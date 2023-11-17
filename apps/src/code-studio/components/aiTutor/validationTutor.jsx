@@ -35,22 +35,31 @@ const ValidationTutor = props => {
       {!javalabState.hasRunOrTestedCode && (
         <h4>Test your code first and see what happens.</h4>
       )}
+      {javalabState.hasRunOrTestedCode &&
+        javalabEditorState.hasCompilationError && (
+          <h4>
+            Uh oh! Your code has to compile successfully before we can work on
+            passing tests.
+          </h4>
+        )}
       {javalabState.validationPassed && (
         <h4>🎉 Your tests are passing. Wahoo!</h4>
       )}
-      {javalabState.hasRunOrTestedCode && !javalabState.validationPassed && (
-        <>
-          <h4>Why aren't my tests passing?</h4>
-          <Button
-            text="Ask AI Tutor"
-            isPending={aiTutorState.isWaitingForAIResponse}
-            pendingText="waiting"
-            onClick={() => handleSend(studentCode)}
-            disabled={javalabState.validationPassed}
-          />
-          <p id="ai-response">{aiTutorState.aiResponse}</p>
-        </>
-      )}
+      {javalabState.hasRunOrTestedCode &&
+        !javalabEditorState.hasCompilationError &&
+        !javalabState.validationPassed && (
+          <>
+            <h4>Why aren't my tests passing?</h4>
+            <Button
+              text="Ask AI Tutor"
+              isPending={aiTutorState.isWaitingForAIResponse}
+              pendingText="waiting"
+              onClick={() => handleSend(studentCode)}
+              disabled={javalabState.validationPassed}
+            />
+            <p id="ai-response">{aiTutorState.aiResponse}</p>
+          </>
+        )}
     </div>
   );
 };
