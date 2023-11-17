@@ -25,9 +25,10 @@ export enum Role {
 }
 
 export enum Status {
+  ERROR = 'error',
+  INAPPROPRIATE = 'inappropriate',
   OK = 'ok',
   PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
   UNKNOWN = 'unknown',
 }
 
