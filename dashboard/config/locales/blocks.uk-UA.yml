@@ -72,6 +72,11 @@ uk:
             '"measures"': такти
             '"seconds"': секунди
         text: після {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': такти
+            '"seconds"': секунди
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -95,6 +100,28 @@ uk:
             '"SLOTH"': лінивці
             '"UNICORN"': єдинороги
             sprites: усі
+          MOVE:
+            '"next"': "(Наступний)"
+            '"prev"': "(Попередній)"
+            '"rand"': "(Випадковий)"
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Відпустити
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Kick: Зірка
+            MOVES.Rest: Немає
+            MOVES.Roll: Хвиля
+            MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': коти
+            '"SLOTH"': лінивці
           MOVE:
             '"next"': "(Наступний)"
             '"prev"': "(Попередній)"
@@ -572,6 +599,51 @@ uk:
             '"electronic"': Електронний
             '"iceCream"': Морозиво
             '"neon"': Неоновий
+            '"rave"': Чорний та білий
+            '"tropical"': Тропічний
+            '"vintage"': Вінтажний
+            '"warm"': Теплий
+        text: |-
+          "установити фоновий ефект
+          {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Коло
+            '"color_cycle"': Кольори
+            '"diamonds"': Ромби
+            '"disco"': Квадрати
+            '"disco_ball"': Дискокуля
+            '"fireworks"': Феєрверк
+            '"flowers"': Квіти
+            '"galaxy"': Відступ
+            '"growing_stars"': Зірки, які ростуть
+            '"higher_power"': Вища сила
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерний танцпол
+            '"music_wave"': Хвилі
+            '"none"': Немає
+            '"quads"': Кути
+            '"rainbow"': Веселка
+            '"rand"': "(Випадковий)"
+            '"ripples"': Брижі
+            '"ripples_random"': Випадкові брижі
+            '"snowflakes"': Сніг
+            '"sparkles"': Блискітки
+            '"spiral"': спіраль
+            '"splatter"': Бульбашки
+            '"squiggles"': Звивання
+            '"starburst"': Вибухаюча зірка
+            '"stars"': Зірки
+            '"swirl"': Гіпноз
+            '"text"': Назва пісні
+          PALETTE:
+            '"cool"': Холодний
+            '"default"': Світлий
+            '"electronic"': Електронний
+            '"iceCream"': Морозиво
+            '"neon"': Неоновий
+            '"rainbow"': Веселка
             '"rave"': Чорний та білий
             '"tropical"': Тропічний
             '"vintage"': Вінтажний
@@ -1377,6 +1449,7 @@ uk:
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
+            '"sound://category_nature/steady_campfire_loop.mp3"': багаття
             '"sound://category_nature/summer_night_loop.mp3"': ніч
       Poetry_playSound:
         options:
@@ -1998,6 +2071,7 @@ uk:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
             "'sound://category_animals/bear.mp3'": Ведмідь
             "'sound://category_animals/cat.mp3'": кіт
+            "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/chicken.mp3'": курка
             "'sound://category_animals/cow.mp3'": корова
             "'sound://category_animals/dog.mp3'": пес
@@ -2256,6 +2330,14 @@ uk:
         text: |-
           якщо {NUM}% ймовірність
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        options:
+          NUM:
+            '10': дуже низька
+            '90': дуже висока
+        text: |2-
+           {NUM} ймовірність
+           {STATEMENT}
       gamelab_xLocationOf:
         text: x координата {SPRITE}
       gamelab_yLocationOf:

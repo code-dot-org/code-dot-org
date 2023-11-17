@@ -1622,10 +1622,6 @@
           "word": "ព្រឹត្តិការណ៍ (Events)",
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "word": "កូដ (Code)"
         },
@@ -1684,25 +1680,18 @@
           "word": "កម្មវិធី (Program)",
           "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
         },
-        "code/poem-art/unversioned": {
-          "word": "កូដ",
-          "definition": ""
+        "map/csc-mappinglandmarks/2023": {
+          "word": "ផែនទី"
         },
-        "event/poem-art/unversioned": {
+        "code/dance-ai/2023": {
+          "word": "កូដ"
+        },
+        "event/dance-ai/2023": {
           "word": "ព្រឹត្តិការណ៍ (Events)",
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
-        "program/poem-art/unversioned": {
-          "word": "កម្មវិធី (Program)",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "program/dance-ai/2023": {
+          "word": "កម្មវិធី (Program)"
         }
       }
     }

@@ -2265,25 +2265,16 @@
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Codi",
-          "definition": "Escriure instruccions per a un ordinador."
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Esdeveniment",
           "definition": "Una acció que fa que passi alguna cosa."
         },
-        "program/poem-art/unversioned": {
-          "word": "Programa",
-          "definition": "Una sèrie de passos que s'han codificat en alguna cosa que pot ser executada per una màquina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Estat d'ànim",
-          "definition": "L'expressió d'un sentiment, ambient o emoció a través de les arts visuals o escrites."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Línia",
-          "definition": "(poesia) - La subdivisió d'un poema disposada en una fila que acaba al marge dret. "
+        "program/dance-ai/2023": {
+          "word": "Programa"
         }
       }
     }

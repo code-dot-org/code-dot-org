@@ -242,15 +242,13 @@ class Foorm::Form < ApplicationRecord
       # but are in the submission (eg, survey config and workshop metadata).
       # Put new headers first, as they generally contain important general
       # information (eg, user_id, pd_workshop_id, etc.)
-      potential_new_headers = Hash[
-        answers.keys.map do |question_id|
-          if headers.key?(question_id)
-            [nil, nil]
-          else
-            [question_id, question_id]
-          end
+      potential_new_headers = answers.keys.map do |question_id|
+        if headers.key?(question_id)
+          [nil, nil]
+        else
+          [question_id, question_id]
         end
-      ].compact
+      end.to_h.compact
 
       headers = potential_new_headers.merge headers
 
@@ -283,9 +281,7 @@ class Foorm::Form < ApplicationRecord
 
           # Add any facilitator-specific questions as headers
           # that are in the submission but not already in the list of headers.
-          potential_new_headers = Hash[
-            facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}
-          ]
+          potential_new_headers = facilitator_response_with_facilitator_number.keys.map {|question_id| [question_id, question_id]}.to_h
           facilitator_headers = potential_new_headers.merge facilitator_headers
 
           headers.merge! facilitator_headers
@@ -316,13 +312,13 @@ class Foorm::Form < ApplicationRecord
   # @param [String] question_id
   # @return [Hash]
   def get_question_details(question_id)
-    parsed_questions(true)[question_id]
+    parsed_questions(should_flatten: true)[question_id]
   end
 
   # Returns a readable version of the questions asked in a Form.
   # @param [Boolean] should_flatten
   # @return [Hash] Hash with two keys (:general and :facilitator), or those two hashes merged if the should_flatten parameter is true.
-  def parsed_questions(should_flatten = false)
+  def parsed_questions(should_flatten: false)
     @parsed_questions ||= Pd::Foorm::FoormParser.parse_form_questions(questions)
 
     should_flatten ?
@@ -358,11 +354,9 @@ class Foorm::Form < ApplicationRecord
   end
 
   def readable_questions_with_facilitator_number(questions, number)
-    Hash[
-      questions[:facilitator].map do |question_id, question_text|
-        [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
-      end
-    ]
+    questions[:facilitator].map do |question_id, question_text|
+      [question_id + "_#{number}", "Facilitator #{number}: " + question_text]
+    end.to_h
   end
 
   def write_to_file?

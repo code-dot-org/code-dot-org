@@ -116,7 +116,7 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper
     %h2 How does the application process work?
-    %ol.steps-list
+    %ol.steps-list.four-col
       %li
         %h3
           %span 1
@@ -175,7 +175,7 @@ theme: responsive_full_width
           %h3 Outside the United States
           %p If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
         .content-footer
-          %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary"} Learn more
+          %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary has-external-link"} Learn more
 
 = view :section_divider_line
 
@@ -186,6 +186,6 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
         = view :professional_development_workshops_regional_partner_search
-        %a{href: "https://support.code.org/", class: "link-button secondary", target: "_blank", rel: "noopener noreferrer"} Visit our support center
+        %a{href: "https://support.code.org/", class: "link-button secondary has-external-link", target: "_blank", rel: "noopener noreferrer"} Visit our support center
       %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
   .clear

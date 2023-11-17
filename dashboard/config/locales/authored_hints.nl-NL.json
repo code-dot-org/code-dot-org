@@ -1528,6 +1528,9 @@
         "course3_collector_debugging_challenge2": {
           "courseD_collector_debugging_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">4</title>\n<statement name=\"DO\">\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"maze_move\">\n<title name=\"DIR\">moveForward</title>\n<next>\n<block type=\"controls_repeat\">\n<title name=\"TIMES\">2</title>\n<statement name=\"DO\">\n<block type=\"collector_collect\"/>\n</statement>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_move\">\n<title name=\"DIR\">moveBackward</title>\n</block>\n</next>\n</block>\n</statement>\n<next>\n<block type=\"maze_turn\">\n<title name=\"DIR\">turnRight</title>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</xml>"
         },
+        "course3_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
         "course3_playLab_challenge1": {
           "courseE_playLab_challenge1_a": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel wint:\n\n-   Laat de dinosaurus verdwijnen.\n-   Stop de eekhoorns.\n-   Maak de eekhoorns en de ridder blij.\n-   Verander de achtergrond.\n-   Zorg dat de ridder de spelter bedankt voor de hulp.\n-   Laat alle spelers verdwijnen en toon een boodschap \"Je hebt gewonnen!\".",
           "courseE_playLab_challenge1_b": "Hier zijn wat dingen die je zou kunnen doen als de speler het spel verliest.:\n\n-   Laat de ridder verdwijnen.\n-   Maak de eekhoorns verdrietig.\n-   Laat de dinosaurus iets zeggen.\n-   Verander de achtergrond.\n-   Laat alle spelers verdwijnen, en toon een boodschap \"Afgelopen uit\"."
@@ -2265,6 +2268,48 @@
           "courseC_artist_prog2_a": "Als je het blok 'beweeg vooruit door 100 pixels', zal ik automatisch een lijn tekenen.",
           "courseC_artist_prog2_b": "Problemen met het draaien van de hoek? Gebruik het blok 'rechts 90 graden'."
         },
+        "courseC_artist_prog5": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog52022": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog5_2018": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog5_2019": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog5_2020": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog5_2023": {
+          "courseC_artist_prog5_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog72022": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7_2018": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7_2019": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7_2020": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7_2021": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseC_artist_prog7_2023": {
+          "courseC_artist_prog7_e": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
         "courseC_collector_loops_challenge2": {
           "courseC_maze_loops_challenge2_b": "Gebruik lussen, want anders heb je niet genoeg `verzamel`-blokken!"
         },
@@ -2315,25 +2360,32 @@
           "courseC_collector_prog1_b": "De eenvoudigste oplossing is om een stap vooruit te bewegen, en dan de schat op te rapen."
         },
         "courseC_collector_prog2": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog22022": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog2_2018": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog2_2019": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog2_2020": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog2_2023": {
-          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken."
+          "courseC_collector_prog2_a": "Je kunt vier <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml>-blokken gebruiken, of je kunt het <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>-blok gebruiken om je programma korter te maken.",
+          "courseC_collector_prog2_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_collector_prog3": {
           "courseC_collector_prog3_a": "Het programma zal alleen de blokken uitvoeren die vastzitten aan het  <xml><block type=\"when_run\"/></xml>-blok.",
@@ -2372,30 +2424,37 @@
         },
         "courseC_collector_prog4": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog42022": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog4_2018": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog4_2019": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog4_2020": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog4_2021": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog4_2023": {
           "courseC_collector_prog4_a": "Als je vastzit, probeer dan het pad uit te tekenen op een blad papier.",
+          "courseC_collector_prog4_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost.",
           "courseC_collector_prog4_c": "Probeer deze route eens."
         },
         "courseC_collector_prog5": {
@@ -3041,6 +3100,118 @@
           "courseC_harvester_loops_challenge2_c": "Door dit zigzag-patroon te herhalen kun je de puzzle oplossen met slechts 20 blokken!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "Deze spiraal route kun je programmeren met slechts 18 blokken!!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
+        "courseC_maze_debugging1": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging12022": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging1_2018": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging1_2019": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging1_2020": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging1_2023": {
+          "courseC_maze_debugging1_a": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?",
+          "courseC_maze_debugging1_b": "Je hebt nog 1 blok nodig om de puzzel af te maken."
+        },
+        "courseC_maze_debugging2": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging22022": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging2_2018": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging2_2019": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging2_2020": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging2_2023": {
+          "courseC_maze_debugging2_b": "-   Werkt alles na de eerste stap?\n-   Werkt het nog steeds na de tweede stap?\n-   Waar gaat het mis?"
+        },
+        "courseC_maze_debugging3": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging32022": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging3_2018": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging3_2019": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging3_2020": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging3_2023": {
+          "courseC_maze_debugging3_a": "Om een blok in het midden van je code te verwijderen, sleep je de blokken er onder naar een ander gedeelte van het werkgebied.\n\nSleep dan het blok wat je wilt verwijderen terug naar de gereedschapskist.\n\nPlaats daarna je andere blokken terug waar ze horen.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)"
+        },
+        "courseC_maze_debugging4": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging42022": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging4_2018": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging4_2019": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging4_2020": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging4_2023": {
+          "courseC_maze_debugging4_a": "Gebruik de \"Stap\" knop om de instructies één voor één uit te voeren. Helpt dit je om de regel te vinden waar het misgaat?"
+        },
+        "courseC_maze_debugging_challenge1": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge12022": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge1_2018": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge1_2019": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge1_2020": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
+        "courseC_maze_debugging_challenge1_2023": {
+          "courseC_maze_debugging_challenge1_a": "Links of rechts? Aan jou de keuze!"
+        },
         "courseC_maze_loops_challenge1a": {
           "courseC_maze_loops_challenge1_a": "Beschouw dit pad als twee opeenvolgende routes, Elke route heeft een patroon dat je kunt herhalen.",
           "courseC_maze_loops_challenge1_b": "Weet je nog hoe je lussen kon gebruiken om een trap-patroon te herhalen?"
@@ -3175,30 +3346,37 @@
           "courseC_maze_programming4_b": "Om het pad te volgen:\n\n-   beweeg vooruit\n-   draai\n-   beweeg vooruit\n-   draai de andere kant op\n-   beweeg vooruit"
         },
         "courseC_maze_programming5": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming52022": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming5_2018": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming5_2019": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming5_2020": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
         "courseC_maze_programming5_2023": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
           "courseC_maze_programming5_b": "De angry bird moet een keer draaien om deze puzzle af te maken. Kun jij uitzoeken welke kant hij op moet draaien?",
           "courseC_maze_programming5_c": "De oplossing bevat twee `beweeg vooruit` blokken, één draai en nog eens twee `beweeg vooruit` blokken."
         },
@@ -3273,25 +3451,32 @@
           "courseC_maze_programming7_b": "Als je het moeilijk vind om deze puzzle op te lossen, schrijf dan de binaire regels eens uit op een stuk papier."
         },
         "courseC_maze_programming8": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming82022": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming8_2018": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming8_2019": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming8_2020": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming8_2021": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming8_2023": {
-          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt."
+          "courseC_maze_programming8_a": "Denk er aan dat je de `Stap`-knop kunt gebruiken om het programma stap voor stap uit te voeren, als je er niet uit komt.",
+          "courseC_maze_programming8_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseC_maze_programming_challenge1": {
           "courseC_maze_programming_challenge1_a": "Er zijn een heleboel manieren om bij het biggetje te komen. Gebruik je vinger om een route te vinden, en codeer vervolgens die route in je programma."
@@ -3651,7 +3836,8 @@
           "course_starWars_loops9_c": "Je hoeft niet linksom te draaien om deze puzzle op te lossen. Al je draaien kunnen rechtsom zijn.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
         },
         "courseC_video_angles": {
-          "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseD_scrat_programming6_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseD_artist_binary1": {
           "courseD_artist_binary1_a": "Vervang de \"???\" in het tekst blok door het binaire plaatje dat je wilt hebben, gecodeerd met nullen en enen.",
@@ -4681,6 +4867,47 @@
           "courseD_collector_ramp9_a": "Breng Laurel eerst naar de eerste stapel schatten, en verzamel hem. Kun je deze serie instructies herhalen om bij de tweede stapel te komen?",
           "courseD_collector_ramp9_b": "Als je je code eenvoudiger wilt maken, kun je een herhaal lus binnen in een andere herhaal lus plaatsen! Dat noemen we een **geneste lus** (nested loop)."
         },
+        "courseD_maze_intro5a2022": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_intro5a_2019": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_intro5a_2020": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_intro5a_2023": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp12022": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1_2018": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1_2019": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1_2020": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp1_2023": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
         },
@@ -4701,6 +4928,78 @@
         },
         "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
+        },
+        "courseD_maze_ramp5": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp52022": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5_2018": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5_2019": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5_2020": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5_2023": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5a": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5a_2018": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5a_2019": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5a_2020": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b2022": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b_2018": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b_2019": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b_2020": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_maze_ramp5b_2023": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?",
+          "courseC_maze_programming5_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseD_maze_ramp6": {
           "courseC_maze_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
@@ -4772,15 +5071,26 @@
         "courseD_playLab_cond6a_2018": {
           "courseD_playLab_cond6_c": "Voeg een `wacht een seconde`-blok toe aan het begin van de `blijf-herhalen`-lus die de positie van de piraat checkt (maar niet binnenin het `als`-blok) om te voorkomen dat er te vroeg punten worden afgetrokken."
         },
+        "courseD_scrat_ramp1": {
+          "courseC_maze_programming1_b": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
         "courseD_scrat_ramp2": {
           "courseC_maze_programming2_a": "Om het \"beweeg vooruit\" blok te gebruiken, sleep je het vanuit het blokken gebied naar de werkplaats en plak je het direct onder het blok \"als gestart\"."
         },
+        "courseD_scrat_ramp4": {
+          "courseC_maze_programming4_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
+        },
+        "courseD_scrat_ramp5": {
+          "courseC_maze_programming5_a": "Probeer de \"Stap\" knop te gebruiken om je code regel voor regel uit te voeren. Kun je uitvogelen wat de volgende stap moet zijn?"
+        },
         "courseD_scrat_ramp7": {
-          "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!"
+          "courseD_scrat_programming6_a": "Er zijn 2 manieren om deze puzzel op te lossen!",
+          "courseD_scrat_programming6_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseD_scrat_ramp8": {
           "courseD_maze_ramp7_a": "Je kunt `herhaal`-blokken gebruiken om een enkel blok of een hele set instructies steeds maar weer te herhalen.",
-          "courseD_maze_ramp7_b": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat."
+          "courseD_maze_ramp7_b": "Vergeet niet om de `Stap`-knop te gebruiken. Daarmee kun je het programma stap voor stap uitvoeren en kijken waar het fout gaat.",
+          "courseD_maze_ramp7_c": "Wees niet bang om een foutje te maken! Probeer blokken toe te voegen en de code uit te voeren om te zien wat er gebeurt, ook als je denkt dat je de puzzel nog niet hebt opgelost."
         },
         "courseD_video_nestedLoopsArtist": {
           "courseD_artist_ramp12_a": "Wat is er hetzelfde als bij een vierkant? En wat is er anders?",
@@ -5526,6 +5836,11 @@
         "courseE_playLab_scaffold5": {
           "courseE_playLab_scaffold5_a": "Om dit level te halen, moet je winnen of verliezen.  Gebruik een `eindig het spel als gewonnen`- of `eindig het spel als verloren`-blok als einde."
         },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "De afbeelding in de tekening is gemaakt met een teller voor de `set alpha` en `teller`/10 als penseelgrootte.",
+          "courseF_artist_for10_b": "De afbeelding in de tekening maakt gebruik van een draai van 61 graden.",
+          "courseF_artist_for10_c": "Wil je weten hoe de voorbeeldafbeelding is gemaakt?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "courseF_artist_for4": {
           "courseF_artist_for4_a": "**Wat is het kleinste nummer dat je nodig hebt?\nWat is het grootste nummer?\nHoe groot is de toename iedere keer?**\n\nDit zijn vragen die je jezelf moet stellen wanneer je de leegtes in de `herhaal` lus invult."
         },
@@ -5537,6 +5852,10 @@
         },
         "courseF_artist_for4_2020": {
           "courseF_artist_for4_a": "**Wat is het kleinste nummer dat je nodig hebt?\nWat is het grootste nummer?\nHoe groot is de toename iedere keer?**\n\nDit zijn vragen die je jezelf moet stellen wanneer je de leegtes in de `herhaal` lus invult."
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Als je het blok `set alpha` in je voorwaardelijke lus plaatst en de variabele `teller` gebruikt om het te wijzigen, kun je een ontwerp zoals dit maken.",
+          "courseF_artist_for9_b": "Het blok \\`set alpha' verandert de doorzichtigheid van een kleur. Hoe kleiner de waarde, hoe transparanter de kleur is."
         },
         "courseF_artist_for_challenge1": {
           "courseF_artist_for_challenge1_a": "De `pendikte` is 1. De eerste vierkant heeft en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.",
@@ -5601,6 +5920,8 @@
           "courseF_artist_for_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
         "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_a": "De kleurverandering gebeurt met het blok `kleur instellen op rood, groen, blauw`. Rood is constant ingesteld op 255, groen is altijd de waarde van `teller` en blauw is altijd `255 - teller`.",
+          "courseF_artist_for_challenge2_b": "De code hiervoor is eenvoudiger dan je zou denken. Stel gewoon de kleur in de voorwaardelijke lus in, ga vooruit en draai dan om.",
           "courseF_artist_for_challenge2_c": "De `for lus` gaat van 5 tot 250 in stappen van 2. ",
           "courseF_artist_for_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
@@ -5649,6 +5970,12 @@
         "courseF_bee_conditionals8": {
           "courseF_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "Hoeveel is 12 minder dan 15? \\\nHoeveel is 9 minder dan 12?\n\nZie je een patroon?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Je hebt twee blokken nodig in je 'herhalingslus' om alle nectar te verzamelen."
+        },
         "courseF_bee_for2": {
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
@@ -5665,10 +5992,16 @@
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
         "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Test je code regematig. Probeer eerst nectar uit 1 bloem te halen, lukt dit probeer dan ook de tweede bloem enz.",
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
         "courseF_bee_for2_2023": {
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Gebruik een `voorwaardelijke` lus van 1 tot 7 in stappen van 1 om deze puzzel op te lossen.",
+          "courseF_bee_for4_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
+          "courseF_bee_for4_c": "Zorg ervoor dat je de variabele `teller` in je geneste herhaalblok gebruikt om genoeg nectar te krijgen!"
         },
         "courseF_bee_for5": {
           "courseF_bee_for5_b": "Gebruik de `counter` variabele in elke lus zodat de bij verschillende afstanden aflegt tussen elke bloem."
@@ -5707,6 +6040,8 @@
           "courseF_bee_for6_c": "Je lus zou moeten tellen **van 5 naar 1**."
         },
         "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Vergeet niet om een `teller` variabele in je herhaallus te gebruiken.",
+          "courseF_bee_for6_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
           "courseF_bee_for6_c": "Je lus zou moeten tellen **van 5 naar 1**."
         },
         "courseF_bee_for6_2023": {
@@ -5728,10 +6063,17 @@
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
         },
         "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Je voorwaardelijke lus moet van 1 tot 7 tellen in stappen van 2.",
+          "courseF_bee_for7_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
         },
         "courseF_bee_for7_2023": {
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Bij elke herhaling van je lus wordt de stapgrootte telkens bij je tellervariabele opgeteld. \n\nHoeveel moet je bij elk getal optellen om de volgende hoeveelheid nectar te krijgen?",
+          "courseF_bee_for8_b": "In deze puzzel moet je in een trappenpatroon bewegen om bij de bloemen te komen.",
+          "courseF_bee_for8_c": "Je lus telt van 3 tot 15 met een bepaalde stapgrootte. Wat is de stapgrootte?"
         },
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_c": "Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.\n\nDe andere 'voor`lus heeft slechts één standaard lus nodig om`counter\\` keer honing te maken.",

@@ -5993,6 +5993,8 @@ ka:
           description_short: კოდი თქვენი საკუთარი საცეკვაო პარტია გაუზიაროთ თქვენს
             მეგობრებს! (ეს ვერსია არის ნელი კავშირებისთვის)
           title: საცეკვაო წვეულება (დაბალი გამტარობა)
+        dance-unplugged:
+          title: ცეკვის პარტია unplugged
         dani-june-2020-test:
           lesson_groups:
             cs_lg:
@@ -6929,7 +6931,7 @@ ka:
           description_short: შეისწავლეთ Minecraft-ის სამყარო კოდით
           student_description: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის
             თავგადასავლებში.
-          title: Minecraft-ის კოდის ერთი საათი
+          title: Minecraft თავგადასავალი
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -7658,6 +7660,17 @@ ka:
               display_name: შიგთავსი
             csd3_2:
               display_name: 'თავი 2: თამაშების შექმნა'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: შესავალი
+          lessons:
+            lesson-7:
+              name: შესავალი
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: შესავალი
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -7680,6 +7693,10 @@ ka:
           lessons:
             lesson-3:
               name: შეფასება
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: შესავალი
         virustest:
           description_short: 'გამოიყენეთ Sprite Lab ვირუსის გავრცელების სიმულაციის
             შესაქმნელად. '

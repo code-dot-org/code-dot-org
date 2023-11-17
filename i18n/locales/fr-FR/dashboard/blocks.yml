@@ -2,6 +2,15 @@
 fr:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': trop
+            '"just right"': tout juste assez
+            '"too little"': trop peu
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -73,6 +82,11 @@ fr:
           UNIT:
             '"measures"': mesures
             '"seconds"': secondes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': mesures
+            '"seconds"': secondes
       Dancelab_changeColorBy:
         text: changer {COLOR} {METHOD} de {AMOUNT}
         options:
@@ -113,6 +127,28 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
+        options:
+          GROUP:
+            '"CAT"': les chats
+            '"SLOTH"': les paresseux
+          MOVE:
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.ClapHigh: Tape des mains en l'air
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Aucun
+            '"next"': "(Suivant)"
+            '"prev"': "(Précédent)"
+            '"rand"': "(Aléatoire)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} indéfiniment"
         options:
@@ -588,6 +624,48 @@ fr:
             '"iceCream"': Glace
             '"default"': Lumière
             '"neon"': Néon
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Rouges
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: définir l'effet d'arrière-plan {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Aucun
+            '"rand"': "(Aléatoire)"
+            '"quads"': Angles
+            '"circles"': Tunnel
+            '"color_cycle"': Couleurs
+            '"diamonds"': Diamants
+            '"disco_ball"': Boule disco
+            '"fireworks"': Feux d'artifice
+            '"flowers"': Fleurs
+            '"growing_stars"': Étoiles montantes
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaléidoscope
+            '"lasers"': Piste de danse laser
+            '"splatter"': Éclaboussures de peinture
+            '"rainbow"': Arc-en-ciel
+            '"ripples_random"': Ondulations aléatoires
+            '"ripples"': Ondulations
+            '"snowflakes"': Neige
+            '"text"': Titres de chanson
+            '"galaxy"': Espace
+            '"sparkles"': Éclats
+            '"spiral"': Spirale
+            '"disco"': Carrés
+            '"squiggles"': Gribouillis
+            '"starburst"': Starburst
+            '"stars"': Étoiles
+            '"music_wave"': Vagues
+          PALETTE:
+            '"rave"': Noir et blanc
+            '"cool"': Cool
+            '"electronic"': Électronique
+            '"iceCream"': Glace
+            '"default"': Lumière
+            '"neon"': Néon
+            '"rainbow"': Arc-en-ciel
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Rouges
@@ -2530,6 +2608,19 @@ fr:
           DIR:
             right: droite ↻
             left: gauche ↺
+      ecosystems_catchMe:
+        text: attraper {THIS}
+      ecosystems_eat:
+        text: manger {THIS}
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"too much"': trop
+            '"just right"': tout juste assez
+            '"too little"': trop peu
       ecosystems_int10:
         text: "{VALUE}"
         options:
@@ -2544,6 +2635,24 @@ fr:
             '8': '8'
             '9': '9'
             '10': '10'
+      ecosystems_makeNewSpriteBetween:
+        text: 'créer {N} un nouveau {GROUP} entre les emplacements x : {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {RANGE}
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Haut
+            "{x1:0, x2:400, y1:150, y2:250}": Au milieu
+            "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Haut
+            "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
       storylab_printText:
         text: imprimer {TEXT}
       storylab_setForegroundEffect2:

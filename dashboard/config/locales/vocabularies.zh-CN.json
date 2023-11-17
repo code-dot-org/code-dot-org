@@ -2312,25 +2312,16 @@
           "word": "无损压缩",
           "definition": "允许从压缩的数据中完美地重建原始数据的一种数据压缩算法。最常用于文本压缩（例如zip压缩）"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "代码",
-          "definition": "（动词）为计算机编写指令。"
+          "definition": "(v) 编写代码或编写计算机指令。"
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "事件",
           "definition": "导致某些事情发生的操作。"
         },
-        "program/poem-art/unversioned": {
-          "word": "程序",
-          "definition": "一系列已编码的步骤，可在设备上运行。"
-        },
-        "mood/poem-art/unversioned": {
-          "word": "意境",
-          "definition": "艺术作品或文学作品所表达出某种感觉、氛围或情感。"
-        },
-        "line/poem-art/unversioned": {
-          "word": "诗歌行",
-          "definition": "（诗歌）- 一篇诗歌的组成部分，采用单行格式，在右侧结束。 "
+        "program/dance-ai/2023": {
+          "word": "程序"
         }
       }
     }

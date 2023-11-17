@@ -81,7 +81,6 @@ gem 'rack-cache'
 
 group :development, :test do
   gem 'rerun'
-  gem 'shotgun'
   gem 'thin'
   # Use debugger
   #gem 'debugger' unless ENV['RM_INFO']
@@ -351,3 +350,5 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.2.1'
+
+gem "delayed_job_active_record", "~> 4.1"

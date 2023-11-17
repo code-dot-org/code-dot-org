@@ -7,7 +7,10 @@
 #
 # Usage: update_certs COMMON_NAME [SAN_1] [SAN_2] [...]
 #
+# Example: bundle exec ./update_certs adhoc-bugcrowd.cdn-code.org adhoc-bugcrowd-studio.cdn-code.org origin-adhoc-bugcrowd.cdn-code.org
+#
 # Prerequisites:
+# - Execute this script from this directory ("aws/cloudformation")
 # - AWS credentials provided by the environment with appropriate access policies
 #   (ref: https://github.com/sorah/acmesmith#iam-policy)
 # - Existing valid ACME account key in the object storage (created by `acmesmith register CONTACT`)

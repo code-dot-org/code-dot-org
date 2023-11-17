@@ -59,6 +59,11 @@ mn:
             '"measures"': арга хэмжээ
             '"seconds"': секундууд
         text: "{TIMESTAMP}-н дараа {UNIT}"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': арга хэмжээ
+            '"seconds"': секундууд
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -82,6 +87,27 @@ mn:
             '"SLOTH"': зальхай
             '"UNICORN"': нэг эвэрт
             sprites: бүгд
+          MOVE:
+            '"next"': "(Дараагийнх)"
+            '"prev"': "(Өмнөх)"
+            '"rand"': "(Санамсаргүй)"
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Kick: Од
+            MOVES.Rest: Байхгүй
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+        text: "{GROUP} {MOVE} {DIR}-г үүрд хийх"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': муур
+            '"SLOTH"': зальхай
           MOVE:
             '"next"': "(Дараагийнх)"
             '"prev"': "(Өмнөх)"
@@ -547,6 +573,50 @@ mn:
             '"electronic"': Электрон
             '"iceCream"': Зайрмаг
             '"neon"': Неон
+            '"rave"': Хар ба цагаан
+            '"tropical"': Тропикийн
+            '"vintage"': Усан үзэм
+            '"warm"': Дулаан
+        text: |-
+          суурь нөлөөг тохируулах
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Тойргууд
+            '"color_cycle"': Өнгөнүүд
+            '"diamonds"': Алмааз
+            '"disco"': Квадратууд
+            '"disco_ball"': Дисконы бөмбөг
+            '"fireworks"': Салют
+            '"flowers"': Цэцэг
+            '"galaxy"': Сансар
+            '"growing_stars"': Томорч буй од
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Бүжгийн лазер шал
+            '"music_wave"': Давалгаа
+            '"none"': Байхгүй
+            '"quads"': Өнцөг
+            '"rainbow"': Солонго
+            '"rand"': "(Санамсаргүй)"
+            '"ripples"': Долгионууд
+            '"ripples_random"': Санамсаргүй долгио
+            '"snowflakes"': Цас
+            '"sparkles"': Гялалзах
+            '"spiral"': Спираль
+            '"splatter"': Будаг тараагч
+            '"squiggles"': Жижиг долгио
+            '"starburst"': Оддын тэсрэлт
+            '"stars"': Одод
+            '"swirl"': Гипно
+            '"text"': Дууны нэрнүүд
+          PALETTE:
+            '"cool"': Гайхалтай
+            '"default"': Гэрэл
+            '"electronic"': Электрон
+            '"iceCream"': Зайрмаг
+            '"neon"': Неон
+            '"rainbow"': Солонго
             '"rave"': Хар ба цагаан
             '"tropical"': Тропикийн
             '"vintage"': Усан үзэм

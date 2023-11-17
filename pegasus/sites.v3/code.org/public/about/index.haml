@@ -8,7 +8,7 @@ style_min: true
 
 - facebook = {:u=>'https://youtu.be/mTGSiB4kB18'}
 - twitter = {:url=>'https://youtu.be/mTGSiB4kB18', :related=>'codeorg', :text=>"Meet the team at @codeorg and see how much they’ve done! (Thanks #{PegasusCdoDonor.get_random_donor_twitter} for supporting @codeorg)"}
-%h1 
+%h1
   =hoc_s(:about_us_page_title)
 
 %div{style: "float: left; width: 280px; margin-right: 5%"}
@@ -20,14 +20,14 @@ style_min: true
 
 %h2
   =hoc_s(:about_us_page_section_title_1)
-%section 
-  .col-33 
+%section
+  .col-33
     %center
       %img{src: "/images/marketing/diversity2021/code_gender.png", style:"max-width: 100%"}
-  .col-33 
+  .col-33
     %center
       %img{src: "/images/marketing/diversity2021/code_urg.png", style:"max-width: 100%"}
-  .col-33 
+  .col-33
     %center
       %img{src: "/images/marketing/diversity2021/code_frl.png", style:"max-width: 100%"}
 .div{style:"clear: both;"}
@@ -38,7 +38,7 @@ style_min: true
 
 %h2
   =hoc_s(:about_us_page_section_title_2)
-%section 
+%section
   %p
     =hoc_s(:about_us_page_section_news_description, markdown: :inline, locals: {news_url: "/about/news"})
   .col-45{style:"float: left; margin: 1%"}
@@ -47,7 +47,7 @@ style_min: true
     =view :display_video_thumbnail, id: "codeorg_cbs", video_code: "sUXfjzzHO5g", caption: "Code.org's work covered by CBS This Morning", play_button: "center", letterbox: "false"
   .div{style:"clear: both;"}
 
-%h2 
+%h2
   =hoc_s(:about_us_page_section_table)
 %section
   %table
@@ -55,9 +55,9 @@ style_min: true
       %tr
         %th
           =hoc_s(:about_us_page_section_table_header_1)
-        %th 
+        %th
           =hoc_s(:about_us_page_section_table_header_2)
-    %tbody 
+    %tbody
       %tr
         %td
           =hoc_s(:abous_page_section_table_cell_1_1, markdown: :inline)
@@ -68,22 +68,22 @@ style_min: true
           =hoc_s(:about_page_section_table_cell_2_1)
         %td
           =hoc_s(:about_page_section_table_cell_2_2, markdown: :inline, locals:{hour_url: "http://hourofcode.com/"})
-      %tr 
+      %tr
         %td
           =hoc_s(:about_page_section_table_cell_3_1)
         %td
           =hoc_s(:about_page_section_table_cell_3_2, markdown: :inline, locals:{code_studio_url: "http://studio.code.org"})
-      %tr 
+      %tr
         %td
           =hoc_s(:about_page_section_table_cell_4_1)
         %td
           =hoc_s(:about_page_section_table_cell_4_2, markdown: :inline, locals:{learning_programs_url: "/educate"})
-      %tr 
+      %tr
         %td
           =hoc_s(:about_page_section_table_cell_5_1)
         %td
           =hoc_s(:about_page_section_table_cell_5_2, markdown: :inline, locals:{schoold_disctrict_url: "/educate/partner-districts", cs_curriculum_url: "/educate/curriculum", regional_partner_url: "/educate/districts"})
-      %tr 
+      %tr
         %td
           =hoc_s(:about_page_section_table_cell_6_1)
         %td
@@ -102,59 +102,59 @@ style_min: true
   =hoc_s(:about_page_section_title_3)
   %p
     =hoc_s(:about_page_section_more_description_1, markdown: :inline, locals: {hadi_url: "/about/leadership/hadi_partovi", partovi_url: "https://www.crunchbase.com/person/ali-partovi#/entity", video_url: "https://www.youtube.com/watch?v=nKIu9yen5nc", efforts_url: "https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub", partners_url: "https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924"})
-  %p 
+  %p
     =hoc_s(:about_page_section_more_description_2)
   %p
     =hoc_s(:about_page_section_more_description_3, markdown: :inline, locals: {efforts_url: "https://docs.google.com/document/d/1rdEUqAkYtKPMD4UeEmpZCAau4_AdIOGbZDqLkePAQrY/pub", partners_url: "https://medium.com/@codeorg/dedicating-our-5-year-anniversary-to-our-partners-b57368a92924"})
   %ul
-    %li 
-      =hoc_s(:about_page_section_more_list_1, markdown: :inline, locals: {report_url: "/about/2021", past_url_1: "/about/2020", past_url_2: "/about/2019", past_url_3: "/about/2018", past_url_4: "/about/2017", past_url_5: "/about/2016", past_url_6: "/about/2015", past_url_7: "/about/2014"})
-    %li 
+    %li
+      =hoc_s(:about_page_annual_report_2022, markdown: :inline, locals: {report_url_2022: "/about/2022", report_url_2021: "/about/2021", report_url_2020: "/about/2020", report_url_2019: "/about/2019", report_url_2018: "/about/2018", report_url_2017: "/about/2017", report_url_2016: "/about/2016", report_url_2015: "/about/2015", report_url_2014: "/about/2014"})
+    %li
       =hoc_s(:about_page_section_more_list_2, markdown: :inline, locals: {core_url: "/about/values"})
-    %li 
+    %li
       =hoc_s(:about_page_section_more_list_3, markdown: :inline, locals: {curriculum_url: "educate/curriculum/values"})
-    %li 
+    %li
       =hoc_s(:about_page_section_more_list_4, markdown: :inline, locals: {tedx_url: "https://www.youtube.com/watch?v=m-U9wzC9xLk"})
 = view :section_divider_line
 
 %h2
   =hoc_s(:about_page_section_specific_title_1)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_1, markdown: :inline, locals: {read_more_url: "/about/unifying"})
   = view :section_divider_line
-%h2 
+%h2
   =hoc_s(:about_page_section_specific_title_8)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_8, markdown: :inline, locals: {partners_url: "https://code.org/about/partners"})
 %h2
   =hoc_s(:about_page_section_specific_title_2)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_2, markdown: :inline, locals: {values_url: "/about/values", accessibility_url: "/accessibility" })
   = view :section_divider_line
 %h2
   =hoc_s(:about_page_section_specific_title_3)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_3, markdown: :inline, locals: {commons_url: "http://creativecommons.org/licenses/by-nc-sa/4.0/", contact_us_url: "/contact", open_source_url: "https://github.com/code-dot-org/code-dot-org" })
   = view :section_divider_line
 %h2
   =hoc_s(:about_page_section_specific_title_4)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_4, markdown: :inline, locals: {advocacy_url: "/advocacy" , leaders_url: "https://youtu.be/W5QGo_Yb_Pc?list=PLzdnOPI1iJNfygSF8gKBUq7fT4Y61_h2I"})
   = view :section_divider_line
 %h2
   =hoc_s(:about_page_section_specific_title_5)
-  %p 
+  %p
     =hoc_s(:about_page_section_specific_description_5, markdown: :inline, locals: {framework_url: "http://k12cs.org"})
   = view :section_divider_line
-%h2 
+%h2
   =hoc_s(:about_page_section_specific_title_6)
   %p
     =hoc_s(:about_page_section_donors_description_1, markdown: :inline, locals: {individuals_url: "/about/donors"})
   %p
     =hoc_s(:about_page_section_donors_description_2, markdown: :inline)
-  %p 
-    %a.link-button{href: "/donate"} 
-      =hoc_s(:about_page_donors_link_1)
+  %p
+    %a.link-button{href: "/donate"}
+      =hoc_s(:call_to_action_make_a_donation)
     &nbsp;&nbsp;or
     %a
       =hoc_s(:about_page_donors_link_2, markdown: :inline, locals: {donors_url: "/about/donors"})
@@ -162,9 +162,9 @@ style_min: true
     =hoc_s(:about_page_section_specific_description_6, markdown: :inline, locals: {irs_url_1: "/files/irs-form.pdf", irs_url_2: "/files/irs-form-2015.pdf", irs_url_3: "/files/irs-form-2016.pdf", irs_url_4: "/files/irs-form-2017.pdf", irs_url_5: "/files/irs-form-2018.pdf", irs_url_6: "/files/irs-form-2019.pdf", irs_url_7: "/files/irs-form-2020.pdf", irs_url_8: "/files/irs-form-2021.pdf", donation_policy_url: "/about/donation-policy"})
   = view :section_divider_line
 
-%h2 
+%h2
   =hoc_s(:about_page_section_specific_title_7)
-%p 
+%p
   =hoc_s(:about_page_section_specific_description_7, markdown: :inline, locals: {sign_up_url: "https://code.org/about/hear-from-us"})
 = view :social_media, facebook: "Code.org", twitter: "codeorg", instagram: "codeorg"
 = view :section_divider_line

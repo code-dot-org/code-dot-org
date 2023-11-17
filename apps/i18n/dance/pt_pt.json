@@ -1,5 +1,11 @@
 {
-  "danceFeedbackDidntPress": "Assegura-te de que primes as teclas direcionais enquanto a tua dança estiver em execução.",
+  "danceAiModalBack": "Anterior",
+  "danceAiModalClose": "Fechar",
+  "danceAiModalCodeButton": "Código",
+  "danceAiModalExplanationButton": "Saber mais",
+  "danceAiModalStartOverButton": "Recomeçar",
+  "danceFeedbackDidntPress": "Certifique-se de pressionar as teclas de seta enquanto sua dança está em execução.",
+  "danceFeedbackKeepCoding": "Continua a tentar! Ainda falta alguma coisa.",
   "danceFeedbackKeyEvent": "Assegura-te de que anexas algum código ao bloco <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"cima\"</title></block></xml> e de que primes a tecla enquanto o teu dançarino estiver em execução.",
   "danceFeedbackNeedBackup": "Precisas de criar um grupo de dançarinos secundários com o bloco <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICÓRNIO\"</title><title name=\"LAYOUT\">\"círculo\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Precisas de usar uma dança diferente.",

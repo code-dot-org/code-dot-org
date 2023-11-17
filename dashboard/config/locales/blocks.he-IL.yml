@@ -63,6 +63,11 @@ he:
             '"measures"': תיבות
             '"seconds"': שניות
         text: אחרי {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': תיבות
+            '"seconds"': שניות
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -86,6 +91,28 @@ he:
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
             sprites: כולם
+          MOVE:
+            '"next"': "(הבא)"
+            '"prev"': "(קודם)"
+            '"rand"': "(אקראי)"
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Clown: גאנגם
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Kick: כוכב
+            MOVES.Rest: כלום
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ThisOrThat: כך וכך
+            MOVES.Thriller: זומבי
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': חתולים
+            '"SLOTH"': עצלנים
           MOVE:
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
@@ -558,6 +585,49 @@ he:
             '"electronic"': אלקטרוני
             '"iceCream"': גלידה
             '"neon"': נאון
+            '"rave"': שחור לבן
+            '"tropical"': טרופי
+            '"vintage"': וינטאג'
+            '"warm"': חמים
+        text: קבע אפקט רקע {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': מעגלים
+            '"color_cycle"': צבעים
+            '"diamonds"': יהלומים
+            '"disco"': ריבועים
+            '"disco_ball"': כדור דיסקו
+            '"fireworks"': זיקוקים
+            '"flowers"': פרחים
+            '"galaxy"': חלל
+            '"growing_stars"': כוכבים גדלים
+            '"kaleidoscope"': קליידוסקופ
+            '"lasers"': רחבת ריקודים מלייזר
+            '"music_wave"': גלים
+            '"none"': כלום
+            '"quads"': מלאכים
+            '"rainbow"': קשת
+            '"rand"': "(אקראי)"
+            '"ripples"': אדוות
+            '"ripples_random"': אדוות אקראיות
+            '"snowflakes"': שלג
+            '"sparkles"': נצנוצים
+            '"spiral"': ספירלה
+            '"splatter"': שפריץ צבע
+            '"squiggles"': קווים מתפתלים
+            '"starburst"': כוכבים
+            '"stars"': כוכבים
+            '"swirl"': הִיפְּנוֹ
+            '"text"': כותרת שיר
+          PALETTE:
+            '"cool"': מגניב
+            '"default"': אוֹר
+            '"electronic"': אלקטרוני
+            '"iceCream"': גלידה
+            '"neon"': נאון
+            '"ocean"': אוקיינוס
+            '"rainbow"': קשת
             '"rave"': שחור לבן
             '"tropical"': טרופי
             '"vintage"': וינטאג'

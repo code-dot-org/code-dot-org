@@ -73,6 +73,11 @@ id:
           UNIT:
             '"measures"': langkah
             '"seconds"': detik
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': langkah
+            '"seconds"': detik
       Dancelab_changeColorBy:
         text: ubah {COLOR}{METHOD} dengan {AMOUNT}
         options:
@@ -112,6 +117,27 @@ id:
             MOVES.Kick: Bintang
             MOVES.ThisOrThat: Ini atau Itu
             MOVES.Rest: Tidak Ada
+      Dancelab_changeMoveEachLR_slothcat:
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
+        options:
+          GROUP:
+            '"CAT"': semua kucing
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Gandakan
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Segar
+            MOVES.Clown: Badut
+            MOVES.Kick: Bintang
+            MOVES.ThisOrThat: Ini atau Itu
+            MOVES.Rest: Tidak Ada
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
+            '"rand"': Acak
       Dancelab_changeMoveLR:
         text: "{SPRITE} melakukan {MOVE} {DIR} selamanya"
         options:
@@ -594,6 +620,52 @@ id:
             '"iceCream"': Es Krim
             '"default"': Lampu
             '"neon"': Neon
+            '"tropical"': Tropis
+            '"vintage"': Vintage
+            '"warm"': Hangat
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          tetapkan efek latar belakang
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Tidak Ada
+            '"rand"': Acak
+            '"quads"': Sudut
+            '"circles"': Lingkaran
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Kembang Api
+            '"flowers"': Bunga
+            '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Dansa Laser
+            '"splatter"': Percikan Cat
+            '"rainbow"': Pelangi
+            '"ripples_random"': Riak Acak
+            '"ripples"': Riak
+            '"snowflakes"': Salju
+            '"text"': Nama Lagu
+            '"galaxy"': Spasi
+            '"sparkles"': Kilauan
+            '"spiral"': Spiral
+            '"disco"': Bujur sangkar
+            '"squiggles"': Garis berlekuk
+            '"starburst"': Semburan bintang
+            '"stars"': Bintang
+            '"music_wave"': Gelombang
+          PALETTE:
+            '"rave"': Hitam dan Putih
+            '"cool"': Keren
+            '"electronic"': Elektronik
+            '"iceCream"': Es Krim
+            '"default"': Lampu
+            '"neon"': Neon
+            '"ocean"': Lautan
+            '"rainbow"': Pelangi
             '"tropical"': Tropis
             '"vintage"': Vintage
             '"warm"': Hangat

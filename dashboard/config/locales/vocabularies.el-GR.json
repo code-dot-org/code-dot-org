@@ -1172,25 +1172,16 @@
           "word": "Πρόγραμμα",
           "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Κώδικας",
-          "definition": ""
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
-        "program/poem-art/unversioned": {
-          "word": "Πρόγραμμα",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "program/dance-ai/2023": {
+          "word": "Πρόγραμμα"
         }
       }
     }

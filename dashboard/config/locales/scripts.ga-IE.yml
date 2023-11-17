@@ -2436,6 +2436,8 @@ ga:
           title: Lean ort ag damhsa
         dance-low:
           title: Cóisir Dhamhsa (Ceangal Mall)
+        dance-unplugged:
+          title: Cóisir Dhamhsa Dhíphlugáilte
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -2910,7 +2912,7 @@ ga:
           description_short: Taiscéal domhan Minecraft le cód.
           student_description: Úsáid blocanna cóid le dul ar eachtra le Steve nó Alex
             sa domhan Minecraft seo.
-          title: An Uair Chódála Minecraft
+          title: Eachtránaí Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-4:
@@ -3260,6 +3262,17 @@ ga:
               display_name: Ábhar
             csd3_2:
               display_name: 'Caibidil 2: Tógáil Cluichí'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Réamhrá
+          lessons:
+            lesson-7:
+              name: Réamhrá
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Réamhrá
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3268,6 +3281,10 @@ ga:
           lessons:
             lesson-3:
               name: Measúnú
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Réamhrá
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

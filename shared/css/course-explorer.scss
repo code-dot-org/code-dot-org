@@ -100,7 +100,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   }
   .title {
     font-size: 16px;
-    font-family: $gotham-regular;
+    @include main-font-regular;
     pointer-events: none;
   }
   .groupname {
@@ -140,7 +140,7 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     color: $white;
     font-size: 12px;
     margin-left: 0;
-    font-family: $gotham-regular;
+    @include main-font-regular;
   }
   .courseimage {
     float: left;
@@ -188,10 +188,10 @@ $color_border_invisible: rgba(170, 170, 170, 0);
   box-sizing: border-box;
   .title {
     font-size: 18px;
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
   a {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 }
 .notes {

@@ -13754,30 +13754,6 @@
         "2b5cb5b7-6a5e-4727-b8b5-128a3c546781": {
           "description": "Utilisez ces activités pour améliorer l'apprentissage des élèves. Elles peuvent servir d'activités en dehors de la classe ou comme autre enrichissement.\n\n**L'envers du décor**\n\nLorsque vous partagez un lien vers votre histoire, vous partagez également tout le code qui se cache derrière. Ceci est un excellent moyen pour les élèves d'apprendre des uns des autres.\n\n-   Publiez des liens vers des histoires terminées en ligne.\n    -   Créez également votre propre histoire à partager !\n-   Lorsque les élèves vont visiter un lien, demandez-leur de cliquer sur la touche « Comment ça marche » pour voir le code derrière l'histoire.\n-   Discutez en groupe des différentes façons dont vos camarades de classe ont codé leurs histoires.\n    -   Qu'est-ce qui vous a surpris ?\n    -   Qu'aimeriez-vous essayer ?\n-   Choisissez l'histoire de quelqu'un d'autre et cliquez sur « Remixer » pour continuer. (Ne vous inquiétez pas, l'histoire originale sera en sécurité.)"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "Installer la scène",
-          "description": "Accueillez les élèves en classe et présentez très brièvement l'activité de la journée. "
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "Au cours de cette activité, vous allez vous amuser à créer un monde interactif avec des personnages amusants que l'on appelle des sprites. Vous pourrez les faire parler à l'aide de bulles, comme dans une bande dessinée ou un roman graphique, et vous apprendrez à les faire réagir automatiquement lorsque vous ou quelqu'un d'autre clique sur eux.\n\nAujourd'hui, vous allez vous familiariser avec la programmation en utilisant les « code », c'est-à-dire un ensemble d'instructions qu'un ordinateur peut comprendre. Lorsque vous écrivez pour raconter une histoire, vous devez réfléchir soigneusement aux mots que vous utilisez. Lorsque vous programmez avec des codes, vous devez réfléchir soigneusement aux instructions que vous donnez à l'ordinateur.",
-          "tips": [
-            "Il est préférable de consacrer très peu de temps à la phase d'introduction de l'Heure du code. En particulier avec les jeunes apprenants, il est préférable de se lancer aussi vite que possible."
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "Soutien général",
-          "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n- Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme][0] pour suivre le tutoriel.  \n\n- Lisez les instructions :** Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png » style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n- Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": "Bonjour tout le monde !"
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Si un groupe ou un élève termine tôt, encouragez-le à poursuivre la réalisation de son projet au cours du dernier module. Si les élèves ne savent pas quoi faire d'autre, vous pouvez les inciter à poser des questions :\n\n- Quels autres sprites pourriez-vous ajouter à votre projet ?\n- Avez-vous consulté la bibliothèque de costumes ou essayé de dessiner votre propre costume de sprites ?\n- Que pourriez-vous faire dire d'autre à vos sprites ?\n- Que devraient faire vos sprites lorsqu'on clique dessus ?\n- Invitez les élèves à partager leurs idées et à apprendre les uns des autres. Ils peuvent également essayer un autre tutoriel en visitant [code.org/learn][0]."
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Réflexion",
-          "description": "#### Résumé\n\nDemandez aux élèves de réfléchir sur les activités de la journée. Qu'ont-ils appris sur le codage ? Les sprites ? Les événements ?\n\nQue pensent-ils de l'informatique et du codage après avoir passé une heure à les explorer ?\n\n#### Prochaines étapes\n\nFaites savoir aux élèves que s'ils ont apprécié l'activité d'aujourd'hui, ils ont de nombreuses possibilités pour continuer à coder. Visitez le site [Connexions CS][0] pour trouver des idées sur la façon d'intégrer l'informatique à d'autres matières ou pour en savoir plus sur nos [offres de cours destinées aux élèves du primaire][1]."
-        },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
             "\\*\\*Les étapes suivantes sont également traitées dans une série de [r code_org_how-to_videos/csd/2022] disponibles sur le site Web de soutien aux enseignants de Code.org. Vous pouvez décider de regarder ces vidéos avant de lire les instructions ci-dessous."
@@ -22897,7 +22873,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -22912,7 +22903,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -22927,7 +22928,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -22938,7 +22954,7 @@
           ]
         },
         "9861853d-f4bb-4d00-a1e2-49c860164ac2": {
-          "name": "Pensez-y",
+          "name": "Réfléchissons-y",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Think About It »"
         },
         "1f4fe839-ac91-45d7-a7c3-741750897864": {
@@ -22999,7 +23015,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Discuter »\n\n**Discuter** : \n\n-   _Nommez certains animaux qui vivent dans notre État._ \n-   \\_Quels sont les défis auxquels ils sont confrontés dans leur environnement actuel ? \\_ \n-   \\_Si nous avions eu une machine à voyager dans le temps et que nous avions rendu visite à ces animaux dans 1 000 ans, comment auraient-ils pu s'adapter pour survivre à ces menaces ? \\_\n\n**Objectif de la discussion** : Le but de cette courte discussion est d'établir un lien avec les animaux que les élèves ont vus dans leur environnement local. Au cours de cette discussion, les élèves seront en mesure d'expliquer que les animaux changent pour survivre. La survie peut consister à allonger le cou pour atteindre la nourriture, à changer de couleur de fourrure pour échapper aux prédateurs, à déménager dans des climats plus hospitaliers ou à se rassembler en groupe. "
         },
         "a4d9b9b3-742d-4389-9e89-f1a51d709361": {
-          "description": "Ce module est une excellente introduction à l'informatique sous l'angle de la science. Voici quelques options pour continuer à en apprendre davantage sur les concepts CS présentés dans ce module. Nous vous recommandons de poursuivre ces extensions après avoir terminé la leçon 3 de ce module. "
+          "description": "Ce module est une excellente introduction à l'informatique au travers du prisme de la science. Voici quelques options pour continuer à en apprendre davantage sur les notions d'informatique présentées dans ce module. Nous conseillons de poursuivre ces leçons supplémentaires après avoir terminé la leçon 3 de ce module. "
         },
         "6829c72f-0868-4e1e-98ad-979b6b52effd": {
           "tips": [
@@ -23007,11 +23023,11 @@
           ]
         },
         "f8b819ac-8167-4a55-8c10-fa7febe38b15": {
-          "name": "Pensez-y",
+          "name": "Réfléchissons-y",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Think About It » \n\n**Procédez comme suit :** Lisez les deux questions à haute voix. Permettez aux élèves de 2 à 4 minutes pour réfléchir ou écrire de façon autonome.\n\n**Invite :** \n\n-   \\_Que font ces animaux ? \\_\n-   \\_Qu'est-ce que les photos ont en commun ? \\_\n\n**Objectif** : Les élèves devraient commencer à remarquer que les deux photos montrent des animaux se déplaçant en groupe. C'est un comportement de survie ! "
         },
         "1fb909c3-a900-42a6-97b0-3595ad3a9301": {
-          "name": "Tournez et parlez",
+          "name": "Discuter en binômes puis partager",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Turn & Talk »\n\n**Discuter :** \n\n-   \\_Pourquoi ce banc de sardines agit-il ainsi ? \\_\n\n**Objectifs de la discussion :** Les élèves devraient expliquer pourquoi le nombre fait la force. Cela peut inclure des informations sur la petite taille des sardines, sur la facilité avec laquelle il serait possible d'attraper une sardine seule, sur la façon dont ce comportement d'essaimage perturbe les prédateurs et sur le fait qu'il y a moins de risques d'être mangés ou capturés lorsqu'ils pullulent.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Science et codage »"
         },
         "6b6d4e60-10fe-47e4-a5d5-67713f67ca3c": {
@@ -23057,7 +23073,7 @@
           "description": "Bravo, codeurs !\n\nLa prochaine fois, nous apprendrons à modifier les comportements et à créer les nôtres. À la fin de la leçon suivante, vous devrez relever le défi d'imaginer et de coder une nouvelle adaptation animale !"
         },
         "3f4b6cf2-180b-48f8-8db4-d6fec0b3b3cb": {
-          "description": "Ce module est une excellente introduction à l'informatique sous l'angle de la science. Voici quelques options pour continuer à en apprendre davantage sur les concepts CS présentés dans ce module. Nous vous recommandons de poursuivre ces extensions après avoir terminé la leçon 3 de ce module. "
+          "description": "Ce module est une excellente introduction à l'informatique au travers du prisme de la science. Voici quelques options pour continuer à en apprendre davantage sur les notions d'informatique présentées dans ce module. Nous conseillons de poursuivre ces leçons supplémentaires après avoir terminé la leçon 3 de ce module. "
         },
         "84ab8f28-b727-4b06-b5a8-ffed92d44877": {
           "tips": [
@@ -23103,7 +23119,7 @@
           "description": "Bravo, codeurs !\nVous avez beaucoup appris sur les adaptations des animaux pour survivre ! "
         },
         "1ed09ab6-cec1-4783-acea-f30a60c1a688": {
-          "description": "Ce module est une excellente introduction à l'informatique sous l'angle de la science. Voici quelques options pour continuer à en apprendre davantage sur les concepts CS présentés dans ce module. Nous vous recommandons de poursuivre ces extensions après avoir terminé la leçon 3 de ce module. "
+          "description": "Ce module est une excellente introduction à l'informatique au travers du prisme de la science. Voici quelques options pour continuer à en apprendre davantage sur les notions d'informatique présentées dans ce module. Nous conseillons de poursuivre ces leçons supplémentaires après avoir terminé la leçon 3 de ce module. "
         },
         "344490db-b576-434e-b89d-94c93ed0a957": {
           "tips": [
@@ -23319,215 +23335,226 @@
         },
         "0698034d-f421-4962-8bb5-63e351454c9a": {
           "tips": [
-            "**Contenu scientifique :** Les élèves travailleront avec un écosystème de vie marine dans les leçons 1 et 2. Pour vous familiariser avec cet écosystème, nous vous recommandons cette vidéo <a href=\"https://www.youtube.com/watch?v=8adtdg0N2-g\" target=\"_blank\">sur les animaux marins</a> (9 h 42 minutes).\n\n**Contenu informatique :** Dans ce module, les étudiants apprendront de nouveaux concepts de codage qui peuvent être difficiles pour les nouveaux étudiants en informatique. Si les étudiants ne connaissent pas le Sprite Lab de Code.org, nous recommandons d'essayer <a href=\"https://studio.code.org/s/coursee-2022/lessons/3\" target=\"_blank\">Swimming Fish with Sprite Lab</a> (55 minutes) pour une introduction de base à l'outil. \n\nCe module utilise également un concept CS avancé appelé instructions conditionnelles. Les élèves apprennent ce concept de manière schaffolée, mais certains d'entre eux pourraient avoir intérêt à participer d'abord à cette activité d'introduction aux conditionnels débranchés : Conditionals with Cards (50 <a href=\"https://studio.code.org/s/coursed-2022/lessons/12\" target=\"_blank\">minutes).</a>"
+            "**Contenu scientifique :** Les élèves travailleront avec un écosystème de vie marine dans les leçons 1 et 2. Pour se familiariser avec cet écosystème, nous vous recommandons  <a href=\"https://www.youtube.com/watch?v=8adtdg0N2-g\" target=\"_blank\">cette vidéo sur les animaux marins</a> (9 minutes 42).\n\n**Contenu informatique :** Dans ce module, les élèves apprendront de nouveaux concepts de codage qui peuvent être difficiles pour les élèves nouveaux en informatique. Si vos élèves ne connaissent pas le Labo des Sprites de Code.org, nous vous conseillons de leur faire essayer l'activité <a href=\"https://studio.code.org/s/coursee-2022/lessons/3\" target=\"_blank\">Poissons qui Nagent avec le Labo des Sprites</a> (55 minutes) pour une introduction de base à l'outil. \n\nCe module utilise également un concept informatique avancé qu'on appelle les « instructions conditionnelles ». Les élèves apprendront ce concept dans le cadre du soutien d'un échafaudage pédagogique, mais certains d'entre eux auront peut-être plutôt intérêt à participer d'abord à l'activité débranchée d'introduction aux instructions conditionnelles suivante : <a href=\"https://studio.code.org/s/coursed-2022/lessons/12\" target=\"_blank\">Les instructions conditionnelles avec des cartes</a> (50 minutes)."
           ]
         },
         "dfb9f773-cb0e-44b8-b4a9-933c50bdcac0": {
-          "name": "Pensez-y",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Discussion »\n\n**Discuter** : \n\n-   \\_Quelles différences remarquez-vous entre les deux photos ? \\_ \n-   \\_Quelle image montre un écosystème équilibré ? Quelles preuves voyez-vous ? \\_ \n\n**Faites-ça** : Montrez aux élèves les photos du diaporama ou trouvez votre propre exemple ou non d'écosystème équilibré.\n\n**Objectif de la discussion** : Les élèves se rendront compte qu'un écosystème équilibré est lumineux, coloré et plein de vie, mais qu'un écosystème déséquilibré est morne et mort. Les preuves peuvent inclure plusieurs types de poissons nageant, des coraux vivants aux couleurs vives, des poissons nageant en groupe et des eaux aux couleurs vives dans un écosystème sain et équilibré. Les preuves de la mauvaise santé de l'écosystème peuvent inclure le manque de poissons, des coraux vieux et morts, un vieux filet de pêche, etc."
+          "name": "Réfléchissons-y",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Discussion »\n\n**Faire discuter** : \n\n-   \\_Quelles différences remarquez-vous entre les deux photos ? \\_ \n-   \\_Quelle image montre un écosystème équilibré ? Sur quelles preuves peut-on s'appuyer ? \\_ \n\n**Faites-ceci** : Montrez aux élèves les photos du diaporama ou trouvez votre propre exemple et contre-exemple d'un écosystème équilibré.\n\n**Objectif de la discussion** : Les élèves se rendront compte qu'un écosystème équilibré est radieux, vif et plein de vie, mais qu'un écosystème déséquilibré est morne et mort. Pour les preuves à l'appui, il peut notamment s'agir du fait qu'il y ait plusieurs types de poissons qui nagent, des coraux vivants aux couleurs vives, des poissons qui nagent en groupe ou encore des eaux aux couleurs vives au sein d'un écosystème sain et équilibré. Pour ce qui est des preuves qu'un écosytème est en mauvaise santé, il peut s'agir : d'un manque de poissons, de coraux vieux et morts, d'un vieux filet de pêche, etc."
         },
         "eaf174f1-bc53-496f-aa5c-32ba79886c44": {
           "tips": [
-            "Pour renforcer l'engagement et faire en sorte que toutes les voix soient entendues, donnez aux élèves le temps de réfléchir ou même de noter quelques idées avant de les partager avec l'ensemble du groupe. Envisagez d'utiliser une stratégie de réflexion, de jumelage et de partage. Permettez aux étudiants ayant la même langue maternelle de discuter dans leur langue maternelle. Essayez de faire appel aux élèves en utilisant un système de sélection aléatoire afin d'éviter de prioriser uniquement les voix des étudiants ayant une expérience directe de la visite d'écosystèmes marins."
+            "Pour booster leur implication et assurer la participation de tout un chacun, donnez aux élèves le temps de réfléchir ou même de noter quelques idées avant qu'il ne les partagent avec l'ensemble du groupe. Envisagez d'utiliser une stratégie de les faire d'abord réfléchir, puis de les mettre en binômes et de les faire partager leurs idées. Permettez aux élèves ayant la même langue maternelle d'en parler entre eux dans leur langue maternelle. Essayez de faire appel aux élèves en utilisant un système de sélection aléatoire afin d'éviter de prioriser les seules voix des élèves ayant déjà fait l'expérience directe de la visite d'un écosystème marin."
           ]
         },
         "a58fb61c-3be3-44e1-801a-e33bbfc94649": {
-          "description": "La première photo montre de nombreux organismes vivant et se soutenant mutuellement. Il y a des poissons de différentes tailles qui nagent, le corail est fleuri et brillant, et vous pouvez même voir des algues dans l'eau. La deuxième photo a été prise après que cet écosystème aquatique soit tombé malade et soit mort. Il n'y a pas de poissons, de coraux ou de plantes qui poussent. Comment pensez-vous que cela s'est produit ? Pensez-vous que l'ensemble du système est mort en même temps ou au fil du temps ? Gardez ces questions et vos idées à l'esprit lorsque vous programmez votre simulation d'écosystème aquatique."
+          "description": "La première photo montre de nombreux organismes vivant et s'appuyant les uns sur les autres. Il y a des poissons de différentes tailles qui nagent, le corail est brillant et épanoui, et on voit même des algues dans l'eau. La deuxième photo a été prise une fois que cet écosystème marin soit tombé malade et en ai péri. Il n'y a pas de poissons, de coraux ou de plantes qui poussent. Comment pensez-vous que cela se soit produit ? Pensez-vous que l'ensemble du système soit mort en même temps ou que cela se soit passé au gré du temps ? Gardez ces questions et vos idées à l'esprit lorsque vous programmez votre simulation d'écosystème marin."
         },
         "d747ca6b-8ecd-4e58-9e73-36965c1f336c": {
-          "name": "Simulation d'écosystèmes aquatiques - Renforcement des compétences",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Aperçu du projet »"
+          "name": "Simulation d'écosystèmes aquatiques - Développement des compétences",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Aperçu du projet »"
         },
         "cfa85b63-4071-4af0-90ed-cd1e30c70604": {
-          "description": "Dans la leçon de codage d'aujourd'hui, vous allez créer une simulation d'un écosystème. Vous allez commencer par ajouter un code pour représenter la chaîne alimentaire : les poissons mangent les algues et les humains attrapent le poisson en bateau. Mais l'écosystème devient déséquilibré parce que les humains capturent trop de poissons dans l'eau. Lorsqu'une espèce d'un écosystème est supprimée, il y a un **effet** sur le reste des organismes du système. Dans cette simulation, les poissons mangent les algues à un rythme normal. Mais lorsque trop de poissons sont capturés et retirés de l'écosystème, les algues envahissent la végétation, ce qui nuit au récif corallien."
+          "description": "Dans la leçon de codage d'aujourd'hui, vous allez créer une simulation d'écosystème. Vous allez commencer par ajouter du code qui recréera la chaîne alimentaire : les poissons mangent les algues et les humains en bateau pêchent les poissons. Mais l'écosystème devient déséquilibré parce que les humains attrapent un nombre trop élevé de poissons dans l'eau. Lorsqu'on enlève une espèce d'un écosystème, il y a un **effet** sur le reste des organismes du système. Dans cette simulation, les poissons mangent les algues à un rythme normal. Mais lorsque trop de poissons sont capturés, et donc ôtés à l'écosystème, les algues envahissent l'environnement, ce qui a un impact négatif sur le récif corallien."
         },
         "c8103731-20b1-4450-bf84-5a7f726c3984": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Vidéo sur les écosystèmes »\n\n**Fais** : Afficher la vidéo d'introduction à l'ensemble de la classe"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Vidéo sur les écosystèmes »\n\n**Faites-ceci** : Passez la vidéo d'introduction devant l'ensemble de la classe",
+          "progression_name": "Vidéo : Les écosystèmes"
         },
         "37930866-a6ed-47a0-9be5-f009204e8950": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 2 - Tester la simulation »\n\n**Faites-ça** : Demandez aux élèves d'essayer la simulation inachevée sur leur propre ordinateur. Posez des questions d'orientation pour les aider à remarquer ce qui manque dans la simulation."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 2 - Tester la simulation »\n\n**Faites-ceci** : Demandez aux élèves d'essayer à la simulation inachevée sur leurs propres ordinateurs. Posez des questions pour les orienter et les aider à remarquer ce qui manque dans la simulation.",
+          "progression_name": "Simulation d'écosystèmes"
         },
         "7782afb7-cd17-487c-9b04-547c5476271b": {
-          "description": "**Questions directives** :\n\n-   Qu'est-ce qui change à l'écran ?\n-   Des plantes et des animaux sont-ils ajoutés ? Supprimé ?\n-   Pourquoi y a-t-il tant d'algues ?\n-   À quoi vous attendriez-vous lorsque le bateau touche le poisson ?\n-   S'agit-il d'un écosystème équilibré ?\n-   La chaîne alimentaire est-elle en action ?\n-   Qu'est-ce qui pourrait améliorer cette simulation ? \n\n**Objectif de la discussion** : Les élèves reconnaîtront qu'il y a beaucoup d'algues parce que les poissons ne les mangent pas. De plus, le bateau ne pêche pas le poisson. La simulation serait meilleure si elle modélisait la chaîne alimentaire : les poissons mangent les agales et les passagers du bateau mangent le poisson. "
+          "description": "**Questions directrices** :\n\n-   Qu'est-ce qui change à l'écran ?\n-   Voit-on plus de plantes ou d'animaux apparaître ? Moins ? \n-   Pourquoi y a-t-il autant d'algues ?\n-   Qu'imaginez-vous qu'ils se passera quand le bateau touche le poisson ?\n-   S'agit-il d'un écosystème équilibré ?\n-   La chaîne alimentaire est-elle à l'œuvre ?\n-   Qu'est-ce qui pourrait améliorer cette simulation ? \n\n**Objectif de la discussion** : Les élèves se rendront compte qu'il y a beaucoup d'algues parce que les poissons ne les mangent pas. Aussi, que ce n'est pas le bateau lui-même qui pêche les poissons. La simulation serait meilleure si elle recréait la chaîne alimentaire : les poissons mangent les algues et les gens sur le bateau mangent les poissons. "
         },
         "e554835c-b016-4b77-9ea3-2d792d88e4f6": {
           "tips": [
-            "-   Encouragez les élèves à lire et à relire les instructions en haut de chaque niveau. \n-   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Les élèves peuvent également cliquer sur cette icône de synthèse vocale pour entendre les instructions lues à haute voix.\n-   Les instructions peuvent être traduites dans différentes langues en bas à gauche de leur écran. \n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> Rappelez aux élèves de chercher des indices à côté du crabe avec des détails plus explicites sur la façon de réussir le niveau.\n-   Envisagez de suspendre le cours à quelques reprises pendant la leçon pour discuter avec un voisin de l'adaptation animale qu'il modélise. \n-   Aidez les étudiants à comprendre que le débogage (détection et correction d'erreurs) est une partie très courante du processus de codage. Célébrez la détermination, l'esprit critique et le souci du détail. "
+            "-   Encouragez les élèves à lire et à relire les instructions en haut de chaque niveau. \n-   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Les élèves peuvent également cliquer sur cette icône de synthèse vocale pour entendre les instructions lues à haute voix.\n-   Les instructions peuvent être traduites vers différentes langues en bas à gauche de leur écran. \n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> Rappelez aux élèves d'aller chercher des indices à côté du crabe avec des détails plus clairs sur comment réussir le niveau.\n-   Envisagez de suspendre le cours à quelques reprises pendant la leçon pour les faire discuter avec un voisin de l'adaptation animale sur laquelle ils travaillent.\n-   Aidez les élèves à comprendre que le débogage (la détection et la correction d'erreurs) fait pleinement partie du processus de codage. Fêtez la détermination, l'esprit critique et le souci du détail.  "
           ]
         },
         "4965bd27-8ecf-4ca5-9c82-4ecabe2a6ad0": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveaux 3 à 5 - Coder la chaîne alimentaire »\n\n**Faites-ça** : Demandez aux élèves de terminer les niveaux 3 à 5 de manière indépendante pour configurer l'écosystème aquatique. Ils ajouteront des blocs d'événements à la simulation pour inciter les poissons à manger les algues et à les retirer lorsqu'ils toucheront le bateau. \n\n**Niveau 3** - Les élèves trouvent le bloc d'événement « Quand le poisson touche une algue » et ajoutent un bloc « mange des algues » sous l'événement. \n\n**Niveau 4** - Les élèves trouvent le bloc d'événement « Quand un bateau touche un poisson » et ajoutent un bloc « attrape un poisson » sous l'événement.\n\n**Niveau 5** - Vous pouvez utiliser ce niveau correspondant pour vérifier votre compréhension et pour renforcer l'apprentissage aux niveaux 3 et 4. Les élèves font glisser l'image du code correspondant au GIF. Un GIF montre le poisson mangeant des algues et l'autre le bateau en train de pêcher. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveaux 3 à 5 - Coder la chaîne alimentaire »\n\n**Faites-ceci** : Demandez aux élèves de terminer les niveaux 3 à 5 de manière indépendante pour configurer l'écosystème marin. Ils ajouteront des blocs événement à la simulation pour inciter les poissons à manger les algues et pour les soutirer à l'eau lorsqu'ils touchent le bateau. \n\n**Niveau 3** - Les élèves vont chercher le bloc événement « Quand le poisson touche l'algue » et ajouter un bloc « mange l'objet : algue » en dessous de l'événement. \n\n**Niveau 4** - Les élèves vont chercher le bloc événement « Quand un bateau touche un poisson » et ajouter un bloc « attrape l'objet : poisson » en dessous de l'événement.\n\n**Niveau 5** -  Vous pouevez utiliser ce niveau de jeu d'association pour vérifier la compréhension et pour renforcer les acquis des niveaux 3 et 4. Les élèves font glisser l'image du code vers le GIF qui lui correspond. L'un des GIF montre le poisson qui mange des algues et l'autre le bateau en train de faire la pêche.",
+          "progression_name": "Vidéo : Les écosystèmes"
         },
         "d57207f8-fc64-4d78-a47c-b7030eb457f0": {
-          "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Concept clé »\n\n**Faites-ça** : Dès que quelques élèves ont terminé le niveau 5, réunissez toute la classe pour prévisualiser le niveau 6. Lisez les scénarios de cause à effet d'une trop grande quantité, d'une trop faible quantité ou d'une quantité suffisante d'algues. Participez à la conversation dès l'échauffement pour rappeler aux élèves le déséquilibre des écosystèmes. Dans cette simulation, la quantité d'algues provoque un déséquilibre du système. \n\n-   **Condition** - Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action.\n\n-   **Conditionnels** - Instructions qui ne s'exécutent que sous certaines conditions.\n\n**Objectif de la discussion** : Les élèves comprendront que les ordinateurs peuvent vérifier si quelque chose est vrai ou faux et « décider » de l'action à exécuter en fonction de la réponse."
+          "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Concept clé »\n\n**Faites-ceci** : Dès que quelques élèves ont terminé le niveau 5, réunissez toute la classe pour prévisualiser le niveau 6. Lisez les scénarios décrivant le lien de cause à effet lorsqu'il y a trop, pas assez, ou juste assez d'algues. Intégrez dès l'échauffement la notion de  déséquilibre des écosystèmes à la conversation pour que vos élèves l'aient à l'esprit. Dans cette simulation, c'est la quantité d'algues qui provoque un déséquilibre du système. \n\n-   **Condition** - Une chose qu'un programme vérifie pour voir si elle est véridique avant d'autoriser une action.\n\n-   **Instructions conditionnelles** - Instructions qui ne s'exécutent que sous certaines conditions.\n\n**Objectif de la discussion** : Les élèves comprendront que les ordinateurs peuvent vérifier si quelque chose est vrai ou faux et « décider » de l'action à exécuter en fonction de la réponse."
         },
         "cddd2711-7958-4f87-ad00-3f5fbfdf2e0f": {
-          "description": "Les déclarations conditionnelles en informatique sont comme des déclarations « si-alors » qui indiquent à l'ordinateur ce qu'il doit faire dans certaines situations. Par exemple, si l'utilisateur appuie sur la touche d'augmentation du volume, le son de l'ordinateur sera plus fort. Dans les écosystèmes marins, il existe certaines relations de cause à effet et nous pouvons utiliser l'informatique pour les vérifier. \n\nPar exemple, s'il y a **trop d'algues**, cela empêche le corail de recevoir suffisamment de lumière solaire et provoque sa mort. Par contre, s'il y a **trop peu d'algues**, les poissons qui mangent des algues partiront faute de nourriture. Mais s'il y a **juste la bonne quantité d'algues**, l'écosystème sera en bonne santé et tous les êtres vivants (algues, poissons, coraux, etc.) pourront prospérer.\n\nEn informatique, nous utilisons des instructions conditionnelles pour indiquer à l'ordinateur ce qu'il doit faire en fonction de certaines conditions ou situations. Tout comme les êtres vivants d'un écosystème sont affectés par différentes causes et effets, nous pouvons programmer notre écosystème pour qu'il ait des résultats différents s'il y a trop, trop peu ou juste assez d'une certaine ressource. "
+          "description": "Les expressions conditionnelles en informatique sont comme des propositions « si-alors » qui indiquent à l'ordinateur ce qu'il doit faire dans certaines situations. Par exemple, si l'utilisateur appuie sur la touche qui augmente le volume, alors le son de l'ordinateur sera plus fort. Dans les écosystèmes marins, il existe certaines relations de cause à effet, et on peut utiliser l'informatique pour vérifier cela. \n\nPar exemple, s'il y a **trop d'algues**, cela empêche le corail de recevoir suffisamment de soleil et entraîne sa mort. Par contre, s'il y a **trop peu d'algues**, les poissons mangeurs d'algues s'en iront, faute de nourriture. Mais s'il y a **juste la bonne quantité d'algues**, l'écosystème sera en bonne santé et tous les êtres vivants (algues, poissons, coraux, etc.) pourront s'épanouir.\n\nEn informatique, on se sert d'instructions conditionnelles pour indiquer à l'ordinateur ce qu'il doit faire en fonction de certaines conditions ou situations. De la même manière que les êtres vivants dans un écosystème sont impactés par diverses causes et leurs conséquences, nous, on peut aussi programmer notre écosystème pour que différents résultats se produisent selon s'il y a trop, trop peu ou juste assez d'une ressource donnée."
         },
         "2276d309-5698-4ed6-a7c5-5bda987e7112": {
-          "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Cause et effet des niveaux 6 à 10 »\n\n**Faites-ça** : Demandez aux élèves de terminer les niveaux 6 à 10 indépendamment pour définir les conditions de cause à effet. Ils en ajouteront une condition à la fois pour vérifier la quantité d'algues présentes dans l'eau. \n\n**Niveau 6** - Regardez attentivement les photos de l'écosystème et le code qui représente la situation.\n\n**Niveau 7** - Les élèves ajouteront un bloc conditionnel qui vérifie s'il y a **trop d'algues**. Lorsque la condition est vraie, l'ordinateur exécute le code à l'intérieur du bloc conditionnel. Dans ce cas, en cas de surpêche, il n'y a pas assez de poissons pour manger toutes les algues. S'il y a trop d'algues, le corail sain change de costume pour devenir un corail malade.\n\n**Niveau 8** - Les élèves ajouteront une deuxième déclaration conditionnelle qui vérifie s'il y a **trop peu d'algues**. Lorsque la condition est vraie, l'ordinateur exécute le code à l'intérieur du bloc conditionnel. Cette fois, le poisson arrêtera tout, puis commencera à quitter la zone. Ces deux blocs sont collés ensemble pour aider les élèves à les imbriquer facilement dans le bloc conditionnel.\n\n**Niveau 9** - Les élèves ajoutent maintenant une dernière déclaration conditionnelle qui vérifie si la quantité d' **algues est correcte**. Lorsque c'est vrai, le corail change de costume, passant de malade à sain.\n\n**Niveau 10** - Il s'agit d'un niveau de correspondance similaire au niveau 5 qui peut être utilisé pour vérifier la compréhension. C'est également l'occasion de renforcer la façon dont les trois blocs conditionnels vérifient la quantité d'algues (cause) et modifient l'écosystème en conséquence (effet). "
+          "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveaux 6 à 10 : Cause et effet »\n\n**Faites-ceci** : Demandez aux élèves de terminer les niveaux 6 à 10 seuls afin qu'ils configurent les instructions conditionnelles relatives au lien de cause à effet. Il leur faudra ajouter les instructions conditionnelles qui vérifient la quantité d'algues présentes dans l'eau une à la fois. \n\n**Niveau 6** - Regardez attentivement les photos de l'écosystème et le code qui correspond à la situation.\n\n**Niveau 7** - Les élèves ajouteront un bloc à instruction conditionnelle qui vérifie s'il y a **trop d'algues**. Si la condition s'avère être vraie, l'ordinateur exécutera le code qui se trouve dans le bloc à instruction conditionnelle. Dans ce cas, celui d'une instance de surpêche, il n'y a pas assez de poissons pour manger toutes les algues. S'il y a trop d'algues, le corail en bonne santé change de costume, et devient un corail malade.\n\n**Niveau 8** - Les élèves ajouteront une deuxième instruction conditionnelle qui vérifie s'il y a **trop peu d'algues**. Si la condition est s'avère être vraie, l'ordinateur exécutera le code à l'intérieur du bloc à instruction conditionnelle. Cette fois, le poisson arrêtera tout, puis commencera à quitter la zone. Ces deux blocs sont collés ensemble pour aider les élèves à les imbriquer facilement au sein du bloc à instruction conditionnelle.\n\n**Niveau 9** - Les élèves ajouteront maintenant une dernière expression conditionnelle qui vérifie si la quantité d' **algues est tout juste parfaite**. Lorsque cette condition est s'avère être vraie, le corail changera de costume, et passera d'un état malade à un état en bonne santé.\n\n**Niveau 10** - Il s'agit d'un niveau de correspondance similaire au niveau 5, qui peut être utilisé pour vérifier la compréhension des élèves. C'est également l'occasion renforcer la manière dont les trois blocs à instructions conditionnelles vérifient la quantité d'algues (cause) et modifient l'écosystème en conséquence (effet)."
         },
         "e275f8a3-27ab-4dd2-8a83-f9a359a4136f": {
           "tips": [
-            "Dans les niveaux 7 à 9, les élèves reçoivent le code correct de leurs niveaux précédents. Ils ajouteront quelques nouveaux blocs à la fin du code de démarrage de chaque niveau pour créer la simulation. \nLes déclarations conditionnelles peuvent être un concept délicat en informatique. Si vous avez le temps, cette activité <a href=\"https://code.org/hourofcode/unplugged-conditionals-with-cards\" target=\"_blank\">Conditionals with Cards</a> Unplugged peut vous aider à mieux comprendre. Encouragez également les élèves à lire leur code à haute voix pour les aider à comprendre l'effet des blocages conditionnels dans chaque situation. "
+            "Dans les niveaux 7 à 9, on donne aux élèves le bon code pour les niveaux précédents. Ils ajouteront quelques nouveaux blocs à la fin du code de départ de chaque niveau pour créer la simulation. \nLes déclarations conditionnelles peuvent être une notion délicate en informatique. Si vous avez le temps, l'activité débranchée <a href=\"https://code.org/hourofcode/unplugged-conditionals-with-cards\" target=\"_blank\">Les instructions conditionnelles avec des cartes</a> peut aider à mieux la faire comprendre. Encouragez également les élèves à énoncer leur code à voix-haute pour les aider à comprendre l'effet des blocs conditionnels dans chaque instance."
           ],
-          "progression_name": "Équilibrer votre écosystème"
+          "progression_name": "Garde en équilibre son écosystème"
         },
         "09821d1f-e78a-404c-9576-4dd20147b4d9": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 11 - Maintenant, vous avez le contrôle »\n\n**Faites-le** : avec le temps restant, permettez aux élèves de modifier eux-mêmes la simulation entièrement codée. Les instructions incluent des instructions pour donner aux élèves une idée de la façon de modifier leur code.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 11 - Maintenant, à vous de jouer »\n\n**Faites-ceci** : Avec le temps qui reste, permettez aux élèves de modifier eux-mêmes la simulation entièrement codée. Les instructions comprennent des amorces afin de donner aux élèves une idée de comment ils peuvent modifier leur code.",
           "progression_name": "Développement des Compétences"
         },
         "a5338484-d7e1-48a3-9add-f4f7cd788e67": {
           "tips": [
-            "Le niveau 11 serait un excellent endroit pour les étudiants qui souhaitent suivre un programme de jumelage. Vous pouvez leur montrer [cette vidéo] comment[0] effectuer un programme de jumelage. Demandez aux élèves de former des équipes et d'utiliser un ordinateur pour essayer de modifier les valeurs tout au long de la simulation. Travailler avec un partenaire favorisera la conversation et encouragera les élèves à expliquer leurs observations et leurs réflexions."
+            "Le niveau 11 est un excellent niveau pour faire programmer en binôme les élèves. Vous pouvez leur montrer [cette vidéo](https://www.youtube.com/watch?v=vgkahOzFH2Q) sur comment faire de la programmation en binôme. Demandez aux élèves de se mettre en binômes et de se mettre à un ordinateur pour tester ensemble des modifications de valeurs tout au long de la simulation. Les faire travailler avec un partenaire favorisera le dialogue et poussera les élèves à expliquer leurs observations et leur pensée. "
           ],
           "progression_name": "Jeu libre"
         },
         "a73966de-b55e-4bba-af9c-fc9c6b5e8828": {
-          "description": "Essayez de changer un chiffre à la fois et prédisez ce à quoi vous vous attendez avant de cliquer sur le bouton Exécuter. Expliquez ce qui a changé dans le programme après avoir changé les chiffres. Après avoir expérimenté un peu, essayez de répondre aux questions suivantes :\n\n-   Que se passe-t-il si votre écosystème commence par un grand nombre de poissons ?\n-   Que se passe-t-il s'il faut plus ou moins de temps pour que les algues repoussent ?\n-   Sinon, comment pouvez-vous contrôler le nombre de nouvelles algues qui poussent ?"
+          "description": "Essayez en changeant un nombre à la fois et prévoyez ce à quoi vous vous attendez avant de cliquer sur le bouton Exécuter. Expliquez ce qui a changé dans le programme après avoir changé les nombres. Après avoir joué un peu avec, essayez de répondre aux questions suivantes :\n\n-   Que se passe-t-il si mon écosystème a un grand nombre de poissons au début ?\n-   Que se passe-t-il s'il faut plus ou moins de temps aux algues pour repousser ?\n-   Quelles autres manières y a-t-il de contrôler le nombre de nouvelles algues qui poussent ?"
         },
         "7612d108-4748-4dcd-bec1-f3f812ffdb23": {
           "name": "Revoir",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Révision »\n\n**Discuter** : \n\n-   À quoi sert la vérification de l'énoncé conditionnel ?\n-   Si la condition est vraie, que se passe-t-il ? \n-   Que se passe-t-il si c'est faux ?\n\n**Objectif de la discussion** : Les élèves pourront vérifier s'il y a 10 corgis. Si l'affirmation est vraie, alors le lapin dit : « Youpi ! Il y a 10 corgis. » Si la déclaration est fausse, rien ne se passe. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Révision »\n\n**Discussion** : \n\n-   Que vérifie l'expression conditionnelle ?\n-   Si la condition est vraie, que se passe-t-il ? \n-   Que se passe-t-il si elle s'avère être fausse ?\n\n**Objectif de la discussion** : Les élèves pourront bien voir que l'expression conditionnelle vérifie s'il y a 10 corgis. Si l'énoncé s'avère être vrai, alors le lapin dira : « Youpi ! Il y a 10 corgis. » Si l'énoncé est faux, rien ne se passera. "
         },
         "a62557b9-907c-4a4f-aed3-c43c447de4b9": {
-          "name": "Cause et effet",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher « Montrez ce que vous savez ! » slide\n\n**Discuter** : utilisez des énoncés conditionnels pour expliquer les écosystèmes équilibrés et/ou déséquilibrés.\n\n**Objectif de la discussion** : Les élèves seront en mesure d'exprimer ce qu'ils ont appris sur les effets d'un organisme sur un autre dans un écosystème. "
+          "name": "Lien de cause à effet",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Montre ce que tu sais ! ».\n\n**Discussion** : Utilisez des expressions conditionnelles pour expliquer les écosystèmes équilibrés et/ou déséquilibrés.\n\n**Objectif de la discussion** : Les élèves seront en mesure d'exprimer ce qu'ils ont appris sur les effets d'un organisme sur un autre au sein d'un écosystème. "
         },
         "1cc29624-e2d1-4065-9043-e1c463b1da82": {
-          "description": "Nous avons appris à démontrer les causes et les effets dans un écosystème en utilisant du code ! Montrez ce que vous avez appris sur la façon dont les organismes de cet écosystème aquatique s'équilibrent et sur la façon dont la surpêche peut perturber cet équilibre. Remplissez les espaces de l'instruction conditionnelle : s'il y a \\*\\* \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_\\*\\* alors \\*\\* \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_\\*\\*. La banque de mots propose quelques options pour vous aider à démarrer, mais vous pouvez également utiliser d'autres mots dont vous avez besoin. \n\nPar exemple : s'il y a **trop d'algues** alors **le corail deviendra malsain**. S'il y a **trop peu de poissons pour manger les algues**, alors \\*\\*les algues prolifèreront."
+          "description": "On a appris à démontrer les liens de cause à effet au sein d'un écosystème grâce au code ! Montrez ce que vous avez appris sur la façon dont les organismes de cet écosystème marin s'équilibrent les uns les autres et sur comment la surpêche peut venir perturber cet équilibre. Remplissez les blancs de l'instruction conditionnelle : s'il y a \\*\\* \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_\\*\\* alors \\*\\* \\\\ \\_ \\\\ \\_ \\\\ \\_ \\\\ \\_\\*\\*. La banque de mots propose quelques options pour vous aider à démarrer, mais vous pouvez également utiliser d'autres mots dont vous avez besoin. \n\nPar exemple : s'il y a **trop d'algues** alors **le corail tombera malade**. S'il y a **trop peu de poissons pour manger les algues**, alors **les algues prolifèreront.**"
         },
         "b51610c6-1ebc-4df3-85f9-dda59538d1ab": {
-          "description": "**Faites-ça** : demandez aux élèves de noter leurs réponses sur des notes autocollantes, un journal, un formulaire Google ou un autre système de gestion de contenu utilisé dans votre classe. "
+          "description": "**Faites-ceci** : Demandez aux élèves de noter leurs réponses sur des pense-bêtes, dans un journal, dans un formulaire Google ou via un autre système de gestion de contenu que vous utilisez dans votre salle de classe. "
         },
         "128e04b7-6b97-4066-bd42-cd4b83e55b42": {
-          "description": "Ce module est une excellente introduction à l'informatique sous l'angle de la science. Voici quelques options pour continuer à en apprendre davantage sur les concepts CS présentés dans ce module. Nous vous recommandons de poursuivre ces extensions après avoir terminé la leçon 3 de ce module. "
+          "description": "Ce module est une excellente introduction à l'informatique au travers du prisme de la science. Voici quelques options pour continuer à en apprendre davantage sur les notions d'informatique présentées dans ce module. Nous conseillons de poursuivre ces leçons supplémentaires après avoir terminé la leçon 3 de ce module. "
         },
         "1f8ad863-3986-44fd-ac0f-11163feccdfd": {
           "tips": [
-            "**Contenu scientifique :**  \n\n-   Module   <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">CSC : Adaptations animales, leçons 1 à 3</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projet : Modélisation des cycles de vie dans Sprite Lab</a> \n-   <a href=\"https://code.org/oceans\" target=\"_blank\">AI for Oceans</a> \n\n**Concepts informatiques :**  \n\n-   Simulations :  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">simulation d'expériences</a> et d' <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">épidémies</a> \n-   Conditions : Minecraft <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\"></a> \n-   If/Else Conditionals : <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Abeille</a> \n-   Événements : soirée dansante <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\"></a> "
+            "**Contenu scientifique :**  \n\n-   <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">Module Connexions en Informatique : Adaptations animales, leçons 1 à 3</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projet : Modélisation des cycles de vie dans le Labo des Sprites</a> \n-   <a href=\"https://code.org/oceans\" target=\"_blank\">l'IA pour les océans</a> \n\n**Notions d'informatique :**  \n\n-   Simulations :  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">simulation d'expériences</a> et <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">d'épidémies</a> \n-   Instructions conditionnelles : <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\">Minecraft</a> \n-   Instructions conditionnelles « Si / Sinon » : <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">l'Abeille</a> \n-   Événements : <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Soirée Dansante</a> "
           ]
         },
         "fc7aef76-ffb9-430d-afaa-77525d8ab3b0": {
           "tips": [
-            "**Contenu scientifique** : Dans cette leçon, les élèves chercheront à trouver un équilibre entre la simulation de l'écosystème marin et les pratiques de pêche durables. Certaines de ces stratégies sont utilisées par les populations autochtones du littoral depuis des siècles. Voici quelques ressources pour aider les élèves à acquérir des connaissances de base : \n\n-   <a href=\"https://www.youtube.com/watch?v=WpKqXidmshc\" target=\"_blank\">Salmon Boy : A Legend of the Sechelt People</a> : L'histoire d'un garçon qui enseigne à son peuple la responsabilité et le respect envers le saumon afin d'assurer sa survie. \n\n-   Site Web   <a href=\"https://www.seagardens.net/#map\" target=\"_blank\">Storymap</a> : les peuples autochtones gèrent l'océan depuis des milliers d'années. Cette carte narrative interactive et « vivante » des jardins marins commence à synthétiser des informations sur la mariculture ancestrale dans l'océan Pacifique. \n\n**Informatique** : Cette leçon utilise brièvement les événements, les comportements et les conditions du code. Voici quelques ressources qui peuvent vous aider à renforcer ces concepts de codage si vous en avez le temps. \n\n-   <a href=\"https://studio.code.org/s/coursed-2022/lessons/6\" target=\"_blank\">Événements</a> dans Bounce (leçon de 50 minutes)"
+            "**Contenu scientifique** : Dans cette leçon, les élèves chercheront à ramener l'équilibre à la simulation d'écosystème marin en employant des pratiques de pêche durables. Certaines de ces stratégies sont employées par des populations indigènes côtières depuis des siècles. Voici quelques ressources pour aider les élèves à développer leurs connaissances en la matière : \n\n-   <a href=\"https://www.youtube.com/watch?v=WpKqXidmshc\" target=\"_blank\">Garçon-saumon : la légende du peuple Sechelt</a> : L'histoire d'un garçon qui enseigne à son peuple une attitude responsable et le respect envers les saumons afin d'assurer leur survie. \n\n-   <a href=\"https://www.seagardens.net/#map\" target=\"_blank\">Le site web Storymap</a> : Les peuples indigènes se font les gardiens de l'océan depuis des millénaires. Cette carte de récits interactive et « vivante » de jardins marins propose un début de synthèse au sujet des informations que l'on a sur la mariculture ancestrale dans l'océan Pacifique. \n\n**Informatique** : Cette leçon utilise au passage les événements, les comportements et les intstructions conditionnelles au sein du code. Voici une ressource qui vous permettra de renforcer ces notions de codage si vous en avez le temps : \n\n-   <a href=\"https://studio.code.org/s/coursed-2022/lessons/6\" target=\"_blank\">Les Événements</a> dans Bounce (leçon de 50 minutes)"
           ]
         },
         "b94ce22a-54d4-4d70-b8d1-a3f37e9c22ae": {
-          "name": "Lisez et discutez",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Lire et discuter »\n\n**Faites ça** : Fournissez aux élèves l'article Comprendre la surpêche <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">sous forme numérique ou imprimée.</a> Lisez l'article ensemble à haute voix, en prenant le temps d'aborder le nouveau vocabulaire nécessaire à votre classe. \n\n**Discute** : \n\n-   \\_Quel est le lien entre l'article et la simulation de surpêche que nous avons réalisée dans la leçon 1 ? \\_ \n-   \\_Comment pourrions-nous modifier le code pour équilibrer l'écosystème ? \\_\n\n**Objectif de la discussion** : Les élèves devraient comprendre le lien avec le déséquilibre de l'écosystème, en particulier s'il y a moins de poissons, si les algues prolifèrent et si le corail tombe malade. Demandez aux élèves de se référer au paragraphe de l'article intitulé « Dommages causés aux écosystèmes ». Les élèves peuvent également trouver plusieurs solutions au problème dans la section intitulée « Comment prévenir la surpêche ». Les élèves devraient réfléchir à la manière dont ils pourraient appliquer ces solutions à leur simulation codée.",
+          "name": "Lire et discuter",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Lire et discuter »\n\n**Faites-ceci** : Distribuez aux élèves l'article <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\" target=\"_blank\">Comprendre la surpêche</a> sous forme numérique ou imprimée. Lisez l'article ensemble à haute voix, en prenant le temps d'aborder le vocabulaire nouveau au besoin, en fonction de votre classe. \n\n**Discussion** : \n\n-   \\_Quel est le lien entre l'article et la simulation de surpêche que nous avons réalisée dans la leçon 1 ? \\_ \n-   \\_Comment pourrions-nous modifier le code pour équilibrer l'écosystème ? \\_\n\n**Objectif de la discussion** : Les élèves devraient faire le lien avec l'écosystème désiquilibré, notamment en ce que s'il y a moins de poissons, les algues prolifèrent et le corail tombe malade. Demandez aux élèves de se référer au paragraphe de l'article intitulé : « Dégâts causés aux écosystèmes ». Les élèves pourront également trouver plusieurs solutions au problème dans la section intitulée : « Comment prévenir la surpêche ». Les élèves devraient réfléchir à comment ils pourraient appliquer ces solutions à leur simulation codée.",
           "tips": [
-            "Pour renforcer l'engagement et faire en sorte que toutes les voix soient entendues, donnez aux élèves le temps de réfléchir ou même de noter quelques idées avant de les partager avec l'ensemble du groupe. Renforcez l'idée que pendant la phase de brainstorming, il n'y a pas de mauvaises réponses ni de mauvaises idées. "
+            "Pour booster leur implication et assurer la participation de tout un chacun, donnez aux élèves le temps de réfléchir ou même de noter quelques idées avant de les partager avec l'ensemble du groupe. Renforcez l'idée que pendant la phase de remue-méninges, il n'y a pas de mauvaises réponses ou de mauvaises idées."
           ]
         },
         "09f782b1-a091-45c7-abca-2059f52f81c7": {
-          "description": "Cet article nous propose plusieurs solutions bien documentées au problème de la surpêche. Comment pourrions-nous modifier notre simulation pour démontrer l'une de ces solutions ? Comment préserver la santé des coraux ? Comment pourrions-nous suivre la quantité de poissons capturés par le bateau ? Devons-nous limiter certains sprites ? Laquelle des solutions de l'article serait facile à coder et laquelle serait très difficile ?"
+          "description": "Cet article nous propose plusieurs solutions bien documentées au problème de la surpêche. Comment pourrions-nous modifier notre simulation pour mettre en pratique l'une de ces solutions ? Comment préserver la santé des coraux ? Comment pourrions-nous garder un suivi de la quantité de poissons capturés par le bateau ? Faut-il limiter certains sprites ? Quelles solutions dans l'article seraient faciles à coder et lesquelles seraient très difficiles ?"
         },
         "7dac5668-0cc8-422a-a008-6ae0bc988054": {
-          "name": "Équilibrer la simulation de l'écosystème aquatique - Renforcement des compétences",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Aperçu du projet »"
+          "name": "Simulation : Équilibrer l'écosystème marin - Développement des compétences",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Aperçu du projet »"
         },
         "3fe4ca01-7f4b-49d3-916b-d7e5cf020eb3": {
-          "description": "Dans la leçon de codage d'aujourd'hui, vous allez modifier le modèle d'un écosystème aquatique déséquilibré. Au départ, l'écosystème est déséquilibré parce que les humains retirent trop de poissons de l'eau. Lorsqu'une espèce d'un écosystème est supprimée, cela a un effet sur le reste des organismes du système.\n\nVous allez coder trois solutions différentes au problème de la surpêche. \n\nTout d'abord, vous allez limiter la zone dans laquelle le bateau est autorisé à pêcher. \n\nEnsuite, vous allez créer une saison de pêche et une saison sans pêche pour laisser le temps aux poissons de se rétablir. \n\nEnfin, vous allez ajouter un code pour compter le nombre de poissons capturés par le bateau et pour empêcher le bateau d'en attraper d'autres une fois qu'il aura atteint sa limite. \n\nLorsque vous exécutez le code, observez attentivement chaque simulation pour trouver la solution qui vous semble la plus efficace."
+          "description": "Dans la leçon de codage d'aujourd'hui, on va modifier un modèle d'écosystème marin déséquilibré. On commence avec un écosystème qui est déséquilibré parce que les humains soutirent trop de poissons à l'eau. Lorsqu'une espèce est supprimée d'un écosystème, il y a un effet sur le reste des organismes du système.\n\nVous allez coder trois solutions différentes au problème de la surpêche. \n\nTout d'abord, vous allez limiter la zone au sein de laquelle le bateau est autorisé à pêcher. \n\nEnsuite, vous allez créer une saison de pêche et une saison de non-pêche, afin de laisser aux poissons le temps de se rétablir. \n\nEnfin, vous allez ajouter de code pour compter le nombre de poissons capturés par le bateau et pour empêcher le bateau d'en attraper d'autres une fois qu'il aura atteint sa limite. \n\nLorsque vous exécutez le code, observez attentivement chaque simulation pour voir quelle solution vous semble la plus efficace."
         },
         "bc563dad-0bfb-4c77-b9c4-fbbfd5a18858": {
           "tips": [
-            "Voici quelques conseils qui devraient aider les étudiants, quel que soit le niveau sur lequel ils travaillent :\n\n-   **Lisez les instructions :** Les instructions sont des points sur la façon de terminer le niveau. Si un élève se sent bloqué, demandez-lui de vous lire les instructions à haute voix et demandez-lui de répéter ce qu'elles disent dans leurs propres mots. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Les élèves peuvent également cliquer sur cette icône de synthèse vocale pour entendre les instructions lues à haute voix.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Recherchez des indices** : La plupart des niveaux incluent au moins un indice avec des détails plus explicites sur la façon de passer le niveau. \n-   **Célébrez les bogues :** La détection d'un bogue dans votre code fait naturellement partie du processus de codage. Si le programme ne donne pas les résultats escomptés, demandez à l'étudiant de vous dire d'abord ce qu'il souhaite voir se produire, de cliquer sur Exécuter pour observer ce qui se passe réellement, puis de trouver l'endroit dans son code à l'origine de l'écart. N'oubliez pas de célébrer la découverte et la correction des bogues. Le fait d'avoir un bogue signifie que les étudiants font un excellent travail en élaborant un programme plus complexe. "
+            "Voici quelques conseils qui devraient aider les élèves, quel que soit le niveau sur lequel ils travaillent :\n\n-   **Lire les instructions :** Les instructions sont un fil d'ariane qui indique comment terminer le niveau. Si un élève se sent bloqué, demandez-lui de vous lire les instructions à voix-haute, puis demandez-lui de répéter les information qui s'y trouvent avec ses propres mots. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Les élèves peuvent également cliquer sur cette icône de synthèse vocale pour entendre les instructions lues à haute voix.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Rechercher des indices** : La plupart des niveaux comprennent au moins un indice qui détaille plus clairement comment faire pour réussir le niveau. \n-   **Fêtez les bugs :** Avoir un bug dans son code, cela fait partie du déroulement naturel du codage. Si le programme ne donne pas les résultat attendus, demandez à l'élève de vous dire d'abord ce qu'il souhaite voir se produire, de cliquer sur Exécuter pour observer ce qui se passe réellement, puis de trouver l'endroit dans son code qui est à l'origine de l'incohérence. N'oubliez pas de fêter la découverte et la correction de bugs. Avoir des bugs, cela indique que les élèves travaillent bien dur à développer des programmes plus complexes. "
           ]
         },
         "1faf1a1c-d60e-4053-b2b4-b39bc7866e6e": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 1 - Prédiction »\n\n**Discute** : \\_Quelle est la cause de la mort du corail dans cette simulation aquatique ? \\_\n\n**Fais ça** : Demandez aux élèves de commencer ensemble le premier niveau. Ils saisiront une réponse dans la zone de texte en utilisant les preuves tirées du texte de l'article qu'ils ont lu pendant l'échauffement. Vous pouvez utiliser leurs réponses pour vérifier que vous comprenez et dissiper les idées fausses les plus courantes. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 1 - Prévision »\n\n**Discussion** : \\_Quelle est la cause de la mort du corail dans cette simulation aquatique ? \\_\n\n**Faites-ceci** : Demandez aux élèves de commencer ensemble le premier niveau. Ils saisiront une réponse dans la zone de texte en utilisant les preuves tirées du texte de l'article qu'ils ont lu pendant l'échauffement. Vous pourrez utiliser leurs réponses pour vérifier qu'ils ont bien compris et dissiper les idées fausses les plus courantes. "
         },
         "695cd2f0-863b-47e7-bcf6-13415299464f": {
           "name": "Solution de surpêche #1 - Établir des aires marines protégées",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveaux 1 et 2 - Établir des aires marines protégées »\n\n**Faites-le** : Demandez aux élèves de lire les instructions pour terminer les niveaux 1 et 2. Rappelez aux élèves d'essayer d'exécuter leur code plusieurs fois et d'utiliser les astuces intégrées pour trouver la solution avant de demander de l'aide à leurs pairs. Pensez à établir un lien avec le texte affiché sur la diapositive.\n\n**Niveau 1** - Les élèves apprendront la pratique de pêche durable #1 : les zones de pêche. Les bateaux de pêche ne peuvent pêcher que dans les zones désignées. Certaines zones sont interdites aux bateaux de pêche afin que l'écosystème puisse se rétablir.\n\n**Niveau 2** - Les élèves ajouteront un code pour modifier le comportement du bateau afin qu'il reste dans la zone de pêche spécifiée."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveaux 1 et 2 - Établir des aires marines protégées »\n\n**Faites-ceci** : Demandez aux élèves de lire les instructions pour terminer les niveaux 1 et 2. Rappelez aux élèves d'essayer d'exécuter leur code plusieurs fois et d'utiliser les astuces intégrées pour trouver la solution avant de demander de l'aide aux autres. Envisagez de faire le lien avec le texte qui s'affiche sur la diapositive.\n\n**Niveau 1** - Les élèves apprendront la pratique de pêche durable #1 : Les zones de pêche. Les bateaux de pêche ne pourront pêcher qu'au sein de zones désignées. Certaines zones seront interdites aux bateaux de pêche afin que l'écosystème puisse se rétablir.\n\n**Niveau 2** - Les élèves ajouteront du code qui modifie le comportement du bateau afin qu'il reste dans la zone de pêche spécifiée.",
+          "progression_name": "Solution 1 - Zone de pêche"
         },
         "072db4ea-d8ac-439e-ab0e-c8ef67d7b860": {
-          "name": "Solution de surpêche #2 - Créez une « saison de pêche »",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveaux 3 à 5 - Créez une saison de pêche »\n\n**Faites-le** : Demandez aux élèves de compléter le code de ces niveaux à leur propre rythme. Envisagez de réunir le groupe pour établir un lien avec le texte du niveau 3.\n\n**Niveau 3** - Les élèves apprendront la pratique de pêche durable #2 : Créez une saison de pêche. Fixez des limites quant aux moments où les gens peuvent pêcher. Lorsque ce n'est pas la saison de pêche, l'écosystème a le temps de se rétablir.\n\n**Niveau 4** - Les élèves ajouteront du code pour créer une saison sans pêche.\n\n**Niveau 5** - Les élèves ajouteront du code pour créer une saison de pêche qui se répète. L'écosystème alternera entre les saisons de pêche et d'interdiction de pêche."
+          "name": "Solution de surpêche #2 - Créer une « Saison de pêche »",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveaux 3 à 5 - Créer une saison de pêche »\n\n**Faites-ceci** : Demandez aux élèves de compléter le code de ces niveaux à leur propre rythme. Envisagez de rassembler le groupe pour faire ensemble le lien avec le texte du niveau 3.\n\n**Niveau 3** - Les élèves apprendront la pratique de pêche durable #2 : Créer une saison de pêche. Fixez des limites quant aux moments où les gens pourront pêcher. Lorsque ce n'est pas la saison de la pêche, l'écosystème aura le temps de se rétablir.\n\n**Niveau 4** - Les élèves ajouteront du code pour créer une saison de non-pêche.\n\n**Niveau 5** - Les élèves ajouteront du code pour créer une saison de pêche qui revient. L'écosystème alternera entre les saisons de pêche et de non-pêche.",
+          "progression_name": "Solution 2 - Saison de pêche"
         },
         "48e4c3b2-150f-4524-b1a8-55dfc170c1b6": {
-          "name": "Solution de surpêche #3 - Limitez le nombre de poissons capturés",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveaux 6 à 8 - Limitez le nombre de poissons capturés »\n\n**Faites-le** : Demandez aux élèves de compléter le code en suivant les instructions des niveaux 6 à 8 à leur propre rythme. Envisagez de réunir le groupe pour établir un lien avec le texte du niveau 6.\n\n**Niveau 6** - Les élèves apprendront la pratique de pêche durable #3 : Fixez des limites de pêche. Les scientifiques peuvent aider à déterminer combien de poissons peuvent être capturés sans nuire à l'océan. Les pêcheurs sauront alors qu'ils ne doivent pêcher que ce nombre de poissons.\n\n**Niveau 7** - Les élèves créeront une nouvelle variable pour suivre le nombre de poissons capturés par le bateau et augmenteront la variable de 1 pour chaque nouveau poisson capturé.\n\n**Niveau 8** - Les élèves utiliseront un conditionnel pour définir la limite de pêche et retirer le bateau une fois qu'il aura atteint cette limite."
+          "name": "Solution de surpêche #3 - Limiter le nombre de poissons pêchés",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveaux 6 à 8 - Limiter le nombre de poissons pêchés »\n\n**Faites-ceci** : Demandez aux élèves de compléter le code en suivant les instructions des niveaux 6 à 8 à leur propre rythme. Envisagez de rassembler le groupe pour établir un lien avec le texte du niveau 6.\n\n**Niveau 6** - Les élèves apprendront la pratique de pêche durable #3 : Fixer des limites à la pêche. Les scientifiques peuvent aider à déterminer combien de poissons peuvent être capturés sans nuire à l'océan. Les pêcheurs sauront alors qu'ils ne doivent pêcher que ce nombre de poissons.\n\n**Niveau 7** - Les élèves créeront une nouvelle variable afin de faire un suivi du nombre de poissons capturés par le bateau et augmenteront la variable de 1 pour chaque nouveau poisson capturé.\n\n**Niveau 8** - Les élèves utiliseront une instruction conditionnelle pour définir la limite de pêche et enlever le bateau une fois qu'il aura atteint cette limite.",
+          "progression_name": "Solution 3 - Limites de pêche"
         },
         "676d8a66-e8c0-4388-9600-eb00bf91e63e": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichage : Afficher la diapositive « Niveau 9 - Vérifier la compréhension »\n\n**Le niveau 9** est une dernière vérification de compréhension. Les élèves examineront les trois pratiques de pêche durables\net feront glisser le code sur l'image correspondante.",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 9 - Vérifier la compréhension »\n\n**Le niveau 9** est une dernière vérification de la compréhension. Les élèves examineront les trois pratiques de pêche durables et feront glisser le code vers l'image qui lui correspond.",
           "progression_name": "Vérifier la compréhension"
         },
         "7e2e90c2-7e89-498f-a565-c2f8956afde0": {
           "tips": [
-            "Il peut être utile pour les élèves qui travaillent au même rythme de se réunir à deux ou en petits groupes pour discuter de la question du niveau 9 - Vérifier la compréhension avant de soumettre leurs réponses. Guidez les élèves pour qu'ils expliquent chaque ligne de code et son objectif dans la simulation. Après avoir discuté en petits groupes, les élèves devraient être mieux préparés à répondre aux questions correspondantes. \n\nIl peut également être utile de fournir aux élèves quelques entrées de phrase pour leurs discussions. Vous pouvez les écrire sur une feuille de papier ou sur le tableau de la classe selon vos besoins. \n\n-   Le corail reste en bonne santé dans cette simulation car… \n-   Le corail ne tombe pas malade dans cette simulation car…"
-          ]
+            "Il peut être utile pour les élèves qui travaillent au même rythme de se mettre en binômes ou en petits groupes pour parler de la question du Niveau 9 - Vérifier la compréhension avant de soumettre leurs réponses. Conduisez les élèves à expliquer chaque ligne de code et son objet dans la simulation. Après avoir discuté en petits comités, les élèves devraient être mieux équippés à répondre aux questions de correspondance. \n\nIl peut également être utile de fournir aux élèves quelques débuts de phrase pour leurs discussions. Vous pouvez les écrire sur une feuille de papier ou sur le tableau de la classe selon ce qui convient le mieux. \n\n-   Le corail reste en bonne santé dans cette simulation car… \n-   Le corail ne tombe pas malade dans cette simulation car…"
+          ],
+          "progression_name": " Vérifier la compréhension"
         },
         "a758b35b-192c-4765-b0f7-f419f9d55a88": {
-          "name": "Montrez ce que vous savez",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Montrez ce que vous savez »\n\n**Dites :** \n\n-   _Nommez TROIS blocs de code utilisés dans la leçon 3 : Équilibrer l'écosystème._ \n-   _Décrivez DEUX solutions au problème de surpêche._ - _Expliquez votre partie préférée de la leçon._\n    \\*\\*Faites-le\n\n\\*\\* : Demandez aux élèves de noter leurs réponses sur des notes autocollantes, un journal, un formulaire Google ou un autre système de gestion de contenu utilisé dans votre classe. \\_Facultatif : lecture et discussion prolongées. \\_"
+          "name": "Montre ce que tu sais ",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Montre ce que tu sais ! »\n\n**Dites :** \n\n-   _Nommez TROIS blocs de code utilisés dans la leçon 3 : Équilibrer l'écosystème._ \n-   _Décrivez DEUX solutions au problème de la surpêche._\n-   _Expliquez l'UNE de vos parties préférée de la leçon._\n\n**Faites-ceci** : Demandez aux élèves de noter leurs réponses sur des pense-bêtes, dans un journal, sur un formulaire Google ou au travers de tout autre système de gestion de contenu que vous employez dans votre salle de classe. \\_Facultatif : Lecture et discussion prolongées. \\_"
         },
         "a9a34da7-fec1-45cb-98d5-ce3ad961fa6b": {
-          "description": "Nous avons beaucoup appris sur la programmation informatique en explorant les effets de la surpêche sur un écosystème composé de poissons, d'algues et de coraux. Nous avons programmé trois solutions différentes pour aider à maintenir le corail en bonne santé plus longtemps. Quelle est selon vous la meilleure solution ? Expliquez votre réponse. En utilisant les preuves issues de la simulation \n\nEn conclusion, prenez le temps de réfléchir à votre rôle dans votre écosystème local. Réfléchissez à l'impact que les humains peuvent avoir sur les écosystèmes aquatiques et à la manière dont nous pouvons travailler pour maintenir l'équilibre de nos écosystèmes afin que tous les organismes puissent prospérer. "
+          "description": "On en a beaucoup appris sur la programmation informatique en explorant les effets de la surpêche sur un écosystème composé de poissons, d'algues et de coraux. On a programmé trois solutions différentes pour aider à maintenir le corail en bonne santé plus longtemps. Quelle est selon vous la meilleure solution ? Expliquez votre réponse en utilisant des preuves issues de la simulation. \n\nPour conclure, prenez le temps de réfléchir à votre rôle au sein de votre écosystème local. Réfléchissez à l'impact que les humains peuvent avoir sur les écosystèmes marins et à comment on peut s'efforcer à maintenir l'équilibre de nos écosystèmes afin que tous les organismes puissent prospérer. "
         },
         "4b939bca-2465-429e-b32e-423d9e746f4a": {
           "tips": [
-            "**Contenu scientifique** : Dans cette leçon, les élèves chercheront à trouver un équilibre entre la simulation de l'écosystème marin et les pratiques de pêche durables. Certaines de ces stratégies sont utilisées par les populations autochtones du littoral depuis des siècles. Voici quelques ressources pour aider les élèves à acquérir des connaissances de base : \n\n-   [Salmon Boy : A Legend of the Sechelt People](https://www.youtube.com/watch?v=WpKqXidmshc) raconte l'histoire d'un garçon qui enseigne à son peuple la responsabilité et le respect envers le saumon afin d'assurer sa survie. \n\n-   [Site Web Storymap](https://www.seagardens.net/#map) : Les peuples autochtones gèrent l'océan depuis des milliers d'années. Cette carte narrative interactive et « vivante » des jardins marins commence à synthétiser des informations sur la mariculture ancestrale dans l'océan Pacifique. \n\n**Informatique** : Cette leçon utilise brièvement les événements, les comportements et les conditions du code. Voici quelques ressources qui peuvent vous aider à renforcer ces concepts de codage si vous en avez le temps. \n\n-   [Events](https://studio.code.org/s/coursed-2022/lessons/6) dans Bounce (leçon de 50 minutes)"
+            "**Contenu scientifique** : Dans cette leçon, les élèves chercheront à ramener l'équilibre à la simulation d'écosystème marin en employant des pratiques de pêche durables. Certaines de ces stratégies sont employées par des populations indigènes côtières depuis des siècles. Voici quelques ressources pour aider les élèves à développer leurs connaissances en la matière : \n\n-   [Garçon-saumon : la légende du peuple Sechelt](https://www.youtube.com/watch?v=WpKqXidmshc) raconte l'histoire d'un garçon qui enseigne à son peuple une attitude responsable et le respect envers les saumons afin d'assurer leur survie. \n\n-   [Site Web Storymap](https://www.seagardens.net/#map) : Les peuples indigènes se font les gardiens de l'océan depuis des millénaires. Cette carte de récits interactive et « vivante » de jardins marins propose un début de synthèse au sujet des informations que l'on a sur la mariculture ancestrale dans l'océan Pacifique.\n\n**Informatique** : Cette leçon utilise au passage les événements, les comportements et les intstructions conditionnelles au sein du code. Voici une ressource qui vous permettra de renforcer ces notions de codage si vous en avez le temps : \n\n-   [Les Événements](https://studio.code.org/s/coursed-2022/lessons/6) dans Bounce (leçon de 50 minutes)"
           ]
         },
         "f7b0e9e5-649b-41d6-832a-7ce3bec1f5a0": {
           "name": "Vocabulaire",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Vocabulaire »\n\n-   **Chaîne alimentaire** - Groupe d'organismes liés par ordre de consommation, des producteurs aux consommateurs, et des proies aux prédateurs.\n-   **Energie** - Transférée entre les organismes des réseaux trophiques, des producteurs aux consommateurs. L'énergie est utilisée par les organismes pour effectuer des tâches complexes.\n\n**Faites-ci** : Passez en revue les définitions de la chaîne alimentaire et de l'énergie à l'aide de la diapositive fournie ou des références précédentes utilisées dans votre classe. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Vocabulaire »\n\n-   **Chaîne alimentaire** - Groupe d'organismes liés par ordre de consommation, des producteurs aux consommateurs, et des proies aux prédateurs.\n-   **Énergie** - Transférée entre les organismes des réseaux trophiques, des producteurs aux consommateurs. Cette énergie est utilisée par les organismes pour effectuer des tâches complexes.\n\n**Faites-ceci** : Étudiez les définitions de la chaîne alimentaire et de l'énergie à l'aide de la diapositive fournie ou de références précédentes utilisées dans votre classe. "
         },
         "022d1902-1a3b-4488-8332-b9333aa09bc8": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Chaîne alimentaire marine »\n\n**Faites-ça** : passez en revue l'exemple de chaîne alimentaire de l'écosystème marin "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Chaîne alimentaire marine »\n\n**Faites-ceci** : Examinez l'exemple de chaîne alimentaire d'écosystème marin."
         },
         "72679211-0df2-4e09-b342-84b8cbb63bca": {
-          "description": "L'énergie circule d'un organisme à l'autre par le biais de la chaîne alimentaire. Le soleil fournit l'énergie nécessaire à la croissance des plantes. Les consommateurs primaires, généralement des plantes, obtiennent l'énergie nécessaire pour vivre en mangeant des plantes. Les consommateurs secondaires, en l'occurrence le poisson, consomment les principaux consommateurs d'énergie. En examinant cet exemple d'écosystème marin avec lequel nous avons travaillé, nous pouvons également compléter l'exemple d'un écosystème de forêt tropicale humide."
+          "description": "L'énergie circule d'un organisme à l'autre par le biais de la chaîne alimentaire. Le soleil fournit l'énergie nécessaire à la croissance des plantes. Les consommateurs primaires, généralement des herbivores comme des mollusques, obtiennent l'énergie qui leur faut pour vivre en mangeant des plantes. Les consommateurs secondaires, en l'occurence les poissons, ici, mangent les consommateurs primaires pour leur d'énergie. En examinant cet exemple d'écosystème marin sur lequel on a travaillé, on peut également compléter l'exemple d'un écosystème de forêt tropicale."
         },
         "30157cac-7e00-44d9-b3e0-c3b27591d7c1": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Chaîne alimentaire - Forêt tropicale »\n\n**Discuter** : Quels sont les organismes de la chaîne alimentaire dans un écosystème de forêt tropicale ? \n\n**Objectif de la discussion** : Les élèves détermineront le placement des organismes dans la chaîne alimentaire au sein d'un écosystème de forêt tropicale humide. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Chaîne alimentaire - Forêt tropicale »\n\n**Discussion** : Quels sont les organismes de la chaîne alimentaire dans un écosystème de forêt tropicale ? \n\n**Objectif de la discussion** : Les élèves détermineront le placement des organismes dans la chaîne alimentaire au sein d'un écosystème de forêt tropicale."
         },
         "1b625904-4550-4630-8cd7-77fcd20f98c4": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : \nAfficher la diapositive « Exemple de forêt tropicale »\n\n**Discuter** : Quels sont les organismes de la chaîne alimentaire dans un écosystème de forêt tropicale ? \n\n**Objectif de la discussion** : Les élèves détermineront le placement des organismes dans la chaîne alimentaire au sein d'un écosystème de forêt tropicale humide. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Exemple de forêt tropicale »\n\n**Discussion** : Quels sont les organismes de la chaîne alimentaire dans un écosystème de forêt tropicale ? \n\n**Objectif de la discussion** : Les élèves détermineront le placement des organismes dans la chaîne alimentaire au sein d'un écosystème de forêt tropicale."
         },
         "81bd8cd7-0a8a-41d4-9ea9-34e285777719": {
-          "name": "Revue de la chaîne alimentaire",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 1 - La chaîne alimentaire »\n\n**Faites-ça** : Passez en revue l'équilibre délicat d'une chaîne alimentaire à l'aide des exemples de cause à effet tirés de la leçon 1."
+          "name": "Analyse de la chaîne alimentaire",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 1 - La chaîne alimentaire »\n\n**Faites-ceci** : Examinez l'équilibre délicat d'une chaîne alimentaire à l'aide des exemples de cause à effet tirés de la leçon 1.",
+          "progression_name": "La chaîne alimentaire"
         },
         "277c72a1-2eb0-4508-88ab-ea1467d9dc3d": {
-          "description": "La chaîne alimentaire est un équilibre délicat. S'il y a trop d'un organisme, cela peut avoir des effets sur les autres plantes ou animaux. Dans le cadre de la simulation marine sur laquelle nous avons travaillé, l'impact humain a provoqué un déséquilibre dans l'écosystème. Le bateau a pêché trop de poissons dans l'océan. Comme les poissons mangent les algues, le fait d'en retirer le poisson signifiait que les algues étaient envahies par la végétation. La présence d'une trop grande quantité d'algues dans l'écosystème a provoqué la mort du corail."
+          "description": "La chaîne alimentaire, c'est un équilibre délicat. S'il y a trop d'un organisme, il peut y avoir des effets sur les autres plantes ou animaux. Dans le cadre de la simulation marine sur laquelle nous avons travaillé, l'impact humain a provoqué un déséquilibre au sein de l'écosystème. Le bateau a trop pêché de poissons dans l'océan. Comme les poissons mangent les algues, le fait d'y avoir soutiré les poissons a fait que les algues ont envahi l'envrionnement. La présence d'une trop grande quantité d'algues au sein de l'écosystème a provoqué la mort du corail.",
+          "progression_name": "La chaîne alimentaire"
         },
         "09231b15-08f9-4770-8abd-22c1b8c4729e": {
-          "name": "Observer, modifier, enregistrer",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 2 - Niveau de choix »\n\n**Faites-ça** : Donnez à chaque élève un exemplaire du guide d'activités. Passez en revue les sections Observer, Modifier et Enregistrer avant que les élèves ne commencent le niveau de leur choix sur l'ordinateur. "
+          "name": "Observer, Modifier, Prendre Note",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 2 - Niveau au choix »\n\n**Faites-ceci** : Donnez à chaque élève un exemplaire du Guide d'Activités. Examines les sections Observer, Modifier et Prendre Note avant que les élèves ne commencent le niveau au choix sur l'ordinateur. ",
+          "progression_name": "Équilibrer un écosystème"
         },
         "0a65cbdc-a7b3-4262-975b-c5963bc30c29": {
-          "description": "À ce niveau, il existe quatre exemples d'écosystèmes confrontés à des défis liés à l'ingérence humaine. Vous pouvez choisir l'écosystème à équilibrer. Serez-vous un écologiste de la forêt tropicale, un écologiste du désert, un écologiste des zones humides ou un écologiste de l'Arctique ? \n\nCommencez par observer la simulation de l'écosystème en action. Notez vos observations dans votre carnet d'écologiste. \n\nSuivez ensuite les instructions pour modifier le code afin d'équilibrer l'écosystème. \n\nRéexécutez la simulation et observez comment la modification du code a modifié la simulation. Enfin, notez vos observations des changements dans votre carnet d'écologiste. \n\nVous pouvez explorer un autre écosystème si vous avez le temps !"
+          "description": "Dans ce niveau, on a quatre exemples d'écosystèmes confrontés à des défis liés à l'ingérence humaine. Vous pouvez choisir l'écosystème à équilibrer. Serez-vous un écologiste de la forêt tropicale, un écologiste du désert, un écologiste des zones humides ou un écologiste de l'Arctique ? \n\nCommencez par observer la simulation de l'écosystème en action. Notez vos observations dans votre carnet d'écologiste. \n\nSuivez ensuite les instructions pour modifier le code afin d'équilibrer l'écosystème. \n\nRéexécutez la simulation et observez comment la modification du code a modifié la simulation. Enfin, notez vos observations concernant les changements dans votre carnet d'écologiste. \n\nVous pouvez explorer un autre écosystème si vous avez le temps !"
         },
         "9216fede-49ad-4b19-a1d3-aea5e42900a9": {
           "name": "Partager",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 3 - Partage »\n\n**Faites-le suivant** : Regroupez les élèves de la manière aléatoire de votre choix, idéalement avec des pairs qui choisissent un écosystème différent à équilibrer. "
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 3 - Partager »\n\n**Faites-ceci** : Regroupez les élèves aléatoirement à votre manière, au choix, mais idéalement avec des élèves qui ont choisi des écosystèmes différents à équilibrer. ",
+          "progression_name": "Partager sa simulation"
         },
         "7ad0e8a1-2be5-47d2-a203-a6c9c3bb5bd8": {
-          "description": "L'un des avantages de l'informatique est qu'il existe souvent plusieurs solutions correctes à un problème. Lorsque vous retrouvez votre groupe/partenaire, commencez par expliquer l'écosystème que vous avez choisi et le défi qu'il présentait.\n\n1.  Expliquez la chaîne alimentaire de votre écosystème et comment vous l'avez codée.\n2.  Y avait-il trop ou trop peu d'organisme ?\n\nMontrez ensuite les modifications que vous avez apportées au code et expliquez en quoi elles ont modifié la simulation.\n\n3.  Expliquez les modifications que vous avez apportées à la simulation.\n4.  Qu'avez-vous remarqué après avoir modifié les valeurs ?"
+          "description": "L'un des avantages de l'informatique est qu'il existe souvent plusieurs solutions correctes à un même problème. Lorsque vous vous mettez en groupes/binômes, commencez par expliquer quel écosystème vous avez choisi et le défi qu'il présentait.\n\n1.  Expliquez la chaîne alimentaire de votre écosystème et comment vous l'avez codée.\n2.  Y avait-il trop ou trop peu d'organismes ?\n\nMontrez ensuite les modifications que vous avez apportées au code et expliquez en quoi elles ont modifié la simulation.\n\n3.  Expliquez les modifications que vous avez apportées à la simulation.\n4.  Qu'avez-vous remarqué après avoir modifié les valeurs ?"
         },
         "cb2a879c-6ef3-4f45-a5ce-de3b695cad85": {
           "tips": [
-            "Encouragez les élèves à utiliser leur carnet d'ingénieur pour soutenir leur conversation et partager avec leur groupe. Vous pouvez regrouper les questions en deux parties : A) Expliquez l'écosystème, la chaîne alimentaire et l'impact humain. B) Affichez le code, signalez les modifications, puis exécutez la simulation finale. Donnez aux élèves le signal de changer afin que tous les membres du groupe aient le temps de partager leur travail. "
+            "Encouragez les élèves à utiliser leur carnet d'écologiste pour appuyer leurs conversations et partager leurs expériences avec leur groupe. Vous pouvez regrouper les questions en deux parties : A) Expliquez l'écosystème, la chaîne alimentaire et l'impact humain. B) Affichez le code, signalez les modifications, puis exécutez la simulation finale. Faites signe aux élèves de changer de rôle afin que tous les membres du groupe aient le temps de partager leur travail. "
           ]
         },
         "ea776062-2f16-4d74-95c5-015ddf9a1e90": {
-          "name": "Tournez et parlez",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Assurer la durabilité »\n\n**Discuter** : \nPourquoi les types de réglementations peuvent contribuer à maintenir la durabilité, l'équilibre et la santé de votre écosystème ?\n\n**Objectif de la discussion :** Les élèves établiront un lien avec la leçon 2 et appliqueront les idées issues des trois pratiques de pêche durables potentielles introduites tout au long des niveaux. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Réfléchir »\n\n**Discuter** : Pourquoi est-il important de maintenir l'équilibre et la santé de tous les écosystèmes ? Que pouvez-vous faire pour aider l'écosystème dans lequel vous vivez ? \n\n**Objectif de la discussion :** Les élèves établiront un lien avec le monde réel. Ils seront en mesure d'expliquer la nécessité de maintenir l'équilibre et la santé des différents écosystèmes, ainsi que les solutions potentielles pour y parvenir."
+          "name": "Discuter en binômes puis partager",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Assurer la durabilité »\n\n**Discussion** : \nQuels types de réglementations peuvent contribuer à maintenir la durabilité, l'équilibre et la santé de notre écosystème ?\n\n**Objectif de la discussion :** Les élèves feront le lien avec la leçon 2 et emploieront des idées issues des trois pratiques de pêche durables potentielles introduites au cours des différents niveaux.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Temps de réfléxion »\n\n\\*_Discussion_ : Pourquoi est-il important de maintenir l'équilibre et la santé de tous les écosystèmes ? Que peut-on faire pour aider l'écosystème au sein duquel on vit ? \n\n**Objectif de la discussion :** Les élèves feront le lien avec le monde réel. Ils seront en mesure d'expliquer le besoin de maintenir l'équilibre et la santé des différents écosystèmes, ainsi que les solutions potentielles qui permettraient d'y parvenir."
         },
         "9682670e-68d2-453d-9f22-b93126eb808f": {
-          "description": "Excellent travail, écologistes ! Ensemble, nous avons utilisé l'informatique pour mieux connaître et comprendre le fragile équilibre d'une chaîne alimentaire au sein d'un écosystème. Les scientifiques utilisent de telles simulations pour tester de nouvelles idées et solutions visant à protéger les écosystèmes du monde entier ! Peut-être serez-vous un écologiste utilisant l'informatique dans le futur ! "
+          "description": "Excellent travail, les écologistes ! Ensemble, on a utilisé l'informatique pour nous aider à découvrir et à comprendre l'équilibre fragile d'une chaîne alimentaire au sein d'un écosystème. Les scientifiques utilisent de telles simulations pour tester de nouvelles idées et solutions visant à protéger les écosystèmes du monde entier ! Peut-être serez-vous même un écologiste qui se sert de l'informatique à l'avenir ! "
         },
         "2ac3ae1c-b9e7-455a-91a3-b30db502e3b2": {
-          "name": "Créez un écosystème local",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Niveau 10 - Jeu gratuit »\n\n**Faites-ça** : Les élèves peuvent utiliser les animaux et les arrière-plans pour créer leur propre écosystème. \n\n\\*\\* (Facultatif) Faites-ça\\*\\* : Il vous est possible de faire un remix du niveau Free Play de la leçon 1, puis de télécharger vos propres images à utiliser pour les sprites. Vous pouvez utiliser cette technique pour placer un objectif local au dernier niveau. <a href=\"https://youtu.be/8KCAvNt4jRg\" target=\"_blank\">Cette vidéo explique comment télécharger vos propres images pour</a> \nque vos élèves puissent les utiliser comme sprites."
+          "name": "Créer un écosystème local",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Affichez la diapositive « Niveau 10 - Jeu libre »\n\n**Faites-ceci** : Les élèves peuvent se servi des animaux et des fonds pour créer leur propre écosystème. \n\n**(Facultatif) Faites-çceci** : Il vous est possible de faire un remix du niveau Jeu Libre de la leçon 1, puis de télécharger vos propres images à utiliser en tant que sprites. Vous pouvez utiliser cette technique pour ajouter une touche locale au dernier niveau. <a href=\"https://youtu.be/8KCAvNt4jRg\" target=\"_blank\">Voici une vidéo</a> qui explique comment télécharger vos propres images pour que vos élèves puissent les utiliser en tant que sprites."
         },
         "9fda5c5f-e72e-4695-accb-10fe0ecad953": {
-          "description": "Essayez d'ajouter un arrière-plan et des sprites qui représentent un écosystème de notre région ! De nouvelles options de sprite et d'arrière-plan sont à votre disposition dans ce niveau. \n\n-   Comment se déplacent les organismes de cet écosystème ? Essayez d'ajouter des comportements !\n-   Comment les organismes de cet écosystème interagissent-ils ? Essayez d'ajouter des événements !\n-   Comment circule l'énergie (réseau alimentaire) dans cet écosystème ?  \n-   Votre simulation est-elle un écosystème équilibré ou un organisme est-il à l'origine d'un déséquilibre ?  ",
+          "description": "Essayez d'ajouter un fond et des sprites qui représentent un écosystème de notre région ! De nouveaux choix de sprite et de fonds sont à votre disposition dans ce niveau. \n\n-   Comment se déplacent les organismes de cet écosystème ? Essayez d'ajouter des comportements !\n-   Comment les organismes de cet écosystème interagissent-ils entre eux ? Essayez d'ajouter des événements !\n-   Comment circule l'énergie (relative au réseau alimentaire) au sein de cet écosystème ?  \n-   Votre simulation résulte-t-elle en un écosystème équilibré ou bien un organisme est-il à l'origine d'un déséquilibre ?  ",
           "tips": [
-            "Les autres extensions incluent \n\n:**Contenu scientifique :**  \n\n-   Module   <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">CSC : Animal Adaptations Lessons 1-3</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projet : Modélisation des cycles de vie dans Sprite Lab - AI</a> \n    <a href=\"https://code.org/oceans\" target=\"_blank\">pour les océans</a> \n\n**Concepts informatiques :**  \n\n-   Simulations :  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">simulation d'expériences</a> et d' <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">épidémies</a> \n-   Conditions : Minecraft <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\"></a> \n-   If/Else Conditionals : <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Abeille</a> \n-   Événements : soirée dansante <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\"></a> "
+            "Quelques autres éléments pour aller plus loin : \n\n**Contenu scientifique :**  \n\n-   Module  <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">Connexions informatiques : Adaptations animales, leçons 1-3</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projet : Modélisation des cycles de vie dans le Labos des Sprites</a> \n-   <a href=\"https://code.org/oceans\" target=\"_blank\">l'IA pour les océans</a> \n\n**Concepts informatiques :**  \n\n-   Simulations : <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulateur d'expériences</a> et <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Épidémie</a> \n-   Instructions conditionnelles : <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\">Minecraft</a> \n-   Conditionnelles Si/Sinon : <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Abeille</a> \n-   Événements : <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Soirée dansante</a> "
           ]
         },
         "4acb696c-b168-4868-996d-4d721669b233": {
@@ -24270,7 +24297,7 @@
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher** : Afficher la diapositive « Whiparound »\n\n**Discuter :** \\_Que souhaitez-vous apprendre d'autre sur le codage et l'informatique ? \\_"
         },
         "ca01b961-e407-42c4-9abc-fb3990df39d3": {
-          "description": "Ce module est une excellente introduction à l'informatique sous l'angle de la science. Voici quelques options pour continuer à en apprendre davantage sur les concepts CS présentés dans ce module. Nous vous recommandons de poursuivre ces extensions après avoir terminé la leçon 3 de ce module. "
+          "description": "Ce module est une excellente introduction à l'informatique au travers du prisme de la science. Voici quelques options pour continuer à en apprendre davantage sur les notions d'informatique présentées dans ce module. Nous conseillons de poursuivre ces leçons supplémentaires après avoir terminé la leçon 3 de ce module. "
         },
         "3ffbf11a-4e50-40ff-b781-f003016c72c6": {
           "tips": [
@@ -35658,11 +35685,15 @@
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introduction",
-          "description": "**Discussion :**\n\n- _Que sait-on au sujet de la propagation des virus ?_\n- _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n- _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
+          "description": "**Discussion :**\n\n-   _Que sait-on au sujet de la propagation des virus ?_\n-   _Qu'est-ce qui peut accélérer la propagation d'un virus dans une ville ?_\n-   _Qu'est-ce qui peut aider à ralentir la propagation d'un virus ?_\n\nLe but de cette discussion est de donner l'occasion aux élèves de mobiliser leurs connaissances préalables et de voir leurs idées au tableau. C'est aussi l'occasion d'examiner certaines idées fausses sur la façon dont les virus se propagent. "
+        },
+        "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8": {
+          "name": "Soutien général",
+          "description": "**Soutien général :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien compléter le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau :\n\n-   Incitez les élèves à naviguer les différentes sections « en plus » dans l'ordre qu'ils souhaitent. Ils peuvent toujours retourner au Niveau 1 pour revisiter le menu. \n\n-   **Collaborer avec ses voisins :** Incitez vos élèves à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n\n-   **Lire les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Chercher des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les casse-têtes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour être encore plus créatif en prolongeant la tâche. \n\n-   **Avancer et revenir :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts introduits lors des niveaux antérieurs. \n\n-   **Prendre son temps et essayer différentes choses.** Lisez le code attentivement. Même si les deux premiers niveaux indiquent aux élèves précisément ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées. Il n'y a pas de bonnes ou de mauvaises réponses dans ces niveaux. (Ils sont tous en jeu libre !)"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "Épidémie",
-          "description": "_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.________.\n\n_Tu devras créer un simulateur d’épidémie dans le Labo des Sprites, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ _",
+          "description": "\\_Dans la leçon d’aujourd’hui, tu vas aller à « Monstreville », ville qui est sur le point d'être frappée par une épidémie. Le Dr Monstre a besoin de ton aide pour ralentir la propagation du virus.**\\_\\_\\_\\_**.\n\n_Tu devras créer un simulateur d’épidémie dans le Labo des Sprites, et l’utiliser pour comprendre comment un virus peut se propager. Tu aideras aussi à soigner tous les monstres !_ \\_",
           "progression_name": "Épidémie"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
@@ -35677,11 +35708,11 @@
         },
         "df13fa93-37df-4188-837d-462c48179625": {
           "description": "**Faites ceci :** Faites passer les élèves à leurs ordinateurs et demandez-leur de commencer à suivre les instructions pour chaque niveau dans la section renforcement des compétences. S'ils ont fini avant, ils pourront continuer à jouer avec et peaufiner leur code dans le niveau 6 jusqu'à ce que toute la classe soit prête à passer à autre chose. ",
-          "progression_name": "Renforcement des compétences"
+          "progression_name": "Développement des Compétences"
         },
         "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
           "description": "**Faites ceci :** Remettez les élèves à leurs ordinateurs et demandez-leur de travailler sur les niveaux restants. Certains de ces niveaux proposent des défis facultatifs. Encouragez les élèves à lire attentivement les instructions et à jouer avec leurs simulations. ",
-          "progression_name": "Mini-projet : simulateur d'épidémie"
+          "progression_name": "Mini-projet : Simulateur d'Épidémie"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Jeu libre"
@@ -35690,11 +35721,15 @@
           "description": "_Les simulations sont un excellent moyen d’apprendre des choses qui peuvent être difficiles à observer dans le monde réel. Elles aident les scientifiques à résoudre des problèmes, à les anticiper et à tester de nouvelles idées de manière sûre et efficace. Ta simulation est un moyen de savoir à quoi pourrait ressembler une épidémie de virus à Monstreville._"
         },
         "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": "**Discussion :**\n\n- En quoi les simulations sont-elles utiles en vrai ?\n- En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n- En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
+          "description": "**Discussion :**\n\n-   En quoi les simulations sont-elles utiles en vrai ?\n-   En quoi nous aident-elles à comprendre le monde qui nous entoure ?\n-   En quoi peuvent-elles améliorer la manière dont nous testons nos idées ?\n\nL'objectif de cette discussion est de faire comprendre aux élèves que les simulations sont un moyen de modéliser des systèmes complexes de manière interactive. Ils devraient également voir comment les simulations permettent aux gens de tester des idées rapidement, à moindre coût et en toute sécurité. "
         },
         "b8e884f1-eae0-4138-8778-0972f90e34d9": {
           "name": "Réflexion",
-          "description": "**Invitations à la réflexion :**\n\n- En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n- Que voudriez-vous y changer/ajouter ?"
+          "description": "**Invitations à la réflexion :**\n\n-   En quoi cette simulation ressemble-t-elle au monde réel ? En quoi est-elle différente ?\n-   Que voudriez-vous y changer/ajouter ?"
+        },
+        "c1c5b270-2aae-4f8c-aded-0d92811d532f": {
+          "name": "Fêtez ça",
+          "description": "Expliquez que si vous passez une heure à coder aujourd'hui, c'est parce que c'est la Semaine de l'Enseignement de l'Informatique, et que des millions d'autres élèves du monde entier ont également fait une Heure de Code cette semaine. Félicitez vos élèves pour leur participation à cette initiative mondiale. \n\nRemettez à chacun de vos élèves [un certificat](http://code.org/certificates) à son nom."
         },
         "366afa8a-feff-4dd4-a415-03a04e01e897": {
           "name": "Installer la scène"
@@ -35913,18 +35948,6 @@
         "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
           "progression_name": "setProperty"
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Séance d’échauffement"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "Activité principale (Ancien)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "Activité principale (Nouveau)"
-        },
-        "50216925-6742-400e-b45a-2de4cd3b63f2": {
-          "name": "Conclusion"
-        },
         "f108ae93-f672-4062-b6d6-522901659990": {
           "name": "CS Discoveries Enquête Post-Cours",
           "progression_name": "CS Discoveries Enquête Post-Cours"
@@ -35949,39 +35972,54 @@
         "319eb690-ba34-4d34-9158-d30d777c4b05": {
           "name": "Réflexion"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "#### La mise en scène\n\nAccueillez les élèves en classe et présentez l'activité de la journée.",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "Séance d’échauffement"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Activité principale (Ancien)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Activité principale (Nouveau)"
+        },
+        "50216925-6742-400e-b45a-2de4cd3b63f2": {
+          "name": "Conclusion"
+        },
+        "fe9aa8cf-961f-4691-b15b-1d9eb8ab89bb": {
+          "progression_name": "Configuration de la chaîne alimentaire"
+        },
+        "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc": {
+          "progression_name": "Si... alors...  Expressions conditionnelles"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrer la musique"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Soutien général"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            "Une façon de présenter l'Heure de Code si vous n'êtes pas très familier avec le codage vous-même est de montrer l'une de [nos vidéos inspirantes][0]. Choisissez-en une que vos élèves trouveront inspirante et partagez-la maintenant. Pour les élèves des niveaux intermédiaires, nous suggérons [L'heure de code c’est ici][1]."
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": "Aujourd'hui, nous allons utiliser notre créativité pendant que nous apprenons à coder. Il existe de nombreuses façons d'être créatif. De quelles manières aimez-vous être créatif ?"
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Vidéo d'introduction"
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": "Encouragez les élèves à partager les façons dont ils expriment leur créativité, par exemple avec l'art, la danse, la musique ou l'écriture. Comme question de suivi, demandez-leur ce qu'ils utilisent pour attiser leur créativité."
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": "Saviez-vous que l'informatique peut être très créative ? En fait, vous pouvez faire de l'art avec du code. Pour rappel, le code est un ensemble d'instructions qu'un ordinateur peut comprendre. Tout comme choisir les couleurs de peinture à utiliser, choisir le code que vous écrivez peut aussi être l'occasion d'exprimer votre créativité !\n\nNous allons utiliser la poésie pour inspirer notre codage créatif aujourd'hui. Est-ce que quelqu'un sait ce qu'est la poésie ? Avez-vous un poème ou un poète préféré ?"
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Compte rendu"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Lire de la poésie ensemble :** Lisez [quelques poèmes][0] ensemble en classe et entraînez-vous à nommer l'ambiance de chaque poème. Encouragez les élèves à partager leur interprétation, même si elle est différente de celle de quelqu'un d'autre. "
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Fêtez ça"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "Art du poème",
-          "description": "#### Assistance générale\n\nÀ la fin de cette activité, les élèves auront un poème animé qui représente leur interprétation visuelle du poème qu'ils ont choisi. Cette leçon est conçue pour leur donner l'opportunité de bricoler leur code et de trouver les effets visuels qu'ils préfèrent.\n\nEn faisant le tour de la salle, encouragez les élèves :\n\n- **Prenez votre temps :** La plupart des niveaux demandent aux élèves de trouver les effets parfaits pour correspondre à leur interprétation de l'ambiance du poème. Rester à niveau et bricoler avec leur code est fortement encouragé.\n\n- **Trouvez un poème que vous aimez :** Le poème qui s'affiche pour un élève à un nouveau niveau n'est qu'une suggestion. Il y a un menu déroulant de poèmes avec des poèmes préchargés en haut de l'espace de jeu. Demandez aux élèves d'en lire quelques-uns et d'en trouver un qui leur parle. Ils peuvent alors commencer à animer le poème qu'ils ont choisi avec du code.\n\n- **Montrez un niveau terminé :** Toute bulle de niveau entièrement verte signifie que l'étudiant a rempli avec succès toutes les exigences de ce niveau. Demandez à un élève de cliquer sur une bulle verte pour montrer ce qu'il a créé.\n\nPour les moments où un élève se sent coincé :\n\n- ** Lisez les instructions : ** Les instructions sont des points à puces sur la façon de terminer le niveau. Si un élève se sent coincé, demandez-lui de vous lire les instructions à haute voix et demandez-lui de répéter ce que les instructions disent dans leurs propres mots.\n    - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG » style=\"height: 25px;\"> Ils peuvent également cliquer sur cette icône de synthèse vocale pour entendre le instructions lues à haute voix.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png » style=\"height: 35px;\"> **Recherchez des indices** : la plupart des niveaux incluent au moins un indice avec plus des détails explicites sur la façon de passer le niveau.\n- **Fêtez les bogues :** La détection d'un bug dans votre code fait naturellement partie du processus de codage. Si le programme ne fait pas ce qu'il attend, demandez à l'élève de vous dire d'abord ce qu'il veut qu'il se passe, cliquez sur Exécuter pour observer ce qui se passe réellement, puis trouvez l'endroit dans son code qui a causé l'écart. N'oubliez pas de fêter la découverte et la correction des bogues. Avoir un bug signifie que les élèves font un excellent travail en construisant un programme plus complexe. "
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Prochaines étapes"
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": "#### Assistance niveau par niveau\n\n**Niveau 1 :** Encouragez les élèves à lire le poème. Demandez-leur ensuite de trouver une couleur de fond ou un effet qui corresponde au ton du poème qu'ils ont choisi.\n\n**Niveau 2 :** Dans cet exemple, les élèves doivent d'abord lire le poème par eux-mêmes, puis appuyer sur Exécuter. Vous pouvez demander à un élève si le son et les effets choisis par le programmeur correspondent à l'ambiance du poème. Demandez-leur de développer leur réponse.\n\n**Niveau 3 :** Ce niveau introduit le son, les élèves peuvent utiliser des écouteurs s'ils en ont.\n\n**Niveau 4 :** Demandez aux élèves de lire le poème et de trouver la ligne où l'humeur du poème change ou s'il y a une nouvelle image que le poète introduit. Utilisez le bloc événement pour ajouter des effets correspondants aux lignes identifiées du poème.\n\n**Niveau 5 :** Dans cet exemple, les élèves doivent d'abord lire le poème par eux-mêmes, puis appuyer sur Exécuter. Demandez-leur si les images correspondent aux mots du poème. Demandez-leur de développer leur réponse.\n\n**Niveau 6, 7, 8 :** Voir « Célébrer les bogues » dans la section Assistance générale. Encouragez les élèves à créer des programmes avec plus d'une transition avec leurs blocs d'événements.\n\n**Niveau 9 :** Encouragez les élèves à lire tous les poèmes du menu déroulant pour en trouver un qu'ils aiment. Dites aux élèves qu'ils peuvent partager ce qu'ils font dans ce dernier niveau avec leurs amis et leur famille. Il est maintenant temps de rassembler toutes les compétences de codage et d'ELA !"
-        },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": "Si vous avez aimé apprendre à coder aujourd'hui, vous pouvez continuer à apprendre en visitant code.org/learn. Si vous souhaitez partager ce que vous avez fait avec vos amis et votre famille, cliquez sur le bouton « Partager » et envoyez le lien à qui vous voulez !"
-        },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": "#### (Facultatif) Évaluation : Vérifier la compréhension (4 minutes)\n\nDistribuez deux autocollants par élève."
-        },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": "Vous avez deux autocollants. Sur un, écrivez ce que vous avez appris sur le codage aujourd'hui.\nSur le second, écrivez ce que vous avez appris sur la poésie aujourd'hui.\n\nPartageons avec toute la classe en levant la main pour répondre à cette question : qu'espérez-vous pouvoir apprendre d'autre sur le codage et l'informatique ensuite ?"
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Devenez viral"
         }
       }
     }

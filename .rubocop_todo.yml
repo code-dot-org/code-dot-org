@@ -271,12 +271,6 @@ Style/GlobalStdStream:
 Style/GlobalVars:
   Enabled: false
 
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowSplatArgument.
-Style/HashConversion:
-  Enabled: false
-
 # Offense count: 31
 # This cop supports unsafe auto-correction (--auto-correct-all).
 # Configuration parameters: AllowedReceivers.

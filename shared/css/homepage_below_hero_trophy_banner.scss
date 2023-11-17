@@ -1,3 +1,5 @@
+@import 'font';
+
 .homepage-professional-learning-banner {
   background-color: #0094ca;
   padding-top: 5px;
@@ -5,7 +7,7 @@
   position: relative;
 
   a {
-    font-family: 'Gotham 4r', sans-serif;
+    @include main-font-regular;
     text-decoration: none;
   }
 

@@ -11,7 +11,7 @@
     ],
     "hide_animation_mode": "true",
     "show_type_hints": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -49,7 +49,7 @@
       "downButton",
       "upButton"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_11_a\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"dance_callout_11_b\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"dance_callout_11_a\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"dance_callout_11_b\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"6\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"dance_callout_11_a\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"6\\\"]\",\"localization_key\":\"dance_callout_11_b\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Just be creative!\\n\\n*This level ends after 7 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9003baa437b4aa76484191d252a5c801/Dance_Party_11.mp3\"}]",
     "default_song": "summer_calvinharris",
@@ -58,8 +58,7 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "tts_long_instructions_override": "The when up pressed event block lets you run code when the up arrow is pressed.\r\n\r\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
-    "encrypted_examples": "vjGdqKkMnCkRRxrrxByDGxNwQK5j/BpfPBsYlF5HQPRxTKMJw280LujJ3L0E\ndCkz6B43rF5vigLZ499dKxfzUdzqYDnB8LPCg3ZpygNBbSoem5R3JXqykeWK\nFdP8A2GUaTFaP1pnTVrtVqNbMSTdqVJJv8DFgNk/JxCL447uNIjJ4p4JvDdJ\nLTDHDJKGVhiYtVfbtBZU1lRUZOyUsz+LGw==\n",
-    "contained_level_names": null
+    "encrypted_examples": "vjGdqKkMnCkRRxrrxByDGxNwQK5j/BpfPBsYlF5HQPRxTKMJw280LujJ3L0E\ndCkz6B43rF5vigLZ499dKxfzUdzqYDnB8LPCg3ZpygNBbSoem5R3JXqykeWK\nFdP8A2GUaTFaP1pnTVrtVqNbMSTdqVJJv8DFgNk/JxCL447uNIjJ4p4JvDdJ\nLTDHDJKGVhiYtVfbtBZU1lRUZOyUsz+LGw==\n"
   },
   "published": true,
   "notes": "",
@@ -126,7 +125,7 @@
           <title name="MOVE">MOVES.Dab</title>
           <title name="DIR">-1</title>
         </block>
-        <block type="Dancelab_doMoveLR">
+        <block type="Dancelab_doMoveLR" id="4">
           <title name="SPRITE">left_dancer</title>
           <title name="MOVE">MOVES.Dab</title>
           <title name="DIR">-1</title>
@@ -136,7 +135,7 @@
           <title name="PROPERTY">"scale"</title>
           <title name="VAL">50</title>
         </block>
-        <block type="Dancelab_setPropRandom">
+        <block type="Dancelab_setPropRandom" id="6">
           <title name="SPRITE">left_dancer</title>
           <title name="PROPERTY">"scale"</title>
         </block>

@@ -83,7 +83,7 @@ sq:
       title: 'Bashkohu në sesion në Code.org'
       placeholder: "Kodi i Sesionit (ABCDEF)"
       instructions: "Ju lutemi shkruani kodin me 6 shkronja që mësimdhënësi juaj ndau me ju (shembull: “ABCDEF”) për t'u bashkuar me sesionin e tyre."
-      instructions_short: "Fut kodin e seksionit me 6 shkronja"
+      instructions_short: "Vendosni kodin tuaj të seksionit me 6 shkronja"
       submit: 'Bashkohu'
   add_hint_form:
     placeholder: 'Të lutem fut udhëzimin tënd këtu'
@@ -110,14 +110,14 @@ sq:
   prize: 'çmim'
   more_info: 'Më shumë informacion'
   auth:
-    continue_with: 'Hyr me %{provider}'
+    continue_with: 'Vazhdoni me %{provider}'
     sign_in_with: 'Logohu me %{provider}'
     signed_in: 'U loguat!'
     signed_out_markdown: '### Ju jeni ç''kyçur nga [Code.org](%{url}).'
     sign_out_of_markdown: '#### Ju keni përdorur %{provider} për t''u kyçur. <a href="%{url}">Klikoni këtu për tu ç''kyçur nga %{provider}.'
     already_signedup: 'Jeni regjistruar?'
     notyet_signedup: "Nuk jeni të regjistruar akoma?"
-    google_oauth2: 'Llogaria e Google'
+    google_oauth2: 'Google'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Llogaria e Microsoft'
@@ -226,9 +226,9 @@ sq:
     school_organization_name: 'Emri i shkollës/organizatës'
     school_organization_zip: 'Kodi postar i shkollës/organizatës'
   signin_form:
-    title: 'Ke një llogari ekzistuese? Logohu'
+    title: 'Ke një llogari ekzistuese? Kyçu'
     login: 'Email'
-    login_username: 'Email-i ose emri i përdoruesit'
+    login_username: 'Email ose Emri i përdoruesit'
     password: 'Fjalëkalimi'
     remember: 'Më mbaj mend'
     submit: 'Kyçu'
@@ -373,9 +373,9 @@ sq:
       about_contact: "Na kontaktoni"
       about_faqs: "(FAQ) Pyetjet e shpeshta"
       learn: "Mëso"
-      stats: "statistikat"
+      stats: "Statistikat"
       help_us: "Na ndihmoni"
-      teach: "Mësoj"
+      teach: "Mësoni"
       about: "Rreth"
       incubator: "Inkubatori"
       legal: "Privatësia & Ligjore"
@@ -390,7 +390,7 @@ sq:
       my_projects: 'Projektet e mia'
       settings: 'Llogaria ime'
       logout: 'Dil'
-      signin: 'Futu'
+      signin: 'Kyçu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
       pair_programming: 'Programimi në ekip'
@@ -618,7 +618,7 @@ sq:
       link: "Mëso më shumë"
       applab_unsupported_tablet: "App Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
       gamelab_unsupported_tablet: "Loja Lab punon më së miri në një kompjuter desktop ose laptop me një mouse dhe tastierë. Mund të hasni probleme duke përdorur këtë mjet në pajisjen tuaj aktuale."
-      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e Shfletimit Privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
+      weblab_unsupported_locale_storage: "Ju mund të hasni probleme duke përdorur Web Lab në modalitetin e shfletimit privat. Ju lutemi ringarkoni projektin tuaj në gjendje normal. Na vjen keq për shqetësimin."
   deprecation:
     algebra_lab: " Sjkencat Kompjuterike në kurrikulën dhe përmbajtjen e Algjebër po zhvlerësohet. Brenda disa muajve të ardhshëm, ky laborator nuk do të jetë më i disponueshëm. Ju lutem shikoni [Bootstrap: Algjebra] ()%{bootstrap_algebra_url}në vend të kësaj. [Mëso më shumë] (%{cs_algebra_url})."
   slow_loading: 'Kjo po zgjat më shumë seç duhet...'
@@ -960,16 +960,21 @@ sq:
   view_all_units: 'Shiko të gjitha njësitë'
   pd:
     form_labels:
+      first_name: 'Emri'
+      first_name_preferred: 'Emri i preferuar'
+      last_name: 'Mbiemri'
       email: 'Email'
       school: 'Shkolla'
       school_name: 'Emri i shkollës'
-      school_country: 'Qyteti i shkollës'
+      school_city: 'Qyteti'
+      school_country: 'Shteti'
       colombian_chilean_school_name: 'Emri i shkollës'
       chilean_school_commune: 'Komuna'
       chilean_school_id: "ID e shkollës\n"
-      workshop_organizer: 'Organizuesi i punëtorisë'
-      workshop_course: 'Kursi i punëtorisë'
-      email_opt_in: 'A mund t''ju dërgojmë email në lidhje me programin ndërkombëtar të Code.org, azhurnimet në kurset tona ose lajme të tjera të shkencave kompjuterike?'
+      workshop_organizer: 'Organizatori i trajnimit'
+      workshop_course: 'Kursi i trajnimit'
+      email_opt_in: 'A mund t''ju dërgojmë email në lidhje me programin ndërkombëtar të Code.org, përditësimet në kurset tona ose lajme të tjera të shkencave kompjuterike?'
+      legal_opt_in: 'Duke dorëzuar këtë formular, ju pranoni të lejoni Code.org të ndajë informacione se si e përdorni Code.org dhe burimet e të mësuarit profesional me Partnerët ndërkombëtarë të Code.org në vendin tuaj. Ne do të ndajmë me këta partnerë informacionin tuaj të kontaktit (si emri dhe adresa e emailit), informacionin që jepni për shkollën tuaj, cilat kurse/njësi po përdorni dhe të dhëna të përmbledhura rreth këtyre kurseve (si p.sh. numri i studentëve që përdorin çdo kurs ). Ne nuk do të ndajmë asnjë informacion për nxënësit me partnerët tanë: të gjitha informacionet e nxënësve do të çidentifikohen dhe grumbullohen. Partnerët dhe fasilitorët tanë ndërkombëtarë janë të detyruar kontraktualisht ta trajtojnë këtë informacion me të njëjtin nivel konfidencialiteti si Code.org.'
     form_entries:
       gender:
         male: 'Mashkull'
@@ -1018,6 +1023,10 @@ sq:
       email_opt_in:
         opt_in_yes: 'Po'
         opt_in_no: 'Jo'
+    international_opt_in:
+      title: 'Pjesëmarrja në trajnim'
+      intro: "Faleminderit që keni gjetë kohë për të marrë pjesë në trajnimin për kurrikulën e Code.org. Misioni ynë për të sjellë mundësinë e edukimit në Shkencat Kompjuterike për të gjithë fëmijët në të gjitha shkollat në mbarë botën nuk do të ishte i mundur pa ju."
+      instructions: "Ju lutemi plotësoni formularin më poshtë për të treguar se 1) keni marrë pjesë në një trajnimi të drejtuar nga një nga partnerët ndërkombëtarë të Code.org dhe 2) pranoni të ndani informacionin tuaj me partnerin tonë ndërkombëtar në vendin tuaj në mënyrë që ata të mund të ndihmojnë për të mbështetur udhëtimin tuaj si mësimdhënës i shkencave kompjuterike."
   course_offering:
     headers:
       favorites: 'Të preferuarat'
@@ -1031,4 +1040,3 @@ sq:
   code_org_logo_alt: "Code.org Faqja kryesore"
   pixelation:
     binary: "Binare"
-

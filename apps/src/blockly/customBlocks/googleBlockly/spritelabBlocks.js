@@ -1,20 +1,25 @@
 import _ from 'lodash';
+import msg from '@cdo/locale';
 import {SVG_NS} from '@cdo/apps/constants';
 import Button from '@cdo/apps/templates/Button';
 import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {blocks as behaviorBlocks} from './behaviorBlocks';
-import msg from '@cdo/locale';
+
+const INPUTS = {
+  FLYOUT: 'flyout_input',
+  STACK: 'STACK',
+};
 import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
-
 export const blocks = {
   // Creates and returns a toggle button field. This field should be
   // added to the block after other inputs have been created.
-  initializeMiniToolbox() {
+  // miniToolboxBlocks is a backwards-compatible parameter used in CDO Blockly.
+  initializeMiniToolbox(miniToolboxBlocks, renderToolboxBeforeStack = false) {
     // Function to create the flyout
     const createFlyoutField = function (block) {
       const flyoutKey = CdoFieldFlyout.getFlyoutId(block);
@@ -24,9 +29,18 @@ export const blocks = {
         name: 'FLYOUT',
         isFlyoutVisible: true,
       });
-      block
-        .appendDummyInput('flyout_input')
-        .appendField(flyoutField, flyoutKey);
+
+      block.appendDummyInput(INPUTS.FLYOUT).appendField(flyoutField, flyoutKey);
+      // By default, the flyout is added after the stack input (at the bottom of the block).
+      // This flag is used by behavior and function definitions, mainly in the modal function editor,
+      // to add the flyout before the stack input (at the top of the block).
+      if (
+        renderToolboxBeforeStack &&
+        block.getInput(INPUTS.FLYOUT) &&
+        block.getInput(INPUTS.STACK)
+      ) {
+        block.moveInputBefore(INPUTS.FLYOUT, INPUTS.STACK);
+      }
       return flyoutField;
     };
 
@@ -34,12 +48,12 @@ export const blocks = {
     // deletes the flyout depending on the current visibility.
     const toggleFlyout = function () {
       const block = this.getSourceBlock();
-      if (!block.getInput('flyout_input')) {
+      if (!block.getInput(INPUTS.FLYOUT)) {
         const flyoutField = createFlyoutField(block);
         flyoutField.showEditor();
         flyoutField.render_();
       } else {
-        block.removeInput('flyout_input');
+        block.removeInput(INPUTS.FLYOUT);
       }
     };
 
@@ -69,8 +83,15 @@ export const blocks = {
   },
 
   // Adds a toggle button field to a block. Requires other inputs to already exist.
-  appendMiniToolboxToggle(miniToolboxBlocks, flyoutToggleButton) {
+  appendMiniToolboxToggle(
+    miniToolboxBlocks,
+    flyoutToggleButton,
+    renderingInFunctionEditor = false
+  ) {
+    // In the function editor, this call prevents a dummy input from being used as a
+    // row separator between the function definition in the mini-toolbox.
     this.setInputsInline(true);
+
     // We set the inputs to align left so that if the flyout is larger than the
     // inputs will be aligned with the left edge of the block.
     this.inputList.forEach(input => {
@@ -85,25 +106,32 @@ export const blocks = {
     // https://github.com/google/blockly-samples/tree/master/plugins/renderer-inline-row-separators
     const lastInput = this.inputList[this.inputList.length - 1];
     // Force add a dummy input at the end of the block, if needed.
-    if (lastInput.type !== Blockly.inputTypes.DUMMY) {
+    if (
+      ![Blockly.inputTypes.DUMMY, Blockly.inputTypes.STATEMENT].includes(
+        lastInput.type
+      )
+    ) {
       this.appendDummyInput();
     }
 
     if (this.workspace.rendered) {
-      const imageSourceId = this.id;
       this.workspace.registerToolboxCategoryCallback(
         CdoFieldFlyout.getFlyoutId(this),
-        function (workspace) {
+        () => {
           let blocks = [];
-          miniToolboxBlocks.forEach(blockType =>
-            blocks.push({
+          miniToolboxBlocks.forEach(blockType => {
+            const block = {
               kind: 'block',
               type: blockType,
-              extraState: {
-                imageSourceId: imageSourceId,
-              },
-            })
-          );
+            };
+            // The function editor toolbox doesn't need to track its parent.
+            if (!renderingInFunctionEditor) {
+              block.extraState = {
+                imageSourceId: this.id,
+              };
+            }
+            blocks.push(block);
+          });
           return blocks;
         }
       );
@@ -112,6 +140,11 @@ export const blocks = {
     // Blockly mutators are extensions add custom serialization to a block.
     // Serialize the state of the toggle icon to determine whether a
     // flyout field is needed immediately upon loading the block.
+    // If we're just rendering the block in the function editor, we don't
+    // need to serialize the state.
+    if (renderingInFunctionEditor) {
+      return;
+    }
 
     // JSON serialization hooks
     this.saveExtraState = function () {
@@ -137,6 +170,8 @@ export const blocks = {
     };
     this.domToMutation = function (xmlElement) {
       const useDefaultIcon =
+        // Assume default icon if no XML attribute present
+        !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
         xmlElement.getAttribute('useDefaultIcon') === 'true';
       flyoutToggleButton.setIcon(useDefaultIcon);

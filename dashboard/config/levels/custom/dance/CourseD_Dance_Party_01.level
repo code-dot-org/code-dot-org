@@ -11,7 +11,7 @@
     ],
     "hide_animation_mode": "true",
     "show_type_hints": "true",
-    "use_modal_function_editor": "true",
+    "use_modal_function_editor": "false",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -48,7 +48,7 @@
       "https://curriculum.code.org/images/sprites/dance_20191106/moose_26.png",
       "https://curriculum.code.org/images/sprites/dance_20191106/moose_27.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"dance_callout_01\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"dance_callout_01\",\"callout_text\":\"Add this block to your program!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"dance_callout_01\",\"callout_text\":\"Add this block to your program!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "parent_level_id": 14643,
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* Make sure a dancer appears on the screen.\\n\\n*This level ends after 4 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b738b0f8464fcea6bd8c56a620a73ec/Dance_Party_01.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"**Optional Challenges**\\n* Choose a different song to play.\\n* Rename your dancer.\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15d993f319020635146d237b03cbfc52/Dance_Party_01.mp3\"}]",
@@ -58,8 +58,7 @@
     "video_key": "hoc_dance_warmup",
     "mini_rubric": "false",
     "encrypted": "false",
-    "encrypted_examples": "BpO18MlCAuQFiNZRLcvX2VrE9mDyNDhv/CZ5640MXARkNhMEIIr3lp9/8lgN\nEvKpUSv/0QnBk1ih0lwxAhEE5A==\n",
-    "contained_level_names": null
+    "encrypted_examples": "BpO18MlCAuQFiNZRLcvX2VrE9mDyNDhv/CZ5640MXARkNhMEIIr3lp9/8lgN\nEvKpUSv/0QnBk1ih0lwxAhEE5A==\n"
   },
   "published": true,
   "notes": "",
@@ -79,7 +78,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Dancelab_makeNewDanceSprite">
+        <block type="Dancelab_makeNewDanceSprite" id="1">
           <title name="COSTUME" config="&quot;CAT&quot;">"CAT"</title>
           <title name="NAME">my_first_dancer</title>
           <title name="LOCATION">{x: 200, y: 200}</title>

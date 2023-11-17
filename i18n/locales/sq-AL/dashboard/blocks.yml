@@ -24,12 +24,20 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             '"ALIEN"': alienët
             '"MOOSE"': Moose
             '"ROBOT"': robotët
+          MOVE:
+            MOVES.Rest: Asnjë
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: Asnjë
       Dancelab_changeMoveLR:
@@ -176,6 +184,11 @@ sq:
         options:
           EFFECT:
             '"none"': Asnjë
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': Asnjë
+            '"clouds"': Retë
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:

@@ -2161,10 +2161,6 @@
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/playlab/unversioned": {
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
@@ -2236,25 +2232,16 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressão sem perdas"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Código",
-          "definition": "(v) Para escrever instruções para um computador."
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
         },
-        "program/poem-art/unversioned": {
-          "word": "Programa",
-          "definition": "Uma série de passos que foram codificados em algo que pode ser executado por uma máquina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Humor",
-          "definition": "a expressão de um sentimento, atmosfera ou emoção na arte ou escrita."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Linha",
-          "definition": "(poesia) - uma subdivisão de um poema disposto em uma linha que termina na margem direita."
+        "program/dance-ai/2023": {
+          "word": "Programa"
         }
       }
     }

@@ -17,7 +17,7 @@
 
 - video_101_index.times do |index|
   .action-block.action-block--two-col
-    %figure.video-101__video.col-50
+    .media-wrapper.col-50
       = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false', download_path: video_download_path[index]
     .text-wrapper.col-50
       %p.overline
@@ -30,17 +30,17 @@
         %p
           %i{class: "#{icon_book}"}
           %strong=hoc_s(:ai_pl_101_resources_guide)
-          %a{href: "https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy", target: "_blank", rel: "noopener noreferrer"}
+          %a.has-external-link{href: "https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/copy", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:ai_pl_101_llm_slides_title)
       - if index === 2
         %p
           %i{class: "#{icon_book}"}
           %strong=hoc_s(:ai_pl_101_resources_guide)
-          %a{href: "http://bit.ly/TransformLearningAI", target: "_blank", rel: "noopener noreferrer"}
+          %a.has-external-link{href: "http://bit.ly/TransformLearningAI", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:ai_pl_101_resources_3)
       - if index === 3
         %p
           %i{class: "#{icon_book}"}
           %strong=hoc_s(:ai_pl_101_resources_guide)
-          %a{href: "http://bit.ly/AIRespUse", target: "_blank", rel: "noopener noreferrer"}
+          %a.has-external-link{href: "http://bit.ly/AIRespUse", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:ai_pl_101_resources_5)

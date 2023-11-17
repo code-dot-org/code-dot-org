@@ -12,6 +12,7 @@ import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnAction
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class YourSchool extends Component {
   static propTypes = {
@@ -139,11 +140,11 @@ const styles = {
     marginTop: 10,
     marginBottom: 20,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     lineHeight: '1.5em',
   },
   mapFooter: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25,

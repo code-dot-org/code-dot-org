@@ -1,5 +1,6 @@
 require 'json'
 require 'jwt'
+require 'policies/lti'
 require 'test_helper'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
@@ -21,7 +22,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
-  def create_jwt_and_stub(payload, raises_error = false)
+  def create_jwt_and_stub(payload, raises_error: false)
     if raises_error
       LtiV1Controller.any_instance.stubs(:get_decoded_jwt).raises JWT::DecodeError
     else
@@ -38,6 +39,9 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
           else
             @integration.client_id
           end
+    roles_key = Policies::Lti::LTI_ROLES_KEY
+    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    teacher_roles = Policies::Lti::TEACHER_ROLES
     {
       aud: aud,
       azp: @integration.client_id,
@@ -46,7 +50,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       iss: @integration.issuer,
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
-      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest'
+      'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
+      custom_claims_key => {
+        display_name: 'hansolo',
+        full_name: 'Han Solo',
+        given_name: 'Han',
+        family_name: 'Solo',
+      },
+      roles_key => teacher_roles
     }
   end
 
@@ -57,7 +68,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   def create_valid_jwt_raise_error
     payload = get_valid_payload(false)
-    create_jwt_and_stub(payload, true)
+    create_jwt_and_stub(payload, raises_error: true)
   end
 
   test 'login - given no params, return unauthorized' do

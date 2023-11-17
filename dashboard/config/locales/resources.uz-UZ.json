@@ -5534,7 +5534,6 @@
           "type": "Manba"
         },
         "how_ai_works_large_language_models/ai-ethics/2023": {
-          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
           "type": "Video"
         },
         "societal_impact_of_generative_ai/ai-ethics/2023": {
@@ -7053,6 +7052,10 @@
         "functions_with_parameters/csd/2023": {
           "name": "Funksiyalar (parameterlari bilan)",
           "type": "Video"
+        },
+        "fucntions_devices/csd/2023": {
+          "name": "Funksiyalar",
+          "type": "Slaydlar"
         },
         "mini-project_interactive_art/csd/2023": {
           "type": "Slaydlar"
@@ -9095,10 +9098,8 @@
           "name": "Video: Aloe Blak bilan matnni siqish",
           "type": "Video"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "",
-          "url": "",
-          "type": "Slaydlar"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Manba"
         }
       }
     }

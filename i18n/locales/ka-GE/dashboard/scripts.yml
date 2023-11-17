@@ -472,7 +472,7 @@ ka:
           description_short: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი ვარსკვლავური ომების თამაში.
           student_description: ისწავლეთ დროიდების დაპროგრამება და შექმენით საკუთარი ვარსკვლავური ომების თამაში.
         mc:
-          title: Minecraft-ის კოდის ერთი საათი
+          title: Minecraft თავგადასავალი
           description: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის თავგადასავლებში.
           description_short: შეისწავლეთ Minecraft-ის სამყარო კოდით
           student_description: გამოიყენეთ ბლოკები და დაეხმარეთ სტივსა ან ალექსს Minecraft-ის თავგადასავლებში.
@@ -4051,6 +4051,8 @@ ka:
               display_name: შიგთავსი
             lessonGroup-2:
               display_name: შიგთავსი
+        dance-unplugged:
+          title: ცეკვის პარტია unplugged
         spelling-bee:
           title: შეჯიბრი დამარცვლაში
         csa5-exemplars:
@@ -5236,3 +5238,18 @@ ka:
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
         how-ai-works-2023:
           title: როგორ მუშაობს AI
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: შესავალი
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: შესავალი
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: შესავალი
+          lesson_groups:
+            lessonGroup-7:
+              display_name: შესავალი

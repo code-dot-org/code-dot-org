@@ -181,7 +181,8 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "sequencing/coursec/2021": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "programming/coursec/2021": {
           "word": "Pagprograma",
@@ -451,7 +452,8 @@
           "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "sequencing/express/2021": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "program/express/2021": {
           "word": "Program",
@@ -763,7 +765,8 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "sequencing/coursec/2022": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "persistence/coursec/2022": {
           "word": "Pagtitiyaga",
@@ -1037,7 +1040,8 @@
           "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "sequencing/express/2022": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "program/express/2022": {
           "word": "Program",
@@ -1443,7 +1447,8 @@
           "definition": "Isang algorithm na na-code papunta sa isang bagay na maaaring patakbuhin ng isang machine."
         },
         "sequencing/coursec/2023": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "persistence/coursec/2023": {
           "word": "Pagtitiyaga",
@@ -1717,7 +1722,8 @@
           "definition": "Paghahanap at pag-aayos ng mga problema sa algorithm o program."
         },
         "sequencing/express/2023": {
-          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command."
+          "definition": "Paglalagay ng mga command sa tamang pagkakasunod-sunod para mabasa ng mga computer ang mga command.",
+          "word": "Pagsunud-sunod"
         },
         "program/express/2023": {
           "word": "Program",
@@ -2182,25 +2188,16 @@
           "word": "Lossless Compression",
           "definition": "isang data compression algorithm na nagbibigay-daan sa orihinal na data na ganap na mabuo mula sa naka-compress na data. Pinakakaraniwang ginagamit sa pag-compress ng text (hal. .zip compression)"
         },
-        "code/poem-art/unversioned": {
+        "code/dance-ai/2023": {
           "word": "Code",
-          "definition": "(v) upang magsulat ng mga tagubilin sa isang computer."
+          "definition": "(v) para sumulat ng code, o sumulat ng mga tagubulin para sa isang computer."
         },
-        "event/poem-art/unversioned": {
+        "event/dance-ai/2023": {
           "word": "Event",
           "definition": "Isang aksyon na sanhi na nagaganap ang isang bagay."
         },
-        "program/poem-art/unversioned": {
-          "word": "Program",
-          "definition": "Serye ng mga hakbang na naka-code sa isang bagay na maaaring patakbuhin ng makina."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "Mood",
-          "definition": "pagpapahayag ng damdamin, kapaligiran, o emosyon sa sining o pagsulat."
-        },
-        "line/poem-art/unversioned": {
-          "word": "Linya",
-          "definition": "(tula) - isang subdibisyon ng tula na nakaayos ng sunud-sunod na nagtatapos sa kanang gilid. "
+        "program/dance-ai/2023": {
+          "word": "Program"
         }
       }
     }

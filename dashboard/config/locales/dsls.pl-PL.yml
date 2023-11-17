@@ -972,57 +972,89 @@ pl-PL:
       CSD U1 MC Q1_2023:
         answers:
         - correct: true
+          text: Ekran dotykowy
         - correct: true
+          text: Mikrofon
+        - text: Głośnik
+        - text: Monitor
         - {}
-        - {}
-        - {}
+        markdown: Które z następujących mogą być wejściem dla komputera? *(Zaznacz
+          wszystkie pasujące)*
+        teacher_markdown: |-
+          **Zawartość: Rozdział 1 Lekcja 5**
+          Wejście przekazuje dane od użytkownika lub urządzenia do komputera. Ekrany dotykowe i mikrofony przekazują informacje. Głośniki i latarki nie są wejściami, ponieważ są wyjściami, które *dają* informacje.
       CSD U1 MC Q2_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po policzeniu liczby kliknięć ekran się aktualizuje.
+        - text: Jeśli nie zgadniesz, otrzymasz wiadomość.
+        - text: Jeśli zgadniesz prawidłową liczbę, zagra muzyka.
+        - text: Jeśli twój najlepszy wynik jest lepszy niż poprzedni najlepszy wynik,
+            jest on aktualizowany na ekranie.
         - correct: true
         questions:
-        - {}
+        - text: Które z następujących można opisać jako przetwarzanie, a które jako
+            wynik przetwarzania?
+        teacher_markdown: |-
+          **Zawartość: Rozdział 1 Lekcja 5**
+          Wyjście to informacja, którą komputery dają użytkownikom. Są to wszystkie przykłady informacji dane użytkownikowi po przetworzeniu, myślenie komputera.
       CSD U1 MC Q3_2023:
         answers:
-        - {}
-        - {}
+        - text: Aplikacje
+        - text: Zdjęcia
         - text: Muzyka
         - text: Miejsce
         - correct: true
         questions:
-        - {}
+        - text: Jakie rodzaje informacji może przechowywać komputer?
+        teacher_markdown: |
+          **Zawartość: Rozdział 1 Lekcja 7**
+
+          Wszystkie te elementy mogą być przechowywane w komputerze.
       CSD U1 MC Q4_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Obliczanie i mierzenie wzrostu poziomu morza
+        - text: Szukanie miasta o największym zanieczyszczeniu powietrza
+        - text: Porównanie ilości gazów cieplarnianych emitowanych przez poszczególne
+            kraje
         - correct: true
+          text: Podejmij działania w celu odwrócenia zmian klimatu
         - correct: true
+          text: Przyjęcie przepisów mających na celu ograniczenie paliw kopalnych
         questions:
-        - {}
+        - text: Których problemów *nie można* rozwiązać za pomocą obliczeń? (Wybierz
+            wszystkie pasujące)
+        teacher_markdown: |
+          **Zawartość: Rozdział 1 Lekcja 4**
+
+          Używanie tylko komputerów nie może rozwiązać problemu zmian klimatu, ani komputery nie mogą uchwalić przepisów.
       CSD U1 Match Q5_2023:
         answers:
         - text: Wejście
         - text: Pamięć
         - text: Przetwarzanie
+        content1: Opracowujesz aplikację, która ostrzega Cię, gdy jakość powietrza
+          w Twoim mieście jest słaba. Dopasuj następujące elementy do wejścia, przetwarzania
+          i przechowywania
         questions:
-        - {}
-        - {}
-        - {}
+        - text: Zmierz dzisiejszą jakość powietrza
+        - text: Zachowaj dane dotyczące jakości powietrza na każdy dzień
+        - text: Porównaj dzisiejszą jakość powietrza z jakością powietrza z ostatnich
+            dni
+        teacher_markdown: "**Zawartość: Rozdział 1 Lekcja 5, 6, 7**"
       CSD U1 Match Q6_2023:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Zdecyduj, jakie atrakcje będą na imprezie, jakie jedzenie i kogo zaprosić
+        - text: Przedyskutuj, co poszło dobrze, a co można poprawić
+        - text: Zorganizuj imprezę dla mieszkańców z okolicy
+        - text: Zdecyduj o celu imprezy
+        content1: Pięciu studentów planuje imprezę. Dopasuj to, co trzeba zrobić z
+          etapem procesu rozwiązywania problemów
         questions:
         - text: Przygotuj
         - text: Przemyśl
         - text: Spróbuj
         - text: Zdefiniuj
+        teacher_markdown: "**Zawartość: Rozdział 1 Lekcja 2**"
       CSD U1 Test:
         title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
       CSD U1 Test PSP match:
@@ -3368,6 +3400,17 @@ pl-PL:
         title: 'Test po projekcie: Tworzenie stron internetowych '
       CSD Web Development Post-Project Test_pilot_2023:
         title: 'Test po projekcie: Tworzenie stron internetowych '
+      CSD Web Sample Pages_2023:
+        markdown: |
+          # Przykładowe osobiste strony internetowe
+
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon A</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/kkb1upGQja7Hy4NAa72uQxwu87jDa_DO1aiav2Qhzk8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/301502f3280461ed7b9f16bf5ed11bb8-image-1677189841902.png" alt="Template A page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon B</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/hQCSn2We5tss6ZiOPTGJYq6PXHkwOIAztnd3ArJbezc" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e9839b33b809a72773d9190f5378e295-image-1677194056589.png" alt="Template B page"></a></div>
+          <div style="float: left; text-align:center; width:34%"><strong>Szablon C</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/Z3m2fWClc10iTgxiLnOfTqZHApYrFXgx8YqgCwAvXvs" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/c030607ab7c9eacdffc613aff3992381-image-1677194170313.png" alt="Template C page"></a></div>
+          <hr style="clear: both" />
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon D</strong><br />(kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/asJPWlR18HPsC30w8nGM7Zm1jPurD_wNyEKstYWjh_Q" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/e53aaca3962f75b7279cb8f39b2b8237-image-1677194195497.png" alt="Template D page"></a></div>
+          <div style="float: left; text-align:center; width:33%"><strong>Szablon E</strong><br />(Kliknij obraz, aby wyświetlić szablon)<br /><a href="https://codeprojects.org/projects/weblab/I888qmIAVN8JACK6jHeRtIz17b77g5-XcvkkxF8ztZ8" target="_new"><img style="border-radius:10px; margin: 10px; width: 100%;" src="https://images.code.org/68afb5ea16d9e61545c68254570ce39e-image-1677194239625.png" alt="Template E page"></a></div>
+          <hr style="clear: both" />
       CSD games cake challenge choice_2021:
         display_name: Wyzwania
       CSD games cake challenge choice_2022:
@@ -11186,7 +11229,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       csd-post-survey-unit1-preamble:
         content1: opis tutaj
       csd-post-survey-unit2-preamble:
@@ -11216,6 +11259,8 @@ pl-PL:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
       csd-pre-survey-levelgroup_21_22_2022:
         title: 'Ankieta uczniowska przed kursem CS Discoveries '
+      csd-pre-survey-levelgroup_21_22_2023:
+        title: Ankieta dla uczniów przed odbyciem kursu
       csd-pulse-check-survey-1-q1 U1Ch2:
         answers:
         - correct: true
@@ -16298,17 +16343,29 @@ pl-PL:
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
+          text: To pierwsza nauka o rozwiązywaniu problemów za pomocą technologii
         - correct: true
+          text: 'Robiłem mniejsze zajęcia dotyczące rozwiązywania problemów za pomocą
+            technologii (na przykład: godzina kodu), ale to moje pierwsze dłuższe
+            zajęcia'
         - correct: true
+          text: Uczęszczałem już na zajęcia lub robiłem dłuższe samouczki online dotyczące
+            rozwiązywania problemów za pomocą technologii
         questions:
-        - {}
+        - text: Jakie dotychczasowe doświadczenia miałeś z rozwiązywaniem problemów
+            za pomocą technologii?
       intro-pulse-survey-q2_csd2_2023:
         answers:
         - correct: true
+          text: To pierwsza moja nauka o tworzeniu stron internetowych
         - correct: true
+          text: 'Wykonałem mniejsze działania w zakresie tworzenia stron internetowych
+            (na przykład: godzina kodu), ale to moja pierwsza dłuższa klasa'
         - correct: true
+          text: Uczęszczałem już na zajęcia lub robiłem dłuższe samouczki online na
+            temat tworzenia stron internetowych
         questions:
-        - {}
+        - text: Jakie dotychczasowe doświadczenia miałeś z tworzeniem stron internetowych?
       intro-pulse-survey-q2_csd3_2023:
         answers:
         - correct: true
@@ -16347,7 +16404,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd2_2023:
         answers:
         - correct: true
@@ -16358,7 +16415,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd3_2023:
         answers:
         - correct: true
@@ -16369,7 +16426,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd4_2023:
         answers:
         - correct: true
@@ -16380,7 +16437,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd5_2023:
         answers:
         - correct: true
@@ -16391,7 +16448,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q3_csd6_2023:
         answers:
         - correct: true
@@ -16402,7 +16459,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Mam możliwość nauki informatyki
       intro-pulse-survey-q4_csd1_2023:
         answers:
         - correct: true
@@ -16413,7 +16470,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd2_2023:
         answers:
         - correct: true
@@ -16424,7 +16481,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd3_2023:
         answers:
         - correct: true
@@ -16435,7 +16492,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd4_2023:
         answers:
         - correct: true
@@ -16446,7 +16503,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd5_2023:
         answers:
         - correct: true
@@ -16457,7 +16514,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q4_csd6_2023:
         answers:
         - correct: true
@@ -16468,7 +16525,7 @@ pl-PL:
         - correct: true
         - correct: true
         questions:
-        - {}
+        - text: Chcę wziąć udział w większej ilości zajęć z informatyki w przyszłości
       intro-pulse-survey-q5_csd1_2023:
         answers:
         - correct: true
@@ -16535,6 +16592,10 @@ pl-PL:
         - correct: true
         questions:
         - {}
+      intro-pulse-survey_csd1_2023:
+        title: Szybka ankieta o rozwiązywaniu problemów i obliczaniu!
+      intro-pulse-survey_csd2_2023:
+        title: Szybka ankieta dotycząca tworzenia stron internetowych!
       made-choices-about-assignments:
         answers:
         - correct: true

@@ -648,14 +648,6 @@
         "machine_learning/oceans/unversioned": {
           "definition": "כיצד מחשבים מזהים תבניות או מקבלים החלטות מבלי שתוכנתו לכך במפורש"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "מציאת טעויות"
         },
@@ -677,25 +669,8 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "מציאת טעויות"
         },
-        "code/poem-art/unversioned": {
-          "word": "קוד",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "אווירה",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "קוד"
         }
       }
     }

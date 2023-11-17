@@ -786,14 +786,6 @@
           "word": "Машинно Обучение",
           "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Отстраняване на грешки"
         },
@@ -815,25 +807,12 @@
         "lossless_compression/text-compression/unversioned": {
           "definition": "алгоритъм за компресиране, който позволява данните да бъдат перфектно възстановени от копмресираните данни. Най-често използвани за компресиране на текст(т.е. .zip компресия)"
         },
-        "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
+        "generative_ai/ai-ethics/2023": {
+          "word": "Генеративен AI",
+          "definition": "Вид изкустве нинтелект (AI), който използва модели от съществуващо съдаржание за създаване на ново съдържание, като нов текст или нови изобважения."
         },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Код"
         }
       }
     }

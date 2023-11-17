@@ -167,7 +167,8 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
     Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
-    Then I wait until element "h1:contains(Professional development for elementary teachers)" is visible
+    Then I wait for jquery to load
+    And I wait until current URL contains "/professional-development-workshops"
     
 
 

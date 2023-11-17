@@ -335,6 +335,11 @@ GEM
       tableschema
     date (3.3.3)
     declarative (0.0.20)
+    delayed_job (4.1.11)
+      activesupport (>= 3.0, < 8.0)
+    delayed_job_active_record (4.1.7)
+      activerecord (>= 3.0, < 8.0)
+      delayed_job (>= 3.0, < 5)
     devise (4.7.3)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -406,7 +411,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.15.5)
+    ffi (1.16.3)
     firebase (0.2.6)
       httpclient
       json
@@ -505,7 +510,7 @@ GEM
     launchy (2.5.2)
       addressable (~> 2.8)
     libv8 (8.4.255.0)
-    listen (3.7.1)
+    listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.19.1)
@@ -724,7 +729,7 @@ GEM
     request_store (1.4.1)
       rack (>= 1.4)
     require_all (2.0.0)
-    rerun (0.13.0)
+    rerun (0.14.0)
       listen (~> 3.0)
     responders (3.1.0)
       actionpack (>= 5.2)
@@ -807,8 +812,6 @@ GEM
       websocket (~> 1.0)
     sequel (5.67.0)
     set (1.0.3)
-    shotgun (0.9.1)
-      rack (>= 1.0)
     signet (0.17.0)
       addressable (~> 2.8)
       faraday (>= 0.17.5, < 3.a)
@@ -974,6 +977,7 @@ DEPENDENCIES
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
   datapackage
+  delayed_job_active_record (~> 4.1)
   devise (~> 4.7.0)
   devise_invitable (~> 2.0.2)
   dotiw
@@ -1082,7 +1086,6 @@ DEPENDENCIES
   sd_notify
   selenium-webdriver (~> 4.0)
   sequel (~> 5.29)
-  shotgun
   simplecov (~> 0.22.0)
   sinatra (= 2.2.3)
   sort_alphabetical!

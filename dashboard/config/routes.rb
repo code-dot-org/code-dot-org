@@ -359,6 +359,9 @@ Dashboard::Application.routes.draw do
       resources :reference_guides, param: 'key', path: 'guides'
     end
 
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
+
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
     get '/s/csp2-2020/lockable/1(*all)', to: redirect(path: '/s/csp2-2020/lessons/9%{all}')
@@ -879,6 +882,9 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
@@ -920,6 +926,15 @@ Dashboard::Application.routes.draw do
         # Routes used by the peer reviews admin pages
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1043,14 +1058,23 @@ Dashboard::Application.routes.draw do
     resources :rubrics, only: [:create, :edit, :new, :update] do
       member do
         get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        post 'run_ai_evaluations_for_user'
         post 'submit_evaluations'
       end
     end
 
-    resources :learning_goal_evaluations, only: [:create, :update] do
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
       end
     end
 

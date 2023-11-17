@@ -4,6 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
+import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 import sinon from 'sinon';
@@ -88,6 +89,8 @@ describe('RubricsContainerTest', () => {
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
       defaultProps.submittableLevels.length
     );
+    expect(wrapper.find(RubricEditor)).to.have.length(1);
+    expect(wrapper.find('Button[text="Delete key concept"]')).to.have.length(1);
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
@@ -98,6 +101,9 @@ describe('RubricsContainerTest', () => {
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
       defaultProps.submittableLevels.length
+    );
+    expect(wrapper.find(RubricEditor).prop('learningGoalList')).to.equal(
+      rubricInfo.learningGoals
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length
@@ -115,6 +121,18 @@ describe('RubricsContainerTest', () => {
     addButton.simulate('click');
     const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
     expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
+  });
+
+  it('adds a deletes learning goal on "Delete Key Concept" button click', () => {
+    const wrapper = mount(<RubricsContainer {...defaultProps} />);
+    const initialLearningGoalItems = wrapper.find('LearningGoalItem').length;
+    const deleteButton = wrapper
+      .find(Button)
+      .findWhere(n => n.props().text === 'Delete key concept');
+    expect(deleteButton).to.have.length(1);
+    deleteButton.simulate('click');
+    const afterAddDeletingGoalItems = wrapper.find('LearningGoalItem').length;
+    expect(afterAddDeletingGoalItems).to.equal(initialLearningGoalItems - 1);
   });
 
   it('changes the selected level for assessment when the dropdown is changed', () => {

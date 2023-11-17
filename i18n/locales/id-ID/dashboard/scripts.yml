@@ -205,7 +205,7 @@ id:
           description_short: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
           student_description: Pelajari memprogram Droid, dan Buat permainan Star Wars Anda sendiri di sebuah di galaksi yang sangat jauh.
         mc:
-          title: Minecraft Hour of Code
+          title: Petualang Minecraft
           description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
           description_short: Jelajahi dunia Minecraft melalui kode
           student_description: Gunakan blok dari Code untuk mendapatkan Steve atau Alex pada petualangan dengan dunia Minecraft ini.
@@ -5472,3 +5472,62 @@ id:
           lessons:
             lesson-1:
               name: Kode Etik AI Kami
+        virtual-pl-csa-summer-2024-day1:
+          title: Hari 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Pendahuluan
+          title: Hari 2
+        virtual-pl-csp-summer-day3:
+          title: Hari 3
+        virtual-pl-csp-summer-day4:
+          title: Hari 4
+        virtual-pl-csa-summer-day2:
+          title: Hari 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Pendahuluan
+          title: Hari 3
+        virtual-pl-csa-summer-day4:
+          title: Hari 4
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Pendahuluan
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Pendahuluan
+          title: Hari 1
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Pengantar Kegiatan Asinkron
+          title: Hari 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: templat rencana pelajaran hour of code
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Pemecahan Masalah dan Komputasi Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Pemecahan Masalah dan Komputasi.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mengkesplorasi proyek akhir chapter.
+
+            **Waktu yang disarankan:** 30 menit

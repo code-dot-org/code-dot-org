@@ -25,6 +25,10 @@ sm:
         options:
           UNIT:
             '"seconds"': sekone
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekone
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -32,6 +36,10 @@ sm:
             '"ALIEN"': tagata ese
             '"MOOSE"': aila lapoa
             '"ROBOT"': masina faatagata
+          MOVE:
+            MOVES.Rest: E leai se mea
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: E leai se mea
       Dancelab_changeMoveLR:
@@ -173,6 +181,12 @@ sm:
         options:
           EFFECT:
             '"none"': E leai se mea
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': E leai se mea
+          PALETTE:
+            '"ocean"': Moana
       Dancelab_setDanceSpeed:
         options:
           SPEED:

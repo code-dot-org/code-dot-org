@@ -4770,6 +4770,8 @@ pt:
           description_short: Codifique sua própria festa de dança para compartilhar
             com seus amigos! (Esta versão é para conexões lentas)
           title: Festa de Dança (Baixa Largura de Banda)
+        dance-unplugged:
+          title: Festa de dança desconectada
         dani-june-2020-test:
           lesson_groups:
             csp5_1:
@@ -5616,7 +5618,7 @@ pt:
           description_short: Explore o mundo de Minecraft usando códigos.
           student_description: Use blocos de código para levar Steve ou Alex a uma
             aventura pelo mundo do Minecraft.
-          title: Hora do Código Minecraft
+          title: Aventureiro de Minecraft
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
@@ -6019,6 +6021,29 @@ pt:
           title: DP da ciência da computação na ciência
         sconyers:
           title: Parque da Tracey
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e
+            computação'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
@@ -6277,6 +6302,25 @@ pt:
               display_name: Conteúdo
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
+        virtual-pl-csa-summer-2024-day1:
+          title: Dia 1
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
+          lessons:
+            lesson-7:
+              name: Introdução
+          title: Dia 1
+        virtual-pl-csa-summer-day2:
+          title: Dia 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
+          title: Dia 3
+        virtual-pl-csa-summer-day4:
+          title: Dia 4
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -6303,6 +6347,17 @@ pt:
           lessons:
             lesson-3:
               name: Avaliação
+        virtual-pl-csp-summer-day1:
+          title: Dia 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
+          title: Dia 2
+        virtual-pl-csp-summer-day3:
+          title: Dia 3
+        virtual-pl-csp-summer-day4:
+          title: Dia 4
         virustest:
           description_short: 'Use o Sprite Lab para criar uma simulação de epidemia
             de vírus. '

@@ -52,6 +52,7 @@ pl:
         age: 'Wiek'
         gender: 'Płeć'
         edit_header: 'Edytuj dane konta'
+        ai_settings_header: 'Ustawienia AI'
         finish_sign_up_header: 'Zakończ tworzenie swojego konta'
         finish_sign_up_header_error: 'Proszę poprawić następujące błędy:'
         finish_sign_up_subheader: 'Wypełnij poniższe informacje, aby zakończyć tworzenie konta Code.org dla <strong>%{email}</strong>.'
@@ -63,6 +64,7 @@ pl:
           future: nie może być w przyszłości
         user_type: 'Typ konta'
         us_state: 'Stan'
+        ai_rubrics_disabled: 'Wyłącz funkcję rubryki AI'
   beta: "beta"
   hello: "Witaj świecie"
   welcome_back: "Witaj z powrotem, %{name}"
@@ -1319,4 +1321,8 @@ pl:
   course_deprecated:
     title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
     button: "Zobacz nowy program nauczania"
-
+  hoc_tutorial_email_content:
+    dear_teacher: "Szanowna/y %{teacher_name},"
+    learn_about_ai: "Poznaj sztuczną inteligencję (AI)"
+    founder: "Założyciel, Code.org"
+    your_friends: "Twoi znajomi na Code.org"

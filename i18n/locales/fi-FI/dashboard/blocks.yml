@@ -59,6 +59,11 @@ fi:
           UNIT:
             '"measures"': tahdit
             '"seconds"': sekuntia
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': tahdit
+            '"seconds"': sekuntia
       Dancelab_changeColorBy:
         text: muuta {COLOR} {METHOD} {AMOUNT}
         options:
@@ -98,6 +103,27 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
+        options:
+          GROUP:
+            '"CAT"': kaikki kissat
+            '"SLOTH"': laiskiaiset
+          MOVE:
+            MOVES.Roll: Korin kallistus
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Tähti
+            MOVES.ThisOrThat: Sitä tai tätä
+            MOVES.Rest: Ei mitään
+            '"next"': "(Seuraava)"
+            '"prev"': "(Edellinen)"
+            '"rand"': "(Satunnainen)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -546,6 +572,49 @@ fi:
             '"iceCream"': Jäätelö
             '"default"': Vaalea
             '"neon"': Neon
+            '"tropical"': Trooppinen
+            '"vintage"': Vanhanaikainen
+            '"warm"': Sydämellinen
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "määritä taustatehoste
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Ei mitään
+            '"rand"': "(Satunnainen)"
+            '"quads"': Kulmat
+            '"circles"': Ympyrät
+            '"color_cycle"': Värit
+            '"diamonds"': Timantit
+            '"disco_ball"': Diskopallo
+            '"fireworks"': Ilotulitus
+            '"flowers"': Kukat
+            '"growing_stars"': Kasvavat tähdet
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskooppi
+            '"lasers"': Laser-tanssilattia
+            '"splatter"': Maaliroiskeet
+            '"rainbow"': Sateenkaari
+            '"ripples_random"': Satunnainen aaltoilu
+            '"ripples"': Aaltoilu
+            '"snowflakes"': Lumi
+            '"text"': Kappaleen nimet
+            '"galaxy"': Avaruus
+            '"sparkles"': Kimallus
+            '"spiral"': Kierre
+            '"disco"': Neliöt
+            '"starburst"': Tähtisäteet
+            '"stars"': Äänet
+            '"music_wave"': Aallot
+          PALETTE:
+            '"rave"': Mustavalkoinen
+            '"cool"': Kylmä
+            '"electronic"': Sähköinen
+            '"iceCream"': Jäätelö
+            '"default"': Vaalea
+            '"neon"': Neon
+            '"rainbow"': Sateenkaari
             '"tropical"': Trooppinen
             '"vintage"': Vanhanaikainen
             '"warm"': Sydämellinen

@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color', 'font';
 
 .module_assignments {
   display: flex;
@@ -43,8 +43,8 @@
 
     .course_unit_title {
       a {
+        @include main-font-regular;
         color: $dark_charcoal !important;
-        font-family: "Gotham 4r", sans-serif;
       }
 
       font-size: 18px;
@@ -62,8 +62,8 @@
     }
 
     .module_assignment {
+      @include main-font-regular;
       border-radius: 5px;
-      font-family: "Gotham 4r", sans-serif;
       text-decoration: none;
       margin: 10px;
       padding: 5px;

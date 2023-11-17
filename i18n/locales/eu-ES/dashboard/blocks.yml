@@ -46,6 +46,11 @@ eu:
           UNIT:
             '"measures"': neurriak
             '"seconds"': segundu
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': neurriak
+            '"seconds"': segundu
       Dancelab_changeColorBy:
         text: aldatu {COLOR} {METHOD} {AMOUNT} erabiliaz
         options:
@@ -62,6 +67,22 @@ eu:
             '"DOG"': txakur guztiak
             '"MOOSE"': altze guztiak
             '"ROBOT"': robot guztiak
+          MOVE:
+            MOVES.Roll: Biratu
+            MOVES.ClapHigh: Txalo Haundi
+            MOVES.Dab: Mihi-arrain
+            MOVES.DoubleJam: Urdaiazpiko bikoitza
+            MOVES.Drop: Bota
+            MOVES.Floss: Haria
+            MOVES.Fresh: Freskatu
+            MOVES.Clown: Pailazoa
+            MOVES.Kick: Bota
+            MOVES.ThisOrThat: Hau edo Hori
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} egin {MOVE} {DIR} betirako"
+        options:
+          GROUP:
+            '"CAT"': katu guztiak
           MOVE:
             MOVES.Roll: Biratu
             MOVES.ClapHigh: Txalo Haundi

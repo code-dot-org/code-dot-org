@@ -208,6 +208,24 @@
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın",
           "CSD_U3_L11_S17_C2": "Qurbağanı bura geri göndərin"
         },
+        "CSD U3 abstraction jumping": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
+        "CSD U3 abstraction jumping_2018": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
+        "CSD U3 abstraction jumping_2019": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
+        "CSD U3 abstraction jumping_2021": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
+        "CSD U3 abstraction jumping_2022": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
+        "CSD U3 abstraction jumping_2023": {
+          "CSD_U3_L13_S8_C1": "Burada sürəti təyin edin"
+        },
         "CSD U3 abstraction looping": {
           "CSD_U3_L11_S17_C1": "Bu \"əgər\" ifadəsinə baxın"
         },
@@ -876,6 +894,18 @@
         "CSD U6 light show_2021": {
           "CSDUDL03P09": "Bu sıra nə edir?"
         },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "evez"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "evez"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "evez"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "evez"
+        },
         "CSD U6 tugowar variables 3": {
           "CSD_U6_checkWin": "Oyuncunun galib gəldiyini yola"
         },
@@ -971,6 +1001,10 @@
         },
         "Course 4 Play Lab Vars 1": {
           "arrows_move_actor": "Aktyoru hərəkətə keçirmək üçün oxlardan istifadə edin."
+        },
+        "Course 4 Playlab For Loops 4b": {
+          "Course_4_Playlab_For_Loops_4b_1": "Diqqət yetirin ki, “əks” dəyişəninin hər bir simvol üçün fərqli bir adı var? Beləliklə, hər bir “for” döngə öz sayğacını idarə edə bilər.",
+          "Course_4_Playlab_For_Loops_4b_2": "Bu tapmacada yalnız “for” döngələrinin “artımını” dəyişdirməyə icazə verilir."
         },
         "CourseD_Dance_2020_01": {
           "dance_callout_01": "Burada rəqqasın növünü seçin."
@@ -2826,7 +2860,7 @@
           "hw_Run": "Kodu işə salman üçün buraya vurun."
         },
         "helloworld_food_click_space-2022": {
-          "hw_Run": "birinci bura basın"
+          "hw_Run": "birinci bura basın!"
         },
         "helloworld_food_costumes": {
           "hello_world_new": "Yeni blok!"
@@ -2936,10 +2970,12 @@
           "poetry_sprite": "Yeni blok!"
         },
         "poetry_hoc_backgroundEffects": {
-          "poetry_background": "Kod bloklarını burada tapın. "
+          "poetry_background": "Kod bloklarını burada tapın. ",
+          "run_button": "Animasiyanızı bu düymə ilə sınayın. "
         },
         "poetry_hoc_backgroundEffects_2023": {
-          "poetry_background": "Kod bloklarını burada tapın. "
+          "poetry_background": "Kod bloklarını burada tapın. ",
+          "run_button": "Animasiyanızı bu düymə ilə sınayın. "
         },
         "poetry_hoc_events1": {
           "poetry_event": "Yeni blok!",

@@ -1530,14 +1530,6 @@
         "machine_learning/oceans/unversioned": {
           "word": "మెషిన్ లెర్నింగ్"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "డీబగ్గింగ్"
         },
@@ -1568,25 +1560,8 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "డీబగ్గింగ్"
         },
-        "code/poem-art/unversioned": {
-          "word": "కోడ్",
-          "definition": "(v) కంప్యూటర్ కోసం సూచనలు రాయడానికి."
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": "దేనిలోకైనా కోడ్ చేయబడిన స్టెప్స్ యొక్క సీరీస్‌ను ఒక మెషిన్ ద్వారా రన్ చేయవచ్చు."
-        },
-        "mood/poem-art/unversioned": {
-          "word": "మూడ్",
-          "definition": "ఒక అనుభూతి, వాతావరణం లేదా భావోద్వేగాన్ని ఆర్ట్ లేదా రచనలో వ్యక్తీకరించడం."
-        },
-        "line/poem-art/unversioned": {
-          "word": "లైన్",
-          "definition": "(కవిత్వం) - కుడి చేతి మార్జిన్‌లో ముగిసే వరుసలో అమర్చబడిన ఒక కవితలోని ఉప విభాగం. "
+        "code/dance-ai/2023": {
+          "word": "కోడ్"
         }
       }
     }

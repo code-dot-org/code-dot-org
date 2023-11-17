@@ -626,14 +626,6 @@
         "machine_learning/oceans/unversioned": {
           "word": "Машины сургалт"
         },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Алдааг засах"
         },
@@ -655,25 +647,8 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Алдагдалгүй шахалт"
         },
-        "code/poem-art/unversioned": {
-          "word": "Код",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+        "code/dance-ai/2023": {
+          "word": "Код"
         }
       }
     }

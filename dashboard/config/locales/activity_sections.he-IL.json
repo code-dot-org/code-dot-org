@@ -4621,12 +4621,14 @@
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "אמנו את AI לנקות את האוקיינוס"
         },
         "86495854-e877-4aea-b9d6-2669b1d2d43b": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "שימוש בנתוני אימון"
         },
         "daee1c13-09e4-4f2f-88c8-d3841869bfcb": {
           "tips": [
@@ -5056,30 +5058,6 @@
         },
         "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
           "progression_name": "תוספת לשיעורים"
-        },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "name": "",
-          "description": ""
-        },
-        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "",
-          "tips": [
-            ""
-          ]
-        },
-        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
-          "name": "",
-          "description": ""
-        },
-        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
-          "name": ""
-        },
-        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": ""
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "",
-          "description": ""
         },
         "9a692bd5-9de8-4718-9518-f14949953885": {
           "tips": [
@@ -9761,12 +9739,14 @@
         "138f82fc-c0fe-4836-a4f8-a38e874680b5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "אמנו את AI לנקות את האוקיינוס"
         },
         "97505f9d-3e88-4a48-8fb1-66a0dcb61e9e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "שימוש בנתוני אימון"
         },
         "f3a8670b-9954-45f9-af08-1689c799a427": {
           "tips": [
@@ -10228,7 +10208,22 @@
             null
           ]
         },
+        "8beb2941-dd64-44f4-9e99-6149c445067a": {
+          "tips": [
+            null
+          ]
+        },
         "500131a4-a22b-4a63-bc0a-d5d4a19c7169": {
+          "tips": [
+            null
+          ]
+        },
+        "a45155ff-19af-43ac-bf11-6ca4001816f4": {
+          "tips": [
+            null
+          ]
+        },
+        "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b": {
           "tips": [
             null
           ]
@@ -10243,7 +10238,17 @@
             null
           ]
         },
-        "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8": {
+        "4ff33db6-6668-4423-8f1d-ad0b25f6da40": {
+          "tips": [
+            null
+          ]
+        },
+        "169c3eed-52d7-4a4b-b7c6-161cf287ed33": {
+          "tips": [
+            null
+          ]
+        },
+        "f1632666-ffc1-457a-832a-c2d3b2d1fc20": {
           "tips": [
             null
           ]
@@ -10258,7 +10263,22 @@
             null
           ]
         },
+        "b2777295-b74f-4240-bb3d-c76b79dde6a9": {
+          "tips": [
+            null
+          ]
+        },
         "9bcab929-d773-4dab-bfb0-d09892056944": {
+          "tips": [
+            null
+          ]
+        },
+        "bedaca2d-4f48-45b4-b6e9-431f6a38cc13": {
+          "tips": [
+            null
+          ]
+        },
+        "221b5029-fcfd-4791-b951-852609cb0198": {
           "tips": [
             null
           ]
@@ -16554,12 +16574,14 @@
         "f5d14c30-5c0f-4814-a25f-3a8fee707813": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "אמנו את AI לנקות את האוקיינוס"
         },
         "76becf5c-75f5-4140-81d0-d3fbc6995765": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "שימוש בנתוני אימון"
         },
         "21ca3d62-66f5-4f55-8245-729d9cf5886e": {
           "tips": [
@@ -18307,7 +18329,8 @@
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": " בינה מלאכותית ולמידת מכונה - סרטון"
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "בינה מלאכותית למען האוקיינוסים",
@@ -18318,47 +18341,21 @@
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "שימוש בנתוני אימון"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "מבוא",
-          "description": ""
+          "name": "מבוא"
         },
         "d63c77c1-4167-4360-ab98-25610934beda": {
           "name": "התפרצות",
-          "description": "",
           "progression_name": "התפרצות"
         },
         "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "description": "",
           "progression_name": "ברוכים הבאים למפלצת-טאון"
-        },
-        "60837b14-7f66-4848-9c51-1c6aa9a21ad9": {
-          "description": ""
-        },
-        "13a06294-2f2a-4661-9947-46ed5843913f": {
-          "description": ""
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "description": "",
-          "progression_name": ""
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "description": "",
-          "progression_name": ""
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "משחק חופשי"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": ""
-        },
-        "b3189fd8-5272-4de4-953a-f4848b2ddb5c": {
-          "description": ""
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "",
-          "description": ""
         },
         "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
           "tips": [
@@ -18463,15 +18460,6 @@
             null
           ]
         },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "חימום"
-        },
-        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
-          "name": "פעילות ראשית (ישן)"
-        },
-        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
-          "name": "פעילות ראשית (חדש)"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -18488,39 +18476,39 @@
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "שלבים"
         },
-        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
-          "description": "",
+        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
+          "name": "חימום"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "פעילות ראשית (ישן)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "פעילות ראשית (חדש)"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            ""
+            null
           ]
         },
-        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
-          "description": ""
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
         },
-        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
-          "description": ""
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "השלבים הבאים"
         },
-        "6fba9dd0-6069-402c-a641-53899ae667e2": {
-          "description": ""
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "אמנו את AI לנקות את האוקיינוס"
         },
-        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": ""
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "AI: נתוני אימון והטיות - סרטון"
         },
-        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
-          "name": "אומנות השירה",
-          "description": ""
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "AI: השפעה על החברה - סרטון"
         },
-        "065eda67-268c-4f91-9caf-efb2c34493fe": {
-          "description": ""
-        },
-        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
-          "description": ""
-        },
-        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
-          "description": ""
-        },
-        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
-          "description": ""
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "למדו את AI מילה חדשה"
         }
       }
     }

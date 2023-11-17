@@ -6966,6 +6966,10 @@
           "name": "Mga function na meron mga parameter",
           "type": "Video"
         },
+        "fucntions_devices/csd/2023": {
+          "name": "Mga function",
+          "type": "Mga Slide"
+        },
         "mini-project_interactive_art/csd/2023": {
           "type": "Mga Slide"
         },
@@ -8860,10 +8864,8 @@
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
         },
-        "list_of_poems_1/poem-art/unversioned": {
-          "name": "Listahan ng mga Tula",
-          "url": "[https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O\\_ZNaX5RqHyuvBso/edit?usp=sharing][0]",
-          "type": "Mga Slide"
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Mapagkukunan"
         }
       }
     }

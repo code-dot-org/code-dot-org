@@ -5,43 +5,57 @@ zh:
   language: English
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
-  campaign_date_start_short: 12月5日
-  campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日11日
-  campaign_date_full: 12 月 5 日 - 11 日
-  campaign_date_year: '2022'
-  campaign_date_full_year: 2022年12月5-11日
+  new: 新
+  hours_of_code_served: 已服務的一小時玩程式
+  hoc_stat_languages: 支援超過 45 種語言
+  hoc_stat_hours_served: 超過 1 億名學生已體驗
+  hoc_stat_females: 女性學生佔一小時玩程式參與者的50%
+  campaign_date_start_short: 12月4日
+  campaign_date_start_long: 12月4日
+  campaign_date_short: 12月4日10日
+  campaign_date_full: 12 月 4 日 - 10 日
+  campaign_date_year: '2023'
+  campaign_date_full_year: 2023年12月4-10日
   nonus_campaign_date_start_short: 十月一日
   nonus_campaign_date_start_long: 拾月壹日
   nonus_campaign_date_short: 10 月 1 日 - 12 月 18 日
   nonus_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2023'
   nonus_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   latam_campaign_date_start_short: 十月一日
   latam_campaign_date_start_long: 拾月壹日
   latam_campaign_date_short: 10 月 1 日 - 12 月 18 日
   latam_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2023'
   latam_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   europe_campaign_date_start_short: 十月一日
   europe_campaign_date_start_long: 拾月壹日
   europe_campaign_date_short: 10 月 1 日 - 12 月 18 日
   europe_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2023'
   europe_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
   africa_campaign_date_start_short: 十月一日
   africa_campaign_date_start_long: 拾月壹日
   africa_campaign_date_short: 10 月 1 日 - 12 月 18 日
   africa_campaign_date_full: 10 月 1 日 - 12 月 18 日
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2023'
   africa_campaign_date_full_year: 2022 年 10 月 1 日 - 2022 年 12 月 18 日
+  hoc2023_header: 人工智慧創造力
+  hoc2023_hero_desc_homepage: 與全球數百萬人一起組織一小時編碼，無論是否使用AI，並學習AI如何運行。任何人，任何地方都可以開展。無需經驗。
+  hoc2023_hero_desc_learn_page: 今年，我們透過提供包含人工智慧（AI）和非AI元件的編碼機會，將一小時玩程式提升到新的高度。
+  hoc2023_social_creativity_with_ai_title: 一小時玩程式-你會創造什麼？
+  hoc2023_social_creativity_with_ai_desc: 利用計算機科學探索和學習 AI！
+  hoc2023_what_is_hoc_desc: 一小時玩程式通過有趣的活動和視訊免費介紹計算機科學，適合所有技能水平的學習者。今年的程式設計和人工智慧慶祝活動得到了超過400個合作夥伴、20,000名教育工作者和58,000名志願者的支持。
   hoc2022_header: 探索，玩耍，創造！
   social_hoc2022_explore_play_create: 使用電腦科學來探索、玩耍和創造！
   codeorg_homepage_hoc2022_body: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多。
+  codeorg_homepage_hoc2023_body: 準備，大放異彩，運用人工智能發揮創意！創建自己的舞蹈派對，其中包含您最喜歡的藝術家的熱門歌曲。
   hoc2022_codeorg_title: 与NASA等一起慶祝一小時玩程式
   hoc2022_codeorg_description: 第10次一小時玩程式非常好！來和我們一起探索、玩耍和創造吧。
   social_hoc2022_dance: 裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
   social_hoc2023_dance: 擁有碧昂絲，BTS，哈利風格，麗佐，Lil 納斯 X，塞萊娜戈麥斯，迪士尼的音樂「Encanto」等等！
+  social_hoc2023_dance_v2: 現在是時候把你的東西放在一起了！創建自己的舞蹈派對，其中包括Miley Cyrus、BTS、Lil Nas X、Harry
+    Styles、Nicki Minaj、Rosalía亞等人的熱門歌曲！
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
@@ -115,6 +129,7 @@ zh:
   social_blockchain_desc: 探索什麼是區塊鏈以及為什麼它很重要的視頻和課程。
   social_ai_title: 瞭解有關人工智慧 (AI) 的資訊
   social_ai_desc: 協助學生和教師將 AI 帶入課堂的工具。
+  social_videos_desc: 適合所有年齡段學習者的引人入勝的計算機科學視訊。
   pl_superhero_title: 幫助學生成為超級英雄！
   pl_superhero_desc: 加入我們為初中和高中教育工作者提供高度支持的專業學習計劃。
   teach_ai_homepage_banner_title: 面向世界的人工智能教育
@@ -122,6 +137,38 @@ zh:
   curriculum_launch_2023_title: 不可思議的課程内容更新
   curriculum_launch_2023_desc: CSC、CSP、CSD等内容更新，還有全新的課程目錄和重新設計的教學頁面，協助您找到所有內容！
   in_partnership_with: 合作夥伴：
+  shop_code_dot_org_heading: 商店代碼.
+  shop_code_dot_org_desc: 支持我們的工作，自豪地穿上運動。我們的帽子也被奧巴馬總統和名人戴過。
+  spread_the_word_heading: 傳播這個訊息
+  spread_the_word_desc: 透過與您的網路分享 Code.org 來擴大我們的影響力。從社交媒體到電子郵件更新，了解如何幫助我們接觸更多教育工作者，學生和倡導者。
+  follow_us_heading: 在社交媒體上關注我們
+  follow_us_desc: 在社交媒體上與我們保持最新消息，並與您的網絡分享我們的帖子，以保持最新消息並幫助提高知名度。
+  facebook: Pseudoloc-弗诶伊比哦开
+  twitter: Pseudoloc-提尔提提儿
+  linked_in: LinkedIn
+  instagram: Instagram
+  tik_tok: 提克托克
+  device_tablet: 平板電腦
+  device_laptop: 筆記型電腦
+  device_desktop_computer: 桌上型電腦
+  device_mobile_device: 行動裝置
+  for_everyone: 針對所有人
+  for_students_teacher_led_learning: 針對學生：教師主導的學習
+  for_students_teacher_led_lessons: 針對學生：教師指導的課程
+  professional_development: 專業發展
+  teach_computer_science: 教授計算機科學
+  explore_our_curriculum: 探索我們的課程
+  start_professional_learning: 開始專業學習
+  how_ai_works_video_series: AI 如何運作影片系列
+  learn_how_ai_works: 了解 AI 的運作方式
+  ai_101_for_educators: 適用於教育工作者的 AI 101
+  learn_about_ai_impacts: 了解 AI 的影響
+  hoc_ai_activities: 編碼時間人工智能活動
+  subscribe_to_emails_heading: 訂閱電子郵件
+  subscribe_to_emails_desc: 透過我們的郵件清單，透過每季更新，閱讀 Code.org 和電腦科學教育的情況。
+  subscribe_to_emails_intl: 訂閱國際更新
+  promote_code_dot_org_heading: 促進代碼.
+  promote_code_dot_org_desc: 借助統計信息，報價和視頻，促進您所在地區的計算機科學。
   afe_partnership_logo_alt: 亞馬遜未來工程師徽標
   afe_partnership_thanks_desc: 亞馬遜未來工程師徽標是一項從童年到職業生涯的全面計劃，旨在激勵、教育和培訓低收入和其他弱勢兒童和年輕人從事計算機科學事業。[瞭解我們的合作夥伴關係](%{afe_url})。
   grade_level: 年級
@@ -134,21 +181,69 @@ zh:
   curricula_desc_middle: 瀏覽引人入勝的產品，讓您和您的初中學生一起探索電腦科學。
   curricula_title_high: 高中課程
   curricula_desc_high: 瀏覽引人注目的課程和活動，邀請您和您的高中生更深入地了解計算機科學。
+  for_administrators_heading: 對於管理員
+  for_administrators_desc: 加入數以千計的學校，他們已經將計算機科學納入他們的課程。
+  for_parents_heading: 致家長
+  for_parents_desc: 您可以幫助鼓勵學生的學校提供或擴展計算機科學教育。
+  for_educators_heading: 致教師
+  for_educators_desc: 通過我們的專業學習工作坊，立即開始教學-無需計算機科學經驗。
   students_label: 學生
   teachers_label: 教師
+  educators_label: 教育工作者
+  companies_label: 公司
+  districts_label: 地區
+  school_assemblies_label: 學校會議
+  parents_label: 家長
+  public_officials_label: 公職人員
+  volunteers_label: 志願者
+  virtual_events_label: 虛擬活動
   teacher_label_csf: 計算機科學基礎教師
   teacher_label_csd: 計算機科學探索教師
   teacher_label_csp: 計算機科學原理教師
   teacher_label_csc: 計算機科學聯繫教師
   teacher_label_csa: AP® Computer Science A Teacher
+  teacher_forum_heading: 教師論壇
+  teacher_forum_desc: 訪問一小時玩程式教師論壇，獲取其他教育工作者的建議、見解和支持。
   required_materials: 所需材料：
   optional_materials: 可選材料：
-  call_to_action_explore_roles: 探索開放角色
+  for_students: 針對學生
+  for_educators: 致教師
+  call_to_action_host_hoc: 舉辦一小時玩程式
+  call_to_action_hold_an_event: 舉辦活動
+  call_to_action_register_event: 註冊您的活動
+  call_to_action_register_your_hoc: 註冊您的一小時玩程式
+  call_to_action_register_now: 馬上註冊
+  call_to_action_share_event_plan: Share your event plan
+  call_to_action_select_activity: 選擇活動
+  call_to_action_select_coding_activity: 選擇編碼活動
+  call_to_action_start_activity: 開始活動
+  call_to_action_get_certificates: 獲取證書
+  call_to_action_print_certificates: 列印證書
+  call_to_action_go_beyond_hoc: 超越一小時玩程式
+  call_to_action_see_volunteer_guide: 請參閱志工指南
+  call_to_action_see_teacher_guide: See teacher how-to guide
+  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_join_advocacy_coalition: 加入倡導聯盟
+  call_to_action_become_an_advocate: Become an advocate
+  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_sign_up_to_volunteer: 註冊志工
+  call_to_action_share_on_social_media: Share on social media
+  call_to_action_explore_all_hoc_activities: 探索Code.org上的所有一小時玩程式活動
+  call_to_action_start_dance_party: 開始舞蹈派對
+  call_to_action_start_part_02: 開始第二部分
+  call_to_action_start_unplugged_activity: 開始缐下活動
+  call_to_action_view_promo_resources: 查看推廣資源
+  call_to_action_get_involved: 參與其中
   call_to_action_learn_more: 進一步學習
   call_to_action_watch_now: 立即觀看
   call_to_action_try_activity: 試用活動
+  call_to_action_try_activities: 嘗試活動
+  call_to_action_try_hoc_ai_activities: 嘗試編碼一小時 AI 活動
+  call_to_action_explore_activities: 探索活動
+  call_to_action_explore_ai: 探索人工智慧
   call_to_action_explore_unit: 探索單位
   call_to_action_explore_curriculum: 探索課程
+  call_to_action_explore_curricula: 探索課程
   call_to_action_explore_curriculum_options: 探索課程選項
   call_to_action_explore_lessons: 探索課程
   call_to_action_explore_modules: 探索模組
@@ -170,6 +265,10 @@ zh:
   call_to_action_explore_maker: 探索創客課程
   call_to_action_explore_hoc: 探索一小時玩程式教學課
   call_to_action_explore_hoc_short: 探索一小時玩程式
+  call_to_action_explore_how_ai_works: 探索AI如何運行
+  call_to_action_explore_dance_party: 探索舞蹈派對
+  call_to_action_explore_ai_for_oceans: 探索海洋AI
+  call_to_action_explore_minecraft: 探索我的世界
   call_to_action_try_app_lab: 嘗試應用實驗室
   call_to_action_view_lesson_plan: 查看課程計劃
   call_to_action_self_paced_pl: 開始自主進度的專業學習
@@ -196,10 +295,13 @@ zh:
   call_to_action_explore_ai_curricula: 探索 AI 課程
   call_to_action_explore_curriculum_catalog: 探索課程目錄
   call_to_action_see_full_curriculum_catalog: 查看完整課程目錄
+  call_to_action_view_curriculum_catalog: 查看課程目錄
   call_to_action_find_self_paced_modules: 查找自定進度模組
   call_to_action_join_teacher_forums: 加入教師論壇
   call_to_action_explore_teacher_forums: 探索教師論壇
+  call_to_action_explore_teacher_forum: 探索教師論壇
   call_to_action_explore_career_resources: 探索職業資源
+  call_to_action_explore_stats_infographics: Explore statistics & infographics
   call_to_action_watch_videos: 觀看視訊
   call_to_action_download_posters: 下載海報
   call_to_action_contact_support: 聯絡Code.org支援
@@ -210,20 +312,52 @@ zh:
   call_to_action_start_modules: 啟動模組
   call_to_action_see_course_details: 查看課程詳情
   call_to_action_see_lesson_details: 查看課程詳情
+  call_to_action_see_more_insp_videos: 觀看更多勵志視訊
   call_to_action_learn_about_approach: 進一步了解我們的方法
   call_to_action_try_java_lab: 嘗試Java實驗室
   call_to_action_notify_available: 有貨時通知我
   call_to_action_register_early_access: 註冊以取得早期存取
   call_to_action_open_positions: 查看未平倉職位
+  call_to_action_explore_roles: 探索開放角色
   call_to_action_get_guide: 取得指南
   call_to_action_donate_to_cdo: 捐款給我們
   call_to_action_start_fundraiser: 開始籌款活動
   call_to_action_view_donation_policy: 查看捐款政策
   call_to_action_view_donate_bitpay: 使用比特支付捐款
+  call_to_action_make_a_donation: 捐款
+  call_to_action_other_ways_to_give: 其他給予方式
+  call_to_action_become_partner_usa: 成為美國合作夥伴
+  call_to_action_become_partner_intl: 成為國際合作夥伴
+  call_to_action_become_a_volunteer: 成為義工
+  call_to_action_become_a_volunteer_today: 立即成為志工！
+  call_to_action_start_translating: 開始翻譯
+  call_to_action_learn_about_advocacy: 了解我們的倡導
+  call_to_action_visit_store: 參觀商店
+  call_to_action_view_faqs: 查看更多常見問題
+  call_to_action_view_resources: 查看更多資源
+  call_to_action_applications_open: 現已開始申請
+  call_to_action_apply_cs_ambassador: 申請成為 CS 大使
+  call_to_action_coming_soon: 即將推出！
+  call_to_action_learn_how_ai_works: 瞭解AI如何運行
+  call_to_action_learn_about_ai: 瞭解AI
+  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_get_started: 開始使用
+  aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
+  aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
+  aria_label_call_to_action_hoc_how_to_districts: 查看地區操作指南
+  aria_label_call_to_action_hoc_how_to_school_assemblies: 查看學校會議操作指南
+  aria_label_call_to_action_hoc_how_to_parents: 查看家長操作指南
+  aria_label_call_to_action_hoc_how_to_public_officials: 查看公職人員操作指南
+  aria_label_call_to_action_hoc_how_to_volunteers: 查看志願者操作指南
+  aria_label_call_to_action_hoc_how_to_virtual_events: 查看虛擬活動的操作指南
+  aria_label_call_to_action_dance_01: 開始舞蹈派對活動
+  aria_label_call_to_action_dance_02: 開始舞蹈派對活動的第二部分
+  aria_label_call_to_action_dance_unplugged: 開始缐下舞蹈派對活動
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
   aria_label_call_to_action_teaching_csp: 開始教學計算機科學原理專業學習計劃
+  aria_label_call_to_action_teaching_problem_solving: 開始教授問題解決和計算專業學習課程
   aria_label_call_to_action_teaching_csc: 開始教授計算機科學聯繫專業學習計劃
   aria_label_call_to_action_teaching_ai: 開始教學人工智慧與機器學習專業學習計畫
   aria_label_call_to_action_teaching_maker_cp: 開始教學使用裝置製作應用程式 (環路遊樂場) 專業學習計劃
@@ -234,6 +368,7 @@ zh:
   aria_label_call_to_action_curriculum_csf_express_pre_reader: 探索計算機科學基礎準讀者快速課程
   aria_label_call_to_action_curriculum_csd: 探索電腦科學探索課程
   aria_label_call_to_action_curriculum_csp: 探索電腦科學原理課程
+  aria_label_call_to_action_curriculum_problem_solving: 探索問題解決和計算課程
   aria_label_call_to_action_curriculum_csc: 探索計算機科學聯繫課程
   aria_label_call_to_action_curriculum_ai: 探索 AI 和機器學習課程
   aria_label_call_to_action_curriculum_maker_cp: 探索使用裝置建立應用程式 (環路遊樂場) 課程
@@ -273,6 +408,22 @@ zh:
   aria_label_call_to_action_how_ai_works_lesson_05: 請參閱生成影像課程詳細資料
   aria_label_call_to_action_how_ai_works_lesson_06: 請參閱演算法偏差課程詳細資訊
   aria_label_call_to_action_how_ai_works_lesson_07: 請參閱我們的 AI 道德守則課程詳情
+  aria_label_call_to_action_learn_more_teach: 進一步了解計算機科學教學
+  aria_label_call_to_action_learn_more_self_paced_pl: 進一步瞭解自定進度的專業學習
+  aria_label_call_to_action_minecraft_aquatic: 開始使用《我的世界水上航行》
+  aria_label_call_to_action_minecraft_aquatic_lesson: 查看《我的世界水上航行》課程計劃
+  aria_label_call_to_action_minecraft_journey: 開始使用《我的世界英雄之旅》
+  aria_label_call_to_action_minecraft_journey_lesson: 查看《我的世界英雄之旅》課程計劃
+  aria_label_call_to_action_minecraft_adventurer: 開始使用《我的世界冒險家》
+  aria_label_call_to_action_minecraft_adventurer_lesson: 查看《我的世界冒險家》課程計劃
+  aria_label_call_to_action_minecraft_designer: 開始使用《我的世界設計師》
+  aria_label_call_to_action_minecraft_designer_lesson: 查看《我的世界設計師》課程計劃
+  aria_label_call_to_action_minecraft_2023: 開始使用《我的世界生成AI》
+  aria_label_call_to_action_minecraft_2022: 開始使用《我的世界逃離莊園》
+  aria_label_call_to_action_minecraft_2021: 開始使用《我的世界時光工藝》
+  aria_label_call_to_action_minecraft_2020: 開始使用《我的世界地球AI》
+  aria_label_call_to_action_register_student_workshop: 注冊參加免費學生工作坊
+  aria_label_call_to_action_view_more_cs_resources: 查看更多計算機科學資源
   video_title_professional_learning_program: 專業學習計劃
   curriculum_name_csf: 計算機科學基礎
   curriculum_name_csf_02: 任何 CS 基礎知識（課程 A-F）
@@ -290,6 +441,7 @@ zh:
   curriculum_name_csf_teacher_led: 教師主導課程
   curriculum_name_csd: 計算機科學發現
   curriculum_name_csp: 計算機科學原理
+  curriculum_name_problem_solving: 問題解決與計算
   curriculum_name_csc: 計算機科學聯繫
   curriculum_name_csa: 計算機科學A
   curriculum_name_csa_ai: Pseudoloc-丝哦提尔儿伊伊娜艾娜伊儿娜 &西哦屁吾伊儿维艾艾哦
@@ -302,11 +454,20 @@ zh:
   curriculum_name_creating_apps_with_devices: 使用裝置建立應用程式
   curriculum_name_poetry: 詩歌編程
   curriculum_name_dance_party: 舞蹈派對
+  curriculum_name_dance_party_02: 繼續跳舞
+  curriculum_name_dance_party_unplugged: 缐下舞蹈派對
+  curriculum_name_dance_party_ai_edition: 舞蹈派對：AI版
+  curriculum_name_ai_for_oceans: "  保護海洋的人工智慧 (AI for Oceans)  "
+  curriculum_name_minecraft: 我的世界
   curriculum_name_problem_solving_computing: 問題解決和計算
   curriculum_name_web_development: 網頁開發
   curriculum_name_interactive_animations_games: 互動式動畫和遊戲
   curriculum_name_design_process: 設計流程
   curriculum_name_data_society: 數據和社會
+  curriculum_desc_dance_party_01: 在這個入門活動中，使用代碼讓各種多彩的角色在動畫背景和歡快的音樂中跳躍。
+  curriculum_desc_dance_party_02: 超越入門課程，提供更廣泛的項目想法。瀏覽更複雜的舞蹈派對示例庫。
+  curriculum_desc_dance_party_unplugged: 進入你的最佳狀態，不需要電腦！瞭解如何使用編碼概念（如事件）來同步舞者編舞。
+  curriculum_desc_dance_party_ai_edition: 瞭解人工智慧（AI）概念，以創建你自己的虛擬舞蹈派對，展示當今的頂級藝術家。有數十首歌曲可供選擇，無論學生的音樂品味如何都能滿足。是時候把你的東西放在一起了！
   curriculum_desc_csf: 免費的小學課程，向學生介紹計算機科學的基礎概念。
   curriculum_desc_csf_express: 學習創建計算機程序，發展解決問題的能力，並通過有趣的挑戰工作！製作遊戲和創意專案，與朋友、家人和教師分享。
   curriculum_desc_csf_express_pre_reader: 通過解決難題和創建動畫場景來學習拖放模組編程的基礎知識。製作藝術品和簡單的遊戲，與朋友、家人和老師分享。
@@ -372,12 +533,16 @@ zh:
   module_grade_k_5: K-5
   module_grade_k_1: K-1
   module_grade_2_5: 2-5
+  module_grade_2_8: 2-8
+  module_grade_2_12: 2-12
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
   module_grade_k_12: K-12
   module_grade_3_12: 3-12
+  module_grade_5_12: 五至十二
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
+  module_grade_7_12: 七至十二
   module_grade_9_12: 9-12
   module_grade_kindergarten: 幼稚園
   module_grade_grade_01: 一年級
@@ -385,6 +550,13 @@ zh:
   module_grade_grade_03: 三年級
   module_grade_grade_04: 四年級
   module_grade_grade_05: 五年級
+  module_age_05_07: 5-7歲
+  module_age_07: 7歲以上
+  module_age_07_11: 7-11嵗
+  module_age_11: 11歲以上
+  module_age_13: 13嵗以上
+  module_age_all_age: 所有年齡段
+  module_professional_learning: 專業學習
   module_grade_k_5_teachers: K-5教師
   module_grade_6_10_teachers: 6-10年級教師
   module_grade_9_12_teachers: 9-12年級教師
@@ -416,6 +588,7 @@ zh:
   module_label_teaching_csf: 教授計算機科學基礎
   module_label_teaching_csd: 教授計算機科學發現
   module_label_teaching_csp: 教授電腦科學原理
+  module_label_teaching_problem_solving: 教授問題解決和計算
   module_label_teaching_csc: 教授計算機科學聯繫
   module_label_teaching_ai: 人工智慧與機器學習教學
   module_label_teaching_maker_cp: 教學使用設備創建應用程序（電路遊樂場）
@@ -464,6 +637,41 @@ zh:
   heading_these_lessons_will: 這些課程將：
   heading_explore_curriculum_catalog: 在課程目錄中探索我們所有的課程
   heading_csa_ai: 尋找 AP® 考試後要做的事情嗎？
+  heading_bring_cs_to_students: 將計算機科學帶給學生
+  heading_cs_ambassador_program: CS 大使計劃
+  heading_featured_student_projects: 精選學生項目
+  heading_start_hoc_with_videos: 用勵志視訊開始一小時玩程式
+  heading_attend_free_workshop: 參加免費學生工作坊
+  heading_access_more_cs_resources: 訪問更多計算機科學資源
+  heading_available_on_code_dot_org: 可在Code.org上找到
+  cs_ambassador_subhead: 如果您是一名高中生，熱情鼓勵更多年輕女性在您的學校學習計算機科學，那麼我們需要您！
+  cs_ambassador_desc: 每個領域，包括醫學，娛樂，體育，教育，商業，時尚和創業，都受到計算機科學影響。然而，只有 5% 的高中年輕女性參加計算機科學課程。大使可以鼓勵同齡人參加計算機科學課程來幫助彌補這種性別差距。
+  cs_ambassador_application_date: 截止報名日期至二零二三年十一月八日
+  cs_ambassador_application_subhead: 立即與老師合作提交您的申請
+  cs_ambassador_application_questions: 有問題？請聯繫 [youngwomen@code.org]（%{email_url}）
+  cs_ambassador_do_heading: CS 大使做什麼？
+  cs_ambassador_do_desc: 資訊科技大使鼓勵年輕女性探索這個主題，並在他們重新獲得計算機科學的地位時，互相提升起來。CS 大使與同伴聯繫，分享他們對計算機科學的興奮和熱愛。他們參觀教室，在午餐時舉辦桌子，並在會議和俱樂部會議上發言。CS
+    大使與教師和學校行政人員合作，打破阻礙年輕女性的刻板印象。
+  cs_ambassador_steps_heading: 我需要什麼才能成為 CS 大使？
+  cs_ambassador_steps_list_title_01: 熱情
+  cs_ambassador_steps_list_title_02: CS 課程的經驗
+  cs_ambassador_steps_list_title_03: 提供 CS 的學校
+  cs_ambassador_steps_list_desc_01: 鼓勵學校的年輕女性參加計算機科學課程的熱情
+  cs_ambassador_steps_list_desc_02: 在 2022-23 學年或更早參加了一年的計算機科學課程（建議：CS 原則或 AP® CSA）
+  cs_ambassador_steps_list_desc_03: 參加一所定期提供一年的計算機科學課程的高中（建議：CS 原則或 AP® CSA）
+  cs_ambassador_benefits_heading: 計劃優惠
+  cs_ambassador_benefits_list_title_01: 國家社區
+  cs_ambassador_benefits_list_title_02: 社區服務
+  cs_ambassador_benefits_list_title_03: 認可
+  cs_ambassador_benefits_list_title_04: 斯瓦格
+  cs_ambassador_benefits_list_title_05: 證書
+  cs_ambassador_benefits_list_title_06: 體驗
+  cs_ambassador_benefits_list_desc_01: 訪問一個全國的年輕領袖社區，致力於消除計算機科學的性別差距。
+  cs_ambassador_benefits_list_desc_02: 社區服務時間和獲得 [美國總統志願服務獎] 的機會（%{award_url}）。
+  cs_ambassador_benefits_list_desc_03: 獲嘉許為 2023-2024 年大使，並獲得 Code.org 大使名人堂榮譽資格。
+  cs_ambassador_benefits_list_desc_04: 通過特殊的 Code.org 品牌服裝，貼紙等，被識別為 CS 大使！
+  cs_ambassador_benefits_list_desc_05: 來自 Code.org 的官方參與證書。
+  cs_ambassador_benefits_list_desc_06: 獲得經驗和故事以在您的大學申請，簡歷等中分享！
   professional_learning_section_desc: 在準備教學時獲得所需的支援。老師喜歡它，超過90％的老師將其評為有史以來最好的職業發展！
   professional_learning_section_desc_short: 在準備教學時獲得所需的支援。
   professional_learning_section_desc_self_paced: 及時的支持，讓你可以根據自己的日程安排充滿信心地準備教學。
@@ -485,6 +693,50 @@ zh:
   subscribe_form_section_desc_csf: 註冊即可每月接收有關 Code.org 電腦科學基礎知識的電子郵件，並直接將有用的提醒事項、提示和更新發送到您的收件匣。
   subscribe_form_section_desc_csp: 註冊以每月接收有關 Code.org 電腦科學原理的電子郵件，並直接將有用的提醒事項、提示和更新發送到您的收件匣。
   subscribe_form_section_unsubscribe: 您可以隨時取消訂閱。
+  hoc_page_what_is_hoc_heading: 一小時玩程式是什麼？
+  hoc_page_desc: "[一小時玩程式](%{hoc_url})是一項全球運動，覆蓋逾180個國家的數千萬學生。無論身在何處，任何人都可以組織一小時玩程式活動，或從超過500個一小時教程（超過45種語言版本）中選擇學習。"
+  hoc_page_desc_2023: 今年，一小時玩程式正在探索人工智慧賦予的無限創造力！無論你或你的學生是經驗豐富的程式師，還是正在開始第一次計算機科學探險，這個一小時玩程式活動都將是一次非凡的旅程。
+  hoc_page_place_to_start: 你可以從幾個地方開始，選擇最適合你和學生的：
+  hoc_page_lead_activity_heading: 引導一小時玩程式活動
+  hoc_page_lead_activity_desc: 超過700項活動可供選擇，並按年級、經驗和人工智慧納入程度進行分類，選擇範圍非常廣泛。當你知道自己的計畫後，請[註冊你的活動](%{register_activity_url})，這樣我們就可以慶祝全球範圍內發生的所有活動。
+  hoc_page_activity_minecraft_desc: 使用《我的世界》進行建造和探索！學習基本的計算機科學技能，有許多不同的《我的世界》活動可供選擇。
+  hoc_page_how_ai_works_desc: 瞭解ChatGPT、計算機視覺和其他AI概念的內部運行方式，這些概念由創造這些技術的人通過視訊和隨附的教學計劃進行解釋。
+  hoc_page_how_ai_works_title: 課程計劃：AI如何運行
+  hoc_page_ai_101_heading: 參與教師AI 101
+  hoc_page_ai_101_desc: 教師AI 101是一個由五部分組成的專業學習視訊系列，它將揭開人工智慧的神秘面紗，探討負責任的實施，解決偏見，並展示人工智慧驅動的學習如何徹底改變學生的學習成果。
+  hoc_page_ai_101_block_title: 視訊系列：教師AI 101
+  hoc_page_ai_101_block_desc: 這是一個免費的基礎線上學習系列，適合任何對人工智慧（AI）突破性世界及其在教育中的轉型潛力感興趣的教師和教育工作者。
+  hoc_page_go_beyond_hoc: 超越一小時玩程式
+  hoc_page_go_beyond_hoc_card_desc_teach: 加入擁有超過200萬名教育工作者的全球社群，為下一代創新者、問題解決者和數位公民提供能力。
+  hoc_page_go_beyond_hoc_card_desc_curriculum: 利用Code.org靈活而有趣的免費計算機科學課程，充分挖掘學生的潛力。每個課堂都能找到適合自己的東西。
+  hoc_page_go_beyond_hoc_card_desc_pl: 我們免費的自主節奏模塊可幫助您在準備在課堂上教計算機科學的同時增進自己的理解。
+  dance_hero_heading: 編碼舞蹈派對
+  dance_featuring_songs_by_short: 歌曲來自：
+  dance_featuring_songs_by_long: 舞蹈派對包含以下藝人的歌曲：
+  dance_and_more: 等等
+  dance_choose_activity: 選擇您的舞蹈派對
+  dance_afe_disclaimer: 本教程中所用音樂的藝術家並沒有作為授權Code.org使用其音樂的一部分贊助或認可亞馬遜。
+  minecraft_hero_heading: "《我的世界》一小時玩程式教程"
+  minecraft_activities_desc: 所有教程均提供多種語言，並與現代瀏覽器和平板電腦兼容。沒有互聯網？[下載《我的世界冒險家》的離線版！](%{offline_url})
+  minecraft_cdo_activity_title_aquatic: 我的世界水上旅行
+  minecraft_cdo_activity_desc_aquatic: 使用我的世界建造和探索！使用您的創造力和解決問題技能，使用代碼探索和構建水下世界。
+  minecraft_cdo_activity_title_journey: 我的世界英雄之旅
+  minecraft_cdo_activity_desc_journey: 使用我的世界建造和探索！玩家編寫代碼，指示特工執行命令並克服遊戲中的障礙。
+  minecraft_cdo_activity_title_adventurer: 我的世界冒險家
+  minecraft_cdo_activity_desc_adventurer: 編程Alex或Steve，在《我的世界》世界的模擬部分中移動，學習計算機科學的基礎知識。
+  minecraft_cdo_activity_title_designer: 我的世界設計師
+  minecraft_cdo_activity_desc_designer: 您在此活動中制定規則，您可以在其中學習基本的計算機科學技能，創建自己的《我的世界》遊戲並與他人分享！
+  minecraft_education_activities_heading: 在《我的世界教育》中可用
+  minecraft_education_activity_title_2023: 我的世界生成AI
+  minecraft_education_activity_desc_2023: 冒險穿越時空，創造你的AI驅動發明！新的《我的世界一小時玩程式》教程現已在《我的世界教育》中推出，適用於Windows、Mac、Chromebook、iPad和移動設備。開始使用免費的教育工作者資源、培訓和視訊。
+  minecraft_education_activity_title_2022: 我的世界逃離莊園
+  minecraft_education_activity_desc_2022: 黎明前逃離神秘的豪宅，賺取百萬翡翠！
+  minecraft_education_activity_title_2021: 我的世界時光工藝
+  minecraft_education_activity_desc_2021: 在這節《我的世界教育》免費編程課中，穿越時空，拯救未來。
+  minecraft_education_activity_title_2020: 我的世界地球AI
+  minecraft_education_activity_desc_2020: 編程我的世界特工，收集有關森林火災的資料。學習編程基礎知識並探索人工智慧的真實示例。
+  minecraft_resources_desc_01: 按需使用此課程[免費課程](%{course_url})或為整個班級註冊，與客座教師一起參加一小時玩程式的直播研討會。在計算機科學教育周期間多次提供，%{campaign_date}。
+  minecraft_resources_desc_02: 在專業發展的支持下，通過200小時的計算機科學課程（從模組到python）激發 K-12年級學習者的STEM熱情。
   blockchain_hero_heading: 區塊鏈如何運作
   blockchain_hero_desc: 通過我們的新視頻系列和隨附課程「區塊鏈如何工作」深入探索區塊鏈的世界！
   blockchain_intro_heading: 了解區塊鏈如何運作
@@ -558,6 +810,9 @@ zh:
   ai_curriculum_btn_aria_label_04: 探索 AI 如何運作課程
   ai_curriculum_grades_05: 年級等級：9 至 12 年級
   ai_curriculum_btn_aria_label_05: 探索軟體工程與電腦視覺模組
+  ai_curriculum_title_06: 生成人工智能的社會影響
+  ai_curriculum_desc_06: 從不同角度調查生成人工智能的影響，然後以團隊合作制定準則，以滿足所有參與者最多需求的指導方針。
+  ai_curriculum_btn_aria_label_06: 查看生成人工智能課程計劃的社會影響
   ai_carousel_heading: 老師對於人工智慧與 Code.org 的評論：
   ai_carousel_quote_01: 這節課還讓我的學生有機會看到分類系統中存在意見要素。後來，當我們開始看到偏見如何在 AI 中結束時，我能夠將它們拉回來並提醒他們，用於訓練模型的數據是基於選擇的。
   ai_carousel_quote_02: 我的學生了解到他們幾乎每天都在經歷的技術進步時，他們不必只是成為消費者。他們實際上可以是創作者！
@@ -624,11 +879,14 @@ zh:
   ai_pl_101_video_title_5: 將 AI 帶入課堂
   ai_pl_101_video_desc_5: 本課程重點介紹有關 AI 的教學，評估和利用 AI 教育工具，以及利用 AI 進行學生評估。它融合了豐富的理論、實務範例和資源，旨在讓教育工作者能夠導航
     AI 環境並增強學生的學習體驗。
+  ai_pl_101_resources_5: 確保負責任的人工智慧方法指南
   ai_pl_101_video_desc_6: 深入瞭解推動人工智慧重大變革的新技術，其中包含兩個有關大型語言模型 (如 ChatGPT) 和生成 AI 的新影片。聽聽這些新技術如何直接從專家那裡工作：OpenAI
     的首席技術官 Mira Murati 和 RunwayML 首席執行官克里斯托瓦爾·瓦倫蘇埃拉。
   ai_pl_101_llm_slides_title: 教育工作者的大語言模型提示
   ai_pl_101_llm_slides_desc: 從 ChatGPT 等 LMS 獲得最佳輸出的工具，從初學者到高級。包括那些只是浸入腳趾的人的入門提示，以及為那些希望最大限度地發揮潛力的人提供高級工具。
   ai_pl_101_resources_3: AI 提示改變學生學習
+  ai_pl_101_resources_section_title: 更多瞭解 AI 的方式
+  ai_pl_101_resources_guide: 同伴指南：
   how_ai_works_hero_heading: AI 如何運作
   how_ai_works_hero_desc: 通過我們的視頻系列視頻和隨附的課程「AI 如何工作」深入人工智能世界！
   how_ai_works_intro_desc: 這一系列的短片和隨附的課堂內課程將向您和您的學生介紹人工智慧的運作方式以及其重要性。您可以根據主題選擇個別課程，在一個班級中探索整個系列主題，或教授所有
@@ -1144,26 +1402,38 @@ zh:
     work, please see our [curriculum values](%{curriculum_values_url}) and our [professional
     learning values](%{pl_values_url}).
   donate_page_top_heading: 幫助資助我們的使命
-  donate_page_top_desc: 每筆捐款都能推動 Code.org 擴大獲得電腦科學教育機會的使命。我們為您提供幾種捐贈和有所作為的方式。
-  donate_page_fundraise_title: 為 Code.org 籌款
-  donate_page_fundraise_desc: 協助為 Code.org 籌集資金！每所學校的每個學生都應該有機會學習計算機科學。
+  donate_page_top_desc: 每筆捐款都能推動Code.org擴大獲得計算機科學教育機會的使命。我們為您提供幾種捐贈從而產生影響的方式。
+  donate_page_fundraise_title: 為Code.org籌款
+  donate_page_fundraise_desc: 協助為Code.org籌集資金！每所學校的每個學生都應該有機會學習計算機科學。
   donate_page_other_ways_title: 其他給予方式
-  donate_page_other_ways_desc: 探索各種貢獻方法，並找到最適合您的選項。每一個手勢，無論大或小，都推動了我們的使命向前。
-  donate_page_501c3: Code.org 註冊為公共 501 (c) (3) 非營利組織。在法律允許的範圍內，對 Code.org 的貢獻可以扣稅。代碼組織的稅務識別號碼是
-    46-0858543。
+  donate_page_other_ways_desc: 探索各種做捐款的方法，找到最適合您的選項。每一個手勢，無論大或小，都會推動我們的使命前進。
+  donate_page_501c3: Code.org註冊為公共501 (c) (3)非營利組織。在法律允許的範圍內，對Code.org的捐款可以免稅。Code.org的稅務識別號碼是46-0858543。
   donate_page_donation_policy_title: 了解我們的捐款政策
   donate_page_donation_policy_desc: 了解我們如何處理和分配您的捐款。
-  donate_tabs_tab_label_daf_direct: DAF 直通
+  donate_tabs_tab_label_daf_direct: DAF Direct
   donate_tabs_tab_label_amazon: 亞馬遜
-  donate_tabs_tab_label_bitpay: 比特支付
+  donate_tabs_tab_label_bitpay: BitPay
   donate_tabs_tab_label_employee_match: 員工匹配
-  donate_tabs_daf_direct_title: 透過 DAF 直接捐款
-  donate_tabs_daf_direct_desc: 透過您向富達慈善、嘉信慈善或紐約梅隆銀行捐款的捐款基金，並透過 DAF Direct 網上表格向 Code.org
-    提出您的撥款建議。
-  donate_tabs_amazon_title: 通過亞馬遜捐贈
-  donate_tabs_amazon_desc: 使用您的亞馬遜帳戶直接捐款。只要按幾下滑鼠，就能順暢地為 Code.org 的使命做出貢獻，並為電腦科學教育的未來提供支援。
-  donate_tabs_bitpay_title: 透過 BitPay 以加密貨幣捐款
-  donate_tabs_bitpay_desc: 擁抱加密貨幣捐贈的未來。通過 BitPay，您的數字貨幣可以直接支持 Code.org 在擴展計算機科學教育方面的努力。
+  donate_tabs_daf_direct_title: 透過DAF Direct捐款
+  donate_tabs_daf_direct_desc: 透過富達慈善、嘉信慈善或紐約梅隆銀行的捐贈者建議基金捐款，透過DAF Direct網上表格向Code.org提出您的撥款建議。
+  donate_tabs_amazon_title: 透過亞馬遜捐款
+  donate_tabs_amazon_desc: 使用您的亞馬遜帳戶直接捐款。只需幾次點擊，即可順暢地為Code.org的使命做出貢獻，並為計算機科學教育的未來提供支援。
+  donate_tabs_bitpay_title: 透過BitPay以加密貨幣捐款
+  donate_tabs_bitpay_desc: 擁抱加密貨幣捐贈的未來。透過BitPay，您的數字貨幣可以直接支持Code.org在擴展計算機科學教育方面的努力。
+  help_page_top_heading: 您可以如何提供幫助
+  help_page_top_desc: 支持我們的使命，使計算機科學可以在任何地方為每個孩子訪問。您的努力有助於我們啟發未來的創新者，並彌合科技教育差距。
+  help_page_top_subhead: 捐款給科德。
+  help_page_top_desc_02: 我們正在努力為每個學生提供學習計算機科學的機會-無論是在線還是在學校中，我們都可以在那裡建立永久性課程並培訓教師。您捐贈的每一美元，就會有一個孩子接觸到計算機科學。
+  help_page_partners_heading: 成為合作夥伴
+  help_page_partners_desc: Code.org 與其他非營利組織合作，成為合作夥伴，協助以當地、可持續的方式傳播電腦科學。進一步了解我們的計劃。
+  help_page_volunteer_heading: 義工, 在, a, 教室
+  help_page_volunteer_desc: 志願者教導一小時玩程式，或在當地教室擔任嘉賓講者。註冊以了解您附近的機會。
+  help_page_translate_heading: 幫助我們翻譯
+  help_page_translate_desc: 志願者已經將我們的教程翻譯成超過 45 種語言。幫助我們繼續為世界各地的學生擴展我們的教程！
+  help_page_speak_for_cs_heading: 講話, 為, 計算機科學, 教育
+  help_page_speak_for_cs_desc: 深入瞭解 Code.org 在美國各地的倡導工作，以及我們建議各州採取的十項政策，讓所有學生都能獲得電腦科學基礎。另外，了解如何推動您所在州的變化。
+  yw_page_top_heading: 計算機科學的年輕女性
+  yw_page_top_desc: 成為 CS 大使，成為縮小計算機科學性別差距的一部分。
   hoc_live: 一小時玩程式直播
   hoc_live_sign_up_title: 註冊以取得「一小時玩程式」直播
   hoc_live_learn_title: 透過一小時玩程式直播來學習
@@ -1254,7 +1524,7 @@ zh:
   front_header_banner: 加入史上最大的學習活動， %{campaign_date}
   front_intro_default: 一小時玩程式（Hour of Code）是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有<strong>適用於
     4 到 104 歲</strong>的教程，支援超過 45 種語言。
-  front_intro_default_2: 遍布 180 多個國家的全球運動。
+  front_intro_default_2: 遍布逾180個國家的全球運動。
   front_watch_video: 觀看新的影片
   front_watch_regular_video: 觀賞影片
   front_volunteers: 徵求專門技術志願者
@@ -1474,11 +1744,18 @@ zh:
   cta_try_an_activity: 嘗試一個活動
   hoc_homepage_join_the_movement_heading: 加入運動
   hoc_homepage_join_the_movement_description: 一小時玩程式全年都可參與，但每年12月，你的班級可以加入世界各地數百萬學生的行列，用一小時玩程式慶祝電腦科學教育周。一年一度的慶祝活動於每年10月開始註冊。
+  hoc_homepage_join_the_celebration_description: Your class or group can join millions
+    around the world doing the Hour of Code! This year, the annual Computer Science
+    Education Week celebration is %{campaign_date} and registration begins in October.
+    Though, Hour of Code is available year-round.
   hoc_homepage_what_is_hoc_subhead: 一小時的教程，超過45種語言。不需要經驗。一小時玩程式活動全年都可免費參與。
   hoc_homepage_what_is_hoc_description: 一小時玩程式是一個小時的電腦科學介紹，使用有趣的教程展示出任何人都可以學習基礎知識。這一基層運動得到全球逾400個合作夥伴和20萬名教育工作者的支持。
+  hoc_homepage_registration_desc: 你的班級或小組可以加入全球數百萬人的行列，進行一小時玩程式！一年一度的計算機科學教育周慶祝活動將於十月份開始報名。但是，一小時玩程式全年開放。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[閱讀我們的操作指南](%{howto_guide_url})為你的班級計劃活動。"
   hoc_homepage_highlights_heading: 一小時玩程式亮點
   hoc_homepage_organized_by: 一小時玩程式由[Code.org](%{codeorg_url})組織。
+  hoc_events_heading: 註冊以舉辦一小時玩程式
+  hoc_events_jump_to_map: 跳至一小時玩程式地圖
   signup_closed: 程式碼小時注册現已關閉。請在十月再次檢查，以便為下一小時的程式碼注册。
   signup_registration_not_required: 您不需要註冊即可參加！一小時玩程式活動全年開放。 <a href='%{hoc_activities_url}'>嘗試活動</a>
     或閱讀我們的 <a href='%{howto_guide_url}'>操作指南</a> ，為您的班級計劃活動。
@@ -1501,7 +1778,7 @@ zh:
   signup_event_entire_school_label: 我的整間學校都會參與
   signup_event_location_label: 活動地點
   signup_event_location_error: 須填寫活動地點
-  signup_special_event_flag_label: 將我的活動標示為特殊活動
+  signup_special_event_flag_label: 我的活動將涉及整個地區、整個組織、社區成員和/或其他超越一小時的特別計劃
   signup_special_event_details_label: 特殊活動的詳細資訊
   signup_send_posters_flag_label: 把這<a href= "/resources#posters">海報</a>交給我們的學校或組織
   signup_send_posters_address_label: 學校或組織的地址
@@ -1558,6 +1835,7 @@ zh:
   map_title: 一小時玩程式的地圖
   map_header: "# 個一小時玩程式活動遍佈世界各地"
   map_header_count_year: "%{event_count} 註冊的事件 %{year}"
+  map_header_count_year_so_far: "%{year}年到目前為止已註冊%{event_count}個活動"
   see_all_events: 查看所有活動
   map_header_company: "# 由公司主辦"
   map_header_country: '在 %{country} 有 # 場'
@@ -1570,6 +1848,7 @@ zh:
   map_warning: Hour of Code的地圖只顯示首 200,000 起已註冊事件。要查看所有已註冊事件，請使用 <a href='%{events_url}'>
     事件頁面</a>
   map_warning_markdown: 事件的完整列表可以在 [活動頁面] 上查看 (%{events_url})
+  map_view_all_events: 查看一小時玩程式活動的完整列表：[here](%{events_url})。
   meta_tag_og_title: 一小時玩程式活動來囉
   meta_tag_og_description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
   meta_tag_twitter_title: 一小時玩程式活動來囉
@@ -1585,45 +1864,23 @@ zh:
   twitter_default_text_donor: '我參加了今年的 #HourOfCode, 是嗎?（感謝 %{random_donor} 支持 @codeorg）'
   hoc_faq_title: 常見問答
   hoc_faq_what_is_hoc_q: "「一小時玩程式」是什麼？"
-  hoc_faq_what_is_hoc_a: Hour of Code 是個一小時介紹計算機科學的活動，希望在揭開程式設計的神秘面紗的同時，說明它是任何人都可以學習的基礎知識，期望能擴展人們在計算機科學領域的參與。查看<a
-    href='%{tutorials}'>教程和活動</a>。這個草根活動得到了<a href='%{partners}'>400 個合作夥伴</a>和來自世界
-    20 萬名教師的支持。
   hoc_faq_what_is_hoc_a_markdown: 一小時玩程式以一個小時的時間，介紹電腦科學，並讓人們快速瞭解程式設計，讓人們輕而易舉學習最基本的知識，更加廣泛地瞭解電腦科學。這是一項國際性活動，在一小時訓練營之外還有各種社區活動，慶祝電腦科學。查看我們的[教程和活動](%{tutorials})。感謝全球超過[400位夥伴](%{partners})和20萬教育工作者對這項草根活動的支持。
   hoc_faq_last_year: 試試教程
   hoc_faq_when_is_hoc_q: 何時舉辦一小時玩程式活動？
-  hoc_faq_when_is_hoc_a: 一小時學程式活動主要是在<a href='%{csedweek_url}'>計算機科學教育週</a>期間展開，%{campaign_date_year}計算機科學教育週是%{campaign_date_full}，但你還是可以隨時隨地舉辦一小時玩程式活動。每年舉辦的計算機科學教育週是為了紀念以紀念計算機先驅<a
-    href='%{grace_hopper}'>Grace Murray Hopper</a>的誕辰（1906 年 12 月 9 日）。
   hoc_faq_when_is_hoc_a_markdown: '每年 12 月初 的[電腦科學教育週](%{csedweek_url}) 期間，都會舉辦一小時玩程式活動。%{campaign_date_year}電腦科學教育週的時間為%{campaign_date_full}，但你全年都可以舉辦「一小時玩程式」活動。電腦科學教育週每年舉行一次，以紀念計算機先驅[Admiral
     Grace Murray Hopper](%{grace_hopper})的誕辰（1906 年 12 月 9 日）。  '
   hoc_faq_why_cs_q: 為何是資訊科學？
-  hoc_faq_why_cs_a: "<i>每個</i> 學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、 邏輯和創造力。提早開始，學生將有在任何一個
-    21 世紀的職業生涯成功的基礎。在<a href='%{stats_url}'>這裏</a>查看更多統計資料。"
   hoc_faq_why_cs_a_markdown: '每個學生都應該有機會學習電腦科學。它有助於培養解決問題的技能、邏輯和創造力。儘早開始學習能幫助學生在 21
     世紀任何職業道路上的成功奠定基礎。可在[here](%{stats_url})檢視更多統計資料。  '
   hoc_faq_how_participate_q: 要如何參加一小時玩程式活動？
-  hoc_faq_how_participate_a: 觀看完我們的活動指引就可以<a href='/how-to'>開始在這裡計劃</a>。你能在你的學校或你的社區，組織個一小時玩程式活動&mdash;
-    就像在進行一個課外活動，非營利的活動或是一個工作。或者，在%{campaign_date} 到來之前自己先體驗。
-  hoc_faq_how_participate_a_markdown: '檢視我們的指南，[按這裡開始規劃](%{howto})。你可以在你的學校或社群組織一次「一小時玩程式」活動——比如在課外俱樂部、非營利組織或工作場所。或者，當%{campaign_date}到來時，你也可以自己嘗試一下。  '
+  hoc_faq_how_participate_a_markdown: 查看我們的操作指南，[從這裏開始計劃](%{howto})。您可以在學校或社區組織一小時玩程式活動，例如在課外俱樂部、非營利組織或工作中。
   hoc_faq_behind_hoc_q: 一小時玩程式活動是由誰支持的？
-  hoc_faq_behind_hoc_a: 一小時玩程式是由 Code. org 策劃，屬於 501c3 非營利組織，活動在<a href='%{partner_url}'>計算機科學教育週</a>展開，致力於在學校推廣計算機科學教育，並增加了女性和弱勢學生學習計算機的機會。同時，這是一個<a
-    href='Http://code. org/about/partners'>前所未有的夥伴聯盟</a>&mdash; 支持者包括微軟、蘋果、亞馬遜、Boys
-    and Girls Clubs of America 以及各大學理事會。
-  hoc_faq_behind_hoc_a_markdown: "「一小時玩程式」由「一小時玩程式」和電腦科學教育週[諮詢和評審委員會](%{partner_url})
-    推動，此外還有前所未有的合作伙伴聯盟共同支援「一小時玩程式」，包括微軟、Apple、亞馬遜、美國男孩女孩俱樂部和大學委員會等等。  "
+  hoc_faq_behind_hoc_a_markdown: 一小時玩程式由Code.org組織，由一小時玩程式審核委員會以及合力支持一小時玩程式的前所未有的[partners](%{partner_url})聯盟推動，其中包括微軟、Apple、亞馬遜、美國男孩女孩俱樂部以及大學委員會等。
   hoc_faq_host_q: 我對寫程式一無所知，這樣能舉辦活動嗎？
-  hoc_faq_host_a: 當然，「一小時玩程式活動」是可以自學得。你要做的就是<a href='%{codeorg_url}/learn'>體驗我們目前的教程</a>，挑選你想要的教程&mdash;
-    後續就放心的交給我們。我們為不同年齡不同程度的人，提供了許多選擇。先閱讀我們的 <a href='target-resources-how-to'>活動指引</a>，並開始規劃您的活動。
-  hoc_faq_host_a_markdown: '當然。一小時玩程式活動側重於自我指導。你所要做的就是[嘗試我們當前的教程](%{codeorg_url}/learn)，選擇你想要的教程，並選擇一個小時的時間——其餘的事情我們會處理。我們還為幼兒園以上的每個不同年齡段和經驗水平的人提供了不同選擇。馬上閱讀我們的[指南](%{howto})，開始規劃你的活動。  '
+  hoc_faq_host_a_markdown: '當然。一小時玩程式活動側重於自我指導。你所要做的就是[嘗試我們的當前教程](%{learn_url})，選擇你想要的教程，並選擇一個小時的時間，其餘的事情我們會處理。我們還為幼兒園以上的各個年齡段和經驗水平的人提供不同的選擇。馬上閱讀我們的[操作指南](%{howto_url})，開始計劃你的活動。  '
   hoc_faq_devices_q: 我應該給我的學生使用什麼設備？
-  hoc_faq_devices_a: Code.org教學課程可以在所有的裝置跟瀏覽器上使用。您可以在<a href='%{codeorg_url}/educate/it'>這裏</a>找到關於Code.org教學課程的軟硬體需求詳情。關於非Code.org的教學課程的軟硬體需求，可以在<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>的教學描述中。別忘了，如果您的學校沒有電腦或沒有相關的資源，我們也有不用電腦也可以進行的<a
-    href='%{unplugged_url}'>離線活動</a>！
-  hoc_faq_devices_a_markdown: 'Code.org的教程可以在所有裝置和瀏覽器上使用。你可以在[here](%{codeorg_url}/educate/it)看到更多關於Code.org教程技術需求的資訊。非Code.org教程的技術需求可以在[%{partner_url}/learn](%{codeorg_url}/learn)的教程具體說明中找到。不要忘了，如果你的學校不能滿足教程的要求，我們還提供[離線活動](%{unplugged_url})！  '
+  hoc_faq_devices_a_markdown: Code.org教程可在各種設備和瀏覽器上使用。您可以在[here](%{it_url})查看有關Code.org的教程技術需求的更多信息。非Code.org教程的技術需求可在[hourofcode.com/learn](%{learn_url})中的特定教程說明中找到。別忘了，如果您的學校無法容納教程，我們還提供[缐下活動](%{unplugged_url})！
   hoc_faq_need_computers_q: 我要給每個參與者提供電腦嗎？
-  hoc_faq_need_computers_a: 不需要，一小時玩程式活動可以在電腦、手機、平板上執行，有些活動甚至根本不需要計算機。無論你在哪裡，不管設備是什麼，你都可以參加。<p><i>這裡有幾個方式：</i>
-    <br><ul><li><b>兩兩合作。</b><a href='%{pair_programming_research}'>研究顯示</a>，學生在<a
-    href='%{pair_programming_video}'>合作編程</a>時的學習效果最好，透過在一台電腦上協同，也可以讓你的學生學習合作。<li><b>使用投影螢幕，</b>如果你有一部投影機和有可以電腦連線的大螢幕，你的整個團體就可以一起進行活動，一起觀看影片，輪流解決關卡或回答問題。<li><b>不插電活動，</b>我們提供了<a
-    href='%{unplugged_url}'>不需要電腦的教學內容</a>。</ul>
   hoc_faq_need_computers_a_markdown: |-
     不。我們的程式設計一小時教程可以在個人電腦、智慧手機、平板電腦使用，有些甚至不需要電腦！無論你在哪裡，無論你條件如何，你都可以加入。
 
@@ -1633,63 +1890,43 @@ zh:
     - **使用投影螢幕。**如果你有投影儀和螢幕供聯網的電腦使用，你的整個小組就可以一起進行“程式設計一小時”。一起觀看視頻部分，然後輪流解謎或回答問題。
     - **離線活動。**我們提供完全[不需要電腦的教程](%{unplugged_url})。
   hoc_faq_international_q: 我在<country>。我如何參與國際活動？
-  hoc_faq_international_a: 任何人都可以在任何一個地方舉辦一小時玩程式活動。去年，全世界有許多的學生共同參與了這個活動。<a href='target-resources'>進一步了解</a>。
   hoc_faq_international_a_markdown: 任何人在世界任何地方，都可以組織一小時玩程式活動。去年，全世界的學生一起參與程式設計一小時。在[here](%{promote})查看更多。
   hoc_faq_tutorial_q: 我該如何製作一小時玩程式的教程？
-  hoc_faq_tutorial_a: 如果您有興趣成為教程合作夥伴，請<a href='/tutorial-guidelines'>參閱我們的指南和說明</a>。
-    我們想要舉辦各種各樣有吸引力的選擇，但主要目標是優化對於計算機科學新手的學生和教師的體驗。
   hoc_faq_tutorial_a_markdown: '如果你有興趣成為教程合作伙伴，請[參見我們的指南和說明](%{tutorial_guidelines})。我們希望舉辦各種引人入勝的活動，但主要目標是為剛接觸電腦科學的學生和教師優化體驗。  '
   hoc_faq_account_q: 學生是否需要使用帳戶登錄？
-  hoc_faq_account_a: 不，學生體驗一小時玩程式的過程中，完全不需要註冊或登入。只有大多數<a href='%{codeorg_url}/learn/beyond'>後續課程</a>才需要建立帳戶以保存學生的學習進度。同時，一小時玩程式上註冊的帳戶並沒有自動與
-    Code Studio 的帳戶關聯。如果你想為你的學生建立帳戶，請參考<a href='https://youtu.be/_smelV_KISE'>這些指引</a>。
-  hoc_faq_account_a_markdown: 不，學生完全不需要註冊或登入就可以嘗試「一小時玩程式」。大多數[後續課程](%{codeorg_url}/learn/beyond)則需要建立帳戶來儲存學生的學習進度。另外，註冊「一小時玩程式」並不會自動建立一個代碼工作室帳戶。如果你想為你的學生建立帳戶，請遵循以下[instructions](%{section_instructions_url})。
+  hoc_faq_account_a_markdown: 不，學生完全不需要註冊或登入就可以嘗試一小時玩程式。大多數[後續課程](%{beyond_url})則需要建立帳戶來儲存學生的學習進度。另外，註冊一小時玩程式並不會自動建立代碼工作室帳戶。如果你想為學生建立帳戶，請遵循這些[instructions](%{section_instructions_url})。
   hoc_faq_high_school_q: 我應該和高中生一起做哪些活動？
-  hoc_faq_high_school_a: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript 版本和這兩個教程的自由發揮關卡。或者,
-    我們建議一開始可以在 <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> 裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
-    30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或 CodeHS 的 JavaScript 相關課程。
-  hoc_faq_high_school_a_markdown: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的 JavaScript
-    版本和這兩個教程的自由發揮級別。或者, 我們建議一開始可以在[%{partner_url}/learn](%{codeorg_url}/learn)裡選個入門教程，比方說憤怒鳥，或安娜和艾莎公主。高中生應該能夠在
-    30 分鐘內完成其中一個，然後進行更進階的教程，比如汗學院或CodeHS的JavaScript相關課程。
+  hoc_faq_high_school_a_markdown: 我們的《星際大戰》和《我的世界》教程對高中生來說是很好的的選擇，尤其是《星球大戰》的JavaScript版本和這兩個教程的自由發揮關卡。此外，我們建議一開始可以在[hourofcode.com/learn](%{learn_url})選擇一個入門教程，例如《憤怒的小鳥》或《Frozen's
+    Anna and Elsa》教程。高中生應該能夠在30分鐘內完成其中一個，然後進行更高級的教程，例如Khan Academy或CodeHS的JavaScript課程。
   hoc_faq_scratch_q: 我正用 Scratch 辦一小時玩程式活動，但是如果我的學生有 iPad 而不是筆記型電腦，怎麼辦呢？
-  hoc_faq_scratch_a: Scratch無法在平板電腦上執行。如果你的學生年紀小，他們可以使用iPad應用程式ScratchJR（年幼閲讀者）。如果你查看<a
-    href='%{codeorg_url}/learn'>%{partner_url}/learn</a>上的教程，你可以找到其他在iPad可行的教程 - 來自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_scratch_a_markdown: Scratch不能在平板電腦上運行。如果你的學生都很小，他們可以使用ScratchJR iPad應用程式（年幼閱讀者）。如果你查看[%{partner_url}/learn](%{codeorg_url}/learn)上的教程，你可以找到在iPad運行的其他教程
     - 來自Code.org、Tynker、Lightbot或CodeSpark。
   hoc_faq_count_hoc_q: 你如何計算一小時玩程式？
   hoc_faq_map_q: 為什麼我在地圖上看不到我的點？
-  hoc_faq_map_a: '很抱歉，在「一小時玩程式」地圖上看不到你的活動。由於有成千上萬的組織者註冊，所以地圖彙總了所有資料，並在一個點上顯示多個活動。如果你點選地圖下方的<a
-    href=''%{events_url}''>活動頁面</a>連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裡找到你的活動列表。此外，由於有成千上萬的人報名參加「一小時玩程式」，地圖和活動列表通常需要
-    48 小時才能更新。請在幾天後再來檢視！  '
-  hoc_faq_map_a_markdown: 很抱歉，在「一小時玩程式」地圖上看不到你的活動。由於有成千上萬的組織者註冊，所以地圖彙總了所有資料，並在一個點上顯示多個活動。如果你點選地圖下方的[活動頁面](%{events_url})
-    連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裡找到你的活動列表。此外，由於有成千上萬的人報名參加「一小時玩程式」，地圖和活動列表通常需要 48
-    小時才能更新。請在幾天後再來檢視！
-  hoc_faq_count_hoc_a: 一小時玩程式追蹤器並不能精確測量使用情況。當我們追蹤「一小時玩程式」的參與情況時，我們並不能完美地計算出唯一的學生 ID，特別是因為我們並不要求學生登入或註冊。因此，我們會同時多算和少算參與者。在<a
-    href='%{codeorg_url}/loc'>這裏</a>閱讀所有細節。
-  hoc_faq_count_hoc_a_markdown: 一小時玩程式追蹤器並不能精確測量使用情況。當我們追蹤「一小時玩程式」的參與情況時，我們並不能完美地計算出唯一的學生
-    ID，特別是因為我們並不要求學生登入或註冊。因此，我們會同時多算和少算參與者。在[here](%{codeorg_url}/loc)閱讀所有細節。
+  hoc_faq_map_a_markdown: 很抱歉，在一小時玩程式地圖上看不到你的活動。由於有成千上萬的組織者註冊，地圖彙總了所有數據，並在一個點上顯示多個活動。如果你點選地圖下方的[活動頁面](%{events_url})連結，你會被引導到一個按州劃分的所有活動列表上，你可以在那裏找到你的活動列表。此外，由於有成千上萬的人報名參加一小時玩程式，地圖和活動列表通常需要48小時才能更新。請在幾天後再來查看！
+  hoc_faq_count_hoc_a_markdown: 我們在追踪一小時玩程式的參與時不會完全計數獨立學生ID。為什麼？一部分是因為我們不希望在學生或課堂第一次嘗試學習之前提示「登入/註冊」的摩擦，一部分是因為我們有很多活動無法在線上跟踪。我們確實採取了某些步驟來減少雙重計數，但沒有登入提示，這將無法完美運行。同時，一小時玩程式中有很多學生活動完全不被跟踪。例如：(1)
+    使用行動裝置/平板電腦應用程式來嘗試一小時玩程式的學生通常不會計數 (2) 共用螢幕進行結對編程或群組編程的學生可能被計數為一個人 (3) 嘗試缐下課堂活動的學生無法在線上計數
+    (4) 建立自己的一小時玩程式活動的教師。因此，有一些計數不足和一些雙重計數，因此我們不認為一小時玩程式追踪器是確切的使用量測量。這在方向上肯定是正確的，並顯示有數十萬名學生參與。
   hoc_faq_one_hour_q: 在一個小時內我們可以學到多少？
-  hoc_faq_one_hour_a: "「一小時的程式設計課程」目的並不是在一小時內把大家教成資訊科學的專家。一小時的時間是剛好讓大家瞭解到資訊科學是門有趣且有創意的學問，而且適合所有年紀、所有學生學習，不管是什麼背景。這個活動的成功不是以學生學了多少資訊科學的知識來衡量的，而是體現在參與族群、性別、經濟背景等的多元化，讓我們可以看到資訊科學在所有年齡層中遍地開花。上百萬的老師與學生在一小時的體驗之後決定繼續下去
-    -- 學習一整天、一整個星期甚至更長時間，而且有許多學生決定最後主修資訊科學。<br/><br/>除了學生之外，另一個「得到好處」的是老師們。因為有些老師並沒有資訊科學的學位，但經過這一小時的體驗之後，他們變得有自信，可以教好資訊科學相關的課程。也有成千上萬的老師決定再深入一點研究資訊科學，有些去參與線上課程，甚至有人去進修。有些學校的管理團隊也瞭解到，資訊科學是他們的學生與老師可以一起學習的課程。<br/><br/>總結來說，我們希望一小時的體驗能帶給大家更多未來的可能性。"
   hoc_faq_one_hour_a_markdown: |-
-    一小時玩程式的目標不是讓任何人在一小時內成為電腦科學家或者專家。一個小時的時間只夠讓大家瞭解到電腦科學是有趣的、有創造力的，是所有年齡段、所有學生（無論什麼背景）都能接觸到的。衡量這項活動成功與否的標準並不在於學生學到了多少電腦科學知識，而在於讓不同性別、種族/民族和社會經濟群體廣泛參與，以及由此帶來的各年級電腦科學課程入學率和參與率的提高。數以百萬計的教師和學生參與活動之後都決定要超越一個小時：學習一整天或一整周或更長的時間，還有許多學生因此決定報讀一整門課程（甚至大學專業）。
+    一小時玩程式的目標不是讓任何人在一小時內成為計算機科學家或者專家。一個小時的時間只夠讓大家瞭解到計算機科學是有趣的、有創造力的，是所有年齡段、所有學生（無論什麼背景）都能接觸到的。衡量這項活動成功與否的標準並不在於學生學到了多少計算機科學知識，而在於讓不同性別、種族/民族和社會經濟群體廣泛參與，以及由此帶來的各年級計算機科學課程報讀率和參與率的提高。數以百萬計的教師和學生參與活動之後都決定要超越一個小時：學習一整天或一整週或更長的時間，還有許多學生因此決定報讀一整門課程（甚至大學專業）。
 
-    除了學生群體，教育工作者同時也是另一群“學習者”，他們在這一小時後獲得了信心，認為自己可以教授電腦科學，即使他們可能沒有電腦科學的大學學位。數以萬計的教師決定進一步鑽研電腦科學，要麼參加 PD，要麼提供後續的線上課程，或者兩者兼而有之。這同樣也適用於學校管理者，他們意識到電腦科學是他們的學生想要的，而且他們的老師也有能力勝任教學任務。
+    除了學生群體，教育工作者同時也是另一群“學習者”，他們在這一小時後獲得了信心，認為自己可以教授計算機科學，即使他們可能沒有計算機科學的大學學位。數以萬計的教師決定進一步鑽研計算機科學，要麼參加專業發展課程，要麼參加後續線上課程，或者兩者兼而有之。這同樣也適用於學校管理者，他們意識到計算機科學是他們的學生想要的，而且他們的教師也有能力勝任教學任務。
 
-    最重要的是，所有參與者在一小時內都能學到的是：我們可以做到。
+    最重要的是，所有參與者在一小時內都能學到的是，任何人都可以學習計算機科學！
   hoc_faq_more_questions_q: 還有疑問？
-  hoc_faq_more_questions_a: 請嘗試在<a href='http://support.code.org'>支援論壇</a>中找到答案。
   hoc_faq_more_questions_a_markdown: 嘗試在我們的[支持論壇](http://support.code.org)尋找答案。
   hoc_faq_keep_learning_q: 在一小時玩程式活動之後，我可以繼續學習什麼？
-  hoc_faq_keep_learning_a: 任何人、任何時間都可以舉辦一小時玩程式活動。所有的教程都會永久保留在網站上。請到<a href='/promote'>我們的資源</a>看看如何辦理活動的活動指引，還有相關的資源，幫助你辦理一場成功的活動。
   hoc_faq_keep_learning_a_markdown: '任何人在任何時候都可以舉辦「一小時玩程式」活動。教程全年不間斷。放心，我們所有的教程和課程都會在我們的網站上永久保留。請到[我們的資源](%{promote})檢視活動指南和其他資源，以幫助你的「一小時玩程式」活動獲得成功。  '
   hoc_faq_certificates_q: 我在哪裡可以為學生列印證書？
-  hoc_faq_certificates_a: 前往<a href='%{codeorg_url}/certificates'>證書頁面</a>，你就能在開始之前為全班列印證書。你也能給參加了《我的世界》教程的學生列印<a
-    href='%{codeorg_url}/certificates?course=mc'>特別證書</a>。
-  hoc_faq_certificates_a_markdown: 前往我們的[證書頁面](%{codeorg_url}/certificates)，在這裡你可以提前列印全班的證書。你也可以列印[特殊證書](%{codeorg_url}/certificates?course=mc)
-    給正在學習《我的世界》教程的學生。
+  hoc_faq_certificates_answer_markdown: 前往我們的[證書頁面](%{certificates_url})，你可以提前為整個班級列印證書。
   hoc_faq_logo_q: 當我使用一小時玩程式的標誌或名稱時，有什麼限制嗎？
-  hoc_faq_logo_a: 程式設計一小時已進行商標註冊。我們不希望阻止它的使用，但我們想要確保它的使用符合限制。請參閱<a href='%{logo_url}'>使用指南</a>。
   hoc_faq_logo_a_markdown: 程式設計一小時已進行商標註冊。我們不希望阻止它的使用，但我們想要確保它的使用符合限制。請參閱[使用指南](%{logo_url})。
+  hoc_faq_bug_q: 我在一小時代碼活動中發現一個錯誤！我該怎麼辦？
+  hoc_faq_bug_a_markdown: |-
+    哦，不！如果您在一小時程式碼活動中遇到錯誤，請先檢查您正在進行的活動的 URL。如果網址以 studio.code.org 開頭，我們的 Code.org 支持團隊可以為您提供幫助！點擊屏幕右上角的問號圖標，然後從下拉菜單中選擇「報告問題」。
+
+    如果網址不是以 studio.code.org 開頭，則您可能正在進行第三方活動，並需要聯繫該公司的支持團隊以獲得進一步的幫助。
   stats_hoc_2013_image_alt: 2013 一小時玩程式的統計資料
   stats_growth: 活動在最快的時間內觸及了 1500 萬的使用者。
   stats_i18n: 支援超過 45 種語言
@@ -1781,7 +2018,7 @@ zh:
   event: 活動
   events: 活動
   highlights_title: 焦點訊息
-  highlights_header: 一小時玩程式焦點訊息
+  highlights_header: 一小時玩程式重點
   highlights_description: 一些我們最愛的一小時玩程式活動花絮。
   highlights_previous: 前幾年的亮點
   highlights_see_more: 查看更多亮點
@@ -8974,6 +9211,1170 @@ zh:
   tutorial_kcjhealth_string_detail_programming_languages: 積木式
   tutorial_msftwakanda_string_detail_programming_languages: 積木式
   tutorial_nafbrand_string_detail_programming_languages: Python
+  tutorial_bsimage_name: Image Composition - A Wintry Puzzle!
+  tutorial_bscomputing_name: Computing Needs All Voices
+  tutorial_stackpython_name: Learn Python Programming by Building A Robot
+  tutorial_questcastle_name: Minecraft Cyber Castle Challenge
+  tutorial_bsdata_name: Hour of Data
+  tutorial_blockscadroblox_name: BlocksCAD Roblox Characters
+  tutorial_blockscadcoin_name: Coin-Flipping Simulator
+  tutorial_blockscadsolar_name: Building Solar Power with Loops
+  tutorial_blockscadstarwars_name: Star Wars and BB-8 with Geometry and Code
+  tutorial_blockscadgame_name: Custom Game Consoles with Code
+  tutorial_carnegieaccelerate_name: Acceleration City
+  tutorial_codespeakcctrivia_name: Create a Climate Change Trivia Game on Scratch
+  tutorial_edisonsquare_name: It's hip to be a square
+  tutorial_carnegiemachine_name: Machine Vision in Robotics (Virtual)
+  tutorial_skoolparts_name: 'Plugged Coding Activity: Parts of A Plant'
+  tutorial_skoolplant_name: 'Plugged Coding Activity: Parts of A Plant'
+  tutorial_mitchatgpt_name: Building a mobile ChatGPT app with MIT App Inventor
+  tutorial_mitimagebot_name: Building an ImageBot with MIT App Inventor
+  tutorial_mitconverse_name: Conversational AI with MIT App Inventor
+  tutorial_nasamarsreturn_name: 'NASA: Mars Sample Return Coding Challenge'
+  tutorial_nasaradio_name: 'NASA: Coding a Radio Message in Space'
+  tutorial_nasahelicopter_name: 'NASA: Code a Mars Helicopter Video Game'
+  tutorial_nasacollection_name: 'NASA: Code a Mars Sample Collection Video Game'
+  tutorial_wizclock_name: 'Clock: creating a clock with code'
+  tutorial_wizmoon_name: 'Moon Phase: creating the moon phases with code'
+  tutorial_wiztraffic_name: 'Traffic light: creating a traffic light with code'
+  tutorial_wizpacman_name: 'Pacman game: creating a Pacman game with code'
+  tutorial_wizsea_name: 'Saving the sea: creating a game with code'
+  tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
+  tutorial_bekidsadventure_name: Creative Coding Adventures
+  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
+  tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
+  tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
+    Thunkable
+  tutorial_ozobotircomm_name: Intro to IR Communications
+  tutorial_gsmonster_name: Create Monster Maze with GameSalad
+  tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
+  tutorial_ozobotbroadcast_name: Broadcast and Retrieve IR Messages with Ozobot
+  tutorial_ozobotapplications_name: Basic Applications of IR Communications
+  tutorial_codecombatworlds_name: CodeCombat Worlds
+  tutorial_spherochatgpt_name: BOLT meets ChatGPT
+  tutorial_spherorvrimage_name: 'AI with RVR+: Image Recognition'
+  tutorial_spherorvrauto_name: 'AI with RVR+: Autonomous Vehicles'
+  tutorial_spherofeedback_name: Feedback Loops and AI
+  tutorial_spheroindi_name: Autonomous indi
+  tutorial_codetribeplatform_name: My First Platformer Game
+  tutorial_codetribespace_name: My Space Explorer
+  tutorial_codetribelanding_name: My First Landing Page
+  tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
+  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
+  tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
+  tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
+  tutorial_pickcodecookie_name: 'Pickcode: Click a Cookie Game'
+  tutorial_pickcodeexoplanet_name: 'Pickcode: Exoplanet Explorer'
+  tutorial_firiahaunted_name: Haunted Code Chronicles
+  tutorial_googlediscoverai_name: Discover AI in Daily Life
+  tutorial_msftsparksfly_name: Sparks Flying!
+  tutorial_msftsparksflyjr_name: Sparks Flying Junior
+  tutorial_seesawemrobot_name: Em Builds a Robot With Hardware
+  tutorial_brilliantthinking_name: Thinking in Code
+  tutorial_seesawtomika_name: Tomika Programs With ScratchJr
+  tutorial_seesawrobot_name: Create a Hardware Robot with Em
+  tutorial_brilliantcreate_name: Creative Coding
+  tutorial_seesawscratch_name: Program With Scratch and Tomika
+  tutorial_seesawkeyboard_name: Robo Keyboard and the Typing Device
+  tutorial_seesawrobocar_name: Robo Car Introduces Scratch
+  tutorial_seesawrobowand_name: Robo Car Introduces Scratch
+  tutorial_seesawinventor_name: Robo Inventor and the Creative Coding Project
+  tutorial_codeartobjects_name: 'Falling Objects: Game Design on Scratch'
+  tutorial_microsoftmanor_name: 'Spooky Manor: Uncover the Haunted Mysteries with
+    VS Code for Education'
+  tutorial_nasaartemis_name: 'NASA: Artemis II Coding Challenge'
+  tutorial_codejikaresume_name: 'CodeJIKA: My Web Resume'
+  tutorial_codejikabiz_name: 'CodeJIKA: My Biz Website'
+  tutorial_codejikasnake_name: 'CodeJIKA: Snake Arcade Game'
+  tutorial_codespeakplant_name: Build a Grow a Plant! Game in Scratch
+  tutorial_codespeakaichat_name: Build an AI Chatbot in Python
+  tutorial_icteachmicrobit_name: Micro:bit Cyber Pin Code Generator
+  tutorial_codeyallawebsite_name: 'CodeYalla: 5 Minute Website'
+  tutorial_usicastle_name: Program Your Own Castle
+  tutorial_bootupparty_name: 舞蹈派對
+  tutorial_codespeakrocket_name: 'Rocket Blaster: Build a Scratch Project'
+  tutorial_bootupstarry_name: Starry Night
+  tutorial_bootupsea_name: Under the Sea
+  tutorial_bootupanimal_name: Animal House
+  tutorial_bootupdance_name: Dance Fever
+  tutorial_unrulyart_name: 'Found Art Challenge: Creating Art through Code'
+  tutorial_intelinoabc_name: ABC Code with intelino
+  tutorial_robotcodeline_name: Code a Line Follower
+  tutorial_cospacepirate_name: Pirate Plunder
+  tutorial_bwai_name: Artificial Intelligence Lesson and Questions
+  tutorial_simplepython_name: 'Python in Pieces: Explore text outputs and print statements'
+  tutorial_codestersfire_name: 'Codesters: Fireworks!'
+  tutorial_codehskinder_name: Training AI Using Data K-1
+  tutorial_codehsaielem_name: Training AI Using Data 2-5
+  tutorial_codespeaktrivia_name: How to Code A Trivia Game on Scratch Using AI
+  tutorial_hwescape_name: 'Escape Room: Tower Conquest'
+  tutorial_hwlava_name: Floor is Lava
+  tutorial_hwgallery_name: Show and Tell Gallery
+  tutorial_hwfanpage_name: Fan Page
+  tutorial_hwillusion_name: Color Illusion Challenge
+  tutorial_caevolution_name: 'Silicon Synapses: Evolution of AI'
+  tutorial_bbbusybot_name: BusyBot!
+  tutorial_caaifarm_name: Old MacDonald Hacked a farm, AI, AI Drone
+  tutorial_cafuture_name: Face the Future
+  tutorial_dmscratch_name: Scratch - Book to Code
+  tutorial_dmliteracy_name: Data Literacy in the AI Era Workshop
+  tutorial_dmwind_name: Scratch - Planet Wind
+  tutorial_dmbeatbox_name: Scratch - Beat-Box
+  tutorial_kinderaikibo_name: An Introduction to AI with KIBO
+  tutorial_kinderairvr_name: AI - Design a KIBO Mars Rover
+  tutorial_bbtai_name: AI for All
+  tutorial_cagenius_name: Gesture Genius
+  tutorial_tynkerweather_name: Weather Control
+  tutorial_tynkerbalance_name: Balancing Act
+  tutorial_tynkertickle_name: Tickle Monster
+  tutorial_tynkerfruit_name: Fruit Fighter
+  tutorial_codemonkeyhoot_name: 'AI is a Hoot: Pose Detection'
+  tutorial_kcjpong_name: Teach an AI to Play Pong
+  tutorial_dmsolar_name: Scratch - Solar Power Hour
+  tutorial_mindmakersneural_name: AI & Neural Networks
+  tutorial_blocksmithrescue_name: A.I. Rescue
+  tutorial_cstaheroes_name: CSTA CS Heroes
+  tutorial_codecombathack_name: CodeCombat AI HackStack
+  tutorial_toxicodewords_name: 'N-Gram Explorers: Quest for Words'
+  tutorial_mitstepmisinformation_name: 'Developing AI Literacy (DAILy) 2.0: Spread
+    of Misinformation'
+  tutorial_mitstepdeepfakes_name: 'Developing AI Literacy (DAILy) 2.0: Deepfakes +
+    Ethical Matrix'
+  tutorial_mitstepintrotoml_name: 'Developing AI Literacy (DAILy) 2.0: Intro to Supervised
+    Machine Learning'
+  tutorial_naflogo_name: 'Code your Brand: Make a Logo'
+  tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
+  tutorial_intelinosmile_name: Smile to Drive intelino
+  tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_bsimage_longdescription: In this lesson students engage with a series of
+    scaffolded self-paced activities in our Parley editor that introduce them to the
+    Pyret programming language, image-producing functions, defining values and image
+    placement using coordinates. By the end they'll be able to modify code to solve
+    a puzzle that generates a snowman scene!  Students looking for a challenge can
+    even add their own elements.
+  tutorial_bscomputing_longdescription: Free downloadable Poster Series and accompanying
+    lesson in which students learn about a diverse group of pioneers in computing
+    and consider the problem solving advantages that diverse teams foster.
+  tutorial_stackpython_longdescription: Learn to build and program a robot using python
+    language.
+  tutorial_questcastle_longdescription: 'The Cyber Castle Challenge is an exciting,
+    gamified approach to learning cyber security using Minecraft: Education. Designed
+    for ages 8-13, students collaborate to conquer 4 seasons of real-world cyber security
+    challenges. Using the analogy of castles, chickens and foxes, students will have
+    to identify who is a friend or who is foe, while developing defences to protect
+    their important assets. Can your students identify a threat? Can they strategize
+    to protect themselves and others? Put them to the test with the Cyber Castle Challenge.'
+  tutorial_bsdata_longdescription: This Hour of Data lesson is a self-guided Desmos
+    activity. Students explore data visualization, introductory programming using
+    The Pyret Programming Language, and the application of Data Science to solve real
+    problems. Students will investigate a data set of vehicle-wildlife collisions
+    in Vermont and make recommendations about where to build wildlife overpasses.
+  tutorial_blockscadroblox_longdescription: 'One of the winners of the Roblox avatar
+    contest - and now quite a popular character - was Gang O’ Fries. This avatar is
+    made of relatively simple geometric shapes: cylinders and cubes. You can make
+    and customize your own in BlocksCAD!'
+  tutorial_blockscadcoin_longdescription: Use logic and loops in combination with
+    geometric shapes to program any probability simulator you want. Can you program
+    a game you love that involves probability?
+  tutorial_blockscadsolar_longdescription: Harnessing solar power relies on large
+    solar panels that can capture as much sunlight as possible. They are made up of
+    many, many copies of solar cells. Can you build a geometric solar cell and then
+    creatively iterate it with loops?
+  tutorial_blockscadstarwars_longdescription: One of the most loveable characters
+    of the recent Star Wars movies is the droid BB-8 despite its very simple construction
+    and lack of facial features. Can you build him with basic geometry and code? What
+    else in the galaxy can you design?
+  tutorial_blockscadgame_longdescription: If you’re a video game company imagining
+    new styles and shapes for your controllers and consoles, you need designers to
+    first render them digitally before producing physical models to test out. What
+    features do you think make for an optimal controller or a sleek console? What
+    shapes can you use to create these designs in a CAD platform like BlocksCAD?
+  tutorial_carnegieaccelerate_longdescription: 'Welcome to Acceleration City, where
+    fun is only limited by your drive! Explore a wild world filled with races and
+    stunts. Every vehicle is equipped with a personal CoBot companion, which can generate
+    ramps, platforms, and boost pads to help you in the world. The CoBot can be programmed
+    to respond to your keypresses, as well as key colored trigger zones when racing. '
+  tutorial_codespeakcctrivia_longdescription: Code a trivia game on climate change
+    and learn what’s beneficial for our planet and how to take good care of it.
+  tutorial_edisonsquare_longdescription: It’s hip to be a square… or a triangle… or
+    even a hexagon! What sort of shapes can you get Edison to drive in and what specific
+    instructions do you need to use?
+  tutorial_carnegiemachine_longdescription: Learn how Machine Vision can be integrated
+    into robotics systems to automatically perform tasks such as image detection and
+    quality control. Train a vision-based quality control system in a simulation that
+    leverages the vision data in machine learning modules.
+  tutorial_skoolparts_longdescription: In this plugged coding activity, we guide our
+    little ones to appreciate our natural surroundings with the use of a tech toy.
+    We facilitate outdoor play by merging technology and nature to enhance preschoolers'
+    learning experience.
+  tutorial_skoolplant_longdescription: In this plugged coding activity, we guide our
+    little ones to appreciate our natural surroundings with the use of a tech toy.
+    We facilitate outdoor play by merging technology and nature to enhance preschoolers’
+    learning experience.
+  tutorial_mitchatgpt_longdescription: Have you ever wondered how it is possible to
+    create your very own ChatGPT app that will allow you, wherever you are, to tap
+    into a world of useful information? In this tutorial, you will build a simple
+    app with MIT App Inventor that allows users to connect to ChatGPT, ask questions,
+    and have a conversation.
+  tutorial_mitimagebot_longdescription: Have you ever wondered how to create your
+    own generative AI app for wildly imaginative visualizations? In this tutorial,
+    you will build a simple app with MIT App Inventor that allows users to connect
+    to OpenAI’s DALL-E generative AI program, submit their own prompts, and see the
+    result in exciting artistic visions from the AI.
+  tutorial_mitconverse_longdescription: In these tutorials, you will learn how to
+    use the MIT App Inventor's Conversational AI Interface to create your own Amazon
+    Alexa skills for Alexa. (No Amazon device required.)
+  tutorial_nasamarsreturn_longdescription: In this collaborative project, student
+    teams each take on a component of the Mars Sample Return mission in order to construct
+    and code a model of a device capable of sending Martian rocks to Earth. Groups
+    can use multiple coding languages simultaneously to allow all levels of coders
+    to participate.
+  tutorial_nasaradio_longdescription: In this activity, students use their knowledge
+    of coding to create a system that can send and receive radio signals. Students
+    then encode a message into the signal that can be decoded by other students.
+  tutorial_nasahelicopter_longdescription: In this activity, students create a Mars
+    helicopter game using the Scratch programming language. They will engage in computational
+    thinking, use math and include elements of real Mars helicopter planning to design
+    their game.
+  tutorial_nasacollection_longdescription: In this project, you will use Scratch,
+    a visual programming language, to create a video game that simulates the way NASA
+    collects samples on Mars!
+  tutorial_wizclock_longdescription: Learn to create a clock with ScratchJr
+  tutorial_wizmoon_longdescription: Learn the different moon phases and create your
+    own moon phase with ScratchJr
+  tutorial_wiztraffic_longdescription: Learn how to program traffic light using ScratchJr.
+  tutorial_wizpacman_longdescription: Learn to program characters of the pacman game
+    using ScratchJr
+  tutorial_wizsea_longdescription: Learn to create saving the sea game using ScratchJr
+  tutorial_wizroad_longdescription: Learn to road crossing game program with ScratchJr
+  tutorial_bekidsadventure_longdescription: Explore creativity through two engaging
+    games with block-based programming! Create fun geometric patterns, and craft car
+    routes through exciting challenges. Unleash creativity, enhance logic, and get
+    to know the art of programming!
+  tutorial_myqpixel_longdescription: In this MyQ activity, you will solve visual fun
+    challenges to help our cute dog find its bones, while leraning the concepts of
+    cause and effect and user interactions.
+  tutorial_creaticodechatgpt_longdescription: Learn to use OpenAI's ChatGPT AI as
+    a chatting and reasoning engine to build fun games and smart apps. Scratch-like
+    blocks and user interface are used so no need to install any software or learn
+    more complex languages.
+  tutorial_thunkabletranslator_longdescription: Build an app that translates languages
+    for you and turns your speech into text.
+  tutorial_ozobotircomm_longdescription: Students will be introduced to the idea that
+    Ozobot can detect and respond toobjects around it.
+  tutorial_gsmonster_longdescription: Learn to build your own game were your monster
+    navigates a maze and collects candy!
+  tutorial_gsspacerocks_longdescription: Build the game Space Rocks with GameSalad
+    and learn to use game physics and loops. Student should have some familiarity
+    with GameSalad to complete the activity in one hour.
+  tutorial_ozobotbroadcast_longdescription: Students will work in pairs or small groups
+    with two devices and twoOzobots, which students will program to communicate with
+    each other.
+  tutorial_ozobotapplications_longdescription: Students will identify an everyday
+    application of infrared communication andbuild a model of it with Ozobots and
+    Ozobot Blockly.
+  tutorial_codecombatworlds_longdescription: Play your way to mastering the coding
+    skills needed for creating your own amazing Roblox games! Start in the Overworld,
+    where you'll code your own pets to harvest, battle, and play. Then, take on the
+    Learning Levels and master the core concepts of Luau coding. But the real magic
+    happens in Creative Mode, where you'll craft your own games with the help of AI.
+    The power to create is in your hands!
+  tutorial_spherochatgpt_longdescription: ChatGPT, an artificially intelligent chatbot,
+    is all the rage these days. Is there anything it doesn’t know? In this activity,
+    explore whether or not ChatGPT can program your BOLT robot, then reflect on the
+    pros and cons of this new technology.
+  tutorial_spherorvrimage_longdescription: Artificial intelligence is making technology
+    smart. Computing systems can do more and more on their own these days, including
+    recognizing objects in images. In this activity, explore the role of human trainers
+    in image recognition.
+  tutorial_spherorvrauto_longdescription: It’s impossible to have a conversation about
+    how Artificial Intelligence (AI) will impact our lives without discussing autonomous,
+    or self-driving, vehicles. In this activity, program RVR+ to drive on its own
+    and explore how humans and machines can work together to safely automate driving.
+  tutorial_spherofeedback_longdescription: A feedback loop uses the output of a program
+    to change how the program functions in the next cycle. Artificial Intelligence
+    (AI) uses feedback loops to learn new information and present that information
+    to the user. In this lesson, students will explore feedback loops and how they
+    relate to AI.
+  tutorial_spheroindi_longdescription: One day self-driving cars may take over our
+    roads but indi can drive autonomously right now! In this lesson, students will
+    be introduced to the concept of self-driving cars and explore how they can be
+    “trained.
+  tutorial_codetribeplatform_longdescription: Build your own Super-Mario-style game
+    in just 22 minutes using this amazing tutorial. Powered by Kaboom.js ( a simplified
+    version of Javascript) you'll write functions and add sprites within the first
+    lesson.
+  tutorial_codetribespace_longdescription: 'You will code this fast-paced and thrilling
+    space shooter game from scratch using the simplified version of javascript: Kaboom.js.
+    You''ll learn how to simply manage different controls, keep score, and randomize
+    the obstacles.'
+  tutorial_codetribelanding_longdescription: Deepdive into CSS and a colorful world
+    of linear gradients. This is the best way to introduce syntax programming as the
+    learner builds a beautiful design using tags and the HTML structure which she
+    codes from scratch in this sequence of self-directed micro-challenges.
+  tutorial_cakeyboard_longdescription: Join Juno and Max on an electrifying educational
+    journey exploring computing systems. Dive into portable electronic devices, decode
+    hardware/software glitches, master inputs/outputs, and conquer navigation. Sharpen
+    literacy skills, letter recognition and capitalization, and troubleshoot problems.
+    Complete the 5 tasks in an hour or split for junior students. Additional activities
+    included.
+  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
+    programming languages! Hedy is free to use, open source, and unlike any other
+    textual programming language in three ways: you can use Hedy in your own language,
+    you can learn one concept and its syntax a time, is built for the classroom, allowing
+    teachers to fully customize their student''s experience.'
+  tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
+    a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
+    but will demonstrate some important concepts in AI.
+  tutorial_pickcodegenart_longdescription: In this lesson, we'll use code to generate
+    art. While our program won't be as complicated as Generative AI like Dall-E, we'll
+    notice some similarities as our code gets more advanced.
+  tutorial_pickcodecarbon_longdescription: In this lesson, we'll make a chatbot that
+    will ask a user questions to calculate their carbon footprint -- how much their
+    actions impact the environment.
+  tutorial_pickcodecookie_longdescription: In this lesson, we're going to make Click
+    a Cookie, a very advanced game that counts how many times the player clicks a
+    picture of a cookie.
+  tutorial_pickcodeexoplanet_longdescription: In this lesson, we're going to learn
+    all about them and we're going to write code for a chatbot that helps scientists
+    classify exoplanets based on their properties.
+  tutorial_firiahaunted_longdescription: Explore the mysteries of the Haunted House
+    as you write Python code to guide your CodeBot through its spooky corridors! Fear
+    not, you will be guided step-by-step with the concepts needed to build your Python
+    coding skills as you learn to control CodeBot’s motors, sensors, and more. Fun
+    and exciting challenges await, with an infinite number of creative solutions.
+    How will YOU code your way through?
+  tutorial_googlediscoverai_longdescription: Have you ever wondered how an app can
+    recommend movies that you may like? Or how a computer can suggest words to finish
+    a sentence you’re typing? In this Applied Digital Skills lesson, you will learn
+    what artificial intelligence is, how people use it every day, and its benefits
+    and challenges using Quick, Draw!, AutoDraw, Google Translate, and Google Slides.
+  tutorial_msftsparksfly_longdescription: Take a trip back to prehistoric times and
+    create a game that challenges you to light a fire to keep yourself warm.
+  tutorial_msftsparksflyjr_longdescription: You live in a cave in prehistoric times
+    - code a game to help you light a fire quickly!
+  tutorial_seesawemrobot_longdescription: Learn about hardware and complete multiple
+    activities to sort hardware, match hardware components with their functions, and
+    use hardware to build a robot.
+  tutorial_brilliantthinking_longdescription: Start thinking like a programmer! Learn
+    how to write programs step-by- step and identify patterns in code.
+  tutorial_seesawtomika_longdescription: Learn how to navigate ScratchJr to create
+    a project by adding and customizing a sprite and backdrop. Then, explore code
+    blocks to program your sprite to move.
+  tutorial_seesawrobot_longdescription: Learn about hardware and complete multiple
+    activities to sort, identify, and match common hardware components with their
+    functions. Then, use your hardware knowledge to build a robot.
+  tutorial_brilliantcreate_longdescription: Use block-based variables and conditions
+    to code dynamic shapes, adjust colors and sizes, and create brilliant works of
+    art.
+  tutorial_seesawscratch_longdescription: Learn how to navigate Scratch to create
+    a project by adding and customizing a sprite and backdrop. Then, explore code
+    blocks to program your sprite to move.
+  tutorial_seesawkeyboard_longdescription: Learn the difference between hardware and
+    software and how they work together with inputs and outputs in a model. Then,
+    work with a partner to design a new texting device and explain how it works.
+  tutorial_seesawrobocar_longdescription: Explore the Scratch programming app and
+    code Robo Car to get to the Waste Center. Then, practice coding a partner with
+    code blocks digitally and unplugged.
+  tutorial_seesawrobowand_longdescription: Create and use variables to help Robo Wand
+    accomplish a secret mission and to program Robo Wand on Scratch. Then, work with
+    a partner to use variables in a hands-on Roll It game.
+  tutorial_seesawinventor_longdescription: Explore how other coders incorporate their
+    interests and cultures into Scratch coding projects. Then, creatively code and
+    collaborate with a partner to iterate a coding project.
+  tutorial_codeartobjects_longdescription: Code a fun and artistic game using Scratch!
+    For this lesson, you'll code a Falling Objects game and then express yourself
+    creatively through modifying and enhancing the game using the skills you learned.
+  tutorial_microsoftmanor_longdescription: In this text-based Python adventure game,
+    you'll explore an old house. Beware, not all is as it seems in Spooky Manor! Using
+    Visual Studio Code for Education, can you escape before dawn, while rescuing your
+    friends who have mysteriously vanished and uncover the Manor's hidden secrets?
+  tutorial_nasaartemis_longdescription: Students learn about the Artemis II mission
+    and the NASA App Development Challenge (ADC). The goal is for students to follow-along
+    steps we've created using Code.org's App Lab to learn basic programming skills
+    while utilizing block code.
+  tutorial_codejikaresume_longdescription: Build an amazing online resume to present
+    your skills and talents through an attractive and engaging online CV website built
+    with HTML, CSS and emojis.
+  tutorial_codejikabiz_longdescription: Learn how to build an online business website
+    with HTML, CSS and JavaScript. In this, you will learn how to use forms to place
+    orders for customers, reset information, and set limits to the numbers of orders.
+  tutorial_codejikasnake_longdescription: Build a fun classic snake arcade game using
+    JavaScript. We will take you through all the necessary steps. Let the game begin.
+  tutorial_codespeakplant_longdescription: Learn how to grow a plant on Scratch using
+    coding concepts like loops and conditional statements.
+  tutorial_codespeakaichat_longdescription: 'Learn to code a Python interactive questions
+    game using Artificial Intelligence. '
+  tutorial_icteachmicrobit_longdescription: Use this micro:bit-based teacher resource
+    for generating random 4-digit PINs, ideal for educators experienced in tech or
+    beginners. Micro:bits facilitate coding and computational thinking, allowing you
+    to teach cybersecurity through hands-on PIN generator projects, fostering coding
+    skills and security awareness.
+  tutorial_codeyallawebsite_longdescription: A great introduction to coding using
+    HTML and CSS. Learn how to code in Arabic by creating a nice landing page with
+    a two-color gradient background, name and website launch date.
+  tutorial_usicastle_longdescription: Develop a functional approach to programming
+    by learning to call functions and to pass arguments to produce castle parts. Then
+    compose lists of parts into a castle inspired by the three medieval castles of
+    Bellinzona that protected Italy from the Swiss in the Middle Ages.
+  tutorial_bootupparty_longdescription: 'In this teacher-led lesson, young learners
+    code a Silly Dance Party in ScratchJr. They use start on green flag and motion
+    blocks. This project integrates CCSS Math standards: K (numbers, attributes) and
+    1 (indirect measurement, place value). It fosters coding skills while reinforcing
+    math concepts.'
+  tutorial_codespeakrocket_longdescription: Learn to program rockets, and create your
+    own Rocket Blaster game.
+  tutorial_bootupstarry_longdescription: In this teacher-led lesson, coders use repeat
+    forever, looks, and control blocks to create a simulated environment. The project
+    introduces new blocks triggered with the green flag. Students ask questions, define
+    problems, and develop models to illustrate object stability, aligning with K-2
+    NGSS standards.
+  tutorial_bootupsea_longdescription: In this teacher-led lesson, coders review how
+    to use repeat forever blocks with looks and control blocks to create a different
+    simulated environment. Students ask questions, define problems, and develop models
+    to illustrate object stability, aligning with K-2 NGSS standards.
+  tutorial_bootupanimal_longdescription: In this teacher-led lesson, coders use a
+    variety of blocks and sprites to create their own interactive diorama about animals
+    on a farm.  The purpose of this project is to introduce coders to the sound blocks.
+  tutorial_bootupdance_longdescription: In this teacher-led lesson, coders will use
+    the start on bump block to create a contagious dance party using motion blocks.
+    The purpose of this project is to introduce young coders to triggering algorithms
+    using the start on bump block.
+  tutorial_unrulyart_longdescription: This lesson uses the power of coding to unleash
+    students’ creativity and imagination by transforming ordinary classroom objects
+    into Unruly sculptures!
+  tutorial_intelinoabc_longdescription: Crack the code and find the secret word that
+    the intelino train spells out in this combo ELA and unplugged coding activity.
+  tutorial_robotcodeline_longdescription: Learn to code a line following robot that
+    uses sensors to detect what it’s driving over. This fun and challenging tutorial
+    teaches you about electronics, programming, robotics and AI. Line following can
+    be used to solve real-world problems, such as guiding robots through warehouses
+    or factories. Self-driving cars use more complex sensors and AI, but you can learn
+    the basic concepts in this lesson.
+  tutorial_cospacepirate_longdescription: Help our pirate captain to reach his treasure
+    by dragging and dropping visual blocks to write code. Climb, fight, collect, and
+    walk your way through challenges of increasing complexity, while learning to create
+    efficient code with loops and write intelligent behaviour with conditions. This
+    student-guided activity is targeted to kids aged 7+ and first-time-coders.
+  tutorial_bwai_longdescription: Learn about the history and development of artificial
+    intelligence with digital interactive slides.
+  tutorial_simplepython_longdescription: In this lesson students will learn what a
+    'string' is in Python, the use of the print block to print strings and numbers,
+    how to add strings and how to multiply a string by a number, and how to format
+    text with line-breaks.
+  tutorial_codestersfire_longdescription: Learn Python basics and events while creating
+    your own firework generator. Click the screen to shoot off a firework! Customize
+    the firework size, speed, colors, and more!
+  tutorial_codehskinder_longdescription: Explore, understand, and model how artificial
+    intelligence is trained with data to make predictions!
+  tutorial_codehsaielem_longdescription: Students will explore, understand, and model
+    how artificial intelligence is trained with data to make predictions!
+  tutorial_codespeaktrivia_longdescription: Learn how to use prompt engineering with
+    ChatGPT to program a trivia game on Scratch
+  tutorial_hwescape_longdescription: In this project, you'll create a tower for other
+    players to escape from! The tower will contain three floors and each floor will
+    require players to solve a riddle or puzzle in order to unlock the door to the
+    next floor.
+  tutorial_hwlava_longdescription: In this project, you will design and build a floor
+    is lava game! While players race through the game avoiding the lava, they will
+    also be trying to collect different objects in order to finish the game.
+  tutorial_hwgallery_longdescription: In this project, you'll design a gallery that's
+    all about you! Your gallery will have three rooms and each room will show something
+    about yourself that you want to share. You will design rooms about your family,
+    your hobbies, and something unique that you can choose!
+  tutorial_hwfanpage_longdescription: In this project, you'll create a webpage for
+    a review of a movie, show, book, or something else you like.
+  tutorial_hwillusion_longdescription: In this project, you'll build a game where
+    the user must correctly name the color of a word before their time is up.
+  tutorial_caevolution_longdescription: Discover the defining moments that shaped
+    the world of AI and the rapid evolution that has brought AI into our everyday
+    lives. Navigate the world of chatbots, recommendation engines, autonomous vehicles
+    and creative AI.  Take a deep dive into the transformative power of AI in healthcare,
+    education, and beyond. Embrace the future where AI isn't just a tool—it's a partner.
+  tutorial_bbbusybot_longdescription: Teach a robot to build!
+  tutorial_caaifarm_longdescription: AI meets agriculture! Join Sakura and Niko at
+    the smart farm to explore groundbreaking agriculture like never before. Uncover
+    how smart tech like drones and agribots are transforming farms, improving crop
+    growth, and predicting weather patterns. Get started and sow the seeds of a tech-driven,
+    green future.
+  tutorial_cafuture_longdescription: This 60-minute lesson introduces the concept
+    of biometric authentication and explores Facial Recognition Technology (FRT) in
+    depth. It offers a fun and practical activity creating facial signatures and matching
+    them to photos. Students will discuss the vast array of positive applications
+    of FRT but will also weigh its ethical implications, including equity, accuracy,
+    and bias.
+  tutorial_dmscratch_longdescription: Book to Code is a project that celebrates books
+    and reading.  We will help Tera, our heroine, in her quest to get back home. But
+    not only will you help Tera!, you will also learn the tools you need to create
+    a Scratch project about your favorite book. Students will start with the traditional
+    Scratch blocks and then incorporate artificial intelligence using the Translate
+    extension in Scratch.
+  tutorial_dmliteracy_longdescription: This workshop will get students thinking about
+    the place of data in their daily lives and show them that they can understand
+    it and learn to use it to navigate the world more easily.
+  tutorial_dmwind_longdescription: This Scratch activity celebrates planet Earth,
+    promotes clean energy to replace fossil fuels, and helps the environment.  Students
+    will start with the traditional Scratch blocks, then recreate and enhance their
+    project using Artificial Intelligence and the experimental Scratch blocks with
+    Face Sensing.
+  tutorial_dmbeatbox_longdescription: Beat-Box is a project that celebrates music
+    and the creation of your own sound device.  Your task is to make wonderful sounds
+    with your creation.  Students will start with the traditional Scratch blocks and
+    then incorporate artificial intelligence using the Text-to-Speech extension in
+    Scratch.
+  tutorial_kinderaikibo_longdescription: Students will explore the big ideas of artificial
+    intelligence and see how they relate to their own experiences. They’ll review
+    some fundamentals of KIBO programming that relate to AI. They’ll gain practice
+    with creating programs using repeat loops that allow KIBO to operate independently.
+  tutorial_kinderairvr_longdescription: Students will create a rover robot that uses
+    its sensors and programming to explore a new environment and operate independently.
+    KIBO will illustrate the “sense – think – act” cycle that is fundamental to both
+    robotics and AI.
+  tutorial_bbtai_longdescription: It's time to get hands-on with AI! Train and test
+    a real image recognition model, and use it to control your code.
+  tutorial_cagenius_longdescription: This 2 hour activity will introduce students
+    to machine learning models and sign language. They will engage in hands-on programming
+    to train a model to recognize two different signs and integrate their model into
+    an interactive Scratch project. During the activity they will learn about the
+    importance of diverse training data to avoid bias.
+  tutorial_tynkerweather_longdescription: Create a fun interactive project that controls
+    the weather. Program hand gestures to control different weather conditions using
+    Tynker's AI Pose Tracking library.
+  tutorial_tynkerbalance_longdescription: Create an interactive game using Tynker's
+    Physics and AI pose tracking libraries. Players balance an object by moving their
+    face on camera!
+  tutorial_tynkertickle_longdescription: Create a virtual tickle monster and use Tynker's
+    AI Pose Tracking library to make the character respond to hand gestures.
+  tutorial_tynkerfruit_longdescription: 'Create a fun Fruit Ninja-style game that
+    recognizes hand movements using p5.js. '
+  tutorial_codemonkeyhoot_longdescription: Create games using AI and blocks! In this
+    short course, your students will learn to train an AI model using different poses.
+    The students will use their model to control the owl and change its scale based
+    on the different poses. They will follow step-by-step instructions and easily
+    drag the blocks to solve the exercises. Your curious students can also deep dive
+    into how AI works.
+  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
+    then train an AI to play the game on its own! Learn core JavaScript concepts including
+    Variables, Functions and Events, and get hands-on experience with Neural Networks
+    and Machine Learning.
+  tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
+    Day and promote clean energy to replace fossil fuels and help the environment.  Your
+    task is to collect the sun's rays to power a city. Students will start with the
+    traditional Scratch blocks and then recreate and improve their project using Artificial
+    Intelligence and the experimental Scratch blocks with Face Sensing.
+  tutorial_mindmakersneural_longdescription: From your first steps in programming
+    to Neural Networks, all in just 16 challenges! Understand how AI techniques contribute
+    to programming, using Text-to-Speech (TTS), Speech-to-Text (STT), and training
+    your first neural networks to classify text, images, and poses.
+  tutorial_blocksmithrescue_longdescription: Can you rescue the A.I. and human crew?  Play
+    a game made with AI while learning about AI. Control a robot to rescue the Artificial
+    Intelligence and human crew on a stranded spaceship, while learning how neural
+    networks operate. Find each of the missing neurons to reconstruct the AI's brain
+    then train the AI with specific datasets, and finally test it in a quiz, all as
+    fast as possible!
+  tutorial_cstaheroes_longdescription: Each year, CSTA showcases various CS heroes
+    on our CSEdweek website. These heroes represent different industries and communities.
+    Students will research CS heroes that have made an impact in computing while focusing
+    on the positive, negative, and neutral influences on artificial intelligence.
+    Students will be able to plan poster and design posters, and share their posters
+    with others.
+  tutorial_codecombathack_longdescription: Discover the future of AI with CodeCombat
+    AI HackStack! This cutting-edge tool is your gateway to AI mastery, offering access
+    to top LLMs like ChatGPT-4, Claude, Stable Diffusion, DALL-E, and more. In just
+    minutes, unleash your creativity and go from ideas to fully published projects
+    like - games, art, websites, and code. HackStack is your new AI companion for
+    limitless possibilities!
+  tutorial_toxicodewords_longdescription: Unlock some of the secrets behind computer-assisted
+    words and sentences crafting, with our dynamic exploration.
+  tutorial_mitstepmisinformation_longdescription: Play out a simulation game of the
+    spread misinformation. Learn about how and why misinformation spreads. As an extension,
+    learn how to spot and stop misinformation.
+  tutorial_mitstepdeepfakes_longdescription: Explore what deepfakes are, how realistic
+    they can look, and ways to identify them. Practice identifying deepfakes and create
+    their own ethical matrices. Learn that deepfakes can impact people differently,
+    and that relationships between these stakeholders and values can be visually represented
+    using an ethical matrix.
+  tutorial_mitstepintrotoml_longdescription: Learn how supervised machine learning
+    can be trained to classify complex datasets based on labeled data. Train a Teachable
+    Machine model and see how it can learn to make predictions about new pictures
+    and live video feeds!
+  tutorial_naflogo_longdescription: A personal logo is a unique way to communicate
+    your values, knowledge and what makes you special. Within seconds of seeing your
+    logo, your audience will be captivated and understand your personal brand and
+    professionalism. Learn about the key steps marketers take in the development of
+    a logo using an Artificial Intelligence tool, brainstorm ideas, and then code
+    your own!
+  tutorial_madmobile_longdescription: Our HCJ Builder template allows you to input
+    HTML, CSS and Javascript code to create your own interactive and customized app
+    screen. This lesson allows users to experiment with ChatGPT and task its AI to
+    create code to input in your own mobile app. The lesson shows examples of ChatGPT
+    prompts and the code it generated.
+  tutorial_intelinosmile_longdescription: Control the intelino train - with your face!
+    Learn to use AI face sensing to make your computer recognize facial expressions.
+    Program events in intelino Scratch and see how your smile makes intelino drive!
+  tutorial_intelinoaisign_longdescription: Become the intelino train conductor - with
+    the help of AI and intelino Scratch! Create and train an AI model that recognizes
+    signs. Then, use this model in intelino Scratch to program and control movement
+    and steering of the intelino train.
+  tutorial_bsimage_string_detail_grades: 年級 6+
+  tutorial_bscomputing_string_detail_grades: 年級 6+
+  tutorial_stackpython_string_detail_grades: 年級 6+
+  tutorial_questcastle_string_detail_grades: 年級 2+
+  tutorial_bsdata_string_detail_grades: 年級 6+
+  tutorial_blockscadroblox_string_detail_grades: 年級 6+
+  tutorial_blockscadcoin_string_detail_grades: 年級 6+
+  tutorial_blockscadsolar_string_detail_grades: 年級 6+
+  tutorial_blockscadstarwars_string_detail_grades: 年級 6+
+  tutorial_blockscadgame_string_detail_grades: 年級 6+
+  tutorial_carnegieaccelerate_string_detail_grades: 年級 2-8
+  tutorial_codespeakcctrivia_string_detail_grades: 年級 2-8
+  tutorial_edisonsquare_string_detail_grades: 年級 6+
+  tutorial_carnegiemachine_string_detail_grades: 年級 6+
+  tutorial_skoolparts_string_detail_grades: 學前 - 年級 1
+  tutorial_skoolplant_string_detail_grades: 學前 - 年級 1
+  tutorial_mitchatgpt_string_detail_grades: 年級 6+
+  tutorial_mitimagebot_string_detail_grades: 年級 6+
+  tutorial_mitconverse_string_detail_grades: 年級 6+
+  tutorial_nasamarsreturn_string_detail_grades: 年級 6+
+  tutorial_nasaradio_string_detail_grades: 年級 6+
+  tutorial_nasahelicopter_string_detail_grades: 年級 2-8
+  tutorial_nasacollection_string_detail_grades: 年級 2-8
+  tutorial_wizclock_string_detail_grades: 學前 - 年級 5
+  tutorial_wizmoon_string_detail_grades: 學前 - 年級 1
+  tutorial_wiztraffic_string_detail_grades: 學前 - 年級 5
+  tutorial_wizpacman_string_detail_grades: 學前 - 年級 5
+  tutorial_wizsea_string_detail_grades: 學前 - 年級 5
+  tutorial_wizroad_string_detail_grades: 學前 - 年級 5
+  tutorial_bekidsadventure_string_detail_grades: 學前 - 年級 5
+  tutorial_myqpixel_string_detail_grades: 學前 - 年級 5
+  tutorial_creaticodechatgpt_string_detail_grades: 年級 2+
+  tutorial_thunkabletranslator_string_detail_grades: 年級 6-8
+  tutorial_ozobotircomm_string_detail_grades: 年級 6-8
+  tutorial_gsmonster_string_detail_grades: 年級 6-8
+  tutorial_gsspacerocks_string_detail_grades: 年級 6+
+  tutorial_ozobotbroadcast_string_detail_grades: 年級 6-8
+  tutorial_ozobotapplications_string_detail_grades: 年級 6-8
+  tutorial_codecombatworlds_string_detail_grades: 年級 2+
+  tutorial_spherochatgpt_string_detail_grades: 年級 6+
+  tutorial_spherorvrimage_string_detail_grades: 年級 6+
+  tutorial_spherorvrauto_string_detail_grades: 年級 6+
+  tutorial_spherofeedback_string_detail_grades: 年級 2-8
+  tutorial_spheroindi_string_detail_grades: 學前 - 年級 5
+  tutorial_codetribeplatform_string_detail_grades: 年級 6+
+  tutorial_codetribespace_string_detail_grades: 年級 6+
+  tutorial_codetribelanding_string_detail_grades: 年級 2+
+  tutorial_cakeyboard_string_detail_grades: 學前
+  tutorial_hedytext_string_detail_grades: 年級 2+
+  tutorial_pickcodelanguage_string_detail_grades: 年級 6+
+  tutorial_pickcodegenart_string_detail_grades: 年級 6+
+  tutorial_pickcodecarbon_string_detail_grades: 年級 6+
+  tutorial_pickcodecookie_string_detail_grades: 年級 6+
+  tutorial_pickcodeexoplanet_string_detail_grades: 年級 6+
+  tutorial_firiahaunted_string_detail_grades: 年級 6+
+  tutorial_googlediscoverai_string_detail_grades: 年級 6+
+  tutorial_msftsparksfly_string_detail_grades: 年級 2+
+  tutorial_msftsparksflyjr_string_detail_grades: 學前 - 年級 5
+  tutorial_seesawemrobot_string_detail_grades: 學前 - 年級 1
+  tutorial_brilliantthinking_string_detail_grades: 年級 2+
+  tutorial_seesawtomika_string_detail_grades: 學前 - 年級 1
+  tutorial_seesawrobot_string_detail_grades: 學前 - 年級 1
+  tutorial_brilliantcreate_string_detail_grades: 年級 6+
+  tutorial_seesawscratch_string_detail_grades: 學前 - 年級 5
+  tutorial_seesawkeyboard_string_detail_grades: 學前 - 年級 5
+  tutorial_seesawrobocar_string_detail_grades: 學前 - 年級 5
+  tutorial_seesawrobowand_string_detail_grades: 學前 - 年級 5
+  tutorial_seesawinventor_string_detail_grades: 學前 - 年級 5
+  tutorial_codeartobjects_string_detail_grades: 年級 6+
+  tutorial_microsoftmanor_string_detail_grades: 年級 6+
+  tutorial_nasaartemis_string_detail_grades: 年級 6-8
+  tutorial_codejikaresume_string_detail_grades: 年級 2+
+  tutorial_codejikabiz_string_detail_grades: 年級 2+
+  tutorial_codejikasnake_string_detail_grades: 年級 2+
+  tutorial_codespeakplant_string_detail_grades: 學前 - 年級 5
+  tutorial_codespeakaichat_string_detail_grades: 年級 6+
+  tutorial_icteachmicrobit_string_detail_grades: 年級 2-8
+  tutorial_codeyallawebsite_string_detail_grades: 年級 2+
+  tutorial_usicastle_string_detail_grades: 年級 6+
+  tutorial_bootupparty_string_detail_grades: 學前 - 年級 5
+  tutorial_codespeakrocket_string_detail_grades: 年級 2-8
+  tutorial_bootupstarry_string_detail_grades: 學前 - 年級 5
+  tutorial_bootupsea_string_detail_grades: 學前 - 年級 5
+  tutorial_bootupanimal_string_detail_grades: 學前 - 年級 5
+  tutorial_bootupdance_string_detail_grades: 學前 - 年級 5
+  tutorial_unrulyart_string_detail_grades: 學前 - 年級 5
+  tutorial_intelinoabc_string_detail_grades: 學前 - 年級 8
+  tutorial_robotcodeline_string_detail_grades: 年級 6+
+  tutorial_cospacepirate_string_detail_grades: 年級 2-8
+  tutorial_bwai_string_detail_grades: 學前 - 年級 5
+  tutorial_simplepython_string_detail_grades: 年級 2-8
+  tutorial_codestersfire_string_detail_grades: 年級 6+
+  tutorial_codehskinder_string_detail_grades: 學前 - 年級 1
+  tutorial_codehsaielem_string_detail_grades: 學前 - 年級 5
+  tutorial_codespeaktrivia_string_detail_grades: 年級 2+
+  tutorial_hwescape_string_detail_grades: 年級 6+
+  tutorial_hwlava_string_detail_grades: 年級 2+
+  tutorial_hwgallery_string_detail_grades: 年級 2+
+  tutorial_hwfanpage_string_detail_grades: 年級 2+
+  tutorial_hwillusion_string_detail_grades: 年級 6+
+  tutorial_caevolution_string_detail_grades: 年級 6+
+  tutorial_bbbusybot_string_detail_grades: 年級 6+
+  tutorial_caaifarm_string_detail_grades: 年級 6+
+  tutorial_cafuture_string_detail_grades: 年級 6+
+  tutorial_dmscratch_string_detail_grades: 年級 2-8
+  tutorial_dmliteracy_string_detail_grades: 年級 9+
+  tutorial_dmwind_string_detail_grades: 年級 2-8
+  tutorial_dmbeatbox_string_detail_grades: 年級 2-8
+  tutorial_kinderaikibo_string_detail_grades: 學前 - 年級 5
+  tutorial_kinderairvr_string_detail_grades: 學前 - 年級 5
+  tutorial_bbtai_string_detail_grades: 年級 6+
+  tutorial_cagenius_string_detail_grades: 年級 6+
+  tutorial_tynkerweather_string_detail_grades: 年級 2-8
+  tutorial_tynkerbalance_string_detail_grades: 年級 2-8
+  tutorial_tynkertickle_string_detail_grades: 年級 2-8
+  tutorial_tynkerfruit_string_detail_grades: 年級 9+
+  tutorial_codemonkeyhoot_string_detail_grades: 年級 2-8
+  tutorial_kcjpong_string_detail_grades: 年級 6+
+  tutorial_dmsolar_string_detail_grades: 年級 2-8
+  tutorial_mindmakersneural_string_detail_grades: 年級 6+
+  tutorial_blocksmithrescue_string_detail_grades: 年級 2+
+  tutorial_cstaheroes_string_detail_grades: 年級 2+
+  tutorial_codecombathack_string_detail_grades: 年級 6+
+  tutorial_toxicodewords_string_detail_grades: 年級 2+
+  tutorial_mitstepmisinformation_string_detail_grades: 年級 6-8
+  tutorial_mitstepdeepfakes_string_detail_grades: 年級 6-8
+  tutorial_mitstepintrotoml_string_detail_grades: 年級 6-8
+  tutorial_naflogo_string_detail_grades: 年級 6+
+  tutorial_madmobile_string_detail_grades: 年級 6+
+  tutorial_intelinosmile_string_detail_grades: 學前 - 年級 8
+  tutorial_intelinoaisign_string_detail_grades: 年級 2-8
+  tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
+  tutorial_bscomputing_string_platforms: 不插電活動
+  tutorial_stackpython_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_questcastle_string_platforms: 所有的主流瀏覽器
+  tutorial_bsdata_string_platforms: 所有的主流瀏覽器
+  tutorial_blockscadroblox_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_blockscadcoin_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_blockscadsolar_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone"
+  tutorial_blockscadstarwars_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_blockscadgame_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_carnegieaccelerate_string_platforms: 所有的主流瀏覽器
+  tutorial_codespeakcctrivia_string_platforms: Chrome, Firefox, Safari
+  tutorial_edisonsquare_string_platforms: 所有的主流瀏覽器
+  tutorial_carnegiemachine_string_platforms: 所有的主流瀏覽器
+  tutorial_skoolparts_string_platforms: 不插電活動
+  tutorial_skoolplant_string_platforms: 不插電活動
+  tutorial_mitchatgpt_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_mitimagebot_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_mitconverse_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_nasamarsreturn_string_platforms: 所有的主流瀏覽器
+  tutorial_nasaradio_string_platforms: 所有的主流瀏覽器
+  tutorial_nasahelicopter_string_platforms: 所有的主流瀏覽器
+  tutorial_nasacollection_string_platforms: 所有的主流瀏覽器
+  tutorial_wizclock_string_platforms: 所有的主流瀏覽器
+  tutorial_wizmoon_string_platforms: 所有的主流瀏覽器
+  tutorial_wiztraffic_string_platforms: 所有的主流瀏覽器
+  tutorial_wizpacman_string_platforms: 所有的主流瀏覽器
+  tutorial_wizsea_string_platforms: 所有的主流瀏覽器
+  tutorial_wizroad_string_platforms: 所有的主流瀏覽器
+  tutorial_bekidsadventure_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_myqpixel_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_creaticodechatgpt_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_thunkabletranslator_string_platforms: 所有的主流瀏覽器
+  tutorial_ozobotircomm_string_platforms: 不插電活動
+  tutorial_gsmonster_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_gsspacerocks_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_ozobotbroadcast_string_platforms: 不插電活動
+  tutorial_ozobotapplications_string_platforms: 不插電活動
+  tutorial_codecombatworlds_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_spherochatgpt_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_spherorvrimage_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_spherorvrauto_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_spherofeedback_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_spheroindi_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_codetribeplatform_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_codetribespace_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_codetribelanding_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_cakeyboard_string_platforms: 所有的主流瀏覽器
+  tutorial_hedytext_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_pickcodelanguage_string_platforms: 所有的主流瀏覽器
+  tutorial_pickcodegenart_string_platforms: 所有的主流瀏覽器
+  tutorial_pickcodecarbon_string_platforms: 所有的主流瀏覽器
+  tutorial_pickcodecookie_string_platforms: 所有的主流瀏覽器
+  tutorial_pickcodeexoplanet_string_platforms: 所有的主流瀏覽器
+  tutorial_firiahaunted_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_googlediscoverai_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_msftsparksfly_string_platforms: 所有的主流瀏覽器
+  tutorial_msftsparksflyjr_string_platforms: 所有的主流瀏覽器
+  tutorial_seesawemrobot_string_platforms: 不插電活動
+  tutorial_brilliantthinking_string_platforms: Chrome, Firefox, Safari
+  tutorial_seesawtomika_string_platforms: 所有的主流瀏覽器
+  tutorial_seesawrobot_string_platforms: 所有的主流瀏覽器
+  tutorial_brilliantcreate_string_platforms: Chrome, Firefox, Safari
+  tutorial_seesawscratch_string_platforms: 所有的主流瀏覽器
+  tutorial_seesawkeyboard_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_seesawrobocar_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_seesawrobowand_string_platforms: 所有的主流瀏覽器
+  tutorial_seesawinventor_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_codeartobjects_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_microsoftmanor_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_nasaartemis_string_platforms: 所有的主流瀏覽器
+  tutorial_codejikaresume_string_platforms: 所有的主流瀏覽器
+  tutorial_codejikabiz_string_platforms: 所有的主流瀏覽器
+  tutorial_codejikasnake_string_platforms: 所有的主流瀏覽器
+  tutorial_codespeakplant_string_platforms: 鉻, 野生動物園
+  tutorial_codespeakaichat_string_platforms: 鉻, 野生動物園
+  tutorial_icteachmicrobit_string_platforms: 所有的主流瀏覽器
+  tutorial_codeyallawebsite_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_usicastle_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_bootupparty_string_platforms: 所有的主流瀏覽器
+  tutorial_codespeakrocket_string_platforms: Chrome, Firefox, Safari
+  tutorial_bootupstarry_string_platforms: 所有的主流瀏覽器
+  tutorial_bootupsea_string_platforms: 所有的主流瀏覽器
+  tutorial_bootupanimal_string_platforms: 所有的主流瀏覽器
+  tutorial_bootupdance_string_platforms: 所有的主流瀏覽器
+  tutorial_unrulyart_string_platforms: 所有的主流瀏覽器
+  tutorial_intelinoabc_string_platforms: 不插電活動
+  tutorial_robotcodeline_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_cospacepirate_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_bwai_string_platforms: 不插電活動
+  tutorial_simplepython_string_platforms: 所有的主流瀏覽器
+  tutorial_codestersfire_string_platforms: 所有的主流瀏覽器
+  tutorial_codehskinder_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_codehsaielem_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
+    iPhone
+  tutorial_codespeaktrivia_string_platforms: Chrome
+  tutorial_hwescape_string_platforms: 所有的主流瀏覽器
+  tutorial_hwlava_string_platforms: 所有的主流瀏覽器
+  tutorial_hwgallery_string_platforms: 所有的主流瀏覽器
+  tutorial_hwfanpage_string_platforms: 所有的主流瀏覽器
+  tutorial_hwillusion_string_platforms: 所有的主流瀏覽器
+  tutorial_caevolution_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_bbbusybot_string_platforms: 所有的主流瀏覽器
+  tutorial_caaifarm_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
+  tutorial_cafuture_string_platforms: 不插電活動
+  tutorial_dmscratch_string_platforms: 所有的主流瀏覽器
+  tutorial_dmliteracy_string_platforms: 所有的主流瀏覽器
+  tutorial_dmwind_string_platforms: 所有的主流瀏覽器
+  tutorial_dmbeatbox_string_platforms: 所有的主流瀏覽器
+  tutorial_kinderaikibo_string_platforms: 不插電活動
+  tutorial_kinderairvr_string_platforms: 不插電活動
+  tutorial_bbtai_string_platforms: 所有的主流瀏覽器
+  tutorial_cagenius_sstring_platforms: 所有的主流瀏覽器
+  tutorial_tynkerweather_string_platforms: 所有的主流瀏覽器
+  tutorial_tynkerbalance_string_platforms: 所有的主流瀏覽器
+  tutorial_tynkertickle_string_platforms: 所有的主流瀏覽器
+  tutorial_tynkerfruit_string_platforms: 所有的主流瀏覽器
+  tutorial_codemonkeyhoot_string_platforms: 所有的主流瀏覽器
+  tutorial_kcjpong_string_platforms: 所有的主流瀏覽器
+  tutorial_dmsolar_string_platforms: 所有的主流瀏覽器
+  tutorial_mindmakersneural_string_platforms: 微軟邊緣，鉻
+  tutorial_blocksmithrescue_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_cstaheroes_string_platforms: 不插電活動
+  tutorial_codecombathack_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_toxicodewords_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機,
+    Android手機, iPhone
+  tutorial_mitstepmisinformation_string_platforms: 不插電活動
+  tutorial_mitstepdeepfakes_string_platforms: 不插電活動
+  tutorial_mitstepintrotoml_string_platforms: 不插電活動
+  tutorial_naflogo_string_platforms: 所有的主流瀏覽器
+  tutorial_madmobile_string_platforms: 所有的主流瀏覽器
+  tutorial_intelinosmile_string_platforms: 所有的主流瀏覽器, iPad
+  tutorial_intelinoaisign_string_platforms: 所有的主流瀏覽器
+  tutorial_bsimage_string_detail_platforms: ''
+  tutorial_bscomputing_string_detail_platforms: ''
+  tutorial_stackpython_string_detail_platforms: ''
+  tutorial_questcastle_string_detail_platforms: ''
+  tutorial_bsdata_string_detail_platforms: ''
+  tutorial_blockscadroblox_string_detail_platforms: ''
+  tutorial_blockscadcoin_string_detail_platforms: ''
+  tutorial_blockscadsolar_string_detail_platforms: ''
+  tutorial_blockscadstarwars_string_detail_platforms: ''
+  tutorial_blockscadgame_string_detail_platforms: ''
+  tutorial_carnegieaccelerate_string_detail_platforms: ''
+  tutorial_codespeakcctrivia_string_detail_platforms: ''
+  tutorial_edisonsquare_string_detail_platforms: 愛迪生機器
+  tutorial_carnegiemachine_string_detail_platforms: ''
+  tutorial_skoolparts_string_detail_platforms: Beebot
+  tutorial_skoolplant_string_detail_platforms: Matatalab Coding Blocks
+  tutorial_mitchatgpt_string_detail_platforms: ''
+  tutorial_mitimagebot_string_detail_platforms: ''
+  tutorial_mitconverse_string_detail_platforms: ''
+  tutorial_nasamarsreturn_string_detail_platforms: Arduino
+  tutorial_nasaradio_string_detail_platforms: Arduino
+  tutorial_nasahelicopter_string_detail_platforms: ''
+  tutorial_nasacollection_string_detail_platforms: ''
+  tutorial_wizclock_string_detail_platforms: ''
+  tutorial_wizmoon_string_detail_platforms: ''
+  tutorial_wiztraffic_string_detail_platforms: ''
+  tutorial_wizpacman_string_detail_platforms: ''
+  tutorial_wizsea_string_detail_platforms: ''
+  tutorial_wizroad_string_detail_platforms: ''
+  tutorial_bekidsadventure_string_detail_platforms: ''
+  tutorial_myqpixel_string_detail_platforms: ''
+  tutorial_creaticodechatgpt_string_detail_platforms: ''
+  tutorial_thunkabletranslator_string_detail_platforms: ''
+  tutorial_ozobotircomm_string_detail_platforms: Ozobot Evo
+  tutorial_gsmonster_string_detail_platforms: ''
+  tutorial_gsspacerocks_string_detail_platforms: ''
+  tutorial_ozobotbroadcast_string_detail_platforms: Ozobot Evo
+  tutorial_ozobotapplications_string_detail_platforms: Ozobot Evo
+  tutorial_codecombatworlds_string_detail_platforms: ''
+  tutorial_spherochatgpt_string_detail_platforms: 斯英雄螺栓
+  tutorial_spherorvrimage_string_detail_platforms: Sphero RVR+
+  tutorial_spherorvrauto_string_detail_platforms: Sphero RVR+
+  tutorial_spherofeedback_string_detail_platforms: littleBits STEAM + Coding Kit
+  tutorial_spheroindi_string_detail_platforms: 斯佩罗·印迪
+  tutorial_codetribeplatform_string_detail_platforms: ''
+  tutorial_codetribespace_string_detail_platforms: ''
+  tutorial_codetribelanding_string_detail_platforms: ''
+  tutorial_cakeyboard_string_detail_platforms: ''
+  tutorial_hedytext_string_detail_platforms: ''
+  tutorial_pickcodelanguage_string_detail_platforms: ''
+  tutorial_pickcodegenart_string_detail_platforms: ''
+  tutorial_pickcodecarbon_string_detail_platforms: ''
+  tutorial_pickcodecookie_string_detail_platforms: ''
+  tutorial_pickcodeexoplanet_string_detail_platforms: ''
+  tutorial_firiahaunted_string_detail_platforms: ''
+  tutorial_googlediscoverai_string_detail_platforms: ''
+  tutorial_msftsparksfly_string_detail_platforms: ''
+  tutorial_msftsparksflyjr_string_detail_platforms: ''
+  tutorial_seesawemrobot_string_detail_platforms: ''
+  tutorial_brilliantthinking_string_detail_platforms: ''
+  tutorial_seesawtomika_string_detail_platforms: ''
+  tutorial_seesawrobot_string_detail_platforms: ''
+  tutorial_brilliantcreate_string_detail_platforms: ''
+  tutorial_seesawscratch_string_detail_platforms: ''
+  tutorial_seesawkeyboard_string_detail_platforms: ''
+  tutorial_seesawrobocar_string_detail_platforms: ''
+  tutorial_seesawrobowand_string_detail_platforms: ''
+  tutorial_seesawinventor_string_detail_platforms: ''
+  tutorial_codeartobjects_string_detail_platforms: ''
+  tutorial_microsoftmanor_string_detail_platforms: ''
+  tutorial_nasaartemis_string_detail_platforms: ''
+  tutorial_codejikaresume_string_detail_platforms: ''
+  tutorial_codejikabiz_string_detail_platforms: ''
+  tutorial_codejikasnake_string_detail_platforms: ''
+  tutorial_codespeakplant_string_detail_platforms: ''
+  tutorial_codespeakaichat_string_detail_platforms: ''
+  tutorial_icteachmicrobit_string_detail_platforms: ''
+  tutorial_codeyallawebsite_string_detail_platforms: ''
+  tutorial_usicastle_string_detail_platforms: ''
+  tutorial_bootupparty_string_detail_platforms: ''
+  tutorial_codespeakrocket_string_detail_platforms: ''
+  tutorial_bootupstarry_string_detail_platforms: ''
+  tutorial_bootupsea_string_detail_platforms: ''
+  tutorial_bootupanimal_string_detail_platforms: ''
+  tutorial_bootupdance_string_detail_platforms: ''
+  tutorial_unrulyart_string_detail_platforms: ''
+  tutorial_intelinoabc_string_detail_platforms: intelino smart train set
+  tutorial_robotcodeline_string_detail_platforms: ''
+  tutorial_cospacepirate_string_detail_platforms: ''
+  tutorial_bwai_string_detail_platforms: ''
+  tutorial_simplepython_string_detail_platforms: ''
+  tutorial_codestersfire_string_detail_platforms: ''
+  tutorial_codehskinder_string_detail_platforms: ''
+  tutorial_codehsaielem_string_detail_platforms: ''
+  tutorial_codespeaktrivia_string_detail_platforms: ''
+  tutorial_hwescape_string_detail_platforms: ''
+  tutorial_hwlava_string_detail_platforms: ''
+  tutorial_hwgallery_string_detail_platforms: ''
+  tutorial_hwfanpage_string_detail_platforms: ''
+  tutorial_hwillusion_string_detail_platforms: ''
+  tutorial_caevolution_string_detail_platforms: ''
+  tutorial_bbbusybot_string_detail_platforms: ''
+  tutorial_caaifarm_string_detail_platforms: ''
+  tutorial_cafuture_string_detail_platforms: ''
+  tutorial_dmscratch_string_detail_platforms: ''
+  tutorial_dmliteracy_string_detail_platforms: ''
+  tutorial_dmwind_string_detail_platforms: ''
+  tutorial_dmbeatbox_string_detail_platforms: ''
+  tutorial_kinderaikibo_string_detail_platforms: KIBO Robot Kit
+  tutorial_kinderairvr_string_detail_platforms: KIBO Robot Kit
+  tutorial_bbtai_string_detail_platforms: ''
+  tutorial_cagenius_string_detail_platforms: ''
+  tutorial_tynkerweather_string_detail_platforms: ''
+  tutorial_tynkerbalance_string_detail_platforms: ''
+  tutorial_tynkertickle_string_detail_platforms: ''
+  tutorial_tynkerfruit_string_detail_platforms: ''
+  tutorial_codemonkeyhoot_string_detail_platforms: ''
+  tutorial_kcjpong_string_detail_platforms: ''
+  tutorial_dmsolar_string_detail_platforms: ''
+  tutorial_mindmakersneural_string_detail_platforms: ''
+  tutorial_blocksmithrescue_string_detail_platforms: ''
+  tutorial_cstaheroes_string_detail_platforms: ''
+  tutorial_codecombathack_string_detail_platforms: ''
+  tutorial_toxicodewords_string_detail_platforms: ''
+  tutorial_mitstepmisinformation_string_detail_platforms: ''
+  tutorial_mitstepdeepfakes_string_detail_platforms: ''
+  tutorial_mitstepintrotoml_string_detail_platforms: ''
+  tutorial_naflogo_string_detail_platforms: ''
+  tutorial_madmobile_string_detail_platforms: ''
+  tutorial_intelinosmile_string_detail_platforms: intelino smart train set
+  tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_bsimage_string_detail_programming_languages: Pyret
+  tutorial_bscomputing_string_detail_programming_languages: 不受語言影響
+  tutorial_stackpython_string_detail_programming_languages: Python
+  tutorial_questcastle_string_detail_programming_languages: 不受語言影響
+  tutorial_bsdata_string_detail_programming_languages: Pyret
+  tutorial_blockscadroblox_string_detail_programming_languages: 積木式
+  tutorial_blockscadcoin_string_detail_programming_languages: 積木式
+  tutorial_blockscadsolar_string_detail_programming_languages: 積木式
+  tutorial_blockscadstarwars_string_detail_programming_languages: 積木式
+  tutorial_blockscadgame_string_detail_programming_languages: 積木式
+  tutorial_carnegieaccelerate_string_detail_programming_languages: 積木式
+  tutorial_codespeaktrivia_string_detail_programming_languages: HTML
+  tutorial_edisonsquare_string_detail_programming_languages: 積木式
+  tutorial_carnegiemachine_string_detail_programming_languages: 不受語言影響
+  tutorial_skoolparts_string_detail_programming_languages: 積木式
+  tutorial_skoolplant_string_detail_programming_languages: 積木式
+  tutorial_mitchatgpt_string_detail_programming_languages: MIT App Inventor
+  tutorial_mitimagebot_string_detail_programming_languages: MIT App Inventor
+  tutorial_mitconverse_string_detail_programming_languages: MIT App Inventor
+  tutorial_nasamarsreturn_string_detail_programming_languages: 積木式, Python
+  tutorial_nasaradio_string_detail_programming_languages: 積木式, Python
+  tutorial_nasahelicopter_string_detail_programming_languages: 積木式
+  tutorial_nasacollection_string_detail_programming_languages: 積木式
+  tutorial_wizclock_string_detail_programming_languages: 積木式
+  tutorial_wizmoon_string_detail_programming_languages: 積木式
+  tutorial_wiztraffic_string_detail_programming_languages: 積木式
+  tutorial_wizpacman_string_detail_programming_languages: 積木式
+  tutorial_wizsea_string_detail_programming_languages: 積木式
+  tutorial_wizroad_string_detail_programming_languages: 積木式
+  tutorial_bekidsadventure_string_detail_programming_languages: 積木式
+  tutorial_myqpixel_string_detail_programming_languages: 不受語言影響
+  tutorial_creaticodechatgpt_string_detail_programming_languages: 積木式
+  tutorial_thunkabletranslator_string_detail_programming_languages: 積木式
+  tutorial_ozobotircomm_string_detail_programming_languages: 積木式
+  tutorial_gsmonster_string_detail_programming_languages: 積木式
+  tutorial_gsspacerocks_string_detail_programming_languages: 積木式
+  tutorial_ozobotbroadcast_string_detail_programming_languages: 積木式
+  tutorial_ozobotapplications_string_detail_programming_languages: 積木式
+  tutorial_codecombatworlds_string_detail_programming_languages: Luau
+  tutorial_spherochatgpt_string_detail_programming_languages: JavaScript
+  tutorial_spherorvrimage_string_detail_programming_languages: 積木式
+  tutorial_spherorvrauto_string_detail_programming_languages: 積木式
+  tutorial_spherofeedback_string_detail_programming_languages: 積木式
+  tutorial_spheroindi_string_detail_programming_languages: ''
+  tutorial_codetribeplatform_string_detail_programming_languages: JavaScript
+  tutorial_codetribespace_string_detail_programming_languages: JavaScript
+  tutorial_codetribelanding_string_detail_programming_languages: HTML, CSS
+  tutorial_cakeyboard_string_detail_programming_languages: 不受語言影響
+  tutorial_hedytext_string_detail_programming_languages: Python, Hedy
+  tutorial_pickcodelanguage_string_detail_programming_languages: JavaScript
+  tutorial_pickcodegenart_string_detail_programming_languages: JavaScript
+  tutorial_pickcodecarbon_string_detail_programming_languages: JavaScript
+  tutorial_pickcodecookie_string_detail_programming_languages: JavaScript
+  tutorial_pickcodeexoplanet_string_detail_programming_languages: JavaScript
+  tutorial_firiahaunted_string_detail_programming_languages: Python
+  tutorial_googlediscoverai_string_detail_programming_languages: ''
+  tutorial_msftsparksfly_string_detail_programming_languages: 積木式
+  tutorial_msftsparksflyjr_string_detail_programming_languages: 積木式
+  tutorial_seesawemrobot_string_detail_programming_languages: 積木式
+  tutorial_brilliantthinking_string_detail_programming_languages: 積木式
+  tutorial_seesawtomika_string_detail_programming_languages: 積木式
+  tutorial_seesawrobot_string_detail_programming_languages: 積木式
+  tutorial_brilliantcreate_string_detail_programming_languages: 積木式
+  tutorial_seesawscratch_string_detail_programming_languages: 積木式
+  tutorial_seesawkeyboard_string_detail_programming_languages: 積木式
+  tutorial_seesawrobocar_string_detail_programming_languages: 積木式
+  tutorial_seesawrobowand_string_detail_programming_languages: 積木式
+  tutorial_seesawinventor_string_detail_programming_languages: 積木式
+  tutorial_codeartobjects_string_detail_programming_languages: 積木式
+  tutorial_microsoftmanor_string_detail_programming_languages: Python
+  tutorial_nasaartemis_string_detail_programming_languages: 積木式, Python
+  tutorial_codejikaresume_string_detail_programming_languages: HTML, CSS
+  tutorial_codejikabiz_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_codejikasnake_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_codespeakplant_string_detail_programming_languages: 積木式
+  tutorial_codespeakaichat_string_detail_programming_languages: Python
+  tutorial_icteachmicrobit_string_detail_programming_languages: ''
+  tutorial_codeyallawebsite_string_detail_programming_languages: HTML, CSS
+  tutorial_usicastle_string_detail_programming_languages: Python
+  tutorial_bootupparty_string_detail_programming_languages: 積木式
+  tutorial_codespeakrocket_string_detail_programming_languages: 積木式
+  tutorial_bootupstarry_string_detail_programming_languages: 積木式
+  tutorial_bootupsea_string_detail_programming_languages: 積木式
+  tutorial_bootupanimal_string_detail_programming_languages: 積木式
+  tutorial_bootupdance_string_detail_programming_languages: 積木式
+  tutorial_unrulyart_string_detail_programming_languages: 積木式
+  tutorial_intelinoabc_string_detail_programming_languages: 不插電活動
+  tutorial_robotcodeline_string_detail_programming_languages: 積木式, JavaScript
+  tutorial_cospacepirate_string_detail_programming_languages: 積木式
+  tutorial_bwai_string_detail_programming_languages: 不插電活動
+  tutorial_simplepython_string_detail_programming_languages: 積木式, Python
+  tutorial_codestersfire_string_detail_programming_languages: Python
+  tutorial_codehskinder_string_detail_programming_languages: 積木式
+  tutorial_codehsaielem_string_detail_programming_languages: 積木式
+  tutorial_codespeakcctrivia_string_detail_programming_languages: 積木式
+  tutorial_hwescape_string_detail_programming_languages: 積木式
+  tutorial_hwlava_string_detail_programming_languages: 積木式
+  tutorial_hwgallery_string_detail_programming_languages: 積木式
+  tutorial_hwfanpage_string_detail_programming_languages: HTML, CSS
+  tutorial_hwillusion_string_detail_programming_languages: Python
+  tutorial_caevolution_string_detail_programming_languages: 理論基礎
+  tutorial_bbbusybot_string_detail_programming_languages: JavaScript
+  tutorial_caaifarm_string_detail_programming_languages: 理論基礎
+  tutorial_cafuture_string_detail_programming_languages: 理論基礎
+  tutorial_dmscratch_string_detail_programming_languages: 積木式
+  tutorial_dmliteracy_string_detail_programming_languages: 積木式
+  tutorial_dmwind_string_detail_programming_languages: 積木式
+  tutorial_dmbeatbox_string_detail_programming_languages: 積木式
+  tutorial_kinderaikibo_string_detail_programming_languages: 不插電活動
+  tutorial_kinderairvr_string_detail_programming_languages: 不插電活動
+  tutorial_bbtai_string_detail_programming_languages: 積木式
+  tutorial_cagenius_string_detail_programming_languages: 積木式
+  tutorial_tynkerweather_string_detail_programming_languages: 積木式
+  tutorial_tynkerbalance_string_detail_programming_languages: 積木式
+  tutorial_tynkertickle_string_detail_programming_languages: 積木式
+  tutorial_tynkerfruit_string_detail_programming_languages: JavaScript, p5.js
+  tutorial_codemonkeyhoot_string_detail_programming_languages: 積木式
+  tutorial_kcjpong_string_detail_programming_languages: JavaScript
+  tutorial_dmsolar_string_detail_programming_languages: 積木式
+  tutorial_mindmakersneural_string_detail_programming_languages: 積木式
+  tutorial_blocksmithrescue_string_detail_programming_languages: 不受語言影響
+  tutorial_cstaheroes_string_detail_programming_languages: 不插電活動
+  tutorial_codecombathack_string_detail_programming_languages: 不受語言影響
+  tutorial_toxicodewords_string_detail_programming_languages: 不受語言影響
+  tutorial_mitstepmisinformation_string_detail_programming_languages: 不插電活動
+  tutorial_mitstepdeepfakes_string_detail_programming_languagess: 不插電活動
+  tutorial_mitstepintrotoml_string_detail_programming_languages: 不插電活動
+  tutorial_naflogo_string_detail_programming_languages: JavaScript
+  tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
+  tutorial_intelinosmile_string_detail_programming_languages: 積木式
+  tutorial_intelinoaisign_string_detail_programming_languages: 積木式
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。
@@ -9018,6 +10419,420 @@ zh:
   all: 所有
   dont_know: 我不知道
   language_label: 語言
+  before_hoc: 一小時玩程式之前
+  day_of_hoc: 一小時玩程式日
+  after_hoc: 一小時玩程式之後
+  step_01: 第1步
+  step_02: 第2步
+  step_03: 第3步
+  step_04: 第4步
+  step_05: 第5步
+  step_06: 第6步
+  step_07: 第7步
+  step_08: 第8步
+  step_09: Step 9
+  what: 什麼：
+  when: 什麼時候：
+  where: 在哪裡：
+  hoc_how_to_top_heading: 一小時玩程式指南
+  hoc_how_to_top_desc: 量身定制的操作指南，提供最佳的一小時玩程式體驗。
+  hoc_how_to_top_view_guide: 查看指南
+  hoc_how_to_nav_main_aria_label: 選擇指南
+  hoc_how_to_nav_sidebar_aria_label: 側邊欄導航
+  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_desc: 一小時玩程式是一小時的計算機科學介紹，使用有趣的教程來表明任何人都可以學習基礎知識。今年，我們透過提供包含人工智慧（AI）和非AI元件的編碼機會，將一小時玩程式提升到新的高度。無論你或學生是經驗豐富的編程師，還是你們所有人都是第一次進行計算機科學探險，這個一小時玩程式活動都將是一次非凡的旅程。
+  hoc_how_to_companies_intro_heading: 你的公司可以如何參與一小時玩程式
+  hoc_how_to_companies_intro_desc_01: 一小時玩程式是為時一小時的計算機科學入門，它使用有趣的教程來展示任何人都可以學習基礎知識。今年，我們將通過提供涵蓋人工智慧（AI）和非人工智慧元件的編程機會，將一小時玩程式推向新的高度。
+  hoc_how_to_companies_intro_desc_02: 你的所有努力都可以對來自邊緣化種族和族裔群體的年輕女性和學生看待計算機科學及其自身潛力的方式產生巨大影響。
+  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
+    Code
+  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    Districts who fully engage with Hour of Code can help raise awareness of the computer
+    science movement and inspire more students to try computer science, particularly
+    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_heading: 如何規劃一場「一小時玩程式」活動
+  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
+    computer science, using fun tutorials to show that anybody can learn the basics.
+    Your efforts can make a huge impact on the way students view computer science
+    and their own potential.
+  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
+    Hour of Code can help raise awareness of the computer science movement and inspire
+    more students to try computer science, particularly young women and students from
+    historically marginalized racial and ethnic groups.
+  hoc_how_to_parents_intro_heading: 如何與孩子一起學習一小時玩程式
+  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
+    to introduce your child to computer science, perhaps for the very first time.
+    Not only is computer science foundational to all fields of study, but recent studies
+    show: children who study computer science perform better in other subjects, excel
+    at problem-solving, and are 17% more likely to enroll in college.'
+  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
+    students worldwide in this global event. Together, we can inspire kids to learn,
+    break stereotypes, and help children discover a newfound interest. Best of all,
+    you already have everything you need to bring the Hour of Code into your home!
+  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
+    of Code
+  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
+    Hour of Code event will show your representative the impact and need for computer
+    science education, and your students will be inspired by a role model in government.
+  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
+    Code event while engaging elected officials, complete these tasks prior to the
+    elected official attending your school. The task includes coordination with their
+    point of contact, media invitations, waivers, and planning your agenda.
+  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
+  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    As a volunteer, your efforts can make a huge impact on the way students view computer
+    science and their own potential.
+  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
+    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
+    of all backgrounds participate. The Hour of Code features a large variety of activities
+    for all ages and skill levels, so you don't need to be a programming expert to
+    volunteer.
+  hoc_how_to_faq_question_prerequisites: 進行一小時玩程式的先決條件是什麼？
+  hoc_how_to_faq_answer_prerequisites: 一小時玩程式的運行很簡單，即使是初學者也是如此。激發學生探索、創造和學習新事物不需要計算機科學或教學方面的經驗。
+  hoc_how_to_faq_question_devices: 我需要哪些裝置才能進行一小時玩程式？
+  hoc_how_to_faq_answer_devices_01: 你可以使用的裝置：
+  hoc_how_to_faq_answer_devices_02: 如果裝置有限或無法使用，請嘗試[結對編程](%{pair_url})或探索我們的[缐下活動](%{unplugged_url})，無需任何裝置就可以學習！
+  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
+    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_question_volunteer: 誰可以做志工？
+  hoc_how_to_faq_answer_volunteer: 任何對計算機科學教育和增加科技的多樣性充滿熱情的人都可以成為志願者！我們希望看到各種背景的志願者參加。一小時玩程式提供適合所有年齡段和技能水平的各種活動，因此你不需要成為編程專家即可進行志願者服務！
+  hoc_how_to_faq_question_full_hour: 一小時玩程式是否需要一整個小時？
+  hoc_how_to_faq_answer_full_hour: 許多學生將能夠在不到一小時內完成活動，沒關係！學生可以在其他學生完成活動的同時繼續學習。
+  hoc_how_to_faq_question_account: 學生是否需要使用帳戶登錄？
+  hoc_how_to_faq_answer_account: 學生無需註冊或登入即可嘗試一小時玩程式。註冊一小時玩程式不會自動創建Code.org帳戶。
+  hoc_how_to_faq_question_organize_specific_school: 如何與特定學校進行組織？
+  hoc_how_to_faq_answer_organize_specific_school: 如果你想在課堂做志工，我們建議你直接聯絡老師和管理人員。如果你是家長或監護人，[發送此電子郵件](%{email_url})給孩子的老師，表示願意幫助他們舉辦一小時玩程式。使用我們的[示例文本](%{sample_text_url})作為指南，向你心目中的學校發送電子郵件。
+  hoc_how_to_faq_question_prepare: 如何為一小時玩程式做準備？
+  hoc_how_to_faq_answer_prepare_01: 前往課堂之前，請自己嘗試一些活動。
+  hoc_how_to_faq_answer_prepare_02: 與老師討論你在活動中的角色。你可能想準備分享你的故事：你是如何參與科技事業的，或者為什麼科技對你很重要？
+  hoc_how_to_faq_answer_prepare_03: 讓學生興致高昂！[挑選一個視訊](%{video_url})來吸引學生關注，讓他們更有興致完成一小時玩程式。
+  hoc_how_to_faq_answer_prepare_04: 如果您是一名虛擬志願者, 請事先測試 a/v 和螢幕共用功能。
+  hoc_how_to_faq_question_when_company_host: 我的公司何時可以舉辦一小時玩程式活動？
+  hoc_how_to_faq_answer_when_company_host: 世界各地的人們在計算機教育周(%{campaign_date})期間參加一小時玩程式慶祝活動，那時會發佈最新的教程和活動。但是你可以在一年中的任何一天進行一小時玩程式！
+  hoc_how_to_faq_question_volunteer_teacher_contact: 我還沒有得到老師的聯繫。我怎麼還能做志願者？
+  hoc_how_to_faq_answer_volunteer_teacher_contact: 嘗試搜索當地的學校，並致電校長/教師/前廳,，詢問你能如何提供幫助。
+  hoc_how_to_faq_question_classroom_visit: 課堂訪問持續多長時間？
+  hoc_how_to_faq_answer_classroom_visit: 實體課程通常為 60-90 分鐘，而網絡課程通常為 20-30 分鐘。
+  hoc_how_to_faq_question_age_groups: 一小時玩程式活動是提供給哪個年齡層使用的？
+  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
+    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
+    Everyone—even adults—can have fun learning!
+  hoc_how_to_resources_heading_educators: 給教師的其他一小時玩程式活動資源：
+  hoc_how_to_resources_heading_default: 其他一小時玩程式資源
+  hoc_how_to_resources_promo_heading: 推廣資源
+  hoc_how_to_resources_promo_desc: 找到您所需的所有資源（包括印刷和數字格式），為你的一小時玩程式吸引關注。
+  hoc_how_to_resources_discover_heading: 探索活動
+  hoc_how_to_resources_discover_desc: 探索各種專為所有年齡段設計的一小時教程（超過45種語言）。
+  hoc_how_to_resources_get_involved_heading: 如何參與
+  hoc_how_to_resources_get_involved_desc: 幫助傳播有關一小時玩程式的消息！探索讓您的社區參與的方法。
+  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
+  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
+    look for ways to promote the Hour of Code in your district communication to stakeholders.
+    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_step_label_plan: 計劃一小時玩程式活動的地點和時間
+  hoc_how_to_step_label_choose_activity: 選擇您的活動
+  hoc_how_to_step_label_choose_activities: 選擇您的活動
+  hoc_how_to_step_label_test_activity: 測試您的活動
+  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_register_event: 註冊您的活動
+  hoc_how_to_step_label_register_your_hoc: 註冊您的一小時玩程式
+  hoc_how_to_step_label_tell: 告訴您的學生、學校和社區
+  hoc_how_to_step_label_get_coding: 開始編碼！
+  hoc_how_to_step_label_celebrate: 慶祝
+  hoc_how_to_step_label_beyond_hoc: 超越一小時玩程式
+  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_plan_your_event: 計劃您的活動
+  hoc_how_to_step_label_plan_your_hour: 計劃您的時間
+  hoc_how_to_step_label_help_spread_word: 幫助傳播信息
+  hoc_how_to_step_label_connect_with_school: 與當地學校聯繫
+  hoc_how_to_step_label_inspire_employees: 激勵您的員工
+  hoc_how_to_step_label_encourage_employees: 鼓勵員工做志工
+  hoc_how_to_step_label_plan_internal_event: 計劃內部活動
+  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
+  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
+    in Hour of Code
+  hoc_how_to_step_label_after_event: After the event
+  hoc_how_to_step_label_invite_elected_official: Invite an elected official
+  hoc_how_to_step_label_coordinate_media: Coordinate with Media
+  hoc_how_to_step_label_confirm_details: Confirm all details
+  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
+  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_beyond_hoc_subhead: 它不會止於此！
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
+    these suggestions:'
+  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. Check out the diverse curriculum offerings
+    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_plan_hour_desc_01: 以下是一個幫助你開始的示例議程：
+  hoc_how_to_step_choose_activities_desc_01: 今年，一小時玩程式主題是人工智慧（AI）創造力。無論是編碼新的應用程式和演算法、製作獨特的藝術品，還是製作編舞來讓我們跳舞，AI都在為數位表達打開新的機會，從而擴大我們對創造力的理解。完成編碼活動並學習AI，讓今年變得特別。
+  hoc_how_to_step_choose_activities_desc_02: 首先，[探索數百個編碼活動](%{activities_url})，根據群組的年齡、經驗、興趣等從中選擇一個。[這些精選活動](%{ai_activities_url})將人工智慧作為關鍵主題或課程。
+  hoc_how_to_step_choose_activities_desc_03: 然後，[瞭解關於AI的所有信息](%{ai_url})。學生可以觀看該領域專家的短片，還有用於擴展活動和指導進一步討論的附帶課程計劃。或者，我們為教育工作者提供免費專業學習，開啟利用AI教學和關於AI教學的未來。
+  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
+    Students can watch short videos featuring experts in the field, and there are
+    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_beyond_advocacy_desc_01: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然沒有教學，成千上萬的工作崗位空缺。學習如何將計算機科學帶到您所在地區的更多學校，並宣導將計算機科學作為一項畢業要求。
+  hoc_how_to_step_educators_register_desc: 首先註冊你的活動，承諾與學生一起進行一小時玩程式。註冊後，你將收到有用的電子郵件，其中包含舉辦成功的一小時玩程式的新聞和提示。你還將被[放在地圖上](%{map_url})。我們集體努力的可見整體表明了對計算機科學運動的全球承諾，這將幫助我們為系統性變革建立動力。
+  hoc_how_to_step_educators_plan_desc_01: 在活動前，請自行嘗試活動以確保它們可以在學生裝置上運行，並準備好回答問題！頻寬低？計劃在課堂上展示視訊，這樣就不需要每個學生都下載自己的視訊。
+  hoc_how_to_step_educators_plan_desc_02: 世界各地的人經常在計算機科學教育週（%{campaign_date}）期間參與一小時玩程式慶祝活動，但你可以在一年中的任何一天進行一小時玩程式！
+  hoc_how_to_step_educators_plan_desc_03: 選擇適合你的學生數量和裝置的空間。學生可以在單個裝置上嘗試活動、輪流分享裝置，或在白板上全班進行。甚至還有完全不需要裝置的缐下活動，因此在戶外也可以進行！
+  hoc_how_to_step_educators_spread_word_desc_01: 使用[這些電子郵件模板](%{email_url})幫助我們在你的社區傳播信息。
+  hoc_how_to_step_educators_spread_word_desc_02: 請兩位同事[register](%{register_url})並舉辦一小時玩程式活動。他們可以繼續確保兩名同事，後者又可以確保兩名同事，依此類推。
+  hoc_how_to_step_educators_spread_word_desc_03: 請校長[舉辦全校活動](%{host_url})。當300名以上的孩子參加時，你可以獲得特別參與套件，包括T恤、海報、筆記本電腦貼紙等。[分享你的全校活動計劃](%{share_url})以獲得資格。
+  hoc_how_to_step_educators_spread_word_desc_04: 聯絡學校的家長教師學生協會或在家長通訊中分享，讓他們知道孩子正在學習的內容。
+  hoc_how_to_step_educators_plan_hour_desc_02: 上午10:00-10:05：從[勵志視訊](%{video_url})開始
+  hoc_how_to_step_educators_plan_hour_desc_03: 上午10:05-10:45：學生進行編碼活動
+  hoc_how_to_step_educators_plan_hour_desc_04: 上午10:45-10:55：學生瞭解人工智慧
+  hoc_how_to_step_educators_plan_hour_desc_05: 上午10:55-11:00：教師致閉幕辭
+  hoc_how_to_step_educators_get_coding_desc: 引導學生參與活動，可以通過在白板上分享連結或通過課堂的學習管理系統。學生可能會遇到挑戰，這沒關係！學習編程就像學習一種新語言，你不會立即變得流利。如果你不知道答案，你們可以一起弄清楚。
+  hoc_how_to_step_educators_celebrate_desc: 活動結束後，列印完成證書並祝賀學生。分享一小時玩程式活動的照片和視訊，並使用#HourOfCode和@codeorg展示學生的成就。
+  hoc_how_to_step_companies_inspire_desc_01: 在全體員工會議或發送給所有員工的電子郵件中分享此視訊，以展示像您這樣的公司如何通過一小時玩程式對為所有學校的所有學生提供電腦科學教育的全球運動產生巨大影響。
+  hoc_how_to_step_companies_encourage_desc_01: 參與一小時玩程式活動最充實的方式之一是在當地課堂上做志工，可以是面對面的，也可以是虛擬的。最重要的是，成為志工不必是工程師或具有技術背景的人。通過分享自己的職業經歷以及計算機科學或技術如何影響你的職位，你仍然可以為學生提供有意義的體驗。引導您的員工查看志工指南以瞭解更多資訊。
+  hoc_how_to_step_companies_plan_desc_01: 一小時玩程式不僅適合K-12年級學生，也適合所有年齡段和所有技能水準的學習者。聯絡貴公司的活動團隊，為所有員工舉辦一小時玩程式活動。
+  hoc_how_to_step_companies_plan_desc_02: 儘早做出承諾並提前註冊您的活動。註冊後，您將收到有用的電子郵件，其中包含成功舉辦一小時玩程式的新聞和技巧。您也將[列在地圖上](%{map_url})。我們集體努力的可見總體表明了全球對計算機科學運動的承諾，這將幫助我們建立系統性變革的勢頭。
+  hoc_how_to_step_companies_choose_activities_desc_03: 然後，[全面瞭解AI](%{ai_url})。員工可以觀看介紹該領域專家的簡短視訊。
+  hoc_how_to_step_companies_spread_word_desc_01: 活動結束後，用個性化的完成證書祝賀你的員工。分享一小時玩程式活動的照片和視訊，並使用#HourOfCode和@codeorg展示你對支持計算機科學運動的承諾。
+  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
+    the resources provided in our how-to guides for educators and school assemblies.
+    With your support, teachers and school administrators can decide which type of
+    event best meets the interest of your schools.
+  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
+    When you register your Hour of Code event, you'll receive helpful emails with
+    news and tips for hosting a successful Hour of Code. It's also how you can let
+    local volunteers know your school is participating. Volunteers are a great resource
+    and can come speak to your class about computer science or help your students
+    with Hour of Code activities.
+  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
+    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
+    Instagram and your district's homepage! Explore our sample emails which help you
+    share your Hour of Code event with your community.
+  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
+    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
+    so we can see your district in action!'
+  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
+    to end with the Hour of Code! To help provide students in your district with skills
+    and knowledge that will prepare them to be college and career ready, check out
+    our free to use web-based curriculum!
+  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
+    have to end with the Hour of Code! To help provide students in your district with
+    skills and knowledge that will prepare them to be college and career ready, check
+    out the diverse curriculum offerings from Hour of Code partners!
+  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions! When
+    300 or more students participate, you can receive a special engagement kit with
+    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
+    to qualify.
+  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
+    to see your event, and know that your dedication is part of a worldwide movement.
+  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
+    your event, as well as the tech capabilities of your space. Students can work
+    on their own devices, in pairs on one device, or together as a classroom on a
+    projector, and there are even unplugged tutorials that can be completed with no
+    devices at all!
+  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
+    official or influential business person and invite them to speak. [Check out our
+    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
+    of Code for more info.
+  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
+    as a local news station, newspaper, or education/tech bloggers. [See our press
+    kit for help](%{press_kit_url}).
+  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
+    [inspirational videos](%{videos_url}).'
+  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
+    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
+  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
+    about their background and how technology and computer science plays an important
+    role in their everyday lives'
+  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
+    of Code demo for the school. Fun twist: have them teach the principal, politician,
+    or other students!'
+  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
+    activity and how computer science can be taught without using computers.'
+  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
+    organize school-wide event gives closing remarks.'
+  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
+    take pictures to commemorate the event, and to post on your organization's social
+    media networks. (Publicity or privacy policies may apply.)
+  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
+    and that it remains on track to end on time—especially if any special guests have
+    other scheduled commitments to attend.
+  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
+    sure to:'
+  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
+    and congratulate your students.
+  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
+    great for students to do) and offer to answer any follow-up questions they may
+    have.
+  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
+    the day on social media. (Publicity or privacy policies may apply.)
+  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
+    on how to make next year's event even better.
+  hoc_how_to_step_events_after_desc_06: 聯絡學校的家長教師學生協會或在家長通訊中分享，讓他們知道孩子正在學習的內容。
+  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
+    of Code with your child by registering. When you register your event, you'll receive
+    helpful emails with news and tips for hosting a successful Hour of Code. You'll
+    also be [put on the map](%{map_url}) so you can show your child that they are
+    part of a global movement.
+  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
+    get to work together. They may encounter challenges—that's okay! Learning to program
+    is like learning a new language; you won't be fluent right away. Computer science
+    is all about learning how to "debug" situations that didn't turn out the way we
+    thought they would. Together, you and your child can think of creative ways to
+    solve the problem!
+  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
+    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too!'
+  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
+    your child to show off their achievement!
+  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
+    a school-wide event. When 300 or more kids participate, you can receive a special
+    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
+    whole school event plan](%{share_url}) to qualify.
+  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
+    hosting a company-wide event or encouraging other employees to host their own
+    Hour of Code event.
+  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
+    that features one of their favorite role models.
+  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
+    and why it matters.
+  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
+    with your child right away to get them excited or save it for the end of your
+    Hour of Code as a special prize."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
+    your school today."
+  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
+    both your event and the elected official.
+  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
+    from your event (e.g., school administrator) and for the elected official attending
+    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
+    for the day of the event.
+  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
+    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
+  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
+    your Hour of Code event to register and put your event on the map. You'll receive
+    early access to information about new activities and special promotions!
+  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
+    map](%{map_url}) to see your event, and know that your dedication is part of a
+    worldwide movement."
+  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
+    day and make sure all parties participating (teachers, students, administrators,
+    elected officials and their staff) are aware of what is happening and when. Things
+    to consider:'
+  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
+    each part of the event?
+  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
+    or rotate between many students during the event? (You may want to coordinate
+    this ahead of time with the official's staffer.)
+  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
+    as a group?
+  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
+    What if the official is running late? What if some students finish their activity
+    before others?
+  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
+    to talk about their background and how technology and computer science plays an
+    important role in their everyday life.'
+  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
+    their Hour of Code activity. Fun twist: have a group of students teach the principal,
+    politician, or other students!'
+  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
+    gives closing remarks.'
+  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
+    coordinating media invitations. It could be the school, the district, the official's
+    office, or any combination.
+  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
+    per your state/district/school policy.
+  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
+    (DocuSign - send link to signer)"
+  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
+    (Download and print)"
+  hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
+    - send link to signer)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
+    and print)"
+  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
+    official 72 hours prior to the event. Include event dress code, who will greet
+    them, which classroom or event they will attend with teacher's name, and agenda
+    for the event.
+  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
+    technology the day before and day of the event to ensure the event runs smoothly.
+  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
+    feel welcome and engaged, greet the elected official at the door of the event
+    to show them where to go and answer any questions they may have. It is always
+    great to have a student help greet them!
+  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
+    to commemorate the visit and to post on your organization's social media networks.
+    (Publicity or privacy policies may apply).
+  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
+    smoothly and that it remains on track to end on time. The official may have other
+    visits or meetings scheduled following your event.
+  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
+    of completion and congratulate your students.
+  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
+    and offer to answer any follow-up questions they may have.
+  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
+    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
+    or privacy policies may apply.)'
+  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
+    you note. It's especially thoughtful to get students to sign!
+  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
+    on each side for feedback on how to make next year’s event even better.
+  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
+    or a degree in computer science—you''re already qualified as you are! There are
+    a few ways you can get involved in Hour of Code as a volunteer:'
+  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
+    Email a local teacher or administrator to see if they need support for their Hour
+    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
+    started!"
+  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
+    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
+    Hour of Code event!"
+  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
+    there, teachers in your area will be able to reach out to you. Teachers will review
+    your profile on the [map](%{map_url}), so try to complete as much as possible
+    to increase the chance that a teacher will contact you."
+  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
+    work with your event organizer to register your Hour of Code event. You'll receive
+    early access to information about new activities and special promotions!
+  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
+    discuss these logistics with the teacher ahead of time to better understand their
+    needs:'
+  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
+    event? If you work in tech, you might be asked to share your personal experience
+    or story. Can you help the teacher prepare by doing the activity together in advance?
+    Can you walk around the classroom to answer questions or encourage students as
+    they do their Hour of Code?
+  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
+    This can determine what times you need to be present and in what capacity.
+  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
+    Depending on their procedures you may need to complete a background check or arrive
+    a little early for check-in at an in-person event.
+  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
+    with Artificial Intelligence (AI). Make this year special by completing a coding
+    activity AND learning about AI.
+  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
+    science movement by sharing your volunteer plans with your friends and colleagues
+    on your social media accounts (e.g. LinkedIn).
+  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
+    free to answer questions—but try not to give them the solution outright. Ask them
+    questions so they can answer themselves what went wrong. Encourage students to
+    help each other if they get stuck.
+  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
+    okay! Let the student know that you're in this together and work alongside them
+    to figure it out.
+  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
+  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
+    to stop with the Hour of Code. Consider volunteering year round with programs
+    like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_ai_top_desc: 無論您是教室中的學生還是教育工作者，任何人都可以學習 AI 的知識。
+  hoc_ai_how_ai_works_video_series_desc: 這系列短視頻將向您介紹人工智能的工作原理以及為什麼重要。然後深入研究演算法偏見和
+    AI 決策道德等問題。
+  hoc_ai_learn_how_ai_works_desc: 透過「AI 如何運作」課程，與我們的影片系列相結合，您將介紹 AI 的運作方式以及其重要原因，深入探索人工智慧世界。
+  hoc_ai_101_for_educators_desc: 通過我們為教育工作者提供的免費線上學習系列，探索人工智慧（AI）在教育中的變革潛力。
+  hoc_ai_impacts_desc: 透過教師指導的課程，探討人工智慧的影響，並邀請學生思考解決某些 AI 問題的解決方案。
+  hoc_ai_activities_desc: 這些全新的一小時代碼活動以有趣且引人入勝的方式向用戶介紹人工智能世界。
   team_page_full_team_alt_text: 將近 100 名員工穿著藍色和黃色 T 恤的 Code.org 員工在酒店會議室舉辦的 2022 年夏季
     Codechella 活動中擺姿勢。
   careers_page_code_pride_alt_text: 兩位女性呈現的員工微笑著，同時拿著代碼的末端。組織品牌的彩虹橫幅。在他們背後，有幾個人穿著
@@ -9230,68 +11045,199 @@ zh:
   csa_ai_page_faq_answer_11_list_03: "** 目標 3：** 深入了解 AI 模型如何訓練並整合到程式中。"
   csa_ai_page_faq_answer_11_02: 有關引導我們工作的價值觀的更多信息，請參閱我們的 [課程價值]（%{curriculum_values_url}）。
   video_library_page_main_title: 教育短片
-  video_library_page_hero_description: Code.org 不斷增長的教育影片庫可供世界各地的教育工作者使用，無論是線上或在教室中都能重複使用。我們的目標是擴大我們的努力，超出我們自己的課程範圍。
+  video_library_page_hero_description: Code.org不斷增長的教育視訊庫可供世界各地的教育工作者使用，無論是線上或在教室中都能重複使用。我們的目標是擴大我們的努力，超越我們自己的課程範圍。
   video_library_page_title_ai_works: AI 如何運作
-  video_library_page_description_ai_works: 這一系列的短片將向您介紹人工智能的工作原理以及為什麼它很重要。了解神經網絡，或者
-    AI 如何學習，並深入研究算法偏見和 AI 決策道德等問題。
-  video_library_page_title_computers_work: 電腦如何運作
-  video_library_page_description_computers_work: 說明是什麼讓電腦成為電腦、數位資訊如何以 1 秒和 0 表示、電腦電路如何運作來操控數位資訊，以及中央處理單元
-    (CPU) 和作業系統如何控制電腦的輸入、輸出、記憶體和硬體。
-  video_library_page_title_internet_works: 互聯網的工作原理
-  video_library_page_description_internet_works: 擁有 TCP/IP 的發明者 Vint Cerf，Tumblr 的創始人大衛·卡普解釋
-    HTTP 和 HTML，谷歌的安全公主解釋 SSL 和網絡安全，以及來自微軟，Spotify 和賽門鐵克的工程師。這一系列的短片解釋了互聯網的工作原理。
+  video_library_page_description_ai_works: 這一系列的短片將向您介紹人工智慧如何運行以及為什麼它很重要。了解神經網絡，或者AI如何學習，並深入研究演算法偏見和AI決策道德等問題。
+  video_library_page_title_computers_work: 電腦如何運行
+  video_library_page_description_computers_work: 說明是什麼讓電腦成為電腦、數位資訊如何以1和0表示、電腦電路如何運行以操控數位資訊，以及中央處理單元（CPU）和作業系統如何控制電腦的輸入、輸出、記憶體和硬體。
+  video_library_page_title_internet_works: 互聯網如何運行
+  video_library_page_description_internet_works: 裏面有TCP/IP的發明者Vint Cerf，Tumblr的創始人大衛·卡普解釋HTTP和HTML，谷歌安全公主解釋SSL和網絡安全，以及來自微軟、Spotify和賽門鐵克的工程師。這一系列短片解釋了互聯網如何運行。
   video_library_page_title_not_hacked: 如何不被黑客攻擊
-  video_library_page_description_not_hacked: 互聯網是開放的，因此除非受到保護，否則可以看到它上面發生的一切。在現代國家，人們比任何其他犯罪更擔心被黑客入侵。為什麼？因為互聯網上的每台計算機或電話都經常被犯罪分子，恐怖分子甚至國家行為者進行漏洞測試。如果您不小心，有人可能會入侵您的設備或帳戶，甚至竊取您的身份或金錢。
+  video_library_page_description_not_hacked: 互聯網是開放的，因此除非受到保護，否則可以看到它上面發生的一切。在現代國家，相比任何其他犯罪，人們更擔心被黑客入侵。為什麼？因為互聯網上的每台電腦或電話都經常被犯罪分子、恐怖分子甚至國家行為者進行漏洞測試。如果您不小心，有人可能會入侵您的設備或帳戶，甚至竊取您的身份或金錢。
   video_library_page_title_blockchain: 區塊鏈如何運作
-  video_library_page_description_blockchain: 該系列與 Coinbase 合作製造，以行業專家為特色，旨在通過探索區塊鏈是什麼，它如何工作以及其潛在的社會影響（好壞）來揭開這項技術的神秘面紗。
-  video_library_page_title_careers: 在 CS 的職業生涯
-  video_library_page_description_careers: 計算機科學和技術的職業生涯可以是有趣和有益的。但是，在這些領域工作的人真正做了什麼？隨著各種各樣的工作和公司，這個問題不只有一個答案。觀看下面的視頻，以認識一些正在以創造性的方式解決大問題的人。
+  video_library_page_description_blockchain: 該系列與Coinbase合作製作，裏面有行業專家，旨在通過探索區塊鏈是什麼，它如何運行以及其潛在的社會影響（好和壞）來揭開這項技術的神秘面紗。
+  video_library_page_title_careers: 計算機科學職業
+  video_library_page_description_careers: 計算機科學和技術職業可能充滿樂趣和收穫。但是，在這些領域工作的人真正做了什麼？因為有各種各樣的工作和公司，這個問題不只有一個答案。觀看下面的視訊，認識一些正在以創造性的方式解決大問題的人。
   video_library_page_title_inspirational: 勵志
-  video_library_page_description_inspirational: 計算機科學將在我們的世界發生什麼變化？一切？這是給誰的？大家！觀看這些視頻以激勵和激勵您。
-  video_library_page_footer_description: 尋找別的東西？我們在我們的 Youtube 頻道上提供了很多很棒的視頻。
-  video_library_page_footer_cta: 探索所有在 YouTube 上的影片
-  video_library_page_computer_work_video_title_1: Pseudoloc-艾娜儿哦吾西娜吉尺哦 西马吾提儿丝尔哦开
-  video_library_page_computer_work_video_title_2: Pseudoloc-比艾诶儿 诶迪 诶提
+  video_library_page_description_inspirational: 計算機科學將在我們的世界改變什麽？一切？這是給誰的？每一個人！觀看這些視訊以激勵和鼓舞你。
+  video_library_page_footer_description: 在尋找其他内容？我們的Youtube頻道上有很多精彩視訊。
+  video_library_page_footer_cta: 探索YouTube上的所有Code.org視訊
+  video_library_page_computer_work_video_title_1: 介紹計算機如何運行
+  video_library_page_computer_work_video_title_2: 二進制和數據
   video_library_page_computer_work_video_title_3: CPU、記憶體、輸入和輸出
-  video_library_page_computer_work_video_title_4: 是什麼讓一台電腦，一台電腦？
+  video_library_page_computer_work_video_title_4: 是什麼讓電腦成為電腦？
   video_library_page_computer_work_video_title_5: 電路邏輯
-  video_library_page_computer_work_video_title_6: Pseudoloc-尺诶迪尔儿伊诶娜 丝弗提诶伊
+  video_library_page_computer_work_video_title_6: 硬體和軟體
   video_library_page_internet_work_video_title_1: 什麼是互聯網？
-  video_library_page_internet_work_video_title_2: 互聯網：IP 地址和 DNS
-  video_library_page_internet_work_video_title_3: 互聯網：HTTP 和 HTML
+  video_library_page_internet_work_video_title_2: 互聯網：IP地址和DNS
+  video_library_page_internet_work_video_title_3: 互聯網：HTTP和HTML
   video_library_page_internet_work_video_title_4: 互聯網：網絡安全與犯罪
-  video_library_page_internet_work_video_title_5: 互聯網：電線，電纜和無線上網
+  video_library_page_internet_work_video_title_5: 互聯網：電線，電纜和Wifi
   video_library_page_internet_work_video_title_6: 互聯網：數據包，路由和可靠性
-  video_library_page_internet_work_video_title_7: 網際網路：加密與公開金鑰
+  video_library_page_internet_work_video_title_7: 互聯網：加密與公開金鑰
   video_library_page_internet_work_video_title_8: 互聯網：如何搜索工作
   video_library_page_cs_video_title_1: 我叫杰羅姆，我是喵狼的設計技術專家
-  video_library_page_cs_video_title_2: 我的名字是 Nikesha，我是美國宇航局的航空航天工程師
-  video_library_page_cs_video_title_3: 我的名字是布琳娜，我是 Instagram 的軟件工程師
-  video_library_page_cs_video_title_4: 我的名字是金斯利，我是臉書的軟件工程師
-  video_library_page_cs_video_title_5: 我的名字是 Polina，我是電子藝術的數據科學家
-  video_library_page_cs_video_title_6: 我的名字是丹妮爾，我是 MBARI 的軟件工程師
-  video_library_page_cs_video_title_7: 我的名字是克里斯托弗，我是 Tanium 的安全分析師
-  video_library_page_cs_video_title_8: 我的名字是費德里科，我是微軟的技術計劃經理
-  video_library_page_cs_video_title_9: 我的名字是苔絲，我是谷歌的軟件工程師
-  video_library_page_inspirational_video_title_1: 改變計算機科學的面貌（3 分鐘）
-  video_library_page_inspirational_video_title_2: 推你自己任何人都可以學習。（1 分鐘）
-  video_library_page_inspirational_video_title_3: 激勵一個女孩（2 分鐘）
+  video_library_page_cs_video_title_2: 我叫Nikesha，我是NASA的航空航天工程師
+  video_library_page_cs_video_title_3: 我叫布琳娜，我是Instagram的軟體工程師
+  video_library_page_cs_video_title_4: 我叫金斯利，我是臉書的軟體工程師
+  video_library_page_cs_video_title_5: 我叫Polina，我是美商藝電的數據科學家
+  video_library_page_cs_video_title_6: 我叫丹妮爾，我是MBARI的軟體工程師
+  video_library_page_cs_video_title_7: 我叫克里斯托弗，我是Tanium的安全分析師
+  video_library_page_cs_video_title_8: 我叫費德里科，我是微軟的技術項目經理
+  video_library_page_cs_video_title_9: 我叫黛絲，我是谷歌的軟體工程師
+  video_library_page_inspirational_video_title_1: 改變計算機科學的面貌（3分鐘）
+  video_library_page_inspirational_video_title_2: 激勵自己。任何人都可以學習。（1分鐘）
+  video_library_page_inspirational_video_title_3: 激勵一個女孩（2分鐘）
   video_library_page_inspirational_video_title_4: 大多數學校不教 (5 分鐘)
-  video_library_page_inspirational_video_title_5: 一小時玩程式就在這裡-任何人都可以學習（2 分鐘）
-  video_library_page_inspirational_video_title_6: 我的名字是安拉西利 (3 分鐘)
-  video_library_page_inspirational_video_title_7: "「一小時玩程式與咖哩」(2 分鐘)"
-  video_library_page_inspirational_video_title_8: 計算機科學正在改變一切（5 分鐘）
-  video_library_page_inspirational_video_title_9: 計算機科學介紹（1 分鐘）
-  video_library_page_inspirational_video_title_10: 奧巴馬總統談計算機科學（1 分鐘）
+  video_library_page_inspirational_video_title_5: 一小時玩程式就在這裏 - 任何人都可以學習（2分鐘）
+  video_library_page_inspirational_video_title_6: 我的名字是阿拉西利（3分鐘）
+  video_library_page_inspirational_video_title_7: 與史蒂芬·柯瑞一起進行一小時玩程式（2分鐘）
+  video_library_page_inspirational_video_title_8: 計算機科學正在改變一切（5分鐘）
+  video_library_page_inspirational_video_title_9: 計算機科學介紹（1分鐘）
+  video_library_page_inspirational_video_title_10: 奧巴馬總統談計算機科學（1分鐘）
   video_library_page_inspirational_video_title_11: 任何人都可以學習（1 分鐘）
-  video_library_page_inspirational_video_title_12: 羅闕法爾塔恩努埃斯庫埃斯庫塞拉斯（2 分鐘）
+  video_library_page_inspirational_video_title_12: 我們的學校缺少什麼（2分鐘）
+  video_library_page_inspirational_video_title_13: NASA慶祝一小時玩程式（2分鐘）
+  video_library_page_inspirational_video_title_14: 不只是一個游戲（1分鐘）
+  video_library_page_inspirational_video_title_15: 利用計算機科學進行創造（1分鐘）
   video_library_page_not_hacked_video_title_1: 如何不被黑客攻擊：簡介
   video_library_page_not_hacked_video_title_2: 如何不被黑客攻擊：密碼
-  video_library_page_not_hacked_video_title_3: 如何不被黑客入侵：身份驗證和設備鎖定
+  video_library_page_not_hacked_video_title_3: 如何不被黑客攻擊：身份驗證和設備鎖
   video_library_page_not_hacked_video_title_4: 如何不被黑客攻擊：網絡釣魚
-  video_library_page_not_hacked_video_title_5: 如何不被黑客攻擊：網站和 Wifi
+  video_library_page_not_hacked_video_title_5: 如何不被黑客攻擊：網站和Wifi
   video_library_page_not_hacked_video_title_6: 如何不被黑客攻擊：消息傳遞和下載
   video_library_page_not_hacked_video_title_7: 如何不被黑客攻擊：安裝更新
+  thank_you_page_main_title: 感謝您幫助建立一個運動
+  thank_you_page_description: Code.org 倡導聯盟希望感謝數以千計的當地支持者和倡導者，包括教師、社區成員、研究人員、非營利組織、大學、企業和政府機構，他們支持每個學校的每個學生都應得學習計算機科學的願景。感謝您對這項運動的支持。
+  thank_you_page_members_section_title: 對於 Code.org 倡導聯盟的所有成員：
+  thank_you_page_individual_organization_title: 感謝以下個人和組織對此報告的貢獻：
+  thank_you_page_individual_organization_description: 每個州教育機構的計算機科學教育主管，大學委員會，德拉·克羅寧，斯圖爾特·德克斯勒，凱瑟琳·梅西斯，安東尼·歐文，肖恩·羅伯茨，凱爾·特洛伊恩，帕特永普拉迪特
+  thank_you_page_teachers_students_title: 感謝本報告中引用的學生和老師：
+  thank_you_page_teachers_students_description: 泰斯·坎皮翁、威拉·坎皮昂、傑米·德勒梅、辛迪·諾里加、塔拉·沃多皮奇
+  about_us_page_title: 關於我們
+  about_us_page_hero_description: Code.org®是一個教育創新非營利組織，致力於讓每個學校的每個學生都有機會學習計算機科學，作為核心K-12教育的一部分。我們擴大學校使用計算機科學的機會，重點是增加年輕女性和來自其他代表性不足的群體的學生的參與。Code.org是美國最大學區的K-12計算機科學課程的領先提供商，還組織了年度[一小時玩程式](%{hour_url})活動，該活動吸引了全球超過15％的學生。Code.org得到慷慨捐贈者支持，其中包括微軟、亞馬遜、谷歌[和衆多其他支持者](%{others_url})。
+  about_us_page_section_title_1: Code.org上有超過800萬名學生和200萬名教師
+  about_us_page_statistic_figcaption: 自2021-2022學年起的Code.org參與。[請參閱分類數據](%{data_url})。
+  about_us_page_statistic_description: Code.org通過接觸各種背景的學生（技能水平、學校以及鼓勵他們持續學習的方式）來增加計算機科學的多樣性。Code.org上的絕大多數學生都來自歷史上在計算機科學中代表性不足的學生團體。增加計算機科學的多樣性是我們工作的基礎，[我們鼓勵您閱讀有關我們的努力的更多資訊](%{diversity_url})。
+  about_us_page_section_title_2: 新聞報道中的Code.org
+  about_us_page_section_news_description: 查看所有過去的[新聞和公告](%{news_url})
+  about_us_page_section_table: 我們的目標和指標
+  about_us_page_section_table_header_1: Code.org目標
+  about_us_page_section_table_header_2: 成就
+  abous_page_section_table_cell_1_1: 提高計算機科學的多元化 *（美國學生）*
+  abous_page_section_table_cell_1_2: Code.org學生中有45%是年輕女性，50％是來自邊緣種族和族群的學生，46％的美國學生就讀於高需求學校。進一步閱讀[我們的多樣性方法](%{diversity_url})
+  about_page_section_table_cell_2_1: 激勵學生
+  about_page_section_table_cell_2_2: 數千萬人嘗試過[一小時玩程式](%{hour_url})。（已服務426,370,561人，49%為女性）
+  about_page_section_table_cell_3_1: 到達課堂
+  about_page_section_table_cell_3_2: 已有591,636名教師注冊以教授[代碼工作室](%{code_studio_url})上的入門課程，19,177,297名學生報名。
+  about_page_section_table_cell_4_1: 準備新計算機科學教師
+  about_page_section_table_cell_4_2: 我們已準備了超過106,000名新教師，教授K-12年級計算機科學科學。瞭解我們的[專業學習計劃](%{learning_programs_url})。
+  about_page_section_table_cell_5_1: 更改學區課程
+  about_page_section_table_cell_5_2: 我們已與[超過180個最大學區](%{schoold_disctrict_url})和60個區域合作夥伴合作，[將計算機科學添加到學校課程中](%{cs_curriculum_url})。[瞭解如何成為區域合作夥伴](%{regional_partner_url})。
+  about_page_section_table_cell_6_1: 設定政策以支持計算機科學
+  about_page_section_table_cell_6_2: "[美國50個州更改政策](%{states_url})以制定計算機科學教育標準，使計算機科學課程計入高中畢業成績，等等
+    [（詳細信息）](%{details_url})"
+  about_page_section_table_cell_7_1: 全球化
+  about_page_section_table_cell_7_2: 我們的課程提供超過67種語言，在超過180個國家/地區使用。
+  about_page_section_table_under_label: 來源：代碼工作室活動和[參與教育工作者調查](%{educators_url})
+  about_page_section_title_3: 更多信息，歷史和哲學
+  about_page_section_more_description_1: 2013年，Code.org由雙胞胎兄弟[Hadi](%{hadi_url})和[Ali
+    Partovi](%{partovi_url})通過一個推廣計算機科學的[video](%{video_url})推出。該視訊在YouTube上成為當天排名第一的視訊，15萬間學校聯絡我們尋求協助。從那時起，我們已經從一支啟動志願者團隊擴展到了一個全面的組織，支持全球運動。我們相信，每個孩子都應該獲得優質的計算機科學教育，而不只是少數幸運者。
+  about_page_section_more_description_2: 為了支持我們的目標，我們的教育範疇包括設計自己的課程或與他人、培訓教師合作，與大型學區合作，協助改變政府政策，通過合作夥伴關係拓展國際化，進行行銷以打破刻板印象。
+  about_page_section_more_description_3: 我們的工作基於[數十年的努力、無數組織和個人](%{efforts_url})，他們幫助建立、資助和傳播計算機科學教育。我們為受益於更廣泛的計算機科學教育社區的不懈幫助表示感謝，同時[我們對所有在多年來支持我們的工作的所有合作夥伴和個人表示感謝](%{partners_url})。
+  about_page_section_more_list_1: "[Code.org 2021年度報告](%{report_url})（過去的報告：[2020](%{past_url_1})，[2019](%{past_url_2})，[2018](%{past_url_3})，[2017](%{past_url_4})，[2016](%{past_url_5})，[2015](%{past_url_6})，[2014](%{past_url_7})）"
+  about_page_section_more_list_2: "[我們的核心價值觀和訊息指南](%{core_url})"
+  about_page_section_more_list_3: "[我們的課程和教學哲學](%{curriculum_url})"
+  about_page_section_more_list_4: "[我們的創始人Hadi Partovi關於為什麼計算機科學適合所有人的TEDx講座（視訊）](%{tedx_url})"
+  about_page_section_title_4: 分裂世界中的統一方法
+  about_page_section_specific_title_1: 分裂世界中的統一方法
+  about_page_section_specific_title_2: 我們對無障礙性的承諾
+  about_page_section_specific_title_3: 我們對免費課程和開源技術的承諾
+  about_page_section_specific_title_4: Code.org倡導聯盟
+  about_page_section_specific_title_5: K-12計算機科學框架
+  about_page_section_specific_title_6: Code.org捐款者
+  about_page_section_specific_title_7: 追蹤我們
+  about_page_section_specific_title_8: Code.org的全球足跡
+  about_page_section_specific_description_1: 只有在不同且經常分裂的利益相關者中採用統一的方法才能實現Code.org在K-12計算機科學運動中的全球角色。在兩極分化加劇的時代，為學生增加機會的想法將不同政治派別的人團結在一起。Code.org的團隊成員、學生、教師和支持者的觀點多樣而多元，歡迎他們參與我們的使命。[閱讀更多](%{read_more_url})。
+  about_page_section_specific_description_2: Code.org相信計算機科學是所有學生的基礎，我們致力於在我們的組織[values.](%{values_url})中實現公平、可及性和機會。為了實現這一目標，我們致力於找出並消除阻止殘疾學生和教育工作者的包容和全面參與的障礙。如需進一步瞭解我們的努力，請參閱我們的[無障礙聲明](%{accessibility_url})。
+  about_page_section_specific_description_3: 我們撰寫的所有課程資源和教學課程將永久免費使用，並根據[Creative
+    Commons](%{commons_url})許可證公開授權，允許其他人為非商業目的製作衍生教育資源。如果您有興趣為商業目的授權我們的材料，請[聯絡我們](%{contact_us_url})。我們的課程被翻譯以供全球使用或由不同語言的使用者翻譯。我們的技術是作為[開源項目](%{open_source_url})開發的。
+  about_page_section_specific_description_4: "[Code.org倡導聯盟](%{advocacy_url})是一個由企業和非營利組織組成的兩黨聯盟，協助建立美國聯邦和州政策，以擴大和維持K-12計算機科學的可及性，並擴大該領域的參與和多樣性。我們將[共和黨和民主黨政治領袖](%{leaders_url})聚集在一起，以支持擴大K-12計算機科學的可及性和參與。"
+  about_page_section_specific_description_5: Code.org是指導委員會的成員，協助建立[K-12計算機科學框架](%{framework_url})，這是針對實施計算機科學教育的州、地區和組織的高級指南。該框架獲得了數百位學者、K-12教育工作者、軟體公司、非營利組織和州的支持。
+  about_page_section_specific_description_6: Code.org IRS表格990-[2014](%{irs_url_1})，[2015](%{irs_url_2})，[2016](%{irs_url_3})，[2017](%{irs_url_4})，[2018](%{irs_url_5})，[2019](%{irs_url_6})，[2020](%{irs_url_7})，[2021](%{irs_url_8})。[捐款政策。](%{donation_policy_url})
+  about_page_section_specific_description_7: "[註冊以接收狀態更新](%{sign_up_url})：關於K-12計算機科學運動的進度以及Code.org的工作。或在社交媒體上關注Code.org："
+  about_page_section_specific_description_8: 我們的網站流量超過40％來自美國以外，這個數字還在繼續上升。為了擴大全球對計算機科學的接觸，我們的團隊與[逾100個國際合作夥伴](%{partners_url})密切合作，幫助他們推廣一小時玩程式，倡導政策變革，培訓教師。我們正在與世界各地的教育部合作，並與經濟合作和發展組織和聯合國教科文組織等國際組織合作，使計算機科學成為國際教育話語的一部分。
+  about_page_section_donors_description_1: Code.org®是一家註冊公共501c3非營利組織，獲得公眾的支持。我們感謝支持我們願景的[個人和組織](%{individuals_url})的大力支持。
+  about_page_section_donors_description_2: 上面的代碼成就表明我們能夠利用這些錢來實現強勁的成果。但考慮到我們的非營利機構願望，每個學校的每個孩子都應該能夠接觸計算機科學，在當今數位世界中成為有文化的公民，並測試他們對於進一步探索計算機科學作為職業的興趣。我們還有很長的路要走，才能達成支持這一願景的籌款目標。
+  about_page_donors_link_1: 進行捐款
+  about_page_donors_link_2: "[查看我們的捐款者列表](%{donors_url})"
+  teach_ai_title: 現實實例子。實用資源。
+  teach_ai_description: 學校人工智能指南工具包是政策制定者、學校領袖和教職員的資源，可以在學校制定有關人工智慧的初始指導。
+  teach_ai_button_label: 檢視工具包
+  middle_high_page_main_title: 11歲及以上的學習
+  middle_high_page_main_description: 通過引人入勝的視訊、自定節奏的教程、編程活動等，探索計算機科學世界！
+  middle_high_page_hero_title: 開始一小時玩程式
+  middle_high_page_hero_description: 透過免費的一小時玩程式活動，學習計算機科學的基礎知識，其中包含拖放編碼區塊。有數百個小時的選項可供選擇！
+  middle_high_page_hourofcode_link: 探索一小時玩程式活動
+  middle_high_page_modules_title: 高年級學生編程模組
+  middle_high_page_modules_description: 這些針對初中和高中學生的自定節奏的簡短模組均根據我們的計算機科學探索和計算機科學原理課程改編設計，是學習涵蓋所有編程語言和工具的相關概念的絕佳方法。
+  middle_high_page_modules_card_title_1: 遊戲實驗室簡介
+  middle_high_page_modules_card_title_2: 應用實驗室海龜編程
+  middle_high_page_modules_card_title_3: 應用實驗室事件驅動編程
+  middle_high_page_modules_card_description_1: 在游戲實驗室環境的介紹中，按照自己的節奏推進，編程動畫、互動藝術和遊戲。
+  middle_high_page_modules_card_description_2: 在應用實驗室中解鎖使用JavaScript製作豐富的互動應用程式的能力！
+  middle_high_page_modules_card_description_3: 透過應用實驗室編程環境介紹，讓學生使用JavaScript來建立互動應用程式，你可以按照自己的節奏進行。
+  middle_high_page_modules_card_link: 試試看
+  middle_high_page_make_your_own_title: 製作自己的應用程式、遊戲和網頁
+  middle_high_page_make_your_own_description: '除了課程外，我們還有編程工具讓你探索自己的創造力並製作令人驚嘆的東西。 '
+  middle_high_page_make_your_own_card_title_1: 應用實驗室
+  middle_high_page_make_your_own_card_title_2: 遊戲實驗室
+  middle_high_page_make_your_own_card_title_3: 網路實驗室
+  middle_high_page_make_your_own_card_descrpition_1: 應用實驗室是一個編程環境，你可以在其中製作簡單的應用程式。設計一個應用程式，在JavaScript中使用積木或文本編碼，然後在幾秒鐘內共享你的應用程式。
+  middle_high_page_make_your_own_card_descrpition_2: 遊戲實驗室是一個編程環境，你可以在其中使用互相交互的對象和角色製作簡單的動畫和遊戲。
+  middle_high_page_make_your_own_card_descrpition_3: 網路實驗室是一個編程環境，透過它，你可以用HTML和CSS來建立簡單的網頁。設計網頁，然後在幾秒鐘內分享你的網站。
+  middle_high_page_make_your_own_card_link: 進一步學習
+  middle_high_page_additional_resources_title: 附加資源
+  middle_high_page_additional_resources_description: 有很多方法可以進一步探索計算機科學！瀏覽我們的視訊庫，或進一步瞭解計算機科學領域激動人心的職業。
+  middle_high_page_video_library_title: 探索我們的視訊庫
+  middle_high_page_video_library_description: 通過5-10分鐘的短視訊學習計算機科學基礎知識，主題包括人工智慧、互聯網、計算機如何運作、如何不被黑客攻擊、區塊鏈、職業等等！
+  middle_high_page_video_library_link: 查看視訊庫
+  middle_high_page_cs_journeys_title: 透過計算機科學旅程邁向更遠
+  middle_high_page_cs_journeys_description: 在計算機科學之旅中邁出下一步。探索職業、指導機會、線上課程、獎學金、實習等等！
+  middle_high_page_cs_journeys_link: 探索計算機科學旅程
+  middle_high_page_cs_title: 教室中的計算機科學
+  middle_high_page_cs_description: 這些課程應由教師引導！如果你想看到它們在你的學校教授，請考慮與教師合作，將它們帶到你的課堂。
+  middle_high_page_cs_card_title_1: 計算機科學探索
+  middle_high_page_cs_card_title_2: 計算機科學原理
+  middle_high_page_cs_card_title_3: AP計算機科學A
+  middle_high_page_cs_card_description_1: 為期一年的免費課程，向學生介紹計算機科學的基礎概念，並挑戰他們探索計算和技術如何影響世界。
+  middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
+    students to the foundational concepts of computer science and challenges them
+    to explore how computing and technology can impact the world. Can be taught as
+    an introductory class and as an AP course.
+  middle_high_page_cs_card_description_3: 在 AP® 計算機科學 A（AP® CSA）的免費課程中學習 Java 編程語言的同時，向學生介紹軟件工程和面向對象的設計。
+  middle_high_page_cs_link_1: 探究計算機科學探索
+  middle_high_page_cs_link_2: 探索 CS 原則
+  middle_high_page_cs_link_3: 探究CSA
+  elemeentary_page_main_title: 5至11歲的學習
+  elementary_page_main_description: 通過引人入勝的視訊、自定節奏的教程、編程活動等，探索計算機科學世界！
+  elementary_page_own_pace_title: 繼續按照自己的節奏學習
+  elementary_page_own_pace_description: 使用這兩種絕佳選項，讓學生自己學習計算機科學基礎知識，創建繪圖、遊戲等。
+  elementary_page_own_pace_card_title_1: 准讀者快速課程
+  elementary_page_own_pace_card_title_2: 快速課程
+  elementary_page_own_pace_card_description_1: 按照自己的節奏學習計算機科學！學習創建計算機程式，培養解決問題的技能，並解決有趣的挑戰！製作遊戲和創意項目以與朋友，家人和老師分享。
+  elementary_page_own_pace_link_1: 開始准讀者課程
+  elementary_page_own_pace_link_2: 開始快速課程
+  elementary_page_make_your_own_games_title: 製作自己的動畫和遊戲
+  elementary_page_make_your_own_games_card_title_1: 精靈圖實驗室
+  elementary_page_make_your_own_games_card_description_1: 是時候發揮創意了！使用基於積木的編碼，在精靈圖實驗室中製作一些愚蠢、甜美或古怪的東西。盡情發揮你的想像力！
+  elementary_page_make_your_own_games_link: 試試精靈圖實驗室
+  elementary_page_computer_science_title: 教室中的計算機科學
+  elementary_page_computer_science_description: 這些課程應由教師引導！如果你想看到它們在你的學校教授，請讓家長或監護人與教師合作，將它們帶到你的課堂。
+  elementary_page_computer_science_card_title_1: 計算機科學基礎
+  elementary_page_computer_science_card_title_2: 計算機科學聯繫
+  elementary_page_computer_science_description_1: 為期一年的免費課程，向學生介紹計算機科學的基礎概念，並挑戰他們探索計算和技術如何影響世界。
+  elementary_page_computer_science_description_2: 在計算機科學與數學、語言藝術、科學和社會研究等其他學科之間建立聯繫。
   language_code:
     ar: 阿拉伯人
     az: 阿塞拜疆

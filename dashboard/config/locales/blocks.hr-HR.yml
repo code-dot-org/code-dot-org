@@ -23,6 +23,10 @@ hr:
         options:
           UNIT:
             '"seconds"': sekunde
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -30,6 +34,10 @@ hr:
             '"CAT"': mačke
             '"DOG"': psi
             sprites: sve
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačke
       Dancelab_changePropBy:
         options:
           PROPERTY:

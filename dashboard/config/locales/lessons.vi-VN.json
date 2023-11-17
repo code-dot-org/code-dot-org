@@ -1217,6 +1217,39 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Ong tìm chữ"
         },
+        "K5-OnlinePD/Getting Started": {
+          "name": "Bắt đầu"
+        },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Máy tính khoa học cơ bản"
+        },
+        "K5-OnlinePD/Looking Ahead": {
+          "name": "Nhìn về phía trước"
+        },
+        "K5-OnlinePD/Mastering the Basics: Sequencing": {
+          "name": "Nắm vững các khái niệm cơ bản: Trình tự"
+        },
+        "K5-OnlinePD/Mastering the Basics: Loops": {
+          "name": "Nắm vững các khái niệm cơ bản: Các vòng lặp"
+        },
+        "K5-OnlinePD/Mastering the Basics: Conditionals": {
+          "name": "Nắm vững các khái niệm cơ bản: Các điều kiện"
+        },
+        "K5-OnlinePD/Mastering the Basics: Functions": {
+          "name": "Nắm vững các khái niệm cơ bản: Các chức năng"
+        },
+        "K5-OnlinePD/Mastering the Basics: Events": {
+          "name": "Nắm vững các khái niệm cơ bản: Các sự kiện"
+        },
+        "K5-OnlinePD/Best Practices for Teaching Computer Science": {
+          "name": "Những thực hành tốt nhất cho việc dạy Khoa học máy tính"
+        },
+        "K5-OnlinePD/Planning": {
+          "name": "Lập kế hoạch"
+        },
+        "K5-OnlinePD/Next Steps": {
+          "name": "Bước tiếp theo"
+        },
         "csd1-2019/Intro to Problem Solving": {
           "name": "Giới thiệu phần giải quyết vấn đề"
         },
@@ -1732,6 +1765,30 @@
         },
         "pre-express-2019/Make a Game in Play Lab": {
           "name": "Trận chiến hoàng gia với các sự kiện"
+        },
+        "k5-onlinepd-2019/Sequencing": {
+          "name": "Chuỗi tuần tự"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Vòng lặp"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Các sự kiện"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Điều kiện"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Các hàm"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Các biến"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Cho vòng lặp"
+        },
+        "k5-onlinepd-2019/Sprite Lab": {
+          "name": "Sprite Lab"
         },
         "coursea-2020/Safety in My Online Neighborhood": {
           "name": "Giữ an toàn trong môi trường trực tuyến của tôi"
@@ -3201,6 +3258,39 @@
           "preparation": "-   Làm thử bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào đối với lớp của bạn.\n-   (Tùy chọn) Chọn vài bài tập để làm theo nhóm trên lớp.\n-   Đảm bảo tất cả học sinh đều có Nhật ký suy nghĩ.",
           "purpose": "Trong hoạt động trực tuyến này, học sinh sẽ học cách sử dụng các sự kiện trong Play Lab. Họ sẽ bắt đầu bằng cách huấn luyện hiệp sĩ di chuyển khi nhấn một phím mũi tên, sau đó kết thúc bài học với cơ hội thể hiện các kỹ năng còn lại mà họ đã học được trong suốt khóa học này, bao gồm trình tự và vòng lặp, trong bài tập chơi tự do cuối cùng.",
           "student_overview": "Sử dụng sự kiện để tạo một câu chuyện hoặc làm game tương tác."
+        },
+        "kodea-pd-2021/Getting Started": {
+          "name": "Bắt đầu"
+        },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Máy tính khoa học cơ bản"
+        },
+        "kodea-pd-2021/Looking Ahead": {
+          "name": "Nhìn về phía trước"
+        },
+        "kodea-pd-2021/Mastering the Basics: Sequencing": {
+          "name": "Nắm vững các khái niệm cơ bản: Trình tự"
+        },
+        "kodea-pd-2021/Mastering the Basics: Loops": {
+          "name": "Nắm vững các khái niệm cơ bản: Các vòng lặp"
+        },
+        "kodea-pd-2021/Mastering the Basics: Conditionals": {
+          "name": "Nắm vững các khái niệm cơ bản: Các điều kiện"
+        },
+        "kodea-pd-2021/Mastering the Basics: Functions": {
+          "name": "Nắm vững các khái niệm cơ bản: Các chức năng"
+        },
+        "kodea-pd-2021/Mastering the Basics: Events": {
+          "name": "Nắm vững các khái niệm cơ bản: Các sự kiện"
+        },
+        "kodea-pd-2021/Best Practices for Teaching Computer Science": {
+          "name": "Những thực hành tốt nhất cho việc dạy Khoa học máy tính"
+        },
+        "kodea-pd-2021/Planning": {
+          "name": "Lập kế hoạch"
+        },
+        "kodea-pd-2021/Next Steps": {
+          "name": "Bước tiếp theo"
         },
         "csd1-2022/Intro to Problem Solving": {
           "name": "Giới thiệu phần giải quyết vấn đề"
@@ -5395,9 +5485,6 @@
           "overview": "⚠️ Bài học này dành cho các lớp học muốn hiển thị toàn bộ [Chuỗi video hoạt động của AI như thế nào](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) trong một ngày\\*\\*. Nó không nhằm mục đích được dạy theo trình tự với các bài học khác trong bài học này, trong đó giới thiệu mỗi video một ngày tại một thời điểm.\n\nHọc sinh theo dõi từng video bằng cách kết hợp từ vựng từ video, sau đó trả lời câu hỏi phản ánh về mỗi video. Giáo án và slide rất thưa thớt và có kết thúc mở để cho phép ứng biến và tùy chỉnh để phù hợp với lớp học của bạn.",
           "preparation": "-   In ra hướng dẫn hoạt động\n-   Chiếu các slide trên máy chiếu video"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Giờ Lập trình 2013"
-        },
         "applab-intro/Intro to App Lab": {
           "name": "Giới thiệu về AppLab",
           "overview": "Bài hướng dẫn này được thiết kế để nhanh chóng giới thiệu môi trường lập trình App Lab như một công cụ mạnh mẽ để lập trình và chia sẻ ứng dụng. Bản thân bài hướng dẫn này sẽ dạy học sinh tạo và điều khiển các nút, chữ, hình ảnh, âm thanh và màn hình trong JavaScript bằng cách sử dụng khối hoặc chữ. Ở phần cuối bài hướng dẫn, học sinh sẽ có thời gian phát triển dự án mà họ đã bắt đầu xây dựng thành ứng dụng “Chọn cuộc phiêu lưu của riêng bạn”, “Thiệp mừng” hoặc “Bài trắc nghiệm tính cách”. Họ cũng có thể tiếp tục thực hiện các dự án khác trên trang code.org/applab.\n\nChúc bạn vui vẻ khi hoàn thành Giờ lập trình của mình với App Lab!\n\n**Độ tuổi phù hợp:** Bài hướng dẫn được thiết kế cho học sinh trên 13 tuổi. Vì bài hướng dẫn này cho phép học sinh tải lên âm thanh và hình ảnh tùy chỉnh, học sinh nhỏ tuổi không nên học bài này mà không có sự giám sát. Để bảo vệ quyền riêng tư của học sinh, nếu học sinh dưới 13 tuổi, trẻ sẽ không thể học bài này trừ khi bạn thiết lập tài khoản cho trẻ trước trong nhóm đào tạo mà bạn quản lý.",
@@ -5567,9 +5654,10 @@
           "student_overview": "Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào tạo của mình để có cả các sinh vật biển khác sống trong nước. Trong phần thứ hai của hoạt động, học sinh sẽ tự chọn nhãn để áp dụng lên hình ảnh những con cá tạo ngẫu nhiên. Dữ liệu đào tạo này được sử dụng cho mô hình học máy mà sau đó có thể tự gắn nhãn các hình ảnh mới."
         },
         "outbreak/Outbreak": {
+          "name": "Lập trình mô phỏng",
           "overview": "Bài học này kết hợp **phát triển kỹ năng** liên quan đến sự kiện với một **dự án nhỏ**, trong đó học sinh có thể xây dựng bản mô phỏng máy tính của riêng mình trong Sprite Lab. Học sinh sẽ nghiên cứu bản mô phỏng để hiểu tốc độ lây lan nhanh chóng của vi rút và phương pháp làm chậm tốc độ đó.",
-          "preparation": "-   Khám phá các bài tập để tìm ra bất kỳ vấn đề tiềm ẩn nào trong lớp học.\n-   Đảm bảo mỗi học sinh đều có nhật ký suy nghĩ.",
-          "purpose": "Trong bài học trước, học sinh đã thu thập và giải thích dữ liệu từ một bản mô phỏng đơn giản. Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng.",
+          "preparation": "### Một tuần trước Giờ lập trình\n\n-   Xem lại [Hướng dẫn Giờ lập trình dành cho giáo viên](https://hourofcode.com/us/how-to)và \\[Phương pháp hay nhất của các giáo viên thành công[1] để bắt đầu lập kế hoạch sự kiện Giờ lập trình.\n\n-   [Đăng ký sự kiện Giờ lập trình](https://hourofcode.com/us) nếu bạn muốn nhận hỗ trợ lớp học, poster giảm giá hoặc tham gia vào chương trình tặng quà robot (chỉ ở Hoa Kỳ).\n\n-   Tự xem lại và hoàn thành bài hướng dẫn trực tuyến: [Dịch bệnh bùng phát](https://studio.code.org/s/outbreak/)\n\n-   Nhớ kiểm tra trước khi yêu cầu học sinh làm.\n\n-   Hãy kiểm tra thiết bị công nghệ và quyết định xem bạn có cần khắc phục sự cố gì trước Giờ lập trình hay không.\n\n#### Một ngày trước Giờ lập trình\n\n-   Mỗi học sinh hoàn thành hoạt động sẽ nhận được một [chứng chỉ](https://studio.code.org/certificates/batch). Hãy in chứng chỉ cho mọi người để hoạt động này dễ dàng hơn vào cuối Giờ lập trình.\n-   (không bắt buộc) Hãy khuyên học sinh mang theo tai nghe để sử dụng trong hoạt động này.",
+          "purpose": "Trong bài học này, học sinh sẽ làm theo hướng dẫn để viết mã lệnh cho mô hình mô phỏng của riêng mình. Những kiến thức trước đó của học sinh về sự lây lan của vi rút trong thế giới thực sẽ được áp dụng trong một tình huống giả tưởng. ",
           "student_overview": "Một loại vi rút đã lây lan tới Thị Trấn Quái Vật rồi! Hãy học cách tạo trình mô phỏng vi rút và giúp những con quái vật khỏe mạnh trở lại."
         },
         "playlab/Play Lab": {
@@ -5611,51 +5699,6 @@
           "preparation": "-   Dùng thử Tiện ích nén văn bản\n-   Xem lại các lời khuyên đào tạo để quyết định tùy chọn nào bạn muốn sử dụng",
           "purpose": "Nguyên tắc cơ bản đằng sau thao tác nén là phát triển một phương pháp hoặc giao thức sử dụng ít bit hơn để biểu diễn thông tin gốc. Cách chúng tôi biểu diễn dữ liệu nén trong bài học này, với “từ điển” các mẫu lặp lại tương tự như [Lược đồ nén LZW](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), nhưng cần lưu ý rằng LZW hơi khác so với những gì học sinh làm trong bài học này. Học sinh sáng chế ra cách riêng của họ ở đây. LZW không chỉ được sử dụng cho văn bản (tệp zip), mà còn với định dạng tệp ảnh GIF.",
           "student_overview": "Tại một thời điểm nào đó, chúng ta sẽ đạt đến giới hạn vật lý về tốc độ gửi các bit và nếu muốn gửi một lượng lớn thông tin nhanh hơn, chúng ta phải tìm cách biểu diễn cùng một thông tin với số bit ít hơn – chúng ta phải nén dữ liệu."
-        },
-        "applab-2hour/Event Driven Programming": {
-          "name": "Lập trình theo sự kiện"
-        },
-        "applab-2hour/Basic App Functionality": {
-          "name": "Chức năng cơ bản của Ứng dụng"
-        },
-        "frequency_analysis/Frequency Analysis": {
-          "name": "Phân tích tần suất"
-        },
-        "netsim/Overview and Setup Instructions": {
-          "name": "Tổng quan và hướng dẫn cài đặt"
-        },
-        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
-          "name": "Mạng đồng đẳng - Gửi Bit dữ liệu trên đường dây được chia sẻ"
-        },
-        "netsim/Peer to Peer - Sending Numbers": {
-          "name": "Mạng đồng đẳng - Gửi các con số"
-        },
-        "netsim/Peer to Peer - Sending Ascii": {
-          "name": "Mạng đồng đẳng - Gửi Ascii"
-        },
-        "netsim/Broadcasting messages": {
-          "name": "Thông điệp phát thanh truyền hình"
-        },
-        "netsim/Routers and addresses": {
-          "name": "Bộ định tuyến và địa chỉ"
-        },
-        "netsim/Packets and Reliability": {
-          "name": "Gói dữ liệu và độ tin cậy"
-        },
-        "netsim/Manual DNS": {
-          "name": "Hướng dẫn sử dụng DNS"
-        },
-        "netsim/Automatic DNS node": {
-          "name": "Nút DNS tự động"
-        },
-        "netsim/Internet Simulator Freeplay": {
-          "name": "Chế độ chơi tự do mô phỏng internet"
-        },
-        "poetry-hoc3/lesson-1": {
-          "name": "Tìm hiểu cảm xúc"
-        },
-        "vigenere/Vigenere": {
-          "name": "Vigenere"
         },
         "allthethings/Jigsaw": {
           "name": "Ghép hình"
@@ -5776,6 +5819,12 @@
         },
         "allthethings/lesson-49": {
           "name": "Âm nhạc"
+        },
+        "applab-2hour/Event Driven Programming": {
+          "name": "Lập trình theo sự kiện"
+        },
+        "applab-2hour/Basic App Functionality": {
+          "name": "Chức năng cơ bản của Ứng dụng"
         },
         "20-hour/Introduction to Computer Science": {
           "name": "Giới thiệu về khoa học máy tính"
@@ -6077,12 +6126,48 @@
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Thách thức khắc nghiệt - Toàn diện"
         },
+        "frequency_analysis/Frequency Analysis": {
+          "name": "Phân tích tần suất"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Giờ Lập trình 2013"
+        },
         "jigsaw/Jigsaw": {
           "name": "Ghép hình",
           "overview": "Bài học này sẽ cung cấp cho học sinh ý tưởng về những hoạt động sẽ diễn ra khi các em đến phòng máy tính. Bài học bắt đầu với một cuộc thảo luận ngắn giới thiệu về cách hành xử trong phòng máy tính, sau đó sẽ tiếp tục sử dụng máy tính để hoàn thành các bài tập trực tuyến.",
           "preparation": "-   Xem trang web [Common Sense Education](https://www.commonsense.org/education/digital-citizenship) để biết thêm nội dung về an toàn trên mạng.",
           "purpose": "Mục tiêu chính của bài học này là phát triển trải nghiệm của học sinh với máy tính. Bằng cách đề cập đến các chức năng máy tính cơ bản nhất như nhấp chuột, kéo và thả, chúng ta đang tạo ra một sân chơi công bằng hơn trong lớp cho các bài tập trong tương lai. Bài học này cũng là cơ hội tuyệt vời để giới thiệu thuật ngữ phần cứng máy tính cơ bản, có thể bao gồm “chuột”, “bàn di chuột” hoặc “màn hình cảm ứng”, tùy thuộc vào thiết bị của bạn.",
           "student_overview": "Nhấp chuột và kéo để hoàn thành các bài tập."
+        },
+        "netsim/Overview and Setup Instructions": {
+          "name": "Tổng quan và hướng dẫn cài đặt"
+        },
+        "netsim/Peer to Peer - Sending Bits on a Shared Wire": {
+          "name": "Mạng đồng đẳng - Gửi Bit dữ liệu trên đường dây được chia sẻ"
+        },
+        "netsim/Peer to Peer - Sending Numbers": {
+          "name": "Mạng đồng đẳng - Gửi các con số"
+        },
+        "netsim/Peer to Peer - Sending Ascii": {
+          "name": "Mạng đồng đẳng - Gửi Ascii"
+        },
+        "netsim/Broadcasting messages": {
+          "name": "Thông điệp phát thanh truyền hình"
+        },
+        "netsim/Routers and addresses": {
+          "name": "Bộ định tuyến và địa chỉ"
+        },
+        "netsim/Packets and Reliability": {
+          "name": "Gói dữ liệu và độ tin cậy"
+        },
+        "netsim/Manual DNS": {
+          "name": "Hướng dẫn sử dụng DNS"
+        },
+        "netsim/Automatic DNS node": {
+          "name": "Nút DNS tự động"
+        },
+        "netsim/Internet Simulator Freeplay": {
+          "name": "Chế độ chơi tự do mô phỏng internet"
         },
         "pixelation/Black & White Pixelation Tutorial": {
           "name": "Bài hướng dẫn điểm ảnh hoá trắng và đen"
@@ -6098,6 +6183,15 @@
         },
         "pixelation/Color Pixelation Freeplay": {
           "name": "Chế độ chơi tự do điểm ảnh hoá màu sắc"
+        },
+        "poetry-hoc3/lesson-1": {
+          "name": "Tìm hiểu cảm xúc"
+        },
+        "vigenere/Vigenere": {
+          "name": "Vigenere"
+        },
+        "allthethings/lesson-50": {
+          "name": "Trò chuyện AI"
         }
       }
     }

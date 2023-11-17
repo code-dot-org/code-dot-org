@@ -1,4 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -8,6 +10,7 @@ import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import {STATES} from '@cdo/apps/geographyConstants';
 import DCDO from '@cdo/apps/dcdo';
@@ -150,6 +153,9 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       study: 'amazon-future-engineer-eligibility',
       event: 'continue',
       data_json: JSON.stringify(submitData),
+    });
+    analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
+      submitData: JSON.stringify(submitData),
     });
 
     this.props.updateFormData(submitData);
@@ -420,7 +426,7 @@ const styles = {
   },
   descriptiveText: {
     display: 'block',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontWeight: 'bold',
     fontSize: 14,
     border: 'none',

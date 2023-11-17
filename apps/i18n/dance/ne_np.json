@@ -1,5 +1,10 @@
 {
+  "danceAiModalBack": "पछाडि",
+  "danceAiModalClose": "बन्द गर्नुहोस्",
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalExplanationButton": "थप जान्नुहोस्",
   "danceFeedbackDidntPress": "तपाईंको नृत्य चलिरहेको बेलामा वाण कि थिच्न निश्चित हुनुहोस् ।",
+  "danceFeedbackKeepCoding": "Keep coding! Something's not quite right yet.",
   "danceFeedbackNeedDifferentDance": "तपाईंले फरक नृत्य प्रयोग गर्नु आवश्यक छ ।",
   "danceFeedbackNeedEveryTwoMeasures": "तपाईंले `every 2 measures` खण्ड प्रयोग गर्दै हुनुहुन्छ भन्ने निश्चित गर्नुहोस् ।",
   "danceFeedbackNeedMakeANewDancer": "दोस्रो डान्सर सिर्जना गर्न `make a new` खण्ड प्रयोग गर्नुहोस् ।",
