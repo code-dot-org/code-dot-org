@@ -141,6 +141,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
               text={isSendInProgress ? i18n.inProgress() : emailGuideButtonText}
               onClick={validateAndSave}
               color={Button.ButtonColor.brandSecondaryDefault}
+              disabled={isSendInProgress}
             />
           </div>
         </AccessibleDialog>
