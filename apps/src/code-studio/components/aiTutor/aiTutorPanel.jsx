@@ -10,8 +10,8 @@ import GeneralChatTutor from './generalChatTutor';
 const icon = require('@cdo/static/ai-bot.png');
 
 const AITutorPanel = props => {
-  const {levelType} = props;
-  const isCodingLevel = levelType === 'Javalab';
+  const {level} = props;
+  const isCodingLevel = level.type === 'Javalab';
 
   const initialCheckboxes = [
     {
@@ -24,7 +24,7 @@ const AITutorPanel = props => {
       key: 'validation',
       label: 'Failing tests',
       checked: false,
-      hidden: true,
+      hidden: !level.hasValidation,
     },
     {
       key: 'question',
@@ -80,7 +80,10 @@ const AITutorPanel = props => {
 };
 
 AITutorPanel.propTypes = {
-  levelType: PropTypes.string,
+  level: PropTypes.shape({
+    type: PropTypes.string,
+    hasValidation: PropTypes.bool,
+  }),
 };
 
 export default AITutorPanel;
