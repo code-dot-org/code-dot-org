@@ -615,10 +615,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           >
             <ToggleGroup
               selected={currentToggle}
-              activeColor={color.teal}
+              activeColor={color['light_primary_500']}
               onChange={(value: Toggle) => {
                 setCurrentToggle(value);
               }}
+              useRebrandedLikeStyles
             >
               <button key={0} type="button" value={Toggle.AI_BLOCK}>
                 {i18n.danceAiModalEffectButton()}
