@@ -40,9 +40,9 @@ module I18n
               source_path = File.join(I18N_SOURCE_DIR_PATH, file_name)
               next unless File.exist?(source_path)
 
-              RedactRestoreUtils.backup_file(source_path)
+              RedactRestoreUtils.backup_source_file(source_path)
 
-              RedactRestoreUtils.redact_file(source_path, source_path, REDACT_PLUGINS)
+              RedactRestoreUtils.redact(source_path, source_path, REDACT_PLUGINS)
             end
           end
         end

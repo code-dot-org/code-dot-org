@@ -33,7 +33,7 @@ module I18n
             return false unless File.exist?(original_file_path)
 
             # Course content should be merged with existing content, so existing data doesn't get lost
-            restored_i18n_data = RedactRestoreUtils.restore_file(original_file_path, crowdin_file_path, REDACT_PLUGINS)
+            restored_i18n_data = RedactRestoreUtils.restore(original_file_path, crowdin_file_path, REDACT_PLUGINS)
             i18n_data = JSON.load_file(crowdin_file_path)
             File.write(crowdin_file_path, JSON.pretty_generate(i18n_data.deep_merge(restored_i18n_data)))
 
