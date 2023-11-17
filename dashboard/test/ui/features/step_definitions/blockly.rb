@@ -26,6 +26,7 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
+  puts code
   @browser.execute_script code
 end
 
@@ -36,6 +37,7 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)" plus offset (\d+), (\d+)$/ do |from, to, dx, dy|
   code = generate_drag_code(get_block_id(from), get_block_id(to), dx, dy)
+  puts code
   @browser.execute_script code
 end
 
@@ -286,9 +288,24 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   @browser.execute_script(script)
 end
 
-Then(/^I click block button with selector "(.*?)"$/) do |selector|
+Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
+  script = "
+    Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
+  "
+  @browser.execute_script(script)
+end
+
+Then(/^I simulate click on block button with selector "(.*?)"$/) do |selector|
   script = "
     $('#{selector}').simulate('pointerdown')
+    $('#{selector}').simulate('pointerup')
+  "
+  @browser.execute_script(script)
+end
+
+Then(/^I click block button with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('click')
   "
   @browser.execute_script(script)
 end
@@ -296,6 +313,11 @@ end
 Then(/^the open flyout has (.*?) blocks$/) do |n|
   script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
+end
+
+Then(/^I drag and drop block with selector "(.*?)" to offset ((.*?), (.*?))$/) do |selector, dx, dy|
+  element = @browser.find_element(:css, selector)
+  element.drag_and_drop_by(dx.to_i, dy.to_i)
 end
 
 def current_block_xml
