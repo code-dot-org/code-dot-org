@@ -23,9 +23,9 @@ export function setBlockDescription(block, extraState) {
 // from the description field on the block. Otherwise we get it from
 // the description property on the block.
 export function getBlockDescription(block) {
-  let description = block.description;
+  let fieldDescription;
   if (Blockly.useModalFunctionEditor) {
-    description = block.getFieldValue('DESCRIPTION');
+    fieldDescription = block.getFieldValue('DESCRIPTION');
   }
-  return description;
+  return fieldDescription || block.description;
 }
