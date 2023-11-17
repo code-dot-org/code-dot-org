@@ -35,7 +35,7 @@ class PotentialTeachersController < ApplicationController
     name = current_user&.name || params[:name]
     email = current_user&.email || params[:email]
     unit_id = params[:script_id]
-    lessons = Unit.find_by_id(unit_id).lessons
+    lessons = Unit.get_from_cache(unit_id).lessons
     lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
     TeacherMailer.hoc_tutorial_email(name, email, lesson_plan_html_url).deliver_now
   end
