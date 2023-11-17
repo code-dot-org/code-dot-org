@@ -342,7 +342,6 @@ class HomeControllerTest < ActionController::TestCase
     end
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
     query_count = 17
@@ -399,7 +398,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
     sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
     query_count = 18
@@ -420,7 +418,6 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
     sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
     query_count = 17

@@ -158,10 +158,10 @@ FactoryBot.define do
           authorized_teacher.save
         end
       end
-      factory :ai_chat_access do
-        after(:create) do |ai_chat_access|
-          ai_chat_access.permission = UserPermission::AI_CHAT_ACCESS
-          ai_chat_access.save
+      factory :ai_tutor_access do
+        after(:create) do |ai_tutor_access|
+          ai_tutor_access.permission = UserPermission::AI_TUTOR_ACCESS
+          ai_tutor_access.save
         end
       end
       factory :facilitator do
@@ -344,6 +344,26 @@ FactoryBot.define do
         end
       end
 
+      factory :student_with_ai_tutor_access do
+        after(:create) do |user|
+          teacher = create :teacher
+          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
+          section = create :section, ai_tutor_enabled: true, user: teacher
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
+      factory :student_without_ai_tutor_access do
+        after(:create) do |user|
+          teacher = create :teacher
+          create :single_user_experiment, min_user_id: teacher.id, name: 'ai-tutor'
+          section = create :section, ai_tutor_enabled: false, user: teacher
+          create :follower, student_user: user, section: section
+          user.reload
+        end
+      end
+
       trait :migrated_imported_from_google_classroom do
         google_sso_provider
         without_email
@@ -520,6 +540,18 @@ FactoryBot.define do
           data: {
             oauth_token: 'some-clever-token'
           }.to_json
+        )
+      end
+    end
+
+    trait :with_lti_authentication_option do
+      after(:create) do |user|
+        create(:authentication_option,
+          user: user,
+          email: user.email,
+          hashed_email: user.hashed_email,
+          credential_type: AuthenticationOption::LTI_V1,
+          authentication_id: 'https://lms.fake|12345|abcdef',
         )
       end
     end
@@ -1882,6 +1914,17 @@ FactoryBot.define do
     association :rubric_ai_evaluation
     understanding {0}
     ai_confidence {1}
+  end
+
+  factory :learning_goal_ai_evaluation_feedback do
+    association :learning_goal_ai_evaluation
+    teacher_id {0}
+    ai_feedback_approval {false}
+    false_positive {false}
+    false_negative {false}
+    vague {false}
+    feedback_other {true}
+    other_content {'other'}
   end
 
   factory :potential_teacher do

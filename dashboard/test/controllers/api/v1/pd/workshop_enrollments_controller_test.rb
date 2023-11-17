@@ -68,7 +68,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_equal @unrelated_enrollment.email, response_json[0]['email']
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers can see enrollments in their workshops' do
     sign_in @organizer
     get :index, params: {workshop_id: @organizer_workshop.id}
@@ -78,7 +77,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_equal @organizer_workshop_enrollment.email, response_json[0]['email']
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers cannot see enrollments in workshops they are not organizing' do
     sign_in @organizer
     get :index, params: {workshop_id: @unrelated_workshop.id}
@@ -145,7 +143,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     refute Pd::Enrollment.exists?(@unrelated_enrollment.id)
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers can delete enrollments from their own workshops' do
     sign_in @organizer
 
@@ -154,7 +151,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     refute Pd::Enrollment.exists?(@organizer_workshop_enrollment.id)
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers cannot delete enrollments from workshops they are not organizing' do
     sign_in @organizer
 
@@ -335,7 +331,6 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     assert_equal RESPONSE_MESSAGES[:DUPLICATE], JSON.parse(@response.body)["workshop_enrollment_status"]
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'creating an enrollment with email match from organizer sends \'own\' workshop enrollment status' do
     params = enrollment_test_params.merge(
       {

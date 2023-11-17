@@ -13884,6 +13884,7 @@ ru:
   tutorial_naflogo_name: 'Code your Brand: Make a Logo'
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
+  tutorial_generationai_name: Поколение ИИ
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -14355,6 +14356,7 @@ ru:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_generationai_longdescription: 'Отправляйтесь в путешествие во времени и создавайте свои изобретения, основанные на искусственном интеллекте, в новой мини-игре «Час кода: Поколение ИИ». Изучите решение задач, творческий подход и вычислительное мышление, применяя принципы RAI. Игра учит основам кодирования через блоки или Python, научая созданию передового ИИ.'
   tutorial_bsimage_string_detail_grades: 6+ класс (11 и выше)
   tutorial_bscomputing_string_detail_grades: 6+ класс (11 и выше)
   tutorial_stackpython_string_detail_grades: 6+ класс (11 и выше)
@@ -14486,6 +14488,7 @@ ru:
   tutorial_madmobile_string_detail_grades: 6+ класс (11 и выше)
   tutorial_intelinosmile_string_detail_grades: Предварительная книга — 8 класс
   tutorial_intelinoaisign_string_detail_grades: 2-8 классы
+  tutorial_generationai_string_detail_grades: 2-5 классы (7-10 лет) 6-8 классы (11-13 лет) 9 классы и старше (возраст от 14 лет)
   tutorial_bsimage_string_platforms: Chrome, Firefox, сафари
   tutorial_bscomputing_string_platforms: Отключен
   tutorial_stackpython_string_platforms: Все современные браузеры, планшет Android,
@@ -14655,6 +14658,7 @@ ru:
   tutorial_madmobile_string_platforms: Все современные браузеры
   tutorial_intelinosmile_string_platforms: Все современные браузеры, iPad
   tutorial_intelinoaisign_string_platforms: Все современные браузеры
+  tutorial_generationai_string_platforms: Компьютеры (ПК и Mac), Android (устройства Chromebook), iPad
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14786,6 +14790,7 @@ ru:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Языконезависимая программа
   tutorial_stackpython_string_detail_programming_languages: питон
@@ -14918,6 +14923,7 @@ ru:
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Блоки
   tutorial_intelinoaisign_string_detail_programming_languages: Блоки
+  tutorial_generationai_string_detail_programming_languges: Блоки, Python
   school_not_found_heading: Мы не смогли найти вашу школу. Пожалуйста, введите дополнительную
     информацию.
   school_name: Название школы
