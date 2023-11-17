@@ -4,8 +4,8 @@ import style from './ai-tutor.module.scss';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useSelector, useDispatch} from 'react-redux';
 
-// AI Tutor feature that explains to students why their code did not compile.
-const CompilationAssistant = () => {
+// AI Tutor feature that explains to students why their code is not passing tests.
+const ValidationTutor = () => {
   const dispatch = useDispatch();
   const javalabState = useSelector(state => state.javalabEditor);
   const studentCode =
@@ -19,17 +19,17 @@ const CompilationAssistant = () => {
 
   return (
     <div className={style.compilationAssistant}>
-      <h4>Why didn't my code compile?</h4>
+      <h4>Why aren't my tests passing?</h4>
       <Button
         text="Ask AI Tutor"
         isPending={aiTutorState.isWaitingForAIResponse}
         pendingText="waiting"
         onClick={() => handleSend(studentCode)}
-        disabled={!javalabState.hasCompilationError}
+        disabled={true}
       />
       <p id="ai-response">{aiTutorState.aiResponse}</p>
     </div>
   );
 };
 
-export default CompilationAssistant;
+export default ValidationTutor;
