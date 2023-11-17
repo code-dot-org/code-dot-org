@@ -125,3 +125,14 @@
 
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'cookie_banner.haml')), type: :haml, locals: {dashboard: true}
     = yield :body_scripts
+
+    :javascript
+      (function (w, d, s) {
+          var a = d.getElementsByTagName('head')[0];
+          var r = d.createElement('script');
+          r.async = 1;
+          r.src = s;
+          r.setAttribute('id', 'usetifulScript');
+          r.dataset.token = "7c0e758bcf6f40594070a097e7a56e81";
+                              a.appendChild(r);
+        })(window, document, "https://www.usetiful.com/dist/usetiful.js");
