@@ -18,16 +18,6 @@ $ai-modal-border-width: 8px;
   }
 }
 
-@keyframes appear-disappear {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-
 // Emoji moves across linearly but downwards with acceleration.
 @keyframes flying-emoji-x {
   0% {
@@ -153,7 +143,8 @@ $ai-modal-border-width: 8px;
           &:focus-visible {
             // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
             // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
-            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability - we'll simply use SegmentedButton here
+            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability -
+            // we'll simply use SegmentedButton here.
             outline: 2px solid $light_primary_500 !important;
           }
         }
@@ -255,12 +246,6 @@ $ai-modal-border-width: 8px;
       }
     }
 
-    .scoreArea {
-      position: absolute;
-      left: 270px;
-      top: 120px;
-    }
-
     .previewArea {
       position: absolute;
       width: 280px;
@@ -273,29 +258,8 @@ $ai-modal-border-width: 8px;
       transition: left 1.5s, box-shadow 0.3s;
       left: 50%;
 
-      &Generating {
-
-        /*animation: appear 2s*/ /*, preview-right-to-normal 0.5s*/;
-        /*left: 70%;*/
-        /*opacity: 0.4;*/
-      }
-
-      &Generated {
-        /*animation: appear 2s ease-in;*/
-      }
-
-      &Results {
-        left: 50%;
-        /*animation: appear 0.7s;*/
-      }
-
       &Yes {
         box-shadow: 0 0 0 4px $yes-color;
-        border-radius: 4px;
-      }
-
-      &No {
-        box-shadow: 0 0 0 2px $no-color;
         border-radius: 4px;
       }
 
@@ -329,15 +293,10 @@ $ai-modal-border-width: 8px;
         &Back {
           position: absolute;
           backface-visibility: hidden;
-          /*left: 50%;*/
-        }
-
-        &Front {
-          /*transform: translateX(-50%);*/
         }
 
         &Back {
-          transform: rotateY(180deg) /* translateX(50%)*/;
+          transform: rotateY(180deg);
 
           .blockPreview {
             margin-top: 50px;
