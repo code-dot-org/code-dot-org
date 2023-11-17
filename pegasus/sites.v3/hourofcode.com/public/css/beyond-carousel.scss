@@ -70,9 +70,7 @@ section.activities {
 .carousel-wrapper {
   padding-bottom: 0;
   margin-bottom: 50px;
-  @media (max-width: 1279px) {
-    overflow: hidden;
-  }
+
 
   .slides {
     position: relative !important;
@@ -84,24 +82,24 @@ section.activities {
     gap: 1.5rem;
   }
 
-  button.carousel__prev,
-  button.carousel__next {
+  a.slide-prev,
+  a.slide-next {
     display: none !important;
   }
 
   @media screen and (min-width: 1280px) {
-    button.carousel__prev {
+    a.slide-prev {
       position: absolute;
       left: -3.5rem;
     }
 
-    button.carousel__next {
+    a.slide-next {
       position: absolute;
       right: -3.5rem;
     }
 
-    button.carousel__prev,
-    button.carousel__next {
+    a.slide-prev,
+    a.slide-next {
       display: block !important;
       top: calc(50% - 50px);
       background: none;
@@ -224,7 +222,12 @@ section.activities {
   .action-block-wrapper{
     width: 100%;
   }
+  button.slide-prev
+  button.slide-next {
+    display: none;
+  }
 } 
+
 .age-tags {
     color: #0093A4;
 }
