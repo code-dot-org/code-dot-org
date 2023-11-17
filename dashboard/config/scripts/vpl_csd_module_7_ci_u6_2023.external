@@ -4,31 +4,21 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-#Previously On...
+# Curriculum Investigation
 
 ## Overview
 
-##### In this section, you will investigate lessons 1 through 6 in the AI and Machine Learning unit. This is a high-level overview of the content. It is intended to provide background context for the synchronous session activities. Mastery is not an expectation here. You may want to write down ideas about how to teach these lessons in your journal throughout the investigations. The times below are suggestions.  Feel free to take as much time as you need.  
+##### In this section, you will investigate four lessons in the Creating Apps with Devices unit. Each lesson includes an investigation goal and task. Reflection prompts are included to further guide your planning and implementation. You may want to write down ideas about how to teach these lessons in your journal throughout the investigations. The times below are suggestions. Feel free to take as much time as you need.
+
+##### **You will not need a Circuit Playground or micro:bit to complete the following activities.**
 
 ## Lesson Investigations
 
-* ##### Become familiar with:
+##### Become familiar with:
 
-	* ##### **Lesson 1:** Intro to App Lab
-    
-	* ##### **Lesson 2:** Introduction to Machine Learning
-
-	* ##### **Lesson 3:** Types of Machine Learning
-    
-	* ##### **Lesson 4:** Innovations in AI
-
-	* ##### **Lesson 5:** Patterns in Data
-    
-    * ##### **Lesson 6:** Classification Models
-
-
-
-
-
-
+* ##### **Lesson 1:** Intro to App Lab
+* ##### **Lesson 2:** Physical Designs
+* ##### **Lesson 3:** The Circuit Playground OR Introducing the micro:bit
+* ##### **Lesson 4:** Updating Screen Elements
+* ##### **Lesson 5:** Board Events
 MARKDOWN
