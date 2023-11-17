@@ -517,6 +517,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     return (
       <div
         className={moduleStyles.inputsContainer}
+        tabIndex={0}
         onClick={handleStartOverClick}
       >
         {Array.from(Array(SLOT_COUNT).keys()).map(index => {
@@ -965,7 +966,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
         isHighlighted && moduleStyles.emojiIconButtonHighlighted,
         className
       )}
-      title={item.emoji}
+      aria-label={item.emoji}
     />
   );
 };
