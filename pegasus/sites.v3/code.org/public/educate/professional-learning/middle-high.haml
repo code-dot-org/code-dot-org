@@ -8,27 +8,21 @@ theme: responsive_full_width
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::MIDDLE_AND_HIGH_SCHOOL_PL_PAGE_VISITED_EVENT
 
-%section.hero-banner-basic{style: "background: #FFDFA1"}
+%section.top
   .wrapper
-    .text-wrapper
-      %h1 Code.org Professional Learning
-      %h2.heading-lg Help today's students become tomorrow's superheroes.
-      %p.no-margin-bottom Find your local professional learning workshops for middle and high school and apply today!
-    .clear
-    %img{src: "/images/professional-learning/pl-superhero-girl-crop.png", alt: ""}
-
-%section
-  .wrapper
-    %div.col-45{style: "margin-bottom: 1rem"}
-      %h2 Why Code.org professional learning?
-      %p Our engaging workshops are for new and experienced computer science teachers!
-      %p <strong>In this program, you will:</strong>
+    %h1=hoc_s(:pl_middle_high_top_heading)
+    .text-wrapper.col-50
+      %p.body-one
+        =hoc_s(:pl_middle_high_top_desc)
+      %p
+        %strong=hoc_s(:pl_middle_high_top_desc_02)
       %ul
-        %li Explore the curriculum and learning tools
-        %li Experience the course as a teacher and a learner
-        %li Collaborate with fellow teachers
-      %a{href: "/educate/professional-learning/program-information", class: "link-button"} Apply now
-    %div.col-50{style: "float: right"}
+        %li=hoc_s(:pl_middle_high_top_list_01)
+        %li=hoc_s(:pl_middle_high_top_list_02)
+        %li=hoc_s(:pl_middle_high_top_list_03)
+      %a.link-button{href: "/educate/professional-learning/program-information"}
+        =hoc_s(:call_to_action_apply_now)
+    .video-wrapper.col-50
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", title: "YouTube video player", allowfullscreen: "true", frameborder: "0"}
@@ -40,59 +34,17 @@ theme: responsive_full_width
       %figure.col-33{style: "margin-top: 10px;"}
         %img{src: "/images/professional-learning/pl-carousel.png", alt: ""}
       %div.col-60{style: "float: right"}
-        %h2 What teachers are saying about Code.org professional learning:
+        %h2.heading-lg.no-margin-bottom
+          =hoc_s(:pl_middle_high_quotes_heading)
         = view :pl_middle_high_carousel
   .clear
 
 %section
   .wrapper
-    %h2 Professional learning programs specific to the course
-    %p Join one of our professional learning programs in your area. The programs are designed to prepare you before and during your first year teaching <a href="/educate/csd" target="_blank" rel="noopener noreferrer">CS Discoveries</a>, <a href="/educate/csp" target="_blank" rel="noopener noreferrer">CS Principles</a>, or <a href="/educate/csa" target="_blank" rel="noopener noreferrer">AP® CSA</a>.
-    .action-block__wrapper.action-block__wrapper--three-col{style: "margin-top: 2em"}
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Beginner
-          %h3 CS Discoveries
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/uQim0hBHco0", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li No computer science experience required
-            %li Based in United States
-            %li Teaching 25+ hours of course to a class in next school year
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Beginner
-          %h3 CS Principles
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/DMr1iFYacGQ", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li No computer science experience required
-            %li Based in United States
-            %li Teaching 100+ hours of course to a class in next school year
-            %li Teach AP or non-AP course
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Intermediate
-          %h3 AP® CSA
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/lFkFi2jGs70", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li Able to use functions, conditionals, loops, and arrays
-            %li Based in United States
-            %li Teaching 140+ hours of course to a class  in next school year
-            %li Teach AP or non-AP course
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
+    %h2=hoc_s(:pl_middle_high_programs_heading)
+    %p
+      =hoc_s(:pl_middle_high_programs_desc, markdown: :inline, locals:{csd_url: "/csd", csp_url: "/csp", csa_url: "/csa"})
+    = view :pl_middle_high_programs
   .clear
 
 = view :section_divider_line
@@ -125,20 +77,15 @@ theme: responsive_full_width
       %li
         %h3
           %span 2
-        %h4 Application Review
-        %p In some regions you will need to get approval from a school administrator in order to get accepted into the program.
-      %li
-        %h3
-          %span 3
         %h4 Acceptance
         %p If accepted, you will be notified of your acceptance by your Regional Partner 2-4 weeks after applying.
       %li
         %h3
-          %span 4
+          %span 3
         %h4 Enroll
         %p Sign up for the summer workshop in your region and get ready to start the yearlong program!
     %div.centered
-      %a{href: "/educate/professional-learning/program-information", class: "link-button"} Apply now
+      %a.link-button{href: "/educate/professional-learning/program-information"} Apply now
 
 %section
   .wrapper
@@ -148,7 +95,7 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %h3.heading-sm The cost of the program varies by region.
         %p You may be eligible for a scholarship to cover the cost of your program.
-        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more about the program in your region
+        %a.link-button{href: "/educate/professional-learning/program-information"} Learn more about the program in your region
   .clear
 
 = view :section_divider_line
@@ -163,19 +110,19 @@ theme: responsive_full_width
           %h3 Self-Paced Learning
           %p Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free.
         .content-footer
-          %a{href: "/educate/professional-development-online", class: "link-button secondary"} Learn more
+          %a.link-button.secondary{href: "/educate/professional-development-online"} Learn more
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
           %h3 Elementary Workshops
           %p Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops.
         .content-footer
-          %a{href: "/professional-development-workshops", class: "link-button secondary"} Learn more
+          %a.link-button.secondary{href: "/professional-development-workshops"} Learn more
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
           %h3 Outside the United States
           %p If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
         .content-footer
-          %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary has-external-link"} Learn more
+          %a.link-button.secondary.has-external-link{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", target: "_blank", rel: "noopener noreferrer"} Learn more
 
 = view :section_divider_line
 
@@ -186,6 +133,6 @@ theme: responsive_full_width
       .text-wrapper.col-50
         %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
         = view :professional_development_workshops_regional_partner_search
-        %a{href: "https://support.code.org/", class: "link-button secondary has-external-link", target: "_blank", rel: "noopener noreferrer"} Visit our support center
+        %a.link-button.secondary.has-external-link{href: "https://support.code.org/", target: "_blank", rel: "noopener noreferrer"} Visit our support center
       %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
   .clear
