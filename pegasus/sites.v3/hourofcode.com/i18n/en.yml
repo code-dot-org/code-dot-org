@@ -586,6 +586,7 @@
   module_duration_1_hr: "1 hour"
   module_duration_2_hrs: "2 hours"
   module_duration_3_hrs: "3 hours"
+  module_duration_3_hrs_20_minutes: "3 hours 20 minutes"
   module_duration_5_hrs: "5 hours"
   module_duration_5_hrs_plus: "5+ hours"
   module_duration_8_hrs: "8 hours"
