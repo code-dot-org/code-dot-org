@@ -1,29 +1,33 @@
 require_relative '../test_helper'
 require_relative '../../i18n/redact_restore_utils'
+require_relative '../../i18n/i18n_script_utils'
 
 class RedactRestoreUtilsTest < Minitest::Test
   YAML_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_blocks.yml').freeze
   JSON_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_docs.json').freeze
+  MARKDOWN_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_emails.md').freeze
+
+  def test_backup_source_file
+    expected_source_path = CDO.dir(I18N_SOURCE_DIR, 'i18n_locales_source_dashboard_docs.json').freeze
+    expected_original_path = CDO.dir(I18N_ORIGINAL_DIR, 'i18n_locales_source_dashboard_docs.json').freeze
+    I18nScriptUtils.stubs(:copy_file).with(expected_source_path, expected_original_path)
+
+    RedactRestoreUtils.backup_source_file(expected_source_path)
+  end
 
   def test_redaction_of_yaml_file
     expected_source_path = YAML_FIXTURE_PATH
     expected_source_data = 'expected_source_data'
     expected_dest_dir_path = 'expected_dest_dir'
     expected_dest_path = "#{expected_dest_dir_path}/dest.yml"
-    expected_dest_file = mock
     expected_plugins = %w[testPlugin]
     expected_format = 'txt'
     expected_redacted_data = 'expected_redacted_data'
-    expected_redacted_yaml = 'expected_redacted_yaml'
 
-    YAML.stubs(:load_file).with(expected_source_path).returns(expected_source_data)
+    I18nScriptUtils.stubs(:parse_file).with(expected_source_path).returns(expected_source_data)
     RedactRestoreUtils.stubs(:redact_data).with(expected_source_data, expected_plugins, expected_format).returns(expected_redacted_data)
 
-    File.stubs(:open).with(expected_dest_path, 'w+').yields(expected_dest_file)
-    I18nScriptUtils.stubs(:to_crowdin_yaml).returns(expected_redacted_yaml)
-
-    FileUtils.expects(:mkdir_p).with(expected_dest_dir_path).once
-    expected_dest_file.expects(:write).with(expected_redacted_yaml).once
+    I18nScriptUtils.stubs(:write_yaml_file).with(expected_dest_path, expected_redacted_data)
 
     RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
   end
@@ -33,18 +37,28 @@ class RedactRestoreUtilsTest < Minitest::Test
     expected_source_data = 'expected_source_data'
     expected_dest_dir_path = 'expected_dest_dir'
     expected_dest_path = "#{expected_dest_dir_path}/dest.json"
-    expected_dest_file = mock
     expected_plugins = %w[testPlugin]
     expected_format = 'txt'
     expected_redacted_data = 'expected_redacted_data'
-    expected_redacted_json = '"expected_redacted_data"'
 
-    JSON.stubs(:load_file).with(expected_source_path).returns(expected_source_data)
+    I18nScriptUtils.stubs(:parse_file).with(expected_source_path).returns(expected_source_data)
     RedactRestoreUtils.stubs(:redact_data).with(expected_source_data, expected_plugins, expected_format).returns(expected_redacted_data)
-    File.stubs(:open).with(expected_dest_path, 'w+').yields(expected_dest_file)
 
-    FileUtils.expects(:mkdir_p).with(expected_dest_dir_path).once
-    expected_dest_file.expects(:write).with(expected_redacted_json).once
+    I18nScriptUtils.stubs(:write_json_file).with(expected_dest_path, expected_redacted_data)
+
+    RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
+  end
+
+  def test_redaction_of_markdown_file
+    expected_source_path = MARKDOWN_FIXTURE_PATH
+    expected_dest_path = "expected_dest_dir/dest.json"
+    expected_plugins = %w[testPlugin]
+    expected_format = 'md'
+    expected_redacted_data = 'expected_redacted_data'
+
+    RedactRestoreUtils.stubs(:redact_file).with(expected_source_path, expected_plugins, expected_format).returns(expected_redacted_data)
+
+    I18nScriptUtils.stubs(:write_file).with(expected_dest_path, expected_redacted_data)
 
     RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
   end
