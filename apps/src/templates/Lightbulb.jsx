@@ -140,24 +140,34 @@ export default class Lightbulb extends React.Component {
           </g>
         </g>
       );
-      numberCircle = (
-        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
-          <circle cx="545" cy="330" r="125" fill={color.white} />
-        </g>
-      );
     }
 
     let countDisplay;
     if (this.props.lit && this.props.count) {
-      // If there are more than nine hints, simply display "9+"
       const countText = this.props.count > 9 ? '9+' : this.props.count;
-      countDisplay = (
-        <g>
-          <text id="hintCount" x="475" y="400" style={styles.count}>
-            {countText}
-          </text>
-        </g>
-      );
+      if (!this.props.isMinecraft) {
+        // If there are more than nine hints, simply display "9+"
+        countDisplay = (
+          <g>
+            <text id="hintCount" x="475" y="400" style={styles.count}>
+              {countText}
+            </text>
+          </g>
+        );
+        numberCircle = (
+          <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
+            <circle cx="545" cy="330" r="125" fill={color.white} />
+          </g>
+        );
+      } else {
+        countDisplay = (
+          <g>
+            <text id="hintCount" x="400" y="700" style={styles.countMinecraft}>
+              {countText}
+            </text>
+          </g>
+        );
+      }
     }
 
     return (
@@ -168,7 +178,7 @@ export default class Lightbulb extends React.Component {
         viewBox="0 0 612 792"
       >
         {bulbDisplay}
-        {this.props.lit && numberCircle}
+        {numberCircle}
         {countDisplay}
       </svg>
     );
@@ -178,8 +188,16 @@ export default class Lightbulb extends React.Component {
 const styles = {
   count: {
     fontWeight: 'bold',
-    fontSize: '175px',
+    fontSize: '200px',
     fill: color.light_info_500,
+    fontFamily: 'Verdana, Geneva, sans-serif',
+  },
+  countMinecraft: {
+    fontWeight: 'bold',
+    fontSize: '400px',
+    fill: color.white,
+    stroke: color.black,
+    strokeWidth: '30px',
     fontFamily: 'Verdana, Geneva, sans-serif',
   },
 };
