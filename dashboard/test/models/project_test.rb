@@ -11,7 +11,8 @@ class ProjectTest < ActiveSupport::TestCase
     # https://codedotorg.atlassian.net/browse/TEACH-230
     # https://github.com/code-dot-org/code-dot-org/pull/46442
     # https://github.com/code-dot-org/code-dot-org/pull/49960
-    @project = create :project
+    project_owner = create :student
+    @project = create :project, owner: project_owner
   end
 
   test "Projects must be 30 minutes old to publish" do
