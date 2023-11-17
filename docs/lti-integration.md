@@ -77,23 +77,19 @@ configuration. Below is the JSON you can paste directly into the
         "placements": [
           {
             "placement": "account_navigation",
-            "message_type": "LtiResourceLinkRequest",
-             "target_link_uri": "https://studio.code.org/home"            
+            "message_type": "LtiResourceLinkRequest"       
           },
           {
             "placement": "link_selection",
-            "message_type": "LtiResourceLinkRequest",
-             "target_link_uri": "https://studio.code.org/home"            
+            "message_type": "LtiResourceLinkRequest"       
           },
           {
             "placement": "assignment_menu",
-            "message_type": "LtiResourceLinkRequest",
-             "target_link_uri": "https://studio.code.org/home"
+            "message_type": "LtiResourceLinkRequest"
           },
           {
             "placement": "assignment_selection",
-            "message_type": "LtiResourceLinkRequest",
-            "target_link_uri": "https://studio.code.org/home"
+            "message_type": "LtiResourceLinkRequest"
           }
         ]
       }
