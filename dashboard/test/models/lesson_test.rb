@@ -881,7 +881,7 @@ class LessonTest < ActiveSupport::TestCase
   end
 
   test 'uncached lesson path helpers' do
-    hoc_unit = create :script, name: 'dance'
+    hoc_unit = create :script, name: 'dance-ai-2023'
     hoc_lesson_group = create :lesson_group, script: hoc_unit
     hoc_lesson = create :lesson, script: hoc_unit, lesson_group: hoc_lesson_group
 
