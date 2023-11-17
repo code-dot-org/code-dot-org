@@ -1,11 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import {useSelector, useDispatch} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
 import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {useSelector, useDispatch} from 'react-redux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor = () => {
+const CompilationTutor = props => {
+  const levelId = props.levelId;
   const dispatch = useDispatch();
   const javalabState = useSelector(state => state.javalab);
   const javalabEditorState = useSelector(state => state.javalabEditor);
@@ -21,10 +25,13 @@ const CompilationTutor = () => {
     dispatch(
       askAITutor({systemPrompt: systemPrompt, studentCode: studentCode})
     );
+    analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_COMPILATION, {
+      levelId: levelId,
+    });
   };
 
   return (
-    <div className={style.compilationTutor}>
+    <div className={style.tutorContainer}>
       {!javalabState.hasRunOrTestedCode && (
         <h4>Run your code first and see what happens.</h4>
       )}
@@ -51,3 +58,7 @@ const CompilationTutor = () => {
 };
 
 export default CompilationTutor;
+
+CompilationTutor.propTypes = {
+  levelId: PropTypes.number,
+};
