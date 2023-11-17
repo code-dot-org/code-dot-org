@@ -219,15 +219,19 @@ section.activities {
     justify-content: space-between;
     gap: 40px;
     width: 30%;
+}
+@media(max-width: 768px) {
+  .action-block-wrapper{
+    width: 100%;
   }
-  
-  .age-tags {
+} 
+.age-tags {
     color: #0093A4;
-  }
+}
   
-  .action-block.action-block--one-col.flex-space-between {
+.action-block.action-block--one-col.flex-space-between {
     background-color: white;
-  }
+}
 
 .carousel-main-title {
   text-align: center;
