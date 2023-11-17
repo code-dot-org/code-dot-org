@@ -23,6 +23,8 @@ import {
   setAiOutput,
 } from './danceRedux';
 import trackEvent from '../util/trackEvent';
+import analyticsReporter from '../lib/util/AnalyticsReporter';
+import {EVENTS} from '../lib/util/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
 import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
@@ -40,6 +42,7 @@ import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,
@@ -259,11 +262,19 @@ Dance.prototype.initSongs = async function (config) {
           config.level.selectedSong = songId;
         }
       },
-      onSongUnavailable: () => {
+      onSongUnavailable: songId => {
         this.songUnavailableAlert = this.studioApp_.displayPlayspaceAlert(
           'warning',
           React.createElement('div', {}, danceMsg.danceSongNoLongerSupported())
         );
+
+        const {isReadOnlyWorkspace, channelId} =
+          getStore().getState().pageConstants;
+        analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_SONG_UNAVAILABLE, {
+          songId,
+          viewerOwnsProject: !isReadOnlyWorkspace,
+          channelId,
+        });
       },
     })
   );
@@ -307,12 +318,7 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
 
-  [
-    'ai-select-emoji',
-    'ai-deselect-emoji',
-    'ai-generate-no',
-    'ai-generate-yes',
-  ].forEach(soundId => {
+  DANCE_AI_SOUNDS.forEach(soundId => {
     const soundPath = this.studioApp_.assetUrl(
       `media/skins/dance/${soundId}.mp3`
     );
