@@ -19,6 +19,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import DCDO from '@cdo/apps/dcdo';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
+import {getCoteacherMetricInfoFromSection} from './coteacherSettings/CoteacherUtils';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 
 const FORM_ID = 'sections-set-up-container';
@@ -219,6 +220,12 @@ export default function SectionsSetUpContainer({
       })
       .then(data => {
         recordSectionSetupEvent(section);
+        coteachersToAdd.forEach(() => {
+          analyticsReporter.sendEvent(
+            EVENTS.COTEACHER_INVITE_SENT,
+            getCoteacherMetricInfoFromSection(section)
+          );
+        });
         // Redirect to the sections list.
         let redirectUrl = window.location.origin + '/home';
         if (createAnotherSection) {
@@ -316,6 +323,9 @@ export default function SectionsSetUpContainer({
           primaryTeacher={sections[0].primaryInstructor}
           setCoteachersToAdd={setCoteachersToAdd}
           coteachersToAdd={coteachersToAdd}
+          sectionMetricInformation={getCoteacherMetricInfoFromSection(
+            sections[0]
+          )}
         />
       ),
       isCoteacherOpen,
