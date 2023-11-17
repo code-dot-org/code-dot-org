@@ -1,14 +1,16 @@
 /** @file Top-level view for AI Chat Lab */
 
 import React, {useCallback} from 'react';
-import moduleStyles from './aichatView.module.scss';
-import ChatWorkspace from './ChatWorkspace';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 const commonI18n = require('@cdo/locale');
 const aichatI18n = require('@cdo/aichat/locale');
+
+import ChatWorkspace from './ChatWorkspace';
+import CopyButton from './CopyButton';
+import moduleStyles from './aichatView.module.scss';
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -31,6 +33,7 @@ const AichatView: React.FunctionComponent = () => {
         <PanelContainer
           id="aichat-workspace-panel"
           headerText={aichatI18n.aichatWorkspaceHeader()}
+          rightHeaderContent={<CopyButton />}
         >
           <ChatWorkspace />
         </PanelContainer>
