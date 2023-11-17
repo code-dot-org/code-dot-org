@@ -38,6 +38,7 @@ export default function CoteacherSettings({
   primaryTeacher,
   setCoteachersToAdd,
   coteachersToAdd,
+  sectionMetricInformation,
 }) {
   const [addError, setAddError] = useState('');
   const [coteacherToRemove, setCoteacherToRemove] = useState(null);
@@ -63,6 +64,13 @@ export default function CoteacherSettings({
     [setSavedCoteachers]
   );
 
+  const addSavedCoteacher = useCallback(
+    coteacher => {
+      setSavedCoteachers(prevSaved => [coteacher, ...prevSaved]);
+    },
+    [setSavedCoteachers]
+  );
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
@@ -72,8 +80,10 @@ export default function CoteacherSettings({
           numCoteachers={coteachers.length}
           coteachersToAdd={coteachersToAdd}
           setCoteachersToAdd={setCoteachersToAdd}
+          addSavedCoteacher={addSavedCoteacher}
           addError={addError}
           setAddError={setAddError}
+          sectionMetricInformation={sectionMetricInformation}
         />
         <CoteacherTable
           coteachers={coteachers}
@@ -84,6 +94,7 @@ export default function CoteacherSettings({
           setCoteacherToRemove={setCoteacherToRemove}
           removeSavedCoteacher={removeSavedCoteacher}
           setCoteachersToAdd={setCoteachersToAdd}
+          sectionId={sectionId}
         />
       </div>
     </div>
@@ -96,4 +107,5 @@ CoteacherSettings.propTypes = {
   primaryTeacher: PropTypes.object,
   setCoteachersToAdd: PropTypes.func.isRequired,
   coteachersToAdd: PropTypes.arrayOf(PropTypes.string),
+  sectionMetricInformation: PropTypes.object,
 };

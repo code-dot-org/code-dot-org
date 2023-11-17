@@ -72,7 +72,7 @@ const AITutorPanel = props => {
             )
         )}
       </div>
-      {compilationSelected && <CompilationTutor />}
+      {compilationSelected && <CompilationTutor levelId={level.id} />}
       {validationSelected && <ValidationTutor />}
       {questionSelected && <GeneralChatTutor />}
     </AITutorPanelContainer>
@@ -81,6 +81,7 @@ const AITutorPanel = props => {
 
 AITutorPanel.propTypes = {
   level: PropTypes.shape({
+    id: PropTypes.number,
     type: PropTypes.string,
     hasValidation: PropTypes.bool,
   }),
