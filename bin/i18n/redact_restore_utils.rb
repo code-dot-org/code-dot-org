@@ -75,7 +75,7 @@ class RedactRestoreUtils
     return unless File.exist?(source)
     return unless File.exist?(redacted)
 
-    if I18nScriptUtils.json_file?(source)
+    if I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)
       source_data = I18nScriptUtils.parse_file(source)
       redacted_data = I18nScriptUtils.parse_file(redacted)
 
@@ -84,36 +84,22 @@ class RedactRestoreUtils
       return unless source_data&.values&.first&.length
       return unless redacted_data&.values&.first&.length
 
-      restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
-      I18nScriptUtils.write_yaml_file(dest, redacted)
-
-    elsif I18nScriptUtils.yaml_file?(source)
-      source_data = I18nScriptUtils.parse_file(source)
-      redacted_data = I18nScriptUtils.parse_file(redacted)
-
-      return unless source_data
-      return unless redacted_data
-      return unless source_data&.values&.first&.length
-      return unless redacted_data&.values&.first&.length
-      puts source_data
-      source_data.values.first
-      restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-      I18nScriptUtils.write_yaml_file(dest, restored)
-    end
-
-    File.open(dest, "w+") do |file|
-      if File.extname(dest) == '.json'
-        file.write(JSON.pretty_generate(restored))
-      elsif File.extname(dest) == '.yml'
+      # yaml files have a locale key wrapping all content. Redacted files have the translated language key, while the
+      # un-redacted file keeps the English key. We need to extract the data inside the locale key to restore content.
+      if I18nScriptUtils.yaml_file?(source)
+        restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
         redacted_key = redacted_data.keys.first
         restored = {redacted_key => restored}
-        file.write(I18nScriptUtils.to_crowdin_yaml(restored))
+        I18nScriptUtils.write_yaml_file(dest, restored)
       else
-        file.write(restored)
+        restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
+        I18nScriptUtils.write_json_file(dest, restored)
       end
-    end
 
-    restored
+    else
+      restored = RedactRestoreUtils.restore_file(source, redacted, plugins, format)
+      I18nScriptUtils.write_file(dest, restored)
+    end
   end
 
   # redact redacts the content of the source file, whether is a json, yml or other formats and write the output
