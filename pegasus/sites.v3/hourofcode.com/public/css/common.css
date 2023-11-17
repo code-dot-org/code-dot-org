@@ -182,13 +182,13 @@ html {
   height: 100%;
 }
 .course-carousel .slide-prev {
-  left: 0;
+  left: -55px;
 }
 .course-carousel .slide-prev > span {
   border-right-color: #fff;
 }
 .course-carousel .slide-next {
-  right: 0;
+  right: -45px;
 }
 .course-carousel .slide-next > span {
   border-left-color: #fff;
@@ -218,14 +218,9 @@ html {
     height: 180px;
     padding: 0 40px;
   }
-  .course-carousel .slide .slide-shortdescription {
-  }
+
   .course-carousel .slide .slide-tags {
     margin-bottom: 0;
-  }
-  .course-carousel .slide-prev,
-  .course-carousel .slide-next {
-    height: 180px;
   }
   .btn-carousel-slide {
     right: 10px;
@@ -252,8 +247,6 @@ html {
 
 @media screen and (min-width: 970px) {
 
-  .course-carousel {
-  }
   .course-carousel-title {
     text-align: center;
   }
@@ -265,8 +258,7 @@ html {
     width: 446px;
     height: 335px;
   }
-  .course-carousel .slide img {
-  }
+  
   .course-carousel .slide .slide-text {
     width: 444px;
     padding: 20px 20px 0 20px;
@@ -309,8 +301,7 @@ html {
   .course-carousel .slide .slide-shorturl-link :hover {
     text-decoration: underline;
   }
-  .course-carousel .btn-carousel-slide {
-  }
+  
 }
 
 /* Datepicker customizations */
@@ -345,8 +336,7 @@ html {
 #promote-page h2 {
   margin-bottom: 10px;
 }
-#promote-page .download-fact-sheet {
-}
+
 #promote-page .download-fact-sheet a:link,
 #promote-page .download-fact-sheet a:visited {
   color: #c8c8c8;
@@ -580,3 +570,4 @@ html {
 #onetrust-consent-sdk ul li:before {
   content: none;
 }
+
