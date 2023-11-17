@@ -191,6 +191,7 @@ const Notification = ({
                   color={button.color || Button.ButtonColor.gray}
                   text={button.text}
                   style={{...styles.button, ...button.style}}
+                  target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
                 />
