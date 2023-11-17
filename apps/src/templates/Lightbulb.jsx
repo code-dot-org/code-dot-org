@@ -53,11 +53,7 @@ export default class Lightbulb extends React.Component {
     } else {
       bulbDisplay = (
         <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
-          <g
-            transform="translate(215,200) scale(3.0,3.0)"
-            fill={this.props.lit ? color.light_info_500 : '#dddddd'}
-            stroke="none"
-          >
+          <g transform="translate(215,200) scale(3.0,3.0)">
             <path
               fill="#4390DD"
               opacity="1.000000"
