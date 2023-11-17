@@ -7,13 +7,16 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  def self.backup_file(source_path)
-    backup_path = source_path.gsub(/\/source\//, '/original/')
+  # RedactRestoreUtils manages the
+  def self.backup_source_file(source_path)
+    return unless File.exist?(source_path)
+    return unless source_path[I18N_SOURCE_DIR]
+    backup_path = source_path.sub(I18N_SOURCE_DIR, I18N_ORIGINAL_DIR)
     I18nScriptUtils.copy_file(source_path, backup_path)
   end
 
-  # For a given file, redact returns the redacted content of the file. The default file format is Markdown.
-  def self.redact(source_path, plugins = [], format = 'md')
+  # For a given file, redact_file returns the redacted content of the file. The default file format is Markdown.
+  def self.redact_file(source_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -24,7 +27,7 @@ class RedactRestoreUtils
     return stdout
   end
 
-  def self.restore(source_path, redacted_path, plugins = [], format = 'md')
+  def self.restore_file(source_path, redacted_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/restore')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -60,7 +63,7 @@ class RedactRestoreUtils
     source_json.flush
     redacted_json.flush
 
-    restored = RedactRestoreUtils.restore(source_json.path, redacted_json.path, plugins, format)
+    restored = RedactRestoreUtils.restore_file(source_json.path, redacted_json.path, plugins, format)
 
     source_json.close
     redacted_json.close
@@ -68,14 +71,13 @@ class RedactRestoreUtils
     return JSON.parse(restored)
   end
 
-  def self.restore_file(source, redacted, dest, plugins = [], format = 'md')
+  def self.restore(source, redacted, dest, plugins = [], format = 'md')
     return unless File.exist?(source)
     return unless File.exist?(redacted)
-    file_format = File.extname(source)
 
-    if file_format == '.json'
-      source_data = JSON.load_file(source)
-      redacted_data = JSON.load_file(redacted)
+    if I18nScriptUtils.json_file?(source)
+      source_data = I18nScriptUtils.parse_file(source)
+      redacted_data = I18nScriptUtils.parse_file(redacted)
 
       return unless source_data
       return unless redacted_data
@@ -83,20 +85,20 @@ class RedactRestoreUtils
       return unless redacted_data&.values&.first&.length
 
       restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
+      I18nScriptUtils.write_yaml_file(dest, redacted)
 
-    elsif file_format == '.yml'
-      source_data = YAML.load_file(source)
-      redacted_data = YAML.load_file(redacted)
+    elsif I18nScriptUtils.yaml_file?(source)
+      source_data = I18nScriptUtils.parse_file(source)
+      redacted_data = I18nScriptUtils.parse_file(redacted)
 
       return unless source_data
       return unless redacted_data
       return unless source_data&.values&.first&.length
       return unless redacted_data&.values&.first&.length
-
+      puts source_data
+      source_data.values.first
       restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-
-    else
-      restored = RedactRestoreUtils.restore(source, redacted, plugins, format)
+      I18nScriptUtils.write_yaml_file(dest, restored)
     end
 
     File.open(dest, "w+") do |file|
@@ -114,32 +116,20 @@ class RedactRestoreUtils
     restored
   end
 
-  # redact_file redacts the content of the source file, whether is a json, yml or other formats and write the output
+  # redact redacts the content of the source file, whether is a json, yml or other formats and write the output
   # into the dest file.
-  def self.redact_file(source, dest, plugins = [], format = 'md')
+  def self.redact(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
-    FileUtils.mkdir_p File.dirname(dest)
 
-    file_format = File.extname(source)
+    if I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)
+      source_data = I18nScriptUtils.parse_file(source)
+      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
 
-    if file_format == '.json'
-      source_data = JSON.load_file(source)
-      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
-    elsif file_format == '.yml'
-      source_data = YAML.load_file(source)
-      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
+      I18nScriptUtils.write_yaml_file(dest, redacted) if I18nScriptUtils.yaml_file?(source)
+      I18nScriptUtils.write_json_file(dest, redacted) if I18nScriptUtils.json_file?(source)
     else
-      redacted = RedactRestoreUtils.redact(source_data, plugins, format)
-    end
-
-    File.open(dest, "w+") do |file|
-      if File.extname(dest) == '.json'
-        file.write(JSON.pretty_generate(redacted))
-      elsif File.extname(dest) == '.yml'
-        file.write(I18nScriptUtils.to_crowdin_yaml(redacted))
-      else
-        file.write(redacted)
-      end
+      redacted = redact_file(source_data, plugins, format)
+      I18nScriptUtils.write_file(dest, redacted)
     end
   end
 

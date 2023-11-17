@@ -57,7 +57,7 @@ module I18n
           end
 
           def redact
-            I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
+            RedactRestoreUtils.backup_source_file(I18N_SOURCE_FILE_PATH)
             RedactRestoreUtils.redact(I18N_SOURCE_FILE_PATH, I18N_SOURCE_FILE_PATH, REDACT_PLUGINS, REDACT_FORMAT)
           end
         end
