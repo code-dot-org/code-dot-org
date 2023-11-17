@@ -32,7 +32,7 @@ Scenario: Can edit a Function
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-d"
-  And I drag and drop block with selector "[data-id='new-sprite-block']" to offset 70, 177
+  And I drag and drop block "new-sprite-block" to offset 70, 177
   #And I drag block "new-sprite-block" to block "set-background-block" plus offset 24, 30
   And I wait for 3 seconds
 

@@ -315,9 +315,11 @@ Then(/^the open flyout has (.*?) blocks$/) do |n|
   expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
-Then(/^I drag and drop block with selector "(.*?)" to offset ((.*?), (.*?))$/) do |selector, dx, dy|
-  element = @browser.find_element(:css, selector)
-  element.drag_and_drop_by(dx.to_i, dy.to_i)
+Then(/^I drag and drop block "(.*?)" to offset (\d+), (\d+)$/) do |block_id, dx, dy|
+  puts "selector: #{block_id}, dx: #{dx}, dy: #{dy}"
+  id_selector = get_id_selector
+  element = @browser.find_element(:css, "[#{id_selector}='#{block_id}']")
+  @browser.action.drag_and_drop_by(element, dx, dy).perform
 end
 
 def current_block_xml
