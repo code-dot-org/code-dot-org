@@ -7,7 +7,7 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  # RedactRestoreUtils manages the
+  # RedactRestoreUtils manages the redaction and restoration of i18n files.
   def self.backup_source_file(source_path)
     return unless File.exist?(source_path)
     return unless source_path[I18N_SOURCE_DIR]
