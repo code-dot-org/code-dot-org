@@ -206,7 +206,9 @@ class Button extends React.Component {
               <FontAwesome icon="spinner" className="fa-spin" />
             </span>
           )}
-          <span className={moduleStyles.textSpan}>{!isPending && text}</span>
+          {!isPending && text && (
+            <span className={moduleStyles.textSpan}>{!isPending && text}</span>
+          )}
         </div>
       </Tag>
     );
