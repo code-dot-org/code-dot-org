@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import style from './ai-tutor.module.scss';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
@@ -7,9 +8,11 @@ import AITutorPanelContainer from '@cdo/apps/code-studio/components/aiTutor/aiTu
 import CompilationTutor from './compilationTutor';
 import ValidationTutor from './validationTutor';
 import GeneralChatTutor from './generalChatTutor';
+import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 const icon = require('@cdo/static/ai-bot.png');
 
 const AITutorPanel = props => {
+  const dispatch = useDispatch();
   const {level} = props;
   const isCodingLevel = level.type === 'Javalab';
 
@@ -37,6 +40,7 @@ const AITutorPanel = props => {
   const [checkboxes, updateCheckboxes] = useState(initialCheckboxes);
 
   const handleCheckboxChange = key => {
+    dispatch(addAIResponse(''));
     const updatedCheckboxes = checkboxes.map(checkbox =>
       checkbox.key === key
         ? {...checkbox, checked: !checkbox.checked}
@@ -55,7 +59,7 @@ const AITutorPanel = props => {
   const questionSelected = checked && checked.key === 'question';
 
   return (
-    <AITutorPanelContainer>
+    <AITutorPanelContainer level={level}>
       <h3 id="ai_tutor_panel">AI Tutor</h3>
       <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
       <div>
@@ -73,7 +77,7 @@ const AITutorPanel = props => {
         )}
       </div>
       {compilationSelected && <CompilationTutor levelId={level.id} />}
-      {validationSelected && <ValidationTutor />}
+      {validationSelected && <ValidationTutor levelId={level.id} />}
       {questionSelected && <GeneralChatTutor />}
     </AITutorPanelContainer>
   );
