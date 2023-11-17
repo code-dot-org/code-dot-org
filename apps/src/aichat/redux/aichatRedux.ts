@@ -12,6 +12,7 @@ import {
   Role,
 } from '../types';
 
+const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
 export interface AichatState {
   // All user and assistant chat messages - includes too personal and inappropriate user messages.
   // Messages will be logged and stored.
@@ -55,14 +56,13 @@ export const submitChatMessage = createAsyncThunk(
       msg => msg.status === Status.OK
     );
 
-    const currentTimestamp = moment(Date.now()).format('YYYY-MM-DD HH:mm');
     // Create the new user ChatCompleteMessage and add to chatMessages.
     const newMessage: ChatCompletionMessage = {
       id: newMessageId,
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: message,
-      timestamp: currentTimestamp,
+      timestamp: getCurrentTimestamp(),
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
@@ -89,6 +89,9 @@ export const submitChatMessage = createAsyncThunk(
         role: Role.ASSISTANT,
         status: Status.OK,
         chatMessageText: chatApiResponse.assistantResponse,
+        // The accuracy of this timestamp is debatable since it's not when our backend
+        // issued the message, but it's good enough for user testing.
+        timestamp: getCurrentTimestamp(),
       };
       thunkAPI.dispatch(addChatMessage(assistantChatMessage));
     }
