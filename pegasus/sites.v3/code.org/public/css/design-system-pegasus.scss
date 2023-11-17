@@ -761,6 +761,22 @@ form {
     padding-right: 0.5rem;
     margin: 1rem 0 0;
   }
+
+  // Removes margins on the display_video_thumbnail view
+  // so the play button image is vertically centered
+  .videothumbnail {
+    margin-bottom: 1rem;
+
+    .thumbnail-wrapper .thumbnail-image {
+      margin-bottom: 0;
+    }
+  }
+
+  // Shows download button image correctly on modal
+  .modal-body img {
+    width: unset;
+    margin-bottom: 0;
+  }
 }
 
 // Two column action block
@@ -1015,12 +1031,12 @@ form {
 
         &::before {
           content: "\f10d";
-          margin: 0 8px 0 0;
+          margin: 0 4px 0 0;
         }
 
         &::after {
           content: "\f10e";
-          margin: 0 0 0 8px;
+          margin: 0 0 0 4px;
         }
       }
     }
