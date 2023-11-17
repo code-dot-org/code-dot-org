@@ -240,6 +240,7 @@ Notification.propTypes = {
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
+      link: PropTypes.string,
       onClick: PropTypes.func,
       className: PropTypes.string,
       color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
