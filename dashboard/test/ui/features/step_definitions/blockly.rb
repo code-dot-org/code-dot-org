@@ -26,7 +26,6 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
-  puts code
   @browser.execute_script code
 end
 
@@ -37,7 +36,6 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)" plus offset (\d+), (\d+)$/ do |from, to, dx, dy|
   code = generate_drag_code(get_block_id(from), get_block_id(to), dx, dy)
-  puts code
   @browser.execute_script code
 end
 
@@ -86,7 +84,6 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
 end
 
 Then /^I scroll the ([a-zA-Z]*) blockspace to block "(.*?)"$/ do |workspace_type, block_id|
-  puts block_id
   block_space_name = workspace_type + 'BlockSpace'
   @browser.execute_script("Blockly.#{block_space_name}.centerOnBlock('#{block_id}')")
 end

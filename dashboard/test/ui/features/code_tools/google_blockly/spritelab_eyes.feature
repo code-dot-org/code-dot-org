@@ -22,3 +22,4 @@ Scenario: It Renders
   And I see no difference for "scroll to when clicked block"
   And I wait for 3 seconds
   And I close my eyes
+  
