@@ -34,11 +34,9 @@
                       %p.slide-longdescription= tutorial[:longdescription]
                     %a.link-button{:href=>url, :target=>'_blank'}<
                       =I18n.t(:go)
+        %button.slide-prev{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+          %img{src: "/images/carousel/prev.svg", alt: "previous"}
+        %button.slide-next{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+          %img{src: "/images/carousel/next.svg", alt: "next"}
       .pagination
         %div{:id => "pagination-#{id}"}
-      %button.slide-prev{:href=>'#'}<
-        %span<
-          %span.label= I18n.t(:previous)
-      %button.slide-next{:href=>'#'}<
-        %span<
-          %span.label= I18n.t(:next)
