@@ -4,7 +4,7 @@ class PotentialTeachersController < ApplicationController
 
   # url: /potential_teachers METHOD: POST
   def create
-    unless current_user
+    if current_user.nil?
       @potential_teacher = PotentialTeacher.new(potential_teacher_params)
       begin
         @potential_teacher.save!
@@ -32,8 +32,8 @@ class PotentialTeachersController < ApplicationController
   end
 
   def send_hoc_email(params)
-    email = current_user&.email || params[:email]
     name = current_user&.name || params[:name]
+    email = current_user&.email || params[:email]
     unit_id = params[:script_id]
     lessons = Unit.find_by_id(unit_id).lessons
     lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
