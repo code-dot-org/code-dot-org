@@ -74,6 +74,7 @@ export const behaviorDefMutator = {
       }
     }
     this.behaviorId = xmlElement.getAttribute('behaviorId');
+    this.userCreated = xmlElement.getAttribute('userCreated');
   },
 
   /**

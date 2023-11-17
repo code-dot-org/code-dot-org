@@ -473,6 +473,14 @@ export function getBlockColor(block) {
   return block?.style?.colourPrimary;
 }
 
+/**
+ * Combines shared functions (XML) with a starting block source (XML or JSON).
+ * Used in levels where shared functions and behaviors are enabled.
+ *
+ * @param {string} startBlocksSource - The source of starting blocks (XML or JSON).
+ * @param {string} functionsXml - The XML representation of functions to append.
+ * @returns {string} - Updated starting blocks in JSON format.
+ */
 export function appendSharedFunctions(startBlocksSource, functionsXml) {
   let startBlocks;
   if (stringIsXml(startBlocksSource)) {
