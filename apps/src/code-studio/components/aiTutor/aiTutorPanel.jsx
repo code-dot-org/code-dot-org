@@ -8,18 +8,21 @@ const icon = require('@cdo/static/ai-bot.png');
 
 export default class AITutorPanel extends React.Component {
   static propTypes = {
-    levelType: PropTypes.string,
+    level: PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      type: PropTypes.string.isRequired,
+    }),
   };
 
   render() {
-    const {levelType} = this.props;
-    const isCodingLevel = levelType === 'Javalab';
+    const {level} = this.props;
+    const isCodingLevel = level.type === 'Javalab';
 
     return (
-      <AITutorPanelContainer>
+      <AITutorPanelContainer level={level}>
         <h3 id="ai_tutor_panel">AI Tutor</h3>
         <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
-        {isCodingLevel && <CompilationAssistant />}
+        {isCodingLevel && <CompilationAssistant levelId={level.id} />}
       </AITutorPanelContainer>
     );
   }
