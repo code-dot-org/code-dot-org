@@ -924,7 +924,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="start-over-button"
               onClick={handleStartOverClick}
               color={Button.ButtonColor.neutralDark}
-              className={moduleStyles.button}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
+              iconClassName={moduleStyles.buttonIcon}
               aria-label={i18n.danceAiModalStartOverButton()}
               title={i18n.danceAiModalStartOverButton()}
               icon="fast-backward"
@@ -937,9 +941,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="explanation-button"
               onClick={handleExplanationClick}
               color={Button.ButtonColor.neutralDark}
-              className={moduleStyles.button}
               aria-label={i18n.danceAiModalExplanationButton()}
               title={i18n.danceAiModalExplanationButton()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
               iconClassName={moduleStyles.buttonIcon}
               icon="chart-simple"
             />
@@ -950,9 +957,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
               aria-label={i18n.danceAiModalBack()}
               title={i18n.danceAiModalBack()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
               iconClassName={moduleStyles.buttonIcon}
               icon="chart-simple"
             />
