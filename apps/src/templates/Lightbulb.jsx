@@ -22,6 +22,7 @@ export default class Lightbulb extends React.Component {
 
   render() {
     let bulbDisplay;
+    let numberCircle;
 
     if (this.props.isMinecraft) {
       const href = this.props.lit
@@ -143,6 +144,11 @@ export default class Lightbulb extends React.Component {
           </g>
         </g>
       );
+      numberCircle = (
+        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
+          <circle cx="545" cy="330" r="125" fill={color.white} />
+        </g>
+      );
     }
 
     let countDisplay;
@@ -151,7 +157,7 @@ export default class Lightbulb extends React.Component {
       const countText = this.props.count > 9 ? '9+' : this.props.count;
       countDisplay = (
         <g>
-          <text id="hintCount" x="400" y="700" style={styles.count}>
+          <text id="hintCount" x="475" y="400" style={styles.count}>
             {countText}
           </text>
         </g>
@@ -166,6 +172,7 @@ export default class Lightbulb extends React.Component {
         viewBox="0 0 612 792"
       >
         {bulbDisplay}
+        {this.props.lit && numberCircle}
         {countDisplay}
       </svg>
     );
@@ -175,10 +182,8 @@ export default class Lightbulb extends React.Component {
 const styles = {
   count: {
     fontWeight: 'bold',
-    fontSize: '400px',
-    fill: color.white,
-    stroke: color.black,
-    strokeWidth: '30px',
+    fontSize: '175px',
+    fill: color.light_info_500,
     fontFamily: 'Verdana, Geneva, sans-serif',
   },
 };
