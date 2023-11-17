@@ -14,24 +14,26 @@ const initialState: AITutorState = {
   isWaitingForAIResponse: false,
 };
 
+interface question {
+  systemPrompt: string;
+  studentCode: string;
+}
+
 // THUNKS
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (studentCode: string, thunkAPI) => {
-    const systemPrompt =
-      'You are a tutor in a high school computer science class. Students in the class are studying Java and they would like to know in age-appropriate, clear language why their code does not compile.';
-
-    if (systemPrompt === undefined) {
+  async (question: question, thunkAPI) => {
+    if (question.systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
 
-    if (studentCode === undefined) {
+    if (question.studentCode === undefined) {
       throw new Error('studentCode is undefined');
     }
 
     const chatApiResponse = await postOpenaiChatCompletion([
-      {role: Role.SYSTEM, content: systemPrompt},
-      {role: Role.USER, content: studentCode},
+      {role: Role.SYSTEM, content: question.systemPrompt},
+      {role: Role.USER, content: question.studentCode},
     ]);
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
   }
