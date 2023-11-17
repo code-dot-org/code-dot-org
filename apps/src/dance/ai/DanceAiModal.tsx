@@ -698,10 +698,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           >
             <ToggleGroup
               selected={currentToggle}
-              activeColor={color.teal}
+              activeColor={color['light_primary_500']}
               onChange={(value: Toggle) => {
                 setCurrentToggle(value);
               }}
+              useRebrandedLikeStyles
             >
               <button key={0} type="button" value={Toggle.EFFECT}>
                 {i18n.danceAiModalEffectButton()}
@@ -997,6 +998,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleGenerateClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
 
@@ -1008,6 +1010,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
                 disabled={aiModalOpenedFromFlyout}
+                useDefaultLineHeight
               />
             )}
             {showUseButton && (
@@ -1017,6 +1020,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleUseClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
           </div>
