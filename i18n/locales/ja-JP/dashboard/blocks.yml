@@ -126,6 +126,27 @@ ja:
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
+        options:
+          GROUP:
+            '"CAT"': すべてのネコ
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: ボディロール
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Clown: カンナム
+            MOVES.Kick: 星
+            MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Rest: 設定なし
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
+            '"rand"': "(ランダム)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} で実行 {MOVE} {DIR} ずっとくりかえす"
         options:
@@ -598,8 +619,8 @@ ja:
           EFFECT:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
-            '"circles"': トンネル
             '"quads"': アングル
+            '"circles"': トンネル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
@@ -615,11 +636,11 @@ ja:
             '"ripples"': さざ波
             '"snowflakes"': 雪
             '"text"': 曲名
-            '"squiggles"': 波線
             '"galaxy"': 宇宙
             '"sparkles"': きらめき
             '"spiral"': スパイラル
             '"disco"': 正方形
+            '"squiggles"': 波線
             '"starburst"': スターバースト
             '"stars"': 星
             '"music_wave"': 波

@@ -13141,6 +13141,14 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 7 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: U7L7 Modal Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Lesson Reflection'
+            lesson-5:
+              name: 'Synchronous Session 4: Lesson Investigation'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m7
           title: Module 7
@@ -13152,6 +13160,12 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 8 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Conclusions and Connections'
+            lesson-4:
+              name: 'Synchronous Session 3: Equity Journey'
+            lesson-5:
+              name: 'Synchronous Session 4: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m8
           title: Module 8
@@ -13756,6 +13770,17 @@ en:
           lesson_groups: {}
           name: self-paced-pl-csd-unit5-2-2023
           title: Preparing to Teach Data and Society
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: AI Tutor Test
+          lesson_groups: {}
+          name: ai-tutor-test
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

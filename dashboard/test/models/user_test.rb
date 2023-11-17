@@ -292,6 +292,30 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
+  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+    user = create :teacher
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user
+    application_form_data = application.form_data_hash
+    application_form_data['alternateEmail'] = ''
+    application.update!(form_data_hash: application_form_data)
+
+    assert application.form_data_hash['alternateEmail'].empty?
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user, status: 'accepted'
+    app_alternate_email = application.form_data_hash['alternateEmail']
+
+    assert_equal user.email_for_enrollments, app_alternate_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -1840,6 +1864,22 @@ class UserTest < ActiveSupport::TestCase
     assert_empty teacher.sections_instructed
   end
 
+  test 'sections_instructed omits sections with in-active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :invited
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'sections_instructed includes sections with active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :active
+
+    refute_empty teacher.sections_instructed
+  end
+
   test 'cannot change own user type as a teacher with sections' do
     section = create :section
     teacher = section.teacher
@@ -1854,6 +1894,12 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can delete own account if independent student' do
     user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if LTI student' do
+    user = create :student, :with_lti_authentication_option
     refute user.teacher_managed_account?
     assert user.can_delete_own_account?
   end

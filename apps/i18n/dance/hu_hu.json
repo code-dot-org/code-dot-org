@@ -1,4 +1,9 @@
 {
+  "danceAiModalBack": "Vissza",
+  "danceAiModalClose": "Bezár",
+  "danceAiModalCodeButton": "Kód",
+  "danceAiModalExplanationButton": "Tudj meg többet",
+  "danceAiModalStartOverButton": "Újrakezdés",
   "danceFeedbackDidntPress": "Mindenképpen nyomd meg a gombot, amíg a tánc folyamatban van.",
   "danceFeedbackKeepCoding": "Minden szükséges blokkot felhasználtál, de nem megfelelően.",
   "danceFeedbackKeyEvent": "Bizonyosodj meg róla, hogy csatoltál kódot a <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"fel\"</title></block></xml> blokkhoz, és nyomd meg a gombot, amíg a tánc fut.",

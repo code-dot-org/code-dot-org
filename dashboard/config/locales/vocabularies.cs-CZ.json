@@ -2261,6 +2261,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Bezeztrátová komprese",
           "definition": "algoritmus komprese dat, který umožňuje úplné obnovení původních dat z jejich komprimované podoby. Nejčastěji se používá ke kompresi textu (například komprese ve formátu .zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kód",
+          "definition": " psát kód, neboli instrukce pro počítač."
+        },
+        "event/dance-ai/2023": {
+          "word": "Událost",
+          "definition": "Akce, která způsobí, že se něco stane."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program "
         }
       }
     }

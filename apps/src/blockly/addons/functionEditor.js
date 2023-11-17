@@ -20,6 +20,7 @@ import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
 import {frameSizes} from './cdoConstants';
+import CdoTrashcan from './cdoTrashcan';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -53,6 +54,7 @@ export default class FunctionEditor {
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
+      media: options.media,
       move: {
         drag: false,
         scrollbars: {
@@ -66,6 +68,7 @@ export default class FunctionEditor {
         blockDragger: ScrollBlockDragger,
         connectionChecker: CdoConnectionChecker,
       },
+      readOnly: options.readOnly,
       renderer: options.renderer,
       rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
@@ -110,6 +113,9 @@ export default class FunctionEditor {
     );
 
     this.setUpEditorWorkspaceChangeListeners();
+
+    const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
+    functionEditorTrashcan.init();
   }
 
   hide() {
@@ -178,6 +184,7 @@ export default class FunctionEditor {
         type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
+          userCreated: true,
         },
         fields: {
           NAME: procedure.getName(),
@@ -190,6 +197,17 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+
+    // We hide the delete button unless it is a function or user-created behavior.
+    const shouldShowDeleteButton =
+      this.block.type === BLOCK_TYPES.procedureDefinition ||
+      this.block.userCreated;
+    const modalEditorDeleteButton = document.getElementById(
+      MODAL_EDITOR_DELETE_ID
+    );
+    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
+      ? 'visible'
+      : 'hidden';
 
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
