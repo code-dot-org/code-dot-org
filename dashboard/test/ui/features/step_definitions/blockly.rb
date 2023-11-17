@@ -295,31 +295,15 @@ Then(/^I click block field that is number (.*?) in the list of blocks and number
   @browser.execute_script(script)
 end
 
-Then(/^I simulate click on block button with selector "(.*?)"$/) do |selector|
-  script = "
-    $('#{selector}').simulate('pointerdown')
-    $('#{selector}').simulate('pointerup')
-  "
-  @browser.execute_script(script)
-end
-
-Then(/^I click block button with selector "(.*?)"$/) do |selector|
-  script = "
-    $('#{selector}').simulate('click')
-  "
-  @browser.execute_script(script)
-end
-
 Then(/^the open flyout has (.*?) blocks$/) do |n|
   script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
-Then(/^I drag and drop block "(.*?)" to offset (\d+), (\d+)$/) do |block_id, dx, dy|
-  puts "selector: #{block_id}, dx: #{dx}, dy: #{dy}"
+Then(/^I drag and drop block "(.*?)" to offset (.*?), (.*?)$/) do |block_id, dx, dy|
   id_selector = get_id_selector
   element = @browser.find_element(:css, "[#{id_selector}='#{block_id}']")
-  @browser.action.drag_and_drop_by(element, dx, dy).perform
+  @browser.action.drag_and_drop_by(element, dx.to_i, dy.to_i).perform
 end
 
 def current_block_xml
