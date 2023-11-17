@@ -1,5 +1,6 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
-import {GeneratedEffect} from '../types';
+import {FieldKey, GeneratedEffect} from '../types';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 /**
  * Generates blocks from the AI result in a given workspace,
@@ -12,17 +13,49 @@ export const generateBlocksFromResult = (
   const blocksSvg = generateBlocks(workspace);
 
   // Foreground block.
-  blocksSvg[0].setFieldValue(effect.foregroundEffect, 'EFFECT');
+  validateAndSetFieldValue(
+    blocksSvg[0].getField('EFFECT') as FieldDropdown,
+    effect.foregroundEffect,
+    FieldKey.FOREGROUND_EFFECT
+  );
 
   // Background block.
-  blocksSvg[1].setFieldValue(effect.backgroundEffect, 'EFFECT');
-  blocksSvg[1].setFieldValue(effect.backgroundColor, 'PALETTE');
+  validateAndSetFieldValue(
+    blocksSvg[1].getField('EFFECT') as FieldDropdown,
+    effect.backgroundEffect,
+    FieldKey.BACKGROUND_EFFECT
+  );
+  validateAndSetFieldValue(
+    blocksSvg[1].getField('PALETTE') as FieldDropdown,
+    effect.backgroundColor,
+    FieldKey.BACKGROUND_PALETTE
+  );
 
   // Connect the blocks.
   blocksSvg[0].nextConnection.connect(blocksSvg[1].previousConnection);
 
   return blocksSvg;
 };
+
+function validateAndSetFieldValue(
+  dropdown: FieldDropdown,
+  value: string,
+  field: FieldKey
+) {
+  if (
+    dropdown
+      .getOptions()
+      .some(option => option[1] === value || option[1] === `"${value}"`)
+  ) {
+    dropdown.setValue(value);
+  } else {
+    Lab2MetricsReporter.logWarning({
+      message: 'Invalid generated value',
+      value,
+      field,
+    });
+  }
+}
 
 export const generateBlocks = (workspace: Workspace): [BlockSvg, BlockSvg] => {
   return [

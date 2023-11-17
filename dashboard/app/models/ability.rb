@@ -221,6 +221,7 @@ class Ability
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
+        can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -293,7 +294,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
+      if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
       end
     end
