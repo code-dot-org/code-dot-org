@@ -14,6 +14,8 @@ import color from '../../util/color';
 import Instructions from './Instructions';
 
 var instructions = require('../../redux/instructions');
+const LIGHT_BLUE_BACKGROUND = '#f0ffff';
+const LIGHT_YELLOW_BACKGROUND = '#fffff0';
 
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {
@@ -180,7 +182,7 @@ class InstructionsCsfMiddleCol extends React.Component {
             <InlineHint
               key={hint.hintId}
               borderColor={color.light_info_500}
-              backgroundColor={'#f0ffff'}
+              backgroundColor={LIGHT_BLUE_BACKGROUND}
               markdown={hint.markdown}
               ttsUrl={hint.ttsUrl}
               ttsMessage={hint.ttsMessage}
@@ -203,7 +205,7 @@ class InstructionsCsfMiddleCol extends React.Component {
                 ? color.white
                 : color.product_caution_default
             }
-            backgroundColor={'#fffff0'}
+            backgroundColor={LIGHT_YELLOW_BACKGROUND}
             message={this.props.feedback.message}
             isMinecraft={this.props.isMinecraft}
             skinId={this.props.skinId}
@@ -213,7 +215,7 @@ class InstructionsCsfMiddleCol extends React.Component {
         {this.props.shouldDisplayHintPrompt() && (
           <HintPrompt
             borderColor={color.light_info_500}
-            backgroundColor={'#f0ffff'}
+            backgroundColor={LIGHT_BLUE_BACKGROUND}
             onConfirm={this.showHint}
             onDismiss={this.props.dismissHintPrompt}
             isMinecraft={this.props.isMinecraft}

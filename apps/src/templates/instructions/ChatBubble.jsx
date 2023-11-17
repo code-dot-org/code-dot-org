@@ -4,6 +4,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import ChatBubbleTip from './ChatBubbleTip';
 import {shouldDisplayChatTips} from './utils';
 import InlineAudio from './InlineAudio';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   container: {
@@ -11,7 +12,7 @@ const styles = {
   },
 
   main: {
-    backgroundColor: 'white',
+    backgroundColor: color.white,
     borderRadius: 10,
     margin: '5px 0',
     paddingTop: 5,
@@ -51,6 +52,8 @@ var audioStyle = {
   },
 };
 
+const MINECRAFT_COLOR = '#3B3B3B';
+
 const ChatBubble = ({
   children,
   isMinecraft,
@@ -62,8 +65,10 @@ const ChatBubble = ({
   ttsMessage,
   textToSpeechEnabled,
 }) => {
-  borderColor = borderColor || 'white';
-  backgroundColor = isMinecraft ? '#3B3B3B' : backgroundColor || 'white';
+  borderColor = borderColor || color.white;
+  backgroundColor = isMinecraft
+    ? MINECRAFT_COLOR
+    : backgroundColor || color.white;
   isDashed = isDashed || false;
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
 
