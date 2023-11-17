@@ -110,11 +110,6 @@ const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
-// Returns an array containing [0, 1, 2, ..., max]
-const getRangeArray_ = (max: number) => {
-  return getRangeArray(0, max);
-};
-
 // Returns an array containing [min, min+1, min+2, ..., max]
 const getRangeArray = (min: number, max: number) => {
   const len = max - min + 1;
@@ -617,6 +612,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const labels = getLabels();
 
+  // While generating, we render two previews at a time, so that as a new
+  // one appears, it will smoothly fade in over the top of the previous one.
   const indexesToPreview = [];
   if (mode === Mode.GENERATING) {
     if (generatingProgress.step > 0) {
@@ -769,15 +766,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           mode === Mode.RESULTS) && (
           <div
             id="preview-area"
-            className={classNames(
-              moduleStyles.previewArea,
-              mode === Mode.GENERATING
-                ? moduleStyles.previewAreaGenerating
-                : mode === Mode.GENERATED
-                ? moduleStyles.previewAreaGenerated
-                : moduleStyles.previewAreaResults,
-              previewAreaClass
-            )}
+            className={classNames(moduleStyles.previewArea, previewAreaClass)}
           >
             <div id="flip-card" className={moduleStyles.flipCard}>
               <div
@@ -826,31 +815,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 </div>
               </div>
             </div>
-          </div>
-        )}
-
-        {mode === Mode.GENERATING && false && (
-          <div
-            id="score-area"
-            key={generatingProgress.step}
-            className={moduleStyles.scoreArea}
-          >
-            <DanceAiScore
-              scores={
-                generatingProgress.subStep === 0
-                  ? [1, 1, 1]
-                  : getScores(inputs, generatingProgress.step)
-              }
-              minMax={minMaxAssociations.current}
-              colors={
-                generatingProgress.subStep <= 1
-                  ? ScoreColors.GREY
-                  : generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
-                  ? ScoreColors.NO
-                  : ScoreColors.YES
-              }
-              slotCount={SLOT_COUNT}
-            />
           </div>
         )}
 
