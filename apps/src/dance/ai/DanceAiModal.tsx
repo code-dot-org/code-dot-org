@@ -141,6 +141,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const GENERATION_SUBSTEP_DURATION_MAX = 270;
   const GENERATION_SUBSTEP_DURATION_MIN = 120;
 
+  // How many steps in the generated mode.
+  const GENERATED_STEPS_COUNT = 3;
+
   // How long we spend in each step of the generated mode.
   const GENERATED_STEP_DURATION = 1500;
 
@@ -412,7 +415,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     } else if (mode === Mode.GENERATED) {
       if (generatedProgress === 1) {
         playSound('ai-generate-yes', {volume: 0.2});
-      } else if (generatedProgress === 2) {
+      } else if (generatedProgress === GENERATED_STEPS_COUNT - 1) {
         setMode(Mode.RESULTS);
       }
     }
@@ -438,7 +441,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       if (mode === Mode.GENERATING) {
         setGeneratingProgress(updateGeneratingProgress);
       } else if (mode === Mode.GENERATED) {
-        if (generatedProgress < 2) {
+        if (generatedProgress < GENERATED_STEPS_COUNT - 1) {
           setGeneratedProgress(progress => progress + 1);
         }
       } else if (mode === Mode.EXPLANATION) {
