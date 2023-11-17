@@ -22,11 +22,11 @@ class TablesApi < Sinatra::Base
   # Exports a csv file from a table where the first row is the column names
   # and additional rows are the column values.
   #
-  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name|
+  get %r{/v3/export-firebase-tables/([^/]+)/([^/]+)$} do |channel_id, table_name| # TODO: unfirebase
     dont_cache
     content_type :csv
     response.headers['Content-Disposition'] = "attachment; filename=\"#{table_name}.csv\""
 
-    return FirebaseHelper.new(channel_id).table_as_csv(table_name)
+    return FirebaseHelper.new(channel_id).table_as_csv(table_name) # TODO: unfirebase
   end
 end
