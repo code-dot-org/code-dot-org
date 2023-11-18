@@ -40,8 +40,9 @@ import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
 import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
 import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
 import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
-import aiBotHeadNo from '@cdo/static/dance/ai/bot/ai-bot-head-no.png';
-import aiBotBodyNo from '@cdo/static/dance/ai/bot/ai-bot-body-no.png';
+import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
+import aiBotBodyThink1 from '@cdo/static/dance/ai/bot/ai-bot-body-think1.png';
+import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -51,6 +52,7 @@ export enum Mode {
   INITIAL = 'initial',
   SELECT_INPUTS = 'selectInputs',
   GENERATING = 'generating',
+  GENERATED = 'generated',
   RESULTS = 'results',
   EXPLANATION = 'explanation',
 }
@@ -74,9 +76,15 @@ type GeneratedEffects = {
 };
 
 enum Toggle {
-  AI_BLOCK = 'aiBlock',
+  EFFECT = 'effect',
   CODE = 'code',
 }
+
+const aiBotBodyThinkImages = [
+  aiBotBodyThink0,
+  aiBotBodyThink1,
+  aiBotBodyThink2,
+];
 
 // Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
 function useInterval(callback: () => void, delay: number | undefined) {
@@ -108,6 +116,21 @@ const getImageUrl = (id: string) => {
   return `/blockly/media/dance/ai/emoji/${id}.svg`;
 };
 
+// Returns an array containing [min, min+1, min+2, ..., max]
+const getRangeArray = (min: number, max: number) => {
+  const len = max - min + 1;
+  const arr = new Array(len);
+  for (let i = 0; i < len; i++) {
+    arr[i] = min + i;
+  }
+  return arr;
+};
+
+// Linear interpolation.
+const lerp = (step: number, steps: number, min: number, max: number) => {
+  return (step / steps) * (max - min) + min;
+};
+
 interface DanceAiModalProps {
   playSound: (name: DanceAiSound, options?: object) => void;
 }
@@ -118,16 +141,33 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const dispatch = useAppDispatch();
 
   // How many low-scoring results we show before the chosen one.
-  const BAD_GENERATED_RESULTS_COUNT = 4;
+  const BAD_GENERATED_RESULTS_COUNT = 16;
 
-  // How many substeps for each step in the generating process.
+  // How many substeps for each step in the generating mode.
   const GENERATING_SUBSTEP_COUNT = 3;
 
-  // How long we spend in each substep in the generating process.
-  const GENERATION_SUBSTEP_DURATION = 1000;
+  // How long we spend in each substep in the generating mode.
+  // Perform a linear interpolation from the first to the second, so
+  // that we gradually speed up.
+  const GENERATION_SUBSTEP_DURATION_MAX = 270;
+  const GENERATION_SUBSTEP_DURATION_MIN = 120;
 
-  // How long we spend in each step of the explanation process.
+  // How many steps in the generated mode.
+  const GENERATED_STEPS_COUNT = 3;
+
+  // How long we spend in each step of the generated mode.
+  const GENERATED_STEP_DURATION = 1500;
+
+  // How many steps in the explanation mode.
+  const EXPLANATION_STEPS_COUNT = 5;
+
+  // How long we spend in each step of the explanation mode.
   const EXPLANATION_STEP_DURATION = 900;
+
+  // The explanation shows the last (EXPLANATION_STEPS_COUNT-1) bad effects and the
+  // one good effect.
+  const EXPLANATION_START_INDEX =
+    BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1;
 
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
@@ -147,7 +187,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       step: 0,
       subStep: 0,
     });
-  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.AI_BLOCK);
+  const [generatedProgress, setGeneratedProgress] = useState<number>(0);
+  const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
   const currentAiModalField = useSelector(
@@ -192,8 +233,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const calculateMinMax = useCallback(
     (useInputs: string[]) => {
       // The minimum individual score is selected across all generated effects (bad and good).
-      const minIndividualScore = Array.from(
-        Array(BAD_GENERATED_RESULTS_COUNT + 1).keys()
+      const minIndividualScore = getRangeArray(
+        0,
+        BAD_GENERATED_RESULTS_COUNT - 1
       ).reduce((accumulator: number, currentValue: number) => {
         const scores = getScores(useInputs, currentValue);
         const min = Math.min(...scores);
@@ -225,7 +267,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         setGeneratingProgress({step: BAD_GENERATED_RESULTS_COUNT, subStep: 0});
 
         generatedEffects.current = {
-          badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
+          badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(
             () => chooseEffects(currentValue.inputs, ChooseEffectsQuality.BAD)
           ),
           goodEffect: currentValue,
@@ -311,6 +353,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setInputs([]);
     setCurrentInputSlot(0);
     setGeneratingProgress({step: 0, subStep: 0});
+    setGeneratedProgress(0);
     setMode(Mode.SELECT_INPUTS);
   };
 
@@ -319,6 +362,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       emojis: inputs,
     });
     setGeneratingProgress({step: 0, subStep: 0});
+    setGeneratedProgress(0);
+    setCurrentToggle(Toggle.EFFECT);
     handleGenerateClick();
   };
 
@@ -326,6 +371,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
       emojis: inputs,
     });
+    setGeneratedProgress(0);
     setExplanationProgress(0);
     setMode(Mode.EXPLANATION);
   };
@@ -366,38 +412,59 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       // Bump step and reset substep.
       currentProgress.step++;
       currentProgress.subStep = 0;
-    } else {
-      // Leave these values intact, and go to the results.
-      setMode(Mode.RESULTS);
     }
 
     return currentProgress;
   };
 
-  // Handle moments during generation when we should play a sound.
+  // Handle moments when we should play a sound or do another action.
   useEffect(() => {
-    if (mode === Mode.GENERATING && generatingProgress.subStep === 2) {
+    if (
+      mode === Mode.GENERATING &&
+      generatingProgress.subStep === GENERATING_SUBSTEP_COUNT - 1
+    ) {
       if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-        playSound('ai-generate-no', {volume: 0.25});
+        playSound('ai-generate-no', {volume: 0.2});
       } else {
-        playSound('ai-generate-yes', {volume: 0.25});
+        setMode(Mode.GENERATED);
+      }
+    } else if (mode === Mode.GENERATED) {
+      if (generatedProgress === 1) {
+        playSound('ai-generate-yes', {volume: 0.2});
+      } else if (generatedProgress === GENERATED_STEPS_COUNT - 1) {
+        setMode(Mode.RESULTS);
       }
     }
-  }, [generatingProgress, mode, playSound]);
+  }, [generatingProgress, generatedProgress, mode, playSound]);
+
+  const getGeneratingStepDuration = () => {
+    return lerp(
+      generatingProgress.step,
+      BAD_GENERATED_RESULTS_COUNT,
+      GENERATION_SUBSTEP_DURATION_MAX,
+      GENERATION_SUBSTEP_DURATION_MIN
+    );
+  };
 
   // Animate through the generating or explanation process.
   useInterval(
     () => {
       if (mode === Mode.GENERATING) {
         setGeneratingProgress(updateGeneratingProgress);
+      } else if (mode === Mode.GENERATED) {
+        if (generatedProgress < GENERATED_STEPS_COUNT - 1) {
+          setGeneratedProgress(progress => progress + 1);
+        }
       } else if (mode === Mode.EXPLANATION) {
-        if (explanationProgress < BAD_GENERATED_RESULTS_COUNT) {
+        if (explanationProgress < EXPLANATION_STEPS_COUNT - 1) {
           setExplanationProgress(progress => progress + 1);
         }
       }
     },
     mode === Mode.GENERATING
-      ? GENERATION_SUBSTEP_DURATION
+      ? getGeneratingStepDuration()
+      : mode === Mode.GENERATED
+      ? GENERATED_STEP_DURATION
       : mode === Mode.EXPLANATION
       ? EXPLANATION_STEP_DURATION
       : undefined
@@ -405,8 +472,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const startAi = () => {
     generatedEffects.current = {
-      badEffects: Array.from(Array(BAD_GENERATED_RESULTS_COUNT).keys()).map(
-        () => chooseEffects(inputs, ChooseEffectsQuality.BAD)
+      badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(() =>
+        chooseEffects(inputs, ChooseEffectsQuality.BAD)
       ),
       goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
     };
@@ -484,7 +551,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const showUseButton =
     mode === Mode.RESULTS &&
-    currentToggle === Toggle.AI_BLOCK &&
+    currentToggle === Toggle.EFFECT &&
     (aiOutput === AiOutput.AI_BLOCK || aiOutput === AiOutput.BOTH);
 
   const showConvertButton =
@@ -495,16 +562,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   let aiBotHead = aiBotHeadNormal;
   let aiBotBody = aiBotBodyNormal;
   let previewAreaClass = undefined;
-  if (mode === Mode.GENERATING && generatingProgress.subStep >= 2) {
-    if (generatingProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-      aiBotHead = aiBotHeadNo;
-      aiBotBody = aiBotBodyNo;
-      previewAreaClass = moduleStyles.previewAreaNo;
-    } else {
-      aiBotHead = aiBotHeadYes;
-      aiBotBody = aiBotBodyYes;
-      previewAreaClass = moduleStyles.previewAreaYes;
-    }
+  if (
+    mode === Mode.GENERATED ||
+    (mode === Mode.GENERATING &&
+      generatingProgress.step >= BAD_GENERATED_RESULTS_COUNT)
+  ) {
+    aiBotHead = aiBotHeadYes;
+    aiBotBody = aiBotBodyYes;
+    previewAreaClass = moduleStyles.previewAreaYes;
+  } else if (mode === Mode.GENERATING) {
+    aiBotBody =
+      aiBotBodyThinkImages[
+        generatingProgress.step % aiBotBodyThinkImages.length
+      ];
   }
 
   const explanationKeyDotColor = [
@@ -520,7 +590,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         tabIndex={0}
         onClick={handleStartOverClick}
       >
-        {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+        {getRangeArray(0, SLOT_COUNT - 1).map(index => {
           const item = getItem(inputs[index]);
           return (
             <div key={index} className={moduleStyles.emojiSlot}>
@@ -561,14 +631,26 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const labels = getLabels();
 
+  // While generating, we render two previews at a time, so that as a new
+  // one appears, it will smoothly fade in over the top of the previous one.
+  const indexesToPreview = [];
+  if (mode === Mode.GENERATING) {
+    if (generatingProgress.step > 0) {
+      indexesToPreview.push(generatingProgress.step - 1);
+    }
+    indexesToPreview.push(generatingProgress.step);
+  } else if (mode === Mode.GENERATED || mode === Mode.RESULTS) {
+    indexesToPreview.push(BAD_GENERATED_RESULTS_COUNT);
+  }
+
   const text =
     mode === Mode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
-      : mode === Mode.GENERATING && aiBotHead === aiBotHeadYes
-      ? i18n.danceAiModalGenerating2()
-      : mode === Mode.GENERATING
+      : mode === Mode.GENERATING ||
+        (mode === Mode.GENERATED && generatedProgress === 0)
       ? i18n.danceAiModalFinding2()
-      : mode === Mode.RESULTS && currentToggle === Toggle.AI_BLOCK
+      : (mode === Mode.GENERATED && generatedProgress >= 1) ||
+        (mode === Mode.RESULTS && currentToggle === Toggle.EFFECT)
       ? i18n.danceAiModalEffect2()
       : mode === Mode.RESULTS && currentToggle === Toggle.CODE
       ? i18n.danceAiModalCode2()
@@ -616,12 +698,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           >
             <ToggleGroup
               selected={currentToggle}
-              activeColor={color.teal}
+              activeColor={color['light_primary_500']}
               onChange={(value: Toggle) => {
                 setCurrentToggle(value);
               }}
+              useRebrandedLikeStyles
             >
-              <button key={0} type="button" value={Toggle.AI_BLOCK}>
+              <button key={0} type="button" value={Toggle.EFFECT}>
                 {i18n.danceAiModalEffectButton()}
               </button>
               <button key={1} type="button" value={Toggle.CODE}>
@@ -676,6 +759,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           {(mode === Mode.INITIAL ||
             mode === Mode.SELECT_INPUTS ||
             mode === Mode.GENERATING ||
+            mode === Mode.GENERATED ||
             mode === Mode.RESULTS) && (
             <div className={moduleStyles.botContainer}>
               <img
@@ -697,17 +781,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           )}
         </div>
 
-        {(mode === Mode.GENERATING || mode === Mode.RESULTS) && (
+        {(mode === Mode.GENERATING ||
+          mode === Mode.GENERATED ||
+          mode === Mode.RESULTS) && (
           <div
-            key={'preview-' + generatingProgress.step}
             id="preview-area"
-            className={classNames(
-              moduleStyles.previewArea,
-              mode === Mode.GENERATING
-                ? moduleStyles.previewAreaGenerating
-                : moduleStyles.previewAreaResults,
-              previewAreaClass
-            )}
+            className={classNames(moduleStyles.previewArea, previewAreaClass)}
           >
             <div id="flip-card" className={moduleStyles.flipCard}>
               <div
@@ -723,11 +802,24 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                   id="flip-card-front"
                   className={moduleStyles.flipCardFront}
                 >
-                  <AiVisualizationPreview
-                    id="ai-preview"
-                    code={getPreviewCode(currentGeneratedEffect)}
-                    size={previewSize}
-                  />
+                  {indexesToPreview.map(index => {
+                    return (
+                      <div
+                        id={'preview-container-' + index}
+                        key={'preview-container-' + index}
+                        className={moduleStyles.previewContainer}
+                        style={{
+                          animationDuration: getGeneratingStepDuration() + 'ms',
+                        }}
+                      >
+                        <AiVisualizationPreview
+                          id={'ai-preview-' + index}
+                          code={getPreviewCode(getGeneratedEffect(index))}
+                          size={previewSize}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
                 <div id="flip-card-back" className={moduleStyles.flipCardBack}>
                   {mode === Mode.RESULTS && (
@@ -746,31 +838,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           </div>
         )}
 
-        {mode === Mode.GENERATING && generatingProgress.subStep >= 1 && (
-          <div
-            id="score-area"
-            key={generatingProgress.step}
-            className={moduleStyles.scoreArea}
-          >
-            <DanceAiScore
-              scores={getScores(inputs, generatingProgress.step)}
-              minMax={minMaxAssociations.current}
-              colors={
-                generatingProgress.subStep === 1
-                  ? ScoreColors.GREY
-                  : generatingProgress.step < BAD_GENERATED_RESULTS_COUNT
-                  ? ScoreColors.NO
-                  : ScoreColors.YES
-              }
-              slotCount={SLOT_COUNT}
-            />
+        {mode === Mode.GENERATED && (
+          <div id="check-area" className={moduleStyles.checkArea}>
+            <i className="fa fa-check-circle" />
           </div>
         )}
 
         {mode === Mode.EXPLANATION && currentGeneratedEffect && (
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <div className={moduleStyles.key}>
-              {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+              {getRangeArray(0, SLOT_COUNT - 1).map(index => {
                 const item = getItem(inputs[index]);
                 return (
                   <div key={index} className={moduleStyles.emojiSlot}>
@@ -791,7 +868,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               })}
             </div>
             <div className={moduleStyles.visualizationContainer}>
-              {Array.from(Array(explanationProgress + 1).keys()).map(index => {
+              {getRangeArray(
+                EXPLANATION_START_INDEX,
+                EXPLANATION_START_INDEX + explanationProgress
+              ).map(index => {
                 return (
                   <div key={index} className={moduleStyles.visualizationColumn}>
                     <DanceAiScore
@@ -846,7 +926,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="start-over-button"
               onClick={handleStartOverClick}
               color={Button.ButtonColor.neutralDark}
-              className={moduleStyles.button}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
+              iconClassName={moduleStyles.buttonIcon}
               aria-label={i18n.danceAiModalStartOverButton()}
               title={i18n.danceAiModalStartOverButton()}
               icon="fast-backward"
@@ -859,11 +943,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="explanation-button"
               onClick={handleExplanationClick}
               color={Button.ButtonColor.neutralDark}
-              className={moduleStyles.button}
               aria-label={i18n.danceAiModalExplanationButton()}
               title={i18n.danceAiModalExplanationButton()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
               iconClassName={moduleStyles.buttonIcon}
-              icon="bar-chart"
+              icon="chart-simple"
             />
 
             <ModalButton
@@ -872,11 +959,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="leave-explanation-button"
               onClick={handleLeaveExplanation}
               color={Button.ButtonColor.brandSecondaryDefault}
-              className={moduleStyles.button}
               aria-label={i18n.danceAiModalBack()}
               title={i18n.danceAiModalBack()}
+              className={classNames(
+                moduleStyles.button,
+                moduleStyles.buttonWithoutText
+              )}
               iconClassName={moduleStyles.buttonIcon}
-              icon="bar-chart"
+              icon="chart-simple"
             />
           </div>
         </div>
@@ -908,6 +998,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleGenerateClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
 
@@ -919,6 +1010,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
                 disabled={aiModalOpenedFromFlyout}
+                useDefaultLineHeight
               />
             )}
             {showUseButton && (
@@ -928,6 +1020,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                 onClick={handleUseClick}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 className={moduleStyles.button}
+                useDefaultLineHeight
               />
             )}
           </div>
