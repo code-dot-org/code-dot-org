@@ -83,9 +83,9 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
 end
 
-Then /^I scroll the ([a-zA-Z]*) blockspace to block "(.*?)"$/ do |workspace_type, block_id|
-  block_space_name = workspace_type + 'BlockSpace'
-  @browser.execute_script("Blockly.#{block_space_name}.centerOnBlock('#{block_id}')")
+# This function only works for Google Blockly
+Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
+  @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
@@ -291,6 +291,7 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   @browser.execute_script(script)
 end
 
+# This only works for Google Blockly
 Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
   script = "
     Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
@@ -298,6 +299,7 @@ Then(/^I click block field that is number (.*?) in the list of blocks and number
   @browser.execute_script(script)
 end
 
+# This only works for Google Blockly
 Then(/^the open flyout has (.*?) blocks$/) do |n|
   script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
@@ -309,6 +311,7 @@ Then(/^I drag and drop block "(.*?)" to offset (.*?), (.*?)$/) do |block_id, dx,
   @browser.action.drag_and_drop_by(element, dx.to_i, dy.to_i).perform
 end
 
+# This only works for Google Blockly
 Then(/^the function editor workspace has (\d+) blocks$/) do |n|
   script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
   expect(@browser.execute_script(script)).to eq(n)
