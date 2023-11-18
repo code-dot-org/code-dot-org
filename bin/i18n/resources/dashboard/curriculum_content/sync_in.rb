@@ -70,7 +70,7 @@ module I18n
           def redact_file_content(i18n_source_file_path)
             RedactRestoreUtils.backup_source_file(i18n_source_file_path)
 
-            RedactRestoreUtils.redact(i18n_source_file_path, REDACT_RESTORE_PLUGINS)
+            RedactRestoreUtils.redact(i18n_source_file_path, i18n_source_file_path, REDACT_RESTORE_PLUGINS)
           end
 
           # Helper method to get the desired destination subdirectory of the given

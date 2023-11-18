@@ -34,7 +34,7 @@ describe I18n::Resources::Dashboard::Docs::SyncIn do
       I18nScriptUtils.expects(:write_json_file).with(i18n_source_file_path, programming_env_i18n_data)
     end
     let(:expect_programming_env_i18n_source_file_backup_creation) do
-      I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_original_file_path)
+      RedactRestoreUtils.expects(:backup_source_file).with(i18n_source_file_path)
     end
     let(:expect_programming_env_i18n_source_file_redaction) do
       RedactRestoreUtils.expects(:redact).with(i18n_source_file_path, i18n_source_file_path, %w[visualCodeBlock link resourceLink])
