@@ -61,7 +61,7 @@ export async function getChatCompletionMessage(
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
   if (!response) {
-    return {status: Status.PERSONAL, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
+    return {status: Status.ERROR, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
   }
   return {
     status: Status.OK,

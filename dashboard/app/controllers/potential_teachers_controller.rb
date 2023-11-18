@@ -4,13 +4,16 @@ class PotentialTeachersController < ApplicationController
 
   # url: /potential_teachers METHOD: POST
   def create
-    @potential_teacher = PotentialTeacher.new(potential_teacher_params)
-    begin
-      @potential_teacher.save!
-      render json: {message: 'Potential teacher created successfully'}, status: :created
-    rescue ActiveRecord::RecordInvalid => exception
-      raise "ERROR: #{exception.message}"
+    if current_user.nil?
+      @potential_teacher = PotentialTeacher.new(potential_teacher_params)
+      begin
+        @potential_teacher.save!
+        render json: {message: 'Potential teacher created successfully'}, status: :created
+      rescue ActiveRecord::RecordInvalid => exception
+        raise "ERROR: #{exception.message}"
+      end
     end
+    send_hoc_email(params)
   end
 
   # GET /potential_teachers/:id
@@ -26,6 +29,15 @@ class PotentialTeachersController < ApplicationController
 
   private def potential_teacher_params
     params.permit([:name, :email, :script_id, :receives_marketing]).to_h
+  end
+
+  def send_hoc_email(params)
+    name = current_user&.name || params[:name]
+    email = current_user&.email || params[:email]
+    unit_id = params[:script_id]
+    lessons = Unit.get_from_cache(unit_id).lessons
+    lesson_plan_html_url = lessons&.first&.lesson_plan_html_url
+    TeacherMailer.hoc_tutorial_email(name, email, lesson_plan_html_url).deliver_now
   end
 
   def set_potential_teacher
