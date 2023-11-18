@@ -30,4 +30,3 @@ Scenario: Edit a Function
   And I wait for 3 seconds
   And I see no difference for "run the program with the updated function"
   And I close my eyes
-  

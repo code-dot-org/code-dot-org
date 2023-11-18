@@ -43,4 +43,3 @@ Scenario: Can edit a Function
   # Now the function editor workspace should have 4 blocks: the procedure block,
   # the set background block, the new sprite block, and the location block attached to the new sprite block.
   Then the function editor workspace has 4 blocks
-
