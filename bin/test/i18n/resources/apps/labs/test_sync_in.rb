@@ -67,7 +67,7 @@ describe I18n::Resources::Apps::Labs::SyncIn do
     let(:i18n_source_file_path) {CDO.dir(File.join("i18n/locales/source/blockly-mooc/#{lab}.json"))}
     let(:i18n_backup_file_path) {CDO.dir(File.join("i18n/locales/original/blockly-mooc/#{lab}.json"))}
 
-    let(:expect_i18n_source_file_backuping) {I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_backup_file_path)}
+    let(:expect_i18n_source_file_backuping) {RedactRestoreUtils.expects(:backup_source_file).with(i18n_source_file_path)}
     let(:expect_i18n_source_file_redaction) {RedactRestoreUtils.expects(:redact).with(i18n_source_file_path, i18n_source_file_path, %w[link])}
 
     before do
