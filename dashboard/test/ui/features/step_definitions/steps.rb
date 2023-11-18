@@ -1054,8 +1054,8 @@ end
 
 And /^I dismiss the hoc guide dialog$/ do
   steps <<~GHERKIN
-    And I click selector ".uitest-no-email-guide"
-    And I wait until I don't see selector ".uitest-no-email-guide"
+    And I click selector "#uitest-no-email-guide" once I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end
 
