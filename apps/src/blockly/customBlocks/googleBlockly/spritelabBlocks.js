@@ -322,7 +322,7 @@ export const blocks = {
             !appOptions.readonlyWorkspace &&
             Blockly.useModalFunctionEditor &&
             block.inputList.length &&
-            !block.workspace.isFlyout
+            block.workspace.id === Blockly.getMainWorkspace().id
           ) {
             const editButton = new Blockly.FieldButton({
               value: msg.edit(),
