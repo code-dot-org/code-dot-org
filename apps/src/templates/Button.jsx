@@ -207,7 +207,7 @@ class Button extends React.Component {
             </span>
           )}
           {!isPending && text && (
-            <span className={moduleStyles.textSpan}>{!isPending && text}</span>
+            <span className={moduleStyles.textSpan}>{text}</span>
           )}
         </div>
       </Tag>
