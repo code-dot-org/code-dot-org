@@ -47,7 +47,7 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "Important: Your Code.org Professional Learning Application Requires Administrator/School Leader Approval"
+          subject: "Important: Your Application Requires Administrator/School Leader Approval"
         )
       else
         mail(
