@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../util/color';
+import color from '@cdo/apps/util/color';
 
 export default class Lightbulb extends React.Component {
   static propTypes = {
@@ -100,7 +100,7 @@ export default class Lightbulb extends React.Component {
               cy="310"
               r="125"
               fill={color.white}
-              stroke="#dddddd"
+              stroke={color.blockly_flyout_gray}
               strokeWidth="16"
             />
           </g>
