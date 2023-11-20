@@ -11,7 +11,7 @@ function createApplabStore() {
   return createStore(
     combineReducers({
       ...commonReducers,
-      ...applabReducers
+      ...applabReducers,
     })
   );
 }
@@ -25,7 +25,7 @@ export default storybook => {
 
   const storybookStyle = {
     position: 'relative',
-    width: '100%'
+    width: '100%',
   };
 
   storyTable.push({
@@ -34,7 +34,7 @@ export default storybook => {
       const withDebugConsoleStore = createApplabStore();
       withDebugConsoleStore.dispatch(
         setPageConstants({
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -42,7 +42,7 @@ export default storybook => {
           <JsDebugger style={storybookStyle} />
         </Provider>
       );
-    }
+    },
   });
 
   storyTable.push({
@@ -52,7 +52,7 @@ export default storybook => {
       withDebugConsoleStore.dispatch(
         setPageConstants({
           showDebugConsole: true,
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -62,7 +62,7 @@ export default storybook => {
           </Provider>
         </div>
       );
-    }
+    },
   });
 
   storyTable.push({
@@ -73,7 +73,7 @@ export default storybook => {
         setPageConstants({
           showDebugConsole: true,
           showDebugSlider: true,
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -81,7 +81,7 @@ export default storybook => {
           <JsDebugger style={storybookStyle} />
         </Provider>
       );
-    }
+    },
   });
 
   storyTable.push({
@@ -92,7 +92,7 @@ export default storybook => {
         setPageConstants({
           showDebugConsole: true,
           showDebugButtons: true,
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -100,7 +100,7 @@ export default storybook => {
           <JsDebugger style={storybookStyle} />
         </Provider>
       );
-    }
+    },
   });
 
   storyTable.push({
@@ -111,7 +111,7 @@ export default storybook => {
         setPageConstants({
           showDebugConsole: true,
           showDebugWatch: true,
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -119,7 +119,7 @@ export default storybook => {
           <JsDebugger style={storybookStyle} />
         </Provider>
       );
-    }
+    },
   });
 
   storyTable.push({
@@ -132,7 +132,7 @@ export default storybook => {
           showDebugConsole: true,
           showDebugWatch: true,
           showDebugSlider: true,
-          appType: 'gamelab'
+          appType: 'gamelab',
         })
       );
       return (
@@ -140,7 +140,7 @@ export default storybook => {
           <JsDebugger style={storybookStyle} debugWatch />
         </Provider>
       );
-    }
+    },
   });
 
   storybook.storiesOf('JsDebugger', JsDebugger).addStoryTable(storyTable);

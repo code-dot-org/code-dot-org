@@ -1,30 +1,21 @@
 name 'CB_Question_16'
-encrypted '0O1P3pjyElvNbDbRCcOz06kGAa5466b2VJoUSI+zY3Oaf8A1dTvzW4ll63nS
-zN4odjeu7y1aZlU96OkriymaqR1v7/xCtH1Hbowu4hwcecyaulqBP3QNh71y
-avvkY03LVfBgAkq0JBQdZI7KpJDd2QCKlVDe8ocNEydSiqxMpPzfhsgN4jv4
-tMq+c6tvzVW7aKmIwXlpSlfnvtuRv3hNwGP03mb9fBwHyNZrTqvS8HoLnzA7
-AyycjtahkKD1A4tGabg5n8E/8VCESnDe9brf6GVNSGdWLM5QA2ye8NSDrUBB
-6OgumJvCSADaxgALhE9i1ETgkqDou5gplOfy4fw+QKGg//LOubveuT4JnwJe
-5hrPvIbrL+DZxyS6+KuO26Ixw1/XdT3raygMgzSAd8gGUxZc5S9w4tPzXQes
-O9oWxna1bIhu9uTIRMJn5EemMeUzbe/BhQMKk/fFKmM7fyHzIx+ePCKITPlX
-sD2/ryhf6PO0SEXMeF/90aopAJe/6mlf6c5D0fwzxoDlzwqNkEUV/UaHhRdh
-CV+b020PB0u4w9MmaO+1plK2vTQOeKJwE8Lfx/SKCl9ahsHyNth6iqqwQAB6
-LJ4+VCuZkwaA47bgNag38W47cjBTM7DlqKijVa0yCFMw07+e6Wa/pr6ubCjB
-34KmbdFqnqhESV+uFr4ZsxuMGynFkgP1uns8czyiNeSg/0kdtIbWdxiMuruY
-hHJJU1xmzQF6L2/QJFXmPZ+ZstUi0QuRsDSQFZRrHyqRh8GFEiIweFMmQ+bj
-AWC3GR8ODFb20aIcNuuRfxJobH6ejZraeiZXGyYIqBsNApHyIH4i/Rbw9O7U
-Szrrz/dNk/9lK7n1jr43y8IFNd+53AK1rOcNbsS5vKZkXWjv2dNCmFLggoZx
-aXgyZe24HsxMEA335YR6gZNcEyqndyDosYxeXCGzkUHMcnkWvKSJ9ruSGnsS
-7fpAqlfvLN5Lu3Zkvgxgd6McQwuRLaDB0v+zWwwOyZ4Mrpv1EecHfkSt/pzj
-iSvcVQMuxBlP5+4C/li4HrcPux4uiXTJb0mAjtW3KTR7ZSx5s/XiZwEHpn+r
-M9ARXNJjySOclQQ2KLBPb441X7L+N3f0jRtfaIQ8YkIiC5bMuQIJ5kJkCNda
-xEK1s+eF+Evh2+wZ6rQ/tYJurAl4Td1rzO9aWD2AKeupBOCQB+f4D/uDx7DA
-xNdVuXL6SWm5Zla24d7R1WF0wUyhjk9hOS9KrHwhsTjyE2GH5wgdOHqPKGka
-Z2J/KY9ejFfooFNXpszB0n4hJAes6J9z+VShxqsjVxTmX56y1lvvXmmNrhHa
-qHDXgHGwNOnkS/1uKBDfWbERdWVL8k+kFMui7lziq5fC2w2SA6T+swvBIpD1
-U2s3cecHlW79v7uvXa9ZxpWzJvYO9GqBoZ4NFjfQs0l03WlMwxUZOZcByDpy
-kJMk9UEIpRAG/ftDjKHqkQQz8hCKFGhrORv/PDzBTelwZO6SfMrmZXG1CCws
-VXN/02X0PjS2HzSryx2qkVbIxA8HMRnzlne1UBePFgAVsn9FuxWJCgrDsicm
-uNJmyCvkXKy4GRZZBWxmfdHKhVRtilFrR6u5JQzpDQzVpW40dqfNS50s69lV
-RA==
-'
+height '80'
+layout 'wrap'
+
+
+right 'https://images.code.org/4e51af4d6bd924fe15d82aaa8ff2654d-image-1461454965539.PNG'
+wrong 'https://images.code.org/44d34760736cb918ec15e20566af5523-image-1461454960496.PNG'
+wrong 'https://images.code.org/30af21f04bf077f19c05acf26747f281-image-1461454973664.PNG'
+wrong 'https://images.code.org/be3dd88e835cc39163b07f9996f52dc7-image-1461454977406.PNG'
+
+markdown <<MARKDOWN
+A summer camp offers a morning session and an afternoon session. The list `morningList` contains the names of all children attending the morning session, and the list `afternoonList` contains the names of all children attending the afternoon session.
+
+Only children who attend both sessions eat lunch at the camp. The camp director wants to create `lunchList`, which will contain the names of children attending both sessions.
+
+The following code segment is intended to create `lunchList`, which is initially empty. It uses the procedure `isFound (list, name)`, which returns `true` if `name` is found in `list` and returns `false` otherwise. 
+
+<img src="https://images.code.org/f0809a940d8c49855ed59ec03bc651dd-image-1461454956453.PNG" width=300>
+MARKDOWN
+
+allow_multiple_attempts true

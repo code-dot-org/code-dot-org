@@ -28,3 +28,5 @@ for(int i = 0; i < nums.length; i++){
 
 ```
 MARKDOWN
+
+allow_multiple_attempts true

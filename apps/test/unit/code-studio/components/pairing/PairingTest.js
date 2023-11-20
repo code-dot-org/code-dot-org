@@ -5,7 +5,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
-describe('Pairing component', function() {
+describe('Pairing component', function () {
   function createDomElement() {
     return mount(<Pairing source="/pairings" />);
   }
@@ -15,7 +15,7 @@ describe('Pairing component', function() {
     server.respondWith('GET', '/pairings', [
       httpCode,
       {'Content-Type': 'application/json'},
-      JSON.stringify(response)
+      JSON.stringify(response),
     ]);
     return server;
   }
@@ -35,7 +35,7 @@ describe('Pairing component', function() {
 
   describe('handles http errors', () => {
     let server, component;
-    afterEach(function() {
+    afterEach(function () {
       teardownFakeAjax(server);
       component = null;
     });
@@ -59,10 +59,10 @@ describe('Pairing component', function() {
         {
           id: 1,
           name: 'A section',
-          students: [{id: 11, name: 'First student'}]
-        }
+          students: [{id: 11, name: 'First student'}],
+        },
       ],
-      pairings: []
+      pairings: [],
     };
 
     beforeEach(() => {
@@ -70,7 +70,7 @@ describe('Pairing component', function() {
       server.respondWith('PUT', '/pairings', [
         500,
         {'Content-Type': 'application/json'},
-        ''
+        '',
       ]);
       component = createDomElement();
       server.respond();
@@ -112,7 +112,7 @@ describe('Pairing component', function() {
     });
   });
 
-  describe('for student in multiple sections', function() {
+  describe('for student in multiple sections', function () {
     var component;
     var server;
     var ajaxState = {
@@ -122,27 +122,27 @@ describe('Pairing component', function() {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
+            {id: 12, name: 'Second Student'},
+          ],
         },
-        {id: 15, name: 'Another section'}
+        {id: 15, name: 'Another section'},
       ],
-      pairings: []
+      pairings: [],
     };
 
-    beforeEach(function() {
+    beforeEach(function () {
       server = setupFakeAjax(ajaxState);
       component = createDomElement();
       server.respond();
       component.update();
     });
 
-    afterEach(function() {
+    afterEach(function () {
       teardownFakeAjax(server);
       component = null;
     });
 
-    it('should change the section and render a list of students when a section with students is selected', function() {
+    it('should change the section and render a list of students when a section with students is selected', function () {
       verifyStartingValues(component, 0, 1);
 
       // choose first section
@@ -159,23 +159,23 @@ describe('Pairing component', function() {
     });
   });
 
-  describe('before ajax response is received', function() {
+  describe('before ajax response is received', function () {
     var component;
-    beforeEach(function() {
+    beforeEach(function () {
       component = mount(React.createElement(Pairing, {}));
       component.update();
     });
 
-    afterEach(function() {
+    afterEach(function () {
       component = null;
     });
 
-    it('should not render a section dropdown', function() {
+    it('should not render a section dropdown', function () {
       verifyStartingValues(component);
     });
   });
 
-  describe('for student in one section', function() {
+  describe('for student in one section', function () {
     var component;
     var server;
     var ajaxState = {
@@ -185,81 +185,63 @@ describe('Pairing component', function() {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
-        }
+            {id: 12, name: 'Second Student'},
+          ],
+        },
       ],
-      pairings: []
+      pairings: [],
     };
 
-    beforeEach(function() {
+    beforeEach(function () {
       server = setupFakeAjax(ajaxState);
       component = createDomElement();
       server.respond();
       component.update();
     });
 
-    afterEach(function() {
+    afterEach(function () {
       teardownFakeAjax(server);
       component = null;
     });
 
-    it('should recall two students are selected when two students are clicked', function() {
+    it('should recall two students are selected when two students are clicked', function () {
       verifyStartingValues(component, 2);
 
       // click on both students to select
-      component
-        .find('.student')
-        .first()
-        .simulate('click');
-      component
-        .find('.student')
-        .last()
-        .simulate('click');
+      component.find('.student').first().simulate('click');
+      component.find('.student').last().simulate('click');
       expect(component.find('.student').length).to.equal(2);
       expect(component.find('.selected').length).to.equal(2);
       expect(component.find('.addPartners').length).to.equal(1);
     });
 
-    it('should stop displaying addPartners when student is unclicked', function() {
+    it('should stop displaying addPartners when student is unclicked', function () {
       verifyStartingValues(component, 2);
 
       // click on first student to select
-      component
-        .find('.student')
-        .first()
-        .simulate('click');
+      component.find('.student').first().simulate('click');
       expect(component.find('.student').length).to.equal(2);
       expect(component.find('.selected').length).to.equal(1);
       expect(component.find('.addPartners').length).to.equal(1);
 
       // click on first student again to unselect
-      component
-        .find('.student')
-        .first()
-        .simulate('click');
+      component.find('.student').first().simulate('click');
       expect(component.find('.student').length).to.equal(2);
       expect(component.find('.selected').length).to.equal(0);
       expect(component.find('.addPartners').length).to.equal(0);
     });
 
-    it('should let you select a student and add them as a partner', function() {
+    it('should let you select a student and add them as a partner', function () {
       verifyStartingValues(component, 2);
 
       // click on first student to select
-      component
-        .find('.student')
-        .first()
-        .simulate('click');
+      component.find('.student').first().simulate('click');
       expect(component.find('.student').length).to.equal(2);
       expect(component.find('.selected').length).to.equal(1);
       expect(component.find('.addPartners').length).to.equal(1);
 
       // click on Add Partner to confirm
-      component
-        .find('.addPartners')
-        .first()
-        .simulate('click');
+      component.find('.addPartners').first().simulate('click');
 
       // verify that the right data is sent to the server
       let data = server.requests[server.requests.length - 1].requestBody;
@@ -269,7 +251,7 @@ describe('Pairing component', function() {
     });
   });
 
-  describe('for student who is currently pairing', function() {
+  describe('for student who is currently pairing', function () {
     var component;
     var server;
     var ajaxState = {
@@ -279,39 +261,39 @@ describe('Pairing component', function() {
           name: 'A section',
           students: [
             {id: 11, name: 'First student'},
-            {id: 12, name: 'Second Student'}
-          ]
+            {id: 12, name: 'Second Student'},
+          ],
         },
         {
           id: 56,
-          name: 'Another section'
-        }
+          name: 'Another section',
+        },
       ],
       pairings: [
         {id: 546, name: 'Josh'},
         {id: 563, name: 'Charing'},
-        {id: 96747, name: 'Andrew O.'}
-      ]
+        {id: 96747, name: 'Andrew O.'},
+      ],
     };
 
-    beforeEach(function() {
+    beforeEach(function () {
       server = setupFakeAjax(ajaxState);
       server.respondWith('PUT', '/pairings', [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify({sections: [], pairings: []})
+        JSON.stringify({sections: [], pairings: []}),
       ]);
       component = createDomElement();
       server.respond();
       component.update();
     });
 
-    afterEach(function() {
+    afterEach(function () {
       teardownFakeAjax(server);
       component = null;
     });
 
-    it('should remove all students and go back to selection mode when clicking Stop', function() {
+    it('should remove all students and go back to selection mode when clicking Stop', function () {
       verifyStartingValues(component, 3, 0, 1);
 
       // click on stop button

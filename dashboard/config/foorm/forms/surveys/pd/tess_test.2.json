@@ -330,6 +330,13 @@
             }
           ],
           "choicesOrder": "asc"
+        },
+        {
+          "type": "text",
+          "name": "workshop_date",
+          "title": "Please enter the date of the workshop",
+          "inputType": "date",
+          "min": "2023-10-24"
         }
       ]
     }

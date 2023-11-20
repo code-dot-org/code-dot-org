@@ -3,16 +3,19 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Navigating lesson plans and resources  
+# Navigating Lesson Plans and Resources  
 
-#### Now that you know how to navigate the Code.org learning platform, we are going to dig deeper into the resources available to support you in teaching the CS Discoveries course. 
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Now that you know how to navigate the Code.org learning platform, we are going to dig deeper into the resources available to support you in teaching the CS Discoveries course. 
+</p>
+</div>
 
 ## You will learn how to:
 
 * ##### Locate and use course lesson plans and teacher resources 
 
-### Let's keep learning! 
+### **Let's keep learning!**
 
-> ##**Curriculum Value:** Teachers in Classrooms
-We believe students learn best with the help of an empowered teacher. **We design our materials for a classroom setting and provide teachers robust supports that enable them to understand and perform their critical role in supporting student learning.** Because teachers know their students best, we empower them to make choices within the curriculum, even as we recommend and support a variety of pedagogical approaches. Knowing that many of our teachers are new to computer science themselves, our resources and strategies specifically target their needs. 
+
 MARKDOWN

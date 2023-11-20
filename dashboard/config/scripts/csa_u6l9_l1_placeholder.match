@@ -14,3 +14,4 @@ answer 'an exception that occurs when a program attempts to access an index that
 
 question 'ConcurrentModificationException'
 answer 'an exception that occurs when code attempts to change the size of an ArrayList while traversing it using an enhanced for loop'
+allow_multiple_attempts true

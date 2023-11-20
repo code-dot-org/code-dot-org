@@ -3,6 +3,7 @@ import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import React from 'react';
 import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -19,6 +20,8 @@ $(document).ready(() => {
   const showVideo = $('.show-video');
   const notes = $('.notes-content');
   const video = $('.video-content');
+
+  reportTeacherReviewingStudentNonLabLevel();
 
   showNotes.click(() => {
     showNotes.hide();
@@ -55,7 +58,7 @@ $(document).ready(() => {
   );
 
   // Render markdown contents
-  $('.standalone-video > .markdown-container').each(function() {
+  $('.standalone-video > .markdown-container').each(function () {
     const container = this;
     if (!container.dataset.markdown) {
       return;

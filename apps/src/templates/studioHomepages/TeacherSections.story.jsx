@@ -4,13 +4,13 @@ import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   serverSectionFromSection,
-  setSections
+  setSections,
 } from '../teacherDashboard/teacherSectionsRedux';
 import TeacherSections from './TeacherSections';
 
 export default {
   title: 'TeacherSections',
-  component: TeacherSections
+  component: TeacherSections,
 };
 
 const sections = [
@@ -26,7 +26,7 @@ const sections = [
     loginType: 'word',
     code: 'ABCDEF',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 12,
@@ -40,7 +40,7 @@ const sections = [
     loginType: 'word',
     code: 'EEB206',
     providerManaged: false,
-    hidden: false
+    hidden: false,
   },
   {
     id: 13,
@@ -54,8 +54,8 @@ const sections = [
     loginType: 'word',
     code: 'HPRWHG',
     providerManaged: false,
-    hidden: false
-  }
+    hidden: false,
+  },
 ];
 const serverSections = sections.map(serverSectionFromSection);
 
@@ -84,12 +84,12 @@ export const TeacherNoSections = () => {
 
 function withFakeServer({courses = [], sections = []} = {}) {
   const server = sinon.fakeServer.create({
-    autoRespond: true
+    autoRespond: true,
   });
   const successResponse = body => [
     200,
     {'Content-Type': 'application/json'},
-    JSON.stringify(body)
+    JSON.stringify(body),
   ];
   server.respondWith(
     'GET',
@@ -101,4 +101,5 @@ function withFakeServer({courses = [], sections = []} = {}) {
     '/dashboardapi/sections/valid_course_offerings',
     successResponse([])
   );
+  server.respondWith('GET', '/api/v1/section_instructors', successResponse([]));
 }

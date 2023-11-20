@@ -25,14 +25,14 @@ social:
 
 <a id="fundamentals"></a>
 <h2>CS Fundamentals Teachers</h2>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested beginning-of-year message to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested beginning-of-year message to send home</h3>
 <p style="margin-left:50px; margin-right:30%">This year in class your student will be learning about computer science! Elementary school is a great time for students to learn the basics and start exploring this essential subject.</p>
 <p style="margin-left:50px; margin-right:30%">Why are we learning computer science? CS teaches students critical thinking and problem solving. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn computer science perform better in reading, science, and math.</p>
 <p style="margin-left:50px; margin-right:30%">In these lessons, your child will collaborate with others, investigate different problem-solving techniques, and learn to persist in the face of challenging tasks. You can take a look at some of our lessons <a href="https://code.org/educate/curriculum/csf" target="_blank">here</a>.</p>
 <p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project, like a Dance Party Creation or a link to the projects gallery to give parents a glimpse of what your students might be creating]</i></p>
 <p style="margin-left:50px; margin-right:30%">Outside of the class, you might explore <a href="/careers-with-cs/k5" target="_blank">career inspiration and exploration resources</a> to help your child make connections beyond the classroom. Students are more likely to connect with material when given opportunities to see how it's used in the real world. Spark their imagination and help them envision where CS could lead them.</p>
 <br>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested end-of-year message to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested end-of-year message to send home</h3>
 <p style="margin-left:50px; margin-right:30%">This year, the students were excited to learn about computer science. Elementary school is a great time for students to start getting exposed to this subject essential for them to learn in today’s world.</p>
 <p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn computer science do better in other subjects.</p>
 <p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning. So ask your child what they learned and created in our computer science lessons.</p>
@@ -41,14 +41,14 @@ social:
 
 <a id="discoveries"></a>
 <h2>CS Discoveries Teachers</h2>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested beginning-of-year message to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested beginning-of-year message to send home</h3>
 <p style="margin-left:50px; margin-right:30%">This year, your students will be taking Computer Science Discoveries! Computer science teaches critical thinking and problem solving, and improves student performance across subjects. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn CS are more likely to go to college.</p>
 <p style="margin-left:50px; margin-right:30%">In this class, learners will look at computer science with a wide lens. We’ll cover problem solving, programming, physical computing, user-centered design, and AI/machine learning, while inspiring students as they build their own websites, apps, and games. You can take a look at some of our lessons <a href="https://studio.code.org/courses/csd" target="_blank">here</a>.</p>
 <p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your child to see something they created in class. Or ask them what makes a computer a computer?</p>
 <p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project or a link to the projects gallery to give parents a glimpse of what your students might be creating]</i></p>
 <p style="margin-left:50px; margin-right:30%">Outside of the class, you might explore our <a href="/careers-with-cs" target="_blank">career exploration hub</a> to help your child make connections beyond the classroom. Students are more likely to connect with material when given opportunities to see how it's used in the real world. Spark their imagination and help them envision where CS could lead them.</p>
 <br>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested end-of-year message to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested end-of-year message to send home</h3>
 <p style="margin-left:50px; margin-right:30%">It’s been a pleasure to see your students engage with computer science this year. They’ve learned about programming and how computers work, and they’ve also been inspired to build their own websites, apps, animations, and games!</p>
 <p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn computer science do better in other subjects, excel at problem solving, and are more likely to go to college.</p>
 <p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your child to see something they created in class. Or ask them what makes a computer a computer?</p>
@@ -58,13 +58,13 @@ social:
 
 <a id="principles"></a>
 <h2>CS Principles Teachers</h2>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested beginning-of-year to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested beginning-of-year to send home</h3>
 <p style="margin-left:50px; margin-right:30%">This year, your students will be taking Computer Science Principles, and hopefully developing a love of computer science! Computer science teaches critical thinking and problem solving, and improves student performance across subjects. In fact, <a href="https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536" target="_blank">studies show</a> that students who learn CS are more likely to go to college.</p>
 <p style="margin-left:50px; margin-right:30%">In this class, students will learn the foundational concepts of computer science and explore how computing and technology can impact the world. We’ll cover algorithms, program design, networks, and more, while inspiring students as they build their own series of real working, shareable apps with App Lab. You can take a look at some of our lessons here.</p>
 <p style="margin-left:50px; margin-right:30%"><i>[Teachers: optionally, you could share a link to a student project or a link to the projects gallery to give parents a glimpse of what your students might be creating]</i></p>
 <p style="margin-left:50px; margin-right:30%">You may also encourage your child to explore the <a href="/beyond" target="_blank">resources to help them make connections beyond the classroom</a>. Students are more likely to connect with material when given opportunities to see how it's used in the real world. Spark their imagination and help them explore the vast possibilities of a future with CS.</a></p>
 <br>
-<h3 style="margin-left:50px; margin-right:30%"><strong>Suggested end-of-year to send home</strong></h3>
+<h3 class="heading-sm" style="margin-left:50px; margin-right:30%">Suggested end-of-year to send home</h3>
 <p style="margin-left:50px; margin-right:30%">It’s been a pleasure to see your students engage with computer science this year. They’ve learned foundational concepts of computer science and programming skills, and they’ve explored how computing and technology can impact the world they live in.</p>
 <p style="margin-left:50px; margin-right:30%">Computer science teaches students critical thinking and problem solving. In fact, studies show that students who learn computer science do better in other subjects, excel at problem solving, and are more likely to go to college.</p>
 <p style="margin-left:50px; margin-right:30%">Parent/guardian encouragement is critical to student success and interest in learning and success. So ask your student to see something they created in class.</p>

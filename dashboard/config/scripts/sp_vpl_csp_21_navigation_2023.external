@@ -1,0 +1,80 @@
+name 'SP-VPL-CSP-21-Navigation_2023'
+title 'Navigating this Professional Learning Course'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating professional learning modules
+
+#### Find the learning that works for you
+
+* ##### **Go at your own pace:** These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace. 
+
+* ##### **Pick your content:** The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. Select an option below to begin. 
+
+## Choose your path to continue learning
+
+### **Option A:** <a href= "https://studio.code.org/courses/self-paced-pl-csp-2023" >Click here</a> to return to the overview page to select your next module. 
+
+### **Option B:** Use the table below to navigate directly to the content of your choice.
+
+<table style="width:100%; border-style:none;">
+  <tr>
+  <th style="background-color:#00adbc; text-align:center; border-style:none; font-weight:bold;""">
+      <b><a href="https://studio.code.org/s/self-paced-pl-csp1-2023/"  rel="noopener noreferrer" style="color: white">Module 1</a></b><br/>
+      <i>Welcome</i>
+    </th>
+    <th style="background-color:#7665a0; text-align:center; border-style:none; font-weight:bold;""">
+      <b><a href="https://studio.code.org/s/self-paced-pl-csp2-2023/"  rel="noopener noreferrer" style="color: white">Module 2</a></b><br/>
+      <i>Navigating Code.org</i>
+    </th>
+    <th style="background-color:#0094ca; text-align:center; border-style:none;""">
+        <a href="https://studio.code.org/s/self-paced-pl-csp3-2023/"  rel="noopener noreferrer" style="color: white">Module 3</a><br/>
+        <i>Overview of CS Principles</i>
+    </th>
+    <th style="background-color:#ffa400; text-align:center; border-style:none;""">
+        <a href="https://studio.code.org/s/self-paced-pl-csp4-2023/"  rel="noopener noreferrer" style="color: white">Module 4</a><br/>
+        <i>Teaching and learning CS Principles</i>
+    </th>
+   
+  <tr>
+    <td colspan="5" style="text-align:center;width:96%;background-color:#d9d9d9;color:black; border-style:none;"> </td>
+  </tr>
+  <tr>
+  <td style="background-color:#a6e3e8; color:black; border-style:none; vertical-align: text-top;"">
+      <ul>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp1-2023/lessons/1/levels/1" > Welcome to Code.org </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp1-2023/lessons/2/levels/1" > Welcome to "Teaching CS Principles"</a></li>
+      </ul>
+    </td>
+    <td style="background-color:#cfc9de; color:black; border-style:none; vertical-align: text-top;"">
+      <ul>
+        <li> <a href="https://studio.code.org/s/self-paced-pl-csp2-2023/lessons/1/levels/1" > Navigating the Code.org learning platform </a> </li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp2-2023/lessons/2/levels/1" >Navigating lesson plans and resources </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp2-2023/lessons/3/levels/1" >Navigating support </a></li>
+      </ul>
+    </td>
+    <td style="background-color:#a6daed; color:black; border-style:none; vertical-align: text-top;"">
+      <ul>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp3-2023/lessons/1/levels/1" > Overview of course content </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp3-2023/lessons/2/levels/1" > Overview of learning tools </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp3-2023/lessons/3/levels/1" > Overview of implementation </a></li>
+      </ul>
+    </td>
+    <td style="background-color:#ffe0a6; color:black; border-style:none; vertical-align: text-top;"">
+      <ul>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp4-2023/lessons/1/levels/1">The role of the teacher </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp4-2023/lessons/2/levels/1">Learning CS Principles </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp4-2023/lessons/3/levels/1">Teaching CS Principles </a></li>
+        <li><a href="https://studio.code.org/s/self-paced-pl-csp4-2023/lessons/4/levels/1">Connect with the CS Community</a></li>
+      </ul>
+    </td>
+    
+</table>
+<br/>
+
+### **Option C:** Click the "Continue to next module" button below to move to the next module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/s/self-paced-pl-csp2-2023/lessons/1/levels/1=<user_id/>" rel="noopener noreferrer" style="float:right;">Continue to next module</a>
+
+![](https://images.code.org/dacb010cde55bd80f820cafafbd3a7d5-image-1626881552425.32.03 AM.png)
+MARKDOWN

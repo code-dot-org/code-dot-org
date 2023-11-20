@@ -4,9 +4,19 @@ Description: >-
   IAM layer including global/shared roles and access permissions for Code.org infrastructure.
   Note: Admin permissions are required to manage some admin-only resources in this stack.
 Parameters:
-  GoogleDeveloperIDs:
+  # Google ID parameters are defined in this template, use String placeholder during initial stack creation.
+  DeveloperGoogleIDs:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleDeveloperIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Developer access.
+  ContributorGoogleIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleContributorIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Contributor access.
+  BillingGoogleIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleBillingIDs
+    Description: SSM Parameter with a list of Google ID's for users granted Billing access.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -136,6 +146,8 @@ Resources:
             Action:
               - dynamodb:GetItem
             Resource: !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/dcdo_production"
+
+# TODO: Migrate to Engineering_FullAccess
   Developer:
     Type: AWS::IAM::Role
     Properties:
@@ -157,7 +169,7 @@ Resources:
             StringEquals:
               accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
             ForAnyValue:StringEquals:
-              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+              accounts.google.com:sub: !Ref DeveloperGoogleIDs
         - Effect: Allow
           Principal: {Service: ec2.amazonaws.com}
           Action: sts:AssumeRole
@@ -198,6 +210,11 @@ Resources:
             Action: logs:*
             Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
       ManagedPolicyArns: [!Ref DevPermissions]
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+
+# TODO: Migrate to REDTeam_Analyst
   DataAnalystRole:
     Type: AWS::IAM::Role
     Properties:
@@ -220,7 +237,179 @@ Resources:
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
       Tags:
         - Key: sqlworkbench-team
-          Value: red-team
+          Value: codedotorg
+
+# TODO: Migrate to Engineering_Contributor
+  ContributorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Contributor
+      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
+      Path: /engineering/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref ContributorGoogleIDs
+      ManagedPolicyArns:
+        - !Ref ContributorS3Policy
+        - !Ref ContributorSecretsPolicy
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+
+# TODO: Migrate to Billing_ReadOnly
+  BillingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: Billing
+      Description: Google-federated AWS Role for finance, granting limited access to the Billing console.
+      Path: /admin/
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref BillingGoogleIDs
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
+
+# Console & CLI Roles
+
+<%
+roles = {
+  EngineeringReadOnlyRole: {
+    RoleName: 'Engineering_ReadOnly',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref DenySecretsPolicy'
+    ]
+  },
+  EngineeringFullAccessRole: {
+    RoleName: 'Engineering_FullAccess',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+    ]
+  },
+  EngineeringContributorRole: {
+    RoleName: 'Engineering_Contributor',
+    GoogleIdsSSMParameter: 'ContributorGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref ContributorS3Policy',
+      '!Ref ContributorSecretsPolicy',
+    ]
+  },
+  TempS3LessEngineerRole: {
+    RoleName: 'Temp_S3less_Engineer',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref NoS3ForYouPolicy',
+    ]
+  },
+  EngineeringMusicLabContributorRole: {
+    RoleName: 'Engineering_MusicLabContributor',
+    ManagedPolicyArns: [
+      '!Ref MusicLabS3ReadWritePolicy',
+    ]
+  },
+  DataAnalyticsFullAccessRole: {
+    RoleName: 'DataAnalytics_FullAccess',
+    ManagedPolicyArns: [
+      '!Ref DataAnalystPolicy',
+      '!Ref DataAnalystDmsReadOnlyPolicy',
+      '!Ref DataAnalystRedshiftPolicy',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
+      'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  BillingReadOnlyRole: {
+    RoleName: 'Billing_ReadOnly',
+    GoogleIdsSSMParameter: 'BillingGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  }
+}
+roles.each do |name, config| %>
+  <%= name %>:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: <%= config[:RoleName] %>
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+            Action: sts:AssumeRoleWithSAML
+            Condition:
+              StringEquals:
+                SAML:aud: https://signin.aws.amazon.com/saml
+          <%- if config[:GoogleIdsSSMParameter] -%>
+          - Effect: Allow
+            Principal: {Federated: accounts.google.com}
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+              ForAnyValue:StringEquals:
+                accounts.google.com:sub: !Ref <%= config[:GoogleIdsSSMParameter] %>
+          <%- end -%>
+      ManagedPolicyArns:
+        <%- config[:ManagedPolicyArns].each do |arn| -%>
+        - <%=arn%>
+        <%- end -%>
+      Policies:
+        - PolicyName: "DenyAdminLogs"
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Deny
+                Action: logs:*
+                Resource: !Sub 'arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/admin/*'
+      Tags:
+        - Key: sqlworkbench-team
+          Value: codedotorg
+<%- end -%>
+
+  NoS3ForYouPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: NoS3ForYouPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - s3:*
+            Resource: '*'
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -300,7 +489,181 @@ Resources:
               - 'redshift:DescribeClusterDbRevisions'
               - 'redshift:DescribeClusterSnapshots'
               - 'redshift:DescribeClusterSubnetGroups'
+              - 'redshift:ViewQueriesInConsole'
+              - 'redshift:ViewQueriesFromConsole'
+              - 'events:ListRules'
             Resource: '*'
+
+  GoogleContributorIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/GoogleContributorIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted contributor access.
+  
+  ContributorS3Policy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: ContributorS3Policy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: AllowUserToSeeBucketList
+            Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+              - s3:GetBucketLocation
+            Resource:
+              - arn:aws:s3:::*
+          - Sid: AllowListingCertainBucketsObjects
+            Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:ListBucketVersions
+            Resource:
+              - arn:aws:s3:::cdo-v3-sources
+              - arn:aws:s3:::cdo-v3-assets
+              - arn:aws:s3:::cdo-v3-animations
+              - arn:aws:s3:::cdo-v3-files
+            Condition:
+              StringLike: {
+                "s3:prefix": [
+                    "",
+                    "sources_development/*",
+                    "assets_development/*",
+                    "animations_development/*",
+                    "files_development/*"
+                ]
+              }
+          - Sid: AllowNeededS3ActionsInCertainBucketFolders
+            Effect: Allow
+            Action:
+              - s3:AbortMultipartUpload
+              - s3:DeleteObject
+              - s3:DeleteObjectTagging
+              - s3:DeleteObjectVersion
+              - s3:DeleteObjectVersionTagging
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectTagging
+              - s3:GetObjectTorrent
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:GetObjectVersionForReplication
+              - s3:GetObjectVersionTagging
+              - s3:GetObjectVersionTorrent
+              - s3:PutObject
+              - s3:PutObjectTagging
+              - s3:PutObjectVersionTagging
+              - s3:RestoreObject
+            Resource:
+              - arn:aws:s3:::cdo-v3-sources/sources_development/*
+              - arn:aws:s3:::cdo-v3-assets/assets_development/*
+              - arn:aws:s3:::cdo-v3-animations/animations_development/*
+              - arn:aws:s3:::cdo-v3-files/files_development/*
+          - Sid: AllowListingToLibraryBuckets
+            Effect: Allow
+            Action:
+              - s3:ListBucket
+              - s3:ListBucketVersions
+            Resource:
+              - arn:aws:s3:::cdo-animation-library
+              - arn:aws:s3:::cdo-sound-library
+          - Sid: AllowReadOnlyToLibraryBuckets
+            Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectTagging
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:GetObjectVersionTagging
+            Resource:
+              - arn:aws:s3:::cdo-animation-library/*
+              - arn:aws:s3:::cdo-sound-library/*
+
+  DenySecretsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DenySecretsPolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:production/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:levelbuilder/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:test/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/adhoc-*
+
+  ContributorSecretsPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: ContributorSecretsPolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource:
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
+
+  MusicLabS3ReadWritePolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: MusicLabS3ReadWritePolicy
+      Path: /engineering/
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:ListAllMyBuckets
+            Resource: '*'
+          - Effect: 'Allow'
+            Action:
+              - s3:ListBucket
+              - s3:GetBucketLocation
+              - s3:GetBucketPublicAccessBlock
+              - s3:GetBucketPolicyStatus
+              - s3:GetBucketAcl
+              - s3:ListAccessPoints
+            Resource:
+              - arn:aws:s3:::cdo-curriculum
+          - Effect: Allow
+            Action:
+              - s3:AbortMultipartUpload
+              - s3:DeleteObject
+              - s3:DeleteObjectVersion
+              - s3:GetObject
+              - s3:GetObjectAcl
+              - s3:GetObjectVersion
+              - s3:GetObjectVersionAcl
+              - s3:PutObject
+              - s3:PutObjectAcl
+              - s3:PutObjectVersionAcl
+            Resource:
+              - arn:aws:s3:::cdo-curriculum/media/musiclab/*
+
+  GoogleBillingIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/GoogleBillingIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted billing access.
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack

@@ -35,16 +35,16 @@ var base = {
    * @param {NodeStyleCallback} callback - Expected result is an array of
    *        collection objects.
    */
-  all: function(callback) {
+  all: function (callback) {
     $.ajax({
       url: this.api_base_url,
       type: 'get',
-      dataType: 'json'
+      dataType: 'json',
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, null);
       });
@@ -58,17 +58,17 @@ var base = {
    * @param {Object} queryParams Object representing params to append to the
    *        url as a query string.
    */
-  create: function(value, callback, queryParams) {
+  create: function (value, callback, queryParams) {
     $.ajax({
       url: this.api_base_url + stringifyQueryParams(queryParams),
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(value)
+      data: JSON.stringify(value),
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, undefined);
       });
@@ -79,16 +79,16 @@ var base = {
    * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    */
-  delete: function(childPath, callback) {
+  delete: function (childPath, callback) {
     $.ajax({
       url: this.api_base_url + '/' + childPath + '/delete',
       type: 'post',
-      dataType: 'json'
+      dataType: 'json',
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, true);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, false);
       });
@@ -99,16 +99,16 @@ var base = {
    * @param {string} childPath The path underneath api_base_url
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    */
-  deleteObject: function(childPath, callback) {
+  deleteObject: function (childPath, callback) {
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'delete',
-      dataType: 'json'
+      dataType: 'json',
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, true);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, false);
       });
@@ -120,17 +120,17 @@ var base = {
    * @param {AjaxNodeStyleCallback} callback - Expected result is the requested
    *        collection object.
    */
-  fetch: function(childPath, callback, dataType) {
+  fetch: function (childPath, callback, dataType) {
     dataType = dataType || 'json';
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'get',
-      dataType: dataType
+      dataType: dataType,
     })
-      .done(function(data, textStatus, jqXHR) {
+      .done(function (data, textStatus, jqXHR) {
         callback(null, data, jqXHR);
       })
-      .fail(function(response, status, error) {
+      .fail(function (response, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, undefined /*data*/, undefined /*jqXHR*/, response);
       });
@@ -143,17 +143,17 @@ var base = {
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  update: function(childPath, value, callback) {
+  update: function (childPath, value, callback) {
     $.ajax({
       url: this.api_base_url + '/' + childPath,
       type: 'post',
       contentType: 'application/json; charset=utf-8',
-      data: JSON.stringify(value)
+      data: JSON.stringify(value),
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         err.responseText = request.responseText;
         callback(err, false);
@@ -168,15 +168,15 @@ var base = {
    * @param {*} dest - Destination collection identifier.
    * @param {NodeStyleCallback} callback
    */
-  copyAll: function(src, dest, callback) {
+  copyAll: function (src, dest, callback) {
     $.ajax({
       url: this.api_base_url + '/' + dest + '?src=' + src,
-      type: 'put'
+      type: 'put',
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, false);
       });
@@ -190,18 +190,20 @@ var base = {
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  put: function(id, value, filename, callback) {
+  put: function (id, value, filename, callback) {
     $.ajax({
       url: this.api_base_url + '/' + id + '/' + filename,
       type: 'put',
       contentType: 'application/json; charset=utf-8',
-      data: value
+      data: value,
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
-        var err = errorString(request, status, error);
+      .fail(function (request, status, error) {
+        // json_bad_request helper adds details to the responseJSON
+        const details = request.responseJSON?.details || null;
+        const err = errorString(request, status, error, details);
         callback(err, false);
       });
   },
@@ -214,26 +216,27 @@ var base = {
    * @param {NodeStyleCallback} callback - Expected result is the new collection
    *        object.
    */
-  patchAll: function(id, queryParams, value, callback) {
+  patchAll: function (id, queryParams, value, callback) {
     $.ajax({
       url: this.api_base_url + '/' + id + '/?' + queryParams,
       type: 'patch',
       contentType: 'application/json; charset=utf-8',
-      data: value
+      data: value,
     })
-      .done(function(data, text) {
+      .done(function (data, text) {
         callback(null, data);
       })
-      .fail(function(request, status, error) {
+      .fail(function (request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
         callback(err, false);
       });
-  }
+  },
 };
 
-function errorString(request, status, error) {
+function errorString(request, status, error, details = null) {
   return new Error(
-    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`
+    `httpStatusCode: ${request.status}; status: ${status}; error: ${error}`,
+    {cause: details}
   );
 }
 
@@ -243,9 +246,9 @@ module.exports = {
    * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
    * @returns {ClientApi}
    */
-  create: function(url) {
+  create: function (url) {
     return _.assign({}, base, {
-      api_base_url: url
+      api_base_url: url,
     });
-  }
+  },
 };

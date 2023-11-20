@@ -16,7 +16,7 @@
 class ContactRollupsProcessed < ApplicationRecord
   self.table_name = 'contact_rollups_processed'
 
-  DEFAULT_BATCH_SIZE = 10000
+  BATCH_SIZE = DCDO.get('batch_size_import_to_processed', 10000)
 
   # These JSON object keys are used to compile data from a contact_rollups_raw record
   # into a JSON object. They are shorten to single characters to reduce the size of
@@ -54,7 +54,7 @@ class ContactRollupsProcessed < ApplicationRecord
   # Aggregates data from contact_rollups_raw table and saves the results, one row per email.
   # @param batch_size [Integer] number of records to save per INSERT statement.
   # @return [Hash] number of valid and invalid contacts (emails) in the raw table
-  def self.import_from_raw_table(batch_size = DEFAULT_BATCH_SIZE)
+  def self.import_from_raw_table(batch_size = BATCH_SIZE)
     valid_contacts = 0
     invalid_contacts = 0
 
@@ -175,7 +175,7 @@ class ContactRollupsProcessed < ApplicationRecord
         end
 
         if !output[sources].key?('last_data_updated_at') ||
-          data_updated_at > output[sources]['last_data_updated_at']
+            data_updated_at > output[sources]['last_data_updated_at']
           output[sources]['last_data_updated_at'] = data_updated_at
         end
       end
@@ -222,9 +222,9 @@ class ContactRollupsProcessed < ApplicationRecord
     # Contact is a teacher if they appears in any of the following tables
     roles.add 'Teacher' if
       contact_data.dig('dashboard.users', 'user_id') ||
-      contact_data.key?('dashboard.pd_enrollments') ||
-      contact_data.key?('dashboard.pd_attendances') ||
-      contact_data.key?('dashboard.followers')
+        contact_data.key?('dashboard.pd_enrollments') ||
+        contact_data.key?('dashboard.pd_attendances') ||
+        contact_data.key?('dashboard.followers')
 
     unless roles.include? 'Teacher'
       # Contact is a teacher if they submit a census survey as a teacher
@@ -245,13 +245,13 @@ class ContactRollupsProcessed < ApplicationRecord
     # @see Unit model, csf?, csd? and csp? methods
     curricula = extract_field contact_data, 'dashboard.sections', 'curriculum_umbrella'
     roles.add 'CSF Teacher' if curricula.any?('CSF')
-    roles.add 'CSD Teacher' if !roles.include?('CSD Teacher') && curricula.any?('CSD')
-    roles.add 'CSP Teacher' if !roles.include?('CSP Teacher') && curricula.any?('CSP')
-    roles.add 'CSA Teacher' if !roles.include?('CSA Teacher') && curricula.any?('CSA')
+    roles.add 'CSD Teacher' if roles.exclude?('CSD Teacher') && curricula.any?('CSD')
+    roles.add 'CSP Teacher' if roles.exclude?('CSP Teacher') && curricula.any?('CSP')
+    roles.add 'CSA Teacher' if roles.exclude?('CSA Teacher') && curricula.any?('CSA')
 
     roles.add 'Form Submitter' if
       contact_data.key?('pegasus.forms') ||
-      contact_data.key?('dashboard.census_submissions')
+        contact_data.key?('dashboard.census_submissions')
 
     roles.add 'Parent' if contact_data.dig('dashboard.users', 'is_parent')
 
@@ -308,7 +308,7 @@ class ContactRollupsProcessed < ApplicationRecord
     # US state in schools table is in abbreviation, must convert it back to state name.
     school_state = extract_field_latest_value contact_data, 'dashboard.schools', 'state'
     if school_state
-      state_name = get_us_state_from_abbr(school_state, true) || school_state
+      state_name = get_us_state_from_abbr(school_state, include_dc: true) || school_state
       return {state: state_name}
     end
 

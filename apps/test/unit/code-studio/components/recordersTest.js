@@ -1,13 +1,13 @@
 import {assert} from '../../../util/reconfiguredChai';
 import getRecorder, {
-  RecordingFileType
+  RecordingFileType,
 } from '@cdo/apps/code-studio/components/recorders';
 
 describe('recorders', () => {
   for (const fileType of [
     ...Object.values(RecordingFileType),
     undefined,
-    null
+    null,
   ]) {
     const recorder = getRecorder(fileType);
 

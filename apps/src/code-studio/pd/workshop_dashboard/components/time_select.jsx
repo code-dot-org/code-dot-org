@@ -8,7 +8,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import moment from 'moment';
-import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap';
+import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {TIME_FORMAT} from '../workshopConstants';
 
@@ -21,7 +22,7 @@ export default class TimeSelect extends React.Component {
     readOnly: PropTypes.bool,
     onChange: PropTypes.func.isRequired,
     minTime: PropTypes.object, // moment
-    maxTime: PropTypes.object // moment
+    maxTime: PropTypes.object, // moment
   };
 
   handleChange = e => {
@@ -116,27 +117,27 @@ export default class TimeSelect extends React.Component {
 
 const styles = {
   dropdown: {
-    width: '100%'
+    width: '100%',
   },
   toggle: {
     padding: 0,
     border: 0,
     margin: 0,
-    width: '100%'
+    width: '100%',
   },
   menu: {
     height: 'auto',
     maxHeight: 300,
     overflowX: 'hidden',
-    width: '100%'
+    width: '100%',
   },
   input: {
-    fontFamily: '"Gotham 4r"'
+    ...fontConstants['main-font-regular'],
   },
   readOnlyInput: {
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
-  }
+    border: 'none',
+  },
 };

@@ -2,11 +2,11 @@ import {assert} from '../util/reconfiguredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-describe('functional_cond_number', function() {
+describe('functional_cond_number', function () {
   var studioApp;
 
   // create our environment
-  beforeEach(function() {
+  beforeEach(function () {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
@@ -48,7 +48,7 @@ describe('functional_cond_number', function() {
     );
   }
 
-  it('it can addConditionalRow multiple times', function() {
+  it('it can addConditionalRow multiple times', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     validatePairs(block, [0]);
@@ -60,7 +60,7 @@ describe('functional_cond_number', function() {
     validatePairs(block, [0, 1, 2]);
   });
 
-  it('can remove a row at the end', function() {
+  it('can remove a row at the end', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -71,7 +71,7 @@ describe('functional_cond_number', function() {
     validatePairs(block, [0, 1]);
   });
 
-  it('can remove a row in the middle', function() {
+  it('can remove a row in the middle', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -82,7 +82,7 @@ describe('functional_cond_number', function() {
     validatePairs(block, [0, 2]);
   });
 
-  it('can add a row after removing one', function() {
+  it('can add a row after removing one', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -96,7 +96,7 @@ describe('functional_cond_number', function() {
     validatePairs(block, [0, 2, 3]);
   });
 
-  it("can't remove the last row", function() {
+  it("can't remove the last row", function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     validatePairs(block, [0]);
@@ -105,7 +105,7 @@ describe('functional_cond_number', function() {
     validatePairs(block, [0]);
   });
 
-  it('can copy/paste with sparse pairs', function() {
+  it('can copy/paste with sparse pairs', function () {
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     assert(block.type === 'functional_cond_number');
     block.addConditionalRow();
@@ -124,7 +124,7 @@ describe('functional_cond_number', function() {
     validatePairs(pasted, [0, 2]);
   });
 
-  it('generates valid code', function() {
+  it('generates valid code', function () {
     // Replace block with a more complex one
     var block = Blockly.mainBlockSpace.getAllBlocks()[0];
     block.dispose();

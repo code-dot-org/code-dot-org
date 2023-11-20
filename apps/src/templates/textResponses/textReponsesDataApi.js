@@ -10,7 +10,7 @@ export const loadTextResponsesFromServer = (sectionId, scriptId) => {
   }
 
   return fetch(requestUrl, {
-    credentials: 'same-origin'
+    credentials: 'same-origin',
   })
     .then(response => {
       return response.json();
@@ -30,7 +30,7 @@ const convertTextResponseServerData = textResponses => {
     responses.push({
       ...response,
       studentId: id,
-      studentName: name
+      studentName: name,
     });
   });
 
@@ -45,5 +45,5 @@ export const textResponsePropType = PropTypes.shape({
   lesson: PropTypes.string.isRequired,
   studentId: PropTypes.number.isRequired,
   studentName: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired,
 });

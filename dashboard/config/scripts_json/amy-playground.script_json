@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "amy-playground",
-    "serialized_at": "2022-10-31 19:19:13 UTC",
+    "serialized_at": "2023-03-02 23:25:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -62,6 +62,36 @@
         "lesson_group.key": "",
         "script.name": "amy-playground"
       }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Sprite Lab Building Demo",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "ecosystems",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "amy-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -99,6 +129,18 @@
       "seeding_key": {
         "lesson_activity.key": "f88c4b19-37c7-4812-ab66-0ec920239ff6",
         "lesson.key": "Particles Lesson 1",
+        "lesson_group.key": "",
+        "script.name": "amy-playground"
+      }
+    },
+    {
+      "key": "f8051830-fc73-4fb5-9aa9-f03c6478925b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8051830-fc73-4fb5-9aa9-f03c6478925b",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "amy-playground"
       }
@@ -190,6 +232,16 @@
       "seeding_key": {
         "activity_section.key": "b2ffeead-a5e5-4234-b70b-b74b3de73b4f",
         "lesson_activity.key": "f88c4b19-37c7-4812-ab66-0ec920239ff6"
+      }
+    },
+    {
+      "key": "17860f1f-969c-4ec6-8d40-75be58308a78",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "17860f1f-969c-4ec6-8d40-75be58308a78",
+        "lesson_activity.key": "f8051830-fc73-4fb5-9aa9-f03c6478925b"
       }
     }
   ],
@@ -718,6 +770,54 @@
       "level_keys": [
         "csc_Paricles_StatesOfMatter_L15 Challenge_-particles"
       ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "demo_blank_sprite lab_flash talk"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "demo_blank_sprite lab_flash talk"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground",
+        "activity_section.key": "17860f1f-969c-4ec6-8d40-75be58308a78"
+      },
+      "level_keys": [
+        "demo_blank_sprite lab_flash talk"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "demo_sprite lab_flash talk"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "demo_sprite lab_flash talk"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground",
+        "activity_section.key": "17860f1f-969c-4ec6-8d40-75be58308a78"
+      },
+      "level_keys": [
+        "demo_sprite lab_flash talk"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -971,6 +1071,30 @@
         "lesson_group.key": "",
         "script.name": "amy-playground",
         "activity_section.key": "f1a4b67b-7431-45f5-8c77-bff42a596103"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "demo_blank_sprite lab_flash talk",
+        "script_level.level_keys": [
+          "demo_blank_sprite lab_flash talk"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground",
+        "activity_section.key": "17860f1f-969c-4ec6-8d40-75be58308a78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "demo_sprite lab_flash talk",
+        "script_level.level_keys": [
+          "demo_sprite lab_flash talk"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "amy-playground",
+        "activity_section.key": "17860f1f-969c-4ec6-8d40-75be58308a78"
       }
     }
   ],

@@ -1,5 +1,5 @@
 require 'json'
-require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+require_relative 'http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
@@ -97,7 +97,6 @@ module SharedConstants
     artist_k1
     playlab_k1
     dance
-    spritelab
     poetry
     poetry_hoc
     thebadguys
@@ -109,17 +108,20 @@ module SharedConstants
     gamelab
   ).freeze
 
+  # For privacy reasons, sprite lab projects can only be published if they are not in "restricted share mode".
+  # This mode is triggered if the user is a student and has uploaded an image to their project.
+  RESTRICTED_PUBLISH_PROJECT_TYPES = %w(spritelab).freeze
+
   UNPUBLISHABLE_PROJECT_TYPES = %w(
     algebra_game
     calc
     eval
     minecraft_codebuilder
-    spritelab
     weblab
   )
 
   ALL_PUBLISHABLE_PROJECT_TYPES =
-    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+    ALWAYS_PUBLISHABLE_PROJECT_TYPES + CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES + RESTRICTED_PUBLISH_PROJECT_TYPES
 
   ALL_PROJECT_TYPES = ALL_PUBLISHABLE_PROJECT_TYPES + UNPUBLISHABLE_PROJECT_TYPES
 
@@ -305,11 +307,16 @@ module SharedConstants
       "var mySensor = createCapacitiveTouchSensor": null,
 
       // Circuit Playground
-      "on": null,
-      "off": null,
-      "toggle": null,
-      "blink": null,
-      "pulse": null,
+      "__.on": null,
+      "__.off": null,
+      "__.toggle": null,
+      "__.blink": null,
+      "__.pulse": null,
+      "colorLeds[0].on": null,
+      "colorLeds[0].off": null,
+      "colorLeds[0].toggle": null,
+      "colorLeds[0].blink": null,
+      "colorLeds[0].pulse": null,
       "stop": null,
       "color": null,
       "intensity": null,
@@ -341,9 +348,6 @@ module SharedConstants
       "onBoardEvent": null,
 
       // micro:bit
-      "on": null,
-      "off": null,
-      "toggle": null,
       "ledScreen.on": null,
       "ledScreen.off": null,
       "ledScreen.toggle": null,
@@ -593,4 +597,51 @@ module SharedConstants
     # An unhandleable error that results in a program crash.
     FATAL: 4
   }.freeze
+
+  RUBRIC_UNDERSTANDING_LEVELS = OpenStruct.new(
+    {
+      EXTENSIVE: 3,
+      CONVINCING: 2,
+      LIMITED: 1,
+      NONE: 0,
+    }
+  ).freeze
+
+  # These reflect the 'status' of an AI rubric evaluation
+  RUBRIC_AI_EVALUATION_STATUS = {
+    # Queued as a job
+    QUEUED: 0,
+    # Job is running
+    RUNNING: 1,
+    # Succeeded
+    SUCCESS: 2,
+    # General failure (along with anything larger)
+    FAILURE: 1000,
+    # PII Failure
+    PII_VIOLATION: 1001,
+    # Profanity Failure
+    PROFANITY_VIOLATION: 1002,
+  }.freeze
+
+  EMAIL_LINKS = OpenStruct.new(
+    {
+      PRIVACY_POLICY_URL: "https://code.org/privacy",
+      TOS_URL: "https://code.org/tos",
+      STUDENT_PRIVACY_PLEDGE_URL: "https://studentprivacypledge.org/signatories/",
+      COMMON_SENSE_MEDIA_URL: "https://privacy.commonsense.org/evaluation/code.org",
+      CDO_SUPPORT_MAILTO: "mailto:support@code.org"
+    }
+  ).freeze
+
+  CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
+    {
+      LOCKED_OUT: 'l',
+      REQUEST_SENT: 's',
+      PERMISSION_GRANTED: 'g'
+    }
+  ).freeze
+
+  CENSUS_CONSTANTS = OpenStruct.new(
+    {CURRENT_CENSUS_SCHOOL_YEAR: 2023}
+  )
 end

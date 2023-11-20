@@ -6,6 +6,8 @@ import {connect} from 'react-redux';
 import {setCurrentView} from './sectionProgressRedux';
 import {ViewType} from './sectionProgressConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/locale';
 
 /**
@@ -19,7 +21,7 @@ class SectionProgressToggle extends React.Component {
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
     sectionId: PropTypes.number,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
   };
 
   onChange = selectedToggle => {
@@ -32,11 +34,16 @@ class SectionProgressToggle extends React.Component {
           section_id: this.props.sectionId,
           old_view: this.props.currentView,
           new_view: selectedToggle,
-          script_id: this.props.scriptId
-        })
+          script_id: this.props.scriptId,
+        }),
       },
       {includeUserId: true}
     );
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_TOGGLE, {
+      sectionId: this.props.sectionId,
+      unitId: this.props.scriptId,
+      newView: selectedToggle,
+    });
     this.props.setCurrentView(selectedToggle);
   };
 
@@ -82,8 +89,8 @@ const styles = {
   toggleButton: {
     padding: '3px 20px',
     height: 34,
-    margin: 'auto auto 10px auto'
-  }
+    margin: 'auto auto 10px auto',
+  },
 };
 
 export const UnconnectedSectionProgressToggle = SectionProgressToggle;
@@ -92,11 +99,11 @@ export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId
+    scriptId: state.unitSelection.scriptId,
   }),
   dispatch => ({
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    }
+    },
   })
 )(SectionProgressToggle);

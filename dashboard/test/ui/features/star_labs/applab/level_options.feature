@@ -17,7 +17,6 @@ Scenario: Level defaults to design mode, students see design mode and teachers s
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/21"
   And I wait for the page to fully load
   And I wait to see Applab design mode
-  Then I rotate to landscape
   And I wait to see "#runButton"
 
   # As teacher

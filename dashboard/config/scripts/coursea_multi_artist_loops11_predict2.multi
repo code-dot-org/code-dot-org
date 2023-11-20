@@ -4,3 +4,5 @@ wrong 'The artist will draw a square', feedback: 'Incorrect.  The artist repeats
 right 'The artist will draw a stair pattern.', feedback: 'Correct!'
 wrong 'The artist won\'t move at all.', feedback: 'Incorrect.  The artist repeats `South` and `East` four times to make a staircase.'
 wrong 'I don\'t know.', feedback: 'The artist repeats `South` and `East` four times to make a staircase.'
+
+allow_multiple_attempts false

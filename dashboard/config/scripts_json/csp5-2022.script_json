@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "7264ade6-1bfd-47a2-b1b2-1e17d8afb9a4"
-        },
-        {
-          "key": "4f74b18a-ad3f-44d9-bd89-bbdd1f57008e",
-          "notice": "How to Avoid Plagiarism and Exam Violations in AP CSP",
-          "details": "This College Board webinar is for both students and teachers. We’ll discuss the plagiarism and exam violation policies, as outlined on pages 169–171 of the AP Computer Science Principles Course and Exam Description and pages 11–15 of the Student Handouts, view examples of student plagiarism, and cover instructions to ensure students’ compliance with the policies.",
-          "link": "https://collegeboard.zoom.us/webinar/register/WN_b6IClLS1Tp-DepqnKZUtgg?fbclid=IwAR1_RnXP8gm7Qx9vGVq8EOVcbxD6fJuZqDHE-x8ZgNWPrXpcNeh_6m2LaIA",
-          "type": "information",
-          "visibility": "Teacher and student",
-          "dismissible": true,
-          "buttonText": "Sign Up"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-18 00:39:40 UTC",
+    "serialized_at": "2023-03-15 18:02:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2580,7 +2570,7 @@
       "key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
       "position": 10,
       "properties": {
-        "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
+        "description": "\n\n**Levels 8-9 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 8: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 9: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
       "seeding_key": {
         "activity_section.key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",

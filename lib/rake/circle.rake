@@ -6,6 +6,8 @@ require 'cdo/git_utils'
 require 'open-uri'
 require 'json'
 require 'net/http'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 # CircleCI Build Tags
 # We provide some limited control over CircleCI's build behavior by adding these
@@ -55,7 +57,7 @@ SKIP_EYES = 'skip eyes'.freeze
 
 namespace :circle do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
-  task :run_tests do
+  timed_task_with_logging :run_tests do
     unless CircleUtils.unit_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -81,7 +83,7 @@ namespace :circle do
   end
 
   desc 'Runs UI tests only if the tag specified is present in the most recent commit message.'
-  task :run_ui_tests do
+  timed_task_with_logging :run_ui_tests do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -106,31 +108,33 @@ namespace :circle do
     end
     RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
     Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
-      RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-          " --feature #{container_features.join(',')}" \
-          " --pegasus localhost.code.org:3000" \
-          " --dashboard localhost-studio.code.org:3000" \
-          " --circle" \
-          " --#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'}" \
-          " --parallel #{use_saucelabs ? 16 : 8}" \
-          " --abort_when_failures_exceed 10" \
-          " --retry_count 2" \
-          " --output-synopsis" \
-          " --html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "--feature #{container_features.join(',')} " \
+          "--pegasus localhost.code.org:3000 " \
+          "--dashboard localhost-studio.code.org:3000 " \
+          "--circle " \
+          "--#{use_saucelabs ? "config #{ui_test_browsers.join(',')}" : 'local'} " \
+          "--parallel #{use_saucelabs ? 16 : 8} " \
+          "--abort_when_failures_exceed 10 " \
+          "--retry_count 2 " \
+          "--output-synopsis " \
+          "--with-status-page " \
+          "--html"
       if test_eyes?
-        RakeUtils.system_stream_output "bundle exec ./runner.rb" \
-            " --eyes" \
-            " --feature #{container_eyes_features.join(',')}" \
-            " --config Chrome,iPhone" \
-            " --pegasus localhost.code.org:3000" \
-            " --dashboard localhost-studio.code.org:3000" \
-            " --circle" \
-            " --parallel 10" \
-            " --retry_count 1" \
-            " --html"
+        RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+            "--eyes " \
+            "--feature #{container_eyes_features.join(',')} " \
+            "--config Chrome,iPhone " \
+            "--pegasus localhost.code.org:3000 " \
+            "--dashboard localhost-studio.code.org:3000 " \
+            "--circle " \
+            "--parallel 10 " \
+            "--retry_count 1 " \
+            "--with-status-page " \
+            "--html"
       end
     end
     close_sauce_connect if use_saucelabs || test_eyes?
@@ -140,7 +144,7 @@ namespace :circle do
   end
 
   desc 'Checks for unexpected changes (for example, after a build step) and raises an exception if an unexpected change is found'
-  task :check_for_unexpected_apps_changes do
+  timed_task_with_logging :check_for_unexpected_apps_changes do
     # Changes to yarn.lock is a particularly common case; catch it early and
     # provide a helpful error message.
     if RakeUtils.git_staged_changes? apps_dir 'yarn.lock'
@@ -157,7 +161,7 @@ namespace :circle do
     end
   end
 
-  task :seed_ui_test do
+  timed_task_with_logging :seed_ui_test do
     unless CircleUtils.ui_test_container?
       ChatClient.log "Wrong container, skipping"
       next
@@ -200,7 +204,7 @@ def start_sauce_connect
   tar_name = sc_download_url.split('/')[-1]
   dir_name = tar_name.chomp('.tar.gz')
 
-  RakeUtils.system_stream_output "wget #{sc_download_url}"
+  RakeUtils.system_stream_output "wget --quiet #{sc_download_url}"
   RakeUtils.system_stream_output "tar -xzf #{tar_name}"
   Dir.chdir(Dir.glob(dir_name)[0]) do
     # Run sauce connect a second time on failure, known periodic "Error bringing up tunnel VM." disconnection-after-connect issue, e.g. https://circleci.com/gh/code-dot-org/code-dot-org/20930

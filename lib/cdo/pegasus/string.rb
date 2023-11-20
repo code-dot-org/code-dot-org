@@ -1,7 +1,7 @@
 class String
   # Returns true if the string ends with the string passed
   def ends_with?(s)
-    self[-s.length..-1] == s
+    self[-s.length..] == s
   end
 
   # Returns true if the string contains any one of the strings passed

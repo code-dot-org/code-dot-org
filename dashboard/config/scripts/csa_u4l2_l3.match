@@ -10,3 +10,4 @@ question 'static method'
 answer 'a method that is called by the class instead of by an instance of the class'
 question 'static variable'
 answer 'a variable defined in a class that stores a shared value for all instances of the class'
+allow_multiple_attempts true

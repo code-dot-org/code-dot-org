@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Navigate to lesson plans
+# Task: Navigate to Lesson Plans
 
 ### Steps to access lesson plans:
 
@@ -11,26 +11,16 @@ markdown <<MARKDOWN
 
 ##### **Step 2:** Click on the course of your choice in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
 
-(If you have not created class sections, navigate to the content of your choice from the "My Courses" section of the "My Dashboard" page.)
+(If you have not created class sections, navigate <a href="https://code.org/maker" target="blank" rel="noopener noreferrer">https://code.org/maker</a> and select "Explore the unit".)
 
-##### **Step 3:** Navigate to the Unit you would like to view and click on the "Go to Unit" button.
-
-##### **Step 4:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
+##### **Step 3:** Navigate to the Lesson you would like to view and click on the "View Lesson Plan" button.
 
 
 <hr style="clear:both">
 
 
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTVhTiSAQydKUrGrGNaDQ_m7-IeAQ9dLo7MzlWWeJKQ5HdKI2Nrn9QOI2gV-hZTPgV7vbIa1zFrIcgS/pub?w=708&h=612" alt="Screenshot showing the CS Discoveries course overview page with an orange arrow pointing to the 'Go to Unit' button for Unit 1." style="float: left; height: 400px; clear: both; margin: 0 20px 20px 0;">
 
-## Course overview page
-
-The course overview page contains a short description of each unit within the course along with unit level teacher resources. To access unit content, you can click on the “Go to Unit” button. 
-
-**Note:** Courses containing only one unit will not have a course overview page. In this case, you will be taken directly to the unit overview page. 
-
-<hr style="clear:both">
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vTsMcAjhEPf8bUwJ6p1oIXmKaZu40kRwep8HfBRCyx5AN9WAWXmcCMx-vlmLW25V0cgcPcpbUNUIRrA/pub?w=750&h=703"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
 

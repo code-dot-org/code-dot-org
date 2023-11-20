@@ -10,7 +10,7 @@ exports.ForStatementMode = {
   INIT: 0,
   TEST: 1,
   BODY: 2,
-  UPDATE: 3
+  UPDATE: 3,
 };
 
 function populateFunctionsIntoScope(
@@ -29,7 +29,7 @@ function populateFunctionsIntoScope(
       var wrapper = interpreter.makeNativeMemberFunction(
         utils.extend(options, {
           nativeFunc: func,
-          nativeParentObj: parent
+          nativeParentObj: parent,
         })
       );
       interpreter.setProperty(
@@ -69,7 +69,7 @@ function populateGlobalFunctions(interpreter, blocks, blockFilter, scope) {
         nativeParentObj: block.parent,
         dontMarshal,
         nativeIsAsync,
-        nativeCallsBackInterpreter
+        nativeCallsBackInterpreter,
       });
       var intFunc;
       if (block.nativeIsAsync) {
@@ -86,7 +86,7 @@ function populateJSFunctions(interpreter) {
   // The interpreter is missing some basic JS functions. Add them as needed:
 
   // Add String.prototype.includes
-  var wrapper = function(searchStr) {
+  var wrapper = function (searchStr) {
     // Polyfill based off of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
     return interpreter.createPrimitive(
       String.prototype.indexOf.apply(this, arguments) !== -1
@@ -113,7 +113,7 @@ function populateJSFunctions(interpreter) {
  * globalObjects (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function(
+exports.initJSInterpreter = function (
   interpreter,
   blocks,
   blockFilter,
@@ -155,7 +155,7 @@ exports.initJSInterpreter = function(
  * Check to see if it is safe to step the interpreter while we are unwinding.
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
-exports.isNextStepSafeWhileUnwinding = function(interpreter) {
+exports.isNextStepSafeWhileUnwinding = function (interpreter) {
   var state = interpreter.peekStackFrame();
   var type = state.node.type;
   if (state.done_) {
@@ -209,7 +209,7 @@ exports.isNextStepSafeWhileUnwinding = function(interpreter) {
 // Usage
 // var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.calculateCumulativeLength = function(code) {
+exports.calculateCumulativeLength = function (code) {
   var regex = /\n/g,
     result = [];
   do {
@@ -226,7 +226,7 @@ exports.calculateCumulativeLength = function(code) {
 // Usage
 // var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-exports.aceFindRow = function(cumulativeLength, rows, rowe, pos) {
+exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -244,7 +244,7 @@ exports.aceFindRow = function(cumulativeLength, rows, rowe, pos) {
   return mid;
 };
 
-exports.isAceBreakpointRow = function(session, userCodeRow) {
+exports.isAceBreakpointRow = function (session, userCodeRow) {
   if (!session) {
     return false;
   }
@@ -287,7 +287,7 @@ function highlightAceLines(
   }
   if (typeof startRow !== 'undefined') {
     lastHighlightMarkerIds[className] = session.addMarker(
-      new (window.ace.require('ace/range')).Range(
+      new (window.ace.require('ace/range').Range)(
         startRow,
         startColumn,
         endRow,
@@ -308,7 +308,7 @@ function highlightAceLines(
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowColError = function(editor, row, col) {
+exports.selectEditorRowColError = function (editor, row, col) {
   if (!editor) {
     return;
   }
@@ -341,7 +341,7 @@ exports.selectEditorRowColError = function(editor, row, col) {
  * @param {boolean} allClasses When set to true, remove all classes of
  * highlights (including ace_step, ace_error, and anything else)
  */
-exports.clearDropletAceHighlighting = function(editor, allClasses) {
+exports.clearDropletAceHighlighting = function (editor, allClasses) {
   if (editor.session && editor.session.currentlyUsingBlocks) {
     editor.clearLineMarks();
   }
@@ -397,7 +397,7 @@ function highlightCode(
  *
  * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
-exports.selectCurrentCode = function(
+exports.selectCurrentCode = function (
   interpreter,
   cumulativeLength,
   userCodeStartOffset,
@@ -454,7 +454,7 @@ exports.selectCurrentCode = function(
           {
             row: userCodeRow,
             col: start - cumulativeLength[userCodeRow],
-            type: 'block'
+            type: 'block',
           },
           style
         );

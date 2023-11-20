@@ -4,7 +4,7 @@
   text-align: center;
   cursor: pointer;
   background-color: transparent;
-  padding: 0;
+  padding: 2px 0 2px 0;
   border: none;
   color: color.$orange;
   &:hover {
@@ -14,9 +14,13 @@
   }
 }
 
+.headerItemLess {
+  padding: 2px;
+}
+
 .caret {
   font-size: 40px;
-  line-height: 10px;
+  line-height: 20px;
 }
 
 .more {

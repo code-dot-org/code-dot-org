@@ -18,7 +18,7 @@ class StandardsView extends Component {
     //redux
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType
+    scriptData: scriptDataPropType,
   };
 
   getLinkToOverview() {
@@ -41,7 +41,7 @@ class StandardsView extends Component {
             markdown={i18n.standardsHowToDetails({
               courseName: scriptFriendlyName,
               courseLink: linkToOverview,
-              cstaLink: cstaStandardsURL
+              cstaLink: cstaStandardsURL,
             })}
           />
           <h3>{i18n.standardsGetInvolved()}</h3>
@@ -49,7 +49,7 @@ class StandardsView extends Component {
             markdown={i18n.standardsGetInvolvedDetails({
               adminLink: pegasus('/administrators'),
               parentLink: pegasus('/help'),
-              teacherLink: '/courses'
+              teacherLink: pegasus('/teach'),
             })}
           />
         </div>
@@ -63,5 +63,5 @@ export const UnconnectedStandardsView = StandardsView;
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
   scriptData: getCurrentUnitData(state),
-  scriptFriendlyName: getSelectedScriptFriendlyName(state)
+  scriptFriendlyName: getSelectedScriptFriendlyName(state),
 }))(StandardsView);

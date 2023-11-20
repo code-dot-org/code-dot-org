@@ -3,7 +3,7 @@ import ButtonList from './ButtonList';
 
 export default {
   title: 'ButtonList',
-  component: ButtonList
+  component: ButtonList,
 };
 
 const Template = args => <ButtonList {...args} />;
@@ -13,7 +13,7 @@ RadioButtons.args = {
   type: 'radio',
   label: 'What is your favorite pet?',
   groupName: 'favoritePet',
-  answers: ['Cat', 'Dog']
+  answers: ['Cat', 'Dog'],
 };
 
 export const Checkboxes = Template.bind({});
@@ -21,7 +21,7 @@ Checkboxes.args = {
   type: 'check',
   label: 'What is your favorite pet?',
   groupName: 'favoritePet',
-  answers: ['Cat', 'Dog']
+  answers: ['Cat', 'Dog'],
 };
 
 export const CheckboxesIncludeOther = Template.bind({});
@@ -30,7 +30,7 @@ CheckboxesIncludeOther.args = {
   label: 'What is your favorite pet?',
   groupName: 'favoritePet',
   answers: ['Cat', 'Dog'],
-  includeOther: true
+  includeOther: true,
 };
 
 export const CheckboxesWithCustom = Template.bind({});
@@ -42,7 +42,7 @@ CheckboxesWithCustom.args = {
     'Cat',
     {
       answerText: 'Specific dog breed',
-      inputId: 'dog-breed-input'
-    }
-  ]
+      inputId: 'dog-breed-input',
+    },
+  ],
 };

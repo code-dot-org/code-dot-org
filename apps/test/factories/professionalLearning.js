@@ -20,5 +20,5 @@ export const serializedWorkshopFactory = Factory.define('serializedWorkshop')
     state: 'Not Started',
     attended: false,
     pre_workshop_survey_url: null,
-    workshop_starting_date: null
+    workshop_starting_date: null,
   });

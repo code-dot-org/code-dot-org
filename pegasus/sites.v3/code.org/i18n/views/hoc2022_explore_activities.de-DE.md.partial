@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hello World: Weltraum", body: "Erschaffe intergalaktische Szenen mit Charakteren und Sounds, die sagen \"Hallo Welten!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ featured_tutorial, title: "Hallo Welten: Weltraum", body: "Erschaffe intergalaktische Szenen mit Charakteren und Sounds, die sagen \"Hallo Welten!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 
 {{ featured_tutorial, title: "Weltraum-Jam bei der NASA", body: "Erschaffe ein Sonnensystem, das wirklich rockt, und lerne dabei etwas über Musik, Astronomie und Programmieren!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
 

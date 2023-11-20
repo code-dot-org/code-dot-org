@@ -29,6 +29,15 @@
   padding: 3px 6px;
   font-size: 14px;
   min-width: 120px;
+
+  &:disabled {
+    cursor: not-allowed;
+    &:active {
+      // We need this !important in order to overwrite !important styles in common.scss
+      // (apps/style/common.scss, line 628)that makes disabled active button to have a black border.
+      border: none !important;
+    }
+  }
 }
 
 #continueButton {

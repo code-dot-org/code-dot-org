@@ -66,7 +66,7 @@ class WavRecorder {
 
 export const RecordingFileType = {
   MP3: '.mp3',
-  WAV: '.wav'
+  WAV: '.wav',
 };
 
 const getRecorder = extension => {

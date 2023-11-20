@@ -73,7 +73,7 @@ module AWS
     # @param [String] bucket
     # @param [String] key
     # @return [String]
-    def self.download_from_bucket(bucket, key, options={})
+    def self.download_from_bucket(bucket, key, options = {})
       create_client.get_object(bucket: bucket, key: key).body.read.force_encoding(Encoding::BINARY)
     rescue Aws::S3::Errors::NoSuchKey
       raise NoSuchKey.new("No such key `#{key}'")
@@ -139,7 +139,7 @@ module AWS
     # @param [Hash] options Aws::S3::Client#put_object options as documented at
     # http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method.
     # @return [String] The key of the new value, derived from filename.
-    def self.upload_to_bucket(bucket, filename, data, options={})
+    def self.upload_to_bucket(bucket, filename, data, options = {})
       no_random = options.delete(:no_random)
       filename = "#{random}-#{filename}" unless no_random
       create_client.put_object(options.merge(bucket: bucket, key: filename, body: data))
@@ -245,7 +245,7 @@ module AWS
     # @param bucket [String] The S3 bucket name.
     # @param key [String] The S3 key.
     # @param dry_run [Boolean] If true, do not update seeded object tracking.
-    def self.seed_from_file(bucket, key, dry_run = false)
+    def self.seed_from_file(bucket, key, dry_run: false)
       etag = create_client.head_object({bucket: bucket, key: key}).etag
       unless SeededS3Object.exists?(bucket: bucket, key: key, etag: etag)
         AWS::S3.process_file(bucket, key) do |filename|
@@ -292,6 +292,25 @@ module AWS
       Aws::S3::Presigner.new(client: create_client).presigned_url(method, params)
     end
 
+    # Returns a link to the S3 web console for a given presigned S3 URL.
+    # This is useful for finding a file once the presigned URL has expired.
+    # The user will need to authenticate when using the link.
+    # @param [String] a presigned S3 URL
+    # @return [String] a direct link to the file in the S3 console
+    # @raise [Exception] if the provided link isn't a presigned S3 URL
+    def self.get_console_link_from_presigned(presigned_url)
+      presigned_regex = /^https\:\/\/([a-z0-9][a-z0-9-]{1,61}[a-z0-9])\.s3\.amazonaws.com\/(.*)\?.*$/
+      unless presigned_url.match(presigned_regex)
+        raise ArgumentError.new("expected presigned S3 URL like 'https://bucket-name.s3.amazonaws.com/prefix/filename?with=any&query=params'")
+      end
+
+      captured = presigned_regex.match(presigned_url)
+      bucket = captured[1]
+      prefix = captured[2]
+
+      return "https://s3.console.aws.amazon.com/s3/object/#{bucket}?prefix=#{prefix}"
+    end
+
     class LogUploader
       # A LogUploader is constructed with some preconfigured settings that will
       # apply to all log uploads - presumably you may be uploading many similar
@@ -301,7 +320,7 @@ module AWS
       # @param [Bool] make_public will cause the uploaded files to be given
       #        public_read permission, and public URLs to be returned.  Otherwise,
       #        files will be private and short-term presigned URLs will be returned.
-      def initialize(bucket, prefix, make_public=false)
+      def initialize(bucket, prefix, make_public: false)
         @bucket = bucket
         @prefix = prefix
         @make_public = make_public
@@ -315,9 +334,10 @@ module AWS
       # @return [String] public URL of uploaded log
       # @raise [Exception] if the S3 upload fails
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
-      def upload_log(name, body, options={})
+      def upload_log(name, body, options = {})
         key = "#{@prefix}/#{name}"
 
+        options[:content_type] ||= 'text/plain'
         options[:acl] = 'public-read' if @make_public
         result = AWS::S3.create_client.put_object(
           options.merge(
@@ -346,7 +366,7 @@ module AWS
       # @return [String] public URL of uploaded file
       # @raise [Exception] if the file cannot be opened or the S3 upload fails
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
-      def upload_file(filename, options={})
+      def upload_file(filename, options = {})
         File.open(filename, 'rb') do |file|
           return upload_log(File.basename(filename), file, options)
         end

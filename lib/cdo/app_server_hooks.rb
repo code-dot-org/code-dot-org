@@ -10,7 +10,7 @@ module Cdo
       # Control automated restarts of web application server processes via Gatekeeper.
       # NOTE: before_fork runs on the parent puma process, so complete restart of the web application services on all
       # front end instances is required for a change of this Gatekeeper flag to take effect:
-      #   sudo service dashboard upgrade && sudo service pegasus upgrade
+      #   sudo systemctl restart dashboard && sudo systemctl restart pegasus
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
       Gatekeeper.after_fork

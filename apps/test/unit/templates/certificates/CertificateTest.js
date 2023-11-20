@@ -24,7 +24,7 @@ describe('Certificate', () => {
   beforeEach(() => {
     storedWindowDashboard = window.dashboard;
     window.dashboard = {
-      CODE_ORG_URL: '//code.org'
+      CODE_ORG_URL: '//code.org',
     };
   });
 
@@ -52,12 +52,12 @@ describe('Certificate', () => {
     it('renders code studio image urls', () => {
       const data = {
         certificate_sent: true,
-        name: 'Student'
+        name: 'Student',
       };
       server.respondWith('POST', `/v2/certificate`, [
         200,
         {'Content-Type': 'application/json'},
-        JSON.stringify(data)
+        JSON.stringify(data),
       ]);
 
       const initialCertificateImageUrl =
@@ -66,7 +66,7 @@ describe('Certificate', () => {
         tutorial: 'dance',
         certificateId: 'sessionId',
         initialCertificateImageUrl,
-        isHocTutorial: true
+        isHocTutorial: true,
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.equal(initialCertificateImageUrl);
@@ -91,9 +91,27 @@ describe('Certificate', () => {
       wrapper.update();
       image = wrapper.find('#uitest-certificate img');
       const expectedData = {name: 'Student', course: 'dance'};
-      const expectedFilename = btoa(JSON.stringify(expectedData));
+      const encodedData = btoa(JSON.stringify(expectedData));
+      const expectedFilename = encodedData
+        .replace(/\+/g, '-')
+        .replace(/\//g, '_')
+        .replace(/=+$/g, '');
       const expectedSrc = `/certificate_images/${expectedFilename}.jpg`;
       expect(image.prop('src')).to.equal(expectedSrc);
+    });
+
+    it('passes down full urls to SocialShare', () => {
+      const initialCertificateImageUrl =
+        'https://code.org/images/placeholder-hoc-image.jpg';
+      const wrapper = wrapperWithParams({
+        tutorial: 'dance',
+        certificateId: 'sessionId',
+        initialCertificateImageUrl,
+        isHocTutorial: true,
+      });
+      const socialShare = wrapper.find('SocialShare');
+      expect(socialShare.props().facebook).to.include('studio.code.org');
+      expect(socialShare.props().twitter).to.include('studio.code.org');
     });
   });
 });

@@ -1,0 +1,130 @@
+@import "font", "breakpoints";
+
+.professional-learning-banner {
+  margin: 0 auto 3em;
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: $width-md) {
+    background-color: #0d4172;
+  }
+
+  img {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+
+    @media screen and (max-width: $width-md) {
+      height: 100%;
+      width: auto;
+    }
+
+    &.bg-desktop {
+      @media screen and (max-width: $width-md) {
+        display: none;
+      }
+    }
+
+    &.bg-tablet {
+      @media screen and (min-width: $width-sm) and (max-width: $width-md) {
+        display: block;
+      }
+
+      @media screen and (min-width: $width-md) and (max-width: $width-xxl) {
+        display: none;
+      }
+
+      @media screen and (max-width: $width-sm) {
+        display: none;
+      }
+    }
+  }
+
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5em 2em 0.5em 1.25em;
+
+    @media screen and (max-width: $width-md) {
+      justify-content: right;
+      padding: 0.5em 1.5em;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      padding: 1.5em 2em 2em;
+    }
+  }
+
+  a,
+  a:hover,
+  a:visited {
+    text-decoration: none !important;
+  }
+
+  .text-wrapper {
+    width: 38%;
+
+    @media screen and (max-width: $width-md) {
+      width: 51%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    @include main-font-regular;
+    color: black;
+    position: relative;
+    font-size: 18px;
+    line-height: 40px;
+    margin: 0;
+
+    @media screen and (max-width: $width-md) {
+      color: white;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      margin-bottom: 0.5em;
+      line-height: 1.4;
+    }
+  }
+
+  p {
+    @include main-font-regular;
+    color: black;
+    position: relative;
+    font-size: 14px;
+
+    @media screen and (max-width: $width-md) {
+      color: white;
+    }
+  }
+
+  span {
+    @include main-font-semi-bold;
+    min-width: 100px;
+    background-color: white;
+    border-color: white;
+    border-radius: 4px;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 2em;
+    z-index: 1;
+
+    @media screen and (max-width: $width-md) {
+      margin: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      margin: 0.5em auto 0;
+    }
+  }
+}

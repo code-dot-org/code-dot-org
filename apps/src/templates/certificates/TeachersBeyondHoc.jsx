@@ -9,7 +9,7 @@ import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 class TeachersBeyondHoc extends Component {
   static propTypes = {
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired
+    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
   };
 
   render() {
@@ -35,16 +35,16 @@ class TeachersBeyondHoc extends Component {
         title: i18n.congratsTeacherCodeOrgTitle(),
         description: i18n.congratsTeacherCodeOrgDesc(),
         buttonText: i18n.congratsTeacherCodeOrgButton(),
-        link: '/courses?view=teacher',
-        image: codeorgTeacherImage
+        link: '/catalog',
+        image: codeorgTeacherImage,
       },
       {
         title: thirdPartyTeacherTitle,
         description: i18n.congratsTeacherExternalDesc(),
         buttonText: i18n.congratsTeacherExternalButton(),
         link: pegasus('/educate/curriculum/3rd-party'),
-        image: thirdPartyTeacherImage
-      }
+        image: thirdPartyTeacherImage,
+      },
     ];
 
     return (
@@ -72,20 +72,20 @@ class TeachersBeyondHoc extends Component {
 
 const styles = {
   heading: {
-    width: '100%'
+    width: '100%',
   },
   mobileHeading: {
     fontSize: 24,
-    lineHeight: 1.5
+    lineHeight: 1.5,
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
   },
   spacer: {
-    height: 50
-  }
+    height: 50,
+  },
 };
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(TeachersBeyondHoc);

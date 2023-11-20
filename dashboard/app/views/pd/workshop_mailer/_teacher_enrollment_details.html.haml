@@ -8,13 +8,20 @@
     vertical-align: top;
   }
 
-= render partial: 'workshop_logistics'
-
-- if @workshop.virtual?
-  = render partial: 'virtual_tips'
-- elsif !@workshop.virtual? && @is_reminder
-  = render partial: 'supply_list'
-  = render partial: 'covid_19'
+- if @workshop.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
+  %h3
+    Before the Workshop
+  - if @workshop.course == Pd::Workshop::COURSE_CSA
+    %p
+      Reminder: For the best professional development experience, we strongly
+      encourage you to engage in the pre-work that is specifically designed for
+      CSA. The pre-work can be found at
+      = link_to('studio.code.org/courses/self-paced-pl-csa', 'https://studio.code.org/courses/self-paced-pl-csa') + '.'
+  - else
+    %p
+      There is no requirement that you are familiar with the course before you
+      join the workshop - we will walk you through what you need to know in our
+      time together.
 
 - if @is_reminder && @workshop.course == Pd::Workshop::COURSE_CSD && @workshop.subject == Pd::Workshop::SUBJECT_CSD_WORKSHOP_4
   %h3
@@ -28,22 +35,27 @@
     School- or district-owned laptops may require administrator permission to download Maker App,
     so we encourage you to start this process soon.
 
-- if @workshop.local_summer? && @is_reminder
-  = render partial: 'pre_course_material'
+- if @workshop.virtual?
+  = render partial: 'virtual_tips'
+- elsif !@workshop.virtual? && @is_reminder
+  = render partial: 'supply_list'
+  %h3
+    Health and wellness precautions
+  %p
+    Our workshops are highly interactive. If you are feeling ill, or show
+    any flu-like symptoms such as a fever or cough, please inform your
+    Regional Partner.
 
 = render partial: 'accessibility'
+
+= render partial: 'workshop_logistics'
 
 = render partial: 'how_to_cancel'
 
 %p
   Thank you,
   %br
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
-  - else
-    = @workshop.organizer.name
+  = @workshop.organizer.name
 
 %p
   P.S. Connect with other computer science teachers on Twitter

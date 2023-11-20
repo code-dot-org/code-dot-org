@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
 
-const normalizeWhitespace = function(xmlString) {
+const normalizeWhitespace = function (xmlString) {
   return xmlString.replace(/\n\s*/g, '\n');
 };
 
@@ -20,7 +20,7 @@ describe('convertBlocksXml', () => {
       `<xml>
         <block type="craft_destroyBlock">
         </block>
-      </xml>`
+      </xml>`,
     ];
 
     const expected = [
@@ -38,7 +38,7 @@ describe('convertBlocksXml', () => {
         <block type="craft_destroy">
           <title name="DIR">forward</title>
         </block>
-      </xml>`
+      </xml>`,
     ];
 
     sources.forEach((source, i) => {
@@ -53,7 +53,7 @@ describe('convertBlocksXml', () => {
       'dirt', // unconverted
       'oreCoal', // coal_ore
       'logAcacia', // log2,0
-      'farmlandWet' // no code connection block, defaults to "dirt"
+      'farmlandWet', // no code connection block, defaults to "dirt"
     ];
 
     const expected = ['dirt', 'coal_ore', 'log2,0', 'dirt'];
@@ -86,7 +86,7 @@ describe('convertBlocksXml', () => {
       bricks: '1',
       logAcacia: '7',
       wool_blue: '22',
-      nonExistantBlock: '1' // default
+      nonExistantBlock: '1', // default
     };
 
     Object.keys(blocksToExpected).forEach(block => {

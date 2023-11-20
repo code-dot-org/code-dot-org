@@ -1,0 +1,42 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2023-05-15T21:32:11.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Style this page!\r\nHere is an opportunity to be creative and have some fun with styles.\r\n\r\n \r\n# Do this\r\n1) Link the stylesheet to the web page.\r\n2) Make the paragraph text a different size.\r\n3) Make the paragraph text a different color.\r\n   * It is your choice whether to use a named color or use an RGB color.\r\n",
+    "mini_rubric": "true",
+    "validation_enabled": "true",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \" \"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    <h1>CSS<\\/h1>\\r\\n    <p>Cascading Style Sheets are a great way to give your web pages a little extra STYLE!  You can change the color, size, and lots of other things.  It's okay if you don't remember every property, because you can always look them back up to remind yourself.<\\/p>\\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
+    "display_name": "Add a style sheet",
+    "bubble_choice_description": "Add a style sheet and rule-sets to this article.",
+    "encrypted_examples": "1/ttHf2ufPeRaIp2yfS5u51FScl+7fbpgEHVP7VuXjBH3y3fb/YbOskBlqmd\n8SVsUNDPqlY27U4wUDxCrKqW2g==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/text-properties",
+      "/courses/csd-2022/guides/web-lab",
+      "/courses/csd-2022/guides/formatting-html",
+      "/courses/csd-2022/guides/lists",
+      "/courses/csd-2022/guides/headings-and-paragraphs",
+      "/courses/csd-2022/guides/html-tags",
+      "/courses/csd-2022/guides/debugging-html"
+    ],
+    "map_reference": "/courses/csd-2022/guides/style-sheets",
+    "parent_level_id": 20026,
+    "thumbnail_url": "https://images.code.org/3297ad9f32df97ea4fcbb93b2352ed0d-image-1564005833568.JPG",
+    "rubric_performance_level_1": "The paragraphs are a new color and size, and there are no errors or inconsistencies in the HTML or CSS code.",
+    "rubric_performance_level_2": "The paragraphs are a new color or size.",
+    "rubric_performance_level_3": "The paragraphs have a special rule-set in the stylesheet, and the color or size property is used, but there are enough errors that the text does not change color or size.  There is HTML code that attempts to link the stylesheet to the web page.",
+    "rubric_performance_level_4": "There is no special rule-set for paragraphs or the color or size properties are not used in the rule-set.  There is no code to link the stylesheet to the web page.",
+    "name_suffix": "_csd-vpl-23",
+    "rubric_key_concept": "Create a stylesheet and link to the sheet in the HTML. The stylesheet includes a rule that changes the paragraph element of a webpage."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-15T21:32:11.277+00:00\",\"changed\":[\"cloned from \\\"CSD Web CSS Assessment_2023\\\"\"],\"cloned_from\":\"CSD Web CSS Assessment_2023\"}]"
+}]]></config>
+</Weblab>

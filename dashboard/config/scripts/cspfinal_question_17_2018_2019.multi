@@ -7,3 +7,5 @@ wrong 'Public key encryption makes use of mathematical problems which no algorit
 markdown <<MARKDOWN
 Which of the following statements best describes the properties of public key encryption?
 MARKDOWN
+
+allow_multiple_attempts true

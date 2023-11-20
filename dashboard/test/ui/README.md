@@ -55,13 +55,14 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)
      - Secure copy this file into your dev environment with something like `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
-     - From the destination folder, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`
-2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. The link in Step 1 has an example command line with your credentials that you can copy.
-   - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in Step 1.
+   - From the destination folder, unzip the file (or for EC2 instances, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`)
+2. `cd` into the unzipped folder and start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. You can find your username and key on the page linked in step 1. Note: the command listed there does not match the above.
+   - The `bin/sc` path only works once you've navigated into the unzipped file (on a mac, the full path might look something like `sc-4.8.2-osx/bin/sc`).
    - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
      - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
      - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
-3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+3. (Re)start your dashboard-server `./bin/dashboard-server`.
+4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
@@ -98,13 +99,13 @@ Run one feature in one saucelabs browser against your local machine with html ou
 
 `./runner.rb -l -f features/big_game_remix.feature -c Chrome --html`
 
-Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect, described earlier)
+Run **eyes tests** on one feature in one saucelabs browser against your local machine with html output (requires SauceConnect and api_key for eyes testing described in See Also below)
 
 `./runner.rb -l -f features/angle_helper.feature -c Chrome --html --eyes`
 
 ## Tips
 
-- If you're new to [Cucumber](http://cukes.info/), read about [Cucumber scenarios](https://github.com/cucumber/cucumber/wiki/Feature-Introduction), especially the keywords [Given When Then](https://github.com/cucumber/cucumber/wiki/Given-When-Then).
+- If you're new to [Cucumber](https://cucumber.io), read about [Cucumber scenarios](https://cucumber.io/docs/guides/overview/), especially the keywords [Given When Then](https://cucumber.io/docs/gherkin/reference/).
 - When debugging test scripts, it can be helpful to add pauses, such as: `And I wait for 5 seconds`.
 - If you're missing data locally, try running `bundle exec rake seed:ui_test` from the dashboard directory
 

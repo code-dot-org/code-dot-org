@@ -1,25 +1,22 @@
 name 'CB_Question_14'
-encrypted 'AU0Pz/1aVUzrcI6pZPMjxCCjLzVospo6IvSuAAkfKChYpBo0dQjK1jlbBkBy
-+GBId1+VW4Mc+2w08pXL9zwZFbGRYEdDxfd9vALIZ+C7G3bNOob3Hiyn+LiP
-lT5Er3cg0BrR+pkactdA7zHOHU4NRg+ZLuSwpEb5PADXqtfZ8cEDrLPR8gk+
-qJDswQY6Ed6kK7JIadYr32FHy6WwBWSDZil7XERdABysxX+6QMyJcG4TWoHK
-1FEAbvgBAGancMf38puKmS1bXioLEev8D5W1UzwbH5Pr7J5p5MRQRv8T9zUW
-c+wcOSW7ll76eJ7zb0p36uwB7JzKWTAxlI69cA6jKhBm2Qv2efjtnIGHiJUe
-uA+Gn3R6TFLskhIJuEc1BwExzMLSPBsqaSVut4aOt8pP9UaI9V0e6rvOAxS4
-znZwlk3ZC3l5zhlHe5z0EJeYFqSZ3JRdsMk/2DTmh6IqR56oY9ALAYTm2W0b
-dUZJkQ9uHfoOXzdaXkB4yiyhzsXzddp0Upq6l6cI8hDOxB0HuUrtTaJBkvzK
-Dg/FKNfj1g2rXntrrDOyzYwVmZ3npty91fMiEjgceIA9oT9BM0nmFpIu6BO+
-AppiXKEgKC4P1b1zFcWsrpXugdyD8gGOrI/VDwbg2DFYJgm6gh2T16sM4AVB
-0h9KU/8ib+1HS5nPJBgnTsFaRSWf38ncbf01m59e4wjCwxTlslxBueMOrRTc
-X8mR7S7fy++kYuwA2E5TvXunbINMTtZ590lVv0NisbTnUQVMLgVBNxLj3yQT
-T+y623pae8tF+ylJtj9fCG31aFsrxaty6PV5vryyyY5zEehp3mJ6mw2r8glz
-bLyq5otic41q5MWPRnER5ObfMsnn5uPKFFLFPj+Tk1T+rCEhrfxi2+cv8Ap4
-xRWiB+F09E6DCJzjcXqoucUHT2NdSfBvuJDYLY57DMtKCxcWkTCeVv10kX2I
-EYlxWq3C6fRoB8UmQ4bon1NFqm9KaSXgHIhlMuS1YBK2XrejaaSdyId8sy/J
-+B8ZrmIZiEdvBru1hybdXv9ZSbJJhsSNZWfKaYEeyDx3oY9wTGRb8cUPP4pf
-LNofSfLUhA/fDAT8buOAHKcAM4C7/cNfo03Q/uAr7zCg9VNgTyyRAWRs/nGR
-q+6laTs+rLUGqSxE2Me8PjWpBaU5Urbgi2+2CvT5IAz+wlewaXf7iYg+zSQ+
-ddAYxbjdHXUd5+EefDDeIDZobRP9L5t4F99cnGzz4wsEbLUT8WRcgfprsKli
-AomYwBJSBnHCDMkPvOlqEzab0ZFYKwnde4fPi2qyZcwgWGDIy60wogUe66an
-UJKtMF1C1UoeEcDWyCNjQEC1BhjPFOesMoByp/9svogHwg==
-'
+height '100'
+layout 'wrap'
+
+wrong 'https://images.code.org/00f79fe34f512a4c168e5e2b094a6b41-image-1461454050857.PNG'
+wrong 'https://images.code.org/96714b5aa4f23f482aa003a73d197ba7-image-1461454053774.PNG'
+right 'https://images.code.org/d93101c8ba4542112e351f2c9ad6390b-image-1461454056322.PNG'
+wrong 'https://images.code.org/4368fc059bdddba9000d5b8956c74481-image-1461454060908.PNG'
+
+markdown <<MARKDOWN
+The figure below shows a robot in a grid of squares. The robot is represented as a triangle, which is initially facing upward. The robot can move into a white or gray square but cannot move into a black region.
+
+<img src="https://images.code.org/51a38509e5df40cba8e9787e140e4627-image-1461454041396.PNG" width=200>
+
+Consider the procedure `MoveAndTurn` below
+
+<img src="https://images.code.org/17d7acd37e4ad657daa6ebf4e9140250-image-1461454046624.PNG" width=350>
+
+Which of the following code segments will move the robot to the gray square?
+MARKDOWN
+
+allow_multiple_attempts true

@@ -16,7 +16,7 @@ export default function PlaygroundButton(opts) {
 
   // Add a read-only `isPressed` property
   Object.defineProperty(this, 'isPressed', {
-    get: () => this.value === 1
+    get: () => this.value === 1,
   });
 }
 PlaygroundButton.inherits(five.Button);

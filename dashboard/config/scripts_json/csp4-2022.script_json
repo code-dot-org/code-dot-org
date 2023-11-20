@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "b076c568-a6e5-45b3-abf9-e6b349b49169"
-        },
-        {
-          "key": "a19dfb64-c5bf-432b-84a1-f1d9269c86d6",
-          "notice": "How to Avoid Plagiarism and Exam Violations in AP CSP",
-          "details": "This College Board webinar is for both students and teachers. We’ll discuss the plagiarism and exam violation policies, as outlined on pages 169–171 of the AP Computer Science Principles Course and Exam Description and pages 11–15 of the Student Handouts, view examples of student plagiarism, and cover instructions to ensure students’ compliance with the policies.",
-          "link": "https://collegeboard.zoom.us/webinar/register/WN_b6IClLS1Tp-DepqnKZUtgg?fbclid=IwAR1_RnXP8gm7Qx9vGVq8EOVcbxD6fJuZqDHE-x8ZgNWPrXpcNeh_6m2LaIA",
-          "type": "information",
-          "visibility": "Teacher and student",
-          "dismissible": true,
-          "buttonText": "Sign Up"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-28 17:15:01 UTC",
+    "serialized_at": "2022-12-06 15:28:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

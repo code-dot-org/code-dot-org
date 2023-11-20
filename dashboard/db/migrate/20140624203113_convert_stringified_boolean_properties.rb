@@ -3,9 +3,10 @@ class ConvertStringifiedBooleanProperties < ActiveRecord::Migration[4.2]
     Level.all.each do |level|
       next unless level.is_a? Blockly
 
-      if level.is_k1 == '0'
+      case level.is_k1
+      when '0'
         level.is_k1 = 'false'
-      elsif level.is_k1 == '1'
+      when '1'
         level.is_k1 = 'true'
       else
         next

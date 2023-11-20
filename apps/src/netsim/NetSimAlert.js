@@ -1,7 +1,6 @@
 /**
  * @overview Controller for creating growl-style Bootstrap alerts
  */
-/* global setTimeout */
 
 import $ from 'jquery';
 var markup = require('./NetSimAlert.html.ejs');
@@ -19,14 +18,14 @@ var NetSimAlert = (module.exports = {});
  * @private
  * @return {jQuery}
  */
-NetSimAlert.getOrCreateAlertContainer_ = function() {
+NetSimAlert.getOrCreateAlertContainer_ = function () {
   var alertContainer = $('.netsim-alert-container');
 
   if (alertContainer.length === 0) {
     alertContainer = $('<div>').addClass('netsim-alert-container');
     $('#netsim').append(alertContainer);
 
-    alertContainer.on('closed', function() {
+    alertContainer.on('closed', function () {
       if ($(this).children().length === 1) {
         $(this).remove();
       }
@@ -42,7 +41,7 @@ NetSimAlert.getOrCreateAlertContainer_ = function() {
  * @return {boolean} whether or not bootstrap's `alert` function is
  *                   loaded and available
  */
-NetSimAlert.isBootstrapAlertLoaded_ = function() {
+NetSimAlert.isBootstrapAlertLoaded_ = function () {
   return typeof $().alert === 'function';
 };
 
@@ -58,7 +57,7 @@ NetSimAlert.isBootstrapAlertLoaded_ = function() {
  * @param {number} options.timeout Timeout in ms. defaults to 5000.
  * @return {jQuery} the created alert element
  */
-NetSimAlert.create_ = function(body, flavor, options) {
+NetSimAlert.create_ = function (body, flavor, options) {
   if (!NetSimAlert.isBootstrapAlertLoaded_()) {
     logger.warn(
       'Bootstrap Alert not loaded; NetSimAlert refusing to create alert'
@@ -76,14 +75,14 @@ NetSimAlert.create_ = function(body, flavor, options) {
     markup({
       flavor: flavor,
       body: body,
-      title: options.get('title', ArgumentUtils.isString)
+      title: options.get('title', ArgumentUtils.isString),
     })
   );
 
   $container.append(bootstrapAlert);
   bootstrapAlert.alert();
 
-  setTimeout(function() {
+  setTimeout(function () {
     bootstrapAlert.alert('close');
   }, options.get('timeout', ArgumentUtils.isPositiveNoninfiniteNumber, 5000));
 
@@ -91,21 +90,21 @@ NetSimAlert.create_ = function(body, flavor, options) {
 };
 
 /** Wrapper method to call create with an "alert-warn" flavor */
-NetSimAlert.warn = function(body, options) {
+NetSimAlert.warn = function (body, options) {
   return NetSimAlert.create_(body, 'alert-warn', options);
 };
 
 /** Wrapper method to call create with an "alert-info" flavor */
-NetSimAlert.info = function(body, options) {
+NetSimAlert.info = function (body, options) {
   return NetSimAlert.create_(body, 'alert-info', options);
 };
 
 /** Wrapper method to call create with an "alert-error" flavor */
-NetSimAlert.error = function(body, options) {
+NetSimAlert.error = function (body, options) {
   return NetSimAlert.create_(body, 'alert-error', options);
 };
 
 /** Wrapper method to call create with an "alert-success" flavor */
-NetSimAlert.success = function(body, options) {
+NetSimAlert.success = function (body, options) {
   return NetSimAlert.create_(body, 'alert-success', options);
 };

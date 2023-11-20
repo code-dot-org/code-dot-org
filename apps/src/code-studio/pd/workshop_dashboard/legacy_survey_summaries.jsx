@@ -5,7 +5,7 @@ import Spinner from '../components/spinner';
 class LegacySurveySummaryTable extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    data: PropTypes.object
+    data: PropTypes.object,
   };
 
   render() {
@@ -36,7 +36,7 @@ class LegacySurveySummaryTable extends React.Component {
 export default class LegacySurveySummaries extends React.Component {
   state = {
     loading: true,
-    data: null
+    data: null,
   };
 
   componentDidMount() {
@@ -51,11 +51,11 @@ export default class LegacySurveySummaries extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: queryUrl,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
-        data: data
+        data: data,
       });
     });
   };
@@ -73,7 +73,7 @@ export default class LegacySurveySummaries extends React.Component {
       csf_intro_post_workshop_from_pegasus,
       csf_intro_post_workshop_from_pegasus_for_all_workshops,
       csd_summer_workshops_from_jotform,
-      csp_summer_workshops_from_jotform
+      csp_summer_workshops_from_jotform,
     } = this.state.data;
 
     return (

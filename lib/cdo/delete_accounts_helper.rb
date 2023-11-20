@@ -12,6 +12,15 @@ class DeleteAccountsHelper
     Weblab
   ).freeze
 
+  def sql_query_to_anonymize_field(table_name, new_attribute_values, selector)
+    set = "SET " + new_attribute_values.map {|k, v| "`#{table_name}`.`#{k}` = #{v}"}.join(', ')
+    new_attribute_values.each do |k, v|
+      set << ", `#{table_name}`.`#{k}` = #{v}"
+    end
+    where = "WHERE `#{table_name}`.`#{selector.keys[0]}` = #{selector.values[0]}"
+    "UPDATE `#{table_name}` #{set} #{where}"
+  end
+
   # @param [IO|StringIO] log to record granular activity while deleting accounts.
   # @param [Boolean] bypass_safety_constraints to purge accounts without the
   #   usual checks on account type, row limits, etc.  For use only when an
@@ -109,22 +118,45 @@ class DeleteAccountsHelper
     Pd::Attendance.with_deleted.where(teacher_id: user_id).update_all(teacher_id: nil, deleted_at: Time.now)
     Pd::Attendance.with_deleted.where(marked_by_user_id: user_id).update_all(marked_by_user_id: nil)
 
-    Pd::FacilitatorProgramRegistration.where(user_id: user_id).update_all(form_data: '{}')
-    Pd::RegionalPartnerProgramRegistration.where(user_id: user_id).update_all(form_data: '{}', teachercon: 0)
-    Pd::Teachercon1819Registration.where(user_id: user_id).update_all(form_data: '{}', user_id: nil)
     Pd::RegionalPartnerContact.where(user_id: user_id).update_all(form_data: '{}')
     Pd::RegionalPartnerMiniContact.where(user_id: user_id).update_all(form_data: '{}')
 
+    # SQL query to anonymize Pd::Teachercon1819Registration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      sql_query_to_anonymize_field(
+        "pd_teachercon1819_registrations",
+        {'form_data' => '""'},
+        {'user_id' => user_id}
+      )
+    )
+
     # SQL query to anonymize Pd::TeacherApplication (2017-18 application) because the model no longer exists
     ActiveRecord::Base.connection.exec_query(
-      <<-SQL
-        UPDATE `pd_teacher_applications`
-        SET `pd_teacher_applications`.`primary_email` = '',
-          `pd_teacher_applications`.`secondary_email` = '',
-          `pd_teacher_applications`.`application` = ''
-        WHERE `pd_teacher_applications`.`user_id` = #{user_id}
-      SQL
+      sql_query_to_anonymize_field(
+        "pd_teacher_applications",
+        {'primary_email' => '""', 'secondary_email' => '""', 'application' => '""'},
+        {'user_id' => user_id}
+      )
     )
+
+    # SQL query to anonymize Pd::FacilitatorProgramRegistration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      sql_query_to_anonymize_field(
+        "pd_facilitator_program_registrations",
+        {'form_data' => '""'},
+        {'user_id' => user_id}
+      )
+    )
+
+    # SQL query to anonymize Pd::RegionalPartnerProgramRegistration because the model no longer exists
+    ActiveRecord::Base.connection.exec_query(
+      sql_query_to_anonymize_field(
+        "pd_regional_partner_program_registrations",
+        {'form_data' => '""', 'teachercon' => 0},
+        {'user_id' => user_id}
+      )
+    )
+
     # Peer reviews might be associated with a purged submitter or viewer
     PeerReview.where(submitter_id: user_id).update_all(submitter_id: nil, audit_trail: nil)
     PeerReview.where(reviewer_id: user_id).update_all(reviewer_id: nil, data: nil, audit_trail: nil)
@@ -141,9 +173,25 @@ class DeleteAccountsHelper
     Pd::Application::Email.where(to: user_email).destroy_all if user_email.present?
 
     unless application_ids.empty?
-      # Pd::FitWeekend1819Registration does not inherit from Pd::FitWeekendRegistrationBase so both are needed here
-      Pd::FitWeekend1819Registration.where(pd_application_id: application_ids).update_all(form_data: '{}')
-      Pd::FitWeekendRegistrationBase.where(pd_application_id: application_ids).update_all(form_data: '{}')
+      application_ids.each do |app_id|
+        # SQL query to anonymize Pd::FitWeekend1819Registration because the model no longer exists
+        ActiveRecord::Base.connection.exec_query(
+          sql_query_to_anonymize_field(
+            "pd_fit_weekend1819_registrations",
+            {'form_data' => '""'},
+            {'pd_application_id' => app_id}
+          )
+        )
+
+        # SQL query to anonymize Pd::FitWeekendRegistrationBase because the model no longer exists
+        ActiveRecord::Base.connection.exec_query(
+          sql_query_to_anonymize_field(
+            "pd_fit_weekend_registrations",
+            {'form_data' => '""'},
+            {'pd_application_id' => app_id}
+          )
+        )
+      end
       Pd::Application::ApplicationBase.with_deleted.where(id: application_ids).update_all(form_data: '{}', notes: nil)
     end
 
@@ -220,11 +268,9 @@ class DeleteAccountsHelper
     @log.puts "Removing CensusSubmission"
     census_submissions = Census::CensusSubmission.where(submitter_email_address: email)
     csfms = Census::CensusSubmissionFormMap.where(census_submission_id: census_submissions.pluck(:id))
-    ciis = Census::CensusInaccuracyInvestigation.where(census_submission_id: census_submissions.pluck(:id))
-    deleted_cii_count = ciis.delete_all
+
     deleted_csfm_count = csfms.delete_all
     deleted_submissions_count = census_submissions.delete_all
-    @log.puts "Removed #{deleted_cii_count} CensusInaccuracyInvestigation" if deleted_cii_count > 0
     @log.puts "Removed #{deleted_csfm_count} CensusSubmissionFormMap" if deleted_csfm_count > 0
     @log.puts "Removed #{deleted_submissions_count} CensusSubmission" if deleted_submissions_count > 0
   end
@@ -328,6 +374,12 @@ class DeleteAccountsHelper
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
 
+  def purge_lti_user_identities(user)
+    @log.puts "Deleting lti user identities"
+    # Delete most recently destroyed (soft-deleted) record first
+    user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   def purge_contact_rollups(email)
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
@@ -376,6 +428,7 @@ class DeleteAccountsHelper
 
     user.destroy
 
+    purge_lti_user_identities(user)
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?

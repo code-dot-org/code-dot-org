@@ -29,7 +29,7 @@ const HiddenState = Immutable.Record({
     // [sectionId]: {
     //   [scriptId]: true
     // }
-  })
+  }),
 });
 
 /**
@@ -71,7 +71,7 @@ export default function reducer(state = new HiddenState(), action) {
 
     return nextState.merge({
       hiddenLessonsInitialized: true,
-      hideableLessonsAllowed
+      hideableLessonsAllowed,
     });
   }
 
@@ -112,7 +112,7 @@ export function setHiddenLessons(
   return {
     type: SET_HIDDEN_LESSONS,
     hiddenLessonsPerSection,
-    hideableLessonsAllowed
+    hideableLessonsAllowed,
   };
 }
 export function updateHiddenLesson(sectionId, lessonId, hidden) {
@@ -120,7 +120,7 @@ export function updateHiddenLesson(sectionId, lessonId, hidden) {
     type: UPDATE_HIDDEN_LESSON,
     sectionId,
     lessonId,
-    hidden
+    hidden,
   };
 }
 
@@ -129,7 +129,7 @@ export function updateHiddenScript(sectionId, scriptId, hidden) {
     type: UPDATE_HIDDEN_SCRIPT,
     sectionId,
     scriptId,
-    hidden
+    hidden,
   };
 }
 
@@ -166,7 +166,7 @@ export function toggleHiddenScript(scriptName, sectionId, scriptId, hidden) {
 function postToggleHidden(scriptName, sectionId, lessonId, hidden) {
   const data = {
     section_id: sectionId,
-    hidden
+    hidden,
   };
   if (lessonId) {
     data.stage_id = lessonId;
@@ -177,7 +177,7 @@ function postToggleHidden(scriptName, sectionId, lessonId, hidden) {
     url: `/s/${scriptName}/toggle_hidden`,
     dataType: 'json',
     contentType: 'application/json',
-    data: JSON.stringify(data)
+    data: JSON.stringify(data),
   }).success(() => {
     window.__TestInterface = window.__TestInterface || {};
     window.__TestInterface.toggleHiddenUnitComplete = true;
@@ -197,7 +197,7 @@ export function getHiddenLessons(scriptName, canHideLessons) {
       type: 'GET',
       url: `/s/${scriptName}/hidden_lessons`,
       dataType: 'json',
-      contentType: 'application/json'
+      contentType: 'application/json',
     })
       .done(response =>
         dispatch(initializeHiddenLessons(response, canHideLessons))

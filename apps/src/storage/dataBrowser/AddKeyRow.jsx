@@ -12,14 +12,14 @@ import msg from '@cdo/locale';
 const INITIAL_STATE = {
   isAdding: false,
   key: '',
-  value: ''
+  value: '',
 };
 
 class AddKeyRow extends React.Component {
   static propTypes = {
     onShowWarning: PropTypes.func.isRequired,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};

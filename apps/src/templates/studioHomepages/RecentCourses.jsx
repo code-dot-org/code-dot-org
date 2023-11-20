@@ -18,13 +18,13 @@ export default class RecentCourses extends Component {
     topCourse: shapes.topCourse,
     isTeacher: PropTypes.bool.isRequired,
     hasFeedback: PropTypes.bool.isRequired,
-    isProfessionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool,
   };
 
   static defaultProps = {
     courses: [],
     isTeacher: false,
-    hasFeedback: false
+    hasFeedback: false,
   };
 
   render() {
@@ -33,7 +33,7 @@ export default class RecentCourses extends Component {
       topCourse,
       isTeacher,
       hasFeedback,
-      isProfessionalLearningCourse
+      isProfessionalLearningCourse,
     } = this.props;
     const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
@@ -54,7 +54,6 @@ export default class RecentCourses extends Component {
               lessonName={topCourse.lessonName}
               linkToOverview={topCourse.linkToOverview}
               linkToLesson={topCourse.linkToLesson}
-              isProfessionalLearningCourse={isProfessionalLearningCourse}
             />
           )}
           {topFourCourses.length > 0 && (
@@ -65,7 +64,6 @@ export default class RecentCourses extends Component {
                     title={course.title}
                     description={course.description}
                     link={course.link}
-                    isProfessionalLearningCourse={isProfessionalLearningCourse}
                   />
                 </div>
               ))}
@@ -96,6 +94,6 @@ const styles = {
     width: contentWidth,
     display: 'flex',
     justifyContent: 'space-between',
-    flexWrap: 'wrap'
-  }
+    flexWrap: 'wrap',
+  },
 };

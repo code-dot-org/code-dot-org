@@ -3,22 +3,23 @@ import PropTypes from 'prop-types';
 import {
   NavigationBar,
   NavigationCategory,
-  NavigationItem
+  NavigationItem,
 } from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 
 const referenceGuideShape = PropTypes.shape({
+  key: PropTypes.string,
   display_name: PropTypes.string,
   content: PropTypes.string,
   position: PropTypes.number,
-  parent_reference_guide_key: PropTypes.string
+  parent_reference_guide_key: PropTypes.string,
 });
 
 export default function ReferenceGuideView({
   referenceGuide,
   referenceGuides,
-  baseUrl
+  baseUrl,
 }) {
   let rootCategory = referenceGuide;
   while (rootCategory.parent_reference_guide_key !== null) {
@@ -36,7 +37,7 @@ export default function ReferenceGuideView({
       return {
         key: guide.key,
         name: guide.display_name,
-        items: children
+        items: children,
       };
     });
   return (
@@ -71,5 +72,5 @@ export default function ReferenceGuideView({
 ReferenceGuideView.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
   referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
-  baseUrl: PropTypes.string.isRequired
+  baseUrl: PropTypes.string.isRequired,
 };

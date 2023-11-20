@@ -13,14 +13,14 @@ module HocEventReview
   end
 
   FORMS = ::PEGASUS_DB[:forms]
-  COUNTRY_CODE_COLUMN = :location_country_code_s
+  COUNTRY_CODE_COLUMN = json('data.hoc_event_country_s')
   STATE_CODE_COLUMN = json('processed_data.location_state_code_s')
   SPECIAL_EVENT_FLAG_COLUMN = json('data.special_event_flag_b')
 
   # Get non-US event counts by country
   # (used for event review overview page)
   def self.event_counts_by_country(**rest)
-    events_query(rest).
+    events_query(**rest).
       exclude(COUNTRY_CODE_COLUMN => 'US').
       group_and_count(COUNTRY_CODE_COLUMN.as(:country_code)).
       all
@@ -29,7 +29,7 @@ module HocEventReview
   # Get US event counts by state
   # (used for event review overview page)
   def self.event_counts_by_state(**rest)
-    events_query(rest).
+    events_query(**rest).
       where(COUNTRY_CODE_COLUMN => 'US').
       exclude(STATE_CODE_COLUMN => nil).
       group_and_count(
@@ -40,16 +40,15 @@ module HocEventReview
 
   # Get events according to given filters
   def self.events(**rest)
-    events_query(rest).
+    events_query(**rest).
       select(:data, :secret, :processed_data).
       limit(100).
-      map do |form|
+      filter_map do |form|
         next unless form[:processed_data]
         JSON.parse(form[:data]).
           merge(secret: form[:secret]).
           merge(JSON.parse(form[:processed_data]))
-      end.
-      compact
+      end
   end
 
   private_class_method def self.events_query(

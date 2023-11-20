@@ -1,19 +1,30 @@
 name 'U2L14 Assessment'
-encrypted 'qtnJH1kUco09dzAwJGv5R0sbFQ7TCQByPNkOm/9mOUbWOnZ8k0Fy6jZNYQ2d
-AkcrMbyVGyNKexZbvE+BMNpVH8BHtPbxXj5ECXeC2bFaXJ3idhi8fH71Rq4R
-Nbr4/dZquR+k8Xwxxk+e2n0TaJLGJVq4b3bbfugZmo5fw1tlv6SxjKUqL8Gz
-eUb2v5ISNcZWh4P8Hz+t2eVrDaRfY16lcywhc16TQ5V+T6wCoDowAcwVC2f2
-CbXwIAfS55czKlAJjWsFbSUsd5uJwXA1jMf2M6TzqwAx/inVGGZ/WaaGheqm
-ZzpBS1s3QHS/XU2uQuQqtdTQub2PrR+byL9X8J1Fzsf951ddotQWvR4Rmos4
-VHRlsB3j0dNo4dFB0pCdXf56AmLTm4MxDJBEoS2rKk/43Sv4olPyKuSIsoj7
-rzs6/hSrcBqIAYa96Oky6zH5yQNqAPpIooGfRTo8LD1k/tl711kkdp80f9Eg
-5Tp1b6JTXa0nQduP4sU9VIT16qD+WS9VAcDLiOJIV9+vCq5KoZfB2kbkUVcH
-8xk1SyG5QuFV7lnQxC56vMqINiBS5SJBOOP9jAlACL6jUiVENd8SiTXjL1l+
-SBUPQ8QkQBWli0cuRt5jB3qa1XjB6iE3Gsa8xpKaGrMUDbjS8VpZ3Nir5JxG
-DK2tUt3gIpsr6UwCNPBFhamJKe1fNQFtI4FzaIcJECuZbjvXQmDO9NfQzlaj
-X/ddv5Mzz6fNHbSuwSe05KADwxsR8SsQCeBeyTSy4NBYkupYr83v/jtzEK/P
-32pH7Th3WWQJwO5ZW1Yzsj7B8gYjY6sI3xw9MxU+S9aSm5PajpEc9e9VsreU
-/bbNDMnaVYL8qzb4WGiDU+AmUQy0m13QwOonXfgxwIM6SMsR1FRYZx1WJVJ1
-1qNO9fWFpCE59Gepf2v0lHzN0o03fugOYChGH2rO7CUnnmoCJfub6rM2m4Re
-3qB5kUECn+LX+47c5sKhjZiWMewheghC+N2uf5189Ss=
-'
+title 'Terminology Matching'
+
+question 'encrypt'
+answer 'use an algorithm to encode a message'
+question 'decrypt'
+answer 'use an algorithm to decode a message'
+question 'cipher'
+answer 'another term for encrypted message'
+question 'random substitution cipher'
+answer 'encryption in which arbitrary symbols replace letters'
+question 'Caesar cipher'
+answer 'encryption scheme based on shifting the alphabet'
+question 'Vigenère Cipher'
+answer 'encryption that shifts the alphabet differently per character'
+question 'Computationally Hard'
+answer 'a problem that cannot be solved in a reasonable amount of time'
+ 
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

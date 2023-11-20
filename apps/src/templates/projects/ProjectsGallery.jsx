@@ -9,23 +9,24 @@ import {Galleries} from './projectConstants';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const galleryTabs = [
   {
     key: Galleries.PRIVATE,
     url: '/projects',
-    headerText: i18n.myProjects()
+    headerText: i18n.myProjects(),
   },
   {
     key: Galleries.LIBRARIES,
     url: '/projects/libraries',
-    headerText: i18n.myLibraries()
+    headerText: i18n.myLibraries(),
   },
   {
     key: Galleries.PUBLIC,
     url: '/projects/public',
-    headerText: i18n.publicProjects()
-  }
+    headerText: i18n.publicProjects(),
+  },
 ];
 
 class ProjectsGallery extends Component {
@@ -35,7 +36,7 @@ class ProjectsGallery extends Component {
 
     // Provided by Redux
     selectedGallery: PropTypes.string.isRequired,
-    selectGallery: PropTypes.func.isRequired
+    selectGallery: PropTypes.func.isRequired,
   };
 
   toggleTo = tab => {
@@ -52,7 +53,7 @@ class ProjectsGallery extends Component {
               key={tab.key}
               style={[
                 styles.pill,
-                this.props.selectedGallery === tab.key && styles.selectedPill
+                this.props.selectedGallery === tab.key && styles.selectedPill,
               ]}
               onClick={() => this.toggleTo(tab)}
             >
@@ -75,48 +76,48 @@ class ProjectsGallery extends Component {
 const styles = {
   container: {
     marginBottom: 20,
-    backgroundColor: color.lightest_gray,
+    backgroundColor: color.neutral_light,
     borderRadius: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.lighter_gray,
     padding: 10,
-    height: 36
+    height: 36,
   },
   pill: {
     ':hover': {
-      color: color.teal
+      color: color.brand_primary_default,
     },
     border: 'none',
     borderRadius: 50,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal,
+    backgroundColor: color.neutral_light,
+    color: color.neutral_dark,
     margin: '0 0 0 20px',
     boxShadow: 'none',
     outline: 'none',
     padding: '8px 18px',
     float: 'left',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   selectedPill: {
     ':hover': {
-      color: color.white
+      color: color.neutral_white,
     },
-    backgroundColor: color.teal,
-    color: color.white,
-    border: 'none'
-  }
+    backgroundColor: color.brand_primary_default,
+    color: color.neutral_white,
+    border: 'none',
+  },
 };
 
 export default connect(
   state => ({
-    selectedGallery: state.projects.selectedGallery
+    selectedGallery: state.projects.selectedGallery,
   }),
   dispatch => ({
     selectGallery(gallery) {
       dispatch(selectGallery(gallery));
-    }
+    },
   })
 )(Radium(ProjectsGallery));

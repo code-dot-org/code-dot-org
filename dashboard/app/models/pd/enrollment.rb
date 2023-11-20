@@ -37,6 +37,7 @@ class Pd::Enrollment < ApplicationRecord
   include Pd::WorkshopSurveyConstants
   include SerializedProperties
   include Pd::Application::ActiveApplicationModels
+  include Pd::Application::ApplicationConstants
   include Pd::WorkshopSurveyFoormConstants
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
@@ -78,7 +79,6 @@ class Pd::Enrollment < ApplicationRecord
     attended_csf_intro_workshop
     csf_course_experience
     csf_courses_planned
-    csf_has_physical_curriculum_guide
     previous_courses
     replace_existing
     csf_intro_intent
@@ -96,7 +96,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def self.for_user(user)
-    where('email = ? OR user_id = ?', user.email, user.id)
+    where('email = ? OR user_id = ?', user.email_for_enrollments, user.id)
   end
 
   # Name split (https://github.com/code-dot-org/code-dot-org/pull/11679) was deployed on 2016-11-09
@@ -148,9 +148,7 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Filters a list of enrollments for survey completion, for the workshop types we are able to filter for
-  # survey completion: CSD/CSP Summer, CSP Workshop for Returning Teachers, CSF Intro/Deep Dive, Counselor
-  # and Admin. We will always return [] for Academic year workshops as we want facilitators to handle those surveys.
+  # Filters a list of workshops user is enrolled in with (in)complete surveys (dependent on select_completed).
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
   #   otherwise return only those without completed surveys. Defaults to true.
@@ -159,12 +157,11 @@ class Pd::Enrollment < ApplicationRecord
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
         enrollments.is_a?(Enumerable) && enrollments.all?(Pd::Enrollment)
 
-    # Local summer, CSP Workshop for Returning Teachers, or CSF Intro after 5/8/2020 will use Foorm for survey completion.
-    # CSF Deep Dive after 9/1 also uses Foorm. CSF District workshops will always use Foorm
+    # Filter out Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020 (they
+    # do not use Foorm for survey completion); CSF Deep Dive workshops before 9/1/2020 (they do not use Foorm for
+    # survey completion); and Admin + Admin/Counselor workshops (they should not receive exit surveys at all).
     foorm_enrollments = enrollments.select do |enrollment|
-      (enrollment.workshop.workshop_ending_date >= Date.new(2020, 5, 8) &&
-        (enrollment.workshop.csf_intro? || enrollment.workshop.local_summer? || enrollment.workshop.csp_wfrt?)) ||
-        (enrollment.workshop.workshop_ending_date >= Date.new(2020, 9, 1) && enrollment.workshop.csf_201?) || enrollment.workshop.csf_district?
+      !admin_workshop?(enrollment.workshop) && currently_receives_foorm_survey(enrollment.workshop)
     end
 
     # We do not want to check survey completion for the following workshop types: Legacy (non-Foorm) summer,
@@ -185,7 +182,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(email)
+    user || User.find_by_email_or_hashed_email(email) || User.find_by(id: application&.user_id)
   end
 
   # Pre-workshop survey URL (if any)
@@ -300,14 +297,6 @@ class Pd::Enrollment < ApplicationRecord
     end
   end
 
-  # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
-  # attending a local summer workshop as a participant to observe the facilitation techniques
-  def newly_accepted_facilitator?
-    workshop.local_summer? &&
-      workshop.school_year == APPLICATION_CURRENT_YEAR &&
-      FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
-  end
-
   # Finds the application a user used for a workshop.
   # Returns the id if (a) the course listed on their application
   # matches the workshop course and user, or (b) a workshop id was
@@ -315,13 +304,13 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
-    course_match = ->(application) {Pd::Application::ApplicationBase::COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
+    course_match = ->(application) {COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
     pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
     # Finds application from the school year of the workshop. Assumes workshops start after 6/1
     # because workshop.school_year assumes 6/1 is the start of the school year
-    Pd::Application::ApplicationBase.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
+    Pd::Application::TeacherApplication.where(user_id: user_id, application_year: workshop&.school_year).each do |application|
       application_id = application.id if course_match.call(application) || pd_match.call(application)
       break if application_id
     end
@@ -330,7 +319,7 @@ class Pd::Enrollment < ApplicationRecord
 
   def application
     return nil unless application_id
-    Pd::Application::ApplicationBase.find_by(id: application_id)
+    Pd::Application::TeacherApplication.find_by(id: application_id)
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.
@@ -368,22 +357,37 @@ class Pd::Enrollment < ApplicationRecord
     user.permission = UserPermission::AUTHORIZED_TEACHER if user&.teacher? && [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(workshop.course)
   end
 
+  # Returns true if the given workshop is an Admin or Admin/Counselor workshop
+  private_class_method def self.admin_workshop?(workshop)
+    workshop.course == Pd::Workshop::COURSE_ADMIN ||
+      workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+  end
+
+  # Returns if the given workshop uses Foorm for survey completion (assuming the workshop does receive exit
+  # surveys). Some types of workshops previously did not use Foorm before certain dates, so this returns
+  # false for:
+  # - CSF Deep Dive workshops before 9/1/2020
+  # - Local summer, CSP Workshop for Returning Teachers, and CSF Intro workshops before 5/8/2020
+  # And returns true otherwise.
+  private_class_method def self.currently_receives_foorm_survey(workshop)
+    !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
+      !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+  end
+
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)
     completed_surveys, uncompleted_surveys = enrollments.partition do |enrollment|
       workshop = enrollment.workshop
       form_name = POST_SURVEY_CONFIG_PATHS[workshop.subject]
       Pd::WorkshopSurveyFoormSubmission.where(pd_workshop: workshop, user: enrollment.user).
         joins(:foorm_submission).
-        where(foorm_submissions: {form_name: form_name}).
-        exists?
+        exists?(foorm_submissions: {form_name: form_name})
     end
 
     select_completed ? completed_surveys : uncompleted_surveys
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
   end
 end

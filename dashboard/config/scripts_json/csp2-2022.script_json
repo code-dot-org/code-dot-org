@@ -13,16 +13,6 @@
           "visibility": "Teacher-only",
           "buttonText": "Learn More",
           "key": "bd40e697-e830-4d7d-848b-27c7c2584e0d"
-        },
-        {
-          "key": "7f19cb6c-a538-454f-9f33-a2d1acbd030a",
-          "notice": "How to Avoid Plagiarism and Exam Violations in AP CSP",
-          "details": "This College Board webinar is for both students and teachers. We’ll discuss the plagiarism and exam violation policies, as outlined on pages 169–171 of the AP Computer Science Principles Course and Exam Description and pages 11–15 of the Student Handouts, view examples of student plagiarism, and cover instructions to ensure students’ compliance with the policies.",
-          "link": "https://collegeboard.zoom.us/webinar/register/WN_b6IClLS1Tp-DepqnKZUtgg?fbclid=IwAR1_RnXP8gm7Qx9vGVq8EOVcbxD6fJuZqDHE-x8ZgNWPrXpcNeh_6m2LaIA",
-          "type": "information",
-          "visibility": "Teacher and student",
-          "dismissible": true,
-          "buttonText": "Sign Up"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-10-28 17:15:06 UTC",
+    "serialized_at": "2023-03-17 22:23:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -936,7 +926,7 @@
       "key": "ddcdfaf0-5778-4b85-908c-584fc8c8fa9e",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {
@@ -1297,7 +1287,7 @@
       "key": "329dd0ac-cc60-457b-9774-5f3772bda2ca",
       "position": 1,
       "properties": {
-        "description": "Today we saw a lot of really important principles that are important on the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
+        "description": "Today we saw a lot of really important principles that apply to the Internet. The first is that if we want to talk to each other we need to know who messages are going from and to. The other is that we all are going to need to be using the same set of rules if we want to communicate with one another. Let's watch a video about these concepts.",
         "remarks": true
       },
       "seeding_key": {
@@ -1320,7 +1310,7 @@
       "key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communiate over networks.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "567b1934-5b7f-4e7a-8497-72f11290fbf0",
@@ -1342,7 +1332,7 @@
       "key": "5febd336-2c53-4e20-b1e5-5a47b2657543",
       "position": 5,
       "properties": {
-        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols on the Internet.",
+        "description": "Today we took an important step in learning about the Internet. We saw that it's not just important to build a network connecting all these devices, but we need open and shared rules, or protocols, for how these devices will communicate. In coming lessons we'll be learning more about the protocols the Internet runs on.",
         "remarks": true
       },
       "seeding_key": {
@@ -1992,6 +1982,7 @@
       "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Log into this version of the Internet Simulator\r\n\r\n* No talking at all, not even to get your partner’s IP address\r\n* Ask the DNS for the IP address of a user by sending GET username\r\n* Use the IP address you get back to communicate with at least 2 friends. You can talk about: In your ideal world what time would school start? or What would you eat for your perfect meal?",
+        "progression_name": "Internet Simulator",
         "tips": [
           {
             "type": "teachingTip",
@@ -2709,7 +2700,8 @@
       "properties": {
         "level_keys": [
           "U1L5 CSP Internet Simulator DNS2022"
-        ]
+        ],
+        "progression": "Internet Simulator"
       },
       "bonus": false,
       "seeding_key": {

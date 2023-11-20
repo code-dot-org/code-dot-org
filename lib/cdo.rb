@@ -39,7 +39,7 @@ module Cdo
         raise "Unknown property not in defaults: #{key}" unless defaults.key?(key.to_sym)
       end
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
-      freeze
+      freeze_config
     end
 
     def shared_cache
@@ -103,11 +103,19 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-        (ENV['CI'] && host.include?('localhost'))
+          (ENV['CI'] && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
       host
+    end
+
+    def dashboard_site_host
+      site_host('studio.code.org')
+    end
+
+    def pegasus_site_host
+      site_host('code.org')
     end
 
     def site_url(domain, path = '', scheme = '')
@@ -166,6 +174,15 @@ module Cdo
       end
     end
 
+    def javabuilder_demo_url(path = '', scheme = '')
+      DCDO.get("javabuilder_demo_websocket_url", 'wss://javabuilder-demo.code.org')
+    end
+
+    def javabuilder_demo_upload_url(path = '', scheme = '')
+      http_url = DCDO.get("javabuilder_demo_http_url", 'https://javabuilder-demo-http.code.org')
+      http_url + "/seedsources/sources.json"
+    end
+
     # Get a list of all languages for which we want to link to a localized
     # version of CurriculumBuilder. This list is distinct from the list of
     # languages officially supported by CurriculumBuilder in that there are
@@ -207,10 +224,10 @@ module Cdo
       return @@curriculum_languages
     end
 
-    def curriculum_url(locale, uri = '', autocomplete_partial_path = true)
+    def curriculum_url(locale, uri = '', autocomplete_partial_path: true)
       return unless uri
-      uri = URI.encode(uri)
-      uri = URI.parse(uri)
+      uri = URI::DEFAULT_PARSER.escape(uri)
+      uri = URI::DEFAULT_PARSER.parse(uri)
 
       uri.host = "curriculum.code.org" if uri.host.nil? && autocomplete_partial_path
       uri.scheme = "https" if uri.scheme.nil? && autocomplete_partial_path
@@ -222,6 +239,15 @@ module Cdo
       end
 
       uri.to_s
+    end
+
+    # Temporary method to allow safe (exception-free) accessing of the
+    # Amplitude API key.
+    def safe_amplitude_api_key
+      CDO.cdo_amplitude_api_key
+    rescue ArgumentError
+      # Return an empty string, instead of raising.
+      ''
     end
 
     def dir(*dirs)
@@ -239,6 +265,15 @@ module Cdo
       rack_env?(:test) && pegasus_hostname == 'test.code.org'
     end
 
+    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
+    # Some components may operate differently within a web application server, such as using a database proxy to
+    # connect to the database. We use the `puma` web application server in most environments, except development, where
+    # we use `thin`.
+    def running_web_application?
+      %w(puma thin).include?(File.basename($0))
+    end
+
     def shared_image_url(path)
       "/shared/images/#{path}"
     end
@@ -253,7 +288,7 @@ module Cdo
       @@log ||= Logger.new(STDOUT).tap do |l|
         l.level = Logger::INFO
         l.formatter = proc do |severity, _, _, msg|
-          "#{severity != 'INFO' ? "#{severity}: " : ''}#{msg}\n"
+          "#{severity == 'INFO' ? '' : "#{severity}: "}#{msg}\n"
         end
       end
     end
@@ -296,4 +331,4 @@ module Cdo
     end
   end
 end
-CDO ||= Cdo::Impl.instance
+CDO = Cdo::Impl.instance

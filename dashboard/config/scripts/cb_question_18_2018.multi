@@ -8,3 +8,5 @@ right 'There are trade-offs involved in choosing a compression technique for sto
 markdown <<MARKDOWN
 Which of the following is a true statement about data compression?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import TeacherDashboardNavigation, {
-  TeacherDashboardPath
+  TeacherDashboardPath,
 } from './TeacherDashboardNavigation';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import StatsTableWithData from './StatsTableWithData';
@@ -15,6 +15,8 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -25,7 +27,7 @@ function TeacherDashboard({
   sectionName,
   studentCount,
   coursesWithProgress,
-  location
+  location,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -42,6 +44,7 @@ function TeacherDashboard({
       if (prevLocation) {
         action(location, prevLocation);
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [prevLocation]);
   };
 
@@ -56,11 +59,16 @@ function TeacherDashboard({
         event: 'click_new_tab',
         data_json: JSON.stringify({
           section_id: sectionId,
-          new_tab: newTab
-        })
+          new_tab: newTab,
+        }),
       },
       {includeUserId: true}
     );
+    if (newTab === 'progress') {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
+        sectionId: sectionId,
+      });
+    }
   });
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -157,15 +165,15 @@ TeacherDashboard.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
 
   // Provided by React router in parent.
-  location: PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
 };
 
 const styles = {
   text: {
     fontStyle: 'italic',
     textAlign: 'center',
-    paddingTop: 10
-  }
+    paddingTop: 10,
+  },
 };
 
 export default TeacherDashboard;

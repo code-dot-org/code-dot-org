@@ -15,6 +15,8 @@ style_min: true
 
 =inline_css 'homepage.css'
 =inline_css '/generated/hoc-banner.css'
+=inline_css '/generated/banners-curriculum-launch-2023.css'
+=inline_css '/generated/banners-ai-pl-launch-2023.css'
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]
@@ -24,18 +26,16 @@ style_min: true
 
 #homepage.supreme-container
   = view :homepage_hero
-  = view :homepage_cs_leaders_prize
 
   - if request.language == "en"
     = view :curriculum_banner
     = view :homepage_below_hero_announcement
-    = view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more', homepage: true
-    = view :homepage_ceos_for_cs_banner
-    = view :homepage_ceos_for_cs_banner_govs
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement
 
+  = view :homepage_tenth_anniversary
+  = view :curriculum_launch_skinny_banner
   = view :homepage_sections
   = view :homepage_gallery
   = view :homepage_supporters

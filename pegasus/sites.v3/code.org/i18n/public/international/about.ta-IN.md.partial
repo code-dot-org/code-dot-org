@@ -14,9 +14,9 @@ video_player: true
   </p>
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org படிப்புகள் பல்லாயிரக்கணக்கான மாணவர்கள் மற்றும் உலகம் முழுவதும் ஒரு மில்லியன் ஆசிரியர்களால் பயன்படுத்தப்படுகின்றன.</b></font>
- 
+
 </div>
 
   
@@ -36,7 +36,7 @@ video_player: true
 
 <p spaces-before="0">
   <br>
-</p> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+</p> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 <h2 spaces-before="0">
   நாங்கள் என்ன செய்கிறோம்

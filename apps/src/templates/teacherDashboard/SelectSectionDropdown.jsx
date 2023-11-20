@@ -9,7 +9,7 @@ class SelectSectionDropdown extends React.Component {
   static propTypes = {
     // Provided by redux.
     sections: PropTypes.array,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.number,
   };
 
   onChange = event => {
@@ -44,17 +44,17 @@ class SelectSectionDropdown extends React.Component {
 const styles = {
   container: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   dropdown: {
     marginLeft: 10,
-    marginBottom: 0
-  }
+    marginBottom: 0,
+  },
 };
 
 export const UnconnectedSelectSectionDropdown = SelectSectionDropdown;
 
 export default connect(state => ({
   sections: getVisibleSections(state),
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: state.teacherSections.selectedSectionId,
 }))(SelectSectionDropdown);

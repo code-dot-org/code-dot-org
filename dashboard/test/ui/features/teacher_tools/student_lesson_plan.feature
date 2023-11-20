@@ -1,3 +1,6 @@
+# 2/6/23: Temporarily disabling in Safari because the 'When I switch tabs' step is failing after
+# upgrading to Safari 14.
+@no_safari
 @no_mobile
 Feature: Student Lesson Plan
 

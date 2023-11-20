@@ -4,11 +4,7 @@
     "func": "makeAnonymousDanceSprite",
     "inline": false,
     "blockText": "make a new {COSTUME} at {LOCATION}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
+    "style": "sprite_blocks",
     "args": [
       {
         "name": "COSTUME",

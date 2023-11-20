@@ -13,3 +13,5 @@ right '7'
 right '8'
 right '9'
 right '10'
+
+allow_multiple_attempts true

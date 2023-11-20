@@ -31,3 +31,5 @@ public static String rearrange(String str) {
 
 What, if anything, is returned by the method call `rearrange("computer")`?
 MARKDOWN
+
+allow_multiple_attempts true

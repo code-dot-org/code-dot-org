@@ -1,5 +1,5 @@
 /** @file Top-level view for GameLab */
-/* global dashboard */
+
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
-  APP_HEIGHT
+  APP_HEIGHT,
 } from './constants';
 import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
@@ -24,6 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for GameLab
@@ -41,7 +42,8 @@ class P5LabView extends React.Component {
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
-      P5LabInterfaceMode.ANIMATION
+      P5LabInterfaceMode.ANIMATION,
+      P5LabInterfaceMode.BACKGROUND,
     ]).isRequired,
     isResponsive: PropTypes.bool.isRequired,
     hideSource: PropTypes.bool.isRequired,
@@ -51,7 +53,7 @@ class P5LabView extends React.Component {
     isRunning: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isBackground: PropTypes.bool,
-    currentUserType: PropTypes.string
+    currentUserType: PropTypes.string,
   };
 
   constructor(props) {
@@ -64,15 +66,18 @@ class P5LabView extends React.Component {
 
     this.state = {
       libraryManifest: {},
-      projectType
+      projectType,
     };
   }
 
   getChannelId() {
+    let channelId;
+
     if (dashboard && dashboard.project) {
-      return dashboard.project.getCurrentId();
+      channelId = dashboard.project.getCurrentId();
     }
-    return undefined;
+
+    return channelId;
   }
 
   componentDidMount() {
@@ -84,12 +89,10 @@ class P5LabView extends React.Component {
     });
   }
 
-  shouldHideAnimationUpload() {
-    // Teachers should always be allowed to upload animations.
-    if (this.props.currentUserType === 'teacher') {
-      return false;
-    }
-
+  // Users of non-Blockly labs should always be allowed to upload animations
+  // with no restrictions. Teachers in blockly labs (ie. Sprite Lab) can upload with a warning.
+  // When students upload animations in Blockly labs, we disable publish and remix for the project.
+  shouldWarnOnAnimationUpload() {
     return this.props.isBlockly;
   }
 
@@ -99,37 +102,37 @@ class P5LabView extends React.Component {
       isResponsive,
       hideSource,
       pinWorkspaceToBottom,
-      showFinishButton
+      showFinishButton,
     } = this.props;
 
     // Code mode contains protected (non-React) content.  We have to always
     // render it, so when we're not in code mode use CSS to hide it.
     const codeModeStyle = {
-      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined
+      display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined,
     };
 
     const visualizationColumnStyle = {
-      width: APP_WIDTH
+      width: APP_WIDTH,
     };
 
     const visualizationColumnClassNames = classNames({
       responsive: isResponsive,
-      pin_bottom: !hideSource && pinWorkspaceToBottom
+      pin_bottom: !hideSource && pinWorkspaceToBottom,
     });
     let defaultQuery = {
       categoryQuery: '',
-      searchQuery: ''
+      searchQuery: '',
     };
     if (this.props.isBackground) {
       defaultQuery.categoryQuery = 'backgrounds';
     }
-    // we don't want them to be able to navigate to all categories if we're only showing backgrounds
+    // We don't want them to be able to navigate to all categories if we're only showing backgrounds.
     const navigable = !this.props.isBackground;
-    // we don't want to show backgrounds if we're looking for sprites in spritelab
+    // We don't want to show backgrounds if we're looking for costumes in Sprite Lab.
     const hideBackgrounds = !this.props.isBackground && this.props.isBlockly;
-    // we don't want students to be able to draw their own backgrounds in spritelab so if we're showing
-    // backgrounds alone, we must be in spritelab and we should get rid of the draw your own option
-    const canDraw = !this.props.isBackground;
+    const hideCostumes = this.props.isBackground && this.props.isBlockly;
+    const channelId = this.getChannelId();
+
     return (
       <div style={codeModeStyle}>
         <div
@@ -144,16 +147,16 @@ class P5LabView extends React.Component {
             hidePauseButton={this.props.hidePauseButton}
             onPromptAnswer={this.props.onPromptAnswer}
           />
-          {this.getChannelId() && (
+          {channelId && (
             <AnimationPicker
-              channelId={this.getChannelId()}
+              channelId={channelId}
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.shouldHideAnimationUpload()}
+              shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
-              canDraw={canDraw}
+              hideCostumes={hideCostumes}
               pickerType={
                 this.props.isBackground
                   ? PICKER_TYPE.backgrounds
@@ -173,6 +176,7 @@ class P5LabView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace withSettingsCog={!this.props.isBlockly} />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </div>
     );
@@ -180,20 +184,35 @@ class P5LabView extends React.Component {
 
   renderAnimationMode() {
     const {allowAnimationMode, interfaceMode} = this.props;
+    let defaultQuery = {
+      categoryQuery: '',
+      searchQuery: '',
+    };
+    if (this.props.isBackground) {
+      // Navigate to the backgrounds animation category.
+      defaultQuery.categoryQuery = 'backgrounds';
+    }
+    const isBackgroundMode = interfaceMode === P5LabInterfaceMode.BACKGROUND;
     return allowAnimationMode &&
-      interfaceMode === P5LabInterfaceMode.ANIMATION ? (
+      (interfaceMode === P5LabInterfaceMode.ANIMATION ||
+        interfaceMode === P5LabInterfaceMode.BACKGROUND) ? (
       <AnimationTab
         channelId={this.getChannelId()}
+        defaultQuery={defaultQuery}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.shouldHideAnimationUpload()}
+        shouldWarnOnAnimationUpload={this.shouldWarnOnAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
-        hideBackgrounds={this.props.isBlockly}
+        hideBackgrounds={this.props.isBlockly && !isBackgroundMode}
+        hideCostumes={isBackgroundMode}
         labType={this.props.labType}
-        pickerType={this.state.projectType}
+        pickerType={
+          this.props.isBackground
+            ? PICKER_TYPE.backgrounds
+            : this.state.projectType
+        }
+        interfaceMode={interfaceMode}
       />
-    ) : (
-      undefined
-    );
+    ) : undefined;
   }
 
   render() {
@@ -217,5 +236,5 @@ export default connect(state => ({
   isIframeEmbed: state.pageConstants.isIframeEmbed,
   isBlockly: state.pageConstants.isBlockly,
   isBackground: state.animationPicker.isBackground,
-  currentUserType: state.currentUser?.userType
+  currentUserType: state.currentUser?.userType,
 }))(P5LabView);

@@ -6,7 +6,7 @@ import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 describe('Location Commands', () => {
   let coreLibrary;
   const spriteName = 'sprite1';
-  beforeEach(function() {
+  beforeEach(function () {
     const p5Wrapper = createP5Wrapper();
     coreLibrary = new CoreLibrary(p5Wrapper.p5);
   });
@@ -22,28 +22,28 @@ describe('Location Commands', () => {
         commands.locationModifier.apply(coreLibrary, [
           25,
           'North',
-          {x: 100, y: 200}
+          {x: 100, y: 200},
         ])
       ).to.deep.equal({x: 100, y: 175});
       expect(
         commands.locationModifier.apply(coreLibrary, [
           25,
           'South',
-          {x: 100, y: 200}
+          {x: 100, y: 200},
         ])
       ).to.deep.equal({x: 100, y: 225});
       expect(
         commands.locationModifier.apply(coreLibrary, [
           25,
           'East',
-          {x: 100, y: 200}
+          {x: 100, y: 200},
         ])
       ).to.deep.equal({x: 125, y: 200});
       expect(
         commands.locationModifier.apply(coreLibrary, [
           25,
           'West',
-          {x: 100, y: 200}
+          {x: 100, y: 200},
         ])
       ).to.deep.equal({x: 75, y: 200});
     });
@@ -53,11 +53,11 @@ describe('Location Commands', () => {
         commands.locationModifier.apply(coreLibrary, [
           15,
           'North',
-          {x: 0, y: 0}
+          {x: 0, y: 0},
         ])
       ).to.deep.equal({
         x: 0,
-        y: -15
+        y: -15,
       });
     });
 
@@ -69,7 +69,7 @@ describe('Location Commands', () => {
         commands.locationModifier.apply(coreLibrary, [
           15,
           'Invalid Direction',
-          {x: 10, y: 10}
+          {x: 10, y: 10},
         ])
       ).to.equal(undefined);
     });
@@ -80,14 +80,14 @@ describe('Location Commands', () => {
     coreLibrary.p5.mouseY = 0;
     expect(commands.locationMouse.apply(coreLibrary)).to.deep.equal({
       x: 0,
-      y: 0
+      y: 0,
     });
 
     coreLibrary.p5.mouseX = 123;
     coreLibrary.p5.mouseY = 321;
     expect(commands.locationMouse.apply(coreLibrary)).to.deep.equal({
       x: 123,
-      y: 321
+      y: 321,
     });
   });
 
@@ -98,7 +98,7 @@ describe('Location Commands', () => {
       commands.locationOf.apply(coreLibrary, [{name: spriteName}])
     ).to.deep.equal({
       x: 123,
-      y: 321
+      y: 321,
     });
   });
 

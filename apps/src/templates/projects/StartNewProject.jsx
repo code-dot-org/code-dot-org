@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import fontConstants from '@cdo/apps/fontConstants';
 import NewProjectButtons from './NewProjectButtons';
 import i18n from '@cdo/locale';
 import Button from '../Button';
@@ -9,15 +10,15 @@ export default class StartNewProject extends React.Component {
   static propTypes = {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool
+    canViewAdvancedTools: PropTypes.bool,
   };
 
   static defaultProps = {
-    canViewAdvancedTools: true
+    canViewAdvancedTools: true,
   };
 
   state = {
-    showFullList: false
+    showFullList: false,
   };
 
   toggleShowFullList = () => {
@@ -32,14 +33,14 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'artist',
       'applab',
-      'gamelab'
+      'gamelab',
     ];
 
     const DEFAULT_PROJECT_TYPES_BASIC = [
       'spritelab',
       'artist',
       'dance',
-      'playlab'
+      'playlab',
     ];
 
     const defaultProjectTypes = canViewAdvancedTools
@@ -50,7 +51,7 @@ export default class StartNewProject extends React.Component {
       'spritelab',
       'dance',
       'poetry',
-      'thebadguys'
+      'thebadguys',
     ];
 
     const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
@@ -59,7 +60,7 @@ export default class StartNewProject extends React.Component {
       'minecraft_adventurer',
       'minecraft_designer',
       'minecraft_hero',
-      'minecraft_aquatic'
+      'minecraft_aquatic',
     ];
 
     const GAMES_AND_EVENTS_PROJECT_TYPES = [
@@ -67,7 +68,7 @@ export default class StartNewProject extends React.Component {
       'starwarsblocks',
       'bounce',
       'sports',
-      'basketball'
+      'basketball',
     ];
 
     const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
@@ -76,19 +77,18 @@ export default class StartNewProject extends React.Component {
 
     const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
 
-    const MATH_PROJECT_TYPES = ['calc', 'eval'];
-
     return (
       <div>
-        <div style={styles.headingStartNew}>{i18n.projectStartNew()}</div>
+        <h4 className="new-project-heading" style={styles.headingStartNew}>
+          {i18n.projectStartNew()}
+        </h4>
         <NewProjectButtons projectTypes={defaultProjectTypes} />
 
         {canViewFullList && (
           <Button
-            __useDeprecatedTag
             id="uitest-view-full-list"
             onClick={this.toggleShowFullList}
-            color={Button.ButtonColor.gray}
+            color={Button.ButtonColor.neutralDark}
             icon={showFullList ? 'caret-up' : 'caret-down'}
             text={showFullList ? i18n.hideFullList() : i18n.viewFullList()}
             style={styles.button}
@@ -129,12 +129,6 @@ export default class StartNewProject extends React.Component {
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER_PROJECT_TYPES}
             />
-            {canViewAdvancedTools && (
-              <NewProjectButtons
-                description={i18n.projectGroupMath()}
-                projectTypes={MATH_PROJECT_TYPES}
-              />
-            )}
           </div>
         )}
         <div style={styles.spacer} />
@@ -146,19 +140,20 @@ export default class StartNewProject extends React.Component {
 const styles = {
   button: {
     float: 'right',
-    marginRight: 1
+    margin: '0 1px 0 0',
+    padding: '0 16px',
   },
   headingStartNew: {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: '"Gotham 4r"',
-    color: color.charcoal,
-    marginBottom: -10
+    ...fontConstants['main-font-regular'],
+    color: color.neutral_dark,
+    marginBottom: -10,
   },
   spacer: {
     paddingTop: 10,
     clear: 'both',
-    width: '100%'
-  }
+    width: '100%',
+  },
 };

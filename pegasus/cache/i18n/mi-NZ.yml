@@ -1,17 +1,108 @@
 ---
 mi-NZ:
-  hello: Tēnā koe e te ao
-  'yes': Āe
-  'no': Kāore
-  select_language: Tēnā kōwhiritia tō reo
-  upgrade_ie_message: Kāore e roa ka poroa e Code.org te āheinga mō Internet Explorer
-    8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
-  upgrade_ie_message_csedweek: Kāore e roa ka poroa e CSEdWeek.org te āheinga mō Internet
-    Explorer 8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
-  upgrade_ie_link: Me ako tonu
-  en: Pūtaiao Rorohiko
+  20-hour_name: Whakaakoranga Whakatere
+  accelerated_gradelevel: Ngā Tau 10-18
+  accelerated_name: Whakaakoranga Whakatere
+  ai_activity: Ngohe
+  ai_description: Whakaahuatanga
+  ai_for_oceans_lesson_plan: mahere akoranga
+  ai_microsoft_thanks: Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou tirohanga
+    me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa ki te ako
+    i te Hangarau Matihiko me nga pukenga kia angitu.
+  allcancode_gradelevel: Ngā Tau 5-10
+  anybody_can_learn: E taea ana e wai rānei te ako.
+  applab_gradelevel: Pakeke 13+
+  applab_name: Taiwhanga Taupānga
+  applab_shortdescription_congrats: He taiao papatono te Taiwhanga Taupānga e hangaia
+    ai ngā taupānga māmā. Waihangahia he taupānga me ngā paraka waehere, me JavaScript
+    rānei kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho
+  applab_tile_start_tutorial: Tīmata
+  applab_tile_teacher_guide: Tirohia te aratohu kaiako
+  aquatic_name: 'Toihuke: Rerenga Moana'
+  are_you_teacher: He pouako rānei koe?
+  artist_gradelevel: Ngā Tau 8-108
+  artist_name: Rehetoi
+  artist_shortdescription: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
+  basketball_name: Hangaia tētahi kēmu poitūkohu
+  blockly_name: Blockly
+  california_button: Ako Tonu
+  california_heading: Tono atu ki tō kura ki te whakaako i te pūtaiao rorohiko
+  california_text: E āhei ana ngā kaiako katou ki te whakaako ā mātou <a href='http://studio.code.org/'>akomanga
+    kore utu</a>. Ka taea e ngā kura tuatahi katoa ki te <a href='http://code.org/educate/k5'>whakaako
+    i te pūtaiao rorohiko</a>. Tono atu ki ngā whaerekura ki <a href='http://code.org/educate/districts'>mahitahi
+    i a mātou.
+  cargobot_beyond_gradelevel: Ngā Tau 8+
+  cded_sign_up: Waitohu Mai
+  cded_try_it: Whakamātauria
+  city: tāone nui
+  class_submission_online: tuihono
+  classicmaze_name: Rīrapa Tauhira
+  codeintl_gradelevel: Ngā Tau 4-104
+  codeintl_name: Rīrapa Tauhira
+  codeorg_beyond_gradelevel: Ngā Tau 4-104
+  codeorg_gradelevel: Ngā Tau 4-104
+  codeorg_name: Rīrapa Tauhira
+  codesters_gradelevel: Ngā Tau 12-14
+  compatibility_unsupported_browser: Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia
+    tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'>
+    tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi,
+    heoi anō, kia takatū i te whatinga o te taumahinga.
+  compatibility_unsupported_browser_markdown: Kāore tō pūtirotiro i te tautokona.
+    Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}',
+    target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te
+    titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga.
   computer_science_edweek: E tata mai ana te Hour of Code
-  csedweek_dates: 8-14 Hakihea, 2014
+  condcards_gradelevel: Ngā Tau 8-12
+  course1_gradelevel: Ngā Tau 4-6
+  course1_name: Akoranga 1
+  course2_gradelevel: Ngā Tau 6+ (me mātua pānui)
+  course2_name: Akoranga 2
+  course3_gradelevel: Ngā Tau 8-18
+  course3_name: Akoranga 3
+  course4_gradelevel: Ngā Tau 10-18
+  course4_name: Akoranga 4
+  coursea-2017_gradelevel: Ngā Tau 4-7
+  coursea-2018_gradelevel: Ngā Tau 4-7
+  coursea-2019_gradelevel: Ngā Tau 4-7
+  coursea-2020_gradelevel: Ngā Tau 4-7
+  coursea-2021_gradelevel: Ngā Tau 4-7
+  coursea-2022_gradelevel: Ngā Tau 4-7
+  coursea_gradelevel: Ngā Tau 4-7
+  courseb-2017_gradelevel: Ngā Tau 5-8
+  courseb-2018_gradelevel: Ngā Tau 5-8
+  courseb-2019_gradelevel: Ngā Tau 5-8
+  courseb-2020_gradelevel: Ngā Tau 5-8
+  courseb-2021_gradelevel: Ngā Tau 5-8
+  courseb-2022_gradelevel: Ngā Tau 5-8
+  courseb_gradelevel: Ngā Tau 5-8
+  coursec-2017_gradelevel: Ngā Tau 6-10
+  coursec-2018_gradelevel: Ngā Tau 6-10
+  coursec-2019_gradelevel: Ngā Tau 6-10
+  coursec-2020_gradelevel: Ngā Tau 6-10
+  coursec-2021_gradelevel: Ngā Tau 6-10
+  coursec-2022_gradelevel: Ngā Tau 6-10
+  coursec_gradelevel: Ngā Tau 6-10
+  coursed-2017_gradelevel: Ngā Tau 7-11
+  coursed-2018_gradelevel: Ngā Tau 7-11
+  coursed-2019_gradelevel: Ngā Tau 7-11
+  coursed-2020_gradelevel: Ngā Tau 7-11
+  coursed-2021_gradelevel: Ngā Tau 7-11
+  coursed-2022_gradelevel: Ngā Tau 7-11
+  coursed_gradelevel: Ngā Tau 7-11
+  coursee-2017_gradelevel: Ngā Tau 8-12
+  coursee-2018_gradelevel: Ngā Tau 8-12
+  coursee-2019_gradelevel: Ngā Tau 8-12
+  coursee-2020_gradelevel: Ngā Tau 8-12
+  coursee-2021_gradelevel: Ngā Tau 8-12
+  coursee-2022_gradelevel: Ngā Tau 8-12
+  coursee_gradelevel: Ngā Tau 8-12
+  coursef-2017_gradelevel: Ngā Tau 9-13
+  coursef-2018_gradelevel: Ngā Tau 9-13
+  coursef-2019_gradelevel: Ngā Tau 9-13
+  coursef-2020_gradelevel: Ngā Tau 9-13
+  coursef-2021_gradelevel: Ngā Tau 9-13
+  coursef-2022_gradelevel: Ngā Tau 9-13
+  coursef_gradelevel: Ngā Tau 9-13
   csedweek_banner_hoc: 'E tata mai ana te <a href="http://hourofcode.com" style="color:
     white; text-decoration:underline; font-weight:bold">Hour of Code</a>. Kei te karangahia
     ngā pouako, me ngā kaiwhakarite<a href="http://hourofcode.com" style="color: white;
@@ -19,84 +110,249 @@ mi-NZ:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">He pouako PR (Pūtaiao Rorohiko) koe? Tirohia ētahi atu
     rauemi CSEdWeek </a>'
-  n_have_learned_an_hoc: "<h1>Whakamātau i tētahi</h1><h2>Hour of Code</h2><h3>#tāngata
-    kua whakamāutau kē</h3>"
-  anybody_can_learn: E taea ana e wai rānei te ako.
-  learn_now: E Ako
-  petition_message: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
-    rorohiko
-  petition_sign_message: Mēnā e whakaae ana koe i te mātou, waitohungia. Whakapiri
-    mai ki te hia tāngata kua piri kē mai.
-  petition_join_others: Whakapiri mai ki te hia tāngata kua piri kē mai
-  name: Ingoa
-  email: Īmēra
-  zipcode: ZIP rohenga, Whenua rānei
-  submit: Tāpaetia
-  twentyhours_heading: Whakamātauria tā mātou Akoranga Whakarāpopotonga o te Pūtaiao
-    Rorohiko
-  twentyhours_text: Kua oti tō Hour of Code tuatahi? Ako he pūtaiao rorohiko me ngā
-    huatau waehere anō i tei akomanga whai-ake.
-  og_title: 'Code.org: Ka taea te ako, ahakoa ko wai'
-  og_title_soon: E tata mai ana te Hour of Code
-  og_description: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
-    rorohiko.
-  csedweek_og_title: E tata mai ana te Hour of Code
+  csedweek_dates: 8-14 Hakihea, 2014
+  csedweek_map_header: "# ngā takunetanga CSEdWeek /Hour of Code puta noa i te ao"
+  csedweek_map_legend_cs_tech_jam: Takunetanga Mīharo
+  csedweek_map_legend_event: Takunetanga Hour of Code
+  csedweek_map_legend_title: Poutohu
+  csedweek_map_search_placeholder: Rapu i ngā takunetanga Hour of Code
+  csedweek_map_search_reset: Tautuhi Anō
+  csedweek_map_search_search: Rapua
+  csedweek_map_signup: Waitohungia tō takunetanga
   csedweek_og_description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona
     pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki
     ngā reo e 45 neke atu.
-  hoc2014_heading: Hono ki te <a href="http://hourofcode.com">Hour of Code</a><br/>December
-    8 - 14, 2014<br/>
-  hoc2014_try: Whakamātauria
-  hoc2014_teachers: Ngā Pouako
-  hoc2014_host: Taurimatia
-  hoc2014_everyone: Te Marea
-  hoc2014_support: Tautokona &#x25BE;
-  hoc2014_whatishoc: He aha te Hour of Code?
-  csedweek_map_header: "# ngā takunetanga CSEdWeek /Hour of Code puta noa i te ao"
-  csedweek_map_signup: Waitohungia tō takunetanga
-  csedweek_map_search_placeholder: Rapu i ngā takunetanga Hour of Code
-  csedweek_map_search_search: Rapua
-  csedweek_map_search_reset: Tautuhi Anō
-  csedweek_map_legend_title: Poutohu
-  csedweek_map_legend_event: Takunetanga Hour of Code
-  csedweek_map_legend_cs_tech_jam: Takunetanga Mīharo
-  cded_sign_up: Waitohu Mai
-  cded_try_it: Whakamātauria
-  try_now: Ngana ināianei
-  california_heading: Tono atu ki tō kura ki te whakaako i te pūtaiao rorohiko
-  california_text: E āhei ana ngā kaiako katou ki te whakaako ā mātou <a href='http://studio.code.org/'>akomanga
-    kore utu</a>. Ka taea e ngā kura tuatahi katoa ki te <a href='http://code.org/educate/k5'>whakaako
-    i te pūtaiao rorohiko</a>. Tono atu ki ngā whaerekura ki <a href='http://code.org/educate/districts'>mahitahi
-    i a mātou.
-  california_button: Ako Tonu
+  csedweek_og_title: E tata mai ana te Hour of Code
+  csfirst_gradelevel: Ngā Tau 9-14
+  dashboard_action_cancel: Whakakore
+  dashboard_action_delete_no: Kāore
+  dashboard_action_delete_yes: Āe
+  dashboard_announce_learn_more_button: Me ako tonu
+  dashboard_correctness_correct: Tika
+  dashboard_course1: 'Akoranga 1:'
+  dashboard_course2: 'Akoranga 2:'
+  dashboard_course3: 'Akoranga 3:'
+  dashboard_landing_educator_blog: Pānuihia ngā pūrongo me ngā whakahoutanga o ā mātou
+    rauemi ki tā mātou Rangitaki Kaiwhakaako
+  dashboard_landing_new_beta: Hou! Whakamātauria ā mātou whakaaronga peta mā ngā ākonga
+    K-5.
+  dashboard_landing_print_certificates: Tāngia ngā tiwhikete mō ngā ākonga ka oti
+    i a rātou tēnei whakaakoranga
+  dashboard_landing_video_player: Whakamātauria tā mātou pūrere ataata hou ki tō kura
+  dashboard_login_none: Īmēra
+  dashboard_navigation_section_community: Tautoko
+  dashboard_progress_completed_perfect: kua oti, pāruhi kē
+  dashboard_progress_completed_too_many_blocks: kua oti, he nui kē ngā paraka
+  dashboard_progress_furthest_level_attempted: kua whakamātauria te taumata tiketike
+    rawa
+  dashboard_progress_in_progress: e kauneke ana
+  dashboard_progress_not_started: kāore anō kia tīmata
+  dashboard_progress_submitted: kua tāpaetia
+  dashboard_puzzle: Panga
+  dashboard_sections_close: Kati
+  dashboard_sections_table_pairing_allowed: Papatonotanga ā-Tānga
+  dashboard_sequence: Raupapa
+  dashboard_stage: Taumata
+  dashboard_student: Waitohu Ākonga
+  dashboard_students_female: Wahine
+  dashboard_students_male: Tāne
+  dashboard_students_name: Ingoa
+  email: Īmēra
+  en: Pūtaiao Rorohiko
+  finch_beyond_gradelevel: Ngā Tau 8+
+  flappy_gradelevel: Ngā Tau 6-106
   flappy_heading: Hari Flappy-tau ki Code.org
-  thank_you_: Tēnā koe!
-  third_party_gradelevel_2to8: Tau 2-8
-  third_party_gradelevel_4to12: Tau 4-12
-  third_party_gradelevel_5to12: Tau 5-12
-  third_party_gradelevel_6plus: Tau 6+
-  city: tāone nui
+  flappy_shortcode: paki
+  footer_about: Whakamārama
+  footer_donate: Tāpaetia he koha
+  footer_powered_by_aws: He mea whakahiko e Ratonga Tukutuku Amazon
+  footer_privacy_policy: Kaupapahere Tūmataitinga
+  footer_support: Tautoko
+  footer_terms: Ngā Ture
+  frozen_gradelevel: Ngā Tau 8-108
+  frozen_longdescription: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua
+    ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia e koe
+    ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka waihangahia
+    tētahi ao hōtoke hei tiritiri atu ki ō hoa!
+  frozen_name: Tuhia te waehere ki tō Anna me Elsa taha
   gender: Ira
   get_started: Tīmata
-  participant_student: Waitohu Ākonga
-  learn_back_to_minecraft: Kia kaha tonu ki te ako me Mahimaina
-  studiobar_dance_title: Te Pāti Kanikani
-  studiobar_flappy_title: Waehere Flappy
-  studiobar_donate_title: Tāpaetia he koha
+  header_about: Whakamārama
+  header_course_catalog: Whārangi Akoranga
+  header_courses: Akoranga
+  header_help_support: 'Māngai tautoko '
+  header_legal_privacy: Kaupapahere Tūmataitinga
+  header_legal_tos: Ngā Ture Ratonga
+  header_project_gallery: Ngā Tūmahi
+  header_report_bug: Pūrongo mai to raru
+  hello: Tēnā koe e te ao
+  hoc2014_everyone: Te Marea
+  hoc2014_heading: Hono ki te <a href="http://hourofcode.com">Hour of Code</a><br/>December
+    8 - 14, 2014<br/>
+  hoc2014_host: Taurimatia
+  hoc2014_support: Tautokona &#x25BE;
+  hoc2014_teachers: Ngā Pouako
+  hoc2014_try: Whakamātauria
+  hoc2014_try_frozen: Rehetoi me Anna rāua ko Elsa nō Frozen
+  hoc2014_try_new_tutorial: Whakamātauria tā mātou whakaaroranga Hour of Code hou
+    ki peta
+  hoc2014_whatishoc: He aha te Hour of Code?
+  hoc2018_creativity_create: Waihanga
+  hoc2018_creativity_hoc_coming: E tata mai ana te Hour of Code…
+  hoc2018_dance_amazon_about_future_engineer_button: Me ako tonu
+  hoc2018_dance_amazon_about_future_engineer_title: Ngā mahi a Amazon Future Engineer
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ako atu ngā mahi
+    a Amazon Future Engineer
+  hoc2018_dance_amazon_scholarship_programs_button: Tono inaianei
+  hoc2018_dance_amazon_scholarship_programs_title: Ngā Karahipi akoranga
+  hoc2018_dance_amazon_try_coding_this_summer_title: I te Raumati nei me tarai ki
+    te waehere
+  hoc2018_dance_create_your_own_dance_title: Hangaia tōu ake Pati Kanikani
+  hoc2018_dance_featured_student_creations_title: Ngā Waihanga o ngā Tauira
+  hoc2018_dance_keep_on_dancing_box_title: Me Kanikani Tonu
+  hoc2018_dance_keep_on_dancing_button: Timata te Wāhanga tuarua
+  hoc2018_dance_keep_on_dancing_description: Neke atu i te kotahi haora, anei ethahi
+    wero ano.
+  hoc2018_dance_keep_on_dancing_specs: Reo | Whakatakotoranga | Tau 13+
+  hoc2018_dance_measure: Wāhanga
+  hoc2018_dance_measure_colon: 'Wāhanga:'
+  hoc2018_dance_party_box_description: Waeheretia he Pati Kanikani ki te toharoha
+    atu ki o hoa!
+  hoc2018_dance_party_box_title: Te Pāti Kanikani
+  hoc2018_dance_party_button: Tīmata
+  hoc2018_dance_party_landing_title: Kanikani
+  hoc2018_dance_party_main_heading: Te Pāti Kanikani
+  hoc2018_dance_party_specs: Reo | Whakatakotoranga | Tau 6-106
+  hoc2018_dance_party_subheading: Āwhina mai ki te whakamaoritia i te Pati Kanikani
+  hoc2018_dance_teacher_resources_tile1_button: Mahere Akoranga
+  hoc2018_dance_teacher_resources_tile1_description: "Ngā Mahereakoranga, Ngā tiwhikete
+    me ngā \ntātari waiata."
+  hoc2018_dance_teacher_resources_tile2_button: Ngohe Momotu
+  hoc2018_dance_teacher_resources_tile2_description: Hei aha ngā rorohiko! Me ako
+    ngā aroro waehere ki te hanga he pati kanikani.
+  hoc2018_dance_teacher_resources_tile2_title: Te Pāti Kanikani Purukore
+  hoc2018_dance_teacher_resources_title: Ngā Rauemi Kaiako
+  hoc2018_dance_video1: Te Pāti Kanikani - He timata kōrero
+  hoc2018_dance_video2: Te Pāti Kanikani - Ngā Takunetanga
+  hoc2018_dance_video3: Te Pāti Kanikani - Ngā Auaha
+  hoc2018_dance_video4: Te Pāti Kanikani - E mihi ana
+  hoc2018_dance_video_title_what_is_creativity: He aha te Auahatanga?
+  hoc2018_dance_videos_section_heading: Whakaohoho ia koe
+  hoc2018_dance_view_creativity_video_playlist: He aha te Auahatanga? Tirohia ki te
+    Ratonga katoa (5 miniti)
+  hoc2018_mc_adventurer_description: Kawe i a Steve, i a Alex rānei i tētahi mahi
+    mātātoa mā te whakamahi i te waehere.
+  hoc2018_mc_adventurer_title: Kiri Māia Mahimaina
+  hoc2018_mc_aquatic_announcement: Waitohuhia mo te akomanga ki te whakamatau i tetahi
+    o nga taumahi 150 neke atu mo te Waa o te Waehere (Tihema 3-9). Me ata titiro
+    ano koe ki o maatau mahi Toihuke hou mo te tau 2018, te Rerenga Moana! Waitohuhia
+    mo to akomanga i tenei ra.
+  hoc2018_mc_aquatic_title: Mahimaina Rerenga Moana
+  hoc2018_mc_back: Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te Haora Waehere!
+  hoc2018_mc_designer_description: Papatonotia ngā kararehe me ētahi atu koiora o
+    Mahimaina i tāu ake whakaputanga Mahimaina.
+  hoc2018_mc_designer_title: Pūhoahoa Mahimaina
+  hoc2018_mc_details: He reo i kore | Pūtirotiro, paparorohiko hou | Tau 2+
+  hoc2018_mc_download_adventurer: Tikina ake te putanga tuimotu o Kiri Māia Mahimaina.
+  hoc2018_mc_educators: Mā ngā kaiwhaako
+  hoc2018_mc_educators_box1_button: Me timata
+  hoc2018_mc_educators_box1_desc: 'Mahimaina: Putanga Kuranga, E whakaratohia ana
+    e te Whakaakoranga Mātauranga nga paerewa, nga whakaharatau me nga waehere e pa
+    ana ki te marautanga ​​i te Mahimaina.'
+  hoc2018_mc_educators_box1_title: Waehere ki Te Mahimaina
+  hoc2018_mc_educators_box2_button: Tikiake
+  hoc2018_mc_educators_box2_desc: Ka awhina tenei taputapu ki a koe ki te tiaki i
+    te Haora Waehere me te whakauru atu ki o ākonga ki te taiao rorohiko.
+  hoc2018_mc_educators_box2_title: Tikiake i te Aratohu Kaiwhakahaere
+  hoc2018_mc_educators_box3_button: Kimihia he awheawhe
+  hoc2018_mc_educators_box3_desc: Haere ki te toa Microsoft i to rohe mo to awheawhe
+    haora waehere kore utu. Mo nga kaiuru o nga taumata pukenga katoa, e ono tau piki
+    ake.
+  hoc2018_mc_educators_box3_title: Haere ki tetahi waananga tauira, kore utu
+  hoc2018_mc_educators_box4_button: Whakahōpara nga rauemi
+  hoc2018_mc_educators_box4_desc: Waihangahia he huringa ki to hapori ki nga pukenga
+    rorohiko me nga rauemi matauranga taiao rorohiko mai i a Microsoft.
+  hoc2018_mc_educators_box4_title: Whakarato atu ki nga rauemi rorohiko
+  hoc2018_mc_homepage_give_flight: Kia rere ki te pohewatanga kia hua mai te whakahoutanga.
+    Tīmata ki te kotahi Haora Waehere me tohu ou auahatanga, ahakoa he aha.
+  hoc2018_mc_homepage_hoc_coming: Kei te haere mai te Haora waehere...
+  hoc2018_mc_homepage_join_us: Whakapiri mai
+  hoc2018_mc_homepage_try_it: Whakamātauria
+  hoc2018_mc_homepage_watch_video: Titiro ki to tatou ataata
+  hoc2018_mc_journey: Hāereere ki te ao Mahimaina ki te waehere.
+  hoc2018_mc_page_title: Whakaakoranga Hour of Code Mahimaina
+  hoc2018_mc_short_description: Me whakamahi i to whakaaro hangarau me nga pukenga
+    whakaoti rapanga ki te kimi taonga me te torotoro i raro moana me te mana o te
+    waehere.
+  hoc2018_mc_short_description_shorter: Me whakamahi i to whakaaro hangarau me nga
+    pukenga whakaoti ki te torotoro, ki te hanga ao ki raro moana i te waehere.
+  hoc2018_mc_start: Tīmata
+  hoc2018_mc_teacher_guide: Tirohia te aratohu kaiako
+  hoc2018_mc_thank_microsoft: Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou
+    tirohanga me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa
+    ki te ako i te Hangarau Matihiko me nga pukenga kia angitu.
+  hoc2018_mc_video_1min: kotahi meneti
+  hoc2018_mc_video_2min: rua meneti
+  hoc2018_mc_video_3min: toru meneti
+  hoc2018_mc_video_5min: rima meneti
+  hoc2018_mc_video_title_inspire_girl: Whakaohooho i tētahi kōtiro
+  hoc2022_landing_page_create_title: Waihanga
+  hoc_overview_dance_subtitle: Waeheretia he Pāti Kanikani ki te tohatoha ki o hoa.
+    Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith Urban, Ciara me etahi atu!
+  hoc_overview_dance_title: Te Pāti Kanikani
+  hoc_overview_start_tutorial: Tīmata
+  hoc_overview_view_teacher_guide: Tirohia te aratohu kaiako
+  homepage_action_text_codevideo: Mātakina te ataata
+  homepage_action_text_girlvideo: Whakaohooho i tētahi kōtiro
+  homepage_action_text_hoc: Hour of Code mā ngā ākonga katoa.
+  homepage_action_text_join_us: Whakapiri mai
+  homepage_action_text_learn: Me tīmata te ako
+  homepage_action_text_sign_up: Waitohu Mai
+  homepage_action_text_signpetition: Waitohungia te puka inoi
+  homepage_action_text_teachervideo: Mātakina te ataata
+  homepage_action_text_try_it: Whakamātauria
+  homepage_action_text_volunteers: He tūao pouako kei te hiahiatia
+  homepage_action_text_watchvideo: Mātakina te ataata
+  homepage_banner_20k_teachers: E 20,000 ngā pouako kua whakangungua, ā, ko rātou
+    kei te whakaako i te pūtaiao rorohiko ināianei.
+  homepage_banner_20k_teachers_link: Me ako tonu
+  homepage_banner_40k_teachers_link: Me ako tonu
+  homepage_banner_congress: Kei te inoi atu ngā rangatira o Amerika kia tautoko ā-putea
+    te Congress i te pūtaiao rorohiko K-12.
+  homepage_banner_congress_link: Tautokona atu
+  homepage_banner_emailprivacy: Kei te panonihia tētahi āhuatanga whakahirahira mō
+    te āhua ki tā mātou taunaki i te tūmataititanga o ngā ākonga.
+  homepage_banner_emailprivacy_link: Pānui tonu
+  homepage_banner_link_prizes: 'Whakapiri mai ki te takunetanga ako rahi rawa o te
+    wā. '
+  homepage_banner_privacy_link: Me ako tonu
+  homepage_banner_text_link: Me ako tonu
+  homepage_banner_text_main: E tū tahi ana a Code.org me te College Board ki te whakapai
+    ake i ngā āhuatanga kanorau o te pūtaiao rorohiko.
+  homepage_banner_text_prizes: 'E kainamu ana te rā ka tīmata anō ai te Hour of Code
+    ā te 7-13 o Hakihea. '
+  homepage_below_hero_announcement_link_text: Me ako tonu
+  homepage_diversity_pledge: Kawea ake te kī taurangi kanorau
+  homepage_donors_donate: Tāpaetia he koha
+  homepage_donors_seall: Tirohia te katoa
+  homepage_header_donors: Ka mihia ōna kaitautoko e Code.org
+  homepage_hero_hoc_is_coming: E tata mai ana te Hour of Code
+  homepage_hero_hoc_is_here: E tata mai ana te Hour of Code
+  homepage_hero_text_bosh: "&ldquo;Mēnā koe ka tuhi waehere, māu anō tō ara haere
+    ake nei e whiriwhiri.&rdquo; Chris Bosh"
+  homepage_hero_text_fistbump: "&ldquo;Kaua e korikori noa iho ki tō waea, papatonotia.&rdquo;
+    Perehitana Barack Obama"
   homepage_hero_text_malala: "&ldquo;E whakatara ana ahau i ngā kōtiro puta noa i
     te ao kia ako i tētahi Hour of Code&rdquo; Malala, kaiwhakawhiwhi ki te Tohu Nobel
     Peace"
-  homepage_hero_text_susan: "&ldquo;Ki te taea e koe te hangarau te panoni, ka taea
-    hoki e koe te ao te panoni.&rdquo; Susan, Kaiurungi o TiriAta (YouTube)"
-  homepage_hero_text_fistbump: "&ldquo;Kaua e korikori noa iho ki tō waea, papatonotia.&rdquo;
-    Perehitana Barack Obama"
+  homepage_hero_text_satya: "&ldquo;Ka tuwhere ētahi o ngā tino huarahi i te ao mā
+    roto mai i te pūtaiao rorohiko.&rdquo; Satya, Kaiurungi o Microsoft"
   homepage_hero_text_sheryl: "&ldquo;Me whai wāhi ā tātou tamariki &mdash; ā tātou
     kōtiro hoki&mdash;ki te ako i te pūtaiao rorohiko.&rdquo; Sheryl, Kaiurungi o
     Pukamata (Facebook)"
-  homepage_hero_text_satya: "&ldquo;Ka tuwhere ētahi o ngā tino huarahi i te ao mā
-    roto mai i te pūtaiao rorohiko.&rdquo; Satya, Kaiurungi o Microsoft"
-  homepage_hero_text_bosh: "&ldquo;Mēnā koe ka tuhi waehere, māu anō tō ara haere
-    ake nei e whiriwhiri.&rdquo; Chris Bosh"
+  homepage_hero_text_stat_loc: He 2.5 miriona kōtiro i uru atu ki te ako mā Code Studio
+  homepage_hero_text_stat_served: 'I whai wāhi te #served ki Hour of Code'
+  homepage_hero_text_stat_students: "#student_count ngā pūkei ākonga kei Code Studio"
   homepage_hero_text_student1: "&ldquo;Kua rerekē te ao kei mua i tōku aroaro i ēnei
     pūkenga. Me te ngahau hoki.&rdquo; Luna, taumata ako 7 (tau kura Amerika)"
   homepage_hero_text_student2: "&ldquo;Kāore anō au kia kite i tēnei momo hīkaka ki
@@ -108,430 +364,174 @@ mi-NZ:
     taumata 2 (tau kura Amerika)"
   homepage_hero_text_student5: "&ldquo;Ehara te pūtaiao rorohiko i te mahi mō tangata
     kē atu. Mōu kē, i tēnei wā tonu, i tēnei wāhi tonu.&rdquo;Geraldo, pouako"
+  homepage_hero_text_susan: "&ldquo;Ki te taea e koe te hangarau te panoni, ka taea
+    hoki e koe te ao te panoni.&rdquo; Susan, Kaiurungi o TiriAta (YouTube)"
   homepage_hero_text_teacher1: "&ldquo;He mea whakahihiko i te auahatanga, te whakaawetanga
     me te whakahoutanga tēnei mea te waehere &mdash; katoa, katoa he mea whaitake
     i ngā umanga katoa.&rdquo;Floresa, pouako"
   homepage_hero_text_teacher2: "&ldquo;Nā tēnei papatono i aro mai ai, i whai wāhi
     mai ai, i uru mai ai hoki te 100 ōrau o aku ākonga.&rdquo; Adam, pouako"
-  homepage_hero_text_stat_loc: He 2.5 miriona kōtiro i uru atu ki te ako mā Code Studio
-  homepage_hero_text_stat_students: "#student_count ngā pūkei ākonga kei Code Studio"
-  homepage_hero_text_stat_served: 'I whai wāhi te #served ki Hour of Code'
-  homepage_hero_hoc_is_coming: E tata mai ana te Hour of Code
-  homepage_hero_hoc_is_here: E tata mai ana te Hour of Code
-  homepage_slot_text_frozen: Frozen me Anna rāua ko Elsa
-  homepage_slot_text_teacher: Paemana Pouako
-  homepage_slot_text_studio: Ā mātou whakaakoranga katoa
-  homepage_slot_text_course4: Akoranga 4
-  homepage_slot_text_flappy: Waehere Flappy
-  homepage_action_text_hoc: Hour of Code mā ngā ākonga katoa.
-  homepage_action_text_join_us: Whakapiri mai
-  homepage_action_text_sign_up: Waitohu Mai
-  homepage_action_text_try_it: Whakamātauria
-  homepage_action_text_volunteers: He tūao pouako kei te hiahiatia
-  homepage_action_text_codevideo: Mātakina te ataata
-  homepage_action_text_teachervideo: Mātakina te ataata
-  homepage_action_text_watchvideo: Mātakina te ataata
-  homepage_action_text_girlvideo: Whakaohooho i tētahi kōtiro
-  homepage_action_text_learn: Me tīmata te ako
-  homepage_action_text_signpetition: Waitohungia te puka inoi
   homepage_signpetition_dropdown: Kei te whakaae ahau &#x25BE;
-  homepage_diversity_pledge: Kawea ake te kī taurangi kanorau
-  homepage_banner_text_prizes: 'E kainamu ana te rā ka tīmata anō ai te Hour of Code
-    ā te 7-13 o Hakihea. '
-  homepage_banner_link_prizes: 'Whakapiri mai ki te takunetanga ako rahi rawa o te
-    wā. '
-  homepage_banner_text_main: E tū tahi ana a Code.org me te College Board ki te whakapai
-    ake i ngā āhuatanga kanorau o te pūtaiao rorohiko.
-  homepage_banner_text_link: Me ako tonu
-  homepage_banner_privacy_link: Me ako tonu
-  homepage_banner_20k_teachers: E 20,000 ngā pouako kua whakangungua, ā, ko rātou
-    kei te whakaako i te pūtaiao rorohiko ināianei.
-  homepage_banner_20k_teachers_link: Me ako tonu
-  homepage_banner_congress: Kei te inoi atu ngā rangatira o Amerika kia tautoko ā-putea
-    te Congress i te pūtaiao rorohiko K-12.
-  homepage_banner_congress_link: Tautokona atu
-  homepage_banner_emailprivacy: Kei te panonihia tētahi āhuatanga whakahirahira mō
-    te āhua ki tā mātou taunaki i te tūmataititanga o ngā ākonga.
-  homepage_banner_emailprivacy_link: Pānui tonu
-  homepage_banner_40k_teachers_link: Me ako tonu
+  homepage_slot_text_blurb_advocates: Tautoko i te rerenga kētanga i ngā mahi rorohiko
+  homepage_slot_text_blurb_educators: Whakaakona ō ākonga
   homepage_slot_text_blurb_hoc: E āhei ana te tangata te ako ahakoa ko wai. Me tīmata
     i te rangi nei
-  homepage_slot_text_link_hoc: Whakamātauria te Hour of Code
-  homepage_slot_text_link_host: Taurima i tētahi Hour of Code
-  homepage_solot_text_link_volunteer: E kuhu hei tūao mō te Hour of Code
   homepage_slot_text_blurb_students: Torohia te katoa o ā mātou whakaakoranga
   homepage_slot_text_blurb_students_courses: Torohia ā mātou akoranga
+  homepage_slot_text_course4: Akoranga 4
+  homepage_slot_text_flappy: Waehere Flappy
+  homepage_slot_text_frozen: Frozen me Anna rāua ko Elsa
+  homepage_slot_text_link_buy: E kuhu
   homepage_slot_text_link_codestudio: Whakamātauria te Code Studio
+  homepage_slot_text_link_donate: Tāpaetia he koha
+  homepage_slot_text_link_elementary: Kura Tuatahi
+  homepage_slot_text_link_fullcurriculum: Tirohia tā mātou marautanga katoa
+  homepage_slot_text_link_hoc: Whakamātauria te Hour of Code
+  homepage_slot_text_link_host: Taurima i tētahi Hour of Code
+  homepage_slot_text_link_k5: Akoranga mā ngā taumata K-5 (tau kua Amerika)
   homepage_slot_text_link_local: Kimihia he akomanga i tō takiwā
   homepage_slot_text_link_othercourses: He akoranga tuihono anō
-  homepage_slot_text_title_educators: Kaiwhakaako
-  homepage_slot_text_blurb_educators: Whakaakona ō ākonga
-  homepage_slot_text_link_elementary: Kura Tuatahi
-  homepage_slot_text_link_k5: Akoranga mā ngā taumata K-5 (tau kua Amerika)
-  homepage_slot_text_link_fullcurriculum: Tirohia tā mātou marautanga katoa
   homepage_slot_text_link_pd: Te Ngaiotanga
-  homepage_slot_text_title_advocates: Ngā Kaihāpai
-  homepage_slot_text_blurb_advocates: Tautoko i te rerenga kētanga i ngā mahi rorohiko
-  homepage_slot_text_link_stats: Tirohia ngā tatauranga
-  homepage_slot_text_link_buy: E kuhu
-  homepage_slot_text_link_donate: Tāpaetia he koha
   homepage_slot_text_link_shop: Tīhāte, pōtae, aha atu
-  homepage_header_donors: Ka mihia ōna kaitautoko e Code.org
-  homepage_donors_seall: Tirohia te katoa
-  homepage_donors_donate: Tāpaetia he koha
-  homepage_below_hero_announcement_link_text: Me ako tonu
-  class_submission_online: tuihono
-  playlab_iceage_title_live: Ao Kōpaka
-  starwars_blocks_title: Ngā Paraka
-  mc_name: Hour of Code Mahimaina
+  homepage_slot_text_link_stats: Tirohia ngā tatauranga
+  homepage_slot_text_studio: Ā mātou whakaakoranga katoa
+  homepage_slot_text_teacher: Paemana Pouako
+  homepage_slot_text_title_advocates: Ngā Kaihāpai
+  homepage_slot_text_title_educators: Kaiwhakaako
+  homepage_solot_text_link_volunteer: E kuhu hei tūao mō te Hour of Code
+  hourofcode_gradelevel: Ngā Tau 6-106
+  hourofcode_name: Rīrapa Tauhira
+  iceage_name: Ao Kōpaka
+  infinity_gradelevel: Ngā Tau 6-14
+  infinity_name: Taiwhanga Tākaro Disney Infinity
+  infinity_shortdescription: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
+    pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
+  kidsruby_beyond_gradelevel: Pakeke 12+
+  kodableunplugged_gradelevel: Ngā Tau 8-13
+  kodu_beyond_gradelevel: Ngā Tau 8+
+  learn_back_to_minecraft: Kia kaha tonu ki te ako me Mahimaina
+  learn_more: Ngana ināianei
+  learn_now: E Ako
+  learn_sign_up_button: Waitohu Mai
+  mc_gradelevel: Ngā Tau 6-106
   mc_longdescription: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
     rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
+  mc_name: Hour of Code Mahimaina
   mc_shortdescription: Whakamahia ngā paraka tuhiwaehere hei kawe i a Steve, i a Alex
     rānei i tētahi mahi mātātoa mā tēnei ao Mahimaina
-  mc_gradelevel: Ngā Tau 6-106
-  minecraft_designer: Pūhoahoa Mahimaina
   minecraft_adventurer: Kiri Māia Mahimaina
-  minecraft_tutorials: Whakaakoranga Hour of Code Mahimaina
-  minecraft_specs: He reo i kore | Pūtirotiro, paparorohiko hou | Tau 2+
-  minecraft_agent_button: Tīmata
-  minecraft_designer_description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
-    i tāu ake whakaputanga Mahimaina.
-  minecraft_designer_button: Tīmata
+  minecraft_adventurer_button: Tīmata
   minecraft_adventurer_description: Kawe i a Steve, i a Alex rānei i tētahi mahi mātātoa
     mā te whakamahi i te waehere.
-  minecraft_adventurer_button: Tīmata
+  minecraft_agent_button: Tīmata
+  minecraft_designer: Pūhoahoa Mahimaina
+  minecraft_designer_button: Tīmata
+  minecraft_designer_description: Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina
+    i tāu ake whakaputanga Mahimaina.
   minecraft_download_adventurer: Tikina ake te putanga tuimotu o Kiri Māia Mahimaina.
-  minecraft_subtitle: Hour of Code Mahimaina
+  minecraft_host_event: Hautūngia tētahi Takunetanga Hour of Code Mahimaina
+  minecraft_leader_guide: Tikina ake ngā rauemi hei tautoko i a koe ki te whakamahere
+    me te whakahaere i tētahi takunetanga.
+  minecraft_name: Mahimaina
   minecraft_signup_store_camps: <a href="%{signup_store_camp}">Waitohu mai</a>ki whai
     wāhi ai koe ki ngā Puninga Hour of Code ki te toa Microsoft Store ka tū ki Ahitereiria,
     ki Kānata, ki Puerto Rico, ki Amerika rānei. Ka ako me pēhea te paheko i tō auahatanga
     ki te mahi waehere.
-  minecraft_host_event: Hautūngia tētahi Takunetanga Hour of Code Mahimaina
+  minecraft_specs: He reo i kore | Pūtirotiro, paparorohiko hou | Tau 2+
+  minecraft_subtitle: Hour of Code Mahimaina
   minecraft_teach_resources: Ngā rauemi pouako me te mahere ako.
-  minecraft_leader_guide: Tikina ake ngā rauemi hei tautoko i a koe ki te whakamahere
-    me te whakahaere i tētahi takunetanga.
+  minecraft_tutorials: Whakaakoranga Hour of Code Mahimaina
+  monstercoding_gradelevel: Ngā Tau 5-13
+  mozilla_beyond_gradelevel: Pakeke 12+
+  n_have_learned_an_hoc: "<h1>Whakamātau i tētahi</h1><h2>Hour of Code</h2><h3>#tāngata
+    kua whakamāutau kē</h3>"
+  name: Ingoa
+  'no': Kāore
+  og_description: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
+    rorohiko.
+  og_title: 'Code.org: Ka taea te ako, ahakoa ko wai'
+  og_title_soon: E tata mai ana te Hour of Code
+  participant_student: Waitohu Ākonga
+  petition_age: Pakeke
+  petition_join_others: Whakapiri mai ki te hia tāngata kua piri kē mai
+  petition_message: E tika ana kia whai wāhi ia ākonga, i ia kura ki te ako i te pūtaiao
+    rorohiko
+  petition_sign_message: Mēnā e whakaae ana koe i te mātou, waitohungia. Whakapiri
+    mai ki te hia tāngata kua piri kē mai.
+  playlab_gradelevel: Ngā Tau 6-14
+  playlab_iceage_title_live: Ao Kōpaka
+  playlab_name: Taiwhanga Tākaro
+  playlab_shortdescription: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
+    Tākaro!
+  projguts_gradelevel: Ngā Tau 10-13
+  robomind_beyond_gradelevel: Ngā Tau 8-13
+  robomind_gradelevel: Ngā Tau 8-13
+  robomindnl_gradelevel: Ngā Tau 8-13
+  scratch_beyond_gradelevel: Ngā Tau 8+
+  scratch_gradelevel: Ngā Tau 8+
+  select_language: Tēnā kōwhiritia tō reo
+  sphero_beyond_gradelevel: Ngā Tau 8+
+  sports_all_sports_title: Tuhia te waehere o tō ake hākinakina
+  sports_basketball_title: Hangaia tētahi kēmu poitūkohu
+  sports_name: Ngā Hākinakina
   sports_title: Ngā Hākinakina
   sports_watch_video: Mātakina te ataata
-  sports_basketball_title: Hangaia tētahi kēmu poitūkohu
-  sports_all_sports_title: Tuhia te waehere o tō ake hākinakina
-  video_title_inspire_girl: Whakaohooho i tētahi kōtiro
+  starwars_blocks_title: Ngā Paraka
+  starwars_gradelevel: Ngā Tau 6-106
+  starwars_longdescription: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+    ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+  starwars_shortdescription: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
+    ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
+  studiobar_dance_title: Te Pāti Kanikani
+  studiobar_donate_title: Tāpaetia he koha
+  studiobar_flappy_title: Waehere Flappy
+  submit: Tāpaetia
+  teacherled_gradelevel: Pakeke 5+
+  texasinstruments_gradelevel: Ngā Tau 13-16
+  thank_you_: Tēnā koe!
+  thinkersmith2_gradelevel: Ngā Tau 8+
+  third_party_gradelevel_2to8: Tau 2-8
+  third_party_gradelevel_4to12: Tau 4-12
+  third_party_gradelevel_5to12: Tau 5-12
+  third_party_gradelevel_6plus: Tau 6+
+  try_now: Ngana ināianei
+  twentyhours_heading: Whakamātauria tā mātou Akoranga Whakarāpopotonga o te Pūtaiao
+    Rorohiko
+  twentyhours_text: Kua oti tō Hour of Code tuatahi? Ako he pūtaiao rorohiko me ngā
+    huatau waehere anō i tei akomanga whai-ake.
+  tynker_beyond_gradelevel: Ngā Tau 5-13
+  tynker_gradelevel: Ngā Tau 5-13
+  tynkerapp_gradelevel: Ngā Tau 5-13
+  upgrade_ie_link: Me ako tonu
+  upgrade_ie_message: Kāore e roa ka poroa e Code.org te āheinga mō Internet Explorer
+    8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
+  upgrade_ie_message_csedweek: Kāore e roa ka poroa e CSEdWeek.org te āheinga mō Internet
+    Explorer 8, 9, and 10. Tēna, whakahoungia tō pūtitotiro.
+  user_header_applab: 'Taiwhanga Taupānga '
+  user_header_artist: 'Rehetoi '
+  user_header_create: 'Waihanga '
+  user_header_dance: Te Pāti Kanikani
+  user_header_flappy: Flappy
+  user_header_label: Tēnā koe %{username}
+  user_header_logout: Takiputa
+  user_header_minecraft: Mahimaina
+  user_header_playlab: Taiwhanga Tākaro
+  user_header_settings: Taku pūkete
+  user_header_signin: Takiuru
+  user_header_team: Tīma
   video_1min: kotahi meneti
   video_2min: rua meneti
   video_3min: toru meneti
   video_5min: rima meneti
-  are_you_teacher: He pouako rānei koe?
-  volunteer_engineer_submission_field_name: Ingoa
+  video_title_inspire_girl: Whakaohooho i tētahi kōtiro
+  volunteer_engineer_submission_commitment_more: Nui ake
   volunteer_engineer_submission_field_description: Whakaahuatanga
   volunteer_engineer_submission_field_email: Wāhitau īmēra
   volunteer_engineer_submission_field_email_placeholder: Wāhitau īmēra
-  volunteer_engineer_submission_field_email_preference_yes: Āe
   volunteer_engineer_submission_field_email_preference_no: Kāore
+  volunteer_engineer_submission_field_email_preference_yes: Āe
+  volunteer_engineer_submission_field_name: Ingoa
   volunteer_engineer_submission_submit: Tāpaetia
-  volunteer_engineer_submission_commitment_more: Nui ake
-  petition_age: Pakeke
-  dashboard_announce_learn_more_button: Me ako tonu
-  dashboard_landing_new_beta: Hou! Whakamātauria ā mātou whakaaronga peta mā ngā ākonga
-    K-5.
-  dashboard_landing_print_certificates: Tāngia ngā tiwhikete mō ngā ākonga ka oti
-    i a rātou tēnei whakaakoranga
-  dashboard_landing_educator_blog: Pānuihia ngā pūrongo me ngā whakahoutanga o ā mātou
-    rauemi ki tā mātou Rangitaki Kaiwhakaako
-  dashboard_landing_video_player: Whakamātauria tā mātou pūrere ataata hou ki tō kura
-  dashboard_action_cancel: Whakakore
-  dashboard_action_delete_yes: Āe
-  dashboard_action_delete_no: Kāore
-  dashboard_navigation_section_community: Tautoko
-  dashboard_progress_not_started: kāore anō kia tīmata
-  dashboard_progress_in_progress: e kauneke ana
-  dashboard_progress_completed_too_many_blocks: kua oti, he nui kē ngā paraka
-  dashboard_progress_completed_perfect: kua oti, pāruhi kē
-  dashboard_progress_furthest_level_attempted: kua whakamātauria te taumata tiketike
-    rawa
-  dashboard_progress_submitted: kua tāpaetia
-  dashboard_sections_table_pairing_allowed: Papatonotanga ā-Tānga
-  dashboard_sections_close: Kati
-  dashboard_students_name: Ingoa
-  dashboard_students_male: Tāne
-  dashboard_students_female: Wahine
-  dashboard_course1: 'Akoranga 1:'
-  dashboard_course2: 'Akoranga 2:'
-  dashboard_course3: 'Akoranga 3:'
-  dashboard_sequence: Raupapa
-  dashboard_login_none: Īmēra
-  dashboard_stage: Taumata
-  dashboard_puzzle: Panga
-  dashboard_correctness_correct: Tika
-  dashboard_student: Waitohu Ākonga
-  learn_more: Ngana ināianei
-  learn_sign_up_button: Waitohu Mai
-  hoc2014_try_new_tutorial: Whakamātauria tā mātou whakaaroranga Hour of Code hou
-    ki peta
-  hoc2014_try_frozen: Rehetoi me Anna rāua ko Elsa nō Frozen
-  frozen_name: Tuhia te waehere ki tō Anna me Elsa taha
-  codeorg_name: Rīrapa Tauhira
-  codeintl_name: Rīrapa Tauhira
-  blockly_name: Blockly
-  hourofcode_name: Rīrapa Tauhira
-  playlab_name: Taiwhanga Tākaro
-  infinity_name: Taiwhanga Tākaro Disney Infinity
-  artist_name: Rehetoi
-  course1_name: Akoranga 1
-  course2_name: Akoranga 2
-  course3_name: Akoranga 3
-  course4_name: Akoranga 4
-  accelerated_name: Whakaakoranga Whakatere
-  20-hour_name: Whakaakoranga Whakatere
-  classicmaze_name: Rīrapa Tauhira
-  iceage_name: Ao Kōpaka
-  minecraft_name: Mahimaina
-  applab_name: Taiwhanga Taupānga
-  basketball_name: Hangaia tētahi kēmu poitūkohu
-  sports_name: Ngā Hākinakina
-  applab_gradelevel: Pakeke 13+
-  applab_shortdescription_congrats: He taiao papatono te Taiwhanga Taupānga e hangaia
-    ai ngā taupānga māmā. Waihangahia he taupānga me ngā paraka waehere, me JavaScript
-    rānei kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho
-  codeorg_gradelevel: Ngā Tau 4-104
-  codeintl_gradelevel: Ngā Tau 4-104
-  tynker_gradelevel: Ngā Tau 5-13
-  scratch_gradelevel: Ngā Tau 8+
-  condcards_gradelevel: Ngā Tau 8-12
-  robomind_gradelevel: Ngā Tau 8-13
-  tynkerapp_gradelevel: Ngā Tau 5-13
-  robomindnl_gradelevel: Ngā Tau 8-13
-  flappy_gradelevel: Ngā Tau 6-106
-  thinkersmith2_gradelevel: Ngā Tau 8+
-  kodableunplugged_gradelevel: Ngā Tau 8-13
-  projguts_gradelevel: Ngā Tau 10-13
-  hourofcode_gradelevel: Ngā Tau 6-106
-  frozen_gradelevel: Ngā Tau 8-108
-  starwars_gradelevel: Ngā Tau 6-106
-  playlab_gradelevel: Ngā Tau 6-14
-  infinity_gradelevel: Ngā Tau 6-14
-  artist_gradelevel: Ngā Tau 8-108
-  monstercoding_gradelevel: Ngā Tau 5-13
-  allcancode_gradelevel: Ngā Tau 5-10
-  csfirst_gradelevel: Ngā Tau 9-14
-  codesters_gradelevel: Ngā Tau 12-14
-  texasinstruments_gradelevel: Ngā Tau 13-16
-  teacherled_gradelevel: Pakeke 5+
-  course1_gradelevel: Ngā Tau 4-6
-  course2_gradelevel: Ngā Tau 6+ (me mātua pānui)
-  course3_gradelevel: Ngā Tau 8-18
-  course4_gradelevel: Ngā Tau 10-18
-  coursea_gradelevel: Ngā Tau 4-7
-  courseb_gradelevel: Ngā Tau 5-8
-  coursec_gradelevel: Ngā Tau 6-10
-  coursed_gradelevel: Ngā Tau 7-11
-  coursee_gradelevel: Ngā Tau 8-12
-  coursef_gradelevel: Ngā Tau 9-13
-  coursea-2017_gradelevel: Ngā Tau 4-7
-  courseb-2017_gradelevel: Ngā Tau 5-8
-  coursec-2017_gradelevel: Ngā Tau 6-10
-  coursed-2017_gradelevel: Ngā Tau 7-11
-  coursee-2017_gradelevel: Ngā Tau 8-12
-  coursef-2017_gradelevel: Ngā Tau 9-13
-  coursea-2018_gradelevel: Ngā Tau 4-7
-  courseb-2018_gradelevel: Ngā Tau 5-8
-  coursec-2018_gradelevel: Ngā Tau 6-10
-  coursed-2018_gradelevel: Ngā Tau 7-11
-  coursee-2018_gradelevel: Ngā Tau 8-12
-  coursef-2018_gradelevel: Ngā Tau 9-13
-  coursea-2019_gradelevel: Ngā Tau 4-7
-  courseb-2019_gradelevel: Ngā Tau 5-8
-  coursec-2019_gradelevel: Ngā Tau 6-10
-  coursed-2019_gradelevel: Ngā Tau 7-11
-  coursee-2019_gradelevel: Ngā Tau 8-12
-  coursef-2019_gradelevel: Ngā Tau 9-13
-  coursea-2020_gradelevel: Ngā Tau 4-7
-  courseb-2020_gradelevel: Ngā Tau 5-8
-  coursec-2020_gradelevel: Ngā Tau 6-10
-  coursed-2020_gradelevel: Ngā Tau 7-11
-  coursee-2020_gradelevel: Ngā Tau 8-12
-  coursef-2020_gradelevel: Ngā Tau 9-13
-  coursea-2021_gradelevel: Ngā Tau 4-7
-  courseb-2021_gradelevel: Ngā Tau 5-8
-  coursec-2021_gradelevel: Ngā Tau 6-10
-  coursed-2021_gradelevel: Ngā Tau 7-11
-  coursee-2021_gradelevel: Ngā Tau 8-12
-  coursef-2021_gradelevel: Ngā Tau 9-13
-  coursea-2022_gradelevel: Ngā Tau 4-7
-  courseb-2022_gradelevel: Ngā Tau 5-8
-  coursec-2022_gradelevel: Ngā Tau 6-10
-  coursed-2022_gradelevel: Ngā Tau 7-11
-  coursee-2022_gradelevel: Ngā Tau 8-12
-  coursef-2022_gradelevel: Ngā Tau 9-13
-  accelerated_gradelevel: Ngā Tau 10-18
-  starwars_shortdescription: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-    ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-  playlab_shortdescription: Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga
-    Tākaro!
-  infinity_shortdescription: Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi
-    pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity.
-  artist_shortdescription: Tātuhia ngā pikitia me ngā hoahoa rawe me te Rehetoi!
-  frozen_longdescription: Me whakamahi i te tuhiwaehere kia hono atu ki a Anna rāua
-    ko Elsa i a rāua e tūhura ana i te wana me te ihi o te tio. Ka waihangahia e koe
-    ngā whā hukarere me ngā tauira i a koe e reti hukapapa ana, ā, ka waihangahia
-    tētahi ao hōtoke hei tiritiri atu ki ō hoa!
-  starwars_longdescription: Ako pēhea te whakahaere karetao, me te waihanga i tōhou
-    ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa.
-  codeorg_beyond_gradelevel: Ngā Tau 4-104
-  tynker_beyond_gradelevel: Ngā Tau 5-13
-  scratch_beyond_gradelevel: Ngā Tau 8+
-  robomind_beyond_gradelevel: Ngā Tau 8-13
-  kodu_beyond_gradelevel: Ngā Tau 8+
-  cargobot_beyond_gradelevel: Ngā Tau 8+
-  kidsruby_beyond_gradelevel: Pakeke 12+
   w3schools_beyond_gradelevel: Pakeke 12+
-  mozilla_beyond_gradelevel: Pakeke 12+
-  finch_beyond_gradelevel: Ngā Tau 8+
-  sphero_beyond_gradelevel: Ngā Tau 8+
-  compatibility_unsupported_browser: Kāore tō pūtirotiro i te tautokona. Tēnā whakahoungia
-    tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}', target='_blank'>
-    tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te titiro ki te whārangi,
-    heoi anō, kia takatū i te whatinga o te taumahinga.
-  compatibility_unsupported_browser_markdown: Kāore tō pūtirotiro i te tautokona.
-    Tēnā whakahoungia tō pūtirotiro kia rite ki<a href='%{supported_browsers_url}',
-    target='_blank'> tētahi o ā mātou pūtirotiro </a>. E āhei ana te whakamātau te
-    titiro ki te whārangi, heoi anō, kia takatū i te whatinga o te taumahinga.
-  flappy_shortcode: paki
-  header_courses: Akoranga
-  header_course_catalog: Whārangi Akoranga
-  header_project_gallery: Ngā Tūmahi
-  header_about: Whakamārama
-  header_help_support: 'Māngai tautoko '
-  header_report_bug: Pūrongo mai to raru
-  header_legal_privacy: Kaupapahere Tūmataitinga
-  header_legal_tos: Ngā Ture Ratonga
-  user_header_label: Tēnā koe %{username}
-  user_header_team: Tīma
-  user_header_settings: Taku pūkete
-  user_header_logout: Takiputa
-  user_header_signin: Takiuru
-  user_header_create: 'Waihanga '
-  user_header_applab: 'Taiwhanga Taupānga '
-  user_header_artist: 'Rehetoi '
-  user_header_playlab: Taiwhanga Tākaro
-  user_header_dance: Te Pāti Kanikani
-  user_header_minecraft: Mahimaina
-  user_header_flappy: Flappy
-  applab_tile_start_tutorial: Tīmata
-  applab_tile_teacher_guide: Tirohia te aratohu kaiako
-  aquatic_name: 'Toihuke: Rerenga Moana'
-  hoc_overview_dance_title: Te Pāti Kanikani
-  hoc_overview_dance_subtitle: Waeheretia he Pāti Kanikani ki te tohatoha ki o hoa.
-    Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith Urban, Ciara me etahi atu!
-  hoc_overview_start_tutorial: Tīmata
-  hoc_overview_view_teacher_guide: Tirohia te aratohu kaiako
-  hoc2018_creativity_create: Waihanga
-  hoc2018_creativity_hoc_coming: E tata mai ana te Hour of Code…
-  hoc2018_mc_page_title: Whakaakoranga Hour of Code Mahimaina
-  hoc2018_mc_details: He reo i kore | Pūtirotiro, paparorohiko hou | Tau 2+
-  hoc2018_mc_aquatic_announcement: Waitohuhia mo te akomanga ki te whakamatau i tetahi
-    o nga taumahi 150 neke atu mo te Waa o te Waehere (Tihema 3-9). Me ata titiro
-    ano koe ki o maatau mahi Toihuke hou mo te tau 2018, te Rerenga Moana! Waitohuhia
-    mo to akomanga i tenei ra.
-  hoc2018_mc_aquatic_title: Mahimaina Rerenga Moana
-  hoc2018_mc_designer_title: Pūhoahoa Mahimaina
-  hoc2018_mc_designer_description: Papatonotia ngā kararehe me ētahi atu koiora o
-    Mahimaina i tāu ake whakaputanga Mahimaina.
-  hoc2018_mc_adventurer_title: Kiri Māia Mahimaina
-  hoc2018_mc_adventurer_description: Kawe i a Steve, i a Alex rānei i tētahi mahi
-    mātātoa mā te whakamahi i te waehere.
-  hoc2018_mc_start: Tīmata
-  hoc2018_mc_download_adventurer: Tikina ake te putanga tuimotu o Kiri Māia Mahimaina.
-  hoc2018_mc_educators: Mā ngā kaiwhaako
-  hoc2018_mc_educators_box1_title: Waehere ki Te Mahimaina
-  hoc2018_mc_educators_box1_desc: 'Mahimaina: Putanga Kuranga, E whakaratohia ana
-    e te Whakaakoranga Mātauranga nga paerewa, nga whakaharatau me nga waehere e pa
-    ana ki te marautanga ​​i te Mahimaina.'
-  hoc2018_mc_educators_box1_button: Me timata
-  hoc2018_mc_educators_box2_title: Tikiake i te Aratohu Kaiwhakahaere
-  hoc2018_mc_educators_box2_desc: Ka awhina tenei taputapu ki a koe ki te tiaki i
-    te Haora Waehere me te whakauru atu ki o ākonga ki te taiao rorohiko.
-  hoc2018_mc_educators_box2_button: Tikiake
-  hoc2018_mc_educators_box3_title: Haere ki tetahi waananga tauira, kore utu
-  hoc2018_mc_educators_box3_desc: Haere ki te toa Microsoft i to rohe mo to awheawhe
-    haora waehere kore utu. Mo nga kaiuru o nga taumata pukenga katoa, e ono tau piki
-    ake.
-  hoc2018_mc_educators_box3_button: Kimihia he awheawhe
-  hoc2018_mc_educators_box4_title: Whakarato atu ki nga rauemi rorohiko
-  hoc2018_mc_educators_box4_desc: Waihangahia he huringa ki to hapori ki nga pukenga
-    rorohiko me nga rauemi matauranga taiao rorohiko mai i a Microsoft.
-  hoc2018_mc_educators_box4_button: Whakahōpara nga rauemi
-  hoc2018_mc_video_1min: kotahi meneti
-  hoc2018_mc_video_2min: rua meneti
-  hoc2018_mc_video_3min: toru meneti
-  hoc2018_mc_video_5min: rima meneti
-  hoc2018_mc_video_title_inspire_girl: Whakaohooho i tētahi kōtiro
-  hoc2018_mc_homepage_hoc_coming: Kei te haere mai te Haora waehere...
-  hoc2018_mc_homepage_give_flight: Kia rere ki te pohewatanga kia hua mai te whakahoutanga.
-    Tīmata ki te kotahi Haora Waehere me tohu ou auahatanga, ahakoa he aha.
-  hoc2018_mc_homepage_watch_video: Titiro ki to tatou ataata
-  hoc2018_mc_homepage_join_us: Whakapiri mai
-  hoc2018_mc_homepage_try_it: Whakamātauria
-  hoc2018_mc_back: Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te Haora Waehere!
-  hoc2018_mc_teacher_guide: Tirohia te aratohu kaiako
-  hoc2018_mc_short_description: Me whakamahi i to whakaaro hangarau me nga pukenga
-    whakaoti rapanga ki te kimi taonga me te torotoro i raro moana me te mana o te
-    waehere.
-  hoc2018_mc_short_description_shorter: Me whakamahi i to whakaaro hangarau me nga
-    pukenga whakaoti ki te torotoro, ki te hanga ao ki raro moana i te waehere.
-  hoc2018_mc_journey: Hāereere ki te ao Mahimaina ki te waehere.
-  hoc2018_dance_party_main_heading: Te Pāti Kanikani
-  hoc2018_dance_party_landing_title: Kanikani
-  hoc2018_dance_party_subheading: Āwhina mai ki te whakamaoritia i te Pati Kanikani
-  hoc2018_dance_create_your_own_dance_title: Hangaia tōu ake Pati Kanikani
-  hoc2018_dance_party_box_title: Te Pāti Kanikani
-  hoc2018_dance_party_box_description: Waeheretia he Pati Kanikani ki te toharoha
-    atu ki o hoa!
-  hoc2018_dance_party_specs: Reo | Whakatakotoranga | Tau 6-106
-  hoc2018_dance_party_button: Tīmata
-  hoc2018_dance_keep_on_dancing_box_title: Me Kanikani Tonu
-  hoc2018_dance_keep_on_dancing_description: Neke atu i te kotahi haora, anei ethahi
-    wero ano.
-  hoc2018_dance_keep_on_dancing_specs: Reo | Whakatakotoranga | Tau 13+
-  hoc2018_dance_keep_on_dancing_button: Timata te Wāhanga tuarua
-  hoc2018_dance_teacher_resources_title: Ngā Rauemi Kaiako
-  hoc2018_dance_teacher_resources_tile1_description: "Ngā Mahereakoranga, Ngā tiwhikete
-    me ngā \ntātari waiata."
-  hoc2018_dance_teacher_resources_tile1_button: Mahere Akoranga
-  hoc2018_dance_teacher_resources_tile2_title: Te Pāti Kanikani Purukore
-  hoc2018_dance_teacher_resources_tile2_description: Hei aha ngā rorohiko! Me ako
-    ngā aroro waehere ki te hanga he pati kanikani.
-  hoc2018_dance_teacher_resources_tile2_button: Ngohe Momotu
-  hoc2018_dance_featured_student_creations_title: Ngā Waihanga o ngā Tauira
-  hoc2018_dance_videos_section_heading: Whakaohoho ia koe
-  hoc2018_dance_video_title_what_is_creativity: He aha te Auahatanga?
-  hoc2018_dance_view_creativity_video_playlist: He aha te Auahatanga? Tirohia ki te
-    Ratonga katoa (5 miniti)
-  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Ako atu ngā mahi
-    a Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_title: Ngā mahi a Amazon Future Engineer
-  hoc2018_dance_amazon_about_future_engineer_button: Me ako tonu
-  hoc2018_dance_amazon_try_coding_this_summer_title: I te Raumati nei me tarai ki
-    te waehere
-  hoc2018_dance_amazon_scholarship_programs_title: Ngā Karahipi akoranga
-  hoc2018_dance_amazon_scholarship_programs_button: Tono inaianei
-  hoc2018_dance_measure: Wāhanga
-  hoc2018_dance_measure_colon: 'Wāhanga:'
-  hoc2018_dance_video1: Te Pāti Kanikani - He timata kōrero
-  hoc2018_dance_video2: Te Pāti Kanikani - Ngā Takunetanga
-  hoc2018_dance_video3: Te Pāti Kanikani - Ngā Auaha
-  hoc2018_dance_video4: Te Pāti Kanikani - E mihi ana
-  hoc2018_mc_thank_microsoft: Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou
-    tirohanga me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa
-    ki te ako i te Hangarau Matihiko me nga pukenga kia angitu.
-  footer_powered_by_aws: He mea whakahiko e Ratonga Tukutuku Amazon
-  footer_privacy_policy: Kaupapahere Tūmataitinga
-  footer_about: Whakamārama
-  footer_donate: Tāpaetia he koha
-  footer_support: Tautoko
-  footer_terms: Ngā Ture
-  ai_for_oceans_lesson_plan: mahere akoranga
-  ai_microsoft_thanks: Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou tirohanga
-    me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa ki te ako
-    i te Hangarau Matihiko me nga pukenga kia angitu.
-  ai_activity: Ngohe
-  ai_description: Whakaahuatanga
-  hoc2022_landing_page_create_title: Waihanga
+  'yes': Āe
+  zipcode: ZIP rohenga, Whenua rānei

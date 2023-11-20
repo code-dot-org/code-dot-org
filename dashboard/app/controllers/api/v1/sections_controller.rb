@@ -17,10 +17,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   end
 
   # GET /api/v1/sections
-  # Get the set of sections owned by the current user
+  # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections.map(&:summarize_without_students)
+    render json: current_user.sections_instructed.map(&:summarize_without_students)
   end
 
   # GET /api/v1/sections/<id>
@@ -45,22 +45,33 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
     end
 
+    # If the new grades field exists, it takes precedence.
+    grades = if Section.valid_grades?(params[:grades] || [])
+               params[:grades]
+             elsif Section.valid_grades?([params[:grade].to_s])
+               [params[:grade].to_s]
+             end
+
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
         participant_type: params[:participant_type],
-        grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
+        grades: grades,
         script_id: @unit&.id,
         course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
         restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
-    render head :bad_request unless section
+    return head :bad_request unless section.persisted?
+
+    # Add all coteachers specified in params
+    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
     current_user.assign_script @unit if @unit
@@ -87,12 +98,15 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
-    fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
+    fields[:grades] = [params[:grade]] if Section.valid_grades?([params[:grade]])
+    # If the new grades field exists, it takes precedence.
+    fields[:grades] = params[:grades] if Section.valid_grades?(params[:grades] || [])
     fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
+    fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
 
     section.update!(fields)
     if @unit
@@ -100,6 +114,10 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         student.assign_script(@unit)
       end
     end
+
+    # Add all coteachers specified in params
+    params[:instructor_emails]&.each {|instructor_email| section.add_instructor(instructor_email, current_user)}
+
     render json: section.summarize
   end
 
@@ -260,9 +278,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success', expiration: @section.code_review_expires_at}
   end
 
-  private
-
-  def find_follower
+  private def find_follower
     unless current_user
       render_404
       return
@@ -270,21 +286,22 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 
-  def get_course_and_unit
+  private def get_course_and_unit
     return head :forbidden if current_user.nil?
 
     if params[:course_version_id]
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
 
-      if course_version.content_root_type == 'UnitGroup'
+      case course_version.content_root_type
+      when 'UnitGroup'
         course_id = course_version.content_root_id
         @course = UnitGroup.get_from_cache(course_id)
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
         @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
         return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
-      elsif course_version.content_root_type == 'Unit'
+      when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)
         return head :bad_request unless @unit

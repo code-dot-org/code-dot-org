@@ -18,3 +18,5 @@ wrong '/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png'
 wrong  '/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png'
 
 # http://staging.learn.code.org/s/course2/lessons/1/levels/24
+
+allow_multiple_attempts true

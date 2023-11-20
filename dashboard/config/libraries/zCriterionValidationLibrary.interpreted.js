@@ -45,6 +45,10 @@ function member(elt, array) {
   return false;
 }
 
+function checkSpriteExists(id) {
+  return member(id, getSpriteIdsInUse());
+}
+
 /**
 Updates several helper variables that are used in validation code:
 - spriteIds - an array of all the current sprite IDs
@@ -293,12 +297,15 @@ SPRITE VALIDATION
  }, "changeLocation");  // include i18n feedback string
  */
 function checkMovedSpritePin(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteX = getProp(sprite, "x");
-  var spriteY = getProp(sprite, "y");
-  if(spriteX != 200 || spriteY != 200) {
-    return true;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteX = getProp(sprite, "x");
+    var spriteY = getProp(sprite, "y");
+    if(spriteX != 200 || spriteY != 200) {
+      return true;
+ 	}
   }
+  return false;
 }
 
 
@@ -314,13 +321,16 @@ function checkMovedSpritePin(spriteId) {
   }, "useSetpropBlock");
  */
 function checkNotDefaultSize(spriteId) {
-  var sprite = {id: spriteId};
-  var spriteScale = getProp(sprite, "scale");
-  if(spriteScale != 100) {
-    return true;
-  } else {
-  	return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteScale = getProp(sprite, "scale");
+    if(spriteScale != 100) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 //Checks if the sprite has been changed from the default costume
@@ -338,13 +348,16 @@ function checkNotDefaultSize(spriteId) {
  }, "cscLandmarkChangeCostume");  // include i18n feedback string
  */
 function checkNotDefaultCostume(spriteId, defaultCostume) {
-  var sprite = {id: spriteId};
-  var spriteCostume = getProp(sprite, "costume");
-  if(spriteCostume != defaultCostume) {
-    return true;
-  } else {
-    return false;
+  if (checkSpriteExists(spriteId)) {
+    var sprite = {id: spriteId};
+    var spriteCostume = getProp(sprite, "costume");
+    if(spriteCostume != defaultCostume) {
+      return true;
+    } else {
+      return false;
+    }
   }
+  return false;
 }
 
 
@@ -368,6 +381,84 @@ function checkSpriteSpeech(spriteId) {
     return false;
   }
 }
+
+//Gets the sprite ID that has that costume
+function getSpecificSpriteByCostume(costume) {
+  for(var i = 0; i < spriteIds.length; i++) {
+    var sprite = spriteIds[i];
+    if(isCostumeEqual({"id": sprite}, costume)) {
+       return spriteIds[i];
+    }
+  }
+  return -1;
+}
+
+/**
+ * Checks if at least one of the costumes (in an array) is set to a sprite in the scene
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {boolean} true if at least one of these costumes is in the scene, false otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    return World.frameCount == 1 && atLeastOneFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+  }, "There is no octopus at the beginning of the scene!");
+ */
+function atLeastOneFromCostumes(spriteCostumes) {
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * Checks if there is exactly one of the costumes from the array of costumes (ie: the level expects just one character, but a student added many)
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {boolean} true if exactly one of these costumes is in the scene, false otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    return World.frameCount == 1 && exactlyOneFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+  }, "There are too many octopi in the beginning of this scene!");
+ */
+function exactlyOneFromCostumes(spriteCostumes) {
+  var count = 0;
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      count += 1;
+    }
+  }
+  return count == 1;
+}
+
+/**
+ * Returns the spriteId of a sprite that has the costume in the array. Should be used with exactlyOneFromCostumes() to ensure there is a unique ID returned. If there is no sprite: -1 is returned
+ * @param spriteCostumes - An array of costumes (as strings) to check for
+ * @returns {number} number representing the spriteId; -1 otherwise
+ * @see [Click here for example - checking for an octopus](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    var octopusId = getExactlyOneSpriteIdFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+    return checkSpriteTouchedThisFrame() && checkNewSpriteCostumeThisFrame(octopusId);
+  }, "There was an event, but the octopus sprite didn't change costume!");
+ */
+function getExactlyOneSpriteIdFromCostumes(spriteCostumes) {
+  for(var i = 0; i < spriteCostumes.length; i++) {
+    var costume = spriteCostumes[i];
+    var spriteId = getSpecificSpriteByCostume(costume);
+    if(spriteId != -1) {
+      return spriteId;
+    }
+  }
+  return -1;
+}
+
+
 
 // NEWSECTION
 // # <a name="eventValidation">Event Validation</a>
@@ -557,7 +648,10 @@ function checkThisSpriteClickedThisFrame(spriteId) {
   }, "cscLandmarkBackgroundStoryteller");  // include i18n feedback string
   */
 function checkNewBackground() {
-  return getBackground() != validationProps.previous.background;
+  if (getBackground() != '' && getBackground() != null) {
+  	return getBackground() != validationProps.previous.background;
+  }
+  return false;
 }
 
 //Checks if n unique touch events have happened
@@ -602,7 +696,10 @@ function checkUniqueTouchEvents(n, delayTime) {
  }, "noEvents");
  */
 function checkAtLeastNEvents(n) {
-  return eventLog.length >= n;
+  if (eventLog) {
+      return eventLog.length >= n;
+  }
+  return false;
 }
 
 //Checks if a prompt appeared with an event
@@ -656,6 +753,30 @@ function getSpritesThatTouched(){
   return -1;
 }
 
+
+/**
+ * Returns whether two specific sprite costumes are touching, such as wanting to check that a certain sprite interacted with a another specific 
+ * @param costume1 - A string of one costume to check
+ * @param costume2 - A string of one costume to check
+ * @returns {boolean} Whether or not two sprites with these costumes are touching
+ * @see [Click here for example - checking for an octopus adapting to its environment](https://levelbuilder-studio.code.org/levels/47067/)
+ * @example
+ * addCriteria(function() {
+    var octopusId = getExactlyOneSpriteIdFromCostumes(["octopus_green", "octopus_purple", "octopus_red"]);
+    return checkSpriteTouchedThisFrame() && checkNewSpriteCostumeThisFrame(octopusId) &&
+      	  (checkTheseTwoSpriteCostumesTouched("octopus_green", "underseadeco_34") || 
+          checkTheseTwoSpriteCostumesTouched("octopus_red", "underseadeco_25") ||
+          checkTheseTwoSpriteCostumesTouched("octopus_purple", "underseadeco_24"));
+  }, "cscAdaptationsMoveOctopusToPlant");
+ */
+function checkTheseTwoSpriteCostumesTouched(costume1, costume2) {
+  var sprites = getSpritesThatTouched();
+  var movingSprite = parseInt(sprites[0]);
+  var touchedSprite = parseInt(sprites[1]);
+  return (isCostumeEqual({"id": movingSprite}, costume1) && isCostumeEqual({"id": touchedSprite}, costume2)) ||
+    (isCostumeEqual({"id": touchedSprite}, costume1) && isCostumeEqual({"id": movingSprite}, costume2));
+}
+
 /**
  * Updates current sprite speech for given sprite id. Meant to be called every frame, similar to getHelperVars()
  @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
@@ -685,7 +806,7 @@ function trackSpriteSpeech(spriteId) {
     validationProps.previous.spriteSpeeches = {};
   }
   
-  validationProps.spriteSpeeches[spriteId] = getSpeechForSpriteId(spriteIds[0]);
+  validationProps.spriteSpeeches[spriteId] = getSpeechForSpriteId(spriteId);
 }
 
 /**
@@ -747,6 +868,93 @@ function checkNewSpriteSpeakThisFrame(spriteId) {
     return false;
   }
   return validationProps.spriteSpeeches[spriteId] != validationProps.previous.spriteSpeeches[spriteId];
+}
+
+/**
+ * Updates current sprite costume for given sprite id. Meant to be called every frame, similar to getHelperVars()
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); // <-------
+check();
+updatePrevSpriteCostume(spriteIds[0]);
+updatePrevious();
+ */
+function trackSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.spriteCostumes[spriteId] = getProp({id: spriteId}, "costume");
+}
+
+/**
+ * Keeps track of previous frame sprite costume. Meant to be called just before the end of the validation loop, similar to updatePrevious();
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]);
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); // <-------
+updatePrevious();
+ */
+function updatePrevSpriteCostume(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    validationProps.spriteCostumes = {};
+  }
+  if(!validationProps.previous.spriteCostumes) {
+    validationProps.previous.spriteCostumes = {};
+  }
+  
+  validationProps.previous.spriteCostumes[spriteId] = validationProps.spriteCostumes[spriteId];
+}
+
+/**
+ * Checks if the sprite's costume changed this frame
+ @param {number} spriteId - the id of the sprite to track, usually by passing an index of the spriteIds object
+ @example
+if(World.frameCount == 1) {
+  setFailTime(150);
+  setDelayTime(90);
+  setupPrevious(); 
+  addCriteria(function() {
+    //update to the criteria you want
+    return minimumSprites(1) && checkThisSpriteClickedThisFrame(spriteIds[0]) && checkNewSpriteCostumeThisFrame(spriteIds[0]); // <-------
+  }, "Make sure you change the costume of your sprite!");
+}
+getHelperVars();
+trackSpriteCostume(spriteIds[0]); 
+check();
+updatePrevSpriteCostume(spriteIds[0]); 
+updatePrevious();
+ */
+function checkNewSpriteCostumeThisFrame(spriteId) {
+  if(!validationProps.spriteCostumes) {
+    console.log("Validation error - in order to use checkNewSpriteCostumeThisFrame, you must also call trackSpriteCostume() and updatePrevSpriteCostume(). See documentation for more information.");
+    return false;
+  }
+  return validationProps.spriteCostumes[spriteId] != validationProps.previous.spriteCostumes[spriteId];
 }
 
 // NEWSECTION
@@ -1023,4 +1231,111 @@ function checkStudentVariableChangedThisFrame(variableName) {
     return false;
   }
   return validationProps.variableValues[variableName] != validationProps.previous.variableValues[variableName];
+}
+
+/**
+ * Checks that the last thing printed by the user contains a given string. For example, if this criterion function was passed the string "example", then the criterion function would return true if the user printed "this is an example" or "example" but not "examp".
+ * @param {string} string - the string to search for in the last print statement
+ * @returns {boolean} true if the statement printed by a print block contains <string>
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43122)
+ * @example
+ addCriteria(function() {
+   return checkLastPrintStatementContains(example);
+ }, "genericFailure");
+ */
+
+function checkLastPrintStatementContains(string) {
+  	if (printLog.length > 0) {
+		return printLog[printLog.length - 1].indexOf(string) !== -1;
+    }
+  	return false;
+}
+
+/**
+ * Checks that a user caused a sprite to move with the arrow keys by detecting arrow keypresses and comparing the position of each sprite between the previous and current frames.
+ * @returns {boolean} true if the any sprite moved in the same frame that a user pressed an arrow key
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/43127)
+ * @example
+ addCriteria(function() {
+   return checkInteractiveSpriteMovement()
+ }, "genericFailure");
+ */
+
+function checkInteractiveSpriteMovement() {
+  	// Uses functions from the NativeSpriteLab helper library to detect if a user pressed a key this frame
+	var keyPressedNow = isKeyPressed("up") || isKeyPressed("down") || isKeyPressed("left") || isKeyPressed("right");
+
+  	var spriteIds = getSpriteIdsInUse();
+ 
+  	if(!validationProps.previous) {
+      	validationProps.previous = {};
+    }
+  	for (i=0; i<spriteIds.length; i++) {
+      var currentX = getProp({id: spriteIds[i]}, "x");
+      var currentY = getProp({id: spriteIds[i]}, "y");
+
+      // Performs 2 checks: 1. Did the user press a key this frame? 2. Did the sprites position change from the last frame?
+      if (
+        validationProps.previous[spriteIds[i]] &&
+        (currentX != validationProps.previous[spriteIds[i]].x || currentY != validationProps.previous[spriteIds[i]].y) &&
+        keyPressedNow
+      ) {
+      	return true;
+      }
+
+      // Update validationProps.previous for the next position comparison
+      validationProps.previous[spriteIds[i]] = {
+      	x: currentX,
+        y: currentY,
+      };
+    }
+}
+
+
+/**
+ * Checks that a sprite has been moved from their default position in one given dimension by a given amount. 
+ * @returns {boolean} true if the sprite with the given `spriteID` moved an `amount` of pixels in a given `direction`
+ * @see [Click here for example](https://levelbuilder-studio.code.org/levels/44327?show_callouts=1)
+ * @example
+if (World.frameCount == 1) {
+
+  setFailTime(400); // Frames to wait before failing student
+  setDelayTime(90); // Frames to wait after success before stopping program
+  setupPrevious(); //Defines the validationProps.previous{} object. To use it, call updatePrevious() at the end of this box
+  
+  addCriteria(function() {
+    return spriteIds.length >= 1 && checkSpriteMoved(spriteIds[0], 'x', 30);
+  }, "didntMoveUp");  // include i18n feedback string
+
+}
+getHelperVars();
+check();
+updatePrevious();
+
+ */
+
+function checkSpriteMoved(spriteId, direction, amount) {
+	validationProps.initialPosition = validationProps.initialPosition || undefined;
+  	if (validationProps.initialPosition == undefined) {
+		validationProps.initialPosition = [];
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).x);
+      	validationProps.initialPosition.push(locationOf({"id": spriteId}).y);
+      	console.log(validationProps.initialPosition[1]);
+    }
+ 	if (!amount) { console.log("Amount missing or malformed from checkSpriteMoved call"); }
+  	var sign = 1;
+  	if (amount < 0) { sign = -1; }
+	if (direction !== 'x' && direction !== 'y') { console.log("Direction missing or malformated from checkSpriteMoved call"); }
+  	if (direction === 'x') {
+		return (sign*locationOf({"id": spriteId}).x - (sign * validationProps.initialPosition[0])) > Math.abs(amount);
+	} else if ( direction === 'y') {
+		return (-1*sign*locationOf({"id": spriteId}).y - (-1 * sign * validationProps.initialPosition[1])) > Math.abs(amount);
+    }
+}
+
+function checkSpriteHasBehavior(spriteId, behaviorString) {
+  if (spriteId == undefined) { console.log("No sprite ID supplied to checkSpriteHasBehavior"); return; }
+  if (behaviorString == undefined) { console.log("No behavior string supplied to checkSpriteHasBehavior"); return; }
+
+  return member(behaviorString, getBehaviorsForSpriteId(spriteId));
 }

@@ -79,38 +79,40 @@ class BubbleChoice < DSLDefined
   # @param [Boolean] should_localize If true, translate the summary.
   # @return [Hash]
   def summarize(script_level: nil, user: nil, should_localize: false)
-    user_id = user ? user.id : nil
-    summary = {
-      id: id.to_s,
-      display_name: display_name,
-      description: description,
-      name: name,
-      type: type,
-      teacher_markdown: teacher_markdown,
-      sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      user_id = user&.id
+      summary = {
+        id: id.to_s,
+        display_name: display_name,
+        description: description,
+        name: name,
+        type: type,
+        teacher_markdown: teacher_markdown,
+        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
+      }
 
-    if script_level
-      previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-      redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
+      if script_level
+        previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true)
 
-      summary.merge!(
-        {
-          previous_level_url: previous_level_url,
-          redirect_url: redirect_url,
-          script_url: script_url(script_level.script)
-        }
-      )
-    end
-
-    if should_localize
-      %i[display_name description].each do |property|
-        localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
-        summary[property] = localized_value unless localized_value.nil?
+        summary.merge!(
+          {
+            previous_level_url: previous_level_url,
+            redirect_url: redirect_url,
+            script_url: script_url(script_level.script)
+          }
+        )
       end
-    end
 
-    summary
+      if should_localize
+        %i[display_name description].each do |property|
+          localized_value = I18n.t(property, scope: [:data, :dsls, name], default: nil, smart: true)
+          summary[property] = localized_value unless localized_value.nil?
+        end
+      end
+
+      summary
+    end
   end
 
   # Summarizes the level's sublevels.
@@ -121,6 +123,7 @@ class BubbleChoice < DSLDefined
   # @return [Array]
   def summarize_sublevels(script_level: nil, user_id: nil, should_localize: false)
     summary = []
+    localized_properties = %i[display_name short_instructions long_instructions]
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans.symbolize_keys
 
@@ -162,7 +165,7 @@ class BubbleChoice < DSLDefined
       end
 
       if should_localize
-        %i[display_name short_instructions long_instructions].each do |property|
+        localized_properties.each do |property|
           localized_value = I18n.t(level.name, scope: [:data, property], default: nil, smart: true)
           level_info[property] = localized_value unless localized_value.nil?
         end
@@ -236,19 +239,17 @@ class BubbleChoice < DSLDefined
     sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
   end
 
-  private
-
   # Returns the sublevel for a user that has the highest best_result.
   # @param [User]
   # @param [Unit]
   # @return [Level]
-  def best_result_sublevel(user, script)
+  private def best_result_sublevel(user, script)
     sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
     ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
 
-  def keep_working_sublevel(user, script)
+  private def keep_working_sublevel(user, script)
     # get latest feedback on sublevels where keepWorking is true
     level_ids = sublevels.map(&:id)
     latest_feedbacks = TeacherFeedback.get_latest_feedbacks_received(user.id, level_ids, script.id)

@@ -13,3 +13,5 @@ Answer:
 - An HTTP request is sent from a client to request access to data stored on a server.
 - Displaying a web page will often require multiple HTTP requests in order to acquire all the necessary data.
 MARKDOWN
+
+allow_multiple_attempts true

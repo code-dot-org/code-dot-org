@@ -7,7 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReportTable from './report_table';
 import {PermissionPropType} from '../permission';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
 
@@ -19,17 +19,17 @@ export class TeacherAttendanceReport extends React.Component {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
-    course: PropTypes.oneOf(COURSE_VALUES)
+    course: PropTypes.oneOf(COURSE_VALUES),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   state = {
     loading: true,
     rows: null,
-    showFacilitatorDetails: false
+    showFacilitatorDetails: false,
   };
 
   componentDidMount() {
@@ -70,11 +70,11 @@ export class TeacherAttendanceReport extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
-        rows: data
+        rows: data,
       });
     });
   }
@@ -105,114 +105,114 @@ export class TeacherAttendanceReport extends React.Component {
     let columns = [
       {
         property: 'teacher_first_name',
-        header: {label: 'Teacher First Name'}
+        header: {label: 'Teacher First Name'},
       },
       {
         property: 'teacher_last_name',
-        header: {label: 'Teacher Last Name'}
+        header: {label: 'Teacher Last Name'},
       },
       {
         property: 'teacher_id',
-        header: {label: 'Teacher Id'}
+        header: {label: 'Teacher Id'},
       },
       {
         property: 'teacher_email',
-        header: {label: 'Teacher Email'}
+        header: {label: 'Teacher Email'},
       },
       {
         property: 'plp_name',
-        header: {label: 'PLP Name'}
+        header: {label: 'PLP Name'},
       },
       {
         property: 'state',
-        header: {label: 'State'}
+        header: {label: 'State'},
       },
       {
         property: 'district_name',
-        header: {label: 'District Name'}
+        header: {label: 'District Name'},
       },
       {
         property: 'district_id',
-        header: {label: 'District Id'}
+        header: {label: 'District Id'},
       },
       {
         property: 'school',
-        header: {label: 'School'}
+        header: {label: 'School'},
       },
       {
         property: 'course',
-        header: {label: 'Course'}
+        header: {label: 'Course'},
       },
       {
         property: 'subject',
-        header: {label: 'Subject'}
+        header: {label: 'Subject'},
       },
       {
         property: 'workshop_id',
         header: {label: 'Workshop Id'},
-        cell: {format: this.formatWorkshopId}
+        cell: {format: this.formatWorkshopId},
       },
       {
         property: 'workshop_dates',
-        header: {label: 'Workshop Dates'}
+        header: {label: 'Workshop Dates'},
       },
       {
         property: 'workshop_name',
-        header: {label: 'Workshop Name'}
+        header: {label: 'Workshop Name'},
       },
       {
         property: 'on_map',
-        header: {label: 'Shown on Map'}
+        header: {label: 'Shown on Map'},
       },
       {
         property: 'funded',
-        header: {label: 'Funded'}
+        header: {label: 'Funded'},
       },
       {
         property: 'organizer_name',
-        header: {label: 'Organizer Name'}
+        header: {label: 'Organizer Name'},
       },
       {
         property: 'organizer_email',
-        header: {label: 'Organizer Email'}
+        header: {label: 'Organizer Email'},
       },
       {
         property: 'year',
-        header: {label: 'Year'}
+        header: {label: 'Year'},
       },
       {
         property: 'hours',
-        header: {label: 'Hours'}
+        header: {label: 'Hours'},
       },
       {
         property: 'days',
-        header: {label: 'Days'}
-      }
+        header: {label: 'Days'},
+      },
     ];
 
     if (this.props.permission.hasWorkshopAdmin) {
       columns.push(
         {
           property: `pay_period`,
-          header: {label: `Pay Period`}
+          header: {label: `Pay Period`},
         },
         {
           property: `payment_type`,
-          header: {label: `Payment Type`}
+          header: {label: `Payment Type`},
         },
         {
           property: `payment_rate`,
-          header: {label: `Payment Rate`}
+          header: {label: `Payment Rate`},
         },
         {
           property: `qualified`,
           header: {label: `Qualified`},
-          cell: {format: this.formatYesNo}
+          cell: {format: this.formatYesNo},
         },
         {
           property: `payment_amount`,
           header: {label: `Payment Amount`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         }
       );
     }
@@ -245,9 +245,9 @@ export class TeacherAttendanceReport extends React.Component {
 }
 
 const styles = {
-  link: {cursor: 'pointer'}
+  link: {cursor: 'pointer'},
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(TeacherAttendanceReport);

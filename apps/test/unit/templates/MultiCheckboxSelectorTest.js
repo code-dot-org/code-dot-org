@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
-const ItemComponent = function({item}) {
+const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
 ItemComponent.propTypes = {item: PropTypes.string};

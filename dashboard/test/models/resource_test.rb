@@ -152,7 +152,7 @@ class ResourceTest < ActiveSupport::TestCase
 
   test "summarize retrives translations" do
     resource = create(:resource, name: "English name")
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
         "resources" => {

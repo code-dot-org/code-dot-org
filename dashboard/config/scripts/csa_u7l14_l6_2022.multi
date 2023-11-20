@@ -8,3 +8,4 @@ right 'Accessing and modifying private instance variables using methods (e.g. `i
 right 'Working with multiple classes'
 right 'Finding if an object with a given attribute exists in a list'
 right '`ArrayList`s'
+allow_multiple_attempts true

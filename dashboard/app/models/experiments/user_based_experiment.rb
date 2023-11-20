@@ -28,7 +28,7 @@
 #
 
 class UserBasedExperiment < Experiment
-  def enabled?(user: nil, section: nil)
+  def enabled?(user: nil)
     return false unless user
     return false unless user.id
     user_id = user.id % 100

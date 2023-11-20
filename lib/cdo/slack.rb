@@ -13,6 +13,7 @@ class Slack
   }.freeze
 
   CHANNEL_MAP = {
+    'content-editors' => 'content-editors',
     'server operations' => 'server-operations',
     'staging' => 'infra-staging',
     'test' => 'infra-test',
@@ -21,6 +22,7 @@ class Slack
 
   # Common channel name to ID mappings
   CHANNEL_IDS = {
+    'content-editors' => 'C03A2LG1JLQ',
     'developers' => 'C0T0PNTM3',
     'deploy-status' => 'C7GS8NE8L',
     'infra-staging' => 'C03CK8E51',
@@ -57,7 +59,7 @@ class Slack
 
   # @param channel_name [String] The channel to fetch the topic.
   # @return [String | nil] The existing topic, nil if not found.
-  def self.get_topic(channel_name, use_channel_map = false)
+  def self.get_topic(channel_name, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -75,7 +77,7 @@ class Slack
   # @param use_channel_map [Boolean] Whether to look up channel_name in
   #   CHANNEL_MAP.
   # @return [Boolean] Whether the topic was successfully updated.
-  def self.update_topic(channel_name, new_topic, use_channel_map = false)
+  def self.update_topic(channel_name, new_topic, use_channel_map: false)
     if use_channel_map && (CHANNEL_MAP.include? channel_name.to_sym)
       channel_name = CHANNEL_MAP[channel_name]
     end
@@ -116,9 +118,9 @@ class Slack
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
   # NOTE: This function utilizes an incoming webhook, not the Slack token
-  def self.message(text, params={})
+  def self.message(text, params = {})
     return false unless CDO.slack_endpoint
-    params[:channel] = "\##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
+    params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
 
     payload =
@@ -202,7 +204,7 @@ class Slack
   private_class_method def self.slackify(message)
     message_copy = message.dup
     message_copy.strip!
-    message_copy = "```#{message_copy[7..-1]}```" if /^\/quote /.match?(message_copy)
+    message_copy = "```#{message_copy[7..]}```" if /^\/quote /.match?(message_copy)
     message_copy.
       gsub(/<\/?i>/, '_').
       gsub(/<\/?b>/, '*').
@@ -252,10 +254,10 @@ class Slack
         Honeybadger.notify_cronjob_error opts
         response = false
       end
-    rescue Exception => error
+    rescue Exception => exception
       opts = {
         error_class: "Slack integration [error]",
-        error_message: error,
+        error_message: exception,
         context: {url: url, payload: payload}
       }
       Honeybadger.notify_cronjob_error opts

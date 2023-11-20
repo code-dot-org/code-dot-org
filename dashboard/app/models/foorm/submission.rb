@@ -82,7 +82,7 @@ class Foorm::Submission < ApplicationRecord
       return {question_name => choices[answer]}
     when ANSWER_MULTI_SELECT
       choices = question_details[:choices]
-      return {question_name => answer.map {|selected| choices[selected]}.compact.sort.join(', ')}
+      return {question_name => answer.filter_map {|selected| choices[selected]}.sort.join(', ')}
     end
 
     # Return blank hash if question_type not found
@@ -111,10 +111,10 @@ class Foorm::Submission < ApplicationRecord
       where(user: workshop_metadata.user).
       select do |associated_submission_metadata|
         associated_submission_metadata.facilitator_specific? &&
-        associated_submission_metadata[:created_at].between?(
-          workshop_metadata[:created_at] - 1.minute,
-          workshop_metadata[:created_at] + 1.minute
-        )
+          associated_submission_metadata[:created_at].between?(
+            workshop_metadata[:created_at] - 1.minute,
+            workshop_metadata[:created_at] + 1.minute
+          )
       end
 
     associated_submission_metadatas.map(&:foorm_submission)
@@ -123,11 +123,9 @@ class Foorm::Submission < ApplicationRecord
   def formatted_answers_with_facilitator_number(number)
     return {} unless workshop_metadata.facilitator_specific?
 
-    Hash[
-      formatted_answers.map do |question_id, answer_text|
-        [question_id + "_#{number}", answer_text]
-      end
-    ]
+    formatted_answers.map do |question_id, answer_text|
+      [question_id + "_#{number}", answer_text]
+    end.to_h
   end
 
   # Store the JSON parsable "{}" if we attempt to store a blank submission,

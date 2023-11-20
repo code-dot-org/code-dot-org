@@ -23,14 +23,14 @@ export class SettingsCog extends Component {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
     showMakerToggle: PropTypes.bool,
-    autogenerateML: PropTypes.func
+    autogenerateML: PropTypes.func,
   };
 
   state = {
     open: false,
     confirmingEnableMaker: false,
     managingLibraries: false,
-    managingModels: false
+    managingModels: false,
   };
 
   open = () => this.setState({open: true});
@@ -59,7 +59,7 @@ export class SettingsCog extends Component {
       firehoseClient.putRecord({
         study: 'maker-toolkit',
         study_group: 'maker-toolkit',
-        event: 'enable-maker-toolkit'
+        event: 'enable-maker-toolkit',
       });
 
       // Pop a confirmation dialog when trying to enable maker,
@@ -82,19 +82,25 @@ export class SettingsCog extends Component {
   closeModelManager = () => this.setState({managingModels: false});
   handleClickOutside = () => this.close();
 
+  getPageConstants() {
+    return getStore().getState().pageConstants;
+  }
+
   areLibrariesEnabled() {
-    let pageConstants = getStore().getState().pageConstants;
-    return pageConstants && pageConstants.librariesEnabled;
+    return this.getPageConstants()?.librariesEnabled;
   }
 
   areAIToolsEnabled() {
-    let pageConstants = getStore().getState().pageConstants;
-    return pageConstants && pageConstants.aiEnabled;
+    return this.getPageConstants()?.aiEnabled;
+  }
+
+  isCurriculumLevel() {
+    return this.getPageConstants()?.isCurriculumLevel;
   }
 
   levelbuilderModel() {
     let model = {};
-    let pageConstants = getStore().getState().pageConstants;
+    let pageConstants = this.getPageConstants();
     if (pageConstants?.aiModelId && pageConstants?.aiModelName) {
       model.id = pageConstants.aiModelId;
       model.name = pageConstants.aiModelName;
@@ -129,6 +135,7 @@ export class SettingsCog extends Component {
             {this.areAIToolsEnabled() &&
               renderMenuItem(this.manageModels, msg.manageAIModels())}
             {this.props.showMakerToggle &&
+              !this.isCurriculumLevel() &&
               renderMakerButton(this.toggleMakerToolkit)}
           </JavalabDropdown>
         )}

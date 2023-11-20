@@ -23,10 +23,13 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
+#  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
+#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -35,13 +38,16 @@ class CleverSection < OmniAuthSection
   def self.from_service(course_id, owner_id, student_list, section_name)
     code = "C-#{course_id}"
 
+    set_family_name = DCDO.get('clever_family_name', false)
+
     students = student_list.map do |student|
       data = student['data']
       OmniAuth::AuthHash.new(
         uid: data['id'],
         provider: 'clever',
         info: {
-          name: data['name'],
+          name: set_family_name ? data['name']['first'] : data['name'],
+          family_name: set_family_name ? data['name']['last'] : nil,
           dob: data['dob'],
         },
       )

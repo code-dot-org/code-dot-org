@@ -1,16 +1,19 @@
 name 'U3L06 Assessment2'
-encrypted 'Es0FltWKtOcZHl9Sp+73jHYXCOMAr4NmXJnZqVK0UeDlPjCvMja1Irc9jtsP
-keOPI0Dn4d+S5z8vf03t6DzK+KDrWzAgOpiwQrt7emUTxLbQg9EOTrw92hbs
-fk43MTg0TjrNBOB9wL8WVapUXtmtfZVSf1lRE1DqfuBfL1/pt3BCdJ3M9OkI
-WSL24DdA0NR7tVSSwZdkjYH0ne7e0L4BSXg0UREFngaTGTOzVC8+Cb2tbQ8w
-bjthZPZM41EAD5tiS1sA2ZnB9Y+6H1JqxodkjPn+6FopbRGtfb32Zb2RB92J
-HB/eJhJZDtYHGGov2VOO38OFOvyygGqeGklbAy/KjuJBHaa5IHWb6qPES97b
-BxBsqWFQyHf2oaf7GEANoy1dWSZFp9XPI8v4hw/iaUa7/yn+svambQ0OZJ0o
-iss/8NU8ds8/n3IXNJlAoWaj2WC2L1jKNuiMMpfO1BPAe54Oa65sqx7AzhAd
-Y1qft2QAjY8NXtlqcwy7B/aLjV2GH8sbuafMlfNk3GhReR9Stalr8q7pB3uz
-dTsjmAYZXLg43h8WuLSTtEiTtOvzXcWinKFEecj6t1OfwzEPESVtVHMoJnUQ
-eCPBprsIfKNMY1XapDZWIAp7XA4UnO0pCcnoyGXG9RwMKX3ieHWjYnUpG/zx
-TPUbmIohBWceJ3x8eXGeSATXk+Fauo6E9P8eFcmDPpR94gJrh3DlQSsergCO
-6L2a3musnjqYKnArq4/oy1cnBXCTwZ5BonzAtYAVSyeruG2TlOkBtTezZDX2
-1YN336L4KCZualGln5wzgcpMH0Y7FIc=
-'
+title 'Multiple Choice: What is a function parameter?'
+wrong "Para-meter: a measure of the distance between a function's conception and implementation."
+right 'A way to give input to a function that controls how the function runs.'
+wrong 'A collection of commands that can be used in a programming language.'
+wrong 'Another name for the purpose of a function.'
+wrong 'A named memory location.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Correct answer:
+
+A way to give input to a function that controls how the function runs.
+MARKDOWN
+
+allow_multiple_attempts true

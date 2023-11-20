@@ -7,7 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
   lessonNumber: 2,
-  isSummaryView: false
+  isSummaryView: false,
 };
 
 const setUp = (overrideProps = {}) => {

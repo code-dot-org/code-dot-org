@@ -6,7 +6,7 @@ export const unitCalendarLesson = PropTypes.shape({
   duration: PropTypes.number.isRequired,
   assessment: PropTypes.bool.isRequired,
   unplugged: PropTypes.bool,
-  url: PropTypes.string
+  url: PropTypes.string,
 });
 
 export const unitCalendarLessonChunk = PropTypes.shape({
@@ -18,5 +18,5 @@ export const unitCalendarLessonChunk = PropTypes.shape({
   isStart: PropTypes.boolean,
   isEnd: PropTypes.boolean,
   isMajority: PropTypes.boolean,
-  url: PropTypes.string
+  url: PropTypes.string,
 });

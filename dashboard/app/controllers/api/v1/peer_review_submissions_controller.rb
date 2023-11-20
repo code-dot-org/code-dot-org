@@ -142,9 +142,7 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     send_as_csv_attachment response_body, "#{course_unit.name}_peer_review_report.csv"
   end
 
-  private
-
-  def result_to_status(result)
+  private def result_to_status(result)
     case result
     when ActivityConstants::REVIEW_ACCEPTED_RESULT
       'Accepted'

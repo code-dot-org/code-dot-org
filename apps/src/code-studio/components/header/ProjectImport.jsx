@@ -1,5 +1,3 @@
-/* globals dashboard, Craft */
-
 import $ from 'jquery';
 import React from 'react';
 import i18n from '@cdo/locale';
@@ -56,24 +54,25 @@ export default class ProjectImport extends React.Component {
         channelId = sharePath.match(projectShareRegex)[1];
       }
 
-      const onFinish = function(source) {
+      const onFinish = function (source) {
         // Source data will likely be from a different project type than this one,
         // so convert it
 
         const convertedSource = convertBlocksXml(source);
-        dashboard.project.createNewChannelFromSource(convertedSource, function(
-          channelData
-        ) {
-          const pathName =
-            dashboard.project.appToProjectUrl() +
-            '/' +
-            channelData.id +
-            '/edit';
-          location.href = pathName;
-        });
+        dashboard.project.createNewChannelFromSource(
+          convertedSource,
+          function (channelData) {
+            const pathName =
+              dashboard.project.appToProjectUrl() +
+              '/' +
+              channelData.id +
+              '/edit';
+            location.href = pathName;
+          }
+        );
       };
 
-      const onError = function() {
+      const onError = function () {
         Craft.showErrorMessagePopup(
           i18n.projectShareLinkImportErrorHeader(),
           i18n.projectShareLinkImportErrorBody()
@@ -87,17 +86,17 @@ export default class ProjectImport extends React.Component {
         $.ajax({
           url: levelSourcePath,
           type: 'get',
-          dataType: 'json'
+          dataType: 'json',
         })
-          .done(function(data) {
+          .done(function (data) {
             onFinish(data.data);
           })
-          .error(function() {
+          .error(function () {
             onError();
           });
       } else if (channelId) {
         // channel-backed sources need to go through the project API
-        dashboard.project.getSourceForChannel(channelId, function(source) {
+        dashboard.project.getSourceForChannel(channelId, function (source) {
           if (source) {
             onFinish(source);
           } else {

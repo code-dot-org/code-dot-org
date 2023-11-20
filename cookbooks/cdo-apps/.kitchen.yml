@@ -1,7 +1,7 @@
 ---
 driver:
   name: dokken
-  chef_version: 16.18.0
+  chef_version: 17.6.18
   cap_add:
   # needed for setting hostname
     - SYS_ADMIN

@@ -41,14 +41,14 @@ const NewDataDocForm = () => {
 
 const styles = {
   label: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   input: {
-    marginLeft: 10
+    marginLeft: 10,
   },
   helptip: {
-    marginLeft: 10
-  }
+    marginLeft: 10,
+  },
 };
 
 export default NewDataDocForm;

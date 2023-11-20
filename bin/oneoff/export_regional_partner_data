@@ -139,7 +139,7 @@ def export_to(filename)
     file.puts JSON.pretty_generate(json)
   end
 
-  puts "Exported #{RegionalPartner.count} regional partners "\
+  puts "Exported #{RegionalPartner.count} regional partners " \
     "and #{Pd::CourseFacilitator.count} facilitators to #{filename}"
 end
 
@@ -153,7 +153,7 @@ def import_from(filename)
       Pd::CourseFacilitator.import facilitator_hash
     end
 
-    puts "Imported #{hash['regional_partners'].count} regional partners "\
+    puts "Imported #{hash['regional_partners'].count} regional partners " \
       "and #{hash['facilitators'].count} facilitators from #{filename}"
   end
 end

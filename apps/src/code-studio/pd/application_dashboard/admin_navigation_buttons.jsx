@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 export default class AdminNavigationButtons extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   handleFitClick = event => {
@@ -29,9 +29,9 @@ export default class AdminNavigationButtons extends React.Component {
 
 const styles = {
   buttonContainer: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   button: {
-    marginRight: '10px'
-  }
+    marginRight: '10px',
+  },
 };

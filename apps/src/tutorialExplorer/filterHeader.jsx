@@ -19,7 +19,7 @@ export default class FilterHeader extends React.Component {
     filteredTutorialsCount: PropTypes.number.isRequired,
     showingModalFilters: PropTypes.bool.isRequired,
     showModalFilters: PropTypes.func.isRequired,
-    hideModalFilters: PropTypes.func.isRequired
+    hideModalFilters: PropTypes.func.isRequired,
   };
 
   shouldShowOpenFiltersButton() {
@@ -60,8 +60,8 @@ export default class FilterHeader extends React.Component {
                 zIndex: 1,
                 ...getResponsiveValue({
                   xs: styles.barMobile,
-                  md: styles.barDesktop
-                })
+                  md: styles.barDesktop,
+                }),
               }}
             >
               {!this.props.mobileLayout && (
@@ -138,50 +138,50 @@ const styles = {
     marginBottom: 8,
     paddingLeft: 7,
     paddingRight: 7,
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   barDesktop: {
     color: 'dimgrey',
     height: 46,
     overflow: 'hidden',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   barMobile: {
     color: 'white',
     height: 46,
     overflow: 'hidden',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
   },
   button: {
     backgroundColor: '#2799a4',
     color: 'white',
     borderColor: 'white',
-    height: 34
+    height: 34,
   },
   full: {
     float: 'left',
-    width: '100%'
+    width: '100%',
   },
   left: {
     float: 'left',
-    marginLeft: 6
+    marginLeft: 6,
   },
   right: {
     float: 'right',
     marginTop: 6,
-    marginRight: 6
+    marginRight: 6,
   },
   mobileCount: {
     lineHeight: '46px',
     paddingLeft: 6,
-    color: 'dimgrey'
+    color: 'dimgrey',
   },
   filterGroupGradeContainer: {
     width: '68%',
-    float: 'left'
+    float: 'left',
   },
   filterGroupStudentExperienceContainer: {
     width: '28%',
-    float: 'right'
-  }
+    float: 'right',
+  },
 };

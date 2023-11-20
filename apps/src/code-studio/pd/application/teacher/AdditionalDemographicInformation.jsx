@@ -4,15 +4,15 @@ import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {PROGRAM_CSA} from './TeacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {
   LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields
+  LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 
@@ -92,11 +92,11 @@ const AdditionalDemographicInformation = props => {
   );
 };
 AdditionalDemographicInformation.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 AdditionalDemographicInformation.associatedFields = [
-  ...Object.keys(PageLabels.additionalDemographicInformation)
+  ...Object.keys(PageLabels.additionalDemographicInformation),
 ];
 
 AdditionalDemographicInformation.getDynamicallyRequiredFields = data => {
@@ -113,6 +113,6 @@ export default AdditionalDemographicInformation;
 
 const styles = {
   error: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

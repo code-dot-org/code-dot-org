@@ -1,38 +1,36 @@
 import {BlockTypes} from '../blockTypes';
+import musicI18n from '../../locale';
+import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {
   definition: {
     type: BlockTypes.WHEN_RUN,
-    message0: 'when run',
+    style: 'setup_blocks',
+    message0: musicI18n.blockly_blockWhenRun(),
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
-    tooltip: 'when run',
-    helpUrl: ''
+    tooltip: musicI18n.blockly_blockWhenRunTooltip(),
+    helpUrl: '',
   },
-  generator: () => '\n'
+  generator: () => 'var currentMeasureLocation = 1;\n',
 };
 
 export const triggeredAt = {
   definition: {
     type: BlockTypes.TRIGGERED_AT,
-    message0: '%1 triggered at %2',
+    style: 'event_blocks',
+    message0: musicI18n.blockly_blockTriggeredAt({trigger: '%1', time: '%2'}),
     args0: [
-      {
-        type: 'input_dummy',
-        name: 'trigger'
-      },
+      fieldTriggerDefinition,
       {
         type: 'field_variable',
         name: 'var',
-        variable: 'currentTime'
-      }
+        variable: 'currentTime',
+      },
     ],
     inputsInline: true,
     nextStatement: null,
-    colour: 230,
-    tooltip: 'at trigger',
-    extensions: ['dynamic_trigger_extension']
+    tooltip: musicI18n.blockly_blockTriggeredAtTooltip(),
   },
   generator: ctx => {
     const varName = Blockly.JavaScript.nameDB_.getName(
@@ -40,7 +38,29 @@ export const triggeredAt = {
       Blockly.Names.NameType.VARIABLE
     );
     return `
-      ${varName} = MusicPlayer.getPlayheadPosition();
+      ${varName} = startPosition;
       \n`;
-  }
+  },
+};
+
+export const triggeredAtSimple = {
+  definition: {
+    type: BlockTypes.TRIGGERED_AT_SIMPLE,
+    message0: musicI18n.blockly_blockTriggered({trigger: '%1'}),
+    args0: [fieldTriggerDefinition],
+    inputsInline: true,
+    nextStatement: null,
+    style: 'event_blocks',
+    tooltip: musicI18n.blockly_blockTriggeredTooltip(),
+  },
+  generator: ctx => {
+    const varName = Blockly.JavaScript.nameDB_.getDistinctName(
+      'eventTime',
+      Blockly.Names.NameType.VARIABLE
+    );
+    return (
+      `${varName} = startPosition;\n` +
+      `currentMeasureLocation = Math.ceil(${varName});\n`
+    );
+  },
 };

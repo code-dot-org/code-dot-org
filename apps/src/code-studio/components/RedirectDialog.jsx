@@ -12,7 +12,7 @@ export default class RedirectDialog extends React.Component {
     details: PropTypes.string.isRequired,
     handleClose: PropTypes.func.isRequired,
     redirectUrl: PropTypes.string.isRequired,
-    redirectButtonText: PropTypes.string.isRequired
+    redirectButtonText: PropTypes.string.isRequired,
   };
 
   redirect = () => {
@@ -44,7 +44,7 @@ export default class RedirectDialog extends React.Component {
             __useDeprecatedTag
             text={redirectButtonText}
             onClick={this.redirect}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </BaseDialog>
@@ -54,9 +54,9 @@ export default class RedirectDialog extends React.Component {
 
 const styles = {
   dialog: {
-    padding: 20
+    padding: 20,
   },
   dialogHeader: {
-    marginTop: 0
-  }
+    marginTop: 0,
+  },
 };

@@ -101,13 +101,13 @@ function sendRecords(records) {
       fetch('/i18n/track_string_usage', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           url: url,
           source: source,
-          string_keys: stringKeyBatch
-        })
+          string_keys: stringKeyBatch,
+        }),
       });
     }
   });

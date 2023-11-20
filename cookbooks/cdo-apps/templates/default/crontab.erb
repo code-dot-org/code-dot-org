@@ -1,4 +1,12 @@
 <%
+  # This file contains the cron schedules for our various persistent and
+  # non-persistent servers. All times are UTC.
+  #
+  # None of these schedules, unless specifically noted, needs to change for
+  # dayling savings time.
+  #
+  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
+
   require 'shellwords'
 
   $crontab = []
@@ -41,17 +49,15 @@
     $crontab.join("\n")
   end
 
-  # CRONJOB TIME SYNTAX: https://help.ubuntu.com/community/CronHowto
-
   # for multi-instance envs (ie production) there should be one daemon,
   # so cronjobs that run once per environment go here (standalone env
-  # instances are all their own daemon)
+  # instances (ie staging, test) are all their own daemon)
   if node['cdo-apps']['daemon']
     if node.chef_environment == 'staging' && node.name == 'staging' # 'real' staging only
       cronjob at:'@reboot', do:home_dir('.dropbox-dist', 'dropboxd')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
-      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'test_access_report_import')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
       cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
@@ -60,13 +66,13 @@
       cronjob at:'30 7 * * 1-5', do:deploy_dir('bin', 'cron', 'commit_content')
       cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'update_dts')
       cronjob at:'0 17 * * *', do:deploy_dir('bin', 'cron', 'commit_trusted_proxies')
-      
+
       # This should be run after the commit_content job that happens on both the levelbuilder
       # and staging environments
       # merge_lb_to_staging is also known as DTS or "deploy to staging"
       cronjob at:'35 7 * * 1-5', do:deploy_dir('bin', 'cron', 'merge_lb_to_staging')
 
-      
+
       # This should be run after the commit_content job that happens on the levelbuilder
       # environment.
       cronjob at:'20 9 * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_levelbuilder')
@@ -78,7 +84,7 @@
 
     if node.chef_environment == 'test' && node.name == 'test' # 'real' test only
       # This should be run shortly after the commit_content job run on levelbuilder.
-      cronjob at:'*/2 * * * 1-5', do:deploy_dir('bin', 'cron', 'deploy_to_test')
+      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'deploy_to_test')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'snapshot')
     end
 
@@ -88,6 +94,10 @@
     end
 
 
+    # To facilitate the Ubuntu 20 upgrade, temporarily disable all cronjobs on
+    # the production daemon but still write them to the crontab. We can then
+    # easily reenable them on just the old server, so that we still have jobs
+    # running while the new server is under construction.
     if node.chef_environment == 'production' # production daemon
       cronjob at:'30 14 * * *', do:dashboard_dir('bin','scheduled_pd_workshop_emails')
       cronjob at:'0 16 * * *', do:dashboard_dir('bin','scheduled_pd_application_emails')
@@ -96,8 +106,6 @@
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
       cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
-      cronjob at:'49 5 * * *', do:deploy_dir('bin', 'cron', 'update_census_mapbox')
-      cronjob at:'0 9 * * 1-5', do:deploy_dir('bin', 'cron', 'check_for_census_inaccuracy_reports')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
@@ -114,8 +122,10 @@
       cronjob at:'00 02 * * *', do:deploy_dir('bin', 'cron', 'export_mysql_database_to_redshift')
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'build_contact_rollups_v2')
       cronjob at:'0 2 * * *', do:deploy_dir('bin', 'cron', 'hoc_student_name_cleanup')
+      cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
+      cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
 
-      # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
+      # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
     end
 
@@ -140,11 +150,6 @@
   # cronjobs that run on all instances in all environments go here:
 
   cronjob at:"#{rand(60)} * * * *", do:"#{deploy_dir('bin','upload-logs-to-s3')} dashboard pegasus"
-
-  # report memory and disk space utilization to CloudWatch every minute
-  # we do not use the cronjob helper method because this should not execute with
-  # bundle.
-  $crontab << "*/1 * * * * /usr/local/aws-scripts-mon/mon-put-instance-data.pl --mem-util --disk-space-util --disk-path=/ --from-cron#{node['cdo-apps']['daemon'] ? '' : ' --auto-scaling'}"
 %>
 #
 # node: <%= node.name %>

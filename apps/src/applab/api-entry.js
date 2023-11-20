@@ -14,7 +14,7 @@ import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 import {
   getAppOptions,
   setAppOptions,
-  setupApp
+  setupApp,
 } from '@cdo/apps/code-studio/initApp/loadApp';
 import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
@@ -23,14 +23,14 @@ import * as shareWarnings from '../shareWarnings';
 import {navigateToHref} from '../utils';
 window.CDOSounds = Sounds.getSingleton();
 
-const noop = function() {};
+const noop = function () {};
 
 // TODO: remove the below monkey patches.
 window.Applab.JSInterpreter = {
-  getNearestUserCodeLine: function() {
+  getNearestUserCodeLine: function () {
     return 0;
   },
-  deinitialize: noop
+  deinitialize: noop,
 };
 studioApp().highlight = noop;
 Applab.render = noop;
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       channelId: config.channel,
       hasDataAPIs: () => true,
       onWarningsComplete: __start,
-      onTooYoung: () => navigateToHref('https://studio.code.org/too_young')
+      onTooYoung: () => navigateToHref('https://studio.code.org/too_young'),
     });
   } else {
     __start();

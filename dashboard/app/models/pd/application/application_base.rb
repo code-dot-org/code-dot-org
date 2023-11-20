@@ -120,7 +120,7 @@ module Pd::Application
     end
 
     def formatted_applicant_email
-      applicant_email = user.email.presence || sanitize_form_data_hash[:alternate_email]
+      applicant_email = user.email.presence || sanitized_form_data_hash[:alternate_email]
       if applicant_email.blank?
         raise "invalid email address for application #{id}"
       end
@@ -128,13 +128,10 @@ module Pd::Application
       "\"#{applicant_full_name}\" <#{applicant_email}>"
     end
 
-    # Queues an email for this application
+    # Sends an email for this application
     # @param email_type [String] specifies the mailer action
-    # @param deliver_now [Boolean] (default false)
-    #   When true, send the email immediately.
-    #   Otherwise, it will remain unsent in the queue until the next morning's cronjob.
     # @see Pd::Application::Email
-    def queue_email(email_type, deliver_now: false)
+    def send_pd_application_email(email_type)
       email = Email.new(
         application: self,
         application_status: status,
@@ -142,8 +139,7 @@ module Pd::Application
         to: user.email
       )
 
-      email.send! if deliver_now
-      email.save!
+      email.send!
     end
 
     # Override in any application class that will deliver email.
@@ -227,7 +223,7 @@ module Pd::Application
     end
 
     # Get the answers from form_data with additional text appended
-    # @param [Hash] hash - sanitized form data hash (see #sanitize_form_data_hash)
+    # @param [Hash] hash - sanitized form data hash (see #sanitized_form_data_hash)
     # @param [Symbol] field_name - name of the multi-choice option
     # @param [String] option (optional, defaults to "Other:") value for the option that is associated with additional text
     # @param [Symbol] additional_text_field_name (optional, defaults to field_name + "_other")
@@ -236,9 +232,10 @@ module Pd::Application
     def self.answer_with_additional_text(hash, field_name, option = OTHER_WITH_TEXT, additional_text_field_name = nil)
       additional_text_field_name ||= "#{field_name}_other".to_sym
       answer = hash[field_name]
-      if answer.is_a? String
+      case answer
+      when String
         answer = [option, hash[additional_text_field_name]].flatten.join(' ') if answer == option
-      elsif answer.is_a? Array
+      when Array
         index = answer.index(option)
         answer[index] = [option, hash[additional_text_field_name]].flatten.join(' ') if index
       end
@@ -258,18 +255,16 @@ module Pd::Application
 
     # Include additional text for all the multi-select fields that have the option
     def full_answers
-      @full_answers ||= begin
-        sanitize_form_data_hash.tap do |hash|
-          additional_text_fields.each do |field_name, option, additional_text_field_name|
-            next unless hash.key? field_name
+      @full_answers ||= sanitized_form_data_hash.tap do |hash|
+        additional_text_fields.each do |field_name, option, additional_text_field_name|
+          next unless hash.key? field_name
 
-            option ||= OTHER_WITH_TEXT
-            additional_text_field_name ||= "#{field_name}_other".to_sym
-            hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
-            hash.delete additional_text_field_name
-          end
-        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
-      end
+          option ||= OTHER_WITH_TEXT
+          additional_text_field_name ||= "#{field_name}_other".to_sym
+          hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
+          hash.delete additional_text_field_name
+        end
+      end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
     end
 
     # Camelized (js-standard) format of the full_answers. The keys here will match the raw keys in form_data
@@ -289,7 +284,7 @@ module Pd::Application
     end
 
     def email
-      user.try(:email) || sanitize_form_data_hash[:alternate_email]
+      user.try(:email) || sanitized_form_data_hash[:alternate_email]
     end
 
     def regional_partner_name
@@ -305,7 +300,7 @@ module Pd::Application
     end
 
     def applicant_name
-      "#{sanitize_form_data_hash[:first_name]} #{sanitize_form_data_hash[:last_name]}"
+      "#{sanitized_form_data_hash[:first_name]} #{sanitized_form_data_hash[:last_name]}"
     end
 
     def total_score

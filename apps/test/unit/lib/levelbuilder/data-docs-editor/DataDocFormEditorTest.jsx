@@ -18,7 +18,7 @@ describe('DataDocFormEditor', () => {
     defaultProps = {
       dataDocKey: docKey,
       originalDataDocName: docName,
-      originalDataDocContent: docContent
+      originalDataDocContent: docContent,
     };
   });
 
@@ -77,12 +77,12 @@ describe('DataDocFormEditor', () => {
     let returnData = {
       key: docKey,
       name: docName,
-      content: docContent
+      content: docContent,
     };
     server.respondWith('PUT', `/data_docs/${docKey}`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const saveBar = wrapper.find('SaveBar');
@@ -114,12 +114,12 @@ describe('DataDocFormEditor', () => {
     let returnData = {
       key: docKey,
       name: docName,
-      content: docContent
+      content: docContent,
     };
     server.respondWith('PUT', `/data_docs/${docKey}`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     const saveBar = wrapper.find('SaveBar');

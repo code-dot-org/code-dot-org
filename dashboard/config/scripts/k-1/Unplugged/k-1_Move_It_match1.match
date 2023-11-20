@@ -11,3 +11,4 @@ answer '/script_assets/k_1_images/unplugged_images/rightrightup.png'
 
 question '/script_assets/k_1_images/unplugged_images/move_it_2_q3.png'
 answer '/script_assets/k_1_images/unplugged_images/rightdown.png'
+allow_multiple_attempts true

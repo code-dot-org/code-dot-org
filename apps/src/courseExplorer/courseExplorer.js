@@ -1,13 +1,14 @@
 // Code for the Course/Tools Explorer.  Include it once on the page and it will
 // handle both CourseExplorer and ToolsExplorer on the same page.
+import color from '../util/color';
 
 let detailRowShowing = -1;
 let toolShowingIndex = -1;
 
 let courseShowingIndex = -1;
 
-module.exports.initCourseExplorer = function() {
-  $('.tool').click(function() {
+module.exports.initCourseExplorer = function () {
+  $('.tool').click(function () {
     const row = $(this).data('row');
     const index = $(this).data('index');
 
@@ -35,12 +36,12 @@ module.exports.initCourseExplorer = function() {
     }
   });
 
-  $('.tool_arrow_box_close').click(function() {
+  $('.tool_arrow_box_close').click(function () {
     $('.detailrow').slideUp();
     toolShowingIndex = -1;
   });
 
-  $('.course.breakable').click(function() {
+  $('.course.breakable').click(function () {
     const courseIndex = $(this).attr('data-courseindex');
 
     // Show the arrows as inline-block instead of .show()'s default inline
@@ -48,11 +49,19 @@ module.exports.initCourseExplorer = function() {
 
     if (courseShowingIndex === -1) {
       $('.courseextra-' + courseIndex).slideDown('slow');
+      $(`.course-${courseIndex} .clicktag`).css(
+        'background-color',
+        color.brand_primary_default
+      );
       $('.course-' + courseIndex + ' .arrow-down').hide();
       $('.course-' + courseIndex + ' .arrow-up').css('display', 'inline-block');
       courseShowingIndex = courseIndex;
     } else if (courseShowingIndex === courseIndex) {
       $('.courseextra-' + courseIndex).slideUp('slow');
+      $(`.course-${courseIndex} .clicktag`).css(
+        'background-color',
+        color.neutral_dark70
+      );
       $('.course-' + courseIndex + ' .arrow-down').css(
         'display',
         'inline-block'
@@ -61,21 +70,33 @@ module.exports.initCourseExplorer = function() {
       courseShowingIndex = -1;
     } else {
       $('.courseextra-' + courseShowingIndex).slideUp('slow');
+      $(`.course-${courseShowingIndex} .clicktag`).css(
+        'background-color',
+        color.neutral_dark70
+      );
       $('.course-' + courseShowingIndex + ' .arrow-down').css(
         'display',
         'inline-block'
       );
       $('.course-' + courseShowingIndex + ' .arrow-up').hide();
       $('.courseextra-' + courseIndex).slideDown('slow');
+      $(`.course-${courseIndex} .clicktag`).css(
+        'background-color',
+        color.brand_primary_default
+      );
       $('.course-' + courseIndex + ' .arrow-down').hide();
       $('.course-' + courseIndex + ' .arrow-up').css('display', 'inline-block');
       courseShowingIndex = courseIndex;
     }
   });
 
-  $('.arrow_box_close').click(function() {
+  $('.arrow_box_close').click(function () {
     const courseIndex = $(this).attr('data-courseindex');
     $('.courseextra-' + courseIndex).slideUp();
+    $(`.course-${courseIndex} .clicktag`).css(
+      'background-color',
+      color.neutral_dark70
+    );
     $('.course-' + courseIndex + ' .arrow-down').css('display', 'inline-block');
     $('.course-' + courseIndex + ' .arrow-up').hide();
     courseShowingIndex = -1;

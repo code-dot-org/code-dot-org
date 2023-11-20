@@ -1,5 +1,5 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Grunnatriði tölvunarfræði - hraðnámskeiðin
 theme: responsive
 style_min: true
 ---
@@ -10,7 +10,7 @@ style_min: true
 
 * [Yfirlit](#overview)
 * [Að kenna nýju námskeiðin](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
+* [Hring-tími Sögur (Námskeið A og B)](#circletime)
 * [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
 * [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
 * [End of Course Projects (Courses E & F)](#endofcourse)
@@ -22,7 +22,7 @@ style_min: true
 ## Yfirlit
 Landslagið í kennslu tölvunarfræði hefur gjörbreyst frá því upphaflegu námskeiðin í Grunnatriðum tölvunarfræði voru búin til. Upphaflega voru námskeið 1-4 hönnuð til að kenna grundvallaratriði óháð aldri nemandans sem var að byrja í greininni.  En nú þegar fleiri skólaumdæmi, borgir og fylki hafa innleitt nám í tölvunarfræði alveg frá leikskólastigi, eru kennarar að biðja um meira efni sem dugi nemendum allt til miðskóla eða fyrstu bekkja framhaldsskóla.
 
-Svar okkar við þessu eru Grunnatriði tölvunarfræði Námskeið A-F.  Með því að miða námsefnið við bekki gátum við stigið til baka og hugsað upp á nýtt hvernig við værum að leggja efnið fyrir.  Um leið gátum við einnig af heilum hug notað endurgjöfina frá samfélagi kennara sem hafa dyggilega stutt okkur í þessu verkefni okkar. Námskeið A-F eru hönnuð með hjálp fremstu sérfræðinga landsins í kennslu tölvunarfræði á grunnskólastigi. Þau ættu því að vera nógu kunnugleg til að kennarar þurfi ekki að afla sér frekari faglegrar þjálfunar, en samt nógu nýstárleg fyrir nemendur sem hafa farið gegnum eldra efni okkar.
+Computer Science Fundamentals [Courses A-F](https://code.org/educate/curriculum/csf), are our answer to that issue.  Með því að miða námsefnið við bekki gátum við stigið til baka og hugsað upp á nýtt hvernig við værum að leggja efnið fyrir.  Um leið gátum við einnig af heilum hug notað endurgjöfina frá samfélagi kennara sem hafa dyggilega stutt okkur í þessu verkefni okkar. Námskeið A-F eru hönnuð með hjálp fremstu sérfræðinga landsins í kennslu tölvunarfræði á grunnskólastigi. Þau ættu því að vera nógu kunnugleg til að kennarar þurfi ekki að afla sér frekari faglegrar þjálfunar, en samt nógu nýstárleg fyrir nemendur sem hafa farið gegnum eldra efni okkar.
 
 * Námskeið A: Leikskóli
 * Námskeið B: 1. bekkur
@@ -51,7 +51,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## Hring-tími Sögur (Námskeið A og B)
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 
 Here is how the circle-time stories are intended to be used:
@@ -136,9 +136,8 @@ We hope this overview has been insightful.  If you have any questions or comment
 
 | Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
+| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | Yes. Courses 1-4 no longer meet modern standards. CS Fundamentals courses A-F better teach these computer science concepts. We will be removing Courses 1-4 gradually. Starting at the end of the 2022-2023 school year, we will remove references to these courses, but the links you already have will remain. Starting in July 2023, the courses will no longer be accessible on our site.                                                                                  |
 | **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
 | **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
 | **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
 

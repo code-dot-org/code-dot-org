@@ -41,22 +41,22 @@ module Cdo
         run_opts = {cwd: @new_resource.destination}
         # PATCH: support shallow fetch.
         converge_by("fetch updates for #{@new_resource.remote}") do
-          git("fetch #{@new_resource.remote}", run_opts)
+          git("fetch #{@new_resource.remote}", **run_opts)
         end
         # PATCH: support switching to a new checkout branch after the initial clone.
         if @new_resource.checkout_branch != current_branch
           converge_by "Checking out branch #{@new_resource.checkout_branch}" do
-            git("checkout #{@new_resource.checkout_branch}", run_opts)
+            git("checkout #{@new_resource.checkout_branch}", **run_opts)
           end
         end
         # since we're in a local branch already, just reset to specified revision rather than merge
         converge_by "Resetting to revision #{target_revision}" do
-          git("reset --hard #{target_revision}", run_opts)
+          git("reset --hard #{target_revision}", **run_opts)
         end
       end
 
       def current_branch
-        git('rev-parse --abbrev-ref HEAD', {cwd: @new_resource.destination}).stdout
+        git('rev-parse --abbrev-ref HEAD', cwd: @new_resource.destination).stdout
       end
 
       # PATCH: Expand the remote.origin.fetch config to include the specified branch if needed.
@@ -66,16 +66,16 @@ module Cdo
         cwd = @new_resource.destination
 
         # Skip update if either the exact or wildcard fetch-ref already exists in the config.
-        ref_exists_cmd = <<~BASH
-          git config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$' || \
-          git config --get remote.#{remote}.fetch '^\\+refs/heads/\*:refs/remotes/#{remote}/\*$'
-        BASH
-        ref_exists = shell_out!(ref_exists_cmd, run_options(cwd: cwd, returns: [0, 1])).exitstatus == 0
+        ref_exists = [
+          "config --get remote.#{remote}.fetch '^\\+refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}$'",
+          "config --get remote.#{remote}.fetch '^\\+refs/heads/*:refs/remotes/#{remote}/*$'"
+        ].any? do |cmd|
+          git(cmd, cwd: cwd, returns: [0, 1]).exitstatus == 0
+        end
 
         unless ref_exists
           converge_by("Updating fetch refs for #{remote}/#{branch}") do
-            update_fetch_refs_cmd = "git config --add remote.#{remote}.fetch +refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}"
-            shell_out!(update_fetch_refs_cmd, run_options(cwd: cwd))
+            git("config --add remote.#{remote}.fetch +refs/heads/#{branch}:refs/remotes/#{remote}/#{branch}", cwd: cwd)
           end
         end
       end

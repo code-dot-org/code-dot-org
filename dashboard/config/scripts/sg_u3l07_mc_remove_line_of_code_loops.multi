@@ -26,3 +26,5 @@ Correct answer: Line 7.
 The turnRight on line 7 will re-orient after drawing each square, which causes the turtle to not travel straight forward drawing squares. Since the drawSquare function has the turtle finish at the same location and facing the same direction that it started, all that needs to happen after drawing each square is to move forward.
 
 MARKDOWN
+
+allow_multiple_attempts true

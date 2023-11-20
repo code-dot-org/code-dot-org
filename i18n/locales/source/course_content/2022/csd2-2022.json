@@ -960,7 +960,7 @@
       "rubric_key_concept": "Create classes that can be referenced and affected as a group.",
       "rubric_performance_level_1": "The class and rule-set are created correctly, all elements of the of the chosen haiku are included, and there are at least three rules in the rule-set.",
       "rubric_performance_level_2": "A class and rule-set are created and most elements in the chosen haiku section of the website is affected by this class, but there may be a few minor errors for some parts of text, or there may be fewer than three rules in the rule-set.",
-      "rubric_performance_level_3": "And class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
+      "rubric_performance_level_3": "A class and rule-set are created, and at least some elements in the website are in that class, but there may be major errors that prevent the text from being styled.",
       "rubric_performance_level_4": "No class or rule sets are created, or no website elements are put in the class."
     }
   },

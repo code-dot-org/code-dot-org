@@ -19,6 +19,8 @@
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
+require 'honeybadger/ruby'
+
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
   include SerializedProperties
@@ -129,7 +131,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def self.seed_all
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
+    Dir.glob(Rails.root.join("config/programming_expressions/**/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
     where(id: removed_records).destroy_all
@@ -197,15 +199,23 @@ class ProgrammingExpression < ApplicationRecord
       id: id,
       name: name,
       blockName: block_name,
-      category: programming_environment_category&.name,
+      category: get_localized_property(
+        :name,
+        [:data,
+         :programming_environments,
+         programming_environment&.name,
+         :categories,
+         programming_environment_category&.key],
+        programming_environment_category&.name
+      ),
       color: get_color,
       externalDocumentation: external_documentation,
-      content: content,
-      syntax: syntax,
-      returnValue: return_value,
-      tips: tips,
-      parameters: palette_params,
-      examples: examples,
+      content: get_localized_property(:content, expression_scope, content),
+      syntax: get_localized_property(:syntax, expression_scope, syntax),
+      returnValue: get_localized_property(:return_value, expression_scope, return_value),
+      tips: get_localized_property(:tips,  expression_scope, tips),
+      parameters: get_localized_params,
+      examples: get_localized_examples,
       video: video_key.blank? ? nil : Video.current_locale.find_by_key(video_key)&.summarize(false),
       imageUrl: image_url
     }
@@ -245,6 +255,82 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
+  def expression_scope
+    [:data,
+     :programming_environments,
+     programming_environment&.name,
+     :categories,
+     programming_environment_category&.key,
+     :expressions,
+     key]
+  end
+
+  def get_localized_examples
+    localized_examples = examples.deep_dup
+    i18n_examples = I18n.t(
+      :examples,
+      scope: expression_scope,
+      default: examples,
+      smart: true
+    )
+    if i18n_examples != localized_examples
+      localized_examples&.each do |example|
+        if example['name'].nil?
+          report_error_get_localized_examples_no_name(example)
+          next
+        end
+        example_key = example['name'].to_sym
+        unless i18n_examples[example_key].nil?
+          example['name'] = i18n_examples[example_key][:name] unless i18n_examples[example_key][:name].nil?
+          # code sections are not translated until expression names are marked "do not translate" in crowdin.
+          # example['code'] = i18n_examples[example_key][:code] unless i18n_examples[example_key][:code].nil?
+          example['description'] = i18n_examples[example_key][:description] unless i18n_examples[example_key][:description].nil?
+        end
+      end
+    end
+    localized_examples
+  end
+
+  def report_error_get_localized_examples_no_name(example)
+    Honeybadger.notify(
+      "example needs a unique 'name', otherwise a translation cannot be shown",
+      context: {
+        example: example
+      }
+    )
+  end
+
+  def get_localized_params
+    localized_params = palette_params.deep_dup
+    i18n_params = I18n.t(
+      :palette_params,
+      scope: expression_scope,
+      default: palette_params,
+      smart: true
+    )
+    if i18n_params != localized_params
+      localized_params&.each do |param|
+        param_key = param['name'].to_sym
+        unless i18n_params[param_key].nil?
+          # parameter names are not translated since they are part of the code
+          # param['name'] = i18n_params[param_key][:name] unless i18n_params[param_key][:name].nil?
+          param['type'] = i18n_params[param_key][:type] unless i18n_params[param_key][:type].nil?
+          param['description'] = i18n_params[param_key][:description] unless i18n_params[param_key][:description].nil?
+        end
+      end
+    end
+    localized_params
+  end
+
+  def get_localized_property(property_name,  scope, default_value)
+    I18n.t(
+      property_name,
+      scope: scope,
+      default: default_value,
+      smart: true
+    )
+  end
+
   def get_blocks
     return unless block_name
     return unless programming_environment.block_pool_name
@@ -278,13 +364,13 @@ class ProgrammingExpression < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
     object_to_serialize = serialize
     directory_name = File.dirname(file_path)
-    Dir.mkdir(directory_name) unless File.exist?(directory_name)
+    FileUtils.mkdir_p(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
   def remove_serialization
     return unless Rails.application.config.levelbuilder_mode
-    File.delete(file_path) if File.exist?(file_path)
+    FileUtils.rm_f(file_path)
   end
 
   def clone_to_programming_environment(environment_name, new_category_key = nil)

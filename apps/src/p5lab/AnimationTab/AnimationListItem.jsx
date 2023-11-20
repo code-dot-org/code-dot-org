@@ -10,12 +10,13 @@ import {
   deleteAnimation,
   setAnimationFrameDelay,
   setAnimationLooping,
-  isNameUnique
+  isNameUnique,
 } from '../redux/animationList';
-import {selectAnimation} from '../redux/animationTab';
+import {selectAnimation, selectBackground} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
+import {P5LabInterfaceMode} from '../constants';
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -29,8 +30,11 @@ class AnimationListItem extends React.Component {
     animationList: shapes.AnimationList.isRequired,
     columnWidth: PropTypes.number.isRequired,
     cloneAnimation: PropTypes.func.isRequired,
+    interfaceMode: PropTypes.oneOf(Object.values(P5LabInterfaceMode))
+      .isRequired,
     deleteAnimation: PropTypes.func.isRequired,
     selectAnimation: PropTypes.func.isRequired,
+    selectBackground: PropTypes.func.isRequired,
     setAnimationName: PropTypes.func.isRequired,
     setAnimationLooping: PropTypes.func.isRequired,
     setAnimationFrameDelay: PropTypes.func.isRequired,
@@ -38,7 +42,7 @@ class AnimationListItem extends React.Component {
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
     isSpriteLab: PropTypes.bool.isRequired,
-    labType: PropTypes.string.isRequired
+    labType: PropTypes.string.isRequired,
   };
 
   getAnimationProps(props) {
@@ -52,7 +56,7 @@ class AnimationListItem extends React.Component {
     this.state = {
       frameDelay: frameDelay,
       name: name,
-      isNameValid: true
+      isNameValid: true,
     };
   }
 
@@ -64,7 +68,7 @@ class AnimationListItem extends React.Component {
     if (this.props.isSelected && !nextProps.isSelected) {
       this.setState({
         name: this.getAnimationProps(this.props).name,
-        isNameValid: true
+        isNameValid: true,
       });
     }
   }
@@ -80,15 +84,28 @@ class AnimationListItem extends React.Component {
     }, 200);
   }
 
-  onSelect = () => this.props.selectAnimation(this.props.animationKey);
+  onSelect = () => {
+    if (this.props.interfaceMode === P5LabInterfaceMode.BACKGROUND) {
+      this.props.selectBackground(this.props.animationKey);
+    } else {
+      this.props.selectAnimation(this.props.animationKey);
+    }
+  };
 
   cloneAnimation = evt => {
-    this.props.cloneAnimation(this.props.animationKey);
+    this.props.cloneAnimation(
+      this.props.animationKey,
+      this.props.interfaceMode
+    );
     evt.stopPropagation();
   };
 
   deleteAnimation = () => {
-    this.props.deleteAnimation(this.props.animationKey, this.props.isSpriteLab);
+    this.props.deleteAnimation(
+      this.props.animationKey,
+      this.props.isSpriteLab,
+      this.props.interfaceMode
+    );
   };
 
   setAnimationLooping = looping => {
@@ -164,6 +181,8 @@ class AnimationListItem extends React.Component {
   };
 
   render() {
+    const {allAnimationsSingleFrame, isSelected, isSpriteLab, labType, style} =
+      this.props;
     const animationProps = Object.assign(
       {},
       this.getAnimationProps(this.props),
@@ -171,7 +190,7 @@ class AnimationListItem extends React.Component {
     );
     const name = this.state.name;
     let animationName;
-    if (this.props.isSelected) {
+    if (isSelected) {
       let invalidNameStyle = this.state.isNameValid
         ? {}
         : {backgroundColor: color.lightest_red};
@@ -189,10 +208,10 @@ class AnimationListItem extends React.Component {
       animationName = <div style={styles.nameLabel}>{name}</div>;
     }
 
-    const selectedStyle = this.props.isSelected ? styles.selectedTile : {};
-    const tileStyle = {...styles.tile, ...selectedStyle, ...this.props.style};
+    const selectedStyle = isSelected ? styles.selectedTile : {};
+    const tileStyle = {...styles.tile, ...selectedStyle, ...style};
 
-    const arrowStyle = this.props.isSelected ? styles.rightArrow : {};
+    const arrowStyle = isSelected ? styles.rightArrow : {};
 
     return (
       <button style={tileStyle} onClick={this.onSelect} type="button">
@@ -200,11 +219,11 @@ class AnimationListItem extends React.Component {
         <ListItemThumbnail
           ref="thumbnail"
           animationProps={animationProps}
-          isSelected={this.props.isSelected}
-          singleFrameAnimation={this.props.allAnimationsSingleFrame}
+          isSelected={isSelected}
+          singleFrameAnimation={allAnimationsSingleFrame}
         />
-        {!this.props.isSpriteLab && animationName}
-        {this.props.isSelected && (
+        {!isSpriteLab && animationName}
+        {isSelected && (
           <ListItemButtons
             onFrameDelayChanged={this.setAnimationFrameDelay}
             onCloneClick={this.cloneAnimation}
@@ -214,8 +233,8 @@ class AnimationListItem extends React.Component {
             frameDelay={this.convertFrameDelayToLockedValues(
               this.state.frameDelay
             )}
-            singleFrameAnimation={this.props.allAnimationsSingleFrame}
-            labType={this.props.labType}
+            singleFrameAnimation={allAnimationsSingleFrame}
+            labType={labType}
           />
         )}
       </button>
@@ -238,10 +257,10 @@ const styles = {
     position: 'relative',
 
     border: 0,
-    margin: '5px 0 0 0'
+    margin: '5px 0 0 0',
   },
   selectedTile: {
-    backgroundColor: color.purple
+    backgroundColor: color.purple,
   },
   nameLabel: {
     marginLeft: 4,
@@ -250,12 +269,12 @@ const styles = {
     textAlign: 'center',
     userSelect: 'none',
     overflow: 'hidden',
-    fontSize: '13px'
+    fontSize: '13px',
   },
   nameInputWrapper: {
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 4
+    marginTop: 4,
   },
   nameInput: {
     width: '100%',
@@ -263,7 +282,7 @@ const styles = {
     padding: 0,
     textAlign: 'center',
     border: 'none',
-    borderRadius: 9
+    borderRadius: 9,
   },
   rightArrow: {
     width: 0,
@@ -273,26 +292,30 @@ const styles = {
     borderLeft: '10px solid ' + color.purple,
     position: 'absolute',
     right: '-10px',
-    top: 80
-  }
+    top: 80,
+  },
 };
 export default connect(
   state => ({
+    interfaceMode: state.interfaceMode,
     columnWidth: state.animationTab.columnSizes[0],
     allAnimationsSingleFrame:
       state.pageConstants.allAnimationsSingleFrame || false,
-    isSpriteLab: state.pageConstants.isBlockly
+    isSpriteLab: state.pageConstants.isBlockly,
   }),
   dispatch => {
     return {
-      cloneAnimation(animationKey) {
-        dispatch(cloneAnimation(animationKey));
+      cloneAnimation(animationKey, type) {
+        dispatch(cloneAnimation(animationKey, type));
       },
-      deleteAnimation(animationKey, isSpriteLab) {
-        dispatch(deleteAnimation(animationKey, isSpriteLab));
+      deleteAnimation(animationKey, isSpriteLab, type) {
+        dispatch(deleteAnimation(animationKey, isSpriteLab, type));
       },
       selectAnimation(animationKey) {
         dispatch(selectAnimation(animationKey));
+      },
+      selectBackground(animationKey) {
+        dispatch(selectBackground(animationKey));
       },
       setAnimationName(animationKey, newName) {
         dispatch(setAnimationName(animationKey, newName));
@@ -302,7 +325,7 @@ export default connect(
       },
       setAnimationFrameDelay(animationKey, frameDelay) {
         dispatch(setAnimationFrameDelay(animationKey, frameDelay));
-      }
+      },
     };
   }
 )(AnimationListItem);

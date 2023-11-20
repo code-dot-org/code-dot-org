@@ -4,7 +4,7 @@ import ResetSuccessDialog from './ResetSuccessDialog';
 
 export default {
   title: 'ResetSuccessDialog',
-  component: ResetSuccessDialog
+  component: ResetSuccessDialog,
 };
 
 const Template = arg => (

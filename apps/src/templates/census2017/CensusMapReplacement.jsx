@@ -1,4 +1,3 @@
-/* global mapboxgl */
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import React, {Component} from 'react';
@@ -12,7 +11,7 @@ class CensusMapInfoWindow extends Component {
     city: PropTypes.string.isRequired,
     state: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    teachesCs: PropTypes.string.isRequired
+    teachesCs: PropTypes.string.isRequired,
   };
 
   render() {
@@ -27,7 +26,7 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'NO':
         censusMessage =
-          'We believe this school offers limited or no Computer Science opportunities.';
+          'We believe this school offers no Computer Science opportunities.';
         color = 'blue';
         break;
       case 'HISTORICAL_YES':
@@ -37,13 +36,8 @@ class CensusMapInfoWindow extends Component {
         break;
       case 'HISTORICAL_NO':
         censusMessage =
-          'We believe this school historically offered limited or no Computer Science opportunities.';
+          'We believe this school historically offered no Computer Science opportunities.';
         color = 'blue';
-        break;
-      case 'MAYBE':
-      case 'HISTORICAL_MAYBE':
-        censusMessage = 'We have conflicting data for this school.';
-        color = 'yellow';
         break;
       default:
         censusMessage = 'We need data for this school.';
@@ -53,17 +47,15 @@ class CensusMapInfoWindow extends Component {
 
     const schoolDropdownOption = {
       value: this.props.schoolId,
-      label: `${this.props.schoolName} - ${this.props.city}, ${
-        this.props.state
-      }`,
+      label: `${this.props.schoolName} - ${this.props.city}, ${this.props.state}`,
       school: {
         nces_id: this.props.schoolId,
         name: this.props.schoolName,
         city: this.props.city,
         state: this.props.state,
         longitude: this.props.location.split(',')[0],
-        latitude: this.props.location.split(',')[1]
-      }
+        latitude: this.props.location.split(',')[1],
+      },
     };
 
     const colorClass = `color-small ${color}`;
@@ -101,27 +93,7 @@ class CensusMapInfoWindow extends Component {
               </div>
             </a>
           </div>
-          <div className="button-link-div">
-            <a href="/yourschool/letter" target="_blank">
-              <div className="button">
-                <div className="button-text">
-                  Send the survey to a teacher at this school
-                </div>
-              </div>
-            </a>
-          </div>
         </div>
-        {!missingCensusData && (
-          <div className="inaccuracy-link">
-            <a
-              onClick={() =>
-                this.props.onTakeSurveyClick(schoolDropdownOption, true)
-              }
-            >
-              I believe that the categorization for this school is inaccurate.
-            </a>
-          </div>
-        )}
       </div>
     );
   }
@@ -130,7 +102,8 @@ class CensusMapInfoWindow extends Component {
 export default class CensusMapReplacement extends Component {
   static propTypes = {
     onTakeSurveyClick: PropTypes.func.isRequired,
-    school: PropTypes.object
+    school: PropTypes.object,
+    tileset: PropTypes.string.isRequired,
   };
 
   map = undefined;
@@ -154,7 +127,7 @@ export default class CensusMapReplacement extends Component {
       // console but still make it to our error reporting system. We should
       // change this code once React error boundariess are available (React
       // 16).  https://reactjs.org/docs/error-boundaries.html
-      setTimeout(1, function() {
+      setTimeout(1, function () {
         console.err(e);
       });
     }
@@ -209,7 +182,7 @@ export default class CensusMapReplacement extends Component {
       style: 'mapbox://styles/codeorg/cjyudafoo004w1cnpaeq8a0lz',
       zoom: 3,
       minZoom: 1,
-      center: [-98, 39]
+      center: [-98, 39],
     });
 
     this.map.dragRotate.disable();
@@ -218,19 +191,19 @@ export default class CensusMapReplacement extends Component {
 
     var _this = this;
 
-    this.map.on('load', function() {
-      _this.map.addSource('censustiles', {
+    this.map.on('load', function () {
+      _this.map.addSource(_this.props.tileset, {
         type: 'vector',
-        url: 'mapbox://codeorg.censustiles'
+        url: `mapbox://codeorg.${_this.props.tileset}`,
       });
 
       _this.map.addLayer({
         id: 'census-schools',
         type: 'circle',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
-          visibility: 'visible'
+          visibility: 'visible',
         },
         paint: {
           'circle-radius': 4,
@@ -239,35 +212,34 @@ export default class CensusMapReplacement extends Component {
             ['get', 'teaches_cs'],
             ['NO', 'HISTORICAL_NO'],
             '#989CF8',
-            ['MAYBE', 'HISTORICAL_MAYBE'],
-            '#FFFDA6',
-            'white'
+            'white',
           ],
           'circle-stroke-width': 1,
-          'circle-stroke-color': '#000000'
+          'circle-stroke-color': '#000000',
         },
         filter: [
-          'any',
+          'all',
           ['!=', 'teaches_cs', 'YES'],
-          ['!=', 'teaches_cs', 'HISTORICAL_YES']
-        ]
+          ['!=', 'teaches_cs', 'HISTORICAL_YES'],
+          ['!=', 'teaches_cs', 'EXCLUDED'],
+        ],
       });
       _this.map.addLayer({
         id: 'census-schools-teaching-cs',
         type: 'symbol',
-        source: 'censustiles',
+        source: _this.props.tileset,
         'source-layer': 'census',
         layout: {
           'icon-image': 'marker-15-green',
           'icon-allow-overlap': true,
           // Increase the icon size as we zoom in
-          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6]
+          'icon-size': ['interpolate', ['linear'], ['zoom'], 1, 0.7, 14, 1.6],
         },
         filter: [
           'any',
           ['==', 'teaches_cs', 'YES'],
-          ['==', 'teaches_cs', 'HISTORICAL_YES']
-        ]
+          ['==', 'teaches_cs', 'HISTORICAL_YES'],
+        ],
       });
 
       _this.map.addControl(new mapboxgl.FullscreenControl(), 'top-right');
@@ -282,39 +254,39 @@ export default class CensusMapReplacement extends Component {
       }
 
       // Enable mouse controls when the map is clicked
-      _this.map.on('click', function(e) {
+      _this.map.on('click', function (e) {
         enableMouseControls();
       });
       // Enable mouse controls when the zoom (+/-) buttons are pressed
-      _this.map.on('zoom', function(e) {
+      _this.map.on('zoom', function (e) {
         enableMouseControls();
       });
       // Enable mouse controls when we go full screen
-      _this.map.on('resize', function(e) {
+      _this.map.on('resize', function (e) {
         enableMouseControls();
       });
 
-      _this.map.on('click', 'census-schools', function(e) {
+      _this.map.on('click', 'census-schools', function (e) {
         _this.onPointClick(_this, e);
       });
 
-      _this.map.on('mouseenter', 'census-schools', function() {
+      _this.map.on('mouseenter', 'census-schools', function () {
         _this.map.getCanvas().style.cursor = 'pointer';
       });
 
-      _this.map.on('mouseleave', 'census-schools', function() {
+      _this.map.on('mouseleave', 'census-schools', function () {
         _this.map.getCanvas().style.cursor = '';
       });
 
-      _this.map.on('click', 'census-schools-teaching-cs', function(e) {
+      _this.map.on('click', 'census-schools-teaching-cs', function (e) {
         _this.onPointClick(_this, e);
       });
 
-      _this.map.on('mouseenter', 'census-schools-teaching-cs', function() {
+      _this.map.on('mouseenter', 'census-schools-teaching-cs', function () {
         _this.map.getCanvas().style.cursor = 'pointer';
       });
 
-      _this.map.on('mouseleave', 'census-schools-teaching-cs', function() {
+      _this.map.on('mouseleave', 'census-schools-teaching-cs', function () {
         _this.map.getCanvas().style.cursor = '';
       });
     });
@@ -331,7 +303,7 @@ export default class CensusMapReplacement extends Component {
         zoom: 14,
         scrollwheel: this.scrollwheelOption,
         draggable: this.draggableOption,
-        speed: 2
+        speed: 2,
       };
       if (this.popup) {
         this.popup.remove();
@@ -339,14 +311,14 @@ export default class CensusMapReplacement extends Component {
       this.map.flyTo(map_options);
       const _this = this;
       var flying = true;
-      _this.map.on('moveend', function() {
+      _this.map.on('moveend', function () {
         if (!flying) {
           return;
         }
         flying = false;
-        const features = _this.map.querySourceFeatures('censustiles', {
+        const features = _this.map.querySourceFeatures(_this.props.tileset, {
           sourceLayer: 'census',
-          filter: ['all', ['==', 'school_id', school.nces_id]]
+          filter: ['all', ['==', 'school_id', school.nces_id]],
         });
         if (features.length > 0) {
           const properties = features[0].properties;
@@ -405,9 +377,7 @@ export default class CensusMapReplacement extends Component {
             <div className="color legend-offers-cs" />
             <div className="caption">Offers computer science</div>
             <div className="color legend-limited-cs" />
-            <div className="caption">Limited or no CS opportunities</div>
-            <div className="color legend-inconclusive-cs" />
-            <div className="caption">Inconclusive data</div>
+            <div className="caption">No CS opportunities</div>
             <div className="color legend-no-data-cs" />
             <div className="caption">No Data</div>
           </div>
@@ -417,9 +387,7 @@ export default class CensusMapReplacement extends Component {
           <div className="color legend-offers-cs" />
           <div className="caption">Offers computer science</div>
           <div className="color legend-limited-cs" />
-          <div className="caption">Limited or no CS opportunities</div>
-          <div className="color legend-inconclusive-cs" />
-          <div className="caption">Inconclusive data</div>
+          <div className="caption">No CS opportunities</div>
           <div className="color legend-no-data-cs" />
           <div className="caption">No Data</div>
         </div>

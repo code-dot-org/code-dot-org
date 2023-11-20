@@ -28,3 +28,5 @@ public static void insertionSort(ArrayList<Integer> nums) {
 
 An `ArrayList` containing the values `[11, 8, 12, 7, 21, 15, 1]` is sorted using the above method. What is stored in the `ArrayList` after the `for` loop has executed twice?
 MARKDOWN
+
+allow_multiple_attempts true

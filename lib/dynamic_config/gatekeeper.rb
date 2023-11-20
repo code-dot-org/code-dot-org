@@ -68,7 +68,16 @@ class GatekeeperBase < DynamicConfigBase
     key = where_key(where)
     if rule_map.key? key
       rule_map.delete key
-      @datastore_cache.set(feature, rule_map)
+      # This is a little odd, but in Ruby 2 if the last argument of a method
+      # call is a Hash, Ruby will attempt to interpret it as a hash of keyword
+      # arguments and so we can get some unexpected behavior when `rule_map`
+      # ends up as an empty hash.
+      #
+      # To prevent that, explicitly pass a (no-op) hash of keyword arguments to
+      # this method call so it never attempts to use rule_map for that purpose.
+      #
+      # TODO after updating to Ruby 3.0: remove the now-unnecessary `**{}`
+      @datastore_cache.set(feature, rule_map, **{})
       return true
     end
     false
@@ -160,9 +169,7 @@ class GatekeeperBase < DynamicConfigBase
     @datastore_cache.update_cache
   end
 
-  private
-
-  def stringify_keys(hsh)
+  private def stringify_keys(hsh)
     hsh.inject({}) do |hash, pair|
       hash[pair[0].to_s] = pair[1]
       hash

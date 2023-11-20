@@ -17,6 +17,9 @@ import verifiedInstructor from './verifiedInstructorRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
+import microBit from '../lib/kits/maker/microBitRedux';
+import lab from '../lab2/lab2Redux';
+import javalabEditor from '@cdo/apps/javalab/redux/editorRedux';
 
 registerReducers({
   header,
@@ -35,7 +38,10 @@ registerReducers({
   projects,
   verifiedInstructor,
   currentUser,
-  arrowDisplay
+  arrowDisplay,
+  microBit,
+  lab,
+  javalabEditor,
 });
 
 export {getStore};

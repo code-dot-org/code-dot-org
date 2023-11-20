@@ -13,3 +13,5 @@ markdown <<MARKDOWN
 
 Match the variable label to the rule that it violates, then fix the code in the program below.
 MARKDOWN
+
+allow_multiple_attempts true

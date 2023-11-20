@@ -114,7 +114,7 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   function test() { ... }
   while (n < 1) { ... }
   ```
-  
+
 * <a name="js-object-curly-spacing"></a>
   Unlike Google's JavaScript styleguide, we don't require padding spaces inside object literals.
   <sup>[[link](#js-object-curly-spacing)]</sup>
@@ -160,7 +160,7 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   myObject.doSomething()
       .doSomethingElse();
   ```
-  
+
 * <a name="js-module-exports"></a>
   We have a few different patterns for how we export things in our JS files currently. There's not necessarily
   an expectation that we'll go fix these all, but new code should try to follow these patterns.
@@ -170,25 +170,25 @@ Default: https://google.github.io/styleguide/javascriptguide.xml
   module.exports.foo = function foo() { }
   // elsewhere
   foo();
-  
+
   // okay, unless you're calling this method locally
   module.exports.foo = function () {
   }
   // elsewhere - bad
   module.exports.foo();
-  
+
   // good
   var Foo = module.exports = function () {
   };
   Foo.prototype.bar = function () {
   }
-  
+
   // bad
   module.exports = {
     foo: function () {
     }
   }
-  
+
   // bad
   function foo() {
   }
@@ -228,8 +228,89 @@ Our default style if not mentioned here should be that mentioned in the AirBnb g
 https://github.com/airbnb/javascript/tree/master/react#spacing We're okay with no space in
 self-closing tags, i.e. `<MyComponent/>` and `<MyComponent />` are both valid.
 
+* <a name="js-react-long-components"></a>
+Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation. Paritally linted by [jsx-first-prop-new-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md) and [jsx-indent-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md).
+```jsx
+// Bad
+var component = (
+  <MyComponent param1={1} param2={2} param3={3} param4={4} param5={5}>
+    <ChildComponent/>
+  </MyComponent>
+);
+
+// Good
+var component = (
+  <MyComponent
+    param1={1}
+    param2={2}
+    param3={3}
+    param4={4}
+    param5={5}
+  >
+    <ChildComponent/>
+  </MyComponent>
+);
+```
+
+* <a name="jsx-child-elements-on-own-line"></a>
+Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
+you can and should put child elements on their own line, instead of putting
+them on the same line to avoid extra spaces.
+
+```jsx
+// good
+<Component
+  prop1="prop1"
+  prop2="prop2"
+>
+  textContent
+</Component>
+
+
+// bad
+<Component
+  prop1="prop1"
+  prop2="prop2">textContent</Component>
+
+// good - fine to put content on same line if the tag opens & closes on that line
+<Component>textContent</Component>
+```
+
+* <a name="js-react-aligned-tags"></a>
+Align open and close tags. Wrap multiline JSX expressions in parentheses to allow this. Linted by [jsx-closing-bracket-location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md) and [wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md).
+```jsx
+// Bad
+var component = (<MyComponent
+    foo="bar"
+    onClose={this.handleClose}
+  >
+    <ChildComponent/>
+  </MyComponent>);
+
+// Good
+var component = (
+  <MyComponent
+    foo="bar"
+    onClose={this.handleClose}
+  >
+    <ChildComponent/>
+  </MyComponent>
+);
+var selfClosing = (
+  <MyComponent
+    foo="bar"
+    onClose={this.handleClose}
+  />
+);
+```
+
+### CSS-in-JS
+
+We prefer SCSS modules over CSS-in-JS (see [CSS](#css) for more). If you are working in a file that has
+already-existing CSS-in-JS and cannot migrate the styling over to an SCSS module, please follow these guidelines:
+
 * <a name="js-react-inline-styles"></a>
-Prefer single object for all styles vs. inlined style objects.  Define static styles below the component, and only dynamic styles in the render method.
+  Prefer single object for all styles vs. inlined style objects.  Define static styles below the component, and only dynamic styles in the render method.
 ```jsx
 // Bad
 var component = (
@@ -280,7 +361,7 @@ var staticStyles = {
 };
 ```
 * <a name="js-react-pixel-numbers"></a>
-Prefer numbers vs strings for pixel values
+  Prefer numbers vs strings for pixel values
 ```jsx
 // Bad
 var styles = {
@@ -298,81 +379,6 @@ var styles = {
   }
 };
 ```
-* <a name="js-react-long-components"></a>
-Components with many attributes should have one per line, with 2 spaces of indentation. Child components should have 2 spaces of indentation. Paritally linted by [jsx-first-prop-new-line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md) and [jsx-indent-props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md).
-```jsx
-// Bad
-var component = (
-  <MyComponent param1={1} param2={2} param3={3} param4={4} param5={5}>
-    <ChildComponent/>
-  </MyComponent>
-);
-
-// Good
-var component = (
-  <MyComponent
-    param1={1}
-    param2={2}
-    param3={3}
-    param4={4}
-    param5={5}
-  >
-    <ChildComponent/>
-  </MyComponent>
-);
-```
-
-* <a name="jsx-child-elements-on-own-line"></a>
-Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
-you can and should put child elements on their own line, instead of putting
-them on the same line to avoid extra spaces.
-
-```jsx
-// good
-<Component
-  prop1="prop1"
-  prop2="prop2"
->
-  textContent
-</Component>
-
-
-// bad
-<Component
-  prop1="prop1"
-  prop2="prop2">textContent</Component>
-    
-// good - fine to put content on same line if the tag opens & closes on that line
-<Component>textContent</Component>
-```
-
-* <a name="js-react-aligned-tags"></a>
-Align open and close tags. Wrap multiline JSX expressions in parentheses to allow this. Linted by [jsx-closing-bracket-location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md) and [wrap-multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md).
-```jsx
-// Bad
-var component = (<MyComponent
-    foo="bar"
-    onClose={this.handleClose}
-  >
-    <ChildComponent/>
-  </MyComponent>);
-
-// Good
-var component = (
-  <MyComponent
-    foo="bar"
-    onClose={this.handleClose}
-  >
-    <ChildComponent/>
-  </MyComponent>
-);
-var selfClosing = (
-  <MyComponent
-    foo="bar"
-    onClose={this.handleClose}
-  />
-);
-```
 
 ### In /apps
 
@@ -384,7 +390,11 @@ On the frontend, some lint and style rules are enforced by [Stylelint](https://s
 
 Some key points:
 - Use SCSS modules over CSS-in-JS. The module file takes the name "my-component.module.scss" and lives in the same directory as the component.
-- Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames. 
+- Use kebab-case (not camelCase nor snake_case) for separating words in IDs, classes, mixins and filenames.
+- Use `px` for small values (e.g. less than 4 px) and specific values (e.g. 87px).
+- Use `rem` or `em` for other values like `font-size`, `margin`, and `padding`.
+  - Default to `rem`, but to quote [this article](https://www.digitalocean.com/community/tutorials/css-rem-vs-em-units) "use `em` units in places where the influence of nearby parent elements would make sense".
+  - To convert between `px` and `em` (or `rem`) for our site, use a [Pixel to Em converter](https://www.w3schools.com/tags/ref_pxtoemconversion.asp) with 16 as the default pixel size.
 - Avoid inline styles in markup.
 - Use names that are as short as possible but as long as necessary.
 - Use SCSS helpers for vendor prefixing.

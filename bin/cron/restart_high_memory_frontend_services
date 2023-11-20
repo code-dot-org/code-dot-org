@@ -42,7 +42,7 @@ def main
     )
     ChatClient.message 'infra-production', "Found #{production_frontends.count} production front end webservers"
     production_frontends.each do |instance|
-      memory_utilization = cloudwatch_resource.metric('System/Linux', 'MemoryUtilization').get_statistics(
+      memory_utilization = cloudwatch_resource.metric('CWAgent', 'mem_used_percent').get_statistics(
         {
           dimensions: [
             {
@@ -72,8 +72,8 @@ def main
       ChatClient.message 'infra-production', capture(restart_command, raise_on_non_zero_exit: false)
     end
     ChatClient.message 'infra-production', 'Done finding and restarting front end services with high memory utilization'
-  rescue StandardError => error
-    ChatClient.message 'infra-production', "Error finding/restarting frond end services with high memory utilization - #{error.message}"
+  rescue StandardError => exception
+    ChatClient.message 'infra-production', "Error finding/restarting frond end services with high memory utilization - #{exception}"
   end
 end
 

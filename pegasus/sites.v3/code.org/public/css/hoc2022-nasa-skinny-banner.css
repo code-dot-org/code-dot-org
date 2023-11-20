@@ -23,9 +23,12 @@
 
 .nasa-skinny-banner h1 {
   color: white;
-  margin: 0 auto .5em;
+  margin: 0;
   font-size: 1.45em;
-  font-family: "Gotham 5r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
+  width: 55%;
+  text-align: center;
 }
 
 .nasa-skinny-banner p {
@@ -46,6 +49,10 @@
     width: 80%;
   }
 
+  .nasa-skinny-banner h1 {
+    font-size: 1.25em;
+  }
+
   .nasa-skinny-banner p {
     font-size: 1em;
   }
@@ -57,7 +64,12 @@
   }
 
   .nasa-skinny-banner h1 {
-    margin-top: 0.5em;
-    font-size: 1.35em;
+    font-size: 1.25em;
+    width: 95%;
+    margin: .5em auto 1em;
+  }
+
+  .nasa-skinny-banner button {
+    margin: 0 auto 1em;
   }
 }

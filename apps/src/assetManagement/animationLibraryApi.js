@@ -2,7 +2,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 export const UploadType = {
   SPRITE: 'Sprite',
-  METADATA: 'Metadata'
+  METADATA: 'Metadata',
 };
 
 /* Returns the animation manifest of either GameLab or SpriteLab in the specified locale
@@ -35,17 +35,15 @@ export function uploadDefaultListMetadata(metadata, environment) {
     {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
       },
-      body: JSON.stringify(metadata)
+      body: JSON.stringify(metadata),
     }
   )
     .then(response => {
       if (!response.ok) {
         throw new Error(
-          `Default Sprite Metadata Upload Error(${response.status}: ${
-            response.statusText
-          })`
+          `Default Sprite Metadata Upload Error(${response.status}: ${response.statusText})`
         );
       }
       return Promise.resolve();
@@ -78,6 +76,14 @@ export function moveDefaultSpriteMetadataToProduction() {
     });
 }
 
+export function getSourceUrlForLevelAnimation(
+  versionId,
+  filename,
+  extension = ''
+) {
+  return `/api/v1/animation-library/level_animations/${versionId}/${filename}${extension}`;
+}
+
 export function generateAnimationMetadataForFile(fileObject) {
   const json = fileObject.json;
   const png = fileObject.png;
@@ -89,10 +95,12 @@ export function generateAnimationMetadataForFile(fileObject) {
         jsonLastModified: json.last_modified,
         pngLastModified: png.last_modified,
         version: png.version_id,
-        sourceUrl: `/api/v1/animation-library/level_animations/${
-          png.version_id
-        }/${metadata.name}.png`,
-        sourceSize: png.source_size
+        sourceUrl: getSourceUrlForLevelAnimation(
+          png.version_id,
+          metadata.name,
+          '.png'
+        ),
+        sourceSize: png.source_size,
       };
       return Promise.resolve(combinedMetadata);
     })
@@ -173,11 +181,11 @@ export function generateLevelAnimationsManifest() {
       let manifestJson = {
         '//': [
           'Animation Library Manifest',
-          'GENERATED FILE: DO NOT MODIFY DIRECTLY'
+          'GENERATED FILE: DO NOT MODIFY DIRECTLY',
         ],
         metadata: metadataNoAliases,
         categories: categoryMap,
-        aliases: aliasMap
+        aliases: aliasMap,
       };
 
       return JSON.stringify(manifestJson);
@@ -207,9 +215,9 @@ export function uploadAnimationToAnimationLibrary(destination, imageData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'image/png'
+      'Content-Type': 'image/png',
     },
-    body: imageData
+    body: imageData,
   })
     .then(response => {
       if (!response.ok) {
@@ -232,9 +240,9 @@ export function uploadMetadataToAnimationLibrary(destination, jsonData) {
   return fetch(`/api/v1/animation-library` + destination, {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: jsonData
+    body: jsonData,
   })
     .then(response => {
       if (!response.ok) {

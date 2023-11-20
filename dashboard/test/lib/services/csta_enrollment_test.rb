@@ -12,7 +12,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     CDO.stubs(:csta_jotform_api_key).returns(nil)
     CDO.stubs(:csta_jotform_form_id).returns(nil)
     Net::HTTP.expects(:post_form).never
-    Services::CSTAEnrollment.submit(valid_params)
+    Services::CSTAEnrollment.submit(**valid_params)
   end
 
   test 'posts to CSTA Jotform in the expected format' do
@@ -30,26 +30,26 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
         'submission[17_state]' => 'WA',
         'submission[17_zip]' => '12345',
         'submission[19]' => "Yes, I provide my consent.",
-        'submission[20]' => "Role with Spaces",
-        'submission[21]' => "K-5, 6-8, ",
+        'submission[25]' => "Role with Spaces",
+        'submission[22]' => "K-5, 6-8, ",
       }
     )
     expected_request.returns(success_response)
 
-    Services::CSTAEnrollment.submit(valid_params)
+    Services::CSTAEnrollment.submit(**valid_params)
   end
 
   test 'raises without submitting if privacy_permission is not true' do
     Net::HTTP.expects(:post_form).never
     assert_raises_matching /CSTA submission skipped: Privacy consent was not provided/ do
-      Services::CSTAEnrollment.submit(valid_params.merge(privacy_permission: false))
+      Services::CSTAEnrollment.submit(**valid_params.merge(privacy_permission: false))
     end
   end
 
   test 'raises when JotForm response is a failure' do
     Net::HTTP.expects(:post_form).returns(failure_response)
     assert_raises_matching /CSTA submission failed/ do
-      Services::CSTAEnrollment.submit(valid_params)
+      Services::CSTAEnrollment.submit(**valid_params)
     end
   end
 
@@ -129,7 +129,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
     expected_request = Net::HTTP.expects(:post_form).with {|_, args| captured_args = args}
     expected_request.returns(success_response)
 
-    Services::CSTAEnrollment.submit(valid_params.merge(input))
+    Services::CSTAEnrollment.submit(**valid_params.merge(input))
 
     expected_output.each do |key, value|
       assert_equal value, captured_args[key]
@@ -164,7 +164,7 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
           "message": "success",
           "content": {
             "submissionID": "4693670621822232790",
-            "URL": "https:\/\/api.jotform.com\/submission\/4693670621822232790"
+            "URL": "https://api.jotform.com/submission/4693670621822232790"
           },
           "duration": "24ms",
           "limit-left": 49996
@@ -182,10 +182,10 @@ class Services::CSTAEnrollmentTest < ActiveSupport::TestCase
       response.stubs(:body).returns(<<~BODY)
         {
           "responseCode": 400,
-          "message": "Bad request (\/form-id-submissions) - Submissions couldn't inserted",
+          "message": "Bad request (/form-id-submissions) - Submissions couldn't inserted",
           "content": [],
           "duration": "12ms",
-          "info": "https:\/\/api.jotform.com\/docs#form-id-submissions"
+          "info": "https://api.jotform.com/docs#form-id-submissions"
         }
       BODY
     end

@@ -5,16 +5,18 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setHasAuthoredHints,
   setInstructionsConstants,
-  setTtsAutoplayEnabledForLevel
+  setTtsAutoplayEnabledForLevel,
 } from '@cdo/apps/redux/instructions';
 import {enqueueHints, showNextHint} from '@cdo/apps/redux/authoredHints';
 import isRtl, {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import TopInstructions from './TopInstructions';
+import SmallStaticAvatar from '@cdo/static/skins/bee/small_static_avatar.png';
+import FailureAvatar from '@cdo/static/skins/bee/failure_avatar.png';
 
 export default {
   title: 'TopInstructions',
-  component: TopInstructions
+  component: TopInstructions,
 };
 
 /**
@@ -26,7 +28,7 @@ export default {
  * @param {boolean} options.rtl
  * @param {boolean} options.tts
  */
-const createCommonStore = function(options = {}) {
+const createCommonStore = function (options = {}) {
   const store = createStore(combineReducers({...commonReducers, isRtl}));
   const pageConstants = {};
   const instructionsConstants = {};
@@ -66,12 +68,12 @@ const createCommonStore = function(options = {}) {
           {
             hintId: 'first',
             markdown:
-              'this is the first hint. It has **some** _simple_ formatting'
+              'this is the first hint. It has **some** _simple_ formatting',
           },
           {
             hintId: 'second',
             markdown:
-              'This is the second hint. It has an image.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)'
+              'This is the second hint. It has an image.\n\n![](https://images.code.org/cab43107265a683a6216e18faab2353f-image-1452027548372.png)',
           },
           {
             hintId: 'third',
@@ -80,8 +82,8 @@ const createCommonStore = function(options = {}) {
               <xml>
                 <block type="maze_moveForward" />
               </xml>
-            )
-          }
+            ),
+          },
         ],
         []
       )
@@ -91,10 +93,8 @@ const createCommonStore = function(options = {}) {
       store.dispatch(showNextHint());
     };
 
-    pageConstants.smallStaticAvatar =
-      '/blockly/media/skins/bee/small_static_avatar.png';
-
-    pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
+    pageConstants.smallStaticAvatar = SmallStaticAvatar;
+    pageConstants.failureAvatar = FailureAvatar;
   } else {
     instructionsConstants.noInstructionsWhenCollapsed = true;
     pageConstants.documentationUrl = 'https://studio.code.org/docs/weblab/';
@@ -107,10 +107,9 @@ const createCommonStore = function(options = {}) {
         enable_fallback: true,
         key: 'csd_weblab_intro_2',
         name: 'Intro to Web Lab - Part 2',
-        src:
-          'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
-        thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg'
-      }
+        src: 'https://www.youtube-nocookie.com/embed/Hjl6gbg9kmk/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=Hjl6gbg9kmk&wmode=transparent',
+        thumbnail: '/c/video_thumbnails/csd_weblab_intro_2.jpg',
+      },
     ];
   }
 
@@ -136,22 +135,22 @@ const Template = args => {
 
 export const CSFInstructions = Template.bind({});
 CSFInstructions.args = {
-  isCSF: true
+  isCSF: true,
 };
 
 export const CSFInstructionsRightToLeft = Template.bind({});
 CSFInstructionsRightToLeft.args = {
   rtl: true,
-  isCSF: true
+  isCSF: true,
 };
 
 export const CSD_CSPInstructions = Template.bind({});
 CSD_CSPInstructions.args = {
-  isCSF: false
+  isCSF: false,
 };
 
 export const CSD_CSPInstructionsRightToLeft = Template.bind({});
 CSD_CSPInstructionsRightToLeft.args = {
   rtl: true,
-  isCSF: false
+  isCSF: false,
 };

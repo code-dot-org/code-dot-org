@@ -2,20 +2,23 @@ import React from 'react';
 import MatchByStudentTable from './MatchByStudentTable';
 import {matchDataForSingleStudent} from './assessmentsTestHelpers';
 
-export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/MatchByStudentTable', module)
-    .addStoryTable([
-      {
-        name: 'Student Overview',
-        description:
-          'Ability to see match assessment overview for a single student',
-        story: () => (
-          <MatchByStudentTable
-            questionAnswerData={matchDataForSingleStudent}
-            studentAnswerData={{responses: [0, 1]}}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'MatchByStudentTable',
+  component: MatchByStudentTable,
+};
+
+//
+// TEMPLATE
+//
+
+const Template = args => <MatchByStudentTable {...args} />;
+
+//
+// STORIES
+//
+
+export const Default = Template.bind({});
+Default.args = {
+  questionAnswerData: matchDataForSingleStudent,
+  studentAnswerData: {responses: [0, 1]},
 };

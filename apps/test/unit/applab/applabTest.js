@@ -11,7 +11,7 @@ import {
   getStore,
   registerReducers,
   stubRedux,
-  restoreRedux
+  restoreRedux,
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
@@ -53,8 +53,8 @@ describe('Applab', () => {
     utils.fireResizeEvent.restore();
   });
 
-  describe('designMode.addScreenIfNecessary', function() {
-    it('adds a screen if we dont have one', function() {
+  describe('designMode.addScreenIfNecessary', function () {
+    it('adds a screen if we dont have one', function () {
       var html =
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<button id="button1" style="padding: 0px; margin: 0px; height: 40px; width: 80px; font-size: 14px; color: rgb(0, 0, 0); position: absolute; left: 95px; top: 55px; background-color: rgb(238, 238, 238);" class="">Button</button>' +
@@ -70,7 +70,7 @@ describe('Applab', () => {
       assert.equal(screenObj.children().length, 2);
     });
 
-    it('changes nothing if we already have a screen', function() {
+    it('changes nothing if we already have a screen', function () {
       var html =
         '<div xmlns="http://www.w3.org/1999/xhtml" id="designModeViz" tabindex="1" style="width: 320px; height: 480px;">' +
         '<div class="screen" id="screen1" style="display: block; height: 480px; width: 320px; left: 0px; top: 0px; position: relative;">' +
@@ -82,52 +82,52 @@ describe('Applab', () => {
       assert.equal(converted, html);
     });
 
-    it('succeeds if we have no startHtml', function() {
+    it('succeeds if we have no startHtml', function () {
       var html = '';
       var converted = designMode.addScreenIfNecessary(html);
       assert.equal(converted, html);
     });
   });
 
-  describe('getIdDropdown filtering modes', function() {
+  describe('getIdDropdown filtering modes', function () {
     var documentRoot;
 
-    beforeEach(function() {
+    beforeEach(function () {
       documentRoot = setupVizDom();
     });
 
-    it('produces all IDs when no filter is given', function() {
+    it('produces all IDs when no filter is given', function () {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot), [
         {display: '"chart9"', text: '"chart9"'},
         {display: '"image1"', text: '"image1"'},
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
     });
 
-    it('can filter on tag type', function() {
+    it('can filter on tag type', function () {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'div'), [
         {display: '"chart9"', text: '"chart9"'},
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, 'img'), [
-        {display: '"image1"', text: '"image1"'}
+        {display: '"image1"', text: '"image1"'},
       ]);
     });
 
-    it('can filter on class', function() {
+    it('can filter on class', function () {
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-        {display: '"chart9"', text: '"chart9"'}
+        {display: '"chart9"', text: '"chart9"'},
       ]);
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.screen'), [
-        {display: '"screen1"', text: '"screen1"'}
+        {display: '"screen1"', text: '"screen1"'},
       ]);
     });
 
-    it('does not accidentally pick up superset classes', function() {
+    it('does not accidentally pick up superset classes', function () {
       // Make sure searching for elements with class ".chart" does not also pick
       // up elements with class ".chart-friend"
       assert.deepEqual(Applab.getIdDropdownFromDom_(documentRoot, '.chart'), [
-        {display: '"chart9"', text: '"chart9"'}
+        {display: '"chart9"', text: '"chart9"'},
       ]);
       assert.deepEqual(
         Applab.getIdDropdownFromDom_(documentRoot, '.chart-friend'),
@@ -136,14 +136,14 @@ describe('Applab', () => {
     });
   });
 
-  describe('getIdDropdownForCurrentScreen ordering', function() {
+  describe('getIdDropdownForCurrentScreen ordering', function () {
     var documentRoot;
 
-    beforeEach(function() {
+    beforeEach(function () {
       documentRoot = setupVizDom();
     });
 
-    it('returns the correct ordering', function() {
+    it('returns the correct ordering', function () {
       assert.deepEqual(
         Applab.getIdDropdownForCurrentScreenFromDom_(documentRoot),
         ['screen1', 'chart9', 'image1']
@@ -151,24 +151,24 @@ describe('Applab', () => {
     });
   });
 
-  describe('getText/setText commands', function() {
-    describe('simplified innerText emulation', function() {
+  describe('getText/setText commands', function () {
+    describe('simplified innerText emulation', function () {
       var getInnerText = applabCommands.getElementInnerText_;
       var setInnerText = applabCommands.setElementInnerText_;
       var element;
 
-      beforeEach(function() {
+      beforeEach(function () {
         element = document.createElement('div');
         element.setAttribute('contentEditable', true);
       });
 
-      describe('getter', function() {
-        it('reads plain text as-is', function() {
+      describe('getter', function () {
+        it('reads plain text as-is', function () {
           element.innerHTML = 'plain text';
           assert.equal(getInnerText(element), 'plain text');
         });
 
-        it('converts nonbreaking spaces to plain spaces', function() {
+        it('converts nonbreaking spaces to plain spaces', function () {
           element.innerHTML =
             'text with &nbsp;lots &nbsp; of &nbsp; &nbsp;whitespace';
           assert.equal(
@@ -184,18 +184,18 @@ describe('Applab', () => {
           );
         });
 
-        it('converts divs to newlines', function() {
+        it('converts divs to newlines', function () {
           element.innerHTML = 'text<div>with</div><div>newlines</div>';
           assert.equal(getInnerText(element), 'text\nwith\nnewlines');
         });
 
-        it('converts divs with attributes to newlines', function() {
+        it('converts divs with attributes to newlines', function () {
           element.innerHTML =
             'Line 1<div style="line-height: 10.8px;">Line 2</div>';
           assert.equal(getInnerText(element), 'Line 1\nLine 2');
         });
 
-        it('converts <div><br></div> to blank lines', function() {
+        it('converts <div><br></div> to blank lines', function () {
           element.innerHTML =
             'text<div><br></div><div>with</div><div><br></div><div><br></div><div>empty newlines</div>';
           assert.equal(
@@ -204,13 +204,13 @@ describe('Applab', () => {
           );
         });
 
-        it('does not add leading newline for leading nonempty div', function() {
+        it('does not add leading newline for leading nonempty div', function () {
           element.innerHTML =
             '<div>text</div><div>with</div><div>leading div</div>';
           assert.equal(getInnerText(element), 'text\nwith\nleading div');
         });
 
-        it('does add leading newline for leading empty div', function() {
+        it('does add leading newline for leading empty div', function () {
           element.innerHTML =
             '<div><br></div><div>text</div><div>with</div><div>leading empty div</div>';
           assert.equal(
@@ -219,12 +219,12 @@ describe('Applab', () => {
           );
         });
 
-        it('Unescapes < and >', function() {
+        it('Unescapes < and >', function () {
           element.innerHTML = 'text with &lt;b&gt;markup&lt;/b&gt;';
           assert.equal(getInnerText(element), 'text with <b>markup</b>');
         });
 
-        it('Unescapes &', function() {
+        it('Unescapes &', function () {
           element.innerHTML = 'text with&amp;nbsp;HTML &amp;lt;escapes&amp;gt;';
           assert.equal(
             getInnerText(element),
@@ -233,13 +233,13 @@ describe('Applab', () => {
         });
       });
 
-      describe('setter', function() {
-        it('sets plain text as-is', function() {
+      describe('setter', function () {
+        it('sets plain text as-is', function () {
           setInnerText(element, 'plain text');
           assert.equal(element.innerHTML, 'plain text');
         });
 
-        it('adds nonbreaking spaces for extra whitespace', function() {
+        it('adds nonbreaking spaces for extra whitespace', function () {
           setInnerText(element, 'text with  lots   of    whitespace');
           assert.equal(
             element.innerHTML,
@@ -247,7 +247,7 @@ describe('Applab', () => {
           );
         });
 
-        it('adds divs for lines after the first line', function() {
+        it('adds divs for lines after the first line', function () {
           setInnerText(element, 'text\nwith\nnewlines');
           assert.equal(
             element.innerHTML,
@@ -255,7 +255,7 @@ describe('Applab', () => {
           );
         });
 
-        it('adds divs containing <br> for empty lines', function() {
+        it('adds divs containing <br> for empty lines', function () {
           setInnerText(element, 'text\n\nwith\n\n\nempty newlines');
           assert.equal(
             element.innerHTML,
@@ -263,7 +263,7 @@ describe('Applab', () => {
           );
         });
 
-        it('html-escapes < and >', function() {
+        it('html-escapes < and >', function () {
           setInnerText(element, 'text with <b>markup</b>');
           assert.equal(
             element.innerHTML,
@@ -271,7 +271,7 @@ describe('Applab', () => {
           );
         });
 
-        it('html-escapes &', function() {
+        it('html-escapes &', function () {
           setInnerText(element, 'text with&nbsp;HTML &lt;escapes&gt;');
           assert.equal(
             element.innerHTML,
@@ -279,7 +279,7 @@ describe('Applab', () => {
           );
         });
 
-        it('casts non-string arguments safely with toString', function() {
+        it('casts non-string arguments safely with toString', function () {
           var numberArgument = 3.14;
           setInnerText(element, numberArgument);
           assert.equal(numberArgument.toString(), '3.14');
@@ -297,7 +297,7 @@ describe('Applab', () => {
         });
       });
 
-      describe('round-trips', function() {
+      describe('round-trips', function () {
         function roundTripTest(text) {
           setInnerText(element, text);
           // One extra round-trip for good measure
@@ -305,104 +305,104 @@ describe('Applab', () => {
           assert.equal(getInnerText(element), text);
         }
 
-        it('preserves plain text', function() {
+        it('preserves plain text', function () {
           roundTripTest('plain text');
         });
 
-        it('preserves whitespace', function() {
+        it('preserves whitespace', function () {
           roundTripTest('text with  lots   of    whitespace');
         });
 
-        it('preserves newlines', function() {
+        it('preserves newlines', function () {
           roundTripTest('text\nwith\nnewlines');
         });
 
-        it('preserves empty newlines', function() {
+        it('preserves empty newlines', function () {
           roundTripTest('text\n\nwith\n\n\nempty newlines');
         });
 
-        it('preserves single leading newline', function() {
+        it('preserves single leading newline', function () {
           roundTripTest('\ntext after newline');
         });
 
-        it('preserves leading and trailing newlines', function() {
+        it('preserves leading and trailing newlines', function () {
           roundTripTest('\n\n\ntext between newlines\n\n');
         });
 
-        it('preserves markup', function() {
+        it('preserves markup', function () {
           roundTripTest('text with <b>markup</b>');
         });
 
-        it('preserves escape characters', function() {
+        it('preserves escape characters', function () {
           roundTripTest('text with&nbsp;HTML &lt;escapes&gt;');
         });
       });
     });
   });
 
-  describe('hasDataStoreAPIs', function() {
-    it('returns true if we use createRecord', function() {
+  describe('hasDataStoreAPIs', function () {
+    it('returns true if we use createRecord', function () {
       var code = [
         '',
         'createRecord("mytable", {name:\'Alice\'}, function(record) {' + '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
 
-    it('returns true if we use updateRecord', function() {
+    it('returns true if we use updateRecord', function () {
       var code = [
         '',
         'updateRecord("mytable", {name:\'Bob\'}, function(record) {' + '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
 
-    it('returns true if we use setKeyValue', function() {
+    it('returns true if we use setKeyValue', function () {
       var code = [
         '',
         'setKeyValue("key", "value", function () {',
         '  ',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), true);
     });
 
-    it('returns false if we just read records', function() {
+    it('returns false if we just read records', function () {
       var code = [
         '',
         'readRecords("mytable", {}, function(records) {',
         '  for (var i =0; i < records.length; i++) {',
         "    textLabel('id', records[i].id + ': ' + records[i].name);",
         '  }',
-        '});'
+        '});',
       ].join('\n');
       assert.strictEqual(Applab.hasDataStoreAPIs(code), false);
     });
   });
 
-  describe('startSharedAppAfterWarnings', function() {
+  describe('startSharedAppAfterWarnings', function () {
     var originalState = {};
     var mockedApplabItems = ['user', 'getCode', 'runButtonClick'];
 
-    beforeEach(function() {
+    beforeEach(function () {
       localStorage.clear();
-      mockedApplabItems.forEach(function(item) {
+      mockedApplabItems.forEach(function (item) {
         originalState[item] = Applab[item];
       });
       originalState.dashboard = window.dashboard;
 
       Applab.user = {};
       Applab.channelId = 'current_channel';
-      Applab.getCode = function() {
+      Applab.getCode = function () {
         return 'createRecord'; // use data API
       };
-      Applab.runButtonClick = function() {};
+      Applab.runButtonClick = function () {};
     });
 
-    afterEach(function() {
-      mockedApplabItems.forEach(function(item) {
+    afterEach(function () {
+      mockedApplabItems.forEach(function (item) {
         Applab[item] = originalState[item];
       });
       window.dashboard = originalState.dashboard;
@@ -413,7 +413,7 @@ describe('Applab', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
           channelId: 'current_channel',
-          isSignedIn: true
+          isSignedIn: true,
         });
         // If we're signed in, we depend on the server routing you appropriately,
         // i.e. if you're under 13, we'll only let you see shared apps if your
@@ -425,7 +425,7 @@ describe('Applab', () => {
         localStorage.setItem('is13Plus', 'true');
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
-          channelId: 'current_channel'
+          channelId: 'current_channel',
         });
         assert.equal(component.props.promptForAge, false);
       });
@@ -433,7 +433,7 @@ describe('Applab', () => {
       it('is true if user is not signed in and has no local storage set', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => true,
-          channelId: 'current_channel'
+          channelId: 'current_channel',
         });
         assert.equal(component.props.promptForAge, true);
       });
@@ -442,85 +442,85 @@ describe('Applab', () => {
         const component = shareWarnings.checkSharedAppWarnings({
           hasDataAPIs: () => false,
           channelId: 'current_channel',
-          isSignedIn: false
+          isSignedIn: false,
         });
         assert.equal(component.props.promptForAge, false);
       });
     });
 
-    describe('showStoreDataAlert', function() {
-      it('is true if user has viewed no channels', function() {
+    describe('showStoreDataAlert', function () {
+      it('is true if user has viewed no channels', function () {
         var component = shareWarnings.checkSharedAppWarnings({
           channelId: 'current_channel',
-          hasDataAPIs: function() {
+          hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, true);
       });
 
-      it('is true if user has viewed only other channels', function() {
+      it('is true if user has viewed only other channels', function () {
         localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
         var component = shareWarnings.checkSharedAppWarnings({
           channelId: 'current_channel',
-          hasDataAPIs: function() {
+          hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, true);
       });
 
-      it('is false if user has viewed this channel', function() {
+      it('is false if user has viewed this channel', function () {
         localStorage.setItem(
           'dataAlerts',
           JSON.stringify(['other_channel', 'current_channel'])
         );
         var component = shareWarnings.checkSharedAppWarnings({
           channelId: 'current_channel',
-          hasDataAPIs: function() {
+          hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, false);
       });
 
-      it('is false if code has no data storage APIs', function() {
-        Applab.getCode = function() {
+      it('is false if code has no data storage APIs', function () {
+        Applab.getCode = function () {
           return 'asdf';
         };
         var component = shareWarnings.checkSharedAppWarnings({
           channelId: 'current_channel',
-          hasDataAPIs: function() {
+          hasDataAPIs: function () {
             return Applab.hasDataStoreAPIs(Applab.getCode());
-          }
+          },
         });
         assert.equal(component.props.showStoreDataAlert, false);
       });
     });
 
-    it('sets is13Plus to true on close', function() {
+    it('sets is13Plus to true on close', function () {
       var component = shareWarnings.checkSharedAppWarnings({
-        channelId: 'current_channel'
+        channelId: 'current_channel',
       });
       component.props.handleClose();
       assert.strictEqual(localStorage.getItem('is13Plus'), 'true');
     });
 
-    it('sets is13Plus to false on too young', function() {
+    it('sets is13Plus to false on too young', function () {
       var component = shareWarnings.checkSharedAppWarnings({
-        channelId: 'current_channel'
+        channelId: 'current_channel',
       });
       component.props.handleTooYoung();
       assert.strictEqual(localStorage.getItem('is13Plus'), 'false');
     });
 
-    it('adds our channelId on close', function() {
+    it('adds our channelId on close', function () {
       localStorage.setItem('dataAlerts', JSON.stringify(['other_channel']));
       var component = shareWarnings.checkSharedAppWarnings({
         channelId: 'current_channel',
-        hasDataAPIs: function() {
+        hasDataAPIs: function () {
           return Applab.hasDataStoreAPIs(Applab.getCode());
-        }
+        },
       });
       component.props.handleClose();
       assert.strictEqual(
@@ -562,8 +562,8 @@ describe('Applab', () => {
           baseUrl: 'foo',
           skin: {},
           level: {
-            editCode: 'foo'
-          }
+            editCode: 'foo',
+          },
         };
       });
 
@@ -580,8 +580,8 @@ describe('Applab', () => {
             ...config,
             level: {
               ...config.level,
-              expandDebugger: true
-            }
+              expandDebugger: true,
+            },
           });
           expect(isDebuggerOpen(getStore().getState())).to.be.true;
         });

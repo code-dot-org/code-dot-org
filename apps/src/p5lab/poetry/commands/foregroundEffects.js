@@ -19,7 +19,7 @@ export const commands = {
           drops.push({
             x: utils.randomInt(-400, 380),
             y: utils.randomInt(-50, -20),
-            length: utils.randomInt(10, 20)
+            length: utils.randomInt(10, 20),
           });
         }
         this.foregroundEffects.push({
@@ -47,7 +47,7 @@ export const commands = {
               );
             }
             this.p5.pop();
-          }
+          },
         });
         break;
       }
@@ -60,7 +60,7 @@ export const commands = {
             y: 410,
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
-            color: this.getP5Color(utils.randomColor(this.p5), 60)
+            color: this.getP5Color(utils.randomColor(this.p5), 60),
           });
         }
         this.foregroundEffects.push({
@@ -87,7 +87,7 @@ export const commands = {
                 effect => effect.id !== id
               );
             }
-          }
+          },
         });
         break;
       }
@@ -100,7 +100,7 @@ export const commands = {
             y: utils.randomInt(10, 390),
             rotation: utils.randomInt(0, 359),
             size: utils.randomInt(10, 120),
-            color: this.getP5Color(utils.randomColor(this.p5), 60)
+            color: this.getP5Color(utils.randomColor(this.p5), 60),
           });
         }
         this.foregroundEffects.push({
@@ -123,7 +123,7 @@ export const commands = {
                 effect => effect.id !== id
               );
             }
-          }
+          },
         });
         break;
       }
@@ -156,7 +156,7 @@ export const commands = {
             x: utils.randomInt(10, 390),
             y: utils.randomInt(-100, -50),
             size: utils.randomInt(50, 90),
-            image: emojiTypes[utils.randomInt(0, emojiTypes.length - 1)]
+            image: emojiTypes[utils.randomInt(0, emojiTypes.length - 1)],
           });
         }
 
@@ -183,7 +183,7 @@ export const commands = {
                 effect => effect.id !== id
               );
             }
-          }
+          },
         });
 
         break;
@@ -198,7 +198,7 @@ export const commands = {
             velocityX: this.p5.random(-2, 2),
             size: this.p5.random(6, 12, 18),
             spin: 1,
-            color: utils.randomColor(this.p5)
+            color: utils.randomColor(this.p5),
           });
         }
         this.foregroundEffects.push({
@@ -228,7 +228,7 @@ export const commands = {
             }
 
             this.p5.pop();
-          }
+          },
         });
         break;
       }
@@ -243,7 +243,7 @@ export const commands = {
             x: 200,
             y: 200,
             velocityX: velocity * this.p5.cos(theta),
-            velocityY: velocity * this.p5.sin(theta)
+            velocityY: velocity * this.p5.sin(theta),
           });
         }
         this.foregroundEffects.push({
@@ -270,7 +270,7 @@ export const commands = {
               );
             }
             this.p5.pop();
-          }
+          },
         });
 
         break;
@@ -301,12 +301,12 @@ export const commands = {
               x: utils.randomInt(200 - shardRadius, 200 + shardRadius),
               y: utils.randomInt(200 - shardRadius, 200 + shardRadius),
               velocityX: velocity * this.p5.cos(theta),
-              velocityY: velocity * this.p5.sin(theta)
+              velocityY: velocity * this.p5.sin(theta),
             });
           }
           glassShards.push({
             points: points,
-            color: utils.randomColorFromPalette('ocean')
+            color: utils.randomColorFromPalette('ocean'),
           });
         }
         this.foregroundEffects.push({
@@ -331,7 +331,7 @@ export const commands = {
               );
             }
             this.p5.pop();
-          }
+          },
         });
 
         break;
@@ -349,7 +349,7 @@ export const commands = {
             // a random value from the array. The reason it's not just random(-6, 6)
             // is that we don't want stars with delta values between 0 and +/-2
             // because they change too slowly to feel noticeable.
-            delta: this.p5.random([-6, -5, -4, -3, 3, 4, 5, 6])
+            delta: this.p5.random([-6, -5, -4, -3, 3, 4, 5, 6]),
           });
         }
 
@@ -377,12 +377,12 @@ export const commands = {
               );
             }
             this.p5.pop();
-          }
+          },
         });
         break;
       }
       default:
         break;
     }
-  }
+  },
 };

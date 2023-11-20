@@ -23,7 +23,7 @@ var CONFIGS = {
     movePegmanAnimationSpeedScale: 1.5,
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
-    hideInstructions: true
+    hideInstructions: true,
   },
 
   bee: {
@@ -48,12 +48,12 @@ var CONFIGS = {
     // This is required when move pegman animation is set
     movePegmanAnimationFrameNumber: 9,
     actionSpeedScale: {
-      nectar: 1
+      nectar: 1,
     },
     pegmanYOffset: 0,
     tileSheetWidth: 5,
     pegmanHeight: 50,
-    pegmanWidth: 50
+    pegmanWidth: 50,
   },
 
   collector: {
@@ -78,7 +78,7 @@ var CONFIGS = {
     transparentTileEnding: true,
     nonDisappearingPegmanHittingObstacle: true,
     background: 'background.png',
-    danceOnLoad: true
+    danceOnLoad: true,
   },
 
   farmer: {
@@ -94,7 +94,7 @@ var CONFIGS = {
     background: 'background' + randomValue([0, 1, 2, 3]) + '.png',
     dirtSound: true,
     pegmanYOffset: -8,
-    danceOnLoad: true
+    danceOnLoad: true,
   },
 
   harvester: {
@@ -112,7 +112,7 @@ var CONFIGS = {
     nonDisappearingPegmanHittingObstacle: true,
     background: 'background' + randomValue([0, 1, 2, 3]) + '.png',
     pegmanYOffset: -8,
-    danceOnLoad: true
+    danceOnLoad: true,
   },
 
   pvz: {
@@ -124,7 +124,7 @@ var CONFIGS = {
 
     obstacleScale: 1.4,
     pegmanYOffset: -8,
-    danceOnLoad: true
+    danceOnLoad: true,
   },
 
   birds: {
@@ -148,7 +148,7 @@ var CONFIGS = {
     pegmanHeight: 68,
     pegmanWidth: 51,
     pegmanYOffset: -14,
-    turnAfterVictory: true
+    turnAfterVictory: true,
   },
 
   scrat: {
@@ -183,7 +183,7 @@ var CONFIGS = {
     pegmanWidth: 80,
     pegmanXOffset: -12,
     pegmanYOffset: -30,
-    turnAfterVictory: true
+    turnAfterVictory: true,
   },
 
   neighborhood: {
@@ -193,7 +193,7 @@ var CONFIGS = {
       'vehicles.png': 7,
       'buildings.png': 26,
       'sidewalk.png': 4,
-      'wall.png': 4
+      'wall.png': 4,
     },
     pegmanHeight: 80,
     pegmanWidth: 80,
@@ -203,8 +203,8 @@ var CONFIGS = {
     squareSize: 80,
     svgHeight: 800,
     svgWidth: 800,
-    paintCan: 'paint_can.png'
-  }
+    paintCan: 'paint_can.png',
+  },
 };
 
 // night skins are effectively the same, but will have some different assets
@@ -213,7 +213,7 @@ CONFIGS.bee_night = CONFIGS.bee;
 CONFIGS.farmer_night = CONFIGS.farmer;
 
 CONFIGS.planter = Object.assign({}, CONFIGS.harvester, {
-  soil: 'soil.png'
+  soil: 'soil.png',
 });
 
 /**
@@ -224,7 +224,7 @@ function soundAssetUrls(skin, mp3Sound) {
   return [skin.assetUrl(mp3Sound), skin.assetUrl(base + '.ogg')];
 }
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   // The skin has properties from three locations
   // (1) skinBase - properties common across Blockly apps
   // (2) here - properties common across all maze skins

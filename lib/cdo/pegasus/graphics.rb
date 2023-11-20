@@ -37,10 +37,10 @@ def load_manipulated_image(path, mode, width, height, scale = nil)
   ilist
 end
 
-def process_image(path, ext_names, language=nil, site=nil)
+def process_image(path, ext_names, language = nil, site = nil)
   extname = File.extname(path).downcase
   return nil unless ext_names.include?(extname)
-  image_format = extname[1..-1]
+  image_format = extname[1..]
 
   basename = File.basename(path, extname)
   dirname = File.dirname(path)
@@ -60,7 +60,7 @@ def process_image(path, ext_names, language=nil, site=nil)
   end
 
   # Assume we are returning the same resolution as we're reading.
-  retina_in = retina_out = basename[-3..-1] == '_2x'
+  retina_in = retina_out = basename[-3..] == '_2x'
 
   path = nil
   if site == 'hourofcode.com'

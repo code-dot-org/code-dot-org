@@ -7,8 +7,8 @@ Scenario: Teacher submits inline mini-contact form after adding zip
   Given I create a teacher named "Severus"
 
   # By using a teacher account, the email field will be prepopulated.
-  And I am on "http://code.org/educate/professional-learning/middle-high"
-  And I wait until element "#regional-partner-mini-contact-form-middle-high" is visible
+  And I am on "http://code.org/educate/professional-learning/contact-regional-partner"
+  And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
   And I press "#submit" using jQuery
 
   # Wait until we see an error for no ZIP.
@@ -18,14 +18,14 @@ Scenario: Teacher submits inline mini-contact form after adding zip
   Given I scroll the "#zip" element into view
   And I press keys "90210" for element "#zip"
   And I press "#submit" using jQuery
-  And I wait until element "#regional-partner-mini-contact-thanks-middle-high" is visible
+  And I wait until element "#regional-partner-mini-contact-thanks-contact-regional-partner" is visible
   And I sign out
 
 
 Scenario: Teacher submits inline mini-contact form after adding zip and email
   Given I create a teacher named "Severus"
-  And I am on "http://code.org/educate/professional-learning/middle-high"
-  And I wait until element "#regional-partner-mini-contact-form-middle-high" is visible
+  And I am on "http://code.org/educate/professional-learning/contact-regional-partner"
+  And I wait until element "#regional-partner-mini-contact-form-contact-regional-partner" is visible
   And I dismiss the language selector
 
   # Let's clear out the email to make sure that it's required.
@@ -42,7 +42,7 @@ Scenario: Teacher submits inline mini-contact form after adding zip and email
   And I press keys "90210" for element "#zip"
   And I press keys "test-email@code.org" for element "#email"
   And I press "#submit" using jQuery
-  And I wait until element "#regional-partner-mini-contact-thanks-middle-high" is visible
+  And I wait until element "#regional-partner-mini-contact-thanks-contact-regional-partner" is visible
   And I sign out
 
 

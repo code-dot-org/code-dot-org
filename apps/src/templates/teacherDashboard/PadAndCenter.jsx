@@ -11,7 +11,7 @@ const PadAndCenter = ({children}) => (
       flexFlow: 'row',
       justifyContent: 'center',
       marginTop: 20,
-      marginBottom: 20
+      marginBottom: 20,
     }}
   >
     {children}

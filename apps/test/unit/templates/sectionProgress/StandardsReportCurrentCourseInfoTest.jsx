@@ -15,12 +15,12 @@ describe('StandardsReportCurrentCourseInfo', () => {
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
         path: '//localhost-studio.code.org:3000/s/express-2019',
-        lessons: []
+        lessons: [],
       },
       unitDescription: 'This script teaches things',
       numStudentsInSection: 15,
       numLessonsCompleted: 5,
-      numLessonsInUnit: 10
+      numLessonsInUnit: 10,
     };
   });
 

@@ -65,7 +65,7 @@ module LocaleHelper
 
   # Looks up a localized string driven by a database value.
   # See config/locales/data.en.yml for details.
-  def data_t(dotted_path, key, default=nil)
+  def data_t(dotted_path, key, default = nil)
     # Escape separator in provided key to support keys containing dot characters.
     try_t(
       key,
@@ -78,12 +78,12 @@ module LocaleHelper
   # Looks up a localized string driven by a database value.
   # See config/locales/data.en.yml for details.
   def data_t_suffix(dotted_path, key, suffix, options = {})
-    I18n.t("data.#{dotted_path}.#{key}.#{suffix}", options)
+    I18n.t("data.#{dotted_path}.#{key}.#{suffix}", **options)
   end
 
   # Tries to access translation, returning nil if not found
   def try_t(dotted_path, params = {})
-    I18n.t(dotted_path, {raise: true}.merge(params)) rescue nil
+    I18n.t(dotted_path, **({raise: true}.merge(params))) rescue nil
   end
 
   def i18n_dropdown

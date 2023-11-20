@@ -1,26 +1,20 @@
 name 'CSP Unit 2 Ch 2 MC data bias'
-encrypted 'xNmoOIBqqCgKDr6XcDfd5zk7/IEPJSzoXZm2U0OqV0Q/ECSDCUI0lR0mZI8t
-OscjaWwKOmKfM67aOl2oQiwp76LrMyDms2D6yW3WqzUdMG4CFwQG8+msZrr+
-4x0pvFgcYTHtYcTpFcJdD7GMmtc6iGEgesa6SotAZGq6II0iDe4z50QDt1sx
-7GxdJUMx9QI+VyC5/gvghDgkkJCJncIubo1Mp7140GwQFy8R0NNZisHa8Zoz
-KkkvGeewIw7tuA/uMvvNXMszkJWSGHDmLG7GgxnAyDs3Gj44uU0nbPXVil+P
-0G2CMwNF7rQQ1Pd5Ul9gZWPYKq4fmM9CTCGuWen8RMBc8qYh0ZMmmM7wsHEy
-bnvAxf/+uGrL90DZc6bIOPMNALRHVeorD5mYd4FFuiDQ7NUYOzE3WnMPZhXv
-3J8otKxRJgM4D9y5Y7wXjPrTN9FIAy3LnqygLiugzpAc/50XNatDLcdrB454
-tCU1FA4Rx59lnRNjPrnFPBSFFUPDKz+ec9y6u0y0rAJgN/IjSnRrVYybd6Di
-2iUiZuSx8DkjDPZhbAOin0o3hXw2jY7YlcHle4vINb8aZeD1NC7ZeLMNvmo1
-jX1svoGoRSsos9FzBUaHKl5ygvp1dH5BglDKnnmbibmf5LMdLbOrgF46MOlb
-81+FarPAVvVrvqbkkONTls6eL3wPvEntZBLHM227tS+hSASfkAcOyaFKcNeA
-P5hTzL25Xf11H4YPBqnPndLwL4PUeMcpTGXlQOhXuNp62qxOkhZ0IrQ3g4fh
-+9dpfoMhYDoS8Guly5u70Y69hcORGAJLBRoAnym312OhJAz6PmUcPWtbj6tn
-uwkNRO6st5eH1aYGsPZkXV8Dw1nCvBI2hcPQ3ok+jB4HDNB8dTs9fDi0auMh
-7T+o8PnVZHYm9vHWCrSNHY0ZPxCNOLGLUD2ra63u0rsxi1k1IP9O9kH3tj8D
-MM711z4ac46syh5brJFobNAH/zZ6zc1UDMGL/77OdIqOeX17vOYUPbRCuUid
-1dhxa26l/1cFTBZkE0TfJaAz7sQJVa2UHb3qqDHWmBMqG2fDjiL9D3DhuSmy
-P4LIserb6T2c+qkat5V2YlJ/ldJpklzY3t3ftP5t2jn1KfVCSiqvw/dWAgFV
-n+HP421tGwJkFLzCWcShXZTjNTUhl9M5HfrTXG6wCXLdIjbPuhAXoCGYdUsk
-45csnTXcA6/MPVIBNQ+1Cwc1jhWZZ4/oR9ArlWAdNy/UaXhaNSNuWYnEvQaH
-SrtNCxfNntiYRDSD+F6N+OnLBtCv8Fmo1CHSugmpPh6B3eEl/qVtKZok3i7G
-dR8leTDGVOKeSUFED5IvNzZwN34WkOJQDkdfXqNX3BAPFcsvv5VUND/1YLtv
-KBxCSw8=
-'
+title 'Data Bias'
+type 'multi2'
+description ' '
+
+question ' ' 
+
+wrong 'She learns that the survey administrators only asked a representative sample of students, rather than every student in each state.'
+right 'She learns that responses were collected only by mobile app.'
+right 'She learns that the survey was only available to students who scored at the top 10% on the PSAT.'
+wrong 'She learns the survey was available to complete in both digital and paper form.'
+markdown <<MARKDOWN
+This question refers to the same data from the High School Survey about college plans from the previous question.
+
+Amara plans to use the survey data to create a visualization and short write up about students’ plans for college, but first she wants to learn more about how the survey was conducted. Of the following things she might learn about the survey, which are the **most likely** sources of bias in the results based how it was collected?
+
+Choose <u>two</u> answers.
+MARKDOWN
+
+allow_multiple_attempts true

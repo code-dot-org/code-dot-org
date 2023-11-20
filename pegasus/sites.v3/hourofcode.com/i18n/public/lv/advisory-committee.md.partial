@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Programmēšanas stunda un CSedWeek padomdevēja komiteja
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Programmēšanas stunda un CSedWeek padomdevēja komiteja
 
 {{ advisory-committee/about_headshots }}
 

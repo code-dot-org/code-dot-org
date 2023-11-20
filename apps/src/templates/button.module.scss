@@ -1,10 +1,15 @@
-@import "color.scss";
+@import 'color', 'font';
 
 // Note: Keep these constants in sync with Button.jsx.
 $button-height-default: 34px;
 $button-height-large: 40px;
 $button-height-narrow: 40px;
 $button-height-small: 20px;
+
+@mixin focus-outline {
+  outline: $brand_primary_default solid 2px;
+  outline-offset: 2px;
+}
 
 /* stylelint-disable selector-pseudo-class-no-unknown */
 div,
@@ -17,9 +22,9 @@ a:visited,
 :global(.header) a:visited {
   /* stylelint-enable selector-pseudo-class-no-unknown */
   &.main {
+    @include main-font-regular;
     display: inline-block;
     font-size: 12px;
-    font-family: "Gotham 4r", sans-serif;
     border: 1px solid $border_gray;
     border-radius: 3px;
     text-decoration: none;
@@ -202,35 +207,94 @@ a:visited,
     }
   }
 
+  // Phase 1 of Code.org Redesign - Colors
+  &.brandSecondaryDefault {
+    color: $neutral_white;
+    background-color: $brand_secondary_default;
+    border-color: $brand_secondary_default;
+    border-radius: 4px;
+    border-width: 1px;
+    line-height: 30px;
+
+    &:hover {
+      box-shadow: none;
+      color: $white;
+      border-color: $brand_secondary_dark;
+      background-color: $brand_secondary_dark;
+    }
+
+    &:focus-visible {
+      @include focus-outline;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: $brand_secondary_light;
+      border: none;
+    }
+  }
+
+  &.neutralDark {
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 1px solid $neutral_dark;
+    border-radius: 4px;
+    line-height: 30px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+    }
+
+    &:focus-visible {
+      @include focus-outline;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      cursor: not-allowed;
+    }
+  }
+
+  &.neutralDark,
+  &.brandSecondaryDefault {
+    &.default {
+      padding-left: 16px;
+      padding-right: 16px;
+
+      @include main-font-semi-bold;
+    }
+
+    &:active {
+      border-width: 2px;
+    }
+  }
+
   // Button sizes.
   &.default {
     height: $button-height-default;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0 24px;
     line-height: 34px;
   }
 
   &.large {
     height: $button-height-large;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0 30px;
     line-height: 40px;
   }
 
   &.narrow {
     height: $button-height-narrow;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 10px;
     line-height: 40px;
   }
 
   &.small {
     height: $button-height-small;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding: 0 5px;
     line-height: 20px;
     position: relative;
-    top: 4px;
 
     .icon {
       font-size: 12px;
@@ -243,17 +307,36 @@ a:visited,
     line-height: 12px;
   }
 
+  &.phase1Updated {
+    line-height: 30px;
+  }
+
   &.textButton {
+    @include main-font-semi-bold;
     color: $teal;
     border-width: 0;
     background-color: unset;
-    font-family: "Gotham 5r", sans-serif;
     box-shadow: none;
     padding: 0;
     margin: 0;
 
     &:hover {
       background-color: unset;
+    }
+  }
+
+  &.rebrandedTextButton {
+    color: $brand_secondary_default;
+    font-size: 16px;
+    padding: 12px 16px;
+
+    &:hover {
+      color: $brand_secondary_dark;
+    }
+
+    &:focus-visible {
+      @include focus-outline;
+      outline-offset: unset;
     }
   }
 }

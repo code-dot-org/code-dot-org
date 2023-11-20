@@ -12,7 +12,7 @@ CERT_NAME_AREA_HEIGHT = 80
 class CertificateImage
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_certificate_image2(image_path, name, params={})
+  def self.create_certificate_image2(image_path, name, params = {})
     # Load the certificate template
     background = Magick::Image.read(image_path).first
     font = "Times bold"
@@ -39,7 +39,7 @@ class CertificateImage
   # If no width is given, then the text is bound to the width of the background image.
   # @param [Integer] height in pixels of the bounding box for the text.
   # If no height is given, then the text is bound to the height of the background image.
-  def self.apply_text(image, text, pointsize, font, color, x_offset, y_offset, width=nil, height=nil)
+  def self.apply_text(image, text, pointsize, font, color, x_offset, y_offset, width = nil, height = nil)
     # If there is no text, don't try to render it.
     return if text.nil? || text.strip.empty?
     # If there is no background image, there is nothing to do.
@@ -56,21 +56,21 @@ class CertificateImage
       # the correct font. This is important for handling non-latin languages.
       # The text_overlay is first generated at full size and then resized to fit
       # the given bounding box width & height.
-      text_overlay = Magick::Image.read("pango:#{text}") do
+      text_overlay = Magick::Image.read("pango:#{text}") do |img|
         # pango:markup is set to false in order to easily prevent pango markup
         # injection from user input.
-        define('pango', 'markup', false)
+        img.define('pango', 'markup', false)
         # If the text doesn't fit the bounding box, then put a '...' at the end.
-        define('pango', 'ellipsize', 'end')
-        self.background_color = 'none'
-        self.pointsize = pointsize
-        self.font = font
-        self.fill = color
+        img.define('pango', 'ellipsize', 'end')
+        img.background_color = 'none'
+        img.pointsize = pointsize
+        img.font = font
+        img.fill = color
         # Limit the maximum size of content to protect ourselves against extremely large strings.
         # The multiplier represents the max amount the text can be shrunk to fit the given bounds.
-        self.size = "#{width * 3}x#{height * 3}"
+        img.size = "#{width * 3}x#{height * 3}"
         # Center the text in the box.
-        self.gravity = Magick::CenterGravity
+        img.gravity = Magick::CenterGravity
       end.first
 
       return unless text_overlay
@@ -141,7 +141,7 @@ class CertificateImage
 
   # This method returns a newly-allocated Magick::Image object.
   # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course=nil, donor_name=nil, course_title=nil, default_random_donor: false)
+  def self.create_course_certificate_image(name, course = nil, donor_name = nil, course_title = nil, default_random_donor: false)
     name = ' ' if name.blank?
 
     course ||= ScriptConstants::HOC_NAME
@@ -184,9 +184,10 @@ class CertificateImage
 
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course)
-    return true if ScriptConstants.unit_in_category?(:hoc, course)
+    course_version = CurriculumHelper.find_matching_course_version(course)
+    return true if course_version&.hoc?
     return false if accelerated_course?(course)
-    return false if CurriculumHelper.find_matching_course_version(course)
+    return false if course_version
     true
   end
 
@@ -196,10 +197,13 @@ class CertificateImage
 
   def self.certificate_template_for(course)
     if ScriptConstants.unit_in_category?(:minecraft, course)
-      if course == ScriptConstants::MINECRAFT_HERO_NAME
+      case course
+      when ScriptConstants::MINECRAFT_HERO_NAME
         'MC_Hour_Of_Code_Certificate_Hero.png'
-      elsif course == ScriptConstants::MINECRAFT_AQUATIC_NAME
+      when ScriptConstants::MINECRAFT_AQUATIC_NAME
         'MC_Hour_Of_Code_Certificate_Aquatic.png'
+      when ScriptConstants::MINECRAFT_AI_NAME
+        'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end

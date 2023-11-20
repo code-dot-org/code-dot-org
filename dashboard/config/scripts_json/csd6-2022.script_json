@@ -6,14 +6,6 @@
     "properties": {
       "announcements": [
         {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only",
-          "key": "1aca9aa7-be38-47cb-b58d-9d0df5c15f3b"
-        },
-        {
           "notice": "More Opportunities for Feedback",
           "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short survey to let the Code.org curriculum team know how the unit went.",
           "link": "https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6",
@@ -22,6 +14,16 @@
           "dismissible": true,
           "buttonText": "Teacher Survey",
           "key": "89b889db-2e3a-4afa-8df5-b424eb0d62d1"
+        },
+        {
+          "key": "cd936bbe-e57c-4568-aad1-832ee483d149",
+          "notice": "Now Available with micro:bit!",
+          "details": "We've recently launched a version of this unit that uses the BBC micro:bit instead of the Adafruit Circuit Playground! Click the button to see the unit and learn more!",
+          "link": "https://studio.code.org/s/microbit-2023?viewAs=Instructor",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -33,12 +35,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:09 UTC",
+    "serialized_at": "2023-08-31 17:38:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1214,19 +1219,6 @@
       }
     },
     {
-      "key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b",
-        "lesson.key": "Physical Outputs and LEDs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "642bece0-6dc3-45e9-918e-4d01f8034a1c",
       "position": 1,
       "properties": {
@@ -1367,7 +1359,7 @@
       "key": "c34e82c1-7915-4903-8b84-5bb8e0a93f89",
       "position": 1,
       "properties": {
-        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Professional Development:** If you are interested in teaching this course, we recommend completing the free [Physical Computing Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-physical-computing-2022). The module is designed to take 2 hours to complete. No previous experience with coding or physical computing is assumed.\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -4394,17 +4386,6 @@
       "seeding_key": {
         "activity_section.key": "bfba76c0-3ffa-403b-b4d0-9e962d6b85ca",
         "lesson_activity.key": "16e5bfe9-a20f-474f-934f-e109c2a6d33f"
-      }
-    },
-    {
-      "key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3a69fce-9cb6-4117-9f01-7e7b4b0c82f1",
-        "lesson_activity.key": "9b29cc4c-555f-4b71-9dfc-0ac54fe7db2b"
       }
     },
     {
@@ -11198,7 +11179,7 @@
     },
     {
       "name": "The Counter Pattern",
-      "url": "https://youtu.be/sLIJNEIE0Rs",
+      "url": "https://www.youtube.com/watch?v=GiHbeLq1ZkM",
       "key": "the_counter_pattern_1",
       "properties": {
         "audience": "Student",
@@ -13381,6 +13362,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

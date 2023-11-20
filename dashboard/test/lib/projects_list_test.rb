@@ -32,7 +32,8 @@ class ProjectsListTest < ActionController::TestCase
 
   test 'get_project_row_data correctly parses student and project data' do
     project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, @student)
-    assert_equal @channel_id, project_row['channel']
+    assert_nil @channel_id
+    assert_nil project_row['channel']
     assert_equal 'Bobs App', project_row['name']
     assert_equal @student.name, project_row['studentName']
     assert_equal 'applab', project_row['type']
@@ -45,19 +46,20 @@ class ProjectsListTest < ActionController::TestCase
 
   test 'get_project_row_data still correctly parses project data even if no student is passed' do
     project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id)
-    assert_equal @channel_id, project_row['channel']
+    assert_nil @channel_id
+    assert_nil project_row['channel']
     assert_equal 'Bobs App', project_row['name']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
   end
 
   test 'get_project_row_data includes library data if with_library is true' do
-    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, false)
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, with_library: false)
     assert_nil project_row['libraryName']
     assert_nil project_row['libraryDescription']
     assert_nil project_row['libraryPublishedAt']
 
-    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, true)
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, with_library: true)
     assert_equal 'bobsLibrary', project_row['libraryName']
     assert_equal 'A library by Bob.', project_row['libraryDescription']
     assert_equal '2020-01-25T17:48:12.358-08:00', project_row['libraryPublishedAt']
@@ -237,8 +239,8 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal fake_project[:published_at], returned_project["publishedAt"]
     assert_equal UserHelpers.initial(fake_project[:name]),
       returned_project["studentName"]
-    assert_equal UserHelpers.age_range_from_birthday(fake_project[:birthday]),
-      returned_project["studentAgeRange"]
+    assert_nil UserHelpers.age_range_from_birthday(fake_project[:birthday])
+    assert_nil returned_project["studentAgeRange"]
   end
 
   test "include_featured combines featured project data and published projects data correctly" do
@@ -300,7 +302,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description, 'hidden': true}.to_json,
+        value: {libraryName: applab_lib_name, libraryDescription: description, hidden: true}.to_json,
         state: 'active'
       },
       {
@@ -310,7 +312,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 2,
         project_type: 'gamelab',
-        value: {'libraryName': gamelab_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: gamelab_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
@@ -318,11 +320,11 @@ class ProjectsListTest < ActionController::TestCase
       @storage_id => 4,
       @teacher_storage_id => 6
     }
-    User = Struct.new(:id, :name)
-    teacher = User.new(6, teacher_name)
-    student = User.new(4, student_name)
-    Section = Struct.new(:students, :user, :id, :name, :user_id)
-    section = Section.new([student], teacher, 321, 'sectionName', teacher.id)
+    mock_user = Struct.new(:id, :name)
+    teacher = mock_user.new(6, teacher_name)
+    student = mock_user.new(4, student_name)
+    mock_section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = mock_section.new([student], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
     Projects.stubs(:table).returns(library_db_result(stub_projects))
@@ -349,18 +351,18 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: applab_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
     stub_users = {
       @storage_id => 4
     }
-    User = Struct.new(:id, :name, :user_type)
-    section_owner = User.new(6, section_owner_name, 'teacher')
-    section_participant = User.new(4, section_participant_name, 'teacher')
-    Section = Struct.new(:students, :user, :id, :name, :user_id)
-    section = Section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
+    mock_user = Struct.new(:id, :name, :user_type)
+    section_owner = mock_user.new(6, section_owner_name, 'teacher')
+    section_participant = mock_user.new(4, section_participant_name, 'teacher')
+    mock_section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = mock_section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
     Projects.stubs(:table).returns(library_db_result(stub_projects))
@@ -386,7 +388,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 3,
         project_type: 'applab',
-        value: {'libraryName': shared_lib_name, 'libraryDescription': description, 'sharedWith': [321]}.to_json,
+        value: {libraryName: shared_lib_name, libraryDescription: description, sharedWith: [321]}.to_json,
         state: 'active'
       },
       {
@@ -396,17 +398,17 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 4,
         project_type: 'applab',
-        value: {'libraryName': unshared_lib_name, 'libraryDescription': description}.to_json,
+        value: {libraryName: unshared_lib_name, libraryDescription: description}.to_json,
         state: 'active'
       }
     ]
     stub_users = {
       @storage_id => 4
     }
-    User = Struct.new(:id, :name)
-    teacher = User.new(4, teacher_name)
-    Section = Struct.new(:students, :user, :id, :name, :user_id)
-    section = Section.new([], teacher, 321, 'sectionName', teacher.id)
+    mock_user = Struct.new(:id, :name)
+    teacher = mock_user.new(4, teacher_name)
+    mock_section = Struct.new(:students, :user, :id, :name, :user_id)
+    section = mock_section.new([], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
     Projects.stubs(:table).returns(library_db_result(stub_projects))
@@ -429,11 +431,11 @@ class ProjectsListTest < ActionController::TestCase
     stub_projects = [
       {
         id: 1,
-        value: {'latestLibraryVersion': '2'}.to_json
+        value: {latestLibraryVersion: '2'}.to_json
       },
       {
         id: 2,
-        value: {'latestLibraryVersion': '1'}.to_json
+        value: {latestLibraryVersion: '1'}.to_json
       },
       {
         id: 3,

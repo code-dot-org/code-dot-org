@@ -10,7 +10,7 @@ var markup = require('./NetSimDnsManualControl.html.ejs');
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsManualControl = (module.exports = function(
+var NetSimDnsManualControl = (module.exports = function (
   rootDiv,
   becomeDnsCallback
 ) {
@@ -33,7 +33,7 @@ var NetSimDnsManualControl = (module.exports = function(
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimDnsManualControl.prototype.render = function() {
+NetSimDnsManualControl.prototype.render = function () {
   var renderedMarkup = $(markup({}));
   this.rootDiv_.html(renderedMarkup);
   this.rootDiv_
@@ -45,13 +45,13 @@ NetSimDnsManualControl.prototype.render = function() {
  * Handler for button click.
  * @private
  */
-NetSimDnsManualControl.prototype.onBecomeDnsButtonClick_ = function() {
+NetSimDnsManualControl.prototype.onBecomeDnsButtonClick_ = function () {
   this.becomeDnsCallback_();
 };
 
 /**
  * @param {boolean} isDnsNode
  */
-NetSimDnsManualControl.prototype.setIsDnsNode = function(isDnsNode) {
+NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };

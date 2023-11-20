@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Kurzy Code.org využívají desítky milionů studentů a jeden milion učitelů na celém světě.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Historie
 
 V roce 2013 spustila dvojčata Hadi a Ali Partovi projekt Code.org [videem propagujícím informatiku](https://www.youtube.com/watch?v=nKIu9yen5nc). Toto video se stalo na celý den videem č. 1 na YouTube a 15000 škol se na nás obrátilo s žádostí o pomoc. Od té doby jsme se rozšířili z původní organizace s přetíženým personálem dobrovolníků na plnohodnotnou organizaci podporující celosvětové hnutí. Věříme, že kvalitní vzdělávání v oboru počítačových věd by mělo být dostupné všem dětem, ne jen několika málo šťastlivcům.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Co děláme
 

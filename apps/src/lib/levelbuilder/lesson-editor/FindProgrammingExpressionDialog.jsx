@@ -10,7 +10,7 @@ import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import LessonEditorDialog from './LessonEditorDialog';
 import {connect} from 'react-redux';
 
-export const SearchForm = function(props) {
+export const SearchForm = function (props) {
   return (
     <form className="form-search">
       <input
@@ -38,10 +38,10 @@ export const SearchForm = function(props) {
 SearchForm.propTypes = {
   onSearch: PropTypes.func.isRequired,
   onFilter: PropTypes.func.isRequired,
-  programmingEnvironments: PropTypes.array
+  programmingEnvironments: PropTypes.array,
 };
 
-export const ProgrammingExpressionTable = function(props) {
+export const ProgrammingExpressionTable = function (props) {
   if (
     !props.programmingExpressions ||
     props.programmingExpressions.length === 0
@@ -90,10 +90,10 @@ ProgrammingExpressionTable.propTypes = {
       link: PropTypes.string,
       syntax: PropTypes.string.isRequired,
       programmingEnvironmentName: PropTypes.string.isRequired,
-      uniqueKey: PropTypes.string.isRequired
+      uniqueKey: PropTypes.string.isRequired,
     })
   ),
-  handleSelect: PropTypes.func.isRequired
+  handleSelect: PropTypes.func.isRequired,
 };
 
 export class FindProgrammingExpressionDialog extends Component {
@@ -101,14 +101,14 @@ export class FindProgrammingExpressionDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    programmingEnvironments: PropTypes.array
+    programmingEnvironments: PropTypes.array,
   };
 
   constructor(props) {
     super(props);
     this.state = {
       currentPage: 1,
-      numPages: 0
+      numPages: 0,
     };
   }
 
@@ -132,12 +132,12 @@ export class FindProgrammingExpressionDialog extends Component {
 
   handleSearch = e => {
     this.setState({
-      searchQuery: e.target.value
+      searchQuery: e.target.value,
     });
   };
   handleFilter = e => {
     this.setState({
-      filteredProgrammingEnvironment: e.target.value
+      filteredProgrammingEnvironment: e.target.value,
     });
   };
 
@@ -145,7 +145,7 @@ export class FindProgrammingExpressionDialog extends Component {
     this.setState({
       selectedProgrammingExpression: this.state.programmingExpressions.find(
         expression => expression.uniqueKey === e.target.value
-      )
+      ),
     });
   };
 
@@ -156,11 +156,12 @@ export class FindProgrammingExpressionDialog extends Component {
 
     const params = {
       page: this.state.currentPage,
-      query: this.state.searchQuery
+      query: this.state.searchQuery,
     };
 
     if (this.state.filteredProgrammingEnvironment) {
-      params.programmingEnvironmentName = this.state.filteredProgrammingEnvironment;
+      params.programmingEnvironmentName =
+        this.state.filteredProgrammingEnvironment;
     }
 
     fetch('/programming_expressions/search?' + queryString.stringify(params))
@@ -168,7 +169,7 @@ export class FindProgrammingExpressionDialog extends Component {
       .then(data => {
         this.setState({
           programmingExpressions: data.programmingExpressions,
-          numPages: data.numPages
+          numPages: data.numPages,
         });
       });
   }
@@ -208,7 +209,7 @@ export class FindProgrammingExpressionDialog extends Component {
           <Button
             text={'Close and Add'}
             onClick={this.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
           />
         </DialogFooter>
       </LessonEditorDialog>
@@ -217,5 +218,5 @@ export class FindProgrammingExpressionDialog extends Component {
 }
 
 export default connect(state => ({
-  programmingEnvironments: state?.levelSearchingInfo?.programmingEnvironments
+  programmingEnvironments: state?.levelSearchingInfo?.programmingEnvironments,
 }))(FindProgrammingExpressionDialog);

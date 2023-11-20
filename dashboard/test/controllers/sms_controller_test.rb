@@ -13,7 +13,7 @@ class SmsControllerTest < ActionController::TestCase
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id} (reply STOP to stop receiving this)"
+      body: "Check this out on Code Studio: http://test.host/c/#{level_source.id}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)
@@ -34,7 +34,7 @@ class SmsControllerTest < ActionController::TestCase
     expected_twilio_options = {
       messaging_service_sid: 'fake_messaging_service_sid',
       to: 'xxxxxx',
-      body: "Check this out on Code Studio: #{project_share_url} (reply STOP to stop receiving this)"
+      body: "Check this out on Code Studio: #{project_share_url}?sms=true (reply STOP to stop receiving this)"
     }
 
     twilio_messages_mock = stub(:messages)

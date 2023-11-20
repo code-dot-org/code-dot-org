@@ -1,0 +1,35 @@
+@import 'color.scss';
+
+.message {
+    padding: 10px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.userMessageContainer {
+    margin: 0 0 15px 50px;
+}
+
+.assistantMessageContainer {
+    margin: 0 50px 15px 0;
+}
+
+.userMessage {
+    background-color: $lightest_cyan;
+}
+
+.assistantMessage {
+    background-color: $lightest_gray;
+}
+
+.inappropriateMessage {
+    background-color: $lightest_red;
+}
+
+.tooPersonalMessage {
+    background-color: $lightest_yellow;
+}
+
+.messageHeaderContainer {
+    margin: 5px 0 5px 0;
+}

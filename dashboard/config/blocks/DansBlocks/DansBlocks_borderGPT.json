@@ -1,0 +1,19 @@
+{
+  "category": "Experimental",
+  "config": {
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "func": "borderGPT",
+    "blockText": "Generate Border {DESCRIPTION}",
+    "args": [
+      {
+        "name": "DESCRIPTION",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

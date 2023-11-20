@@ -34,3 +34,5 @@ Looking at the if statements:
 
 This code will return the largest number of the three. It may be helpful to use concrete examples by assigning values to a, b, and c.
 MARKDOWN
+
+allow_multiple_attempts true

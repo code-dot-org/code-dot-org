@@ -141,7 +141,7 @@ NewCourseFields.propTypes = {
   setVersionYear: PropTypes.func.isRequired,
   instructionType: PropTypes.string.isRequired,
   instructorAudience: PropTypes.string.isRequired,
-  participantAudience: PropTypes.string.isRequired
+  participantAudience: PropTypes.string.isRequired,
 };
 
 const styles = {
@@ -152,9 +152,9 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0,
-    height: '100%'
+    height: '100%',
   },
   dropdown: {
-    margin: '0 6px'
-  }
+    margin: '0 6px',
+  },
 };

@@ -13,3 +13,5 @@ answer 'a loop that has a predetermined beginning, end, and increment or decreme
 
 question 'traverse'
 answer 'to move through an array'
+
+allow_multiple_attempts true

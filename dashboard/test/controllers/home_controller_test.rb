@@ -315,9 +315,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     cookie_header = @response.header['Set-Cookie']
-    assert cookie_header.include?("teacher_account_age_in_years")
-    assert cookie_header.include?("teacher_within_us")
-    assert cookie_header.include?("teacher_has_attended_pd")
+    assert_includes(cookie_header, "teacher_account_age_in_years")
+    assert_includes(cookie_header, "teacher_within_us")
+    assert_includes(cookie_header, "teacher_has_attended_pd")
   end
 
   # This exception is actually annoying to handle because it never gets to
@@ -342,9 +342,8 @@ class HomeControllerTest < ActionController::TestCase
     end
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers see dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service)
+    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
     query_count = 17
     assert_queries query_count do
       get :home
@@ -353,7 +352,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'program managers see dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service)
+    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
     query_count = 18
     assert_queries query_count do
       get :home
@@ -362,7 +361,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'workshop admins see dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service)
+    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
     query_count = 16
     assert_queries query_count do
       get :home
@@ -371,7 +370,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'facilitators see dashboard links' do
-    facilitator = create(:facilitator, :with_terms_of_service)
+    facilitator = create(:facilitator, :with_terms_of_service, :not_first_sign_in)
     sign_in facilitator
     query_count = 17
     assert_queries query_count do
@@ -381,7 +380,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'teachers cannot see dashboard links' do
-    sign_in create(:terms_of_service_teacher)
+    sign_in create(:terms_of_service_teacher, :not_first_sign_in)
     query_count = 15
     assert_queries query_count do
       get :home
@@ -390,7 +389,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'workshop admins see application dashboard links' do
-    sign_in create(:workshop_admin, :with_terms_of_service)
+    sign_in create(:workshop_admin, :with_terms_of_service, :not_first_sign_in)
     query_count = 16
     assert_queries query_count do
       get :home
@@ -399,9 +398,8 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are regional partner program managers see application dashboard links' do
-    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service)
+    sign_in create(:workshop_organizer, :as_regional_partner_program_manager, :with_terms_of_service, :not_first_sign_in)
     query_count = 18
     assert_queries query_count do
       get :home
@@ -411,7 +409,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test 'program managers see application dashboard links' do
-    sign_in create(:program_manager, :with_terms_of_service)
+    sign_in create(:program_manager, :with_terms_of_service, :not_first_sign_in)
     query_count = 18
     assert_queries query_count do
       get :home
@@ -420,9 +418,8 @@ class HomeControllerTest < ActionController::TestCase
     assert_select 'h3', count: 1, text: 'Manage Applications'
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'workshop organizers who are not regional partner program managers do not see application dashboard links' do
-    sign_in create(:workshop_organizer, :with_terms_of_service)
+    sign_in create(:workshop_organizer, :with_terms_of_service, :not_first_sign_in)
     query_count = 17
     assert_queries query_count do
       get :home

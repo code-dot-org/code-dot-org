@@ -10,7 +10,7 @@ import shapes from './studioHomepages/shapes';
 
 export default class VerticalImageResourceCardRow extends Component {
   static propTypes = {
-    cards: shapes.courses
+    cards: shapes.courses,
   };
 
   render() {

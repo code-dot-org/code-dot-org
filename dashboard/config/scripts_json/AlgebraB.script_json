@@ -20,7 +20,8 @@
       "is_course": true,
       "is_migrated": true,
       "use_legacy_lesson_plans": true,
-      "version_year": "unversioned"
+      "version_year": "unversioned",
+      "is_deprecated": true
     },
     "new_name": null,
     "family_name": "algebrab",

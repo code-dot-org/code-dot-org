@@ -12,7 +12,7 @@ class BaseDSL
     self.class.to_s.tap {|s| s.slice!('DSL')}.underscore
   end
 
-  def self.parse(str, filename, name=nil)
+  def self.parse(str, filename, name = nil)
     object = new
     object.name(name) if name.present?
     # Use consistent apostrophe symbol, and remove no-break space

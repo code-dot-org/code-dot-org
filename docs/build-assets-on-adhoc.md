@@ -24,7 +24,7 @@
     - Only build if any of the apps_build_trigger_paths have changed since last build.
     - Install dependencies by running `yarn`
     - Rebuild PhantomJS `npm rebuild phantomjs-prebuilt`
-    - Then `npm run build` or `npm run build:dist` (minified/uglified version) depends on the environment
+    - Then `yarn build` or `yarn build:dist` (minified/uglified version) depends on the environment
       - Execute grunt build tasks as set in `apps/package.json`, e.g. `grunt clean build`
       - `apps/Gruntfile.js` confgiures and delegates work to the various webpack tasks
       - `apps/webpack.js` bundles javascript files and minifies them. Results are in `apps/build/package/js/`
@@ -50,7 +50,7 @@
       - Configurations for the asset pipeline (config.assets lines)
         - `dashboard/config/application.rb`
         - `dashboard/config/environments/production.rb`
-    - Upgrade dashboard `sudo service dashboard upgrade`
+    - Upgrade dashboard `sudo systemctl restart dashboard`
 
 - More details on building apps and asset pipeline: [apps/docs/build.md](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md)
 
@@ -90,8 +90,8 @@
 - Alternative option:
   - Manually re-try the failed step and follow next steps in `lib/rake/build.rake` to re-build apps and dashboard.
   - Upgrade dashboard service. May need to restart varnish
-    - sudo service dashboard upgrade
-    - sudo service varnish restart
+    - sudo systemctl restart dashboard
+    - sudo systemctl restart varnish
 
 ## How to fix seeding issue when building adhoc
 - Option 1: Fix seeding file  (e.g. ApSchoolCode seeding)

@@ -10,7 +10,7 @@ export default class SectionResults extends React.Component {
     section: PropTypes.string.isRequired,
     answers: PropTypes.object.isRequired,
     questions: PropTypes.object.isRequired,
-    facilitators: PropTypes.object
+    facilitators: PropTypes.object,
   };
 
   renderQuestionResults(surveyQuestions, questionId, surveyId) {

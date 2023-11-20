@@ -5,7 +5,7 @@ theme: responsive
 
 # CS Leaders Prize - Terms and Conditions
 
-This educational campaign is meant to celebrate and promote computer science education. The CS Leaders Prize is managed solely by Code.org, a USA-based 501c3 nonprofit whose registered office is at 1501 4th Ave, Seattle, WA 98101. These terms and conditions do not constitute an agreement with DonorsChoose.
+This educational campaign is meant to celebrate and promote computer science education. The CS Leaders Prize is managed solely by Code.org, a USA-based 501c3 nonprofit whose registered office is at 801 5th Avenue, Suite 2100, Seattle, WA 98104. These terms and conditions do not constitute an agreement with DonorsChoose.
 
 Awards will be limited to public middle and high U.S. schools only. To qualify, a school representative (staff, teacher, principal) must fill out the [submission form](/prize). One middle school and one high school in every U.S. state and in D.C. will receive a $10,000 gift code for DonorsChoose, which may be used to fund a project(s) of the school’s creation through the DonorsChoose marketplace. The award is as stated and no cash or other alternatives will be offered. The awards are not transferable. All gift codes will expire on November 30, 2023, which date cannot be extended.
 

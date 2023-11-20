@@ -1,0 +1,14 @@
+- songMap = @level.class.hoc_songs.reduce({}) {|hash, song| hash[song[1]] = song; hash }
+
+%h1.control-legend{data: {toggle: "collapse", target: "#songSelection"}}
+  Song Selection
+
+#songSelection.in.collapse
+  %p
+    Click to
+    %a.select_none{href: '#'} not limit song selection
+  %p (shift-click or cmd-click to select multiple).
+  = f.select :song_selection, ((@level.song_selection || []).map {|s| songMap[s] }.compact + @level.class.hoc_songs).uniq, {}, {size: 12, multiple: true}
+  %p Songs currently selected (does not update until level is saved):
+
+  = @level.song_selection ? @level.song_selection.map {|s| songMap[s]&.length && songMap[s][0] }.compact : "All songs are available"

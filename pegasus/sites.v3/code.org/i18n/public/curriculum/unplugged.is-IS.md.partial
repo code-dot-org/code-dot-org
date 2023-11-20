@@ -1,21 +1,21 @@
 ---
-title: CS Fundamentals Unplugged
+title: Grundvallaratriði tölvunarfræði án tölvu
 video_player: true
 theme: responsive
 ---
 
-# CS Fundamentals Unplugged
+# Grundvallaratriði tölvunarfræði án tölvu
 
-We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+Við höfum tekið saman lista yfir allar ótengdar kennslustundir okkar sem þú getur notað í kennslustofunni þinni. Nú getur þú kennt grundvallaratriði tölvunarfræði, hvort sem þú ert með tölvur í kennslustofunni þinni eða ekki!
 <br>
 <div class="col-50">
-We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. <br><br>
-Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+Vísað er til kennslustunda þar sem nemendur eru ekki að vinna á tölvu sem “ótengdar”. Nemendur munu oft vinna með blýant og blað eða hreyfanlega hluti.  Þetta eru tækifæri til hreyfingar sem eru viljandi notuð til að hjálpa nemendum að melta flókin hugtök með tengingu við eigin reynslu. <br><br>
+Ótengdar kennslustundir eru sérstaklega gagnlegar hvað varðar að skapa og viðhalda samstarfsanda í kennslustofunni og þær eru gagnleg reynsla sem þú getur vísað til þegar þú kynnir óhlutbundnari hugtök. Hvert þessara verkefna er hægt að nota annað hvort stök eða með annarri tölvunarfræðikennslu um tengd hugtök.
 </div>
 
 <div class="col-50" style="text-align:center">
 <img src="/images/new-main.jpg" width="90%">
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ages 4+, English only
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Aldur 4+, Aðeins á ensku
 </div>
 
 <div style="clear: both;"></div>
@@ -233,3 +233,4 @@ th, td {
 
 <p style="clear:both"></p>
 
+{{ visit_partial_event_logger }}

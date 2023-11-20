@@ -1,7 +1,6 @@
 @no_circle
 @no_mobile
 @no_safari
-@no_ie
 
 Feature: Oceans ML HoC
 

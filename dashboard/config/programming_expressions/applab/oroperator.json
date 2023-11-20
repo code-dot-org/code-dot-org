@@ -19,7 +19,7 @@
     {
       "name": "Example: Thank Goodness It's Friday!",
       "description": "Determines if it is currently the weekend.",
-      "code": "```\n// Determines if it is currently the weekend.\nvar now = new Date(); \nvar dayOfWeek = now.getDay();\nvar isWeekend = false;\nif (dayOfWeek === 0 || dayOfWeek === 6) {\n    isWeekend = true;\n}\nconsole.log(isWeekend);\n```"
+      "code": "```\n// Determines if it is currently the weekend.\nvar now = new Date(); \nvar dayOfWeek = now.getDay();\nvar isWeekend = false;\nif (dayOfWeek == 0 || dayOfWeek == 6) {\n    isWeekend = true;\n}\nconsole.log(isWeekend);\n```"
     }
   ],
   "palette_params": [

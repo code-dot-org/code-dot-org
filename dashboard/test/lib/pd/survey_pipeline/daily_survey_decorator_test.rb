@@ -28,7 +28,7 @@ module Pd::SurveyPipeline
         form_id => {
           '1' => {type: 'radio', name: 'importance', text: 'CS is important?', order: 1,
             options: %w(Disagree Neutral Agree),
-            option_map: {'Disagree': 1, 'Neutral': 2, 'Agree': 3}, answer_type: 'singleSelect'},
+            option_map: {Disagree: 1, Neutral: 2, Agree: 3}, answer_type: 'singleSelect'},
           '2' => {type: 'textarea', name: 'feedback', text: 'Free-format feedback', order: 2,
             answer_type: 'text'}
         }
@@ -49,11 +49,11 @@ module Pd::SurveyPipeline
 
       summary_data = [
         {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.first.id,
-          name: 'importance', reducer: 'histogram', reducer_result: {'Agree': 2}},
+          name: 'importance', reducer: 'histogram', reducer_result: {Agree: 2}},
         {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.first.id,
           name: 'feedback', reducer: 'no_op', reducer_result: ['Feedback 1', 'Feedback 2']},
         {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.last.id,
-          name: 'importance', reducer: 'histogram', reducer_result: {'Neutral': 1, 'Disagree': 1}},
+          name: 'importance', reducer: 'histogram', reducer_result: {Neutral: 1, Disagree: 1}},
         {workshop_id: @workshop.id, day: 0, form_id: form_id, facilitator_id: @facilitators.last.id,
           name: 'feedback', reducer: 'no_op', reducer_result: ['Feedback 3']}
       ]
@@ -75,8 +75,8 @@ module Pd::SurveyPipeline
             general: {},
             facilitator: {
               'importance' => {
-                @facilitators.first.name => {'Agree': 2},
-                @facilitators.last.name => {'Neutral': 1, 'Disagree': 1}
+                @facilitators.first.name => {Agree: 2},
+                @facilitators.last.name => {Neutral: 1, Disagree: 1}
               },
               'feedback' => {
                 @facilitators.first.name => ['Feedback 1', 'Feedback 2'],
@@ -108,7 +108,7 @@ module Pd::SurveyPipeline
         form_id => {
           '1' => {type: 'radio', name: 'importance', text: 'CS is important?', order: 1,
             options: ['Disagree', 'Neutral', 'Agree'],
-            option_map: {'Disagree': 1, 'Neutral': 2, 'Agree': 3}, answer_type: 'singleSelect'},
+            option_map: {Disagree: 1, Neutral: 2, Agree: 3}, answer_type: 'singleSelect'},
           '2' => {type: 'textarea', name: 'feedback', text: 'Free-format feedback', order: 2,
             answer_type: 'text'}
         }
@@ -125,7 +125,7 @@ module Pd::SurveyPipeline
 
       summary_data = [
         {workshop_id: @workshop.id, day: 0, form_id: form_id, name: 'importance',
-          reducer: 'histogram', reducer_result: {'Agree': 2, 'Neutral': 1, 'Disagree': 1}},
+          reducer: 'histogram', reducer_result: {Agree: 2, Neutral: 1, Disagree: 1}},
         {workshop_id: @workshop.id, day: 0, form_id: form_id, name: 'feedback',
           reducer: 'no_op', reducer_result: ['Feedback 1', 'Feedback 2', 'Feedback 3']}
       ]
@@ -145,7 +145,7 @@ module Pd::SurveyPipeline
           context_name => {
             response_count: 4,
             general: {
-              'importance' => {'Agree': 2, 'Neutral': 1, 'Disagree': 1},
+              'importance' => {Agree: 2, Neutral: 1, Disagree: 1},
               'feedback' => ['Feedback 1', 'Feedback 2', 'Feedback 3']
             },
             facilitator: {}

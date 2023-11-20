@@ -1,19 +1,15 @@
 name 'U2L05 Assessment 1'
-encrypted '6ei+U/5C6V9AYEQU6tNkMKNCZPskXjMKHIo5wd79/TPiZT9G9q4mjd2bIZU+
-3Ut9bo+whuGDY/B6aBMm+H94it4khU4g/E1d+v/XmkiGuepptLDKGmyuowdu
-PuMfxBpJVZpVfBvGRbr5kPrcsiZFHcXZaJFAhLqBHEUE1sIva6gjAvBi2LSW
-4LjpCHJ7dAX1qAy7v0+4zqf0ZQs9vxvWCgEHsm+JUWUBfjKZ9i7aj+q36NtJ
-N3PQna7rp2cy08QNO6etLdGfCEzyvhRYmrenxgzc2bSxg5tu3ENtE5g5DwSi
-BpmOZyIi/UWmUhsvYZrkS1Hl3K3+UgGVMl6Wvj7TL43F7c32aogj3sQ6EefJ
-Qz53Q4rfFlpafOvDuXVf5XahtM1TBRC4nWo8z5ZUscopTTuW5GfwYIzGsS0T
-VRlg7aaLmn5GaXTsjLO5n/FVGiQ48ZtSkpxuYy61qCFU8A1iLiPkyCTQFyfj
-pUFywz/UEhbIINnwzLihZKAtU4Fq+PuLtqg5a4zQrzV2cl2fYrExQvCeNK/q
-cEN+XR89PAk7tqz+PQbNSkRguEvUZsscrEJAWjgMo91acN62ytuI78F423vO
-/4JHueznS9gI/xu8kVPNXu0W6rubHKzKwYNMj7tzg4uz+b6GqH/e2W1T9NNg
-AkPSSHD51vgq9W94quU01TZdv7nKQyA0BIeprjt6S/E7R1xHK5v2m1Wsfon1
-zzbrLNFQmyXsPMQbMegjWsmuIrS7zQfEArbflgYoHPOO7naA5ooiUhy75Qaz
-mD8PNlDIj57B2eNGWQM5i5dlXAY7NaWgECS0eh3ElZo69ltnHpoRbumwndJ+
-002BIn450nIVjSoe3MqFWgs3d2R+hfvZqC8Z+yXEb7eQ2wGVadECBsuaZlJX
-f+ilzhb0vtHLjOETeR7JgmDuwcc7rop84UKfZOzsAex069M4Oot+mNRclW+y
-npG7WTucI+WwxbFUyWk8ew==
-'
+title 'Packets and Making a Reliable Internet: Question 1'
+type 'multi2'
+
+question 'Pick Two: Pick the two statements about packets and routing on the Internet which are true.'
+wrong 'Packets travelling across the Internet take a standardized amount of time and so can be counted on to arrive in the order they were sent'
+right 'TCP ensures messages can be reliably transmitted across the Internet'
+wrong 'TCP depends on the infrastructure of the Internet to be reliable enough to ensure no packets are lost in transmission'
+right 'TCP must account for the fact that packets may not arrive at a destination computer in the intended order'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

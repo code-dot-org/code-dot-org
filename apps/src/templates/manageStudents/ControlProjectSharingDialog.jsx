@@ -13,11 +13,11 @@ class ControlProjectSharingDialog extends Component {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func,
     showSharingColumn: PropTypes.func,
-    editAll: PropTypes.func
+    editAll: PropTypes.func,
   };
 
   state = {
-    isDialogOpen: this.props.isDialogOpen
+    isDialogOpen: this.props.isDialogOpen,
   };
 
   handleShowSharingClick = () => {
@@ -40,16 +40,16 @@ class ControlProjectSharingDialog extends Component {
           </div>
           <DialogFooter>
             <Button
-              __useDeprecatedTag
               text={i18n.dialogCancel()}
               onClick={this.props.closeDialog}
               color={Button.ButtonColor.gray}
+              style={styles.buttonWithoutMargin}
             />
             <Button
-              __useDeprecatedTag
               text={i18n.projectSharingDialogButton()}
               onClick={this.handleShowSharingClick}
-              color={Button.ButtonColor.orange}
+              color={Button.ButtonColor.brandSecondaryDefault}
+              style={styles.buttonWithoutMargin}
             />
           </DialogFooter>
         </BaseDialog>
@@ -62,11 +62,15 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
+  buttonWithoutMargin: {
+    margin: 0,
+  },
 };
 
-export const UnconnectedControlProjectSharingDialog = ControlProjectSharingDialog;
+export const UnconnectedControlProjectSharingDialog =
+  ControlProjectSharingDialog;
 
 export default connect(
   state => ({}),
@@ -76,6 +80,6 @@ export default connect(
     },
     editAll() {
       dispatch(editAll());
-    }
+    },
   })
 )(ControlProjectSharingDialog);

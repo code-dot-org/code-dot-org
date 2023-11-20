@@ -2,8 +2,34 @@
 en:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: moving NESW with arrow keys
+      AmysBlocks_addTarget:
+        text: "[TARGET][0] [OPT][1] [SPRITE][2] "
+        options:
+          OPT:
+            '"follows"': follows
+            '"avoids"': avoids
+      AmysBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           if too much[SPRITE][0]
+          [STATEMENT][1]else if just right
+          [STATEMENT3][2]else if too little
+          [STATEMENT2][3]
+      AmysBlocks_makeNumSprites:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites [LOCATION][2]
+      AmysBlocks_playerBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): moving NSEW with arrow keys
       AmysBlocks_setPromptWithChoices:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choices [A][2][B][3][C][4]
       AmysBlocks_spriteSayVar:
@@ -28,6 +54,8 @@ en:
             '1.00': medium
             '2.00': large
             '3.00': extra large
+      Dancelab_ai:
+        text: "[IMAGE][0]generate [VALUE][1] effect"
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -77,6 +105,12 @@ en:
           UNIT:
             '"measures"': measures
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        text: at [TIMESTAMP][0] [UNIT][1]
+        options:
+          UNIT:
+            '"measures"': measures
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: change [COLOR][0] [METHOD][1] by [AMOUNT][2]
         options:
@@ -117,6 +151,31 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            '"CAT"': cats
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -622,6 +681,65 @@ en:
             '"tropical"': Tropical
             '"vintage"': Vintage
             '"warm"': Warm
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          set background effect
+          [PALETTE][0] [EFFECT][1]
+        options:
+          EFFECT:
+            '"none"': None
+            '"rand"': "(Random)"
+            '"quads"': Angles
+            '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
+            '"clouds"': Clouds
+            '"color_cycle"': Colors
+            '"diamonds"': Diamonds
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Flowers
+            '"frosted_grid"': Frosted Grid
+            '"growing_stars"': Growing Stars
+            '"higher_power"': Higher Power
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"splatter"': Paint Splatter
+            '"rainbow"': Rainbow
+            '"ripples_random"': Random Ripples
+            '"ripples"': Ripples
+            '"snowflakes"': Snow
+            '"text"': Song Names
+            '"galaxy"': Space
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"disco"': Squares
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Stars
+            '"music_wave"': Waves
+          PALETTE:
+            '"autumn"': Autumn
+            '"rave"': Black and White
+            '"cool"': Cool
+            '"electronic"': Electronic
+            '"grayscale"': Grayscale
+            '"iceCream"': Ice Cream
+            '"default"': Light
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Rainbow
+            '"roses"': Roses
+            '"sky"': Sky
+            '"spring"': Spring
+            '"summer"': Summer
+            '"sunrise"': Sunrise
+            '"sunset"': Sunset
+            '"tropical"': Tropical
+            '"twinkling"': Twinkling
+            '"vintage"': Vintage
+            '"warm"': Warm
+            '"winter"': Winter
       Dancelab_setDanceSpeed:
         text: set [SPRITE][0] dance speed to [SPEED][1]
         options:
@@ -1032,6 +1150,8 @@ en:
             '"macklemore90"': Macklemore - Can't Hold Us
             '"hammer"': MC Hammer - U Can't Touch This
             '"peas"': The Black Eyed Peas - I Got a Feeling
+      DansBlocks_borderGPT:
+        text: Generate Border [DESCRIPTION][0]
       DansBlocks_getMicroscope:
         text: Microscope has [INPUT1][0]
         options:
@@ -1040,7 +1160,7 @@ en:
             '3': baking soda
             '5': both
       DansBlocks_setForegroundEffect2:
-        text: do [EFFECT][0] effect
+        text: "[Don't Use] do [EFFECT][0] effect"
         options:
           EFFECT:
             '"bubbles"': bubbles
@@ -1108,6 +1228,8 @@ en:
         text: avoiding targets
       gamelab_beginCollectingData:
         text: begin collecting data [BREAK][0] value [VALUE][1] with label [LABEL][2]
+      gamelab_behaviorPicker:
+        text: "[BEHAVIOR][0]"
       gamelab_bounceOff:
         text: "[SPRITE][0] bounces off [TARGET][1]"
       gamelab_changePropBy:
@@ -1173,6 +1295,8 @@ en:
         text: following targets
       gamelab_getAllSprites:
         text: all sprites
+      gamelab_getCostume:
+        text: sprites with costume of [SPRITE][0]
       gamelab_getProp:
         text: "[SPRITE][0] [PROPERTY][1]"
         options:
@@ -1301,6 +1425,19 @@ en:
             '"z"': z
       gamelab_layoutGrid:
         text: layout sprites as a grid
+      gamelab_layoutSprites:
+        text: layout [GROUP][0] as a [FORMAT][1]
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_locationAt:
         text: 'location x: [X][0] y: [Y][1]'
       gamelab_locationModifier:
@@ -1327,8 +1464,23 @@ en:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
+      gamelab_makeNewSpriteGroup:
+        text: make [N][0] new [GROUP][1] in a [FORMAT][2]
+        options:
+          FORMAT:
+            '"border"': border
+            '"circle"': circle
+            '"grid"': grid
+            '"top"': top row
+            '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
+            '"column"': column
+            '"right"': right column
       gamelab_makeNumSprites:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites
+      gamelab_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       gamelab_makeProjectile:
         text: "create projectile \n[ANIMATION_NAME][0] from [LOCATION][1] with speed [SPEED][2]direction[DIRECTION][3]"
         options:
@@ -1722,6 +1874,27 @@ en:
         text: x coordinate of [SPRITE][0]
       gamelab_yLocationOf:
         text: y coordinate of [SPRITE][0]
+      KatiesBlocks_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
+      KatiesBlocks_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      KatiesBlocks_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      KatiesBlocks_tumbling:
+        text: tumbling
       Mikelab_addBehaviorSimple:
         text: sprite [SPRITE][0] begins [BEHAVIOR][1]
       Mikelab_addTrainingData:
@@ -2427,8 +2600,6 @@ en:
         text: turn left
       RyanLab_turnRight:
         text: turn right
-      SpriteLab2Beta_spriteSay:
-        text: sprite [SPRITE][0] say [TEXT][1] for [SECONDS][2] seconds
       Vector_createSpriteWith:
         text: |-
           create sprite
@@ -2534,6 +2705,35 @@ en:
             '"quarantining"': quarantining when sick
             '"avoiding"': social distancing
             '"none"': staying still
+      adaptations_adaptationBehaviors:
+        text: "[BEHAVIOR][0]"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): spinning right
+            new Behavior(spinning_left, []): spinning left
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): jittering
+            new Behavior(wobbling, []): wobbling
+            new Behavior(wandering, []): wandering
+            new Behavior(patrolling, []): patrolling
+      adaptations_location_picker:
+        text: at:[LOCATION][0]
+      adaptations_makeNumSpritesNear:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
+      adaptations_spriteBirdSay:
+        text: "[SPRITE][0] says [SPEECH][1]"
+        options:
+          SPEECH:
+            '"My beak is pointy and strong to find insects in tree bark."': My beak is pointy and strong to find insects in tree bark.
+            '"I have a beak like a scoop to catch fish."': I have a beak like a scoop to catch fish.
+      adaptations_startFollowing:
+        text: "[SPRITE][0] begins following [TARGET][1]"
+      adaptations_toggleBehaviorSimple:
+        text: sprite [SPRITE][0] [TOGGLE][1] [BEHAVIOR][2]
+        options:
+          TOGGLE:
+            '"begins"': begins
+            '"stops"': stops
       binary_drawBin:
         text: draw binary [BIN][0]
       binary_drawBinScreen:
@@ -2676,8 +2876,59 @@ en:
           DIR:
             right: right ↻
             left: left ↺
+      ecosystems_catchMe:
+        text: catch [THIS][0]
+      ecosystems_eat:
+        text: eat [THIS][0]
+      ecosystems_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"too much"': too much
+            '"just right"': just right
+            '"too little"': too little
+      ecosystems_int10:
+        text: "[VALUE][0]"
+        options:
+          VALUE:
+            '0': '0'
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      ecosystems_location_picker:
+        text: at:[LOCATION][0]
+      ecosystems_makeNewSpriteBetween:
+        text: 'make [N][0] new [GROUP][1] between location x: [X][2] y: [Y][3]'
+      ecosystems_makeNumSpritesAtLocation:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites at [LOCATION_GENERATOR][2]
+      ecosystems_makeNumSpritesWithinRange:
+        text: make [NUM][0] new [ANIMATION_NAME][1] sprites at [RANGE][2]
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:150, y2:250}": Middle
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
+      ecosystems_randomLocationWithinRange:
+        text: x min[X1][0]x max[X2][1]y min[Y1][2]y max[Y2][3]
+      ecosystems_randomLocationWithinSelectedRange:
+        text: "[RANGE][0]"
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:200, y2:400}": Top
+            "{x1:0, x2:400, y1:0, y2:200}": Bottom
       storylab_clearHeadings:
         text: clear headings
+      storylab_printText:
+        text: print [TEXT][0]
       storylab_setForegroundEffect2:
         text: do [EFFECT][0] effect
         options:
@@ -2694,7 +2945,3 @@ en:
         text: prompt user [QUESTION][0] for variable [VAR][1] with choice [A][2]
       storylab_setSubheading:
         text: set subheading [SUBHEADING][0]
-      validation_validatedBackground:
-        text: set background to [IMG][0]
-      validation_validatedSound:
-        text: PLAYSound [SOUND][0]

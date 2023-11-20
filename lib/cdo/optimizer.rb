@@ -78,6 +78,8 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
+    self.queue_adapter = :async
+
     IMAGE_OPTIM = ImageOptim.new(
       config_paths: dashboard_dir('config/image_optim.yml'),
       cache_dir: dashboard_dir('tmp/cache/image_optim')
@@ -93,9 +95,9 @@ module Cdo
         cache.write(cache_key, false)
         IMAGE_OPTIM.optimize_image_data(data) || data
       end
-    rescue => e
+    rescue => exception
       # Log error and return original content.
-      Honeybadger.notify(e,
+      Honeybadger.notify(exception,
         context: {
           key: cache_key
         }

@@ -110,7 +110,7 @@ class VocabularyTest < ActiveSupport::TestCase
       "#{vocabulary.key}/#{course_offering.key}/#{course_version.key}",
       Services::GloballyUniqueIdentifiers.build_vocab_key(vocabulary)
     )
-    test_locale = :"te-ST"
+    test_locale = :'te-ST'
     custom_i18n = {
       "data" => {
         "vocabularies" => {

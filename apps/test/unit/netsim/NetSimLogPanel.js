@@ -12,30 +12,30 @@ function to_b(ascii) {
   return DataConverters.asciiToBinary(ascii, 8);
 }
 
-describe('NetSimLogPanel', function() {
+describe('NetSimLogPanel', function () {
   var panel, rootDiv;
 
-  beforeEach(function() {
+  beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
   });
 
-  it('has default maximum packet size of 50', function() {
+  it('has default maximum packet size of 50', function () {
     panel = new NetSimLogPanel(rootDiv, {});
     assert.equal(50, panel.maximumLogPackets_);
   });
 
-  it('is open by default', function() {
+  it('is open by default', function () {
     panel = new NetSimLogPanel(rootDiv, {});
     assert.isFalse(panel.isMinimized());
   });
 
-  it('can be configured to be closed on creation', function() {
+  it('can be configured to be closed on creation', function () {
     panel = new NetSimLogPanel(rootDiv, {isMinimized: true});
     assert.isTrue(panel.isMinimized());
   });
 
-  it('renders body on construction', function() {
+  it('renders body on construction', function () {
     var initialHtml = rootDiv.html();
     panel = new NetSimLogPanel(rootDiv, {isMinimized: true});
     var newHtml = rootDiv.html();
@@ -43,19 +43,19 @@ describe('NetSimLogPanel', function() {
     assert(newHtml.length > initialHtml.length);
   });
 
-  describe('logging', function() {
+  describe('logging', function () {
     var scrollArea;
-    beforeEach(function() {
+    beforeEach(function () {
       panel = new NetSimLogPanel(rootDiv, {
         packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
-        maximumLogPackets: 10
+        maximumLogPackets: 10,
       });
 
       panel.setEncodings([EncodingType.ASCII]);
       scrollArea = rootDiv.find('.scroll-area');
     });
 
-    it('only renders enabled encodings', function() {
+    it('only renders enabled encodings', function () {
       panel.log(to_b('first-message'), 1);
       panel.setEncodings([EncodingType.ASCII]);
 
@@ -78,7 +78,7 @@ describe('NetSimLogPanel', function() {
         EncodingType.DECIMAL,
         EncodingType.HEXADECIMAL,
         EncodingType.BINARY,
-        EncodingType.A_AND_B
+        EncodingType.A_AND_B,
       ]);
 
       assert.equal(1, scrollArea.find('.packet:first tr.ascii').length);
@@ -88,7 +88,7 @@ describe('NetSimLogPanel', function() {
       assert.equal(1, scrollArea.find('.packet:first tr.a_and_b').length);
     });
 
-    it('can log a packet', function() {
+    it('can log a packet', function () {
       assert.equal(0, panel.packets_.length);
       assert.equal(0, scrollArea.children().length);
       panel.log(to_b('fake-packet-binary'), 1);
@@ -96,7 +96,7 @@ describe('NetSimLogPanel', function() {
       assert.equal(1, scrollArea.children().length);
     });
 
-    it('puts subsequent packets at the top of the log', function() {
+    it('puts subsequent packets at the top of the log', function () {
       panel.log(to_b('first-message'), 1);
       panel.log(to_b('second-message'), 2);
       assert.equal(2, scrollArea.children().length);
@@ -115,7 +115,7 @@ describe('NetSimLogPanel', function() {
       );
     });
 
-    it('keeps a limited number of packets', function() {
+    it('keeps a limited number of packets', function () {
       // The limit in this test is 10 (see beforeEach for describe("logging"))
       for (var i = 1; i <= 9; i++) {
         panel.log(to_b('packet ' + i), i);
@@ -155,7 +155,7 @@ describe('NetSimLogPanel', function() {
       );
     });
 
-    it('ignores duplicate packets by id', function() {
+    it('ignores duplicate packets by id', function () {
       panel.log(to_b('first-message'), 1);
       panel.log(to_b('first-message again'), 1);
 

@@ -70,7 +70,7 @@ class Pd::PreWorkshopSurveyTest < ActiveSupport::TestCase
       'Form data lesson'
     ], survey.errors.full_messages
 
-    survey.form_data = survey.sanitize_form_data_hash.merge({unit: UNIT_1}).to_json
+    survey.form_data = survey.sanitized_form_data_hash.merge({unit: UNIT_1}).to_json
     assert survey.valid?
   end
 

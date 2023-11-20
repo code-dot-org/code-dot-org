@@ -12,7 +12,7 @@ describe('ImagePicker', () => {
     typeFilter: 'image',
     uploadsEnabled: false,
     showUnderageWarning: false,
-    useFilesApi: false
+    useFilesApi: false,
   };
 
   it('shows mode switch', () => {

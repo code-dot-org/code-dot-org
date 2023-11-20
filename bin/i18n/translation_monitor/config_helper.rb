@@ -61,7 +61,7 @@ module ConfigHelper
     shared_data = file_content['shared_data']
 
     limit = file_content['limit'] || data.size
-    limit.times.map do |i|
+    Array.new(limit) do |i|
       # Explict config data will overwrite the shared data
       config = shared_data.merge(data[i])
 

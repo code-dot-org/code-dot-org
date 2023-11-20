@@ -51,7 +51,7 @@ var logger = NetSimLogger.getSingleton();
  * @augments NetSimEntity
  * @implements MessageData
  */
-var NetSimMessage = (module.exports = function(shard, messageRow) {
+var NetSimMessage = (module.exports = function (shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
   NetSimEntity.call(this, shard, messageRow);
 
@@ -113,14 +113,14 @@ NetSimMessage.inherits(NetSimEntity);
  * @returns {MessageRow}
  * @throws {TypeError} if payload is invalid
  */
-NetSimMessage.buildRowFromData = function(messageData) {
+NetSimMessage.buildRowFromData = function (messageData) {
   return {
     fromNodeID: messageData.fromNodeID,
     toNodeID: messageData.toNodeID,
     simulatedBy: messageData.simulatedBy,
     base64Payload: binaryToBase64(messageData.payload),
     extraHopsRemaining: utils.valueOr(messageData.extraHopsRemaining, 0),
-    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, [])
+    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, []),
   };
 };
 
@@ -131,7 +131,7 @@ NetSimMessage.buildRowFromData = function(messageData) {
  * @param {!MessageData} messageData
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.send = function(shard, messageData, onComplete) {
+NetSimMessage.send = function (shard, messageData, onComplete) {
   try {
     var row = NetSimMessage.buildRowFromData(messageData);
     shard.messageTable.create(row, onComplete);
@@ -147,7 +147,7 @@ NetSimMessage.send = function(shard, messageData, onComplete) {
  * @param {MessageData[]} messageDatas
  * @param {!NodeStyleCallback} onComplete (success)
  */
-NetSimMessage.sendMany = function(shard, messageDatas, onComplete) {
+NetSimMessage.sendMany = function (shard, messageDatas, onComplete) {
   try {
     var rows = messageDatas.map(NetSimMessage.buildRowFromData);
     shard.messageTable.multiCreate(rows, onComplete);
@@ -161,7 +161,7 @@ NetSimMessage.sendMany = function(shard, messageDatas, onComplete) {
  * @param {NetSimMessage} message
  * @returns {boolean} TRUE iff the given message is well-formed.
  */
-NetSimMessage.isValid = function(message) {
+NetSimMessage.isValid = function (message) {
   return /^[01]*$/.test(message.payload);
 };
 
@@ -169,7 +169,7 @@ NetSimMessage.isValid = function(message) {
  * Helper that gets the wires table for the configured instance.
  * @returns {NetSimTable}
  */
-NetSimMessage.prototype.getTable = function() {
+NetSimMessage.prototype.getTable = function () {
   return this.shard_.messageTable;
 };
 
@@ -178,6 +178,6 @@ NetSimMessage.prototype.getTable = function() {
  * @returns {MessageRow}
  * @throws {TypeError} if payload is invalid
  */
-NetSimMessage.prototype.buildRow = function() {
+NetSimMessage.prototype.buildRow = function () {
   return NetSimMessage.buildRowFromData(this);
 };

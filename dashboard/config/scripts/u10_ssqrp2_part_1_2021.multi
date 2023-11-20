@@ -22,3 +22,5 @@ markdown <<MARKDOWN
 
 Which of the following data is necessary for Snappy to display "Happy Moments" for a particular city?
 MARKDOWN
+
+allow_multiple_attempts true

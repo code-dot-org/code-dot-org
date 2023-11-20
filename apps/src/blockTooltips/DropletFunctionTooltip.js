@@ -47,7 +47,7 @@ var DROPLET_BLOCK_I18N_PREFIX = 'dropletBlock_';
  *
  * @constructor
  */
-var DropletFunctionTooltip = function(appMsg, definition) {
+var DropletFunctionTooltip = function (appMsg, definition) {
   this.appMsg = appMsg;
 
   /** @type {string} */
@@ -113,21 +113,21 @@ var DropletFunctionTooltip = function(appMsg, definition) {
  * @param {string} key
  * @returns {Function}
  */
-DropletFunctionTooltip.prototype.getLocalization = function(key) {
+DropletFunctionTooltip.prototype.getLocalization = function (key) {
   return this.appMsg[key] || msg[key];
 };
 
 /**
  * @returns {string}
  */
-DropletFunctionTooltip.prototype.descriptionKey = function() {
+DropletFunctionTooltip.prototype.descriptionKey = function () {
   return this.i18nPrefix() + '_description';
 };
 
 /**
  * @returns {string}
  */
-DropletFunctionTooltip.prototype.signatureOverrideKey = function() {
+DropletFunctionTooltip.prototype.signatureOverrideKey = function () {
   return this.i18nPrefix() + '_signatureOverride';
 };
 
@@ -135,7 +135,7 @@ DropletFunctionTooltip.prototype.signatureOverrideKey = function() {
  * @param {Number} paramIndex
  * @returns {string}
  */
-DropletFunctionTooltip.prototype.parameterNameKey = function(paramIndex) {
+DropletFunctionTooltip.prototype.parameterNameKey = function (paramIndex) {
   return this.i18nPrefix() + '_param' + paramIndex;
 };
 
@@ -143,7 +143,7 @@ DropletFunctionTooltip.prototype.parameterNameKey = function(paramIndex) {
  * @param {Number} paramIndex
  * @returns {string}
  */
-DropletFunctionTooltip.prototype.parameterDescriptionKey = function(
+DropletFunctionTooltip.prototype.parameterDescriptionKey = function (
   paramIndex
 ) {
   return this.i18nPrefix() + '_param' + paramIndex + '_description';
@@ -152,7 +152,7 @@ DropletFunctionTooltip.prototype.parameterDescriptionKey = function(
 /**
  * @returns {string} i18n file prefix for this function
  */
-DropletFunctionTooltip.prototype.i18nPrefix = function() {
+DropletFunctionTooltip.prototype.i18nPrefix = function () {
   return DROPLET_BLOCK_I18N_PREFIX + this.functionName;
 };
 
@@ -160,7 +160,7 @@ DropletFunctionTooltip.prototype.i18nPrefix = function() {
  * @param {string} appType
  * @returns {string} URL for full doc about this function
  */
-DropletFunctionTooltip.prototype.getFullDocumentationURL = function(appType) {
+DropletFunctionTooltip.prototype.getFullDocumentationURL = function (appType) {
   if (this.customDocURL) {
     return this.customDocURL;
   }

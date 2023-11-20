@@ -2,6 +2,13 @@ import React from 'react';
 import MultipleChoiceSurveyOverviewTable from './MultipleChoiceSurveyOverviewTable';
 import i18n from '@cdo/locale';
 
+export default {
+  title: 'MultipleChoiceSurveyOverviewTable',
+  component: MultipleChoiceSurveyOverviewTable,
+};
+
+const Template = args => <MultipleChoiceSurveyOverviewTable {...args} />;
+
 const multipleChoiceSurveyData = [
   {
     id: 1,
@@ -11,10 +18,10 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionA(), percentAnswered: 40},
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 20},
       {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20},
-      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 20}
+      {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 20},
     ],
     notAnswered: 10,
-    totalAnswered: 20
+    totalAnswered: 20,
   },
   {
     id: 2,
@@ -26,10 +33,10 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 10},
       {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 10},
       {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 20},
-      {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 10}
+      {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 10},
     ],
     notAnswered: 30,
-    totalAnswered: 20
+    totalAnswered: 20,
   },
   {
     id: 3,
@@ -40,10 +47,10 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionB(), percentAnswered: 15},
       {multipleChoiceOption: i18n.answerOptionC(), percentAnswered: 20},
       {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 5},
-      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5}
+      {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5},
     ],
     notAnswered: 5,
-    totalAnswered: 20
+    totalAnswered: 20,
   },
   {
     id: 4,
@@ -57,39 +64,24 @@ const multipleChoiceSurveyData = [
       {multipleChoiceOption: i18n.answerOptionD(), percentAnswered: 9},
       {multipleChoiceOption: i18n.answerOptionE(), percentAnswered: 5},
       {multipleChoiceOption: i18n.answerOptionF(), percentAnswered: 32},
-      {multipleChoiceOption: i18n.answerOptionG(), percentAnswered: 5}
+      {multipleChoiceOption: i18n.answerOptionG(), percentAnswered: 5},
     ],
     notAnswered: 0,
-    totalAnswered: 20
-  }
+    totalAnswered: 20,
+  },
 ];
 
-export default storybook => {
-  return storybook
-    .storiesOf('SectionAssessments/MultipleChoiceSurveyOverviewTable', module)
-    .addStoryTable([
-      {
-        name: 'Assessment multiple choice with 7 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <MultipleChoiceSurveyOverviewTable
-            multipleChoiceSurveyData={multipleChoiceSurveyData}
-          />
-        )
-      },
-      {
-        name: 'Assessment multiple choice with 3 answers',
-        description: 'Ability to see assessment overview for a section',
-        story: () => (
-          <MultipleChoiceSurveyOverviewTable
-            multipleChoiceSurveyData={multipleChoiceSurveyData.map(question => {
-              return {
-                ...question,
-                answers: question.answers.slice(0, 2)
-              };
-            })}
-          />
-        )
-      }
-    ]);
+export const AssessmentWith7Answers = Template.bind({});
+AssessmentWith7Answers.args = {
+  multipleChoiceSurveyData: multipleChoiceSurveyData,
+};
+
+export const AssessmentWith3Answers = Template.bind({});
+AssessmentWith3Answers.args = {
+  multipleChoiceSurveyData: multipleChoiceSurveyData.map(question => {
+    return {
+      ...question,
+      answers: question.answers.slice(0, 2),
+    };
+  }),
 };

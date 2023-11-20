@@ -1,18 +1,246 @@
 ---
 sr-SP:
-  hour_of_code: Час кода
-  hello: Здраво свете
-  'yes': Да
-  'no': не
-  select_language: Молимо изаберите језик
-  upgrade_ie_message: Code.org ће ускоро престати са подршком за Internet Explorer
-    8, 9, и 10. Молимо да пређете на коришћење новијих прегледача.
-  upgrade_ie_message_csedweek: CSEdWeek.org ће ускоро престати са подршком за Internet
-    Explorer 8, 9, и 10. Молимо да пређете на коришћење новијих прегледача.
-  upgrade_ie_link: Сазнајте више
-  en: Информатика
+  accelerated_gradelevel: Узраст од 10 до 18 година
+  account_sign_up_email_opt_in: Да ли можемо да вам шаљемо електронску пошту о нашим
+    курсевима, локалним могућностима или другим вестима из информатике (отприлике
+    једном месечно)?
+  ai_activity: Активност
+  ai_description: Опис
+  ai_for_oceans_lesson_plan: план лекције
+  ai_in_partnership_with: Уз партнерство са
+  alice_beyond_platformtext: Биндовс или Мек (захтевна инсталација)
+  all_ages: Сви узрасти
+  allcancode_gradelevel: Узраст од 5 до 10 година
+  allcancode_platformtext: Модерни претраживачи, ИОС
+  allcancode_shortdescription: Имресивна игра Марко са видљивим програмским језиком.
+  anybody_can_learn: Сви могу да науче.
+  appinventor_beyond_platformtext: Модерни претраживач + Андроид
+  appinventor_beyond_shortdescription: Направи своју апликацију! (Само андроид)
+  appinventor_platformtext: Модерни претраживачи + Андроид
+  appinventor_shortdescription: Направи своју апликацију! (Само андроид)
+  applab_tile_start_tutorial: Покрени
+  arduino_beyond_platformtext: Интернет претраживач, затим комплет за набавку
+  are_you_teacher: Да ли сте наставник?
+  artist_gradelevel: За године од 8 до 108
+  artist_name: Уметник
+  artist_shortdescription: Цртај слике са уметником!
+  beginner: Почетник
+  beyond_an_hour: После Часа програмирања
+  beyond_hoc: Изван Једног Часа
+  beyond_hour_message: Наставите са нашим <a href='http://studio.code.org'>другим
+    курсевима</a>, или видите више опција на <a href='/learn/beyond'>Научите више
+    него у једном сату</a>.
+  bitsbox_gradelevel: Основна школа (од 1. до 4. разреда)
+  bitsbox_name: Bitsbox - напрабите игру
+  bitsbox_platformtext: Модерни интернет претраживачи
+  bitsbox_shortdescription: Програмирај серију апликација за игру и дељење, уз коришћење
+    правог ЈаваСкрипт-а.
+  blockly_gradelevel: Сви узрасти
+  blockly_name: Blockly
+  blockly_platformtext: Само модерни претраживачи
+  blockly_shortdescription: Пребаци ЗИП датотеку и учи ван мреже
+  boxisland_gradelevel: Основна школа (од 1. до 4. разреда)
+  boxisland_platformtext: Андроид, ИОС
+  boxisland_shortdescription: Преузми програмски пут Бокс острва са храбрим Хиро.
+  boy: Дечак
+  boys: Момци
+  boys_team: Мушки тим
+  california_button: Сазнајте више
+  california_heading: Замолите Вашу школу да се у њој учи информатика
+  california_text: Било који наставник може да понуди наше <a href='http://studio.code.org/'>бесплатне
+    курсеве</a>. Било која основна школа може да<a href='http://code.org/educate/k5'>учи
+    информатику</a>. Питајте средње школе да <a href='http://code.org/educate/districts'>буду
+    наши партнери.
+  cargobot_beyond_gradelevel: Узраста 8+
+  carousel_heading_apps_games: Направите сопствене апликације или игрице
+  carousel_heading_beginners: Водичи за почетнике
+  carousel_heading_beyond_devices: Апликације водичи за телефоне и таблете
+  carousel_heading_beyond_javascript: Туторијали за JavaScript
+  carousel_heading_beyond_languages: Водичи у другим програмским језицима
+  carousel_heading_devices: Апликације водичи за телефоне и таблете
+  carousel_heading_domestic: Водичи на Енглеском
+  carousel_heading_ide: Платформе популарне са учитељима
+  carousel_heading_international: Туторијали на твом језику
+  carousel_heading_javascript: Туторијали за JavaScript
+  carousel_heading_languages: Водичи у другим програмским језицима
+  carousel_heading_robots: Научите да програмирате са роботима
+  carousel_heading_university: Унивезетски курсеви на интернету
+  carousel_heading_unplugged: Без уређаја или интернета? Пробајте компјутерску науку
+    у стварном свету
+  carousel_heading_webpages: Научите да правите интернет странице
+  cded_sign_up: Региструј се
+  cded_try_it: Пробајте
+  city: Град
+  class_submission_in_school: У школи
+  class_submission_in_school_ap_computer_science: AP (напредно знање) компјутерска
+    наука
+  class_submission_in_school_daily_programming_course: Дневни курс програмирања
+  class_submission_in_school_exploring_computer_science: Истраживање компјутерске
+    науке
+  class_submission_in_school_full_university_cs_curriculum: Пуни универзитетски наставни
+    план компјутерске науке
+  class_submission_in_school_other: Остали у школи
+  class_submission_in_school_programming_integrated_in_other_classes: Програмирање
+    унето у друге часове (математика, физика, итд)
+  class_submission_in_school_robotics_club: Клуб роботике
+  class_submission_in_school_summer_school_cs_program: Програм летње школе компјутерске
+    науке
+  class_submission_languages_other: Други језик/ци
+  class_submission_level_college: Факултет
+  class_submission_level_elementary: Основна школа (од 1. до 4. разреда)
+  class_submission_level_high_school: Средња школа
+  class_submission_level_middle_school: Основна школа (од 5. до 8. разреда)
+  class_submission_level_preschool: Предшколско
+  class_submission_level_vocational: Професионални
+  class_submission_online: На интернету
+  class_submission_online_other: Други на интернету
+  class_submission_online_programming_class: Час програмирања на интернету
+  class_submission_online_teacher_resource: Ресурси за учитеље на интернету
+  class_submission_out_of_school: Ван школе
+  class_submission_out_of_school_afterschool_program: Програм за после школе
+  class_submission_out_of_school_all-day_workshop: Целодневна радионица (до једне
+    недеље)
+  class_submission_out_of_school_multi-week_workshop: Вишенедељна радионица
+  class_submission_out_of_school_other: Остали ван школе
+  class_submission_out_of_school_summer_camp: Летњи камп
+  code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
+  code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској
+    науци
+  codeavengers_beyond_platformtext: Модерни интернет претраживач
+  codeavengers_name: Направи игрицу JavaScript-ом
+  codeavengers_platformtext: Модерни интернет претраживачи
+  codeavengers_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
+  codecademy_beyond_gradelevel: Средња школа
+  codecademy_beyond_platformtext: Модерни интернет претраживач. Иос, Андроид апликације
+  codecademy_beyond_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
+  codecademy_gradelevel: Средња школа
+  codecademy_platformtext: Модерни интернет претраживач. Иос, Андроид апликације
+  codecademy_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
+  codecombat_beyond_platformtext: Интернет базирано (Firefox, Chrome, Safari, IE9+)
+  codecombat_longdescription: Порази предрасуде о Пајтон и ЈаваСкрипту у овом незаборавном
+    програмирању!
+  codecombat_platformtext: Модерни претраживачи (Захтева праћење курса $$)
+  codecombat_shortdescription: Порази предрасуде о Пајтон и ЈаваСкрипту у овом незаборавном
+    програмирању!
+  codehs_beyond_gradelevel: Средња школа
+  codehs_beyond_name: Научите да програмирате са Карелом псом
+  codehs_beyond_platformtext: Модерни претраживачи ($$ required)
+  codehs_gradelevel: Средња школа
+  codehs_name: Научите да програмирате са Карелом псом
+  codehs_platformtext: Модерни претраживачи. (Захтева праћење курса  $$)
+  codehs_shortdescription: Почни програмирање са Карелом псом, забаван и визуелан
+    увод у програмирање!
+  codeintl_gradelevel: Узраст од 4 до 104 година
+  codeintl_longdescription: Научи основе информатичких наука програмирања превуци
+    и отпусти. Налик игрици самосталним режирањем примера видео лекцијама од Бил Гејтса,
+    Марк Цукерберга, Љуте птице и Плантажама против Зомбија. Научи понављање петље,
+    услове, и основе алгоритма. Подржан у 34. језика.
+  codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
+  codeintl_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
+  codemonkey_name: CodeMonkey
+  codemonkey_platformtext: Модерни интернет претраживачи
+  codemonkey_shortdescription: Ученици програмирају мајмуна да ухвати банане.
+  codeorg_beyond_gradelevel: Узраст од 4 до 104 година
+  codeorg_beyond_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим
+    Птицама!
+  codeorg_gradelevel: Узраст од 4 до 104 година
+  codeorg_longdescription: Научи основе информатичких наука програмирања превуци и
+    отпусти. Налик игрици самосталним режирањем примера видео лекцијама од Бил Гејтса,
+    Марк Цукерберга, Љуте птице и Плантажама против Зомбија. Научи понављање петље,
+    услове, и основе алгоритма. Подржан у 34. језика.
+  codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
+  codeorg_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
+  codespark_gradelevel: Основна школа (од 1. до 4. разреда)
+  codespark_name: The Foos (добродошли су и они који још не знају да читају)
+  codespark_platformtext: iOS, Android (или веб читачи)
+  codespark_shortdescription: За фудбалере је забаван, дечија пријатељска игра учења
+    програмирања.
+  codesters_gradelevel: Годишта 12.-14.
+  codesters_platformtext: Модерни интернет претраживачи
+  codesters_shortdescription: Креирајте своје игре, анимације  и цртеже користећи
+    Пајтон
+  compatibility_hide_this_warning: Сакриј ова обавештења
   computer_science_edweek: Недеља информатике
-  csedweek_dates: 8-14 Децембар, 2014
+  condcards_gradelevel: Годишта 8.-12.
+  condcards_name: Услови са картама
+  condcards_platformtext: Није укључен
+  condcards_shortdescription: Научи алгоритме са шпилом карата
+  congrats_guest_speaker_title: Пронађите предавача за Ваш разред
+  congrats_next_tutorials_desc: Пробај ове кратке једночасовне туторијале или пробај
+    <a href="%{current_path}/next">partnerski tutorijali</a>.
+  congrats_next_tutorials_title: Пређи на следећи ниво
+  congratulations: Честитамо!
+  congratulations_on_completing_hoc: Честитамо на завршавању 1 Часа Програмирања
+  congratulations_volunteer: 'Честитамо: Сад кад сте испробали Hour of Code,<a href="https://code.org/volunteer">пријавите
+    се да будете волонтер у разреду</a> и помогнете ученицима да науче Hour of Code!'
+  contact_form_label_email: Ваша имејл адреса
+  contact_form_label_message: Порука
+  contact_form_label_submit: Пошаљи поруку
+  contact_form_label_topic: Тема
+  contact_form_topic_contribution: Добровољни принос
+  contact_form_topic_other: Други
+  contact_form_topic_outside_us: Ја сам ван САД.
+  contact_form_topic_parent: Ја сам родитељ
+  contact_form_topic_partner: Ја би желео да будем партнер
+  contact_form_topic_press: Штампа/медији (интервју или говор)
+  contact_form_topic_student: Ја сам студент
+  contact_form_topic_teacher: Ја сам учитељ/едукатор
+  continue_learning_body: Постоји много опција. Можете научити преко интернета, или
+    у локалној школи, или на летњем кампу.
+  continue_learning_header: Наставите учити преко једног часа
+  country: Землја
+  course1_gradelevel: Узраст од 4 до 6 година
+  course1_name: Курс 1
+  course2_gradelevel: Ages 6-18
+  course2_name: Курс 2
+  course3_gradelevel: За године од 8 до 18
+  course3_name: Курс 3
+  course4_gradelevel: Узраст од 10 до 18 година
+  course4_name: Course 4
+  coursea-2017_gradelevel: Узраст од 4 до 7 година
+  coursea-2018_gradelevel: Узраст од 4 до 7 година
+  coursea-2019_gradelevel: Узраст од 4 до 7 година
+  coursea-2020_gradelevel: Узраст од 4 до 7 година
+  coursea-2021_gradelevel: Узраст од 4 до 7 година
+  coursea-2022_gradelevel: Узраст од 4 до 7 година
+  coursea_gradelevel: Узраст од 4 до 7 година
+  courseb-2017_gradelevel: За године од 5 до 8
+  courseb-2018_gradelevel: За године од 5 до 8
+  courseb-2019_gradelevel: За године од 5 до 8
+  courseb-2020_gradelevel: За године од 5 до 8
+  courseb-2021_gradelevel: За године од 5 до 8
+  courseb-2022_gradelevel: За године од 5 до 8
+  courseb_gradelevel: За године од 5 до 8
+  coursec-2017_gradelevel: Ages 6-10
+  coursec-2018_gradelevel: Ages 6-10
+  coursec-2019_gradelevel: Ages 6-10
+  coursec-2020_gradelevel: Ages 6-10
+  coursec-2021_gradelevel: Ages 6-10
+  coursec-2022_gradelevel: Ages 6-10
+  coursec_gradelevel: Ages 6-10
+  coursed-2017_gradelevel: Узраст од 7 до 11 година
+  coursed-2018_gradelevel: Узраст од 7 до 11 година
+  coursed-2019_gradelevel: Узраст од 7 до 11 година
+  coursed-2020_gradelevel: Узраст од 7 до 11 година
+  coursed-2021_gradelevel: Узраст од 7 до 11 година
+  coursed-2022_gradelevel: Узраст од 7 до 11 година
+  coursed_gradelevel: Узраст од 7 до 11 година
+  coursee-2017_gradelevel: Годишта 8.-12.
+  coursee-2018_gradelevel: Годишта 8.-12.
+  coursee-2019_gradelevel: Годишта 8.-12.
+  coursee-2020_gradelevel: Годишта 8.-12.
+  coursee-2021_gradelevel: Годишта 8.-12.
+  coursee-2022_gradelevel: Годишта 8.-12.
+  coursee_gradelevel: Годишта 8.-12.
+  coursef-2017_gradelevel: Узраста 9.-13.
+  coursef-2018_gradelevel: Узраста 9.-13.
+  coursef-2019_gradelevel: Узраста 9.-13.
+  coursef-2020_gradelevel: Узраста 9.-13.
+  coursef-2021_gradelevel: Узраста 9.-13.
+  coursef-2022_gradelevel: Узраста 9.-13.
+  coursef_gradelevel: Узраста 9.-13.
+  coursera_beyond_platformtext: Модерни претраживачи
+  create_art_with_zombie: или направи напредну уметност са зомбијем
   csedweek_banner_hoc: '<a href="http://hourofcode.com" style="color: white; text-decoration:underline;
     font-weight:bold">Сат програмирања </a>долази. Позивамо све учитеље и организаторе,
     <a href="http://hourofcode.com" style="color: white; text-decoration:underline;
@@ -22,202 +250,402 @@ sr-SP:
     на недељи едукације о компјутерској науци.</a>'
   csedweek_banner_teachers_text: Да ли сте ви учитељ компјутерских наука? Погледајте
     друге на недељи едукације о компјутерској науци.
-  n_have_learned_an_hoc: "<h1>Испробај</h1><h2>Сат Програмирања</h2><h3># посећено</h3>"
-  anybody_can_learn: Сви могу да науче.
-  learn_now: Учите сада
-  petition_message: Сваки ученик у свакој школи треба да има прилику да учи информатику
-  petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
-  petition_join_others: Придружи се осталима
-  name: Име
-  email: Електронска пошта
-  zipcode: Поштански број или име државе
-  submit: Пошаљи
-  twentyhours_heading: Пробајте наш курс Увод у информатику
-  twentyhours_text: Завршили сте свој први Час програмирања? Научите више основа информатике
-    и концепте програмирања у курсу који следи.
-  og_title: Свако дете заслужује шансу
-  og_title_soon: Hour of Code је стигао
-  og_description: Сваки ученик у свакој школи треба да има прилику да учи рачунарске
-    науке.
-  csedweek_og_title: Hour of Code је стигао
+  csedweek_dates: 8-14 Децембар, 2014
+  csedweek_map_header: "# CSEdWeek / Hour of Code догађаји широм света"
+  csedweek_map_legend_cs_tech_jam: Посебан догађај
+  csedweek_map_legend_event: Час кода догађај
+  csedweek_map_legend_title: Легенда
+  csedweek_map_search_placeholder: Тражи Hour of Code догађања
+  csedweek_map_search_reset: Почни поново
+  csedweek_map_search_search: Тражи
+  csedweek_map_signup: Пријавите свој догађај
   csedweek_og_description: Hour of Code је међунродни покрет који обухвата милионе
     ученика свих узраста у преко 180 држава света на преко 45 језика.
-  hoc2014_heading: Придружите се<a href="http://hourofcode.com">Часу програмирања
-    </a><br/>8.-14.децембар,2014<br/>
-  hoc2014_students: Студенти
-  hoc2014_try: Пробајте
-  hoc2014_teachers: Наставници
-  hoc2014_host: Одржите
-  hoc2014_everyone: Сви
-  hoc2014_support: Подржите &#x25BE;
-  hoc2014_whatishoc: Шта је Час програмирања?
-  csedweek_map_header: "# CSEdWeek / Hour of Code догађаји широм света"
-  csedweek_map_signup: Пријавите свој догађај
-  csedweek_map_search_placeholder: Тражи Hour of Code догађања
-  csedweek_map_search_search: Тражи
-  csedweek_map_search_reset: Почни поново
-  csedweek_map_legend_title: Легенда
-  csedweek_map_legend_event: Час кода догађај
-  csedweek_map_legend_cs_tech_jam: Посебан догађај
-  cded_sign_up: Региструј се
-  cded_try_it: Пробајте
-  try_now: Испробај сада
-  california_heading: Замолите Вашу школу да се у њој учи информатика
-  california_text: Било који наставник може да понуди наше <a href='http://studio.code.org/'>бесплатне
-    курсеве</a>. Било која основна школа може да<a href='http://code.org/educate/k5'>учи
-    информатику</a>. Питајте средње школе да <a href='http://code.org/educate/districts'>буду
-    наши партнери.
-  california_button: Сазнајте више
+  csedweek_og_title: Hour of Code је стигао
+  csfirst_gradelevel: Годишта 9.-14.
+  csfirst_platformtext: Модерни интернет претраживачи
+  csfirst_shortdescription: Анимирај причу са два морска карактера. Направи свој стил!
+  dashboard_action_cancel: Откажи
+  dashboard_action_confirm: Желите ли да избришете?
+  dashboard_action_delete: Обриши
+  dashboard_action_delete_no: Не
+  dashboard_action_delete_yes: Да
+  dashboard_action_done: Готово
+  dashboard_announce_learn_more_button: Сазнајте више
+  dashboard_classroom_strategies: Стратегије подучавања за учитеље
+  dashboard_course1: 'Курс 1:'
+  dashboard_course2: 'Курс 2:'
+  dashboard_course3: 'Курс 3:'
+  dashboard_course4: 'Курс 4 (почетнички): '
+  dashboard_course_csina: Наука информатике у Алгебри
+  dashboard_course_csins: Информатика у науци
+  dashboard_course_csp: AP ® Информатички принципи науке
+  dashboard_course_ecs: Истраживање компјутерске науке
+  dashboard_curriculum: Наставни план
+  dashboard_curriculum_csina: 'Наука информатике у Алгебри:'
+  dashboard_curriculum_csins: 'Информатика у науци:'
+  dashboard_curriculum_csp: 'AP® Принципи информатичких наука:'
+  dashboard_curriculum_ecs: 'Истраживање компјутерске науке:'
+  dashboard_curriculum_high_title: Едукатор ресурса из средње школе
+  dashboard_curriculum_k5_title: К-5 наставнички извори
+  dashboard_curriculum_middle_title: Научни извори из средње школе
+  dashboard_curriculum_overview: Преглед наставног плана за вртић
+  dashboard_debugging: 'Отклањање грешака:'
+  dashboard_faq: Често постављана питања
+  dashboard_faq_k5: K-5 Често постављана питања
+  dashboard_framework: Оквир
+  dashboard_glossary: Појмовник
+  dashboard_grade_k: Вртић
+  dashboard_grade_other: Други
+  dashboard_high_courses: једногодишњи средњошколски курс
+  dashboard_hoc_courses: Сат програмирања за све узрасте
+  dashboard_hoc_courses_desc: Пробај један од ових примера 1. сат са својим студентима!
+  dashboard_implementation_guide: Водич за имплементацију
+  dashboard_k5_courses: 20. часовни курс за К-5
+  dashboard_landing_available_courses: Ово су курсеви тренутно доступни за вас и ваше
+    ученике.
+  dashboard_landing_available_title: Доступни курсеви
+  dashboard_landing_educator_blog: Прочитајте о новостима и ажурирањима наших материјала
+    на нашем едукаторском блогу
+  dashboard_landing_loading: Учитава се...
+  dashboard_landing_more_tutorials: Желите да погледате још примера?
+  dashboard_landing_more_tutorials_desc: Ту је још предлога <a href="/learn/beyond">предложених
+    од наших партнера.</a> Научи програмиранје са роботима, прави интернет странице,
+    направи своју апликацију, или истражи друге језике као C++, Ruby, or Python!
+  dashboard_landing_new_beta: Ново! Пробајте наше пробне курсеве за вртић.
+  dashboard_landing_new_k5courses: Ново! Пробајте наше курсеве за вртић.
+  dashboard_landing_news_title: Ресурси едукатора за вртић (само на Енглеском)
+  dashboard_landing_office_hours: Питајте питање уживо! Посетите нашу месечну понуду
+    видео разговарања.
+  dashboard_landing_print_certificates: Штампај потврде ученицима који су завршили
+    курс
+  dashboard_landing_print_progress: Штампање је у току
+  dashboard_landing_progress_biggest: Ово је напредак за вашу највећу секцију.
+  dashboard_landing_progress_title: Напредак у главном курсу
+  dashboard_landing_students_manage: Видите и управљајте вашим ученицима
+  dashboard_landing_students_title: Ваши ученици
+  dashboard_landing_title: Почетна страница за учитеље
+  dashboard_landing_useful_links: Други корисни линкови (само на Енглеском)
+  dashboard_landing_video: Гледајте овај видео
+  dashboard_landing_video_player: Тестирајте наш нови video player у вашој школи
+  dashboard_landing_view_as_student: Види овај сајт као ученик
+  dashboard_landing_view_progress: Видите напредак за%{biggest_section}
+  dashboard_landing_watch_video: за обилазак нових функција!
+  dashboard_landing_welcome: Добродошли на нову и побољшану учитељску контролну таблу.
+  dashboard_lesson_plans: План лекција
+  dashboard_login_none: Електронска пошта
+  dashboard_login_picture: Слика
+  dashboard_login_word: Реч
+  dashboard_middle_courses: двадесетчасовни средњошколски курс
+  dashboard_navigation_add_students: Додајте ученике
+  dashboard_navigation_all_sections: Налози за ученике и напредак
+  dashboard_navigation_home_page: Почетна страна за учитеље
+  dashboard_navigation_lesson_plans_resources: План лекција и ресурса
+  dashboard_navigation_manage_students: Управљање ученицима
+  dashboard_navigation_section: Секција:%{section_name}
+  dashboard_navigation_section_community: Помоћ и заједница
+  dashboard_navigation_section_lesson_plans: План лекција и ресурса
+  dashboard_navigation_section_pd: Професионални развој
+  dashboard_navigation_section_speakers: Рачунарске науке <br/> Гостујући говорници
+  dashboard_navigation_section_student_progress: Налози за ученике и напредак
+  dashboard_navigation_section_teacher_progress: Напредак кроз курс
+  dashboard_navigation_student: Ученик:%{student_name}
+  dashboard_navigation_view_progress: Напредак
+  dashboard_navigation_view_stats: Статистика
+  dashboard_overview: Преглед
+  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
+    овде</a>да би добили наш документ о приватности који можете да поделите или одштампате
+    са вашим ученицима.
+  dashboard_progress_not_completed: није завршено
+  dashboard_puzzle: Пузла
+  dashboard_puzzle_solving: 'Решавање проблема:'
+  dashboard_question: Питање
+  dashboard_response: Одговор
+  dashboard_sections_account_creation_question: Ко прави налог од ученика?
+  dashboard_sections_choose_secret: Ако желите да дате вашим ученицима, изаберите
+    тајну <b>реч</b>или<b>слику</b>за ту секцију.
+  dashboard_sections_close: Затвори
+  dashboard_sections_email_question: Да ли сви студенти имају имејл адресу која функционише?
+  dashboard_sections_jumbotron_instruction: Направите нову секцију и додајте ученике
+    у њих.Секције вам помажу да организујете ученике у мање групе да би могли да видите
+    њихов напредак и управљате њиховим налозима.
+  dashboard_sections_login_type_explanation: Ово вам објашњава који од ових брста
+    пријављивања, <b>слику, реч или имејл адресу</b> , би сте изабрали за групу.
+  dashboard_sections_name: Име секције
+  dashboard_sections_new_section: Нова секција
+  dashboard_sections_password_account_creation: Лозинке направљне од стране ученика
+  dashboard_sections_password_question: Шта ученици користе као ''лозинку''?
+  dashboard_sections_picture_account_creation: Слика додељена од Code.org
+  dashboard_sections_print_secrets: Затим, можете отштампати листу са картицама на
+    којима су подаци о налозима. Картице поделите  појединачно сваком ученику.
+  dashboard_sections_secret_none: Ако бисте желели да ваши ученици управљају сопственим
+    налозима, укључујући бирање сопствених лозинки, изаберите тајни тип<b>none</b>.
+  dashboard_sections_secret_picture: "<b>Слика</b>вам дозвољава да поставите тајну
+    слику за сваког ученика,идеално за оне ученике који још не знају да пишу."
+  dashboard_sections_secret_word: "<b>Реч</b>вам дозвољава да поставите тајну реч
+    за сваког ученика."
+  dashboard_sections_sign_in_main: http://code.or и кликните "Пријави ме"
+  dashboard_sections_sign_in_question: Где се ученици пријављују?
+  dashboard_sections_sign_in_unique: Јединствена интернет страница на  "Управљатјте
+    ученицима"
+  dashboard_sections_switch_section: 'Промените групу:'
+  dashboard_sections_table_code: Секција програмирања
+  dashboard_sections_table_course: Курс
+  dashboard_sections_table_grade: Степен
+  dashboard_sections_table_secret: Врста пријаве
+  dashboard_sections_table_section: Секција
+  dashboard_sections_table_students: Студенти
+  dashboard_sections_word_account_creation: Једноставна реч додељена од Code.org
+  dashboard_sections_yes_both: Да, желим да копирам ученика(е) како би били у овој
+    и у новој секцији
+  dashboard_sequence: Низ Акција
+  dashboard_stage: фаза
+  dashboard_standards: Стандарди
+  dashboard_student: студент
+  dashboard_student_worksheet: радна листови за ученике
+  dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком
+    реду по једног:'
+  dashboard_students_completed_levels: Завршени нивои
+  dashboard_students_female: Женско
+  dashboard_students_join_link: Реците вашим ученицима да направе сопствене налоге
+    и придруже се вашој групи на
+  dashboard_students_male: Мушко
+  dashboard_students_name: Име
+  dashboard_students_new_section: Направили сте нову групу! Сада додајте ваше ученике
+    користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад.
+  dashboard_students_no_email: Ако ваши студенти немају имејл адресе, или бисте желели
+    да направите налоге за њих, промените тајну за групу у <b>реч</b> или <b>слику</b>.
+  dashboard_students_print_info: Отштампајте картице са подацима за пријављивање ученика/це.
+  dashboard_students_print_page: Одштампај ову страницу
+  dashboard_students_progress: Напредак
+  dashboard_students_reset_picture: Можете да ресетујете тајну слику било када бирањем
+    <b>Покажи тајну</b> и тада<b>Ресетуј тајну</b>. Нова слика ће бити изабрана за
+    тог ученика када се пријаве.
+  dashboard_students_reset_word: 'Можете ресетовати тајне речи ученика било када бирањем
+    <b>Покажи тајну</b> и тад <b>Ресетуј тајну</b>. Нови пар тајних речи ће бити изабране
+    за тог студента да их користи када се пријаве. '
+  dashboard_students_secret_picture: Тајна слика
+  dashboard_students_secret_picture_title: Тајна слика
+  dashboard_students_secret_word: Тајна Реч
+  dashboard_students_secret_word_title: Тајна реч
+  dashboard_students_share_section: 'Поделите страницу за пријаву ове групе са својим
+    ученицима:'
+  dashboard_students_total_lines: Редови програма
+  dashboard_students_url: УРЛ адреса странице
+  dashboard_teacher: Учитељ
+  dashboard_teacher_worksheet: радни листови за учитеље
+  dashboard_view_all_lesson_plans: Видите план свих лекција
+  download_offline: Преузми верзију за рад без интернета.
+  educator_notes: Белешке за едукаторе
+  edx_beyond_platformtext: Модерни претраживачи
+  email: Електронска пошта
+  en: Информатика
+  enter_country: Унеси земљу ако не живиш у САД-у
+  enter_valid_age: Molimo da izaberete važeće godine
+  enter_valid_email: Молимо да унесете валидну емаил адресу
+  finch_beyond_gradelevel: Узраста 8+
+  finch_beyond_platformtext: Роботске набавке
+  flappy_gradelevel: Ages 6-106
   flappy_heading: Флапи рођендан сајту Code.org
+  flappy_name: Направите флапи игру
+  flappy_platformtext: Модерни претраживачи, паметни телефони, таблети
+  flappy_shortcode: маши крилима
+  flappy_shortdescription: Направи своју игру - Флепи Птица, Ајкула, или Подморница
   flappy_text: Code.org је управо напунио годину дана.<br/><br/>Прославите са нама
     прављењем сопствене<b>Флапи</b>игре.Програмирајте своја правила, и поделите их
     са пријатељима!
-  view_english_site: Погледај енглеску верзију
-  non_english_tutorials: 'Туторијали преведени на више језика:'
-  write_your_first_program: Напиши свој први компјутерски програм
-  learn_cs_concepts: Научи основе компјутерских наукаса са повуци и испусти програмирањем.
-    Ово је туторијал у облику игрице  у којем видео лекције дају Bill Gates, Mark
-    Zuckerberg, Angry Birds and Plants vs. Zombies. Научи понављање петље, ако-онда
-    изјаве, и основне алгоритме.
-  all_ages: Сви узрасти
-  beginner: Почетник
-  n_participants: "# учесници"
-  go: Иди
-  thank_you_: Хвала!
-  congratulations: Честитамо!
-  congratulations_on_completing_hoc: Честитамо на завршавању 1 Часа Програмирања
-  congratulations_volunteer: 'Честитамо: Сад кад сте испробали Hour of Code,<a href="https://code.org/volunteer">пријавите
-    се да будете волонтер у разреду</a> и помогнете ученицима да науче Hour of Code!'
-  congrats_next_tutorials_title: Пређи на следећи ниво
-  congrats_next_tutorials_desc: Пробај ове кратке једночасовне туторијале или пробај
-    <a href="%{current_path}/next">partnerski tutorijali</a>.
-  get_a_certificate_of_achievement: Узмите сертификат
-  view_course: Види курс
-  view_unit: Погледај лекцију
-  make_app: Креирај апликацију
-  congrats_guest_speaker_title: Пронађите предавача за Ваш разред
-  third_party_gradelevel_2to8: Разреди 2-8
-  third_party_gradelevel_4to12: Разреди 4-12
-  third_party_gradelevel_5to12: Разреди 5-12
-  third_party_gradelevel_6plus: Разреди 6+
-  third_party_curriculum: Наставни план
-  enter_valid_age: Molimo da izaberete važeće godine
-  enter_valid_email: Молимо да унесете валидну емаил адресу
+  footer_donate: Донирај
+  footer_partners: Партнери
+  footer_privacy_policy: Политика приватности
+  footer_support: Помоћ и заједница
+  footer_terms: Услови
+  frozen_gradelevel: За године од 8 до 108
+  frozen_longdescription: Хајде да искористимо програмирање да би се придружили Ани
+    и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете
+    по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
+  frozen_name: Програмирај са Аном и Елзом
+  frozen_platformtext: Модерни претраживачи + таблети
+  frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани
+    и Елзи у истраживању магије и лепоте леда.
+  gender: Пол
   get_a_certificate_message: Послаћемо Вам сертификат и информације како да <a href='/learn/beyond'>
     Научите и више од сата кодирања</a>
   get_a_certificate_message_after: Кликните на диплому да би је преузели или одштампали.
     Сада, наставите са нашим <a href='http://studio.code.org'>другим курсевима</a>,
     или да би видели више могућности идите на <a href='/learn/beyond'>Научите више
     него у Сату програмирања</a>.
-  thanks_for_submitting: Хвала на датим информацијама!
-  if_you_enjoyed: Ако сте уживали учећи, питајте пријатеље да и они пробају! Ми желимо
-    да цео свет научи.
-  personalize_certificate: Персонализујте свој сертификат
-  share_achievement: Поделите своје постигнуће
-  beyond_hour_message: Наставите са нашим <a href='http://studio.code.org'>другим
-    курсевима</a>, или видите више опција на <a href='/learn/beyond'>Научите више
-    него у једном сату</a>.
-  leaderboards_for_hoc: Лјествице за Сат Програмиранја.
-  support_url: http://support.code.org/
-  country: Землја
-  city: Град
-  gender: Пол
-  boys: Момци
-  girls: Девојке
-  give_my_hour: 'Дај мој сат следећем:'
-  girls_team: Женски тим
-  boys_team: Мушки тим
-  tell_the_world: Подели Свету!
-  thanks_for_voting: Хвала на гласању!
-  share_on_facebook: Подели на Facebook-u
-  share_on_twitter: Подели на Тwitteru
-  beyond_an_hour: После Часа програмирања
+  get_a_certificate_of_achievement: Узмите сертификат
   get_started: Покрени
-  i_agree: Слажем се
-  participant_select: "-Изабери-"
-  participant_student: студент
-  participant_parent: Родитељ
-  participant_educator: Учитељ
-  participant_engineer: Софтверски инжињер
-  participant_other: Ништа од наведеног
-  print_all: Отштампај све
-  print_ice_art: Одштампај свој "ice art"
-  create_art_with_zombie: или направи напредну уметност са зомбијем
-  i_am_a: Ја сам
-  never_spam: Никада вам нећемо слати нежељену пошту
-  enter_country: Унеси земљу ако не живиш у САД-у
-  used_infrequent_updates: Само за ретка ажурирања
-  privacy_practices_children: Видите наше праксе за приватност за децу
-  petition_thankyou: Хвала вам што сте потписали петицију
-  continue_learning_header: Наставите учити преко једног часа
-  continue_learning_body: Постоји много опција. Можете научити преко интернета, или
-    у локалној школи, или на летњем кампу.
-  learn_code_studio: Испробајте курсеве Code Studio
-  learn_next_level: Настави до следећег нивоа
-  learn_online: Пробајте друге курсеве на интернету
-  learn_classes: Пронађите локалне часове
-  learn_back_to_minecraft: Настави да учиш уз Minecraft
-  hoc_is_here: "#HourOfCode поново почиње 5. и траје до 11. децембра. https://youtu.be/KsOIlDT145A."
-  just_did_hoc: 'Управо сам завршио #HourOfCode - погледајте га! @codeorg'
-  learn_hoc: Научите час кодирања
-  beyond_hoc: Изван Једног Часа
-  what_gender: Којег сте пола?
   girl: Девојка
-  boy: Дечак
-  help_recruit_coders: Помозите нам да рекрутујемо више кодера вашем тиму!
+  girls: Девојке
+  girls_team: Женски тим
+  give_my_hour: 'Дај мој сат следећем:'
+  go: Иди
+  groklearning_beyond_platformtext: Модерни интернет претраживачи
+  groklearning_beyond_shortdescription: Основни увод у Пајтон програмирање
+  groklearning_name: Докторка Елиза, виртуелни саговорник
+  groklearning_platformtext: Модерни интернет претраживачи
+  groklearning_shortdescription: Научи чет-бота Елизу тако да твоји пријатељи помисле
+    да је она човек!
+  hacketyhack_beyond_gradelevel: Средња школа
+  hacketyhack_beyond_platformtext: Статично инталирање
+  header_about_contact: Контактирајте нас
+  header_about_donors: Донатори
+  header_about_faqs: Често постављана питања
+  header_about_jobs: Послови
+  header_about_partners: Партнери
+  header_about_team: Цео тим
+  header_about_us: О нама
+  header_courses: курсеви
+  header_educate_hoc: Час кода
+  header_help_us: Помози нам
+  header_learn: Научи
+  header_legal_privacy: Политика приватности
+  header_legal_tos: Услови коришћења
+  header_report_bug: Пријави проблем
+  header_sections: Секције
+  header_stats: Статистика
+  header_teacher_community: Заједница учитеља
+  hello: Здраво свете
   help_recruit: помозите нам да рекрутујемо више кодера!
-  lines_of_code: Преко<b># Линије кода</b> Исписане по датуму.
-  lines_of_code_alt: "<b>#</b>Линије кода написане од стране сутдената"
-  who_has_done_hoc: 'Ко је одрадио #HourOfCode? @codeorg'
+  help_recruit_coders: Помозите нам да рекрутујемо више кодера вашем тиму!
+  help_translate: Помози нам да преведемо.
+  hoc2014_everyone: Сви
+  hoc2014_heading: Придружите се<a href="http://hourofcode.com">Часу програмирања
+    </a><br/>8.-14.децембар,2014<br/>
+  hoc2014_host: Одржите
+  hoc2014_students: Студенти
+  hoc2014_support: Подржите &#x25BE;
+  hoc2014_teachers: Наставници
+  hoc2014_try: Пробајте
+  hoc2014_try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
+  hoc2014_try_new_tutorials: Пробајте наше нове водиче за Сат програмирања
+  hoc2014_try_scrat: Angry Birds, Plants vs Zombies,и Ice age
+  hoc2014_whatishoc: Шта је Час програмирања?
+  hoc2018_creativity: креативност
+  hoc2018_creativity_courses: Сазнај више помоћу курсева Часа програмирања
+  hoc2018_creativity_courses_link: Сазнај више на <a href="https://studio.code.org/courses">Час
+    програмирања курсеви</a>
+  hoc2018_creativity_create: Креирај
+  hoc2018_creativity_hoc_about: 'Ове године, Час програмирања посвећен је креативности. '
+  hoc2018_creativity_hoc_coming: Час програмирања долази…
+  hoc2018_creativity_homepage: Дај машти крила и отвори ум за нова стварања. Започни
+    Часом програмирања реализацију сопствене идеје, ма шта она била. Погледај наш
+    видео.
+  hoc2018_creativity_social_media: 'Ове године #Час програмирања је посвећен креативности.
+    Ја учествујем! А ти?'
+  hoc2018_creativity_social_media_2: 'Ове године #Час програмирања је посвећен креативности.
+    Шта ти желиш да створиш?'
+  hoc2018_dance_amazon_about_future_engineer_button: Сазнајте више
+  hoc2018_dance_amazon_scholarship_programs_button: Пријавите се
+  hoc2018_dance_amazon_scholarship_programs_title: Стипендије
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Уз партнерство са
+  hoc2018_dance_amazon_try_coding_this_summer_button: Придружи се кампу
+  hoc2018_dance_amazon_try_coding_this_summer_title: Пробај да програмираш овог лета
+  hoc2018_dance_create_your_own_dance_title: Направи своју плесну журку
+  hoc2018_dance_featured_student_creations_title: Одабрани пројекти ученика
+  hoc2018_dance_keep_on_dancing_box_title: Настави плес
+  hoc2018_dance_keep_on_dancing_button: Започни Други део
+  hoc2018_dance_keep_on_dancing_description: Иди даље од првог часа са новим идејама
+    за пројекте.
+  hoc2018_dance_keep_on_dancing_specs: Језик | Формат | Старост 13+
+  hoc2018_dance_measure: Такт
+  hoc2018_dance_measure_colon: 'Такт:'
+  hoc2018_dance_party_box_description: Направи Плесну журку и подели је са пријатељима!
+  hoc2018_dance_party_button: Покрени
+  hoc2018_dance_party_landing_title: Плес
+  hoc2018_dance_party_specs: Језик | Формат | Старост 6-106
+  hoc2018_dance_party_subheading: Помози у превођењу Плесне журке
+  hoc2018_dance_teacher_resources_tile1_description: Планови часова, сертификати,
+    филтери за музику.
+  hoc2018_dance_teacher_resources_tile2_button: Активност ван мреже
+  hoc2018_dance_teacher_resources_tile2_description: Без рачунара! Научимо концепте
+    програмирања кроз креирање сопствене кореографије.
+  hoc2018_dance_teacher_resources_tile2_title: Плесна журка без интернета
+  hoc2018_dance_teacher_resources_title: Ресурси за учитеље
+  hoc2018_dance_video1: Плесна журка - Увод
+  hoc2018_dance_video2: Плесна журка - Догађаји
+  hoc2018_dance_video3: Плесна журка - Својства
+  hoc2018_dance_video4: Плесна журка - Честитамо
+  hoc2018_dance_video_title_what_is_creativity: Шта је креативност?
+  hoc2018_dance_videos_section_heading: Потражи инспирацију
+  hoc2018_dance_view_creativity_video_playlist: Шта је креативност? Погледај све примере
+    (5 мин)
+  hoc2018_mc_designer_description: Програмирај животиње и друга Minecraft створења
+    у својој верзији Minecraft-а.
+  hoc2018_mc_designer_title: Дизајнер игрице Minecraft
+  hoc2018_mc_educators_box2_button: Преузимање
+  hoc2018_mc_homepage_join_us: Pridruži nam se
+  hoc2018_mc_homepage_try_it: Пробајте
+  hoc2018_mc_no_internet: Немаш приступ интернету?
+  hoc2018_mc_start: Покрени
+  hoc2018_mc_video_1min: 1 мин
+  hoc2018_mc_video_2min: 2 мин
+  hoc2018_mc_video_5min: 5 мин
+  hoc2018_mc_video_title_anybody_can_learn: Свако може да научи
+  hoc2018_mc_video_title_inspire_girl: Inspirišimo devojčice
+  hoc2018_mc_watch_videos: Пре него што почнеш, погледај један од ових инспиративних
+    видео снимака
+  hoc2018_mc_with_microsoft: Уз партнерство са
+  hoc2022_landing_page_create_title: Креирај
+  hoc_is_here: "#HourOfCode поново почиње 5. и траје до 11. децембра. https://youtu.be/KsOIlDT145A."
   hoc_leaderboards: Табела најуспешнијих учесника Сата кодирања
-  students_and_lines: "%{students} студената је одрадило сат кодирања и напислао %{lines}
-    линија кода."
-  start_hoc: Започните Сат кодирања, сада
-  contact_form_topic_press: Штампа/медији (интервју или говор)
-  stats_nina: '"Сваки дан је донео исти резултат &mdash; 100% ангажовања." - Нина
-    Николс Пири, учитељ'
-  stats_student: '"Знала сам да је ово <b>једном у животу</b> прилика." - Маријана
-    Алзејт, пети разред'
-  stats_michael: '"Нисам <b>никад, никад</b> видео моје ђаке тако узбуђене око учења."
-    - Мајкл Кларк, учитељ'
-  studiobar_title: Истражите<a href='http://studio.code.org'>Студио Програмирања</a>
-  studiobar_title_nolink: Истражите Студио Програмирања
-  studiobar_elementary_title: Основни курсеви
-  studiobar_elementary_body: Наша три нова курса за врт&#8209;ић
-  studiobar_hoc_title: сата кодирања
-  studiobar_hoc_body: Научите да програмирате уз Angry Birds
-  studiobar_flappy_body: Направите и поделите сопствену Флапи игру
-  studiobar_teacher_title: Направљено за учитеље
-  studiobar_teacher_body: Уведите Студио програмирања у вашу учионицу
-  studiobar_frozen_title: Час кода
-  studiobar_frozen_body: Направи зимску земљу чуда са Аном и Елзом
-  studiobar_donate_title: Донирај
-  studiobar_donate_body: Једно дете нешто научи за сваки долар који донирате
-  studiobar_shop_title: Купуј
-  studiobar_shop_body: Сруши стереотипе. Са поносом носи наш лого.
-  homepage_hero_text_malala: |-
-    &ldquo;Изазивам девојке из свих земаља да науче Сат Програмирања&rdquo;
-    Малала, добитник Нобелове награде за мир
-  homepage_hero_text_susan: |-
-    &ldquo;Ако можеш променити технологију,
-    можеш променити свет.&rdquo;
-    Сузан, генерални директор YouTube-a
-  homepage_hero_text_fistbump: |-
-    &ldquo;Немој се само играти на свом телефону,
-    испрограмирај га.&rdquo;
-    Председник САД, Барак Обама
-  homepage_hero_text_sheryl: |-
-    &ldquo;Наша деца &mdash; укључујући и девојчице &mdash;
-    требају шансу да науче компјутерске науке.&rdquo;
-    Шерил, извршни директор Фејсбука
-  homepage_hero_text_satya: |-
-    &ldquo;Компјутерске науке могу откључати
-    највеће могућности на свету.&rdquo;
-    Сатја, генерални директор Мајкрософта
+  hoc_overview_start_tutorial: Покрени
+  homepage_action_text_codevideo: Погледајте видео
+  homepage_action_text_girlvideo: Inspirišimo devojčice
+  homepage_action_text_hoc: Sat programiranja za svakog učenika.
+  homepage_action_text_join_us: Pridruži nam se
+  homepage_action_text_learn: Почни
+  homepage_action_text_num_served: "# приказано"
+  homepage_action_text_sign_up: Региструј се
+  homepage_action_text_signpetition: Потпишите петицију
+  homepage_action_text_teachervideo: Погледајте видео
+  homepage_action_text_try_it: Пробајте
+  homepage_action_text_volunteers: Potrebni volonteri za tehničku podršku
+  homepage_action_text_watchvideo: Погледајте видео
+  homepage_banner_20k_teachers: 20,000 наставника је обучено, и сада предају информатику
+    и програмирање у школама.
+  homepage_banner_20k_teachers_link: Сазнајте више
+  homepage_banner_40k_teachers_link: Сазнајте више
+  homepage_banner_congress: Лидери у Америци позивају конгрес да финансијски помогне
+    рачунарске науке у основним и средњим школама.
+  homepage_banner_congress_link: Подржи и ти
+  homepage_banner_emailprivacy: Уводимо важне измене у начин заштите приватности студената.
+  homepage_banner_emailprivacy_link: Сазнај више
+  homepage_banner_link_prizes: 'Pridruži se najvećem događaju za učenje u istoriji. '
+  homepage_banner_privacy_link: Сазнајте више
+  homepage_banner_text_link: Сазнајте више
+  homepage_banner_text_prizes: 'Sat programiranja je opet tu od 7. do 13. decembra. '
+  homepage_below_hero_announcement_link_text: Сазнајте више
+  homepage_below_hero_announcement_text: Ми бринемо о вашој приватности и вршимо неке
+    исправке у нашој политици приватности, које ће ступити на снагу 25. маја.
+  homepage_donors_donate: Донирај
+  homepage_donors_seall: Погледај све
+  homepage_header_donors: Code.org захваљује својим сарадницима
+  homepage_hero_hoc_is_coming: Hour of Code је стигао
+  homepage_hero_hoc_is_here: Hour of Code је стигао
   homepage_hero_text_bosh: |-
     &ldquo;Ако програмирате, можете изабрати
     прави смер у свом животу&rdquo;
     Крис Бош
+  homepage_hero_text_fistbump: |-
+    &ldquo;Немој се само играти на свом телефону,
+    испрограмирај га.&rdquo;
+    Председник САД, Барак Обама
+  homepage_hero_text_malala: |-
+    &ldquo;Изазивам девојке из свих земаља да науче Сат Програмирања&rdquo;
+    Малала, добитник Нобелове награде за мир
+  homepage_hero_text_satya: |-
+    &ldquo;Компјутерске науке могу откључати
+    највеће могућности на свету.&rdquo;
+    Сатја, генерални директор Мајкрософта
+  homepage_hero_text_sheryl: |-
+    &ldquo;Наша деца &mdash; укључујући и девојчице &mdash;
+    требају шансу да науче компјутерске науке.&rdquo;
+    Шерил, извршни директор Фејсбука
+  homepage_hero_text_stat_loc: "#loc линија кода писане од стране ученика"
+  homepage_hero_text_stat_served: 'Час Кода: #served served'
+  homepage_hero_text_stat_students: "#student_count студент рачуни на коду Студио"
   homepage_hero_text_student1: |-
     &ldquo;Ове вештине су измениле моју будућност.
     Да не помињем да је просто забавно.&rdquo;
@@ -232,895 +660,467 @@ sr-SP:
     ваш ум жели.&rdquo;\nМаја, други разред"
   homepage_hero_text_student5: "&ldquo;Рачунарска наука није за неког другог. \nОна
     је за вас, овде и сад.&rdquo;\nЖералдо, учитељ"
+  homepage_hero_text_susan: |-
+    &ldquo;Ако можеш променити технологију,
+    можеш променити свет.&rdquo;
+    Сузан, генерални директор YouTube-a
   homepage_hero_text_teacher1: "&ldquo;Програмирање подстиче креативност, инспирацију
     и \nиновације &mdash; а све оне су неопходне у било којој каријери.&rdquo;\nФлореса,
     учитељ"
   homepage_hero_text_teacher2: "&ldquo;Овај програм је постигао да се 100% мојих \nђака
     око њега ангажује и активно учествује.&rdquo;\nАдам, учитељ"
-  homepage_hero_text_stat_loc: "#loc линија кода писане од стране ученика"
-  homepage_hero_text_stat_students: "#student_count студент рачуни на коду Студио"
-  homepage_hero_text_stat_served: 'Час Кода: #served served'
-  homepage_hero_hoc_is_coming: Hour of Code је стигао
-  homepage_hero_hoc_is_here: Hour of Code је стигао
-  homepage_slot_text_hoc: сата кодирања
-  homepage_slot_text_frozen: Залеђено краљевство са Аном и Елзом
-  homepage_slot_text_teacher: Контролна табла за наставнике
-  homepage_slot_text_studio: Сви наши туторијали
-  homepage_slot_text_course4: Course 4
-  homepage_slot_text_shop: Купуј
-  homepage_action_text_hoc: Sat programiranja za svakog učenika.
-  homepage_action_text_num_served: "# приказано"
-  homepage_action_text_join_us: Pridruži nam se
-  homepage_action_text_sign_up: Региструј се
-  homepage_action_text_try_it: Пробајте
-  homepage_action_text_volunteers: Potrebni volonteri za tehničku podršku
-  homepage_action_text_codevideo: Погледајте видео
-  homepage_action_text_teachervideo: Погледајте видео
-  homepage_action_text_watchvideo: Погледајте видео
-  homepage_action_text_girlvideo: Inspirišimo devojčice
-  homepage_action_text_learn: Почни
-  homepage_action_text_signpetition: Потпишите петицију
   homepage_signpetition_dropdown: Потпишите нашу петицију &#x25BE;
   homepage_signpetition_dropdown_text: Слажем се
-  homepage_banner_text_prizes: 'Sat programiranja je opet tu od 7. do 13. decembra. '
-  homepage_banner_link_prizes: 'Pridruži se najvećem događaju za učenje u istoriji. '
-  homepage_banner_text_link: Сазнајте више
-  homepage_banner_privacy_link: Сазнајте више
-  homepage_banner_20k_teachers: 20,000 наставника је обучено, и сада предају информатику
-    и програмирање у школама.
-  homepage_banner_20k_teachers_link: Сазнајте више
-  homepage_banner_congress: Лидери у Америци позивају конгрес да финансијски помогне
-    рачунарске науке у основним и средњим школама.
-  homepage_banner_congress_link: Подржи и ти
-  homepage_banner_emailprivacy: Уводимо важне измене у начин заштите приватности студената.
-  homepage_banner_emailprivacy_link: Сазнај више
-  homepage_banner_40k_teachers_link: Сазнајте више
-  homepage_slot_text_title_hoc: Час кода
+  homepage_slot_text_blurb_advocates: Подржите наш рад
+  homepage_slot_text_blurb_educators: Научи своје ђаке
   homepage_slot_text_blurb_hoc: Свако може научити. Почните данас
-  homepage_slot_text_link_hoc: Испробај "Hour of Code"
-  homepage_slot_text_link_host: Одржите Сат програмирања
-  homepage_slot_text_link_hocserved: "# приказано"
-  homepage_solot_text_link_volunteer: Volontiraj na Satu programiranja
-  homepage_slot_text_title_students: Студенти
   homepage_slot_text_blurb_students: Истражи све наше туторијале
   homepage_slot_text_blurb_students_courses: Истражите насе курсеве
-  homepage_slot_text_link_codestudio: Испробај Студио Програмирања
-  homepage_slot_text_link_local: Нађи локалну класу
-  homepage_slot_text_link_othercourses: Остали онлајн курсеви
-  homepage_slot_text_title_educators: Едукатори
-  homepage_slot_text_blurb_educators: Научи своје ђаке
-  homepage_slot_text_link_elementary: Основна школа
-  homepage_slot_text_link_middle: Основна школа (од 5. до 8. разреда)
-  homepage_slot_text_link_high: Средња школа
-  homepage_slot_text_link_k5: Курсеви за ниво К-5
-  homepage_slot_text_link_fullcurriculum: Погледајте цео наставни план
-  homepage_slot_text_link_pd: Професионални развој
-  homepage_slot_text_title_advocates: Заговорници
-  homepage_slot_text_blurb_advocates: Подржите наш рад
-  homepage_slot_text_link_stats: Погледај статистику
+  homepage_slot_text_course4: Course 4
+  homepage_slot_text_frozen: Залеђено краљевство са Аном и Елзом
+  homepage_slot_text_hoc: сата кодирања
   homepage_slot_text_link_buy: Укључите се
+  homepage_slot_text_link_codestudio: Испробај Студио Програмирања
   homepage_slot_text_link_donate: Донирај
+  homepage_slot_text_link_elementary: Основна школа
+  homepage_slot_text_link_fullcurriculum: Погледајте цео наставни план
+  homepage_slot_text_link_high: Средња школа
+  homepage_slot_text_link_hoc: Испробај "Hour of Code"
+  homepage_slot_text_link_hocserved: "# приказано"
+  homepage_slot_text_link_host: Одржите Сат програмирања
+  homepage_slot_text_link_k5: Курсеви за ниво К-5
+  homepage_slot_text_link_local: Нађи локалну класу
+  homepage_slot_text_link_middle: Основна школа (од 5. до 8. разреда)
+  homepage_slot_text_link_othercourses: Остали онлајн курсеви
+  homepage_slot_text_link_pd: Професионални развој
   homepage_slot_text_link_shop: Мајце, капе и остало
-  homepage_header_donors: Code.org захваљује својим сарадницима
-  homepage_donors_seall: Погледај све
-  homepage_donors_donate: Донирај
-  homepage_below_hero_announcement_text: Ми бринемо о вашој приватности и вршимо неке
-    исправке у нашој политици приватности, које ће ступити на снагу 25. маја.
-  homepage_below_hero_announcement_link_text: Сазнајте више
-  contact_form_topic_student: Ја сам студент
-  contact_form_topic_parent: Ја сам родитељ
-  contact_form_topic_teacher: Ја сам учитељ/едукатор
-  contact_form_topic_outside_us: Ја сам ван САД.
-  contact_form_topic_contribution: Добровољни принос
-  contact_form_topic_partner: Ја би желео да будем партнер
-  contact_form_topic_other: Други
-  contact_form_label_topic: Тема
-  contact_form_label_email: Ваша имејл адреса
-  contact_form_label_message: Порука
-  contact_form_label_submit: Пошаљи поруку
-  class_submission_in_school: У школи
-  class_submission_in_school_daily_programming_course: Дневни курс програмирања
-  class_submission_in_school_ap_computer_science: AP (напредно знање) компјутерска
-    наука
-  class_submission_in_school_full_university_cs_curriculum: Пуни универзитетски наставни
-    план компјутерске науке
-  class_submission_in_school_robotics_club: Клуб роботике
-  class_submission_in_school_programming_integrated_in_other_classes: Програмирање
-    унето у друге часове (математика, физика, итд)
-  class_submission_in_school_summer_school_cs_program: Програм летње школе компјутерске
-    науке
-  class_submission_in_school_exploring_computer_science: Истраживање компјутерске
-    науке
-  class_submission_in_school_other: Остали у школи
-  class_submission_out_of_school: Ван школе
-  class_submission_out_of_school_summer_camp: Летњи камп
-  class_submission_out_of_school_afterschool_program: Програм за после школе
-  class_submission_out_of_school_all-day_workshop: Целодневна радионица (до једне
-    недеље)
-  class_submission_out_of_school_multi-week_workshop: Вишенедељна радионица
-  class_submission_out_of_school_other: Остали ван школе
-  class_submission_online: На интернету
-  class_submission_online_programming_class: Час програмирања на интернету
-  class_submission_online_teacher_resource: Ресурси за учитеље на интернету
-  class_submission_online_other: Други на интернету
-  class_submission_level_preschool: Предшколско
-  class_submission_level_elementary: Основна школа (од 1. до 4. разреда)
-  class_submission_level_middle_school: Основна школа (од 5. до 8. разреда)
-  class_submission_level_high_school: Средња школа
-  class_submission_level_college: Факултет
-  class_submission_level_vocational: Професионални
-  class_submission_languages_other: Други језик/ци
-  playlab_choose_theme: Одабери своју Play Lab тему
-  playlab_classic_title: Класично
-  playlab_iceage_title: 'Ледено доба - Ускоро
-
-'
-  playlab_iceage_title_live: Ледено доба
-  starwars_subtitle: Изгради галаксију кôдом
-  starwars_javascript_title: JavaScript
-  starwars_javascript_description: Користи повуци-испусти блокове и JavaScript.
-  starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11
-    +
-  starwars_blocks_title: блокови
-  starwars_blocks_description: Искористи повуци-спусти блокове.
-  starwars_blocks_specs: Више језика | Савремени прегледачи, паметни телефони, таблети
-    | Узраст 6-10
-  starwars_platform_text: Модерни претраживачи, паметни телефони, таблети
-  mc_name: Мајнкрафт час програмирања
-  mc_longdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
-    кроз овај Мајнкрафт свет.
-  mc_shortdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
-    кроз овај Мајнкрафт свет.
-  mc_gradelevel: Ages 6-106
-  mc_platformtext: Модерни претраживачи, паметни телефони, таблети
-  mc_specs: Више језика | Савремени прегледачи, паметни телефони, таблети | Узраст
-    6-10
-  minecraft_designer: Дизајнер игрице Minecraft
-  minecraft_agent_button: Покрени
-  minecraft_designer_description: Програмирај животиње и друга Minecraft створења
-    у својој верзији Minecraft-а.
-  minecraft_designer_button: Покрени
-  minecraft_adventurer_button: Покрени
-  minecraft_no_internet: Немаш приступ интернету?
-  minecraft_subtitle: Мајнкрафт час програмирања
-  sports_watch_video: Погледајте видео
-  watch_inspirational_videos: Пре него што почнеш, погледај један од ових инспиративних
-    видео снимака
-  video_title_inspire_girl: Inspirišimo devojčice
-  video_title_anybody_can_learn: Свако може да научи
-  video_title_draymond_green: Hour of Code са Драјмондом Грином
-  video_title_russell_okung: Hour of Code са Раселом Окунгом
-  video_title_real_madrid: Hour of Code са Реал Мадридом
-  video_title_marco_belinelli: Hour of Code са Марком Белинелијем
-  video_title_chris_bosh: Крис Бош о рачунарским наукама
-  video_1min: 1 мин
-  video_2min: 2 мин
-  video_5min: 5 мин
-  speak_another_language: Знаш ли неки други језик?
-  help_translate: Помози нам да преведемо.
-  no_internet: Немаш приступ интернету?
-  download_offline: Преузми верзију за рад без интернета.
-  are_you_teacher: Да ли сте наставник?
-  review_lesson_plan: Прегледајте план лекција и остале материјале за наставике.
-  volunteer_engineer_submission_title: Инспиришите ученике и волонтирајте
-  volunteer_engineer_submission_subtitle_generic: '100000 наставника ће одржати час
-    програмирања Hour of Code у својим разредима ове године, од 7. до 13. децембра
-    2015. Треба им твоја помоћ! '
-  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} наставника треба
-    волонтере. <br>%{num_volunteers} волонтера се пријавило. Придружи им се."
-  volunteer_engineer_submission_field_name: Име
-  volunteer_engineer_submission_field_name_placeholder: Пуно име и презиме
-  volunteer_engineer_submission_field_experience_level: Ниво искуства
-  volunteer_engineer_submission_field_location: Место
-  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
-  volunteer_engineer_submission_field_description: Опис
-  volunteer_engineer_submission_field_email: Емаил адреса
-  volunteer_engineer_submission_field_email_placeholder: Емаил адреса
-  volunteer_engineer_submission_field_email_preference_privacy: "(Погледајте нашу
-    политику приватности)"
-  volunteer_engineer_submission_field_email_preference_yes: Да
-  volunteer_engineer_submission_field_email_preference_no: не
-  volunteer_engineer_submission_submit: Пошаљи
-  volunteer_engineer_submission_commitment_uncertain: Несигурно
-  volunteer_engineer_submission_commitment_one_hr_per_week: 1 сат по недељи
-  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 сата по недељи
-  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 сати по недељи
-  volunteer_engineer_submission_commitment_now_and_then: Свако сад и тад
-  volunteer_engineer_submission_commitment_more: Више
-  volunteer_engineer_submission_location_flexibility_onsite: На сајту у школи
-  volunteer_engineer_submission_location_flexibility_remote: Учење на даљину (учитељи
-    или ученици)
-  volunteer_engineer_submission_location_flexibility_curriculum: Желели би сте да
-    допринесете отвореним програмима?
-  volunteer_engineer_submission_experience_unspecified: Неодређено
-  volunteer_engineer_submission_experience_university_student_or_researcher: Тренутни
-    студент (или истраживач)
-  volunteer_engineer_submission_experience_software_professional: Професионалац за
-    програмирање
-  volunteer_engineer_submission_num_volunteers_5: 5. Волонтера
-  volunteer_engineer_submission_num_volunteers_10: 10. Болонтера
-  volunteer_engineer_submission_num_volunteers_25: 25. Волонтера
-  volunteer_engineer_submission_num_volunteers_50: 50. Волонтера
-  volunteer_engineer_submission_type_task_mentor: У потрази сам за ментором који би
-    ме припремио за програмирање са мојим студентима
-  petition_age: Узраст
-  dashboard_announce_learn_more_button: Сазнајте више
-  dashboard_landing_title: Почетна страница за учитеље
-  dashboard_landing_welcome: Добродошли на нову и побољшану учитељску контролну таблу.
-  dashboard_landing_video: Гледајте овај видео
-  dashboard_landing_watch_video: за обилазак нових функција!
-  dashboard_landing_view_as_student: Види овај сајт као ученик
-  dashboard_landing_students_title: Ваши ученици
-  dashboard_landing_students_manage: Видите и управљајте вашим ученицима
-  dashboard_landing_news_title: Ресурси едукатора за вртић (само на Енглеском)
-  dashboard_landing_new_beta: Ново! Пробајте наше пробне курсеве за вртић.
-  dashboard_landing_new_k5courses: Ново! Пробајте наше курсеве за вртић.
-  dashboard_landing_useful_links: Други корисни линкови (само на Енглеском)
-  dashboard_landing_office_hours: Питајте питање уживо! Посетите нашу месечну понуду
-    видео разговарања.
-  dashboard_landing_print_certificates: Штампај потврде ученицима који су завршили
-    курс
-  dashboard_landing_educator_blog: Прочитајте о новостима и ажурирањима наших материјала
-    на нашем едукаторском блогу
-  dashboard_landing_video_player: Тестирајте наш нови video player у вашој школи
-  dashboard_landing_progress_title: Напредак у главном курсу
-  dashboard_landing_progress_biggest: Ово је напредак за вашу највећу секцију.
-  dashboard_landing_view_progress: Видите напредак за%{biggest_section}
-  dashboard_landing_print_progress: Штампање је у току
-  dashboard_landing_available_title: Доступни курсеви
-  dashboard_landing_available_courses: Ово су курсеви тренутно доступни за вас и ваше
-    ученике.
-  dashboard_landing_more_tutorials: Желите да погледате још примера?
-  dashboard_landing_more_tutorials_desc: Ту је још предлога <a href="/learn/beyond">предложених
-    од наших партнера.</a> Научи програмиранје са роботима, прави интернет странице,
-    направи своју апликацију, или истражи друге језике као C++, Ruby, or Python!
-  dashboard_hoc_courses: Сат програмирања за све узрасте
-  dashboard_hoc_courses_desc: Пробај један од ових примера 1. сат са својим студентима!
-  dashboard_k5_courses: 20. часовни курс за К-5
-  dashboard_middle_courses: двадесетчасовни средњошколски курс
-  dashboard_high_courses: једногодишњи средњошколски курс
-  dashboard_course_csina: Наука информатике у Алгебри
-  dashboard_course_csins: Информатика у науци
-  dashboard_course_ecs: Истраживање компјутерске науке
-  dashboard_course_csp: AP ® Информатички принципи науке
-  dashboard_landing_loading: Учитава се...
-  dashboard_action_cancel: Откажи
-  dashboard_action_delete: Обриши
-  dashboard_action_delete_yes: Да
-  dashboard_action_delete_no: Не
-  dashboard_action_confirm: Желите ли да избришете?
-  dashboard_action_done: Готово
-  dashboard_navigation_home_page: Почетна страна за учитеље
-  dashboard_navigation_section_student_progress: Налози за ученике и напредак
-  dashboard_navigation_section_teacher_progress: Напредак кроз курс
-  dashboard_navigation_section_lesson_plans: План лекција и ресурса
-  dashboard_navigation_section_community: Помоћ и заједница
-  dashboard_navigation_section_pd: Професионални развој
-  dashboard_navigation_section_speakers: Рачунарске науке <br/> Гостујући говорници
-  dashboard_navigation_all_sections: Налози за ученике и напредак
-  dashboard_navigation_view_progress: Напредак
-  dashboard_navigation_add_students: Додајте ученике
-  dashboard_navigation_manage_students: Управљање ученицима
-  dashboard_navigation_lesson_plans_resources: План лекција и ресурса
-  dashboard_navigation_view_stats: Статистика
-  dashboard_navigation_section: Секција:%{section_name}
-  dashboard_navigation_student: Ученик:%{student_name}
-  dashboard_progress_not_completed: није завршено
-  dashboard_sections_new_section: Нова секција
-  dashboard_sections_jumbotron_instruction: Направите нову секцију и додајте ученике
-    у њих.Секције вам помажу да организујете ученике у мање групе да би могли да видите
-    њихов напредак и управљате њиховим налозима.
-  dashboard_sections_table_section: Секција
-  dashboard_sections_table_secret: Врста пријаве
-  dashboard_sections_table_grade: Степен
-  dashboard_sections_table_course: Курс
-  dashboard_sections_table_students: Студенти
-  dashboard_sections_table_code: Секција програмирања
-  dashboard_sections_name: Име секције
-  dashboard_sections_choose_secret: Ако желите да дате вашим ученицима, изаберите
-    тајну <b>реч</b>или<b>слику</b>за ту секцију.
-  dashboard_sections_secret_word: "<b>Реч</b>вам дозвољава да поставите тајну реч
-    за сваког ученика."
-  dashboard_sections_secret_picture: "<b>Слика</b>вам дозвољава да поставите тајну
-    слику за сваког ученика,идеално за оне ученике који још не знају да пишу."
-  dashboard_sections_secret_none: Ако бисте желели да ваши ученици управљају сопственим
-    налозима, укључујући бирање сопствених лозинки, изаберите тајни тип<b>none</b>.
-  dashboard_sections_print_secrets: Затим, можете отштампати листу са картицама на
-    којима су подаци о налозима. Картице поделите  појединачно сваком ученику.
-  dashboard_sections_switch_section: 'Промените групу:'
-  dashboard_sections_close: Затвори
-  dashboard_sections_yes_both: Да, желим да копирам ученика(е) како би били у овој
-    и у новој секцији
-  dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком
-    реду по једног:'
-  dashboard_students_new_section: Направили сте нову групу! Сада додајте ваше ученике
-    користећи дугмад <b>Додајте ученика</b> и <b> Додајте више ученика</b> изнад.
-  dashboard_students_name: Име
-  dashboard_students_progress: Напредак
-  dashboard_students_male: Мушко
-  dashboard_students_female: Женско
-  dashboard_students_completed_levels: Завршени нивои
-  dashboard_students_total_lines: Редови програма
-  dashboard_students_share_section: 'Поделите страницу за пријаву ове групе са својим
-    ученицима:'
-  dashboard_students_print_info: Отштампајте картице са подацима за пријављивање ученика/це.
-  dashboard_students_secret_picture_title: Тајна слика
-  dashboard_students_secret_picture: Тајна слика
-  dashboard_students_reset_picture: Можете да ресетујете тајну слику било када бирањем
-    <b>Покажи тајну</b> и тада<b>Ресетуј тајну</b>. Нова слика ће бити изабрана за
-    тог ученика када се пријаве.
-  dashboard_students_secret_word_title: Тајна реч
-  dashboard_students_secret_word: Тајна Реч
-  dashboard_students_reset_word: 'Можете ресетовати тајне речи ученика било када бирањем
-    <b>Покажи тајну</b> и тад <b>Ресетуј тајну</b>. Нови пар тајних речи ће бити изабране
-    за тог студента да их користи када се пријаве. '
-  dashboard_students_join_link: Реците вашим ученицима да направе сопствене налоге
-    и придруже се вашој групи на
-  dashboard_students_no_email: Ако ваши студенти немају имејл адресе, или бисте желели
-    да направите налоге за њих, промените тајну за групу у <b>реч</b> или <b>слику</b>.
-  dashboard_students_print_page: Одштампај ову страницу
-  dashboard_students_url: УРЛ адреса странице
-  dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
-    овде</a>да би добили наш документ о приватности који можете да поделите или одштампате
-    са вашим ученицима.
-  dashboard_curriculum_k5_title: К-5 наставнички извори
-  dashboard_curriculum_middle_title: Научни извори из средње школе
-  dashboard_curriculum_high_title: Едукатор ресурса из средње школе
-  dashboard_lesson_plans: План лекција
-  dashboard_view_all_lesson_plans: Видите план свих лекција
-  dashboard_course1: 'Курс 1:'
-  dashboard_course2: 'Курс 2:'
-  dashboard_course3: 'Курс 3:'
-  dashboard_course4: 'Курс 4 (почетнички): '
-  dashboard_curriculum: Наставни план
-  dashboard_curriculum_overview: Преглед наставног плана за вртић
-  dashboard_overview: Преглед
-  dashboard_sequence: Низ Акција
-  dashboard_framework: Оквир
-  dashboard_standards: Стандарди
-  dashboard_implementation_guide: Водич за имплементацију
-  dashboard_glossary: Појмовник
-  dashboard_classroom_strategies: Стратегије подучавања за учитеље
-  dashboard_debugging: 'Отклањање грешака:'
-  dashboard_puzzle_solving: 'Решавање проблема:'
-  dashboard_student_worksheet: радна листови за ученике
-  dashboard_teacher_worksheet: радни листови за учитеље
-  dashboard_curriculum_csina: 'Наука информатике у Алгебри:'
-  dashboard_curriculum_csins: 'Информатика у науци:'
-  dashboard_curriculum_csp: 'AP® Принципи информатичких наука:'
-  dashboard_curriculum_ecs: 'Истраживање компјутерске науке:'
-  dashboard_grade_k: Вртић
-  dashboard_grade_other: Други
-  dashboard_login_word: Реч
-  dashboard_login_picture: Слика
-  dashboard_login_none: Електронска пошта
-  dashboard_stage: фаза
-  dashboard_puzzle: Пузла
-  dashboard_question: Питање
-  dashboard_response: Одговор
-  stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања.
-    За само недељу дана:'
-  stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
-  dashboard_teacher: Учитељ
-  dashboard_student: студент
-  dashboard_sections_email_question: Да ли сви студенти имају имејл адресу која функционише?
-  dashboard_sections_account_creation_question: Ко прави налог од ученика?
-  dashboard_sections_password_question: Шта ученици користе као ''лозинку''?
-  dashboard_sections_picture_account_creation: Слика додељена од Code.org
-  dashboard_sections_word_account_creation: Једноставна реч додељена од Code.org
-  dashboard_sections_sign_in_question: Где се ученици пријављују?
-  dashboard_sections_sign_in_unique: Јединствена интернет страница на  "Управљатјте
-    ученицима"
-  dashboard_sections_sign_in_main: http://code.or и кликните "Пријави ме"
-  dashboard_sections_password_account_creation: Лозинке направљне од стране ученика
-  dashboard_sections_login_type_explanation: Ово вам објашњава који од ових брста
-    пријављивања, <b>слику, реч или имејл адресу</b> , би сте изабрали за групу.
-  dashboard_faq: Често постављана питања
-  dashboard_faq_k5: K-5 Често постављана питања
-  code_hoc_coming: 'Сат Програмирања је стигао: 8-14 Децембра!'
-  code_sign_up: Пријавите се да учествујете током недеље за едукацију о компјутерској
-    науци
-  learn_more: Сазнајте више
-  learn_sign_up_button: Региструј се
+  homepage_slot_text_link_stats: Погледај статистику
+  homepage_slot_text_shop: Купуј
+  homepage_slot_text_studio: Сви наши туторијали
+  homepage_slot_text_teacher: Контролна табла за наставнике
+  homepage_slot_text_title_advocates: Заговорници
+  homepage_slot_text_title_educators: Едукатори
+  homepage_slot_text_title_hoc: Час кода
+  homepage_slot_text_title_students: Студенти
+  homepage_solot_text_link_volunteer: Volontiraj na Satu programiranja
+  hopscotch_beyond_shortdescription: Научи бизуелно програмирање на Ајпеду
+  hour_of_code: Час кода
+  hourofcode_gradelevel: Ages 6-106
+  hourofcode_longdescription: Напиши свој први компјутерски програм
+  hourofcode_platformtext: Модерни претраживачи, паметни телефони, таблети
+  hourofcode_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
+  how_to_teach_hoc: Како предавати Сат програмирања
+  i_agree: Слажем се
+  i_am_a: Ја сам
+  iceage_name: Ледено доба
+  if_you_enjoyed: Ако сте уживали учећи, питајте пријатеље да и они пробају! Ми желимо
+    да цео свет научи.
+  infinity_gradelevel: Годишта 6.-14.
+  infinity_shortdescription: Креирај приче и игре са Дизнијевим ликовима у Играоници.
+  just_did_hoc: 'Управо сам завршио #HourOfCode - погледајте га! @codeorg'
+  khan_beyond_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khan_beyond_platformtext: Модерни интернет претраживач
+  khan_beyond_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khan_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних цртежа.
+    Самостално или са својим разредом!
+  khan_name: Увод у JavaScript
+  khan_platformtext: Модерни интернет претраживачи
+  khan_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khanes_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khanes_name: Увод у JavaScript
+  khanes_platformtext: Модерни интернет претраживачи
+  khanes_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khanfr_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khanfr_name: Увод у JavaScript
+  khanfr_platformtext: Модерни интернет претраживачи
+  khanfr_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khanhe_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khanhe_name: Увод у JavaScript
+  khanhe_platformtext: Модерни интернет претраживачи
+  khanhe_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khanpl_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khanpl_name: Увод у JavaScript
+  khanpl_platformtext: Модерни интернет претраживачи
+  khanpl_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  khanpt_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
+    цртежа. Самостално или са својим разредом!
+  khanpt_name: Увод у JavaScript
+  khanpt_platformtext: Модерни интернет претраживачи
+  khanpt_shortdescription: Научи да црташ у ЈаваСкрипт-у
+  kidsruby_beyond_gradelevel: Узраста 12+
+  kidsruby_beyond_platformtext: Статично инталирање
+  kodable_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
+  kodable_beyond_shortdescription: Забавна Ипад игра учења програмирања
+  kodable_gradelevel: Основна школа (од 1. до 4. разреда)
+  kodable_name: Kodable (добродошли су и они који још не знају да читају)
+  kodable_shortdescription: Забавна Ипад игра учења програмирања
+  kodableunplugged_gradelevel: Узраста 8.-13.
+  kodableunplugged_platformtext: Није укључен
+  kodableunplugged_shortdescription: Необавезна забава
+  kodu_beyond_gradelevel: Узраста 8+
+  leaderboards_for_hoc: Лјествице за Сат Програмиранја.
+  learn_back_to_minecraft: Настави да учиш уз Minecraft
+  learn_classes: Пронађите локалне часове
+  learn_code_studio: Испробајте курсеве Code Studio
+  learn_cs_concepts: Научи основе компјутерских наукаса са повуци и испусти програмирањем.
+    Ово је туторијал у облику игрице  у којем видео лекције дају Bill Gates, Mark
+    Zuckerberg, Angry Birds and Plants vs. Zombies. Научи понављање петље, ако-онда
+    изјаве, и основне алгоритме.
   learn_educator_resources_description: Научи да предајеш сат програмирања
+  learn_hoc: Научите час кодирања
   learn_hoc_prizes: <a href="https://hourofcode.com/prizes">Saznaj više</a> o nagradama
     za svakog edukatora.
-  hoc2014_try_new_tutorials: Пробајте наше нове водиче за Сат програмирања
-  hoc2014_try_scrat: Angry Birds, Plants vs Zombies,и Ice age
-  hoc2014_try_frozen: Уметник са Аном и Елзом из Залеђеног краљевства
-  carousel_heading_international: Туторијали на твом језику
-  carousel_heading_domestic: Водичи на Енглеском
-  carousel_heading_beginners: Водичи за почетнике
-  carousel_heading_javascript: Туторијали за JavaScript
-  carousel_heading_beyond_javascript: Туторијали за JavaScript
-  carousel_heading_unplugged: Без уређаја или интернета? Пробајте компјутерску науку
-    у стварном свету
-  carousel_heading_devices: Апликације водичи за телефоне и таблете
-  carousel_heading_beyond_devices: Апликације водичи за телефоне и таблете
-  carousel_heading_languages: Водичи у другим програмским језицима
-  carousel_heading_beyond_languages: Водичи у другим програмским језицима
-  carousel_heading_apps_games: Направите сопствене апликације или игрице
-  carousel_heading_university: Унивезетски курсеви на интернету
-  carousel_heading_webpages: Научите да правите интернет странице
-  carousel_heading_robots: Научите да програмирате са роботима
-  carousel_heading_ide: Платформе популарне са учитељима
-  educator_notes: Белешке за едукаторе
-  how_to_teach_hoc: Како предавати Сат програмирања
+  learn_more: Сазнајте више
+  learn_next_level: Настави до следећег нивоа
+  learn_now: Учите сада
+  learn_online: Пробајте друге курсеве на интернету
+  learn_sign_up_button: Региструј се
+  lego_beyond_platformtext: Роботске набавке
+  lightbot_beyond_gradelevel: Сви узрасти
+  lightbot_beyond_longdescription: Научите основну логику програмирања, почевши од
+    врло основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у
+    веб читачима). Научите да распоредите команде, уочите шаблоне, као и да искористите
+    процедуре и петље!
+  lightbot_beyond_platformtext: iOS, Android (или веб читачи)
+  lightbot_beyond_shortdescription: Игрица која вас учи принципима програмирања
+  lightbot_gradelevel: Сви узрасти
+  lightbot_longdescription: Водите LightBot-а да осветли све плаве плочице. LightBot
+    је игра-слагалица која користи програмерске технике како би омогућила играчима
+    да у пракси схвате основе програмирања.
+  lightbot_platformtext: СВИ читачи као и iOS, Android или играчке конзоле
+  lightbot_shortdescription: Испрограмирајте Lightbot-а да решава загонетке, користећи
+    процедуре и петље!
+  lightbotintl_gradelevel: Сви узрасти
+  lightbotintl_longdescription: Научите основну логику програмирања, почевши од врло
+    основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у веб читачима).
+    Научите да распоредите команде, уочите шаблоне, као и да искористите процедуре
+    и петље!
+  lightbotintl_platformtext: iOS, Android (или веб читачи)
+  lightbotintl_shortdescription: Игрица која вас учи принципима програмирања
+  lines_of_code: Преко<b># Линије кода</b> Исписане по датуму.
+  lines_of_code_alt: "<b>#</b>Линије кода написане од стране сутдената"
+  lynda_beyond_platformtext: Интернет базирано ($$ required)
+  make_app: Креирај апликацију
+  makeschool_beyond_gradelevel: Средња школа
+  makeschool_beyond_name: Направите Ајфон игру у вашем браузеру!
+  makeschool_beyond_platformtext: Модерни интернет претраживач
+  makeschool_gradelevel: Средња школа
+  makeschool_name: Направите Ајфон игру у вашем браузеру!
+  makeschool_platformtext: Модерни интернет претраживач
+  makeschool_shortdescription: Направи Ајфон игрицу! Научи уз писање програма да научиш
+    своју нове покрете!
+  mc_gradelevel: Ages 6-106
+  mc_longdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
+    кроз овај Мајнкрафт свет.
+  mc_name: Мајнкрафт час програмирања
+  mc_platformtext: Модерни претраживачи, паметни телефони, таблети
+  mc_shortdescription: Користите блокове кода да поведете Стива или Алекс у авантуру
+    кроз овај Мајнкрафт свет.
+  mc_specs: Више језика | Савремени прегледачи, паметни телефони, таблети | Узраст
+    6-10
+  minecraft_adventurer_button: Покрени
+  minecraft_agent_button: Покрени
+  minecraft_designer: Дизајнер игрице Minecraft
+  minecraft_designer_button: Покрени
+  minecraft_designer_description: Програмирај животиње и друга Minecraft створења
+    у својој верзији Minecraft-а.
+  minecraft_no_internet: Немаш приступ интернету?
+  minecraft_subtitle: Мајнкрафт час програмирања
+  mobile_devices: Туторијали за мобилне уређаје
+  monstercoding_gradelevel: Узраста 5.-13.
+  monstercoding_platformtext: Модерни претраживачи, ИОС, Андроид
+  monsterocding_shortdescription: Шаренолика програмска авантура за децу.
   more_resources_educators: Више ресурса за учитеље и едукаторе
-  participants: учесници
-  teachers_notes: Белешке учитеља
-  teachers_notes_hoc: 'Учитељи: прочитајте важне белешке за едукаторе овде'
-  previous: Претходни
+  mozilla_beyond_gradelevel: Узраста 12+
+  mozilla_beyond_platformtext: Модерни интернет претраживач
+  n_have_learned_an_hoc: "<h1>Испробај</h1><h2>Сат Програмирања</h2><h3># посећено</h3>"
+  n_participants: "# учесници"
+  name: Име
+  never_spam: Никада вам нећемо слати нежељену пошту
   next: Следећи
+  'no': не
+  no_internet: Немаш приступ интернету?
+  non_english_tutorials: 'Туторијали преведени на више језика:'
+  og_description: Сваки ученик у свакој школи треба да има прилику да учи рачунарске
+    науке.
+  og_title: Свако дете заслужује шансу
+  og_title_soon: Hour of Code је стигао
   older_systems: Водичи који раде на старијим системима
   older_systems_subheading: Ово би требало радити на старим веб читачима. Да приступите
     свим туторијалима, инсталирајте <a href="http://browsehappy.com/" target="_blank">модеран
     веб читач.</a>
-  mobile_devices: Туторијали за мобилне уређаје
-  frozen_name: Програмирај са Аном и Елзом
-  starwars_name: 'Ратови Звезда: Изгради галаксије кôдом'
-  khan_name: Увод у JavaScript
-  khanes_name: Увод у JavaScript
-  khanpt_name: Увод у JavaScript
-  khanhe_name: Увод у JavaScript
-  khanfr_name: Увод у JavaScript
-  khanpl_name: Увод у JavaScript
-  tynker_name: Направите своју сопствену игрицу
-  scratch_name: Будите креативни с програмирањем
-  thinkersmith_name: Моји роботски пријатељи
-  condcards_name: Услови са картама
-  codehs_name: Научите да програмирате са Карелом псом
-  codemonkey_name: CodeMonkey
-  codeavengers_name: Направи игрицу JavaScript-ом
-  processing_name: Цртање програмрињем
-  robomind_name: Програмирајте виртуелног робота
-  groklearning_name: Докторка Елиза, виртуелни саговорник
-  quorum_name: Програмирање у моду без баријера (са подршком читача екрана)
-  codespark_name: The Foos (добродошли су и они који још не знају да читају)
-  kodable_name: Kodable (добродошли су и они који још не знају да читају)
-  tynkerapp_name: Tynker - на таблетима
-  robomindnl_name: Програмирајте виртуелног робота
-  flappy_name: Направите флапи игру
-  bitsbox_name: Bitsbox - напрабите игру
-  makeschool_name: Направите Ајфон игру у вашем браузеру!
-  blockly_name: Blockly
-  projguts_name: Лист, камен, маказе
-  playlab_name: Играоница
-  artist_name: Уметник
-  course1_name: Курс 1
-  course2_name: Курс 2
-  course3_name: Курс 3
-  course4_name: Course 4
-  iceage_name: Ледено доба
-  codeorg_gradelevel: Узраст од 4 до 104 година
-  codeintl_gradelevel: Узраст од 4 до 104 година
-  tynker_gradelevel: Узраста 5.-13.
-  scratch_gradelevel: Узраста 8+
-  lightbot_gradelevel: Сви узрасти
-  thinkersmith_gradelevel: Сви узрасти
-  condcards_gradelevel: Годишта 8.-12.
-  lightbotintl_gradelevel: Сви узрасти
-  codehs_gradelevel: Средња школа
-  codecademy_gradelevel: Средња школа
-  processing_gradelevel: Средња школа
-  robomind_gradelevel: Узраста 8.-13.
-  codespark_gradelevel: Основна школа (од 1. до 4. разреда)
-  kodable_gradelevel: Основна школа (од 1. до 4. разреда)
-  tynkerapp_gradelevel: Узраста 5.-13.
-  robomindnl_gradelevel: Узраста 8.-13.
-  flappy_gradelevel: Ages 6-106
-  bitsbox_gradelevel: Основна школа (од 1. до 4. разреда)
-  makeschool_gradelevel: Средња школа
-  touchdevelop_gradelevel: Средња школа
-  blockly_gradelevel: Сви узрасти
-  thinkersmith2_gradelevel: Узраста 8+
-  kodableunplugged_gradelevel: Узраста 8.-13.
-  projguts_gradelevel: Узраста 10.-13.
-  hourofcode_gradelevel: Ages 6-106
-  frozen_gradelevel: За године од 8 до 108
-  starwars_gradelevel: Ages 6-106
+  participant_educator: Учитељ
+  participant_engineer: Софтверски инжињер
+  participant_other: Ништа од наведеног
+  participant_parent: Родитељ
+  participant_select: "-Изабери-"
+  participant_student: студент
+  participants: учесници
+  personalize_certificate: Персонализујте свој сертификат
+  petition_age: Узраст
+  petition_join_others: Придружи се осталима
+  petition_message: Сваки ученик у свакој школи треба да има прилику да учи информатику
+  petition_sign_message: 'Ако се слажеш, упиши своје име. Придружи се # осталима.'
+  petition_thankyou: Хвала вам што сте потписали петицију
+  playlab_choose_theme: Одабери своју Play Lab тему
+  playlab_classic_title: Класично
   playlab_gradelevel: Годишта 6.-14.
-  infinity_gradelevel: Годишта 6.-14.
-  artist_gradelevel: За године од 8 до 108
-  monstercoding_gradelevel: Узраста 5.-13.
-  allcancode_gradelevel: Узраст од 5 до 10 година
-  csfirst_gradelevel: Годишта 9.-14.
-  boxisland_gradelevel: Основна школа (од 1. до 4. разреда)
-  codesters_gradelevel: Годишта 12.-14.
-  texasinstruments_gradelevel: Узраста 13.-16.
-  teacherled_gradelevel: Узраста 5+
-  course1_gradelevel: Узраст од 4 до 6 година
-  course2_gradelevel: Ages 6-18
-  course3_gradelevel: За године од 8 до 18
-  course4_gradelevel: Узраст од 10 до 18 година
-  coursea_gradelevel: Узраст од 4 до 7 година
-  courseb_gradelevel: За године од 5 до 8
-  coursec_gradelevel: Ages 6-10
-  coursed_gradelevel: Узраст од 7 до 11 година
-  coursee_gradelevel: Годишта 8.-12.
-  coursef_gradelevel: Узраста 9.-13.
-  coursea-2017_gradelevel: Узраст од 4 до 7 година
-  courseb-2017_gradelevel: За године од 5 до 8
-  coursec-2017_gradelevel: Ages 6-10
-  coursed-2017_gradelevel: Узраст од 7 до 11 година
-  coursee-2017_gradelevel: Годишта 8.-12.
-  coursef-2017_gradelevel: Узраста 9.-13.
-  coursea-2018_gradelevel: Узраст од 4 до 7 година
-  courseb-2018_gradelevel: За године од 5 до 8
-  coursec-2018_gradelevel: Ages 6-10
-  coursed-2018_gradelevel: Узраст од 7 до 11 година
-  coursee-2018_gradelevel: Годишта 8.-12.
-  coursef-2018_gradelevel: Узраста 9.-13.
-  coursea-2019_gradelevel: Узраст од 4 до 7 година
-  courseb-2019_gradelevel: За године од 5 до 8
-  coursec-2019_gradelevel: Ages 6-10
-  coursed-2019_gradelevel: Узраст од 7 до 11 година
-  coursee-2019_gradelevel: Годишта 8.-12.
-  coursef-2019_gradelevel: Узраста 9.-13.
-  coursea-2020_gradelevel: Узраст од 4 до 7 година
-  courseb-2020_gradelevel: За године од 5 до 8
-  coursec-2020_gradelevel: Ages 6-10
-  coursed-2020_gradelevel: Узраст од 7 до 11 година
-  coursee-2020_gradelevel: Годишта 8.-12.
-  coursef-2020_gradelevel: Узраста 9.-13.
-  coursea-2021_gradelevel: Узраст од 4 до 7 година
-  courseb-2021_gradelevel: За године од 5 до 8
-  coursec-2021_gradelevel: Ages 6-10
-  coursed-2021_gradelevel: Узраст од 7 до 11 година
-  coursee-2021_gradelevel: Годишта 8.-12.
-  coursef-2021_gradelevel: Узраста 9.-13.
-  coursea-2022_gradelevel: Узраст од 4 до 7 година
-  courseb-2022_gradelevel: За године од 5 до 8
-  coursec-2022_gradelevel: Ages 6-10
-  coursed-2022_gradelevel: Узраст од 7 до 11 година
-  coursee-2022_gradelevel: Годишта 8.-12.
-  coursef-2022_gradelevel: Узраста 9.-13.
-  accelerated_gradelevel: Узраст од 10 до 18 година
-  codeorg_platformtext: Модерни претраживачи, паметни телефони, таблети
-  codeintl_platformtext: Модерни претраживачи, паметни телефони, таблети
-  thinkersmithspanish_platformtext: Није укључен
-  khan_platformtext: Модерни интернет претраживачи
-  khanes_platformtext: Модерни интернет претраживачи
-  khanpt_platformtext: Модерни интернет претраживачи
-  khanhe_platformtext: Модерни интернет претраживачи
-  khanfr_platformtext: Модерни интернет претраживачи
-  khanpl_platformtext: Модерни интернет претраживачи
-  tynker_platformtext: Модерни интернет претраживачи
-  scratch_platformtext: Обични рачунари за претраживање (не таблети)
-  lightbot_platformtext: СВИ читачи као и iOS, Android или играчке конзоле
-  thinkersmith_platformtext: Није укључен
-  condcards_platformtext: Није укључен
-  lightbotintl_platformtext: iOS, Android (или веб читачи)
-  codehs_platformtext: Модерни претраживачи. (Захтева праћење курса  $$)
-  codecademy_platformtext: Модерни интернет претраживач. Иос, Андроид апликације
-  codecombat_platformtext: Модерни претраживачи (Захтева праћење курса $$)
-  codemonkey_platformtext: Модерни интернет претраживачи
-  codeavengers_platformtext: Модерни интернет претраживачи
-  processing_platformtext: Модерни интернет претраживачи
-  robomind_platformtext: Модерни интернет претраживачи, Мобилни интернет
-  groklearning_platformtext: Модерни интернет претраживачи
-  quorum_platformtext: Модерни претраживачи. Подржан читач екрана
-  codespark_platformtext: iOS, Android (или веб читачи)
-  tynkerapp_platformtext: Ипад, Андроид таблети
-  robomindnl_platformtext: Модерни интернет претраживачи, Мобилни интернет
-  flappy_platformtext: Модерни претраживачи, паметни телефони, таблети
-  bitsbox_platformtext: Модерни интернет претраживачи
-  makeschool_platformtext: Модерни интернет претраживач
-  touchdevelop_platformtext: Модерни претраживачи, паметни телефони, сви уређаји
-  appinventor_platformtext: Модерни претраживачи + Андроид
-  blockly_platformtext: Само модерни претраживачи
-  thinkersmith2_platformtext: Није укључен
-  kodableunplugged_platformtext: Није укључен
-  projguts_platformtext: Није укључен
-  hourofcode_platformtext: Модерни претраживачи, паметни телефони, таблети
-  frozen_platformtext: Модерни претраживачи + таблети
-  starwars_platformtext: Модерни претраживачи + таблети
+  playlab_iceage_title: 'Ледено доба - Ускоро
+
+    '
+  playlab_iceage_title_live: Ледено доба
+  playlab_name: Играоница
   playlab_platformtext: Модерни претраживачи, паметни телефони, таблети
-  monstercoding_platformtext: Модерни претраживачи, ИОС, Андроид
-  allcancode_platformtext: Модерни претраживачи, ИОС
-  csfirst_platformtext: Модерни интернет претраживачи
-  boxisland_platformtext: Андроид, ИОС
-  codesters_platformtext: Модерни интернет претраживачи
-  texasinstruments_platformtext: ТИ дигитрони
-  teacherled_platformtext: Модерни претраживачи, паметни телефони, таблети
-  codeorg_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
-  codeintl_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
-  khan_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  khanes_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  khanpt_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  khanhe_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  khanfr_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  khanpl_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  tynker_shortdescription: Научи програмирање уз решавање пазла и направи своје мобилне
-    игрице.
-  scratch_shortdescription: Направи интерактивне игрице, приче, и анимације.
-  lightbot_shortdescription: Испрограмирајте Lightbot-а да решава загонетке, користећи
-    процедуре и петље!
-  thinkersmith_shortdescription: Нису укључени примери за групе без уређаја
-  condcards_shortdescription: Научи алгоритме са шпилом карата
-  lightbotintl_shortdescription: Игрица која вас учи принципима програмирања
-  codehs_shortdescription: Почни програмирање са Карелом псом, забаван и визуелан
-    увод у програмирање!
-  codecademy_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
-  codecombat_shortdescription: Порази предрасуде о Пајтон и ЈаваСкрипту у овом незаборавном
-    програмирању!
-  codemonkey_shortdescription: Ученици програмирају мајмуна да ухвати банане.
-  codeavengers_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
+  playlab_shortdescription: Направи причу или игру у Играоници!
+  pocketcode_beyond_platformtext: Мобилна апликација
+  pocketcode_beyond_shortdescription: Направи своју игру на паметном телефону и дели
+    је са својим пријатељима!
+  previous: Претходни
+  print_all: Отштампај све
+  print_ice_art: Одштампај свој "ice art"
+  privacy_practices_children: Видите наше праксе за приватност за децу
+  processing_beyond_gradelevel: Средња школа
+  processing_beyond_platformtext: Модерни интернет претраживачи
+  processing_gradelevel: Средња школа
+  processing_name: Цртање програмрињем
+  processing_platformtext: Модерни интернет претраживачи
   processing_shortdescription: Једночасовни примери у процесном језику
-  robomind_shortdescription: Напиши програм за виртуелног робота
-  groklearning_shortdescription: Научи чет-бота Елизу тако да твоји пријатељи помисле
-    да је она човек!
-  quorum_shortdescription: Придружи се Мери у њеној авантури Кворум програмирања.
-  codespark_shortdescription: За фудбалере је забаван, дечија пријатељска игра учења
-    програмирања.
-  kodable_shortdescription: Забавна Ипад игра учења програмирања
-  tynkerapp_shortdescription: Научи програмирање уз решавање пазл игре.
-  robomindnl_shortdescription: Напиши програм за виртуелног робота
-  flappy_shortdescription: Направи своју игру - Флепи Птица, Ајкула, или Подморница
-  bitsbox_shortdescription: Програмирај серију апликација за игру и дељење, уз коришћење
-    правог ЈаваСкрипт-а.
-  makeschool_shortdescription: Направи Ајфон игрицу! Научи уз писање програма да научиш
-    своју нове покрете!
-  touchdevelop_shortdescription: 'Решавај пазл, Прави игрице, и научи програмирање
-    све на твом телефону. '
-  appinventor_shortdescription: Направи своју апликацију! (Само андроид)
-  blockly_shortdescription: Пребаци ЗИП датотеку и учи ван мреже
-  thinkersmith2_shortdescription: Научи као рачунар користи 1. и 0. да презентује
-    информацију
-  kodableunplugged_shortdescription: Необавезна забава
+  projguts_gradelevel: Узраста 10.-13.
+  projguts_name: Лист, камен, маказе
+  projguts_platformtext: Није укључен
   projguts_shortdescription: Пробај моделирање и симулацију помоћу камена/папира/
     зами
-  hourofcode_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим Птицама!
-  frozen_shortdescription: Хајде да искористимо програмирање да би се придружили Ани
-    и Елзи у истраживању магије и лепоте леда.
+  quorum_name: Програмирање у моду без баријера (са подршком читача екрана)
+  quorum_platformtext: Модерни претраживачи. Подржан читач екрана
+  quorum_shortdescription: Придружи се Мери у њеној авантури Кворум програмирања.
+  review_lesson_plan: Прегледајте план лекција и остале материјале за наставике.
+  robomind_beyond_gradelevel: Узраста 8.-13.
+  robomind_beyond_name: Програмирајте виртуелног робота
+  robomind_beyond_platformtext: Модерни интернет претраживачи, Мобилни интернет
+  robomind_beyond_shortdescription: Напиши програм за виртуелног робота
+  robomind_gradelevel: Узраста 8.-13.
+  robomind_name: Програмирајте виртуелног робота
+  robomind_platformtext: Модерни интернет претраживачи, Мобилни интернет
+  robomind_shortdescription: Напиши програм за виртуелног робота
+  robomindnl_gradelevel: Узраста 8.-13.
+  robomindnl_name: Програмирајте виртуелног робота
+  robomindnl_platformtext: Модерни интернет претраживачи, Мобилни интернет
+  robomindnl_shortdescription: Напиши програм за виртуелног робота
+  scratch_beyond_gradelevel: Узраста 8+
+  scratch_beyond_longdescription: Са скречом можете креирати сопствене игре, приче,
+    анимације &mdash; и делите са својим пријатељима. Почните са анимацијом свог имена,
+    прављење разгледнице, или своје пинг понг игрице.
+  scratch_beyond_name: Будите креативни с програмирањем
+  scratch_beyond_platformtext: Било који претраживач
+  scratch_beyond_shortdescription: Направи интерактивне игрице, приче, и анимације.
+  scratch_gradelevel: Узраста 8+
+  scratch_longdescription: Са скречом можете креирати сопствене игре, приче, анимације
+    &mdash; и делите са својим пријатељима. Почните са анимацијом свог имена, прављење
+    разгледнице, или своје пинг понг игрице.
+  scratch_name: Будите креативни с програмирањем
+  scratch_platformtext: Обични рачунари за претраживање (не таблети)
+  scratch_shortdescription: Направи интерактивне игрице, приче, и анимације.
+  scratchjr_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
+  scratchjr_beyond_shortdescription: 'Креирање интерактивне приче и игре користећи
+    Сцратцхјр. '
+  select_language: Молимо изаберите језик
+  share_achievement: Поделите своје постигнуће
+  share_on_facebook: Подели на Facebook-u
+  share_on_twitter: Подели на Тwitteru
+  speak_another_language: Знаш ли неки други језик?
+  sphero_beyond_gradelevel: Узраста 8+
+  sphero_beyond_platformtext: Роботске набавке
+  sports_watch_video: Погледајте видео
+  start_hoc: Започните Сат кодирања, сада
+  starwars_blocks_description: Искористи повуци-спусти блокове.
+  starwars_blocks_specs: Више језика | Савремени прегледачи, паметни телефони, таблети
+    | Узраст 6-10
+  starwars_blocks_title: блокови
+  starwars_gradelevel: Ages 6-106
+  starwars_javascript_description: Користи повуци-испусти блокове и JavaScript.
+  starwars_javascript_specs: Samo na engleskom | Moderni pretraživači | Uzrasta 11
+    +
+  starwars_javascript_title: JavaScript
+  starwars_longdescription: Научите да програмирате дроиде и креирате сопствену игру
+    Ратова звезда у галаксији далеко, далеко.
+  starwars_name: 'Ратови Звезда: Изгради галаксије кôдом'
+  starwars_platform_text: Модерни претраживачи, паметни телефони, таблети
+  starwars_platformtext: Модерни претраживачи + таблети
   starwars_shortdescription: Научите да програмирате дроиде и креирате сопствену игру
     Ратова звезда у галаксији далеко, далеко.
-  playlab_shortdescription: Направи причу или игру у Играоници!
-  infinity_shortdescription: Креирај приче и игре са Дизнијевим ликовима у Играоници.
-  artist_shortdescription: Цртај слике са уметником!
-  monsterocding_shortdescription: Шаренолика програмска авантура за децу.
-  allcancode_shortdescription: Имресивна игра Марко са видљивим програмским језиком.
-  csfirst_shortdescription: Анимирај причу са два морска карактера. Направи свој стил!
-  boxisland_shortdescription: Преузми програмски пут Бокс острва са храбрим Хиро.
-  codesters_shortdescription: Креирајте своје игре, анимације  и цртеже користећи
-    Пајтон
-  texasinstruments_shortdescription: Сазнај основе програмирања са  TI-84&#8482; Плус
-    дигитроном.
+  starwars_subtitle: Изгради галаксију кôдом
+  stats_hoc_2013_heading: 'Невероватна статистика прошлогодишњег Сата програмирања.
+    За само недељу дана:'
+  stats_hoc_2013_image_alt: Статистика за Сат програмирања 2013
+  stats_michael: '"Нисам <b>никад, никад</b> видео моје ђаке тако узбуђене око учења."
+    - Мајкл Кларк, учитељ'
+  stats_nina: '"Сваки дан је донео исти резултат &mdash; 100% ангажовања." - Нина
+    Николс Пири, учитељ'
+  stats_student: '"Знала сам да је ово <b>једном у животу</b> прилика." - Маријана
+    Алзејт, пети разред'
+  students_and_lines: "%{students} студената је одрадило сат кодирања и напислао %{lines}
+    линија кода."
+  studiobar_donate_body: Једно дете нешто научи за сваки долар који донирате
+  studiobar_donate_title: Донирај
+  studiobar_elementary_body: Наша три нова курса за врт&#8209;ић
+  studiobar_elementary_title: Основни курсеви
+  studiobar_flappy_body: Направите и поделите сопствену Флапи игру
+  studiobar_frozen_body: Направи зимску земљу чуда са Аном и Елзом
+  studiobar_frozen_title: Час кода
+  studiobar_hoc_body: Научите да програмирате уз Angry Birds
+  studiobar_hoc_title: сата кодирања
+  studiobar_shop_body: Сруши стереотипе. Са поносом носи наш лого.
+  studiobar_shop_title: Купуј
+  studiobar_teacher_body: Уведите Студио програмирања у вашу учионицу
+  studiobar_teacher_title: Направљено за учитеље
+  studiobar_title: Истражите<a href='http://studio.code.org'>Студио Програмирања</a>
+  studiobar_title_nolink: Истражите Студио Програмирања
+  submit: Пошаљи
+  support_url: http://support.code.org/
+  teacherled_gradelevel: Узраста 5+
+  teacherled_platformtext: Модерни претраживачи, паметни телефони, таблети
   teacherled_shortdescription: Буди инспирисан дизајном са својим сат програмирањем
     планским лекцијама.
-  codeorg_longdescription: Научи основе информатичких наука програмирања превуци и
-    отпусти. Налик игрици самосталним режирањем примера видео лекцијама од Бил Гејтса,
-    Марк Цукерберга, Љуте птице и Плантажама против Зомбија. Научи понављање петље,
-    услове, и основе алгоритма. Подржан у 34. језика.
-  codeintl_longdescription: Научи основе информатичких наука програмирања превуци
-    и отпусти. Налик игрици самосталним режирањем примера видео лекцијама од Бил Гејтса,
-    Марк Цукерберга, Љуте птице и Плантажама против Зомбија. Научи понављање петље,
-    услове, и основе алгоритма. Подржан у 34. језика.
-  khan_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних цртежа.
-    Самостално или са својим разредом!
-  khanes_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
-  khanpt_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
-  khanhe_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
-  khanfr_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
-  khanpl_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
+  teachers_notes: Белешке учитеља
+  teachers_notes_hoc: 'Учитељи: прочитајте важне белешке за едукаторе овде'
+  teachingtree_beyond_name: Унивезетски курсеви на интернету
+  teachingtree_beyond_platformtext: Интернет база
+  tell_the_world: Подели Свету!
+  texasinstruments_gradelevel: Узраста 13.-16.
+  texasinstruments_platformtext: ТИ дигитрони
+  texasinstruments_shortdescription: Сазнај основе програмирања са  TI-84&#8482; Плус
+    дигитроном.
+  thank_you_: Хвала!
+  thanks_for_submitting: Хвала на датим информацијама!
+  thanks_for_voting: Хвала на гласању!
+  thinkersmith2_gradelevel: Узраста 8+
+  thinkersmith2_platformtext: Није укључен
+  thinkersmith2_shortdescription: Научи као рачунар користи 1. и 0. да презентује
+    информацију
+  thinkersmith_gradelevel: Сви узрасти
+  thinkersmith_longdescription: Помоћу Робота вокабулара ученици могу да распознају
+    и коментаришу специфичне радње. Те лекције уче ученике да се умреже са симболима
+    и акцијама, као и да уклањају грешке. Мој роботски пријатељ ради најбоље у групи
+    са учитељем у учионици.
+  thinkersmith_name: Моји роботски пријатељи
+  thinkersmith_platformtext: Није укључен
+  thinkersmith_shortdescription: Нису укључени примери за групе без уређаја
+  thinkersmithspanish_platformtext: Није укључен
+  third_party_curriculum: Наставни план
+  third_party_gradelevel_2to8: Разреди 2-8
+  third_party_gradelevel_4to12: Разреди 4-12
+  third_party_gradelevel_5to12: Разреди 5-12
+  third_party_gradelevel_6plus: Разреди 6+
+  touchdevelop_beyond_gradelevel: Средња школа
+  touchdevelop_beyond_platformtext: Модерни претраживачи, паметни телефони, сви уређаји
+  touchdevelop_gradelevel: Средња школа
+  touchdevelop_platformtext: Модерни претраживачи, паметни телефони, сви уређаји
+  touchdevelop_shortdescription: 'Решавај пазл, Прави игрице, и научи програмирање
+    све на твом телефону. '
+  try_now: Испробај сада
+  twentyhours_heading: Пробајте наш курс Увод у информатику
+  twentyhours_text: Завршили сте свој први Час програмирања? Научите више основа информатике
+    и концепте програмирања у курсу који следи.
+  tynker_beyond_gradelevel: Узраста 5.-13.
+  tynker_beyond_platformtext: Модерни интернет претраживач ($$ required)
+  tynker_beyond_shortdescription: Забаван и привлачан курс за децу узраста од 4.-8.
+  tynker_gradelevel: Узраста 5.-13.
   tynker_longdescription: Прави своје игрице и дели са својим пријатељима! Решавај
     занимљиве пазл игрице, и учи програмирање по нивоима. Персонализуј игрице са анимираним
     карактерима, у више нивоа и богатим реквизитима. Направи своју реалистичну игрицу
     уз коришћење физике. Гледај код као блокове или ЈаваСкрипт. Користи своје игрице
     на мобилном Ајпеду или Андроид таблету. На десетине активности које можете одабрати!
-  scratch_longdescription: Са скречом можете креирати сопствене игре, приче, анимације
-    &mdash; и делите са својим пријатељима. Почните са анимацијом свог имена, прављење
-    разгледнице, или своје пинг понг игрице.
-  lightbot_longdescription: Водите LightBot-а да осветли све плаве плочице. LightBot
-    је игра-слагалица која користи програмерске технике како би омогућила играчима
-    да у пракси схвате основе програмирања.
-  thinkersmith_longdescription: Помоћу Робота вокабулара ученици могу да распознају
-    и коментаришу специфичне радње. Те лекције уче ученике да се умреже са симболима
-    и акцијама, као и да уклањају грешке. Мој роботски пријатељ ради најбоље у групи
-    са учитељем у учионици.
-  lightbotintl_longdescription: Научите основну логику програмирања, почевши од врло
-    основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у веб читачима).
-    Научите да распоредите команде, уочите шаблоне, као и да искористите процедуре
-    и петље!
-  codecombat_longdescription: Порази предрасуде о Пајтон и ЈаваСкрипту у овом незаборавном
-    програмирању!
-  hourofcode_longdescription: Напиши свој први компјутерски програм
-  frozen_longdescription: Хајде да искористимо програмирање да би се придружили Ани
-    и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце док клижете
-    по леду и направићете зимску чаролију коју можете поделити са својим пријатељима!
-  starwars_longdescription: Научите да програмирате дроиде и креирате сопствену игру
-    Ратова звезда у галаксији далеко, далеко.
-  scratch_beyond_name: Будите креативни с програмирањем
-  robomind_beyond_name: Програмирајте виртуелног робота
-  makeschool_beyond_name: Направите Ајфон игру у вашем браузеру!
-  codehs_beyond_name: Научите да програмирате са Карелом псом
-  teachingtree_beyond_name: Унивезетски курсеви на интернету
-  codeorg_beyond_gradelevel: Узраст од 4 до 104 година
-  tynker_beyond_gradelevel: Узраста 5.-13.
-  scratch_beyond_gradelevel: Узраста 8+
-  lightbot_beyond_gradelevel: Сви узрасти
-  codecademy_beyond_gradelevel: Средња школа
-  kodable_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
-  scratchjr_beyond_gradelevel: Основна школа (од 1. до 4. разреда)
-  hacketyhack_beyond_gradelevel: Средња школа
-  robomind_beyond_gradelevel: Узраста 8.-13.
-  makeschool_beyond_gradelevel: Средња школа
-  touchdevelop_beyond_gradelevel: Средња школа
-  codehs_beyond_gradelevel: Средња школа
-  kodu_beyond_gradelevel: Узраста 8+
-  cargobot_beyond_gradelevel: Узраста 8+
-  kidsruby_beyond_gradelevel: Узраста 12+
-  w3schools_beyond_gradelevel: Узраста 12+
-  mozilla_beyond_gradelevel: Узраста 12+
-  finch_beyond_gradelevel: Узраста 8+
-  processing_beyond_gradelevel: Средња школа
-  sphero_beyond_gradelevel: Узраста 8+
-  khan_beyond_platformtext: Модерни интернет претраживач
-  tynker_beyond_platformtext: Модерни интернет претраживач ($$ required)
-  scratch_beyond_platformtext: Било који претраживач
-  lightbot_beyond_platformtext: iOS, Android (или веб читачи)
-  codecademy_beyond_platformtext: Модерни интернет претраживач. Иос, Андроид апликације
-  pocketcode_beyond_platformtext: Мобилна апликација
-  groklearning_beyond_platformtext: Модерни интернет претраживачи
-  hacketyhack_beyond_platformtext: Статично инталирање
-  robomind_beyond_platformtext: Модерни интернет претраживачи, Мобилни интернет
-  makeschool_beyond_platformtext: Модерни интернет претраживач
-  appinventor_beyond_platformtext: Модерни претраживач + Андроид
-  touchdevelop_beyond_platformtext: Модерни претраживачи, паметни телефони, сви уређаји
-  codehs_beyond_platformtext: Модерни претраживачи ($$ required)
-  udemy_beyond_platformtext: Интернет база
-  lynda_beyond_platformtext: Интернет базирано ($$ required)
-  edx_beyond_platformtext: Модерни претраживачи
-  coursera_beyond_platformtext: Модерни претраживачи
+  tynker_name: Направите своју сопствену игрицу
+  tynker_platformtext: Модерни интернет претраживачи
+  tynker_shortdescription: Научи програмирање уз решавање пазла и направи своје мобилне
+    игрице.
+  tynkerapp_gradelevel: Узраста 5.-13.
+  tynkerapp_name: Tynker - на таблетима
+  tynkerapp_platformtext: Ипад, Андроид таблети
+  tynkerapp_shortdescription: Научи програмирање уз решавање пазл игре.
   udacity_beyond_platformtext: Модерни претраживачи
-  teachingtree_beyond_platformtext: Интернет база
-  kidsruby_beyond_platformtext: Статично инталирање
-  w3schools_beyond_platformtext: Модерни интернет претраживач
-  codeavengers_beyond_platformtext: Модерни интернет претраживач
-  mozilla_beyond_platformtext: Модерни интернет претраживач
-  codecombat_beyond_platformtext: Интернет базирано (Firefox, Chrome, Safari, IE9+)
-  lego_beyond_platformtext: Роботске набавке
-  finch_beyond_platformtext: Роботске набавке
-  arduino_beyond_platformtext: Интернет претраживач, затим комплет за набавку
-  processing_beyond_platformtext: Модерни интернет претраживачи
-  alice_beyond_platformtext: Биндовс или Мек (захтевна инсталација)
-  sphero_beyond_platformtext: Роботске набавке
-  codeorg_beyond_shortdescription: Научи програмирањ са Марком Цукербергом и Љутим
-    Птицама!
-  khan_beyond_shortdescription: Научи да црташ у ЈаваСкрипт-у
-  tynker_beyond_shortdescription: Забаван и привлачан курс за децу узраста од 4.-8.
-  scratch_beyond_shortdescription: Направи интерактивне игрице, приче, и анимације.
-  lightbot_beyond_shortdescription: Игрица која вас учи принципима програмирања
-  codecademy_beyond_shortdescription: Научи ЈаваСкрипт прорамирање у веб-браузеру
-  kodable_beyond_shortdescription: Забавна Ипад игра учења програмирања
-  scratchjr_beyond_shortdescription: 'Креирање интерактивне приче и игре користећи
-    Сцратцхјр. '
-  hopscotch_beyond_shortdescription: Научи бизуелно програмирање на Ајпеду
-  pocketcode_beyond_shortdescription: Направи своју игру на паметном телефону и дели
-    је са својим пријатељима!
-  groklearning_beyond_shortdescription: Основни увод у Пајтон програмирање
-  robomind_beyond_shortdescription: Напиши програм за виртуелног робота
-  appinventor_beyond_shortdescription: Направи своју апликацију! (Само андроид)
-  khan_beyond_longdescription: Научи основе ЈаваСкрипт програмирања прављењем ѕабавних
-    цртежа. Самостално или са својим разредом!
-  scratch_beyond_longdescription: Са скречом можете креирати сопствене игре, приче,
-    анимације &mdash; и делите са својим пријатељима. Почните са анимацијом свог имена,
-    прављење разгледнице, или своје пинг понг игрице.
-  lightbot_beyond_longdescription: Научите основну логику програмирања, почевши од
-    врло основног програмирања, за децу од 4 године, на iOS-у или Androidu (или у
-    веб читачима). Научите да распоредите команде, уочите шаблоне, као и да искористите
-    процедуре и петље!
-  compatibility_hide_this_warning: Сакриј ова обавештења
-  flappy_shortcode: маши крилима
-  header_courses: курсеви
-  header_sections: Секције
-  header_educate_hoc: Час кода
-  header_about_us: О нама
-  header_about_donors: Донатори
-  header_about_partners: Партнери
-  header_about_team: Цео тим
-  header_about_jobs: Послови
-  header_about_contact: Контактирајте нас
-  header_about_faqs: Често постављана питања
-  header_learn: Научи
-  header_stats: Статистика
-  header_help_us: Помози нам
-  header_teacher_community: Заједница учитеља
-  header_report_bug: Пријави проблем
-  header_legal_privacy: Политика приватности
-  header_legal_tos: Услови коришћења
-  user_header_label: Здраво %{username}
-  user_header_team: Тим
-  user_header_settings: Мој налог
-  user_header_logout: Одјави се
-  user_header_signin: Пријави се
-  user_header_create: 'Креирај '
+  udemy_beyond_platformtext: Интернет база
+  upgrade_ie_link: Сазнајте више
+  upgrade_ie_message: Code.org ће ускоро престати са подршком за Internet Explorer
+    8, 9, и 10. Молимо да пређете на коришћење новијих прегледача.
+  upgrade_ie_message_csedweek: CSEdWeek.org ће ускоро престати са подршком за Internet
+    Explorer 8, 9, и 10. Молимо да пређете на коришћење новијих прегледача.
+  used_infrequent_updates: Само за ретка ажурирања
   user_header_artist: 'Уметник '
-  user_header_playlab: Играоница
+  user_header_create: 'Креирај '
   user_header_flappy: Флапи
-  applab_tile_start_tutorial: Покрени
-  account_sign_up_email_opt_in: Да ли можемо да вам шаљемо електронску пошту о нашим
-    курсевима, локалним могућностима или другим вестима из информатике (отприлике
-    једном месечно)?
-  hoc_overview_start_tutorial: Покрени
-  hoc2018_creativity: креативност
-  hoc2018_creativity_create: Креирај
-  hoc2018_creativity_hoc_coming: Час програмирања долази…
-  hoc2018_creativity_homepage: Дај машти крила и отвори ум за нова стварања. Започни
-    Часом програмирања реализацију сопствене идеје, ма шта она била. Погледај наш
-    видео.
-  hoc2018_creativity_hoc_about: 'Ове године, Час програмирања посвећен је креативности. '
-  hoc2018_creativity_social_media: 'Ове године #Час програмирања је посвећен креативности.
-    Ја учествујем! А ти?'
-  hoc2018_creativity_social_media_2: 'Ове године #Час програмирања је посвећен креативности.
-    Шта ти желиш да створиш?'
-  hoc2018_creativity_courses: Сазнај више помоћу курсева Часа програмирања
-  hoc2018_creativity_courses_link: Сазнај више на <a href="https://studio.code.org/courses">Час
-    програмирања курсеви</a>
-  hoc2018_mc_designer_title: Дизајнер игрице Minecraft
-  hoc2018_mc_designer_description: Програмирај животиње и друга Minecraft створења
-    у својој верзији Minecraft-а.
-  hoc2018_mc_start: Покрени
-  hoc2018_mc_no_internet: Немаш приступ интернету?
-  hoc2018_mc_educators_box2_button: Преузимање
-  hoc2018_mc_watch_videos: Пре него што почнеш, погледај један од ових инспиративних
+  user_header_label: Здраво %{username}
+  user_header_logout: Одјави се
+  user_header_playlab: Играоница
+  user_header_settings: Мој налог
+  user_header_signin: Пријави се
+  user_header_team: Тим
+  video_1min: 1 мин
+  video_2min: 2 мин
+  video_5min: 5 мин
+  video_title_anybody_can_learn: Свако може да научи
+  video_title_chris_bosh: Крис Бош о рачунарским наукама
+  video_title_draymond_green: Hour of Code са Драјмондом Грином
+  video_title_inspire_girl: Inspirišimo devojčice
+  video_title_marco_belinelli: Hour of Code са Марком Белинелијем
+  video_title_real_madrid: Hour of Code са Реал Мадридом
+  video_title_russell_okung: Hour of Code са Раселом Окунгом
+  view_course: Види курс
+  view_english_site: Погледај енглеску верзију
+  view_unit: Погледај лекцију
+  volunteer_engineer_submission_commitment_five_hrs_per_week: 5 сати по недељи
+  volunteer_engineer_submission_commitment_more: Више
+  volunteer_engineer_submission_commitment_now_and_then: Свако сад и тад
+  volunteer_engineer_submission_commitment_one_hr_per_week: 1 сат по недељи
+  volunteer_engineer_submission_commitment_three_hrs_per_week: 3 сата по недељи
+  volunteer_engineer_submission_commitment_uncertain: Несигурно
+  volunteer_engineer_submission_experience_software_professional: Професионалац за
+    програмирање
+  volunteer_engineer_submission_experience_university_student_or_researcher: Тренутни
+    студент (или истраживач)
+  volunteer_engineer_submission_experience_unspecified: Неодређено
+  volunteer_engineer_submission_field_description: Опис
+  volunteer_engineer_submission_field_email: Емаил адреса
+  volunteer_engineer_submission_field_email_placeholder: Емаил адреса
+  volunteer_engineer_submission_field_email_preference_no: не
+  volunteer_engineer_submission_field_email_preference_privacy: "(Погледајте нашу
+    политику приватности)"
+  volunteer_engineer_submission_field_email_preference_yes: Да
+  volunteer_engineer_submission_field_experience_level: Ниво искуства
+  volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
+  volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
+  volunteer_engineer_submission_field_location: Место
+  volunteer_engineer_submission_field_name: Име
+  volunteer_engineer_submission_field_name_placeholder: Пуно име и презиме
+  volunteer_engineer_submission_location_flexibility_curriculum: Желели би сте да
+    допринесете отвореним програмима?
+  volunteer_engineer_submission_location_flexibility_onsite: На сајту у школи
+  volunteer_engineer_submission_location_flexibility_remote: Учење на даљину (учитељи
+    или ученици)
+  volunteer_engineer_submission_num_volunteers_10: 10. Болонтера
+  volunteer_engineer_submission_num_volunteers_25: 25. Волонтера
+  volunteer_engineer_submission_num_volunteers_5: 5. Волонтера
+  volunteer_engineer_submission_num_volunteers_50: 50. Волонтера
+  volunteer_engineer_submission_submit: Пошаљи
+  volunteer_engineer_submission_subtitle_generic: '100000 наставника ће одржати час
+    програмирања Hour of Code у својим разредима ове године, од 7. до 13. децембра
+    2015. Треба им твоја помоћ! '
+  volunteer_engineer_submission_subtitle_specific: "%{num_teachers} наставника треба
+    волонтере. <br>%{num_volunteers} волонтера се пријавило. Придружи им се."
+  volunteer_engineer_submission_title: Инспиришите ученике и волонтирајте
+  volunteer_engineer_submission_type_task_mentor: У потрази сам за ментором који би
+    ме припремио за програмирање са мојим студентима
+  w3schools_beyond_gradelevel: Узраста 12+
+  w3schools_beyond_platformtext: Модерни интернет претраживач
+  watch_inspirational_videos: Пре него што почнеш, погледај један од ових инспиративних
     видео снимака
-  hoc2018_mc_video_1min: 1 мин
-  hoc2018_mc_video_2min: 2 мин
-  hoc2018_mc_video_5min: 5 мин
-  hoc2018_mc_video_title_inspire_girl: Inspirišimo devojčice
-  hoc2018_mc_video_title_anybody_can_learn: Свако може да научи
-  hoc2018_mc_homepage_join_us: Pridruži nam se
-  hoc2018_mc_homepage_try_it: Пробајте
-  hoc2018_dance_party_landing_title: Плес
-  hoc2018_dance_party_subheading: Помози у превођењу Плесне журке
-  hoc2018_dance_create_your_own_dance_title: Направи своју плесну журку
-  hoc2018_dance_party_box_description: Направи Плесну журку и подели је са пријатељима!
-  hoc2018_dance_party_specs: Језик | Формат | Старост 6-106
-  hoc2018_dance_party_button: Покрени
-  hoc2018_dance_keep_on_dancing_box_title: Настави плес
-  hoc2018_dance_keep_on_dancing_description: Иди даље од првог часа са новим идејама
-    за пројекте.
-  hoc2018_dance_keep_on_dancing_specs: Језик | Формат | Старост 13+
-  hoc2018_dance_keep_on_dancing_button: Започни Други део
-  hoc2018_dance_teacher_resources_title: Ресурси за учитеље
-  hoc2018_dance_teacher_resources_tile1_description: Планови часова, сертификати,
-    филтери за музику.
-  hoc2018_dance_teacher_resources_tile2_title: Плесна журка без интернета
-  hoc2018_dance_teacher_resources_tile2_description: Без рачунара! Научимо концепте
-    програмирања кроз креирање сопствене кореографије.
-  hoc2018_dance_teacher_resources_tile2_button: Активност ван мреже
-  hoc2018_dance_featured_student_creations_title: Одабрани пројекти ученика
-  hoc2018_dance_videos_section_heading: Потражи инспирацију
-  hoc2018_dance_video_title_what_is_creativity: Шта је креативност?
-  hoc2018_dance_view_creativity_video_playlist: Шта је креативност? Погледај све примере
-    (5 мин)
-  hoc2018_dance_amazon_sponsor_section_with_logo_title: Уз партнерство са
-  hoc2018_dance_amazon_about_future_engineer_button: Сазнајте више
-  hoc2018_dance_amazon_try_coding_this_summer_title: Пробај да програмираш овог лета
-  hoc2018_dance_amazon_try_coding_this_summer_button: Придружи се кампу
-  hoc2018_dance_amazon_scholarship_programs_title: Стипендије
-  hoc2018_dance_amazon_scholarship_programs_button: Пријавите се
-  hoc2018_dance_measure: Такт
-  hoc2018_dance_measure_colon: 'Такт:'
-  hoc2018_dance_video1: Плесна журка - Увод
-  hoc2018_dance_video2: Плесна журка - Догађаји
-  hoc2018_dance_video3: Плесна журка - Својства
-  hoc2018_dance_video4: Плесна журка - Честитамо
-  hoc2018_mc_with_microsoft: Уз партнерство са
-  footer_privacy_policy: Политика приватности
-  footer_partners: Партнери
-  footer_donate: Донирај
-  footer_support: Помоћ и заједница
-  footer_terms: Услови
-  ai_for_oceans_lesson_plan: план лекције
-  ai_in_partnership_with: Уз партнерство са
-  ai_activity: Активност
-  ai_description: Опис
-  hoc2022_landing_page_create_title: Креирај
+  what_gender: Којег сте пола?
+  who_has_done_hoc: 'Ко је одрадио #HourOfCode? @codeorg'
+  write_your_first_program: Напиши свој први компјутерски програм
+  'yes': Да
+  zipcode: Поштански број или име државе

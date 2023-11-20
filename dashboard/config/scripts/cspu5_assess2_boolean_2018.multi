@@ -13,3 +13,5 @@ teacher_markdown <<MARKDOWN
 
 **Boolean Definition:** A variable that has two possible values, “true” and “false”
 MARKDOWN
+
+allow_multiple_attempts true

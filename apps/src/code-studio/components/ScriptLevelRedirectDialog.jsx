@@ -3,7 +3,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {
   onDismissRedirectDialog,
-  dismissedRedirectDialog
+  dismissedRedirectDialog,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 
@@ -11,11 +11,11 @@ export default class ScriptLevelRedirectDialog extends React.Component {
   static propTypes = {
     redirectUrl: PropTypes.string.isRequired,
     scriptName: PropTypes.string.isRequired,
-    courseName: PropTypes.string
+    courseName: PropTypes.string,
   };
 
   state = {
-    isOpen: true
+    isOpen: true,
   };
 
   onCloseRedirectDialog = () => {
@@ -23,7 +23,7 @@ export default class ScriptLevelRedirectDialog extends React.Component {
     // Use course name if available, and script name if not.
     onDismissRedirectDialog(courseName || scriptName);
     this.setState({
-      isOpen: false
+      isOpen: false,
     });
   };
 

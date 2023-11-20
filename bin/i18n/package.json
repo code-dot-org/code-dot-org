@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@code-dot-org/redactable-markdown": "0.9.1",
+    "@code-dot-org/redactable-markdown": "0.9.3",
     "@code-dot-org/remark-plugins": "^1.3.0"
   }
 }

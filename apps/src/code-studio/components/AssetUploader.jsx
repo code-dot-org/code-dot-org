@@ -16,7 +16,7 @@ export default class AssetUploader extends React.Component {
     onUploadError: PropTypes.func,
     allowedExtensions: PropTypes.string,
     uploadsEnabled: PropTypes.bool.isRequired,
-    api: PropTypes.object.isRequired
+    api: PropTypes.object.isRequired,
   };
 
   /**
@@ -42,7 +42,6 @@ export default class AssetUploader extends React.Component {
           onUploadError={this.props.onUploadError}
         />
         <Button
-          __useDeprecatedTag
           onClick={this.fileUploadClicked}
           className="share"
           id="upload-asset"

@@ -16,8 +16,9 @@ module Pd::Payment
     end
 
     test 'attendance_url' do
-      assert_not_nil @workshop_summary.attendance_url
-      assert @workshop_summary.attendance_url.include?(
+      refute_nil @workshop_summary.attendance_url
+      assert_includes(
+        @workshop_summary.attendance_url,
         "/pd/workshop_dashboard/workshops/#{@ended_workshop.id}/attendance/#{@ended_workshop.sessions.first.id}"
       )
     end
@@ -36,6 +37,21 @@ module Pd::Payment
       @ended_admin_workshop = create :admin_workshop, :ended
       @workshop_summary = WorkshopSummary.new(
         workshop: @ended_admin_workshop,
+        pay_period: 'a pay period',
+        num_days: 1,
+        num_hours: 6,
+        min_attendance_days: 1,
+        calculator_class: PaymentCalculatorBase,
+        attendance_count_per_session: [1]
+      )
+      report = @workshop_summary.generate_organizer_report_line_item
+      assert_nil report[:num_scholarship_teachers_attending_all_sessions]
+    end
+
+    test 'workshop summary reports nil for attendance count for all sessions attendance for admin/counselor workshop' do
+      @ended_admin_counselor_workshop = create :admin_counselor_workshop, :ended
+      @workshop_summary = WorkshopSummary.new(
+        workshop: @ended_admin_counselor_workshop,
         pay_period: 'a pay period',
         num_days: 1,
         num_hours: 6,

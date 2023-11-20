@@ -1,5 +1,7 @@
 import React from 'react';
 import {shallow, mount} from 'enzyme';
+import {updateQueryParam} from '../../../../src/code-studio/utils';
+import {currentLocation} from '@cdo/apps/utils';
 import {
   BasicBubble,
   BubbleShape,
@@ -8,7 +10,7 @@ import {
   getBubbleContent,
   getBubbleShape,
   getBubbleUrl,
-  unitTestExports
+  unitTestExports,
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import {fakeLevel} from '@cdo/apps/templates/progress/progressTestHelpers';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
@@ -23,7 +25,7 @@ describe('BubbleFactory', () => {
       size: BubbleSize.dot,
       progressStyle: {},
       classNames: '',
-      children: <div />
+      children: <div />,
     };
 
     const setUp = (overrideProps = {}) => {
@@ -35,7 +37,7 @@ describe('BubbleFactory', () => {
       const bubbleSize = BubbleSize.full;
       const wrapper = setUp({
         size: bubbleSize,
-        shape: BubbleShape.diamond
+        shape: BubbleShape.diamond,
       });
       expect(wrapper.find(unitTestExports.DiamondContainer)).to.have.length(1);
       expect(
@@ -47,7 +49,7 @@ describe('BubbleFactory', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
         shape: BubbleShape.diamond,
-        children: child
+        children: child,
       });
       expect(wrapper.contains(child)).to.be.true;
     });
@@ -56,7 +58,7 @@ describe('BubbleFactory', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({
         shape: BubbleShape.circle,
-        children: child
+        children: child,
       });
       expect(wrapper.contains(child)).to.be.true;
     });
@@ -65,7 +67,7 @@ describe('BubbleFactory', () => {
   describe('BubbleTooltip', () => {
     const DEFAULT_PROPS = {
       level: fakeLevel(),
-      children: <div />
+      children: <div />,
     };
 
     const setUp = (overrideProps = {}) => {
@@ -101,7 +103,7 @@ describe('BubbleFactory', () => {
       const testLevel = fakeLevel({
         isUnplugged: false,
         name: undefined,
-        progressionDisplayName: progressionName
+        progressionDisplayName: progressionName,
       });
       const wrapper = setUp({level: testLevel});
       expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
@@ -112,7 +114,7 @@ describe('BubbleFactory', () => {
     it('tooltipText includes a level number if the level has one', () => {
       const levelNumber = 1;
       const testLevel = fakeLevel({
-        levelNumber
+        levelNumber,
       });
       const wrapper = setUp({level: testLevel});
       expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
@@ -139,7 +141,7 @@ describe('BubbleFactory', () => {
       isBonus = false,
       isPaired = false,
       title,
-      bubbleSize
+      bubbleSize,
     }) => {
       return mount(
         getBubbleContent(
@@ -230,6 +232,15 @@ describe('BubbleFactory', () => {
     it('if there is a sectionId append the section_id to the url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1, 2);
       expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
+    });
+
+    it('removes version param if it exists even if other params are preserved', () => {
+      const levelUrl = 'http://a-level-url.com';
+      updateQueryParam('version', '456lmnop');
+      expect(currentLocation().search).to.include('version=456lmnop');
+      const preserveQueryParams = true;
+      const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
+      expect(bubbleUrl).to.not.include('version=456lmnop');
     });
   });
 

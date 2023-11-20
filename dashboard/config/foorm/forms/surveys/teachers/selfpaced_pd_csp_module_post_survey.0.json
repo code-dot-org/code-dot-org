@@ -389,7 +389,7 @@
             },
             {
               "value": "5",
-              "text": "5 "
+              "text": "5"
             }
           ],
           "rows": [
@@ -417,7 +417,7 @@
             },
             {
               "value": "check_for_understanding",
-              "text": "Completing a 'check for understanding' question."
+              "text": "Completing a check for understanding question."
             }
           ]
         },

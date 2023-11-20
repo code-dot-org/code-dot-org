@@ -13,3 +13,5 @@ teacher_markdown <<MARKDOWN
 
 In this case, receiving an email that requires you to send personal information (such as a password) is considered a phishing attack. 
 MARKDOWN
+
+allow_multiple_attempts true

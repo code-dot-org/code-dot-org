@@ -30,7 +30,7 @@ class DiscourseSsoController < ApplicationController
     end
 
     FACILITATOR_COURSE_NAMES_TO_GROUP_NAMES.each do |course_name, group_name|
-      if Pd::CourseFacilitator.where(facilitator: current_user, course: course_name).exists?
+      if Pd::CourseFacilitator.exists?(facilitator: current_user, course: course_name)
         add_groups << group_name
       else
         remove_groups << group_name

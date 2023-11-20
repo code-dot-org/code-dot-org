@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# Involucreu la vostra comunitat en l'Hora del Codi
 
 ## 1. Corre la veu
 
-Tell your friends about the **#HourOfCode**!
+Expliqueu als vostres amics què és **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
 ## 2. Demana a tothom de la teva escola que ofereixin una Hora de Codi
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Envieu aquest correu electrònic]({{ promote/sample_emails }}) al director del vostre centre i animeu a totes les classes de la vostra escola a registrar-s'hi!
 
 ## 3. Demana a la teva empresa que s'impliqui
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Envieu aquest correu electrònic]({{ promote/sample_emails }}) al vostre superior o al Director General de la vostra empresa.
 
-## 4. Promote Hour of Code in your community
+## 4. Promoveu l'Hora del Codi a la vostra comunitat
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Demaneu la col·laboració d'un grup del vostre entorn]({{ promote/sample_emails }}): un esplai, un casal, una universitat, un sindicat, o fins i tot els vostres amics. No cal estar estudiant per aprendre adquirir coneixements nous. Feu servir aquests [pòsters, cartells, adhesius, vídeos i altres materials](/promote/resources) per al vostre esdeveniment.
 
 ## 5. Demana a un carrec electe local que doni suport a l'Hora del Codi
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
+[Envieu aquest correu electrònic]({{ promote/sample_emails }}) als regidors, consellers o comitès escolars per convidar-los a visitar la vostra escola durant l'Hora del Codi. En fer-ho, contribuireu a solidificar el compromís amb la informàtica al vostre entorn més enllà de l'esdeveniment.
 
 {{ signup_button }}

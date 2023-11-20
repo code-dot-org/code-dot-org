@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org kursları dünyanın hər yerində on milyonlarla şagird və bir milyon müəllim tərəfindən istifadə olunur.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Tarixçə
 
 Code.org 2013-cü ildə Hadi və Ali Partovi əkiz qardaşları tərəfindən [kompüter elmlərini tanıdan bir video](https://www.youtube.com/watch?v=nKIu9yen5nc) ilə başladıldı. Bu video bir günlük YouTube-da 1. yerdə oldu və 15,000 məktəb kömək üçün bizə müraciət etdi. O vaxtdan bəri, dünya miqyaslı bir hərəkatı dəstəkləyən tam bir təşkilat qurmaq üçün könüllülər heyətindən genişləndik. Keyfiyyətli kompüter elmləri təhsilinin uşaqların sadəcə bir qismi üçün deyil hamısı üçün mümkün olduğuna inanırıq.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Biz nə edirik
 

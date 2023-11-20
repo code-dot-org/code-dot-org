@@ -1,31 +1,31 @@
 name 'cspu5_assess2_wrongLogic_2018'
-encrypted 'CzAwiKTgIOtX8U1yc73pPcap+O3aFUGfYfeWPAk33r5lBkYgqwNDVjLas/yf
-pZNqmVRdydIKs9e0+57Svcqsk7lCQXOnPQyYxYjpc+dFWYd0Q2Up3ajTcg2n
-whLBKZEgk8hbJDB69fS9QmGTcLA1U7bisX+6kPUGwycRFi7+Z5zDMeaV92OM
-5w8gRzj8+RoczXX3pMM/knISsHhYNuCZ18jO1hlOM4nSdWpfoMAxjhh+HlZr
-Bz4ZMfhg/WPKQSGmzBAx3izxj1zM6oE6er3fPIIY5ja5wJOrVsqHpREfv55L
-d7EPmrr08TQoeXCQhzdZ2MNLjE7CtfEo36kKWHEj6ekZSbHtfZ0BsN7lkNmQ
-dNLCWhNbvP6IWJ8MidSObIp2faTA2PBXztGY6qQtCztG2yPy/TwnGZXaZpgR
-nlFlVglvpiCSvN9tQX5yB6/hq0MZdpuWblwolPfbX+aiAG/N+YajigmYC/ar
-+DHEZmcGmO6a0dvkfhi6cL7RHi4BszIkbAT9EuXmBBI1wYhDhFDuktGsdKoB
-ChyMj8YnL1hZCsZrfH2rbmL0xpUFGj9d4gyxPdSziHfxKjb6XrxWvyLlTcjp
-gDu8yIA9cXv7BxXS7rg4+b/I5BZjQStSn5sLoEl+qisYwogUamuuTsTSfn0+
-38WITs4CoSlUj9WQV9+wEodEhhtXxMKeLZgHsdVpXzb1ayH4RZoG+UajSKlH
-jxrdCoTl6qUOjQzBNT7oXHTh/vWqZZKUYnByXZOnKucvODqyDPMaEN92rSSR
-uYDGoecaYqtwplm6ShinjnTcqFJMBSCqdmglClHujuerZ7+7bGBRt5Quf8Wc
-8+KtwCnhYYR03Lekgfx3awg1nv6Zaz2M63FwNtCf5edolCHEqcNn5e1aWcp6
-lmXTxhLvcRTh5qZFgFn91poGdFjfxNpUcSiDD+qvIihDduAeSrLnH5AezIt+
-tZqGP8zRRAP9Ji9RynT+gRSTQCBXNz+R0P9II4lLfiLbqAlLwCYn2cKIWyDo
-WIY1yXqmty0qkHKVJd+XvQPjIhGRKi6h+hrtDgrH3aIT5gv2w6FQhxlEK/aW
-MlIVYQZyB2xEBRdIIYETuM5mhiwOLgEAY6F3h3vUgZaClir1nRX+a3THYAPB
-Ikg9b8AZGfMRLwE5lOaHpSN3KRgDWUnj0wXCV9Z99MwjnPyOAnKUEPNZO/Ge
-OiHc6eHCPHLHGRm20srTOv76kD6smtEqcL5/vtKIxMSyzmi8LbyKFQjg6KQ2
-gq8xZcKWmiZqv4N8OX7PmmZLGHxbQRwZj4poNXQBBkGGM+o2/vh9ItO0KsNI
-xg1hpE9Hrh/DUbz5Si3S3Ep2lqCMb3u5aDZaoswC+kAW2xt2WfaAcB01ayzu
-4SLGD7OJKh0RmIDqaItr/WkjvdbHzFDm/yBHxF4joh3GFjG/gVK+qYq/C4GM
-JGJR80KGo9HSeABx5RTV3RYmckjzJ/GTdUtVhKd5IUM+IDfOKQcaTuAvV6oa
-IAOUMvky6WOl1Kg8GVj0tW8YqE+/yIDGrNdY9UPI76LIP1BMRKvjKLFJmnyD
-sav4ogSla/83b7YpzosK5VYH0YMyv6EryXCsdlHxneqDw2tmOIaJ7BWy5yfV
-ReUlOotEXeFWM2Rk1WJIE3raP+cHiwOoHllE+fvayaS76Rzzlg9T5y8BoSfx
-l7KlGIvIf1KA00URfnPDecH3rlo=
-'
+wrong 'Any time between 6 and 9'
+wrong 'Any time between 10 and 19'
+wrong 'Any time between 0 and 20'
+right 'There is no value of time that will result in “Good Morning!” being displayed'
+wrong 'The logic error will cause the program to stop running at line 7.'
+
+markdown <<MARKDOWN
+Consider the following JavaScript code segment.  
+
+    var time = promptNum(“What hour is it (on a 24 hour clock)?”);
+    var greeting = “”;
+    if (time < 6) {
+        greeting = "It is too early!";
+    } else if (time < 20) {
+        greeting = "Good Day!";
+    } else if (time < 10) {
+        greeting = “Good Morning!”;
+    } else {
+        greeting = "Good Evening!";
+    }
+    console.log(greeting);
+
+Something is wrong with the logic in the program above. For which values of time will the greeting “Good Morning!” be displayed?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Looking at the two else if statements in the middle, we notice that (time < 20) comes before (time < 10). Since code executes sequentially, "Good Morning!" will never be displayed because all values that are between 6 and 10 will first go into the (time < 20) statement due to the order of the code.
+MARKDOWN
+
+allow_multiple_attempts true

@@ -8,7 +8,7 @@ class EqualColumns extends React.Component {
   static propTypes = {
     // Space between columns, in pixels
     intercolumnarDistance: PropTypes.number,
-    children: AnyChildren
+    children: AnyChildren,
   };
 
   static defaultProps = {intercolumnarDistance: 0};
@@ -18,14 +18,14 @@ class EqualColumns extends React.Component {
     const childCount = React.Children.count(children);
     const outerColumnStyle = {
       float: 'left',
-      width: 100 / childCount + '%'
+      width: 100 / childCount + '%',
     };
     return (
       <div>
         {React.Children.map(this.props.children, (child, index) => {
           const innerColumnStyle = {
             marginLeft: index > 0 && intercolumnarDistance / 2,
-            marginRight: index < childCount - 1 && intercolumnarDistance / 2
+            marginRight: index < childCount - 1 && intercolumnarDistance / 2,
           };
           return (
             <div style={outerColumnStyle}>

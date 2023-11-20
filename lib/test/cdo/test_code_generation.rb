@@ -7,7 +7,7 @@ end
 class CodeGenerationTest < Minitest::Test
   describe 'random unique code' do
     it 'does not generate vowels' do
-      codes = 10.times.map {CodeGeneration.random_unique_code}
+      codes = Array.new(10) {CodeGeneration.random_unique_code}
       assert codes.grep(/[AEIOU]/).empty?
     end
 

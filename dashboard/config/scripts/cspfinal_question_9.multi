@@ -7,3 +7,5 @@ right 'There is a limit to the number of things that can be represented in binar
 markdown <<MARKDOWN
 Number bases, including binary, decimal, and hexadecimal, are used to view and represent digital data.  Which of the following is **NOT** true about representing digital data?
 MARKDOWN
+
+allow_multiple_attempts true

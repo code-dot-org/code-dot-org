@@ -46,3 +46,5 @@ The purpose of the procedure _countFives_ is to see how many fives are in the de
 
 	RETURN(count)
 MARKDOWN
+
+allow_multiple_attempts true

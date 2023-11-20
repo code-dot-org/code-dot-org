@@ -1,0 +1,31 @@
+{
+  "category": "",
+  "config": {
+    "func": "makeNewSpriteBetween",
+    "blockText": "make {N} new {GROUP} between location x: {X} y: {Y}",
+    "style": "sprite_blocks",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "N",
+        "type": "Number"
+      },
+      {
+        "name": "GROUP",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "X",
+        "type": "Number"
+      },
+      {
+        "name": "Y",
+        "type": "Number"
+      }
+    ]
+  }
+}

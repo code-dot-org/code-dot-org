@@ -39,8 +39,8 @@ module MysqlCheckIndexUsed
         end
       end
     end
-  rescue => e
-    raise translate_exception_class(e, sql, [])
+  rescue => exception
+    raise translate_exception_class(exception, sql, [])
   end
 end
 

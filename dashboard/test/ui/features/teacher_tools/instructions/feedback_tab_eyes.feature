@@ -5,8 +5,7 @@ Feature: Feedback Tab Visibility
   Background:
     Given I create a teacher-associated student named "Lillian"
     And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
-    Then I rotate to landscape
-    And I wait to see "#runButton"
+    Then I wait to see "#runButton"
     And I press "runButton"
     And I wait to see "#finishButton"
     And I press "finishButton"

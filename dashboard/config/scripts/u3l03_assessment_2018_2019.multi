@@ -17,3 +17,5 @@ Correct answer:
 
 * Functions cannot make calls to other functions written by the same programmer.
 MARKDOWN
+
+allow_multiple_attempts true

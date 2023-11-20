@@ -31,7 +31,7 @@ DOWNLOAD_DESTINATION = '~/cdo-sound-library'.freeze
 class Hash
   # Like Enumerable::map but returns a Hash instead of an Array
   def hmap(&block)
-    Hash[map {|k, v| yield k, v}]
+    map {|k, v| yield k, v}.to_h
   end
 
   # Drop a key from the hash, returning the hash (destructive)
@@ -69,31 +69,30 @@ class ManifestBuilder
     info "Mapped #{category_map.size} categories"
 
     # Write result to file
-    File.open(DEFAULT_OUTPUT_FILE, 'w') do |file|
-      file.write(
-        JSON.pretty_generate(
-          {
-            # JSON-style file comment
-            '//': [
-              'Sound Library Manifest',
-              'GENERATED FILE: DO NOT MODIFY DIRECTLY',
-              'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
-            ],
+    File.write(
+      DEFAULT_OUTPUT_FILE,
+      JSON.pretty_generate(
+        {
+          # JSON-style file comment
+          '//': [
+            'Sound Library Manifest',
+            'GENERATED FILE: DO NOT MODIFY DIRECTLY',
+            'See tools/scripts/rebuildSoundLibraryManifest.rb for more information.'
+          ],
 
-            # Strip aliases from metadata - they're no longer needed since they
-            #   are represented in the alias map.
-            # Also sort for stable updates
-            'metadata': sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
+          # Strip aliases from metadata - they're no longer needed since they
+          #   are represented in the alias map.
+          # Also sort for stable updates
+          metadata: sound_metadata.hmap {|k, v| [k, v.omit!('aliases')]}.sort.to_h,
 
-            # Sort category map for stable updates
-            'categories': category_map.sort.to_h,
+          # Sort category map for stable updates
+          categories: category_map.sort.to_h,
 
-            # Sort alias map for stable updates
-            'aliases': alias_map.sort.to_h
-          }
-        )
+          # Sort alias map for stable updates
+          aliases: alias_map.sort.to_h
+        }
       )
-    end
+    )
 
     @warnings.each {|warning| warn "#{bold 'Warning:'} #{warning}"}
 
@@ -104,8 +103,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -158,10 +157,10 @@ class ManifestBuilder
         objects['json'].get(response_target: json_destination)
         verbose "Writing #{mp3_destination}"
         objects['mp3'].get(response_target: mp3_destination)
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json and #{name}.mp3 from S3:
-          #{service_error}
+          #{exception}
           The sound has been skipped.
         WARN
       end
@@ -179,8 +178,8 @@ class ManifestBuilder
     EOS
 
   # Report any issues while talking to S3 and suggest most likely steps for fixing it.
-  rescue Aws::Errors::ServiceError => service_error
-    warn service_error.inspect
+  rescue Aws::Errors::ServiceError => exception
+    warn exception.inspect
     warn <<-EOS.unindent
 
       #{bold 'There was an error talking to S3.'}  Make sure you have credentials set using one of:
@@ -295,16 +294,16 @@ class ManifestBuilder
         end
         metadata['aliases'] = aliases.map {|a| (a.start_with? "category_") ? (a.delete_prefix "category_") : a}
         metadata['categories'] = categories
-      rescue Aws::Errors::ServiceError => service_error
+      rescue Aws::Errors::ServiceError => exception
         next <<~WARN
           There was an error retrieving #{name}.json from S3:
-          #{service_error}
+          #{exception}
           The sound has been skipped.
         WARN
-      rescue JSON::JSONError => json_error
+      rescue JSON::JSONError => exception
         next <<~WARN
           There was an error parsing #{name}.json:
-          #{json_error}
+          #{exception}
           The sound has been skipped.
         WARN
       end

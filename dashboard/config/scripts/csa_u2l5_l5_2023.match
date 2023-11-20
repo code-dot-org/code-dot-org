@@ -14,3 +14,4 @@ answer 'where a variable can be used'
 
 question 'encapsulation'
 answer 'an object-oriented programming concept where the instance variables of a class are hidden from other classes and can be accessed only through the methods of the class'
+allow_multiple_attempts true

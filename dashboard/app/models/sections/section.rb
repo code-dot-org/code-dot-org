@@ -23,10 +23,13 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
+#  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
+#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -61,6 +64,12 @@ class Section < ApplicationRecord
   belongs_to :user, optional: true
   alias_attribute :teacher, :user
 
+  has_many :section_instructors, dependent: :destroy
+  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
+  has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section
+  after_destroy :soft_delete_lti_section
+
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
@@ -81,11 +90,21 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
+
+  serialize :grade, GradesArray
+  # Allow accessing section.grades, without a costly column rename.
+  alias_attribute :grades, :grade
+
+  validate :grades_are_subset_of_valid_grades, unless: -> {grades.nil?}
+  validate :grades_with_pl_are_only_pl, unless: -> {grades.nil?}
 
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -98,8 +117,8 @@ class Section < ApplicationRecord
   # PL courses which are run with adults should have the grade type of 'pl'.
   # This value was recommended by RED team.
   def pl_sections_must_use_pl_grade
-    if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
-      errors.add(:grade, 'must be pl for pl section.')
+    if pl_section? && grades != [SharedConstants::PL_GRADE_VALUE]
+      errors.add(:grades, 'must be ["pl"] for pl section.')
     end
   end
 
@@ -109,6 +128,22 @@ class Section < ApplicationRecord
   def participant_type_not_changed
     if participant_type_changed? && persisted?
       errors.add(:participant_type, "can not be update once set.")
+    end
+  end
+
+  # We want the `grades` attribute to be a list that only includes elements
+  # that exist in the list of valid grades.
+  def grades_are_subset_of_valid_grades
+    unless Section.valid_grades?(grades)
+      errors.add(:grades, "must be one or more of the valid student grades. Expected: #{VALID_GRADES}. Got: #{grades}.")
+    end
+  end
+
+  # If the grades include 'pl', they must *ONLY* include 'pl'.
+  # E.g.: You can't have a section with 'K' and 'pl'.
+  def grades_with_pl_are_only_pl
+    if grades.include?(SharedConstants::PL_GRADE_VALUE) && grades.length != 1
+      errors.add(:grades, "cannot combine pl with other grades")
     end
   end
 
@@ -137,6 +172,11 @@ class Section < ApplicationRecord
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
+  VALID_GRADES = [
+    SharedConstants::STUDENT_GRADE_LEVELS,
+    SharedConstants::PL_GRADE_VALUE
+  ].flatten.freeze
+
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
@@ -147,6 +187,9 @@ class Section < ApplicationRecord
   CSA = 'csa'.freeze
   CSA_PILOT_FACILITATOR = 'csa-pilot-facilitator'.freeze
 
+  # A section can have five co-teachers, plus the owner, for a total of 6
+  INSTRUCTOR_LIMIT = 6
+
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
   end
@@ -155,8 +198,9 @@ class Section < ApplicationRecord
     Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.value?(type)
   end
 
-  def self.valid_grade?(grade)
-    SharedConstants::STUDENT_GRADE_LEVELS.include?(grade) || grade == PL_GRADE_VALUE
+  def self.valid_grades?(grades)
+    return false if grades.empty?
+    (grades - VALID_GRADES).empty?
   end
 
   # Override default script accessor to use our cache
@@ -193,6 +237,33 @@ class Section < ApplicationRecord
     end
   end
 
+  after_save :ensure_owner_is_active_instructor
+  def ensure_owner_is_active_instructor
+    return if user.blank?
+
+    si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
+    if si.blank?
+      # Using insert instead of create saves on queries to re-read the section
+      # and user from the DB to validate these are still actual objects.
+      SectionInstructor.insert(
+        {
+          instructor_id: user_id,
+          section_id: id,
+          status: :active,
+          created_at: Time.now,
+          updated_at: Time.now
+        }
+      )
+    elsif si.deleted?
+      si.restore
+      si.status = :active
+      si.save!
+    elsif si.status != 'active'
+      si.status = :active
+      si.save!
+    end
+  end
+
   # return a version of self.students in which all students' names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
@@ -200,7 +271,9 @@ class Section < ApplicationRecord
   def name_safe_students
     name_splitter_proc = ->(student) {FullNameSplitter.split(student.name)}
 
-    SafeNames.get_safe_names(students, name_splitter_proc).map do |safe_name_and_student|
+    students_only = students.where.not(user_type: "teacher")
+
+    SafeNames.get_safe_names(students_only, name_splitter_proc).map do |safe_name_and_student|
       # Replace each student name with the safe name (for this instance, not saved)
       safe_name, student = safe_name_and_student
       student.name = safe_name
@@ -249,20 +322,21 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
     # OAUTH login section (Google Classroom / clever).
     # added_by is passed only from the sections_students_controller, used by teachers to
     # manager their rosters.
-    unless added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)
-      return ADD_STUDENT_RESTRICTED if restrict_section == true && (!follower || follower.deleted?)
+    if !(added_by&.id == user_id || (LOGIN_TYPES_OAUTH.include? login_type)) && (restrict_section == true && (!follower || follower.deleted?))
+      return ADD_STUDENT_RESTRICTED
     end
 
     # Unless the sections login type is Google or Clever
-    unless externally_rostered?
+    if !externally_rostered? && (students.distinct(&:id).size >= @@section_capacity)
       # Return a full section error if the section is already at capacity.
-      return ADD_STUDENT_FULL if students.distinct(&:id).size >= @@section_capacity
+      return ADD_STUDENT_FULL
     end
 
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
@@ -294,11 +368,9 @@ class Section < ApplicationRecord
       end
     end
 
-    if options[:notify]
-      # Though in theory required, we are missing an email address for many teachers.
-      if user && user.email.present?
-        FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
-      end
+    # Though in theory required, we are missing an email address for many teachers.
+    if options[:notify] && user && user.email.present?
+      FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
     end
   end
 
@@ -317,75 +389,80 @@ class Section < ApplicationRecord
   # Provides some information about a section. This is consumed by our SectionsAsStudentTable
   # React component on the teacher homepage and student homepage
   def summarize(include_students: true)
-    base_url = CDO.studio_url('/teacher_dashboard/sections/')
+    ActiveRecord::Base.connected_to(role: :reading) do
+      base_url = CDO.studio_url('/teacher_dashboard/sections/')
 
-    title = ''
-    link_to_assigned = base_url
-    title_of_current_unit = ''
-    link_to_current_unit = ''
-    course_version_name = nil
+      title = ''
+      link_to_assigned = base_url
+      title_of_current_unit = ''
+      link_to_current_unit = ''
+      course_version_name = nil
 
-    if unit_group
-      title = unit_group.localized_title
-      link_to_assigned = course_path(unit_group)
-      course_version_name = unit_group.name
-      if script_id
-        title_of_current_unit = script.title_for_display
-        link_to_current_unit = script_path(script)
+      if unit_group
+        title = unit_group.localized_title
+        link_to_assigned = course_path(unit_group)
+        course_version_name = unit_group.name
+        if script_id
+          title_of_current_unit = script.title_for_display
+          link_to_current_unit = script_path(script)
+        end
+      elsif script_id
+        title = script.title_for_display
+        link_to_assigned = script_path(script)
+        course_version_name = script.name
       end
-    elsif script_id
-      title = script.title_for_display
-      link_to_assigned = script_path(script)
-      course_version_name = script.name
+
+      # Remove ordering from scope when not including full
+      # list of students, in order to improve query performance.
+      unique_students = include_students ?
+        students.distinct(&:id) :
+        students.unscope(:order).distinct(&:id)
+      num_students = unique_students.size
+
+      serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
+
+      {
+        id: id,
+        name: name,
+        createdAt: created_at,
+        teacherName: teacher.name,
+        sectionInstructors: serialized_section_instructors,
+        linkToProgress: "#{base_url}#{id}/progress",
+        assignedTitle: title,
+        linkToAssigned: link_to_assigned,
+        currentUnitTitle: title_of_current_unit,
+        linkToCurrentUnit: link_to_current_unit,
+        courseVersionName: course_version_name,
+        numberOfStudents: num_students,
+        linkToStudents: "#{base_url}#{id}/manage_students",
+        code: code,
+        lesson_extras: lesson_extras,
+        pairing_allowed: pairing_allowed,
+        tts_autoplay_enabled: tts_autoplay_enabled,
+        sharing_disabled: sharing_disabled?,
+        login_type: login_type,
+        participant_type: participant_type,
+        course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+        course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+        unit_id: unit_group ? script_id : nil,
+        course_id: course_id,
+        script: {
+          id: script_id,
+          name: script.try(:name),
+          project_sharing: script.try(:project_sharing)
+        },
+        studentCount: num_students,
+        grades: grades,
+        providerManaged: provider_managed?,
+        hidden: hidden,
+        students: include_students ? unique_students.map(&:summarize) : nil,
+        restrict_section: restrict_section,
+        is_assigned_csa: assigned_csa?,
+        # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+        post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+        code_review_expires_at: code_review_expires_at
+      }
     end
-
-    # Remove ordering from scope when not including full
-    # list of students, in order to improve query performance.
-    unique_students = include_students ?
-      students.distinct(&:id) :
-      students.unscope(:order).distinct(&:id)
-    num_students = unique_students.size
-
-    {
-      id: id,
-      name: name,
-      createdAt: created_at,
-      teacherName: teacher.name,
-      linkToProgress: "#{base_url}#{id}/progress",
-      assignedTitle: title,
-      linkToAssigned: link_to_assigned,
-      currentUnitTitle: title_of_current_unit,
-      linkToCurrentUnit: link_to_current_unit,
-      courseVersionName: course_version_name,
-      numberOfStudents: num_students,
-      linkToStudents: "#{base_url}#{id}/manage_students",
-      code: code,
-      lesson_extras: lesson_extras,
-      pairing_allowed: pairing_allowed,
-      tts_autoplay_enabled: tts_autoplay_enabled,
-      sharing_disabled: sharing_disabled?,
-      login_type: login_type,
-      participant_type: participant_type,
-      course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
-      course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-      unit_id: unit_group ? script_id : nil,
-      course_id: course_id,
-      script: {
-        id: script_id,
-        name: script.try(:name),
-        project_sharing: script.try(:project_sharing)
-      },
-      studentCount: num_students,
-      grade: grade,
-      providerManaged: provider_managed?,
-      hidden: hidden,
-      students: include_students ? unique_students.map(&:summarize) : nil,
-      restrict_section: restrict_section,
-      is_assigned_csa: assigned_csa?,
-      # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
-      post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
-      code_review_expires_at: code_review_expires_at
-    }
   end
 
   def provider_managed?
@@ -460,7 +537,7 @@ class Section < ApplicationRecord
 
       # Count students who have made progress on 5+ programming levels in both units
       next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
-          (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
+        (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
 
       num_students_with_sufficient_progress += 1
       return true if num_students_with_sufficient_progress >= 10
@@ -507,9 +584,7 @@ class Section < ApplicationRecord
     self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
-  private
-
-  def unused_random_code
+  private def unused_random_code
     CodeGeneration.random_unique_code length: 6, model: Section
   end
 
@@ -517,7 +592,7 @@ class Section < ApplicationRecord
   # from the section name.
   # We make a best-effort to make the name usable without the removed characters.
   # We can remove this once our database has utf8mb4 support everywhere.
-  def strip_emoji_from_name
+  private def strip_emoji_from_name
     # We don't want to fill in a default name if the caller intentionally tried to clear it.
     return if name.blank?
 
@@ -528,4 +603,38 @@ class Section < ApplicationRecord
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
   before_validation :strip_emoji_from_name
+
+  public def add_instructor(email, current_user)
+    instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
+
+    deleted_section_instructor = validate_instructor(instructor)
+    deleted_section_instructor&.really_destroy!
+
+    SectionInstructor.create!(
+      section: self,
+      instructor: instructor,
+      status: :invited,
+      invited_by: current_user
+    )
+  end
+
+  # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
+  public def validate_instructor(instructor)
+    if section_instructors.count >= INSTRUCTOR_LIMIT
+      raise ArgumentError.new('section full')
+    end
+
+    si = SectionInstructor.with_deleted.find_by(instructor: instructor, section: self)
+
+    # Return the instructor for actual deletion if they were soft-deleted
+    if si&.deleted_at.present?
+      return si
+    # Can't re-add someone who is already an instructor (or invited/declined)
+    elsif si.present?
+      raise ArgumentError.new('already invited')
+    elsif pl_section? && students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
+    end
+  end
 end

@@ -1,6 +1,6 @@
 var evalUtils = require('./evalUtils');
 
-var EvalImage = function(style, color) {
+var EvalImage = function (style, color) {
   // x/y location in pixel space of object's center
   this.x_ = 200;
   this.y_ = 200;
@@ -14,12 +14,12 @@ var EvalImage = function(style, color) {
 };
 module.exports = EvalImage;
 
-EvalImage.prototype.updatePosition = function(x, y) {
+EvalImage.prototype.updatePosition = function (x, y) {
   this.x_ = x;
   this.y_ = y;
 };
 
-EvalImage.prototype.draw = function(parentElement) {
+EvalImage.prototype.draw = function (parentElement) {
   if (this.style_ && this.color_) {
     this.element_.setAttribute(
       'fill',
@@ -53,16 +53,16 @@ EvalImage.prototype.draw = function(parentElement) {
   }
 };
 
-EvalImage.prototype.place = function(x, y) {
+EvalImage.prototype.place = function (x, y) {
   this.x_ = x;
   this.y_ = y;
 };
 
-EvalImage.prototype.rotate = function(degrees) {
+EvalImage.prototype.rotate = function (degrees) {
   this.rotation_ += degrees;
 };
 
-EvalImage.prototype.scale = function(scaleX, scaleY) {
+EvalImage.prototype.scale = function (scaleX, scaleY) {
   this.scaleX_ = scaleX;
   this.scaleY_ = scaleY;
 };
@@ -70,6 +70,6 @@ EvalImage.prototype.scale = function(scaleX, scaleY) {
 /**
  * Get child EvalObjects. overridden by children
  */
-EvalImage.prototype.getChildren = function() {
+EvalImage.prototype.getChildren = function () {
   return [];
 };

@@ -17,3 +17,5 @@ for (int n = 0; n <= 4; n++) {
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

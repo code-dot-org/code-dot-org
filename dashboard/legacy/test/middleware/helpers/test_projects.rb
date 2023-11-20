@@ -178,4 +178,72 @@ class ProjectsTest < Minitest::Test
     project.buffer_abuse_score(new_project_channel_id)
     assert_equal (-50), Projects.get_abuse(new_project_channel_id)
   end
+
+  def test_uses_type_over_level_project_type
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+
+    mock_level = mock
+    mock_level.expects(:project_type).returns('test_type').never
+
+    channel_id = project.create({}, ip: 123, type: 'actual_type', level: mock_level)
+    assert_equal 'actual_type', project.get(channel_id)[:projectType]
+  end
+
+  def test_uses_level_project_type_if_no_type
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+
+    mock_level = mock
+    mock_level.expects(:project_type).returns('test_type').once
+
+    channel_id = project.create({}, ip: 123,  level: mock_level)
+    assert_equal 'test_type', project.get(channel_id)[:projectType]
+  end
+
+  def test_can_have_nil_project_type
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+    channel_id = project.create({}, ip: 123)
+    assert_nil project.get(channel_id)[:projectType]
+  end
+
+  def test_project_throws_on_update_with_invalid_thumbnail_url
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+    channel_id = project.create({}, ip: 123)
+
+    assert_raises Projects::ValidationError do
+      project.update(channel_id, {'thumbnailUrl' => 'bad.com'}, 123)
+    end
+  end
+
+  def test_project_update_succeeds_with_valid_thumbnail_url
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+    channel_id = project.create({}, ip: 123)
+
+    expected_thumbnail_url = "/v3/files/#{channel_id}/.metadata/thumbnail.png"
+    updated_value = project.update(channel_id, {'thumbnailUrl' => expected_thumbnail_url}, 123)
+    assert_equal expected_thumbnail_url, updated_value['thumbnailUrl']
+  end
+
+  def test_project_throws_on_create_with_invalid_thumbnail_url
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+
+    assert_raises Projects::ValidationError do
+      project.create({'thumbnailUrl' => 'bad.com'}, ip: 123)
+    end
+  end
+
+  def test_project_create_succeeds_with_valid_thumbnail_url
+    signedin_storage_id = create_storage_id_for_user(20)
+    project = Projects.new(signedin_storage_id)
+
+    expected_thumbnail_url = '/v3/files/parentChannelId123/.metadata/thumbnail.png'
+    channel_id = project.create({'thumbnailUrl' => expected_thumbnail_url}, ip: 123)
+
+    assert_equal expected_thumbnail_url, project.get(channel_id)['thumbnailUrl']
+  end
 end

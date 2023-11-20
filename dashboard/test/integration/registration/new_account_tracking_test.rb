@@ -174,7 +174,7 @@ module RegistrationsControllerTests
           name: args[:name] || 'someone',
           email: args[:email] || EMAIL,
           user_type: args[:user_type] || 'teacher',
-          dob: args[:dob] || (Date.today - 20.years),
+          dob: args[:dob] || (Time.zone.today - 20.years),
           gender: args[:gender] || 'f'
         },
         credentials: {

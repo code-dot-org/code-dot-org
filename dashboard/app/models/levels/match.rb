@@ -25,6 +25,10 @@
 #
 
 class Match < DSLDefined
+  serialized_attrs %w(
+    allow_multiple_attempts
+  )
+
   def dsl_default
     <<~RUBY
       name '#{DEFAULT_LEVEL_NAME}'
@@ -32,6 +36,7 @@ class Match < DSLDefined
       description 'description here'
       question 'Question'
       answer 'Answer 1'
+      allow_multiple_attempts false
     RUBY
   end
 

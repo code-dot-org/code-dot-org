@@ -16,14 +16,14 @@ const FAKE_VERSION_LIST_RESPONSE = {
     {
       versionId: FAKE_CURRENT_VERSION,
       lastModified: new Date('2018-08-01T03:00:00'),
-      isLatest: true
+      isLatest: true,
     },
     {
       versionId: FAKE_PREVIOUS_VERSION,
       lastModified: new Date('2018-07-31T02:00:00'),
-      isLatest: false
-    }
-  ])
+      isLatest: false,
+    },
+  ]),
 };
 
 describe('VersionHistory', () => {
@@ -58,7 +58,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: false,
-        isReadOnly: false
+        isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
         sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
@@ -69,7 +69,7 @@ describe('VersionHistory', () => {
       finishRestoreVersion: () =>
         sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
+        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
     });
   });
 
@@ -89,7 +89,7 @@ describe('VersionHistory', () => {
         handleClearPuzzle: () => {},
         isProjectTemplateLevel: false,
         useFilesApi: true,
-        isReadOnly: false
+        isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
         filesApi.getVersionHistory.firstCall.args[0](
@@ -103,7 +103,7 @@ describe('VersionHistory', () => {
       finishRestoreVersion: () =>
         filesApi.restorePreviousVersion.firstCall.args[1](),
       failRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[2]()
+        filesApi.restorePreviousVersion.firstCall.args[2](),
     });
   });
 
@@ -113,7 +113,7 @@ describe('VersionHistory', () => {
     failVersionHistoryLoad,
     restoreSpy,
     finishRestoreVersion,
-    failRestoreVersion
+    failRestoreVersion,
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
@@ -151,20 +151,14 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -173,10 +167,7 @@ describe('VersionHistory', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      wrapper
-        .find('.img-upload')
-        .first()
-        .simulate('click');
+      wrapper.find('.img-upload').first().simulate('click');
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -303,8 +294,8 @@ describe('VersionHistory', () => {
               currentUrl: window.location.href,
               shareUrl: 'fake-share-url',
               isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION
-            })
+              currentSourceVersionId: FAKE_CURRENT_VERSION,
+            }),
           },
           {includeUserId: true}
         );

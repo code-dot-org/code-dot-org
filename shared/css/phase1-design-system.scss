@@ -1,0 +1,438 @@
+@import 'color';
+@import 'font';
+
+// This file is used only for Phase 1 style updates across the pages of dashboard and pegasus/code.org
+// It should be imported to the pages that are listed in Phase 1 updates.
+// Therefore never mind if you meet !important anywhere in this file. It will be used only if there is no other option than to overwrite styles
+// in a way that updating styles of shared elements would only affect Phase1 pages.
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 100%;
+}
+
+h1, h2, h3 {
+  font-family: $barlowSemiCondensed-semibold;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2;
+  color: $neutral-dark;
+}
+
+h2 {
+  color: $neutral-dark;
+  font-size: 2.125em;
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: $barlowSemiCondensed-medium;
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+h6 {
+  color: $neutral_dark;
+  font-size: 1em;
+  line-height: 1.2;
+  @include main-font-semi-bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+a {
+  color: $brand_secondary_default;
+  text-decoration: underline;
+
+  &:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+}
+
+.professional-learning-banner {
+  a {
+    text-decoration: none;
+  }
+}
+
+.header_right {
+  a {
+    text-decoration: none;
+  }
+}
+
+.tutorial-block, .courseblock-tall {
+  background-color: $neutral_light;
+}
+
+p {
+  color: $neutral_dark;
+}
+
+#signin {
+  flex-grow: unset;
+}
+
+#signup {
+  p {
+    font-size: 14px;
+  }
+  a {
+    @include main-font-semi-bold;
+    font-size:  1em;
+  }
+
+  .signup {
+    input {
+      background-color: $neutral_light;
+    }
+
+    .signup-field-label {
+      label {
+        color: $neutral_dark;
+        @include main-font-semi-bold;
+        font-size: 1em;
+      }
+    }
+
+    .submit {
+      @include main-font-semi-bold;
+      padding: 10px 20px;
+      height: auto;
+      margin-right: 0;
+      background-color: $brand_secondary_default;
+      border: 2px solid $brand_secondary_default;
+      color: $neutral_white;
+
+      &:hover {
+        background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
+        box-shadow: none;
+      }
+
+      &:focus {
+        border-color: $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+#homepage-container {
+  .project_card {
+    > div {
+      background-color: $neutral_light !important;
+
+      &:hover {
+        border-color: $neutral_dark70 !important;
+      }
+    }
+
+    div {
+      color: $neutral_dark !important;
+
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#classroom-sections, #uitest-personal-projects {
+  table {
+    th {
+      color: $neutral_white !important;
+      background-color: $neutral_dark !important;
+
+      i {
+        color: $neutral_white !important;
+      }
+    }
+
+    td {
+      color: $neutral_dark;
+      background-color: $neutral_light;
+
+      i {
+        color: $neutral_dark !important;
+      }
+    }
+  }
+}
+
+.courseexplorer {
+  .grouprow {
+    background-color: $neutral_dark;
+
+    h6 {
+      color: $neutral_white;
+    }
+  }
+
+  .graderow {
+    background-color: $neutral_dark10 !important;
+
+    &.numbered {
+      color: $neutral_dark;
+    }
+  }
+
+  .courserow {
+    background-color: $neutral_dark70;
+  }
+
+  .arrow_box {
+    background-color: $neutral_white;
+
+    .arrow_box_content {
+      color: $neutral_dark;
+
+      .description {
+        font-size: 14px;
+
+        li, a {
+          font-size: 14px;
+        }
+      }
+
+      .description, a {
+        color: $neutral_dark;
+
+        a {
+          @include main-font-bold;
+          text-decoration: underline;
+          color: $brand_secondary_default;
+          &:hover {
+            color: $brand_secondary_dark;
+          }
+        }
+      }
+
+      .launch {
+        @include main-font-semi-bold;
+        font-size: 1em !important;
+        padding: 10px 20px;
+        height: auto;
+        margin-right: 0;
+        background-color: $brand_secondary_default;
+        border: 2px solid $brand_secondary_default;
+        color: $neutral_white;
+        line-height: unset;
+
+        &:hover {
+          background-color: $brand_secondary_dark;
+          border-color: $brand_secondary_dark;
+          box-shadow: none;
+        }
+
+        &:focus {
+          border-color: $brand_primary_default;
+        }
+
+        &:disabled {
+          color: $neutral_white;
+          border-color: $neutral_dark20;
+          background-color: $neutral_dark20;
+          cursor: not-allowed;
+        }
+      }
+
+      .course-explorer-gray-button {
+        @include main-font-semi-bold;
+        font-size: 1em !important;
+        color: $neutral_dark;
+        background-color: $neutral_white;
+        border: 2px solid $neutral_dark;
+        border-radius: 4px;
+        line-height: unset;
+
+        &:hover {
+          background-color: $neutral_dark10;
+          box-shadow: none;
+        }
+
+        &:focus {
+          border-color: $brand_primary_default;
+        }
+
+        &:disabled {
+          color: $neutral_dark20;
+          border-color: $neutral_dark20;
+          background-color: $neutral_white;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  .professional-learning {
+    background-color: $brand_primary_default;
+    color: $neutral_white;
+
+    .course-explorer-gray-button {
+      @include main-font-semi-bold;
+      font-size: .8em !important;
+      background-color: $brand_primary_default;
+      border: 2px solid $neutral_white;
+      border-radius: 4px;
+      color: $neutral_white;
+      box-shadow: none;
+      line-height: 30px;
+
+      &:hover {
+        background-color: $brand_primary_dark;
+        box-shadow: none;
+      }
+
+      &:focus {
+        border: 2px solid $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.hoc-overview-page {
+  color: $neutral_dark;
+  font-size: 14px;
+
+  h3 {
+    color: $neutral_dark;
+  }
+
+  .hoc-skinny-banner {
+    p {
+      color: $white;
+    }
+  }
+
+  > a {
+    color: $brand_secondary_default;
+  }
+
+  .tutorial-info {
+    background-color: $neutral_light;
+    border: 1px solid $neutral_dark20;
+
+    .tutorial-info-guide a {
+      color: $brand_secondary_default;
+    }
+  }
+
+  .full-resource-block {
+    border: 1px solid $neutral_dark20;
+
+    > a {
+      > img {
+        border: none !important;
+      }
+    }
+
+    .activities-info {
+      border-left: 1px solid $neutral_dark20;
+      background-color: $neutral_light;
+      color: $neutral_dark;
+
+      h2 {
+        color: $neutral_dark;
+      }
+    }
+  }
+
+  .tutorial-gray {
+    @include main-font-semi-bold;
+    font-size: 1em !important;
+    padding: 10px 16px;
+    height: auto;
+    margin-right: 0;
+    background-color: $brand_secondary_default;
+    border: 2px solid $brand_secondary_default;
+    color: $neutral_white;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_white;
+      border-color: $neutral_dark20;
+      background-color: $neutral_dark20;
+      cursor: not-allowed;
+    }
+  }
+
+  .course-container {
+    .teacher-guide a {
+      color: $brand_secondary_default;
+    }
+  }
+}
+
+#projects-page {
+  .container {
+    .new-project-heading {
+      font-family: $barlowSemiCondensed-medium !important;
+      font-size: 1.5em !important;
+      line-height: 1.2 !important;
+    }
+
+    #uitest-public-projects {
+      .viewMoreLink {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.newProject-button-tile {
+  &:hover {
+    border-color: $neutral_dark70 !important;
+  }
+}
+
+.tutorial-promo-container.dance-party-container {
+  .tutorial-description {
+    color: $neutral_white;
+  }
+}
+
+.full-resource-block .resource-title {
+  // Overwrite global full-resource-block styling for phase1 styles
+  color: $neutral_dark !important;
+}
+
+.featured-project {
+  > a {
+    > div {
+      background-color: $neutral_light;
+    }
+  }
+}

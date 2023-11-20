@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::TestCase
+class Api::V1::Pd::TeacherAttendanceReportControllerTest < ActionController::TestCase
   freeze_time
 
   EXPECTED_COMMON_FIELDS = %w(
@@ -92,7 +92,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_payment_fields response.first
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers do not get payment info' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer
@@ -129,7 +128,6 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
     assert_equal [@pm_workshop.id, @workshop.id, @other_workshop.id].sort, response.map {|r| r['workshop_id']}.uniq.sort
   end
 
-  # TODO: remove this test when workshop_organizer is deprecated
   test 'organizers only see their own workshops' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
     sign_in @organizer
@@ -184,7 +182,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
 
   test 'filter by schedule' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, sessions_from: start_date + 2.weeks
@@ -209,7 +207,7 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
 
   test 'filter by end date' do
     skip 'test is flaky for 6 hours per day due to time zone differences'
-    start_date = Date.today - 6.months
+    start_date = Time.zone.today - 6.months
     end_date = start_date + 1.month
 
     workshop_in_range = create :workshop, :ended, ended_at: start_date + 2.weeks
@@ -264,9 +262,9 @@ class Api::V1::Pd::TeacherAttendanceReportControllerTest < ::ActionController::T
 
     # Check expected row counts for our test workshops
     # (We don't count all rows to insulate this test against existing state)
-    assert_equal 10, response.count {|row| row[11] == @pm_workshop.id.to_s}
-    assert_equal 10, response.count {|row| row[11] == @workshop.id.to_s}
-    assert_equal 1, response.count {|row| row[11] == @other_workshop.id.to_s}
+    assert_equal(10, response.count {|row| row[11] == @pm_workshop.id.to_s})
+    assert_equal(10, response.count {|row| row[11] == @workshop.id.to_s})
+    assert_equal(1, response.count {|row| row[11] == @other_workshop.id.to_s})
   end
 
   private

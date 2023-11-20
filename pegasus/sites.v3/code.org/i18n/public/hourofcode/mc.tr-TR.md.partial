@@ -1,12 +1,8 @@
 ---
 title: Öğretmen Kaynakları - MINECRAFT
-nav: hoc_teacher_resources_nav
-video_player: true
-theme: responsive
-style_min: true
 ---
 
-# MINECRAFT Kod Saati
+# MINECRAFT Hour of Code
 
 {{ hoc_mc_video }}
 
@@ -24,14 +20,14 @@ style_min: true
 
 ### Uzatma Faaliyetleri:
 
-- [Bir Kod Saati Ötesinde](http://code.org/learn/beyond)
+- [Hour of Code Ötesinde](http://code.org/learn/beyond)
 - [Bilgisayar Bilimi Temelleri: Kurs 2](https://studio.code.org/s/course2)
 
 ### Diğer Öğretmen Kaynakları:
 
-- [Kod Saati: Eğitimciler için Nasıl Yapılır Kılavuzu](https://hourofcode.com/how-to)
+- [Hour of Code: Eğitimciler için Nasıl Yapılır Kılavuzu](https://hourofcode.com/how-to)
 - [Başarılı Eğitimcilerden En İyi Uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Canlı Etkinlik: [Bir Eğitimcinin Kod Saati Kılavuzu](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- Canlı Etkinlik: [Bir Eğitimcinin Hour of Code  Kılavuzu](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 - [Bir etkinliği planlamanıza ve yönetmenize yardımcı olacak kaynaklar](https://docs.com/hourofcode2016)
 
 [/col-50]

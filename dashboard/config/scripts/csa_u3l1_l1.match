@@ -14,3 +14,5 @@ answer 'the numerical position of an item in an array'
 
 question 'element'
 answer 'an item in an array'
+
+allow_multiple_attempts true

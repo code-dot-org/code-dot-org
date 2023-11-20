@@ -1,0 +1,28 @@
+{
+  "category": "",
+  "config": {
+    "func": "makeNumSpritesAtLocation",
+    "blockText": "make {NUM} new {ANIMATION_NAME} sprites at {LOCATION_GENERATOR}",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "style": "sprite_blocks",
+    "args": [
+      {
+        "name": "NUM",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "ANIMATION_NAME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION_GENERATOR",
+        "type": "Function"
+      }
+    ]
+  }
+}

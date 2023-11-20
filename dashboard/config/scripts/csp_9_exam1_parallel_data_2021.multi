@@ -25,3 +25,5 @@ teacher_markdown <<MARKDOWN
 * DAT-2.C: Identify the challenges associated with processing data.
 :::
 MARKDOWN
+
+allow_multiple_attempts true

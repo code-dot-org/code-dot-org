@@ -1,18 +1,23 @@
 name 'U2L15 Assessment1'
-encrypted 'vH82SJuVjRkNQ+VQ1dLqP/CWCpR7II3KkqziQfeFck0Sau99ChIIxZ/sQLIp
-SE2WOFAZIoeAs8PwYqIkdt3stjwO0TM5zsP/AN0NY21VCYuhY4s7aYt0FU6p
-V3xyEWfZDeMfetOuQsa8EuJ+iMnD4D2oaAcZ5evbu5k3nPQ+ZIInwaYNkWkX
-MEfhX+raqsvb7NWlOsK2MqJi/trYMKeCAjg+79bGFR/ppUJDRG6En8pKK4LF
-9b/5rX8vStgmEAa2YMfW730amMiCnIAq2sltFX1/oEV322ym6iEUpr7O+2xa
-tfmbw6L2OUJX4Xrbqe8zcQV+DUwm20LytCdvD6OZ/IOfs5nD8bD2iBt11GkH
-1l9QaNqNPoGK7G/Q29VFrnSKxSJFycqADlBxyUrNcfjQWic7BWVnNIKACBfk
-U4I+sMZL4KmgL4psft71qMnlxXD2CvWFlx6BP5ZIk3IVXiW6ytx7Q1l1aoP8
-qpQfaJxVXuSXKelSj1QXf77l2qwU1g9ZqRVfZBz8ZQdc7iOceKm78ivLIWhc
-K3b3H8PhgRf/PUvzUI1OaCtYiQlJHv3xG5L3w5w3UBPNeu9vZhtNLxGvhrO/
-1UdkDTZx5qfaEVN7VqUQWFkcFzETJ4YUiV547vv3ZUmWWScbrWwxx8XEPj8v
-zPnYpS0UC1jy+E73voH9K+0aIHK9aVZPHqC3mDtyB8RUxfMHQoiAl5acMHnU
-xHRUTH6ww8N9hmfFVnPpIaqZl4MpiGZTL08HSJ4EF9Biab/PZ5W5Mdr/93EN
-XxnDf5Ia1f6WQ6B0kTMSm0KRvteKl4e3GdRg/obgauHDJP7SOStmtthwd3k5
-nwGpr5p7vh0alRffDegSgPxB6kmfGn/ekFqKJZqLMWXUQMpxD1b1OLVr1LYX
-1eENiBM3B3d0UIN8nA==
-'
+title 'Vigenere Cipher'
+type 'multi2'
+question 'Why is the Vigenere cipher hard to crack? (select 2)'
+right 'One cannot solve using frequency analysis directly.'
+right 'The key length is variable and potentially very long'
+wrong 'The key is always secret to both the sender and receiver of the message.'
+wrong 'A Vigenere cipher relies upon an "alphabet shift" algorithm.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answers:
+
+- One cannot solve using frequency analysis directly.
+- Long keys create exponential growth possibilities.
+
+Note that a Caesar cipher relies upon an alphabetic shift
+MARKDOWN
+
+allow_multiple_attempts true

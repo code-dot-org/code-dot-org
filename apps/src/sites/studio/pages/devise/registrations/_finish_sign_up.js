@@ -6,20 +6,23 @@ import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
   '#school-info-section',
   '#email-preference-radio',
-  '#teacher-gdpr'
+  '#teacher-gdpr',
 ];
 const STUDENT_ONLY_FIELDS = [
   '#student-name-label',
-  '#gender-dropdown',
+  '#gender-field',
   '#age-dropdown',
+  '#us-state-dropdown',
   '#student-consent',
   '#parent-email-container',
-  '#student-gdpr'
+  '#student-gdpr',
 ];
 
 // Values loaded from scriptData are always initial values, not the latest
@@ -34,7 +37,7 @@ const studentButton = document.getElementById('select-user-type-student');
 // Auto-fill country and countryCode if we detect a US IP address.
 let schoolData = {
   country: usIp ? 'United States' : '',
-  countryCode: usIp ? 'US' : ''
+  countryCode: usIp ? 'US' : '',
 };
 
 // Keep track of whether the current user is in the U.S. or not (for regional partner email sharing)
@@ -55,22 +58,25 @@ $(document).ready(() => {
   init();
 
   function init() {
-    if (inClearerUserTypeRollout) {
-      // If in variant, toggle large buttons
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:none;';
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:flex;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:135px;';
-    } else {
-      // Otherwise (also the default), keep original dropdown
-      document.getElementById('select-user-type-variant').style.cssText =
-        'display:none;';
-      document.getElementById('select-user-type-original').style.cssText =
-        'display:flex;';
-      document.getElementById('signup-select-user-type-label').style.cssText =
-        'width:220px;';
+    let hiddenUserType = $('#user_user_type').attr('type') === 'hidden';
+    if (!hiddenUserType) {
+      if (inClearerUserTypeRollout) {
+        // If in variant, toggle large buttons
+        document.getElementById('select-user-type-original').style.cssText =
+          'display:none;';
+        document.getElementById('select-user-type-variant').style.cssText =
+          'display:flex;';
+        document.getElementById('signup-select-user-type-label').style.cssText =
+          'width:135px;';
+      } else {
+        // Otherwise (also the default), keep original dropdown
+        document.getElementById('select-user-type-variant').style.cssText =
+          'display:none;';
+        document.getElementById('select-user-type-original').style.cssText =
+          'display:flex;';
+        document.getElementById('signup-select-user-type-label').style.cssText =
+          'width:220px;';
+      }
     }
     setUserType(user_type);
     renderSchoolInfo();
@@ -78,7 +84,7 @@ $(document).ready(() => {
   }
 
   let alreadySubmitted = false;
-  $('.finish-signup').submit(function() {
+  $('.finish-signup').submit(function () {
     // prevent multiple submission. We want to do this to defend against
     // attempting to create multiple accounts, and it's valid to simply disable
     // after the first attempt here since this form is submitted via HTML and
@@ -93,6 +99,9 @@ $(document).ready(() => {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': user_type,
+    });
   });
 
   function cleanSchoolInfo() {
@@ -112,14 +121,12 @@ $(document).ready(() => {
     }
   }
 
-  $('#user_parent_email_preference_opt_in_required').change(function() {
+  $('#user_parent_email_preference_opt_in_required').change(function () {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
     if (user_type === '') {
       setUserType('student');
-      $('#user_user_type')
-        .val('student')
-        .change();
+      $('#user_user_type').val('student').change();
     }
     renderParentSignUpSection();
   });
@@ -136,7 +143,7 @@ $(document).ready(() => {
   }
 
   // Keep if sign-up user type experiment favors original (just func. below)
-  $('#user_user_type').change(function() {
+  $('#user_user_type').change(function () {
     var value = $(this).val();
     setUserType(value);
   });
@@ -195,7 +202,10 @@ $(document).ready(() => {
       study: 'account-sign-up-v5',
       study_group: 'experiment-v4',
       event: 'select-' + type,
-      data_string: signUpUID
+      data_string: signUpUID,
+    });
+    analyticsReporter.sendEvent(EVENTS.ACCOUNT_TYPE_PICKED_EVENT, {
+      'account type': type,
     });
   }
 
@@ -270,7 +280,7 @@ $(document).ready(() => {
     if (event) {
       schoolData = {
         ...schoolData,
-        [field]: event.target.value
+        [field]: event.target.value,
       };
     }
     renderSchoolInfo();

@@ -62,7 +62,7 @@
       "name": "height",
       "type": "Number",
       "required": false,
-      "description": "The height of the rectangular area to display the text. Should be a number from 0 to 400. When the text reaches the end of this width, it will wrap to a new line."
+      "description": "The height of the rectangular area to display the text. Should be a number from 0 to 400."
     }
   ],
   "parameters": [

@@ -10,7 +10,7 @@ import React from 'react';
 
 const BUTTON_TYPE = {
   DANGER: 'danger',
-  SUBMIT: 'submit'
+  SUBMIT: 'submit',
 };
 
 export default class BootstrapButton extends React.Component {
@@ -19,7 +19,7 @@ export default class BootstrapButton extends React.Component {
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     text: PropTypes.string.isRequired,
-    type: PropTypes.oneOf(Object.values(BUTTON_TYPE))
+    type: PropTypes.oneOf(Object.values(BUTTON_TYPE)),
   };
 
   buttonClasses = () => {
@@ -44,13 +44,13 @@ export default class BootstrapButton extends React.Component {
     const {style, onClick, disabled, text} = this.props;
 
     return (
-      // for some reason, the 'button has type' rule isn't able to recognize
+      // The 'button has type' rule isn't able to recognize
       // that we are actually passing a valid button type here. Valid types
       // include "button", "submit", or "reset", and we are currently always
       // returning either "button" or "submit".
       // see https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
-      // eslint-disable-next-line react/button-has-type
       <button
+        // eslint-disable-next-line react/button-has-type
         type={this.buttonType()}
         className={this.buttonClasses()}
         style={{...styles.button, ...style}}
@@ -66,6 +66,6 @@ export default class BootstrapButton extends React.Component {
 
 const styles = {
   button: {
-    margin: 0
-  }
+    margin: 0,
+  },
 };

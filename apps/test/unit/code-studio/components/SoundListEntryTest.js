@@ -15,10 +15,10 @@ describe('SoundListEntry', () => {
     soundMetadata: {
       name: 'click1',
       time: 1,
-      sourceUrl: sourceURL
+      sourceUrl: sourceURL,
     },
     isSelected: true,
-    soundsRegistry: sounds
+    soundsRegistry: sounds,
   };
 
   it('renders with purple background when selected', () => {

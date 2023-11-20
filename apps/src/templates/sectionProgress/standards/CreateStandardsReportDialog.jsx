@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import BaseDialog from '../../BaseDialog';
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export class CreateStandardsReportDialog extends Component {
   static propTypes = {
@@ -13,11 +14,11 @@ export class CreateStandardsReportDialog extends Component {
     handleConfirm: PropTypes.func.isRequired,
     handleNext: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    onCommentChange: PropTypes.func.isRequired
+    onCommentChange: PropTypes.func.isRequired,
   };
 
   state = {
-    currentPage: 1
+    currentPage: 1,
   };
 
   handleNext = () => {
@@ -66,17 +67,18 @@ export class CreateStandardsReportDialog extends Component {
 
 const styles = {
   description: {
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif'
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
-  }
+    ...fontConstants['main-font-regular'],
+  },
 };
 
-export const UnconnectedCreateStandardsReportDialog = CreateStandardsReportDialog;
+export const UnconnectedCreateStandardsReportDialog =
+  CreateStandardsReportDialog;

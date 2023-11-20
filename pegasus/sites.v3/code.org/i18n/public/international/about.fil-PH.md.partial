@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Ang mga kurso sa Code.org ay ginagamit ng sampu-sampung milyong estudyante at ng isang milyong guro sa buong mundo.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Kasaysayan
 
 Noong 2013, ang Code.org ay inilunsad ng magkakambal na sina Hadi at Ali Partovi na may [na video na nagsusulong ng computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). Ang video na ito ay naging #1 sa YouTube sa loob ng isang araw, at 15,000 paaralan ang umabot sa amin para sa tulong. Simula noon, lumawak kami mula sa isang naka-bootstrap na tauhan ng mga boluntaryo para bumuo ng isang buong organisasyon na sumusuporta sa isang pandaigdigang kilusan. Naniniwala kami na ang isang de-kalidad na edukasyon sa computer science ay dapat na available sa bawat bata, hindi lamang ng masuwerteng iilan.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Ang Ginagawa Namin
 

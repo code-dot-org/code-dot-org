@@ -1,0 +1,23 @@
+name 'virtual-pl-csd-summer-day2-async5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Day 2, Asynchronous Part I Wrap Up
+
+## Next steps
+
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="30px" style="border-radius:10px; float:left; margin: 0px 10px 5px 0px;">
+
+
+#### 1. Ensure that you have completed **Step 1: Get familiar with the lesson** in your Activity Guide. You will have time to complete steps 2 - 4 later today.
+
+#### 2. You may not have completed all of the levels in the Model Lessons from today. If you are interested in additional practice, consider returning to the levels from those Model Lessons and completing them. This is optional and for your own edification.
+
+#### 3. Add your questions to the question parking lot. 
+<br>
+
+#### Please be prepared to share out when you return from lunch!
+
+
+MARKDOWN

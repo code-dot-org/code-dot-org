@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalTriangle = function(edge, style, color) {
+var EvalTriangle = function (edge, style, color) {
   evalUtils.ensureNumber(edge);
   evalUtils.ensureStyle(style);
   evalUtils.ensureColor(color);
@@ -16,7 +16,7 @@ var EvalTriangle = function(edge, style, color) {
 EvalTriangle.inherits(EvalImage);
 module.exports = EvalTriangle;
 
-EvalTriangle.prototype.draw = function(parent) {
+EvalTriangle.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);
@@ -28,17 +28,17 @@ EvalTriangle.prototype.draw = function(parent) {
 
   var bottomLeft = {
     x: -this.edge_ / 2,
-    y: height / 3
+    y: height / 3,
   };
 
   var bottomRight = {
     x: this.edge_ / 2,
-    y: height / 3
+    y: height / 3,
   };
 
   var top = {
     x: 0,
-    y: (-height * 2) / 3
+    y: (-height * 2) / 3,
   };
 
   this.element_.setAttribute(

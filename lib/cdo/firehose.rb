@@ -142,12 +142,10 @@ class FirehoseClient
     @buffers.clear
   end
 
-  private
-
   # Adds common key-value pairs to the data hash.
   # @param data [Hash] The data to add the key-value pairs to.
   # @return [Hash] The data, including the newly added key-value pairs.
-  def add_common_values(data)
+  private def add_common_values(data)
     data.merge(
       created_at: DateTime.now,
       environment: rack_env,

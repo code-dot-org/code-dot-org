@@ -17,6 +17,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def authorized_teacher_access
+    return unless (user = current_user)
+    user.permission = UserPermission::AUTHORIZED_TEACHER
+    user.save!
+    head :ok
+  end
+
   def plc_reviewer_access
     return unless (user = current_user)
     user.permission = UserPermission::PLC_REVIEWER
@@ -69,6 +76,12 @@ class TestController < ApplicationController
     script = Unit.find_by_name(params.require(:script_name))
 
     Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    head :ok
+  end
+
+  def create_student_section_with_name
+    return unless (user = current_user)
+    Section.create!(name: params[:section_name], user: user, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     head :ok
   end
 
@@ -192,50 +205,51 @@ class TestController < ApplicationController
   end
 
   # Use the same data from pd_teacher_application_hash_common
-  # We can't use the factory directly because FactoryGirl is not available on prod
+  # We can't use the factory directly because FactoryBot is not available on prod
   def teacher_form_data
     {
-      'school': School.first.id,
-      'country': 'United States',
-      'first_name': 'First',
-      'last_name': 'Last',
-      'alternate_email': 'ilovepotions@gmail.com',
-      'phone': '5558675309',
-      'gender_identity': 'Male',
-      'race': ['Other'],
-      'street_address': '333 Hogwarts Place',
-      'city': 'Magic City',
-      'state': 'Washington',
-      'zip_code': '98101',
-      'principal_role': 'Headmaster',
-      'principal_first_name': 'Albus',
-      'principal_last_name': 'Dumbledore',
-      'principal_title': 'Dr.',
-      'principal_email': 'socks@hogwarts.edu',
-      'principal_confirm_email': 'socks@hogwarts.edu',
-      'principal_phone_number': '5555882300',
-      'current_role': 'Teacher',
-      'committed': 'Yes',
-      'willing_to_travel': 'Up to 50 miles',
-      'agree': 'Yes',
-      'completing_on_behalf_of_someone_else': 'No',
-      'previous_yearlong_cdo_pd': ['CS in Science'],
-      'enough_course_hours': Pd::Application::TeacherApplication.options[:enough_course_hours].first,
-      'program': 'csp',
-      'csp_which_grades': ['11', '12'],
-      'csp_how_offer': 'As an AP course',
-      'csd_which_grades': ['6', '7'],
-      'csa_which_grades': ['11', '12'],
-      'csa_how_offer': 'As an AP course',
-      'csa_phone_screen': 'Yes',
-      'csa_already_know': 'Yes',
-      'replace_existing': 'No, this course will be added to the schedule in addition to an existing computer science course'
+      school: School.first.id,
+      country: 'United States',
+      first_name: 'First',
+      last_name: 'Last',
+      alternate_email: 'ilovepotions@gmail.com',
+      phone: '5558675309',
+      gender_identity: 'Male',
+      race: ['Other'],
+      street_address: '333 Hogwarts Place',
+      city: 'Magic City',
+      state: 'Washington',
+      zip_code: '98101',
+      principal_role: 'Headmaster',
+      principal_first_name: 'Albus',
+      principal_last_name: 'Dumbledore',
+      principal_title: 'Dr.',
+      principal_email: 'socks@hogwarts.edu',
+      principal_confirm_email: 'socks@hogwarts.edu',
+      principal_phone_number: '5555882300',
+      current_role: 'Teacher',
+      committed: 'Yes',
+      willing_to_travel: 'Up to 50 miles',
+      agree: 'Yes',
+      completing_on_behalf_of_someone_else: 'No',
+      previous_yearlong_cdo_pd: ['CS in Science'],
+      enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
+      program: 'csp',
+      csp_which_grades: ['11', '12'],
+      csp_how_offer: 'As an AP course',
+      csd_which_grades: ['6', '7'],
+      csa_which_grades: ['11', '12'],
+      csa_how_offer: 'As an AP course',
+      csa_phone_screen: 'Yes',
+      csa_already_know: 'Yes',
+      replace_existing: 'No, this course will be added to the schedule in addition to an existing computer science course',
+      pay_fee: 'Yes, my school/district would be able to pay the full program fee.'
     }
   end
 
   def create_teacher_application
     return unless (user = current_user)
-    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}")
+    regional_partner = RegionalPartner.create!(name: "regional-partner#{Time.now.to_i}-#{rand(1_000_000)}", is_active: true)
 
     RegionalPartnerProgramManager.create!(program_manager_id: user.id, regional_partner_id: regional_partner.id)
 
@@ -254,13 +268,12 @@ class TestController < ApplicationController
     form_data = teacher_form_data.merge(
       first_name: teacher_name,
       last_name: 'Test',
+      regional_partner_id: regional_partner.id,
       program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
     ).to_json
     application = Pd::Application::TeacherApplication.create!(
       user: teacher,
       form_data: form_data,
-      regional_partner_id: regional_partner.id,
-      course: 'csp',
       status: 'unreviewed'
     )
 
@@ -311,6 +324,12 @@ class TestController < ApplicationController
     Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
     User.find(params[:teacher_id].to_i).destroy
     User.find_by(name: params[:pm_name]).destroy
+    head :ok
+  end
+
+  def create_pilot
+    name = params.require(:pilot_name)
+    Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)
     head :ok
   end
 end

@@ -2,6 +2,7 @@
   "category": "",
   "config": {
     "func": "placePrismarine",
-    "blockText": "place prismarine"
+    "blockText": "place prismarine",
+    "style": "default"
   }
 }

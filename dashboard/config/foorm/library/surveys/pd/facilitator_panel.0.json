@@ -61,6 +61,7 @@
                 },
                 {
                   "value": "equitable_workshop_environment",
+                  "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
                   "text": "Built and sustained an equitable learning environment in our workshop."
                 },
                 {
@@ -73,6 +74,7 @@
                 },
                 {
                   "value": "create_equity_for_students",
+                  "visibleIf": "{regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub'",
                   "text": "Helped me see ways to create and support an equitable learning environment for my students."
                 },
                 {

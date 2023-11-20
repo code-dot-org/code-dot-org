@@ -1,4 +1,6 @@
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
 require 'fileutils'
+include TimedTaskWithLogging
 
 namespace :blockly do
   def dist_project
@@ -29,14 +31,14 @@ namespace :blockly do
     end
   end
 
-  task latest: :environment do
+  timed_task_with_logging latest: :environment do
     puts "Asking #{dist_version} for latest version number"
     latest = `curl --silent --insecure #{dist_version}`.strip
     puts "Latest version: #{latest}"
     Rake::Task['blockly:get'].invoke(latest)
   end
 
-  task :get, [:version] => :environment do |_t, args|
+  timed_task_with_logging :get, [:version] => :environment do |_t, args|
     clean!
     filepath = dist_file(args[:version])
     puts "Downloading and extracting #{filepath}"
@@ -47,7 +49,7 @@ namespace :blockly do
     FileUtils.mv("#{dirname}/package", dest)
   end
 
-  task :dev, [:src] => :environment do |_t, args|
+  timed_task_with_logging :dev, [:src] => :environment do |_t, args|
     src = args[:src] || '../apps'
     fullsrc = "#{File.absolute_path(src)}/build/package"
     unless File.directory?(fullsrc)

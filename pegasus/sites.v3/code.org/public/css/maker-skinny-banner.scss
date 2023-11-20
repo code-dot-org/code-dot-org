@@ -1,0 +1,113 @@
+@import "color", "font", "breakpoints", "typography";
+
+.maker-skinny-banner {
+  box-sizing: content-box;
+  height: 130px;
+  overflow: hidden;
+  padding: 0 0 0 1rem;
+  background: #00736E;
+  position: relative;
+
+  @media screen and (max-width: $width-md) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    height: auto;
+    padding: 1rem 2rem;
+    margin: 3rem auto 0;
+  }
+
+  a:hover,
+  a:active,
+  a:visited,
+  a:link {
+    text-decoration: none;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1020px;
+    margin: 0 auto;
+
+    @media screen and (max-width: $width-md) {
+      width: 72%;
+      margin: 0;
+      padding: 0.5rem 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      justify-content: center;
+      width: 100%;
+      margin-top: -1rem;
+    }
+  }
+
+  img.left {
+    align-self: start;
+
+    @media screen and (max-width: $width-md) {
+      display: none;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: block;
+      position: relative;
+      top: -8px;
+    }
+  }
+
+  img.right {
+    align-self: end;
+
+    @media screen and (max-width: $width-md) {
+      position: absolute;
+      z-index: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      display: none;
+    }
+  }
+
+  .text-wrapper {
+    color: white;
+    text-align: center;
+
+    @media screen and (max-width: $width-md) {
+      margin: 0 0 -0.5rem;
+      text-align: left;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      text-align: center;
+    }
+
+    h1 {
+      @include heading-sm;
+      color: $white;
+      margin: 0 auto 4px;
+    }
+
+    p {
+      @include body-two;
+      margin-bottom: 0;
+      color: $white;
+    }
+  }
+
+  button {
+    background: #4E1598;
+    border-color: #4E1598;
+    margin: 0;
+
+    @media screen and (max-width: $width-sm) {
+      margin-top: 1rem;
+    }
+  }
+}

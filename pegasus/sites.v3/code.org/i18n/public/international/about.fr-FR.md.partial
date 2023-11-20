@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org est soutenu par des donneurs généreux comme Amazon, Facebook, Google, la Fondation Infosys, Microsoft, et <a href="/about/donors">beaucoup d'autres</a>.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Histoire
 
 En 2013, Code.org a été lancé par les frères jumeaux Hadi et Ali Partovi avec une \[vidéo de promotion de l'informatique\] (https://www.youtube.com/watch?v=nKIu9yen5nc). La vidéo devint #1 sur YouTube pendant un jour, et 15.000 écoles nous contactèrent pour avoir de l'aide. Depuis, nous sommes passés d'un groupe de volontaires à une organisation complète qui supporte un mouvement mondial. Nous croyons qu'une éducation en informatique devrait être disponible à tous les enfants, et pas seulement à quelques chanceux.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Ce que nous faisons
 

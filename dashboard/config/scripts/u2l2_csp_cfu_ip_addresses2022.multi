@@ -16,3 +16,5 @@ right 'IP is the shared way that all devices and computers label their messages 
 teacher_markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

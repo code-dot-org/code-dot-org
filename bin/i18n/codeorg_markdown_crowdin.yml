@@ -9,4 +9,7 @@
 files: [{
   "source": "/i18n/locales/source/markdown/**/*.md",
   "translation": "/pegasus/sites.v3/code.org/i18n/**/%file_name%.%locale%.md.partial",
+  "ignore": [
+    "/i18n/locales/source/markdown/public/ai.md",
+    ],
   }]

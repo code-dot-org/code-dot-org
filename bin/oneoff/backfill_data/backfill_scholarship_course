@@ -26,9 +26,10 @@ def course_from_current_teacher_lsw_enrollment(si)
       puts "user #{si.user_id} new facilitator, app #{Pd::Application::Facilitator1920Application.find_by(user_id: si.user_id).id}"
       next
     end
-    if e.workshop.course == "CS Discoveries"
+    case e.workshop.course
+    when 'CS Discoveries'
       course = 'csd'
-    elsif e.workshop.course == 'CS Principles'
+    when 'CS Principles'
       course = 'csp'
     end
     break

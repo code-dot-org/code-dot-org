@@ -11,7 +11,8 @@
           "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
           "type": "information",
           "visibility": "Teacher-only",
-          "key": "ed6a61e5-23b1-4249-a182-874156f2d135"
+          "key": "ed6a61e5-23b1-4249-a182-874156f2d135",
+          "buttonText": "Learn More"
         },
         {
           "notice": "More Opportunities for Feedback",
@@ -32,13 +33,16 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:08 UTC",
+    "serialized_at": "2023-08-31 17:39:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5982,7 +5986,7 @@
       "key": "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "ff77579c-bfc0-4614-87d3-89f4b5e7a5b2",
@@ -13533,6 +13537,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

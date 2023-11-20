@@ -8,10 +8,10 @@
 var skinsBase = require('../skins');
 
 var CONFIGS = {
-  flappy: {}
+  flappy: {},
 };
 
-exports.load = function(assetUrl, id) {
+exports.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
@@ -26,7 +26,7 @@ exports.load = function(assetUrl, id) {
     obstacle_bottom_thumb: skin.assetUrl('obstacle_bottom_scifi_thumb.png'),
     obstacle_top: skin.assetUrl('obstacle_top_scifi.png'),
     ground: skin.assetUrl('ground_scifi.png'),
-    ground_thumb: skin.assetUrl('ground_scifi_thumb.png')
+    ground_thumb: skin.assetUrl('ground_scifi_thumb.png'),
   };
 
   skin.underwater = {
@@ -38,7 +38,7 @@ exports.load = function(assetUrl, id) {
     ),
     obstacle_top: skin.assetUrl('obstacle_top_underwater.png'),
     ground: skin.assetUrl('ground_underwater.png'),
-    ground_thumb: skin.assetUrl('ground_underwater_thumb.png')
+    ground_thumb: skin.assetUrl('ground_underwater_thumb.png'),
   };
 
   skin.cave = {
@@ -48,7 +48,7 @@ exports.load = function(assetUrl, id) {
     obstacle_bottom_thumb: skin.assetUrl('obstacle_bottom_cave_thumb.png'),
     obstacle_top: skin.assetUrl('obstacle_top_cave.png'),
     ground: skin.assetUrl('ground_cave.png'),
-    ground_thumb: skin.assetUrl('ground_cave_thumb.png')
+    ground_thumb: skin.assetUrl('ground_cave_thumb.png'),
   };
 
   skin.santa = {
@@ -58,58 +58,58 @@ exports.load = function(assetUrl, id) {
     obstacle_bottom_thumb: skin.assetUrl('obstacle_bottom_santa_thumb.png'),
     obstacle_top: skin.assetUrl('obstacle_top_santa.png'),
     ground: skin.assetUrl('ground_santa.png'),
-    ground_thumb: skin.assetUrl('ground_santa_thumb.png')
+    ground_thumb: skin.assetUrl('ground_santa_thumb.png'),
   };
 
   skin.night = {
-    background: skin.assetUrl('background_night.png')
+    background: skin.assetUrl('background_night.png'),
   };
 
   skin.redbird = {
-    avatar: skin.assetUrl('avatar_redbird.png')
+    avatar: skin.assetUrl('avatar_redbird.png'),
   };
 
   skin.laser = {
     obstacle_bottom: skin.assetUrl('obstacle_bottom_laser.png'),
     obstacle_bottom_thumb: skin.assetUrl('obstacle_bottom_laser_thumb.png'),
-    obstacle_top: skin.assetUrl('obstacle_top_laser.png')
+    obstacle_top: skin.assetUrl('obstacle_top_laser.png'),
   };
 
   skin.lava = {
     ground: skin.assetUrl('ground_lava.png'),
-    ground_thumb: skin.assetUrl('ground_lava_thumb.png')
+    ground_thumb: skin.assetUrl('ground_lava_thumb.png'),
   };
 
   skin.shark = {
-    avatar: skin.assetUrl('shark.png')
+    avatar: skin.assetUrl('shark.png'),
   };
 
   skin.easter = {
-    avatar: skin.assetUrl('easterbunny.png')
+    avatar: skin.assetUrl('easterbunny.png'),
   };
 
   skin.batman = {
-    avatar: skin.assetUrl('batman.png')
+    avatar: skin.assetUrl('batman.png'),
   };
 
   skin.submarine = {
-    avatar: skin.assetUrl('submarine.png')
+    avatar: skin.assetUrl('submarine.png'),
   };
 
   skin.unicorn = {
-    avatar: skin.assetUrl('unicorn.png')
+    avatar: skin.assetUrl('unicorn.png'),
   };
 
   skin.fairy = {
-    avatar: skin.assetUrl('fairy.png')
+    avatar: skin.assetUrl('fairy.png'),
   };
 
   skin.superman = {
-    avatar: skin.assetUrl('superman.png')
+    avatar: skin.assetUrl('superman.png'),
   };
 
   skin.turkey = {
-    avatar: skin.assetUrl('turkey.png')
+    avatar: skin.assetUrl('turkey.png'),
   };
 
   // Images
@@ -142,12 +142,12 @@ exports.load = function(assetUrl, id) {
   // Sounds
   skin.obstacleSound = [
     skin.assetUrl('obstacle.mp3'),
-    skin.assetUrl('obstacle.ogg')
+    skin.assetUrl('obstacle.ogg'),
   ];
   skin.wallSound = [skin.assetUrl('wall.mp3'), skin.assetUrl('wall.ogg')];
   skin.winGoalSound = [
     skin.assetUrl('win_goal.mp3'),
-    skin.assetUrl('win_goal.ogg')
+    skin.assetUrl('win_goal.ogg'),
   ];
   skin.wall0Sound = [skin.assetUrl('wall0.mp3'), skin.assetUrl('wall0.ogg')];
 
@@ -155,15 +155,15 @@ exports.load = function(assetUrl, id) {
   skin.hitSound = [skin.assetUrl('sfx_hit.mp3'), skin.assetUrl('sfx_hit.ogg')];
   skin.pointSound = [
     skin.assetUrl('sfx_point.mp3'),
-    skin.assetUrl('sfx_point.ogg')
+    skin.assetUrl('sfx_point.ogg'),
   ];
   skin.swooshingSound = [
     skin.assetUrl('sfx_swooshing.mp3'),
-    skin.assetUrl('sfx_swooshing.ogg')
+    skin.assetUrl('sfx_swooshing.ogg'),
   ];
   skin.wingSound = [
     skin.assetUrl('sfx_wing.mp3'),
-    skin.assetUrl('sfx_wing.ogg')
+    skin.assetUrl('sfx_wing.ogg'),
   ];
 
   skin.jetSound = [skin.assetUrl('jet.mp3'), skin.assetUrl('jet.ogg')];

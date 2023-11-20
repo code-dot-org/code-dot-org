@@ -14,9 +14,9 @@ Consider the following method, `reverse`, which is intended to return the revers
 public static int[][] reverse(int[][] arr) {
   int[][] ret = new int[arr.length][arr[0].length];
 
-  for (int i = 0; i < arr.length; i++) {
-    for (int j = 0; j < arr[0].length; j++) {
-      /* missing statement */ = arr[i][j];
+  for (int row = 0; row < arr.length; row++) {
+    for (int col = 0; col < arr[0].length; col++) {
+      /* missing statement */ = arr[row][col];
     }
   }
 
@@ -26,3 +26,5 @@ public static int[][] reverse(int[][] arr) {
 
 What choice could replace `/* missing statement */` so that `reverse` works as intended?
 MARKDOWN
+
+allow_multiple_attempts true

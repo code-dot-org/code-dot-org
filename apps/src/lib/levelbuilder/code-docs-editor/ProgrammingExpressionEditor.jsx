@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
-import ImageInput from './ImageInput';
+import ImageInput from '../ImageInput';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -62,12 +62,10 @@ function renderExampleEditor(example, updateFunc) {
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
   environmentCategories,
-  videoOptions
+  videoOptions,
 }) {
-  const [
-    programmingExpression,
-    setProgrammingExpressionProperty
-  ] = useProgrammingExpression(initialProgrammingExpression);
+  const [programmingExpression, setProgrammingExpressionProperty] =
+    useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -81,9 +79,9 @@ export default function ProgrammingExpressionEditor({
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
-        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
+        'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
       },
-      body: JSON.stringify(programmingExpression)
+      body: JSON.stringify(programmingExpression),
     })
       .then(response => {
         setIsSaving(false);
@@ -106,7 +104,7 @@ export default function ProgrammingExpressionEditor({
 
   const markdownEditorFeatures = {
     imageUpload: true,
-    programmingExpression: true
+    programmingExpression: true,
   };
 
   return (
@@ -295,13 +293,14 @@ const programmingExpressionShape = PropTypes.shape({
   returnValue: PropTypes.string,
   tips: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
-  examples: PropTypes.arrayOf(PropTypes.object).isRequired
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired,
+  showPath: PropTypes.string,
 });
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
   environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
+  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const styles = {
@@ -312,7 +311,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   selectInput: {
     boxSizing: 'border-box',
@@ -321,6 +320,6 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     marginBottom: 0,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };

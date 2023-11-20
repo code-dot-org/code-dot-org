@@ -22,7 +22,7 @@ export default class FilterSet extends React.Component {
       .isRequired,
     onUserInputFilter: PropTypes.func.isRequired,
     onUserInputOrgName: PropTypes.func.isRequired,
-    onUserInputSortBy: PropTypes.func.isRequired
+    onUserInputSortBy: PropTypes.func.isRequired,
   };
 
   displayItem = item => {

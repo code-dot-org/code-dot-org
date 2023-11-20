@@ -34,3 +34,5 @@ Going through the code line by line:
 * A value of 5 is inserted at index 3. data = [3,4,5,0,1,2]
 * The data now holds "3,4,5,0,1,2"
 MARKDOWN
+
+allow_multiple_attempts true

@@ -21,25 +21,25 @@ describe('ProgrammingExpressionEditor', () => {
       returnValue: 'none',
       tips: 'some tips on how to use this block',
       parameters: [{name: 'id', type: 'string'}],
-      examples: [{name: 'example 1'}]
+      examples: [{name: 'example 1'}],
     };
     defaultProps = {
       initialProgrammingExpression,
       environmentCategories: [
         {key: 'circuit', name: 'Circuit'},
         {key: 'variables', name: 'Variables'},
-        {key: 'canvas', name: 'Canvas'}
+        {key: 'canvas', name: 'Canvas'},
       ],
       videoOptions: [
         {
           key: 'video1',
-          name: 'Video 1'
+          name: 'Video 1',
         },
         {
           key: 'video2',
-          name: 'Video 2'
-        }
-      ]
+          name: 'Video 2',
+        },
+      ],
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -53,26 +53,11 @@ describe('ProgrammingExpressionEditor', () => {
     expect(wrapper.contains('Editing block')).to.be.true;
 
     // Display name
-    expect(
-      wrapper
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('Block');
+    expect(wrapper.find('input').at(0).props().value).to.equal('Block');
 
     // Key
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().value
-    ).to.equal('block');
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().readOnly
-    ).to.be.true;
+    expect(wrapper.find('input').at(1).props().value).to.equal('block');
+    expect(wrapper.find('input').at(1).props().readOnly).to.be.true;
 
     // Category select
     const categorySelect = wrapper.find('select').at(0);
@@ -92,49 +77,32 @@ describe('ProgrammingExpressionEditor', () => {
     expect(wrapper.find('ImageInput').length).to.equal(1);
 
     // short description
-    expect(
-      wrapper
-        .find('textarea')
-        .at(0)
-        .props().value
-    ).to.equal('This is a short description.');
+    expect(wrapper.find('textarea').at(0).props().value).to.equal(
+      'This is a short description.'
+    );
 
     // Documentation section
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
+    expect(documentationSection.find('input').at(0).props().value).to.equal(
+      'developer.mozilla.org'
+    );
     expect(
-      documentationSection
-        .find('input')
-        .at(0)
-        .props().value
-    ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      documentationSection.find('TextareaWithMarkdownPreview').at(0).props()
+        .markdown
     ).to.equal('This is a longer description of the code.');
 
     const detailsSection = wrapper.find('CollapsibleEditorSection').at(1);
     expect(
-      detailsSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      detailsSection.find('TextareaWithMarkdownPreview').at(0).props().markdown
     ).to.equal('block()');
-    expect(
-      detailsSection
-        .find('textarea')
-        .at(0)
-        .props().value
-    ).to.equal('none');
+    expect(detailsSection.find('textarea').at(0).props().value).to.equal(
+      'none'
+    );
 
     // Tips section
     const tipsSection = wrapper.find('CollapsibleEditorSection').at(2);
     expect(
-      tipsSection
-        .find('TextareaWithMarkdownPreview')
-        .at(0)
-        .props().markdown
+      tipsSection.find('TextareaWithMarkdownPreview').at(0).props().markdown
     ).to.equal('some tips on how to use this block');
 
     // Parameters section
@@ -161,7 +129,7 @@ describe('ProgrammingExpressionEditor', () => {
         initialProgrammingExpression={{
           ...initialProgrammingExpression,
           environmentLanguageType: 'blockly',
-          blockName: 'gamelab_location_picker'
+          blockName: 'gamelab_location_picker',
         }}
       />
     );
@@ -198,7 +166,7 @@ describe('ProgrammingExpressionEditor', () => {
         'returnValue',
         'syntax',
         'tips',
-        'examples'
+        'examples',
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('Block');

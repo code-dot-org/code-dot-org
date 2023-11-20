@@ -5,33 +5,27 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Overview
 
-##### In the AI and Machine Learning unit, students learn how computers can find patterns in data to make decisions. They use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">In the AI and Machine Learning unit, students learn how computers can find patterns in data to make decisions. They use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+</p>
+</div>
 
+### **Students Will:**
 
-## Students will:
+<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="float:right; width: 400px; clear: both; margin: 0 20px 20px 20px;"> 
 
-* ##### Test and evaluate machine learning models for accuracy and potential bias. 
+* ##### Test and evaluate machine learning models for accuracy and potential bias.
 * ##### Learn how machine learning models use data to make decisions.
 * ##### Create a machine learning model to solve a problem.
 * ##### Create an app that uses their machine learning model.
 
-## 
+ <div style="clear:both"/>
 
-<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
-
-### **Implementation guidance** 
-
-* ##### Complete the first three lessons of the Problem Solving and Computing unit of CS Discoveries before starting.
-
-* ##### This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1" target="blank" rel="noopener noreferrer">App Lab Hour of Code</a> before starting this unit.
-
-* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">Programming Levels Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview" target="blank" rel="noopener noreferrer">Differentiation Guide</a>.
-
-* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit.
+##### **You can view the full <a href="https://docs.google.com/document/d/1O7hPugJfy7CgFSwQO5BDqqFYsbklpDiJe7lrNtDqBQc/view" target="blank" rel="noopener noreferrer">Unit Guide</a> for more information about this unit.**
 
 
-### **Suggested time to complete the unit:** 5 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+## **Suggested time to complete the unit:** 5 weeks 
+##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 <div style="clear:both"/>
 

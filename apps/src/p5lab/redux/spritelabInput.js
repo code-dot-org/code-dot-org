@@ -4,7 +4,7 @@ const CLEAR_PROMPTS = 'spritelabInput/CLEAR_PROMPTS';
 
 export const PromptType = {
   TEXT: 'TEXT',
-  MULTIPLE_CHOICE: 'MULTIPLE_CHOICE'
+  MULTIPLE_CHOICE: 'MULTIPLE_CHOICE',
 };
 
 export default function spritelabInputList(state, action) {
@@ -14,7 +14,7 @@ export default function spritelabInputList(state, action) {
       const newPromptInfo = {
         promptType: action.promptType,
         promptText: action.promptText,
-        variableName: action.variableName
+        variableName: action.variableName,
       };
       if (action.promptType === PromptType.MULTIPLE_CHOICE) {
         newPromptInfo.choices = action.choices;
@@ -35,7 +35,7 @@ export function addTextPrompt(promptText, variableName) {
     type: SET_PROMPT,
     promptType: PromptType.TEXT,
     promptText,
-    variableName
+    variableName,
   };
 }
 
@@ -45,7 +45,7 @@ export function addMultipleChoicePrompt(promptText, variableName, choices) {
     promptType: PromptType.MULTIPLE_CHOICE,
     promptText,
     variableName,
-    choices
+    choices,
   };
 }
 

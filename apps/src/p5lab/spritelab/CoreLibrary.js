@@ -6,7 +6,7 @@ import {APP_HEIGHT, APP_WIDTH} from '../constants';
 import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 import {
   workspaceAlertTypes,
-  displayWorkspaceAlert
+  displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
 import msg from '@cdo/locale';
 
@@ -21,7 +21,7 @@ export default class CoreLibrary {
     this.totalPauseTime = 0;
     this.timerResetTime = {
       seconds: 0,
-      frames: 0
+      frames: 0,
     };
     this.numActivePrompts = 0;
     this.screenText = {};
@@ -41,7 +41,7 @@ export default class CoreLibrary {
       delay: 90,
       fail: 150,
       pass: 90,
-      successFrame: 0
+      successFrame: 0,
     };
 
     this.commands = {
@@ -56,7 +56,7 @@ export default class CoreLibrary {
         }
         commands.drawStoryLabText.apply(this);
       },
-      ...commands
+      ...commands,
     };
   }
 
@@ -174,7 +174,7 @@ export default class CoreLibrary {
       spriteY,
       {
         tailHeight,
-        radius
+        radius,
       },
       bubbleType
     );
@@ -187,7 +187,7 @@ export default class CoreLibrary {
       bubbleY + padding,
       textSize,
       {
-        horizontalAlign: this.p5.CENTER
+        horizontalAlign: this.p5.CENTER,
       }
     );
   }
@@ -206,7 +206,7 @@ export default class CoreLibrary {
       text,
       removeAt,
       renderFrame: this.currentFrame(),
-      bubbleType
+      bubbleType,
     });
     return id;
   }
@@ -268,7 +268,7 @@ export default class CoreLibrary {
     if (!spriteArg) {
       return [];
     }
-    if (spriteArg.hasOwnProperty('id')) {
+    if (Object.prototype.hasOwnProperty.call(spriteArg, 'id')) {
       let sprite = this.nativeSpriteMap[spriteArg.id];
       if (sprite) {
         return [sprite];
@@ -436,10 +436,10 @@ export default class CoreLibrary {
     }
 
     sprite.baseScale = 1;
-    sprite.setScale = function(scale) {
+    sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
     };
-    sprite.getScale = function() {
+    sprite.getScale = function () {
       return sprite.scale / sprite.baseScale;
     };
     if (animation) {
@@ -499,7 +499,7 @@ export default class CoreLibrary {
     if (!this.userInputEventCallbacks[variableName]) {
       this.userInputEventCallbacks[variableName] = {
         setterCallbacks: [],
-        userCallbacks: []
+        userCallbacks: [],
       };
     }
     this.userInputEventCallbacks[variableName].setterCallbacks.push(
@@ -514,7 +514,7 @@ export default class CoreLibrary {
     if (!this.userInputEventCallbacks[variableName]) {
       this.userInputEventCallbacks[variableName] = {
         setterCallbacks: [],
-        userCallbacks: []
+        userCallbacks: [],
       };
     }
     this.userInputEventCallbacks[variableName].userCallbacks.push(userCallback);
@@ -552,7 +552,8 @@ export default class CoreLibrary {
     const matchingInputEvents = this.inputEvents.filter(
       inputEvent =>
         inputEvent.type === 'whenSpriteCreated' &&
-        (inputEvent.args.name === newSprite.name ||
+        ((inputEvent.args.name !== undefined &&
+          inputEvent.args.name === newSprite.name) ||
           inputEvent.args.costume === newSprite.getAnimationLabel() ||
           inputEvent.args.costume === 'all')
     );
@@ -674,12 +675,12 @@ export default class CoreLibrary {
   }
 
   whenTouchEvent(inputEvent) {
-    const getFired = function(map, spriteId, targetId) {
+    const getFired = function (map, spriteId, targetId) {
       if (map && map[spriteId] && map[spriteId][targetId]) {
         return map[spriteId][targetId].firedOnce;
       }
     };
-    const setFired = function(map, spriteId, targetId, fired) {
+    const setFired = function (map, spriteId, targetId, fired) {
       if (!map) {
         map = {};
       }
@@ -708,7 +709,7 @@ export default class CoreLibrary {
             this.eventLog.push(`whenTouch: ${sprite.id} ${target.id}`);
             callbackArgList.push({
               subjectSprite: sprite.id,
-              objectSprite: target.id
+              objectSprite: target.id,
             });
             firedOnce = true;
           }
@@ -740,7 +741,7 @@ export default class CoreLibrary {
           }
           callbackArgList.push({
             subjectSprite: sprite.id,
-            objectSprite: target.id
+            objectSprite: target.id,
           });
         }
       });
@@ -844,7 +845,7 @@ export default class CoreLibrary {
         this.behaviors.push({
           func: behavior.func,
           name: behavior.name,
-          sprite: sprite
+          sprite: sprite,
         });
       }
     }

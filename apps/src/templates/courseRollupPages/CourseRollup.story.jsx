@@ -1,6 +1,8 @@
 import React from 'react';
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
+import {Provider} from 'react-redux';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 const defaultProps = {
   objectToRollUp: 'Vocabulary',
@@ -22,15 +24,15 @@ const defaultProps = {
               {
                 key: 'key',
                 word: 'word',
-                definition: 'definition'
-              }
+                definition: 'definition',
+              },
             ],
             programmingExpressions: [
               {
                 syntax: 'playSound',
                 name: 'playSound',
-                link: 'studio.code.org/docs/applab/playSound'
-              }
+                link: 'studio.code.org/docs/applab/playSound',
+              },
             ],
             preparation: '- One',
             standards: [
@@ -42,8 +44,8 @@ const defaultProps = {
                 categoryDescription: 'Algorithms & Programming',
                 shortcode: '1B-AP-09',
                 description:
-                  'Create programs that use variables to store and modify data.'
-              }
+                  'Create programs that use variables to store and modify data.',
+              },
             ],
             resources: {
               Teacher: [
@@ -51,8 +53,8 @@ const defaultProps = {
                   key: 'teacher-resource',
                   name: 'Teacher Resource',
                   url: 'fake.url',
-                  type: 'Slides'
-                }
+                  type: 'Slides',
+                },
               ],
               Student: [
                 {
@@ -60,10 +62,10 @@ const defaultProps = {
                   name: 'Student Resource',
                   url: 'fake.url',
                   download_url: 'download.fake.url',
-                  type: 'Activity Guide'
-                }
-              ]
-            }
+                  type: 'Activity Guide',
+                },
+              ],
+            },
           },
           {
             key: 'l2',
@@ -74,15 +76,15 @@ const defaultProps = {
               {
                 key: 'key',
                 word: 'word',
-                definition: 'definition'
-              }
+                definition: 'definition',
+              },
             ],
             programmingExpressions: [
               {
                 syntax: 'playSound',
                 name: 'playSound',
-                link: 'studio.code.org/docs/applab/playSound'
-              }
+                link: 'studio.code.org/docs/applab/playSound',
+              },
             ],
             preparation: '- One',
             standards: [
@@ -94,8 +96,8 @@ const defaultProps = {
                 categoryDescription: 'Algorithms & Programming',
                 shortcode: '1B-AP-09',
                 description:
-                  'Create programs that use variables to store and modify data.'
-              }
+                  'Create programs that use variables to store and modify data.',
+              },
             ],
             resources: {
               Teacher: [
@@ -103,8 +105,8 @@ const defaultProps = {
                   key: 'teacher-resource',
                   name: 'Teacher Resource',
                   url: 'fake.url',
-                  type: 'Slides'
-                }
+                  type: 'Slides',
+                },
               ],
               Student: [
                 {
@@ -112,12 +114,12 @@ const defaultProps = {
                   name: 'Student Resource',
                   url: 'fake.url',
                   download_url: 'download.fake.url',
-                  type: 'Activity Guide'
-                }
-              ]
-            }
-          }
-        ]
+                  type: 'Activity Guide',
+                },
+              ],
+            },
+          },
+        ],
       },
       {
         name: 'unit-2',
@@ -133,7 +135,7 @@ const defaultProps = {
             standards: [],
             programmingExpressions: [],
             preparation: null,
-            resources: {}
+            resources: {},
           },
           {
             key: 'l4',
@@ -144,15 +146,15 @@ const defaultProps = {
               {
                 key: 'key',
                 word: 'word',
-                definition: 'definition'
-              }
+                definition: 'definition',
+              },
             ],
             programmingExpressions: [
               {
                 syntax: 'playSound',
                 name: 'playSound',
-                link: 'studio.code.org/docs/applab/playSound'
-              }
+                link: 'studio.code.org/docs/applab/playSound',
+              },
             ],
             preparation: '- One',
             standards: [
@@ -164,8 +166,8 @@ const defaultProps = {
                 categoryDescription: 'Algorithms & Programming',
                 shortcode: '1B-AP-09',
                 description:
-                  'Create programs that use variables to store and modify data.'
-              }
+                  'Create programs that use variables to store and modify data.',
+              },
             ],
             resources: {
               Teacher: [
@@ -173,8 +175,8 @@ const defaultProps = {
                   key: 'teacher-resource',
                   name: 'Teacher Resource',
                   url: 'fake.url',
-                  type: 'Slides'
-                }
+                  type: 'Slides',
+                },
               ],
               Student: [
                 {
@@ -182,77 +184,74 @@ const defaultProps = {
                   name: 'Student Resource',
                   url: 'fake.url',
                   download_url: 'download.fake.url',
-                  type: 'Activity Guide'
-                }
-              ]
-            }
-          }
-        ]
-      }
-    ]
-  }
+                  type: 'Activity Guide',
+                },
+              ],
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('CourseRollup', module)
-    .withReduxStore()
-    .addStoryTable([
-      {
-        name: 'Course Vocabulary',
-        story: () => <CourseRollup {...defaultProps} />
-      },
-      {
-        name: 'Course Code',
-        story: () => <CourseRollup {...defaultProps} objectToRollUp={'Code'} />
-      },
-      {
-        name: 'Course Resources',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Resources'} />
-        )
-      },
-      {
-        name: 'Course Standards',
-        story: () => (
-          <CourseRollup {...defaultProps} objectToRollUp={'Standards'} />
-        )
-      },
-      {
-        name: 'Unit Vocabulary',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={defaultProps.objectToRollUp}
-          />
-        )
-      },
-      {
-        name: 'Unit Code',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Code'}
-          />
-        )
-      },
-      {
-        name: 'Unit Resources',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Resources'}
-          />
-        )
-      },
-      {
-        name: 'Unit Standards',
-        story: () => (
-          <UnitRollup
-            unit={defaultProps.course.units[0]}
-            objectToRollUp={'Standards'}
-          />
-        )
-      }
-    ]);
+export default {
+  title: 'CourseRollup',
+  component: CourseRollup,
+};
+
+const CourseTemplate = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <CourseRollup {...defaultProps} {...args} />
+    </Provider>
+  );
+};
+
+const UnitTemplate = args => {
+  return (
+    <Provider store={reduxStore()}>
+      <UnitRollup unit={defaultProps.course.units[0]} {...args} />
+    </Provider>
+  );
+};
+
+export const CourseVocabularyExample = CourseTemplate.bind({});
+CourseVocabularyExample.args = {
+  objectToRollUp: defaultProps.objectToRollUp,
+};
+
+export const CourseCodeExample = CourseTemplate.bind({});
+CourseCodeExample.args = {
+  objectToRollUp: 'Code',
+};
+
+export const CourseResourceExample = CourseTemplate.bind({});
+CourseResourceExample.args = {
+  objectToRollUp: 'Resources',
+};
+
+export const CourseStandardsExample = CourseTemplate.bind({});
+CourseStandardsExample.args = {
+  objectToRollUp: 'Standards',
+};
+
+export const UnitVocabularyExample = UnitTemplate.bind({});
+UnitVocabularyExample.args = {
+  objectToRollUp: defaultProps.objectToRollUp,
+};
+
+export const UnitCodeExample = UnitTemplate.bind({});
+UnitCodeExample.args = {
+  objectToRollUp: 'Code',
+};
+
+export const UnitResourceExample = UnitTemplate.bind({});
+UnitResourceExample.args = {
+  objectToRollUp: 'Resources',
+};
+
+export const UnitStandardsExample = UnitTemplate.bind({});
+UnitStandardsExample.args = {
+  objectToRollUp: 'Standards',
 };

@@ -22,7 +22,7 @@ class DataOverview extends React.Component {
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
-    onViewChange: PropTypes.func.isRequired
+    onViewChange: PropTypes.func.isRequired,
   };
 
   onTableAdd = tableName => {
@@ -68,7 +68,7 @@ class DataOverview extends React.Component {
 export default connect(
   state => ({
     view: state.data.view,
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
@@ -76,6 +76,6 @@ export default connect(
     },
     onViewChange(view, tableName) {
       dispatch(changeView(view, tableName));
-    }
+    },
   })
 )(DataOverview);
