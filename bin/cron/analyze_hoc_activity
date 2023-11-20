@@ -58,6 +58,8 @@ def main
   today = Date.today
   day = Date.new(2014, 12, 6)
 
+  puts 'Marker 1'
+
   while day < today
     cache_path = pegasus_dir("cache/HourOfActivity_Results_#{day.strftime('%Y-%m-%d')}.json")
     if (day != today) && File.file?(cache_path)
@@ -86,8 +88,16 @@ def main
   # Compute the number of hoc events (the grand total and broken down by company and country).
   hoc_country_totals = Hash.new(0)
   hoc_company_totals = Hash.new(0)
-  unique_hoc_events = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
+  puts 'Before pegasus queries'
+  unique_hoc_events = []
+  begin
+    unique_hoc_events = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
+  rescue => exception
+    puts exception
+  end
+  puts 'Finish unique_hoc_events query'
   total_hoc_count = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
+  puts 'After pegasus queries'
 
   unique_hoc_events.each do |row|
     data = JSON.parse(row[:data])
@@ -95,10 +105,14 @@ def main
     hoc_company_totals[data['hoc_company_s']] += 1
   end
 
+  puts 'Start event count'
   events_by_country = Forms.events_by_country("HocSignup#{hoc_year}")
+  puts events_by_country.count
   events_by_country.each do |country_row|
     hoc_country_totals[country_row[:country_code]] = country_row[:count]
   end
+  puts hoc_country_totals
+  puts 'Event count finished'
 
   Properties.set :hoc_metrics, {
     started: total_started,
@@ -112,6 +126,8 @@ def main
     hoc_country_totals: hoc_country_totals,
     hoc_company_totals: hoc_company_totals,
   }
+
+  puts 'Marker 2'
 
   # In the production environment, begin with a known previous value in case we
   # are unable to obtain a more recent number.
@@ -138,6 +154,8 @@ def main
       end
     end
   end
+
+  puts 'Marker 3'
 
   metrics = Properties.get(:metrics) || Hash.new(0)
 
