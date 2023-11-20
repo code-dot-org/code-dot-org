@@ -26,7 +26,7 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
     for (const blockState of blockStates) {
       try {
         if (
-          Blockly.useModalFunctionEditor &&
+          !Blockly.useModalFunctionEditor &&
           PROCEDURE_DEFINITION_TYPES.includes(blockState.type)
         ) {
           // Ensure that procedure definitions can be moved/edited on the main workspace.
