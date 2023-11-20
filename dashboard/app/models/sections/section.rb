@@ -606,6 +606,7 @@ class Section < ApplicationRecord
 
   public def add_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
 
     deleted_section_instructor = validate_instructor(instructor)
     deleted_section_instructor&.really_destroy!
@@ -632,7 +633,7 @@ class Section < ApplicationRecord
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
       raise ArgumentError.new('already invited')
-    elsif pl_section? && students.exists?(email: instructor.email)
+    elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
   end
