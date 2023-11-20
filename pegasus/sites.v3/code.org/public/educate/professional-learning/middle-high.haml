@@ -98,50 +98,41 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 What does the program cost?
-    .action-block.action-block--two-col
-      %img{src: "/images/professional-learning/pl-teacher-group.png", alt: "", class: "col-50"}
-      .text-wrapper.col-50
-        %h3.heading-sm The cost of the program varies by region.
-        %p You may be eligible for a scholarship to cover the cost of your program.
-        %a.link-button{href: "/educate/professional-learning/program-information"} Learn more about the program in your region
-  .clear
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2 Additional programs to meet diverse teacher needs
-    %p In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers.
+    %h2=hoc_s(:pl_middle_high_additional_programs_heading)
+    %p=hoc_s(:pl_middle_high_additional_programs_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Self-Paced Learning
-          %p Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free.
+          %h3=hoc_s(:pl_self_paced_learning_heading)
+          %p=hoc_s(:pl_self_paced_learning_desc)
         .content-footer
-          %a.link-button.secondary{href: "/educate/professional-development-online"} Learn more
+          %a.link-button.secondary{href: "/educate/professional-development-online"}
+            =hoc_s(:call_to_action_explore_self_paced_learning)
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Elementary Workshops
-          %p Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops.
+          %h3=hoc_s(:pl_elementary_workshops_heading)
+          %p=hoc_s(:pl_elementary_workshops_desc)
         .content-footer
-          %a.link-button.secondary{href: "/professional-development-workshops"} Learn more
+          %a.link-button.secondary{href: "/professional-development-workshops"}
+            =hoc_s(:call_to_action_explore_k_5_workshops)
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Outside the United States
-          %p If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
+          %h3=hoc_s(:pl_outside_us_heading)
+          %p=hoc_s(:pl_outside_us_desc)
         .content-footer
-          %a.link-button.secondary.has-external-link{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", target: "_blank", rel: "noopener noreferrer"} Learn more
+          %a.link-button.secondary.has-external-link{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_for_intl_educators)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2 Have questions?
+    %h2=hoc_s(:heading_have_questions)
     .action-block.action-block--two-col
       .text-wrapper.col-50
-        %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
+        %p=hoc_s(:pl_regional_partner_desc)
         = view :professional_development_workshops_regional_partner_search
-        %a.link-button.secondary.has-external-link{href: "https://support.code.org/", target: "_blank", rel: "noopener noreferrer"} Visit our support center
-      %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
+        %a.link-button.secondary.has-external-link{href: "https://support.code.org/", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_visit_support_center)
+      %img.col-50{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", style: "height: max-content;"}
   .clear

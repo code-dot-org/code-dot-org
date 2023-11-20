@@ -363,6 +363,11 @@
   call_to_action_applications_get_notified: "Get notified when applications open"
   call_to_action_applications_notify_me: "Notify me when I can apply"
   call_to_action_apply_now: "Apply now"
+  call_to_action_explore_self_paced_learning: "Explore self-paced learning"
+  call_to_action_explore_k_5_workshops: "Explore K-5 workshops"
+  call_to_action_for_intl_educators: "For international educators"
+  call_to_action_contact_regional_partner: "Contact your regional partner"
+  call_to_action_visit_support_center: "Visit our support center"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -682,6 +687,7 @@
   heading_apply: "Apply"
   heading_acceptance: "Acceptance"
   heading_enroll: "Enroll"
+  heading_have_questions: " Have questions?"
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
@@ -718,6 +724,14 @@
   professional_learning_section_block_facilitator_led_workshops_csf: "Join local teachers for inspiring and hands-on support to implement computer science in your classroom. Our Regional Partners offer high-quality, one-day Code.org workshops for individual teachers or for schoolwide PD. Sign up for a professional development workshop near you!"
   professional_learning_section_block_csa: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CSA curriculum to your students."
   professional_learning_section_workshops_starting: "In-person and virtual workshops starting this summer."
+
+  pl_self_paced_learning_heading: "Self-Paced Learning"
+  pl_self_paced_learning_desc: "Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free."
+  pl_elementary_workshops_heading: "Elementary Workshops"
+  pl_elementary_workshops_desc: "Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops."
+  pl_outside_us_heading: "Outside the United States"
+  pl_outside_us_desc: "If you are an international teacher interested in professional learning. Learn more about what is offered in your area."
+  pl_regional_partner_desc: "Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!"
 
   no_devices_section_subhead: "Go ahead, cut the cord (for a while)!"
   no_devices_section_desc: "CS education does not always need to be in front of a screen and device access shouldn't be a barrier to learning computer science concepts."
@@ -997,6 +1011,8 @@
   pl_middle_high_process_enroll_desc: "Sign up for the summer workshop in your region and get ready to start the yearlong program!"
   pl_middle_high_get_notified_heading: "Get notified when Professional Learning registration opens"
   pl_middle_high_get_notified_desc: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
+  pl_middle_high_additional_programs_heading: "Additional programs to meet diverse teacher needs"
+  pl_middle_high_additional_programs_desc: "In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers."
 
   self_paced_pl_hero_heading: "Self-Paced Professional Learning For Educators"
   self_paced_pl_hero_desc: "Professional learning offerings to support teachers in every stage of their computer science teaching journey."
