@@ -3,6 +3,9 @@ title: Professional Learning Program Details
 theme: responsive_full_width
 ---
 
+-# Use this DCDO flag to show the off-season version of the page
+- off_season_version = !!DCDO.get('pl-teacher-application', false)
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/pl-middle-high-styles.css", rel: "stylesheet"}
 
@@ -92,9 +95,10 @@ theme: responsive_full_width
       %a.link-button{href: "/educate/professional-learning/program-information"}
         =hoc_s(:call_to_action_apply_now)
 
-%section
-  .wrapper
-    ADD FORM HERE
+- if off_season_version
+  %section
+    .wrapper
+      ADD FORM HERE
 
 %section
   .wrapper
