@@ -33,7 +33,8 @@ a Client ID to provide Code.org (in [Step 4](#step-4))
 1. Enter LTI Key Settings:
     - Key Name: `<your-key-name>`
     - Owner Email: `<admin-owner-email>`
-    - Redirect URIs: `https://studio.code.org`
+    - Redirect URIs: `https://studio.code.org/home` NOTE: If you choose the JSON
+    configuration below, this will autogenerate for you.
     - Notes: `Optional: Any notes about the LTI key, such as the reason it was created.`
 
 ### Step 2
@@ -111,8 +112,8 @@ Here are the values to enter in the associated text input fields:
 1. OpenID Connect Initiation URL: `https://studio.code.org/lti/v1/login`
 1. JWK Method - Public JWK URL: `https://studio.code.org/oauth/jwks`
 1. LTI Advantage Services: Enable all
-1. Placements: Select the placements where you want Code.org LTI Tool to be 
-available. NOTE: Code.org currently only supports `LtiResourceLinkRequest`. Do not
+1. Placements: Select `Link Selection` and `Submission Type` from the Placements
+selector. NOTE: Code.org currently only supports `LtiResourceLinkRequest`. Do not
 select any placements that utilize an `LtiDeepLinkRequest`.
 1. Additional Settings - Custom Fields:
    ```
@@ -139,9 +140,12 @@ Once you have the Client ID copied, please reference
 ### Step 4
 
 Once you have both the Client ID and the Deployment ID, provide them to Code.org.
-
-TODO: How will they supply them to us?
+We will complete the final configuration in our system, and will let you know
+when you can begin using the Code.org LTI 1.3 Canvas integration.
 
 ## Using Code.org as an LTI Tool
 
 Code.org must be configured to open in a new tab, and will not work in an iframe.
+As mentioned above, the Code.org LTI integration does not support Deep Linking.
+Some of the placments for LTI Tools in Canvas will trigger a Deep Link request
+that is not curently supported by Code.org.
