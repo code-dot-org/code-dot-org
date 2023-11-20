@@ -55,7 +55,6 @@
     "default_song": "2beloved_lizzo",
     "long_instructions": "**Use A.I. to generate a new effect for a different song.**\r\n\r\n- Connect the <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to setup.\r\n\r\n- Click on the block to get started. \r\n",
     "short_instructions": "**Use A.I. to generate a new effect for a different song.**",
-    "video_key": "hoc_dance_warmup_2019",
     "encrypted": "false",
     "mini_rubric": "false",
     "validation_enabled": "false",
@@ -70,21 +69,17 @@
       "summer_calvinharris",
       "asitwas_harrystyles",
       "thunder_imaginedragons",
-      "sorry_justinbieber",
       "bornthisway_ladygaga",
       "2beloved_lizzo",
-      "macarena_losdelrio",
       "astronautintheocean_maskedwolf",
       "good4u_oliviarodrigo",
       "iliketomoveit_william",
       "aire_jessejoy"
     ],
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "HM8j+EKFdGKymY885VlVaOQaDIyGOqs1V7bHJHPNN5G75wtutyemxiq1CMjQ\nlSC1yHovIJpulgRRhABtXrNDow==\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-02T02:29:52.951+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_ai_sad_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_ai_sad_draft3\"},{\"changed_at\":\"2023-11-03 14:14:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 14:14:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 20:24:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:37:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"song_selection\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:37:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 19:27:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-02T02:29:52.951+00:00\",\"changed\":[\"cloned from \\\"draft_ai_dance_party_drag_ai_sad_draft3\\\"\"],\"cloned_from\":\"draft_ai_dance_party_drag_ai_sad_draft3\"},{\"changed_at\":\"2023-11-03 14:14:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 14:14:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-03 20:24:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:37:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"song_selection\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-06 21:37:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-09 19:27:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"contained_level_names\"],\"changed_by_id\":18596,\"changed_by_email\":\"alice.fisher+levelbuilder@code.org\"},{\"changed_at\":\"2023-11-17 23:21:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"video_key\",\"song_selection\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-11-17 23:25:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2023-11-17 23:27:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
