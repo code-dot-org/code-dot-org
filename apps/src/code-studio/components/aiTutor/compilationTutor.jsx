@@ -8,8 +8,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // AI Tutor feature that explains to students why their code did not compile.
-const CompilationTutor = props => {
-  const levelId = props.levelId;
+const CompilationTutor = ({levelId}) => {
   const dispatch = useDispatch();
   const javalabState = useSelector(state => state.javalab);
   const javalabEditorState = useSelector(state => state.javalabEditor);

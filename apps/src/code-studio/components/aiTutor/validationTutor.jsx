@@ -8,8 +8,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // AI Tutor feature that explains to students why their code is not passing tests.
-const ValidationTutor = props => {
-  const levelId = props.levelId;
+const ValidationTutor = ({levelId}) => {
   const dispatch = useDispatch();
   const javalabState = useSelector(state => state.javalab);
   const javalabEditorState = useSelector(state => state.javalabEditor);
@@ -32,7 +31,7 @@ const ValidationTutor = props => {
 
   return (
     <div className={style.tutorContainer}>
-      {!javalabState.hasRunOrTestedCode && (
+      {!javalabState.hasRunOrTestedCode && !javalabState.validationPassed && (
         <h4>Test your code first and see what happens.</h4>
       )}
       {javalabState.hasRunOrTestedCode &&
@@ -55,7 +54,7 @@ const ValidationTutor = props => {
               isPending={aiTutorState.isWaitingForAIResponse}
               pendingText="waiting"
               onClick={() => handleSend(studentCode)}
-              disabled={javalabState.validationPassed}
+              disabled={true}
             />
             <p id="ai-response">{aiTutorState.aiResponse}</p>
           </>
