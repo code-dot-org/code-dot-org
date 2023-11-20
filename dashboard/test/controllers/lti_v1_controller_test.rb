@@ -21,7 +21,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
-  def create_jwt_and_stub(payload, raises_error = false)
+  def create_jwt_and_stub(payload, raises_error: false)
     if raises_error
       LtiV1Controller.any_instance.stubs(:get_decoded_jwt).raises JWT::DecodeError
     else
@@ -57,7 +57,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   def create_valid_jwt_raise_error
     payload = get_valid_payload(false)
-    create_jwt_and_stub(payload, true)
+    create_jwt_and_stub(payload, raises_error: true)
   end
 
   test 'login - given no params, return unauthorized' do

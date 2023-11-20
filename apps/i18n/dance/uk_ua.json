@@ -1,5 +1,6 @@
 {
   "danceFeedbackDidntPress": "Обов’язково натискайте клавіші зі стрілками під час виконання танцю.",
+  "danceFeedbackKeepCoding": "Використано усі необхідні типи блоків, але у неправильному порядку.",
   "danceFeedbackKeyEvent": "Переконайтеся, що ви прикріпили код до блоку \"коли ключ\" і натискайте цей \"ключ\" доки ваш танець триває.",
   "danceFeedbackNeedBackup": "Ви маєте створити групу другорядних танцівників за допомогою блока <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Потрібно використати інший танець.",

@@ -1,4 +1,5 @@
 @import "color.scss";
+@import "font.scss";
 
 .modalBackdrop {
   position: fixed;
@@ -40,4 +41,41 @@
 
 .buttonsBottom {
   float: right;
+  font-weight: bold; 
+};
+
+.label {
+  font-size: 16px;
+
+  .box {
+    accent-color: $brand_primary_default;
+    margin: 0 12px 0 3px;
+    transform: scale(1.5);
+  }
+};
+
+input.classNameTextField {
+  width: 100%;
+  box-sizing: border-box;
+  height: unset;
+  border: 1px solid $neutral_dark;
+
+  @include main-font-regular;
+  line-height: 1.5;
+  font-size: 1em;
+
+  &:invalid:focus {
+    border-color: $neutral_dark;
+    box-shadow: unset;
+    color: $neutral_dark;
+  };
+};
+
+// TODO: once we agree and receive a final approve on what styles of typography
+//  are and the Label styles added to Typography Elements - remove and rewrite labels with typography elements.
+label.typographyLabel {
+  @include main-font-semi-bold;
+  color: $neutral_dark;
+  font-size: 16px;
+  margin-top: 10px;
 };

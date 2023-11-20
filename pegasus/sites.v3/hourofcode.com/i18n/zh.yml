@@ -6,10 +6,10 @@ zh:
   front_title: 加入史上最大的學習活動， %{campaign_date}
   coming_soon: 即將推出
   new: 新
-  hours_of_code_served: 代碼服務時間
+  hours_of_code_served: 已服務的一小時玩程式
   hoc_stat_languages: 支援超過 45 種語言
   hoc_stat_hours_served: 超過 1 億名學生已體驗
-  hoc_stat_females: 女性學生佔代碼一小時參與者的 50%
+  hoc_stat_females: 女性學生佔一小時玩程式參與者的50%
   campaign_date_start_short: 12月4日
   campaign_date_start_long: 12月4日
   campaign_date_short: 12月4日10日
@@ -45,8 +45,7 @@ zh:
   hoc2023_hero_desc_learn_page: 今年，我們透過提供包含人工智慧（AI）和非AI元件的編碼機會，將一小時玩程式提升到新的高度。
   hoc2023_social_creativity_with_ai_title: 一小時玩程式-你會創造什麼？
   hoc2023_social_creativity_with_ai_desc: 利用計算機科學探索和學習 AI！
-  hoc2023_what_is_hoc_desc: 編碼一小時是通過有趣的活動和視頻來免費介紹計算機科學，適用於所有技能水平的學習者。今年的編碼和人工智能慶祝活動得到了超過
-    400 個合作夥伴、20,000 名教育工作者和 58,000 名義工的支持。
+  hoc2023_what_is_hoc_desc: 一小時玩程式通過有趣的活動和視訊免費介紹計算機科學，適合所有技能水平的學習者。今年的程式設計和人工智慧慶祝活動得到了超過400個合作夥伴、20,000名教育工作者和58,000名志願者的支持。
   hoc2022_header: 探索，玩耍，創造！
   social_hoc2022_explore_play_create: 使用電腦科學來探索、玩耍和創造！
   codeorg_homepage_hoc2022_body: 探索宇宙，進球得分，跳舞 — 嘗試電腦科學的方法如此之多。
@@ -54,7 +53,8 @@ zh:
   hoc2022_codeorg_description: 第10次一小時玩程式非常好！來和我們一起探索、玩耍和創造吧。
   social_hoc2022_dance: 裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
   social_hoc2023_dance: 擁有碧昂絲，BTS，哈利風格，麗佐，Lil 納斯 X，塞萊娜戈麥斯，迪士尼的音樂「Encanto」等等！
-  social_hoc2023_dance_v2: 現在是時候把你的東西放在一起了！創建自己的舞蹈派對，其中包括麥莉·賽勒斯，BTS，Lil Nas X，哈利·斯泰爾斯，妮基·米納傑，羅莎莉亞等等歌曲！
+  social_hoc2023_dance_v2: 現在是時候把你的東西放在一起了！創建自己的舞蹈派對，其中包括Miley Cyrus、BTS、Lil Nas X、Harry
+    Styles、Nicki Minaj、Rosalía亞等人的熱門歌曲！
   social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
     the connections!'
   hoc2020_header: "  馬上開始學習，打造更美好的明天。  "
@@ -151,10 +151,10 @@ zh:
   device_laptop: 筆記型電腦
   device_desktop_computer: 桌上型電腦
   device_mobile_device: 行動裝置
-  for_everyone: 適合所有人
-  for_students_teacher_led_learning: 對於學生：教師主導的學習
-  for_students_teacher_led_lessons: 對於學生：教師指導的課程
-  professional_development: Pseudoloc-屁儿弗伊丝艾娜诶 迪维伊哦马伊提
+  for_everyone: 針對所有人
+  for_students_teacher_led_learning: 針對學生：教師主導的學習
+  for_students_teacher_led_lessons: 針對學生：教師指導的課程
+  professional_development: 專業發展
   how_ai_works_video_series: AI 如何運作影片系列
   learn_how_ai_works: 了解 AI 的運作方式
   ai_101_for_educators: 適用於教育工作者的 AI 101
@@ -202,20 +202,22 @@ zh:
   teacher_forum_desc: 訪問一小時玩程式教師論壇，獲取其他教育工作者的建議、見解和支持。
   required_materials: 所需材料：
   optional_materials: 可選材料：
-  for_students: 對於學生
+  for_students: 針對學生
   for_educators: 致教師
-  call_to_action_host_hoc: Pseudoloc-尺哦提 娜 哦吾 哦 西迪
+  call_to_action_host_hoc: 舉辦一小時玩程式
   call_to_action_hold_an_event: 舉辦活動
   call_to_action_register_event: 註冊您的活動
-  call_to_action_register_your_hoc: 註冊您的代碼時間
+  call_to_action_register_your_hoc: 註冊您的一小時玩程式
   call_to_action_select_activity: 選擇活動
+  call_to_action_select_coding_activity: 選擇編碼活動
   call_to_action_start_activity: 開始活動
   call_to_action_get_certificates: 獲取證書
+  call_to_action_print_certificates: 列印證書
   call_to_action_go_beyond_hoc: 超越一小時玩程式
-  call_to_action_explore_all_hoc_activities: 探索 Code.org 的所有編碼一小時活動
+  call_to_action_explore_all_hoc_activities: 探索Code.org上的所有一小時玩程式活動
   call_to_action_start_dance_party: 開始舞蹈派對
   call_to_action_start_part_02: 開始第二部分
-  call_to_action_start_unplugged_activity: 開始未連接電源的活動
+  call_to_action_start_unplugged_activity: 開始缐下活動
   call_to_action_view_promo_resources: 查看推廣資源
   call_to_action_learn_more: 進一步學習
   call_to_action_watch_now: 立即觀看
@@ -312,8 +314,8 @@ zh:
   call_to_action_applications_open: 現已開始申請
   call_to_action_apply_cs_ambassador: 申請成為 CS 大使
   call_to_action_coming_soon: 即將推出！
-  call_to_action_learn_how_ai_works: 了解 AI 的運作方式
-  call_to_action_learn_about_ai: 了解人工智能
+  call_to_action_learn_how_ai_works: 瞭解AI如何運行
+  call_to_action_learn_about_ai: 瞭解AI
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
   aria_label_call_to_action_hoc_how_to_districts: 查看地區操作指南
@@ -324,11 +326,12 @@ zh:
   aria_label_call_to_action_hoc_how_to_virtual_events: 查看虛擬活動的操作指南
   aria_label_call_to_action_dance_01: 開始舞蹈派對活動
   aria_label_call_to_action_dance_02: 開始舞蹈派對活動的第二部分
-  aria_label_call_to_action_dance_unplugged: 開始不連接電源的舞蹈派對活動
+  aria_label_call_to_action_dance_unplugged: 開始缐下舞蹈派對活動
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
   aria_label_call_to_action_teaching_csp: 開始教學計算機科學原理專業學習計劃
+  aria_label_call_to_action_teaching_problem_solving: 開始教授問題解決和計算專業學習課程
   aria_label_call_to_action_teaching_csc: 開始教授計算機科學聯繫專業學習計劃
   aria_label_call_to_action_teaching_ai: 開始教學人工智慧與機器學習專業學習計畫
   aria_label_call_to_action_teaching_maker_cp: 開始教學使用裝置製作應用程式 (環路遊樂場) 專業學習計劃
@@ -339,6 +342,7 @@ zh:
   aria_label_call_to_action_curriculum_csf_express_pre_reader: 探索計算機科學基礎準讀者快速課程
   aria_label_call_to_action_curriculum_csd: 探索電腦科學探索課程
   aria_label_call_to_action_curriculum_csp: 探索電腦科學原理課程
+  aria_label_call_to_action_curriculum_problem_solving: 探索問題解決和計算課程
   aria_label_call_to_action_curriculum_csc: 探索計算機科學聯繫課程
   aria_label_call_to_action_curriculum_ai: 探索 AI 和機器學習課程
   aria_label_call_to_action_curriculum_maker_cp: 探索使用裝置建立應用程式 (環路遊樂場) 課程
@@ -395,6 +399,7 @@ zh:
   curriculum_name_csf_teacher_led: 教師主導課程
   curriculum_name_csd: 計算機科學發現
   curriculum_name_csp: 計算機科學原理
+  curriculum_name_problem_solving: 問題解決與計算
   curriculum_name_csc: 計算機科學聯繫
   curriculum_name_csa: 計算機科學A
   curriculum_name_csa_ai: Pseudoloc-丝哦提尔儿伊伊娜艾娜伊儿娜 &西哦屁吾伊儿维艾艾哦
@@ -407,18 +412,18 @@ zh:
   curriculum_name_creating_apps_with_devices: 使用裝置建立應用程式
   curriculum_name_poetry: 詩歌編程
   curriculum_name_dance_party: 舞蹈派對
-  curriculum_name_dance_party_02: Pseudoloc-开伊屁 娜 诶娜艾娜
-  curriculum_name_dance_party_unplugged: Pseudoloc-迪诶西伊屁诶提吾吾娜勒吾吉迪
-  curriculum_name_dance_party_ai_edition: 舞蹈派對：AI 版
+  curriculum_name_dance_party_02: 繼續跳舞
+  curriculum_name_dance_party_unplugged: 缐下舞蹈派對
+  curriculum_name_dance_party_ai_edition: 舞蹈派對：AI版
   curriculum_name_problem_solving_computing: 問題解決和計算
   curriculum_name_web_development: 網頁開發
   curriculum_name_interactive_animations_games: 互動式動畫和遊戲
   curriculum_name_design_process: 設計流程
   curriculum_name_data_society: 數據和社會
-  curriculum_desc_dance_party_01: 在這個入門活動中，使用代碼讓各種色彩繽紛的角色轉向動畫背景和樂觀音樂。
-  curriculum_desc_dance_party_02: 不僅限入門教學課程，並提供更廣泛的專案想法。瀏覽更複雜的舞蹈派對示例庫。
-  curriculum_desc_dance_party_unplugged: 不需要電腦，開始發揮您的樂趣！了解如何使用編碼概念（例如活動）來同步舞者編舞。
-  curriculum_desc_dance_party_ai_edition: 了解人工智能（AI）概念，以創建您自己的虛擬舞蹈派對，展示當今頂級藝術家。有數十首歌曲可供選擇，無論他們的音樂品味都能觸及每個學生。是時候把你的東西放在一起了！
+  curriculum_desc_dance_party_01: 在這個入門活動中，使用代碼讓各種多彩的角色在動畫背景和歡快的音樂中跳躍。
+  curriculum_desc_dance_party_02: 超越入門課程，提供更廣泛的項目想法。瀏覽更複雜的舞蹈派對示例庫。
+  curriculum_desc_dance_party_unplugged: 進入你的最佳狀態，不需要電腦！瞭解如何使用編碼概念（如事件）來同步舞者編舞。
+  curriculum_desc_dance_party_ai_edition: 瞭解人工智慧（AI）概念，以創建你自己的虛擬舞蹈派對，展示當今的頂級藝術家。有數十首歌曲可供選擇，無論學生的音樂品味如何都能滿足。是時候把你的東西放在一起了！
   curriculum_desc_csf: 免費的小學課程，向學生介紹計算機科學的基礎概念。
   curriculum_desc_csf_express: 學習創建計算機程序，發展解決問題的能力，並通過有趣的挑戰工作！製作遊戲和創意專案，與朋友、家人和教師分享。
   curriculum_desc_csf_express_pre_reader: 通過解決難題和創建動畫場景來學習拖放模組編程的基礎知識。製作藝術品和簡單的遊戲，與朋友、家人和老師分享。
@@ -501,11 +506,11 @@ zh:
   module_grade_grade_03: 三年級
   module_grade_grade_04: 四年級
   module_grade_grade_05: 五年級
-  module_age_05_07: 5 至 7 歲
-  module_age_07: 7 歲以上
-  module_age_07_11: Pseudoloc-诶吉丝 一1
-  module_age_11: 年齡為 11 歲以上
-  module_age_13: Pseudoloc-诶吉丝 3+
+  module_age_05_07: 5-7歲
+  module_age_07: 7歲以上
+  module_age_07_11: 7-11嵗
+  module_age_11: 11歲以上
+  module_age_13: 13嵗以上
   module_age_all_age: 所有年齡段
   module_grade_k_5_teachers: K-5教師
   module_grade_6_10_teachers: 6-10年級教師
@@ -538,6 +543,7 @@ zh:
   module_label_teaching_csf: 教授計算機科學基礎
   module_label_teaching_csd: 教授計算機科學發現
   module_label_teaching_csp: 教授電腦科學原理
+  module_label_teaching_problem_solving: 教授問題解決和計算
   module_label_teaching_csc: 教授計算機科學聯繫
   module_label_teaching_ai: 人工智慧與機器學習教學
   module_label_teaching_maker_cp: 教學使用設備創建應用程序（電路遊樂場）
@@ -589,7 +595,7 @@ zh:
   heading_bring_cs_to_students: 將計算機科學帶給學生
   heading_cs_ambassador_program: CS 大使計劃
   heading_featured_student_projects: 精選學生項目
-  heading_start_hoc_with_videos: 用勵志視頻開始您的編碼一小時
+  heading_start_hoc_with_videos: 用勵志視訊開始一小時玩程式
   cs_ambassador_subhead: 如果您是一名高中生，熱情鼓勵更多年輕女性在您的學校學習計算機科學，那麼我們需要您！
   cs_ambassador_desc: 每個領域，包括醫學，娛樂，體育，教育，商業，時尚和創業，都受到計算機科學影響。然而，只有 5% 的高中年輕女性參加計算機科學課程。大使可以鼓勵同齡人參加計算機科學課程來幫助彌補這種性別差距。
   cs_ambassador_application_date: 截止報名日期至二零二三年十一月八日
@@ -640,11 +646,11 @@ zh:
   subscribe_form_section_desc_csp: 註冊以每月接收有關 Code.org 電腦科學原理的電子郵件，並直接將有用的提醒事項、提示和更新發送到您的收件匣。
   subscribe_form_section_unsubscribe: 您可以隨時取消訂閱。
   dance_hero_heading: 編碼舞蹈派對
-  dance_featuring_songs_by_short: 主演歌曲：
-  dance_featuring_songs_by_long: 舞蹈派對包括：
-  dance_and_more: 以及更多
+  dance_featuring_songs_by_short: 歌曲來自：
+  dance_featuring_songs_by_long: 舞蹈派對包含以下藝人的歌曲：
+  dance_and_more: 等等
   dance_choose_activity: 選擇您的舞蹈派對
-  dance_afe_disclaimer: 本教學課程中使用音樂的藝術家並不贊助或贊助 Amazon，作為授權使用他們的音樂給 Code.org 的一部分。
+  dance_afe_disclaimer: 本教程中所用音樂的藝術家並沒有作為授權Code.org使用其音樂的一部分贊助或認可亞馬遜。
   blockchain_hero_heading: 區塊鏈如何運作
   blockchain_hero_desc: 通過我們的新視頻系列和隨附課程「區塊鏈如何工作」深入探索區塊鏈的世界！
   blockchain_intro_heading: 了解區塊鏈如何運作
@@ -1432,7 +1438,7 @@ zh:
   front_header_banner: 加入史上最大的學習活動， %{campaign_date}
   front_intro_default: 一小時玩程式（Hour of Code）是個全球性的運動，觸及了來自 180 多個國家，數以千萬計的學生。不管你是誰，你在哪裡，都可以舉辦一小時玩程式活動，你不需要有任何經驗。這裡有<strong>適用於
     4 到 104 歲</strong>的教程，支援超過 45 種語言。
-  front_intro_default_2: 遍布 180 多個國家的全球運動。
+  front_intro_default_2: 遍布逾180個國家的全球運動。
   front_watch_video: 觀看新的影片
   front_watch_regular_video: 觀賞影片
   front_volunteers: 徵求專門技術志願者
@@ -1654,13 +1660,12 @@ zh:
   hoc_homepage_join_the_movement_description: 一小時玩程式全年都可參與，但每年12月，你的班級可以加入世界各地數百萬學生的行列，用一小時玩程式慶祝電腦科學教育周。一年一度的慶祝活動於每年10月開始註冊。
   hoc_homepage_what_is_hoc_subhead: 一小時的教程，超過45種語言。不需要經驗。一小時玩程式活動全年都可免費參與。
   hoc_homepage_what_is_hoc_description: 一小時玩程式是一個小時的電腦科學介紹，使用有趣的教程展示出任何人都可以學習基礎知識。這一基層運動得到全球逾400個合作夥伴和20萬名教育工作者的支持。
-  hoc_homepage_registration_desc: 您的班級或團隊可以加入世界各地的數百萬人參加編碼一小時！每年一度計算機科學教育週慶祝活動將於 10
-    月開始報名。儘管如此，代碼一小時全年都可用。
+  hoc_homepage_registration_desc: 你的班級或小組可以加入全球數百萬人的行列，進行一小時玩程式！一年一度的計算機科學教育周慶祝活動將於十月份開始報名。但是，一小時玩程式全年開放。
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[閱讀我們的操作指南](%{howto_guide_url})為你的班級計劃活動。"
   hoc_homepage_highlights_heading: 一小時玩程式亮點
   hoc_homepage_organized_by: 一小時玩程式由[Code.org](%{codeorg_url})組織。
-  hoc_events_heading: 註冊以主持一小時代碼
-  hoc_events_jump_to_map: 跳至程式碼時間地圖
+  hoc_events_heading: 註冊以舉辦一小時玩程式
+  hoc_events_jump_to_map: 跳至一小時玩程式地圖
   signup_closed: 程式碼小時注册現已關閉。請在十月再次檢查，以便為下一小時的程式碼注册。
   signup_registration_not_required: 您不需要註冊即可參加！一小時玩程式活動全年開放。 <a href='%{hoc_activities_url}'>嘗試活動</a>
     或閱讀我們的 <a href='%{howto_guide_url}'>操作指南</a> ，為您的班級計劃活動。
@@ -1683,7 +1688,7 @@ zh:
   signup_event_entire_school_label: 我的整間學校都會參與
   signup_event_location_label: 活動地點
   signup_event_location_error: 須填寫活動地點
-  signup_special_event_flag_label: 將我的活動標示為特殊活動
+  signup_special_event_flag_label: 我的活動將涉及整個地區、整個組織、社區成員和/或其他超越一小時的特別計劃
   signup_special_event_details_label: 特殊活動的詳細資訊
   signup_send_posters_flag_label: 把這<a href= "/resources#posters">海報</a>交給我們的學校或組織
   signup_send_posters_address_label: 學校或組織的地址
@@ -1740,7 +1745,7 @@ zh:
   map_title: 一小時玩程式的地圖
   map_header: "# 個一小時玩程式活動遍佈世界各地"
   map_header_count_year: "%{event_count} 註冊的事件 %{year}"
-  map_header_count_year_so_far: "%{event_count} 迄今為止註冊的活動 %{year}"
+  map_header_count_year_so_far: "%{year}年到目前為止已註冊%{event_count}個活動"
   see_all_events: 查看所有活動
   map_header_company: "# 由公司主辦"
   map_header_country: '在 %{country} 有 # 場'
@@ -1753,7 +1758,7 @@ zh:
   map_warning: Hour of Code的地圖只顯示首 200,000 起已註冊事件。要查看所有已註冊事件，請使用 <a href='%{events_url}'>
     事件頁面</a>
   map_warning_markdown: 事件的完整列表可以在 [活動頁面] 上查看 (%{events_url})
-  map_view_all_events: 請參閱程式碼一小時事件的完整清單 [here](%{events_url})。
+  map_view_all_events: 查看一小時玩程式活動的完整列表：[here](%{events_url})。
   meta_tag_og_title: 一小時玩程式活動來囉
   meta_tag_og_description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
   meta_tag_twitter_title: 一小時玩程式活動來囉
@@ -1923,7 +1928,7 @@ zh:
   event: 活動
   events: 活動
   highlights_title: 焦點訊息
-  highlights_header: 一小時玩程式焦點訊息
+  highlights_header: 一小時玩程式重點
   highlights_description: 一些我們最愛的一小時玩程式活動花絮。
   highlights_previous: 前幾年的亮點
   highlights_see_more: 查看更多亮點
@@ -9171,6 +9176,9 @@ zh:
   step_06: 第6步
   step_07: 第7步
   step_08: 第8步
+  what: 什麼：
+  when: 什麼時候：
+  where: 在哪裡：
   hoc_how_to_top_heading: 一小時玩程式指南
   hoc_how_to_top_desc: 量身定制的操作指南，提供最佳的一小時玩程式體驗。
   hoc_how_to_top_view_guide: 查看指南
@@ -9196,29 +9204,36 @@ zh:
   hoc_how_to_resources_discover_desc: 探索各種專為所有年齡段設計的一小時教程（超過45種語言）。
   hoc_how_to_step_label_plan: 計劃一小時玩程式活動的地點和時間
   hoc_how_to_step_label_choose_activity: 選擇您的活動
+  hoc_how_to_step_label_choose_activities: 選擇您的活動
   hoc_how_to_step_label_test_activity: 測試您的活動
   hoc_how_to_step_label_register_event: 註冊您的活動
   hoc_how_to_step_label_tell: 告訴您的學生、學校和社區
   hoc_how_to_step_label_get_coding: 開始編碼！
   hoc_how_to_step_label_celebrate: 慶祝
   hoc_how_to_step_label_beyond_hoc: 超越一小時玩程式
+  hoc_how_to_step_label_plan_your_event: 計劃您的活動
+  hoc_how_to_step_label_plan_your_hour: 計劃您的時間
+  hoc_how_to_step_label_help_spread_word: 幫助傳播信息
   hoc_how_to_step_beyond_hoc_subhead: 它不會止於此！
-  hoc_how_to_step_beyond_hoc_desc: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然不教授它。立即瞭解如何將計算機科學帶到孩子的學校。
-  hoc_how_to_step_01_educators_subhead: 選擇適合您的學生數量和裝置的活動時間和空間。
-  hoc_how_to_step_01_educators_desc_01: 有哪些空間可供您進行一小時玩程式活動？考慮您的空間的技術能力，以及您期望學生使用的裝置類型。學生可以在單一裝置上處理教學課程，輪流使用共用裝置，或在課堂白板上一起嘗試教學課程。甚至還有缐下教學課程，完全無需裝置即可完成。缐下選項可以在任何地方進行，即使在戶外也可以！
-  hoc_how_to_step_01_educators_desc_02: 在計算機科學教育週%{campaign_date}期間，世界各地的人們參與一小時玩程式慶祝活動，當時發布了最新的教程和活動。但是，您可以在一年中的任何一天進行一小時玩程式！
-  hoc_how_to_step_02_educators_desc_01: 根據您群組的年齡、經驗、興趣等來探索活動。讓學生嘗試自我指導教程很受歡迎，儘管許多活動包含教師課程計劃以指導討論或擴展活動。
-  hoc_how_to_step_02_educators_desc_02: 提前決定是否要為所有學生選擇單一教程，還是讓每個孩子自己選擇自己的教程。
-  hoc_how_to_step_02_educators_desc_03: 今年，您和學生可以通過教程、課程計劃和我們的全新人工智慧如何運行視訊系列[瞭解關於AI的所有資訊](%ai_url)。
-  hoc_how_to_step_03_educators_desc_01: 在進入課堂之前，請自己嘗試教程，以便您可以回答問題！
-  hoc_how_to_step_03_educators_desc_02: 您還可以在學生計算機或裝置上測試教程，以確保它們支持聲音和視訊。頻寬低？可以在課堂上顯示視訊，這樣就不用每個學生都下載自己的視訊。
-  hoc_how_to_step_03_educators_desc_03: 如果您選擇的教學課程最適合有聲音，請考慮為您的課程提供耳機，或要求學生自備耳機。
-  hoc_how_to_step_04_educators_desc_01: 當您註冊一小時玩程式活動時，您將收到有用的電子郵件，其中包含有關舉辦成功的一小時玩程式的新聞和提示。這也是您可以讓當地志願者知道您的學校正在參與的方式。志願者是一個很好的資源，可以向您的班級講解計算機科學，或幫助您的學生進行一小時玩程式活動。
-  hoc_how_to_step_05_educators_desc_01: 分享突出多元化的人和在現實世界中使用計算機科學的創意方式的[勵志視訊](%{videos_url})，讓學生感到興奮。
-  hoc_how_to_step_05_educators_desc_02: 與其他可能希望加入這一樂趣的其他教師分享你的一小時玩程式計劃！這也是一個聯絡學校的家長-教師-學生協會或分享家長通訊的好機會，讓他們知道孩子正在學習什麼。
-  hoc_how_to_step_06_educators_desc_01: 引導學生參與活動，可以通過在白板上分享連結或通過課堂的學習管理系統。學生可能會遇到挑戰，這沒關係！學習編程就像學習一種新語言；你不會立即變得流利。如果你不知道答案，你們可以一起弄清楚。
-  hoc_how_to_step_07_educators_desc_01: 一定要慶祝成功！在社交媒體上分享一小時玩程式活動的照片和視訊。使用#HourOfCode和@codeorg，這樣我們也可以突出你們的成功！
-  hoc_how_to_step_07_educators_desc_02: 你還可以為學生列印證書，展示他們的成就！
+  hoc_how_to_step_plan_hour_desc_01: 以下是一個幫助你開始的示例議程：
+  hoc_how_to_step_choose_activities_desc_01: 今年，一小時玩程式主題是人工智慧（AI）創造力。無論是編碼新的應用程式和演算法、製作獨特的藝術品，還是製作編舞來讓我們跳舞，AI都在為數位表達打開新的機會，從而擴大我們對創造力的理解。完成編碼活動並學習AI，讓今年變得特別。
+  hoc_how_to_step_choose_activities_desc_02: 首先，[探索數百個編碼活動](%{activities_url})，根據群組的年齡、經驗、興趣等從中選擇一個。[這些精選活動](%{ai_activities_url})將人工智慧作為關鍵主題或課程。
+  hoc_how_to_step_choose_activities_desc_03: 然後，[瞭解關於AI的所有信息](%{ai_url})。學生可以觀看該領域專家的短片，還有用於擴展活動和指導進一步討論的附帶課程計劃。或者，我們為教育工作者提供免費專業學習，開啟利用AI教學和關於AI教學的未來。
+  hoc_how_to_step_educators_register_desc: 首先註冊你的活動，承諾與學生一起進行一小時玩程式。註冊後，你將收到有用的電子郵件，其中包含舉辦成功的一小時玩程式的新聞和提示。你還將被[放在地圖上](%{map_url})。我們集體努力的可見整體表明了對計算機科學運動的全球承諾，這將幫助我們為系統性變革建立動力。
+  hoc_how_to_step_educators_plan_desc_01: 在活動前，請自行嘗試活動以確保它們可以在學生裝置上運行，並準備好回答問題！頻寬低？計劃在課堂上展示視訊，這樣就不需要每個學生都下載自己的視訊。
+  hoc_how_to_step_educators_plan_desc_02: 世界各地的人經常在計算機科學教育週（%{campaign_date}）期間參與一小時玩程式慶祝活動，但你可以在一年中的任何一天進行一小時玩程式！
+  hoc_how_to_step_educators_plan_desc_03: 選擇適合你的學生數量和裝置的空間。學生可以在單個裝置上嘗試活動、輪流分享裝置，或在白板上全班進行。甚至還有完全不需要裝置的缐下活動，因此在戶外也可以進行！
+  hoc_how_to_step_educators_spread_word_desc_01: 使用[這些電子郵件模板](%{email_url})幫助我們在你的社區傳播信息。
+  hoc_how_to_step_educators_spread_word_desc_02: 請兩位同事[register](%{register_url})並舉辦一小時玩程式活動。他們可以繼續確保兩名同事，後者又可以確保兩名同事，依此類推。
+  hoc_how_to_step_educators_spread_word_desc_03: 請校長[舉辦全校活動](%{host_url})。當300名以上的孩子參加時，你可以獲得特別參與套件，包括T恤、海報、筆記本電腦貼紙等。[分享你的全校活動計劃](%{share_url})以獲得資格。
+  hoc_how_to_step_educators_spread_word_desc_04: 聯絡學校的家長教師學生協會或在家長通訊中分享，讓他們知道孩子正在學習的內容。
+  hoc_how_to_step_educators_plan_hour_desc_02: 上午10:00-10:05：從[勵志視訊](%{video_url})開始
+  hoc_how_to_step_educators_plan_hour_desc_03: 上午10:05-10:45：學生進行編碼活動
+  hoc_how_to_step_educators_plan_hour_desc_04: 上午10:45-10:55：學生瞭解人工智慧
+  hoc_how_to_step_educators_plan_hour_desc_05: 上午10:55-11:00：教師致閉幕辭
+  hoc_how_to_step_educators_get_coding_desc: 引導學生參與活動，可以通過在白板上分享連結或通過課堂的學習管理系統。學生可能會遇到挑戰，這沒關係！學習編程就像學習一種新語言，你不會立即變得流利。如果你不知道答案，你們可以一起弄清楚。
+  hoc_how_to_step_educators_celebrate_desc: 活動結束後，列印完成證書並祝賀學生。分享一小時玩程式活動的照片和視訊，並使用#HourOfCode和@codeorg展示學生的成就。
+  hoc_how_to_step_educators_beyond_desc: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然不教授它。為了提供幫助，我們的課程是基於網路的，永久免費使用。立即瞭解如何將計算機科學帶到孩子的學校。
   hoc_ai_top_desc: 無論您是教室中的學生還是教育工作者，任何人都可以學習 AI 的知識。
   hoc_ai_how_ai_works_video_series_desc: 這系列短視頻將向您介紹人工智能的工作原理以及為什麼重要。然後深入研究演算法偏見和
     AI 決策道德等問題。
@@ -9567,71 +9582,66 @@ zh:
   teach_ai_title: 現實實例子。實用資源。
   teach_ai_description: 學校人工智能指南工具包是政策制定者、學校領袖和教職員的資源，可以在學校制定有關人工智慧的初始指導。
   teach_ai_button_label: 檢視工具包
-  middle_high_page_main_title: 11 歲及以上的學習
-  middle_high_page_main_description: 通過引人入勝的視頻，自定節奏的教程，編程活動等，探索計算機科學世界！
-  middle_high_page_hero_title: 開始使用程式碼一小時
-  middle_high_page_hero_description: 透過免費的程式碼一小時活動，學習計算機科學的基礎知識，其中包含拖放編碼區塊。有數百個小時的選項可供選擇！
-  middle_high_page_hourofcode_link: 探索程式碼一小時活動
-  middle_high_page_modules_title: 長者程式設計模組
-  middle_high_page_modules_description: 這些針對中學和高中生的簡短模塊，是學習涵蓋所有程式設計語言和工具的概念的好方法，這些簡短的模塊是學習涵蓋所有程式設計語言和工具的概念的好方法。
-  middle_high_page_modules_card_title_1: Pseudoloc-艾娜儿哦吾西艾哦 提 吉马 勒比
-  middle_high_page_modules_card_title_2: 應用實驗室中的海龜程式設計
-  middle_high_page_modules_card_title_3: Pseudoloc-伊维娜提迪儿维伊 屁哦吉诶马艾吉 娜 屁屁勒诶
-  middle_high_page_modules_card_description_1: 在我們 Game Lab 環境的介紹中，按照自己的節奏進行動作，並編程動畫、互動藝術和遊戲。
-  middle_high_page_modules_card_description_2: 在應用實驗室中解鎖使用 JavaScript 製作豐富的互動應用程序的能力！
-  middle_high_page_modules_card_description_3: 透過 App Lab 程式設計環境簡介，讓學生使用 JavaScript
-    來建立互動式應用程式，您可以按照自己的步調進行。
-  middle_high_page_modules_card_link: Pseudoloc-提儿 艾 哦提
+  middle_high_page_main_title: 11歲及以上的學習
+  middle_high_page_main_description: 通過引人入勝的視訊、自定節奏的教程、編程活動等，探索計算機科學世界！
+  middle_high_page_hero_title: 開始一小時玩程式
+  middle_high_page_hero_description: 透過免費的一小時玩程式活動，學習計算機科學的基礎知識，其中包含拖放編碼區塊。有數百個小時的選項可供選擇！
+  middle_high_page_hourofcode_link: 探索一小時玩程式活動
+  middle_high_page_modules_title: 高年級學生編程模組
+  middle_high_page_modules_description: 這些針對初中和高中學生的自定節奏的簡短模組均根據我們的計算機科學探索和計算機科學原理課程改編設計，是學習涵蓋所有編程語言和工具的相關概念的絕佳方法。
+  middle_high_page_modules_card_title_1: 遊戲實驗室簡介
+  middle_high_page_modules_card_title_2: 應用實驗室海龜編程
+  middle_high_page_modules_card_title_3: 應用實驗室事件驅動編程
+  middle_high_page_modules_card_description_1: 在游戲實驗室環境的介紹中，按照自己的節奏推進，編程動畫、互動藝術和遊戲。
+  middle_high_page_modules_card_description_2: 在應用實驗室中解鎖使用JavaScript製作豐富的互動應用程式的能力！
+  middle_high_page_modules_card_description_3: 透過應用實驗室編程環境介紹，讓學生使用JavaScript來建立互動應用程式，你可以按照自己的節奏進行。
+  middle_high_page_modules_card_link: 試試看
   middle_high_page_make_your_own_title: 製作自己的應用程式、遊戲和網頁
-  middle_high_page_make_your_own_description: '除了課程外，我們還有編程工具，可讓您探索自己的創造力並製作出令人驚嘆的東西。 '
+  middle_high_page_make_your_own_description: '除了課程外，我們還有編程工具讓你探索自己的創造力並製作令人驚嘆的東西。 '
   middle_high_page_make_your_own_card_title_1: 應用實驗室
-  middle_high_page_make_your_own_card_title_2: Pseudoloc-吉诶伊 诶比
-  middle_high_page_make_your_own_card_title_3: Pseudoloc-尔伊 勒比
-  middle_high_page_make_your_own_card_descrpition_1: App Lab 是一個編程環境，您可以在其中製作簡單的應用程序。設計一個應用程序，使用區塊或文本使用
-    JavaScript 編碼，然後在幾秒鐘內共享您的應用程序。
-  middle_high_page_make_your_own_card_descrpition_2: Pseudoloc-吉诶伊 诶比艾丝诶 儿哦儿马马娜吉伊娜艾儿娜马娜提尔伊儿
-    吾吾 诶娜马诶伊 艾屁勒 诶艾马提艾娜丝诶娜 诶马丝 艾提 哦杰伊提丝诶迪 尺诶诶西伊儿 提诶提艾提伊诶西 尔提尺伊诶尺 提伊儿
-  middle_high_page_make_your_own_card_descrpition_3: Pseudoloc-尔伊 勒比 丝  屁哦吉诶马艾吉 娜维儿哦马伊提
-    尺儿伊吾哦 西娜 诶开 丝马勒伊尔伊 屁吉伊 吾艾娜 提马 诶迪 丝丝 迪丝艾娜吾哦儿 伊比屁诶伊丝诶娜 尺诶伊 哦吾 丝提伊艾娜丝西哦迪丝
+  middle_high_page_make_your_own_card_title_2: 遊戲實驗室
+  middle_high_page_make_your_own_card_title_3: 網路實驗室
+  middle_high_page_make_your_own_card_descrpition_1: 應用實驗室是一個編程環境，你可以在其中製作簡單的應用程式。設計一個應用程式，在JavaScript中使用積木或文本編碼，然後在幾秒鐘內共享你的應用程式。
+  middle_high_page_make_your_own_card_descrpition_2: 遊戲實驗室是一個編程環境，你可以在其中使用互相交互的對象和角色製作簡單的動畫和遊戲。
+  middle_high_page_make_your_own_card_descrpition_3: 網路實驗室是一個編程環境，透過它，你可以用HTML和CSS來建立簡單的網頁。設計網頁，然後在幾秒鐘內分享你的網站。
   middle_high_page_make_your_own_card_link: 進一步學習
-  middle_high_page_additional_resources_title: 其他資源
-  middle_high_page_additional_resources_description: 有很多方法可以進一步探索計算機科學！瀏覽我們的視頻庫，或了解有關計算機科學領域的激動人心職業的更多信息。
-  middle_high_page_video_library_title: 探索我們的視頻庫
-  middle_high_page_video_library_description: 通過 5-10 分鐘的短短視頻，學習計算機科學的基礎知識，有關人工智能，互聯網，計算機如何運作，如何不被黑客攻擊，區塊鏈，職業等等主題！
-  middle_high_page_video_library_link: 查看視頻庫
-  middle_high_page_cs_journeys_title: 透過 CS 旅程邁向更遠
-  middle_high_page_cs_journeys_description: 在計算機科學之旅中邁出下一步。探索職業，指導機會，在線課程，獎學金，實習等等！
-  middle_high_page_cs_journeys_link: 探索 CS 旅程
+  middle_high_page_additional_resources_title: 附加資源
+  middle_high_page_additional_resources_description: 有很多方法可以進一步探索計算機科學！瀏覽我們的視訊庫，或進一步瞭解計算機科學領域激動人心的職業。
+  middle_high_page_video_library_title: 探索我們的視訊庫
+  middle_high_page_video_library_description: 通過5-10分鐘的短視訊學習計算機科學基礎知識，主題包括人工智慧、互聯網、計算機如何運作、如何不被黑客攻擊、區塊鏈、職業等等！
+  middle_high_page_video_library_link: 查看視訊庫
+  middle_high_page_cs_journeys_title: 透過計算機科學旅程邁向更遠
+  middle_high_page_cs_journeys_description: 在計算機科學之旅中邁出下一步。探索職業、指導機會、線上課程、獎學金、實習等等！
+  middle_high_page_cs_journeys_link: 探索計算機科學旅程
   middle_high_page_cs_title: 教室中的計算機科學
-  middle_high_page_cs_description: 這些課程應由老師領導！如果您想看到他們在學校教授，請考慮與老師合作，將他們帶到您的班上。
-  middle_high_page_cs_card_title_1: Pseudoloc-西丝迪艾西哦伊儿伊丝
-  middle_high_page_cs_card_title_2: Pseudoloc-西丝屁儿娜西屁勒丝
-  middle_high_page_cs_card_title_3: AP 計算機科學 A
+  middle_high_page_cs_description: 這些課程應由教師引導！如果你想看到它們在你的學校教授，請考慮與教師合作，將它們帶到你的課堂。
+  middle_high_page_cs_card_title_1: 計算機科學探索
+  middle_high_page_cs_card_title_2: 計算機科學原理
+  middle_high_page_cs_card_title_3: AP計算機科學A
   middle_high_page_cs_card_description_1: 為期一年的免費課程，向學生介紹計算機科學的基礎概念，並挑戰他們探索計算和技術如何影響世界。
   middle_high_page_cs_card_description_2: Free year-long curriculum that introduces
     students to the foundational concepts of computer science and challenges them
     to explore how computing and technology can impact the world. Can be taught as
     an introductory class and as an AP course.
   middle_high_page_cs_card_description_3: 在 AP® 計算機科學 A（AP® CSA）的免費課程中學習 Java 編程語言的同時，向學生介紹軟件工程和面向對象的設計。
-  middle_high_page_cs_link_1: 探索 CS 專輯
+  middle_high_page_cs_link_1: 探究計算機科學探索
   middle_high_page_cs_link_2: 探索 CS 原則
-  middle_high_page_cs_link_3: 探索 CSA
-  elemeentary_page_main_title: 5 至 11 歲的學習
-  elementary_page_main_description: 通過引人入勝的視頻，自定節奏的教程，編程活動等，探索計算機科學世界！
+  middle_high_page_cs_link_3: 探究CSA
+  elemeentary_page_main_title: 5至11歲的學習
+  elementary_page_main_description: 通過引人入勝的視訊、自定節奏的教程、編程活動等，探索計算機科學世界！
   elementary_page_own_pace_title: 繼續按照自己的節奏學習
-  elementary_page_own_pace_description: 使用這兩種絕佳選項，讓學生自己學習計算機科學的基礎知識，創建繪圖、遊戲等。
-  elementary_page_own_pace_card_title_1: 閱讀前快速課程
-  elementary_page_own_pace_card_title_2: Pseudoloc-伊斯儿伊丝 哦吾丝伊
-  elementary_page_own_pace_card_description_1: 按照自己的節奏學習計算機科學！學習創建計算機程序，培養解決問題的技能，並通過有趣的挑戰！製作遊戲和創意項目以與朋友，家人和老師分享。
-  elementary_page_own_pace_link_1: 開始閱讀前課程
+  elementary_page_own_pace_description: 使用這兩種絕佳選項，讓學生自己學習計算機科學基礎知識，創建繪圖、遊戲等。
+  elementary_page_own_pace_card_title_1: 准讀者快速課程
+  elementary_page_own_pace_card_title_2: 快速課程
+  elementary_page_own_pace_card_description_1: 按照自己的節奏學習計算機科學！學習創建計算機程式，培養解決問題的技能，並解決有趣的挑戰！製作遊戲和創意項目以與朋友，家人和老師分享。
+  elementary_page_own_pace_link_1: 開始准讀者課程
   elementary_page_own_pace_link_2: 開始快速課程
   elementary_page_make_your_own_games_title: 製作自己的動畫和遊戲
   elementary_page_make_your_own_games_card_title_1: 精靈圖實驗室
-  elementary_page_make_your_own_games_card_description_1: 是時候發揮創意了！使用基於區塊的編碼，在 Sprite
-    Lab 中製作一些愚蠢、甜美或外觀的東西。唯一的限制是您的想像力！
-  elementary_page_make_your_own_games_link: 試試斯普萊特實驗室
+  elementary_page_make_your_own_games_card_description_1: 是時候發揮創意了！使用基於積木的編碼，在精靈圖實驗室中製作一些愚蠢、甜美或古怪的東西。盡情發揮你的想像力！
+  elementary_page_make_your_own_games_link: 試試精靈圖實驗室
   elementary_page_computer_science_title: 教室中的計算機科學
-  elementary_page_computer_science_description: 這些課程應由老師領導！如果您想看到他們在學校教授，請要求家長或監護人與老師合作，將他們帶到您的班上。
+  elementary_page_computer_science_description: 這些課程應由教師引導！如果你想看到它們在你的學校教授，請讓家長或監護人與教師合作，將它們帶到你的課堂。
   elementary_page_computer_science_card_title_1: 計算機科學基礎
   elementary_page_computer_science_card_title_2: 計算機科學聯繫
   elementary_page_computer_science_description_1: 為期一年的免費課程，向學生介紹計算機科學的基礎概念，並挑戰他們探索計算和技術如何影響世界。

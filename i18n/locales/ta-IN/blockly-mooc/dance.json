@@ -18,5 +18,6 @@
   "danceFeedbackUseSetSize": "டான்சரை சிறியதாக்க `பேக்அப்_டான்சர்2 அளவை அமைக்க` ப்ளாக்கை பயன்படுத்தவும்.",
   "danceFeedbackUseSetTint": "டான்சரின் டின்ட்டை மாற்ற `set tint` ப்ளாக்கை பயன்படுத்தவும்.",
   "danceFeedbackUseStartMapping": "<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">right_unicorn</title><title name=\"PROPERTY\">\"scale\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ப்ளாக்கை உங்கள் நிரலில் சேர்க்க முயற்சிக்கவும்.",
+  "danceFeedbackKeepCoding": "குறியீட்டுடன் இருங்கள்! ஏதோ இன்னும் சரியாகவில்லை.",
   "measure": "அளவை:"
 }

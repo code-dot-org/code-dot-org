@@ -38,7 +38,9 @@ namespace :ci do
           RakeUtils.git_push
         end
         RakeUtils.bundle_exec 'berks', 'upload', (rack_env?(:production) ? '' : '--no-freeze')
-        RakeUtils.bundle_exec 'berks', 'apply', rack_env
+
+        ChatClient.log 'Temporarily skipping `berks apply` step...'
+        # RakeUtils.bundle_exec 'berks', 'apply', rack_env
 
         ChatClient.log 'Applying <b>chef</b> profile...'
         RakeUtils.sudo '/opt/chef/bin/chef-client --chef-license accept-silent'
