@@ -314,3 +314,63 @@ export function getCombinedSerialization(
   );
   return combinedSerialization;
 }
+
+/**
+ * Converts blocks in XML format to JSON representation. Shared behaviors are saved
+ * as XML, so we need to convert it if the student's project is in JSON.
+ * Conversion occurs by loading blocks onto a temporary headless workspace and re-serializing.
+ *
+ * @param {string} functionsXml - The XML representation of functions to convert.
+ * @returns {Object} - JSON representation of the functions.
+ */
+export function convertFunctionsXmlToJson(functionsXml) {
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(`<xml>${functionsXml}</xml>`, 'text/xml');
+  const tempWorkspace = new Blockly.Workspace();
+  Blockly.Xml.domToBlockSpace(tempWorkspace, xml);
+  const proceduresState = Blockly.serialization.workspaces.save(tempWorkspace);
+  tempWorkspace.dispose();
+  return proceduresState;
+}
+
+/**
+ * Appends procedures from shared state to the project state, merging blocks and procedures.
+ * This works by comparing each block list. For any shared behavior that is not already
+ * in the saved project (based on behaviorId value), add the block and its procedure
+ * to the state.
+ *
+ * @param {Object} projectState - The saved project in JSON (blocks and procedures).
+ * @param {Object} proceduresState - The shared procedures in JSON (blocks and procedures).
+ * @returns {Object} - The updated project state with shared procedures appended.
+ */
+export function appendProceduresToState(projectState, proceduresState) {
+  const projectBlocks = projectState.blocks?.blocks || [];
+  const projectProcedures = projectState.procedures || [];
+
+  const sharedBlocks = proceduresState.blocks?.blocks || [];
+  const sharedProcedures = proceduresState.procedures || [];
+
+  sharedBlocks.forEach(block => {
+    const {behaviorId, procedureId} = block.extraState;
+
+    if (!blockExists(behaviorId, projectBlocks)) {
+      // If the block doesn't exist, add it to the student project
+      projectBlocks.push(block);
+      projectProcedures.push(
+        sharedProcedures.find(procedure => procedure.id === procedureId)
+      );
+    }
+  });
+  projectState.blocks = {blocks: projectBlocks};
+  projectState.procedures = projectProcedures;
+  return projectState;
+}
+
+// Function to check if a block with the given behaviorId exists in the project
+function blockExists(behaviorId, projectBlocks) {
+  return projectBlocks.some(
+    block =>
+      block.type === 'behavior_definition' &&
+      block.extraState?.behaviorId === behaviorId
+  );
+}
