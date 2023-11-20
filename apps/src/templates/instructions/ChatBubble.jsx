@@ -52,7 +52,7 @@ var audioStyle = {
   },
 };
 
-const MINECRAFT_COLOR = '#3B3B3B';
+const MINECRAFT_VERY_DARK_GRAY_COLOR = '#3B3B3B';
 
 const ChatBubble = ({
   children,
@@ -67,7 +67,7 @@ const ChatBubble = ({
 }) => {
   borderColor = borderColor || color.white;
   backgroundColor = isMinecraft
-    ? MINECRAFT_COLOR
+    ? MINECRAFT_VERY_DARK_GRAY_COLOR
     : backgroundColor || color.white;
   isDashed = isDashed || false;
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
