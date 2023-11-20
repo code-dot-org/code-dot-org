@@ -115,9 +115,9 @@ export default function RubricSettings({
       case STATUS_ALL.INITIAL_LOAD:
         return i18n.aiEvaluationStatus_initial_load();
       case STATUS_ALL.READY:
-        return unevaluatedCount
-          ? i18n.aiEvaluationStatusAll_ready(unevaluatedCount)
-          : null;
+        return i18n.aiEvaluationStatusAll_ready({
+          unevaluatedCount: unevaluatedCount,
+        });
       case STATUS_ALL.SUCCESS:
         return i18n.aiEvaluationStatus_success();
       case STATUS_ALL.EVALUATION_PENDING:
@@ -138,7 +138,7 @@ export default function RubricSettings({
   };
 
   useEffect(() => {
-    if (!!rubricId && !!studentUserId) {
+    if (!!rubricId && !!studentUserId && !!sectionId) {
       fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
         if (!response.ok) {
           setStatus(STATUS.ERROR);
@@ -179,7 +179,7 @@ export default function RubricSettings({
             // we can't fetch the csrf token from the DOM because CSRF protection
             // is disabled on script level pages.
             setCsrfToken(data.csrfToken);
-            setUnevaluatedCount(data.attemptedUnevaluedCount);
+            setUnevaluatedCount(data.attemptedUnevaluatedCount);
             if (data.attemptedCount === 0) {
               setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
             } else if (data.attemptedUnevaluatedCount === 0) {
@@ -196,7 +196,7 @@ export default function RubricSettings({
   }, [rubricId, studentUserId, sectionId]);
 
   useEffect(() => {
-    if (polling && !!rubricId && !!studentUserId) {
+    if (polling && !!rubricId && !!studentUserId && !!sectionId) {
       const intervalId = setInterval(() => {
         fetchAiEvaluationStatus(rubricId, studentUserId).then(response => {
           if (!response.ok) {
@@ -228,10 +228,32 @@ export default function RubricSettings({
           }
           // console.log(`User status: ${status}`);
         });
+        fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
+          if (!response.ok) {
+            setStatusAll(STATUS_ALL.ERROR);
+          } else {
+            response.json().then(data => {
+              console.log(data);
+              // we can't fetch the csrf token from the DOM because CSRF protection
+              // is disabled on script level pages.
+              setCsrfToken(data.csrfToken);
+              setUnevaluatedCount(data.attemptedUnevaluatedCount);
+              if (data.attemptedCount === 0) {
+                setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
+              } else if (data.attemptedUnevaluatedCount === 0) {
+                console.log('ALREADY EVALUATED');
+                setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
+              } else {
+                setStatusAll(STATUS_ALL.READY);
+              }
+              // console.log(`All status: ${statusAll}`);
+            });
+          }
+        });
       }, 5000);
       return () => clearInterval(intervalId);
     }
-  }, [rubricId, studentUserId, polling, refreshAiEvaluations]);
+  }, [rubricId, studentUserId, polling, sectionId, refreshAiEvaluations]);
 
   const handleRunAiAssessment = () => {
     setStatus(STATUS.EVALUATION_PENDING);
