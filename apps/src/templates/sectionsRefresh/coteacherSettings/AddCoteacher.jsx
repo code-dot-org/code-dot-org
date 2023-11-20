@@ -37,7 +37,7 @@ const getErrorMessageFromResponse = (response, email) => {
       if (json.error.includes('inviting self')) {
         return i18n.coteacherCannotInviteSelf();
       }
-      if (json.error.includes('already in section')) {
+      if (json.error.includes('already a student')) {
         return i18n.coteacherAlreadyInCourse({email});
       }
       console.error('Coteacher validation error', response);
