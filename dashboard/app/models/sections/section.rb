@@ -606,6 +606,7 @@ class Section < ApplicationRecord
 
   public def add_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
 
     deleted_section_instructor = validate_instructor(instructor)
     deleted_section_instructor&.really_destroy!
