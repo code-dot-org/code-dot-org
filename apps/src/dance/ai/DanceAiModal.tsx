@@ -35,7 +35,7 @@ const i18n = require('../locale');
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
-import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-border.png';
+import aiBotBorder from '@cdo/static/dance/ai/bot/ai-bot-mini-border.png';
 import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
 import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
 import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
