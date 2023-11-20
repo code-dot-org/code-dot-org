@@ -5,9 +5,11 @@ we are beta testing with a small group of Canvas users, and plan to release our
 integration in 2024.
 
 The following documentation details the steps required to install Code.org as an
-LTI tool in Canvas. As an outcome of following these steps, you will supply the
-generated `Client ID` and the `Deployment ID` to Code.org as the final
-configuration step.
+LTI tool in Canvas. Completing the following steps will generate a `Client ID`
+and a `Deployment ID`. Please supply these two IDs to Code.org via
+[this form][lti-integration-form] to complete your installation.
+
+[lti-integration-form]: https://forms.gle/hLqdbgQ1VhZdKR7N8
 
 ## References
 
@@ -139,9 +141,10 @@ Once you have the Client ID copied, please reference
 
 ### Step 4
 
-Once you have both the Client ID and the Deployment ID, provide them to Code.org.
-We will complete the final configuration in our system, and will let you know
-when you can begin using the Code.org LTI 1.3 Canvas integration.
+Once you have both the Client ID and the Deployment ID, submit them to Code.org
+via [this form][lti-integration-form]. We will complete the final configuration
+in our system, and will let you know when you can begin using the Code.org LTI 
+1.3 Canvas integration.
 
 ## Using Code.org as an LTI Tool
 
