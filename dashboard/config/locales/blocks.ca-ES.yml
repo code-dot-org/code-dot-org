@@ -1136,6 +1136,15 @@ ca:
         text: "{SPRITE}dir{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': líquid
+            '"solid"': sòlid
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_spriteBirdSay:
         options:
           SPEECH:
