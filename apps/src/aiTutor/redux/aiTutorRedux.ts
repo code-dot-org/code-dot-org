@@ -14,7 +14,7 @@ const initialState: AITutorState = {
   isWaitingForAIResponse: false,
 };
 
-interface question {
+interface ChatContext {
   systemPrompt: string;
   studentCode: string;
 }
@@ -22,18 +22,18 @@ interface question {
 // THUNKS
 export const askAITutor = createAsyncThunk(
   'aitutor/askAITutor',
-  async (question: question, thunkAPI) => {
-    if (question.systemPrompt === undefined) {
+  async (ChatContext: ChatContext, thunkAPI) => {
+    if (ChatContext.systemPrompt === undefined) {
       throw new Error('systemPrompt is undefined');
     }
 
-    if (question.studentCode === undefined) {
+    if (ChatContext.studentCode === undefined) {
       throw new Error('studentCode is undefined');
     }
 
     const chatApiResponse = await postOpenaiChatCompletion([
-      {role: Role.SYSTEM, content: question.systemPrompt},
-      {role: Role.USER, content: question.studentCode},
+      {role: Role.SYSTEM, content: ChatContext.systemPrompt},
+      {role: Role.USER, content: ChatContext.studentCode},
     ]);
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
   }

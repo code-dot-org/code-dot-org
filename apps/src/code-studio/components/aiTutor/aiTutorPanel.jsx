@@ -11,9 +11,8 @@ import GeneralChatTutor from './generalChatTutor';
 import {addAIResponse} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 const icon = require('@cdo/static/ai-bot.png');
 
-const AITutorPanel = props => {
+const AITutorPanel = ({level}) => {
   const dispatch = useDispatch();
-  const {level} = props;
   const isCodingLevel = level.type === 'Javalab';
 
   const initialCheckboxes = [
