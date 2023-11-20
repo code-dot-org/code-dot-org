@@ -9,7 +9,7 @@ export default function InfoHelpTip({id, content}) {
   return (
     <span style={{marginLeft: '12px'}}>
       <span data-tip data-for={id}>
-        <FontAwesome icon="info-circle" style={styles.infoTipIcon} />
+        <FontAwesome icon="sparkle" style={styles.infoTipIcon} />
       </span>
       <ReactTooltip id={id} role="tooltip" effect="solid">
         <div style={styles.infoToolTipBox}>

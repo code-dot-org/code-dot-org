@@ -16,6 +16,9 @@ import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
 import {stringifyQueryParams} from '../../utils';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ReactTooltip from 'react-tooltip';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -307,6 +310,20 @@ class OwnedSectionsTable extends Component {
         property: 'actions',
         header: {
           props: {style: tableLayoutStyles.headerCell},
+          label: (
+            <span style={styles.toolTipBox}>
+              <span data-tip data-for={'action-tooltip'}>
+                <FontAwesome icon="sparkles" style={styles.toolTipIcon} />
+              </span>
+              <ReactTooltip id={'action-tooltip'} role="tooltip" effect="solid">
+                <div style={styles.infoToolTipBox}>
+                  <BodyTwoText style={styles.toolTipText}>
+                    NEW: You can add co-teachers from Edit Section Details.
+                  </BodyTwoText>
+                </div>
+              </ReactTooltip>
+            </span>
+          ),
         },
         cell: {
           formatters: [this.actionCellFormatter],
@@ -374,6 +391,25 @@ const styles = {
   sectionCodeNone: {
     color: color.light_gray,
     fontSize: 16,
+  },
+  toolTipIcon: {
+    cursor: 'pointer',
+    marginLeft: '5px',
+    marginRight: '5px',
+    fontSize: '18px',
+    verticalAlign: 'middle',
+    color: 'gray',
+  },
+  toolTipBox: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+  },
+  toolTipText: {
+    fontSize: '13px',
+    color: color.neutral_white,
+    marginBottom: '0',
   },
 };
 
