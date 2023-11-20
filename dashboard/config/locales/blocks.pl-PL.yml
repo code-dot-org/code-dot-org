@@ -1197,6 +1197,15 @@ pl:
         text: "{SPRITE}powiedz {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': ciecz
+            '"solid"': trwały
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:
