@@ -518,7 +518,7 @@
   "coteacherRemoveDialogDescription": "This teacher will lose their ability to manage or view student work for this section.",
   "coteacherNoCoteachers": "You haven't added any co-teachers yet",
   "coteacherUnknownSaveError": "An unknown error occured when adding {email} as a coteacher.",
-  "coteacherAlreadyInCourse": "{email} is a participant for this course. A user cannot be both a participant and instructor of the same section.",
+  "coteacherAlreadyInCourse": "Participants in this section cannot be added as co-teachers.",
   "coteacherAccepted": "ACCEPTED",
   "coteacherPending": "PENDING",
   "coteacherDeclined": "DECLINED",
