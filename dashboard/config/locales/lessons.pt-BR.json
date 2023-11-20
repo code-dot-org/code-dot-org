@@ -3110,7 +3110,7 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2021/Representation Matters": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos cotidianamente?**\n\nNa primeira aula da unidade de dados, os alunos têm uma visão geral do que são dados e como esses dados são usados para resolver problemas. Os alunos começam com uma breve discussão para chegar a um entendimento comum do que são dados. Em seguida, eles se dividem em grupos e usam um conjunto de dados para fazer uma série de sugestões de refeições para pessoas a partir de vários critérios. Cada grupo tem as opções de refeições representadas de uma forma diferente (fotos, receitas, cardápio, aspectos nutricionais), o que dá uma vantagem para uma das recomendações. Depois, os grupos comparam suas respostas e discutem como as diferentes representações dos dados das refeições afetaram a forma como os alunos conseguiram resolver os diferentes problemas.",
           "purpose": "Esta lição apresenta várias noções importantes que os alunos explorarão neste capítulo. Eles verão que os mesmos objetos podem ser representados de várias maneiras. No Capítulo 1, eles aprenderão os diferentes sistemas de representação que os computadores utilizam para representar informações. Eles também verão nesta lição que a representação é importante quando usamos dados para tomar decisões. No Capítulo 2 desta unidade, os alunos explorarão mais profundamente como os dados podem ser usados por humanos e por computadores para tomar decisões."
         },
@@ -3130,32 +3130,41 @@
           "name": "Representando Números"
         },
         "csd5-2021/Combining Representations": {
-          "name": "Combinando Representações"
+          "name": "Combinando Representações",
+          "student_overview": "**Pergunta do Dia: Como os computadores diferenciam códigos binários de letras, números ou imagens?**\n\nNesta lição, você combinará ASCII, binário e imagens para explorar maneiras de codificar tipos mais complexos de informações."
         },
         "csd5-2021/Keeping Data Secret": {
-          "name": "Mantendo o segredo dos dados"
+          "name": "Mantendo o segredo dos dados",
+          "student_overview": "**Pergunta do Dia: Como podemos manter os dados em segredo e protegê-los contra o uso indevido?**\n\nNesta lição, você explorará diferentes níveis de segurança, analisará a importância da privacidade e aprenderá a criptografar informações!"
         },
         "csd5-2021/Problem Solving and Data": {
-          "name": "Resolução de Problemas e Dados"
+          "name": "Resolução de Problemas e Dados",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os dados para resolver problemas em nossa comunidade?**\n\nNesta lição, você decidirá em que uma cidade mais precisa investir para perceber como usar os dados para resolver problemas."
         },
         "csd5-2021/Structuring Data": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "student_overview": "**Pergunta do Dia: como podemos facilitar o processamento de dados pelos computadores?**\n\nNesta lição, você aprenderá como apresentar dados de maneiras diferentes que podem ajudar as pessoas a entenderem melhor os dados, bem como quais partes do processo podem ser feitas por um computador e quais partes exigem um ser humano."
         },
         "csd5-2021/Interpreting Data": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "student_overview": "**Pergunta do Dia: Como os padrões nos dados podem nos ajudar a tomar decisões?**\n\nNesta lição, você aprenderá sobre tabulação cruzada, que permitirá representar graficamente as relações entre vários dados."
         },
         "csd5-2021/Making Decisions with Data": {
-          "name": "Tomando Decisões com Dados"
+          "name": "Tomando Decisões com Dados",
+          "student_overview": "\\*\\*Pergunta do Dia: como os padrões nos dados podem ajudar a tomar uma decisão? \\*\\*\n\nNesta lição, você terá a chance de praticar o processo de solução de problemas de dados que aprendeu na lição anterior. "
         },
         "csd5-2021/Automating Data Decisions": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "student_overview": "**Pergunta do Dia: Como os computadores podem nos ajudar a tomar decisões sobre dados?**\n\nNesta lição, você examinará como um computador pode ser usado para concluir a etapa de tomada de decisão do processo de solução de problemas de dados."
         },
         "csd5-2021/Problem Solving with Big Data": {
-          "name": "Solução de Problemas com Big Data"
+          "name": "Solução de Problemas com Big Data",
+          "student_overview": "**Pergunta do Dia: Como nossos dados são coletados e por que saber disso é útil?**\n\nNesta lição, você verá como os dados são coletados e usados pelas organizações para resolver problemas reais no mundo real."
         },
         "csd5-2021/Project - Make a Recommendation": {
           "name": "Projeto - Faça uma Recomendação",
-          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
+          "student_overview": "**Pergunta do Dia: Como posso usar os dados para fazer minhas próprias recomendações?**\n\nNesta lição, você criará um mecanismo de recomendação com base nos dados coletados e analisados a partir das contribuições dos seus colegas."
         },
         "csd5-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa Pós-curso do Descobertas da CC"
@@ -3220,7 +3229,8 @@
         },
         "csd7-2021/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
-          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
         },
         "csd7-2021/Types of Machine Learning": {
           "name": "Tipos de Machine Learning"
@@ -4668,10 +4678,11 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2022/Representation Matters": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "student_overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos diariamente?**\n\nNesta lição, você explorará o que são os dados e como eles são usados para solucionar problemas.",
           "overview": "**Pergunta do Dia: Como os dados afetam as decisões que tomamos cotidianamente?**\n\nNa primeira aula da unidade de dados, os alunos têm uma visão geral do que são dados e como esses dados são usados para resolver problemas. Os alunos começam com uma breve discussão para chegar a um entendimento comum do que são dados. Em seguida, eles se dividem em grupos e usam um conjunto de dados para fazer uma série de sugestões de refeições para pessoas a partir de vários critérios. Cada grupo tem as opções de refeições representadas de uma forma diferente (fotos, receitas, cardápio, aspectos nutricionais), o que dá uma vantagem para uma das recomendações. Depois, os grupos comparam suas respostas e discutem como as diferentes representações dos dados das refeições afetaram a forma como os alunos conseguiram resolver os diferentes problemas.",
-          "purpose": "Esta lição introduz várias noções importantes que os alunos explorarão neste capítulo. Eles verão que os mesmos objetos podem ser representados de várias maneiras diferentes. No Capítulo 1, eles aprenderão os diferentes sistemas de representação que os computadores usam para representar informações. Eles também verão nesta lição que a representação é importante quando usamos dados para tomar decisões. No Capítulo 2 desta unidade, os alunos explorarão mais profundamente como os dados podem ser usados por humanos e computadores para tomar decisões."
+          "purpose": "Esta lição introduz várias noções importantes que os alunos explorarão neste capítulo. Eles verão que os mesmos objetos podem ser representados de várias maneiras diferentes. No Capítulo 1, eles aprenderão os diferentes sistemas de representação que os computadores usam para representar informações. Eles também verão nesta lição que a representação é importante quando usamos dados para tomar decisões. No Capítulo 2 desta unidade, os alunos explorarão mais profundamente como os dados podem ser usados por humanos e computadores para tomar decisões.",
+          "preparation": "-   Imprima cópias do recurso Informações sobre Refeições de forma que cada grupo receba uma das quatro páginas\n-   Imprima uma cópia do guia de atividades para cada grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2022/Patterns and Representation": {
           "name": "Padrões e Representações",
@@ -4695,47 +4706,59 @@
           "student_overview": "**Pergunta do Dia: Que sistema os computadores usam para representar números?**\n\nNesta lição, você aprenderá sobre o sistema de números binário utilizado pelos computadores!"
         },
         "csd5-2022/Combining Representations": {
-          "name": "Combinando Representações"
+          "name": "Combinando Representações",
+          "student_overview": "**Pergunta do Dia: Como os computadores diferenciam códigos binários de letras, números ou imagens?**\n\nNesta lição, você combinará ASCII, binário e imagens para explorar maneiras de codificar tipos mais complexos de informações."
         },
         "csd5-2022/Keeping Data Secret": {
           "name": "Mantendo o segredo dos dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos manter os dados em segredo e protegê-los contra o uso indevido?**\n\nNesta lição, você explorará diferentes níveis de segurança, analisará a importância da privacidade e aprenderá a criptografar informações!"
         },
         "csd5-2022/Create a Representation": {
           "name": "Projeto - Criando uma Representação",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como posso representar informações complexas usando sistemas binários?**\n\nNesta lição, você explorará como usar os formatos ASCII, binário e de imagem para representar seu dia perfeito!"
         },
         "csd5-2022/Problem Solving and Data": {
           "name": "Resolução de Problemas com Dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os dados para resolver problemas em nossa comunidade?**\n\nNesta lição, você decidirá em que uma cidade mais precisa investir para perceber como usar os dados para resolver problemas."
         },
         "csd5-2022/Structuring Data": {
           "name": "Estruturação de dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: como podemos facilitar o processamento de dados pelos computadores?**\n\nNesta lição, você aprenderá como apresentar dados de maneiras diferentes que podem ajudar as pessoas a entenderem melhor os dados, bem como quais partes do processo podem ser feitas por um computador e quais partes exigem um ser humano."
         },
         "csd5-2022/Interpreting Data": {
           "name": "Interpretando Dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como os padrões nos dados podem nos ajudar a tomar decisões?**\n\nNesta lição, você aprenderá sobre tabulação cruzada, que permitirá representar graficamente as relações entre vários dados."
         },
         "csd5-2022/Making Decisions with Data": {
-          "name": "Tomando Decisões com Dados"
+          "name": "Tomando Decisões com Dados",
+          "student_overview": "\\*\\*Pergunta do Dia: como os padrões nos dados podem ajudar a tomar uma decisão? \\*\\*\n\nNesta lição, você terá a chance de praticar o processo de solução de problemas de dados que aprendeu na lição anterior. "
         },
         "csd5-2022/Automating Data Decisions": {
           "name": "Automatizando decisões de dados",
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
+          "student_overview": "**Pergunta do Dia: Como os computadores podem nos ajudar a tomar decisões sobre dados?**\n\nNesta lição, você examinará como um computador pode ser usado para concluir a etapa de tomada de decisão do processo de solução de problemas de dados."
         },
         "csd5-2022/Problem Solving with Big Data": {
-          "name": "Solução de Problemas com Big Data"
+          "name": "Solução de Problemas com Big Data",
+          "student_overview": "**Pergunta do Dia: Como nossos dados são coletados e por que saber disso é útil?**\n\nNesta lição, você verá como os dados são coletados e usados pelas organizações para resolver problemas reais no mundo real."
         },
         "csd5-2022/Project - Make a Recommendation": {
           "name": "Projeto - Faça uma Recomendação",
-          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio."
+          "assessment_opportunities": "Use a rubrica do projeto anexada a esta lição para avaliar o domínio dos alunos sobre as metas de aprendizagem desta unidade. Você também pode optar por atribuir o teste pós-projeto por meio do Code Studio.",
+          "student_overview": "**Pergunta do Dia: Como posso usar os dados para fazer minhas próprias recomendações?**\n\nNesta lição, você criará um mecanismo de recomendação com base nos dados coletados e analisados a partir das contribuições dos seus colegas."
         },
         "csd5-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd6-2022/Innovations in Computing": {
-          "name": "Inovações em Computação"
+          "name": "Inovações em Computação",
+          "overview": "Nesta lição, os alunos farão algumas pesquisas sobre inovações interessantes na área da computação. Esta lição colocará os alunos em contato com uma variedade maior de formatos de computação (a aparência de um computador) e campos que são afetados pela computação. Posteriormente nesta unidade, os alunos analisarão os dispositivos que encontraram nesta lição ao desenvolverem seus próprios dispositivos de computação física.\n\n**Pergunta do Dia:** O que é inovação em computação?",
+          "preparation": "-   Use o vídeo [A Internet das Coisas](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) ou [A Ciência da Computação está Mudando Tudo](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n-   Imprima uma cópia do guia de atividades para cada aluno\n-   Decida como você gostaria de distribuir as Áreas de Pesquisa em Inovação na Computação e se gostaria de fazer alguma edição no documento para adicionar ou remover sites.\n-   Visite o[2] fórum da [\"Sala dos Professores\"] para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores"
         },
         "csd6-2022/The Circuit Playground": {
           "name": "O parque de diversões do circuito"
@@ -6130,7 +6153,8 @@
           "preparation": "-   Determine quanto tempo cada grupo tem para apresentar. Normalmente, esse tempo é de 8 a 10 minutos por equipe, mas lembre-se de reservar algum tempo para acompanhar as equipes\n-   Crie uma cópia do conjunto de slides do modelo de apresentação para cada equipe\n-   Imprima uma cópia da rubrica para cada equipe.\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) para professores verificados para estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
         },
         "csd5-2023/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "preparation": "-   Imprima cópias do recurso Informações sobre Refeições de forma que cada grupo receba uma das quatro páginas\n-   Imprima uma cópia do guia de atividades para cada grupo\n-   Verifique o forum da [\"Sala dos Professores\"] [0] para os professores autorizados para encontrar estratégias ou recursos extras oferecidos pelos colegas professores\n-   Se você estiver dando aulas de forma remota, verifique nossas [Adaptações para Aulas Remotas](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)"
         },
         "csd5-2023/Patterns and Representation": {
           "name": "Padrões e Representações",
@@ -7106,7 +7130,8 @@
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
           "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: o que é Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da [Série de vídeos Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada machine learning e como eles podem usar o Processo de Resolução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de machine learning em que um robô - AI Bot - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
-          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano"
+          "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Visão Computacional",
@@ -7116,36 +7141,37 @@
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Redes Neurais",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: redes neurais] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar os pesos de cada pessoa. Por fim, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do recurso WeTube Content Creators para cada aluno\n-   Imprima cópias do guia de atividades da Rede Neural para cada aluno",
-          "student_overview": "Saiba como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Redes Neurais](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de uma experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar a influência de cada pessoa. Finalmente, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do recurso Criadores de Conteúdo do WeTube para cada aluno\n-   Imprima cópias do guia de atividades da Rede Neural para cada aluno",
+          "student_overview": "Aprenda como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
-          "name": "Chatbots e Modelos de Linguagem Grande (LLMs)",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: chatbots e grandes modelos de linguagem] da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de linguagem grande (LLMs) geram novo texto. O texto que os LLMs geram parece que um humano pode tê-lo escrito porque grandes modelos de linguagem são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para cocriar um texto com IA. Finalmente, a aula termina com uma discussão sobre se os LLMs são inteligentes ou criativos.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "name": "Chatbots e Grandes Modelos de Linguagem (LLMs)",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem](https://youtu.be/X-AWdfSFCHQ) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nGrandes Modelos de Linguagem (LLMs) geram um novo texto. O texto gerado pelos LLMs parece serem escritos por um ser humano porque modelos de linguagem grandes são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para co-criar um texto com a IA. Finalmente, a lição termina com uma discussão sobre se os LLMs são ou não inteligentes ou criativos.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
           "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
-          "student_overview": "Os Large Language Models (LLMs) são inteligentes ou criativos? Decida você mesmo, ao trabalhar com eles, criar algo e saiba mais sobre como eles funcionam!"
+          "student_overview": "Os Grandes Modelos de Linguagem (LLMs) são inteligentes ou criativos? Decida você mesmo ao passo em que trabalha com eles para criar algo e aprende mais sobre como eles funcionam!"
         },
         "how-ai-works-2023/Generative Images": {
           "name": "Imagens Generativas",
-          "overview": "Esta lição gira em torno de [Como a IA funciona: criatividade e imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) vídeo da [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina uma IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de IA de difusão. Por fim, a aula termina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Criatividade e Imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina outra IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de difusão de IA. Finalmente, a aul taermina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência].[2]",
           "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
-          "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de IA de difusão."
+          "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de difusão de IA."
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "Viés Algorítmico",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: acesso igual e viés algorítmico] da [série de vídeos Como a IA funciona].[1]Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos praticarão o recorte de imagens para descobrir o viés subjacente ao algoritmo de recorte do Twitter. Em seguida, os alunos lerão e assistirão a um vídeo sobre a descoberta desse algoritmo tendencioso. Por fim, os alunos discutirão maneiras de reconhecer e reduzir o preconceito, além de analisar a resposta do Twitter às alegações de preconceito em seu algoritmo de recorte.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Conclua você mesmo a atividade do widget de recorte para ver o que seus alunos vivenciarão com o widget e quais perguntas ou problemas eles poderão abordar.\n-   Assista às partes do vídeo [“Estamos automatizando o racismo?”](https://youtu.be/Ok5sKLXqynQ) referenciado no plano de aula.\n-   Leia os dois artigos na seção de links abaixo.",
-          "student_overview": "Nesta lição, você trabalhará no recorte de imagens e discutirá os desafios e preconceitos envolvidos em ensinar uma máquina a cortar uma imagem."
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Acesso Igualitário e Viés Algorítmico](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos praticarão o recorte de imagens para descobrir o viés subjacente do algoritmo de corte do Twitter. Em seguida, os alunos lerão e assistirão a um vídeo sobre a descoberta desse algoritmo tendencioso. Por fim, os alunos discutirão maneiras de reconhecer e reduzir o viés, além de analisar a resposta do Twitter às alegações de viés em seu algoritmo de recorte.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Conclua você mesmo a atividade sobre o Widget Recorte para ver o que seus alunos vivenciarão com o widget e quais perguntas ou problemas eles poderão abordar.\n-   Assista às partes do vídeo [“Estamos Automatizando o Racismo?”](https://youtu.be/Ok5sKLXqynQ) citado no plano de aula.\n-   Leia os dois artigos na seção de links abaixo.",
+          "student_overview": "Nesta lição, você trabalhará no recorte de imagens e discutirá os desafios e os viéses envolvidos em ensinar uma máquina a recortar uma imagem."
         },
         "how-ai-works-2023/Our AI Code of Ethics": {
           "name": "Nosso Código de Ética em I.A.",
-          "overview": "Esta lição gira em torno do[0] vídeo [Como a IA funciona: privacidade e o futuro do trabalho] da série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nEm pequenos grupos, os alunos conduzem pesquisas usando artigos e vídeos que expõem armadilhas éticas em uma área de inteligência artificial de sua escolha. Posteriormente, cada grupo desenvolve pelo menos um princípio orientado a soluções que aborda a área escolhida. Esses princípios são então reunidos em um recurso “Nosso Código de Ética de IA” para toda a classe (por exemplo, uma apresentação de slides, documento ou página da web) para criadores e legisladores de IA em todos os lugares.\n\nEsta lição pode ser ministrada sozinha ou como parte de uma sequência de 7 aulas sobre Como a IA funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável."
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Privacidade e o Futuro do Trabalho](https://youtu.be/zNxw5gJtHLc?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nEm pequenos grupos, os alunos conduzem pesquisas usando artigos e vídeos que expõem as armadilhas éticas em uma área da inteligência artificial de sua escolha. Posteriormente, cada grupo desenvolve pelo menos um princípio orientado a soluções que aborda a área escolhida. Esses princípios são então reunidos em um material “Nosso Código de Ética em IA” para toda a turma (por exemplo, uma apresentação de slides, um documento ou uma página web) para criadores e legisladores de IAs em todos os lugares.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência].[2]",
+          "student_overview": "Pesquise de forma colaborativa sobre a ética da IA e crie um código de conduta compartilhável.",
+          "preparation": "-   Prepare-se para compartilhar on-line uma apostila sobre **Áreas de Pesquisa em Ética em IA** por grupo.\n-   Imprima ou prepare-se para compartilhar on-line uma apostila **Reflexões sobre Pesquisa em Ética em IA** por grupo.\n-   Prepare um documento web compartilhável, apresentação de slides, modelo de vídeo ou qualquer outra forma de mídia para ser usada para compor o recurso “Nosso Código de Ética em IA” da sua turma."
         },
         "how-ai-works-2023/How AI Works In a Day": {
           "name": "Como a IA Funciona Em um Dia",
-          "overview": "⚠️ Esta lição é destinada a salas de aula que desejam mostrar toda a [série de vídeos Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se destina a ser ensinado em sequência com as outras lições desta unidade, que apresenta cada vídeo um dia de cada vez.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com sua sala de aula.",
+          "overview": "⚠️ Esta lição é destinada às salas de aula que desejam exibir toda a série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se foi projetada para ser lecionada em sequência com as outras lições desta unidade, as quais apresentam um vídeo a cada dia.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e, em seguida, respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com a sua sala de aula.",
           "preparation": "-   Imprima o guia de atividades\n-   Projete os slides em um projetor de vídeo"
         },
         "applab-intro/Intro to App Lab": {
@@ -7900,6 +7926,35 @@
         "ai-ethics-2023/lesson-2": {
           "overview": "Os alunos podem entender melhor o impacto da IA generativa participando de um jogo colaborativo. Eles começam assistindo um vídeo que explica como modelos grandes de linguagens funcionam como chatbots ou imagens geradas. Depois, os alunos simulam uma situação onde uma pessoa teve a vida impactada por uma IA generativa para ler alguns artigos e reagir de acordo com os sentimentos do personagem. Os alunos formarão grupos e receberão um cenário envolvendo o seu personagem e a IA generativa. Trabalhando juntos, eles criam diretrizes para como a IA generativa deve ser implementada nesse cenário, priorizando a voz e a perspectivas de todas as partes interessadas. Por último, os alunos compartilham seus resultados com a turma e refletem sobre esse processo.",
           "student_overview": "Aprenda sobre a IA generativa criando um personagem e produzindo diretrizes apropriadas para a IA generativa."
+        },
+        "csd5-2021/Project - Create a Representation": {
+          "name": "Crie uma Representação",
+          "student_overview": "**Pergunta do Dia: Como posso representar informações complexas usando sistemas binários?**\n\nNesta lição, você explorará como usar os formatos ASCII, binário e de imagem para representar seu dia perfeito!"
+        },
+        "csd5-2021/Data and Machine Learning": {
+          "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."
+        },
+        "csd7-2021/Patterns in Data": {
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+        },
+        "csd7-2021/AI Code of Ethics": {
+          "name": "Código de Ética em IA",
+          "preparation": "-   Prepare-se para compartilhar on-line uma apostila sobre **Áreas de Pesquisa em Ética em IA** por grupo.\n-   Imprima ou prepare-se para compartilhar on-line uma apostila **Reflexões sobre Pesquisa em Ética em IA** por grupo.\n-   Prepare um documento web compartilhável, apresentação de slides, modelo de vídeo ou qualquer outra forma de mídia para ser usada para compor o recurso “Nosso Código de Ética em IA” da sua turma."
+        },
+        "csd7-2021/Mini-Project: Make a Machine Learning App": {
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+        },
+        "csd5-2022/Data and Machine Learning": {
+          "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."
+        },
+        "csd7-2023/AI Code of Ethics": {
+          "name": "Código de Ética em IA"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Festa dançante: Edição de I.A.",
+          "overview": "Nesta atividade, alunos de todas as idades terão uma experiência introdutória em codificação e inteligência artificial, em um ambiente seguro e criativo. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Nesta atividade, os alunos deverão tocar um som, pois o tutorial foi programado para responder a uma música.",
+          "preparation": "### Como planejar seu Hour of Code.\n\nLocalize os recursos necessários para planeja, implementar e iniciar o Hour of Code na sua escola [here](https://hourofcode.com/us/how-to)!",
+          "purpose": "Tornar a codificação uma experiência empolgante e agradável é essencial para estimular o interesse pela ciência da computação. Esta lição tem diversos momentos de alegria em que os alunos utilizam códigos para coreografar um espetáculo de dança, cores e movimentos, utilizando blocos simples de arrastar e soltar na codificação. Os alunos terão uma introdução a um Robô de I.A. que eles mesmos vão controlar para definir os efeitos perfeitos que correspondam ao astral da sua dança. "
         }
       }
     }

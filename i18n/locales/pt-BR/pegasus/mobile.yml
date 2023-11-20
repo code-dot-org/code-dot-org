@@ -1542,6 +1542,7 @@
   header_report_abuse: "Reportar abuso"
   header_legal: "Termos & Privacidade"
   header_legal_privacy: "Política de Privacidade"
+  header_legal_cookie_notice: "Aviso sobre Cookies"
   header_legal_tos: "Termos de Serviço"
   header_tutorials: "Tutoriais"
   header_screen_reader_hamburger: "Menu"

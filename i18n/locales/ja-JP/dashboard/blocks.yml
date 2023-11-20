@@ -33,6 +33,8 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}は{VALUE}エフェクトを生成"
       Dancelab_alternateMoves:
         text: |-
           {GROUP} は {MOVE1} と {MOVE2}
@@ -620,12 +622,14 @@ ja:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
             '"quads"': アングル
+            '"blooming_petals"': 花咲く花びら
             '"circles"': トンネル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
             '"fireworks"': 花火
             '"flowers"': フラワー
+            '"frosted_grid"': つや消しグリッド
             '"growing_stars"': 成長する星
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
@@ -645,17 +649,27 @@ ja:
             '"stars"': 星
             '"music_wave"': 波
           PALETTE:
+            '"autumn"': 秋
             '"rave"': 白黒
             '"cool"': 青
             '"electronic"': エレクトロニクス
+            '"grayscale"': グレースケール
             '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
             '"ocean"': 海
             '"rainbow"': 虹
+            '"roses"': バラ
+            '"sky"': 空
+            '"spring"': 春
+            '"summer"': 夏
+            '"sunrise"': 日の出
+            '"sunset"': 日没
             '"tropical"': 熱帯
+            '"twinkling"': きらきら
             '"vintage"': ヴィンテージ
             '"warm"': 赤
+            '"winter"': 冬
       Dancelab_setDanceSpeed:
         text: "{SPRITE} のダンスの速さを {SPEED} に変更"
         options:
@@ -1744,6 +1758,15 @@ ja:
         text: y 座標 {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': 単色
+            '"liquid"': 液体
+            '"gas"': ガス
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:

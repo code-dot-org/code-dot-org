@@ -1689,6 +1689,12 @@ th:
         text: พิกัด y ของ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ของแข็ง
+            '"liquid"': ของเหลว
+            '"gas"': แก๊ส
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

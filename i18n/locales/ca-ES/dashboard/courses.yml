@@ -87,6 +87,10 @@ ca:
           title: Aprenentatge Professional Virtual CSA
         self-paced-pl-csd-unit1-2023:
           title: Ensenyament de la resolució de problemes i la informàtica
+        self-paced-pl-csd-unit2-2023:
+          title: Ensenyament Desenvolupament Web
+        self-paced-pl-csd-unit5-2023:
+          title: Dades Docents i Societat
     resources:
       curriculum/csd/2017:
         name: Pla d'estudis

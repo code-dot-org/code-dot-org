@@ -232,6 +232,7 @@ nl:
   for_students_teacher_led_lessons: 'Voor studenten: lessen onder leiding van een
     docent'
   professional_development: Professionele ontwikkeling
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -330,6 +331,8 @@ nl:
   call_to_action_try_hoc_ai_activities: Probeer de AI-activiteiten van Hour of Code
   call_to_action_explore_activities: Activiteiten ontdekken
   call_to_action_explore_ai: AI ontdekken
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Tool verkennen
   call_to_action_explore_unit: Eenheid verkennen
   call_to_action_explore_curriculum: Ontdek het curriculum
   call_to_action_explore_curricula: Bekijk de curricula
@@ -715,6 +718,7 @@ nl:
   module_label_accessibility_features_full: 'Toegankelijkheidsfuncties:'
   module_label_educator_tool: Hulpmiddel voor docenten
   module_label_educator_course: Cursus voor docenten
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Hulpmiddel voor studenten
   module_label_student_product: Produkt
   module_label_student_content_resources: Inhoud en bronnen
@@ -723,6 +727,7 @@ nl:
   module_label_available_now: Nu beschikbaar
   module_label_video_series: Videoserie
   module_label_self_paced: Module in eigen tempo
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3635,19 +3640,14 @@ nl:
   tutorial_csfirstdialogue_name: Dialoog
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
-  tutorial_itchspace_name: 'ItchCode: Space Invaders - RockCoder'
   tutorial_vidcodemagic_name: SFX-magie
   tutorial_vidcodemagices_name: SFX-magie
   tutorial_codespeakmeal_name: Een app voor gezonde maaltijden coderen
-  tutorial_itchfish_name: 'ItchCode: Fish Scratch spel'
   tutorial_bsdwebsite_name: Mijn favoriete website
   tutorial_codespeaktime_name: Een tijdscapsule in Scratch coderen
-  tutorial_itchwebcam_name: 'ItchCode: webcam met augmented reality'
-  tutorial_itchball_name: 'HitchCode: Bouncing Ball'
   tutorial_ttrace_name: Conditie race
   tutorial_plethora_name: 'Plethora: oorzaak en gevolg'
   tutorial_educodesecret_name: Ontdek de geheimen van het agentschap!
-  tutorial_itchshapes_name: 'ItchCode: vormen en hoeken'
   tutorial_codeguppytext_name: Inleiding tot tekstgebaseerde codering
   tutorial_vidcodeplastiche_name: Plasticvervuiling PSA
   tutorial_educativechatbot_name: Bouw je eigen chatbot in Python
@@ -3671,7 +3671,6 @@ nl:
   tutorial_codecapture_name: Leer programmeren met JavaScript in een handomdraai
   tutorial_codehslitter_name: Coderen voor een zwerfvrije gemeenschap
   tutorial_bsdocean_name: Leven onder water
-  tutorial_itchplatformer_name: 'Handleiding voor ItchCode: Scratch 3.0-platformgame'
   tutorial_codejika_name: 'CodeJika: website van 5 minuten'
   tutorial_gamefrootclicker_name: Variabelen leren. Codeer je eigen Clicker Game.
   tutorial_rmagicequity_name: Gelijkheid versus gelijkheid
@@ -7674,20 +7673,12 @@ nl:
   tutorial_codestersdistance_longdescription: Leer de basisprincipes van coderen in
     Python en maak vervolgens een programma dat de afstand tussen twee sprites berekent
     om er zeker van te zijn dat ze sociale afstand nemen of een masker moeten dragen.
-  tutorial_itchspace_longdescription: Deze tutorial neemt je mee in de creatie van
-    een klassiek Space Invaders-spel met behulp van de programmeertaal Scratch MIT.
-    Abonneer je op het RokCoder YouTube-kanaal voor meer op Scratch gebaseerde video's
-    en tutorials! Elke video is een hapklare tutorial (ongeveer tien minuten lang)
-    die zijn eigen specifieke einddoelen bevat. Het eindresultaat is een Scratch-arcadespel
-    van hoge kwaliteit.
   tutorial_vidcodemagic_longdescription: Laat flitsen willekeurig op het scherm verschijnen
     met behulp van een lus.
   tutorial_vidcodemagices_longdescription: Laat flitsen willekeurig op het scherm
     verschijnen met behulp van een lus.
   tutorial_codespeakmeal_longdescription: Leer een app coderen die gebruikers helpt
     bij het nemen van beslissingen over gezonde voeding.
-  tutorial_itchfish_longdescription: Scratch 3.0-tutorial om een spel met een haai
-    die op vis jaagt en eet te verstoren wanneer een duiker per ongeluk wordt opgegeten.
   tutorial_bsdwebsite_longdescription: 'In deze cursus kunnen studenten code gebruiken
     als een manier om te delen wat belangrijk of interessant voor hen is. Ze kunnen
     de les volgen of unieke projecten maken terwijl ze HTML, CSS en JavaScript leren.
@@ -7696,10 +7687,6 @@ nl:
     belangrijkste dingen waarin je geïnteresseerd bent of graag doet. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Leer hoe je een digitale tijdcapsule codeert
     om je leven nu vast te leggen en erover na te denken.
-  tutorial_itchwebcam_longdescription: Kom meer te weten over augmented reality en
-    maak je eigen virtuele ruimte voor augmented reality.
-  tutorial_itchball_longdescription: Laat een bal over het scherm stuiteren. Meer
-    informatie over loops en conditionals binnen loops.
   tutorial_ttrace_longdescription: Door functies aan te roepen en klassen te ontwerpen,
     programmeren spelers hun eigen raceauto om snel, wendbaar en krachtig te zijn;
     tijdens races kunnen ze vervolgens de voertuigen van hun concurrenten hacken om
@@ -7710,8 +7697,6 @@ nl:
     Smith terwijl je dieper ingaat op het leren of statements, strings, for-in loops
     zijn. Help Agent Smith de boosdoeners te vinden en het besturingssysteem van het
     Agentschap te configureren voor hun nieuwe gebruikers met Python.
-  tutorial_itchshapes_longdescription: Leer hoe je vormen tekent in Scratch. Je leert
-    ook hoe je kunt berekenen hoeveel je moet draaien voor welke vorm dan ook.
   tutorial_codeguppytext_longdescription: Leer de basisprincipes van tekstgebaseerd
     coderen door je eerste programma te maken in een online coderingseditor.
   tutorial_vidcodeplastiche_longdescription: "  Het probleem van plastic dat onze
@@ -7793,8 +7778,6 @@ nl:
     kwestie waar we tegenwoordig mee te maken hebben: ons milieu. Dit project richt
     zich op het begeleiden van u bij het coderen van uw eigen webpagina over de bescherming
     van onze wateren.'
-  tutorial_itchplatformer_longdescription: Een eenvoudig te volgen tutorial voor het
-    maken van een eenvoudig platformspel met Scratch.
   tutorial_codejika_longdescription: Een geweldige introductie tot coderen met HTML
     en CSS. Codeer een paar regels, bekijk onmiddellijke resultaten zonder verstrikt
     te raken in het hoe en waarom door een mooie landingspagina te maken met een tweekleurige
@@ -8600,19 +8583,14 @@ nl:
   tutorial_csfirstdialogue_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_codemonkeybeaver_string_detail_grades: Voorlezer - Graad 5
   tutorial_codestersdistance_string_detail_grades: Graad 6 en hoger
-  tutorial_itchspace_string_detail_grades: Graad 6 en hoger
   tutorial_vidcodemagic_string_detail_grades: Vanaf groep 4
   tutorial_vidcodemagices_string_detail_grades: Vanaf groep 4
   tutorial_codespeakmeal_string_detail_grades: Graad 6 en hoger
-  tutorial_itchfish_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_bsdwebsite_string_detail_grades: Graad 6 en hoger
   tutorial_codespeaktime_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_itchwebcam_string_detail_grades: Graad 6 en hoger
-  tutorial_itchball_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_ttrace_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_plethora_string_detail_grades: Vanaf groep 4
   tutorial_educodesecret_string_detail_grades: Graad 6 en hoger
-  tutorial_itchshapes_string_detail_grades: Graad 6 en hoger
   tutorial_codeguppytext_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_vidcodeplastiche_string_detail_grades: Graad 6 en hoger
   tutorial_educativechatbot_string_detail_grades: Graden 9+
@@ -8634,7 +8612,6 @@ nl:
   tutorial_codecapture_string_detail_grades: Graad 6 en hoger
   tutorial_codehslitter_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_bsdocean_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
-  tutorial_itchplatformer_string_detail_grades: Graad 6 en hoger
   tutorial_codejika_string_detail_grades: Graad 6 en hoger
   tutorial_gamefrootclicker_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
   tutorial_rmagicequity_string_detail_grades: Groepen 6-8 (leeftijd 11-13)
@@ -9425,21 +9402,16 @@ nl:
   tutorial_csfirstdialogue_string_platforms: Alle moderne browsers
   tutorial_codemonkeybeaver_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_codestersdistance_string_platforms: Alle moderne browsers, schermlezer
-  tutorial_itchspace_string_platforms: Alle moderne browsers
   tutorial_vidcodemagic_string_platforms: Alle moderne browsers, Android-tablet, iPad,
     schermlezer
   tutorial_vidcodemagices_string_platforms: Alle moderne browsers, Android-tablet,
     iPad, schermlezer
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: Alle moderne browsers
   tutorial_bsdwebsite_string_platforms: Chroom
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: Webgebaseerd, Android tablet, iPad
-  tutorial_itchball_string_platforms: Alle moderne browsers
   tutorial_ttrace_string_platforms: Chroom
   tutorial_plethora_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_educodesecret_string_platforms: Alle moderne browsers
-  tutorial_itchshapes_string_platforms: Alle moderne browsers
   tutorial_codeguppytext_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_vidcodeplastiche_string_platforms: Alle moderne browsers, iPad, zonder
     kabel
@@ -9464,7 +9436,6 @@ nl:
     iPhone
   tutorial_codehslitter_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_bsdocean_string_platforms: Chroom
-  tutorial_itchplatformer_string_platforms: Alle moderne browsers
   tutorial_codejika_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_gamefrootclicker_string_platforms: Alle moderne browsers, iPad, zonder
     kabel
@@ -10114,19 +10085,14 @@ nl:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10148,7 +10114,6 @@ nl:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10835,20 +10800,15 @@ nl:
   tutorial_csfirstdialogue_string_detail_programming_languages: Blokken, Scratch
   tutorial_codemonkeybeaver_string_detail_programming_languages: 'Blokken '
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: 'Blokken '
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: 'Blokken '
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: 'Blokken '
-  tutorial_itchwebcam_string_detail_programming_languages: 'Blokken '
-  tutorial_itchball_string_detail_programming_languages: 'Blokken '
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Taalonafhankelijk (kan in
     meerdere talen worden onderwezen)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: 'Blokken '
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10873,7 +10833,6 @@ nl:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: 'Blokken '
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: 'Blokken '
   tutorial_rmagicequity_string_detail_programming_languages: Blokken, JavaScript
@@ -11848,10 +11807,7 @@ nl:
   tutorial_kodableshapes_name: Vormen maken met code
   tutorial_nasabinary_name: 'Binaire code: hoe praat je met een ruimtevaartuig'
   tutorial_3dmaker_name: 3D-maker
-  tutorial_itchstart_name: 'ItchCode: Scratch 5 Block Starter'
   tutorial_hopsub_name: Bouw Subway Surfers met een vriend
-  tutorial_itchmundos_name: De werelden in mijn wereld_E2
-  tutorial_itchtenacity_name: Vasthoudendheid
   tutorial_kcjskiing_name: 'Sport + Code: Skiën'
   tutorial_groksecurity_name: 'Cyberbeveiliging: verdediging tegen de duistere hoeden'
   tutorial_creaticode_name: 3D-programmering met Scratch Blocks
@@ -11994,17 +11950,8 @@ nl:
     binaire code op een naamplaatje, armband, pin of zelfs geluid.
   tutorial_3dmaker_longdescription: Maak snel en eenvoudig je eigen coole, draaibare
     3D-objecten.
-  tutorial_itchstart_longdescription: Deze les is een goed startpunt voor kinderen
-    van groep 2 of 3 die Scratch net voor het eerst uitproberen. Ze beginnen met een
-    set van 5 blokken die ze moeten samenstellen om hun personage bepaalde acties
-    te laten uitvoeren.
   tutorial_hopsub_longdescription: Leer hoe je het programma koppelt aan een vriend
     of klasgenoot en creëer je eigen metrosurfer met Hopscotch-personages!
-  tutorial_itchmundos_longdescription: Maak kennis met Scratch, een hulpmiddel om
-    te programmeren. Agregarán objetos y fondos, usarán bloques de eventos y apariencia
-    para dar vida a su programa.
-  tutorial_itchtenacity_longdescription: In dit project programmeer ik in Scratch
-    de simulador van een robot die de zeehavens schoonmaakt.
   tutorial_kcjskiing_longdescription: 'Het is allemaal recreatie; niets ernstigs;
     gemakkelijke, plezierige activiteiten. Totdat iemand tegen een boom botst… of
     IS dat het leuke gedeelte? Trek je ski''s aan en buig je knieën terwijl je je
@@ -12298,11 +12245,8 @@ nl:
   tutorial_kodableshapes_language: Nederlands
   tutorial_nasabinary_language: Nederlands
   tutorial_3dmaker_language: Nederlands
-  tutorial_itchstart_language: Nederlands
   tutorial_hopsub_language: Chinees (vereenvoudigd), Engels, Spaans (Spanje), Spaans
     (Mexico)
-  tutorial_itchmundos_language: Spaans (Mexico)
-  tutorial_itchtenacity_language: Spaans (Mexico)
   tutorial_kcjskiing_language: Engels, Frans
   tutorial_groksecurity_language: Nederlands
   tutorial_creaticode_language: Chinees (vereenvoudigd), Chinees (traditioneel), Engels
@@ -12396,10 +12340,7 @@ nl:
   tutorial_kodableshapes_string_detail_grades: Voorlezer - Graad 5
   tutorial_nasabinary_string_detail_grades: Graad 6 en hoger
   tutorial_3dmaker_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_itchstart_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
   tutorial_hopsub_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
-  tutorial_itchmundos_string_detail_grades: Vanaf groep 4
-  tutorial_itchtenacity_string_detail_grades: Vanaf groep 4
   tutorial_kcjskiing_string_detail_grades: Vanaf groep 4
   tutorial_groksecurity_string_detail_grades: Graad 6 en hoger
   tutorial_creaticode_string_detail_grades: Graad 6 en hoger
@@ -12486,10 +12427,7 @@ nl:
   tutorial_kodableshapes_string_platforms: Alle moderne browsers, iPad, iPhone
   tutorial_nasabinary_string_platforms: Niet aangesloten, schermlezer
   tutorial_3dmaker_string_platforms: Webgebaseerd Android tablet iPad
-  tutorial_itchstart_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Webgebaseerd, Android tablet, iPad
-  tutorial_itchtenacity_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_kcjskiing_string_platforms: Alle moderne browsers
   tutorial_groksecurity_string_platforms: Webgebaseerd Android tablet iPad
   tutorial_creaticode_string_platforms: Webgebaseerd Android tablet iPad
@@ -12579,10 +12517,7 @@ nl:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12672,10 +12607,7 @@ nl:
     (kan in meerdere talen worden onderwezen)
   tutorial_nasabinary_string_detail_programming_languages: Binaire code
   tutorial_3dmaker_string_detail_programming_languages: 'Blokken '
-  tutorial_itchstart_string_detail_programming_languages: 'Blokken '
   tutorial_hopsub_string_detail_programming_languages: Hinkelen
-  tutorial_itchmundos_string_detail_programming_languages: 'Blokken '
-  tutorial_itchtenacity_string_detail_programming_languages: 'Blokken '
   tutorial_kcjskiing_string_detail_programming_languages: 'Blokken '
   tutorial_groksecurity_string_detail_programming_languages: Geen - geen programmering
     vereist
@@ -13779,6 +13711,16 @@ nl:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Dansfeest
+  tutorial_introtomlai_name: Inleiding tot machine learning
+  tutorial_computervisionai_name: Computervisie
+  tutorial_neuralnetworksai_name: Neurale netwerken
+  tutorial_chatbotsllmai_name: Chatbots en grote taalmodellen
+  tutorial_generativeimagesai_name: Generatieve afbeeldingen
+  tutorial_algorithmicbiasai_name: Algoritmische vooringenomenheid
+  tutorial_codeofethicsai_name: Onze ethische code voor AI
+  tutorial_socimpactofgenaiai_name: Maatschappelijke impact van generatieve AI
+  tutorial_generationai_name: Generatie AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14249,6 +14191,43 @@ nl:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: "  Codeer een Dance Party om te delen met
+    je vrienden. Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, en nog
+    25 anderen!  "
+  tutorial_introtomlai_longdescription: Kom meer te weten over een vorm van kunstmatige
+    intelligentie, machine learning genaamd, en hoe ze het probleemoplossingsproces
+    kunnen gebruiken om een robot te helpen problemen op te lossen. Neem deel aan
+    machine learning-activiteiten waarbij een robot leert patronen in vissen te detecteren.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Ontdek hoe neurale netwerken werken.
+    Gebruik een widget om neurale netwerken op een praktische manier te verkennen.
+    Bekijk een video waarin neurale netwerken worden uitgelegd. Bespreek ten slotte
+    de noodzaak van verschillende perspectieven bij het creëren van aanbevelingssystemen.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Ontdek hoe AI afbeeldingen kan genereren,
+    verken vervolgens een diffuse AI-widget en bespreek of deze modellen al dan niet
+    creatief zijn.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Onderzoek de impact van generatieve
+    AI vanuit verschillende perspectieven en werk vervolgens als team samen om richtlijnen
+    op te stellen die inspelen op de meeste behoeften van alle deelnemers.
+  tutorial_generationai_longdescription: 'Reis door de tijd om je AI-aangedreven uitvindingen
+    te maken in het nieuwe ''Een Uur Code: Generatie AI'' van Minecraft. Combineer
+    probleemoplossend vermogen, creativiteit en rekenwerk met de principes van Responsible
+    AI. Met programmeren in blokken of Python in Een Uur Code leer je de basis van
+    programmeren en ontdek je hoe je voor iedereen een betere AI kunt ontwikkelen.'
   tutorial_bsimage_string_detail_grades: Graad 6 en hoger
   tutorial_bscomputing_string_detail_grades: Graad 6 en hoger
   tutorial_stackpython_string_detail_grades: Graad 6 en hoger
@@ -14350,7 +14329,7 @@ nl:
   tutorial_hwfanpage_string_detail_grades: Vanaf groep 4
   tutorial_hwillusion_string_detail_grades: Graad 6 en hoger
   tutorial_caevolution_string_detail_grades: Graad 6 en hoger
-  tutorial_bbbusybot_string_detail_grades: Graad 6 en hoger
+  tutorial_bbbusybot_string_detail_grades: Graden 9+
   tutorial_caaifarm_string_detail_grades: Graad 6 en hoger
   tutorial_cafuture_string_detail_grades: Graad 6 en hoger
   tutorial_dmscratch_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
@@ -14380,6 +14359,16 @@ nl:
   tutorial_madmobile_string_detail_grades: Graad 6 en hoger
   tutorial_intelinosmile_string_detail_grades: Voorlezer - Graad 8
   tutorial_intelinoaisign_string_detail_grades: Groepen 3-6 (leeftijd 7-10)
+  tutorial_danceai2023_string_detail_grades: Vanaf groep 4
+  tutorial_introtomlai_string_detail_grades: Graad 6 en hoger
+  tutorial_computervisionai_string_detail_grades: Graad 6 en hoger
+  tutorial_neuralnetworksai_string_detail_grades: Graad 6 en hoger
+  tutorial_chatbotsllmai_string_detail_grades: Graad 6 en hoger
+  tutorial_generativeimagesai_string_detail_grades: Graad 6 en hoger
+  tutorial_algorithmicbiasai_string_detail_grades: Graad 6 en hoger
+  tutorial_codeofethicsai_string_detail_grades: Graad 6 en hoger
+  tutorial_socimpactofgenaiai_string_detail_grades: Graad 6 en hoger
+  tutorial_generationai_string_detail_grades: Vanaf groep 4
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Niet aangesloten
   tutorial_stackpython_string_platforms: Webgebaseerd Android tablet iPad
@@ -14513,6 +14502,26 @@ nl:
   tutorial_madmobile_string_platforms: Alle moderne browsers
   tutorial_intelinosmile_string_platforms: Alle moderne browsers, iPad, zonder kabel
   tutorial_intelinoaisign_string_platforms: Alle moderne browsers
+  tutorial_danceai2023_string_platforms: Alle moderne browsers, Android-tablet, iPad,
+    Android-telefoon, iPhone
+  tutorial_introtomlai_string_platforms: Alle moderne browsers, Android-tablet, iPad,
+    Android-telefoon, iPhone
+  tutorial_computervisionai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_neuralnetworksai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_chatbotsllmai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_generativeimagesai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_codeofethicsai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Alle moderne browsers, Android-tablet,
+    iPad, Android-telefoon, iPhone
+  tutorial_generationai_string_platforms: Android-tablet, iPad, Windows-telefoon,
+    Android-telefoon, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14644,6 +14653,16 @@ nl:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Taalonafhankelijk
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14769,12 +14788,22 @@ nl:
   tutorial_codecombathack_string_detail_programming_languages: Taalonafhankelijk
   tutorial_toxicodewords_string_detail_programming_languages: Taalonafhankelijk
   tutorial_mitstepmisinformation_string_detail_programming_languages: Niet aangesloten
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Niet aangesloten
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Niet aangesloten
   tutorial_mitstepintrotoml_string_detail_programming_languages: Niet aangesloten
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 'Blokken '
   tutorial_intelinoaisign_string_detail_programming_languages: 'Blokken '
+  tutorial_danceai2023_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_introtomlai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_computervisionai_string_detail_programming_language: Taalonafhankelijk
+  tutorial_neuralnetworksai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_chatbotsllmai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_generativeimagesai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_codeofethicsai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Taalonafhankelijk
+  tutorial_generationai_string_detail_programming_languages: Blokken, Python
   school_not_found_heading: We konden je school niet vinden. Voer meer informatie
     in.
   school_name: Naam van de school
@@ -14916,6 +14945,10 @@ nl:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Wat zijn de vereisten om een Hour of Code
     te doen?
   hoc_how_to_faq_answer_prerequisites: The Hour of Code is eenvoudig uit te voeren
@@ -15360,6 +15393,44 @@ nl:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Iedereen kan meer te weten komen over AI, of je nu een student
     in de klas bent of een docent die de toekomst van lesgeven met en over AI ontsluit.
   hoc_ai_how_ai_works_video_series_desc: Deze serie korte video's laat je zien hoe
@@ -15375,6 +15446,37 @@ nl:
     worden uitgenodigd om oplossingen te bedenken voor sommige AI-problemen.
   hoc_ai_activities_desc: Deze gloednieuwe Hour of Code-activiteiten laten gebruikers
     op een leuke, boeiende manier kennismaken met de wereld van kunstmatige intelligentie.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Bijna 100 medewerkers van Code.org in bijpassende
     blauwe en gele t-shirts poseren in een vergaderruimte van een hotel voor het Codechella-evenement
     van het bedrijf in de zomer van 2022.
@@ -16034,9 +16136,10 @@ nl:
     dankbaar dat we kunnen profiteren van de onvermoeibare hulp van de bredere onderwijsgemeenschap
     op het gebied van informatica, en [we bedanken alle partners en individuen die
     onze impact in de loop der jaren hebben ondersteund] ())%{partners_url}.
-  about_page_section_more_list_1: "[Code.org Jaarverslag 2021] (%{report_url}) (Eerdere
-    verslagen: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7})"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Onze kernwaarden en richtlijnen voor berichten]
     (%{core_url})"
   about_page_section_more_list_3: "[Ons curriculum en pedagogische filosofie] ()%{curriculum_url}"

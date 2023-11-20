@@ -69,6 +69,8 @@ id:
           description_short: Pelajari konsep-konsep ilmu komputer dasar.
         csd-2023:
           title: Computer Science Discoveries
+        self-paced-pl-csd-unit2-2023:
+          title: Mengajarkan Pengembangan Web
     resources:
       curriculum/csd/2017:
         name: Kurikulum

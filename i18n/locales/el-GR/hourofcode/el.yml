@@ -248,6 +248,7 @@ el:
   for_students_teacher_led_learning: 'Για μαθητές: Εκπαίδευση υπό την καθοδήγηση εκπαιδευτικών'
   for_students_teacher_led_lessons: 'Για μαθητές: Μαθήματα υπό την καθοδήγηση εκπαιδευτικών'
   professional_development: Επαγγελματική ανάπτυξη
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Διδάξτε Επιστήμη των Υπολογιστών
   explore_our_curriculum: Εξερευνήστε το πρόγραμμα σπουδών μας
   start_professional_learning: Ξεκινήστε την επαγγελματική εκμάθηση
@@ -351,6 +352,8 @@ el:
     Κώδικα
   call_to_action_explore_activities: Εξερευνήστε τις δραστηριότητες
   call_to_action_explore_ai: Εξερευνήστε το AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Εργαλείο εξερεύνησης
   call_to_action_explore_unit: Εξερεύνηση μονάδας
   call_to_action_explore_curriculum: Εξερευνήστε το πρόγραμμα σπουδών
   call_to_action_explore_curricula: Εξερευνήστε τα προγράμματα σπουδών
@@ -757,6 +760,7 @@ el:
   module_label_accessibility_features_full: 'Χαρακτηριστικά προσβασιμότητας:'
   module_label_educator_tool: Εκπαιδευτικό εργαλείο
   module_label_educator_course: Εκπαιδευτικό μάθημα
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Εργαλείο σπουδαστών
   module_label_student_product: Προϊόν
   module_label_student_content_resources: Περιεχόμενο & πόροι
@@ -765,6 +769,7 @@ el:
   module_label_available_now: Διαθέσιμο τώρα
   module_label_video_series: Σειρά βίντεο
   module_label_self_paced: Αυτορυθμιζόμενη μονάδα
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3828,19 +3833,14 @@ el:
   tutorial_csfirstdialogue_name: Διάλογος
   tutorial_codemonkeybeaver_name: Επιτάχτης κάστορα
   tutorial_codestersdistance_name: 'Κωδικοί: Κοινωνικά αποστασιοποιούνται Sprites'
-  tutorial_itchspace_name: 'ITCHCode: Διαστημικοί εισβολείς - RokCoder'
   tutorial_vidcodemagic_name: Μαγεία SFX
   tutorial_vidcodemagices_name: Μαγεία SFX
   tutorial_codespeakmeal_name: Κωδικοποιήστε μια εφαρμογή για υγιεινό γεύμα
-  tutorial_itchfish_name: 'ItchCode: Παιχνίδι γρατσουνίσματος ψαριών'
   tutorial_bsdwebsite_name: Αγαπημένη Ιστοσελίδα
   tutorial_codespeaktime_name: Κωδικοποιήστε μια κάψουλα χρόνου στο μηδέν
-  tutorial_itchwebcam_name: 'ItchCode: Αυξημένη πραγματικότητα κάμερας Web'
-  tutorial_itchball_name: 'ItchCode: Μπάλα αναπήδησης'
   tutorial_ttrace_name: Κατάσταση Αγώνα
   tutorial_plethora_name: 'Πληθώρα: Αιτία και αποτέλεσμα'
   tutorial_educodesecret_name: Ανακαλύψτε τα μυστικά του Οργανισμού!
-  tutorial_itchshapes_name: 'ItchCode: Σχήματα & γωνίες'
   tutorial_codeguppytext_name: Εισαγωγή στην κωδικοποίηση με βάση το κείμενο
   tutorial_vidcodeplastiche_name: Πλαστική ρύπανση PSA
   tutorial_educativechatbot_name: Δημιουργήστε το δικό σας chatbot στο Python
@@ -3864,7 +3864,6 @@ el:
   tutorial_codecapture_name: Μάθετε προγραμματισμό με JavaScript σε ένα Jiffy
   tutorial_codehslitter_name: Κωδικοποίηση για μια κοινότητα χωρίς σκουπίδια
   tutorial_bsdocean_name: Ζωή κάτω από το νερό
-  tutorial_itchplatformer_name: 'ItchCode: Εκμάθηση πλατφόρμας Scratch 3.0'
   tutorial_codejika_name: 'CodeJika: Ιστοσελίδα 5 λεπτών'
   tutorial_gamefrootclicker_name: Μάθετε μεταβλητές. Κωδικοποιήστε το δικό σας παιχνίδι
     Clicker.
@@ -8205,21 +8204,12 @@ el:
     Python και, στη συνέχεια, δημιουργήστε ένα πρόγραμμα που υπολογίζει την απόσταση
     μεταξύ δύο sprites για να βεβαιωθείτε ότι βρίσκονται σε κοινωνική απόσταση ή πρέπει
     να φορούν μάσκα.
-  tutorial_itchspace_longdescription: Αυτό το σεμινάριο σας οδηγεί στη δημιουργία
-    ενός κλασικού παιχνιδιού Space Invaders χρησιμοποιώντας τη γλώσσα προγραμματισμού
-    Scratch MIT. Εγγραφείτε στο κανάλι RokCoder YouTube για περισσότερα βίντεο και
-    σεμινάρια με βάση το Scratch! Κάθε βίντεο είναι ένα σεμινάριο μεγέθους δαγκώματος
-    (διάρκειας περίπου δέκα λεπτών) που περιέχει τους δικούς του συγκεκριμένους τελικούς
-    στόχους. Το τελικό αποτέλεσμα είναι ένα υψηλής ποιότητας παιχνίδι Scratch arcade.
   tutorial_vidcodemagic_longdescription: Κάντε αναλαμπές να εμφανίζονται τυχαία γύρω
     από την οθόνη χρησιμοποιώντας ένα βρόχο.
   tutorial_vidcodemagices_longdescription: Κάντε αναλαμπές να εμφανίζονται τυχαία
     γύρω από την οθόνη χρησιμοποιώντας ένα βρόχο.
   tutorial_codespeakmeal_longdescription: Μάθετε να κωδικοποιείτε μια εφαρμογή που
     βοηθά τους χρήστες να λαμβάνουν αποφάσεις για υγιεινά τρόφιμα.
-  tutorial_itchfish_longdescription: Το Scratch 3.0 tutorial για τη δημιουργία ενός
-    παιχνιδιού με καρχαρία που κυνηγά και τρώει ψάρια διαταράσσεται όταν ένας δύτης
-    τρώγεται κατά λάθος.
   tutorial_bsdwebsite_longdescription: 'Αυτό το μάθημα επιτρέπει στους μαθητές να
     χρησιμοποιούν τον κώδικα ως τρόπο να μοιραστούν αυτό που είναι σημαντικό ή ενδιαφέρον
     για αυτούς. Μπορούν να ακολουθήσουν το μάθημα ή να δημιουργήσουν μοναδικά έργα
@@ -8229,10 +8219,6 @@ el:
     σας ενδιαφέρουν ή σας αρέσουν. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Μάθετε πώς να κωδικοποιείτε μια ψηφιακή
     κάψουλα χρόνου για να καταγράψετε και να σκεφτείτε τη ζωή σας αυτήν τη στιγμή.
-  tutorial_itchwebcam_longdescription: Μάθετε για την επαυξημένη πραγματικότητα και
-    δημιουργήστε τον δικό σας εικονικό χώρο επαυξημένης πραγματικότητας.
-  tutorial_itchball_longdescription: Πάρτε μια μπάλα για να αναπηδήσετε γύρω από την
-    οθόνη. Μάθετε για τους βρόχους και τους όρους εντός των βρόχων.
   tutorial_ttrace_longdescription: Καλώντας λειτουργίες και σχεδιάζοντας τάξεις, οι
     παίκτες προγραμματίζουν το δικό τους αγωνιστικό αυτοκίνητο να είναι γρήγορο, ευκίνητο
     και ισχυρό; κατά τη διάρκεια αγώνων, μπορούν στη συνέχεια να χακάρουν τα οχήματα
@@ -8244,8 +8230,6 @@ el:
     τον πράκτορα Σμιθ καθώς βουτάτε βαθύτερα στην εκμάθηση δηλώσεων, συμβολοσειρών,
     βρόχων for-in. Βοηθήστε τον πράκτορα Smith να βρει τους ενόχους και να διαμορφώσει
     το λειτουργικό σύστημα του Οργανισμού για τους νέους χρήστες του με την Python.
-  tutorial_itchshapes_longdescription: Μάθετε πώς να σχεδιάζετε σχήματα στο Scratch.
-    Θα μάθετε επίσης πώς να υπολογίζετε πόσο πρέπει να γυρίσετε για οποιοδήποτε σχήμα.
   tutorial_codeguppytext_longdescription: Μάθετε τα βασικά της κωδικοποίησης βάσει
     κειμένου δημιουργώντας το πρώτο σας πρόγραμμα σε έναν διαδικτυακό επεξεργαστή
     κωδικοποίησης.
@@ -8340,8 +8324,6 @@ el:
     ζήτημα που αντιμετωπίζουμε σήμερα - το περιβάλλον μας. Αυτό το έργο επικεντρώνεται
     στην καθοδήγηση σας για να κωδικοποιήσετε τη δική σας ιστοσελίδα για την προστασία
     των υδάτων μας.
-  tutorial_itchplatformer_longdescription: Ένα εύκολο στην παρακολούθηση σεμινάριο
-    για το πώς να δημιουργήσετε ένα απλό παιχνίδι πλατφόρμας χρησιμοποιώντας το Scratch.
   tutorial_codejika_longdescription: Μια μεγάλη εισαγωγή στην κωδικοποίηση χρησιμοποιώντας
     HTML και CSS. Κωδικοποιήστε μερικές γραμμές, δείτε την άμεση έξοδο χωρίς να παγιδευτείτε
     στο Hows and Whys δημιουργώντας μια ωραία σελίδα προορισμού με φόντο κλίσης δύο
@@ -9180,20 +9162,15 @@ el:
   tutorial_csfirstdialogue_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
   tutorial_codemonkeybeaver_string_detail_grades: Προ-αναγνώστης - Βαθμός 5
   tutorial_codestersdistance_string_detail_grades: Βαθμοί 6+
-  tutorial_itchspace_string_detail_grades: Βαθμοί 6+
   tutorial_vidcodemagic_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_vidcodemagices_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και
     άνω'
   tutorial_codespeakmeal_string_detail_grades: Βαθμοί 6+
-  tutorial_itchfish_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
   tutorial_bsdwebsite_string_detail_grades: Βαθμοί 6+
   tutorial_codespeaktime_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
-  tutorial_itchwebcam_string_detail_grades: Βαθμοί 6+
-  tutorial_itchball_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
   tutorial_ttrace_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
   tutorial_plethora_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_educodesecret_string_detail_grades: Βαθμοί 6+
-  tutorial_itchshapes_string_detail_grades: Βαθμοί 6+
   tutorial_codeguppytext_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
   tutorial_vidcodeplastiche_string_detail_grades: Βαθμοί 6+
   tutorial_educativechatbot_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και
@@ -9217,7 +9194,6 @@ el:
   tutorial_codecapture_string_detail_grades: Βαθμοί 6+
   tutorial_codehslitter_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
   tutorial_bsdocean_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
-  tutorial_itchplatformer_string_detail_grades: Βαθμοί 6+
   tutorial_codejika_string_detail_grades: Βαθμοί 6+
   tutorial_gamefrootclicker_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
   tutorial_rmagicequity_string_detail_grades: Τάξεις 6-8 (ηλικίες 11-13)
@@ -10056,21 +10032,16 @@ el:
   tutorial_csfirstdialogue_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_codemonkeybeaver_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
   tutorial_codestersdistance_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
-  tutorial_itchspace_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_vidcodemagic_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     tablet Android, iPad, Αναγνώστης οθόνης
   tutorial_vidcodemagices_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     tablet Android, iPad, Αναγνώστης οθόνης
   tutorial_codespeakmeal_string_platforms: Χρώμιο, Firefox
-  tutorial_itchfish_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_bsdwebsite_string_platforms: Χρώμιο
   tutorial_codespeaktime_string_platforms: Χρώμιο, Firefox
-  tutorial_itchwebcam_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
-  tutorial_itchball_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_ttrace_string_platforms: Χρώμιο
   tutorial_plethora_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
   tutorial_educodesecret_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
-  tutorial_itchshapes_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_codeguppytext_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
   tutorial_vidcodeplastiche_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     iPad
@@ -10098,7 +10069,6 @@ el:
   tutorial_codehslitter_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     tablet Android, iPad, Windows τηλέφωνο, τηλέφωνο Android, iPhone
   tutorial_bsdocean_string_platforms: Χρώμιο
-  tutorial_itchplatformer_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_codejika_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, tablet
     Android, iPad, Windows τηλέφωνο, τηλέφωνο Android, iPhone
   tutorial_gamefrootclicker_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
@@ -10756,19 +10726,14 @@ el:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10790,7 +10755,6 @@ el:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -11477,20 +11441,15 @@ el:
   tutorial_csfirstdialogue_string_detail_programming_languages: Μπλοκ, γρατζουνιές
   tutorial_codemonkeybeaver_string_detail_programming_languages: Μπλοκ
   tutorial_codestersdistance_string_detail_programming_languages: Πύθων
-  tutorial_itchspace_string_detail_programming_languages: Μπλοκ
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Μπλοκ
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Μπλοκ
-  tutorial_itchwebcam_string_detail_programming_languages: Μπλοκ
-  tutorial_itchball_string_detail_programming_languages: Μπλοκ
   tutorial_ttrace_string_detail_programming_languages: JavaScript, Καφές καφέ
   tutorial_plethora_string_detail_programming_languages: Γλώσσα ανεξάρτητη (μπορεί
     να διδαχθεί σε πολλές γλώσσες)
   tutorial_educodesecret_string_detail_programming_languages: Πύθων
-  tutorial_itchshapes_string_detail_programming_languages: Μπλοκ
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Πύθων
@@ -11515,7 +11474,6 @@ el:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Πύθων, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Μπλοκ
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Μπλοκ
   tutorial_rmagicequity_string_detail_programming_languages: Blocks, JavaScript
@@ -12542,10 +12500,7 @@ el:
   tutorial_kodableshapes_name: Δημιουργήστε σχήματα με κώδικα
   tutorial_nasabinary_name: 'Δυαδικός κώδικας: Πώς να μιλήσετε με ένα διαστημικό σκάφος'
   tutorial_3dmaker_name: Δημιουργός 3D
-  tutorial_itchstart_name: 'Κωδικός ITCHCODE: Εκκινητής 5 φραγμών'
   tutorial_hopsub_name: Φτιάξτε σέρφερ του μετρό με έναν φίλο
-  tutorial_itchmundos_name: Λος Μούντος και Μούντο_Ε2
-  tutorial_itchtenacity_name: Αντοχή
   tutorial_kcjskiing_name: 'Άθλημα + Κωδικός: Σκι'
   tutorial_groksecurity_name: 'Ασφάλεια στον κυβερνοχώρο: Άμυνα ενάντια στα σκοτεινά
     καπέλα'
@@ -12700,17 +12655,8 @@ el:
     καρφίτσα, ή ακόμα και ήχο.
   tutorial_3dmaker_longdescription: Φτιάξτε τα δικά σας πραγματικά δροσερά, περιστρεφόμενα,
     τρισδιάστατα αντικείμενα γρήγορα και εύκολα.
-  tutorial_itchstart_longdescription: Αυτό το μάθημα είναι ένα καλό σημείο εισόδου
-    για παιδιά βαθμού 2 ή 3 που δοκιμάζουν το Scratch για πρώτη φορά. Θα ξεκινήσουν
-    με ένα σύνολο 5 μπλοκ που πρέπει να συγκεντρώσουν για να κάνουν τον χαρακτήρα
-    τους να εκτελέσει κάποιες ενέργειες.
   tutorial_hopsub_longdescription: Μάθετε πώς να συνδυάζετε το πρόγραμμα με έναν φίλο
     ή συμμαθητή σας, και δημιουργήστε το δικό σας surfer του μετρό με χαρακτήρες Hopscotch!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, ένα πρόγραμμα που έχει προγραμματιστεί.
-    Προγραμματισμός και fondos, usarán bloques de eventos και apariencia για το dar
-    vida στο πρόγραμμα.
-  tutorial_itchtenacity_longdescription: Ένα proyecto πρόγραμμα προγραμματισμού και
-    Scratch το προσομοίωμα ενός ρομπότ que limpia las aguas marinas.
   tutorial_kcjskiing_longdescription: 'Είναι όλα διασκεδαστικά και παιχνίδια έως ότου
     κάποιος πέσει σε ένα δέντρο… ή είναι αυτό το διασκεδαστικό μέρος? Δέστε αυτά τα
     σκι και λυγίστε στα γόνατα καθώς καθοδηγείτε τον χαρακτήρα σας κάτω από έναν λόφο
@@ -13033,11 +12979,8 @@ el:
   tutorial_kodableshapes_language: ελληνικά
   tutorial_nasabinary_language: ελληνικά
   tutorial_3dmaker_language: ελληνικά
-  tutorial_itchstart_language: ελληνικά
   tutorial_hopsub_language: Κινέζικα (Απλοποιημένα), Αγγλικά, Ισπανικά (Ισπανία),
     Ισπανικά (Μεξικό)
-  tutorial_itchmundos_language: Ισπανικά (Μεξικό)
-  tutorial_itchtenacity_language: Ισπανικά (Μεξικό)
   tutorial_kcjskiing_language: Αγγλικά, Γαλλικά
   tutorial_groksecurity_language: ελληνικά
   tutorial_creaticode_language: Κινεζικά (Απλοποιημένα), Κινέζικα (Παραδοσιακά), Αγγλικά
@@ -13135,10 +13078,7 @@ el:
   tutorial_kodableshapes_string_detail_grades: Προ-αναγνώστης - Βαθμός 5
   tutorial_nasabinary_string_detail_grades: Βαθμοί 6+
   tutorial_3dmaker_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
-  tutorial_itchstart_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
   tutorial_hopsub_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
-  tutorial_itchmundos_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
-  tutorial_itchtenacity_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_kcjskiing_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_groksecurity_string_detail_grades: Βαθμοί 6+
   tutorial_creaticode_string_detail_grades: Βαθμοί 6+
@@ -13230,10 +13170,7 @@ el:
   tutorial_nasabinary_string_platforms: Αποσυνδεδεμένος, Αναγνώστης οθόνης
   tutorial_3dmaker_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, tablet
     Android, iPad, Windows τηλέφωνο, τηλέφωνο Android, iPhone
-  tutorial_itchstart_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
-  tutorial_itchtenacity_string_platforms: Ιστοσελίδα, Τάμπλετ Android, iPad
   tutorial_kcjskiing_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
   tutorial_groksecurity_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     tablet Android, iPad, Windows τηλέφωνο, τηλέφωνο Android, iPhone
@@ -13330,10 +13267,7 @@ el:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -13423,10 +13357,7 @@ el:
     γλώσσα (μπορεί να διδαχθεί σε πολλές γλώσσες)
   tutorial_nasabinary_string_detail_programming_languages: Δυαδικός κώδικας
   tutorial_3dmaker_string_detail_programming_languages: Μπλοκ
-  tutorial_itchstart_string_detail_programming_languages: Μπλοκ
   tutorial_hopsub_string_detail_programming_languages: Κουτσό
-  tutorial_itchmundos_string_detail_programming_languages: Μπλοκ
-  tutorial_itchtenacity_string_detail_programming_languages: Μπλοκ
   tutorial_kcjskiing_string_detail_programming_languages: Μπλοκ
   tutorial_groksecurity_string_detail_programming_languages: Κανένα - δεν απαιτείται
     προγραμματισμός
@@ -14515,7 +14446,7 @@ el:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy: μάθετε να προγραμματίζετε εύκολα'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -14602,6 +14533,16 @@ el:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Πάρτυ χορού
+  tutorial_introtomlai_name: Εισαγωγή στη Μηχανική Μάθηση
+  tutorial_computervisionai_name: Οραμα Υπολογιστών
+  tutorial_neuralnetworksai_name: Νευρωνικά δίκτυα
+  tutorial_chatbotsllmai_name: Chatbots και μεγάλα γλωσσικά μοντέλα
+  tutorial_generativeimagesai_name: Γενετικές εικόνες
+  tutorial_algorithmicbiasai_name: Αλγοριθμική προκατάληψη
+  tutorial_codeofethicsai_name: Ο Κώδικας Δεοντολογίας AI
+  tutorial_socimpactofgenaiai_name: Κοινωνικός αντίκτυπος της γενετικής τεχνητής νοημοσύνης
+  tutorial_generationai_name: Γενιά της Τεχνητής Νοημοσύνης
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14774,11 +14715,12 @@ el:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Το Hedy είναι ο εύκολος τρόπος για να ξεκινήσετε
+    με τις γλώσσες προγραμματισμού κειμένου! είναι δωρεάν στη χρήση, ανοιχτού κώδικα,
+    πολύγλωσσο, μπορείτε να χρησιμοποιήσετε το Hedy στη δική σας γλώσσα. είναι σταδιακή,
+    ώστε να μπορείτε να μάθετε μια έννοια και η σύνταξή της κάθε φορά είναι κατασκευασμένη
+    για την τάξη, επιτρέποντας στους δασκάλους να προσαρμόσουν πλήρως την εμπειρία
+    του μαθητή τους.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -15072,6 +15014,46 @@ el:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: Προγραμματίστε ένα Πάρτι Χορού για να μοιραστείτε
+    με τους φίλους σας. Συμμετέχουν οι Katy Perry, Madonna, J. Balvin, Sia, Keith
+    Urban, Ciara, και 25 άλλοι!
+  tutorial_introtomlai_longdescription: Μάθετε για μια μορφή τεχνητής νοημοσύνης που
+    ονομάζεται μηχανική μάθηση και πώς μπορούν να χρησιμοποιήσουν τη Διαδικασία Επίλυσης
+    Προβλημάτων για να βοηθήσουν στην εκπαίδευση ενός ρομπότ για την επίλυση προβλημάτων.
+    Συμμετέχετε σε δραστηριότητες μηχανικής μάθησης όπου ένα ρομπότ μαθαίνει πώς να
+    ανιχνεύει μοτίβα στα ψάρια.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Μάθετε πώς λειτουργούν τα νευρωνικά δίκτυα.
+    Χρησιμοποιήστε ένα widget για να εξερευνήσετε τα νευρωνικά δίκτυα σε ένα δρόμο.
+    Παρακολουθήστε ένα βίντεο που εξηγεί νευρωνικά δίκτυα. Τέλος, συζητήστε την ανάγκη
+    για διαφορετικές προοπτικές κατά τη δημιουργία συστημάτων συστάσεων.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Μάθετε πώς η τεχνητή νοημοσύνη μπορεί
+    να δημιουργήσει εικόνες, στη συνέχεια εξερευνήστε ένα widget διάχυσης AI και συζητήστε
+    εάν αυτά τα μοντέλα είναι δημιουργικά ή όχι.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Διερευνήστε τον αντίκτυπο της γενετικής
+    τεχνητής νοημοσύνης από διαφορετικές οπτικές γωνίες και, στη συνέχεια, συνεργαστείτε
+    ως ομάδα για να βρείτε οδηγίες που καλύπτουν τις περισσότερες ανάγκες όλων των
+    συμμετεχόντων.
+  tutorial_generationai_longdescription: 'Περιπλανήσου στον χρόνο για να δημιουργήσεις
+    τις εφευρέσεις σου με τη βοήθεια της τεχνητής νοημοσύνης στη νέα Ώρα του Κώδικα:
+    Γενιά της Τεχνητής Νοημοσύνης του Minecraft. Εξερεύνησε την επίλυση προβλημάτων,
+    δημιουργικότητα και υπολογιστική σκέψη για τη δημιουργία υπεύθυνης ΤΝ. Η Ώρα του
+    Κώδικα διδάσκει προγραμματισμό με κύβους ή Python, εκπαιδεύοντας για καλύτερη
+    ΤΝ για όλους.'
   tutorial_bsimage_string_detail_grades: Βαθμοί 6+
   tutorial_bscomputing_string_detail_grades: Βαθμοί 6+
   tutorial_stackpython_string_detail_grades: Βαθμοί 6+
@@ -15182,7 +15164,7 @@ el:
   tutorial_hwfanpage_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_hwillusion_string_detail_grades: Βαθμοί 6+
   tutorial_caevolution_string_detail_grades: Βαθμοί 6+
-  tutorial_bbbusybot_string_detail_grades: Βαθμοί 6+
+  tutorial_bbbusybot_string_detail_grades: 'Τάξεις: από Τρίτη Γυμνασίου και άνω'
   tutorial_caaifarm_string_detail_grades: Βαθμοί 6+
   tutorial_cafuture_string_detail_grades: Βαθμοί 6+
   tutorial_dmscratch_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
@@ -15214,6 +15196,16 @@ el:
   tutorial_madmobile_string_detail_grades: Βαθμοί 6+
   tutorial_intelinosmile_string_detail_grades: Προ-αναγνώστης - Βαθμός 8
   tutorial_intelinoaisign_string_detail_grades: Β έως Ε Δημοτικού (ηλικίες 7-10)
+  tutorial_danceai2023_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
+  tutorial_introtomlai_string_detail_grades: Βαθμοί 6+
+  tutorial_computervisionai_string_detail_grades: Βαθμοί 6+
+  tutorial_neuralnetworksai_string_detail_grades: Βαθμοί 6+
+  tutorial_chatbotsllmai_string_detail_grades: Βαθμοί 6+
+  tutorial_generativeimagesai_string_detail_grades: Βαθμοί 6+
+  tutorial_algorithmicbiasai_string_detail_grades: Βαθμοί 6+
+  tutorial_codeofethicsai_string_detail_grades: Βαθμοί 6+
+  tutorial_socimpactofgenaiai_string_detail_grades: Βαθμοί 6+
+  tutorial_generationai_string_detail_grades: 'Τάξεις: από Δευτέρα Δημοτικού και άνω'
   tutorial_bsimage_string_platforms: Chrome, Firefox, Σαφάρι
   tutorial_bscomputing_string_platforms: Αποσυνδεδεμένο
   tutorial_stackpython_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, tablet
@@ -15381,6 +15373,26 @@ el:
   tutorial_intelinosmile_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
     iPad
   tutorial_intelinoaisign_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης
+  tutorial_danceai2023_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, Android
+    tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_introtomlai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης, Android
+    tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_computervisionai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_neuralnetworksai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_chatbotsllmai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_generativeimagesai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_codeofethicsai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Όλα τα σύγχρονα προγράμματα περιήγησης,
+    Android tablet, iPad, Android τηλέφωνο, iPhone
+  tutorial_generationai_string_platforms: Δισκίο Android, iPad, Windows τηλέφωνο,
+    τηλέφωνο Android, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -15512,6 +15524,16 @@ el:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
   tutorial_stackpython_string_detail_programming_languages: Πύθων
@@ -15637,12 +15659,22 @@ el:
   tutorial_codecombathack_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
   tutorial_toxicodewords_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
   tutorial_mitstepmisinformation_string_detail_programming_languages: Αποσυνδεδεμένο
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Αποσυνδεδεμένο
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Αποσυνδεδεμένο
   tutorial_mitstepintrotoml_string_detail_programming_languages: Αποσυνδεδεμένο
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Μπλοκ
   tutorial_intelinoaisign_string_detail_programming_languages: Μπλοκ
+  tutorial_danceai2023_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_introtomlai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_computervisionai_string_detail_programming_language: Ανεξαρτήτως γλώσσας
+  tutorial_neuralnetworksai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_chatbotsllmai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_generativeimagesai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_codeofethicsai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Ανεξαρτήτως γλώσσας
+  tutorial_generationai_string_detail_programming_languages: Blocks, Python
   school_not_found_heading: Δεν μπορέσαμε να βρούμε το σχολείο σου. Παρακαλώ εισάγετε
     περισσότερες πληροφορίες.
   school_name: Όνομα σχολείου
@@ -15790,6 +15822,10 @@ el:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Ποιες είναι οι προϋποθέσεις για να κάνετε
     μια Ώρα Κώδικα;
   hoc_how_to_faq_answer_prerequisites: Η Ώρα του Κώδικα είναι απλή στην εκτέλεση -
@@ -16256,6 +16292,44 @@ el:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Οποιοσδήποτε μπορεί να μάθει για την τεχνητή νοημοσύνη, είτε είστε
     μαθητής στην τάξη είτε εκπαιδευτικός που ξεκλειδώνει το μέλλον της διδασκαλίας
     με και για την τεχνητή νοημοσύνη.
@@ -16275,6 +16349,37 @@ el:
   hoc_ai_activities_desc: Αυτές οι ολοκαίνουργιες δραστηριότητες Hour of Code εισάγουν
     τους χρήστες στον κόσμο της τεχνητής νοημοσύνης με έναν διασκεδαστικό και συναρπαστικό
     τρόπο.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Σχεδόν 100 υπάλληλοι της Code.org με ταιριαστά μπλε
     και κίτρινα μπλουζάκια ποζάρουν σε μια αίθουσα συνεδριάσεων ξενοδοχείου για την
     καλοκαιρινή εκδήλωση Codechella της εταιρείας το 2022.
@@ -16964,9 +17069,10 @@ el:
     Είμαστε ευγνώμονες που επωφεληθήκαμε από την ακούραστη βοήθεια της ευρύτερης κοινότητας
     εκπαίδευσης στην επιστήμη των υπολογιστών, και [ευχαριστούμε όλους τους συνεργάτες
     και τα άτομα που υποστήριξαν τον αντίκτυπό μας όλα αυτά τα χρόνια] (%{partners_url})).
-  about_page_section_more_list_1: "[Ετήσια Έκθεση Code.org 2021] (%{report_url}) (Προηγούμενες
-    εκθέσεις: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Οι βασικές μας αξίες και οι οδηγίες ανταλλαγής
     μηνυμάτων] (%{core_url})"
   about_page_section_more_list_3: "[Το πρόγραμμα σπουδών και η παιδαγωγική φιλοσοφία

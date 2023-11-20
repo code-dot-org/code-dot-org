@@ -1023,6 +1023,26 @@
         "csc_animal_adaptations_bugs2": {
           "hello_world_behavior_blocks": "השתמשו בבלוק זה בשילוב אחת מההתנהגויות שמתחת"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ השתמשו בבלוק הזה.",
+          "dance_callout_02": "הוסיפו כאן את הבלוק \"יצירת אפקט ב-AI\"."
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ השתמשו בבלוק הזה.",
+          "dance_callout_02": "הוסיפו תנועת ריקוד."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "לחצו כאן."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ התחילו כאן."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ השתמשו בבלוק הזה."
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ השתמשו בבלוק הזה."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "השתמשו בבלוק הזה כדי ליצור דמות",
           "hello_world_say": "השתמשו בבלוק הזה כדי לגרום לדמויות לדבר"

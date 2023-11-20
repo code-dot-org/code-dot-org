@@ -218,6 +218,7 @@ ps:
   for_students_teacher_led_learning: 'د محصلینو لپاره: د ښوونکو مشري زده کړه'
   for_students_teacher_led_lessons: 'د محصلینو لپاره: د ښوونکو مشري درسونه'
   professional_development: مسلکي پرمختګ
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -316,6 +317,8 @@ ps:
   call_to_action_try_hoc_ai_activities: د کوډ AI فعالیتونو ساعته هڅه وکړئ
   call_to_action_explore_activities: فعالیتونه وپلټئ
   call_to_action_explore_ai: AI وپلټئ
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: وسیله وپلټئ
   call_to_action_explore_unit: واحد وپلټئ
   call_to_action_explore_curriculum: نصاب وپلټئ
   call_to_action_explore_curricula: درسي نصابونه وپلټئ
@@ -683,6 +686,7 @@ ps:
   module_label_accessibility_features_full: 'د لاسرسي ځانګړتیاوې:'
   module_label_educator_tool: ښوونکی وسیله
   module_label_educator_course: د ښوونکي کورس
+  module_label_educator_resources: Educator resources
   module_label_student_tool: د زده کونکي وسیله
   module_label_student_product: د محصول د
   module_label_student_content_resources: مینځپانګه او سرچینې
@@ -691,6 +695,7 @@ ps:
   module_label_available_now: اوس شتون لري
   module_label_video_series: د ویډیو لړۍ
   module_label_self_paced: د ځان سرعت ماډل
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: ۷-۱۸
@@ -3488,19 +3493,14 @@ ps:
   tutorial_csfirstdialogue_name: خبرې اترې
   tutorial_codemonkeybeaver_name: بیور لاسته راوړونکی
   tutorial_codestersdistance_name: 'کوډسټرې: د ټولنیز واټن سپریټونه'
-  tutorial_itchspace_name: 'ITCHCode: د فضا برید کونکي - RokCoder'
   tutorial_vidcodemagic_name: SFX جادو
   tutorial_vidcodemagices_name: SFX جادو
   tutorial_codespeakmeal_name: د صحي خواړو ایپ کوډ کړئ
-  tutorial_itchfish_name: 'ItchCode: د کب نیولو لوبه'
   tutorial_bsdwebsite_name: زما د خوښې ویب پا. ه
   tutorial_codespeaktime_name: په سکریچ کې د وخت کیپسول کوډ
-  tutorial_itchwebcam_name: 'ITCHCode: د ویب کیم وده شوی حقیقت'
-  tutorial_itchball_name: 'د خارش کوډ: د توپ اچول'
   tutorial_ttrace_name: د ریس حالت
   tutorial_plethora_name: 'پراخه کول: لامل او اغیز'
   tutorial_educodesecret_name: د ادارې رازونه خلاص کړئ!
-  tutorial_itchshapes_name: 'د خارش کوډ: شکلونه او زاویې'
   tutorial_codeguppytext_name: د متن پر بنسټ کوډینګ پیژندنه
   tutorial_vidcodeplastiche_name: پلاستيکي ککړتيا د پيکېنګ
   tutorial_educativechatbot_name: په پیتون کې خپل چیټ بوټ جوړ کړئ
@@ -3524,7 +3524,6 @@ ps:
   tutorial_codecapture_name: په جیفي کې د جاواسکریپټ سره برنامه کول زده کړئ
   tutorial_codehslitter_name: د لیټر فری ټولنې لپاره کوډ کول
   tutorial_bsdocean_name: د اوبو لاندې ژوند
-  tutorial_itchplatformer_name: 'د خارش کوډ: د سکریچ 3.0 پلیټ فارم لارښود'
   tutorial_codejika_name: 'کوډجیکا: د 5 دقیقې ویب پاڼه'
   tutorial_gamefrootclicker_name: متغیرونه زده کړئ. خپله د کلیکر لوبه کوډ کړئ.
   tutorial_rmagicequity_name: مساوات په وړاندې مساوات
@@ -7280,19 +7279,12 @@ ps:
   tutorial_codestersdistance_longdescription: په پایتون کې د کوډ کولو اساسات زده کړئ،
     بیا یو برنامه رامینځته کړئ چې د دوه سپیریټونو ترمینځ فاصله محاسبه کوي ترڅو ډاډ
     ترلاسه کړي چې دوی ټولنیز واټن لري یا ماسک اغوستلو ته اړتیا لري.
-  tutorial_itchspace_longdescription: دا لارښود تاسو د سکریچ MIT برنامې ژبې په کارولو
-    سره د کلاسیک فضا برید کونکي لوبې رامینځته کولو له لارې نیسي. د نورو سکریچ میشته
-    ویډیوګانو او ښوونو لپاره د RokCoder یوټیوب چینل کې ګډون وکړئ! هره ویډیو د کاټ
-    اندازې ټیوټوریل دی (نږدې لس دقیقې اوږدوالی) چې خپل ځانګړي پای اهداف لري. وروستۍ
-    پایله د لوړ کیفیت سکریچ آرکیډ لوبه ده.
   tutorial_vidcodemagic_longdescription: د لوپ په کارولو سره د سکرین شاوخوا په تصادفي
     ډول روښانه کړئ.
   tutorial_vidcodemagices_longdescription: د لوپ په کارولو سره د سکرین شاوخوا په تصادفي
     ډول روښانه کړئ.
   tutorial_codespeakmeal_longdescription: د یو اپلیکیشن کوډ کول زده کړئ چې کاروونکو
     سره د صحي خواړو پریکړې کولو کې مرسته کوي.
-  tutorial_itchfish_longdescription: د شارک تعقیب او کب نیولو سره د لوبې جوړولو لپاره
-    سکریچ 3.0 لارښود ګډوډ شوی کله چې یو غوطه په ناڅاپي ډول وخوړل شي.
   tutorial_bsdwebsite_longdescription: 'دا کورس زده کونکو ته اجازه ورکوي چې کوډ د
     یوې لارې په توګه وکاروي ترڅو هغه څه شریک کړي چې دوی ته مهم یا په زړه پوري دي.
     دوی کولی شي درس تعقیب کړي یا ځانګړي پروژې رامینځته کړي پداسې حال کې چې HTML، CSS
@@ -7301,10 +7293,6 @@ ps:
     کولو باندې تمرکز کوي چې تاسو یې علاقه لرئ یا یې کولو سره مینه لرئ. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: د ډیجیټل وخت کیپسول کوډ کولو څرنګوالي زده
     کړئ ترڅو همدا اوس خپل ژوند ثبت او منعکس کړئ.
-  tutorial_itchwebcam_longdescription: د پرمختللي واقعیت په اړه زده کړه وکړئ او خپل
-    لوړ شوي واقعیت مجازی ځای جوړ کړئ.
-  tutorial_itchball_longdescription: د سکرین شاوخوا اچولو لپاره یو بال ترلاسه کړئ.
-    په لوپونو کې د لوپونو او شرایطو په اړه زده کړه وکړئ.
   tutorial_ttrace_longdescription: د دندو په زنګ وهلو او د ټولګیو ډیزاین کولو سره،
     لوبغاړي خپل ریس موټر برنامه کوي ترڅو ګړندی، ځناور او ځواکمن وي؛ د ریسونو په جریان
     کې، دوی بیا کولی شي د خپلو کنټرولونو له مینځه وړلو لپاره د خپلو سیالانو وسایط
@@ -7315,8 +7303,6 @@ ps:
     تاسو زده کړې ته ژور ډوب شئ که بیانات، تارونه، د لوپونو لپاره. د مرستې اجنټ سمیټ
     مجرمین ومومئ او د پیتون سره د دوی نوي کاروونکو لپاره د ادارې عملیاتي سیسټم تنظیم
     کړئ.
-  tutorial_itchshapes_longdescription: زده کړئ چې څنګه په سکریچ کې شکلونه رسم کړئ.
-    تاسو به دا هم زده کړئ چې څنګه محاسبه کړئ چې تاسو د کوم شکل لپاره څومره اړتیا لرئ.
   tutorial_codeguppytext_longdescription: په آنلاین کوډینګ ایډیټر کې د خپل لومړي برنامې
     رامینځته کولو سره د متن پراساس کوډ کولو اساسات زده کړئ.
   tutorial_vidcodeplastiche_longdescription: زموږ د سمندرونو ډکولو پلاستیک ستونزه
@@ -7395,8 +7381,6 @@ ps:
   tutorial_bsdocean_longdescription: د اوبو لاندې ژوند په یوه فشار مسله باندې ر lightا
     اچوي چې نن ورځ موږ ورسره مخ یو - زموږ چاپیریال. دا پروژه تاسو ته لارښود کولو باندې
     تمرکز کوي ترڅو زموږ د اوبو خوندي کولو لپاره خپله ویب پا code ه کوډ کړئ.
-  tutorial_itchplatformer_longdescription: د سکریچ په کارولو سره د ساده پلیټ فارمر
-    لوبې رامینځته کولو څرنګوالي لپاره لارښود تعقیب کول اسانه.
   tutorial_codejika_longdescription: د HTML او CSS په کارولو سره د کوډ کولو عالي پیژندنه.
     یو څو لینونه کوډ کړئ، د دوه رنګ تدریجي شالید، نوم او ویب پا launchې لانچ نیټې
     سره د ښې لینډینګ پا createې رامینځته کولو سره سمدستي محصول وګورئ Hows او Whys
@@ -8187,19 +8171,14 @@ ps:
   tutorial_csfirstdialogue_string_detail_grades: ټولګي 2-8
   tutorial_codemonkeybeaver_string_detail_grades: مخکې لوستونکی - 5 ټولګي
   tutorial_codestersdistance_string_detail_grades: ټولګي 6+
-  tutorial_itchspace_string_detail_grades: ټولګي 6+
   tutorial_vidcodemagic_string_detail_grades: 2+ درجې
   tutorial_vidcodemagices_string_detail_grades: 2+ درجې
   tutorial_codespeakmeal_string_detail_grades: ټولګي 6+
-  tutorial_itchfish_string_detail_grades: ټولګي 2-8
   tutorial_bsdwebsite_string_detail_grades: ټولګي 6+
   tutorial_codespeaktime_string_detail_grades: ټولګي 2-8
-  tutorial_itchwebcam_string_detail_grades: ټولګي 6+
-  tutorial_itchball_string_detail_grades: ټولګي 2-8
   tutorial_ttrace_string_detail_grades: 6-8 درجې
   tutorial_plethora_string_detail_grades: 2+ درجې
   tutorial_educodesecret_string_detail_grades: ټولګي 6+
-  tutorial_itchshapes_string_detail_grades: ټولګي 6+
   tutorial_codeguppytext_string_detail_grades: 6-8 درجې
   tutorial_vidcodeplastiche_string_detail_grades: ټولګي 6+
   tutorial_educativechatbot_string_detail_grades: ټولګي 9+
@@ -8221,7 +8200,6 @@ ps:
   tutorial_codecapture_string_detail_grades: ټولګي 6+
   tutorial_codehslitter_string_detail_grades: 6-8 درجې
   tutorial_bsdocean_string_detail_grades: 6-8 درجې
-  tutorial_itchplatformer_string_detail_grades: ټولګي 6+
   tutorial_codejika_string_detail_grades: ټولګي 6+
   tutorial_gamefrootclicker_string_detail_grades: 6-8 درجې
   tutorial_rmagicequity_string_detail_grades: 6-8 درجې
@@ -9031,21 +9009,16 @@ ps:
   tutorial_codemonkeybeaver_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
     iPad
   tutorial_codestersdistance_string_platforms: ټول عصري براوزرونه، د سکرین لوستونکی
-  tutorial_itchspace_string_platforms: ټول عصري براوزرونه
   tutorial_vidcodemagic_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
     د سکرین لوستونکی
   tutorial_vidcodemagices_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
     iPad، د سکرین لوستونکی
   tutorial_codespeakmeal_string_platforms: کروم، فایرفوکس
-  tutorial_itchfish_string_platforms: ټول عصري براوزرونه
   tutorial_bsdwebsite_string_platforms: کروم
   tutorial_codespeaktime_string_platforms: کروم، فایرفوکس
-  tutorial_itchwebcam_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
-  tutorial_itchball_string_platforms: ټول عصري براوزرونه
   tutorial_ttrace_string_platforms: کروم
   tutorial_plethora_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
   tutorial_educodesecret_string_platforms: ټول عصري براوزرونه
-  tutorial_itchshapes_string_platforms: ټول عصري براوزرونه
   tutorial_codeguppytext_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
   tutorial_vidcodeplastiche_string_platforms: ټول عصري براوزرونه، iPad
   tutorial_educativechatbot_string_platforms: ټول عصري براوزرونه
@@ -9072,7 +9045,6 @@ ps:
   tutorial_codehslitter_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
     وینډوز تلیفون، Android تلیفون، آی فون
   tutorial_bsdocean_string_platforms: کروم
-  tutorial_itchplatformer_string_platforms: ټول عصري براوزرونه
   tutorial_codejika_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
     وینډوز تلیفون، Android تلیفون، آی فون
   tutorial_gamefrootclicker_string_platforms: ټول عصري براوزرونه، iPad
@@ -9726,19 +9698,14 @@ ps:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9760,7 +9727,6 @@ ps:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10446,20 +10412,15 @@ ps:
   tutorial_csfirstdialogue_string_detail_programming_languages: بلاکونه، سکریچ
   tutorial_codemonkeybeaver_string_detail_programming_languages: بلاکونه
   tutorial_codestersdistance_string_detail_programming_languages: پیتون
-  tutorial_itchspace_string_detail_programming_languages: بلاکونه
   tutorial_vidcodemagic_string_detail_programming_languages: جاواسکریپټ
   tutorial_vidcodemagices_string_detail_programming_languages: جاواسکریپټ
   tutorial_codespeakmeal_string_detail_programming_languages: جاواسکریپټ
-  tutorial_itchfish_string_detail_programming_languages: بلاکونه
   tutorial_bsdwebsite_string_detail_programming_languages: جاواسکریپټ، HTML، CSS
   tutorial_codespeaktime_string_detail_programming_languages: بلاکونه
-  tutorial_itchwebcam_string_detail_programming_languages: بلاکونه
-  tutorial_itchball_string_detail_programming_languages: بلاکونه
   tutorial_ttrace_string_detail_programming_languages: جاواسکریپټ، کافي سکریپټ
   tutorial_plethora_string_detail_programming_languages: ژبه خپلواکه (په ګ multiple
     ژبو کې تدریس کیدی شي)
   tutorial_educodesecret_string_detail_programming_languages: پیتون
-  tutorial_itchshapes_string_detail_programming_languages: بلاکونه
   tutorial_codeguppytext_string_detail_programming_languages: جاواسکریپټ
   tutorial_vidcodeplastiche_string_detail_programming_languages: جاواسکریپټ
   tutorial_educativechatbot_string_detail_programming_languages: پیتون
@@ -10484,7 +10445,6 @@ ps:
   tutorial_codecapture_string_detail_programming_languages: جاواسکریپټ
   tutorial_codehslitter_string_detail_programming_languages: پیتون، HTML
   tutorial_bsdocean_string_detail_programming_languages: جاواسکریپټ، HTML، CSS
-  tutorial_itchplatformer_string_detail_programming_languages: بلاکونه
   tutorial_codejika_string_detail_programming_languages: جاواسکریپټ، HTML، CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: بلاکونه
   tutorial_rmagicequity_string_detail_programming_languages: بلاکونه، جاواسکریپټ
@@ -11435,10 +11395,7 @@ ps:
   tutorial_kodableshapes_name: د کوډ سره شکلونه جوړ کړئ
   tutorial_nasabinary_name: 'بائنری کوډ: د فضايي الوتکې سره څنګه خبرې وکړئ'
   tutorial_3dmaker_name: 3D جوړونکی
-  tutorial_itchstart_name: 'د ایچ کوډ: سکریچ 5 بلاک سټارټر'
   tutorial_hopsub_name: د ملګري سره سب ویز سرفرز جوړ کړئ
-  tutorial_itchmundos_name: لاس مونډوز en mi Mundo_e2
-  tutorial_itchtenacity_name: ټينګښت
   tutorial_kcjskiing_name: 'سپورټ + کوډ: سکیینګ'
   tutorial_groksecurity_name: 'سایبر امنیت: د تیاره خولۍ پروړاندې دفاع'
   tutorial_creaticode_name: د سکریچ بلاکونو سره د 3D برنامه کول
@@ -11576,15 +11533,8 @@ ps:
     نوم ټګ، کڑا، پن، یا حتی غږ باندې وژباړئ.
   tutorial_3dmaker_longdescription: خپل واقعیا یخ، د گردش وړ، 3D شیان ګړندي او اسانه
     کړئ.
-  tutorial_itchstart_longdescription: دا درس د 2 یا 3 درجې ماشومانو لپاره د ننوتلو
-    ښه ځای دی چې یوازې د لومړي ځل لپاره د سکریچ هڅه کوي. دوی به د 5 بلاکونو سیټ سره
-    پیل وکړي چې دوی اړتیا لري یوځای کړي ترڅو خپل کرکټر ځینې کړنې ترسره کړي.
   tutorial_hopsub_longdescription: د ملګري یا ټولګیوال سره برنامه جوړه کولو څرنګوالي
     زده کړئ، او د هاپسکاچ کرکټرونو سره خپل سب ویز سرفر رامینځته کړئ!
-  tutorial_itchmundos_longdescription: د سکریچ کنوکر، د برنامو لپاره یو هیرامپ. اګرګرن
-    څیزونه y فونډوس، یوساران بلاکس دی ایونتوس y apariencia پارا ډار ویدا یو سو پروګرام.
-  tutorial_itchtenacity_longdescription: دا یو برنامه او سکریچ یو روبوټ دی چې لیمپیا
-    لاس اګواس ماریناس دی.
   tutorial_kcjskiing_longdescription: 'دا ټول ساتیري او لوبې دي تر هغه چې څوک په ونې
     کې ټکر وکړي… یا ایا دا د ساتیرۍ برخه ده؟ په دې سکي باندې پټه کړئ او په زنګونونو
     کې وخورئ ځکه چې تاسو خپل کرکټر د دې سکریچ فعالیت کې د کوډ په کارولو سره د منجمد
@@ -11864,11 +11814,8 @@ ps:
   tutorial_kodableshapes_language: پښتو
   tutorial_nasabinary_language: پښتو
   tutorial_3dmaker_language: پښتو
-  tutorial_itchstart_language: پښتو
   tutorial_hopsub_language: چینایی (ساده شوی)، انګلیسي، هسپانوي (هسپانیه)، هسپانوي
     (میکسیکو)
-  tutorial_itchmundos_language: هسپانوي (میکسیکو)
-  tutorial_itchtenacity_language: هسپانوي (میکسیکو)
   tutorial_kcjskiing_language: انګلیسي، فرانسوي
   tutorial_groksecurity_language: پښتو
   tutorial_creaticode_language: چینایی (ساده شوی)، چینایی (دودیز)، انګلیسي
@@ -11961,10 +11908,7 @@ ps:
   tutorial_kodableshapes_string_detail_grades: مخکې لوستونکی - 5 ټولګي
   tutorial_nasabinary_string_detail_grades: ټولګي 6+
   tutorial_3dmaker_string_detail_grades: ټولګي 2-8
-  tutorial_itchstart_string_detail_grades: ټولګي 2-8
   tutorial_hopsub_string_detail_grades: ټولګي 2-8
-  tutorial_itchmundos_string_detail_grades: 2+ درجې
-  tutorial_itchtenacity_string_detail_grades: 2+ درجې
   tutorial_kcjskiing_string_detail_grades: 2+ درجې
   tutorial_groksecurity_string_detail_grades: ټولګي 6+
   tutorial_creaticode_string_detail_grades: ټولګي 6+
@@ -12055,10 +11999,7 @@ ps:
   tutorial_nasabinary_string_platforms: غیر پلګ شوی، د سکرین لوستونکی
   tutorial_3dmaker_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad، وینډوز
     تلیفون، Android تلیفون، آی فون
-  tutorial_itchstart_string_platforms: ټول عصري براوزرونه، iPad
   tutorial_hopsub_string_platforms: آی پیډ، آی فون
-  tutorial_itchmundos_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
-  tutorial_itchtenacity_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
   tutorial_kcjskiing_string_platforms: ټول عصري براوزرونه
   tutorial_groksecurity_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
     وینډوز تلیفون، Android تلیفون، آی فون
@@ -12153,10 +12094,7 @@ ps:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12246,10 +12184,7 @@ ps:
     (په ډیری ژبو کې تدریس کیدی شي)
   tutorial_nasabinary_string_detail_programming_languages: بائنری کوډ
   tutorial_3dmaker_string_detail_programming_languages: بلاکونه
-  tutorial_itchstart_string_detail_programming_languages: بلاکونه
   tutorial_hopsub_string_detail_programming_languages: هپسکاچ
-  tutorial_itchmundos_string_detail_programming_languages: بلاکونه
-  tutorial_itchtenacity_string_detail_programming_languages: بلاکونه
   tutorial_kcjskiing_string_detail_programming_languages: بلاکونه
   tutorial_groksecurity_string_detail_programming_languages: هیڅ نه - هیڅ پروګرام
     ته اړتیا نشته
@@ -13348,6 +13283,16 @@ ps:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: د نڅا ګوند
+  tutorial_introtomlai_name: د ماشین زده کړې پیژندنه
+  tutorial_computervisionai_name: د کمپیوټر لید
+  tutorial_neuralnetworksai_name: عصبي شبکې
+  tutorial_chatbotsllmai_name: چیټ بوټس او د ژبې لوی ماډلونه
+  tutorial_generativeimagesai_name: تولیدونکی انځورونه
+  tutorial_algorithmicbiasai_name: الګوریتمیک تعصب
+  tutorial_codeofethicsai_name: زموږ د AI اخالقي قانون
+  tutorial_socimpactofgenaiai_name: د جنراتیو AI ټولنیز اغیزه
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13818,6 +13763,42 @@ ps:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: د خپلو ملګرو سره شریکولو لپاره د نڅا ګوند
+    کوډ کړئ. د بیونسي، لیزو، هیري سټایلونو، لیل ناس ایکس، سیلینا ګومز، د ډیزني 'اینکانټو'
+    څخه میوزیک، او نور ډیر څه وړاندې کول!
+  tutorial_introtomlai_longdescription: د ماشین زده کړې په نوم د مصنوعي استخباراتو
+    یوې ب aboutې په اړه زده کړئ او دا چې دوی څنګه کولی شي د ستونزو حل کولو لپاره د
+    روبوټ روزلو کې مرسته کولو لپاره د ستونزې حل کولو پروسه وکاروي. د ماشین زده کړې
+    فعالیتونو کې برخه واخلئ چیرې چې روبوټ په کب کې د نمونو موندلو څرنګوالي زده کوي.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: زده کړئ چې عصبي شبکې څنګه کار کوي. په
+    لاره کې د عصبي شبکو سپړلو لپاره ویجټونه وکاروئ. یو ویډیو وګورئ چې عصبي شبکې تشریح
+    کوي. په نهایت کې د وړاندیز سیسټمونو رامینځته کولو پرمهال د مختلف لیدونو اړتیا
+    باندې بحث وکړئ.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: زده کړئ چې څنګه AI کولی شي عکسونه رامینځته
+    کړي، بیا د توزیع AI ویجټ وپلټئ او بحث وکړئ چې ایا دا ماډلونه تخلیقي دي یا نه.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: د مختلفو لیدلو څخه د جنراتیو AI اغیزې
+    څیړنه کړئ، بیا د ټیم په توګه همکاري وکړئ ترڅو لارښوونونو سره راشي چې د ټولو ګډونوالو
+    څخه
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: ټولګي 6+
   tutorial_bscomputing_string_detail_grades: ټولګي 6+
   tutorial_stackpython_string_detail_grades: ټولګي 6+
@@ -13919,7 +13900,7 @@ ps:
   tutorial_hwfanpage_string_detail_grades: 2+ درجې
   tutorial_hwillusion_string_detail_grades: ټولګي 6+
   tutorial_caevolution_string_detail_grades: ټولګي 6+
-  tutorial_bbbusybot_string_detail_grades: ټولګي 6+
+  tutorial_bbbusybot_string_detail_grades: ټولګي 9+
   tutorial_caaifarm_string_detail_grades: ټولګي 6+
   tutorial_cafuture_string_detail_grades: ټولګي 6+
   tutorial_dmscratch_string_detail_grades: ټولګي 2-8
@@ -13949,6 +13930,16 @@ ps:
   tutorial_madmobile_string_detail_grades: ټولګي 6+
   tutorial_intelinosmile_string_detail_grades: مخکې لوستونکی - 8 ټولګي
   tutorial_intelinoaisign_string_detail_grades: ټولګي 2-8
+  tutorial_danceai2023_string_detail_grades: 2+ درجې
+  tutorial_introtomlai_string_detail_grades: ټولګي 6+
+  tutorial_computervisionai_string_detail_grades: ټولګي 6+
+  tutorial_neuralnetworksai_string_detail_grades: ټولګي 6+
+  tutorial_chatbotsllmai_string_detail_grades: ټولګي 6+
+  tutorial_generativeimagesai_string_detail_grades: ټولګي 6+
+  tutorial_algorithmicbiasai_string_detail_grades: ټولګي 6+
+  tutorial_codeofethicsai_string_detail_grades: ټولګي 6+
+  tutorial_socimpactofgenaiai_string_detail_grades: ټولګي 6+
+  tutorial_generationai_string_detail_grades: 2+ درجې
   tutorial_bsimage_string_platforms: کروم، فایرفوکس، سفاري
   tutorial_bscomputing_string_platforms: بې پلګ شوی
   tutorial_stackpython_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
@@ -14116,6 +14107,26 @@ ps:
   tutorial_madmobile_string_platforms: ټول عصري براوزرونه
   tutorial_intelinosmile_string_platforms: ټول عصري براوزرونه، iPad
   tutorial_intelinoaisign_string_platforms: ټول عصري براوزرونه
+  tutorial_danceai2023_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
+    Android تلیفون، iPhone
+  tutorial_introtomlai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
+    Android تلیفون، iPhone
+  tutorial_computervisionai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_neuralnetworksai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_chatbotsllmai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
+    Android تلیفون، iPhone
+  tutorial_generativeimagesai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_algorithmicbiasai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_codeofethicsai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_socimpactofgenaiai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ،
+    iPad، Android تلیفون، iPhone
+  tutorial_generationai_string_platforms: اندروید ټابلیټ، iPad، وينډوز تليفون، اندروید
+    تليفون، iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14247,6 +14258,16 @@ ps:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: ژبه خپلواکه
   tutorial_stackpython_string_detail_programming_languages: پیتون
@@ -14372,12 +14393,22 @@ ps:
   tutorial_codecombathack_string_detail_programming_languages: ژبه خپلواکه
   tutorial_toxicodewords_string_detail_programming_languages: ژبه خپلواکه
   tutorial_mitstepmisinformation_string_detail_programming_languages: بې پلګ شوی
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: بې پلګ شوی
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: بې پلګ شوی
   tutorial_mitstepintrotoml_string_detail_programming_languages: بې پلګ شوی
   tutorial_naflogo_string_detail_programming_languages: جاواسکریپټ
   tutorial_madmobile_string_detail_programming_languages: جاواسکریپټ، HTML، CSS
   tutorial_intelinosmile_string_detail_programming_languages: بلاکونه
   tutorial_intelinoaisign_string_detail_programming_languages: بلاکونه
+  tutorial_danceai2023_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_introtomlai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_computervisionai_string_detail_programming_language: ژبه خپلواکه
+  tutorial_neuralnetworksai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_chatbotsllmai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_generativeimagesai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_algorithmicbiasai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_codeofethicsai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: ژبه خپلواکه
+  tutorial_generationai_string_detail_programming_languages: بلاکونه، پیتون
   school_not_found_heading: موږ ستاسو ښوونځی ونه موندو. مهرباني وکړئ نور معلومات دننه
     کړئ.
   school_name: د ښوونځي نوم
@@ -14517,6 +14548,10 @@ ps:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: د کوډ یو ساعت ترسره کولو شرطونه کوم دي؟
   hoc_how_to_faq_answer_prerequisites: د کوډ ساعت د چلولو لپاره ساده دی - حتی د پیل
     کونکو لپاره. تاسو د کمپیوټر ساینس یا تدریس کې تجربې ته اړتیا نلرئ ترڅو زده کونکي
@@ -14954,6 +14989,44 @@ ps:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: هر څوک کولی شي د AI په اړه زده کړه، ایا تاسو په کلاس کې زده کوونکی
     یاست یا یو ښوونکی د AI سره او په اړه د تدریس راتلونکی خلاص کړئ.
   hoc_ai_how_ai_works_video_series_desc: د لنډو ویډیوونو دا لړۍ به تاسو ته معرفي کړئ
@@ -14968,6 +15041,37 @@ ps:
     ذهنیت اغیزو څیړنه کوي او زده کوونکو بلنه کوي چې د AI د ځینو مسلو
   hoc_ai_activities_desc: دا ټول نوي ساعته د کوډ فعالیتونه کاروونکي د مصنوعي ذهنیت
     نړۍ ته په تفریحي، ښکیلونکی لاره کې معرفي کوي
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: نږدې 100 Code.org کارمندان د نیلي او ژیړ ټي شرټونو
     سره سمون لري د شرکت دوبي 2022 کوډچیلا پیښې لپاره د هوټل کنفرانس خونه کې پوز کوي.
   careers_page_code_pride_alt_text: دوه ښځینه وړاندې کونکي کارمندان موسکا کوي پداسې
@@ -15556,9 +15660,10 @@ ps:
     تمویل او خپرولو کې مرسته کړې. موږ مننه کوو چې د پراخه کمپیوټر ساینس زده کړې ټولنې
     د بې ستړې مرستې څخه ګټه پورته کوو، او [موږ د ټولو ملګرو او اشخاصو څخه مننه کوو
     چې د کلونو په اوږدو کې زموږ اغیزې ملاتړ کړې] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 کلنۍ راپور] (%{report_url}) (تیرې
-    راپورونه: [2020](%{past_url_1})، [2019](%{past_url_2})، [2018](%{past_url_3})،
-    [2017](%{past_url_4})، [2016]()%{past_url_5})، [2015](%{past_url_6})، [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[زموږ اصلي ارزښتونه او د پیغام رسولو لارښوونې]
     (%{core_url})"
   about_page_section_more_list_3: "[زموږ نصاب او تدریس فلسفه] (%{curriculum_url})"

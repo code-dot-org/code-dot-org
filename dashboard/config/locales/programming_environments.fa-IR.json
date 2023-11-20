@@ -24,7 +24,7 @@
                 "circle": {
                   "palette_params": {
                     "radius": {
-                      "description": "شعاع دایره، در پیکسل."
+                      "description": "شعاع دایره، بر حسب پیکسل."
                     }
                   }
                 },
@@ -126,10 +126,10 @@
                 "rect": {
                   "palette_params": {
                     "height": {
-                      "description": "ارتفاع عمودی در پیکسل مستطیل."
+                      "description": "ارتفاع مستطیل بر حسب پیکسل."
                     },
                     "width": {
-                      "description": "عرض افقی در پیکسل مستطیل."
+                      "description": "عرض مستطیل بر حسب پیکسل."
                     },
                     "x": {
                       "description": "موقعیت x برحسب پیکسل گوشه سمت چپ بالای مستطیل برای ترسیم."
@@ -284,7 +284,7 @@
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
-                      "description": "مقدار بازگردانده شده توسط تابع setTimeOut برای لغو."
+                      "description": "مقدار به‌دست‌آمده از تابع setTimeOut برای لغو‌کردن."
                     }
                   }
                 },
@@ -564,7 +564,7 @@
             "turtle": {
               "expressions": {
                 "arcLeft": {
-                  "short_description": "لاکپشت را به سمت جلو و چپ در یک مسیر قوس دار ملایم حرکت میدهد."
+                  "short_description": "لاکپشت را در مسیری قوس‌دار و پیوسته، به سمت چپ جلو می‌برد."
                 },
                 "getX": {
                   "short_description": "مختصات x فعلی را بر حسب پیکسل لاک‌پشت دریافت می‌کند."
@@ -639,7 +639,7 @@
             "ui_controls": {
               "expressions": {
                 "button": {
-                  "short_description": "ایجاد یک دکمه بر روی صفحه نمایش برای نمایش متن ارائه شده و ارجاع شده توسط شناسه داده شده در محل پیش فرض (0,0)."
+                  "short_description": "دکمه‌ای روی صفحه ایجاد می‌کند که متن ارائه‌شده و ارجاع‌شده توسط شناسه موجود را در مکان پیش‌فرض (0,0) نشان می‌دهد."
                 },
                 "getProperty": {
                   "palette_params": {
@@ -748,6 +748,12 @@
                       "name": "انتخاب ماجراجویی خود"
                     }
                   }
+                },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
                 },
                 "getValue": {
                   "palette_params": {
@@ -1473,7 +1479,13 @@
             "variables": {
               "expressions": {
                 "assign_x": {
-                  "short_description": "یک مقدار به یکی از متغییر های موجود بدهید. برای مثال x=0;"
+                  "short_description": "یک مقدار به یکی از متغییرهای موجود بدهید. برای مثال x=0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
                 },
                 "includes": {
                   "palette_params": {

@@ -1555,6 +1555,12 @@ el:
         text: x συντεταγμένη του {SPRITE}
       gamelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': στερεό
+            '"liquid"': υγρό
+            '"gas"': αέριο
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:
