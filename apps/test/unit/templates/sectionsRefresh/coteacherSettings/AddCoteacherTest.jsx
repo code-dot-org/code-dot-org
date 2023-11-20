@@ -148,13 +148,15 @@ describe('AddCoteacher', () => {
   });
 
   it('shows error if add call fails', done => {
-    fetchSpy.returns(Promise.resolve({ok: false}));
+    fetchSpy.returns(
+      Promise.resolve({ok: false, statusText: 'Not Found', status: 404})
+    );
 
     const addSavedCoteacherSpy = sinon.spy();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).to.equal(
-        'An unknown error occured when adding pterodactyl@code.org as a coteacher.'
+        'invalid-email@code.org is not associated with a Code.org teacher account.'
       );
       expect(setCoteachersToAddSpy).not.to.have.been.called;
 
@@ -175,7 +177,7 @@ describe('AddCoteacher', () => {
         addSavedCoteacher={addSavedCoteacherSpy}
       />
     );
-    addTeacher(wrapper, 'pterodactyl@code.org');
+    addTeacher(wrapper, 'invalid-email@code.org');
   });
 
   it('trims email for validation', done => {

@@ -7,7 +7,6 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
-import experiments from '@cdo/apps/util/experiments';
 import style from './hoc-guide-dialogue.module.scss';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
@@ -82,7 +81,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
 
   return (
     <div>
-      {isOpen && experiments.isEnabled(experiments.HOC_TUTORIAL_DIALOG) && (
+      {isOpen && (
         <AccessibleDialog styles={style} onClose={onClose}>
           <div tabIndex="0">
             <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
