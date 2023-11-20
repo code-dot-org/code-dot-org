@@ -42,6 +42,7 @@ import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,
@@ -205,6 +206,7 @@ Dance.prototype.init = function (config) {
               showFinishButton={showFinishButton}
               setSong={this.setSongCallback.bind(this)}
               resetProgram={this.reset.bind(this)}
+              playSound={this.playSound.bind(this)}
             />
           }
           onMount={onMount}
@@ -315,6 +317,13 @@ Dance.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
+
+  DANCE_AI_SOUNDS.forEach(soundId => {
+    const soundPath = this.studioApp_.assetUrl(
+      `media/skins/dance/${soundId}.mp3`
+    );
+    this.studioApp_.loadAudio([soundPath], soundId);
+  });
 };
 
 const KeyCodes = {
@@ -477,6 +486,12 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
       this.studioApp_.toggleRunReset('run');
     },
   });
+};
+
+Dance.prototype.playSound = function (soundName, options) {
+  var defaultOptions = {volume: 0.5};
+  var newOptions = {...defaultOptions, ...options};
+  Sounds.getSingleton().play(soundName, newOptions);
 };
 
 /**

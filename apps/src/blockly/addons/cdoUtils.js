@@ -12,6 +12,8 @@ import {
   ToolboxType,
 } from '../constants';
 import {
+  appendProceduresToState,
+  convertFunctionsXmlToJson,
   convertXmlToJson,
   getCombinedSerialization,
   hasBlocks,
@@ -19,6 +21,7 @@ import {
   resetEditorWorkspaceBlockConfig,
 } from './cdoSerializationHelpers';
 import {parseElement as parseXmlElement} from '../../xml';
+import * as blockUtils from '../../block_utils';
 
 /**
  * Loads blocks to a workspace.
@@ -468,4 +471,30 @@ function simplifyBlockState(block, variableMap) {
 
 export function getBlockColor(block) {
   return block?.style?.colourPrimary;
+}
+
+/**
+ * Combines shared functions (XML) with a starting block source (XML or JSON).
+ * Used in levels where shared functions and behaviors are enabled.
+ *
+ * @param {string} startBlocksSource - The source of starting blocks (XML or JSON).
+ * @param {string} functionsXml - The XML representation of functions to append.
+ * @returns {string} - Updated starting blocks in JSON format.
+ */
+export function appendSharedFunctions(startBlocksSource, functionsXml) {
+  let startBlocks;
+  if (stringIsXml(startBlocksSource)) {
+    startBlocks = blockUtils.appendNewFunctions(
+      startBlocksSource,
+      functionsXml
+    );
+  } else {
+    const proceduresState = convertFunctionsXmlToJson(functionsXml);
+    const stateToLoad = appendProceduresToState(
+      JSON.parse(startBlocksSource),
+      proceduresState
+    );
+    startBlocks = JSON.stringify(stateToLoad);
+  }
+  return startBlocks;
 }

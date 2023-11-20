@@ -91,4 +91,18 @@ $(document).ready(function () {
       onMouse: true,
     },
   });
+  const educatorResources = "#educator_resources";
+  handleScreenSize("educator_resources");
+  $(educatorResources + " .slides").carouFredSel({
+    auto: false,
+    pagination: "#educator_resources-pagination",
+    prev: "#prev_4",
+    next: "#next_4",
+    responsive: true,
+    scroll: 1,
+    swipe: {
+      onTouch: true,
+      onMouse: true,
+    },
+  });
 });
