@@ -66,6 +66,7 @@ export default class ProgramExecutor {
         container,
         i18n: danceMsg,
         resourceLoader: new ResourceLoader(ASSET_BASE),
+        logger: Lab2MetricsReporter,
       });
   }
 
