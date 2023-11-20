@@ -18,7 +18,7 @@ class Pd::SessionAttendanceController < ApplicationController
     end
 
     enrollments = @session.workshop.enrollments
-    enrollment = enrollments.find_by(user: current_user) || enrollments.find_by(email: current_user.email)
+    enrollment = enrollments.find_by(user: current_user) || enrollments.find_by(email: current_user.email_for_enrollments)
 
     unless enrollment
       # If signed out, user must sign in then is redirected back. If signed in to an account not associated
