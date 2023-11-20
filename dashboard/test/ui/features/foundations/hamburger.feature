@@ -7,8 +7,8 @@ Feature: Hamburger dropdown
     And I open my eyes to test "Hamburger Menu in English Signed-out"
     And I rotate to portrait
     And I wait for 0.5 seconds
-    Then I wait until element "#hamburger" is visible
-    And I click selector "#hamburger"
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
     And I see no difference for "Hamburger Menu: English Signed-out"
     And I close my eyes
 
@@ -19,6 +19,7 @@ Feature: Hamburger dropdown
     And I open my eyes to test "Hamburger Menu in English Student"
     Then I wait until element "#hamburger-icon" is visible
     And I click selector "#hamburger-icon"
+    And I wait for 0.5 seconds
     And I see no difference for "Hamburger Menu: English Student"
     And I close my eyes
 
