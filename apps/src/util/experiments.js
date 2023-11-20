@@ -49,8 +49,7 @@ experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 experiments.HOC_TUTORIAL_DIALOG = 'hocTutorialDialog';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
 experiments.AI_TUTOR_ACCESS = 'ai-tutor';
-// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
-experiments.AI_TUTOR_TOGGLE = 'ai-tutor-toggle';
+// Uses Google Blockly for a given user across labs/levels until the experiment is disabled
 experiments.GOOGLE_BLOCKLY = 'google_blockly';
 
 /**
