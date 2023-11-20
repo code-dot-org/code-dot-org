@@ -510,7 +510,6 @@
   "coteacherAddSectionFull": "You can only add up to 5 co-teachers per section.",
   "coteacherCannotInviteSelf": "Unable to invite yourself as a co-teacher",
   "coteacherUnableToEditCoteachers": "You are not able to edit co-teachers for this section.",
-  "coteacherUnknownValidationError": "An unknown error occured when checking if {email} is a valid email.",
   "coteacherAddNoAccount": "{email} is not associated with a Code.org teacher account.",
   "coteacherAddButton": "Add co-teacher",
   "coteacherCount": "{count}/5 co-teachers added",
