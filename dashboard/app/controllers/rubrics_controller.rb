@@ -118,8 +118,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = true
-    # is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    # is_ai_experiment_enabled = true
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
@@ -143,29 +143,20 @@ class RubricsController < ApplicationController
 
   def run_ai_evaluations_for_all
     section_id = params.transform_keys(&:underscore).require(:section_id)
-    # @user = User.find_by(id: user_id)
-    # students = current_user.students
-    # return head :forbidden unless @user&.student_of?(current_user)
-
-    ## need to pull out student user ids from within a section
-    # user_ids=Section.last.followers.pluck(:student_user_id)
-    # @rubric.lesson.script.user_scripts.where(user_id: user_ids)
 
     # Find the rubric (must have something to evaluate)
     return head :bad_request unless @rubric
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = true
-    # is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    # is_ai_experiment_enabled = true
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
-    # @rubric.lesson.script.user_scripts.each do |user_script|
-    #   @user = User.find(user_script.user_id)
-    user_ids = Section.find_by(section_id).followers.pluck(:student_user_id)
+    user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     @rubric.lesson.script.user_scripts.where(user_id: user_ids).each do |user_script|
       @user = User.find(user_script.user_id)
       next unless @user&.student_of?(current_user)
@@ -173,10 +164,8 @@ class RubricsController < ApplicationController
       puts @user.name
 
       attempted = attempted_at
-      # return render status: :bad_request, json: {error: 'Not attempted'} unless attempted
       # TODO: count errors, return count of not attempted/ already evaluated/ runs
       evaluated = ai_evaluated_at
-      # return render status: :bad_request, json: {error: 'Already evaluated'} if evaluated && attempted < evaluated
       if attempted && !evaluated
         # EvaluateRubricJob.perform_later(
         #   user_id: @user.id,
@@ -200,8 +189,8 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = true
-    # is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
+    # is_ai_experiment_enabled = true
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
@@ -229,35 +218,31 @@ class RubricsController < ApplicationController
 
   def ai_evaluation_status_for_all
     section_id = params.transform_keys(&:underscore).require(:section_id)
-    # @user = User.find_by(id: user_id)
-    # return head :forbidden unless @user&.student_of?(current_user)
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    is_ai_experiment_enabled = true
-    # is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
+    # is_ai_experiment_enabled = true
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
-    not_attempted_count = 0
     attempted_count = 0
     attempted_unevaluated_count = 0
     last_attempt_evaluated_count = 0
 
-    user_ids = Section.find_by(section_id).followers.pluck(:student_user_id)
+    user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
     @rubric.lesson.script.user_scripts.where(user_id: user_ids).each do |user_script|
       @user = User.find(user_script.user_id)
       next unless @user&.student_of?(current_user)
       attempted = attempted_at
       evaluated = ai_evaluated_at
-      not_attempted_count += 1 unless attempted
-      attempted_unevaluated_count += 1 if !!attempted && !!evaluated && evaluated < attempted
+      attempted_unevaluated_count += 1 if !!attempted && (!evaluated || (!!evaluated && evaluated < attempted))
       attempted_count += 1 if !!attempted
       last_attempt_evaluated_count += 1 if !!attempted && !!evaluated && evaluated >= attempted
     end
     render json: {
-      notAttemptedCount: not_attempted_count,
+      notAttemptedCount: user_ids.length - attempted_count,
       attemptedCount: attempted_count,
       attemptedUnevaluatedCount: attempted_unevaluated_count,
       lastAttemptEvaluatedCount: last_attempt_evaluated_count,
