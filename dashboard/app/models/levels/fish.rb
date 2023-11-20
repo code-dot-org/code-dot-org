@@ -65,7 +65,7 @@ class Fish < Level
       level_prop['teacherMarkdown'] = nil
 
       # Don't set nil values
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end

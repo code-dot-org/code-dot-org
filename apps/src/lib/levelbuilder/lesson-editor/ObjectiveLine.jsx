@@ -9,7 +9,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     backgroundColor: 'white',
-    height: 30
+    height: 30,
   },
   remove: {
     fontSize: 14,
@@ -18,7 +18,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     minWidth: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   edit: {
     fontSize: 14,
@@ -27,7 +27,7 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     minWidth: '50%',
-    lineHeight: '30px'
+    lineHeight: '30px',
   },
   save: {
     fontSize: 14,
@@ -36,8 +36,8 @@ const styles = {
     cursor: 'pointer',
     textAlign: 'center',
     minWidth: '50%',
-    lineHeight: '30px'
-  }
+    lineHeight: '30px',
+  },
 };
 
 export default onClickOutside(
@@ -48,14 +48,14 @@ export default onClickOutside(
       onSave: PropTypes.func.isRequired,
       onEditCancel: PropTypes.func.isRequired,
       onEditClick: PropTypes.func.isRequired,
-      onRemove: PropTypes.func.isRequired
+      onRemove: PropTypes.func.isRequired,
     };
 
     constructor(props) {
       super(props);
 
       this.state = {
-        description: props.description
+        description: props.description,
       };
     }
 
@@ -79,7 +79,7 @@ export default onClickOutside(
                 value={this.state.description}
                 onChange={e =>
                   this.setState({
-                    description: e.target.value
+                    description: e.target.value,
                   })
                 }
                 onKeyDown={e => {
@@ -88,7 +88,7 @@ export default onClickOutside(
                   }
                 }}
                 style={{
-                  width: '98%'
+                  width: '98%',
                 }}
                 type="text"
               />
@@ -100,7 +100,7 @@ export default onClickOutside(
             <td
               style={{
                 ...lessonEditorTableStyles.actionsCell,
-                ...styles.actionButtons
+                ...styles.actionButtons,
               }}
             >
               <div
@@ -121,7 +121,7 @@ export default onClickOutside(
             <td
               style={{
                 ...lessonEditorTableStyles.actionsCell,
-                ...styles.actionButtons
+                ...styles.actionButtons,
               }}
             >
               <div style={styles.edit} onMouseDown={this.props.onEditClick}>

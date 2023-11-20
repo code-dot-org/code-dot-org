@@ -1,0 +1,715 @@
+{
+  "hy-AM": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U1 IO Story_2021": {
+          "City": "Քաղաք",
+          "Color": "Գույնը",
+          "Name": "Անուն",
+          "text": "տեքստ"
+        },
+        "CSD U1 IO Story_2022": {
+          "City": "Քաղաք",
+          "Color": "Գույնը",
+          "Name": "Անուն",
+          "text": "տեքստ"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "Քաղաք",
+          "Color": "Գույնը",
+          "Name": "Անուն",
+          "text": "տեքստ"
+        },
+        "CSD U1 processing guess_2021": {
+          "text": "տեքստ"
+        },
+        "CSD U1 processing guess_2022": {
+          "text": "տեքստ"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "տեքստ"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "կատու",
+          "chicken": "ճուտիկ",
+          "dog": "շուն"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "Կներեք!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "Կներեք!"
+        },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Կներեք!"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Վերադառնալ"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Վերադառնալ"
+        },
+        "CSD U1 storage friends_2023": {
+          "Back": "Վերադառնալ"
+        },
+        "CSD U1 storage movies_2021": {
+          "No": "ոչ",
+          "Star Wars": "Աստղային պատերազմներ",
+          "Yes": "այո",
+          "text": "տեքստ"
+        },
+        "CSD U1 storage movies_2022": {
+          "No": "ոչ",
+          "Star Wars": "Աստղային պատերազմներ",
+          "Yes": "այո",
+          "text": "տեքստ"
+        },
+        "CSD U1 storage movies_2023": {
+          "No": "ոչ",
+          "Star Wars": "Աստղային պատերազմներ",
+          "Yes": "այո",
+          "text": "տեքստ"
+        },
+        "CSD U1 storage outfit_2021": {
+          "black": "Սեվ",
+          "green": "կանաչ",
+          "pink": "վարդագույն",
+          "purple": "մանուշակագույն"
+        },
+        "CSD U1 storage outfit_2022": {
+          "black": "Սեվ",
+          "green": "կանաչ",
+          "pink": "վարդագույն",
+          "purple": "մանուշակագույն"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "Սեվ",
+          "green": "կանաչ",
+          "pink": "վարդագույն",
+          "purple": "մանուշակագույն"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Տարիք",
+          "Happy": "Երջանիկ",
+          "Name": "Անուն"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Ձուկ"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Fish": "Ձուկ"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "միջին"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "միջին"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "կանաչ",
+          "left": "ձախ",
+          "purple": "մանուշակագույն",
+          "red": "կարմիր",
+          "right": "ճիշտ",
+          "yellow": "դեղին"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "կանաչ",
+          "left": "ձախ",
+          "purple": "մանուշակագույն",
+          "red": "կարմիր",
+          "right": "ճիշտ",
+          "yellow": "դեղին"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "ձախ",
+          "right": "ճիշտ"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "ձախ",
+          "right": "ճիշտ"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "ձախ",
+          "right": "ճիշտ"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "կապույտ",
+          "green": "կանաչ",
+          "yellow": "դեղին"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "կապույտ",
+          "green": "կանաչ",
+          "yellow": "դեղին"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Անուն"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Անուն"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Անուն"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Music - A_2222": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "E": "E"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "E": "E"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB3_2023": {
+          "E": "E"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "E": "E"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Հաշիվ"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Հաշիվ"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Հաշիվ"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "Save"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "Save"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Save": "Save"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "Սեվ"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "կոչում"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "կոչում"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "կոչում"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "ներքեւ",
+          "left": "ձախ",
+          "right": "ճիշտ",
+          "up": "մինչեւ"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "ներքեւ",
+          "left": "ձախ",
+          "right": "ճիշտ",
+          "up": "մինչեւ"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "ներքեւ",
+          "left": "ձախ",
+          "right": "ճիշտ",
+          "up": "մինչեւ"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "անուն"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "անուն"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "անուն"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "տեքստ"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "տեքստ"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "տեքստ"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 analog light": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Թարմացնել"
+        },
+        "CSD U6 array piano": {
+          "E": "E"
+        },
+        "CSD U6 array piano_2018": {
+          "E": "E"
+        },
+        "CSD U6 array piano_2019": {
+          "E": "E"
+        },
+        "CSD U6 array piano_2021": {
+          "E": "E"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "առաջին"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "առաջին"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "առաջին"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "առաջին"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "միջին"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "միջին"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "միջին"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "միջին"
+        },
+        "CSD U6 emotion machine example": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 emotion machine example_2018": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 emotion machine example_2019": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 emotion machine example_2021": {
+          "Happy": "Երջանիկ"
+        },
+        "CSD U6 getProperty Demo": {
+          "Save": "Save"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Save": "Save"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Save": "Save"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Save": "Save"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Հաստատել"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Հաստատել"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Հաստատել"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Հաստատել"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "տեքստ"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "տեքստ"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "տեքստ"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "տեքստ"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "կոչում"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "կոչում"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "կոչում"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "կոչում"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "Cancel": "վերացնել",
+          "No": "ոչ",
+          "Save": "Save",
+          "Yes": "այո"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "Cancel": "վերացնել",
+          "No": "ոչ",
+          "Save": "Save",
+          "Yes": "այո"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "Cancel": "վերացնել",
+          "No": "ոչ",
+          "Save": "Save",
+          "Yes": "այո"
+        },
+        "CSDU4 Decision App Demo": {
+          "When?": "Երբ?"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "When?": "Երբ?"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "When?": "Երբ?"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Hide",
+          "Show": "Ցուցադրում"
+        },
+        "CSDU4 List App Demo": {
+          "Cancel": "վերացնել",
+          "Done": "Done"
+        },
+        "CSDU4 List App Demo_2018": {
+          "Cancel": "վերացնել",
+          "Done": "Done"
+        },
+        "CSDU4 List App Demo_2019": {
+          "Cancel": "վերացնել",
+          "Done": "Done"
+        },
+        "CSDU4 Quiz App Demo": {
+          "Submit": "Հաստատել",
+          "When?": "Երբ?"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "Submit": "Հաստատել",
+          "When?": "Երբ?"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "Submit": "Հաստատել",
+          "When?": "Երբ?"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Վերադառնալ"
+        },
+        "CSDU6 circuit playground piano": {
+          "E": "E"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "E": "E"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "E": "E"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "E": "E"
+        },
+        "CSDU6 piano with notes": {
+          "E": "E"
+        },
+        "CSDU6 piano with notes_2018": {
+          "E": "E"
+        },
+        "CSDU6 piano with notes_2019": {
+          "E": "E"
+        },
+        "CSDU6 piano with notes_2021": {
+          "E": "E"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Վերադառնալ"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Վերականգնել"
+        },
+        "allthethings design mode elements": {
+          "text": "տեքստ"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Սկսել"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Սկսել"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Սկսել"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Սկսել"
+        },
+        "csd u5 recommender sample_2023": {
+          "Start": "Սկսել"
+        },
+        "csd-apps for good-2": {
+          "Next": "Next"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Next"
+        },
+        "csd-apps for good-2_2023": {
+          "Next": "Next"
+        },
+        "csd-explore ui-2": {
+          "Next": "Next"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Next"
+        },
+        "csd-explore ui-2_2023": {
+          "Next": "Next"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "Կներեք!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "Կներեք!"
+        },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Կներեք!"
+        },
+        "csd-explore ui-6": {
+          "Next": "Next"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Next"
+        },
+        "csd-explore ui-6_2023": {
+          "Next": "Next"
+        },
+        "ml-L2 supervised - green glass door-2021": {
+          "Accepted": "ընդունված է",
+          "Rejected": "Մերժվել է"
+        },
+        "ml-L2 supervised - green glass door_2022": {
+          "Accepted": "ընդունված է",
+          "Rejected": "Մերժվել է"
+        },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "ընդունված է",
+          "Rejected": "Մերժվել է"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Next"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Next"
+        },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Next"
+        },
+        "ml-customize-raspado-2021": {
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-customize-raspado_2022": {
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-customize-raspado_2023": {
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Շարունակել",
+          "Loading...": "Loading..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Շարունակել",
+          "Loading...": "Loading..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Շարունակել",
+          "Loading...": "Loading..."
+        },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Silly": "Խեղճ"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Խեղճ"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
+          "Silly": "Խեղճ"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "W",
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "W",
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "W": "W",
+          "no": "ոչ",
+          "yes": "այո"
+        },
+        "ml-model cards-book recommender model card": {
+          "Silly": "Խեղճ"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Silly": "Խեղճ"
+        },
+        "ml-model cards-book recommender model card_2023": {
+          "Silly": "Խեղճ"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Վերադառնալ"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Վերադառնալ"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "Back": "Վերադառնալ"
+        },
+        "ml-models in applab-zoo assessment": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-models in applab-zoo model embed": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "ոչ",
+          "Yes": "այո"
+        },
+        "ml-use model card-example3A-2021": {
+          "cloudy": "ամպամած",
+          "night": "գիշեր"
+        },
+        "ml-use model card-example3A_2022": {
+          "cloudy": "ամպամած",
+          "night": "գիշեր"
+        },
+        "ml-use model card-example3A_2023": {
+          "cloudy": "ամպամած",
+          "night": "գիշեր"
+        }
+      }
+    }
+  }
+}

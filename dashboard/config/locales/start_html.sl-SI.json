@@ -1,0 +1,1257 @@
+{
+  "sl-SI": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U1 IO Story_2021": {
+          "City": "Mesto",
+          "Color": "Barva",
+          "Name": "Ime",
+          "text": "besedilo"
+        },
+        "CSD U1 IO Story_2022": {
+          "City": "Mesto",
+          "Color": "Barva",
+          "Name": "Ime",
+          "text": "besedilo"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "Mesto",
+          "Color": "Barva",
+          "Name": "Ime",
+          "text": "besedilo"
+        },
+        "CSD U1 processing guess_2021": {
+          "text": "besedilo"
+        },
+        "CSD U1 processing guess_2022": {
+          "text": "besedilo"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "besedilo"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "medved"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "medved"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "muca",
+          "chicken": "piščanec",
+          "dog": "kuža"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "Oprostite!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "Oprostite!"
+        },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Oprostite!"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Nazaj"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Nazaj"
+        },
+        "CSD U1 storage friends_2023": {
+          "Back": "Nazaj"
+        },
+        "CSD U1 storage movies_2021": {
+          "No": "Ne",
+          "Star Wars": "Star Wars",
+          "Yes": "Da",
+          "text": "besedilo"
+        },
+        "CSD U1 storage movies_2022": {
+          "No": "Ne",
+          "Star Wars": "Star Wars",
+          "Yes": "Da",
+          "text": "besedilo"
+        },
+        "CSD U1 storage movies_2023": {
+          "No": "Ne",
+          "Star Wars": "Star Wars",
+          "Yes": "Da",
+          "text": "besedilo"
+        },
+        "CSD U1 storage outfit_2021": {
+          "black": "črna",
+          "green": "zelena",
+          "purple": "vijoličen"
+        },
+        "CSD U1 storage outfit_2022": {
+          "black": "črna",
+          "green": "zelena",
+          "purple": "vijoličen"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "črna",
+          "green": "zelena",
+          "purple": "vijoličen"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Starost",
+          "Name": "Ime"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "zelena",
+          "left": "levo",
+          "purple": "vijoličen",
+          "red": "rdeča",
+          "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "zelena",
+          "left": "levo",
+          "purple": "vijoličen",
+          "red": "rdeča",
+          "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "levo",
+          "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "levo",
+          "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "levo",
+          "right": "desno"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "modra",
+          "green": "zelena",
+          "orange": "pomaranča"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "modra",
+          "green": "zelena",
+          "orange": "pomaranča"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "quiet": "tišina"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "quiet": "tišina"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB3_2222": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - Combine Inputs - SB4_2222": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Ime"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Ime"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Ime"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Music - SB4_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Rezultat"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "Score": "Rezultat"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Rezultat"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "Shrani"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "Shrani"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Save": "Shrani"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "črna"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "naslov"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "naslov"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "naslov"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "White": "Bela"
+        },
+        "CSD U6 - Screen Outputs - PracA_2222": {
+          "White": "Bela"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "White": "Bela"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "dol",
+          "left": "levo",
+          "right": "desno",
+          "up": "gor"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "dol",
+          "left": "levo",
+          "right": "desno",
+          "up": "gor"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "dol",
+          "left": "levo",
+          "right": "desno",
+          "up": "gor"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "ime"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "name": "ime"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "ime"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "besedilo"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "besedilo"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "besedilo"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 LED toggle": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 add LED button": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 add LED button_2018": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 add LED button_2019": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 add LED button_2021": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 analog light": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Posodobi"
+        },
+        "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "prvi"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "prvi"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "prvi"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "prvi"
+        },
+        "CSD U6 change": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 change_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 change_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 change_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Srednje težko"
+        },
+        "CSD U6 frequency": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 frequency_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 frequency_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 frequency_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 get toggle": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 get toggle_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 get toggle_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 get toggle_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 getProperty Demo": {
+          "Save": "Shrani"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Save": "Shrani"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Save": "Shrani"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Save": "Shrani"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Pošlji"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Pošlji"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Pošlji"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Pošlji"
+        },
+        "CSD U6 getters debug": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 getters debug_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 getters debug_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 getters debug_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 interval": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 interval_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 interval_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 interval_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 predict LED button": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "besedilo"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "besedilo"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "besedilo"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "besedilo"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "naslov"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "naslov"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "naslov"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "naslov"
+        },
+        "CSD U6 slider intro": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 slider intro_2018": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 slider intro_2019": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 slider intro_2021": {
+          "long": "dolgo",
+          "short": "kratko"
+        },
+        "CSD U6 test LED": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 test LED_2018": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 test LED_2019": {
+          "Success!": "Uspešno!"
+        },
+        "CSD U6 test LED_2021": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "No": "Ne",
+          "Save": "Shrani",
+          "Yes": "Da"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "No": "Ne",
+          "Save": "Shrani",
+          "Yes": "Da"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "No": "Ne",
+          "Save": "Shrani",
+          "Yes": "Da"
+        },
+        "CSDU4 Decision App Demo": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "I don't know": "Ne vem",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "I don't know": "Ne vem",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "I don't know": "Ne vem",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Skrij",
+          "Show": "Pokaži"
+        },
+        "CSDU4 List App Demo": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "Done": "Končano"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "Done": "Končano"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Cancel": "Prekliči",
+          "Done": "Končano"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Submit": "Pošlji",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Submit": "Pošlji",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About": "O programu",
+          "About Us": "O nas",
+          "Submit": "Pošlji",
+          "When?": "Kdaj?",
+          "Why?": "Zakaj?"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Nazaj"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
+          "Success!": "Uspešno!"
+        },
+        "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Nazaj"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "resetiraj"
+        },
+        "allthethings design mode elements": {
+          "text": "besedilo"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Začni"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Začni"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Začni"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Začni"
+        },
+        "csd u5 recommender sample_2023": {
+          "Start": "Začni"
+        },
+        "csd-apps for good-2": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-apps for good-2_2022": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-apps for good-2_2023": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-2": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-2_2022": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-2_2023": {
+          "Home": "Domov",
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "Oprostite!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "Oprostite!"
+        },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Oprostite!"
+        },
+        "csd-explore ui-6": {
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Naslednja"
+        },
+        "csd-explore ui-6_2023": {
+          "Next": "Naslednja"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Naslednja"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Naslednja"
+        },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Naslednja"
+        },
+        "ml-customize-raspado-2021": {
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-customize-raspado_2022": {
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-customize-raspado_2023": {
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Nadaljuj",
+          "Loading...": "Nalaganje..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Nadaljuj",
+          "Loading...": "Nalaganje..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Nadaljuj",
+          "Loading...": "Nalaganje..."
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "A": "A",
+          "W": "Z",
+          "head": "glava",
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "A": "A",
+          "W": "Z",
+          "head": "glava",
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "Z",
+          "head": "glava",
+          "no": "ne",
+          "yes": "da"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Nazaj"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Nazaj"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "Back": "Nazaj"
+        },
+        "ml-models in applab-zoo assessment": {
+          "B": "B",
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "B": "B",
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo model embed": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Ne",
+          "Yes": "Da"
+        },
+        "ml-use model card-example3A-2021": {
+          "cloudy": "oblačno",
+          "night": "noč",
+          "rain": "dež"
+        },
+        "ml-use model card-example3A_2022": {
+          "cloudy": "oblačno",
+          "night": "noč",
+          "rain": "dež"
+        },
+        "ml-use model card-example3A_2023": {
+          "cloudy": "oblačno",
+          "night": "noč",
+          "rain": "dež"
+        }
+      }
+    }
+  }
+}

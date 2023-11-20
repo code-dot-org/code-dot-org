@@ -1,0 +1,128 @@
+{
+  "correctAnswer": "Riekta",
+  "datasets": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Ahki"
+        },
+        "Gender": {
+          "id": "Sohkabealli"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "ivdni"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ahki"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Interneahtta"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Music": {
+          "id": "Musihkka"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Star": {
+          "id": "Násti"
+        }
+      }
+    },
+    "safari_toy": {
+      "name": "Safári"
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "siiddut"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "beaivi"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Dáiddár"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ahki"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Ahki",
+          "id": "Ahki"
+        },
+        "Gender": {
+          "description": "Sohkabealli",
+          "id": "Sohkabealli"
+        },
+        "Internet": {
+          "id": "Interneahtta"
+        },
+        "Music": {
+          "id": "Musihkka"
+        }
+      }
+    }
+  },
+  "navigateBack": "Ruovttoluotta"
+}

@@ -1,7 +1,7 @@
 ---
 driver:
   name: dokken
-  chef_version: 16.18.0
+  chef_version: 17.6.18
   privileged: true
 transport:
   name: dokken
@@ -16,7 +16,6 @@ platforms:
     pid_one_command: /bin/systemd
   run_list:
   - recipe[apt]
-  - recipe[sudo-user]
   attributes:
     cdo-syslog:
       syslog_size: 256

@@ -25,15 +25,40 @@
 #
 
 class Poetry < GamelabJr
-  before_save :check_default_poem
+  validate :validate_default_poem_and_available_poems
 
   serialized_attrs %w(
     default_poem
     standalone_app_name
+    available_poems
   )
+  # Note that standalone_app_name refers to the Poetry subtype.
 
-  def check_default_poem
-    self.default_poem = nil unless standalone_app_name == 'poetry_hoc'
+  # Set the default poem to nil if the standalone_app does not have poems, or if the default poem is
+  # not in the list of poems for the standalone_app.
+  def sanitize_default_poem
+    self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
+      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
+  end
+
+  # Set the available poems to nil if the standalone_app does not have poems.
+  # Also remove any available poems that are not in the list of poems for the standalone_app.
+  def sanitize_available_poems
+    self.available_poems = nil unless Poetry.standalone_apps_with_poems.include?(standalone_app_name)
+    return if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) || (available_poems && available_poems.empty?)
+    # filter out any invalid poems from available_poems
+    self.available_poems = available_poems & Poetry.poem_keys_for_standalone_app(standalone_app_name)
+  end
+
+  def validate_default_poem_and_available_poems
+    sanitize_default_poem
+    sanitize_available_poems
+    # If there is a default poem and dropdown poem(s), check that the default poem is
+    # in the dropdown poem list.
+    if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
+        available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
+      errors.add(:default_poem, "selected default poem is not in dropdown poem list")
+    end
   end
 
   # Poetry levels use the same shared_functions as GamelabJr
@@ -41,8 +66,16 @@ class Poetry < GamelabJr
     GamelabJr
   end
 
+  def project_type
+    standalone_app_name
+  end
+
   def self.standalone_app_names
-    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc']]
+    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc'],  ['Time Capsule', 'time_capsule']]
+  end
+
+  def self.standalone_apps_with_poems
+    %w(poetry_hoc time_capsule)
   end
 
   def self.skins
@@ -80,7 +113,24 @@ class Poetry < GamelabJr
   def common_blocks(type)
   end
 
-  # Used by levelbuilders to set a default poem on a Poetry level.
+  # Used to get all available poems for a Poetry level.
+  def self.poems_for_standalone_app(standalone_app_name)
+    case standalone_app_name
+    when 'poetry_hoc'
+      hoc_poems
+    when 'time_capsule'
+      time_capsule_poems
+    else
+      []
+    end
+  end
+
+  def self.poem_keys_for_standalone_app(standalone_app_name)
+    # get the keys out of a poem list. Assumes each entry
+    # in the list is a 2 element array
+    poems_for_standalone_app(standalone_app_name).map {|poem| poem[1]}
+  end
+
   def self.hoc_poems
     [
       ['', ''],
@@ -106,6 +156,22 @@ class Poetry < GamelabJr
       ['An Afternoon Nap', 'lomeli1'],
       ['An Ode to Imagery', 'lomeli2'],
       ['Nothing Gold Can Stay', 'frost']
+    ]
+  end
+
+  def self.time_capsule_poems
+    [
+      ['', ''],
+      ['1990 - My Poem 1', 'pat'],
+      ['2020 - My Poem 2', 'erin'],
+      ['2021 - My Poem 3', 'aryanna'],
+      ['2023 - My Poem 4', 'tj'],
+      ['1905 - The Turn of the Century ', 'erik'],
+      ['1963 - March on Washington', 'aaron'],
+      ['1969 - Inspiring Dreams', 'noemi'],
+      ['1969 - Hope for Peace', 'ken'],
+      ['1980 - Bring Us Together', 'mike'],
+      ['1990 - Mary W. Jackson ', 'jess'],
     ]
   end
 end

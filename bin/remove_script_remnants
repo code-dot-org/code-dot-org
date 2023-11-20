@@ -31,9 +31,9 @@ def get_all_progress(script_id)
   data[:user_levels] = UserLevel.
     where(script_id: script_id).
     where(user_id:
-      data[:user_scripts].map do |user_script|
+      data[:user_scripts].filter_map do |user_script|
         user_script['user_id']
-      end.compact
+      end
     ).
     to_a.
     map(&:serializable_hash)
@@ -78,9 +78,7 @@ def main
   data = get_all_progress(script_id)
 
   # Write the data to a JSON file.
-  File.open("/tmp/all_progress_#{script_id}.json", 'w') do |f|
-    f.write(JSON.pretty_generate(data))
-  end
+  File.write("/tmp/all_progress_#{script_id}.json", JSON.pretty_generate(data))
 
   # Delete the data (if requested).
   print "Should all user progress (" \

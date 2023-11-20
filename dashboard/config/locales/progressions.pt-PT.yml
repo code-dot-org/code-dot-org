@@ -66,6 +66,7 @@ pt:
       Change: Mudança
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
+      Check for Understanding: Verifique a compreensão
       Checking for a Winner: Verificando um Vencedor
       Choose Your Own Adventure: Escolha sua Aventura
       Choosing Good IDs: Escolhendo bons IDs
@@ -201,11 +202,13 @@ pt:
       Inspiration!: Inspiração!
       InspirationalArtwork: ArteInspiradora
       Interactive Card: Cartão Interativo
+      Intro Video: Vídeo de introdução
       Intro to Design Mode: Introdução ao Modo Design
       Intro to For Loops: Introdução para Laços "For"
       Intro to Sprites: Introdução a Sprites
       Intro to Variables: Introdução a Variáveis
       Introducing Sprite Lab: Introdução ao Sprite Lab
+      Introduction: Introdução
       Introduction to Arrays: Introdução a Arrays
       Introduction to Game Lab: Introdução ao Laboratório de Jogos
       Introduction to Variables: Introdução a Variáveis
@@ -325,6 +328,7 @@ pt:
       Setting Properties: Propriedades de Configuração
       Shapes and Parameters: Formas e Parâmetros
       Shapes and the Draw Loop: Formas e o Laço de Desenho
+      Share Out: Compartilhar
       Share Your App: Compartilhe Seu App
       Side Scroller: Rolagem Lateral
       Simple Circuits: Circuitos Simples
@@ -359,6 +363,7 @@ pt:
       Tour of Design Mode: Introdução ao Modo Design
       Train an AI to Clean the Ocean: Treine uma IA para limpar o oceano
       UI Element Properties: Propriedades do Elemento de UI
+      Unplugged Activity: Atividade offline
       User Interface: Interface do Usuário
       Using Accelerometer Events: Usando eventos do acelerômetro
       Using Arrays: Usando Vetores

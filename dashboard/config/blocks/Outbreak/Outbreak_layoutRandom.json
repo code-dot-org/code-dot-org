@@ -2,6 +2,7 @@
   "category": "",
   "config": {
     "func": "layoutRandom",
-    "blockText": "layout monsters randomly"
+    "blockText": "layout monsters randomly",
+    "style": "default"
   }
 }

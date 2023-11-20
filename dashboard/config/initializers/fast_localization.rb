@@ -40,4 +40,6 @@ module UpdateCheckerExt
   end
 end
 
-ActiveSupport::FileUpdateChecker.prepend UpdateCheckerExt
+Rails.application.config.to_prepare do
+  ActiveSupport::FileUpdateChecker.prepend UpdateCheckerExt
+end

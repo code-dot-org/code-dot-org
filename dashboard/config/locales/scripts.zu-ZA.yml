@@ -3,14 +3,6 @@ zu:
   data:
     script:
       name:
-        csp5-pilot-staging:
-          lesson_groups:
-            csp_lists:
-              display_name: Umbhalo olandelanayo
-        csp5-pilot:
-          lesson_groups:
-            csp_lists:
-              display_name: Umbhalo olandelanayo
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -23,7 +15,15 @@ zu:
           lesson_groups:
             csp_lists:
               display_name: Umbhalo olandelanayo
-        csp5-2023:
+        csp5-pilot:
           lesson_groups:
             csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp5-pilot-staging:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
               display_name: Umbhalo olandelanayo

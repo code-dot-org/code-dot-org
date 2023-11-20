@@ -43,7 +43,7 @@ class ChannelsTest < Minitest::Test
     young_user_cannot_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_cannot_share)
 
@@ -56,7 +56,7 @@ class ChannelsTest < Minitest::Test
     young_user_can_share = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(young_user_can_share)
 
@@ -238,7 +238,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -252,7 +252,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -266,7 +266,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -280,7 +280,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": false}.to_json
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -301,7 +301,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {"sharing_disabled": true}.to_json
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -312,31 +312,26 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
-  def test_abuse
-    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
+  def test_restricted_publish_permissions
+    # sprite lab projects require talking to S3
+    AWS::S3.stubs :create_client
 
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
+    # under 13 sharing enabled
+    stub_user = {
+      name: ' xavier',
+      birthday: 12.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    stub_project_body(true)
+    # stubbed project has restricted share mode set to true, this means we cannot publish
+    assert_cannot_publish('spritelab')
+    stub_project_body(false)
+    # stubbed project has restricted share mode set to false, this means we can publish
+    assert_can_publish('spritelab')
 
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 10, JSON.parse(last_response.body)['abuse_score']
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.unauthorized?
-
-    ChannelsApi.any_instance.stubs(:project_validator?).returns(true)
-
-    delete "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    ChannelsApi.any_instance.unstub(:project_validator?)
+    SourceBucket.any_instance.unstub(:get)
+    AWS::S3.unstub(:create_client)
   end
 
   def test_disable_and_enable_content_moderation
@@ -395,22 +390,6 @@ class ChannelsTest < Minitest::Test
     Projects.any_instance.unstub(:get_user_sharing_disabled)
   end
 
-  def test_abuse_frozen
-    post '/v3/channels', {frozen: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-
-    post "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-
-    get "/v3/channels/#{channel_id}/abuse"
-    assert last_response.ok?
-    assert_equal 0, JSON.parse(last_response.body)['abuse_score']
-  end
-
   def test_most_recent
     post '/v3/channels', {level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     abc_channel_id = last_response.location.split('/').last
@@ -424,12 +403,19 @@ class ChannelsTest < Minitest::Test
 
     # These hidden and frozen projects should be skipped when considering most_recent
     post '/v3/channels', {hidden: true, level: 'projects/abc'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    hidden_channel_id = last_response.location.split('/').last
+
+    Timecop.travel 1
+
     post '/v3/channels', {frozen: true, level: 'projects/xyz'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
 
     user_storage_id = storage_decrypt_id CGI.unescape @session.cookie_jar[storage_id_cookie_name]
 
     assert_equal abc_channel_id, Projects.new(user_storage_id).most_recent('abc')
     assert_equal xyz_channel_id, Projects.new(user_storage_id).most_recent('xyz')
+
+    # Includes hidden projects if include_hidden is true
+    assert_equal hidden_channel_id, Projects.new(user_storage_id).most_recent('abc', include_hidden: true)
   ensure
     Timecop.return
   end
@@ -468,6 +454,32 @@ class ChannelsTest < Minitest::Test
     post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
     assert_equal 'gamelab', Projects.table.where(id: storage_app_id).first[:project_type]
+  end
+
+  def test_update_with_good_thumbnail_url_succeeds
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "/v3/files/#{channel_id}/.metadata/thumbnail.png"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+  end
+
+  def test_update_with_bad_thumbnail_url_fails
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    post "/v3/channels/#{channel_id}", {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
+  end
+
+  def test_create_with_good_thumbnail_url_succeeds
+    post '/v3/channels', {thumbnailUrl: '/v3/files/parentChannelId123/.metadata/thumbnail.png'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.redirection?
+  end
+
+  def test_create_with_bad_thumbnail_fails
+    post '/v3/channels', {thumbnailUrl: "bad.com"}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert_equal 400, last_response.status
   end
 
   private
@@ -515,5 +527,11 @@ class ChannelsTest < Minitest::Test
   def assert_cannot_unpublish(channel_id)
     post "/v3/channels/#{channel_id}/unpublish", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
+  end
+
+  def stub_project_body(should_restrict_share)
+    sample_project = StringIO.new
+    sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
+    SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 end

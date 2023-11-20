@@ -82,20 +82,20 @@ Getting an error like:
 
 ```
 RAILS_ENV=levelbuilder RACK_ENV=levelbuilder bundle exec rake assets:precompile
-sudo service levelbuilder start
+sudo systemctl start levelbuilder
 master failed to start, check stderr log for details
 rake aborted!
-'sudo service levelbuilder start' returned 1
+'sudo systemctl start levelbuilder' returned 1
 /home/ubuntu/levelbuilder/lib/cdo/rake_utils.rb:33:in `system'
 ```
 
-View the contents of `levelbuilder/dashboard/log/unicorn_stderr.log`.
+View the contents of `levelbuilder/dashboard/log/puma_stderr.log`.
 
 ### Already running?
 
-Does `unicorn_stderr.log` then say have something like `/var/lib/gems/2.0.0/gems/unicorn-4.8.2/lib/unicorn/http_server.rb:206:in 'pid=': Already running on PID:9070 (or pid=/home/ubuntu/levelbuilder/dashboard/config/unicorn.rb.pid is stale) (ArgumentError)`?
+Does `puma_stderr.log` then say have something like `Already running on PID:9070 (or pid=/home/ubuntu/levelbuilder/dashboard/config/puma.rb.pid is stale) (ArgumentError)`?
 
-Try restarting unicorn:
+Try restarting puma:
 
 1. `kill -9 9070` (or whichever `PID` showed up above)
 1. `rake build:dashboard`

@@ -1,5 +1,3 @@
-# coding: utf-8
-
 require_relative 'files_api_test_base' # Must be required first to establish load paths
 require_relative 'files_api_test_helper'
 require_relative '../../middleware/helpers/asset_bucket'
@@ -144,6 +142,7 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_set_abuse_score
+    skip "Abuse score functionality moved to Rails"
     asset_bucket = AssetBucket.new
 
     # create a couple assets without an abuse score
@@ -209,6 +208,7 @@ class AssetsTest < FilesApiTestBase
   end
 
   def test_viewing_abusive_assets
+    skip "Abuse score functionality moved to Rails"
     _, asset_name = post_asset_file(@api, 'abusive_asset.jpg', 'stub-image-contents', 'image/jpeg')
 
     # owner can view
@@ -276,7 +276,9 @@ class AssetsTest < FilesApiTestBase
 
     _, image_filename = post_asset_file(src_api, image_filename, image_body, 'image/jpeg')
     _, sound_filename = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
-    src_api.patch_abuse(10)
+
+    # Can't test abuse score functionality, since it's been moved to Rails.
+    #src_api.patch_abuse(10)
 
     expected_sound_info = {'filename' => sound_filename, 'category' => 'audio', 'size' => sound_body.length}
 
@@ -290,7 +292,6 @@ class AssetsTest < FilesApiTestBase
     assert_newrelic_metrics %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
-      Custom/ListRequests/AssetBucket/BucketHelper.list
       Custom/ListRequests/AssetBucket/BucketHelper.copy_files
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
@@ -319,7 +320,9 @@ class AssetsTest < FilesApiTestBase
     image_filename = JSON.parse(response)['filename']
     response, _ = post_asset_file(src_api, sound_filename, sound_body, 'audio/mpeg')
     sound_filename = JSON.parse(response)['filename']
-    src_api.patch_abuse(10)
+
+    # Can't test abuse score functionality, since it's been moved to Rails.
+    #src_api.patch_abuse(10)
 
     expected_image_info = {'filename' =>  image_filename, 'category' => 'image', 'size' => image_body.length}
     expected_sound_info = {'filename' =>  sound_filename, 'category' => 'audio', 'size' => sound_body.length}
@@ -333,13 +336,14 @@ class AssetsTest < FilesApiTestBase
     assert_fileinfo_equal(expected_sound_info, dest_file_infos[1])
 
     # abuse score didn't carry over
+    # note: this test doesn't actually work, since the abuse score functionality
+    # got moved to Rails.
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, image_filename)
     assert_equal 0, AssetBucket.new.get_abuse_score(dest_channel_id, sound_filename)
 
     assert_newrelic_metrics %w(
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
       Custom/ListRequests/AssetBucket/BucketHelper.app_size
-      Custom/ListRequests/AssetBucket/BucketHelper.list
       Custom/ListRequests/AssetBucket/BucketHelper.copy_files
       Custom/ListRequests/AssetBucket/BucketHelper.list
     )
@@ -468,7 +472,7 @@ class AssetsTest < FilesApiTestBase
     FilesApi.any_instance.stubs(:max_app_size).returns(2000)
 
     # gradient.png's file size is 1559. Upload should only be successful if it is downsampled.
-    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.open("./test/fixtures/gradient.png").read, 'image/png')
+    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.read("./test/fixtures/gradient.png"), 'image/png')
     assert successful?, "Downsampled file upload is successful."
     @api.delete_object(filetodelete1)
 

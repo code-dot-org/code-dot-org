@@ -1,81 +1,7 @@
-@import 'font.scss', 'color.scss', 'imports/_breakpoints.scss';
+@import 'font.scss', 'color.scss', 'breakpoints.scss';
 
 html {
   scroll-behavior: smooth;
-}
-
-// Homepage banner
-.homepage-cs-leaders-prize {
-  background-color: #E5EEEE;
-  padding: 1.5em;
-  margin-bottom: 1em;
-
-  @media screen and (max-width: $width-md) {
-    padding: 1em;
-  }
-
-  @media screen and (max-width: $width-sm) {
-    padding: 1.5em 2em 2em;
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 960px;
-    margin: 0 auto;
-
-    @media screen and (max-width: $width-md) {
-      max-width: 750px;
-    }
-
-    img {
-      width: 70px;
-      margin: -2px 0 2px;
-
-      @media screen and (max-width: $width-md) {
-        width: 50px;
-      }
-    }
-
-    h1 {
-      color: $darkest-gray;
-      margin: 0;
-      font-family: $gotham-bold;
-      font-size: 1.75em;
-
-      @media screen and (max-width: $width-md) {
-        font-size: 1.35em;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        text-align: center;
-        margin: .75em auto;
-      }
-    }
-
-    a.btn {
-      background-color: $darkest-gray;
-      color: white;
-      border-radius: 4px;
-      font-size: 17px;
-      font-family: $gotham-bold;
-      padding: 0.45em 1em;
-
-      @media screen and (max-width: $width-lg) {
-        font-size: 16px;
-      }
-
-      @media screen and (max-width: $width-md) {
-        font-size: 14px;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        font-size: 16px;
-      }
-    }
-  }
 }
 
 // Landing page - code.org/prize
@@ -117,7 +43,8 @@ header {
 }
 
 summary {
-  font-family: $gotham-bold;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
 
   &:hover {
     cursor: pointer;

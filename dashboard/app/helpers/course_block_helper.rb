@@ -23,7 +23,8 @@ module CourseBlockHelper
       url: script_url(id),
       title: I18n.t("upsell.#{id}.title"),
       body: I18n.t("upsell.#{id}.body"),
-      image_url: CDO.shared_image_url("courses/logo_tall_#{id}.jpg")
+      image_url: CDO.shared_image_url("courses/logo_tall_#{id}.jpg"),
+      image_alt: I18n.t("upsell.#{id}.image_alt", default: "")
     }
 
     block_override_data = {
@@ -205,6 +206,7 @@ module CourseBlockHelper
       return {
         url: script_url(id),
         image_url: CDO.shared_image_url("courses/logo_tall_#{family_name}.jpg"),
+        image_alt: I18n.t("upsell.#{family_name}.image_alt", default: ""),
         title: data_t_suffix('script.name', id, 'title'),
         body: data_t_suffix('script.name', id, 'description_short'),
         audience: data_t_suffix('script.name', id, 'description_audience')

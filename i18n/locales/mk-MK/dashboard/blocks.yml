@@ -5,19 +5,11 @@ mk:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средни
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': средни
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -36,6 +28,10 @@ mk:
             '"DOG"': кучиња
             '"MOOSE"': лос
             '"ROBOT"': роботи
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': мачки
       Dancelab_changePropEachBy:
         options:
           GROUP:
@@ -122,10 +118,6 @@ mk:
         options:
           SPEED:
             '1': нормално
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
@@ -137,10 +129,6 @@ mk:
             '"ROBOT"': роботи
           SPEED:
             '1': нормално
-            '2': fast
-            '4': very fast
-            '0.5': slow
-            '0.25': very slow
       Dancelab_setPropEach:
         options:
           GROUP:
@@ -246,18 +234,24 @@ mk:
             '"while"': Додека
           KEY:
             '"i"': i
+      gamelab_layoutSprites:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
       gamelab_makeBurst:
         options:
           EFFECT:
             '"burst"': пукна
             '"rain"': дожд
             '"spiral"': спирала
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"grid"': Мрежа
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': средни
-            '100': large
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -306,25 +300,15 @@ mk:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': средни
-            '100': large
       gamelab_setProp_dropdown:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': средни
-            '100': large
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
-            '3': slow
             '5': нормално
-            '7': fast
-            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -454,21 +438,6 @@ mk:
         options:
           'N':
             '0': "???"
-            '1': '1'
-            '2': '2'
-            '3': '3'
-            '4': '4'
-            '5': '5'
-            '6': '6'
-            '7': '7'
-            '8': '8'
-            '9': '9'
-            '10': '10'
-            '11': '11'
-            '12': '12'
-            '13': '13'
-            '14': '14'
-            '15': '15'
       Vector_where:
         options:
           PROPERTY:
@@ -482,16 +451,20 @@ mk:
         options:
           PORTION:
             '1': сите
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': сите
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): се врти десно
+            new Behavior(spinning_left, []): врти лево
+            new Behavior(fluttering, []): разлетувањето
+            new Behavior(jittering, []): нервоза
+            new Behavior(wobbling, []): колебливи
+            new Behavior(wandering, []): талкање
+            new Behavior(patrolling, []): патролирање
       craft_ifPath:
         options:
           DIR:

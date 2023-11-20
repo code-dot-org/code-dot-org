@@ -61,7 +61,7 @@ function wrappedSortable(getSortingColumns, onSort, styles = {}) {
           </span>
           <span key="label">{label}</span>
         </span>
-      )
+      ),
     };
   };
 }

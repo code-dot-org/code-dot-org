@@ -6,3 +6,4 @@ right 'a bit too much.'
 right 'about right.'
 right 'a bit too little.'
 right 'way too little.'
+allow_multiple_attempts true

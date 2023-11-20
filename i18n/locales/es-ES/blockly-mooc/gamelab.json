@@ -62,7 +62,6 @@
   "dropletBlock_remove_param0_description": "El sprite que se va a eliminar.",
   "dropletBlock_x_description": "Coordenada X del sprite.",
   "dropletBlock_y_description": "Coordenada Y del sprite.",
-  "errorLoadingAnimation": "Parece que tenemos problemas al cargar tu animación \"{animationName}\". Asegúrate de que tienes una buena conexión a Internet y vuelve a cargar la página. Si persiste el problema, es posible que la animación esté rota. En ese caso, deberías eliminar la animación para continuar.",
-  "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para pasar al siguiente nivel.",
+  "reinfFeedbackMsg": "¡Has terminado! Pulsa \"Continuar\" para pasar al siguiente nivel.",
   "shareGame": "Comparte tu juego:"
 }

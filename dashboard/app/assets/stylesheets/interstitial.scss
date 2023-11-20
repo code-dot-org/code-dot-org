@@ -19,6 +19,18 @@
   font-size: 12px;
   color: $default_text;
 }
+
+#race-modal .modal-content .custom-h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.7em;
+}
+
+#race-modal .modal-content p {
+  font-size: 15px;
+  line-height: 20px;
+}
+
 #terms-modal .left,
 #school-info-modal .left,
 #race-modal .left {
@@ -75,11 +87,25 @@
   background-image: none;
   margin-top: 10px;
 }
-#terms-modal .disabled-button,
-#race-modal .disabled-button {
+
+#race-modal .primary-button {
+  background-color: $brand_secondary_default;
+  border-color: $brand_secondary_default;
+  color: $neutral_white;
+  @include main-font-semi-bold;
+}
+
+#terms-modal .disabled-button {
   background-color: $lighter_gray;
   border-color: $lighter_gray;
   color: $dark_charcoal;
+}
+
+#race-modal .disabled-button {
+  color: $neutral_white;
+  border-color: $neutral_dark20;
+  background-color: $neutral_dark20;
+  cursor: not-allowed;
 }
 #terms-modal .custom-h1,
 #race-modal .custom-h1 {
@@ -94,7 +120,7 @@
 }
 #race-modal .dismiss-link {
   font-size: 14px;
-  font-family: $gotham-regular;
+  @include main-font-regular;
   line-height: 20px;
 }
 #school-info-modal .disabled,
@@ -132,10 +158,10 @@ $almost_white: #eee;
   }
 
   #close_btn_go_to_account {
+    @include main-font-bold;
     background-color: $orange;
     border: 1px solid $orange;
     color: $white;
-    font-family: "Gotham 7r", sans-serif;
     margin: 25px 0 0 0;
     padding: 10px 25px;
   }

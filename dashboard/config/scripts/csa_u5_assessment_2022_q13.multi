@@ -25,3 +25,5 @@ public static int[][] shift(int[][] arr) {
 
 The code does not work as intended. Which of the following arrays can be passed to `shift` to show that the method does NOT work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

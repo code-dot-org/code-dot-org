@@ -15,7 +15,7 @@ module Services
           # identifier, then by property name).
           #
           # Will default to the relevant English string when appropriate.
-          def get_localized_property(object, property_name, key=nil)
+          def get_localized_property(object, property_name, key = nil)
             key = object.key if key.blank?
             unlocalized_property = object.send(property_name)
             return unlocalized_property if ::I18n.locale == ::I18n.default_locale

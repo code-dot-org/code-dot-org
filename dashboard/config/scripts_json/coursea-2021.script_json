@@ -17,11 +17,19 @@
       "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
+        "ca-ES",
         "de-DE",
         "es-ES",
         "es-MX",
+        "fa-IR",
+        "fil-PH",
         "fr-FR",
         "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "kn-IN",
         "mr-IN",
         "ms-MY",
         "pl-PL",
@@ -30,9 +38,13 @@
         "ro-RO",
         "ru-RU",
         "sk-SK",
+        "ta-IN",
         "th-TH",
         "tr-TR",
+        "uk-UA",
         "ur-PK",
+        "vi-VN",
+        "zh-CN",
         "zh-TW"
       ],
       "tts": true,
@@ -40,7 +52,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2022-05-05 22:45:09 UTC",
+    "serialized_at": "2023-11-15 22:32:47 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8532,6 +8544,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

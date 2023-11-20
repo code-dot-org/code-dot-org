@@ -1,0 +1,6 @@
+name 'counselor_encourage_2023'
+type 'multi'
+question 'Did a counselor or advisor at school encourage you to take this class?'
+right 'yes'
+right 'no'
+allow_multiple_attempts true

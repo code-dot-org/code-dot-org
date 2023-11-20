@@ -14,20 +14,20 @@ export const importableScreenShape = PropTypes.shape({
   assetsToImport: PropTypes.arrayOf(PropTypes.string).isRequired,
   conflictingIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   html: PropTypes.string.isRequired,
-  canBeImported: PropTypes.bool.isRequired
+  canBeImported: PropTypes.bool.isRequired,
 });
 
 export const importableAssetShape = PropTypes.shape({
   filename: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  willReplace: PropTypes.bool.isRequired
+  willReplace: PropTypes.bool.isRequired,
 });
 
 export const importableProjectShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   screens: PropTypes.arrayOf(importableScreenShape).isRequired,
-  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired
+  otherAssets: PropTypes.arrayOf(importableAssetShape).isRequired,
 });
 
 /**
@@ -74,7 +74,7 @@ function getImportableScreen(dom) {
     assetsToImport,
     conflictingIds,
     html: dom.outerHTML,
-    canBeImported: conflictingIds.length === 0
+    canBeImported: conflictingIds.length === 0,
   };
 }
 
@@ -108,13 +108,13 @@ export function getImportableProject(project) {
     .map(asset => ({
       filename: asset.filename,
       category: asset.category,
-      willReplace: !!existingAssetNames[asset.filename]
+      willReplace: !!existingAssetNames[asset.filename],
     }));
   return {
     id: channel.id,
     name: channel.name,
     screens,
-    otherAssets
+    otherAssets,
   };
 }
 

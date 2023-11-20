@@ -3,7 +3,7 @@ import {UnconnectedFreeResponseDetailsDialog as FreeResponseDetailsDialog} from 
 
 export default {
   title: 'FreeResponseDetailsDialog',
-  component: FreeResponseDetailsDialog
+  component: FreeResponseDetailsDialog,
 };
 
 const Template = args => <FreeResponseDetailsDialog {...args} />;
@@ -14,6 +14,6 @@ Example.args = {
   closeDialog: () => {},
   questionAndAnswers: {
     question: 'Hello world. I display *markdown* questions in a dialog.',
-    answers: []
-  }
+    answers: [],
+  },
 };

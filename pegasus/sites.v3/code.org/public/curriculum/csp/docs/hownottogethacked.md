@@ -9,7 +9,7 @@ theme: responsive
 The Internet is open, so everything that happens on it can be seen unless it’s protected. In modern countries, people are more worried about getting hacked than about any other crime. Why? Because every computer or phone on the Internet is regularly being tested for vulnerabilities by criminals, terrorists, or even state actors. If you’re not careful, somebody could hack your device or accounts, and even steal your identity or your money.
 
 <div style="text-align:center; margin:20px 20px;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AuYNXgO_f3Y" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?list=PLzdnOPI1iJNf1vuNF_Dg0EykzOpXWS7vC" title="How Not to Get Hacked Playlist" frameborder="0" allowfullscreen></iframe>
 </div>
 
 So how can you make sure your information is safe?  Here are 9 tips to keep in mind. These aren’t just friendly recommendations, they are critically important. In fact, if you don’t follow these tips, it’s almost guaranteed criminals and hackers will collect your personal information and use it in ways you don’t expect.
@@ -48,7 +48,7 @@ The one way to avoid these scams is to make sure the address on your browser mat
 
 <h2>Tip #3: Only Download From Trustworthy Sources</h2>
 
-Whether you click on links in emails or you’re just browsing the web or looking for games, you should take extra care when a web site asks you to download anything. This may lead you to install unwanted apps called viruses, or to add 3rd party browser extensions that snoop on your browsing habits. 
+Whether you click on links in emails or you’re just browsing the web or looking for games, you should take extra care when a web site asks you to download anything. This may lead you to install unwanted apps called viruses, or to add 3rd party browser extensions that snoop on your browsing habits.
 
 If you accidentally download something like this from the Internet, don’t install it. Instead, only download software from verified, trustworthy sources.
 
@@ -67,11 +67,11 @@ If you accidentally download something like this from the Internet, don’t inst
 
 <div>
 <p>
-Sometimes your computer can get attacked even if you don’t do anything, because of vulnerabilities in the system you’re using. 
+Sometimes your computer can get attacked even if you don’t do anything, because of vulnerabilities in the system you’re using.
 </p>
 
 <p>
-Whether it’s Windows or Mac, Android or iPhone, or really whatever it is, ALL computer systems are prone to vulnerabilities. These openings allow attackers to install unwanted apps or access data in a way you didn’t intend. 
+Whether it’s Windows or Mac, Android or iPhone, or really whatever it is, ALL computer systems are prone to vulnerabilities. These openings allow attackers to install unwanted apps or access data in a way you didn’t intend.
 </p>
 
 <p>
@@ -86,7 +86,7 @@ This is where you come in. You need to install these security updates quickly, i
 
 <h2>Tip #5: Do NOT Email Private Data</h2>
 
-Even if there’s a lock on your browser, not all the information you send and receive is private. 
+Even if there’s a lock on your browser, not all the information you send and receive is private.
 
 Whenever you send email on the internet, unless you’re sending it to somebody on the same email domain as you, your email is out in the open, available for anybody in the world to access. In fact, almost ALL the emails you send can be seen by third party hackers. <br>
 
@@ -114,9 +114,9 @@ Most people use the same password everywhere, and their password is easy to gues
 
 You may be advised to include special characters like exclamation marks or hyphens in passwords to make them stronger. This is helpful, but it’s not enough.
 
-Passwords like "Rover2015" and "R0v3r2015" are actually the same strength. This is because their length is the same. 
+Passwords like "Rover2015" and "R0v3r2015" are actually the same strength. This is because their length is the same.
 
-For real protection it’s much more valuable to use LONGER passwords. Each additional character increases the amount of time for a hacker with a supercomputer to guess your password. A 16-character alphabetic password is much stronger than an 8-character password with special characters. 
+For real protection it’s much more valuable to use LONGER passwords. Each additional character increases the amount of time for a hacker with a supercomputer to guess your password. A 16-character alphabetic password is much stronger than an 8-character password with special characters.
 
 Of course, even with a long password, you can always add in special characters to make it harder to guess.
 
@@ -146,7 +146,7 @@ Two-factor authentication adds extra security to your password, so even if someb
 <img src="images/computer-device-plug-in-hack.png" height="220px" style="float:right; margin:0px 0px 0px 20px;">
 One last piece of advice: don’t plug in a device or accessory from a stranger. If somebody gives you a memory card for your computer or even a USB power cable for your phone, it could infect your device with a virus the moment you plug it in. The person giving it to you may not even know that their plug is infected.
 
-Of course, sometimes you don’t have a choice, and most of the time it’s probably not a big deal. But you should be aware that anytime you plug something into your computer or device, you take a small risk. 
+Of course, sometimes you don’t have a choice, and most of the time it’s probably not a big deal. But you should be aware that anytime you plug something into your computer or device, you take a small risk.
 
 
 <h2>Conclusion</h2>

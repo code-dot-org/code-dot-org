@@ -52,7 +52,9 @@ az:
         age: 'Yaşınız'
         gender: 'Cins'
         edit_header: 'Hesab Detallarına düzəliş edin'
+        ai_settings_header: 'AI Parametrləri'
         finish_sign_up_header: 'Hesabınızı yaratmağı başa çatdırın'
+        finish_sign_up_header_error: 'Aşağıdakı səhfləri düzəldin:'
         finish_sign_up_subheader: '<strong>%{email} </strong> Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_markdown: '**%{email} ** üçün bir Code.org hesabı yaratmağı bitirmək üçün aşağıdakı məlumatları doldurun.'
         finish_sign_up_subheader_provider: '<strong>%{provider}</strong> for <strong>%{email}</strong> üçün bir Code.org hesabı yaratmağı sona çatdırmaq üçün aşağıdakı məlumatları doldurun.'
@@ -60,6 +62,9 @@ az:
         reset_password_token: "İzlədiyiniz parolun sıfırlanması bağlantısı"
         error:
           future: gələcəkdə ola bilməz
+        user_type: 'Hesab Növü'
+        us_state: 'dövlət'
+        ai_rubrics_disabled: 'AI Rubrik Xüsusiyyətini deaktiv edin'
   beta: "beta versiya"
   hello: "Salam, dünya"
   welcome_back: "Bir daha xoş gəldiniz, %{name}"
@@ -69,6 +74,7 @@ az:
   unsubmit: Göndərilməmiş
   previous_page: Əvvəlki səhifə
   next_page: Növbəti səhifə
+  next_level: Növbəti mərhələ
   next_resource: Sonrakı resurs
   done_with_module: Bu Tədris Modulu ilə tamamlanması
   cancel: "İmtina et"
@@ -172,7 +178,6 @@ az:
     data_collection_us: "Code.org-un ABŞ-da mənfəət gətirməyən bir veb sayt olduğunu və ABŞ-da məlumat toplanmasını tənzimləyən qanunların ölkəmdəki qanunlardan fərqli ola biləcəyini başa düşürəm."
     visit_privacy: 'Daha çox məlumat üçün Code.org-un [Məxfilik Siyasəti] (%{privacy_url}) səhifəsini ziyarət edin.'
     student_terms_markdown: "Elektron poçt ünvanları bizim şagirdlərlə əlaqə saxlamağımız üçün götürülməyib. Şagirdlər Code.ord-dan şifrə bərpasından başqa hallarda elektron poçt əldə etməyəcəklər. Daha çox məlumat üçün gizlilik politikamıza(http://code.org/privacy) baxın."
-    additional_information: "Qeydiyyatı davam etdirmək üçün bəzi əlavə məlumatlara ehtiyacımız var."
     user_type_button: "Hesab növünü yeniləyin"
     user_type_label: "Hesab Növü"
     user_type_student: "şagird"
@@ -200,6 +205,9 @@ az:
     parent_account_checkbox: "Mən övladımın adından qeydiyyatdan keçən valideyn/qəyyumam."
     parent_account_email_progress_permission: "Övladınızın tərəqqisi və layihələri haqqında hər hansı bir yeniləmə, kursları və kompüter elmləri ilə bağlı yenilikləri sizə göndərə bilərikmi? [(Məxfilik siyasətimizə baxın)] (%{privacy_policy_url})"
     parent_account_email_label: "Valideyn /Qəyyum E-poçtu"
+    us_state: 'dövlət'
+    us_state_dropdown_options:
+      other: "Mən burada qeyd olunmayan yerdə yaşayıram"
   school_info:
     title: 'Təhsil müəssisəsi haqqında məlumat (istəyə görə)'
     school_country: 'Məktəb Ölkəsi'
@@ -268,9 +276,13 @@ az:
   parent_mailer:
     student_associated_subject: 'Code.org üçün giriş məlumatları'
     parent_email_added_subject: 'Code.org-a xoş gəlmisiniz!'
+    parent_permission_request_subject: "Övladınızın Code.org saytına daxil olması üçün valideyn razılığı tələb olunur"
+    parent_permission_reminder_subject: "Xatırlatma, övladınızın Code.org saytına daxil olması üçün valideyn razılığı lazımdır"
+    parent_permission_confirmation_subject: "Övladınızın Code.org saytına daxil olmasına icazə verdiyiniz üçün təşəkkür edirik!"
   teacher_mailer:
     new_teacher_subject: 'Code.org-a xoş gəlmisiniz!'
     delete_teacher_subject: 'Code.org bildirişi: Sizin hesabınız ləğv olunub'
+    verified_teacher_subject: 'Code.org Müəllim Təstiqləməsi - Uğur'
   section:
     your_section:
       one: 'Sizin Bölməniz:'
@@ -352,6 +364,7 @@ az:
       sprite_lab_documentation: "Sprite Laboratoriyasının Sənədləri"
       sprite_lab_tutorials: "Sprite Laboratoriyası Dərslikləri"
       web_lab_documentation: "Veb laboratoriya sənədləri"
+      project_beats_documentation: "Layihə Sənədləri Beats"
       educate_overview: "Təlimçi üçün xülasə"
       educate_elementary: "İbtidai məktəb"
       educate_middle: "Orta məktəb"
@@ -378,6 +391,7 @@ az:
       help_us: "Bizə kömək edin"
       teach: "Öyrədin"
       about: "Haqqımızda"
+      incubator: "İnkubator"
       legal: "Məxfilik və Hüquq"
       legal_privacy: "Məxfilik siyasəti"
       legal_cookie_notice: "Kuki Xəbərdarlığı"
@@ -423,6 +437,7 @@ az:
       playlab: 'Oyun labı'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Şeir'
+      poetry_hoc: 'Şeir sənəti'
       scratch: 'Cızıq'
       sports: 'İdman'
       spritelab: 'Sprite Laboratoriyası'
@@ -609,6 +624,7 @@ az:
     store: 'Mağaza'
     cookie_notice: 'Kuki Xəbərdarlığı'
     view_code: 'Koda Baxın'
+    locale_select: "Dili seç (-in)"
   reference_area:
     title: 'Kömək lazımdır?'
     subtitle: 'Bu videolara və məsləhətlərə baxın'
@@ -633,6 +649,8 @@ az:
       applab_unsupported_tablet: "Tətbiq Laboratoriyası siçan və klaviatura ilə masaüstü və ya noutbukda ən yaxşı şəkildə işləyir. Cari cihazınızda bu alətdən istifadə etməklə bağlı problemlərlə üzləşə bilərsiniz."
       gamelab_unsupported_tablet: "Game Lab ən yaxşı şəkildə siçan və klaviatura ilə masaüstü və ya noutbukda işləyir. Cari cihazınızda bu alətdən istifadə etməklə bağlı problemlərlə üzləşə bilərsiniz."
       weblab_unsupported_locale_storage: "Şəxsi Baxış rejimində Veb Laboratoriyasından istifadə etməklə bağlı problemlərlə üzləşə bilərsiniz. Lütfən, layihənizi normal rejimdə yenidən yükləyin. Narahatçılığa görə üzr istəyirik."
+  deprecation:
+    algebra_lab: "Cəbrdə kompüter elmləri tədris proqramı və məzmunu köhnəlmişdir.  Növbəti bir neçə ay ərzində bu laboratoriya artıq mövcud olmayacaq.  Zəhmət olmasa bunun əvəzinə [Bootstrap: Algebra](%{bootstrap_algebra_url}) ilə tanış olun. [Daha çox oxuyun] (%{cs_algebra_url})."
   slow_loading: 'Bu, adi halda olduğundan daha çox vaxt aparır...'
   try_reloading: 'Səhifəni yenidən yükləməyə cəhd edin'
   next_stage: 'Bitdi! Növbəti mərhələyə keçin!'
@@ -671,81 +689,156 @@ az:
       body_short: "Tətbiq dizayn edin, onu işləməsi üçün bloklar və ya JavaScript ilə kodlayın, sonra tətbiqinizi saniyələr ərzində paylaşın."
       audience: '13+ yaş'
       cta: 'Öyrənin necə'
-    dance:
-      title: 'Rəqs şənliyi'
+      image_alt: 'Raketlə işləyən bel çantasını taxan bənövşəyi dovşan.'
+    applab-intro:
+      image_alt: 'Əl telefon ekranının ortasına tıklayır. Ekran işıltı və parıldama saçır.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Minecraft''dan Stiv və Aleks sənə baxırlar.'
+    artist:
+      image_alt: 'Böyük qələmi tutub və üçbucaq çəkən cizgi filmi personajı.'
+    conditionals:
+      image_alt: 'Oyun kartı göyərtəsini qarışdıran iki əl.'
+    course1:
+      image_alt: 'Hansısa kodun qarşısında duran Code.org''dən eşşəkarısı və narıncı balıq.'
+    course2:
+      image_alt: 'Yaşıl sehrbaz, rəssam və narıncı balığı göstərən Code.org''dakı kolaj.'
+    course3:
+      image_alt: 'Oyunu, zombi və ninjanı göstərən Code.org''dakı kolaj.'
+    course4:
+      image_alt: 'Futbol, ev heyvanları və rəssamı göstərən Code.org''dakı kolaj.'
+    coursea:
+      image_alt: 'Fil və dələni göstərən Code.org''dakı kolaj.'
+    courseb:
+      image_alt: 'Tədqiqatçı, qiymətli daşlar və çiçəyi göstərən Code.org''dakı kolaj.'
+    coursec:
+      image_alt: 'Dələ, ikili ədədlər və Angry Birds oyunundan qırmızı quşu göstərən Code.org tapmacalarının kollajı.'
+    coursed:
+      image_alt: 'Arı, güllər, bal və Angry Birds oyunundan yaşıl donuzu göstərən Code.org tapmacalarının kollajı.'
+    coursee:
+      image_alt: 'Kürəyi tutan insan, balqabaq, bağ və inəyi göstərən Code.org tapmacalarının kollajı.'
+    coursef:
+      image_alt: 'Rəngarəng həndəsi fiqurları, qırmızı piratı və rəssamı göstərən Code.org tapmacalarının kollajı.'
     dance-2019:
       title: 'Rəqs şənliyi'
-    hello-world:
-      title: 'Salam Dünya'
-      body: 'Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli mövzudan birini seçin.'
-    poem-art:
-      body: 'Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.'
-    hoc:
-      title: 'Ənənəvi labirint'
-      body: 'İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.'
+      image_alt: 'Xoşbəxt pişik, tənbəl və rəqs edən köpək balığı.'
+    dance-2022:
+      image_alt: 'Yaşıl yadplanetli və arxa fonda/planda Saturnla rəqs edən robot.'
+    dance:
+      title: 'Rəqs şənliyi'
+      image_alt: 'Sərin/əla pişik və şənlikdə rəqs edən xoşbəxt edən köpək balığı.'
+    donate:
+      image_alt: 'Code.org tapmacasını göstərən laptopun ekranına işarə edən uşaq.'
+    elementary:
+      image_alt: 'Eşşək arısı və tarlada göyqurşağının qarşısında duran dələ.'
+    express:
+      image_alt: 'Bitkilər Zombilərə qarşı zombi və Flappy Bird-in yanında duran bitki.'
     flappy:
       title: 'Qanadlı Kod'
       body: '10 dəqiqədən də az müddətə öz oyununuzu yazmaq istəyrisiniz? Qanadlı Kod dərsliyimizi sınayın!'
-    20-hour:
-      title: 'Sürətləndirilmiş kurs'
-      body: 'Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.'
-      body_short: 'İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası ilə öyrənin.'
-    hoc2014:
-      try_new_tutorial: 'Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.'
-      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+      image_alt: 'Yaşıl boruların arasında uçan sarı quş.'
+    frozen:
+      title: "Buzlu ürək"
+      image_alt: 'Buzlu ürək filmindən Anna və Elza. Aralarında Annanın buz üzərində konki ilə gözəl bir fiqur çəkməsinin/çəkdiyi şəkli var.'
     gallery:
       title: "Qalereya"
       body: "İstifadəçilərimizin düzəltdiyi proqram və rəsm işlərinin qalereyasına baxın"
+      image_alt: 'Çoxlu dairələr, pişik, yarasa və qış tətili ölkəsində duran ruhu çəkən rəssam.'
     gamelab:
       title: "Oyun labaratoriyası"
       body: "Game Lab bir-biri ilə qarşılıqlı əlaqədə olan obyektlər və personajlarla sadə animasiyalar və oyunlar yarada biləcəyiniz proqramlaşdırma mühitidir."
       audience: "13+ yaş"
       cta: "Öyrənin necə"
+      image_alt: 'Səkidə duran/dayanan və gülən çoxlu cizgi filmi insanları və heyvanları.'
+    hello-world-food:
+      image_alt: 'Yer kürəsinin ətrafında fırlanan çoxlu heyvanlar, yadplanetlilər və emojilər.'
+    hello-world:
+      title: 'Salam Dünya'
+      body: 'Yaratdığınız dünyada interaktiv simvolları kodlaşdırmaq üçün dörd əyləncəli mövzudan birini seçin.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a səyahət."
+      image_alt: 'Minecraftdan Dəmir Qolem Annanın həll etdiyi tapmacanın yuxarı görünüşünün qarşısında dayanır.'
     hoc-encryption:
       title: "Sadə Şifrələmə"
       body: "Tələbələr şifrələnmiş mesajların yaradılması və sındırılması üsullarını öyrənəcəklər."
+      image_alt: 'İngilis dilində hərf tezliklərinin histoqramı.'
+    hoc:
+      title: 'Ənənəvi labirint'
+      body: 'İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq bu fürsətdən istifadə edib.'
+      image_alt: 'Kodu göstərən şəkillərin kolajı, Mark Zukerberq və Angry Birds .'
+    hourofcode:
+      image_alt: 'Kodu göstərən şəkillərin kolajı, Mark Zukerberq və Angry Birds .'
+    hoc2014:
+      try_new_tutorial: 'Bizim betadaki yeni Kod Saatı konsultasiyamızı təcrübə edin.'
+      try_frozen: '"Buzlu ürək"dən Anna və Elza ilə Rəssam'
+    infinity:
+      title: "Infinity oyun laboratoriyası"
+      body: "Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün Play Lab-dan istifadə edin."
+      image_alt: 'Frozen, Rapunzel və Böyük Qəhrəman 6`dan 5 dayanan personaj.'
+    map:
+      image_alt: 'Birləşmiş Ştatların təxminən 20 bənövşəyi rəngdə vurğulanmış ştatlarının  boz şəkli.'
+    mc_escape:
+      image_alt: 'Zümrüdlərlə dolu xəzinə sandığını açarkən üst papaq və monokl taxan Minecraft personajı.'
+    mc:
+      image_alt: 'Minecraft-dan Anna və Stiv Code.org Minecraft tapmacasının qarşısında dayanırlar.'
+    minecraft:
+      title: "Minecraft"
+      body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
+      image_alt: 'Minecraft-dan Anna və Stiv Code.org Minecraft tapmacasının qarşısında dayanırlar.'
+    minecraft2016:
+      title: "Minecraft"
+      body: "Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını proqramlaşdırın."
+    oceans:
+      image_alt: 'Okeanda müxtəlif dəniz canlılarını skan edən robot.'
+    playlab:
+      image_alt: 'Mavi pişik, axmaq it və tarix öncəsi mışovul göstərən bir şəkil kolajı.'
+    poem-art:
+      title: 'Şeir sənəti'
+      body: 'Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.'
+      image_alt: 'Səhnədə çıxış edən hipster kalamar.'
+    pre-express-2017:
+      image_alt: 'Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu at.'
+    pre-express-2018:
+      image_alt: 'Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu at.'
+    pre-express-2019:
+      image_alt: 'Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu at.'
+    pre-express:
+      image_alt: 'Puzzle parçalarından hazırlanmış ağacın qarşısında duran it və təkbuynuzlu at.'
+    sports:
+      title: "İdman"
+      body: "Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın."
+      image_alt: 'NBA və WNBA loqoları futbol topu, amerikan futbol topu, xokkey diski və basketbol topunun yanında göstərilir.'
+    starwars:
+      title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey və BB-8 səhrada dayanır.'
+    text-compression:
+      title: "Mətnin sıxılması"
+      body: "Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün Mətn Sıxılma Vidcetindən istifadə edəcəklər."
+      image_alt: "Bütün sözlər sadə simvolla əvəz etməklə mətn sıxılır.\nBütün sözlər bir simvolla əvəz etməklə kompres olunur."
     weblab:
       title: "veb-laboratoriya (beta)"
       body: "Web Laboratoriyası HTML və CSS-dən istifadə edərək sadə veb səhifələr yarada biləcəyiniz proqramlaşdırma mühitidir. Veb səhifələrinizi dizayn edin və saytınızı saniyələr ərzində paylaşın."
       audience: "13+ yaş"
       cta: "Öyrənin necə"
-    frozen:
-      title: "Buzlu ürək"
-    starwars:
-      title: "Star Wars"
-    infinity:
-      title: "Infinity oyun laboratoriyası"
-      body: "Disney Infinity personajlarının oynadığı hekayə və ya oyun yaratmaq üçün Play Lab-dan istifadə edin."
-    minecraft:
-      title: "Minecraft"
-      body: "Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin"
-    minecraft2016:
-      title: "Minecraft"
-      body: "Minecraft-ın öz versiyanızda heyvanları və digər Minecraft canlılarını proqramlaşdırın."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü! Kod ilə Minecraft-a səyahət."
-    sports:
-      title: "İdman"
-      body: "Basketbol oyunu hazırlayın və ya idman növlərini qarışdırın və uyğunlaşdırın."
-    text-compression:
-      title: "Mətnin sıxılması"
-      body: "Bu dərsdə şagirdlər nümunələri simvollarla əvəz edərək mətni sıxmaq üçün Mətn Sıxılma Vidcetindən istifadə edəcəklər."
-    unplugged:
-      title: "Sərbəst dərslər"
-      audience: "4+ yaş"
-      body: "Sinifinizdə istifadə etməyiniz üçün şəbəkədən çıxarılan dərslərin siyahısını tərtib etdik. İndi siz sinifinizdə kompüterlərin olub-olmamasından asılı olmayaraq kompüter elminin əsaslarını öyrədə bilərsiniz! Bu dərsləri müstəqil kurs kimi və ya hər hansı kompüter elmləri kursu üçün əlavə dərslər kimi istifadə etməyə çalışın."
-      body_short: "Əgər kompüteriniz yoxdursa, sinif otağınızda bu şəbəkədən çıxarılan dərsləri sınayın."
-    unplugged_conditionals:
-      title: "Şərti ifadələr"
-      body: "Kartların göyərtəsindən istifadə edərək, bu \"plugged\" fəaliyyətdə alqoritmlər və şərti ifadələr haqqında məlumat əldə edin."
+      image_alt: 'HTML kodunu göstərən kompüter ekranı.'
     widgets:
       title: "Vidjetlər"
       body: "Tələbələr bu rəqəmsal alətlərdən istifadə edərək, Kompüter Elmləri Prinsipləri kursumuzdakı anlayışları praktiki olaraq araşdıra bilərlər. Vidcetləri təkbaşına istifadə edin və ya sinifiniz üçün tək konseptual dərs yaradın."
       audience: "14+ yaş"
       cta: "Öyrənin necə"
+    unplugged_conditionals:
+      title: "Şərti ifadələr"
+      body: "Kartların göyərtəsindən istifadə edərək, bu \"plugged\" fəaliyyətdə alqoritmlər və şərti ifadələr haqqında məlumat əldə edin."
+    unplugged:
+      title: "Sərbəst dərslər"
+      audience: "4+ yaş"
+      body: "Sinifinizdə istifadə etməyiniz üçün şəbəkədən çıxarılan dərslərin siyahısını tərtib etdik. İndi siz sinifinizdə kompüterlərin olub-olmamasından asılı olmayaraq kompüter elminin əsaslarını öyrədə bilərsiniz! Bu dərsləri müstəqil kurs kimi və ya hər hansı kompüter elmləri kursu üçün əlavə dərslər kimi istifadə etməyə çalışın."
+      body_short: "Əgər kompüteriniz yoxdursa, sinif otağınızda bu şəbəkədən çıxarılan dərsləri sınayın."
+    20-hour:
+      title: 'Sürətləndirilmiş kurs'
+      body: 'Bu 20 saatlıq kurs informatikanın əsasları və proqramlaşdırmanın əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.'
+      body_short: 'İnformatikanın əsaslarını 2-4-cü kursların sürətləndirilmiş versiyası ilə öyrənin.'
   landing:
     prerelease_tutorial: "Bu dərslik **beta**-dadır. Rəy alındıqca və təkmilləşdirmələr aparıldıqca o, yenidən nəzərdən keçirilməlidir."
     report_bug: "Səhvi bildirin"
@@ -785,6 +878,8 @@ az:
     submit-incomplete-body: "Bəzi sualları yarımçıq qoymuşsunuz. Qiymətləndirmənizi təqdim etdikdən sonra redaktə edə bilməzsiniz. Sən əminsən?"
     submit-complete-title: "Qiymətləndirməni göndərin."
     submit-complete-body: "Qiymətləndirmənizi təqdim etdikdən sonra redaktə edə bilməzsiniz. Sən əminsən?"
+  level_summary:
+    correct_answer: "Düzgün cavab\n"
   match:
     wrong_title: "Yanlış həll"
     wrong_body: "Daxil etdiyiniz həll yanlışdır. Lütfən, bir daha cəhd edin!"
@@ -910,6 +1005,7 @@ az:
           age: 'Zəhmət olmasa bir yaş göstərin'
           abuse_type: 'Zəhmət olmasa bu məzmunun Xidmət Şərtlərini necə pozduğuna cavab verin'
           abuse_detail: 'Please provide details regarding the content you are reporting.'
+          captcha: 'Bu məzmunu bildirmək üçün CAPTCHA-nı doldurun.'
         abusive_url: 'Bildirilən məzmunun URL.'
         abuse_type:
           question: 'Bu kontent %{link_start} Xidmət Şərtlərini %{link_end} necə pozur?'
@@ -1047,17 +1143,36 @@ az:
         not_listed: 'Üstünlük verilən müddət siyahıda deyil'
         none: 'Cavab verməməyə üstünlük verirəm'
       school_country:
+        australia: 'Avstraliya'
         barbados: 'Barbados'
         belize: 'beliz'
+        brazil: 'Braziliya'
         canada: 'Kanada'
         chile: 'Çili'
         colombia: 'Kolumbiya'
+        dominican_republic: 'Dominik Respublikası'
+        india: 'Hindistan'
+        indonesia: 'İndoneziya'
         israel: 'İtrail'
+        jamaica: 'Yamayka'
+        kenya: 'Kenya'
+        kosovo: 'Kosova'
         malaysia: 'Malayziya'
+        maldives: 'Maldiv adaları'
         mexico: 'Meksika'
+        mongolia: 'Monqolustan'
+        new_zealand: 'Yeni Zenlandiya'
         paraguay: 'Paraqvay'
+        philippines: 'Filippin'
+        portugal: 'Portuqaliya '
+        puerto_rico: 'Puerto Riko'
+        slovakia: 'Slovakiya'
+        south_korea: 'Cənubi Koreya'
+        spain: "Ispaniya\n"
         thailand: 'Tayland'
+        trinidad_and_tobago: 'Trinidad və Tobaqo'
         uzbekistan: 'Özbəkistan'
+        vietnam: 'Vyetnam'
       ages:
         ages_under_6: '6 yaşdan aşağı'
         ages_7_8: '7 və 8 yaş arası'
@@ -1105,6 +1220,7 @@ az:
         csf_express: 'CS (Əvvəldən ifadə etmək və ya ifadə etmək)'
         csd: 'Kompüter Elmləri kəşfləri'
         csp: 'Kompüter Elmləri prinsipləri'
+        other: 'Digər'
         not_applicable: "Tətbiq olunmağa uyğun deyil"
       email_opt_in:
         opt_in_yes: 'Bəli'
@@ -1126,6 +1242,26 @@ az:
     no_teacher_email:
       body_markdown: 'Sizin hesabınızın email adressi yoxdur. Zəhmət olmasa bu formu bitirməmişdən əvvəl email adressinizi əlavə etmək üçün [hesab tənzimləmələrinə daxil olun] %{user_registration}'
   courses_category: 'Tam Kurslar'
+  course_offering:
+    headers:
+      favorites: 'Bəyənilənlər'
+      labs_and_skills: 'Laboratoriyalar və Bacarıqlar'
+      minecraft: 'Minecraft'
+      hello_world: 'Salam Dünya'
+      popular_media: 'Populyar media'
+      sports: 'İdman'
+      express: 'ifadə'
+      csf: 'Kompüter Elmlərinin əsasları'
+      csc: "CS Əlaqələri\n"
+      year_long: 'İl boyu'
+      csa_labs: 'CSA Laboratoriyaları'
+      self_paced: 'Öz-özünə templi'
+      teacher_led: 'Müəllimin rəhbərliyi'
+      collections: 'Kolleksiyalar'
+      workshops_k5: 'K-5 Seminarları'
+      summer_workshops_612: '6-12 Yay Seminarları'
+      virtual_academic_year_workshops_612: '6–12 Virtual Akademik İli Seminarları'
+      unsupported: 'Dəstəklənməyən'
   cookie_banner:
     message: 'Saytımıza baxmağa davam edərək və ya "Razıyam" düyməsini basaraq, kompüterinizdə və ya cihazınızda Cookies saxlanmasını qəbul etmiş olursunuz.'
     more_information: "\"Code.org\"un məxfilik siyasətini nəzərdən keçirin."
@@ -1146,6 +1282,7 @@ az:
       error_invalid_user: 'Etibarsız istifadəçi ID-si. Zəhmət olmasa, yenidən daxil olmağı yoxlayın.'
       error_no_code: 'Zəhmət olmasa, giriş kodunuzu daxil edin.'
       confirm_login: 'Google hesabınızla daxil olmaq üçün "Təsdiq et" -i seçin.'
+    setup_page_title: 'Maker Quraşdırma'
   parent_email_banner:
     text: "** Valideyn və ya qəyyumsunuz? ** Övladınızın proqresi və layihələri haqqında məlumatda olmaq üçün email ünvanınızı bu hesaba qoşun"
     link_your_email: "Eletron ünvanınızı qoşun"
@@ -1163,4 +1300,24 @@ az:
       forbidden: "İstifadəçi tələbənin kilidlənən vəziyyətini yeniləyə bilməz"
   reset_predict_progress_button: "Cavabı Sil"
   pixelation:
+    raw_format: "İbtidai format"
+    raw_format_alt: "Heç bir formatlaşdırmadan bitlərə baxın"
+    readable_format: "Oxunabilən Format"
+    readable_format_alt: "Piksellərə ayrılmış bitlərə bax(-ın)"
+    save_image: "Şəkli saxla (-yın)"
+    actual_size: "Hazırki/həqiqi ölçü"
+    image_file_format_header: "Şəklin Fayl Formatı."
+    image_file_format_width: "En(-i): 1 bayt"
+    image_file_format_height: "Hündürlük: 1 bayt"
+    image_file_format_bits_per_pixel: "Piksel başına Bit: 1 bayt\nHər Pikselə Bitlərin sayı/miqdarı: 1 bayt"
+    image_file_format_data_a: "piksel məlumatının n (sayda/miqdarda) bitləri"
+    image_file_format_data_b: "n = En * Hündürlük * Hər Pikselə Bitlərin sayı/miqdarı"
+    image_width: "Şəklin Eni"
+    image_height: "Şəklin Uzunluğu"
+    bits_per_pixel_header: "Piksel başına Bit/ Hər Pikselə Bitlərin sayı/miqdarı"
     binary: "İkilik"
+    hexadecimal: "Hexadecimal/ on altı ədədli"
+    pixel_format_header: "Piksel(-in) Formatı"
+  course_deprecated:
+    title: "Diqqət edin! Bu kurikulum artıq mövcud deyil, lakin Code.org sizin üçün daha yeni seçimlərə malikdir."
+    button: "Yeni kurrikuluma baxın"

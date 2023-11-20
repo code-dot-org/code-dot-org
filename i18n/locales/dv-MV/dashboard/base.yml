@@ -70,3 +70,6 @@ dv:
       email_opt_in:
         opt_in_yes: 'އާން'
         opt_in_no: 'ނޫން'
+  course_offering:
+    headers:
+      csf: 'ސީއެސް ފަންޑަމެންޓަލްސް'

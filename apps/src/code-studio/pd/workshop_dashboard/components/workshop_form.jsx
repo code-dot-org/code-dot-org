@@ -12,6 +12,7 @@ import Spinner from '../../components/spinner';
 import SessionListFormPart from './session_list_form_part';
 import FacilitatorListFormPart from './facilitator_list_form_part';
 import OrganizerFormPart from './organizer_form_part';
+/* eslint-disable no-restricted-imports */
 import {
   Grid,
   Row,
@@ -24,36 +25,40 @@ import {
   Button,
   ButtonToolbar,
   Radio,
-  Alert
+  Alert,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 import {
   PermissionPropType,
   WorkshopAdmin,
   Organizer,
   ProgramManager,
-  CsfFacilitator
+  CsfFacilitator,
 } from '../permission';
 import {
+  ActiveCourseWorkshops,
   Subjects,
+  SubjectNames,
   HideFeeInformationSubjects,
   HideOnWorkshopMapSubjects,
   HideFundedSubjects,
   VirtualOnlySubjects,
   NotFundedSubjects,
-  MustSuppressEmailSubjects
+  MustSuppressEmailSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
+import ModuleSelect from './ModuleSelect';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {
   placeholderId: '_0',
   date: moment().format(DATE_FORMAT),
   startTime: '9:00am',
-  endTime: '5:00pm'
+  endTime: '5:00pm',
 };
 
 // When selecting whether a workshop is virtual through the UI,
@@ -66,7 +71,7 @@ const thirdPartyProviders = ['friday_institute'];
 
 export class WorkshopForm extends React.Component {
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   static propTypes = {
@@ -94,12 +99,14 @@ export class WorkshopForm extends React.Component {
       suppress_email: PropTypes.bool,
       organizer: PropTypes.shape({
         id: PropTypes.number,
-        name: PropTypes.string
-      })
+        name: PropTypes.string,
+      }),
+      module: PropTypes.string,
     }),
     onSaved: PropTypes.func,
+    today: PropTypes.instanceOf(Date),
     readOnly: PropTypes.bool,
-    children: PropTypes.node
+    children: PropTypes.node,
   };
 
   constructor(props) {
@@ -120,6 +127,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
+      module: '',
       fee: null,
       notes: '',
       sessions: [placeholderSession],
@@ -130,7 +138,7 @@ export class WorkshopForm extends React.Component {
       regional_partner_id: '',
       virtual: false,
       suppress_email: false,
-      third_party_provider: null
+      third_party_provider: null,
     };
 
     if (props.workshop) {
@@ -146,13 +154,14 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
+          'module',
           'fee',
           'notes',
           'regional_partner_id',
           'organizer',
           'virtual',
           'suppress_email',
-          'third_party_provider'
+          'third_party_provider',
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -189,7 +198,7 @@ export class WorkshopForm extends React.Component {
     this.loadWorkshopRequest = $.ajax({
       method: 'GET',
       url: `/api/v1/pd/course_facilitators?course=${course}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({availableFacilitators: data});
     });
@@ -199,10 +208,10 @@ export class WorkshopForm extends React.Component {
     this.loadRegionalPartnersRequest = $.ajax({
       method: 'GET',
       url: '/api/v1/regional_partners',
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
-        regionalPartners: data
+        regionalPartners: data,
       });
     });
   }
@@ -214,7 +223,7 @@ export class WorkshopForm extends React.Component {
         id: session.id,
         date: moment.utc(session.start).format(DATE_FORMAT),
         startTime: moment.utc(session.start).format(TIME_FORMAT),
-        endTime: moment.utc(session.end).format(TIME_FORMAT)
+        endTime: moment.utc(session.end).format(TIME_FORMAT),
       };
     });
   }
@@ -230,14 +239,14 @@ export class WorkshopForm extends React.Component {
             .format(),
           end: moment
             .utc(session.date + ' ' + session.endTime, DATETIME_FORMAT)
-            .format()
+            .format(),
         };
       })
       .concat(
         destroyedSessions.map(destroyedSession => {
           return {
             id: destroyedSession.id,
-            _destroy: true
+            _destroy: true,
           };
         })
       );
@@ -257,7 +266,7 @@ export class WorkshopForm extends React.Component {
     this.setState({
       sessionsModified: true,
       sessions,
-      destroyedSessions
+      destroyedSessions,
     });
   };
 
@@ -273,7 +282,7 @@ export class WorkshopForm extends React.Component {
     return (
       <FormGroup validationState={validation.style.on_map}>
         <ControlLabel>Should this appear on the K-5 workshop map?</ControlLabel>
-        <FormGroup>
+        <FormGroup id="on_map">
           <Radio
             checked={this.state.on_map}
             inline
@@ -308,22 +317,22 @@ export class WorkshopForm extends React.Component {
       options.push(
         {
           value: {funded: true, funding_type: 'partner'},
-          text: 'Yes, it is funded. Please pay the Regional Partner.'
+          text: 'Yes, it is funded. Please pay the Regional Partner.',
         },
         {
           value: {funded: true, funding_type: 'facilitator'},
-          text: 'Yes, it is funded. Please pay the Facilitator directly.'
+          text: 'Yes, it is funded. Please pay the Facilitator directly.',
         }
       );
     } else if (this.state.subject !== 'Workshop for Returning Teachers') {
       options.push({
         value: {funded: true, funding_type: null},
-        text: 'Yes, it is funded.'
+        text: 'Yes, it is funded.',
       });
     }
     options.push({
       value: {funded: false, funding_type: null},
-      text: 'No, it is not funded.'
+      text: 'No, it is not funded.',
     });
     const value = JSON.stringify(
       _.pick(this.state, ['funded', 'funding_type'])
@@ -361,6 +370,34 @@ export class WorkshopForm extends React.Component {
     return this.state.course && Subjects[this.state.course];
   }
 
+  // For summer workshops for CSP and CSA, only workshop admins can change
+  // the “Is this a virtual workshop” field within one month of the workshop
+  // in order to prevent people from changing this last minute without
+  // talking to us or the Friday institute.
+  checkCannotChangeIfWorkshopVirtual() {
+    return (
+      (this.state.course === ActiveCourseWorkshops.CSP ||
+        this.state.course === ActiveCourseWorkshops.CSA) &&
+      this.state.subject === SubjectNames.SUBJECT_SUMMER_WORKSHOP &&
+      !this.props.permission.has(WorkshopAdmin) &&
+      this.state.sessions.some(this.sessionStartsWithinMonth)
+    );
+  }
+
+  // Returns whether today is within a month before the given session (a month
+  // is represented as 30 days here for consistency and to align with behavior
+  // in workshop_controller.rb).
+  sessionStartsWithinMonth = session => {
+    const today = this.props.today;
+    const workshopDate = new Date(session.date);
+    const monthBeforeWorkshopDate = new Date(
+      workshopDate.getFullYear(),
+      workshopDate.getMonth(),
+      workshopDate.getDate() - 30
+    );
+    return monthBeforeWorkshopDate <= today && today <= workshopDate;
+  };
+
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
@@ -379,16 +416,28 @@ export class WorkshopForm extends React.Component {
     const showFundedInput = !(
       isAdminCounselor || isCsfSubjectWithHiddenFundedField
     );
+    const virtualWorkshopHelpTip = this.checkCannotChangeIfWorkshopVirtual() ? (
+      <p>
+        There is less than a month until your workshop. Please contact
+        partner@code.org to update this setting.
+      </p>
+    ) : (
+      <p>Please update your selection if/when your plans change.</p>
+    );
 
     return (
       <FormGroup>
         <ControlLabel>
           Workshop Type Options&nbsp;
-          {isCsf && <a onClick={this.toggleTypeOptionsHelpDisplay}>(help)</a>}
+          {isCsf && (
+            <a id="helpLink" onClick={this.toggleTypeOptionsHelpDisplay}>
+              (help)
+            </a>
+          )}
         </ControlLabel>
         <div style={{height: 7}}>&nbsp;</div>
         {this.state.showTypeOptionsHelpDisplay && isCsf && (
-          <FormGroup>
+          <FormGroup id="helpTextDisplay">
             <p>
               If you’d like to make your workshop open to the public, select Yes
               to show it on the K-5 workshop map.
@@ -419,16 +468,19 @@ export class WorkshopForm extends React.Component {
             <FormGroup validationState={validation.style.virtual}>
               <ControlLabel>
                 Is this a virtual workshop?
-                <HelpTip>
-                  <p>Please update your selection if/when your plans change.</p>
-                </HelpTip>
+                <HelpTip>{virtualWorkshopHelpTip}</HelpTip>
               </ControlLabel>
               <SelectIsVirtual
                 value={this.currentVirtualStatus()}
                 onChange={this.handleVirtualChange}
                 readOnly={
                   this.props.readOnly ||
-                  VirtualOnlySubjects.includes(this.state.subject)
+                  VirtualOnlySubjects.includes(this.state.subject) ||
+                  this.checkCannotChangeIfWorkshopVirtual()
+                }
+                showVirtualOptions={
+                  !!this.props.workshop ||
+                  !this.checkCannotChangeIfWorkshopVirtual()
                 }
               />
               <HelpBlock>{validation.help.virtual}</HelpBlock>
@@ -489,14 +541,14 @@ export class WorkshopForm extends React.Component {
       options.push(
         ...sortedPartners.map(partner => ({
           value: partner.id,
-          label: partner.name
+          label: partner.name,
         }))
       );
     } else if (this.props.workshop) {
       // Display the currently selected partner name, even if the list hasn't yet loaded.
       options.push({
         value: this.props.workshop.regional_partner_id || '',
-        label: this.props.workshop.regional_partner_name
+        label: this.props.workshop.regional_partner_name,
       });
     }
 
@@ -691,7 +743,7 @@ export class WorkshopForm extends React.Component {
 
     this.setState({
       virtual,
-      third_party_provider: thirdPartyProviders.includes(value) ? value : null
+      third_party_provider: thirdPartyProviders.includes(value) ? value : null,
     });
   };
 
@@ -726,14 +778,15 @@ export class WorkshopForm extends React.Component {
   handleCourseChange = event => {
     const course = this.handleFieldChange(event);
 
-    // clear facilitators, subject, funding, and email reminders
+    // clear facilitators, subject, module, funding, and email reminders
     this.setState({
       facilitators: [],
       subject: null,
       fee: null,
       funded: '',
       funding_type: null,
-      suppress_email: false
+      suppress_email: false,
+      module: null,
     });
     this.loadAvailableFacilitators(course);
   };
@@ -746,25 +799,29 @@ export class WorkshopForm extends React.Component {
       NotFundedSubjects.includes(subject)
     ) {
       this.setState({
-        funded: false
+        funded: false,
       });
     }
 
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
-        virtual: true
+        virtual: true,
       });
     }
 
     if (MustSuppressEmailSubjects.includes(subject)) {
       this.setState({
-        suppress_email: true
+        suppress_email: true,
       });
     } else {
       this.setState({
-        suppress_email: false
+        suppress_email: false,
       });
     }
+
+    this.setState({
+      module: null,
+    });
   };
 
   handleCustomizeFeeChange = event => {
@@ -772,7 +829,7 @@ export class WorkshopForm extends React.Component {
     const fee = customizeFee ? '' : null;
 
     this.setState({
-      fee
+      fee,
     });
   };
 
@@ -787,6 +844,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
+      module: this.state.module,
       fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
       virtual: this.state.virtual,
@@ -796,7 +854,7 @@ export class WorkshopForm extends React.Component {
         this.state.sessions,
         this.state.destroyedSessions
       ),
-      regional_partner_id: this.state.regional_partner_id
+      regional_partner_id: this.state.regional_partner_id,
     };
 
     if (this.state.organizer) {
@@ -817,7 +875,7 @@ export class WorkshopForm extends React.Component {
       url: url,
       dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify({pd_workshop: workshop_data, notify})
+      data: JSON.stringify({pd_workshop: workshop_data, notify}),
     })
       .done(data => {
         if (this.props.onSaved) {
@@ -828,7 +886,7 @@ export class WorkshopForm extends React.Component {
         if (data.responseJSON.errors) {
           this.setState({
             errors: data.responseJSON.errors,
-            showSaveConfirmation: false
+            showSaveConfirmation: false,
           });
         }
       });
@@ -841,6 +899,10 @@ export class WorkshopForm extends React.Component {
 
   shouldShowFacilitators() {
     return !['Counselor', 'Admin'].includes(this.state.course);
+  }
+
+  shouldRenderModules() {
+    return this.state.subject === SubjectNames['SUBJECT_CUSTOM_WORKSHOP'];
   }
 
   renderFormButtons() {
@@ -890,7 +952,7 @@ export class WorkshopForm extends React.Component {
 
   toggleTypeOptionsHelpDisplay = () => {
     this.setState({
-      showTypeOptionsHelpDisplay: !this.state.showTypeOptionsHelpDisplay
+      showTypeOptionsHelpDisplay: !this.state.showTypeOptionsHelpDisplay,
     });
   };
 
@@ -950,6 +1012,11 @@ export class WorkshopForm extends React.Component {
         validation.isValid = false;
         validation.style.fee = 'error';
         validation.help.fee = 'Required';
+      }
+      if (this.shouldRenderModules() && !this.state.module) {
+        validation.isValid = false;
+        validation.style.module = 'error';
+        validation.help.module = 'Required.';
       }
     }
     return validation;
@@ -1044,6 +1111,20 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
+            <Col sm={5}>
+              {this.shouldRenderModules() && (
+                <ModuleSelect
+                  course={this.state.course}
+                  module={this.state.module}
+                  readOnly={this.props.readOnly}
+                  inputStyle={this.getInputStyle()}
+                  validation={validation}
+                  onChange={this.handleFieldChange}
+                />
+              )}
+            </Col>
+          </Row>
+          <Row>
             <Col sm={10}>
               {this.state.course && this.renderWorkshopTypeOptions(validation)}
             </Col>
@@ -1104,22 +1185,22 @@ const styles = {
   readOnlyInput: {
     backgroundColor: 'inherit',
     cursor: 'default',
-    border: 'none'
+    border: 'none',
   },
   noFeeContainer: {
-    paddingBottom: 7
+    paddingBottom: 7,
   },
   yesFeeRadio: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };
 
 export default connect(state => ({
   permission: state.workshopDashboard.permission,
-  facilitatorCourses: state.workshopDashboard.facilitatorCourses
+  facilitatorCourses: state.workshopDashboard.facilitatorCourses,
 }))(WorkshopForm);
 
-const SelectIsVirtual = ({value, readOnly, onChange}) => (
+const SelectIsVirtual = ({value, readOnly, onChange, showVirtualOptions}) => (
   <FormControl
     componentClass="select"
     value={value}
@@ -1132,18 +1213,23 @@ const SelectIsVirtual = ({value, readOnly, onChange}) => (
     <option key={'in_person'} value={'in_person'}>
       No, this is an in-person workshop.
     </option>
-    <option key={'friday_institute'} value={'friday_institute'}>
-      Yes, this is a Code.org-Friday Institute virtual workshop.
-    </option>
-    <option key={'regional'} value={'regional'}>
-      Yes, this is a regional virtual workshop.
-    </option>
+    {showVirtualOptions && (
+      <>
+        <option key={'friday_institute'} value={'friday_institute'}>
+          Yes, this is a Code.org-Friday Institute virtual workshop.
+        </option>
+        <option key={'regional'} value={'regional'}>
+          Yes, this is a regional virtual workshop.
+        </option>
+      </>
+    )}
   </FormControl>
 );
 SelectIsVirtual.propTypes = {
   value: PropTypes.string.isRequired,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  showVirtualOptions: PropTypes.bool.isRequired,
 };
 
 const SelectSuppressEmail = ({value, readOnly, onChange}) => (
@@ -1167,5 +1253,5 @@ const SelectSuppressEmail = ({value, readOnly, onChange}) => (
 SelectSuppressEmail.propTypes = {
   value: PropTypes.bool.isRequired,
   readOnly: PropTypes.bool,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };

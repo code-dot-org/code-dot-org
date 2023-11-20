@@ -19,3 +19,5 @@ Answers:
 
 Note that a Caesar cipher relies upon an alphabetic shift
 MARKDOWN
+
+allow_multiple_attempts true

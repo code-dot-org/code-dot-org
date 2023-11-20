@@ -22,7 +22,7 @@ const requiredFormatter = required => {
 export default function ParametersTable({
   parameters,
   programmingEnvironmentLanguage,
-  isSmallWindow
+  isSmallWindow,
 }) {
   const descriptionFormatter = description => {
     if (description) {
@@ -51,13 +51,13 @@ export default function ParametersTable({
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
-          }
-        }
+            width: '15%',
+          },
+        },
       },
       cell: {
-        props: {style: cellStyle}
-      }
+        props: {style: cellStyle},
+      },
     },
     {
       property: 'type',
@@ -67,13 +67,13 @@ export default function ParametersTable({
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '15%'
-          }
-        }
+            width: '15%',
+          },
+        },
       },
       cell: {
-        props: {style: cellStyle}
-      }
+        props: {style: cellStyle},
+      },
     },
     {
       property: 'required',
@@ -84,19 +84,19 @@ export default function ParametersTable({
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
             width: '15%',
-            ...(hideRequiredColumn && {display: 'none'})
-          }
-        }
+            ...(hideRequiredColumn && {display: 'none'}),
+          },
+        },
       },
       cell: {
         formatters: [requiredFormatter],
         props: {
           style: {
             ...cellStyle,
-            ...(hideRequiredColumn && {display: 'none'})
-          }
-        }
-      }
+            ...(hideRequiredColumn && {display: 'none'}),
+          },
+        },
+      },
     },
     {
       property: 'description',
@@ -106,15 +106,15 @@ export default function ParametersTable({
           style: {
             ...tableLayoutStyles.headerCell,
             ...styles.headerCell,
-            width: '55%'
-          }
-        }
+            width: '55%',
+          },
+        },
       },
       cell: {
         formatters: [descriptionFormatter],
-        props: {style: cellStyle}
-      }
-    }
+        props: {style: cellStyle},
+      },
+    },
   ];
 
   return (
@@ -132,22 +132,22 @@ export default function ParametersTable({
 ParametersTable.propTypes = {
   parameters: PropTypes.arrayOf(PropTypes.object),
   programmingEnvironmentLanguage: PropTypes.string,
-  isSmallWindow: PropTypes.bool
+  isSmallWindow: PropTypes.bool,
 };
 
 const styles = {
   headerCell: {
     backgroundColor: color.teal,
-    color: color.white
+    color: color.white,
   },
   requiredCheck: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   table: {
-    width: '100%'
+    width: '100%',
   },
   smallCell: {
     padding: 5,
-    fontSize: 13
-  }
+    fontSize: 13,
+  },
 };

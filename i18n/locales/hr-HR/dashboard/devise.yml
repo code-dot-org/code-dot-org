@@ -50,9 +50,6 @@ hr:
       expired: "istekao je, molimo zatraži novi"
       not_found: "nije pronađeno"
       not_locked: "nije zaključan"
-      not_saved:
-        one: "1 greška onemogućuje spremanje ovom %{resource} : "
-        other: "%{count} grešaka onemogućuju %{resource} spremanje:"
     invitations:
       send_instructions: 'E-mail pozivnica je poslana na %{email}.'
       invitation_token_invalid: 'Token pozivnice nije valjan!'

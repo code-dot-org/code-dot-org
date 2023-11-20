@@ -1,0 +1,342 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Leírás",
+  "correctAnswer": "Helyes",
+  "dataCardLastUpdated": "Legutóbb frissítve",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Height": {
+          "id": "Magasság"
+        },
+        "Length": {
+          "id": "Hossz"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Kor"
+        },
+        "Gender": {
+          "id": "Nem"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banán"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "szín"
+        },
+        "food": {
+          "id": "étel"
+        },
+        "music": {
+          "id": "zene"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Kor"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        },
+        "Writing": {
+          "id": "Írás"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Ország"
+        },
+        "Dance": {
+          "id": "Tánc"
+        },
+        "Music": {
+          "id": "Zene"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Ország"
+        },
+        "Name": {
+          "id": "Név"
+        },
+        "Score": {
+          "id": "Eredmény"
+        },
+        "Star": {
+          "id": "Csillag"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "sajt"
+        },
+        "chicken": {
+          "id": "csirke"
+        },
+        "lamb": {
+          "id": "bárány\n"
+        },
+        "onion": {
+          "id": "hagyma"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategória"
+        },
+        "Description": {
+          "id": "Leírás"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádó"
+        },
+        "ginger": {
+          "id": "gyömbér"
+        },
+        "onion": {
+          "id": "hagyma"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "szalonna"
+        },
+        "cheese": {
+          "id": "sajt"
+        },
+        "lobster": {
+          "id": "homár"
+        },
+        "meat": {
+          "id": "hús"
+        },
+        "mushrooms": {
+          "id": "gombák"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "Lime"
+        },
+        "strawberry": {
+          "id": "eper"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "aligátor"
+        },
+        "elephant": {
+          "id": "Elefánt"
+        },
+        "people": {
+          "id": "emberek"
+        },
+        "rhino": {
+          "id": "orrszarvú"
+        },
+        "trees": {
+          "id": "fák"
+        }
+      },
+      "name": "Szafari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádó"
+        },
+        "beans": {
+          "id": "babok"
+        },
+        "cheese": {
+          "id": "sajt"
+        },
+        "chicken": {
+          "id": "csirke"
+        },
+        "fruit": {
+          "id": "gyümölcs"
+        },
+        "tomato": {
+          "id": "paradicsom"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokádó"
+        },
+        "beans": {
+          "id": "babok"
+        },
+        "corn": {
+          "id": "kukorica"
+        },
+        "lime": {
+          "id": "Lime"
+        },
+        "onion": {
+          "id": "hagyma"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "méret"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "méret"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "nap"
+        },
+        "shoe": {
+          "id": "cipő"
+        },
+        "weather": {
+          "id": "időjárás"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Művész"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "kor"
+        },
+        "health": {
+          "id": "egészség"
+        },
+        "school": {
+          "id": "iskola"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Eredmények"
+        },
+        "Age": {
+          "description": "Kor",
+          "id": "Kor"
+        },
+        "Country": {
+          "id": "Ország"
+        },
+        "Dance": {
+          "id": "Tánc"
+        },
+        "Gender": {
+          "description": "Nem",
+          "id": "Nem"
+        },
+        "Height": {
+          "description": "Magasság",
+          "id": "Magasság"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Zene"
+        },
+        "Writing": {
+          "id": "Írás"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Tengeri"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "Helytelen",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Vissza",
+  "navigateDone": "Kész",
+  "navigateForward": "Tovább",
+  "predictButton": "Előrejelzés",
+  "saveProgress": "Mentés",
+  "tryAgain": "Próbáld újra"
+}

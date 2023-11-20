@@ -3,13 +3,13 @@ import {
   setWindowLocation,
   resetWindowLocation,
   queryParams,
-  updateQueryParam
+  updateQueryParam,
 } from '@cdo/apps/code-studio/utils';
 
 describe('utils', () => {
   let fakeWindowLocation = {
     search: '',
-    pathname: ''
+    pathname: '',
   };
   before(() => setWindowLocation(fakeWindowLocation));
   after(resetWindowLocation);
@@ -27,7 +27,7 @@ describe('utils', () => {
     it('get a hash of params if no specific one is asked for', () => {
       assert.deepEqual(queryParams(), {
         param1: 'one',
-        param2: 'two'
+        param2: 'two',
       });
     });
   });

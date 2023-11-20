@@ -18,7 +18,7 @@ describe('FoormLibraryEditorManager', () => {
     server.respondWith('GET', /foorm\/libraries\/[0-9]+\/question_names/, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify([{id: 2, name: 'a_library_question_name', type: 'radio'}])
+      JSON.stringify([{id: 2, name: 'a_library_question_name', type: 'radio'}]),
     ]);
 
     defaultProps = {
@@ -35,7 +35,7 @@ describe('FoormLibraryEditorManager', () => {
       setHasJSONError: () => {},
       setHasLintError: () => {},
       setLastSavedQuestions: () => {},
-      setLibraryData: () => {}
+      setLibraryData: () => {},
     };
 
     wrapper = shallow(<FoormLibraryEditorManager {...defaultProps} />);
@@ -48,53 +48,39 @@ describe('FoormLibraryEditorManager', () => {
   const sampleExistingLibraryQuestionData = {
     question: {},
     name: 'sample_library_question_name',
-    id: 0
+    id: 0,
   };
 
   const sampleExistingLibraryData = {
     name: 'sample_library_name',
     version: 0,
-    id: 1
+    id: 1,
   };
 
   it('keeps library question choice disabled and editor hidden on load', () => {
-    assert(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
-    );
+    assert(wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled'));
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
   });
 
   it('enables library question choice and keeps editor hidden on library load', () => {
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(0)
-      .prop('onSelect')(sampleExistingLibraryData);
-
-    assert(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
+    wrapper.find(FoormEntityLoadButtons).at(0).prop('onSelect')(
+      sampleExistingLibraryData
     );
+
+    assert(wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled'));
 
     server.respond();
     // calls setFetchableLibraryQuestions which results in
     wrapper.setProps({
       libraryId: sampleExistingLibraryData.id,
       fetchableLibraryQuestionsForCurrentLibrary: [
-        sampleExistingLibraryQuestionData
-      ]
+        sampleExistingLibraryQuestionData,
+      ],
     });
 
     assert.isFalse(
-      wrapper
-        .find(FoormEntityLoadButtons)
-        .at(1)
-        .prop('isDisabled')
+      wrapper.find(FoormEntityLoadButtons).at(1).prop('isDisabled')
     );
   });
 
@@ -102,25 +88,23 @@ describe('FoormLibraryEditorManager', () => {
     server.respondWith('GET', '/foorm/library_questions/0', [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(sampleExistingLibraryQuestionData)
+      JSON.stringify(sampleExistingLibraryQuestionData),
     ]);
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
 
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(0)
-      .prop('onSelect')(sampleExistingLibraryData);
+    wrapper.find(FoormEntityLoadButtons).at(0).prop('onSelect')(
+      sampleExistingLibraryData
+    );
 
     server.respond();
     wrapper.update();
 
     assert.equal(wrapper.find(FoormEntityEditor).length, 0);
 
-    wrapper
-      .find(FoormEntityLoadButtons)
-      .at(1)
-      .prop('onSelect')(sampleExistingLibraryQuestionData);
+    wrapper.find(FoormEntityLoadButtons).at(1).prop('onSelect')(
+      sampleExistingLibraryQuestionData
+    );
 
     server.respond();
     wrapper.update();

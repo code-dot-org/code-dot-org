@@ -1,0 +1,58 @@
+{
+  "ga-IE": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "codebytes-2020": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "coldplay": {
+            "buttonText": "Bain triail as"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Tosaigh"
+          },
+          "csjourneys": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "csjourneys-22": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "csleadersprize": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "hoc-2023": {
+            "buttonText": "Tuilleadh eolais"
+          },
+          "hoc-more": {
+            "body": "Tá níos mó ná 500 gníomhaíochtaí ríomheolaíochta ar shuíomh na hUaire Códála, do dhaoine ag gach leibhéal agus gach aois, forbartha ag Code.org agus ár gcomhpháirtithe."
+          },
+          "superhero": {
+            "buttonText": "Tuilleadh Eolais"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Bí linn"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Bí linn"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Bí linn"
+          }
+        }
+      }
+    }
+  }
+}

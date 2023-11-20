@@ -5,9 +5,6 @@
         "csd-2022/accelerometer-events": {
           "display_name": "İvmeölçer olayları"
         },
-        "csd-2022/analog-sensors": {
-          "display_name": "Analog Sensörler"
-        },
         "csd-2022/app-lab": {
           "display_name": "App Laboratuvarı"
         },
@@ -18,10 +15,13 @@
           "display_name": "Diziler"
         },
         "csd-2022/board-events": {
-          "display_name": "Kurul Etkinlikleri"
+          "display_name": "Devre kartı Etkinlikleri"
         },
         "csd-2022/booleans-and-comparison-operators": {
           "display_name": "Boolean ve Karşılaştırma Operatörleri"
+        },
+        "csd-2022/circuit-playground": {
+          "display_name": "Devre Oyun Alanına Genel Bakış"
         },
         "csd-2022/classes": {
           "display_name": "Sınıflar"
@@ -48,7 +48,7 @@
           "display_name": "Resimleri Düzenleme"
         },
         "csd-2022/for-loops": {
-          "display_name": "For Döngüleri"
+          "display_name": "For (İçin) Döngüleri"
         },
         "csd-2022/formatting-html": {
           "display_name": "HTML'de Biçimlendirme"
@@ -119,11 +119,14 @@
         "csd-2022/patterns-overview": {
           "display_name": "Genel Bakış"
         },
-        "csd-2022/physical-input": {
-          "display_name": "Fiziksel Girdi"
-        },
         "csd-2022/playing-notes": {
-          "display_name": "Notları çalma"
+          "display_name": "Notaları çalma"
+        },
+        "csd-2022/problem-solving-process": {
+          "display_name": "Problem çözme süreci"
+        },
+        "csd-2022/problem-solving-process-general": {
+          "display_name": "Problem çözme süreci"
         },
         "csd-2022/random-numbers": {
           "display_name": "Rastgele Sayılar"
@@ -147,7 +150,10 @@
           "display_name": "Hız"
         },
         "csd-2022/velocity-and-the-counter-pattern": {
-          "display_name": "Hız ve Sayaç Modeli"
+          "display_name": "Hız ve Sayaç Deseni"
+        },
+        "csd-2022/web-lab": {
+          "display_name": "Web Laboratuvarı"
         },
         "csd-2022/which-type-of-chart": {
           "content": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"

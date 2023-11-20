@@ -5,11 +5,11 @@
         "CT": {
           "description": "Razmišljati poput računala"
         },
-        "L": {
-          "description": "Jezik"
-        },
         "F": {
           "description": "Funkcije"
+        },
+        "L": {
+          "description": "Jezik"
         }
       }
     }

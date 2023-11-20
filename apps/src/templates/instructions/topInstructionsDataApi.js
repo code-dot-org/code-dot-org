@@ -1,10 +1,11 @@
 import $ from 'jquery';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 export function getTeacherFeedbackForStudent(studentId, levelId, scriptId) {
   return $.ajax({
     url: `/api/v1/teacher_feedbacks/get_feedbacks?student_id=${studentId}&level_id=${levelId}&script_id=${scriptId}`,
     method: 'GET',
-    contentType: 'application/json;charset=UTF-8'
+    contentType: 'application/json;charset=UTF-8',
   });
 }
 
@@ -12,7 +13,7 @@ export function getRubric(levelId) {
   return $.ajax({
     url: `/levels/${levelId}/get_rubric`,
     method: 'GET',
-    contentType: 'application/json;charset=UTF-8'
+    contentType: 'application/json;charset=UTF-8',
   });
 }
 
@@ -25,7 +26,7 @@ export function getTeacherFeedbackForTeacher(
   return $.ajax({
     url: `/api/v1/teacher_feedbacks/get_feedback_from_teacher?student_id=${studentId}&level_id=${levelId}&teacher_id=${teacherId}&script_id=${scriptId}`,
     method: 'GET',
-    contentType: 'application/json;charset=UTF-8'
+    contentType: 'application/json;charset=UTF-8',
   });
 }
 
@@ -34,6 +35,10 @@ export function incrementVisitCount(latestFeedbackId, token) {
     url: `/api/v1/teacher_feedbacks/${latestFeedbackId}/increment_visit_count`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    headers: {'X-CSRF-Token': token}
+    headers: {'X-CSRF-Token': token},
   });
+}
+
+export function getTaRubricFeedbackForStudent(rubricId) {
+  return HttpClient.fetchJson(`/rubrics/${rubricId}/get_teacher_evaluations`);
 }

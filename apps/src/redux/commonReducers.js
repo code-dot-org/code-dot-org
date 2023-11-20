@@ -11,6 +11,7 @@ import instructionsDialog from './instructionsDialog';
 import watchedExpressions from './watchedExpressions';
 import feedback from './feedback';
 import studioAppActivity from './studioAppActivity';
+import blockly from './blockly';
 
 module.exports = {
   runState,
@@ -21,5 +22,6 @@ module.exports = {
   instructionsDialog,
   watchedExpressions,
   feedback,
-  studioAppActivity
+  studioAppActivity,
+  blockly,
 };

@@ -10,3 +10,4 @@ question 'two-dimensional array'
 answer 'an array of arrays often represented as a table with rows and columns'
 question 'pixel'
 answer 'the smallest unit of information in an image'
+allow_multiple_attempts true

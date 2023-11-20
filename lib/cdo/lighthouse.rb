@@ -58,7 +58,7 @@ module Lighthouse
     ChatClient.log "#{url} Page Speed: <a href='#{html_url}'>#{perf}</a>"
     Cdo::Metrics.put 'Website/PageSpeed', perf,
       Environment: CDO.rack_env, URL: url.to_s
-  rescue => e
-    ChatClient.log "Page speed report failed: #{e}"
+  rescue => exception
+    ChatClient.log "Page speed report failed: #{exception}"
   end
 end

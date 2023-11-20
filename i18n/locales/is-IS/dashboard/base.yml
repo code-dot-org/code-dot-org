@@ -53,6 +53,7 @@ is:
         gender: 'Kyn'
         edit_header: 'Breyta upplýsingum reiknings'
         finish_sign_up_header: 'Ljúka við að stofna aðgang'
+        finish_sign_up_header_error: 'Vinsamlegast leiðréttu eftirfarandi villur:'
         finish_sign_up_subheader: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang fyrir **%{email}**.'
         finish_sign_up_subheader_provider: 'Færðu inn eftirfarandi upplýsingar til að ljúka við að stofna Code.org aðgang hjá <strong>%{provider}</strong> fyrir <strong>%{email}</strong>.'
@@ -60,6 +61,8 @@ is:
         reset_password_token: "Tengillinn sem þú hefur notað til að endurstilla lykilorðið"
         error:
           future: má ekki vera í framtíð
+        user_type: 'Tegund aðgangs'
+        us_state: 'Fylki'
   beta: "beta"
   hello: "Halló heimur"
   welcome_back: "Velkomin/n aftur, %{name}"
@@ -172,7 +175,6 @@ is:
     data_collection_us: "Ég skil að Code.org er bandarískt sjálfseignarvefsvæði og að bandarísk lög um söfnun gagna gætu verið önnur en lög í mínu landi."
     visit_privacy: 'Lestu [Persónuverndarstefnu](%{privacy_url}) Code.org til að fá nánari upplýsingar.'
     student_terms_markdown: "Netföng eru ekki geymd á sniði sem gerir okkur kleift að hafa samband við nemendur. Nemendur munu aldrei fá póst frá Code.org nema til að endurstilla aðgangsorð. Sjá nánar um þetta í [persónuverndarstefnu](http://code.org/privacy) okkar."
-    additional_information: "Við þurfum viðbótarupplýsingar til að geta haldið áfram að skrá þig."
     user_type_button: "Uppfæra tegund aðgangs"
     user_type_label: "Tegund aðgangs"
     user_type_student: "nemandi"
@@ -193,6 +195,7 @@ is:
     parent_account_checkbox: "Ég er foreldri/forráðamaður sem er að skrá fyrir hönd barns míns"
     parent_account_email_progress_permission: "Megum við senda þér af og til netpóst með upplýsingum um framvindu og verkefni barns þíns, og upplýsingum um námskeiðið og tölvunarfræði? [(Sjá persónuverndarstefnu okkar)](%{privacy_policy_url})"
     parent_account_email_label: "Netfang foreldris/forráðamanns"
+    us_state: 'Fylki'
   school_info:
     title: 'Upplýsingar skóla (val)'
     school_country: 'Land skóla'
@@ -649,23 +652,17 @@ is:
       body_short: "Hannaðu app og forritaðu það með kubbum eða JavaScript svo það virki. Deildu því svo með öðrum."
       audience: 'Aldur 13+'
       cta: 'Læra hvernig'
-    dance:
-      title: 'Danspartý'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Danspartý'
-    hoc:
-      title: 'Völundarhús'
-      body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
+    dance:
+      title: 'Danspartý'
     flappy:
       title: 'Flappy kóði'
       body: 'Viltu skrifa þinn eigin leik á minna en 10 mínútum? Prófaðu kennsluna með Flappy kóða!'
-    20-hour:
-      title: 'Hraðnámskeiðið'
-      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
-      body_short: 'Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prófaðu nýjustu Klukkustund kóðunar (beta)'
-      try_frozen: 'Listamaður með Önnu og Elsu úr Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Safn"
       body: "Skoða safn forrita og mynda sem notendur okkar hafa búið til"
@@ -674,18 +671,18 @@ is:
       body: "Leikjasmiðja er forritunarumhverfi þar sem þú getur búið til einfaldar hreyfimyndir og leiki með hlutum og gagnvirkum leikverum."
       audience: "Aldur 13+"
       cta: "Læra hvernig"
+    hero:
+      title: "Minecraft"
+      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     hoc-encryption:
       title: "Einföld dulkóðun"
       body: "Nemendur munu læra aðferðir til að búa til og þýða dulkóðuð skilaboð."
-    weblab:
-      title: "Vefsmiðjan (beta)"
-      body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
-      audience: "Aldur 13+"
-      cta: "Læra hvernig"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Völundarhús'
+      body: 'Prófaðu undirstöðuatriði tölvunarfræði. Miljónir hafa gert það.'
+    hoc2014:
+      try_new_tutorial: 'Prófaðu nýjustu Klukkustund kóðunar (beta)'
+      try_frozen: 'Listamaður með Önnu og Elsu úr Frozen'
     infinity:
       title: "Infinity Leikjasmiðja"
       body: "Nota Leikjasmiðjuna til að búa til sögu eða leik með Disney Infinity persónum."
@@ -695,30 +692,36 @@ is:
     minecraft2016:
       title: "Minecraft"
       body: "Forritaðu dýr og aðrar Minecraft verur í þinni eigin útgáfu af Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!\nFerðist um Minecraft með kóða."
     sports:
       title: "Íþróttir"
       body: "Búa til körfuboltaleik eða blanda saman íþróttum."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Þjöppun texta"
       body: "Í þessari kennslustund munu nemendur nota græjuna fyrir textaþjöppun til að þjappa texta með því að skipta út mynstrum fyrir tákn."
-    unplugged:
-      title: "Verkefni án tölvu"
-      audience: "Aldur 6+"
-      body: "Við höfum sett saman lista yfir verkefni unnin án tölvu sem hægt er að nota í kennslustofunni. Nú er hægt að kenna grundvallaratriði tölvunarfræðinnar hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði."
-      body_short: "Prófaðu verkefni án tölvu, ef engin tölva er til staðar."
-    unplugged_conditionals:
-      title: "Skilyrði"
-      body: "Lærðu um algrím og skilyrtar yrðingar í þessu verkefni \"án tölvu\" með því að nota spilastokk."
+    weblab:
+      title: "Vefsmiðjan (beta)"
+      body: "Vefsmiðjan er forritunarumhverfi þar sem þú getur búið til einfaldar vefsíður með HTML og CSS. Hannaðu vefsíður og deildu vefsetrinu á augabragði."
+      audience: "Aldur 13+"
+      cta: "Læra hvernig"
     widgets:
       title: "Græjur"
       body: "Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir um einstök hugtök fyrir hópinn."
       audience: "Aldur 14+"
       cta: "Læra hvernig"
+    unplugged_conditionals:
+      title: "Skilyrði"
+      body: "Lærðu um algrím og skilyrtar yrðingar í þessu verkefni \"án tölvu\" með því að nota spilastokk."
+    unplugged:
+      title: "Verkefni án tölvu"
+      audience: "Aldur 6+"
+      body: "Við höfum sett saman lista yfir verkefni unnin án tölvu sem hægt er að nota í kennslustofunni. Nú er hægt að kenna grundvallaratriði tölvunarfræðinnar hvort sem tölvur eru til staðar eða ekki í kennslustofunni. Reyndu að nota verkefnin sem sjálfstæð námskeið eða sem aukaefni fyrir námskeið í tölvunarfræði."
+      body_short: "Prófaðu verkefni án tölvu, ef engin tölva er til staðar."
+    20-hour:
+      title: 'Hraðnámskeiðið'
+      body: 'Þetta 20 klst. námskeið kynnir grundvallarhugtök í tölvunarfræði og forritun. Námskeiðið er hannað fyrir notkun í skólastofu með aldurshópi 13 - 14 ára, en er skemmtilegt fyrir alla aldurshópa.'
+      body_short: 'Lærðu undirstöðu í tölvunarfræði með hraðaðri útgáfu af námskeiðum 2-4.'
   landing:
     prerelease_tutorial: "Þetta kennsluefni er **beta** útgáfa. Það gæti breyst eftir því sem endurgjöf berst og endurbætur eru gerðar."
     report_bug: "Tilkynna galla"
@@ -1068,6 +1071,7 @@ is:
         csf_express: 'Grunnatriði TF (Forstig Hraðferðar eða Hraðferð)'
         csd: 'Uppgötvanir tölvunarfræði'
         csp: 'Grunnhugtök tölvunarfræði'
+        other: 'Annað'
         not_applicable: "Á ekki við"
       email_opt_in:
         opt_in_yes: 'Já'
@@ -1089,6 +1093,11 @@ is:
     no_teacher_email:
       body_markdown: 'Aðgangurinn þinn er ekki með skráð netfang. Vinsamlegast [farðu í notendastillingar þínar](%{user_registration}) til að bæta við netfangi þínu áður en þú fyllir út þetta form.'
   courses_category: 'Heil námskeið'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Íþróttir'
+      csf: 'TF Grunnur'
   cookie_banner:
     message: 'Með því að halda áfram að vafra á vef okkar eða smella á "Ég samþykki" samþykkir þú vistun fótspora (cookies) á tölvu þinni eða tæki.'
     more_information: "Sjá persónuverndarstefnu Code.org."

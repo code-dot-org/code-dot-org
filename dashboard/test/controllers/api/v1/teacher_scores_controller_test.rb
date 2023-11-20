@@ -51,7 +51,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     sign_in teacher
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: 100}]}
-    assert TeacherScore.where(teacher_id: teacher.id).exists?
+    assert TeacherScore.exists?(teacher_id: teacher.id)
     assert_response :no_content
   end
 
@@ -75,7 +75,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     destroyed_lesson = create :lesson
     destroyed_lesson.destroy
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: 100}, {lesson_id: destroyed_lesson.id, score: 0}]}
-    refute TeacherScore.where(teacher_id: teacher.id).exists?
+    refute TeacherScore.exists?(teacher_id: teacher.id)
     assert_response :forbidden
   end
 
@@ -147,7 +147,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, lesson_scores: [{lesson_id: lesson.id, score: score}]}
 
-    assert_queries 6 do
+    assert_queries 7 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
 
@@ -159,7 +159,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal section.students.count, 11
 
-    assert_queries 6 do
+    assert_queries 7 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end

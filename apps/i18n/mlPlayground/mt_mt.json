@@ -1,0 +1,78 @@
+{
+  "columnInspectorDescription": "Deskrizzjoni",
+  "correctAnswer": "Korrett",
+  "datasets": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Età"
+        },
+        "Gender": {
+          "id": "Sess"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "età"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Età"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "età"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "età"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Deskrizzjoni"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "jum"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "età"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Age": {
+          "description": "Età",
+          "id": "Età"
+        },
+        "Gender": {
+          "description": "Sess",
+          "id": "Sess"
+        }
+      }
+    }
+  },
+  "navigateBack": "Lura"
+}

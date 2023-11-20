@@ -37,8 +37,10 @@ bn:
         age: 'বয়স'
         gender: 'লিঙ্গ'
         edit_header: 'একাউন্ট বিস্তারিত সম্পাদনা করুন'
+        finish_sign_up_header_error: 'অনুগ্রহ করে নিম্নের ত্রুটিগুলো সংশোধন করুন:'
         error:
           future: ভবিষ্যতের হতে পারবে না
+        user_type: 'অ্যাকাউন্ট-এর ধরন'
   beta: "বেটা"
   hello: "হ্যালো ওয়ার্ল্ড"
   welcome_back: "স্বাগতম %{name}"
@@ -107,7 +109,6 @@ bn:
     invalid_password: "পাসওয়ার্ডের অন্তত 6 অক্ষর হতে হবে"
     mismatch_password: "আপনার প্রবেশ করানো পাসওয়ার্ড দুটি মিলছে না"
     student_consent: "আমি নিশ্চিত করছি যে Code.org এর সেবা ব্যবহার করার ক্ষেত্রে আমার বাবা-মা অথবা বৈধ অভিভাবকের অনুমতি আছে।"
-    additional_information: "সাইন আপ প্রক্রিয়া চালিয়ে নিতে আমাদের আরো কিছু অতিরিক্ত তথ্যের প্রয়োজন।"
     user_type_button: "অ্যাকাউন্ট-এর ধরন আপডেট করুন"
     user_type_label: "অ্যাকাউন্ট-এর ধরন"
     user_type_student: "ছাত্র"
@@ -295,37 +296,37 @@ bn:
       body: "অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ বানানো হয়। একটি অ্যাপ্লিকেশন নকশা (ডিজাইন) করুন ,তাকে কাজ করানোর জন্য ব্লক বা জাভাস্ক্রিপ্ট দিয়ে কোড করুন, তারপর এক সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।"
       audience: 'বয়সের ১৩+'
       cta: 'শিখুন কিভাবে'
+    aquatic:
+      title: "মাইনক্র্যাফট"
     flappy:
       title: 'ফ্লাপি কোড'
+    frozen:
+      title: "হিমায়িত"
     gallery:
       title: "সংগ্রহশালা"
     gamelab:
       audience: "বয়সের ১৩+"
       cta: "শিখুন কিভাবে"
+    hero:
+      title: "মাইনক্র্যাফট"
     hoc-encryption:
       title: "সাধারণ এনক্রিপশন"
-    weblab:
-      audience: "বয়সের ১৩+"
-      cta: "শিখুন কিভাবে"
-    frozen:
-      title: "হিমায়িত"
-    starwars:
-      title: "স্টার ওয়ার্স"
     minecraft:
       title: "মাইনক্র্যাফট"
     minecraft2016:
       title: "মাইনক্র্যাফট"
-    aquatic:
-      title: "মাইনক্র্যাফট"
-    hero:
-      title: "মাইনক্র্যাফট"
-    unplugged:
-      audience: "বয়স ৬+"
-    unplugged_conditionals:
-      title: "শর্তযুক্ত"
+    starwars:
+      title: "স্টার ওয়ার্স"
+    weblab:
+      audience: "বয়সের ১৩+"
+      cta: "শিখুন কিভাবে"
     widgets:
       audience: "বয়স 14+"
       cta: "শিখুন কিভাবে"
+    unplugged_conditionals:
+      title: "শর্তযুক্ত"
+    unplugged:
+      audience: "বয়স ৬+"
   landing:
     report_bug: "বাগ রিপোর্ট করুন"
     support: "সহায়তা নিন"
@@ -414,9 +415,14 @@ bn:
       robotics:
         kodable: 'কোডাবল'
         other: "অন্যান্য"
+      workshop_course:
+        other: 'অন্যান্য'
       email_opt_in:
         opt_in_yes: '"হ্যাঁ"'
         opt_in_no: 'না'
+  course_offering:
+    headers:
+      minecraft: 'মাইনক্র্যাফট'
   cookie_banner:
     accept: 'আমি একমত'
   copy: 'অনুলিপি'

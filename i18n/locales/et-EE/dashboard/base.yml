@@ -43,8 +43,11 @@ et:
         age: 'Vanus'
         gender: 'Sugu'
         edit_header: 'Muuda kasutajakonto üksikasju'
+        finish_sign_up_header_error: 'Palun parandage järgmised vead:'
         error:
           future: ei saa olla tulevikus
+        user_type: 'Konto tüüp'
+        us_state: 'Olek'
   beta: "beeta"
   hello: "Tere maailm"
   welcome_back: "Tere tulemast tagasi, %{name}"
@@ -130,16 +133,17 @@ et:
     agree_us_data_transfer_teacher: '**Nõustun, et Code.org võib edastada andmeid (muu hulgas isikuandmeid) selle kohta, kuidas ma (ja minu õpilased) seda saiti kasutan, Ameerika Ühendriikidesse**, eesmärgiga neid andmeid säilitada ja töödelda.'
     data_collection_us: "Saan aru, et Code.org on Ameerika Ühendriikide mittetulunduslik veebisait ja Ameerika Ühendriikides kehtivad andmekaitseseadused võivad erineda minu koduriigis kehtivatest."
     visit_privacy: 'Lisateavet leiab veebisaidi Code.org [privaatsuspoliitikast](%{privacy_url}).'
-    additional_information: "Meil on vaja täiendavat teavet, et sind registreerida."
     user_type_label: "Konto tüüp"
     user_type_student: "Õpilane"
     user_type_teacher: "Õpetaja"
     field_is_required: "on nõutud"
     accept_terms: "Pead konto loomiseks nõustuma"
+    email_preference_privacy: "(Vaata privaatsusreegleid)"
     email_preference_yes: "Jah"
     email_preference_no: "Ei"
     share_teacher_email_reg_partner_preference_yes: "Jah"
     share_teacher_email_reg_partner_preference_no: "Ei"
+    us_state: 'Olek'
   school_info:
     private: 'Privaatne'
     public: 'Avalik'
@@ -479,23 +483,17 @@ et:
       body_short: "Kujunda rakendus, programmeeri see plokkide või JavaScriptiga, et rakendus toimiks. Seejärel jaga oma rakendust mõne sekundiga."
       audience: 'Vanus 13+'
       cta: 'Õpi kuidas'
-    dance:
-      title: 'Tantsuõhtu'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Tantsuõhtu'
-    hoc:
-      title: 'Klassikaline labürint'
-      body: 'Proovige arvutiteaduse alused. Miljonid on proovinud.'
+    dance:
+      title: 'Tantsuõhtu'
     flappy:
       title: 'Flappy kood'
       body: 'Tahad kirjutada oma enda mängu vähem kui 10 minutiga? Proovi meie Flappy Code õpetusvideot!'
-    20-hour:
-      title: 'Kiirendatud kursus'
-      body: 'See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!'
-      body_short: 'Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Proovi meie uut KoodiTunni beta õpetusvideot'
-      try_frozen: 'Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galerii"
       body: "Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest"
@@ -503,14 +501,15 @@ et:
       title: "Game Lab"
       audience: "Vanus 13+"
       cta: "Õpi kuidas"
-    weblab:
-      title: "Web Lab (beta)"
-      audience: "Vanus 13+"
-      cta: "Õpi kuidas"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+    hoc:
+      title: 'Klassikaline labürint'
+      body: 'Proovige arvutiteaduse alused. Miljonid on proovinud.'
+    hoc2014:
+      try_new_tutorial: 'Proovi meie uut KoodiTunni beta õpetusvideot'
+      try_frozen: 'Näitleja Anna ja Elsaga, filmist "Lumekuninganna ja Igavene talv"'
     infinity:
       title: "Lõpmatu Play Lab"
       body: "Kasuta Play Labi, et luua lugu või mäng, kus peaosa mängivad Disney Infinity tegelased."
@@ -520,22 +519,27 @@ et:
     minecraft2016:
       title: "Minecraft"
       body: "Programmeeri loomi ja teisi Minecrafti tegelasi omaenda Minecrafti versioonis."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft on tagasi KoodiTunniks uhiuue tegevusega! Teekond läbi Minecrafti koos koodiga."
+    starwars:
+      title: "Star Wars"
+    weblab:
+      title: "Web Lab (beta)"
+      audience: "Vanus 13+"
+      cta: "Õpi kuidas"
+    widgets:
+      title: "Vidinad"
+      audience: "Vanuses 14 +"
+      cta: "Õpi kuidas"
+    unplugged_conditionals:
+      title: "Tingimuslaused"
     unplugged:
       title: "Seadmeteta tunnid"
       audience: "Vanusele 4+"
       body: "Oleme kokku seadnud nimekirja seadmeteta tundidest, mida saad oma klassis läbi viia. Nüüd saad õpetada arvutiteaduste põhialuseid ka siis kui sinu klassis ei ole arvuteid! Proovi neid tunnikavasid kas eraldiseisva kursusena või lisaks teistele arvutiõpetuse tundidele."
       body_short: "Kui sul ei ole arvuteid, proovi neid tunnikavasid seadmeteta tunni läbiviimiseks oma klassis."
-    unplugged_conditionals:
-      title: "Tingimuslaused"
-    widgets:
-      title: "Vidinad"
-      audience: "Vanuses 14 +"
-      cta: "Õpi kuidas"
+    20-hour:
+      title: 'Kiirendatud kursus'
+      body: 'See 20-tunnine kursus käsitleb peamisi arvutiteaduse ja programmeerimise kontseptsioone kursustel 2-4. Kursus on mõeldud kasutamiseks vanuses 10-18 aastat. Tutvu kursustega 2-4 põhjalikuma kogemuse saamiseks!'
+      body_short: 'Õppige arvutiteaduse põhitõed kiirendatud versioonis kursustel 2-4.'
   landing:
     report_bug: "Raporteeri veast"
     support: "Abi saamine"
@@ -792,9 +796,16 @@ et:
       robotics:
         kodable: 'Kodable'
         other: "Muu"
+      workshop_course:
+        other: 'Muu'
       email_opt_in:
         opt_in_yes: 'Jah'
         opt_in_no: 'Ei'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'Arvutiteaduse põhialused'
+      csc: 'Arvutiteaduse ühendused (CS Connections)'
   cookie_banner:
     accept: 'Olen nõus'
   page_not_found_title: "Lehte ei leitud"

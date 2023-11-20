@@ -1,5 +1,8 @@
+import React from 'react';
+import {shallow} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
 describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {
@@ -57,5 +60,25 @@ describe('ReportAbuseForm', () => {
       ),
       '123abc'
     );
+  });
+
+  it('renders a captcha when required', () => {
+    const args = {
+      abuseUrl: 'test.url',
+      requireCaptcha: true,
+    };
+    const wrapper = shallow(<ReportAbuseForm {...args} />);
+
+    assert.equal(wrapper.find('div.g-recaptcha').length, 1);
+  });
+
+  it('does not render a captcha when not required', () => {
+    const args = {
+      abuseUrl: 'test.url',
+      requireCaptcha: false,
+    };
+    const wrapper = shallow(<ReportAbuseForm {...args} />);
+
+    assert.equal(wrapper.find('div.g-recaptcha').length, 0);
   });
 });

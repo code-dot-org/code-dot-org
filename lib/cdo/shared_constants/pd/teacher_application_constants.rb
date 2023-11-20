@@ -13,6 +13,8 @@ module Pd
       complete: 'Complete - '
     }
 
+    SEND_ADMIN_APPROVAL_EMAIL_STATUSES = %w(awaiting_admin_approval).freeze
+
     YEAR = SharedApplicationConstants::APPLICATION_CURRENT_YEAR
 
     REGIONAL_PARTNER_DEFAULT_GUARDRAILS = {

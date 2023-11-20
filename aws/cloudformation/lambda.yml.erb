@@ -273,66 +273,53 @@ Resources:
             - "ec2:DescribeImages"
             Resource: '*'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
+
+  SQLUserLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
+      FunctionName: SQLUser
+      Code: <%=package_node_lambda 'sql-user' %>
+      Handler: index.handler
+      Runtime: nodejs18.x
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt SQLUserLambdaRole.Arn
+      VpcConfig:
+        SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
+        SubnetIds: <%=subnets.to_json%>
+  SQLUserLambdaRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
+      Policies:
+        - PolicyName: GetDBCredentials
+          PolicyDocument:
+            Statement:
+              # Grant this Lambda permission to every Stack's database credential Secrets.
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_admin-??????"
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_writer-??????"
+              -
+                Effect: Allow
+                Action: 'secretsmanager:GetSecretValue'
+                Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:CfnStack/*/db_credential_reader-??????"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+
   LambdaSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Security group for VPC-internal Lambda functions.
       VpcId: !ImportValue VPC
-  SSMSessionSlack:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'SSM Session Slack event handler'
-      FunctionName: SSMSessionSlack
-      Code: <%=ruby_zip 'ssm_session_slack' %>
-      Environment:
-        Variables:
-          SLACK_API_TOKEN: '{{resolve:secretsmanager:lambda/ssm_session_slack_token}}'
-          SLACK_CHANNEL: !Ref SessionChannel
-          FREEGEOIP_HOST: !ImportValue geocoder-DNSName
-          AUDIT_LOG_PATH: /admin/auditlogs
-      Handler: ssm_session_slack.handler
-      Runtime: ruby2.7
-      MemorySize: 1024
-      Timeout: 30
-      Role: !GetAtt SSMSessionSlackRole.Arn
-      VpcConfig:
-        SecurityGroupIds: [!Ref LambdaSecurityGroup]
-        SubnetIds: <%=subnets.to_json%>
-  SSMSessionSlackRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role 'lambda'%>
-      Path: /
-      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole']
-      Policies:
-        - PolicyName: root
-          PolicyDocument:
-            Statement:
-              - Effect: Allow
-                Action: ['ec2:DescribeTags']
-                Resource: '*'
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-  SessionEvent:
-    Type: AWS::Events::Rule
-    Properties:
-      Description: !Sub "Session events for ${AWS::StackName}."
-      EventPattern:
-        source: [aws.ssm]
-        detail-type: [AWS API Call via CloudTrail]
-        detail:
-          eventSource: [ssm.amazonaws.com]
-          eventName: [StartSession]
-          responseElements:
-            sessionId: [exists: true]
-      State: ENABLED
-      Targets: [{Id: SessionEventTarget, Arn: !GetAtt SSMSessionSlack.Arn}]
-  SessionEventPermission:
-    Type: AWS::Lambda::Permission
-    Properties:
-      FunctionName: !GetAtt SSMSessionSlack.Arn
-      Action: 'lambda:InvokeFunction'
-      Principal: events.amazonaws.com
-      SourceArn: !GetAtt SessionEvent.Arn
   AcceptLanguageFunction:
     Type: AWS::CloudFront::Function
     Properties:

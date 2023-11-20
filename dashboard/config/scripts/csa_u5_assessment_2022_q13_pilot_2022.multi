@@ -2,7 +2,7 @@ name 'CSA U5 Assessment 2022 q13_pilot-2022'
 
 wrong '`{{0}}`'
 wrong '`{{0}, {0}}`'
-wrong '`{{0, 1}, {0, 1}}`'
+wrong '`{{0, 0}, {1, 1}}`'
 wrong '`{{0, 1, 0}, {0, 1, 0}}`'
 right '`{{1, 0, 0}, {1, 0, 0}}`'
 
@@ -25,3 +25,5 @@ public static int[][] shift(int[][] arr) {
 
 The code does not work as intended. Which of the following arrays can be passed to `shift` to show that the method does NOT work as intended?
 MARKDOWN
+
+allow_multiple_attempts true

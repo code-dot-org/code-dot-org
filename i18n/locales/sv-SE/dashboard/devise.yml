@@ -50,9 +50,6 @@ sv:
       expired: "har löpt ut, vänligen begär ett nytt"
       not_found: "hittades inte"
       not_locked: "var inte låst"
-      not_saved:
-        one: "1 fel förbjöd %{resource} från att sparas:"
-        other: "%{count} fel förbjöd %{resource} från att sparas:"
     invitations:
       send_instructions: 'E-post inbjudan har skickats till %{email}.'
       invitation_token_invalid: 'Inbjudnings symbolen som tillhandahålls är inte giltig!'

@@ -7,9 +7,9 @@ const DEFAULT_PROPS = {
   name: `fo\'o's.bar`,
   type: 'image',
   api: {
-    basePath: name => `/path/to/${name}`
+    basePath: name => `/path/to/${name}`,
   },
-  onDelete: () => {}
+  onDelete: () => {},
 };
 
 describe('AssetRow', () => {

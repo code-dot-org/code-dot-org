@@ -9,7 +9,7 @@ describe('CourseRollup', () => {
   beforeEach(() => {
     defaultProps = {
       objectToRollUp: 'Vocabulary',
-      course: courseData
+      course: courseData,
     };
   });
 

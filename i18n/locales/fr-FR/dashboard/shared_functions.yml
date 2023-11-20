@@ -2,14 +2,14 @@ fr:
   data:
     shared_functions:
       driving with arrow keys: conduire avec les touches fléchées 
-      fluttering: flotter
+      fluttering: voleter
       growing: grandir
       jittering: gigoter
       moving east: se déplacer vers l'est
       moving east and looping: se déplacer vers l'est et en boucle
       moving north: se déplacer vers le nord
       moving north and looping: se déplacer vers le Nord et en boucle
-      moving south: aller vers le Sud
+      moving south: aller vers le sud
       moving south and looping: se déplacer vers le Sud et en boucle
       moving west: se déplacer vers l'ouest
       moving west and looping: se déplacer vers l'ouest et en boucle

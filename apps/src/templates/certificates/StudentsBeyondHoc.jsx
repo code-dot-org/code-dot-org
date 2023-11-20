@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import CourseBlocksStudentGradeBands from '../studioHomepages/CourseBlocksStudentGradeBands';
 import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
-import {LocalClassActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import {tutorialTypes} from '../tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import CourseBlocksWrapper from '@cdo/apps/templates/studioHomepages/CourseBlocksWrapper';
+import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
 
 class StudentsBeyondHoc extends Component {
   static propTypes = {
@@ -17,7 +17,7 @@ class StudentsBeyondHoc extends Component {
     userType: PropTypes.oneOf(['signedOut', 'teacher', 'student']).isRequired,
     under13: PropTypes.bool,
     isEnglish: PropTypes.bool.isRequired,
-    hideDancePartyFollowUp: PropTypes.bool
+    hideDancePartyFollowUp: PropTypes.bool,
   };
 
   render() {
@@ -28,7 +28,7 @@ class StudentsBeyondHoc extends Component {
       isEnglish,
       MCShareLink,
       under13,
-      hideDancePartyFollowUp
+      hideDancePartyFollowUp,
     } = this.props;
 
     const signedIn = userType === 'teacher' || userType === 'student';
@@ -152,13 +152,12 @@ class StudentsBeyondHoc extends Component {
         <h1 style={headingStyle}>{heading}</h1>
         <VerticalImageResourceCardRow cards={cards} />
         {isEnglish && (
-          <CourseBlocksStudentGradeBands
-            showContainer={false}
+          <CourseBlocksWrapper
+            cards={StudentGradeBandCards}
             hideBottomMargin={true}
           />
         )}
         <div style={styles.spacer} />
-        <LocalClassActionBlock showHeading={false} />
       </div>
     );
   }
@@ -166,17 +165,17 @@ class StudentsBeyondHoc extends Component {
 
 const styles = {
   heading: {
-    width: '100%'
+    width: '100%',
   },
   mobileHeading: {
     fontSize: 24,
-    lineHeight: 1.5
+    lineHeight: 1.5,
   },
   spacer: {
-    height: 20
-  }
+    height: 20,
+  },
 };
 
 export default connect(state => ({
-  responsiveSize: state.responsive.responsiveSize
+  responsiveSize: state.responsive.responsiveSize,
 }))(StudentsBeyondHoc);

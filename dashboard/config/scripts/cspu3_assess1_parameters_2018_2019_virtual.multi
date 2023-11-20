@@ -26,3 +26,5 @@ Correct answer:
         
 For squares of side length 3, 8, and 76 without having repetitive chunks of code in their program.
 MARKDOWN
+
+allow_multiple_attempts true

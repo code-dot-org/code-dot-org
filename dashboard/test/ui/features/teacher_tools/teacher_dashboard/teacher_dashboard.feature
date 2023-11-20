@@ -229,17 +229,17 @@ Feature: Using the teacher dashboard
 
   Scenario: Attempt to join an invalid section through the homepage
     Given I am a teacher and go home
-    And I wait until element "div.ui-test-join-section" is visible
+    And I wait until element "button.ui-test-join-section" is visible
     And I press keys "INVALID" for element "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "Section INVALID doesn't exist"
 
   Scenario: Attempt to join a section you own from teacher dashboard provides notification
     Given I am a teacher
     And I create a new student section and go home
-    And I wait until element "div.ui-test-join-section" is visible
+    And I wait until element "button.ui-test-join-section" is visible
     And I enter the section code into "input.ui-test-join-section"
-    And I click selector "div.ui-test-join-section"
+    And I click selector "button.ui-test-join-section"
     Then I wait until element ".announcement-notification" is visible
     And element ".announcement-notification" contains text matching "You are already the owner of section"

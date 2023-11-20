@@ -566,6 +566,45 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal courseg_2017, Unit.latest_assigned_version('courseg', student)
   end
 
+  test 'self.latest_version_with_progress returns nil if user made no progress in any version' do
+    student = create :student
+    family_name = 'fake-script-family'
+    create(:script, name: 'fake-script-family-2023', family_name: family_name, version_year: '2023')
+
+    assert_nil Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns version user made progress in if they made progress in one' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns latest version of unit user made progress in' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2022, last_progress_at: Time.now
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
+  test 'self.latest_version_with_progress returns latest version of unit user made progress in even if most recent progress not in most recent version' do
+    student = create :student
+    family_name = 'fake-script-family'
+    fake_script_2022 = create(:script, name: 'sample-script-family-2022', family_name: family_name, version_year: '2022')
+    fake_script_2023 = create(:script, name: 'sample-script-family-2023', family_name: family_name, version_year: '2023')
+    create :user_script, user: student, script: fake_script_2022, last_progress_at: Time.now
+    create :user_script, user: student, script: fake_script_2023, last_progress_at: Time.now - 1.day
+
+    assert_equal fake_script_2023, Unit.latest_version_with_progress(family_name, student)
+  end
+
   test 'has_other_versions? makes no queries when there is one other unit group version' do
     Unit.stubs(:should_cache?).returns true
 
@@ -876,6 +915,7 @@ class UnitTest < ActiveSupport::TestCase
 
     expected = {
       name: 'single-lesson-script',
+      displayName: 'single-lesson-script',
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,
@@ -1045,9 +1085,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo16, foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:teacher))
-      assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1075,9 +1115,9 @@ class UnitTest < ActiveSupport::TestCase
 
     [foo17, foo18, foo19].each do |s|
       summary = s.summarize_course_versions(create(:student))
-      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["foo-2017"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1109,7 +1149,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'summarize includes show assign button' do
-    unit = create(:script, name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
+    unit = create(:course_version, :with_unit).content_root
+    unit.update!(name: 'script', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview)
     teacher = create(:teacher)
 
     # No user, show_assign_button set to false
@@ -1164,10 +1205,10 @@ class UnitTest < ActiveSupport::TestCase
     unit = create :script
     announcement_key = SecureRandom.uuid
     unit.announcements = [{
-      'key': announcement_key,
-      'notice': 'Announcement notice',
-      'details': 'Announcement details',
-      'buttonText': 'Announcement button text'
+      key: announcement_key,
+      notice: 'Announcement notice',
+      details: 'Announcement details',
+      buttonText: 'Announcement button text'
     }]
     unit.save!
 
@@ -1622,9 +1663,9 @@ class UnitTest < ActiveSupport::TestCase
     Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
     assert Unit.modern_elementary_courses_available?("en-us")
-    assert_not Unit.modern_elementary_courses_available?("ch-ch")
-    assert_not Unit.modern_elementary_courses_available?("it-it")
-    assert_not Unit.modern_elementary_courses_available?("fr-fr")
+    refute Unit.modern_elementary_courses_available?("ch-ch")
+    refute Unit.modern_elementary_courses_available?("it-it")
+    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do
@@ -1869,7 +1910,7 @@ class UnitTest < ActiveSupport::TestCase
       [@csd_unit.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSD)
     )
-    assert Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP).include? @csp_unit.name
+    assert_includes(Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSP), @csp_unit.name)
     assert_equal(
       [@csa_unit.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSA)
@@ -1878,7 +1919,7 @@ class UnitTest < ActiveSupport::TestCase
       [@csc_unit.name],
       Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.CSC)
     )
-    assert Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC).include? @hoc_unit.name
+    assert_includes(Unit.unit_names_by_curriculum_umbrella(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC), @hoc_unit.name)
   end
 
   test "under_curriculum_umbrella and helpers" do
@@ -1894,6 +1935,8 @@ class UnitTest < ActiveSupport::TestCase
     assert @csc_unit.csc?
     assert @hoc_unit.under_curriculum_umbrella?(Curriculum::SharedCourseConstants::CURRICULUM_UMBRELLA.HOC)
     assert @hoc_unit.hoc?
+    refute @csf_unit.hoc?
+    refute @csd_unit.hoc?
   end
 
   test "middle_high?" do

@@ -1,10 +1,19 @@
 name 'U2L10 Assessment1'
-encrypted 'ZmCkpBMTpTvuWHCvTKqAny0WqMo7w4Pygridisljlb3R+eKtTr9ll43S2Bxg
-kzuxHyJa6874EpvQ7wEbqFffdJSkHL2CHsdHckizhIGbEwu6mvmpDdLGQ1HF
-DwKmkJkA0wDIGRsc2/8uBeR13mOJvPIYRr8gY1ikpfLYlLB/Pw3+nXrWfwVC
-vNXFCVsK5FrpR3KWkoJPClt9J+KhHS/8dxAp6irYytiDOHiLMvlZRexT6T+P
-HcMjVNNjWLq4yZBXFdsBvoBa4jRj+hKAoDWbAMffnryDqG3ajhyM9pgVRD5A
-F0OweouWwRdJjSmVACeb1oG0zE9iPSXUacOV/iW/WLDj0Ejaa8pOY7bbl8xo
-rBp41lTRqesIuBoNhaYVUCAZ9cidCdvrFfN69Bkxj2OdggnkU8DUuuz+B9EQ
-W5K42IWIWeZ7x4k/ZJifF/P/S+YzJGgahRcofzoKdinjxA9acg==
-'
+title 'Assessment Question 1'
+
+question 'What feature of DNS and IP allow the internet to scale?'
+wrong 'A. Redundancy'
+right 'B. Hierarchy'
+wrong 'C. Multiple servers' 
+wrong 'D. Government control'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Answer: 
+
+- B. Hierarchy
+MARKDOWN
+
+allow_multiple_attempts true

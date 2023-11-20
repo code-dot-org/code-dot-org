@@ -50,9 +50,6 @@ sk:
       expired: "vypršal, požiadaj o nový"
       not_found: "nenájdené"
       not_locked: "nebol uzamknutý"
-      not_saved:
-        one: "1 chyba zabránila uloženiu tohoto %{resource}:"
-        other: "%{count} chýb zabránilo uloženiu tohoto %{resource}:"
     invitations:
       send_instructions: 'Pozvanie bolo odoslané na e-mail: %{email}.'
       invitation_token_invalid: 'Zadaný pozývací token je neplatný!'

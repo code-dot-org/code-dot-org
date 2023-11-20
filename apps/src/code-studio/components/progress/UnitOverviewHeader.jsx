@@ -11,9 +11,10 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   dismissedRedirectWarning,
-  onDismissRedirectWarning
+  onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -44,7 +45,7 @@ class UnitOverviewHeader extends Component {
     // provided by redux
     plcHeaderProps: PropTypes.shape({
       unitName: PropTypes.string.isRequired,
-      courseViewPath: PropTypes.string.isRequired
+      courseViewPath: PropTypes.string.isRequired,
     }),
     announcements: PropTypes.arrayOf(announcementShape),
     courseVersionId: PropTypes.number.isRequired,
@@ -57,7 +58,7 @@ class UnitOverviewHeader extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    localeCode: PropTypes.string
+    localeCode: PropTypes.string,
   };
 
   componentDidMount() {
@@ -80,7 +81,7 @@ class UnitOverviewHeader extends Component {
       url: `/api/v1/user_scripts/${this.props.scriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true})
+      data: JSON.stringify({version_warning_dismissed: true}),
     });
   };
 
@@ -102,7 +103,7 @@ class UnitOverviewHeader extends Component {
       courseName,
       userId,
       isVerifiedInstructor,
-      hasVerifiedResources
+      hasVerifiedResources,
     } = this.props;
 
     const displayVerifiedResources =
@@ -136,7 +137,7 @@ class UnitOverviewHeader extends Component {
             viewAs={viewAs}
             firehoseAnalyticsData={{
               script_id: scriptId,
-              user_id: userId
+              user_id: userId,
             }}
           />
         )}
@@ -214,31 +215,31 @@ class UnitOverviewHeader extends Component {
 
 const styles = {
   heading: {
-    width: '100%'
+    width: '100%',
   },
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   title: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
-    color: color.charcoal
+    color: color.charcoal,
   },
   versionDropdown: {
-    marginBottom: 13
+    marginBottom: 13,
   },
   description: {
-    width: 700
-  }
+    width: 700,
+  },
 };
 
 export const UnconnectedUnitOverviewHeader = UnitOverviewHeader;
@@ -256,5 +257,5 @@ export default connect(state => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  localeCode: state.locales.localeCode
+  localeCode: state.locales.localeCode,
 }))(UnitOverviewHeader);

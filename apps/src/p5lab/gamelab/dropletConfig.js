@@ -1,5 +1,3 @@
-/* global dashboard */
-
 var api = require('./apiJavascript.js');
 import color from '@cdo/apps/util/color';
 var consoleApi = require('@cdo/apps/consoleApi');
@@ -20,13 +18,13 @@ var animBlockPrefix = 'anim.';
 
 const colliderTypeDropdown = ['rectangle', 'circle'].map(s => ({
   text: `"${s}"`,
-  display: `"${s}"`
+  display: `"${s}"`,
 }));
 
 var gameLab;
 var getAnimationDropdown;
 
-exports.injectGameLab = function(gamelab) {
+exports.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
   const executeCmd = gameLab.executeCmd.bind(gameLab);
@@ -37,7 +35,7 @@ exports.injectGameLab = function(gamelab) {
 // Flip the argument order so we can bind `typeFilter`.
 function chooseAsset(typeFilter, callback) {
   dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
+    showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
   });
 }
 
@@ -48,7 +46,7 @@ module.exports.blocks = [
     block: 'function draw() {}',
     expansion: 'function draw() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'drawSprites', category: 'World'},
   /* disabled since we aren't suggesting these global properties be used - commenting these out prevents droplet from turning 'width' and 'height' into blocks when referenced as locals or parameters */
@@ -61,19 +59,19 @@ module.exports.blocks = [
     func: 'keyIsPressed',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'key',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'keyCode',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'keyDown',
@@ -81,7 +79,7 @@ module.exports.blocks = [
     params: ['"up"'],
     dropdown: {0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"']},
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'keyWentDown',
@@ -89,7 +87,7 @@ module.exports.blocks = [
     params: ['"up"'],
     dropdown: {0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"']},
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'keyWentUp',
@@ -97,58 +95,58 @@ module.exports.blocks = [
     params: ['"up"'],
     dropdown: {0: ['"up"', '"down"', '"left"', '"right"', '"space"', '"a"']},
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'keyPressed',
     block: 'function keyPressed() {}',
     expansion: 'function keyPressed() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'keyReleased',
     block: 'function keyReleased() {}',
     expansion: 'function keyReleased() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'keyTyped',
     block: 'function keyTyped() {}',
     expansion: 'function keyTyped() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseX',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseY',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'pmouseX',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'pmouseY',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseButton',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'mouseDidMove', category: 'World', type: 'value'},
   {
@@ -156,83 +154,83 @@ module.exports.blocks = [
     paletteParams: ['button'],
     params: ['"leftButton"'],
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'mouseIsPressed',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseMoved',
     block: 'function mouseMoved() {}',
     expansion: 'function mouseMoved() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseDragged',
     block: 'function mouseDragged() {}',
     expansion: 'function mouseDragged() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mousePressed',
     block: 'function mousePressed() {}',
     expansion: 'function mousePressed() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseReleased',
     block: 'function mouseReleased() {}',
     expansion: 'function mouseReleased() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseClicked',
     block: 'function mouseClicked() {}',
     expansion: 'function mouseClicked() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseWentDown',
     paletteParams: ['button'],
     params: ['"leftButton"'],
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'mouseWentUp',
     paletteParams: ['button'],
     params: ['"leftButton"'],
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'mouseWheel',
     block: 'function mouseWheel() {}',
     expansion: 'function mouseWheel() {\n  __;\n}',
     category: 'World',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'mouseIsOver',
     paletteParams: ['sprite'],
     params: ['sprite'],
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'mousePressedOver',
     paletteParams: ['sprite'],
     params: ['sprite'],
     category: 'World',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'showMobileControls',
@@ -240,16 +238,16 @@ module.exports.blocks = [
       'spaceButtonVisible',
       'dpadVisible',
       'dpadFourWay',
-      'mobileOnly'
+      'mobileOnly',
     ],
     params: ['true', 'true', 'true', 'true'],
-    category: 'World'
+    category: 'World',
   },
   {
     func: 'allSprites',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'World.allSprites', category: 'World', type: 'readonlyproperty'},
   {func: 'World.width', category: 'World', type: 'readonlyproperty'},
@@ -263,7 +261,7 @@ module.exports.blocks = [
     func: 'camera',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'camera.on', category: 'World'},
   {func: 'camera.off', category: 'World'},
@@ -272,7 +270,7 @@ module.exports.blocks = [
     func: 'camera.active',
     category: 'World',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'camera.mouseX', category: 'World', type: 'readonlyproperty'},
   {func: 'camera.mouseY', category: 'World', type: 'readonlyproperty'},
@@ -280,13 +278,13 @@ module.exports.blocks = [
     func: 'camera.position.x',
     category: 'World',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'camera.position.y',
     category: 'World',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'camera.x', category: 'World', type: 'property'},
   {func: 'camera.y', category: 'World', type: 'property'},
@@ -295,7 +293,7 @@ module.exports.blocks = [
     func: 'comment_GameLab',
     block: '// Comment',
     expansion: '// ',
-    category: 'World'
+    category: 'World',
   },
 
   // Sprites
@@ -305,7 +303,7 @@ module.exports.blocks = [
     paramButtons: {minArgs: 2, maxArgs: 4},
     paletteParams: ['x', 'y'],
     params: ['200', '200'],
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'var sprite = createSprite',
@@ -313,7 +311,7 @@ module.exports.blocks = [
     paletteParams: ['x', 'y'],
     params: ['200', '200'],
     noAutocomplete: true,
-    docFunc: 'createSprite'
+    docFunc: 'createSprite',
   },
   {
     func: 'changeAnimation',
@@ -323,7 +321,7 @@ module.exports.blocks = [
     params: ['"animation_1"'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.changeAnimation',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'setAnimation',
@@ -332,12 +330,12 @@ module.exports.blocks = [
     paletteParams: ['label'],
     params: ['"animation_1"'],
     dropdown: {
-      0: function() {
+      0: function () {
         return getAnimationDropdown();
-      }
+      },
     },
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.setAnimation'
+    modeOptionName: '*.setAnimation',
   },
   {
     func: 'changeImage',
@@ -347,7 +345,7 @@ module.exports.blocks = [
     params: ['"img1"'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.changeImage',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'x',
@@ -355,7 +353,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.x',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'y',
@@ -363,7 +361,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.y',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'velocity',
@@ -372,7 +370,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.velocity',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'velocityX',
@@ -380,7 +378,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.velocityX',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'velocityY',
@@ -388,21 +386,21 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.velocityY',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'sprite.velocity.x',
     category: 'Sprites',
     modeOptionName: 'sprite_velocity_x',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'sprite.velocity.y',
     category: 'Sprites',
     modeOptionName: 'sprite_velocity_y',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'scale',
@@ -410,21 +408,21 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.scale',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'sprite.height',
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.height',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'sprite.width',
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.width',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'visible',
@@ -432,7 +430,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.visible',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'rotateToDirection',
@@ -440,7 +438,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.rotateToDirection',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'rotation',
@@ -448,7 +446,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.rotation',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'rotationSpeed',
@@ -456,7 +454,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.rotationSpeed',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'debug',
@@ -464,7 +462,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.debug',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'isTouching',
@@ -474,7 +472,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.isTouching',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'addAnimation',
@@ -484,7 +482,7 @@ module.exports.blocks = [
     params: ['"animation_1"', 'anim'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.addAnimation',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'addImage',
@@ -494,7 +492,7 @@ module.exports.blocks = [
     params: ['"img1"', 'img'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.addImage',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'addSpeed',
@@ -503,7 +501,7 @@ module.exports.blocks = [
     paletteParams: ['speed', 'angle'],
     params: ['1', '90'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.addSpeed'
+    modeOptionName: '*.addSpeed',
   },
   {
     func: 'addToGroup',
@@ -513,7 +511,7 @@ module.exports.blocks = [
     params: ['group'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.addToGroup',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'bounce',
@@ -523,7 +521,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.bounce',
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'bounceOff',
@@ -533,7 +531,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.bounceOff',
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'collide',
@@ -543,7 +541,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.collide',
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'displace',
@@ -553,7 +551,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.displace',
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'overlap',
@@ -563,7 +561,7 @@ module.exports.blocks = [
     params: ['target'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.overlap',
-    type: 'either'
+    type: 'either',
   },
   {
     func: 'setCollider',
@@ -574,7 +572,7 @@ module.exports.blocks = [
     params: ['"rectangle"'],
     dropdown: {0: colliderTypeDropdown},
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.setCollider'
+    modeOptionName: '*.setCollider',
   },
   {
     func: 'frameDidChange',
@@ -582,7 +580,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.frameDidChange',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'attractionPoint',
@@ -592,7 +590,7 @@ module.exports.blocks = [
     params: ['1', '200', '200'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.attractionPoint',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {func: 'createEdgeSprites', category: 'Sprites'},
   {func: 'leftEdge', category: 'Sprites', type: 'readonlyproperty'},
@@ -605,28 +603,28 @@ module.exports.blocks = [
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.pause'
+    modeOptionName: '*.pause',
   },
   {
     func: 'play',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.play'
+    modeOptionName: '*.play',
   },
   {
     func: 'previousFrame',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.previousFrame'
+    modeOptionName: '*.previousFrame',
   },
   {
     func: 'nextFrame',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.nextFrame'
+    modeOptionName: '*.nextFrame',
   },
   {
     func: 'setFrame',
@@ -635,7 +633,7 @@ module.exports.blocks = [
     paletteParams: ['frame'],
     params: ['0'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.setFrame'
+    modeOptionName: '*.setFrame',
   },
   {
     func: 'shapeColor',
@@ -643,7 +641,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.shapeColor',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'tint',
@@ -651,7 +649,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.tint',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'alpha',
@@ -659,7 +657,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.alpha',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'setVelocity',
@@ -668,7 +666,7 @@ module.exports.blocks = [
     paletteParams: ['x', 'y'],
     params: ['1', '1'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.setVelocity'
+    modeOptionName: '*.setVelocity',
   },
   {
     func: 'setSpeedAndDirection',
@@ -677,7 +675,7 @@ module.exports.blocks = [
     paletteParams: ['speed', 'angle'],
     params: ['1', '90'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.setSpeedAndDirection'
+    modeOptionName: '*.setSpeedAndDirection',
   },
   {
     func: 'getAnimationLabel',
@@ -686,7 +684,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getAnimationLabel',
     type: 'value',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'getDirection',
@@ -694,7 +692,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getDirection',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'getFrame',
@@ -702,7 +700,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getFrame',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'getSpeed',
@@ -710,7 +708,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getSpeed',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'limitSpeed',
@@ -720,7 +718,7 @@ module.exports.blocks = [
     params: ['3'],
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.limitSpeed',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'pointTo',
@@ -729,7 +727,7 @@ module.exports.blocks = [
     paletteParams: ['x', 'y'],
     params: ['200', '200'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.pointTo'
+    modeOptionName: '*.pointTo',
   },
   {
     func: 'mirrorX',
@@ -738,7 +736,7 @@ module.exports.blocks = [
     paletteParams: ['dir'],
     params: ['-1'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.mirrorX'
+    modeOptionName: '*.mirrorX',
   },
   {
     func: 'mirrorY',
@@ -747,7 +745,7 @@ module.exports.blocks = [
     paletteParams: ['dir'],
     params: ['-1'],
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.mirrorY'
+    modeOptionName: '*.mirrorY',
   },
   {
     func: 'getScaledWidth',
@@ -755,7 +753,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getScaledWidth',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'getScaledHeight',
@@ -763,14 +761,14 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.getScaledHeight',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'sprite.animation',
     category: 'Sprites',
     modeOptionName: '*.animation',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'depth',
@@ -778,7 +776,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.depth',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'sprite.remove',
@@ -786,14 +784,14 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: 'sprite_remove',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'destroy',
     blockPrefix: spriteBlockPrefix,
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
-    modeOptionName: '*.destroy'
+    modeOptionName: '*.destroy',
   },
   {
     func: 'frameDelay',
@@ -801,7 +799,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.frameDelay',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'friction',
@@ -809,7 +807,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.friction',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'immovable',
@@ -818,7 +816,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.immovable',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'life',
@@ -827,7 +825,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.life',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'lifetime',
@@ -835,7 +833,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.lifetime',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'mass',
@@ -843,7 +841,7 @@ module.exports.blocks = [
     category: 'Sprites',
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.mass',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'maxSpeed',
@@ -852,7 +850,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.maxSpeed',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'position',
@@ -861,21 +859,21 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.position',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'sprite.position.x',
     category: 'Sprites',
     modeOptionName: 'sprite_position_x',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'sprite.position.y',
     category: 'Sprites',
     modeOptionName: 'sprite_position_y',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'previousPosition',
@@ -884,21 +882,21 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.previousPosition',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'sprite.previousPosition.x',
     category: 'Sprites',
     modeOptionName: 'sprite_previousPosition_x',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'sprite.previousPosition.y',
     category: 'Sprites',
     modeOptionName: 'sprite_previousPosition_y',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'removed',
@@ -907,7 +905,7 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.removed',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'restitution',
@@ -916,14 +914,14 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.restitution',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'bounciness',
     category: 'Sprites',
     blockPrefix: spriteBlockPrefix,
     modeOptionName: '*.bounciness',
-    type: 'property'
+    type: 'property',
   },
   {
     func: 'touching',
@@ -932,13 +930,13 @@ module.exports.blocks = [
     tipPrefix: spriteMethodPrefix,
     modeOptionName: '*.touching',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'comment_Sprites',
     block: '// Comment',
     expansion: '// ',
-    category: 'Sprites'
+    category: 'Sprites',
   },
 
   /* TODO: decide whether to expose these Sprite properties:
@@ -967,10 +965,10 @@ update() - USEFUL?
     paletteParams: ['url1', 'url2'],
     params: [
       '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0001.png"',
-      '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0002.png"'
+      '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0002.png"',
     ],
     type: 'either',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'var anim = loadAnimation',
@@ -978,17 +976,17 @@ update() - USEFUL?
     paletteParams: ['url1', 'url2'],
     params: [
       '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0001.png"',
-      '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0002.png"'
+      '"https://code-dot-org.github.io/p5.play/examples/assets/ghost_standing0002.png"',
     ],
     noAutocomplete: true,
-    docFunc: 'loadAnimation'
+    docFunc: 'loadAnimation',
   },
   {
     func: 'animation',
     category: 'Animations',
     paletteParams: ['animation', 'x', 'y'],
     params: ['anim', '50', '50'],
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'changeFrame',
@@ -998,7 +996,7 @@ update() - USEFUL?
     params: ['0'],
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.changeFrame',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'anim.nextFrame',
@@ -1006,7 +1004,7 @@ update() - USEFUL?
     category: 'Animations',
     tipPrefix: animMethodPrefix,
     modeOptionName: 'anim_nextFrame',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'anim.previousFrame',
@@ -1014,7 +1012,7 @@ update() - USEFUL?
     category: 'Animations',
     tipPrefix: animMethodPrefix,
     modeOptionName: 'anim_previousFrame',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'clone',
@@ -1023,7 +1021,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.clone',
     type: 'value',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'getFrame',
@@ -1032,7 +1030,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: 'anim_getFrame',
     type: 'value',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'getLastFrame',
@@ -1041,7 +1039,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.getLastFrame',
     type: 'value',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'goToFrame',
@@ -1051,7 +1049,7 @@ update() - USEFUL?
     params: ['1'],
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.goToFrame',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'anim.play',
@@ -1059,7 +1057,7 @@ update() - USEFUL?
     category: 'Animations',
     tipPrefix: animMethodPrefix,
     modeOptionName: 'anim_play',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'rewind',
@@ -1067,7 +1065,7 @@ update() - USEFUL?
     category: 'Animations',
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.rewind',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'stop',
@@ -1075,7 +1073,7 @@ update() - USEFUL?
     category: 'Animations',
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.stop',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'frameChanged',
@@ -1084,7 +1082,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.frameChanged',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'anim.frameDelay',
@@ -1093,7 +1091,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: 'anim_frameDelay',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'images',
@@ -1102,7 +1100,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.images',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'looping',
@@ -1111,7 +1109,7 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.looping',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'playing',
@@ -1120,14 +1118,14 @@ update() - USEFUL?
     tipPrefix: animMethodPrefix,
     modeOptionName: '*.playing',
     type: 'readonlyproperty',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'anim.visible',
     category: 'Animations',
     modeOptionName: 'anim_visible',
     type: 'property',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   /* TODO: decide whether to expose these Animation methods:
 draw(xy)
@@ -1143,7 +1141,7 @@ getWidth()
     func: 'var group = createGroup',
     category: 'Groups',
     noAutocomplete: true,
-    docFunc: 'createGroup'
+    docFunc: 'createGroup',
   },
   {func: 'Group', category: 'Groups', type: 'either', noAutocomplete: true},
   {
@@ -1151,7 +1149,7 @@ getWidth()
     category: 'Groups',
     type: 'either',
     docFunc: 'Group',
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'add',
@@ -1160,7 +1158,7 @@ getWidth()
     paletteParams: ['sprite'],
     params: ['sprite'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.add'
+    modeOptionName: '*.add',
   },
   {
     func: 'remove',
@@ -1169,14 +1167,14 @@ getWidth()
     paletteParams: ['sprite'],
     params: ['sprite'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.remove'
+    modeOptionName: '*.remove',
   },
   {
     func: 'clear',
     blockPrefix: groupBlockPrefix,
     category: 'Groups',
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.clear'
+    modeOptionName: '*.clear',
   },
   {
     func: 'contains',
@@ -1186,7 +1184,7 @@ getWidth()
     params: ['sprite'],
     tipPrefix: groupMethodPrefix,
     modeOptionName: '*.contains',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'get',
@@ -1196,7 +1194,7 @@ getWidth()
     params: ['0'],
     tipPrefix: groupMethodPrefix,
     modeOptionName: '*.get',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'group.isTouching',
@@ -1205,7 +1203,7 @@ getWidth()
     params: ['target'],
     modeOptionName: 'group_isTouching',
     noAutocomplete: true,
-    type: 'value'
+    type: 'value',
   } /* avoid sprite.isTouching conflict */,
   {
     func: 'group.bounce',
@@ -1213,7 +1211,7 @@ getWidth()
     paletteParams: ['target'],
     params: ['target'],
     modeOptionName: 'group_bounce',
-    noAutocomplete: true
+    noAutocomplete: true,
   } /* avoid sprite.bounce conflict */,
   {
     func: 'group.bounceOff',
@@ -1221,7 +1219,7 @@ getWidth()
     paletteParams: ['target'],
     params: ['target'],
     modeOptionName: 'group_bounceOff',
-    noAutocomplete: true
+    noAutocomplete: true,
   } /* avoid sprite.bounceOff conflict */,
   {
     func: 'group.collide',
@@ -1229,7 +1227,7 @@ getWidth()
     paletteParams: ['target'],
     params: ['target'],
     modeOptionName: 'group_collide',
-    noAutocomplete: true
+    noAutocomplete: true,
   } /* avoid sprite.collide conflict */,
   {
     func: 'group.displace',
@@ -1237,7 +1235,7 @@ getWidth()
     paletteParams: ['target'],
     params: ['target'],
     modeOptionName: 'group_displace',
-    noAutocomplete: true
+    noAutocomplete: true,
   } /* avoid sprite.displace conflict */,
   {
     func: 'group.overlap',
@@ -1245,7 +1243,7 @@ getWidth()
     paletteParams: ['target'],
     params: ['target'],
     modeOptionName: 'group_overlap',
-    noAutocomplete: true
+    noAutocomplete: true,
   } /* avoid sprite.overlap conflict */,
   {
     func: 'maxDepth',
@@ -1253,7 +1251,7 @@ getWidth()
     category: 'Groups',
     tipPrefix: groupMethodPrefix,
     modeOptionName: '*.maxDepth',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'minDepth',
@@ -1261,14 +1259,14 @@ getWidth()
     category: 'Groups',
     tipPrefix: groupMethodPrefix,
     modeOptionName: '*.minDepth',
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'destroyEach',
     blockPrefix: groupBlockPrefix,
     category: 'Groups',
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.destroyEach'
+    modeOptionName: '*.destroyEach',
   },
   {
     func: 'pointToEach',
@@ -1277,7 +1275,7 @@ getWidth()
     paletteParams: ['x', 'y'],
     params: ['200', '200'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.pointToEach'
+    modeOptionName: '*.pointToEach',
   },
   {
     func: 'setAnimationEach',
@@ -1286,12 +1284,12 @@ getWidth()
     paletteParams: ['label'],
     params: ['"animation_1"'],
     dropdown: {
-      0: function() {
+      0: function () {
         return getAnimationDropdown();
-      }
+      },
     },
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setAnimationEach'
+    modeOptionName: '*.setAnimationEach',
   },
   {
     func: 'setColorEach',
@@ -1306,11 +1304,11 @@ getWidth()
         '"blue"',
         '"yellow"',
         'rgb(255, 0, 0)',
-        'rgb(255, 0, 0, 0.5)'
-      ]
+        'rgb(255, 0, 0, 0.5)',
+      ],
     },
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setColorEach'
+    modeOptionName: '*.setColorEach',
   },
   {
     func: 'setColliderEach',
@@ -1321,7 +1319,7 @@ getWidth()
     params: ['"rectangle"'],
     dropdown: {0: colliderTypeDropdown},
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setColliderEach'
+    modeOptionName: '*.setColliderEach',
   },
   {
     func: 'setDepthEach',
@@ -1330,7 +1328,7 @@ getWidth()
     paletteParams: ['depth'],
     params: ['1'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setDepthEach'
+    modeOptionName: '*.setDepthEach',
   },
   {
     func: 'setHeightEach',
@@ -1339,7 +1337,7 @@ getWidth()
     paletteParams: ['height'],
     params: ['50'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setHeightEach'
+    modeOptionName: '*.setHeightEach',
   },
   {
     func: 'setLifetimeEach',
@@ -1348,7 +1346,7 @@ getWidth()
     paletteParams: ['lifetime'],
     params: ['5'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setLifetimeEach'
+    modeOptionName: '*.setLifetimeEach',
   },
   {
     func: 'setMirrorXEach',
@@ -1357,7 +1355,7 @@ getWidth()
     paletteParams: ['dir'],
     params: ['-1'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setMirrorXEach'
+    modeOptionName: '*.setMirrorXEach',
   },
   {
     func: 'setMirrorYEach',
@@ -1366,7 +1364,7 @@ getWidth()
     paletteParams: ['dir'],
     params: ['-1'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setMirrorYEach'
+    modeOptionName: '*.setMirrorYEach',
   },
   {
     func: 'setRotateToDirectionEach',
@@ -1375,7 +1373,7 @@ getWidth()
     paletteParams: ['bool'],
     params: ['true'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setRotateToDirectionEach'
+    modeOptionName: '*.setRotateToDirectionEach',
   },
   {
     func: 'setRotationEach',
@@ -1384,7 +1382,7 @@ getWidth()
     paletteParams: ['angle'],
     params: ['90'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setRotationEach'
+    modeOptionName: '*.setRotationEach',
   },
   {
     func: 'setRotationSpeedEach',
@@ -1393,7 +1391,7 @@ getWidth()
     paletteParams: ['speed'],
     params: ['5'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setRotationSpeedEach'
+    modeOptionName: '*.setRotationSpeedEach',
   },
   {
     func: 'setScaleEach',
@@ -1402,7 +1400,7 @@ getWidth()
     paletteParams: ['scale'],
     params: ['5'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setScaleEach'
+    modeOptionName: '*.setScaleEach',
   },
   {
     func: 'setSpeedAndDirectionEach',
@@ -1411,7 +1409,7 @@ getWidth()
     paletteParams: ['speed', 'angle'],
     params: ['1', '90'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setSpeedAndDirectionEach'
+    modeOptionName: '*.setSpeedAndDirectionEach',
   },
   {
     func: 'setTintEach',
@@ -1426,11 +1424,11 @@ getWidth()
         '"blue"',
         '"yellow"',
         'rgb(255, 0, 0)',
-        'rgb(255, 0, 0, 0.5)'
-      ]
+        'rgb(255, 0, 0, 0.5)',
+      ],
     },
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setTintEach'
+    modeOptionName: '*.setTintEach',
   },
   {
     func: 'setVelocityEach',
@@ -1439,7 +1437,7 @@ getWidth()
     paletteParams: ['x', 'y'],
     params: ['1', '1'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setVelocityEach'
+    modeOptionName: '*.setVelocityEach',
   },
   {
     func: 'setVelocityXEach',
@@ -1448,7 +1446,7 @@ getWidth()
     paletteParams: ['velocityX'],
     params: ['3'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setVelocityXEach'
+    modeOptionName: '*.setVelocityXEach',
   },
   {
     func: 'setVelocityYEach',
@@ -1457,7 +1455,7 @@ getWidth()
     paletteParams: ['velocityY'],
     params: ['3'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setVelocityYEach'
+    modeOptionName: '*.setVelocityYEach',
   },
   {
     func: 'setVisibleEach',
@@ -1466,7 +1464,7 @@ getWidth()
     paletteParams: ['bool'],
     params: ['false'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setVisibleEach'
+    modeOptionName: '*.setVisibleEach',
   },
   {
     func: 'setWidthEach',
@@ -1475,13 +1473,13 @@ getWidth()
     paletteParams: ['width'],
     params: ['50'],
     tipPrefix: groupMethodPrefix,
-    modeOptionName: '*.setWidthEach'
+    modeOptionName: '*.setWidthEach',
   },
   {
     func: 'comment_Groups',
     block: '// Comment',
     expansion: '// ',
-    category: 'Groups'
+    category: 'Groups',
   },
   /* TODO: decide whether to expose these Group methods:
 draw() - USEFUL?
@@ -1495,18 +1493,18 @@ draw() - USEFUL?
     params: ['"https://code.org/images/logo.png"'],
     type: 'either',
     dropdown: {
-      0: function() {
+      0: function () {
         return getAssetDropdown('image');
-      }
+      },
     },
-    assetTooltip: {0: chooseAsset.bind(null, 'image')}
+    assetTooltip: {0: chooseAsset.bind(null, 'image')},
   },
   {
     func: 'var img = loadImage',
     category: 'Drawing',
     paletteParams: ['url'],
     params: ['"https://code.org/images/logo.png"'],
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'image',
@@ -1520,7 +1518,7 @@ draw() - USEFUL?
       'x',
       'y',
       'w',
-      'h'
+      'h',
     ],
     params: [
       'img',
@@ -1531,9 +1529,9 @@ draw() - USEFUL?
       '0',
       '0',
       'img.width',
-      'img.height'
+      'img.height',
     ],
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'background',
@@ -1548,9 +1546,9 @@ draw() - USEFUL?
         '"blue"',
         '"yellow"',
         'rgb(255, 0, 0)',
-        'rgb(255, 0, 0, 0.5)'
-      ]
-    }
+        'rgb(255, 0, 0, 0.5)',
+      ],
+    },
   },
   {
     func: 'fill',
@@ -1564,9 +1562,9 @@ draw() - USEFUL?
         '"blue"',
         '"yellow"',
         'rgb(255, 0, 0)',
-        'rgb(255, 0, 0, 0.5)'
-      ]
-    }
+        'rgb(255, 0, 0, 0.5)',
+      ],
+    },
   },
   {func: 'noFill', category: 'Drawing'},
   {
@@ -1581,16 +1579,16 @@ draw() - USEFUL?
         '"blue"',
         '"yellow"',
         'rgb(255, 0, 0)',
-        'rgb(255, 0, 0, 0.5)'
-      ]
-    }
+        'rgb(255, 0, 0, 0.5)',
+      ],
+    },
   },
   {func: 'noStroke', category: 'Drawing'},
   {
     func: 'strokeWeight',
     category: 'Drawing',
     paletteParams: ['size'],
-    params: ['3']
+    params: ['3'],
   },
   {
     func: 'rgb',
@@ -1598,90 +1596,90 @@ draw() - USEFUL?
     paramButtons: {minArgs: 3, maxArgs: 4},
     paletteParams: ['r', 'g', 'b'],
     params: ['255', '255', '255'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'rect',
     category: 'Drawing',
     paramButtons: {minArgs: 2, maxArgs: 4},
     paletteParams: ['x', 'y', 'w', 'h'],
-    params: ['100', '100', '200', '200']
+    params: ['100', '100', '200', '200'],
   },
   {
     func: 'ellipse',
     category: 'Drawing',
     paramButtons: {minArgs: 2, maxArgs: 4},
     paletteParams: ['x', 'y', 'w', 'h'],
-    params: ['200', '200', '400', '400']
+    params: ['200', '200', '400', '400'],
   },
   {
     func: 'text',
     category: 'Drawing',
     paletteParams: ['str', 'x', 'y'],
     params: ['"text"', '0', '15'],
-    paramButtons: {minArgs: 3, maxArgs: 5}
+    paramButtons: {minArgs: 3, maxArgs: 5},
   },
   {
     func: 'textAlign',
     category: 'Drawing',
     paletteParams: ['horiz', 'vert'],
-    params: ['CENTER', 'TOP']
+    params: ['CENTER', 'TOP'],
   },
   {
     func: 'textFont',
     category: 'Drawing',
     paletteParams: ['font'],
-    params: ['"Arial"']
+    params: ['"Arial"'],
   },
   {
     func: 'textSize',
     category: 'Drawing',
     paletteParams: ['pixels'],
-    params: ['12']
+    params: ['12'],
   },
   {
     func: 'arc',
     category: 'Drawing',
     paletteParams: ['x', 'y', 'w', 'h', 'start', 'stop'],
-    params: ['0', '0', '800', '800', '0', '90']
+    params: ['0', '0', '800', '800', '0', '90'],
   },
   {
     func: 'line',
     category: 'Drawing',
     paletteParams: ['x1', 'y1', 'x2', 'y2'],
-    params: ['0', '0', '400', '400']
+    params: ['0', '0', '400', '400'],
   },
   {
     func: 'point',
     category: 'Drawing',
     paletteParams: ['x', 'y'],
-    params: ['200', '200']
+    params: ['200', '200'],
   },
   {
     func: 'regularPolygon',
     category: 'Drawing',
     paletteParams: ['x', 'y', 'sides', 'size'],
-    params: ['200', '200', '5', '50']
+    params: ['200', '200', '5', '50'],
   },
   {
     func: 'shape',
     category: 'Drawing',
     paramButtons: {minArgs: 6},
     paletteParams: ['x1', 'y1', 'x2', 'y2', 'x3', 'y3'],
-    params: ['200', '0', '0', '400', '400', '400']
+    params: ['200', '0', '0', '400', '400', '400'],
   },
   {
     func: 'triangle',
     category: 'Drawing',
     paletteParams: ['x1', 'y1', 'x2', 'y2', 'x3', 'y3'],
     params: ['200', '0', '0', '400', '400', '400'],
-    noAutocomplete: true
+    noAutocomplete: true,
   },
   {
     func: 'comment_Drawing',
     block: '// Comment',
     expansion: '// ',
-    category: 'Drawing'
+    category: 'Drawing',
   },
 
   // Control
@@ -1695,7 +1693,7 @@ draw() - USEFUL?
     func: 'comment_Control',
     block: '// Comment',
     expansion: '// ',
-    category: 'Control'
+    category: 'Control',
   },
 
   // Math
@@ -1704,214 +1702,214 @@ draw() - USEFUL?
     category: 'Math',
     paletteParams: ['angle'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'cos',
     category: 'Math',
     paletteParams: ['angle'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'tan',
     category: 'Math',
     paletteParams: ['angle'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'asin',
     category: 'Math',
     paletteParams: ['value'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'acos',
     category: 'Math',
     paletteParams: ['value'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'atan',
     category: 'Math',
     paletteParams: ['value'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'atan2',
     category: 'Math',
     paletteParams: ['y', 'x'],
     params: ['10', '10'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'degrees',
     category: 'Math',
     paletteParams: ['radians'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'radians',
     category: 'Math',
     paletteParams: ['degrees'],
     params: ['0'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'angleMode',
     category: 'Math',
     paletteParams: ['mode'],
-    params: ['DEGREES']
+    params: ['DEGREES'],
   },
   {
     func: 'random',
     category: 'Math',
     paletteParams: ['min', 'max'],
     params: ['1', '5'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'randomGaussian',
     category: 'Math',
     paletteParams: ['mean', 'sd'],
     params: ['0', '15'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'randomSeed',
     category: 'Math',
     paletteParams: ['seed'],
-    params: ['99']
+    params: ['99'],
   },
   {
     func: 'abs',
     category: 'Math',
     paletteParams: ['num'],
     params: ['-1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'ceil',
     category: 'Math',
     paletteParams: ['num'],
     params: ['0.1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'constrain',
     category: 'Math',
     paletteParams: ['num', 'low', 'high'],
     params: ['1.1', '0', '1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'dist',
     category: 'Math',
     paletteParams: ['x1', 'y1', 'x2', 'y2'],
     params: ['0', '0', '100', '100'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'exp',
     category: 'Math',
     paletteParams: ['num'],
     params: ['1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'floor',
     category: 'Math',
     paletteParams: ['num'],
     params: ['0.9'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'lerp',
     category: 'Math',
     paletteParams: ['start', 'stop', 'amt'],
     params: ['0', '100', '0.1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'log',
     category: 'Math',
     paletteParams: ['num'],
     params: ['1'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'mag',
     category: 'Math',
     paletteParams: ['a', 'b'],
     params: ['100', '100'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'map',
     category: 'Math',
     paletteParams: ['value', 'start1', 'stop1', 'start2', 'stop'],
     params: ['0.9', '0', '1', '0', '100'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'max',
     category: 'Math',
     paletteParams: ['n1', 'n2'],
     params: ['1', '3'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'min',
     category: 'Math',
     paletteParams: ['n1', 'n2'],
     params: ['1', '3'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'norm',
     category: 'Math',
     paletteParams: ['value', 'start', 'stop'],
     params: ['90', '0', '100'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'pow',
     category: 'Math',
     paletteParams: ['n', 'e'],
     params: ['10', '2'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'round',
     category: 'Math',
     paletteParams: ['num'],
     params: ['0.9'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'sq',
     category: 'Math',
     paletteParams: ['num'],
     params: ['2'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'sqrt',
     category: 'Math',
     paletteParams: ['num'],
     params: ['9'],
-    type: 'value'
+    type: 'value',
   },
   {
     func: 'comment_Math',
     block: '// Comment',
     expansion: '// ',
-    category: 'Math'
+    category: 'Math',
   },
 
   // Variables
@@ -1920,13 +1918,13 @@ draw() - USEFUL?
     parent: consoleApi,
     category: 'Variables',
     paletteParams: ['message'],
-    params: ['"message"']
+    params: ['"message"'],
   },
 
   {
     func: 'console.clear',
     parent: consoleApi,
-    category: 'Variables'
+    category: 'Variables',
   },
 
   ...dropletStringBlocks,
@@ -1935,13 +1933,13 @@ draw() - USEFUL?
     func: 'comment_Variables',
     block: '// Comment',
     expansion: '// ',
-    category: 'Variables'
+    category: 'Variables',
   },
 
   // Data
   {func: 'getUserId', parent: api, category: 'World', noAutocomplete: true},
   {func: 'getKeyValue', parent: api, category: 'World', noAutocomplete: true},
-  {func: 'setKeyValue', parent: api, category: 'World', noAutocomplete: true}
+  {func: 'setKeyValue', parent: api, category: 'World', noAutocomplete: true},
 
   // Advanced
 ];
@@ -1951,44 +1949,44 @@ module.exports.categories = {
     id: 'world',
     color: 'yellow',
     rgb: color.droplet_yellow,
-    blocks: []
+    blocks: [],
   },
   Sprites: {
     id: 'sprites',
     color: 'red',
     rgb: color.droplet_red,
-    blocks: []
+    blocks: [],
   },
   Animations: {
     id: 'animations',
     color: 'red',
     rgb: color.droplet_red,
-    blocks: []
+    blocks: [],
   },
   Groups: {
     id: 'groups',
     color: 'red',
     rgb: color.droplet_red,
-    blocks: []
+    blocks: [],
   },
   Data: {
     id: 'data',
     color: 'lightgreen',
     rgb: color.droplet_light_green,
-    blocks: []
+    blocks: [],
   },
   Drawing: {
     id: 'drawing',
     color: 'cyan',
     rgb: color.droplet_cyan,
-    blocks: []
+    blocks: [],
   },
   Advanced: {
     id: 'advanced',
     color: 'blue',
     rgb: color.droplet_bright_blue,
-    blocks: []
-  }
+    blocks: [],
+  },
 };
 
 module.exports.additionalPredefValues = [
@@ -2084,7 +2082,7 @@ module.exports.additionalPredefValues = [
   'BEZIER',
   'CURVE',
   '_DEFAULT_STROKE',
-  '_DEFAULT_FILL'
+  '_DEFAULT_FILL',
 ];
 module.exports.showParamDropdowns = true;
 

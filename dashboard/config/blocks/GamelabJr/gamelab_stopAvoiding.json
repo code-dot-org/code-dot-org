@@ -6,6 +6,7 @@
       1,
       0.74
     ],
+    "style": "default",
     "func": "stopAvoiding",
     "blockText": "{SPRITE} stops avoiding other sprites",
     "args": [

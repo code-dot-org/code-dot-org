@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:32:02 UTC",
+    "serialized_at": "2023-04-18 14:18:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5843,6 +5843,18 @@
       }
     },
     {
+      "name": "Unit 8 Guide [Exemplar]",
+      "url": "https://docs.google.com/document/d/1OJVa2ExHUaZU45eE2MeRkZrDX1PNaSCoYE6-N2qEK5c/edit?usp=sharing",
+      "key": "unit_8_guide_exemplar_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_8_guide_exemplar_"
+      }
+    },
+    {
       "name": "Unit 8 Overview",
       "url": "https://docs.google.com/document/d/1PEyTbEedsWm4aK0oJ8P3ud6c9ED5cyJ8pjUL2z74lWg/edit?usp=sharing",
       "key": "unit_8_overview",
@@ -6294,6 +6306,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_8_guide",
+        "script.name": "csa8-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_8_guide_exemplar_",
         "script.name": "csa8-2022"
       }
     },

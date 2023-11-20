@@ -205,9 +205,9 @@ def main
         end
       end
     end
-  rescue Exception => e
+  rescue Exception => exception
     puts "EXCEPTION ON USER_LEVEL_ID: #{e_user_level_id}."
-    raise e
+    raise exception
   end
 end
 

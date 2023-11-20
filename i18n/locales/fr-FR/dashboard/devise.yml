@@ -50,9 +50,6 @@ fr:
       expired: "a expiré, merci d’en demander un nouveau"
       not_found: "non trouvé"
       not_locked: "n'a pas été verrouillé"
-      not_saved:
-        one: "Une erreur a empêché ce %{resource} d'être sauvegardé:"
-        other: "%{count} erreurs ont empêché ce %{resource} d'être sauvegardé:"
     invitations:
       send_instructions: 'Un e-mail d''invitation a été envoyé à %{email}.'
       invitation_token_invalid: 'Le jeton d''invitation fourni n''est pas valide !'

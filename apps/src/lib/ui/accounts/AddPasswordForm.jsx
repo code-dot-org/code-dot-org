@@ -17,13 +17,13 @@ const DEFAULT_STATE = {
   passwordConfirmation: '',
   submissionState: {
     message: '',
-    isError: false
-  }
+    isError: false,
+  },
 };
 
 export default class AddPasswordForm extends React.Component {
   static propTypes = {
-    handleSubmit: PropTypes.func.isRequired
+    handleSubmit: PropTypes.func.isRequired,
   };
 
   state = DEFAULT_STATE;
@@ -32,7 +32,7 @@ export default class AddPasswordForm extends React.Component {
     this.setState({
       // Clear any existing submission state
       submissionState: DEFAULT_STATE.submissionState,
-      password: event.target.value
+      password: event.target.value,
     });
   };
 
@@ -40,7 +40,7 @@ export default class AddPasswordForm extends React.Component {
     this.setState({
       // Clear any existing submission state
       submissionState: DEFAULT_STATE.submissionState,
-      passwordConfirmation: event.target.value
+      passwordConfirmation: event.target.value,
     });
   };
 
@@ -78,8 +78,8 @@ export default class AddPasswordForm extends React.Component {
     this.setState({
       ...DEFAULT_STATE.submissionState,
       submissionState: {
-        message: SAVING_STATE
-      }
+        message: SAVING_STATE,
+      },
     });
     this.props
       .handleSubmit(password, passwordConfirmation)
@@ -90,8 +90,8 @@ export default class AddPasswordForm extends React.Component {
     this.setState({
       ...DEFAULT_STATE,
       submissionState: {
-        message: SUCCESS_STATE
-      }
+        message: SUCCESS_STATE,
+      },
     });
     utils.reload();
   };
@@ -100,8 +100,8 @@ export default class AddPasswordForm extends React.Component {
     this.setState({
       submissionState: {
         message: error.message,
-        isError: true
-      }
+        isError: true,
+      },
     });
   };
 
@@ -153,7 +153,7 @@ class PasswordField extends React.Component {
     label: PropTypes.string.isRequired,
     error: PropTypes.string,
     value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired
+    onChange: PropTypes.func.isRequired,
   };
 
   render() {
@@ -176,29 +176,29 @@ class PasswordField extends React.Component {
 
 const styles = {
   container: {
-    paddingTop: 20
+    paddingTop: 20,
   },
   header: {
-    fontSize: 22
+    fontSize: 22,
   },
   hint: {
     marginTop: 10,
-    marginBottom: 10
+    marginBottom: 10,
   },
   input: {
-    marginBottom: 4
+    marginBottom: 4,
   },
   buttonContainer: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   statusText: {
     paddingLeft: 10,
     paddingRight: 10,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
   },
   errorText: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

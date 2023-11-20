@@ -7,7 +7,7 @@ import BonusLevels from '@cdo/apps/code-studio/components/lessonExtras/BonusLeve
 const DEFAULT_PROPS = {
   bonusLevels: bonusLevels,
   sectionId: null,
-  userId: null
+  userId: null,
 };
 
 const setUp = () => {

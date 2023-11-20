@@ -1,11 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "breedte",
   "dropletBlock_createSprite_param3": "hoogte",
-  "dropletBlock_setCollider_param0": "type",
-  "dropletBlock_setCollider_param4": "hoogte",
   "dropletBlock_setColliderEach_param0": "type",
   "dropletBlock_setColliderEach_param4": "hoogte",
-  "errorLoadingAnimation": "Het lijkt erop dat we een probleem hebben met het laden van je animatie \"{animationName}\". Zorg ervoor dat je een goede internetconnectie hebt en probeer de site opnieuw te laden. Als dit probleem aanhoudt, kan het zo zijn dat je animatie niet werkt. In dat geval, moet je de animatie verwijderen.",
+  "dropletBlock_setCollider_param0": "type",
+  "dropletBlock_setCollider_param4": "hoogte",
   "reinfFeedbackMsg": "Je bent klaar! Klik op \"Doorgaan\" om verder te gaan naar het volgende level.",
   "shareGame": "Deel je spel met anderen:"
 }

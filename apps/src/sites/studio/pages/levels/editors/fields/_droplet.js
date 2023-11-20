@@ -10,13 +10,13 @@ const data = getScriptData('pageOptions');
 const fieldConfig = {
   starterCode: {
     codemirror: 'level_start_blocks',
-    codemirrorMode: 'javascript'
+    codemirrorMode: 'javascript',
   },
   codeFunctions: {
     hideWhen: !data.uses_droplet,
     codemirror: 'level_code_functions',
-    codemirrorMode: 'javascript'
-  }
+    codemirrorMode: 'javascript',
+  },
 };
 
 Object.keys(fieldConfig).forEach(key => {

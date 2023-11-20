@@ -23,7 +23,7 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
@@ -41,7 +41,7 @@ module Dashboard
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require_relative '../../cookbooks/cdo-varnish/libraries/http_cache'
+      require 'cdo/http_cache'
       config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
         HttpCache.config(rack_env)[:dashboard]
 
@@ -144,6 +144,7 @@ module Dashboard
       emulate-print-media.js
       jquery.handsontable.full.js
       video-js/*.css
+      font-awesome.css
     )
 
     # Support including code from directories outside of the normal Rails directory
@@ -204,5 +205,7 @@ module Dashboard
 
     # Use custom routes for error codes
     config.exceptions_app = routes
+
+    config.active_job.queue_adapter = :delayed_job
   end
 end

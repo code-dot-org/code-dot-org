@@ -4,12 +4,13 @@ import {onAnswerChanged, resetContainedLevel} from './codeStudioLevels';
 import {sourceForLevel} from '../clientState';
 
 export default class FreeResponse {
-  constructor(levelId, optional) {
+  constructor(levelId, optional, allowMultipleAttempts) {
     this.levelId = levelId;
     // Levelbuilder booleans are undefined, 'true', or 'false'.
     this.optional = [true, 'true'].includes(optional);
+    this.allowMultipleAttempts = [true, 'true'].includes(allowMultipleAttempts);
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       var textarea = $(`textarea#level_${levelId}.response`);
       if (!textarea.val()) {
         const lastAttempt = sourceForLevel(
@@ -20,10 +21,10 @@ export default class FreeResponse {
           textarea.val(lastAttempt);
         }
       }
-      textarea.blur(function() {
+      textarea.blur(function () {
         onAnswerChanged(levelId, true);
       });
-      textarea.on('input', null, null, function() {
+      textarea.on('input', null, null, function () {
         onAnswerChanged(levelId, false);
       });
 
@@ -44,7 +45,7 @@ export default class FreeResponse {
       response: response,
       valid: response.length > 0,
       result: true,
-      testResult: TestResults.FREE_PLAY
+      testResult: TestResults.FREE_PLAY,
     };
   }
 
@@ -53,6 +54,9 @@ export default class FreeResponse {
   }
 
   lockAnswers() {
+    if (this.allowMultipleAttempts) {
+      return;
+    }
     $(`textarea#level_${this.levelId}.response`).prop('disabled', true);
     $('#reset-predict-progress-button')?.prop('disabled', false);
   }

@@ -14,3 +14,4 @@ answer 'the process of automatically converting a primitive type value into an o
 
 question 'wrapper class'
 answer 'a class used to convert primitive data types into objects'
+allow_multiple_attempts true

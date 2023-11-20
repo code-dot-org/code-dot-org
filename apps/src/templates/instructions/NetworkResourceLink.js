@@ -8,11 +8,11 @@ export default class NetworkResourceLink extends React.Component {
     highlight: PropTypes.bool,
     icon: PropTypes.string.isRequired,
     reference: PropTypes.string.isRequired,
-    openReferenceInNewTab: PropTypes.bool
+    openReferenceInNewTab: PropTypes.bool,
   };
 
   state = {
-    title: null
+    title: null,
   };
 
   componentDidMount() {

@@ -39,8 +39,10 @@ ne:
         age: 'उमेर'
         gender: 'लिङ्ग'
         edit_header: 'खाता जानकारी सम्पादन गर्नुहोस्'
+        finish_sign_up_header_error: 'Please correct the following errors:'
         error:
           future: can't be in the future
+        user_type: 'Account Type'
   beta: "बिटा"
   hello: "के छ विश्व"
   welcome_back: "Welcome back, %{name}"
@@ -118,7 +120,6 @@ ne:
     valid_password: "Valid password!"
     invalid_password: "Password must be at least 6 characters"
     mismatch_password: "The two passwords you entered do not match"
-    additional_information: "We need some additional information to continue signing you up."
     user_type_label: "Account Type"
     user_type_student: "Student"
     user_type_teacher: "Teacher"
@@ -436,32 +437,27 @@ ne:
       body_short: "Design an app, code with blocks or JavaScript to make it work, then share your app in seconds."
       audience: 'Ages 13+'
       cta: 'Learn how'
-    hoc:
-      title: 'Classic Maze'
-      body: 'Try the basics of computer science. Millions have given it a shot.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy Code'
       body: 'Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!'
-    20-hour:
-      title: 'Accelerated Course'
-      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
-      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
-      try_frozen: 'Artist with Anna and Elsa, from Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
     gamelab:
       audience: "Ages 13+"
       cta: "Learn how"
-    weblab:
-      audience: "Ages 13+"
-      cta: "Learn how"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Classic Maze'
+      body: 'Try the basics of computer science. Millions have given it a shot.'
+    hoc2014:
+      try_new_tutorial: 'Try our new Hour of Code tutorial in beta'
+      try_frozen: 'Artist with Anna and Elsa, from Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
@@ -471,20 +467,25 @@ ne:
     minecraft2016:
       title: "Minecraft"
       body: "Program animals and other Minecraft creatures in your own version of Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
+    starwars:
+      title: "Star Wars"
+    weblab:
+      audience: "Ages 13+"
+      cta: "Learn how"
+    widgets:
+      audience: "Ages 14+"
+      cta: "Learn how"
+    unplugged_conditionals:
+      title: "Conditionals"
     unplugged:
       title: "Unplugged Lessons"
       audience: "Ages 4+"
       body: "We've compiled a list of unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand-alone course or as complementary lessons for any computer science course."
       body_short: "If you don't have computers, try these unplugged lessons in your classroom."
-    unplugged_conditionals:
-      title: "Conditionals"
-    widgets:
-      audience: "Ages 14+"
-      cta: "Learn how"
+    20-hour:
+      title: 'Accelerated Course'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body_short: 'Learn basic computer science in an accelerated version of courses 2-4.'
   landing:
     report_bug: "Report Bug"
     support: "Get Help"
@@ -733,9 +734,14 @@ ne:
         other: "अन्य"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'अन्य'
       email_opt_in:
         opt_in_yes: 'हो'
         opt_in_no: 'होइन'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'CS आधारभूत'
   cookie_banner:
     accept: 'I agree'
   copy: 'प्रतिलिपि गर्नुहोस्'

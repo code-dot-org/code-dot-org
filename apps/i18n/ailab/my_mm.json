@@ -1,115 +1,15 @@
 {
-  "datasets": {
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "shoe_survey_toy": {
-      "fields": {
-        "weather": {
-          "id": "မိုး​လေဝသ"
-        }
-      }
-    },
-    "insurance_cost": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "nutrition": {
-      "fields": {
-        "Description": {
-          "id": "ဖော်ပြချက်"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ"
-        }
-      }
-    },
-    "student_alcohol_consumption": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "naan_toy": {
-      "fields": {
-        "chicken": {
-          "id": "ကြက်ကလေး"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "movies": {
-      "fields": {
-        "Score": {
-          "id": "အမှတ်"
-        },
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Name": {
-          "id": "အမည္"
-        }
-      }
-    },
-    "student_survey": {
-      "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
-        },
-        "Achievements": {
-          "id": "တိုးတက်မှုများ"
-        },
-        "Age": {
-          "id": "အသက်",
-          "description": "အသက်"
-        },
-        "Gender": {
-          "id": "က်ား/မ",
-          "description": "က်ား/မ"
-        }
-      }
-    },
-    "heart": {
-      "fields": {
-        "Age": {
-          "id": "အသက်"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "နိုင်ငံ"
-        }
-      }
-    }
-  }
+  "dataDisplayFeatures": "ခန့်မှန်းချက်ပြုလုပ်ရာတွင် ကူညီရန် ကော်လံတစ်ခု သို့မဟုတ် တစ်ခုထက်ပိုသော ကော်လံများကို ရွေးချယ်ပါ။",
+  "dataDisplayLabel": "ခန့်မှန်းရန် ကော်လံတစ်ခုကို ရွေးချယ်ပါ။",
+  "generateResults": "သင်၏မော်ဒယ်ကို စမ်းသပ်နေပါသည်။",
+  "modelSummary": "သင်၏မော်ဒယ်ကို အောင်မြင်စွာ လေ့ကျင့်ပြီး သိမ်းဆည်းပြီးပါပြီ။ သင်၏မော်ဒယ်အသေးစိတ်အချက်အလက်များကို စစ်ဆေးပြီး App Lab တွင် သင်၏လေ့ကျင့်ထားသော မော်ဒယ်ကို အသုံးပြုရန် ပြီးဆုံးသည်ကိုနှိပ်ပါ။",
+  "results": "ရလဒ်များကို ပြန်လည်သုံးသပ်ပါ။",
+  "resultsDetails": "ရလဒ်၏အသေးစိတ်များကို ပြသနေပါသည်။",
+  "saveModel": "App Lab တွင် အသုံးပြုရန်အတွက် လေ့ကျင့်ထားသော မော်ဒယ်ကို သိမ်းဆည်းပါ။\n",
+  "selectDataset": "သင်အသုံးပြုလိုသော ဒေတာအစုအဖွဲ့ကို ရွေးခြယ်ပါ။",
+  "selectedDataset": "ဒေတာအစုံကို သင်ရွေးချယ်လိုက်ပါသည်။\n",
+  "selectedFeatureCategorical": "သင်သည် အမျိုးအစားဆိုင်ရာ အင်္ဂါရပ်တစ်ခုကို ရွေးချယ်လိုက်ပါသည်။",
+  "selectedFeatureNumerical": "သင်သည် ကိန်းဂဏာန်းဆိုင်ရာ အင်္ဂါရပ်တစ်ခုကို ရွေးချယ်လိုက်ပါသည်။",
+  "trainModel": "သင်၏မော်ဒယ်ကို လေ့ကျင့်နေပါသည်။",
+  "uploadedDataset": "သင်သည် ဒေတာအတွဲတစ်ခုကို အပ်လုဒ်လုပ်လိုက်ပါသည်။"
 }

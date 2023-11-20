@@ -20,3 +20,5 @@ System.out.println(d1 + d2 + d3 + d4);
 
 What, if anything, is printed when the code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -26,3 +26,5 @@ Learning Objective: **3.3.1** and Essential Knowledge statements: **3.3.1D**
  (D) This includes an incorrect option: when an image is resized to a smaller number of pixels, some information is necessarily lost and there is no way to reconstruct the original image
 
 MARKDOWN
+
+allow_multiple_attempts true

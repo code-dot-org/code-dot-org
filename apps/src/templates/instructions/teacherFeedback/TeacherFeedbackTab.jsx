@@ -3,7 +3,7 @@ import EditableTeacherFeedback from '@cdo/apps/templates/instructions/teacherFee
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import {
   teacherFeedbackShape,
-  rubricShape
+  rubricShape,
 } from '@cdo/apps/templates/instructions/teacherFeedback/types';
 import PropTypes from 'prop-types';
 
@@ -16,7 +16,8 @@ const TeacherFeedbackTab = ({
   serverScriptId,
   serverLevelId,
   teacher,
-  innerRef
+  innerRef,
+  allowUnverified,
 }) => {
   // If the teacher isn't viewing student work then display feedback tab content
   // if there is a rubric or feedback has been given to the user
@@ -35,6 +36,7 @@ const TeacherFeedbackTab = ({
           serverScriptId={serverScriptId}
           serverLevelId={serverLevelId}
           teacher={teacher}
+          allowUnverified={allowUnverified}
         />
       )}
       {renderReadonlyFeedback && (
@@ -58,7 +60,8 @@ TeacherFeedbackTab.propTypes = {
   teacher: PropTypes.number,
   latestFeedback: teacherFeedbackShape,
   token: PropTypes.string,
-  innerRef: PropTypes.func
+  innerRef: PropTypes.func,
+  allowUnverified: PropTypes.bool.isRequired,
 };
 
 export default TeacherFeedbackTab;

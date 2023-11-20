@@ -30,7 +30,7 @@ class LevelDetailsDialog extends Component {
     scriptLevel: PropTypes.object.isRequired,
     handleClose: PropTypes.func.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -42,7 +42,7 @@ class LevelDetailsDialog extends Component {
       selectedLevel,
       scriptLevel,
       height: MAX_LEVEL_HEIGHT,
-      maxHeight: MAX_LEVEL_HEIGHT
+      maxHeight: MAX_LEVEL_HEIGHT,
     };
   }
 
@@ -85,7 +85,7 @@ class LevelDetailsDialog extends Component {
       return (
         <SafeMarkdown
           markdown={i18n.levelGroupDetailsDialogText({
-            buttonText: i18n.seeFullLevel()
+            buttonText: i18n.seeFullLevel(),
           })}
         />
       );
@@ -162,7 +162,7 @@ class LevelDetailsDialog extends Component {
           mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
-            height: this.state.height - HEADER_HEIGHT
+            height: this.state.height - HEADER_HEIGHT,
           }}
           setInstructionsRenderedHeight={height =>
             this.setState({height: Math.min(height, MAX_LEVEL_HEIGHT)})
@@ -182,7 +182,7 @@ class LevelDetailsDialog extends Component {
       return (
         <SafeMarkdown
           markdown={i18n.noLevelPreviewAvailable({
-            buttonText: i18n.seeFullLevel()
+            buttonText: i18n.seeFullLevel(),
           })}
           openExternalLinksInNewTab
         />
@@ -217,14 +217,14 @@ class LevelDetailsDialog extends Component {
         study_group: 'teacher-lesson-plan',
         event: 'click-see-full-level',
         data_json: JSON.stringify({
-          scriptLevelId: scriptLevel.id
-        })
+          scriptLevelId: scriptLevel.id,
+        }),
       },
       {
         includeUserId: true,
         callback: () => {
           windowOpen(url, 'noopener', 'noreferrer');
-        }
+        },
       }
     );
   };
@@ -250,7 +250,7 @@ class LevelDetailsDialog extends Component {
       clonedScriptLevel.highlighted = true;
       this.setState({
         selectedLevel: clickedObject.level,
-        scriptLevel: clonedScriptLevel
+        scriptLevel: clonedScriptLevel,
       });
     } else {
       // A sublevel was clicked so find the cloned version of the sublevel and set highlighted to true
@@ -260,7 +260,7 @@ class LevelDetailsDialog extends Component {
       clonedNewSelected.highlighted = true;
       this.setState({
         selectedLevel: clonedNewSelected,
-        scriptLevel: clonedScriptLevel
+        scriptLevel: clonedScriptLevel,
       });
     }
   };
@@ -328,17 +328,17 @@ class LevelDetailsDialog extends Component {
 const styles = {
   sublevelCards: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   scrollContainer: {
     maxHeight: '60vh',
-    overflow: 'auto'
-  }
+    overflow: 'auto',
+  },
 };
 
 export const UnconnectedLevelDetailsDialog = LevelDetailsDialog;
 
 export default connect(state => ({
   viewAs: state.viewAs,
-  isRtl: state.isRtl
+  isRtl: state.isRtl,
 }))(LevelDetailsDialog);

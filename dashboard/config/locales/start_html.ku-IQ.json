@@ -1,0 +1,971 @@
+{
+  "ku-IQ": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Story_2021": {
+          "City": "شار",
+          "Color": "ڕەنگ",
+          "Name": "ناو",
+          "text": "دەق"
+        },
+        "CSD U1 IO Story_2022": {
+          "City": "شار",
+          "Color": "ڕەنگ",
+          "Name": "ناو",
+          "text": "دەق"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "شار",
+          "Color": "ڕەنگ",
+          "Name": "ناو",
+          "text": "دەق"
+        },
+        "CSD U1 processing bday_2021": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing fastest_2021": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing guess_2021": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "دەق"
+        },
+        "CSD U1 processing guess_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "دەق"
+        },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "text": "دەق"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "وورچ"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "وورچ"
+        },
+        "CSD U1 processing writers_2021": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "CSD U1 storage movies_2021": {
+          "text": "دەق"
+        },
+        "CSD U1 storage movies_2022": {
+          "text": "دەق"
+        },
+        "CSD U1 storage movies_2023": {
+          "text": "دەق"
+        },
+        "CSD U1 storage outfit_2021": {
+          "black": "ڕەش",
+          "green": "سەوز"
+        },
+        "CSD U1 storage outfit_2022": {
+          "black": "ڕەش",
+          "green": "سەوز"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "ڕەش",
+          "green": "سەوز"
+        },
+        "CSD U2 RGB intro": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2018": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2019": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2021": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U2 RGB intro_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "تەمەن",
+          "Name": "ناو"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "ڕۆژهەڵات",
+          "North": "باکوور",
+          "South": "باشوور",
+          "West": "ڕۆژئاوا"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "East": "ڕۆژهەڵات",
+          "North": "باکوور",
+          "South": "باشوور",
+          "West": "ڕۆژئاوا"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "سەوز",
+          "red": "سور"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "سەوز",
+          "red": "سور"
+        },
+        "CSD U6 - Combine Inputs - CA_2022": {
+          "fast": "خێرا",
+          "on": "پێکردن",
+          "slow": "خاو"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "خێرا",
+          "on": "پێکردن",
+          "slow": "خاو"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "شین",
+          "green": "سەوز"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "شین",
+          "green": "سەوز"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "ناو"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "ناو"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "ناو"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_2222": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB3_2023": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PA_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "ڕەش"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 - Sensors - PC_2222": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "دەق"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "دەق"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "دەق"
+        },
+        "CSD U6 LED all": {
+          "on": "پێکردن"
+        },
+        "CSD U6 LED all_2018": {
+          "on": "پێکردن"
+        },
+        "CSD U6 LED all_2019": {
+          "on": "پێکردن"
+        },
+        "CSD U6 LED all_2021": {
+          "on": "پێکردن"
+        },
+        "CSD U6 Pedometer": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2018": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2019": {
+          "0": "0"
+        },
+        "CSD U6 Pedometer_2021": {
+          "0": "0"
+        },
+        "CSD U6 array piano": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 array piano_2018": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 array piano_2019": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 array piano_2021": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "یەکەم"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "یەکەم"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "یەکەم"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "یەکەم"
+        },
+        "CSD U6 getProperty Demo": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "بنێرە"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "بنێرە"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "بنێرە"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "بنێرە"
+        },
+        "CSD U6 getters debug": {
+          "fast": "خێرا",
+          "slow": "خاو"
+        },
+        "CSD U6 getters debug_2018": {
+          "fast": "خێرا",
+          "slow": "خاو"
+        },
+        "CSD U6 getters debug_2019": {
+          "fast": "خێرا",
+          "slow": "خاو"
+        },
+        "CSD U6 getters debug_2021": {
+          "fast": "خێرا",
+          "slow": "خاو"
+        },
+        "CSD U6 light show": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 light show_2018": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 light show_2019": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 light show_2021": {
+          "off": "كوژانەوە",
+          "on": "پێکردن"
+        },
+        "CSD U6 params starchaser intro": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2018": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2019": {
+          "0": "0"
+        },
+        "CSD U6 params starchaser intro_2021": {
+          "0": "0"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "دەق"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "دەق"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "دەق"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "دەق"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "Save": "پاشه‌كه‌وت بكە"
+        },
+        "CSDU4 List App Demo": {
+          "Done": "تەواو"
+        },
+        "CSDU4 List App Demo_2018": {
+          "Done": "تەواو"
+        },
+        "CSDU4 List App Demo_2019": {
+          "Done": "تەواو"
+        },
+        "CSDU4 Quiz App Demo": {
+          "Submit": "بنێرە"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "Submit": "بنێرە"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "Submit": "بنێرە"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+",
+          "=": "="
+        },
+        "CSDU6 circuit playground piano": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 piano with notes": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 piano with notes_2018": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 piano with notes_2019": {
+          "E": "ڕۆژهەڵات"
+        },
+        "CSDU6 piano with notes_2021": {
+          "E": "ڕۆژهەڵات"
+        },
+        "allthethings design mode elements": {
+          "text": "دەق"
+        },
+        "csa widget test2": {
+          "8": "8"
+        },
+        "csd u5 recommender sample": {
+          "Start": "دەستپێبکە"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "دەستپێبکە"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "دەستپێبکە"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "دەستپێبکە"
+        },
+        "csd u5 recommender sample_2023": {
+          "Start": "دەستپێبکە"
+        },
+        "csd-apps for good-3": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
+        "csd-explore ui-3": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2022": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "بەردەوام بە"
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "بەردەوام بە"
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "بەردەوام بە"
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "W": "ڕۆژئاوا"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "W": "ڕۆژئاوا"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "W": "ڕۆژئاوا"
+        },
+        "ml-models in applab-choice if quotes": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if quotes_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-use model card-example3A-2021": {
+          "night": "شەو"
+        },
+        "ml-use model card-example3A_2022": {
+          "night": "شەو"
+        },
+        "ml-use model card-example3A_2023": {
+          "night": "شەو"
+        }
+      }
+    }
+  }
+}

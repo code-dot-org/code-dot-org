@@ -11,13 +11,13 @@ export default class UnitCalendar extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
-    weekWidth: PropTypes.number.isRequired
+    weekWidth: PropTypes.number.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      hovering: ''
+      hovering: '',
     };
   }
 
@@ -119,7 +119,7 @@ export default class UnitCalendar extends React.Component {
                       icon="square-o"
                       style={{
                         color: color.teal,
-                        ...styles.keyIcon
+                        ...styles.keyIcon,
                       }}
                     />
                     {i18n.instructionalLesson()}
@@ -129,7 +129,7 @@ export default class UnitCalendar extends React.Component {
                       icon="check-circle"
                       style={{
                         color: color.purple,
-                        ...styles.keyIcon
+                        ...styles.keyIcon,
                       }}
                     />
                     {i18n.assessment()}
@@ -157,33 +157,33 @@ const styles = {
     border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     fontWeight: 'bold',
-    minHeight: 50
+    minHeight: 50,
   },
   scheduleColumn: {
     border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     display: 'flex',
     minHeight: 50,
-    margin: 0
+    margin: 0,
   },
   table: {
     borderCollapse: 'collapse',
-    width: '100%'
+    width: '100%',
   },
   key: {
     border: '1px solid ' + color.purple,
     borderCollapse: 'collapse',
     width: '100%',
-    marginTop: 20
+    marginTop: 20,
   },
   keyIcon: {
-    marginRight: 5
+    marginRight: 5,
   },
   keySection: {
     display: 'flex',
     justifyContent: 'space-around',
     width: '90%',
     alignItems: 'center',
-    fontSize: 15
-  }
+    fontSize: 15,
+  },
 };

@@ -1,0 +1,16 @@
+{
+  "datasets": {
+    "movies": {
+      "fields": {
+        "Star": {
+          "id": "ސްޓަރ - ތަރި"
+        }
+      }
+    },
+    "safari_toy": {
+      "name": "ސަފާރީ"
+    }
+  },
+  "navigateDone": "ނިންމާލަން",
+  "navigateForward": "ކުރިއަށް ދިޔުމަށް"
+}

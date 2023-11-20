@@ -1,4 +1,3 @@
-/*global dashboard*/
 /**
  * @file Redux module for new format for tracking project animations.
  */
@@ -8,20 +7,21 @@ import {createUuid} from '@cdo/apps/utils';
 import {
   fetchURLAsBlob,
   blobToDataURI,
-  dataURIToSourceSize
+  dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {selectAnimation} from './animationTab';
+import {selectAnimation, selectBackground} from './animationTab';
 import {reportError} from './errorDialogStack';
 import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
 import {
   projectChanged,
   isOwner,
-  getCurrentId
+  getCurrentId,
 } from '@cdo/apps/code-studio/initApp/project';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import trackEvent from '@cdo/apps/util/trackEvent';
+import {P5LabInterfaceMode} from '../constants';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load
@@ -66,8 +66,10 @@ export const REMOVE_PENDING_FRAMES = 'AnimationList/REMOVE_PENDING_FRAMES';
 export default combineReducers({
   orderedKeys,
   propsByKey,
-  pendingFrames
+  pendingFrames,
 });
+
+const BACKGROUNDS_CATEGORY = 'backgrounds';
 
 /** pendingFrames is used for temporarily storing additional
  * frames before they get added to the animation in Piskel.
@@ -79,7 +81,7 @@ function pendingFrames(state, action) {
     case SET_PENDING_FRAMES:
       return {
         key: action.key,
-        props: action.props
+        props: action.props,
       };
 
     case REMOVE_PENDING_FRAMES:
@@ -87,14 +89,14 @@ function pendingFrames(state, action) {
 
     case START_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
-        loadedFromSource: false
+        loadedFromSource: false,
       });
 
     case DONE_LOADING_PENDING_FRAMES_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
         saved: true,
-        loadedProps: action.loadedProps
+        loadedProps: action.loadedProps,
       });
 
     default:
@@ -143,7 +145,7 @@ function propsByKey(state, action) {
     case DONE_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
-        [action.key]: animationPropsReducer(state[action.key], action)
+        [action.key]: animationPropsReducer(state[action.key], action),
       });
 
     case DELETE_ANIMATION:
@@ -169,27 +171,27 @@ function animationPropsReducer(state, action) {
     case EDIT_ANIMATION:
       return Object.assign({}, state, action.props, {
         sourceUrl: null, // Once edited this animation is custom.
-        saved: false // Dirty, so it'll get saved soon.
+        saved: false, // Dirty, so it'll get saved soon.
       });
 
     case SET_ANIMATION_NAME:
       return Object.assign({}, state, {
-        name: action.name
+        name: action.name,
       });
 
     case SET_ANIMATION_FRAME_DELAY:
       return Object.assign({}, state, {
-        frameDelay: action.frameDelay
+        frameDelay: action.frameDelay,
       });
 
     case SET_ANIMATION_LOOPING:
       return Object.assign({}, state, {
-        looping: action.looping
+        looping: action.looping,
       });
 
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
-        loadedFromSource: false
+        loadedFromSource: false,
       });
 
     case DONE_LOADING_FROM_SOURCE:
@@ -198,13 +200,13 @@ function animationPropsReducer(state, action) {
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI,
-        sourceSize: action.sourceSize
+        sourceSize: action.sourceSize,
       });
 
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
         saved: true,
-        version: action.version
+        version: action.version,
       });
 
     default:
@@ -243,6 +245,7 @@ function generateAnimationName(baseName, animationList) {
       animationName = animationName.replace(baseName, '');
       if (animationName[0] === '_') {
         const brokenUpString = animationName.split('_');
+        // TODO: Address the fragility here if animationName includes multiple underscores.
         const number = parseInt(brokenUpString.pop());
         unavailableNumbers.push(number);
       }
@@ -284,7 +287,7 @@ export function setInitialAnimationList(
       propsByKey: serializedAnimationList.reduce((memo, next) => {
         memo[next.key] = next;
         return memo;
-      }, {})
+      }, {}),
     };
   }
 
@@ -344,12 +347,8 @@ export function setInitialAnimationList(
     for (let j = i + 1; j < numberAnimations; j++) {
       const otherKey = serializedAnimationList.orderedKeys[j];
       if (name === serializedAnimationList.propsByKey[otherKey].name) {
-        serializedAnimationList.propsByKey[
-          otherKey
-        ].name = generateAnimationName(
-          name,
-          serializedAnimationList.propsByKey
-        );
+        serializedAnimationList.propsByKey[otherKey].name =
+          generateAnimationName(name, serializedAnimationList.propsByKey);
       }
     }
   }
@@ -364,17 +363,23 @@ export function setInitialAnimationList(
   return dispatch => {
     dispatch({
       type: SET_INITIAL_ANIMATION_LIST,
-      animationList: serializedAnimationList
+      animationList: serializedAnimationList,
     });
-    let key = serializedAnimationList.orderedKeys[0];
-    // If we're in spritelab, we need to make sure we don't set the selected animation to a background
+    // Sprite Lab supports both costumes and backgrounds.
+    // We need to select a default animation for each tab.
     if (isSpriteLab) {
-      const filteredOrderedKeys = getOrderedKeysWithoutBackgrounds(
+      const costumeKeys = getOrderedKeysWithoutBackgrounds(
         serializedAnimationList
       );
-      key = filteredOrderedKeys[0];
+      dispatch(selectAnimation(costumeKeys[0] || ''));
+      const backgroundKeys = getOrderedKeysOnlyBackgrounds(
+        serializedAnimationList
+      );
+      dispatch(selectBackground(backgroundKeys[0] || ''));
+    } else {
+      const animationKeys = serializedAnimationList.orderedKeys;
+      dispatch(selectAnimation(animationKeys[0] || ''));
     }
-    dispatch(selectAnimation(key || ''));
     serializedAnimationList.orderedKeys.forEach(key => {
       dispatch(loadAnimationFromSource(key));
     });
@@ -385,29 +390,53 @@ const getOrderedKeysWithoutBackgrounds = serializedAnimationList => {
   return serializedAnimationList.orderedKeys.filter(animKey => {
     const animProps = serializedAnimationList.propsByKey[animKey];
     return (
-      !animProps.categories || !animProps.categories.includes('backgrounds')
+      !animProps.categories ||
+      !animProps.categories.includes(BACKGROUNDS_CATEGORY)
     );
   });
 };
 
-export function addBlankAnimation() {
+const getOrderedKeysOnlyBackgrounds = serializedAnimationList => {
+  return serializedAnimationList.orderedKeys.filter(animKey => {
+    const animProps = serializedAnimationList.propsByKey[animKey];
+    return (
+      animProps.categories &&
+      animProps.categories.includes(BACKGROUNDS_CATEGORY)
+    );
+  });
+};
+
+export function addBlankAnimation(interfaceMode) {
   // To avoid special cases and saving tons of blank animations to our server,
   // we're actually adding a secret blank library animation any time the user
   // picks "Draw my own."  As soon as the user makes any changes to the
   // animation it gets saved as a custom animation in their own project, just
   // like we do with other library animations.
+  const isBackground = interfaceMode === P5LabInterfaceMode.BACKGROUND;
+  const blankAnimation = {
+    name: 'animation',
+    sourceUrl:
+      '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
+    frameSize: {x: 100, y: 100},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 4,
+    version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz',
+  };
+  const blankBackground = {
+    name: 'blank_background',
+    sourceUrl:
+      '/api/v1/animation-library/level_animations/.31YUNsUQNxLZeGkrQper8CLl_jyNb71/blank.png',
+    frameSize: {x: 400, y: 400},
+    frameCount: 1,
+    looping: true,
+    frameDelay: 2,
+    categories: [BACKGROUNDS_CATEGORY],
+    version: '.31YUNsUQNxLZeGkrQper8CLl_jyNb71',
+  };
   return addLibraryAnimation(
-    {
-      name: 'animation',
-      sourceUrl:
-        '/api/v1/animation-library/mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz/category_backgrounds/blank.png',
-      frameSize: {x: 100, y: 100},
-      frameCount: 1,
-      looping: true,
-      frameDelay: 4,
-      version: 'mUlvnlbeZ5GHYr_Lb4NIuMwPs7kGxHWz'
-    },
-    false /*skipBackground. False because these are going to be sprites or we're in gamelab*/
+    isBackground ? blankBackground : blankAnimation,
+    isBackground
   );
 }
 
@@ -417,14 +446,17 @@ export function addBlankAnimation() {
  */
 export function appendBlankFrame() {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, {blankFrame: true}));
+    // Multiframe animations are only supported in Game Lab,
+    // so we don't need to worry about backgrounds (which are only in Sprite Lab)
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
+    dispatch(setPendingFramesAction(currentAnimationKey, {blankFrame: true}));
     projectChanged();
   };
 }
 
 /**
- * Add an animation to the project (at the end of the list).
+ * Add an animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!AnimationKey} key
  * @param {!SerializedAnimation} props
  */
@@ -432,10 +464,18 @@ export function addAnimation(key, props) {
   // TODO: Validate that key is not already in use?
   // TODO: Validate props format?
   return (dispatch, getState) => {
-    dispatch(addAnimationAction(key, {...props, looping: true}));
+    const isSpriteLab =
+      getState().pageConstants && getState().pageConstants.isBlockly;
+    // Unlike Game Lab, Sprite Lab projects start with animations.
+    // We add new animations to the top of the list to make them more discoverable.
+    const index = isSpriteLab ? 0 : null;
+    dispatch(addAnimationAction(key, {...props, looping: true}, index));
+    const isBackground = props.categories?.includes(BACKGROUNDS_CATEGORY);
+    const selector =
+      isSpriteLab && isBackground ? selectBackground : selectAnimation;
     dispatch(
       loadAnimationFromSource(key, () => {
-        dispatch(selectAnimation(key));
+        dispatch(selector(key));
       })
     );
     let name = generateAnimationName(
@@ -454,35 +494,38 @@ export function addAnimation(key, props) {
  */
 export function appendCustomFrames(props) {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, props));
-    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    // Multiframe animations are only supported in Game Lab,
+    // so we don't need to worry about backgrounds (Sprite Lab only)
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
+    dispatch(setPendingFramesAction(currentAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
   };
 }
 
 /**
- * Add a library animation to the project (at the end of the list, unless a spritelab project).
+ * Add a library animation to the project (at the end of the list, unless a Sprite Lab project).
  * @param {!SerializedAnimation} props
  */
-export function addLibraryAnimation(props, skipBackground) {
+export function addLibraryAnimation(props, isSpriteLab) {
   return (dispatch, getState) => {
     const key = createUuid();
     if (getState().pageConstants && getState().pageConstants.isBlockly) {
+      // Unlike Game Lab, Sprite Lab projects start with animations.
+      // We add new animations to the top of the list to make them more discoverable.
       dispatch(addAnimationAction(key, props, 0));
     } else {
       dispatch(addAnimationAction(key, props));
     }
-    // if skipBackground, this means we don't want the selected animation to be a background
-    if (!skipBackground || !props.categories.includes('backgrounds')) {
-      dispatch(
-        loadAnimationFromSource(key, () => {
-          dispatch(selectAnimation(key));
-        })
-      );
-    } else {
-      dispatch(loadAnimationFromSource(key, () => {}));
-    }
+    const isSpriteLabBackground =
+      props.categories?.includes(BACKGROUNDS_CATEGORY) && isSpriteLab;
+    const selector = isSpriteLabBackground ? selectBackground : selectAnimation;
+    dispatch(
+      loadAnimationFromSource(key, () => {
+        dispatch(selector(key));
+      })
+    );
 
     let name = generateAnimationName(
       props.name,
@@ -501,9 +544,12 @@ export function addLibraryAnimation(props, skipBackground) {
  */
 export function appendLibraryFrames(props) {
   return (dispatch, getState) => {
-    const selectedAnimationKey = getState().animationTab.selectedAnimation;
-    dispatch(setPendingFramesAction(selectedAnimationKey, props));
-    dispatch(loadPendingFramesFromSource(selectedAnimationKey, props));
+    // Multiframe animations are only supported in Game Lab,
+    // so we don't need to worry about backgrounds (Sprite Lab only)
+    const currentAnimationKey =
+      getState().animationTab.currentAnimations[P5LabInterfaceMode.ANIMATION];
+    dispatch(setPendingFramesAction(currentAnimationKey, props));
+    dispatch(loadPendingFramesFromSource(currentAnimationKey, props));
     projectChanged();
   };
 }
@@ -514,7 +560,7 @@ export function appendLibraryFrames(props) {
  * @param {!AnimationKey} key
  * @returns {Function}
  */
-export function cloneAnimation(key) {
+export function cloneAnimation(key, type = P5LabInterfaceMode.ANIMATION) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
     // Track down the source animation and its index in the collection
@@ -535,10 +581,14 @@ export function cloneAnimation(key) {
           animationList.propsByKey
         ),
         version: sourceAnimation.version,
-        saved: false
-      })
+        saved: false,
+      }),
     });
-    dispatch(selectAnimation(newAnimationKey));
+    const selector =
+      type === P5LabInterfaceMode.BACKGROUND
+        ? selectBackground
+        : selectAnimation;
+    dispatch(selector(newAnimationKey));
     projectChanged();
   };
 }
@@ -554,7 +604,7 @@ export function setAnimationName(key, name) {
     dispatch({
       type: SET_ANIMATION_NAME,
       key,
-      name
+      name,
     });
     projectChanged();
   };
@@ -571,7 +621,7 @@ export function setAnimationFrameDelay(key, frameDelay) {
     dispatch({
       type: SET_ANIMATION_FRAME_DELAY,
       key,
-      frameDelay
+      frameDelay,
     });
     projectChanged();
   };
@@ -588,7 +638,7 @@ export function setAnimationLooping(key, looping) {
     dispatch({
       type: SET_ANIMATION_LOOPING,
       key,
-      looping
+      looping,
     });
     projectChanged();
   };
@@ -604,7 +654,7 @@ export function editAnimation(key, props) {
     dispatch({
       type: EDIT_ANIMATION,
       key,
-      props
+      props,
     });
     projectChanged();
   };
@@ -615,28 +665,49 @@ export function editAnimation(key, props) {
  * @param {!AnimationKey} key
  * @returns {function}
  */
-export function deleteAnimation(key, isSpriteLab = false) {
+export function deleteAnimation(
+  key,
+  isSpriteLab = false,
+  type = P5LabInterfaceMode.ANIMATION
+) {
   return (dispatch, getState) => {
     const animationList = getState().animationList;
     let orderedKeys = animationList.orderedKeys;
     // If we're in spritelab, we need to make sure we don't set the selected animation to a background
     if (isSpriteLab) {
-      orderedKeys = getOrderedKeysWithoutBackgrounds(animationList);
+      switch (type) {
+        case P5LabInterfaceMode.ANIMATION:
+          orderedKeys = getOrderedKeysWithoutBackgrounds(animationList);
+          break;
+        case P5LabInterfaceMode.BACKGROUND:
+          orderedKeys = getOrderedKeysOnlyBackgrounds(animationList);
+          break;
+      }
     }
+
     const currentSelectionIndex = orderedKeys.indexOf(key);
     let keyToSelect =
       currentSelectionIndex === 0 ? 1 : currentSelectionIndex - 1;
-    dispatch(selectAnimation(orderedKeys[keyToSelect] || null));
+    const selector =
+      type === P5LabInterfaceMode.BACKGROUND
+        ? selectBackground
+        : selectAnimation;
+    dispatch(selector(orderedKeys[keyToSelect] || ''));
 
     dispatch({type: DELETE_ANIMATION, key});
     projectChanged();
-    animationsApi.ajax('DELETE', key + '.png', () => {}, function error(xhr) {
-      dispatch(
-        reportError(
-          `Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`
-        )
-      );
-    });
+    animationsApi.ajax(
+      'DELETE',
+      key + '.png',
+      () => {},
+      function error(xhr) {
+        dispatch(
+          reportError(
+            `Error deleting object ${key}: ${xhr.status} ${xhr.statusText}`
+          )
+        );
+      }
+    );
   };
 }
 
@@ -647,7 +718,7 @@ export function deleteAnimation(key, isSpriteLab = false) {
  * @param {function} [callback]
  */
 function loadAnimationFromSource(key, callback) {
-  callback = callback || function() {};
+  callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
     const sourceUrl = animationSourceUrl(
@@ -657,7 +728,7 @@ function loadAnimationFromSource(key, callback) {
     );
     dispatch({
       type: START_LOADING_FROM_SOURCE,
-      key: key
+      key: key,
     });
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -679,8 +750,8 @@ function loadAnimationFromSource(key, callback) {
               mainJsonSourceUrl: state.animationList.propsByKey[key].sourceUrl,
               version: state.animationList.propsByKey[key].version,
               animationName: state.animationList.propsByKey[key].name,
-              error: err.message
-            })
+              error: err.message,
+            }),
           },
           {includeUserId: true}
         );
@@ -689,9 +760,7 @@ function loadAnimationFromSource(key, callback) {
           // Display error dialog
           dispatch(
             reportError(
-              `Sorry, we couldn't load animation "${
-                state.animationList.propsByKey[key].name
-              }".`,
+              `Sorry, we couldn't load animation "${state.animationList.propsByKey[key].name}".`,
               'anim_load',
               key
             )
@@ -708,7 +777,7 @@ function loadAnimationFromSource(key, callback) {
             key,
             blob,
             dataURI,
-            sourceSize
+            sourceSize,
           });
           callback();
         });
@@ -731,13 +800,13 @@ export function addAnimationAction(key, props, index) {
       type: ADD_ANIMATION_AT,
       key,
       props,
-      index
+      index,
     };
   }
   return {
     type: ADD_ANIMATION,
     key,
-    props
+    props,
   };
 }
 
@@ -752,7 +821,7 @@ function setPendingFramesAction(key, props) {
   return {
     type: SET_PENDING_FRAMES,
     key,
-    props
+    props,
   };
 }
 
@@ -762,7 +831,7 @@ function setPendingFramesAction(key, props) {
  */
 export function removePendingFramesAction() {
   return {
-    type: REMOVE_PENDING_FRAMES
+    type: REMOVE_PENDING_FRAMES,
   };
 }
 
@@ -774,7 +843,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
   return {
     type: DONE_LOADING_PENDING_FRAMES_FROM_SOURCE,
     key,
-    loadedProps
+    loadedProps,
   };
 }
 
@@ -784,7 +853,7 @@ function doneLoadingPendingFramesFromSourceAction(key, loadedProps) {
  */
 function startLoadingPendingFramesFromSourceAction() {
   return {
-    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE
+    type: START_LOADING_PENDING_FRAMES_FROM_SOURCE,
   };
 }
 
@@ -796,7 +865,7 @@ function startLoadingPendingFramesFromSourceAction() {
  * @param {function} [callback]
  */
 function loadPendingFramesFromSource(key, props, callback) {
-  callback = callback || function() {};
+  callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
     const sourceUrl = animationSourceUrl(
@@ -817,7 +886,7 @@ function loadPendingFramesFromSource(key, props, callback) {
             doneLoadingPendingFramesFromSourceAction(key, {
               blob,
               dataURI,
-              sourceSize
+              sourceSize,
             })
           );
           callback();
@@ -931,11 +1000,11 @@ export function saveAnimation(animationKey, animationProps) {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
 
-    const onError = function() {
+    const onError = function () {
       reject(new Error(`${xhr.status} ${xhr.statusText}`));
     };
 
-    const onSuccess = function() {
+    const onSuccess = function () {
       if (xhr.status >= 400) {
         onError();
         return;
@@ -946,7 +1015,7 @@ export function saveAnimation(animationKey, animationProps) {
         resolve({
           type: ON_ANIMATION_SAVED,
           key: animationKey,
-          version: response.versionId
+          version: response.versionId,
         });
       } catch (e) {
         reject(e);

@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "CSS нэмэх",
+  "addHTMLButton": "HTML нэмэх",
+  "addImageButton": "Зураг нэмэх",
+  "closeFullscreenPreview": "Бүрэн дэлгэцийн урьдчилж харах",
+  "currentProjectCapacity": "{currentMegabytes}MB буюу {totalMegabytes}MB ашигласан",
+  "disallowedHtml": "“{filename}\" файл нь зөвшөөрөгдөөгүй HTML элементүүдийг агуулдаг: `{disallowedTags}`. Энэ харилцах цонх хаалттай үед тэд устгагдах болно.",
+  "errorSavingProject": "Таны төслийг автоматаар хэмнэх үед ямар нэг зүйл ажиллахгүй байгаа юм бэ. Интернет холболтоо шалгаад гараар хадгалахыг оролдоорой. Хэрэв энэ асуудал хэвээр байвал хуудсыг эхлүүлэхийн тулд дахин ачаалж үзээрэй.",
+  "fatalError": "Үхлийн алдаа: {message}. Та Private Browsing горимд байгаа бол, мэдээлэл бичиж чадахгүй.",
+  "loadFailure": "Бид уучлаарай, Вэб Lab зарим нэг шалтгааны улмаас дуудаж чадаагүй. Алдаа: {message}",
+  "openFullscreenPreview": "Дэлгэцийн дэлгэцийг нээх",
+  "refreshPreview": "Сэргээх, хадгалах",
+  "reloading": "Дахин ачаалж байна...",
+  "reset": "Вэб лабораторийг дахин тохируулах",
+  "resetComplete": "Вэб Lab иж бүрэн анхны байдалд нь оруулж",
+  "resetFailure": "Вэб Lab анхны байдалд нь оруулж чадсангүй: {message}.",
+  "toggleInspectorOff": "Байцаагч: -нд",
+  "toggleInspectorOn": "Байцаагч: Off",
+  "troubleshootingSupport": "Манай дэмжлэг нийтлэл үзнэ үү [\"Алдааг олж засварлах нь Web Lab асуудлууд\"]({url}) Дэлгэрэнгүй мэдээллийг.",
+  "uploadError": "Байршуулах алдаа"
 }

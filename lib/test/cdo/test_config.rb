@@ -54,13 +54,13 @@ class ConfigTest < Minitest::Test
     end
   end
 
-  def test_freeze
+  def test_freeze_config
     config = Cdo::Config.new
     config.load_configuration(x: 'y')
-    config.x = 'z'
-    config.freeze
-    assert_equal 'z', config.x
-    assert_raises(RuntimeError) {config.x = 'a'}
+    assert_equal 'y', config.x
+    assert_equal nil, config.y
+    config.freeze_config
+    assert_raises(RuntimeError) {config.load_configuration(z: 'a')}
     assert_raises(ArgumentError) {config.y}
   end
 end

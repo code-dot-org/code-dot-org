@@ -5,7 +5,7 @@ km:
       Actions: សកម្មភាព
       Advanced: ជម្រើស​កម្រិត​ខ្ពស់
       Behaviors: ឥរិយាបទ
-      Brushes: ច្រាស់
+      Brushes: ជក់គំនូរ
       Color: ពណ៌
       Comment: មតិយោបល់
       Comments: មតិយោបល់
@@ -14,7 +14,7 @@ km:
       Default: គម្រូ​ដើម
       Events: ព្រឹត្តិការណ៍
       Functions: អនុ​គមន៍
-      'Functions ': មុខងារ
+      'Functions ': អនុ​គមន៍
       Game/Score: ល្បែង/ពិន្ទុ
       Games/Score: ល្បែង/ពិន្ទុ
       Groups: ក្រុម
@@ -22,11 +22,13 @@ km:
       Location: ទីតាំង
       Locations: ទីតាំង
       Logic: តក្ក
-      Loops: រង្វិល​ជុំ
+      Loops: ប្រតិបត្តិដដែលៗ
       Math: គណិត​វិទ្យា
       Numbers: ចំនួន
       Properties: ធាតុ
+      Sprites: Sprites
       Text: អត្ថ​​បទ
       Variables: អ​ថេរ
-      'Variables ': 'អ​ថេរ '
+      'Variables ': អញាតិ
+      'Variables  ': អថេរ
       World: ពិភពលោក

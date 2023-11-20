@@ -1,0 +1,256 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Kirjeldus",
+  "correctAnswer": "Õige",
+  "dataCardLastUpdated": "Viimati uuendatud",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Pikkus"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "index": {
+          "id": "indeks"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Vanus"
+        },
+        "Gender": {
+          "id": "Sugu"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banaan"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "värv"
+        },
+        "food": {
+          "id": "toit"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Vanus"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Riik"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Riik"
+        },
+        "Name": {
+          "id": "Nimi"
+        },
+        "Score": {
+          "id": "Tulemus"
+        },
+        "Star": {
+          "id": "Täht"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "juust"
+        },
+        "chicken": {
+          "id": "kana"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategooria"
+        },
+        "Description": {
+          "id": "Kirjeldus"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "ginger": {
+          "id": "ingver"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "cheese": {
+          "id": "juust"
+        },
+        "meat": {
+          "id": "liha"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "alligaator"
+        },
+        "elephant": {
+          "id": "elevant"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "beans": {
+          "id": "oad"
+        },
+        "cheese": {
+          "id": "juust"
+        },
+        "chicken": {
+          "id": "kana"
+        },
+        "fruit": {
+          "id": "puuvili"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokaado"
+        },
+        "beans": {
+          "id": "oad"
+        },
+        "corn": {
+          "id": "mais"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "suurus"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "suurus"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "päev"
+        },
+        "weather": {
+          "id": "ilm"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Kunstnik"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "vanus"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Saavutused"
+        },
+        "Age": {
+          "description": "Vanus",
+          "id": "Vanus"
+        },
+        "Country": {
+          "id": "Riik"
+        },
+        "Gender": {
+          "description": "Sugu",
+          "id": "Sugu"
+        },
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Tagasi",
+  "navigateDone": "Lõpeta",
+  "navigateForward": "Jätka",
+  "saveProgress": "Salvesta",
+  "tryAgain": "Proovi uuesti"
+}

@@ -5,6 +5,8 @@ sv:
       Actions: Åtgärder
       Advanced: Avancerat
       Behaviors: Beteenden
+      'Behaviors ': Beteenden
+      Boolean: Boolean
       Brushes: Borstar
       Category: Kategori
       Color: Färg
@@ -13,19 +15,24 @@ sv:
       Conditionals: Villkor
       Dancers: Dansare
       Default: Förval
+      Effects: Effekter
       Events: Händelser
       Functions: funktioner
       'Functions ': 'Funktioner '
       Game/Score: Spel/Poäng
       Games/Score: Spel/Poäng
       Groups: Grupper
+      Input: Inmatning
       Location: Ort
       Locations: Platser
       Logic: Logik
       Loops: loopar
       Math: Matte
+      Number: Nummer
       Numbers: Siffror
+      Picker: Väljare
       Properties: Egenskaper
+      String: Sträng
       Text: text
       Variables: variabler
       'Variables ': 'Variabler '

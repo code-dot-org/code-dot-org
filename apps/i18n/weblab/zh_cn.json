@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "添加 CSS",
+  "addHTMLButton": "添加 HTML",
+  "addImageButton": "添加图片",
+  "closeFullscreenPreview": "关闭全屏预览",
+  "currentProjectCapacity": "已使用 {totalMegabytes}MB 中的 {currentMegabytes}MB",
+  "disallowedHtml": "文件 “{filename}” 包含不允许的 HTML 元素：`{disallowedTags}`。关闭此对话框后，它们会将被删除。",
+  "errorSavingProject": "自动保存项目时出现了一些问题。检查您的互联网连接并尝试手动保存。如果此问题仍然存在，请尝试重新加载页面，并重新开始。",
+  "fatalError": "致命错误： {message}。如果您处于 “隐私浏览” 模式，则无法写入数据。",
+  "loadFailure": "很抱歉，Web Lab 由于某种原因无法加载。错误： {message}",
+  "openFullscreenPreview": "打开全屏预览",
+  "refreshPreview": "刷新并保存",
+  "reloading": "正在重新加载...",
+  "reset": "重置 Web Lab",
+  "resetComplete": "Web Lab重置已完成",
+  "resetFailure": "无法重置 Web Lab： {message}。",
+  "toggleInspectorOff": "检查：关闭",
+  "toggleInspectorOn": "检查：关闭",
+  "troubleshootingSupport": "有关更多信息，请参阅我们的支持文章 [“Web Lab问题疑难解答”]({url}) 。",
+  "uploadError": "上传错误"
 }

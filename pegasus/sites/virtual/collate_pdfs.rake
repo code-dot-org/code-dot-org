@@ -4,11 +4,13 @@ require 'pdf/collate'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
 require 'cdo/yaml'
+require lib_dir 'cdo/data/logging/rake_task_event_logger'
+include TimedTaskWithLogging
 
 # Given a .collate file with lines representing
 def collate_to_pdf_to_fetch_file(collate_file)
   source_paths = PDF.get_local_markdown_paths(collate_file) +
-      PDF.get_local_pdf_paths(collate_file)
+    PDF.get_local_pdf_paths(collate_file)
   output_filename = collate_file.sub('.collate', '.pdf')
   v3_path = CurriculumCourse.virtual_to_v3_path(output_filename)
   fetchfile_path = "#{v3_path}.fetch"
@@ -38,10 +40,10 @@ all_output_files = []
 
 Dir.glob(pegasus_dir('sites/**/*.collate')).each do |collate_file|
   all_output_files << collate_to_pdf_to_fetch_file(collate_file)
-rescue Exception => e
+rescue Exception => exception
   ChatClient.log "PDF generation failure for #{collate_file}"
-  ChatClient.log "/quote #{e.message}\n#{CDO.backtrace e}", message_format: 'text'
+  ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
   raise
 end
 
-task default: all_output_files
+timed_task_with_logging default: all_output_files

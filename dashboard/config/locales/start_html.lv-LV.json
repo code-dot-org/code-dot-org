@@ -1,0 +1,779 @@
+{
+  "lv-LV": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Pet Chooser 2_2021": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Pet Chooser 2_2022": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Pet Chooser_2021": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Pet Chooser_2022": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U1 IO Story_2021": {
+          "City": "Pilsēta",
+          "Color": "Krāsa",
+          "Name": "Vārds",
+          "text": "teksts"
+        },
+        "CSD U1 IO Story_2022": {
+          "City": "Pilsēta",
+          "Color": "Krāsa",
+          "Name": "Vārds",
+          "text": "teksts"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "Pilsēta",
+          "Color": "Krāsa",
+          "Name": "Vārds",
+          "text": "teksts"
+        },
+        "CSD U1 processing guess_2021": {
+          "text": "teksts"
+        },
+        "CSD U1 processing guess_2022": {
+          "text": "teksts"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "teksts"
+        },
+        "CSD U1 processing live_2021": {
+          "bear": "Lācis"
+        },
+        "CSD U1 processing live_2022": {
+          "bear": "Lācis"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "kaķis",
+          "dog": "suns"
+        },
+        "CSD U1 processing npark_2021": {
+          "Sorry!": "Piedod!"
+        },
+        "CSD U1 processing npark_2022": {
+          "Sorry!": "Piedod!"
+        },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "Piedod!"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Atpakaļ"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Atpakaļ"
+        },
+        "CSD U1 storage friends_2023": {
+          "Back": "Atpakaļ"
+        },
+        "CSD U1 storage movies_2021": {
+          "No": "Nē",
+          "Yes": "Jā",
+          "text": "teksts"
+        },
+        "CSD U1 storage movies_2022": {
+          "No": "Nē",
+          "Yes": "Jā",
+          "text": "teksts"
+        },
+        "CSD U1 storage movies_2023": {
+          "No": "Nē",
+          "Yes": "Jā",
+          "text": "teksts"
+        },
+        "CSD U1 storage outfit_2021": {
+          "black": "melns",
+          "green": "zaļās krāsas"
+        },
+        "CSD U1 storage outfit_2022": {
+          "black": "melns",
+          "green": "zaļās krāsas"
+        },
+        "CSD U1 storage outfit_2023": {
+          "black": "melns",
+          "green": "zaļās krāsas"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Vecums",
+          "Name": "Vārds"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "North": "Ziemeļi"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "North": "Ziemeļi"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 - Color LEDs - SB4_2222": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "zaļās krāsas",
+          "left": "pa kreisi",
+          "red": "sarkanās krāsas",
+          "right": "pa labi"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "zaļās krāsas",
+          "left": "pa kreisi",
+          "red": "sarkanās krāsas",
+          "right": "pa labi"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "pa kreisi",
+          "right": "pa labi"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "pa kreisi",
+          "right": "pa labi"
+        },
+        "CSD U6 - Combine Inputs - PracA_2222": {
+          "left": "pa kreisi",
+          "right": "pa labi"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "zilās krāsas",
+          "green": "zaļās krāsas"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "zilās krāsas",
+          "green": "zaļās krāsas"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_2222": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Vārds"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Vārds"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Vārds"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - ChalD_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - Piano_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "melns"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "nosaukums"
+        },
+        "CSD U6 - Screen Outputs - P_2222": {
+          "title": "nosaukums"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "nosaukums"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "uz leju",
+          "left": "pa kreisi",
+          "right": "pa labi",
+          "up": "uz augšu"
+        },
+        "CSD U6 - Screen Outputs - PracB_2222": {
+          "down": "uz leju",
+          "left": "pa kreisi",
+          "right": "pa labi",
+          "up": "uz augšu"
+        },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "uz leju",
+          "left": "pa kreisi",
+          "right": "pa labi",
+          "up": "uz augšu"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "teksts"
+        },
+        "CSD U6 - Sensors - P_2222": {
+          "text": "teksts"
+        },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "teksts"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 analog light": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Atjaunināt"
+        },
+        "CSD U6 array piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 array piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 arrays select predict": {
+          "first": "pirmais"
+        },
+        "CSD U6 arrays select predict_2018": {
+          "first": "pirmais"
+        },
+        "CSD U6 arrays select predict_2019": {
+          "first": "pirmais"
+        },
+        "CSD U6 arrays select predict_2021": {
+          "first": "pirmais"
+        },
+        "CSD U6 colorLeds intensity": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 colorLeds intensity_2018": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 colorLeds intensity_2019": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "Medium": "Vidējs"
+        },
+        "CSD U6 getProperty Demo": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 getProperty Demo_2018": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 getProperty Demo_2019": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 getProperty Demo_2021": {
+          "Save": "Saglabāt"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Iesniegt"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Iesniegt"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Iesniegt"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Iesniegt"
+        },
+        "CSD U6 sensor experiment embedded": {
+          "text": "teksts"
+        },
+        "CSD U6 sensor experiment embedded_2018": {
+          "text": "teksts"
+        },
+        "CSD U6 sensor experiment embedded_2019": {
+          "text": "teksts"
+        },
+        "CSD U6 sensor experiment embedded_2021": {
+          "text": "teksts"
+        },
+        "CSD U6 setProperty predict app": {
+          "title": "nosaukums"
+        },
+        "CSD U6 setProperty predict app_2018": {
+          "title": "nosaukums"
+        },
+        "CSD U6 setProperty predict app_2019": {
+          "title": "nosaukums"
+        },
+        "CSD U6 setProperty predict app_2021": {
+          "title": "nosaukums"
+        },
+        "CSDU4 Crowdsource App Demo": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "No": "Nē",
+          "Save": "Saglabāt",
+          "Yes": "Jā"
+        },
+        "CSDU4 Crowdsource App Demo_2018": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "No": "Nē",
+          "Save": "Saglabāt",
+          "Yes": "Jā"
+        },
+        "CSDU4 Crowdsource App Demo_2019": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "No": "Nē",
+          "Save": "Saglabāt",
+          "Yes": "Jā"
+        },
+        "CSDU4 Decision App Demo": {
+          "About Us": "Par mums",
+          "I don't know": "Es nezinu",
+          "When?": "Kad?"
+        },
+        "CSDU4 Decision App Demo_2018": {
+          "About Us": "Par mums",
+          "I don't know": "Es nezinu",
+          "When?": "Kad?"
+        },
+        "CSDU4 Decision App Demo_2019": {
+          "About Us": "Par mums",
+          "I don't know": "Es nezinu",
+          "When?": "Kad?"
+        },
+        "CSDU4 Functionality visible": {
+          "Hide": "Paslēpt",
+          "Show": "Rādīt"
+        },
+        "CSDU4 List App Demo": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "Done": "Gatavs"
+        },
+        "CSDU4 List App Demo_2018": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "Done": "Gatavs"
+        },
+        "CSDU4 List App Demo_2019": {
+          "About Us": "Par mums",
+          "Cancel": "Atcelt",
+          "Done": "Gatavs"
+        },
+        "CSDU4 Quiz App Demo": {
+          "About Us": "Par mums",
+          "Submit": "Iesniegt",
+          "When?": "Kad?"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "About Us": "Par mums",
+          "Submit": "Iesniegt",
+          "When?": "Kad?"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "About Us": "Par mums",
+          "Submit": "Iesniegt",
+          "When?": "Kad?"
+        },
+        "CSDU6 - UI and Inputs - getNumber": {
+          "+": "+"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Atpakaļ"
+        },
+        "CSDU6 circuit playground piano": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 circuit playground piano_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2018": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2019": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "CSDU6 piano with notes_2021": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "A",
+          "F": "F",
+          "G": "G"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Atpakaļ"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Atiestatīt"
+        },
+        "allthethings design mode elements": {
+          "text": "teksts"
+        },
+        "csd u5 recommender sample": {
+          "Start": "Sākt"
+        },
+        "csd u5 recommender sample_2019": {
+          "Start": "Sākt"
+        },
+        "csd u5 recommender sample_2021": {
+          "Start": "Sākt"
+        },
+        "csd u5 recommender sample_2022": {
+          "Start": "Sākt"
+        },
+        "csd u5 recommender sample_2023": {
+          "Start": "Sākt"
+        },
+        "csd-apps for good-2": {
+          "Next": "Nākamā"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Nākamā"
+        },
+        "csd-apps for good-2_2023": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-2": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-2_2023": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-4": {
+          "Sorry!": "Piedod!"
+        },
+        "csd-explore ui-4_2022": {
+          "Sorry!": "Piedod!"
+        },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "Piedod!"
+        },
+        "csd-explore ui-6": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Nākamā"
+        },
+        "csd-explore ui-6_2023": {
+          "Next": "Nākamā"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Nākamā"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Nākamā"
+        },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Nākamā"
+        },
+        "ml-customize-raspado-2021": {
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-customize-raspado_2022": {
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-customize-raspado_2023": {
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-intro ai lab- fruit veggie widget": {
+          "Continue": "Turpināt",
+          "Loading...": "Ielādē..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "Turpināt",
+          "Loading...": "Ielādē..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Turpināt",
+          "Loading...": "Ielādē..."
+        },
+        "ml-model card-medical app v2 2021-2": {
+          "A": "A",
+          "W": "R",
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-model card-medical app v2 2021-2_2022": {
+          "A": "A",
+          "W": "R",
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "R",
+          "no": "nē",
+          "yes": "jā"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Atpakaļ"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Atpakaļ"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "Back": "Atpakaļ"
+        },
+        "ml-models in applab-zoo assessment": {
+          "B": "B",
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "B": "B",
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-models in applab-zoo model embed": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-models in applab-zoo model embed_2022": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Nē",
+          "Yes": "Jā"
+        },
+        "ml-use model card-example3A-2021": {
+          "cloudy": "mākoņains",
+          "night": "nakts",
+          "snow": "sniegs"
+        },
+        "ml-use model card-example3A_2022": {
+          "cloudy": "mākoņains",
+          "night": "nakts",
+          "snow": "sniegs"
+        },
+        "ml-use model card-example3A_2023": {
+          "cloudy": "mākoņains",
+          "night": "nakts",
+          "snow": "sniegs"
+        }
+      }
+    }
+  }
+}

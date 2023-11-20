@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::Pd::ApplicationSerializerTest < ::ActionController::TestCase
+class Api::V1::Pd::ApplicationSerializerTest < ActionController::TestCase
   setup do
     application_data = build :pd_teacher_application_hash, course: :csp
     @application = create :pd_teacher_application, form_data_hash: application_data

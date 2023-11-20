@@ -4,35 +4,60 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "f8e11610-8bc9-448e-bb7e-25e58ecb193e",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 1: Problem Solving and Computing. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit1-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 1 Self-Paced PL"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "is_course": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": "csd1",
-    "serialized_at": "2022-10-10 22:15:41 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "family_name": null,
+    "serialized_at": "2023-10-27 19:05:37 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd1-2023"
     }
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Chapter 1"
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 1: The Problem Solving Process"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -42,9 +67,9 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
-        "display_name": "Chapter 2"
+        "display_name": "Chapter 2: Computers and Problem Solving"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -54,7 +79,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Alternative Lessons"
       },
@@ -66,19 +91,32 @@
   ],
   "lessons": [
     {
+      "key": "Student Pre-Course Survey",
+      "name": "Student Pre-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
       "key": "Intro to Problem Solving",
       "name": "Intro to Problem Solving",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nIn this lesson, students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/csd1-2022/lessons/9/)\n* [Spaghetti Bridge](/s/csd1-2022/lessons/10/)\n* [Paper Tower](/s/csd1-2022/lessons/11/)",
+        "overview": "\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. Students work in groups to design aluminum foil boats that will support as many pennies as possible. Groups have two rounds to work on their boats, with the goal of trying to hold more pennies than they did in round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Newspaper Table](/s/csd1-2023/lessons/9/)\n* [Spaghetti Bridge](/s/csd1-2023/lessons/10/)\n* [Paper Tower](/s/csd1-2023/lessons/11/)",
         "preparation": "**For each group**\n\n* 2 sheets of aluminum foil, 5x5 inches in length each\n* 1 container that can hold 3-5 inches of water \n* Several paper towels or rags that can be placed under the container \n* 15 pennies\n* One copy of the activity guide\n\n**For the teacher**\n\n* 1 container that can hold 3-5 inches of water \n* 50 pennies \n* Extra paper towels or rags \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
-        "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The aluminum boats problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
-        "student_overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n"
+        "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nYou will work with a group to design and test an aluminum foil boat that will support as many pennies as possible. \n"
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving",
@@ -89,17 +127,15 @@
     {
       "key": "The Problem Solving Process",
       "name": "The Problem Solving Process",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "1. **Given a problem, identify individual actions that would fall within each step of the problem solving process**\r\n\r\n\tOn page 2 of the activity guide, check that students have written down reasonable actions for each of the four steps in the problem they are trying to solve.\r\n\r\n2. **Identify useful strategies within each step of the problem solving process**\r\n\r\n\tIn the wrap up, check that students are coming up with effective strategies for each step of the process.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\r\n\r\nThis lesson introduces the formal problem solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the problem activities from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.",
+        "overview": "\nThis lesson introduces the formal problem-solving process that students will use over the course of the year, Define - Prepare - Try - Reflect. The lesson begins by anchoring the formal problem-solving process in some real-life experiences they already have solving problems by asking students to brainstorm all the different types of problems that they encounter in everyday life. Students are then shown the four steps of the problem-solving process and work together to relate these abstract steps to their actual experiences solving problems. First students relate these steps to the problem activities from the previous lesson, then a problem they are good at solving, then a problem they want to improve at solving. At the end of the lesson, the class collects a list of generally useful strategies for each step of the process to put on posters that will be used throughout the unit and year.\n\n**Question of the Day:** What are some common steps we can use to solve many different types of problems?\n",
         "preparation": "For each student \n\n* Print a copy of Activity Guide\n\nFor the class\n\n* Poster paper\n* Markers/colored pencils\n\nFor the Teacher\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
-        "purpose": "This lesson aims to anchor the formal problem solving process students will use throughout the course in some real-life experiences they already have solving problems. Future units in CS Discoveries will present problems in contexts that may or may not be familiar. A structured problem solving process will be an important tool for helping students move forward in the face of novel and complex challenges.",
-        "student_overview": "**Question of the Day: What are some common steps we can use to solve many different types of problems?**\n\nYou will learn about the Problem Solving Process we use in Computer Science and dive into a few strategies to implement each step. \n"
+        "student_overview": "**Question of the Day:** What are some common steps we can use to solve many different types of problems?\n\nYou will learn about the Problem-Solving Process we use in Computer Science and dive into a few strategies to implement each step. \n"
       },
       "seeding_key": {
         "lesson.key": "The Problem Solving Process",
@@ -110,17 +146,15 @@
     {
       "key": "Exploring Problem Solving",
       "name": "Exploring Problem Solving",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Animal Theme](/s/csd1-2022/lessons/12/)\n* [Games Theme](/s/csd1-2022/lessons/13/)",
+        "overview": "\nIn this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a word search, arrange seating for a birthday party, and redesign a classroom. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**Alternate versions of this lesson are also available.** \n\n* [Animal Theme](/s/csd1-2022/lessons/12/)\n* [Games Theme](/s/csd1-2022/lessons/13/)",
         "preparation": "* Print the activity guide for each student\n* Scratch paper for the Birthday Party problem\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
-        "student_overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nToday you will apply the Problem-Solving Process to three different problems which will grow increasingly complex!\n"
+        "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nToday you will apply the Problem-Solving Process to three different problems which will grow increasingly complex!\n"
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving",
@@ -131,17 +165,15 @@
     {
       "key": "What is a Computer?",
       "name": "What is a Computer?",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "1. **Identify a computer as a machine that works with information.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n\r\n2. **Reason about whether particular objects are or are not computers.**\r\n\r\n\tIn the last discussion of the main activity, check students' reasoning about whether a device is a computer.  Make sure that they are mentioning that it uses information or solves information (or thinking) problems.\r\n    \r\n3. **Choose problems that can be solved with computing and justify those choices.**\r\n\r\n\tIn the wrap up activity, check that students have chosen information problems and have explained how a computer gets and uses the information needed to solve the problem.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What is a computer?**\r\n\r\nIn this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.\r\n",
+        "overview": "\nThis lesson builds on the problem-solving theme of the earlier lessons and focuses on the specifics of how computing is used in problem-solving, starting with developing a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.\n\n**Question of the Day:** What is a computer?\n",
         "preparation": "**For each group** \n\n  * Print out copies of the activity guide. Note there are two sets of pictures, but each group only needs a single set.\n  * Scissors (if you will not have time to cut the pictures prior to class) \n  * Poster paper\n  * Markers or colored pencils \n  * Glue or tape to attach pictures \n\n**For the teacher**\n\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
-        "purpose": "This lesson builds on the problem solving theme of the earlier lessons and focuses on the specifics of how computing is used in problem solving. In this lesson, students will consider different types of computers and that these computers use information as part of the problem solving process. Upcoming lessons will dive much deeper into what an information problem looks like and how computers solve these problems.",
-        "student_overview": "**Question of the Day: What is a computer?**\n\nIn this lesson, you will work with a group to figure out what makes a computer a computer!"
+        "student_overview": "**Question of the Day:** What is a computer?\n\nIn this lesson, you will work with a group to figure out what makes a computer a computer!"
       },
       "seeding_key": {
         "lesson.key": "What is a Computer?",
@@ -152,17 +184,15 @@
     {
       "key": "Input and Output",
       "name": "Input and Output",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "1. **Select the inputs and outputs used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of tasks that involve input and output, and that they are coming up with multiple types of inputs and outputs specific to the task at hand.  You might also collect individual answers to this question as an exit ticket.\n\n2. **Explain the role that input and output take when computers are used to solve information problems.**\n\n\tOn the activity guide, check that \"student app\" has appropriate inputs and outputs listed, with a reasonable explanation for why each is necessary.  Student answers will vary, but you can use the exemplar linked on the first level of the Code Studio progression as a guide.\n\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How do computers use input and output to get and give the information that they need to solve problems?**\r\n\r\nIn this lesson students consider how computers get and give information to the user through inputs and outputs.  Students first consider what information they would need to solve a \"thinking problem\", then use that information to produce a recommendation.  They then identify the inputs and outputs to that process.  Afterwards, students consider an app that engages in the same process and determine how that app inputs and outputs information.  Last, they consider other types of inputs and outputs that computers can use to help solve problems.",
+        "overview": "\nThis lesson introduces focuses on two of the features identified in the previous lesson, input and output, that can help classify devices as a computer and has students identify different methods of input or output in common apps. In this lesson, students consider how computers get and give information to the user through inputs and outputs.  Students first consider what information they would need to solve a \"thinking problem\", then use that information to produce a recommendation.  They then identify the inputs and outputs of that process.  Afterward, students consider an app that engages in the same process and determine how that app inputs and outputs information.  Last, they consider other types of inputs and outputs that computers can use to help solve problems.\n\n**Question of the Day:** How do computers use input and output to get and give the information that they need to solve problems?\n",
         "preparation": "* Prepare copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "In the previous lesson students began brainstorming features that can help classify devices as a computer. This lesson introduces input and output as one of these features and has students identify different methods of input or output in common apps.",
-        "student_overview": "**Question of the Day: How do computers use input and output to get and give the information that they need to solve problems?**\n\nIn this lesson, you will learn about how computers get and give information to the user through various inputs and outputs. \n"
+        "student_overview": "**Question of the Day:** How do computers use input and output to get and give the information that they need to solve problems?\n\nIn this lesson, you will learn about how computers get and give information to the user through various inputs and outputs. \n"
       },
       "seeding_key": {
         "lesson.key": "Input and Output",
@@ -173,17 +203,15 @@
     {
       "key": "Processing",
       "name": "Processing",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "1. **Determine possible processing used to perform common computing tasks**\n\n\tIn the wrap-up discussion, make sure that students come up with multiple examples of processing and are able to explain how that processing turns input into outpput. You might also collect individual answers to this question as an exit ticket.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What are the different ways computers can process information?**\r\n\r\nThis lesson introduces students to four common types of processing: if/then (conditionals), finding a match (searching), counting, and comparing.  Students are first introduced to the types of processing through several sample apps.  They then investigate more apps to determine what sorts of processing each uses.  They then think of their own app and decide what types of processing it would need to work.  Finally, they brainstorm other types of processing that may be useful but were not included in the main lesson.",
+        "overview": "\nThis lesson introduces the concept of processing within computational problem-solving. While this lesson focuses on four common types of processing - if/then (conditionals), finding a match (searching), counting, and comparing - students should understand that processing is whatever a computer does to turn inputs into outputs. Students are first introduced to the types of processing through several sample apps.  They then investigate more apps to determine what sorts of processing each uses.  They then think of their own app and decide what types of processing it would need to work.  Finally, they brainstorm other types of processing that may be useful but were not included in the main lesson.\n\n**Question of the Day:** What are the different ways computers can process information?\n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "This lesson introduces the concept of processing within computational problem solving. The definition of processing presented in this lesson is intentionally approachable. Students should understand that processing is whatever a computer does to turn inputs to outputs, and that there are many different ways for computers to do this work. The goal of this lesson is not for students to write specific algorithms for the example apps.",
-        "student_overview": "**Question of the Day: What are the different ways computers can process information?**\n\nIn this lesson, you will learn about the four types of processing that computers may use to turn input into output.  "
+        "student_overview": "**Question of the Day:** What are the different ways computers can process information?\n\nIn this lesson, you will learn about the four types of processing that computers may use to turn input into output.  "
       },
       "seeding_key": {
         "lesson.key": "Processing",
@@ -194,17 +222,15 @@
     {
       "key": "Storage",
       "name": "Storage",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "1. **Determine whether some input should be stored or not.**\n\n\tInput  In the activity guide, check student answers and reasoning for what information should be stored.\n\n1. **Identify guidelines regarding which kinds of input should and should not be stored.**\n\n\tCheck the guidelines that each group writes together.\n\n1. **Use the IOSP model to identify some of the input, output, storage, and processing used in a given computer.**\n\n\tThe two journal prompts after the IOSP video ask students to identify the different parts of IOSP in an app they commonly use and in a smartphone. \n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: Why is storage an important part of the computing process?**\n\nThis lesson introduces the final component of the unit's model of computing: storage.  After trying out an \"outfit picker\" app, students discuss what information should be stored in the app versus input every time the app is run.  They then look at a series of apps and use their decisions about what should be stored to create guidelines for deciding what information to store.  They then review the four components of this chapter's model of computing: input, output, storage, and processing.  Afterwards, they have one last opportunity to revise their decisions about which items should be classified as a \"computer\" from earlier in the chapter.  The lesson ends with a reflection on their own app ideas and how storage could be used.",
+        "overview": "\nThis lesson introduces the final component of the unit's model of computing: storage.  After trying out an \"outfit picker\" app, students discuss what information should be stored in the app versus input every time the app is run.  They then look at a series of apps and use their decisions about what should be stored to create guidelines for deciding what information to store.  They then review the four components of this chapter's model of computing: input, output, storage, and processing.  Afterward, they have one last opportunity to revise their decisions about which items should be classified as a \"computer\" from earlier in the chapter.  The lesson ends with a reflection on their own app ideas and how storage could be used.\n\n**Question of the Day:** Why is storage an important part of the computing process?\n",
         "preparation": "* Print a copy of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-2-lessons-4-8/36189) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "In Chapter 1 of this unit, students learned the problem solving process. In Chapter 2, students learned how computers solve problems. At this point, students know that computers are information processing machines that can do four things with information: input, output, store, and process.  In this final lesson before the unit project, students look at types of input that may be needed to solve a particular problem and describe the processing and storage that a computer would do to produce the desired output.  This should prepare them to eventually design their own app to address a problem and explain how that app would work.",
-        "student_overview": "**Question of the Day: Why is storage an important part of the computing process?**\n\nIn this lesson, you learn about the last criteria that make a computer a computer - storage!"
+        "student_overview": "**Question of the Day:** Why is storage an important part of the computing process?\n\nIn this lesson, you learn about the last criteria that make a computer a computer - storage!"
       },
       "seeding_key": {
         "lesson.key": "Storage",
@@ -215,7 +241,7 @@
     {
       "key": "Project - Propose an App",
       "name": "Project - Propose an App",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -231,12 +257,10 @@
             "buttonText": "Take Teacher Survey"
           }
         ],
-        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit.  You may also choose to assign the post-project test through code studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\r\n\r\nTo conclude their study of the problem solving process and the input/output/store/process model of a computer, students will propose an app designed to solve a real world problem. This project will be completed across multiple days and will result in students creating a poster highlighting the features of their app that they will present to their classmates. A project guide provides step by step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.",
-        "preparation": "* Print a copy of [r apps_and_problem_solving/csd1/2023] for each pair of students\n* Poster paper, pens, markers and other supplies for making posters\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "This project combines the two major themes of Unit 1, problem solving, and the input-output-store-process model of a computer. This project ties both themes to a broader goal of identifying real world problems and finding ways to use technology to help solve them. Students collaborate in the creation of their app and also take part in a structured peer review process that they will see many more times throughout the course. This project should be a fun and creative experience as well, and gives students a chance to tie the field of computer science to their own interests and ambitions.",
-        "student_overview": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\n\nFor this lesson, you will spend a few days creating an idea for an app that solves a real-world problem using input, output, storage, and processing. \n"
+        "overview": "\nTo conclude this unit, this project combines the two major themes of Unit 1, the problem-solving process and the input/output/store/process model of a computer, to have students identify real-world problems and find ways to use technology to help solve them. This project will be completed across multiple days and will result in students creating a poster of a proposed app they design to solve a real-world problem, highlighting the features of their app that they will present to their classmates. A project guide provides step-by-step instructions for students and helps them organize their thoughts. The project is designed to be completed in pairs though it can be completed individually.\n\n**Question of the Day:**  How can the IOSP model help us to design an app that solves a problem?\n",
+        "preparation": "* Print a copy of [r apps_and_problem_solving/csd/2023] for each pair of students\n* Poster paper, pens, markers and other supplies for making posters\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-propose-an-app-problem-solving-and-computing-lesson-8/36201) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
+        "student_overview": "**Question of the Day:**  How can the IOSP model help us to design an app that solves a problem?\n\nFor this lesson, you will spend a few days creating an idea for an app that solves a real-world problem using input, output, storage, and processing. \n"
       },
       "seeding_key": {
         "lesson.key": "Project - Propose an App",
@@ -247,10 +271,10 @@
     {
       "key": "Post-Project Test",
       "name": "Post-Project Test",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": true,
       "has_lesson_plan": false,
-      "relative_position": 1,
+      "relative_position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -262,17 +286,15 @@
     {
       "key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\n\nIn this lesson, students work in groups to design newspaper tables that will hold as many books as possible. Groups have two rounds to work on their tables, with the goal of trying to hold more books than they did in the first round. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "\n\nThis lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design newspaper tables that will hold as many books as possible. Groups have two rounds to work on their tables, with the goal of trying to hold more books than they did in the first round. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2023/lessons/1/)**",
         "preparation": "**For each group**\n\n* 2 full newspapers for each group of students\n* 1 roll of tape for each group of students\n* One copy of the activity guide\n\n**For the teacher**\n\n* 10-20 books of similar weight.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
-        "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The newspaper table problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
-        "student_overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a newspaper table that will support as many books as possible. "
+        "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a newspaper table that will support as many books as possible. "
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)",
@@ -283,17 +305,15 @@
     {
       "key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\n\nIn this lesson, students work in groups to design spaghetti bridges that will support as many books as possible. Groups have two rounds to work on their bridges, with the goal of trying to hold more books than they did in Round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design spaghetti bridges that will support as many books as possible. Groups have two rounds to work on their bridges, with the goal of trying to hold more books than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2023/lessons/1/)**",
         "preparation": "**For each group**\n\n* 1 pound of dry spaghetti noodles (about 1 box)\n* 1 glue gun\n* One copy of the activity guide\n\n**For the teacher**\n\n* 10-20 books of similar size and weight\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n\n",
-        "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The spaghetti bridge problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems.",
-        "student_overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a spaghetti bridge that will support as many books as possible. \n"
+        "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?*\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a spaghetti bridge that will support as many books as possible. \n"
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)",
@@ -304,17 +324,15 @@
     {
       "key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
       "name": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "assessment_opportunities": "1. **Communicate and collaborate with classmates in order to solve a problem**\r\n\r\n\tIn the wrap up discussion question about collaboration, check for advantages to collaboration in problem solving and can list appropriate strategies for overcoming challenges.  This practice will be reinforced throughout the unit and course.\r\n    \r\n2. **Iteratively improve a solution to a problem**\r\n\r\n\tIn the Activity Guide, check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project.\r\n    \r\n    \r\n3. **Identify different strategies used to solve a problem**\r\n\r\n\tIn the Activity Guide, check for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\n\nIn this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson students reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course.\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2022/lessons/1/)**",
+        "overview": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem-solving students will be using over the rest of this unit and course. In this lesson, students work in groups to design paper towers that can stand as high as possible. Groups have two rounds to work on their towers, with the goal of trying to go higher than they did in Round 1. The structure of the activity foreshadows different steps of the problem-solving process that students will be introduced to in more detail in the following lesson. At the end of the lesson, students reflect on their experiences with the activity and make connections to the types of problem-solving they will be doing for the rest of the course.\n\n**Question of the Day:** What can help us to work together and solve problems as a team?\n\n\n**This is an alternate activity to [Intro to Problem Solving - Aluminum Boats](/s/csd1-2023/lessons/1/)**",
         "preparation": "**For each group**\n\n* 20 sheets of paper, 8.5 x 11 inches\n* Space to build their tower\n* One copy of the activity guide\n\n**For the teacher**\n \n* Extra paper \n* Timer\n* Ruler\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)\n",
-        "purpose": "This lesson is a fun introduction to the open-ended, collaborative, and creative problem solving students will be using over the rest of this unit and course. The paper towers problem could easily be substituted out for any number of other problems that require students to define their goals, devise a plan, try a solution, evaluate their results, and then iteratively improve from there. The fact that the problem chosen is \"non-computational\" is intentional. Computer science is fundamentally a problem-solving discipline and staying away from traditional computer science problems at this point helps to frame this class as one about problem-solving more generally with computer science being a new \"tool\" to help attack certain types of problems. ",
-        "student_overview": "**Question of the Day: What can help us to work together and solve problems as a team?**\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a paper tower that you will try to make as tall as possible. \n\n"
+        "student_overview": "**Question of the Day:** What can help us to work together and solve problems as a team?\n\nFor this lesson, you will work with a group to design, build, test, and reflect on a paper tower that you will try to make as tall as possible. \n\n"
       },
       "seeding_key": {
         "lesson.key": "Intro to Problem Solving - Paper Tower (Alternate Lesson 1)",
@@ -325,17 +343,16 @@
     {
       "key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
         "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2022/lessons/3/)**",
+        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve tangrams, choose a pet for several people, and plan a pet adoption event. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2023/lessons/3/)**",
         "preparation": "* Print the activity guide for each student\n* Prepare tangrams for students, or print out one tangram sheet and get scissors for each group.\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
-        "student_overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n\n"
+        "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n\n"
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Animals Theme (Alternate Lesson 3)",
@@ -346,17 +363,15 @@
     {
       "key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
       "name": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "assessment_opportunities": "1. **Apply the problem solving process to approach a variety of problems**\r\n\t\r\n    On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\r\n\r\n2. **Assess how well-defined a problem is and use strategies to define the problem more precisely**\r\n\r\n\tFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nIn this lesson students apply the problem solving process to three different problems in order to better understand the value of each step. They will solve a maze, organizing a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2022/lessons/3/)**",
+        "overview": "In this lesson, students apply the problem-solving process to three different problems in order to better understand the value of each step. They will solve a maze, organize a team to race as fast as possible, and design a game. The problems grow increasingly complex and poorly defined to highlight how the problem-solving process is particularly helpful when tackling these types of problems. The lesson concludes with students reflecting on their experience with the problem-solving process. They will justify the inclusion of each step and will brainstorm questions or strategies that can help them better define open-ended problems, as this is often the most critical step.\n\nThis lesson will likely take two class periods or more to complete. The first two problems may fit into a single class period but the third will need to be moved to a second day.\n\n**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\n\n**This is an alternate activity to [Exploring Problem Solving](/s/csd1-2023/lessons/3/)**",
         "preparation": "* Print the activity guide for each student\n* Scratch paper for the Partner Race Relay problem\n* Poster to record strategies for defining problems in wrap up discussion\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
-        "purpose": "This lesson provides students with more practice with the problem solving process in a variety of contexts. It highlights the fact that the problem solving process is particularly helpful when approaching poorly defined problems. The final brainstorm of the lesson provides students with some strategies and questions they can ask to better define problems for themselves, since this is often the most critical step. The problems seen in this lesson also help to drive a discussion in the following lesson about the types of problems that computers are well-suited to solve.",
-        "student_overview": "**Question of the Day: How can we apply the problem solving process to many different kinds of problems?**\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n"
+        "student_overview": "**Question of the Day:** How can we apply the problem-solving process to many different kinds of problems?\n\nFor this lesson, you will apply the problem-solving process to several different problems, each one getting increasingly complex! \n"
       },
       "seeding_key": {
         "lesson.key": "Exploring Problem Solving - Games Theme (Alternate Lesson 3)",
@@ -366,6 +381,19 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "8af54b20-90f3-4b23-8063-580ea1351f95",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8af54b20-90f3-4b23-8063-580ea1351f95",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd1-2023"
+      }
+    },
     {
       "key": "360c949e-7bb0-4183-8580-6f9cf3d3a2e1",
       "position": 1,
@@ -1084,6 +1112,16 @@
   ],
   "activity_sections": [
     {
+      "key": "948e68e1-307f-4f5b-b763-c1d6f71c8beb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "948e68e1-307f-4f5b-b763-c1d6f71c8beb",
+        "lesson_activity.key": "8af54b20-90f3-4b23-8063-580ea1351f95"
+      }
+    },
+    {
       "key": "a9138347-c3ac-46c8-9258-f5dbd9e57563",
       "position": 1,
       "properties": {
@@ -1091,7 +1129,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd1/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
+            "markdown": "**How-To Videos:** The following steps are also covered in a series of [r code_org_how-to_videos/csd/2023] available on Code.org's Teacher Support website. You may decide to watch these videos before reading the instructions below."
           }
         ]
       },
@@ -1104,7 +1142,7 @@
       "key": "74e9e64d-7599-413b-bf0b-713efdb5896a",
       "position": 2,
       "properties": {
-        "description": "## Before class\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers."
+        "description": "## Preparing for the Unit\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). "
       },
       "seeding_key": {
         "activity_section.key": "74e9e64d-7599-413b-bf0b-713efdb5896a",
@@ -1314,7 +1352,13 @@
       "key": "b27170b9-6a3d-4cdd-b2ef-22202a8fcafc",
       "position": 9,
       "properties": {
-        "description": "### Develop a Plan\r\n\r\n**Prompt:** Now that you've had a chance to learn from the first round of boat making, let's run the same activity again. First, your group will develop a new plan. Just as before, record it on your activity guide, and once you're ready I'll come around and give you a new piece of foil.\r\n\r\n**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your boat needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your boat, or make minor modifications?” \r\n\r\nOnce groups have prepared their new plans give them a new piece of foil and have them each build a new boat.\r\n\r\n### Test Your Boat\r\n\r\nGroups can test their designs just as before and record the results on their activity guides."
+        "description": "### Develop a Plan\n\n**Prompt:** Now that you've had a chance to learn from the first round of boat making, let's run the same activity again. First, your group will develop a new plan. Just as before, record it on your activity guide, and once you're ready I'll come around and give you a new piece of foil.\n\n**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your boat needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your boat, or make minor modifications?” \n\nOnce groups have prepared their new plans give them a new piece of foil and have them each build a new boat.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Iteratively improve a solution to a problem**\n\nIn the Activity Guide, you can check for strengths and weaknesses in students' original design and connections to appropriate changes for the next iteration of the project.\n    \n**Identify different strategies used to solve a problem**\n\nYou can also check their activity guide for strategies for overcoming the challenges in the activity.  You also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b27170b9-6a3d-4cdd-b2ef-22202a8fcafc",
@@ -1325,8 +1369,7 @@
       "key": "2f07e793-6e76-482c-9d71-88bdaedf09b9",
       "position": 10,
       "properties": {
-        "description": "**Transition**: Ask class to return to their own seats to reflect on the activity.",
-        "name": "Reflect\r"
+        "description": "### Test Your Boat\n\nGroups can test their designs just as before and record the results on their activity guides.\n\n### Reflect\n\n**Transition**: Ask class to return to their own seats to reflect on the activity."
       },
       "seeding_key": {
         "activity_section.key": "2f07e793-6e76-482c-9d71-88bdaedf09b9",
@@ -1382,6 +1425,19 @@
       },
       "seeding_key": {
         "activity_section.key": "ea50f78a-a3fc-4669-92e8-fb8d0adef7e7",
+        "lesson_activity.key": "9e786f9e-9ab6-4979-87a8-36fa84b7bfe1"
+      }
+    },
+    {
+      "key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
+      "position": 5,
+      "properties": {
+        "description": "**Code Studio:** Have students answer 5 quick survey questions at the beginning of this unit. Once at least 5 students have completed the survey you will be able to view the anonymized results in the Teacher Dashboard. Some of these questions will be asked again at the end of the first project, which can be helpful in seeing student growth and shifts in attitudes throughout the unit.",
+        "name": "Reflection",
+        "progression_name": "Check-In Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01",
         "lesson_activity.key": "9e786f9e-9ab6-4979-87a8-36fa84b7bfe1"
       }
     },
@@ -1453,7 +1509,7 @@
       "key": "3fcef854-07b9-454c-87a9-18ac2711cf4a",
       "position": 2,
       "properties": {
-        "description": "**Distribute**: Hand out copies of the activity guides."
+        "description": "**Distribute**: Hand out copies of the [r the_problem_solving_process_5/csd/2023] activity guides."
       },
       "seeding_key": {
         "activity_section.key": "3fcef854-07b9-454c-87a9-18ac2711cf4a",
@@ -1464,9 +1520,15 @@
       "key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
       "position": 3,
       "properties": {
-        "description": "**Video:** Watch the Problem Solving Process Video on Code Studio\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r problem_solving_process_1/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- How did you follow the problem-solving process in the last lesson?\n- How could you use this process on a problem in your everyday life?\n\n**Discussion Goal:** The first discussion question is part of the core activity in the rest of the lesson. Students should take time working in their groups to think of specific things that they did that follow each step of the process. The goal of this discussion is to make the abstract steps more concrete and accessible to students by relating them to a shared activity. The second question gives students a chance to expand their understanding of the process to a different problem, seeing how the different steps may look in different domains. The goal of this discussion is to make sure students have a general enough understanding of the process that they can apply it to a wider variety of problems since the process will be used throughout the course in various domains.\n",
         "name": "The Problem Solving Process\r",
-        "progression_name": "Video: Problem Solving Process"
+        "progression_name": "Video: Problem Solving Process",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a",
@@ -1523,7 +1585,13 @@
       "key": "d26a7dab-fdd0-4a40-93a2-e202f937e9b4",
       "position": 8,
       "properties": {
-        "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.\n\n**Discussion Goal:** All three of these discussions in this lesson aim to reinforce the meaning of the 4 steps in the problem-solving process. In this discussion, you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided in the activity guide."
+        "description": "**Discuss:** Have students share what they wrote with a neighbor and then once again lead a discussion of the conversations they had. Ask students to talk about the individual steps they're using to solve their chosen problem but also point out instances where the same types of strategies are appearing multiple times.\n\n**Discussion Goal:** All three of these discussions in this lesson aim to reinforce the meaning of the 4 steps in the problem-solving process. In this discussion, you might lean more heavily on other students to ensure that the strategies and steps being offered by students seem to fit the definitions of the 4 steps provided in the activity guide.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Given a problem, identify individual actions that would fall within each step of the problem-solving process**\n\nYou can check that students have written down reasonable actions for each of the four steps in the problem they are trying to solve on page 2 of the activity guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d26a7dab-fdd0-4a40-93a2-e202f937e9b4",
@@ -1768,7 +1836,13 @@
       "position": 8,
       "properties": {
         "description": "**Prompt:** You just solved a number of very different problems. With your tables review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem-solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem-solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.\n\n**Discussion Goal:** Students have practiced using the problem-solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem-solving process in general. A sample set of conclusions is below but you should allow students to share their own insights before offering your own.\n\n* **Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\n\n* **Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\n\n* **Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\n\n* **Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\n\n* **The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.",
-        "name": "Understanding the Problem Solving Process"
+        "name": "Understanding the Problem Solving Process",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "There are a couple of assessment opportunities on page 5 of the Activity Guide: \n\n**Apply the problem-solving process to approach a variety of problems**\n\t\nYou can choose to check the chart to make sure that students are putting in reasonable steps for each of the problems.\n\n**Assess how well-defined a problem is and use strategies to define the problem more precisely**\n\nFor the last question on page 5 of the Activity Guide, you can make sure that students have at least one question or strategy that would be an effective way to better define a problem."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ae3a507f-552e-4aa2-b1c9-72c66cdc0f67",
@@ -1990,7 +2064,13 @@
       "key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
       "position": 9,
       "properties": {
-        "description": "**Display:** Show [r what_is_a_computer/csd1/2023]. This video is also available to students on the Code.org website, including an alternative link for schools where YouTube is blocked. The video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_is_a_computer/csd/2023] video in the slides.\n\nThe video presents a computer as a machine that helps with certain kinds of thinking work by manipulating information.  You may want to present the definition as \"a machine that works with information\".\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7dd50f9a-e8a7-4b4e-97fb-48e6c0d387c8",
@@ -2017,7 +2097,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Rather than looking at how particular items are categorized, check students' reasoning about whether a device is a computer. Make sure that they are mentioning that it manipulates information or solves information (or thinking) problems, and prompt them with the scaffolding questions if they are unable to give a sufficient definition.\r\n\r\nIt may be impossible to tell from the picture alone whether or not an item is a computer.  Reassure the class that even experts often disagree about what exactly is or is not a computer.\r\n"
+            "markdown": "Rather than looking at how particular items are categorized, check students' reasoning about whether a device is a computer. Make sure that they are mentioning that it manipulates information or solves information (or thinking) problems, and prompt them with the scaffolding questions if they are unable to give a sufficient definition.\n\nIt may be impossible to tell from the picture alone whether or not an item is a computer.  Reassure the class that even experts often disagree about what exactly is or is not a computer.\n\n\n"
           }
         ]
       },
@@ -2186,7 +2266,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"Teachers Only\" box of the first level in Code Studio.\n"
+            "markdown": "Ensure that students are identifying appropriate inputs and outputs.  Student answers may vary slightly, but they should be similar to those in the exemplar provided in the \"For the teachers\" resources section of the lesson plan.\n"
           }
         ]
       },
@@ -2766,7 +2846,7 @@
       "key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1",
       "position": 2,
       "properties": {
-        "description": "Show them the video introducing the IOSP model.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r what_do_computers_do/csd/2023] video in the slides which introduces the IOSP model.\n",
         "progression_name": "Video: IOSP Model"
       },
       "seeding_key": {
@@ -2782,7 +2862,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals\r\n"
+            "markdown": "If you are using journaling, prompt the students to write their answers down in their journals. \n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**.\n"
           }
         ]
       },
@@ -2795,7 +2875,13 @@
       "key": "c2f89a1d-8699-4430-8bd4-dbf17d51514c",
       "position": 4,
       "properties": {
-        "description": "1. Think of something you do on the computer. What sort of input, output, storage, and processing are happening?\r\n\r\n1. What kinds of input, output, storage, and processing are used in a modern smartphone?\r\n\r\nFinally, look at the poster from the \"What is a Computer?\" lesson and check to see if any of the machines should be reclassified as computers or not computers based on this new IOSP model."
+        "description": "1. Think of something you do on the computer. What sort of input, output, storage, and processing are happening?\r\n\r\n1. What kinds of input, output, storage, and processing are used in a modern smartphone?\r\n\r\nFinally, look at the poster from the \"What is a Computer?\" lesson and check to see if any of the machines should be reclassified as computers or not computers based on this new IOSP model.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use the two journal prompts here to asses students' ability to identify the different parts of IOSP in an app they commonly use and in a smartphone. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c2f89a1d-8699-4430-8bd4-dbf17d51514c",
@@ -2966,11 +3052,15 @@
       "key": "71f728a6-8e24-4b3c-b506-6539e6990fd4",
       "position": 8,
       "properties": {
-        "description": "**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the [r apps_and_problem_solving_-_student_checklist/csd1/2023] so students can self-assess how well their project meets the requirements for this project.",
+        "description": "**Step 8: Finalize App and Make Poster**: Students should incorporate the ideas of their peers in finalizing their app idea. They should then make a poster presenting their app following the guidance provided in the activity guide.\n\nStudents should revisit the rubric for this project to see how their project aligns. You may also decide to distribute the [r apps_and_problem_solving_-_student_checklist/csd/2023] so students can self-assess how well their project meets the requirements for this project.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the *Sample Marked Rubrics* resource at the top of the lesson plan (only visible to verified teachers)"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the project rubric attached to this lesson to assess student mastery of the learning goals of this unit.  You may also choose to assign the post-project test through code studio."
           }
         ]
       },
@@ -3032,7 +3122,7 @@
       "key": "3b38408b-4718-4567-894b-20be8c605f2f",
       "position": 1,
       "properties": {
-        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/edit) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
+        "description": "**Post-Project tests** are included at the end of every unit. These include several multiple choice and matching questions as well as open ended reflections on the final project of the unit. These tests are aligned to the [learning framework](https://docs.google.com/document/d/1WlmAr6CeU4NAQhPAa0YAO-ujVTls_12fOP3lbc2SLxo/view) of each unit and are designed to assess parts of the framework that may not have been covered by the project rubrics. To holistically assess the learning objectives of the unit, the post-project test should be paired with the end-of-unit project which is the primary student assessment in each unit.\n\n**Unlocking The Tests:** This test is locked and hidden from student view by default.  In order for students to see and take this test, you'll need to unlock it by clicking the \"Lock Settings\" button and following the instructions that appear. [Click here for more information about unlocking and admistering assessments](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)"
       },
       "seeding_key": {
         "activity_section.key": "3b38408b-4718-4567-894b-20be8c605f2f",
@@ -3064,7 +3154,7 @@
       "key": "616fa312-173f-4817-8d18-21fe619630de",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -3123,13 +3213,7 @@
       "key": "1f166900-bfac-4e1b-80d3-cf7aabadfc81",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this warm up is to start students thinking about problem solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.\n\n**Discussion Goal:** The goal of this warm-up is to start students thinking about problem-solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\n"
       },
       "seeding_key": {
         "activity_section.key": "1f166900-bfac-4e1b-80d3-cf7aabadfc81",
@@ -3305,7 +3389,13 @@
       "key": "05b03e18-f177-4408-a10c-a019a6a7c836",
       "position": 11,
       "properties": {
-        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your table needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your table, or make minor modifications?” \r\n\r\n\r\nOnce groups have prepared their new plans give them a new newspaper and have them each build a new table.\r\n\r\n### Test Your Table\r\n\r\nGroups can test their designs just as before and record the results on their activity guides."
+        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your table needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your table, or make minor modifications?” \n\n\nOnce groups have prepared their new plans give them a new newspaper and have them each build a new table.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Iteratively improve a solution to a problem**\n\nYou can check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project in the Activity Guide.\n    \n    \n**Identify different strategies used to solve a problem**\n\nYou also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "05b03e18-f177-4408-a10c-a019a6a7c836",
@@ -3316,8 +3406,7 @@
       "key": "62d1d271-64da-4405-9ec7-7b86486de93b",
       "position": 12,
       "properties": {
-        "description": "**Transition**: Ask class to return to their own seats to reflect on the activity.",
-        "name": "Reflect\r"
+        "description": "### Test Your Table\n\nGroups can test their designs just as before and record the results on their activity guides.\n\n### Reflect\n\n**Transition**: Ask class to return to their own seats to reflect on the activity."
       },
       "seeding_key": {
         "activity_section.key": "62d1d271-64da-4405-9ec7-7b86486de93b",
@@ -3391,7 +3480,7 @@
       "key": "e62adeca-af8a-42b4-9c29-6e088c60f6f1",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5)",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -3450,13 +3539,7 @@
       "key": "5102f594-fa35-4319-a1a7-a64056d3e8c6",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this warm up is to start students thinking about problem solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.\n\n**Discussion Goal:** The goal of this warm-up is to start students thinking about problem-solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\n"
       },
       "seeding_key": {
         "activity_section.key": "5102f594-fa35-4319-a1a7-a64056d3e8c6",
@@ -3632,7 +3715,13 @@
       "key": "ee216503-674e-4c8d-a2cb-46bb91dec05f",
       "position": 11,
       "properties": {
-        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your bridge needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your bridge, or make minor modifications?” \r\n\r\n\r\nOnce groups have prepared their new plans give them more spaghetti and have them each build a new bridge."
+        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your bridge needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely restructure your bridge, or make minor modifications?” \r\n\r\n\r\nOnce groups have prepared their new plans give them more spaghetti and have them each build a new bridge.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Iteratively improve a solution to a problem**\n\nYou can check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project in their Activity Guide.\n    \n    \n**Identify different strategies used to solve a problem**\n\nYou also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ee216503-674e-4c8d-a2cb-46bb91dec05f",
@@ -3730,7 +3819,7 @@
       "key": "2207f2c6-4c68-48e8-b2cf-4a883c4d6648",
       "position": 2,
       "properties": {
-        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2018)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5).",
+        "description": "#### Ensure you are registered on Code Studio as a \"verified\" teacher account\n\nAnyone can create a teacher account on Code Studio, which means that we need an extra layer of authorization to allow CS Discoveries teachers to see assessments, answer keys, and any other collateral that students should not be able to trivially get access to. If you attended a Code.org professional learning workshop during the summer, you should already have this access.\n\nTo check whether you have access:\n\n1. Navigate to the [Unit 1 course overview page](https://studio.code.org/s/csd1-2023)\n2. Do you see the CS Discoveries Pre-course Survey as the first \"stage\" of the course?\n3. If not, please fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Note that it can take a day or so to become a verified teacher account, so please do this step early!\n\nIf you are *not* a verified teacher account, you can still create a section for your class, but you will not be able to administer the pre-course survey on the first day.\n\n\n#### Create a class section on Code Studio.\n\nTo create a section:\n\n1. Navigate to the [Teacher Home Page](https://studio.code.org/home)\n2. Click 'New section' under 'Classroom Sections'\n3. Choose 'Email Logins' \n4. In the space provided, give your section a name (e.g. CSD Period 1), the grade of your students, Course: 'Computer Science Discoveries', Current Unit: 'Unit 1: Problem Solving', and click 'Save'\n5. Once the section is created, click the name of the section\n6. On the new page, you will see a unique Join URL that you will distribute to your students in the class. \n\nFor a video walkthrough of these steps and more on navigating your Code.org account, go to the [Code.org How-to Video Playlist](https://www.youtube.com/playlist?list=PL7-6SpcrToamXzSMUKkEYZfKTzi6gJos5).",
         "name": "Before class\r"
       },
       "seeding_key": {
@@ -3789,13 +3878,7 @@
       "key": "461e8d60-df5c-49f9-901f-2f8e39fd0e8f",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The goal of this warm up is to start students thinking about problem solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\r\n"
-          }
-        ]
+        "description": "**Discuss:** Allow students to share answers at their table groups or with a partner, then have those who are comfortable share with the whole class.\n\n**Discussion Goal:** The goal of this warm-up is to start students thinking about problem-solving in preparation for the day's activity.  Highlight answers that reinforce key practices in the class, such as collaboration, persistence, and creativity.  This is also a chance to reinforce a positive culture that encourages students to share out and support each other in brainstorming ideas.\n"
       },
       "seeding_key": {
         "activity_section.key": "461e8d60-df5c-49f9-901f-2f8e39fd0e8f",
@@ -3907,7 +3990,7 @@
       "position": 6,
       "properties": {
         "description": "Once groups are ready, have them test their towers by recording its height and see if it can stand on its own. Remind them of the rules, specifically that they can't touch or adjust the towers once they let go of it.",
-        "name": "Test Your Table\r"
+        "name": "Test Your Tower"
       },
       "seeding_key": {
         "activity_section.key": "01795e3f-f5e6-43b9-a42b-96ef8c4f7450",
@@ -3971,7 +4054,13 @@
       "key": "e175b822-1fa6-41ee-acf7-4365ec85972c",
       "position": 11,
       "properties": {
-        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your tower needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely rebuild your tower, or make minor modifications?” \r\n\r\n\r\nOnce groups have prepared their new plans give them new pieces of paper and have them each build a new tower.\r\n\r\n### Test Your Table\r\n\r\nGroups can test their designs just as before and record the results on their activity guides."
+        "description": "**Support**: As you circulate from group to group, ask questions about the group’s focus in redesign. EX: “What aspect of your tower needed the most improvement?” “What ideas from other groups did you want to incorporate to yours?” “Did you feel the need to completely rebuild your tower, or make minor modifications?” \n\n\nOnce groups have prepared their new plans give them new pieces of paper and have them each build a new tower.\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Iteratively improve a solution to a problem**\n\nYou can check for strengths and weaknesses in students' original design and connection to appropriate changes for the next iteration of the project in their Activity Guide.\n    \n    \n**Identify different strategies used to solve a problem**\n\nYou also may want to check the \"strengths\" of their designs that students list as part of developing their plan on the second page of the guide."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e175b822-1fa6-41ee-acf7-4365ec85972c",
@@ -3982,8 +4071,7 @@
       "key": "29a8eef9-a0a5-4592-ab45-c3f07b4d824f",
       "position": 12,
       "properties": {
-        "description": "**Transition**: Ask class to return to their own seats to reflect on the activity.",
-        "name": "Reflect\r"
+        "description": "### Test Your Tower\n\nGroups can test their designs just as before and record the results on their activity guides.\n\n### Reflect\n\n**Transition**: Ask class to return to their own seats to reflect on the activity."
       },
       "seeding_key": {
         "activity_section.key": "29a8eef9-a0a5-4592-ab45-c3f07b4d824f",
@@ -4057,13 +4145,7 @@
       "key": "ec08513b-6b44-449d-936d-3db0209018aa",
       "position": 2,
       "properties": {
-        "description": "Allow students to share out individually.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
-          }
-        ]
+        "description": "Allow students to share out individually.\n\n**Discussion Goal:** This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\n"
       },
       "seeding_key": {
         "activity_section.key": "ec08513b-6b44-449d-936d-3db0209018aa",
@@ -4193,12 +4275,12 @@
       "key": "564ef6e5-7009-4124-afc1-cb53616d7dfb",
       "position": 8,
       "properties": {
-        "description": "**Prompt:** You just solved a number of very different problems. With your table groups, review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.",
+        "description": "**Prompt:** You just solved a number of very different problems. With your table groups, review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem-solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem-solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.\n\n**Discussion Goal:** Students have practiced using the problem-solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem-solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\n\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\n\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\n\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\n\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\n\n**The Problem-Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\n",
         "name": "Understanding the Problem Solving Process",
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
+            "type": "assessmentOpportunity",
+            "markdown": "**Apply the problem-solving process to approach a variety of problems**\n\t\n On page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\n\n**Assess how well-defined a problem is and use strategies to define the problem more precisely**\n\nFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem."
           }
         ]
       },
@@ -4233,13 +4315,7 @@
       "key": "48603d59-e189-44d3-a2cf-be48a911f2bc",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why does the problem exist? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.\n\n**Discussion Goal:** There are many different strategies to help define problems, including the questions in the previous lesson's activity guide.  Some potentially useful questions include:\n\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\n* Why does the problem exist? (And why does that problem exist?) Keep asking to get to the heart of the problem.\n* How could I be able to tell the problem had been solved? What could I observe or measure?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "48603d59-e189-44d3-a2cf-be48a911f2bc",
@@ -4273,13 +4349,7 @@
       "key": "800e5cde-aa0c-4c1c-b341-6151200cec6f",
       "position": 2,
       "properties": {
-        "description": "Allow students to share out individually.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This discussion serves as a review of the problem solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\r\n"
-          }
-        ]
+        "description": "Allow students to share out individually.\n\n**Discussion Goal:** This discussion serves as a review of the problem-solving process and highlights how many different types of problems there could be. Encourage students to be creative and have some fun with the different \"problems\" they might solve.\n"
       },
       "seeding_key": {
         "activity_section.key": "800e5cde-aa0c-4c1c-b341-6151200cec6f",
@@ -4409,12 +4479,12 @@
       "key": "3a499d3c-4272-48d7-a7d9-ae90bc7f3584",
       "position": 8,
       "properties": {
-        "description": "**Prompt:** You just solved a number of very different problems. With your tables review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.",
+        "description": "**Prompt:** You just solved a number of very different problems. With your tables review the notes you took on each of the problems. Be ready to report out on the following questions\n\n* For each step in the problem-solving process, what is its purpose? Why is it included?\n* Are there any kinds of problems that the problem-solving process is particularly helpful at solving?\n\n**Discuss:** After tables have discussed their responses for several minutes invite the whole class to share their rationale for including each step in the process. Once each step has been discussed, move on to the second question. This question may have many responses and you should allow students to share their thoughts and experiences. If it doesn't arise naturally as you leave the conversation offer some or all of the ideas mentioned in the discussion goals.\n\n**Discussion Goal:** Students have practiced using the problem-solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem-solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\n\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\n\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\n\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\n\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\n\n**The Problem-Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\n",
         "name": "Understanding the Problem Solving Process",
         "tips": [
           {
-            "type": "discussionGoal",
-            "markdown": "**Goal:** Students have practiced using the problem solving process on a number of different problems. Help them synthesize the notes they have been keeping to better understand the role of each step and the value of the problem solving process in general. A sample set of conclusions is below but you should allow students to share your own insights before offering your own.\r\n\r\n**Define:** without defining a problem you might solve the wrong problem, not know where to start, or not know when you're finished\r\n\r\n**Prepare:** Even well-defined problems usually have many possible approaches. Make each try more likely to succeed by first examining your options and anticipating challenges\r\n\r\n**Try:** Without trying you'll never get anywhere. It's important to be persistent and patient so long as your plan still may work\r\n\r\n**Reflect:** You'll likely not solve the problem the first time or there will be a better way to solve it. Learn from your past attempts and get ready to start the process again.\r\n\r\n**The Problem Solving Process:** While you may notice you're using it even for small and trivial problems, this process is incredibly useful for large, complex, poorly-defined, or open-ended problems. It helps you make progress when the way forward may not always be clear.\r\n"
+            "type": "assessmentOpportunity",
+            "markdown": "**Apply the problem-solving process to approach a variety of problems**\n\t\nOn page 5 of the Activity Guide, check the chart to make sure that students are putting in reasonable steps for each of the problems.\n\n**Assess how well-defined a problem is and use strategies to define the problem more precisely**\n\nFor the last question on page 5 of the Activity Guide, make sure that students have at least one question or strategy that would be an effective way to better define a problem."
           }
         ]
       },
@@ -4449,13 +4519,7 @@
       "key": "cf072d25-06e7-4f36-86f2-59baead8f26f",
       "position": 3,
       "properties": {
-        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are many different strategies to help define problems, including the questions on the previous lesson's activity guide.  Some potentially useful questions include:\r\n\r\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\r\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\r\n* How could I be able to tell the problem had been solved? What could I observe or measure?\r\n\r\n"
-          }
-        ]
+        "description": "**Discuss:** Have groups share quickly before taking suggestions from the class as a whole.\n\n**Discussion Goal:** There are many different strategies to help define problems, including the questions in the previous lesson's activity guide.  Some potentially useful questions include:\n\n* Who in particular the problem affects. What specifically do they need? In what kind of situations?\n* Why the problem exists? (And why does that problem exist?) Keep asking to get to the heart of the problem.\n* How could I be able to tell the problem had been solved? What could I observe or measure?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "cf072d25-06e7-4f36-86f2-59baead8f26f",
@@ -4480,50 +4544,49 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "CSD Problem Solving Process Video_2023"
-        ],
-        "progression": "Video: Problem Solving Process"
+          "csd-pre-survey-levelgroup_21_22_2023"
+        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Problem Solving Process Video_2023"
+          "csd-pre-survey-levelgroup_21_22_2023"
         ],
-        "lesson.key": "The Problem Solving Process",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd1-2023",
-        "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a"
+        "activity_section.key": "948e68e1-307f-4f5b-b763-c1d6f71c8beb"
       },
       "level_keys": [
-        "CSD Problem Solving Process Video_2023"
+        "csd-pre-survey-levelgroup_21_22_2023"
       ]
     },
     {
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "CSD What Makes a Computer a Computer Video_2023"
+          "intro-pulse-survey_csd1_2023"
         ],
-        "progression": "Video: What Makes a Computer, a Computer?"
+        "progression": "Check-In Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD What Makes a Computer a Computer Video_2023"
+          "intro-pulse-survey_csd1_2023"
         ],
-        "lesson.key": "What is a Computer?",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd1-2023",
-        "activity_section.key": "affe52e5-e02c-4e4e-9812-3f3937a325cf"
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
       },
       "level_keys": [
-        "CSD What Makes a Computer a Computer Video_2023"
+        "intro-pulse-survey_csd1_2023"
       ]
     },
     {
@@ -4878,31 +4941,6 @@
     },
     {
       "chapter": 17,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U1 storage video_2023"
-        ],
-        "progression": "Video: IOSP Model"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U1 storage video_2023"
-        ],
-        "lesson.key": "Storage",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd1-2023",
-        "activity_section.key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1"
-      },
-      "level_keys": [
-        "CSD U1 storage video_2023"
-      ]
-    },
-    {
-      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4927,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4954,26 +4992,26 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "CSD Problem Solving Process Video_2023",
+        "level.key": "csd-pre-survey-levelgroup_21_22_2023",
         "script_level.level_keys": [
-          "CSD Problem Solving Process Video_2023"
+          "csd-pre-survey-levelgroup_21_22_2023"
         ],
-        "lesson.key": "The Problem Solving Process",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "Student Pre-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd1-2023",
-        "activity_section.key": "9b54904f-66a6-4d2c-b41c-e9077a419c6a"
+        "activity_section.key": "948e68e1-307f-4f5b-b763-c1d6f71c8beb"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD What Makes a Computer a Computer Video_2023",
+        "level.key": "intro-pulse-survey_csd1_2023",
         "script_level.level_keys": [
-          "CSD What Makes a Computer a Computer Video_2023"
+          "intro-pulse-survey_csd1_2023"
         ],
-        "lesson.key": "What is a Computer?",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd1-2023",
-        "activity_section.key": "affe52e5-e02c-4e4e-9812-3f3937a325cf"
+        "activity_section.key": "e2c9fd7f-f196-4ed5-af46-0398fda3df01"
       }
     },
     {
@@ -5146,18 +5184,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U1 storage video_2023",
-        "script_level.level_keys": [
-          "CSD U1 storage video_2023"
-        ],
-        "lesson.key": "Storage",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd1-2023",
-        "activity_section.key": "e9cb7588-fbd6-4624-a83d-3dd31aff67e1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD Student End of Unit Survey - Unit 1_2023",
         "script_level.level_keys": [
           "CSD Student End of Unit Survey - Unit 1_2023"
@@ -5182,6 +5208,39 @@
     }
   ],
   "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/csd1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2023/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
     {
       "name": "Aluminum Boats",
       "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
@@ -5286,7 +5345,7 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/16-FcZlbn-DXr_BcDncQwUJvwAy24mT4JOuxTQAHzDOE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DS3DtZOeqkkFPx25ujdJ_LB68Wxj_yNBWUquVAo1Tis/template/preview",
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",
@@ -5323,7 +5382,7 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/presentation/d/1YX99Zyb1-Mwgl9TiY5P2DEx9Wb4_xffJUDu05VxTh_I/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bXivMZwN5wWZxnmlaSO2M81twsZf_JgXBWWdrSccghE/template/preview",
       "key": "apps_with_storage_2",
       "properties": {
         "audience": "Teacher",
@@ -5394,8 +5453,63 @@
       }
     },
     {
+      "name": "CSD Guide to Assessment",
+      "url": "https://docs.google.com/document/d/1IO5XgPW_Apil_Uziq5hAMCBgilm8txZ3sp8atxiKiLU/view",
+      "key": "csd_guide_to_assessment_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_1"
+      }
+    },
+    {
+      "name": "CSD Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view",
+      "key": "csd_guide_to_curriculum_videos_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_1"
+      }
+    },
+    {
+      "name": "CSD Guide to Differentiation",
+      "url": "https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view",
+      "key": "csd_guide_to_differentiation_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_2"
+      }
+    },
+    {
+      "name": "CSD Guide to Teaching and Learning Strategies",
+      "url": "https://docs.google.com/document/d/1Cg5iTwERoX25Y2DdLNmrPCbVB2d9FPGfUMUvcnVoN8Q/view",
+      "key": "csd_guide_to_teaching_and_learning_strategies_1",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_1"
+      }
+    },
+    {
+      "name": "CSD Guide to Using Resources",
+      "url": "https://docs.google.com/document/d/1NYJMHZYnAZYNctehlQOImSstsu48sRGOMbi4It4ZjkI/view",
+      "key": "csd_guide_to_using_resources_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_2"
+      }
+    },
+    {
       "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qEiI3VfO04CKhzpucsXmcrTLcV3wHYCyvwsOdiSoI5k/template/preview",
       "key": "exploring_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5431,7 +5545,7 @@
     },
     {
       "name": "Exploring Problem Solving (Animals)",
-      "url": "https://docs.google.com/presentation/d/1QGTKTq86hJ8TLZl3mc4_WucYHE4sHkgSVp9Bif56Sxk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HrzXZUsvtHJjfU2XI5FOkDQCkkxzFJ1354F6iPG2hp4/template/preview",
       "key": "exploring_problem_solving_animals_",
       "properties": {
         "audience": "Teacher",
@@ -5443,7 +5557,7 @@
     },
     {
       "name": "Exploring Problem Solving (Games)",
-      "url": "https://docs.google.com/presentation/d/1u_-Gw3xJhfsOffpGtqyyKbqvjFNoLcAuozHh10enO0A/template/preview",
+      "url": "https://docs.google.com/presentation/d/11Qw-SNahzSYo-9zX4SQhOiRgvtQN6mL8zwFeaf2gTqk/template/preview",
       "key": "exploring_problem_solving_games_",
       "properties": {
         "audience": "Teacher",
@@ -5480,7 +5594,7 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/10ew9kAUGnO0gMSr6sW5sFLB0bYfjdwQgiX-cJyzPQ9w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uoMxf--EQrDqG_bmoqYWn6KraKCmWy9gC1LFOlz4OO8/template/preview",
       "key": "input_and_output_2",
       "properties": {
         "audience": "Teacher",
@@ -5492,7 +5606,7 @@
     },
     {
       "name": "Intro to Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1zpwDZmqxT8pW9ZxUBfQ3rZhWvjANQPbrz4XE18reP-8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1TuN5qOfjgSxNjZccb6o4sUZbfaXGOSDeUolDojrJ0pM/template/preview",
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5516,7 +5630,7 @@
     },
     {
       "name": "Intro to Problem Solving (Newspapers)",
-      "url": "https://docs.google.com/presentation/d/1ArHAwZQQ9ptcWZQgjQKbN8N3uRjFphIZvDRoiqPLEuI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1EY9Qy_ufSUgtdyfDdoEjDXfbepoW4o-66y5nkNDY_-0/template/preview",
       "key": "intro_to_problem_solving_newspapers_",
       "properties": {
         "audience": "Teacher",
@@ -5527,8 +5641,8 @@
       }
     },
     {
-      "name": "Intro to Problem Solving (Paper Towels)",
-      "url": "https://docs.google.com/presentation/d/13t_CP4Fx2s_h-PfJ2Wi4TA5ay_8IQHap4NO8Ds892cA/template/preview",
+      "name": "Intro to Problem Solving (Paper Tower)",
+      "url": "https://docs.google.com/presentation/d/1x9Zx8mdqlNkYnFcK0-uff_sv53v1_MWTHwpXdW6eJJo/template/preview",
       "key": "intro_to_problem_solving_paper_towels_",
       "properties": {
         "audience": "Teacher",
@@ -5540,7 +5654,7 @@
     },
     {
       "name": "Intro to Problem Solving (Spaghetti)",
-      "url": "https://docs.google.com/presentation/d/1v2LAJj8kTaRiuwCREkTpaoEWpw469czx3FaClScE2vQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GOd3_LgR4y4EeYqOVx6yjdIvx_mhJ4cJAMwu0NAkovA/template/preview",
       "key": "intro_to_problem_solving_spaghetti_",
       "properties": {
         "audience": "Teacher",
@@ -5613,7 +5727,7 @@
     },
     {
       "name": "Project - Propose an App",
-      "url": "https://docs.google.com/presentation/d/1wkcHClx2M7iHLvZa4yO0Mj9FuRxZgqA8WyxkFD5wP60/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dFjAAwty7BeGHTDB7X8VXyCmMJ9Fh5mEs_JNZwlf9XM/template/preview",
       "key": "project_-_propose_an_app",
       "properties": {
         "audience": "Teacher",
@@ -5625,7 +5739,7 @@
     },
     {
       "name": "Project Guide Exemplar",
-      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit",
+      "url": "https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit?usp=sharing",
       "key": "project_guide_exemplar",
       "properties": {
         "audience": "Verified Teacher",
@@ -5637,10 +5751,11 @@
     },
     {
       "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit",
+      "url": "https://docs.google.com/document/d/17C1pGuIk1FL84FjMvUIisYa6x_U8aKREcljfqnEm21c/edit?usp=sharing",
       "key": "sample_marked_rubrics",
       "properties": {
         "audience": "Verified Teacher",
+        "include_in_pdf": true,
         "type": "Exemplar"
       },
       "seeding_key": {
@@ -5737,13 +5852,23 @@
       }
     },
     {
-      "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/view",
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Problem Solving Process ",
+      "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
       "key": "the_problem_solving_process",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "download_url": "https://videos.code.org/levelbuilder/problemsolvingprocess-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process"
@@ -5751,7 +5876,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1vCSb1Q5LCJsoDf9xg2hI7rwKvVot0yX6oEAhT2UQHKY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ISxsRTRVG9D0BYkfRHYHWFHiP_HNYIvlzfkCULvxYnA/template/preview",
       "key": "the_problem_solving_process_1",
       "properties": {
         "audience": "Teacher",
@@ -5759,6 +5884,30 @@
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process_1"
+      }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1ttgLORbUtEEpWcGsygF0YKVFHpG0PEzfLyi52T8wFIo/view",
+      "key": "the_problem_solving_process_2",
+      "properties": {
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_2"
+      }
+    },
+    {
+      "name": "The Problem Solving Process",
+      "url": "https://docs.google.com/document/d/1KczAoklRXU1MemCJaah68E9-YtM4Qny00uZJE5f_Ly0/edit?usp=sharing",
+      "key": "the_problem_solving_process_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_5"
       }
     },
     {
@@ -5801,7 +5950,7 @@
     },
     {
       "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1v8ErjlG4MLpdwJ-paeJ1PJlUMY3nXL8RfoBK_DczJ-M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qc6_t0IdvXD_jSZ84gXvNA7LvLCr94WHKC6SKPtq2po/template/preview",
       "key": "what_is_a_computer_1",
       "properties": {
         "audience": "Teacher",
@@ -6141,6 +6290,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "The Problem Solving Process",
+        "resource.key": "the_problem_solving_process_5"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "What is a Computer?",
         "resource.key": "what_is_a_computer"
       }
@@ -6171,7 +6326,66 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_assessment_1",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_curriculum_videos_1",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_differentiation_2",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_teaching_and_learning_strategies_1",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_guide_to_using_resources_2",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd1-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "the_problem_solving_process_2",
+        "script.name": "csd1-2023"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -6860,6 +7074,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

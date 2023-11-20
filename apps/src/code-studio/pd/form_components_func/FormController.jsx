@@ -1,19 +1,22 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';
-import {Button, Alert, FormGroup} from 'react-bootstrap';
+import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {Pagination} from '@react-bootstrap/pagination';
 import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();
 
 const scrollToTop = () => {
   $('html, body').animate(
     {
-      scrollTop: 0
+      scrollTop: 0,
     },
     200
   );
@@ -49,7 +52,7 @@ const InvalidPagesSummary = ({pages, setPage}) => (
 
 InvalidPagesSummary.propTypes = {
   pages: PropTypes.arrayOf(PropTypes.number).isRequired,
-  setPage: PropTypes.func.isRequired
+  setPage: PropTypes.func.isRequired,
 };
 
 /**
@@ -79,7 +82,7 @@ const FormController = props => {
     submitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
     validateOnSubmitOnly,
-    warnOnExit
+    warnOnExit,
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
@@ -90,12 +93,15 @@ const FormController = props => {
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
     ...getInitialStored(sessionStorageKey, 'data'),
-    ...getInitialData()
+    ...getInitialData(),
   }));
+  const [regionalPartner] = useRegionalPartner(data);
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
   const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
+  const [showApplicationClosedMessage, setShowApplicationClosedMessage] =
+    useState(regionalPartner?.are_apps_closed);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
   const [hasUserChangedData, setHasUserChangedData] = useState(
@@ -108,18 +114,25 @@ const FormController = props => {
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
   const [triedToSubmit, setTriedToSubmit] = useState(false);
-  const [updatedApplicationId, setUpdatedApplicationId] = useState(
-    applicationId
-  );
-  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId
-  );
+  const [updatedApplicationId, setUpdatedApplicationId] =
+    useState(applicationId);
+  const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] =
+    useState(applicationId);
 
   // do this once on mount only
   useEffect(() => {
     onInitialize();
     onSetPageInternal(initialPage);
   }, [onInitialize, onSetPageInternal, initialPage]);
+
+  // on matching to an RP with apps closed
+  useEffect(() => {
+    if (regionalPartner?.are_apps_closed) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    }
+  }, [regionalPartner]);
 
   useEffect(() => {
     if (
@@ -134,6 +147,7 @@ const FormController = props => {
     }
   }, [autoComputedFields, data, savedData]);
 
+  // on exiting application with unsaved data
   useEffect(() => {
     const showWarningOnExit =
       warnOnExit && !submitting && !saving && hasUserChangedData;
@@ -170,7 +184,7 @@ const FormController = props => {
     errors.length,
     previousErrors.length,
     pageComponents.length,
-    pageHasError
+    pageHasError,
   ]);
 
   // on page changed
@@ -214,7 +228,7 @@ const FormController = props => {
       }
       setData({
         ...data,
-        ...pageData
+        ...pageData,
       });
 
       const pageRequiredFields = pageFields.filter(f =>
@@ -296,9 +310,9 @@ const FormController = props => {
         const mergedData = {
           ...{
             currentPage: currentPage,
-            data: data
+            data: data,
           },
-          ...newState
+          ...newState,
         };
         sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
       }
@@ -345,7 +359,7 @@ const FormController = props => {
     return {
       form_data: formData,
       isSaving: isSaving,
-      ...serializeAdditionalData()
+      ...serializeAdditionalData(),
     };
   };
 
@@ -375,7 +389,7 @@ const FormController = props => {
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(data, isSaving))
+        data: JSON.stringify(serializeFormData(data, isSaving)),
       });
 
     return updatedApplicationId
@@ -414,7 +428,11 @@ const FormController = props => {
    */
   const handleSubmit = event => {
     event.preventDefault();
-    if (validateOnSubmitOnly) {
+    if (regionalPartner?.are_apps_closed) {
+      setShowApplicationClosedMessage(true);
+      scrollToTop();
+      return;
+    } else if (validateOnSubmitOnly) {
       setTriedToSubmit(true);
       let invalidPages = validateForm();
 
@@ -437,6 +455,19 @@ const FormController = props => {
     const handleSuccessfulSubmit = data => {
       sessionStorage.removeItem(sessionStorageKey);
       onSuccessfulSubmit(data);
+
+      // Log application status change upon submission for Teacher Applications
+      if (window.location.href.includes('teacher')) {
+        const rp_requires_admin_approval =
+          regionalPartner.applications_principal_approval ===
+          'all_teachers_required';
+        analyticsReporter.sendEvent(EVENTS.APP_STATUS_CHANGE_EVENT, {
+          'application id': data.id,
+          'application status': rp_requires_admin_approval
+            ? 'awaiting_admin_approval'
+            : 'unreviewed',
+        });
+      }
     };
 
     makeRequest(false)
@@ -504,7 +535,7 @@ const FormController = props => {
       onChange: handleChange,
       errors: errors,
       errorMessages: errorMessages,
-      data: data
+      data: data,
     };
   }, [
     currentPage,
@@ -513,7 +544,7 @@ const FormController = props => {
     errorMessages,
     data,
     getAdditionalPageProps,
-    handleChange
+    handleChange,
   ]);
 
   /**
@@ -555,6 +586,13 @@ const FormController = props => {
       const currentPageValid =
         validateOnSubmitOnly || validateCurrentPageRequiredFields();
       if (currentPageValid) {
+        if (currentPage !== newPage) {
+          analyticsReporter.sendEvent(EVENTS.PAGE_CHANGED_EVENT, {
+            'current application page': currentPage + 1,
+            'new application page': newPage + 1,
+          });
+        }
+
         setCurrentPage(newPage);
 
         saveToSessionStorage({currentPage: newPage});
@@ -564,7 +602,8 @@ const FormController = props => {
       pageComponents,
       validateOnSubmitOnly,
       saveToSessionStorage,
-      validateCurrentPageRequiredFields
+      currentPage,
+      validateCurrentPageRequiredFields,
     ]
   );
 
@@ -574,6 +613,24 @@ const FormController = props => {
   const shouldShowSubmit = () => {
     return currentPage === pageComponents.length - 1;
   };
+
+  /**
+   * @returns {Element|false}
+   */
+  const renderApplicationClosedMessage = () =>
+    showApplicationClosedMessage && (
+      <Alert
+        key={3}
+        onDismiss={() => setShowApplicationClosedMessage(false)}
+        bsStyle="danger"
+      >
+        <p>
+          Applications are closed for this region. Join{' '}
+          <a href="https://code.org/about/hear-from-us">our email list</a> to
+          find out when applications open next year.
+        </p>
+      </Alert>
+    );
 
   /**
    * @returns {Element|false}
@@ -682,6 +739,7 @@ const FormController = props => {
     <form onSubmit={handleSubmit}>
       {renderErrorFeedback()}
       {renderDataWasLoadedMessage()}
+      {renderApplicationClosedMessage()}
       {renderMessageOnSave()}
       {renderCurrentPage()}
       {renderControlButtons()}
@@ -693,16 +751,16 @@ const FormController = props => {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0px 10px 5px'
+    margin: '0px 10px 5px',
   },
   saveButton: {
     marginLeft: '10px',
-    marginRight: '10px'
+    marginRight: '10px',
   },
   spinner: {
     verticalAlign: 'top',
-    marginTop: '5px'
-  }
+    marginTop: '5px',
+  },
 };
 
 FormController.propTypes = {
@@ -724,7 +782,7 @@ FormController.propTypes = {
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,
-  warnOnExit: PropTypes.bool
+  warnOnExit: PropTypes.bool,
 };
 
 FormController.defaultProps = {
@@ -741,7 +799,7 @@ FormController.defaultProps = {
   sessionStorageKey: null,
   submitButtonText: defaultSubmitButtonText,
   validateOnSubmitOnly: false,
-  warnOnExit: false
+  warnOnExit: false,
 };
 
 export default FormController;

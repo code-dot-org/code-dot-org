@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "a3109564-513f-47c8-bdf3-d69a19f5149e",
+          "notice": "Extension Lessons with the micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,13 +27,18 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "supported_locales": [
+        "fa-AF",
+        "fa-IR",
+        "sq-AL"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-06-29 14:54:46 UTC",
+    "serialized_at": "2023-11-01 21:17:17 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4181,6 +4198,18 @@
         "activity_section.key": "c3102dcc-a35a-489f-8461-06e0aa3d5125",
         "lesson_activity.key": "6683243e-d006-4ef6-9f65-a53b80a1ecf6"
       }
+    },
+    {
+      "key": "d7eee78e-d5fd-418e-9dce-3cb0f1be8122",
+      "position": 2,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course F, click [here](http://code.org/maker/csf-microbit) to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-F-v3.pdf) cover the following topics: Meet your micro:bit, Variables, Data, Events, Simulation, Loops, and Conditionals.",
+        "name": "Extension Lessons with the micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7eee78e-d5fd-418e-9dce-3cb0f1be8122",
+        "lesson_activity.key": "6683243e-d006-4ef6-9f65-a53b80a1ecf6"
+      }
     }
   ],
   "script_levels": [
@@ -8055,6 +8084,18 @@
       }
     },
     {
+      "name": "Extension Lessons with the micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "End of Course Project Guide",
       "url": "https://docs.google.com/document/d/1PWOfzIXpcN3tF32T28fVAMFykNePli7IEBHBK9u7NXQ/edit",
       "key": "final_project_design_1",
@@ -8644,6 +8685,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursef-2022"
       }
     },
@@ -9820,6 +9867,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

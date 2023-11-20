@@ -1,8 +1,8 @@
 {
   "absolute": "absolutua",
+  "agentDiamondPathCongrats": "Zorionak, diamante bidea aurkitu duzu! Orain arte {count, plural, beste {1 diamante} other  {# diamante}} bildu dituzu!",
   "agentGenericFailureMessage": "Jarraitu kodetzen! Gogoratu Agentea erabiltzen laguntzeko.",
   "agentTooFewBlocksFailureMessage": "Saiatu bloke bakarra gehitzen aldi berean Agentea leku egokira eramateko.",
-  "agentDiamondPathCongrats": "Zorionak, diamante bidea aurkitu duzu! Orain arte {count, plural, beste {1 diamante} other  {# diamante}} bildu dituzu!",
   "blockActionAdd": "gehitu",
   "blockActionAttack": "eraso egin",
   "blockActionClone": "klonatu blokeak",

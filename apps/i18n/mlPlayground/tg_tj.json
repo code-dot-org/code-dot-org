@@ -1,0 +1,41 @@
+{
+  "datasets": {
+    "billionaires": {
+      "fields": {
+        "Gender": {
+          "id": "Ҷинс"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Кишвар"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Кишвар"
+        },
+        "Name": {
+          "id": "Ном"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Country": {
+          "id": "Кишвар"
+        },
+        "Gender": {
+          "description": "Ҷинс",
+          "id": "Ҷинс"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "Нодуруст",
+  "navigateBack": "Бозгашт"
+}

@@ -229,6 +229,6 @@ module.exports = {
                 )}</value>`
             )
         )
-    )
-  }
+    ),
+  },
 };

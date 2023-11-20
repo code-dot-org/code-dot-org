@@ -1,0 +1,365 @@
+{
+  "columnDetailsMaximumValue": "최대",
+  "columnDetailsMinimumValue": "최소",
+  "columnInspectorDescription": "설명",
+  "correctAnswer": "정답",
+  "dataCardLastUpdated": "최종 수정일",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Height": {
+          "id": "높이"
+        },
+        "Length": {
+          "id": "시간"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "달"
+        },
+        "index": {
+          "id": "인덱스"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "나이"
+        },
+        "Gender": {
+          "id": "성별"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "바나나"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "나이"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "색깔"
+        },
+        "food": {
+          "id": "음식"
+        },
+        "music": {
+          "id": "음악"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "나이"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "나이"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "인터넷"
+        },
+        "Writing": {
+          "id": "쓰기"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "국가"
+        },
+        "Dance": {
+          "id": "댄스"
+        },
+        "Music": {
+          "id": "음악"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "나이"
+        }
+      },
+      "name": "의료 우선순위"
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "국가"
+        },
+        "Name": {
+          "id": "이름"
+        },
+        "Score": {
+          "id": "점수"
+        },
+        "Star": {
+          "id": "별"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "치즈"
+        },
+        "chicken": {
+          "id": "닭"
+        },
+        "lamb": {
+          "id": "새끼 양"
+        },
+        "onion": {
+          "id": "양파"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "범주"
+        },
+        "Description": {
+          "id": "설명"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "아보카도"
+        },
+        "ginger": {
+          "id": "진저"
+        },
+        "onion": {
+          "id": "양파"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "베이컨"
+        },
+        "cheese": {
+          "id": "치즈"
+        },
+        "lobster": {
+          "id": "랍스터"
+        },
+        "meat": {
+          "id": "고기"
+        },
+        "mushrooms": {
+          "id": "버섯들"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "라임"
+        },
+        "strawberry": {
+          "id": "딸기"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "악어"
+        },
+        "elephant": {
+          "id": "코끼리"
+        },
+        "people": {
+          "id": "사람들"
+        },
+        "rhino": {
+          "id": "코뿔소"
+        },
+        "trees": {
+          "id": "나무"
+        }
+      },
+      "name": "사파리"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "아보카도"
+        },
+        "beans": {
+          "id": "콩"
+        },
+        "cheese": {
+          "id": "치즈"
+        },
+        "chicken": {
+          "id": "닭"
+        },
+        "fruit": {
+          "id": "과일"
+        },
+        "tomato": {
+          "id": "토마토"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "아보카도"
+        },
+        "beans": {
+          "id": "콩"
+        },
+        "corn": {
+          "id": "옥수수"
+        },
+        "lime": {
+          "id": "라임"
+        },
+        "onion": {
+          "id": "양파"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "변"
+        },
+        "size": {
+          "id": "크기"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "변"
+        },
+        "size": {
+          "id": "크기"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "일"
+        },
+        "shoe": {
+          "id": "신발"
+        },
+        "weather": {
+          "id": "날씨"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "예술가"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "나이"
+        },
+        "health": {
+          "id": "건강"
+        },
+        "school": {
+          "id": "학교"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "업적"
+        },
+        "Age": {
+          "description": "나이",
+          "id": "나이"
+        },
+        "Country": {
+          "id": "국가"
+        },
+        "Dance": {
+          "id": "댄스"
+        },
+        "Gender": {
+          "description": "성별",
+          "id": "성별"
+        },
+        "Height": {
+          "description": "높이",
+          "id": "높이"
+        },
+        "Internet": {
+          "id": "인터넷"
+        },
+        "Music": {
+          "id": "음악"
+        },
+        "Writing": {
+          "id": "쓰기"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "아쿠아틱"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "틀림",
+  "modelCardFeatures": "특징",
+  "modelCardLabel": "라벨",
+  "modelCardLimitations": "제한 및 경고",
+  "modelCardPossibleValuesMaximum": "최대",
+  "modelCardPossibleValuesMinimum": "최소",
+  "navigateBack": "뒤로",
+  "navigateDone": "마침",
+  "navigateForward": "계속",
+  "potentialMisusesLabel": "제한 및 경고",
+  "predictButton": "예측",
+  "resultsTableFeatureHeader": "특징",
+  "saveProgress": "저장",
+  "trainModelHeading": "교육",
+  "tryAgain": "다시 시도"
+}

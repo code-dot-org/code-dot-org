@@ -20,16 +20,16 @@ es:
   errors:
     messages:
       not_saved: 'Corrige los siguientes errores:'
-      too_young: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes.'
-      teacher_must_accept_terms: 'Este contenido tiene restricciones de edad establecidas y no está disponible para estudiantes jóvenes. Pídele a tu docente que acepte los Términos de Servicio actualizados para darte acceso a este contenido. Para hacerlo, puede iniciar sesión en Code Studio y hacer clic en el botón "Revisar términos actualizados" cerca de la parte superior de la página de inicio de Code Studio.'
-      pair_programmer: 'En este momento, estás programando de a pares con un estudiante que no tiene acceso a este contenido. Para acceder a este contenido, detén la programación en pareja e inténtalo nuevamente.'
+      too_young: 'Este contenido tiene restricciones de edad y no está disponible para los alumnos más jóvenes.'
+      teacher_must_accept_terms: 'Este contenido tiene restricciones de edad y no está disponible para los alumnos más jóvenes. Pide a tu profesor que acepte las Condiciones del servicio actualizadas para poder acceder a este contenido. Para ello, inicia sesión en Code Studio y pulsa el botón "Revisar las condiciones actualizadas" situado en la parte superior de la página de inicio de Code Studio.'
+      pair_programmer: 'En este momento estás programando por parejas con un alumno que no tiene acceso a este contenido. Para acceder a este contenido, deja de programar por parejas e inténtalo de nuevo.'
   activerecord:
     errors:
       models:
         user:
           attributes:
             reset_password_token:
-              invalid: "no es válido. Ten en cuenta que cada enlace sólo se puede utilizar una vez para restablecer la contraseña y sólo funcionará el enlace enviado más recientemente."
+              invalid: "no es válido. Ten en cuenta que cada enlace sólo puede utilizarse una vez para restablecer tu contraseña, y sólo funcionará el enlace enviado más recientemente."
       messages:
         blank: "es requerido"
         blank_plural: "son obligatorios"
@@ -52,7 +52,9 @@ es:
         age: 'Edad'
         gender: 'Sexo'
         edit_header: 'Editar información de la cuenta'
+        ai_settings_header: 'Los ajustes de IA'
         finish_sign_up_header: 'Termina de crear tu cuenta'
+        finish_sign_up_header_error: 'Corrige los siguientes errores:'
         finish_sign_up_subheader: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa la siguiente información para terminar de crear tu cuenta en Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,6 +62,9 @@ es:
         reset_password_token: "El enlace para restablecer la contraseña que has seguido"
         error:
           future: No puede ser en el futuro
+        user_type: 'Tipo de cuenta'
+        us_state: 'Estado/provincia'
+        ai_rubrics_disabled: 'Desactivar la función de rúbrica de IA'
   beta: "beta"
   hello: "Hola mundo"
   welcome_back: "Bienvenido, %{name}"
@@ -69,6 +74,7 @@ es:
   unsubmit: NO enviado
   previous_page: Página anterior
   next_page: Página siguiente
+  next_level: Siguiente nivel
   next_resource: Siguiente recurso
   done_with_module: Hecho con este Módulo de Aprendizaje
   cancel: "Cancelar"
@@ -145,7 +151,7 @@ es:
     overview: 'Crea una cuenta para ver tu progreso o administrar tu aula. <a href="/">Puedes explorar varias etapas y desafíos</a> sin una cuenta, pero deberás registrarte para guardar tu progreso y tus proyectos.'
     overview_markdown: 'Crea una cuenta para ver tu progreso o administrar tu aula. [Puedes explorar varias etapas y desafíos](/) sin una cuenta, pero deberás registrarte para guardar tu progreso y tus proyectos.'
     hoc_already_signed_up_heading: 'Empezar sin iniciar sesión'
-    hoc_already_signed_up_content: '¡Te has registrado para enseñar en la Hora del Código! Tú y tus estudiantes no necesitan iniciar sesión en Code Studio para participar en este evento. Para comenzar, <a href="%{learn_url}">selecciona un tutorial</a> para tus estudiantes y comparte el enlace con ellos.<br/><br/>Si te ha gustado la Hora del Código y quieres seguir avanzando, puedes establecer una contraseña y crear una cuenta de Code Studio debajo para inscribir a tus estudiantes en cualquiera de nuestros <a href="%{educate_url}">cursos largos</a>.'
+    hoc_already_signed_up_content: '¡Te has registrado para enseñar una Hora del Código! No es necesario que tú y tus alumnos os registréis en Code Studio para participar en este evento. Para empezar, <a href="%{learn_url}">elige un tutorial</a> para tu clase y comparte el enlace con ellos.<br/><br/>Si te ha gustado la Hora del Código y quieres ir más allá, puedes introducir una contraseña y crear una cuenta de Code Studio a continuación para inscribir a tus alumnos en cualquiera de nuestros <a href="%{educate_url}">cursos más largos</a>.'
     hoc_already_signed_up_content_post_hoc: 'Gracias por apoyar la Hora del Código. Para ingresar en Code Studio, tienes que establecer una contraseña para tu cuenta. Así podrás guardar tu progreso y administrar tu clase. Podrás asignar cursos a estudiantes y ver su progreso. <a href="%{studio_url}">También puedes continuar con los demás niveles y desafíos</a> sin crear una cuenta.'
     hoc_already_signed_up_content_post_hoc_markdown: 'Gracias por apoyar la Hora del Código. Para ingresar en Code Studio, tienes que establecer una contraseña para tu cuenta. Así podrás guardar tu progreso y administrar tu clase. Podrás asignar cursos a estudiantes y ver su progreso. [También puedes continuar con los demás niveles y desafíos](%{studio_url}) sin crear una cuenta.'
     teacher_educator_guide: 'Consulta la Guía del educador'
@@ -172,7 +178,6 @@ es:
     data_collection_us: "Entiendo que Code.org es un sitio web sin fines de lucro con sede en los Estados Unidos y que las leyes que rigen la recopilación de datos en los Estados Unidos pueden diferir de las leyes de mi país."
     visit_privacy: 'Consulte la [política de privacidad](%{privacy_url}) de Code.org para obtener más información.'
     student_terms_markdown: "Las direcciones de correo electrónico no se almacenan de forma que nos permitan ponernos en contacto con los estudiantes. Los estudiantes nunca recibirán correos electrónicos de Code.org, excepto en caso de que necesiten recuperar la contraseña. Consulta nuestra [política de privacidad](http://code.org/privacy) para obtener más información."
-    additional_information: "Necesitamos alguna información adicional para continuar con tu registro."
     user_type_button: "Actualizar el tipo de cuenta"
     user_type_label: "Tipo de cuenta"
     user_type_student: "estudiante"
@@ -189,7 +194,7 @@ es:
     accept_terms: "Debes estar de acuerdo para crear una cuenta."
     error: "Ocurrió un error."
     email_preference_question: "¿Podemos enviarte actualizaciones de nuestros cursos, oportunidades en tu zona u otras noticias sobre ciencias de la computación por correo electrónico? (aproximadamente una vez al mes)"
-    email_preference_privacy: "(Vea nuestra politica de privacidad)"
+    email_preference_privacy: "(Consulta nuestra política de privacidad)"
     email_preference_yes: "Sí"
     email_preference_no: "No"
     email_preference_required: "Debes especificar una preferencia de correo electrónico."
@@ -200,6 +205,9 @@ es:
     parent_account_checkbox: "Soy padre o tutor registrándose en lugar de mi hijo"
     parent_account_email_progress_permission: "¿Podemos enviarle emails con para contarle sobre el rendimiento y los proyectos de su hijo? Tambien mandaremos informacion sobre los cursos de ciencias computacionales [(Mira nuestra política de privacidad)](%{privacy_policy_url})"
     parent_account_email_label: "Correo electrónico del padre o tutor"
+    us_state: 'Estado/provincia'
+    us_state_dropdown_options:
+      other: "Vivo en un lugar que no aparece aquí"
   school_info:
     title: 'Información de la escuela (opcional)'
     school_country: 'País en el que está la escuela'
@@ -262,9 +270,11 @@ es:
   parent_mailer:
     student_associated_subject: 'Información de inicio de sesión para Code.org'
     parent_email_added_subject: '¡Bienvenido a Code.org!'
+    parent_permission_request_subject: "Se necesita el consentimiento de los padres para que su hijo tenga acceso a Code.org"
   teacher_mailer:
     new_teacher_subject: '¡Bienvenido a Code.org!'
     delete_teacher_subject: 'Aviso de Code.org: tu cuenta ha sido eliminada'
+    verified_teacher_subject: 'Verificación de Profesores de Code.org - Satisfactorio'
   section:
     your_section:
       one: 'Tu sección:'
@@ -372,6 +382,7 @@ es:
       help_us: "Ayudenos"
       teach: "Enseñar"
       about: "Acerca de"
+      incubator: "Incubadora"
       legal: "Privacidad y Legalidad"
       legal_privacy: "Política de Privacidad"
       legal_cookie_notice: "Aviso de Cookies"
@@ -604,6 +615,7 @@ es:
     store: 'Tienda'
     cookie_notice: 'Aviso de Cookies'
     view_code: 'Ver Código'
+    locale_select: "Seleccionar idioma"
   reference_area:
     title: '¿Necesitas ayuda?'
     subtitle: 'Ver estos vídeos y sugerencias'
@@ -628,6 +640,8 @@ es:
       applab_unsupported_tablet: "El Laboratorio de aplicaciones funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
       gamelab_unsupported_tablet: "El Laboratorio de juegos funciona mejor en una computadora de escritorio o portátil con un ratón o un teclado. Puede que experimentes problemas si usas esta herramienta en tu dispositivo actual."
       weblab_unsupported_locale_storage: "Puedes experimentar problemas con el Laboratorio web en el modo de navegación privada. Por favor, vuelve a cargar el proyecto en modo normal. Disculpa las molestias."
+  deprecation:
+    algebra_lab: "El plan de estudios y los contenidos de Informática en Álgebra están quedando obsoletos.  En los próximos meses, este laboratorio dejará de estar disponible.  En su lugar, consulta [Bootstrap: Algebra](%{bootstrap_algebra_url}). [Más información](%{cs_algebra_url})."
   slow_loading: 'Esto está tardando más tiempo de lo habitual...'
   try_reloading: 'Intenta volver a cargar la página'
   next_stage: '¡Acabado! Sigue a la siguiente etapa'
@@ -666,29 +680,25 @@ es:
       body_short: "Diseña una aplicación, programa con bloques o JavaScript para que funcione, y luego comparte tu aplicación en cuestión de segundos."
       audience: 'Desde 13 años'
       cta: 'Aprende cómo'
-    dance:
-      title: 'Fiesta de Baile'
+      image_alt: 'Un conejito morado con una mochila propulsada por cohetes.'
+    applab-intro:
+      image_alt: 'Una mano golpea el centro de la pantalla de un smartphone. De la pantalla salen luces y destellos.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve y Alex de Minecraft te están mirando.'
+    artist:
+      image_alt: 'La caricatura de una persona sosteniendo un enorme lápiz y dibujando un triángulo.'
+    conditionals:
+      image_alt: 'Dos manos barajando un mazo de cartas.'
     dance-2019:
       title: 'Fiesta de Baile'
-    hello-world:
-      title: 'Hola Mundo'
-      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
-    poem-art:
-      title: 'Arte del Poema'
-      body: '¡Exprésate! Utiliza el código para crear poemas animados.'
-    hoc:
-      title: 'Laberinto clásico'
-      body: 'Prueba los fundamentos de la Ciencia de la Computación. Millones lo han intentado.'
+    dance:
+      title: 'Fiesta de Baile'
     flappy:
       title: 'Código Flappy'
       body: '¿Quieres crear tu propio juego en menos de 10 minutos? ¡Prueba nuestro tutorial de Código Flappy!'
-    20-hour:
-      title: 'Curso acelerado'
-      body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
-      body_short: 'Aprende informática básica con una versión acelerada de los cursos 2 a 4.'
-    hoc2014:
-      try_new_tutorial: 'Prueba nuestro nuevo tutorial de la Hora de Code en beta'
-      try_frozen: 'Artista con Anna y Elsa de "Frozen"'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galería"
       body: "Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios"
@@ -697,18 +707,21 @@ es:
       body: "El Laboratorio de juegos es un ambiente de programación en el que puedes crear animaciones y juegos simples con objetos y personajes que interactúan entre sí."
       audience: "Desde 13 años"
       cta: "Aprende cómo"
+    hello-world:
+      title: 'Hola Mundo'
+      body: 'Elige entre cuatro temas divertidos para codificar personajes interactivos en un mundo creado por ti.'
+    hero:
+      title: "Minecraft"
+      body: "¡Minecraft vuelve a la Hora del Código con una nueva actividad! Viaja a través de Minecraft con código."
     hoc-encryption:
       title: "Encriptación Simple"
       body: "Los estudiantes aprenderán técnicas para crear y revelar mensajes cifrados."
-    weblab:
-      title: "Laboratorio web (beta)"
-      body: "El Laboratorio web es un ambiente de programación en el que puedes crear páginas web simples mediante HTML y CSS. Diseña tus páginas web y comparte tu sitio en cuestión de segundos."
-      audience: "Desde 13 años"
-      cta: "Aprende cómo"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Laberinto clásico'
+      body: 'Prueba los fundamentos de la Ciencia de la Computación. Millones lo han intentado.'
+    hoc2014:
+      try_new_tutorial: 'Prueba nuestro nuevo tutorial de la Hora de Code en beta'
+      try_frozen: 'Artista con Anna y Elsa de "Frozen"'
     infinity:
       title: "Laboratorio de Juegos Disney Infinity"
       body: "Utiliza el laboratorio de juegos para crear una historia o un juego protagonizado por personajes de Disney Infinity."
@@ -718,30 +731,39 @@ es:
     minecraft2016:
       title: "Minecraft"
       body: "Construye tu propia versión de Minecraft. Crea tus propias versiones de las gallinas, ovejas, Creepers, zombis y más."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "¡Minecraft vuelve a la Hora del Código con una nueva actividad! Viaja a través de Minecraft con código."
+    poem-art:
+      title: 'Arte del Poema'
+      body: '¡Exprésate! Utiliza el código para crear poemas animados.'
     sports:
       title: "Deportes"
       body: "Elige entre un partido de baloncesto o una combinación de deportes."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Compresión de Texto"
-      body: "En esta lección, los estudiantes usarán el Widget de Comprensión de Textos para comprimir texto mediante el reemplazo de patrones con símbolos."
-    unplugged:
-      title: "Lecciones sin conexión"
-      audience: "Desde 4 años"
-      body: "Hemos recopilado una lista de lecciones sin conexión para que las utilices en tu aula. Ahora puedes enseñar los fundamentos de la informática, tanto si tienes ordenadores en tu aula como si no. Prueba a utilizar estas lecciones como curso independiente o como lecciones complementarias para cualquier curso de informática."
-      body_short: "Si no tienes ordenadores, prueba estas lecciones sin conexión en tu aula."
-    unplugged_conditionals:
-      title: "Condicionales"
-      body: "Aprende los algoritmos y sentencias condicionales en esta actividad \"sin conexión\" utilizando una baraja de cartas."
+      body: "En esta lección, los alumnos utilizarán el Widget de Compresión de Texto para comprimir texto sustituyendo patrones por símbolos."
+    weblab:
+      title: "Laboratorio web (beta)"
+      body: "El Laboratorio web es un ambiente de programación en el que puedes crear páginas web simples mediante HTML y CSS. Diseña tus páginas web y comparte tu sitio en cuestión de segundos."
+      audience: "Desde 13 años"
+      cta: "Aprende cómo"
     widgets:
       title: "Widgets"
       body: "Los estudiantes pueden explorar conceptos de nuestro curso de Principios de Ciencias de la Computación de manera práctica mediante estas herramientas digitales. Usa los widgets por tu cuenta o crea una lección con un concepto único para tu clase."
       audience: "Desde 14 años"
       cta: "Aprende cómo"
+    unplugged_conditionals:
+      title: "Condicionales"
+      body: "Aprende los algoritmos y sentencias condicionales en esta actividad \"sin conexión\" utilizando una baraja de cartas."
+    unplugged:
+      title: "Lecciones sin conexión"
+      audience: "Desde 4 años"
+      body: "Hemos recopilado una lista de lecciones sin conexión para que las utilices en tu aula. Ahora puedes enseñar los fundamentos de la informática, tanto si tienes ordenadores en tu aula como si no. Prueba a utilizar estas lecciones como curso independiente o como lecciones complementarias para cualquier curso de informática."
+      body_short: "Si no tienes ordenadores, prueba estas lecciones sin conexión en tu aula."
+    20-hour:
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas introduce el núcleo de la informática y conceptos de programación. El curso está diseñado para su uso en aulas para los grados K-8, pero es divertido aprender en todas las edades.  '
+      body_short: 'Aprende informática básica con una versión acelerada de los cursos 2 a 4.'
   landing:
     prerelease_tutorial: "Este tutorial es una versión **beta**. Es objeto de revisión a medida que se reciben comentarios y se hacen mejoras."
     report_bug: "Informar sobre un error"
@@ -941,8 +963,8 @@ es:
     instructions_headline: '¿No tienes Internet?'
     instructions: 'Instrucciones para docentes: si tu conexión a Internet no es buena, puedes descargar estos tutoriales de la Hora del Código y consultarlos sin conexión. Elige tu idioma y plataforma, descarga el tutorial e instálalo en todas las computadoras de tu aula. También puedes utilizar una unidad USB para descargarlo una sola vez e instalarlo en todos los equipos. Ten en cuenta que los estudiantes no podrán iniciar sesión en Code Studio, guardar su progreso o imprimir certificados. Los docentes pueden imprimir los certificados por adelantado [here](%{url}).'
     minecraft_name: 'Hora del Código de Minecraft'
-    starwars_blocks_name: 'Star Wars: cómo crear una galaxia con el código (bloques)'
-    starwars_javascript_name: 'Star Wars: cómo crear una galaxia con el código (JavaScript)'
+    starwars_blocks_name: 'Star Wars: Construyendo una galaxia con código (Bloques)'
+    starwars_javascript_name: 'Star Wars: Construyendo una galaxia con código (JavaScript)'
     download_message: 'Descargar %{app_name} para su uso sin conexión (136 MB)'
     download_in_Albanian: 'Descargar en albanés:'
     download_in_Arabic: 'Descargar en árabe:'
@@ -1067,7 +1089,7 @@ es:
         math: 'Matemáticas'
         science: 'Ciencia'
         history: 'Historia / Estudios Sociales'
-        la: 'Linguistica'
+        la: 'Lengua y Literatura'
         efl: 'Inglés como lengua extranjera'
         music: 'Música'
         art: 'Arte'
@@ -1100,6 +1122,7 @@ es:
         csf_express: 'Fundamentos de Informática (Pre-Exprés o Exprés)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
+        other: 'Otros'
         not_applicable: "No aplicable"
       email_opt_in:
         opt_in_yes: 'Sí'
@@ -1121,6 +1144,13 @@ es:
     no_teacher_email:
       body_markdown: 'Tu cuenta no tiene una dirección de correo electrónico. [Visita la configuración de tu cuenta](%{user_registration}) para agregar tu dirección de correo electrónico antes de completar este formulario.'
   courses_category: 'Cursos completos'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Hola Mundo'
+      sports: 'Deportes'
+      csf: 'Fundamentos de Ciencias de la Computación'
+      csc: 'Conexiones con la Informática'
   cookie_banner:
     message: 'Si continúas navegando nuestro sitio web o haces clic en "Acepto", aceptas que se guarden las cookies en tu computadora o dispositivo.'
     more_information: "Mira la política de privacidad de Code.org."
@@ -1158,4 +1188,8 @@ es:
       forbidden: "El usuario no puede actualizar el estado bloqueable del estudiante"
   reset_predict_progress_button: "Borrar respuesta"
   pixelation:
+    raw_format: "Formato sin procesar"
+    readable_format: "Formato legible"
+    save_image: "Guardar imagen"
+    actual_size: "Tamaño real"
     binary: "Binario"

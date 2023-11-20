@@ -45,16 +45,16 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
-    marginTop: 20
+    marginTop: 20,
   },
   card: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   icon: {
     fontSize: 40,
     float: 'right',
-    lineHeight: '70px'
-  }
+    lineHeight: '70px',
+  },
 };
 
 export default YourSchoolResources;

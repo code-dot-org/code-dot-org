@@ -2,46 +2,215 @@
   "se-FI": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "categories": {
-            "sprites": {
-              "name": "Sprite:at"
-            },
-            "groups": {
-              "name": "Joavkkut"
-            }
-          }
-        },
         "applab": {
-          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit.",
           "categories": {
             "advanced": {
               "name": "Avanserta"
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "objeakta"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "objeakta"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "objeakta"
+                    }
+                  }
+                }
+              }
+            },
+            "ui_controls": {
+              "expressions": {
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "description": "App Lab lea programmerenbiras gos sáhtát ráhkadit eaŋkilis app:aid. Ráhkat app:a, koda blohkaiguin dahje JavaScript:ain oažžut dán doaibmat, ja de juoge app:a jođánit."
+        },
+        "gamelab": {
+          "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Násti"
+                    }
+                  }
+                }
+              }
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Čáhppes ja Vilges"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Ráhkat Musihka"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "name": "Joavkkut"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirála"
+                    }
+                  }
+                }
+              },
+              "name": "Sprite:at"
             }
           }
         },
         "spritelab": {
-          "name": "Sprite-lab",
           "categories": {
-            "sprites": {
-              "name": "Sprite:at"
-            },
-            "world": {
-              "name": "Máilbmi"
-            },
-            "location": {
-              "name": "Báikkit"
-            },
-            "events": {
-              "name": "Dáhpáhusaid"
-            },
             "behaviors": {
               "name": "Láhttemat"
             },
             "comments": {
               "name": "Kommentárat"
+            },
+            "events": {
+              "name": "Dáhpáhusaid"
+            },
+            "location": {
+              "name": "Báikkit"
+            },
+            "sprites": {
+              "name": "Sprite:at"
+            },
+            "world": {
+              "name": "Máilbmi"
             }
-          }
+          },
+          "name": "Sprite-lab"
         }
       }
     }

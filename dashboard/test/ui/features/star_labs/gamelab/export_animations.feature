@@ -1,7 +1,8 @@
 @as_student
 Feature: Game Lab Export
 
-@no_mobile
+@no_mobile @no_safari
+# Safari 14 on SauceLabs is not configured to allow downloads.
 Scenario: Export library animation
   Given I start a new Game Lab project
   And I switch to the animation tab

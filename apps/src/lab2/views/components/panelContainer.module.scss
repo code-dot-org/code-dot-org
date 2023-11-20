@@ -1,0 +1,48 @@
+@import 'color.scss';
+
+// Constants
+$default-spacing: 2px;
+
+.panelContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+%panel-container-header {
+  min-height: 30px;
+  margin-bottom: $default-spacing;
+  position: relative;
+}
+
+.panelContainerHeader-dark {
+  @extend %panel-container-header;
+  background-color: $neutral_dark80;
+}
+
+.panelContainerHeader-light {
+  @extend %panel-container-header;
+  background-color: $neutral_dark;
+}
+
+.panelContainerHeaderItem {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &Text {
+    color: $neutral_light;
+    width: 100%;
+    text-align: center;
+  }
+
+  &Right {
+    right: 4px;
+  }
+
+  &Left {
+    left: 4px;
+  }
+}

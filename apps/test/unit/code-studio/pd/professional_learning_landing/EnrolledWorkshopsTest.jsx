@@ -11,11 +11,11 @@ describe('EnrolledWorkshops', () => {
   const workshops = [
     serializedWorkshopFactory.build({
       pre_workshop_survey_url: 'code.org/pre_survey_url',
-      workshop_starting_date: '2020-01-17T00:44:05.000Z'
+      workshop_starting_date: '2020-01-17T00:44:05.000Z',
     }),
     serializedWorkshopFactory.build({state: 'In Progress'}),
     serializedWorkshopFactory.build({state: 'Ended', attended: true}),
-    serializedWorkshopFactory.build({state: 'Ended'})
+    serializedWorkshopFactory.build({state: 'Ended'}),
   ];
 
   let clock;
@@ -58,7 +58,7 @@ describe('EnrolledWorkshops', () => {
     );
   });
 
-  it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function() {
+  it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
@@ -79,7 +79,7 @@ describe('EnrolledWorkshops', () => {
     );
   });
 
-  it('"Print Certificate" button is disabled if user did not attend workshop', function() {
+  it('"Print Certificate" button is disabled if user did not attend workshop', function () {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
@@ -94,7 +94,7 @@ describe('EnrolledWorkshops', () => {
     expect(printCertificateButton.prop('disabled')).to.be.true;
   });
 
-  it('Pre-survey link button shown in workshops that have not started', function() {
+  it('Pre-survey link button shown in workshops that have not started', function () {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
@@ -109,7 +109,7 @@ describe('EnrolledWorkshops', () => {
     assert(utils.windowOpen.calledOnce);
   });
 
-  it('Pre-survey link button not shown in ended workshop', function() {
+  it('Pre-survey link button not shown in ended workshop', function () {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
@@ -123,11 +123,9 @@ describe('EnrolledWorkshops', () => {
     expect(preWorkshopSurveyButton).to.have.lengthOf(0);
   });
 
-  it('Pre-survey link button is disabled if more than 10 days before workshop', function() {
+  it('Pre-survey link button is disabled if more than 10 days before workshop', function () {
     clock = sinon.useFakeTimers(
-      moment(workshops[0].workshop_starting_date)
-        .subtract(14, 'days')
-        .toDate()
+      moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate()
     );
 
     const enrolledWorkshopsTable = shallow(

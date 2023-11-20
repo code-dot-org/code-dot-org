@@ -1,4 +1,4 @@
-{{ featured_tutorial, title: "Hello World: Space", body: "\"Hello worlds！\"と言ってもらえるようなキャラクターやサウンドで銀河系間のシーンを作る", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
+{{ featured_tutorial, title: "ハローワールド:宇宙", body: "\"ハローワールド！\"と言ってもらえるようなキャラクターやサウンドで銀河系間のシーンを作る", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
 
 {{ featured_tutorial, title: "NASA's Space Jam", body: "その過程で音楽、天文学、コーディングについて学び、本当に揺れる太陽系を作ろう！", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
 

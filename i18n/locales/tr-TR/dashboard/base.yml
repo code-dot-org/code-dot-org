@@ -52,7 +52,9 @@ tr:
         age: 'Yaş'
         gender: 'Cinsiyet'
         edit_header: 'Hesap Bilgilerini Düzenle'
+        ai_settings_header: 'Yapay Zeka Ayarları'
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
+        finish_sign_up_header_error: 'Lütfen aşağıdaki hataları düzeltiniz:'
         finish_sign_up_subheader: ' <strong>%{email}</strong> için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_markdown: '**%{email}** için bir Code.org hesabı oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
         finish_sign_up_subheader_provider: '<strong>%{email}</strong> için <strong>%{provider}</strong> ile bir Code.org hesabı oluşturmayı tamamlamak üzere aşağıdaki bilgileri doldurun.'
@@ -60,6 +62,8 @@ tr:
         reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
+        user_type: 'Hesap Türü'
+        us_state: 'Eyalet'
   beta: "beta"
   hello: "Merhaba dünya"
   welcome_back: "Hoş geldiniz %{name}"
@@ -69,6 +73,7 @@ tr:
   unsubmit: Gönderini gerial
   previous_page: Önceki Sayfa
   next_page: Sonraki Sayfa
+  next_level: Sonraki Seviye
   next_resource: Sonraki Kaynak
   done_with_module: Bu Öğrenme Modülü tamamlandı
   cancel: "İptal"
@@ -95,7 +100,7 @@ tr:
     title_student: "Bilgisayar Bilimlerini Öğren"
     title_teacher: "Bilgisayar Bilimlerini Öğret"
   unplugged_activity: 'Bilgisayarsız Etkinlik'
-  of: "/"
+  of: "dan"
   more: "DAHA FAZLA"
   less: "DAHA AZ"
   try_hoc: "Kod Saati'ni denemek için buraya tıklayın >> "
@@ -172,7 +177,6 @@ tr:
     data_collection_us: "Code.org, kâr amacı gütmeyen, ABD merkezli bir web sitesi olup ABD'nin veri toplama için geçerli kanunlarının, ülkemdeki kanunlardan farklı olabileceğini anlıyorum."
     visit_privacy: 'Daha fazla bilgi için Code.org''un [Gizlilik Politikasını](%{privacy_url}) ziyaret edin.'
     student_terms_markdown: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](http://code.org/privacy) bakınız."
-    additional_information: "Giriş işleminize devam edebilmek için ek bilgilere ihtiyaç duymaktayız."
     user_type_button: "Hesap Türünü Güncelle"
     user_type_label: "Hesap Türü"
     user_type_student: "öğrenci"
@@ -188,7 +192,7 @@ tr:
     field_is_required: "gerekli"
     accept_terms: "Hesap oluşturmak için kabul etmelisiniz"
     error: "Bir hata oluştu."
-    email_preference_question: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
+    email_preference_question: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz? (kabaca ayda bir)"
     email_preference_privacy: "(Bkz: Gizlilik İlkelerimiz)"
     email_preference_yes: "Evet"
     email_preference_no: "Hayır"
@@ -200,6 +204,7 @@ tr:
     parent_account_checkbox: "Çocuğum adına kayıt olan bir ebeveyn/veliyim"
     parent_account_email_progress_permission: "Size ara sıra çocuğunuzun gelişimi ve projeleriyle ilgili güncellemeler ve kursu ve bilgisayar bilimi hakkında güncellemeler gönderebilir miyiz? [(Gizlilik politikamıza bakın)](%{privacy_policy_url})"
     parent_account_email_label: "Ebeveyn/Veli E-postası"
+    us_state: 'Eyalet'
   school_info:
     title: 'Okul bilgileri (isteğe bağlı)'
     school_country: 'Okulun bulunduğu ülke'
@@ -248,7 +253,7 @@ tr:
       email: 'E-posta adresi'
       submit: 'Gönder'
     reset_errors:
-      captcha_required: 'Şifreni değiştirmek için lütfen robot olmadığını kanıtla.'
+      captcha_required: 'Şifrenizi sıfırlamak için lütfen CAPTCHA''yı doldurun.'
       invalid_email: 'Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor. Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.'
     change_form:
       title: 'Şifrenizi değiştirin'
@@ -267,7 +272,7 @@ tr:
     parent_email_added_subject: 'Code.org''a Hoşgeldiniz!'
   teacher_mailer:
     new_teacher_subject: 'Code.org''a Hoşgeldiniz!'
-    delete_teacher_subject: 'Code.org hesabınız silindi'
+    delete_teacher_subject: 'Code.org bildirimi: Hesabınız silindi'
     verified_teacher_subject: 'Code.org Öğretmen Doğrulaması - Başarılı'
   section:
     your_section:
@@ -339,7 +344,7 @@ tr:
       help_support: "Yardım ve Destek"
       report_bug: "Hata bildir"
       report_abuse: "Hata Rapor Et"
-      teacher_community: "Öğretmen topluluğu"
+      teacher_community: "Öğretmen forumu"
       professional_learning: "Profesyonel öğrenme"
       documentation: "Belgeler"
       tutorials: "Eğitmler"
@@ -347,9 +352,9 @@ tr:
       app_lab_tutorials: "Uygulama Laboratuvar Eğitimleri"
       game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
       game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
-      sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
+      sprite_lab_documentation: "Sprite Lab Dökümanları"
       sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
-      web_lab_documentation: "Web Laboratuvarı Belgelendirmesi"
+      web_lab_documentation: "Web Lab Belgelendirmesi"
       educate_overview: "Eğitimci genel bakış"
       educate_elementary: "İlköğretim Okulu"
       educate_middle: "Ortaokul"
@@ -368,7 +373,7 @@ tr:
       about_team: "Tam takım"
       about_news: "Haber odası"
       about_evaluation: "Değerlendirme"
-      about_jobs: "İş Olanakları"
+      about_jobs: "Kariyer"
       about_contact: "Bize Ulaşın"
       about_faqs: "SSS"
       learn: "Öğren"
@@ -376,13 +381,14 @@ tr:
       help_us: "Bize yardım edin"
       teach: "Öğret"
       about: "Hakkında"
+      incubator: "İnkübatör"
       legal: "Gizlilik & Hukuk"
       legal_privacy: "Gizlilik Politikası"
       legal_cookie_notice: "Çerez Bildirimi"
       legal_tos: "Hizmet Şartları"
     user:
       classroom: 'Öğretmen ana sayfa'
-      district_dashboard: 'Kontrol Paneli Bölgesi'
+      district_dashboard: 'Bölge Gösterge Tablosu'
       label: 'Merhaba %{username}'
       stats: 'Kod Stüdyosu'
       my_projects: 'Projelerim'
@@ -425,10 +431,10 @@ tr:
       scratch: 'Scratch'
       sports: 'Spor'
       spritelab: 'Hareketli Nesne Laboratuvarı'
-      starwars: 'Yıldız Savaşları'
+      starwars: 'Star Wars'
       starwarsblocks: 'Yıldız savaşları (blok)'
       starwarsblocks_hour: 'Yıldız savaşları (blok)'
-      thebadguys: 'Kim Demiş Kötüyüz Diye?'
+      thebadguys: 'The Bad Guys (Kim Demiş Kötüyüz Diye?) filmi'
       loading: 'Yükleniyor...'
       weblab: 'Web Laboratuvarı'
       view_all: 'Tüm projeleri görüntüle...'
@@ -460,7 +466,7 @@ tr:
       answer_viewer: 'Öğretmen Paneli'
       student: 'öğrenci'
       viewing_solution: 'Çözüme Bak'
-      try_it_yourself: 'kendini dene'
+      try_it_yourself: 'Kendiniz deneyin'
       section: 'Bölüm'
       example: 'Örnek Çözüm'
       example_with_number: 'Örnek Çözüm %{solution_number}'
@@ -469,7 +475,7 @@ tr:
       unsubmit: 'Gönderini gerial'
       worked_with: 'İle çalıştı'
       update_lock_settings: 'Kilit ayarlarını burada değiştirin.'
-      clear_response: 'Net yanıt'
+      clear_response: 'Yanıtı temizle'
     student_code_view_diabled: 'Bu aktivite için öğrenci kodu görüntülenemiyor.'
   user:
     email_confirm_needed: 'E-posta adresiniz teyit edilmedi:'
@@ -480,24 +486,24 @@ tr:
     new_password_hint: "(Eğer değiştirmek istemiyorsanız boş bırakın)"
     current_password_hint: '(Değişikliklerinizi onaylamak için geçerli parolanız gerekiyor)'
     delete: 'Hesabını Sil'
-    delete_text: "Aşağıdaki düğmeye tıklamak hesabınızı siler."
+    delete_text: "Hesabınızı silmek, bu hesaba bağlı tüm bilgileri ve ilerlemeyi siler."
     delete_text_teacher_managed_note: "Bu hesabı silmeye yetkiniz yok çünkü öğretmeniniz tarafından yönetiliyor. Öğretmen(ler)iniz hesabınızı silmeniz için sizi gruptan kaldırmalı."
     delete_text_teacher_note: "Lütfen dikkat: Kendi hesabınızı silmek, öğrencilerinizin hesaplarını silmez."
     delete_confirm: 'Hesabınızı silmek istediğinize emin misiniz?'
-    deleted_user: 'silinen kullanıcı'
+    deleted_user: 'silinmiş kullanıcı'
     no_password_because_oauth: 'Şifre yok çünkü bir üçüncü taraf sağlayıcı ile giriş yaptınız.'
-    no_password_because_sponsored: 'Öğretmenin parolanızı yönetmesi için bkz.'
-    create_personal_login: 'Kişisel bir oturum oluşturma'
+    no_password_because_sponsored: 'Öğretmenine parolanı yönetmesi için danış.'
+    create_personal_login: 'Kişisel şifre girişi oluştur'
     create_personal_login_under_13_info: 'Eğer okul yılı bittiğinde de Code.org hesabını kullanmaya devam etmek istiyorsan, ebeveynlerinden senin kişisel oturum bilgilerini oluşturmaları için yardım iste.'
     create_personal_login_under_13_username: "Kullanıcı adı (gerçek adınızı kullanmayınız!)"
     create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, altta kendi girişinizi yapın.'
     create_personal_login_link_account: 'Bunun yerine, ayrıca "Bağlı Hesapları Yönet" bölümünde kişisel bir hesaba bağlanmayı seçebilirsiniz.'
-    create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
-    create_personal_login_terms_markdown: "Kişisel hesap oluşturmakla ben, Code.org'un [hizmet şartlarına bağlı olmayı kabul ediyorum](%{terms_of_service_url}). Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
-    create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız."
-    create_personal_login_email_note_markdown: 'Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org''dan elektronik posta almazlar. Daha fazla bilgi için [Güvenlik politikamıza](%{privacy_policy_url}) bakınız.'
-    enter_new_login_info: 'Oturum açma bilgilerini gir'
+    create_personal_login_terms: "Kişisel bir giriş oluşturarak, Code.org <a href='%{terms_of_service_url}', target='_blank'>hizmet şartlarına</a> bağlı kalmayı kabul ediyorum. Code.org hizmetlerini öğretmen olmadan bile kullanmak için ebeveynim veya yasal vasimin iznine sahip olduğumu onaylıyorum."
+    create_personal_login_terms_markdown: "Kişisel bir giriş oluşturarak, Code.org [hizmet şartları](%{terms_of_service_url}) ile bağlı olmayı kabul ediyorum. Code.org hizmetlerini öğretmen olmadan bile kullanmak için ebeveynim veya yasal vasimin iznine sahip olduğumu onaylıyorum."
+    create_personal_login_email_note: "Not: E-posta adresleri, öğrencilerle iletişim kurmamızı sağlayan bir biçimde saklanmaz. Öğrenciler, şifre kurtarma dışında Code.org'dan asla e-posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>gizlilik politikamıza</a> bakın."
+    create_personal_login_email_note_markdown: 'Not: E-posta adresleri, öğrencilerle iletişim kurmamızı sağlayan bir biçimde saklanmaz. Öğrenciler, şifre kurtarma dışında Code.org''dan asla e-posta almazlar. Daha fazla bilgi için [gizlilik politikamıza](%{privacy_policy_url}) bakın.'
+    enter_new_login_info: 'Yeni oturum açma bilgilerini gir'
     confirm_secret_words: 'Gizli kelimenizi girerek siz olduğunuzu doğrulayın'
     parent_email_label: "Ebeveyn/veli e-postası (isteğe bağlı)"
     parent_email_hint: "(bu, şifre kurtarma için kullanılabilir)"
@@ -530,7 +536,7 @@ tr:
     teacher_student_count: '%{count} öğrenciye sahipsiniz.'
     teacher_averages: Öğrencileriniz "Kavram Ustalığı" kupalarından ortalama olarak %{trophy_max} kupadan %{trophy_average} kupayı kazanmıştır.
     teacher_print_certificates: 'Bu dersi bitiren öğrenciler için sertifika bastır'
-    teacher_read_blog: Ders malzemeleri hakkında haberler ve güncellemeleri eğitimci bloğumuzda okuyun
+    teacher_read_blog: Eğitimci Blogumuzda materyallerimizle ilgili haberleri ve güncellemeleri okuyun
     classroom: Sınıfınız
     student_progress: Öğrenme ilerlemeniz
     student_stats: '"Kavram Ustalığı" kupalarından %{trophy_max} kupadan %{trophy_count} kupayı kazandınız.'
@@ -551,17 +557,17 @@ tr:
     heading_elementary_markdown: "# Bilgisayar Bilimi Temelleri için (her yaşta)\n## 20 saat ders"
     your_gallery: Galeri
     no_primary_course: "Code Studio'daki kurslardan birisini deneyin"
-    choose_next_course: "Aşağıdaki Code Studio derslerinden birini seçerek deneyin"
+    choose_next_course: "Aşağıdaki Code Studio kurslarınden birini seçerek deneyin"
     print_certificate: "Sertifikayı Yazdır"
   certificate_sponsor_message: "%{sponsor_name} öğreniminize sponsor olarak cömert bir bağışta bulundu."
   certificate_hour_of_code: "Saat Kodu"
   move_students:
-    new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
+    new_section_dne: "Üzgünüz, ama %{new_section_code} bölümü mevcut değil. Lütfen başka bir bölüm kodu girin.\n"
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
-    current_section_dne: "Üzgünüm, ama %{current_section_code} yok. Lütfen başka bir bölüm kodu girin."
-    student_ids_not_entered: "Lütfen students_ids girin."
-    student_not_found: "Öğrenci ve öğretmen bulunamadı."
-    all_students_must_be_in_current_section: "Bütün öğrenciler şu anda sınıfınıza kayıtlı olmalıdır."
+    current_section_dne: "Üzgünüz, ama %{current_section_code} bölümü mevcut değil. Lütfen başka bir bölüm kodu girin.\n"
+    student_ids_not_entered: "Lütfen students_id'leri girin."
+    student_not_found: "Bir veya daha fazla öğrenci bulunamadı."
+    all_students_must_be_in_current_section: "Tüm öğrenciler şu anda bölümünüze kayıtlı olmalıdır."
     already_enrolled_in_new_section: "Öğrenciler zaten yeni bir bölümde bulunduğundan onları başka yere taşıyamazsınız."
     third_party_login: "Öğrencileri, üçüncü taraf bir uygulama ile senkronize edilen bir bölüme taşıyamazsınız."
     not_correct_participant_type: "Yeni bölümde katılımcı olma izinleri olmadığı için bu kullanıcıları taşıyamazsınız."
@@ -592,7 +598,7 @@ tr:
     copyright: 'Telif Hakkı'
     more: 'Daha Fazla'
     feedback: 'Geri bildirim sağlayın'
-    translate: 'Kendi dilinize çevirmemiz için bize yardım edin'
+    translate: 'Kendi dilinize çevirmemiz için gönüllü olun'
     support: 'Destek'
     support_url: 'http://support.code.org'
     tos_short: 'Koşullar'
@@ -608,6 +614,7 @@ tr:
     store: 'Mağaza'
     cookie_notice: 'Çerez Bildirimi'
     view_code: 'Kodu Görüntüle'
+    locale_select: "Dil Seçin"
   reference_area:
     title: 'Yardım lazım mı?'
     subtitle: 'Bu videolara ve ipuçlarına bakın'
@@ -632,6 +639,8 @@ tr:
       applab_unsupported_tablet: "App Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       gamelab_unsupported_tablet: "Game Lab bir fare ve klavye ile bir masaüstü veya dizüstü bilgisayarda en iyi çalışır. Geçerli cihazınızda bu aracı kullanarak sorunlarla karşılaşabilirsiniz."
       weblab_unsupported_locale_storage: "Web Lab Özel tarama modunu kullanırken sorunlarla karşılaşabilirsiniz. Lütfen projenizi normal modda yeniden yükleyin. Rahatsızlık verdiğim için özür dilerim."
+  deprecation:
+    algebra_lab: "Cebir müfredatında ve içeriğinde BB kullanımdan kaldırılıyor. Önümüzdeki birkaç ay içinde, bu laboratuvar artık kullanılamayacak. Lütfen bunun yerine [Bootstrap: Cebir](%{bootstrap_algebra_url})'ye göz atın. [Daha Fazla Bilgi Edinin](%{cs_algebra_url})."
   slow_loading: 'Bu normalden uzun sürüyor...'
   try_reloading: 'Sayfayı yeniden yüklemeyi deneyin'
   next_stage: 'Bitti! Bir sonraki derse geç'
@@ -655,7 +664,7 @@ tr:
   builder:
     created: "Yeni bir komut dosyası oluşturdu."
     destroyed: "Bir komut dosyası yok."
-    manage: "Seiyeler Oluştur"
+    manage: "Seviyeler Oluştur"
     view: "Görünüm"
     back: "Komut dosyalarına geri dön"
     success: "Blokları başarıyla düzenlediniz."
@@ -670,88 +679,162 @@ tr:
       body_short: "Bir uygulama tasarlayın, çalışmasını sağlamak için bloklar veya JavaScript ile kodlayın, ardından uygulamanızı saniyeler içinde paylaşın."
       audience: '13 + Yaşlar'
       cta: 'Nasıl olduğunu öğren'
-    dance:
-      title: 'Dans Partisi'
+      image_alt: 'Roketle çalışan bir sırt çantası giyen mor bir tavşan.'
+    applab-intro:
+      image_alt: 'Bir el akıllı telefon ekranının ortasına dokunuyor. Ekrandan ışık ve parıltılar çıkıyor.'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Minecraft''tan Steve ve Alex sana bakıyor.'
+    artist:
+      image_alt: 'Büyük bir kalem tutan ve bir üçgen çizen karikatürize bir kişi.'
+    conditionals:
+      image_alt: 'Bir iskambil destesini karıştıran iki el.'
+    course1:
+      image_alt: 'Code.org yaban arısı ve bazı kodların önünde duran turuncu balık.'
+    course2:
+      image_alt: 'Yeşil bir sihirbazı, sanatçıyı ve turuncu balığı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    course3:
+      image_alt: 'Bir oyunu, zombiyi ve ninjayı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    course4:
+      image_alt: 'Futbolu, evcil hayvanları ve bir sanatçıyı gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursea:
+      image_alt: 'Bir fil ve bir sincabı gösteren Code.org bulmaca kolajı.'
+    courseb:
+      image_alt: 'Bir kâşifi, değerli taşları ve bir çiçeği gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursec:
+      image_alt: 'Angry Birds oyunundan bir sincabı, ikili sayıları ve kırmızı bir kuşu gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursed:
+      image_alt: 'Angry Birds oyunundan bir arı, çiçekler, bal ve yeşil bir domuzu gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursee:
+      image_alt: 'Kürek, balkabağı, meyve bahçesi ve inek tutan bir kişiyi gösteren Code.org bulmacalarından oluşan bir kolaj.'
+    coursef:
+      image_alt: 'Renkli geometrik şekiller, kırmızı bir korsan ve bir sanatçıyı gösteren Code.org bulmacalarından oluşan bir kolaj.'
     dance-2019:
       title: 'Dans Partisi'
-    hello-world:
-      title: 'Merhaba Dünya'
-      body: 'Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli temadan birini seçin.'
-    poem-art:
-      title: 'Şiir Sanatı'
-      body: 'Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.'
-    hoc:
-      title: 'Klasik Labirent'
-      body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
+      image_alt: 'Mutlu bir kedi, tembel hayvan ve köpekbalığı dansı.'
+    dance-2022:
+      image_alt: 'Arka planda Satürn ile dans eden yeşil bir uzaylı ve robot.'
+    dance:
+      title: 'Dans Partisi'
+      image_alt: 'Bir partide dans eden havalı bir kedi ve mutlu köpekbalığı.'
+    donate:
+      image_alt: 'Bir Code.org bulmacasını gösteren bir dizüstü bilgisayar ekranını işaret eden bir çocuk.'
+    elementary:
+      image_alt: 'Gökkuşağının önündeki tarlada duran bir yaban arısı ve sincap.'
+    express:
+      image_alt: 'Plants vs Zombies zombi ve Flappy Bird''ün yanında duran bitki.'
     flappy:
       title: 'Flappy Kod'
       body: '10 dakikadan az bir süre içinde kendi oyununu yazmak ister misin? Flappy Kod eğitimimizi deneyin!'
-    20-hour:
-      title: 'Hızlandırılmış Kurs'
-      body: 'Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.'
-      body_short: 'Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda öğrenin.'
-    hoc2014:
-      try_new_tutorial: 'Yeni Kod Saati eğitimimizi beta halinde deneyin'
-      try_frozen: 'Karlar Ülkesi''nden Anna ve Elsa ile birlikte bir sanatçı'
+      image_alt: 'Yeşil borular arasında uçan sarı bir kuş.'
+    frozen:
+      title: "Karlar Ülkesi"
+      image_alt: 'Frozen filminden Anna ve Elsa. Aralarında, Anna''nın buz patenlerini kullanarak buzda güzel bir şekil çizdiği bir resim var.'
     gallery:
       title: "Galeri"
-      body: "Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın"
+      body: "Kullanıcılarımız tarafından oluşturulan uygulama ve sanatçı resimleri galerisini görüntüleyin"
+      image_alt: 'Bir sürü daire çizen bir sanatçı ve bir kış tatili diyarında duran bir kedi, yarasa ve hayalet.'
     gamelab:
       title: "Oyun Laboratuvarı"
       body: "Oyun labaratuarı basit animasyonları ve oyunları nesnelerle ve etkileşimli karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır."
       audience: "13 + Yaşlar"
       cta: "Nasıl olduğunu öğren"
+      image_alt: 'Kaldırımda duran ve gülümseyen birçok çizgi film insanı ve hayvan.'
+    hello-world-food:
+      image_alt: 'Dünyanın yörüngesinde dönen birçok hayvan, uzaylı ve emoji.'
+    hello-world:
+      title: 'Merhaba Dünya'
+      body: 'Yarattığınız bir dünyada etkileşimli karakterleri kodlamak için dört eğlenceli tema arasından seçim yapın.'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın"
+      image_alt: 'Minecraft''tan bir Demir Golem, Anna''nın bir yapbozu çözerken yukarıdan çekilmiş görüntüsünün önünde duruyor.'
     hoc-encryption:
       title: "Basit şifreleme"
       body: "Öğrenciler şifreli mesaj yaratma ve şifre kırma tekniklerini öğrenecek."
+      image_alt: 'İngiliz dilinde harf sıklıklarının çubuk grafiği.'
+    hoc:
+      title: 'Klasik Labirent'
+      body: 'Temel bilgisayar bilimlerine milyonlar bir şans verdi, sen de dene.'
+      image_alt: 'Kodu, Mark Zuckerberg''i ve Angry Birds''ü gösteren resimlerden oluşan bir kolaj.'
+    hourofcode:
+      image_alt: 'Kodu, Mark Zuckerberg''i ve Angry Birds''ü gösteren resimlerden oluşan bir kolaj.'
+    hoc2014:
+      try_new_tutorial: 'Yeni Kod Saati eğitimimizi beta halinde deneyin'
+      try_frozen: 'Frozen''dan Anna ve Elsa ile birlikte bir sanatçı'
+    infinity:
+      title: "Infinity Play Lab"
+      body: "Disney Infinity karakteriyle bir hikaye ya da  bir oyun yaratmak için Play Lab'i kullanın."
+      image_alt: 'Frozen, Tangled ve Big Hero 6''dan beş karakter bir arada duruyor.'
+    map:
+      image_alt: 'Yaklaşık 20 eyaletin mor renkle vurgulandığı Amerika Birleşik Devletleri''nin gri bir görüntüsü.'
+    mc_escape:
+      image_alt: 'Zümrütlerle dolu bir hazine sandığını açarken silindir şapka ve tek gözlük takan bir Minecraft karakteri.'
+    mc:
+      image_alt: 'Minecraft''tan Anna ve Steve bir Code.org Minecraft yapbozunun önünde duruyor.'
+    minecraft:
+      title: "Minecraft"
+      body: "Minecraft dünyasını kodlamayla keşfet"
+      image_alt: 'Minecraft''tan Anna ve Steve bir Code.org Minecraft yapbozunun önünde duruyor.'
+    minecraft2016:
+      title: "Minecraft"
+      body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla."
+    oceans:
+      image_alt: 'Okyanusta çeşitli deniz canlılarını tarayan bir robot.'
+    playlab:
+      image_alt: 'Mavi bir kediyi, şapşal köpeği ve tarih öncesi gelinciği gösteren bir resim kolajı.'
+    poem-art:
+      title: 'Şiir Sanatı'
+      body: 'Kendinizi ifade edin! Animasyonlu şiirler oluşturmak için kod kullanın.'
+      image_alt: 'Bir sahnede performans gösteren bir hipster kalamar.'
+    pre-express-2017:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express-2018:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express-2019:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    pre-express:
+      image_alt: 'Yapboz parçalarından yapılmış bir ağacın önünde duran bir köpek ve tek boynuzlu at.'
+    sports:
+      title: "Spor"
+      body: "Bir basketbol oyunu yapın veya sporları karıştırın ve eşleştirin."
+      image_alt: 'Bir futbol, futbol topu, hokey diski ve basket topunun yanında görüntülenen NBA ve WNBA logoları.'
+    starwars:
+      title: "Star Wars"
+      image_alt: 'R2-D2, Leia, Rey ve BB-8 bir çölde duruyor.'
+    text-compression:
+      title: "Metin Sıkıştırma"
+      body: "Bu derste öğrenciler, desenleri sembollerle değiştirerek metni sıkıştırmak için Metin Sıkıştırma Widget'ını kullanacaklardır."
+      image_alt: 'Tüm sözcükleri tek bir sembolle değiştirerek sıkıştırılan metin.'
     weblab:
       title: "Web Lab (beta)"
       body: "Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş."
       audience: "13 + Yaşlar"
       cta: "Nasıl olduğunu öğren"
-    frozen:
-      title: "Karlar Ülkesi"
-    starwars:
-      title: "Yıldız Savaşları"
-    infinity:
-      title: "Sınırsız oyun laboratuarı"
-      body: "Bir hikaye ya da Disney Infinity karakteriyle bir oyun yaratmak için Play Lab'i kullanın."
-    minecraft:
-      title: "Minecraft"
-      body: "Minecraft dünyasını kodlamayla keşfet"
-    minecraft2016:
-      title: "Minecraft"
-      body: "Hayvanları ve diğer Minecraft yaratıklarını Minecraft'ın sana ait sürümünde programla."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft Kodlama Saati için yepyeni bir faaliyetle geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın"
-    sports:
-      title: "Spor"
-      body: "Ya bir basketbol ya da sporların karışımından oluşan bir oyun yapmayı seçin."
-    text-compression:
-      title: "Metin Sıkıştırma"
-      body: "Bu derste, öğrenciler metin sıkıştırma aracı ile metinler yerine semboller kullanarak sıkıştır."
-    unplugged:
-      title: "Bağımsız dersler"
-      audience: "4 yaş ve üzeri"
-      body: "Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz. Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka bir bilgisayar dersini destekleyecek şekilde kullanabilirsiniz."
-      body_short: "Bilgisayarınız yok ise bu bağımsız dersleri derste kullanın."
-    unplugged_conditionals:
-      title: "Koşullar"
-      body: "\"Bir deste kart kullanarak algoritmaları ve bu koşullu deyimleri öğrenin."
+      image_alt: 'HTML kodunu gösteren bir bilgisayar ekranı.'
     widgets:
       title: "Araçlar"
-      body: "Öğrenciler bilgisayar bilim ilkelerini bu dijital araçlarla uygulamalı olarak keşfedebilirler. Her öğrenci endi başlarına kullanabilir veya kullanacağınız sınıf için bir ortak tek bir ders oluşturabilirsiniz."
+      body: "Öğrenciler, bu dijital araçları kullanarak Bilgisayar Bilimi İlkeleri kursumuzdaki kavramları uygulamalı olarak keşfedebilirler. Widget'ları kendi başlarına kullanın veya sınıfınız için tek konseptli bir ders oluşturun."
       audience: "14 yaş üzeri"
       cta: "Nasıl olduğunu öğren"
+    unplugged_conditionals:
+      title: "Koşullar"
+      body: "Bir deste kart kullanarak bu \"bağlantısız\" etkinlikte algoritmalar ve koşullu ifadeler hakkında bilgi edinin."
+    unplugged:
+      title: "Bağlantısız dersler"
+      audience: "4 yaş ve üzeri"
+      body: "Sınıfınızda kullanmanız için bağlantısız derslerin bir listesini derledik. Artık sınıfınızda bilgisayar olsun ya da olmasın, bilgisayar biliminin temellerini öğretebilirsiniz! Bu dersleri tek başına bir ders olarak veya herhangi bir bilgisayar bilimi dersi için tamamlayıcı dersler olarak kullanmayı deneyin."
+      body_short: "Bilgisayarınız yok ise bu bağlantısız dersleri sınıfta kullanın."
+    20-hour:
+      title: 'Hızlandırılmış Kurs'
+      body: 'Bu 20 saatlik ders temel bilgisayar bilimi ve programlama kavramlarını tanıtır. Ders, K-8 dersliklerinde kullanılmak üzere tasarlanmıştır, ama her yaştan öğrenmek için eğlencelidir.'
+      body_short: 'Temel bilgisayar bilimleri derslerini 2-4 hızlandırılmış kurslarımızda öğrenin.'
   landing:
     prerelease_tutorial: "Bu öğretici **betadır**. Geri dönüşler aldıkça ve geliştirildikçe düzenlenmeye açıktır."
     report_bug: "Hata bildir"
     support: "Yardım Al"
     support_url: "//support.code.org"
-    help_resources: "Yardım ve kaynaklar"
+    help_resources: "Yardım ve Kaynaklar"
     help_support: "Yardım ve Destek"
     documentation: "Belgeler"
     tutorials: "Eğitmler"
@@ -776,8 +859,8 @@ tr:
     wrong_body: "Cevaplarınızı gönderdiğiniz için teşekkürler."
     correct_title: "Teşekkür ederiz"
     correct_body: "Cevaplarınızı gönderdiğiniz için teşekkürler."
-    hide_survey_last_answer: "Bu anket anonimdir.  Öğretmen Pano yu  sonuçları görmek için ziyaret edin.  Not sonuçlar yalnızca en az beş öğrenci Anketi gönderdiyseniz görülebilir."
-    survey_submission_thankyou: "Anketi doldurduğunuz için teşekkürler! Anket kişisel bilgilerden arındırıldığından kimliğiniz anonim kalır. Fakat unutmayın ki öğretmeniniz tüm sınıfa verdiğiniz yanıtları isimsiz biçimde görebilmektedir."
+    hide_survey_last_answer: "Bu anket anonimdir. Toplu sonuçlar için lütfen öğretmen kontrol panelini ziyaret edin. Sonuçların yalnızca anketi en az beş öğrenci gönderdiğinde görülebileceğini unutmayın."
+    survey_submission_thankyou: "Bu anketi gönderdiğiniz için teşekkür ederiz! Yanıtlarınızın anonim kalması için anket temizlendi. Öğretmeninizin tüm sınıfın yanıtlarını ad eklenmemiş olarak görebileceğini unutmayın."
   level_group-submittable:
     wrong_title: "Teşekkür ederiz"
     wrong_body: "Cevaplarınızı gönderdiğiniz için teşekkürler."
@@ -786,9 +869,9 @@ tr:
     unsubmit-title: "Değerlendirmeni geri al"
     unsubmit-body: "Değerlendirmeni geri almak gönderme zamanını sıfırlayacaktır? Emin misin?"
     submit-incomplete-title: "Değerlendirmeni gönder."
-    submit-incomplete-body: "Bazı soruları boş bıraktın. Değerlendirmeyi gönderdikten sonra değişiklik yapamazsın. Emin misin?"
+    submit-incomplete-body: "Bazı soruları boş bıraktın. Değerlendirmeni gönderdikten sonra değişiklik yapamazsın. Emin misin?"
     submit-complete-title: "Değerlendirmeni gönder."
-    submit-complete-body: "Değerlendirmenizi gönderdikten sonra düzenleyemezsiniz, gerçekten göndermek istiyor musunuz?"
+    submit-complete-body: "Değerlendirmenizi gönderdikten sonra düzenleyemezsiniz. Emin misiniz?"
   match:
     wrong_title: "Yanlış çözüm"
     wrong_body: "Girdiğiniz çözüm doğru değil.  Lütfen tekrar deneyin!"
@@ -796,12 +879,12 @@ tr:
     correct_body: "İşte bu doğru cevap."
   contract_match:
     wrong_title: "Yanlış cevap"
-    badname: "Senin sözleşmende yanlış isim var."
-    badname_case: "Fonksiyon isimleri büyük-küçük harfe duyarlıdır. Fonksiyon gövdesindeki ismin büyüklüğünü   değiştirmeyi deneyin."
+    badname: "Sözleşmenizin adı yanlış."
+    badname_case: "İşlev adları büyük/küçük harfe duyarlıdır. Sözleşmenizin adının büyük/küçük harf durumunu değiştirmeyi deneyin.\n"
     badrange: "Senin sözleşmen yanlış bir diziye sahip."
-    baddomainsize: "sözleşmeniz içerikteki elemanların doğru numaralarını içermiyor."
-    baddomainname: "1 veya daha fazla senin öğelerin hatalı."
-    baddomaintype: "Bir veya daha fazla etki alanı yanlış öğe türüne sahip, ya da yanlış sırada."
+    baddomainsize: "Sözleşmenizde etki alanında doğru sayıda öğe bulunmuyor."
+    baddomainname: "Etki alanı öğelerinizden biri veya daha fazlası yanlış ada sahip."
+    baddomaintype: "Etki alanı öğelerinizden biri veya daha fazlası yanlış türde, veya yanlış sırada."
   text_match:
     placeholder: "Cevabınızı buraya girin"
     open_response_title: "teşekkürler"
@@ -828,53 +911,53 @@ tr:
     sign_out_markdown: 'Yaşınızı girmek istemiyorsanız, [oturumu kapatabilirsiniz](%{url}).'
   terms_interstitial:
     title: "Güncellenen Hizmet ve Gizlilik Politikası şartları"
-    intro_desc: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: <i>Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz.</i> Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
-    intro_desc_markdown: "Kullanıcı sözleşmesini aşağıdaki gibi güncelledik. Değişiklikler 24 Ağustos 2016'dan itibaren uygulanıyor. En büyük değişiklik: _Artık Code Studio'daki öğrencilerin email adreslerini artık arşivlemiyoruz._ Bu bizim için büyük bir şey, ve umuyoruz eğitim teknolojilerindeki öğrenci mahremiyetine yeni bir standart getirir. Diğer değişikliklerin özetini de size mail olarak gönderdik."
-    intro_instructions: "Kod Studio tüm son özelliklerine tam erişim sınıfında 13 yaşın altındaki öğrenciler için bu yeni şartları kabul gerekir.  13 yaşından küçük bir öğrenci için bir hesap kayıt olurken okul kullanımı için öğrencinin kişisel bilgilerin toplanması ve kod Studio gibi eğitim programları da dahil olmak üzere okul parası için ebeveyn izni olduğundan emin olun istenecektir."
+    intro_desc: "Hizmet Şartlarımızı ve Gizlilik Politikamızı aşağıda gösterildiği gibi güncelledik. Değişiklikler 24 Ağustos 2016 tarihinden itibaren geçerlidir. En büyük değişiklik: <i>Öğrenci hesapları için artık Code Studio'da e-posta adresleri saklamayacağız.</i> Bu bizim için çok önemli ve umarız eğitim teknolojisinde öğrenci mahremiyeti için yeni standart. Size e-posta yoluyla diğer değişikliklerin bir özetini gönderdik."
+    intro_desc_markdown: "Hizmet Şartlarımızı ve Gizlilik Politikamızı aşağıda gösterildiği gibi güncelledik. Değişiklikler 24 Ağustos 2016 tarihinden itibaren geçerlidir. En büyük değişiklik: *artık Code Studio'da öğrenci hesapları için e-posta adreslerini saklamayacağız.* Bu bizim için çok önemli ve umarız öğrenci gizliliği için yeni bir standart belirler. eğitim teknolojisinde. Size e-posta yoluyla diğer değişikliklerin bir özetini gönderdik."
+    intro_instructions: "Sınıfınızda 13 yaşın altındaki öğrencilerin Code Studio'daki en son özelliklerin tümüne tam erişim sahibi olmaları için bu yeni şartları kabul etmeniz gerekir. 13 yaşın altındaki bir öğrenci için hesap kaydederken, Code Studio gibi eğitim programları da dahil olmak üzere okulun kullanımı ve yararı için öğrencinin kişisel bilgilerinin toplanması konusunda okulunuzun ebeveyn onayına sahip olduğunu doğrulamanız istenecektir."
     tos: "Hizmet Şartları"
     privacy: "Gizlilik Politikası"
-    privacy_notice: "Gizlilik Politikası"
-    accept_label: 'Güncellenme Zamanı <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik politikasını</a> kabul ediyorum'
+    privacy_notice: "Gizlilik Bildirimi"
+    accept_label: '<a href="%{tos_url}" target="_blank">Hizmet Şartları</a>''nı ve <a href="%{privacy_url}" target="_blank">Gizlilik Politikası</a>''nı kabul ediyorum .'
     accept_label_markdown: Güncellenme Zamanı [Hizmet şartları](%{tos_url}) ve [Gizlilik politikasını](%{privacy_url}) kabul ediyorum
     accept_tos: Code.org'a kaydolarak [Hizmet Şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url}) şartlarını kabul etmiş olursunuz.
     accept: "Kabul et"
     print: "Yazdır"
-    reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
-    reminder_desc_markdown: '[Hizmet şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url}) güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz. JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
-    review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
+    reminder_desc: ' <a href="%{tos_url}" target="_blank">Hizmet Şartlarımızı</a> ve <a href="%{privacy_url}" target="_blank">Gizlilik Politikamızı</a> güncelledik . Lütfen kabul etmeden önce bunları dikkatlice okuyun. JavaScript öğreten araçlarımız, öğrencileriniz güncellenen şartları açıkça kabul etmeden önce kullanılamayabilir.'
+    reminder_desc_markdown: '[Hizmet Şartlarımızı](%{tos_url}) ve [Gizlilik Politikamızı](%{privacy_url}) güncelledik. Lütfen kabul etmeden önce bunları dikkatlice okuyun. JavaScript öğreten araçlarımız, öğrencileriniz güncellenen şartları açıkça kabul etmeden önce kullanılamayabilir.'
+    review_terms: "Güncellenen şartları inceleyin"
   school_info_interstitial:
-    title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
+    title: "Bilgisayar Bilimini her öğrenciye getirmek istiyoruz - ilerlememizi takip etmemize yardımcı olun!"
     message: "Lütfen aşağıya okul bilgilerinizi girin."
-    message_with_suggestion: "Lütfen aşağıdaki bilgileri doğru olduğundan emin olun veya gerektiği gibi güncelleştirin."
+    message_with_suggestion: "Lütfen aşağıdaki bilgilerin doğru olduğundan emin olun veya gerektiği gibi güncelleştirin."
     save: "Kaydet"
   race_interstitial:
-    title: "Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun"
-    message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
+    title: "İsteğe bağlı: Bilgisayar bilimlerinde çeşitliliği geliştirmeye yönelik ilerlememizi izlememize yardımcı olun"
+    message: " Lütfen bize ırkınızı veya etnik kökeninizi söyleyin (uygun olan tüm seçenekleri işaretleyin)"
     races:
       white: "Beyaz"
-      black: "Siyahi veya Afrika kökenli Amerikalı"
+      black: "Siyah veya Afrikalı Amerikalı"
       hispanic: "İspanyol veya Latin"
       asian: "Asyalı"
       hawaiian: "Yerel Hawaii veya diğer Pasifik Adalı"
       american_indian: "Amerikalı Kızılderili / Alaska Yerlisi"
       other: "Diğer"
-      opt_out: "Söylememek istemiyorum"
+      opt_out: "Söylememeyi tercih ederim"
     submit: "Gönder"
     decline: "Kapat"
-  zendesk_too_young_message: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. <a href="http://support.code.org">support.code.org</a> adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
+  zendesk_too_young_message: 'Üzgünüz, daha genç kullanıcılar destek sitemizde oturum açamayabilir. Oturum açmadan <a href="http://support.code.org">support.code.org</a>''a göz atabilir veya ebeveyninizden veya öğretmeninizden sizin için bizimle iletişime geçmesini isteyebilirsiniz.'
   zendesk_too_young_message_markdown: 'Üzgünüz, genç kullanıcılarımız destek sitemize üye olamazlar. [support.code.org](http://support.code.org) adresini giriş yapmadan kullanın ya da ebeveynlerinize veya öğretmeninize bizimle temasa geçmelerini söyleyin.'
   progress:
     not_started: Başlatılmadı
     in_progress: İşlem devam ediyor
-    completed_too_many_blocks: tamamlanmadı, fazla blok var
+    completed_too_many_blocks: tamamlandı, fazla blok var
     completed_perfect: tamamlandı, harika
-    furthest_level_attempted: denenen en yüksek seviye
+    furthest_level_attempted: en yüksek seviye denendi
     assessment: değerlendirme
     submitted: gönderildi
   studio:
-    courses_working_on: "Üzerinde çalışmakta olduğunuz dersler"
-    completed_courses: "Tamamladığınız dersler"
-    all_courses: "Tüm dersler"
+    courses_working_on: "Üzerinde çalışmakta olduğunuz kurslar"
+    completed_courses: "Tamamlanan kurslar"
+    all_courses: "Tüm kurslar"
   project:
     projects: "Projeler"
     create: "Proje Oluştur"
@@ -882,47 +965,48 @@ tr:
     new: "Yeni oluştur"
     exit: "Kursa dön"
     project_gallery: "Projeler"
-    publish: "Yayımla"
-    unpublish: "Yayımdan Kaldır"
+    publish: "Yayınla"
+    unpublish: "Yayından Kaldır"
     share_title: Projenizi paylaşın
     share_copy_link: "Bağlantıyı kopyala:"
     share_embed_description: "Projeyi bir web sayfasında görüntülemek için yerleştirme kodunu HTML sayfasına yapıştırın."
-    share_u13_warning: "Öğretmenine paylaşmadan önce sor. Sadece senin okuldaki diğer kişilerle  paylaş."
+    share_u13_warning: "Paylaşmadan önce öğretmeninize sorun. Sadece okulunuzdaki diğer kişilerle paylaşın."
     embed: "Yerleştir"
     advanced_share: "Gelişmiş seçenekleri göster"
-    no_projects: "Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden birini tıklatın."
+    no_projects: "Şu anda projeniz yok. Bir proje başlatmak için yukarıdaki düğmelerden birine tıklayın."
     name: "İsim"
     updated: "Güncellendi"
     project_type: "Proje türü"
-    help_text: "Uygulama oluştur'a tıklayın veya Yeni bir oyun labaratuvarı veya sanatçı projesi çizin. \nGeri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz."
-    need_help: "Başlarken yardıma mı ihtiyacınız var?"
-    thumbnail_help: "Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat sürebilir."
+    help_text: "Yeni bir proje<br/> başlatmak için aşağıdaki <strong>Uygulama Yap</strong> veya <strong>Bir Şey Çiz</strong>'i tıklayın!Dilediğiniz zaman geri gelip projeleriniz üzerinde çalışabilirsiniz."
+    need_help: "Yeni projenize başlamanıza yardımcı olması için bu kursları deneyin"
+    thumbnail_help: "Projeniz için doğru küçük resmi göremiyor musunuz? Yeni bir küçük resim oluşturmak için uygulamanızı çalıştırın. Küçük resmin her yerde yenilenmesinin birkaç saat sürebileceğini unutmayın."
     saved: "Kaydedildi"
     not_saved: "Kaydedilmedi"
     view_all: 'Projelerimi görüntüle'
     edit_project: 'Projeyi Düzenle'
-    sharing_disabled: "Üzgünüz, bu proje paylaşım için kullanılabilir değil. Bu sizin projeniz ya da proje öğrencilerinden birinin ise, projeyi görüntülemek için hesabınızda <a href='https://studio.code.org/users/sign_in'> oturum açın</a> lütfen."
+    sharing_disabled: "Üzgünüz, bu proje paylaşıma uygun değil. Bu sizin projeniz veya öğrencilerinizden birinin projesiyse, Lütfen projeyi görüntülemek için hesabınıza <a href='https://studio.code.org/users/sign_in'>oturum aç</a> ."
     abuse:
       tos: "Bu projenin Code.org <a href='http://code.org/tos'> Hizmet Şartları'nı</a> ihlal ettiği raporlandı ve başkalarıyla paylaşılamaz."
-      policy_violation: "Bu projeyi başkalarıyla paylaşılamaz bilgileri içerir. Lütfen onların app içeriğini düzeltmek için app sahibine başvurun."
+      policy_violation: "Bu proje, başkalarıyla paylaşılamayan bilgiler içermektedir. Uygulamalarının içeriğini düzeltmek için lütfen uygulama sahibiyle iletişime geçin."
       contact_us: "Eğer bir hata olduğunu düşünüyorsanız, lütfen <a href='https://code.org/contact'>bizimle iletişime geçin.</a>"
-      go_to_code_studio: 'Kod Stüdyosu''na git'
+      go_to_code_studio: 'Code Studio''ya git'
       report_abuse_form:
-        intro: 'Rahatsız edici, tehdit, sanal kabadayılık, taciz yada telif hakkı ihlali içeren bir içerikle karşılaşırsanız lütfen aşağıdaki formu doldurun. Raporunuzu çok ciddiye alacağız ve dikkatlice inceleyip gereken eylemi yerine getireceğiz.'
+        intro: "Code Studio üzerinde oluşturulmuş uygulamaları kullanırken saldırgan içerik, tehdit, siber zorbalık, taciz veya sahip olduğunuz içerikle ilgili bir telif hakkı ihlali örneğiyle karşılaştıysanız, lütfen aşağıdaki formu doldurun. Raporunuzu çok ciddiye alacağız, buna göre araştıracağız ve uygun işlemi yapacağız.\n"
         validation:
           email: 'Lütfen E-posta adresinizi belirtiniz'
           age: 'Lütfen yaşınızı belirtiniz'
           abuse_type: 'Lütfen bu içeriğin Hizmet Şartlarını nasıl ihlal ettiğini açıklayın'
-          abuse_detail: 'Bildirmekte olduğunuz içeriği açıklayın'
+          abuse_detail: 'Lütfen bildirdiğiniz içerikle ilgili ayrıntıları belirtin'
+          captcha: 'Bu içeriği bildirmek için lütfen CAPTCHA''yı doldurun.'
         abusive_url: 'Raporlamış olduğunuz içeriğin URL''si'
         abuse_type:
           question: 'Bu içerik %{link_start}Hizmet Şartlarını%{link_end} nasıl ihlal ediyor?'
-          harassment: 'Tehditler, klavye delikanlılığı, zorbalık'
+          harassment: 'Tehditler, siber zorbalık, taciz'
           offensive: 'Rahatsız edici içerik'
           infringement: 'Telif Hakkı İhlali'
           other: 'Diğer'
-        detail: 'Bildirmekte olduğunuz içerik ile ilgili mümkün olduğunca fazla ayrıntı veriniz.'
-        acknowledge: 'Bu bilgileri göndererek, %{link_start_privacy}Gizlilik Sözleşmesini%{link_end} ve %{link_start_tos}Hizmet Sözleşmesini%{link_end} kabul etmiş olursunuz'
+        detail: 'Lütfen bildirdiğiniz içerikle ilgili mümkün olduğunca fazla ayrıntı sağlayın.'
+        acknowledge: 'Bu bilgiyi göndererek, bunun %{link_start_privacy}Gizlilik Politikası%{link_end} ve %{link_start_tos}Hizmet Şartları%{link_end} hükümlerine uygun olarak ele alınacağını kabul etmiş olursunuz.'
   peer_review:
     accepted:
       name: 'Kabul edildi'
@@ -932,25 +1016,25 @@ tr:
       description_markdown: '**Hayır**, bu öneri gereklilikleri **karşılamamaktadır**'
     escalated:
       name: 'Yükseltilmiş'
-      description: 'Bu gönderiyi gözden geçirmek için bir eğitmen istiyorum'
+      description: 'Bir eğitmenin bu gönderimi gözden geçirmesini istiyorum'
     instructor_feedback: 'Eğitmen Geribildirimi'
-    peer_feedback: 'Geribildirim Gönder'
-    outdated: 'Bu geribildirim daha önce yollanan gönderiye eklendi'
+    peer_feedback: 'Akran geri bildirimi'
+    outdated: 'Bu geri bildirim, daha önce gönderilen bir sürüm için eklendi'
     review_in_progress: 'Gözden geçirmeye hazır'
     review_count: 'Bu ünite için %{review_count} inceleme tamamlamanız gerekir'
-    peer_review: 'Eş gözden geçirme'
+    peer_review: 'Akran Değerlendirmesi'
   external_links:
     disclaimer: Yasal uyarı
-    leaving_domain: Code.org tarafından işletilen site değil. 
-    disclaimer_text: '<strong>Yasal uyarı: Code.org tarafından işletilen bir site değil.</strong> Bu sitenin Code.org''dan farklı gizlilik ilkeleri olabilir. <br/> <br/> Onlar sizin için yararlı olacağını düşündüğümüz için seçtik. Biz doğrudan bu Web sitesinin içeriği için sorumlu değiliz, <a href=''%{support_url}''> Destek hizmetlerine</a> tıklayarak sakıncalı içerik veya bağlantılı hatasını raporlayın.'
+    leaving_domain: Şimdi bu etki alanını Code.org tarafından işletilmeyen bir siteye bırakıyorsunuz.
+    disclaimer_text: "Bu site Code.org'unkinden farklı gizlilik politikalarına sahip olabilir. Bu üçüncü taraf kaynakları sizin için yararlı olacağını düşündüğümüz için seçtik. Bu web sitesinin içeriğinden doğrudan sorumlu olmasak da, içeriği sakıncalı bulursanız veya bağlantı verilen site artık kullanılamıyorsa lütfen <a href='%{support_url}'>destek ile iletişime geçin</a>.\n"
   hoc_download:
-    title: 'Kodlama Saati İndirmeler'
+    title: 'Hour of Code indirmeleri'
     capsule_title: 'İnternetiniz var mı?'
     capsule_desc: 'Web tabanlı <a href="%{url}">%{app_name}</a> kullanın.'
     instructions_headline: 'İnternet Yok Mu?'
-    instructions: 'Öğretmenler için Talimatlar: Eğer zayıf internet bağlantınız varsa, bu Kod Saati uygulamasını indirip çevrimdışı kullanabilirsiniz. Dilinizi ve platformunuzu seçin ve sınıftaki bütün bilgisayarlara yükleyin. USB kullanmak isteyebilirsiniz. NOT: Öğrenciler kod saatine giriş yapamayacak ve sertifika bastıramayacak. Öğretmenler önden sertifikaları yazdırabilir. a href="%{url}">here</a>.'
-    minecraft_name: 'Minecraft Kodlama Saati'
-    starwars_blocks_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
+    instructions: "Öğretmenler için talimatlar: İnternet hizmetiniz zayıfsa, bu Hour of Code eğitimleri çevrimdışı kullanım için indirilebilir ve kurulabilir. Dilinizi ve platformunuzu seçin, indirin ve sınıfınızdaki tüm bilgisayarlara kurun. Bir kez indirmek ve tüm bilgisayarlara yüklemek için bir USB sürücü kullanmak isteyebilirsiniz. Not: öğrenciler Code Studio'da oturum açamaz, ilerlemeyi kaydedemez veya sertifika yazdıramaz. Öğretmenler sertifikaları önceden [buradan](%{url}) yazdırabilir.\n"
+    minecraft_name: 'Minecraft Hour Of Code'
+    starwars_blocks_name: 'Star Wars: Kod İle Bir Galaksiyi İnşa Etmek (Bloklar)'
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (JavaScript)'
     download_message: 'Çevrimdışı kullanım  için %{app_name} (136 MB) indir'
     download_in_Albanian: 'Arnavutça indir:'
@@ -958,14 +1042,14 @@ tr:
     download_in_Azerbaijani: 'Azerice indir:'
     download_in_Basque: 'Baskçayı indir:'
     download_in_Bosnian: 'Boşnakça indir:'
-    download_in_Bulgarian: 'Bulgaristanca indir:'
+    download_in_Bulgarian: 'Bulgarca indir:'
     download_in_Catalan: 'Katalanca indir:'
     download_in_Chinese-Taiwan: 'Tayvan Çincesi indir:'
     download_in_Chinese: 'Çince indir:'
     download_in_Croatian: 'Hırvatça indir:'
     download_in_Czech: 'Çekce indir:'
-    download_in_Danish: 'Danimarkaca indir:'
-    download_in_Dutch: 'Almanca indir:'
+    download_in_Danish: 'Danca indir:'
+    download_in_Dutch: 'Hollandaca indir:'
     download_in_English: 'İngilizce indir:'
     download_in_Finnish: 'Fince indir:'
     download_in_French: 'Fransızca indir'
@@ -979,11 +1063,11 @@ tr:
     download_in_Italian: 'İtalyanca indir:'
     download_in_Japanese: 'Japonca indir:'
     download_in_Korean: 'Korece indir:'
-    download_in_Latvian: 'Litvanyaca indir:'
+    download_in_Latvian: 'Letonca indirin:'
     download_in_Lithuanian: 'Litvanyaca indir:'
     download_in_Norwegian: 'Norveççe indir:'
-    download_in_Norwegian-Nynorsk: 'Norveççe indir:'
-    download_in_Polish: 'Polonyacayı indir:'
+    download_in_Norwegian-Nynorsk: 'Norveç-Nynorsk indirin:'
+    download_in_Polish: 'Lehçe olarak indirin:'
     download_in_Portuguese-Brazil: 'Portekizce-Brezilya indir:'
     download_in_Portuguese: 'Portekizce olarak yükleyin:'
     download_in_Romanian: 'Romence indir:'
@@ -995,11 +1079,11 @@ tr:
     download_in_Turkish: 'Türkçe indir:'
     download_in_Ukrainian: 'Ukraynaca indir:'
     download_in_Vietnamese: 'Vietnam dilinde yükleyin:'
-    windows: 'Windows'
+    windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
-  locked_stage: 'Bu sahnenin içeriği görünmemektedir çünkü bu sahne şu anda kilitlidir. Öğretmeniniz bu sahneyi size çalışmak veya yanıtlarınızı gözden geçirmek için zamanında açacaktır.'
+  locked_stage: 'Bu ders şu anda kilitli olduğu için bu dersin içeriği görünmüyor. Öğretmeniniz, üzerinde çalışma veya yanıtlarınızı gözden geçirme zamanı geldiğinde bu dersin kilidini açabilir.'
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi derste olman gerektiğini sor."
-  hidden_script: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi ünitede olman gerektiğini sor."
+  hidden_script: "Öğretmenin burada olmanı beklemiyordu. Lütfen öğretmeninize hangi birimde olmanız gerektiğini sorun."
   no_course_access_student: "Bu derse erişiminiz bulunmamaktadır. Lütfen hangi derste olmanız gerektiğini öğretmeninize sorun."
   no_course_access_teacher: "Bu derse erişiminiz bulunmamaktadır. Bu derse erişiminizin olması gerektiğini düşünüyorsanız, lütfen durumu düzeltebilmemiz için support@code.org adresine yazın."
   no_script_access_student: "Bu üniteye erişiminiz bulunmamaktadır. Lütfen hangi ünitede olmanız gerektiğini öğretmeninize sorun."
@@ -1010,7 +1094,7 @@ tr:
   no_exemplar_access_student: "Öğrenciler örnek koda erişemez. Lütfen öğretmeninize hangi seviyede olmanız gerektiğini sorun."
   no_exemplar_access_teacher: "Örnek koda yalnızca doğrulanmış öğretmenler erişebilir. Doğrulanmış bir öğretmen olmak istiyorsanız, lütfen support@code.org adresine yazın."
   return_unit_overview: 'Ünite genel bakışına git'
-  return_course_overview: 'Ünite genel bakışına git'
+  return_course_overview: 'Kursa genel bakışa git'
   view_all_units: 'Tüm üniteleri göster'
   view_teacher_guide: 'Öğretmen kılavuzunu görüntüle'
   pd:
@@ -1093,7 +1177,7 @@ tr:
         other: "Diğer"
         na: 'Uygulanamaz'
       robotics:
-        grok: 'Grok'
+        grok: 'Grok Öğrenimi'
         kodable: 'Kodlanabilir'
         lego: 'LEGO Eğitimi'
         microbit: 'Microbit'
@@ -1107,7 +1191,8 @@ tr:
         csf_af: 'Bilgisayar Bilimi Temelleri (Dersler A-F)'
         csf_express: 'Bilgisayar Bilimleri Temelleri (Hızlandırma Öncesi veya Hızlandırılmış)'
         csd: 'Bilgisayar Bilimi Keşifleri'
-        csp: ''' 16 - 17'' Bilgisayar bilimleri ilkeleri'
+        csp: 'BB (Bilgisayar Bilimleri) İlkeleri'
+        other: 'Diğer'
         not_applicable: "Uygulanamaz"
       email_opt_in:
         opt_in_yes: 'Evet'
@@ -1129,6 +1214,25 @@ tr:
     no_teacher_email:
       body_markdown: 'Hesabınızı e-posta adresi bulunmamaktadır. Bu formu tamamlamadan önce e-posta adresinizi eklemek için lütfen [hesap ayarlarınızı ziyaret edin](%{user_registration}).'
   courses_category: 'Tüm Kurslar'
+  course_offering:
+    headers:
+      favorites: 'Sık Kullanılanlar'
+      labs_and_skills: 'Laboratuvarlar ve Beceriler'
+      minecraft: 'Minecraft'
+      hello_world: 'Merhaba Dünya'
+      popular_media: 'Popüler Medya'
+      sports: 'Spor'
+      express: 'Hızlı'
+      csf: 'Bilgisayar bilimleri temelleri'
+      csc: 'Bilgisayar Bilimi Bağlantıları'
+      year_long: 'Yıl boyu'
+      csa_labs: 'CSA Labs'
+      self_paced: 'Kendi kendine tempolu'
+      teacher_led: 'Öğretmen liderliğinde'
+      collections: 'Koleksiyonlar'
+      workshops_k5: 'K-5 Atölyeleri'
+      summer_workshops_612: '6-12 Yaz Atölyeleri'
+      virtual_academic_year_workshops_612: '6-12 Sanal Akademik Yıl Atölyeleri'
   cookie_banner:
     message: 'Sitemize göz atmaya devam ederek veya "Kabul Ediyorum"a tıklayarak, bilgisayarınızdaki veya cihazınızdaki çerezlerin depolanmasını kabul etmiş olursunuz.'
     more_information: "Code.org'un Gizlilik Politikasına bakın."
@@ -1138,7 +1242,7 @@ tr:
   page_not_found_description: "Aradığınız sayfa bu adreste bulunmuyor. Web adresini kontrol edip yeniden gönderin. Veya anasayfamıza geri dönün."
   page_not_found_button: "Anasayfaya Dön"
   copy: 'Kopyala'
-  confirm: 'onaylayın'
+  confirm: 'Onayla'
   maker:
     google_oauth:
       login_with_google: 'Google ile Maker App''e giriş'
@@ -1148,14 +1252,14 @@ tr:
       error_wrong_provider: 'Yanlış sağlayıcı. Lütfen Google ile giriş yaptığınızdan emin olun.'
       error_invalid_user: 'Geçersiz kullanıcı kimliği. Lütfen yeniden giriş yapmayı deneyin.'
       error_no_code: 'Lütfen giriş kodunuzu girin.'
-      confirm_login: 'Google hesabınız ile giriş yapmak için "Doğrula"yı seçin.'
+      confirm_login: 'Google hesabınız ile giriş yapmak için "Onayla"yı seçin.'
   parent_email_banner:
     text: "** Ebeveyn veya veli misiniz? ** Çocuğunuzun gelişimi ve projeleri hakkında bilgi almak için e-postanızı bu hesaba bağlayın!"
     link_your_email: "E-postanızı bağlayın"
     not_now: "Şimdi değil"
   behaviors:
     this_sprite: "bu hareketli nesne"
-  unit_prefix: "Birim %{n}"
+  unit_prefix: "Ünite %{n}"
   code_org_logo_alt: "Code.org Ana Sayfası"
   teacher_feedback: "Öğretmen Geribildirimi"
   lesson_lock:
@@ -1166,13 +1270,13 @@ tr:
       forbidden: "Kullanıcı, öğrencinin kilitlenebilme durumunu güncelleyemez"
   reset_predict_progress_button: "Yanıtı Sil"
   pixelation:
-    raw_format: "Ham Format"
+    raw_format: "Ham Biçim"
     raw_format_alt: "Bitleri herhangi bir biçimlendirme olmadan görüntüleyin"
     readable_format: "Okunabilir Biçim"
     readable_format_alt: "Pikselle ayrılmış bitleri görüntüleyin"
     save_image: "Resmi kaydet"
     actual_size: "Gerçek boyut"
-    image_file_format_header: "Görüntü Dosyası Biçimi"
+    image_file_format_header: "Resim Dosyası Biçimi"
     image_file_format_width: "Genişlik: 1 bayt"
     image_file_format_height: "Yükseklik: 1 bayt"
     image_file_format_bits_per_pixel: "Piksel başına bit: 1 bayt"

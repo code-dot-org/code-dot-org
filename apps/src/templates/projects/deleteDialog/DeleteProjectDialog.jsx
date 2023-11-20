@@ -13,7 +13,7 @@ class DeleteProjectDialog extends Component {
     projectId: PropTypes.string,
     isDeletePending: PropTypes.bool,
     onClose: PropTypes.func.isRequired,
-    deleteProject: PropTypes.func.isRequired
+    deleteProject: PropTypes.func.isRequired,
   };
 
   close = () => this.props.onClose();
@@ -32,17 +32,15 @@ class DeleteProjectDialog extends Component {
         <div style={{marginBottom: 10}}>{i18n.deleteProjectConfirm()}</div>
         <DialogFooter>
           <Button
-            __useDeprecatedTag
             text={i18n.dialogCancel()}
             onClick={this.close}
             color={Button.ButtonColor.gray}
             className="no-mc"
           />
           <Button
-            __useDeprecatedTag
             text={i18n.delete()}
             onClick={this.delete}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="no-mc ui-confirm-project-delete-button"
             isPending={this.props.isDeletePending}
             pendingText={i18n.deleting()}
@@ -57,8 +55,8 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
-  }
+    paddingBottom: 20,
+  },
 };
 
 export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
@@ -67,7 +65,7 @@ export default connect(
   state => ({
     isOpen: state.deleteDialog.isOpen,
     isDeletePending: state.deleteDialog.isDeletePending,
-    projectId: state.deleteDialog.projectId
+    projectId: state.deleteDialog.projectId,
   }),
   dispatch => ({
     onClose() {
@@ -75,6 +73,6 @@ export default connect(
     },
     deleteProject(projectId) {
       return dispatch(deleteProject(projectId));
-    }
+    },
   })
 )(DeleteProjectDialog);

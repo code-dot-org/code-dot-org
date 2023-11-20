@@ -31,3 +31,5 @@ When counting in binary, we always start with one value (2^0 = 1).  In this exam
 Therefore you must begin your switch count with an exponent of 1 (2^1 or 2) and not 0 (2^0 ). When you 9 switches starting at an exponent of 1, you will get 2^9 or 512.
 
 MARKDOWN
+
+allow_multiple_attempts true

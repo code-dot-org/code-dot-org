@@ -2,7 +2,7 @@
 // render errors and other problems.
 import {
   throwOnConsoleErrorsEverywhere,
-  clearTimeoutsBetweenTests
+  clearTimeoutsBetweenTests,
 } from '../util/testUtils';
 import testStorybook from './util/testStorybook';
 import $ from 'jquery';
@@ -10,7 +10,7 @@ import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
-describe('react-storybook stories render without errors or warnings', function() {
+describe('react-storybook stories render without errors or warnings', function () {
   throwOnConsoleErrorsEverywhere();
 
   // TODO: Add warnings back once redux/react-redux have been upgraded.

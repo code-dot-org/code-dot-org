@@ -20,6 +20,10 @@ zu:
   errors:
     messages:
       not_saved: 'Please correct the following errors:'
+  activerecord:
+    attributes:
+      user:
+        finish_sign_up_header_error: 'Please correct the following errors:'
   cancel: "Hoxisa"
   continue: 'Qhubeka'
   signup_form:

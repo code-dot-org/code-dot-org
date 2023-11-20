@@ -5,9 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching a Programming Lesson 
 
-## What is my role as the teacher?
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-##### As the facilitator of learning, your role as the teacher is to create opportunities for students to engage with their neighbors, for the class to pause and reflect as they work, and to offer just-in-time feedback. Lessons within this curriculum are not designed as self-paced learning experiences for students to complete in isolation. Although lesson plans are provided, the teacher has the critical task of making the learning experience come alive for students. 
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">As the facilitator of learning, your role as the teacher is to create opportunities for students to engage with their neighbors, for the class to pause and reflect as they work, and to offer just-in-time feedback. Lessons within this curriculum are not designed as self-paced learning experiences for students to complete in isolation. Although lesson plans are provided, the teacher has the critical task of making the learning experience come alive for students. 
+</p></div>
 
 ## Types of Levels
 
@@ -26,7 +27,7 @@ markdown <<MARKDOWN
 
 * ##### **Challenges:** Students are given more open-ended tasks to complete as an extension of the skills they’ve learned in the lesson. Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson.
 
-### <a href="https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview" target="blank" rel="noopener noreferrer">Click here</a> to read the full Guide to Programming Lessons.
+### <a href="https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view" target="blank" rel="noopener noreferrer">Click here</a> to read the full Guide to Programming Lessons.
 
 
 

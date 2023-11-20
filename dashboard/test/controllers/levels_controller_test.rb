@@ -8,7 +8,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-    Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
+    Policies::LevelFiles.stubs(:write_to_file?).returns(false) # don't write to level files
 
     @level = create(:level)
     @partner_level = create :level, editor_experiment: 'platformization-partners'
@@ -76,6 +76,16 @@ class LevelsControllerTest < ActionController::TestCase
     )
   end
 
+  test "should return level_properties " do
+    level = create :maze, name: 'music 1', properties: {level_data: {hello: "there"}, other: "other"}
+
+    get :level_properties, params: {id: level}
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal({"levelData" => {"hello" => "there"}, "other" => "other", "preloadAssetList" => nil, "type" => "Maze", "appName" => "maze", "useRestrictedSongs" => false}, body)
+  end
+
   test "should get filtered levels with just page param" do
     get :get_filtered_levels, params: {page: 1}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
@@ -124,7 +134,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should get index" do
     get :index, params: {game_id: @level.game}
     assert_response :success
-    assert_not_nil assigns(:levels)
+    refute_nil assigns(:levels)
   end
 
   test_user_gets_response_for(
@@ -484,7 +494,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should create and destroy custom level with level file" do
     # Enable writing custom level to file for this specific test only
-    Level.any_instance.stubs(:write_to_file?).returns(true)
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
 
     level_name = 'TestCustomLevel'
     begin
@@ -494,12 +504,11 @@ class LevelsControllerTest < ActionController::TestCase
         program: @program
       }
       level = Level.find_by(name: level_name)
-      file_path = Level.level_file_path(level.name)
+      file_path = Policies::LevelFiles.level_file_path(level)
       assert_equal true, file_path && File.exist?(file_path)
       delete :destroy, params: {id: level}
       assert_equal false, file_path && File.exist?(file_path)
     ensure
-      file_path = Level.level_file_path(level_name)
       File.delete(file_path) if file_path && File.exist?(file_path)
     end
   end
@@ -700,7 +709,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load file contents when editing a dsl defined level" do
-    level_path = 'config/scripts/test_demo_level.external'
+    level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -713,7 +722,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
-    level_path = 'config/scripts/test_external_markdown.external'
+    level_path = "#{Rails.root}/config/scripts/test_external_markdown.external"
     contents = File.read(level_path)
     data, _ = External.parse(contents, level_path)
     External.setup data
@@ -722,15 +731,15 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
 
     assert_equal level_path, assigns(:level).filename
-    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split(" ").first
-    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split(" ").first
+    assert_equal "name", assigns(:level).dsl_text.split("\n").first.split.first
+    assert_equal "encrypted", assigns(:level).dsl_text.split("\n")[1].split.first
   end
 
   test "should allow rename of new level" do
     get :edit, params: {id: @level.id}
     assert_response :success
     assert_includes @response.body, @level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of level in launched or pilot script" do
@@ -764,12 +773,12 @@ class LevelsControllerTest < ActionController::TestCase
     get :edit, params: {id: level.id}
     assert_response :success
     assert_includes @response.body, level.name
-    assert_not_includes @response.body, 'level cannot be renamed'
+    refute_includes @response.body, 'level cannot be renamed'
   end
 
   test "should prevent rename of stanadalone project level" do
     level_name = ProjectsController::STANDALONE_PROJECTS.values.first[:name]
-    create(:level, name: level_name) unless Level.where(name: level_name).exists?
+    create(:level, name: level_name) unless Level.exists?(name: level_name)
     level = Level.find_by(name: level_name)
 
     get :edit, params: {id: level.id}
@@ -851,7 +860,7 @@ class LevelsControllerTest < ActionController::TestCase
     level = create(:artist)
     get :edit, params: {id: level}
     css = css_select "form[action=\"#{level_path(level)}\"]"
-    assert_not css.empty?
+    refute css.empty?
   end
 
   test "should use first skin as default" do
@@ -955,14 +964,14 @@ class LevelsControllerTest < ActionController::TestCase
   test "should update karel data properly" do
     game = Game.find_by_name("CustomMaze")
     maze_array = [
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 2}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 1, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 2, "range": 1}, {"tileType": 1, "featureType": 2, "value": 1, "cloudType": 3, "range": 1}, {"tileType": 1, "featureType": 1, "value": 1, "cloudType": 4, "range": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 1}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}],
-      [{"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}, {"tileType": 0}]
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 2}, {tileType: 1, featureType: 2, value: 1, cloudType: 1, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 2, range: 1}, {tileType: 1, featureType: 2, value: 1, cloudType: 3, range: 1}, {tileType: 1, featureType: 1, value: 1, cloudType: 4, range: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 1}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}],
+      [{tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}, {tileType: 0}]
     ]
     post :create, params: {
       level: {

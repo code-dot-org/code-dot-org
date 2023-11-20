@@ -5,19 +5,11 @@ ne:
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       BadGuys_setSize_dropdown:
         options:
           SIZE:
-            '0.50': extra small
-            '0.75': small
             '1.00': medium
-            '2.00': large
-            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -56,6 +48,11 @@ ne:
           UNIT:
             '"measures"': मापनहरु
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': मापनहरु
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: परिवर्तन
         options:
@@ -88,6 +85,25 @@ ne:
             MOVES.Clown: गमनम
             MOVES.Kick: तारा
             MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_changeMoveEachLR_slothcat:
+        text: सधैंभरिलाई
+        options:
+          GROUP:
+            '"SLOTH"': स्लथ्स
+          MOVE:
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
       Dancelab_changeMoveLR:
         text: सधैंलाई
         options:
@@ -302,6 +318,10 @@ ne:
         options:
           EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"rand"': अनियमित
@@ -534,9 +554,7 @@ ne:
       gamelab_makeSpritesWithSize:
         options:
           SIZE:
-            '30': small
             '50': medium
-            '100': large
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -570,10 +588,7 @@ ne:
       gamelab_setDefaultSpriteSize:
         options:
           SIZE:
-            '25': extra small
-            '50': small
             '75': medium
-            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -585,10 +600,7 @@ ne:
           PROPERTY:
             '"scale"': size
           SIZE:
-            '25': extra small
-            '50': small
             '75': medium
-            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:

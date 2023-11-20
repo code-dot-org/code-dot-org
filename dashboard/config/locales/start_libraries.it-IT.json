@@ -1,0 +1,39 @@
+{
+  "it-IT": {
+    "data": {
+      "start_libraries": {
+        "LLM - Written Voice Simulator_ai23": {
+          "I18n_HAIW23L4": {
+            "newBackButton_19": "Indietro"
+          }
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Cibo",
+            "PEOPLE": "Persone",
+            "allButtonText": "Tutti",
+            "startTitleLabel_0": "Consigli sui video di WeTube (versione beta)"
+          }
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "I18n_HAIW23L3": {
+            "FOOD": "Cibo",
+            "PEOPLE": "Persone",
+            "allButtonText": "Tutti",
+            "startTitleLabel_0": "Consigli sui video di WeTube (versione beta)"
+          }
+        },
+        "Noisy Image Widget_ai23": {
+          "I18n_HAIW23L5": {
+            "loadingScreen_4": "Sii paziente! Caricamento di immagini rumorose!"
+          }
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "I18n_HAIW23L6": {
+            "resetBtn_8": "Ricomincia"
+          }
+        }
+      }
+    }
+  }
+}

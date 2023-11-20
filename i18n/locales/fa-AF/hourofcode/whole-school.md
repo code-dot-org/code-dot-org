@@ -1,5 +1,5 @@
 ---
-title: Whole School Participation
+title: مشارکت کل مدرسه
 ---
 
 {{ signup_button }}

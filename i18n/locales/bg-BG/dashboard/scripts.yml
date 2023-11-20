@@ -63,6 +63,7 @@ bg:
           description: Научете функционално програмиране чрез алгебра.
           description_short: Научете функционално програмиране чрез алгебра.
           student_description: Научете функционално програмиране чрез алгебра.
+          name: алгебра
         infinity:
           title: Дисни Инфинити Игрална лаборатория
           description: Използвайте "Игрална лаборатория", за да създадете история или игра с участието на героите от Дисни Инфинити.
@@ -93,6 +94,7 @@ bg:
           description_short: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3.
           description_audience: Възраст 10 + (след курс 3)
           student_description: Този 20-часов курс покрива основите на Компютърните Науки и концепциите за програмиране от курсове 2-3. Курсът е предназначен най-вече за използване  от  учениците на възраст 10 -18 години. Проверете курсове 2-4 за по-задълбочено обучение.
+          name: 20-часа
         edit-code:
           title: Редактиране на кода
           description: Редактиране на кода
@@ -234,6 +236,9 @@ bg:
           description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
           description_short: Всички типове нива за тестване на потребителски интерфейс
           student_description: Всички типове нива за тестване на потребителски интерфейс. Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата работят само ако сте в профила си).
+          lessons:
+            lesson-49:
+              name: Музика
         algebraPD2b:
           title: Компютърни науки в алгебрата
           description: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -291,6 +296,7 @@ bg:
           description_short: Създай история или си направи игра с Гъмбол в игралната лаборатория!
           student_description: Създай история или си направи игра с Гъмбол в игралната лаборатория!
         starwars:
+          title: 'Междузвездни войни: Изграждане на галактика с код (JavaScript)'
           description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
@@ -299,7 +305,7 @@ bg:
           description_short: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
           student_description: Научете се да програмирате дроиди и създайте своя собствена игра "Междузвездни войни" в галактиката далече, далече.
         mc:
-          title: Minecraft Hour of Code
+          title: Minecraft авантюрист
           description: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
           description_short: Изследвайте Minecraft света чрез код.
           student_description: Използвайте блокове с код, за да въведете Steve или Alex в приключението чрез този Minecraft свят.
@@ -382,6 +388,8 @@ bg:
               display_name: Учителски практики
         CSDU1-Draft:
           description_short: Разрешаване на Проблеми
+        CSDU2-Draft:
+          description_short: Уеб Разработка
         CSDU5-Draft:
           description_short: Данни
         CSF_Secret_Sample_Story:
@@ -401,10 +409,13 @@ bg:
         gradeKinder:
           description_audience: Възраст 5 + (необходими са умения за четене)
         grade4:
+          title: Клас 4
           description_audience: Възраст 9-99
         grade1:
+          title: Клас 1
           description_audience: Възраст 5 + (необходими са умения за четене)
         grade5:
+          title: Клас 5
           description_audience: Възраст 10-110
         ecs-unit2:
           description: 'Раздел 2: Решаване на проблеми'
@@ -423,6 +434,7 @@ bg:
           description_short: 'Раздел 6: роботика'
           student_description: 'Раздел 6: роботика'
         grade3:
+          title: Клас 3
           description_audience: Възраст 5 + (необходими са умения за четене)
         alltheplcthings:
           lesson_groups:
@@ -437,6 +449,7 @@ bg:
             cspSurvey:
               display_name: Проучване
         grade2:
+          title: Клас 2
           description_audience: Възраст 5 + (необходими са умения за четене)
         algebrapdnext:
           description: Научи алгебра чрез функционално програмиране
@@ -484,12 +497,16 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-draft:
           lesson_groups:
             content:
               display_name: Съдържание
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         classic-hoc-impact-study:
           description_short: Опитайте основите на програмирането с много забавни герои!
         hoc-impact-study:
@@ -518,6 +535,8 @@ bg:
               display_name: Учителски практики
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             content:
               display_name: Съдържание
         csp5-support:
@@ -538,6 +557,8 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+        csd2-old:
+          description_short: Уеб Разработка
         coursea-2017:
           title: Курс A
           assignment_family_title: Курс A
@@ -554,11 +575,16 @@ bg:
           title: Курс E
           assignment_family_title: Курс E
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-2017:
           title: Курс F
           assignment_family_title: Курс F
+          lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp-ap:
           lesson_groups:
             csp_ap_1:
@@ -639,6 +665,8 @@ bg:
           lesson_groups:
             content:
               display_name: Съдържание
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp3-research-mxghyt:
           description_short: Програмиране
           description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
@@ -648,16 +676,26 @@ bg:
           student_description: Тази част въвежда фундаменталните концепции за компютърно програмиране, което отключва възможността да се правят богати, интерактивни приложения. Този курс използва JavaScript като език за програмиране, както и Ап лабораторията като програмната среда за изграждане на приложения, но концепцията, която ще научите в тези уроци обхваща всички езици за програмиране и инструменти.
         e-f-ramp:
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         new-express:
           lesson_groups:
             content:
               display_name: Съдържание
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         new-e:
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
+        new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         hero:
           title: 'Minecraft: Пътуването на героя'
           description_short: Minecraft се завръща с чисто нова дейност за часът на кода!
@@ -674,8 +712,14 @@ bg:
               display_name: Проучване
         course-e-2018:
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
+        course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
@@ -708,11 +752,16 @@ bg:
           title: Курс E (2018)
           assignment_family_title: Курс E
           lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             extra_course_content:
               display_name: Допълнително учебно съдържание
         coursef-2018:
           title: Курс F (2018)
           assignment_family_title: Курс F
+          lesson_groups:
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -902,8 +951,13 @@ bg:
               display_name: Спрайт
             csf_digcit:
               display_name: Цифрови граждани
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+        dance-low:
+          description_short: Кодирай свое танцово парти, за да споделиш с приятели! (Тази версия е за бавни връзки)
         coursed-2019:
           title: Курс D (2019)
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
           lesson_groups:
             csf_events:
               display_name: Събития
@@ -915,6 +969,8 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursee-2019:
           title: Курс E (2019)
           lesson_groups:
@@ -926,8 +982,13 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         express-2019:
+          title: Експресен Курс (2019)
           lesson_groups:
+            csf_warmup:
+              display_name: Загрявка
             csf_loops:
               display_name: Повторения
             csf_conditionals:
@@ -940,16 +1001,20 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
+          name: експрес-2019
         csd1-2019:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
         andrea-test:
+          title: андреа-тест
+          description_short: това е да тествам уменията си в правенето на курс
           lesson_groups:
             required:
               display_name: Общ преглед
             content:
               display_name: Съдържание
+          name: андреа-тест
         dance-extras-gallery:
           title: Продължавай Да Танцуваш
         coursec-2019:
@@ -965,6 +1030,8 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -995,11 +1062,14 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
+          name: преди-експрес-2019
         csd2-2019:
+          title: ОКН Урок 2 - Уеб Разработка ('19-'20)
           lesson_groups:
             cspSurvey:
               display_name: Проучване
         csd3-2019:
+          title: ОКН Урок 3 - Анимации и Игри ('19-'20)
           lesson_groups:
             cspSurvey:
               display_name: Проучване
@@ -1073,6 +1143,7 @@ bg:
             required:
               display_name: Общ преглед
         time4csdemo:
+          description_audience: 4ти клас
           lesson_groups:
             csf_sprites:
               display_name: Спрайт
@@ -1310,6 +1381,8 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1411,8 +1484,11 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursed-2020:
           title: Курс D (2020)
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
           lesson_groups:
             csf_events:
               display_name: Събития
@@ -1424,6 +1500,8 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursee-2020:
           title: Курс E (2020)
           lesson_groups:
@@ -1435,6 +1513,8 @@ bg:
               display_name: Вмъкнати цикли
             csf_functions:
               display_name: Функции
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursef-2020:
           title: Курс F (2020)
           lesson_groups:
@@ -1448,8 +1528,12 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         express-2020:
           lesson_groups:
+            csf_warmup:
+              display_name: Загрявка
             csf_loops:
               display_name: Повторения
             csf_conditionals:
@@ -1462,6 +1546,8 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -1623,6 +1709,8 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
+            lessonGroup-5:
+              display_name: Проект за Края на Курса
         courseb-2021:
           title: Курс B (2021)
           lesson_groups:
@@ -1633,6 +1721,7 @@ bg:
             csf_events:
               display_name: Събития
             lessonGroup-6:
+              display_name: Проект за Края на Курса
               description: "![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)"
         coursec-2021:
           title: Курс C (2021)
@@ -1647,7 +1736,10 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursed-2021:
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
           lesson_groups:
             csf_events:
               display_name: Събития
@@ -1659,6 +1751,8 @@ bg:
               display_name: Двоичен код
             csf_digcit:
               display_name: Цифрови граждани
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             lessonGroup-6:
               display_name: Цифрови граждани
         coursee-2021:
@@ -1673,6 +1767,8 @@ bg:
               display_name: Условия
             csf_functions:
               display_name: Функции
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursef-2021:
           title: Курс F (2021)
           lesson_groups:
@@ -1686,6 +1782,8 @@ bg:
               display_name: Данни и Симулации
             csf_for_loops:
               display_name: За циклите
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             lessonGroup-8:
               display_name: Променливи
             lessonGroup-9:
@@ -1706,6 +1804,8 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
+            end_of_course_project:
+              display_name: Проект за Края на Курса
             lessonGroup-9:
               display_name: Събития
         pre-express-2021:
@@ -1734,6 +1834,10 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+        contagion-pilot:
+          description_audience: Клас 5
+        contagion-guided-practice:
+          description_audience: 5ти клас
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -1784,6 +1888,9 @@ bg:
               display_name: Урок 4
             Lesson 5:
               display_name: Урок 5
+          description_audience: Клас 4, Клас 5
+        fancygeometry-pilot:
+          description_audience: Клас 3, Клас 4
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -1877,6 +1984,8 @@ bg:
               display_name: Съдържание
             lessonGroup-2:
               display_name: Съдържание
+        ai-ethics:
+          description_audience: класове 6-12
         spelling-bee:
           title: Правопис
         outbreak-csc:
@@ -1900,7 +2009,7 @@ bg:
         2022drafting:
           lesson_groups:
             lessonGroup-8:
-              display_name: Hour of Code
+              display_name: Час на Кода
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1911,6 +2020,8 @@ bg:
               display_name: Спрайт
             lessonGroup-3:
               display_name: Променливи
+            lessonGroup-4:
+              display_name: Проект за Края на Курса
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1931,6 +2042,8 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
+            lessonGroup-5:
+              display_name: Проект за Края на Курса
         express-2022:
           lesson_groups:
             csf_sprites:
@@ -1947,6 +2060,8 @@ bg:
               display_name: Променливи
             csf_for_loops:
               display_name: За циклите
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -1983,6 +2098,8 @@ bg:
               display_name: Повторения
             csf_events:
               display_name: Събития
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
         coursec-2022:
           lesson_groups:
             csf_digcit:
@@ -1993,6 +2110,8 @@ bg:
               display_name: Събития
             csf_data:
               display_name: Данни
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -2007,6 +2126,9 @@ bg:
               display_name: Повторения
             csf_conditionals:
               display_name: Условия
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
         coursee-2022:
           lesson_groups:
             csf_sprites:
@@ -2019,6 +2141,8 @@ bg:
               display_name: Функции
             csf_nested_loops:
               display_name: Условия
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         coursef-2022:
           lesson_groups:
             ramp_up:
@@ -2029,6 +2153,8 @@ bg:
               display_name: Променливи
             csf_data:
               display_name: Данни и Симулации
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csa1-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2079,6 +2205,8 @@ bg:
               display_name: Променливи
             csf_data:
               display_name: Данни и Симулации
+            end_of_course_project:
+              display_name: Проект за Края на Курса
         csa6-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2109,6 +2237,7 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+          title: Уеб Разработка ('22-'23)
         csd3-2022:
           lesson_groups:
             cspSurvey:
@@ -2117,18 +2246,23 @@ bg:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+          title: Процесът на Дизайн ('22-'23)
         csd5-2022:
           lesson_groups:
             cspSurvey:
               display_name: Проучване
+          title: Данни и Обществото ('22-'23)
         csd7-2022:
           lesson_groups:
             lessonGroup-4:
               display_name: Проучване
         csd6-2022:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
             lessonGroup-4:
               display_name: Проучване
+          title: Физично Изчисление ('22-'23)
         soccer:
           name: футбол
         csa1-validation-pilot-2022:
@@ -2185,10 +2319,54 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa3-2023:
+          lessons:
+            lesson-1:
+              name: Едномерни (1D) Масиви
+            lesson-3:
+              name: За циклите
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa4-2023:
+          lessons:
+            lesson-9:
+              name: Случаен
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+            lessonGroup-4:
+              display_name: Проучване
         csd1-2023:
-          title: Разрешаване на Проблеми
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
         csd7-2023:
           title: AI и Машинно Обучение
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
         csp1-2023:
           lesson_groups:
             cspSurvey:
@@ -2212,12 +2390,322 @@ bg:
         csp5-2023:
           lesson_groups:
             csp_lists:
-              display_name: Списъци
+              display_name: Данни
             csp_loops:
               display_name: Повторения
             csp_project:
+              display_name: Проект
+        csp6-2023:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Списъци
+            lessonGroup-3:
+              display_name: Повторения
+            lessonGroup-5:
               display_name: Проект
         csp9-2023:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+        angelina-playground:
+          lessons:
+            lesson-5:
+              name: Оценки
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+        tess-testing-problem-solving-2023:
+          title: Разрешаване на Проблеми
+        testing-focus-on-creativity1:
+          title: Разрешаване на Проблеми
+        testing-focus-on-creativity2:
+          title: Уеб Разработка
+        pre-express-2023:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        express-2023:
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
+            lessonGroup-9:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+        coursea-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            lessonGroup-5:
+              display_name: Проект за Края на Курса
+        courseb-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
+        coursec-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+        coursed-2023:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрови граждани
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
+        coursee-2023:
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_sprites:
+              display_name: Спрайт
+            ramp_up:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+            csf_nested_loops:
+              display_name: Условия
+            end_of_course_project:
+              display_name: Проект за Края на Курса
+        web-development-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        interactive-games-animations-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        design-process-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        data-society-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+          title: AI и Машинно Обучение
+        focus-on-creativity1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+        focus-on-hardware1-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+        focus-on-data1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        focus-on-data3-2023:
+          title: AI и Машинно Обучение
+        focus-on-design-with-purpose1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+        focus-on-coding1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+        focus-on-impact-in-society1-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Проучване
+        focus-on-impact-in-society4-2023:
+          title: AI и Машинно Обучение
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Вход и Изход'
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Проучване
+        devices-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 1: Вход и Изход'
+            lessonGroup-5:
+              display_name: Проучване
+        pl-csd-summer-day1:
+          lessons:
+            lesson-3:
+              name: Въведение
+        virtual-pl-csd-summer-day1:
+          lessons:
+            lesson-1:
+              name: Въведение
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Оценка
+        coursef-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-3:
+              display_name: Спрайт
+            lessonGroup-4:
+              display_name: Променливи
+            lessonGroup-5:
+              display_name: Данни и Симулации
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
+        csa-frq-practice:
+          lessons:
+            lesson-2:
+              name: Разделители
+        csa-frq-practice-2022:
+          lessons:
+            lesson-4:
+              name: Данни
+        test-nv-coursea-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+        nevada-standards-aligned-kindergarten-2023:
+          lessons:
+            lesson-1:
+              name: Данни
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Данни
+        nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Данни
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-6:
+              display_name: Събития
+            lessonGroup-7:
+              display_name: Проект за Края на Курса
+            lessonGroup-8:
+              display_name: Данни
+        nevada-standards-aligned-second-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-4:
+              display_name: Повторения
+            lessonGroup-5:
+              display_name: Събития
+            lessonGroup-6:
+              display_name: Данни
+        nevada-standards-aligned-third-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Цифрови граждани
+            lessonGroup-6:
+              display_name: Повторения
+            lessonGroup-7:
+              display_name: Данни
+            lessonGroup-8:
+              display_name: Проект за Края на Курса
+          description_short: Научете за условни твърдения. Създайте свои собствени творби, игри и дори танцови партита.
+        nevada-standards-aligned-fourth-grade-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Вмъкнати цикли
+            lessonGroup-4:
+              display_name: Функции
+            lessonGroup-5:
+              display_name: Данни и Симулации
+            lessonGroup-6:
+              display_name: Проект за Края на Курса
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+        nevada-standards-aligned-fifth-grade-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+            lessonGroup-3:
+              display_name: Условия
+            lessonGroup-4:
+              display_name: Данни и Симулации
+            lessonGroup-5:
+              display_name: Променливи
+            lessonGroup-7:
+              display_name: Проект за Края на Курса
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Въведение
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Въведение
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Въведение
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Въведение

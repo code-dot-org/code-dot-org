@@ -50,18 +50,18 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
 const ProgrammingEnvironmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
-  descriotion: PropTypes.string,
+  description: PropTypes.string,
   imageUrl: PropTypes.string,
-  showPath: PropTypes.string.isRequired
+  showPath: PropTypes.string.isRequired,
 });
 
 ProgrammingEnvironmentIndex.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(ProgrammingEnvironmentShape)
-    .isRequired
+    .isRequired,
 };
 
 ProgrammingEnvironmentCard.propTypes = {
-  programmingEnvironment: ProgrammingEnvironmentShape
+  programmingEnvironment: ProgrammingEnvironmentShape,
 };
 
 const styles = {
@@ -76,16 +76,16 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   all: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   image: {
-    width: '100%'
+    width: '100%',
   },
   header: {
-    margin: 5
-  }
+    margin: 5,
+  },
 };

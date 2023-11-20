@@ -75,7 +75,7 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_revision_short(project_directory=Dir.pwd)
+  def self.git_revision_short(project_directory = Dir.pwd)
     return nil if project_directory.nil?
     # Cron jobs execute as root and may not be in the current project directory, preventing git commands from working.
     # Eventually other (or all) GitUtils methods may need to explicitly change to the project root, but currently
@@ -93,7 +93,7 @@ module GitUtils
   def self.get_branch_commit_merges(commit)
     commit_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/commits/#{commit}").read)
     commit_json['commit']['message'].match(/from code-dot-org\/(.*)\n\n/)[1]
-  rescue => _
+  rescue
     nil
   end
 

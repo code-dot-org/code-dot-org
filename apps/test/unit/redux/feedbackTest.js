@@ -16,9 +16,9 @@ describe('feedback redux module', () => {
       displayFunometer: true,
       studentCode: {
         message: '',
-        code: ''
+        code: '',
       },
-      feedbackImage: null
+      feedbackImage: null,
     });
   });
 
@@ -30,13 +30,13 @@ describe('feedback redux module', () => {
   describe('action: show and hide feedback', () => {
     const state = {
       displayingFeedback: false,
-      displayingShareControls: false
+      displayingShareControls: false,
     };
     it('sets the displayingFeedback property to true', () => {
       const newState = reducer(state, feedback.showFeedback());
       expect(newState).to.deep.equal({
         displayingFeedback: true,
-        displayingShareControls: false
+        displayingShareControls: false,
       });
     });
 
@@ -45,7 +45,7 @@ describe('feedback redux module', () => {
       const newState = reducer(intermediateState, feedback.hideFeedback());
       expect(newState).to.deep.equal({
         displayingFeedback: false,
-        displayingShareControls: false
+        displayingShareControls: false,
       });
     });
 
@@ -60,7 +60,7 @@ describe('feedback redux module', () => {
       const state = {};
       const newState = reducer(state, feedback.setBlockLimit(42));
       expect(newState).to.deep.equal({
-        blockLimit: 42
+        blockLimit: 42,
       });
     });
 
@@ -68,7 +68,7 @@ describe('feedback redux module', () => {
       const state = {blockLimit: 42};
       const newState = reducer(state, feedback.setBlockLimit(undefined));
       expect(newState).to.deep.equal({
-        blockLimit: undefined
+        blockLimit: undefined,
       });
     });
   });
@@ -84,7 +84,7 @@ describe('feedback redux module', () => {
           blocksUsed: 19,
           displayFunometer: false,
           studentCode: 'console.log("hello world!");',
-          feedbackImage: 'fake_image.png'
+          feedbackImage: 'fake_image.png',
         })
       );
       expect(newState).to.deep.equal({
@@ -93,7 +93,7 @@ describe('feedback redux module', () => {
         blocksUsed: 19,
         displayFunometer: false,
         studentCode: 'console.log("hello world!");',
-        feedbackImage: 'fake_image.png'
+        feedbackImage: 'fake_image.png',
       });
     });
   });

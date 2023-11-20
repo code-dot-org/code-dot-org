@@ -13,7 +13,7 @@ class SourceBucket < BucketHelper
   end
 
   def allowed_file_name?(filename)
-    MAIN_JSON_FILENAME == filename
+    filename == MAIN_JSON_FILENAME
   end
 
   def allowed_file_types
@@ -24,12 +24,16 @@ class SourceBucket < BucketHelper
     0
   end
 
+  def self.main_json_filename
+    MAIN_JSON_FILENAME
+  end
+
   # Copies the given version of the file to make it the current revision.
   # (All intermediate versions are preserved.)
   # Copies the animations at the given version and makes them the current version.
   def restore_previous_version(encrypted_channel_id, filename, version_id, user_id)
     # In most cases fall back on the generic restore behavior.
-    return super(encrypted_channel_id, filename, version_id, user_id) unless MAIN_JSON_FILENAME == filename
+    return super(encrypted_channel_id, filename, version_id, user_id) unless filename == MAIN_JSON_FILENAME
 
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     key = s3_path owner_id, storage_app_id, filename
@@ -52,6 +56,13 @@ class SourceBucket < BucketHelper
           user_id
         )
         psj.set_animation_version(a['key'], anim_response[:version_id])
+      end
+    end
+
+    if psj.in_restricted_share_mode?
+      project = Project.find_by_channel_id(encrypted_channel_id)
+      unless project.published_at.nil?
+        Projects.new(owner_id).unpublish(encrypted_channel_id)
       end
     end
 

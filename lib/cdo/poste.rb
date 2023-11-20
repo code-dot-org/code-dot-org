@@ -30,8 +30,8 @@ module Poste
   # @return [Integer, nil] decrypted id, or nil if it could not be decrypted.
   def self.decrypt_id(encrypted)
     decrypt(encrypted).to_i
-  rescue OpenSSL::Cipher::CipherError, ArgumentError => e
-    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{e.message}"
+  rescue OpenSSL::Cipher::CipherError, ArgumentError => exception
+    CDO.log.warn "Unable to decrypt poste id: #{encrypted}. Error: #{exception.message}"
     nil
   end
 
@@ -83,7 +83,7 @@ module Poste
   #   WARNING: The contact to unsubscribe is chosen using hashed_email.
   # @param hashed_email [string] the MD5 hash of the email to unsubscribe.
   # @param params [hash] A hash of parameters, including ip_address.
-  def self.unsubscribe(email, hashed_email, params={})
+  def self.unsubscribe(email, hashed_email, params = {})
     email = email.strip.downcase if email
     now = DateTime.now
 
@@ -112,11 +112,11 @@ module Poste
   class Template
     def initialize(path)
       @path = path
-      @template_type = File.extname(path)[1..-1]
+      @template_type = File.extname(path)[1..]
       @header, @html, @text = parse_template(File.read(path))
     end
 
-    def render(params={})
+    def render(params = {})
       if params.key?('form_id')
         form = Form2.from_row(POSTE_DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
@@ -133,9 +133,7 @@ module Poste
       [header, html, text]
     end
 
-    private
-
-    def parse_template(content)
+    private def parse_template(content)
       header = nil
       html = nil
       text = nil
@@ -154,12 +152,12 @@ module Poste
       [header, html, text]
     end
 
-    def render_header(bound, locals={})
+    private def render_header(bound, locals = {})
       return {} unless @header.present?
       YAML.safe_load(renderer.render(inline: @header, type: :erb, locals: locals))
     end
 
-    def render_html(bound, locals={})
+    private def render_html(bound, locals = {})
       return nil unless @html.present?
       # All our emails regardless of the extension they use are parsed as ERB
       # in addition to their regular template type.
@@ -173,12 +171,12 @@ module Poste
       html
     end
 
-    def render_text(bound, locals={})
+    private def render_text(bound, locals = {})
       return nil unless @text.present?
       renderer.render(inline: @text, type: :erb, locals: locals)
     end
 
-    def renderer
+    private def renderer
       @@renderer ||= begin
         require 'cdo/markdown/handler'
         Cdo::Markdown::Handler.register
@@ -294,10 +292,10 @@ class Deliverer
     message.puts ''
     message.puts "--#{marker}--"
 
-    if !rack_env?(:development)
-      @smtp.send_message message.string, from_address[:email], *to_addresses
-    else
+    if rack_env?(:development)
       puts(message.string)
+    else
+      @smtp.send_message message.string, from_address[:email], *to_addresses
     end
   end
 
@@ -311,20 +309,18 @@ class Deliverer
     @templates[name] = Poste::Template.new path
   end
 
-  private
-
-  def format_address(address)
+  private def format_address(address)
     email = address[:email].to_s.strip
     raise ArgumentError, 'No :email' if email.empty?
 
     name = address[:name].to_s.strip
     return email if name.empty?
 
-    name = "\"#{name.tr('"', '\"').tr("'", "\'")}\"" if /[;,\"\'\(\)]/.match?(name)
+    name = "\"#{name.tr('"', '\"').tr("'", "'")}\"" if /[;,\"\'\(\)]/.match?(name)
     "#{name} <#{email}>".strip
   end
 
-  def parse_address(address, defaults={})
+  private def parse_address(address, defaults = {})
     address = address.to_s.strip
     return parse_email_address_string(address) unless address.empty?
 
@@ -353,7 +349,7 @@ class Deliverer
     'end of file reached'
   ].map(&:freeze).freeze
   RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
-  def smtp_connect
+  private def smtp_connect
     Retryable.retryable(
       tries: CONNECTION_ATTEMPTS,
       on: RETRYABLE_ERROR_TYPES,
@@ -394,7 +390,7 @@ module Poste2
 
   # TODO(asher): Refactor create_recipient and ensure_recipient to share common
   # code.
-  def self.create_recipient(email, params={})
+  def self.create_recipient(email, params = {})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
     raise ArgumentError, "Invalid email address (#{email})" unless email_address?(email)
@@ -432,7 +428,7 @@ module Poste2
   end
 
   DEFAULT_IP_ADDRESS = '127.0.0.1'.freeze
-  def self.ensure_recipient(email, params={})
+  def self.ensure_recipient(email, params = {})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
     raise ArgumentError, 'Invalid email address' unless email_address?(email)
@@ -465,7 +461,7 @@ module Poste2
     # Get directory from settings (locals.yml / globals.yml)
     # If none specified, use ./poste_attachments
     path = CDO.poste_attachment_dir || File.join(Dir.pwd, 'poste_attachments')
-    Dir.mkdir(path) unless Dir.exist?(path)
+    FileUtils.mkdir_p(path)
     path
   end
 
@@ -482,7 +478,7 @@ module Poste2
         # Prevent saving certificates - they are unecessarily filling storage.
         next if name.include?('certificate')
         filename = File.expand_path "#{attachment_dir}/#{timestamp}-#{name}"
-        File.open(filename, 'w+b') {|f| f.write content}
+        File.binwrite(filename, content)
         saved[name] = filename
       end
     end

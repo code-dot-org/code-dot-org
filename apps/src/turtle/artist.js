@@ -45,7 +45,7 @@ var JsInterpreterLogger = require('../JsInterpreterLogger');
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
-  runAfterPostContainedLevel
+  runAfterPostContainedLevel,
 } from '../containedLevels';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
@@ -77,85 +77,85 @@ const REMIX_PROPS = [
   {
     defaultValues: {
       initialX: DEFAULT_X,
-      initialY: DEFAULT_Y
+      initialY: DEFAULT_Y,
     },
     generateBlock: args =>
       blockAsXmlNode('jump_to_xy', {
         titles: {
           XPOS: args.initialX,
-          YPOS: args.initialY
-        }
-      })
+          YPOS: args.initialY,
+        },
+      }),
   },
   {
     defaultValues: {
-      startDirection: DEFAULT_DIRECTION
+      startDirection: DEFAULT_DIRECTION,
     },
     generateBlock: args =>
       blockAsXmlNode('draw_turn', {
         titles: {
-          DIR: 'turnRight'
+          DIR: 'turnRight',
         },
         values: {
           VALUE: {
             type: 'math_number',
             titleName: 'NUM',
-            titleValue: args.startDirection - DEFAULT_DIRECTION
-          }
-        }
-      })
-  }
+            titleValue: args.startDirection - DEFAULT_DIRECTION,
+          },
+        },
+      }),
+  },
 ];
 
 const FROZEN_REMIX_PROPS = [
   {
     defaultValues: {
       initialX: DEFAULT_X,
-      initialY: DEFAULT_Y
+      initialY: DEFAULT_Y,
     },
     generateBlock: args =>
       blockAsXmlNode('jump_to_xy', {
         titles: {
           XPOS: args.initialX,
-          YPOS: args.initialY
-        }
-      })
+          YPOS: args.initialY,
+        },
+      }),
   },
   {
     defaultValues: {
-      startDirection: 180
+      startDirection: 180,
     },
     generateBlock: args =>
       blockAsXmlNode('draw_turn', {
         titles: {
-          DIR: 'turnRight'
+          DIR: 'turnRight',
         },
         values: {
           VALUE: {
             type: 'math_number',
             titleName: 'NUM',
-            titleValue: args.startDirection - 180
-          }
-        }
-      })
+            titleValue: args.startDirection - 180,
+          },
+        },
+      }),
   },
   {
     defaultValues: {
-      skin: 'elsa'
+      skin: 'elsa',
     },
     generateBlock: args =>
       blockAsXmlNode('turtle_setArtist', {
         titles: {
-          VALUE: args.skin
-        }
-      })
-  }
+          VALUE: args.skin,
+        },
+      }),
+  },
 ];
 
 const REMIX_PROPS_BY_SKIN = {
   artist: REMIX_PROPS,
   anna: FROZEN_REMIX_PROPS,
-  elsa: FROZEN_REMIX_PROPS
+  elsa: FROZEN_REMIX_PROPS,
 };
 
 const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
@@ -164,7 +164,7 @@ const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var Artist = function() {
+var Artist = function () {
   this.skin = null;
   this.level = null;
 
@@ -200,7 +200,7 @@ module.exports.Visualization = Visualization;
 /**
  * todo
  */
-Artist.prototype.injectStudioApp = function(studioApp) {
+Artist.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
   this.studioApp_.reset = _.bind(this.resetButtonClick, this);
   this.studioApp_.runButtonClick = _.bind(this.runButtonClick, this);
@@ -218,7 +218,7 @@ Artist.prototype.injectStudioApp = function(studioApp) {
  *         whether they did so successfully or not (or that resolves instantly
  *         if there are no images to load).
  */
-Artist.prototype.preloadAllStickerImages = function() {
+Artist.prototype.preloadAllStickerImages = function () {
   this.stickers = {};
 
   const loadSticker = name =>
@@ -252,7 +252,7 @@ Artist.prototype.preloadAllStickerImages = function() {
  *         whether they did so successfully or not (or that resolves instantly
  *         if there are no images to load).
  */
-Artist.prototype.preloadAllShapeImages = function() {
+Artist.prototype.preloadAllShapeImages = function () {
   this.shapes = {};
 
   const loadShape = name =>
@@ -285,7 +285,7 @@ Artist.prototype.preloadAllShapeImages = function() {
  *         whether they did so successfully or not (or that resolves instantly
  *         if there are no images to load).
  */
-Artist.prototype.preloadAllPatternImages = function() {
+Artist.prototype.preloadAllPatternImages = function () {
   const loadPattern = patternOption =>
     new Promise(resolve => {
       const pattern = patternOption[1];
@@ -311,14 +311,14 @@ Artist.prototype.preloadAllPatternImages = function() {
   }
 };
 
-Artist.prototype.isFrozenSkin = function() {
+Artist.prototype.isFrozenSkin = function () {
   return this.skin.id === 'anna' || this.skin.id === 'elsa';
 };
 
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
-Artist.prototype.init = function(config) {
+Artist.prototype.init = function (config) {
   if (!this.studioApp_) {
     throw new Error('Artist requires a StudioApp');
   }
@@ -342,7 +342,7 @@ Artist.prototype.init = function(config) {
     isK1: config.level.isK1,
     isFrozenSkin: this.isFrozenSkin(),
     decorationAnimationImage: this.decorationAnimationImage,
-    showDecoration: () => this.skin.id === 'elsa'
+    showDecoration: () => this.skin.id === 'elsa',
   });
 
   this.autoRun = experiments.isEnabled('auto-artist') || this.level.autoRun;
@@ -405,7 +405,7 @@ Artist.prototype.init = function(config) {
   return Promise.all([
     this.preloadAllStickerImages(),
     this.preloadAllShapeImages(),
-    this.preloadAllPatternImages()
+    this.preloadAllPatternImages(),
   ]).then(() => {
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -424,7 +424,7 @@ Artist.prototype.init = function(config) {
  * but not set by default, in this case the artist's starting position and
  * orientation.
  */
-Artist.prototype.prepareForRemix = function() {
+Artist.prototype.prepareForRemix = function () {
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   const blocksDocument = blocksDom.ownerDocument;
   const remix_props = REMIX_PROPS_BY_SKIN[this.skin.id] || REMIX_PROPS;
@@ -489,11 +489,14 @@ Artist.prototype.prepareForRemix = function() {
   cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
-  Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
+  Blockly.cdoUtils.loadBlocksToWorkspace(
+    Blockly.mainBlockSpace,
+    Blockly.Xml.domToText(blocksDom)
+  );
   return Promise.resolve();
 };
 
-Artist.prototype.loadAudio_ = function() {
+Artist.prototype.loadAudio_ = function () {
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
@@ -511,14 +514,14 @@ Artist.prototype.loadAudio_ = function() {
  *
  * @return {boolean}
  */
-Artist.prototype.shouldSupportNormalization = function() {
+Artist.prototype.shouldSupportNormalization = function () {
   return this.studioApp_.isUsingBlockly();
 };
 
 /**
  * Code called after the blockly div + blockly core is injected into the document
  */
-Artist.prototype.afterInject_ = function(config) {
+Artist.prototype.afterInject_ = function (config) {
   // Initialize the slider.
   var slider = document.getElementById('slider');
   this.speedSlider = new Slider(10, 35, 130, slider);
@@ -547,7 +550,7 @@ Artist.prototype.afterInject_ = function(config) {
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function() {
+    Blockly.JavaScript.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
@@ -599,7 +602,7 @@ Artist.prototype.afterInject_ = function(config) {
 /**
  * On startup draw the expected answer and save it to the given canvas.
  */
-Artist.prototype.drawAnswer = function(canvas) {
+Artist.prototype.drawAnswer = function (canvas) {
   if (this.level.solutionBlocks) {
     this.drawBlocksOnCanvas(this.level.solutionBlocks, canvas);
   } else {
@@ -611,7 +614,7 @@ Artist.prototype.drawAnswer = function(canvas) {
  * Given a set of commands and a canvas, draws the commands onto the canvas
  * composited over the scratch canvas.
  */
-Artist.prototype.drawLogOnCanvas = function(log, canvas) {
+Artist.prototype.drawLogOnCanvas = function (log, canvas) {
   this.reset();
   while (log.length) {
     var tuple = log.shift();
@@ -626,7 +629,7 @@ Artist.prototype.drawLogOnCanvas = function(log, canvas) {
 /**
  * Evaluates blocks or code, and draws onto given canvas.
  */
-Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
+Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   var code;
   if (this.studioApp_.isUsingBlockly()) {
     var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
@@ -642,7 +645,7 @@ Artist.prototype.drawBlocksOnCanvas = function(blocksOrCode, canvas) {
  * Draws the results of block evaluation (stored on api.log) onto the given
  * canvas.
  */
-Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
+Artist.prototype.drawCurrentBlocksOnCanvas = function (canvas) {
   this.drawLogOnCanvas(this.api.log, canvas);
 };
 
@@ -653,9 +656,9 @@ Artist.prototype.drawCurrentBlocksOnCanvas = function(canvas) {
  * @param {!Array} position An x-y pair.
  * @param {number} optional scale at which image is drawn
  */
-Artist.prototype.placeImage = function(filename, position, scale) {
+Artist.prototype.placeImage = function (filename, position, scale) {
   var img = new Image();
-  img.onload = _.bind(function() {
+  img.onload = _.bind(function () {
     if (img.width !== 0) {
       if (scale) {
         this.visualization.ctxImages.drawImage(
@@ -692,7 +695,7 @@ Artist.prototype.placeImage = function(filename, position, scale) {
 /**
  * Draw the images for this page and level onto this.visualization.ctxImages.
  */
-Artist.prototype.drawImages = function() {
+Artist.prototype.drawImages = function () {
   if (!this.level.images) {
     return;
   }
@@ -712,7 +715,7 @@ Artist.prototype.drawImages = function() {
 /**
  * Initialize the turtle image on load.
  */
-Artist.prototype.loadTurtle = function(initializing = true) {
+Artist.prototype.loadTurtle = function (initializing = true) {
   const onloadCallback = initializing
     ? () => this.visualization.display()
     : () => this.visualization.drawTurtle();
@@ -725,7 +728,7 @@ Artist.prototype.loadTurtle = function(initializing = true) {
 /**
  * Initial the turtle animation deocration on load.
  */
-Artist.prototype.loadDecorationAnimation = function() {
+Artist.prototype.loadDecorationAnimation = function () {
   if (this.skin.id === 'elsa') {
     this.decorationAnimationImage.src = this.skin.decorationAnimation;
   }
@@ -737,7 +740,7 @@ Artist.prototype.loadDecorationAnimation = function() {
  * @param {boolean} ignore Required by the API but ignored by this
  *     implementation.
  */
-Artist.prototype.reset = function(ignore) {
+Artist.prototype.reset = function (ignore) {
   this.visualization.reset(
     this.level.startDirection,
     this.level.initialX,
@@ -770,7 +773,7 @@ Artist.prototype.reset = function(ignore) {
 /**
  * Click the run button.  Start the program.
  */
-Artist.prototype.runButtonClick = function() {
+Artist.prototype.runButtonClick = function () {
   this.shouldAnimate_ = !this.instant_;
   this.studioApp_.toggleRunReset('reset');
   document.getElementById('spinner').style.visibility = 'visible';
@@ -781,7 +784,7 @@ Artist.prototype.runButtonClick = function() {
   this.execute(this.executionInfo);
 };
 
-Artist.prototype.resetButtonClick = function() {
+Artist.prototype.resetButtonClick = function () {
   this.shouldAnimate_ = !this.instant_ && !this.autoRun;
 
   if (this.autoRun) {
@@ -791,14 +794,14 @@ Artist.prototype.resetButtonClick = function() {
   }
 };
 
-Artist.prototype.evalCode = function(code, executionInfo) {
+Artist.prototype.evalCode = function (code, executionInfo) {
   try {
     CustomMarshalingInterpreter.evalWith(code, {
       Turtle: this.api,
       // The default executionInfo modifies itself, make a fresh copy each run
       executionInfo: {
-        ...executionInfo
-      }
+        ...executionInfo,
+      },
     });
   } catch (e) {
     // Infinity is thrown if we detect an infinite loop. In that case we'll
@@ -821,15 +824,15 @@ Artist.prototype.evalCode = function(code, executionInfo) {
 /**
  * Set up the JSInterpreter and consoleLogger for editCode levels
  */
-Artist.prototype.initInterpreter = function() {
+Artist.prototype.initInterpreter = function () {
   if (!this.level.editCode) {
     return;
   }
   this.JSInterpreter = new JSInterpreter({
     studioApp: this.studioApp_,
-    shouldRunAtMaxSpeed: function() {
+    shouldRunAtMaxSpeed: function () {
       return false;
-    }
+    },
   });
   this.JSInterpreter.onExecutionError.register(
     this.handleExecutionError.bind(this)
@@ -838,14 +841,14 @@ Artist.prototype.initInterpreter = function() {
   this.JSInterpreter.parse({
     code: this.studioApp_.getCode(),
     blocks: dropletConfig.blocks,
-    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions
+    blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
   });
 };
 
 /**
  * Handle an execution error from the interpreter
  */
-Artist.prototype.handleExecutionError = function(
+Artist.prototype.handleExecutionError = function (
   err,
   lineNumber,
   outputString
@@ -864,7 +867,7 @@ Artist.prototype.handleExecutionError = function(
 /**
  * Execute the user's code.  Heaven help us...
  */
-Artist.prototype.execute = function(executionInfo) {
+Artist.prototype.execute = function (executionInfo) {
   this.executing = true;
   this.api.log = [];
 
@@ -931,7 +934,7 @@ Artist.prototype.execute = function(executionInfo) {
  * Special case: if we have a turn, followed by a move forward, then we can just
  * do the turn instantly and then begin the move forward in the same frame.
  */
-Artist.prototype.checkforTurnAndMove_ = function() {
+Artist.prototype.checkforTurnAndMove_ = function () {
   var nextIsForward = false;
 
   var currentTuple = this.api.log[0];
@@ -959,7 +962,7 @@ Artist.prototype.checkforTurnAndMove_ = function() {
 /**
  * Attempt to execute one command from the log of API commands.
  */
-Artist.prototype.executeTuple_ = function() {
+Artist.prototype.executeTuple_ = function () {
   if (this.api.log.length === 0) {
     if (!this.shouldAnimate_) {
       this.visualization.display();
@@ -988,7 +991,7 @@ Artist.prototype.executeTuple_ = function() {
 
     // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
     var tupleDone = this.step(command, tuple.slice(1), {
-      smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple
+      smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple,
     });
     if (this.shouldAnimate_) {
       this.visualization.display();
@@ -1006,7 +1009,7 @@ Artist.prototype.executeTuple_ = function() {
 /**
  * Handle the tasks to be done after the user program is finished.
  */
-Artist.prototype.finishExecution_ = function() {
+Artist.prototype.finishExecution_ = function () {
   this.studioApp_.stopLoopingAudio('start');
 
   document.getElementById('spinner').style.visibility = 'hidden';
@@ -1033,7 +1036,7 @@ Artist.prototype.finishExecution_ = function() {
  * Iterate through the recorded path and animate the turtle's actions.
  * @return boolean true if there is more to animate, false if finished
  */
-Artist.prototype.animate = function() {
+Artist.prototype.animate = function () {
   // All tasks should be complete now.  Clean up the PID list.
   this.pid = 0;
 
@@ -1086,7 +1089,7 @@ Artist.prototype.animate = function() {
   return true;
 };
 
-Artist.prototype.calculateSmoothAnimate = function(options, distance) {
+Artist.prototype.calculateSmoothAnimate = function (options, distance) {
   var tupleDone = true;
   var stepDistanceCovered = this.visualization.stepDistanceCovered;
 
@@ -1131,7 +1134,7 @@ Artist.prototype.calculateSmoothAnimate = function(options, distance) {
  * @param {number} fraction How much of this step's distance do we draw?
  * @param {object} single option for now: smoothAnimate (true/false)
  */
-Artist.prototype.step = function(command, values, options) {
+Artist.prototype.step = function (command, values, options) {
   var tupleDone = true;
   var result;
   var distance;
@@ -1168,7 +1171,7 @@ Artist.prototype.step = function(command, values, options) {
       } else {
         this.visualization.jumpTo([
           utils.xFromPosition(values[0], CANVAS_WIDTH),
-          utils.yFromPosition(values[0], CANVAS_HEIGHT)
+          utils.yFromPosition(values[0], CANVAS_HEIGHT),
         ]);
       }
       break;
@@ -1364,7 +1367,7 @@ function scaleToBoundingBox(maxSize, width, height) {
   return {width: newWidth, height: newHeight};
 }
 
-Artist.prototype.selectPattern = function() {
+Artist.prototype.selectPattern = function () {
   if (this.skin.id === 'anna') {
     this.setPattern('annaLine');
   } else if (this.skin.id === 'elsa') {
@@ -1375,7 +1378,7 @@ Artist.prototype.selectPattern = function() {
   }
 };
 
-Artist.prototype.setPattern = function(pattern) {
+Artist.prototype.setPattern = function (pattern) {
   if (this.visualization.shouldDrawNormalized_) {
     pattern = null;
   }
@@ -1395,7 +1398,7 @@ Artist.prototype.setPattern = function(pattern) {
  * @param {number} permittedErrors Number of pixels allowed to be wrong.
  * @return {boolean} True if the level is solved, false otherwise.
  */
-Artist.prototype.isCorrect_ = function(pixelErrors, permittedErrors) {
+Artist.prototype.isCorrect_ = function (pixelErrors, permittedErrors) {
   return pixelErrors <= permittedErrors;
 };
 
@@ -1403,7 +1406,7 @@ Artist.prototype.isCorrect_ = function(pixelErrors, permittedErrors) {
  * App specific displayFeedback function that calls into
  * this.studioApp_.displayFeedback when appropriate
  */
-Artist.prototype.displayFeedback_ = function() {
+Artist.prototype.displayFeedback_ = function () {
   var level = this.level;
   // Don't save impressive levels as projects, because this would create too
   // many projects. Instead store them as /c/ links, which are much more
@@ -1429,9 +1432,9 @@ Artist.prototype.displayFeedback_ = function() {
     disableSaveToGallery: !isSignedIn,
     appStrings: {
       reinfFeedbackMsg: turtleMsg.reinfFeedbackMsg(),
-      sharingText: turtleMsg.shareDrawing()
+      sharingText: turtleMsg.shareDrawing(),
     },
-    enablePrinting: true
+    enablePrinting: true,
   });
 };
 
@@ -1439,7 +1442,7 @@ Artist.prototype.displayFeedback_ = function() {
  * Function to be called when the service report call is complete
  * @param {MilestoneResponse} response - JSON response (if available)
  */
-Artist.prototype.onReportComplete = function(response) {
+Artist.prototype.onReportComplete = function (response) {
   this.response = response;
   // Disable the run button until onReportComplete is called.
   var runButton = document.getElementById('runButton');
@@ -1451,7 +1454,7 @@ Artist.prototype.onReportComplete = function(response) {
 // This removes lengths from the text version of the XML of programs.
 // It is used to determine if the user program and model solution are
 // identical except for lengths.
-var removeK1Lengths = function(s) {
+var removeK1Lengths = function (s) {
   return s.replace(removeK1Lengths.regex, '">');
 };
 
@@ -1461,7 +1464,7 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
  * Verify if the answer is correct.
  * If so, move on to next level.
  */
-Artist.prototype.checkAnswer = function() {
+Artist.prototype.checkAnswer = function () {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
 
@@ -1573,10 +1576,9 @@ Artist.prototype.checkAnswer = function() {
   // The call to displayFeedback() will happen later in onReportComplete()
 };
 
-Artist.prototype.getUserCode = function() {
+Artist.prototype.getUserCode = function () {
   if (this.studioApp_.isUsingBlockly()) {
-    var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-    return Blockly.Xml.domToText(xml);
+    return Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
   } else if (this.level.editCode) {
     // If we want to "normalize" the JavaScript to avoid proliferation of nearly
     // identical versions of the code on the service, we could do either of these:
@@ -1594,13 +1596,13 @@ Artist.prototype.getUserCode = function() {
  * @param {boolean} [enableOnComplete=true] whether or not to attach the
  *        onComplete handler to the StudioApp.report call
  */
-Artist.prototype.report = function(enableOnComplete = true) {
+Artist.prototype.report = function (enableOnComplete = true) {
   let reportData = {
     app: 'turtle',
     level: this.level.id,
     result: this.levelComplete,
     testResult: this.testResults,
-    program: encodeURIComponent(this.getUserCode())
+    program: encodeURIComponent(this.getUserCode()),
   };
 
   if (enableOnComplete) {
@@ -1619,7 +1621,7 @@ Artist.prototype.report = function(enableOnComplete = true) {
  * @returns {Object} Updated reportData, or original report data if not updated.
  * @private
  */
-Artist.prototype.setReportDataImage_ = function(level, reportData) {
+Artist.prototype.setReportDataImage_ = function (level, reportData) {
   // https://www.pivotaltracker.com/story/show/84171560
   // Never send up frozen images for now.
   var isFrozen = this.skin.id === 'anna' || this.skin.id === 'elsa';
@@ -1640,13 +1642,13 @@ Artist.prototype.setReportDataImage_ = function(level, reportData) {
     const encodedImage = encodeURIComponent(image.split(',')[1]);
     return {
       ...reportData,
-      image: encodedImage
+      image: encodedImage,
     };
   }
   return reportData;
 };
 
-Artist.prototype.getFeedbackImage_ = function(width, height) {
+Artist.prototype.getFeedbackImage_ = function (width, height) {
   var origWidth = this.visualization.ctxFeedback.canvas.width;
   var origHeight = this.visualization.ctxFeedback.canvas.height;
 
@@ -1689,20 +1691,20 @@ Artist.prototype.getFeedbackImage_ = function(width, height) {
  * @returns {HTMLCanvasElement} A canvas containing the thumbnail.
  * @private
  */
-Artist.prototype.getThumbnailCanvas_ = function() {
+Artist.prototype.getThumbnailCanvas_ = function () {
   this.clearImage_(this.visualization.ctxThumbnail);
   this.drawImage_(this.visualization.ctxThumbnail);
   return this.visualization.ctxThumbnail.canvas;
 };
 
-Artist.prototype.clearImage_ = function(context) {
+Artist.prototype.clearImage_ = function (context) {
   var style = context.fillStyle;
   context.fillStyle = color.white;
   context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   context.fillStyle = style;
 };
 
-Artist.prototype.drawImage_ = function(context) {
+Artist.prototype.drawImage_ = function (context) {
   // Draw the images layer.
   if (!this.level.discardBackground) {
     context.globalCompositeOperation = 'source-over';
@@ -1741,7 +1743,7 @@ Artist.prototype.drawImage_ = function(context) {
  * At the end of each step, we want to reset any incremental information, which
  * is what this does.
  */
-Artist.prototype.resetStepInfo_ = function() {
+Artist.prototype.resetStepInfo_ = function () {
   this.visualization.stepStartX = this.visualization.x;
   this.visualization.stepStartY = this.visualization.y;
   this.visualization.stepDistanceCovered = 0;

@@ -60,7 +60,7 @@ function extractLockData(serverLockState, sectionId, lessonId) {
   return lessonData.map(studentData => ({
     name: studentData.name,
     lockStatus: toLockStatus(studentData),
-    userLevelData: studentData.user_level_data
+    userLevelData: studentData.user_level_data,
   }));
 }
 
@@ -77,17 +77,17 @@ export function saveLockState(previousLockState, newLockState, csrfToken) {
     .map(item => ({
       user_level_data: item.userLevelData,
       locked: item.lockStatus === LockStatus.Locked,
-      readonly_answers: item.lockStatus === LockStatus.ReadonlyAnswers
+      readonly_answers: item.lockStatus === LockStatus.ReadonlyAnswers,
     }));
 
   return fetch('/api/lock_status', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'X-CSRF-Token': csrfToken
+      'X-CSRF-Token': csrfToken,
     },
     credentials: 'same-origin',
-    body: JSON.stringify({updates: lockStateChanges})
+    body: JSON.stringify({updates: lockStateChanges}),
   });
 }
 

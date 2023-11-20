@@ -9,9 +9,13 @@ import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
-  isRosterDialogOpen
+  isRosterDialogOpen,
 } from './teacherSectionsRedux';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+const COMPLETED_EVENT = 'Section Setup Completed';
+const CANCELLED_EVENT = 'Section Setup Cancelled';
 
 const ctaButtonStyle = {
   background: color.orange,
@@ -20,7 +24,7 @@ const ctaButtonStyle = {
   borderRadius: 3,
   boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.63)',
   fontSize: 14,
-  padding: '8px 20px'
+  padding: '8px 20px',
 };
 
 const ClassroomList = ({classrooms, onSelect, selectedId, rosterProvider}) =>
@@ -57,7 +61,7 @@ ClassroomList.propTypes = {
   classrooms: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
   selectedId: PropTypes.string,
-  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const NoClassroomsFound = ({rosterProvider}) => {
@@ -81,7 +85,7 @@ const NoClassroomsFound = ({rosterProvider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
+  rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const ROSTERED_SECTIONS_SUPPORT_URL =
@@ -122,7 +126,7 @@ const LoadError = ({rosterProvider, loginType}) => {
 };
 LoadError.propTypes = {
   rosterProvider: PropTypes.string,
-  loginType: PropTypes.string
+  loginType: PropTypes.string,
 };
 
 const REAUTHORIZE_URL =
@@ -146,29 +150,80 @@ class RosterDialog extends React.Component {
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes))
+    rosterProvider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   };
 
   state = {selectedId: null};
 
   importClassroom = () => {
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
     const classrooms = this.props.classrooms;
     const selectedName =
       classrooms &&
       classrooms.find(classroom => {
         return classroom.id === this.state.selectedId;
       }).name;
-
     this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
 
+  // create new function for redirect to NewEditPage
+  redirectToEditSectionPage = sectionId => {
+    const redirectUrl = '/sections/' + sectionId + '/edit';
+    window.location.href = redirectUrl;
+  };
+
+  // Creates the section and redirects to the edit page
+  handleRedirect = () => {
+    this.recordSectionSetupExitEvent(COMPLETED_EVENT);
+    const classrooms = this.props.classrooms;
+    const courseName =
+      classrooms &&
+      classrooms.find(classroom => {
+        return classroom.id === this.state.selectedId;
+      }).name;
+
+    const importSectionUrl =
+      this.props.rosterProvider === OAuthSectionTypes.google_classroom
+        ? '/dashboardapi/import_google_classroom'
+        : '/dashboardapi/import_clever_classroom';
+    const courseId = this.state.selectedId;
+
+    return new Promise((resolve, reject) => {
+      $.getJSON(importSectionUrl, {
+        courseId,
+        courseName,
+      })
+        .done(resolve)
+        .fail(jqxhr =>
+          reject(
+            new Error(`
+            url: ${importSectionUrl}
+            status: ${jqxhr.status}
+            statusText: ${jqxhr.statusText}
+            responseText: ${jqxhr.responseText}
+          `)
+          )
+        );
+    }).then(newSection => this.redirectToEditSectionPage(newSection.id));
+  };
+
   cancel = () => {
+    this.recordSectionSetupExitEvent(CANCELLED_EVENT);
     this.props.handleCancel();
   };
 
   onClassroomSelected = id => {
     this.setState({selectedId: id});
+  };
+
+  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  recordSectionSetupExitEvent = eventName => {
+    const {rosterProvider} = this.props;
+
+    analyticsReporter.sendEvent(eventName, {
+      oauthSource: rosterProvider,
+    });
   };
 
   render() {
@@ -213,6 +268,7 @@ class RosterDialog extends React.Component {
         </div>
         <div style={styles.footer}>
           <button
+            id="cancel-button"
             type="button"
             onClick={this.cancel}
             style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
@@ -220,8 +276,9 @@ class RosterDialog extends React.Component {
             {locale.dialogCancel()}
           </button>
           <button
+            id="import-button-and-redirect"
             type="button"
-            onClick={this.importClassroom}
+            onClick={this.handleRedirect}
             style={Object.assign(
               {},
               styles.buttonPrimary,
@@ -242,7 +299,7 @@ const styles = {
     position: 'absolute',
     left: 20,
     color: color.dark_charcoal,
-    margin: '15px 0'
+    margin: '15px 0',
   },
   content: {
     position: 'absolute',
@@ -250,32 +307,32 @@ const styles = {
     top: 50,
     right: 20,
     bottom: 70,
-    overflowY: 'scroll'
+    overflowY: 'scroll',
   },
   classroomRow: {
     padding: 10,
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   highlightRow: {
     backgroundColor: color.default_blue,
-    color: color.white
+    color: color.white,
   },
   footer: {
     position: 'absolute',
     bottom: 15,
     right: 20,
-    left: 20
+    left: 20,
   },
   buttonPrimary: {
     ...ctaButtonStyle,
-    float: 'right'
+    float: 'right',
   },
   buttonSecondary: {
     float: 'left',
     background: '#eee',
     color: '#5b6770',
-    border: '1px solid #c5c5c5'
-  }
+    border: '1px solid #c5c5c5',
+  },
 };
 export const UnconnectedRosterDialog = RosterDialog;
 export default connect(
@@ -283,10 +340,10 @@ export default connect(
     isOpen: isRosterDialogOpen(state),
     classrooms: state.teacherSections.classrooms,
     loadError: state.teacherSections.loadError,
-    rosterProvider: state.teacherSections.rosterProvider
+    rosterProvider: state.teacherSections.rosterProvider,
   }),
   {
     handleImport: importOrUpdateRoster,
-    handleCancel: cancelImportRosterFlow
+    handleCancel: cancelImportRosterFlow,
   }
 )(RosterDialog);

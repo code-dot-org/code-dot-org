@@ -15,14 +15,15 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
   onDismissRedirectWarning,
-  dismissedRedirectWarning
+  dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   assignmentCourseVersionShape,
-  sectionForDropdownShape
+  sectionForDropdownShape,
 } from '@cdo/apps/templates/teacherDashboard/shapes';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -31,6 +32,8 @@ import SafeMarkdown from '../SafeMarkdown';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -45,7 +48,7 @@ class CourseOverview extends Component {
     sectionsInfo: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
+        name: PropTypes.string.isRequired,
       })
     ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -60,10 +63,12 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    userType: PropTypes.string,
+    participantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    isSignedIn: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -71,6 +76,15 @@ class CourseOverview extends Component {
     const showRedirectDialog =
       props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
     this.state = {showRedirectDialog};
+
+    if (props.userType === 'teacher') {
+      analyticsReporter.sendEvent(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit group name': props.name,
+        }
+      );
+    }
   }
 
   onChangeVersion = versionId => {
@@ -98,14 +112,14 @@ class CourseOverview extends Component {
       url: `/api/v1/user_scripts/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true})
+      data: JSON.stringify({version_warning_dismissed: true}),
     });
   };
 
   onCloseRedirectDialog = () => {
     onDismissRedirectDialog(this.props.name);
     this.setState({
-      showRedirectDialog: false
+      showRedirectDialog: false,
     });
   };
 
@@ -133,7 +147,8 @@ class CourseOverview extends Component {
       redirectToCourseUrl,
       showAssignButton,
       userId,
-      isSignedIn
+      isSignedIn,
+      participantAudience,
     } = this.props;
 
     const showNotification =
@@ -178,7 +193,7 @@ class CourseOverview extends Component {
             viewAs={viewAs}
             firehoseAnalyticsId={{
               user_id: userId,
-              unit_group_id: id
+              unit_group_id: id,
             }}
           />
         )}
@@ -210,11 +225,12 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             id={id}
-            title={title}
+            courseName={title}
             teacherResources={teacherResources}
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             isInstructor={viewAs === ViewType.Instructor}
+            participantAudience={participantAudience}
           />
         </div>
         {scripts.map((script, index) => (
@@ -238,31 +254,31 @@ class CourseOverview extends Component {
 
 const styles = {
   main: {
-    width: '100%'
+    width: '100%',
   },
   description: {
-    marginBottom: 20
+    marginBottom: 20,
   },
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   title: {
-    display: 'inline-block'
+    display: 'inline-block',
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline'
+    alignItems: 'baseline',
   },
   versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
-    color: color.charcoal
+    color: color.charcoal,
   },
   versionDropdown: {
-    marginBottom: 13
-  }
+    marginBottom: 13,
+  },
 };
 
 export const UnconnectedCourseOverview = CourseOverview;
@@ -277,5 +293,5 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   isVerifiedInstructor: state.verifiedInstructor.isVerified,
   hasVerifiedResources: state.verifiedInstructor.hasVerifiedResources,
-  announcements: state.announcements || []
+  announcements: state.announcements || [],
 }))(CourseOverview);

@@ -1,0 +1,122 @@
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
+
+.pl-banner-superhero.homepage {
+  max-width: 1020px;
+  margin: 2em auto 5em;
+
+  @media screen and (max-width: $width-md) {
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    margin-top: -1em;
+    padding-bottom: 5em;
+  }
+
+  h1, h2 {
+    text-align: left;
+    color: $black;
+    max-width: 490px;
+
+    @media screen and (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font-size: 3em;
+    margin: 0;
+
+    @media screen and (max-width: $width-md) {
+      font-size: 2.25em;
+      width: 50%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+      font-size: 2em;
+    }
+  }
+
+  h2 {
+    margin: 1em 0;
+    font-family: var(--main-font);
+    font-weight: var(--regular-font-weight);
+
+    @media screen and (max-width: $width-md) {
+      font-size: 1.25em;
+      width: 40%;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 100%;
+    }
+  }
+
+  .action {
+    text-align: left;
+
+    @media screen and (max-width: $width-sm) {
+      text-align: center;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 1080px;
+
+    &.image-tablet {
+      display: none;
+    }
+
+    @media screen and (max-width: $width-md) {
+      width: 850px;
+      right: -25em;
+
+      &.image {
+        display: none;
+      }
+
+      &.image-tablet {
+        display: block;
+        width: 460px;
+        right: 0;
+      }
+    }
+
+    @media screen and (max-width: $width-sm) {
+      width: 850px;
+      right: -25em;
+
+      &.image {
+        display: block;
+        width: 100%;
+        left: 4em;
+      }
+
+      &.image-tablet {
+        display: none;
+      }
+    }
+  }
+}
+
+#homepage #actions {
+
+  @media screen and (max-width: $width-sm) {
+    overflow: hidden;
+  }
+
+  .herohocbutton-solid-yellow {
+    background-color: #44769f;
+    border-color: #44769f;
+  }
+
+  @media screen and (max-width: $width-md) {
+    .herohocbutton {
+      min-width: 220px;
+    }
+  }
+}

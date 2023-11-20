@@ -1,5 +1,5 @@
 ---
-title: Spread the word
+title: Skleiskite žodį
 ---
 
 {{ signup_button }}

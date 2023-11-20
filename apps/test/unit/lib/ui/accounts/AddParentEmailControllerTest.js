@@ -39,7 +39,7 @@ describe('AddParentEmailController', () => {
       formParentEmailField: parentEmailField,
       formParentOptInField: parentOptInField,
       link,
-      onSuccessCallback
+      onSuccessCallback,
     });
   }
 
@@ -100,7 +100,7 @@ describe('AddParentEmailController', () => {
     it('sets parent email field', async () => {
       await controller.submitParentEmailChange({
         parentEmail: TEST_EMAIL,
-        parentEmailOptIn: 'yes'
+        parentEmailOptIn: 'yes',
       });
       expect(
         form.find('#add-parent-email-modal_user_parent_email').val()
@@ -110,7 +110,7 @@ describe('AddParentEmailController', () => {
     it('sets email_preference_opt_in if "yes"', async () => {
       await controller.submitParentEmailChange({
         parentEmail: TEST_EMAIL,
-        parentEmailOptIn: 'yes'
+        parentEmailOptIn: 'yes',
       });
       expect(
         form
@@ -122,7 +122,7 @@ describe('AddParentEmailController', () => {
     it('sets email_preference_opt_in if "no"', async () => {
       await controller.submitParentEmailChange({
         parentEmail: TEST_EMAIL,
-        parentEmailOptIn: 'no'
+        parentEmailOptIn: 'no',
       });
       expect(
         form
@@ -134,7 +134,7 @@ describe('AddParentEmailController', () => {
     it('does not set email_preference_opt_in otherwise', async () => {
       await controller.submitParentEmailChange({
         parentEmail: TEST_EMAIL,
-        parentEmailOptIn: undefined
+        parentEmailOptIn: undefined,
       });
       expect(
         form
@@ -146,7 +146,7 @@ describe('AddParentEmailController', () => {
     it('resolves to new email on success', async () => {
       const parentEmail = await controller.submitParentEmailChange({
         parentEmail: TEST_EMAIL,
-        parentEmailOptIn: 'yes'
+        parentEmailOptIn: 'yes',
       });
       expect(parentEmail).to.equal(TEST_EMAIL);
     });
@@ -157,7 +157,7 @@ describe('AddParentEmailController', () => {
       await expect(
         controller.submitParentEmailChange({
           parentEmail: TEST_EMAIL,
-          parentEmailOptIn: 'yes'
+          parentEmailOptIn: 'yes',
         })
       ).to.eventually.be.rejectedWith(Error);
     });
@@ -168,20 +168,20 @@ describe('AddParentEmailController', () => {
         form.trigger('ajax:error', [
           {
             responseJSON: {
-              parentEmail: ['test-email-error']
-            }
-          }
+              parentEmail: ['test-email-error'],
+            },
+          },
         ])
       );
       await expect(
         controller.submitParentEmailChange({
           parentEmail: TEST_EMAIL,
-          parentEmailOptIn: 'yes'
+          parentEmailOptIn: 'yes',
         })
       ).to.eventually.be.rejectedWith({
         serverErrors: {
-          parentEmail: 'test-email-error'
-        }
+          parentEmail: 'test-email-error',
+        },
       });
     });
   });

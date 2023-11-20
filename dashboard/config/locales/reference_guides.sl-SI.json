@@ -38,6 +38,9 @@
         "csd-2022/patterns-overview": {
           "display_name": "Pregled"
         },
+        "csd-2022/sprites": {
+          "display_name": "liki"
+        },
         "csd-2022/variables": {
           "display_name": "Spremenljivke"
         }

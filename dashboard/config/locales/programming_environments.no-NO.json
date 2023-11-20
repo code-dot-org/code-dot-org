@@ -2,89 +2,230 @@
   "no-NO": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Weblaboratoriet"
+        "applab": {
+          "categories": {
+            "advanced": {
+              "name": "Avansert"
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funksjoner"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det største tallet returnert"
+                    },
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det største tallet returnert"
+                    },
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    }
+                  }
+                }
+              },
+              "name": "Matematikk"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funksjon"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Spiller MP3-lydfilen fra den spesifiserte URL-en."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Ingen"
+                },
+                "declareNoAssign_x": {
+                  "short_description": "Lager en variabel med navnet 'var'"
+                }
+              },
+              "name": "Variabler"
+            }
+          },
+          "description": "App Lab er et programmeringsmiljø hvor du kan lage enkle apper. Lag en app, programmer med blokker eller JavaScript for å få det til å virke, deretter kan du dele appen på få sekunder.",
+          "name": "App Lab"
         },
         "gamelab": {
-          "name": "Spill-lab",
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Stjerne"
+                    }
+                  }
+                }
+              },
+              "name": "Tegning"
+            },
+            "functions": {
+              "name": "Funksjoner"
+            },
             "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Svart-hvitt"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Spiller MP3-lydfilen fra den spesifiserte URL-en."
+                }
+              },
               "name": "Spill-lab"
             },
             "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farge"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Farge"
+                    }
+                  }
+                }
+              },
               "name": "Grupper"
             },
-            "drawing": {
-              "name": "Tegning"
-            },
             "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det største tallet returnert"
+                    },
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Det største tallet returnert"
+                    },
+                    "min": {
+                      "description": "Det minste tallet returnert"
+                    }
+                  }
+                }
+              },
               "name": "Matematikk"
             },
-            "variables": {
-              "name": "Variabler"
-            },
-            "functions": {
-              "name": "Funksjoner"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab er et programmeringsmiljø hvor du kan lage enkle apper. Lag en app, programmer med blokker eller JavaScript for å få det til å virke, deretter kan du dele appen på få sekunder.",
-          "categories": {
-            "math": {
-              "name": "Matematikk"
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spiral"
+                    }
+                  }
+                }
+              }
             },
             "variables": {
+              "expressions": {
+                "declareNoAssign_x": {
+                  "short_description": "Lager en variabel med navnet 'var'"
+                }
+              },
               "name": "Variabler"
-            },
-            "functions": {
-              "name": "Funksjoner"
-            },
-            "advanced": {
-              "name": "Avansert"
             }
-          }
+          },
+          "name": "Spill-lab"
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "Verden"
-            },
-            "location": {
-              "name": "Steder"
-            },
             "actions": {
               "name": "Handlinger"
-            },
-            "events": {
-              "name": "Hendelser"
             },
             "behaviors": {
               "name": "Oppførsler"
             },
-            "loops": {
-              "name": "Løkker"
+            "comments": {
+              "name": "Kommentarer"
             },
-            "variables": {
-              "name": "Variabler"
-            },
-            "math": {
-              "name": "Matematikk"
-            },
-            "logic": {
-              "name": "Logikk"
+            "events": {
+              "name": "Hendelser"
             },
             "functions": {
               "name": "Funksjoner"
             },
+            "location": {
+              "name": "Steder"
+            },
+            "logic": {
+              "name": "Logikk"
+            },
+            "loops": {
+              "name": "Løkker"
+            },
+            "math": {
+              "name": "Matematikk"
+            },
             "text": {
               "name": "tekst"
             },
-            "comments": {
-              "name": "Kommentarer"
+            "variables": {
+              "name": "Variabler"
+            },
+            "world": {
+              "name": "Verden"
             }
           }
+        },
+        "weblab": {
+          "name": "Weblaboratoriet"
         }
       }
     }

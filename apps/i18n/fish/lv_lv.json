@@ -1,9 +1,9 @@
 {
-  "continue": "Turpināt",
   "areYouSure": "Vai esat pārliecināts?",
   "cancel": "Atcelt",
-  "yes": "Jā",
+  "continue": "Turpināt",
+  "finish": "Pabeigt",
   "no": "Nē",
   "run": "Palaist",
-  "finish": "Pabeigt"
+  "yes": "Jā"
 }

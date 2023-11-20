@@ -1,10 +1,9 @@
-/* global requirejs */
-import CdoBramble from './CdoBramble';
+import CdoBramble, {BRAMBLE_CONTAINER} from './CdoBramble';
+import {FILE_SYSTEM_ERROR, BRAMBLE_READY_STATE} from './constants';
 
 /**
  * JS to communicate between Bramble and Code Studio
  */
-
 const scriptData = document.querySelector('script[data-bramble]');
 const brambleConfig = JSON.parse(scriptData.dataset.bramble);
 const BRAMBLE_BASE_URL = brambleConfig.baseUrl;
@@ -15,7 +14,8 @@ let webLab_;
 if (parent.getWebLab) {
   webLab_ = parent.getWebLab();
 } else {
-  console.error('ERROR: getWebLab() method not found on parent');
+  brambleConfig.skipFiles ||
+    console.error('ERROR: getWebLab() method not found on parent');
 }
 
 function load(Bramble) {
@@ -35,6 +35,35 @@ function load(Bramble) {
     .init();
 }
 
+// "Minimal" load function does not pass files to Bramble; it's used by
+// the support verification page at studio.code.org/weblab/network-check
+// to check that we can reach a ready state
+function loadMinimal(Bramble) {
+  Bramble.load(BRAMBLE_CONTAINER, {
+    url: `${BRAMBLE_BASE_URL}/index.html`,
+  });
+
+  Bramble.on('readyStateChange', (_, newState) => {
+    if (Bramble.MOUNTABLE === newState) {
+      window.parent.postMessage(
+        JSON.stringify({msg: BRAMBLE_READY_STATE}),
+        brambleConfig.studioUrl
+      );
+    }
+  });
+
+  Bramble.on('error', err => {
+    if (err.code === FILE_SYSTEM_ERROR) {
+      window.parent.postMessage(
+        JSON.stringify({msg: FILE_SYSTEM_ERROR}),
+        brambleConfig.studioUrl
+      );
+    }
+    console.log(err);
+  });
+}
+
 // Load bramble.js
 const brambleClient = brambleConfig.devMode ? 'bramble/client/main' : 'bramble';
-requirejs([brambleClient], load);
+const callback = brambleConfig.skipFiles ? loadMinimal : load;
+requirejs([brambleClient], callback);

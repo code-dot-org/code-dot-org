@@ -8,13 +8,13 @@ import classNames from 'classnames';
 
 const INITIAL_STATE = {
   isConfirmDialogOpen: false,
-  isImporting: false
+  isImporting: false,
 };
 
 class ConfirmImportButton extends React.Component {
   static propTypes = {
     importCsv: PropTypes.func.isRequired,
-    containerStyle: PropTypes.any
+    containerStyle: PropTypes.any,
   };
 
   state = {...INITIAL_STATE};
@@ -27,7 +27,7 @@ class ConfirmImportButton extends React.Component {
   handleConfirm = () => {
     this.setState({
       isConfirmDialogOpen: false,
-      isImporting: true
+      isImporting: true,
     });
     this.uploadFile();
   };

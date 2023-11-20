@@ -15,8 +15,8 @@ const style = {
     height: LINE_HEIGHT,
     lineHeight: `${LINE_HEIGHT - 2 * BUTTON_VERTICAL_PADDING}px`,
     padding: `${BUTTON_VERTICAL_PADDING}px ${BUTTON_HORIZONTAL_PADDING}px`,
-    marginLeft: 5
-  }
+    marginLeft: 5,
+  },
 };
 
 /**
@@ -37,7 +37,7 @@ export function PrivateKeyDropdown(props) {
 PrivateKeyDropdown.propTypes = {
   publicModulus: PropTypes.number,
   value: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 /**
@@ -56,7 +56,7 @@ export function PublicModulusDropdown(props) {
 }
 PublicModulusDropdown.propTypes = {
   value: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 /**
@@ -78,7 +78,7 @@ export function SecretNumberDropdown(props) {
 SecretNumberDropdown.propTypes = {
   publicModulus: PropTypes.number,
   value: PropTypes.number,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 /**
@@ -101,20 +101,20 @@ export function GoButton(props) {
 GoButton.propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 function Keyword(props) {
   const keywordStyle = {
     backgroundColor: props.color,
     fontWeight: 'bold',
-    padding: 3
+    padding: 3,
   };
   return <span style={keywordStyle}>{props.children}</span>;
 }
 Keyword.propTypes = {
   color: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
 
 export function KeywordPublicModulus() {

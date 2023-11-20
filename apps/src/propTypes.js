@@ -22,7 +22,7 @@ import {isSubsequence} from './utils';
  * @param ...validChildrenTypes array<constructor> - a list of types to allow as children
  */
 export function childrenOfType(...validChildrenTypes) {
-  return function(props, propName, componentName) {
+  return function (props, propName, componentName) {
     if (propName !== 'children') {
       return new Error(
         'The childrenOfType prop type should only be used on the children prop.'
@@ -78,7 +78,7 @@ export function childrenOfType(...validChildrenTypes) {
  *
  */
 export function whenNoChildOfTypes(...unexpectedChildTypes) {
-  return function(props, propName, componentName) {
+  return function (props, propName, componentName) {
     if (!props.children || !props[propName]) {
       return;
     }

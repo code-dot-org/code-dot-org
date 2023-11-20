@@ -73,14 +73,12 @@ module AWS
       end
     end
 
-    private
-
     # @return [Aws::CloudFormation::Client]
-    def cfn
+    private def cfn
       @cfn ||= Aws::CloudFormation::Client.new
     end
 
-    def change_stack
+    private def change_stack
       template = stack.render
       if options[:verbose]
         log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
@@ -95,7 +93,7 @@ module AWS
     end
 
     # Prepare changes to a stack using a Change Set.
-    def prepare_changes(stack_options, name)
+    private def prepare_changes(stack_options, name)
       action = stack_options[:change_set_type].downcase.to_sym
       log.info "Pending #{action} for stack `#{stack_name}`:" unless options[:quiet]
       change_set_id = cfn.create_change_set(
@@ -107,12 +105,12 @@ module AWS
         loop do
           sleep 1
           change_set = cfn.describe_change_set(change_set_name: change_set_id)
-          break unless %w(CREATE_PENDING CREATE_IN_PROGRESS).include?(change_set.status)
+          break unless change_set.status == "CREATE_PENDING" || change_set.status == "CREATE_IN_PROGRESS"
         end
         change_set.changes.each do |change|
           c = change.resource_change
           str = "#{c.action} #{c.logical_resource_id} [#{c.resource_type}] #{c.scope.join(', ')}"
-          str += " Replacement: #{c.replacement}" if %w(True Conditional).include?(c.replacement)
+          str += " Replacement: #{c.replacement}" if c.replacement == "True" || c.replacement == "Conditional"
           str += " (#{c.details.map {|d| d.target.name}.join(', ')})" if c.details.any?
           log.info str unless options[:quiet]
         end
@@ -132,7 +130,7 @@ module AWS
       end
     end
 
-    def apply_changes(stack_options, change_set_id, action)
+    private def apply_changes(stack_options, change_set_id, action)
       # Change Set does not support `on_failure` or `stack_policy` options
       # which are useful for stack creation, so apply create action directly.
       if action == :create
@@ -154,7 +152,7 @@ module AWS
     end
 
     # Returns an inline string or S3 URL depending on the size of the template.
-    def string_or_url(template)
+    private def string_or_url(template)
       # Upload the template to S3 if it's too large to be passed directly.
       if template.length < TEMPLATE_MAX
         {template_body: template}
@@ -173,7 +171,7 @@ module AWS
       end
     end
 
-    def parameters(template)
+    private def parameters(template)
       # These templates include complex classes like Dates that are not
       # supported by safe_load
       #
@@ -181,7 +179,7 @@ module AWS
       params = YAML.load(template)['Parameters']
       # rubocop:enable Security/YAMLLoad
       return [] unless params
-      params.map do |key, properties|
+      params.filter_map do |key, properties|
         value = CDO[key.underscore] || ENV[key.underscore.upcase]
         param = {parameter_key: key}
         if value
@@ -198,10 +196,10 @@ module AWS
             HighLine.new.ask("Enter value for Parameter #{key}:", String)
         end
         param
-      end.compact
+      end
     end
 
-    def base_options
+    private def base_options
       # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
       # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
       role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
@@ -212,7 +210,7 @@ module AWS
       }
     end
 
-    def stack_options(template)
+    private def stack_options(template)
       @stack_options ||= base_options.merge(string_or_url(template)).merge(
         parameters: parameters(template),
         tags: stack.tags,
@@ -224,7 +222,7 @@ module AWS
     end
 
     # Sets options specific to the CreateChangeSet operation.
-    def change_set_options(template)
+    private def change_set_options(template)
       opts = stack_options(template)
       if (imports = options[:import_resources]&.split(','))
         opts[:change_set_type] = 'IMPORT'
@@ -245,14 +243,14 @@ module AWS
       opts
     end
 
-    def stack_action(method, stack_options)
+    private def stack_action(method, stack_options)
       start = Time.now
       begin
         result = cfn.method("#{method}_stack").call(stack_options)
         @stack_id ||= result.stack_id if result.respond_to?(:stack_id)
-      rescue Aws::CloudFormation::Errors::ValidationError => e
-        if e.message == 'No updates are to be performed.'
-          log.info e.message
+      rescue Aws::CloudFormation::Errors::ValidationError => exception
+        if exception.message == 'No updates are to be performed.'
+          log.info exception.message
           return
         else
           raise
@@ -264,21 +262,21 @@ module AWS
     end
 
     # Only way to determine whether a given stack exists using the Ruby API.
-    def stack_exists?
+    private def stack_exists?
       @stack_resource ||=
         begin
           cfn.describe_stacks(stack_name: stack_name).stacks.first.tap do |stack|
             @stack_id = stack.stack_id
           end
-        rescue Aws::CloudFormation::Errors::ValidationError => e
-          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+        rescue Aws::CloudFormation::Errors::ValidationError => exception
+          raise exception unless exception.message == "Stack with id #{stack_name} does not exist"
           false
         end
       @stack_resource && !%w(REVIEW_IN_PROGRESS DELETE_COMPLETE).include?(@stack_resource.stack_status)
     end
 
     # Prints the latest CloudFormation stack events.
-    def tail_events(start)
+    private def tail_events(start)
       @last_event ||= start
       stack_events = cfn.describe_stack_events(stack_name: @stack_id).stack_events
       stack_events.reject! do |event|
@@ -297,13 +295,16 @@ module AWS
       @last_event = ([@last_event] + stack_events.map(&:timestamp)).max
     end
 
-    def wait_for_stack(action)
+    private def wait_for_stack(action)
       log.info "Stack #{action} requested, waiting for provisioning to complete..."
       yield rescue nil
       begin
         cfn.wait_until("stack_#{action}_complete".to_sym, stack_name: @stack_id) do |w|
           w.delay = 5 # seconds
-          w.max_attempts = 1.5.hours / w.delay
+          # TODO: lower this back to 1.5 hours once we're no longer building
+          # Node.js from source as part of adhoc creation, which right now is
+          # making this often take longer than that.
+          w.max_attempts = 2.5.hours / w.delay
           w.before_wait do
             yield
             print '.' unless options[:quiet]

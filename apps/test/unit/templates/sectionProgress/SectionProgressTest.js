@@ -1,16 +1,17 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import sinon from 'sinon';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const studentData = [
   {id: 1, name: 'studentb'},
   {id: 3, name: 'studentc'},
-  {id: 0, name: 'studenta'}
+  {id: 0, name: 'studenta'},
 ];
 
 describe('SectionProgress', () => {
@@ -26,7 +27,7 @@ describe('SectionProgress', () => {
       section: {
         id: 2,
         script: {id: 123},
-        students: studentData
+        students: studentData,
       },
       coursesWithProgress: [],
       currentView: ViewType.SUMMARY,
@@ -36,18 +37,18 @@ describe('SectionProgress', () => {
         lessons: [
           {
             id: 456,
-            levels: [{id: '789'}]
-          }
+            levels: [{id: '789'}],
+          },
         ],
         csf: true,
-        hasStandards: true
+        hasStandards: true,
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
       showStandardsIntroDialog: false,
       studentLastUpdateByUnit: {
-        1: Date.now()
-      }
+        1: Date.now(),
+      },
     };
   });
 
@@ -92,5 +93,19 @@ describe('SectionProgress', () => {
   it('shows standards view', () => {
     const wrapper = setUp({currentView: ViewType.STANDARDS});
     expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
+  });
+
+  it('sends Amplitude progress event when onChangeScript is called', () => {
+    const wrapper = setUp({currentView: ViewType.DETAIL});
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+    wrapper.instance().onChangeScript(123);
+    expect(analyticsSpy).to.be.calledOnce;
+    assert.equal(
+      analyticsSpy.getCall(0).firstArg,
+      'Section Progress Unit Changed'
+    );
+
+    analyticsSpy.restore();
   });
 });

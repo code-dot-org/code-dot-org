@@ -3,7 +3,7 @@
 export function container(elementId, html) {
   return Applab.executeCmd(null, 'container', {
     elementId: elementId,
-    html: html
+    html: html,
   });
 }
 
@@ -14,7 +14,7 @@ export function write(html) {
 export function innerHTML(elementId, html) {
   return Applab.executeCmd(null, 'innerHTML', {
     elementId: elementId,
-    html: html
+    html: html,
   });
 }
 
@@ -48,7 +48,7 @@ export function setPosition(elementId, left, top, width, height) {
     left: left,
     top: top,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -56,7 +56,7 @@ export function setSize(elementId, width, height) {
   return Applab.executeCmd(null, 'setSize', {
     elementId: elementId,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -64,14 +64,14 @@ export function setProperty(elementId, property, value) {
   return Applab.executeCmd(null, 'setProperty', {
     elementId: elementId,
     property: property,
-    value: value
+    value: value,
   });
 }
 
 export function getProperty(elementId, property) {
   return Applab.executeCmd(null, 'getProperty', {
     elementId: elementId,
-    property: property
+    property: property,
   });
 }
 
@@ -87,7 +87,7 @@ export function createCanvas(elementId, width, height) {
   return Applab.executeCmd(null, 'createCanvas', {
     elementId: elementId,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -108,7 +108,7 @@ export function rect(x, y, width, height) {
     x: x,
     y: y,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -138,7 +138,7 @@ export function drawImage(imageId, x, y, width, height) {
     x: x,
     y: y,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -160,7 +160,7 @@ export function drawImageURL(url, x, y, width, height, callback) {
     y: y,
     width: width,
     height: height,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -169,7 +169,7 @@ export function getImageData(x, y, width, height) {
     x: x,
     y: y,
     width: width,
-    height: height
+    height: height,
   });
 }
 
@@ -177,14 +177,21 @@ export function putImageData(imageData, x, y) {
   return Applab.executeCmd(null, 'putImageData', {
     imageData: imageData,
     x: x,
-    y: y
+    y: y,
+  });
+}
+
+export function textArea(elementId, text) {
+  return Applab.executeCmd(null, 'textArea', {
+    elementId: elementId,
+    text: text,
   });
 }
 
 export function textInput(elementId, text) {
   return Applab.executeCmd(null, 'textInput', {
     elementId: elementId,
-    text: text
+    text: text,
   });
 }
 
@@ -192,14 +199,14 @@ export function textLabel(elementId, text, forId) {
   return Applab.executeCmd(null, 'textLabel', {
     elementId: elementId,
     text: text,
-    forId: forId
+    forId: forId,
   });
 }
 
 export function checkbox(elementId, checked) {
   return Applab.executeCmd(null, 'checkbox', {
     elementId: elementId,
-    checked: checked
+    checked: checked,
   });
 }
 
@@ -207,7 +214,17 @@ export function radioButton(elementId, checked, name) {
   return Applab.executeCmd(null, 'radioButton', {
     elementId: elementId,
     checked: checked,
-    name: name
+    name: name,
+  });
+}
+
+export function slider(elementId, min, max, value, step) {
+  return Applab.executeCmd(null, 'slider', {
+    elementId: elementId,
+    min: min,
+    max: max,
+    value: value,
+    step: step,
   });
 }
 
@@ -218,7 +235,7 @@ export function getChecked(elementId) {
 export function setChecked(elementId, checked) {
   return Applab.executeCmd(null, 'setChecked', {
     elementId: elementId,
-    checked: checked
+    checked: checked,
   });
 }
 
@@ -226,14 +243,14 @@ export function dropdown(elementId) {
   var optionsArray = Array.prototype.slice.call(arguments, 1);
   return Applab.executeCmd(null, 'dropdown', {
     elementId: elementId,
-    optionsArray: optionsArray
+    optionsArray: optionsArray,
   });
 }
 
 export function getAttribute(elementId, attribute) {
   return Applab.executeCmd(null, 'getAttribute', {
     elementId: elementId,
-    attribute: attribute
+    attribute: attribute,
   });
 }
 
@@ -241,7 +258,7 @@ export function setAttribute(elementId, attribute, value) {
   return Applab.executeCmd(null, 'setAttribute', {
     elementId: elementId,
     attribute: attribute,
-    value: value
+    value: value,
   });
 }
 
@@ -255,7 +272,7 @@ export function setSelectionRange(
     elementId,
     selectionStart,
     selectionEnd,
-    selectionDirection
+    selectionDirection,
   });
 }
 
@@ -274,7 +291,7 @@ export function getNumber(elementId) {
 export function setNumber(elementId, number) {
   return Applab.executeCmd(null, 'setNumber', {
     elementId: elementId,
-    number: number
+    number: number,
   });
 }
 
@@ -285,28 +302,28 @@ export function getImageURL(elementId) {
 export function setImageURL(elementId, src) {
   return Applab.executeCmd(null, 'setImageURL', {
     elementId: elementId,
-    src: src
+    src: src,
   });
 }
 
 export function imageUploadButton(elementId, text) {
   return Applab.executeCmd(null, 'imageUploadButton', {
     elementId: elementId,
-    text: text
+    text: text,
   });
 }
 
 export function setParent(elementId, parentId) {
   return Applab.executeCmd(null, 'setParent', {
     elementId: elementId,
-    parentId: parentId
+    parentId: parentId,
   });
 }
 
 export function setStyle(elementId, style) {
   return Applab.executeCmd(null, 'setStyle', {
     elementId: elementId,
-    style: style
+    style: style,
   });
 }
 
@@ -316,7 +333,7 @@ export function onEvent(elementId, eventName, func) {
     elementId: elementId,
     eventName: eventName,
     func: func,
-    extraArgs: extraArgs
+    extraArgs: extraArgs,
   });
 }
 
@@ -333,7 +350,7 @@ export function startWebRequestSync(url, func) {
     url: url,
     func: (status, contentType, responseText) => {
       func(responseText);
-    }
+    },
   });
 }
 
@@ -341,14 +358,14 @@ export function getKeyValue(key, onSuccess, onError) {
   return Applab.executeCmd(null, 'getKeyValue', {
     key: key,
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
   });
 }
 
 export function getKeyValueSync(key, callback) {
   return Applab.executeCmd(null, 'getKeyValueSync', {
     key: key,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -357,7 +374,7 @@ export function setKeyValue(key, value, onSuccess, onError) {
     key: key,
     value: value,
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
   });
 }
 
@@ -365,7 +382,7 @@ export function setKeyValueSync(key, value, callback) {
   return Applab.executeCmd(null, 'setKeyValueSync', {
     key: key,
     value: value,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -373,7 +390,7 @@ export function getColumn(table, column, callback) {
   return Applab.executeCmd(null, 'getColumn', {
     table: table,
     column: column,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -382,7 +399,7 @@ export function createRecord(table, record, onSuccess, onError) {
     table: table,
     record: record,
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
   });
 }
 
@@ -391,7 +408,7 @@ export function createRecordSync(table, record, callback) {
     table: table,
     record: record,
     onSuccess: callback,
-    onError: callback
+    onError: callback,
   });
 }
 
@@ -400,7 +417,7 @@ export function readRecords(table, searchParams, onSuccess, onError) {
     table: table,
     searchParams: searchParams,
     onSuccess: onSuccess,
-    onError: onError
+    onError: onError,
   });
 }
 
@@ -409,7 +426,7 @@ export function readRecordsSync(table, callback) {
     table: table,
     searchParams: {},
     onSuccess: callback,
-    onError: callback
+    onError: callback,
   });
 }
 
@@ -418,7 +435,7 @@ export function updateRecord(table, record, onComplete, onError) {
     table: table,
     record: record,
     onComplete: onComplete,
-    onError: onError
+    onError: onError,
   });
 }
 
@@ -427,7 +444,7 @@ export function updateRecordSync(table, record, callback) {
     table: table,
     record: record,
     onComplete: callback,
-    onError: callback
+    onError: callback,
   });
 }
 
@@ -436,7 +453,7 @@ export function deleteRecord(table, record, onComplete, onError) {
     table: table,
     record: record,
     onComplete: onComplete,
-    onError: onError
+    onError: onError,
   });
 }
 
@@ -445,7 +462,7 @@ export function deleteRecordSync(table, record, callback) {
     table: table,
     record: record,
     onComplete: callback,
-    onError: callback
+    onError: callback,
   });
 }
 
@@ -453,7 +470,7 @@ export function onRecordEvent(table, onRecord, includeAll) {
   return Applab.executeCmd(null, 'onRecordEvent', {
     table: table,
     onRecord: onRecord,
-    includeAll: includeAll
+    includeAll: includeAll,
   });
 }
 
@@ -492,7 +509,7 @@ export function turnTo(direction) {
 export function arcRight(degrees, radius) {
   return Applab.executeCmd(null, 'arcRight', {
     degrees: degrees,
-    radius: radius
+    radius: radius,
   });
 }
 
@@ -554,7 +571,7 @@ export function drawChart(chartId, chartType, chartData, options, callback) {
     chartType: chartType,
     chartData: chartData,
     options: options,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -572,7 +589,7 @@ export function drawChartFromRecords(
     tableName: tableName,
     columns: columns,
     options: options,
-    callback: callback
+    callback: callback,
   });
 }
 
@@ -581,14 +598,14 @@ export function getPrediction(modelName, modelId, testValues, callback) {
     modelName,
     modelId,
     testValues,
-    callback
+    callback,
   });
 }
 
 export function getValue(object, key) {
   return Applab.executeCmd(null, 'getValue', {
     object,
-    key
+    key,
   });
 }
 
@@ -596,6 +613,6 @@ export function addPair(object, key, value) {
   return Applab.executeCmd(null, 'addPair', {
     object,
     key,
-    value
+    value,
   });
 }

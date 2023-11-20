@@ -535,13 +535,9 @@
   volunteer_engineer_submission_subtitle_generic: 'Bu sene 7-13 Aralık''ta 100,000 öğretmen sınıflarında `Hour of Code` etkinliğini gerçekleştirecek. Unutmayın yardımınıza ihtiyaçları var! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} öğretmenler Aralık ayında gerçekleşecek olan Hour of Code etkinliğinde onlara yardım edecek bilgisayar bilimlerine tutkulu gönüllüler arıyorlar. %{num_volunteers} Gönüllüler kaydoldu. Onlara katıl."
   volunteer_engineer_submission_intro_background: "Hour of code 180'den fazla ülkede on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan Bilgisayar Bilimleri Eğitimi Haftasına katılın."
-  volunteer_engineer_submission_intro_recruit: 'Öğretmenler sınıfta veya hangi görüntülü sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri Eğitimi hakkında tutkulu kişileri arıyor.'
   volunteer_engineer_submission_intro_recruit_markdown: "Öğretmenler, sınıfta yardım edebilecekleri **bilgisayar bilimi eğitimi hakkında tutkulu** bir kişi veya bilgisayar bilimine dair imkanların genişliği ile ilgili konuşarak (görüntülü konuşma ile yapılabilir) öğrencilerine **ilham olabilecek** bir kişinin olmasını ister."
-  volunteer_engineer_submission_intro_guide: "Bizim <a href=\"%{volunteer_guide}\"> gönüllü programımız</a> hakkında daha fazla bilgi edinin."
   volunteer_engineer_submission_intro_guide_markdown: "Bizim [gönüllü programımız](%{volunteer_guide}) hakkında daha fazla bilgi edinin."
-  volunteer_engineer_submission_intro_signup: "Bir bilgisayar bilimleri öğrencisi veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class=\"form-required-field\"> *</span> ile işaretlenmiş alanların doldurulması zorunludur."
   volunteer_engineer_submission_intro_signup_markdown: "Bir bilgisayar bilimi öğrencisi veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. Gönüllü olarak kaydolmanız için en az 18 yaşında olmalısınız. Bu bölümde dolduracağınız tüm alanların, [gönüllü haritasına](/gönüllü/yerel) bakan herhangi bir kişi tarafından görüleceğini unutmayın. _*_ ile işaretlenmiş alanların doldurulması zorunludur."
-  volunteer_engineer_submission_intro_links: "Kendi Kod Saati etkinliğini düzenlemek ve <a href=\"%{volunteer_local}\">yerel gönüllü haritamızdan</a> gönüllü bulmak için <a href=\"%{learn_more}\">daha fazlasını öğren.</a>."
   volunteer_engineer_submission_intro_links_markdown: "Gönüllü arayan bir öğretmen misiniz? [Gönüllü haritamızdan](%{volunteer_local}) yerel bir gönüllü bulun."
   volunteer_engineer_submission_update_information: "Bilgilerinizi güncelleyin"
   volunteer_engineer_submission_header_shared: "Bilgiler gönüllüler haritasındaki öğretmenlerle paylaşıldı"
@@ -692,9 +688,9 @@
   dashboard_progress_not_started: "Başlatılmadı"
   dashboard_progress_in_progress: "İşlem devam ediyor"
   dashboard_progress_not_completed: "tamamlanmadı"
-  dashboard_progress_completed_too_many_blocks: "tamamlanmadı, fazla blok var"
+  dashboard_progress_completed_too_many_blocks: "tamamlandı, fazla blok var"
   dashboard_progress_completed_perfect: "tamamlandı, harika"
-  dashboard_progress_furthest_level_attempted: "denenen en yüksek seviye"
+  dashboard_progress_furthest_level_attempted: "en yüksek seviye denendi"
   dashboard_progress_submitted: "gönderildi"
   dashboard_progress_view: 'İlerlemeyi Görüntüle'
   dashboard_progress_student_in_script: "İlerleme bilgilerini %{script_name} %{student_name} için"
@@ -857,7 +853,7 @@
   hoc2014_try_new_tutorials: "Yeni Kod Saati eğitimlerimizi deneyin"
   hoc2014_try_new_tutorial: "Yeni Kod Saati eğitimimizi beta halinde deneyin"
   hoc2014_try_scrat: "Angry Birds, PvZ  ve Scrat"
-  hoc2014_try_frozen: "Karlar Ülkesi'nden Anna ve Elsa ile birlikte bir sanatçı"
+  hoc2014_try_frozen: "Frozen'dan Anna ve Elsa ile birlikte bir sanatçı"
   carousel_heading_codeorg: "Code.org eğitimleri"
   carousel_heading_codeorg_any_device: "Code.org tarafından (bütün cihazlar için) eğitimler"
   carousel_heading_3rd_party: "Üçüncü taraf eğitimleri"
@@ -911,7 +907,7 @@
   khanpl_name: "JavaScript'e giriş"
   tynker_name: "Kendi oyununu oluştur"
   scratch_name: "Kodlama ile yaratıcı olun"
-  thinkersmith_name: "Robot dostlarım"
+  thinkersmith_name: "Robotik Arkadaşlarım"
   condcards_name: "Kartlarla Koşullu Önermeler"
   codehs_name: "Karel ile Kodlama Öğren"
   codemonkey_name: "CodeMonkey"
@@ -932,7 +928,7 @@
   projguts_name: "Taş,Kağıt, Makas"
   hourofcode_name: "Klasik Labirent"
   playlab_name: "Oyun Laboratuvarı"
-  infinity_name: "Sınırsız oyun laboratuarı"
+  infinity_name: "Infinity Play Lab"
   artist_name: "Sanatçı"
   monstercoding_name: "Gizemli Ada Kodlama Macerası"
   allcancode_name: "Çalış Maco!"
@@ -986,7 +982,12 @@
   coursed-2021_name: Kurs D (2021)
   coursee-2021_name: Kurs E (2021)
   coursef-2021_name: Kurs F (2021)
-  coursed-2022_name: Kurs D (2021)
+  coursea-2022_name: Kurs A (2022)
+  courseb-2022_name: Kurs B (2022)
+  coursec-2022_name: Kurs C (2022)
+  coursed-2022_name: Kurs D (2022)
+  coursee-2022_name: Kurs E (2022)
+  coursef-2022_name: Kurs F (2022)
   express-2018_name: Hızlı Kurs
   pre-express-2018_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2018)
   express-2019_name: Hızlandırılmış Kurs (2019)
@@ -995,6 +996,7 @@
   pre-express-2020_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2020)
   express-2021_name: Hızlandırılmış Kurs (2021)
   pre-express-2021_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2021)
+  express-2022_name: Hızlandırılmış Kurs (2022)
   pre-express-2022_name: Okul Öncesi Çocuklar için Hızlandırılmış Kurs (2022)
   csd2_name: 'Ünite 2 - Ağ Geliştirme'
   csd3_name: 'Ünite 3 - Animasyonlar ve Oyunlar'
@@ -1500,7 +1502,7 @@
   header_about_team: "Tam takım"
   header_about_news: "Haber odası"
   header_about_evaluation: "Değerlendirme"
-  header_about_jobs: "İş Olanakları"
+  header_about_jobs: "Kariyer"
   header_about_contact: "Bize Ulaşın"
   header_about_faqs: "SSS"
   header_learn: "Öğren"
@@ -1508,6 +1510,7 @@
   header_stats: "İstatistikler"
   header_help_us: "Bize yardım edin"
   header_about: "Hakkında"
+  header_incubator: "İnkübatör"
   header_teacher_community: "Öğretmen topluluğu"
   header_help_support: 'Yardım ve Destek '
   header_report_bug: "Hata bildir"
@@ -1522,7 +1525,7 @@
   app_lab_tutorials: "Uygulama Laboratuvar Eğitimleri"
   game_lab_documentation: "Oyun Laboratuvar Belgelendirmesi"
   game_lab_tutorials: "Oyun Laboratuvar Eğitimi"
-  sprite_lab_documentation: "Peri Laboratuvar Belgelendirmesi"
+  sprite_lab_documentation: "Sprite Lab Dökümanları"
   sprite_lab_tutorials: "Peri Laboratuvar Eğitimi"
   header_documentation: "Belgeler"
   user_header_label: "Merhaba %{username}"
@@ -1577,7 +1580,7 @@
   applab_tile_start_tutorial: "Başlayın"
   applab_tile_teacher_guide: "Öğretmen kılavuzunu görüntüle"
   aquatic_name: 'Minecraft: Su Yolculuğu'
-  account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?"
+  account_sign_up_email_opt_in: "Size kurslarımızdaki yenilikler, yerel fırsatlar veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz? (kabaca ayda bir)"
   account_sign_up_child_accept_terms: "Code.org hizmetlerini kullanmam için ebeveynlerimin veya yasal vasimin izni olduğunu onaylıyorum."
   hoc_overview_dance_title: "Dans Partisi"
   hoc_overview_dance_subtitle: "Arkadaşlarınızla paylaşmak için bir Dans Partisi kodlayın. Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 daha fazlası!"
@@ -1622,7 +1625,7 @@
   hoc2018_mc_download_adventurer: "Minecraft Maceracı'nın çevrimdışı versiyonunu indir."
   hoc2018_mc_educators: "Eğitimciler İçin"
   hoc2018_mc_educators_box1_title: "Minecraft ile Kodla"
-  hoc2018_mc_educators_box1_desc: 'Minecraft: Eğitim Sürümü, Minecraft''ta standartlarla uyumlu müfredat, eğitim ve kodlama sağlar.'
+  hoc2018_mc_educators_box1_desc: "Minecraft: Eğitim Sürümü, Minecraft'ta standartlarla uyumlu müfredat, eğitim ve kodlama sağlar."
   hoc2018_mc_educators_box1_button: "Kullanmaya başla"
   hoc2018_mc_educators_box2_title: "Kolaylaştırıcı Rehberini İndir"
   hoc2018_mc_educators_box2_desc: "Bu araç kutusu, sizin bir Kod Saati barındırmanıza ve öğrencilerinizin bilgisayar bilimi ile ilgilenmesine yardımcı olur."
@@ -1730,7 +1733,7 @@
   hoc2018_mc_with_microsoft: "### ortaklığıyla"
   hoc2018_mc_thank_microsoft: "21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz."
   hoc2019_mc_mee_title: "İyilik için Minecraft Yapay Zeka "
-  hoc2019_mc_mee_description1: 'Yeni Minecraft Kod Saati eğitimi artık Minecraft''ta mevcuttur: Windows, Mac ve iPad için Eğitim Sürümü. Kodlama temellerini öğrenin ve öğrencilerinizle birlikte Yapay Zekayı keşfedin!'
+  hoc2019_mc_mee_description1: "Yeni Minecraft Kod Saati eğitimi artık Minecraft'ta mevcuttur: Windows, Mac ve iPad için Eğitim Sürümü. Kodlama temellerini öğrenin ve öğrencilerinizle birlikte Yapay Zekayı keşfedin!"
   hoc2019_mc_mee_description2: "Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişim."
   hoc2019_mc_more_coding_resources: "Daha Fazla Kodlama Kaynakları"
   hoc2019_dance_previous_versions: "Dans Partisinin önceki sürümünü mü arıyorsunuz?  \nÖnceki yıldan [Kısım 1](%{dance_2018_link}) ve [Kısım 2](%{dance_extras_2018_link}) başlamak için buraya tıklayın."
@@ -1743,18 +1746,18 @@
   page_not_available_description: "Üzgünüz, açmak istediğiniz sayfa artık bu adreste bulunmuyor. Yine de erişim isterseniz, lütfen [support@code.org](%{support_email_link}) adresine e-posta gönderin."
   page_not_available_button: "Anasayfaya Dön"
   hoc2020_mc_available_code_org: "Code.org'da mevcut"
-  hoc2020_mc_available_mee: 'Minecraft''ta Mevcut: Eğitim Sürümü'
+  hoc2020_mc_available_mee: "Minecraft'ta Mevcut: Eğitim Sürümü"
   hoc2020_mc_mee_title: "İki Köyün Minecraft Hikayesi"
-  hoc2020_mc_mee_description: 'Yeni Minecraft Hour of Code öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümü''nde mevcut. Öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin! Bir ders planı, videolar, bilgisayar bilimi müfredatı, eşitlik dersleri ve öğretmen eğitimleri dahil olmak üzere ücretsiz kaynaklara erişin.'
+  hoc2020_mc_mee_description: "Yeni Minecraft Hour of Code öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümü'nde mevcut. Öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin! Bir ders planı, videolar, bilgisayar bilimi müfredatı, eşitlik dersleri ve öğretmen eğitimleri dahil olmak üzere ücretsiz kaynaklara erişin."
   hoc2021_mc_mee_title: "Minecraft TimeCraft"
-  hoc2021_mc_mee_description: 'Zamanda geriye yolculuk yapın ve kodlamayı öğrenin! Yeni Minecraft Kodlama Saati öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümünde mevcuttur. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın.'
+  hoc2021_mc_mee_description: "Zamanda geriye yolculuk yapın ve kodlamayı öğrenin! Yeni Minecraft Kodlama Saati öğreticisi artık Windows, Mac, Chromebook ve iPad için Minecraft: Eğitim Sürümünde mevcuttur. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın."
   hoc2021_mc_mee_villages_title: "İki Köyün Hikâyesi"
-  hoc2021_mc_mee_villages_description: 'Minecraft: Eğitim Sürümünde öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin.'
+  hoc2021_mc_mee_villages_description: "Minecraft: Eğitim Sürümünde öğrencilerinizle birlikte kodlamanın temellerini öğrenin ve çeşitliliği ve kapsayıcılığı keşfedin."
   hoc2021_mc_mee_ai_title: "İyilik İçin Yapay Zeka"
-  hoc2021_mc_mee_ai_description: 'Öğrencilerinizle yapay zekayı keşfedin ve Minecraft: Eğitim Sürümünde kodlamayı öğrenin.'
+  hoc2021_mc_mee_ai_description: "Öğrencilerinizle yapay zekayı keşfedin ve Minecraft: Eğitim Sürümünde kodlamayı öğrenin."
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Şafak vakti gizemli malikaneden kaçın ve bir milyon zümrüt kazanın! Yeni Minecraft Hour of Code eğitimi artık Windows, Mac, Chromebook, Ipad ve Mobil için Minecraft: Education Edition''da. Ücretsiz eğitimci kaynakları, eğitimler ve videolar ile başlayın.'
-  hoc2022_mc_mee_timecraft_description: 'Minecraft: Education Edition''daki bu ücretsiz kodlama dersinde geleceği kurtarmak için zamanda geriye yolculuk yapın.'
+  hoc2022_mc_mee_timecraft_description: "Minecraft: Education Edition'daki bu ücretsiz kodlama dersinde geleceği kurtarmak için zamanda geriye yolculuk yapın."
   footer_powered_by_aws: "Amazon Web Services ve \"Powered by AWS\" logoları Amazon.com, Inc. ve Amerika Birleşik Devletleri ve/veya başka ülkelerdeki uzantılarının tescilli markasıdır."
   footer_built_on_github: "Microsoft'tan GitHub üzerinde oluşturuldu"
   codebytes_skinny_banner_title: "CodeBytes canlı mini derslerimiz için 7-11 Aralık tarihlerinde bize katılın!"
@@ -1803,7 +1806,7 @@
   ai_zooniverse: "Zooniverse - Dağ Zebrası Anlık Görüntüsü"
   ai_zooniverse_description: "Görsellerdeki farklı hayvanları tespit ederek nesli tükenmekte olan Cape Dağı Zebrasını korumaya yardımcı olun."
   ai_audience: "Dinleyiciler"
-  ai_minecraft_description: 'Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişin. (Minecraft: Eğitim Sürümü gerekli)'
+  ai_minecraft_description: "Bir ders planı, videolar, bilgisayar bilimi müfredatı ve öğretmen eğitimleri içeren kaynaklara ücretsiz erişin. (Minecraft: Eğitim Sürümü gerekli)"
   ai_k_12_audience: "K-12 (okuma becerisi gerekli)"
   ai_microsoft_workshop: "Microsoft'tan ücretsiz sanal atölyeler"
   ai_microsoft_workshop_description: "Ücretsiz STEM ve kodlama atölyeleri ile merak uyandırın."
@@ -1843,3 +1846,4 @@
   hoc2022_nasa_webb_alt_text: "NASA'nın James Webb teleskopunun çizimi"
   hoc2022_nasa_banner_heading: "Uzayda bilgisayar bilimi hakkında özel bir Hour of Code özelliği için NASA'ya katılın!"
   hoc2022_nasa_banner_description: "5 Aralık saat 10:00 ET(Eastern Time)  NASA STEM'in YouTube kanalında ilk gösterim."
+  hoc2022_nasa_banner_heading_posthoc: "Uzayda bilgisayar bilimi hakkında NASA'nın özel Kodlama Saati özelliğine göz atın!"

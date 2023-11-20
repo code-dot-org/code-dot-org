@@ -1,4 +1,11 @@
 ---
+# Drone CI pipeline running at: https://drone.cdn-code.org/code-dot-org/code-dot-org/
+# 
+# Docs here: https://docs.google.com/document/d/1Qls20xfNN6T_DErOMwVQOFJsxAEAdMWFHzBDIbxyUQQ/edit#heading=h.9bln2fv2lgqd
+#
+# NOTE: after making changes to this file, you'll need to sign them using
+# `drone sign code-dot-org/code-dot-org --save`
+
 kind: pipeline
 type: docker
 name: unit
@@ -7,6 +14,14 @@ clone:
   disable: true
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
@@ -27,10 +42,11 @@ steps:
       debug: true
       pull: true
       restore: true
-      filename: unit-tests-cache.tar
+      filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    image: codedotorg/code-dot-org:1.5.4
+    # see: docker/dockerfiles/Dockerfile
+    image: codedotorg/code-dot-org:1.9.1
     pull: always
     volumes:
       - name: rbenv
@@ -44,8 +60,6 @@ steps:
       CLOUDFRONT_PRIVATE_KEY:
         from_secret: CLOUDFRONT_PRIVATE_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -67,7 +81,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
-      filename: unit-tests-cache.tar
+      filename: unit-tests-cache-ubuntu-20.tar
       mount:
         - /home/circleci/.rbenv
 
@@ -99,6 +113,14 @@ services:
       - 6379
 
 steps:
+  - name: info
+    image: curlimages/curl
+    commands:
+      # If running on EC2, get hostname from ec2 metadata
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - echo "Running on $hostname"
+
   - name: clone
     image: docker:git
     commands:
@@ -119,9 +141,12 @@ steps:
       debug: true
       pull: true
       restore: true
+      filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:1.5.4
+    # see: docker/dockerfiles/Dockerfile
+    image: codedotorg/code-dot-org:1.9.1
+    pull: always
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
@@ -146,8 +171,6 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     commands:
-      # If running on EC2, get hostname from ec2 metadata
-      - hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
       - sudo chown -R circleci:circleci .
       # cache is restored to source directory, so we need to copy it into the right place
       - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
@@ -168,6 +191,7 @@ steps:
       debug: true
       pull: true
       rebuild: true
+      filename: ui-tests-cache-ubuntu-20.tar
       mount:
         - /home/circleci/.rbenv
         # Used to avoid re-seeding UI test data unless something changed - see cached_ui_test task in https://github.com/code-dot-org/code-dot-org/blob/staging/dashboard/lib/tasks/seed.rake
@@ -188,6 +212,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: bb9d5b8edd6b1b4b39a54e6f37561bbb74b9a6139e584eba1ab7fd04d9635036
+hmac: ac1e6aadef62e0d07f0c3a24559332c7d2da17346db0e07a8d5deb781be7cceb
 
 ...

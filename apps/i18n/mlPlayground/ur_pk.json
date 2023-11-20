@@ -1,0 +1,345 @@
+{
+  "columnDetailsMaximumValue": "زیادہ سے زیادہ",
+  "columnDetailsMinimumValue": "کم سے کم",
+  "columnInspectorDescription": "تفصیل",
+  "correctAnswer": "درست",
+  "dataCardLastUpdated": "آخری تازہ کاری",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Height": {
+          "id": "لمبائی"
+        },
+        "Length": {
+          "id": "لمبائی"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "مہینہ"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "عمر"
+        },
+        "Gender": {
+          "id": "Jinss"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "کیلا"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "رنگ"
+        },
+        "food": {
+          "id": "خوراک"
+        },
+        "music": {
+          "id": "موسیقی"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "انٹرنیٹ"
+        },
+        "Writing": {
+          "id": "لکھنا"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Mulk"
+        },
+        "Music": {
+          "id": "میوزک"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        }
+      },
+      "name": "طبی ترجیح"
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Mulk"
+        },
+        "Name": {
+          "id": "نام"
+        },
+        "Score": {
+          "id": "سکور"
+        },
+        "Star": {
+          "id": "ستارہ"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "چکن"
+        },
+        "lamb": {
+          "id": "بھیڑ کا بچہ"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "زمرہ"
+        },
+        "Description": {
+          "id": "تفصیل"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "ginger": {
+          "id": "ادرک"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "سور کی پٹھ کا گوشت"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "lobster": {
+          "id": "جھینگا کیکڑا"
+        },
+        "meat": {
+          "id": "گوشت"
+        },
+        "mushrooms": {
+          "id": "مشرومیں"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "لیموں"
+        },
+        "strawberry": {
+          "id": "سٹرابری"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "مگرمچھ"
+        },
+        "elephant": {
+          "id": "ہاتھی"
+        },
+        "people": {
+          "id": "لوگ"
+        },
+        "rhino": {
+          "id": "گینڈا"
+        },
+        "trees": {
+          "id": "درختیں"
+        }
+      },
+      "name": "سفاری"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "چکن"
+        },
+        "fruit": {
+          "id": "پھل"
+        },
+        "tomato": {
+          "id": "ٹماٹر"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آووکادو"
+        },
+        "beans": {
+          "id": "پھلیاں"
+        },
+        "corn": {
+          "id": "مکئی"
+        },
+        "lime": {
+          "id": "لیموں"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "سائز"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "سائز"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "دن"
+        },
+        "shoe": {
+          "id": "جوتا"
+        },
+        "weather": {
+          "id": "موسم"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "آرٹسٹ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "عمر"
+        },
+        "health": {
+          "id": "صحت"
+        },
+        "school": {
+          "id": "سکول"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "کامیابیوں"
+        },
+        "Age": {
+          "description": "عمر",
+          "id": "عمر"
+        },
+        "Country": {
+          "id": "Mulk"
+        },
+        "Gender": {
+          "description": "Jinss",
+          "id": "Jinss"
+        },
+        "Height": {
+          "description": "لمبائی",
+          "id": "لمبائی"
+        },
+        "Internet": {
+          "id": "انٹرنیٹ"
+        },
+        "Music": {
+          "id": "میوزک"
+        },
+        "Writing": {
+          "id": "لکھنا"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "آبی"
+        }
+      }
+    }
+  },
+  "modelCardLimitations": "حدود اور انتباہ",
+  "modelCardPossibleValuesMaximum": "زیادہ سے زیادہ",
+  "modelCardPossibleValuesMinimum": "کم سے کم",
+  "navigateBack": "واپس",
+  "navigateDone": "اختتام",
+  "navigateForward": "جاری رکھیے",
+  "potentialMisusesLabel": "حدود اور انتباہ",
+  "saveProgress": "محفوظ کریں",
+  "tryAgain": "دوبارہ کوشش کریں",
+  "uniqueOptionsWarningNotice": "نوٹ"
+}

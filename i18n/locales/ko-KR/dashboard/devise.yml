@@ -50,9 +50,6 @@ ko:
       expired: "만료 되었습니다. 다시 요청하세요"
       not_found: "찾을 수 없음"
       not_locked: "잠기지 않음"
-      not_saved:
-        one: "오류가 발생해 %{resource} 를 저장할 수 없습니다 : "
-        other: "%{count} 개의 오류가 발생해, %{resource} 을 저장할 수 없습니다."
     invitations:
       send_instructions: '%{email}에 초대 이메일을 보냈습니다.'
       invitation_token_invalid: '제공된 초대 토큰은 유효하지 않습니다!'

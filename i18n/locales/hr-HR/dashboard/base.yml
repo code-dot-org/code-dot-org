@@ -38,8 +38,10 @@ hr:
         age: 'Godine'
         gender: 'Spol'
         edit_header: 'Uredi podatke o računu'
+        finish_sign_up_header_error: 'Molimo ispravite sljedeće pogreške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Vrsta računa'
   beta: "beta"
   hello: "Pozdrav svima"
   welcome_back: "Dobrodošao natrag, %{name}"
@@ -112,7 +114,6 @@ hr:
     agree_us_data_transfer_teacher: '**Pristajem na to da Code.org može prenositi podatke (uključujući osobne podatke) prikupljene mojim korištenjem (i korištenjem mojih učenika) ove stranice u Sjedinjene Države** u svrhu hostinga i obrade takvih podataka.'
     data_collection_us: "Razumijem da je Code.org neprofitna internetska stranica sa sjedištem u SAD-u i da se zakoni koji uređuju prikupljanje podataka u SAD-u mogu razlikovati od zakona u mojoj zemlji."
     visit_privacy: 'Posjetite Code.orgova [Pravila privatnosti](%{privacy_url}) da biste saznali više.'
-    additional_information: "Trebamo dodatne informacije kako bi nastavili vašu prijavu."
     user_type_label: "Vrsta računa"
     user_type_student: "Učenik"
     user_type_teacher: "Učitelj"
@@ -439,21 +440,13 @@ hr:
       title: 'Laboratorij aplikacija'
       audience: 'Dob 13+'
       cta: 'Nauči kako'
-    hello-world:
-      body: 'Odaberite između četiri zabavne teme za kodiranje interaktivnih likova u svijetu koji stvorite.'
-    hoc:
-      title: 'Klasični labirint'
-      body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy kôd'
       body: 'Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!'
-    20-hour:
-      title: 'Ubrzani tečaj'
-      body: 'Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.'
-      body_short: 'Naučite osnovne računalne znanosti ubrzanom verzijom tečajeva 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji'
-      try_frozen: 'Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva'
+    frozen:
+      title: "Snježno kraljevstvo"
     gallery:
       title: "Galerija"
       body: "Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši korisnici"
@@ -461,14 +454,16 @@ hr:
       title: "Game Lab"
       audience: "Dob 13+"
       cta: "Nauči kako"
-    weblab:
-      title: "Web Lab (beta)"
-      audience: "Dob 13+"
-      cta: "Nauči kako"
-    frozen:
-      title: "Snježno kraljevstvo"
-    starwars:
-      title: "Ratovi zvijezda"
+    hello-world:
+      body: 'Odaberite između četiri zabavne teme za kodiranje interaktivnih likova u svijetu koji stvorite.'
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Klasični labirint'
+      body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
+    hoc2014:
+      try_new_tutorial: 'Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji'
+      try_frozen: 'Budi umjetnik s Annom i Elsom iz Snježnog kraljevstva'
     infinity:
       title: "Infinity Laboratorij igara"
       body: "Koristi Laboratorij igara za stvaranje priče ili igre s likovima iz Disney Infinity."
@@ -477,15 +472,21 @@ hr:
       body: "Istraži Minecraft svijet pomoću koda"
     minecraft2016:
       title: "Minecraft"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-    unplugged_conditionals:
-      title: "Uvjeti"
+    starwars:
+      title: "Ratovi zvijezda"
+    weblab:
+      title: "Web Lab (beta)"
+      audience: "Dob 13+"
+      cta: "Nauči kako"
     widgets:
       audience: "Dob 14+"
       cta: "Nauči kako"
+    unplugged_conditionals:
+      title: "Uvjeti"
+    20-hour:
+      title: 'Ubrzani tečaj'
+      body: 'Ovaj 20-satni tečaj objašnjava iosnovne koncepte programiranja i nformatike. Tečaj je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.'
+      body_short: 'Naučite osnovne računalne znanosti ubrzanom verzijom tečajeva 2-4.'
   landing:
     report_bug: "Prijavi grešku"
     support: "Zatraži pomoć"
@@ -704,6 +705,7 @@ hr:
         csf_express: 'Osnove RZ (Pred-Brzi ili Brzi)'
         csd: 'RZ otkrića'
         csp: 'Principi RZ'
+        other: 'Ostalo'
         not_applicable: "Nije primjenjivo"
       email_opt_in:
         opt_in_yes: 'Da'
@@ -711,6 +713,9 @@ hr:
     international_opt_in:
       instructions: "Ispuni donji obrazac kako bi naznačio da si 1) prisustvovao radionici koju je vodio jedan od međunarodnih partnera Code.org i 2) pristaješ podijeliti tvoje podatke s našim međunarodnim partnerom u tvojoj zemlji kako bi oni mogli ti oni kao učitelju informatike mogli pomoći."
       facilitator_not_applicable: "Nije primjenjivo"
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     more_information: "Pogledaj politiku privatnosti Code.org."
     accept: 'Slažem se'

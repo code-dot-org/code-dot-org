@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import ProgressTableSummaryCell, {
-  unitTestExports
+  unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import color from '@cdo/apps/util/color';
 import sinon from 'sinon';
@@ -15,10 +15,10 @@ const DEFAULT_PROPS = {
     imperfectPercent: 0,
     incompletePercent: 0,
     timeSpent: 0,
-    lastTimestamp: 0
+    lastTimestamp: 0,
   },
   isAssessmentLesson: false,
-  onSelectDetailView: () => {}
+  onSelectDetailView: () => {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -67,7 +67,7 @@ describe('ProgressTableSummaryCell', () => {
       isStarted: true,
       completedPercent: 25,
       imperfectPercent: 0,
-      incompletePercent: 75
+      incompletePercent: 75,
     };
     const wrapper = setUp({studentLessonProgress});
     const incompletePortion = wrapper.childAt(0).childAt(0);
@@ -84,7 +84,7 @@ describe('ProgressTableSummaryCell', () => {
       isStarted: true,
       completedPercent: 25,
       imperfectPercent: 25,
-      incompletePercent: 50
+      incompletePercent: 50,
     };
     const wrapper = setUp({studentLessonProgress});
     const imperfectPortion = wrapper.childAt(0).childAt(1);
@@ -101,7 +101,7 @@ describe('ProgressTableSummaryCell', () => {
       isStarted: true,
       completedPercent: 25,
       imperfectPercent: 25,
-      incompletePercent: 50
+      incompletePercent: 50,
     };
     const wrapper = setUp({isAssessmentLesson: true, studentLessonProgress});
     const completedPortion = wrapper.childAt(0).childAt(2);
@@ -118,7 +118,7 @@ describe('ProgressTableSummaryCell', () => {
       isStarted: true,
       completedPercent: 25,
       imperfectPercent: 25,
-      incompletePercent: 50
+      incompletePercent: 50,
     };
     const wrapper = setUp({isAssessmentLesson: false, studentLessonProgress});
     const completedPortion = wrapper.childAt(0).childAt(2);

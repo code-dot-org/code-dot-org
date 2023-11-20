@@ -4,21 +4,54 @@
       "programming_environments": {
         "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "ސްޓަރ - ތަރި"
+                    }
+                  }
+                }
+              }
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "ކަޅާއި ހުދު"
+                    }
+                  }
+                }
+              }
+            },
             "groups": {
               "name": "ގްރޫޕުތައް"
+            },
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "ސްޕައިރަލް"
+                    }
+                  }
+                }
+              }
             }
           }
         },
         "spritelab": {
           "categories": {
-            "world": {
-              "name": "ދުނިޔެ"
-            },
             "events": {
               "name": "އިވެންޓުތައް"
             },
             "logic": {
               "name": "ލޮޖިކް"
+            },
+            "world": {
+              "name": "ދުނިޔެ"
             }
           }
         }

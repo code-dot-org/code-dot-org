@@ -17,7 +17,7 @@ class CreateStandardsReportStep2 extends Component {
     //redux
     teacherComment: PropTypes.string,
     versionYear: PropTypes.string,
-    familyName: PropTypes.string
+    familyName: PropTypes.string,
   };
 
   commentChanged = event => {
@@ -52,7 +52,7 @@ class CreateStandardsReportStep2 extends Component {
                 markdown={i18n.createStandardsReportSuggestion2Link({
                   standardsOverviewLink: `http://curriculum.code.org/csf-${versionYear.slice(
                     -2
-                  )}/${familyName}/standards`
+                  )}/${familyName}/standards`,
                 })}
               />
             )}
@@ -69,7 +69,7 @@ class CreateStandardsReportStep2 extends Component {
                 projectsLink: teacherDashboardUrl(
                   this.props.sectionId,
                   '/projects'
-                )
+                ),
               })}
             />
           </li>
@@ -94,7 +94,7 @@ class CreateStandardsReportStep2 extends Component {
             __useDeprecatedTag
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
-            color={Button.ButtonColor.orange}
+            color={Button.ButtonColor.brandSecondaryDefault}
             className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>
@@ -106,16 +106,16 @@ class CreateStandardsReportStep2 extends Component {
 const styles = {
   textArea: {
     minHeight: 100,
-    width: '95%'
+    width: '95%',
   },
   header: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   optionalText: {
-    paddingLeft: 10
-  }
+    paddingLeft: 10,
+  },
 };
 
 export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
@@ -123,5 +123,5 @@ export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
 export default connect(state => ({
   teacherComment: state.sectionStandardsProgress.teacherComment,
   versionYear: getCurrentUnitData(state).version_year,
-  familyName: getCurrentUnitData(state).family_name
+  familyName: getCurrentUnitData(state).family_name,
 }))(CreateStandardsReportStep2);

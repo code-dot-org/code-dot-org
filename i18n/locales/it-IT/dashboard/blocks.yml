@@ -2,8 +2,8 @@
 it:
   data:
     blocks:
-      AmysBlocks_moving_with_arrow_keys:
-        text: muovi NESW con i tasti freccia
+      AmysBlocks_playerBehaviors:
+        text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
         text: chiedi all'utente {QUESTION} per la variabile {VAR} con scelte {A}{B}{C}
       AmysBlocks_spriteSayVar:
@@ -77,6 +77,11 @@ it:
           UNIT:
             '"measures"': battute
             '"seconds"': secondi
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': battute
+            '"seconds"': secondi
       Dancelab_changeColorBy:
         text: modifica {COLOR} {METHOD} di {AMOUNT}
         options:
@@ -117,6 +122,28 @@ it:
             MOVES.ThisOrThat: Questo o quello
             MOVES.Thriller: Zombie
             MOVES.Rest: Nessuno
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} eseguono ininterrottamente la mossa {MOVE} {DIR}"
+        options:
+          GROUP:
+            '"CAT"': tutti i gatti
+            '"SLOTH"': bradipi
+          MOVE:
+            MOVES.Roll: Piroetta
+            MOVES.ClapHigh: Applauso alto
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doppio giù
+            MOVES.Drop: Rilascia
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stella
+            MOVES.ThisOrThat: Questo o quello
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Nessuno
+            '"next"': "(Successiva)"
+            '"prev"': "(Precedente)"
+            '"rand"': "(Casuale)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} esegue ininterrottamente la mossa {MOVE} {DIR}"
         options:
@@ -395,7 +422,7 @@ it:
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
-            '"FROG"': Ranocchio
+            '"FROG"': ranocchio
             '"MOOSE"': tutte le alci
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
@@ -424,7 +451,7 @@ it:
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
-            '"FROG"': Ranocchio
+            '"FROG"': ranocchio
             '"MOOSE"': tutte le alci
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
@@ -468,25 +495,6 @@ it:
             '19': '19'
             '20': '20'
             '21': '21'
-            '22': '22'
-            '23': '23'
-            '24': '24'
-            '25': '25'
-            '26': '26'
-            '27': '27'
-            '28': '28'
-            '29': '29'
-            '30': '30'
-            '31': '31'
-            '32': '32'
-            '33': '33'
-            '34': '34'
-            '35': '35'
-            '36': '36'
-            '37': '37'
-            '38': '38'
-            '39': '39'
-            '40': '40'
           COSTUME:
             '"ALIEN"': tutti gli alieni
             '"BEAR"': orsi
@@ -603,6 +611,53 @@ it:
             '"iceCream"': Gelati
             '"default"': Chiaro
             '"neon"': Neon
+            '"tropical"': Tropicale
+            '"vintage"': Vintage
+            '"warm"': Rossi
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          imposta effetto di sfondo
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nessuno
+            '"rand"': "(Casuale)"
+            '"quads"': Angoli
+            '"circles"': Tunnel
+            '"clouds"': Nuvole
+            '"color_cycle"': Colori
+            '"diamonds"': Diamanti
+            '"disco_ball"': Palla da discoteca
+            '"fireworks"': Fuochi d'artificio
+            '"flowers"': Fiori
+            '"growing_stars"': Stelle nascenti
+            '"higher_power"': Higher Power
+            '"swirl"': Ipnotico
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista da ballo del laser
+            '"splatter"': Bolle
+            '"rainbow"': Arcobaleno
+            '"ripples_random"': Increspature casuali
+            '"ripples"': Increspature
+            '"snowflakes"': Neve
+            '"text"': Titolo della canzone
+            '"galaxy"': Spazio
+            '"sparkles"': Scintille
+            '"spiral"': Spirale
+            '"disco"': Quadrati
+            '"squiggles"': Ghirigori
+            '"starburst"': Esplosione di stelle
+            '"stars"': Stelle
+            '"music_wave"': Onde
+          PALETTE:
+            '"rave"': Bianco e nero
+            '"cool"': Blu
+            '"electronic"': Elettronica
+            '"iceCream"': Gelati
+            '"default"': Chiaro
+            '"neon"': Neon
+            '"ocean"': Oceano
+            '"rainbow"': Arcobaleno
             '"tropical"': Tropicale
             '"vintage"': Vintage
             '"warm"': Rossi
@@ -1060,6 +1115,8 @@ it:
         text: evitando gli obiettivi
       gamelab_beginCollectingData:
         text: inizia a raccogliere i dati {BREAK} del valore {VALUE} con l'etichetta {LABEL}
+      gamelab_behaviorPicker:
+        text: "{BEHAVIOR}"
       gamelab_bounceOff:
         text: "{SPRITE} rimbalza su {TARGET}"
       gamelab_changePropBy:
@@ -1251,6 +1308,19 @@ it:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: disponi {GROUP} in {FORMAT}
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"top"': prima fila
+            '"row"': classe
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
+            '"column"': colonna
+            '"right"': colonna a destra
       gamelab_locationAt:
         text: 'posizione x: {X} y: {Y}'
       gamelab_locationModifier:
@@ -1277,6 +1347,18 @@ it:
             '"spiral"': spirale
       gamelab_makeNewSpriteAnon:
         text: crea un nuovo personaggio {ANIMATION_NAME} alla posizione {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': bordo
+            '"circle"': cerchio
+            '"grid"': griglia
+            '"top"': prima fila
+            '"row"': classe
+            '"bottom"': ultima fila
+            '"left"': colonna a sinistra
+            '"column"': colonna
+            '"right"': colonna a destra
       gamelab_makeNumSprites:
         text: crea {NUM} nuovi personaggi {ANIMATION_NAME}
       gamelab_makeProjectile:
@@ -1506,11 +1588,9 @@ it:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
-            '1': extra slow
             '3': lenta
             '5': normale
             '7': veloce
-            '9': extra fast
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
       gamelab_setupScoreboard:
@@ -1635,6 +1715,10 @@ it:
         text: coordinata x di {SPRITE}
       gamelab_yLocationOf:
         text: coordinata y di {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} scivola a {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: ruzzolando
       Mikelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -2236,8 +2320,6 @@ it:
         text: gira a sinistra
       RyanLab_turnRight:
         text: gira a destra
-      SpriteLab2Beta_spriteSay:
-        text: personaggio {SPRITE} dice {TEXT} per {SECONDS} secondi
       Vector_createSpriteWith:
         text: |-
           creare personaggio
@@ -2274,18 +2356,25 @@ it:
         options:
           PORTION:
             '1': tutto
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': tutto
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} dice {SPEECH}"
+      adaptations_adaptationBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rotazione oraria
+            new Behavior(spinning_left, []): rotazione anti-oraria
+            new Behavior(fluttering, []): ondeggiamento
+            new Behavior(jittering, []): pulsazione
+            new Behavior(wobbling, []): barcollamento
+            new Behavior(wandering, []): movimento casuale
+            new Behavior(patrolling, []): pattugliamento
+      adaptations_startFollowing:
+        text: "{SPRITE} inizia a seguire {TARGET}"
       binary_drawBin:
         text: disegna in binario {BIN}
       binary_drawBinScreen:
@@ -2428,6 +2517,22 @@ it:
           DIR:
             right: destra ↻
             left: sinistra ↺
+      ecosystems_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: scrivi {TEXT}
       storylab_setForegroundEffect2:
         text: crea effetto {EFFECT}
         options:
@@ -2442,5 +2547,3 @@ it:
         text: imposta intestazione {HEADING}
       storylab_setSubheading:
         text: imposta intestazione secondaria {SUBHEADING}
-      validation_validatedBackground:
-        text: imposta lo sfondo {IMG}

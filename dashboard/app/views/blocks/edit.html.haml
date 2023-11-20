@@ -1,6 +1,6 @@
 - content_for(:head) do
-  %script{src: webpack_asset_path('js/blockly.js')}
-  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+  - @pool = @block.pool
+  = render partial: 'load_blockly'
   %script{src: webpack_asset_path('js/blocks/edit.js')}
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag asset_path('css/common.css'), media: 'all'
@@ -25,7 +25,7 @@
       %div
         = f.submit class: 'btn', id: 'block_submit'
       %br
-        = f.submit class: 'btn btn-info', value: 'Save as Clone', data: {'disable-with': 'Cloning...'}
+        = f.submit class: 'btn btn-info', id: 'block_clone', value: 'Save as Clone', data: {'disable-with': 'Cloning...'}
 
     - unless @block.new_record?
       = form_for(@block,
@@ -36,7 +36,7 @@
             data: {confirm: 'Are you sure you want to delete this block?'},
             class: 'btn btn-danger'
   .block-preview
-    %h3 Block Preview
+    %h3= @blockly_version == 'google' ? 'Block Preview (Google Blockly)' : 'Block Preview (CDO Blockly)'
     #blockly-container
     %h3 Generated Code
     %pre#code-preview

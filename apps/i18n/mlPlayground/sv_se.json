@@ -1,0 +1,327 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Beskrivning",
+  "correctAnswer": "Rätt",
+  "dataCardLastUpdated": "Senast uppdaterad",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Height": {
+          "id": "Höjd"
+        },
+        "Length": {
+          "id": "Längd"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Ålder"
+        },
+        "Gender": {
+          "id": "Kön"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banan"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "ålder"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "färg"
+        },
+        "food": {
+          "id": "mat"
+        },
+        "music": {
+          "id": "musik"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Ålder"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "ålder"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        },
+        "Music": {
+          "id": "Musik"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "ålder"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Land"
+        },
+        "Name": {
+          "id": "Namn"
+        },
+        "Score": {
+          "id": "Poäng"
+        },
+        "Star": {
+          "id": "Stjärna"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "ost"
+        },
+        "chicken": {
+          "id": "höna"
+        },
+        "lamb": {
+          "id": "lamm"
+        },
+        "onion": {
+          "id": "lök"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Kategori"
+        },
+        "Description": {
+          "id": "Beskrivning"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avokado"
+        },
+        "onion": {
+          "id": "lök"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "Bacon"
+        },
+        "cheese": {
+          "id": "ost"
+        },
+        "lobster": {
+          "id": "hummer"
+        },
+        "meat": {
+          "id": "kött"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "lime"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "Alligator"
+        },
+        "elephant": {
+          "id": "elefant"
+        },
+        "rhino": {
+          "id": "noshörning"
+        },
+        "trees": {
+          "id": "träd"
+        }
+      },
+      "name": "Safari"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avokado"
+        },
+        "beans": {
+          "id": "bönor"
+        },
+        "cheese": {
+          "id": "ost"
+        },
+        "chicken": {
+          "id": "höna"
+        },
+        "fruit": {
+          "id": "frukt"
+        },
+        "tomato": {
+          "id": "tomat"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "Avokado"
+        },
+        "beans": {
+          "id": "bönor"
+        },
+        "corn": {
+          "id": "majs"
+        },
+        "lime": {
+          "id": "lime"
+        },
+        "onion": {
+          "id": "lök"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "sidor"
+        },
+        "size": {
+          "id": "storlek"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "sidor"
+        },
+        "size": {
+          "id": "storlek"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "dag"
+        },
+        "shoe": {
+          "id": "sko"
+        },
+        "weather": {
+          "id": "väder"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Konstnären"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "ålder"
+        },
+        "health": {
+          "id": "hälsa"
+        },
+        "school": {
+          "id": "skola"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Prestationer"
+        },
+        "Age": {
+          "description": "Ålder",
+          "id": "Ålder"
+        },
+        "Country": {
+          "id": "Land"
+        },
+        "Gender": {
+          "description": "Kön",
+          "id": "Kön"
+        },
+        "Height": {
+          "description": "Höjd",
+          "id": "Höjd"
+        },
+        "Internet": {
+          "id": "Internet"
+        },
+        "Music": {
+          "id": "Musik"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Vatten"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "Fel",
+  "modelCardFeatures": "Funktioner",
+  "modelCardLabel": "Etikett",
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Tillbaka",
+  "navigateDone": "Avsluta",
+  "navigateForward": "Fortsätt",
+  "resultsTableFeatureHeader": "Funktioner",
+  "saveProgress": "Spara",
+  "trainModelHeading": "Träning",
+  "tryAgain": "Försök igen"
+}

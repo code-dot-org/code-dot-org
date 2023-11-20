@@ -8,16 +8,7 @@ import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLesso
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
-  45,
-  90,
-  135,
-  180,
-  225,
-  270,
-  315,
-  360,
-  405,
-  450
+  45, 90, 135, 180, 225, 270, 315, 360, 405, 450,
 ];
 export const WEEK_WIDTH = 585;
 
@@ -27,13 +18,13 @@ export default class UnitCalendarDialog extends Component {
     handleClose: PropTypes.func.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
-    scriptId: PropTypes.number.isRequired
+    scriptId: PropTypes.number.isRequired,
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      instructionalMinutes: this.props.weeklyInstructionalMinutes
+      instructionalMinutes: this.props.weeklyInstructionalMinutes,
     };
   }
 
@@ -58,8 +49,8 @@ export default class UnitCalendarDialog extends Component {
       data_json: JSON.stringify({
         original_time: originalTime,
         new_time: newTime,
-        script_id: this.props.scriptId
-      })
+        script_id: this.props.scriptId,
+      }),
     };
     firehoseClient.putRecord(record, {includeUserId: true});
   };
@@ -102,7 +93,7 @@ export default class UnitCalendarDialog extends Component {
           style={styles.button}
           text={i18n.closeDialog()}
           onClick={handleClose}
-          color={Button.ButtonColor.orange}
+          color={Button.ButtonColor.brandSecondaryDefault}
         />
       </BaseDialog>
     );
@@ -114,23 +105,23 @@ const styles = {
     textAlign: 'left',
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
   },
   button: {
     float: 'right',
-    marginTop: 30
+    marginTop: 30,
   },
   dropdown: {
     width: 'fit-content',
-    marginBottom: 0
+    marginBottom: 0,
   },
   minutesPerWeekWrapper: {
     display: 'flex',
     marginBottom: 10,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   minutesPerWeekDescription: {
     fontWeight: 'bold',
-    marginRight: 10
-  }
+    marginRight: 10,
+  },
 };

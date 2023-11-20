@@ -53,6 +53,7 @@ hu:
         gender: 'Nem'
         edit_header: 'Felhasználói adatok szerkesztése'
         finish_sign_up_header: 'A profilod létrehozásának befejezése'
+        finish_sign_up_header_error: 'Kérjük, javítsd a következő hibákat:'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
@@ -60,6 +61,8 @@ hu:
         reset_password_token: "A jelszó megváltoztatásához használt link"
         error:
           future: nem lehet a jövőben
+        user_type: 'Fióktípus'
+        us_state: 'Állam'
   beta: "béta"
   hello: "Helló világ"
   welcome_back: "Üdv újra, %{name}"
@@ -69,6 +72,7 @@ hu:
   unsubmit: Visszavon
   previous_page: Előző oldal
   next_page: Következő oldal
+  next_level: Következő szint
   next_resource: Következő erőforrás
   done_with_module: Végeztem ezzel a tanulási modullal
   cancel: "Mégsem"
@@ -172,7 +176,6 @@ hu:
     data_collection_us: "Tudom, hogy a Code.org egy nonprofit webhely, amelynek székhelye az USA-ban van, és az USA adatgyűjtésre vonatkozó törvényei eltérhetnek az én hazám törvényeitől."
     visit_privacy: 'További információkért keresd fel a Code.org webhelyen az [Adatvédelmi Szabályokat](%{privacy_url}).'
     student_terms_markdown: "Az e-mail címeket olyan módon tároljuk, hogy az nem teszi lehetővé számunkra a kapcsolatfelvételt a tanulókkal. A tanulók a jelszóemlékeztető kivételével soha nem fognak e-mailt kapni a Code.org-tól. További információt az [adatvédelem](http://code.org/privacy) részben találsz."
-    additional_information: "Még szükségünk van néhány adatra  a regisztráció folytatásához."
     user_type_button: "Felhasználói fiók-típus módosítása"
     user_type_label: "Fióktípus"
     user_type_student: "Diák"
@@ -200,6 +203,9 @@ hu:
     parent_account_checkbox: "Szülő/gondviselő vagyok, a gyermekem nevében jelentkezem"
     parent_account_email_progress_permission: "Küldhetünk Önnek esetenként e-mailt a gyermeke fejlődéséről és projektjeiről, valamint frissítéseket a tanfolyamáról és a számítástechnikai ismereteiről? [(Lásd az adatvédelmi irányelveinket)](%{privacy_policy_url})"
     parent_account_email_label: "Szülő/gondviselő e-mail címe"
+    us_state: 'Állam'
+    us_state_dropdown_options:
+      other: "Olyan helyen élek, ami nem szerepel a listában."
   school_info:
     title: 'Iskolai információ (opcionális)'
     school_country: 'Iskola országa'
@@ -332,7 +338,7 @@ hu:
       finished_hoc: "Végeztem!"
       sign_in_to_save: 'Jelentkezz be, hogy később ugyaninnen folytathasd'
       my_dashboard: "Vezérlőpultom"
-      course_catalog: "Tanfolyamaink"
+      course_catalog: "Tanfolyamok"
       project_gallery: "Projektek"
       sections: "Szakaszok"
       help_support: "Súgó és támogatás"
@@ -669,29 +675,17 @@ hu:
       body_short: "Tervezz egy alkalmazást, kódolj elemekből vagy JavaScript-ben, majd oszd meg néhány másodperc alatt."
       audience: '13 éves kor felett'
       cta: 'Ismerd meg, hogyan'
-    dance:
-      title: 'Táncos buli'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Táncos buli'
-    hello-world:
-      title: 'Helló világ'
-      body: 'Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.'
-    poem-art:
-      title: 'Versművészet'
-      body: 'Fejezd ki magad! Készíts animált verseket kódok felhasználásával.'
-    hoc:
-      title: 'Hagyományos labirintus'
-      body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
+    dance:
+      title: 'Táncos buli'
     flappy:
       title: 'Flappy kód'
       body: 'Szeretnéd megírni a saját játékodat kevesebb, mint 10 perc alatt? Próbáld ki a Flappy kód gyakorlatot!'
-    20-hour:
-      title: 'Gyorsított tanfolyam'
-      body: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
-      body_short: 'Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.'
-    hoc2014:
-      try_new_tutorial: 'Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát'
-      try_frozen: 'Művészkedj Annával és Elzával a Jégvarázsból'
+    frozen:
+      title: "Jégvarázs"
     gallery:
       title: "Galéria"
       body: "Nézd meg a felhasználóink által készített alkalmazásokat és a művészi képek galériáját"
@@ -700,18 +694,21 @@ hu:
       body: "A Game Lab egy olyan programozási környezet, amelyben egyszerű animációkat és játékokat lehet készíteni egymással kölcsönhatásban lévő objektumokkal és karakterekkel."
       audience: "13 éves kor felett"
       cta: "Ismerd meg, hogyan"
+    hello-world:
+      title: 'Helló világ'
+      body: 'Válassz a négy szórakoztató téma közül, ha interaktív karaktereket akarsz kódolni az általad létrehozott világban.'
+    hero:
+      title: "Minecraft"
+      body: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
     hoc-encryption:
       title: "Egyszerű titkosítás"
       body: "A diákok megtanulják, hogyan kell titkosított üzeneteket létrehozni és feltörni."
-    weblab:
-      title: "Web Lab (béta)"
-      body: "A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a webhelyet akár pár másodperc alatt."
-      audience: "13 éves kor felett"
-      cta: "Ismerd meg, hogyan"
-    frozen:
-      title: "Jégvarázs"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Hagyományos labirintus'
+      body: 'Ismerkedj meg a számítógép-tudomány alapjaival. Milliók kezdték már el.'
+    hoc2014:
+      try_new_tutorial: 'Próbáld ki az új Kódolás Órája oktató anyagunk béta változatát'
+      try_frozen: 'Művészkedj Annával és Elzával a Jégvarázsból'
     infinity:
       title: "Infinity játéklabor"
       body: "Használd a Játéklabort, hogy megalkoss egy történetet vagy játékot Disney Infinity szereplőkkel."
@@ -721,30 +718,39 @@ hu:
     minecraft2016:
       title: "Minecraft"
       body: "Programozz állatokat és egyéb Minecraft lényeket a saját Minecraft verziódban."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz végig a Minecraft világán kódok segítségével."
+    poem-art:
+      title: 'Versművészet'
+      body: 'Fejezd ki magad! Készíts animált verseket kódok felhasználásával.'
     sports:
       title: "Sportok"
       body: "Készíts egy kosárlabda-játékot, vagy kombináld a különböző sportágakat."
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Szöveg tömörítése"
       body: "Ebben a leckében a tanulók a szövegtömörítő widget segítségével tömörítik a szöveget, a mintákat szimbólumokkal helyettesítik."
-    unplugged:
-      title: "Offline tanórák"
-      audience: "4 éven felettieknek"
-      body: "Összeállítottunk egy listát a számítógép nélküli leckékről, ezeket lehet használni az osztályteremben. Mostantól taníthatod a számítástechnika alapjait, akár van számítógép az osztályteremben, akár nincs! Próbáld ki ezeket a leckéket önálló tananyagként vagy más számítógépes tanfolyam kiegészítő leckéjeként használni."
-      body_short: "Ha nincs számítógéped, próbáld ki ezeket az offline tanórákat az osztályoddal!"
-    unplugged_conditionals:
-      title: "Feltételek"
-      body: "Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép nélküli tevékenységben egy kártyapakli segítségével."
+    weblab:
+      title: "Web Lab (béta)"
+      body: "A Web Lab egy programozási környezet, ahol egyszerű weboldalakat lehet készíteni HTML és CSS segítségével. Tervezd meg weboldalaid, és oszd meg a webhelyet akár pár másodperc alatt."
+      audience: "13 éves kor felett"
+      cta: "Ismerd meg, hogyan"
     widgets:
       title: "Widgetek"
       body: "Ezeknek a digitális eszközöknek a segítségével a diákok gyakorlatokon keresztül fedezhetik fel a Számítástechnika alapjai kurzusunkban szereplő fogalmakat. Használd a widgeteket önállóan, vagy készíts egy, egy fogalom köré épült leckét az osztálynak."
       audience: "14 éves kortól"
       cta: "Ismerd meg, hogyan"
+    unplugged_conditionals:
+      title: "Feltételek"
+      body: "Ismerd meg az algoritmusokat és a feltételes utasításokat ebben a számítógép nélküli tevékenységben egy kártyapakli segítségével."
+    unplugged:
+      title: "Offline tanórák"
+      audience: "4 éven felettieknek"
+      body: "Összeállítottunk egy listát a számítógép nélküli leckékről, ezeket lehet használni az osztályteremben. Mostantól taníthatod a számítástechnika alapjait, akár van számítógép az osztályteremben, akár nincs! Próbáld ki ezeket a leckéket önálló tananyagként vagy más számítógépes tanfolyam kiegészítő leckéjeként használni."
+      body_short: "Ha nincs számítógéped, próbáld ki ezeket az offline tanórákat az osztályoddal!"
+    20-hour:
+      title: 'Gyorsított tanfolyam'
+      body: 'Ez a 20 órás kurzus bemutatja a  számítástechnika és programozás alap fogalmait. A kurzus általános iskolásoknak lett kitalálva, de mindenki számára jó időtöltés lehet.'
+      body_short: 'Ismerd meg a számítógép-tudomány alapjait, a 2-4. gyorsított tanfolyamban.'
   landing:
     prerelease_tutorial: "Ez a gyakorlat **béta** állapotban van.  A visszajelzések és a fejlesztések alapján átdolgozásra kerül."
     report_bug: "Hiba bejelentése"
@@ -1100,6 +1106,7 @@ hu:
         csf_express: 'Számítástechnika alapjai (expressz vagy azt megelőző)'
         csd: 'Számítástechnika felfedezése'
         csp: 'Számítástechnika alapjai'
+        other: 'Egyéb'
         not_applicable: "Nem alkalmazható"
       email_opt_in:
         opt_in_yes: 'Igen'
@@ -1121,6 +1128,13 @@ hu:
     no_teacher_email:
       body_markdown: 'A fiókodnak nincs e-mail-címe. Kérjük, [látogass el a fiók beállításokhoz](%{user_registration}), és az űrlap kitöltése előtt add meg az e-mail-címed.'
   courses_category: 'Komplett tanfolyamok'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Helló világ'
+      sports: 'Sportok'
+      csf: 'A számítógép-tudomány alapjai'
+      csc: 'Kapcsolatok az informatikával'
   cookie_banner:
     message: 'A weboldalunk további böngészésével vagy az Elfogadom gombra kattintással hozzájárulsz a sütik számítógépen vagy más eszközön történő tárolásához.'
     more_information: "Lásd a Code.org adatvédelmi irányelveit."

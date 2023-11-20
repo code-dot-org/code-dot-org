@@ -38,6 +38,7 @@ hy:
         age: 'Տարիք'
         gender: 'Սեռ'
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
+        finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         error:
           future: հակում է լինի ապագայում
   beta: "բետա"
@@ -112,7 +113,6 @@ hy:
     valid_password: "Valid գաղտնաբառը:"
     invalid_password: "Գաղտնաբառ պետք է լինի առնվազն 6 նիշ"
     mismatch_password: "Այս երկու Ձեր մուտքագրած գաղտնաբառերը չեն համընկնում"
-    additional_information: "Մենք պետք է որոշ լրացուցիչ տեղեկություններ է շարունակել ստորագրման ձեզ."
     user_type_student: "Աշակերտ"
     user_type_teacher: "Teacher"
     field_is_required: "պարտադիր ե"
@@ -411,32 +411,27 @@ hy:
       body_short: "Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով."
       audience: 'տարեկան 13-ից ավելի'
       cta: 'Իմացեք, թե ինչպես'
-    hoc:
-      title: 'Classic Maze'
-      body: 'Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy-ի կոդը'
       body: 'Wanna գրեք ձեր սեփական խաղը ավելի քիչ, քան 10 րոպե: Փորձեք մեր Flappy Code խնամակալական!'
-    20-hour:
-      title: 'Արագացված Դասընթացի'
-      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
-      body_short: 'Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով դասընթացներ 2-4:'
-    hoc2014:
-      try_new_tutorial: 'Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա'
-      try_frozen: 'Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած'
+    frozen:
+      title: "սառած"
     gallery:
       title: "սրահ"
       body: "Դիտելու պատկերասրահում ծրագրի եւ նկարիչ պատկերների կողմից ստեղծված մեր օգտվողներին"
     gamelab:
       audience: "տարեկան 13-ից ավելի"
       cta: "Իմացեք, թե ինչպես"
-    weblab:
-      audience: "տարեկան 13-ից ավելի"
-      cta: "Իմացեք, թե ինչպես"
-    frozen:
-      title: "սառած"
-    starwars:
-      title: "Աստղային պատերազմներ"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Classic Maze'
+      body: 'Փորձեք հիմունքների համակարգչային գիտության. Միլիոնավոր են տվել այն կրակոցի.'
+    hoc2014:
+      try_new_tutorial: 'Փորձեք մեր նոր ժամին օրենսգրքի ձեռնարկը բետա'
+      try_frozen: 'Արվեստագետ Աննայի հետ եւ Էլզա, սառեցրած'
     infinity:
       title: "Infinity Խաղալ Lab"
       body: "Use Play Lab to create a story or game starring Disney Infinity characters."
@@ -445,20 +440,25 @@ hy:
       body: "Explore a Minecraft world through code"
     minecraft2016:
       title: "Minecraft"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
+    starwars:
+      title: "Աստղային պատերազմներ"
+    weblab:
+      audience: "տարեկան 13-ից ավելի"
+      cta: "Իմացեք, թե ինչպես"
+    widgets:
+      audience: "Ages 14+"
+      cta: "Իմացեք, թե ինչպես"
+    unplugged_conditionals:
+      title: "conditionals"
     unplugged:
       title: "unplugged Դասեր"
       audience: "տարեկան 4+"
       body: "Weve կազմել ցուցակը unplugged դասերի ձեզ համար օգտագործել ձեր դասարանում. Այժմ դուք կարող եք սովորեցնել հիմունքների համակարգչային գիտության, թե արդյոք դուք ունեք համակարգիչ է ձեր դասարանում, թե ոչ: Փորձեք օգտագործելով այս դասերը որպես առանձին ոլորտ, իհարկե, կամ, ինչպես կոմպլեմենտար դասեր ցանկացած համակարգչային գիտության, իհարկե:"
       body_short: "Եթե ​​դուք dont պետք համակարգիչներ, փորձեք այդ unplugged դասեր ձեր դասարանում."
-    unplugged_conditionals:
-      title: "conditionals"
-    widgets:
-      audience: "Ages 14+"
-      cta: "Իմացեք, թե ինչպես"
+    20-hour:
+      title: 'Արագացված Դասընթացի'
+      body: 'This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!'
+      body_short: 'Իմացեք, թե հիմնական համակարգչային գիտությունը արագացված տարբերակով դասընթացներ 2-4:'
   landing:
     report_bug: "Report Bug"
     support: "Օգնություն ստանալ"
@@ -634,9 +634,14 @@ hy:
         other: "Այլ"
       workshop_course:
         csp: '''16-''17 CS Principles'
+        other: 'Այլ'
       email_opt_in:
         opt_in_yes: 'այո'
         opt_in_no: 'ոչ'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      csf: 'CS Fundamentals'
   cookie_banner:
     accept: 'Ես համաձայն եմ'
   copy: 'պատճեն'

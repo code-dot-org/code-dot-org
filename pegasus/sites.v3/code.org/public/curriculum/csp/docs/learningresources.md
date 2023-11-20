@@ -5,7 +5,7 @@ video_player: true
 
 # CS Principles - Learning JavaScript Resources
 
-The following table is intended to outline the main programming topics for Unit 3, so that teachers may familiarize themselves with the material and feel more comfortable running the lessons in the unit. 
+The following table is intended to outline the main programming topics for Unit 3, so that teachers may familiarize themselves with the material and feel more comfortable running the lessons in the unit.
 
 <style>
 .rotate {
@@ -49,7 +49,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/1/Teacher">U3L01 - The Need for Programming Languages</a>
       </td>
-      <td style="border:1px solid #999999;">You Should Learn to Program: Christian Genco at TEDxSMU<iframe width="100%" src="https://www.youtube.com/embed/xfBWk4nw440" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">You Should Learn to Program: Christian Genco at TEDxSMU<iframe width="100%" src="https://www.youtube-nocookie.com/embed/xfBWk4nw440" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>
@@ -57,14 +57,14 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/2/Teacher">U3L02 - Using Simple Commands</a>
       </td>
-      <td style="border:1px solid #999999;">Turtle Programming<iframe width="100%" src="https://www.youtube.com/embed/i2KHYUhtOlM" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Turtle Programming<iframe width="100%" src="https://www.youtube-nocookie.com/embed/i2KHYUhtOlM" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/3/Teacher">U3L03 - Creating Functions</a>
       </td>
-      <td style="border:1px solid #999999;">Defining and Calling Functions<iframe width="100%" src="https://www.youtube.com/embed/yPWQfa4CHbw" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Defining and Calling Functions<iframe width="100%" src="https://www.youtube-nocookie.com/embed/yPWQfa4CHbw" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="https://code.org/applab/docs/functionParams_none">App Lab Docs: Define a function</a></li>
@@ -91,7 +91,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/6/Teacher">U3L06 - Creating Functions with Parameters</a>
       </td>
-      <td style="border:1px solid #999999;">Functions with Parameters<iframe width="100%" src="https://www.youtube.com/embed/k7Ji1E97-V0" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Functions with Parameters<iframe width="100%" src="https://www.youtube-nocookie.com/embed/k7Ji1E97-V0" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="http://www.w3schools.com/js/js_functions.asp">W3Schools: JS Functions</a></li>
@@ -102,7 +102,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/7/Teacher">U3L07 - Looping and Random Numbers</a>
       </td>
-      <td style="border:1px solid #999999;">Using Loops<iframe width="100%" src="https://www.youtube.com/embed/G8hfAk4PfOM" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Using Loops<iframe width="100%" src="https://www.youtube-nocookie.com/embed/G8hfAk4PfOM" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="http://www.w3schools.com/js/js_loop_for.asp">W3Schools: JS For Loop</a></li>
@@ -143,7 +143,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/12/Teacher">U3L12 - Introducing Design Mode</a>
       </td>
-      <td style="border:1px solid #999999;">Intro to Design Mode in App Lab<iframe width="100%" src="https://www.youtube.com/embed/-EoTeD4mSNU" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Intro to Design Mode in App Lab<iframe width="100%" src="https://www.youtube-nocookie.com/embed/-EoTeD4mSNU" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>
@@ -158,7 +158,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/14/Teacher">U3L14 - Controlling Memory with Variables</a>
       </td>
-      <td style="border:1px solid #999999;">Intro to Variables - Part 1<iframe width="100%" src="https://www.youtube.com/embed/G41G_PEWFjE" frameborder="0" allowfullscreen></iframe><br><br>Intro to Variables - Part 2<iframe width="100%" src="https://www.youtube.com/embed/ijjVDBPwA1o" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Intro to Variables - Part 1<iframe width="100%" src="https://www.youtube-nocookie.com/embed/G41G_PEWFjE" frameborder="0" allowfullscreen></iframe><br><br>Intro to Variables - Part 2<iframe width="100%" src="https://www.youtube-nocookie.com/embed/ijjVDBPwA1o" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="http://www.w3schools.com/js/js_variables.asp">W3Schools: JS Variables</a></li>
@@ -199,7 +199,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/18/Teacher">U3L18 - Understanding Program Flow and Logic</a>
       </td>
-      <td style="border:1px solid #999999;">Conditionals - Part 1: Boolean Expressions<iframe width="100%" src="https://www.youtube.com/embed/y3rCKJNOwpA" frameborder="0" allowfullscreen></iframe><br><br>Conditionals - Part 2: If/Else Statements<iframe width="100%" src="https://www.youtube.com/embed/UDi7xgIIW8E" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Conditionals - Part 1: Boolean Expressions<iframe width="100%" src="https://www.youtube-nocookie.com/embed/y3rCKJNOwpA" frameborder="0" allowfullscreen></iframe><br><br>Conditionals - Part 2: If/Else Statements<iframe width="100%" src="https://www.youtube-nocookie.com/embed/UDi7xgIIW8E" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="http://www.w3schools.com/js/js_if_else.asp">W3Schools: JS If/Else Statements</a></li>
@@ -217,7 +217,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/20/Teacher">U3L20 - Compound Conditional Logic</a>
       </td>
-      <td style="border:1px solid #999999;">Conditionals - Part 3: AND & OR Operators<iframe width="100%" src="https://www.youtube.com/embed/kyFdniI-ZZs" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Conditionals - Part 3: AND & OR Operators<iframe width="100%" src="https://www.youtube-nocookie.com/embed/kyFdniI-ZZs" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>
@@ -250,7 +250,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/24/Teacher">U3L24 - Introduction to Arrays</a>
       </td>
-      <td style="border:1px solid #999999;">Introduction to Lists<iframe width="100%" src="https://www.youtube.com/embed/KFy7u3Rhozs" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Introduction to Lists<iframe width="100%" src="https://www.youtube-nocookie.com/embed/KFy7u3Rhozs" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;">
         <ul>
           <li><a href="http://www.w3schools.com/js/js_arrays.asp">W3Schools: JS Arrays</a></li>
@@ -269,7 +269,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
       <td style="border:1px solid #999999;">
         <a href="https://code.org/curriculum/cspunit3/26/Teacher">U3L26 - Processing Arrays</a>
       </td>
-      <td style="border:1px solid #999999;">Processing Lists<iframe width="100%" src="https://www.youtube.com/embed/RQ6GJt9f2vg" frameborder="0" allowfullscreen></iframe></td>
+      <td style="border:1px solid #999999;">Processing Lists<iframe width="100%" src="https://www.youtube-nocookie.com/embed/RQ6GJt9f2vg" frameborder="0" allowfullscreen></iframe></td>
       <td style="border:1px solid #999999;"></td>
     </tr>
     <tr>

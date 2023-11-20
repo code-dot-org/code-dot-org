@@ -8,12 +8,12 @@ class ProjectWidgetWithData extends React.Component {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array,
     canViewFullList: PropTypes.bool,
-    canViewAdvancedTools: PropTypes.bool // Default: true
+    canViewAdvancedTools: PropTypes.bool, // Default: true
   };
 
   state = {
     isLoading: true,
-    projectList: this.props.projectList || []
+    projectList: this.props.projectList || [],
   };
 
   UNSAFE_componentWillMount() {
@@ -21,7 +21,7 @@ class ProjectWidgetWithData extends React.Component {
       $.ajax({
         method: 'GET',
         url: `/v3/channels`,
-        dataType: 'json'
+        dataType: 'json',
       }).done(projectList => {
         this.setState({isLoading: false, projectList: projectList});
       });

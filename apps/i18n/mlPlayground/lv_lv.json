@@ -1,0 +1,161 @@
+{
+  "columnDetailsMaximumValue": "maksimālais",
+  "columnDetailsMinimumValue": "minimālais",
+  "columnInspectorDescription": "Apraksts",
+  "correctAnswer": "Pareizi",
+  "datasets": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Vecums"
+        },
+        "Gender": {
+          "id": "Dzimums"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banāns"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "krāsa"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Vecums"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internets"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Valsts"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Valsts"
+        },
+        "Name": {
+          "id": "Vārds"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Apraksts"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "kukurūza"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "izmērs"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "izmērs"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "diena"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Mākslinieks"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "vecums"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Sasniegumi"
+        },
+        "Age": {
+          "description": "Vecums",
+          "id": "Vecums"
+        },
+        "Country": {
+          "id": "Valsts"
+        },
+        "Gender": {
+          "description": "Dzimums",
+          "id": "Dzimums"
+        },
+        "Internet": {
+          "id": "Internets"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "maksimālais",
+  "modelCardPossibleValuesMinimum": "minimālais",
+  "navigateBack": "Atpakaļ",
+  "navigateDone": "Pabeigt",
+  "navigateForward": "Turpināt",
+  "saveProgress": "Saglabāt",
+  "tryAgain": "Mēģini vēlreiz"
+}

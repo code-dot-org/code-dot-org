@@ -2,75 +2,17 @@
   "my-MM": {
     "data": {
       "vocabularies": {
-        "function/hero/unversioned": {
-          "word": "လုပ်ဆောင်ချက်"
-        },
-        "code/poem-art/2021": {
-          "word": "Code"
-        },
-        "code/artist/unversioned": {
-          "word": "Code"
-        },
-        "loops/aquatic/unversioned": {
-          "word": "Loops"
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/sports/unversioned": {
-          "word": "Code"
-        },
-        "variable/coursef/2022": {
+        "variable/csd/2021": {
           "word": "Variable"
         },
-        "define/coursef/2022": {
-          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
-        },
-        "function/coursee/2022": {
+        "function/csd/2021": {
           "word": "လုပ်ဆောင်ချက်"
         },
-        "define/coursee/2022": {
-          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
-        },
-        "function/express/2022": {
+        "function/coursee/2021": {
           "word": "လုပ်ဆောင်ချက်"
         },
-        "variable/express/2022": {
-          "word": "Variable"
-        },
-        "define/express/2022": {
+        "define/coursee/2021": {
           "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
-        },
-        "variable/csd/2022": {
-          "word": "Variable"
-        },
-        "function/csd/2022": {
-          "word": "လုပ်ဆောင်ချက်"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Code",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "variable/coursef/2021": {
           "word": "Variable"
@@ -87,17 +29,92 @@
         "define/express/2021": {
           "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
         },
-        "function/coursee/2021": {
-          "word": "လုပ်ဆောင်ချက်"
-        },
-        "define/coursee/2021": {
-          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
-        },
-        "variable/csd/2021": {
+        "variable/csd/2022": {
           "word": "Variable"
         },
-        "function/csd/2021": {
+        "function/csd/2022": {
           "word": "လုပ်ဆောင်ချက်"
+        },
+        "function/coursee/2022": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "define/coursee/2022": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "variable/coursef/2022": {
+          "word": "Variable"
+        },
+        "define/coursef/2022": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "function/express/2022": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "variable/express/2022": {
+          "word": "Variable"
+        },
+        "define/express/2022": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Code"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Code"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variable"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Code"
+        },
+        "code/poetry/2023": {
+          "word": "Code"
+        },
+        "variable/csd/2023": {
+          "word": "Variable"
+        },
+        "function/csd/2023": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "function/coursee/2023": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "define/coursee/2023": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "variable/coursef/2023": {
+          "word": "Variable"
+        },
+        "define/coursef/2023": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "function/express/2023": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "variable/express/2023": {
+          "word": "Variable"
+        },
+        "define/express/2023": {
+          "word": "အဓိပ္ပာယ်သတ်မှတ်သည်။"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Loops"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "function/hero/unversioned": {
+          "word": "လုပ်ဆောင်ချက်"
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "code/dance-ai/2023": {
+          "word": "Code"
         }
       }
     }

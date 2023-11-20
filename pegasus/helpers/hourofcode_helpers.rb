@@ -19,7 +19,7 @@ HOC_COUNTRIES = hoc_load_countries
 def hoc_s(id, markdown: false, locals: {}, language: nil)
   id = id.to_s
   language ||= @language || PegasusLanguages.get_hoc_unique_language_by_locale(request.locale)
-  string = I18n.t(id, locals.merge({locale: language}))
+  string = I18n.t(id, **locals.merge({locale: language}))
 
   if markdown
     type = markdown == :inline ? :inline_md : :safe_md
@@ -184,7 +184,7 @@ def campaign_date(format)
     id = 'campaign_date_full_year'
   end
 
-  # For hoc2022, we just want campaign dates for the US
+  # For hoc2023, we just want campaign dates for the US
   # and non-US.
   if @country != "us"
     id = "nonus_#{id}"

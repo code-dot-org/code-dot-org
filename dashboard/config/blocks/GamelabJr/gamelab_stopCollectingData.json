@@ -6,6 +6,7 @@
       "0.35",
       "0.62"
     ],
+    "style": "world_blocks",
     "func": "stopCollectingData",
     "blockText": "stop collecting data"
   }

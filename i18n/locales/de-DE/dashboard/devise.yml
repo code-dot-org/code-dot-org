@@ -51,9 +51,6 @@ de:
       expired: "ist abgelaufen, bitte fordern Sie einen Neuen an"
       not_found: "nicht gefunden"
       not_locked: "war nicht gesperrt"
-      not_saved:
-        one: "1 Fehler verhinderte das Speichern von %{resource}:"
-        other: "%{count} Fehler verhinderten das Speichern von %{resource}:"
     invitations:
       send_instructions: 'Eine Einladungs-E-Mail wurde an %{E-Mail} gesendet.'
       invitation_token_invalid: 'Das Einladungs-Token ist ungültig!'

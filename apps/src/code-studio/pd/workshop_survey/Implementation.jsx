@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import FormComponent from '../form_components/FormComponent';
 
 const LABELS = {
@@ -20,7 +20,7 @@ const LABELS = {
   cteCredit:
     'Can students get CTE credit for taking CS Discoveries in your school?',
   csdRequired:
-    'At your school, is your CS Discoveries course required or optional?'
+    'At your school, is your CS Discoveries course required or optional?',
 };
 
 export default class Implementation extends FormComponent {
@@ -39,42 +39,42 @@ export default class Implementation extends FormComponent {
           label: LABELS.hoursPerWeek,
           name: 'hoursPerWeek',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.weeksPerYear,
           name: 'weeksPerYear',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.courseStructure,
           name: 'courseStructure',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.props.data.courseStructure &&
           this.props.data.courseStructure.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other format?',
             name: 'courseStructureOther',
-            type: 'text'
+            type: 'text',
           })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.unitsPlanningToTeach,
           name: 'unitsPlanningToTeach',
           required: true,
-          type: 'check'
+          type: 'check',
         })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.sameStudentsMultipleYears,
           name: 'sameStudentsMultipleYears',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.props.data.sameStudentsMultipleYears &&
           this.props.data.sameStudentsMultipleYears.includes(
@@ -84,49 +84,49 @@ export default class Implementation extends FormComponent {
             label: LABELS.unitsInLaterYears,
             name: 'unitsInLaterYears',
             required: true,
-            type: 'check'
+            type: 'check',
           })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.combiningCurricula,
           name: 'combiningCurricula',
           required: true,
-          type: 'check'
+          type: 'check',
         })}
         {this.props.data.combiningCurricula &&
           this.props.data.combiningCurricula.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other curricula?',
             name: 'combiningCurriculaOther',
-            type: 'text'
+            type: 'text',
           })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.cteCredit,
           name: 'cteCredit',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.props.data.cteCredit &&
           this.props.data.cteCredit.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other?',
             name: 'cteOther',
-            type: 'text'
+            type: 'text',
           })}
 
         {this.buildButtonsFromOptions({
           label: LABELS.csdRequired,
           name: 'csdRequired',
           required: true,
-          type: 'radio'
+          type: 'radio',
         })}
         {this.props.data.csdRequired &&
           this.props.data.csdRequired.includes('Other') &&
           this.buildFieldGroup({
             label: 'Other?',
             name: 'csdRequiredOther',
-            type: 'text'
+            type: 'text',
           })}
       </FormGroup>
     );

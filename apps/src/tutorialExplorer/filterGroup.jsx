@@ -14,7 +14,7 @@ export default class FilterGroup extends React.Component {
     filterEntries: PropTypes.array.isRequired,
     selection: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired,
-    singleEntry: PropTypes.bool.isRequired
+    singleEntry: PropTypes.bool.isRequired,
   };
 
   render() {

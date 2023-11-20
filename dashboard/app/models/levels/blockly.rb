@@ -102,7 +102,7 @@ class Blockly < Level
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     xml_node = Nokogiri::XML(super(options))
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
@@ -180,21 +180,32 @@ class Blockly < Level
     PROCEDURE: 'Functions',
     VARIABLE: 'Variables',
   }
+
+  GOOGLE_BLOCKLY_NAMESPACE_XML = "<xml xmlns=\"https://developers.google.com/blockly/xml\">"
+
+  # This function converts category blocks used by levelbuilders to edit the toolbox to category tags
+  # and places the appropriate blocks within each category
   def self.convert_toolbox_to_category(xml_string)
+    is_google_blockly = false
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      is_google_blockly = true
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
+    end
     xml = Nokogiri::XML(xml_string, &:noblanks)
     tag = Blockly.field_or_title(xml)
-    return xml_string if xml.nil? || xml.xpath('/xml/block[@type="category"]').empty?
+    return xml_string if xml.nil? || (xml.xpath('/xml/block[@type="category"]').empty? && xml.xpath('xml/block[@type="custom_category"]').empty?)
     default_category = category_node = Nokogiri::XML("<category name='Default'>").child
     xml.child << default_category
     xml.xpath('/xml/block').each do |block|
-      if block.attr('type') == 'category'
+      case block.attr('type')
+      when 'category'
         category_name = block.xpath(tag).text
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
         category_node['custom'] = 'PROCEDURE' if category_name == 'Functions'
         category_node['custom'] = 'VARIABLE' if category_name == 'Variables'
         xml.child << category_node
         block.remove
-      elsif block.attr('type') == 'custom_category'
+      when 'custom_category'
         custom_type = block.xpath(tag).text
         category_name = CATEGORY_CUSTOM_NAMES[custom_type.to_sym]
         category_node = Nokogiri::XML("<category name='#{category_name}'>").child
@@ -202,15 +213,26 @@ class Blockly < Level
         xml.child << category_node
         block.remove
       else
+        block.remove_attribute('x')
+        block.remove_attribute('y')
         block.remove
         category_node << block
       end
     end
     default_category.remove if default_category.element_children.empty?
-    xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    xml_string = xml.serialize(save_with: XML_OPTIONS).delete("\n").strip
+    if is_google_blockly
+      xml_string["<xml>"] = GOOGLE_BLOCKLY_NAMESPACE_XML
+    end
+    return xml_string
   end
 
+  # This function converts category tags to blocks so that levelbuilders can more easily edit
+  # a toolbox that contains categories.
   def self.convert_category_to_toolbox(xml_string)
+    if xml_string.include? GOOGLE_BLOCKLY_NAMESPACE_XML
+      xml_string[GOOGLE_BLOCKLY_NAMESPACE_XML] = "<xml>"
+    end
     xml = Nokogiri::XML(xml_string, &:noblanks).child
     tag = Blockly.field_or_title(xml)
     return xml_string if xml.nil?
@@ -300,7 +322,7 @@ class Blockly < Level
 
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
-        set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
+        set_unless_nil(level_options, 'startLibraries', localized_start_libraries(level_options['startLibraries']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
@@ -328,7 +350,6 @@ class Blockly < Level
 
       level_options
     end
-
     options.freeze
   end
 
@@ -374,6 +395,7 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['startLibraries'] = try(:project_template_level).try(:start_libraries) || start_libraries
         level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
         level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
@@ -401,9 +423,9 @@ class Blockly < Level
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
-          concat(NetSim.json_object_attrs).
-          concat(Craft.json_object_attrs).
-          each do |x|
+        concat(NetSim.json_object_attrs).
+        concat(Craft.json_object_attrs).
+        each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 
@@ -420,7 +442,7 @@ class Blockly < Level
       level_prop['teacherMarkdown'] = nil
 
       # Set some values that Blockly expects on the root of its options string
-      level_prop.reject! {|_, value| value.nil?}
+      level_prop.compact!
     end
     options.freeze
   end
@@ -430,7 +452,7 @@ class Blockly < Level
     if should_localize? && try(property_name)
       I18n.t(
         name,
-        scope: [:data, property_name.pluralize],
+        scope: [:data, property_name],
         default: nil,
         smart: true
       )
@@ -438,7 +460,7 @@ class Blockly < Level
   end
 
   def localized_failure_message_override
-    get_localized_property("failure_message_overrides")
+    get_localized_property('failure_message_override')
   end
 
   def localized_long_instructions
@@ -446,22 +468,30 @@ class Blockly < Level
     localized_blockly_in_text(localized_long_instructions)
   end
 
-  def localized_start_html(start_html)
-    return unless start_html
-    start_html_xml = Nokogiri::XML(start_html, &:noblanks)
+  def localized_start_libraries(start_libraries)
+    return unless start_libraries
+    level_libraries = JSON.parse(start_libraries)
+    level_libraries.each_with_index do |library, index|
+      library_name = library["name"]
+      next unless /^i18n_/i.match?(library_name)
 
-    # match any element that contains text
-    start_html_xml.xpath('//*[text()[normalize-space()]]').each do |element|
-      localized_text = I18n.t(
-        element.text,
-        scope: [:data, :start_html, name],
-        default: nil,
+      library_source = library["source"]
+      translation_text = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+      translation_json = JSON.parse(translation_text)
+      next if translation_json.blank?
+
+      translations = I18n.t(
+        library_name,
+        scope: [:data, :start_libraries, name],
+        default: translation_json,
         smart: true
       )
-      element.content = localized_text if localized_text
-    end
 
-    start_html_xml.serialize(save_with: XML_OPTIONS).strip
+      localized_json = translation_json.merge(translations.stringify_keys)
+      library_source.gsub!(translation_text, JSON.pretty_generate(localized_json))
+      level_libraries[index] = library
+    end
+    JSON.generate(level_libraries)
   end
 
   def localized_authored_hints
@@ -538,9 +568,9 @@ class Blockly < Level
         return loc_val
       end
     else
-      val = [game.app, game.name].map do |name|
+      val = [game.app, game.name].filter_map do |name|
         I18n.t("data.level.instructions.#{name}_#{level_num}", default: nil)
-      end.compact.first
+      end.first
       return val unless val.nil?
     end
   end
@@ -741,6 +771,7 @@ class Blockly < Level
       studio_ask
       math_change
       gamelab_textVariableJoin
+      gamelab_ifVarEquals
     ]
 
     # Localize each 'catch-all' block type.
@@ -748,7 +779,7 @@ class Blockly < Level
       block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
         # Find all <title/field name="VAR" /> blocks and maybe update their
         # content if there exists a localization key for them.
-        block.xpath("./#{tag}[@name=\"VAR\"]").each do |var|
+        block.xpath("./#{tag}[@name=\"VAR\" or @name=\"NUM\"]").each do |var|
           localized_name = I18n.t(
             var.content,
             scope: [:data, :variable_names],
@@ -948,7 +979,7 @@ class Blockly < Level
   end
 
   def update_goal_override
-    if goal_override&.is_a?(String)
+    if goal_override.is_a?(String)
       self.goal_override = JSON.parse(goal_override)
     end
   end

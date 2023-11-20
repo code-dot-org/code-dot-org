@@ -1,8 +1,8 @@
 {
   "dropletBlock_createSprite_param3": "բարձրություն",
-  "dropletBlock_setCollider_param0": "տիպ",
-  "dropletBlock_setCollider_param4": "բարձրություն",
   "dropletBlock_setColliderEach_param0": "տիպ",
   "dropletBlock_setColliderEach_param4": "բարձրություն",
+  "dropletBlock_setCollider_param0": "տիպ",
+  "dropletBlock_setCollider_param4": "բարձրություն",
   "shareGame": "Կիսեք ձեր խաղը:"
 }

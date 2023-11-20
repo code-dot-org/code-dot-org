@@ -10,7 +10,7 @@ export default class AddLevelTable extends Component {
     levels: PropTypes.array.isRequired,
     currentPage: PropTypes.number.isRequired,
     setCurrentPage: PropTypes.func.isRequired,
-    numPages: PropTypes.number.isRequired
+    numPages: PropTypes.number.isRequired,
   };
 
   render() {

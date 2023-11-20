@@ -1,0 +1,634 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.floatingActionButton {
+  position: fixed;
+  left: 10px;
+  bottom: 48px;
+
+  height: 60px;
+  width: 60px;
+  background-size: 60px;
+  padding: 0;
+
+  border-width: 0;
+  border-radius: 30px;
+}
+
+.rubricContainer {
+  position: fixed;
+  left: 10px;
+  bottom: 116px;
+  z-index: 400;
+  width: 760px;
+}
+
+.hiddenRubricContainer {
+  display: none;
+}
+
+.settings {
+  width: 724px;
+  min-height: 298px;
+  padding: 16px 16px 32px 16px;
+  gap: 16px;
+
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 0.25);
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.settingsVisible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.settingsHidden {
+  display: none;
+}
+
+.aiAssessmentOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+  border-bottom: 1px solid $light_gray_200;
+  padding-bottom: 1rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.rubricContent {
+  border-radius: 0 0 4px 4px;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
+  background: $neutral_light;
+  box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
+
+  height: 408px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  padding: 16px;
+}
+
+.visibleRubricContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.hiddenRubricContent {
+  display: none;
+}
+
+.rubricContainerFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  align-self: stretch;
+}
+
+.submitToStudentButtonAndError {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  align-self: stretch;
+}
+
+.submitToStudentButton {
+  margin: 0;
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: stretch;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.studentMetadata {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  align-self: stretch;
+}
+
+.levelAndStudentDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  h5,
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.singleMetadatum {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.learningGoalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  border-radius: 4px;
+  border: 1px solid $neutral_dark40;
+  background: $neutral_white;
+}
+
+.rubricHeader {
+  border-radius: 4px 4px 0 0;
+  background: $neutral_dark;
+  color: $neutral_white;
+  // padding: 9px 15px 8px;
+
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  gap: 4px;
+  //height: 40px;
+  align-items: center;
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  // height: 40px;
+  // justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
+}
+
+button.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: $neutral_light;
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: $light_primary_700;
+  }
+}
+
+.unselectedTab {
+  background: $neutral_dark70;
+  h6 {
+    color: $neutral_white;
+    margin-bottom: 0;
+    line-height: 1.1875;
+  }
+}
+
+.learningGoalRow {
+  display: flex;
+  align-self: stretch;
+  border-bottom: 1px solid $neutral_dark40;
+  min-height: 40px;
+
+  // Directly target the <summary> child with the class
+  .learningGoalHeader {
+    display: flex;
+    height: 40px;
+    padding: 0 1rem 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    line-height: 154%;
+    position: relative;
+
+    // Common styles for the FontAwesome icons, regardless of state
+    &::after {
+      font: var(--fa-font-solid);
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-35%);
+      padding-right: 10px;
+      height: 16px;
+      width: 16px;
+      // Icon for closed details
+      content: "\f107";
+    }
+    
+    &:hover {
+      background: none;
+      cursor: pointer;
+    }
+
+    // Hide the default disclosure arrow for summary elements in Safari
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  // When the details are open, change the icon
+  &[open] .learningGoalHeader::after {
+    content: "\f106";
+  }
+}
+
+.learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.learningGoalHeaderRightSide {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  font-weight: 325;
+  line-height: 154%;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.aiToken {
+  display: flex;
+  height: 20px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  border-radius: 30px;
+  border: 1px solid $product_information_default;
+  background: $lightest_cyan;
+}
+
+p.aiTokenText {
+  color: $product_information_default;
+  margin-bottom: 0;
+}
+
+.aiTokenText {
+  color: $product_affirmative_default;
+}
+
+h2.studentName {
+  margin-bottom: 8px;
+}
+
+.submittedEvaluation {
+  display: flex;
+  width: 170px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.learningGoalExpanded {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+
+.learningGoalTips {
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid $neutral_dark50;
+  background: $neutral_dark10;
+
+  // This is body three styles but the typography components don't work well with markdown support
+  // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
+  div {
+    @include main-font-regular;
+    color: $neutral-dark;
+    font-size: 0.875rem;
+    line-height: 1.54;
+  }
+}
+
+.evidenceLevelSetHorizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.evidenceLevelInnerDiv:first-child {
+  padding: 1em;
+  width: 100%;
+  border-left: 0;
+}
+
+.evidenceLevelInnerDiv {
+  padding: 1em;
+  border-left: 1px solid #a9acaf;
+  width: 100%
+}
+
+.evidenceLevelSet {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-self: stretch;
+  flex: 1;
+
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+
+  span {
+    @include main-font-semi-bold;
+    font-size: 0.875rem;
+    line-height: 154%;
+  }
+
+  p,
+  h6 {
+    margin-bottom: 0;
+  }
+}
+
+.evidenceLevelLabel {
+  @include main-font-semi-bold;
+  font-size: 0.875rem;
+  line-height: 154%;
+  margin-bottom: 0;
+}
+
+.evidenceLevelDescriptionIndented {
+  padding-left: 2rem;
+}
+
+.submittedEvaluationEvidenceLevel {
+  border-radius: 4px;
+  background: $light_primary_100;
+  height: 100%;
+}
+
+.studentLearningGoalContainer {
+  margin: 20px;
+}
+
+p.errorMessage {
+  color: $product_negative_default;
+  margin-bottom: 0;
+}
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.infoTipText {
+  max-width: 500px;
+}
+
+.openedAiAssessment {
+  padding: 1rem 1rem 0 1rem;
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.aiBotImg {
+  width: 42px;
+  height: 68px;
+}
+
+.greenAiAssessment {
+  align-items: left;
+  border: 1px solid $product_affirmative_default;
+  background-color: $light_affirmative_100;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.redAiAssessment {
+  align-items: left;
+  border: 1px solid $product_negative_default;
+  background-color: $product_negative_light;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.noAiAssessment {
+  align-items: left;
+  background-color: $lightest_gray;
+  border: 1px solid $light_gray;
+  border-radius: 4px;
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.inputTextbox {
+  width: 95%;
+  height: 5rem;
+  margin-top: 5;
+}
+
+.autosaveMessage {
+  float: right;
+  line-height: 100%;
+  padding: 0;
+  color: #3ea33e;
+}
+
+.feedbackArea {
+  flex: 1;
+}
+
+.infoAlert {
+  display: flex;
+  padding: 10px 12px;
+  gap: 10px;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  background: $light_info_100;
+
+  p {
+    margin: 0;
+    line-height: 1.25;
+  }
+}
+
+i.infoAlertIcon {
+  color: $light-info-500;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 125%;
+}
+
+.aiFeedbackRow {
+  display:flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.aiFeedbackThumbsUpChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_affirmative_default;
+}
+
+.aiFeedbackThumbsUp {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $light_affirmative_100;
+    color: $product_affirmative_default;
+  }
+}
+
+.aiFeedbackThumbsDownChecked {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+  color: $product_negative_default;
+}
+
+.aiFeedbackThumbsDown {
+  display: flex;
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: $product_negative_light;
+    color: $product_negative_default;
+  }
+}
+
+.aiFeedbackRadio {
+  opacity: 0;
+  position: absolute;
+  height: 0
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 5px;
+}
+
+.aiFeedbackTextbox {
+  height: 60px;
+  width: 100%;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.submitFeedbackRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.submitFeedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.aiFeedbackReceived {
+  margin-left: auto;
+}

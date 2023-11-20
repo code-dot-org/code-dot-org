@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Situs Hour of Code memiliki lebih dari 100 aktifitas ilmu komputer untuk semua usia dan tingkat pengalaman,dikembangkan pleh Code.org dan partners.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih banyak"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Bergabunglah dengan kami"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Bergabunglah dengan kami"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Nominasikan Guru"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Bergabunglah dengan kami"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lihat Ide-Ide Proyek"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "ai-2020": {
+      "title": "Jelajahi Artificial Intelligence (Kecerdasan Buatan) dan Machine Learning",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Mulai"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Cobalah"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pelajari lebih lanjut"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Kreativitas dengan AI",
+      "body": "Bergabunglah bersama jutaan orang di seluruh dunia dalam menyelenggarakan kegiatan coding satu jam, dengan atau tanpa AI dan mempelajari cara kerja AI. Siapapun, dan di manapun dapat  melakukannya. Tidak harus punya pengalaman.",
+      "buttonText": "Pelajari lebih lanjut"
+    }
+  }
+}

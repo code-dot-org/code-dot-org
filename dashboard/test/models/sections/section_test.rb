@@ -33,6 +33,14 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
   end
 
+  test "destroying section destroys associated LTI section" do
+    section = create :section
+    lti_section = create :lti_section, section: section
+    section.destroy
+    assert lti_section.reload.deleted_at.present?, "LTI section should be soft deleted"
+    assert LtiSection.without_deleted.where(id: lti_section.id).empty?, "LTI section should be soft deleted"
+  end
+
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
     Timecop.freeze(Time.now - 1.day) do
@@ -53,7 +61,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "create assigns unique section codes" do
-    sections = 3.times.map do
+    sections = Array.new(3) do
       # Repeatedly seed the RNG so we get the same "random" codes.
       srand 1
       Section.create!(@default_attrs)
@@ -134,15 +142,42 @@ class SectionTest < ActiveSupport::TestCase
     assert student.sharing_disabled?
   end
 
-  test 'should raise error if grade is not valid' do
+  test 'should raise error if grades is not valid' do
     section1 = Section.create @default_attrs
 
     error = assert_raises do
-      section1.grade = 'fake_grade'
+      section1.grades = ['fake_grade']
       section1.save!
     end
 
-    assert_includes error.message, 'Grade must be one of the valid student grades. Expected one of:'
+    assert_includes error.message, 'Grades must be one or more of the valid student grades'
+  end
+
+  test 'should raise error if grades contain pl and others' do
+    section1 = Section.create @default_attrs
+
+    error = assert_raises do
+      section1.grades = ['pl', '1']
+      section1.save!
+    end
+
+    assert_includes error.message, 'Grades cannot combine pl with other grades'
+  end
+
+  test 'grades are sorted on save' do
+    section = Section.create @default_attrs
+
+    section.update!(grades: ['12', '1', '5', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', '5', '12']
+
+    section.update!(grades: ['10', 'Other', '1', '2'])
+    section.reload
+    assert_equal section.grades, ['1', '2', '10', 'Other']
+
+    section.update!(grades: ['Other', '1', 'K'])
+    section.reload
+    assert_equal section.grades, ['K', '1', 'Other']
   end
 
   # Ideally this test would also confirm user_must_be_teacher is only validated for non-deleted
@@ -180,9 +215,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use pl grade' do
-    section = build :section, :teacher_participants, grade: 'Other'
+    section = build :section, :teacher_participants, grades: ['Other']
     refute section.valid?
-    assert_equal ['Grade must be pl for pl section.'], section.errors.full_messages
+    assert_equal ['Grades must be ["pl"] for pl section.'], section.errors.full_messages
   end
 
   test 'can not update participant type' do
@@ -190,7 +225,7 @@ class SectionTest < ActiveSupport::TestCase
 
     error = assert_raises do
       section.participant_type = Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-      section.grade = 'pl'
+      section.grades = ['pl']
       section.save!
     end
 
@@ -284,6 +319,17 @@ class SectionTest < ActiveSupport::TestCase
   test 'add_student returns failure for section teacher' do
     assert_does_not_create(Follower) do
       add_student_return = @section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
+  test 'add_student returns failure for section instructor' do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    assert_does_not_create(Follower) do
+      add_student_return = section.add_student @teacher
       assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
     end
   end
@@ -437,14 +483,15 @@ class SectionTest < ActiveSupport::TestCase
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -486,14 +533,70 @@ class SectionTest < ActiveSupport::TestCase
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+      }
+      # Compare created_at separately because the object's created_at microseconds
+      # don't match Time.zone.now's microseconds (different levels of precision)
+      assert_equal Time.zone.now.change(sec: 0), section.created_at.change(sec: 0)
+      assert_equal expected, section.summarize.except!(:createdAt)
+    end
+  end
+
+  test 'summarize: section with a coteacher' do
+    # Use an existing script so that it has a translation
+    script = Unit.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
+    Timecop.freeze(Time.zone.now) do
+      section = create :section
+      coteacher_user = create :teacher
+      primary_section_instructor_id = section.section_instructors[0].id
+      coteacher_section_instructor = section.add_instructor(coteacher_user.email, current_user)
+      section.reload
+
+      expected = {
+        id: section.id,
+        name: section.name,
+        teacherName: section.teacher.name,
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
+        assignedTitle: '',
+        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
+        currentUnitTitle: '',
+        linkToCurrentUnit: '',
+        courseVersionName: nil,
+        numberOfStudents: 0,
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
+        code: section.code,
+        lesson_extras: false,
+        pairing_allowed: true,
+        tts_autoplay_enabled: false,
+        sharing_disabled: false,
+        login_type: "email",
+        participant_type: 'student',
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
+        course_id: nil,
+        script: {id: nil, name: nil, project_sharing: nil},
+        studentCount: 0,
+        grades: nil,
+        providerManaged: false,
+        hidden: false,
+        students: [],
+        restrict_section: false,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -538,14 +641,16 @@ class SectionTest < ActiveSupport::TestCase
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -583,14 +688,15 @@ class SectionTest < ActiveSupport::TestCase
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
-        grade: nil,
+        grades: nil,
         providerManaged: false,
         hidden: false,
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
         post_milestone_disabled: false,
-        code_review_expires_at: nil
+        code_review_expires_at: nil,
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -667,17 +773,20 @@ class SectionTest < ActiveSupport::TestCase
     refute facilitator_section.can_join_section_as_participant?(student)
   end
 
-  test 'valid_grade? accepts K-12 and Other' do
-    assert Section.valid_grade?("K")
-    assert Section.valid_grade?("1")
-    assert Section.valid_grade?("6")
-    assert Section.valid_grade?("12")
-    assert Section.valid_grade?("Other")
+  test 'valid_grades? accepts K-12 and Other' do
+    assert Section.valid_grades?(["K"])
+    assert Section.valid_grades?(["1"])
+    assert Section.valid_grades?(["6"])
+    assert Section.valid_grades?(["12"])
+    assert Section.valid_grades?(["Other"])
+    assert Section.valid_grades?(["K", "1", "10", "Other"])
   end
 
-  test 'valid_grade? does not accept invalid numbers and strings' do
-    refute Section.valid_grade?("Something else")
-    refute Section.valid_grade?("56")
+  test 'valid_grades? does not accept invalid numbers and strings' do
+    refute Section.valid_grades?(["Something else"])
+    refute Section.valid_grades?(["56"])
+    refute Section.valid_grades?(["K", "1", "56", "Other"])
+    refute Section.valid_grades?([""])
   end
 
   test 'code review disabled for sections with no code review expiration' do
@@ -737,7 +846,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'update_code_review_expiration resets expiration time when enabling code review' do
     @section.update_code_review_expiration(true)
     @section.save
-    assert_not_nil @section.code_review_expires_at
+    refute_nil @section.code_review_expires_at
     # check the expiration date was set to a time greater than now.
     assert DateTime.parse(@section.code_review_expires_at) > DateTime.now
   end
@@ -750,6 +859,41 @@ class SectionTest < ActiveSupport::TestCase
     @section.update_code_review_expiration(false)
     @section.save
     assert_nil @section.code_review_expires_at
+  end
+
+  test 'section create adds section instructor' do
+    assert_difference 'SectionInstructor.count' do
+      section = create(:section)
+      instructor = section.instructors.first
+      assert_equal instructor, section.user
+    end
+  end
+
+  test 'section update fixes section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.status = :declined
+    si.save!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
+  end
+
+  test 'section update fixes soft-deleted section instructor' do
+    section = create(:section)
+    si = section.section_instructors.first
+    si.destroy!
+
+    assert_empty section.instructors
+
+    section.name = 'newly renamed again!'
+    section.save!
+
+    assert_equal 1, section.instructors.length
   end
 
   def set_up_code_review_groups

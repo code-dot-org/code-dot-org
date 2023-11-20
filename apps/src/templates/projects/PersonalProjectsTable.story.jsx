@@ -7,11 +7,11 @@ import {stubFakePersonalProjectData} from './generateFakeProjects';
 const initialState = {
   publishDialog: {
     isOpen: false,
-    isPublishPending: false
+    isPublishPending: false,
   },
   deleteDialog: {
-    isOpen: false
-  }
+    isOpen: false,
+  },
 };
 
 export default storybook => {
@@ -29,7 +29,7 @@ export default storybook => {
             isUserSignedIn={true}
             canShare={true}
           />
-        )
+        ),
       },
       {
         name: 'Empty Personal Project Table',
@@ -41,7 +41,7 @@ export default storybook => {
             isUserSignedIn={true}
             canShare={true}
           />
-        )
-      }
+        ),
+      },
     ]);
 };

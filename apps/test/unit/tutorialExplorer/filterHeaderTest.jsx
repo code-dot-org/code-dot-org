@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
   filterGroups: [],
   selection: {},
   onUserInputFilter: FAKE_ON_USER_INPUT,
-  onUserInputOrgName: FAKE_ON_ORG_NAME
+  onUserInputOrgName: FAKE_ON_ORG_NAME,
 };
 
 describe('FilterHeader', () => {

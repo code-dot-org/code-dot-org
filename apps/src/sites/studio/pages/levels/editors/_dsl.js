@@ -7,7 +7,7 @@ import $ from 'jquery';
 var initializeEmbeddedMarkdownEditor = require('@cdo/apps/code-studio/initializeEmbeddedMarkdownEditor');
 
 // Initialize markdown editors on page load
-$(document).ready(function() {
+$(document).ready(function () {
   initializeEmbeddedMarkdownEditor(
     $('#level_dsl_text'),
     'level_markdown_textarea',

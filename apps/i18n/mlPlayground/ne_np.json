@@ -1,0 +1,189 @@
+{
+  "columnDetailsMaximumValue": "अधिकतम",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "वर्णन",
+  "correctAnswer": "Correct",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Length"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "उमेर"
+        },
+        "Gender": {
+          "id": "लिङ्ग"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banana"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "देश"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "देश"
+        },
+        "Name": {
+          "id": "नाम"
+        },
+        "Score": {
+          "id": "Score"
+        },
+        "Star": {
+          "id": "तारा"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "chicken"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "वर्णन"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "chicken"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "corn"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "size"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "size"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "day"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artist"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "उमेर"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "उपलब्धिहरु"
+        },
+        "Age": {
+          "description": "उमेर",
+          "id": "उमेर"
+        },
+        "Country": {
+          "id": "देश"
+        },
+        "Gender": {
+          "description": "लिङ्ग",
+          "id": "लिङ्ग"
+        },
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "Incorrect",
+  "modelCardPossibleValuesMaximum": "अधिकतम",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "पछाडि",
+  "navigateDone": "समाप्त",
+  "navigateForward": "जारी राख्नुहोस्",
+  "saveProgress": "सङ्ग्रह गर्नुहोस्",
+  "tryAgain": "Try again"
+}

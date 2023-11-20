@@ -17,8 +17,10 @@ speedRating.add(6.56);
 speedRating.add(4.24);
 speedRating.set(0, 2.14);
 speedRating.set(2, 7.63);
-System.out.println(conditionRating);
+System.out.println(speedRating);
 ```
 
 What is printed when this code segment is executed?
 MARKDOWN
+
+allow_multiple_attempts true

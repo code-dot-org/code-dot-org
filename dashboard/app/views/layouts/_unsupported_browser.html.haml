@@ -6,4 +6,5 @@
   #applab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.applab_unsupported_tablet")
   #gamelab-unsupported-tablet.banner-text{style: 'display: none'}= t("compatibility.upgrade.gamelab_unsupported_tablet")
   #weblab-unsupported-local-storage.banner-text{style: 'display: none'}= t("compatibility.upgrade.weblab_unsupported_locale_storage")
+  #calc-eval-deprecated.banner-text{style: 'display: none'}!= t("deprecation.algebra_lab", bootstrap_algebra_url: 'https://www.bootstrapworld.org/materials/algebra/', cs_algebra_url: 'https://studio.code.org/s/algebra', markdown: true)
   %i.fa.fa-close.close-button.banner-icon#dismiss-icon{style: 'display: none; cursor: pointer', onclick: '$("#warning-banner").slideUp();'}

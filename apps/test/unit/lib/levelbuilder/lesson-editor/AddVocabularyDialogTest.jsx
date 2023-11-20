@@ -19,19 +19,14 @@ describe('AddVocabularyDialog', () => {
       afterSave: afterSaveSpy,
       handleClose: handleCloseSpy,
       courseVersionId: 1,
-      commonSenseMedia: false
+      commonSenseMedia: false,
     };
   });
 
   it('renders default props', () => {
     const wrapper = shallow(<AddVocabularyDialog {...defaultProps} />);
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(
-      wrapper
-        .find('input')
-        .first()
-        .props().disabled
-    ).to.be.false;
+    expect(wrapper.find('input').first().props().disabled).to.be.false;
   });
 
   it('closes if save is successful', () => {
@@ -39,7 +34,7 @@ describe('AddVocabularyDialog', () => {
     const instance = wrapper.instance();
     instance.setState({
       word: 'my vocabulary word',
-      definition: 'my vocabulary definition'
+      definition: 'my vocabulary definition',
     });
     instance.forceUpdate();
     wrapper.update();
@@ -48,13 +43,13 @@ describe('AddVocabularyDialog', () => {
       key: 'my vocabulary word',
       word: 'my vocabulary word',
       definition: 'my vocabulary definition',
-      commonSenseMedia: false
+      commonSenseMedia: false,
     };
     let server = sinon.fakeServer.create();
     server.respondWith('POST', `/vocabularies`, [
       200,
       {'Content-Type': 'application/json'},
-      JSON.stringify(returnData)
+      JSON.stringify(returnData),
     ]);
 
     wrapper.find('#submit-button').simulate('click');
@@ -74,7 +69,7 @@ describe('AddVocabularyDialog', () => {
       key: 'key',
       word: 'existing vocab',
       definition: 'existing definition',
-      commonSenseMedia: false
+      commonSenseMedia: false,
     };
     const wrapper = mount(
       <AddVocabularyDialog
@@ -96,7 +91,7 @@ describe('AddVocabularyDialog', () => {
     const instance = wrapper.instance();
     instance.setState({
       word: 'my vocabulary word',
-      definition: 'my vocabulary definition'
+      definition: 'my vocabulary definition',
     });
     instance.forceUpdate();
     wrapper.update();
@@ -106,7 +101,7 @@ describe('AddVocabularyDialog', () => {
     server.respondWith('POST', `/vocabularies`, [
       404,
       {'Content-Type': 'application/json'},
-      returnData
+      returnData,
     ]);
 
     wrapper.find('#submit-button').simulate('click');
@@ -120,7 +115,10 @@ describe('AddVocabularyDialog', () => {
     const wrapper = shallow(
       <AddVocabularyDialog
         {...defaultProps}
-        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+        selectableLessons={[
+          {id: 1, name: 'lesson1'},
+          {id: 2, name: 'lesson2'},
+        ]}
       />
     );
     expect(wrapper.contains('Add Vocabulary')).to.be.true;
@@ -133,19 +131,22 @@ describe('AddVocabularyDialog', () => {
       word: 'existing vocab',
       definition: 'existing definition',
       commonSenseMedia: false,
-      lessons: [{id: 1, name: 'lesson1'}]
+      lessons: [{id: 1, name: 'lesson1'}],
     };
     const wrapper = mount(
       <AddVocabularyDialog
         {...defaultProps}
-        selectableLessons={[{id: 1, name: 'lesson1'}, {id: 2, name: 'lesson2'}]}
+        selectableLessons={[
+          {id: 1, name: 'lesson1'},
+          {id: 2, name: 'lesson2'},
+        ]}
         editingVocabulary={existingVocabulary}
       />
     );
 
     expect(wrapper.find('Select').length).to.equal(1);
     expect(wrapper.find('Select').props().value).to.deep.equal([
-      {id: 1, name: 'lesson1'}
+      {id: 1, name: 'lesson1'},
     ]);
   });
 
@@ -155,7 +156,7 @@ describe('AddVocabularyDialog', () => {
       key: 'key',
       word: 'existing vocab',
       definition: 'existing definition',
-      commonSenseMedia: true
+      commonSenseMedia: true,
     };
     const wrapper = mount(
       <AddVocabularyDialog
@@ -164,11 +165,6 @@ describe('AddVocabularyDialog', () => {
       />
     );
 
-    expect(
-      wrapper
-        .find('input')
-        .at(1)
-        .props().disabled
-    ).to.be.true;
+    expect(wrapper.find('input').at(1).props().disabled).to.be.true;
   });
 });

@@ -32,9 +32,9 @@ describe('StandardsReport', () => {
         excludeCsfColumnInLegend: false,
         title: 'Express Course (2019)',
         path: '//localhost-studio.code.org:3000/s/express-2019',
-        lessons: []
+        lessons: [],
       },
-      scriptFriendlyName: 'Express Course (2019)'
+      scriptFriendlyName: 'Express Course (2019)',
     };
   });
 
@@ -47,8 +47,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: 'Comment!'
-      }
+        teacherComment: 'Comment!',
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
@@ -61,8 +61,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: 'Comment!'
-      }
+        teacherComment: 'Comment!',
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
@@ -75,8 +75,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: 'Comment!'
-      }
+        teacherComment: 'Comment!',
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
@@ -91,8 +91,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: 'I love my class they are wonderful'
-      }
+        teacherComment: 'I love my class they are wonderful',
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
@@ -108,8 +108,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: null
-      }
+        teacherComment: null,
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
@@ -122,8 +122,8 @@ describe('StandardsReport', () => {
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
-        teacherComment: 'Comment!'
-      }
+        teacherComment: 'Comment!',
+      },
     });
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force

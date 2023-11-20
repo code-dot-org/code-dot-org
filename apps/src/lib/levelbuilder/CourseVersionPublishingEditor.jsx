@@ -22,7 +22,7 @@ export default class CourseVersionPublishingEditor extends Component {
     publishedState: PropTypes.oneOf(Object.values(PublishedState)).isRequired,
     updatePublishedState: PropTypes.func.isRequired,
     preventCourseVersionChange: PropTypes.bool,
-    courseOfferingEditorLink: PropTypes.string
+    courseOfferingEditorLink: PropTypes.string,
   };
 
   constructor(props) {
@@ -30,7 +30,7 @@ export default class CourseVersionPublishingEditor extends Component {
     this.state = {
       addingFamilyName: false,
       selectedFamilyName: props.familyName,
-      newFamilyName: ''
+      newFamilyName: '',
     };
   }
 
@@ -73,33 +73,33 @@ export default class CourseVersionPublishingEditor extends Component {
         PublishedState.preview,
         PublishedState.stable,
         PublishedState.sunsetting,
-        PublishedState.deprecated
+        PublishedState.deprecated,
       ],
       pilot: [
         PublishedState.pilot,
         PublishedState.sunsetting,
-        PublishedState.deprecated
+        PublishedState.deprecated,
       ],
       beta: [
         PublishedState.beta,
         PublishedState.preview,
         PublishedState.stable,
         PublishedState.sunsetting,
-        PublishedState.deprecated
+        PublishedState.deprecated,
       ],
       preview: [
         PublishedState.preview,
         PublishedState.stable,
         PublishedState.sunsetting,
-        PublishedState.deprecated
+        PublishedState.deprecated,
       ],
       stable: [
         PublishedState.stable,
         PublishedState.sunsetting,
-        PublishedState.deprecated
+        PublishedState.deprecated,
       ],
       sunsetting: [PublishedState.sunsetting, PublishedState.deprecated],
-      deprecated: [PublishedState.deprecated]
+      deprecated: [PublishedState.deprecated],
     };
 
     return availablePublishedStates[currentState];
@@ -335,7 +335,7 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4,
-    margin: 0
+    margin: 0,
   },
   smallInput: {
     boxSizing: 'border-box',
@@ -344,20 +344,20 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: 4,
     margin: 0,
-    height: '100%'
+    height: '100%',
   },
   dropdown: {
-    margin: '0 6px'
+    margin: '0 6px',
   },
   checkbox: {
-    margin: '0 0 0 7px'
+    margin: '0 0 0 7px',
   },
   tableBorder: {
     border: '1px solid ' + color.white,
-    padding: 5
+    padding: 5,
   },
   buttonAndHelpTip: {
     display: 'flex',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

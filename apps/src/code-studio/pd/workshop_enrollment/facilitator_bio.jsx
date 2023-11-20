@@ -7,7 +7,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {
-    facilitator: FacilitatorPropType
+    facilitator: FacilitatorPropType,
   };
 
   image = () => {

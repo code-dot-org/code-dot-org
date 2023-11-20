@@ -84,6 +84,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  test 'returns all sections instructed by teacher' do
+    cotaught_section = create(:section, user: create(:teacher), login_type: 'word')
+    create(:section_instructor, instructor: @teacher, section: cotaught_section, status: :active)
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
+  test 'returns sections co-taught with a deleted instructor' do
+    cotaught_section = create(:section, user: @teacher, login_type: 'word')
+    coteacher = create(:teacher)
+    create(:section_instructor, instructor: coteacher, section: cotaught_section, status: :active)
+    coteacher.destroy!
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,
@@ -281,6 +307,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       returned_json.with_indifferent_access
   end
 
+  test 'invalid params does not create section and returns an error' do
+    sign_in @facilitator
+
+    assert_does_not_create(Section) do
+      # As is, this will fail because the grade "PL" is not provided but
+      # this test is meant to ensure a non-200 is returned when creating a section fails
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher,
+      }
+
+      assert_response :bad_request
+    end
+  end
+
   test 'current user owns the created section' do
     sign_in @teacher
     post :create, params: {
@@ -373,8 +414,31 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         grade: desired_grade,
       }
-      assert_equal desired_grade, returned_section.grade
+      assert_equal [desired_grade], returned_section.grades
     end
+  end
+
+  [["K", "1", "2"], ["3", "4", "K"], ["5", "6", "7"], ["Other", "K", "10"]].each do |desired_grades|
+    test "can set grade to #{desired_grades} during creation" do
+      sign_in @teacher
+      post :create, params: {
+        login_type: Section::LOGIN_TYPE_EMAIL,
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        grades: desired_grades,
+      }
+      assert_equal desired_grades.sort, returned_section.grades.sort
+    end
+  end
+
+  test "grades takes precedence over grade during creation" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grade: "1",
+      grades: ["K", "2", "3"]
+    }
+    assert_equal ["K", "2", "3"], returned_section.grades
   end
 
   %w(student teacher facilitator).each do |desired_type|
@@ -405,7 +469,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       grade: nil,
     }
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
+  end
+
+  test "default grades is nil" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grades: nil,
+    }
+    assert_nil returned_section.grades
   end
 
   test "create section without participant type gives error" do
@@ -426,7 +500,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_nil returned_section.grade
+    assert_nil returned_section.grades
+  end
+
+  test 'cannot pass invalid grades' do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      grades: ['13'],
+    }
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_section.grades
   end
 
   test 'creates a six-letter section code' do
@@ -718,6 +805,40 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal 0, @teacher.scripts.size
   end
 
+  test 'creating a section with a coteacher adds both teachers' do
+    sign_in @teacher
+
+    coteacher = create(:teacher)
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, returned_section.section_instructors.size
+
+    # Assert that the teacher is an accepted instructor
+    teacher_instructor = returned_section.section_instructors.find_by(instructor_id: @teacher.id)
+    assert_equal 'active', teacher_instructor.status
+
+    # Assert that the coteacher is an invited instructor
+    coteacher_instructor = returned_section.section_instructors.find_by(instructor_id: coteacher.id)
+    assert_equal 'invited', coteacher_instructor.status
+  end
+
+  test 'creating a section adds teacher as instructor' do
+    sign_in @teacher
+
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+    }
+    assert_response :success
+    assert_equal 1, returned_section.section_instructors.size
+    assert_equal @teacher.id, returned_section.section_instructors.first.instructor_id
+  end
+
   test 'creating a section with no course or script does not assign a script' do
     sign_in @teacher
     assert_equal 0, @teacher.scripts.size
@@ -739,7 +860,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       user: @teacher,
       script_id: @script_in_preview_state.id,
       login_type: Section::LOGIN_TYPE_WORD,
-      grade: "1",
+      grades: ["1"],
       lesson_extras: true,
       pairing_allowed: false,
       hidden: true
@@ -764,7 +885,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil(section_with_script.script_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
-    assert_equal("K", section_with_script.grade)
+    assert_equal(["K"], section_with_script.grades)
     assert_equal(false, section_with_script.lesson_extras)
     assert_equal(true, section_with_script.pairing_allowed)
     assert_equal(false, section_with_script.hidden)
@@ -775,6 +896,27 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
     section_with_script = Section.find(section_with_script.id)
     assert_equal(true, section_with_script.lesson_extras)
+  end
+
+  test "update: can update grades for section you own" do
+    UnitGroup.stubs(:course_assignable?).returns(true)
+
+    sign_in @teacher
+    section_with_script = create(
+      :section,
+      user: @teacher,
+      grades: ["1"],
+    )
+
+    post :update, params: {
+      id: section_with_script.id,
+      grades: ["K"],
+    }
+    assert_response :success
+
+    section_with_script.reload
+
+    assert_equal(["K"], section_with_script.grades)
   end
 
   test "update: name is ignored if empty or all whitespace" do
@@ -791,6 +933,22 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     section.reload
     assert_equal 'Old section name', section.name
+  end
+
+  test 'update: add coteacher' do
+    coteacher = create(:teacher)
+
+    section = create :section
+    sign_in section.teacher
+
+    assert_equal 1, section.section_instructors.size
+
+    post :update, params: {
+      id: section.id,
+      instructor_emails: [coteacher.email]
+    }
+    assert_response :success
+    assert_equal 2, section.section_instructors.size
   end
 
   test "update: course_id is cleared if not provided and script has no default course" do
@@ -943,7 +1101,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_version_id: @script.course_version.id
     }
 
-    assert_not_nil UserScript.find_by(script: @script, user: student)
+    refute_nil UserScript.find_by(script: @script, user: student)
   end
 
   test 'logged out cannot delete a section' do
@@ -1217,7 +1375,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     post :set_code_review_enabled, params: {id: @section.id, enabled: true}
     @section.reload
     assert_response :success
-    assert_not_nil json_response["expiration"]
+    refute_nil json_response["expiration"]
     assert_equal @section.code_review_expires_at, json_response["expiration"]
   end
 

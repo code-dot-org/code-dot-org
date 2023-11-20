@@ -27,3 +27,5 @@ public static void mystery(int[] arr) {
 
 Which of the following describes what the method `mystery()` does to the array `arr`?
 MARKDOWN
+
+allow_multiple_attempts true

@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "A Code.org és partnerei által fejlesztett Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden korosztály és minden képzettségi szint képviselői számára.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Csatlakozz"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Csatlakozz"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Nevezzen ki egy tanárt"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Csatlakozz"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Projektötletek megtekintése"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "ai-2020": {
+      "title": "Fedezd fel a mesterséges intelligenciát és a gépi tanulást",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Kezdés"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Próbáld ki"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tudj meg többet"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Kód órája: Kreativitás AI-vel",
+      "body": "A világon milliók szerveznek Kódolás óráját mesterséges intelligenciával vagy anélkül, s tanulnak arról, hogy hogyan működik az AI. Csatlakozz hozzájuk! Bárhol és bárki megteheti. Nincs szükség tapasztalatra.",
+      "buttonText": "Tudj meg többet"
+    }
+  }
+}

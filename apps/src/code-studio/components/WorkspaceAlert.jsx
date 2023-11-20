@@ -9,7 +9,7 @@ export default class WorkspaceAlert extends React.Component {
     children: PropTypes.element.isRequired,
     onClose: PropTypes.func.isRequired,
     isBlockly: PropTypes.bool,
-    displayBottom: PropTypes.bool
+    displayBottom: PropTypes.bool,
   };
 
   render() {
@@ -48,6 +48,6 @@ export default class WorkspaceAlert extends React.Component {
 const styles = {
   alertContainer: {
     position: 'absolute',
-    right: 0
-  }
+    right: 0,
+  },
 };

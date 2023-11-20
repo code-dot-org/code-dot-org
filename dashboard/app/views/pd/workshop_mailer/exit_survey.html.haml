@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 - code_org_link = link_to 'Code.org', 'http://code.org'
@@ -63,16 +63,11 @@
     = link_to('teacher forum', 'https://forum.code.org/') + '.'
 
 - unless [Pd::Workshop::SUBJECT_CSF_201, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS].include? @workshop.subject
-  %h3
-    Additional workshop benefits
-
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     %p
       There's a personalized certificate attached to this email acknowledging your successful completion of Code.org's
       = @workshop.course
       workshop.
-
-  = render partial: 'iste'
 
   %p
     You've taken the first steps to making CS available to your students. We can't wait to see where you all go from here!
@@ -83,9 +78,7 @@
   %p
     Thank you,
     %br
-    Dave Frye
-    %br
-    Director of Program Development and Operations, Code.org
+    = @workshop.organizer.name
 
 - else
   %p

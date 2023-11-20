@@ -38,6 +38,8 @@
   "drawATriangle": "desenhar um triângulo",
   "drawUpperWave": "desenhe a onda superior",
   "drawLowerWave": "desenhe a onda inferior",
+  "drawShape": "desenhar forma",
+  "drawShapeWithSideLength": "desenhe a forma com o comprimento lateral",
   "drawSticker": "desenhar adesivo",
   "drawStickerWithSize": "desenhe um adesivo com tamanho",
   "forward": "avançar",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Faz o artista ficar visível ou invisível.",
   "widthTooltip": "Altera a largura do lápis.",
   "withSize": "com tamanho",
+  "withSideLength": "com comprimento lateral",
   "wrongColour": "Sua figura está com a cor errada. Para este desafio, ela precisa ser %1."
 }

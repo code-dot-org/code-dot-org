@@ -4,26 +4,26 @@ import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import announcementsReducer, {
-  addAnnouncement
+  addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import plcHeaderReducer, {
-  setPlcHeader
+  setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
-  setVerifiedResources
+  setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import googlePlatformApi, {
-  loadGooglePlatformApi
+  loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 import {
   selectSection,
   setSections,
   setPageType,
-  pageTypes
+  pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import progress from '@cdo/apps/code-studio/progress';
@@ -97,6 +97,11 @@ function initPage() {
   // rendered on this page
   updateQueryParam('completedLessonNumber', undefined);
 
+  const unitHasLevels = scriptData.lessons.reduce(
+    (n, {levels}) => n || !!levels?.length,
+    false
+  );
+
   ReactDOM.render(
     <Provider store={store}>
       <UnitOverview
@@ -120,10 +125,12 @@ function initPage() {
         showAssignButton={scriptData.show_assign_button}
         isProfessionalLearningCourse={scriptData.isPlCourse}
         userId={scriptData.user_id}
+        userType={scriptData.user_type}
         assignedSectionId={scriptData.assigned_section_id}
         showCalendar={scriptData.showCalendar}
         weeklyInstructionalMinutes={scriptData.weeklyInstructionalMinutes}
         unitCalendarLessons={scriptData.calendarLessons}
+        unitHasLevels={unitHasLevels}
         isMigrated={scriptData.is_migrated}
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
@@ -133,6 +140,7 @@ function initPage() {
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}
+        participantAudience={scriptData.participantAudience}
       />
     </Provider>,
     mountPoint
@@ -163,7 +171,7 @@ function initializeStoreWithSections(store, sections, currentSection) {
   if (idx >= 0) {
     sections[idx] = {
       ...sections[idx],
-      ...currentSection
+      ...currentSection,
     };
   }
   store.dispatch(setSections(sections));

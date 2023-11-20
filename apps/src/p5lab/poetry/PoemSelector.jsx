@@ -1,4 +1,3 @@
-/* global appOptions */
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
@@ -6,21 +5,22 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import color from '@cdo/apps/util/color';
 import StylizedBaseDialog, {
-  FooterButton
+  FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {setPoem} from '../redux/poetry';
 import msg from '@cdo/poetry/locale';
 import {APP_WIDTH} from '../constants';
-import {POEMS, PoetryStandaloneApp} from './constants';
-import {getPoem} from './poem';
+import {PoetryStandaloneApp} from './constants';
+import {getPoem, shouldAlphabetizePoems} from './poem';
 import * as utils from '@cdo/apps/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const poemShape = PropTypes.shape({
   key: PropTypes.string,
   title: PropTypes.string,
   author: PropTypes.string,
-  lines: PropTypes.arrayOf(PropTypes.string)
+  lines: PropTypes.arrayOf(PropTypes.string),
 });
 
 export function PoemEditor(props) {
@@ -47,38 +47,33 @@ export function PoemEditor(props) {
   }, [props.isOpen, error]);
 
   const body = (
-    <div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.title()}</label>
+    <form style={{margin: 0}}>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.title()}</span>
         <input
           style={styles.input}
           value={title}
           onChange={event => setTitle(event.target.value)}
         />
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.author()}</label>
+      </label>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.author()}</span>
         <input
           style={styles.input}
           value={author}
           onChange={event => setAuthor(event.target.value)}
         />
-      </div>
-      <div style={{...styles.modalContainer, paddingTop: 0}}>
-        <div style={styles.label} />
-        <div style={{...styles.input, ...styles.warning}}>
-          {msg.authorWarning()}
-        </div>
-      </div>
-      <div style={styles.modalContainer}>
-        <label style={styles.label}>{msg.poem()}</label>
+      </label>
+      <div style={styles.warning}>{msg.authorWarning()}</div>
+      <label style={styles.labelContainer}>
+        <span style={styles.label}>{msg.poem()}</span>
         <textarea
           style={styles.input}
           value={poem}
           onChange={event => setPoem(event.target.value)}
         />
-      </div>
-    </div>
+      </label>
+    </form>
   );
 
   const onSave = () => {
@@ -87,7 +82,7 @@ export function PoemEditor(props) {
         key: msg.enterMyOwn(),
         title,
         author,
-        lines: poem.split('\n')
+        lines: poem.split('\n'),
       });
 
     utils
@@ -101,7 +96,7 @@ export function PoemEditor(props) {
           setError(
             msg.profanityFoundError({
               wordCount: profaneWords.length,
-              words: profaneWords.join(', ')
+              words: profaneWords.join(', '),
             })
           );
         } else {
@@ -118,7 +113,12 @@ export function PoemEditor(props) {
         {error}
       </div>
     ),
-    <FooterButton text={msg.save()} onClick={onSave} type="confirm" key="btn" />
+    <FooterButton
+      text={msg.save()}
+      onClick={onSave}
+      type="confirm"
+      key="btn"
+    />,
   ];
 
   return (
@@ -135,16 +135,16 @@ export function PoemEditor(props) {
 PoemEditor.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
-  initialPoem: poemShape
+  initialPoem: poemShape,
 };
 PoemEditor.defaultProps = {
-  initialPoem: {}
+  initialPoem: {},
 };
 
 function PoemSelector(props) {
   const [isOpen, setIsOpen] = useState(false);
 
-  if (appOptions.level.standaloneAppName !== PoetryStandaloneApp.PoetryHoc) {
+  if (appOptions.level.standaloneAppName === PoetryStandaloneApp.Poetry) {
     return null;
   }
 
@@ -170,7 +170,7 @@ function PoemSelector(props) {
         key: msg.chooseAPoem(),
         author: '',
         title: '',
-        lines: []
+        lines: [],
       };
     } else {
       poem = getPoem(poemKey);
@@ -183,11 +183,16 @@ function PoemSelector(props) {
   };
 
   const getPoemOptions = () => {
-    const options = Object.keys(POEMS)
+    let options = Object.keys(props.poemList)
       .map(poemKey => getPoem(poemKey))
-      .filter(poem => !poem.locales || poem.locales.includes(appOptions.locale))
-      .sort((a, b) => (a.title > b.title ? 1 : -1))
-      .map(poem => ({value: poem.key, label: poem.title}));
+      .filter(
+        poem => !poem.locales || poem.locales.includes(appOptions.locale)
+      );
+
+    if (shouldAlphabetizePoems()) {
+      options.sort((a, b) => (a.title > b.title ? 1 : -1));
+    }
+    options = options.map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
     options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
     // Add blank option that just says "Choose a Poem" to the top of the dropdown.
@@ -229,47 +234,51 @@ PoemSelector.propTypes = {
   // from Redux
   selectedPoem: poemShape.isRequired,
   isRunning: PropTypes.bool.isRequired,
-  onChangePoem: PropTypes.func.isRequired
+  onChangePoem: PropTypes.func.isRequired,
+  poemList: PropTypes.object,
 };
 
 const styles = {
   container: {
-    maxWidth: APP_WIDTH
+    maxWidth: APP_WIDTH,
   },
   selector: {
     width: '100%',
-    marginBottom: 10
+    marginBottom: 10,
   },
   label: {
-    flex: 1
+    flex: 1,
   },
   input: {
-    flex: 2
+    flex: 2,
   },
-  modalContainer: {
+  labelContainer: {
     display: 'flex',
-    justifyContent: 'flex-end',
-    padding: 10
+    justifyContent: 'space-between',
+    padding: '10px 10px 0 10px',
   },
   error: {
     color: color.red,
     fontStyle: 'italic',
     textAlign: 'right',
-    marginRight: 5
+    marginRight: 5,
   },
   warning: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
+    ...fontConstants['main-font-semi-bold'],
+    textAlign: 'end',
+    padding: '0 10px 10px 0',
+  },
 };
 
 export default connect(
   state => ({
     selectedPoem: state.poetry.selectedPoem,
-    isRunning: state.runState.isRunning
+    isRunning: state.runState.isRunning,
+    poemList: state.poetry.poemList,
   }),
   dispatch => ({
     onChangePoem(poem) {
       dispatch(setPoem(poem));
-    }
+    },
   })
 )(PoemSelector);

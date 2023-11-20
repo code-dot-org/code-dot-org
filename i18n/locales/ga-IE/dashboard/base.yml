@@ -52,6 +52,7 @@ ga:
         gender: 'Inscne'
         edit_header: 'Cuir Sonraí an Chuntais in Eagar'
         finish_sign_up_header: 'Críochnaigh an próiseas cláraithe'
+        finish_sign_up_header_error: 'Ceartaigh na hearráidí seo a leanas:'
         finish_sign_up_subheader: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le haghaidh **%{email}**.'
         finish_sign_up_subheader_provider: 'Líon isteach an t-eolas seo a leanas chun cuntas Code.org a chruthú le <strong>%{provider}</strong> le haghaidh <strong>%{email}</strong>.'
@@ -59,6 +60,8 @@ ga:
         reset_password_token: "Tá an nasc a chliceáil tú chun d'fhocal faire a athshocrú"
         error:
           future: earráid - dáta sa todhchaí
+        user_type: 'Cineál Cuntais'
+        us_state: 'Stát'
   beta: "béite"
   hello: "Dia dhuit a dhomhain"
   welcome_back: "Fáilte ar ais a %{name}"
@@ -167,7 +170,6 @@ ga:
     data_collection_us: "Is suíomh gréasáin neamhbhrabúis é Code.org atá bunaithe sna SAM, agus d'fhéadfadh na dlíthe lena rialaítear bailiú sonraí sna SAM a bheith difriúil ó na dlíthe i do thír féin."
     visit_privacy: 'Tabhair cuairt ar [Pholasaí Príobháideachais](%{privacy_url}) chun tuilleadh a fhoghlaim.'
     student_terms_markdown: "Ní stórálaimid seoltaí ríomhphoist ar bhealach a ligfeadh dúinn dul i dteagmháil le daltaí. Ní bhfaighidh daltaí aon ríomhphost ó Code.org seachas chun focal faire a athshocrú. Féach ár [bpolasaí príobháideachais](http://code.org/privacy) chun tuilleadh eolais a fháil."
-    additional_information: "Teastaíonn tuilleadh eolais uainn sular féidir linn tú a chlárú."
     user_type_button: "Athraigh Cineál an Chuntais"
     user_type_label: "Cineál Cuntais"
     user_type_student: "Dalta"
@@ -186,6 +188,7 @@ ga:
     parent_account_checkbox: "Is tuismitheoir/caomhnóir mé agus tá mé ag clárú ar son mo pháiste"
     parent_account_email_progress_permission: "An bhfuil cead againn ríomhphost a sheoladh chugat anois is arís le heolas faoi dhul chun cinn do pháiste, faoin chúrsa, agus faoin ríomheolaíocht go ginearálta? [(Féach ár bpolasaí príobháideachais)](%{privacy_policy_url})"
     parent_account_email_label: "Seoladh R-Phoist Tuismitheora/Caomhnóra"
+    us_state: 'Stát'
   school_info:
     title: 'Eolas faoin scoil (roghnach)'
     school_country: 'Tír na Scoile'
@@ -637,23 +640,17 @@ ga:
       body_short: "Dear d'aip, códáil le blocanna nó le JavaScript í, ansin foilsigh an aip ar an toirt."
       audience: 'Aois 13+'
       cta: 'Foghlaim anois'
-    dance:
-      title: 'Cóisir Dhamhsa'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Cóisir Dhamhsa'
-    hoc:
-      title: 'Cathair Ghríobháin Chlasaiceach'
-      body: 'Bí leis na milliúin a bhain triail as buntús na ríomheolaíochta.'
+    dance:
+      title: 'Cóisir Dhamhsa'
     flappy:
       title: 'Cód Flappy'
       body: 'Ar mhaith leat do chluiche féin a scríobh i gceann 10 nóiméad? Bain triail as ár gcúrsa Flappy Code!'
-    20-hour:
-      title: 'Cúrsa Luathaithe'
-      body: 'Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus 18 bliain d''aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!'
-      body_short: 'Foghlaim buntús na ríomheolaíochta i leagan luathaithe de chúrsaí 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Bain triail as an gcúrsa teagaisc nua don Uair Chódála (béite)'
-      try_frozen: 'An tEalaíontóir, le hAnna agus Elsa ó Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Gailearaí"
       body: "Féach ar phictiúir d'aipeanna agus ar obair ealaíne déanta ag úsáideoirí"
@@ -662,18 +659,18 @@ ga:
       body: "Is timpeallacht ríomhchláraithe é an tSaotharlann Cluichíochta lenar féidir leat beochaintí agus cluichí simplí a chruthú le rudaí agus carachtair a dhéanann idirghníomhaíocht lena chéile."
       audience: "Aois 13+"
       cta: "Foghlaim anois"
+    hero:
+      title: "Minecraft"
+      body: "Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála! Téigh ar aistear trí Minecraft le cód."
     hoc-encryption:
       title: "Criptiú Simplí"
       body: "Foghlaimeoidh na daltaí teicnící a chabhróidh leo teachtaireachtaí criptithe a chruthú agus a dhíchódú."
-    weblab:
-      title: "Saotharlann an Ghréasáin (béite)"
-      body: "Is éard atá i Saotharlann an Ghréasáin ná timpeallacht ríomhchláraithe lenar féidir leathanaigh Ghréasáin shimplí a chruthú in HTML agus CSS. Dear do leathanaigh féin agus foilsigh do shuíomh ar an bpointe."
-      audience: "Aois 13+"
-      cta: "Foghlaim anois"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Cathair Ghríobháin Chlasaiceach'
+      body: 'Bí leis na milliúin a bhain triail as buntús na ríomheolaíochta.'
+    hoc2014:
+      try_new_tutorial: 'Bain triail as an gcúrsa teagaisc nua don Uair Chódála (béite)'
+      try_frozen: 'An tEalaíontóir, le hAnna agus Elsa ó Frozen'
     infinity:
       title: "Infinity: Spraotharlann"
       body: "Úsáid an Spraotharlann chun scéal nó cluiche a chruthú ina bhfuil carachtair Disney Infinity."
@@ -683,29 +680,35 @@ ga:
     minecraft2016:
       title: "Minecraft"
       body: "Códáil ainmhithe agus créatúir eile i do leagan féin de Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála! Téigh ar aistear trí Minecraft le cód."
     sports:
       title: "Spórt"
       body: "Is féidir leat cluiche cispheile a chruthú nó spóirt éagsúla a mheascadh."
+    starwars:
+      title: "Star Wars"
     text-compression:
       body: "Sa cheacht seo, úsáidfidh na daltaí an Ghiuirléid Chomhbhrúite Téacs chun téacs a chomhbhrú trí shiombailí a chur in áit patrún áirithe."
-    unplugged:
-      title: "Ceachtanna Díphlugáilte"
-      audience: "Aois 4+"
-      body: "Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo mar chúrsa saorsheasaimh nó mar chomhlánú ar aon chúrsa ríomheolaíochta."
-      body_short: "Mura bhfuil ríomhairí agat, bain triail as na ceachtanna \"díphlugáilte\" seo i do sheomra ranga."
-    unplugged_conditionals:
-      title: "Coinníollacha"
-      body: "Foghlaim faoi algartaim agus faoi ráitis choinníollacha sa ghníomhaíocht \"dhíphlugáilte\" seo a úsáideann deic cártaí."
+    weblab:
+      title: "Saotharlann an Ghréasáin (béite)"
+      body: "Is éard atá i Saotharlann an Ghréasáin ná timpeallacht ríomhchláraithe lenar féidir leathanaigh Ghréasáin shimplí a chruthú in HTML agus CSS. Dear do leathanaigh féin agus foilsigh do shuíomh ar an bpointe."
+      audience: "Aois 13+"
+      cta: "Foghlaim anois"
     widgets:
       title: "Giuirléidí"
       body: "Is féidir le daltaí na huirlisí digiteacha seo a úsáid chun coincheapa ó Fhoras Feasa na Ríomheolaíochta a fhoghlaim. Úsáid na giuirléidí ina n-aonar, nó cruthaigh ceacht a chlúdaíonn coincheap amháin."
       audience: "Aois 14+"
       cta: "Foghlaim anois"
+    unplugged_conditionals:
+      title: "Coinníollacha"
+      body: "Foghlaim faoi algartaim agus faoi ráitis choinníollacha sa ghníomhaíocht \"dhíphlugáilte\" seo a úsáideann deic cártaí."
+    unplugged:
+      title: "Ceachtanna Díphlugáilte"
+      audience: "Aois 4+"
+      body: "Bhailíomar liosta de cheachtanna díphlugáilte is féidir a úsáid i do sheomra ranga. Anois, beidh tú in ann buntús na ríomheolaíochta a mhúineadh, is cuma mura bhfuil ríomhairí i do sheomra ranga! Bain úsáid as na ceachtanna seo mar chúrsa saorsheasaimh nó mar chomhlánú ar aon chúrsa ríomheolaíochta."
+      body_short: "Mura bhfuil ríomhairí agat, bain triail as na ceachtanna \"díphlugáilte\" seo i do sheomra ranga."
+    20-hour:
+      title: 'Cúrsa Luathaithe'
+      body: 'Is cúrsa 20 uair an chloig é seo a chlúdaíonn bunchoincheapa ríomheolaíochta agus ríomhchláraithe ó chúrsaí 2-4. Tá sé dírithe ar dhaltaí idir 10 agus 18 bliain d''aois. Féach ar chúrsaí 2-4 chun eolas níos cuimsithí a fháil!'
+      body_short: 'Foghlaim buntús na ríomheolaíochta i leagan luathaithe de chúrsaí 2-4.'
   landing:
     prerelease_tutorial: "Is cúrsa teagaisc **béite** é seo. Seans go bhfeabhsófar é amach anseo, bunaithe ar aiseolas ón phobal."
     report_bug: "Déan Tuairisc ar Fhadhb"
@@ -1041,6 +1044,7 @@ ga:
         csf_express: 'Buntús na Ríomheolaíochta (Réamh-luathchúrsa nó luathchúrsa)'
         csd: 'Fionnachtana sa Ríomheolaíocht'
         csp: 'Foras Feasa ar an Ríomheolaíocht'
+        other: 'Eile'
       email_opt_in:
         opt_in_yes: 'Tá'
         opt_in_no: 'Níl'
@@ -1058,6 +1062,11 @@ ga:
     no_teacher_email:
       body_markdown: 'Níl aon seoladh ríomhphoist ceangailte le do chuntas. Ní mór duit seoladh ríomhphoist a chur le do chuntas sna [socruithe](%{user_registration}) sula líonfaidh tú an fhoirm seo isteach.'
   courses_category: 'Cúrsaí Iomlána'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Spórt'
+      csf: 'Buntús na Ríomheolaíochta'
   cookie_banner:
     message: 'Má chliceálann tú "Glacaim leis" nó má leanann tú ar aghaidh ag brabhsáil, glacfaidh tú le stóráil fianán ar do ríomhaire nó gléas soghluaiste.'
     more_information: "Polasaí Príobháideachais Code.org."

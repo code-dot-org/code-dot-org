@@ -2,31 +2,126 @@
   "hy-AM": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                }
+              },
+              "name": "Մաթեմատիկա"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Ֆունկցիա"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "փոփոխականների"
+            }
+          },
+          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
+          "name": "App Lab"
+        },
         "gamelab": {
           "categories": {
+            "functions": {
+              "name": "գործառույթները"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Գույնը"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Գույնը"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Առավելագույն թվով վերադարձել"
+                    },
+                    "min": {
+                      "description": "Նվազագույն թիվը վերադարձել"
+                    }
+                  }
+                }
+              },
               "name": "Մաթեմատիկա"
             },
             "variables": {
               "name": "փոփոխականների"
-            },
-            "functions": {
-              "name": "գործառույթները"
-            }
-          }
-        },
-        "applab": {
-          "name": "App Lab",
-          "description": "App Lab է ծրագրավորման միջավայրի, որտեղ դուք կարող եք կատարել պարզ apps. Նախագծել է ծրագիր, օրենսգրքի բլոկների կամ Javascript, որպեսզի այն աշխատի, ապա կիսվել ձեր ծրագիրը վայրկյաններով.",
-          "categories": {
-            "math": {
-              "name": "Մաթեմատիկա"
-            },
-            "variables": {
-              "name": "փոփոխականների"
-            },
-            "functions": {
-              "name": "գործառույթները"
             }
           }
         },
@@ -38,23 +133,23 @@
             "events": {
               "name": "Իրադարձություններ"
             },
-            "loops": {
-              "name": "loops"
-            },
-            "variables": {
-              "name": "փոփոխականների"
-            },
-            "math": {
-              "name": "Մաթեմատիկա"
+            "functions": {
+              "name": "գործառույթները"
             },
             "logic": {
               "name": "տրամաբանություն"
             },
-            "functions": {
-              "name": "գործառույթները"
+            "loops": {
+              "name": "loops"
+            },
+            "math": {
+              "name": "Մաթեմատիկա"
             },
             "text": {
               "name": "տեքստ"
+            },
+            "variables": {
+              "name": "փոփոխականների"
             }
           }
         }

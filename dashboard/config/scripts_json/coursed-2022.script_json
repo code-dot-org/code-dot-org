@@ -4,18 +4,35 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "8f212dd2-169f-4a3d-9880-f76d3372b6c1",
+          "notice": "Extension Lessons with the micro:bit",
+          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
+          "link": "https://code.org/maker/csf-microbit",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn more"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "supported_locales": [
+        "fa-AF",
+        "fa-IR",
+        "sq-AL"
+      ],
       "tts": true,
       "version_year": "2022"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-06-29 14:54:32 UTC",
+    "serialized_at": "2023-11-01 21:07:29 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1402,6 +1419,19 @@
         "lesson_group.key": "end_of_course_project",
         "script.name": "coursed-2022"
       }
+    },
+    {
+      "key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed",
+      "position": 4,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed",
+        "lesson.key": "End of Course Project",
+        "lesson_group.key": "end_of_course_project",
+        "script.name": "coursed-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -2288,7 +2318,7 @@
       "key": "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f",
       "position": 1,
       "properties": {
-        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *Why is it important to NOT share private information online?* \n- *How do you know if information is private?*",
+        "description": "\n\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n\n**Reflect:**\n\n\n - *What type of game did you create today?* \n- *What did you like about your classmates' games?*",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3974,6 +4004,18 @@
       "seeding_key": {
         "activity_section.key": "558c0510-2a0d-4302-82d1-98f221ecec6f",
         "lesson_activity.key": "a54509a7-dac6-4985-830d-91272c3de923"
+      }
+    },
+    {
+      "key": "3dcc5ff1-9cad-46cc-985e-e92e1989a304",
+      "position": 1,
+      "properties": {
+        "description": "To build on the skills you learned in CS Fundamentals Course D, click [here](https://code.org/maker/csf-microbit)  to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-D-July23.pdf) cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
+        "name": "Extension Lessons with the micro:bit"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dcc5ff1-9cad-46cc-985e-e92e1989a304",
+        "lesson_activity.key": "f7559bae-c62e-4cc6-94a2-26b09e8c1eed"
       }
     }
   ],
@@ -10276,6 +10318,18 @@
       }
     },
     {
+      "name": "Extension Lessons with the micro:bit",
+      "url": "https://code.org/maker/csf-microbit",
+      "key": "extension_lessons_micro_bit",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit"
+      }
+    },
+    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -11079,6 +11133,12 @@
     {
       "seeding_key": {
         "resource.key": "debugging_guide",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "extension_lessons_micro_bit",
         "script.name": "coursed-2022"
       }
     },
@@ -12190,5 +12250,14 @@
         "opportunity_standard.shortcode": "3-5-ETS1-1"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

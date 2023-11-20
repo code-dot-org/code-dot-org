@@ -6,6 +6,9 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
@@ -15,17 +18,13 @@ describe('StudentHomepage', () => {
     codeOrgUrlPrefix: 'http://localhost:3000',
     studentId: 123,
     isEnglish: true,
-    showVerifiedTeacherWarning: false
+    showVerifiedTeacherWarning: false,
   };
 
-  it('shows a non-extended Header Banner that says My Dashboard', () => {
+  it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
-    assert.deepEqual(headerBanner.props(), {
-      headingText: 'My Dashboard',
-      short: true,
-      backgroundUrl: '/shared/images/banners/teacher-homepage-hero.jpg'
-    });
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {
@@ -40,7 +39,7 @@ describe('StudentHomepage', () => {
       courses: courses,
       topCourse: topCourse,
       isTeacher: false,
-      hasFeedback: false
+      hasFeedback: false,
     });
   });
 
@@ -53,8 +52,16 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const joinSectionArea = wrapper.find('JoinSectionArea');
     assert.deepEqual(joinSectionArea.props(), {
-      initialJoinedStudentSections: joinedSections
+      initialJoinedStudentSections: joinedSections,
     });
+  });
+
+  it('does not log an Amplitude event for student signing-in', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    shallow(<StudentHomepage {...TEST_PROPS} />);
+
+    expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
   });
 
   it('shows the special announcement for English', () => {

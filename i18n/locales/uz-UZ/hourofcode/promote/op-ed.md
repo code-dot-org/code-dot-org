@@ -4,44 +4,44 @@ title: '"Informatika bo‘yicha ta''lim haftaligi va soat soati" dasturining nam
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Kompyuter Fanlari Ta'lim Haftasini qo‘llab-quvvatlovchi avtorlik fikr-mulohazalarini yozing
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Quyida shtat va mahalliy qonun chiqaruvchilar, biznes korhonalari rahbarlari va boshqalar foydalanishi mumkin bo'lgan Kompyuter Fanlari Ta'lim Haftasi va u haqdagi fikr-mulohazalar namunasi keltirilgan.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Kompyuter fanlariga oid maxsus maʼlumotlarni topish uchun [advocacy.code.org]({{ urls/advocacy }}) saytiga kiring.
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### Sarlavha: Dasturlash... Ish-Joylar Qayerda
 
-#### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
+#### [ISM] bilan [O‘QITUVCHI, DIREKTOR YOKI BIZNES LIDER BILAN HAMMUALLIFLIKNI KO'RIB CHIQING] hamkorlikda.
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+Kompyuterlar hamma joyda. Cho'ntagimizda. Devorimizda. Avtomobilimizda. Ular elektr tarmoqlaridan tortib svetoforlargacha, moliyaviy bozorlarimizning ichki ish-jarayonlarigacha bo'lgan infratuzilmamizning muhim qismi hisoblanadi. Ushbu kompyuterlarning barchasida umumiy narsa bor. Ular nimani bajarishi kerakligini buyuradigan dasturiy ta'minotga bog'liq.
 
-But who exactly is going to write this software?
+Ammo, bu dasturiy ta'minotni kim yozadi?
 
-Considering how fast our world is being transformed by technology, you might expect the number of students studying computer science in K-12 education today to be at an all-time high. You’d be wrong. In fact, fewer students are studying computer science, and fewer schools are teaching it, than a decade ago.
+Dunyomiz texnologiya tomonidan qanchalik tez o'zgartirib borilayotganini hisobga oladigan bo'lsak, bugungi kunda K-12 ta'limida kompyuter fanlarini o'rganayotgan o'quvchilar soni eng yuqori darajada bo'lishini kutishingiz mumkin. Xato o'ylayotgan bo'lishingiz ham mumkin. Aslida, o'n yil oldingiga qaraganda kam talabalar kompyuter fanlarini o'rganmoqda va kam maktablar uni o'rgatmoqda.
 
-At a time when demand for skilled programmers has never been higher, we’re turning out fewer computer scientists. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+Malakali dasturchilarga talab hech qachon yuqori bo'lmagan bir paytda, biz kompyuter fanlari olimlarini kam chiqarmoqdamiz. Ishsizlik darajasi yuqori bo'lgan hozirgi vaqtda ham minglab ish o'rinlarini, ularning aksariyati, mana shu yerda,**[SHTAT/SHAHARNI KIRITING]**mos keluvchi malakaga ega kadrlar yetishmovchiligini to'ldirolmaydi.
 
-Why is this? And how can we address it?
+Bu nima uchun ro'y bermoqda? Va buni qanday hal qilishimiz mumkin?
 
-The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
+Muammo o‘rta va yuqori sinfdan boshlanadi. Maktablarimizning o‘ntasidan to‘qqiztasida kompyuterda dasturlash darslari yo‘q. O‘tgan yili **[MAKTAB TUMANI]**da faqat **[RAQAM]**ta o‘quvchi kollej darajasidagi Kompyuter fanlaridan Fanni chuqurlashtirib o'rganish dasturi (AP) imtihonida qatnashgan, o'quvchilarimizdan atigi **[%]** AP (Fanni chuqurlashtirib o'rganish dasturi) imtihonidan o'ta oldi. Biz o'quvchilarimizni ushbu yuqori maoshli, muhim kasblarni egallashga tayyorlash yoki rag'batlantirish uchun yetarli harakat qilmayapmiz.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Deyarli barcha yirik dasturlash sohasidagi innovatsiyalar bu davlatda kashf qilingan, ammo hoziroq biror harakatni amalga oshirmasak, biz bu liderlikni yo'qotish xavfi ostidamiz.
 
-We need to make some changes.
+Ba'zi o'zgarishlarni amalga oshirishimiz kerak.
 
-**[OPTIONAL FOR STATES WHERE THIS APPLIES]**
+**[AMAL QILUVCHI SHTATLAR UCHUN IHTIYORIY]**
 
-One positive change would be to allow rigorous computer science courses to satisfy a high school math or science graduation requirement. In **[INSERT STATE]**, computer science courses are electives. Given academic demands, students cannot afford to take elective computer science courses. And making this change can have a big impact. In states where computer science courses count toward graduation requirements, courses are fifty percent larger with much higher rates of participation by underserved minorities than states that treat computer science as an elective.
+Ijobiy o'zgarishlardan biri bu yuqori sinfni bitirish uchun matematika yoki tabiiy fanlar bo'yicha talablarni qondirish uchun ilg'or kompyuter fanlari kurslarini o'rganish imkoniyatini taqdim etish bo'ladi. **[SHTATNI KIRITING]**da kompyuter fanlari kurslari fakultativ dastur hisoblanadi. Akademik talablarni hisobga olgan holda, talabalar fakultativ komputer fanlari kurslarini olisha olmaydilar. Ushbu o'zgarishni amalga oshirish katta ta'sir ko'rsatishi mumkin. Kompyuter fanlari kurslari bitiruv talablari sifatida hisobga olinadigan shtatlardagi kurslar kompyuter fanlarini fakultativ sifatida qabul qiladigan shtatlarga qaraganda, kam ta'minlangan ozchiliklarning ishtiroki darajasi yuqoriroq bo'lgan holda kurslar hajmi ellik foizga kattaroq.
 
-We should also work with students at a young age to spark their interest in computer science and coding. Our children should not just know how to use apps and play video games – they should know how to create them. Children can learn the basics of coding as early as the second grade.
+Shuningdek, kompyuter fanlari va dasturlashga qiziqishlarini uyg'otish uchun biz o'quvchilar bilan yoshligida ishlashimiz kerak. Farzandlarimiz nafaqat ilovalardan foydalanishni, video o‘yinlarni o‘ynashni bilishlari, balki ularni qanday yaratishni ham bilishlari kerak. Bolalar dasturlash asoslarini ikkinchi sinfdayoq o'rgana oladilar.
 
-We need to recruit more computer science teachers and encourage professional development within their field. Today there are many online resources that can help teachers access and keep up to date with the latest technology for their students.
+Biz ko‘proq kompyuter fanlari o‘qituvchilarini jalb qilishimiz va ularning sohasi bo‘yicha professional rivojlanishini rag‘batlantirishimiz kerak. Bugungi kunda o'qituvchilarga o'z o'quvchilarini eng so'nggi texnologiyalardan bohabar qilishga yordam beradigan ko'plab onlayn resurslar mavjud.
 
-According to the Bureau of Labor Statistics, by 2020, there will be 9.2 million jobs in STEM fields. Half of those jobs—4.6 million—will be in computing or information technology. And computer science is increasingly foundational knowledge for the 21st Century. Who will fill these jobs if our children are not given the opportunity to gain the skills needed?
+Mehnat statistikasi byurosining ma'lumotlariga ko'ra, 2020 yilga kelib, STEM sohalarida 9,2 million ish o'rni mavjud bo'ladi. Ushbu ish o'rinlarining yarmi - 4,6 millioni - hisoblash yoki axborot texnologiyalari sohasiga to'g'ri keladi. Kompyuter fanlari esa XXI asr uchun tobora fundamental bilimlarga aylanib bormoqda. Farzandlarimizga kerakli ko'nikmalarni egallash imkoniyati berilmasa, bu ish-o'rinlarini kim to'ldiradi?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. In schools throughout **[STATE]**, our students will be participating in a national Hour of Code, demystifying the subject of computer science and hopefully whetting their appetites to go on and learn more. I will be joining them, and I invite you to join in as well. Everyone should learn how to code. Visit https://hourofcode.com/{{ country }} to learn more and get started. And support our efforts to bring computer science to more schools in **[STATE]**.
+Bu hafta, {{ kampanya_date/full }}, Kompyuter Fanlari Taʼlim Haftasimi. Butun****[SHTAT]**dagi maktablarda o‘quvchilarimiz milliy Dasturlash soatida ishtirok etib, kompyuter fanlari haqida afsonalarni ochib tashlaydilar va ishonamizki, davom ettirish va ko‘proq o‘rganishga ishtiyoqlarini oshiradilar. Men ham ularga qo'shilaman va sizni ham qo'shilishga taklif qilaman. Har bir odam dasturlashni o'rganishi kerak. Batafsil ma’lumot olish va boshlash uchun https://hourofcode.com/{{ country }} saytiga tashrif buyuring. **[SHTAT]**dagi ko‘proq maktablarga kompyuter fanlarini olib kirish bo‘yicha harakatlarimizni qo‘llab-quvvatlang.</p> 
 
 {{ signup_button }}

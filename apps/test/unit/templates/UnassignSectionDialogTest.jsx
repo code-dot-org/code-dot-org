@@ -11,7 +11,7 @@ const DEFAULT_PROPS = {
   cancelUnassign: () => {},
   unassignSection: () => {},
   courseName: 'myCourse',
-  sectionName: 'mySection'
+  sectionName: 'mySection',
 };
 
 const setUp = overrideProps => {

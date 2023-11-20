@@ -50,9 +50,6 @@ zh-CN:
       expired: "已过期，请申请一个新的"
       not_found: "找不到"
       not_locked: "未被锁定"
-      not_saved:
-        one: "发生了1个错误，%{resource}无法被保存："
-        other: "发生了%{count}个错误，%{resource}无法被保存："
     invitations:
       send_instructions: '一封邀请电子邮件已经发送至%{email}。'
       invitation_token_invalid: '提供的邀请令牌无效！'

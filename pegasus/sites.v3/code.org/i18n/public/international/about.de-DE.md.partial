@@ -13,9 +13,9 @@ video_player: true
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
-  
+
   <font size="4" color="#FFFFFF"><b>Code.org Kurse werden von mehr als 10 Millionen Schülern und von einer Million Lehrerinnen und Lehrern weltweit verwendet.</b></font>
- 
+
 </div>
 
 [/col-40]
@@ -25,7 +25,7 @@ video_player: true
 ## Geschichte
 
 Im Jahr 2013 wurde Code.org von den Zwillingen Hadi und Ali Partovi mit einem [Video zur Förderung der Informatik](https://www.youtube.com/watch?v=nKIu9yen5nc) gestartet. Dieses Video wurde #1 auf YouTube für einen Tag, und 15.000 Schulen kontaktierten uns mit dem Wunsch nach Unterstützung. Seitdem sind wir von einer kleinen Gruppe Freiwilliger zu einer vollständigen Organisation gewachsen, die unsere weltweite Initiative durchführt. Wir sind der Meinung, dass für jedes Kind eine qualitativ hochwertige Informatik-Ausbildung zur Verfügung stehen sollte, nicht nur für ein paar glückliche.
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
+<br> <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen></iframe>
 
 ## Was wir machen
 

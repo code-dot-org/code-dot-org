@@ -1,0 +1,161 @@
+{
+  "sm-WS": {
+    "data": {
+      "vocabularies": {
+        "variable/csd/2021": {
+          "word": "Fuainumera lasi "
+        },
+        "function/csd/2021": {
+          "word": "Faiva"
+        },
+        "behavior/coursee/2021": {
+          "word": "Amio"
+        },
+        "function/coursee/2021": {
+          "word": "Faiva"
+        },
+        "define/coursee/2021": {
+          "word": "Faamatala"
+        },
+        "behavior/coursef/2021": {
+          "word": "Amio"
+        },
+        "variable/coursef/2021": {
+          "word": "Fuainumera lasi "
+        },
+        "define/coursef/2021": {
+          "word": "Faamatala"
+        },
+        "behavior/express/2021": {
+          "word": "Amio"
+        },
+        "function/express/2021": {
+          "word": "Faiva"
+        },
+        "variable/express/2021": {
+          "word": "Fuainumera lasi "
+        },
+        "define/express/2021": {
+          "word": "Faamatala"
+        },
+        "variable/csd/2022": {
+          "word": "Fuainumera lasi "
+        },
+        "function/csd/2022": {
+          "word": "Faiva"
+        },
+        "data/coursec/2022": {
+          "word": "Faamaumauga"
+        },
+        "behavior/coursee/2022": {
+          "word": "Amio"
+        },
+        "function/coursee/2022": {
+          "word": "Faiva"
+        },
+        "define/coursee/2022": {
+          "word": "Faamatala"
+        },
+        "behavior/coursef/2022": {
+          "word": "Amio"
+        },
+        "variable/coursef/2022": {
+          "word": "Fuainumera lasi "
+        },
+        "define/coursef/2022": {
+          "word": "Faamatala"
+        },
+        "behavior/express/2022": {
+          "word": "Amio"
+        },
+        "function/express/2022": {
+          "word": "Faiva"
+        },
+        "variable/express/2022": {
+          "word": "Fuainumera lasi "
+        },
+        "define/express/2022": {
+          "word": "Faamatala"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Faailo"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Amio"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Faailo"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Faailo"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Faafanua"
+        },
+        "code/poetry/2023": {
+          "word": "Faailo"
+        },
+        "variable/csd/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "function/csd/2023": {
+          "word": "Faiva"
+        },
+        "data/coursec/2023": {
+          "word": "Faamaumauga"
+        },
+        "behavior/coursee/2023": {
+          "word": "Amio"
+        },
+        "function/coursee/2023": {
+          "word": "Faiva"
+        },
+        "define/coursee/2023": {
+          "word": "Faamatala"
+        },
+        "behavior/coursef/2023": {
+          "word": "Amio"
+        },
+        "variable/coursef/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "define/coursef/2023": {
+          "word": "Faamatala"
+        },
+        "behavior/express/2023": {
+          "word": "Amio"
+        },
+        "function/express/2023": {
+          "word": "Faiva"
+        },
+        "variable/express/2023": {
+          "word": "Fuainumera lasi "
+        },
+        "define/express/2023": {
+          "word": "Faamatala"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "taamiloga"
+        },
+        "code/artist/unversioned": {
+          "word": "Faailo"
+        },
+        "function/hero/unversioned": {
+          "word": "Faiva"
+        },
+        "code/poem-art/2021": {
+          "word": "Faailo"
+        },
+        "code/sports/unversioned": {
+          "word": "Faailo"
+        },
+        "code/dance-ai/2023": {
+          "word": "Faailo"
+        }
+      }
+    }
+  }
+}

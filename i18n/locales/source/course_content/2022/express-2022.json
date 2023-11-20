@@ -206,22 +206,22 @@
             {
               "text": "Scrat will reach the acorn. There are no bugs in the code.",
               "correct": false,
-              "feedback": "Incorrect. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not reach the acorn because he turns the wrong way.",
               "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Correct! Scrat turns the wrong direction and will not reach the acorn."
             },
             {
               "text": "Scrat will not reach the acorn because there are not enough `move forward` blocks.",
-              "correct": true,
-              "feedback": "Correct! First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "correct": false,
+              "feedback": "Incorrect. Scrat will not reach the acorn because he turns the wrong way."
             },
             {
               "text": "Scrat will not move from the first block.",
               "correct": false,
-              "feedback": "There are two bugs in this code. First, Scrat turns the wrong direction, then Scrat doesn't move forward enough times to reach the acorn."
+              "feedback": "Scrat will not reach the acorn because he turns the wrong way."
             }
           ],
           "questions": [
@@ -408,17 +408,6 @@
     "authored_hints": {
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
-    },
-    "function_definitions": {
-      "draw flame": {
-        "name": "draw flame",
-        "parameters": {
-          "x": "x"
-        }
-      },
-      "draw fire": {
-        "name": "draw fire"
-      }
     }
   },
   "https://studio.code.org/s/express-2022/lessons/4/levels/5": {
@@ -954,48 +943,6 @@
     "callouts": {
       "run_button": "Press the Run button first!",
       "visualizationResizeBar": "Drag the 3 dots to resize the play area."
-    },
-    "placeholder_texts": {
-      "e8a10c04d72b2f135dabe360c4bdd534": "You win!",
-      "077449fb290b51b9d70c9f2f3d3213bc": " seconds",
-      "490082498449bd20ff0199737dfa4916": "Select game type:",
-      "41f2b2212de0105c2a942ebb4a44e449": "The Great Collector Game!"
-    },
-    "function_definitions": {
-      "end game": {
-        "name": "end game"
-      }
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving west2": "moving west2",
-      "flying west and looping": "flying west and looping",
-      "fluttering": "fluttering",
-      "moving east2": "moving east2",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "wandering2": "wandering2",
-      "spinning left2": "spinning left2",
-      "spinning right2": "spinning right2",
-      "shrinking2": "shrinking2",
-      "growing2": "growing2",
-      "moving south2": "moving south2",
-      "swimming left and right2": "swimming left and right2",
-      "moving north2": "moving north2",
-      "jittering2": "jittering2",
-      "patrolling2": "patrolling2",
-      "moving with arrow keys2": "moving with arrow keys2",
-      "driving with arrow keys2": "driving with arrow keys2"
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -1772,23 +1719,6 @@
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite move one way, then another way.",
     "long_instructions": "# Switching Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nIf you want to switch from one behavior to another, you need to _stop_ the old behavior and _begin_ the new behavior  at the same time. You can use a new block to make sprites stop their current behaviors.\n\n[blockly block][1]\n\nYou'll need to connect a behavior to this block, such as `moving east`.\n\n## Do This\n\n-   Run the code and see what happens.\n-   Add behaviors to each `stops` and `begins` block to make the sprite change from moving east to moving west at 2 seconds.",
-    "behavior_names": {
-      "moving east": "moving east",
-      "patrolling": "patrolling",
-      "moving forward": "moving forward",
-      "growing": "growing",
-      "moving west": "moving west",
-      "spinning right": "spinning right",
-      "moving north": "moving north",
-      "moving south": "moving south",
-      "jittering": "jittering",
-      "wandering": "wandering",
-      "shrinking": "shrinking",
-      "spinning left": "spinning left",
-      "fluttering": "fluttering",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping"
-    },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
@@ -2448,7 +2378,7 @@
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/6": {
     "short_instructions": "Give your pet a behavior when the new sprite touches it.",
-    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitment.",
+    "long_instructions": "_Now, let's show your pet's excitement by giving it a behavior when the new sprite touches it._\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\n## Do This:\n\n1.  Add another `when touches` block to your code. Select your pet and its toy or friend.\n2.  Use a `sprite begins` block to give your pet a new behavior _when the new sprite touches it._\n\n**Optional Challenge:**\n\n-   Play a sound to show your pet's excitement.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/express-2022/lessons/8/levels/7": {

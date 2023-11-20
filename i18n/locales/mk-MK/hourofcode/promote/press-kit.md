@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Притиснете комплет
 ---
 
 {{ signup_button }}

@@ -180,5 +180,5 @@ export const commands = {
     if (utils.randomInt(0, 100) < 50) {
       sprite.rotation = utils.randomInt(-1, 1);
     }
-  }
+  },
 };

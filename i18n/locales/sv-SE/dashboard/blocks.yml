@@ -13,7 +13,7 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       BadGuys_setSize_dropdown:
         options:
           SIZE:
@@ -21,9 +21,9 @@ sv:
             '0.75': liten
             '1.00': medel
             '2.00': stor
-            '3.00': extra large
+            '3.00': extra stor
       Dancelab_alternateMoves:
-        text: "{GROUP} växla varje {N} takter \nmellan {MOVE1} och {MOVE2}"
+        text: "{GROUP} växla var {N}:e takt \nmellan {MOVE1} och {MOVE2}"
         options:
           GROUP:
             sprites: alla
@@ -42,10 +42,10 @@ sv:
           MOVE1:
             MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjärna
@@ -54,10 +54,10 @@ sv:
           MOVE2:
             MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjärna
@@ -67,7 +67,12 @@ sv:
         text: efter {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
+            '"seconds"': sekunder
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_changeColorBy:
         text: ändra {COLOR} {METHOD} via {AMOUNT}
@@ -99,15 +104,36 @@ sv:
             '"rand"': "(Slumpad)"
             MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjärna
             MOVES.ThisOrThat: Det här eller det där
             MOVES.Rest: Ingen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gör {MOVE} {DIR} för alltid"
+        options:
+          GROUP:
+            '"CAT"': alla katter
+            '"SLOTH"': sengångare
+          MOVE:
+            MOVES.Roll: Kroppsrullning
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Färsk
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjärna
+            MOVES.ThisOrThat: Det här eller det där
+            MOVES.Rest: Ingen
+            '"next"': "(Nästa)"
+            '"prev"': "(Föregående)"
+            '"rand"': "(Slumpad)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gör {MOVE} {DIR} för alltid"
         options:
@@ -117,10 +143,10 @@ sv:
             '"rand"': "(Slumpad)"
             MOVES.Roll: Kroppsrullning
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.Kick: Stjärna
@@ -183,11 +209,11 @@ sv:
             MOVES.Roll: Kroppsrullning
             MOVES.XClapSide: Klappa
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.XFever: Disco
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Huvud + Höfter
@@ -211,11 +237,11 @@ sv:
             MOVES.Roll: Kroppsrullning
             MOVES.XClapSide: Klappa
             MOVES.ClapHigh: Klappa högt
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.XFever: Disco
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Huvud + Höfter
@@ -234,7 +260,7 @@ sv:
         text: 'varje {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_everyVerseChorus:
         text: 'varje {UNIT} '
@@ -264,7 +290,7 @@ sv:
         text: "{UNIT} har passerat"
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
       Dancelab_ifDanceIs:
         text: |-
@@ -274,10 +300,10 @@ sv:
           DANCE:
             MOVES.ClapHigh: Klappa högt
             MOVES.Clown: Gangnam
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Roll: Kroppsrullning
             MOVES.Kick: Stjärna
@@ -287,7 +313,7 @@ sv:
         text: om {UNIT} is {OP} {N} {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': åtgärder
+            '"measures"': takter
             '"seconds"': sekunder
           OP:
             '">"': ">"
@@ -367,6 +393,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_makeAnonymousDanceSprite:
         text: skapa en ny {COSTUME} på {LOCATION}
@@ -397,20 +424,20 @@ sv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
       Dancelab_makeNewDanceSprite:
         text: |-
-          gör en ny {COSTUME}
-          kallade {NAME} till {LOCATION}
+          skapa en ny {COSTUME}
+          kallad {NAME} vid {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': alien
-            '"BEAR"': Björn
+            '"BEAR"': björn
             '"CAT"': katt
             '"DOG"': hund
             '"DUCK"': anka
-            '"FROG"': Groda
-            '"MOOSE"': alla älgar
-            '"PINEAPPLE"': Ananas
+            '"FROG"': groda
+            '"MOOSE"': älg
+            '"PINEAPPLE"': ananas
             '"ROBOT"': robot
-            '"SHARK"': Haj
+            '"SHARK"': haj
             '"SLOTH"': sengångare
             '"UNICORN"': enhörning
           LOCATION:
@@ -426,7 +453,7 @@ sv:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": slumpad
       Dancelab_makeNewDanceSpriteGroup:
         text: |-
-          gör {N} ny {COSTUME}
+          skapa {N} nya {COSTUME}
           i en {LAYOUT}
         options:
           'N':
@@ -470,15 +497,15 @@ sv:
             '39': '39'
             '40': '40'
           COSTUME:
-            '"ALIEN"': alla aliens
+            '"ALIEN"': aliens
             '"BEAR"': björnar
-            '"CAT"': alla katter
-            '"DOG"': alla hundar
+            '"CAT"': katter
+            '"DOG"': hundar
             '"DUCK"': ankor
             '"FROG"': grodor
-            '"MOOSE"': alla älgar
+            '"MOOSE"': älgar
             '"PINEAPPLE"': ananaser
-            '"ROBOT"': alla robotar
+            '"ROBOT"': robotar
             '"SHARK"': hajar
             '"SLOTH"': sengångare
             '"UNICORN"': enhörningar
@@ -497,6 +524,7 @@ sv:
             '"x"': korsvis
             '"plus"': plus
             '"spiral"': spiral
+            '"infinity"': oändlig linje
             '"random"': slumpad
       Dancelab_mixColors:
         text: blanda {COLOR1} och {COLOR2}
@@ -529,7 +557,7 @@ sv:
             '"rainbow"': Regnbåge
             '"snowflakes"': Snö
             '"text"': Låttitel
-            '"galaxy"': Mellanslag
+            '"galaxy"': Rymd
             '"sparkles"': Gnistror
             '"spiral"': Spiral
             '"disco"': Fyrkanter
@@ -546,14 +574,14 @@ sv:
             '"warm"': Röda
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          "ställ in bakgrundseffekt
-          {PALETTE} {EFFECT}"
+          ställ in bakgrundseffekt
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Ingen
             '"rand"': "(Slumpad)"
             '"circles"': Tunnel
-            '"quads"': Änglar
+            '"quads"': Vinklar
             '"color_cycle"': Färger
             '"diamonds"': Diamanter
             '"disco_ball"': Discokula
@@ -570,7 +598,7 @@ sv:
             '"snowflakes"': Snö
             '"text"': Låttitel
             '"squiggles"': Krumelurer
-            '"galaxy"': Mellanslag
+            '"galaxy"': Rymd
             '"sparkles"': Gnistror
             '"spiral"': Spiral
             '"disco"': Fyrkanter
@@ -586,6 +614,51 @@ sv:
             '"tropical"': Tropisk
             '"vintage"': Vintage
             '"warm"': Röda
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          ställ in bakgrundseffekt
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ingen
+            '"rand"': "(Slumpad)"
+            '"quads"': Vinklar
+            '"circles"': Tunnel
+            '"color_cycle"': Färger
+            '"diamonds"': Diamanter
+            '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
+            '"flowers"': Blommor
+            '"growing_stars"': Växande Stjärnor
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"splatter"': Färgstänk
+            '"rainbow"': Regnbåge
+            '"ripples_random"': Slumpmässiga Krusningar
+            '"ripples"': Krusningar
+            '"snowflakes"': Snö
+            '"text"': Låttitel
+            '"galaxy"': Rymd
+            '"sparkles"': Gnistror
+            '"spiral"': Spiral
+            '"disco"': Fyrkanter
+            '"squiggles"': Krumelurer
+            '"starburst"': Stjärnfall
+            '"stars"': Stjärnor
+            '"music_wave"': Vågor
+          PALETTE:
+            '"rave"': Svartvitt
+            '"cool"': Blues
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
+            '"default"': Ljus
+            '"neon"': Neon
+            '"ocean"': Hav
+            '"rainbow"': Regnbåge
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Röda
       Dancelab_setDanceSpeed:
         text: ändra danshastigheten av {SPRITE} till {SPEED}
         options:
@@ -596,7 +669,7 @@ sv:
             '0.5': långsam
             '0.25': väldigt långsam
       Dancelab_setDanceSpeedEach:
-        text: ställ in {GROUP} danshastighet på {SPEED}
+        text: ställ in {GROUP} danshastighet till {SPEED}
         options:
           GROUP:
             sprites: alla
@@ -660,7 +733,7 @@ sv:
             '"exploding_stars"': Stjärnfall
             '"raining_tacos"': Tacos
       Dancelab_setProp:
-        text: 'Ställ in {SPRITE} {PROPERTY} till {VAL} '
+        text: 'ställ in {SPRITE} {PROPERTY} till {VAL} '
         options:
           PROPERTY:
             '"scale"': storlek
@@ -706,7 +779,7 @@ sv:
             '"y"': vertikalt läge
             '"tint"': färgton
       Dancelab_setPropRandomEach:
-        text: randomisera {GROUP} {PROPERTY}
+        text: slumpa {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: alla
@@ -731,7 +804,7 @@ sv:
             '"y"': vertikalt läge
             '"tint"': färgton
       Dancelab_setTint:
-        text: Ställ in {SPRITE}s färgton till {VAL}
+        text: ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setTintEach:
         text: set {THIS} tint to {VAL}
         options:
@@ -767,7 +840,7 @@ sv:
             '"SLOTH"': sengångare
             '"UNICORN"': enhörningar
       Dancelab_setTintInline:
-        text: Ställ in {SPRITE}s färgton till {VAL}
+        text: ställ in {SPRITE}s färgton till {VAL}
       Dancelab_setVisible:
         text: ställ in synligheten på {SPRITE} till {VISIBILITY}
         options:
@@ -891,7 +964,7 @@ sv:
             '"music_wave"': Vågor
             '"ripples"': Krusningar
             '"ripples_random"': Slumpmässiga Krusningar
-            '"quads"': Änglar
+            '"quads"': Vinklar
             '"flowers"': Blommor
             '"popsicles"': Isglassar
             '"squiggles"': Krumelurer
@@ -982,9 +1055,15 @@ sv:
             '1': mellan
             '2': diskant
       Dancelab_whenSetup:
-        text: ställ in
+        text: uppställning
       Dancelab_whenSetup2:
-        text: ställ in
+        text: uppställning
+      DansBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
       DansBlocks_setForegroundEffect2:
         options:
           EFFECT:
@@ -993,6 +1072,33 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
+      DansBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      DansBlocks_testRectangle:
+        text: 'gör rektangel x: {X} y: {Y} b: {W} h: {H} färg: {COLOR}'
+      FunctionBlocks_addEightBlock:
+        text: läggTillÅtta
+      FunctionBlocks_addFiveBlock:
+        text: läggTillFem
+      FunctionBlocks_addFourBlock:
+        text: läggTillFyra
+      FunctionBlocks_addNineBlock:
+        text: läggTillNio
+      FunctionBlocks_addOneBlock:
+        text: läggTillEtt
+      FunctionBlocks_addSevenBlock:
+        text: läggTillSju
+      FunctionBlocks_addSixBlock:
+        text: läggTillSex
+      FunctionBlocks_addThreeBlock:
+        text: läggTillTre
+      FunctionBlocks_addTwoBlock:
+        text: läggTillTvå
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
@@ -1192,6 +1298,19 @@ sv:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+      gamelab_layoutSprites:
+        text: utforma {GROUP} som en/ett {FORMAT}
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"top"': översta raden
+            '"row"': klass
+            '"bottom"': nedersta raden
+            '"left"': vänstra kolumnen
+            '"column"': kolumn
+            '"right"': högra kolumnen
       gamelab_locationAt:
         text: 'plats x: {X} Y: {Y}'
       gamelab_locationModifier:
@@ -1218,6 +1337,18 @@ sv:
             '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeNewSpriteGroup:
+        options:
+          FORMAT:
+            '"border"': gräns
+            '"circle"': cirkel
+            '"grid"': rutnät
+            '"top"': översta raden
+            '"row"': klass
+            '"bottom"': nedersta raden
+            '"left"': vänstra kolumnen
+            '"column"': kolumn
+            '"right"': högra kolumnen
       gamelab_makeNumSprites:
         text: gör {NUM} ny {ANIMATION_NAME}sprites
       gamelab_makeProjectile:
@@ -1308,8 +1439,18 @@ sv:
             "'sound://category_digital/jump_7.mp3'": hoppa
       gamelab_playSoundOptionsSoccer:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_sports/Crowd_Applause_SFX.mp3'": applåder
+            "'sound://category_sports/Crowd_Chant_SFX.mp3'": sång
+            "'sound://category_sports/Crowd_Cheer_SFX.mp3'": jubel
+            "'sound://category_sports/Double_Whistle_SFX.mp3'": två visselpipor
       gamelab_playSoundOptionsSpace:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       gamelab_playSpeech:
         text: spela tal {SOUND}
       gamelab_playerBehaviors:
@@ -1554,6 +1695,10 @@ sv:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} glid till {LOCATION}"
+      KatiesBlocks_tumbling:
+        text: tumlande
       Mikelab_addBehaviorSimple:
         text: sprite {SPRITE} börjar {BEHAVIOR}
       Mikelab_addTrainingData:
@@ -1715,10 +1860,10 @@ sv:
           DANCE:
             MOVES.ClapHigh: Klappa högt
             MOVES.Clown: Gangnam
-            MOVES.Dab: Badda
+            MOVES.Dab: Dabba
             MOVES.DoubleJam: Dubbelt ner
             MOVES.Drop: Släpp
-            MOVES.Floss: Res dig
+            MOVES.Floss: Flossa
             MOVES.Fresh: Färsk
             MOVES.Roll: Kroppsrullning
             MOVES.Kick: Stjärna
@@ -1867,6 +2012,19 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      ParticlesBlocks_getMicroscope:
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
+      ParticlesBlocks_setMicroscope:
+        text: Ställ in mikroskop på {INPUT1}
+        options:
+          INPUT1:
+            '1': citronsaft
+            '3': bakpulver
+            '5': både
       Poetry_addFrame:
         options:
           BRUSH:
@@ -1935,6 +2093,10 @@ sv:
             '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
       Poetry_playSoundOptionsSpace:
         text: spelljud {SOUND}
+        options:
+          SOUND:
+            "'sound://category_space/Blackhole_SFX.mp3'": svart hål
+            "'sound://category_space/Galactic_center_SFX.mp3'": galaktiskt centrum
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
@@ -2036,8 +2198,6 @@ sv:
         text: sväng vänster
       RyanLab_turnRight:
         text: sväng höger
-      SpriteLab2Beta_spriteSay:
-        text: sprite {SPRITE} säga {TEXT} för {SECONDS} sekunder
       Vector_createSpriteWith:
         text: |-
           skapa sprite
@@ -2074,20 +2234,20 @@ sv:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
           RATE:
             '"immediately"': omedelbart
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': alla
-            '0.75': most
-            '0.5': half of
-            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} säger {SPEECH}"
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(patrolling, []): patrullerar
+      adaptations_startFollowing:
+        text: "{SPRITE} börjar följa {TARGET}"
       binary_drawBin:
         text: rita binär {BIN}
       binary_drawBinScreen:
@@ -2228,6 +2388,21 @@ sv:
           DIR:
             right: höger ↻
             left: vänster ↺
+      ecosystems_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      storylab_printText:
+        text: tryck {TEXT}
       storylab_setForegroundEffect2:
         options:
           EFFECT:
@@ -2236,5 +2411,3 @@ sv:
             '"hearts"': hjärtan
             '"rain"': regn
             '"starburst"': Stjärnfall
-      validation_validatedBackground:
-        text: ställa in bakgrunden till {IMG}

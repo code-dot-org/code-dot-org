@@ -1,9 +1,9 @@
 {
   "absolute": "தனிமதிப்பை",
+  "agentDiamondPathCongrats": "வாழ்த்துக்கள், நீங்கள் வைர பாதையை கண்டுபிடித்து விட்டீர்கள்! நீங்கள் இதுவரை சேகரித்துள்ளது {count, plural, one {1 diamond} other {# diamonds}} !",
   "agentGenericFailureMessage": "தொடர்ந்து கோடிங் செய்யவும். உதவிக்கான ஏஜென்ட்டை பயன்படுத்திக் கொள்ள நினைவில் கொள்ளவும்.",
   "agentTooFewBlocksFailureMessage": "ஏஜென்ட்டை சரியான இடத்திற்கு வரவழைக்க ஒரு நேரத்தில் ஒரே ஒரு பிளாக்கை மட்டும் சேர்க்க முயற்சிக்கவும்.",
   "at": "இல்",
-  "agentDiamondPathCongrats": "வாழ்த்துக்கள், நீங்கள் வைர பாதையை கண்டுபிடித்து விட்டீர்கள்! நீங்கள் இதுவரை சேகரித்துள்ளது {count, plural, one {1 diamond} other {# diamonds}} !",
   "blockActionAdd": "சேர்",
   "blockActionAttack": "தாக்குதல்",
   "blockActionClone": "க்ளோன் பிளாக்குகள்",

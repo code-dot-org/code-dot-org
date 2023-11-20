@@ -7,7 +7,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import ReportTable from './report_table';
 import {PermissionPropType, WorkshopAdmin} from '../permission';
-import {Checkbox, Button} from 'react-bootstrap';
+import {Checkbox, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {QUERY_BY_VALUES, COURSE_VALUES} from './report_constants';
 import Spinner from '../../components/spinner';
 
@@ -21,17 +21,17 @@ export class WorkshopSummaryReport extends React.Component {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,
     queryBy: PropTypes.oneOf(QUERY_BY_VALUES).isRequired,
-    course: PropTypes.oneOf(COURSE_VALUES)
+    course: PropTypes.oneOf(COURSE_VALUES),
   };
 
   static contextTypes = {
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
   };
 
   state = {
     loading: true,
     rows: null,
-    showFacilitatorDetails: false
+    showFacilitatorDetails: false,
   };
 
   componentDidMount() {
@@ -72,11 +72,11 @@ export class WorkshopSummaryReport extends React.Component {
     this.loadRequest = $.ajax({
       method: 'GET',
       url: url,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         loading: false,
-        rows: data
+        rows: data,
       });
     });
   }
@@ -120,83 +120,83 @@ export class WorkshopSummaryReport extends React.Component {
     let columns = [
       {
         property: 'organizer_name',
-        header: {label: 'Organizer Name'}
+        header: {label: 'Organizer Name'},
       },
       {
         property: 'organizer_email',
-        header: {label: 'Organizer Email'}
+        header: {label: 'Organizer Email'},
       },
       {
         property: 'regional_partner_name',
-        header: {label: 'Regional Partner'}
+        header: {label: 'Regional Partner'},
       },
       {
         property: 'workshop_dates',
-        header: {label: 'Dates'}
+        header: {label: 'Dates'},
       },
       {
         property: 'num_hours',
-        header: {label: 'Workshop Total Hours'}
+        header: {label: 'Workshop Total Hours'},
       },
       {
         property: 'funded',
-        header: {label: 'Funded'}
+        header: {label: 'Funded'},
       },
       {
         property: 'attendance_url',
         header: {label: 'Attendance URL'},
-        cell: {format: this.formatUrl}
+        cell: {format: this.formatUrl},
       },
       {
         property: 'num_facilitators',
-        header: {label: 'Num Facilitators'}
+        header: {label: 'Num Facilitators'},
       },
       {
         property: 'num_registered',
-        header: {label: 'Num Registered'}
+        header: {label: 'Num Registered'},
       },
       {
         property: 'num_scholarship_teachers_attending_all_sessions',
-        header: {label: 'Num Scholarship Attending'}
-      }
+        header: {label: 'Num Scholarship Attending'},
+      },
     ];
 
     for (let i = 1; i <= ATTENDANCE_DAYS_COUNT; i++) {
       columns.push({
         property: `attendance_day_${i}`,
-        header: {label: `Attendance Day ${i}`}
+        header: {label: `Attendance Day ${i}`},
       });
     }
 
     columns.push(
       {
         property: 'organizer_id',
-        header: {label: 'Organizer Id'}
+        header: {label: 'Organizer Id'},
       },
       {
         property: 'workshop_name',
-        header: {label: 'Workshop Name'}
+        header: {label: 'Workshop Name'},
       },
       {
         property: 'on_map',
-        header: {label: 'Shown on Map'}
+        header: {label: 'Shown on Map'},
       },
       {
         property: 'workshop_id',
         header: {label: 'Workshop Id'},
-        cell: {format: this.formatWorkshopId}
+        cell: {format: this.formatWorkshopId},
       },
       {
         property: 'course',
-        header: {label: 'Course'}
+        header: {label: 'Course'},
       },
       {
         property: 'subject',
-        header: {label: 'Subject'}
+        header: {label: 'Subject'},
       },
       {
         property: 'facilitators',
-        header: {label: 'Facilitators'}
+        header: {label: 'Facilitators'},
       }
     );
 
@@ -205,11 +205,11 @@ export class WorkshopSummaryReport extends React.Component {
         columns.push(
           {
             property: `facilitator_name_${i}`,
-            header: {label: `Facilitator Name ${i}`}
+            header: {label: `Facilitator Name ${i}`},
           },
           {
             property: `facilitator_email_${i}`,
-            header: {label: `Facilitator Email ${i}`}
+            header: {label: `Facilitator Email ${i}`},
           }
         );
       }
@@ -218,11 +218,11 @@ export class WorkshopSummaryReport extends React.Component {
     columns.push(
       {
         property: 'num_qualified_teachers',
-        header: {label: 'Num Qualified Teachers'}
+        header: {label: 'Num Qualified Teachers'},
       },
       {
         property: 'days',
-        header: {label: 'Days'}
+        header: {label: 'Days'},
       }
     );
 
@@ -230,41 +230,41 @@ export class WorkshopSummaryReport extends React.Component {
       columns.push(
         {
           property: `pay_period`,
-          header: {label: `Pay Period`}
+          header: {label: `Pay Period`},
         },
         {
           property: `payment_type`,
-          header: {label: `Payment Type`}
+          header: {label: `Payment Type`},
         },
         {
           property: `qualified`,
           header: {label: `Qualified`},
-          cell: {format: this.formatYesNo}
+          cell: {format: this.formatYesNo},
         },
         {
           property: `food_payment`,
           header: {label: `Food Payment`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         },
         {
           property: `facilitator_payment`,
           header: {label: `Facilitator Payment`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         },
         {
           property: `staffer_payment`,
           header: {label: `Staffer Payment`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         },
         {
           property: `venue_payment`,
           header: {label: `Venue Payment`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         },
         {
           property: `payment_total`,
           header: {label: `Payment Total`},
-          cell: {format: this.formatCurrency}
+          cell: {format: this.formatCurrency},
         }
       );
     }
@@ -302,9 +302,9 @@ export class WorkshopSummaryReport extends React.Component {
 }
 
 const styles = {
-  link: {cursor: 'pointer'}
+  link: {cursor: 'pointer'},
 };
 
 export default connect(state => ({
-  permission: state.workshopDashboard.permission
+  permission: state.workshopDashboard.permission,
 }))(WorkshopSummaryReport);

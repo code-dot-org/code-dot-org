@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+/* eslint-disable no-restricted-imports */
 import {
   ControlLabel,
   FormControl,
   FormGroup,
   HelpBlock,
   Row,
-  Col
+  Col,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 
 const REQUIRED = <span style={{color: 'red'}}>&nbsp;*</span>;
 
@@ -29,7 +31,7 @@ export default class FieldGroup extends React.Component {
     }
     this.props.onChange &&
       this.props.onChange({
-        [this.props.id]: value
+        [this.props.id]: value,
       });
   }
 
@@ -38,7 +40,7 @@ export default class FieldGroup extends React.Component {
     // The handleChange function will filter its contents to be numbers only.
     const updatedProps = {
       ...props,
-      type: props.type === 'number' ? 'text' : props.type
+      type: props.type === 'number' ? 'text' : props.type,
     };
 
     return (
@@ -88,7 +90,7 @@ export default class FieldGroup extends React.Component {
 
 FieldGroup.defaultProps = {
   labelWidth: {md: 12},
-  controlWidth: {md: 12}
+  controlWidth: {md: 12},
 };
 
 FieldGroup.propTypes = {
@@ -102,5 +104,5 @@ FieldGroup.propTypes = {
   onChange: PropTypes.func,
   labelWidth: PropTypes.object,
   controlWidth: PropTypes.object,
-  inlineControl: PropTypes.bool
+  inlineControl: PropTypes.bool,
 };

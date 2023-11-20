@@ -25,13 +25,13 @@ const DataDocEditAll = props => {
         if (xhr.status === 404) {
           deleteRequestCleanup();
         }
-      }
+      },
     });
   };
 
   const deleteRequestCleanup = () => {
     setDataDocs([
-      ...dataDocs.filter(dataDoc => !pendingDeleteDocKey.includes(dataDoc.key))
+      ...dataDocs.filter(dataDoc => !pendingDeleteDocKey.includes(dataDoc.key)),
     ]);
     setShowDeleteWarningDialog(false);
     setPendingDeleteDocKey(null);
@@ -85,7 +85,7 @@ const DataDocEditAll = props => {
               <div className="guide-box">
                 <Link href={`/data_docs/${dataDoc.key}`}>{dataDoc.name}</Link>
               </div>
-            </React.Fragment>
+            </React.Fragment>,
           ];
         })}
       </div>
@@ -98,9 +98,9 @@ DataDocEditAll.propTypes = {
     PropTypes.shape({
       key: PropTypes.string,
       name: PropTypes.string,
-      content: PropTypes.string
+      content: PropTypes.string,
     })
-  )
+  ),
 };
 
 export default DataDocEditAll;

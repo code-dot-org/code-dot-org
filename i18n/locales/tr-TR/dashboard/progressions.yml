@@ -1,10 +1,10 @@
 tr:
   data:
     progressions:
-      '"If/Else" with the Bee': 'Arı ile "If/Else"'
+      '"If/Else" with the Bee': 'Arı ile "Eğer/Başka"'
       8-Bit Binary Number Widget: 8 Bitlik İkili Sayı Widget'ı
-      AI Lab and Isaac's Data: Yapay Zeka Laboratuvarı ve Isaac'ın Verileri
-      AI Lab and Kim's Data: Yapay Zeka Laboratuvarı ve Kim'in Verileri
+      AI Lab and Isaac's Data: Yapay Zeka Laboratuvarı (AI Lab) ve Isaac'ın Verileri
+      AI Lab and Kim's Data: Yapay Zeka Laboratuvarı (AI Lab)  ve Kim'in Verileri
       AI Machine Learning - Video: AI Makine Öğrenimi - Video
       'AI for Oceans: Fish vs Not Fish': 'Okyanuslar için Yapay Zeka: Balık mı, Değil mi?'
       'AI for Oceans: Types of Fish': 'Okyanuslar için Yapay Zeka: Balık Türleri'
@@ -29,7 +29,7 @@ tr:
       Animate Your Scene: Sahnenizi Canlandırın
       App Lab Intro - Video: Uygulama Laboratuvarı Giriş - Video
       'App Project: Screen Design': 'Uygulama Projesi: Ekran Tasarımı'
-      'App: Choose a Kid''s Movie': 'Uygulama: Çocuk Filmi Seçin'
+      'App: Choose a Kid''s Movie': 'Uygulama: Bir Çocuk Filmi Seçin'
       'App: Friend Finder': 'Uygulama: Arkadaş Bulucu'
       'App: Guess the Number': 'Uygulama: Sayıyı Tahmin Et'
       'App: How Many Countries': 'Uygulama: Kaç Ülke'
@@ -45,29 +45,30 @@ tr:
       'App: Where Should I Live?': 'Uygulama: Nerede Yaşamalıyım?'
       Arrays: Diziler
       Artist Intro with JR Hildebrand: JR Hildebrand ile Sanatçı Tanıtımı
-      Artist Intro with JR Hildebrande: JR Hildebrand ile Sanatçı Tanıtımı
+      Artist Intro with JR Hildebrande: JR Hildebrande ile Sanatçı Tanıtımı
       Artist Project: Sanatçı Projesi
       'Artist: Variables': 'Sanatçı: Değişkenler'
       Assessment: Değerlendirme
       Attribution: İlişkilendirme
       Back and Forth: Geri ve ileri
+      Balance an Ecosystem: Bir Ekosistemi Dengele
       Basic Conditionals: Temel Koşullar
       Bass, Mid, and Treble: Bas, Orta ve Tiz
       Be a Super Digital Citizen: Süper Bir Dijital Vatandaş Olun
       Begin planning your project: Projenizi planlamaya başlayın
-      Begin planning your project_2018: Projenizi planlamaya başlayın_2018
+      Begin planning your project_2018: 2018_Projenizi planlamaya başlayın
       Binary Bracelets - Unplugged Activity: İkili Bilezikler - Bağlantısız Aktivite
       Binary Number Widget: İkili Sayı Widget'ı
       Binary Numbers: İkili Sayılar
-      Board Events: Kurul Etkinlikleri
-      Board Input and Output: Kart Girişi ve Çıkışı
+      Board Events: Devre kartı Etkinlikleri
+      Board Input and Output: Devre Kartı Girişi ve Çıkışı
       Book Recommender App: Kitap Önerme Uygulaması
       Book Recommender Model Card: Kitap Önerme Model Kartı
       Boolean Comparison: Boole Karşılaştırması
       Booleans and Comparison Operators: Boolean ve Karşılaştırma Operatörleri
-      Build a Platform Jumper: Zıplama Platformu Yapın
+      Build a Platform Jumper: Platform Atlama Teli Oluşturun
       Build a Screen: Bir Ekran Oluşturun
-      Building a UI with Design Mode: Tasarım Modu ile UI Oluşturma
+      Building a UI with Design Mode: Tasarım Modu ile UI (Kullanıcı arayüzü) Oluşturma
       Building an App: Bir Uygulama Oluşturma
       'Bunny ': 'Tavşan '
       Button Circuits: Düğme Devreleri
@@ -75,39 +76,42 @@ tr:
       CS Discoveries Post-Course Survey: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
       CS Discoveries Post-course Survey: CS Discoveries Kurs Sonrası Anketi
       CSD U3 Interactive Card Exemplar: CSD U3 Etkileşimli Kart Örneği
-      CSD U3 platform intro: CSD U3 platform girişi
-      'CSD: For Loop': 'CSD: (For) Döngüsü'
+      CSD U3 platform intro: CSD U3 platformu tanıtımı
+      'CSD: For Loop': 'CSD: (İçin) Döngüsü'
       CSS Classes: CSS Sınıfları
       CSS Text Properties: CSS Metin Özellikleri
       CSS and Style Sheets: CSS ve Biçim Sayfaları
-      Cake Defender: Savunmacı
-      Cake Survey: Kek Araştırması
-      Challenge: Meydan Okuma
-      Challenge Levels: Zorluk Düzeyleri
+      Cake Defender: Kek Savunmacısı
+      Cake Survey: Kek Anketi
+      Challenge: Mücadele
+      Challenge Levels: Mücadele Düzeyleri
+      Challenge/Practice: Mücadele/Alıştırma
       'Challenge: Draw an Image': 'Meydan Okuma: Bir Resim Çiz'
-      'Challenge: Lists': 'Meydan okuma: Listeler'
-      'Challenge: RGB Colors': 'Meydan okuma: RGB Renkleri'
+      'Challenge: Lists': 'Mücadele: Listeler'
+      'Challenge: RGB Colors': 'Mücadele: RGB Renkleri'
       'Challenge: Updating Variables': 'Meydan Okuma: Değişkenleri Kaydetmek'
-      Challenges: Meydan okuma
-      Change: Değiştirin
+      Challenges: Mücadeleler
+      Change: Değiştir
+      Check For Understanding: Konuyu Ne Kadar İyi Anladığınızı Test Edin
       Check Your Work: Çalışmanızı Kontrol Edin
+      Check for Understanding: Anlamak için Kontrol Edin
       Check-In Survey: Kontrol Anketi
       Checking for a Winner: Bir Kazananı Kontrol Etmek
       'Choice Levels: Customize Your App': 'Seçim Seviyeleri: Uygulamanızı Kişiselleştirin'
       Choose Your Own Adventure: Kendi Maceranızı Seçin
-      Choosing Good IDs: İyi ID Seçimi
+      Choosing Good IDs: İyi ID (kimlik) Seçimi
       'Circuit Playground: Buzzer': 'Devre Sahası: Buzzer'
       Club Datasets: Kulüp Veri Setleri
       Code Prediction: Kod Tahmini
       Code Your Own Flappy Game: Kendi Flappy Oyununuzu Kodlayın
       Code Your Page: Sayfanızı Kodlayın
-      Collector Game: Koleksiyoner Oyunu
+      Collector Game: Toplayıcı Oyunu
       Collision Detection: Çarpışmanın algılanması
       Collisions: Çarpışmalar
       Collisions in Games: Oyunlarda Çarpışmalar
       Color LEDs: Renkli LED'ler
       Combining Projects: Projeleri Birleştirme
-      Combining Representations: İfadeleri birleştirme
+      Combining Representations: Temsillerin Birleştirilmesi
       Conditionals with Cards - Unplugged Activity: Kartlarla Koşullar - Bağlantısız Aktivite
       'Conditionals: If Statements': 'Koşullu İfadeler: If İfadeleri'
       'Conditionals: If and If/Else Statements': 'Koşullu İfadeler: If and If / Else İfadeleri'
@@ -134,6 +138,7 @@ tr:
       Creative Commons Search: Kamu Telif Hakkı Araması
       Customize: Kişiselleştir
       Customize Your App: Uygulamanızı Kişiselleştirin
+      Customizing Your App: Uygulamanızı Kişiselleştirin
       Dance Crews: Dans Ekipleri
       Data Visualization: Veri görselleştirmeleri 
       De-bugging with the Step Button: Adım Düğmesiyle Hata Ayıklama
@@ -156,27 +161,32 @@ tr:
       Drawing: Çizim
       Drawing Shapes: Şekil Çizmek
       Driver Alert System: Sürücü Uyarı Sistemi
+      Ecosystems Simulation: Ekosistem Simülasyonu
+      Ecosystems Video: Ekosistemler Videosu
       Editing Images: Resimleri Düzenleme
       End of Course Projects: Kurs Projelerinin Sonu
+      End-Of-Unit Survey: Ünite-Sonu Anketi
+      End-of-Unit Survey: Ünite-Sonu Anketi
       Escape Room Example: Kaçış Odası Örneği
       Event Types: Olay Türleri
       Events: Olaylar
       Events and Linking Screens: Etkinlikler ve Bağlantı Ekranları
       Events and Properties: Olaylar ve Özellikler
       Example: Örnek
-      Example Animated Scene: Animasyonlu Sahne Örneği
-      Example App Types: Uygulama Türü Örneği
+      Example Animated Scene: Örnek Hareketli Sahne
+      Example App Types: Örnek Uygulama Tipleri
       'Example App: Zoo Classification': 'Örnek Uygulama: Hayvanat Bahçesi Sınıflandırması'
       Example Apps: Örnek Uygulamalar
       Example Projects: Örnek Projeler
       Example projects: Örnek projeler
-      Exemplar Personal Websites: Kişisel Web Sitesi Örnekleri
+      Exemplar Personal Websites: Örnek Kişisel Web Siteleri
       Expanding Personal Website: Kişisel Web Sitesini Genişletmek
       Expanding Your Website: Web Sitenizi Genişletmek
       Experiment with Web Lab: Web Laboratuvarı ile Deney Yapın
       Exploration: Keşif
       'Exploration: Adding Style': 'Keşfet: Biçem Eklemek'
-      'Exploration: For Loops': 'Keşif: For Döngüleri'
+      'Exploration: Clicker Game': 'Keşif: Clicker Oyunu'
+      'Exploration: For Loops': 'Keşif: For (İçin) Döngüleri'
       'Exploration: Rikki''s Poster': 'Keşif: Rikki''nin Posteri'
       'Exploration: Sample Apps': 'Keşif: Örnek Uygulamalar'
       'Exploration: Sample Programs': 'Keşif: Örnek Programlar'
@@ -184,9 +194,10 @@ tr:
       Explore HTML: HTML'i Keşfet
       Exploring CS in Entertainment: Eğlence Dünyasında Bilgisayar Bilimini Keşif
       Exploring more CSS: Daha fazla CSS keşfetmek
-      Extra: Ek özellikler
+      Extra: Ekstra
       Extra Challenge: Ekstra Zorluk
       'Extra Challenge: Sound Board': 'Ekstra Zorluk: Ses Kartı'
+      Field Collector App: Field Collector Uygulaması
       Final Room Escape App: Nihai Odadan Kaçış Uygulaması
       Find the Wizard: Sihirbazı Bul
       Finish a Screen: Bir Ekranı Bitir
@@ -197,11 +208,12 @@ tr:
       Follow the Algorithm - Unplugged Activity: Algoritmayı İzle - Bağlantısız Aktivite
       Follow the Mouse: Fareyi Takip Edin
       Fonts and Style: Yazı Tipleri ve Stil
+      Food Chain Setup: Besin Zinciri Kurulumu
       FoodFight: Yemek Savaşı
       For Loop Fun - Unplugged Activity: For Döngüsü Eğlencesi - Bağlantısız Aktivite
-      For Loops: For Döngüleri
-      For Loops and Color LEDs: Döngüler ve Renkli LED'ler için
-      For Loops and Repeat Blocks: Döngüler ve Tekrar Blokları için
+      For Loops: For (İçin) Döngüleri
+      For Loops and Color LEDs: For Döngüleri ve Renkli LED'ler 
+      For Loops and Repeat Blocks: For Döngüleri ve Tekrar Blokları
       Formatting HTML: HTML'de Biçimlendirme
       Free Play: Ücretsiz Oyna
       'Free Play: Make a Scene': 'Serbest Oyun: Bir Sahne Yap'
@@ -221,31 +233,37 @@ tr:
       Headings in HTML: HTML Başlıkları
       Hello World: Merhaba Dünya
       How to Create a Simple Function: Basit Bir Fonksiyon Nasıl Oluşturulur
-      How to Make a Sprite: Nesne Oluşturma
+      How to Make a Sprite: Hareketli Nesne Oluşturma
+      Human Device Interaction: İnsan Cihaz Etkileşimi
       Hyperlinks: Köprü
       Ice Age Loops: Buz Devri Döngüleri
       If Statements: Eğer (If) Durumları
+      If... then... Conditional Statements: If... then... Koşullu İfadeleri
       Images and Sounds: Görüntüler ve Sesler
       Images in HTML: HTML'de Görseller
       Import Your Model: Modelinizi İçe Aktarın
       Import a Model: Bir Model İçe Aktarın
       Importing Your Model: Modelinizi İçe Aktarma
       Improved Shoe Recommender: İyileştirilmiş Ayakkabı Önerici
-      Incorporate Feedback: Kuruluş Geri Bildirimi
+      Incorporate Feedback: Geri Bildirimi Dahil Edin
       Innovation Research: Yenilik Araştırması
       Input Examples: Girdi örnekleri
-      Input with If-Else: Girdi ile birlite If-Else
+      Input with If-Else: If-Else ile girdi
       Inspiration!: İlham!
       InspirationalArtwork: İlham Verici Eser
+      Interactive Art: İnteraktif Sanat
       Interactive Card: İnteraktif Kart
+      Intro Video: Giriş Videosu
       Intro to Flyer Game: Flyer Oyununa Giriş
       Intro to For Loops: Döngüler İçin Giriş
       Intro to Side Scrollers: Yan Kaydırıcılara Giriş
-      Intro to Sprites: Spritese Giriş
+      Intro to Sprites: Hareketli Nesnelere Giriş
       Intro to Variables: Değişkenlere Giriş
       Introducing Sprite Lab: Hareketli Nesne Laboratuvarı Tanıtımı
+      Introduction: Giriş
       Introduction to Arrays: Dizilere Giriş
       Introduction to Game Lab: Oyun Laboratuvarı'na Giriş
+      Investigate: Araştır
       Isaac's Survey Data: Isaac'in Anket Verileri
       Iteration and Parameters: Tekrarlama ve Parametreler
       Keep On Dancing!: Dans Etmeye Devam!
@@ -254,8 +272,9 @@ tr:
       Kim's Survey: Kim'in Anketi
       Kim's Survey Data: Kim'in Anket Verileri
       LED Apps: LED Uygulamaları
-      Layout with CSS: CSS ile düzeni
+      Layout with CSS: CSS ile düzen
       Learning from Simulations: Simülasyonlardan Öğrenmek
+      Lesson Extra: Ders ekstraları
       Lesson Extras: Ders ekstraları
       Lesson Overview: Derse Genel Bakış
       Level Overview: Seviyeye Genel Bakış
@@ -265,8 +284,8 @@ tr:
       Linking Screens: Bağlama Ekranları
       Lists: Listeler
       Lists in HTML: HTML'de Listeler
-      Looking for Patterns: Desen Aranıyor
-      Looping: Döngüler
+      Looking for Patterns: Desen Arama
+      Looping: Döngüleme
       Loops with the Artist: Sanatçı ile Döngüler
       Make Your Sprites: Hareketli Nesnelerinizi Yapın
       Make a Prediction: Bir Tahminde Bulun
@@ -278,18 +297,21 @@ tr:
       Making Sounds: Sesler Yapmak
       Making an Interactive Card: Etkileşimli bir Kart Yapma
       'Maze Intro: Programming with Blocks': 'Labirent Giriş: Bloklarla Programlama'
-      Measures: Ölçü
+      Measures: Ölçüler
       Medical Dataset Model Cards: Tıbbi Veri Seti Model Kartları
       Medical Priority App: Tıbbi Öncelik Uygulaması
       'Minecraft: Hero''s Journey': 'Minecraft: Kahramanın Yolculuğu'
       'Mini-Project: About Me': 'Ben ve Hareketli Nesne Laboratuvarı Hakkında'
       'Mini-Project: Alien Dance Moves': 'Mini Proje: Uzaylı Dansı Hareketleri'
       'Mini-Project: Alien Dance Party': 'Mini Proje: Uzaylı Dans Partisi'
+      'Mini-Project: Clicker Game': 'Mini-Proje: Clicker Oyunu'
+      'Mini-Project: Collector Game': 'Mini-Proje: Koleksiyoncu Oyunu'
       'Mini-Project: Create a Virtual Pet': 'Mini Proje: Sanal Hayvan Oluştur'
       'Mini-Project: Outbreak Simulator': 'Mini Proje: Salgın Simülatörü'
       'Mini-Project: Royal Battle': 'Mini Proje: Kraliyet Savaşı'
       "Mini-Project: Snowflake #1": "Mini Proje: Kar Tanesi # 1"
       "Mini-Project: Snowflake #2": "Mini Proje: Kar Tanesi #2"
+      'Mini-Project: Sticker Art': 'Mini proje: Etiket Sanatı'
       'Mini-Project: Swimming Fish': 'Mini Proje: Yüzen Balık'
       'Mini-Project: Swimming Fish (continued)': 'Mini Proje: Yüzen Balık(devam)'
       'Mini-Project: User Input Programs': 'Mini Proje: Kullanıcı Giriş Programları'
@@ -297,7 +319,7 @@ tr:
       'Mini-project: Chase Game': 'Mini proje: Chase Oyunu'
       'Mini-project: Flappy Game': 'Mini proje: Flappy Oyunu'
       'Mini-project: Interactive Poster': 'Mini proje: Etkileşimli Poster'
-      'Mini-project: Jorge the Dog': 'Mini proje: Jorge the Dog'
+      'Mini-project: Jorge the Dog': 'Mini proje: Köpek Jorge '
       'Mini-project: Sticker Art': 'Mini proje: Etiket Sanatı'
       'Mini-project: Sticker Design': 'Mini proje: Etiket Tasarımı'
       Modify simulation variables: Simülasyon değişkenlerini değiştirin
@@ -311,16 +333,16 @@ tr:
       Multiframe Animations: Çok Çerçeveli Animasyonlar
       Musical Arrays: Müzikal Diziler
       My Loopy Robotic Friends - Unplugged Activity: Döngüsel Robotik Arkadaşlarım - Bağlantısız Aktivite
-      My Online Neighborhood: Online Mahallem
+      My Online Neighborhood: Çevrimiçi Mahallem
       My Robotic Friends - Unplugged Activity: Robotik Arkadaşlarım - Bağlantısız Aktivite
       Naming Variables: Değişkenleri Adlandırma
       Nested Loops with the Bee: Arı ile İç içe Döngüler
-      New Challenge Introduction: Yeni Zorluğa Giriş
+      New Challenge Introduction: Yeni Mücadeleye Giriş
       New Shapes: Yeni Şekiller
       Orientation: Oryantasyon
       Overview: Genel Bakış
       'Overview: Design Mode': 'Genel Bakış: Tasarım Modu'
-      'Overview: If Statements': 'Genel Bakış: If İfadeleri'
+      'Overview: If Statements': 'Genel Bakış: If (Eğer) İfadeleri'
       'Overview: Images': 'Genel Bakış: Görüntüler'
       'Overview: onEvent': 'Genel Bakış: onEvent'
       'Overview: setPosition': 'Genel Bakış: setPosition'
@@ -336,14 +358,14 @@ tr:
       Platform Jumper - Items: Platform Jumper - Öğeler
       Platform Jumper - Platforms: Platform Jumper - Platformlar
       Platform Jumper - Player: Platform Jumper - Oyuncu
-      Platform Jumper Review: Zıplama Platformu İncelemesi
+      Platform Jumper Review: Platform Jumper İncelemesi
       Player Controls: Oyuncu Kontrolleri
-      Playing Notes: Notları çalma
-      Playing with Notes: Notlarla Oynamak
+      Playing Notes: Notaları çalma
+      Playing with Notes: Notalarla Oynamak
       Plotting Shapes in Game Lab: Oyun Laboratuvarı'nda Şekil Çizimi
       Polling Events: Yoklama olayları
       Post-Course Survey Instructions: Kurs Sonrası Anket Talimatları
-      Practice: Egzersizler
+      Practice: Alıştırma
       Predict: Tahmin Et
       Prediction: tahmin
       Prepare for your presentation: Sunumuz için hazırlanın
@@ -354,11 +376,11 @@ tr:
       Programs that Repeat: Tekrarlayan Programlar
       Project: Proje
       Project - Background and Variables: Proje - Arka Plan ve Değişkenler
-      Project - Sprites and Interactions: Proje - Sprite ve Etkileşimler
+      Project - Sprites and Interactions: Proje - Hareketli Nesne ve Etkileşimler
       Project Guide: Proje Kılavuzu
       Project Work: Proje çalışması
       Properties: Özellikler
-      Publishing Your Website: Web Sitenizi Yayınlıyoruz
+      Publishing Your Website: Web Sitenizi Yayınlama
       Quarter Notes: Çeyrek Notalar
       Quick Check: Hızlı Kontrol
       RGB Exploration: RGB Keşfi
@@ -372,11 +394,11 @@ tr:
       Recognizing Shapes: Şekilleri Tanıma
       Reflection: Yansıma
       Relay Programming - Unplugged Activity: Röle Programlama - Bağlantısız Aktivite
-      Repeat Blocks: Tekrarlanan Bloklar
-      Repeat Blocks with BB-8: BB-8 ile Blokları Tekrarla
-      Repeat Blocks with the Artist: Sanatçı ile Blokları Tekrarla
-      Repeat Unit Statements: Birim İfadelerini Tekrarla
-      Repeat Until Statements: Birim İfadelerini Tekrarla
+      Repeat Blocks: Tekrarlama blokları
+      Repeat Blocks with BB-8: BB-8 ile Tekrarlama blokları
+      Repeat Blocks with the Artist: Sanatçı ile Tekrarlama blokları
+      Repeat Unit Statements: '''e kadar tekrar İfadeleri'
+      Repeat Until Statements: '''e kadar tekrar İfadeleri'
       Representing Images: Görüntüleri ifade etme
       Review: İnceleme
       Review Your Animated Scene: Animasyonlu Sahnenizi Gözden Geçirin
@@ -393,24 +415,27 @@ tr:
       Safari App: Safari Uygulaması
       Safari Model: Safari Modeli
       Same Game: Aynı Oyun
-      Sample Apps for Good: Yararlı Uygulama Örnekleri
+      Sample Apps for Good: İyilik için Uygulama Örnekleri
       Sample Game: Örnek Oyun
       Sample Games: Örnek Oyunlar
       Sample Personal Web Pages: Örnek Kişisel Web Sayfaları
       Sample Personal Websites: Örnek Kişisel Web Siteleri
-      Sample Programs: Örnek Oyun
+      Sample Programs: Örnek Programlar
       Sample Web Page: Örnek Web Sayfası
       Sample Website: Örnek Web Sitesi
       Scoring & Scoreboard: Puanlama ve Puan Tablosu
-      Screen Design: Site Tasarımı
+      Screen Design: Ekran Tasarımı
       Sensor Events: Sensör olayları
-      Sensors to Colors: Sensörler Renklere
-      Set Up Sprites: Hareketli Nesne Hazırlama
+      Sensors to Colors: Renklere Sensörler
+      Set Up Sprites: Hareketli Nesneleri Ayarlama
       Setting Properties: Özellik Ayarlama
+      Setup: Kurulum
       Shapes and Parameters: Şekiller ve Parametreler
       Shapes and the Draw Loop: Şekiller ve Çizim Döngüsü
+      Share Out: Paylaş
       Share Your App: Uygulamanızı Paylaşın
       Share Your Pages: Sayfalarınızı Paylaşın
+      Share Your Simulation: Simülasyonunu Paylaş
       Share Your Stylesheets: Stil Sayfalarınızı Paylaşın
       Shoe Recommendation Survey: Ayakkabı Öneri Anketi
       Shoe Recommender: Ayakkabı Önerici
@@ -418,9 +443,11 @@ tr:
       Simple Circuits: Basit Devreler
       Skill Building: Beceri Oluşturma
       Skill-Building: Beceri Oluşturma
-      Sliders: Kaydırıcı
+      Sliders: Kaydırıcılar
       Smart Bike - Blinkers: Akıllı Bisiklet - Flaşörler
       Social Sleuth: Sosyal Dedektif
+      Solution 2 - Fishing Season: Çözüm 2 - Balıkçılık Sezonu
+      Solution 3 - Fishing Limits: Çözüm 3 - Balıkçılık Sınırları
       Songwriting - Functions Unplugged Activity: Şarkı Yazma - Bağlantısız Fonksiyonlar Aktivitesi
       Speed it Up, Slow it Down: Hızlandır, Yavaşlat
       Sprite Lab Example Project: Hareketli Nesne Laboratuvarı Örnek Proje
@@ -428,7 +455,7 @@ tr:
       Sprite Movement: Hareketli Nesnelerin Hareketi
       Sprite Properties: Nesne özellikleri
       Sprite Scenes: Hareketli Sahneleri
-      Sprites and the Draw Loop: Sprite ve Çizim Döngüsü
+      Sprites and the Draw Loop: Hareketli Nesne ve Çizim Döngüsü
       Star Chaser: Yıldız kovalayan
       Styling Text: Metin stilini ayarlama
       Styling with Classes: Sınıflarla Stil Oluşturma
@@ -445,6 +472,7 @@ tr:
       The Buzzer: ' Buzzer'
       The Collector: Toplayıcı
       The Draw Loop: Döngü çiz
+      The Food Chain: Besin Zinciri
       The Harvester: Hasatçı
       The Internet - Unplugged Activity: İnternet - Bağlantısız Aktivite
       The Power of Words - Unplugged Activity: Sözcüklerin Gücü - Bağlantısız Aktivite
@@ -453,12 +481,14 @@ tr:
       Train AI to Clean the Ocean: Yapay Zekayı Okyanusu Temizlemesi için Eğitin
       Train a Model in AI Lab: Yapay Zeka Laboratuvarında bir Model Eğitin
       Train an AI to Clean the Ocean: Bir Yapay Zekayı Okyanusu Temizlemesi için Eğitin
-      UI Element Properties: UI Öğesi Özellikleri
+      UI Element Properties: UI (Kullanıcı Arayüzü) Öğesi Özellikleri
       Ultimate Shoe Recommender: Son Ayakkabı Önerici
       Unit 5 Lesson 1 Overview: Ünite 5 Ders 1 Genel Bakış
+      Unplugged Activity: Bilgisayarsız Etkinlik
+      Updating Your Prototype: Prototipinizi Güncelleme
       Upload Your Images: Resimlerinizi Yükleyin
       User Interface: Kullanıcı Arayüzü
-      Using Getters and Setters: Getiricileri ve Ayarlayıcıları Kullanma
+      Using Getters and Setters: Alıcıları ve Ayarlayıcıları Kullanma
       Using HTML Tags: HTML Etiketlerini Kullanma
       Using Random Numbers: Rastgele Sayılar Kullanma
       Using Training Data: Eğitim Verilerinin Kullanılması
@@ -468,14 +498,20 @@ tr:
       Using the Switch: Anahtarı Kullanma
       Variables: Değişkenler
       Velocity: Hız
-      Velocity and the Counter Pattern: Hız ve Sayaç Modeli
+      Velocity and the Counter Pattern: Hız ve Sayaç Deseni
       Video: Video
-      Video - Encryption and Public Keys: Video - Şifreleme ve Ortak Anahtarlar
+      Video - Encryption and Public Keys: Video - Şifreleme ve Genel Anahtarlar
+      Video - Functions: Video - Fonksiyonlar
+      Video - If Statements: Video - Eğer İfadeleri
+      Video - Introduction to Arrays: Video - Dizilere Giriş
       'Video - Maze Intro: Programming with Blocks': 'Video - Labirente Giriş: Bloklarla Programlama'
+      Video - Parameters: Video - Parametreler
+      Video - The Counter Pattern: Video - Sayaç Deseni
+      Video - Variables: Video - Değişkenler
       'Video:  Debugging with the Step Button': 'Video: Adım Düğmesiyle Hata Ayıklama'
-      'Video:  Minecraft - The Agent': 'Video: Minecraft - Agent'
-      'Video:  Text  and Prompts': 'Video: Metin ve Sorular'
-      'Video: "If/Else"': 'Video: "If/Else"'
+      'Video:  Minecraft - The Agent': 'Video: Minecraft - Ajan'
+      'Video:  Text  and Prompts': 'Video: Metin ve Bilgi İstemleri'
+      'Video: "If/Else"': 'Video: "If/Else" (Eğer/Başka)'
       'Video: AI: What is Machine Learning?': 'Video: Yapay Zeka: Makine Öğrenimi Nedir?'
       'Video: Amazon and Data': 'Video: Amazon ve Veriler'
       'Video: Artist Intro with JR Hildebrand': 'Video: JR Hildebrand ile Sanatçı Tanıtımı'
@@ -497,10 +533,14 @@ tr:
       'Video: Drawing in Game Lab - Part 1': 'Video: Oyun Laboratuvarı''nda Çizim - Bölüm 1'
       'Video: Drawing in Game Lab - Part 2': 'Video: Oyun Laboratuvarı''nda Çizim - Bölüm 2'
       'Video: Events': 'Video: Olaylar'
+      'Video: Events in App Lab': 'Video: App Lab''daki Etkinlikler'
       'Video: Follow The Digital Trail': 'Video: Dijital İzi Takip Edin'
       'Video: Getting Loopy': 'Video: Loopy Başlarken'
       'Video: Happy Maps - Unplugged Activity': 'Video: Mutlu Haritalar - Bağlantısız Aktivite'
       'Video: Harvesting with Conditionals': 'Video: Koşullarla Hasat Etme'
+      'Video: Hello World: Do What You Want': 'Video: Hello World: İstediğini Yap'
+      'Video: Hello World: Programming with Events': 'Video: Hello World: Olaylarla Programlama'
+      'Video: Hello World: Welcome to Sprite Lab': 'Video: Hello World: Sprite Lab''e Hoşgeldiniz'
       'Video: How Search Works': 'Video: Arama Nasıl Çalışır?'
       'Video: How to Create a Simple Function': 'Video: Basit Bir Fonksiyon Nasıl Oluşturulur?'
       'Video: How to Make a Sprite': 'Video: Hareketli Nesne Oluşturma'
@@ -519,6 +559,7 @@ tr:
       'Video: Introduction to Variables': 'Video: Değişkenlere Giriş'
       'Video: Loops in Artist': 'Video: Sanatçıda Döngüler'
       'Video: Loops with the Artist': 'Video: Sanatçı ile Döngüler'
+      'Video: Lots of Sprites': 'Video: Çok sayıda Hareketli Nesne'
       'Video: Managing Disagreement': 'Video: Anlaşmazlığı Yönetme'
       'Video: Maze Intro - Programming with Blocks': 'Video: Labirente Giriş - Bloklarla Programlama'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Labirente Giriş - Bloklarla Programlama '
@@ -527,22 +568,25 @@ tr:
       'Video: Minecraft - Congratulations': 'Video: Minecraft - Tebrikler'
       'Video: Minecraft - Functions': 'Video: Minecraft - Fonksiyonlar'
       'Video: Minecraft - Repeat Loops': 'Video: Minecraft - Tekrarlama Döngüleri'
-      'Video: Minecraft - The Agent': 'Video: Minecraft - Agent'
+      'Video: Minecraft - The Agent': 'Video: Minecraft - Ajan'
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Su Yolculuğu Koşulları'
       'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Su Yolculuğu Tebrikler'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Su Yolculuğuna Giriş'
-      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Şuraya Kadar Su Yolculuğunu Tekrarla'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Su Yolculuğu ''e kadar Tekrarla'
       'Video: Nested Loops': 'Video: İç İçe Döngüler'
       'Video: Nested Loops with the Bee': 'Video: Arı ile İç İçe Döngüler'
       'Video: Netflix and Data': 'Video: Netflix ve Veriler'
+      'Video: Outbreak Simulator: Events': 'Video: Salgın Simülatörü: Etkinlikler'
+      'Video: Outbreak Simulator: Free Play': 'Video: Salgın Simülatörü: Serbest Oyun'
       'Video: Outbreak Simulator: Introduction': 'Video: Salgın Simülatörü: Giriş'
+      'Video: Outbreak Simulator: Thinking Like a Scientist': 'Video: Salgın Simülatörü: Bilim İnsanı gibi Düşünmek'
       'Video: Pair Programming': 'Video: Eşli Programlama'
       'Video: Pair Programming ': 'Video: Eşli Programlama '
       'Video: Problem Solving Process': 'Video: Problem Çözme Süreci'
       'Video: Programming with Blocks': 'Video: Bloklarla Programlama'
       'Video: Programming with Rey and BB-8': 'Video: Rey ve BB-8 ile programlama'
       'Video: Properties': 'Video: Özellikler'
-      'Video: Publishing Your Website': 'Video: Web Sitenizi Yayınlıyoruz'
+      'Video: Publishing Your Website': 'Video: Web Sitenizi Yayınlama'
       'Video: Repeat Blocks': 'Video: Tekrarlama Blokları'
       'Video: Repeat Blocks with BB-8': 'Video: BB-8 ile Tekrarlama Blokları'
       'Video: Repeat Blocks with the Artist': 'Video: Sanatçı ile Tekrarlama Blokları'
@@ -551,10 +595,10 @@ tr:
       'Video: Sprites in Action': 'Video: Eylem halindeki Hareketli Nesneler'
       'Video: Star Wars Project': 'Video: Star Wars Projesi'
       'Video: Teamwork': 'Video: Takım Çalışması'
-      'Video: Text and Prompts': 'Video: Metin ve Sorular'
+      'Video: Text and Prompts': 'Video: Metin ve Bilgi İstemleri'
       'Video: The Artist in Code Studio': 'Video: Code Studio''daki Sanatçı'
       'Video: The Big Event - Unplugged Activity': 'Video: Büyük Olay - Bağlantısız Aktivite'
-      'Video: The Collector': 'Video: Koleksiyoncu'
+      'Video: The Collector': 'Video: Toplayıcı'
       'Video: The Harvester': 'Video: Hasatçı'
       'Video: Training Data & Bias': 'Video: Eğitim Verileri ve Önyargı'
       'Video: Training Data and Bias': 'Video: Eğitim Verileri ve Önyargı'
@@ -565,13 +609,13 @@ tr:
       'Video: Waze and Data': 'Video: Waze ve Veriler'
       'Video: What Makes a Computer, a Computer?': 'Video: Bir bilgisayarı, bilgisayar yapan nedir?'
       'Video: What is Machine Learning?': 'Video: Makine Öğrenimi Nedir?'
-      'Video: While Loops with the Farmer': 'Video: Çiftçi ile While Döngüleri'
+      'Video: While Loops with the Farmer': 'Video: Çiftçi ile While (Süresince) Döngüleri'
       'Video: Wrap-up': 'Video: Toparlama'
       Warm Up: Isınmak
       Website Project: Web Sitesi Projesi
       Welcome to Monster Town: Canavar Şehri'ne Hoş Geldiniz
       Where'd They Go?: Nereye Gittiler?
-      While Loops with the Farmer: Çiftçi Döngüleri
+      While Loops with the Farmer: Çiftçi ile While (Süresince) Döngüleri
       'Widget: Text Compression': 'Widget: Metin Sıkıştırma'
       Wrap-up: Özet
       'You Choose: Improve Your App': 'Sen Seç: Uygulamanı İyileştir'
@@ -579,6 +623,6 @@ tr:
       Your Personal Website: Kişisel Web Siteniz
       Your Team Project: Takım Projeniz
       Zoo Predictions: Hayvanat Bahçesi Tahminleri
-      getText vs getNumber: getText - getNumber
-      isTouching: dokunaklı
-      setProperty: setProperty
+      getText vs getNumber: getText getNumber ' a karşı
+      isTouching: dokunuyor
+      setProperty: özelliğiseç

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Role of the teacher
+# Role of the Teacher
 
 ## What is my role as the teacher in a computer science classroom?
 
@@ -22,7 +22,7 @@ As the lead learner, your role shifts from being the source of knowledge to bein
 
 ## How can I be a lead learner for my students?
 
-<img src="https://images.code.org/1a93c890c891af0075d1a07aa16cbd75-image-1626705192531.jpg" alt="A smiling teacher leans over a table while two students work on laptops." width="400px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/1a93c890c891af0075d1a07aa16cbd75-image-1626705192531.jpg" alt="A smiling teacher leans over a table while two students work on laptops." width="375px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 * ##### Allow students to dive into an activity without front-loading the content first.
 * ##### Encourage students to rely on each other for support.

@@ -9,7 +9,7 @@ const DEFAULT_PROPS = {
   index: 1,
   name: 'Jerry',
   lockStatus: LockStatus.Locked,
-  handleRadioChange: () => {}
+  handleRadioChange: () => {},
 };
 
 const setUp = (overrideProps = {}) => {
@@ -20,12 +20,7 @@ const setUp = (overrideProps = {}) => {
 describe('StudentRow', () => {
   it('displays name', () => {
     const wrapper = setUp();
-    expect(
-      wrapper
-        .find('td')
-        .at(0)
-        .text()
-    ).to.equal('Jerry');
+    expect(wrapper.find('td').at(0).text()).to.equal('Jerry');
   });
 
   it('has expected status when lockStatus is locked', () => {
@@ -68,8 +63,8 @@ describe('StudentRow', () => {
     lockLessonInput.simulate('change', {
       target: {
         value: lockLessonInput.props().value,
-        name: lockLessonInput.props().name
-      }
+        name: lockLessonInput.props().name,
+      },
     });
     expect(handleChangeSpy).to.have.been.calledWith(1, LockStatus.Locked);
   });

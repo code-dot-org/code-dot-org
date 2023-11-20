@@ -1,0 +1,85 @@
+@import "color.scss";
+
+.summaryEntryPoint {
+  padding-bottom: 8px;
+  display: flow-root;
+  // Don't squish things onto multiple lines in small spaces.
+  min-width: max-content;
+  // If the content would otherwise be right at the edge of the available
+  // space, and not long enough to force a horizontal scrollbar (e.g.
+  // JavaLab contained levels), add enough padding to enable the
+  // horizontal scrollbar, so the content doesn't get cut off by the
+  // vertical scrollbar.
+  padding-inline-end: 12px;
+}
+
+.summaryEntryPoint.isStandalone {
+  padding-top: 40px;
+}
+
+.summaryEntryPoint.noQuestionContent {
+  margin-left: 50px;
+}
+
+.button {
+  float: left;
+}
+
+[dir="rtl"] .button {
+  float: right;
+}
+
+.responseIcon {
+  float: left;
+  padding: 1px 8px;
+
+  height: 30px; // button height;
+  line-height: 30px;
+
+  /* stylelint-disable selector-pseudo-class-no-unknown */
+  :global(.fa) {
+    vertical-align: middle;
+    font-size: 30px;
+    color: $brand_primary_default;
+  }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
+}
+
+[dir="rtl"] .responseIcon {
+  float: right;
+}
+
+.responseCounter {
+  float: left;
+  padding: 2px 0;
+
+  height: 34px; // button height;
+  line-height: 34px;
+
+  p {
+    margin: 0;
+  }
+
+  span.counter {
+    display: inherit;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  span.text {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+[dir="rtl"] .responseCounter {
+  float: right;
+
+  // Since the `X/Y` counter doesn't have anything to get translated, explicitly
+  // set the text direction when in RTL mode.
+  span.counter {
+    direction: rtl;
+  }
+}

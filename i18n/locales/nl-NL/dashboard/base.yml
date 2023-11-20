@@ -45,6 +45,7 @@ nl:
         personal_email_markdown: "Persoonlijk e-mailadres [(Klik hier als je geen e-mailadres hebt)](%{url})"
         username: 'gebruikersnaam'
         password: 'Wachtwoord'
+        verified_teacher: 'Geverifieerde Leraar'
         password_confirmation: 'Wachtwoord bevestiging'
         current_password: 'Huidig wachtwoord'
         locale: 'Taal'
@@ -52,6 +53,7 @@ nl:
         gender: 'Geslacht'
         edit_header: 'Accountdetails bewerken'
         finish_sign_up_header: 'Voltooi het maken van je account'
+        finish_sign_up_header_error: 'Corrigeer de volgende fouten:'
         finish_sign_up_subheader: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor <strong>%{email}</strong> te voltooien.'
         finish_sign_up_subheader_markdown: 'Vul de volgende informatie in om het aanmaken van een Code.org-account voor **%{email}** te voltooien.'
         finish_sign_up_subheader_provider: 'Vul de volgende informatie in om het aanmaken van een Code.org-account met <strong>%{provider}</strong> voor <strong>%{email}</strong> te voltooien.'
@@ -59,6 +61,8 @@ nl:
         reset_password_token: "De link die u heeft gevolgd om uw wachtwoord te herstellen"
         error:
           future: kan niet in de toekomst
+        user_type: 'Accounttype'
+        us_state: 'Provincie'
   beta: "beta"
   hello: "Hallo wereld"
   welcome_back: "Welkom terug, %{name}"
@@ -167,7 +171,6 @@ nl:
     data_collection_us: "Ik begrijp dat Code.org een in de VS gevestigde non-profit website is en dat de wetten waaronder het verzamelen van data in de VS valt kunnen afwijken van de wetten in mijn land."
     visit_privacy: 'Ga naar het [Privacybeleid](%{privacy_url}) van Code.org voor meer informatie.'
     student_terms_markdown: "Emailadressen worden niet bewaard in een formaat dat ons toelaat om leerlingen te mailen. Leerlingen zullen nooit mails ontvangen van Code.org behalve bij een wachtwoord reset. Zie onze [privacy policy](http://code.org/privacy) voor meer informatie."
-    additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."
     user_type_button: "Accounttype bijwerken"
     user_type_label: "Accounttype"
     user_type_student: "Leerling"
@@ -187,6 +190,7 @@ nl:
     parent_account_checkbox: "Ik ben een ouder/voogd die zich aanmeld namens mijn kind."
     parent_account_email_progress_permission: "Kunnen wij u af en toe e-mailen over de voortgang van uw kind en de projecten, en u op de hoogte houden van hun cursus en informatica?  [(Zie ons privacybeleid)](%{privacy_policy_url})"
     parent_account_email_label: "E-mail ouder/voog"
+    us_state: 'Provincie'
   school_info:
     title: 'Schoolinformatie (optioneel)'
     school_country: 'Land van de school'
@@ -578,6 +582,7 @@ nl:
     try_hour_of_code: 'Probeer een Hour of Code!'
     store: 'Winkel'
     cookie_notice: 'Cookiebeleid'
+    view_code: 'Bekijk Code'
   reference_area:
     title: 'Hulp nodig?'
     subtitle: 'Bekijk deze video''s en hints'
@@ -599,6 +604,7 @@ nl:
     upgrade:
       unsupported_message: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."
       link: "Leer meer"
+      applab_unsupported_tablet: "App Lab werkt het beste op een PC of laptop met muis en toetsenbord. Op je huidige apparaat zou het minder goed kunnen werken."
   slow_loading: 'Dit duurt langer dan normaal...'
   try_reloading: 'Probeer de pagina opnieuw te laden'
   next_stage: 'Klaar! Verder naar het volgende niveau'
@@ -637,27 +643,18 @@ nl:
       body_short: "Ontwerp een app, codeer met blokken of JavaScript om het te laten werken, en deel je app dan in een paar seconden."
       audience: 'Leeftijd 13+'
       cta: 'Leer hoe'
-    dance:
-      title: 'Dansfeest'
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve en Alex uit Minecraft kijken naar je.'
     dance-2019:
       title: 'Dansfeest'
-    hello-world:
-      title: 'Hallo Wereld'
-    poem-art:
-      title: 'Poëzie'
-    hoc:
-      title: 'Klassiek doolhof'
-      body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
+    dance:
+      title: 'Dansfeest'
     flappy:
       title: 'Flappy Code'
       body: 'Wil je ook binnen 10 minuten je eigen spel schrijven? Probeer onze Flappy Code opdracht!'
-    20-hour:
-      title: 'versnelde cursus'
-      body: 'Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.'
-      body_short: 'Leer eenvoudige informatica in een versnelde versie van de cursussen 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Probeer onze nieuwe Uur Code in beta'
-      try_frozen: 'Maak kunst met Anna en Elsa van Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galerij"
       body: "Bekijk een galerij van apps en kunstwerken gemaakt door onze gebruikers"
@@ -666,18 +663,20 @@ nl:
       body: "Game Lab is een programmeeromgeving waarin je eenvoudige animaties en games kan maken met objecten en personages die met elkaar interageren."
       audience: "Leeftijd 13+"
       cta: "Leer hoe"
+    hello-world:
+      title: 'Hallo Wereld'
+    hero:
+      title: "Minecraft"
+      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
     hoc-encryption:
       title: "Eenvoudige versleuteling"
       body: "Leerlingen willen technieken leren om versleutelde berichten te maken en te breken."
-    weblab:
-      title: "Web Lab (bèta)"
-      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
-      audience: "Leeftijd 13+"
-      cta: "Leer hoe"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klassiek doolhof'
+      body: 'Probeer de beginselen van de informatica. Miljoenen gingen je voor!'
+    hoc2014:
+      try_new_tutorial: 'Probeer onze nieuwe Uur Code in beta'
+      try_frozen: 'Maak kunst met Anna en Elsa van Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Gebruik Play Lab om een verhaal of spel te maken met Disney Infinity figuren in de hoofdrol."
@@ -687,27 +686,35 @@ nl:
     minecraft2016:
       title: "Minecraft"
       body: "Ga dieren en andere Minecraft wezens programmeren in je eigen Minecraft omgeving."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft is terug bij Uur Code met een gloednieuwe activiteit! Programmeer om door Minecraft te reizen."
+    poem-art:
+      title: 'Poëzie'
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Tekstcompressie"
       body: "In deze les zullen leerlingen de Tekstcompressiewidget gebruiken om tekst te comprimeren door patronen te vervangen door symbolen."
-    unplugged:
-      title: "'Unplugged' lessen"
-      audience: "Leeftijden 6+"
-      body: "We hebben een lijst van offline lessen gemaakt om te gebruiken in het klaslokaal. Vanaf nu kun je de beginselen van informatie onderwijzen, met of zonder computers! Probeer deze lessen als een aparte cursus of als aanvulling voor een informatica-vak."
-      body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
-    unplugged_conditionals:
-      title: "Voorwaardelijke instructies"
-      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
+    weblab:
+      title: "Web Lab (bèta)"
+      body: "Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's gebruikmakend van HTML en CSS kan maken. Ontwerp je webpagina's en deel je site binnen enkele seconden."
+      audience: "Leeftijd 13+"
+      cta: "Leer hoe"
     widgets:
       title: "Widgets"
       body: "Studenten kunnen concepten uit onze 'CW Principles cursus' diepgaand verkennen door gebruik te maken van deze digitale hulpmiddelen. Gebruik de widgets op zichzelf, of maak een één-concept-les."
       audience: "Leeftijd 14+"
       cta: "Leer hoe"
+    unplugged_conditionals:
+      title: "Voorwaardelijke instructies"
+      body: "Leer over algoritmes en conditionele statements in deze \"unplugged\" activiteit door gebruik te maken van een kaartspel."
+    unplugged:
+      title: "'Unplugged' lessen"
+      audience: "Leeftijden 6+"
+      body: "We hebben een lijst van offline lessen gemaakt om te gebruiken in het klaslokaal. Vanaf nu kun je de beginselen van informatie onderwijzen, met of zonder computers! Probeer deze lessen als een aparte cursus of als aanvulling voor een informatica-vak."
+      body_short: "Als je geen computers hebt, probeer dan deze 'unplugged' lessen in je klaslokaal."
+    20-hour:
+      title: 'versnelde cursus'
+      body: 'Deze cursus van 20 uur introduceert basisbegrippen voor informatica en programmeren. De cursus is bedoeld voor basisschool-klassen, maar is voor alle leeftijden leuk om te leren.'
+      body_short: 'Leer eenvoudige informatica in een versnelde versie van de cursussen 2-4.'
   landing:
     report_bug: "Meld Bug"
     support: "Help"
@@ -882,6 +889,7 @@ nl:
     download_in_Greek: 'Download in het Grieks:'
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
+  hidden_stage: "Jouw leraar had jou hier niet verwacht. Vraag je leraar welke les je zou moeten doen."
   view_teacher_guide: 'Lerarenhandleiding bekijken'
   pd:
     form_labels:
@@ -911,7 +919,7 @@ nl:
       subjects:
         cs: 'informaticawetenschappen'
         ict: 'ICT'
-        math: 'wiskundige'
+        math: 'Wiskunde'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
         music: 'Muziek'
@@ -934,10 +942,16 @@ nl:
         other: "Anders"
       workshop_course:
         csp: 'CW Principes'
+        other: 'Anders'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nee'
   courses_category: 'Volledige Cursussen'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      hello_world: 'Hallo Wereld'
+      csf: 'Basis'
   cookie_banner:
     accept: 'Ik ga akkoord'
   page_not_found_title: "Pagina niet gevonden"

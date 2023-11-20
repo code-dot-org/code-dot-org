@@ -38,9 +38,9 @@ begin
     end
     count += 1
   end
-rescue Exception => e
+rescue Exception => exception
   puts "PROCESSED: #{count} records."
-  raise e
+  raise exception
 ensure
   ActiveRecord::Base.record_timestamps = true
 end

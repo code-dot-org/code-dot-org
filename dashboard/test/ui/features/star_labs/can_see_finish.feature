@@ -16,10 +16,6 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
     And I check that the blockly free play level for "Bounce" shows the finish button for small screens
 
   @no_mobile
-  Scenario: can see finish button on "CS in Algebra"
-    And I check that the blockly free play level for "CS in Algebra" shows the finish button for small screens
-
-  @no_mobile
   Scenario: can see finish button on "Flappy"
     And I check that the blockly free play level for "Flappy" shows the finish button for small screens
 
@@ -35,20 +31,13 @@ Feature: Make sure we can see the finish button for all LEVEL TYPE levels on sma
   Scenario: can see finish button on "Minecraft Adventurer"
     And I check that the minecraft free play level for "Minecraft Adventurer" shows the finish button for small screens
 
-  # A row of arrow control buttons result in the Finish button not being visible in Dance Lab on our phone simulator,
-  # so only running against iPad.
-  # Tracking fix here: https://codedotorg.atlassian.net/browse/SL-346
-  @no_safari @no_firefox @no_chrome @no_phone
+  @only_mobile
   Scenario: can see finish button on "Dance Party"
     And I check that the blockly free play level for "Dance Party" shows the finish button for mobile screens
 
   @only_mobile
   Scenario: can see finish button on "Artist"
     And I check that the blockly free play level for "Artist" shows the finish button for mobile screens
-
-  @only_mobile
-  Scenario: can see finish button on "CS in Algebra"
-    And I check that the blockly free play level for "CS in Algebra" shows the finish button for mobile screens
 
   @only_mobile
   Scenario: can see finish button on "Flappy"

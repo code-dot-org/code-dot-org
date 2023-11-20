@@ -40,8 +40,11 @@ lt:
         age: 'Amžius'
         gender: 'Lytis'
         edit_header: 'Keisti paskyros duomenis'
+        finish_sign_up_header_error: 'Ištaisyk šias klaidas:'
         error:
           future: negali būti ateitis
+        user_type: 'Paskyros tipas'
+        us_state: 'Valstija'
   beta: "beta"
   hello: "Sveikas, pasauli"
   welcome_back: "Sveiki sugrįžę, %{name}"
@@ -122,7 +125,6 @@ lt:
     agree_us_data_transfer_teacher: '**Sutinku, kad „Code.org“ perduotų duomenis (įskaitant asmeninius duomenis), man (ir kaip studentui) naudojantis šiuo tinklapiu Jungtinėse Valstijose** tokių duomenų prieglobai ir apdorojimui.'
     data_collection_us: "Suprantu, kad „Code.org“ yra JAV esantis ne pelno siekiantis tinklapis ir įstatymai, kuriais tvarkomas duomenų rinkimas JAV, gali skirtis nuo jūsų šalies įstatymų."
     visit_privacy: 'Apsilankykite „Code.org“ [Privatumo politika](%{privacy_url}), kad sužinotumėte išsamiau.'
-    additional_information: "Mums reikia papildomos informacijos, kad galėtum prisiregistruoti."
     user_type_label: "Paskyros tipas"
     user_type_student: "Mokinys"
     user_type_teacher: "Mokytojas"
@@ -133,6 +135,7 @@ lt:
     email_preference_no: "Ne"
     share_teacher_email_reg_partner_preference_yes: "Taip"
     share_teacher_email_reg_partner_preference_no: "Ne"
+    us_state: 'Valstija'
   school_info:
     title: 'Mokyklos informacija (neprivaloma)'
     select_school_type: 'Mokyklos tipas'
@@ -456,19 +459,13 @@ lt:
       body_short: "Sukurk programėlę naudodamas blokelius arba Javascript ir pasidalink ja su draugais."
       audience: 'Amžius 13+'
       cta: 'Sužinok, kaip'
-    hoc:
-      title: 'Klasikinis labirintas'
-      body: 'Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Flappy Kodas'
       body: 'Ar nori parašyti savo žaidimą per mažiau nei 10 minučių? Išmėgink Flappy Code pamokėles!'
-    20-hour:
-      title: 'Pagreitintas kursas'
-      body: 'Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.'
-      body_short: 'Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose į 2-4 kursus).'
-    hoc2014:
-      try_new_tutorial: 'Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje'
-      try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
+    frozen:
+      title: "Ledo šalis"
     gallery:
       title: "Galerija"
       body: "Peržiūrėkite su menininku sukurtų piešinių galeriją"
@@ -476,13 +473,14 @@ lt:
       title: "Žaidimų laboratorija"
       audience: "Amžius 13+"
       cta: "Sužinok, kaip"
-    weblab:
-      audience: "Amžius 13+"
-      cta: "Sužinok, kaip"
-    frozen:
-      title: "Ledo šalis"
-    starwars:
-      title: "Žvaigždžių karai"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Klasikinis labirintas'
+      body: 'Išmėginkite programavimo pagrindus. Juos išbandė jau milijonai žmonių.'
+    hoc2014:
+      try_new_tutorial: 'Išbandykite naująsias „Programavimo valandos“ pamokėles beta versijoje'
+      try_frozen: 'Piešimas su Ana ir Elze iš "Ledo šalies"'
     infinity:
       title: "Žaidimų laboratorija „Infinity“"
       body: "Sukurk istoriją ar žaidimą su Žaidimų laboratorija, kurioje bus Disnėjaus Infinity personažai."
@@ -492,20 +490,25 @@ lt:
     minecraft2016:
       title: "Minecraft"
       body: "Programuok gyvūnus ir kitus Minecraft kūrinius savo asmeninėje Minecraft versijoje."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
     sports:
       title: "Sportas"
-    unplugged:
-      title: "Papildomos pamokėlės"
-      audience: "Amžius 4+"
-    unplugged_conditionals:
-      title: "Sąlyginiai sakiniai"
+    starwars:
+      title: "Žvaigždžių karai"
+    weblab:
+      audience: "Amžius 13+"
+      cta: "Sužinok, kaip"
     widgets:
       audience: "Amžius 14+"
       cta: "Sužinok, kaip"
+    unplugged_conditionals:
+      title: "Sąlyginiai sakiniai"
+    unplugged:
+      title: "Papildomos pamokėlės"
+      audience: "Amžius 4+"
+    20-hour:
+      title: 'Pagreitintas kursas'
+      body: 'Šis 20-ties valandų informatikos kursas supažindina su programavimo pagrindais. Jis yra skirtas naudoti pamokose nuo 5 klasės, bet smagu mokytis esant bet kurioje amžiaus grupėje.'
+      body_short: 'Išmok informatikos pagrindų pagreitintuose kursuose (panašiuose į 2-4 kursus).'
   landing:
     report_bug: "Pranešti apie problemą"
     support: "Pagalba"
@@ -683,9 +686,15 @@ lt:
         other: "Kita"
       robotics:
         other: "Kita"
+      workshop_course:
+        other: 'Kita'
       email_opt_in:
         opt_in_yes: 'Taip'
         opt_in_no: 'Ne'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sportas'
   cookie_banner:
     accept: 'Sutinku'
   page_not_found_title: "Puslapis nerastas"

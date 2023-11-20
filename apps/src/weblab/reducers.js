@@ -60,5 +60,5 @@ export default {
   inspectorOn,
   dialog,
   maxProjectCapacity,
-  projectSize
+  projectSize,
 };

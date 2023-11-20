@@ -11,7 +11,7 @@ import style from './new-list-item.module.scss';
 class NewListItem extends React.Component {
   static propTypes = {
     label: PropTypes.string.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {

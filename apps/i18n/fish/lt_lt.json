@@ -1,9 +1,9 @@
 {
-  "continue": "Tęsti",
   "areYouSure": "Ar tikrai?",
   "cancel": "Atšaukti",
-  "yes": "Taip",
+  "continue": "Tęsti",
+  "finish": "Finišas",
   "no": "Ne",
   "run": "Paleisti",
-  "finish": "Finišas"
+  "yes": "Taip"
 }

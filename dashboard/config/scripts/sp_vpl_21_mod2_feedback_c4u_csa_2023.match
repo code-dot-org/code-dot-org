@@ -23,3 +23,5 @@ markdown <<MARKDOWN
 
 <a href="https://images.code.org/1351aaa3df68b655b7a1279fc311c242-image-1646852788801.jpg" target="_blank"><img src="https://images.code.org/1351aaa3df68b655b7a1279fc311c242-image-1646852788801.jpg" width="100%" style=" margin: 2px;"></a>
 MARKDOWN
+
+allow_multiple_attempts true

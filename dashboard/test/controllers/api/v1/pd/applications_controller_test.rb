@@ -17,9 +17,13 @@ module Api::V1::Pd
         cohort_capacity_csd: 25,
         cohort_capacity_csp: 50
 
+      @hash_csd_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csd, regional_partner_id: @regional_partner.id
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
-      @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
-      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner, status: 'incomplete'
+      @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY,
+          form_data_hash: @hash_csd_with_rp
+      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY,
+          form_data_hash: @hash_csd_with_rp,
+          status: 'incomplete'
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
 
       @test_show_params = {
@@ -127,37 +131,40 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
+      assert_equal(
+        [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
         JSON.parse(@response.body).map {|r| r['id']}
+      )
     end
 
     test 'quick view if not admin returns applications without incomplete apps and with filter' do
       sign_in @program_manager
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
-      assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
     test "quick view returns applications with regional partner filter unset" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers'}
       assert_response :success
-      assert_equal [
-        @csd_teacher_application.id,
-        @csd_teacher_application_with_partner.id,
-        @csd_incomplete_application_with_partner.id
-      ],
+      assert_equal(
+        [
+          @csd_teacher_application.id,
+          @csd_teacher_application_with_partner.id,
+          @csd_incomplete_application_with_partner.id
+        ],
         JSON.parse(@response.body).map {|r| r['id']}
+      )
     end
 
     test "quick view returns applications with regional partner filter set to no partner" do
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: 'none'}
       assert_response :success
-      assert_equal [@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal([@csd_teacher_application.id], JSON.parse(@response.body).map {|r| r['id']})
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can only see their applications in index as workshop organizers' do
       sign_in @workshop_organizer
       get :index
@@ -182,14 +189,12 @@ module Api::V1::Pd
       assert_equal 2, data['csd_teachers']['unreviewed']['total']
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can show their applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: @test_show_params
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners cannot show other applications as workshop organizers' do
       sign_in @workshop_organizer
       get :show, params: {id: @csd_teacher_application}
@@ -214,7 +219,6 @@ module Api::V1::Pd
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can see only their applications in quick_view as workshop organizers' do
       sign_in @workshop_organizer
       get :quick_view, params: @test_quick_view_params
@@ -243,14 +247,14 @@ module Api::V1::Pd
       assert_equal expected_ids, data.map {|a| a['id']}.sort
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners can edit their applications as workshop organizers' do
       sign_in @workshop_organizer
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'regional partners cannot edit other applications as workshop organizers' do
       sign_in @workshop_organizer
       put :update, params: {id: @csd_teacher_application, application: {status: 'accepted', notes: 'Notes'}}
@@ -259,6 +263,8 @@ module Api::V1::Pd
 
     test 'regional partners can edit their applications' do
       sign_in @program_manager
+      Pd::Application::TeacherApplication.any_instance.stubs(:deliver_email)
+
       put :update, params: {id: @csd_teacher_application_with_partner, application: {status: 'accepted', notes: 'Notes'}}
       assert_response :success
     end
@@ -367,6 +373,44 @@ module Api::V1::Pd
       assert_equal expected_log, @csd_teacher_application_with_partner.sanitize_status_timestamp_change_log
     end
 
+    test 'update sends a decision email once if status changed to decision and if associated with an RP' do
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).
+        with(instance_of(TEACHER_APPLICATION_CLASS)).
+        returns(mock {|mail| mail.expects(:deliver_now)})
+
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        status: 'accepted'
+      }}
+
+      # A different update does not trigger another decision email sent
+      post :update, params: {id: @csd_teacher_application_with_partner.id, application: {
+        notes: 'More notes'
+      }}
+    end
+
+    test 'update does not send a decision email if status changed to decision but no RP' do
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+
+      post :update, params: {id: @csd_teacher_application.id, application: {
+        status: 'accepted'
+      }}
+    end
+
+    test 'update does not send a decision email if status changed to non-decision even with an RP' do
+      hash_csp_with_rp = build TEACHER_APPLICATION_HASH_FACTORY, :csp, regional_partner_id: @regional_partner.id
+      csp_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, form_data_hash: hash_csp_with_rp
+
+      sign_in @program_manager
+      Pd::Application::TeacherApplicationMailer.expects(:accepted).never
+
+      csp_teacher_application_with_partner.expects(:send_pd_application_email).never
+      post :update, params: {id: csp_teacher_application_with_partner.id, application: {
+        status: 'pending'
+      }}
+    end
+
     test 'workshop admins can update form_data' do
       sign_in @workshop_admin
       updated_form_data = @csd_teacher_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
@@ -391,7 +435,6 @@ module Api::V1::Pd
       assert_equal scholarship_status, @csp_teacher_application.reload.scholarship_status
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'Regional partners cannot update form_data as workshop organizers' do
       sign_in @workshop_organizer
       updated_form_data = @csd_teacher_application_with_partner.form_data_hash.merge('alternateEmail' => 'my.other@email.net')
@@ -427,11 +470,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        refute response_csv.first.include?(column)
+        refute_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      assert response_csv.first.include?(column)
+      assert_includes(response_csv.first, column)
     end
 
     test 'csv download for csp teacher returns expected columns' do
@@ -443,11 +486,11 @@ module Api::V1::Pd
 
       [:csp_which_grades, :csp_how_offer].each do |key|
         column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csp')[:teacher][key]
-        assert response_csv.first.include?(column)
+        assert_includes(response_csv.first, column)
       end
 
       column = TEACHER_APPLICATION_CLASS.csv_filtered_labels('csd')[:teacher][:csd_which_grades]
-      refute response_csv.first.include?(column)
+      refute_includes(response_csv.first, column)
     end
 
     test 'cohort view returns teacher applications of correct statuses' do
@@ -471,7 +514,6 @@ module Api::V1::Pd
       )
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher' do
       time = Date.new(2020, 3, 15)
 
@@ -483,8 +525,8 @@ module Api::V1::Pd
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
+          course: 'csd',
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id
         )
@@ -495,7 +537,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -521,15 +563,13 @@ module Api::V1::Pd
       end
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'cohort view as a workshop organizer returns expected columns for a teacher without a workshop' do
       time = Date.new(2020, 3, 15)
 
       Timecop.freeze(time) do
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
         )
 
@@ -539,7 +579,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @workshop_organizer
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -576,8 +616,7 @@ module Api::V1::Pd
 
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
+          form_data_hash: @hash_csd_with_rp,
           user: @serializing_teacher,
           pd_workshop_id: workshop.id
         )
@@ -589,7 +628,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -622,9 +661,8 @@ module Api::V1::Pd
       Timecop.freeze(time) do
         application = create(
           TEACHER_APPLICATION_FACTORY,
-          course: 'csp',
-          regional_partner: @regional_partner,
-          user: @serializing_teacher,
+          form_data_hash: @hash_csd_with_rp,
+          user: @serializing_teacher
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
@@ -633,7 +671,7 @@ module Api::V1::Pd
         application.save!
 
         sign_in @program_manager
-        get :cohort_view, params: {role: 'csp_teachers'}
+        get :cohort_view, params: {role: 'csd_teachers'}
         assert_response :success
 
         assert_equal(
@@ -779,7 +817,6 @@ module Api::V1::Pd
       assert_equal expected, result
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'search as workshop organizer finds applications by email for the relevant regional partner' do
       sign_in @workshop_organizer
       get :search, params: {email: @csd_teacher_application_with_partner.user.email}
@@ -793,7 +830,6 @@ module Api::V1::Pd
       assert_equal expected, result
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'search as workshop organizer does not reveal applications outside the regional partners cohort' do
       sign_in @workshop_organizer
       get :search, params: {email: @csd_teacher_application.user.email}

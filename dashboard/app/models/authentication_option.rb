@@ -35,6 +35,7 @@ class AuthenticationOption < ApplicationRecord
   validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
   validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
+  validates :authentication_id, if: :lti?, format: {with: /\A(\S+\|\S+\|\S+)\z/, message: "For LTI authentication_options, format must be 'issuer|audience|subject'"}
 
   after_create :set_primary_contact_info
 
@@ -53,6 +54,7 @@ class AuthenticationOption < ApplicationRecord
 
   CREDENTIAL_TYPES = [
     EMAIL = 'email',
+    LTI_V1 = 'lti_v1',
     OAUTH_CREDENTIAL_TYPES,
   ].flatten.freeze
 
@@ -70,7 +72,8 @@ class AuthenticationOption < ApplicationRecord
   # user, and instead to rely exclusively on authentication_id
   UNTRUSTED_EMAIL_CREDENTIAL_TYPES = [
     CLEVER,
-    POWERSCHOOL
+    POWERSCHOOL,
+    LTI_V1,
   ].freeze
 
   TRUSTED_EMAIL_CREDENTIAL_TYPES = (
@@ -99,6 +102,10 @@ class AuthenticationOption < ApplicationRecord
     OAUTH_CREDENTIAL_TYPES.include? credential_type
   end
 
+  def lti?
+    credential_type == LTI_V1
+  end
+
   def primary?
     user.primary_contact_info == self
   end
@@ -108,7 +115,7 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def fill_authentication_id
-    self.authentication_id = hashed_email if EMAIL == credential_type
+    self.authentication_id = hashed_email if credential_type == EMAIL
   end
 
   def set_primary_contact_info

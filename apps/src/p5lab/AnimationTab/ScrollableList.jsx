@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import style from './scrollable-list.module.scss';
+import styles from './scrollable-list.module.scss';
 
 /**
  * Component displaying a vertical list of tiles that scrolls if it grows
@@ -13,17 +13,18 @@ class ScrollableList extends React.Component {
     className: PropTypes.string,
     style: PropTypes.object,
     children: PropTypes.node,
-    onScroll: PropTypes.func
+    onScroll: PropTypes.func,
   };
 
   render() {
+    const {children, className, onScroll, style} = this.props;
     return (
       <div
-        className={classNames(this.props.className, style.root)}
-        style={this.props.style}
-        onScroll={this.props.onScroll}
+        className={classNames(className, styles.root)}
+        style={style}
+        onScroll={onScroll}
       >
-        <div className={style.margins}>{this.props.children}</div>
+        <div className={styles.margins}>{children}</div>
       </div>
     );
   }

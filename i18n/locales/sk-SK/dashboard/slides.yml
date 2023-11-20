@@ -441,6 +441,15 @@ sk:
         text: "Toto je užitočné v prípade, kedy nevieš koľko nektáru alebo medu dostaneš, ako vidíme tu s týmto otáznikom. "
       3:
         text: "V tomto príklade povieme, že AK má fialový kvietok viac nektáru ako 0, je možné zbierať nektár. To povie našej včielke, aby pokračovala v zbieraní nektáru, kým tam nejaký je. Ta-dá! "
+    C2_binary_bracelets:
+      1:
+        text: "Toto je lekcia binárnych náramkov. Chystáme sa kódovať naše iniciály na náramok, ktorý môžeme nosiť, a ukázať všetkým našim priateľom!"
+      2:
+        text: "Binárne je spôsob reprezentácie informácií pomocou iba dvoch možností. Niekedy si ľudia myslia, že to len 1s a 0s. Ale môžete reprezentovať binárne s kombináciou zapnutie alebo vypnutie, hore a dole, a von, alebo naozaj akýkoľvek súbor protikladov."
+      3:
+        text: "Ahoj, Som Orion a programujem roboty tu na Play-im. Všetky počítačové a robotické mozgy na ich najzákladnejšej úrovni sú malé elektronické brány. Keď je brána otvorená, elektrina môže pretekať a keď je zatvorená, elektrina nemôže."
+      4:
+        text: "Príkladom binárneho súboru na robotovi sú oči robota. Oči robota sú LED diódy a to sú svetlá, ktoré sú buď zapnuté alebo vypnuté. Je to binárny systém, jeden alebo druhý. Svetlá môžeme použiť na reprezentáciu binárnych čísel. Ak máme sadu robotov, môžeme povedať, že prvý robot je miesto 1s a druhý robot je miesto 2s, tretí robot je miesto 4s a tak ďalej. Takto reprezentujete binárne číslo. Roboti to urobia svojimi binárnymi očami a spočítajú to za vás."
     C2_conditionals_with_cards:
       1:
         text: "Táto lekcia má názov \"Podmienky s kartami\" Každý deň robíš rozhodnutia na základe toho, čo vidíš a počuješ. "
@@ -454,20 +463,43 @@ sk:
         text: "Zamysli sa nad svojou obľúbenou videohrou. Nazbieraš za niektoré akcie viac bodov ako za iné? Toto sa deje preto, že počitač používa podmienky. Je to spôsob, akým počítač robí rozhodnutie. Ako keď napríklad trafíš cieľ, získaš desať bodov. Ak nie, stratíš tri body. Keď už vieš ako podmienky fungujú, môžeš vytvárať všetky možné vzrušujúce hry. "
     C2_artist_debugging:
       1:
+        text: "Tu už máme niekoľko blokov v našom pracovnom priestore. Ale niečo nie je v poriadku."
       2:
+        text: "Poďme ladiť tento kód spomalením rýchlosti a sledovaním, ako to prechádza každým blokom krok za krokom."
       3:
         text: "Och, tu je ten problém! Mačacie fúzy sú dlhé 75 pixelov, nie 25."
     C2_bee_debugging:
       1:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
       2:
+        text: "Tu máme niekoľko blokov už na našom pracovisku. Budeme používať tlačidlo krok na prechádzku blokov, krok za krokom, aby zistili, či je to správne riešenie a kde budeme musieť opraviť."
       3:
+        text: "Vyzerá to, že je tu náš problém! Potrebujeme ešte jeden krok vpred blok. Tlačidlo Krok nám pomáha ladiť náš problém identifikáciou, kde je chyba, aby sme ju mohli opraviť."
+    C2_digital_footprint:
+      1:
+        text: "Na hlave držíte klobúk a vaše chytrosti vám povedia, kde ste a premýšľať o zoologickej záhrade a kývnúť ahoj vám a vám! Použite svoju hlavu, keď ste online, aby ste udržali to, čo je vaše vo svojej mysli a aby ste vedeli, ako byť v bezpečí, ako dať svojmu životu nejaký súkromný priestor! Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online!"
+      2:
+        text: "Použite svoje srdce na rast a rast, a dať si zdravú žiaru a urobiť miláčik, povedzte niekomu, že budete moja! Použite svoje srdce, keď ste online, cítite to, čo je správne a vždy láskavé, a prejavte svojim priateľom rešpekt, aby ste boli spravodliví a milí na internete. Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online!"
+      3:
+        text: "Použite ruky na objatie vášho domáceho maznáčika, zabráňte navlhnutiu oblečenia a noste svoje obľúbené rukávy a pomôžte vám lietať a veriť. Použite svoje ruky, keď ste online, aby ste si urobili prestávku a vyvážili čas a nechali svoju techniku za sebou a našli si strom na vyliezanie. Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online!"
+      4:
+        text: "Použite svoje črevo na uloženie jedla a na počúvanie jeho vrčacej nálady, na vytvorenie brušného flopu a na pocit plynu v sódovom popu. Použite svoje črevá, keď ste online, aby ste vedeli sledovať určité znaky a nechať ho viesť cestu a povedať vám, keď to nie je v poriadku. Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online!"
+      5:
+        text: "Takže premýšľajte hlavou a cítite srdcom, vyvážte ruky, počúvajte svoje črevá online. Použite nohy na beh a kopanie, skákať a odraziť sa na pogo palicu a tancovať okolo bloku a preskočiť vo svojich páchnuce ponožky. Použite nohy, keď ste online, postavte sa šikanom, ktorí prekročia čiaru, a nezabudnite stáť vysoký, buďte milí na stvorenia veľké a malé."
+      6:
+        text: "Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online! Takže premýšľajte hlavou a cítite srdcom, vyrovnáte sa s rukami, počúvajte svoje črevá, postavte sa nohami. Z hlavy až po prsty na nohách, pauza, premýšľajte o tom. Od nôh až po nos, pauza a premýšľať online!"
+    C2_digital_footprint_v2:
+      1:
+        text: "Zakaždým, keď idete online, zanecháte stopu, ktorú je možné vyhľadávať, kopírovať, zdieľať, vysielať a je trvalá. Aký druh digitálnej stopy opúšťate? Aký druh digitálnej stopy chcete opustiť?"
     C2_graph_paper:
       1:
         text: "Táto lekcia sa nazýva \"Programovanie na štvorčekový papier\" a je celá o algoritmoch. Dnes sa naučíme písať programy, v ktorých budeme kresliť čierno-biele obrázky len pomocou šípiek."
       2:
+        text: "Algoritmus je zoznam pokynov na dokončenie úlohy. Budeme postupovať podľa tejto sady pokynov na výrobu misy. Algoritmy sú naozaj užitočné, keď potrebujete niekoho iného, aby pochopil, ako niečo urobiť."
       3:
+        text: "Ak píšete algoritmus pre počítač, musíte ho rozobrať na malé malé kroky. Takže dokončiť tento riadok a prejdite na ďalšie, potom ďalšie, a budete hotovo."
       4:
+        text: "Vo svojej práci používam algoritmy. Ak napíšem všetky kroky, môžem znova vytvoriť ten istý kus, alebo môžem naučiť niekoho iného, aby to urobil. Vložte pohár do pece, spojte ho a postupujte podľa zvyšných pokynov a vytvorte misku. Algoritmy vám cestovnú mapu pre niečo urobiť."
     C2_artist_loops:
       1:
         text: "V tejto časti použijeme blok \"opakuj\" a tým pri programovaní ušetríme umelcovi kopu času. Na ploche už máme nejaké bloky, ale to len preto, aby nám pomohli začať."
@@ -477,17 +509,57 @@ sk:
       1:
         text: "Cyklus znamená opakovanie činnosti. Keď kontrolujem úľ, vytiahnem a skontrolujem jeden rám a potom ho vrátim a túto činnosť opakujem viackrát. Toto je vlastne cyklus - vykonávanie rovnakej činnosti opakovane."
       2:
+        text: "Toto je opakovací blok. Čokoľvek vložíte do bloku opakovania, opakuje tieto akcie, koľkokrát to poviete. Napríklad v tejto úrovni, skôr než ťahať vpred a dostať nektár trikrát, budeme len ťahať von raz každý a opakovať akciu trikrát. To uľahčilo!"
+    C2_maze_intro:
+      1:
+        text: "Zvyčajne programovanie je všetko v texte, ale budeme používať Blockly ktorý používa vizuálne bloky, ktoré ste drag and drop písať programy. Pod kapotou stále vytvárate kód. Ak chcete začať, budeme stavať kód pre program, ktorý pomôže tento Angry Bird pohybovať bludiskom sa dostať do zlých ošípaných, ktoré ukradli jeho vajcia."
+      2:
+        text: "Blokne je rozdelená na tri hlavné časti. Na ľavej strane je vtáčie bludisko, kde bude spustiť váš program. Pokyny pre každú úroveň sú napísané pod bludiskom. Táto stredná oblasť je sada nástrojov a každý z týchto blokov je príkazom, ktorému vták rozumie. Práve miesto na pravej strane sa nazýva pracovný priestor a to je miesto, kde budeme stavať náš program."
+      3:
+        text: "Ak pretiahnem blok presunu do nášho pracovného priestoru a stlačím tlačidlo „Spustiť“, čo sa stane? Vták sa pohybuje dopredu o jednu škatuľu na mriežke. A čo keď chcem, aby vták niečo urobil po tom, čo sa posunie dopredu o jednu škatuľu? Môžem pridať ďalší blok do nášho programu."
+      4:
+        text: "Vyberiem blok „odbočiť vpravo“ a pretiahnem ho pod mojím blokom pohybu, kým sa nezobrazí žltá šípka. Potom ju pustím a dva bloky sa zacvaknú. Keď znova stlačím tlačidlo „Spustiť“, vták vykoná príkazy, ktoré sú naskladané zhora nadol na našom pracovnom priestore."
+      5:
+        text: "Ak ste niekedy chceli odstrániť blok, stačí ho odstrániť zo zásobníka a pretiahnuť ho do koša. Potom, čo ste hit beh, môžete vždy stlačiť tlačidlo reset dostať vták späť na štart. Teraz poďme tie ošípané!"
+    C2_paper_airplanes:
+      1:
+        text: "Táto lekcia sa nazýva Real Life Algoritmy. Algoritmy popisujú veci, ktoré ľudia robia každý deň. Cookie recepty a pokyny pre stavbu vtáčej búdky sú obaja každodenné algoritmy."
+      2:
+        text: "Dnes budeme robiť, vytvárať a testovať algoritmus pre papierové lietadlo. Ale najprv, musíme rozdeliť tento veľký projekt do ľahko sledovať malé kroky. Pri výrobe papierového lietadla sa musíme rozhodnúť, aké kroky podniknúť a v akom poradí ich podniknúť."
+      3:
+        text: "Svoj algoritmus vytvoríte najskôr rozrezaním obrázkov. Ďalej vyberiete 6 obrázkov, ktoré zobrazujú kroky potrebné na vytvorenie papierového lietadla a usporiadajte tieto obrázky v správnom poradí. Keď budete mať všetko v poriadku, budete obchodovať s algoritmami s iným študentským tímom, aby ste vyskúšali algoritmus, aby ste zistili, či algoritmus funguje. Dobre navrhnutý algoritmus je mimoriadne dôležitý pre výrobu najlepšieho papierového lietadla."
+      4:
+        text: "Keď chceme vyrábať čokoládu, existuje veľa veľkých krokov k tomu. A každý z týchto veľkých krokov má vlastnú sadu menších krokov. A existujú rôzne recepty alebo algoritmy, v závislosti od toho, ako chceme, aby čokoláda ochutnala. Každý krok je dôležitý, dokonca aj tie malé. Takže bez jedného kroku nie je možné dokončiť zvyšok. Vytváranie algoritmov, ktorým ostatní dokážu porozumieť, je skutočne dôležité. Preto musí byť každý krok napísaný, takže bez ohľadu na to, kto to robí, výsledok je rovnaký."
     C2_playlab_createstory:
       1:
         text: "Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá sa dá v skutočnosti aj hrať."
       2:
+        text: "Tam sú niektoré nové bloky vyskúšať. K dispozícii je blok „keď šípka“ a blok „move actor“. Môžete dať tieto bloky dohromady pohybovať hercov okolo pomocou klávesov so šípkami. A tam sú niektoré bloky, ktoré robia veci, keď herci zrazí alebo sú kliknutí. Pozrite sa na ne a bavte sa!"
     C2_relay_programming:
       1:
         text: "Dnes budeme programovať v štafete. Bude to o programovaní pod tlakom a o hľadaní a opravovaní chýb, ktoré sa stávajú, keď pracujete v tíme a naozaj rýchlo. Využijeme programovanie na štvorčekový papier, aby sme nasimulovali skutočné programovanie a štafetové preteky, aby sme cítili aj časový tlak."
       2:
         text: "V štafetovom programovaní sa tímy budú pretekať v písaní programu na štvorčekový papier. Musíš skontrolovať kamarátovu prácu a v prípade, že v nej nádeš chybu, tak túto chybu opraviť, pridať vlastnú šípku a rýchlo bežať so štafetou za ďalším členom tvojho tímu."
       3:
+        text: "Programátori používajú ladenie veľa nájsť a opraviť problémy vo svojich algoritmoch alebo kóde. Existuje mnoho spôsobov, ako ladiť problémy. Jedným z najjednoduchších je pohybovať sa krok za krokom, kým nezistíte, kde sa niečo pokazí, a potom ho opravte."
       4:
+        text: "Tu sa snažím urobiť zadnú handspring, ale stále padám. Prechádzam každou časťou krok za krokom a uvedomujem si, kde bola moja chyba. Môj tréner mi ukázal, že som správne nepoložil ruky na lúč. Tak som vyskúšal ďalšiu zadnú ruku na nosníku s mojou novou polohou ruky a prilepil som ho! Bol som naozaj rád, že som ladil chrbát handspring. Zistili sme to! Ladenie je hľadanie a riešenie problémov. Pekná, dobrá práca!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Jedna vec, v ktorej sú počítače naozaj dobré, je opakovanie príkazov. Ako človek by ste sa naozaj nudili, keby ste museli robiť to isté mnohokrát za sebou. Ale počítač môže robiť to isté milióny alebo dokonca miliardkrát, a nie nudiť a byť schopný to vykonať naozaj dobre."
+      2:
+        text: "Takže napríklad ak som chcel popriať všetkým na Facebooku všetko najlepšie k narodeninám tým, že im pošlem e-mail, mohlo by mi trvať viac ako storočie, kým skutočne napíšem všetky tieto e-maily všetkým. Ale len s niekoľkými riadkami kódu, Môžem mať systém poslať e-mail všetkým na Facebooku, ktorí im želajú všetko najlepšie k narodeninám. Tak to je to, čo slučky sú, a prečo sú cenné, a niečo, čo počítače môžu robiť veľmi dobre."
+      3:
+        text: "V tomto príklade bude vaším cieľom presunúť vtáka, aby ste dostali prasa. Teraz budeme môcť použiť blok „opakovanie“, aby sme to mohli urobiť veľmi ľahko. Môžete to urobiť buď tak, že počítaču päťkrát dáte príkaz „posunúť sa dopredu“, aby ste vták posunuli vždy o jeden krok k ošípanej."
+      4:
+        text: "Alebo môžete jednoducho povedať počítaču, aby sa raz „posunul dopredu“ a potom mu povedzte, aby „opakoval“ to 5 krát a urobí to isté. Aby ste to urobili, pretiahnite príkaz „vpred“ a potom ho vložíte do bloku „opakovať“. A môžete kliknúť na neho a povedať, koľkokrát chcete blok opakovať, aby ste mu povedali, koľko krokov chcete, aby sa dopredu."
+      5:
+        text: "Teraz ešte jedna vec je, že do bloku „opakovania“ môžete vložiť toľko príkazov, koľko chcete. Takže v tomto príklade ste hovoril, aby sa pohybovať vpred a odbočiť doľava, čo to bude robiť päťkrát. Dobre dobrá práca a bavte sa!"
+    C3_artist_functions:
+      1:
+        text: "Jednou z veľkých vecí v programovaní počítača je, akonáhle ste naučil počítač, ako urobiť akciu, môžete volať túto funkciu znova. Dáte mu meno a potom ho môžete nazvať. To je naozaj ako rozšírenie jazyka."
+      2:
+        text: "V programe, ktorý sme postavili, sme sa naučili nakresliť štvorec štyrikrát pohybom a otáčaním. Môžeme vziať túto funkciu a dať mu meno, nakresliť štvorec, takže kedykoľvek chceme urobiť, že sme jednoducho povedať nakresliť štvorec a to sa vráti a vyvolať túto funkciu, že kód. Urobí sa to pre nás. Tento koncept sme pridali do nášho programovacieho jazyka."
     C3_artist_intro:
       1:
         text: "Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými."
@@ -515,32 +587,117 @@ sk:
       1:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
       2:
+        text: "Tu máme niekoľko blokov už na našom pracovisku. Budeme používať tlačidlo krok na prechádzku blokov, krok za krokom, aby zistili, či je to správne riešenie a kde budeme musieť opraviť."
       3:
+        text: "Vyzerá to, že je tu náš problém! Potrebujeme ešte jeden krok vpred blok. Tlačidlo Krok nám pomáha ladiť náš problém identifikáciou, kde je chyba, aby sme ju mohli opraviť."
+    C3_bee_functions:
+      1:
+        text: "Jedným z najdôležitejších konceptov v informatike je, ako definovať nové príkazy, ako pridať vlastné slová do počítačového jazyka. Väčšina počítačových jazykov má len asi sto slov alebo príkazov. Umenie a mágia spočíva v definovaní vašich vlastných nových slov z týchto stavebných kameňov."
+      2:
+        text: "Robíme to po celú dobu v športe. Napríklad v basketbale začnete tým, že sa naučíte driblovať, ako urobiť rozloženie, ako odskočiť. Akonáhle ste sa naučili tieto naozaj základné pohyby, naučíte sa nové pohyby a dať dohromady tieto stavebné bloky, ako pick and roll alebo dať a ísť. Potom môžete ísť odtiaľ robiť zložitejšie hry. Keď sa naučíte túto hru a dáte jej meno, všetci v tíme vedia, ako na to."
+      3:
+        text: "Podobne, keď ste naučili počítač, ako urobiť akciu raz pomocou týchto sekvencií príkazov, môžete vytvoriť svoj vlastný názov pre túto akciu, takže je ľahké opakovať neskôr. Keď definujete svoj vlastný príkaz a dať mu meno, to sa nazýva funkcia. Teraz budeme používať funkcie na pomoc včelám."
+      4:
+        text: "V tomto príklade, naša funkcia sa nazýva dostať 2 nektár, tento zelený blok tu. Vieme, čo dostať 2 nektár robí pri pohľade na tento šedý box, ktorý je definícia funkcie. Ak sa tam pozrieme dovnútra, get 2 nektár dostane nektár a potom znova dostane nektár. Vždy sa pozrite na to, čo je vo vnútri šedej skrinky, aby ste vedeli, čo tieto zelené funkčné bloky dokážu."
     C3_bee_nested_loops:
       1:
         text: "Dnes sa naučíme používať vnorené cykly. Na začiatku máme pripravený kód, ktorým sa včela trikrát posunie dopredu a zoberie nektár. Nakoniec sa otočí doprava. Vezmime tento celý blok kódu a vložme ho do vnútra ďalšieho opakovania. Počet opakovaní nastavme na 3. Hotovo!"
+    C3_bounce:
+      1:
+        text: "Budeš vytvárať svoj vlastný bounce hru, ktorú budete môcť zdieľať so svojimi priateľmi! Ako cool!"
+      2:
+        text: "Aby sme mohli začať, musíme prepojiť ovládacie prvky pádla so šípkami na našej klávesnici."
+      3:
+        text: "Môžeme to urobiť prepojením pri ľavej šípke blok s pohybom vľavo bloku a keď šípka vpravo blok na pohyb pravého bloku. Dajte to a budete programovať svoju vlastnú odrazovú hru v žiadnom momente!"
+    C3_computational_thinking:
+      1:
+        text: "Táto lekcia je výpočtové myslenie. Niekedy učenie novej hry môže byť ťažké, však? Spočiatku sa to môže zdať naozaj mätúce a niekedy nie je nikto, kto by vás naučil pravidlá, takže na to musíte prísť sami."
+      2:
+        text: "Dobrou správou je, že sa môžete zlepšiť pri príchode na veci sami, keď poznáte niekoľko trikov myslenia. Tieto triky sú jedinečné spôsoby, ako sa pozerať na a riešiť problémy. V tejto lekcii sa dozviete o štyroch trikoch a precvičte ich so svojimi priateľmi, aby ste zistili pravidlá hry."
+      3:
+        text: "Keď rozoberiete veľký problém na menšie kúsky, používate svoj mozog na rozloženie veľkého problému. Akonáhle sme rozložili veľký problém na niekoľko menších problémov, môžeme prejsť k nášmu ďalšiemu triku, ktorý sa nazýva vzor zápas."
+      4:
+        text: "To je, keď hľadáme podobnosti medzi vecami. Akonáhle nájdem veci, ktoré sú rovnaké, môžem zistiť, aké veci sa líšia. Keď odstránim tieto rozdiely, nazýva sa to abstrakcia."
+      5:
+        text: "Potom, čo som prišiel na kroky k vyriešeniu problému, môžem dať tieto kroky v konkrétnom poradí nazývanom algoritmus tak, že ktokoľvek môže použiť moje pokyny na vyriešenie tohto problému. Tieto štyri kroky použijeme, aby sme zistili, ako hrať hru bez pravidiel. Do konca hry, budete môcť hrať niečo, čo vyzerá takto!"
+    C3_crowdsourcing:
+      1:
+        text: "Táto lekcia sa nazýva crowdsourcing. V tejto lekcii použijeme balíček kariet, aby sme sa dozvedeli o tom, o koľko ľahšie môžu byť niektoré veci robiť v skupinách namiesto toho, aby sme sa ich snažili robiť sami. Takže chytiť nejaké priateľov a urobiť niečo úžasné. Crowdsourcing dostáva pomoc od veľkej skupiny ľudí, aby dokončili niečo rýchlejšie."
+      2:
+        text: "V informatike používame crowdsourcing po celú dobu. Tisíce amatérov a profesionálov spájajú svoje počítače dohromady a vyhľadávajú miliardy a miliardy informácií. Hľadáte veci, ako je ďalšie prvočíslo Marsenne alebo dokonca možná mimozemská komunikácia."
+      3:
+        text: "Keď vidíte film, každá sekunda filmu je 24 jednotlivých obrázkov, nazývame tieto snímky. Takže každý z týchto obrázkov je potrebné vytvoriť a vykresliť a dať všetko dohromady. Môj tím a ja sme všetci vývojári softvéru. Všetci spolupracujeme na vytvorení softvéru, ktorý skutočne vytvorí obraz, vytvorí konečný obraz, ktorý vidíte na obrazovke. To je nástroj, ktorý môžu umelci a ďalší vývojári použiť ako súčasť svojej tímovej práce a procesu, aby mohli vytvárať obrázky, ktoré chcú na obrazovke."
+      4:
+        text: "Napríklad v Finding Nemo, keď Crush and Squirt a všetci ich priatelia lietajú cez východoaustrálsky prúd. Vidíte obrázky vody tečúcej, vidíte farby na zadnej strane korytnačky, vidíte strany rýb. Všetky tieto veci sa generujú prostredníctvom matematických a počítačových programov, ktoré píšeme, ktoré potom dáme umelcovi a berú to, aby vytvorili tento konečný obraz a vyladili ho a vyzerali nádherne a vyzerali zábavne."
+    C3_dice_race:
+      1:
+        text: "Táto lekcia sa nazýva kocky závod. Takmer každý rád hrá počítačové hry. Už ste niekedy premýšľali o tom, ako počítačoví programátori menia kroky hry na program? Prvý krok pri vytváraní počítačových hier a pri riešení akéhokoľvek problému si vyžaduje myslenie a plánovanie."
+      2:
+        text: "Myšlienkový krok riešenia problémov vytvára algoritmus, ktorý je krok za krokom plán na riešenie problému alebo dokončenie úlohy. V tejto lekcii vytvoríte algoritmus pre hru s kockami. Potom požiadate svojich priateľov, aby vyskúšali svoj plán a zistili, či môžu postupovať podľa pokynov na hranie hry. Keď je programátor istý, že kroky sú správne, je čas preložiť algoritmus do programu s jazykom, ktorému počítač dokáže porozumieť."
+      3:
+        text: "Takmer všetko, čo robíme každý deň, vyžaduje algoritmus, zoznam krokov, ktoré môžete vykonať na dokončenie úlohy. Zamyslite sa nad prípravou do školy alebo plánujete zábavný deň so svojimi priateľmi alebo o tom, že si pripravíte občerstvenie. Ak chcete dokončiť niektorú z týchto úloh, budete ju musieť rozdeliť na menšie kroky a niekedy musia byť kroky v konkrétnom poradí."
+      4:
+        text: "Premýšľajte o tom, že urobíte sendvič. Nezáleží na tom, ktorú zložku dostanete zo skrinky ako prvú. Ale arašidové maslo nemôžete rozložiť, kým neotvoríte nádobu. Počítače potrebujú algoritmy a programy, aby im ukázali, ako robiť aj jednoduché veci, ktoré dokážeme urobiť bez toho, aby sme o tom premýšľali."
+      5:
+        text: "Algoritmus je premýšľanie za to, čo sa musí stať, zatiaľ čo program je skutočné pokyny dané k počítaču, aby sa to stalo. Algoritmus musí byť preložený do programu predtým, ako ho počítač môže spustiť. Rozbitie úlohy na kroky nazývané algoritmus je niekedy ťažké. Ale ako každá nová zručnosť, s praxou je to jednoduchšie a jednoduchšie."
+    C3_farmer_while:
+      1:
+        text: "Zatiaľ čo slučky sú dosť podobné tomu, čo robíte v každodennom živote. Predstavte si, že umývate auto, budete drhnúť, kým nebude čisté. Aj keď to nie je čisté, pokračujte v čistení. Vyhodnocujete tieto veci po celú dobu."
+      2:
+        text: "Máme nový vzhľad, ktorý pomôže vášmu farmárovi von. Nazýva sa to blok. Je to celkom jednoduché vlastne. Zatiaľ čo tvrdenie v hornej časti je pravdivé, urobte niečo. Napríklad, zatiaľ čo tam je hromada ťah jeden seno. Choďte do toho a skúste to so svojím farmárom."
+    C3_functional_suncatchers:
+      1:
+        text: "Táto lekcia je funkčné suncatchers. Budete vytvárať tieto pekné suncatchers pomocou funkcií. Existuje niekoľko krokov pri vytváraní jedného z týchto suncatchers. Niektoré z krokov musíte opakovať mnohokrát."
+      2:
+        text: "Prvým krokom pri zjednodušení procesu výroby slnečného lúča je zistiť, čo musíme opakovať znova a znova. Môžeme zoskupiť tieto kroky do toho, čo nazývame funkciu."
+      3:
+        text: "Ale je tu viac k vytvoreniu krásneho suncatcher ako presných krokov. Niekedy chceme byť kreatívni a zmeniť farbu korálkov, ktoré používame. Môžeme urobiť každý suncatcher jedinečný, ak použijeme rôzne farebné korálky."
+      4:
+        text: "Váš suncatcher bude jedinečne vaša, keď sa naučíte myslieť na korálky ako premenné, čo je slovo, ktoré znamená zástupný symbol pre informácie, ktoré sa môžu zmeniť. Bavte sa vytváraním krásnych suncatchers pomocou funkcií a premenných!"
     C3_internet:
       1:
+        text: "Táto lekcia je o internete. Internet je veľmi rušné miesto a podobné tejto rušnej ceste. Správy ako autá sa priblížia, aby sa dostali na miesto určenia. Správy sa pohybujú cez internet veľmi rýchlo."
       2:
+        text: "Konanie, ako funguje internet, vám pomôže pochopiť, čo sa deje, keď používate internet. Dozviete sa, ako sa správy dostanú z počítača na obľúbenú webovú stránku alebo od priateľa do e-mailovej schránky. Rovnako ako je ľahšie navigovať na rušných cestách, keď poznáte cesty a môžete čítať značky, cestovanie po internete nie je také zložité, keď viete, čo sa deje v zákulisí."
       3:
+        text: "Odosielanie správ na internete je trochu ako odosielanie správ poštou, ale s niekoľkými rozdielmi. Som tu na Google.com. IP adresa tejto webovej stránky je toto číslo. IP adresu si môžete predstaviť ako svoju spiatočnú adresu v e-maile. Predstavme si, že chcem poslať správu poštou niekomu v kancelárii tam dole. Vidíte URL a IP adresu na tieto dvere? Napísal som túto správu a stlačte tlačidlo Odoslať."
       4:
+        text: "Na rozdiel od poštovej služby, prvá vec, ktorá sa stane, je, že internet rozbije správu na menšie časti, aby sa dalo ľahšie odoslať. Tieto malé časti sa nazývajú pakety. Každý paket správy je doručený na miesto určenia jeden po druhom. Všetky tieto pakety sú zostavené v správnom poradí, aby prijímač mohol správne prečítať správu. Samozrejme, existuje mnoho ďalších vecí sa dozvedieť o tom, ako internet funguje, ale je to skvelý začiatok. Ste na ceste k tomu, aby ste sa stali zdatným užívateľom internetu! Nezabudnite povedať svojej rodine a priateľom, čo ste sa naučili!"
       5:
         text: "Som Amanda Camp a pracujem ako softvérový inžinier v Googli. Pracujem v tíme, ktorý pracuje na serveroch uchovávajúcich profily a kontakty. Pri mojej práci často rozmýšľame, ako sa dajú kontakty posielať na iné zariadenia ako napríklad váš telefón. Väčšina ľudí má veľa kontaktov, povedzme že tisíc, a my nechceme poslať všetky tieto kontakty na váš telefón naraz, lebo by to bolo priveľa na správu. Tak, ako internet delí veľké správy na pakety, my používame koncept nazvaný stránkovanie, v ktorom môžeme poslať na váš telefón len 100 kontaktov naraz, nechať telefón nech ich spracuje a čakať, kým si vypýta ďaľších 100 kontaktov."
       6:
+        text: "Najzaujímavejšou vecou softvéru je skutočnosť, že môže ovplyvniť celý svet. Prvýkrát som sa naučil programovať, keď mi bolo asi devätnásť rokov. Myslím, že som už bol druhák alebo junior na vysokej škole. Prvý program, ktorý si pamätám písať, je niečo, čo konvertovalo Celzia na Fahrenheita. Páči sa mi programovanie, pretože rád pomáham ľuďom. Môžem písať programy na Google, ktoré pomáhajú ľuďom na celom svete, a to je naozaj ohromujúci a vzrušujúce."
     C3_maze_conditionals:
       1:
         text: "Ľudia robia rozhodnutia každý deň. Napríklad, predtým než idete von, máte podmieňovací výraz - ak vonku prší, musíte si zobrať svoju vetrovku. Počítače sú úžasné, lebo keď sa rozhodnete, ktoré príkazy majú a vedia spracovávať, tak ich spracuvávajú neskutočne rýchlo a zodpovedne. Počítačový program je vlastne trošku matematiky a niekoľko podmieňovacích výrazov, pri ktorých sa robia rozhodnutia."
       2:
+        text: "Blok if pomáha zombie pri rozhodovaní. Kontroluje niečo. Napríklad, poďme použiť blok, ktorý hovorí, či tam je cesta vľavo, a dať odbočiť doľava príkaz vnútri. Hovoríme zombie, aby skontrolovali svoje okolie, zistili, či je vľavo cesta, a ak áno, urobte to."
       3:
+        text: "Potom použijeme blok posunu vpred vo vnútri tohto opakovania, aby sme ho udržali v pohybe vpred, pokiaľ chce ísť rovno. Potom, keď je otočenie, blok if mu povie, aby sa otočil doľava. Môžete vidieť, že ak to urobíme, ak odbočíme doľava a inak sa pohneme vpred, dosiahneme náš cieľ."
       4:
+        text: "Je to príklad použitia vyhlásenia if, ktorý je skutočne základným konceptom v počítačovom programovaní. Jednou z prvých vecí, ktoré som sa naučil, bolo, ako napísať program, ktorý hral tic-tac-toe. Mal som, ak vyhlásenia povedať, ok, v prípade, že druhá osoba sa chystá vyhrať, choďte do toho a blokovať toto miesto. Bavte sa učiť, ako používať, ak vyhlásenia, je to kľúčový koncept."
     C3_maze_level_4:
       1:
         text: "V tomto príklade je tvojou úlohou dostať zombíka k slnečnici. Mohli by sme použiť 5 blokov \"posun sa dopredu\", alebo môžeme počítaču povedať, nech sa raz posunie dopredu a prikázať mu to zopakovať 5 krát použitím jedného opakovacieho bloku."
       2:
+        text: "To šetrí čas a uľahčuje to. Ak ho chcete použiť, jednoducho vložte blok posunu vpred do bloku opakovania. Hit beh a zombie sa bude pohybovať dopredu päťkrát na báječný slnečnice."
     C3_playlab_create_game:
       1:
         text: "Doteraz sa ti podarilo vytvoriť animáciu alebo príbeh, ktorý keď je spustený, vykoná stále to isté. Teraz môžeš vytvoriť interaktívnu hru, ktorá sa dá v skutočnosti aj hrať."
       2:
+        text: "Tam sú niektoré nové bloky vyskúšať. K dispozícii je blok „keď šípka“ a blok „move actor“. Môžete dať tieto bloky dohromady pohybovať hercov okolo pomocou klávesov so šípkami. A tam sú niektoré bloky, ktoré robia veci, keď herci zrazí alebo sú kliknutí. Pozrite sa na ne a bavte sa!"
+    C3_songwriting_with_parameters:
+      1:
+        text: "Toto je lekcia písania piesní. Hudba je veľa ako počítačový program. Písomné poznámky a slová hovoria spevákovi presne, čo má robiť. Niektoré časti hudby sa používajú znova a znova."
+      2:
+        text: "Hovoríme tomu zbor. V počítačovom programe sa časti programu, ktoré sa používajú znova a znova, nazývajú funkcie. Keď čítate texty piesní a hovorí slovo chorus, spievate slovo chorus? Nie, pozriete sa do hornej časti stránky, aby ste videli, aké slová tvoria zbor."
+      3:
+        text: "V tejto lekcii sa naučíte hlúpe malú pieseň s názvom malý zajačik foo foo. Skladba má zbor, ktorý budete spievať niekoľkokrát znova a znova. Funkcia je kus kódu, ktorý môžete volať a používať znova a znova. Uľahčuje a zefektívňuje programovanie, takže nemusíte znova a znova písať kroky svojej funkcie. Môžete to len napísať raz!"
+    C4_bee_conditional:
+      1:
+        text: "Toto je podmienený blok. Hovorí sa, že ak ste na kvete alebo voštine, potom niečo urobte. To je užitočné, keď nevieme, koľko medu alebo nektáru získať, ako vidíme tu s týmto otáznikom."
+      2:
+        text: "V tomto príklade povieme, ak je to kvetina, získajte všetok nektár a potom použite iný, aby sme povedali, či je to plást, urobte med. Ta-dah!"
     C4_conditionals:
       1:
         text: "Máme nový blok, ktorý sa volá blok ak / inak. Je to podmienka rovnako ako blok ak, ktorý ste používali v predošlých úlohách. Ale teraz je na spodu bloku nová časť, ktorá hovorí inak. Blok ak / inak umožňuje včele rozhodnúť sa medzi dvoma sadami akcií. Ak je včela pri kvete, vykoná sadu akcií, ktoré zadáte v prvej časti, kde sa hovorí, vykonaj ak. Ak včela nie je pri kvete, vykoná sadu akcií, ktoré vložíte na miesto, kde je uvedené inak."
@@ -569,6 +726,93 @@ sk:
         text: "Keď použijete blok opakuj na zacyklenie kódu, ako počítač zistí, kedy sa kód zopakoval dostatočne veľakrát? Blok opakuj v skutočnosti skrýva sofistikovanejší kúsok kódu nazývaný cyklus pre, ktorý počíta od počiatočnej hodnoty po koncovú hodnotu o konkrétny prírastok."
       2:
         text: "Napríklad opakovanie troch blokov sa počíta od 1 do 3 po 1. Zakaždým, keď sa počíta, spustí sa kód vnútri cyklu. Cyklus pre vie, koľkokrát sa má spustiť, vďaka premennej počítadlo, ktorá je nastavená na počiatočnú hodnotu na začiatku cyklu, a má k nej pridaný prírastok pri každom spustení cyklu. Akonáhle je premenná počítadla väčšia ako koncová hodnota, cyklus sa zastaví. Výhodou použitia cyklu pre namiesto bloku opakovania je, že skutočne vidíte premennú počítadlo a môžete ju použiť vo svojom cykle."
+    C4_function_create:
+      1:
+        text: "Teraz, keď ste upravili funkčné bloky, je čas vytvoriť nový funkčný blok od nuly. Je to naozaj jednoduché. Uvidíte, že sada nástrojov obsahuje kategóriu nazývanú funkcie. Ak kliknete na toto, uvidíte oranžové tlačidlo s názvom vytvoriť funkciu. Kliknutím na toto tlačidlo sa zobrazí editor funkcií, ktorý ste už použili na úpravu existujúcich funkčných blokov."
+      2:
+        text: "Rovnako ako predtým, ste začali pomenovaním funkcie, zapísanie popis toho, čo funkcia má robiť. Napríklad má nakresliť štvorec alebo nakresliť trojuholník a potom ťahať bloky z panela nástrojov do bieleho pracovného priestoru nižšie. Nezabudnite pretiahnuť tieto bloky vnútri zeleného baliaceho bloku pre funkciu."
+      3:
+        text: "Po dokončení kliknite na uložiť a ukončiť. Tým sa dostanete späť do hlavného pracovného priestoru puzzle. Nová funkcia, ktorú ste vytvorili, sa zobrazí ako zelený blok v kategórii funkcií vo vašom paneli nástrojov. Presuňte to do hlavného pracovného priestoru a použite ho ako akýkoľvek iný blok na vyriešenie hádanky."
+    C4_function_edit:
+      1:
+        text: "Jednou z veľkých vecí v programovaní počítača je, akonáhle ste naučil počítač, ako urobiť akciu, môžete volať túto funkciu znova. Dáte mu meno a potom ho môžete nazvať. To je naozaj ako rozšírenie jazyka."
+      2:
+        text: "V programe, ktorý sme postavili, sme sa naučili nakresliť štvorec štyrikrát pohybom a otáčaním. Môžeme vziať túto funkciu a dať mu meno, nakresliť štvorec tak, že kedykoľvek chceme urobiť, že sme jednoducho povedať nakresliť štvorec a to sa vráti a vyvolať túto funkciu, že kód a to bude robiť pre nás. Tento koncept sme pridali do nášho programovacieho jazyka."
+      3:
+        text: "V tejto hádanke sme už vytvorili remízu štvorcové funkcie pre vás. Uvidíte to v paneli nástrojov ako zelený blok. Čo budete musieť urobiť, je napísať rovnaký kód, ktorý ste napísali pred nakresliť štvorec a dať ho do tejto funkcie. Ak to chcete urobiť, kliknite na možnosť úpravy v zelenom kresliť štvorcový blok. Tým sa otvorí editor funkcií. Editor funkcií má tri časti. Miesto, kde pomenujete svoju funkciu. Toto sa zobrazí na zelenom bloku pred touto funkciou. Potom napíšte krátky popis toho, čo vaša funkcia má robiť."
+      4:
+        text: "V tomto prípade sa má nakresliť štvorec. Biely priestor pod týmto je pracovný priestor a funguje rovnako ako pracovný priestor, ktorý ste už používali. Presuňte bloky z panela nástrojov do tohto pracovného priestoru. Nezabudnite dať bloky, ktoré vytvárajú štvorec vnútri zeleného baliaceho bloku pre túto funkciu. Po dokončení kliknite na uložiť a ukončiť. Tým sa dostanete späť do hlavného pracovného priestoru puzzle. Teraz môžete použiť kresliť štvorcový funkčný blok rovnako ako akýkoľvek iný blok na vyriešenie hádanky."
+    C4_function_parameters:
+      1:
+        text: "Tu je funkcia, ktorá kreslí štvorec s 50 pixelovými stranami. To je skvelé, ale čo keby som chcel nakresliť štvorec so stranami 50 pixelov a ďalší štvorec so stranami 100 pixelov? Nemali by sme robiť dve samostatné funkcie, ktoré robia takmer to isté. Namiesto toho môžeme použiť jednu funkciu s parametrom."
+      2:
+        text: "Parametre nám umožňujú odovzdávať hodnoty do funkcie, ktorá sa používa ako premenné vo vnútri funkcie. Skúsme pridať parameter nazvaný ako k tejto funkcii, aby sme ho mohli použiť na vytvorenie štvorcov rôznych veľkostí. V editore funkcií môžete upraviť názov a popis ako predtým, ale teraz môžete pridať aj parameter. Napíšte názov parametra do priestoru a kliknite na Pridať parameter. Tým sa vytvorí červený blok s názvom parametra, ktorý ste práve vytvorili. Teraz môžeme nahradiť pohyb vpred blokom 100 parametrom Dĺžka, aby sa posunul dopredu o dĺžku."
+      3:
+        text: "Kliknite na tlačidlo Uložiť a zatvoriť a potiahnite nový vytvoriť štvorcový blok z kategórie funkcií v paneli nástrojov. Všimnite si, že je prázdne miesto vedľa dĺžky, pretože funkcia chce vedieť, akú hodnotu parameter Dĺžka by mal mať. Presuňte číselný blok z kategórie Matematika a umiestnite ho do tohto priestoru. Pozrite sa, ako môžete túto funkciu používať znova a znova s rôznymi dĺžkami na vytvorenie štvorcov rôznych veľkostí? Vyskúšajte to sami!"
+    C4_intro:
+      1:
+        text: "Zvyčajne programovanie je všetko v texte, ale budeme používať Blockly ktorý používa vizuálne bloky, ktoré ste drag and drop písať programy. Pod kapotou stále vytvárate kód. Ak chcete začať, budeme stavať kód pre program, ktorý pomôže tento Angry Bird pohybovať bludiskom sa dostať do zlých ošípaných, ktoré ukradli jeho vajcia."
+      2:
+        text: "Blokne je rozdelená na tri hlavné časti. Na ľavej strane je vtáčie bludisko, kde bude spustiť váš program. Pokyny pre každú úroveň sú napísané pod bludiskom. Táto stredná oblasť je sada nástrojov a každý z týchto blokov je príkazom, ktorému vták rozumie. Práve miesto na pravej strane sa nazýva pracovný priestor a to je miesto, kde budeme stavať náš program."
+      3:
+        text: "Ak pretiahnem blok presunu do nášho pracovného priestoru a stlačím tlačidlo „spustiť“, čo sa stane? Vták sa pohybuje dopredu o jednu škatuľu na mriežke. A čo keď chcem, aby vták niečo urobil po tom, čo sa posunie dopredu o jednu škatuľu? Môžem pridať ďalší blok do nášho programu."
+      4:
+        text: "Vyberiem blok „odbočiť vpravo“ a pretiahnem ho pod mojím blokom pohybu, kým sa nezobrazí žltá šípka. Potom ju pustím a dva bloky sa zacvaknú. Keď znova stlačím tlačidlo „spustiť“, vták vykoná príkazy, ktoré sú naskladané zhora nadol na našom pracovnom priestore."
+      5:
+        text: "Ak ste niekedy chceli odstrániť blok, stačí ho odstrániť zo zásobníka a pretiahnuť ho do koša. Potom, čo ste hit beh, môžete vždy stlačiť tlačidlo reset dostať vták späť na štart. Teraz poďme tie ošípané!"
+    C4_math_artist:
+      1:
+        text: "Ak chcem nakresliť obdĺžnik vysoký 50 pixelov a ktorý je dvakrát tak široký ako vysoký, ako by som naprogramoval počítač tak, aby to urobil? No, mohol by som povedať umelcovi ísť hore päťdesiat, odbočiť vpravo, a potom ísť cez 100 a presunúť celú vec dvakrát. Ale potom robím matematiku pre počítač."
+      2:
+        text: "Vynásobenie päťdesiat dvoma vo vašej hlave nemusí byť tak ťažké, ale počítače sú naozaj dobré v tom matematiku, takže by sme mali nechať na nich, kedykoľvek je to možné. Keby som práve použil premennú nazývanú výška namiesto toho, potom by som mohol ľahko zmeniť výšku na päťdesiat a potom zmeniť môj algoritmus povedať umelca ísť hore podľa výšky, odbočiť vpravo a potom prejsť podľa výšky krát 2, čo nám dáva obdĺžnik, ktorý je dvakrát tak široký, ako je vysoký."
+    C4_unplugged_algorithms:
+      1:
+        text: "Táto lekcia sa nazýva Tangram Algoritmy. Tangram je skladačka so siedmimi kusmi, ktoré je možné dať dohromady, aby sa vytvorili iné tvary. Budete používať algoritmus vysvetliť svojmu partnerovi, ako dať puzzle dohromady."
+      2:
+        text: "Algoritmus je len zo zoznamu krokov, ktoré môžete vykonať na dokončenie úlohy. Používame ich každý deň s vecami, ako sú nákupné zoznamy a recepty. Ak budete mať algoritmus jednoduchý, existuje veľa spôsobov, ako interpretovať a kto vykonáva tento algoritmus nemusí dostať presne to, čo ste chceli. Ak sa chcete uistiť, že všetci skončia s presne rovnakou vecou, váš algoritmus bude musieť byť podrobný a veľmi špecifický."
+      3:
+        text: "Dnes používam algoritmus na dokončenie obrazu. Chcel som skúsiť maľovať niektorých vlkov, ale nie som ten najúžasnejší maliar. Našťastie pre ľudí podľa mňa, tam je farba podľa čísel. Existuje štyridsať farieb a má malé písmená a čísla, ktoré vám povedia, akú farbu maľovať každú sekciu. Maľovanie podľa čísel mi presne hovorí, akú farbu použiť a kde."
+      4:
+        text: "Je to veľmi špecifické, takže som schopný sledovať pokyny a obraz vyjde vyzerať úžasne. Je to skvelý algoritmus. Ak by pokyny neboli dostatočne špecifické, moji vlci by nevyzerali tak dobre. Keď naozaj chcete, aby sa niečo ukázalo presne tak, ako ste to naplánovali, je najlepšie byť veľmi presný."
+    C4_unplugged_binary:
+      1:
+        text: "Každý tím, osoba, ktorá inštruuje, že je osoba, ktorá drží papier, musí prísť na to, čo ich off symbol bude a čo ich na symbol bude. V binárnom, je to niečo ako abeceda s dvoma písmenami. Rovnako ako mať A a B byť celá vaša abeceda, ale máte 0 a 1."
+      2:
+        text: "Najbežnejší spôsob, ako používať binárne je v príkaze if. Je to klasická vec z programovania. Program beží spolu a hovorí, že ak je niečo pravda, potom to urobte. Alebo to nie je pravda a robíte niečo iné. Čo ak chcete urobiť niečo, čo možno trochu komplikovanejšie. Namiesto toho vyhlásenie if chcete pracovať s niečím ako obrázok alebo zvuk v počítači."
+      3:
+        text: "Počítač pozná iba binárne, ale obraz, nie je to binárne, nie sú to tie a nuly, tak ako to robíte? Tu je príklad: Máte tento krásny obrázok. Teraz je obrázok v podstate formou informácií. Všetky informácie môžu byť kódované binárne tak či onak, stačí zistiť, ako to urobiť."
+      4:
+        text: "Predstavujete si, že budeme dať mriežku cez tento panda medveď a pre každý štvorec, budeme rozhodovať, či tento štvorec je viac čierny alebo viac biely. A potom ideme na farbu to tak. Teraz každá bunka na mriežke je buď čierna alebo biela a potom čierne štvorce hovoríme, že sú nuly (binárne číslice) a biele štvorce sú tie, druhá binárna číslica. Na konci, ste vľavo len s banda z nich a núl. Takto reprezentujete tento obrázok v binárnom."
+    C4_unplugged_forloops:
+      1:
+        text: "Táto lekcia sa volá na zábavu so slučkou. V tejto lekcii použijeme číselný riadok na hranie hry s kockami. Každý hráč sa trikrát hodí, aby priraďil počiatočnú hodnotu, hodnotu zastavenia a náš interval. Počas každého kola, sme kruh našu počiatočnú hodnotu, a každú hodnotu, ktorá je rovnaký počet krokov vpred ako naše hodnota intervalu. Keď sa dostaneme k našej zastavovacej hodnote, prestaneme krúžiť. Osoba s najvyšším skóre vyhráva!"
+      2:
+        text: "Pre slučky môže prísť vhod veľa miest a ak by ste sa mali stať meteorológom, mali by ste používať pre slučky po celú dobu. Ahoj, ja som Becky. Pracujem v spoločnosti EverPower Renewables ako veterný meteorológ. Predpovedám rýchlosti vetra pre oblasť Columbia River Gorge, kde spoločnosť vlastní veterné farmy."
+      3:
+        text: "Snažíme sa pochopiť, koľko vetra tam bude, aby sme vedeli, koľko energie bude na výstupe. Tieto informácie poskytujeme obchodníkom s energiou v reálnom čase. Nakupujú a predávajú energiu na základe toho, koľko energie im povieme, že tam bude, aby sa ubezpečil, že elektrická sieť je vyvážená, vaše svetlá zostanú rozsvietené a že maximalizujeme množstvo energie, ktorú dostaneme z našich fariem."
+      4:
+        text: "Sme v národnom kontrolnom stredisku pre obnoviteľné zdroje EverPower tu v Portlande a tu máme informácie prichádzajúce zo všetkých našich fariem po celej krajine. Ani počítače s najvyšším výkonom dnes nemôžu simulovať atmosféru všade. V počítačových predpovedacích modeloch máme to, čo nazývame mriežkou. Každý bod mriežky je zemepisná šírka, zemepisná dĺžka. Musíme vypočítať fyziku a pokúsiť sa zistiť rýchlosť vetra, teplotu, tlak, také veci."
+      5:
+        text: "Vzhľadom k tomu, to sú pomerne veľké siete a robíme to v mnohých bodoch sme opakovanie nad týmito vecami milióny a miliónkrát. Všetko, čo robím, použijem pre slučky. Tu je napríklad pre slučku priamo tam. Keď predpovedáte vietor, existuje toľko rôznych parametrov, ktoré do nej idú, že by bolo nemožné, aby si človek sadol a urobil všetky tieto výpočty. Existuje toľko rôznych aspektov toho, čo bude mať vplyv na to, čo sa deje s vetrom, že potrebujeme počítačový model, aby sme ho predpovedali."
+    C4_unplugged_madlibs:
+      1:
+        text: "V tejto lekcii, budeme hrať s niektorými vyplniť prázdne príbehy. Máte šablónu, ktorú môžete vyplniť a vytvoriť podobné príbehy, ktoré majú veľmi zábavné rozdiely."
+      2:
+        text: "V tejto lekcii sme sa tiež naučili, ako vytvoriť abstraktnú šablónu z dvoch príbehov, ktoré už boli vytvorené. Abstrakcia je umenie odstraňovania rozdielov a detailov, aby ste videli, ako by jedno riešenie mohlo fungovať pri mnohých rôznych problémoch. Je to veľmi užitočné v informatike, pretože nám umožňuje vytvárať funkcie, ktoré môžu byť užitočné v niekoľkých rôznych situáciách."
+    C4_unplugged_parameters:
+      1:
+        text: "Táto lekcia sa nazýva písanie skladieb s parametrami. Budeme tu písať nejaké piesne. Niekedy je zbor len trochu iný zakaždým, keď ho spievate. Pamätáte si Old Macdonald mal farmu? Zbor je pre každé zviera mierne odlišný. A na tej farme mal kravu, e-i-e-i-o. Malá zmena v každom refréne môže byť zobrazená pomocou niečoho, čo nazývame parametre."
+      2:
+        text: "Niekedy funkcia potrebuje parameter. Parameter je ďalšia informácia, ktorú môžete odovzdať funkcii, aby ste ju prispôsobili špeciálnym potrebám. Keď vyrábate zmrzlinové poháre so svojimi priateľmi, používate proces podobný parametrom v počítačovom programe."
+      3:
+        text: "Disk vanilkovej zmrzliny môže byť rovnaký pre každý pohár, ale keď sa spýtate svojich priateľov, ktoré dve zálievky by chceli, môžete získať veľa rôznych kombinácií. Topping je názov funkcie, ale každý typ zálievky je parameter. Funkcie a parametre spolupracujú na vytváranie skvelých počítačových programov a skvelých pohárov."
+    C4_unplugged_variables:
+      1:
+        text: "Táto lekcia sa nazýva premenné v obálkach. Naučíme sa, ako môžeme vytvárať vety, keď nám stále chýbajú informácie. Väčšina z nás už pozná myšlienku vyplnenia prázdneho miesta. Robíme to, keď uvádzame naše meno na domácu úlohu. Niekedy je tu viac ako jedno slovo, ktoré je potrebné vyplniť a v takom prípade dáme prázdny štítok, aby sme vedeli, ktorá informácia ide kam."
+      2:
+        text: "Premenné sú zástupné symboly pre informácie, ktoré sa môžu zmeniť. Pomocou premennej pre chýbajúce informácie, môžeme pokračovať v práci na čo sme robili a nechať niekoho iného vyplniť chýbajúce informácie neskôr. V softvéri používame premenné veľa. Premenné používame ako zástupné symboly pre meno, e-mailovú adresu a dokonca aj používateľské meno. Týmto spôsobom môžeme dať programu vedieť, kde sa tieto podrobnosti objavia po ich vyplnení používateľa. V našej práci používame premenné po celú dobu."
+      3:
+        text: "Každým, keď potrebujete uložiť informáciu na neskôr, používame premennú. Povedzme, že musíme počítať, koľkokrát používateľ tweetoval. Zakaždým, keď používateľ tweety, pridáme jeden na toto číslo a zakaždým, keď používateľ odstráni tweet, znížime toto číslo o jednu. Kedykoľvek potrebujeme vedieť, koľkokrát, že užívateľ má tweeted, budeme len pozrieť na túto premennú."
     C4_variables_artist:
       1:
         text: "Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v premennej."
@@ -580,7 +824,9 @@ sk:
       1:
         text: "Premenná je kontajner, do ktorého môžeš ukladať hodnotu. Keď ju použiješ v algoritme, otvorí kontajner a pozrie na hodnotu vo vnútri. To ti dovolí písať šikovnejšie algoritmy, ktoré sa správajú podľa hodnôt uložených v premennej."
       2:
+        text: "Teraz sa chystáte vyskúšať playlab, kde máte rôzne hry a môžete zmeniť hodnoty premenných, ako je rýchlosť, výška, skóre, aby ste zmenili hru. Nebudete musieť meniť algoritmus hry, aby ste zmenili spôsob, akým sa hrá, iba premenná."
       3:
+        text: "V mojej práci pre Kindle a na röntgenových snímkach používame premenné mnohými rôznymi spôsobmi. Jedným zo spôsobov, ako môžete použiť premennú, je ukladanie čísel stránok knihy. Používateľ môže zväčšiť a zmenšiť veľkosť písma na stránke. Na základe veľkosti písma sa počet strán v knihe môže zmeniť. Môžeme ho upraviť uložením počtu strán do premennej."
     infinity_playlab_events:
       1:
         text: "Teraz sa naučíme o niečom, čo programátori hier používajú každý deň. Sú to Udalosti. Udalosť hovorí tvojmu programu, aby čakal na to, keď sa niečo stane. A potom, keď sa to stane, program vykoná nejakú aktivitu. Príkladmi udalostí sú napríklad čakanie na kliknutie myši, stlačenie šípky alebo ťuknutie na obrazovku."
@@ -606,29 +852,101 @@ sk:
         text: "Vieš si predstaviť, že by si mal niečo opakovať donekonečna? Stále znova a znova... Dúfajme, že to nikdy nebudeš musieť robiť, lebo v opakovaní sú fakt dobré počítače. Tento blok sa volá \"opakuj donekonečna\". Čokoľvek vo vnútri toho bloku sa bude v hre neustále opakovať."
       2:
         text: "Ak chceme, aby postava opakovala niečo bez toho, aby sa o to staral hráč, tak tie bloky umiestnime do vnútra bloku \"opakuj donekonečna\". V nasledujúcej úlohe je našim cieľom, aby Anna neustále chodila hore a dole. Ak sa naučíš používať opakovacie príkazy, ušetrí ti pri tvorbe vlastnej hry kopec času."
+    tutorial_puzzle_challenge:
+      1:
+        text: "Čo chcete byť, keď vyrastiete Olivia? Astronaut. Viete náhodou, čo je počítačový programátor? Áno, um nie. Hmmm počkať čo? Nie som si istý, ako to vysvetliť počítačové programovanie je celkom jednoduché. Je to súbor pokynov, ako je recept, musíte ich postupovať krok za krokom, aby ste dosiahli požadovaný konečný výsledok."
+      2:
+        text: "Môžem zmeniť počet pixelov, dĺžku riadku, pomocou tejto rozbaľovacej ponuke. Ako dlho to bolo znova? Pokyny môžete znova zobraziť pod tlačidlom spustiť. Tu som použil blok posunu vpred a idem vybrať 100 pixelov. Blok môžem odstrániť pretiahnutím do panela nástrojov alebo do koša. Dajme to späť."
+      3:
+        text: "Spustite kód stlačením tlačidla spustiť. To nefungovalo! Stlačím reset a zistím, čo sa deje. Môžete skúsiť puzzle toľkokrát, koľkokrát by ste chceli a preskočiť hádanky a vrátiť sa k nim. Len sa uistite, že sa snažíte čo najlepšie a nevzdávajte sa. Pridajte ďalší krok vpred. To stále nefungovalo. Môžem umiestniť blok medzi ostatné bloky."
+      4:
+        text: "Poďme sa otočiť blok a umiestnite ho medzi pohyb dopredu. Odbočte doľava o 45 stupňov. Poďme to znova spustiť. Reset, beh, úžasné! Tu je ďalšia hádanka. Niekedy dostanete štartovací kód na dokončenie. Tu musím pridať príslušné dĺžky a stupne."
+      5:
+        text: "Niekedy môžete náhodne vyhodiť štartovací kód. Čo teda robíte? Môžete stlačiť jasné puzzle a začať znova. Chystám sa pretiahnuť toto číslo blok do rôznych oblastí pixelov. Vyberte 100 pre pixely, 45 pre stupne a 100 pre pixely znova. Úžasné! Tu je včela Code Studio. Potrebujem presunúť včelu na každú kvetinu a získať nektár."
+      6:
+        text: "Prvý kvet je tri bloky ďaleko, takže potrebujem tri pohyb dopredu. 1, 2, 3. Potom sa dostať nektár, potom ďalší dostať nektár. To nefungovalo! Umiestním ďalší krok vpred medzi get nektárov a spustím ho znova. Yay, funguje to! Práve ste sa naučili používať umelca Code Studio a včelie hádanky. Veľa šťastia v puzzle výzve Code Studio."
     unplug1:
       1:
+        text: "Čo chcete byť, keď vyrastiete Olivia? Umm, astronaut! Viete náhodou, čo je počítačový programátor? Jo, hm, nie. Umm, čo čo? Nie som si istý, ako to vysvetliť. Počítačové programovanie je veľmi jednoduché. Je to súbor pokynov, ako recept. Musíte ich sledovať krok za krokom, aby ste dosiahli požadovaný konečný výsledok."
       2:
+        text: "Počítačová veda je spôsob, ako ovplyvniť svet. Môžu to byť hudobné videá, môžu to byť hry, zistiť, či niekto súvisí s niekým iným. Nájsť viete, priateľov ľudí. Môžete robiť všetky druhy ďalších bláznivých vecí, ktoré skutočne zachraňujú životy. Myslím, že musíte mať disk. Je to pre mňa ako štetec. Myslím, že skvelé programovanie nie je tak odlišné od veľkého umenia."
       3:
         text: "Keď som sa konečne naučil trochu programovať, tá biela plocha sa premenila na množstvo dverí a po ich otvorení sa za nimi nachádzala, samozrejme, ďalšia chodba s množstvom dverí. Programovanie je jednoduché a zábavné. Môžeš urobiť čokoľvek, čo chce tvoja myseľ. Nakoniec otvoríš dostatok dverí, aby vošlo svetlo. Pre mňa je hotový program ako stavba naplnená svetlom. Všetky kúty sú osvetlené. Počet ľudí, ktorých môžeš ovplyvniť a komunikovať s nimi, je niečo, čo svet predtým nevidel."
       4:
+        text: "Naša prvá lekcia v tejto sérii je o tom, čo je počítačová veda, čo robí počítačový vedec a ako môžete byť zodpovednejší za používanie technológie. Je to veľmi dôležitá lekcia, ale je to trochu ťažké. Nakoniec si pomocou iniciál vytvoríte vlastné prispôsobené kódovanie. Je to zábavná aktivita a je to veľmi posilňujúce, pretože binárne je jednou z tých vecí, ktoré sa cítia veľmi technické, ale akonáhle to pochopíte, je to ako hovoríte tajným jazykom."
+    unplug2:
+      1:
+        text: "Lekcia o výpočtovom myslení je určená na to, aby vás naučila, ako urobiť veľký ťažký problém a rozdeliť ho na niekoľko jednoduchších problémov. Cieľom tejto lekcie je napísať súbor pokynov, ktoré môže niekto nasledovať, aby nakreslil jednu z príšer zahrnutých v pláne lekcie."
+      2:
+        text: "Študenti sa rozdelia do skupín, aby napísali pokyny, a potom ich prepínajú s inou skupinou, ktorá bude musieť kresliť monštrum. Skupiny budú písať pokyny pomocou štyroch krokov výpočtového myslenia: rozklad, umiestnenie vzoru, abstrakcie a algoritmy."
+      3:
+        text: "Prvé skupiny rozložia úlohu, čo znamená vytvoriť herný plán. Potom budú hľadať vzory medzi všetkými príšerami v katalógu. Keď narazia na rozdiely medzi príšerami, budú tieto detaily abstraktné alebo odstránia. Napríklad jedno monštrum v katalógu má vegitas oči a ďalšie má spritem oči. Ale obaja majú oči, aby sme mohli napísať riadok, ktorý hovorí, že monštrum má prázdne oči."
+      4:
+        text: "Študenti tak budú môcť napísať súbor inštrukcií, nazývaných algoritmus, ktoré uvádzajú časti príšer s polotovarmi pre to, čo by mali byť štýly. Toto je súbor pokynov, ktoré odovzdajú ostatným študentom, aby znovu vytvorili svoje vlastné monštrum."
     unplug3:
       1:
         text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
       2:
+        text: "V tejto aktivite sú jediné symboly, ktoré môžete použiť, tieto: presuňte jeden štvorec dopredu, jeden štvorec dozadu, posuňte jeden štvorec nahor, presuňte jeden štvorec nadol, prejdite na ďalšiu farbu a vyplňte štvorec farbou. Akonáhle budeme mať, že kódované hore, môžeme odovzdať na inú osobu, ktorá môže čítať kód a pokúsiť sa znovu vytvoriť obrázok."
     unplug4:
       1:
         text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
       2:
+        text: "V druhej polovici aktivity sa žiakov pýtame, koľko rôznych spôsobov môžu zložiť kus papiera a vytvoriť šestnásť rovnakých obdĺžnikov. Potom budete diskutovať o tom, ako viacero riešení môže viesť k rovnakému konečnému výsledku a prečo sú niektoré riešenia v určitých situáciách lepšie."
     unplug5:
       1:
         text: "V programovaní na štvorčekový papier sa snažíme vysvetliť, ako programovanie skutočne funguje. Jedna osoba dostane malú kresbu na štvorčekovom papieri a jej úlohou je pomocou šípiek a znakov definovať algoritmus (postup na kreslenie), podľa ktorého bude možné kresbu zreprodukovať."
       2:
+        text: "V druhej polovici aktivity sa žiakov pýtame, koľko rôznych spôsobov môžu zložiť kus papiera a vytvoriť šestnásť rovnakých obdĺžnikov. Potom budete diskutovať o tom, ako viacero riešení môže viesť k rovnakému konečnému výsledku a prečo sú niektoré riešenia v určitých situáciách lepšie."
+    unplug6:
+      1:
+        text: "Táto aktivita sa nazýva kódovanie kartami a je skvelá pre každý vek. Ako ste sa dozvedeli s vyhláseniami if v predchádzajúcich lekciách, počas Blockly, ak majú vyhlásenia kus o nich, musíte vyhodnotiť, aby ste zistili, či je to pravdivé alebo nepravdivé. To je podmienené a môže byť použitý v mnohých rôznymi spôsobmi."
+      2:
+        text: "Využívame to vytvorením programov na papieri, ktoré spustíte pomocou náhodného žrebovania hracích kariet. Môžete mať vyhlásenie if, ktoré hovorí niečo ako v prípade, že karta, ktorú nakreslíte, je väčšia ako 8, dostanete bod. V opačnom prípade váš súper dostane bod. Môžete to urobiť tak jednoduchým alebo komplikovaným, ako sa cítite pohodlne."
+    unplug7:
+      1:
+        text: "Viete, ako keď sa pozriete na texty piesne a definujú zbor na samom začiatku a potom pre zvyšok piesne, jednoducho vás odkázajú späť na zbor? Takto voláte funkciu."
+      2:
+        text: "V tejto lekcii definujeme zbor na začiatku našej piesne a potom spievame cez našu pieseň a vrátime sa a všimneme si, že trieda nespieva slovo chorus, automaticky idú až na vrchol, kde definujeme zbor a spievame cez to. Používame to ako skvelý úvod do toho, ako pochopiť, čo program robí, keď definuje a volá funkciu."
+      3:
+        text: "Používame známe piesne vrátane Starého Macdonalda, aby sme hovorili o tom, ako sa zbor volá znova a znova a ako sa niekedy môže zbor zmeniť. Keď máte pieseň ako Old Macdonald, kde sa určité slová menia, je to skvelé miesto na predstavenie myšlienky parametrov. Odovzdávanie určitých slov, aby ste mohli poslať ďalšie informácie do svojej funkcie. Akonáhle sme si istí, že to všetci dostanú, môžete si vziať svoje vlastné známe piesne a rozbiť ich sami. Uvidíme, či môžete prísť na to spoločne."
+    unplug8:
+      1:
+        text: "Naša lekcia o abstrakcii používa známy koncept madlibs, kde v podstate vložíte prázdne miesto do príbehu, ktorý môže byť naplnený mnohými rôznymi slovami. Berieme túto myšlienku, vyzývame deti, aby prišli s vlastnými slovami pre svoje vlastné príbehy a skutočne vysvetlili koncept abstrakcie."
+      2:
+        text: "Je to všetko o funkciách a ako môžete mať funkciu, ako v Old Macdonald, kde máte štruktúru pre váš zbor, ale máte niečo málo, čo sa zmení a vy abstraktné, že maličkosť, ktorá sa mení a môžete vyplniť ju s vlastným slovom zakaždým cez. Ale niekedy máte tri slová, ktoré sa menia a tak vyplníte tie s tromi parametrami, to je stále dosť užitočné."
+      3:
+        text: "Môžete mať jednu funkciu, ktorá zvládne veľa rôznych problémov. Mnohokrát ľudia napíšu samostatné funkcie pre všetky tieto problémy, neuvedomujúc si, že existuje len jeden malý rozdiel. Ak by mohli len nájsť spôsob, ako zvládnuť, že jeden malý rozdiel, mohli by jednoducho znovu použiť jednu funkciu znova a znova, namiesto toho, aby 14 rôznych funkcií."
+    unplug9:
+      1:
+        text: "Relé programovanie je mimoriadne zábavná lekcia, ktorá sa dostane cez cestu viac ako informatika. Niekedy sú všetci trochu antsy a chcete ich postaviť na nohy. To je skvelý spôsob, ako pridať nejaké vzrušenie do informatiky."
+      2:
+        text: "Všetkých rozdelíte do dvoch skupín, kde stoja v rade a spustíte štýl relé. Prvá osoba v každej skupine beží na druhú stranu miestnosti, kde máte kresbu milimetrového papiera a na ne čaká prázdny kus papiera. Zapíšu prvý krok k vytvoreniu tohto obrázka, spustia sa späť na svoj riadok, označia ďalšieho hráča, ktorý sa vráti späť a napíše ďalší krok."
+      3:
+        text: "To je skvelý spôsob, ako sa dostať cez myšlienku ladenie, potrebujú korektúry svoju vlastnú prácu, a je potrebné skontrolovať prácu ľudí urobil pred vami. Rýchlo pochopíte, aké dôležité je, aby ste boli opatrní pri kódovaní, keď celý tím závisí od vás."
+    unplug10:
+      1:
+        text: "Táto aktivita vysvetľuje ľahko pochopiteľným spôsobom, ako funguje internet. Vysvetlíme všetku terminológiu, ktorú budete potrebovať, jednoducho, aby študenti mohli simulovať prenos správ, napríklad e-mail."
+      2:
+        text: "Študenti budú vysielať správy a predstierať, že sú jednou z troch spôsobov prenosu. Bezdrôtové pripojenie na internet, DSL alebo optických vlákien. Študenti, ktorí zastupujú wi-fi, budú musieť nosiť správu, ktorú vysielajú na hlave, pretože wifi s najväčšou pravdepodobnosťou upustí od niektorých informácií."
+      3:
+        text: "Študenti, ktorí predstierajú, že sú DSL alebo kábel, budú mať správu na zadnej strane ruky, kde je o niečo menej pravdepodobné, že upustia od informácií. A študenti, ktorí zastupujú optické vlákna, ich budú nosiť oboma rukami. Táto aktivita je skvelý spôsob, ako pochopiť niečo, čo mnohí z nás používajú každý deň."
+    unplug11:
+      1:
+        text: "Takže teraz je čas ustúpiť a pozrieť sa z vtáčej perspektívy na všetko, čo ste urobili v týchto minulých devätnástich hodinách. Je to skvelý čas zavolať študentom, že to, čo práve urobili, je obrovský úspech. Naučili sa viac o týchto lekciách, ako väčšina dospelých vie o počítačovej vede."
+      2:
+        text: "Diskutujte ako triedu alebo v malých skupinách o svojich obľúbených lekciách. Keď sa pozriete späť na všetko, čo ste sa naučili, tu môže žiariť kreativita vašich študentov. Rozdeľte ich do skupín a nechajte ich vytvoriť vlastnú odpojenú lekciu. Priraďte každej skupine kľúčový koncept, ako sú funkcie alebo algoritmy, a mať po ruke veľa remeselných materiálov na použitie. Nechajte každú skupinu prezentovať svoju novú odpojenú aktivitu alebo dokonca vyhradiť ďalší deň na vykonanie niekoľkých aktivít vytvorených študentom."
+      3:
+        text: "Od všetkých tu na Code.org dúfame, že ste si počas tohto kurzu užili TONU zábavy. A či je vaším snom vytvoriť najlepšiu novú aplikáciu, používať programovanie na liečbu chorôb, alebo len chcete byť hviezdnym riešiteľom problémov, tento kurz bol prvým krokom k dosiahnutiu týchto snov."
     starwars_intro:
       1:
+        text: "Ahoj, som Kathleen Kennedyová a som producentkou Star Wars: The Force Awakens. Dnes budete pracovať s jednou z našich hviezd, BB-8. BB-8 je sférický droid. Všetko, čo robí, a každý pohyb, ktorý robí, je riadený počítačovým softvérom. Počítačová veda ovplyvňuje každé odvetvie, od marketingu po zdravotnú starostlivosť až po film. V skutočnosti stovky počítačových inžinierov spolupracovali na natočení filmu ako The Force Awakens."
       2:
+        text: "Ahoj, som Rachel Rose, som senior R & D inžinier v ILM a ja viesť animácie a tvora vývojový tím. V The Force Awakens som zodpovedný za pomoc umelcom rozvíjať súpravy, ktoré sú časťami postavy, ktoré sa pohybujú a ktoré umožňujú postave vyzerať veľmi uveriteľne v ďalekej galaxii."
       3:
+        text: "V ďalšej hodine si postavíme vlastnú hru Star Wars. Naučíme vás základné pojmy programovania. Obvykle programovanie je celý text, ale budeme používať bloky tu tak, že môžeme drag and drop písať programy. Pod kapotou stále vytvárate kód. Po vyskúšaní základov s blokmi vás prepneme na JavaScript, jeden z najpopulárnejších programovacích jazykov na webe."
       4:
+        text: "Ak chcete začať, budeme pracovať s Rey naprogramovať BB-8 chodiť zbierať všetky časti šrotu. Vaša obrazovka je rozdelená na tri časti. Na ľavej strane je herný priestor Star Wars, kde bude spustený kód. Pokyny pre každú úroveň sú napísané pod herným priestorom."
       5:
         text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
       6:
@@ -636,10 +954,29 @@ sk:
       7:
         text: "Ak potiahnem do nášho pracovného priestoru blok pohybVľavo(); a potom kliknem Spustiť, čo sa stane? BB=8 sa pohne doľava o jedno pole v mriežke."
       8:
+        text: "A čo keď chcem, aby BB-8 niečo urobil po Moveleft (); blok? Môžem pridať ďalší blok do nášho programu. Chystám sa vybrať MoveUp (); blok a pretiahnem ho pod mojím MoveLeft (); blokovať, kým sa nezobrazí zvýraznenie. Potom ju pustím a dva bloky sa zacvaknú."
       9:
+        text: "Keď stlačím tlačidlo spustiť znova, BB-8 vykoná príkazy, ktoré sú naskladané zhora nadol na našom pracovnom priestore. Ak chcete niekedy odstrániť blok, jednoducho ho vyberte zo zásobníka a presuňte ho späť do skrinky s nástrojmi."
       10:
+        text: "Po stlačení behu môžete vždy stlačiť tlačidlo reset a vrátiť sa BB-8 späť na začiatok. Teraz sa poďme valcovať!"
+    starwars_typing:
+      1:
+        text: "Vnútri blokov, ktoré sme používali, sú príkazy JavaScript. JavaScript je dnes najpopulárnejším programovacím jazykom pre profesionálnych vývojárov. Bloky sú skvelý spôsob, ako začať učiť kódovať a v skutočnosti, špičkové univerzity ako Harvard a Berkeley začať učiť týmto spôsobom. Ale akonáhle sa naučíme základy, inžinieri píšu kód zadaním, pretože nám to umožňuje ísť rýchlejšie."
+      2:
+        text: "Môžeme zadať stovky príkazov bez toho, aby sme ich museli nájsť v paneli nástrojov alebo ich vytiahnuť. Pretože sa učíte písanie môže byť spočiatku pomalšie, ale chceli sme, aby ste to skúsili."
+      3:
+        text: "V pravom hornom rohu pracovného priestoru môžete kliknúť na tlačidlo Zobraziť text na ľubovoľnej hádanke a prepnúť z blokov na písací kód ako text."
+      4:
+        text: "V ďalšej lekcii vás začneme v režime písania. Tu môžete stále pretiahnuť blok z panela nástrojov alebo zadať názov príkazu. Keď začnete písať, uvidíte názvy možných príkazov, ktoré sa zobrazujú nižšie, kde píšete. Namiesto zadania celého názvu príkazu môžete vybrať jeden z nich, aby ste sa pohybovali rýchlejšie. V mojej práci používam túto funkciu automatického dokončovania po celú dobu pri písaní kódu."
+      5:
+        text: "Keď píšete kód, počítač potrebuje, aby ste boli veľmi presní. Musíte napísať a kapitalizovať názov príkazu presne správne, vrátane zátvoriek a polovice hrubého čreva. Aj pri malej chybe pri písaní nedokáže BB-8 pochopiť kód a nebude sa môcť pohybovať."
+      6:
+        text: "Keď urobíte chybu na riadku, editor ju zvýrazní, aby ste mohli skúsiť zmeniť text a opraviť ho."
+      7:
+        text: "Ak sa zaseknete, vždy môžete začať znova tlačidlom začať znova a kliknutím v pravom hornom rohu môžete kedykoľvek prepnúť späť do režimu blokovania. Dobre, skúsme písať! A ak robíte chyby, nenechajte sa frustrovať. To trvá každý pár pokusov, aby si to správne."
     starwars_events:
       1:
+        text: "Dobrý deň, volám sa Charita Carter. Som senior kreatívny producent tu na Walt Disney Imagineering. Som zodpovedný za vedúce tímy, ktoré skutočne produkujú atrakcie, ktoré naši hostia zažijú. Neustále hľadáme spôsoby, ako môžeme zlepšiť a urobiť lepší zážitok pre našich hostí a technológia je jadrom toho."
       2:
         text: "Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude účinkovať R2-D2 a C-3PO."
       3:
@@ -653,6 +990,7 @@ sk:
       7:
         text: "Aby sme to dosiahli, použijeme príkaz, ktorý sa volá \"whenUp()\" (akHore). Ak presunieš príkaz z panela nástrojov, uvidíš, že začína a končí zloženou (kučeravou) zátvorkou, nie bodko-čiarkou. Toto nám dáva priestor, aby sme dovnútra volžili ďalšie príkazy. Každý príkaz, ktorý vložíme dovnútra zátvoriek, sa spustí, keď hráč stlačí šípku hore."
       8:
+        text: "Chceme, aby R2-D2 ísť hore, takže poďme dať GoUp (); blok vnútri príkazu. A urobíme to isté, aby sa R2-D2 ísť dole."
       9:
         text: "Teraz namiesto toho, aby sme  písali celý kód na ovládanie droida vopred, môžeme nechať R2-D2 reagovať na stlačenie kláves, aby sa pohyoval po obrazovke. Krok po kroku sa tvoja hra stáva viac interaktívnou."
     starwars_congrats:
@@ -668,21 +1006,28 @@ sk:
         text: "Keď je tvoja hra hotová, vyber zdieľať a odkaz zdieľaj so svojimi kamarátmi alebo si hru zahraj na svojom telefóne. Veľa zábavy!"
     starwars_blocks_intro:
       1:
+        text: "Ahoj, som Kathleen Kennedyová a som producentom Star Wars: The Force Awakens. Dnes budete pracovať s jednou z našich hviezd, BB-8. BB-8 je sférický droid. Všetko, čo robí, a každý pohyb, ktorý robí, je riadený počítačovým softvérom. Počítačová veda ovplyvňuje každé odvetvie, od marketingu po zdravotnú starostlivosť až po film. V skutočnosti stovky počítačových inžinierov spolupracovali na natočení filmu ako The Force Awakens."
       2:
+        text: "Ahoj, som Rachel Rose. Som vedúci výskumný a vývojový inžinier v ILM a vediem tím pre vývoj animácií a tvorov. V hre The Force Awakens som zodpovedný za pomoc umelcovi pri vývoji súprav, ktoré sú časťami postavy, ktoré sa pohybujú a ktoré umožňujú postave vyzerať veľmi uveriteľne v galaxii ďaleko, ďaleko."
       3:
         text: "Počas najbližšej hodiny si spolu vybudujeme našu vlastnú hru Star Wars, pričom sa naučíme niekoľko základných programovacích konceptov. Väčšinou programátori vypisujú text, my ale použijeme bloky, ktoré budeme spájať a tým vytvoríme program. Na úvod si spolu s Rey naprogramujeme BB-8 tak, aby chodil a zbieral kovový šrot."
       4:
+        text: "Vaša obrazovka je rozdelená na tri časti. Na ľavej strane je herný priestor Star Wars, kde bude spustený kód. Pokyny pre každú úroveň sú napísané pod herným priestorom."
       5:
         text: "Toto miesto v strede je panel s nástrojmi a každý z týchto blokov je príkaz, ktorému BB-8 rozumie."
       6:
         text: "Biela oblasť vpravo sa nazýva pracovný priestor, na tomto mieste budeme vytvárať náš program."
       7:
+        text: "Ak presuniem blok moveleft (); do nášho pracovného priestoru, čo sa stane? BB-8 sa pohybuje vľavo jeden blok na mriežke."
       8:
+        text: "A čo keď chcem, aby BB-8 niečo urobil po Moveleft (); blok? Môžem pridať ďalší blok do nášho programu. Chystám sa vybrať MoveUp (); blok a pretiahnem ho pod mojím MoveLeft (); blokovať, kým sa nezobrazí zvýraznenie. Potom ju pustím a dva bloky sa zacvaknú. Keď stlačím tlačidlo spustiť znova, BB-8 vykoná príkazy, ktoré sú naskladané zhora nadol na našom pracovnom priestore."
       9:
         text: "Ak niekedy budeš chcieť odstrániť blok, tak ho iba odstráň z pracovnej plochy a presuň ho späť do panela nástrojov."
       10:
+        text: "Po stlačení behu môžete vždy stlačiť tlačidlo reset a dostať sa BB-8 späť na štart. Teraz sa poďme valcovať!"
     starwars_blocks_events:
       1:
+        text: "Dobrý deň, volám sa Charita Carter. Som senior kreatívny producent tu na Walt Disney Imagineering. Som zodpovedný za vedúce tímy, ktoré skutočne produkujú atrakcie, ktoré naši hostia zažijú. Neustále hľadáme spôsoby, ako môžeme zlepšiť a urobiť lepší zážitok pre našich hostí a technológia je jadrom toho."
       2:
         text: "Gratulujem, zvládaš to! BB-8 je naprogramovaný. Myslím, že sme pripravení na niečo zložitejšie. Poďme na to. Keďže sa ti práve podarilo naučiť základy programovania, vráťme sa v čase a vytvorme tvoju vlastnú hru, v ktorej bude účinkovať R2-D2 a C-3PO."
       3:
@@ -692,6 +1037,7 @@ sk:
       5:
         text: "Tu urobíme to, aby sa R2-D2 pohyboval smerom hore a doručil správu pilotovi rebelov, a potom smerom dole k inému pilotovi rebelov. K jeho pohybu použijeme udalosti tak, že hráč použije šípky alebo tlačidlá hore/dole."
       6:
+        text: "Používame blok udalostí WhenUp () a pripojíme k nemu blok GoUp (). Keď hráč stlačí šípku nahor, spustí sa kód pripojený k bloku WhenUp (). A urobíme to isté, aby sa R2-D2 pohybovať nadol. Teraz namiesto písania všetkého kódu na ovládanie nášho droida vopred môžeme nechať R2-D2 reagovať na udalosti stlačenia tlačidiel, ktoré ho pohybujú po obrazovke."
       7:
         text: "Krok po kroku, sa tvoja hra stáva viac interaktívnou."
     starwars_blocks_congrats:
@@ -778,36 +1124,70 @@ sk:
       2:
         text: "Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy. Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme hru od základu, ktorá sa dá zdieľať a hrať na mobile."
       3:
+        text: "Dnes sa naučíme, ako robiť všetky tieto veci jeden po druhom so zábavnými hercami a potom postaviť hru od nuly, ktorú je možné zdieľať a hrať na telefóne."
       4:
+        text: "Vaša obrazovka je rozdelená do troch hlavných častí. Vľavo je herný priestor, kde bude váš program spustený. Pokyny pre každú úroveň sú uvedené nižšie."
       5:
+        text: "Táto stredná oblasť je skrinka na náradie a každý z týchto blokov je kusom kódu."
       6:
         text: "Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program."
       7:
+        text: "Ak chcete začať, budete musieť prepojiť svoje bloky s oranžovou pri spustení bloku. Viaceré bloky môžete prepojiť tak, že ich pretiahnete, kým neuvidíte žltú čiaru a potom sa spolu spojí."
       8:
+        text: "V tejto prvej hádanke prinútime hercov niečo povedať prepojením bloku „povedať“ s blokom pri spustení a zadaním správy. Akonáhle budete mať svoje bloky na svojom mieste, stlačte tlačidlo Spustiť vidieť, čo ste naprogramovali."
       9:
+        text: "Začíname a do konca budete môcť vytvoriť svoju vlastnú hru so všetkými druhmi hráčov, ktorí môžu komunikovať, body, hádzať veci, a zmiznúť navzájom. Je to všetko na vás!"
+    gumball_events:
+      1:
+        text: "Teraz sa dozvieme o niečom, čo všetci herní programátori používajú každý deň. Nazývajú sa udalosti. Udalosť povie vášmu programu, aby počúval, keď sa niečo stane, a keď sa tak stane, hra vykoná akciu."
+      2:
+        text: "Niektoré príklady udalostí sú počúvanie kliknutím myši alebo šípkou nahor alebo nadol alebo dokonca klepnutím na obrazovku."
+      3:
+        text: "Tu budeme prinútiť herca niečo povedať, keď hráč klikne na neho. Použijeme blok pri kliknutí a pripojíme k nemu blok „povedať“. Keď hráč klikne, vykonajú sa všetky bloky pripojené k tomuto bloku."
+      4:
+        text: "Tam sú tiež, keď šípky bloky. Ak prepojíte presunúť bloky na tie, môžete začať pohybovať svojich hercov hore, dole, doľava, doprava, pomocou šípok. Postupne vaša hra je stále viac interaktívne."
     gumball_repeat:
       1:
         text: "Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme, že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré."
       2:
+        text: "Toto je opakovanie navždy bloku. Čokoľvek vnútri tohto bloku sa stane navždy v hre. Ak chceme, aby herec robil niečo opakovane bez toho, aby hráč musel robiť čokoľvek, vložíme tieto bloky do bloku opakovania navždy."
       3:
+        text: "V tejto ďalšej hádanke je naším cieľom pomôcť hercovi robiť prácu nepretržite. Zistite, ako fungujú opakované príkazy, vám ušetrí veľa času neskôr, keď si vytvoríte vlastnú hru."
     iceage_intro:
       1:
         text: "Ak by si chcel vytvoriť svoju vlastnú hru, je to naozaj jednoduché. Potrebuješ poznať len zopár základov programovania a za chvíľu už môžeš hrať hru ktorú si si sám vytvoril."
       2:
         text: "Máš obľúbenú videohru? Teraz urobíme krok bližšie k vytváraniu takých hier, ako v Play Labe. Dobré hry majú príbeh a každý príbeh má postavy. Postavy sa rozprávajú, pohybujú sa a navzájom na seba pôsobia. Možno na základe pravidiel hry aj získavajú body. Dnes sa budeme učiť, ako spraviť všetky tieto veci jednu za druhou so zábavnými postavičkami, a potom vytvoríme hru od základu, ktorá sa dá zdieľať a hrať na mobile."
       3:
+        text: "Dnes sa naučíme, ako robiť všetky tieto veci jeden po druhom so zábavnými hercami a potom postaviť hru od nuly, ktorú je možné zdieľať a hrať na telefóne."
       4:
+        text: "Vaša obrazovka je rozdelená do troch hlavných častí. Vľavo je herný priestor, kde bude váš program spustený. Pokyny pre každú úroveň sú uvedené nižšie."
       5:
+        text: "Táto stredná oblasť je skrinka na náradie a každý z týchto blokov je kusom kódu."
       6:
         text: "Biela oblasť vpravo sa nazýva pracovný priestor a je to miesto, kde budeme budovať náš program."
       7:
+        text: "Ak chcete začať, budete musieť prepojiť svoje bloky s oranžovou pri spustení bloku. Viaceré bloky môžete prepojiť tak, že ich pretiahnete, kým neuvidíte žltú čiaru a potom sa spolu spojí."
       8:
+        text: "V tejto prvej hádanke prinútime hercov niečo povedať prepojením bloku „povedať“ s blokom pri spustení a zadaním správy. Akonáhle budete mať svoje bloky na svojom mieste, stlačte tlačidlo Spustiť vidieť, čo ste naprogramovali."
       9:
+        text: "Začíname a do konca budete môcť vytvoriť svoju vlastnú hru so všetkými druhmi hráčov, ktorí môžu komunikovať, body, hádzať veci, a zmiznúť navzájom. Je to všetko na vás!"
+    iceage_events:
+      1:
+        text: "Teraz sa dozvieme o niečom, čo všetci herní programátori používajú každý deň. Nazývajú sa udalosti. Udalosť povie vášmu programu, aby počúval, keď sa niečo stane, a keď sa tak stane, hra vykoná akciu."
+      2:
+        text: "Niektoré príklady udalostí sú počúvanie kliknutím myši alebo šípkou nahor alebo nadol alebo dokonca klepnutím na obrazovku."
+      3:
+        text: "Tu budeme prinútiť herca niečo povedať, keď hráč klikne na neho. Použijeme blok pri kliknutí a pripojíme k nemu blok „povedať“. Keď hráč klikne, vykonajú sa všetky bloky pripojené k tomuto bloku."
+      4:
+        text: "Tam sú tiež, keď šípky bloky. Ak prepojíte presunúť bloky na tie, môžete začať pohybovať svojich hercov hore, dole, doľava, doprava, pomocou šípok. Postupne vaša hra je stále viac interaktívne."
     iceage_repeat:
       1:
         text: "Dokážeš si predstaviť, že by si musel niečo opakovať donekonečna? Dúfajme, že nikdy nebudeš musieť pretože počítače sú v opakovaní skutočne dobré."
       2:
+        text: "Toto je opakovanie navždy bloku. Čokoľvek vnútri tohto bloku sa stane navždy v hre. Ak chceme, aby herec robil niečo opakovane bez toho, aby hráč musel robiť čokoľvek, vložíme tieto bloky do bloku opakovania navždy."
       3:
+        text: "V tejto ďalšej hádanke je naším cieľom pomôcť hercovi robiť prácu nepretržite. Zistite, ako fungujú opakované príkazy, vám ušetrí veľa času neskôr, keď si vytvoríte vlastnú hru."
     mc_2016_intro:
       1:
         text: "Ahoj, volám sa Jens a som hlavná kreatívna dizajnérka Minecraftu. V ďalšej hodine budeš vytvárať svoju vlastnú hru Minecraft. Toto vyzerá ako Minecraft, ale svet sa zastavil. Ovca sa nehýbe, kurčatá nekladú vajcia a zombíci stoja na mieste. Je na tebe aby si pridal kód, ktorý spraví Minecraft svet funkčným."
@@ -1108,8 +1488,10 @@ sk:
     csd_concept_how_computers_work:
       1:
         image: 'notes/csd_concept_how_computers_work_1.png'
+        text: "Všade, kam sa pozriete, počítače menia svet. Či už sú na našich stolných počítačoch, v našich domovoch, v našich vreckách alebo takmer kdekoľvek inde. Ale zatiaľ čo väčšina z nás používa túto revolučnú technológiu denne, často sa nepýtame: „Ako fungujú počítače?“ V tejto sérii sa dozviete, ako počítače skutočne fungujú, počnúc tým, čo robí počítač počítačom. Potom sa pozriete na to, ako sú informácie reprezentované vo vnútri počítača pomocou malých elektrických signálov, ktoré sa zapínajú a vypínajú rýchlosťou."
       2:
         image: 'notes/csd_concept_how_computers_work_2.png'
+        text: "Potom sa dozviete, ako počítače používajú obvody na to, aby robili všetko od jednoduchej matematiky až po simuláciu celých virtuálnych svetov. Ďalej budete oddialiť a pozrieť sa na rôzne časti počítača, ktoré skutočne vstup, výstup, a ukladať všetky tieto informácie. Nakoniec sa pozriete na to, čo kód vlastne je a ako softvér ovláda hardvér. Či už ste zvedaví na zariadenia, ktoré používate každý deň, alebo chcete navrhnúť inovácie budúcnosti, prvým krokom je naučiť sa, ako počítače fungujú."
     csd_concept_computer:
       1:
         image: 'notes/csd_concept_computer_1.png'
@@ -1144,113 +1526,166 @@ sk:
     csd_concept_binary_data:
       1:
         image: 'notes/csd_concept_binary_data_1.png'
+        text: "Ahoj! Volám sa Limor Fried a som inžinier tu v Adafruit Industries. A tu robím inžinierstvo a dizajn a navrhujem obvody pre módu, hudbu a technológiu."
       2:
         image: 'notes/csd_concept_binary_data_2.png'
+        text: "Volám sa Federico Gomez Suarez, a ja som vývojár softvéru s Microsoft Hack for Good. A pozerám sa na používanie technológie, ktoré nám pomôžu vyriešiť niektoré z veľkých sociálnych problémov našej doby."
       3:
         image: 'notes/csd_concept_binary_data_3.png'
+        text: "Možno ste počuli, že počítače pracujú na jedniach a nulách. Ale takmer nikto dnes skutočne nezaoberá priamo týmito a nulami. Ale tie a nuly hrajú veľkú úlohu v tom, ako počítače pracujú vo vnútri."
       4:
         image: 'notes/csd_concept_binary_data_4.png'
+        text: "Vo vnútri počítača sú elektrické drôty a obvody, ktoré nesú všetky informácie v počítači. Ako ukladáte alebo reprezentujete informácie pomocou elektriny?"
       5:
         image: 'notes/csd_concept_binary_data_5.png'
+        text: "No, ak máte jediný drôt s elektrickou energiou, signál môže byť zapnutý alebo vypnutý. To nie je veľa možností, ale je to naozaj dôležitý začiatok. S jedným drôtom, môžeme predstavovať áno alebo nie, true alebo false, jeden alebo nula, alebo čokoľvek iné s iba dvoma možnosťami. Tento stav zapnutia/vypnutia jedného drôtu sa nazýva trochu a je to najmenšia informácia, ktorú môže počítač uložiť."
       6:
         image: 'notes/csd_concept_binary_data_6.png'
+        text: "Ak používate viac drôtov, získate viac bitov: viac a núl. S viacerými bitmi môžete reprezentovať zložitejšie informácie. Ale aby sme to pochopili, musíme sa dozvedieť o niečom, čo sa nazýva binárny číselný systém."
       7:
         image: 'notes/csd_concept_binary_data_7.png'
+        text: "V desatinnom číselnom systéme, máme desať číslic od nuly do deviatich, a to je, ako sme sa všetci naučili počítať. V systéme binárnych čísel máme iba dve číslice: nulu a jednu. S týmito dvoma číslicami môžeme počítať až ľubovoľné číslo."
       8:
         image: 'notes/csd_concept_binary_data_8.png'
+        text: "Tu je návod, ako to funguje. V desatinnom číselnom systéme sme všetci zvyknutí, každá pozícia v čísle má inú hodnotu. K dispozícii je 1 pozícia, pozícia 10, pozícia 100 a tak ďalej. Napríklad 9 v pozícii 100 je 900. V binárnom, každá pozícia tiež nesie hodnotu. Ale namiesto toho, aby sme sa vždy vynásobili 10, vynásobíme 2. Takže je tu pozícia 1, pozícia 2, pozícia 4, pozícia 8 a tak ďalej. Napríklad číslo 9 v binárnom čísle je 1001. Ak chcete vypočítať hodnotu, pridáme 1 krát 8 plus 0 krát 4 plus 0 krát 2 plus 1 krát 1. Takmer nikto nerobí túto matematiku, pretože počítače to robia za nás. Čo je dôležité je, že ľubovoľné číslo môže byť reprezentovaný iba tie a nuly, alebo banda drôtov, ktoré sú zapnuté alebo vypnuté. Čím viac drôtov používate, tým väčšie čísla môžete uložiť. S 8 drôtmi môžete ukladať čísla medzi 0 a 255. To je 8. S iba 32 drôty, môžete uložiť celú cestu od 0 na viac ako 4 miliardy. Pomocou binárneho číselného systému môžete reprezentovať ľubovoľné číslo, ktoré sa vám páči."
       9:
         image: 'notes/csd_concept_binary_data_9.png'
+        text: "Ale čo iné typy informácií? Páči sa vám text, obrázky alebo zvuk? Ukazuje sa, že všetky tieto veci môžu byť tiež reprezentované číslami. Premýšľajte o všetkých písmenách v abecede. Každému písmenu môžete priradiť číslo. A môže byť 1, B môže byť 2, a tak ďalej. Potom môžete reprezentovať akékoľvek slovo alebo odsek ako postupnosť čísel. A ako sme videli, tieto čísla môžu byť uložené ako zapnuté alebo vypnuté elektrické signály. Každé slovo, ktoré vidíte na každej webovej stránke alebo telefóne, je reprezentované pomocou systému, ako je tento."
       10:
         image: 'notes/csd_concept_binary_data_10.png'
+        text: "Teraz zvážime fotografie, videá a všetku grafiku, ktorú vidíte na obrazovke."
       11:
         image: 'notes/csd_concept_binary_data_11.png'
+        text: "Všetky tieto obrázky sú vyrobené z malinkých bodiek nazývaných pixely a každý pixel má farbu. Každá z farieb môže byť reprezentovaná číslami. Keď vezmete do úvahy typický obraz má milióny týchto pixelov, a typické video ukazuje 30 snímok za sekundu teraz hovoríme o veľa dát tu."
       12:
         image: 'notes/csd_concept_binary_data_12.png'
+        text: "Každý zvuk je v podstate sériou vibrácií vo vzduchu. Vibrácie môžu byť graficky znázornené ako priebeh. Akýkoľvek bod na tomto tvare vlny môže byť reprezentovaný číslom. A týmto spôsobom môže byť akýkoľvek zvuk rozdelený na sériu čísel. Ak chcete zvuk vyššej kvality, vyberiete 32-bitový zvuk alebo 8-bitový zvuk. Viac bitov znamená vyšší rozsah čísel."
       13:
         image: 'notes/csd_concept_binary_data_13.png'
+        text: "Keď používate počítač na písanie kódu alebo si vytvoríte vlastnú aplikáciu, nemáte čo do činenia priamo s týmito a nulami. Ale budete sa zaoberať obrázkami alebo zvukom alebo videom. Takže ak chcete pochopiť, ako počítače pracujú vo vnútri, všetko príde na tieto jednoduché a nuly a elektrické signály v obvodoch za nimi."
     csd_concept_circuits_logic:
       1:
         image: 'notes/csd_concept_circuits_logic_1.png'
+        text: "Jednou z najlepších vecí, ktoré som objavil o obvodoch, je obvody môžu byť umelecká forma, ako keby som mal kreatívny nápad, môžem získať ten kreatívny nápad pomocou obvodov. Takže ak máte nápady, môžete použiť technológiu na oživenie týchto myšlienok."
       2:
         image: 'notes/csd_concept_circuits_logic_2.png'
+        text: "Každý vstup alebo výstup počítača je v skutočnosti typom informácií, ktoré môžu byť reprezentované zapnutím alebo vypnutím elektrických signálov alebo jedníc a núl."
       3:
         image: 'notes/csd_concept_circuits_logic_3.png'
+        text: "Aby bolo možné spracovať informácie, ktoré prichádzajú ako vstup, a aby sa informácie, ktoré sú výstupné, počítač musí upraviť a kombinovať vstupné signály. Na tento účel počítač používa milióny malinných elektronických komponentov, ktoré sa spájajú a vytvárajú obvody."
       4:
         image: 'notes/csd_concept_circuits_logic_4.png'
+        text: "Pozrime sa bližšie na to, ako môžu obvody upravovať a spracovávať informácie, ktoré sú zastúpené v jedniach a nulách. Jedná sa o neuveriteľne jednoduchý obvod. Vyžaduje elektrický signál, zapína alebo vypne a preklopí ho. Takže v prípade, že signál dáte to je 1, obvod vám dáva 0, a ak dáte obvodu 0, to vám dáva 1. Signál, ktorý ide, nie je rovnaký ako signál, ktorý vychádza, a tak nazývame tento obvod NIE."
       5:
         image: 'notes/csd_concept_circuits_logic_5.png'
+        text: "Zložitejšie obvody môžu mať viac signálov a kombinovať ich a poskytnúť vám iný výsledok. V tomto príklade bude obvod trvať dva elektrické signály, teraz každý z nich môže byť 1 alebo 0. Ak niektorý zo signálov prichádzajúcich je 0, potom výsledok je tiež 0. Tento obvod vám dá iba 1, ak prvý signál a druhý signál sú obaja 1, a tak nazývame obvod A."
       6:
         image: 'notes/csd_concept_circuits_logic_6.png'
+        text: "Existuje veľa malých obvodov, ako je tento, ktoré vykonávajú jednoduché logické výpočty. Spojením týchto obvodov môžeme vytvoriť zložitejšie obvody, ktoré vykonávajú zložitejšie výpočty."
       7:
         image: 'notes/csd_concept_circuits_logic_7.png'
+        text: "Môžete napríklad vytvoriť obvod, ktorý pridá 2 bity spolu nazývané zmija. Tento obvod trvá 2 jednotlivé bity, každý z nich 1 alebo 0, a spočíta ich dohromady pre výpočet súčtu. Súčet môže byť 0 plus 0 sa rovná 0, 0 plus 1 sa rovná 1, alebo 1 plus 1 sa rovná 2. Potrebujete dva drôty vychádzajúce, pretože to môže trvať až dve binárne číslice reprezentovať súčet. Akonáhle budete mať jeden zmija pre pridanie dvoch bitov informácií, môžete dať dohromady násobky týchto zmija obvodov side-by-side pridať dohromady oveľa väčšie čísla."
       8:
         image: 'notes/csd_concept_circuits_logic_8.png'
+        text: "Napríklad, tu je návod, ako 8-bitové sčítanie pridáva čísla 25 a 50. Každé číslo je znázornené pomocou 8 bitov, čo má za následok 16 rôznych elektrických signálov, ktoré idú do obvodu. Obvod pre 8-bitový smijač má vo vnútri veľa malých sčítavačov, ktoré spolu vypočítajú súčet."
       9:
         image: 'notes/csd_concept_circuits_logic_9.png'
+        text: "Rôzne elektrické obvody môžu vykonávať ďalšie jednoduché výpočty, ako je odčítanie alebo násobenie. V skutočnosti, všetky spracovanie informácií, ktoré váš počítač robí, je len veľa a veľa malých jednoduchých operácií dohromady. Každá jednotlivá operácia vykonaná počítačom je taká jednoduchá, že by ju mohol urobiť človek, ale tieto obvody vo vnútri počítačov sú oveľa rýchlejšie."
       10:
         image: 'notes/csd_concept_circuits_logic_10.png'
+        text: "Späť v deň, tieto obvody boli veľké a neohrabaný, a 8-bitový smij mohol byť rovnako veľký ako chladnička, a to by trvať niekoľko minút pre nich vykonať jednoduchý výpočet. Dnes sú počítačové obvody mikroskopické a rýchlejšie. Prečo sú menšie počítače tiež rýchlejšie? No, pretože čím menší je obvod, tým menšia vzdialenosť musí elektrický signál prejsť. Elektrina sa pohybuje takmer rýchlosťou svetla, a preto moderné obvody môžu vykonávať miliardy výpočtov za sekundu."
       11:
         image: 'notes/csd_concept_circuits_logic_11.png'
+        text: "Či už hráte hru, nahrávate video alebo skúmate vesmír, všetko, čo by ste mohli robiť s technológiou, si vyžaduje veľmi rýchle spracovanie množstva informácií. Pod touto zložitosťou je len veľa malinkých malých obvodov, ktoré premieňajú binárne signály na webové stránky, videá, hudbu a hry. Tieto obvody nám môžu dokonca pomôcť dekódovať DNA na diagnostiku a liečbu chorôb. Čo by ste chceli robiť so všetkými týmito obvodmi?"
     csd_concept_memory_cpu_input_output:
       1:
         image: 'notes/csd_concept_memory_cpu_input_output_1.png'
+        text: "Ahoj, volám sa Madison Maxey. Mám spoločnosť s názvom Loomia a zameriavame sa na výrobu inteligentných tkanín pre inteligentné oblečenie a inteligentné mäkké dobré výrobky. Obloha je limit, pokiaľ ide o textil."
       2:
         image: 'notes/csd_concept_memory_cpu_input_output_2.png'
+        text: "Volám sa Danielle Applestone a som generálny riaditeľ spoločnosti Othermachine Company. Vyrábame stolnú frézku. Frézka berie rotujúci rezný nástroj a presúva ho cez materiál, aby vytvoril 3D objekt."
       3:
         image: 'notes/csd_concept_memory_cpu_input_output_3.png'
+        text: "Pod kapotou všetky počítače robia rovnaké štyri základné veci. Zadávajú informácie, ukladajú a spracovávajú informácie a potom výstupné informácie. Každá z týchto vecí sa vykonáva inou časťou počítača."
       4:
         image: 'notes/csd_concept_memory_cpu_input_output_4.png'
+        text: "Existujú vstupné zariadenia, ktoré prijímajú vstup z vonkajšieho sveta a konvertujú ho na binárne informácie. Na uloženie týchto informácií je pamäť. K dispozícii je centrálna procesorová jednotka alebo CPU, kde sa vykonávajú všetky výpočty. A nakoniec existujú výstupné zariadenia, ktoré berú informácie a konvertujú ich na fyzický výstup."
       5:
         image: 'notes/csd_concept_memory_cpu_input_output_5.png'
+        text: "Poďme sa najprv rozprávať o vstupe. Počítače môžu mať veľa rôznych typov vstupov, ako je klávesnica počítača, touchpad telefónu, fotoaparát, mikrofón alebo GPS. Ale aj senzory na aute, termostatu alebo drone sú tiež rôzne vstupné zariadenia."
       6:
         image: 'notes/csd_concept_memory_cpu_input_output_6.png'
+        text: "Teraz sa pozrime na jednoduchý príklad toho, ako vstup prechádza počítačom a stáva sa výstupom. Keď stlačíte kláves na klávesnici - povedzme písmeno „B“. Klávesnica prevedie písmeno na číslo. Toto číslo sa odosiela ako binárne, jedničiek a núl do počítača."
       7:
         image: 'notes/csd_concept_memory_cpu_input_output_7.png'
+        text: "Počnúc týmto číslom CPU vypočíta, ako zobraziť písmeno „B“ pixel po pixeloch. CPU požaduje podrobné pokyny z pamäte, ktoré mu hovoria, ako nakresliť písmeno „B“. CPU spúšťa tieto pokyny a výsledky ukladá ako pixely do pamäte."
       8:
         image: 'notes/csd_concept_memory_cpu_input_output_8.png'
+        text: "Nakoniec sa táto informácia pixelov odosiela binárne na obrazovku. Obrazovka je výstupné zariadenie, ktoré prevádza binárne signály na malé svetlá a farby, ktoré tvoria to, čo vidíte."
       9:
         image: 'notes/csd_concept_memory_cpu_input_output_9.png'
+        text: "To všetko sa deje tak rýchlo, že sa cíti okamžite, ale na zobrazenie každého písmena počítač spustí tisíce inštrukcií, počnúc okamihom, keď prst stlačí kľúčový bod."
       10:
         image: 'notes/csd_concept_memory_cpu_input_output_10.png'
+        text: "V tomto príklade bolo výstupným zariadením obrazovka, ale existuje veľa rôznych typov výstupu, ktoré berú binárny signál z počítača a robia niečo vo fyzickom svete. Napríklad reproduktor prehrá zvuk a 3D tlačiareň vytlačí objekt. Výstupné zariadenia môžu tiež ovládať fyzický pohyb ako robotické rameno, motor automobilu alebo rezný nástroj frézky, ktorý moja spoločnosť vyrába. Nové typy vstupov a výstupov umožňujú počítačom komunikovať so svetom úplne novými spôsobmi. Pomohli tomu vylepšenia rýchlosti a veľkosti pamäte a CPU."
       11:
         image: 'notes/csd_concept_memory_cpu_input_output_11.png'
+        text: "Čím zložitejšia je úloha a čím viac informácií je vstup alebo výstup, tým viac výpočtového výkonu a pamäte počítač potrebuje. Písanie písmen na obrazovke môže byť jednoduché, ale robiť komplikovanú 3D grafiku alebo nahrávať film s vysokým rozlíšením, moderné počítače majú často viac procesorov na spracovanie všetkých týchto informácií a veľa gigabajtov pamäte na ich uloženie."
       12:
         image: 'notes/csd_concept_memory_cpu_input_output_12.png'
+        text: "Bez ohľadu na to, čo chcete robiť s počítačom, každá akcia je o: zadávanie informácií z fyzického sveta, ukladanie a spracovanie týchto informácií a získanie nejakého výstupu späť do fyzického sveta."
     csd_concept_hardware_software:
       1:
         image: 'notes/csd_concept_hardware_software_1.png'
+        text: "Ahoj, volám sa Erica Gomez a som inžiniersky manažér na Amazon.com. Jednou z najlepších vecí na práci v oblasti technológií a najmä v Amazone je to, že si so sebou prinášam svojho psa do práce každý deň. Mojou úlohou je pomôcť, aby sa ubezpečil softvér dostane von z dverí a jej úlohou je zdriemnuť pod mojím stolom a chrápanie veľmi hlasno."
       2:
         image: 'notes/csd_concept_hardware_software_2.png'
+        text: "Volám sa Jerome Holman, a som programový manažér v tíme Xbox a mám naozaj zábavnú prácu: V podstate prináša hardvér a softvér dohromady, aby vám všetky hry, ktoré máte radi na vašom Xboxe."
       3:
         image: 'notes/csd_concept_hardware_software_3.png'
+        text: "Keď sa pozriete dovnútra výpočtového zariadenia, uvidíte veľa obvodov, čipov, drôtov, reproduktorov, zástrčiek a všetkých druhov ďalších vecí. Toto je hardvér."
       4:
         image: 'notes/csd_concept_hardware_software_4.png'
+        text: "Ale to, čo nevidíte, je softvér. Softvér je všetky počítačové programy, alebo kód, beží na tomto počítači. Softvér môže byť čokoľvek, od aplikácií a hier po webové stránky a softvér na vedu o údajoch, ktorý ja a moje tímy používame v Amazone, aby sme pochopili, ako sa zákazníci správajú."
       5:
         image: 'notes/csd_concept_hardware_software_5.png'
+        text: "Ako však hardvér a softvér vzájomne spolupracujú? Začnime pri pohľade na centrálnu procesorovú jednotku počítača alebo CPU."
       6:
         image: 'notes/csd_concept_hardware_software_6.png'
+        text: "CPU je hlavný čip, ktorý riadi všetky ostatné časti počítača. CPU musí robiť rôzne veci, takže vo vnútri má menšie, jednoduchšie časti, ktoré zvládajú konkrétne úlohy. Má obvody na jednoduchú matematiku a logiku. Má ďalšie obvody na odosielanie a prijímanie informácií do az rôznych častí počítača."
       7:
         image: 'notes/csd_concept_hardware_software_7.png'
+        text: "Skutočným kúzlom CPU je to, ako vie, ktoré obvody použiť a kedy ich použiť. CPU prijíma jednoduché príkazy, ktoré mu hovoria, ktorý obvod použiť na vykonanie konkrétnej úlohy. Napríklad príkaz „add“ hovorí CPU, aby použil svoj vonkajší obvod na výpočet nového čísla. A potom príkaz „store“ povie CPU, aby použil iný obvod na uloženie tohto výsledku do pamäte."
       8:
         image: 'notes/csd_concept_hardware_software_8.png'
+        text: "Rovnako ako čísla, všetky tieto jednoduché príkazy môžu byť reprezentované v binárnych a nulách alebo zapínanie a vypnutie elektrických signálov. Binárne príkazy sú uložené v pamäti a CPU ich načíta a vykoná postupne jeden po druhom. Táto postupnosť príkazov je v skutočnosti veľmi jednoduchý počítačový program."
       9:
         image: 'notes/csd_concept_hardware_software_9.png'
+        text: "Binárny kód je najzákladnejšou formou softvéru a riadi všetok hardvér počítača. V týchto dňoch, nikto píše softvér v binárnom. Trvalo by to večne!"
       10:
         image: 'notes/csd_concept_hardware_software_10.png'
+        text: "Dnes softvér, ktorý píšeme, vyzerá skôr takto (Python), alebo toto (Ruby), alebo dokonca toto (Blockly). Programovacie jazyky, ako sú tieto umožňujú zadávať príkazy v niečom, čo vyzerá podobne ako angličtina."
       11:
         image: 'notes/csd_concept_hardware_software_11.png'
+        text: "Ak chcete nakresliť obdĺžnik na obrazovke, potrebujete iba jeden príkaz. Tento príkaz na vysokej úrovni je prevedený na stovky alebo tisíce jednoduchších binárnych príkazov, ktorým CPU rozumie. Softvér hovorí CPU, čo má robiť, ale keď počúvate hudbu, prehliadate web a chatujete s priateľom, váš počítač používa viacero kusov softvéru naraz."
       12:
         image: 'notes/csd_concept_hardware_software_12.png'
+        text: "Tak, ako sa všetky tieto programy dostanú do počítača na prvom mieste a ako ich môže CPU spustiť naraz? Ak chcete zistiť, musíme sa pozrieť na operačný systém."
       13:
         image: 'notes/csd_concept_hardware_software_13.png'
+        text: "Operačný systém počítača je hlavný program, ktorý riadi, ako softvér používa hardvér počítača. Napríklad som pomohol vytvoriť operačný systém Windows, ktorý beží na väčšine osobných počítačov."
       14:
         image: 'notes/csd_concept_hardware_software_14.png'
+        text: "Operačný systém je program so špeciálnymi schopnosťami, ktoré mu umožňujú ovládať iný softvér v počítači. Umožňuje vám nainštalovať nové programy ich načítaním do pamäte počítača. Rozhoduje o tom, kedy je program spustený centrálnou procesorovou jednotkou a či tento program môže pristupovať k vstupným a výstupným zariadeniam počítača. A keď si myslíte, že váš počítač beží veľa programov naraz, v skutočnosti je to operačný systém, ktorý rýchlo prepína medzi programami zdieľajúcimi tento procesor za zlomky sekundy."
       15:
         image: 'notes/csd_concept_hardware_software_15.png'
+        text: "Vo vnútri každého počítača je operačný systém riadiaci softvér, ktorý riadi hardvér počítača."
       16:
         image: 'notes/csd_concept_hardware_software_16.png'
+        text: "Tento softvér je séria príkazov z jednoduchého binárneho kódu, a že binárny kód je len elektrické signály pretekajúce miliardy malých obvodov."
       17:
         image: 'notes/csd_concept_hardware_software_17.png'
+        text: "Počítače majú potenciál robiť všetky druhy úžasných vecí. Ale jediná vec, ktorá robí počítač inteligentným alebo užitočným, ste vy. Keď sa naučíte kódovať dostanete definovať problém, ktorý chcete vyriešiť, a napísať softvér, ktorý premení tieto myšlienky do reality."
     hoc_dance_warmup:
       1:
         text: "Hodina Kódu | Tanečná Párty: Zahrej sa"
@@ -1388,6 +1823,98 @@ sk:
         text: "Skús použiť bloky s podmienkou ak a zopakuj si kód."
       8:
         text: "Wow! Nettyine ruiny sú úžasné. Musím sa už odsťahovať od svojich rodičov. Čo si myslíš? Sú podmienky správnou voľbou na vyriešenie záverečných úloh? Dajme tomu šancu."
+    mc_2018_closing:
+      1:
+        text: "Amy Lee33: Gratulujeme! Urobil si to!"
+      2:
+        text: "Squid: Gratulujeme!"
+      3:
+        text: "Netty: Urobil si to! Blahoželáme!"
+      4:
+        text: "Tomohawk: Gratulujeme!"
+      5:
+        text: "Aký skvelý deň! Všetok lov pokladov nás viedol k tomu, aby sme postavili potrubie Minecraft, našli škrupiny Nautilus a objavili truhly s pokladom. Len milujem farbu prismarine. Naučili sme sa tiež, ako kódovať slučkami a podmienkami."
+      6:
+        text: "Keď už hovoríme o kódovaní, je tu ešte jedna úroveň tejto úlohy. Ste na to, dobrodruhovia?"
+      7:
+        text: "Je to úroveň hry zadarmo a môžete dať svoje kódovacie schopnosti používať a stavať niečo neuveriteľné."
+      8:
+        text: "Hmmm... miesto, kde môžete skryť svoj poklad, podvodnú pamiatku, koralový hrad? Ahhh... toľko nápadov. Skúste použiť slučky na vytvorenie opakovanej akcie a podmienené podmienky na prípravu na všetky tie nepredvídateľné scenáre."
+      9:
+        text: "Ste určite osvedčil sami neohrozený kodér teraz, a ja sa nemôžem dočkať, až uvidím, čo stavať. A dúfajme, že vaše dobrodružstvo s kódom nekončí tu. Bon Voyage!"
+    teaching_csf_how_it_works:
+      1:
+        image: 'notes/teaching_cs_fundamentals_1.png'
+        text: "Tento kurz je rozdelený do etáp."
+      2:
+        image: 'notes/teaching_cs_fundamentals_2.png'
+        text: "Prvých niekoľko etáp predstaví, čo je počítačová veda, ako aj niektoré kľúčové slovné zásoby."
+      3:
+        image: 'notes/teaching_cs_fundamentals_3.png'
+        text: "Ďalej sa naučíte, ako kódovať rovnakým spôsobom, ako budú vaši študenti. Záverečné fázy kurzu vám pomôžu vytvoriť plán na výučbu počítačovej vedy vo vašej triede. Počas celého kurzu uvidíte príklady zapojených - alebo online - lekcií, ako aj odpojených lekcií, ktoré sa vykonávajú bez počítača."
+      4:
+        image: 'notes/teaching_cs_fundamentals_4.png'
+        text: "Vzdelávacia platforma bude sledovať váš pokrok, takže si môžete kedykoľvek vyzdvihnúť tam, kde ste prestali."
+    what_is_cs:
+      1:
+        image: 'notes/what_is_cs.png'
+        text: "Kódovanie je súbor pokynov, ktoré dáte počítaču. Počítačová veda je oblasť, kde ľudia využívajú silu počítačov na riešenie veľkých problémov. Počítačová veda zahŕňa kódovanie, ale zahŕňa aj ďalšie veci, napríklad to, ako internet funguje a ovplyvňuje spoločnosť, čo robiť s veľkými dátami a ako rozobrať veľké problémy. Počítačová veda je o riešení problémov, kritickom myslení a vytrvalosti."
+    writing_first_program:
+      1:
+        image: 'notes/writing_first_program_1.png'
+        text: "Code.org používa vizuálny, drag and drop programovací jazyk s názvom Blockly. Blokálne používa farebné pokyny nazývané bloky na vytváranie programov a riešenie hádaniek."
+      2:
+        image: 'notes/writing_first_program_2.png'
+        text: "Každá puzzle má štyri časti."
+      3:
+        image: 'notes/writing_first_program_3.png'
+        text: "Hracia plocha je vľavo, kde váš program beží."
+      4:
+        image: 'notes/writing_first_program_4.png'
+        text: "Stred má oblasť panela nástrojov, ktorá má všetky bloky, ktoré potrebujete."
+      5:
+        image: 'notes/writing_first_program_5.png'
+        text: "Na pravej strane je pracovný priestor, kde budete ťahať bloky vytvoriť svoj program."
+      6:
+        image: 'notes/writing_first_program_6.png'
+        text: "Nad pracovným priestorom sú pokyny pre každú hádanku."
+      7:
+        image: 'notes/writing_first_program_7.png'
+        text: "Ak z panela nástrojov vytiahnete príliš veľa blokov, stačí pretiahnuť ďalší blok späť do panela nástrojov. Stlačte Spustiť vyskúšať program, a Reset skúste to znova."
+    repeat_block:
+      1:
+        image: 'notes/repeat_block.png'
+        text: "Blok opakovania umožňuje slučku kódu vnútri to toľkokrát, koľkokrát ho poviete."
+    what_is_an_event:
+      1:
+        image: 'notes/what_is_an_event.png'
+        text: "Udalosť povie vášmu programu, aby počúval, aby sa niečo stalo. Keď sa to stane, program vykoná akciu. Počítač môže počúvať kliknutie myšou, stlačením tlačidla so šípkou alebo klepnutím na obrazovku."
+    lesson_planning:
+      1:
+        image: 'notes/lesson_planning_1.png'
+        text: "Lekcie CS Fundamentals začínajú prehľadmi, aby ste vedeli, čo bude lekcia pokrývať."
+      2:
+        image: 'notes/lesson_planning_2.png'
+        text: "Lekcie majú zahrievania, aktivity a zábaly. Ak si chcete vytvoriť vlastné plány lekcií, možno budete chcieť mať na pamäti tieto tipy."
+      3:
+        image: 'notes/lesson_planning_3.png'
+        text: "1. Pokúste sa použiť dizajn špirálovitých osnov. Predstavte koncepty raz a potom ich znova navštívte."
+      4:
+        image: 'notes/lesson_planning_4.png'
+        text: "2. Vytvorte kombinovaný zážitok z učenia kombináciou online lekcií s odpojenými lekciami."
+      5:
+        image: 'notes/lesson_planning_5.png'
+        text: "3. Rozdeľte svoje učebné osnovy na menšie kúsky."
+      6:
+        image: 'notes/lesson_planning_6.png'
+        text: "4. Uistite sa, že ste v súlade s miestnymi normami a zručnosťami vysokej školy a kariérnej pripravenosti."
+    opd_closing:
+      1:
+        image: 'notes/opd_closing_1.png'
+        text: "Blahoželáme! Dokončili ste online kurz Teaching Computer Science Fundamentals. Teraz ste súčasťou rastúcej komunity učiteľov pripravujúcich svojich študentov na budúcnosť."
+      2:
+        image: 'notes/opd_closing_2.png'
+        text: "Ak potrebujete ďalšiu podporu, pozrite sa na tieto zdroje: 1. forum.code.org 2. @teachcode na Twitteri 3. studio.code.org "
     hoc_dance_warmup_2019:
       1:
         text: "Hodina Kódu | Tanečná Párty: Zahrej sa"
@@ -1408,6 +1935,7 @@ sk:
       9:
         text: "Inštrukcie ku každej úrovni budú tu, na vrchu obrazovky. Ak potrebuješ poradiť, stačí kliknúť na žiarovku."
       10:
+        text: "Ak chcete začať, urobme nového tanečníka s týmto červeným blokom. Najskôr ho pretiahnite z panela nástrojov a zacvaknite ho pod týmto oranžovým blokom „setup“. Táto tanečnica je mačka."
       11:
         text: "S týmto môžeš tiež zmeniť, v ktorej časti hernej plochy sa tanečník objaví."
       12:
@@ -1418,20 +1946,28 @@ sk:
       1:
         text: "Hodina Kódu | Tanečná Párty: Udalosti"
       2:
+        text: "Volám sa Erin a v Code.org pracujem ako softvérová inžinierka. Pomáhala som vytvoriť Tanečnú párty."
       3:
         text: "Aby sa rôzne tanečné kroky spúšťali v správny čas s hudbou, môžeš použiť niečo, čo sa volá Udalosti. Udalosť povie tvojmu programu, aby sledoval či sa niečo stane a potom na to reagoval správnym spôsobom."
       4:
         text: "Niektoré príklady udalostí čakajú na kliknutie myškou, na stlačenie tlačidla šípky, alebo na dotyk na dotykovú obrazovku."
       5:
+        text: "Tu budeme naprogramovať tanečníka vykonať ťah, keď stlačíte tlačidlá so šípkami na obrazovke, alebo klávesy na klávesnici."
       6:
+        text: "Môžeme použiť blok udalostí „keď šípka hore“ a pripojiť k nemu blok „robiť raz“. Keď niekto stlačí šípku nahor, spustí sa kód pripojený k bloku „keď šípka hore“. Ktorý tanečný ťah si vyberiete?"
       7:
+        text: "Uistite sa, že typ tanečníka, ktorý si vyberiete, zodpovedá niektorým z tanečníkov, ktoré ste vytvorili v bloku „setup“, alebo sa vám nestane nič."
       8:
+        text: "Nakoniec môžete vytvoriť viac takých udalostí, aby vaši tanečníci vykonali rôzne pohyby s každým kľúčom. Vyskúšajte to a pomocou niekoľkých riadkov kódu si môžete vytvoriť svoj vlastný interaktívny tanec."
     hoc_dance_measures_2019:
       1:
+        text: "Hodina kódu | Tanečná párty: takty"
       2:
         text: "Som Aloe Blacc. Som spevák, skladateľ a zabávač. Myslím si, že je veľmi dôležité učiť sa informatiku, lebo informatika je budúcnosť a myslím si, že je dôležité pre ľudí, aby ovládali technológiu, ktorá doslovne ovláda naše životy."
       3:
+        text: "Udalosť, ktorú teraz použijeme, bude počúvať zmenu v skladbe. Táto zmena vás spustí tanečníka, aby urobil nový tanec."
       4:
+        text: "Profesionálni tanečníci praktizujú svoju choreografiu počítaním rytmu piesne. V hudbe sa opatrenie vzťahuje na určitý počet úderov. Vo väčšine populárnych piesní je opatrenie dlhé štyri údery."
       5:
         text: "Aby to tvoji tanečníci roztočili, budeš potrebovať zelený blok s udalosťou. Tento blok s udalosťou hovorí \"po 4 taktoch\"."
       6:
@@ -1448,12 +1984,15 @@ sk:
       3:
         text: "Zbožňujem informatiku, lebo kombinuje riešenie problémov a kritické myslenie a po tom, ako do niečoho vložíš hodiny práce, môžeš z toho dostať niečo skutočne cool a hodnotné."
       4:
+        text: "Zatiaľ ste mali šancu zahrať si rôzne typy tanečníkov a naprogramovali ste ich tak, aby robili rôzne typy tanečných pohybov. Ako však tieto pohyby skutočne fungujú?"
       5:
         text: "Každý tanečný krok sa skladá zo série obrázkov nazývaných snímky. Každá snímka sa trochu líši od tej predchádzajúcej. Keď sa tvoj program spustí, počítač ukazuje jednu snímku za druhou. Sú zobrazené tak rýchlo, že to vyzerá, ako keby sa tanečník hýbal. Toto je tajomstvo každej animácie."
       6:
         text: "Môžeš meniť nie len kroky svojho tanečníka, ale môžeš zmeniť aj jeho vlastnosti. Vlastnosti určujú veci ako tanečníkova pozícia na obrazovke, jeho veľkosť, alebo farba."
       7:
+        text: "Ak chcete zmeniť vlastnosti tanečníka, použijete nastavený blok. Použite nastavený blok, aby naši tanečníci vyzerali menšie. Najskôr presuňte nastavený blok do programu."
       8:
+        text: "Potom vyberte tanečníka, ktorého chcete zmeniť, a zadajte veľkosť, ktorú sa zobrazí na obrazovke. Plná veľkosť je 100. Ak zvolíte nižšie číslo, tanečník zmenší. Čím je tanečnica menšia, tým ďalej vyzerá."
       9:
         text: "Použitím bloku nastav môžeš tiež zmeniť tanečníkove rozmery, otočenie, pozíciu a sfarbenie. Hraním sa s týmito parametrami môžeš vytvoriť celú plejádu zmien a naviazať ich na rôzne časti pesničky."
       10:
@@ -1476,23 +2015,163 @@ sk:
     poemart_intro:
       1:
         image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+        text: "Volám sa Caia a som básnik a študent informatiky. Naučil som sa toľko z kódovania, ktoré ma urobil lepším básnikom, a toľko o mojej poézii ma urobil lepšie v kódovaní, len preto, že musíte naozaj premýšľať o slovách, ktoré si vyberiete a čo budete vytvárať, akonáhle to všetko príde dohromady."
       2:
         image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+        text: "Počas nasledujúcej hodiny sa dozviete viac o informatike a poézii vytvorením animovanej básne. V podstate poézia robí umenie slovami. Tvorím poéziu, aby som sa vyjadril, snažím sa vzbudiť predstavivosť a emócie publika, keď píšem pomocou môjho jedinečného štýlu a rytmu."
       3:
         image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+        text: "Rovnako ako umenie, básne môžu byť interpretované mnohými rôznymi spôsobmi. Rovnaká báseň môže znamenať veľmi odlišné veci pre rôznych ľudí a každá báseň má svoju vlastnú náladu. Nálada je pocit, ktorý dostanete z básne. Niekedy ľudia spájajú určité farby a snímky s rôznymi náladami."
       4:
         image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+        text: "Napríklad žltá farba sa cítim veselá. A keď premýšľam o nálade, ako je strach, niekedy si v hlave predstavujem tmavú a búrlivú noc. V tejto aktivite budete mať možnosť ilustrovať a animovať náladu básne na základe toho, ako sa cítite."
       5:
         image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+        text: "Poďme sa pozrieť na to, ako budete robiť to pomocou kódu. Uvidíte, že obrazovka je rozdelená do troch hlavných častí. Na ľavej strane je herný priestor. Tu sa objaví vaša animovaná báseň. Každá báseň má názov a autora."
       6:
         image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+        text: "Táto stredná oblasť je sada nástrojov. Nové bloky kódu budú k dispozícii v tomto priestore, keď prechádzate lekciou."
       7:
         image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+        text: "Priestor na pravej strane je pracovný priestor. Môžete pretiahnuť bloky z panela nástrojov a do pracovného priestoru vytvoriť svoj program."
       8:
         image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+        text: "Pokyny pre každú úroveň bude tu v hornej časti obrazovky. Ak chcete náznak, kliknite na žiarovku."
       9:
         image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+        text: "Najskôr vyberte báseň, ktorá sa vám páči. Existujú všetky druhy básní a môžete si vybrať novú na každej úrovni."
       10:
         image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+        text: "Ďalej pretiahnete bloky z panela nástrojov do pracovného priestoru, aby ste animovali svoju báseň. Môžete si vybrať farbu pozadia alebo efekt, ktorý zodpovedá nálade vašej básne, a potom kliknite na tlačidlo „Spustiť“, aby ste videli svoju báseň v akcii."
       11:
         image: 'notes/hoc_poem_art_2021_introduction_11.jpg'
+        text: "Strávte nejaký čas čítaním rôznych básní a nájdite ten, ktorý vo vás vyvoláva emócie. Premýšľajte o tom, ako sa cítite a ako môžete tento pocit komunikovať prostredníctvom snímok a kódu."
+    poemart_events:
+      1:
+        image: 'notes/hoc_poem_art_2021_events_01.jpg'
+        text: "Niekedy sa báseň nálada posúva čiastočne cez báseň. To, čo by mohlo začať ako šťastne znejúca báseň, sa zmení na smutné, alebo možno tma zmení na svetlo."
+      2:
+        image: 'notes/hoc_poem_art_2021_events_02.jpg'
+        text: "V tejto aktivite budete pracovať s udalosťami. Tento blok udalostí môžete použiť na zmenu priebehu programu, keď sa objaví konkrétny riadok vo vašej básni. Všimnite si, že bloky udalostí nespadnú do vášho hlavného programu. Namiesto toho vytvárajú malé vlastné programy."
+      3:
+        image: 'notes/hoc_poem_art_2021_events_03.jpg'
+        text: "Prečítajte si svoju báseň a nájdite okamih, kedy sa nálada posúva. Spočítajte, na akom riadku sa to deje: jeden, dva, tri. V bloku udalostí zadajte číslo riadku."
+      4:
+        image: 'notes/hoc_poem_art_2021_events_04.jpg'
+        text: "Potom naprogramujte niečo, čo odráža posun nálady, keď sa tento riadok objaví na obrazovke. Keď stlačíte tlačidlo „Spustiť“, môžete vidieť, čo ste kódovali."
+    poemart_imagery:
+      1:
+        image: 'notes/hoc_poem_art_2021_imagery_01.jpg'
+        text: "V poézii autori používajú snímky na maľovanie obrazu v mysli čitateľa. Keď vidíme slovo krokodíl, automaticky si v našich mysliach predstavíme zeleného krokodíla. Ak chcete získať obrázok, ako je tento do animácie budeme používať škriatkovia."
+      2:
+        image: 'notes/hoc_poem_art_2021_imagery_02.jpg'
+        text: "Týmto vytvoríte nový blok sprite, ktorý vám umožní vytvoriť sprite a vybrať si kostým. Vyberte si kostým pre sprite, ktorý si myslíte, že ide s básňou."
+      3:
+        image: 'notes/hoc_poem_art_2021_imagery_03.jpg'
+        text: "Ak chcete zmeniť polohu sprite, môžete kliknúť na ikonu špendlíka v bloku umiestnenia a potom kliknúť na miesto, kam chcete prejsť v priestore prehrávania."
+      4:
+        image: 'notes/hoc_poem_art_2021_imagery_04.jpg'
+        text: "V najbližších niekoľkých úrovniach uvidíte nejaké nové bloky. Tento blok umožňuje zmeniť veľkosť vášho sprite. Tento blok vám umožňuje animovať vášho sprite správaním."
+      5:
+        image: 'notes/hoc_poem_art_2021_imagery_05.jpg'
+        text: "Ak báseň spomína putujúce mraky, najprv vytvorte cloud sprite, potom vyberte tento blok správania, pretiahnite ho a vyberte putovanie."
+      6:
+        image: 'notes/hoc_poem_art_2021_imagery_06.jpg'
+        text: "Uistite sa, že vaše sprite kostýmy zápas. Po stlačení tlačidla spustiť budete čítať a vidieť putovanie mrak."
+      7:
+        image: 'notes/hoc_poem_art_2021_imagery_07.jpg'
+        text: "Teraz môžete pridať doslovné obrázky na ilustráciu slov v básni. Bavte sa!"
+    poemart_celebration:
+      1:
+        image: 'notes/hoc_poem_art_2021_celebration_01.jpg'
+        text: "Blahoželáme! Práve ste sa naučili základy informatiky a ako nájsť náladu básne. Teraz si môžete vytvoriť svoj vlastný animovaný báseň zdieľať so svojimi priateľmi."
+      2:
+        image: 'notes/hoc_poem_art_2021_celebration_02.jpg'
+        text: "Budete starostlivo vybrať jednoduchú scénu pre celú báseň?"
+      3:
+        image: 'notes/hoc_poem_art_2021_celebration_03.jpg'
+        text: "Alebo použijete veľa udalostí na vytvorenie novej scény pre každú líniu vašej básne?"
+      4:
+        image: 'notes/hoc_poem_art_2021_celebration_04.jpg'
+        text: "Na konci tutoriálu môžete zdieľať odkaz na svoj výtvor so svojimi priateľmi."
+      5:
+        image: 'notes/hoc_poem_art_2021_celebration_05.jpg'
+        text: "Strečte svoju fantáziu a bavte sa!"
+    hello_world_intro:
+      1:
+        image: 'notes/hoc_hello_world_2021_introduction_01.jpg'
+        text: "Ahoj! Volám sa Erin a som softvérový inžinier tu na Code.org. Som tak nadšený, pretože som sa dostal do práce na tutoriále, ktorý sa chystáte urobiť! Nazývame to „Hello World“."
+      2:
+        image: 'notes/hoc_hello_world_2021_introduction_02.jpg'
+        text: "„Hello World“ je slávna fráza v informatike a zobrazenie tejto frázy je bežným prvým krokom v učení počítačovej vedy. Počas ďalšej hodiny, budete začať s informatikou programovaním v Sprite Lab."
+      3:
+        image: 'notes/hoc_hello_world_2021_introduction_03.jpg'
+        text: "Sprite Lab je nástroj, ktorý môžete použiť na vytváranie nápaditých a zábavných projektov. Uvidíte, že obrazovka je rozdelená do troch hlavných častí. Na ľavej strane je herný priestor. To je miesto, kde vaše škriatkovia sa objaví."
+      4:
+        image: 'notes/hoc_hello_world_2021_introduction_04.jpg'
+        text: "Sprites sú objekty na obrazovke, s ktorými môžete komunikovať, napríklad postava alebo položka v príbehu alebo hre."
+      5:
+        image: 'notes/hoc_hello_world_2021_introduction_05.jpg'
+        text: "Táto stredná oblasť je sada nástrojov. Nové bloky kódu budú k dispozícii v tomto priestore, keď prechádzate lekciou."
+      6:
+        image: 'notes/hoc_hello_world_2021_introduction_06.jpg'
+        text: "Priestor na pravej strane je pracovný priestor. Bloky môžete pretiahnuť z panela nástrojov a do pracovného priestoru, aby ste vytvorili svoj program."
+      7:
+        image: 'notes/hoc_hello_world_2021_introduction_07.jpg'
+        text: "Pokyny pre každú úroveň bude tu v hornej časti obrazovky. Ak chcete náznak, kliknite na žiarovku."
+      8:
+        image: 'notes/hoc_hello_world_2021_introduction_08.jpg'
+        text: "Ak chcete začať, urobme sprite! Tento blok vám umožní dať vášmu sprite kostým a umiestnenie. Kostým je slovo, ktoré používame na opis vzhľadu sprite. Ak chcete zmeniť polohu sprite, môžete kliknúť na ikonu pinu v bloku umiestnenia a potom kliknúť na miesto, kam chcete ísť."
+      9:
+        image: 'notes/hoc_hello_world_2021_introduction_09.jpg'
+        text: "Teraz poďme mať sprite predstaviť sám! Ak chcete, aby sprite niečo povedal, použite tento blok „Povedať“ a pridajte ho do svojho programu. Uistite sa, že kostým vybraný v bloku „Povedať“ zodpovedá kostýmu vo vašom sprite."
+      10:
+        image: 'notes/hoc_hello_world_2021_introduction_10.jpg'
+        text: "Keď stlačíte tlačidlo „Spustiť“, sprite povie akýkoľvek text, ktorý mu poviete. Teraz je čas začať s Sprite Lab a zistiť, kam vás vaša fantázia vedie!"
+    hello_world_events:
+      1:
+        image: 'notes/hoc_hello_world_2021_events_01.jpg'
+        text: "Teraz, keď ste sa naučili používať Sprite Lab, budete chcieť, aby váš program reagovať, keď niekto hrá s ním. Ak to chcete urobiť, budete používať udalosti. Udalosť povie vášmu programu, aby počúval niečo, čo sa stane, a potom okamžite reagovať."
+      2:
+        image: 'notes/hoc_hello_world_2021_events_02.jpg'
+        text: "Niektoré príklady udalostí sú počúvanie kliknutím myši, tlačidla so šípkou alebo klepnutím na obrazovku. Bloky ako „po kliknutí“ sa nazývajú bloky udalostí. Kód pripojený k bloku udalostí sa spustí, keď sa zistí príslušná akcia."
+      3:
+        image: 'notes/hoc_hello_world_2021_events_03.jpg'
+        text: "Napríklad, ak som pripojiť tento „povedať“ blok „po kliknutí“ udalosť, môj sprite povie niečo, keď používateľ klikne alebo klepne na neho. Všimnite si, že bloky udalostí nespadnú do vášho hlavného programu. Namiesto toho vytvárajú malé vlastné programy."
+      4:
+        image: 'notes/hoc_hello_world_2021_events_04.jpg'
+        text: "Ak máte viac škriatkov, môžete použiť ďalšie udalosti na rozprávanie interaktívneho príbehu."
+      5:
+        image: 'notes/hoc_hello_world_2021_events_05.jpg'
+        text: "Čoskoro sa naučíte, ako robiť ešte viac v Sprite Lab, vrátane zmeny veľkosti alebo vzhľadu sprite, nastavenia rôznych pozadia, prehrávania zvukov a ďalších. Čo chcete, aby vaši škriatkovia robili, keď s nimi niekto komunikuje? Je to len na vás!"
+    hello_world_congrats:
+      1:
+        image: 'notes/hoc_hello_world_2021_freeplay_01.jpg'
+        text: "Blahoželáme! Práve ste sa naučili základy informatiky. Teraz môžete pomocou Sprite Lab vytvoriť, čo chcete."
+      2:
+        image: 'notes/hoc_hello_world_2021_freeplay_02.jpg'
+        text: "Uvidíte tlačidlo s nápisom Kostýmy. Keď na ňu kliknete, môžete si vybrať nové kostýmy sprite z knižnice."
+      3:
+        image: 'notes/hoc_hello_world_2021_freeplay_03.jpg'
+        text: "Môžete tiež kresliť svoje vlastné! Akonáhle máte kostým, ktorý sa vám páči, vráťte sa k svojmu kódu."
+      4:
+        image: 'notes/hoc_hello_world_2021_freeplay_04.jpg'
+        text: "Teraz vyberte ten kostým pre váš sprite."
+      5:
+        image: 'notes/hoc_hello_world_2021_freeplay_05.jpg'
+        text: "Ak sa pozriete do panela nástrojov, nájdete nejaké úplne nové bloky, ktoré ste predtým nevideli. Napríklad existuje veľa blokov správania, ktoré vám umožnia, aby sa váš sprite pohyboval zábavnými a zaujímavými spôsobmi."
+      6:
+        image: 'notes/hoc_hello_world_2021_freeplay_06.jpg'
+        text: "Blok udalostí „keď sa dotkne“ môžete použiť na kontrolu toho, čo sa stane, keď do seba narazia dvaja škriatkovia."
+      7:
+        image: 'notes/hoc_hello_world_2021_freeplay_07.jpg'
+        text: "Vyhľadajte blok „vytvoriť efekt“. Tento mocný blok môže byť použitý na výrobu celej banda škriatkov, ktoré prasknú, alebo pop, alebo dážď na príkaz."
+      8:
+        image: 'notes/hoc_hello_world_2021_freeplay_08.jpg'
+        text: "Rozhliadnite sa okolo seba a skúste experimentovať s týmito novými blokmi a funkciami. Na konci tutoriálu kliknite na tlačidlo „Zdieľať“ a zdieľajte odkaz na svoj výtvor so svojimi priateľmi."
+      9:
+        image: 'notes/hoc_hello_world_2021_freeplay_09.jpg'
+        text: "Máte všetky silné zručnosti, ktoré potrebujete na to, aby ste mohli začať vyvíjať aplikácie, hry a ďalšie nové programy v Sprite Lab! Použite svoje nové právomoci pre dobro. Buďte láskaví a úctiví, rovnako ako keby ste niečo vytvorili na papieri alebo hovorili s priateľom."
+      10:
+        image: 'notes/hoc_hello_world_2021_freeplay_10.jpg'
+        text: "Čo teda vytvoríte? Mohli by ste rozprávať príbeh o sebe... alebo si ho vyrobiť so svojimi vlastnými špeciálnymi postavami. Možno budete dokonca používať svoje nové počítačové vedy zručnosti pre váš ďalší školský projekt! Strečte svoju fantáziu a bavte sa!"

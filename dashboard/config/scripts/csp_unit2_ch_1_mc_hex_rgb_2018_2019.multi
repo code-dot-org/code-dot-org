@@ -18,3 +18,5 @@ The correct answer is `F00`.  A single hex digit is used to represent a 4-bit se
 
 So 3 hex digits represents 12 bits, and the first digit represents the intensity of Red in an RGB image.
 MARKDOWN
+
+allow_multiple_attempts true

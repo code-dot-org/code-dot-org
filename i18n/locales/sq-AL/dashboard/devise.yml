@@ -38,6 +38,7 @@ sq:
       update_needs_confirmation: "Ju përditësuat llogarinë tuaj në mënyrë të suksesshme, por ne kemi nevojë të verifikojmë adresën tuaj të re të email-it. Ju lutem kontrolloni email-in tuaj dhe klikoni tek link-u i konfirmimit për të përfunduar konfirmimin e adresës tuaj të re të emailit."
       updated: "Ju përditësuat llogarinë tuaj me sukses."
     sessions:
+      signed_in: "[empty string]"
       signed_out: "Ju dolët me sukses."
     unlocks:
       send_instructions: "Ju do të merrni një email me udhëzime se si të zhbllokoni llogarinë tuaj në pak minuta."
@@ -50,9 +51,6 @@ sq:
       expired: "ka skaduar, ju lutem kërkoni një të ri"
       not_found: "nuk u gjet"
       not_locked: "nuk ishte e bllokuar"
-      not_saved:
-        one: "1 gabim e ndaloi këtë %{resource} për tu ruajtur:"
-        other: "%{count} gabime ndaluan %{resource} për tu ruajtur:"
     invitations:
       send_instructions: 'Një ftesë përmes email-it është dërguar në %{email}.'
       invitation_token_invalid: 'Shenja e ftesës nuk është e vlefshme!'

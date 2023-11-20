@@ -9,11 +9,11 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import {
   sectionsNameAndId,
-  asyncLoadSectionData
+  asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   setPersonalProjects,
-  updateProjectLibrary
+  updateProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
 
 export class ShareTeacherLibraries extends React.Component {
@@ -24,20 +24,20 @@ export class ShareTeacherLibraries extends React.Component {
     sections: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
-        id: PropTypes.number.isRequired
+        id: PropTypes.number.isRequired,
       })
     ).isRequired,
     personalProjectsList: PropTypes.array.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
     setPersonalProjects: PropTypes.func.isRequired,
     updateProjectLibrary: PropTypes.func.isRequired,
-    loadingFinished: PropTypes.bool.isRequired
+    loadingFinished: PropTypes.bool.isRequired,
   };
 
   state = {
     selectedSections: [],
     selectedLibraryId: null,
-    sharedSections: []
+    sharedSections: [],
   };
 
   componentDidMount() {
@@ -50,7 +50,7 @@ export class ShareTeacherLibraries extends React.Component {
     const {selectedSections, selectedLibraryId} = this.state;
     const {updateProjectLibrary} = this.props;
     updateProjectLibrary(selectedLibraryId, {
-      sharedWith: selectedSections.map(section => section.id)
+      sharedWith: selectedSections.map(section => section.id),
     });
     this.setState({sharedSections: [...selectedSections]});
   };
@@ -68,7 +68,7 @@ export class ShareTeacherLibraries extends React.Component {
     this.setState({
       selectedLibraryId: id,
       sharedSections: sharedSections,
-      selectedSections: [...sharedSections]
+      selectedSections: [...sharedSections],
     });
   };
 
@@ -116,12 +116,8 @@ export class ShareTeacherLibraries extends React.Component {
   };
 
   render() {
-    const {
-      sections,
-      personalProjectsList,
-      onCancel,
-      loadingFinished
-    } = this.props;
+    const {sections, personalProjectsList, onCancel, loadingFinished} =
+      this.props;
     const {selectedSections, selectedLibraryId} = this.state;
     const libraries = personalProjectsList
       .filter(project => project.libraryName)
@@ -131,7 +127,9 @@ export class ShareTeacherLibraries extends React.Component {
 
     const rowData = sections.map(section => ({
       ...section,
-      isChecked: !!selectedSections.find(selected => selected.id === section.id)
+      isChecked: !!selectedSections.find(
+        selected => selected.id === section.id
+      ),
     }));
 
     return (
@@ -187,31 +185,31 @@ const styles = {
   container: {
     fontSize: 13,
     lineHeight: '18px',
-    color: color.dark_charcoal
+    color: color.dark_charcoal,
   },
   footer: {
     display: 'flex',
     flexFlow: 'row',
     justifyContent: 'space-between',
     margin: 2,
-    paddingTop: 10
+    paddingTop: 10,
   },
   libraryCopierLabel: {
     color: color.purple,
     marginBottom: 10,
-    fontStyle: 'italic'
-  }
+    fontStyle: 'italic',
+  },
 };
 
 export default connect(
   state => ({
     personalProjectsList: state.projects.personalProjectsList.projects || [],
     sections: sectionsNameAndId(state.teacherSections),
-    loadingFinished: state.teacherSections.asyncLoadComplete
+    loadingFinished: state.teacherSections.asyncLoadComplete,
   }),
   {
     asyncLoadSectionData,
     setPersonalProjects,
-    updateProjectLibrary
+    updateProjectLibrary,
   }
 )(ShareTeacherLibraries);

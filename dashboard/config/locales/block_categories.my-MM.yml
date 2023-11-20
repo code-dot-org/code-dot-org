@@ -3,6 +3,7 @@ my:
   data:
     block_categories:
       Actions: လုပ်​ဆောင်ချက်များ
+      Events: ဖြစ်စဥ်များ
       Logic: Logic
       Loops: Loops
       Math: သင်္ချာ

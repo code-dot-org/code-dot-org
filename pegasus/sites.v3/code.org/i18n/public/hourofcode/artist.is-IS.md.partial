@@ -1,11 +1,8 @@
 ---
-title: Teacher Resources - Artist
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Tilföng kennara - Listamaður
 ---
 
-# Artist: An Hour of Code Tutorial
+# Listamaður: Klukkustund kóðunar
 
 {{ hoc_artist_video }}
 
@@ -30,7 +27,7 @@ video_player: true
 
 ## Yfirlit
 
-Draw cool pictures and designs with the Artist!
+Teiknaðu flottar myndir og mynstur með Listamanninum!
 
 **Recommended Age Range:** 4-104
 

@@ -3,21 +3,30 @@
 # Recipe:: default
 #
 
-python_runtime '2' do
-  # Workaround for https://github.com/poise/poise-python/issues/133
-  get_pip_url 'https://github.com/pypa/get-pip/raw/f88ab195ecdf2f0001ed21443e247fb32265cabb/get-pip.py'
-  pip_version '18.0'
+# Install AWS CLI, based on the instructions at:
+# https://docs.aws.amazon.com/cli/v1/userguide/install-linux.html#install-linux-bundled
+
+apt_package 'python2.7'
+
+remote_file '/tmp/awscli-bundle.zip' do
+  source "https://s3.amazonaws.com/aws-cli/awscli-bundle-#{node['cdo-awscli']['version']}.zip"
+  action :create_if_missing
 end
 
-python_package 'awscli' do
-  version node['cdo-awscli']['version']
-  action :upgrade
+archive_file '/tmp/awscli-bundle.zip' do
+  # note that we can't just write to tmp directly; we have to specify an output
+  # directory here, even though the zipfile contains a top-level directory.
+  # This means we end up deviating very slightly from the instructions.
+  destination '/tmp/awscli'
 end
 
-python_package 'awscli-cwlogs' do
-  version node['cdo-awscli']['cwlogs_version']
-  action :upgrade
+execute 'install AWS CLI' do
+  cwd '/tmp/awscli/awscli-bundle'
+  command '/usr/bin/python2.7 install -i /usr/local/aws -b /usr/local/bin/aws'
+  not_if {File.exist?('/usr/local/bin/aws')}
 end
+
+# Configure AWS CLI after installation
 
 directory "#{node[:home]}/.aws"
 

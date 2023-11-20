@@ -2,96 +2,343 @@
   "ga-IE": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "name": "Saotharlann an Ghréasáin"
-        },
-        "gamelab": {
-          "name": "An tSaotharlann Cluichíochta",
-          "categories": {
-            "game_lab": {
-              "name": "An tSaotharlann Cluichíochta"
-            },
-            "sprites": {
-              "name": "Sprideanna"
-            },
-            "groups": {
-              "name": "Grúpaí"
-            },
-            "drawing": {
-              "name": "Líníocht"
-            },
-            "math": {
-              "name": "Matamaitic"
-            },
-            "variables": {
-              "name": "Athróga"
-            },
-            "functions": {
-              "name": "Feidhmeanna"
-            }
-          }
-        },
         "applab": {
-          "name": "Saotharlann Aipeanna",
-          "description": "Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript í, ansin foilsigh an aip ar an toirt.",
           "categories": {
-            "math": {
-              "name": "Matamaitic"
-            },
-            "variables": {
-              "name": "Athróga"
-            },
-            "functions": {
-              "name": "Feidhmeanna"
-            },
             "advanced": {
               "name": "Ardroghanna"
+            },
+            "canvas": {
+              "expressions": {
+                "getAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "imageData": {
+                      "type": "réad"
+                    }
+                  }
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Feidhm"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "createRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "deleteRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "drawChart": {
+                  "palette_params": {
+                    "options": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "options": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Feidhm"
+                    }
+                  }
+                },
+                "readRecords": {
+                  "palette_params": {
+                    "terms": {
+                      "type": "réad"
+                    }
+                  }
+                },
+                "updateRecord": {
+                  "palette_params": {
+                    "record": {
+                      "type": "réad"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Feidhmeanna"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "An uimhir is mó sa raon"
+                    },
+                    "min": {
+                      "description": "An uimhir is lú sa raon"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "An uimhir is mó sa raon"
+                    },
+                    "min": {
+                      "description": "An uimhir is lú sa raon"
+                    }
+                  }
+                }
+              },
+              "name": "Matamaitic"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Feidhm"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Seinneann seo an comhad fuaime MP3 ón URL."
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Dada"
+                }
+              },
+              "name": "Athróga"
             }
-          }
+          },
+          "description": "Is timpeallacht ríomhchláraithe é an tSaotharlann Aipeanna lenar féidir aipeanna simplí a chruthú. Dear d'aip, scríobh le blocanna nó le JavaScript í, ansin foilsigh an aip ar an toirt.",
+          "name": "Saotharlann Aipeanna"
         },
-        "spritelab": {
-          "name": "Saotharlann na Sprideanna",
+        "gamelab": {
           "categories": {
+            "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Réalta"
+                    }
+                  }
+                }
+              },
+              "name": "Líníocht"
+            },
+            "functions": {
+              "name": "Feidhmeanna"
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Dubh is Bán"
+                    }
+                  }
+                },
+                "playSound": {
+                  "short_description": "Seinneann seo an comhad fuaime MP3 ón URL."
+                }
+              },
+              "name": "An tSaotharlann Cluichíochta"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Dath"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Dath"
+                    }
+                  }
+                }
+              },
+              "name": "Grúpaí"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "An uimhir is mó sa raon"
+                    },
+                    "min": {
+                      "description": "An uimhir is lú sa raon"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "An uimhir is mó sa raon"
+                    },
+                    "min": {
+                      "description": "An uimhir is lú sa raon"
+                    }
+                  }
+                }
+              },
+              "name": "Matamaitic"
+            },
             "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Bís"
+                    }
+                  }
+                }
+              },
               "name": "Sprideanna"
             },
-            "world": {
-              "name": "Domhan"
-            },
-            "location": {
-              "name": "Áiteanna"
-            },
+            "variables": {
+              "name": "Athróga"
+            }
+          },
+          "name": "An tSaotharlann Cluichíochta"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Gníomhartha"
-            },
-            "events": {
-              "name": "Teagmhais"
             },
             "behaviors": {
               "name": "Iompar"
             },
-            "loops": {
-              "name": "Lúba"
+            "comments": {
+              "name": "Nótaí"
             },
-            "variables": {
-              "name": "Athróga"
-            },
-            "math": {
-              "name": "Matamaitic"
-            },
-            "logic": {
-              "name": "Loighic"
+            "events": {
+              "name": "Teagmhais"
             },
             "functions": {
               "name": "Feidhmeanna"
             },
+            "location": {
+              "name": "Áiteanna"
+            },
+            "logic": {
+              "name": "Loighic"
+            },
+            "loops": {
+              "name": "Lúba"
+            },
+            "math": {
+              "name": "Matamaitic"
+            },
+            "sprites": {
+              "name": "Sprideanna"
+            },
             "text": {
               "name": "Téacs"
             },
-            "comments": {
-              "name": "Nótaí"
+            "variables": {
+              "name": "Athróga"
+            },
+            "world": {
+              "name": "Domhan"
             }
-          }
+          },
+          "name": "Saotharlann na Sprideanna"
+        },
+        "weblab": {
+          "name": "Saotharlann an Ghréasáin"
         }
       }
     }

@@ -44,14 +44,12 @@ class CsvToSqlTable
     @table
   end
 
-  private
-
-  def hash_from_keys_and_values(keys, values)
+  private def hash_from_keys_and_values(keys, values)
     h = {}
     (0..keys.count - 1).each do |i|
       key_name = keys[i].to_s
       value =
-        case key_name[key_name.rindex('_')..-1]
+        case key_name[key_name.rindex('_')..]
         when '_b'
           values[i].to_bool
         when '_f'
@@ -67,7 +65,7 @@ class CsvToSqlTable
     h
   end
 
-  def create_table(columns)
+  private def create_table(columns)
     schema = columns.map {|column| column_name_to_schema(column)}
 
     @db.create_table!(@table, charset: 'utf8') do
@@ -83,7 +81,7 @@ class CsvToSqlTable
     [@db[@table], schema.map {|i| i[:name]}]
   end
 
-  def column_name_to_schema(name)
+  private def column_name_to_schema(name)
     i = name.rindex('_')
 
     if i.nil?
@@ -92,11 +90,11 @@ class CsvToSqlTable
     end
 
     if name.ends_with?('!') || name.ends_with?('*')
-      type_flag = name[-1..-1]
+      type_flag = name[-1..]
       name = name[0..-2]
     end
 
-    type_info = name[i..-1]
+    type_info = name[i..]
 
     type = {
       '_b' => {type: 'boolean'},
@@ -115,7 +113,7 @@ class CsvToSqlTable
     type.merge({name: name.to_sym})
   end
 
-  def set_table_mtime(mtime)
+  private def set_table_mtime(mtime)
     seed_info = @db[:seed_info]
     if seed_info.where(table: @table.to_s).first
       seed_info.where(table: @table.to_s).update(mtime: mtime)

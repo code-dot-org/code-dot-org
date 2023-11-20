@@ -1,0 +1,107 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Description",
+  "datasets": {
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Age"
+        },
+        "Gender": {
+          "id": "Gender"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "age"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "color"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Age"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "age"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "age"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Name": {
+          "id": "Name"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "chicken"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Description"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "chicken"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "age"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Achievements"
+        },
+        "Age": {
+          "description": "Age",
+          "id": "Age"
+        },
+        "Gender": {
+          "description": "Gender",
+          "id": "Gender"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateDone": "Finish",
+  "navigateForward": "Continue",
+  "tryAgain": "Try again"
+}

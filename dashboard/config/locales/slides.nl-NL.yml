@@ -1,456 +1,9 @@
 ---
 nl:
   slides:
-    maze_intro:
-      1:
-        image: notities/hoc1_1.jpg
-        text: Welkom bij je eerste uur code! We duiken direct je eerste ontmoeting
-          met programmeren in.
-      2:
-        image: notities/hoc1_1.jpg
-        text: We zullen Blockly gebruiken, een visuele programmeertaal waar je met
-          drag-en-drop code schrijft.
-      3:
-        text: De meeste code wordt ingetypt, maar Blockly is visueel. Ieder blok komt
-          overeen met een "echte" regel code.
-      4:
-        text: Je zal de basis van computerwetenschappen leren. Deze concepten worden
-          overal gebruikt, van apps voor je mobiele telefoon tot het besturen van
-          de Mars-lander.
-      5:
-        text: Een programma is een reeks instructies die de computer opvolgt.
-      6:
-        text: Het doel van je eerste programma is om een Angry Bird door een doolhof
-          te krijgen om een Groen Varken te raken.
-      7:
-        text: De linkerkant is het doolhof waar je programma in draait. De opdrachten
-          voor iedere puzzel staan onder het doolhof.
-      8:
-        text: De middelste toolbox heeft de opdrachten voor de Angry Bird. Deze gebruik
-          je om je code op te bouwen.
-      9:
-        text: Aan de rechterkant heb je je werkruimte waar je blokken uit je toolbox
-          heen sleept om je programma op te bouwen. Om een blok te verwijderen sleep
-          je het naar de prullenbak in de hoek.
-      10:
-        text: Ieder blok is een opdracht. Wanneer je een "vooruit"-blok naar je werkruimte
-          sleept en op "Voer Programma Uit" klikt, dan beweegt de vogel een stapje
-          in het doolhof.
-      11:
-        text: Om meer dan één actie te doen kan je meerdere blokken naar je werkruimte
-          spelen en deze aan mekaar vasthangen. De vogel zal de commando's van boven
-          naar beneden uitvoeren.
-      12:
-        text: Wanneer je een programma uit hebt gevoerd en het wil repareren en opnieuw
-          beginnen, klik je op de "Opnieuw"-knop.
-      13:
-        text: We zullen dit varkentje wel eens wassen!
-    artist_intro:
-      1:
-        text: Hallo, ik ben JR! Elk raceauto team heeft een computer wetenschapper
-          nodig om te winnen. Ze analyseren data van de auto om hem sneller te laten
-          maken.
-      2:
-        text: In deze puzzels, ben jij de artiest dat een lijn moet laten trekken
-          overal waar ze gaan.
-      3:
-        text: Deze blok zegt "beweeg 100 pixels vooruit." Pixels zijn zeer kleine
-          puntjes op je scherm.
-      4:
-        text: Deze blok zegt "draai rechts voor 90 graden." Dit zal je artiest evenveel
-          draaien als de "draai blok in de doolhof puzzels.
-      5:
-        text: Klik op de pijl in deze blokken om de afstand die de kunstenaar naar
-          voren gaat of draait. Speel hier een beetje mee om handig te worden met
-          deze blokken.
-    farmer_intro:
-      1:
-        text: Hallo, ik ben Paola! In deze puzzels ben jij de boer die zijn veld volledig
-          vlak wilt zodat je gewassen kan aanplanten.
-      2:
-        text: Je zal haar moeten helpen alle hopen grond te verwijderen en alle gaten
-          in te vullen.
-      3:
-        text: De nieuwe blokken verwijderen 1 schep modder van een hoop en vult een
-          gat met 1 schep modder.
-      4:
-        text: De hopen en gaten zijn verschillend van grootte, dus je moet de boer
-          vertellen hoeveel scheppen hij moet gebruiken.
-    flappy_intro:
-      1:
-        text: Hoi, ik ben Katie! Een van de meest spannende dingen over informatica
-          is dat een computerprogramma interactief kan zijn.
-      2:
-        text: Elke keer dat iemand klikt of drukt of typt op een computer of telefoon,
-          dat genereert een gebeurtenis, en er is wat code die beslist wat er gebeurd
-          als er wat gebeurd.
-      3:
-        text: 'Bijvoorbeeld, je zou een gebeurtenis-verwerker kunnen hebben die zegt
-          "wanneer iemand met de muis klikt, speel een geluid af" '
-      4:
-        text: Heb je ooit van het spel FlappyBird gehoord? Met behulp van gebeurtenis-verwerkers
-          gaan we leren om  onze eigen aangepaste versie van FlappyBird te programmeren!
-      5:
-        text: De code die zul je schrijven omvat slepen en neerzetten van blokken
-          met daarin opdrachten voor de computer. Onder de motorkap wordt elk van
-          deze blokken vertegenwoordigd door echte code.
-      6:
-        text: 'Als je een kijkje neemt in de werkplaats, zie je een aantal groene
-          blokken die voor je zijn ingevuld - dit zijn "gebeurtenis-verwerkers" '
-      7:
-        text: Als je wilt dat de vogel FLAPPERT als je met de muis KLIKT, krijg je
-          dat voor elkaar door het "FLAP" blok aan de goede gebeurtenis-verwerker
-          te verbinden. Telkens als je nu in je spel met de muis klikt, zal de vogel
-          flapperen.
-      8:
-        text: In elke puzzel van deze activiteit introduceren we nieuwe gebeurtenis-types
-          als groene blokken op de werkplaats, en dan kun je de juiste blokken kiezen
-          die reageren op de nieuwe gebeurtenissen.
-      9:
-        text: Als je een drop-down pijl zoals deze ziet dan kun je de instellingen
-          veranderen - zoals wel geluid af te spelen wanneer flappy de grond raakt.
-      10:
-        text: In de laatste puzzel kun je je eigen spel maken en deze delen met je
-          virenden. Veel plezier!
-    loop_times:
-      1:
-        text: Hallo, ik ben Mark! We gaan leren over lussen. Met lussen kun je een
-          computer vertellen om een reeks acties telkens te herhalen, duizenden of
-          zelfs miljarden keren.
-      2:
-        text: In deze puzzel willen we de vogel 5 vakjes naar voren laten bewegen
-          om het varken te krijgen.
-      3:
-        text: We kunnen het nieuwe "herhaal"-blok gebruiken om ons te helpen.
-      4:
-        text: In plaats van 5 "vooruit"-blokken hierheen te slepen...
-      5:
-        text: We kunnen een "vooruit"-blok in het "herhalen"-blok zetten en een getal
-          in het blok zetten om aan te geven hoe vaak het moet herhalen.
-      6:
-        text: 'Dit is belangrijk: je kunt meer dan een commando in een "herhalen"-blok
-          zetten.'
-      7:
-        text: Veel plezier met je nieuwe "herhalen"-blok!
-    loop_until:
-      1:
-        text: 'Hallo, ik ben Chris. Voordat ik bij Miami Heat ging basketballen heb
-          ik in Amerika Informatica gestudeerd. We gaan nu ons nieuwe blok uitproberen:
-          het "herhalen totdat"-blok.'
-      2:
-        text: Wat moeten we doen als we niet weten hoe ver de vogel moet bewegen om
-          het varken te krijgen?
-      3:
-        text: Wanneer we een "vooruit"-blok binnen een "herhalen totdat"-blok zetten,
-          dan gaat de vogel vooruit TOT het bij het varken komt (of tegen een muur
-          aanloopt).
-      4:
-        text: 'En dit is belangrijk: net als eerder, kunnen we meerdere blokken binnen
-          het "herhalen totdat" blok zetten, en zij zullen allemaal worden herhaald.'
-    if:
-      1:
-        text: 'Hallo, ik ben Bill! We gaan een fundamenteel nieuw concept leren: "Als"-statements.
-          Zo maken computers beslissingen.'
-      2:
-        text: 'Je gebruikt zelf ook dagelijks "Als"-statements. Voor je ''s-ochtends
-          naar buiten gaat, zeg je: ALS het regent, dan moet ik mijn regenjas aan.'
-      3:
-        text: We kunnen de zombie vertellen dat ALS er een pad naar links is, hij
-          die richting op moet draaien.
-      4:
-        text: Om hier de code voor te schrijven slepen we ons "Als"-blok naar het
-          midden en stoppen we er een "linksaf"-blok in.
-      5:
-        text: Als we er nu een "vooruit"-blok boven zetten en een "herhalen"-blok
-          om alles heen, dan kijkt de zombie iedere keer als hij beweegt of hij naar
-          een pad naar links kan draaien. Het "herhalen"-commando is belangrijk om
-          te zorgen dat hij iedere stap kijkt of er een pad is.
-      6:
-        text: '"Als"-statements zijn heel belangrijk in de informatica. Een van de
-          eerste programma''s die ik heb geschreven was een boter-, kaas- en eieren-spelletje,
-          en er was een "Als"-statement dat zei dat ALS de ander bijna ging winnen,
-          ik het vakje waarmee hij zou winnen in ging pikken.'
-      7:
-        text: Veel plezier met het "Als"-blok!
-    if_else:
-      1:
-        text: Hallo, ik heet Saloni! Ik gebruik informatie om problemen met gezondheid
-          en medicatie op te lossen. Laat ons over het "als dan"-blok leren. Het ziet
-          eruit als het "als"-blok, maar met een extra "dan"-stukje.
-      2:
-        text: 'Als ik een "vooruit"-blok zet bij "uitvoeren" en een "linksaf"-blok
-          bij "anders" dan betekent dat dat de zombie kan kiezen uit 2 opties: ALS
-          er een pad vooruit is dan gaat de zombie vooruit, ANDERS (als er geen pad
-          vooruit is) dan draait de zombie naar links.'
-      3:
-        text: Net als bij de 'als' blok, kunnen we de "als anders" blokken binnen
-          een "herhaal" blok plaatsen zodat de zombie blijft bewegen en de "als anders"
-          blok zal blijven controleren of er ergens gedraaid moet worden.
-      4:
-        text: Stuur die zombies naar waar ze horen!
-    if_else_scrat:
-      1:
-        text: Een als-anders statement is een beslissing tussen twee dingen. Laatosn
-          eens kijken hoe we een als-anders statement kunnen gebruiken bij ons vriendje
-          Scrat de eekhoorn.
-      2:
-        text: Dit blok ziet er hetzelfde uit als het "als"-blok, maar het heeft een
-          extra stuk "anders" stukje aan de onderkant. Als ik een "beweeg vooruit"
-          blokje plaats waar "voer uit" staat, en een "Draai linksom" blokje plaats
-          bij "anders", dan betekent dat Scrat de eekhoorn vooruit beweegt als er
-          een pad is. Als er geen pad is, dan draait Scrat linksom.
-      3:
-        text: Het maakt  een beslissing en doet een van de twee acties op basis van
-          deze beslissing. En net als met 'als' blokken, kun je "als-anders" blokken
-          binnen 'herhaal' blokken plaatsen.
-      4:
-        text: Laten we nu Scrat de eekhoorn helpen om die eikel te pakken!
-    function:
-      1:
-        text: Hoi, ik ben Brina, een engineer bij Instagram. Een functie is een aantal
-          regels code dat je steeds weer wilt kunnen gebruiken, dus in plaats van
-          die code iedere keer helemaal uit te schrijven, kun je gewoon een blok gebruiken.
-      2:
-        text: We gaan leren hoe je functies maakt. Functies hebben een ster in het
-          hoekje. De naam van de functie wordt op de bovenste regel geschreven.
-      3:
-        text: De blokken in de definitie vertellen ons wat de functie doet. Dus deze
-          functiedefinitie hebben we 'vul 5' genoemd, en bestaat uit een 'herhalen'
-          en een 'vul'-blok.
-      4:
-        text: De definitie zit op de werkplaats, maar onze boer voert de functie niet
-          uit tot we ons 'vul 5 functie'-blok uit de 'functies'-categorie slepen.
-      5:
-        text: Let's put the "fun" back in "FUNction!"
-    loop_while:
-      1:
-        text: Hi, I'm Makinde! Let's learn about the "while block."
-      2:
-        text: Het "while" blok voert alles uit wat er in staat, ZOLANG het statement
-          bovenaan WAAR is.
-      3:
-        text: Bijvoorbeeld, als de boer op een hoop staat, blijft ze 1 schep verwijderen
-          ZOLANG er nog een hoop onder haar is.
-    loop_for:
-      1:
-        text: Hoi, ik ben Trina, en ik werk voor Pixar. Ik heb aan een heel stel films
-          gewerkt, waaronder Shrek.
-      2:
-        text: Dit is onze nieuwe 'teller'-lus. Het voert acties steeds weer uit, en
-          je kunt de actie iedere keer ietsje anders maken.
-      3:
-        text: In dit voorbeeld zegt onze 'teller'-lus "tel van 50 tot 90 met 10 tegelijk",
-          en in het blok hebben we ons "teken een vierkant"-blok. Sleep het 'teller'-blok
-          van het 'Variabelen'-stuk naar 'lengte'.
-      4:
-        text: Dit betekent dat onze kunstenaar een vierkant gaat tekenen met zijden
-          van 50 pixels, daarna telt het daar 10 bij op en tekent een vierkant met
-          zijden van 60 pixels. Daarna blijft het 10 optellen en vierkanten tekenen
-          tot het bij de 90 komt. Dus krijgen we vierkanten van 50, 60, 70, 80 en
-          90.
-    parameters:
-      1:
-        text: Hoi, ik ben Janete, en ik ben een engineer bij Zynga.
-      2:
-        text: En als we nu een stel driehoeken willen tekenen met zijden van verschillende
-          lengten?
-      3:
-        text: Ze zouden al die code met de hand kunnen schrijven, of we kunnen een
-          functie met parameters maken.
-      4:
-        text: Klik om dat te doen op de blauwe ster op de "teken een driehoek"-functie.
-          Sleep daarna 'invoer naam' naar het 'invoer'-blok.
-      5:
-        text: Als we dan 'lengte' schrijven op de plek waar nu 'x' staat en op 'enter'
-          drukken, maak je een 'lengte'-invoer voor je functie.
-      6:
-        text: Klik daarna op de ster. Nu wil je op de 'variabelen'-categorie klikken
-          en het 'lengte'-blok in het 'vooruit'-blok van je functie slepen. En sleep
-          het oude nummer-blok weg.
-      7:
-        text: Klik om je nieuwe functie met parameters te gebruiken op de 'functies'-categorie
-          en sleep je "teken een driehoek met lengte'-functie eruit.
-      8:
-        text: Je kunt nu het reken-blok gebruiken om verschillende nummers in te voeren
-          om driehoeken te tekenen met verschillende groottes.
-    hoc_wrapup:
-      1:
-        text: Gefeliciteerd! Met die oplossing voor de laatste puzzel heb je net code
-          geschreven die IEDERE robot kan vertellen hoe hij uit een doolhof zonder
-          splitsingen moet komen, of het nu een zombie is, een vogel, een Mars-lander
-          of zelfs een automatisch rijdende auto.
-      2:
-        text: De basisbegrippen die je hebt gebruikt zijn de kern van ieder programma
-          of app die je gebruikt. We hebben geleerd over lussen, herhalings-statements,
-          "als"-statements en "als anders"-statements.
-      3:
-        text: Als je je eerste uur code leuk vond, ga dan naar code.org om verder
-          te gaan met je informatica-opleiding! Zogau je onze cursus van 20 uur klaar
-          hebt, beheers je de grondbeginselen van het programmeren, en kun je beginnen
-          te leren hoe je apps kunt maken voor mobiele telefoons, programma's voor
-          robots, spelletjes, je kunt het zo gek niet bedenken.
-      4:
-        text: 'Technologie verandert alles wat we doen en of je nu jong of oud bent:
-          programmeren is leuk, creatief, en iedereen kan het leren!'
     20_wrapup:
       1:
         text: Ondertiteling komt eraan!
-    frozen_intro:
-      1:
-        text: Hallo, is mijn naam Lyndsey. Ik ben een model, ik acteer en schrijf
-          mijn eigen apps. Laten we code gebruiken om Anna en Elsa te helpen bij het
-          ontdekken van de magie en schoonheid van ijs.
-      2:
-        text: Je maakt sneeuwvlokken en patronen terwijl je door een winter wonderlandschap
-          schaatst dat je kan delen met je vrienden.
-      3:
-        text: In het volgende uur zal je de basis van het coderen leren. Traditionele
-          programmering maakt gebruik van tekst, wij zullen Blockly gebruiken wat
-          gebruikt maakt van visuele blokken die je kan slepen en neerplaatsen om
-          programma's te schrijven. Op die manier leren zelfs universiteitstudenten
-          de basis. Achter deze blokken zit immers nog altijd echte code.
-      4:
-        text: Een programma is een reeks van instructies die vertellen aan een computer
-          wat hij moet doen. Laat ons een code bouwen of een programma dat Elsa helpt
-          om een eenvoudige lijn te maken. Later zullen we dit gebruiken om meer ingewikkelde
-          patronen te maken.
-      5:
-        text: Je scherm is opgedeeld in drie grote deler. Links is het ijsoppervlak
-          waar je het programma uitvoert. De instructies voor iedere puzzel zijn vlak
-          onder het oppervlak geschreven.
-      6:
-        text: Het middelste oppervlak is de gereedschapskist en elk van deze blokken
-          zijn de acties die Elsa en Anna kunnen doen.
-      7:
-        text: Het witte oppervlak rechts is de werkruimte en hier bouwen we ons programma.
-          Om over het ijsoppervlak te bewegen gebruik je de "Beweeg vooruit" blok.
-      8:
-        text: Hier zegt het "Beweeg vooruit" blok, "beweeg vooruit met 100 pixels".
-          Wat gebeurt er wanneer we op "Voer uit" drukken? Elsa zal een bepaalde afstand
-          vooruit bewegen op het scherm, 100 pixels om precies te zijn! Piwels zijn
-          in feite zeer kleine vierkantjes op je computerscherm.
-      9:
-        text: Het andere blok in deze puzzel zegr "Draai Rechts - 90 graden". Wanneer
-          we deze "Draai Rechts" blok gebruiken zorgt dit ervoor dat Elsa een bepaalde
-          draai maakt. Je kan er mee spelen hoe ver je Elsa wil laten draaien. De
-          hoek is gemeten vanaf het pad voor Elsa. Dit is dus een draai van 90 graden.
-          en dit is een draai van 120 graden.
-      10:
-        text: Je kan het aantal pixels en graden wijzigen door het pijltje ernaast.
-    frozen_loops:
-      1:
-        text: Hallo, ik ben Paola! Computers zijn echt goed in het herhalen van acties.
-          Je kan tellen tot 10,20 of 100. Een computer kan tellen tot een miljard
-          of een biljoen en dit zal slechts enkele seconden duren. Of het nu gaat
-          om tellen, tekenen of iets anders - computers kunnen dit honderden malen
-          herhalen of zelfs miljarden malen.
-      2:
-        text: In programmeren noemen we dit een lus. Een lus gebruik je om code te
-          herhalen. Voor de volgende puzzel is je doel om Anna een vierkant te helpen
-          maken met het "Herhaal" blok.
-      3:
-        text: Gelijk welke blokken je binnen de "Herhaal' blok plaatst, deze zullen
-          in volgorde worden uitgevoerd en dit zo vaak als je zelf wilt.
-      4:
-        text: Als je een vierkant wil tekenen kan je de "Beweeg vooruit" blok en de
-          "Draai Rechts" blok 4 maal gebruiken. Maar de makkelijkere manier is om
-          de "Beweeg vooruit" blok en de Draai Rechts - 90 graden" blok één keer te
-          gebruiken en dan dit paar acties 4 keer te herhalen. Om dit te doen plaats
-          je de "Beweeg vooruit" blok en de "Draai Rechts" blok in een "Herhaal" blok.
-      5:
-        text: Je kan het nummer in het "Herhaal" blok veranderen in gelijk welke waarde
-          en het zal wat er binnen de blok staat zoveel maal herhalen.
-    frozen_functions:
-      1:
-        text: Hallo, ben ik Chris Bosh. Ik ben een professionele basketbalspeler en
-          ik heb gecodeerd op de universiteit.
-      2:
-        text: Een van de belangrijkste concepten in de informatica is hoe je nieuwe
-          opdrachten definiëert. De meeste computertalen hebben slechts 100 woorden
-          of commando's. En echt de kunst en de magie bestaat er in je eigen nieuwe
-          woorden te maken met behulp van deze bouwstenen.
-      3:
-        text: Eens je een computer geleerd hebt om een actie te doen met behulp van
-          een reeks commando's, kan je je eigen naam verzinnen voor deze actie, op
-          deze manier is het makkelijk om deze later te herhalen. Wanneer je je eigen
-          commando definieert en deze een naam geeft noemen we dit een functie.
-      4:
-        text: Hallo, ik ben Jess. Wanneer je programmeer met blokken kan je functies
-          gebruiken wanneer je een reeks acties meerdere malen wil gebruiken. Bijvoorbeeld,je
-          hebt je eigen code geschreven om een vierkant te maken.
-      5:
-        text: 'Je kan dit definiëren als een functie genoemd "maak een vierkant" '
-      6:
-        text: Nu heb je een nieuwe blok die je meerdere keren kan gebruiken om meerdere
-          vierkanten te maken.
-      7:
-        text: Veel simpele vormen kunnen gebruikt worden om meer complexe patronen
-          te maken. In de volgende puzzel is de code die je recent schreef om een
-          cirkel te maken beschikbaar als een functie, waarme je cirkels van verschillende
-          grootte kan maken. Kan je deze gebruiken om Elsa te helpen om ingewikkelde
-          en mooie patronen te maken in de sneeuw?
-    playlab_intro:
-      1:
-        text: We gaan games maken met behulp van Play Lab. Goede games hebben een
-          verhaal, en elk verhaal heeft acteurs. We gaan leren hoe we onze acteurs
-          zoals heksen, aliens en dieren laten praten, bewegen en interactie met elkaar
-          laten hebben. Aan het einde van deze tutorial, kunt u een spel van niks
-          tot iets maken en het delen met je vrienden.
-      2:
-        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
-          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
-      3:
-        text: Het middelste gedeelte is de gereedschapkist, en elk van deze blokken
-          is een stuk code. Het witte gedeelte aan de rechterkant is de werkruimte
-          en daar bouwen we onze progamma's.
-      4:
-        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
-          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
-          lijn ziet, en dan zullen ze samengekoppelt worden.
-      5:
-        text: In deze eerste puzzel is onze acteur een pinguïn en we laten hem "Hallo!"
-          zeggen door een zeg-blok en deze vast te hangen aan de wanneer-uitvoeren
-          blok en door "Hallo!" te typen. We laten de pinguïn ook bewegen door de
-          beweeg rechts en beweeg links blokken te gebruiken. Wanneer je blokken op
-          zijn plaats staan klik dan op de uitvoeren knop om te zien wat je geprogrammeerd
-          hebt.
-      6:
-        text: Ga aan de slag en op het einde zal je in staat zijn om je eigen spel
-          te maken met verschillende soorten spelers die kunnen reageren, blij of
-          verdrietig zijn, punten kunnen scoren of vuurballen gooien of zelfs verdwijnen.
-          Het is helemaal aan jou welk spel je wil maken.
-    playlab_events:
-      1:
-        text: Nu gaan we iets leren over iets wat programmeurs van spellen iedere
-          dag gebruiken. Gebeurtenissen. Een gebeurtenis vertelt aan je programma
-          om te luisteren wanneer er iets gebeurt. Wanneer dat iets gebeurt voert
-          het een actie uit.
-      2:
-        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
-          een pijltjestoets of een tik op het scherm.'
-      3:
-        text: Hier zorgen we ervoor dat de ruimterobot de aardbewoners groet wanneer
-          een speler hem aanklikt. We gebruiken de "wanneer geklikt" blok en hangen
-          hier de "zeg" blok aan. Wanneer de speler de ruimterobot aanklikt wordt
-          alles wat aan de "wanneer geklikt" eventblok vasthangt uitgevoerd. Wat zegt
-          je buitenaards wezen?
-      4:
-        text: Er zijn ook "wanneer pijl" blokken. Als je de "beweeg" blokken vasthangt
-          aan deze kan je je acteurs op en neer en links en rechts laten bewegen.
-          Stap voor stap wordt je spel meer interactief.
-    playlab_repeat_forever:
-      1:
-        text: Dit is de "Herhaal voor altijd" blok. Alles wat binnen deze blok staat
-          zal voor altijd blijven gebeuren in het spel.
-      2:
-        text: Als we een acteur iets herhaaldelijk willen laten doen zonder dat de
-          speler er iets voor moet doen, plaatsen we deze blokken in een "herhaal
-          voor altijd" blok.
-      3:
-        text: In de volgende puzzel is ons doel om de tovernaar de grenzen van het
-          koninkrijk te laten patrouilleren van links naar rechts en dit steeds opnieuw.
-          Als je nu leert hoe de herhaal opdrachten werken, bespaar je je later veel
-          tijd wanneer je je eigen spel maakt.
     C1_artist_intro:
       1:
         text: Dit zijn je tekenblokken. Gebruik het juiste blok om de kunstenaar te
@@ -566,6 +119,42 @@ nl:
           over deze zes dansers maar dan in die lus de snelheid van het licht steeds
           verhogen. Dat wordt allemaal gedaan met lussen. Lussen zijn belangrijk in
           de informatica omdat ze ons werk besparen en het makkelijker maken.
+    C1_going_places_safely:
+      1:
+        text: Mijn naam is Jeremiah. Hallo! Ik ben zeven jaar oud! Ik hou van spelletjes
+          spelen op de computer van mijn moeder. Eerst heb ik wel toestemming nodig.
+          "Moeder, kan ik op de computer spelen? Natuurlijk Liefje!"
+      2:
+        text: Ik speel graag op de computer want ik kan er op het internet. Het internet
+          is een beetje zoals je woonbuurt. Je kan er leuke plekken bezoeken, met
+          familie praten en vrienden maken zodat je vele nieuwe dingen leert.
+      3:
+        text: Gisteren ben ik een zoo gaan bezoeken dat dicht gelegen is aan ons huis.
+          Ik zag een baby zebra. Ik nam een foto en veranderde de kleuren van haar
+          strepen, zette een hoed op haar kop en voegde haar toe aan de collectie
+          van gekke dieren. Tof! Later ben ik een hele verre plek gaan bezoeken namelijk
+          Kenia. Dat is een land waar vele zebra's leven.
+      4:
+        text: Soms praat ik op het internet met mensen die ik ken zoals mijn grootmoeder
+          die in een ander land leeft. Hallo grootmoeder! Ze bakt koekjes dat ze zal
+          opzenden voor mijn verjaardag. "Lekker, Ik wou dat het internet een ruik-o-rama
+          had!" Ik kan met vele verschillende mensen praten zoals mijn neefje, maar
+          ik praat meestal enkel met mensen dat ik ken.
+      5:
+        text: Het leukste dat ik kan vinden op het internet is het spelen van spelletjes.
+          Gescoord! Ik hou ook van tekenen of het uitvinden van dingen zodat ik ze
+          kan delen met mijn vrienden. Cool! Soms bezoek ik sites waar ik nieuwe dingen
+          leer, maar het liefst zit ik op websites die me het meest aanspreken. Wauw,
+          dinosaurussen!
+      6:
+        text: 'Het internet is een super leuke plek. Net zoals een straat in een knusse
+          woonwijk. Je moet wel goed oppassen waar je belandt op het internet. Er
+          zijn 2 gouden regels om te onthouden. Regel nummer 1: Vraag altijd toestemming
+          aan je ouders. Regel nummer 2: Praat enkel met mensen dat je kent en Regel
+          nummer 3: Blijf op websites dat je goed kent en waar je graag bent.'
+      7:
+        text: Wauw, dat was leuk! Etenstijd. Ik ga offline en kan bij niet wachten
+          tot de volgende keer dat ik je weer terug zie.
     C1_happy_maps_unplugged:
       1:
         text: Deze les heet Vrolijke Kaarten. Vandaag gaan we onze pluizige kleine
@@ -640,42 +229,6 @@ nl:
           de computer. Programma's zijn heel goed hierin, maar ze zijn ook heel nuttig
           op andere plekken. Je kan je eigen spelletje schrijven of zelfs een robot
           programmeren.
-    C1_going_places_safely:
-      1:
-        text: Mijn naam is Jeremiah. Hallo! Ik ben zeven jaar oud! Ik hou van spelletjes
-          spelen op de computer van mijn moeder. Eerst heb ik wel toestemming nodig.
-          "Moeder, kan ik op de computer spelen? Natuurlijk Liefje!"
-      2:
-        text: Ik speel graag op de computer want ik kan er op het internet. Het internet
-          is een beetje zoals je woonbuurt. Je kan er leuke plekken bezoeken, met
-          familie praten en vrienden maken zodat je vele nieuwe dingen leert.
-      3:
-        text: Gisteren ben ik een zoo gaan bezoeken dat dicht gelegen is aan ons huis.
-          Ik zag een baby zebra. Ik nam een foto en veranderde de kleuren van haar
-          strepen, zette een hoed op haar kop en voegde haar toe aan de collectie
-          van gekke dieren. Tof! Later ben ik een hele verre plek gaan bezoeken namelijk
-          Kenia. Dat is een land waar vele zebra's leven.
-      4:
-        text: Soms praat ik op het internet met mensen die ik ken zoals mijn grootmoeder
-          die in een ander land leeft. Hallo grootmoeder! Ze bakt koekjes dat ze zal
-          opzenden voor mijn verjaardag. "Lekker, Ik wou dat het internet een ruik-o-rama
-          had!" Ik kan met vele verschillende mensen praten zoals mijn neefje, maar
-          ik praat meestal enkel met mensen dat ik ken.
-      5:
-        text: Het leukste dat ik kan vinden op het internet is het spelen van spelletjes.
-          Gescoord! Ik hou ook van tekenen of het uitvinden van dingen zodat ik ze
-          kan delen met mijn vrienden. Cool! Soms bezoek ik sites waar ik nieuwe dingen
-          leer, maar het liefst zit ik op websites die me het meest aanspreken. Wauw,
-          dinosaurussen!
-      6:
-        text: 'Het internet is een super leuke plek. Net zoals een straat in een knusse
-          woonwijk. Je moet wel goed oppassen waar je belandt op het internet. Er
-          zijn 2 gouden regels om te onthouden. Regel nummer 1: Vraag altijd toestemming
-          aan je ouders. Regel nummer 2: Praat enkel met mensen dat je kent en Regel
-          nummer 3: Blijf op websites dat je goed kent en waar je graag bent.'
-      7:
-        text: Wauw, dat was leuk! Etenstijd. Ik ga offline en kan bij niet wachten
-          tot de volgende keer dat ik je weer terug zie.
     C1_pair_programming:
       1:
         text: Vandaag gaan we leren over "Pair" programmeren. In Pair programmeren
@@ -779,6 +332,15 @@ nl:
         text: Nog een laatste opmerking is je onbeperkt commando's kan plaatsen in
           de herhaal blok. Bijvoorbeeld, je stelt in dat je eerst vooruit moet, daarna
           naar links waardoor alles 5 keer uitgevoerd wordt. Veel plezier!
+    C2_artist_debugging:
+      1:
+        text: Hier hebben we al een paar blokken, maar er is iets verkeerd.
+      2:
+        text: Laten we de code debuggen door de snelheid te verminderen en goed te
+          kijken wanneer het door elk blok heen gaat.
+      3:
+        text: Oh, er is een probleem! De haarballen van de kat zijn 75 pixels lang
+          en niet 25.
     C2_artist_intro:
       1:
         text: Je zou niet eens kunnen starten in de race als je geen mensen hebt die
@@ -804,6 +366,16 @@ nl:
         text: En dit is een 120 graden draai. En vergeet niet, u kunt deze waarden
           wijzigen door op de pijlen naast de cijfers voor pixels en graden te klikken.
           Geniet van het tekenen met uw artiest!
+    C2_artist_loops:
+      1:
+        text: Hier gaan we het "herhaal"-blok gebruiken, zodat we een aantal stappen
+          niet hoeven op te schrijven, als we onze tekenaar programmeren. We hebben
+          al wat blokken, maar zij ons alleen om te beginnen.
+      2:
+        text: Om de blokken vier keer te herhalen, zodat we een vierkant hebben, gebruiken
+          we gewoon het herhaal-blok. We zetten er een ga-vooruit en een draai-rechts
+          blok in. Wanneer we op uitvoeren drukken, zal de tekenaar de stappen vier
+          keer doen en dus het vierkant afmaken.
     C2_bee_conditionals:
       1:
         text: Dit is een voorwaardelijk blok. Het zegt ALS de nektar of honing minder
@@ -815,6 +387,31 @@ nl:
         text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan
           0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen
           zolang er voorraad is. Ta-dah!
+    C2_bee_debugging:
+      1:
+        text: Heb je ooit gehoord van het debuggen van een programma? Met debuggen
+          kun je uitvinden wat er niet werkt aan je programma. Bij het debuggen identificeer
+          en herstel je de fouten.
+      2:
+        text: Hier hebben we al een paar blokken gekregen. We gebruiken de stap-knop
+          om stap-voor-stap door de blokken heen te gaan om te kijken of dit de goede
+          oplossing is en als dit niet zo is, waar we het dan moeten oplossen.
+      3:
+        text: Het lijkt erop dat er iets fout gaat! We hebben een extra ga-vooruit
+          blok nodig. de stap-knop help ons om ons probleem te debuggebm door te kijken
+          waar de fout is, zodat we die kunnen oplossen.
+    C2_bee_loops:
+      1:
+        text: "Een lus is een herhaling van werkzaamheden. Dus, wanneer ik een bijenkorf
+          betreed die ik wil inspecteren, bekijk ik een raam en stop deze daarna weer
+          terug. \nIk herhaal dus de zelfde werkzaamheden meerdere keren. Het gaat
+          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden."
+      2:
+        text: Dit is de "herhaal"-blok. Wat je in het herhaal-blok stopt, zal zo vaak
+          worden uitgevoerd, als je tegen het herhaalblok verteld. In dit level kunnen
+          we in plaats van drie keer "doe een stap vooruit en pak nectar" ook een
+          "herhaal"-blok gebruiken en zeggen dat ze de actie drie keer moeten uitvoeren.
+          Makkelijk toch?
     C2_binary_bracelets:
       1:
         text: Dit is de binaire armband les. We gaan onze initialen op een armband
@@ -862,28 +459,6 @@ nl:
         text: |-
           Denk aan je leukste videospel. Verdien je voor het een meer punten dan voor iets anders? Dit gebeurt omdat de computer voorwaarden gebruikt. Zo maakt de computer beslissingen. Wat denk je van, als je het doel raakt krijg je tien punten en anders verlies je er drie?
           Wanneer je weet hoe voorwaarden werken, kun je allemaal leuke spellen maken.
-    C2_artist_debugging:
-      1:
-        text: Hier hebben we al een paar blokken, maar er is iets verkeerd.
-      2:
-        text: Laten we de code debuggen door de snelheid te verminderen en goed te
-          kijken wanneer het door elk blok heen gaat.
-      3:
-        text: Oh, er is een probleem! De haarballen van de kat zijn 75 pixels lang
-          en niet 25.
-    C2_bee_debugging:
-      1:
-        text: Heb je ooit gehoord van het debuggen van een programma? Met debuggen
-          kun je uitvinden wat er niet werkt aan je programma. Bij het debuggen identificeer
-          en herstel je de fouten.
-      2:
-        text: Hier hebben we al een paar blokken gekregen. We gebruiken de stap-knop
-          om stap-voor-stap door de blokken heen te gaan om te kijken of dit de goede
-          oplossing is en als dit niet zo is, waar we het dan moeten oplossen.
-      3:
-        text: Het lijkt erop dat er iets fout gaat! We hebben een extra ga-vooruit
-          blok nodig. de stap-knop help ons om ons probleem te debuggebm door te kijken
-          waar de fout is, zodat we die kunnen oplossen.
     C2_digital_footprint:
       1:
         text: Op je hoofd hou je je hoed en je verstand vertelt je waar je bent en
@@ -930,28 +505,6 @@ nl:
           maakt. Doe het glas in de oven. smelt er een bol van. Volg de rest van de
           Instructies om een schaal te maken. Algoritmes geven je een plattegrond
           van hoe je iets doet.
-    C2_artist_loops:
-      1:
-        text: Hier gaan we het "herhaal"-blok gebruiken, zodat we een aantal stappen
-          niet hoeven op te schrijven, als we onze tekenaar programmeren. We hebben
-          al wat blokken, maar zij ons alleen om te beginnen.
-      2:
-        text: Om de blokken vier keer te herhalen, zodat we een vierkant hebben, gebruiken
-          we gewoon het herhaal-blok. We zetten er een ga-vooruit en een draai-rechts
-          blok in. Wanneer we op uitvoeren drukken, zal de tekenaar de stappen vier
-          keer doen en dus het vierkant afmaken.
-    C2_bee_loops:
-      1:
-        text: "Een lus is een herhaling van werkzaamheden. Dus, wanneer ik een bijenkorf
-          betreed die ik wil inspecteren, bekijk ik een raam en stop deze daarna weer
-          terug. \nIk herhaal dus de zelfde werkzaamheden meerdere keren. Het gaat
-          in een lus: het meerdere keer uitvoeren van dezelfde werkzaamheden."
-      2:
-        text: Dit is de "herhaal"-blok. Wat je in het herhaal-blok stopt, zal zo vaak
-          worden uitgevoerd, als je tegen het herhaalblok verteld. In dit level kunnen
-          we in plaats van drie keer "doe een stap vooruit en pak nectar" ook een
-          "herhaal"-blok gebruiken en zeggen dat ze de actie drie keer moeten uitvoeren.
-          Makkelijk toch?
     C2_maze_intro:
       1:
         text: Meestal programmeer je alleen met tekst, maar wij gebruiken Blockly
@@ -1150,18 +703,549 @@ nl:
         text: Als je een blok wilt weghalen, verwijder die dan uit de stapel en sleep
           het naar de prullenmand. Als je dan op "uitvoeren" drukt, kun je op de herstelknop
           drukken om de vogel opnieuw te laten beginnen. Kom op, pak de varkens!
-    starwars_events:
+    artist_intro:
+      1:
+        text: Hallo, ik ben JR! Elk raceauto team heeft een computer wetenschapper
+          nodig om te winnen. Ze analyseren data van de auto om hem sneller te laten
+          maken.
+      2:
+        text: In deze puzzels, ben jij de artiest dat een lijn moet laten trekken
+          overal waar ze gaan.
+      3:
+        text: Deze blok zegt "beweeg 100 pixels vooruit." Pixels zijn zeer kleine
+          puntjes op je scherm.
+      4:
+        text: Deze blok zegt "draai rechts voor 90 graden." Dit zal je artiest evenveel
+          draaien als de "draai blok in de doolhof puzzels.
+      5:
+        text: Klik op de pijl in deze blokken om de afstand die de kunstenaar naar
+          voren gaat of draait. Speel hier een beetje mee om handig te worden met
+          deze blokken.
+    farmer_intro:
+      1:
+        text: Hallo, ik ben Paola! In deze puzzels ben jij de boer die zijn veld volledig
+          vlak wilt zodat je gewassen kan aanplanten.
+      2:
+        text: Je zal haar moeten helpen alle hopen grond te verwijderen en alle gaten
+          in te vullen.
+      3:
+        text: De nieuwe blokken verwijderen 1 schep modder van een hoop en vult een
+          gat met 1 schep modder.
+      4:
+        text: De hopen en gaten zijn verschillend van grootte, dus je moet de boer
+          vertellen hoeveel scheppen hij moet gebruiken.
+    flappy_intro:
+      1:
+        text: Hoi, ik ben Katie! Een van de meest spannende dingen over informatica
+          is dat een computerprogramma interactief kan zijn.
+      2:
+        text: Elke keer dat iemand klikt of drukt of typt op een computer of telefoon,
+          dat genereert een gebeurtenis, en er is wat code die beslist wat er gebeurd
+          als er wat gebeurd.
+      3:
+        text: 'Bijvoorbeeld, je zou een gebeurtenis-verwerker kunnen hebben die zegt
+          "wanneer iemand met de muis klikt, speel een geluid af" '
+      4:
+        text: Heb je ooit van het spel FlappyBird gehoord? Met behulp van gebeurtenis-verwerkers
+          gaan we leren om  onze eigen aangepaste versie van FlappyBird te programmeren!
+      5:
+        text: De code die zul je schrijven omvat slepen en neerzetten van blokken
+          met daarin opdrachten voor de computer. Onder de motorkap wordt elk van
+          deze blokken vertegenwoordigd door echte code.
+      6:
+        text: 'Als je een kijkje neemt in de werkplaats, zie je een aantal groene
+          blokken die voor je zijn ingevuld - dit zijn "gebeurtenis-verwerkers" '
+      7:
+        text: Als je wilt dat de vogel FLAPPERT als je met de muis KLIKT, krijg je
+          dat voor elkaar door het "FLAP" blok aan de goede gebeurtenis-verwerker
+          te verbinden. Telkens als je nu in je spel met de muis klikt, zal de vogel
+          flapperen.
+      8:
+        text: In elke puzzel van deze activiteit introduceren we nieuwe gebeurtenis-types
+          als groene blokken op de werkplaats, en dan kun je de juiste blokken kiezen
+          die reageren op de nieuwe gebeurtenissen.
+      9:
+        text: Als je een drop-down pijl zoals deze ziet dan kun je de instellingen
+          veranderen - zoals wel geluid af te spelen wanneer flappy de grond raakt.
+      10:
+        text: In de laatste puzzel kun je je eigen spel maken en deze delen met je
+          virenden. Veel plezier!
+    frozen_functions:
+      1:
+        text: Hallo, ben ik Chris Bosh. Ik ben een professionele basketbalspeler en
+          ik heb gecodeerd op de universiteit.
+      2:
+        text: Een van de belangrijkste concepten in de informatica is hoe je nieuwe
+          opdrachten definiëert. De meeste computertalen hebben slechts 100 woorden
+          of commando's. En echt de kunst en de magie bestaat er in je eigen nieuwe
+          woorden te maken met behulp van deze bouwstenen.
+      3:
+        text: Eens je een computer geleerd hebt om een actie te doen met behulp van
+          een reeks commando's, kan je je eigen naam verzinnen voor deze actie, op
+          deze manier is het makkelijk om deze later te herhalen. Wanneer je je eigen
+          commando definieert en deze een naam geeft noemen we dit een functie.
+      4:
+        text: Hallo, ik ben Jess. Wanneer je programmeer met blokken kan je functies
+          gebruiken wanneer je een reeks acties meerdere malen wil gebruiken. Bijvoorbeeld,je
+          hebt je eigen code geschreven om een vierkant te maken.
+      5:
+        text: 'Je kan dit definiëren als een functie genoemd "maak een vierkant" '
+      6:
+        text: Nu heb je een nieuwe blok die je meerdere keren kan gebruiken om meerdere
+          vierkanten te maken.
+      7:
+        text: Veel simpele vormen kunnen gebruikt worden om meer complexe patronen
+          te maken. In de volgende puzzel is de code die je recent schreef om een
+          cirkel te maken beschikbaar als een functie, waarme je cirkels van verschillende
+          grootte kan maken. Kan je deze gebruiken om Elsa te helpen om ingewikkelde
+          en mooie patronen te maken in de sneeuw?
+    frozen_intro:
+      1:
+        text: Hallo, is mijn naam Lyndsey. Ik ben een model, ik acteer en schrijf
+          mijn eigen apps. Laten we code gebruiken om Anna en Elsa te helpen bij het
+          ontdekken van de magie en schoonheid van ijs.
+      2:
+        text: Je maakt sneeuwvlokken en patronen terwijl je door een winter wonderlandschap
+          schaatst dat je kan delen met je vrienden.
+      3:
+        text: In het volgende uur zal je de basis van het coderen leren. Traditionele
+          programmering maakt gebruik van tekst, wij zullen Blockly gebruiken wat
+          gebruikt maakt van visuele blokken die je kan slepen en neerplaatsen om
+          programma's te schrijven. Op die manier leren zelfs universiteitstudenten
+          de basis. Achter deze blokken zit immers nog altijd echte code.
+      4:
+        text: Een programma is een reeks van instructies die vertellen aan een computer
+          wat hij moet doen. Laat ons een code bouwen of een programma dat Elsa helpt
+          om een eenvoudige lijn te maken. Later zullen we dit gebruiken om meer ingewikkelde
+          patronen te maken.
+      5:
+        text: Je scherm is opgedeeld in drie grote deler. Links is het ijsoppervlak
+          waar je het programma uitvoert. De instructies voor iedere puzzel zijn vlak
+          onder het oppervlak geschreven.
+      6:
+        text: Het middelste oppervlak is de gereedschapskist en elk van deze blokken
+          zijn de acties die Elsa en Anna kunnen doen.
+      7:
+        text: Het witte oppervlak rechts is de werkruimte en hier bouwen we ons programma.
+          Om over het ijsoppervlak te bewegen gebruik je de "Beweeg vooruit" blok.
+      8:
+        text: Hier zegt het "Beweeg vooruit" blok, "beweeg vooruit met 100 pixels".
+          Wat gebeurt er wanneer we op "Voer uit" drukken? Elsa zal een bepaalde afstand
+          vooruit bewegen op het scherm, 100 pixels om precies te zijn! Piwels zijn
+          in feite zeer kleine vierkantjes op je computerscherm.
+      9:
+        text: Het andere blok in deze puzzel zegr "Draai Rechts - 90 graden". Wanneer
+          we deze "Draai Rechts" blok gebruiken zorgt dit ervoor dat Elsa een bepaalde
+          draai maakt. Je kan er mee spelen hoe ver je Elsa wil laten draaien. De
+          hoek is gemeten vanaf het pad voor Elsa. Dit is dus een draai van 90 graden.
+          en dit is een draai van 120 graden.
+      10:
+        text: Je kan het aantal pixels en graden wijzigen door het pijltje ernaast.
+    frozen_loops:
+      1:
+        text: Hallo, ik ben Paola! Computers zijn echt goed in het herhalen van acties.
+          Je kan tellen tot 10,20 of 100. Een computer kan tellen tot een miljard
+          of een biljoen en dit zal slechts enkele seconden duren. Of het nu gaat
+          om tellen, tekenen of iets anders - computers kunnen dit honderden malen
+          herhalen of zelfs miljarden malen.
+      2:
+        text: In programmeren noemen we dit een lus. Een lus gebruik je om code te
+          herhalen. Voor de volgende puzzel is je doel om Anna een vierkant te helpen
+          maken met het "Herhaal" blok.
+      3:
+        text: Gelijk welke blokken je binnen de "Herhaal' blok plaatst, deze zullen
+          in volgorde worden uitgevoerd en dit zo vaak als je zelf wilt.
+      4:
+        text: Als je een vierkant wil tekenen kan je de "Beweeg vooruit" blok en de
+          "Draai Rechts" blok 4 maal gebruiken. Maar de makkelijkere manier is om
+          de "Beweeg vooruit" blok en de Draai Rechts - 90 graden" blok één keer te
+          gebruiken en dan dit paar acties 4 keer te herhalen. Om dit te doen plaats
+          je de "Beweeg vooruit" blok en de "Draai Rechts" blok in een "Herhaal" blok.
+      5:
+        text: Je kan het nummer in het "Herhaal" blok veranderen in gelijk welke waarde
+          en het zal wat er binnen de blok staat zoveel maal herhalen.
+    function:
+      1:
+        text: Hoi, ik ben Brina, een engineer bij Instagram. Een functie is een aantal
+          regels code dat je steeds weer wilt kunnen gebruiken, dus in plaats van
+          die code iedere keer helemaal uit te schrijven, kun je gewoon een blok gebruiken.
+      2:
+        text: We gaan leren hoe je functies maakt. Functies hebben een ster in het
+          hoekje. De naam van de functie wordt op de bovenste regel geschreven.
+      3:
+        text: De blokken in de definitie vertellen ons wat de functie doet. Dus deze
+          functiedefinitie hebben we 'vul 5' genoemd, en bestaat uit een 'herhalen'
+          en een 'vul'-blok.
+      4:
+        text: De definitie zit op de werkplaats, maar onze boer voert de functie niet
+          uit tot we ons 'vul 5 functie'-blok uit de 'functies'-categorie slepen.
+      5:
+        text: Let's put the "fun" back in "FUNction!"
+    gumball_intro:
+      4:
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
+          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
+      6:
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
+          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
+          lijn ziet, en dan zullen ze samengekoppelt worden.
+    hoc_dance_events_2019:
       4:
         text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
           een pijltjestoets of een tik op het scherm.'
-    starwars_blocks_intro:
+    hoc_wrapup:
+      1:
+        text: Gefeliciteerd! Met die oplossing voor de laatste puzzel heb je net code
+          geschreven die IEDERE robot kan vertellen hoe hij uit een doolhof zonder
+          splitsingen moet komen, of het nu een zombie is, een vogel, een Mars-lander
+          of zelfs een automatisch rijdende auto.
+      2:
+        text: De basisbegrippen die je hebt gebruikt zijn de kern van ieder programma
+          of app die je gebruikt. We hebben geleerd over lussen, herhalings-statements,
+          "als"-statements en "als anders"-statements.
+      3:
+        text: Als je je eerste uur code leuk vond, ga dan naar code.org om verder
+          te gaan met je informatica-opleiding! Zogau je onze cursus van 20 uur klaar
+          hebt, beheers je de grondbeginselen van het programmeren, en kun je beginnen
+          te leren hoe je apps kunt maken voor mobiele telefoons, programma's voor
+          robots, spelletjes, je kunt het zo gek niet bedenken.
+      4:
+        text: 'Technologie verandert alles wat we doen en of je nu jong of oud bent:
+          programmeren is leuk, creatief, en iedereen kan het leren!'
+    iceage_intro:
+      4:
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
+          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
+      6:
+        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+      7:
+        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
+          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
+          lijn ziet, en dan zullen ze samengekoppelt worden.
+    if:
+      1:
+        text: 'Hallo, ik ben Bill! We gaan een fundamenteel nieuw concept leren: "Als"-statements.
+          Zo maken computers beslissingen.'
+      2:
+        text: 'Je gebruikt zelf ook dagelijks "Als"-statements. Voor je ''s-ochtends
+          naar buiten gaat, zeg je: ALS het regent, dan moet ik mijn regenjas aan.'
+      3:
+        text: We kunnen de zombie vertellen dat ALS er een pad naar links is, hij
+          die richting op moet draaien.
+      4:
+        text: Om hier de code voor te schrijven slepen we ons "Als"-blok naar het
+          midden en stoppen we er een "linksaf"-blok in.
+      5:
+        text: Als we er nu een "vooruit"-blok boven zetten en een "herhalen"-blok
+          om alles heen, dan kijkt de zombie iedere keer als hij beweegt of hij naar
+          een pad naar links kan draaien. Het "herhalen"-commando is belangrijk om
+          te zorgen dat hij iedere stap kijkt of er een pad is.
+      6:
+        text: '"Als"-statements zijn heel belangrijk in de informatica. Een van de
+          eerste programma''s die ik heb geschreven was een boter-, kaas- en eieren-spelletje,
+          en er was een "Als"-statement dat zei dat ALS de ander bijna ging winnen,
+          ik het vakje waarmee hij zou winnen in ging pikken.'
+      7:
+        text: Veel plezier met het "Als"-blok!
+    if_else:
+      1:
+        text: Hallo, ik heet Saloni! Ik gebruik informatie om problemen met gezondheid
+          en medicatie op te lossen. Laat ons over het "als dan"-blok leren. Het ziet
+          eruit als het "als"-blok, maar met een extra "dan"-stukje.
+      2:
+        text: 'Als ik een "vooruit"-blok zet bij "uitvoeren" en een "linksaf"-blok
+          bij "anders" dan betekent dat dat de zombie kan kiezen uit 2 opties: ALS
+          er een pad vooruit is dan gaat de zombie vooruit, ANDERS (als er geen pad
+          vooruit is) dan draait de zombie naar links.'
+      3:
+        text: Net als bij de 'als' blok, kunnen we de "als anders" blokken binnen
+          een "herhaal" blok plaatsen zodat de zombie blijft bewegen en de "als anders"
+          blok zal blijven controleren of er ergens gedraaid moet worden.
+      4:
+        text: Stuur die zombies naar waar ze horen!
+    if_else_scrat:
+      1:
+        text: Een als-anders statement is een beslissing tussen twee dingen. Laatosn
+          eens kijken hoe we een als-anders statement kunnen gebruiken bij ons vriendje
+          Scrat de eekhoorn.
+      2:
+        text: Dit blok ziet er hetzelfde uit als het "als"-blok, maar het heeft een
+          extra stuk "anders" stukje aan de onderkant. Als ik een "beweeg vooruit"
+          blokje plaats waar "voer uit" staat, en een "Draai linksom" blokje plaats
+          bij "anders", dan betekent dat Scrat de eekhoorn vooruit beweegt als er
+          een pad is. Als er geen pad is, dan draait Scrat linksom.
+      3:
+        text: Het maakt  een beslissing en doet een van de twee acties op basis van
+          deze beslissing. En net als met 'als' blokken, kun je "als-anders" blokken
+          binnen 'herhaal' blokken plaatsen.
+      4:
+        text: Laten we nu Scrat de eekhoorn helpen om die eikel te pakken!
+    loop_for:
+      1:
+        text: Hoi, ik ben Trina, en ik werk voor Pixar. Ik heb aan een heel stel films
+          gewerkt, waaronder Shrek.
+      2:
+        text: Dit is onze nieuwe 'teller'-lus. Het voert acties steeds weer uit, en
+          je kunt de actie iedere keer ietsje anders maken.
+      3:
+        text: In dit voorbeeld zegt onze 'teller'-lus "tel van 50 tot 90 met 10 tegelijk",
+          en in het blok hebben we ons "teken een vierkant"-blok. Sleep het 'teller'-blok
+          van het 'Variabelen'-stuk naar 'lengte'.
+      4:
+        text: Dit betekent dat onze kunstenaar een vierkant gaat tekenen met zijden
+          van 50 pixels, daarna telt het daar 10 bij op en tekent een vierkant met
+          zijden van 60 pixels. Daarna blijft het 10 optellen en vierkanten tekenen
+          tot het bij de 90 komt. Dus krijgen we vierkanten van 50, 60, 70, 80 en
+          90.
+    loop_times:
+      1:
+        text: Hallo, ik ben Mark! We gaan leren over lussen. Met lussen kun je een
+          computer vertellen om een reeks acties telkens te herhalen, duizenden of
+          zelfs miljarden keren.
+      2:
+        text: In deze puzzel willen we de vogel 5 vakjes naar voren laten bewegen
+          om het varken te krijgen.
+      3:
+        text: We kunnen het nieuwe "herhaal"-blok gebruiken om ons te helpen.
+      4:
+        text: In plaats van 5 "vooruit"-blokken hierheen te slepen...
+      5:
+        text: We kunnen een "vooruit"-blok in het "herhalen"-blok zetten en een getal
+          in het blok zetten om aan te geven hoe vaak het moet herhalen.
+      6:
+        text: 'Dit is belangrijk: je kunt meer dan een commando in een "herhalen"-blok
+          zetten.'
+      7:
+        text: Veel plezier met je nieuwe "herhalen"-blok!
+    loop_until:
+      1:
+        text: 'Hallo, ik ben Chris. Voordat ik bij Miami Heat ging basketballen heb
+          ik in Amerika Informatica gestudeerd. We gaan nu ons nieuwe blok uitproberen:
+          het "herhalen totdat"-blok.'
+      2:
+        text: Wat moeten we doen als we niet weten hoe ver de vogel moet bewegen om
+          het varken te krijgen?
+      3:
+        text: Wanneer we een "vooruit"-blok binnen een "herhalen totdat"-blok zetten,
+          dan gaat de vogel vooruit TOT het bij het varken komt (of tegen een muur
+          aanloopt).
+      4:
+        text: 'En dit is belangrijk: net als eerder, kunnen we meerdere blokken binnen
+          het "herhalen totdat" blok zetten, en zij zullen allemaal worden herhaald.'
+    loop_while:
+      1:
+        text: Hi, I'm Makinde! Let's learn about the "while block."
+      2:
+        text: Het "while" blok voert alles uit wat er in staat, ZOLANG het statement
+          bovenaan WAAR is.
+      3:
+        text: Bijvoorbeeld, als de boer op een hoop staat, blijft ze 1 schep verwijderen
+          ZOLANG er nog een hoop onder haar is.
+    maze_intro:
+      1:
+        image: notities/hoc1_1.jpg
+        text: Welkom bij je eerste uur code! We duiken direct je eerste ontmoeting
+          met programmeren in.
+      2:
+        image: notities/hoc1_1.jpg
+        text: We zullen Blockly gebruiken, een visuele programmeertaal waar je met
+          drag-en-drop code schrijft.
+      3:
+        text: De meeste code wordt ingetypt, maar Blockly is visueel. Ieder blok komt
+          overeen met een "echte" regel code.
+      4:
+        text: Je zal de basis van computerwetenschappen leren. Deze concepten worden
+          overal gebruikt, van apps voor je mobiele telefoon tot het besturen van
+          de Mars-lander.
+      5:
+        text: Een programma is een reeks instructies die de computer opvolgt.
+      6:
+        text: Het doel van je eerste programma is om een Angry Bird door een doolhof
+          te krijgen om een Groen Varken te raken.
+      7:
+        text: De linkerkant is het doolhof waar je programma in draait. De opdrachten
+          voor iedere puzzel staan onder het doolhof.
+      8:
+        text: De middelste toolbox heeft de opdrachten voor de Angry Bird. Deze gebruik
+          je om je code op te bouwen.
       9:
+        text: Aan de rechterkant heb je je werkruimte waar je blokken uit je toolbox
+          heen sleept om je programma op te bouwen. Om een blok te verwijderen sleep
+          je het naar de prullenbak in de hoek.
+      10:
+        text: Ieder blok is een opdracht. Wanneer je een "vooruit"-blok naar je werkruimte
+          sleept en op "Voer Programma Uit" klikt, dan beweegt de vogel een stapje
+          in het doolhof.
+      11:
+        text: Om meer dan één actie te doen kan je meerdere blokken naar je werkruimte
+          spelen en deze aan mekaar vasthangen. De vogel zal de commando's van boven
+          naar beneden uitvoeren.
+      12:
+        text: Wanneer je een programma uit hebt gevoerd en het wil repareren en opnieuw
+          beginnen, klik je op de "Opnieuw"-knop.
+      13:
+        text: We zullen dit varkentje wel eens wassen!
+    mc_2016_congrats:
+      1:
+        text: Gefeliciteerd! Je hebt geleerd om informatica commando's te gebruiken
+          om de Minecraft wereld tot leven te brengen. Je bent nu de developer! Je
+          hebt alle commando's en figuren ontgrendelt. Jij bepaalt wat er gebeurt.
+      2:
+        text: Als je klaar bent met het maken van je spel, kies delen, dan krijg je
+          een link die je kan delen met je vrienden, of om je spel op je telefoon
+          te spelen. Veel plezier! Ik kijk er naar uit om jouw versie van Minecraft
+          te gaan spelen.
+    mc_2016_events:
+      1:
+        text: Op dit level kan je kiezen of je Steve of Alex wil zijn. Selecteer de
+          pijltjes op je keyboard om naar boven, naar beneden, naar links of naar
+          rechts te gaan. Nu kan je waar je maar wil rondlopen op een niveau. Om een
+          schepsel te gebruiken moet je er naartoe lopen, er voor gaan staan en op
+          de spatiebalk drukken.
+      2:
+        text: Als je een touch screen gebruikt kan je naar boven, beneden, links en
+          rechts vegen om rond te lopen en dan raak je het scherm aan als je het object
+          voor je wilt pakken.
+      3:
+        text: Maar wat gebeurt er als je het gebruikt? In Minecraft laten schapen
+          wol vallen als je ze scheert, koeien lopen weg als je ze slaat en creepers
+          ontploffen als je vak bij ze komt. Deze acties gebeuren dankzij iets wat
+          we "events" noemen. "Events" vertellen je programma om te luisteren of te
+          wachten als er iets gebeurt en als het gebeurt dan moet er iets gebeuren.
+      4:
+        text: Tot nu toe heb je 1 event gebruikt. Code die je in je "wanneer neergezet"
+          sleuf hebt neergezet doet iets als je figuur is gecreëerd bij het begin
+          van het spel. In de volgende niveaus krijg je nieuwe slots for events zoals
+          "wanneer aangeraakt" die iets doen als je een object aanraakt of "wanneer
+          gebruikt" wanneer je het figuur gebruikt of, als je je zombies wilt laten
+          verdwijnen wanneer de zon opkomt, dan stop je dat in de "overdag" sleuf
+    mc_2016_intro:
+      1:
+        text: Hallo, mijn naam is Jens en ik ben de lead creative Designer van Minecraft
+          In het komende uur ga jij je eigen Minecraft spel maken. Het lijkt op Minecraft
+          maar de wereld staat stil. De schapen bewegen niet, de kippen leggen geen
+          eieren en de zombies staan stil. Jij moet nu code gaan toevoegen om de Minecraft
+          wereld te laten werken.
+      2:
+        text: Mijn naam is Melissa en ik ben een eindgebruikers onderzoeker bij Minecraft.
+          Waar ik echt in ben geïnteresseerd is hoe mensen denken en omgaan met techniek
+          en zo deze baan is perfect voor mij, Hier kan ik informatica en psychologie
+          samenvoegen; hoe denken en gedragen mensen zich.
+      3:
+        text: Je ziet dat je scherm is gesplitst in drie stukken 1) links is het Minecraft
+          scherm De wereld staat nu nog stil maar dat gaan we oplossen met wat code.
+      4:
+        text: 2) het middelste stuk is de gereedschapskist Elk blok is een commando
+          dat kippen, schapen of andere Minecraft figuren begrijpen.
+      5:
+        text: 3) de ruimte aan de rechterkant is de werkruimte en hier ga jij je programma
+          maken.
+      6:
+        text: Als je vergeten bent wat je moet doen dan staan de instructies voor
+          elk niveau boven aan de pagina.
+      7:
+        text: Om te beginnen gaan we een kip programmeren Sleep het "beweeg vooruit"
+          commando naar de werkruimte als ik op "Start" klik gaat de kip 1 stap vooruit
+          Nu zetten we nog een "beweeg vooruit" blok onder eerste "beweeg vooruit"
+          blok totdat hij oplicht op dat moment laat ik het blok los en zitten ze
+          aan elkaar vast. Als ik nu op "Start" klik neemt de kip twee stappen.
+      8:
         text: Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de
           gereedschapskist.
-    starwars_blocks_events:
+      9:
+        text: Als je op "Start" hebt gedrukt kan je altijd op "Herstellen" drukken
+          om het spel opnieuw op te starten Nu is het jouw beurt om je eigen Minecraft
+          versie te maken Veel plezier!
+    mc_2016_loops:
+      1:
+        text: Hallo, ik ben Lisa ben een software developer bij Minecraft en ik werk
+          aan een aantal dieren en vijanden in het spel. Een van de dieren waar ik
+          aan gewerkt heb is de ocelot and ik heb gewerkt aan het onderdeel dat als
+          je een vis vast hebt dat de ocelot naar je toe sluipt en als je hem de vis
+          te eten geeft wordt hij tam en is de ocelot jouw kat geworden.
+      2:
+        text: Mensen gaan zich snel vervelen als ze heel vaak hetzelfde ding moeten
+          doen. Het mooie van computers is dat ze hetzelfde ding een miljoen keer,
+          of zelfs een biljoen keer achter elkaar kunnen doen zonder dat het ze verveelt.
+          Dit herhalen noemen we een "lus" en elk figuur in Minecraft gebruikt ze.
+      3:
+        text: Eerder hebben we een kip laten lopen maar uiteindelijk stopte ze. In
+          Minecraft lopen de kippen rond zonder dat ze ooit stoppen. Wij gaan nu een
+          "Doe voor altijd" lus van de gereedschapskist gebruiken om de kippen ook
+          voor altijd te laten bewegen. De kracht van de lussen gaat je veel tijd
+          besparen en geeft je veel interessante opties als je je eigen versie van
+          Minecraft gaat bouwen.
+    mc_2016_spawn:
+      1:
+        text: In spellen, betekend neerzetten hetzelfde als creëren. Laten we in dit
+          level zombies maken die nieuwe zombies gaan neerzetten als de zon onder
+          gaat. Om dit te doen gaan we de "in de nacht" blokken gebruiken.
+      2:
+        text: Omdat we de zombies in de nacht nieuwe zombies willen laten neerzetten
+          gaan we de "zombie neerzetten" blok onder de "in de nacht" blok neerzetten
+          Op het moment dater een nieuwe zombie is neergezet zal hij de code gebruiken
+          die je in de "wanneer neergezet" sleuf hebt gezet. Veel plezier met het
+          neerzetten van zombies!
+    mc_2017_agent_intro:
+      11:
+        text: Als je vergeten bent wat je moet doen dan staan de instructies voor
+          elk niveau boven aan de pagina.
+    mc_congrats_no_share:
+      1:
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
+      2:
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
+      3:
+        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!"
       4:
-        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
-          een pijltjestoets of een tik op het scherm.'
+        text: Nu kun je maken wat je maar wilt. Veel plezier!
+    mc_congrats_share:
+      1:
+        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
+          geleerd.
+      2:
+        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
+          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
+          je wilt. Je mag zelf kiezen.
+      3:
+        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
+          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
+          We hebben een huis van wol gemaakt!"
+      4:
+        text: Als je creatie is voltooid, kun je delen kiezen voor een link om met
+          je vrienden te delen. Veel plezier!
+    mc_if_statements:
+      1:
+        text: Nu gaan we wat leren over als-instructies. Als-instructies zijn van
+          groot belang als je wilt leren programmeren. Ze helpen een computer beslissingen
+          maken.
+      2:
+        text: Alle computers gebruiken als-instructies, inclusief mijn telefoon. Als
+          ik bijvoorbeeld mijn telefoon ontgrendel, zegt het programma dat mijn telefoon
+          pas wordt geopend als ik het wachtwoord correct heb ingevoerd. Anders verschijnt
+          er een foutmelding.
+      3:
+        text: Je kunt als-instructies in je code gebruiken om te zorgen dat Steve
+          en Alex reageren op wat ze zien in de wereld. Als ze bijvoorbeeld een steen
+          op hun pad vinden, kunnen ze naar links draaien. Of naar rechts als ze tegen
+          een boom op lopen.
+      4:
+        text: In dit geval willen we niet in de lava vallen. Het is makkelijk om de
+          lava te ontwijken. We zien de lava op het scherm. Maar wat doen we met de
+          lava die we niet kunnen zien, onder de steen?
+      5:
+        text: Als we de steen hebben gedolven, moeten we kijken of er op die plek
+          geen lava is voordat we verdergaan. Als er lava is, willen we een steen
+          voor ons personage plaatsen, zodat we verder vooruit kunnen bewegen. Zo
+          kunnen we veilig onze weg vervolgen. Tijd om verder door de mijn te gaan!
+          En vergeet niet de als-instructies om veilig te blijven.
     mc_intro:
       1:
         text: Mijn naam is Jens Bergensten, maar ik ben beter bekend als Jeb. Ik ben
@@ -1242,189 +1326,93 @@ nl:
           om haar de actie vaker uit te laten voeren. Nu klikken we op het herhalingsblok
           en zeggen we hoe vaak we willen dat ze deze actie uitvoert. Laten we nu
           ons huis bouwen, voor de nacht valt! Veel plezier.
-    mc_if_statements:
+    parameters:
       1:
-        text: Nu gaan we wat leren over als-instructies. Als-instructies zijn van
-          groot belang als je wilt leren programmeren. Ze helpen een computer beslissingen
-          maken.
+        text: Hoi, ik ben Janete, en ik ben een engineer bij Zynga.
       2:
-        text: Alle computers gebruiken als-instructies, inclusief mijn telefoon. Als
-          ik bijvoorbeeld mijn telefoon ontgrendel, zegt het programma dat mijn telefoon
-          pas wordt geopend als ik het wachtwoord correct heb ingevoerd. Anders verschijnt
-          er een foutmelding.
+        text: En als we nu een stel driehoeken willen tekenen met zijden van verschillende
+          lengten?
       3:
-        text: Je kunt als-instructies in je code gebruiken om te zorgen dat Steve
-          en Alex reageren op wat ze zien in de wereld. Als ze bijvoorbeeld een steen
-          op hun pad vinden, kunnen ze naar links draaien. Of naar rechts als ze tegen
-          een boom op lopen.
+        text: Ze zouden al die code met de hand kunnen schrijven, of we kunnen een
+          functie met parameters maken.
       4:
-        text: In dit geval willen we niet in de lava vallen. Het is makkelijk om de
-          lava te ontwijken. We zien de lava op het scherm. Maar wat doen we met de
-          lava die we niet kunnen zien, onder de steen?
+        text: Klik om dat te doen op de blauwe ster op de "teken een driehoek"-functie.
+          Sleep daarna 'invoer naam' naar het 'invoer'-blok.
       5:
-        text: Als we de steen hebben gedolven, moeten we kijken of er op die plek
-          geen lava is voordat we verdergaan. Als er lava is, willen we een steen
-          voor ons personage plaatsen, zodat we verder vooruit kunnen bewegen. Zo
-          kunnen we veilig onze weg vervolgen. Tijd om verder door de mijn te gaan!
-          En vergeet niet de als-instructies om veilig te blijven.
-    mc_congrats_share:
-      1:
-        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
-          geleerd.
-      2:
-        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
-          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
-          je wilt. Je mag zelf kiezen.
-      3:
-        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
-          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
-          We hebben een huis van wol gemaakt!"
-      4:
-        text: Als je creatie is voltooid, kun je delen kiezen voor een link om met
-          je vrienden te delen. Veel plezier!
-    mc_congrats_no_share:
-      1:
-        text: Gefeliciteerd! Je hebt daarnet de basisbouwblokken van de informatica
-          geleerd.
-      2:
-        text: Nu kun je deze blokken gebruiken om zelf iets te maken. Er zijn geen
-          aanwijzingen meer en geen puzzels om te kraken. Je kunt alles bouwen wat
-          je wilt. Je mag zelf kiezen.
-      3:
-        text: "[leerlingen praten] Nu wordt het echt. Knippen. Ik maakte een L met
-          fakkels. Ik maakte een A met berkenhouten planken. Het werkte, het werkte.
-          We hebben een huis van wol gemaakt!"
-      4:
-        text: Nu kun je maken wat je maar wilt. Veel plezier!
-    gumball_intro:
-      4:
-        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
-          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
+        text: Als we dan 'lengte' schrijven op de plek waar nu 'x' staat en op 'enter'
+          drukken, maak je een 'lengte'-invoer voor je functie.
       6:
-        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
+        text: Klik daarna op de ster. Nu wil je op de 'variabelen'-categorie klikken
+          en het 'lengte'-blok in het 'vooruit'-blok van je functie slepen. En sleep
+          het oude nummer-blok weg.
       7:
-        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
-          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
-          lijn ziet, en dan zullen ze samengekoppelt worden.
-    iceage_intro:
-      4:
-        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
-          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
-      6:
-        text: De witte ruimte rechts is de werkruimte en daar bouwen we ons programma.
-      7:
-        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
-          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
-          lijn ziet, en dan zullen ze samengekoppelt worden.
-    mc_2016_intro:
-      1:
-        text: Hallo, mijn naam is Jens en ik ben de lead creative Designer van Minecraft
-          In het komende uur ga jij je eigen Minecraft spel maken. Het lijkt op Minecraft
-          maar de wereld staat stil. De schapen bewegen niet, de kippen leggen geen
-          eieren en de zombies staan stil. Jij moet nu code gaan toevoegen om de Minecraft
-          wereld te laten werken.
-      2:
-        text: Mijn naam is Melissa en ik ben een eindgebruikers onderzoeker bij Minecraft.
-          Waar ik echt in ben geïnteresseerd is hoe mensen denken en omgaan met techniek
-          en zo deze baan is perfect voor mij, Hier kan ik informatica en psychologie
-          samenvoegen; hoe denken en gedragen mensen zich.
-      3:
-        text: Je ziet dat je scherm is gesplitst in drie stukken 1) links is het Minecraft
-          scherm De wereld staat nu nog stil maar dat gaan we oplossen met wat code.
-      4:
-        text: 2) het middelste stuk is de gereedschapskist Elk blok is een commando
-          dat kippen, schapen of andere Minecraft figuren begrijpen.
-      5:
-        text: 3) de ruimte aan de rechterkant is de werkruimte en hier ga jij je programma
-          maken.
-      6:
-        text: Als je vergeten bent wat je moet doen dan staan de instructies voor
-          elk niveau boven aan de pagina.
-      7:
-        text: Om te beginnen gaan we een kip programmeren Sleep het "beweeg vooruit"
-          commando naar de werkruimte als ik op "Start" klik gaat de kip 1 stap vooruit
-          Nu zetten we nog een "beweeg vooruit" blok onder eerste "beweeg vooruit"
-          blok totdat hij oplicht op dat moment laat ik het blok los en zitten ze
-          aan elkaar vast. Als ik nu op "Start" klik neemt de kip twee stappen.
+        text: Klik om je nieuwe functie met parameters te gebruiken op de 'functies'-categorie
+          en sleep je "teken een driehoek met lengte'-functie eruit.
       8:
-        text: Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de
-          gereedschapskist.
-      9:
-        text: Als je op "Start" hebt gedrukt kan je altijd op "Herstellen" drukken
-          om het spel opnieuw op te starten Nu is het jouw beurt om je eigen Minecraft
-          versie te maken Veel plezier!
-    mc_2016_loops:
+        text: Je kunt nu het reken-blok gebruiken om verschillende nummers in te voeren
+          om driehoeken te tekenen met verschillende groottes.
+    playlab_events:
       1:
-        text: Hallo, ik ben Lisa ben een software developer bij Minecraft en ik werk
-          aan een aantal dieren en vijanden in het spel. Een van de dieren waar ik
-          aan gewerkt heb is de ocelot and ik heb gewerkt aan het onderdeel dat als
-          je een vis vast hebt dat de ocelot naar je toe sluipt en als je hem de vis
-          te eten geeft wordt hij tam en is de ocelot jouw kat geworden.
+        text: Nu gaan we iets leren over iets wat programmeurs van spellen iedere
+          dag gebruiken. Gebeurtenissen. Een gebeurtenis vertelt aan je programma
+          om te luisteren wanneer er iets gebeurt. Wanneer dat iets gebeurt voert
+          het een actie uit.
       2:
-        text: Mensen gaan zich snel vervelen als ze heel vaak hetzelfde ding moeten
-          doen. Het mooie van computers is dat ze hetzelfde ding een miljoen keer,
-          of zelfs een biljoen keer achter elkaar kunnen doen zonder dat het ze verveelt.
-          Dit herhalen noemen we een "lus" en elk figuur in Minecraft gebruikt ze.
-      3:
-        text: Eerder hebben we een kip laten lopen maar uiteindelijk stopte ze. In
-          Minecraft lopen de kippen rond zonder dat ze ooit stoppen. Wij gaan nu een
-          "Doe voor altijd" lus van de gereedschapskist gebruiken om de kippen ook
-          voor altijd te laten bewegen. De kracht van de lussen gaat je veel tijd
-          besparen en geeft je veel interessante opties als je je eigen versie van
-          Minecraft gaat bouwen.
-    mc_2016_events:
-      1:
-        text: Op dit level kan je kiezen of je Steve of Alex wil zijn. Selecteer de
-          pijltjes op je keyboard om naar boven, naar beneden, naar links of naar
-          rechts te gaan. Nu kan je waar je maar wil rondlopen op een niveau. Om een
-          schepsel te gebruiken moet je er naartoe lopen, er voor gaan staan en op
-          de spatiebalk drukken.
-      2:
-        text: Als je een touch screen gebruikt kan je naar boven, beneden, links en
-          rechts vegen om rond te lopen en dan raak je het scherm aan als je het object
-          voor je wilt pakken.
-      3:
-        text: Maar wat gebeurt er als je het gebruikt? In Minecraft laten schapen
-          wol vallen als je ze scheert, koeien lopen weg als je ze slaat en creepers
-          ontploffen als je vak bij ze komt. Deze acties gebeuren dankzij iets wat
-          we "events" noemen. "Events" vertellen je programma om te luisteren of te
-          wachten als er iets gebeurt en als het gebeurt dan moet er iets gebeuren.
-      4:
-        text: Tot nu toe heb je 1 event gebruikt. Code die je in je "wanneer neergezet"
-          sleuf hebt neergezet doet iets als je figuur is gecreëerd bij het begin
-          van het spel. In de volgende niveaus krijg je nieuwe slots for events zoals
-          "wanneer aangeraakt" die iets doen als je een object aanraakt of "wanneer
-          gebruikt" wanneer je het figuur gebruikt of, als je je zombies wilt laten
-          verdwijnen wanneer de zon opkomt, dan stop je dat in de "overdag" sleuf
-    mc_2016_spawn:
-      1:
-        text: In spellen, betekend neerzetten hetzelfde als creëren. Laten we in dit
-          level zombies maken die nieuwe zombies gaan neerzetten als de zon onder
-          gaat. Om dit te doen gaan we de "in de nacht" blokken gebruiken.
-      2:
-        text: Omdat we de zombies in de nacht nieuwe zombies willen laten neerzetten
-          gaan we de "zombie neerzetten" blok onder de "in de nacht" blok neerzetten
-          Op het moment dater een nieuwe zombie is neergezet zal hij de code gebruiken
-          die je in de "wanneer neergezet" sleuf hebt gezet. Veel plezier met het
-          neerzetten van zombies!
-    mc_2016_congrats:
-      1:
-        text: Gefeliciteerd! Je hebt geleerd om informatica commando's te gebruiken
-          om de Minecraft wereld tot leven te brengen. Je bent nu de developer! Je
-          hebt alle commando's en figuren ontgrendelt. Jij bepaalt wat er gebeurt.
-      2:
-        text: Als je klaar bent met het maken van je spel, kies delen, dan krijg je
-          een link die je kan delen met je vrienden, of om je spel op je telefoon
-          te spelen. Veel plezier! Ik kijk er naar uit om jouw versie van Minecraft
-          te gaan spelen.
-    mc_2017_agent_intro:
-      11:
-        text: Als je vergeten bent wat je moet doen dan staan de instructies voor
-          elk niveau boven aan de pagina.
-    hoc_dance_events_2019:
-      4:
         text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
           een pijltjestoets of een tik op het scherm.'
+      3:
+        text: Hier zorgen we ervoor dat de ruimterobot de aardbewoners groet wanneer
+          een speler hem aanklikt. We gebruiken de "wanneer geklikt" blok en hangen
+          hier de "zeg" blok aan. Wanneer de speler de ruimterobot aanklikt wordt
+          alles wat aan de "wanneer geklikt" eventblok vasthangt uitgevoerd. Wat zegt
+          je buitenaards wezen?
+      4:
+        text: Er zijn ook "wanneer pijl" blokken. Als je de "beweeg" blokken vasthangt
+          aan deze kan je je acteurs op en neer en links en rechts laten bewegen.
+          Stap voor stap wordt je spel meer interactief.
+    playlab_intro:
+      1:
+        text: We gaan games maken met behulp van Play Lab. Goede games hebben een
+          verhaal, en elk verhaal heeft acteurs. We gaan leren hoe we onze acteurs
+          zoals heksen, aliens en dieren laten praten, bewegen en interactie met elkaar
+          laten hebben. Aan het einde van deze tutorial, kunt u een spel van niks
+          tot iets maken en het delen met je vrienden.
+      2:
+        text: Je scherm is verdeeld in 3 delen. Aan de linker zijde wordt het programma
+          uitgevoerd. De instructies voor elk level worden onderaan weergegeven.
+      3:
+        text: Het middelste gedeelte is de gereedschapkist, en elk van deze blokken
+          is een stuk code. Het witte gedeelte aan de rechterkant is de werkruimte
+          en daar bouwen we onze progamma's.
+      4:
+        text: Om te beginnen, moet je blokken koppelen aan het oranje "when run" blok.
+          Je kan meerdere blokken samenkoppelen door ze te slepen totdat je een gele
+          lijn ziet, en dan zullen ze samengekoppelt worden.
+      5:
+        text: In deze eerste puzzel is onze acteur een pinguïn en we laten hem "Hallo!"
+          zeggen door een zeg-blok en deze vast te hangen aan de wanneer-uitvoeren
+          blok en door "Hallo!" te typen. We laten de pinguïn ook bewegen door de
+          beweeg rechts en beweeg links blokken te gebruiken. Wanneer je blokken op
+          zijn plaats staan klik dan op de uitvoeren knop om te zien wat je geprogrammeerd
+          hebt.
+      6:
+        text: Ga aan de slag en op het einde zal je in staat zijn om je eigen spel
+          te maken met verschillende soorten spelers die kunnen reageren, blij of
+          verdrietig zijn, punten kunnen scoren of vuurballen gooien of zelfs verdwijnen.
+          Het is helemaal aan jou welk spel je wil maken.
+    playlab_repeat_forever:
+      1:
+        text: Dit is de "Herhaal voor altijd" blok. Alles wat binnen deze blok staat
+          zal voor altijd blijven gebeuren in het spel.
+      2:
+        text: Als we een acteur iets herhaaldelijk willen laten doen zonder dat de
+          speler er iets voor moet doen, plaatsen we deze blokken in een "herhaal
+          voor altijd" blok.
+      3:
+        text: In de volgende puzzel is ons doel om de tovernaar de grenzen van het
+          koninkrijk te laten patrouilleren van links naar rechts en dit steeds opnieuw.
+          Als je nu leert hoe de herhaal opdrachten werken, bespaar je je later veel
+          tijd wanneer je je eigen spel maakt.
     poemart_intro:
       1:
         image: notes/hoc_poem_art_2021_introduction_01.jpg
@@ -1448,3 +1436,15 @@ nl:
         image: notes/hoc_poem_art_2021_introduction_10.jpg
       11:
         image: notes/hoc_poem_art_2021_introduction_11.jpg
+    starwars_blocks_events:
+      4:
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
+          een pijltjestoets of een tik op het scherm.'
+    starwars_blocks_intro:
+      9:
+        text: Als je een blok weg wilt halen, dan sleep je hem gewoon terug naar de
+          gereedschapskist.
+    starwars_events:
+      4:
+        text: 'Enkele voorbeelden van gebeurtenissen zijn : luisteren voor een muisklik,
+          een pijltjestoets of een tik op het scherm.'

@@ -552,6 +552,7 @@ fil:
         poembot-pilot-prompts: Haiku Bots-Prompt sa mga pagpipilian [PILOT]
         poembot-pilot-text: Haiku Bots - Pag-iimbak ng teksto [PILOT]
         poembot-pilot-haiku: Haiku Bots - Ipakita ang iyong Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Introduksiyon sa AI Lab
         csd_ml_import_model: Pag-import ng isang modelo ng AI
         csf_lots_of_sprites: 'Sprite Lab: Maraming Sprites'
         playlab_2021: Introduksiyon sa Play Lab
@@ -562,6 +563,7 @@ fil:
         PL-Video-21: Maligayang pagdating sa Code.org's Propesyonal na pag-aaral!
         csp_tutorial_datavis1: Visualizer ng Data sa App Lab - Bahagi 1
         csp_tutorial_datavis2: Visualizer ng Data sa App Lab - Bahagi 2
+        csd_ml_intro_ai_lab_july2021: Introduksiyon sa AI Lab
         csd_ml_training_testing_ai_lan: Pagsasanay at pagsubok sa Ai Lab
         csd_ml_model_cards_july2021: Mga model card sa Ai Lab
         csd_ml_numerical_ai_lab: Numerical Data sa Ai Lab
@@ -590,7 +592,25 @@ fil:
         poetry_module_variables: Mga variable-Coding na may tula
         poetry_module_textandvariables: Teksto at mga variable-Coding na may tula
         poetry_module_planningapp: Pagpaplano ng iyong Poem Generator App-Coding na may tula
+        poetry_module_multichoiceprompts: Mga Prompt ng Maramihang Pagpipilian - Coding gamit ang Tula
+        poetry_module_conditionals: Mga Kondisyonal - Coding gamit ang Tula
         poemart_intro: Introduksiyon sa Sining ng Tula
+        poemart_events: Mga Kaganapan sa Sining ng Tula
+        poemart_imagery: Mga Larawan ng Sining ng Tula
+        poemart_celebration: Pagdiriwang ng Sining ng Tula
+        csd_u6_variables_part2: Mga Variable - Bahagi 2
+        csd_ml_ethics_ai: 'Mga Etika at AI '
+        outbreak_intro: 'Simulation ng Outbreak: Introduksiyon'
+        outbreak_events: 'Simulator ng Outbreak: Mga Kaganapan'
+        outbreak_scientist: 'Simulator ng Outbreak: Nag-iisip na Parang Siyentipiko'
+        outbreak_outro: 'Simulator ng Outbreak: Libreng Laro'
+        PL_overview_CSP: Ano ang mga Prinsipyo ng Computer Science?
+        PL_CSP_EIPMOverview: Gabay sa Mga Aralin ng EIPM
+        CSA-PL-debugging-temp: Introduksiyon sa Pag-debug sa Java Lab - temp
+        csd_app_lab_design_mode: Mode ng Disenyo ng CSD App Lab
+        csd_app_lab_events: Mga Kaganapan ng CSD App Lab
+        PL_CSD_Unit4_AppTesting: Pagsubok sa Prototype na Papel
+        csd_u6_circuit_playground: Pisikal na Pagkalkula
         csd_u6_input_output: Input at Output
         CSA-PL-for-loops: Para sa mga loop sa Java
         CSA-PL-variables: Paglikha ng mga Variable sa Java
@@ -604,12 +624,75 @@ fil:
         csd_u6_call_define_functions: 'CSD: Pagtawag at Pagtukoy sa mga Function'
         csp_applab_parameters: Mga function na meron mga parameter
         starquilts_intro_artist: Panimula sa Star Quilts
+        CSA-PL-intro-to-arrays: Isang-Dimensiyonal (1D) na Pagkakaayos
         CSA-PL-1d-arrays-new-values: Paglalagay ng mga value sa 1D arrays
         CSA-PL-conditionals: Mga Kondisyon na Pahayag sa Java
         CSA-PL-two-way-selection: Dalawahang-daan na pagpili
         CSA-PL-Printing-in-Java: Pagpi-print sa Java
         CSA-PL-multi-selection-statements: Mga Pahayag ng Multi-selection
+        PL_CSP_TeacherTips_Advice: 'Mga Tip sa Guro: Payo sa mga Bagong Guro sa CS'
+        PL_CSP_TeacherTips_IntroToCSP: 'Mga Tip ng Guro: Panimula sa Mga Prinsipyo ng CS'
+        PL_CSP_TeacherTips_Debugging: 'Mga Tip ng Guro: Tulong sa Pag-debug'
+        PL_CSP_TeacherTips_LeadLearner: 'Mga Tip ng Guro: Paano Maging Nangungunang Mag-aaral'
+        PL_CSP_TeacherTips_APExam: 'Mga Tip ng Guro: Paghahanda sa Pagsusulit sa AP'
+        PL_CSP_TeacherTips_EIPM: 'Mga Tip ng Guro: Ang Proseso ng EIPM'
+        PL_CSD_CircuitPlayground_Overview: Pangkalahatang-ideya ng Circuit Playground
+        CSA-PL-debugging-22: Pag-debug sa Java Lab
+        CSD_Unit6_InteractiveArtExemplar: Interaktibong Halimbawa ng Sining
         CS_Changing_Everything: Binabago ng agham ng Computer ang lahat
+        csa-alias-video: Mga Katumbas at Alyas
+        csa-equals-video: Ang equals() method
+        csa-user-stories: Kwento ng Mga User sa Software Engineering
+        csa-pl-vpl-m1-unit-3: Software Engineering sa Yunit 3
+        csa-pl-intro-to-equality: Introduksiyon sa Pagkakapantay-pantay
+        csa-pl-intro-to-equals-method: Introduksiyon sa .equals() method
+        csa-pl-equals-book: Pagsusulat ng equals() method sa Book class
+        csa-multi-select-pl: Mga Statement ng Multi-selection sa Java
+        csc_timecapsule_intro: Introduksiyon sa Time Capsule
+        PL_Equity_in_CS_Education: Pagiging patas sa Edukasyon ng CS
+        csc_fm_pilot: Mga Function Machine (Pilot)
+        csc_fm_pilot_v2: 'Panimula sa Mga Function Machine '
+        csc-sprite-lab-pixel-editor: Iguhit ng Sarili Mong Sprite
+        csa-pl-intro-to-strings: Introduksiyon sa Mga String sa Java
+        csa-pl-compareTo: Ang compareTo() method
+        csc-event-short-intro: Maikling Panimula sa Mga Event
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Pangkalahatang-ideya ng Circuit Playground na Yunit
+        csa-day-in-pm-pl: Ano ang ginagawa ng project manager?
+        csa-pl-intro-to-pm: Introduksiyon sa Pamamahala ng Proyekto
+        PL_CSD_CircuitPlayground_Setup: Setup ng Circuit Playground
+        csa_object_oriented_programming: 'CSA: Object-Oriented na Pagprograma'
+        csa_creating_objects: 'CSA: Paglikha ng mga Object'
+        csa_calling_methods: 'CSA: Mga Paraan ng Pagtawag'
+        csa_while_loops: 'CSA: Mga While Loop'
+        csa_inheritance: 'CSA: Pamana'
+        csa_writing_a_method: 'CSA: Pagsusulat ng Paraan'
+        csa_software_engineering_code_reviews: 'CSA: Software Engineering - Mga Repaso ng Code'
+        csa_conditional_statements: 'CSA: Kondisyonal na mga Statement'
+        csa_printing_in_java: 'CSA: Pag-imprenta sa Java'
+        csa_two_way_selection_and_not: 'CSA: Two-Way na Seleksiyon at HINDI'
+        csa-pl-intro-to-oop: Introduksiyon sa Object-Oriented na Pagprograma
+        csa-pl-welcome-to-Neighborhood: Maligayang Pagdating sa Komunidad
+        csa-pl-calling-methods: Mga Paraan ng Pagtawag sa Java
+        csa-pl-creating-objects: Paglikha ng mga Object
+        csa_accessor_methods: 'CSA: Mga Paraan ng Pag-access'
+        csa_constructors: 'CSA: Mga Constructor'
+        csa_creating_a_scanner_object: 'CSA: Paglikha ng Scanner Object'
+        csa_creating_variables: 'CSA: Paglikha ng Mga Variable'
+        csa_instance_variables_and_attributes: 'CSA: Mga Variable at Attribute ng Pagkakataon'
+        csa_mutator_methods: 'CSA: Mga Paraan ng Mutator'
+        csa_overloaded_constructors: 'CSA: Mga Overloaded na Constructor'
+        csa_the_tostring_method: 'CSA: Ang toString() na Paraan'
+        csa_scanner_class_methods: 'CSA: Mga Paraan ng Scanner Class'
+        csa_for_loops: 'CSA: Para sa Mga Loop'
+        csa_enhanced_for_loops: 'CSA: Pinahusay Para sa mga Loop'
+        csa_modifying_values_in_a_1d_array: 'CSA: Pagbabago ng mga Value sa 1D na Hanay'
+        csa_nested_loops: 'CSA: Naka-nest na mga Loop'
+        csa_one_dimensional_arrays: 'CSA: Isang-Dimensiyonal (1D) na mga Hanay'
+        csa_polymorphism: 'CSA: Polymorphism'
+        csc-starquilts-intro: Pag-code ng Geometric Star Quilt
+        csc-ecosystems-intro: Paggaya sa Ekolohiyang Pandagat
+        what-is-creativity: Ano ang Pagkamalikhain?
+        code-break: Kumuha ng Code Break
     callout:
       text:
         drag_blocks: Mag-drag ng "move" na bloke at daklutin ito sa baba ng ibang bloke

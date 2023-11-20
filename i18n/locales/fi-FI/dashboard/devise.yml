@@ -50,9 +50,6 @@ fi:
       expired: "on vanhentunut; ole hyvä ja pyydä uusi"
       not_found: "ei löytynyt"
       not_locked: "ei lukittu"
-      not_saved:
-        one: "Virhe esti tämän %{resource} tallentamisen:"
-        other: "%{count} virhettä esti tämän %{resource} tallentamisen:"
     invitations:
       send_instructions: 'Sähköpostikutsu on lähetetty osoitteeseen %{email}.'
       invitation_token_invalid: 'Käyttämäsi kutsuavain ei ole voimassa!'

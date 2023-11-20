@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-11-08 16:49:47 UTC",
+    "serialized_at": "2023-01-31 17:00:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1833,7 +1833,7 @@
       "key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `atlanta` and 9 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
         "progression_name": "Working with ArrayLists"
       },
       "seeding_key": {
@@ -6165,11 +6165,9 @@
     },
     {
       "name": "Unit 6 Guide",
-      "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1-Kwx3qvUpaTit5A1e69GrfnSPnoluupyJf1HdnRs_iM/edit?usp=sharing",
       "key": "unit_6_guide",
       "properties": {
-        "audience": "Student",
-        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "unit_6_guide"

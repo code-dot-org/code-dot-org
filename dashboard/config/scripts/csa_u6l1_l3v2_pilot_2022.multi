@@ -19,3 +19,5 @@ public int getValue(int[] numbers, int index) {
 
 Which of the following is the most appropriate precondition for the method so that it does not cause an error?
 MARKDOWN
+
+allow_multiple_attempts true

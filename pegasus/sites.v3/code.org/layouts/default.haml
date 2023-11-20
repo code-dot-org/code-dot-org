@@ -17,6 +17,8 @@
       -containerClass = "container_responsive mobile-pad-edge"
     -else
       -containerClass = "container_responsive"
+  -elsif @header['theme'] == 'responsive_full_width'
+    -containerClass = 'container_responsive_full_width'
   -else
     -containerClass = "container_nonresponsive"
 
@@ -28,10 +30,10 @@
 
   %div{:class=>containerClass}
 
-    -if @header['theme'] == 'responsive'
+    -if @header['theme'] == 'responsive' || 'responsive_full_width'
       -if @header['nav']
         %div
-          .col-80-right
+          %main.col-80-right
             =body
           .left-nav.desktop-feature
             -if @header['nav'].nil? || @header['nav'] == 'blank'
@@ -39,7 +41,8 @@
             -else
               = view(@header['nav'])
       -else
-        =body
+        %main
+          =body
 
       #clearboth{:style=>"clear:both"}
       .desktop-feature
@@ -78,7 +81,7 @@
       %br/
   .push
 
--if @header['theme'] == 'responsive'
+-if @header['theme'] == 'responsive' || 'responsive_full_width'
   .desktop-feature
     -if @header['footer'] == 'donor_footer'
       = view :donor_slider

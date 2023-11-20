@@ -1,4 +1,3 @@
-/* global addToHome Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -24,6 +23,8 @@ import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -55,8 +56,20 @@ export function setupApp(appOptions) {
   var baseOptions = {
     containerId: 'codeApp',
     position: {blockYCoordinateInterval: 25},
-    onInitialize: function() {
+    onInitialize: function () {
       createCallouts(this.level.callouts || this.callouts);
+      const isTeacher =
+        getStore().getState().currentUser?.userType === 'teacher';
+      const isViewingStudent = !!queryParams('user_id');
+      const teacherViewingStudentWork = isTeacher && isViewingStudent;
+      if (teacherViewingStudentWork) {
+        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+          unitId: appOptions.serverScriptId,
+          levelId: appOptions.serverLevelId,
+          sectionId: queryParams('section_id'),
+        });
+      }
+
       if (
         appOptions.level.projectTemplateLevelName ||
         appOptions.app === 'applab' ||
@@ -67,23 +80,20 @@ export function setupApp(appOptions) {
       ) {
         $('#clear-puzzle-header').hide();
         // Only show version history if user is project owner, or teacher viewing student work
-        const isTeacher =
-          getStore().getState().currentUser?.userType === 'teacher';
-        const isViewingStudent = !!queryParams('user_id');
         if (
           project.isOwner() ||
-          (isTeacher && isViewingStudent && appOptions.level.isStarted)
+          (teacherViewingStudentWork && appOptions.level.isStarted)
         ) {
           $('#versions-header').show();
         }
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function(/*MilestoneReport*/ report) {
+    onAttempt: function (/*MilestoneReport*/ report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         return tryToUploadShareImageToS3({
           image: report.image,
-          level: appOptions.level
+          level: appOptions.level,
         });
       }
 
@@ -104,8 +114,7 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
-          report.program = Blockly.Xml.domToText(xml);
+          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
         }
         report.callback = appOptions.report.callback;
       }
@@ -120,10 +129,10 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onResetPressed: function() {
+    onResetPressed: function () {
       reporting.cancelReport();
     },
-    onContinue: function() {
+    onContinue: function () {
       var lastServerResponse = reporting.getLastServerResponse();
       if (lastServerResponse.videoInfo) {
         showVideoDialog(lastServerResponse.videoInfo);
@@ -145,14 +154,14 @@ export function setupApp(appOptions) {
         const dialog = new LegacyDialog({
           body: body,
           width: 800,
-          redirect: lastServerResponse.nextRedirect
+          redirect: lastServerResponse.nextRedirect,
         });
         dialog.show();
       } else if (lastServerResponse.nextRedirect) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    showInstructionsWrapper: function(showInstructions) {
+    showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
         return;
@@ -160,7 +169,7 @@ export function setupApp(appOptions) {
 
       var afterVideoCallback = showInstructions;
       if (appOptions.level.afterVideoBeforeInstructionsFn) {
-        afterVideoCallback = function() {
+        afterVideoCallback = function () {
           appOptions.level.afterVideoBeforeInstructionsFn(showInstructions);
         };
       }
@@ -184,7 +193,7 @@ export function setupApp(appOptions) {
           afterVideoCallback();
         }
       }
-    }
+    },
   };
   $.extend(true, appOptions, baseOptions);
 
@@ -256,7 +265,7 @@ function loadProjectAndCheckAbuse(appOptions) {
           renderAbusive(
             project,
             msg.sharingDisabled({
-              sign_in_url: 'https://studio.code.org/users/sign_in'
+              sign_in_url: 'https://studio.code.org/users/sign_in',
             })
           );
           return;
@@ -329,9 +338,7 @@ async function loadAppAsync(appOptions) {
 
   const sectionId = clientState.queryParams('section_id') || '';
   const exampleSolutionsRequest = $.ajax(
-    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
-      appOptions.serverLevelId
-    }?section_id=${sectionId}`
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${appOptions.serverLevelId}?section_id=${sectionId}`
   );
 
   // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
@@ -345,8 +352,8 @@ async function loadAppAsync(appOptions) {
       `/${appOptions.serverLevelId}`,
     data: {
       user_id: clientState.queryParams('user_id'),
-      get_channel_id: shouldGetChannelId
-    }
+      get_channel_id: shouldGetChannelId,
+    },
   });
 
   try {
@@ -453,18 +460,30 @@ const sourceHandler = {
   setInitialLevelSource(levelSource) {
     getAppOptions().level.lastAttempt = levelSource;
   },
+  setInRestrictedShareMode(inRestrictedShareMode) {
+    getAppOptions().level.inRestrictedShareMode = inRestrictedShareMode;
+  },
+  inRestrictedShareMode() {
+    return getAppOptions().level.inRestrictedShareMode;
+  },
+  setTeacherHasConfirmedUploadWarning(teacherHasConfirmedUploadWarning) {
+    getAppOptions().level.teacherHasConfirmedUploadWarning =
+      teacherHasConfirmedUploadWarning;
+  },
+  teacherHasConfirmedUploadWarning() {
+    return getAppOptions().level.teacherHasConfirmedUploadWarning;
+  },
   // returns a Promise to the level source
   getLevelSource(currentLevelSource) {
     return new Promise((resolve, reject) => {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
+        const getSourceAsJson = true;
         // If we're readOnly, source hasn't changed at all
         source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
           ? currentLevelSource
-          : Blockly.Xml.domToText(
-              Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)
-            );
+          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
         resolve(source);
       } else if (appOptions.getCode) {
         source = appOptions.getCode();
@@ -493,7 +512,7 @@ const sourceHandler = {
       return prepareForRemix();
     }
     return Promise.resolve(); // Return an insta-resolved promise.
-  }
+  },
 };
 
 /** @type {AppOptionsConfig} */
@@ -525,7 +544,7 @@ export function getAppOptions() {
  * Loads the "appOptions" object from the dom and augments it with additional
  * information needed by apps to run.
  *
- * This should only be called once per page load, with appoptions specified as a
+ * This should only be called once per page load, with appOptions specified as a
  * data attribute on the script tag.
  *
  * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions

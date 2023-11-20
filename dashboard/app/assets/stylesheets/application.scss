@@ -13,7 +13,6 @@
  *
  * Vendor assets
  *= require add2home
- *= require gotham-font
  *= require jquery.qtip.min
  *
  * Application assets
@@ -21,6 +20,8 @@
  *= require_directory .
  *
  * Shared
+ *= require barlow-semi-condensed-font
+ *= require metropolis-font
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -33,10 +34,12 @@
 @import "mixins";
 @import "style-constants";
 
-$baseFontFamily: $gotham-regular;
-$headingsFontWeight: normal;
+// Bootstrap Variables
+$baseFontFamily: $main-font;
+$headingsFontWeight: $regular-font-weight;
 $btnPrimaryBackground: $orange;
 $btnPrimaryBackgroundHighlight: $orange;
+
 $selectUserTypeButtonBorderColor: #ccc;
 $selectUserTypeButtonBackgroundColor: #fff;
 $selectUserTypeButtonTextColor: #000;
@@ -46,8 +49,6 @@ $selectUserTypeButtonBackgroundColorSelected: #00adbc;
 $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
-// Font-awesome 4.6.3
-@import "font-awesome";
 
 p,pre,span {
   @include selectable;
@@ -72,20 +73,19 @@ body.oceans-blue {
 }
 
 body.music-black {
-  background-color: $music_black;
+  background-color: $dark_black;
+  overscroll-behavior: none;
 }
 
 h1 {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
   font-size: 32px;
   color: $purple;
 }
 
 h2 {
   margin: 25px 0 10px 0;
-  font-family: $gotham-bold;
-  font-weight: normal;
+  @include main-font-semi-bold;
   font-size: 22px;
   line-height: 30px;
   color: $teal;
@@ -110,24 +110,22 @@ th {
   border: 1px solid $white;
   text-align: left;
   font-size: 120%;
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-weight: normal;
   padding: 5px;
 }
 
 strong {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
 }
 
 em {
-  font-family: $gotham-italics;
-  font-style: normal;
+  @include main-font-regular-italic;
 }
 
 strong em,
 em strong {
-  font-family: $gotham-extra-bold-italics;
+  @include main-font-bold-italic;
 }
 
 a.video_link {
@@ -219,19 +217,19 @@ img.video_thumbnail {
     text-overflow: ellipsis;
   }
 
-  @media screen and (min-width: 971px) {
+  @media screen and (min-width: 1011px) {
     .show_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1010px) {
     .hide_on_tablet {
       display: none;
     }
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1120px) {
     .create_menu {
       display: none !important;
     }
@@ -241,7 +239,7 @@ img.video_thumbnail {
     margin-top: 12px;
 
     .headerlink {
-      font-family: 'Gotham 4r', sans-serif;
+      @include main-font-regular;
       margin-left: 30px;
       font-size: 14px;
       line-height: 22px;
@@ -265,7 +263,7 @@ img.video_thumbnail {
     &.header_button_light {
       background-color: $teal;
     }
-    font-family: 'Gotham 4r', sans-serif;
+    @include main-font-regular;
     display: inline-block;
     color: $white;
     background-color: transparent;
@@ -318,6 +316,7 @@ img.video_thumbnail {
       margin-top: 2px;
       font-size: 12px;
       display: inline-block;
+      border-radius: 4px;
     }
   }
 
@@ -409,12 +408,32 @@ img.video_thumbnail {
 
 #header-banner-overflow {
   margin: 16px;
+
+  .bannerContentButton {
+    // !important is used here to overwrite inline styles of button.
+    border-color: $neutral_dark !important;
+  }
 }
 
 #header-banner, #header-banner-overflow {
   .children {
     margin-top: 16px;
   }
+}
+
+/* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
+ * to have a 1px separation between it and the PaneHeader above it.
+*  */
+#codeWorkspace > .cdomoderndark-theme,
+#codeWorkspace > .cdohighcontrastdark-theme,
+#codeWorkspace > .cdoprotanopiadark-theme,
+#codeWorkspace > .cdodeuteranopiadark-theme,
+#codeWorkspace > .cdotritanopiadark-theme {
+  /* A small separation. */
+  margin-top: 1px;
+
+  /* Override the height in Google Blockly's .injectionDiv */
+  height: calc(100% - 1px);
 }
 
 .bannerContentContainer {
@@ -464,15 +483,28 @@ img.video_thumbnail {
 
 .main {
   padding: 10px;
+
   a:link, a:visited, a:hover, a:active {
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
-    color: $cyan;
+    @include main-font-bold;
+    color: $brand_secondary_default;
     background-color: transparent;
-  }
-  a:hover {
     text-decoration: underline;
   }
+  a:hover {
+    color: $brand_secondary_dark;
+    text-decoration: underline;
+  }
+
+  a:link, a:visited, a:active {
+    &:has(.visual-block) {
+      text-decoration: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
@@ -503,11 +535,10 @@ html, body {
   min-height: $footer_min_height;
   padding-top: $footer_padding-top;
   font-size: 14px;
-  background-color: $dark_color;
+  background-color: $darkest_gray;
   color: $header_text;
   a:link, a:visited, a:hover, a:active {
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
     color: $white;
     background-color: transparent;
   }
@@ -526,13 +557,12 @@ html, body {
     }
   .fineprint {
     a:link, a:visited, a:hover, a:active {
-      font-family: $gotham-bold;
-      font-weight: normal;
+      @include main-font-semi-bold;
     }
   }
   .dim {
     display: inline-block;
-    opacity: 0.5;
+    opacity: 0.8;
   }
 
   .container {
@@ -578,8 +608,7 @@ $small-footer-standard-width: 400px;
   color: $dimgray;
   font-size: 14px;
   a {
-    font-family: $gotham-bold;
-    font-weight: normal;
+    @include main-font-semi-bold;
     &:link {
       color: $charcoal;
       text-decoration: none;
@@ -708,6 +737,13 @@ $small-footer-standard-width: 400px;
   }
 }
 
+/* Override footer position on some pages, but not published project views */
+#page-small-footer .small-footer-base {
+  position: fixed;
+  margin-top: 0;
+}
+
+
 #copyright-scroll-area {
   overflow-y: auto;
   padding: 0.8em;
@@ -795,9 +831,62 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
-.oceans-blue .small-footer-base {
+.oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
+}
+
+/* Custom styling for the locale & copyright buttons and the copyright flyout,
+ * for Music Lab.
+ */
+.music-black {
+  #page-small-footer {
+    user-select: none;
+
+    .small-footer-base {
+      margin-left: 10px;
+    }
+
+    .i18n-dropdown-container, .copyright-link {
+      height: 26px;
+      box-sizing: border-box;
+      border: solid 1px $neutral_dark40;
+    }
+
+    .copyright-button {
+      user-select: none;
+
+      .copyright-link {
+        width: 26px;
+      }
+    }
+
+    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
+      background-color: initial;
+      color: $neutral_dark40;
+    }
+
+    #copyright-flyout {
+      border: solid 1px $neutral_dark40;
+      box-sizing: border-box;
+
+      h4, a:link {
+        color: $neutral_dark50;
+      }
+
+      img {
+        background-color: $neutral_light;
+        border-radius: 4px;
+        padding: 4px;
+        margin-bottom: 6px;
+      }
+    }
+
+    #copyright-flyout, #copyright-scroll-area {
+      background-color: $neutral_dark;
+      color: $neutral_light;
+    }
+  }
 }
 
 .header_separator {
@@ -855,8 +944,12 @@ body.embedded_iframe {
 $default-modal-width: 640px;
 
 .modal {
+  @media screen and (max-height: 600px) {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
   a:hover:not(.btn) {
-    color: $red;
     background-color: $white;
   }
 
@@ -971,6 +1064,7 @@ $default-modal-width: 640px;
 
 .video-modal {
   z-index: 10000;
+  overflow: visible;
 
   .ui-tabs {
     height: 100%;
@@ -1239,6 +1333,7 @@ input.header_input {
 
 #codeApp {
   position: relative;
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .loading {
     height: 520px;
@@ -1289,11 +1384,10 @@ body.iframe_embed_app_and_code {
 
 .reference_area {
   margin-top: 20px;
+  color: $neutral_dark;
 
   .help_title {
-    color: $dark_charcoal;
-    font-family: $gotham-extra-bold;
-    font-weight: normal;
+    @include main-font-bold;
     font-size: 17.5px;
     display: inline-block;
   }
@@ -1305,11 +1399,13 @@ body.iframe_embed_app_and_code {
 
   .video_link {
     display: inline-block;
-    margin: 6px;
-  }
+    margin: 6px 0;
+    color: $brand_secondary_default;
+    text-decoration: underline;
 
-  .video_name {
-    text-align: center;
+    &:hover {
+      color: $brand_secondary_dark;
+    }
   }
 
   .help_subtitle {
@@ -1351,12 +1447,22 @@ body.iframe_embed_app_and_code {
     li {
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
+      border: 0;
+      background: transparent;
+      margin-bottom: 2px;
 
       a {
-        background: $dark_color;
-        color: $white;
+        background: $brand_secondary_default;
+        border: 2px solid $brand_secondary_default;
+        border-radius: 6px;
+        color: $neutral_white;
+        @include main-font-semi-bold;
+        cursor: pointer !important;
+
         &:hover {
-          color: $green;
+          background-color: $brand_secondary_dark;
+          border-color: $brand_secondary_dark;
+          color: $neutral_white;
         }
         &:focus {
           outline: 0;
@@ -1370,10 +1476,13 @@ body.iframe_embed_app_and_code {
 
     li.ui-state-active {
       a {
-        background: $white;
-        color: $orange;
+        background: $neutral_white;
+        color: $neutral_dark;
+        border: 2px solid $neutral_dark;
+
         &:hover {
-          color: $orange;
+          color: $neutral_dark;
+          background-color: $neutral_dark20;
         }
       }
     }
@@ -1461,9 +1570,8 @@ body.iframe_embed_app_and_code {
 .qtip-content {
   font-size: 20px;
   line-height: 28px;
-  color: $purple;
-  font-family: $gotham-bold;
-  font-weight: normal;
+  color: $neutral_dark;
+  @include main-font-semi-bold;
   padding-right: 25px;
 }
 
@@ -1499,10 +1607,18 @@ a.download-video {
   z-index: 1;
   cursor: pointer;
   width: 40px;
-  height: 36px;
+  height: 34px;
+  font-size: 28px;
+  background-color: $neutral_white;
+  color: $neutral_dark;
+  border: 2px solid $neutral_dark;
+  padding: 0;
+  line-height: 36px;
+
   &:hover {
-    background: none;
+    background: $neutral_dark20;
   }
+
   img {
     width: 40px;
     height: 41px;
@@ -1518,8 +1634,7 @@ a.download-video {
 
 .quiet_links {
   a:link {
-    font-family: $gotham-regular;
-    font-weight: normal;
+    @include main-font-regular;
   }
 }
 
@@ -1537,8 +1652,7 @@ a.download-video {
     font-size: 24.5px;
     padding: 5px 0;
     #puzzle {
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
     }
     .btn {
       height: 32px;
@@ -1696,6 +1810,17 @@ a.download-video {
       height: 40px;
       padding: 0 6px;
     }
+    input {
+      background-color: $neutral_light;
+    }
+
+    label {
+      color: $neutral_dark;
+      font-size: 1em;
+      max-width: 20%;
+      line-height: 1.2;
+      @include main-font-semi-bold;
+    }
   }
 
   .field-aligned {
@@ -1704,7 +1829,10 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold;
+    color: $neutral_dark;
+    font-size: 1em;
+    line-height: 1.2;
+    @include main-font-semi-bold;
   }
 
   #password_field, #new_user {
@@ -1717,25 +1845,70 @@ a.download-video {
 
   button {
     align-self: flex-end;
-    background-color: $orange;
-    border: 1px solid $orange;
-    color: $white;
-    font-family: $gotham-bold;
+    background-color: $brand_secondary_default;
+    border: 2px solid $brand_secondary_default;
+    color: $neutral_white;
+    @include main-font-semi-bold;
     margin: 5px 0;
     width: $button-width;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_white;
+      border-color: $neutral_dark20;
+      background-color: $neutral_dark20;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
   }
 
   .blue-button {
     background-color: $blue;
     border: 1px solid $blue;
   }
+  .neutral-button {
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    color: $neutral_dark;
+
+    &:hover {
+      background-color: $neutral_dark10;
+      border-color: $neutral_dark;
+      box-shadow: none;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
+  }
 }
 
 #code_without_signing_in {
   margin-top: 80px;
+  margin-bottom: 0;
 }
 
 #signup, #school-info-modal {
+  $signup-info-background: #f7f7f7;
+  $signup-info-border-color: #e5e5e5;
+
   display: flex;
   flex-wrap: wrap;
 
@@ -1744,10 +1917,32 @@ a.download-video {
     flex-wrap: wrap;
   }
 
+  #sign_up_errors {
+    background-color: $signup-info-background;
+    border: 1px solid $red;
+    flex-wrap: wrap;
+    width: 100%;
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .padded-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .row {
+      flex-grow: 1;
+    }
+
+    .parent-email-field-input {
+      flex-grow: 1;
+    }
+  }
+
   .oauth-links {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 10px;
   }
 
   .more-details {
@@ -1822,25 +2017,21 @@ a.download-video {
   .signup-header {
     margin: 0;
     flex-grow: 1;
-    text-align: center;
   }
 
   .signup, .finish-signup {
-    $school-info-background: #f7f7f7;
-    $school-info-border-color: #e5e5e5;
-
     .section-container {
       padding: 10px;
       flex-grow: 1;
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
 
       h5 {
         font-weight: bold;
       }
 
       hr {
-        border: 1px solid $school-info-border-color;
+        border: 1px solid $signup-info-border-color;
       }
     }
 
@@ -1940,8 +2131,8 @@ a.download-video {
     }
 
     #parent-email-section {
-      background-color: $school-info-background;
-      border: 1px solid $school-info-border-color;
+      background-color: $signup-info-background;
+      border: 1px solid $signup-info-border-color;
       flex-wrap: wrap;
     }
 
@@ -1955,19 +2146,6 @@ a.download-video {
 
     #signup-select-user-type-label {
       width: 220px;
-    }
-
-    .padded-container {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      .row {
-        flex-grow: 1;
-      }
-
-      .parent-email-field-input {
-        flex-grow: 1;
-      }
     }
 
     .parent-email-section-header {
@@ -2044,7 +2222,7 @@ a.download-video {
       margin: 5px 0;
       font-size: 18px;
       height: 40px;
-      font-family: $gotham-extra-bold;
+      @include main-font-bold;
     }
 
     #forgot-password {
@@ -2122,6 +2300,10 @@ a.download-video {
     display: flex;
     align-items: center;
 
+    input {
+      background-color: $neutral_light;
+    }
+
     input[type=text] {
       flex-grow: 2;
       height: 40px;
@@ -2131,40 +2313,80 @@ a.download-video {
     }
 
     button {
-      background-color: $orange;
-      border: 1px solid $orange;
-      color: $white;
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
       padding: 10px 20px;
       margin-right: 0;
-    }
-  }
+      background-color: $brand_secondary_default;
+      border: 2px solid $brand_secondary_default;
+      color: $neutral_white;
 
-  .oauth-sign-in {
-    color: $white;
-    font-family: $gotham-bold;
-    width: 100%;
-    margin: 5px 0;
+      &:hover {
+        background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
+        box-shadow: none;
+      }
+      &:focus {
+        border-color: $brand_primary_default;
+      }
 
-    &.with-google_oauth2 {
-      background-color: $google_red;
-      border: 1px solid $google_red;
       &:disabled {
-        border: 1px solid $lighter_gray;
-        background-color: $lighter_gray;
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
         @include box-shadow(none);
         cursor: not-allowed;
       }
     }
+  }
+
+  .oauth-sign-in {
+    @include main-font-semi-bold;
+    width: 100%;
+    margin: 5px 0;
+    color: $neutral_dark;
+    background-color: $neutral_white;
+    border: 2px solid $neutral_dark;
+    border-radius: 4px;
+    line-height: 18px;
+
+    &:hover {
+      background-color: $neutral_dark10;
+      box-shadow: none;
+    }
+
+    img {
+      opacity: unset;
+      float: left;
+      margin-left: 24px;
+    }
+
+    &:focus {
+      border-color: $brand_primary_default;
+    }
+
+    &:disabled {
+      color: $neutral_dark20;
+      border-color: $neutral_dark20;
+      background-color: $neutral_white;
+      @include box-shadow(none);
+      cursor: not-allowed;
+    }
+
+    &.with-google_oauth2 {
+      background-color: $google_brand_color;
+      border-color: $google_brand_color;
+      color: $neutral_white;
+    }
 
     &.with-facebook {
-      background-color: $facebook_blue;
-      border: 1px solid $facebook_blue;
+      background-color: $facebook_brand_color;
+      border-color: $facebook_brand_color;
+      color: $neutral_white;
     }
 
     &.with-microsoft_v2_auth {
-      background-color: $microsoft_blue;
-      border: 1px solid $microsoft_blue;
+      background-color: $microsoft_brand_color;
+      border-color: $microsoft_brand_color;
     }
   }
 }
@@ -2253,8 +2475,7 @@ a.download-video {
       .giantmark {
         .text {
           opacity: 0.8;
-          font-family: $gotham-bold;
-          font-weight: normal;
+          @include main-font-semi-bold;
         }
       }
     }
@@ -2442,8 +2663,7 @@ a.download-video {
       padding: 5px;
       font-size: 18px;
       line-height: 18px;
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
       color: $white;
       background: $cyan;
       margin: 0;
@@ -2583,8 +2803,7 @@ a.download-video {
   color: $white;
   font-size: 13px;
   padding-right: 10px;
-  font-family: $gotham-regular;
-  font-weight: normal;
+  @include main-font-regular;
   padding: 10px;
 }
 
@@ -2791,7 +3010,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
     }
   }
   .item-answer-letter {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 }
 
@@ -2812,11 +3031,15 @@ $modal-no-icon-gap: 22px;
   p, pre {
     line-height: 27px;
     font-size: 24px;
+    color: $neutral_dark;
+  }
+
+  pre {
     color: $purple;
   }
 
   .congrats {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 21px;
     line-height: 27px;
   }
@@ -2863,8 +3086,7 @@ $modal-no-icon-gap: 22px;
     }
 
     .hint-header {
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
+      @include main-font-bold;
     }
 
     .hint-image {
@@ -2876,7 +3098,6 @@ $modal-no-icon-gap: 22px;
   .lines-of-code-message {
     font-size: 20px;
     line-height: normal;
-    color: $charcoal;
     margin: 0 0 8px 0;
   }
 
@@ -2893,8 +3114,12 @@ $modal-no-icon-gap: 22px;
 }
 
 .dialog-title {
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
+  @include main-font-bold;
+}
+
+h5.dialog-title {
+  // TODO: [Phase 2] Remove when new typography will be done and used or replace with 1.25em
+  font-size: 20px;
 }
 
 #ok-button {
@@ -2979,7 +3204,7 @@ $modal-no-icon-gap: 22px;
   }
 
   strong {
-    font-family: $gotham-bold;
+    @include main-font-semi-bold;
   }
 }
 
@@ -3313,8 +3538,10 @@ code {
       padding: 20px;
       color: $white;
 
-      h1 {
+      h2 {
         color: $white;
+        font-size: 26px;
+        margin-bottom: 20px;
       }
 
       .subtext {
@@ -3336,7 +3563,7 @@ code {
         width: 100%;
 
         li {
-          font-size: 14px;
+          font-size: 16px;
         }
 
         .dots {
@@ -3358,6 +3585,18 @@ code {
 
     #noanswer {
       cursor: pointer;
+      border: none;
+      box-shadow: none;
+      @include main-font-semi-bold;
+      font-size: 100%;
+      color: $brand_secondary_default;
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    #noanswer:hover {
+      color: $brand_secondary_dark;
+      text-decoration: underline;
     }
   }
 }
@@ -3423,15 +3662,15 @@ h2.danger {
   padding: 30px 10px 36px 10px;
 
   h1 {
+    @include main-font-semi-bold;
     color: $white;
     margin-bottom: 24px;
     margin-top: 0;
-    font-family: "Gotham 5r", sans-serif;
     font-size: 38px;
   }
 
   h3 {
-    font-family: "Gotham 5r", sans-serif;
+    @include main-font-semi-bold;
     font-size: 20px;
     line-height: normal;
   }
@@ -3473,7 +3712,9 @@ h2.danger {
 .foorm-adjust-header {
   background-color: $white;
   h3 {
-    font-family: "Gotham 5r", sans-serif !important;
+    @include main-font-semi-bold;
+    font-family: $main-font !important;
+    font-weight: $semi-bold-font-weight !important;
     font-size: 22px !important;
     line-height: 30px !important;
     color: $teal !important;
@@ -3481,7 +3722,9 @@ h2.danger {
 }
 
 .foorm-adjust-page-title {
-  font-family: "Gotham 5r", sans-serif !important;
+  @include main-font-semi-bold;
+  font-family: $main-font !important;
+  font-weight: $semi-bold-font-weight !important;
   font-size: 22px !important;
 }
 
@@ -3497,10 +3740,10 @@ h2.danger {
   table-layout: fixed;
 
   th {
+    @include main-font-regular;
     font-size: 12px;
     text-align: center;
-    font-family: 'Gotham 4r', sans-serif;
-    font-weight: normal !important;
+    font-weight: $regular-font-weight !important;
   }
 
   @media (min-width: 601px) {
@@ -3631,19 +3874,21 @@ h2.danger {
       }
 
       #link_your_email {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $orange;
         border-color: $orange;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
 
       #not_now {
+        @include main-font-regular;
+        font-family: $main-font !important;
         background-color: $light_purple;
         border-color: $light_purple;
         border-image-source: none !important;
-        font-family: 'Gotham 4r', sans-serif !important;
         text-shadow: none !important;
         border-width: 1px !important;
       }
@@ -3682,28 +3927,48 @@ html[dir=rtl] {
 
 .immersive-reader-button {
   /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
-  background-color: $lightest_purple !important;
+  background-color: $neutral_white !important;
   float: right;
+  border: 2px solid $neutral_dark;
   margin-top: 1px !important;
-  height: 16px !important;
-  padding: 8px !important;
-  border-radius: 4px !important;
+  margin-right: 2px;
+  height: 16px;
+  padding: 6px !important;
 
   html[dir=rtl] & {
     float: left;
   }
 
   &:hover {
-    background-color: $cyan !important;
-    border-radius: 4px !important;
+    background-color: $brand_primary_default !important;
+    border-color: $brand_primary_default;
 
     /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
     position: relative;
     z-index: 1000;
+
+    img {
+      // paint native Microsoft icon full black and set it's color to $neutral_white
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(101%) contrast(100%);
+    }
   }
 
   img {
-    filter: grayscale(1);
+    // paint native Microsoft icon full black and set it's color to $neutral_dark
+    filter: brightness(0) saturate(100%) invert(15%) sepia(31%) saturate(359%) hue-rotate(169deg) brightness(94%) contrast(91%);
+  }
+}
+
+.immersive-reader-button-legacy-styles {
+  /* !important is used to override the default styling from the Microsoft immersive-reader-sdk */
+  background-color: $lightest_purple !important;
+  border-color: $lightest_purple;
+
+  &:hover {
+    background-color: $cyan !important;
+    border-radius: 4px !important;
+
+    /* The TTS buttons overlap this button, so make this button's z-index higher as a temp fix */
   }
 }
 
@@ -3733,14 +3998,14 @@ html[dir=rtl] {
 
   .mapboxgl-ctrl-geocoder--suggestion {
     color: $default_text;
-    font-family: $gotham-regular, sans-serif;
+    @include main-font-regular;
   }
 }
 
 #reset-predict-progress-button {
   display: 'inline-block';
   font-size: 12;
-  font-family: $gotham-regular;
+  @include main-font-regular;
   border-width: '1px';
   border-style: 'solid';
   border-color: $border_gray;
@@ -3766,6 +4031,41 @@ html[dir=rtl] {
   &:disabled {
     background-color: $lightest_red;
     box-shadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)';
+  }
+}
+
+a {
+  &.design-system-btn {
+    &:link, &:visited, &:hover, &:active {
+      text-decoration: none;
+      border-radius: 4px;
+      @include main-font-semi-bold;
+      font-size: 1em !important;
+      padding: 10px 20px;
+      height: auto;
+      margin-right: 0;
+      background-color: $brand_secondary_default;
+      border: 2px solid $brand_secondary_default;
+      color: $neutral_white;
+      line-height: unset;
+
+      &:hover {
+        background-color: $brand_secondary_dark;
+        border-color: $brand_secondary_dark;
+        box-shadow: none;
+      }
+
+      &:focus {
+        border-color: $brand_primary_default;
+      }
+
+      &:disabled {
+        color: $neutral_white;
+        border-color: $neutral_dark20;
+        background-color: $neutral_dark20;
+        cursor: not-allowed;
+      }
+    }
   }
 }
 

@@ -2,7 +2,7 @@ var EvalImage = require('./evalImage');
 var evalUtils = require('./evalUtils');
 require('../utils'); // Provides Function.prototype.inherits
 
-var EvalPolygon = function(sideCount, length, style, color) {
+var EvalPolygon = function (sideCount, length, style, color) {
   evalUtils.ensureNumber(sideCount);
   evalUtils.ensureNumber(length);
   evalUtils.ensureStyle(style);
@@ -18,7 +18,7 @@ var EvalPolygon = function(sideCount, length, style, color) {
 EvalPolygon.inherits(EvalImage);
 module.exports = EvalPolygon;
 
-EvalPolygon.prototype.draw = function(parent) {
+EvalPolygon.prototype.draw = function (parent) {
   if (!this.element_) {
     this.element_ = document.createElementNS(Blockly.SVG_NS, 'polygon');
     parent.appendChild(this.element_);

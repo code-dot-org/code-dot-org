@@ -10,3 +10,5 @@ wrong 'A method called `equals` in the `Student` class that compares this studen
 markdown <<MARKDOWN
 Which of the following methods would be best written as a static method?
 MARKDOWN
+
+allow_multiple_attempts true

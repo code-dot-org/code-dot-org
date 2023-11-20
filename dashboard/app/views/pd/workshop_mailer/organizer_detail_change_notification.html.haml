@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 %p
@@ -18,7 +18,7 @@
   = @workshop.subject
   workshop have changed.
 
--if [Pd::Workshop::COURSE_COUNSELOR, Pd::Workshop::COURSE_ADMIN].include? @workshop.course
+-if Pd::Workshop::COURSE_ADMIN_COUNSELOR == @workshop.course
   = render partial: 'teacher_enrollment_details_counselor'
 -else
   = render partial: 'teacher_enrollment_details'

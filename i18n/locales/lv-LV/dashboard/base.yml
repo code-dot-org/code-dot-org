@@ -39,8 +39,10 @@ lv:
         age: 'Vecums'
         gender: 'Dzimums'
         edit_header: 'Rediģēt konta detaļas'
+        finish_sign_up_header_error: 'Lūdzu, izlabojiet šādas kļūdas:'
         error:
           future: nevar būt nākotnē
+        user_type: 'Konta tips'
   beta: "beta"
   hello: "Sveika, pasaule"
   welcome_back: "Laipni lūdzu atpakaļ, %{name}"
@@ -111,7 +113,6 @@ lv:
     agree_us_data_transfer_teacher: '**Es piekrītu, ka Code.org pārsūta datus (tostarp personas datus) no manas (un manu studentu) šīs vietnes izmantošanas Amerikas Savienotajām Valstīm** ar mērķi viesot un apstrādāt šos datus.'
     data_collection_us: "Es saprotu, ka Code.org ir ASV reģistrēta bezpeļņas vietne un likumi, kas pārrauga datu apkopošanu ASV, var atšķirties no manas valsts likumiem."
     visit_privacy: 'Skatiet Code.org [Privātuma politiku](%{privacy_url}), lai uzzinātu vairāk.'
-    additional_information: "Mums nepieciešama papildus informācija, lai turpinātu Tavu pieteikumu."
     user_type_label: "Konta tips"
     user_type_student: "Students"
     user_type_teacher: "Skolotāja"
@@ -403,33 +404,33 @@ lv:
     applab:
       title: 'Aplikāciju laborotorija'
       audience: 'Vecums 13+'
-    hoc:
-      body: 'Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.'
     flappy:
       title: 'Flappy kods'
       body: 'Vēlies izveidot pats savu spēli mazāk nekā 10 minūtēs? Izmēģini Flappy koda apmācību!'
-    20-hour:
-      body: 'šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.'
-    hoc2014:
-      try_new_tutorial: 'Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā'
-      try_frozen: 'Zīmē kopā ar Annu un Elzu no "Ledus sirds"'
+    frozen:
+      title: "Ledus sirds"
     gallery:
       title: "Galerija"
       body: "Apskati lietotnes un mākslinieciskos zīmējumus, ko veidojuši citi lietotāji"
     gamelab:
       audience: "Vecums 13+"
-    weblab:
-      audience: "Vecums 13+"
-    frozen:
-      title: "Ledus sirds"
+    hoc:
+      body: 'Mēģini datorzinātņu pamatus. Miljoniem ir mēģinājuši.'
+    hoc2014:
+      try_new_tutorial: 'Pamēģini mūsu jauno Programmēšanas Stundas apmācību beta versijā'
+      try_frozen: 'Zīmē kopā ar Annu un Elzu no "Ledus sirds"'
     minecraft:
       body: "Iepazīsti Minecraft pasauli, izmantojot kodu"
-    unplugged:
-      audience: "Vecums 4+"
-    unplugged_conditionals:
-      title: "Sazarojumi"
+    weblab:
+      audience: "Vecums 13+"
     widgets:
       audience: "Vecums 14+"
+    unplugged_conditionals:
+      title: "Sazarojumi"
+    unplugged:
+      audience: "Vecums 4+"
+    20-hour:
+      body: 'šis 20 stundu kurss iepazīstina ar datorzinību un programmēšanas pamatiem. Kurss ir izveidots, lai to varētu izmantot pamatskolas klasēs, bet tas sagādās prieku mācīties visos vecumos.'
   landing:
     report_bug: "Kļūdas ziņojums"
     support: "Saņemt palīdzību"
@@ -538,6 +539,8 @@ lv:
       robotics:
         kodable: 'Kodable'
         other: "Citi"
+      workshop_course:
+        other: 'Citi'
       email_opt_in:
         opt_in_yes: 'Jā'
         opt_in_no: 'Nē'

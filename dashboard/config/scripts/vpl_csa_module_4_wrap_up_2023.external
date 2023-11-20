@@ -1,0 +1,16 @@
+name 'vpl-csa-module-4-wrap-up_2023'
+editor_experiment ''
+display_name 'CSA Module 3 Wrap-up'
+
+title 'Module 1: CSA Virtual Professional Learning'
+markdown <<MARKDOWN
+# Wrap up
+
+This marks the end of Module 4!  
+
+In your next Code.org workshop, we will cover how students will use The Theater to manipulate 2D arrays of pixels to create their own image effects. 
+
+
+**See you soon!**
+
+MARKDOWN

@@ -5,7 +5,7 @@ uk:
       Blue: Синя
       Green: Зелена
       Red: Червона
-      actor: персонаж
+      actor: виконавець
       age: вік
       answer: відповідь
       binary: двійкова система
@@ -19,6 +19,7 @@ uk:
       i: i
       left: ліворуч
       length: довжина
+      meal: порція
       name: ім’я
       nectar: нектар
       object: об'єкта
@@ -27,7 +28,7 @@ uk:
       random: випадковий
       repeat: повторити
       right: праворуч
-      score: рахунок
+      score: додати бал
       sides: сторони
       size: розмір
       speed: швидкість

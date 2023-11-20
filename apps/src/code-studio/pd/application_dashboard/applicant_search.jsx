@@ -1,12 +1,14 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
+/* eslint-disable no-restricted-imports */
 import {
   Form,
   FormGroup,
   ControlLabel,
   FormControl,
-  Button
+  Button,
 } from 'react-bootstrap';
+/* eslint-enable no-restricted-imports */
 import $ from 'jquery';
 import {Link} from 'react-router';
 import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
@@ -17,7 +19,7 @@ export default class ApplicantSearch extends React.Component {
     this.state = {
       email: '',
       results: [],
-      lastSearch: null
+      lastSearch: null,
     };
   }
 
@@ -25,7 +27,7 @@ export default class ApplicantSearch extends React.Component {
     this.setState({
       email: event.target.value,
       results: [],
-      lastSearch: null
+      lastSearch: null,
     });
   };
 
@@ -38,13 +40,13 @@ export default class ApplicantSearch extends React.Component {
     $.ajax({
       method: 'GET',
       url: `/api/v1/pd/applications/search?${$.param({
-        email: this.state.email
+        email: this.state.email,
       })}`,
-      dataType: 'json'
+      dataType: 'json',
     }).done(data => {
       this.setState({
         lastSearch: this.state.email,
-        results: data
+        results: data,
       });
     });
   };
@@ -93,6 +95,6 @@ export default class ApplicantSearch extends React.Component {
 
 const styles = {
   notFound: {
-    color: color.red
-  }
+    color: color.red,
+  },
 };

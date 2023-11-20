@@ -25,15 +25,27 @@ sv:
       pair_programmer: 'Du parprogrammerar för närvarande med en elev som inte har tillgång till detta innehåll. För att få tillgång till innehållet, avbryt parprogrammeringen och försök igen.'
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: "är ogiltig. Observera att varje länk bara kan användas en gång för att återställa ditt lösenord, och bara den senast skickade länken fungerar."
       messages:
         blank: "krävs"
+        blank_plural: "krävs"
+        invalid: "är ogiltig"
+        invalid_plural: "är ogiltiga"
     attributes:
       user:
         name: 'Visat namn'
+        name_example: 'Visningsnamn (t.ex. "Cool Coder" eller "JohanS")'
         email: 'E-post'
         parent_email: 'Förälder/vårdnadshavares e-postadress'
+        personal_email: "Personlig e-postadress <a href=\"%{url}\">(klicka här om du inte har en e-postadress)</a>"
+        personal_email_markdown: "Personlig e-postadress [(klicka här om du inte har en e-postadress)] (%{url})"
         username: "användarnamn\n"
         password: 'Lösenord'
+        verified_teacher: 'Verified lärare'
         password_confirmation: 'Lösenordsbekräftelse'
         current_password: 'Nuvarande lösenord'
         locale: 'språk'
@@ -41,8 +53,16 @@ sv:
         gender: 'Kön'
         edit_header: 'Redigera kontouppgifter'
         finish_sign_up_header: 'Fortsätt färdigställa ditt konto'
+        finish_sign_up_header_error: 'Rätta följande fel:'
+        finish_sign_up_subheader: 'Fyll i följande information för att slutföra skapandet av ett Code.org-konto för <strong>%{email}</strong>.'
+        finish_sign_up_subheader_markdown: 'Fyll i följande information för att slutföra skapandet av ett Code.org-konto för **%{email}**.'
+        finish_sign_up_subheader_provider: 'Fyll i följande information för att slutföra skapandet av ett Code.org-konto med <strong>%{provider}</strong> för <strong>%{email}</strong>.'
+        finish_sign_up_subheader_provider_markdown: 'Fyll i följande information för att slutföra skapandet av ett Code.org-konto med **%{provider}** för **%{email}**.'
+        reset_password_token: "Länken för återställning av lösenord som du har följt"
         error:
           future: kan inte vara i framtiden
+        user_type: 'Kontotyp'
+        us_state: 'Stat'
   beta: "beta"
   hello: "Hej världen"
   welcome_back: "Välkommen tillbaka, %{name}"
@@ -53,6 +73,7 @@ sv:
   previous_page: Föregående sida
   next_page: Nästa sida
   next_resource: Nästa resurs
+  done_with_module: Färdig med denna inlärningsmodul
   cancel: "Avbryt"
   okay: "Okej"
   or: "eller"
@@ -60,6 +81,7 @@ sv:
   join_section:
     code:
       placeholder: "Avsnitt kod (ABCDEF)"
+      submit: 'Gå med'
   add_hint_form:
     placeholder: 'Skriv in ditt tips här'
     submit: 'Lägg till tips'
@@ -130,7 +152,6 @@ sv:
     agree_us_data_transfer_teacher: '**Jag godkänner att Code.org kan överföra data (inklusive personuppgifter) från min användning (och mina elevers användning) av denna webbplats till USA** i syfte att vara värd för och bearbeta sådan information.'
     data_collection_us: "Jag förstår att Code.org är en USA-baserad ideell webbplats och att lagarna som reglerar datainsamling i USA kan skilja sig från lagarna i mitt land."
     visit_privacy: 'Besök Code.org’s [Privacy Policy](%{privacy_url}) för att veta mer.'
-    additional_information: "Vi behöver  ytterligare information att fortsätta registrera dig."
     user_type_button: "Uppdatera kontotyp"
     user_type_label: "Kontotyp"
     user_type_student: "Student"
@@ -145,7 +166,9 @@ sv:
     parent_account_checkbox: "Jag är en förälder / målsman som anmäler mitt barn"
     parent_account_email_progress_permission: "Har vi tillstånd att skicka dig e-post då och då för att uppdatera dig om ditt barns framsteg och projekt samt om deras kurs och datavetenskap? [(Se vår integritetspolicy)] (%{privacy_policy_url})"
     parent_account_email_label: "Förälder/vårdnadshavare"
+    us_state: 'Stat'
   school_info:
+    title: 'Skolinformation (valfritt)'
     school_country: 'Skolans land'
     select_school_type: 'Skoltyp'
     private: 'Privat'
@@ -517,36 +540,32 @@ sv:
       body_short: "Utveckla en app, bygg den med blocks eller JavaScript. När du har fått den att fungerar som du tänkte kan du inom några sekunder dela med dig av den till andra."
       audience: 'Ålder 13+'
       cta: 'Läs mer'
-    dance:
-      title: 'Dansparty'
+    aquatic:
+      title: "Minecraft"
     dance-2019:
       title: 'Dansparty'
-    hoc:
-      title: 'Klassisk labyrint'
-      body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
+    dance:
+      title: 'Dansparty'
     flappy:
       title: 'Flappy kod'
       body: 'Vill du skriva ditt egna spel på mindre än 10 minuter? Prova vår Flappy Code övning!'
-    20-hour:
-      title: 'Snabbkurs'
-      body: 'Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.'
-      body_short: 'Lär dig grundläggande datavetenskap i en snabbare version av kurser 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prova vår nya Hour of Code övning i betaversion'
-      try_frozen: 'Konstnären, med Anna och Elsa från Frost'
+    frozen:
+      title: "Frost"
     gallery:
       title: "Galleri"
       body: "Se ett galleri av app och artist bilder som skapats av våra användare"
     gamelab:
       audience: "Ålder 13+"
       cta: "Läs mer"
-    weblab:
-      audience: "Ålder 13+"
-      cta: "Läs mer"
-    frozen:
-      title: "Frost"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+      body: "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
+    hoc:
+      title: 'Klassisk labyrint'
+      body: 'Lär dig grunderna i programmering. Miljoner har provat denna.'
+    hoc2014:
+      try_new_tutorial: 'Prova vår nya Hour of Code övning i betaversion'
+      try_frozen: 'Konstnären, med Anna och Elsa från Frost'
     infinity:
       title: "Infinity Play Lab"
       body: "Använd Play Lab för att skapa en berättelse eller ett spel med Disney Infinity karaktärer i huvudrollen ."
@@ -556,25 +575,29 @@ sv:
     minecraft2016:
       title: "Minecraft"
       body: "Programmera djur och andra Minecraft varelser i din egen version av Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Res genom Minecraft via koden."
     sports:
       title: "Sport"
+    starwars:
+      title: "Star Wars"
     text-compression:
       title: "Text komprimering"
+    weblab:
+      audience: "Ålder 13+"
+      cta: "Läs mer"
+    widgets:
+      audience: "Ålder 14+"
+      cta: "Läs mer"
+    unplugged_conditionals:
+      title: "Villkor"
     unplugged:
       title: "Lektioner där du inte behöver tillgång till en dator"
       audience: "Ålder 4+"
       body: "Vi har sammanställt en lista över lektioner som du kan använda i klassrummet där du inte behöver tillgång till en dator. Nu kan du lära grunderna i datavetenskap, om du har datorer i klassrummet eller inte! Prova att använda dessa lektioner som en fristående kurs eller som kompletterande lektioner för någon datavetenskapskurs."
       body_short: "Om du inte har några datorer tillgängliga, prova dessa \"unplugged\" lektioner i klassrummet."
-    unplugged_conditionals:
-      title: "Villkor"
-    widgets:
-      audience: "Ålder 14+"
-      cta: "Läs mer"
+    20-hour:
+      title: 'Snabbkurs'
+      body: 'Denna 20-timmars kurs introducerar grundläggande datavetenskap och programmeringsbegrepp. Kursen är utformad för användning i klassrummet från förskoleklass till årskurs 8, men det är roligt att lära sig i alla åldrar.'
+      body_short: 'Lär dig grundläggande datavetenskap i en snabbare version av kurser 2-4.'
   landing:
     report_bug: "Rapportera bugg"
     support: "Få hjälp"
@@ -848,9 +871,15 @@ sv:
         microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
         other: "Annat"
+      workshop_course:
+        other: 'Annat'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
+      sports: 'Sport'
   cookie_banner:
     accept: 'Jag håller med'
   page_not_found_button: "Återvänd hem"

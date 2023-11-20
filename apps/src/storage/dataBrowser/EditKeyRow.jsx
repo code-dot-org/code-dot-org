@@ -12,7 +12,7 @@ const INITIAL_STATE = {
   isDeleting: false,
   isEditing: false,
   isSaving: false,
-  newValue: ''
+  newValue: '',
 };
 
 class EditKeyRow extends React.Component {
@@ -20,7 +20,7 @@ class EditKeyRow extends React.Component {
     keyName: PropTypes.string.isRequired,
     value: PropTypes.any,
     showError: PropTypes.func.isRequired,
-    hideError: PropTypes.func.isRequired
+    hideError: PropTypes.func.isRequired,
   };
 
   state = {...INITIAL_STATE};
@@ -38,7 +38,7 @@ class EditKeyRow extends React.Component {
   handleEdit = () =>
     this.setState({
       isEditing: true,
-      newValue: editableValue(this.props.value)
+      newValue: editableValue(this.props.value),
     });
 
   handleSave = () => {

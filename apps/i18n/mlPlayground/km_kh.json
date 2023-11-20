@@ -1,0 +1,193 @@
+{
+  "columnDetailsMaximumValue": "អតិប្បរមា",
+  "columnDetailsMinimumValue": "អតិបរមា",
+  "columnInspectorDescription": "សេចក្តីពិពណ៌នា",
+  "correctAnswer": "ត្រឹម​ត្រូវ",
+  "dataCardLastUpdated": "អភិវឌ្ឍន៍មុន",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "ប្រវែង"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "អាយុ"
+        },
+        "Gender": {
+          "id": "ភេទ"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "ចេក"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "អាយុ"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "ពណ៌"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "អាយុ"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "អាយុ"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "ប្រទេស"
+        },
+        "Dance": {
+          "id": "រាំ"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "អាយុ"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "ប្រទេស"
+        },
+        "Name": {
+          "id": "ឈ្មោះ"
+        },
+        "Score": {
+          "id": "ពិន្ទុ"
+        },
+        "Star": {
+          "id": "ផ្កាយ"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "មេមាន់"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "សេចក្តីពិពណ៌នា"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "ក្រពើ"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "មេមាន់"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "ពោត"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "ទំហំ"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "ទំហំ"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "weather": {
+          "id": "អាកាសធាតុ"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "វិចិត្រករ"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "អាយុ"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "ការទទួលជោគជ័យ"
+        },
+        "Age": {
+          "description": "អាយុ",
+          "id": "អាយុ"
+        },
+        "Country": {
+          "id": "ប្រទេស"
+        },
+        "Dance": {
+          "id": "រាំ"
+        },
+        "Gender": {
+          "description": "ភេទ",
+          "id": "ភេទ"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "មិន​ត្រឹមត្រូវ",
+  "modelCardPossibleValuesMaximum": "អតិប្បរមា",
+  "modelCardPossibleValuesMinimum": "អតិបរមា",
+  "navigateBack": "ត្រលប់ក្រោយ",
+  "navigateDone": "បញ្ចប់ ",
+  "navigateForward": "បន្ត",
+  "saveProgress": "រក្សា​ទុក",
+  "tryAgain": "ព្យាយាម​ម្ដង​ទៀត"
+}

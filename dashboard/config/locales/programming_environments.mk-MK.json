@@ -2,117 +2,1321 @@
   "mk-MK": {
     "data": {
       "programming_environments": {
-        "weblab": {
-          "description": "Веб-базиран HTML/CSS eдитор.",
+        "applab": {
           "categories": {
-            "css_properties": {
-              "name": "Својства во CSS"
+            "advanced": {
+              "expressions": {
+                "setStyle": {
+                  "palette_params": {
+                    "css": {
+                      "type": "Стринг"
+                    },
+                    "id": {
+                      "type": "Стринг"
+                    }
+                  }
+                }
+              },
+              "name": "Напредно"
+            },
+            "canvas": {
+              "expressions": {
+                "circle": {
+                  "palette_params": {
+                    "radius": {
+                      "description": "Радиусот на кругот, во пиксели."
+                    }
+                  }
+                },
+                "drawImage": {
+                  "palette_params": {
+                    "id": {
+                      "description": "Позицијата x во пиксели на горниот лев агол на сликата за да се подготви."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели на горниот лев агол на сликата за да се подготви."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели на горниот лев агол на сликата за да се подготви."
+                    }
+                  }
+                },
+                "getAlpha": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  },
+                  "short_description": "Ја враќа количината на алфа (непроѕирност) (која се движи од 0 до 255) во бојата на пикселот кој се наоѓа на дадената x и y позиција во дадените податоци за сликата."
+                },
+                "getBlue": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  }
+                },
+                "getGreen": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  }
+                },
+                "getImageData": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Висината на граничниот правоаголник за снимање на податоците за сликата."
+                    },
+                    "width": {
+                      "description": "Ширината на граничниот правоаголник за снимање на податоците за сликата."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели за да започнете со снимање."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели за да започнете со снимање."
+                    }
+                  }
+                },
+                "getRed": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  }
+                },
+                "putImageData": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата за да ги поставите податоците на платното."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата за да ги поставите податоците на платното."
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "height": {
+                      "description": "Вертикалната висина во пиксели на правоаголникот."
+                    },
+                    "width": {
+                      "description": "Хоризонталната ширина во пиксели на правоаголникот."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели на горниот лев агол на правоаголникот."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели на горниот лев агол на правоаголникот."
+                    }
+                  }
+                },
+                "setAlpha": {
+                  "palette_params": {
+                    "alphaValue": {
+                      "description": "Количината на алфа (непроѕирност) (од 0 до 255) за да се постави во пикселот."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  },
+                  "short_description": "Ја поставува количината на алфа (непроѕирност) (која се движи од 0 до 255) во бојата на пикселот кој се наоѓа на дадената x и y позиција во дадените податоци за сликата."
+                },
+                "setBlue": {
+                  "palette_params": {
+                    "blueValue": {
+                      "description": "Износот на сина (од 0 до 255) за да го поставите во пиксел."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  },
+                  "short_description": "Ја поставува количината на сина (која се движи од 0 до 255) во бојата на пикселот кој се наоѓа на дадената x и y позиција во дадените податоци за сликата до влезниот износ на BlueValue."
+                },
+                "setFillColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "setGreen": {
+                  "palette_params": {
+                    "greenValue": {
+                      "description": "Износот на зелена (од 0 до 255) да се постави во пиксел."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  },
+                  "short_description": "Ја поставува количината на зелена (која се движи од 0 до 255) во бојата на пикселот кој се наоѓа на дадената x и y позиција во дадените податоци за сликата до влезната количина на GreenValue."
+                },
+                "setRGB": {
+                  "palette_params": {
+                    "alpha": {
+                      "description": "Факултативна. Износот на непроѕирност (од 0 до 255) да се постави во пиксел. Дефекти на 255 (целосна непроѕирност)."
+                    },
+                    "blue": {
+                      "description": "Износот на сина (од 0 до 255) за да го поставите во пиксел."
+                    },
+                    "green": {
+                      "description": "Износот на зелена (од 0 до 255) да се постави во пиксел."
+                    },
+                    "red": {
+                      "description": "Износот на црвено (од 0 до 255) за да го поставите во пиксел."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  }
+                },
+                "setRed": {
+                  "palette_params": {
+                    "redValue": {
+                      "description": "Износот на црвено (од 0 до 255) за да го поставите во пиксел."
+                    },
+                    "x": {
+                      "description": "Позицијата x во пиксели почнувајќи од горниот лев агол на сликата."
+                    },
+                    "y": {
+                      "description": "Позицијата y во пиксели почнувајќи од горниот лев агол на сликата."
+                    }
+                  },
+                  "short_description": "Го поставува количеството на црвено (кое се движи од 0 до 255) во бојата на пикселот кој се наоѓа на дадената x и y позиција во дадените податоци за сликата до влезниот износ на RedValue."
+                },
+                "setStrokeColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  }
+                }
+              },
+              "name": "Canvas"
+            },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Булова"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Булова"
+                }
+              }
+            },
+            "control": {
+              "expressions": {
+                "clearTimeout": {
+                  "palette_params": {
+                    "timeout": {
+                      "description": "Вредноста вратена од функцијата SetTimeout да се откаже."
+                    }
+                  }
+                },
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Бројот на милисекунди помеѓу секое извршување на функцијата."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Бројот на милисекунди да се чека пред извршување на функцијата."
+                    }
+                  }
+                },
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функција"
+                    },
+                    "ms": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
+              "name": "Контрола"
+            },
+            "data": {
+              "expressions": {
+                "createRecordSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "drawChartFromRecords": {
+                  "palette_params": {
+                    "tableName": {
+                      "description": "Името на табелата за да се добие евиденција од."
+                    }
+                  }
+                },
+                "getColumn": {
+                  "palette_params": {
+                    "column": {
+                      "type": "Стринг"
+                    },
+                    "table": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "getKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Името на клучот што треба да се добие."
+                    }
+                  }
+                },
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функција"
+                    },
+                    "id": {
+                      "type": "Стринг"
+                    },
+                    "name": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "getUserId": {
+                  "short_description": "Добива единствен идентификатор за тековниот корисник на оваа апликација."
+                },
+                "onRecordEvent": {
+                  "palette_params": {
+                    "table": {
+                      "description": "Името на табелата на која се однесува овој настан управувачот."
+                    }
+                  }
+                },
+                "readRecordsSync": {
+                  "palette_params": {
+                    "table": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "setKeyValue": {
+                  "palette_params": {
+                    "key": {
+                      "description": "Името на клучот што треба да се чува."
+                    },
+                    "value": {
+                      "description": "Податоците што треба да се чуваат."
+                    }
+                  },
+                  "short_description": "Складира пар клуч/вредност во складирање на податоци за клуч/вредност на App Lab и ја повикува функцијата за повратен повик кога дејството е завршено."
+                },
+                "startWebRequest": {
+                  "palette_params": {
+                    "url": {
+                      "description": "Веб адресата на услуга која враќа податоци."
+                    }
+                  }
+                }
+              },
+              "name": "Податоци"
+            },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "mode": {
+                      "type": "Стринг"
+                    },
+                    "pin": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
+              "name": "Maker"
+            },
+            "math": {
+              "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
+              "name": "Математика"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "ledScreen.scrollString": {
+                  "palette_params": {
+                    "String": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "arcLeft": {
+                  "short_description": "Ја поместува желката напред и налево во мазен, кружен лак."
+                },
+                "getX": {
+                  "short_description": "Добива тековната x координата во пиксели на желка."
+                },
+                "getY": {
+                  "short_description": "Добива тековната y координата во пиксели на желка."
+                },
+                "hide": {
+                  "short_description": "Ја прави желката невидлива на сегашната локација."
+                },
+                "move": {
+                  "palette_params": {
+                    "x": {
+                      "description": "Бројот на пиксели за движење на желка право."
+                    },
+                    "y": {
+                      "description": "Бројот на пиксели за движење на желка надолу."
+                    }
+                  }
+                },
+                "moveBackward": {
+                  "short_description": "Се движи желка назад даден број на пиксели од тековната насока."
+                },
+                "moveForward": {
+                  "short_description": "Се движи желка напред даден број на пиксели во тековната насока."
+                },
+                "moveTo": {
+                  "short_description": "Поместува желка на одредена (x, y) позиција на екранот."
+                },
+                "penColor": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  },
+                  "short_description": "Ја поставува бојата на пенкалото што ја користи желката за цртање линии и точки."
+                },
+                "penDown": {
+                  "short_description": "Го става пенкалото надолу па желката повлекува линија зад неа додека се движи."
+                },
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Број"
+                    }
+                  },
+                  "short_description": "Користејќи вредности на RGBA, ја поставува бојата на пенкалото што ја користи желката за цртање линии и точки."
+                },
+                "penUp": {
+                  "short_description": "Го зема пенкалото па желката не повлекува линија како што се движи."
+                },
+                "penWidth": {
+                  "short_description": "Ја поставува ширината на линијата во пиксели што желката ги влече зад неа додека се движи."
+                },
+                "show": {
+                  "short_description": "Ја прави желката видлива на нејзината сегашна локација."
+                },
+                "speed": {
+                  "short_description": "Ја поставува брзината за извршување на апликацијата, која ја вклучува брзината на желката."
+                },
+                "turnLeft": {
+                  "short_description": "Ротира желка лево од страна на одреден агол. Позицијата на желката останува иста."
+                },
+                "turnRight": {
+                  "short_description": "Ротира желка право со наведениот агол. Позицијата на желката останува иста."
+                },
+                "turnTo": {
+                  "short_description": "Ја менува насоката на желката до одреден агол. 0 е нагоре, 90 е во право, 180 е долу, а 270 е лево."
+                }
+              },
+              "name": "Turtle (Желка)"
+            },
+            "ui_controls": {
+              "expressions": {
+                "button": {
+                  "short_description": "Создава копче на екранот прикажувајќи го текстот обезбеден и референциран од дадениот id на стандардна локација (0,0)."
+                },
+                "getProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Стринг"
+                    },
+                    "property": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Функција"
+                    },
+                    "id": {
+                      "type": "Стринг"
+                    },
+                    "type": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Булова"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Стринг"
+                    },
+                    "language": {
+                      "type": "Стринг"
+                    },
+                    "text": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Број"
+                    },
+                    "b": {
+                      "type": "Број"
+                    },
+                    "g": {
+                      "type": "Број"
+                    },
+                    "r": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setProperty": {
+                  "palette_params": {
+                    "id": {
+                      "type": "Стринг"
+                    },
+                    "property": {
+                      "description": "Имотот да се промени.",
+                      "type": "Стринг"
+                    }
+                  },
+                  "short_description": "Поставува својство на нова вредност за наведениот елемент."
+                },
+                "setScreen": {
+                  "short_description": "Го поставува екранот на дадениот screenID."
+                },
+                "showElement": {
+                  "short_description": "Го покажува елементот со обезбедениот ID."
+                },
+                "textLabel": {
+                  "short_description": "Создава текстуална етикета на екранот која го прикажува текстот обезбеден и референциран од дадениот id на стандардна локација (0,0)."
+                }
+              },
+              "name": "UI контроли"
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "declareAssign_list_123": {
+                  "short_description": "Изјави и додели низа на променлива"
+                },
+                "getValue": {
+                  "palette_params": {
+                    "key": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Низата за пребарување."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Низата за пребарување."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Должината на стрингот"
+                }
+              },
+              "name": "Променливи"
             }
           }
         },
         "gamelab": {
-          "name": "Работилница за апликации",
-          "description": "Game Lab е програмерска средина каде можете да создадете возбудливи игри и анимации. Дизајнирајте ги вашите ликови, кодирајте со Blocks или JavaScript и споделете ја вашата игра за неколку секунди.",
           "categories": {
+            "control": {
+              "expressions": {
+                "setInterval": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Бројот на милисекунди помеѓу секое извршување на функцијата."
+                    }
+                  }
+                },
+                "setTimeout": {
+                  "palette_params": {
+                    "ms": {
+                      "description": "Бројот на милисекунди да се чека пред извршување на функцијата."
+                    }
+                  }
+                }
+              },
+              "name": "Контрола"
+            },
+            "drawing": {
+              "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Број"
+                    },
+                    "start": {
+                      "type": "Број"
+                    },
+                    "stop": {
+                      "type": "Број"
+                    },
+                    "w": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "background": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Број"
+                    },
+                    "w": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "fill": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Број"
+                    },
+                    "x2": {
+                      "type": "Број"
+                    },
+                    "y1": {
+                      "type": "Број"
+                    },
+                    "y2": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Број"
+                    },
+                    "w": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Број"
+                    },
+                    "size": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Број"
+                    },
+                    "b": {
+                      "type": "Број"
+                    },
+                    "g": {
+                      "type": "Број"
+                    },
+                    "r": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "shape": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Број"
+                    },
+                    "x2": {
+                      "type": "Број"
+                    },
+                    "y1": {
+                      "type": "Број"
+                    },
+                    "y2": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "stroke": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Број"
+                    },
+                    "str": {
+                      "type": "Стринг"
+                    },
+                    "width": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "textAlign": {
+                  "palette_params": {
+                    "horiz": {
+                      "type": "Стринг"
+                    },
+                    "vert": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "textFont": {
+                  "palette_params": {
+                    "font": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              }
+            },
             "game_lab": {
+              "expressions": {
+                "keyDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "keyWentDown": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "keyWentUp": {
+                  "palette_params": {
+                    "code": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "mouseDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "mouseWentDown": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "mouseWentUp": {
+                  "palette_params": {
+                    "button": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Булова"
+                    },
+                    "url": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "playSpeech": {
+                  "palette_params": {
+                    "gender": {
+                      "type": "Стринг"
+                    },
+                    "language": {
+                      "type": "Стринг"
+                    },
+                    "text": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Булова"
+                    },
+                    "dpadVisible": {
+                      "type": "Булова"
+                    },
+                    "mobileOnly": {
+                      "type": "Булова"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Булова"
+                    }
+                  }
+                },
+                "stopSound": {
+                  "palette_params": {
+                    "url": {
+                      "type": "Стринг"
+                    }
+                  }
+                }
+              },
               "name": "Работилница за апликации"
             },
-            "sprites": {
-              "name": "Сприти"
-            },
             "groups": {
+              "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setAnimationEach": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Број"
+                    },
+                    "rotationOffset": {
+                      "type": "Број"
+                    },
+                    "type": {
+                      "type": "Стринг"
+                    },
+                    "width/radius": {
+                      "type": "Број"
+                    },
+                    "yOffset": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Булова"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Број"
+                    },
+                    "speed": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Булова"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
               "name": "Групи"
             },
-            "control": {
-              "name": "Контрола"
-            },
             "math": {
+              "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Број"
+                    },
+                    "value2": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
               "name": "Математика"
             },
-            "variables": {
-              "name": "Променливи"
-            }
-          }
-        },
-        "applab": {
-          "categories": {
-            "ui_controls": {
-              "name": "UI контроли"
-            },
-            "canvas": {
-              "name": "Canvas"
-            },
-            "data": {
-              "name": "Податоци"
-            },
-            "turtle": {
-              "name": "Turtle (Желка)"
-            },
-            "control": {
-              "name": "Контрола"
-            },
-            "math": {
-              "name": "Математика"
-            },
-            "variables": {
-              "name": "Променливи"
-            },
-            "advanced": {
-              "name": "Напредно"
-            },
-            "maker": {
-              "name": "Maker"
-            }
-          }
-        },
-        "spritelab": {
-          "description": "Sprite Lab е Blocky програмска средина каде можете да создадете интерактивни проекти.",
-          "categories": {
             "sprites": {
+              "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Број"
+                    },
+                    "width": {
+                      "type": "Број"
+                    },
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setAnimation": {
+                  "palette_params": {
+                    "label": {
+                      "type": "Стринг"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Број"
+                    },
+                    "rotationOffset": {
+                      "type": "Број"
+                    },
+                    "type": {
+                      "type": "Стринг"
+                    },
+                    "width/radius": {
+                      "type": "Број"
+                    },
+                    "xOffset": {
+                      "type": "Број"
+                    },
+                    "yOffset": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Број"
+                    },
+                    "speed": {
+                      "type": "Број"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Број"
+                    },
+                    "y": {
+                      "type": "Број"
+                    }
+                  }
+                }
+              },
               "name": "Сприти"
             },
-            "world": {
-              "name": "Светот"
-            },
-            "location": {
-              "name": "Локации"
-            },
-            "actions": {
-              "name": "Акции"
-            },
-            "behaviors": {
-              "name": "Однесувања"
-            },
-            "loops": {
-              "name": "Лупови"
-            },
             "variables": {
+              "expressions": {
+                "includes": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Низата за пребарување."
+                    }
+                  }
+                },
+                "indexOf": {
+                  "palette_params": {
+                    "searchValue": {
+                      "description": "Низата за пребарување."
+                    }
+                  }
+                },
+                "length": {
+                  "return_value": "Должината на стрингот"
+                }
+              },
               "name": "Променливи"
-            },
-            "math": {
-              "name": "Математика"
-            },
-            "logic": {
-              "name": "Логика"
-            },
-            "text": {
-              "name": "Текст"
-            },
-            "comments": {
-              "name": "Коментари"
             }
-          }
+          },
+          "description": "Game Lab е програмерска средина каде можете да создадете возбудливи игри и анимации. Дизајнирајте ги вашите ликови, кодирајте со Blocks или JavaScript и споделете ја вашата игра за неколку секунди.",
+          "name": "Работилница за апликации"
         },
         "javalab": {
           "categories": {
-            "java_lab_shortcuts": {
-              "name": "Java Lab Кратенки"
+            "control_structures": {
+              "name": "Контролни Структури"
+            },
+            "data_structures": {
+              "name": "Дата Структури"
             },
             "general": {
               "name": "Основи во Јava"
             },
-            "org_code_theater": {
-              "name": "org.code.theater"
+            "java_io": {
+              "name": "java.io"
+            },
+            "java_lab_shortcuts": {
+              "name": "Java Lab Кратенки"
+            },
+            "java_lang": {
+              "name": "java.lang"
+            },
+            "java_util": {
+              "name": "java.util"
             },
             "org_code_media": {
               "name": "org.code.media"
@@ -120,22 +1324,56 @@
             "org_code_neighborhood": {
               "name": "org.core.neighborhood"
             },
-            "java_io": {
-              "name": "java.io"
-            },
-            "java_util": {
-              "name": "java.util"
-            },
-            "java_lang": {
-              "name": "java.lang"
-            },
-            "control_structures": {
-              "name": "Контролни Структури"
-            },
-            "data_structures": {
-              "name": "Дата Структури"
+            "org_code_theater": {
+              "name": "org.code.theater"
             }
           }
+        },
+        "spritelab": {
+          "categories": {
+            "actions": {
+              "name": "Акции"
+            },
+            "behaviors": {
+              "name": "Однесувања"
+            },
+            "comments": {
+              "name": "Коментари"
+            },
+            "location": {
+              "name": "Локации"
+            },
+            "logic": {
+              "name": "Логика"
+            },
+            "loops": {
+              "name": "Лупови"
+            },
+            "math": {
+              "name": "Математика"
+            },
+            "sprites": {
+              "name": "Сприти"
+            },
+            "text": {
+              "name": "Текст"
+            },
+            "variables": {
+              "name": "Променливи"
+            },
+            "world": {
+              "name": "Светот"
+            }
+          },
+          "description": "Sprite Lab е Blocky програмска средина каде можете да создадете интерактивни проекти."
+        },
+        "weblab": {
+          "categories": {
+            "css_properties": {
+              "name": "Својства во CSS"
+            }
+          },
+          "description": "Веб-базиран HTML/CSS eдитор."
         }
       }
     }

@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-06-28T00:35:20.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "video_key": "oceans_machine_learning",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "background": "music-black",
+    "video_full_width": true,
+    "uses_lab2": true,
+    "disable_projects": true
+  },
+  "published": true
+}]]></config>
+</StandaloneVideo>

@@ -126,7 +126,7 @@
   thanks_for_voting: "Gràcies per votar!"
   share_on_facebook: "Comparteix a Facebook"
   share_on_twitter: "Comparteix a Twitter"
-  beyond_an_hour: "Més enllà d'una Hora del Codi"
+  beyond_an_hour: "Després d'una Hora del Codi"
   get_started: "Comença"
   i_agree: "D'acord"
   participant_select: "- Trieu -"
@@ -274,6 +274,7 @@
   homepage_slot_text_link_stats: "Veure les estadístiques"
   homepage_slot_text_link_buy: "Involucra't"
   homepage_slot_text_link_donate: "Fes una donació"
+  homepage_slot_text_link_thebadguys: "Programa amb The Bad Guys"
   homepage_gallery_header: "Més de %{project_count} milions de projectes  Code.org creats"
   homepage_header_donors: "Code.org dóna gràcies als seus patrocinadors"
   homepage_donors_seall: "Mostra'ls tots"
@@ -324,14 +325,14 @@
   starwars_javascript_specs: "Només en anglès | Navegadors moderns | Edats 11 +"
   starwars_blocks_title: "Blocs"
   starwars_platform_text: "Navegadors moderns, mòbils i tablets"
-  mc_name: "Hora del Codi de Minecraft"
+  mc_name: "Hora del Codi amb Minecraft"
   mc_longdescription: "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft"
   mc_shortdescription: "Fes servir blocs de codi per portar al Steve o l'Alex a una aventura a través d'aquest món de Minecraft"
   mc_gradelevel: "Edat 4-104"
   mc_platformtext: "Navegadors moderns, mòbils i tablets"
   minecraft_agent: "El viatge de l'heroi de Minecraft"
   minecraft_designer: "Dissenyador de Minecraft"
-  minecraft_adventurer: "Aventurer Minecraft"
+  minecraft_adventurer: "Minecraft: L'aventurer"
   minecraft_tutorials: "Tutorials de l'Hora del codi de Minecraft"
   minecraft_specs: "Moltes llengües | Navegadors moderns i tablets | Més de 6 anys"
   minecraft_agent_description: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
@@ -342,7 +343,7 @@
   minecraft_adventurer_button: "Comença"
   minecraft_no_internet: "No teniu Internet?"
   minecraft_download_adventurer: "Baixeu la versió sense connexió de l'Aventurer Minecraft."
-  minecraft_subtitle: "Hora del Codi de Minecraft"
+  minecraft_subtitle: "Hora del Codi amb Minecraft"
   sports_og_title: "Llença-t'hi. Tothom pot aprendre."
   sports_watch_video: "Mira el vídeo"
   sports_video_title: "Llença-t'hi. Tothom pot aprendre."
@@ -374,6 +375,7 @@
   volunteer_engineer_submission_field_description: "Descripció"
   volunteer_engineer_submission_field_email: "Correu electrònic"
   volunteer_engineer_submission_field_email_placeholder: "Correu electrònic"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Vegeu la nostra política de privacitat)"
   volunteer_engineer_submission_field_email_preference_yes: 'Sí'
   volunteer_engineer_submission_field_email_preference_no: 'No'
   volunteer_engineer_submission_submit: "Envia"
@@ -458,6 +460,7 @@
   dashboard_progress_completed_too_many_blocks: "completat, massa blocs"
   dashboard_progress_completed_perfect: "completat, perfecte"
   dashboard_progress_furthest_level_attempted: "nivell més alt intentat"
+  dashboard_progress_submitted: "enviat"
   dashboard_progress_pair_programming: "programació per parelles"
   dashboard_sections_new_section: "Nova secció"
   dashboard_sections_jumbotron_instruction: "Crea noves seccions i afegeix-hi alumnes. Les seccions t'ajuden a organitzar els estudiants en grups més petits de manera que puguis fer un seguiment del seu progrés i administrar els seus comptes."
@@ -508,7 +511,7 @@
   dashboard_course4: 'Curs 4 (beta): '
   dashboard_curriculum: "Pla d'estudis"
   dashboard_curriculum_overview: "Resum del curriculum de cicle superior de primària"
-  dashboard_overview: "Vista general"
+  dashboard_overview: "Resum"
   dashboard_sequence: "Seqüència"
   dashboard_framework: "Marc de treball"
   dashboard_standards: "Estàndards"
@@ -583,7 +586,8 @@
   older_systems: "Tutorials que funcionen en sistemes més vells"
   older_systems_subheading: "Aquestes hauria de funcionar en navegadors antics. Per accedir a totes les classes, actualitza't a un <a href=\"http://browsehappy.com/\" target=\"_blank\"> navegador Web modern.</a>"
   mobile_devices: "Tutorials per a dispositius mòbils"
-  frozen_name: "Codi amb Anna i Elsa"
+  frozen_name: "Programa amb l'Anna i l'Elsa"
+  starwars_name: 'La guerra de les galàxies: Crea una galàxia amb codi'
   codeorg_name: "Laberint clàssic"
   codeintl_name: "Laberint clàssic"
   khan_name: "Una introducció a JavaScript"
@@ -595,7 +599,7 @@
   tynker_name: "Construeix el teu propi joc"
   scratch_name: "Sigueu creatius amb la programació"
   thinkersmith_name: "Els meus amics robòtics"
-  condcards_name: "Condicionals amb targetes"
+  condcards_name: "Condicionals amb cartes"
   codehs_name: "Aprendre a programar amb Karel el gos"
   codemonkey_name: "CodeMonkey"
   codeavengers_name: "Construir un joc amb JavaScript"
@@ -633,14 +637,30 @@
   coursee_name: "Curs E"
   coursef-draft_name: Curs F
   coursef_name: "Curs F"
+  coursea-2021_name: Curs A (2021)
+  courseb-2021_name: Curs B (2021)
+  coursec-2021_name: Curs C (2021)
+  coursed-2021_name: Curs D (2021)
+  coursee-2021_name: Curs E (2021)
+  coursef-2021_name: Curs F (2021)
+  coursea-2022_name: Curs A (2022)
+  courseb-2022_name: Curs B (2022)
+  coursec-2022_name: Curs C (2022)
+  coursed-2022_name: Curs D (2022)
+  coursee-2022_name: Curs E (2022)
+  coursef-2022_name: Curs F (2022)
+  express-2021_name: Curs exprés (2021)
+  express-2022_name: Curs Express (2022)
   accelerated_name: "Curs accelerat"
   express_name: "Curs exprés"
   20-hour_name: Curs accelerat
   classicmaze_name: "Laberint clàssic"
   iceage_name: "Edat de gel"
   minecraft_name: "Minecraft"
+  text-compression_name: Compressió de text
   applab_name: "Laboratori d'aplicacions"
   gamelab_name: "Laboratori de jocs"
+  applab_gradelevel: "A partir de 13 anys"
   applab_shortdescription_congrats: "El Laboratori d'aplicacions és un entorn de programació on podeu crear aplicacions simples. Dissenyeu una aplicació, programeu-la amb blocs o JavaScript per fer-la funcionar i compartiu-la en pocs segons"
   codeorg_gradelevel: "Edat 4-104"
   codeintl_gradelevel: "Edat 4-104"
@@ -847,6 +867,15 @@
   coursed-2019_shortdescription_congrats: Cobriu amb rapidesa conceptes del curs C i seguiu endavant amb algoritmes, bucles imbricats, condicionals i més.
   coursee-2019_shortdescription_congrats: Cobriu ràpidament els conceptes del curs C i D i seguiu amb les funcions.
   coursef-2019_shortdescription_congrats: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+  coursea-2020_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  courseb-2020_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2020_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+  coursea-2021_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  courseb-2021_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2021_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
+  coursea-2022_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  courseb-2022_shortdescription_congrats: Aprèn els fonaments de la informàtica i de la seguretat a internet. Al final del curs, podràs crear el teu propi joc o història i compartir-los.
+  coursec-2022_shortdescription_congrats: Crea programes amb seqüenciació, bucles i esdeveniments. Tradueix les teves inicials al codi binari, investiga diferents tècniques per resoldre problemes, i aprèn com cal actuar en situacions de ciberassetjament. Al final del curs, crearàs el teu propi joc o història, i podràs compartir-los!
   codeorg_longdescription: "Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes."
   codeintl_longdescription: "Aprèn els conceptes bàsics de la Informàtica mitjançant la programació arrossega i deixa anar. Aquest és un tutorial amb vídeo conferencies protagonitzades per Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Aprèn bucles, condicionals i algorismes bàsics. Disponible en 34 idiomes."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1055,11 +1084,24 @@
   sphero_beyond_longdescription: "Si ets educador o un pare, les lliçons SPRK donen als nens un divertit curs accelerat a la programació de robots de mentre  milloren les seves habilitats en matemàtiques i ciències."
   compatibility_hide_this_warning: "Amaga aquest avís"
   compatibility_unsupported_browser_markdown: "El vostre navegador no és compatible. Sisplau, actualitzeu-lo a [un dels nostres navegadors compatibles](%{supported_browsers_url}). Podeu provar de veure la pàgina, però la funcionalitat es podria veure afectada."
+  hourofcode_shortcode: "Codificar o programar"
   flappy_shortcode: "aleteig"
+  header_my_dashboard: "El meu panell de control"
   header_courses: "cursos"
   header_course_catalog: "Catàleg de cursos"
   header_project_gallery: "Projectes"
+  header_sections: "Seccions"
+  header_professional_learning: "Formació professional"
+  header_educate_overview: "Resum del docent"
+  header_educate_elementary: "Escola primària"
+  header_educate_middle: "E.S.O."
+  header_educate_high: "Batxillerat"
   header_educate_hoc: "L'hora del codi"
+  header_educate_partner: "Col·laboreu amb nosaltres"
+  header_educate_beyond: "Més enllà de Code.org"
+  header_educate_inspire: "Inspireu un alumne"
+  header_educate_community: "Comunitat virtual"
+  header_educate_tools: "Eines i vídeos"
   header_about_us: "Sobre nosaltres"
   header_about_leadership: "Lideratge"
   header_about_donors: "Donants"
@@ -1074,16 +1116,20 @@
   header_teach: "Ensenya"
   header_stats: "Estadístiques"
   header_help_us: "Ajuda'ns"
-  header_about: "Quant a"
+  header_about: "Qui som"
+  header_incubator: "Incubadora"
   header_help_support: 'Ajuda i suport '
   header_report_bug: "Informar d'un problema"
-  header_legal_privacy: "Política de privadesa"
+  header_legal_privacy: "Política de privacitat"
   header_legal_tos: "Condicions d'ús"
+  header_tutorials: "Tutorials"
+  sprite_lab_documentation: "Documentació del Laboratori d'Sprites"
+  header_documentation: "Documentació"
   user_header_label: "Hola %{username}"
   user_header_team: "Equip"
   user_header_settings: "El meu compte"
   user_header_logout: "Tanca la sessió"
-  user_header_signin: "Inicia la sessió"
+  user_header_signin: "Iniciar sessió"
   user_header_create: 'Crea '
   user_header_applab: 'Laboratori d''aplicacions '
   user_header_artist: 'Artista '
@@ -1094,6 +1140,9 @@
   user_header_minecraft: "Minecraft"
   user_header_flappy: "Flappy"
   user_header_view_all: "Mostra tots els projectes..."
+  user_header_view_my_projects: "Veure els meus projectes"
+  view_all_sections: "Veure totes les seccions"
+  hero_name: 'Minecraft: El viatge de l''heroi'
   applab_tile_start_tutorial: "Comença"
   applab_tile_teacher_guide: "Veure la guia docent"
   aquatic_name: 'Minecraft: Viatge aquàtic'
@@ -1107,7 +1156,7 @@
   hoc_overview_partner_activities_link: "Veure activitats"
   hoc_overview_start_tutorial: "Comença"
   hoc_overview_view_teacher_guide: "Veure la guia docent"
-  hoc2018_creativity_create: "Crea"
+  hoc2018_creativity_create: "Crear"
   hoc2018_creativity_what_will_you_create: "Què crearàs?"
   hoc2018_mc_page_title: "Tutorials de l'Hora del codi de Minecraft"
   hoc2018_mc_details: "Moltes llengües | Navegadors moderns i tablets | Més de 6 anys"
@@ -1117,18 +1166,18 @@
   hoc2018_mc_hero_description: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
   hoc2018_mc_designer_title: "Dissenyador de Minecraft"
   hoc2018_mc_designer_description: "Programa animals i altres criatures de Minecraft en la teva pròpia versió de Minecraft."
-  hoc2018_mc_adventurer_title: "Aventurer Minecraft"
+  hoc2018_mc_adventurer_title: "Minecraft: L'aventurer"
   hoc2018_mc_adventurer_description: "Utilitza el codi per du l'Alex o l'Steve a una aventura."
   hoc2018_mc_start: "Comença"
   hoc2018_mc_no_internet: "No teniu Internet?"
   hoc2018_mc_download_adventurer: "Baixeu la versió sense connexió de l'Aventurer Minecraft."
   hoc2018_mc_educators: "Per a docents"
   hoc2018_mc_educators_box1_title: "Programeu amb Minecraft"
-  hoc2018_mc_educators_box1_desc: 'L''edició d''educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius.'
+  hoc2018_mc_educators_box1_desc: "L'edició d'educació de Minecraft proporciona un currículum, exercicis i programació a Minecraft segons els estàndards educatius."
   hoc2018_mc_educators_box1_button: "Comença"
   hoc2018_mc_educators_box2_title: "Baixeu la guia didàctica"
   hoc2018_mc_educators_box2_desc: "Aquest joc d'eines us ajudarà a organitzar una Hora del codi i a motivar els alumnes a aprendre informàtica."
-  hoc2018_mc_educators_box2_button: "Baixa"
+  hoc2018_mc_educators_box2_button: "Descarregar"
   hoc2018_mc_educators_box3_title: "Assisteix a un taller gratuït per a alumnes"
   hoc2018_mc_educators_box3_desc: "Visita una botiga Microsoft a la teva zona per assistir a un taller gratuït de l'Hora del codi. Per participants de tots els nivells, a partir de 6 anys."
   hoc2018_mc_educators_box3_button: "Troba un taller"
@@ -1162,6 +1211,9 @@
   hoc2018_mc_homepage_try_it: "Proveu-ho"
   hoc2018_mc_back_journey: "Minecraft torna amb l'Hora del Codi amb una activitat nova de trinca! Viatja a través de Minecraft amb el codi."
   hoc2018_mc_teacher_guide: "Veure la guia docent"
+  hoc2018_mc_minecraft_education: "Minecraft Education"
+  hoc2018_mc_continue_learning: "Segueix aprenent amb Minecraft."
+  hoc2018_mc_go_to_mc_education: "Anar a Minecraft Education"
   hoc2018_mc_short_description_shorter: "Utilitza la creativitat i les habilitats de resolució de problemes per explorar i crear mons submarins amb codi."
   hoc2018_mc_journey: "Un viatge a través del Minecraft amb codi."
   hoc2018_dance_party_main_heading: "Festa de ball"
@@ -1169,7 +1221,7 @@
   hoc2018_dance_party_box_title: "Festa de ball"
   hoc2018_dance_party_box_description: "Crea un codi de la festa de ball i comparteix-la amb els teus amics!"
   hoc2018_dance_party_button: "Comença"
-  hoc2018_dance_keep_on_dancing_box_title: "Seguir ballant"
+  hoc2018_dance_keep_on_dancing_box_title: "Que el ritme no pari"
   hoc2018_dance_keep_on_dancing_description: "Anar més enllà de la primera hora amb idees desenvolupades del projecte."
   hoc2018_dance_keep_on_dancing_button: "Comença la segona part"
   hoc2018_dance_teacher_resources_title: "Recursos del professor"
@@ -1182,22 +1234,28 @@
   hoc2018_dance_amazon_about_future_engineer_button: "Més informació"
   hoc2018_dance_measure: "Mesure"
   hoc2018_dance_measure_colon: 'Mesure:'
+  hoc2018_dance_video3: "Festa de ball - Propietats"
   hoc2018_mc_with_microsoft: "En associació amb"
   hoc2022_mc_mee_title: "Minecraft Escape Estate"
   hoc2022_mc_mee_description: 'Escapar de la misteriosa mansió per l''alba i guanyar un milió de maragdes! El nou tutorial de Minecraft Hora del Codi ja està disponible a Minecraft: Educació Edició per a Windows, Mac, Chromebook, Ipad i Mòbil. Comença amb recursos educatius gratuïts, formacions i vídeos. '
-  hoc2022_mc_mee_timecraft_description: 'Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition.'
+  hoc2022_mc_mee_timecraft_description: "Viatja en el temps per salvar el futur en aquesta lliçó de codificació gratuïta a Minecraft: Education Edition."
   footer_powered_by_aws: "Funciona amb Amazon Web Services"
-  footer_privacy_policy: "Política de privadesa"
-  footer_about: "Quant a"
+  footer_built_on_github: "Fet amb GitHub de Microsoft"
+  codebytes_skinny_banner_english_only: "Només en anglès"
+  footer_privacy_policy: "Política de privacitat"
+  footer_about: "Qui som"
   footer_partners: "Socis"
   footer_donate: "Feu una donació"
   footer_store: "Botiga"
   footer_support: "Suport"
   footer_terms: "Condicions"
+  ai_for_oceans: "IA per Oceans"
   ai_for_oceans_lesson_plan: "unitat didàctica/lliço"
   ai_in_partnership_with: "En associació amb"
   ai_activity: "Activitat"
   ai_description: "Descripció"
+  outbreak_tile_title: "Brots"
+  footer_cookie_notice: "Política de galetes"
   hoc2022_banner_title: "Explora, Juga, Crea!"
   hoc2022_banner_description: "Explora l'univers, marca un gol, mou-te — hi ha tantes maneres de provar les ciències informàtiques!"
   hoc2022_cta_primary: "Vagueu les novetats"
@@ -1206,8 +1264,10 @@
   hoc2022_landing_page_explore_description: "Obriu portes a nous mons amb les ciències informàtiques!"
   hoc2022_landing_page_play_title: "Juga"
   hoc2022_landing_page_play_description: "Sortiu al camp i marqueu!"
-  hoc2022_landing_page_create_title: "Crea"
+  hoc2022_landing_page_create_title: "Crear"
   hoc2022_landing_page_create_description: "Feu alguna cosa estranya i meravellosa!"
   hoc2022_landing_page_banner_alt_left: "Un alienígena ballant al costat de Saturn a l'espai"
   hoc2022_landing_page_banner_alt_right: "Un robot driblant una pilota de futbol a l'espai davant d'un coet enlairant"
   try_it_yourself: "Prova-ho tu mateix!"
+  try_an_activity: "Proveu una activitat"
+  see_more_activities: "Veure més activitats"

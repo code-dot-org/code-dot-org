@@ -1,5 +1,6 @@
 require 'active_support/core_ext/numeric/time'
 require 'cdo/aws/s3'
+require 'cdo/web_purify'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
@@ -34,12 +35,6 @@ class FilesApi < Sinatra::Base
     else
       not_found
     end
-  end
-
-  def can_update_abuse_score?(endpoint, encrypted_channel_id, filename, new_score)
-    return true if has_permission?('project_validator') || new_score.nil?
-
-    get_bucket_impl(endpoint).new.get_abuse_score(encrypted_channel_id, filename) <= new_score.to_i
   end
 
   def can_view_abusive_assets?(encrypted_channel_id)
@@ -407,7 +402,7 @@ class FilesApi < Sinatra::Base
 
     # sources only supports one file (main.json) and we checked max_file_size above,
     # so there's no need to check if we've exceeded the max total app size for the sources bucket.
-    unless 'sources' == endpoint
+    unless endpoint == 'sources'
       app_size = buckets.app_size(encrypted_channel_id)
       quota_exceeded(endpoint, encrypted_channel_id) unless app_size + body.length < max_app_size
       quota_crossed_half_used(endpoint, encrypted_channel_id) if quota_crossed_half_used?(app_size, body.length)
@@ -421,17 +416,23 @@ class FilesApi < Sinatra::Base
     if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
-      rescue OpenURI::HTTPError => e
-        return file_too_large(endpoint) if e.message == "414 Request-URI Too Large"
+      rescue StandardError => exception
+        return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
+        details = exception.message.empty? ? nil : exception.message
+        return json_bad_request(details)
       end
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      return bad_request if share_failure && share_failure[:type] != "address"
+      if share_failure && share_failure[:type] != "address"
+        details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
+        details = {details_key => [share_failure.content]}
+        return json_bad_request(details)
+      end
     end
 
     # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
-    if 'sources' == endpoint
+    if endpoint == 'sources'
       body_json = JSON.parse(body)
       source = body_json["source"]
       html = body_json["html"]
@@ -622,27 +623,8 @@ class FilesApi < Sinatra::Base
   #
   # Update all assets for the given channelId to have the provided abuse score
   #
-  patch %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/$} do |endpoint, encrypted_channel_id|
-    dont_cache
-
-    abuse_score = request.GET['abuse_score']
-    not_modified if abuse_score.nil?
-
-    buckets = get_bucket_impl(endpoint).new
-
-    begin
-      files = buckets.list(encrypted_channel_id)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
-    end
-    files.each do |file|
-      not_authorized unless can_update_abuse_score?(endpoint, encrypted_channel_id, file[:filename], abuse_score)
-      buckets.replace_abuse_score(encrypted_channel_id, file[:filename], abuse_score)
-    end
-
-    content_type :json
-    {abuse_score: abuse_score}.to_json
-  end
+  # Endpoint removed. Functionality moved to ReportAbuseController.
+  #
 
   #
   # DELETE /v3/(animations|assets|sources|libraries)/<channel-id>/<filename>
@@ -669,7 +651,18 @@ class FilesApi < Sinatra::Base
     content_type :json
 
     filename.downcase! if endpoint == 'files'
-    get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments']).to_json
+    begin
+      versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
+      return versions.to_json if owns_channel?(encrypted_channel_id)
+
+      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_user_id = user_id_for_storage_id(owner_storage_id)
+      return versions.to_json if teaches_student?(owner_user_id)
+
+      return versions.select {|version| version[:isLatest]}.to_json
+    rescue ArgumentError, OpenSSL::Cipher::CipherError
+      bad_request
+    end
   end
 
   #
@@ -712,7 +705,7 @@ class FilesApi < Sinatra::Base
     #     }
     #   ]
     # }
-    {"filesVersionId": result[:version_id], "files": JSON.parse(result[:body].read)}.to_json
+    {filesVersionId: result[:version_id], files: JSON.parse(result[:body].read)}.to_json
   end
 
   #
@@ -941,7 +934,7 @@ class FilesApi < Sinatra::Base
     manifest_json = manifest.to_json
     result = bucket.create_or_replace(encrypted_channel_id, FileBucket::MANIFEST_FILENAME, manifest_json, nil, abuse_score)
 
-    {"filesVersionId": result[:version_id], "files": manifest}.to_json
+    {filesVersionId: result[:version_id], files: manifest}.to_json
   end
 
   #
@@ -1009,7 +1002,7 @@ class FilesApi < Sinatra::Base
     s3_prefix = "#{METADATA_PATH}/#{filename}"
     file = get_file('files', encrypted_channel_id, s3_prefix)
 
-    if THUMBNAIL_FILENAME == filename
+    if filename == THUMBNAIL_FILENAME
       project = Projects.new(get_storage_id)
       project_type = project.project_type_from_channel_id(encrypted_channel_id)
       if moderate_type?(project_type) && moderate_channel?(encrypted_channel_id)

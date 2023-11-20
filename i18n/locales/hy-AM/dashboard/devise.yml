@@ -50,9 +50,6 @@ hy:
       expired: "ժամկետը լրացել է, խնդրում ենք դիմել նորը"
       not_found: "չի գտնվել"
       not_locked: "չէր կողպված"
-      not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
     invitations:
       send_instructions: 'An invitation email has been sent to %{email}.'
       invitation_token_invalid: 'Հրավերը նշանն տրամադրել վավերական չէ!'

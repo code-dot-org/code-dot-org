@@ -14,20 +14,21 @@ end
 # nature of progress bubbles and can be slow, especially when verifying that a bubble
 # displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
 # the bubble.
-def verify_progress(selector, test_result, no_wait=false)
-  if test_result == 'perfect'
+def verify_progress(selector, test_result, no_wait: false)
+  case test_result
+  when 'perfect'
     background_color = color_string('perfect')
     border_color = color_string('perfect')
-  elsif test_result == 'attempted'
+  when 'attempted'
     background_color = color_string('not_tried')
     border_color = color_string('perfect')
-  elsif test_result == 'not_tried'
+  when 'not_tried'
     background_color = color_string('not_tried')
     border_color = color_string('lighter_gray')
-  elsif test_result == 'perfect_assessment'
+  when 'perfect_assessment'
     background_color = color_string('assessment')
     border_color = color_string('assessment')
-  elsif test_result == 'attempted_assessment'
+  when 'attempted_assessment'
     background_color = color_string('not_tried')
     border_color = color_string('assessment')
   end
@@ -55,9 +56,10 @@ def verify_bubble_color(selector, background_color, border_color)
 end
 
 def verify_bubble_type(selector, type)
-  if type == "concept"
+  case type
+  when "concept"
     border_radius = "2px"
-  elsif type == "activity"
+  when "activity"
     border_radius = "9px"
   else
     raise "Unexpected bubble type"
@@ -99,7 +101,7 @@ Then /^I verify progress for lesson (\d+) level (\d+)( in detail view)? is "([^"
   selector = detail_view.nil? ?
     ".uitest-summary-progress-table .uitest-summary-progress-row:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})" :
     ".uitest-detail-progress-table .uitest-progress-lesson:nth(#{lesson.to_i - 1}) .progress-bubble:nth(#{level.to_i - 1})"
-  verify_progress(selector, test_result, !!without_waiting)
+  verify_progress(selector, test_result, no_wait: !!without_waiting)
 end
 
 Then /^I verify progress for the sublevel with selector "([^"]*)" is "([^"]*)"/ do |selector, test_result|

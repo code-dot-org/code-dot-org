@@ -2,8 +2,17 @@
 my:
   data:
     variable_names:
+      actor: ဇာတ်ကောင်
       age: အသက်
+      left: ဘယ်ဘက်သို့
+      name: နာမည်
+      points: ရမှတ်
       repeat: ထပ်မံ ပြုလုပ်ပါ
+      right: ညာဘက်သို့
       score: ရမှတ်
+      size: အရွယ်အစား
+      speed: အရှိန်
+      type: အမျိုးအစား
       variable: variable
+      wizard: မှော်ဆရာ
       x: "×"

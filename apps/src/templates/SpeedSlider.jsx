@@ -5,19 +5,19 @@ import dom from '../dom';
 
 const style = {
   sliderTrack: {
-    stroke: color.lightest_purple,
+    stroke: color.neutral_white,
     strokeWidth: 4,
-    strokeLinecap: 'round'
+    strokeLinecap: 'round',
   },
   sliderKnob: {
-    fill: color.blockly_flyout_gray,
+    fill: color.neutral_white,
     stroke: '#bbc',
     strokeWidth: 1,
     strokeLinejoin: 'round',
     ':hover': {
-      fill: '#eee'
-    }
-  }
+      fill: '#eee',
+    },
+  },
 };
 
 const sliderImages = {
@@ -28,7 +28,7 @@ const sliderImages = {
   lightTurtle:
     'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAMCAYAAABm+U3GAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUCEjkwj4Y80QAAARJJREFUOMulk7FKQ0EQRc+IVUTBQi1ESCHptTGdheA3aJuPsLCwskkndiE/kMbKzk4sA1oI6QRBXqEpAgbTjs19MGw2eU+cZnZ3Zu/euTNr1DB3PwDawAQYmtlb1R2rADwBLoH1JPQA3JrZ15+B3f0aOF3y7idwZWYvueDKAtCzJaBT+R2g5+4XtRhLz14CMgspjbAuJToHmkBL+7sc8L3Y5EBTawAjrY8CmdFqRoISdAb8VDT/XX5LmpfWtND9lkrbAPZrTOGj8g9zwch4V4BrwJNYTzJ3NuWPk/M+8CqcwoIMA/5nXaAoZzsyfgb2gA+VNwZuQhNjZR3pOpYH+I4fxpLmbc/N44LfpbEspPM0zf0FoFJU5IxlTp4AAAAASUVORK5CYII=',
   lightRabbit:
-    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUCEjcsBQRNEAAAAX9JREFUOMuV0zFrVUEQBeBvwCJEEqukEeWhgiiCiIVYWATROqKFrUV6EfwH/gLbVBY2gpAilUQbCaKNRSQgGEnzCt8DwQRDurGZK5d4zbtv4LI7c3fP2Z09J/SMzHxY068R8bnPnhM9gc/X9ApWMhM+4DX8j6wXeETsZOZ8pXu4hZu4ivXM3IuInX/2mTLqFgMsFfgsXmHjKMHU4B1Ej3EZB3iJdxExmtiWzLyGO3hQpY9Yw27rlJtYwDesYJyZWxExmtTz+7jbym/Ut5+ZqxhjucAXas0SfmIUE6T3pGeH9mscYxVbEXEs+FvM9QSdwxs8L3V19zwzF3Gv0u84WfPZY0h+tGQ76tR5tWK5AA/qmms4izMlwSZ+13gO242hMnOxIYgq3K6Xbk75Hr9KAZu4hItFMo8vRXyhXDvAbtU3MIyIwwb8WeM2fMKwnCgiDjNzpkBPt1w6rHyA6+XaJtbxIlp6/gvYgHa8x8zR/+1akT3CKTyN9oIuwCkd2ybyB67+kmBPPxeyAAAAAElFTkSuQmCC'
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAYAAAAPr1RWAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AUCEjcsBQRNEAAAAX9JREFUOMuV0zFrVUEQBeBvwCJEEqukEeWhgiiCiIVYWATROqKFrUV6EfwH/gLbVBY2gpAilUQbCaKNRSQgGEnzCt8DwQRDurGZK5d4zbtv4LI7c3fP2Z09J/SMzHxY068R8bnPnhM9gc/X9ApWMhM+4DX8j6wXeETsZOZ8pXu4hZu4ivXM3IuInX/2mTLqFgMsFfgsXmHjKMHU4B1Ej3EZB3iJdxExmtiWzLyGO3hQpY9Yw27rlJtYwDesYJyZWxExmtTz+7jbym/Ut5+ZqxhjucAXas0SfmIUE6T3pGeH9mscYxVbEXEs+FvM9QSdwxs8L3V19zwzF3Gv0u84WfPZY0h+tGQ76tR5tWK5AA/qmms4izMlwSZ+13gO242hMnOxIYgq3K6Xbk75Hr9KAZu4hItFMo8vRXyhXDvAbtU3MIyIwwb8WeM2fMKwnCgiDjNzpkBPt1w6rHyA6+XaJtbxIlp6/gvYgHa8x8zR/+1akT3CKTyN9oIuwCkd2ybyB67+kmBPPxeyAAAAAElFTkSuQmCC',
 };
 
 let knobXMax = 135;
@@ -47,12 +47,12 @@ class SpeedSlider extends React.Component {
     value: PropTypes.number.isRequired,
     lineWidth: PropTypes.number,
     onChange: PropTypes.func.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
   };
 
   state = {
     dragStart: undefined,
-    valueStart: undefined
+    valueStart: undefined,
   };
 
   componentDidMount() {
@@ -101,7 +101,7 @@ class SpeedSlider extends React.Component {
     this.props.onChange(newValue);
     this.setState({
       dragStart: mousePosition.x,
-      valueStart: newValue
+      valueStart: newValue,
     });
     this.startDragging();
   };
@@ -110,7 +110,7 @@ class SpeedSlider extends React.Component {
     const mousePosition = this.mouseToSvg_(event);
     this.setState({
       dragStart: mousePosition.x,
-      valueStart: this.props.value
+      valueStart: this.props.value,
     });
     this.startDragging();
   };
@@ -137,7 +137,7 @@ class SpeedSlider extends React.Component {
   stopDragging = event => {
     this.setState({
       dragStart: undefined,
-      valueStart: undefined
+      valueStart: undefined,
     });
     this.unbindOnMouseMove();
     this.unbindStopDragging();
@@ -160,11 +160,7 @@ class SpeedSlider extends React.Component {
           </clipPath>
           {/* turtle image */}
           <image
-            xlinkHref={
-              props.hasFocus
-                ? sliderImages.lightTurtle
-                : sliderImages.darkTurtle
-            }
+            xlinkHref={sliderImages.lightTurtle}
             height={12}
             width={22}
             x={2}
@@ -176,11 +172,7 @@ class SpeedSlider extends React.Component {
           </clipPath>
           {/* rabbit image */}
           <image
-            xlinkHref={
-              props.hasFocus
-                ? sliderImages.lightRabbit
-                : sliderImages.darkRabbit
-            }
+            xlinkHref={sliderImages.lightRabbit}
             height={15}
             width={23}
             x={knobXMax - 18}

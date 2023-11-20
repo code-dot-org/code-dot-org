@@ -9,8 +9,8 @@
 }
 
 h2.purple-block{
-  background-color: #7665a0;
-  padding: 1em;
+  background-color: var(--brand_secondary_dark);
+  padding: 1rem 1.5rem;
   font-size: 24px;
   color: #ffffff;
   border-radius: 10px 10px 0 0;
@@ -26,9 +26,7 @@ figure img{
 }
 
   figcaption {
-    font-size: .875em;
-    margin-top: 1em;
-    line-height: 1.4;
+    text-align: initial;
   }
 
 /* columns */
@@ -71,7 +69,7 @@ figure img{
 
 .callout-quote {font-size:20px; font-style:normal; line-height: 1.2em; padding: 20px 20px 16px 26px;}
 .callout-attrib {font-size:.9em; padding-left: 26px;}
-.callout-quote em {color:#ffb81d; font-style:normal; font-family: 'Gotham 5r', sans-serif; }
+.callout-quote em {color:#ffb81d; font-style:normal; font-family: var(--main-font); font-weight: var(--semi-bold-font-weight); }
 
 /* tiles */
 .rounded-tile, .tile {  padding:0; }
@@ -88,16 +86,17 @@ h3.rounded-info-h {  margin-top: 0px;  font-weight: bold;}
 .embedvid .video_caption_link {padding-top:6px; font-weight:bold; font-size:1.1em}
 
 /* Annual report */
-h2.highlight {
+h4.highlight {
   background: url("../images/AR2020/highlight.png") no-repeat top left;
   background-size: 22px 32px;
+  line-height: 1;
   padding-left: 32px;
   min-height: 32px;
-  margin: 3em auto .5em;
+  margin: 2rem auto 1rem;
 }
 
 .ceo-letter{
-  margin-top: 2em
+  margin: 2rem auto 0;
 }
   .ceo-letter figure{
     margin: 0 1.5em 0 0;
@@ -117,8 +116,8 @@ h2.highlight {
 .bythenumbers th {background:#5b6770; padding: 7px 15px; border-top-color: #5b6770;  border-bottom-color: #5b6770;  border-left-color: #5b6770; border-right-color: #5b6770;}
 .bythenumbers td:nth-child(2n+1) {background:#e7e8ea;}
 .bythenumbers td:nth-child(2n+0), .bythenumbers th:nth-child(2n+0) {text-align:center;}
-.goal2025 {font-size:.9em; font-style:italic; font-family: 'Gotham 4i', sans-serif;}
-.goal2025 strong {font-family: 'Gotham 7i', sans-serif;}
+.goal2025 {font-size:.9em; font-style:italic; font-family: var(--main-font);}
+.goal2025 strong {font-family: var(--main-font); font-style: italic;}
 
 /*BHM campaign*/
 .bhm-banner { background-color: #685c91; background-image:url('../images/bhm/bhm-banner-bg2.png'); background-repeat: no-repeat; background-position: bottom right -655px; background-size:auto;  flex-direction: column;  justify-content: center;  padding: 40px 20px 60px;   margin-bottom: 60px;}
@@ -136,7 +135,10 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 
 /* misc */
 
-.bold-text {font-family: 'Gotham 7r', sans-serif;}
+.bold-text {
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+}
 
 /* RESPONSIVE */
 
@@ -147,7 +149,7 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 
   .callout-quote {font-size:18px}
 
-  h2.highlight { background-position-y: 4px; }
+  h4.highlight { background-position-y: 4px; }
 
   .centerspot{
     padding: 2em 0;

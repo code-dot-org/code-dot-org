@@ -1,81 +1,185 @@
 ---
 sv:
   data:
-    game:
-      name:
-        Unplug1: Introduktion till Datavetenskap
-        Maze: Labyrinten
-        Multi: Flervals grejor
-        Unplug2: Uträkningstänkande
-        Unplug3: Kalkyleringsprogrammering
-        Artist: Konstnären
-        Unplug4: Algoritmer
-        Artist2: Konstnären 2
-        Unplug5: Funktioner
-        Farmer: Bonden
-        Unplug6: Villkor
-        Artist3: Konstnären 3
-        Unplug7: Sångskrivande
-        Farmer2: Bonden 2
-        Unplug8: Abstraktion
-        Artist4: Konstnären 4
-        Unplug9: Stafettprogrammering
-        Farmer3: Bonden 3
-        Unplug10: Internet
-        Artist5: Konstnären 5
-        Unplug11: Gör klart
-        MazeEC: Labyrinten
-        Bounce: Studsa
-        Flappy: Flappy Bird
-        Jigsaw: Pussel
-        MazeStep: Labyrint steg-sort
-        Wordsearch: WordSearch
-        Webapp: App Lab
-        ArtistEC: Konstnären
-        TextMatch: Textmatchning
-        StudioEC: Spel-labb
-        Applab: App Lab
-        NetSim: Internet Simulator
-        Custom: Konstnären
-        CustomStudio: Spel-labb
-    trophy:
-      name:
-        Bronze: Brons
-        Silver: Silver
-        Gold: Guld
+    callout:
+      text:
+        Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
+        Infinity_move_directions_callout: Vilket block kommer att flytta Baymax  uppåt
+          när du trycker på uppåt-pilen?
+        Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
+        Infinity_move_right_runbutton: Lägg till flytta- blocket här
+        Infinity_repeat_callout: Placera flytta - block  här inne
+        actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken
+          är här nu.
+        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg
+          till och sedan dra den till din funktionsdefinition
+        arrows_move_actor: Använd piltangenterna för att flytta figuren
+        bee_for_loop: Dra det största antalet nektar du vill biet att ska samla hit
+        category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
+        change_here: Gör din ändring här
+        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
+          till ett kommando för att gå framåt?
+        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
+          igång
+        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du
+          avsluta det?
+        craft_drag_block_callout: Dra ett "gå framåt"-block och fäst det under det
+          andra blocket
+        craft_inside_repeat: Upprepa handlingar genom att placera block här
+        craft_run_button_callout: Tryck på "Kör" för att prova programmet
+        craft_what_is_iron: Bryt järnet!
+        create_function: Klicka här för att öppna  menyn i "Funktioner" , klicka sedan
+          på knappen "Skapa en funktion".
+        degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje
+          vinkel i grader.
+        drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
+        draw_square_hint: 'Tips: Använd kvadrat slingan du just gjort i sista pusslet.'
+        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din
+          funktion
+        edit_draw_square: Använd den här knappen för att redigera funktionen och lägga
+          till slingan.
+        edit_function: Klicka här om du vill redigera din funktion.
+        edit_get_nectar: Använd den här knappen om du vill redigera funktionen och
+          ändra den riktning i vilken biet kommer att vända sig för att få nektar.
+        fill_in_actor: Fyll i ??? med nummer som motsvarar varje skådespelare (1,
+          2 och 3)
+        frozen_circle_function_in_circle_turn: Glöm inte att svänga efter varje cirkel
+          du skapar.
+        frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och
+          ändra storleken.
+        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
+        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
+        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
+        function_editor_draw_square: Detta är din funktionsdefinition. Dessa block  körs
+          varje gång du använder  blocket "Rita en fyrkant"
+        get_nectar: Använd det nya "få nektar" blocket.
+        gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
+          ändå?
+        house_hint: Det är ok om bilden inte ser ut som ett hus ännu. Vi kommer att
+          fixa det i nästa pussel.
+        if_bee_nectar: Använda "Om"-blocket för att besluta om biet bör få nektar
+        if_else_bee: Använd "om/annars" blocket så att biet får nektar från en blomma,
+          och gör honung om det inte är en blomma
+        instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas
+          här
+        jigsaw_click: Klicka på detta block!
+        length_parameter: Kan du uppdatera den här funktionen så att den använder
+          parametern "längd"?
+        logic_category: Öppna "Logik"-menyn för att hitta "om/annars" blocket.
+        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start"
+          blocket för att få Elsa att gå framåt
+        name_function: Skriv namnet på din funktion här
+        place_counter_variable: Dra din räknare-variabel in i detta block
+        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
+        place_variable: Dra din variabel in i  detta block
+        playlab_add_blocks: Lägg till dina block här
+        playlab_add_move: Lägg till "flytta" block inuti detta 'upprepa' block
+        playlab_add_score: Lägga till poäng -block här
+        playlab_arrow_keys: Kom ihåg att använda dessa för att flytta häxan efter
+          att ha klickat på kör
+        playlab_drag_say: Dra blocket "säg" här och skriv "Hej"
+        playlab_move_girl: Använda "flytta höger" blocket för att flytta tennis-flickan
+        playlab_play_sound: Lägg till "spela ljud" block här
+        playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur
+          numret
+        repeat: Sätt block inuti loopen för att upprepa kommandon
+        repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
+        repeat_blocks_1: "(1) använd detta block och lägga det runt de grå blocken
+          på arbetsytan"
+        repeat_blocks_2: (2) flytta blocket "Upprepa" hit, och placera de grå blocken
+          inuti
+        repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för
+          göra en hel cirkel
+        replace_questions: Använd rullistan för att ersätta "???" med en siffra
+        replace_questions_degree: Använd rullistan för att ersätta "???" med rätt
+          antal grader att svänga
+        right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
+        run: Tryck på "Kör" för att prova programmet
+        set_length: Använda detta block för att ange "längd" till rätt värde.
+        set_sides: Använd detta block för att det nummer av 'sidor' som behövs för
+          att slutföra pussel.
+        set_sprite_image: Bifoga en "sätt figur till bild" block till "när berättelsen
+          börjar" blocket för att ange figur/actor i  denna berättelse
+        set_variable: Dra ett antals-block hit för att ange din variabel
+        show_code_explanation: Klicka här för att se koden till programmet du skriver
+        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
+        studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
+        turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i
+          rullistan bestämmer hur mycket hon svänger
+        watch_again: Klicka här för att titta på videon igen
+        which_equation: Vilka ekvation gör varje sida kortare för former med flera
+          sidor?
+        write_draw_square_function: Dra block från verktygslådan hit för  att rita
+          en fyrkant
+        write_draw_triangle_function: Dra block från verktygslådan hit för att rita
+          en triangel
     concept:
       description:
-        sequence: Sekvens
+        function: funktioner
         if: '"Om"-block'
         if_else: '"Om/annars"-block'
+        loop_for: '"Räknar"-block'
         loop_times: '"Upprepa"-Block'
         loop_until: '"Upprepa tills"-Block'
         loop_while: '"Medan"-block'
-        loop_for: '"Räknar"-block'
-        function: funktioner
         parameters: Funktioner med parametrar
+        sequence: Sekvens
+    game:
+      name:
+        Applab: App Lab
+        Artist: Konstnären
+        Artist2: Konstnären 2
+        Artist3: Konstnären 3
+        Artist4: Konstnären 4
+        Artist5: Konstnären 5
+        ArtistEC: Konstnären
+        Bounce: Studsa
+        Custom: Konstnären
+        CustomStudio: Spel-labb
+        Farmer: Bonden
+        Farmer2: Bonden 2
+        Farmer3: Bonden 3
+        Flappy: Flappy Bird
+        Jigsaw: Pussel
+        Maze: Labyrinten
+        MazeEC: Labyrinten
+        MazeStep: Labyrint steg-sort
+        Multi: Flervals grejor
+        NetSim: Internet Simulator
+        StudioEC: Spel-labb
+        TextMatch: Textmatchning
+        Unplug1: Introduktion till Datavetenskap
+        Unplug10: Internet
+        Unplug11: Gör klart
+        Unplug2: Uträkningstänkande
+        Unplug3: Kalkyleringsprogrammering
+        Unplug4: Algoritmer
+        Unplug5: Funktioner
+        Unplug6: Villkor
+        Unplug7: Sångskrivande
+        Unplug8: Abstraktion
+        Unplug9: Stafettprogrammering
+        Webapp: App Lab
+        Wordsearch: WordSearch
     level:
       instructions:
-        maze_2_2: 'Kan du hjälpa mig att fånga den dumma grisen? Sätt ihop ett par
-          "gå framåt"-block och tryck på "Kör" för att hjälpa mig komma dit. '
+        Custom_builder: Dra block från verktygslådan till arbetsytan för att göra
+          den nivå som du vill skapa. Tryck på "Kör" när du är klar.
+        applab_ec_simple: Skapa din app med blocken i verktygslådan.
+        jigsaw_1: Klicka på blocket
+        jigsaw_10: Ordna blocken för att bilda bilden
+        jigsaw_11: Ordna blocken för att bilda bilden
+        jigsaw_12: Ordna blocken för att bilda bilden
+        jigsaw_13: Fixa pusslet!
+        jigsaw_2: Dra blocket till målet
+        jigsaw_3: Ordna blocken för att bilda bilden
+        jigsaw_4: Ordna blocken för att bilda bilden
+        jigsaw_5: Ordna blocken för att bilda bilden
+        jigsaw_6: Ordna blocken för att bilda bilden
+        jigsaw_7: Ordna blocken för att bilda bilden
+        jigsaw_8: Ordna blocken för att bilda bilden
+        jigsaw_9: Ordna blocken för att bilda bilden
         maze_2_1: Den här grisen stör mig. Hjälp mig att hitta honom!
-        maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT, annars
-          flyger fjädrarna!
-        maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
-        maze_2_4: Håll dig lugn och hjälp mig att hitta den elaka grisen. Annars kan
-          det hända att jag blir arg!
-        maze_2_5: Det finns ett sätt för mig att nå den dumma grisen genom att använda
-          bara två block. Kan du lista ut det?
-        maze_2_6: Försök få mig till den gröna inkräktaren genom att använda bara
-          tre block.
-        maze_2_7: Hjälp mig att bannlysa den här dumma grisen genom att använda så
-          få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block.
-        maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det.
-          Lös det här pusslet genom att använda blocket "upprepa" som upprepar 3 gånger.
-          Prova att sätta dessa tre block i det grå "upprepa"-blocket: flytta, flytta,
-          sväng.'
-        maze_2_9: Ok, försök nu att använda det nya 'upprepa tills' blocket - det
-          kommer att 'upprepa tills' jag når den irriterande grisen.
         maze_2_10: Okej, öva en gång till - kan du lösa den här med bara 4 block?
         maze_2_11: Kära människa.  Jag zombie. Jag hungrig. Måste... komma... till
           solros... Kan du ta mig dit med bara 5 block?
@@ -98,9 +202,294 @@ sv:
         maze_2_19: Kan du lägga till bara 3 block för att hjälpa mig att lösa en svårare
           labyrint? Om du gör det rätt, kommer jag kunna gå vilken väg som helst oberoende
           av längden.
+        maze_2_2: 'Kan du hjälpa mig att fånga den dumma grisen? Sätt ihop ett par
+          "gå framåt"-block och tryck på "Kör" för att hjälpa mig komma dit. '
+        maze_2_2_5: Lägg ut vägen och led mig till den dumma grisen. Undvik TNT, annars
+          flyger fjädrarna!
+        maze_2_3: Led mig till den gröna elakheten! (Se upp för TNT)
+        maze_2_4: Håll dig lugn och hjälp mig att hitta den elaka grisen. Annars kan
+          det hända att jag blir arg!
+        maze_2_5: Det finns ett sätt för mig att nå den dumma grisen genom att använda
+          bara två block. Kan du lista ut det?
+        maze_2_6: Försök få mig till den gröna inkräktaren genom att använda bara
+          tre block.
+        maze_2_7: Hjälp mig att bannlysa den här dumma grisen genom att använda så
+          få block som möjligt. Försök att använda mer än ett 'upprepa gånger' block.
+        maze_2_8: 'När ett block är grått betyder det att du inte kan ta bort det.
+          Lös det här pusslet genom att använda blocket "upprepa" som upprepar 3 gånger.
+          Prova att sätta dessa tre block i det grå "upprepa"-blocket: flytta, flytta,
+          sväng.'
+        maze_2_9: Ok, försök nu att använda det nya 'upprepa tills' blocket - det
+          kommer att 'upprepa tills' jag når den irriterande grisen.
+        maze_3_1: Jag måste komma till den där grisen! Skriv in några order för att
+          röra på(); så att jag kan få mina ägg tillbaka.
+        maze_3_2: Skriv ett program till mig som gör att jag kan gå hela vägen till
+          grisen.
+        maze_3_3: Hur ska jag komma till grisen? Försäkra dig om att jag inte springer
+          in i lådan med TNT!
+        maze_3_4: Argh! Skriv ett program till mig som tar mig runt lådan med TNT
+          och till grisen.
+        maze_karel_1_1: Hej, är jag en bonde. Jag behöver din hjälp med att platta
+          till åkern på min gård så den blir redo för plantering. Flytta mig till
+          högen av jord och använda "ta bort"-blocket för att ta bort den.
+        maze_karel_1_10: Jag jobbar sent, så det är mörkt ute och jag kan inte se
+          hur stora högar är. Nu har jag inte alla alternativen som jag hade innan
+          på "medan"-blocket. Flytta runt mig på åkern och om det finns en hög, ta
+          bort den.
+        maze_karel_1_11: 'Det är fortfarande mörkt ute. Flytta runt mig på åkern.
+          Om det finns en hög, ta bort den, och om det finns ett hål, fyll det. Tips:
+          Använd rullgardinsmenyn på "om"-blocket.'
+        maze_karel_1_2: Nu, flytta mig till hålet och fyll den med TVÅ spadar med
+          jord, använd "fyll"-blocket.
+        maze_karel_1_3: Flytta mig till högen med jord och berätta med så få block
+          som möjligt hur många spadar som ska tas bort.
+        maze_karel_1_4: 'Kan du hjälpa mig ta bort alla fyra högarna med jord? Tips:
+          Använd ett "upprepa"-block om du kan.'
+        maze_karel_1_5: 'Hjälp mig fylla i alla hålen med 5 spadar med jord. Tips:
+          du kan sätta ett "Upprepa"-block inuti "medan"-blocket.'
+        maze_karel_1_6: Ta bort alla högarna med jord med så få block som möjligt.
+          De nya alternativen i rullgardinsmenyn på "medan"-blocket berättar för mig
+          om jag står på en hög eller hål.
+        maze_karel_1_7: Wow, jag har hittat ett riktigt djupt hål! Jag vet inte hur
+          många spadar med jord som krävs. Kan du skriva ett program som fyller det
+          tills marken jämn?
+        maze_karel_1_8: Hjälp mig fylla i hålet i slutet av åkern med så få block
+          som möjligt.
+        maze_karel_1_9: 'Gör så att jag tar bort alla dessa högar av jord. Försök
+          använda så få block som möjligt. Ledtråd: försök med ett ''medans'' block.'
+        maze_karel_2_1: 'Försök att använda blocken för att hjälpa mig med att ta
+          bort alla högar och fylla i alla hål i marken. Försök att använda loopar
+          istället för att använda en massa block. Tips: du kan sätta en loop inuti
+          en annan loop.'
+        maze_karel_2_10: Flytta mig över åkern och använd de här två funktionerna
+          för att hjälpa mig ta bort alla högar och fylla alla hål.
+        maze_karel_2_2: Vi har gjort vår egna block som vi kallat "fyll 5" som nu
+          finns i kategorin funktioner. Använda det för att hjälpa mig med att fylla
+          i det här hålet.
+        maze_karel_2_3: Använd det nya "fyll 5"-funktionsblocket för att få mig att
+          fylla i alla hål. Du måste dra ut "fyll 5"-blocket från kategorin funktioner.
+        maze_karel_2_4: Gör en ny funktion som tar bort 7 spadar. använd den sen för
+          att skriva ett program som hjälper mig att ta bort alla högar.
+        maze_karel_2_5: Skapa en ny funktion som tar bort 6 spadar från en hög. Använd
+          den sen för att hjälpa mig gräva bort alla högar.
+        maze_karel_2_6: Använd två nya funktioner, "fyll 8" och "ta bort 8" för att
+          hjälpa mig att gräva bort högen och fylla hålet.
+        maze_karel_2_7: Det står en ko på min åker! Skriv en ny funktion som hjälper
+          mig att undvika kon och ta bort alla högar. sätt alla dina block inuti den
+          nya funktionen.
+        maze_karel_2_8: Använd den nya funktionen "undvik kon och ta bort 1" för att
+          hjälpa mig att ta bort alla högar.
+        maze_karel_2_9: OK, är här en funktion som tar bort 4 olika högar med jord
+          i en lodrät kolumn. Prova att sätta den här funktionen inuti en loop så
+          att du tar bort alla högar med jord med bara några få nya block.
+        maze_karel_debug_function_1: Vad ska du ändra i det här programmet för att
+          hjälpa mig ta bort alla högar?
+        maze_karel_debug_function_2: Kan du fixa det här programmet för mig så att
+          jag gör min åker platt?
+        maze_karel_debug_function_3: 'Fixa det här programmet så att jag tar bort
+          alla högar på min åker. '
+        maze_karel_debug_if: Hjälp! Fixa programmet så min åker blir helt platt.
+        maze_karel_debug_if_else: Fixa det här programmet så att jag fyller hålen
+          och tar bort alla högar.
+        maze_karel_debug_repeat: Fixa det här programmet för mig så att min åker blir
+          fin och platt.
+        maze_karel_debug_seq_1: Välkommen till felsökning! Min kod fungerar inte rätt.
+          Kan du hitta felet och fixa det så att jag kan få min åker platt och redo
+          för plantering?
+        maze_karel_debug_seq_2: Vad är fel med det här programmet? Hur ska du fixa
+          det så jag kan ta bort högen?
+        maze_karel_debug_while: Hur kan du ändra det här programmet för att hjälpa
+          mig fylla hålet?
+        maze_wordsearch_k_1: Flytta mig för att stava ordet EAST(öst)
+        maze_wordsearch_k_13: Flytta mig en väg, sedan en annan för att stava ordet
+          DEBUG(rätta)
+        maze_wordsearch_k_15: Flytta mig en väg, sedan en annan för att stava ordet
+          ABOVE(ovanför)
+        maze_wordsearch_k_16: Flytta mig en väg, sedan en annan för att stava ordet
+          BELOW(nedanför)
+        maze_wordsearch_k_2: Flytta mig för att stava ordet SOUTH(söder)
+        maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan
+          för att stava ordet STORY(berättelse)
+        maze_wordsearch_k_3: Flytta mig för att stava ordet WEST(väst)
+        maze_wordsearch_k_4: Flytta mig för att stava ordet NORTH(nord)
+        maze_wordsearch_k_6: Flytta mig öst och sedan söderut för att stava ordet
+          JUMP(hoppa)
+        maze_wordsearch_k_9: Flytta mig en väg, sedan en annan för att stava ordet
+          CODE(kod)
+        mazestep_1: Labyrint steg beskrivning här
+        mazestep_2: Labyrint steg beskrivning här
+        mazestep_3: Labyrint steg beskrivning här
+        mazestep_4: Labyrint steg beskrivning här
+        mazestep_5: Labyrint steg beskrivning här
+        studio_c2_1: Kan du göra så att hunden säger "hello world"?
+        studio_c2_10: "Kan du lägga till block för att ändra bakgrunden och hastigheten
+          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
+        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
+          om du vill låta kompisar prova din berättelse på sina telefoner.
+        studio_c2_2: Kan du å hunden att hunden att säga något och sen få katten att
+          säga något efteråt?
+        studio_c2_3: Kan du skriva ett program som gör att hunden rör sig till katten?
+        studio_c2_4: Kan du skriva ett program som gör att hunden rör sig till katten
+          och så att katten säger "Hej" när hunden når honom?
+        studio_c2_5: Kan du skriva ett program så att bläckfisken säger "Hej" när
+          man klickar på den?
+        studio_c2_6: Skriv ett program som gör att pingvinen Waddles rör sig runt
+          med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c2_7: Med "Upprepa för alltid" (repeat forever) blocket kan du köra
+          kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
+          upp och ner om och om igen?
+        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "träffad" ljud
+          om han kör in i dinosaurien, och så flytta honom med pilarna för att få
+          det att hända?
+        studio_c2_9: "Kan du lägga till ett block för att räkna poäng när pingvinen
+          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
+          pilarna tills du får poäng!"
+        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej"
+          när man klickar på den?
+        studio_c3_game_2: Skriv ett program som gör att pingvinen Waddles rör sig
+          runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
+        studio_c3_game_3: Med "Upprepa för alltid" (repeat forever) blocket kan du
+          köra kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
+          upp och ner om och om igen?
+        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "träffad"
+          ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att
+          få det att hända?
+        studio_c3_game_5: "Kan du lägga till ett block för att räkna poäng när pingvinen
+          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
+          pilarna tills du får poäng!"
+        studio_c3_game_6: "Kan du lägga till block för att ändra bakgrunden och hastigheten
+          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
+        studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför
+          för att låta vänner prova ditt spel på sina telefoner.
+        studio_c3_story_1: Kan du göra så att hunden säger "hello world"?
+        studio_c3_story_2: Kan du å hunden att hunden att säga något och sen få katten
+          att säga något efteråt?
+        studio_c3_story_3: Kan du skriva ett program som gör att hunden rör sig till
+          katten?
+        studio_c3_story_4: Kan du skriva ett program som gör att hunden rör sig till
+          katten och så att katten säger "Hej" när hunden når honom?
+        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken glad?
+        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
+          om du vill låta kompisar prova din berättelse på sina telefoner.
+        studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
+          för att låta vänner prova ditt spel på sina telefoner.
+        studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
+          för att låta vänner prova ditt spel på sina telefoner.
+        studio_gumball_click_hello: Kan du hjälpa Anton att starta loppet genom att
+          säga "Ready, set, go!"? För att testa programmet, glöm inte att klicka på
+          Anton efter att du klickat på "Kör"!
+        studio_gumball_free_play: Skapa ditt eget spel eller din egen berättelse.
+          När du är klar, klicka på "Slutför" för att låta dina vänner prova ditt
+          spel på sina telefoner, surfplattor eller datorer!
+        studio_gumball_hello1: Anais vill få lite nya vänner. Kan du hjälpa henne
+          att säga "hej" genom att dra blocket "säg" till arbetsytan och skriva ordet
+          "hej" i det?
+        studio_gumball_hello2: Darwin (karaktär 1) och hanns bror Gumball (karaktär
+          2) är på väg till skolan. Hjälp dem att hälsa på varandra genom att använda
+          blocket "prata karaktär" två gånger.
+        studio_gumball_join_food_fight: Gå med i matkriget! Använd kommandot "Skådespelare
+          kastar objekt till höger" för att få Banan-Joe (skådespelare 1) att kasta
+          mat på Anton (skådespelare 2)! Ställ Antons humör till "Arg" när han blir
+          träffad.
+        studio_gumball_move_events: Darwin är med i flaggtävlingen! Hjälpa honom att
+          springa runt genom att bifoga "Flytta"-blocket till var och en av händelserna.
+          När du är klar, klicka på kör och försöka samla alla flaggorna.
+        studio_gumball_move_to_actor: Gumball (skådespelare 1) och Darwin (skådespelare
+          2) är sena till marknaden! Hjälp Gumball att gå 200 pixlar ner till Darwin
+          med blocket "flytta skådespelare".  Anslut sedan ett block till händelsen
+          "när skådespelare berör" för att spela ett ljud när de hittar varandra.
+        studio_gumball_move_to_flag: Banan-Joe är på väg att vinna marknadsrallyt!  Hjälpa
+          honom att gå de sista 200 pixlarna med hjälp av blocket "flytta".
+        studio_gumball_repeat: '"Upprepa för evigt"-blocket gör att du kan köra kod
+          kontinuerligt.  Gumball behöver värma upp för sitt lopp genom att flytta
+          sig till vänster och till höger upprepade gånger. Kan du bifoga block till
+          "Upprepa för evigt"-blocket för att hjälpa hen med det?'
+        studio_gumball_sound_and_points: Vi har gett dig den mesta av koden som gör
+          att Anton (skådespelare 2) flyttar sig till vänster och till höger samt
+          koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen.  Kan du
+          avsluta koden och lägga block till händelsen "när skådespelare berör" så
+          att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton
+          kolliderar?  Tryck på "Kör" för att spela spelet.
+        studio_gumball_warn_food_fight: Darwin lyckades precis komma undan från ett
+          matkrig! Ändra bakgrunden till "figurer" och ange Darwins hastighet till
+          "snabb". Sedan trycker du på "Kör" och flyttar honom till Penny att varna
+          henne.
+        studio_iceage_click_hello: Kan du hjälpa Sid ringa ett sista samtal till vänner
+          när du klickar på? Glöm inte att klicka på honom när du trycker Run.
+        studio_iceage_free_play: Skapa ditt eget spel eller din egen berättelse. När
+          du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel
+          på sina telefoner, surfplattor eller datorer!
+        studio_iceage_hello1: Sid vill samla alla för ett nytt äventyr. Kan du hjälpa
+          honom att säga "hej" genom att dra ett "säg"-block ut i arbetsytan och skriva
+          ordet "hej" inuti?
+        studio_iceage_hello2: Sid (figur 1) hittade Manny (figur 2) och vill bjuda
+          in honom till äventyret. Hjälp dem att hälsa på varandra genom att använda
+          blocket "figur säg" två gånger.
+        studio_iceage_move_events: Scrat söker fortfarande efter ekollon! Hjälp honom
+          att rusa runt genom att fästa "move" blocket till var och en av händelserna
+          och genom att ändra riktning så att den fungerar för varje pil. När du är
+          klar, klicka på kör och försöka samla ihop alla ekollon.
+        studio_iceage_move_to_actor: Diego (skådespelare 1) söker efter Manny (skådespelare
+          2). Hjälp Diego flytta 200 pixlar ner till Manny genom att använda blocket
+          "flytta skådespelare". Anslut ett block till händelsen "när skådespelare
+          berör" för att spela ett ljud när de hittar varandra.
+        studio_iceage_move_to_flag: Scrat letar efter sitt ekollon! Hjälp honom att
+          gå de sista 200 pixlarna genom att använda blocket "flytta".
+        studio_iceage_repeat: Med "Upprepa forever" blocket kan du köra kod kontinuerligt.
+          Kan du bifoga ett block till det att för hjälpa farmor få lite motion genom
+          att flytta vänster och höger upprepade gånger?
+        studio_iceage_sound_and_points: Vi har gett dig den mesta av koden som gör
+          att Anton (skådespelare 2) flyttar sig till vänster och till höger samt
+          koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen. Kan du
+          avsluta koden och lägga block till händelsen "när skådespelare berör" så
+          att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton
+          kolliderar? Tryck på "Kör" för att spela spelet.
+        studio_iceage_throw_hearts: "Sid vill låta sin mormor, farmor, veta att han
+          älskar henne. Med kommandot \"skådespelare kasta\" kastar Sid (skådespelare
+          1) hjärtan på farmor (skådespelare 2)! \nStäll in mormors, farmors humör
+          så att hon blir glad när hon blir träffad av hjärtan."
+        studio_iceage_warn_ice_age: Alla behöver gå snabbare eftersom en istid är
+          på väg! Ändra bakgrunden till en isig bakgrund och ange Sids hastighet till
+          snabbt. Tryck sedan på Kör och flytta honom till Diego för att varna honom.
+        studio_k1_1: Kan du göra så att hunden säger "hello world"?
+        studio_k1_2: Kan du å hunden att hunden att säga något och sen få katten att
+          säga något efteråt?
+        studio_k1_3: Kan du skriva ett program som gör att hunden rör sig till katten?
+        studio_k1_4: Gör så att hunden flyttar till katten och så att katten säger
+          "Hej" när han kommer dit.
+        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken glad?
+        studio_k1_6: Skapa din egen berättelse! Flytta runt katten och hunden och
+          få dem att säga saker.
+        studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
+        studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
+          för att låta vänner prova ditt spel på sina telefoner.
+        studio_playlab_2: Grottpojken (skådespelare 1) och grottflickan (skådespelare
+          2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket
+          "säg" två gånger?
+        studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
+        studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till
+          Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
+        studio_playlab_5: Kan du hjälpa Rymdroboten att säga "Var hälsade jordbor"
+          när den blir klickad? Glöm inte att klicka på roboten efter du klickat på
+          kör
+        studio_playlab_6: Kan du hjälpa häxan att flytta runt med upp/ned/höger/vänster
+          piltangenterna för att komma till alla magiska eldklot?
+        studio_playlab_7: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt.
+          Kan du bifoga block för att hjälpa trollkarlen att flytta sig till höger
+          och till vänster om och om igen?
+        studio_playlab_8: Kan du lägga till ett block för att få en poäng och ett
+          block för att spela ett ljud när enhörningen kör på trollkarlen, och sedan
+          flytta honom med pilarna tills du får poäng?
+        studio_playlab_9: Ställ in bakgrunden för denna invasion av utomjordingar
+          och hjälp Rymdroboten att komma till utomjordingen snabbare genom att ändra
+          dess hastighet. Flytta honom sedan med piltangenterna för att komma till
+          Rymdroboten och varna alla andra
         turtle_1_1: Hej, jag är en konstnär. Du kan skriva kod för att få mig att
           rita nästan vad som helst. Använd några block för att få mig att rita över
           de grå linjerna i bilden.
+        turtle_1_10: 'Du klarade det! Nu, rita vad du vill. Några roliga idéer: en
+          streckfigur, snöflinga eller spiral. Prova också det nya "Bredd"-blocket.
+          Ha kul!'
         turtle_1_2: 'Nu, rita en fyrkant. OBS: Använd din favorit färg genom att välja
           det i de nya "sätta färg"-blocket.'
         turtle_1_3: Gör en kvadrat med bara 3 block.
@@ -120,67 +509,12 @@ sv:
           för att göra klart målningen. Färgerna kommer vara olika varje gång.
         turtle_1_9: Kan du gissa vilket nummer som ska ersätta frågetecknen för att
           rita en cirkel?
-        turtle_1_10: 'Du klarade det! Nu, rita vad du vill. Några roliga idéer: en
-          streckfigur, snöflinga eller spiral. Prova också det nya "Bredd"-blocket.
-          Ha kul!'
-        turtle_4_1: 'Kan du rita en triangel (med kanter som är 100 pixlar) med endast
-          3 block? Tips: Använd ett "Upprepa"-block.'
-        turtle_4_2: Lägga till ett "sväng höger precis vid 90 grader" block någonstans
-          mitt i programmet som redan finns  på arbetsytan för att rita dessa trianglar.
-        turtle_4_3: Pk, här är koden du skrev som ritar en ensam triangel. Kan du
-          lägga till ett 'upprepa' -block och ett 'rotera'-block för att skapa en
-          vacker blomma?
-        turtle_4_4: 'Här är samma kod från föregående pussel, men den roterar bara
-          36 grader efter att ha ritat varje triangel. Hur många gånger behöver det
-          upprepas? (Ledtråd: efter 360 graders rotation blir det en hel cirkel)'
-        turtle_4_5: 'Här är samma kod från föregående pussel, men den upprepar rotationen
-          36 gånger. Hur många grader borde rotationen vara? (Ledtråd: en 360 graders
-          sväng blir en hel cirkel) '
-        turtle_4_6: Kan du rita en kvadrat med sidor av 20 pixlar med bara 3 block?
-        turtle_4_7: 'Här är koden som ritar kvadraten från förra pusslet. Kan du upprepa
-          den så att den ritar 10 angränsande block, liknande en stege? Ledtrd: du
-          behöver bara 2 block till.'
-        turtle_4_8: Här är lösningen till föregående pussel. Kan du lägga till 2 block
-          till för att komplettera den?
-        turtle_4_9: Här är lösningen till det föregående pusslet. Hur många grader
-          borde du rotera för att göra klart ritningen? (Du behöver antagligen gissa
-          några gånger)
-        turtle_4_10: Här är lösningen på föregående pussel. Hur många gånger borde
-          du upprepa för att göra klart ritningen?
-        turtle_4_11: Försök att ändra siffrorna(antalet) i 'rotera' och 'upprepa'
-          blocken för att skapa olika mönster. Eller experimentera med resten av koden
-          för att rita vad du vill.
-        maze_karel_1_1: Hej, är jag en bonde. Jag behöver din hjälp med att platta
-          till åkern på min gård så den blir redo för plantering. Flytta mig till
-          högen av jord och använda "ta bort"-blocket för att ta bort den.
-        maze_karel_1_2: Nu, flytta mig till hålet och fyll den med TVÅ spadar med
-          jord, använd "fyll"-blocket.
-        maze_karel_1_3: Flytta mig till högen med jord och berätta med så få block
-          som möjligt hur många spadar som ska tas bort.
-        maze_karel_1_4: 'Kan du hjälpa mig ta bort alla fyra högarna med jord? Tips:
-          Använd ett "upprepa"-block om du kan.'
-        maze_karel_1_5: 'Hjälp mig fylla i alla hålen med 5 spadar med jord. Tips:
-          du kan sätta ett "Upprepa"-block inuti "medan"-blocket.'
-        maze_karel_1_6: Ta bort alla högarna med jord med så få block som möjligt.
-          De nya alternativen i rullgardinsmenyn på "medan"-blocket berättar för mig
-          om jag står på en hög eller hål.
-        maze_karel_1_7: Wow, jag har hittat ett riktigt djupt hål! Jag vet inte hur
-          många spadar med jord som krävs. Kan du skriva ett program som fyller det
-          tills marken jämn?
-        maze_karel_1_8: Hjälp mig fylla i hålet i slutet av åkern med så få block
-          som möjligt.
-        maze_karel_1_9: 'Gör så att jag tar bort alla dessa högar av jord. Försök
-          använda så få block som möjligt. Ledtråd: försök med ett ''medans'' block.'
-        maze_karel_1_10: Jag jobbar sent, så det är mörkt ute och jag kan inte se
-          hur stora högar är. Nu har jag inte alla alternativen som jag hade innan
-          på "medan"-blocket. Flytta runt mig på åkern och om det finns en hög, ta
-          bort den.
-        maze_karel_1_11: 'Det är fortfarande mörkt ute. Flytta runt mig på åkern.
-          Om det finns en hög, ta bort den, och om det finns ett hål, fyll det. Tips:
-          Använd rullgardinsmenyn på "om"-blocket.'
         turtle_2_1: 'Hej. Jag zombie konstnär. Jag älskar rita! Hjälp mig att rita
           en fyrkant i en speciell färg. Obs: du har fortfarande samma block men de
           har nu blivit ordnade i kategorier.'
+        turtle_2_10: Här är lite kod för att experimentera med olika spiraler.  Vad
+          händer om du ändrar mängden den svänger med? Eller anger en slumpmässig
+          färg i loopen? Du är fri att rita vad du vill.
         turtle_2_2: Välkommen till att använda funktioner. De låter dig skapa nya
           block! Prova det nya "Rita en fyrkant"-blocket som drar en liten grön 50x50
           fyrkant. Det finns i kategorin "Funktioner".
@@ -207,37 +541,11 @@ sv:
         turtle_2_9: Använd en "räkna med"-loop för att rita en familj av snögubbar
           med höjden 110, 100, 90, 80 och 70 respektive. Det ska vara 60 pixlar emellan
           snögubbarna.
-        turtle_2_10: Här är lite kod för att experimentera med olika spiraler.  Vad
-          händer om du ändrar mängden den svänger med? Eller anger en slumpmässig
-          färg i loopen? Du är fri att rita vad du vill.
-        maze_karel_2_1: 'Försök att använda blocken för att hjälpa mig med att ta
-          bort alla högar och fylla i alla hål i marken. Försök att använda loopar
-          istället för att använda en massa block. Tips: du kan sätta en loop inuti
-          en annan loop.'
-        maze_karel_2_2: Vi har gjort vår egna block som vi kallat "fyll 5" som nu
-          finns i kategorin funktioner. Använda det för att hjälpa mig med att fylla
-          i det här hålet.
-        maze_karel_2_3: Använd det nya "fyll 5"-funktionsblocket för att få mig att
-          fylla i alla hål. Du måste dra ut "fyll 5"-blocket från kategorin funktioner.
-        maze_karel_2_4: Gör en ny funktion som tar bort 7 spadar. använd den sen för
-          att skriva ett program som hjälper mig att ta bort alla högar.
-        maze_karel_2_5: Skapa en ny funktion som tar bort 6 spadar från en hög. Använd
-          den sen för att hjälpa mig gräva bort alla högar.
-        maze_karel_2_6: Använd två nya funktioner, "fyll 8" och "ta bort 8" för att
-          hjälpa mig att gräva bort högen och fylla hålet.
-        maze_karel_2_7: Det står en ko på min åker! Skriv en ny funktion som hjälper
-          mig att undvika kon och ta bort alla högar. sätt alla dina block inuti den
-          nya funktionen.
-        maze_karel_2_8: Använd den nya funktionen "undvik kon och ta bort 1" för att
-          hjälpa mig att ta bort alla högar.
-        maze_karel_2_9: OK, är här en funktion som tar bort 4 olika högar med jord
-          i en lodrät kolumn. Prova att sätta den här funktionen inuti en loop så
-          att du tar bort alla högar med jord med bara några få nya block.
-        maze_karel_2_10: Flytta mig över åkern och använd de här två funktionerna
-          för att hjälpa mig ta bort alla högar och fylla alla hål.
         turtle_3_1: Detta pussel visar dig hur "Rita en fyrkant"- och "Rita en cirkel"-funktionerna
           är gjorda.  När du gör en funktion körs den inte,  du måste dra ut "Rita
           en fyrkant"-blocket för att faktiskt rita en fyrkant.
+        turtle_3_10: Du har lärt dig mycket! Använd nu  det för att rita vad du vill.
+          Försök att rita en stjärna, eller en spiral eller en snygg snöflinga.
         turtle_3_2: Med funktionen "Rita en fyrkant" som exempel, skapa en "Rita en
           triangel"-funktion och använd den.
         turtle_3_3: 'Rita trekantiga staket runt katterna och ett fyrkantigt staket
@@ -258,26 +566,33 @@ sv:
           tre hus.
         turtle_3_9: Kan du återskapa funktionen "rita ett hus" utan hjälp? Prova.
           Rita sedan en rad av hus.
-        turtle_3_10: Du har lärt dig mycket! Använd nu  det för att rita vad du vill.
-          Försök att rita en stjärna, eller en spiral eller en snygg snöflinga.
-        maze_karel_debug_seq_1: Välkommen till felsökning! Min kod fungerar inte rätt.
-          Kan du hitta felet och fixa det så att jag kan få min åker platt och redo
-          för plantering?
-        maze_karel_debug_seq_2: Vad är fel med det här programmet? Hur ska du fixa
-          det så jag kan ta bort högen?
-        maze_karel_debug_repeat: Fixa det här programmet för mig så att min åker blir
-          fin och platt.
-        maze_karel_debug_while: Hur kan du ändra det här programmet för att hjälpa
-          mig fylla hålet?
-        maze_karel_debug_if: Hjälp! Fixa programmet så min åker blir helt platt.
-        maze_karel_debug_if_else: Fixa det här programmet så att jag fyller hålen
-          och tar bort alla högar.
-        maze_karel_debug_function_1: Vad ska du ändra i det här programmet för att
-          hjälpa mig ta bort alla högar?
-        maze_karel_debug_function_2: Kan du fixa det här programmet för mig så att
-          jag gör min åker platt?
-        maze_karel_debug_function_3: 'Fixa det här programmet så att jag tar bort
-          alla högar på min åker. '
+        turtle_4_1: 'Kan du rita en triangel (med kanter som är 100 pixlar) med endast
+          3 block? Tips: Använd ett "Upprepa"-block.'
+        turtle_4_10: Här är lösningen på föregående pussel. Hur många gånger borde
+          du upprepa för att göra klart ritningen?
+        turtle_4_11: Försök att ändra siffrorna(antalet) i 'rotera' och 'upprepa'
+          blocken för att skapa olika mönster. Eller experimentera med resten av koden
+          för att rita vad du vill.
+        turtle_4_2: Lägga till ett "sväng höger precis vid 90 grader" block någonstans
+          mitt i programmet som redan finns  på arbetsytan för att rita dessa trianglar.
+        turtle_4_3: Pk, här är koden du skrev som ritar en ensam triangel. Kan du
+          lägga till ett 'upprepa' -block och ett 'rotera'-block för att skapa en
+          vacker blomma?
+        turtle_4_4: 'Här är samma kod från föregående pussel, men den roterar bara
+          36 grader efter att ha ritat varje triangel. Hur många gånger behöver det
+          upprepas? (Ledtråd: efter 360 graders rotation blir det en hel cirkel)'
+        turtle_4_5: 'Här är samma kod från föregående pussel, men den upprepar rotationen
+          36 gånger. Hur många grader borde rotationen vara? (Ledtråd: en 360 graders
+          sväng blir en hel cirkel) '
+        turtle_4_6: Kan du rita en kvadrat med sidor av 20 pixlar med bara 3 block?
+        turtle_4_7: 'Här är koden som ritar kvadraten från förra pusslet. Kan du upprepa
+          den så att den ritar 10 angränsande block, liknande en stege? Ledtrd: du
+          behöver bara 2 block till.'
+        turtle_4_8: Här är lösningen till föregående pussel. Kan du lägga till 2 block
+          till för att komplettera den?
+        turtle_4_9: Här är lösningen till det föregående pusslet. Hur många grader
+          borde du rotera för att göra klart ritningen? (Du behöver antagligen gissa
+          några gånger)
         turtle_5_1: Prova att köra det här programmet och göra ändringar under tiden
           för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort
           det och ersätt det med någonting totalt annorlunda)
@@ -296,236 +611,97 @@ sv:
         turtle_5_6: Prova att köra det här programmet och göra ändringar under tiden
           för att se vad som händer. Kan du lista ut hur det fungerar? (Eller ta bort
           det och ersätt det med någonting totalt annorlunda)
-        maze_3_1: Jag måste komma till den där grisen! Skriv in några order för att
-          röra på(); så att jag kan få mina ägg tillbaka.
-        maze_3_2: Skriv ett program till mig som gör att jag kan gå hela vägen till
-          grisen.
-        maze_3_3: Hur ska jag komma till grisen? Försäkra dig om att jag inte springer
-          in i lådan med TNT!
-        maze_3_4: Argh! Skriv ett program till mig som tar mig runt lådan med TNT
-          och till grisen.
-        Custom_builder: Dra block från verktygslådan till arbetsytan för att göra
-          den nivå som du vill skapa. Tryck på "Kör" när du är klar.
-        jigsaw_1: Klicka på blocket
-        jigsaw_2: Dra blocket till målet
-        jigsaw_3: Ordna blocken för att bilda bilden
-        jigsaw_4: Ordna blocken för att bilda bilden
-        jigsaw_5: Ordna blocken för att bilda bilden
-        jigsaw_6: Ordna blocken för att bilda bilden
-        jigsaw_7: Ordna blocken för att bilda bilden
-        jigsaw_8: Ordna blocken för att bilda bilden
-        jigsaw_9: Ordna blocken för att bilda bilden
-        jigsaw_10: Ordna blocken för att bilda bilden
-        jigsaw_11: Ordna blocken för att bilda bilden
-        jigsaw_12: Ordna blocken för att bilda bilden
-        jigsaw_13: Fixa pusslet!
-        mazestep_1: Labyrint steg beskrivning här
-        mazestep_2: Labyrint steg beskrivning här
-        mazestep_3: Labyrint steg beskrivning här
-        mazestep_4: Labyrint steg beskrivning här
-        mazestep_5: Labyrint steg beskrivning här
-        studio_c2_1: Kan du göra så att hunden säger "hello world"?
-        studio_c2_2: Kan du å hunden att hunden att säga något och sen få katten att
-          säga något efteråt?
-        studio_c2_3: Kan du skriva ett program som gör att hunden rör sig till katten?
-        studio_c2_4: Kan du skriva ett program som gör att hunden rör sig till katten
-          och så att katten säger "Hej" när hunden når honom?
-        studio_c2_5: Kan du skriva ett program så att bläckfisken säger "Hej" när
-          man klickar på den?
-        studio_c2_6: Skriv ett program som gör att pingvinen Waddles rör sig runt
-          med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
-        studio_c2_7: Med "Upprepa för alltid" (repeat forever) blocket kan du köra
-          kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
-          upp och ner om och om igen?
-        studio_c2_8: Kan du få pingvinen att säga "AJ!" och spela ett "träffad" ljud
-          om han kör in i dinosaurien, och så flytta honom med pilarna för att få
-          det att hända?
-        studio_c2_9: "Kan du lägga till ett block för att räkna poäng när pingvinen
-          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
-          pilarna tills du får poäng!"
-        studio_c2_10: "Kan du lägga till block för att ändra bakgrunden och hastigheten
-          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
-        studio_c2_11: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
-          om du vill låta kompisar prova din berättelse på sina telefoner.
-        studio_c3_story_1: Kan du göra så att hunden säger "hello world"?
-        studio_c3_story_2: Kan du å hunden att hunden att säga något och sen få katten
-          att säga något efteråt?
-        studio_c3_story_3: Kan du skriva ett program som gör att hunden rör sig till
-          katten?
-        studio_c3_story_4: Kan du skriva ett program som gör att hunden rör sig till
-          katten och så att katten säger "Hej" när hunden når honom?
-        studio_c3_story_5: Kan du lägga till ett block för att göra bläckfisken glad?
-        studio_c3_story_6: Skapa din egen berättelse. När du är klar, klicka på Slutför/Finish
-          om du vill låta kompisar prova din berättelse på sina telefoner.
-        studio_c3_game_1: Kan du skriva ett program så att bläckfisken säger "Hej"
-          när man klickar på den?
-        studio_c3_game_2: Skriv ett program som gör att pingvinen Waddles rör sig
-          runt med hjälp av upp / ner / vänster/höger pil och träffar alla mål!
-        studio_c3_game_3: Med "Upprepa för alltid" (repeat forever) blocket kan du
-          köra kod oavbrutet. Kan du lägga till block för att flytta den här dinosaurien
-          upp och ner om och om igen?
-        studio_c3_game_4: Kan du få pingvinen att säga "AJ!" och spela ett "träffad"
-          ljud om han kör in i dinosaurien, och så flytta honom med pilarna för att
-          få det att hända?
-        studio_c3_game_5: "Kan du lägga till ett block för att räkna poäng när pingvinen
-          krockar med Octavia (actor 3)? \r \nSpela spelet och flytta pingvinen med
-          pilarna tills du får poäng!"
-        studio_c3_game_6: "Kan du lägga till block för att ändra bakgrunden och hastigheten
-          på pingvinen? \nFlytta honom med pilarna tills du får poäng!"
-        studio_c3_game_7: Skapa ditt eget spel. När du är klar, klicka på Slutför
-          för att låta vänner prova ditt spel på sina telefoner.
-        studio_playlab_1: Pingvinen vill säga "Hej" - kan du hjälpa honom?
-        studio_playlab_2: Grottpojken (skådespelare 1) och grottflickan (skådespelare
-          2) vill säga "Hej" till varandra. Kan du hjälpa dem genom att använda blocket
-          "säg" två gånger?
-        studio_playlab_3: Kan du hjälpa Tennisflickan att komma till flaggan?
-        studio_playlab_4: Kan du hjälpa Tennispojken (skådespelare 1) att komma till
-          Tennisflickan (skådespelare 2) och spela upp ett ljud när han kommer dit?
-        studio_playlab_5: Kan du hjälpa Rymdroboten att säga "Var hälsade jordbor"
-          när den blir klickad? Glöm inte att klicka på roboten efter du klickat på
-          kör
-        studio_playlab_6: Kan du hjälpa häxan att flytta runt med upp/ned/höger/vänster
-          piltangenterna för att komma till alla magiska eldklot?
-        studio_playlab_7: Med "Upprepa för alltid" blocket kan du köra kod kontinuerligt.
-          Kan du bifoga block för att hjälpa trollkarlen att flytta sig till höger
-          och till vänster om och om igen?
-        studio_playlab_8: Kan du lägga till ett block för att få en poäng och ett
-          block för att spela ett ljud när enhörningen kör på trollkarlen, och sedan
-          flytta honom med pilarna tills du får poäng?
-        studio_playlab_9: Ställ in bakgrunden för denna invasion av utomjordingar
-          och hjälp Rymdroboten att komma till utomjordingen snabbare genom att ändra
-          dess hastighet. Flytta honom sedan med piltangenterna för att komma till
-          Rymdroboten och varna alla andra
-        studio_playlab_10: Skapa ditt eget spel. När du är klar, klicka på Slutför
-          för att låta vänner prova ditt spel på sina telefoner.
-        studio_iceage_hello1: Sid vill samla alla för ett nytt äventyr. Kan du hjälpa
-          honom att säga "hej" genom att dra ett "säg"-block ut i arbetsytan och skriva
-          ordet "hej" inuti?
-        studio_iceage_hello2: Sid (figur 1) hittade Manny (figur 2) och vill bjuda
-          in honom till äventyret. Hjälp dem att hälsa på varandra genom att använda
-          blocket "figur säg" två gånger.
-        studio_iceage_move_to_flag: Scrat letar efter sitt ekollon! Hjälp honom att
-          gå de sista 200 pixlarna genom att använda blocket "flytta".
-        studio_iceage_move_to_actor: Diego (skådespelare 1) söker efter Manny (skådespelare
-          2). Hjälp Diego flytta 200 pixlar ner till Manny genom att använda blocket
-          "flytta skådespelare". Anslut ett block till händelsen "när skådespelare
-          berör" för att spela ett ljud när de hittar varandra.
-        studio_iceage_repeat: Med "Upprepa forever" blocket kan du köra kod kontinuerligt.
-          Kan du bifoga ett block till det att för hjälpa farmor få lite motion genom
-          att flytta vänster och höger upprepade gånger?
-        studio_iceage_click_hello: Kan du hjälpa Sid ringa ett sista samtal till vänner
-          när du klickar på? Glöm inte att klicka på honom när du trycker Run.
-        studio_iceage_move_events: Scrat söker fortfarande efter ekollon! Hjälp honom
-          att rusa runt genom att fästa "move" blocket till var och en av händelserna
-          och genom att ändra riktning så att den fungerar för varje pil. När du är
-          klar, klicka på kör och försöka samla ihop alla ekollon.
-        studio_iceage_sound_and_points: Vi har gett dig den mesta av koden som gör
-          att Anton (skådespelare 2) flyttar sig till vänster och till höger samt
-          koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen. Kan du
-          avsluta koden och lägga block till händelsen "när skådespelare berör" så
-          att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton
-          kolliderar? Tryck på "Kör" för att spela spelet.
-        studio_iceage_warn_ice_age: Alla behöver gå snabbare eftersom en istid är
-          på väg! Ändra bakgrunden till en isig bakgrund och ange Sids hastighet till
-          snabbt. Tryck sedan på Kör och flytta honom till Diego för att varna honom.
-        studio_iceage_throw_hearts: "Sid vill låta sin mormor, farmor, veta att han
-          älskar henne. Med kommandot \"skådespelare kasta\" kastar Sid (skådespelare
-          1) hjärtan på farmor (skådespelare 2)! \nStäll in mormors, farmors humör
-          så att hon blir glad när hon blir träffad av hjärtan."
-        studio_iceage_free_play: Skapa ditt eget spel eller din egen berättelse. När
-          du är klar, klicka på "Slutför" för att låta dina vänner prova ditt spel
-          på sina telefoner, surfplattor eller datorer!
-        studio_gumball_hello1: Anais vill få lite nya vänner. Kan du hjälpa henne
-          att säga "hej" genom att dra blocket "säg" till arbetsytan och skriva ordet
-          "hej" i det?
-        studio_gumball_hello2: Darwin (karaktär 1) och hanns bror Gumball (karaktär
-          2) är på väg till skolan. Hjälp dem att hälsa på varandra genom att använda
-          blocket "prata karaktär" två gånger.
-        studio_gumball_move_to_flag: Banan-Joe är på väg att vinna marknadsrallyt!  Hjälpa
-          honom att gå de sista 200 pixlarna med hjälp av blocket "flytta".
-        studio_gumball_move_to_actor: Gumball (skådespelare 1) och Darwin (skådespelare
-          2) är sena till marknaden! Hjälp Gumball att gå 200 pixlar ner till Darwin
-          med blocket "flytta skådespelare".  Anslut sedan ett block till händelsen
-          "när skådespelare berör" för att spela ett ljud när de hittar varandra.
-        studio_gumball_repeat: '"Upprepa för evigt"-blocket gör att du kan köra kod
-          kontinuerligt.  Gumball behöver värma upp för sitt lopp genom att flytta
-          sig till vänster och till höger upprepade gånger. Kan du bifoga block till
-          "Upprepa för evigt"-blocket för att hjälpa hen med det?'
-        studio_gumball_click_hello: Kan du hjälpa Anton att starta loppet genom att
-          säga "Ready, set, go!"? För att testa programmet, glöm inte att klicka på
-          Anton efter att du klickat på "Kör"!
-        studio_gumball_move_events: Darwin är med i flaggtävlingen! Hjälpa honom att
-          springa runt genom att bifoga "Flytta"-blocket till var och en av händelserna.
-          När du är klar, klicka på kör och försöka samla alla flaggorna.
-        studio_gumball_sound_and_points: Vi har gett dig den mesta av koden som gör
-          att Anton (skådespelare 2) flyttar sig till vänster och till höger samt
-          koden för att flytta Banan-Joe (skådespelare 1) runt på skärmen.  Kan du
-          avsluta koden och lägga block till händelsen "när skådespelare berör" så
-          att du både spelar upp ett ljud och får en poäng när Banan-Joe och Anton
-          kolliderar?  Tryck på "Kör" för att spela spelet.
-        studio_gumball_warn_food_fight: Darwin lyckades precis komma undan från ett
-          matkrig! Ändra bakgrunden till "figurer" och ange Darwins hastighet till
-          "snabb". Sedan trycker du på "Kör" och flyttar honom till Penny att varna
-          henne.
-        studio_gumball_join_food_fight: Gå med i matkriget! Använd kommandot "Skådespelare
-          kastar objekt till höger" för att få Banan-Joe (skådespelare 1) att kasta
-          mat på Anton (skådespelare 2)! Ställ Antons humör till "Arg" när han blir
-          träffad.
-        studio_gumball_free_play: Skapa ditt eget spel eller din egen berättelse.
-          När du är klar, klicka på "Slutför" för att låta dina vänner prova ditt
-          spel på sina telefoner, surfplattor eller datorer!
-        studio_full_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
-          för att låta vänner prova ditt spel på sina telefoner.
-        studio_k1_1: Kan du göra så att hunden säger "hello world"?
-        studio_k1_2: Kan du å hunden att hunden att säga något och sen få katten att
-          säga något efteråt?
-        studio_k1_3: Kan du skriva ett program som gör att hunden rör sig till katten?
-        studio_k1_4: Gör så att hunden flyttar till katten och så att katten säger
-          "Hej" när han kommer dit.
-        studio_k1_5: Kan du lägga till ett block för att göra bläckfisken glad?
-        studio_k1_6: Skapa din egen berättelse! Flytta runt katten och hunden och
-          få dem att säga saker.
-        maze_wordsearch_k_1: Flytta mig för att stava ordet EAST(öst)
-        maze_wordsearch_k_2: Flytta mig för att stava ordet SOUTH(söder)
-        maze_wordsearch_k_3: Flytta mig för att stava ordet WEST(väst)
-        maze_wordsearch_k_4: Flytta mig för att stava ordet NORTH(nord)
-        maze_wordsearch_k_6: Flytta mig öst och sedan söderut för att stava ordet
-          JUMP(hoppa)
-        maze_wordsearch_k_9: Flytta mig en väg, sedan en annan för att stava ordet
-          CODE(kod)
-        maze_wordsearch_k_13: Flytta mig en väg, sedan en annan för att stava ordet
-          DEBUG(rätta)
-        maze_wordsearch_k_15: Flytta mig en väg, sedan en annan för att stava ordet
-          ABOVE(ovanför)
-        maze_wordsearch_k_16: Flytta mig en väg, sedan en annan för att stava ordet
-          BELOW(nedanför)
-        maze_wordsearch_k_20: Det här är ett test! Flytta mig en väg, sedan en annan
-          för att stava ordet STORY(berättelse)
-        applab_ec_simple: Skapa din app med blocken i verktygslådan.
-        turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom
-          att välja det i nya "pennfärg" blocket.'
         turtle_ec_1_10: 'Du klarade det! Nu ritar du vad du vill. Några roliga idéer:
           en streckfigur, snöflinga eller spiral. Prova också det nya "pennbredd"
           blocket. Ha det så kul!'
-        studio_ec_sandbox: Skapa ditt eget spel. När du är klar, klicka på Slutför
-          för att låta vänner prova ditt spel på sina telefoner.
+        turtle_ec_1_2: 'Nu ska du rita en fyrkant. Obs: Använd din favoritfärg genom
+          att välja det i nya "pennfärg" blocket.'
+    trophy:
+      name:
+        Bronze: Brons
+        Gold: Guld
+        Silver: Silver
     video:
       name:
-        maze_intro: Labyrint Introduktion
-        artist_intro: Konstnär Introduktion
-        farmer_intro: Bonde Introduktion
-        flappy_intro: Flappy Intro
-        loop_times: '"Upprepa"-Block'
-        loop_until: '"Upprepa tills"-Block'
-        if: '"Om"-block'
-        if_else: '"Om/annars"-block'
-        if_else_scrat: '"Om/annars"-block'
-        function: Funktioner
-        loop_while: '"Medan"-block'
-        loop_for: '"Räknar"-block'
-        parameters: Funktioner med parametrar
-        hoc_wrapup: Sammanfattning för Timmen med Kod
+        C1_artist_intro: Konstnär Introduktion
+        C1_bee_level_intro: Bee nivå - Intro
+        C1_bee_loops: 'Bi: Slingor'
+        C1_bigevent_unplugged: Den stora händelsen
+        C1_building_foundation: Bygga en grund
+        C1_getting_loopy: Att bli snurrig
+        C1_going_places_safely: Trygg resa
+        C1_happy_maps_unplugged: Glada kartor
+        C1_maze_debugging: Labyrint felsökning
+        C1_maze_intro_sequencing: Labyrint- sekvensering Intro
+        C1_maze_loops: 'Labyrint: Slingor'
+        C1_moveitmoveit_unplugged: Flytta det, flytta den
+        C1_pair_programming: Par-programmering
+        C1_planting_seed: Plantera ett frö
+        C1_playlab_storytelling: Play Lab - skapa en berättelse
+        C1_spelling_bee_intro: Spelling Bee Intro
+        C1_zuck_repeat_loop: 'Labyrint: Slingor'
+        C2_artist_debugging: 'Konstnären: Felsökning'
+        C2_artist_intro: Konstnär Introduktion
+        C2_artist_loops: 'Konstnären: Slingor'
+        C2_bee_conditionals: 'Bi: Villkor'
+        C2_bee_debugging: 'Biet: Felsökning'
+        C2_bee_loops: 'Bi: Slingor'
+        C2_binary_bracelets: Binära armband
+        C2_conditionals_with_cards: Villkor
+        C2_digital_footprint: Ditt digitala fotavtryck
+        C2_digital_footprint_v2: Ditt digitala fotavtryck
+        C2_graph_paper: Kalkyleringsprogrammering
+        C2_maze_intro: Labyrint Introduktion
+        C2_paper_airplanes: Pappersflygplan
+        C2_playlab_createstory: Play Lab - skapa en berättelse
+        C2_relay_programming: Stafettprogrammering
+        C2_zuck_repeat_loop: 'Labyrint: Slingor'
+        C3_artist_functions: 'Konstnären: Funktioner'
+        C3_artist_intro: Konstnär Introduktion
+        C3_artist_nested_loops: Kapslade slingor(loopar)
+        C3_bee_conditionals: 'Bi: Villkor'
+        C3_bee_debugging: 'Biet: Felsökning'
+        C3_bee_functions: 'Biet: Funktioner'
+        C3_bee_nested_loops: Kapslade slingor(loopar)
+        C3_bounce: Studsa
+        C3_computational_thinking: Uträkningstänkande
+        C3_crowdsourcing: Crowdsourcing
+        C3_dice_race: Tärningsspelet
+        C3_farmer_while: "'Medan' loopar(slingor)"
+        C3_functional_suncatchers: Funktionella Solfångare
+        C3_internet: Internet
+        C3_maze_conditionals: 'Labyrint: Villkorssatser'
+        C3_maze_level_4: 'Labyrint: Slingor'
+        C3_playlab_create_game: PlayLab - skapa ett spel
+        C3_songwriting_with_parameters: Låtskrivande med parametrar
+        C4_bee_conditional: 'Bi: Villkor'
+        C4_conditionals: Villkor
+        C4_for_loops: "'För' loopar"
+        C4_for_loops_bee: "'För' loopar"
+        C4_for_loops_no_bee: "'För' loopar"
+        C4_function_create: Skapa funktioner
+        C4_function_edit: Redigera funktioner
+        C4_function_parameters: Funktioner med parametrar
+        C4_intro: Introduktion
+        C4_loops_zombie: loopar
+        C4_math_artist: Programmera Konstnären med matematik
+        C4_unplugged_algorithms: Algoritmer med Tangram
+        C4_unplugged_binary: Binära
+        C4_unplugged_forloops: "'För' loopar"
+        C4_unplugged_madlibs: Mad Libs
+        C4_unplugged_parameters: Låtskrivande Med parametrar
+        C4_unplugged_variables: Variabler i kuvert
+        C4_variables_artist: Variabler - Konstnär
+        C4_variables_playlab: Variabler - Play Lab
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
+        CSF_debugging_k1_blocks: Felsökning
+        CSF_debugging_text_blocks: Felsökning
+        CSF_loops_AB: loopar
+        CSF_my_robotic_friends: Mina Robotic- vänner
         Unplug1: Vad är CS?
+        Unplug10: Internet
+        Unplug11: Gör klart
         Unplug2: Uträkningstänkande
         Unplug3: Kalkyleringsprogrammering
         Unplug4: Algoritmer
@@ -534,263 +710,87 @@ sv:
         Unplug7: Låtskrivande
         Unplug8: Abstraktion
         Unplug9: Stafettprogrammering
-        Unplug10: Internet
-        Unplug11: Gör klart
-        C1_happy_maps_unplugged: Glada kartor
-        C1_moveitmoveit_unplugged: Flytta det, flytta den
-        C1_bigevent_unplugged: Den stora händelsen
-        C1_getting_loopy: Att bli snurrig
-        C1_pair_programming: Par-programmering
-        C1_maze_intro_sequencing: Labyrint- sekvensering Intro
-        C1_maze_debugging: Labyrint felsökning
-        C1_bee_level_intro: Bee nivå - Intro
-        C1_artist_intro: Konstnär Introduktion
-        C1_spelling_bee_intro: Spelling Bee Intro
-        C1_zuck_repeat_loop: 'Labyrint: Slingor'
-        C1_bee_loops: 'Bi: Slingor'
-        C1_maze_loops: 'Labyrint: Slingor'
-        C1_playlab_storytelling: Play Lab - skapa en berättelse
-        C1_planting_seed: Plantera ett frö
-        C1_building_foundation: Bygga en grund
-        C1_going_places_safely: Trygg resa
-        C2_maze_intro: Labyrint Introduktion
-        C2_artist_intro: Konstnär Introduktion
-        C2_zuck_repeat_loop: 'Labyrint: Slingor'
-        C2_artist_loops: 'Konstnären: Slingor'
-        C2_artist_debugging: 'Konstnären: Felsökning'
-        C2_bee_loops: 'Bi: Slingor'
-        C2_bee_debugging: 'Biet: Felsökning'
-        C2_bee_conditionals: 'Bi: Villkor'
-        C2_playlab_createstory: Play Lab - skapa en berättelse
-        C2_graph_paper: Kalkyleringsprogrammering
-        C2_conditionals_with_cards: Villkor
-        C2_binary_bracelets: Binära armband
-        C2_relay_programming: Stafettprogrammering
-        C2_paper_airplanes: Pappersflygplan
-        C2_digital_footprint: Ditt digitala fotavtryck
-        C2_digital_footprint_v2: Ditt digitala fotavtryck
-        C3_maze_level_4: 'Labyrint: Slingor'
-        C3_artist_intro: Konstnär Introduktion
-        C3_artist_functions: 'Konstnären: Funktioner'
-        C3_bee_functions: 'Biet: Funktioner'
-        C3_bee_conditionals: 'Bi: Villkor'
-        C3_maze_conditionals: 'Labyrint: Villkorssatser'
-        C3_artist_nested_loops: Kapslade slingor(loopar)
-        C3_farmer_while: "'Medan' loopar(slingor)"
-        C3_bee_nested_loops: Kapslade slingor(loopar)
-        C3_bee_debugging: 'Biet: Felsökning'
-        C3_bounce: Studsa
-        C3_playlab_create_game: PlayLab - skapa ett spel
-        C3_computational_thinking: Uträkningstänkande
-        C3_dice_race: Tärningsspelet
-        C3_internet: Internet
-        C3_crowdsourcing: Crowdsourcing
-        C3_functional_suncatchers: Funktionella Solfångare
-        C3_songwriting_with_parameters: Låtskrivande med parametrar
-        C4_intro: Introduktion
-        C4_loops_zombie: loopar
-        C4_bee_conditional: 'Bi: Villkor'
-        C4_variables_artist: Variabler - Konstnär
-        C4_variables_playlab: Variabler - Play Lab
-        C4_for_loops: "'För' loopar"
-        C4_for_loops_bee: "'För' loopar"
-        C4_for_loops_no_bee: "'För' loopar"
-        C4_math_artist: Programmera Konstnären med matematik
-        C4_function_edit: Redigera funktioner
-        C4_function_create: Skapa funktioner
-        C4_function_parameters: Funktioner med parametrar
-        C4_conditionals: Villkor
-        C4_unplugged_algorithms: Algoritmer med Tangram
-        C4_unplugged_madlibs: Mad Libs
-        C4_unplugged_variables: Variabler i kuvert
-        C4_unplugged_forloops: "'För' loopar"
-        C4_unplugged_parameters: Låtskrivande Med parametrar
-        C4_unplugged_binary: Binära
-        CSF_debugging_k1_blocks: Felsökning
-        CSF_debugging_text_blocks: Felsökning
-        CSF_my_robotic_friends: Mina Robotic- vänner
-        frozen_intro: Kodtimmen introduktion
-        frozen_loops: Introduktion till loopar
-        frozen_functions: Introduktion till funktioner
-        playlab_intro: Introduktion till Play Lab
-        playlab_events: Play Lab händelser
-        playlab_repeat_forever: Play Lab Upprepa för evigt
-        tutorial_puzzle_challenge: Handledning Pussel Utmaning
-        infinity_playlab_intro: Play Lab - introduktion
-        infinity_playlab_events: Play Lab - Händelser
-        infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
-        csd_weblab_intro_1: Intro till Web Lab - Del 1
-        csd_weblab_intro_2: Intro till Web Lab - Del 2
+        artist_intro: Konstnär Introduktion
+        csd_applab_parameters: Funktioner med parametrar
+        csd_debugging: Felsökning
+        csd_pair_programming: Par-programmering
         csd_weblab_css_1: Intro till CSS - Del 1
         csd_weblab_css_2: Intro till CSS - Del 2
+        csd_weblab_intro_1: Intro till Web Lab - Del 1
+        csd_weblab_intro_2: Intro till Web Lab - Del 2
         csd_weblab_intro_3: Intro till Web Lab - Del 3
+        csp_U1L14_tipstricks: Enhet 1 lektion 14 Lärare Tips & Tricks
         csp_applab_functions: Introduktion till funktioner
         csp_applab_functions_parameters: Funktioner med parametrar
         csp_applab_loops: loopar
+        csp_applab_parameters: Funktioner med parametrar
         csp_concept_rgb: Lite om pixlar
+        csp_pixelation_bw: Svart och vit pixelerings widget
         csp_pixelation_color_1: Färg pixelerings widget - Del1
         csp_pixelation_color_2: Färg pixelerings widget - Del2
         csp_pixelation_color_3: Färg pixelerings widget - Del3
-        csp_pixelation_bw: Svart och vit pixelerings widget
-        csp_U1L14_tipstricks: Enhet 1 lektion 14 Lärare Tips & Tricks
-        starwars_intro: 'Star Wars: Bygg en galax med kod - introduktion'
-        starwars_typing: 'Star Wars: Bygg en galax med kod - JavaScript'
-        starwars_events: 'Star Wars: Bygg en galax med kod - händelser'
-        starwars_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
-        starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
-        starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
-        starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
-        mc_intro: Minecraft - Introduktion
-        mc_repeat: Minecraft - Upprepning
-        mc_if_statements: Minecraft - om-satser
-        mc_congrats_share: Minecraft - Grattis
-        mc_congrats_no_share: Minecraft - Grattis
-        gumball_intro: Gumball En timme av kod - introduktion
+        farmer_intro: Bonde Introduktion
+        flappy_intro: Flappy Intro
+        frozen_functions: Introduktion till funktioner
+        frozen_intro: Kodtimmen introduktion
+        frozen_loops: Introduktion till loopar
+        function: Funktioner
         gumball_events: Gumball Kodtimmen - händelser
+        gumball_intro: Gumball En timme av kod - introduktion
         gumball_repeat: Gumball En timme av kod - Upprepa-satser
-        iceage_intro: Ice Age timme av kod - introduktion
-        iceage_events: Ice Age Kodtimmen - händelser
-        iceage_repeat: Ice Age timme av kod - upprepa påståeenden
-        CSF_bb8_skinOverview_C-F: BB-8
-        CSF_bb8_skinOverview_K-1: BB-8
-        CSF_loops_AB: loopar
-        hoc_dance_warmup: Dansparty – uppvärmnin
+        hello_world_congrats: Hej Världen - Gör Vad Du Vill
+        hello_world_events: Hej Världen - Programmering med Evenemang
+        hello_world_intro: Hej Världen - Välkommen till Sprite Lab
         hoc_dance_congrats: Dansparty – fortsätt partyt!
-        writing_first_program: Skriv ditt första datorprogram!
-        csd_pair_programming: Par-programmering
-        csd_applab_parameters: Funktioner med parametrar
-        csd_debugging: Felsökning
         hoc_dance_congrats_2019: Dansparty 2019 – fortsätt partyt!
-        hoc_dance_warmup_2019: Dansparty 2019 – uppvärmning
         hoc_dance_events_2019: Dansparty 2019 – aktiviteter
         hoc_dance_measures_2019: Dansparty 2019 – takter
         hoc_dance_properties_2019: Dansparty 2019 – egenskaper
+        hoc_dance_warmup: Dansparty – uppvärmnin
+        hoc_dance_warmup_2019: Dansparty 2019 – uppvärmning
+        hoc_wrapup: Sammanfattning för Timmen med Kod
+        iceage_events: Ice Age Kodtimmen - händelser
+        iceage_intro: Ice Age timme av kod - introduktion
+        iceage_repeat: Ice Age timme av kod - upprepa påståeenden
+        if: '"Om"-block'
+        if_else: '"Om/annars"-block'
+        if_else_scrat: '"Om/annars"-block'
+        infinity_playlab_events: Play Lab - Händelser
+        infinity_playlab_intro: Play Lab - introduktion
+        infinity_playlab_repeat_forever: Play Lab -  Upprepa för evigt
+        loop_for: '"Räknar"-block'
+        loop_times: '"Upprepa"-Block'
+        loop_until: '"Upprepa tills"-Block'
+        loop_while: '"Medan"-block'
+        maze_intro: Labyrint Introduktion
+        mc_congrats_no_share: Minecraft - Grattis
+        mc_congrats_share: Minecraft - Grattis
+        mc_if_statements: Minecraft - om-satser
+        mc_intro: Minecraft - Introduktion
+        mc_repeat: Minecraft - Upprepning
+        parameters: Funktioner med parametrar
         playlab_2021: Introduktion till Play Lab
         playlab_2021_reader: Introduktion till Play Lab
-        hello_world_intro: Hej Världen - Välkommen till Sprite Lab
-        hello_world_events: Hej Världen - Programmering med Evenemang
-        hello_world_congrats: Hej Världen - Gör Vad Du Vill
-        rough_poemart_intro: v1 Introduktion till diktkonst
-        rough_poemart_events: v1 Diktkonst-evenemang
-        rough_poemart_imagery: v1 Diktkonst-bilder
-        rough_poemart_congrats: v1 Diktkonst-gratulationer
-        poetry_module_variables: Variabler – Koda med poesi
-        poetry_module_textandvariables: Text och variabler – Koda med poesi
-        poetry_module_planningapp: Planera din app för diktgenerering – Koda med poesi
+        playlab_events: Play Lab händelser
+        playlab_intro: Introduktion till Play Lab
+        playlab_repeat_forever: Play Lab Upprepa för evigt
+        poemart_intro: Poesi Konst Introduktion
+        poetry_module_conditionals: Villkor – Koda med poesi
         poetry_module_multichoiceprompts: Frågor med flervalsalternativ – Koda med
           poesi
-        poetry_module_conditionals: Villkor – Koda med poesi
-        poemart_intro: Poesi Konst Introduktion
-        csp_applab_parameters: Funktioner med parametrar
-    callout:
-      text:
-        drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
-        run: Tryck på "Kör" för att prova programmet
-        watch_again: Klicka här för att titta på videon igen
-        gray_block_explanation: Block som är grå kan inte tas bort. Kan du lösa pusslet
-          ändå?
-        show_code_explanation: Klicka här för att se koden till programmet du skriver
-        instructions_repeat_explanation: Instruktionerna för varje uppgift upprepas
-          här
-        category_explanation: Du har kvar alla block men de har nu ordnats i kategorier
-        set_sprite_image: Bifoga en "sätt figur till bild" block till "när berättelsen
-          börjar" blocket för att ange figur/actor i  denna berättelse
-        studio_say_text: Skriv vad du vill att din figur ska säga inom dessa citat
-        jigsaw_click: Klicka på detta block!
-        move_elsa_forward: Dra ett "flytta framåt" block och fäst det under "vid start"
-          blocket för att få Elsa att gå framåt
-        turn_elsa: Använd "sväng" blocket för att få Elsa att vända sig. Siffran i
-          rullistan bestämmer hur mycket hon svänger
-        replace_questions: Använd rullistan för att ersätta "???" med en siffra
-        replace_questions_degree: Använd rullistan för att ersätta "???" med rätt
-          antal grader att svänga
-        repeat_blocks: Använda blocket "Upprepa", lägg det runt blocken i arbetsytan
-        repeat_blocks_1: "(1) använd detta block och lägga det runt de grå blocken
-          på arbetsytan"
-        repeat_blocks_2: (2) flytta blocket "Upprepa" hit, och placera de grå blocken
-          inuti
-        snowflake_dropdown: Använd den här rullisten för att skapa olika snöflingor!
-        degrees_per_side: Dela 360 med antalet sidor för att få storleken på varje
-          vinkel i grader.
-        set_sides: Använd detta block för att det nummer av 'sidor' som behövs för
-          att slutföra pussel.
-        set_length: Använda detta block för att ange "längd" till rätt värde.
-        which_equation: Vilka ekvation gör varje sida kortare för former med flera
-          sidor?
-        get_nectar: Använd det nya "få nektar" blocket.
-        actions_category: Verktygslådan fick ett nytt utseende! "Åtgärder" blocken
-          är här nu.
-        draw_square_hint: 'Tips: Använd kvadrat slingan du just gjort i sista pusslet.'
-        edit_function: Klicka här om du vill redigera din funktion.
-        create_function: Klicka här för att öppna  menyn i "Funktioner" , klicka sedan
-          på knappen "Skapa en funktion".
-        house_hint: Det är ok om bilden inte ser ut som ett hus ännu. Vi kommer att
-          fixa det i nästa pussel.
-        edit_draw_square: Använd den här knappen för att redigera funktionen och lägga
-          till slingan.
-        edit_get_nectar: Använd den här knappen om du vill redigera funktionen och
-          ändra den riktning i vilken biet kommer att vända sig för att få nektar.
-        logic_category: Öppna "Logik"-menyn för att hitta "om/annars" blocket.
-        length_parameter: Kan du uppdatera den här funktionen så att den använder
-          parametern "längd"?
-        frozen_diamond_repeat: Använd upprepa blocket för att skapa den här formen.
-        frozen_circle_function_in_circle_turn: Glöm inte att svänga efter varje cirkel
-          du skapar.
-        frozen_circle_function_with_parameter_circle: Använd blocket "skapa en cirkel"  och
-          ändra storleken.
-        frozen_snowflake_branch: Använd blocket "skapa en snöflinge-gren"
-        frozen_create_square: Lägg till fler block här för att skapa en kvadrat
-        playlab_drag_say: Dra blocket "säg" här och skriv "Hej"
-        playlab_use_twice: Använda detta block två gånger och kom ihåg att ändra figur
-          numret
-        playlab_move_girl: Använda "flytta höger" blocket för att flytta tennis-flickan
-        playlab_play_sound: Lägg till "spela ljud" block här
-        playlab_arrow_keys: Kom ihåg att använda dessa för att flytta häxan efter
-          att ha klickat på kör
-        playlab_add_move: Lägg till "flytta" block inuti detta 'upprepa' block
-        playlab_add_score: Lägga till poäng -block här
-        playlab_add_blocks: Lägg till dina block här
-        set_variable: Dra ett antals-block hit för att ange din variabel
-        place_variable: Dra din variabel in i  detta block
-        bee_for_loop: Dra det största antalet nektar du vill biet att ska samla hit
-        place_counter_variable: Dra din räknare-variabel in i detta block
-        function_editor_draw_square: Detta är din funktionsdefinition. Dessa block  körs
-          varje gång du använder  blocket "Rita en fyrkant"
-        change_here: Gör din ändring här
-        write_draw_square_function: Dra block från verktygslådan hit för  att rita
-          en fyrkant
-        write_draw_triangle_function: Dra block från verktygslådan hit för att rita
-          en triangel
-        edit_add_parameter: Klicka på Redigera för att lägga till en parameter i din
-          funktion
-        add_and_drag_parameter: Skriv in namnet på din parameter här, klicka på Lägg
-          till och sedan dra den till din funktionsdefinition
-        fill_in_actor: Fyll i ??? med nummer som motsvarar varje skådespelare (1,
-          2 och 3)
-        repeat: Sätt block inuti loopen för att upprepa kommandon
-        if_bee_nectar: Använda "Om"-blocket för att besluta om biet bör få nektar
-        if_else_bee: Använd "om/annars" blocket så att biet får nektar från en blomma,
-          och gör honung om det inte är en blomma
-        repeat_full_circle: Skriv in hur många gånger zombien behöver flytta sig för
-          göra en hel cirkel
-        place_length_variable: Dra variabeln längd hit om du vill ersätta frågetecknen
-        arrows_move_actor: Använd piltangenterna för att flytta figuren
-        right_arrow_fireball: Använd högerpiltangenten för att skjuta eldklot
-        name_function: Skriv namnet på din funktion här
-        Infinity_move_right_runbutton: Lägg till flytta- blocket här
-        Infinity_move_directions_callout: Vilket block kommer att flytta Baymax  uppåt
-          när du trycker på uppåt-pilen?
-        Infinity_move_directions_callout_arrow: Använd dessa pilar för att styra
-        Infinity_move_collide_callout: Spela upp ett ljud när händelsen inträffar.
-        Infinity_repeat_callout: Placera flytta - block  här inne
-        craft_run_button_callout: Tryck på "Kör" för att prova programmet
-        craft_drag_block_callout: Dra ett "gå framåt"-block och fäst det under det
-          andra blocket
-        craft_callout_preplaced: Vi har lagt ut några block för att hjälpa dig komma
-          igång
-        craft_inside_repeat: Upprepa handlingar genom att placera block här
-        craft_callout_preplaced_house: Den här koden kommer bygga ditt hus. Kan du
-          avsluta det?
-        craft_what_is_iron: Bryt järnet!
-        craft_callout_moveforward: Den här koden håller koll efter lava. Kan du lägga
-          till ett kommando för att gå framåt?
+        poetry_module_planningapp: Planera din app för diktgenerering – Koda med poesi
+        poetry_module_textandvariables: Text och variabler – Koda med poesi
+        poetry_module_variables: Variabler – Koda med poesi
+        rough_poemart_congrats: v1 Diktkonst-gratulationer
+        rough_poemart_events: v1 Diktkonst-evenemang
+        rough_poemart_imagery: v1 Diktkonst-bilder
+        rough_poemart_intro: v1 Introduktion till diktkonst
+        starwars_blocks_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
+        starwars_blocks_events: 'Star Wars: Bygg en galax med kod - händelser'
+        starwars_blocks_intro: 'Star Wars: Bygg en galax med kod - introduktion'
+        starwars_congrats: 'Star Wars: Bygg en galax med kod - Grattis'
+        starwars_events: 'Star Wars: Bygg en galax med kod - händelser'
+        starwars_intro: 'Star Wars: Bygg en galax med kod - introduktion'
+        starwars_typing: 'Star Wars: Bygg en galax med kod - JavaScript'
+        tutorial_puzzle_challenge: Handledning Pussel Utmaning
+        writing_first_program: Skriv ditt första datorprogram!

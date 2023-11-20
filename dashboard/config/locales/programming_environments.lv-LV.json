@@ -2,33 +2,128 @@
   "lv-LV": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkcijas"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    },
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    },
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    }
+                  }
+                }
+              },
+              "name": "Matemātika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Mainīgie"
+            }
+          },
+          "name": "Aplikāciju laborotorija"
+        },
         "gamelab": {
           "categories": {
             "drawing": {
               "name": "Zīmējums"
             },
+            "functions": {
+              "name": "Funkcijas"
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Krāsa"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Krāsa"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    },
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Lielākais atgrieztais skaitlis"
+                    },
+                    "min": {
+                      "description": "Mazākais atgrieztais skaitlis"
+                    }
+                  }
+                }
+              },
               "name": "Matemātika"
             },
             "variables": {
               "name": "Mainīgie"
-            },
-            "functions": {
-              "name": "Funkcijas"
-            }
-          }
-        },
-        "applab": {
-          "name": "Aplikāciju laborotorija",
-          "categories": {
-            "math": {
-              "name": "Matemātika"
-            },
-            "variables": {
-              "name": "Mainīgie"
-            },
-            "functions": {
-              "name": "Funkcijas"
             }
           }
         },
@@ -40,23 +135,23 @@
             "events": {
               "name": "Pasākumi"
             },
-            "loops": {
-              "name": "Cikli"
-            },
-            "variables": {
-              "name": "Mainīgie"
-            },
-            "math": {
-              "name": "Matemātika"
+            "functions": {
+              "name": "Funkcijas"
             },
             "logic": {
               "name": "Loģika"
             },
-            "functions": {
-              "name": "Funkcijas"
+            "loops": {
+              "name": "Cikli"
+            },
+            "math": {
+              "name": "Matemātika"
             },
             "text": {
               "name": "Teksts"
+            },
+            "variables": {
+              "name": "Mainīgie"
             }
           }
         }

@@ -1,10 +1,9 @@
 {
   "dropletBlock_createSprite_param3": "altura",
-  "dropletBlock_setCollider_param0": "tipo",
-  "dropletBlock_setCollider_param4": "altura",
   "dropletBlock_setColliderEach_param0": "tipo",
   "dropletBlock_setColliderEach_param4": "altura",
-  "errorLoadingAnimation": "Parece que temos un problema ao cargar a túa animación «{animationName}». Asegúrate de que tes unha boa conexión a internet e trata de volver a cargar a páxina. Se continua o problema, é posible que esta animación estea rota. Neste caso, pode ser que teñas que eliminar a animación para continuar.",
+  "dropletBlock_setCollider_param0": "tipo",
+  "dropletBlock_setCollider_param4": "altura",
   "reinfFeedbackMsg": "Remataches! Fai clic en «Continuar» para pasar ao seguinte nivel.",
   "shareGame": "Comparta o seu xogo:"
 }

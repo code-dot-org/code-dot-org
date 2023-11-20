@@ -29,12 +29,3 @@ end
 on_worker_boot do |_index|
   Cdo::AppServerHooks.after_fork(host: CDO.pegasus_hostname)
 end
-
-require 'gctools/oobgc'
-out_of_band {GC::OOB.run}
-
-# Log thread backtraces and GC stats from all worker processes every second when enabled.
-plugin :log_stats
-LogStats.threshold = -> {DCDO.get('logStatsPegasus', nil)}
-filter_gems = %w(puma sinatra actionview activesupport honeybadger newrelic rack)
-LogStats.backtrace_filter = ->(bt) {CDO.filter_backtrace(bt, filter_gems: filter_gems)}

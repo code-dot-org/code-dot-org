@@ -9,3 +9,5 @@ right 'Lossless compression is fully reversible, meaning the original file can b
 markdown <<MARKDOWN
 
 MARKDOWN
+
+allow_multiple_attempts true

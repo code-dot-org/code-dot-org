@@ -17,3 +17,5 @@ This program creates a button and **two event handlers** which listen for a clic
 **Predict:** What will happen when the "Forward" button is clicked? Force yourself to make a prediction about what the turtle will do! 
 
 MARKDOWN
+
+allow_multiple_attempts true

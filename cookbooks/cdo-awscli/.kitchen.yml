@@ -1,7 +1,7 @@
 ---
 driver:
   name: dokken
-  chef_version: 16.18.0
+  chef_version: 17.6.18
 transport:
   name: dokken
 provisioner:
@@ -15,7 +15,6 @@ platforms:
     pid_one_command: /bin/systemd
   run_list:
   - recipe[apt]
-  - recipe[sudo-user]
 suites:
 - name: default
   run_list:

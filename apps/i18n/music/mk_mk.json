@@ -1,0 +1,19 @@
+{
+  "blockly_blockPlaySoundAtMeasureTooltip": "пушти звук",
+  "blockly_blockPlaySoundTooltip": "пушти звук",
+  "blockly_blockRepeatTooltip": "повтори",
+  "blockly_blockRestTooltip": "одмори",
+  "blockly_blockWhenRun": "Кога трча",
+  "blockly_blockWhenRunTooltip": "Кога трча",
+  "blockly_toolboxCategoryControl": "Контрола",
+  "blockly_toolboxCategoryEffects": "Ефекти",
+  "blockly_toolboxCategoryLogic": "Логика",
+  "blockly_toolboxCategoryMath": "Математика",
+  "blockly_toolboxCategoryVariables": "Променливи",
+  "continue": "Продолжи",
+  "control": "Контрола",
+  "panelHeaderInstructions": "Инструкции",
+  "panelHeaderWorkspace": "Работна површина: ",
+  "share": "Сподели",
+  "startOver": "Започни"
+}

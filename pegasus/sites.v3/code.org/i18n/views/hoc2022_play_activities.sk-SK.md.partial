@@ -4,4 +4,4 @@
 
 {{ featured_tutorial, title: "Flappy Code", body: "Chceš napísať vlastnú hru za menej ako 10 minút? Vyskúšaj náš tutoriál Flappy Code!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
-{{ featured_tutorial, title: "Hodina kódu Minecraft", body: "Minecraft je späť v Hodine kódu s úplne novou aktivitou! Cesta kódovania pomocou Minecraft.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}
+{{ featured_tutorial, title:"Hodina kódu Minecraft", body: "Minecraft je späť v Hodine kódu s úplne novou aktivitou! Cesta kódovania pomocou Minecraft.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,0 +1,205 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Deskribapena",
+  "correctAnswer": "Zuzena",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Iraupena"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "index": {
+          "id": "indizea"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Adina"
+        },
+        "Gender": {
+          "id": "Generoa"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "banana"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "adina"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "kolorea"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Adina"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "adina"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Herria"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "adina"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Herria"
+        },
+        "Name": {
+          "id": "Izena"
+        },
+        "Score": {
+          "id": "Puntuaketa"
+        },
+        "Star": {
+          "id": "Bota"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "oilaskoa"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Deskribapena"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "kaiman"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "chicken": {
+          "id": "oilaskoa"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "corn": {
+          "id": "artoa"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "tamaina"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "tamaina"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "eguna"
+        },
+        "weather": {
+          "id": "eguraldia"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Artista"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "adina"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Lorpenak"
+        },
+        "Age": {
+          "description": "Adina",
+          "id": "Adina"
+        },
+        "Country": {
+          "id": "Herria"
+        },
+        "Gender": {
+          "description": "Generoa",
+          "id": "Generoa"
+        },
+        "Internet": {
+          "id": "Internet"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Atzera",
+  "navigateDone": "Amaitu",
+  "navigateForward": "Jarraitu",
+  "saveProgress": "Gorde",
+  "tryAgain": "Saiatu berriro"
+}

@@ -1,0 +1,67 @@
+{
+  "pt-BR": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Saiba mais",
+            "title": "Explore a inteligência artificial e a aprendizagem de máquina"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Saiba mais"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Saiba mais"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Saiba mais"
+          },
+          "codebytes-2020": {
+            "buttonText": "Saiba mais"
+          },
+          "coldplay": {
+            "buttonText": "Experimente"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Começar"
+          },
+          "csjourneys": {
+            "buttonText": "Saiba mais"
+          },
+          "csjourneys-22": {
+            "buttonText": "Saiba mais"
+          },
+          "csleadersprize": {
+            "buttonText": "Saiba mais"
+          },
+          "hoc-2023": {
+            "body": "Junte-se a milhões de pessoas pelo mundo na organização de uma hora de codificação, com ou sem I.A. e aprenda como funciona a I.A. Qualquer pessoa, em qualquer lugar pode participar. Não é preciso ter experiência.",
+            "buttonText": "Saiba mais",
+            "title": "Hour of Code: Criatividade com I.A."
+          },
+          "hoc-more": {
+            "body": "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros."
+          },
+          "home-learning-2020": {
+            "buttonText": "Visualizar as Ideias do Projeto"
+          },
+          "superhero": {
+            "buttonText": "Saiba Mais"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Participe"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Indique um Professor"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Participe"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Participe"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
   "continue": "Continuer",
-  "nextLevel": "Félicitations ! Vous avez terminé cette énigme.",
+  "nextLevel": "Félicitations ! Vous avez terminé cette casse-tête.",
   "no": "Non",
-  "numBlocksNeeded": "Cette énigme peut être résolue avec %1 blocs.",
+  "numBlocksNeeded": "Cette casse-tête peut être résolue avec %1 blocs.",
   "reinfFeedbackMsg": "Tu peux cliquer sur le bouton « Réessayer » pour revenir à ta partie.",
   "share": "Partager",
   "shareGame": "Partager ton jeu :",

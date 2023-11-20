@@ -1,0 +1,212 @@
+{
+  "columnDetailsMaximumValue": "max",
+  "columnDetailsMinimumValue": "min",
+  "columnInspectorDescription": "Aprašymas",
+  "correctAnswer": "Teisingai",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "Trukmė"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Amžius"
+        },
+        "Gender": {
+          "id": "Lytis"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "bananas"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "amžius"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "spalva"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Amžius"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "amžius"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "Internetas"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Šalis"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "amžius"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Šalis"
+        },
+        "Name": {
+          "id": "Vardas"
+        },
+        "Score": {
+          "id": "Rezultatas"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "chicken": {
+          "id": "viščiukas"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Description": {
+          "id": "Aprašymas"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokadas"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "šoninė"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "Aligatorius"
+        }
+      }
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokadas"
+        },
+        "chicken": {
+          "id": "viščiukas"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "avokadas"
+        },
+        "corn": {
+          "id": "kukurūzas"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "dydis"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "dydis"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "diena"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Menininkas"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "amžius"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Pasiekimai"
+        },
+        "Age": {
+          "description": "Amžius",
+          "id": "Amžius"
+        },
+        "Country": {
+          "id": "Šalis"
+        },
+        "Gender": {
+          "description": "Lytis",
+          "id": "Lytis"
+        },
+        "Internet": {
+          "id": "Internetas"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "max",
+  "modelCardPossibleValuesMinimum": "min",
+  "navigateBack": "Atgal",
+  "navigateDone": "Finišas",
+  "navigateForward": "Tęsti",
+  "saveProgress": "Išsaugoti",
+  "tryAgain": "Pabandyk dar kartą"
+}

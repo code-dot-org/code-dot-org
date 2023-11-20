@@ -68,7 +68,7 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  *        redirected to /too_young
  * @returns {ReactElement}
  */
-exports.checkSharedAppWarnings = function(options) {
+exports.checkSharedAppWarnings = function (options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
 
   if (hasDataAPIs && options.isTooYoung) {

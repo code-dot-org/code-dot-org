@@ -2,89 +2,182 @@
   "hr-HR": {
     "data": {
       "programming_environments": {
-        "gamelab": {
-          "name": "Game Lab",
+        "applab": {
           "categories": {
+            "advanced": {
+              "name": "Napredno"
+            },
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "name": "Varijable"
+            }
+          },
+          "name": "Laboratorij aplikacija"
+        },
+        "gamelab": {
+          "categories": {
+            "functions": {
+              "name": "Funkcije"
+            },
             "game_lab": {
               "name": "Game Lab"
             },
-            "sprites": {
-              "name": "Likovi"
-            },
             "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                }
+              },
               "name": "Grupe"
             },
             "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vraća najveći broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
               "name": "Matematika"
             },
-            "variables": {
-              "name": "Varijable"
-            },
-            "functions": {
-              "name": "Funkcije"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratorij aplikacija",
-          "categories": {
-            "math": {
-              "name": "Matematika"
-            },
-            "variables": {
-              "name": "Varijable"
-            },
-            "functions": {
-              "name": "Funkcije"
-            },
-            "advanced": {
-              "name": "Napredno"
-            }
-          }
-        },
-        "spritelab": {
-          "name": "Lab likova",
-          "categories": {
             "sprites": {
               "name": "Likovi"
             },
-            "world": {
-              "name": "Svijet"
-            },
-            "location": {
-              "name": "Lokacije"
-            },
+            "variables": {
+              "name": "Varijable"
+            }
+          },
+          "name": "Game Lab"
+        },
+        "spritelab": {
+          "categories": {
             "actions": {
               "name": "Akcije"
-            },
-            "events": {
-              "name": "Događaji"
             },
             "behaviors": {
               "name": "Ponašanja"
             },
-            "loops": {
-              "name": "Petlje"
+            "comments": {
+              "name": "Komentari"
             },
-            "variables": {
-              "name": "Varijable"
-            },
-            "math": {
-              "name": "Matematika"
-            },
-            "logic": {
-              "name": "Logika"
+            "events": {
+              "name": "Događaji"
             },
             "functions": {
               "name": "Funkcije"
             },
+            "location": {
+              "name": "Lokacije"
+            },
+            "logic": {
+              "name": "Logika"
+            },
+            "loops": {
+              "name": "Petlje"
+            },
+            "math": {
+              "name": "Matematika"
+            },
+            "sprites": {
+              "name": "Likovi"
+            },
             "text": {
               "name": "tekst"
             },
-            "comments": {
-              "name": "Komentari"
+            "variables": {
+              "name": "Varijable"
+            },
+            "world": {
+              "name": "Svijet"
             }
-          }
+          },
+          "name": "Lab likova"
         }
       }
     }

@@ -32,7 +32,7 @@ end
 def get_scenario_for_branch(baseline_data, scenario_name, branch_name)
   baseline_data.select do |item|
     item[SCENARIO_NAME] == scenario_name &&
-    item[BASELINE_BRANCH_NAME] == branch_name
+      item[BASELINE_BRANCH_NAME] == branch_name
   end.first
 end
 
@@ -101,7 +101,7 @@ def main
   # in either or both branches)
   scenarios = baseline_data.select do |item|
     item[BASELINE_BRANCH_NAME] == branch1 ||
-    item[BASELINE_BRANCH_NAME] == branch2
+      item[BASELINE_BRANCH_NAME] == branch2
   end
   unique_scenarios = scenarios.map {|item| item[SCENARIO_NAME]}.uniq {|item| item}.sort
 

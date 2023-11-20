@@ -45,6 +45,7 @@ da:
         personal_email_markdown: "Personlig e-mailadresse [(klik her, hvis du ikke har en e-mailadresse)](%{url})"
         username: 'brugernavn'
         password: 'Adgangskode'
+        verified_teacher: 'Verificeret lærer'
         password_confirmation: 'Bekræft adgangskode'
         current_password: 'Nuværende adgangskode'
         locale: 'Sprog'
@@ -52,6 +53,7 @@ da:
         gender: 'Køn'
         edit_header: 'Rediger kontooplysninger'
         finish_sign_up_header: 'Afslut oprettelsen af din konto'
+        finish_sign_up_header_error: 'Ret venligst følgende fejl:'
         finish_sign_up_subheader: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto for <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Udfyld de følgende oplysninger for at oprette en Code-org-konto med e-mailadressen **%{email}**.'
         finish_sign_up_subheader_provider: 'Udfyld følgende oplysninger for at afslutte oprettelsen af en Code.org konto <strong>%{provider}</strong> for <strong>%{email}</strong>.'
@@ -59,6 +61,8 @@ da:
         reset_password_token: "Adgangskode linket du har brugt"
         error:
           future: kan ikke være i fremtiden
+        user_type: 'Kontotype'
+        us_state: 'Region'
   beta: "beta"
   hello: "Hej verden"
   welcome_back: "Velkommen tilbage %{name}"
@@ -69,6 +73,7 @@ da:
   previous_page: Forrige side
   next_page: Næste side
   next_resource: Næste ressource
+  done_with_module: Færdig med dette læringsmodul
   cancel: "Annuller"
   okay: "Okay"
   or: "eller"
@@ -169,11 +174,18 @@ da:
     data_collection_us: "Jeg forstår, at Code.org er et non-profit-websted baseret i USA, og at lovgivningen om dataindsamling i USA kan afvige fra lovene i mit land."
     visit_privacy: 'Besøg Code.org''s [Privacy Policy](%{privacy_url}) for at lære mere.'
     student_terms_markdown: "E-mailadresser er ikke gemt i form af, at vi kontakter eleverne. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er genopretning af adgangskoder. Se vores [privatlivspolitik](http://code.org/privacy) for mere information."
-    additional_information: "Vi har brug for nogle ekstra oplysninger til at fortsætte med at logge dig."
     user_type_button: "Opdater kontotype"
     user_type_label: "Kontotype"
     user_type_student: "Elev"
+    user_type_student_desc: "Udforsk alle vores kurser og aktiviteter, plus"
+    user_type_student_ability_1: "Gem dine fremskridt og projekter"
+    user_type_student_ability_2: "Deltag i din lærers klasse"
     user_type_teacher: "Lærer"
+    user_type_teacher_desc: "Alt hvad eleverne har adgang til, plus"
+    user_type_teacher_ability_1: "Opret sektioner i klassen"
+    user_type_teacher_ability_2: "Tildel og følg med i elevernes arbejde"
+    user_type_teacher_ability_3: "Tilmeld dig professionel læring"
+    user_type_teacher_ability_4: "Deltag på vores lærerforum"
     field_is_required: "er påkrævet"
     accept_terms: "Du skal acceptere at oprette en konto"
     error: "Der opstod en fejl."
@@ -182,12 +194,14 @@ da:
     email_preference_yes: "Ja"
     email_preference_no: "Nej"
     email_preference_required: "Du skal angive en e-mail adresse."
+    share_teacher_email_reg_partner_question: "Ønsker du at vi deler dine kontaktoplysninger med [Code.org regional partner](%{cdo_regional_partner_desc}) i dit område, så de kan underrette dig om lokale faglige udviklings muligheder, ressourcer og begivenheder? "
     share_teacher_email_reg_partner_preference_yes: "Ja"
     share_teacher_email_reg_partner_preference_no: "Nej"
     share_teacher_email_reg_partner_preference_required: "Du skal angive en e-mail adresse."
     parent_account_checkbox: "Jeg er en forælder eller en værge, der tilmelder sig på vegne af mit barn"
     parent_account_email_progress_permission: "Kan vi sende dig e-mail lejligheds med opdateringer om dit barns fremskridt og projekter og opdateringer om deres kursus og datalogi? [(Se vores privatlivspolitik)] (%{privacy_policy_url})"
     parent_account_email_label: "Forælderens eller værgens e-mailadresse"
+    us_state: 'Region'
   school_info:
     title: 'Skoleoplysninger (valgfrit)'
     school_country: 'Skolens land'
@@ -258,6 +272,7 @@ da:
   teacher_mailer:
     new_teacher_subject: 'Velkommen til Code.org!'
     delete_teacher_subject: 'Code.org notifikation: Din konto er blevet slettet'
+    verified_teacher_subject: 'Code.org Lærer Verifikation - Succes'
   section:
     your_section:
       one: 'Din afdeling:'
@@ -275,6 +290,8 @@ da:
     invite_sent: 'Invitation sendt'
     added_teacher: '%{name} er tilføjet som din lærer'
     registered: "Du er registreret til %{section_name}."
+    captcha_required: 'Udfyld denne CAPTCHA for at deltage i dette afsnit. '
+    already_exists: 'Du har allerede tilmeldt dig denne sektion %{section_name}.'
     error:
       signed_in: 'Log ud inden du fortsætter'
       username_not_found: 'Brugernavn %{username} blev ikke fundet'
@@ -284,6 +301,9 @@ da:
       blank_code: "Angiv en sektions kode"
       cant_join_own_section: "Desværre, du kan ikke deltage i dit eget afsnit."
       provider_managed_section: "Denne sektion er styret af en anden udbyder og derfor kan ikke tilsluttes. Spørg venligst din lærer om, at tilføje dig via %{provider} og synkroniser igen deres sektion."
+      restricted_section: "Vi kunne ikke tilføje dig denne sektion %{section_code} fordi den er låst. Kontakt din lærer for hjælp. "
+      full_section: "Vi kunne ikke tilføje dig til sektion %{section_code} fordi der allerede er %{section_capacity} elever i den. Kontakt din lærer for hjælp. "
+      not_participant_type: "Vi kunne ikke tilføje dig sektion %{section_code} fordi du ikke opfylder deltagertypen for sektionen. "
     mail:
       student_disassociated:
         subject: "Code.org besked: %{student_name} er ikke længere tilknyttet som din elev."
@@ -321,6 +341,7 @@ da:
       report_bug: "Rapporter fejl"
       teacher_community: "Lærer-fælleskab"
       professional_learning: "Professional learning"
+      web_lab_documentation: "Web Lab Dokumentation"
       educate_overview: "Oversigt for undervisere"
       educate_elementary: "Grundskole"
       educate_middle: "Grundskole (mellemtrin/udskoling)"
@@ -423,6 +444,7 @@ da:
       worked_with: 'Samarbejdede med'
       update_lock_settings: 'Opdater låsningsindstillinger her.'
       clear_response: 'Klar feedback'
+    student_code_view_diabled: 'Elevkoden kan ikke ses for denne aktivitet. '
   user:
     email_confirm_needed: 'E-mailadresse er ikke blevet bekræftet:'
     email_confirm_needed_required: 'Din e-mail %{email} er ikke blevet bekræftet:'
@@ -438,6 +460,7 @@ da:
     delete_confirm: 'Er du sikker på, at du vil slette din konto?'
     deleted_user: 'slettet bruger'
     no_password_because_oauth: 'Ingen adgangskode, fordi du tilmeldte dig ved brug af en tredjepartsudbyder.'
+    no_password_because_sponsored: 'Kontakt din lærer for at administrere din adgangskode. '
     create_personal_login: "Lav et personligt kodeords-login\n"
     create_personal_login_under_13_info: 'Hvis du ønsker, at beholde din Code.org-konto efter slutning af skoleåret, så spørg dine forældre eller din værge om hjælp, om at oprette din egen personlige log-in, som vist nedenunder.'
     create_personal_login_under_13_username: "Brugernavn (ikke brug dit rigtige navn!)"
@@ -449,6 +472,7 @@ da:
     create_personal_login_email_note: "Bemærkelse: E-mailadresser er ikke gemt i form af, at vi kontakter elevene. Elever vil aldrig modtage e-mails fra Code.org, bortset fra, at hvis det er genopretning af adgangskoder. Se vores <a href='%{privacy_policy_url}', target='_blank'>privatlivspolitik</a> for mere information."
     create_personal_login_email_note_markdown: 'Merk: E-postadresser er ikkje lagra i eit format som gjer det mogleg for oss å kontakte elevar. Dei vil aldri få epost frå Code.org med unntak av for å få lenke til passordgjenoppretting. Sjå våre [retningsliner for personvern](%{privacy_policy_url}) for meir informasjon.'
     enter_new_login_info: 'Indtast dit nye log-in information'
+    confirm_secret_words: 'Bekræft at det er dig ved at indtaste dine nuværende hemmelige ord'
     parent_email_label: "Forælderens eller værgens e-mail (valgfrit) "
     parent_email_hint: "(det her kan bruges til genopretning af adgangskode)"
     enter_parent_email: "Indtast dine forældres eller din værges e-mailadresse (til genopreting af adgangskode)"
@@ -513,6 +537,7 @@ da:
     all_students_must_be_in_current_section: "Alle de studerende skal i øjeblikket indskrives i din sektion."
     already_enrolled_in_new_section: "Du kan ikke flytte disse studenter, fordi de allerede er i den nye sektion."
     third_party_login: "Du kan ikke flytte studenter til en sektion, der er synkroniseret med en tredjepartsværktøj."
+    not_correct_participant_type: "Du kan ikke flytte disse brugere, fordi du ikke har adgang til de brugere i den nye sektion."
   share:
     title: "Lære om Code Studio"
     description: "Enhver kan lære programmering. Lav spil, apps og kunst med kode."
@@ -521,6 +546,7 @@ da:
     male: 'Mand'
     female: 'Kvinde'
     non_binary: 'Ikke-binær'
+    not_listed: 'Fortrukken betegnelse er ikke angivet'
     none: 'Foretrækker ikke at svare'
   user_type:
     student: 'studerende'
@@ -533,6 +559,7 @@ da:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved. Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org bruger p5.play, hvilket er licenseret under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    google_copyright: '&copy; Google Inc. bruges med tilladelse. Google Classroom er et varemærke tilhørende Google Inc. '
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo og Hour of Code&reg; er varemærker tilhørende Code.org.'
     copyright: 'Copyright'
     more: 'Mere'
@@ -549,6 +576,8 @@ da:
     make_my_own_app: 'Byg min egen app'
     how_it_works: 'Sådan fungerer det'
     try_hour_of_code: 'Prøv en Time med kode!'
+    view_code: 'Vis kode'
+    locale_select: "Vælg sprog"
   reference_area:
     title: 'Brug for hjælp?'
     subtitle: 'Se disse videoer og tips'
@@ -611,41 +640,82 @@ da:
       body_short: "Design en app, kod med blokke eller brug JavaScript for at få det til at virke, og så derefter del din app på få sekunder."
       audience: 'Alder 13+'
       cta: 'Lær hvordan'
-    dance:
-      title: 'Dance Party'
+      image_alt: 'En lilla kanin iført en raketdrevet rygsæk. '
+    applab-intro:
+      image_alt: 'En hånd trykker på midten af en smartphone-skærm. Lys og gnister kommer ud af skærmen. '
+    aquatic:
+      title: "Minecraft"
+      image_alt: 'Steve og Alex fra Minecraft kigger på dig. '
+    artist:
+      image_alt: 'En tegneserie figur holder en kæmpe blyant og tegner en trekant. '
+    conditionals:
+      image_alt: 'To hænder blander et sæt kort.'
+    course1:
+      image_alt: 'Code.org humlebien og den orange fisk står foran noget kode. '
+    course2:
+      image_alt: 'En collage af Code.org puslespil viser en grøn troldmand, kunstner og en orange fisk. '
+    course3:
+      image_alt: 'En collage af Code.org puslespil der viser et spil, zombie og en ninja.'
+    course4:
+      image_alt: 'En collage af Code.org puslespil der viser en fodbold, kæledyr og en kunstner. '
+    coursea:
+      image_alt: 'En collage af Code.org puslespil der viser en elefant og et egern. '
+    courseb:
+      image_alt: 'En collage af Code.org puslespil der viser en opdagelsesrejsende, ædselstene og en blomst. '
+    coursec:
+      image_alt: 'En collage af Code.org puslespil der viser et egern, binære tal, og en rød fugl fra spillet Angry Birds. '
+    coursed:
+      image_alt: 'En collage af Code.org puslespil der viser en bi, blomster, honning, og en grøn gris fra spillet Angry Birds. '
+    coursee:
+      image_alt: 'En collage af Code.org puslespil der viser en person der holder en skovl, græskar, frugtplantage og en ko. '
+    coursef:
+      image_alt: 'En collage af Code.org puslespil der viser farverige geometriske former, en rød pirat og en kunstner. '
     dance-2019:
       title: 'Dance Party'
-    hoc:
-      title: 'Klassisk labyrint'
-      body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'
+      image_alt: 'En glad kat, dovendyr og haj der danser. '
+    dance-2022:
+      image_alt: 'En grøn alien og en robot der danser med Saturn i baggrunden. '
+    dance:
+      title: 'Dance Party'
+      image_alt: 'En sej kat og glad haj der danser til en fest. '
+    donate:
+      image_alt: 'Et barn der peger på en bærbar skærm der viser et Code.org puslespil. '
+    elementary:
+      image_alt: 'En humlebi og et egern der står på en mark foran en regnbue. '
+    express:
+      image_alt: 'Plants vs Zombies zombien og planten står ved siden af Flappy Bird. '
     flappy:
       title: 'Flappy kode'
       body: 'Vil du skrive dit eget spil på mindre end 10 minutter? Prøv vores Flappy kode undervisning!'
-    20-hour:
-      title: 'Accelereret kursus'
-      body: 'Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.'
-      body_short: 'Lær grundlæggende datalogi i en accelereret version af kurser 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Prøv vores nye Hour of Code tutorial i beta-version'
-      try_frozen: 'Kunstner med Anna og Elsa, fra Frozen'
+      image_alt: 'En gul fugl der flyver imellem grønne rør. '
+    frozen:
+      title: "Frozen"
+      image_alt: 'Anna og Elsa fra filmen Frozen. Imellem dem er der et billede af Anna der tegner et flot mønster i isen med hendes skøjter. '
     gallery:
       title: "Galleri"
       body: "Se et galleri af app og kunstnerbilleder skabt af vores brugere"
+      image_alt: 'En kunstner der tegner en masse cirkler og en kat, flagermus og et spøgelse der står i et vinter landskab. '
     gamelab:
       title: "Spil Laboratoriet"
       body: "Game Lab er et programmeringsmiljø, hvor du kan lave simple animationer og spil med genstande og figurer, der interagere med hinanden."
       audience: "Alder 13+"
       cta: "Lær hvordan"
+      image_alt: 'Mange tegneserie mennesker og dyr der står på et fortov og smiler. '
+    hello-world-food:
+      image_alt: 'Mange dyr, aliens og emojier der kredser rundt om jorden. '
+    hello-world:
+      body: 'Vælg imellem fire sjove temaer til at kode interaktive figurer i en verden du laver. '
+    hero:
+      title: "Minecraft"
+      body: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
     hoc-encryption:
       title: "Enkel kryptering"
-    weblab:
-      body: "Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved at bruge HTML og CSS. Design dine websider og del din side på få sekunder."
-      audience: "Alder 13+"
-      cta: "Lær hvordan"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hoc:
+      title: 'Klassisk labyrint'
+      body: 'Prøv grundlæggende kodning. Millioner har allerede gjort det.'
+    hoc2014:
+      try_new_tutorial: 'Prøv vores nye Hour of Code tutorial i beta-version'
+      try_frozen: 'Kunstner med Anna og Elsa, fra Frozen'
     infinity:
       title: "Infinity Play Lab"
       body: "Brug Play Lab til at skabe en historie eller et spil med karakterer fra Disneys Infinity"
@@ -655,18 +725,23 @@ da:
     minecraft2016:
       title: "Minecraft"
       body: "Programmer dyr og andre Minecraft-væsner i din egen udgave af Minecraft."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-      body: "Minecraft er tilbage med en splinterny aktivitet i En Times Kodning! En rejse gennem Minecraft ved hjælp af kode."
-    unplugged:
-      audience: "Alder 4+"
-    unplugged_conditionals:
-      title: "Betingelser"
+    starwars:
+      title: "Star Wars"
+    weblab:
+      body: "Web Lab er et programmeringsmiljø, hvor du kan lave simple websider ved at bruge HTML og CSS. Design dine websider og del din side på få sekunder."
+      audience: "Alder 13+"
+      cta: "Lær hvordan"
     widgets:
       audience: "I alderen 14+"
       cta: "Lær hvordan"
+    unplugged_conditionals:
+      title: "Betingelser"
+    unplugged:
+      audience: "Alder 4+"
+    20-hour:
+      title: 'Accelereret kursus'
+      body: 'Dette 20-timers kursus introducerer centrale computer videnskabs og programmering begreber. Kurset er designet til brug i folkeskolens klasseværelser, men det er sjovt at lære i alle aldre.'
+      body_short: 'Lær grundlæggende datalogi i en accelereret version af kurser 2-4.'
   landing:
     report_bug: "Rapporter fejl"
     support: "Få hjælp"
@@ -879,6 +954,7 @@ da:
         male: 'Mand'
         female: 'Kvinde'
         non_binary: 'Ikke-binær'
+        not_listed: 'Fortrukken betegnelse er ikke angivet'
         none: 'Foretrækker ikke at svare'
       school_country:
         canada: 'Canada'
@@ -911,9 +987,14 @@ da:
       robotics:
         kodable: 'Kodable'
         other: "Andre"
+      workshop_course:
+        other: 'Andre'
       email_opt_in:
         opt_in_yes: 'Ja'
         opt_in_no: 'Nej'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     more_information: "Se Code.org's privatlivspolitik."
     accept: 'Jeg er enig'

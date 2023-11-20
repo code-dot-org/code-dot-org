@@ -1,12 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import sinon from 'sinon';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 const DEFAULT_PROPS = {
   user: 5,
@@ -20,7 +22,8 @@ const DEFAULT_PROPS = {
   verifiedInstructor: true,
   selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
-  updateUserProgress: () => {}
+  allowUnverified: false,
+  updateUserProgress: () => {},
 };
 
 const RUBRIC = {
@@ -28,7 +31,7 @@ const RUBRIC = {
   performanceLevel1: 'exceeded expectations',
   performanceLevel2: 'met expectations',
   performanceLevel3: 'approaches expectations',
-  performanceLevel4: 'no evidence of trying'
+  performanceLevel4: 'no evidence of trying',
 };
 
 const FEEDBACK = {
@@ -37,7 +40,7 @@ const FEEDBACK = {
   id: 5,
   level_id: 123,
   performance: null,
-  student_id: 1
+  student_id: 1,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -49,6 +52,23 @@ describe('EditableTeacherFeedback', () => {
   it('does not display tab content if it is not currently visible', () => {
     const wrapper = setUp({visible: false});
     expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
+  it('logs Amplitude message when rubric level viewed', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    setUp({rubric: RUBRIC});
+
+    expect(analyticsSpy).to.have.been.calledOnce;
+    assert.equal(analyticsSpy.getCall(0).firstArg, 'Rubric Level Viewed');
+    analyticsSpy.restore();
+  });
+
+  it('does not log Amplitude message when non-rubric level viewed', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    setUp();
+
+    expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
   });
 
   describe('without previous feedback', () => {
@@ -90,12 +110,26 @@ describe('EditableTeacherFeedback', () => {
       expect(keepWorkingComponent).to.have.length(1);
       expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
     });
+
+    it('sends analytics event when feedback submitted', () => {
+      const wrapper = setUp();
+      const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+      wrapper.find('Button[id="ui-test-submit-feedback"]').simulate('click');
+      assert(analyticsSpy.calledOnce);
+      assert.equal(
+        analyticsSpy.getCall(0).firstArg,
+        'Level Feedback Submitted'
+      );
+
+      analyticsSpy.restore();
+    });
   });
 
   describe('with previous feedback given', () => {
     it('displays EditableFeedbackStatus if latestFeedback exists', () => {
       const latestFeedback = {
-        student_seen_feedback: new Date()
+        student_seen_feedback: new Date(),
       };
 
       const wrapper = setUp({latestFeedback});
@@ -107,7 +141,7 @@ describe('EditableTeacherFeedback', () => {
     it('displays the rubric if there is a rubric', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        performance: 'performanceLevel2'
+        performance: 'performanceLevel2',
       };
 
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: latestFeedback});
@@ -132,11 +166,11 @@ describe('EditableTeacherFeedback', () => {
     it('does not render EditableReviewState if not canHaveFeedbackReviewState', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({
         latestFeedback,
-        canHaveFeedbackReviewState: false
+        canHaveFeedbackReviewState: false,
       });
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
@@ -146,7 +180,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (completed)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        review_state: ReviewStates.completed
+        review_state: ReviewStates.completed,
       };
       const wrapper = setUp({latestFeedback});
 
@@ -160,7 +194,7 @@ describe('EditableTeacherFeedback', () => {
     it('renders EditableReviewState with expected props (awaitingReview)', () => {
       const latestFeedback = {
         ...FEEDBACK,
-        is_awaiting_teacher_review: true
+        is_awaiting_teacher_review: true,
       };
       const wrapper = setUp({latestFeedback});
 

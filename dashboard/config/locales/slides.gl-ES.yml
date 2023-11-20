@@ -1,451 +1,9 @@
 ---
 gl:
   slides:
-    maze_intro:
-      1:
-        text: Benvido á súa primeira Hora do Código! Ímonos mergullar na súa primeira
-          experiencia con programación.
-      2:
-        text: Imos usar o Blockly, unha linguaxe de programación visual onde vostede
-          arrastra e solta bloques para escribir código.
-      3:
-        text: A programación é xeralmente en liñas de código escrito, no entanto o
-          "Blockly" é visual. Cada bloque corresponde a unha liña de código "real".
-      4:
-        text: Vostede vai aprender o básico da informática, que consiste en conceptos
-          usados no desenvolvemento de aplicacións e até mesmo para controlar unha
-          sonda en Marte.
-      5:
-        text: Un programa é un conxunto de instrucións a seren seguidas polo seu computador.
-      6:
-        text: O obxectivo do seu primeiro programa é levar o Angry Bird até un Porco
-          Verde a través do labirinto.
-      7:
-        text: O lado esquerdo é o labirinto onde o programa é executado. As instrucións
-          para cada desafío están debaixo labirinto.
-      8:
-        text: A caixa de ferramentas do medio contén os comandos do Angry Bird. Vostede
-          vai usalos para crear o seu programa.
-      9:
-        text: Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
-          bloques da caixa de ferramentas para crear o seu programa. Para excluír
-          un bloque, arrástreo para a recolledora de lixo no recanto.
-      10:
-        text: Cada bloque é unha instrución. Se vostede arrastra un bloque "avance"
-          para a súa área de traballo e preme en "Executar Programa", o paxaro móvese
-          un espazo para diante no labirinto.
-      11:
-        text: Para facer máis de unha acción, vostede pode arrastrar varios bloques
-          para a súa área de traballo e conectalos os uns aos outros. O paxariño obedecerá
-          os comandos de enriba para baixo.
-      12:
-        text: Se executa un programa e quere corrixilo, clique en "Recomezar".
-      13:
-        text: Imos apañar estes porcos!
-    artist_intro:
-      1:
-        text: Ola, son o JR! Todo equipo de carreira precisa da informática para gañar.
-          Analizan os datos do coche para facelo máis rápido.
-      2:
-        text: Nestes desafíos vostede vai ser un artista que debuxa por todo lugar
-          que pasa.
-      3:
-        text: Este bloque di "avance por 100 pixels". Pixels son puntos minúsculos
-          na súa pantalla.
-      4:
-        text: Este bloque di "vire á dereita 90 graos". Este bloque funciona da mesma
-          forma que o bloque "vire" no desafío do labirinto.
-      5:
-        text: Clica na frecha en calquera un destes bloques para alterar o número
-          de movementos do artista, tanto para avanzar canto para virar. Xogue cos
-          novos bloques para ver como funcionan.
-    farmer_intro:
-      1:
-        text: Ola, eu son a Paola! Nestes desafíos, vostede é unha campesiña que precisa
-          deixar o seu terreo completamente plano para comezar o plantío.
-      2:
-        text: Precisa axudarlle a remover todos os montes de terra e cubrir todos
-          os buracos.
-      3:
-        text: Os novos bloques removen 1 pa de terra dun monte, e cobren o buraco
-          con 1 pa de terra.
-      4:
-        text: Os montes de terra e os buracos son de tamaños distintos, entón ten
-          que dicir á campesiña cantas pas usar.
-    flappy_intro:
-      1:
-        text: Ola, eu son Katie! Unha das cousas máis emocionantes da informática
-          é que un programa de computador pode ser interactivo.
-      2:
-        text: Sempre que alguén preme, teclea, ou toca na pantalla dun móbil, xérase
-          un EVENTO, e existen algúns códigos que deciden o que facer cando un EVENTO
-          ocorre.
-      3:
-        text: 'Por exemplo, vostede podería ter un MANIPULADOR DE EVENTOS que di "cando
-          se prema o rato, toque un son" '
-      4:
-        text: Vostede xa oiu falar do xogo Flappy Bird? Usando manipuladores de eventos,
-          imos aprender a programar a nosa propia versión do Flappy Bird!
-      5:
-        text: O código que vai escribir consiste en arrastrar e soltar bloques que
-          representan os comandos para o computador. Na verdade, cada un destes bloques
-          é representado polo código real.
-      6:
-        text: 'Se dá unha ollada na área de traballo, existen algúns bloques verdes
-          que son cubertos para vostede - eses son os "manipuladores de evento" '
-      7:
-        text: Se quere que o paxariño VOE cando vostede PREMER, pode anexar o bloque
-          "FLAP" ao manipulador de evento apropiado. Así, sempre que vostede prema,
-          o paxariño vai voar.
-      8:
-        text: En cada desafío desa actividade, imos introducir novos tipos de eventos,
-          como os bloques verdes na área de traballo, e pode decidir que bloques son
-          apropiados para agregar en resposta a eses eventos.
-      9:
-        text: Cando observe unha frecha suspensa como esta, significa que pode alterar
-          as configuracións, como o son a ser reproducido cando o paxaro bata no chan.
-      10:
-        text: No desafío final vai poder crear o seu propio xogo e compartir cos seus
-          amigos. Divírtete!
-    loop_times:
-      1:
-        text: Ola, eu son o Mark! Imos aprender sobre bucles. Usando bucles pode dicir
-          a un computador que repeta calquera conxunto de accións continuamente, miles
-          ou mesmo millóns de veces.
-      2:
-        text: Neste desafío, queremos facer o paxaro avanzar 5 espazos para chegar
-          ao porco.
-      3:
-        text: Podemos usar o novo bloque "repita" para nos axudar.
-      4:
-        text: En vez de arrastrar 5 bloques "avance"...
-      5:
-        text: Podemos colocar o bloque "avance" dentro do bloque "repita" e escribir
-          un número no bloque para definir o número de repeticións.
-      6:
-        text: 'E isto é importante: pode colocar máis dun comando dentro dun bloque
-          "repita".'
-      7:
-        text: Aproveite o  novo bloque "repita"!
-    loop_until:
-      1:
-        text: Ola, eu son o Chris. Antes de entrar para o Miami Heat, fun para a Georgia
-          Tech para estudar informática. Imos dar unha ollada no noso novo bloque,
-          o bloque "repita até".
-      2:
-        text: E se nós non soubesemos canto tivo que se mover o paxaro para chegar
-          ao porco?
-      3:
-        text: Se colocamos un bloque "avance" dentro do bloque "repita até", o paxaro
-          vai seguir adiante ATÉ chegar ao porco (ou se chocar contra unha parede).
-      4:
-        text: 'E iso é importante: así como antes, podemos colocar varios bloques
-          dentro do bloque "repita até", e todos eles serán repetidos.'
-    if:
-      1:
-        text: 'Ola, eu son o Bill! Imos aprender un novo concepto fundamental: instrucións
-          "se". É así como os computadores toman decisións.'
-      2:
-        text: 'Vostede usa a instrución "se" todos os días. Toda mañá, antes de saír,
-          vostede di: SE estivese chovendo alí fóra, vou precisar da miña chaqueta.'
-      3:
-        text: Podemos dicir ao zumbi que verifique SE hai camiño para a esquerda e,
-          se atopa un camiño para a esquerda, precisamos viralo naquela dirección.
-      4:
-        text: Para programar isto, imos arrastrar o noso bloque "se" e colocar un
-          bloque "vire á esquerda" dentro del.
-      5:
-        text: Agora, se colocamos un bloque "avance" por enriba del e colocamos todo
-          dentro dun bloque "repita", a cada vez que o zumbi se mova vai verificar
-          se hai un camiño para a esquerda e virar. O comando "repita" é fundamental
-          para verificar a necesidade de virar a cada paso.
-      6:
-        text: 'As instrucións "se" son moi importantes para a informática. Un dos
-          primeiros programas que escribín foi un xogo da vella, e había unha instrución
-          "se" que dicía: SE a outra persoa está a piques de gañar, bloquee a casa
-          que lle permitiría gañar.'
-      7:
-        text: Divírtete usando o bloque  "se"!
-    if_else:
-      1:
-        text: Ola, o meu nome é Saloni. A informática axúdame a resolver problemas
-          das áreas da saúde e medicina. Imos aprender sobre o bloque "se-senón".
-          Parece o bloque "se", pero cunha parte extra no final que di "senón".
-      2:
-        text: Se eu coloco un bloque "avance" na instrución "faga", e un bloque "vire
-          á esquerda" na instrución "senón", significa que o zumbi vai escoller entre
-          2 opcións. SE existe un camiño diante, o zumbi vai avanzar e, EN CASO CONTRARIO
-          (non hai un camiño adiante), o zumbi vai virar á esquerda.
-      3:
-        text: Así como o bloque "se", nós podemos colocar bloques "se-senón" dentro
-          de bloques "repita", así o zumbi continuará se movendo, e o bloque "se-senón"
-          continuará verificando se é posíbel virar para algún lugar.
-      4:
-        text: Agora coloque cada zumbi no lugar debido!
-    if_else_scrat:
-      1:
-        text: Un comando se-senón é unha decisión entre dúas opcións. Imos ver como
-          podemos usar un comando se-senón co noso amigo Scrat, o esquío.
-      2:
-        text: Este bloque parece igual ao bloque "se", pero hai unha parte extra no
-          final que di "senón". Se eu colocar un bloque "avance" na instrución "faga",
-          e un bloque "vire á esquerda" na instrución "senón", significa que o esquío
-          Scrat vai avanzar se houbese un camiño diante. Se non houbese camiño diante,
-          o Scrat vai virar á esquerda.
-      3:
-        text: Significa tomar unha decisión e facer unha das dúas accións con base
-          nesa decisión. E, así como os bloques "se", pode colocar bloques "se-senón"
-          dentro de bloques "repita".
-      4:
-        text: Agora imos axudar Scrat, o esquío, a apañar esa landra!
-    function:
-      1:
-        text: Ola, eu son a Brina, unha engeñeira do Instagram. Unha función é un
-          conxunto de liñas de código que se desexan usar varias veces. Entón, en
-          vez de escribir ese código cada vez, vostede pode usar só unha liña.
-      2:
-        text: Imos aprender a definir funcións. As definicións de función teñen unha
-          estrela no recanto. O nome da función está escrito na liña superior.
-      3:
-        text: Os bloques que van dentro da definición din o que fai. Entón, esta definición
-          de función chámase "cubra 5", e está composta por un bloque "repita" e un
-          bloque "cubra".
-      4:
-        text: A definición está na área de traballo, pero a campesiña non vai executar
-          a función até que arrastremos o bloque "cubra 5" para fóra da categoría
-          funcións.
-      5:
-        text: 'Imos actuar en "función" da diversión! '
-    loop_while:
-      1:
-        text: 'Ola, eu son o Makinde! Imos aprender sobre o bloque "mentres". '
-      2:
-        text: O bloque "mentres" vai facer todo o que vostede coloque no seu interior,
-          SEMPRE QUE a declaración na parte superior sexa CERTA.
-      3:
-        text: Por exemplo, se a campesiña está nun monte de terra continuará a remover
-          1 pa MENTRES haxa terra debaixo dela.
-    loop_for:
-      1:
-        text: Ola, eu son a Trina, e traballo para a Pixar. Xa traballei nunha cheia
-          de filmes, incluíndo o Shrek.
-      2:
-        text: Este é o noso novo bucle "contador". Executará accións repetidamente,
-          e vostede pode facer que as accións muden aos poucos.
-      3:
-        text: Neste exemplo, o noso bucle "contador" di "conte de 50 até 90, indo
-          de 10 en 10" e, dentro del, temos o noso bloque "debuxe un cadrado". Arrastre
-          o bloque "contador" da sección "Variábeis" para o sitio que indica "lonxitude".
-      4:
-        text: Iso significa que o noso artista vai debuxar un cadrado con lados de
-          50 pixels de lonxitude, e entón vai engadir 10 e debuxar un cadrado con
-          lados de 60 pixels de lonxitude. Vai continuar agregando 10 e debuxando
-          cadrados até que atinxa 90 pixels. Así, imos ter cadrados de 50, 60, 70,
-          80 e 90 pixels.
-    parameters:
-      1:
-        text: Ola, eu son a Janete, e eu son unha engeñeira da Zynga.
-      2:
-        text: E se quixéramos debuxar unha cheia de triángulos de tamaños distintos?
-      3:
-        text: Podemos escribir todo o código á man ou podemos usar unha función con
-          parámetros.
-      4:
-        text: Para facer iso, clique na estrela azul sobre a definición da función
-          "debuxe un triángulo". Arrastre o "nome de entrada" para o bloque "entrada".
-      5:
-        text: Entón, se escribe "lonxitude" no sitio onde hai un "x" e aperta "Enter",
-          vai crear unha lonxitude de entrada para a súa función.
-      6:
-        text: Entón, clique na estrela. Agora vai premer na categoría de variábeis
-          e arrastrar o bloque "lonxitude" para dentro do bloque "avance" da súa definición
-          da función. E arrastre para fóra o antigo bloque de número.
-      7:
-        text: Para usar a súa función con parámetros, clique na categoría funcións
-          e arrastre para fóra a función "debuxe un triángulo con lonxitude".
-      8:
-        text: Agora pode usar o bloque de matemáticas para entrar con números distintos
-          e debuxar triángulos de tamaños distintos.
-    hoc_wrapup:
-      1:
-        text: Parabéns! Co último desafío resolto, acabou de escribir o código que
-          pode dicir a CALQUERA robot como encontrar o o seu camiño a través dun labirinto
-          sen ramificación ou dun túnel de calquera lonxitude, sexa el un zumbi, un
-          paxaro, unha sonda en Marte ou até mesmo un coche sen condutor.
-      2:
-        text: Os conceptos básicos que usou son o corazón de calquera programa ou
-          aplicación. Aprendemos sobre bucles de repetición, instrucións de repeticións
-          condicionais, instrucións se, e instrucións se senón.
-      3:
-        text: Se gustou da primeira hora de programación, visite a code.org para continuar
-          a aprender a informática! Ao completar o noso curso de 20 horas, dominará
-          o básico de programación, e vai estar apto a aprender como programar aplicacións
-          para móbil, instrucións robóticas, xogos, e moito máis.
-      4:
-        text: 'A tecnoloxía está mudando todo o que facemos, e non importa se ti es
-          mozo ou vello: programar é divertido, é creativo, e todos poden aprender!'
     20_wrapup:
       1:
         text: Mostrar notas aparecerá en breve!
-    frozen_intro:
-      1:
-        text: Ola, o meu nome é Lyndsey. Eu son modelo, actriz e tamén escribo as
-          miñas propias aplicacións. Imos usar a programación para explorar a maxia
-          e a beleza do xeo coa Anna e a Elsa.
-      2:
-        text: Vai crear flocos de neve e padróns mentres esquía, e un país das marabillas
-          invernal para compartir cos seus amigos.
-      3:
-        text: Na próxima hora, vai aprender os conceptos básicos da programación.
-          A programación tradicional é escrita, pero nós usaremos Blockly, bloques
-          visuais que pode arrastrar e soltar para escribir programas. Tamén é así
-          como os estudantes universitarios aprenden o básico. E por tras deses bloques,
-          vostede está creando códigos.
-      4:
-        text: Un programa é un conxunto de instrucións que di a un computador o que
-          debe facer. Imos construír un código, ou programa, que axudará á Elsa a
-          crear unha recta simple. Máis adiante imos usar isto para crear padróns
-          máis complexos.
-      5:
-        text: A súa pantalla está dividida en tres partes principais. Á esquerda ten
-          a superficie de xeo onde vai executar o seu programa. As instrucións de
-          cada nivel están escritas xusto abaixo da superficie.
-      6:
-        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
-          bloques representa unha acción que pode ser realizada pola Elsa e a Anna.
-      7:
-        text: O espazo en branco á dereita é chamado de área de traballo, e é onde
-          imos crear o noso programa. Para se mover pola superficie de xeo, usará
-          o bloque "avance".
-      8:
-        text: 'Aquí, o bloque "avance" di: "avance 100 pixels". Cando prememos en
-          "Executar", o que acontece? a Elsa móvese unha correcta distancia na pantalla,
-          100 pixels, de verdade! Os pixels son, basicamente, minúsculos cadrados
-          na pantalla do seu computador.'
-      9:
-        text: O outro bloque que temos neste desafío di "vire á dereita 90 graos".
-          Cando usamos o bloque "vire á dereita", a Elsa fai unha determinada curva.
-          Pode xogar coa cantidade que desexe que a Elsa vire. O ángulo é medido a
-          partir do camiño diante da Elsa. Entón, este é un xiro de 90 graos. E este
-          é un xiro de 120 graos.
-      10:
-        text: Lémbrese de que é posíbel mudar o número de pixels e graos, premendo
-          nas frechas ao lado deles.
-    frozen_loops:
-      1:
-        text: Ola, eu son a Paola! Os computadores son realmente moi bos en repetir
-          accións. Pode contar até 10, 20 ou até 100, pero un computador pode contar
-          até un billón ou un trillón sen se cansar, e só levará algúns segundos.
-          Sexa contar, debuxar ou calquera outra actividade, os computadores poden
-          repetir accións centenares ou até billóns de veces.
-      2:
-        text: Na programación, podemos chamar a iso "bucle". Un bucle é o modo como
-          vostede repite o seu código diversas veces. No próximo desafío, a súa meta
-          é axudar á Anna a crear un cadrado co bloque "repita".
-      3:
-        text: Todos os bloques de código que colocar dentro do bloque "repita" serán
-          repetidos en secuencia, cantas veces vostede quixese.
-      4:
-        text: Para debuxar un cadrado pode usar os bloques "avance" e "vire á dereita"
-          catro veces. Pero o modo máis fácil de facer iso é dicir ao computador "avance"
-          e "vire á dereita 90 graos" unha vez e, despois, facerlle repetir este par
-          de accións catro veces. Para iso precisa colocar os bloques "avance" e "vire
-          á dereita" dentro dun bloque "repita".
-      5:
-        text: Lémbrese de que é posíbel mudar o valor no bloque "repita" a calquera
-          número, e el repetirá o que está dentro do bloque de acordo co número que
-          vostede escolla.
-    frozen_functions:
-      1:
-        text: Ola, eu son Chris Bosh. Son xogador de baloncesto profesional, e xa
-          programei cando estaba na facultade.
-      2:
-        text: Un dos conceptos máis importantes da informática é como definir novos
-          comandos. A maioría das linguaxes de computador teñen só 100 palabras ou
-          comandos. A arte e a maxia están, entón, en definir as súas propias palabras
-          novas a partir do básico.
-      3:
-        text: Despois de ensinar a un computador como facer unha acción unha vez usando
-          esta secuencia de comandos, vostede pode crear o nome que queira para esa
-          acción, así será máis fácil repetila despois. Ao definir e dar nome ao seu
-          propio comando estará creando unha función.
-      4:
-        text: Ola, eu son Jess. Na programación con bloques use funcións cando haxa
-          un conxunto de accións que quere repetir varias veces. Por exemplo, vostede
-          escribiu un código para crear un cadrado.
-      5:
-        text: 'Pode definir isto como unha función chamada "cree un cadrado". '
-      6:
-        text: Agora vostede ten un novo bloque que pode ser usado varias veces para
-          crear diversos cadrados.
-      7:
-        text: Moitas formas simples poden ser usadas para crear padróns máis complexos.
-          No próximo desafío o código que acaba de escribir para facer un círculo
-          estará dispoñíbel como unha nova función que pode facer círculos de distintos
-          tamaños. Pode usala para axudar á Elsa a crear padróns belos e intrincados
-          na neve?
-    playlab_intro:
-      1:
-        text: Nós imos crear xogos usando o Laboratorio. Os bos xogos teñen historias
-          e toda historia ten personaxes. Nós imos aprender como crear os nosos personaxes,
-          como un bruxo, alieníxenas e animais que falan, andan e interactúan os uns
-          cos outros. Ao final deste titorial poderá crear un xogo a partir do cero
-          e compartilo cos seus amigos.
-      2:
-        text: A súa pantalla está dividida en tres partes principais. Á esquerda está
-          o espazo do xogo onde o seu programa será executado. As instrucións para
-          cada nivel están escritas abaixo.
-      3:
-        text: A parte do medio é onde fica a caixa de ferramentas e cada un deses
-          bloques representa unha parte do código. O espazo en branco á dereita é
-          chamado área de traballo e é onde crearemos o noso programa.
-      4:
-        text: Para comezar terá que conectar os seus bloques ao bloque laranxa "cando
-          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
-          até ver a liña amarela e, entón, eles encáixanse xuntos.
-      5:
-        text: Neste primeiro desafío o noso personaxe é un pingüín e nós faremoslle
-          dicir "Olá!", arrastrando o bloque "diga", conectándoo ao bloque "cando
-          executar" e tecleando "Ola". Nós tamén podemos facer que o pingüín se mova
-          usando os bloques "mova á dereita" e "mova á esquerda". Despois que os seus
-          bloques estean no lugar correcto prema no botón "executar" para ver o que
-          programou.
-      6:
-        text: Comece agora mesmo! Ao final conseguirá crear o seu propio xogo, con
-          todos os tipos de xogadores que poderán interactuar, ficar felices ou tristes,
-          marcar puntos ou lanzar bólas de fogo, ou até mesmo facer desaparecer uns
-          aos outros. Depende da súa imaxinación e do xogo que quere crear.
-    playlab_events:
-      1:
-        text: 'Agora imos aprender un pouco sobre algo que os programadores de xogos
-          usan todos os días: os eventos. Un evento di ao seu programa que debe estar
-          escoitando á espera de que algo aconteza. Cando tal cousa acontece, realiza
-          unha acción.'
-      2:
-        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
-          tecla de dirección ou tocar a pantalla.'
-      3:
-        text: Agora imos facer que o robot espacial saúde os terráqueos cando un xogador
-          prema nel. Nós usaremos o bloque "cando premido" e conectarémoslle o bloque
-          "diga". Cando o xogador prema no robot espacial realizarase todo o que estivese
-          conectado ao bloque de evento "cando premido". O que di o seu alieníxena?
-      4:
-        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lle conectas
-          os bloques "mova" será posíbel comezar a mover os seus personaxes para enriba,
-          para baixo, para a esquerda e para a dereita. Aos poucos, o seu xogo está
-          ficando cada vez máis interativo.
-    playlab_repeat_forever:
-      1:
-        text: Este é o bloque "repita infinitamente". Todo que estivese contido neste
-          bloque acontecerá repetidamente no xogo.
-      2:
-        text: Se quixéramos que un personaxe faga algo repetidamente, sen ningunha
-          acción do xogador, colocaremos eses bloques dentro do bloque "repita infinitamente".
-      3:
-        text: Neste desafío o noso obxectivo é axudar o mago a protexer as fronteiras
-          do reino, andando da esquerda para a dereita e viceversa, continuamente.
-          Aprender como repetir accións de comandos vai economizar moito do seu tempo
-          no futuro, cando vaia crear o seu propio xogo.
     C1_artist_intro:
       1:
         text: Estes son os seus bloques de debuxo. Use o bloque correcto para mover
@@ -561,6 +119,41 @@ gl:
           dentro do bucle, aumentar a velocidade da luz. Todo isto é creado usando
           bucles de repetición. Os bucles son importantes na informática porque eles
           fan o noso traballo máis breve e máis fácil.
+    C1_going_places_safely:
+      1:
+        text: Ola, o meu nome é Jeremiah! Teño sete anos. Adoro xogar no computador
+          da miña nai, pero sempre pido permiso primeiro. "Nai, podo usar o computador?
+          Claro, querido!"
+      2:
+        text: Adoro o computador da miña nai porque podo acceder a internet. A internet
+          é como o teu barrio. Podes visitar lugares divertidos, falar coa túa familia
+          e amigos e aprender unha chea de cousas novas.
+      3:
+        text: Onte visitei un zoolóxico preto da miña casa. Vin unha cebra bebé. Saquei
+          unha foto dela e alterei a cor das súas listras, entón eu coloqueille un
+          chapéu e agregueina á miña colección de animais estraños. Incríbel! Despois,
+          fun a un lugar moi distante. Eu visitei a Quenia, un país da África. Alá
+          viven moitas cebras.
+      4:
+        text: Ás veces uso a internet para conversar con persoas que coñezo, como
+          miña avoa, que vive noutra vila. Ola avoa! Está facendo boliños para me
+          mandar no meu aniversario. "Hmm, quería que a internet tivese cheiro!".
+          Podo conversar con persoas distintas na internet, como fai o meu primo pero
+          só converso con persoas que coñezo.
+      5:
+        text: O que máis me gusta na internet é que podo xogar xogos divertidos. Punto!
+          Tamén me gusta debuxar e crear novas cousas para compartir cos meus amigos.
+          A tope! Ás veces visito sitios web nos cales aprendo cousas novas, pero
+          sempre accedo a sitios web apropiados para min. Uau, dinosauros!
+      6:
+        text: 'A internet é un lugar superdivertido. Pero, así como cando atravesas
+          unha rúa no teu barrio, tamén tes que ter coidado cando navegas on-line.
+          Aquí hai tres regras que non podemos esquecer. Regra número 1: sempre pide
+          permiso a teus pais. Regra número 2: fala soamente con persoas coñecidas.
+          Regra número 3: navega por páxinas apropiadas á túa idade.'
+      7:
+        text: Uau, isto foi divertido! Hora da cea. Vou saír agora. Mal podo esperar
+          para me conectar novamente e ver que máis podo visitar.
     C1_happy_maps_unplugged:
       1:
         text: Esta lección chámase Mapas divertidos. Hoxe imos axudar a nosa amiguiña
@@ -635,41 +228,6 @@ gl:
           para un computador. Os programas son realmente bos para iso, pero tamén
           son útiles noutros lugares. Pode crear o teu propio xogo ou mesmo programar
           un robot para realizar tarefas para ti mesmo.
-    C1_going_places_safely:
-      1:
-        text: Ola, o meu nome é Jeremiah! Teño sete anos. Adoro xogar no computador
-          da miña nai, pero sempre pido permiso primeiro. "Nai, podo usar o computador?
-          Claro, querido!"
-      2:
-        text: Adoro o computador da miña nai porque podo acceder a internet. A internet
-          é como o teu barrio. Podes visitar lugares divertidos, falar coa túa familia
-          e amigos e aprender unha chea de cousas novas.
-      3:
-        text: Onte visitei un zoolóxico preto da miña casa. Vin unha cebra bebé. Saquei
-          unha foto dela e alterei a cor das súas listras, entón eu coloqueille un
-          chapéu e agregueina á miña colección de animais estraños. Incríbel! Despois,
-          fun a un lugar moi distante. Eu visitei a Quenia, un país da África. Alá
-          viven moitas cebras.
-      4:
-        text: Ás veces uso a internet para conversar con persoas que coñezo, como
-          miña avoa, que vive noutra vila. Ola avoa! Está facendo boliños para me
-          mandar no meu aniversario. "Hmm, quería que a internet tivese cheiro!".
-          Podo conversar con persoas distintas na internet, como fai o meu primo pero
-          só converso con persoas que coñezo.
-      5:
-        text: O que máis me gusta na internet é que podo xogar xogos divertidos. Punto!
-          Tamén me gusta debuxar e crear novas cousas para compartir cos meus amigos.
-          A tope! Ás veces visito sitios web nos cales aprendo cousas novas, pero
-          sempre accedo a sitios web apropiados para min. Uau, dinosauros!
-      6:
-        text: 'A internet é un lugar superdivertido. Pero, así como cando atravesas
-          unha rúa no teu barrio, tamén tes que ter coidado cando navegas on-line.
-          Aquí hai tres regras que non podemos esquecer. Regra número 1: sempre pide
-          permiso a teus pais. Regra número 2: fala soamente con persoas coñecidas.
-          Regra número 3: navega por páxinas apropiadas á túa idade.'
-      7:
-        text: Uau, isto foi divertido! Hora da cea. Vou saír agora. Mal podo esperar
-          para me conectar novamente e ver que máis podo visitar.
     C1_pair_programming:
       1:
         text: Hoxe imos aprender sobre programación en parella. Na programación en
@@ -772,6 +330,16 @@ gl:
         text: Outra cousa é que podes colocar cantos comandos queiras dentro do bloque
           repita. Entón, netse exemplo, estás dicindo que avance e vire á esquerda,
           o que fará cinco veces. Divírtete!
+    C2_artist_debugging:
+      1:
+        text: Aquí xa temos algúns bloques na nosa área de traballo. Pero hai algo
+          erróneo.
+      2:
+        text: Imos depurar ese código diminuíndo a velocidade e vendo como pasa por
+          cada bloque, paso a paso.
+      3:
+        text: Ah, aí está o problema! Os bigodes do gato teñen 75 pixels de lonxitude,
+          e non 25.
     C2_artist_intro:
       1:
         text: Ti nin te clasificas para a carreira se non tes persoas solventes en
@@ -795,6 +363,16 @@ gl:
         text: E esta é unha curva de 120 graos. Lémbrate, podes alterar estes valores
           premendo nas frechas próximas aos números de pixels e graos. Divírtete debuxando
           co teu artista!
+    C2_artist_loops:
+      1:
+        text: Aquí imos usar o bloque repita para economizar pasos cando esteamos
+          programando o noso artista. Xa temos algúns bloques, pero están aquí soamente
+          para darmos inicio ao programa.
+      2:
+        text: Para repetir eses bloques catro veces para debuxar o cadrado enteiro,
+          arrastramos o bloque repita e colocamos os bloques avance e vire á dereita
+          dentro del. Cando prememos en Executar, o artista vai repetir eses pasos
+          catro veces para completar o cadrado.
     C2_bee_conditionals:
       1:
         text: Este é o bloque condicional. Di que SE houbese néctar ou mel menor que,
@@ -806,6 +384,30 @@ gl:
         text: Neste exemplo, imos dicir que SE a flor morada ten néctar maior que
           0, que obteña néctar. Isto fará que a nosa abella continúe recadando néctar
           mentres fose posíbel. Bingo!
+    C2_bee_debugging:
+      1:
+        text: Xa oiches falar de depurar un programa? Esa é unha forma de descubrir
+          o que non está funcionando. Cando depuras un código identificas os erros
+          e os eliminas.
+      2:
+        text: Aquí, xa temos algúns bloques na nosa área de traballo. Imos usar o
+          botón do paso para camiñar polos bloques, paso a paso, para ver se esta
+          é a solución correcta e onde podemos corrixila.
+      3:
+        text: Parece que o noso problema está aí! Necesitamos un bloque "avance" máis.
+          O botón de paso axúdanos a depurar o noso problema, identificando onde está
+          o erro para corrixilo.
+    C2_bee_loops:
+      1:
+        text: Un bucle é unha repetición dunha actividade. Ao entrar nunha colmea
+          para inspeccionar, eu ollo para un cadro e doulle a volta. Eu repito esa
+          mesma actividade varias veces. Estou repetindo, facendo a mesma actividade
+          varias veces.
+      2:
+        text: Este é o bloque repita. Todo o que coloques dentro do bloque repita
+          será repetido o número de veces que queiras. Por exemplo, neste nivel, en
+          vez de arrastrar os bloques avance e obteña néctar tres veces, imos arrastralos
+          unha vez de cada e repetir a acción tres veces. Así fica doado!
     C2_binary_bracelets:
       1:
         text: Está é a lección das Pulseiras binarias. Imos programar as nosas iniciais
@@ -855,29 +457,6 @@ gl:
           Esta é a forma en que o computador toma unha decisión. Por exemplo, se atinxes
           o obxectivo, gañas dez puntos. Senón, perdes tres. Cando sabes como funcionan
           esas condicións é posíbel crear todo tipo de xogos emocionantes.
-    C2_artist_debugging:
-      1:
-        text: Aquí xa temos algúns bloques na nosa área de traballo. Pero hai algo
-          erróneo.
-      2:
-        text: Imos depurar ese código diminuíndo a velocidade e vendo como pasa por
-          cada bloque, paso a paso.
-      3:
-        text: Ah, aí está o problema! Os bigodes do gato teñen 75 pixels de lonxitude,
-          e non 25.
-    C2_bee_debugging:
-      1:
-        text: Xa oiches falar de depurar un programa? Esa é unha forma de descubrir
-          o que non está funcionando. Cando depuras un código identificas os erros
-          e os eliminas.
-      2:
-        text: Aquí, xa temos algúns bloques na nosa área de traballo. Imos usar o
-          botón do paso para camiñar polos bloques, paso a paso, para ver se esta
-          é a solución correcta e onde podemos corrixila.
-      3:
-        text: Parece que o noso problema está aí! Necesitamos un bloque "avance" máis.
-          O botón de paso axúdanos a depurar o noso problema, identificando onde está
-          o erro para corrixilo.
     C2_digital_footprint:
       1:
         text: Na túa cabeza pos o chapéu pero a túa cabeza tamén che di onde estás
@@ -941,27 +520,6 @@ gl:
           podo recrear a mesma peza novamente, ou eu podo ensinar a outra persoa a
           facer iso. Coloca o vidro no forno, fai a fundición, sigue o resto das instrucións
           para facer a cunca. Os algoritmos dan un mapa de como facer unha cousa.
-    C2_artist_loops:
-      1:
-        text: Aquí imos usar o bloque repita para economizar pasos cando esteamos
-          programando o noso artista. Xa temos algúns bloques, pero están aquí soamente
-          para darmos inicio ao programa.
-      2:
-        text: Para repetir eses bloques catro veces para debuxar o cadrado enteiro,
-          arrastramos o bloque repita e colocamos os bloques avance e vire á dereita
-          dentro del. Cando prememos en Executar, o artista vai repetir eses pasos
-          catro veces para completar o cadrado.
-    C2_bee_loops:
-      1:
-        text: Un bucle é unha repetición dunha actividade. Ao entrar nunha colmea
-          para inspeccionar, eu ollo para un cadro e doulle a volta. Eu repito esa
-          mesma actividade varias veces. Estou repetindo, facendo a mesma actividade
-          varias veces.
-      2:
-        text: Este é o bloque repita. Todo o que coloques dentro do bloque repita
-          será repetido o número de veces que queiras. Por exemplo, neste nivel, en
-          vez de arrastrar os bloques avance e obteña néctar tres veces, imos arrastralos
-          unha vez de cada e repetir a acción tres veces. Así fica doado!
     C2_maze_intro:
       1:
         text: Normalmente a programación faise toda en texto, pero imos usar o Blockly,
@@ -1797,6 +1355,407 @@ gl:
           o tamaño da fonte dun libro electrónico. Con base no tamaño da fonte, o
           número de páxinas no libro electrónico pode mudar. Podemos axustar iso almacenando
           o número de páxinas na variábel.
+    artist_intro:
+      1:
+        text: Ola, son o JR! Todo equipo de carreira precisa da informática para gañar.
+          Analizan os datos do coche para facelo máis rápido.
+      2:
+        text: Nestes desafíos vostede vai ser un artista que debuxa por todo lugar
+          que pasa.
+      3:
+        text: Este bloque di "avance por 100 pixels". Pixels son puntos minúsculos
+          na súa pantalla.
+      4:
+        text: Este bloque di "vire á dereita 90 graos". Este bloque funciona da mesma
+          forma que o bloque "vire" no desafío do labirinto.
+      5:
+        text: Clica na frecha en calquera un destes bloques para alterar o número
+          de movementos do artista, tanto para avanzar canto para virar. Xogue cos
+          novos bloques para ver como funcionan.
+    farmer_intro:
+      1:
+        text: Ola, eu son a Paola! Nestes desafíos, vostede é unha campesiña que precisa
+          deixar o seu terreo completamente plano para comezar o plantío.
+      2:
+        text: Precisa axudarlle a remover todos os montes de terra e cubrir todos
+          os buracos.
+      3:
+        text: Os novos bloques removen 1 pa de terra dun monte, e cobren o buraco
+          con 1 pa de terra.
+      4:
+        text: Os montes de terra e os buracos son de tamaños distintos, entón ten
+          que dicir á campesiña cantas pas usar.
+    flappy_intro:
+      1:
+        text: Ola, eu son Katie! Unha das cousas máis emocionantes da informática
+          é que un programa de computador pode ser interactivo.
+      2:
+        text: Sempre que alguén preme, teclea, ou toca na pantalla dun móbil, xérase
+          un EVENTO, e existen algúns códigos que deciden o que facer cando un EVENTO
+          ocorre.
+      3:
+        text: 'Por exemplo, vostede podería ter un MANIPULADOR DE EVENTOS que di "cando
+          se prema o rato, toque un son" '
+      4:
+        text: Vostede xa oiu falar do xogo Flappy Bird? Usando manipuladores de eventos,
+          imos aprender a programar a nosa propia versión do Flappy Bird!
+      5:
+        text: O código que vai escribir consiste en arrastrar e soltar bloques que
+          representan os comandos para o computador. Na verdade, cada un destes bloques
+          é representado polo código real.
+      6:
+        text: 'Se dá unha ollada na área de traballo, existen algúns bloques verdes
+          que son cubertos para vostede - eses son os "manipuladores de evento" '
+      7:
+        text: Se quere que o paxariño VOE cando vostede PREMER, pode anexar o bloque
+          "FLAP" ao manipulador de evento apropiado. Así, sempre que vostede prema,
+          o paxariño vai voar.
+      8:
+        text: En cada desafío desa actividade, imos introducir novos tipos de eventos,
+          como os bloques verdes na área de traballo, e pode decidir que bloques son
+          apropiados para agregar en resposta a eses eventos.
+      9:
+        text: Cando observe unha frecha suspensa como esta, significa que pode alterar
+          as configuracións, como o son a ser reproducido cando o paxaro bata no chan.
+      10:
+        text: No desafío final vai poder crear o seu propio xogo e compartir cos seus
+          amigos. Divírtete!
+    frozen_functions:
+      1:
+        text: Ola, eu son Chris Bosh. Son xogador de baloncesto profesional, e xa
+          programei cando estaba na facultade.
+      2:
+        text: Un dos conceptos máis importantes da informática é como definir novos
+          comandos. A maioría das linguaxes de computador teñen só 100 palabras ou
+          comandos. A arte e a maxia están, entón, en definir as súas propias palabras
+          novas a partir do básico.
+      3:
+        text: Despois de ensinar a un computador como facer unha acción unha vez usando
+          esta secuencia de comandos, vostede pode crear o nome que queira para esa
+          acción, así será máis fácil repetila despois. Ao definir e dar nome ao seu
+          propio comando estará creando unha función.
+      4:
+        text: Ola, eu son Jess. Na programación con bloques use funcións cando haxa
+          un conxunto de accións que quere repetir varias veces. Por exemplo, vostede
+          escribiu un código para crear un cadrado.
+      5:
+        text: 'Pode definir isto como unha función chamada "cree un cadrado". '
+      6:
+        text: Agora vostede ten un novo bloque que pode ser usado varias veces para
+          crear diversos cadrados.
+      7:
+        text: Moitas formas simples poden ser usadas para crear padróns máis complexos.
+          No próximo desafío o código que acaba de escribir para facer un círculo
+          estará dispoñíbel como unha nova función que pode facer círculos de distintos
+          tamaños. Pode usala para axudar á Elsa a crear padróns belos e intrincados
+          na neve?
+    frozen_intro:
+      1:
+        text: Ola, o meu nome é Lyndsey. Eu son modelo, actriz e tamén escribo as
+          miñas propias aplicacións. Imos usar a programación para explorar a maxia
+          e a beleza do xeo coa Anna e a Elsa.
+      2:
+        text: Vai crear flocos de neve e padróns mentres esquía, e un país das marabillas
+          invernal para compartir cos seus amigos.
+      3:
+        text: Na próxima hora, vai aprender os conceptos básicos da programación.
+          A programación tradicional é escrita, pero nós usaremos Blockly, bloques
+          visuais que pode arrastrar e soltar para escribir programas. Tamén é así
+          como os estudantes universitarios aprenden o básico. E por tras deses bloques,
+          vostede está creando códigos.
+      4:
+        text: Un programa é un conxunto de instrucións que di a un computador o que
+          debe facer. Imos construír un código, ou programa, que axudará á Elsa a
+          crear unha recta simple. Máis adiante imos usar isto para crear padróns
+          máis complexos.
+      5:
+        text: A súa pantalla está dividida en tres partes principais. Á esquerda ten
+          a superficie de xeo onde vai executar o seu programa. As instrucións de
+          cada nivel están escritas xusto abaixo da superficie.
+      6:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques representa unha acción que pode ser realizada pola Elsa e a Anna.
+      7:
+        text: O espazo en branco á dereita é chamado de área de traballo, e é onde
+          imos crear o noso programa. Para se mover pola superficie de xeo, usará
+          o bloque "avance".
+      8:
+        text: 'Aquí, o bloque "avance" di: "avance 100 pixels". Cando prememos en
+          "Executar", o que acontece? a Elsa móvese unha correcta distancia na pantalla,
+          100 pixels, de verdade! Os pixels son, basicamente, minúsculos cadrados
+          na pantalla do seu computador.'
+      9:
+        text: O outro bloque que temos neste desafío di "vire á dereita 90 graos".
+          Cando usamos o bloque "vire á dereita", a Elsa fai unha determinada curva.
+          Pode xogar coa cantidade que desexe que a Elsa vire. O ángulo é medido a
+          partir do camiño diante da Elsa. Entón, este é un xiro de 90 graos. E este
+          é un xiro de 120 graos.
+      10:
+        text: Lémbrese de que é posíbel mudar o número de pixels e graos, premendo
+          nas frechas ao lado deles.
+    frozen_loops:
+      1:
+        text: Ola, eu son a Paola! Os computadores son realmente moi bos en repetir
+          accións. Pode contar até 10, 20 ou até 100, pero un computador pode contar
+          até un billón ou un trillón sen se cansar, e só levará algúns segundos.
+          Sexa contar, debuxar ou calquera outra actividade, os computadores poden
+          repetir accións centenares ou até billóns de veces.
+      2:
+        text: Na programación, podemos chamar a iso "bucle". Un bucle é o modo como
+          vostede repite o seu código diversas veces. No próximo desafío, a súa meta
+          é axudar á Anna a crear un cadrado co bloque "repita".
+      3:
+        text: Todos os bloques de código que colocar dentro do bloque "repita" serán
+          repetidos en secuencia, cantas veces vostede quixese.
+      4:
+        text: Para debuxar un cadrado pode usar os bloques "avance" e "vire á dereita"
+          catro veces. Pero o modo máis fácil de facer iso é dicir ao computador "avance"
+          e "vire á dereita 90 graos" unha vez e, despois, facerlle repetir este par
+          de accións catro veces. Para iso precisa colocar os bloques "avance" e "vire
+          á dereita" dentro dun bloque "repita".
+      5:
+        text: Lémbrese de que é posíbel mudar o valor no bloque "repita" a calquera
+          número, e el repetirá o que está dentro do bloque de acordo co número que
+          vostede escolla.
+    function:
+      1:
+        text: Ola, eu son a Brina, unha engeñeira do Instagram. Unha función é un
+          conxunto de liñas de código que se desexan usar varias veces. Entón, en
+          vez de escribir ese código cada vez, vostede pode usar só unha liña.
+      2:
+        text: Imos aprender a definir funcións. As definicións de función teñen unha
+          estrela no recanto. O nome da función está escrito na liña superior.
+      3:
+        text: Os bloques que van dentro da definición din o que fai. Entón, esta definición
+          de función chámase "cubra 5", e está composta por un bloque "repita" e un
+          bloque "cubra".
+      4:
+        text: A definición está na área de traballo, pero a campesiña non vai executar
+          a función até que arrastremos o bloque "cubra 5" para fóra da categoría
+          funcións.
+      5:
+        text: 'Imos actuar en "función" da diversión! '
+    gumball_events:
+      1:
+        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
+          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
+          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      3:
+        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
+          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
+          o xogador prema, todos os bloques anexados a ese bloque serán executados.
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
+          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
+          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
+          poucos, o teu xogo está ficando cada vez máis interativo.
+    gumball_intro:
+      1:
+        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
+          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
+          que creaches.
+      2:
+        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
+          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
+          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
+          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
+          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
+          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
+          e xogado nun móbil.
+      3:
+        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
+          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
+          nun móbil.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      5:
+        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
+          é un fragmento de código.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      7:
+        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles se encaixam.
+      8:
+        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
+          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
+          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
+      9:
+        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
+          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
+          e facer os outros desapareceren. Ti es quen decides!
+    gumball_repeat:
+      1:
+        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
+          nunca vas precisar facer iso, porque os computadores son realmente bos en
+          repetir cousas.
+      2:
+        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
+          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
+          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
+          "repita infinitamente".
+      3:
+        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
+          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
+          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
+          xogo.
+    hoc_dance_events_2019:
+      4:
+        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
+          tecla de dirección ou tocar a pantalla.'
+    hoc_wrapup:
+      1:
+        text: Parabéns! Co último desafío resolto, acabou de escribir o código que
+          pode dicir a CALQUERA robot como encontrar o o seu camiño a través dun labirinto
+          sen ramificación ou dun túnel de calquera lonxitude, sexa el un zumbi, un
+          paxaro, unha sonda en Marte ou até mesmo un coche sen condutor.
+      2:
+        text: Os conceptos básicos que usou son o corazón de calquera programa ou
+          aplicación. Aprendemos sobre bucles de repetición, instrucións de repeticións
+          condicionais, instrucións se, e instrucións se senón.
+      3:
+        text: Se gustou da primeira hora de programación, visite a code.org para continuar
+          a aprender a informática! Ao completar o noso curso de 20 horas, dominará
+          o básico de programación, e vai estar apto a aprender como programar aplicacións
+          para móbil, instrucións robóticas, xogos, e moito máis.
+      4:
+        text: 'A tecnoloxía está mudando todo o que facemos, e non importa se ti es
+          mozo ou vello: programar é divertido, é creativo, e todos poden aprender!'
+    iceage_events:
+      1:
+        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
+          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
+          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      3:
+        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
+          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
+          o xogador prema, todos os bloques anexados a ese bloque serán executados.
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
+          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
+          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
+          poucos, o teu xogo está ficando cada vez máis interativo.
+    iceage_intro:
+      1:
+        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
+          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
+          que creaches.
+      2:
+        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
+          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
+          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
+          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
+          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
+          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
+          e xogado nun móbil.
+      3:
+        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
+          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
+          nun móbil.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      5:
+        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
+          é un fragmento de código.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      7:
+        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles se encaixam.
+      8:
+        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
+          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
+          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
+      9:
+        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
+          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
+          e facer os outros desapareceren. Ti es quen decides!
+    iceage_repeat:
+      1:
+        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
+          nunca vas precisar facer iso, porque os computadores son realmente bos en
+          repetir cousas.
+      2:
+        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
+          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
+          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
+          "repita infinitamente".
+      3:
+        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
+          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
+          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
+          xogo.
+    if:
+      1:
+        text: 'Ola, eu son o Bill! Imos aprender un novo concepto fundamental: instrucións
+          "se". É así como os computadores toman decisións.'
+      2:
+        text: 'Vostede usa a instrución "se" todos os días. Toda mañá, antes de saír,
+          vostede di: SE estivese chovendo alí fóra, vou precisar da miña chaqueta.'
+      3:
+        text: Podemos dicir ao zumbi que verifique SE hai camiño para a esquerda e,
+          se atopa un camiño para a esquerda, precisamos viralo naquela dirección.
+      4:
+        text: Para programar isto, imos arrastrar o noso bloque "se" e colocar un
+          bloque "vire á esquerda" dentro del.
+      5:
+        text: Agora, se colocamos un bloque "avance" por enriba del e colocamos todo
+          dentro dun bloque "repita", a cada vez que o zumbi se mova vai verificar
+          se hai un camiño para a esquerda e virar. O comando "repita" é fundamental
+          para verificar a necesidade de virar a cada paso.
+      6:
+        text: 'As instrucións "se" son moi importantes para a informática. Un dos
+          primeiros programas que escribín foi un xogo da vella, e había unha instrución
+          "se" que dicía: SE a outra persoa está a piques de gañar, bloquee a casa
+          que lle permitiría gañar.'
+      7:
+        text: Divírtete usando o bloque  "se"!
+    if_else:
+      1:
+        text: Ola, o meu nome é Saloni. A informática axúdame a resolver problemas
+          das áreas da saúde e medicina. Imos aprender sobre o bloque "se-senón".
+          Parece o bloque "se", pero cunha parte extra no final que di "senón".
+      2:
+        text: Se eu coloco un bloque "avance" na instrución "faga", e un bloque "vire
+          á esquerda" na instrución "senón", significa que o zumbi vai escoller entre
+          2 opcións. SE existe un camiño diante, o zumbi vai avanzar e, EN CASO CONTRARIO
+          (non hai un camiño adiante), o zumbi vai virar á esquerda.
+      3:
+        text: Así como o bloque "se", nós podemos colocar bloques "se-senón" dentro
+          de bloques "repita", así o zumbi continuará se movendo, e o bloque "se-senón"
+          continuará verificando se é posíbel virar para algún lugar.
+      4:
+        text: Agora coloque cada zumbi no lugar debido!
+    if_else_scrat:
+      1:
+        text: Un comando se-senón é unha decisión entre dúas opcións. Imos ver como
+          podemos usar un comando se-senón co noso amigo Scrat, o esquío.
+      2:
+        text: Este bloque parece igual ao bloque "se", pero hai unha parte extra no
+          final que di "senón". Se eu colocar un bloque "avance" na instrución "faga",
+          e un bloque "vire á esquerda" na instrución "senón", significa que o esquío
+          Scrat vai avanzar se houbese un camiño diante. Se non houbese camiño diante,
+          o Scrat vai virar á esquerda.
+      3:
+        text: Significa tomar unha decisión e facer unha das dúas accións con base
+          nesa decisión. E, así como os bloques "se", pode colocar bloques "se-senón"
+          dentro de bloques "repita".
+      4:
+        text: Agora imos axudar Scrat, o esquío, a apañar esa landra!
     infinity_playlab_events:
       1:
         text: Agora, imos aprender a ler sobre algo que os programadores de xogos
@@ -1875,6 +1834,591 @@ gl:
           Anna a andar continuamente para enriba e para abaixo. Aprender como os comandos
           de repetición funcionan vai aforrar moito tempo máis tarde cando vaias crear
           o teu propio xogo.
+    loop_for:
+      1:
+        text: Ola, eu son a Trina, e traballo para a Pixar. Xa traballei nunha cheia
+          de filmes, incluíndo o Shrek.
+      2:
+        text: Este é o noso novo bucle "contador". Executará accións repetidamente,
+          e vostede pode facer que as accións muden aos poucos.
+      3:
+        text: Neste exemplo, o noso bucle "contador" di "conte de 50 até 90, indo
+          de 10 en 10" e, dentro del, temos o noso bloque "debuxe un cadrado". Arrastre
+          o bloque "contador" da sección "Variábeis" para o sitio que indica "lonxitude".
+      4:
+        text: Iso significa que o noso artista vai debuxar un cadrado con lados de
+          50 pixels de lonxitude, e entón vai engadir 10 e debuxar un cadrado con
+          lados de 60 pixels de lonxitude. Vai continuar agregando 10 e debuxando
+          cadrados até que atinxa 90 pixels. Así, imos ter cadrados de 50, 60, 70,
+          80 e 90 pixels.
+    loop_times:
+      1:
+        text: Ola, eu son o Mark! Imos aprender sobre bucles. Usando bucles pode dicir
+          a un computador que repeta calquera conxunto de accións continuamente, miles
+          ou mesmo millóns de veces.
+      2:
+        text: Neste desafío, queremos facer o paxaro avanzar 5 espazos para chegar
+          ao porco.
+      3:
+        text: Podemos usar o novo bloque "repita" para nos axudar.
+      4:
+        text: En vez de arrastrar 5 bloques "avance"...
+      5:
+        text: Podemos colocar o bloque "avance" dentro do bloque "repita" e escribir
+          un número no bloque para definir o número de repeticións.
+      6:
+        text: 'E isto é importante: pode colocar máis dun comando dentro dun bloque
+          "repita".'
+      7:
+        text: Aproveite o  novo bloque "repita"!
+    loop_until:
+      1:
+        text: Ola, eu son o Chris. Antes de entrar para o Miami Heat, fun para a Georgia
+          Tech para estudar informática. Imos dar unha ollada no noso novo bloque,
+          o bloque "repita até".
+      2:
+        text: E se nós non soubesemos canto tivo que se mover o paxaro para chegar
+          ao porco?
+      3:
+        text: Se colocamos un bloque "avance" dentro do bloque "repita até", o paxaro
+          vai seguir adiante ATÉ chegar ao porco (ou se chocar contra unha parede).
+      4:
+        text: 'E iso é importante: así como antes, podemos colocar varios bloques
+          dentro do bloque "repita até", e todos eles serán repetidos.'
+    loop_while:
+      1:
+        text: 'Ola, eu son o Makinde! Imos aprender sobre o bloque "mentres". '
+      2:
+        text: O bloque "mentres" vai facer todo o que vostede coloque no seu interior,
+          SEMPRE QUE a declaración na parte superior sexa CERTA.
+      3:
+        text: Por exemplo, se a campesiña está nun monte de terra continuará a remover
+          1 pa MENTRES haxa terra debaixo dela.
+    maze_intro:
+      1:
+        text: Benvido á súa primeira Hora do Código! Ímonos mergullar na súa primeira
+          experiencia con programación.
+      2:
+        text: Imos usar o Blockly, unha linguaxe de programación visual onde vostede
+          arrastra e solta bloques para escribir código.
+      3:
+        text: A programación é xeralmente en liñas de código escrito, no entanto o
+          "Blockly" é visual. Cada bloque corresponde a unha liña de código "real".
+      4:
+        text: Vostede vai aprender o básico da informática, que consiste en conceptos
+          usados no desenvolvemento de aplicacións e até mesmo para controlar unha
+          sonda en Marte.
+      5:
+        text: Un programa é un conxunto de instrucións a seren seguidas polo seu computador.
+      6:
+        text: O obxectivo do seu primeiro programa é levar o Angry Bird até un Porco
+          Verde a través do labirinto.
+      7:
+        text: O lado esquerdo é o labirinto onde o programa é executado. As instrucións
+          para cada desafío están debaixo labirinto.
+      8:
+        text: A caixa de ferramentas do medio contén os comandos do Angry Bird. Vostede
+          vai usalos para crear o seu programa.
+      9:
+        text: Á dereita vostede ten a súa área de traballo, onde vai arrastrar os
+          bloques da caixa de ferramentas para crear o seu programa. Para excluír
+          un bloque, arrástreo para a recolledora de lixo no recanto.
+      10:
+        text: Cada bloque é unha instrución. Se vostede arrastra un bloque "avance"
+          para a súa área de traballo e preme en "Executar Programa", o paxaro móvese
+          un espazo para diante no labirinto.
+      11:
+        text: Para facer máis de unha acción, vostede pode arrastrar varios bloques
+          para a súa área de traballo e conectalos os uns aos outros. O paxariño obedecerá
+          os comandos de enriba para baixo.
+      12:
+        text: Se executa un programa e quere corrixilo, clique en "Recomezar".
+      13:
+        text: Imos apañar estes porcos!
+    mc_2016_intro:
+      8:
+        text: Se queres eliminar un bloque, simplemente remóvaeo da pila e arrástrao
+          de volta para a caixa de ferramentas.
+    mc_congrats_no_share:
+      1:
+        text: Parabéns! Aprendiches os bloques básicos da informática.
+      2:
+        text: Agora podes usar estes bloques para facer a túa propia creación. Non
+          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
+          queiras. Ti escolles.
+      3:
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
+          Construímos unha casa de lá!"
+      4:
+        text: Cando termines a a túa creación, escolle compartir para recibir un link
+          para enviar aos teus amigos. Divírtete!
+    mc_congrats_share:
+      1:
+        text: Parabéns! Aprendiches os bloques básicos da informática.
+      2:
+        text: Agora podes usar estes bloques para facer a túa propia creación. Non
+          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
+          queiras. Ti escolles.
+      3:
+        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
+          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
+          Construímos unha casa de lá!"
+      4:
+        text: Cando termines a túa creación, escolle compartir para recibir un link
+          para enviar aos teus amigos. Divírtete!
+    mc_if_statements:
+      1:
+        text: Agora imos aprender sobre comandos "se". Os comandos "se" son unha parte
+          fundamental de aprender a programar. Axudan a un computador a tomar decisións.
+      2:
+        text: Todos os computadores usan comandos "se", inclusive o meu teléfono.
+          Por exemplo, cando desbloqueo o meu teléfono, executa un código onde se
+          eu tecleo o contrasinal correcto, o teléfono estará desbloqueado. En caso
+          contrario mostra unha mensaxe de erro.
+      3:
+        text: Podes usar comandos "se" no teu código para facer o Steve e a Alice
+          reaccionaren ao que ven no mundo. Por exemplo, se tivesen un penedo diante
+          deles, poden virar á esquerda. Por exemplo, se tivesen un penedo diante
+          deles, poden virar á esquerda. Ou virar á dereita se baten nunha árbore.
+      4:
+        text: Neste caso, non queremos caer na lava. É fácil facer plans contra a
+          lava. Pode ser vista na pantalla. Pero e a lava que non podemos ver baixo
+          as pedras?
+      5:
+        text: Tras escavar a pedra, precisamos verificar se existe lava naquel lugar
+          antes de avanzar. Se tivese lava, queremos colocar unha pedra diante do
+          noso personaxe antes de avanzar. Así, podemos avanzar en seguranza. Hora
+          de escavar máis! E lémbrese de usar o comando "se" para andar con coidado.
+    mc_intro:
+      1:
+        text: O meu nome é Jens Bergensten, pero me chaman Jeb. Son o desenvolvedor
+          xefe do Minecraft aquí na mojang. con. Penso que tiña 11 ou 12 anos cando
+          comecei a programar porque quería facer xogos. Un dos amigos do meu pai
+          díxome que para facer xogos necesitaba aprender a programar. Foi así como
+          comecei. Gústame deseñar e descubrir a arquitetura das cousas. Iso é o que
+          máis me gusta no Minecraft.
+      2:
+        text: Durante a próxima hora vas aprender o básico da informática, programando
+          a Alex ou o Steve para andaren por un mundo simulado de Minecraft.
+      3:
+        text: 'A programación tradicional acostuma a ser en texto, pero hoxe imos
+          usar blockly: un sistema que usa bloques que podes arrastrar e soltar para
+          escribir programas. Por baixo realmente estás creando código en JavaScript.'
+      4:
+        text: Os conceptos que vas aprender son os que os programadores usan todos
+          os días e son a base da informática. Aquí na Mojang, usamos os mesmos conceptos
+          para facer funcionar o Minecraft.
+      5:
+        text: Antes de comezar vas escoller o teu personaxe. Eu vou escoller a Alex.
+          Imos construír o código para un programa que vai axudarlle a andar pola
+          pantalla.
+      6:
+        text: A túa pantalla está dividida en tres partes principais. Na esquerda,
+          está a túa área de xogo do Minecraft, onde o programa será executado. As
+          instrucións para cada nivel escríbense abaixo.
+      7:
+        text: Esta zona intermedia é a caixa de ferramentas, e cada un destes bloques
+          é un comando que dirixe as accións da Alex.
+      8:
+        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
+          construír o noso programa.
+      9:
+        text: Se arrastramos o bloque "andar diante" até a nosa área de traballo e
+          prememos en Executar, o que acontece? Alex avanza un espazo na grade.
+      10:
+        text: E se quixéramos facer algunha cousa tras avanzar un espazo? Podemos
+          agregar un bloque máis ao noso programa. Vou escoller o bloque "virar á
+          dereita" e vou arrastralo abaixo do meu bloque "andar diante" até que esa
+          liña laranxa apareza. Entón, vou soltalo e os dous bloques van formar un
+          grupo. Cando mandamos Executar novamente, a Alex vai seguir os comandos
+          apiñados de enriba para baixo na nosa área de traballo.
+      11:
+        text: E se queres eliminar un bloque, basta arrastralo da pila de volta para
+          a caixa de ferramentas.
+      12:
+        text: Para desfacer as túas mudanzas e volver ao estado inicial da fase, usa
+          o botón Comezar de novo, no recanto superior dereito da área de traballo.
+          Unha cousa máis, estás a ver ese triángulo nos bloques de virar? Sempre
+          que vexas eses triángulos, significa que podes escoller unha opción distinta.
+          Imos comezar a programar!
+    mc_repeat:
+      1:
+        text: Son a Lydia Winters, directora de marca da Mojang, e fixemos un xoguiño
+          chamado Minecraft.
+      2:
+        text: A miña actividade preferida no Minecraft é explorar. Adoro me aventurar
+          nas cavernas e ver o que encontro. Como non son programadora, é moi fascinante
+          pasar polas leccións do Minecraft e aprender un pouco sobre programación.
+      3:
+        text: A última fase precisaba de moitos bloques "andar diante". Sería moito
+          máis fácil se puidésemos dicir ao computador que realice o comando para
+          avanzar catro ou cinco veces. Para a nosa sorte, os computadores son moi
+          bos en repetir comandos con bucles de repetición.
+      4:
+        text: Ao construír o Minecraft, usamos bucles de repetición para colocar todos
+          os materiais iniciais e crear un novo mundo. Son miles e miles de bloques.
+          Tamén usamos bucles nos detalles, por exemplo, para facer os pés da Alex
+          iren para diante e para tras cando anda. Os bucles de repetición son unha
+          parte poderosa da programación.
+      5:
+        text: A noite está chegando, entón nas próximas fases, imos construír unha
+          casa para a nosa seguranza. Imos usar o bloque de repetición para facelo
+          con facilidade.
+      6:
+        text: Para construír unha parede para a nosa casa, podemos dicir á Alex que
+          avance e coloque táboas catro veces, ou podemos dicirlle que avance e coloque
+          unha táboa, entón apañar ese comando e usar o bloque de repetición para
+          que realice esa acción varias veces. Agora, imos premer no bloque de repetición
+          e dicirlle cantas veces queremos que realice esta acción. Agora, imos construír
+          a nosa casa antes que a noite chegue! Divírtete.
+    parameters:
+      1:
+        text: Ola, eu son a Janete, e eu son unha engeñeira da Zynga.
+      2:
+        text: E se quixéramos debuxar unha cheia de triángulos de tamaños distintos?
+      3:
+        text: Podemos escribir todo o código á man ou podemos usar unha función con
+          parámetros.
+      4:
+        text: Para facer iso, clique na estrela azul sobre a definición da función
+          "debuxe un triángulo". Arrastre o "nome de entrada" para o bloque "entrada".
+      5:
+        text: Entón, se escribe "lonxitude" no sitio onde hai un "x" e aperta "Enter",
+          vai crear unha lonxitude de entrada para a súa función.
+      6:
+        text: Entón, clique na estrela. Agora vai premer na categoría de variábeis
+          e arrastrar o bloque "lonxitude" para dentro do bloque "avance" da súa definición
+          da función. E arrastre para fóra o antigo bloque de número.
+      7:
+        text: Para usar a súa función con parámetros, clique na categoría funcións
+          e arrastre para fóra a función "debuxe un triángulo con lonxitude".
+      8:
+        text: Agora pode usar o bloque de matemáticas para entrar con números distintos
+          e debuxar triángulos de tamaños distintos.
+    playlab_events:
+      1:
+        text: 'Agora imos aprender un pouco sobre algo que os programadores de xogos
+          usan todos os días: os eventos. Un evento di ao seu programa que debe estar
+          escoitando á espera de que algo aconteza. Cando tal cousa acontece, realiza
+          unha acción.'
+      2:
+        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
+          tecla de dirección ou tocar a pantalla.'
+      3:
+        text: Agora imos facer que o robot espacial saúde os terráqueos cando un xogador
+          prema nel. Nós usaremos o bloque "cando premido" e conectarémoslle o bloque
+          "diga". Cando o xogador prema no robot espacial realizarase todo o que estivese
+          conectado ao bloque de evento "cando premido". O que di o seu alieníxena?
+      4:
+        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lle conectas
+          os bloques "mova" será posíbel comezar a mover os seus personaxes para enriba,
+          para baixo, para a esquerda e para a dereita. Aos poucos, o seu xogo está
+          ficando cada vez máis interativo.
+    playlab_intro:
+      1:
+        text: Nós imos crear xogos usando o Laboratorio. Os bos xogos teñen historias
+          e toda historia ten personaxes. Nós imos aprender como crear os nosos personaxes,
+          como un bruxo, alieníxenas e animais que falan, andan e interactúan os uns
+          cos outros. Ao final deste titorial poderá crear un xogo a partir do cero
+          e compartilo cos seus amigos.
+      2:
+        text: A súa pantalla está dividida en tres partes principais. Á esquerda está
+          o espazo do xogo onde o seu programa será executado. As instrucións para
+          cada nivel están escritas abaixo.
+      3:
+        text: A parte do medio é onde fica a caixa de ferramentas e cada un deses
+          bloques representa unha parte do código. O espazo en branco á dereita é
+          chamado área de traballo e é onde crearemos o noso programa.
+      4:
+        text: Para comezar terá que conectar os seus bloques ao bloque laranxa "cando
+          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
+          até ver a liña amarela e, entón, eles encáixanse xuntos.
+      5:
+        text: Neste primeiro desafío o noso personaxe é un pingüín e nós faremoslle
+          dicir "Olá!", arrastrando o bloque "diga", conectándoo ao bloque "cando
+          executar" e tecleando "Ola". Nós tamén podemos facer que o pingüín se mova
+          usando os bloques "mova á dereita" e "mova á esquerda". Despois que os seus
+          bloques estean no lugar correcto prema no botón "executar" para ver o que
+          programou.
+      6:
+        text: Comece agora mesmo! Ao final conseguirá crear o seu propio xogo, con
+          todos os tipos de xogadores que poderán interactuar, ficar felices ou tristes,
+          marcar puntos ou lanzar bólas de fogo, ou até mesmo facer desaparecer uns
+          aos outros. Depende da súa imaxinación e do xogo que quere crear.
+    playlab_repeat_forever:
+      1:
+        text: Este é o bloque "repita infinitamente". Todo que estivese contido neste
+          bloque acontecerá repetidamente no xogo.
+      2:
+        text: Se quixéramos que un personaxe faga algo repetidamente, sen ningunha
+          acción do xogador, colocaremos eses bloques dentro do bloque "repita infinitamente".
+      3:
+        text: Neste desafío o noso obxectivo é axudar o mago a protexer as fronteiras
+          do reino, andando da esquerda para a dereita e viceversa, continuamente.
+          Aprender como repetir accións de comandos vai economizar moito do seu tempo
+          no futuro, cando vaia crear o seu propio xogo.
+    starwars_blocks_congrats:
+      1:
+        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
+          aquí na Code.org e traballei neste titorial que estás vendo agora.
+      2:
+        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
+          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
+          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
+          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
+          poder facer aínda máis.
+      3:
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
+          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
+          inchábeis e, cando toques 10.000, vences."
+      4:
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
+          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
+          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
+          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
+          Si!"
+      5:
+        text: Cando termines o teu xogo, selecciona compartir para recibir un link
+          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
+          teu móbil. Divírtete!
+    starwars_blocks_events:
+      1:
+        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
+          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
+          as atraccións que os nosos convidados proban. Estamos sempre procurando
+          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
+          e a tecnoloxía é esencial para iso.
+      2:
+        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
+          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
+          básicos da programación, imos volver o tempo para crear o teu propio xogo,
+          protagonizado por R2-D2 e C3PO.
+      3:
+        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
+          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
+          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
+          unha acción.'
+      4:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      5:
+        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
+          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
+          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
+          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
+      6:
+        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() nel.
+          Cando o xogador presiona a tecla de dirección para enriba, o código do bloque
+          whenUp() é executado. Faremos a mesma cousa para facer a R2-D2 se mover
+          para baixo. Agora, en vez de escribir anticipadamente todo o código para
+          controlar o noso androide, podemos deixar a R2-D2 reaccionar a eventos de
+          botóns presionados que fan que se mova pola pantalla.
+      7:
+        text: Paso a paso, o teu xogo está ficando máis interativo.
+    starwars_blocks_intro:
+      1:
+        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
+          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
+          Todo o que fai e todos os seus movementos son controlados por softwares
+          de computador. A informática ten impacto sobre todas as industrias, do marketing
+          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
+          xuntos para crear un filme como O Despertar da Forza.
+      2:
+        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
+          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
+          responsábel de axudar os artistas a desenvolver equipamentos que son as
+          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
+          moito, moito distante.
+      3:
+        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars,
+          que che vai ensinar os conceptos básicos da programación. Xeralmente, a
+          programación faise con texto, pero aquí imos usar bloques, para que poidas
+          arrastrar e soltar para escribir os programas. Para comezar, imos traballar
+          con Rey para programar o BB-8 para se mover e recoller toda a chatarra.
+      4:
+        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
+          a área do xogo, onde o teu programa será executado. As instrucións para
+          cada nivel están escritas abaixo da área do xogo.
+      5:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques é un comando que BB-8 pode entender.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
+          crear o noso programa.
+      7:
+        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo, o
+          que acontece? BB-8 móvese un bloque para a esquerda.
+      8:
+        text: E se eu quixera que o BB-8 faga algo despois do moveLeft();? Podo agregar
+          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
+          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
+          e os dous bloques van se encaixar. Cando eu presione Executar de novo, o
+          BB-8 vai seguir os comandos que están apiñados na nosa área de traballo
+          de enriba para baixo.
+      9:
+        text: Se queres eliminar un bloque, simplemente remóvaeo da pila e arrástrao
+          de volta para a caixa de ferramentas.
+      10:
+        text: Despois de presionar Executar sempre podes presionar o botón Recomezar
+          para levar a BB-8 de volta ao inicio. Imos comezar!
+    starwars_congrats:
+      1:
+        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
+          aquí na Code.org e traballei neste titorial que estás vendo agora.
+      2:
+        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
+          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
+          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
+          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
+          poder facer aínda máis.
+      3:
+        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
+          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
+          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
+          inchábeis e, cando toques 10.000, vences."
+      4:
+        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
+          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
+          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
+          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
+          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
+          Si!"
+      5:
+        text: Cando termines o teu xogo, selecciona compartir para recibir un link
+          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
+          teu móbil. Divírtete!
+    starwars_events:
+      1:
+        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
+          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
+          as atraccións que os nosos convidados proban. Estamos sempre procurando
+          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
+          e a tecnoloxía é esencial para iso.
+      2:
+        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
+          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
+          básicos da programación, imos volver o tempo para crear o teu propio xogo,
+          protagonizado por R2-D2 e C3PO.
+      3:
+        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
+          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
+          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
+          unha acción.'
+      4:
+        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
+          tecla de dirección ou un toque na pantalla.'
+      5:
+        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
+          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
+          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
+          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
+      6:
+        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() a el.
+          Cando o xogador presione a tecla de dirección para enriba, o código vinculado
+          ao bloque whenUp() é executado. Faremos a mesma cousa para o R2-D2 se mover
+          para baixo.
+      7:
+        text: Para facer isto usamos un comando chamado whenUp(). Cando arrastres
+          o comando para fóra da caixa de ferramentas, vas ver que comeza e termina
+          con chaves en vez de punto e coma. Isto dános espazo para colocar outros
+          comandos entre as chaves. Todos os comandos que colocamos entre esas chaves
+          serán executados cando o xogador presione a frecha para enriba.
+      8:
+        text: Queremos que o R2-D2 vaia para enriba, entón imos colocar un bloque
+          goUp(); dentro do comando. E imos facer a mesma cousa para que o R2-D2 vaia
+          para baixo.
+      9:
+        text: Agora, en vez de escribir anticipadamente todo o código para controlar
+          o noso androide, podemos deixar a R2-D2 reaccionar a eventos de botóns sendo
+          presionados que o fan se mover pola pantalla.
+    starwars_intro:
+      1:
+        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
+          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
+          Todo o que fai e todos os seus movementos son controlados por softwares
+          de computador. A informática ten impacto sobre todas as industrias, do marketing
+          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
+          xuntos para crear un filme como O Despertar da Forza.
+      2:
+        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
+          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
+          responsábel de axudar os artistas a desenvolver equipamentos que son as
+          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
+          moito, moito distante.
+      3:
+        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars.
+          Imos ensinarlle os conceptos básicos da programación. Xeralmente, a programación
+          é toda feita con texto, pero aquí imos usar bloques, para que poidas arrastrar
+          e soltar para escribir os programas. Por tras disto aínda vas estar creando
+          código. Despois de que examines os conceptos básicos cos bloques, imos mudar
+          para JavaScript, unha das linguaxes de programación máis popular na web.
+      4:
+        text: Para comezar, imos traballar con Rey para programar o BB-8 para andar
+          e recoller toda a chatarra. A túa pantalla está dividida en tres partes.
+          Á esquerda, temos a área do xogo de Star Wars, onde o código será executado.
+          As instrucións para cada nivel están abaixo da área de xogo.
+      5:
+        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
+          bloques é un comando que BB-8 pode entender.
+      6:
+        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
+          crear o noso programa.
+      7:
+        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo e presiono
+          Executar, o que acontece? O BB-8 móvese un bloque para a esquerda.
+      8:
+        text: E se eu quero que BB-8 faga algo despois do moveLeft();? Podo agregar
+          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
+          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
+          e os dous bloques van se encaixar.
+      9:
+        text: Cando presiono Executar de novo, BB-8 vai obedecer aos comandos apiñados
+          de enriba para baixo na nosa área de traballo. Se queres eliminar un bloque,
+          simplemente remóveo da pila e arrástrao de volta para a caixa de ferramentas.
+      10:
+        text: Despois de presionar Executar, sempre podes presionar o botón Recomezar
+          para levar BB-8 de volta ao inicio. Imos comezar!
+    starwars_typing:
+      1:
+        text: Dentro dos bloques que temos usado existen comandos JavaScript. Actualmente,
+          JavaScript é a linguaxe de programación máis popular entre os desenvolvedores
+          profesionais. Os bloques son un excelente modo de comezar a aprender a programar,
+          e en verdade, as mellores universidades, como Harvard e Berkeley, comezan
+          a ensinar así. Pero despois de aprendermos o básico, imos escribir os códigos
+          tecleando, porque iso vólvenos máis rápidos.
+      2:
+        text: Podemos teclear centenares de comandos sen ter que encontralos na caixa
+          de ferramentas e arrastralos para a área de traballo. Como estás aprendendo,
+          teclear pode ser máis lento no comezo, pero queremos que probes.
+      3:
+        text: No recanto superior dereito da túa área de traballo, podes premer no
+          botón "Mostrar texto" en calquera desafío para alterar do modo de bloques
+          para o modo de programación na forma de texto.
+      4:
+        text: Na próxima lección, imos introducilo ao modo de tecleado. Aquí aínda
+          podes arrastrar o bloque da caixa de ferramentas ou podes teclear o nome
+          do comando. Conforme vaias tecleando vas ver nomes de comandos posíbeis
+          abaixo de onde está tecleando. En vez de teclear o nome enteiro do comando
+          podes seleccionar un deles para ser máis rápido. No meu traballo uso este
+          recurso de cubrir automaticamente todo o tempo cando estou escribindo código.
+      5:
+        text: Cando esteas tecleando código, o computador necesita que sexas moi preciso.
+          A grafía e o uso de letras maiúsculas e minúsculas no nome do comando deben
+          ser exactamente correctas, incluíndo as parénteses e o punto e coma. Mesmo
+          se houbese só un pequeno erro de tecleado, o BB-8 non vai entender o código
+          e non poderá se mover.
+      6:
+        text: Cando cometas un erro na liña, o editor vai destacalo para que poidas
+          tentar modificar o texto e corrixilo.
+      7:
+        text: Se tiveses problemas sempre podes recomezar co botón "Comezar desde
+          o inicio", e podes volver ao modo de bloques en calquera momento, premendo
+          no recanto superior dereito. Ok, imos tentar teclear! E se cometes algún
+          erro, non fiques frustrado. Todo o mundo ten que tentar algunhas veces antes
+          de acertar.
     tutorial_puzzle_challenge:
       1:
         text: O que queres ser de maior, Olivia? Astronauta. Sabes o que é un programador
@@ -1940,6 +2484,43 @@ gl:
           usando as túas iniciais. É unha actividade divertida, e moi estimulante,
           porque o binario é unha daquelas cousas que parecen ser moi técnicas, pero
           que, cando entendes, é como se falases unha lingua secreta.
+    unplug10:
+      1:
+        text: Esta actividade explica, dunha forma fácil de entender, como funciona
+          a internet. Explicamos todas as terminoloxías que necesitarás en termos
+          simples para que os alumnos poidan simular transmisións de mensaxes, como
+          un e-mail.
+      2:
+        text: Os alumnos van transmitir mensaxes mentres finxen ser un dos tres métodos
+          de transmisión. Internet sen fío, ADSL ou fibra ótica. Os alumnos que representan
+          o wi-fi necesitan memorizar a mensaxe que están enviando, porque o wi-fi
+          ten a maior probabilidade de perder algunha información.
+      3:
+        text: Os alumnos que finxen ser o ADSL ou o cabo van levar a mensaxe nas costas
+          das súas mans, con menor probabilidade de perder a información. E os alumnos
+          que representan a fibra ótica van levar a mensaxe nas dúas mans. Esta actividade
+          é unha excelente forma de comprender algo que moitos de nós usamos todos
+          os días.
+    unplug11:
+      1:
+        text: Entón, agora é hora de dar un paso para tras e dar unha ollada a todo
+          o que fixeches nas últimas dezanove leccións. Esta é unha excelente hora
+          para dicir aos alumnos que o que fixeron xa é unha gran conquista. Aprenderon
+          máis nestas leccións do que moitos adultos saben sobre informática.
+      2:
+        text: Discute coa sala toda ou en grupos pequenos sobre as túas leccións favoritas.
+          Cando mires para todo o que aprendiches, é o momento no cal pode brillar
+          a creatividade de teus alumnos. Divídeos en grupos e pídelles que creen
+          a súa propia lección offline. Atribúe un concepto chave para cada grupo,
+          como funcións ou algoritmos, e dálles materiais para que usen. Pida que
+          cada grupo presente a súa nova actividade ou mesmo reserve outro día para
+          realizar as actividades creadas polos alumnos.
+      3:
+        text: Todos aquí da Code.org esperamos que tiveses unha TONELADA de diversión
+          durante este curso. E se o teu soño é crear a mellor nova aplicación, usar
+          a programación para axudar na cura de doenzas, ou se queres ser só un grande
+          solucionador de problemas, este curso foi o primeiro paso para alcanzar
+          eses soños.
     unplug2:
       1:
         text: A lección sobre pensamento computacional ten o obxectivo de ensinarlle
@@ -2070,584 +2651,3 @@ gl:
           necesidade de revisar o teu propio traballo e o traballo que as persoas
           fixeron antes ca ti. Vas entender rapidamente o importante de ser coidadoso
           ao escribir o teu código cando un equipo enteiro depende de ti.
-    unplug10:
-      1:
-        text: Esta actividade explica, dunha forma fácil de entender, como funciona
-          a internet. Explicamos todas as terminoloxías que necesitarás en termos
-          simples para que os alumnos poidan simular transmisións de mensaxes, como
-          un e-mail.
-      2:
-        text: Os alumnos van transmitir mensaxes mentres finxen ser un dos tres métodos
-          de transmisión. Internet sen fío, ADSL ou fibra ótica. Os alumnos que representan
-          o wi-fi necesitan memorizar a mensaxe que están enviando, porque o wi-fi
-          ten a maior probabilidade de perder algunha información.
-      3:
-        text: Os alumnos que finxen ser o ADSL ou o cabo van levar a mensaxe nas costas
-          das súas mans, con menor probabilidade de perder a información. E os alumnos
-          que representan a fibra ótica van levar a mensaxe nas dúas mans. Esta actividade
-          é unha excelente forma de comprender algo que moitos de nós usamos todos
-          os días.
-    unplug11:
-      1:
-        text: Entón, agora é hora de dar un paso para tras e dar unha ollada a todo
-          o que fixeches nas últimas dezanove leccións. Esta é unha excelente hora
-          para dicir aos alumnos que o que fixeron xa é unha gran conquista. Aprenderon
-          máis nestas leccións do que moitos adultos saben sobre informática.
-      2:
-        text: Discute coa sala toda ou en grupos pequenos sobre as túas leccións favoritas.
-          Cando mires para todo o que aprendiches, é o momento no cal pode brillar
-          a creatividade de teus alumnos. Divídeos en grupos e pídelles que creen
-          a súa propia lección offline. Atribúe un concepto chave para cada grupo,
-          como funcións ou algoritmos, e dálles materiais para que usen. Pida que
-          cada grupo presente a súa nova actividade ou mesmo reserve outro día para
-          realizar as actividades creadas polos alumnos.
-      3:
-        text: Todos aquí da Code.org esperamos que tiveses unha TONELADA de diversión
-          durante este curso. E se o teu soño é crear a mellor nova aplicación, usar
-          a programación para axudar na cura de doenzas, ou se queres ser só un grande
-          solucionador de problemas, este curso foi o primeiro paso para alcanzar
-          eses soños.
-    starwars_intro:
-      1:
-        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
-          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
-          Todo o que fai e todos os seus movementos son controlados por softwares
-          de computador. A informática ten impacto sobre todas as industrias, do marketing
-          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
-          xuntos para crear un filme como O Despertar da Forza.
-      2:
-        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
-          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
-          responsábel de axudar os artistas a desenvolver equipamentos que son as
-          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
-          moito, moito distante.
-      3:
-        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars.
-          Imos ensinarlle os conceptos básicos da programación. Xeralmente, a programación
-          é toda feita con texto, pero aquí imos usar bloques, para que poidas arrastrar
-          e soltar para escribir os programas. Por tras disto aínda vas estar creando
-          código. Despois de que examines os conceptos básicos cos bloques, imos mudar
-          para JavaScript, unha das linguaxes de programación máis popular na web.
-      4:
-        text: Para comezar, imos traballar con Rey para programar o BB-8 para andar
-          e recoller toda a chatarra. A túa pantalla está dividida en tres partes.
-          Á esquerda, temos a área do xogo de Star Wars, onde o código será executado.
-          As instrucións para cada nivel están abaixo da área de xogo.
-      5:
-        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
-          bloques é un comando que BB-8 pode entender.
-      6:
-        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
-          crear o noso programa.
-      7:
-        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo e presiono
-          Executar, o que acontece? O BB-8 móvese un bloque para a esquerda.
-      8:
-        text: E se eu quero que BB-8 faga algo despois do moveLeft();? Podo agregar
-          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
-          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
-          e os dous bloques van se encaixar.
-      9:
-        text: Cando presiono Executar de novo, BB-8 vai obedecer aos comandos apiñados
-          de enriba para baixo na nosa área de traballo. Se queres eliminar un bloque,
-          simplemente remóveo da pila e arrástrao de volta para a caixa de ferramentas.
-      10:
-        text: Despois de presionar Executar, sempre podes presionar o botón Recomezar
-          para levar BB-8 de volta ao inicio. Imos comezar!
-    starwars_typing:
-      1:
-        text: Dentro dos bloques que temos usado existen comandos JavaScript. Actualmente,
-          JavaScript é a linguaxe de programación máis popular entre os desenvolvedores
-          profesionais. Os bloques son un excelente modo de comezar a aprender a programar,
-          e en verdade, as mellores universidades, como Harvard e Berkeley, comezan
-          a ensinar así. Pero despois de aprendermos o básico, imos escribir os códigos
-          tecleando, porque iso vólvenos máis rápidos.
-      2:
-        text: Podemos teclear centenares de comandos sen ter que encontralos na caixa
-          de ferramentas e arrastralos para a área de traballo. Como estás aprendendo,
-          teclear pode ser máis lento no comezo, pero queremos que probes.
-      3:
-        text: No recanto superior dereito da túa área de traballo, podes premer no
-          botón "Mostrar texto" en calquera desafío para alterar do modo de bloques
-          para o modo de programación na forma de texto.
-      4:
-        text: Na próxima lección, imos introducilo ao modo de tecleado. Aquí aínda
-          podes arrastrar o bloque da caixa de ferramentas ou podes teclear o nome
-          do comando. Conforme vaias tecleando vas ver nomes de comandos posíbeis
-          abaixo de onde está tecleando. En vez de teclear o nome enteiro do comando
-          podes seleccionar un deles para ser máis rápido. No meu traballo uso este
-          recurso de cubrir automaticamente todo o tempo cando estou escribindo código.
-      5:
-        text: Cando esteas tecleando código, o computador necesita que sexas moi preciso.
-          A grafía e o uso de letras maiúsculas e minúsculas no nome do comando deben
-          ser exactamente correctas, incluíndo as parénteses e o punto e coma. Mesmo
-          se houbese só un pequeno erro de tecleado, o BB-8 non vai entender o código
-          e non poderá se mover.
-      6:
-        text: Cando cometas un erro na liña, o editor vai destacalo para que poidas
-          tentar modificar o texto e corrixilo.
-      7:
-        text: Se tiveses problemas sempre podes recomezar co botón "Comezar desde
-          o inicio", e podes volver ao modo de bloques en calquera momento, premendo
-          no recanto superior dereito. Ok, imos tentar teclear! E se cometes algún
-          erro, non fiques frustrado. Todo o mundo ten que tentar algunhas veces antes
-          de acertar.
-    starwars_events:
-      1:
-        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
-          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
-          as atraccións que os nosos convidados proban. Estamos sempre procurando
-          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
-          e a tecnoloxía é esencial para iso.
-      2:
-        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
-          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
-          básicos da programación, imos volver o tempo para crear o teu propio xogo,
-          protagonizado por R2-D2 e C3PO.
-      3:
-        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
-          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
-          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
-          unha acción.'
-      4:
-        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
-          tecla de dirección ou un toque na pantalla.'
-      5:
-        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
-          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
-          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
-          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
-      6:
-        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() a el.
-          Cando o xogador presione a tecla de dirección para enriba, o código vinculado
-          ao bloque whenUp() é executado. Faremos a mesma cousa para o R2-D2 se mover
-          para baixo.
-      7:
-        text: Para facer isto usamos un comando chamado whenUp(). Cando arrastres
-          o comando para fóra da caixa de ferramentas, vas ver que comeza e termina
-          con chaves en vez de punto e coma. Isto dános espazo para colocar outros
-          comandos entre as chaves. Todos os comandos que colocamos entre esas chaves
-          serán executados cando o xogador presione a frecha para enriba.
-      8:
-        text: Queremos que o R2-D2 vaia para enriba, entón imos colocar un bloque
-          goUp(); dentro do comando. E imos facer a mesma cousa para que o R2-D2 vaia
-          para baixo.
-      9:
-        text: Agora, en vez de escribir anticipadamente todo o código para controlar
-          o noso androide, podemos deixar a R2-D2 reaccionar a eventos de botóns sendo
-          presionados que o fan se mover pola pantalla.
-    starwars_congrats:
-      1:
-        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
-          aquí na Code.org e traballei neste titorial que estás vendo agora.
-      2:
-        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
-          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
-          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
-          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
-          poder facer aínda máis.
-      3:
-        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
-          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
-          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
-          inchábeis e, cando toques 10.000, vences."
-      4:
-        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
-          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
-          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
-          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
-          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
-          Si!"
-      5:
-        text: Cando termines o teu xogo, selecciona compartir para recibir un link
-          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
-          teu móbil. Divírtete!
-    starwars_blocks_intro:
-      1:
-        text: Ola, son Kathleen Kennedy, produtora de Star Wars, O Despertar da Forza.
-          Hoxe, vas traballar cun dos nosos astros, BB-8. BB-8 é un androide esférico.
-          Todo o que fai e todos os seus movementos son controlados por softwares
-          de computador. A informática ten impacto sobre todas as industrias, do marketing
-          á saúde, aos filmes. De feito, centenares de enxeñeiros da computación traballan
-          xuntos para crear un filme como O Despertar da Forza.
-      2:
-        text: Ola, son Rachel Rose, engeñeira senior de P&D na ILM, e lidero o equipo
-          de animación e desenvolvemento de criaturas. No Despertar da Forza, son
-          responsábel de axudar os artistas a desenvolver equipamentos que son as
-          partes do personaxe que se moven e permítenlle parecer moi real nunha galáxia
-          moito, moito distante.
-      3:
-        text: Durante a próxima hora, imos crear o noso propio xogo do Star Wars,
-          que che vai ensinar os conceptos básicos da programación. Xeralmente, a
-          programación faise con texto, pero aquí imos usar bloques, para que poidas
-          arrastrar e soltar para escribir os programas. Para comezar, imos traballar
-          con Rey para programar o BB-8 para se mover e recoller toda a chatarra.
-      4:
-        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
-          a área do xogo, onde o teu programa será executado. As instrucións para
-          cada nivel están escritas abaixo da área do xogo.
-      5:
-        text: A parte do medio é onde fica a caixa de ferramentas, e cada un deses
-          bloques é un comando que BB-8 pode entender.
-      6:
-        text: O espazo en branco á dereita chámase área de traballo, e é onde imos
-          crear o noso programa.
-      7:
-        text: Se eu arrastro o bloque moveLeft(); para a nosa área de traballo, o
-          que acontece? BB-8 móvese un bloque para a esquerda.
-      8:
-        text: E se eu quixera que o BB-8 faga algo despois do moveLeft();? Podo agregar
-          outro bloque ao noso programa. Vou escoller o bloque moveUp(); e arrastralo
-          para debaixo do bloque moveLeft(); até que fique destacado. Entón, vou soltalo,
-          e os dous bloques van se encaixar. Cando eu presione Executar de novo, o
-          BB-8 vai seguir os comandos que están apiñados na nosa área de traballo
-          de enriba para baixo.
-      9:
-        text: Se queres eliminar un bloque, simplemente remóvaeo da pila e arrástrao
-          de volta para a caixa de ferramentas.
-      10:
-        text: Despois de presionar Executar sempre podes presionar o botón Recomezar
-          para levar a BB-8 de volta ao inicio. Imos comezar!
-    starwars_blocks_events:
-      1:
-        text: Ola, o meu nome é Charita Carter. Son produtora creativa senior aquí
-          na Walt Disney Imagineering. Son responsábel de liderar os equipos que producen
-          as atraccións que os nosos convidados proban. Estamos sempre procurando
-          modos de mellorar e tornar a experiencia dos nosos convidados máis agradábel,
-          e a tecnoloxía é esencial para iso.
-      2:
-        text: Parabéns, conseguichelo! Programaches o BB-8. Agora, penso que estamos
-          listos para algo máis difícil. Imos tentar. Agora que aprendiches os conceptos
-          básicos da programación, imos volver o tempo para crear o teu propio xogo,
-          protagonizado por R2-D2 e C3PO.
-      3:
-        text: 'Para facer un xogo, precisamos aprender algo que os programadores de
-          xogos usan todos os días: os eventos. Os eventos din ao seu programa o que
-          debe prestar atención para cando algo acontece, e, cando aconteza, realizar
-          unha acción.'
-      4:
-        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
-          tecla de dirección ou un toque na pantalla.'
-      5:
-        text: Aquí, imos facer a R2-D2 se mover para enriba para entregar unha mensaxe
-          para un piloto rebelde, e entón se mover para abaixo até o outro piloto
-          rebelde. Imos usar eventos para facelo se mover cando o xogador use as teclas
-          de dirección para enriba/para abaixo ou os botóns para enriba/para abaixo.
-      6:
-        text: Usamos o bloque de evento whenUp() e encaixamos o bloque goUp() nel.
-          Cando o xogador presiona a tecla de dirección para enriba, o código do bloque
-          whenUp() é executado. Faremos a mesma cousa para facer a R2-D2 se mover
-          para baixo. Agora, en vez de escribir anticipadamente todo o código para
-          controlar o noso androide, podemos deixar a R2-D2 reaccionar a eventos de
-          botóns presionados que fan que se mova pola pantalla.
-      7:
-        text: Paso a paso, o teu xogo está ficando máis interativo.
-    starwars_blocks_congrats:
-      1:
-        text: Ola, o meu nome é Alice! Eu xestiono os equipos de produto e enxeñaría
-          aquí na Code.org e traballei neste titorial que estás vendo agora.
-      2:
-        text: Acabas de chegar ao último nivel. Parabéns! Aprendiches todo o que precisas
-          saber para crear o teu propio xogo de Star Wars. Agora, non hai máis instrucións
-          nin desafíos para resolver. Podes crear o teu propio xogo e escoller como
-          vai funcionar. Unha cousa máis, desbloqueaches novos sons e comandos para
-          poder facer aínda máis.
-      3:
-        text: "[alumnos falando] Entón, fixemos un xogo no que, basicamente, marcas
-          puntos cando colle porcos inchábeis. O truco é que sempre que colles un
-          porco inchábel aparece un soldado. En verdade, a pantalla está chea de porcos
-          inchábeis e, cando toques 10.000, vences."
-      4:
-        text: "[alumnos falando] Fixemos un xogo no que non podes perder, e todo o
-          que matas dáche puntos. No meu programa, eu invertín os botóns, entón sempre
-          que premes para enriba, o teu personaxe vai para abaixo, e cando premes
-          para a dereita, vai para a esquerda. É ben difícil! Ás veces tes unha vantaxe,
-          unha vantaxe inxusta cando es ti mesmo o desenvolvedor do xogo. Conseguino?
-          Si!"
-      5:
-        text: Cando termines o teu xogo, selecciona compartir para recibir un link
-          que poderás compartir cos teus amigos ou abrir para xogar o teu xogo no
-          teu móbil. Divírtete!
-    mc_intro:
-      1:
-        text: O meu nome é Jens Bergensten, pero me chaman Jeb. Son o desenvolvedor
-          xefe do Minecraft aquí na mojang. con. Penso que tiña 11 ou 12 anos cando
-          comecei a programar porque quería facer xogos. Un dos amigos do meu pai
-          díxome que para facer xogos necesitaba aprender a programar. Foi así como
-          comecei. Gústame deseñar e descubrir a arquitetura das cousas. Iso é o que
-          máis me gusta no Minecraft.
-      2:
-        text: Durante a próxima hora vas aprender o básico da informática, programando
-          a Alex ou o Steve para andaren por un mundo simulado de Minecraft.
-      3:
-        text: 'A programación tradicional acostuma a ser en texto, pero hoxe imos
-          usar blockly: un sistema que usa bloques que podes arrastrar e soltar para
-          escribir programas. Por baixo realmente estás creando código en JavaScript.'
-      4:
-        text: Os conceptos que vas aprender son os que os programadores usan todos
-          os días e son a base da informática. Aquí na Mojang, usamos os mesmos conceptos
-          para facer funcionar o Minecraft.
-      5:
-        text: Antes de comezar vas escoller o teu personaxe. Eu vou escoller a Alex.
-          Imos construír o código para un programa que vai axudarlle a andar pola
-          pantalla.
-      6:
-        text: A túa pantalla está dividida en tres partes principais. Na esquerda,
-          está a túa área de xogo do Minecraft, onde o programa será executado. As
-          instrucións para cada nivel escríbense abaixo.
-      7:
-        text: Esta zona intermedia é a caixa de ferramentas, e cada un destes bloques
-          é un comando que dirixe as accións da Alex.
-      8:
-        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
-          construír o noso programa.
-      9:
-        text: Se arrastramos o bloque "andar diante" até a nosa área de traballo e
-          prememos en Executar, o que acontece? Alex avanza un espazo na grade.
-      10:
-        text: E se quixéramos facer algunha cousa tras avanzar un espazo? Podemos
-          agregar un bloque máis ao noso programa. Vou escoller o bloque "virar á
-          dereita" e vou arrastralo abaixo do meu bloque "andar diante" até que esa
-          liña laranxa apareza. Entón, vou soltalo e os dous bloques van formar un
-          grupo. Cando mandamos Executar novamente, a Alex vai seguir os comandos
-          apiñados de enriba para baixo na nosa área de traballo.
-      11:
-        text: E se queres eliminar un bloque, basta arrastralo da pila de volta para
-          a caixa de ferramentas.
-      12:
-        text: Para desfacer as túas mudanzas e volver ao estado inicial da fase, usa
-          o botón Comezar de novo, no recanto superior dereito da área de traballo.
-          Unha cousa máis, estás a ver ese triángulo nos bloques de virar? Sempre
-          que vexas eses triángulos, significa que podes escoller unha opción distinta.
-          Imos comezar a programar!
-    mc_repeat:
-      1:
-        text: Son a Lydia Winters, directora de marca da Mojang, e fixemos un xoguiño
-          chamado Minecraft.
-      2:
-        text: A miña actividade preferida no Minecraft é explorar. Adoro me aventurar
-          nas cavernas e ver o que encontro. Como non son programadora, é moi fascinante
-          pasar polas leccións do Minecraft e aprender un pouco sobre programación.
-      3:
-        text: A última fase precisaba de moitos bloques "andar diante". Sería moito
-          máis fácil se puidésemos dicir ao computador que realice o comando para
-          avanzar catro ou cinco veces. Para a nosa sorte, os computadores son moi
-          bos en repetir comandos con bucles de repetición.
-      4:
-        text: Ao construír o Minecraft, usamos bucles de repetición para colocar todos
-          os materiais iniciais e crear un novo mundo. Son miles e miles de bloques.
-          Tamén usamos bucles nos detalles, por exemplo, para facer os pés da Alex
-          iren para diante e para tras cando anda. Os bucles de repetición son unha
-          parte poderosa da programación.
-      5:
-        text: A noite está chegando, entón nas próximas fases, imos construír unha
-          casa para a nosa seguranza. Imos usar o bloque de repetición para facelo
-          con facilidade.
-      6:
-        text: Para construír unha parede para a nosa casa, podemos dicir á Alex que
-          avance e coloque táboas catro veces, ou podemos dicirlle que avance e coloque
-          unha táboa, entón apañar ese comando e usar o bloque de repetición para
-          que realice esa acción varias veces. Agora, imos premer no bloque de repetición
-          e dicirlle cantas veces queremos que realice esta acción. Agora, imos construír
-          a nosa casa antes que a noite chegue! Divírtete.
-    mc_if_statements:
-      1:
-        text: Agora imos aprender sobre comandos "se". Os comandos "se" son unha parte
-          fundamental de aprender a programar. Axudan a un computador a tomar decisións.
-      2:
-        text: Todos os computadores usan comandos "se", inclusive o meu teléfono.
-          Por exemplo, cando desbloqueo o meu teléfono, executa un código onde se
-          eu tecleo o contrasinal correcto, o teléfono estará desbloqueado. En caso
-          contrario mostra unha mensaxe de erro.
-      3:
-        text: Podes usar comandos "se" no teu código para facer o Steve e a Alice
-          reaccionaren ao que ven no mundo. Por exemplo, se tivesen un penedo diante
-          deles, poden virar á esquerda. Por exemplo, se tivesen un penedo diante
-          deles, poden virar á esquerda. Ou virar á dereita se baten nunha árbore.
-      4:
-        text: Neste caso, non queremos caer na lava. É fácil facer plans contra a
-          lava. Pode ser vista na pantalla. Pero e a lava que non podemos ver baixo
-          as pedras?
-      5:
-        text: Tras escavar a pedra, precisamos verificar se existe lava naquel lugar
-          antes de avanzar. Se tivese lava, queremos colocar unha pedra diante do
-          noso personaxe antes de avanzar. Así, podemos avanzar en seguranza. Hora
-          de escavar máis! E lémbrese de usar o comando "se" para andar con coidado.
-    mc_congrats_share:
-      1:
-        text: Parabéns! Aprendiches os bloques básicos da informática.
-      2:
-        text: Agora podes usar estes bloques para facer a túa propia creación. Non
-          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
-          queiras. Ti escolles.
-      3:
-        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
-          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
-          Construímos unha casa de lá!"
-      4:
-        text: Cando termines a túa creación, escolle compartir para recibir un link
-          para enviar aos teus amigos. Divírtete!
-    mc_congrats_no_share:
-      1:
-        text: Parabéns! Aprendiches os bloques básicos da informática.
-      2:
-        text: Agora podes usar estes bloques para facer a túa propia creación. Non
-          hai máis instrucións ou creba-cabezas para resolver. Podes construír o que
-          queiras. Ti escolles.
-      3:
-        text: "[alumnos falando] Agora hai que facelo real. Rapar. Eu fixen un L usando
-          fachos. Eu fixen un A usando tábuas de eucalipto. Foi correcto, foi correcto.
-          Construímos unha casa de lá!"
-      4:
-        text: Cando termines a a túa creación, escolle compartir para recibir un link
-          para enviar aos teus amigos. Divírtete!
-    gumball_intro:
-      1:
-        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
-          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
-          que creaches.
-      2:
-        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
-          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
-          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
-          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
-          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
-          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
-          e xogado nun móbil.
-      3:
-        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
-          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
-          nun móbil.
-      4:
-        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
-          o espazo do xogo, onde o teu programa será executado. As instrucións para
-          cada nivel están escritas abaixo.
-      5:
-        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
-          é un fragmento de código.
-      6:
-        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
-          construír o noso programa.
-      7:
-        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
-          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
-          até ver a liña amarela e, entón, eles se encaixam.
-      8:
-        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
-          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
-          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
-      9:
-        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
-          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
-          e facer os outros desapareceren. Ti es quen decides!
-    gumball_events:
-      1:
-        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
-          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
-          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
-      2:
-        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
-          tecla de dirección ou un toque na pantalla.'
-      3:
-        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
-          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
-          o xogador prema, todos os bloques anexados a ese bloque serán executados.
-      4:
-        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
-          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
-          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
-          poucos, o teu xogo está ficando cada vez máis interativo.
-    gumball_repeat:
-      1:
-        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
-          nunca vas precisar facer iso, porque os computadores son realmente bos en
-          repetir cousas.
-      2:
-        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
-          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
-          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
-          "repita infinitamente".
-      3:
-        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
-          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
-          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
-          xogo.
-    iceage_intro:
-      1:
-        text: Se queres facer o teu propio xogo, é realmente fácil. Todo o que precisas
-          son algúns conceptos básicos de programación e podes comezar a xogar o xogo
-          que creaches.
-      2:
-        text: Tes un xogo favorito? Imos dar un paso para a creación de xogos tal
-          como o do PlayLab. Os bos xogos teñen unha historia, e toda historia ten
-          personaxes. Os personaxes fan cousas como falar, se mover e interactuar
-          os uns cos outros. Talvez até mesmo marcar puntos con base nas regras do
-          xogo. Hoxe, imos aprender como facer todas esas cousas, unha a unha, con
-          personaxes divertidos e imos crear un xogo desde cero que pode ser compartido
-          e xogado nun móbil.
-      3:
-        text: Hoxe, imos aprender a facer todas esas cousas, unha por unha, con personaxes
-          divertidos e imos crear un xogo desde cero, que pode ser compartido e xogado
-          nun móbil.
-      4:
-        text: A túa pantalla está dividida en tres partes principais. Á esquerda está
-          o espazo do xogo, onde o teu programa será executado. As instrucións para
-          cada nivel están escritas abaixo.
-      5:
-        text: Esta área do medio é a caixa de ferramentas e cada un deses bloques
-          é un fragmento de código.
-      6:
-        text: O espazo en branco á dereita chámase área de traballo e é aquí que imos
-          construír o noso programa.
-      7:
-        text: Para comezar terás que conectar os teus bloques ao bloque laranxa "cando
-          executar". É posíbel conectar diversos bloques os uns aos outros, arrastrándoos
-          até ver a liña amarela e, entón, eles se encaixam.
-      8:
-        text: Neste primeiro desafío, imos facer os personaxes diciren algo conectando
-          o bloque "diga" ao bloque "cando executar" e tecleando a túa mensaxe. Cando
-          coloques os bloques no lugar, presiona o botón Executar e mira o que programaches.
-      9:
-        text: Comeza e, cando termines, vas poder crear o teu propio xogo, con todos
-          os tipos de xogadores que poden interactuar, marcar puntos, xogar cousas
-          e facer os outros desapareceren. Ti es quen decides!
-    iceage_events:
-      1:
-        text: 'Agora, imos aprender un pouco sobre algo que todos os programadores
-          de xogos usan todos os días: os eventos. Un evento di ao programa que debe
-          oír cando algo aconteza e, cando esa cousa acontece, realiza unha acción.'
-      2:
-        text: 'Algúns exemplos de eventos son: detectar un clic do rato, o toque dunha
-          tecla de dirección ou un toque na pantalla.'
-      3:
-        text: Aquí, imos facer o personaxe dicir algunha cousa cando o xogador prema
-          nel. Imos usar o bloque "cando premido" e anexarlle o bloque "diga". Cando
-          o xogador prema, todos os bloques anexados a ese bloque serán executados.
-      4:
-        text: Hai tamén os bloques "cando a frecha estivese presionada". Se lles conectas
-          os bloques "mova", podes comezar a mover os teus personaxes para enriba,
-          para baixo, para esquerda e para a dereita coas frechas do teclado. Aos
-          poucos, o teu xogo está ficando cada vez máis interativo.
-    iceage_repeat:
-      1:
-        text: Consegues imaxinar se tiveses que repetir algo para toda vida? Felizmente
-          nunca vas precisar facer iso, porque os computadores son realmente bos en
-          repetir cousas.
-      2:
-        text: Este é o bloque "repita infinitamente". Todo dentro deste bloque vai
-          acontecer no xogo para sempre. Se queremos que un personaxe faga algo repetidamente
-          sen que o xogador faga nada, imos colocar eses bloques dentro do bloque
-          "repita infinitamente".
-      3:
-        text: Neste próximo desafío, o noso obxectivo é axudar o personaxe a realizar
-          algo continuamente. Aprender sobre o funcionamento dos comandos de repetición
-          vaiche axudar a economizar moito tempo no futuro, cando crees o teu propio
-          xogo.
-    mc_2016_intro:
-      8:
-        text: Se queres eliminar un bloque, simplemente remóvaeo da pila e arrástrao
-          de volta para a caixa de ferramentas.
-    hoc_dance_events_2019:
-      4:
-        text: 'Algúns exemplos de eventos son: oir o clic do rato, presionar unha
-          tecla de dirección ou tocar a pantalla.'

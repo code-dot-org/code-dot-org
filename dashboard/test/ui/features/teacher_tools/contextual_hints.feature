@@ -2,7 +2,6 @@ Feature: Contextual Hints
 
 Scenario: Blocks render in contextual hints
   Given I am on "http://studio.code.org/s/allthethings/lessons/6/levels/2?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
   And I wait to see "#lightbulb"
 
@@ -19,7 +18,6 @@ Scenario: Blocks render in contextual hints
 
 Scenario: Contextual hints in level without Authored Hints
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/6?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
   Then element "#lightbulb" does not exist

@@ -1,14 +1,14 @@
-import {MicrobitStubBoard} from '../makeStubBoard';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
 
-describe('MicroBitButton', function() {
-  it('is an event emitter component', function() {
+describe('MicroBitButton', function () {
+  it('is an event emitter component', function () {
     const button = new MicroBitButton({
-      mb: new MicrobitStubBoard(),
-      pin: 0
+      mb: new MBFirmataClientStub(),
+      pin: 0,
     });
     expect(button).to.be.an.instanceOf(EventEmitter);
   });
@@ -18,8 +18,8 @@ describe('MicroBitButton', function() {
 
     beforeEach(() => {
       button = new MicroBitButton({
-        mb: new MicrobitStubBoard(),
-        pin: 0
+        mb: new MBFirmataClientStub(),
+        pin: 0,
       });
     });
 
@@ -46,8 +46,8 @@ describe('MicroBitButton', function() {
 
     beforeEach(() => {
       button = new MicroBitButton({
-        mb: new MicrobitStubBoard(),
-        pin: 0
+        mb: new MBFirmataClientStub(),
+        pin: 0,
       });
     });
     after(() => {
@@ -70,10 +70,10 @@ describe('MicroBitButton', function() {
 
   describe('emitsEvent', () => {
     it('emits the corresponding event and updates states when board receives event', () => {
-      let boardClient = new MicrobitStubBoard();
+      let boardClient = new MBFirmataClientStub();
       let button = new MicroBitButton({
         mb: boardClient,
-        pin: 0
+        pin: 0,
       });
 
       let emitSpy = sinon.spy(button, 'emit');

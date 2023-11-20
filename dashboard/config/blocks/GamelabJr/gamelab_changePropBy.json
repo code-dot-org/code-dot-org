@@ -42,6 +42,7 @@
         "name": "VAL",
         "type": "Number"
       }
-    ]
+    ],
+    "style": "default"
   }
 }

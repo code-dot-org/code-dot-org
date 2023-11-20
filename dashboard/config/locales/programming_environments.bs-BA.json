@@ -2,33 +2,186 @@
   "bs-BA": {
     "data": {
       "programming_environments": {
+        "applab": {
+          "categories": {
+            "control": {
+              "expressions": {
+                "timedLoop": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "data": {
+              "expressions": {
+                "getPrediction": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                }
+              }
+            },
+            "functions": {
+              "name": "Funkcije"
+            },
+            "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
+              "name": "Matematika"
+            },
+            "ui_controls": {
+              "expressions": {
+                "onEvent": {
+                  "palette_params": {
+                    "callback": {
+                      "type": "Funkcija"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Pravljenje muzike"
+                    }
+                  }
+                }
+              }
+            },
+            "variables": {
+              "expressions": {
+                "addPair": {
+                  "return_value": "Nijedno"
+                },
+                "declareAssign_x": {
+                  "short_description": "Deklarira varijablu sa datim imenom nakon 'var', i dodijeljuje joj vrijednost na desnoj strani izraza"
+                }
+              },
+              "name": "Varijable"
+            }
+          },
+          "name": "Laboratorij za Aplikacije"
+        },
         "gamelab": {
           "categories": {
             "drawing": {
+              "expressions": {
+                "shape": {
+                  "examples": {
+                    "Star": {
+                      "name": "Zvijezda"
+                    }
+                  }
+                }
+              },
               "name": "Crtanje"
             },
-            "math": {
-              "name": "Matematika"
-            },
-            "variables": {
-              "name": "Varijable"
-            },
             "functions": {
               "name": "Funkcije"
-            }
-          }
-        },
-        "applab": {
-          "name": "Laboratorij za Aplikacije",
-          "categories": {
+            },
+            "game_lab": {
+              "expressions": {
+                "mouseWentDown": {
+                  "examples": {
+                    "Black and White": {
+                      "name": "Crno-bijelo"
+                    }
+                  }
+                },
+                "playSound": {
+                  "examples": {
+                    "Making Music": {
+                      "name": "Pravljenje muzike"
+                    }
+                  }
+                }
+              }
+            },
+            "groups": {
+              "expressions": {
+                "setColorEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                },
+                "setTintEach": {
+                  "palette_params": {
+                    "color": {
+                      "type": "Boja"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
+              "expressions": {
+                "randomNumber": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                },
+                "randomNumber_min_max": {
+                  "palette_params": {
+                    "max": {
+                      "description": "Vrača največi broj"
+                    },
+                    "min": {
+                      "description": "Vraća najmanji broj"
+                    }
+                  }
+                }
+              },
               "name": "Matematika"
             },
-            "variables": {
-              "name": "Varijable"
+            "sprites": {
+              "expressions": {
+                "getSpeed": {
+                  "examples": {
+                    "Spiral": {
+                      "name": "Spirala"
+                    }
+                  }
+                }
+              }
             },
-            "functions": {
-              "name": "Funkcije"
+            "variables": {
+              "expressions": {
+                "declareAssign_x": {
+                  "short_description": "Deklarira varijablu sa datim imenom nakon 'var', i dodijeljuje joj vrijednost na desnoj strani izraza"
+                }
+              },
+              "name": "Varijable"
             }
           }
         },
@@ -40,23 +193,23 @@
             "events": {
               "name": "Događaji"
             },
-            "loops": {
-              "name": "Petlje"
-            },
-            "variables": {
-              "name": "Varijable"
-            },
-            "math": {
-              "name": "Matematika"
+            "functions": {
+              "name": "Funkcije"
             },
             "logic": {
               "name": "Logika"
             },
-            "functions": {
-              "name": "Funkcije"
+            "loops": {
+              "name": "Petlje"
+            },
+            "math": {
+              "name": "Matematika"
             },
             "text": {
               "name": "Tekst"
+            },
+            "variables": {
+              "name": "Varijable"
             }
           }
         }

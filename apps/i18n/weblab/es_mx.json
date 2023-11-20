@@ -1,2 +1,21 @@
 {
+  "addCSSButton": "Añadir CSS",
+  "addHTMLButton": "Añadir HTML",
+  "addImageButton": "Añadir Imagen",
+  "closeFullscreenPreview": "Cerrar previsualización de pantalla completa",
+  "currentProjectCapacity": "{currentMegabytes}MB de {totalMegabytes}MB utilizados",
+  "disallowedHtml": "El archivo \"{filename}\" contiene elementos HTML no permitidos: `{disallowedTags}`. Se eliminarán cuando se cierre este cuadro de diálogo.",
+  "errorSavingProject": "Algo no ha funcionado al guardarse automáticamente tu proyecto. Comprueba tu conexión a Internet e intenta guardarlo manualmente. Si el problema persiste, intenta recargar la página para empezar de nuevo.",
+  "fatalError": "Error Grave: {message}. Si estás en modo Navegación Privada, no se pueden escribir datos.",
+  "loadFailure": "Lo sentimos, Laboratorio Web no se ha podido cargar por algún motivo. Error: {message}",
+  "openFullscreenPreview": "Abrir previsualización de pantalla completa",
+  "refreshPreview": "Actualizar y Guardar",
+  "reloading": "Recargando...",
+  "reset": "Reiniciar Laboratorio Web",
+  "resetComplete": "Completado el reinicio del Laboratorio Web",
+  "resetFailure": "Fallo al reiniciar Laboratorio Web: {message}.",
+  "toggleInspectorOff": "Inspector: Encendido",
+  "toggleInspectorOn": "Inspector: Apagado",
+  "troubleshootingSupport": "Por favor, consulta nuestro artículo de soporte [\"Solución de problemas de Laboratorio Web\"]({url}) para más información.",
+  "uploadError": "Error al Cargar"
 }

@@ -1,11 +1,8 @@
 ---
-title: Teacher Resources - Make a Flappy Game
-nav: hoc_teacher_resources_nav
-theme: responsive
-video_player: true
+title: Tilföng kennara - Búa til Flappy leik
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Búa til Flappy leik: Klukkustund kóðunar
 
 {{ hoc_flappy_video }}
 
@@ -15,7 +12,7 @@ video_player: true
 
 ### Lesson Plans:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Búðu til Flappy leik]({{ hoc_flappy_cb_url }})
 
 ### Extension Activities:
 
@@ -34,7 +31,7 @@ video_player: true
 
 ## Yfirlit
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Nota draga-og-sleppa forritun til að gera þinn eigin Flappy Bird leik, og gefa honum nýtt útlit (Flappy Hákarl, Flappy Jólasveinn, eða eitthvað annað). Bættu leiknum við símann þinn með einum smelli.
 
 **Recommended Age Range:** 4-104
 

@@ -1,0 +1,427 @@
+{
+  "columnDetailsMaximumValue": "максимум",
+  "columnDetailsMinimumValue": "минимум",
+  "columnInspectorDescription": "Описание",
+  "correctAnswer": "Верно",
+  "dataCardLastUpdated": "Последнее обновление",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Diameter": {
+          "description": "Его диаметр в миллиметрах.",
+          "id": "Диаметр"
+        },
+        "Height": {
+          "description": "Высота моллюска в раковине в миллиметрах.",
+          "id": "Высота"
+        },
+        "Length": {
+          "description": "Его длина в самой длинной точке в миллиметрах.",
+          "id": "Длина"
+        },
+        "Rings": {
+          "description": "Возраст в годах.",
+          "id": "Сколько колец"
+        },
+        "Sex": {
+          "description": "Пол абалона: M (самец), F (самка) или I (личинка).",
+          "id": "Пол"
+        },
+        "Shell weight": {
+          "description": "Вес раковины после сушки в граммах.",
+          "id": "Вес раковины"
+        },
+        "Shucked weight": {
+          "description": "Вес моллюска со снятой раковиной в граммах.",
+          "id": "Вес без раковины"
+        },
+        "Viscera weight": {
+          "description": "Вес внутренних органов в граммах.",
+          "id": "Вес внутренних органов"
+        },
+        "Whole weight": {
+          "description": "Вес всего абалона в граммах.",
+          "id": "Полный вес"
+        }
+      }
+    },
+    "auto_mpg": {
+      "fields": {
+        "acceleration": {
+          "description": "Ускорение автомобиля.",
+          "id": "ускорение"
+        },
+        "car name": {
+          "description": "Название автомобиля: все уникальные значения.",
+          "id": "название автомобиля"
+        },
+        "cylinders": {
+          "description": "Количество цилиндров в двигателе.",
+          "id": "цилиндры"
+        },
+        "displacement": {
+          "description": "Измерение объема цилиндра.",
+          "id": "смещение"
+        },
+        "horsepower": {
+          "description": "Мощность автомобиля.",
+          "id": "лошадиная сила"
+        },
+        "model year": {
+          "description": "Год выпуска автомобиля.",
+          "id": "модельный год"
+        },
+        "mpg": {
+          "description": "Миль на галлон.",
+          "id": "mpg"
+        },
+        "weight": {
+          "description": "Вес автомобиля в фунтах."
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "Месяц"
+        },
+        "index": {
+          "id": "индекс"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "Возраст"
+        },
+        "Gender": {
+          "id": "Пол"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "банан"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "возраст"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "цвет"
+        },
+        "food": {
+          "id": "еда"
+        },
+        "music": {
+          "id": "музыка"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "Возраст"
+        },
+        "Sex": {
+          "id": "Пол"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "возраст"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "интернет"
+        },
+        "Writing": {
+          "id": "Письмо"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "Страна"
+        },
+        "Dance": {
+          "id": "Танцуй"
+        },
+        "Music": {
+          "id": "Музыка"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "возраст"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "Страна"
+        },
+        "Name": {
+          "id": "Имя"
+        },
+        "Score": {
+          "id": "Счет"
+        },
+        "Star": {
+          "id": "Звезда"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "сыр"
+        },
+        "chicken": {
+          "id": "курица"
+        },
+        "lamb": {
+          "id": "ягненок"
+        },
+        "onion": {
+          "id": "лук"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "Категория"
+        },
+        "Description": {
+          "id": "Описание"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "ginger": {
+          "id": "имбирь"
+        },
+        "onion": {
+          "id": "лук"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "бекон"
+        },
+        "cheese": {
+          "id": "сыр"
+        },
+        "lobster": {
+          "id": "лобстер"
+        },
+        "meat": {
+          "id": "мясо"
+        },
+        "mushrooms": {
+          "id": "грибы"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "лайм"
+        },
+        "strawberry": {
+          "id": "клубника"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "крокодил"
+        },
+        "elephant": {
+          "id": "слон"
+        },
+        "people": {
+          "id": "люди"
+        },
+        "rhino": {
+          "id": "носорог"
+        },
+        "trees": {
+          "id": "деревья"
+        }
+      },
+      "name": "Сафари"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "фасоль"
+        },
+        "cheese": {
+          "id": "сыр"
+        },
+        "chicken": {
+          "id": "курица"
+        },
+        "fruit": {
+          "id": "фрукт"
+        },
+        "tomato": {
+          "id": "помидор"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "авокадо"
+        },
+        "beans": {
+          "id": "фасоль"
+        },
+        "corn": {
+          "id": "кукуруза"
+        },
+        "lime": {
+          "id": "лайм"
+        },
+        "onion": {
+          "id": "лук"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "sides": {
+          "id": "стороны"
+        },
+        "size": {
+          "id": "размер"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "sides": {
+          "id": "стороны"
+        },
+        "size": {
+          "id": "размер"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "день"
+        },
+        "shoe": {
+          "id": "обувь"
+        },
+        "weather": {
+          "id": "погода"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "Художник"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "возраст"
+        },
+        "health": {
+          "id": "здоровье"
+        },
+        "school": {
+          "id": "школа"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "Достижения"
+        },
+        "Age": {
+          "description": "Возраст",
+          "id": "Возраст"
+        },
+        "Country": {
+          "id": "Страна"
+        },
+        "Dance": {
+          "id": "Танцуй"
+        },
+        "Gender": {
+          "description": "Пол",
+          "id": "Пол"
+        },
+        "Height": {
+          "description": "Высота",
+          "id": "Высота"
+        },
+        "Internet": {
+          "id": "интернет"
+        },
+        "Music": {
+          "id": "Музыка"
+        },
+        "Writing": {
+          "id": "Письмо"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Водный мир"
+        }
+      }
+    }
+  },
+  "incorrectAnswer": "Неверные",
+  "modelCardPossibleValuesMaximum": "максимум",
+  "modelCardPossibleValuesMinimum": "минимум",
+  "navigateBack": "Назад",
+  "navigateDone": "Готово",
+  "navigateForward": "Продолжить",
+  "predictButton": "Предсказать",
+  "saveProgress": "Сохранить",
+  "tryAgain": "Попробуй еще раз",
+  "uniqueOptionsWarningNotice": "Примечание"
+}

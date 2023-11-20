@@ -1,0 +1,67 @@
+{
+  "fil-PH": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Matuto nang higit pa",
+            "title": "I-explore ang Artificial Intelligence at Machine Learning"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "codebytes-2020": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "coldplay": {
+            "buttonText": "Subukan mo"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Panimula"
+          },
+          "csjourneys": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "csjourneys-22": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "csleadersprize": {
+            "buttonText": "Matuto nang higit pa"
+          },
+          "hoc-2023": {
+            "body": "Sumali sa milyun-milyong tao sa buong mundo sa pag-organisa ng isang oras ng pag-coding, na may AI o walang AI at matuto kung paano gumagana ang AI. Maaaring gawin ito ng sinuman, saanman. Hindi kailangan ng karanasan.",
+            "buttonText": "Matuto nang higit pa",
+            "title": "Hour of Code: Pagigigng Malikhain gamit ang AI"
+          },
+          "hoc-more": {
+            "body": "Ang website ng Hour of Code ay mayroong mahigit 500 na aktibidad sa computer science para sa lahat ng edad at antas ng karanasan, na binuo ng Code.org at mga partner."
+          },
+          "home-learning-2020": {
+            "buttonText": "Tingnan ang Mga Ideya ng Proyekto"
+          },
+          "superhero": {
+            "buttonText": "Dagdagan ang Kaalaman"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Samahan niyo kami"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Magrekomenda ng Guro"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Samahan niyo kami"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Samahan niyo kami"
+          }
+        }
+      }
+    }
+  }
+}

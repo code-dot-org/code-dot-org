@@ -1,9 +1,9 @@
 {
   "absolute": "itseisarvo",
+  "agentDiamondPathCongrats": "Onneksi olkoon, löysit timanttipolun! Olet kerännyt tähän mennessä {count, plural, one {1 diamond} other {# diamonds}}!",
   "agentGenericFailureMessage": "Jatka koodaamista! Muista käyttää Agentia apuna.",
   "agentTooFewBlocksFailureMessage": "Kokeile vain yhden kuution lisäämistä kerrallaan, jotta saat Agentin oikeaan kohtaan.",
   "at": "klo",
-  "agentDiamondPathCongrats": "Onneksi olkoon, löysit timanttipolun! Olet kerännyt tähän mennessä {count, plural, one {1 diamond} other {# diamonds}}!",
   "blockActionAdd": "lisää",
   "blockActionAttack": "hyökkää",
   "blockActionClone": "clone kuutioita",

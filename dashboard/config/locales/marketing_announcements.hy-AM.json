@@ -1,0 +1,55 @@
+{
+  "hy-AM": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "codebytes-2020": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "coldplay": {
+            "buttonText": "Try it"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Սկսել"
+          },
+          "csjourneys": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "csjourneys-22": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "csleadersprize": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "hoc-2023": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "superhero": {
+            "buttonText": "Սովորել ավելին"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Join us"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Join us"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Join us"
+          }
+        }
+      }
+    }
+  }
+}

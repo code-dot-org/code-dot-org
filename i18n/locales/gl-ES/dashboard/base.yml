@@ -47,12 +47,15 @@ gl:
         gender: 'Xénero'
         edit_header: 'Editar os Detalles da Conta'
         finish_sign_up_header: 'Remata de crear a túa conta'
+        finish_sign_up_header_error: 'Por favor, corrixe os seguintes erros:'
         finish_sign_up_subheader: 'Completa a seguinte información para acabar de crear unha conta de Code.org para <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Completa a seguinte información para acabar de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.'
         finish_sign_up_subheader_provider_markdown: 'Completa a seguinte información para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.'
         error:
           future: non pode estar no futuro
+        user_type: 'Tipo de conta'
+        us_state: 'Estado'
   beta: "beta"
   hello: "Ola, mundo"
   welcome_back: "Ola outra vez, %{name}"
@@ -144,7 +147,6 @@ gl:
     invalid_password: "O contrasinal  ten que ter, polo menos, 6 caracteres"
     mismatch_password: "Os dous contrasinais que metiches non se corresponden"
     student_consent: "Confirmo que teño autorización de meus pais ou titores legais para empregrar os servizos de Code.org."
-    additional_information: "Necesitamos máis informacións para continuarmos o proceso de creacción da conta."
     user_type_button: "Actualizar tipo de conta"
     user_type_label: "Tipo de conta"
     user_type_student: "Estudante"
@@ -160,6 +162,7 @@ gl:
     share_teacher_email_reg_partner_preference_yes: "Si"
     share_teacher_email_reg_partner_preference_no: "Non"
     share_teacher_email_reg_partner_preference_required: "Tes que especificar un e-mail de preferencia."
+    us_state: 'Estado'
   school_info:
     title: 'Información da escola (opcional)'
     school_country: 'País da escola'
@@ -533,26 +536,24 @@ gl:
   upsell:
     applab:
       title: 'Laboratorio de aplicacións'
-    hoc:
-      title: 'Labirinto clásico'
-      body: 'Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Código do Flappy bird'
       body: 'Queer crear o seu proprio xogo en menos de 10 minutos? Experimente o noso titorial sobre o Código do Flappy bird!'
-    20-hour:
-      title: 'Curso acelerado'
-      body: 'Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!'
-      body_short: 'Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.'
-    hoc2014:
-      try_new_tutorial: 'Experimente o noso novo titorial da Hora do Código na versión beta'
-      try_frozen: 'O Artista con Anna e Elsa, do filme Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Galería"
       body: "Vexa unha galería de aplicacións e imaxes artísticas creadas polos nosos usuarios"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Labirinto clásico'
+      body: 'Experimente as nocións básicas da informática. Millóns de persoas xa as experimentaron.'
+    hoc2014:
+      try_new_tutorial: 'Experimente o noso novo titorial da Hora do Código na versión beta'
+      try_frozen: 'O Artista con Anna e Elsa, do filme Frozen'
     infinity:
       title: "Laboratorio infinito"
       body: "Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity."
@@ -561,14 +562,16 @@ gl:
       body: "Explora o mundo de Minecraft a través do código"
     minecraft2016:
       title: "Minecraft"
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
-    unplugged_conditionals:
-      title: "Condicionais"
+    starwars:
+      title: "Star Wars"
     widgets:
       audience: "A partir de 14 anos"
+    unplugged_conditionals:
+      title: "Condicionais"
+    20-hour:
+      title: 'Curso acelerado'
+      body: 'Este curso de 20 horas introduce o núcleo da informática e os conceptos da programación. O curso está deseñado para o seu uso en clase para os cursos de primaria pero é divertido aprender con calquera idade!'
+      body_short: 'Aprenda os fundamentos da informática en unha versión acelerada dos cursos 2 a 4.'
   landing:
     report_bug: "Comunicar erro"
     support: "Obter axuda"
@@ -708,9 +711,14 @@ gl:
       robotics:
         kodable: 'Kodable'
         other: "Outros"
+      workshop_course:
+        other: 'Outros'
       email_opt_in:
         opt_in_yes: 'Si'
         opt_in_no: 'Non'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     accept: 'Acepto'
   page_not_found_title: "Páxina non atopada"

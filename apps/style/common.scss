@@ -17,8 +17,7 @@ $common-root: "/blockly/media/common_images/";
 }
 
 @mixin font {
-  font-family: $gotham-regular, sans-serif;
-  font-weight: normal;
+  @include main-font-regular;
 }
 
 @mixin no-transform {
@@ -58,13 +57,11 @@ body {
   margin-top: 0;
 }
 h1 {
-  font-family: $gotham-extra-bold, sans-serif;
-  font-weight: normal;
+  @include main-font-bold;
   font-size: 140%;
 }
 h2 {
-  font-family: $gotham-bold, sans-serif;
-  font-weight: normal;
+  @include main-font-semi-bold;
 }
 a {
   color: $link_color;
@@ -74,18 +71,16 @@ a {
   }
 }
 strong {
-  font-family: $gotham-extra-bold, sans-serif;
-  font-weight: normal;
+  @include main-font-bold;
 }
 
 em {
-  font-family: $gotham-italics, sans-serif;
-  font-style: normal;
+  @include main-font-regular-italic;
 }
 
 strong em,
 em strong {
-  font-family: $gotham-extra-bold-italics, sans-serif;
+  @include main-font-bold-italic;
 }
 
 .clear {
@@ -249,8 +244,9 @@ button.arrow:focus {
   outline-style: none;
 }
 button.arrow:disabled {
-  border: 1px solid #c7c7c7;
-  background-color: #c7c7c7;
+  border: 1px solid $neutral_dark20;
+  background-color: $neutral_dark20;
+  color: $neutral_dark20;
 }
 
 #soft-buttons {
@@ -307,6 +303,10 @@ button.arrow:disabled {
 
 #codeTextbox.pin_bottom {
   border: 1px solid #ddd;
+}
+
+#codeTextbox.has_banner {
+  top: $workspace-headers-height + 30;
 }
 
 html[dir="rtl"] .editor-column {
@@ -388,6 +388,30 @@ html[dir="rtl"] .editor-column {
 
 .droplet-gutter-line.droplet_warning {
   background-position: 2px 2px;
+}
+
+html[dir="rtl"] {
+  // !Important is used to overwrite droplet.min styling for RTL languages support.
+  #codeTextbox {
+    .droplet-wrapper-div {
+      left: 0 !important;
+    }
+
+    .ace_editor {
+      left: 0 !important;
+    }
+
+    .droplet-palette-wrapper {
+      right: 0 !important;
+      left: unset !important;
+      z-index: 1;
+    }
+
+    .droplet-palette-header,
+    .droplet-palette-scroller {
+      border-left: 2px solid #ddd;
+    }
+  }
 }
 
 #visualizationResizeBar {
@@ -564,6 +588,7 @@ button.blocklyLaunch {
   &.hide {
     display: none;
   }
+
   border: 1px solid $orange;
   background-color: $orange;
 
@@ -594,9 +619,16 @@ button.blocklyLaunch {
   html[dir="RTL"] & {
     margin-right: 0;
   }
+
   &#resetButton {
-    border: 1px solid $cyan;
-    background-color: $cyan;
+    border: 1px solid $brand_secondary_default;
+    background-color: $brand_secondary_default;
+
+    &:hover {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+      box-shadow: none;
+    }
   }
 
   &.hideText {
@@ -776,12 +808,11 @@ input[type="radio"] {
   min-width: 4em;
 }
 .feedback {
+  @include main-font-bold;
   font-size: 30px;
   margin: 20px 0 20px 0;
   line-height: 28px;
   color: #7e5ba0;
-  font-family: $gotham-extra-bold;
-  font-weight: normal;
 }
 #show-code {
   margin-bottom: 5px;
@@ -901,14 +932,13 @@ html[dir="RTL"] .prompt-icon-cell {
 
 .qtip.cdo-qtips.qtip-authored-hint {
   .qtip-content {
-    font-family: $gotham-regular;
+    @include main-font-regular;
     padding: 10px 10px 0 10px;
     color: $charcoal;
 
     h3 {
+      @include main-font-bold;
       margin-top: 0;
-      font-family: $gotham-extra-bold;
-      font-weight: normal;
       font-size: 18px;
       line-height: 20px;
     }
@@ -992,6 +1022,7 @@ html[dir="RTL"] .prompt-icon-cell {
 $workspace-header-button-height: 24px;
 $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-button-height) * 0.5;
 .workspace-header-button {
+  @include main-font-semi-bold;
   cursor: pointer;
   float: right;
   overflow: hidden;
@@ -1002,7 +1033,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   margin-left: 0;
   height: $workspace-header-button-height;
   border-radius: 4px; // TODO: Make mixin
-  font-family: $gotham-bold;
   &:hover {
     background-color: $cyan;
   }
@@ -1059,9 +1089,6 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     float: left;
     padding: 0 10px;
     cursor: pointer;
-    #show-toolbox-click-target:hover .fa {
-      color: $white;
-    }
 
     & > span {
       margin: auto auto auto 18px;
@@ -1073,8 +1100,10 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   #clear-puzzle-header:hover {
-    background-color: $red;
+    background-color: $product_negative_default;
+    color: $neutral_white;
   }
+
   .block-counter-overflow {
     color: $yellow;
   }
@@ -1150,7 +1179,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   .template-level-warning {
-    font-family: "Gotham 7r", sans-serif;
+    @include main-font-bold;
     color: $red;
     line-height: normal;
     margin-top: 10px;
@@ -1173,11 +1202,9 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   .goog-menuitem-hover {
     background-color: rgb(255 255 255 / 0.35);
   }
-  &:not(.blocklyGridDropdownMenu) {
-    border-color: rgb(84 84 84) !important;
-  }
+  border-color: rgb(84 84 84) !important;
   &.blocklyGridDropdownMenu {
-    background-color: white !important;
+    background-color: white;
     padding-top: 5px !important;
 
     .goog-menuitem {
@@ -1196,8 +1223,8 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 .modal-content {
   .show-code {
     summary {
-      color: $charcoal;
-      font-family: $gotham-bold;
+      @include main-font-semi-bold;
+      color: $neutral_dark;
     }
 
     .generated-code-container {
@@ -1228,15 +1255,19 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     p {
       font-size: 14px;
       line-height: inherit;
-      color: $charcoal;
+      color: $neutral_dark;
       margin-bottom: 10px;
 
+      &.caption-text {
+        @include main-font-semi-bold;
+      }
+
       a {
-        font-family: $gotham-extra-bold;
-        font-weight: normal;
-        color: $purple;
+        @include main-font-regular;
+        color: $brand_secondary_default;
+        text-decoration: underline;
         &:hover {
-          text-decoration: underline;
+          color: $brand_secondary_dark;
         }
       }
     }
@@ -1245,6 +1276,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     font-size: 14px;
     overflow: scroll;
     max-height: 400px;
+    margin: 12px 0;
   }
 }
 
@@ -1445,7 +1477,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   }
 
   button.saved-to-gallery {
-    font-family: "Gotham 4i", sans-serif;
+    @include main-font-regular-italic;
   }
 
   #sharing-input-container {
@@ -1562,9 +1594,8 @@ $text-color: $white;
 $tooltip-border-radius: 14px;
 $tooltip-shadow-color: $shadow;
 $see-examples-font-weight: bold;
-$tooltip-font: $gotham-regular;
+$tooltip-font: $main-font;
 $function-name-font: $code-font;
-$examples-link-font: $gotham-extra-bold;
 $see-examples-thick-underline-color: $yellow;
 
 .tooltip-example-link,
@@ -1581,9 +1612,9 @@ $see-examples-thick-underline-color: $yellow;
   &:link,
   &:active,
   &:visited {
+    @include main-font-semi-bold;
     border-bottom: 3px solid $see-examples-thick-underline-color;
     color: white;
-    font-family: $gotham-bold;
   }
 }
 
@@ -1615,11 +1646,11 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: $tooltip-font;
+  font-weight: $regular-font-weight;
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;
   overflow: hidden;
-  font-weight: normal;
 }
 
 .droplet-hover-div {

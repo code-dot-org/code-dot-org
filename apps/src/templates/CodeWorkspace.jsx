@@ -19,11 +19,13 @@ import {queryParams} from '../code-studio/utils';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import styleConstants from '@cdo/apps/styleConstants';
+import classNames from 'classnames';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
+    inStartBlocksMode: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -38,7 +40,9 @@ class CodeWorkspace extends React.Component {
     showMakerToggle: PropTypes.bool,
     autogenerateML: PropTypes.func,
     closeWorkspaceAlert: PropTypes.func,
-    workspaceAlert: PropTypes.object
+    workspaceAlert: PropTypes.object,
+    isProjectTemplateLevel: PropTypes.bool,
+    hasIncompatibleSources: PropTypes.bool,
   };
 
   shouldComponentUpdate(nextProps) {
@@ -47,14 +51,18 @@ class CodeWorkspace extends React.Component {
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
     Object.keys(nextProps).forEach(
-      function(key) {
+      function (key) {
         // isRunning and style only affect style, and can be updated
         // workspaceAlert is involved in displaying or closing workspace alert
         // therefore this key can be updated
+        // hasIncompatibleSources is involved in displaying an alert for invalid Blockly
+        // sources. This key can be updated because it will only be set once, and it will
+        // be set after the initial render.
         if (
           key === 'isRunning' ||
           key === 'style' ||
-          key === 'workspaceAlert'
+          key === 'workspaceAlert' ||
+          key === 'hasIncompatibleSources'
         ) {
           return;
         }
@@ -99,13 +107,13 @@ class CodeWorkspace extends React.Component {
       readonlyWorkspace,
       withSettingsCog,
       showMakerToggle,
-      autogenerateML
+      autogenerateML,
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
     const chevronStyle = [
       styles.chevronButton,
-      runModeIndicators && isRunning && styles.runningIcon
+      runModeIndicators && isRunning && styles.runningIcon,
     ];
 
     const settingsCog = showSettingsCog && (
@@ -125,6 +133,8 @@ class CodeWorkspace extends React.Component {
             id="hide-toolbox-icon"
             style={[commonStyles.hidden, chevronStyle]}
             type="button"
+            aria-label={i18n.toolboxHeaderDroplet()}
+            aria-expanded
           >
             <i className="fa fa-chevron-circle-right" />
           </button>
@@ -140,13 +150,19 @@ class CodeWorkspace extends React.Component {
         style={{...styles.toolboxHeaderContainer, ...commonStyles.hidden}}
       >
         <span id="show-toolbox-click-target">
-          <button id="show-toolbox-icon" style={chevronStyle} type="button">
+          <button
+            id="show-toolbox-icon"
+            style={chevronStyle}
+            type="button"
+            aria-label={i18n.toolboxHeaderDroplet()}
+            aria-expanded={false}
+          >
             <i className="fa fa-chevron-circle-right" />
           </button>
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
         <span>{settingsCog}</span>
-      </PaneSection>
+      </PaneSection>,
     ];
   }
 
@@ -242,20 +258,49 @@ class CodeWorkspace extends React.Component {
           <ProtectedStatefulDiv
             ref={codeTextbox => (this.codeTextbox = codeTextbox)}
             id="codeTextbox"
-            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+            className={classNames(
+              this.props.pinWorkspaceToBottom ? 'pin_bottom' : '',
+              this.props.inStartBlocksMode ? 'has_banner' : ''
+            )}
             canUpdate={true}
           >
             {this.props.workspaceAlert && this.renderWorkspaceAlert(false)}
           </ProtectedStatefulDiv>
         )}
         {this.props.displayNotStartedBanner && !inCsfExampleSolution && (
-          <div id="notStartedBanner" style={styles.studentNotStartedWarning}>
+          <div
+            id="notStartedBanner"
+            style={{...styles.topBanner, ...styles.studentNotStartedWarning}}
+          >
             {i18n.levelNotStartedWarning()}
           </div>
         )}
         {this.props.displayOldVersionBanner && (
-          <div id="oldVersionBanner" style={styles.oldVersionWarning}>
+          <div
+            id="oldVersionBanner"
+            style={{...styles.topBanner, ...styles.oldVersionWarning}}
+          >
             {i18n.oldVersionWarning()}
+          </div>
+        )}
+        {this.props.inStartBlocksMode && (
+          <>
+            <div
+              id="startBlocksBanner"
+              style={{...styles.topBanner, ...styles.startBlocksBanner}}
+            >
+              {this.props.isProjectTemplateLevel
+                ? i18n.startBlocksTemplateWarning()
+                : i18n.inStartBlocksMode()}
+            </div>
+          </>
+        )}
+        {this.props.hasIncompatibleSources && (
+          <div
+            id="incompatibleSourcesBanner"
+            style={{...styles.topBanner, ...styles.incompatibleCodeBanner}}
+          >
+            {i18n.jsonInCdoBlockly()}
           </div>
         )}
         {props.showDebugger && (
@@ -274,27 +319,33 @@ class CodeWorkspace extends React.Component {
 
 const styles = {
   headerIcon: {
-    fontSize: 18
+    fontSize: 18,
   },
   runningIcon: {
-    color: color.dark_charcoal
+    color: color.neutral_white,
+    ':hover': {
+      color: color.neutral_dark20,
+    },
   },
   oldVersionWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
     textAlign: 'center',
-    height: 20,
-    padding: 5,
-    opacity: 0.8,
-    position: 'relative'
   },
   studentNotStartedWarning: {
-    zIndex: 99,
     backgroundColor: color.lightest_red,
-    height: 20,
+  },
+  startBlocksBanner: {
+    backgroundColor: color.lighter_yellow,
+  },
+  topBanner: {
+    zIndex: 99,
     padding: 5,
     opacity: 0.9,
-    position: 'relative'
+    position: 'relative',
+    height: 'fit-content',
+  },
+  incompatibleCodeBanner: {
+    backgroundColor: color.lightest_red,
   },
   chevronButton: {
     padding: 0,
@@ -302,19 +353,19 @@ const styles = {
     border: 'none',
     lineHeight: styleConstants['workspace-headers-height'] + 'px',
     backgroundColor: 'transparent',
-    color: color.lighter_purple,
+    color: color.neutral_white,
     fontSize: 18,
     ':hover': {
       cursor: 'pointer',
-      color: color.white,
-      boxShadow: 'none'
-    }
+      color: color.neutral_dark20,
+      boxShadow: 'none',
+    },
   },
   toolboxHeaderContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };
 
 export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
@@ -323,6 +374,7 @@ export default connect(
     displayNotStartedBanner: state.pageConstants.displayNotStartedBanner,
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
+    inStartBlocksMode: state.pageConstants.inStartBlocksMode,
     isRtl: state.isRtl,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: !!state.runState.isRunning,
@@ -331,14 +383,16 @@ export default connect(
       state.pageConstants.showDebugConsole
     ),
     pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-    showProjectTemplateWorkspaceIcon: !!state.pageConstants
-      .showProjectTemplateWorkspaceIcon,
+    showProjectTemplateWorkspaceIcon:
+      !!state.pageConstants.showProjectTemplateWorkspaceIcon,
     isMinecraft: !!state.pageConstants.isMinecraft,
     runModeIndicators: shouldUseRunModeIndicators(state),
     showMakerToggle: !!state.pageConstants.showMakerToggle,
-    workspaceAlert: state.project.workspaceAlert
+    workspaceAlert: state.project.workspaceAlert,
+    isProjectTemplateLevel: state.pageConstants.isProjectTemplateLevel,
+    hasIncompatibleSources: state.blockly.hasIncompatibleSources,
   }),
   dispatch => ({
-    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert())
+    closeWorkspaceAlert: () => dispatch(closeWorkspaceAlert()),
   })
 )(Radium(CodeWorkspace));

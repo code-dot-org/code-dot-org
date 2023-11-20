@@ -9,7 +9,7 @@ export default class SoundCategory extends React.Component {
   static propTypes = {
     displayName: PropTypes.string,
     category: PropTypes.string,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired,
   };
 
   selectCategory = () => this.props.onSelect(this.props.category);
@@ -33,9 +33,9 @@ const styles = {
     margin: 10,
     color: color.white,
     float: 'left',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   categoryArea: {
-    width: '100%'
-  }
+    width: '100%',
+  },
 };

@@ -8,3 +8,6 @@ export const FatalErrorType = makeEnum(
   'LoadFailure',
   'ResetFailure'
 );
+
+export const FILE_SYSTEM_ERROR = 'EFILESYSTEMERROR';
+export const BRAMBLE_READY_STATE = 'bramble:readyToMount';

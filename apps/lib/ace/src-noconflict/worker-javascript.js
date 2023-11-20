@@ -8809,7 +8809,6 @@ exports.browser = {
   moveBy               : false,
   moveTo               : false,
   MutationObserver     : false,
-  name                 : false,
   Node                 : false,
   NodeFilter           : false,
   NodeList             : false,

@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2023-05-17T02:32:53.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSD_TeacherTips_Debugging",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 29587,
+    "name_suffix": "_2022",
+    "encrypted": "false",
+    "long_instructions": "## Consider the following when watching this video:\r\n#### In your role as the teacher, what can do to support students through the process of debugging? "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2023-05-17T02:32:53.069+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod4-Debugging-TipVid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod4-Debugging-TipVid_2022\"}]"
+}]]></config>
+</StandaloneVideo>

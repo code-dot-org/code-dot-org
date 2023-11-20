@@ -43,6 +43,7 @@ sl:
         gender: 'Spol'
         edit_header: 'Uredi podrobnosti računa'
         finish_sign_up_header: 'Dokončaj registracijo'
+        finish_sign_up_header_error: 'Prosim popravite sledeče napake:'
         error:
           future: ne more biti v prihodnosti
   beta: "beta"
@@ -126,7 +127,6 @@ sl:
     agree_us_data_transfer_teacher: '**Strinjam se, da lahko Code.org prenese podatke (vključno z osebnimi podatki) iz moje uporabe (in uporabe mojih študentov) tega spletnega mesta v Združene države Amerike** za namen gostovanja in obdelovanja teh podatkov.'
     data_collection_us: "Razumem, da je Code.org neprofitno spletno mesto iz ZDA in da se lahko zakoni glede zbiranja podatkov v ZDA razlikujejo od zakonov v moji državi."
     visit_privacy: 'Obiščite [Privacy Policy](%{privacy_url}) Code.org za več informacij.'
-    additional_information: "Potrebujemo nekaj dodatnih informacij za uspešno prijavo."
     user_type_student: "Učenec"
     user_type_teacher: "Učitelj/ica"
     field_is_required: "se zahtevan(o)"
@@ -457,30 +457,26 @@ sl:
       body: "App Lab je okolje za programiranje, kjer lahko narediš enostavne aplikacije. Oblikuješ izgled aplikacije, kodiraš z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah."
       body_short: "Oblikuj izgled aplikacije, kodiraj z bloki ali JavaScriptom. Ko aplikacijo dokončaš jo lahko deliš z ostalimi v nekaj sekundah."
       audience: 'Starost 13+'
-    hoc:
-      title: 'Klasičen labirint'
-      body: 'Preizkusite se v osnovah računalništva. Milijonom je že uspelo.'
+    aquatic:
+      title: "Minecraft"
     flappy:
       title: 'Program za Plahutača (Flappyja)'
       body: 'Bi hotel/a svojo igrico izdelati v manj kot 10 minutah? Pomagaj si z priročnikom za Plahutača (Flappy-ja)!'
-    20-hour:
-      title: 'Pospešeni Tečaj'
-      body: 'Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.'
-      body_short: 'Naučite se osnov računalništva v pospešeni različici predavanj 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Uporabite naš nov priročnik za Uro kodiranja'
-      try_frozen: 'Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)'
+    frozen:
+      title: "Zmrznjenka (Frozen)"
     gallery:
       title: "Galerija"
       body: "Poglej si galerijo slik iz igric in aplikacij, ki so jih ustvarili naši uporabniki"
     gamelab:
       audience: "Starost 13+"
-    weblab:
-      audience: "Starost 13+"
-    frozen:
-      title: "Zmrznjenka (Frozen)"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Minecraft"
+    hoc:
+      title: 'Klasičen labirint'
+      body: 'Preizkusite se v osnovah računalništva. Milijonom je že uspelo.'
+    hoc2014:
+      try_new_tutorial: 'Uporabite naš nov priročnik za Uro kodiranja'
+      try_frozen: 'Umetnik z Anno in Elsa (iz Disney-eve risanke Frozen)'
     infinity:
       title: "Neskončen igralni laboratorij"
     minecraft:
@@ -489,17 +485,21 @@ sl:
     minecraft2016:
       title: "Minecraft"
       body: "Sprogramiraj živali in druga Minecraft bitja v svoji lastni različici Minecrafta."
-    aquatic:
-      title: "Minecraft"
-    hero:
-      title: "Minecraft"
+    starwars:
+      title: "Star Wars"
+    weblab:
+      audience: "Starost 13+"
+    widgets:
+      audience: "Starost 14+"
+    unplugged_conditionals:
+      title: "Pogoji"
     unplugged:
       title: "Lekcije brez prijave"
       audience: "Starost 4+"
-    unplugged_conditionals:
-      title: "Pogoji"
-    widgets:
-      audience: "Starost 14+"
+    20-hour:
+      title: 'Pospešeni Tečaj'
+      body: 'Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.'
+      body_short: 'Naučite se osnov računalništva v pospešeni različici predavanj 2-4.'
   landing:
     report_bug: "Sporoči napako"
     support: "Pomoč"
@@ -648,9 +648,14 @@ sl:
       robotics:
         kodable: 'Kodable'
         other: "Drugi"
+      workshop_course:
+        other: 'Drugi'
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'
+  course_offering:
+    headers:
+      minecraft: 'Minecraft'
   cookie_banner:
     accept: 'Strinjam se'
   copy: 'Kopiraj'

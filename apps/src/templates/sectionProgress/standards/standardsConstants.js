@@ -1,6 +1,6 @@
 export const LessonIcons = {
   PLUGGED: 'desktop',
-  UNPLUGGED: 'scissors'
+  UNPLUGGED: 'scissors',
 };
 
 export const cstaStandardsURL = 'https://www.csteachers.org/page/standards';
@@ -15,5 +15,5 @@ export const cstaStandardsURL = 'https://www.csteachers.org/page/standards';
 
 export const TeacherScores = {
   COMPLETE: 100,
-  INCOMPLETE: 0
+  INCOMPLETE: 0,
 };

@@ -9,3 +9,5 @@ right 'Companies are required by law to give users options to personalize what d
 teacher_markdown <<MARKDOWN
 This one is potentially tricky because you have to use test-taking strategy to interpret the "LEAST TRUE" framing of the question. Laws about data collection and disclosure vary widely by country - the EU has a lot of laws required informed consent to collect data - and even varies by state in the US.  But there is nothing that says a company is required to give you options.
 MARKDOWN
+
+allow_multiple_attempts true

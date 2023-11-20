@@ -358,9 +358,6 @@
   volunteer_engineer_submission_subtitle_generic: '100 000 lärare kommer att vara värdar för Hour of Code i sina klassrum detta år,5-11 december 2016. De vill ha din hjälp! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} lärare önskar frivilliga brinner för datavetenskaplig utbildning att hjälpa till med deras Hour of Code i December. <br>%{num_volunteers} frivilliga har anmält sig. Anslut dig."
   volunteer_engineer_submission_intro_background: "Hour of Code är en global rörelse för att prova en timme introduktion till datavetenskap som når tiotals miljoner studenter i 180 + länder. Kom gärna med under Computer Science Education Week, 5-11 december."
-  volunteer_engineer_submission_intro_recruit: 'Dessa lärare vill gärna ha någon <span style="font-family: ''Gotham 7r'', sans-serif;"> teknisk person</span> som kan hjälpa till i klassrummet, eller någon som kan <span style="font-family: ''Gotham 7r'', sans-serif;"> inspirera</span> eleverna genom att tala om bredden av möjligheter med datavetenskap (vilket kan ske genom en videochatt). Om du inte vill ställa upp som frivillig, <a href="%{url}"> lär dig mer</a> om att ordna ett eget Hour of Code event.'
-  volunteer_engineer_submission_intro_signup: "Ange följande information om du är en student i datavetenskap eller programvaru professionell. Fält markerade med en <span class=\"form-required-field\"> *</span> måste fyllas i."
-  volunteer_engineer_submission_intro_links: "Inte ute efter för att vara volontär? <a href=\"%{learn_more}\"> Lär dig mer</a> om hur du organiserar din egen timme av kod och hur du hitta lokala volontärer på vår <a href=\"%{volunteer_local}\"> volontärkarta</a>."
   volunteer_engineer_submission_update_information: "Uppdatera din information"
   volunteer_engineer_submission_header_shared: "Information som delas med lärare på en karta som visar var frivilliga finns"
   volunteer_engineer_submission_field_name: "Namn"
@@ -1235,9 +1232,9 @@
   page_not_found_button: "Återvänd hem"
   hoc2018_mc_thank_microsoft: "  Vi tackar Microsoft som stöttar vår vision och målsättnng att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får de färdigheter som behövs för att lyckas på 2000-talet.  "
   page_not_available_button: "Återvänd hem"
-  hoc2021_mc_mee_description: 'Res bakåt i tiden och lär dig koda! Den nya självstudien Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows, Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar och videor.'
-  hoc2021_mc_mee_villages_description: 'Lär dig grundläggande kodning och utforska mångfald och inkludering med dina elever i Minecraft: Utbildningsversion.'
-  hoc2021_mc_mee_ai_description: 'Utforska AI med dina elever och lär dig koda i Minecraft: Utbildningsversion.'
+  hoc2021_mc_mee_description: "Res bakåt i tiden och lär dig koda! Den nya självstudien Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows, Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar och videor."
+  hoc2021_mc_mee_villages_description: "Lär dig grundläggande kodning och utforska mångfald och inkludering med dina elever i Minecraft: Utbildningsversion."
+  hoc2021_mc_mee_ai_description: "Utforska AI med dina elever och lär dig koda i Minecraft: Utbildningsversion."
   footer_powered_by_aws: "Drivs av Amazon Web Services"
   footer_privacy_policy: "Sekretesspolicy"
   footer_about: "Om"

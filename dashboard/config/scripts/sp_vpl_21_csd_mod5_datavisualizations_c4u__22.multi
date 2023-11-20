@@ -1,5 +1,5 @@
 name 'SP-VPL-21-CSD-mod5-DataVisualizations-c4u_-22'
-title 'Check for understanding'
+title 'Check for Understanding'
 description 'The students in your class are creating machine learning models to predict salad preferences based on different combinations of toppings. As you are circulating the room, you are listening in on group conversations to informally assess student understanding. You notice one group seems to be randomly selecting features. You are wondering if they know how to use the cross-tab visualizations. You stop and ask them to show you an example of feature that would be **LEAST** helpful in training A.I. Bot to predict whether someone will like or dislike a salad.'
 question '**Which of the following would be LEAST helpful in training A.I. Bot?**'
 wrong '![](https://images.code.org/655efc83d0ca3ad71b3a47fb33f9beea-image-1635194040845.33.47 PM.png)'
@@ -16,3 +16,5 @@ teacher_markdown <<MARKDOWN
 <a href="https://studio.code.org/docs/concepts/ai-lab/using-data-with-categorical-features/" target="blank" rel="noopener noreferrer">Click here</a> to learn more about  using data to select features in AI Lab. 
 
 MARKDOWN
+
+allow_multiple_attempts true

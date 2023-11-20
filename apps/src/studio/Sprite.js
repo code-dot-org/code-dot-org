@@ -87,23 +87,23 @@ export default class Sprite extends Item {
         {
           type: 'direction',
           count: frameCounts.turns || 0,
-          frames: frameCounts.walkFrames || frameCounts.walk
+          frames: frameCounts.walkFrames || frameCounts.walk,
         },
         {
           type: 'idle',
           count:
             (frameCounts.idleNormal || 0) + (frameCounts.idleEmotions || 0),
-          frames: frameCounts.idleFrames || frameCounts.walk
+          frames: frameCounts.idleFrames || frameCounts.walk,
         },
         {
           type: 'walkingEmotions',
           count: frameCounts.walkingEmotions || 0,
-          frames: frameCounts.walkFrames || frameCounts.walk
-        }
+          frames: frameCounts.walkFrames || frameCounts.walk,
+        },
       ],
       packedSheetFrameCount: frameCounts.packedSheetFrameCount,
       defaultFramesPerAnimation: frameCounts.walk,
-      skewAnimations: true
+      skewAnimations: true,
     };
 
     if (this.animation_) {
@@ -118,7 +118,7 @@ export default class Sprite extends Item {
     this.animation_ = new StudioAnimation(
       Object.assign({}, options, {
         spriteSheet: new StudioSpriteSheet(options),
-        animationFrameDuration: this.getAnimationFrameDuration()
+        animationFrameDuration: this.getAnimationFrameDuration(),
       })
     );
   }
@@ -168,12 +168,12 @@ export default class Sprite extends Item {
         {
           type: 'legacyEmotionRow',
           count: rowCount,
-          frames: frameCount
-        }
+          frames: frameCount,
+        },
       ],
       defaultFramesPerAnimation: frameCount,
       horizontalAnimation: true,
-      skewAnimations: true
+      skewAnimations: true,
     };
 
     if (this.legacyAnimation_) {
@@ -188,7 +188,7 @@ export default class Sprite extends Item {
     this.legacyAnimation_ = new StudioAnimation(
       Object.assign({}, options, {
         spriteSheet: new StudioSpriteSheet(options),
-        animationFrameDuration: this.getAnimationFrameDuration()
+        animationFrameDuration: this.getAnimationFrameDuration(),
       })
     );
 
@@ -204,14 +204,14 @@ export default class Sprite extends Item {
         animationList.push({
           type: 'legacyEmotionRow',
           index: row,
-          frame: 0
+          frame: 0,
         });
       }
       for (i = 1; i < frameCounts.normal; i++) {
         animationList.push({
           type: 'legacyEmotionRow',
           index: row,
-          frame: i
+          frame: i,
         });
       }
       this.legacyAnimation_.createSpecialAnimation('idle', row, animationList);
@@ -224,7 +224,7 @@ export default class Sprite extends Item {
           // If turnCount is only 7, create the first animation from 'normal'
           // frame 0.
           this.legacyAnimation_.createSpecialAnimation('direction', turnIndex, [
-            {type: 'legacyEmotionRow', index: row, frame: 0}
+            {type: 'legacyEmotionRow', index: row, frame: 0},
           ]);
           turnIndex++;
         }
@@ -233,8 +233,8 @@ export default class Sprite extends Item {
             {
               type: 'legacyEmotionRow',
               index: row,
-              frame: this.frameCounts.normal + frameIndex
-            }
+              frame: this.frameCounts.normal + frameIndex,
+            },
           ]);
         }
       }
@@ -251,14 +251,14 @@ export default class Sprite extends Item {
           animationList.push({
             type: 'legacyEmotionRow',
             index: 0,
-            frame: frameCounts.normal + frameCounts.turns + i
+            frame: frameCounts.normal + frameCounts.turns + i,
           });
         }
         for (var k = 1; k < frameCounts.normal; k++) {
           animationList.push({
             type: 'legacyEmotionRow',
             index: 0,
-            frame: k
+            frame: k,
           });
         }
         this.legacyAnimation_.createSpecialAnimation(
@@ -465,7 +465,7 @@ export default class Sprite extends Item {
   getCenterPos() {
     return {
       x: this.x + this.width / 2,
-      y: this.y + this.height / 2
+      y: this.y + this.height / 2,
     };
   }
 
@@ -473,7 +473,7 @@ export default class Sprite extends Item {
   getCurrentDrawPosition() {
     return {
       x: this.displayX + this.drawWidth / 2 + this.renderOffset.x,
-      y: this.displayY + this.drawHeight / 2 + this.renderOffset.y
+      y: this.displayY + this.drawHeight / 2 + this.renderOffset.y,
     };
   }
 

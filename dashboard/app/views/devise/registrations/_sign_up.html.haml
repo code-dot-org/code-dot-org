@@ -1,13 +1,15 @@
 - SignUpTracking.log_load_sign_up session
+%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%script{src: webpack_asset_path('js/devise/registrations/_sign_up.js')}
 
 #signup
   .row
     .span8.header
-      %h1= t('signup_form.title')
+      %h2= t('signup_form.title')
       = t('signup_form.overview_markdown', markdown: true).html_safe
-      = t('auth.already_signedup')
+      %p= t('auth.already_signedup')
       &nbsp;
-      = link_to t('nav.user.signin'), new_session_path(resource_name)
+      %p= link_to t('nav.user.signin'), new_session_path(resource_name)
   .row
     .span7.oauth-links
       = render "devise/shared/oauth_links"
@@ -57,7 +59,7 @@
         / Submit
         .row
           .span8
-            %button.submit= t('signup_form.submit')
+            %button.submit{:id => 'signup_form_submit'}= t('signup_form.submit')
 
   / More information for students about email storage.
   .row

@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
+import TetherComponent from 'react-tether';
+
 import i18n from '@cdo/locale';
 import {add, update, remove} from '../../redux/watchedExpressions';
-import TetherComponent from 'react-tether';
 import AutocompleteSelector from './AutocompleteSelector';
+
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
 
 const WATCH_VALUE_NOT_RUNNING = 'undefined';
 const OPTIONS_GAMELAB = [
@@ -20,7 +23,7 @@ const OPTIONS_GAMELAB = [
   'sprite.velocityX',
   'sprite.velocityY',
   'sprite.width',
-  'sprite.height'
+  'sprite.height',
 ];
 
 const buttonSize = '28px';
@@ -39,7 +42,7 @@ class Watchers extends React.Component {
     update: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,
     style: PropTypes.object,
-    appType: PropTypes.string.isRequired
+    appType: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -54,7 +57,7 @@ class Watchers extends React.Component {
       autocompleteOpen: false,
       autocompleteIndex: 0,
       autocompleteOptions: this.defaultAutocompleteOptions,
-      historyIndex: -1
+      historyIndex: -1,
     };
   }
 
@@ -127,7 +130,7 @@ class Watchers extends React.Component {
         history: [inputText].concat(this.state.history),
         editing: false,
         historyIndex: -1,
-        text: ''
+        text: '',
       },
       () => {
         this.scrollToBottom();
@@ -140,7 +143,7 @@ class Watchers extends React.Component {
     this.setState({
       editing: false,
       autocompleteSelecting: false,
-      autocompleteOpen: false
+      autocompleteOpen: false,
     });
   };
 
@@ -148,7 +151,7 @@ class Watchers extends React.Component {
     this.setState(
       {
         editing: false,
-        text: ''
+        text: '',
       },
       () => {
         this.filterOptions();
@@ -164,7 +167,7 @@ class Watchers extends React.Component {
         text: this.state.history[historyIndex],
         historyIndex: historyIndex,
         autocompleteSelecting: false,
-        autocompleteOpen: false
+        autocompleteOpen: false,
       },
       () => {
         this.filterOptions();
@@ -176,7 +179,7 @@ class Watchers extends React.Component {
   selectAutocompleteIndex(autocompleteIndex) {
     this.setState({
       autocompleteSelecting: true,
-      autocompleteIndex: autocompleteIndex
+      autocompleteIndex: autocompleteIndex,
     });
   }
 
@@ -265,7 +268,7 @@ class Watchers extends React.Component {
     this.setState({
       autocompleteIndex: 0,
       historyIndex: -1,
-      autocompleteSelecting: false
+      autocompleteSelecting: false,
     });
   }
 
@@ -276,9 +279,10 @@ class Watchers extends React.Component {
   }
 
   filterOptions = () => {
-    const text = this.state.text;
+    const text = escapeSpecialCharactersForRegExp(this.state.text);
+    const regexpToCheck = new RegExp(text, 'i');
     const filteredOptions = this.defaultAutocompleteOptions.filter(option =>
-      option.match(new RegExp(text, 'i'))
+      option.match(regexpToCheck)
     );
     const completeMatch =
       filteredOptions.length === 1 && filteredOptions[0] === text;
@@ -295,7 +299,7 @@ class Watchers extends React.Component {
         text.length &&
         filteredOptions.length &&
         !completeMatch &&
-        (!navigatingHistory || historyTextModified)
+        (!navigatingHistory || historyTextModified),
     });
   };
 
@@ -306,7 +310,7 @@ class Watchers extends React.Component {
   onChange = e => {
     this.setState(
       {
-        text: e.target.value
+        text: e.target.value,
       },
       this.filterOptions
     );
@@ -357,8 +361,8 @@ class Watchers extends React.Component {
               constraints={[
                 {
                   to: 'scrollParent',
-                  attachment: 'together'
-                }
+                  attachment: 'together',
+                },
               ]}
               style={styles.autocompleteDropdown}
             >
@@ -383,7 +387,7 @@ class Watchers extends React.Component {
                   onOptionHovered={index =>
                     this.setState({
                       autocompleteSelecting: true,
-                      autocompleteIndex: index
+                      autocompleteIndex: index,
                     })
                   }
                   onClickOutside={this.closeAutocomplete}
@@ -399,11 +403,11 @@ class Watchers extends React.Component {
 
 const styles = {
   autocompleteDropdown: {
-    zIndex: 2 // Needed so the dropdown appears over the coding space (z-index 1)
+    zIndex: 2, // Needed so the dropdown appears over the coding space (z-index 1)
   },
   watchContainer: {
     width: '100%',
-    height: '100%'
+    height: '100%',
   },
   watchRemoveButton: {
     fontSize: 23,
@@ -418,7 +422,7 @@ const styles = {
     margin: 0,
     padding: 0,
     border: 'none',
-    borderRadius: 0
+    borderRadius: 0,
   },
   watchAddButton: {
     fontSize: 20,
@@ -433,31 +437,31 @@ const styles = {
     margin: 0,
     padding: 0,
     border: 'none',
-    borderRadius: 0
+    borderRadius: 0,
   },
   watchItemDescription: {
     whiteSpace: 'nowrap',
     minHeight: buttonSize,
     marginLeft: 3,
     overflow: 'hidden',
-    width: valueAndInputWidth
+    width: valueAndInputWidth,
   },
   watchValueArray: {
-    whiteSpace: 'normal'
+    whiteSpace: 'normal',
   },
   watchValue: {
     display: 'inline-flex',
     alignItems: 'center',
-    minHeight: '28px'
+    minHeight: '28px',
   },
   watchInputSection: {
-    clear: 'both'
+    clear: 'both',
   },
   watchInput: {
     width: valueAndInputWidth,
     marginTop: 0,
-    height: inputElementHeight
-  }
+    height: inputElementHeight,
+  },
 };
 
 export const UnconnectedWatchers = Watchers;
@@ -465,24 +469,20 @@ export default connect(
   state => ({
     watchedExpressions: state.watchedExpressions,
     isRunning: state.runState.isRunning,
-    appType: state.pageConstants.appType
+    appType: state.pageConstants.appType,
   }),
   {
     add,
     update,
-    remove
+    remove,
   },
   null,
-  {withRef: true}
+  {forwardRef: true}
 )(Watchers);
 
 // http://stackoverflow.com/a/7390612
 function nonValueDescriptor(obj) {
-  return {}.toString
-    .call(obj)
-    .split(' ')[1]
-    .slice(0, -1)
-    .toLowerCase();
+  return {}.toString.call(obj).split(' ')[1].slice(0, -1).toLowerCase();
 }
 
 function wrapValue(index, length) {

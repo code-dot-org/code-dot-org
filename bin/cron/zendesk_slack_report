@@ -31,45 +31,47 @@ STATUSES_TO_REPORT = %w(new open)
 # Slack room -> Zendesk group mappings to report on
 MONITORING_GROUPS = {
   # 'slack-room-name' => ['Zendesk group name', 'Zendesk group name', ...]
-  'ap-csa-pilot' => ['CSA Curric.'],
-  'csf' => ['CSF'],
-  'cspalooza' => ['CSP'],
-  'developers' => ['Developers'],
-  'cs-discoveries' => ['CSD'],
   'acquisition-products' => ['Acquisition Products'],
-  'edpop' => ['EdPop Dana', 'EdPop Desiree', 'EdPop Kristyn', 'EdPop Tawny', 'EdPop Alicia', 'EdPop Danielle'],
-  'facilitator-things' => ['PnP Andrea'],
-  'foundations' => ['Accounts'],
+  'ap-csa' => ['CSA Curriculum'],
+  'cs-discoveries' => ['CSD Curriculum'],
+  'csc' => ['CSC Curriculum'],
+  'csf' => ['CSF Curriculum'],
+  'cspalooza' => ['CSP Curriculum'],
+  'edpop' => ['Ed POP Tickets'],
   'hour-of-code' => ['Hour of Code'],
-  'international' => ['International'],
-  'marketing' => ['Media'],
-  'product' => ['Product'],
-  'programsnpartners_theluau' => ['PNP'],
-  'regional_managers' => ['Outreach'],
+  'infrastructure' => ['Infrastructure'],
+  'international' => ['International Partnerships', 'International'],
+  'marketing' => ['Marketing'],
+  'programsnpartners_theluau' => ['Programs Team'],
+  'reaching-out' => ['Adoption and Outreach Team', 'Ed Programs', 'Professional Learning'],
   'student-learning' => ['Student Learning'],
   'teacher-tools' => ['Teacher Tools']
 }
 
 # Zendesk group -> Zendesk filter id mappings for helpful links (optional)
 GROUP_FILTERS = {
-  'Account' => '360086130792',
-  'CSA Engineering' => '360217870791',
-  'CSD' => '83142177',
-  'CSF' => '278602768',
-  'CSP' => '45749787',
-  'Developers' => '47222126',
-  'International' => '360086130812',
-  'Media' => '47756566',
-  'PLC Tools' => '114103940251',
-  'Product' => '360007773991',
-  '*Labs' => '301129028',
+  'Acquisition Products' => '360057951072',
+  'Adoption and Outreach Team' => '11480578768781',
+  'CSA Curriculum' => '360202873512',
+  'CSC Curriculum' => '9834973821325',
+  'CSD Curriculum' => '83142177',
+  'CSF Curriculum' => '278602768',
+  'CSP Curriculum' => '45749787',
+  'Ed Programs' => '14650984488333',
+  'Ed POP Tickets' => '9638169070477',
+  'Hour of Code' => '9690110143757',
+  'Infrastructure' => '9811556471309',
+  'International' => '14740813928845',
+  'International Partnerships' => '360086130812',
+  'Marketing' => '47756566',
+  'Professional Learning' => '13462346662541',
+  'Programs Team' => '8163316698253',
+  'Student Learning' => '9612070142733',
+  'Teacher Tools' => '360082967212'
 }
 
 # Slack room -> username of a code.org email
-MONITORING_USERS = {
-  'outreach_honky-tonk' => ['zendesk-outreach'],
-  'pl-team-only' => ['zendesk-pl']
-}
+MONITORING_USERS = {}
 
 class Zendesk
   include HTTParty
@@ -191,14 +193,14 @@ def get_tickets_by_group
 
   # Report out for each Slack room
   MONITORING_GROUPS.each do |slack_room, groups|
-    group_messages = groups.map do |group_name|
+    group_messages = groups.filter_map do |group_name|
       count = group_counts[group_name] || 0
       next nil if count == 0
 
       url = Zendesk.group_url(group: group_name, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{group_name} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if group_messages.empty?
@@ -228,7 +230,7 @@ def get_tickets_by_user
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|
-    user_messages = users.map do |user|
+    user_messages = users.filter_map do |user|
       user_email = "#{user}@code.org"
       count = user_counts[user_email] || 0
       next nil if count == 0
@@ -236,7 +238,7 @@ def get_tickets_by_user
       url = Zendesk.user_url(user: user_email, statuses: STATUSES_TO_REPORT)
       statuses = STATUSES_TO_REPORT.join('/')
       "<#{url}|#{user_email} has #{count} #{statuses} Zendesk tickets.>"
-    end.compact
+    end
 
     # Don't post if there's nothing to report
     next if user_messages.empty?
@@ -255,4 +257,3 @@ end
 #
 #
 get_tickets_by_group
-get_tickets_by_user

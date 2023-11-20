@@ -13,11 +13,11 @@ export default class HeaderPopup extends Component {
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     minimal: PropTypes.bool,
-    windowHeight: PropTypes.number
+    windowHeight: PropTypes.number,
   };
 
   state = {
-    open: false
+    open: false,
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -42,8 +42,8 @@ export default class HeaderPopup extends Component {
         study: 'mini_view',
         event: 'mini_view_opened',
         data_json: JSON.stringify({
-          current_level_id: this.props.currentLevelId
-        })
+          current_level_id: this.props.currentLevelId,
+        }),
       },
       {includeUserId: true}
     );
@@ -72,7 +72,11 @@ export default class HeaderPopup extends Component {
         {!this.state.open && (
           <button
             type="button"
-            className={classNames('header_popup_link', styles.headerItem)}
+            className={classNames(
+              'no-mc',
+              'header_popup_link',
+              styles.headerItem
+            )}
             onClick={this.handleClickOpen}
           >
             <i className={classNames('fa fa-caret-down', styles.caret)} />
@@ -84,7 +88,11 @@ export default class HeaderPopup extends Component {
           <div>
             <button
               type="button"
-              className={styles.headerItem}
+              className={classNames(
+                'no-mc',
+                styles.headerItem,
+                styles.headerItemLess
+              )}
               onClick={this.handleClickClose}
             >
               <i className={classNames('fa fa-caret-up', styles.caret)} />

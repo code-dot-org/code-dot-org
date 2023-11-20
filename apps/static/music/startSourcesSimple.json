@@ -1,0 +1,17 @@
+{
+    "blocks": {
+      "languageVersion": 0,
+      "blocks": [
+        {"type": "when_run", "x": 30, "y": 30},
+        {
+          "type": "triggered_at_simple",
+          "x": 425,
+          "y": 30,
+          "fields": {
+            "trigger": "trigger1"
+          }
+        }
+      ]
+    },
+    "variables": [{"name": "currentTime"}, {"name": "i"}]
+  }

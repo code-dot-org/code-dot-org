@@ -1,0 +1,106 @@
+:ruby
+  level ||= if @level.contained_levels.empty?
+    @level
+  else
+    @level.contained_levels.first
+  end
+  in_level_group ||= false
+  last_attempt = @last_attempt unless local_assigns.has_key? :last_attempt
+  left_align = local_assigns[:left_align]
+  responses = @responses&.map do |response|
+    {
+      user_id: response.user_id,
+      text: response.level_source&.data,
+    }
+  end&.filter { |r| !!r[:text] }  # Remove empty responses.
+
+  answer_is_visible = Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
+
+  teacher_markdown = if level.respond_to?(:solution) && level.solution.present? && answer_is_visible
+    level.solution
+  end
+
+  js_data = {
+    level: {
+      properties: level.properties,
+      height: level.respond_to?(:height) ? level.height : nil,
+      type: level.type,
+      id: level.id,
+      name: level.name
+    },
+    last_attempt: last_attempt,
+    left_align: left_align,
+    responses: responses,
+    answer_is_visible: answer_is_visible,
+    teacher_markdown: teacher_markdown,
+    reportingData: {
+      lessonName: @script_level.lesson.name,
+      lessonId: @script_level.lesson.id,
+      unitName: @script.name,
+      unitId: @script.id,
+      curriculumUmbrella: @script.curriculum_umbrella
+    }
+  }
+
+#summary-content.container
+  #summary-top-links
+
+  #level-question
+    - if level.is_a?(FreeResponse)
+      .free-response
+        - title = level.get_property(:title)
+        - if title.present? && !in_level_group
+          %h1.no-underline= title
+        - long_instructions = level.get_property("long_instructions")
+        - if long_instructions
+          / Markdown will be rendered clientside by _summary.js
+          .markdown-container{data: {markdown: long_instructions}}
+
+        - height = level.height || '80'
+        - placeholder = level.get_property(:placeholder) || I18n.t('free_response.placeholder')
+        %textarea.response{id: "level_#{level.id}", placeholder: placeholder, style: "height: #{height}px;", readonly: true}= last_attempt
+
+    - elsif level.is_a?(Multi)
+      .multi.tight
+        .container.mainblock
+          - data = brakeman_no_warn(level.properties)
+          - data['answers'] ||= []
+          = render partial: 'levels/content', locals: {app: "multi", data: data, content_class: "question", source_level: level}
+          - localized_questions = level.localized_property(:questions)
+          - if localized_questions.any?
+            .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
+          %ol.answers{type: "A"}
+            - if data['height'] == 'auto' || data['height'].blank?
+              - height = 'auto'
+            - else
+              - height = "#{data['height']}px"
+            - localized_answers = level.localized_property(:answers)
+            - localized_answers.each do |answer|
+              %li{style: "height: #{height}"}!= render_multi_or_match_content(answer['text'])
+
+  #summary-responses
+
+  - if answer_is_visible
+    - if level.is_a?(Multi)
+      #summary-correct-answer.multi.hide
+        - correct_answers = data['answers'].each_with_index.map do |answer, index|
+          - next unless answer['correct']
+          - letter = Multi.value_to_letter(index)
+          - {index: index, letter: letter}
+        - end.compact
+        - unless correct_answers.empty?
+          %h3#summary-correct-heading= I18n.t('level_summary.correct_answer')
+          - localized_answers = level.localized_property(:answers)
+          - correct_answers.each do |correct_answer|
+            .summary-answer.mainblock
+              %p{style: "height: #{height}"}
+                - if correct_answer[:letter]
+                  = "#{correct_answer[:letter]}. "
+                != render_multi_or_match_content(localized_answers[correct_answer[:index]]['text'])
+
+  #summary-feedback-banner
+
+  #summary-teacher-instructions
+
+- content_for(:head) do
+  %script{src: webpack_asset_path('js/levels/_summary.js'), data: {summary: js_data.to_json}}

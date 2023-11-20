@@ -39,8 +39,10 @@ mi:
         age: 'Pakeke'
         gender: 'Ira'
         edit_header: 'Whakatika Taipitopito Pūkete'
+        finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         error:
           future: tē āhei haere ake nei
+        user_type: 'Momo Pūkete'
   beta: "beta"
   hello: "Tēnā koe e te ao"
   welcome_back: "Hoki mai rā, %{name}"
@@ -118,7 +120,6 @@ mi:
     valid_password: "Kupuhipa whai mana!"
     invalid_password: "Me kaua tō kupuhipa e iti ake i te 6 pūāhua"
     mismatch_password: "He rerekē ngā kupuhipa e rua kua whakaurua e koe"
-    additional_information: "Me whiwhi mātou ki ētahi mōhiohio anō kia āhei tonu tō waitohu mai."
     user_type_label: "Momo Pūkete"
     user_type_student: "Waitohu Ākonga"
     field_is_required: "me mātua"
@@ -423,36 +424,31 @@ mi:
       body_short: "Waihangahia he taupānga me ngā paraka waehere, me JavaScript rānei kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho."
       audience: 'Pakeke 13+'
       cta: 'Ako me pēhea'
-    dance:
-      title: 'Te Pāti Kanikani'
+    aquatic:
+      title: "Mahimaina"
     dance-2019:
       title: 'Te Pāti Kanikani'
-    hoc:
-      title: 'Rīrapa Tauhira'
-      body: 'Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata kua ngana.'
+    dance:
+      title: 'Te Pāti Kanikani'
     flappy:
       title: 'Waehere Flappy'
       body: 'E hiahia ana koe te ki te tuhi i tō ake kēmu i roto iho i te tekau miniti? Whakamātauria tā mātou whakaakoranga Waehere Flappy!'
-    20-hour:
-      title: 'Whakaakoranga Whakatere'
-      body: 'Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga 2-4 kia whānui ake te wheako!'
-      body_short: 'Ako i te pūtaiao rorohiko waiwai i tētahi putanga whakatere o ngā whakaakoranga 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Whakamātauria tā mātou whakaaroranga Hour of Code hou ki peta'
-      try_frozen: 'Rehetoi me Anna rāua ko Elsa nō Frozen'
+    frozen:
+      title: "Frozen"
     gallery:
       title: "Taiwhainga"
       body: "Tirohia tētahi taiwhanga e whakaatu ana i ētahi taupānga, ētahi atahanga rehetoi kua waihangahia e ā mātou kaiwhakamahi"
     gamelab:
       audience: "Pakeke 13+"
       cta: "Ako me pēhea"
-    weblab:
-      audience: "Pakeke 13+"
-      cta: "Ako me pēhea"
-    frozen:
-      title: "Frozen"
-    starwars:
-      title: "Star Wars"
+    hero:
+      title: "Mahimaina"
+    hoc:
+      title: 'Rīrapa Tauhira'
+      body: 'Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata kua ngana.'
+    hoc2014:
+      try_new_tutorial: 'Whakamātauria tā mātou whakaaroranga Hour of Code hou ki peta'
+      try_frozen: 'Rehetoi me Anna rāua ko Elsa nō Frozen'
     infinity:
       title: "Taiwhanga Tākaro Disney Infinity"
       body: "Whakamahia te Taiwhanga Tākaro kia waihanga i tētahi pūrākau, kēmu rānei e whakaatu ana i ngā pūāhua Disney Infinity."
@@ -462,22 +458,27 @@ mi:
     minecraft2016:
       title: "Mahimaina"
       body: "Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina."
-    aquatic:
-      title: "Mahimaina"
-    hero:
-      title: "Mahimaina"
     sports:
       title: "Ngā Hākinakina"
+    starwars:
+      title: "Star Wars"
+    weblab:
+      audience: "Pakeke 13+"
+      cta: "Ako me pēhea"
+    widgets:
+      audience: "Pakeke 14+"
+      cta: "Ako me pēhea"
+    unplugged_conditionals:
+      title: "Ngā Here"
     unplugged:
       title: "Akoranga Momotu"
       audience: "Pakeke 4+"
       body: "Kua whakaritea e mātou tētahi rārangi akoranga momotu hei whakamahi māu i roto i tō akomanga. Mā tēnei kua āhei koe ki te whakaako i ngā āhuatanga taketake o te pūtaiao rorohiko ahakoa rorohiko, ahakoa kore rorohiko rānei i tō akomanga! Tēnā whakamātauria ēnei akonga hei akoranga motuhake, hei akoranga kīnaki rānei mō ngā whakaakoranga pūtaiao rorohiko ahakoa te momo."
       body_short: "Mena kāore ō rorohiko, whakamātauria ēnei akoranga momotu i tō akomanga."
-    unplugged_conditionals:
-      title: "Ngā Here"
-    widgets:
-      audience: "Pakeke 14+"
-      cta: "Ako me pēhea"
+    20-hour:
+      title: 'Whakaakoranga Whakatere'
+      body: 'Ka whakaakona i tēnei akoranga 10-haora te roa i ngā ariā uho o te pūtaiao rorohiko me te tuhiwaehere i ngā akoranga 2-4. I whakahoahoatia tēnei akoranga hei mahi mā ngā tau 10-18 te pakeke. Tirohia ngā akoranga 2-4 kia whānui ake te wheako!'
+      body_short: 'Ako i te pūtaiao rorohiko waiwai i tētahi putanga whakatere o ngā whakaakoranga 2-4.'
   landing:
     report_bug: "Pūrongotia tētahi Iro"
     support: "Tono Āwhina"
@@ -719,6 +720,10 @@ mi:
       email_opt_in:
         opt_in_yes: 'Āe'
         opt_in_no: 'Kāore'
+  course_offering:
+    headers:
+      minecraft: 'Mahimaina'
+      sports: 'Ngā Hākinakina'
   copy: 'Tārua'
   pixelation:
     binary: "Tāhūrua"

@@ -2,14 +2,14 @@
   "ku-IQ": {
     "data": {
       "course_offerings": {
-        "csd": "دۆزینەوەکانی زانستی کۆمپیوتەر",
-        "csp": "بنەماکانی زانستی کۆمپیوتەر",
-        "jigsaw": "مەتەڵە وێنە",
+        "allthethingscourse": "خولی هەموو شتێک",
         "course1": "Ders 1",
         "course2": "Ders 2",
         "course3": "Ders 3",
         "course4": "Ders 4",
-        "allthethingscourse": "خولی هەموو شتێک",
+        "csd": "دۆزینەوەکانی زانستی کۆمپیوتەر",
+        "csp": "بنەماکانی زانستی کۆمپیوتەر",
+        "jigsaw": "مەتەڵە وێنە",
         "soccer": "یاری تۆپی پێ"
       }
     }

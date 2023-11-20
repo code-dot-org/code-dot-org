@@ -1,4 +1,4 @@
-@import 'color.scss', 'font.scss', 'imports/_breakpoints.scss';
+@import 'color.scss', 'font.scss', 'breakpoints.scss';
 
 aside.hoc-skinny-banner {
   background: url("/images/hoc2022-skinny-banner-bg.png") no-repeat center center;
@@ -29,7 +29,7 @@ aside.hoc-skinny-banner {
 
   h1 {
     color: $white;
-    font-size: 1.5em;
+    font-size: 2.15em;
     margin: 0 0 .15em;
   }
 
@@ -56,9 +56,15 @@ aside.hoc-skinny-banner {
 
   button {
     margin: unset;
-    background-color: $white;
-    border-color: $white;
-    color: $black;
-    font-family: $gotham-bold;
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
+    font-family: var(--main-font);
+    font-weight: var(--bold-font-weight);
+
+    &:hover {
+      background-color: $neutral_dark10;
+      border-color: $neutral_dark10;
+    }
   }
 }

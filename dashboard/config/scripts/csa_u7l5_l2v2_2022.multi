@@ -11,19 +11,22 @@ markdown <<MARKDOWN
 Given the declaration `Calculator eval = new Evaluator();` and the class definitions below, what is displayed by the method call `System.out.print(eval.compute(8));`?
 
 ```
-public class Evaluator extends Calculator {
+public class Calculator {
   ...
   public int compute( int value) {
-    value = super.compute(value - 1);
-    return value ++;
+    return value * 2;
   }
 }
 
-public class Calculator {
+public class Evaluator extends Calculator {
  ...
   public int compute(int value) {
-    return value * 2;
+    value = super.compute(value - 1);
+    value++;
+    return value;
   }
 }
 ```
 MARKDOWN
+
+allow_multiple_attempts true

@@ -2,20 +2,173 @@
   "id-ID": {
     "data": {
       "standard_categories": {
-        "DAT-1": {
-          "description": "Cara komputer dalam menyatakan data berbeda dengan cara data ditafsirkan dan ditampilkan kepada pengguna. Program digunakan untuk mengubah data menjadi pernyataan yang lebih mudah dipahami oleh pengguna."
+        "1": {
+          "description": "Para murid menunjukkan pemikiran kreatif, membangun pengetahuan, dan mengembangkan produk dan proses inovatif menggunakan teknologi."
         },
-        "IOC-2": {
-          "description": "Penggunaan inovasi komputasi dapat melibatkan risiko terhadap keamanan dan identitas pribadi Anda."
+        "2": {
+          "description": "Siswa menggunakan lingkungan dan media digital untuk berkomunikasi dan bekerja sama, termasuk dari jarak jauh, untuk membantu pembelajaran secara individual dan berkontribusi untuk pembelajaran siswa lain."
         },
-        "DAT-1.D": {
-          "description": "Membandingkan algoritma kompresi data untuk menentukan algoritma terbaik dalam konteks tertentu."
+        "3": {
+          "description": "Siswa menerapkan alat digital untuk mengumpulkan, mengevaluasi, dan menggunakan informasi."
         },
-        "IOC-2.B": {
-          "description": "Jelaskan bagaimana informasi komputasi dapat dilindungi dan dapat disalahgunakan."
+        "3-A-i": {
+          "description": "Sifat Pembelajaran - manusia vs mesin"
+        },
+        "3-A-ii": {
+          "description": "Nature of Learning - menemukan pola dalam data"
+        },
+        "3-A-iii": {
+          "description": "Sifat Pembelajaran - melatih model"
+        },
+        "3-A-iv": {
+          "description": "Nature of Learning - constructinv vs menggunakan penalaran"
+        },
+        "3-A-v": {
+          "description": "Nature of Learning - menyesuaikan representasi internal"
+        },
+        "3-A-vi": {
+          "description": "Sifat Pembelajaran - belajar dari pengalaman"
+        },
+        "3-B-i": {
+          "description": "Neural Networks - struktur jaringan saraf"
+        },
+        "3-B-ii": {
+          "description": "Neural Networks - penyesuaian berat"
+        },
+        "3-C-i": {
+          "description": "Dataset - set fitur"
+        },
+        "3-C-ii": {
+          "description": "Dataset - kumpulan data besar"
+        },
+        "3-C-iii": {
+          "description": "Dataset - Bias"
+        },
+        "4": {
+          "description": "Murid menggunakan pemikiran kritis untuk merencanakan dan melakukan penelitian, mengelola proyek, memecahkan masalah, dan membuat keputusan yang matang menggunakan alat dan materi pembelajaran digital yang tepat."
+        },
+        "5": {
+          "description": "Mahasiswa memahami isu-isu manusia, budaya, dan masyarakat yang berkaitan dengan teknologi dan praktek perilaku hukum dan etika."
+        },
+        "6": {
+          "description": "Siswa mendemonstrasikan sebuah pengertian baik pada konsep, sistem, dan operasi teknologi."
+        },
+        "AAP-1": {
+          "description": "Untuk menemukan solusi khusus untuk masalah generalisasi, programmer mewakili dan mengatur data dalam berbagai cara."
+        },
+        "AAP-1.A": {
+          "description": "Mewakili nilai dengan variabel."
+        },
+        "AAP-1.B": {
+          "description": "Tentukan nilai variabel sebagai hasil dari tugas."
+        },
+        "AAP-1.C": {
+          "description": "Mewakili daftar atau string menggunakan variabel."
+        },
+        "AAP-1.D": {
+          "description": "Untuk abstraksi data: \na Mengembangkan abstraksi data menggunakan daftar untuk menyimpan beberapa elemen.\nb Jelaskan bagaimana penggunaan abstraksi data mengelola kompleksitas dalam kode program."
+        },
+        "AAP-2": {
+          "description": "Cara pernyataan diurutkan dan digabungkan dalam program menentukan hasil dihitung. Program menggabungkan iterasi dan pemilihan konstruksi untuk mewakili pengulangan dan membuat keputusan untuk menangani nilai-nilai masukan bervariasi."
+        },
+        "AAP-2.A": {
+          "description": "Ekspresikan algoritma yang menggunakan sekuensing tanpa menggunakan bahasa pemrograman."
+        },
+        "AAP-2.B": {
+          "description": "Mewakili proses algoritmik langkah-demi-langkah menggunakan pernyataan kode berurutan."
+        },
+        "AAP-2.C": {
+          "description": "Evaluasi ekspresi yang menggunakan operator aritmatika."
+        },
+        "AAP-2.D": {
+          "description": "Evaluasi ekspresi yang memanipulasi string."
+        },
+        "AAP-2.E": {
+          "description": "Untuk hubungan antara dua variabel, ekspresi, atau nilai-nilai: \na. Mewakili menggunakan operator relasional\nb. Evaluasi ekspresi yang menggunakan operator relasional."
+        },
+        "AAP-2.G": {
+          "description": "Ekspresikan algoritma yang menggunakan seleksi tanpa menggunakan bahasa pemrograman."
+        },
+        "AAP-2.H": {
+          "description": "Untuk seleksi:\na. mewakili menggunakan pernyataan kondisional.\nb Tentukan hasil pernyataan kondisional."
+        },
+        "AAP-2.J": {
+          "description": "Ekspresikan algoritma yang menggunakan iterasi tanpa menggunakan bahasa pemrograman."
+        },
+        "AAP-2.K": {
+          "description": "Untuk iterasi:\na. mewakili menggunakan pernyataan iterasi.\nb Tentukan hasil atau efek samping dari pernyataan iterasi."
+        },
+        "AAP-2.L": {
+          "description": "Bandingkan beberapa algoritma untuk menentukan apakah mereka menghasilkan efek samping atau hasil yang sama."
+        },
+        "AAP-2.O": {
+          "description": "Untuk algoritma yang melibatkan elemen dari daftar:\na. mewakili menggunakan pernyataan berulang untuk melintasi daftar.\nb Tentukan hasil algoritma dengan daftar traversals."
+        },
+        "AAP-2.P": {
+          "description": "Untuk algoritma pencarian biner:\na. Tentukan jumlah iterasi yang diperlukan untuk menemukan nilai dalam kumpulan data. \nb Jelaskan persyaratan yang diperlukan untuk menyelesaikan pencarian biner."
+        },
+        "AAP-3": {
+          "description": "Programmer memecah masalah menjadi potongan-potongan yang lebih kecil dan lebih mudah dikelola. Dengan membuat prosedur dan memanfaatkan parameter, programmer menggeneralisasi proses yang dapat digunakan kembali. Prosedur memungkinkan programmer untuk menggambar pada kode yang ada yang telah diuji, memungkinkan programmer untuk menulis program lebih cepat dan dengan lebih percaya diri."
+        },
+        "AAP-3.A": {
+          "description": "Untuk panggilan prosedur:\na. menulis pernyataan untuk memanggil prosedur.\nb Tentukan hasil atau efek dari panggilan prosedur."
+        },
+        "AAP-3.B": {
+          "description": "Untuk panggilan prosedur:\na. menulis pernyataan untuk memanggil prosedur.\nb Tentukan hasil atau efek dari panggilan prosedur."
+        },
+        "AAP-3.C": {
+          "description": "Mengembangkan abstraksi prosedural untuk mengelola kompleksitas dalam program dengan menulis prosedur."
+        },
+        "AAP-3.D": {
+          "description": "Pilih pustaka yang sesuai atau segmen kode yang ada untuk digunakan dalam membuat program baru."
+        },
+        "AAP-3.F": {
+          "description": "Untuk simulasi:\na Jelaskan bagaimana komputer dapat digunakan untuk mewakili fenomena atau hasil dunia nyata. \nb Bandingkan penggunaan simulasi dengan konteks dunia nyata."
+        },
+        "AAP-4": {
+          "description": "Ada masalah yang tidak dapat diselesaikan komputer, dan bahkan ketika komputer dapat menyelesaikan masalah, itu mungkin tidak dapat melakukannya dalam waktu yang wajar."
+        },
+        "AAP-4.A": {
+          "description": "Untuk menentukan efisiensi algoritma:\na. Jelaskan perbedaan antara algoritma yang berjalan dalam waktu yang wajar dan yang tidak berjalan dalam waktu yang wajar. \nb Identifikasi situasi di mana solusi heuristik mungkin lebih tepat."
+        },
+        "AAP-4.B": {
+          "description": "Jelaskan adanya masalah yang tidak dapat diputuskan dalam ilmu komputer."
+        },
+        "AP": {
+          "description": "Algoritma & Pemrograman"
+        },
+        "APR": {
+          "description": "Aritmatika Dengan Polinomial Dan Ekspresi Rasional"
+        },
+        "BF": {
+          "description": "Fungsi Bangunan"
+        },
+        "BI-1": {
+          "description": "Komputer memandang dunia menggunakan sensor"
+        },
+        "BI-2": {
+          "description": "Agen mempertahankan representasi dunia dan menggunakannya untuk penalaran"
+        },
+        "BI-3": {
+          "description": "Komputer dapat belajar dari data"
+        },
+        "BI-4": {
+          "description": "Agen cerdas membutuhkan banyak jenis pengetahuan untuk berinteraksi secara alami dengan manusia"
+        },
+        "BI-5": {
+          "description": "AI dapat memengaruhi masyarakat dengan cara positif dan negatif"
+        },
+        "C": {
+          "description": "Lingkaran"
+        },
+        "CC": {
+          "description": "Menghitung dan Kardinalitas"
         },
         "CD": {
           "description": "Komputer & Alat Komunikasi"
+        },
+        "CED": {
+          "description": "Membuat Persamaan"
         },
         "CI": {
           "description": "Dampak Komunitas, Global, dan Etis"
@@ -23,29 +176,254 @@
         "CL": {
           "description": "Kolaborasi"
         },
+        "CN": {
+          "description": "Sistem Bilangan Kompleks"
+        },
+        "CO": {
+          "description": "Kesesuaian"
+        },
+        "CON-1": {
+          "description": "Cara variabel dan operator diurutkan dan digabungkan dalam ekspresi menentukan hasil dihitung."
+        },
+        "CON-1.A": {
+          "description": "Mengevaluasi ekspresi aritmatika dalam kode program"
+        },
+        "CON-1.B": {
+          "description": "Mengevaluasi apa yang disimpan dalam variabel sebagai hasil dari ekspresi dengan pernyataan tugas"
+        },
+        "CON-1.C": {
+          "description": "Evaluasi ekspresi aritmatika yang menggunakan casting."
+        },
+        "CON-1.D": {
+          "description": "Evaluasi ekspresi yang menggunakan metode kelas Matematika."
+        },
+        "CON-1.E": {
+          "description": "Evaluasi ekspresi Boolean yang menggunakan operator relasional dalam kode program."
+        },
+        "CON-1.F": {
+          "description": "Evaluasi ekspresi Boolean compoudn dalam kode program."
+        },
+        "CON-1.G": {
+          "description": "Bandingkan dan kontras ekspresi Boolean setara."
+        },
+        "CON-1.H": {
+          "description": "Bandingkan referensi objek menggunakan ekspresi Boolean dalam kode program."
+        },
+        "CON-2": {
+          "description": "Programmer menggabungkan iterasi dan seleksi ke dalam kode sebagai cara memberikan instruksi bagi komputer untuk memproses masing-masing dari banyak nilai masukan yang mungkin"
+        },
+        "CON-2.A": {
+          "description": "Mewakili percabangan proses logis dengan menggunakan pernyataan kondisional."
+        },
+        "CON-2.B": {
+          "description": "Mewakili percabangan proses logis dengan menggunakan pernyataan bersyarat bersarang."
+        },
+        "CON-2.C": {
+          "description": "Mewakili proses iteratif menggunakan whileloop a."
+        },
+        "CON-2.D": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang tidak memerlukan penggunaan traversals: • Identifikasi algoritma standar • memodifikasi algoritma standar • Mengembangkan algoritma."
+        },
+        "CON-2.E": {
+          "description": "Mewakili proses iteratif menggunakan for loop."
+        },
+        "CON-2.F": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang melibatkan objek String • Identifikasi algoritma standar • memodifikasi algoritma standar • Mengembangkan algoritma."
+        },
+        "CON-2.G": {
+          "description": "Mewakili proses iteratif bersarang"
+        },
+        "CON-2.H": {
+          "description": "Hitung jumlah eksekusi pernyataan dan informal run-time perbandingan pernyataan berulang."
+        },
+        "CON-2.I": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang membutuhkan penggunaan traversals array: • Identifikasi algoritma standar • memodifikasi algoritma standar • Mengembangkan algoritma."
+        },
+        "CON-2.J": {
+          "description": "Untuk algoritma dalam konteks spesifikasi tertentu yang membutuhkan penggunaan traversals ArrayList: • Mengidentifikasi algoritma standar. • memodifikasi algoritma standar • Mengembangkan algoritma."
+        },
+        "CON-2.K": {
+          "description": "Terapkan algoritma pencarian berurutan/linear untuk mencari informasi spesifik dalam array atau ArrayList objek."
+        },
+        "CON-2.L": {
+          "description": "Terapkan seleksi semacam dan penyisipan semacam algoritma untuk mengurutkan elemen array atau ArrayList objek."
+        },
+        "CON-2.M": {
+          "description": "Hitung jumlah eksekusi pernyataan dan informal run-time perbandingan algoritma menyortir."
+        },
+        "CON-2.N": {
+          "description": "Untuk Algoritma dalam konteks spesifikasi tertentu yang membutuhkan penggunaan 2D traversals array: • Identifikasi algoritma standar. • memodifikasi algoritma standar • Mengembangkan algoritma."
+        },
+        "CON-2.O": {
+          "description": "Tentukan hasil eksekusi metode rekursif."
+        },
+        "CON-2.P": {
+          "description": "Terapkan algoritma pencarian rekursif untuk informasi dalam String, 1D array, atau ArrayList objek."
+        },
+        "CON-2.Q": {
+          "description": "Terapkan algoritma rekursif untuk mengurutkan elemen array atau ArrayList objek."
+        },
+        "CP": {
+          "description": "Probabilitas Bersyarat Dan Aturan Probabilitas"
+        },
         "CPP": {
           "description": "Latihan Komputasi & Pemrograman"
+        },
+        "CRD-1": {
+          "description": "Menggabungkan berbagai perspektif melalui kolaborasi meningkatkan inovasi komputasi yang sedang dikembangkan."
+        },
+        "CRD-1.A": {
+          "description": "Jelaskan bagaimana inovasi komputasi ditingkatkan melalui kolaborasi."
+        },
+        "CRD-1.B": {
+          "description": "Jelaskan bagaimana inovasi komputasi dikembangkan oleh kelompok orang."
+        },
+        "CRD-1.C": {
+          "description": "Menunjukkan keterampilan interpersonal yang efektif selama kolaborasi."
+        },
+        "CRD-2": {
+          "description": "Pengembang membuat dan berinovasi menggunakan proses desain berulang yang berfokus pada pengguna, yang menggabungkan siklus implementasi/umpan balik, dan yang menyisakan ruang yang cukup untuk eksperimen dan pengambilan risiko."
+        },
+        "CRD-2.A": {
+          "description": "Jelaskan tujuan inovasi komputasi."
+        },
+        "CRD-2.B": {
+          "description": "Jelaskan bagaimana program atau kode segmen fungsi."
+        },
+        "CRD-2.C": {
+          "description": "Identifikasi masukan ke sebuah program."
+        },
+        "CRD-2.D": {
+          "description": "Identifikasi output (s) yang dihasilkan oleh sebuah program."
+        },
+        "CRD-2.E": {
+          "description": "Kembangkan program menggunakan proses pengembangan."
+        },
+        "CRD-2.F": {
+          "description": "Rancang program dan antarmuka penggunanya."
+        },
+        "CRD-2.G": {
+          "description": "Jelaskan tujuan dari segmen kode atau program dengan menulis dokumentasi."
+        },
+        "CRD-2.H": {
+          "description": "Mengakui segmen kode yang digunakan dari sumber lain."
+        },
+        "CRD-2.I": {
+          "description": "Untuk kesalahan dalam algoritma atau program: \na. mengidentifikasi kesalahan. \nb Perbaiki kesalahannya."
+        },
+        "CRD-2.J": {
+          "description": "Mengidentifikasi input dan sesuai output diharapkan atau perilaku yang dapat digunakan untuk memeriksa kebenaran dari algoritma atau program."
+        },
+        "CS": {
+          "description": "Sistem Komputasi"
+        },
+        "CSN-1": {
+          "description": "Sistem komputer dan jaringan memfasilitasi bagaimana data ditransfer."
+        },
+        "CSN-1.A": {
+          "description": "Jelaskan bagaimana perangkat komputasi bekerja sama dalam jaringan."
+        },
+        "CSN-1.B": {
+          "description": "Jelaskan cara kerja Internet."
+        },
+        "CSN-1.C": {
+          "description": "Jelaskan bagaimana data dikirim melalui Internet melalui paket."
+        },
+        "CSN-1.D": {
+          "description": "Jelaskan perbedaan antara Internet dan World Wide Web."
+        },
+        "CSN-2": {
+          "description": "Komputasi paralel dan terdistribusi memanfaatkan beberapa komputer untuk lebih cepat memecahkan masalah kompleks atau memproses kumpulan data besar."
+        },
+        "CSN-2.A": {
+          "description": "Bandingkan solusi masalah yang menggunakan komputasi berurutan, paralel, dan terdistribusi."
+        },
+        "CSN-2.B": {
+          "description": "Tentukan efisiensi solusi sekuensial dan paralel."
+        },
+        "CSN-2.C": {
+          "description": "Jelaskan manfaat dan tantangan komputasi paralel dan terdistribusi."
         },
         "CT": {
           "description": "Berpikir secara komputasi"
         },
-        "L": {
-          "description": "Bahasa"
+        "D1": {
+          "description": "Mengembangkan Pertanyaan dan pertanyaan perencanaan"
         },
-        "RI": {
-          "description": "Membaca Informatif"
+        "D2.Civ": {
+          "description": "Kewarganegaraan"
         },
-        "RL": {
-          "description": "Membaca Sastra"
+        "D2.Eco": {
+          "description": "Ekonomi"
         },
-        "SL": {
-          "description": "Berbicara & Mendengarkan"
+        "D3.Claims": {
+          "description": "Mengembangkan Klaim dan Menggunakan Bukti"
         },
-        "W": {
-          "description": "Menulis"
+        "D3.Sources": {
+          "description": "Mengumpulkan dan Mengevaluasi Sumber"
         },
-        "C": {
-          "description": "Lingkaran"
+        "D4.Action": {
+          "description": "Mengambil Tindakan yang Diinformasikan"
+        },
+        "D4.Conclusions": {
+          "description": "Berkomunikasi dan Mengkritik Kesimpulan"
+        },
+        "DA": {
+          "description": "Data & Analisis"
+        },
+        "DAT-1": {
+          "description": "Cara komputer dalam menyatakan data berbeda dengan cara data ditafsirkan dan ditampilkan kepada pengguna. Program digunakan untuk mengubah data menjadi pernyataan yang lebih mudah dipahami oleh pengguna."
+        },
+        "DAT-1.A": {
+          "description": "Jelaskan bagaimana data dapat direpresentasikan menggunakan bit."
+        },
+        "DAT-1.B": {
+          "description": "Jelaskan konsekuensi dari menggunakan bit untuk mewakili data."
+        },
+        "DAT-1.C": {
+          "description": "Untuk bilangan biner:\na Hitung biner (basis 2) setara dengan bilangan bulat positif (basis 10) dan sebaliknya. \nb Bandingkan dan pesan bilangan biner."
+        },
+        "DAT-1.D": {
+          "description": "Membandingkan algoritma kompresi data untuk menentukan algoritma terbaik dalam konteks tertentu."
+        },
+        "DAT-2": {
+          "description": "Program dapat digunakan untuk memproses data, yang memungkinkan pengguna menemukan informasi dan menciptakan pengetahuan baru."
+        },
+        "DAT-2.A": {
+          "description": "Jelaskan informasi apa yang dapat diekstraksi dari data."
+        },
+        "DAT-2.B": {
+          "description": "Jelaskan informasi apa yang dapat diekstraksi dari metadata."
+        },
+        "DAT-2.C": {
+          "description": "Identifikasi tantangan yang terkait dengan pemrosesan data."
+        },
+        "DAT-2.D": {
+          "description": "Ekstrak informasi dari data menggunakan program."
+        },
+        "DAT-2.E": {
+          "description": "Jelaskan bagaimana program dapat digunakan untuk mendapatkan wawasan dan pengetahuan dari data."
+        },
+        "EE": {
+          "description": "Ekspresi Dan Persamaan"
+        },
+        "ESS": {
+          "description": "Ilmu Bumi dan Luar Angkasa"
+        },
+        "ESS1": {
+          "description": "Tempat Bumi di Alam Semesta"
+        },
+        "ESS2": {
+          "description": "Sistem Bumi"
+        },
+        "ESS3": {
+          "description": "Aktivitas Bumi dan Manusia"
+        },
+        "ETS": {
+          "description": "Rekayasa dalam Ilmu"
+        },
+        "ETS1": {
+          "description": "Desain Rekayasa"
         },
         "F": {
           "description": "fungsi"
@@ -53,26 +431,287 @@
         "G": {
           "description": "Geometri"
         },
+        "GMD": {
+          "description": "Pengukuran Geometris Dan Dimensi"
+        },
+        "GPE": {
+          "description": "Mengekspresikan Properti Geometris Dengan Persamaan"
+        },
+        "IC": {
+          "description": "Dampak dari Komputasi"
+        },
+        "ID": {
+          "description": "Menafsirkan Data Kategoris Dan Kuantitatif"
+        },
+        "IF": {
+          "description": "Menafsirkan Fungsi"
+        },
+        "IOC-1": {
+          "description": "Sementara inovasi komputasi biasanya dirancang untuk mencapai tujuan tertentu, mereka mungkin memiliki konsekuensi yang tidak diinginkan."
+        },
+        "IOC-1.A": {
+          "description": "Jelaskan bagaimana efek dari inovasi komputasi dapat bermanfaat dan berbahaya."
+        },
+        "IOC-1.B": {
+          "description": "Jelaskan bagaimana inovasi komputasi dapat berdampak di luar tujuan yang dimaksudkan."
+        },
+        "IOC-1.C": {
+          "description": "Jelaskan masalah yang berkontribusi pada kesenjangan digital."
+        },
+        "IOC-1.D": {
+          "description": "Jelaskan bagaimana bias ada dalam inovasi komputasi."
+        },
+        "IOC-1.E": {
+          "description": "Jelaskan bagaimana orang berpartisipasi dalam proses pemecahan masalah dalam skala besar."
+        },
+        "IOC-1.F": {
+          "description": "Jelaskan bagaimana penggunaan komputasi dapat menimbulkan masalah hukum dan etika."
+        },
+        "IOC-2": {
+          "description": "Penggunaan inovasi komputasi dapat melibatkan risiko terhadap keamanan dan identitas pribadi Anda."
+        },
+        "IOC-2.A": {
+          "description": "Jelaskan risiko privasi dari mengumpulkan dan menyimpan data pribadi pada sistem komputer."
+        },
+        "IOC-2.B": {
+          "description": "Jelaskan bagaimana informasi komputasi dapat dilindungi dan dapat disalahgunakan."
+        },
+        "IOC-2.C": {
+          "description": "Jelaskan bagaimana akses tidak sah ke sumber daya komputasi diperoleh."
+        },
+        "L": {
+          "description": "Bahasa"
+        },
+        "LE": {
+          "description": "Model Linear, Kuadrat, dan Eksponensial ★"
+        },
+        "LS": {
+          "description": "Ilmu Kehidupan"
+        },
+        "LS1": {
+          "description": "Dari Molekul ke Organisme: Struktur dan Proses"
+        },
+        "LS2": {
+          "description": "Ekosistem: Interaksi, Energi, dan Dinamika"
+        },
+        "LS3": {
+          "description": "Keturunan: Warisan dan Variasi Sifat"
+        },
+        "LS4": {
+          "description": "Evolusi Biologi: Kesatuan dan Keanekaragaman"
+        },
+        "MD": {
+          "description": "Menggunakan Probabilitas Untuk Membuat Keputusan"
+        },
+        "MG": {
+          "description": "Pemodelan Dengan Geometri"
+        },
+        "MOD-1": {
+          "description": "Beberapa objek atau konsep yang begitu sering diwakili bahwa programmer dapat menggunakan kode yang ada yang telah diuji, memungkinkan mereka untuk menulis solusi lebih cepat dan dengan tingkat kepercayaan yang lebih besar"
+        },
+        "MOD-1.A": {
+          "description": "Memanggil metode kelas Sistem untuk menghasilkan output ke konsol."
+        },
+        "MOD-1.B": {
+          "description": "Jelaskan hubungan antara kelas dan objek."
+        },
+        "MOD-1.C": {
+          "description": "Identifikasi, menggunakan tanda tangannya, konstruktor yang benar dipanggil."
+        },
+        "MOD-1.D": {
+          "description": "Untuk membuat objek: a. Buat objek dengan memanggil konstruktor tanpa parameter. b. Buat objek dengan memanggil konstruktor dengan parameter."
+        },
+        "MOD-1.E": {
+          "description": "Panggil metode void non-statis tanpa parameter."
+        },
+        "MOD-1.F": {
+          "description": "Panggil metode void non-statis dengan parameter"
+        },
+        "MOD-1.G": {
+          "description": "Panggil metode non-void non-statis dengan atau tanpa parameter"
+        },
+        "MOD-1.H": {
+          "description": "Memanggil metode statis."
+        },
+        "MOD-2": {
+          "description": "Programmer menggunakan kode untuk mewakili objek fisik atau konsep nonfisik, nyata atau membayangkan, dengan mendefinisikan kelas berdasarkan attirbutes dan/atau perilaku objek atau konsep"
+        },
+        "MOD-2.A": {
+          "description": "Menunjuk akses dan visibilitas kendala untuk kelas, data, konstruktor, dan metode."
+        },
+        "MOD-2.B": {
+          "description": "Tentukan variabel contoh untuk atribut yang akan diinisialisasi melalui konstruktor kelas."
+        },
+        "MOD-2.C": {
+          "description": "Desribe fungsi dan penggunaan kode program thorugh komentar."
+        },
+        "MOD-2.D": {
+          "description": "Mendefinisikan perilaku objek melalui metode non-void tanpa prameters ditulis dalam kelas."
+        },
+        "MOD-2.E": {
+          "description": "Tentukan perilaku objek melalui metode void dengan atau tanpa parameter yang ditulis dalam kelas."
+        },
+        "MOD-2.F": {
+          "description": "Mendefinisikan perilaku objek melalui metode non-void dengan parameter yang ditulis dalam kelas."
+        },
+        "MOD-2.G": {
+          "description": "Mendefinisikan perilaku kelas melalui metode statis."
+        },
+        "MOD-2.H": {
+          "description": "Tentukan variabel statis yang termasuk dalam kelas."
+        },
+        "MOD-3": {
+          "description": "Ketika kelas mulitple mengandung atribut umum dan perilaku, programmer membuat kelas baru yang berisi atribut bersama dan perilaku membentuk hierachy. Modifikasi yang dilakukan pada tingkat tertinggi hierarki berlaku untuk subclass."
+        },
+        "MOD-3.A": {
+          "description": "Tentukan visibilitas pribadi variabel instance untuk merangkum atribut objek."
+        },
+        "MOD-3.B": {
+          "description": "Buat hubungan warisan dari subclass ke superclass."
+        },
+        "MOD-3.C": {
+          "description": "Tentukan variabel referensi dari superclass yang akan ditugaskan ke objek subclass dalam hirarki yang sama."
+        },
+        "MOD-3.D": {
+          "description": "Metode panggilan dalam hubungan warisan."
+        },
+        "MOD-3.E": {
+          "description": "Memanggil metode kelas Object melalui warisan."
+        },
         "MP": {
           "description": "Latihan Matematika"
         },
         "NBT": {
           "description": "Bilangan Dan Operasi Berbasis Sepuluh"
         },
+        "NF": {
+          "description": "Jumlah Dan Operasi - Pecahan"
+        },
+        "NI": {
+          "description": "Jaringan & Internet"
+        },
+        "NS": {
+          "description": "Sistem Angka"
+        },
         "OA": {
           "description": "Operasi & Berpikir Aljabar"
         },
-        "1": {
-          "description": "Para murid menunjukkan pemikiran kreatif, membangun pengetahuan, dan mengembangkan produk dan proses inovatif menggunakan teknologi."
+        "PS": {
+          "description": "Ilmu Fisika"
         },
-        "2": {
-          "description": "Siswa menggunakan lingkungan dan media digital untuk berkomunikasi dan bekerja sama, termasuk dari jarak jauh, untuk membantu pembelajaran secara individual dan berkontribusi untuk pembelajaran siswa lain."
+        "PS1": {
+          "description": "Materi dan Interaksinya"
         },
-        "4": {
-          "description": "Murid menggunakan pemikiran kritis untuk merencanakan dan melakukan penelitian, mengelola proyek, memecahkan masalah, dan membuat keputusan yang matang menggunakan alat dan materi pembelajaran digital yang tepat."
+        "PS2": {
+          "description": "Gerak dan Stabilitas: Kekuatan dan Interaksi"
         },
-        "6": {
-          "description": "Siswa mendemonstrasikan sebuah pengertian baik pada konsep, sistem, dan operasi teknologi."
+        "PS3": {
+          "description": "Energi"
+        },
+        "PS4": {
+          "description": "Gelombang dan Aplikasinya dalam Teknologi dalam Transfer Informasi"
+        },
+        "Q": {
+          "description": "Kuantitas"
+        },
+        "REI": {
+          "description": "Penalaran Dengan Persamaan Dan Ketidaksetaraan"
+        },
+        "RF": {
+          "description": "Keterampilan Dasar Membaca"
+        },
+        "RH": {
+          "description": "Membaca Sejarah/Studi Sosial"
+        },
+        "RI": {
+          "description": "Membaca Informatif"
+        },
+        "RL": {
+          "description": "Membaca Sastra"
+        },
+        "RN": {
+          "description": "Sistem Bilangan Nyata"
+        },
+        "RP": {
+          "description": "Rasio Dan Hubungan Proporsional"
+        },
+        "RST": {
+          "description": "Ilmu Membaca/Teknis"
+        },
+        "SL": {
+          "description": "Berbicara & Mendengarkan"
+        },
+        "SP": {
+          "description": "Statistik Dan Probabilitas"
+        },
+        "SRT": {
+          "description": "Kesamaan, Segitiga Kanan, Dan Trigonometri"
+        },
+        "SSE": {
+          "description": "Melihat Struktur Dalam Ekspresi"
+        },
+        "TF": {
+          "description": "Fungsi trigonometri"
+        },
+        "VAR-1": {
+          "description": "Untuk menemukan solusi khusus untuk masalah generalizable, programmer menyertakan variabel dalam kode mereka sehingga algoritma yang sama berjalan menggunakan nilai input yang berbeda"
+        },
+        "VAR-1.A": {
+          "description": "Buat literal string"
+        },
+        "VAR-1.B": {
+          "description": "Mengidentifikasi kategori tipe data yang paling tepat untuk spesifikasi tertentu"
+        },
+        "VAR-1.C": {
+          "description": "Mendeklarasikan variabel dari jenis yang benar untuk mewakili data primitif"
+        },
+        "VAR-1.D": {
+          "description": "Tentukan variabel dari jenis yang benar untuk mewakili data referensi."
+        },
+        "VAR-1.E": {
+          "description": "Untuk kelas String: a. membuat objek String. b. metode panggilan String."
+        },
+        "VAR-1.F": {
+          "description": "Untuk kelas wrapper: a. Buat objek Integer. b. Panggil metode Integer. c. Buat objek ganda. d. Panggil metode ganda."
+        },
+        "VAR-1.G": {
+          "description": "Jelaskan di mana variabel dapat digunakan dalam kode program."
+        },
+        "VAR-1.H": {
+          "description": "Evaluasi ekspresi referensi objek yang menggunakan kata kunci ini."
+        },
+        "VAR-2": {
+          "description": "Untuk mengelola sejumlah besar data atau hubungan kompleks dalam data, programmer menulis kode yang mengelompokkan data bersama-sama ke dalam struktur data tunggal wihtout menciptakan variabel individu untuk setiap nilai."
+        },
+        "VAR-2.A": {
+          "description": "Mewakili koleksi terkait primitif atau objek referensi data menggunakan satu dimensi (1D) objek array."
+        },
+        "VAR-2.B": {
+          "description": "Melintasi elemen dalam array 1D."
+        },
+        "VAR-2.C": {
+          "description": "Melintasi elemen dalam objek array 1D menggunakan ditingkatkan untuk loop."
+        },
+        "VAR-2.D": {
+          "description": "Mewakili koleksi terkait referensi objek datat menggunakan objek ArrayList."
+        },
+        "VAR-2.E": {
+          "description": "Untuk objek ArrayList: • Traverse menggunakan untuk atau while loop. • Traverse menggunakan ditingkatkan untuk loop."
+        },
+        "VAR-2.F": {
+          "description": "Mewakili koleksi terkait primitif atau objek referensi data menggunakan dua dimensi (2D) objek array."
+        },
+        "VAR-2.G": {
+          "description": "Untuk objek array 2D: • Traverse menggunakan bersarang untuk loop. • Traverse menggunakan bersarang ditingkatkan untuk loop."
+        },
+        "VM": {
+          "description": "Jumlah Vektor Dan Matriks"
+        },
+        "W": {
+          "description": "Menulis"
+        },
+        "WHST": {
+          "description": "Menulis HS/S/T"
         }
       }
     }

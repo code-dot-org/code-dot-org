@@ -40,6 +40,7 @@ fr:
       Assessment: Évaluation
       Attribution: Attribution
       Back and Forth: Va et vient
+      Balance an Ecosystem: Équilibrer un écosystème
       Basic Conditionals: Conditions de base
       Bass, Mid, and Treble: Basse, médium et aigu
       Be a Super Digital Citizen: Sois un Super Citoyen Numérique
@@ -58,7 +59,7 @@ fr:
       Building an App: Fabriquer une application
       'Bunny ': 'Lapin
 
-'
+        '
       Bunny Jumper: Saut de lapin
       Button Circuits: Circuits de bouton
       Buttons and Switch: Boutons et interrupteur
@@ -87,6 +88,8 @@ fr:
       Change: Changer
       Changing Screens: Changer d’écran
       Changing Sensor Scale: Modifier l’échelle des capteurs
+      Check For Understanding: " Vérifier la compréhension"
+      Check for Understanding: Vérifier la compréhension
       Checking for a Winner: Recherche d'un gagnant
       Choose Your Own Adventure: Choisissez votre propre aventure
       Choosing Good IDs: Choisir les bons identifiants
@@ -112,12 +115,12 @@ fr:
       Course E Artist Project: Cours E Projet Artiste
       Course E Sprite Lab Project: 'Cours E Projet du Labo des Lutins
 
-'
+        '
       'Course E: Play Lab Project': 'Cours E : Projet Play Lab'
       Course F Artist Project: Cours E Projet Artistique
       Course F Sprite Lab Project: 'Cours F Projet d''Artiste
 
-'
+        '
       'Course F: Artist Project': 'Cours F : Projet Artiste'
       'Course F: Artist Project - Revise': 'Cours F : Projet Artiste - Révision'
       'Course F: Play Lab Project': 'Cours F : Projet Play Lab'
@@ -148,9 +151,11 @@ fr:
       Digital Sharing - Unplugged Activity: Partage numérique - Activité déconnectée
       Dogger Example: 'Exemple de Dogger
 
-'
+        '
       Drawing: Dessiner
       Drawing Shapes: Dessiner des formes
+      Ecosystems Simulation: Simulation d'écosystèmes
+      Ecosystems Video: 'Vidéo : Les écosystèmes'
       Editing Images: Modifier les images
       Emotion Machine Example: Exemple de machine d’émotion
       End of Course Projects: Projets de fin de cours
@@ -169,6 +174,7 @@ fr:
       'Exploration: For Loops': 'Exploration : Boucles « Pour »'
       'Exploration: Rikki''s Poster': 'Exploration : l''affiche de Rikki'
       'Exploration: Sample Apps': 'Exploration : Exemples d''Applis'
+      'Exploration: Sample Programs': 'Exploration : Exemples de programmes '
       'Exploration: Sample Project': 'Exploration : Exemple de projet'
       Explore HTML: Explorer le HTML
       Extra: Supplémentaire
@@ -178,12 +184,14 @@ fr:
       Finishing Touches: Terminer les touches
       Follow the Algorithm - Unplugged Activity: Suis l'Agorithme – Activité déconnectée
       Follow the Mouse: Suivre la souris
+      Food Chain Setup: Configuration de la chaîne alimentaire
+      For Loop Fun - Unplugged Activity: "« Pour » s'amuser en boucle - Activité déconnectée"
       For Loops: Les Boucles « Pour »
       For Loops and Color LEDs: Les Boucles « Pour » et LEDs colorées
       For Loops and Repeat Blocks: Les Boucles « Pour » et Les Blocs « Répéter »
       Formatting HTML: Mise en forme HTML
       Free Play: Jeu libre
-      'Free Play: Make a Scene': 'Jeu Libre : Crées une scène'
+      'Free Play: Make a Scene': 'Jeu Libre : Crée un tableau'
       'Free Play: Make an Interactive Scene': 'Jeu Libre : Crées une scène interactive'
       Functions: Fonctions
       Functions Review: Révision des fonctions
@@ -203,14 +211,17 @@ fr:
       Hyperlinks: Liens hypertexte
       If Statements: Instructions « si »
       If-Else Statements: Instructions « si-alors »
+      If... then... Conditional Statements: Si... alors...  Expressions conditionnelles
       Images in HTML: Les Images dans le HTML
       Importing Screens: Importation d’écrans
       Improve Your Game: Améliore ton jeu
       Inspiration!: Inspiration !
       Interactive Card: Carte interactive
+      Intro Video: Vidéo d'introduction
       Intro to Design Mode: Introduction au mode création
       Intro to For Loops: Intro au Boucles « Pour »
       Introducing Sprite Lab: Introduction au Labo des Sprites
+      Introduction: Introduction
       Introduction to Arrays: Introduction aux Tableaux
       Introduction to Game Lab: Introduction au labo de jeux
       Keeping Data Secret: Garder les Données Secrètes
@@ -233,11 +244,13 @@ fr:
       'Mini-Project: Alien Dance Party': " Soirée Dansante des Extraterrestres"
       'Mini-Project: Create a Virtual Pet': 'Mini-Projet : Crées un animal de compagnie
         virtuel'
-      'Mini-Project: Outbreak Simulator': " Simulateur d'épidémie"
+      'Mini-Project: Outbreak Simulator': 'Mini-projet : Simulateur d''Épidémie'
       'Mini-Project: Royal Battle': 'Mini-projet : Bataille Royale'
       'Mini-Project: Snowflake #1': 'Mini-projet : Flocon de neige #1'
       'Mini-Project: Snowflake #2': 'Mini-projet : Flocon de neige #2'
       'Mini-Project: Sticker Art': 'Mini-projet : Design à base d''autocollants '
+      'Mini-Project: User Input Programs': 'Mini-projet : Programmes avec saisies
+        de l''utilisateur '
       'Mini-Project: Virtual Pet': 'Mini-projet : Animal domestique virtuel '
       'Mini-project: Chase Game': 'Mini-projet : Jouer à la Chasse'
       'Mini-project: Flappy Game': 'Mini-projet : Jeu Flappy'
@@ -277,7 +290,7 @@ fr:
       Picturing Data: Se représenter les Données
       Plan Your Project: Planifiez votre projet
       Plane Jumper: Saut d’avion
-      Planning: Planifier
+      Planning: Planning
       Platform Jumper - Background and Variables: Platform Jumper - Contexte et variables
       Platform Jumper - Items: Plate-forme de sauts - Objets
       Platform Jumper - Platforms: Plate-forme de sauts - Plate-formes
@@ -322,13 +335,14 @@ fr:
       'Review: HTML': 'Révision : HTML'
       Revise Artist Project: 'Réviser le Projet d''Artiste
 
-'
+        '
       Revise Sprite Lab Project: 'Réviser le Projet du Labo des Lutins
 
-'
+        '
       Robot Doodle: 'Gribouillis de Robot
 
-'
+        '
+      Run a simulation: Lancer une simulation
       Sample App: Appli d’exemple
       Sample Game: Jeu d’exemple
       Sample Personal Web Pages: Exemples de pages web personnelles
@@ -338,9 +352,14 @@ fr:
       Sample Website: Exemple de site web
       Sensor Experiment: Expérience des capteurs
       Shapes and Parameters: Formes et paramètres
+      Share Out: Partager
+      Share Your Simulation: Partager sa simulation
       Skill Building: Développement des Compétences
       Skill-Building: Développement des Compétences
       Social Sleuth: Limier social
+      Solution 1 - Fishing Zone: Solution 1 - Zone de pêche
+      Solution 2 - Fishing Season: Solution 2 - Saison de pêche
+      Solution 3 - Fishing Limits: Solution 3 - Limites de pêche
       Songwriting - Functions Unplugged Activity: Écrire des chansons - Activité déconnectée
         « Fonctions »
       Speed it Up, Slow it Down: Accélère et ralentis
@@ -348,7 +367,7 @@ fr:
       Sprite Interactions Review: Révision des interactions de sprite
       Sprite Lab Example Project: 'Exemple de Projet du Labo des Lutins
 
-'
+        '
       Sprite Lab Project: Projet Labo du Lutin
       Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
@@ -360,10 +379,16 @@ fr:
       The Animation Tab: L’onglet Animation
       The Big Event - Unplugged Activity: Le Grand Événement - Activité déconnectée
       The Draw Loop: La Boucle Dessiner
+      The Food Chain: La chaîne alimentaire
       The Harvester: L'Agricultrice
+      The Internet - Unplugged Activity: L'Internet - Activité déconnectée
+      The Power of Words - Unplugged Activity: Le Pouvoir des Mots - Activité déconnectée
       The Right App - Unplugged Activity: La Bonne Appli - Activité Déconnectée
       Tour of Design Mode: Visite du mode création
+      Train AI to Clean the Ocean: Former l'IA pour nettoyer l'océan
       Train an AI to Clean the Ocean: Entraîner l'IA pour rendre l'océan propre
+      Unplugged Activity: Activité Déconnectée
+      Using Training Data: Utiliser les données d'entraînement
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
       Variables: Variables
@@ -379,8 +404,8 @@ fr:
       'Video:  Text  and Prompts': 'Vidéo : Texte et Invites '
       'Video: "If/Else"': 'Vidéo : « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
-      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
-        automatique ? '
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro à l''Artiste avec JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro à l''Artiste avec
@@ -390,9 +415,9 @@ fr:
       'Video: Code Your Own Flappy Game': 'Vidéo : Code ton propre jeu Flappy'
       'Video: Conditional Statements': 'Vidéo : Instructions conditionnelles'
       'Video: Conditionals': 'Vidéo : Instructions conditionnelles'
-      'Video: Conditionals: If Statements': 'Vidéo : Formules conditionnelles : Les
-        indications « Si »'
-      'Video: Conditionals: If and If/Else Statements': 'Vidéo : Formules conditionnelles :
+      'Video: Conditionals: If Statements': 'Vidéo : Instructions conditionnelles :
+        Les indications « Si »'
+      'Video: Conditionals: If and If/Else Statements': 'Vidéo : Instructions conditionnelles :
         Indications « Si » et « Si/Sinon »'
       'Video: Dance Party Events': 'Vidéo : Événements – Soirée Dansante'
       'Video: Dance Party Measures': 'Vidéo : Mesures – Soirée Dansante'
@@ -413,7 +438,8 @@ fr:
       'Video: For Loops': 'Video: Les Boucles « Pour »'
       'Video: Functions': 'Vidéo: Les Fonctions'
       'Video: Getting Loopy': 'Vidéo : Affaire bouclée'
-      'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité déconnectée'
+      'Video: Happy Maps - Unplugged Activity': 'Vidéo : Cartes Joyeuses - Activité
+        déconnectée'
       'Video: Harvesting with Conditionals': 'Vidéo : Récolter avec les Conditions'
       'Video: How to Create a Simple Function': 'Vidéo : Comment créer une fonction
         simple'
@@ -421,7 +447,7 @@ fr:
       'Video: IOSP Model': 'Vidéo : Modèle IOSP'
       'Video: Ice Age Loops': 'Vidéo : Boucles l''Âge de glace'
       'Video: If/Else Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
-      'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
+      'Video: Impacts on Society': 'Vidéo : Impacts sur la Société'
       'Video: Intro to CSS - Part 1': 'Vidéo : Introduction au CSS - Partie 1'
       'Video: Intro to CSS - Part 2': 'Vidéo : Introduction au CSS - Partie 2'
       'Video: Intro to Web Lab - Part 1': 'Vidéo : Introduction au labo du web - Partie
@@ -456,6 +482,8 @@ fr:
         Aquatique – Répéter Jusqu''à'
       'Video: Nested Loops': 'Vidéo : Les boucles imbriquées'
       'Video: Nested Loops with the Bee': 'Vidéo : Les boucles imbriquées avec l''abeille '
+      'Video: Outbreak Simulator: Introduction': 'Vidéo : Simulateur d''Épidémie :
+        Introduction'
       'Video: Pair Programming': " Programmation en Binôme"
       'Video: Pair Programming ': 'Vidéo : Programmation en Binôme '
       'Video: Problem Solving Process': Processus de Résolution De Problème
@@ -478,9 +506,9 @@ fr:
         déconnectée '
       'Video: The Collector': 'Vidéo : La Collectionneuse'
       'Video: The Harvester': 'Vidéo : L''Agricultrice'
-      'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
-      'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans
-        les enveloppes '
+      'Video: Training Data & Bias': 'Vidéo : Données d''entraînement et biais'
+      'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables déconnectées en
+        enveloppes '
       'Video: Using the Repeat Block': 'Vidéo : Utiliser le Bloc Répéter'
       'Video: Variables in Artist': " Les Variables dans l'Artiste"
       'Video: Velocity': 'Vidéo : la vitesse'
@@ -492,7 +520,7 @@ fr:
       'Video: While Loops with the Farmer': " Vidéo : Les Boucles Tant Que avec la
         Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
-      Warm Up: Warm-up (Séance d’échauffement)
+      Warm Up: Séance d’échauffement
       Website Project: Projet de site Web
       Welcome to Monster Town: Bienvenue à Monstreville
       Where'd They Go?: Is sont passés où ?

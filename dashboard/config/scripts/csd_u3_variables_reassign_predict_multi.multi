@@ -13,3 +13,5 @@ This program **creates a variable** and then sets its value twice in a row. **Wh
 
 **Once you've submitted your answer, be ready to discuss your reasoning with your classmates**
 MARKDOWN
+
+allow_multiple_attempts true

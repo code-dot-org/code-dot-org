@@ -1,0 +1,162 @@
+{
+  "tg-TJ": {
+    "data": {
+      "start_html": {
+        "CSD U1 IO Story_2021": {
+          "City": "Шаҳр",
+          "Name": "Ном"
+        },
+        "CSD U1 IO Story_2022": {
+          "City": "Шаҳр",
+          "Name": "Ном"
+        },
+        "CSD U1 IO Story_2023": {
+          "City": "Шаҳр",
+          "Name": "Ном"
+        },
+        "CSD U1 storage friends_2021": {
+          "Back": "Бозгашт"
+        },
+        "CSD U1 storage friends_2022": {
+          "Back": "Бозгашт"
+        },
+        "CSD U1 storage friends_2023": {
+          "Back": "Бозгашт"
+        },
+        "CSD U1 storage outfit_2021": {
+          "green": "сабз"
+        },
+        "CSD U1 storage outfit_2022": {
+          "green": "сабз"
+        },
+        "CSD U1 storage outfit_2023": {
+          "green": "сабз"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Name": "Ном"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "сабз",
+          "red": "сурх"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "green": "сабз",
+          "red": "сурх"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "кабуд",
+          "green": "сабз"
+        },
+        "CSD U6 - Combine Inputs - PracC_2222": {
+          "blue": "кабуд",
+          "green": "сабз"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Ном"
+        },
+        "CSD U6 - If Variables - SB3_2222": {
+          "Name": "Ном"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Ном"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 analog light": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 analog light_2018": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 analog light_2019": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 analog light_2021": {
+          "Update": "Навсозӣ кардан"
+        },
+        "CSD U6 getProperty input": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSD U6 getProperty input_2018": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSD U6 getProperty input_2019": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSD U6 getProperty input_2021": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSDU4 Functionality visible": {
+          "Show": "Намоиш додан"
+        },
+        "CSDU4 Quiz App Demo": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSDU4 Quiz App Demo_2018": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSDU4 Quiz App Demo_2019": {
+          "Submit": "Пешниҳод кардан"
+        },
+        "CSDU6 - UI and Inputs - setScreen": {
+          "Back": "Бозгашт"
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Бозгашт"
+        },
+        "csd-apps for good-2": {
+          "Next": "Навбатӣ"
+        },
+        "csd-apps for good-2_2022": {
+          "Next": "Навбатӣ"
+        },
+        "csd-apps for good-2_2023": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-2": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-2_2022": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-2_2023": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-6": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-6_2022": {
+          "Next": "Навбатӣ"
+        },
+        "csd-explore ui-6_2023": {
+          "Next": "Навбатӣ"
+        },
+        "ml-L2 unsupervised - 1-2021": {
+          "Next": "Навбатӣ"
+        },
+        "ml-L2 unsupervised - 1_2022": {
+          "Next": "Навбатӣ"
+        },
+        "ml-L2 unsupervised - 1_2023": {
+          "Next": "Навбатӣ"
+        },
+        "ml-models in applab-choice intended warnings": {
+          "Back": "Бозгашт"
+        },
+        "ml-models in applab-choice intended warnings_2022": {
+          "Back": "Бозгашт"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
+          "Back": "Бозгашт"
+        }
+      }
+    }
+  }
+}

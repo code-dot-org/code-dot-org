@@ -1,11 +1,10 @@
 {
   "dropletBlock_createSprite_param2": "너비",
   "dropletBlock_createSprite_param3": "높이:",
-  "dropletBlock_setCollider_param0": "종류",
-  "dropletBlock_setCollider_param4": "높이:",
   "dropletBlock_setColliderEach_param0": "종류",
   "dropletBlock_setColliderEach_param4": "높이:",
-  "errorLoadingAnimation": "애니메이션 \"{animationName}\"을 로딩하는 중 문제가 생긴 것처럼 보입니다. 인터넷 연결이 바르게 되었는지 확인하고 페이지를 다시 로딩해 보세요. 문제가 지속되면, 이 애니메이션이 잘못되었을 가능성이 있습니다. 이 같은 경우, 애니메이션을 제거하고 계속해야 할 수도 있습니다.",
+  "dropletBlock_setCollider_param0": "종류",
+  "dropletBlock_setCollider_param4": "높이:",
   "reinfFeedbackMsg": "다 마쳤어요! 다음 단계로 넘어가려면 \"계속\"을 클릭하세요.",
   "shareGame": "게임 공유하기:"
 }

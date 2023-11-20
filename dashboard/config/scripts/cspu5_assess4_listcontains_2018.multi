@@ -38,3 +38,5 @@ Going through the code line by line as it repeats while keeping track of data[]:
 
 **In summary:** This code adds the current index value to the previous index value, resulting in the accumulative sum of the data.
 MARKDOWN
+
+allow_multiple_attempts true

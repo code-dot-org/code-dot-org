@@ -538,13 +538,9 @@
   volunteer_engineer_submission_subtitle_generic: 'Beidh 100,000 múinteoir ag óstáil An Uair Chódála ina seomra ranga i mbliana, 7-13 Mí na Nollag, 2015. Cabhraigh leo! '
   volunteer_engineer_submission_subtitle_specific: "Tá %{num_teachers} múinteoir ag lorg cúnaimh ó shaorálaithe.<br>Tá %{num_volunteers} saorálaí tar éis clárú. Bí leo!"
   volunteer_engineer_submission_intro_background: "Is éard atá san Uair Chódála ná gluaiseacht dhomhanda le rún na milliúin dalta ar fud an domhain a spreagadh chun triail a bhaint as an ríomheolaíocht. Glac páirt le linn Seachtain na Ríomheolaíochta, 7-13 Mí na Nollag."
-  volunteer_engineer_submission_intro_recruit: 'Ba bhreá le go leor múinteoirí dul i dteagmháil le saorálaí atá <span style="font-family: ''Gotham 7r'', sans-serif;">díograiseach i dtaobh na ríomheolaíochta</span> chun cabhrú sa seomra ranga, nó a bheadh in ann <span style="font-family: ''Gotham 7r'', sans-serif;">daltaí a spreagadh</span> faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá).'
   volunteer_engineer_submission_intro_recruit_markdown: "Ba bhreá le go leor múinteoirí dul i dteagmháil le saorálaí atá **díograiseach i dtaobh na ríomheolaíochta** chun cabhrú sa seomra ranga, nó a bheadh in ann daltaí a **spreagadh** faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá)."
-  volunteer_engineer_submission_intro_guide: "Faigh tuilleadh eolais faoi <a href=\"%{volunteer_guide}\">oibriú deonach anseo</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Gheobhaidh tú tuilleadh eolais faoi obair dheonach [anseo](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Líon isteach na réimsí seo a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí d'aon duine ag féachaint ar <a href=\"/volunteer/local\">léarscáil na saorálaithe</a>. Tá na réimsí marcáilte le <span class=\"form-required-field\">*</span> riachtanach."
   volunteer_engineer_submission_intro_signup_markdown: "Líon isteach na réimsí seo a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí d'aon duine ag féachaint ar [léarscáil na saorálaithe](/volunteer/local). Tá na réimsí marcáilte le _*_ riachtanach."
-  volunteer_engineer_submission_intro_links: "An múinteoir thú? An bhfuil tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an <a href=\"%{volunteer_local}\">léarscáil</a> atá againn."
   volunteer_engineer_submission_intro_links_markdown: "An múinteoir thú? An bhfuil tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an [léarscáil](%{volunteer_local}) atá againn."
   volunteer_engineer_submission_update_information: "Nuashonraigh d'fhaisnéis phearsanta"
   volunteer_engineer_submission_header_shared: "Eolas comhroinnte le múinteoirí ar léarscáil na saorálaithe"
@@ -1597,7 +1593,7 @@
   hoc2018_mc_download_adventurer: "Íoslódáil an leagan as líne d'Eachtránaí Minecraft."
   hoc2018_mc_educators: "Do Mhúinteoirí"
   hoc2018_mc_educators_box1_title: "Códáil le Minecraft"
-  hoc2018_mc_educators_box1_desc: 'Soláthraíonn Minecraft: Education Edition curaclam, traenáil, agus ceachtanna códála in Minecraft, ailínithe le caighdeáin.'
+  hoc2018_mc_educators_box1_desc: "Soláthraíonn Minecraft: Education Edition curaclam, traenáil, agus ceachtanna códála in Minecraft, ailínithe le caighdeáin."
   hoc2018_mc_educators_box1_button: "Tosaigh"
   hoc2018_mc_educators_box2_title: "Íoslódáil an Lámhleabhar d'Éascaitheoirí"
   hoc2018_mc_educators_box2_desc: "Cabhróidh na hacmhainní seo leat Uair Chódála a óstáil agus do dhaltaí a spreagadh chun ríomheolaíochta."
@@ -1698,7 +1694,7 @@
   hoc2018_mc_with_microsoft: "I gcomhar le"
   hoc2018_mc_thank_microsoft: "Táimid buíoch de Microsoft as tacaíocht a thabhairt dár bhfís agus dár misean: deis a thabhairt do gach gasúr an ríomheolaíocht a fhoghlaim chomh maith le scileanna tábhachtacha don saol sa 21ú haois."
   hoc2019_mc_mee_title: "Minecraft AI ar son na Maitheasa"
-  hoc2019_mc_mee_description1: 'Tá an cúrsa teagaisc nua Minecraft don Uair Chódála ar fáil anois mar chuid de Minecraft: Education Edition ar Windows, Mac, agus iPad. Foghlaim an chódáil agus buneolas ar intleacht shaorga in éineacht le do dhaltaí!'
+  hoc2019_mc_mee_description1: "Tá an cúrsa teagaisc nua Minecraft don Uair Chódála ar fáil anois mar chuid de Minecraft: Education Edition ar Windows, Mac, agus iPad. Foghlaim an chódáil agus buneolas ar intleacht shaorga in éineacht le do dhaltaí!"
   hoc2019_mc_mee_description2: "Acmhainní saor in aisce, mar shampla pleananna ceachta, físeáin, curaclam ríomheolaíochta, agus deiseanna traenála do mhúinteoirí."
   hoc2019_mc_more_coding_resources: "Tuilleadh Acmhainní Códála"
   hoc2019_dance_previous_versions: "An bhfuil tú ag lorg leagan níos sine den Chóisir Dhamhsa?  \nCliceáil anseo chun [Cuid 1](%{dance_2018_link}) agus [Cuid 2](%{dance_extras_2018_link}) ón bhliain seo caite a thosú."

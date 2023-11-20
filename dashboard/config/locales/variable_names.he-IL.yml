@@ -2,15 +2,16 @@
 he:
   data:
     variable_names:
-      Blue: כחולים
+      Blue: כחול
       Green: ירוקים
       Red: אדומים
       actor: שחקן
       age: גיל
       answer: 'תשובה
 
-'
+        '
       binary: בינארי
+      birds: ציפורים
       cats: חתולים
       color: צבע
       counter: סופר

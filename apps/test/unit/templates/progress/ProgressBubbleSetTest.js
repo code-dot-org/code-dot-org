@@ -7,7 +7,7 @@ import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 const defaultProps = {
   levels: fakeLevels(5),
   disabled: false,
-  lessonExtrasEnabled: true
+  lessonExtrasEnabled: true,
 };
 
 describe('ProgressBubbleSet', () => {
@@ -22,7 +22,7 @@ describe('ProgressBubbleSet', () => {
   it('renders a disabled ProgressBubble if this.props.disabled is true', () => {
     const additionalProps = {
       levels: fakeLevels(1),
-      disabled: true
+      disabled: true,
     };
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} {...additionalProps} />

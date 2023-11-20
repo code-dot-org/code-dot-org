@@ -1,12 +1,12 @@
 {
-  "continue": "Fortsæt",
   "areYouSure": "Er du sikker?",
-  "cancel": "Annuller",
-  "yes": "Ja",
-  "no": "Nej",
-  "run": "Kør",
-  "finish": "Færdig",
   "blue": "Blå",
+  "cancel": "Annuller",
+  "continue": "Fortsæt",
+  "finish": "Færdig",
   "green": "Grøn",
-  "red": "Rød"
+  "no": "Nej",
+  "red": "Rød",
+  "run": "Kør",
+  "yes": "Ja"
 }

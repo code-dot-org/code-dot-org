@@ -39,8 +39,10 @@ bs:
         age: 'Starost'
         gender: 'Spol'
         edit_header: 'Preuredi Detalje Računa'
+        finish_sign_up_header_error: 'Ispravi ove greške:'
         error:
           future: ne može biti u budućnosti
+        user_type: 'Tip računa'
   beta: "beta"
   hello: "Pozdrav svijete"
   welcome_back: "Dobrodošao/la natrag, %{name}"
@@ -117,7 +119,6 @@ bs:
     valid_password: "Ispravna lozinka!"
     invalid_password: "Lozinka mora biti duga najmanje 6 znakova"
     mismatch_password: "Dvije lozinke koje ste unijeli se ne podudaraju"
-    additional_information: "Trebamo dodatne informacije kako bismo nastavili vašu prijavu."
     user_type_label: "Tip računa"
     user_type_student: "Učenik"
     user_type_teacher: "Učitelj"
@@ -433,46 +434,46 @@ bs:
     applab:
       title: 'Laboratorij za Aplikacije'
       cta: 'Nauči kako'
-    dance:
-      title: 'Plesna zabava'
     dance-2019:
       title: 'Plesna zabava'
-    hoc:
-      body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
+    dance:
+      title: 'Plesna zabava'
     flappy:
       title: 'Flappy kôd'
       body: 'Želite li napisati vlastitu igru u manje od 10 minuta? Isprobajte naš tutorijal izrade Flappy kôda!'
-    20-hour:
-      title: 'Ubrzani Kurs'
-      body: 'Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.'
-      body_short: 'Naučite osnove računarske znanosti ubrzanom verzijom kurseva 2-4.'
-    hoc2014:
-      try_new_tutorial: 'Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji'
-      try_frozen: 'Budi umjetnik s Annom i Elsom iz Sniježnog kraljevstva'
+    frozen:
+      title: "Sniježno kraljevstvo"
     gallery:
       title: "Galerija"
       body: "Pogledaj galeriju aplikacija i umjetničkih slika koje su napravili naši korisnici"
     gamelab:
       cta: "Nauči kako"
-    weblab:
-      cta: "Nauči kako"
-    frozen:
-      title: "Sniježno kraljevstvo"
-    starwars:
-      title: "Zvijezdani ratovi"
+    hoc:
+      body: 'Isprobajte osnove informatike. Milijuni su im dali šansu.'
+    hoc2014:
+      try_new_tutorial: 'Isprobajte naš novi tutorijal Sata Kodiranja u beta verziji'
+      try_frozen: 'Budi umjetnik s Annom i Elsom iz Sniježnog kraljevstva'
     infinity:
       title: "Infinity Play Lab (Beskonačni Laboratorij Igranja)"
       body: "Upotrijebi Laboratorij Igranja da bi napravio/la priču ili igru u kojoj igraju karakteri Disney Beskonačnost."
     minecraft:
       body: "Istražite svijet Minecraft-a putem koda"
-    unplugged:
-      body: "Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare u razredu ili ne! Pokušaj koristiti ove lekcije kao samostalne kurseve ili kao dopunske lekcije za bilo koji kurs računarstva."
-      body_short: "Ako nemate računara, pokušajte ove van mrežne aktivnosti u Vašem razredu."
-    unplugged_conditionals:
-      title: "Uvjeti"
+    starwars:
+      title: "Zvijezdani ratovi"
+    weblab:
+      cta: "Nauči kako"
     widgets:
       audience: "Uzrast 14+"
       cta: "Nauči kako"
+    unplugged_conditionals:
+      title: "Uvjeti"
+    unplugged:
+      body: "Mi smo za tebe sastavili listu van mrežni aktivnosti da ih koristiš u svom razredu. Sad možeš podučavati osnove računarstva, bilo da imaš računare u razredu ili ne! Pokušaj koristiti ove lekcije kao samostalne kurseve ili kao dopunske lekcije za bilo koji kurs računarstva."
+      body_short: "Ako nemate računara, pokušajte ove van mrežne aktivnosti u Vašem razredu."
+    20-hour:
+      title: 'Ubrzani Kurs'
+      body: 'Ovaj 20-satni kurs objašnjava osnovne koncepte programiranja i nformatike. Kurs je namijenjen za korištenje u nižim razredima osnovne škole, ali je zabavan za učenje bez obzira na dob polaznika.'
+      body_short: 'Naučite osnove računarske znanosti ubrzanom verzijom kurseva 2-4.'
   landing:
     report_bug: "Prijavi Grešku"
     support: "Potraži Pomoći"
@@ -642,6 +643,8 @@ bs:
       robotics:
         kodable: 'Kodable'
         other: "Ostalo"
+      workshop_course:
+        other: 'Ostalo'
       email_opt_in:
         opt_in_yes: 'Da'
         opt_in_no: 'Ne'

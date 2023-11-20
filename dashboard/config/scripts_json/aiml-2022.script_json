@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-08-31 19:55:39 UTC",
+    "serialized_at": "2023-05-26 22:44:04 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5152,7 +5152,7 @@
       "key": "a46bdb47-2ee6-4d15-a1c0-5189c97c136c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/aiml/2022] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab/aiml/2022] to each student.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the [r numerical_data_in_ai_lab_1/aiml/2022] video, which outlines how numerical data can be used in AI Lab and how accuracy is calculated.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open the first level. Students will spend most of the lesson exploring data in the first panel and recording their results on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out \n[r numerical_data_in_ai_lab_1/aiml/2022] to each student.\n",
         "name": "Investigating Data\r",
         "progression_name": "Safari Model"
       },
@@ -5905,7 +5905,7 @@
       "key": "c128123f-5d0b-491e-9c5d-d1bee6aa36ed",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "c128123f-5d0b-491e-9c5d-d1bee6aa36ed",

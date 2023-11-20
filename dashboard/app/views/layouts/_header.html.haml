@@ -91,7 +91,6 @@
             = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'user_header.haml')), type: :haml, locals: user_header_options
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'help_button.haml')), type: :haml, locals: hamburger_options
         = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'hamburger.haml')), type: :haml, locals: hamburger_options
-  }
 
 :ruby
   if should_show_progress
@@ -153,7 +152,7 @@
       #{lesson_extras_enabled || 'null'},
       #{script_name_data.to_json},
       #{!script_level}
-    )
+    );
     //]]>
 
 - elsif @is_code_reviewing
@@ -164,7 +163,7 @@
 
 - elsif level
   :javascript
-    dashboard.header.buildProjectInfoOnly()
+    dashboard.header.buildProjectInfoOnly("#{@level.id}")
 
 -# If the page is cached, the sign-in button / user menu must be loaded separately
 -# by the client.

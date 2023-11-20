@@ -3,7 +3,6 @@ Feature: Challenge level shows different dialogs
 Background:
   Given I am on "http://studio.code.org/reset_session"
   Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/6?noautoplay=true"
-  And I rotate to landscape
   And I wait for the page to fully load
 
 Scenario: Submit passing and perfect solutions

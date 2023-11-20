@@ -1,5 +1,5 @@
 ---
-title: Sample Op-ed Supportive of Computer Science Education Week and Hour of Code
+title: Mostra Op-ed Suport de la Setmana de l'Educació de les Ciències de la Computació i Hora del Codi
 ---
 
 {{ signup_button }}

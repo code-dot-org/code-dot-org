@@ -11,7 +11,7 @@ const photoInputId = 'photoInput';
 export default function PhotoSelectionView({
   promptText,
   onPhotoSelected,
-  style
+  style,
 }) {
   const onInputChange = event => {
     onPhotoSelected(event.target.files[0]);
@@ -49,7 +49,7 @@ PhotoSelectionView.propTypes = {
   /** Optional. Displays prompt text below the icon. */
   promptText: PropTypes.string,
   /** Optional. Additional styles to apply to the component */
-  style: PropTypes.object
+  style: PropTypes.object,
 };
 
 const styles = {
@@ -59,12 +59,12 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: color.black
+    backgroundColor: color.black,
   },
   label: {
-    fontSize: 48
+    fontSize: 48,
   },
   prompt: {
-    textColor: color.white
-  }
+    textColor: color.white,
+  },
 };

@@ -648,6 +648,95 @@ az:
         csa-pl-equals-book: Book sinfi üçün equals() metodunun yazılması
         csa-multi-select-pl: Java-da çox seçimli ifadələr
         csc_timecapsule_intro: Zaman kapsulunun təqdimatı
+        PL_Equity_in_CS_Education: Kompüter elmi təhsilində bərabərlik/ədalət
+        csc_fm_pilot: Funksional Maşınlar (Pilot)
+        csc_fm_pilot_v2: 'Funksional Maşınlar Girişi'
+        csc-sprite-lab-pixel-editor: Öz Sprite'ını(-zı) Çək(-in)
+        csa-pl-intro-to-strings: Java-da sətirlərə giriş
+        csa-pl-compareTo: CompareTo() metodu
+        csc-event-short-intro: Hadisələr Qısa Giriş
+        PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Oyun Ərazisində Ümumi Baxış
+        csa-day-in-pm-pl: Lahiyə meneceri nə edir?
+        csa-pl-intro-to-pm: Lahiyənin İdarə Edilməsinə Giriş
+        PL_CSD_CircuitPlayground_Setup: "Oyun Meydançası Quraşdırma\n"
+        csa_object_oriented_programming: 'CSA: Obyekt-Orientasiya Proqramlaşdırması'
+        csa_creating_objects: 'Kompüter Elmlərinin Assosiasiyası: Obyektlərin Yaradılması'
+        csa_calling_methods: 'CSA: Çağırış Üsulları'
+        csa_while_loops: 'CSA: While Loops'
+        csa_inheritance: 'CSA: Miras'
+        csa_writing_a_method: 'CSA: Metodun yazılması'
+        csa_software_engineering_code_reviews: 'CSA: Proqram Mühəndisliyi - Kod Baxışları'
+        csa_conditional_statements: 'CSA: Şərti operatorlar'
+        csa_printing_in_java: "\nCSA: Java-da çap"
+        csa_two_way_selection_and_not: 'CSA: İki Yönlü Seçim və DEYİL'
+        csa-pl-intro-to-oop: "Obyekt Yönümlü Proqramlaşdırmaya Giriş\nObyekt Yönlü Proqramlaşdırmaya Giriş"
+        csa-pl-welcome-to-Neighborhood: Qonşuluğa Xoş Gəlmisiniz
+        csa-pl-calling-methods: Javada Çağırış Üsulları
+        csa-pl-creating-objects: Obyektlərin yaradılması
+        csa_accessor_methods: 'CSA: Aksesuar Üsulları'
+        csa_constructors: 'CSA: İnşaatçılar'
+        csa_creating_a_scanner_object: "\nCSA: Skaner Obyektinin yaradılması"
+        csa_creating_variables: 'Dəyişənlərin yaradılması'
+        csa_instance_variables_and_attributes: 'CSA: Nümunə Dəyişənləri və Atributları'
+        csa_mutator_methods: 'CSA: Mutator üsulları'
+        csa_overloaded_constructors: 'CSA: Həddindən Artıq Yüklənmiş Konstruktorlar'
+        csa_the_tostring_method: "CSA: ToString () Metodu\nCSA: ToString () Üsulu"
+        csa_scanner_class_methods: 'CSA: Skaner Sinif Üsulları'
+        csa_for_loops: "CSA: For Döngələri\nCSA: For Loops"
+        csa_enhanced_for_loops: "CSA: Gücləndirilmiş For Döngələri\nCSA: Gücləndirilmiş For Lopps"
+        csa_modifying_values_in_a_1d_array: 'CSA: 1D Arrayda Dəyərlər Modifikası'
+        csa_nested_loops: "CSA: Nested Loops\nCSA: İç-içə Döngələr"
+        csa_one_dimensional_arrays: "CSA: Bir Ölçülü (1D) Massivlər\nCSA: Bir Ölçülü (1D) Arrays"
+        csa_polymorphism: 'CSA: Polimorfizm'
+        csa_casting: 'CSA: Döküm'
+        csa_equals_and_aliases: 'CSA: Bərabər və ləqəblər'
+        csa_multi-selection_statements: 'CSA: Çox Seçim Hesabatları'
+        csa_random_numbers: 'CSA: Təsadüfi Nömrələr'
+        csa_static_methods: 'CSA: Statik Metodlar'
+        csa_static_variables: 'CSA: Statik Dəyişənlər'
+        csa_the_equals_method: 'CSA: bərabər () metodu'
+        csa_welcome_to_the_theater: 'CSA: Teatra xoş gəlmisiniz'
+        enter_your_own_poem: Öz Şeirinizi Daxil Edin
+        csa-example-solution-1: 'Canlı Kodlaşdırma Nümunə Həll'
+        csd_sprite_properties: Sprite Xüsusiyyətləri
+        csa-pl-documentation: Java laboratoriyasında sənədlər
+        csa-pl-vocab-pm: Layihə İdarəetmə lüğəti
+        csc-ecosystems-intro: Ekosistemlər Modulu
+        PL_CSD_MicroBit_Intro: Micro:bit-ə giriş
+        csa_two_dimensional_arrays: 'CSA: İki Ölçülü (2D) Massivlər'
+        csa_working_with_2d_array_elements: 'CSA: 2D Array Elementləri ilə işləmək'
+        csa_row_major_traversal: 'CSA: Sıra-Major Traversal'
+        csa_column_major_traversal: 'CSA: Sütun-Əsas keçid'
+        csa_enhanced_for_loops_and_2d_arrays: 'CSA: Döngələr və 2D massivlər üçün təkmilləşdirilmiş'
+        csa_images_and_pixels: 'CSA: Şəkillər və Piksellər'
+        csa_wrapper_classes_part_1: 'CSA: Paketləyici Siniflər 1-ci Hissə'
+        csa_wrapper_classes_part_2: 'CSA: Paketləyici Siniflər 2-ci Hissə'
+        csa_the_arraylist_class: 'CSA: ArrayList Sinfi'
+        csa_working_with_arraylist_data: 'CSA: ArrayList Data ilə işləmək'
+        csa_remving_data_from_an_arraylist: 'CSA: ArrayList-dən məlumatların çıxarılması'
+        csa_private_methods: 'CSA: Şəxsi Metodlar'
+        csa_recursion: 'CSA: Rekursiya'
+        csa_searching_algorithms: 'CSA: Axtarış alqoritmləri'
+        csa_sorting_algorithms: 'CSA: Çeşidləmə Alqoritmləri'
+        star_quilts_intro_to_artist: 'Ulduz yorğanları: Sənətçiyə giriş'
+        upload_sprites_backgrounds: Xüsusi spraytların və arxa planların yüklənilməsi
+        PL_CSD_EquityBlindSpotsvid: Qərəz və Məsuliyyət
+        how-ai-works-llms-full: Chat (çət) botları və böyük dil modelləri necə işləyir?
+        how-ai-works-creativity-full: Süni İntellektin yaradıcılığı və təsəvvürü varmı?
+        how-ai-works-llms-part1: Chat (çət) botları və böyük dil modelləri - 1-ci hissə
+        how-ai-works-llms-part2: Chat (çət) botları və böyük dil modelləri - 2-ci hissə
+        llms-cobranded: 'Süni intellek necə işləyir: Chat (çət) botları və böyük dil modelləri'
+        generative-ai-cobranded: 'Süni intellek necə işləyir: Yaradıcı Sİ (süni intellekt)'
+        csa-overview: AP kompüter elmlərinə yeni yanaşma A
+        what-is-creativity: Yaradıcılıq nədir?
+        poetry-programming: Poeziya və Proqramlaşdırma
+        push-yourself: Limiltərini sına. Hamı öyrənə bilər.
+        classic-maze-intro: Klassik Labirint - Giriş
+        code-break: Kode Fasilə edin
+        blockchain-introd: 'Blockchain necə işləyir: Giriş'
+        ai-ethis: Etika və Süni İntellekt
+        how-ai-works-lessons: 'Süni intellekt (Sİ) necə işləyir: Ön baxış'
+        se-cv-intro-to-lessons: 'Proqram təminatı mühəndisliyi və kompüter görməsi: dərslərə giriş'
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

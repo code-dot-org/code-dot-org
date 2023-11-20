@@ -33,3 +33,30 @@ fi:
           description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa oppilaiden luoda aitoja esineitä.
           description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi, joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua ja hauskanpitoa varten.
           description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi, joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua ja hauskanpitoa varten.
+        csd-pilot:
+          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi, joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua ja hauskanpitoa varten.
+        csp-2020:
+          description_short: Opi tietotekniikan peruskäsitteet.
+        csd-2020:
+          description_short: Johdantokurssi tietojenkäsittelytieteisiin joka mahdollistaa oppilaiden luoda aitoja esineitä.
+          description_student: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi, joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua ja hauskanpitoa varten.
+          description_teacher: Tietojenkäsittelytieteiden löydöt (TKT löydöt) on johdantokurssi, joka antaa opiskelijoille mahdollisuuden luoda aitoja esineitä ja tarjoaa tietojenkäsittelytieteet välineenä luovuutta, viestintää, ongelmanratkaisua ja hauskanpitoa varten.
+        csp-2021:
+          description_short: Opi tietotekniikan peruskäsitteet.
+        mike-test:
+          title: Tietojenkäsittelyn Perusteet
+        csp-2022:
+          description_short: Opi tietotekniikan peruskäsitteet.
+        csp-2023:
+          description_short: Opi tietotekniikan peruskäsitteet.
+        csd-2023:
+          title: Tietojenkäsittelytieteiden löydöt
+    resources:
+      curriculum/csd/2017:
+        name: Opetussuunnitelma
+      curriculum/csd/2018:
+        name: Opetussuunnitelma
+      curriculum/csd/2019:
+        name: Opetussuunnitelma
+      curriculum/csd/2020:
+        name: Opetussuunnitelma

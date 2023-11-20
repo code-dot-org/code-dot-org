@@ -1,17 +1,27 @@
 /** @file Board controller for BBC micro:bit */
+
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
-  componentConstructors
+  componentConstructors,
 } from './MicroBitComponents';
 import MBFirmataWrapper from './MBFirmataWrapper';
 import ExternalLed from './ExternalLed';
 import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
-import {MICROBIT_FIRMWARE_VERSION} from './MicroBitConstants';
+import LedScreen from './LedScreen';
+import {
+  MICROBIT,
+  MICROBIT_FIRMWARE_VERSION,
+  FIRMWARE_VERSION_TIMEOUT,
+  SQUARE_LEDS,
+  CHECKMARK_LEDS,
+  ALL_LEDS,
+} from './MicroBitConstants';
+import {delayPromise} from '../../util/boardUtils';
+import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
@@ -29,12 +39,8 @@ export default class MicroBitBoard extends EventEmitter {
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
 
-    this.chromeOS = isChromeOS();
-
-    let portType = serialPortType(true);
-
     /** @private {MicrobitFirmataClient} serial port controller */
-    this.boardClient_ = new MBFirmataWrapper(portType);
+    this.boardClient_ = new MBFirmataWrapper(navigator.serial);
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
@@ -53,37 +59,12 @@ export default class MicroBitBoard extends EventEmitter {
   }
 
   /**
-   * Create a serial port controller and open the serial port immediately.
-   * @return {SerialPort}
+   * Create a serial port controller and open the Web Serial port immediately.
+   * @param {Object} port
+   * @return {Promise<Serial>}
    */
-  openSerialPort() {
-    const portName = this.port ? this.port.comName : undefined;
-    const SerialPortType = serialPortType(false);
-
-    /** @const {number} serial port transfer rate */
-    const SERIAL_BAUD = 57600;
-
-    let serialPort;
-    if (!this.chromeOS) {
-      serialPort = new SerialPortType(portName, {baudRate: SERIAL_BAUD});
-      return Promise.resolve(serialPort);
-    } else {
-      // Chrome-serialport uses callback to relay when serialport initialization is complete.
-      // Wrapping construction function to call promise resolution as callback.
-      let constructorFunction = callback => {
-        serialPort = new SerialPortType(
-          portName,
-          {
-            baudRate: SERIAL_BAUD
-          },
-          true,
-          callback
-        );
-      };
-      return new Promise(resolve => constructorFunction(resolve)).then(() =>
-        Promise.resolve(serialPort)
-      );
-    }
+  openWebSerial(port) {
+    return port.openMBPort().then(() => port);
   }
 
   /**
@@ -95,9 +76,10 @@ export default class MicroBitBoard extends EventEmitter {
    * @returns {Promise<void>}
    */
   checkExpectedFirmware() {
-    return Promise.resolve()
-      .then(() => this.openSerialPort())
-      .then(serialPort => this.boardClient_.connectBoard(serialPort))
+    return this.openWebSerial(this.port)
+      .then(serial => {
+        return this.boardClient_.connectBoard(serial);
+      })
       .then(() => {
         // Delay for 0.25 seconds to ensure we have time to receive the firmware version.
         return delayPromise(250);
@@ -111,9 +93,9 @@ export default class MicroBitBoard extends EventEmitter {
           if (this.boardClient_.firmwareVersion === '') {
             // Log if we were not able to determine the firmware version in time.
             firehoseClient.putRecord({
-              study: 'maker-toolkit',
-              study_group: 'microbit',
-              event: 'firmwareVersionTimeout'
+              study: MAKER_TOOLKIT,
+              study_group: MICROBIT,
+              event: FIRMWARE_VERSION_TIMEOUT,
             });
             console.warn(
               'Firmware version not detected in time. Try refreshing the page.'
@@ -134,8 +116,12 @@ export default class MicroBitBoard extends EventEmitter {
   initializeComponents() {
     return createMicroBitComponents(this.boardClient_).then(components => {
       this.prewiredComponents_ = {
-        board: this.boardClient_,
-        ...components
+        // board is assigned a copy of boardClient_ but with references to the WebSerialPortWrapper
+        // removed. This avoids hitting a recursive loop (due to the emit functionality that's included
+        // in the WebSerialPortWrapper) when we attempt to marshall the object across to the
+        // interpreter.
+        board: this.boardClient_.getBoardClientWithoutPort(),
+        ...components,
       };
     });
   }
@@ -154,6 +140,62 @@ export default class MicroBitBoard extends EventEmitter {
    */
   boardConnected() {
     return !!this.boardClient_.myPort;
+  }
+
+  /**
+   * Displays  to demonstrate successful connection
+   * A square is drawn in a spiral and then a checkmark flashes 3 times
+   * on the board.
+   * @returns {Promise} resolved when the animation is done.
+   */
+  celebrateSuccessfulConnection() {
+    function makeSquare(ledScreen, delay, timeInterval) {
+      return new Promise(resolve => {
+        SQUARE_LEDS.forEach((ledPair, i) => {
+          setTimeout(
+            () => ledScreen.on(ledPair[0], ledPair[1]),
+            delay * (i + 1)
+          );
+        });
+        setTimeout(resolve, delay * SQUARE_LEDS.length + timeInterval);
+      });
+    }
+
+    function makeCheckMark(ledScreen, delay) {
+      return new Promise(resolve => {
+        CHECKMARK_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.on(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
+    function turnOffAllLeds(ledScreen, delay) {
+      return new Promise(resolve => {
+        ALL_LEDS.forEach(ledPair => {
+          setTimeout(() => ledScreen.off(ledPair[0], ledPair[1]));
+        });
+        setTimeout(resolve, delay);
+      });
+    }
+
+    this.initializeComponents().then(() => {
+      const ledScreen = new LedScreen({
+        mb: this.boardClient_,
+      });
+
+      const timeInterval = 200;
+      const squareTimeInterval = 70;
+
+      return Promise.resolve()
+        .then(() => makeSquare(ledScreen, squareTimeInterval, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval))
+        .then(() => turnOffAllLeds(ledScreen, timeInterval))
+        .then(() => makeCheckMark(ledScreen, timeInterval));
+    });
   }
 
   pinMode(pin, modeConstant) {
@@ -195,7 +237,7 @@ export default class MicroBitBoard extends EventEmitter {
     // should be not-null here
     if (this.interpreterReference_) {
       this.interpreterReference_.addCustomMarshalObject({
-        instance: CapacitiveTouchSensor
+        instance: CapacitiveTouchSensor,
       });
       this.interpreterReference_.createGlobalProperty(
         'CapacitiveTouchSensor',
@@ -211,16 +253,7 @@ export default class MicroBitBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
-    this.dynamicComponents_.forEach(component => {
-      // For now, these are _always_ Leds.  Complain if they're not.
-      if (component instanceof ExternalLed) {
-        component.off();
-      } else if (component instanceof ExternalButton) {
-        // No special cleanup required for button
-      } else {
-        throw new Error('Added an unsupported component to dynamic components');
-      }
-    });
+    this.resetDynamicComponents();
     this.dynamicComponents_.length = 0;
 
     if (this.prewiredComponents_) {
@@ -250,7 +283,7 @@ export default class MicroBitBoard extends EventEmitter {
     this.interpreterReference_ = jsInterpreter;
     Object.keys(componentConstructors).forEach(key => {
       jsInterpreter.addCustomMarshalObject({
-        instance: componentConstructors[key]
+        instance: componentConstructors[key],
       });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
@@ -260,7 +293,22 @@ export default class MicroBitBoard extends EventEmitter {
     });
   }
 
+  resetDynamicComponents() {
+    this.dynamicComponents_.forEach(component => {
+      // For now, these are _always_ Leds.  Complain if they're not.
+      if (component instanceof ExternalLed) {
+        // Make sure the LED is turned off.
+        component.off();
+      } else if (component instanceof ExternalButton) {
+        // No special cleanup is required for ExternalButton.
+      } else {
+        throw new Error('Added an unsupported component to dynamic components');
+      }
+    });
+    this.dynamicComponents_.length = 0;
+  }
   reset() {
+    this.resetDynamicComponents();
     cleanupMicroBitComponents(
       this.prewiredComponents_,
       this.dynamicComponents_,
@@ -268,5 +316,3 @@ export default class MicroBitBoard extends EventEmitter {
     );
   }
 }
-
-const delayPromise = t => new Promise(resolve => setTimeout(resolve, t));

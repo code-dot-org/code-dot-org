@@ -2,14 +2,102 @@
 sr:
   data:
     unplugged:
+      BigEvent:
+        title: Велики догађај
+      BigEvent_2018:
+        title: Велики догађај
+      BigEvent_2019:
+        title: Велики догађај
+      BinaryBracelets:
+        title: Бинарне наруквице
+      BinaryBracelets_2018:
+        title: Бинарне наруквице
+      BinaryBracelets_2019:
+        title: Бинарне наруквице
+      BinaryImages:
+        title: Binarne slike
+      BinaryImages_2018:
+        title: Binarne slike
+      BinaryImages_2019:
+        title: Binarne slike
+      BuildingAFoundation:
+        title: Изградња темеља
+      ComputationalThinking:
+        title: Компјутерско Размишљање
+      Conditionals:
+        title: Кондиционали
+      Conditionals_2018:
+        title: Кондиционали
+      Conditionals_2019:
+        title: Кондиционали
+      Crowdsourcing:
+        title: Crowdsourcing
+      DigitalCitizenship:
+        title: Дигитално држављанство
+      DigitalFootprint:
+        title: Твој дигитални траг
+      DigitalFootprint_2018:
+        title: Твој дигитални траг
+      DigitalFootprint_2019:
+        title: Твој дигитални траг
+      FunctionalSuncatchers:
+        title: Functional Suncatchers
+      GettingLoopy:
+        title: Запетљанције
+      GettingLoopy_2018:
+        title: Запетљанције
+      GettingLoopy_2019:
+        title: Запетљанције
+      GoingPlacesSafely:
+        title: Сигурна путања
+      GoingPlacesSafely_2018:
+        title: Сигурна путања
+      GoingPlacesSafely_2019:
+        title: Сигурна путања
+      GraphPaperProgramming:
+        title: Графиконско - Папирно Програмирање
+      GraphPaperProgramming_2018:
+        title: Графиконско - Папирно Програмирање
+      GraphPaperProgramming_2019:
+        title: Графиконско - Папирно Програмирање
+      Internet:
+        title: Интернет
+      MoveIt:
+        title: Помери га, помери
+      MoveItMoveIt_2018:
+        title: Помери га, помери
+      MoveItMoveIt_2019:
+        title: Помери га, помери
+      PaperPlanes:
+        title: 'Стварни алгоритми: Папирни авиони'
+      PaperPlanes_2018:
+        title: 'Стварни алгоритми: Папирни авиони'
+      PaperPlanes_2019:
+        title: 'Стварни алгоритми: Папирни авиони'
+      PlantASeed:
+        title: 'Прави алгоритми: Засади семе'
+      PlantASeed_2018:
+        title: 'Прави алгоритми: Засади семе'
+      PlantASeed_2019:
+        title: 'Прави алгоритми: Засади семе'
+      RelayProgramming:
+        title: Relay programming
+      RelayProgramming_2018:
+        title: Relay programming
+      RelayProgramming_2018_2019:
+        title: Relay programming
       Unplug1:
-        title: Увод у Компјутерске Науке
         desc: Ова лекција ће објаснити основне идеје рачунарских наука. Поред тога,
           она ће дати ученицима прилику да накратко постану програмери. На крају сваке
           активности сваки ученик ће добити подсетник ствари које је научио. Можда
           вас привуче могућност да научите децу непознате речи које су повезане са
           лекцијом, али њихово објашњавање на забаван и лак начин је  продуктивније
           него чекање напреднијих прилика.
+        title: Увод у Компјутерске Науке
+      Unplug10:
+        title: Интернет
+      Unplug11:
+        title: Замотај-Умотај
       Unplug2:
         title: Компјутерско Размишљање
       Unplug3:
@@ -26,153 +114,65 @@ sr:
         title: Апстракција
       Unplug9:
         title: Релејно Програмирање
-      Unplug10:
-        title: Интернет
-      Unplug11:
-        title: Замотај-Умотај
       UnplugHappyMaps:
         title: Веселе мапе
-      MoveIt:
-        title: Помери га, помери
-      PlantASeed:
-        title: 'Прави алгоритми: Засади семе'
-      BuildingAFoundation:
-        title: Изградња темеља
-      GettingLoopy:
-        title: Запетљанције
-      RelayProgramming:
-        title: Relay programming
-      Conditionals:
-        title: Кондиционали
-      BigEvent:
+      UnplugHappyMaps_2018:
+        title: Веселе мапе
+      UnplugHappyMaps_2019:
+        title: Веселе мапе
+      courseABC_unplugged_bigEvent:
         title: Велики догађај
-      GoingPlacesSafely:
+      courseAB_unplugged_plantASeed:
+        title: 'Прави алгоритми: Засади семе'
+      courseA_unplugged_goingPlacesSafely:
         title: Сигурна путања
-      GraphPaperProgramming:
-        title: Графиконско - Папирно Програмирање
-      PaperPlanes:
-        title: 'Стварни алгоритми: Папирни авиони'
-      BinaryBracelets:
-        title: Бинарне наруквице
-      DigitalFootprint:
-        title: Твој дигитални траг
-      ComputationalThinking:
-        title: Компјутерско Размишљање
-      FunctionalSuncatchers:
-        title: Functional Suncatchers
-      Internet:
-        title: Интернет
-      Crowdsourcing:
-        title: Crowdsourcing
-      DigitalCitizenship:
-        title: Дигитално држављанство
-      BinaryImages:
-        title: Binarne slike
+      courseA_unplugged_happyMaps:
+        title: Веселе мапе
       courseB_unplugged_MRF:
         title: Активност ван мреже
+      courseB_unplugged_MRF_2018:
+        title: Моји роботски пријатељи
+      courseB_unplugged_MRF_2019:
+        title: Моји роботски пријатељи
+      courseB_unplugged_digitalFootprint:
+        title: Твој дигитални траг
       courseB_unplugged_loopyMRF:
         title: Активност ван мреже
       courseC_Unplugged_ScreenOutTheMean:
         title: Активност ван мреже
-      courseD_unplugged_digitalCitizenship:
+      courseC_Unplugged_ScreenOutTheMean_2018:
         title: Активност ван мреже
-      courseF_unplugged_powerOfWords:
+      courseC_Unplugged_ScreenOutTheMean_2019:
         title: Активност ван мреже
-      courseAB_unplugged_plantASeed:
-        title: 'Прави алгоритми: Засади семе'
-      courseA_unplugged_happyMaps:
-        title: Веселе мапе
-      courseA_unplugged_goingPlacesSafely:
-        title: Сигурна путања
-      courseABC_unplugged_bigEvent:
-        title: Велики догађај
-      courseB_unplugged_digitalFootprint:
-        title: Твој дигитални траг
-      courseC_unplugged_buildingAFoundation:
-        title: Изградња темеља
-      courseC_unplugged_paperPlanes:
-        title: 'Стварни алгоритми: Папирни авиони'
-      courseC_unplugged_gettingLoopy:
-        title: Запетљанције
       courseC_unplugged_binaryBracelets:
         title: Бинарне наруквице
+      courseC_unplugged_buildingAFoundation:
+        title: Изградња темеља
+      courseC_unplugged_gettingLoopy:
+        title: Запетљанције
+      courseC_unplugged_paperPlanes:
+        title: 'Стварни алгоритми: Папирни авиони'
+      courseD_unplugged_binaryImages:
+        title: Binarne slike
+      courseD_unplugged_conditionalsCards:
+        title: Услови са картама
+      courseD_unplugged_digitalCitizenship:
+        title: Активност ван мреже
+      courseD_unplugged_digitalCitizenship_2018:
+        title: Активност ван мреже
+      courseD_unplugged_digitalCitizenship_2019:
+        title: Активност ван мреже
       courseD_unplugged_graphPaperProgramming:
         title: Графиконско - Папирно Програмирање
       courseD_unplugged_relayProgramming:
         title: Relay programming
-      courseD_unplugged_conditionalsCards:
-        title: Услови са картама
-      courseD_unplugged_binaryImages:
-        title: Binarne slike
-      courseE_unplugged_internet:
-        title: Интернет
       courseE_unplugged_crowdsourcing:
         title: Crowdsourcing
-      courseB_unplugged_MRF_2018:
-        title: Моји роботски пријатељи
-      PlantASeed_2018:
-        title: 'Прави алгоритми: Засади семе'
-      UnplugHappyMaps_2018:
-        title: Веселе мапе
-      GoingPlacesSafely_2018:
-        title: Сигурна путања
-      BigEvent_2018:
-        title: Велики догађај
-      GraphPaperProgramming_2018:
-        title: Графиконско - Папирно Програмирање
-      courseD_unplugged_digitalCitizenship_2018:
+      courseE_unplugged_internet:
+        title: Интернет
+      courseF_unplugged_powerOfWords:
         title: Активност ван мреже
-      courseC_Unplugged_ScreenOutTheMean_2018:
-        title: Активност ван мреже
-      Conditionals_2018:
-        title: Кондиционали
-      DigitalFootprint_2018:
-        title: Твој дигитални траг
-      BinaryImages_2018:
-        title: Binarne slike
-      PaperPlanes_2018:
-        title: 'Стварни алгоритми: Папирни авиони'
-      GettingLoopy_2018:
-        title: Запетљанције
-      BinaryBracelets_2018:
-        title: Бинарне наруквице
-      MoveItMoveIt_2018:
-        title: Помери га, помери
-      RelayProgramming_2018:
-        title: Relay programming
-      courseB_unplugged_MRF_2019:
-        title: Моји роботски пријатељи
-      Conditionals_2019:
-        title: Кондиционали
-      GraphPaperProgramming_2019:
-        title: Графиконско - Папирно Програмирање
-      RelayProgramming_2018_2019:
-        title: Relay programming
-      courseD_unplugged_digitalCitizenship_2019:
-        title: Активност ван мреже
-      BinaryImages_2019:
-        title: Binarne slike
-      GettingLoopy_2019:
-        title: Запетљанције
-      courseC_Unplugged_ScreenOutTheMean_2019:
-        title: Активност ван мреже
-      BigEvent_2019:
-        title: Велики догађај
-      BinaryBracelets_2019:
-        title: Бинарне наруквице
-      PaperPlanes_2019:
-        title: 'Стварни алгоритми: Папирни авиони'
-      PlantASeed_2019:
-        title: 'Прави алгоритми: Засади семе'
-      UnplugHappyMaps_2019:
-        title: Веселе мапе
-      GoingPlacesSafely_2019:
-        title: Сигурна путања
-      MoveItMoveIt_2019:
-        title: Помери га, помери
-      DigitalFootprint_2019:
-        title: Твој дигитални траг
-      timeforcs_demo_crowdsourcing:
-        title: Crowdsourcing
       timeforcs_demo_conditionals:
         title: Кондиционали
+      timeforcs_demo_crowdsourcing:
+        title: Crowdsourcing

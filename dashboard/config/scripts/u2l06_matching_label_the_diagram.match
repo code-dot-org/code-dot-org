@@ -1,15 +1,30 @@
 name 'U2L06 - Matching: Label the Diagram'
-encrypted 'FR5uHNROYJz+xcg5y0iiXfSDxBPp2gHtVTS0x1nW68kJWr7I30a0la63Ezjk
-qSmaLCKj4S4LeAf/qDZGKm31MnoHT0BLfNwnEPoulrmguPN10UNgdtTn8Knk
-XTi5QbD4cbSui1cL0hKn7gCVNw4ON86H2M35ylOqRZK/GSNz/tWOHT+VV2uK
-AQMpC+mP3jfWOFpjmIH8MeoFV9eerzNt6ibuefnuLa+xJYHkHmabckTNmL5N
-EmBlTPlByXGeYLhEziJHKnjiiyXjqSIjQIAF8NQWW2FUOmsl06uz668AEoiV
-qTr3XPV2lGkSNPLSivAWFjAiw714/wR7XY9TZgquzIaRuCbvNS2TfhSeEsZH
-fpfS18KiXKudNTJzSMf7I+1cBXJHWl79AXPE5eb2YiNO8iT+Nxs/a7W6WIoK
-sCmmfIK06wNb6T3hAzxxVuCIKXrlQMDKjorKpoU+o/M6KdqLVljDBQiUYCro
-fXDqjw3lu3FH6JvqDg8/9jNzIdyJeliPix0oO5EQG11q8eHrEG0kNJS0Ex0I
-WFBU4EwL+YhpOLAhy1Y1EuMt0lC4K6ppTh7VFCdc05JevjXlvLytxPYgUKbN
-93p6DoaDTxjw8yp0oiBnXgeU0w8grvLRlYxdvzpBhRhuIr8+w5+thMVEPw5v
-PGMNSiFIZ0qFpLWIwZ51he8WTRI6oxSdu7cXmLbIlkqprL7BEKNE/Hl9rQmU
-XcPjeTrp19kr7LpSE4JqEviztax5ao9MMDJQLMtR17ZR0ZVL
-'
+title 'Graph Terminology'
+description 'Look at the diagram below and then match the proper term with what each label is pointing to.'
+question 'A'
+answer 'Graph'
+question 'B'
+answer 'Edge'
+question 'C'
+answer 'Node'
+question 'D'
+answer 'Cycle'
+question 'E'
+answer 'Weight'
+
+markdown <<MARKDOWN
+![](https://images.code.org/ccd9ed90a3c57478ad0dc27eded4c426-image-1433804631401.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- A: Graph
+- B: Edge
+- C: Node
+- D: Cycle
+- E: Weight
+
+MARKDOWN
+
+allow_multiple_attempts true

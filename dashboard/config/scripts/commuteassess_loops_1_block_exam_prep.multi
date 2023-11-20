@@ -32,3 +32,5 @@ REPEAT 2 TIMES
 
 
 MARKDOWN
+
+allow_multiple_attempts true

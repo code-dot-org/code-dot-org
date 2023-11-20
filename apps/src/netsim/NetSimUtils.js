@@ -19,7 +19,7 @@ var EncodingType = NetSimConstants.EncodingType;
  * @param {string} type - the tagname for the svg element.
  * @returns {jQuery} for chaining
  */
-exports.jQuerySvgElement = function(type) {
+exports.jQuerySvgElement = function (type) {
   var newElement = $(
     document.createElementNS('http://www.w3.org/2000/svg', type)
   );
@@ -28,7 +28,7 @@ exports.jQuerySvgElement = function(type) {
    * Override addClass since jQuery addClass doesn't work on svg.
    * @param {string} className
    */
-  newElement.addClass = function(className) {
+  newElement.addClass = function (className) {
     var oldClasses = newElement.attr('class');
     if (!oldClasses) {
       newElement.attr('class', className);
@@ -44,12 +44,12 @@ exports.jQuerySvgElement = function(type) {
    * @param {string} className
    * @returns {jQuery} for chaining
    */
-  newElement.removeClass = function(className) {
+  newElement.removeClass = function (className) {
     var oldClasses = newElement.attr('class');
     if (oldClasses) {
       var newClasses = oldClasses
         .split(/\s+/g)
-        .filter(function(word) {
+        .filter(function (word) {
           return word !== className;
         })
         .join(' ');
@@ -64,11 +64,11 @@ exports.jQuerySvgElement = function(type) {
    * @param {string} className
    * @returns {boolean}
    */
-  newElement.hasClass = function(className) {
+  newElement.hasClass = function (className) {
     var oldClasses = newElement.attr('class');
     return (
       oldClasses &&
-      oldClasses.split(/\s+/g).some(function(existingClass) {
+      oldClasses.split(/\s+/g).some(function (existingClass) {
         return existingClass === className;
       })
     );
@@ -91,7 +91,7 @@ exports.jQuerySvgElement = function(type) {
    * @param {boolean} [shouldHaveClass]
    * @returns {jQuery} for chaining
    */
-  newElement.toggleClass = function(className, shouldHaveClass) {
+  newElement.toggleClass = function (className, shouldHaveClass) {
     // Default second argument - if not provided, we flip the current state
     shouldHaveClass = utils.valueOr(
       shouldHaveClass,
@@ -115,7 +115,7 @@ exports.jQuerySvgElement = function(type) {
  * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimTabType} tabType
  */
-exports.shouldShowTab = function(levelConfig, tabType) {
+exports.shouldShowTab = function (levelConfig, tabType) {
   return levelConfig.showTabs.indexOf(tabType) > -1;
 };
 
@@ -124,7 +124,7 @@ exports.shouldShowTab = function(levelConfig, tabType) {
  * @param {EncodingType} encodingType
  * @returns {string} localized encoding name
  */
-exports.getEncodingLabel = function(encodingType) {
+exports.getEncodingLabel = function (encodingType) {
   if (encodingType === EncodingType.ASCII) {
     return i18n.ascii();
   } else if (encodingType === EncodingType.DECIMAL) {
@@ -145,9 +145,9 @@ exports.getEncodingLabel = function(encodingType) {
  * @param {function} func - A function to call for each value in the enum,
  *        which gets passed the enum value.
  */
-exports.forEachEnumValue = function(enumObj, func) {
+exports.forEachEnumValue = function (enumObj, func) {
   for (var enumKey in enumObj) {
-    if (enumObj.hasOwnProperty(enumKey)) {
+    if (Object.prototype.hasOwnProperty.call(enumObj, enumKey)) {
       func(enumObj[enumKey]);
     }
   }
@@ -163,7 +163,7 @@ var NUMBER_SERIALIZATION_RULES = [
   {jsVal: Infinity, jsonVal: 'Infinity'},
   {jsVal: -Infinity, jsonVal: '-Infinity'},
   {jsVal: NaN, jsonVal: 'NaN'},
-  {jsVal: undefined, jsonVal: 'undefined'}
+  {jsVal: undefined, jsonVal: 'undefined'},
 ];
 
 /**
@@ -172,7 +172,7 @@ var NUMBER_SERIALIZATION_RULES = [
  * @param {*} val - any value
  * @returns {boolean}
  */
-var isExactlyNaN = function(val) {
+var isExactlyNaN = function (val) {
   // NaN is the only value in JavaScript that is not exactly equal to itself.
   // Therefore, if val !== val, then val must be NaN.
   return val !== val;
@@ -184,8 +184,8 @@ var isExactlyNaN = function(val) {
  * @param {number|NaN} num
  * @returns {number|string}
  */
-exports.serializeNumber = function(num) {
-  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function(rule) {
+exports.serializeNumber = function (num) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return (
       rule.jsVal === num || (isExactlyNaN(rule.jsVal) && isExactlyNaN(num))
     );
@@ -200,8 +200,8 @@ exports.serializeNumber = function(num) {
  * @param {number|string} storedNum
  * @returns {number|NaN}
  */
-exports.deserializeNumber = function(storedNum) {
-  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function(rule) {
+exports.deserializeNumber = function (storedNum) {
+  var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return rule.jsonVal === storedNum;
   });
   return applicableRule ? applicableRule.jsVal : storedNum;
@@ -215,10 +215,10 @@ exports.deserializeNumber = function(storedNum) {
  * @param {Array} spec
  * @returns {Array}
  */
-exports.scrubHeaderSpecForBackwardsCompatibility = function(spec) {
+exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
   var foundOldFormat = false;
   var scrubbedSpec = [];
-  spec.forEach(function(specEntry) {
+  spec.forEach(function (specEntry) {
     if (typeof specEntry === 'string') {
       // This is new new format, we can just copy it over.
       scrubbedSpec.push(specEntry);
@@ -247,16 +247,18 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function(spec) {
  *          converted or cleaned.
  * @private
  */
-exports.scrubLevelConfiguration_ = function(levelConfig) {
+exports.scrubLevelConfiguration_ = function (levelConfig) {
   var scrubbedLevel = _.cloneDeep(levelConfig);
 
   // Convert old header spec format to new header spec format
-  scrubbedLevel.routerExpectsPacketHeader = exports.scrubHeaderSpecForBackwardsCompatibility(
-    scrubbedLevel.routerExpectsPacketHeader
-  );
-  scrubbedLevel.clientInitialPacketHeader = exports.scrubHeaderSpecForBackwardsCompatibility(
-    scrubbedLevel.clientInitialPacketHeader
-  );
+  scrubbedLevel.routerExpectsPacketHeader =
+    exports.scrubHeaderSpecForBackwardsCompatibility(
+      scrubbedLevel.routerExpectsPacketHeader
+    );
+  scrubbedLevel.clientInitialPacketHeader =
+    exports.scrubHeaderSpecForBackwardsCompatibility(
+      scrubbedLevel.clientInitialPacketHeader
+    );
 
   // Coerce certain values to string that might have been mistaken for numbers
   scrubbedLevel.addressFormat = scrubbedLevel.addressFormat.toString();
@@ -287,13 +289,13 @@ exports.scrubLevelConfiguration_ = function(levelConfig) {
 
   // Generate a warning if we see a possible missed string-to-number conversion
   Object.keys(scrubbedLevel)
-    .filter(function(key) {
+    .filter(function (key) {
       // Ignore level params with underscores, they are the dashboard versions
       // of the camelCase parameters that the app actually uses.
       return !/_/.test(key);
     })
-    .forEach(function(key) {
-      var unconvertedValue = NUMBER_SERIALIZATION_RULES.some(function(rule) {
+    .forEach(function (key) {
+      var unconvertedValue = NUMBER_SERIALIZATION_RULES.some(function (rule) {
         return scrubbedLevel[key] === rule.jsonVal;
       });
       if (unconvertedValue) {
@@ -316,7 +318,7 @@ exports.scrubLevelConfiguration_ = function(levelConfig) {
  * @param {number} bits
  * @returns {string} - localized string representation of size in bytes
  */
-exports.bitsToLocalizedRoundedBytesize = function(bits) {
+exports.bitsToLocalizedRoundedBytesize = function (bits) {
   if (bits === Infinity) {
     return i18n.unlimited();
   }
@@ -350,7 +352,7 @@ exports.bitsToLocalizedRoundedBytesize = function(bits) {
  * @param {number} bitsPerSecond
  * @returns {string} - localized string representation of speed in bits
  */
-exports.bitrateToLocalizedRoundedBitrate = function(bitsPerSecond) {
+exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
   if (bitsPerSecond === Infinity) {
     return i18n.unlimited();
   }
@@ -374,12 +376,12 @@ exports.bitrateToLocalizedRoundedBitrate = function(bitsPerSecond) {
   return i18n.x_bps({x: bps});
 };
 
-exports.zeroPadLeft = function(string, desiredWidth) {
+exports.zeroPadLeft = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (padding + string).slice(-desiredWidth);
 };
 
-exports.zeroPadRight = function(string, desiredWidth) {
+exports.zeroPadRight = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
@@ -389,17 +391,17 @@ exports.zeroPadRight = function(string, desiredWidth) {
  * @param {NetSimPanel} onPanel
  * @static
  */
-exports.makeContinueButton = function(onPanel) {
+exports.makeContinueButton = function (onPanel) {
   onPanel.addButton(
     i18n.continueButton({caret: '<i class="fa fa-caret-right"></i>'}),
-    function(jQueryEvent) {
+    function (jQueryEvent) {
       if (!$(jQueryEvent.target).is(':disabled')) {
         NetSimGlobals.completeLevelAndContinue();
       }
     },
     {
       secondary: false,
-      classes: ['submitButton']
+      classes: ['submitButton'],
     }
   );
 };
@@ -409,7 +411,7 @@ exports.makeContinueButton = function(onPanel) {
  * @param {string} shardID
  * @returns {boolean}
  */
-exports.doesUserOwnShard = function(user, shardID) {
+exports.doesUserOwnShard = function (user, shardID) {
   if (!user) {
     return false;
   } else if (user.isAdmin) {
@@ -433,7 +435,7 @@ exports.doesUserOwnShard = function(user, shardID) {
  * @param {!Location|HTMLHyperlinkElementUtils} loc
  * @return {string} a level 'slug' like 's-csp1-lessons-3-levels-2'
  */
-exports.getUniqueLevelKeyFromLocation = function(loc) {
+exports.getUniqueLevelKeyFromLocation = function (loc) {
   return loc.pathname // something like '/s/csp1-2019/lessons/3/levels/2'
     .replace(/^\//, '') // Strip leading slash from pathname
     .replace(/\/$/, '') // Strip trailing slash (if it exists)

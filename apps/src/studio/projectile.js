@@ -4,7 +4,7 @@ import StudioSpriteSheet from './StudioSpriteSheet';
 import {
   Direction,
   DEFAULT_PROJECTILE_ANIMATION_FRAME_DURATION,
-  DEFAULT_PROJECTILE_SPEED
+  DEFAULT_PROJECTILE_SPEED,
 } from './constants';
 
 // mapping of how much we should rotate based on direction
@@ -24,35 +24,35 @@ DIR_TO_ROTATION[Direction.NORTHWEST] = 315;
 var OFFSET_FROM_SPRITE = {};
 OFFSET_FROM_SPRITE[Direction.NORTH] = {
   x: 0.5,
-  y: 0
+  y: 0,
 };
 OFFSET_FROM_SPRITE[Direction.EAST] = {
   x: 1,
-  y: 0.5
+  y: 0.5,
 };
 OFFSET_FROM_SPRITE[Direction.SOUTH] = {
   x: 0.5,
-  y: 1
+  y: 1,
 };
 OFFSET_FROM_SPRITE[Direction.WEST] = {
   x: 0,
-  y: 0.5
+  y: 0.5,
 };
 OFFSET_FROM_SPRITE[Direction.NORTHEAST] = {
   x: 1,
-  y: 0
+  y: 0,
 };
 OFFSET_FROM_SPRITE[Direction.SOUTHEAST] = {
   x: 1,
-  y: 1
+  y: 1,
 };
 OFFSET_FROM_SPRITE[Direction.SOUTHWEST] = {
   x: 0,
-  y: 1
+  y: 1,
 };
 OFFSET_FROM_SPRITE[Direction.NORTHWEST] = {
   x: 0,
-  y: 0
+  y: 0,
 };
 
 // Origin of projectile, based on direction
@@ -61,35 +61,35 @@ OFFSET_FROM_SPRITE[Direction.NORTHWEST] = {
 var OFFSET_CENTER = {};
 OFFSET_CENTER[Direction.NORTH] = {
   x: 0,
-  y: -25
+  y: -25,
 };
 OFFSET_CENTER[Direction.EAST] = {
   x: 25,
-  y: 0
+  y: 0,
 };
 OFFSET_CENTER[Direction.SOUTH] = {
   x: 0,
-  y: 25
+  y: 25,
 };
 OFFSET_CENTER[Direction.WEST] = {
   x: -25,
-  y: 0
+  y: 0,
 };
 OFFSET_CENTER[Direction.NORTHEAST] = {
   x: 25,
-  y: -25
+  y: -25,
 };
 OFFSET_CENTER[Direction.SOUTHEAST] = {
   x: 25,
-  y: 25
+  y: 25,
 };
 OFFSET_CENTER[Direction.SOUTHWEST] = {
   x: -25,
-  y: 25
+  y: 25,
 };
 OFFSET_CENTER[Direction.NORTHWEST] = {
   x: -25,
-  y: -25
+  y: -25,
 };
 
 /**
@@ -123,14 +123,14 @@ export default class Projectile extends Collidable {
       defaultFramesPerAnimation: options.frames,
       assetPath: options.image,
       horizontalAnimation: true,
-      totalAnimations: 1
+      totalAnimations: 1,
     });
 
     /** @private {StudioAnimation} */
     this.animation_ = new StudioAnimation(
       Object.assign({}, options, {
         spriteSheet: this.spriteSheet_,
-        animationFrameDuration: this.getAnimationFrameDuration()
+        animationFrameDuration: this.getAnimationFrameDuration(),
       })
     );
   }
@@ -203,7 +203,7 @@ export default class Projectile extends Collidable {
     this.animation_.redrawCenteredAt(
       {
         x: this.x,
-        y: this.y
+        y: this.y,
       },
       Studio.tickCount
     );
@@ -226,7 +226,7 @@ export default class Projectile extends Collidable {
     var unit = Direction.getUnitVector(this.dir);
     return {
       x: this.x + this.speed * unit.x,
-      y: this.y + this.speed * unit.y
+      y: this.y + this.speed * unit.y,
     };
   }
 

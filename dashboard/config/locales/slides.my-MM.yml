@@ -1,6 +1,12 @@
 ---
 my:
   slides:
+    function:
+      5:
+        text: Let's put the "fun" back in "FUNction!"
+    loop_while:
+      1:
+        text: Hi, I'm Makinde! Let's learn about the "while block."
     maze_intro:
       1:
         text: ပထမဆံုး code သင္ၾကားမႈက ၾကိဳဆုိပါတယ္။ programming ရဲ့ ပထမဆံုး အရသာကို
@@ -33,9 +39,3 @@ my:
         text: Block တစ္ခုမွာ instruction တစ္ခုပါတယ္။ "move forward ေရွ႔သုိ ့" ဆုိတဲ့
           block ကို workspace ထဲဆြဲထည့္လုိက္ျပီး "Run Program" ကိုႏွိပ္လုိက္ရင္ ဌက္ကေလးက
           maze ေပၚကို တစ္ေနရာေရြ ႔သြားမွာျဖစ္တယ္။
-    function:
-      5:
-        text: Let's put the "fun" back in "FUNction!"
-    loop_while:
-      1:
-        text: Hi, I'm Makinde! Let's learn about the "while block."

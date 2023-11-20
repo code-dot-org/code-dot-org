@@ -8,37 +8,52 @@ And(/^I create a new (student|teacher|facilitator) section( and go home)?$/) do 
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And /^I create a new student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
-  individual_steps %Q{
+And /^I create a new "([^"]*)" student section named "([^"]*)" assigned to "([^"]*)"(?: version "([^"]*)")?(?: and unit "([^"]*)")?$/ do |marketing_audience, section_name, assignment_family, version_year, secondary|
+  individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
     When I select email login
-    Then I wait to see "#uitest-section-name"
-    And I press keys "#{section_name}" for element "#uitest-section-name"
-    Then I wait to see "#uitest-assignment-family"
-    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-  }
+    Then I wait to see "#sections-set-up-container"
+    And I press keys "#{section_name}" for element "#uitest-section-name-setup"
+    And I press the first "input[name='grades[]']" element
+    And I wait until element "button:contains(#{marketing_audience})" is visible
+    And I click selector "button:contains(#{marketing_audience})"
+    And I press the first "input[name='#{assignment_family}']" element
+  GHERKIN
 
   if version_year
-    individual_steps %Q{
+    individual_steps <<~GHERKIN
       And I click selector "#assignment-version-year" once I see it
       And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
-    }
+    GHERKIN
   end
 
   if secondary
-    individual_steps %Q{
+    individual_steps <<~GHERKIN
       And I wait to see "#uitest-secondary-assignment"
       And I select the "#{secondary}" option in dropdown "uitest-secondary-assignment"
-    }
+    GHERKIN
   end
 
-  individual_steps %Q{
-    And I press the save button to create a new section
-    And I wait for the dialog to close
-    Then I should see the student section table
-  }
+  individual_steps <<~GHERKIN
+    And I press the first "#uitest-save-section-changes" element
+    And I wait until element "#classroom-sections" is visible
+  GHERKIN
+end
+
+Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
+  steps "Given I am a teacher"
+  browser_request(
+    url: '/api/test/create_student_section_with_name',
+    method: 'POST',
+    body: {section_name: 'Section 1'}
+  )
+  browser_request(
+    url: '/api/test/create_student_section_with_name',
+    method: 'POST',
+    body: {section_name: 'Section 2'}
+  )
 end
 
 Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
@@ -49,33 +64,35 @@ Given(/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   )
 end
 
-And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
-  individual_steps %Q{
+And /^I create a new "([^"]*)" student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |marketing_audience, assignment_family, version_year, secondary|
+  individual_steps <<~GHERKIN
     When I see the section set up box
     When I press the new section button
     Then I should see the new section dialog
 
     When I select email login
-    Then I wait to see "#uitest-assignment-family"
 
-    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
-
+    And I wait until element "button:contains(#{marketing_audience})" is visible
+    And I press keys "Untitled Section" for element "#uitest-section-name-setup"
+    And I press the first "input[name='grades[]']" element
+    And I click selector "button:contains(#{marketing_audience})"
+    And I press the first "input[name='#{assignment_family}']" element
     And I click selector "#assignment-version-year" once I see it
     And I click selector ".assignment-version-title:contains(#{version_year})" once I see it
-  }
+  GHERKIN
 
   if secondary
-    individual_steps %Q{
+    individual_steps <<~GHERKIN
       And I wait to see "#uitest-secondary-assignment"
       And I select the "#{secondary}" option in dropdown "uitest-secondary-assignment"
-    }
+    GHERKIN
   end
 
-  individual_steps %Q{
-    And I press the save button to create a new section
-    And I wait for the dialog to close using jQuery
-    Then I should see the student section table
-  }
+  individual_steps <<~GHERKIN
+    And I press the first "#uitest-save-section-changes" element
+    And I click selector "button:contains('Go to dashboard')" if I see it
+    And I wait until element "#classroom-sections" is visible
+  GHERKIN
 end
 
 And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
@@ -102,25 +119,41 @@ end
 
 And(/^I join the section$/) do
   page_load(true) do
-    steps %Q{
+    steps <<~GHERKIN
       Given I am on "#{@section_url}"
       And I click selector ".btn.btn-primary" once I see it
-    }
+    GHERKIN
   end
 end
 
 And(/^I attempt to join the section$/) do
-  steps %Q{
-    Given I am on "#{@section_url}"
-  }
+  steps "Given I am on \"#{@section_url}\""
+end
+
+And /^I click the "([^"]*)" checkbox in the dialog$/ do |section_name|
+  @browser.execute_script("return $(\"span:contains(#{section_name})\").siblings()[0].click();")
+end
+
+And /^I see that "([^"]*)" is assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
+  individual_steps <<~GHERKIN
+    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is visible
+  GHERKIN
+end
+
+And /^I see that "([^"]*)" is not assigned to "([^"]*)" in the section table$/ do |section_name, course_name|
+  individual_steps <<~GHERKIN
+    And I wait until element "tr:contains(#{section_name}):contains(#{course_name})" is not visible
+  GHERKIN
+end
+
+And /^the "([^"]*)" checkbox is (not )?selected$/ do |section_name, negation|
+  wait_until {@browser.execute_script("return $(\"span:contains(#{section_name})\").siblings().is(':checked');") == negation.nil?}
 end
 
 And(/I type the section code into "([^"]*)"$/) do |selector|
   puts @section_url
   section_code = @section_url.split('/').last
-  steps %Q{
-    And I type "#{section_code}" into "#{selector}"
-  }
+  steps "And I type \"#{section_code}\" into \"#{selector}\""
 end
 
 # press keys allows React to pick up on the changes
@@ -135,10 +168,10 @@ When /^I see the section set up box$/ do
 end
 
 When /^I press the new section button$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     Given I scroll the ".uitest-newsection" element into view
     When I press the first ".uitest-newsection" element
-  STEPS
+  GHERKIN
 end
 
 Then /^I should see the new section dialog$/ do
@@ -146,11 +179,11 @@ Then /^I should see the new section dialog$/ do
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
-  steps %Q{When I press the first ".uitest-#{login_type}Login" element}
+  steps "When I press the first \".uitest-#{login_type}Login\" element"
 end
 
 When /^I select (student|teacher|facilitator) participant type$/ do |participant_type|
-  steps %Q{When I press the first ".uitest-#{participant_type}-type" element}
+  steps "When I press the first \".uitest-#{participant_type}-type\" element"
 end
 
 When /^I press the save button to create a new section$/ do
@@ -235,6 +268,13 @@ Then /^I navigate to teacher dashboard for the section I saved with experiment "
   }
 end
 
+Then /^I navigate to manage students for the section I saved$/ do
+  expect(@section_id).to be > 0
+  steps %{
+    Then I am on "http://studio.code.org/teacher_dashboard/sections/#{@section_id}/manage_students"
+  }
+end
+
 Then /^I navigate to the script "([^"]*)" lesson (\d+) lesson extras page for the section I saved$/ do |script_name, lesson_num|
   expect(@section_id).to be > 0
   steps %{
@@ -279,27 +319,27 @@ Then /^I open the section action dropdown$/ do
 end
 
 Then /^I add the first student to the first code review group$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I focus selector "#uitest-unassign-all-button"
     And I press keys ":tab"
     And I press keys ":space"
     And I press keys ":arrow_right"
     And I press keys ":space"
-  STEPS
+  GHERKIN
 end
 
 Then /^I open the code review groups management dialog$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
-  STEPS
+  GHERKIN
 end
 
 Then /^I create a new code review group for the section I saved$/ do
-  steps <<-STEPS
+  steps <<-GHERKIN
     And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
-  STEPS
+  GHERKIN
 end
