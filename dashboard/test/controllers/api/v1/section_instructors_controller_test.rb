@@ -81,6 +81,13 @@ class Api::V1::SectionInstructorsControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'instructor receives correct error when adding themself to a section' do
+    sign_in @teacher
+    post :create, params: {section_id: @section.id, email: @teacher.email}
+    assert_response :bad_request
+    assert_equal '{"error":"inviting self"}', @response.body
+  end
+
   test 'instructor cannot add a student to instruct a section' do
     sign_in @teacher
     section = create(:section, :teacher_participants, user: @teacher)
