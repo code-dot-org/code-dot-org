@@ -11,7 +11,7 @@ const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
 };
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
@@ -333,14 +333,29 @@ export const blocks = {
               editButton,
               'EDIT'
             );
+            // getProcedureModel is defined on procedure blocks as part of
+            // @blockly/block-shareable-procedures
+            // For this block, we will get the procedure based on selected
+            // dropdown field option.
+            block.getProcedureModel = function () {
+              const fieldValue = block.getFieldValue(inputConfig.name);
+              const procedureMap = block.workspace.getProcedureMap();
+              let procedure = undefined;
+              for (const [, value] of procedureMap.entries()) {
+                if (value.name === fieldValue) {
+                  procedure = value;
+                }
+              }
+              return procedure;
+            };
           }
         }
       },
       generateCode(block, arg) {
-        const invalidBehavior =
-          block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
+        const fieldValue = block.getFieldValue(arg.name);
+        const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
         const behaviorId = Blockly.JavaScript.nameDB_?.getName(
-          block.getFieldValue(arg.name),
+          fieldValue,
           'PROCEDURE'
         );
         if (invalidBehavior) {
@@ -393,17 +408,10 @@ function onBlockImageSourceChange(event, block) {
 // blocks found on the main workspace.
 function getAllBehaviorOptions() {
   const noBehaviorLabel = msg.behaviorsNotFound();
-  const behaviorBlocks = [];
-  Blockly.Workspace.getAll().forEach(workspace => {
-    behaviorBlocks.push(
-      ...workspace
-        .getTopBlocks()
-        .filter(
-          block =>
-            block.type === 'behavior_definition' && !block.workspace.isFlyout
-        )
-    );
-  });
+  // Behavior definition blocks are always moved to the hidden workspace.
+  const behaviorBlocks = Blockly.getHiddenDefinitionWorkspace()
+    .getTopBlocks()
+    .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
   const behaviorOptions = behaviorBlocks.map(block => [
     block.getProcedureModel().name,
     block.getProcedureModel().name,
