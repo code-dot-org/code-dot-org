@@ -10,7 +10,8 @@ theme: responsive_full_width
 
 %section.top
   .wrapper
-    %h1=hoc_s(:pl_middle_high_top_heading)
+    %h1{style: "margin-bottom: 3rem"}
+      =hoc_s(:pl_middle_high_top_heading)
     .text-wrapper.col-50
       %p.body-one
         =hoc_s(:pl_middle_high_top_desc)
@@ -51,41 +52,49 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %h2 Program design
-    %p The yearlong professional learning programs all follow a similar design. Regional Partners across the country provide our programs and offer local workshops led by trained facilitators.
-    %ul.arrow-list
-      %li{style: "width: 32%"}
-        %h3 Summer Workshops
-        %p Attend a 5 day summer workshop to get familiar with the curriculum and prepare for the school year.
-      %li{style: "width: 32%"}
-        %h3 Academic Year Workshops
-        %p Attend workshops during the year to receive support as you teach the curriculum
-      %li{style: "width: 32%"}
-        %h3 Community Support
-        %p Collaborate with your regional cohort of teachers and get the support of a nationwide online teacher community
-    %a{href: "/educate/professional-learning/program-information"} Find out more about the program specifics in your region.
+    %h2=hoc_s(:heading_program_design)
+    %p=hoc_s(:pl_middle_high_program_design_desc)
+    %ul.progressive-list.three-col
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_summer_title)
+        %p=hoc_s(:pl_middle_high_program_design_summer_desc)
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_year_title)
+        %p=hoc_s(:pl_middle_high_program_design_year_desc)
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_community_title)
+        %p=hoc_s(:pl_middle_high_program_design_community_desc)
 
 %section.bg-neutral-light
   .wrapper
-    %h2 How does the application process work?
-    %ol.steps-list.four-col
+    %h2.centered
+      =hoc_s(:heading_how_does_application_process_work)
+    %ol.steps-list.three-col
       %li
         %h3
           %span 1
-        %h4 Apply
-        %p Fill out an application with information about you, your school and the course you're teaching.
+        %h4=hoc_s(:heading_apply)
+        %p=hoc_s(:pl_middle_high_process_apply_desc)
       %li
         %h3
           %span 2
-        %h4 Acceptance
-        %p If accepted, you will be notified of your acceptance by your Regional Partner 2-4 weeks after applying.
+        %h4=hoc_s(:heading_acceptance)
+        %p=hoc_s(:pl_middle_high_process_acceptance_desc)
       %li
         %h3
           %span 3
-        %h4 Enroll
-        %p Sign up for the summer workshop in your region and get ready to start the yearlong program!
+        %h4=hoc_s(:heading_enroll)
+        %p=hoc_s(:pl_middle_high_process_enroll_desc)
     %div.centered
-      %a.link-button{href: "/educate/professional-learning/program-information"} Apply now
+      %a.link-button{href: "/educate/professional-learning/program-information"}
+        =hoc_s(:call_to_action_apply_now)
+
+%section
+  .wrapper
+    ADD FORM HERE
 
 %section
   .wrapper
