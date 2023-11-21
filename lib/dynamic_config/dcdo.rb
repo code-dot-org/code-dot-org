@@ -51,7 +51,7 @@ class DCDOBase < DynamicConfigBase
       'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
-      'show-coteacher-ui': DCDO.get('show-coteacher-ui', false),
+      'show-coteacher-ui': DCDO.get('show-coteacher-ui', true),
       'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {})
     }
   end

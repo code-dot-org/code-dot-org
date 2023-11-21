@@ -13075,3 +13075,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: AI Tutor Test
+          lesson_groups: {}
+          name: ai-tutor-test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

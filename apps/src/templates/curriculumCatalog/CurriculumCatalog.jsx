@@ -173,17 +173,19 @@ const CurriculumCatalog = ({
         imageUrl={CourseCatalogIllustration01}
       />
       {showAssignSuccessMessage && (
-        <div className={style.assignSuccessMessageContainer}>
-          <BodyTwoText className={style.assignSuccessMessage}>
-            {assignSuccessMessage}
-          </BodyTwoText>
-          <button
-            aria-label="close success message"
-            onClick={handleCloseAssignSuccessMessage}
-            type="button"
-          >
-            <strong>X</strong>
-          </button>
+        <div className={style.assignSuccessMessageCenter}>
+          <div className={style.assignSuccessMessageContainer}>
+            <BodyTwoText className={style.assignSuccessMessage}>
+              {assignSuccessMessage}
+            </BodyTwoText>
+            <button
+              aria-label="close success message"
+              onClick={handleCloseAssignSuccessMessage}
+              type="button"
+            >
+              <strong>X</strong>
+            </button>
+          </div>
         </div>
       )}
       <CurriculumCatalogFilters
