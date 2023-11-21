@@ -138,7 +138,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources && (
+                    {Object.keys(availableResources).length > 0 && (
                       <div>
                         <Heading4 visualAppearance="heading-xs">
                           {i18n.availableResources()}

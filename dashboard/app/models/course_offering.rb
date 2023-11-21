@@ -484,11 +484,13 @@ class CourseOffering < ApplicationRecord
     lessons = units&.first&.lessons
 
     return nil unless lessons
-    lesson_plan = lessons&.first&.lesson_plan_html_url
-    expanded_card_resources = {"Lesson Plan" => lesson_plan}
+    expanded_card_resources = {}
 
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
+      if lesson.has_lesson_plan
+        expanded_card_resources["Lesson Plan"] ||= lesson.lesson_plan_html_url
+      end
       lesson.resources&.each do |resource|
         properties = resource.properties
         next unless properties&.key?('type')
