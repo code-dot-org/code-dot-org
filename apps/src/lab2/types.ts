@@ -187,6 +187,7 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
+  | 'pythonlab'
   | 'spritelab'
   | 'standalone_video';
 
