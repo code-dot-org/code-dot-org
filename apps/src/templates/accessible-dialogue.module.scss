@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .modalBackdrop {
   position: fixed;
@@ -9,11 +9,12 @@
   background-color: #000;
   opacity: 0.6;
   z-index: 1250;
-};
+}
 
 .modal {
   position: fixed;
-  top: 10%;
+  top: 5%;
+  max-height: 95%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1350;
@@ -23,4 +24,4 @@
   border-radius: 4px;
   padding: 1rem;
   overflow: auto;
-};
+}
