@@ -5,7 +5,8 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata, AiOutput} from './types';
+import {SongData, SongMetadata} from './types';
+import {AiOutput} from './ai/types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {

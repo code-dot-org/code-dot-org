@@ -22,7 +22,7 @@ import {
   FieldKey,
   GeneratedEffect,
   MinMax,
-} from '../types';
+} from './types';
 import {
   generateBlocks,
   generateBlocksFromResult,
