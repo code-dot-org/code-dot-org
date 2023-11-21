@@ -652,6 +652,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     indexesToPreview.push(BAD_GENERATED_RESULTS_COUNT);
   }
 
+  // How long the preview takes to appear.
+  const previewAppearDuration = getGeneratingStepDuration() / 2.5;
+
   const text =
     mode === Mode.SELECT_INPUTS
       ? i18n.danceAiModalChooseEmoji()
@@ -818,8 +821,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                         key={'preview-container-' + index}
                         className={moduleStyles.previewContainer}
                         style={{
-                          animationDuration:
-                            getGeneratingStepDuration() / 2.5 + 'ms',
+                          animationDuration: previewAppearDuration + 'ms',
                         }}
                       >
                         <AiVisualizationPreview
