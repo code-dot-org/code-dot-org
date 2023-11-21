@@ -3,12 +3,7 @@ $width-md: 877px;
 $width-sm: 767px;
 
 aside.dance-party-ai-skinny-banner {
-  background: linear-gradient(280deg, #911FB5 3.65%, #00022F 51.56%, #007E8E 92.19%);
-  overflow: hidden;
-
-  @media screen and (max-width: $width-sm) {
-    background: linear-gradient(314deg, #911FB5 -6.35%, #00022F 49.56%, #007E8E 104.19%);
-  }
+  background: linear-gradient(314deg, #911FB5 -6.35%, #00022F 49.56%, #007E8E 104.19%);
 
   a:hover,
   a:active,
