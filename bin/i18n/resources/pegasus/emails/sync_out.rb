@@ -34,6 +34,7 @@ module I18n
 
               crowdin_file_path = File.join(crowdin_locale_resource_dir, crowdin_file_subpath)
               origin_markdown_file_path = File.join(ORIGIN_DIR_PATH, crowdin_file_subpath)
+              next unless File.exist?(origin_markdown_file_path)
 
               I18nScriptUtils.copy_file(crowdin_file_path, target_file_path)
               I18n::Utils::PegasusMarkdown.restore_file_header(origin_markdown_file_path, target_file_path)

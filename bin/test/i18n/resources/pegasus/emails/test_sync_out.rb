@@ -76,7 +76,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
 
     context 'when the origin emails file does not exists' do
       before do
-        FileUtils.rm(origin_email_file_path)
+        FileUtils.rm(crowdin_locale_resource_dir)
       end
 
       it 'does not distribute localized emails' do
