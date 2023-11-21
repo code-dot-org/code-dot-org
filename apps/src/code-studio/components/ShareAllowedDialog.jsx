@@ -212,11 +212,43 @@ class ShareAllowedDialog extends React.Component {
   isSocialShareAllowed = () =>
     this.props.canShareSocial && !this.props.inRestrictedShareMode;
 
+  getWarningText = showPublishInfo => {
+    if (this.props.inRestrictedShareMode) {
+      return i18n.restrictedShareInfo();
+    }
+
+    if (this.state.replayVideoUnavailable) {
+      return i18n.downloadReplayVideoButtonError();
+    }
+
+    // The following warnings require showPublishInfo to be true
+    if (!showPublishInfo) {
+      return null;
+    }
+
+    if (!this.props.thumbnailUrl) {
+      return i18n.thumbnailWarning();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isAccountOldEnoughToPublish
+    ) {
+      return i18n.publishFailedAccountTooNew();
+    }
+
+    if (
+      !this.state.isLoadingAccountAndProjectAge &&
+      !this.state.isProjectOldEnoughToPublish
+    ) {
+      return i18n.publishFailedProjectTooNew();
+    }
+  };
+
   render() {
     const {
       canPrint,
       isPublished,
-      inRestrictedShareMode,
       canShareSocial,
       appType,
       selectedSong,
@@ -292,6 +324,8 @@ class ShareAllowedDialog extends React.Component {
       !hasThumbnail ||
       !isAccountOldEnoughToPublish ||
       !isProjectOldEnoughToPublish;
+
+    const warningText = this.getWarningText(showPublishInfo);
 
     return (
       <div>
@@ -387,7 +421,7 @@ class ShareAllowedDialog extends React.Component {
 
                   {showPublishInfo &&
                     (isLoadingAccountAndProjectAge ? (
-                      <Spinner size="medium" style={{marginRight: 16}} />
+                      <Spinner size="medium" style={styles.loadingSpinner} />
                     ) : (
                       <Button
                         type="button"
@@ -473,57 +507,13 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {showPublishInfo && !hasThumbnail && (
-                  <div style={{clear: 'both', marginTop: 10}}>
+                {warningText && (
+                  <div style={styles.warningMessageContainer}>
                     <span
                       style={styles.thumbnailWarning}
                       className="thumbnail-warning"
                     >
-                      {i18n.thumbnailWarning()}
-                    </span>
-                  </div>
-                )}
-                {showPublishInfo &&
-                  !isLoadingAccountAndProjectAge &&
-                  !isAccountOldEnoughToPublish && (
-                    <div style={{clear: 'both', marginTop: 10}}>
-                      <span
-                        style={styles.thumbnailWarning}
-                        className="thumbnail-warning"
-                      >
-                        {i18n.publishFailedAccountTooNew()}
-                      </span>
-                    </div>
-                  )}
-                {showPublishInfo &&
-                  !isLoadingAccountAndProjectAge &&
-                  !isProjectOldEnoughToPublish && (
-                    <div style={{clear: 'both', marginTop: 10}}>
-                      <span
-                        style={styles.thumbnailWarning}
-                        className="thumbnail-warning"
-                      >
-                        {i18n.publishFailedProjectTooNew()}
-                      </span>
-                    </div>
-                  )}
-                {inRestrictedShareMode && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {i18n.restrictedShareInfo()}
-                    </span>
-                  </div>
-                )}
-                {this.state.replayVideoUnavailable && (
-                  <div style={{clear: 'both', marginTop: 10}}>
-                    <span
-                      style={styles.thumbnailWarning}
-                      className="thumbnail-warning"
-                    >
-                      {i18n.downloadReplayVideoButtonError()}
+                      {warningText}
                     </span>
                   </div>
                 )}
@@ -663,6 +653,13 @@ const styles = {
   },
   socialLink: {
     marginRight: 16,
+  },
+  loadingSpinner: {
+    marginRight: 16,
+  },
+  warningMessageContainer: {
+    clear: 'both',
+    marginTop: 10,
   },
 };
 
