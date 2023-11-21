@@ -15,7 +15,7 @@ const initialState: AITutorState = {
 };
 
 interface ChatContext {
-  levelId: number;
+  levelId?: number;
   systemPrompt: string;
   studentCode: string;
 }

@@ -1,6 +1,4 @@
 export const CHAT_COMPLETION_URL = '/openai/chat_completion';
-export const CHAT_COMPLETION_FOR_VALIDATION_URL =
-  '/openai/chat_completion_for_validation';
 import {ChatCompletionMessage, Role, Status} from './types';
 
 const initialChatMessages: ChatCompletionMessage[] = [
