@@ -9,13 +9,16 @@ Feature: Project Sharing - Young Students
     And I close the dialog
     Then I wait until element "#project-share" is gone
 
-  Scenario: Young Students Can Always Share Play Lab Projects
+  Scenario: Young Students Cannot Publish New Play Lab Projects
     Then I make a "playlab" project named "Playlab Project!"
     And I open the project share dialog
-    Then the project can be published
-    Then I publish the project from the share dialog
-    Given I open the project share dialog
-    And the project is published
+    And I wait until element "#share-dialog-publish-button" is visible
+    Then element "#share-dialog-publish-button" is disabled
+
+  Scenario: Young Student Can Always Share via URL
+    Then I make a "playlab" project named "Playlab Project!"
+    And I open the project share dialog
+    And element "#sharing-dialog-copy-button" is enabled
 
   Scenario: Young Students Can Not By Default Make App Lab Projects
     Then I am on "http://studio.code.org/projects/applab/new"
