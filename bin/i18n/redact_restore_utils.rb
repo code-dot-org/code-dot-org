@@ -8,12 +8,6 @@ require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
   # RedactRestoreUtils manages the redaction and restoration of i18n files.
-  def self.backup_source_file(source_path)
-    return unless File.exist?(source_path)
-    return unless source_path[I18N_SOURCE_DIR]
-    backup_path = source_path.sub(I18N_SOURCE_DIR, I18N_ORIGINAL_DIR)
-    I18nScriptUtils.copy_file(source_path, backup_path)
-  end
 
   # For a given file, redact_file returns the redacted content of the file. The default file format is Markdown.
   def self.redact_file(source_path, plugins = [], format = 'md')
@@ -114,7 +108,7 @@ class RedactRestoreUtils
       I18nScriptUtils.write_yaml_file(dest, redacted) if I18nScriptUtils.yaml_file?(source)
       I18nScriptUtils.write_json_file(dest, redacted) if I18nScriptUtils.json_file?(source)
     else
-      redacted = redact_file(source_data, plugins, format)
+      redacted = redact_file(source, plugins, format)
       I18nScriptUtils.write_file(dest, redacted)
     end
   end
