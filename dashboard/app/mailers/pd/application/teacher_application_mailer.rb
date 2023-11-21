@@ -11,7 +11,7 @@ module Pd::Application
         mail(
           to: @application.formatted_applicant_email,
           reply_to: @application.formatted_partner_contact_email,
-          subject: "#{@application.regional_partner.name} has received your application for Code.org's Professional Learning",
+          subject: "#{@application.regional_partner.name} has received your application for Code.org's Professional Learning Program",
         )
       else
         mail(
