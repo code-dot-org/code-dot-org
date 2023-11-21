@@ -2,8 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/courses": "hoc-2023",
-    "/home": "hoc-2023"
+    "/courses": "hoc-2023-dance-ai",
+    "/home": "hoc-2023-dance-ai"
   },
   "banners": {
     "csleadersprize": {
@@ -176,6 +176,14 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
+    },
+    "hoc-2023-dance-ai": {
+      "image": "/images/dance-hoc/dance-party-activity-ai-edition.png",
+      "title": "Dance Party: AI Edition",
+      "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/dance",
+      "buttonId": "hoc-2023-dance-ai"
     }
   }
 }
