@@ -37,9 +37,7 @@ const AITutorPanel = ({level}) => {
 
   const handleCheckboxChange = checked => {
     dispatch(addAIResponse(''));
-    // Note: I think this would unselect the checkbox if it was already selected
-    // which, to Molly's point, might not be want we want (if we want them to act as radio buttons)
-    updateChecked(prevChecked => (prevChecked === checked ? null : checked));
+    updateChecked(checked);
   };
 
   return (
