@@ -21,7 +21,8 @@ module I18n
               I18nScriptUtils.write_json_file(i18n_source_file_path, i18n_data_of(programming_env))
 
               # Redact the file content
-              RedactRestoreUtils.backup_source_file(i18n_source_file_path)
+              i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
+              I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
               RedactRestoreUtils.redact(i18n_source_file_path, i18n_source_file_path, REDACT_PLUGINS)
             ensure
               progress_bar.increment
