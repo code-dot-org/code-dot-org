@@ -98,7 +98,7 @@ class DatastoreCache
   # Updates the local cache with the latest values from the shared cache. Can
   # be called regularly, but only for a small subset of user requests.
   def update_local_cache
-    @local_cache = CDO.shared_cache.read(shared_cache_key) || {}
+    @local_cache = CDO.shared_cache.read(shared_cache_key)
     @local_cache_last_refreshed_at = Time.now
   end
 end
