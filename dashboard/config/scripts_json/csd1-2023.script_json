@@ -14,6 +14,16 @@
           "visibility": "Teacher-only",
           "dismissible": true,
           "buttonText": "Unit 1 Self-Paced PL"
+        },
+        {
+          "key": "22d3b327-9757-4ce3-bd52-2423dbc1fd24",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
         }
       ],
       "curriculum_umbrella": "CSD",
@@ -30,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-27 19:05:37 UTC",
+    "serialized_at": "2023-11-20 21:02:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
