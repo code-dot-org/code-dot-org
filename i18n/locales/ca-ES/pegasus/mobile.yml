@@ -1121,6 +1121,7 @@
   header_help_support: 'Ajuda i suport '
   header_report_bug: "Informar d'un problema"
   header_legal_privacy: "Política de privacitat"
+  header_legal_cookie_notice: "Política de galetes"
   header_legal_tos: "Condicions d'ús"
   header_tutorials: "Tutorials"
   sprite_lab_documentation: "Documentació del Laboratori d'Sprites"

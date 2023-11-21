@@ -2519,6 +2519,26 @@
           "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
           "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "استخدم هذه القطعة البرمجية.",
+          "dance_callout_02": "أضف القطعة البرمجية الذكاء الاصطناعي ينشئ التأثير هنا."
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "استخدم هذه القطعة البرمجية.",
+          "dance_callout_02": "أضف حركة الرقص."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "انقر هنا."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ ابدأ هنا."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "استخدم هذه القطعة البرمجية."
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "استخدم هذه القطعة البرمجية."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن.",
           "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث."

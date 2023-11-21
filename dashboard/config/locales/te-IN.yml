@@ -309,6 +309,7 @@ te:
     built_on_code_studio: కోడ్ స్టూడియోలో నిర్మించబడింది
     code_from_html: Code.org p5.ప్లే ని ఉపయోగిస్తుంది, అది <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the
       GNU LGPL 2.1</a>క్రింద లైసెన్స్ పొంది ఉంది.
+    cookie_notice: కుకీ నోటీసు
     copyright: కాపీరైట్
     feedback: అభిప్రాయాన్ని అందించండి
     google_copyright: "&copy; Google Inc. అనుమతితో ఉపయోగించబడింది. గూగుల్ క్లాస్రూమ్
@@ -326,6 +327,7 @@ te:
     privacy: గోప్యతా పాలసీ
     report_abuse: దుర్భాషను రిపోర్టు చేయండి
     secure: సురక్షిత వెర్షన్
+    store: Store
     support: మద్దతు
     thank_you: కోడ్ స్టూడియోని రూపొందించడంలో వారి మద్దతు కోసం మా <a href="https://code.org/about/donors">దాతలు</a>,
       <a href="https://code.org/about/partners">భాగస్వాములు</a>, మా <a href="https://code.org/about/team">విస్తరించిన
@@ -350,8 +352,8 @@ te:
   hello: హలో ప్రపంచం
   hidden_script: మీరు ఇక్కడ ఉంటారని మీ గురువు did హించలేదు. దయచేసి మీరు ఏ యూనిట్లో
     ఉండాలో మీ గురువును అడగండి.
-  hidden_stage: మీరు ఇక్కడ ఉంటారని మీ గురువు did హించలేదు. దయచేసి మీరు ఏ పాఠంలో ఉండాలో
-    మీ గురువును అడగండి.
+  hidden_stage: మీరు ఈ పాఠం లో  ఉంటారని మీ టీచర్ ఊహించలేదు. దయచేసి మీరు ఏ పాఠంలో ఉండాలో
+    మీ టీచర్‌ని అడగండి.
   hoc_download:
     capsule_desc: ఆన్లైన్, వెబ్ ఆధారిత [%{app_name}] (%{url}) ఉపయోగించండి.
     capsule_title: మీకు ఇంటర్నెట్ ఉందా?
@@ -594,9 +596,9 @@ te:
       educate_tools: ఉపకరణాలు మరియు వీడియోలు
       finished_hoc: నేను పూర్తి చేశాను!
       help_support: సహాయం మరియు మద్దతు
-      help_us: మాకు సహాయం చెయ్యండి
+      help_us: 'హెల్ప్ అస్ '
       incubator: ఇంక్యుబేటర్
-      learn: తెలుసుకోండి
+      learn: నేర్చుకోండి
       legal_privacy: గోప్యతా పాలసీ
       legal_tos: సర్వీసు నిబంధనలు
       my_dashboard: నా డాష్బోర్డ్
@@ -606,6 +608,7 @@ te:
       report_bug: ఒక సమస్యను రిపోర్టు చేయండి
       sections: సెక్షన్లు
       sign_in_to_save: పురోగతిని కాపాడటానికి సైన్ ఇన్ చేయండి
+      stats: స్టాట్స్
       teach: నేర్పండి
       teacher_community: ఉపాధ్యాయ ఫోరమ్
       tutorials: ట్యుటోరియల్స్
@@ -1014,7 +1017,7 @@ te:
       access_denied: ఈ వ్యక్తి గణాంకాలను మీకు ప్రాప్యత లేదు
   reset_predict_progress_button: సమాధానం తొలగించు
   return_course_overview: కోర్సు అవలోకనకు వెళ్లండి
-  return_unit_overview: యూనిట్ అవలోకనకు వెళ్లండి
+  return_unit_overview: యూనిట్ ఒవెర్వ్యూ లోకి వెళ్లండి
   school_info:
     after_school: పాఠశాల తరువాత
     charter: చార్టర్

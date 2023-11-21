@@ -205,8 +205,8 @@ ar:
   follow_us_heading: تابعنا على وسائل التواصل الاجتماعي
   follow_us_desc: ابق على اطلاع معنا على وسائل التواصل الاجتماعي وشارك منشوراتنا مع
     شبكتك للبقاء على اطلاع والمساعدة في زيادة الوعي.
-  facebook: Pseudoloc-بلؤثخخن
-  twitter: Pseudoloc-فصهفثق
+  facebook: فيس بوك
+  twitter: تويتر
   linked_in: لينكد إن
   instagram: إينستاجرام
   tik_tok: تيك توك
@@ -218,6 +218,7 @@ ar:
   for_students_teacher_led_learning: 'للطلاب: التعلم بقيادة المعلم'
   for_students_teacher_led_lessons: 'للطلاب: دروس بقيادة المعلم'
   professional_development: التطور المهني
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: تدريس علم الكمبيوتر
   explore_our_curriculum: استكشف منهجنا
   start_professional_learning: ابدأ التعلم المهني المتخصص
@@ -286,7 +287,7 @@ ar:
   call_to_action_register_event: سجل الحدث الخاص بك
   call_to_action_register_your_hoc: سجل ساعة البرمجة الخاصة بك
   call_to_action_register_now: سجل الآن
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: شارك خطتك للحدث
   call_to_action_select_activity: حدد نشاطًا
   call_to_action_select_coding_activity: حدد نشاط البرمجة
   call_to_action_start_activity: ابدأ نشاطًا
@@ -294,13 +295,13 @@ ar:
   call_to_action_print_certificates: طباعة الشهادات
   call_to_action_go_beyond_hoc: الاطلاع على المزيد من "ساعة البرمجة"
   call_to_action_see_volunteer_guide: انظر دليل المتطوعين
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_see_teacher_guide: انظر دليل المدرس الإرشادي
+  call_to_action_see_event_guide: انظر الدليل الإرشادي للحدث
   call_to_action_join_advocacy_coalition: انضم إلى تحالف المناصرة
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_become_an_advocate: كن داعمًا
+  call_to_action_share_event_w_parents: شارك الحدث الخاص بك مع أولياء الأمور
   call_to_action_sign_up_to_volunteer: سجِّل الاشتراك للتطوُّع
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: المشاركة على وسائل التواصل الاجتماعي
   call_to_action_explore_all_hoc_activities: استكشف جميع أنشطة «ساعة البرمجة» من Code.org
   call_to_action_start_dance_party: ابدأ حفلة الرقص
   call_to_action_start_part_02: ابدأ الجزء الثاني
@@ -314,6 +315,8 @@ ar:
   call_to_action_try_hoc_ai_activities: جرّب أنشطة «ساعة البرمجة بالذكاء الاصطناعي»
   call_to_action_explore_activities: اكتشف الأنشطة
   call_to_action_explore_ai: اكتشف الذكاء الاصطناعي
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: أداة الاستكشاف
   call_to_action_explore_unit: وحدة المستكشف
   call_to_action_explore_curriculum: اكتشف المنهج
   call_to_action_explore_curricula: اكتشف المناهج
@@ -374,7 +377,7 @@ ar:
   call_to_action_explore_teacher_forums: استكشف منتديات المعلمين
   call_to_action_explore_teacher_forum: استكشف منتدى المعلم
   call_to_action_explore_career_resources: استكشف الموارد المهنية
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: استكشف الإحصائيات والرسوم البيانية
   call_to_action_watch_videos: شاهد مقاطع فيديو
   call_to_action_download_posters: تنزيل ملصقات
   call_to_action_contact_support: اتصل بدعم Code.org
@@ -413,7 +416,7 @@ ar:
   call_to_action_coming_soon: قريباً!
   call_to_action_learn_how_ai_works: تعرف على كيفية عمل الذكاء الاصطناعي
   call_to_action_learn_about_ai: تعرف على الذكاء الاصطناعي
-  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_learn_more_about_ai: تعلم المزيد عن الذكاء الاصطناعي
   call_to_action_get_started: ابدأ الآن
   aria_label_call_to_action_hoc_how_to_educators: عرض الدليل الإرشادي للمعلمين
   aria_label_call_to_action_hoc_how_to_companies: عرض الدليل الإرشادي للشركات
@@ -547,7 +550,7 @@ ar:
   curriculum_name_problem_solving: حل المشكلات والحوسبة
   curriculum_name_csc: روابط علوم الكمبيوتر
   curriculum_name_csa: علوم الكمبيوتر A
-  curriculum_name_csa_ai: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
+  curriculum_name_csa_ai: سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
   curriculum_name_csc_02: أي وحدة من وحدات روابط علوم الكمبيوتر
   curriculum_name_ai: الذكاء الاصطناعي وتعلم الآلة
   curriculum_name_artificial_intelligence: الذكاء الاصطناعي (AI)
@@ -668,6 +671,7 @@ ar:
   module_label_accessibility_features_full: 'ميزات إمكانية الوصول:'
   module_label_educator_tool: أداة المعلم
   module_label_educator_course: دورة المعلم
+  module_label_educator_resources: Educator resources
   module_label_student_tool: أداة الطالب
   module_label_student_product: المنتج
   module_label_student_content_resources: المحتوى والموارد
@@ -676,6 +680,7 @@ ar:
   module_label_available_now: متاح الآن
   module_label_video_series: سلسلة فيديو
   module_label_self_paced: وحدة ذاتية السرعة
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -711,7 +716,7 @@ ar:
   module_grade_9_12_teachers: معلمو الصفوف 9-12
   module_level_beginner: مبتدئ
   module_level_intermediate: المستوى المتوسط
-  module_level_advanced: Pseudoloc-ليرلؤثي
+  module_level_advanced: مُتقدم
   module_duration_45_mins: 45 دقيقة
   module_duration_2_weeks: أسبوعان
   module_duration_1_hr: 1 ساعة
@@ -3417,19 +3422,14 @@ ar:
   tutorial_csfirstdialogue_name: حوار
   tutorial_codemonkeybeaver_name: بيفر أشيفر
   tutorial_codestersdistance_name: 'المبرمجون: عفاريت التباعد الاجتماعي'
-  tutorial_itchspace_name: 'رمز الحكة: غزاة الفضاء - RockCoder'
   tutorial_vidcodemagic_name: سحر إس إف إكس
   tutorial_vidcodemagices_name: سحر إس إف إكس
   tutorial_codespeakmeal_name: تطبيق كود وجبة صحية
-  tutorial_itchfish_name: 'رمز الحكة: لعبة خدش الأسماك'
   tutorial_bsdwebsite_name: موقع الويب المفضل لدي
   tutorial_codespeaktime_name: قم بترميز كبسولة زمنية بلغة سكراتش
-  tutorial_itchwebcam_name: 'ItchCode: الواقع المعزز لكاميرا الويب'
-  tutorial_itchball_name: 'كود الحكة: الكرة المرتدة'
   tutorial_ttrace_name: حالة السباق
   tutorial_plethora_name: 'بلتورا : السبب و النتيجة'
   tutorial_educodesecret_name: اكشف أسرار الوكالة!
-  tutorial_itchshapes_name: 'رمز الحكة: الأشكال والزوايا'
   tutorial_codeguppytext_name: مقدمة للترميز القائم على النص
   tutorial_vidcodeplastiche_name: التلوث البلاستيكي
   tutorial_educativechatbot_name: قم ببناء روبوت الدردشة الخاص بك في Python
@@ -3453,7 +3453,6 @@ ar:
   tutorial_codecapture_name: تعلم البرمجة مع جافا سكريبت في لمح البصر
   tutorial_codehslitter_name: البرمجة لمجتمع خالٍ من القمامة
   tutorial_bsdocean_name: الحياة تحت الماء
-  tutorial_itchplatformer_name: 'ItchCode: البرنامج التعليمي لمنصة سكراتش 3.0'
   tutorial_codejika_name: 'كودجيكا: موقع الكتروني لمدة 5 دقائق'
   tutorial_gamefrootclicker_name: تعلم المتغيرات. قم بترميز لعبة Clicker الخاصة بك.
   tutorial_rmagicequity_name: الإنصاف مقابل المساواة
@@ -6935,19 +6934,12 @@ ar:
   tutorial_codestersdistance_longdescription: تعلم أساسيات الترميز في Python، ثم قم
     بإنشاء برنامج يحسب المسافة بين العفاريت للتأكد من تباعدهما الاجتماعي أو حاجتهما
     إلى ارتداء قناع.
-  tutorial_itchspace_longdescription: يأخذك هذا البرنامج التعليمي خلال إنشاء لعبة
-    Space Invaders الكلاسيكية باستخدام لغة برمجة Scratch MIT. اشترك في قناة RokCoder
-    على YouTube لمزيد من مقاطع الفيديو والبرامج التعليمية المستندة إلى Scratch! كل
-    فيديو عبارة عن برنامج تعليمي صغير الحجم (مدته عشر دقائق تقريبًا) يحتوي على أهدافه
-    النهائية المحددة. النتيجة النهائية هي لعبة سكراتش أركيد عالية الجودة.
   tutorial_vidcodemagic_longdescription: اجعل الفلاشات تظهر بشكل عشوائي حول الشاشة
     باستخدام حلقة.
   tutorial_vidcodemagices_longdescription: اجعل الفلاشات تظهر بشكل عشوائي حول الشاشة
     باستخدام حلقة.
   tutorial_codespeakmeal_longdescription: تعلم كيفية برمجة تطبيق يساعد المستخدمين
     على اتخاذ قرارات غذائية صحية.
-  tutorial_itchfish_longdescription: برنامج Scratch 3.0 التعليمي لصنع لعبة مع سمكة
-    قرش تطارد وتأكل الأسماك تتعطل عندما يتم أكل الغواص عن طريق الخطأ.
   tutorial_bsdwebsite_longdescription: 'تتيح هذه الدورة للطلاب استخدام التعليمات البرمجية
     كطريقة لمشاركة ما هو مهم أو مثير للاهتمام بالنسبة لهم. يمكنهم متابعة الدرس أو
     إنشاء مشاريع فريدة أثناء تعلم HTML و CSS و JavaScript. يتم إرشادهم من خلال دروس
@@ -6955,10 +6947,6 @@ ar:
     على إنشاء صفحة ويب لأهم 3 أشياء تهتم بها أو تحب القيام بها. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: تعرف على كيفية ترميز كبسولة زمنية رقمية
     لتسجيل حياتك والتفكير فيها الآن.
-  tutorial_itchwebcam_longdescription: تعرف على الواقع المعزز وقم بإنشاء مساحة افتراضية
-    للواقع المعزز الخاصة بك.
-  tutorial_itchball_longdescription: احصل على كرة لترتد حول الشاشة. تعرف على الحلقات
-    والشروط داخل الحلقات.
   tutorial_ttrace_longdescription: من خلال استدعاء الوظائف وتصميم الفصول الدراسية،
     يقوم اللاعبون ببرمجة سيارة السباق الخاصة بهم لتكون سريعة وذكية وقوية؛ وخلال السباقات،
     يمكنهم بعد ذلك اختراق مركبات منافسيهم لخلط عناصر التحكم الخاصة بهم.
@@ -6967,8 +6955,6 @@ ar:
   tutorial_educodesecret_longdescription: استكشف عوالم الأسرار مع Agent Smith بينما
     تتعمق في تعلم العبارات والأوتار والحلقات. ساعد Agent Smith في العثور على الجناة
     وتكوين نظام تشغيل الوكالة لمستخدميها الجدد باستخدام Python.
-  tutorial_itchshapes_longdescription: تعرف على كيفية رسم الأشكال في Scratch. سوف
-    تتعلم أيضًا كيفية حساب المبلغ الذي تحتاج إلى تحويله لأي شكل.
   tutorial_codeguppytext_longdescription: تعلم أساسيات الترميز القائم على النص من
     خلال إنشاء برنامجك الأول في محرر الترميز عبر الإنترنت.
   tutorial_vidcodeplastiche_longdescription: تستمر مشكلة البلاستيك الذي يملأ محيطاتنا
@@ -7040,8 +7026,6 @@ ar:
   tutorial_bsdocean_longdescription: تسلط الحياة تحت الماء الضوء على قضية ملحة نواجهها
     في الوقت الحاضر - بيئتنا. يركز هذا المشروع على إرشادك لترميز صفحة الويب الخاصة
     بك لحماية مياهنا.
-  tutorial_itchplatformer_longdescription: برنامج تعليمي سهل المتابعة حول كيفية إنشاء
-    لعبة منصات بسيطة باستخدام Scratch.
   tutorial_codejika_longdescription: مقدمة رائعة للترميز باستخدام HTML و CSS. قم بترميز
     بضعة أسطر، وشاهد المخرجات الفورية دون الانشغال بالكيفية والأسباب من خلال إنشاء
     صفحة مقصودة لطيفة بخلفية متدرجة بلونين، والاسم وتاريخ إطلاق موقع الويب.
@@ -7822,19 +7806,14 @@ ar:
   tutorial_csfirstdialogue_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
   tutorial_codemonkeybeaver_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_codestersdistance_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_itchspace_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_vidcodemagic_string_detail_grades: من الصف الثاني فما فوق
   tutorial_vidcodemagices_string_detail_grades: من الصف الثاني فما فوق
   tutorial_codespeakmeal_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_itchfish_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
   tutorial_bsdwebsite_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codespeaktime_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
-  tutorial_itchwebcam_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_itchball_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
   tutorial_ttrace_string_detail_grades: الصفوف 6-8
   tutorial_plethora_string_detail_grades: من الصف الثاني فما فوق
   tutorial_educodesecret_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_itchshapes_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codeguppytext_string_detail_grades: الصفوف 6-8
   tutorial_vidcodeplastiche_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_educativechatbot_string_detail_grades: من الصف التاسع فما فوق
@@ -7856,7 +7835,6 @@ ar:
   tutorial_codecapture_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codehslitter_string_detail_grades: الصفوف 6-8
   tutorial_bsdocean_string_detail_grades: الصفوف 6-8
-  tutorial_itchplatformer_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_codejika_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_gamefrootclicker_string_detail_grades: الصفوف 6-8
   tutorial_rmagicequity_string_detail_grades: الصفوف 6-8
@@ -8749,23 +8727,17 @@ ar:
   tutorial_codemonkeybeaver_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد
     اللوحية، أجهزة آيباد
   tutorial_codestersdistance_string_platforms: جميع المتصفحات الحديثة
-  tutorial_itchspace_string_platforms: جميع المتصفحات الحديثة
   tutorial_vidcodemagic_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_vidcodemagices_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد
     اللوحية، أجهزة آيباد
   tutorial_codespeakmeal_string_platforms: متصفح كروم، متصفح فايرفوكس
-  tutorial_itchfish_string_platforms: جميع المتصفحات الحديثة
   tutorial_bsdwebsite_string_platforms: متصفح كروم (Chrome)
   tutorial_codespeaktime_string_platforms: متصفح كروم، متصفح فايرفوكس
-  tutorial_itchwebcam_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
-    أجهزة آيباد
-  tutorial_itchball_string_platforms: جميع المتصفحات الحديثة
   tutorial_ttrace_string_platforms: متصفح كروم (Chrome)
   tutorial_plethora_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_educodesecret_string_platforms: جميع المتصفحات الحديثة
-  tutorial_itchshapes_string_platforms: جميع المتصفحات الحديثة
   tutorial_codeguppytext_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_vidcodeplastiche_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد
@@ -8793,7 +8765,6 @@ ar:
   tutorial_codehslitter_string_platforms: جميع المتصفحات الحديثة، الأجهزة أندرويد
     اللوحية، أجهزة آيباد، هواتف ويندوز، هواتف أندرويد، هواتف آيفون
   tutorial_bsdocean_string_platforms: متصفح كروم (Chrome)
-  tutorial_itchplatformer_string_platforms: جميع المتصفحات الحديثة
   tutorial_codejika_string_platforms: جميع المتصفحات الحديثة، الأجهزة أندرويد اللوحية،
     أجهزة آيباد، هواتف ويندوز، هواتف أندرويد، هواتف آيفون
   tutorial_gamefrootclicker_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد
@@ -9453,19 +9424,14 @@ ar:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9487,7 +9453,6 @@ ar:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10226,21 +10191,16 @@ ar:
     "سكراتش"
   tutorial_codemonkeybeaver_string_detail_programming_languages: القطع البرمجية
   tutorial_codestersdistance_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_itchspace_string_detail_programming_languages: القطع البرمجية
   tutorial_vidcodemagic_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_vidcodemagices_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_codespeakmeal_string_detail_programming_languages: لغة البرمجة جافاسكريبت
-  tutorial_itchfish_string_detail_programming_languages: القطع البرمجية
   tutorial_bsdwebsite_string_detail_programming_languages: لغة البرمجة جافاسكريبت،
     لغة البرمجة "HTML"، لغة البرمجة "CSS"
   tutorial_codespeaktime_string_detail_programming_languages: القطع البرمجية
-  tutorial_itchwebcam_string_detail_programming_languages: القطع البرمجية
-  tutorial_itchball_string_detail_programming_languages: القطع البرمجية
   tutorial_ttrace_string_detail_programming_languages: لغة "جافاسكريبت"، لغة "Coffeescript"
   tutorial_plethora_string_detail_programming_languages: لغة مستقلة (يمكن تدريسها
     بلغات متعددة)
   tutorial_educodesecret_string_detail_programming_languages: لغة البرمجة "بايثون"
-  tutorial_itchshapes_string_detail_programming_languages: القطع البرمجية
   tutorial_codeguppytext_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_vidcodeplastiche_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_educativechatbot_string_detail_programming_languages: لغة البرمجة "بايثون"
@@ -10266,7 +10226,6 @@ ar:
   tutorial_codehslitter_string_detail_programming_languages: بايثون، إتش تي إم إل
   tutorial_bsdocean_string_detail_programming_languages: لغة البرمجة جافاسكريبت، لغة
     البرمجة "HTML"، لغة البرمجة "CSS"
-  tutorial_itchplatformer_string_detail_programming_languages: القطع البرمجية
   tutorial_codejika_string_detail_programming_languages: لغة البرمجة جافاسكريبت، لغة
     البرمجة "HTML"، لغة البرمجة "CSS"
   tutorial_gamefrootclicker_string_detail_programming_languages: القطع البرمجية
@@ -11227,10 +11186,7 @@ ar:
   tutorial_kodableshapes_name: اصنع الأشكال باستخدام الكود
   tutorial_nasabinary_name: 'الكود الثنائي: كيفية التحدث إلى مركبة فضائية'
   tutorial_3dmaker_name: صانع ثلاثي الأبعاد
-  tutorial_itchstart_name: 'هيتشيكود: سكراتش 5 بلوك ستارتر'
   tutorial_hopsub_name: قم ببناء Subway Surfers مع صديق
-  tutorial_itchmundos_name: العوالم في عالمي _e2
-  tutorial_itchtenacity_name: عناد
   tutorial_kcjskiing_name: 'رمز الرياضة +: التزلج'
   tutorial_groksecurity_name: 'الأمن السيبراني: الدفاع ضد القبعات السوداء'
   tutorial_creaticode_name: برمجة ثلاثية الأبعاد مع كتل سكراتش
@@ -11361,15 +11317,8 @@ ar:
     أو السوار أو الدبوس أو حتى الصوت.
   tutorial_3dmaker_longdescription: اصنع أشياءك ثلاثية الأبعاد الرائعة والقابلة للتدوير
     بسرعة وسهولة.
-  tutorial_itchstart_longdescription: يعد هذا الدرس نقطة دخول جيدة للأطفال في الصف
-    الثاني أو الثالث الذين يجربون Scratch لأول مرة. سيبدأون بمجموعة من 5 كتل يحتاجون
-    إلى تجميعها لجعل شخصيتهم تؤدي بعض الإجراءات.
   tutorial_hopsub_longdescription: تعرف على كيفية ربط البرنامج بصديق أو زميل في الصف،
     وإنشاء راكب الأمواج الخاص بك باستخدام شخصيات Hopscotch!
-  tutorial_itchmundos_longdescription: سوف تعرف على Scratch، وهي أداة للبرمجة. سيتم
-    إضافة الأشياء والأموال واستخدام مجموعات من الأحداث والظهور لإعطاء الحياة لبرنامجهم.
-  tutorial_itchtenacity_longdescription: في هذا المشروع، نقوم ببرمجة جهاز محاكاة الروبوت
-    الذي ينظف المياه البحرية في سكراتش.
   tutorial_kcjskiing_longdescription: 'كل شيء ممتع وألعاب حتى يصطدم شخص ما بشجرة…
     أم أن هذا هو الجزء الممتع؟ اربط تلك الزلاجات وانحنى عند الركبتين بينما تقوم بتوجيه
     شخصيتك إلى أسفل تلة من العقبات المجمدة باستخدام التعليمات البرمجية في نشاط سكراتش
@@ -11632,11 +11581,8 @@ ar:
   tutorial_kodableshapes_language: الإنجليزية
   tutorial_nasabinary_language: الإنجليزية
   tutorial_3dmaker_language: الإنجليزية
-  tutorial_itchstart_language: الإنجليزية
   tutorial_hopsub_language: الصينية (المبسطة)، الإنجليزية، الإسبانية (إسبانيا)، الإسبانية
     (المكسيك)
-  tutorial_itchmundos_language: الإسبانية (المكسيك)
-  tutorial_itchtenacity_language: الإسبانية (المكسيك)
   tutorial_kcjskiing_language: الإنجليزية والفرنسية
   tutorial_groksecurity_language: الإنجليزية
   tutorial_creaticode_language: الصينية (المبسطة)، الصينية (التقليدية)، الإنجليزية
@@ -11731,10 +11677,7 @@ ar:
   tutorial_kodableshapes_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_nasabinary_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_3dmaker_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
-  tutorial_itchstart_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
   tutorial_hopsub_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
-  tutorial_itchmundos_string_detail_grades: من الصف الثاني فما فوق
-  tutorial_itchtenacity_string_detail_grades: من الصف الثاني فما فوق
   tutorial_kcjskiing_string_detail_grades: من الصف الثاني فما فوق
   tutorial_groksecurity_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_creaticode_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -11828,12 +11771,7 @@ ar:
   tutorial_nasabinary_string_platforms: قارئ شاشة غير موصول
   tutorial_3dmaker_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، هواتف ويندوز، هواتف آيفون
-  tutorial_itchstart_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد
   tutorial_hopsub_string_platforms: أجهزة آيباد، هواتف آيفون
-  tutorial_itchmundos_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
-    أجهزة آيباد
-  tutorial_itchtenacity_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
-    أجهزة آيباد
   tutorial_kcjskiing_string_platforms: جميع المتصفحات الحديثة
   tutorial_groksecurity_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، هواتف ويندوز، هواتف آيفون
@@ -11931,10 +11869,7 @@ ar:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12026,10 +11961,7 @@ ar:
     لغة مستقلة (يمكن تدريسها بلغات متعددة)
   tutorial_nasabinary_string_detail_programming_languages: كود ثنائي
   tutorial_3dmaker_string_detail_programming_languages: القطع البرمجية
-  tutorial_itchstart_string_detail_programming_languages: القطع البرمجية
   tutorial_hopsub_string_detail_programming_languages: لغة البرمجة المرئية "Hopscotch"
-  tutorial_itchmundos_string_detail_programming_languages: القطع البرمجية
-  tutorial_itchtenacity_string_detail_programming_languages: القطع البرمجية
   tutorial_kcjskiing_string_detail_programming_languages: القطع البرمجية
   tutorial_groksecurity_string_detail_programming_languages: لا شيء - لا حاجة للبرمجة
   tutorial_creaticode_string_detail_programming_languages: القطع البرمجية
@@ -13009,7 +12941,7 @@ ar:
   tutorial_wizsea_name: 'Saving the sea: creating a game with code'
   tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
   tutorial_bekidsadventure_name: Creative Coding Adventures
-  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
+  tutorial_myqpixel_name: MyQ Pixel - السبب والنتيجة
   tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
   tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
     Thunkable
@@ -13028,7 +12960,7 @@ ar:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: تعلم البرمجة بسهولة!
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13115,6 +13047,16 @@ ar:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: حفلة رقص
+  tutorial_introtomlai_name: مقدمة إلى التعلم الآلي
+  tutorial_computervisionai_name: رؤية الكمبيوتر
+  tutorial_neuralnetworksai_name: الشبكات العصبية
+  tutorial_chatbotsllmai_name: روبوتات المحادثة ونماذج اللغات الكبيرة
+  tutorial_generativeimagesai_name: صور توليدية
+  tutorial_algorithmicbiasai_name: التحيز الخوارزمي
+  tutorial_codeofethicsai_name: مدونة أخلاقيات الذكاء الاصطناعي الخاصة بنا
+  tutorial_socimpactofgenaiai_name: التأثير المجتمعي للذكاء الاصطناعي التوليدي
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13220,9 +13162,8 @@ ar:
     games with block-based programming! Create fun geometric patterns, and craft car
     routes through exciting challenges. Unleash creativity, enhance logic, and get
     to know the art of programming!
-  tutorial_myqpixel_longdescription: In this MyQ activity, you will solve visual fun
-    challenges to help our cute dog find its bones, while leraning the concepts of
-    cause and effect and user interactions.
+  tutorial_myqpixel_longdescription: في نشاط MyQ هذا، ستحل تحديات بصرية ممتعة لمساعدة
+    كلبنا اللطيف في العثور على عظامه، مع تعلم مفاهيم السبب والنتيجة وتفاعلات المستخدم.
   tutorial_creaticodechatgpt_longdescription: Learn to use OpenAI's ChatGPT AI as
     a chatting and reasoning engine to build fun games and smart apps. Scratch-like
     blocks and user interface are used so no need to install any software or learn
@@ -13287,11 +13228,11 @@ ar:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: 'هيدي هي الطريقة السهلة للبدء في لغات البرمجة
+    النصية! هيدي مجانية الاستخدام، ومفتوحة المصدر، وعلى عكس أي لغة برمجة نصية أخرى
+    بثلاث طرق: متعددة اللغات، يمكنك استخدام هيدي بلغتك الخاصة؛ تدريجي، بحيث يمكنك
+    تعلم مفهوم واحد ويتم تخصيص وقت بناء الجملة الخاص به للفصل الدراسي، مما يسمح للمدرسين
+    بتخصيص تجربة طلابهم بشكل كامل.'
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -13522,10 +13463,10 @@ ar:
     on the different poses. They will follow step-by-step instructions and easily
     drag the blocks to solve the exercises. Your curious students can also deep dive
     into how AI works.
-  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
-    then train an AI to play the game on its own! Learn core JavaScript concepts including
-    Variables, Functions and Events, and get hands-on experience with Neural Networks
-    and Machine Learning.
+  tutorial_kcjpong_longdescription: أعد إنشاء لعبة Pong الكلاسيكية باستخدام JavaScript،
+    ثم قم بتدريب الذكاء الاصطناعي على لعب اللعبة بمفرده! تعلم مفاهيم JavaScript الأساسية
+    بما في ذلك المتغيرات، والوظائف، والأحداث، واحصل على خبرة عملية في الشبكات العصبية
+    والتعلم الآلي.
   tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
     Day and promote clean energy to replace fossil fuels and help the environment.  Your
     task is to collect the sun's rays to power a city. Students will start with the
@@ -13585,6 +13526,41 @@ ar:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: قم ببرمجة حفلة رقص لمشاركتها مع أصدقائك. تضم
+    الحفلة كاتي بيري، ومادونا، وج.بالفين، وسيا، وكيث أوربان، وسيارا، و 25 آخرين!
+  tutorial_introtomlai_longdescription: تعرف على شكل من أشكال الذكاء الاصطناعي يسمى
+    التعلم الآلي وكيف يمكنهم استخدام عملية حل المشكلات للمساعدة في تدريب الروبوت على
+    حل المشكلات. شارك في أنشطة التعلم الآلي حيث يتعلم الروبوت كيفية اكتشاف الأنماط
+    في الأسماك.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: تعرف على كيفية عمل الشبكات العصبية. استخدم
+    الأدوات لاستكشاف الشبكات العصبية بطريقة عملية. شاهد مقطع فيديو يشرح الشبكات العصبية.
+    ناقش أخيرًا الحاجة إلى وجهات نظر متنوعة عند إنشاء أنظمة التوصية.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: تعرف على كيفية قيام الذكاء الاصطناعي
+    بإنشاء الصور، ثم استكشف أداة نشر الذكاء الاصطناعي وناقش ما إذا كانت هذه النماذج
+    إبداعية أم لا.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: تحقق من تأثير الذكاء الاصطناعي التوليدي
+    من وجهات نظر مختلفة، ثم تعاون كفريق للتوصل إلى إرشادات تلبي معظم احتياجات جميع
+    المشاركين.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_bscomputing_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_stackpython_string_detail_grades: الصفوف 6+ (11 وما فوق)
@@ -13687,7 +13663,7 @@ ar:
   tutorial_hwfanpage_string_detail_grades: من الصف الثاني فما فوق
   tutorial_hwillusion_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_caevolution_string_detail_grades: الصفوف 6+ (11 وما فوق)
-  tutorial_bbbusybot_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_bbbusybot_string_detail_grades: من الصف التاسع فما فوق
   tutorial_caaifarm_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_cafuture_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_dmscratch_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
@@ -13717,6 +13693,16 @@ ar:
   tutorial_madmobile_string_detail_grades: الصفوف 6+ (11 وما فوق)
   tutorial_intelinosmile_string_detail_grades: قبل تعلم القراءة - المستوى 8
   tutorial_intelinoaisign_string_detail_grades: المراحل الدراسية ٢-٥ (الاعمار ٧-١٠)
+  tutorial_danceai2023_string_detail_grades: من الصف الثاني فما فوق
+  tutorial_introtomlai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_computervisionai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_neuralnetworksai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_chatbotsllmai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_generativeimagesai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_algorithmicbiasai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_codeofethicsai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_socimpactofgenaiai_string_detail_grades: الصفوف 6+ (11 وما فوق)
+  tutorial_generationai_string_detail_grades: من الصف الثاني فما فوق
   tutorial_bsimage_string_platforms: 'المتصفحات: كروم، فايرفوكس، سفاري'
   tutorial_bscomputing_string_platforms: الأنشطة التي تتطلب أي أجهزة إلكترونية
   tutorial_stackpython_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
@@ -13887,6 +13873,26 @@ ar:
   tutorial_madmobile_string_platforms: جميع المتصفحات الحديثة
   tutorial_intelinosmile_string_platforms: جميع المتصفحات الحديثة، أجهزة آيباد
   tutorial_intelinoaisign_string_platforms: جميع المتصفحات الحديثة
+  tutorial_danceai2023_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية التي
+    تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_introtomlai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية التي
+    تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_computervisionai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_neuralnetworksai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_chatbotsllmai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_generativeimagesai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_algorithmicbiasai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_codeofethicsai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_socimpactofgenaiai_string_platforms: جميع المتصفحات الحديثة، الأجهزة اللوحية
+    التي تعمل بنظام أندرويد، أجهزة آيباد، الهواتف التي تعمل بنظام أندرويد، هواتف آيفون
+  tutorial_generationai_string_platforms: جهاز لوحي يعمل بنظام أندرويد، وآيباد، وهاتف
+    ويندوز، وهاتف أندرويد، وآيفون
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14018,6 +14024,16 @@ ar:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: لغة مستقلة
   tutorial_stackpython_string_detail_programming_languages: لغة البرمجة "بايثون"
@@ -14069,7 +14085,7 @@ ar:
   tutorial_codetribelanding_string_detail_programming_languages: لغة البرمجة "HTML"،
     لغة البرمجة "CSS"
   tutorial_cakeyboard_string_detail_programming_languages: لغة مستقلة
-  tutorial_hedytext_string_detail_programming_languages: Python, Hedy
+  tutorial_hedytext_string_detail_programming_languages: بايثون، هيدي
   tutorial_pickcodelanguage_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_pickcodegenart_string_detail_programming_languages: لغة البرمجة جافاسكريبت
   tutorial_pickcodecarbon_string_detail_programming_languages: لغة البرمجة جافاسكريبت
@@ -14159,7 +14175,7 @@ ar:
   tutorial_toxicodewords_string_detail_programming_languages: لغة مستقلة
   tutorial_mitstepmisinformation_string_detail_programming_languages: الأنشطة التي
     تتطلب أي أجهزة إلكترونية
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: الأنشطة التي تتطلب
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: الأنشطة التي تتطلب
     أي أجهزة إلكترونية
   tutorial_mitstepintrotoml_string_detail_programming_languages: الأنشطة التي تتطلب
     أي أجهزة إلكترونية
@@ -14168,6 +14184,17 @@ ar:
     لغة البرمجة "HTML"، لغة البرمجة "CSS"
   tutorial_intelinosmile_string_detail_programming_languages: القطع البرمجية
   tutorial_intelinoaisign_string_detail_programming_languages: القطع البرمجية
+  tutorial_danceai2023_string_detail_programming_languages: لغة مستقلة
+  tutorial_introtomlai_string_detail_programming_languages: لغة مستقلة
+  tutorial_computervisionai_string_detail_programming_language: لغة مستقلة
+  tutorial_neuralnetworksai_string_detail_programming_languages: لغة مستقلة
+  tutorial_chatbotsllmai_string_detail_programming_languages: لغة مستقلة
+  tutorial_generativeimagesai_string_detail_programming_languages: لغة مستقلة
+  tutorial_algorithmicbiasai_string_detail_programming_languages: لغة مستقلة
+  tutorial_codeofethicsai_string_detail_programming_languages: لغة مستقلة
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: لغة مستقلة
+  tutorial_generationai_string_detail_programming_languages: القطع البرمجية، لغة البرمجة
+    بايثون
   school_not_found_heading: لم نتمكن من العثور على مدرستك. يرجى إدخال المزيد من المعلومات.
   school_name: اسم المدرسة
   school_name_error: اسم المدرسة مطلوب.
@@ -14235,7 +14262,7 @@ ar:
   step_06: الخطوة 6
   step_07: الخطوة 7
   step_08: الخطوة 8
-  step_09: Step 9
+  step_09: الخطوة 9
   what: 'ماذا:'
   when: 'متى:'
   where: 'أين:'
@@ -14259,53 +14286,54 @@ ar:
   hoc_how_to_companies_intro_desc_02: يمكن لجهودك أن يكون لها تأثير كبير على الطريقة
     التي تنظر بها الشابات والطلاب من المجموعات العرقية والإثنية المهمشة إلى علوم الكمبيوتر
     وإمكاناتهم الخاصة.
-  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
-    Code
-  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    Districts who fully engage with Hour of Code can help raise awareness of the computer
-    science movement and inspire more students to try computer science, particularly
-    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_districts_intro_heading: أشرك منطقة تعليمية بالكامل في ساعة برمجة
+  hoc_how_to_districts_intro_desc_01: ساعة البرمجة هي مقدمة لمدة ساعة واحدة في علوم
+    الكمبيوتر، باستخدام برامج تعليمية ممتعة لإظهار أنه يمكن لأي شخص تعلم الأساسيات.
+    يمكن للمناطق التي تشارك بصورة كاملة في ساعة البرمجة أن تساعد في رفع مستوى الوعي
+    بحركة علوم الكمبيوتر وإلهام المزيد من الطلاب لتجربة علوم الكمبيوتر، وخاصة الشابات
+    والطلاب من المجموعات العرقية والإثنية المهمشة تاريخيًا.
   hoc_how_to_events_intro_heading: كيفية تنظيم تجمُّع أو فعالية "ساعة من البرمجة"
-  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.
-    Your efforts can make a huge impact on the way students view computer science
-    and their own potential.
-  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
-    Hour of Code can help raise awareness of the computer science movement and inspire
-    more students to try computer science, particularly young women and students from
-    historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_desc_01: ساعة البرمجة هي مقدمة مدتها ساعة واحدة لعلوم الكمبيوتر،
+    وذلك باستخدام برامج تعليمية ممتعة لإظهار أنه يمكن لأي شخص تعلم الأساسيات. يمكن
+    لجهودك أن يكون لها تأثير كبير على الطريقة التي ينظر بها الطلاب إلى علوم الكمبيوتر
+    وإمكاناتهم.
+  hoc_how_to_events_intro_desc_02: يمكن للمدارس والمؤسسات التي تشارك بصورة كاملة في
+    ساعة البرمجة أن تساعد في رفع مستوى الوعي بحركة علوم الكمبيوتر وإلهام المزيد من
+    الطلاب لتجربة علوم الكمبيوتر، وخاصة الشابات والطلاب من المجموعات العرقية والإثنية
+    المهمشة تاريخيًا.
   hoc_how_to_parents_intro_heading: 'كيفية القيام بأنشطة "ساعة من البرمجة" مع طفلك
 
     '
-  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
-    to introduce your child to computer science, perhaps for the very first time.
-    Not only is computer science foundational to all fields of study, but recent studies
-    show: children who study computer science perform better in other subjects, excel
-    at problem-solving, and are 17% more likely to enroll in college.'
-  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
-    students worldwide in this global event. Together, we can inspire kids to learn,
-    break stereotypes, and help children discover a newfound interest. Best of all,
-    you already have everything you need to bring the Hour of Code into your home!
-  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
-    of Code
-  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
-    Hour of Code event will show your representative the impact and need for computer
-    science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
-  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    As a volunteer, your efforts can make a huge impact on the way students view computer
-    science and their own potential.
-  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
-    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
-    of all backgrounds participate. The Hour of Code features a large variety of activities
-    for all ages and skill levels, so you don't need to be a programming expert to
-    volunteer.
+  hoc_how_to_parents_intro_desc_01: تشكل تجربة ساعة البرمجة طريقة بسيطة وممتعة لتقدم
+    لأطفالك علوم الكمبيوتر، ربما للمرة الأولى. لا تشكل علوم الكمبيوتر أساسًا لجميع
+    مجالات الدراسة فقط، بل تبين الدراسات الحديثة أن الأطفال الذين يدرسون علوم الكمبيوتر
+    يحققون أداءً أفضل في المواد الأخرى، ويبرعون في حل المشاكل، ويزيد احتمال التحاقهم
+    بالجامعة بنسبة 17٪.
+  hoc_how_to_parents_intro_desc_02: يمكنك أنت وطفلك الانضمام إلى عشرات الملايين من
+    الطلاب حول العالم في هذا الحدث العالمي. معًا، يمكننا إلهام الأطفال للتعلم، وكسر
+    القوالب النمطية، ومساعدة الأطفال على اكتشاف اهتمامات جديدة. والأهم من ذلك، أنه
+    لديك بالفعل كل ما تجتاحه لإحضار ساعة البرمجة إلى منزلك!
+  hoc_how_to_public_officials_intro_heading: استضافة مسؤول منتخب في ساعة البرمجة الخاصة
+    بك
+  hoc_how_to_public_officials_intro_desc_01: ستبين دعوة مسؤول منتخب إلى حدث ساعة البرمجة
+    الخاص بك لممثلك مدى تأثير تعليم علوم الكمبيوتر والحاجة إليه، كما سيُحفز طلابك
+    من خلال نموذج يحتذى به في الحكومة.
+  hoc_how_to_public_officials_intro_desc_02: لتشغيل حدث ساعة برمجة ناجح مع إشراك المسؤولين
+    المنتخبين، أكمل هذه المهام قبل حضور المسؤول المنتخب إلى مدرستك. تتضمن المهمة التنسيق
+    مع جهة الاتصال التابعة له، ودعوات وسائل الإعلام، والتنازلات، وتخطيط جدول أعمالك.
+  hoc_how_to_volunteers_intro_heading: كيفية التطوع في ساعة البرمجة
+  hoc_how_to_volunteers_intro_desc_01: ساعة البرمجة هي مقدمة مدتها ساعة واحدة لعلوم
+    الكمبيوتر، وذلك باستخدام برامج تعليمية ممتعة لإظهار أنه يمكن لأي شخص تعلم الأساسيات.
+    كمتطوع، يمكن لجهودك أن يكون لها تأثير كبير على الطريقة التي ينظر بها الطلاب إلى
+    علوم الكمبيوتر وإمكاناتهم
+  hoc_how_to_volunteers_intro_desc_02: يمكن لأي شخص متحمس لتعليم علوم الكمبيوتر وزيادة
+    التنوع في مجال التكنولوجيا أن يكون متطوعًا! نود أن نشهد مشاركة متطوعين من جميع
+    الخلفيات. تتميز ساعة البرمجة بمجموعة كبيرة ومتنوعة من الأنشطة لجميع الأعمار ومستويات
+    المهارة، لذلك لا تحتاج إلى أن تكون خبيرًا في البرمجة لتتطوع.
+  hoc_how_to_virtual_event_intro_heading: كيفية استضافة ساعة البرمجة الافتراضية
+  hoc_how_to_virtual_event_intro_desc_02: رغم أنه يمكن عقد ساعة البرمجة في الفصل الدراسي،
+    إلا أنه لا يجب عليك الحضور شخصيًا للاستمتاع! يمكنك استضافة حدث تفاعلي وملهم عن
+    بعد باستخدام بعض هذه التوصيات.
   hoc_how_to_faq_question_prerequisites: ما هي المتطلبات الأساسية للقيام بأنشطة "ساعة
     البرمجة"؟
   hoc_how_to_faq_answer_prerequisites: من السهل تشغيل ساعة البرمجة - حتى للمبتدئين.
@@ -14316,8 +14344,9 @@ ar:
   hoc_how_to_faq_answer_devices_02: إذا كانت الأجهزة محدودة أو غير متوفرة، جرب [البرمجة
     الثنائية](%{pair_url}) أو استكشف [الأنشطة غير الموصولة](%{unplugged_url}) للتعلم
     بدون أي أجهزة على الإطلاق!
-  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
-    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_answer_devices_02_v2: إذا لم يكن لديك جهاز في المنزل، استكشف [أنشطتنا
+    التي لا تتطلب الاتصال بالإنترنت](%{unplugged_url}) للتعلم دون الحاجة إلى أي أجهزة
+    على الإطلاق!!
   hoc_how_to_faq_question_volunteer: من بإمكانه التطوُّع؟
   hoc_how_to_faq_answer_volunteer: يمكن لأي شخص متحمس لتعليم علوم الكمبيوتر وزيادة
     التنوع في التكنولوجيا أن يكون متطوعًا! نود أن نرى متطوعين من جميع الخلفيات يشاركون.
@@ -14359,9 +14388,9 @@ ar:
     عادةً ما بين 60-90 دقيقة، بينما تستغرِق زيارة قاعة الدراسة عبر الإنترنت عادةً
     ما بين 20-30 دقيقة.
   hoc_how_to_faq_question_age_groups: ما الفئة العمرية المناسبة لنشاط "ساعة من البرمجة"؟
-  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
-    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
-    Everyone—even adults—can have fun learning!
+  hoc_how_to_faq_answer_age_groups: 'تصمم Code.org وشركاؤنا جميع أنشطة ساعة البرمجة
+    لإشراك الطلاب من جميع مستويات الصفوف (من الروضة إلى الصف الثاني عشر) ومن جميع
+    الخلفيات. يمكن للجميع –حتى البالغين– الاستمتاع بالتعلم! '
   hoc_how_to_resources_heading_educators: مصادر أخرى للمعلمين في "ساعة من البرمجة"
   hoc_how_to_resources_heading_default: مصادر أخرى لنشاط "ساعة برمجة"
   hoc_how_to_resources_promo_heading: الموارد الترويجية
@@ -14373,22 +14402,22 @@ ar:
   hoc_how_to_resources_get_involved_heading: كيفية المشاركة
   hoc_how_to_resources_get_involved_desc: ساعد في نشر أنشطة "ساعة البرمجة"! اكتشف
     طرقًا لإشراك مجتمعك.
-  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
-  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
-    look for ways to promote the Hour of Code in your district communication to stakeholders.
-    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_resources_hoc_stats_heading: إحصائيات ساعة البرمجة
+  hoc_how_to_resources_hoc_stats_desc: استخدم نماذج الرسائل والرسوم البيانية أثناء
+    البحث عن طرق للترويج لساعة البرمجة في التواصل مع أصحاب المصلحة في منطقتك. ابحث
+    عن الرسوم البيانية والإحصاءات المؤثرة لمشاركتها مع مجتمعك!
   hoc_how_to_step_label_plan: خطط أين ومتى ستقوم بأنشطة "ساعة البرمجة"
   hoc_how_to_step_label_choose_activity: اختر نشاطك
   hoc_how_to_step_label_choose_activities: اختر أنشطتك
   hoc_how_to_step_label_test_activity: اختبر نشاطك
-  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_get_familiar_activities: تعرف على الأنشطة
   hoc_how_to_step_label_register_event: سجل الحدث الخاص بك
   hoc_how_to_step_label_register_your_hoc: سجل ساعة البرمجة الخاصة بك
   hoc_how_to_step_label_tell: أخبر طلابك ومدرستك ومجتمعك
   hoc_how_to_step_label_get_coding: ابدأ في البرمجة!
   hoc_how_to_step_label_celebrate: الإشادة والتكريم
   hoc_how_to_step_label_beyond_hoc: ما بعد "ساعة البرمجة"
-  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_prepare_your_event: استعد للحدث الخاص بك
   hoc_how_to_step_label_plan_your_event: خطط للحدث الخاص بك
   hoc_how_to_step_label_plan_your_hour: خطط لساعتك
   hoc_how_to_step_label_help_spread_word: " انشر المنصة"
@@ -14396,23 +14425,23 @@ ar:
   hoc_how_to_step_label_inspire_employees: ألهم موظفيك
   hoc_how_to_step_label_encourage_employees: شجِّع الموظفين على التطوع
   hoc_how_to_step_label_plan_internal_event: خطط لحدث داخلي
-  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
-  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
-    in Hour of Code
-  hoc_how_to_step_label_after_event: After the event
-  hoc_how_to_step_label_invite_elected_official: Invite an elected official
-  hoc_how_to_step_label_coordinate_media: Coordinate with Media
-  hoc_how_to_step_label_confirm_details: Confirm all details
-  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
-  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_label_recruit_school_participation: استقطب المشاركة المدرسية
+  hoc_how_to_step_label_promote_district_involvement: روّج لمشاركة منطقتك في ساعة
+    البرمجة
+  hoc_how_to_step_label_after_event: بعد الفعالية
+  hoc_how_to_step_label_invite_elected_official: وجه الدعوة إلى مسؤول منتخب
+  hoc_how_to_step_label_coordinate_media: نسّق مع وسائل الإعلام
+  hoc_how_to_step_label_confirm_details: أكد جميع التفاصيل
+  hoc_how_to_step_label_volunteer_decide: قرر كيف تريد التطوع
+  hoc_how_to_step_label_plan_classroom_visit: خطط لزيارة فصلك الدراسي
   hoc_how_to_step_beyond_hoc_subhead: لا ينتهي الأمر هنا!
-  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
-  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
-    these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: وسّع نطاق التعلم إلى ما يتجاوز
+    من برنامج تعليمي واحد.
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'حافظ على الحماس بهذه الاقتراحات:'
+  hoc_how_to_step_beyond_hoc_desc_generic: لا يجب أن تنتهي علوم الكمبيوتر بساعة البرمجة!
+    في حين أن 90٪ من الآباء يريدون أن يتعلم أطفالهم علوم الكمبيوتر، إلا أن معظم المدارس
+    لا تزال لا تدرسها. اطلع على عروض المناهج الدراسية المتنوعة التي يقدمها شركاء ساعة
+    البرمجة، وتعرف على كيفية تقديم علوم الكمبيوتر إلى مدرستك في الوقت الحالي!
   hoc_how_to_step_plan_hour_desc_01: 'في ما يلي نموذج البرنامج للبدء:'
   hoc_how_to_step_choose_activities_desc_01: موضوع «ساعة البرمجة» هذا العام هو «الإبداع
     مع الذكاء الاصطناعي». سواء كان الأمر يتعلق ببرمجة تطبيقات وخوارزميات جديدة، أو
@@ -14426,9 +14455,9 @@ ar:
     يمكن للطلاب مشاهدة مقاطع فيديو قصيرة تضم خبراء في هذا المجال، وهناك خطط دروس مصاحبة
     لتوسيع النشاط وتوجيه المزيد من المناقشة. أو نقدم تعليمًا احترافيًا مجانيًا للمعلمين
     لفتح مستقبل التدريس باستخدام الذكاء الاصطناعي وحوله.
-  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
-    Students can watch short videos featuring experts in the field, and there are
-    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_choose_activities_desc_03_short: بعد ذلك، [تعلم كل شيء عن الذكاء
+    الاصطناعي](%{ai_url}). يمكن للطلاب مشاهدة مقاطع فيديو قصيرة تضم خبراء في المجال،
+    وتوجد دروس مرفقة لتوسيع النشاط وتوجيه المناقشات المقبلة.
   hoc_how_to_step_beyond_advocacy_desc_01: ليس من الضروري أن تنتهي علوم الكمبيوتر
     بساعة البرمجة! في حين أن 90% من الآباء يريدون أن يتعلم أطفالهم علوم الكمبيوتر،
     فإن معظم المدارس لا تزال لا تُعلِّم هذه العلوم، كما أن مئات الآلاف من الوظائف
@@ -14501,239 +14530,254 @@ ar:
   hoc_how_to_step_companies_spread_word_desc_01: 'بعد انتهاء الحدث الخاص بك، قم بتهنئة
     موظفيك بشهادات إنجاز شخصية. شارك الصور ومقاطع الفيديو الخاصة بحدث "ساعة البرمجة"
     وأظهر التزامك بدعم حركة علوم الكمبيوتر باستخدام #HourOfCode و@codeorg.'
-  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
-    the resources provided in our how-to guides for educators and school assemblies.
-    With your support, teachers and school administrators can decide which type of
-    event best meets the interest of your schools.
-  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
-    When you register your Hour of Code event, you'll receive helpful emails with
-    news and tips for hosting a successful Hour of Code. It's also how you can let
-    local volunteers know your school is participating. Volunteers are a great resource
-    and can come speak to your class about computer science or help your students
-    with Hour of Code activities.
-  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
-    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
-    Instagram and your district's homepage! Explore our sample emails which help you
-    share your Hour of Code event with your community.
-  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
-    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
-    so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
-  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
-    to see your event, and know that your dedication is part of a worldwide movement.
-  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
-    your event, as well as the tech capabilities of your space. Students can work
-    on their own devices, in pairs on one device, or together as a classroom on a
-    projector, and there are even unplugged tutorials that can be completed with no
-    devices at all!
-  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
-    official or influential business person and invite them to speak. [Check out our
-    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
-    of Code for more info.
-  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
-    as a local news station, newspaper, or education/tech bloggers. [See our press
-    kit for help](%{press_kit_url}).
-  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
-    [inspirational videos](%{videos_url}).'
-  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
-    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
-  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
-    about their background and how technology and computer science plays an important
-    role in their everyday lives'
-  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
-    of Code demo for the school. Fun twist: have them teach the principal, politician,
-    or other students!'
-  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
-    activity and how computer science can be taught without using computers.'
-  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
-    organize school-wide event gives closing remarks.'
-  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
-    take pictures to commemorate the event, and to post on your organization's social
-    media networks. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
-    and that it remains on track to end on time—especially if any special guests have
-    other scheduled commitments to attend.
-  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
-    sure to:'
-  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
-    and congratulate your students.
-  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
-    great for students to do) and offer to answer any follow-up questions they may
-    have.
-  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
-    the day on social media. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
-    on how to make next year's event even better.
+  hoc_how_to_step_districts_recruit_desc_01: استقطب المشاركة المدرسية من خلال مشاركة
+    الموارد الواردة في الأدلة الإرشادية الخاصة بنا للمعلمين والتجمعات المدرسية. بفضل
+    دعمكم، يمكن للمدرسين ومديري المدارس تحديد نوع الحدث الذي يلبي اهتمامات مدارسكم
+    على أفضل وجه.
+  hoc_how_to_step_districts_register_desc_01: أخبر كل شخص يستضيف حدثاً للتسجيل# عند
+    تسجيل حدث ساعة البرمجة الخاص بك، ستتلقى رسائل بريد إلكتروني مفيدة تحتوي على أخبار
+    وتلميحات لاستضافة حدث ساعة البرمجة الناجح. إنها أيضًا الطريقة التي يمكنك من خلالها
+    السماح للمتطوعين المحليين بمعرفة أن مدرستك تشارك. يشكل المتطوعون مصدرًا رائعًا
+    ويمكنهم التحدث إلى فصلك حول علوم الكمبيوتر أو مساعدة طلابك في أنشطة ساعة البرمجة.
+  hoc_how_to_step_districts_promote_desc_01: أخبر أعضاء المجتمع وأصحاب المصلحة بمشاركتك
+    في أحداث ساعة البرمجة! انشر على فيسبوك، وتويتر، وإنستجرام، والصفحة الرئيسية لمنطقتك!
+    استكشف نماذج رسائل البريد الإلكتروني الخاصة بنا التي تساعدك على مشاركة حدث ساعة
+    البرمجة الخاص بك مع مجتمعك.
+  hoc_how_to_step_districts_celebrate_desc_01: 'شارك الصور ومقاطع الفيديو الخاصة بحدث
+    ساعة البرمجة الخاص بك واستعرض إنجازات طلابك. استخدم #HourOfCode و@codeorg حتى
+    نتمكن من رؤية منطقتك أثناء العمل!'
+  hoc_how_to_step_districts_beyond_desc_01: لا يجب أن ينتهي تعليم علوم الكمبيوتر بساعة
+    البرمجة! للمساعدة في تزويد الطلاب في منطقتك بالمهارات والمعرفة التي من شأنها إعدادهم
+    ليكونوا مستعدين للكلية والعمل، تحقق من مناهجنا المجانية للاستخدام على شبكة الإنترنت!
+  hoc_how_to_step_districts_beyond_desc_01_v2: لا يجب أن ينتهي تعليم علوم الكمبيوتر
+    بساعة البرمجة! للمساعدة في تزويد الطلاب في منطقتك بالمهارات والمعرفة التي من شأنها
+    إعدادهم ليكونوا مستعدين للكلية والعمل، تحقق من عروض المناهج المتنوعة من شركاء
+    ساعة البرمجة!
+  hoc_how_to_step_events_register_desc_01: سجّل حدث ساعة البرمجة الخاص بك لتتمكن من
+    الوصول مبكرًا إلى المعلومات المتعلقة بالأنشطة الجديدة والعروض الترويجية الخاصة!
+    عندما يشارك 300 طالب أو أكثر، يمكنك الحصول على مجموعة تفاعل خاصة تحتوي على قمصان،
+    وملصقات إعلانية، وملصقات كمبيوتر محمول، والمزيد. [شارك خطة الأحداث المدرسية بأكملها](%{share_url})
+    للتأهل.
+  hoc_how_to_step_events_register_desc_02: يمكنك أيضًا [عرض خريطة ساعة البرمجة](%{map_url})
+    لعرض الحدث الخاص بك، واعلم أن تفانيك يشكل جزءًا من حركة عالمية.
+  hoc_how_to_step_events_prepare_desc_01: ضع في اعتبارك المكان والزمان الذي تريد أن
+    تعقد فيه الحدث الخاص بك، بالإضافة إلى الإمكانات التقنية للمساحة الخاصة بك. يمكن
+    للطلاب العمل على أجهزتهم الخاصة، أو في أزواج على جهاز واحد، أو معًا كفصل دراسي
+    على جهاز عرض، كما أن هناك برامج تعليمية لا تتطلب الاتصال بالإنترنت يمكن إكمالها
+    دون أجهزة على الإطلاق!
+  hoc_how_to_step_events_prepare_desc_02: أرسل [رسالة] (%{letter_url}) إلى مسؤول منتخب
+    أو رجل أعمال مؤثر وقدم الدعوة إليهم للتحدث. [راجع مجموعة الأدوات الإرشادية الخاصة
+    بنا] (%{toolkit_url}) عند استضافة مسؤول منتخب خلال ساعة البرمجة للمزيد من المعلومات.
+  hoc_how_to_step_events_prepare_desc_03: يمكنك أيضًا دعوة وسائل الإعلام المحلية،
+    مثل محطة الأخبار المحلية، أو الصحيفة المحلية، أو مدوني التعليم/ المسائل التقنية.
+    [راجع الملف الصحفي للمساعدة](%{press_kit_url}).
+  hoc_how_to_step_events_plan_hour_desc_02: '10:05-10:00 صباحًا: ابدأ بـ [فيديو ملهم](%{videos_url}).'
+  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 صباحًا: يلقي مدير المدرسة
+    خطابًا افتتاحيًا عن أهمية علوم الكمبيوتر. [استخدم هذه الإحصاءات والرسوم البيانية]%{stats_url}(%{stats_url}).'
+  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 صباحًا: ضيف خاص للحديث
+    عن خلفيته وكيف تلعب التكنولوجيا وعلوم الكمبيوتر دورًا مهمًا في حياته اليومية.'
+  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 صباحاً: يقوم الطلاب بعرض
+    توضيحي عن ساعة البرمجة للمدرسة. اختلاف ممتع: اطلب منهم تعليم المدير، أو السياسي،
+    أو الطلاب الآخرين!'
+  hoc_how_to_step_events_plan_hour_desc_06: '10:40- 11:00 صباحًا: يقوم الطلاب بعرض
+    توضيحي عن الأنشطة التي لا تتطلب الاتصال بالإنترنت وكيف يمكن تدريس علوم الكمبيوتر
+    دون أجهزة كمبيوتر.'
+  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 صباحًا: يقدم المدرس الذي
+    ساعد في تنظيم الحدث على مستوى المدرسة الملاحظات الختامية.'
+  hoc_how_to_step_events_get_coding_desc_01: أثناء تنفيذ الطلاب لنشاطهم، التقط صورًا
+    لإحياء ذكرى الحدث، وانشرها على شبكات التواصل الاجتماعي الخاصة بمؤسستك. (قد تُطبق
+    سياسات الإعلان أو الخصوصية.)
+  hoc_how_to_step_events_get_coding_desc_02: تأكد من أن جدول الأعمال يسير بسلاسة،
+    وأنه يظل في المسار الصحيح للانتهاء في الوقت المحدد - خاصة إذا كان لدى أي ضيوف
+    مميزين التزامات محددة أخرى للحضور.
+  hoc_how_to_step_events_after_desc_01: 'بعد حدث ساعة البرمجة، احرص على:'
+  hoc_how_to_step_events_after_desc_02: الاحتفال! اطبع شهادات الإنجاز وقدم التهنئة
+    إلى الطلاب.
+  hoc_how_to_step_events_after_desc_03: توجيه الشكر  إلى أي ضيف مميز على وقته (من
+    الرائع بشكل خاص أن يقوم الطلاب بذلك) وعرض الإجابة على أي أسئلة متابعة قد تكون
+    لديه.
+  hoc_how_to_step_events_after_desc_04: نشر الصور، أو مقاطع الفيديو، أو الاقتباسات
+    البارزة من اليوم على وسائل التواصل الاجتماعي. (قد تُطبق سياسات الإعلان أو الخصوصية.)
+  hoc_how_to_step_events_after_desc_05: المتابعة مع المتطوعين أو الضيوف للحصول على
+    تعليقات بشأن كيفية جعل حدث العام المقبل أفضل.
   hoc_how_to_step_events_after_desc_06: تواصل مع جمعية أولياء الأمور والمعلمين والطلاب
     في مدرستك أو شارك في النشرات الإخبارية لأولياء الأمور، مما يتيح لهم معرفة ما يتعلمه
     أطفالهم.
-  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
-    of Code with your child by registering. When you register your event, you'll receive
-    helpful emails with news and tips for hosting a successful Hour of Code. You'll
-    also be [put on the map](%{map_url}) so you can show your child that they are
-    part of a global movement.
-  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
-    get to work together. They may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. Computer science
-    is all about learning how to "debug" situations that didn't turn out the way we
-    thought they would. Together, you and your child can think of creative ways to
-    solve the problem!
-  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
-    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
-    your child to show off their achievement!
-  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
-    a school-wide event. When 300 or more kids participate, you can receive a special
-    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
-    whole school event plan](%{share_url}) to qualify.
-  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
-    hosting a company-wide event or encouraging other employees to host their own
-    Hour of Code event.
-  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
-    that features one of their favorite role models.
-  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
-    and why it matters.
-  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
-    with your child right away to get them excited or save it for the end of your
-    Hour of Code as a special prize."
-  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
-    your school today."
-  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
-    both your event and the elected official.
-  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
-    from your event (e.g., school administrator) and for the elected official attending
-    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
-    for the day of the event.
-  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
-    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
-  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
-    your Hour of Code event to register and put your event on the map. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
-    map](%{map_url}) to see your event, and know that your dedication is part of a
-    worldwide movement."
-  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
-    day and make sure all parties participating (teachers, students, administrators,
-    elected officials and their staff) are aware of what is happening and when. Things
-    to consider:'
-  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
-    each part of the event?
-  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
-    or rotate between many students during the event? (You may want to coordinate
-    this ahead of time with the official's staffer.)
-  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
-    as a group?
-  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
-    What if the official is running late? What if some students finish their activity
-    before others?
-  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
-    to talk about their background and how technology and computer science plays an
-    important role in their everyday life.'
-  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
-    their Hour of Code activity. Fun twist: have a group of students teach the principal,
-    politician, or other students!'
-  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
-    gives closing remarks.'
-  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
-    coordinating media invitations. It could be the school, the district, the official's
-    office, or any combination.
-  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
-    per your state/district/school policy.
-  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
-    (DocuSign - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
-    (Download and print)"
+  hoc_how_to_step_parents_register_desc_01: ابدأ بالالتزام بتنفيذ ساعة برمجة مع طفلك
+    بالتسجيل. وعند تسجيل الحدث الخاص بك، ستتلقى رسائل بريد إلكتروني مفيدة تتضمن أخبار
+    ونصائح لاستضافة ساعة برمجة ناجحة. كما سيكون لك [مكان على الخريطة](%{map_url})
+    لتبين لطفلك أنه يشكل جزءاً من حركة عالمية.
+  hoc_how_to_step_parents_get_coding_desc_01: وجه طفلك إلى النشاط وابدأ في العمل معه.
+    قد يواجه تحديات— لا توجد مشكلة! تعلم البرمجة يشبه تعلم لغة جديدة؛ لن تجيدها على
+    الفور. تتعلق علوم الكمبيوتر بتعلم كيفية "تصحيح الأخطاء" في الحالات التي لم تسر
+    فيها الأمور بالطريقة التي اعتقدنا أنا ستحدث. يمكنك أنت وطفلك معًا التفكير في طرق
+    إبداعية لحل المشكلة!
+  hoc_how_to_step_parents_celebrate_desc_01: 'احرض على الاحتفال بالنجاح! شارك الصور
+    ومقاطع الفيديو لحدث ساعة البرمجة الخاص بك على وسائل التواصل الاجتماعي. استخدم
+    #HourOfCode و@codeorg لنتمكن من إبراز نجاحك أيضًا!'
+  hoc_how_to_step_parents_celebrate_desc_02: 'يمكنك أيضًا طباعة شهادة لطفلك لإظهار
+    إنجازاته! '
+  hoc_how_to_step_parents_spread_word_desc_02: اطلب من مدير مدرسة طفلك استضافة حدث
+    على مستوى المدرسة. عندما يشارك 300 طفل أو أكثر، يمكنك الحصول على مجموعة أدوات
+    خاصة للمشاركة تحتوي على قمصان، وملصقات للإعلانات، وملصقات للكمبيوتر المحمول، وغير
+    ذلك. [شارك خطة الأحداث المدرسية بالكامل](%{share_url}) للتأهل.
+  hoc_how_to_step_parents_spread_word_desc_03: اطلب من جهة عملك المشاركة باستضافة
+    حدث على مستوى الشركة أو تشجيع الموظفين الآخرين على استضافة حدث ساعة البرمجة الخاص
+    بهم.
+  hoc_how_to_step_parents_beyond_list_01: اعرض لهم [فيديو تحفيزي](%{video_url}) يظهر
+    فيه أحد النماذج المفضلة لديهم.
+  hoc_how_to_step_parents_beyond_list_02: 'تعلم كل شيء عن [طريقة عمل الذكاء الاصطناعي](%{ai_url})،
+    وسبب أهميته. '
+  hoc_how_to_step_parents_beyond_list_03: "[اطلب بعض الهدايا](%{swag_url})! شاركها
+    مع طفلك على الفور لتحفيزه أو احفظها لنهاية حدث ساعة البرمجة الخاص بك كجائزة خاصة."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) كيفية تقديم علوم
+    الكمبيوتر إلى مدرستك في الوقت الحالي."
+  hoc_how_to_step_public_officials_invite_desc_01: حدد الشخص المسؤول للحدث الخاص بك
+    والمسؤول المنتخب.
+  hoc_how_to_step_public_officials_invite_desc_02: نسّق بين الشخص المسؤول للحدث الخاص
+    بك (مثل مدير المدرسة) والشخص المسؤول التابع للمسؤول الحاضر (مثل الموظف أو المنظم).
+    تأكد من حصول كلا الطرفين على بيانات الاتصال الخاصة بيوم الحدث
+  hoc_how_to_step_public_officials_invite_desc_03: 'من اليسار إلى اليمين: يشارك حكام
+    ولايات أركنساس، وكارولينا الشمالية، وأريزونا يشاركون في ساعة البرمجة'
+  hoc_how_to_step_public_officials_register_desc_01: اعمل مع الأطراف التي تنظم حدث
+    ساعة البرمجة الخاص بك للتسجيل ووضع الحدث الخاص بك على الخريطة. سوف تحصل على إمكانية
+    الوصول المبكر إلى المعلومات حول الأنشطة الجديدة والعروض الترويجية الخاصة!
+  hoc_how_to_step_public_officials_register_desc_02: "[اطلع على خريطة ساعة البرمجة](%{map_url})
+    لعرض الحدث الخاص بك، واعلم أن تفانيك يشكل جزءاً من حركة عالمية."
+  hoc_how_to_step_public_officials_plan_desc_01: 'أعد جدول أعمال محدد لهذا اليوم وتأكد
+    من أن جميع الأطراف المشاركة (المعلمين، والطلاب، والإداريين والمسؤولين المنتخبين،
+    وموظفيهم) على علم بما يحدث ومتى. أشياء يجب مراعاتها:'
+  hoc_how_to_step_public_officials_plan_list_01: ماذا يفعل كل مشارك خلال كل جزء من
+    الحدث؟
+  hoc_how_to_step_public_officials_plan_list_02: هل سيجلس المسؤول مع طالب واحد أم
+    يتناوب بين عدة طلاب خلال الفعالية؟ (قد ترغب في تنسيق ذلك مسبقًا مع الموظف التابع
+    للمسؤول).
+  hoc_how_to_step_public_officials_plan_list_03: هل سيتحدث المسؤول مع الطلاب كمجموعة؟
+  hoc_how_to_step_public_officials_plan_list_04: خطط للمرونة في جدول الأعمال. ماذا
+    لو تأخر المسؤول؟ ماذا لو أنهى بعض الطلاب نشاطهم قبل الآخرين؟
+  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 صباحًا: مسؤول منتخب
+    للحديث عن خلفيته وكيف تلعب التكنولوجيا وعلوم الكمبيوتر دورًا مهمًا في حياته اليومية.'
+  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 صباحًا: ينفذ الطلاب
+    نشاط ساعة البرمجة الخاص بهم. اختلافات ممتعة: اطلب من مجموعة من الطلاب تعليم مدير
+    المدرسة، أو السياسي، أو الطلاب الآخرين!'
+  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 صباحًا: يقدم المدرس/
+    الإداري الملاحظات الختامية.'
+  hoc_how_to_step_public_officials_media_desc_01: اعرف من سيكون مسؤولاً عن تنسيق دعوات
+    الإعلام. يمكن أن تكون المدرسة، أو المنطقة، أو مكتب المسؤول، أو أي مزيج.
+  hoc_how_to_step_public_officials_media_desc_02: احصل على التنازلات الإعلامية لجميع
+    الطلاب، وفقًا لسياسة ولايتك/ منطقتك/ مدرستك.
+  hoc_how_to_step_public_officials_media_list_01: "[بالغ/عام](%{general_send_url})
+    (DocuSign - أرسل الرابط إلى الموقّع)"
+  hoc_how_to_step_public_officials_media_list_02: "[بالغ/عام](%{general_print_url})
+    (تنزيل وطباعة)"
   hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
-    - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
-    and print)"
-  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
-    official 72 hours prior to the event. Include event dress code, who will greet
-    them, which classroom or event they will attend with teacher's name, and agenda
-    for the event.
-  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
-    technology the day before and day of the event to ensure the event runs smoothly.
-  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
-    feel welcome and engaged, greet the elected official at the door of the event
-    to show them where to go and answer any questions they may have. It is always
-    great to have a student help greet them!
-  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
-    to commemorate the visit and to post on your organization's social media networks.
-    (Publicity or privacy policies may apply).
-  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
-    smoothly and that it remains on track to end on time. The official may have other
-    visits or meetings scheduled following your event.
-  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
-    of completion and congratulate your students.
-  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
-    and offer to answer any follow-up questions they may have.
-  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
-    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
-    or privacy policies may apply.)'
-  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
-    you note. It's especially thoughtful to get students to sign!
-  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
-    on each side for feedback on how to make next year’s event even better.
-  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
-    or a degree in computer science—you''re already qualified as you are! There are
-    a few ways you can get involved in Hour of Code as a volunteer:'
-  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
-    Email a local teacher or administrator to see if they need support for their Hour
-    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
-    started!"
-  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
-    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
-    Hour of Code event!"
-  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
-    there, teachers in your area will be able to reach out to you. Teachers will review
-    your profile on the [map](%{map_url}), so try to complete as much as possible
-    to increase the chance that a teacher will contact you."
-  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
-    work with your event organizer to register your Hour of Code event. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
-    discuss these logistics with the teacher ahead of time to better understand their
-    needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
-  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
-    This can determine what times you need to be present and in what capacity.
-  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
-    Depending on their procedures you may need to complete a background check or arrive
-    a little early for check-in at an in-person event.
-  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
-    with Artificial Intelligence (AI). Make this year special by completing a coding
-    activity AND learning about AI.
-  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
-    science movement by sharing your volunteer plans with your friends and colleagues
-    on your social media accounts (e.g. LinkedIn).
-  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
-    free to answer questions—but try not to give them the solution outright. Ask them
-    questions so they can answer themselves what went wrong. Encourage students to
-    help each other if they get stuck.
-  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
-    okay! Let the student know that you're in this together and work alongside them
-    to figure it out.
-  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
-  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
-    to stop with the Hour of Code. Consider volunteering year round with programs
-    like [TEALS](%{teals_url}) or advocate for computer science education.
+    - أرسل الرابط إلى الموقّع)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (تنزيل
+    وطباعة)"
+  hoc_how_to_step_public_officials_confirm_desc_01: أرسل جدول الأعمال العام إلى المسؤول
+    قبل 72 ساعة من موعد الحدث. وأدرج قواعد الزي للحدث، ومن سيتولى الترحيب، والفصل
+    الدراسي أو الحدث الذي سيحضره مع اسم المعلم، وجدول أعمال الحدث.
+  hoc_how_to_step_public_officials_confirm_desc_02: راجع جدول الأعمال واختبر جميع
+    التقنيات في اليوم السابق للحدث ويومه لضمان سير الحدث بسلاسة.
+  hoc_how_to_step_public_officials_get_coding_desc_01: للتأكد من أن المسؤولين المنتخبين
+    يشعرون بالترحيب والتفاعل، وجّه التحية للمسؤول المنتخب عند باب الحدث لتوضيح المكان
+    الذي سيذهب إليه، والإجابة على أي أسئلة قد تكون لديهم. من الجيد دائمًا أن يساعد
+    الطالب في الترحيب بهم!
+  hoc_how_to_step_public_officials_get_coding_desc_02: التقط صورًا أثناء الحدث لإحياء
+    ذكرى الزيارة ونشرها على شبكات التواصل الاجتماعي الخاصة بمؤسستك. (قد تُطبق سياسات
+    الإعلان أو الخصوصية).
+  hoc_how_to_step_public_officials_get_coding_desc_03: تأكد من أن جدول الأعمال يسير
+    بسلاسة وأنه يظل على المسار الصحيح حتى ينتهي في الوقت المحدد. قد يكون للمسؤول زيارات
+    أو اجتماعات أخرى مقررة بعد الحدث الخاص بك.
+  hoc_how_to_step_public_officials_after_list_01: احتفل! [اطبع الشهادات](%{certificate_url})
+    وقدم التهنئة لطلابك.
+  hoc_how_to_step_public_officials_after_list_02: اشكر المسؤول على وقته واعرض عليه
+    الإجابة على أي أسئلة متابعة قد تكون لديه.
+  hoc_how_to_step_public_officials_after_list_03: 'انشر الصور، أو مقاطع الفيديو، أو
+    الاقتباسات البارزة من اليوم على وسائل التواصل الاجتماعي باستخدام #HourOfCode و@codeorg.
+    (قد تُطبق سياسات الإعلان أو الخصوصية.)'
+  hoc_how_to_step_public_officials_after_list_04: أرسل رسالة شكر إلى المسؤول للمتابعة.
+    من المفيد بصورة خاصة حث الطلاب على التوقيع!
+  hoc_how_to_step_public_officials_after_list_05: تابع مع الشخص المسؤول لكل طرف للحصول
+    على تعليقات بشأن كيفية كيفية جعل حدث العام المقبل أفضل.
+  hoc_how_to_step_volunteer_decide_desc_01: 'لا تحتاج إلى خلفية تقنية أو شهادة في
+    علوم الكمبيوتر، فأنت مؤهل بالفعل كما أنت! هناك عدة طرق يمكنك من خلالها المشاركة
+    في ساعة البرمجة كمتطوع:'
+  hoc_how_to_step_volunteer_decide_list_01: "**تواصل مع إحدى المدارس في منطقتك.**
+    أرسل رسالة عبر البريد الإلكترني إلى مدرس أو مسؤول محلي لمعرفة ما إذا كانوا بحاجة
+    إلى دعم لحدث ساعة البرمجة الخاص بهم. اطلع على [نموذج البريد الإلكتروني](%{email_url})
+    ليتمكن المتطوعين من البدء!"
+  hoc_how_to_step_volunteer_decide_list_02: "**نظّم حدث مع شركتك.** راجع [الدليل الإرشادي
+    للشركات](%{companies_url}) لإعداد حدث ساعة من البرمجة على مستوى المؤسسة!"
+  hoc_how_to_step_volunteer_decide_list_03: "**سجّل في خريطة المتطوعين.** من هناك،
+    سيتمكن المدرسون في منطقتك من التواصل معك. سيراجع المدرسون ملفك الشخصي على [الخريطة](%{map_url})،
+    لذا حاول إكمال أكبر قدر ممكن لزيادة فرصة اتصال المعلم بك."
+  hoc_how_to_step_volunteer_register_desc_01: بغض النظر عن الطريقة التي قررت بها التطوع،
+    اعمل مع منظم الحدث التابع لك لتسجيل حدث ساعة البرمجة الخاص بك. سوف تحصل على إمكانية
+    الوصول المبكر إلى المعلومات حول الأنشطة الجديدة والعروض الترويجية الخاصة!
+  hoc_how_to_step_volunteer_plan_desc_01: 'إذا كنت متطوعًا في فصل دراسي، فناقش هذه
+    الأمور اللوجستية مع المدرس مسبقًا لفهم احتياجاته بصورة أفضل:'
+  hoc_how_to_step_volunteer_plan_list_01: ما دورك كمتطوع في هذا الحدث؟ إذا كنت تعمل
+    في التكنولوجيا، فقد يُطلب منك مشاركة تجربتك الشخصية أو قصتك. هل يمكنك مساعدة المدرس
+    على الاستعداد من خلال القيام بالنشاط معه مسبقًا؟ هل يمكنك التجول في الفصل الدراسي
+    للإجابة على الأسئلة أو تشجيع الطلاب أثناء تنفيذ ساعة البرمجة؟
+  hoc_how_to_step_volunteer_plan_list_02: إذا كنت ستتطوع افتراضيًا أو شخصيًا. يمكن
+    أن يحدد هذا الأوقات التي يجب أن تكون فيها حاضرًا وبأي صفة.
+  hoc_how_to_step_volunteer_plan_list_03: توجيهات الصحة والسلامة المحلية والمدرسية.
+    بحسب الإجراءات، قد تحتاج إلى إكمال فحص الخلفية أو الوصول مبكرًا قليلًا لتسجيل
+    الوصول في حدث شخصي
+  hoc_how_to_step_volunteer_plan_list_04: موضوع ساعة البرمجة هذا العام هو الإبداع
+    مع الذكاء الاصطناعي. اجعل هذا العام مميزًا من خلال إنجاز نشاط البرمجة والتعرف
+    على الذكاء الاصطناعي.
+  hoc_how_to_step_volunteer_spread_word_desc_01: ساعد في زيادة الوعي بحركة علوم الكمبيوتر
+    من خلال مشاركة خطط التطوع الخاصة بك مع أصدقائك وزملائك على حسابات وسائل التواصل
+    الاجتماعي الخاصة بك (مثل لينكد إن).
+  hoc_how_to_step_volunteer_get_coding_desc_01: أثناء عمل الطلاب، لا تتردد في الإجابة
+    على الأسئلة، ولكن حاول ألا تقدم لهم الحل بصورة مباشرة. اطرح عليهم الأسئلة حتى
+    يتمكنوا من الإجابة على أنفسهم بشأن ما الخطأ الذي حدث. شجّع الطلاب على مساعدة بعضهم
+    البعض إذا واجهوا مشكلة.
+  hoc_how_to_step_volunteer_get_coding_desc_02: إذا لم يكن لديك الإجابة، فلا توجد
+    مشكلة! أبلغ الطالب أنك مشترك في هذا العمل واعمل معه لاكتشاف الحل.
+  hoc_how_to_step_volunteer_beyond_desc_01: ادعم تعلم علوم الكمبيوتر على مدار العام!
+  hoc_how_to_step_volunteer_beyond_desc_02: إذا استمتعت، فلا يجب أن يتوقف العمل في
+    ساعة البرمجة. فكر في التطوع على مدار العام في برامج مثل [TEALS](%{teals_url})
+    أو الدعوة إلى تعلم علوم الكمبيوتر.
+  hoc_how_to_step_virtual_register_desc_01: سجل حدث ساعة البرمجة الخاص بك للحصول على
+    الوصول المبكر إلى المعلومات المتعلقة بالأنشطة الجديدة والعروض الترويجية.
+  hoc_how_to_step_virtual_register_desc_02: قد لا تشارك في اجتماع شخصي، لكنك لا تزال
+    جزءًا من الحركة. استخدم موقع مضيفك لإضافة الحدث الخاص بك إلى خريطة ساعة البرمجة،
+    واعلم أن إخلاصك يشكل جزءًا من حركة عالمية.
+  hoc_how_to_step_virtual_choose_activities_desc_04: قرر مسبقًا ما إذا كنت تريد اختيار
+    برنامج تعليمي واحد لجميع طلابك، أو اسمح لكل طالب باختيار برنامجه التعليمي.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 صباحًا: ابدأ بـ [فيديو تحفيزي](%{videos_url})
+    أو مقدمة موجزة من المضيف عن أهمية أساسيات علوم الكمبيوتر'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 صباحًا: ينفذ الطلاب أنشطة البرمجة
+    الخاصة بهم'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 صباحًا: يتعلم الطلاب الذكاء
+    الاصطناعي'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 صباحًا: يقدم المضيف ملاحظات
+    ختامية'
+  hoc_how_to_step_virtual_plan_desc_02: اختبر أنشطتك وإعدادك للتكنولوجيا مسبقًا. فكر
+    في طريقة انضمام طلابك إلى المكالمة وما إذا كان بإمكانهم المشاركة في المكالمة أثناء
+    إنجاز نشاطهم في نافذة منفصلة. وعند عرض فيديو، شارك شاشتك وصوت الكمبيوتر الخاص
+    بك.
+  hoc_how_to_step_virtual_plan_desc_03: أثناء نشاط البرمجة، يمكنك أن تطلب من الطلاب
+    الصمت حتى يكون لديهم أسئلة. أو، إذا كانت أداة المؤتمر الخاصة بك تدعم ذلك، ادرس
+    استخدام الغرفة الجانبية للطلاب للعمل معاً في أزواج أو مجموعات.
+  hoc_how_to_step_virtual_get_coding_desc_01: وجه طلابك إلى النشاط، ربما من خلال مشاركة
+    الرابط في مربع دردشة أداة المؤتمر أو من خلال نظام إدارة التعليم في الفصل الدراسي
+    الخاص بك. قد يواجه طلابك تحديات—لا مشكلة! تعلم البرمجة يشبه تعلم لغة جديدة؛ لن
+    تجيدها على الفور. في حالة عدم معرفة أي طالب بالإجابة، شجعه على التعاون مع زميل
+    واكتشاف الإجابة معًا.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'احرض على الاحتفال بالنجاح! يمكنك طباعة
+    الشهادات مسبقًا وإرسالها إلى الطلاب، أو تطلب من أحد الوالدين الطباعة في المنزل.
+    اعرض إنجازاتهم وشارك الصور ومقاطع الفيديو لحدث ساعة البرمجة الخاص بك على وسائل
+    التواصل الاجتماعي. استخدم #HourOfCode و@codeorg لنتمكن من إبراز نجاحك أيضًا! (قد
+    تنطبق سياسات الإعلان أو الخصوصية.) '
+  hoc_how_to_step_virtual_beyond_desc_01: لا يجب أن تنتهي علوم الكمبيوتر بساعة البرمجة!
+    بينما يريد 90% من الآباء والأمهات أن يتعلم أطفالهم الكمبيوتر، فإن معظم المدارس
+    لا تزال لا تُدرسها. للمساعدة، يقدم شركاء ساعة البرمجة عروضًا متنوعة للمناهج الدراسية.
+    تعلم كيفية تقديم هذه العروض إلى المدارس في الوقت الحالي.
   hoc_ai_top_desc: يمكن لأي شخص التعرف على الذكاء الاصطناعي، سواء كنت طالبًا في الفصل
     الدراسي أو معلمًا يفتح مستقبل التدريس باستخدام الذكاء الاصطناعي وحوله.
   hoc_ai_how_ai_works_video_series_desc: ستعرفك هذه السلسلة من مقاطع الفيديو القصيرة
@@ -14749,6 +14793,37 @@ ar:
     الذكاء الاصطناعي.
   hoc_ai_activities_desc: تعرّف أنشطة «ساعة البرمجة» الجديدة هذه المستخدمين على عالم
     الذكاء الاصطناعي بطريقة ممتعة وجذابة.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: ما يقرب من 100 موظف في Code.org يرتدون قمصانًا متطابقة
     باللونين الأزرق والأصفر يقفون في قاعة مؤتمرات بالفندق لحضور حدث Codechella لصيف
     2022 للشركة.
@@ -14934,7 +15009,7 @@ ar:
     على مستوى المؤسسة لمدة أسبوعين في نهاية العام المعروف أيضًا باسم عطلة الشتاء)،
     ونصف يوم عمل في أيام الجمعة خلال فصل الصيف المعروف أيضًا باسم أيام الجمعة الصيفية،
     وغيرها من المزايا السخية.
-  careers_hero_title: Pseudoloc-ؤلقثقس
+  careers_hero_title: وظائف
   careers_hero_description: Code.org هي منظمة غير ربحية مكرسة لتوسيع الوصول إلى علوم
     الكمبيوتر في المدارس. نحن نركز بشكل خاص على زيادة المشاركة بين الشابات والطلاب
     ناقصي التمثيل.
@@ -15011,7 +15086,7 @@ ar:
     الإعاقة للمشاركة في طلب الوظيفة أو عملية المقابلة، لأداء وظائف الوظيفة الأساسية،
     والحصول على مزايا وامتيازات التوظيف الأخرى. إذا كانت لديك احتياجات فردية تتعلق
     بالإعاقة، فيرجى التواصل مع accommodations@code.org.
-  csa_ai_page_hero_title: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
+  csa_ai_page_hero_title: سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
   csa_ai_page_hero_description: 'تقدم وحدة ما بعد AP CSA المكونة من فصلين لطلاب المدارس
     الثانوية خبرة عملية في أدوات تطوير البرامج الاحترافية، بما في ذلك GitHub و GitHub
     Copilot، وتزودهم بمهارات العالم الحقيقي لتطوير برنامج رؤية الكمبيوتر. '
@@ -15027,7 +15102,7 @@ ar:
   csa_ai_page_curriculum_accessibility_features: راجع قسم الأسئلة الشائعة للحصول على
     التفاصيل
   csa_ai_page_curriculum_languages_support: الإنجليزية
-  csa_ai_page_article_title_1: Pseudoloc-اعهم صهف ؤخحمخف
+  csa_ai_page_article_title_1: اعهم صهف ؤخحمخف
   csa_ai_page_article_description_1: يتعلم الطلاب كيفية استخدام GitHub Copilot كمبرمج
     مزدوج لشرح التعليمات البرمجية الحالية والعثور على الأخطاء وإصلاحها وإنشاء حلول
     للمشاكل الجديدة.
@@ -15300,9 +15375,10 @@ ar:
     لا يحصى من المنظمات والأفراد](%{efforts_url}) الذين ساعدوا في إنشاء وتمويل ونشر
     تعليم علوم الكمبيوتر. نحن ممتنون للاستفادة من المساعدة الدؤوبة لمجتمع تعليم علوم
     الكمبيوتر الأوسع، و [نشكر جميع الشركاء والأفراد الذين دعموا تأثيرنا على مر السنين](%{partners_url})).
-  about_page_section_more_list_1: "[تقرير Code.org السنوي لعام 2021](%{report_url})
-    (التقارير السابقة: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[قيمنا الأساسية وإرشادات المراسلة](%{core_url})"
   about_page_section_more_list_3: "[منهجنا وفلسفة التربية](%{curriculum_url})"
   about_page_section_more_list_4: "[حديث TEDx من قبل مؤسسنا هادي بارتوفي حول سبب أهمية

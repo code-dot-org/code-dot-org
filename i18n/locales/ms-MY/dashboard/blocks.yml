@@ -1722,6 +1722,12 @@ ms:
         text: y koordinat dari {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': pepejal
+            '"liquid"': cecair
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: berguling
       Mikelab_addBehaviorSimple:

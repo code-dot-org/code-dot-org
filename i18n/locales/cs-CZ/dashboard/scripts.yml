@@ -8350,3 +8350,13 @@ cs:
           title: 'Modul 1: Příprava na výuku řešení problémů a výpočtů'
           description: "Tento profesionální výukový modul je navržen tak, aby Vám pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod so řešení problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 30 minut"
           student_description: "Tento profesionální výukový modul je navržen tak, aby Vám pomohl připravit se na jednotku řešení problémů a výpočtů Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod so řešení problémů a výpočtů.\n-   Praktikovat kléčové koncepce obsažené v této jednotce.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 30 minut"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Příprava na výuku vývoje webu'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Příprava na výuku interaktivních animací a her
+          description: "Tento profesionální výukový modul je určen k tomu, aby Vám pomohl připravit se na výuku jednotky Interaktivní animace a hry Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Interaktivních animací a her.\n-   Praktikovat klíčové koncepce obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+          student_description: "Tento profesionální výukový modul je určen k tomu, aby Vám pomohl připravit se na výuku jednotky Interaktivní animace a hry Code.org. \n\n**V tomto profesionálním výukovém modulu budete:**\n\n-   Absolvovat úvod do Interaktivních animací a her.\n-   Praktikovat klíčové koncepce obsažené v jednotce.\n-   Zapojovat se do Laboratoře her.\n-   Zkoumat projekty na koncích kapitol.\n\n**Navrhovaná doba:** 120 minut"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Příprava na výuku procesu návrhu"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Příprava na výuku dat a společnosti'

@@ -1501,6 +1501,7 @@
   header_report_abuse: "Signaler un abus"
   header_legal: "Confidentialité et mentions légales"
   header_legal_privacy: "Politique de confidentialité"
+  header_legal_cookie_notice: " Utilisation des cookies"
   header_legal_tos: "Conditions Générales d'Utilisation"
   header_tutorials: "Didacticiels"
   header_screen_reader_hamburger: "Menu"

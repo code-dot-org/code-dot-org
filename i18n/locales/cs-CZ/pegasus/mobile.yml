@@ -1522,6 +1522,7 @@
   header_report_abuse: "Nahlásit zneužití"
   header_legal: "Ochrana osobních údajů a právní"
   header_legal_privacy: "Zásady ochrany osobních údajů"
+  header_legal_cookie_notice: "Oznámení o souborech cookie"
   header_legal_tos: "Podmínky"
   header_tutorials: "Návody"
   header_screen_reader_hamburger: "Menu"

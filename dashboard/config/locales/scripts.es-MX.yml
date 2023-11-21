@@ -8978,6 +8978,10 @@ es-MX:
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
           title: Fiesta de baile (remix 2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de Baile: Edición IA'
         dance-draft:
           title: NO USAR
         dance-extras:
@@ -11287,6 +11291,28 @@ es-MX:
             30 minutos"
           title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas
             y la Computación'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparación para la Enseñanza del Desarrollo Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Este módulo de aprendizaje profesional está diseñado para
+            ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado
+            para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos
+            de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-
+            \  Obtener una introducción a las Animaciones y Juegos Interactivos.\n-
+            \  Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar
+            con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo
+            sugerido:** 120 minutos"
+          title: Preparación para la Enseñanza de Animaciones y Juegos Interactivos
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Módulo 4:  Preparación para la Enseñanza del Proceso de Diseño'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'
         self-paced-pl-csd1-2021:
           description: "Este módulo es una breve introducción tanto a Code.org como
             a este curso de aprendizaje profesional. \n\n**Usted podrá:**\n\n-   Obtener

@@ -479,6 +479,7 @@ hu:
         csd_sprite_properties: Sprite tulajdonságok
         what-is-creativity: Mi a Kreativitás?
         code-break: Vegyen egy kódszünetet
+        csd_ml_how_ai_works: Hogyan működik az MI?
     callout:
       text:
         drag_blocks: Húzz egy „előrelépni” blokkot, és csatold a másik blokk alá
