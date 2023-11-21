@@ -15,47 +15,32 @@ const AITutorPanel = ({level}) => {
   const dispatch = useDispatch();
   const isCodingLevel = level.type === 'Javalab';
 
-  const initialCheckboxes = [
+  const checkboxes = [
     {
       key: 'compilation',
       label: 'Code compilation',
-      checked: false,
       hidden: !isCodingLevel,
     },
     {
       key: 'validation',
       label: 'Failing tests',
-      checked: false,
       hidden: !level.hasValidation,
     },
     {
       key: 'question',
       label: 'I have a question',
-      checked: false,
       hidden: false,
     },
   ];
 
-  const [checkboxes, updateCheckboxes] = useState(initialCheckboxes);
+  const [checked, updateChecked] = useState('compilation');
 
-  const handleCheckboxChange = key => {
+  const handleCheckboxChange = checked => {
     dispatch(addAIResponse(''));
-    const updatedCheckboxes = checkboxes.map(checkbox =>
-      checkbox.key === key
-        ? {...checkbox, checked: !checkbox.checked}
-        : {...checkbox, checked: false}
-    );
-    updateCheckboxes(updatedCheckboxes);
+    // Note: I think this would unselect the checkbox if it was already selected
+    // which, to Molly's point, might not be want we want (if we want them to act as radio buttons)
+    updateChecked(prevChecked => (prevChecked === checked ? null : checked));
   };
-
-  const getChecked = checkboxes => {
-    return checkboxes.find(checkbox => checkbox.checked);
-  };
-
-  const checked = getChecked(checkboxes);
-  const compilationSelected = checked && checked.key === 'compilation';
-  const validationSelected = checked && checked.key === 'validation';
-  const questionSelected = checked && checked.key === 'question';
 
   return (
     <AITutorPanelContainer level={level}>
@@ -69,15 +54,19 @@ const AITutorPanel = ({level}) => {
               <Checkbox
                 key={cb.key}
                 label={cb.label}
-                checked={cb.checked}
+                checked={cb.key === checked}
                 onChange={() => handleCheckboxChange(cb.key)}
               />
             )
         )}
       </div>
-      {compilationSelected && <CompilationTutor levelId={level.id} />}
-      {validationSelected && <ValidationTutor levelId={level.id} />}
-      {questionSelected && <GeneralChatTutor />}
+      {
+        {
+          compilation: <CompilationTutor levelId={level.id} />,
+          validation: <ValidationTutor levelId={level.id} />,
+          question: <GeneralChatTutor />,
+        }[checked]
+      }
     </AITutorPanelContainer>
   );
 };
