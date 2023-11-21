@@ -13,9 +13,9 @@ class Services::Lti
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
-      user.name = teacher_keys.filter_map {|key| get_value(id_token, key)}.compact.first
+      user.name = get_name(id_token, teacher_keys)
     else
-      user.name = student_keys.filter_map {|key| get_value(id_token, key)}.compact.first
+      user.name = get_name(id_token, student_keys)
       user.family_name = get_value(id_token, :family_name)
     end
     ao = AuthenticationOption.new(
@@ -25,6 +25,10 @@ class Services::Lti
     )
     user.authentication_options = [ao]
     user
+  end
+
+  def self.get_name(id_token, keys_array)
+    keys_array.filter_map {|key| get_value(id_token, key)}.compact.first
   end
 
   def self.get_value(id_token, key)
