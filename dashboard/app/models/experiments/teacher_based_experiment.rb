@@ -37,7 +37,7 @@ class TeacherBasedExperiment < Experiment
   def enabled?(user: nil)
     return if user.nil?
 
-    sections = user.teacher? ? user.sections : user.sections_as_student
+    sections = user.teacher? ? user.sections_instructed : user.sections_as_student
 
     sections.any? do |s|
       teacher_id_modulus = s.user_id % 100

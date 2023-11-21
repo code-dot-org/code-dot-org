@@ -102,7 +102,7 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
   # @return {boolean} true if we have at least one section that meets our eligibility
   #   requirements for student progress
   def self.student_progress_eligible?(user)
-    user.sections.any?(&:has_sufficient_discount_code_progress?)
+    user.sections_instructed.any?(&:has_sufficient_discount_code_progress?)
   end
 
   def self.application_status(user)

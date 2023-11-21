@@ -7,7 +7,7 @@ class SectionsController < ApplicationController
   def new
     redirect_to '/home' unless params[:loginType] && params[:participantType]
 
-    @is_users_first_section = current_user.sections.empty?
+    @is_users_first_section = current_user.sections_instructed.empty?
   end
 
   def edit
