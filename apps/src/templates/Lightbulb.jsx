@@ -59,7 +59,7 @@ class Lightbulb extends React.Component {
           <g
             transform={
               this.props.isRtl
-                ? 'translate(50,200) scale(10.0,10.0)'
+                ? 'translate(0,200) scale(10.0,10.0)'
                 : 'translate(245,200) scale(10.0,10.0)'
             }
           >
@@ -99,7 +99,7 @@ class Lightbulb extends React.Component {
           <g>
             <text
               id="hintCount"
-              x={this.props.isRtl ? '425' : '495'}
+              x={this.props.isRtl ? '380' : '495'}
               y="380"
               style={styles.count}
             >
@@ -110,7 +110,7 @@ class Lightbulb extends React.Component {
         numberCircle = (
           <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
             <circle
-              cx={this.props.isRtl ? '365' : '565'}
+              cx={this.props.isRtl ? '315' : '565'}
               cy="310"
               r="125"
               fill={color.white}
