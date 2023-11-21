@@ -62,10 +62,14 @@ const ExpandedCurriculumCatalogCard = ({
     'Rubric',
   ];
 
+  const availableResourcesCount = availableResources
+    ? Object.keys(availableResources).length
+    : 0;
+
   let availableResourceCounter = 0;
 
   const displayDivider = () => {
-    return ++availableResourceCounter < Object.keys(availableResources).length;
+    return ++availableResourceCounter < availableResourcesCount;
   };
 
   useEffect(() => {
@@ -138,28 +142,27 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources &&
-                      Object.keys(availableResources).length > 0 && (
-                        <div>
-                          <Heading4 visualAppearance="heading-xs">
-                            {i18n.availableResources()}
-                          </Heading4>
-                          <hr className={style.thickDivider} />
-                          {resoucesOrder.map(
-                            resource =>
-                              availableResources[resource] && (
-                                <div key={resource}>
-                                  <BodyTwoText>
-                                    {translatedAvailableResources[resource]}{' '}
-                                  </BodyTwoText>
-                                  {displayDivider() && (
-                                    <hr className={style.horizontalDivider} />
-                                  )}
-                                </div>
-                              )
-                          )}
-                        </div>
-                      )}
+                    {availableResourcesCount > 0 && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div key={resource}>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
