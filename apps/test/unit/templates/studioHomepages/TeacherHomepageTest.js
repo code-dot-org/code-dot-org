@@ -15,7 +15,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -153,8 +152,8 @@ describe('TeacherHomepage', () => {
     This test will need to be updated according to whether the banner is showing,
     as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
    */
-  it('renders a DonorTeacherBanner if isEnglish and afeEligible are true', () => {
-    const wrapper = setUp({isEnglish: true, afeEligible: true});
+  it('renders a DonorTeacherBanner if afeEligible is true', () => {
+    const wrapper = setUp({afeEligible: true});
     assert(wrapper.find('DonorTeacherBanner').exists());
   });
 

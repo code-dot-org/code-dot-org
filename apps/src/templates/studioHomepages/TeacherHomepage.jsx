@@ -35,7 +35,6 @@ export const UnconnectedTeacherHomepage = ({
   plCourses,
   courses,
   afeEligible,
-  isEnglish,
   joinedStudentSections,
   joinedPlSections,
   ncesSchoolId,
@@ -161,7 +160,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = shouldShowAFEBanner && isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
@@ -321,7 +320,6 @@ UnconnectedTeacherHomepage.propTypes = {
   courses: shapes.courses,
   afeEligible: PropTypes.bool,
   hocLaunch: PropTypes.string,
-  isEnglish: PropTypes.bool.isRequired,
   joinedStudentSections: shapes.sections,
   joinedPlSections: shapes.sections,
   ncesSchoolId: PropTypes.string,
