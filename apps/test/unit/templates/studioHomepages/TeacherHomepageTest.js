@@ -150,13 +150,12 @@ describe('TeacherHomepage', () => {
   });
 
   /*
-    We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
-    space. If we decide to show the banner again this test will need to be updated. See
-    TeacherHomepage.jsx to make the banner show.
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
    */
-  it('does not render a DonorTeacherBanner even if isEnglish and afeEligible are true', () => {
+  it('renders a DonorTeacherBanner if isEnglish and afeEligible are true', () => {
     const wrapper = setUp({isEnglish: true, afeEligible: true});
-    assert(!wrapper.find('DonorTeacherBanner').exists());
+    assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {
