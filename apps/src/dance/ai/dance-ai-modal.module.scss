@@ -128,6 +128,7 @@ $ai-modal-border-width: 8px;
       display: flex;
       justify-content: space-around;
       animation: appear 0.3s;
+      margin-top: 3px;
 
       span {
         button {
@@ -246,7 +247,7 @@ $ai-modal-border-width: 8px;
       display: flex;
       align-items: center;
       margin-top: 10px;
-      transition: left 1.5s, box-shadow 0.3s;
+      transition: left 1.5s, box-shadow 0.05s;
       left: 50%;
 
       &Yes {
@@ -304,7 +305,7 @@ $ai-modal-border-width: 8px;
       left: 630px;
       font-size: 100px;
       color: $yes-color;
-      animation: appear 0.5s;
+      animation: appear 0.05s;
     }
 
     .explanationArea {
