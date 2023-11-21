@@ -44,9 +44,5 @@ Feature: Using the YourSchool census page
     Then I wait until element ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" is visible
     Then I press ".VirtualizedSelectOption:contains('Albert Einstein Academy Elementary - Santa Clarita, CA 91355')" using jQuery
 
-    # Click the "Take the survey for this school" button
-    Then I wait until element "#census-info-window" is visible
-    And I press the first "#census-info-window div.button-text" element
-
     # Verify that the correct school id is set in the census form
     Then element "#form input[name='nces_school_s']" has value "60000113717"

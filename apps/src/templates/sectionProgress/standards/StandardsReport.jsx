@@ -157,7 +157,7 @@ class StandardsReport extends Component {
                   markdown={i18n.standardsGetInvolvedDetailsForPrint({
                     adminLink: pegasus('/administrators'),
                     parentLink: pegasus('/help'),
-                    teacherLink: '/courses',
+                    teacherLink: pegasus('/teach'),
                   })}
                 />
               </div>

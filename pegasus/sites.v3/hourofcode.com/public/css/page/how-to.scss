@@ -1,4 +1,4 @@
-@import 'breakpoints', 'action-blocks';
+@import 'breakpoints', 'action-blocks', 'video-responsive';
 
 $border-radius: 4px;
 
@@ -41,12 +41,12 @@ section.banner {
   padding: 0;
 
   .wrapper {
-    padding: 2rem 0px 12rem;
+    padding: 2rem 0px 11rem;
   }
 
   h1 {
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--neutral_white);
   }
 
@@ -329,18 +329,22 @@ section.steps {
       border-radius: 100%;
       font-size: 1rem;
       text-align: center;
-      line-height: 2;
+      line-height: 2.1;
       font-family: var(--main-font);
       font-weight: var(--semi-bold-font-weight);
     }
 
     h3 {
-      margin-top: 0;
+      margin-top: 2px;
     }
 
     img {
       border-radius: $border-radius;
       width: 100%;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -367,6 +371,10 @@ section.faq {
     summary {
       font-size: 1.15rem;
     }
+  }
+
+  ul li {
+    margin-bottom: 1rem;
   }
 
   @media screen and (max-width: $width-sm) {

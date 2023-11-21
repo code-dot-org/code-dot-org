@@ -823,6 +823,7 @@ th-TH:
   header_help_us: ช่วยเรา
   header_incubator: ตู้บ่มเพาะเชื้อ
   header_learn: เรียนรู้
+  header_legal_cookie_notice: ประกาศเกี่ยวกับคุกกี้
   header_legal_privacy: นโยบายความเป็นส่วนตัว
   header_legal_tos: เงื่อนไขการให้บริการ
   header_my_dashboard: แดชบอร์ดของฉัน
@@ -1720,15 +1721,6 @@ th-TH:
     เพื่อนำเนื้อหาเบื้องต้นเกี่ยวกับวิทยาการคอมพิวเตอร์ไปยังนักเรียนหลายล้านคนในกว่า
     180 ประเทศ โปรดเข้ามามีส่วนร่วมในช่วยเวลาสัปดาห์แห่งการศึกษาวิทยาการคอมพิวเตอร์
     วันที่ 7-13 ธันวาคม
-  volunteer_engineer_submission_intro_links: ต้องการหาอาสาสมัครหรือไม่ ลองค้นหาอาสาสมัครใกล้เคียงด้วย<a
-    href="%{volunteer_local}">แผนที่อาสาสมัคร</a>ของเรา
-  volunteer_engineer_submission_intro_recruit: 'ครูหลายคนชอบที่จะมีสักคน<span style="font-family:
-    ''Gotham 7r'', sans-serif;">ที่หลงไหลเกี่ยวกับการศึกษาวิทยาการคอมพิวเตอร์</span>
-    และสามารถช่วยครูได้ในชั้นเรียน หรือใครสักคนที่สามารถจะ<span style="font-family:
-    ''Gotham 7r'', sans-serif;">สร้างแรงบันดาลใจ</span>ให้กับนักเรียนของเขาด้วยการพูดเกี่ยวกับความเป็นไปได้ต่างๆ
-    เกี่ยวกับวิทยาการคอมพิวเตอร์ (ซึ่งอาจจะทำได้ผ่านวีดีโอแชท)'
-  volunteer_engineer_submission_intro_signup: กรุณากรอกข้อมูลต่อไปนี้ หากคุณคือนักเรียนวิทยาการคอมพิวเตอร์หรือบุคลากรเกี่ยวกับซอฟต์แวร์
-    ข้อมูลที่กำหนดด้วยเครื่องหมาย <span class="form-required-field">*</span> เป็นข้อมูลที่จำเป็น
   volunteer_engineer_submission_location_flexibility_curriculum: ยินดีที่จะช่วยสนับสนุนโครงการ
     open-source
   volunteer_engineer_submission_location_flexibility_onsite: ปฏิบัติที่โรงเรียน

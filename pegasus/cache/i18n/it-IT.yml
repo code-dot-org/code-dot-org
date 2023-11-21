@@ -1270,6 +1270,7 @@ it-IT:
   header_incubator: Incubatrice
   header_learn: Impara
   header_legal: Privacy & Legale
+  header_legal_cookie_notice: Informativa sui cookie
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_my_dashboard: Controllo
@@ -1767,8 +1768,8 @@ it-IT:
   hourofcode_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   how_ai_works: Come funziona l'IA
   how_ai_works_tile_description: Scopri come funziona l'IA e perché è importante con
-    questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e un cast diversificato
-    di esperti.
+    questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e con un eterogeneo
+    gruppo di esperti.
   how_to_teach_hoc: Come insegnare un ora di codice
   i_agree: Accetto
   i_am_a: Io sono un
@@ -2797,27 +2798,14 @@ it-IT:
     globale per far provare un'ora di introduzione all'informatica, che raggiunge
     decine di milioni di studenti in più di 180 nazioni. Partecipa durante la Settimana
     di Educazione all'Informatica, dal 7-13 Dicembre 2015.
-  volunteer_engineer_submission_intro_guide: Scopri di più sul nostro <a href="%{volunteer_guide}">programma
-    volontari</a>.
   volunteer_engineer_submission_intro_guide_markdown: Scopri di più sul nostro [programma
     volontario qui](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Sei un insegnante in cerca di volontari?
-    Trova un volontario locale sulla nostra <a href="%{volunteer_local}">Mappa Volontari</a>
-    (solo per gli USA).
   volunteer_engineer_submission_intro_links_markdown: Sei un insegnante alla ricerca
     di volontari? Trova un volontario locale sulla nostra [mappa dei volontari](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Gli insegnanti cercano <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> appassionati di formazione informatica</span> che
-    possano aiutare in classe, o qualcuno che possa <span style="font-family: ''Gotham
-    7r'', sans-serif;"> ispirare</span> i loro studenti parlando delle grandi possibilità
-    dell''informatica (che potrebbe essere fatto con una chat video).'
   volunteer_engineer_submission_intro_recruit_markdown: Gli insegnanti adorerebbero
     avere qualcuno di **appassionato all'istruzione informatica** che possa aiutare
     in classe, o qualcuno che possa **ispirare** i loro studenti parlando delle grandi
     possibilità con l'informatica (cosa che si potrebbe fare tramite una videochiamata).
-  volunteer_engineer_submission_intro_signup: Compila i campi sottostanti se sei uno
-    studente di informatica o uno sviluppatore professionista. I campi contrassegnati
-    con un <span class="form-required-field">*</span> sono obbligatori.
   volunteer_engineer_submission_intro_signup_markdown: Sei pregato di inserire le
     seguenti informazioni se sei uno studente di informatica o professionista di software.
     Devi avere almeno 18 anni per registrarti come volontario. Nota che tutti i campi

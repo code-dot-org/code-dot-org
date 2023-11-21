@@ -2,103 +2,91 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/apps/animations/sync_out'
 
 describe I18n::Resources::Apps::Animations::SyncOut do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18n::Resources::Apps::Animations::SyncOut}
+  let(:described_instance) {described_class.new}
+
+  let(:spritelab_manifest_builder) {stub}
+
+  let(:crowdin_locale) {'expected_crowdin_locale'}
+  let(:i18n_locale) {'uk-UA'}
+  let(:js_locale) {'uk_ua'}
+  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
   before do
-    STDOUT.stubs(:print)
+    ManifestBuilder.any_instance.stubs(:initial_animation_metadata)
+    ManifestBuilder.any_instance.stubs(:upload_localized_manifest)
+    ManifestBuilder.stubs(:new).with({spritelab: true, upload_to_s3: true, quiet: true}).returns(spritelab_manifest_builder)
   end
 
-  describe '.perform' do
-    it 'call #execute' do
-      I18n::Resources::Apps::Animations::SyncOut.any_instance.expects(:execute).once
+  it 'inherits from I18n::Utils::SyncOutBase' do
+    assert_equal I18n::Utils::SyncOutBase, described_class.superclass
+  end
 
-      I18n::Resources::Apps::Animations::SyncOut.perform
+  describe '#process' do
+    let(:process_language) {described_instance.process(language)}
+
+    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'animations/spritelab_animation_library.json')}
+    let(:crowdin_file_data) {{'i18n_key' => 'i18n_val'}}
+    let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'animations/spritelab_animation_library.json')}
+
+    let(:is_source_lang) {false}
+    let(:i18n_data) {crowdin_file_data}
+
+    let(:expect_localized_manifest_uploading) do
+      spritelab_manifest_builder.expects(:upload_localized_manifest).with(js_locale, i18n_data)
     end
-  end
-
-  describe '#execute' do
-    let(:described_instance) {I18n::Resources::Apps::Animations::SyncOut.new}
-
-    let(:crowdin_locale) {'crowdin_locale'}
-    let(:i18n_locale) {'i18n-LOCALE'}
-
-    let(:spritelab_file_content) {'expected_spritelab_file_content'}
-    let(:crowdin_spritelab_file_path) {CDO.dir(File.join('i18n/locales', crowdin_locale, 'animations/spritelab_animation_library.json'))}
-    let(:i18n_spritelab_file_path) {CDO.dir(File.join('i18n/locales', i18n_locale, 'animations/spritelab_animation_library.json'))}
-
-    let(:spritelab_manifest_builder) do
-      manifest_builder_stub = stub
-      ManifestBuilder.stubs(:new).with({spritelab: true, upload_to_s3: true, quiet: true}).returns(manifest_builder_stub)
-      manifest_builder_stub
+    let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
+      I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
 
     before do
-      PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
+      I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_lang)
+
+      FileUtils.mkdir_p File.dirname(crowdin_file_path)
+      File.write crowdin_file_path, JSON.dump(crowdin_file_data)
     end
 
-    context 'when Crowdin locale file exists' do
+    it 'uploads localized manifest and then moves the Crowdin file to the i18n locale dir' do
+      execution_sequence = sequence('execution')
+
+      spritelab_manifest_builder.expects(:initial_animation_metadata).in_sequence(execution_sequence)
+      expect_localized_manifest_uploading.in_sequence(execution_sequence)
+      expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+
+      process_language
+    end
+
+    context 'when the Crowdin locale dir does not exists' do
       before do
-        FileUtils.mkdir_p(File.dirname(crowdin_spritelab_file_path))
-        File.write(crowdin_spritelab_file_path, JSON.dump(spritelab_file_content))
+        FileUtils.rm(crowdin_file_path)
       end
 
-      context 'if the file is not en-US' do
-        let(:crowdin_locale) {'Not English'}
-        let(:i18n_locale) {'not-EN'}
-
-        it 'sync-out the file' do
-          spritelab_manifest_builder.expects(:initial_animation_metadata).once
-          I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
-          I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).once.returns('expected_js_locale')
-          spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).once
-
-          assert File.exist?(crowdin_spritelab_file_path)
-          refute File.exist?(i18n_spritelab_file_path)
-
-          described_instance.execute
-
-          refute File.exist?(crowdin_spritelab_file_path)
-          assert File.exist?(i18n_spritelab_file_path)
-        end
+      it 'does not upload localized manifest' do
+        expect_localized_manifest_uploading.never
+        process_language
       end
 
-      context 'if the file is en-US' do
-        let(:crowdin_locale) {'English'}
-        let(:i18n_locale) {'en-US'}
-
-        it 'does not sync-out the file' do
-          spritelab_manifest_builder.expects(:initial_animation_metadata).once
-          I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
-          I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
-          spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
-
-          assert File.exist?(crowdin_spritelab_file_path)
-          refute File.exist?(i18n_spritelab_file_path)
-
-          described_instance.execute
-
-          refute File.exist?(crowdin_spritelab_file_path)
-          assert File.exist?(i18n_spritelab_file_path)
-        end
+      it 'does not move the Crowdin file to the i18n locale dir' do
+        expect_crowdin_file_to_i18n_locale_dir_moving.never
+        process_language
       end
     end
 
-    context 'when Crowdin locale file does not exist' do
-      it 'skips the locale sync-out' do
-        spritelab_manifest_builder.expects(:initial_animation_metadata).never
-        I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).never
-        I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
-        spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
+    context 'when the language is the source language' do
+      let(:is_source_lang) {true}
 
-        refute File.exist?(crowdin_spritelab_file_path)
-        refute File.exist?(i18n_spritelab_file_path)
+      it 'does not upload localized manifest' do
+        expect_localized_manifest_uploading.never
+        process_language
+      end
 
-        described_instance.execute
-
-        refute File.exist?(crowdin_spritelab_file_path)
-        refute File.exist?(i18n_spritelab_file_path)
+      it 'moves the Crowdin file to the i18n locale dir' do
+        expect_crowdin_file_to_i18n_locale_dir_moving.once
+        process_language
       end
     end
   end

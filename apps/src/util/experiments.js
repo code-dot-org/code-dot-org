@@ -45,7 +45,9 @@ experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
 experiments.AI_RUBRICS = 'ai-rubrics';
-experiments.HOC_TUTORIAL_DIALOG = 'hocTutorialDialog';
+experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
+// Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section
+experiments.AI_TUTOR_ACCESS = 'ai-tutor';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

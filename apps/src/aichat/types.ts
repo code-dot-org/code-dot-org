@@ -15,6 +15,7 @@ export type ChatCompletionMessage = {
   role: Role;
   chatMessageText: string;
   status: Status;
+  timestamp?: string;
 };
 
 export enum Role {
@@ -24,9 +25,10 @@ export enum Role {
 }
 
 export enum Status {
+  ERROR = 'error',
+  INAPPROPRIATE = 'inappropriate',
   OK = 'ok',
   PERSONAL = 'personal',
-  INAPPROPRIATE = 'inappropriate',
   UNKNOWN = 'unknown',
 }
 

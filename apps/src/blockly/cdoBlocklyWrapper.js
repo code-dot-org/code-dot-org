@@ -5,6 +5,7 @@ import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
 import {setHasIncompatibleSources} from '../redux/blockly';
+import * as blockUtils from '../block_utils';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -331,6 +332,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     partitionBlocksByType() {
       // Google Blockly only. Used to load/render certain block types before others.
+    },
+    appendSharedFunctions(blocksXml, functionsXml) {
+      return blockUtils.appendNewFunctions(blocksXml, functionsXml);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;

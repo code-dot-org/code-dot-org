@@ -1222,6 +1222,7 @@ ms-MY:
   header_incubator: Inkubator
   header_learn: Belajar
   header_legal: Privasi & Undang-undang
+  header_legal_cookie_notice: Notis Kuki
   header_legal_privacy: Dasar Privasi
   header_legal_tos: Terma Perkhidmatan
   header_my_dashboard: Papan Pemuka Saya
@@ -2721,33 +2722,16 @@ ms-MY:
     global untuk mencuba pengenalan selama satu jam kepada sains komputer, menjangkau
     berpuluh juta pelajar di 180+ negara. Sila libatkan diri semasa Minggu Pendidikan
     Sains Komputer, 7-13 Disember.
-  volunteer_engineer_submission_intro_guide: Ketahui lebih lanjut tentang <a href="%{volunteer_guide}">program
-    sukarelawan di sini</a>.
   volunteer_engineer_submission_intro_guide_markdown: Ketahui lebih lanjut tentang
     [program sukarela di sini](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Adakah anda seorang guru yang sedang
-    mencari sukarelawan? Cari sukarelawan tempatan pada <a href="%{volunteer_local}">peta
-    sukarelawan</a> kami.
   volunteer_engineer_submission_intro_links_markdown: Adakah anda seorang guru yang
     sedang mencari sukarelawan? Cari sukarelawan tempatan pada [peta sukarelawan](%{volunteer_local}
     kami).
-  volunteer_engineer_submission_intro_recruit: 'Guru ingin mempunyai seseorang <span
-    style="font-family: ''Gotham 7r'', sans-serif;">ghairah tentang pendidikan sains
-    komputer</span> yang boleh membantu di dalam bilik darjah, atau untuk seseorang
-    yang boleh <span style ="font-family: ''Gotham 7r'', sans-serif;">inspirasi</span>
-    pelajar mereka dengan bercakap tentang keluasan kemungkinan dengan sains komputer
-    (yang boleh dilakukan melalui sembang video).'
   volunteer_engineer_submission_intro_recruit_markdown: Guru ingin mempunyai seseorang
     **bersemangat tentang pendidikan sains komputer** yang boleh membantu di dalam
     bilik darjah, atau seseorang yang boleh **memberi inspirasi** kepada pelajar mereka
     dengan bercakap tentang luasnya kemungkinan dengan sains komputer (yang boleh
     dilakukan melalui sembang video).
-  volunteer_engineer_submission_intro_signup: Sila masukkan maklumat berikut jika
-    anda seorang pelajar sains komputer atau profesional perisian. Anda mesti berumur
-    sekurang-kurangnya 18 tahun untuk mendaftar sebagai sukarelawan. Harap maklum
-    bahawa semua medan yang anda isi dalam bahagian ini akan tersedia secara terbuka
-    kepada sesiapa sahaja yang melihat <a href="/volunteer/local">peta sukarela</a>.
-    Medan yang ditandakan dengan <span class="form-required-field">*</span> diperlukan.
   volunteer_engineer_submission_intro_signup_markdown: Sila masukkan maklumat berikut
     jika anda seorang pelajar sains komputer atau profesional perisian. Anda mesti
     berumur sekurang-kurangnya 18 tahun untuk mendaftar sebagai sukarelawan. Ambil

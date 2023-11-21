@@ -40,6 +40,12 @@ describe('LearningGoal', () => {
         aiConfidence={50}
         aiUnderstanding={3}
         studentLevelInfo={studentLevelInfo}
+        aiEvalInfo={{
+          id: 2,
+          learning_goal_id: 2,
+          understanding: 2,
+          ai_confidence: 2,
+        }}
       />
     );
     expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
@@ -276,6 +282,24 @@ describe('LearningGoal', () => {
     );
     expect(wrapper.find('BodyThreeText').props().children).to.equal(
       'Limited Evidence'
+    );
+  });
+
+  it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [],
+        }}
+        submittedEvaluation={{
+          feedback: 'test feedback',
+          understanding: RubricUnderstandingLevels.NONE,
+        }}
+      />
+    );
+    expect(wrapper.find('BodyThreeText').props().children).to.equal(
+      'No Evidence'
     );
   });
 
