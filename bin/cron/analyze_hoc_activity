@@ -87,7 +87,6 @@ def main
   # Compute the number of hoc events (the grand total and broken down by company and country).
   hoc_country_totals = Hash.new(0)
   hoc_company_totals = Hash.new(0)
-
   unique_hoc_events = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:name, :email, :processed_data, :data)
   total_hoc_count = PEGASUS_DB_READER[:forms].where(kind: "HocSignup#{hoc_year}").group(:email, :name).select(:email, :name).count
 
