@@ -74,7 +74,7 @@ Before running dashboard tests for the first time, run these commands to seed th
 
 1. `RAILS_ENV=test bundle exec rake assets:precompile`
 2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
-3. `cd ../pegasus && RAILS_ENV=test rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
+3. `cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
 To run all dashboard tests, which takes about 15 mintues:
 
