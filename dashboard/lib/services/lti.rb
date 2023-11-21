@@ -13,25 +13,25 @@ class Services::Lti
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
-      user.name = get_name(id_token, teacher_keys)
+      user.name = get_claim_from_list(id_token, teacher_keys)
     else
-      user.name = get_name(id_token, student_keys)
-      user.family_name = get_value(id_token, :family_name)
+      user.name = get_claim_from_list(id_token, student_keys)
+      user.family_name = get_claim(id_token, :family_name)
     end
     ao = AuthenticationOption.new(
       authentication_id: Policies::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
-      email: get_value(id_token, :email),
+      email: get_claim(id_token, :email),
     )
     user.authentication_options = [ao]
     user
   end
 
-  def self.get_name(id_token, keys_array)
-    keys_array.filter_map {|key| get_value(id_token, key)}.compact.first
+  def self.get_claim_from_list(id_token, keys_array)
+    keys_array.filter_map {|key| get_claim(id_token, key)}.compact.first
   end
 
-  def self.get_value(id_token, key)
+  def self.get_claim(id_token, key)
     id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS, key)
   end
 end
