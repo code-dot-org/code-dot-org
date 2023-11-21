@@ -21,25 +21,20 @@ export default class SpecialAnnouncement extends Component {
     const {isEnglish, isTeacher} = this.props;
     const headingText = isTeacher
       ? i18n.teacherAnnouncementSpecialWinter2021Heading()
-      : i18n.studentAnnouncementHoc2023Heading();
+      : i18n.announcementHoc2023DanceAIHeading();
     const descriptionText = isTeacher
       ? i18n.teacherAnnouncementSpecialWinter2021Body()
-      : i18n.studentAnnouncementHoc2023Body();
+      : i18n.announcementHoc2023DanceAIBody();
     const buttonId = isTeacher
       ? 'teacher_homepage_announcement_special_winter2021'
       : 'student_homepage_announcement_special2020';
-    const url =
-      isTeacher && isEnglish ? pegasus('/hourofcode') : pegasus('/hourofcode');
+    const url = isTeacher && isEnglish ? pegasus('/dance') : pegasus('/dance');
     const buttonText =
       isTeacher && isEnglish ? i18n.joinUs() : i18n.learnMore();
     const imageUrl =
       isTeacher && isEnglish
-        ? pegasus(
-            '/shared/images/fill-540x300/announcement/announcement_hoc2020_ai.png'
-          )
-        : pegasus(
-            '/shared/images/fill-540x300/social-media/hoc2023_social.png'
-          );
+        ? pegasus('/images/dance-hoc/dance-party-activity-ai-edition.png')
+        : pegasus('/images/dance-hoc/dance-party-activity-ai-edition.png');
 
     return (
       <TwoColumnActionBlock
