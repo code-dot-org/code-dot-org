@@ -52,12 +52,12 @@ module I18n
           end
 
           def prepare
-            I18nScriptUtils.write_file(ORIGIN_I18N_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
+            I18nScriptUtils.write_yaml_file(ORIGIN_I18N_FILE_PATH, i18n_data)
             I18nScriptUtils.copy_file(ORIGIN_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
           end
 
           def redact
-            RedactRestoreUtils.backup_source_file(I18N_SOURCE_FILE_PATH)
+            I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
             RedactRestoreUtils.redact(I18N_SOURCE_FILE_PATH, I18N_SOURCE_FILE_PATH, REDACT_PLUGINS, REDACT_FORMAT)
           end
         end
