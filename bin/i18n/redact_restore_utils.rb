@@ -7,8 +7,6 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  # RedactRestoreUtils manages the redaction and restoration of i18n files.
-
   # For a given file, redact_file returns the redacted content of the file. The default file format is Markdown.
   def self.redact_file(source_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
