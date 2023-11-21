@@ -138,6 +138,8 @@ module Pd
       CIRCUIT_PLAYGROUND = 'Teaching Creating Apps with Devices (Circuit Playground)'.freeze,
       MICRO_BIT = 'Teaching Creating Apps with Devices (micro:bit)'.freeze,
       ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
+      PROBLEM_SOLVING_AND_COMPUTING = 'Teaching Problem Solving and Computing'.freeze,
+      INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [
