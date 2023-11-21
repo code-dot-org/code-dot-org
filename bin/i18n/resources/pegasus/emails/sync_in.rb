@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../utils/pegasus_markdown'
 require_relative '../emails'
 
