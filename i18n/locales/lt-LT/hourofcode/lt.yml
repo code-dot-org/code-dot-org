@@ -228,6 +228,7 @@ lt:
   for_students_teacher_led_learning: 'Mokiniams: mokytojo vadovaujamas mokymasis'
   for_students_teacher_led_lessons: 'Mokiniams: Mokytojų vedamos pamokos'
   professional_development: Profesinis tobulėjimas
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -326,6 +327,8 @@ lt:
   call_to_action_try_hoc_ai_activities: Išbandykite “Hour of Code AI” veiklą
   call_to_action_explore_activities: Naršykite veiklą
   call_to_action_explore_ai: Naršykite AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Naršyti įrankis
   call_to_action_explore_unit: Naršyti vienetą
   call_to_action_explore_curriculum: Naršyti mokymo programą
   call_to_action_explore_curricula: Naršyti mokymo programas
@@ -709,6 +712,7 @@ lt:
   module_label_accessibility_features_full: 'Pritaikymo neįgaliesiems funkcijos:'
   module_label_educator_tool: Pedagogo įrankis
   module_label_educator_course: Pedagogo kursas
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Studentų įrankis
   module_label_student_product: Produktas
   module_label_student_content_resources: Turinys ir ištekliai
@@ -717,6 +721,7 @@ lt:
   module_label_available_now: Prieinama dabar
   module_label_video_series: Vaizdo įrašų serija
   module_label_self_paced: Savarankiškas modulis
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3564,19 +3569,14 @@ lt:
   tutorial_csfirstdialogue_name: Dialogas
   tutorial_codemonkeybeaver_name: Bebrų pasiekimas
   tutorial_codestersdistance_name: 'Kodestrai: Socialinio atsiribojimo sprites'
-  tutorial_itchspace_name: 'ItchCode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX magija
   tutorial_vidcodemagices_name: SFX magija
   tutorial_codespeakmeal_name: Kodas sveiko valgio programa
-  tutorial_itchfish_name: 'ItchCode: Žuvis nulio žaidimas'
   tutorial_bsdwebsite_name: Mano mėgstamiausia svetainė
   tutorial_codespeaktime_name: Kodas į laiko kapsulę įbrėžimams
-  tutorial_itchwebcam_name: 'ItchCode: Kameros Papildyta Realybė'
-  tutorial_itchball_name: 'ItchCode: šoktelėti kamuolys'
   tutorial_ttrace_name: Lenktynių būklė
   tutorial_plethora_name: 'Plethora: priežastis ir poveikis'
   tutorial_educodesecret_name: Atskleiskite agentūros paslaptis!
-  tutorial_itchshapes_name: "“ItchCode”: formos ir kampai"
   tutorial_codeguppytext_name: Įvadas į teksto kodavimą
   tutorial_vidcodeplastiche_name: Plastiko tarša PSA
   tutorial_educativechatbot_name: Sukurkite savo pokalbių robotą “Python”
@@ -3600,7 +3600,6 @@ lt:
   tutorial_codecapture_name: Sužinokite programavimą naudodami “JavaScript” “Jiffy”
   tutorial_codehslitter_name: Bendrijoje be vadų kodavimas
   tutorial_bsdocean_name: Gyvenimas žemiau vandens
-  tutorial_itchplatformer_name: "“ItchCode”: “Scratch 3.0” platformingo pamoka"
   tutorial_codejika_name: 'CodeJika: 5 minučių svetainė'
   tutorial_gamefrootclicker_name: Sužinokite kintamuosius. Kodas savo Clicker žaidimas.
   tutorial_rmagicequity_name: Nuosavas kapitalas ir lygybė
@@ -7402,20 +7401,12 @@ lt:
   tutorial_codestersdistance_longdescription: Sužinokite “Python” kodavimo pagrindus,
     tada sukurkite programą, kuri apskaičiuoja atstumą tarp dviejų sprites, kad įsitikintumėte,
     jog jie yra socialinis atsiribojimas arba reikia dėvėti kaukę.
-  tutorial_itchspace_longdescription: Ši pamoka padės sukurti klasikinį “Space Invaders”
-    žaidimą, naudojant “Scratch MIT” programavimo kalbą. Prenumeruokite “RokCoder”
-    “YouTube” kanalą, kad galėtumėte gauti daugiau “Scratch” vaizdo įrašų ir vadovėlių!
-    Kiekvienas vaizdo įrašas yra įkandimo dydžio pamoka (maždaug dešimties minučių
-    ilgio), kurioje yra jo konkretūs galutiniai tikslai. Galutinis rezultatas yra
-    aukštos kokybės “Scratch” arkadinis žaidimas.
   tutorial_vidcodemagic_longdescription: Padaryti mirksi rodomi atsitiktinai aplink
     ekraną naudojant kilpą.
   tutorial_vidcodemagices_longdescription: Padaryti mirksi rodomi atsitiktinai aplink
     ekraną naudojant kilpą.
   tutorial_codespeakmeal_longdescription: Sužinokite, kaip sukoduoti programą, kuri
     padeda vartotojams priimti sveiko maisto sprendimus.
-  tutorial_itchfish_longdescription: "“Scratch 3.0” pamoka, skirta žaidimui su rykliu
-    vejantis ir valgant žuvį, sutrinka, kai netyčia suvalgomas naras."
   tutorial_bsdwebsite_longdescription: 'Šis kursas leidžia studentams naudoti kodą
     kaip būdą pasidalinti tuo, kas jiems svarbu ar įdomu. Mokydamiesi HTML, CSS ir
     JavaScript, jie gali sekti pamoką arba kurti unikalius projektus. Jie vadovaujasi
@@ -7424,10 +7415,6 @@ lt:
     domina ar mėgsta daryti, tinklalapį. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Sužinokite, kaip sukoduoti skaitmeninę laiko
     kapsulę, kad galėtumėte įrašyti ir apmąstyti savo gyvenimą dabar.
-  tutorial_itchwebcam_longdescription: Sužinokite apie papildytą realybę ir sukurkite
-    savo papildytos realybės virtualią erdvę.
-  tutorial_itchball_longdescription: Gauti kamuolys Bounce aplink ekraną. Sužinokite
-    apie kilpas ir sąlygas kilpose.
   tutorial_ttrace_longdescription: Skambindami funkcijas ir kurdami klases, žaidėjai
     programuoja savo bolidą, kad jis būtų greitas, apsukrus ir galingas; lenktynių
     metu jie gali nulaužti savo konkurentų automobilius, kad galėtų nulaužti savo
@@ -7439,9 +7426,6 @@ lt:
     Smitu, kai pasinersite giliau į mokymąsi, jei pareiškimai, stygos, už-in kilpos.
     Padėkite agentui Smithui surasti kaltininkus ir sukonfigūruoti agentūros operacinę
     sistemą naujiems vartotojams naudodami “Python”.
-  tutorial_itchshapes_longdescription: Sužinokite, kaip piešti figūras “Scratch”.
-    Jūs taip pat sužinosite, kaip apskaičiuoti, kiek jums reikia pasukti bet kokios
-    formos.
   tutorial_codeguppytext_longdescription: Sužinokite teksto kodavimo pagrindus, sukurdami
     savo pirmąją programą internetiniame kodavimo redaktoriuje.
   tutorial_vidcodeplastiche_longdescription: Plastiko užpildymo mūsų vandenynus problema
@@ -7519,8 +7503,6 @@ lt:
   tutorial_bsdocean_longdescription: Gyvenimas žemiau Vanduo nušviečia aktualią problemą,
     su kuria susiduriame šiais laikais - mūsų aplinką. Šiame projekte pagrindinis
     dėmesys skiriamas tam, kad galėtumėte sukoduoti savo tinklalapį mūsų vandenų apsaugai.
-  tutorial_itchplatformer_longdescription: Lengva sekti pamoka, kaip sukurti paprastą
-    platformingo žaidimą naudojant “Scratch”.
   tutorial_codejika_longdescription: Puikus įvadas į kodavimą naudojant HTML ir CSS.
     Kodas keletą eilučių, pamatyti nedelsiant produkcija be getting pasivijo Hows
     ir Whys sukurti gražus nukreipimo puslapį su dviejų spalvų gradiento fone, pavadinimas
@@ -8322,19 +8304,14 @@ lt:
   tutorial_csfirstdialogue_string_detail_grades: 2-8 klasės
   tutorial_codemonkeybeaver_string_detail_grades: Išankstinis skaitytojas - 5 klasė
   tutorial_codestersdistance_string_detail_grades: 6+ klasės
-  tutorial_itchspace_string_detail_grades: 6+ klasės
   tutorial_vidcodemagic_string_detail_grades: 2+ klasės
   tutorial_vidcodemagices_string_detail_grades: 2+ klasės
   tutorial_codespeakmeal_string_detail_grades: 6+ klasės
-  tutorial_itchfish_string_detail_grades: 2-8 klasės
   tutorial_bsdwebsite_string_detail_grades: 6+ klasės
   tutorial_codespeaktime_string_detail_grades: 2-8 klasės
-  tutorial_itchwebcam_string_detail_grades: 6+ klasės
-  tutorial_itchball_string_detail_grades: 2-8 klasės
   tutorial_ttrace_string_detail_grades: 6–8 klasės (11–13 metų)
   tutorial_plethora_string_detail_grades: 2+ klasės
   tutorial_educodesecret_string_detail_grades: 6+ klasės
-  tutorial_itchshapes_string_detail_grades: 6+ klasės
   tutorial_codeguppytext_string_detail_grades: 6–8 klasės (11–13 metų)
   tutorial_vidcodeplastiche_string_detail_grades: 6+ klasės
   tutorial_educativechatbot_string_detail_grades: 9+ klasės
@@ -8356,7 +8333,6 @@ lt:
   tutorial_codecapture_string_detail_grades: 6+ klasės
   tutorial_codehslitter_string_detail_grades: 6–8 klasės (11–13 metų)
   tutorial_bsdocean_string_detail_grades: 6–8 klasės (11–13 metų)
-  tutorial_itchplatformer_string_detail_grades: 6+ klasės
   tutorial_codejika_string_detail_grades: 6+ klasės
   tutorial_gamefrootclicker_string_detail_grades: 6–8 klasės (11–13 metų)
   tutorial_rmagicequity_string_detail_grades: 6–8 klasės (11–13 metų)
@@ -9236,23 +9212,17 @@ lt:
     planšetinis kompiuteris, “iPad”
   tutorial_codestersdistance_string_platforms: Visos šiuolaikinės naršyklės, ekrano
     skaitytuvas
-  tutorial_itchspace_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_vidcodemagic_string_platforms: Visos šiuolaikinės naršyklės, “Android”
     planšetinis kompiuteris, “iPad”, ekrano skaitytuvas
   tutorial_vidcodemagices_string_platforms: Visos šiuolaikinės naršyklės, “Android”
     planšetinis kompiuteris, “iPad”, ekrano skaitytuvas
   tutorial_codespeakmeal_string_platforms: "“Chrome”, “Firefox"
-  tutorial_itchfish_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_bsdwebsite_string_platforms: "„Chrome“"
   tutorial_codespeaktime_string_platforms: "“Chrome”, “Firefox"
-  tutorial_itchwebcam_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
-    kompiuteris, “iPad”
-  tutorial_itchball_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_ttrace_string_platforms: "„Chrome“"
   tutorial_plethora_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
     kompiuteris, “iPad”
   tutorial_educodesecret_string_platforms: Visos šiuolaikinės naršyklės
-  tutorial_itchshapes_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_codeguppytext_string_platforms: Visos šiuolaikinės naršyklės, “Android”
     planšetinis kompiuteris, “iPad”
   tutorial_vidcodeplastiche_string_platforms: Visos šiuolaikinės naršyklės, “iPad”
@@ -9282,7 +9252,6 @@ lt:
   tutorial_codehslitter_string_platforms: Visos šiuolaikinės naršyklės, “Android”
     planšetinis kompiuteris, “iPad”, “Windows” telefonas, “Android” telefonas, “iPhone”
   tutorial_bsdocean_string_platforms: "„Chrome“"
-  tutorial_itchplatformer_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_codejika_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
     kompiuteris, “iPad”, “Windows” telefonas, “Android” telefonas, “iPhone”
   tutorial_gamefrootclicker_string_platforms: Visos šiuolaikinės naršyklės, “iPad”
@@ -9945,19 +9914,14 @@ lt:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9979,7 +9943,6 @@ lt:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10668,20 +10631,15 @@ lt:
   tutorial_csfirstdialogue_string_detail_programming_languages: Blokai, įbrėžimai
   tutorial_codemonkeybeaver_string_detail_programming_languages: Blokai
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Blokai
   tutorial_vidcodemagic_string_detail_programming_languages: "„JavaScript“"
   tutorial_vidcodemagices_string_detail_programming_languages: "„JavaScript“"
   tutorial_codespeakmeal_string_detail_programming_languages: "„JavaScript“"
-  tutorial_itchfish_string_detail_programming_languages: Blokai
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Blokai
-  tutorial_itchwebcam_string_detail_programming_languages: Blokai
-  tutorial_itchball_string_detail_programming_languages: Blokai
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Nepriklausoma nuo kalbos
     (gali būti mokoma keliomis kalbomis)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Blokai
   tutorial_codeguppytext_string_detail_programming_languages: "„JavaScript“"
   tutorial_vidcodeplastiche_string_detail_programming_languages: "„JavaScript“"
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10706,7 +10664,6 @@ lt:
   tutorial_codecapture_string_detail_programming_languages: "„JavaScript“"
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Blokai
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Blokai
   tutorial_rmagicequity_string_detail_programming_languages: Blokai, JavaScript
@@ -11684,10 +11641,7 @@ lt:
   tutorial_kodableshapes_name: Padaryti figūras su kodu
   tutorial_nasabinary_name: 'Dvejetainis kodas: kaip kalbėtis su erdvėlaiviu'
   tutorial_3dmaker_name: 3D gamintojas
-  tutorial_itchstart_name: "“ItchCode”: “Scratch 5” bloko starteris"
   tutorial_hopsub_name: Sukurkite metro banglentininkus su draugu
-  tutorial_itchmundos_name: Los mundos en mi mundo_e2
-  tutorial_itchtenacity_name: Atkaklumas
   tutorial_kcjskiing_name: 'Sportas + kodas: Slidinėjimas'
   tutorial_groksecurity_name: 'Kibernetinis saugumas: gynyba nuo tamsių skrybėlių'
   tutorial_creaticode_name: 3D programavimas su įbrėžimų blokais
@@ -11829,15 +11783,8 @@ lt:
     kodą ant vardo žymos, apyrankės, kaiščio ar net garso.
   tutorial_3dmaker_longdescription: Padarykite savo tikrai kietas, pasukamas, 3D objektus
     greitai ir lengvai.
-  tutorial_itchstart_longdescription: Ši pamoka yra geras įėjimo taškas 2 ar 3 klasės
-    vaikams, kurie tik pirmą kartą išbando “Scratch”. Jie pradės nuo 5 blokų rinkinio,
-    kurį jiems reikia sudėti, kad jų personažas atliktų tam tikrus veiksmus.
   tutorial_hopsub_longdescription: Sužinokite, kaip susieti programą su draugu ar
     klasioku ir sukurti savo metro banglentininką su Hopscotch simboliais!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, yra programinė įranga. Agregarán
-    objetos y fondos, usarán bloques de eventos y apariencia para dar vida a su programa.
-  tutorial_itchtenacity_longdescription: En este proyecto programan en Scratch el
-    simulador de un robot que limpia las aguas marinas.
   tutorial_kcjskiing_longdescription: 'Tai viskas įdomus ir žaidimai, kol kas nors
     sugenda į medį… ar yra tai, kad įdomus dalis? Dirželis ant tų slidžių ir sulenkite
     kelius, kai nukreipiate savo personažą žemyn nuo užšalusių kliūčių kalno, naudodami
@@ -12120,11 +12067,8 @@ lt:
   tutorial_kodableshapes_language: Lietuvių
   tutorial_nasabinary_language: Lietuvių
   tutorial_3dmaker_language: Lietuvių
-  tutorial_itchstart_language: Lietuvių
   tutorial_hopsub_language: Kinų (supaprastinta), Anglų, Ispanų (Ispanija), Ispanų
     (Meksika)
-  tutorial_itchmundos_language: Ispanų (Meksika)
-  tutorial_itchtenacity_language: Ispanų (Meksika)
   tutorial_kcjskiing_language: Anglų, Prancūzų
   tutorial_groksecurity_language: Lietuvių
   tutorial_creaticode_language: Kinų (supaprastinta), kinų (tradicinė), anglų
@@ -12217,10 +12161,7 @@ lt:
   tutorial_kodableshapes_string_detail_grades: Išankstinis skaitytojas - 5 klasė
   tutorial_nasabinary_string_detail_grades: 6+ klasės
   tutorial_3dmaker_string_detail_grades: 2-8 klasės
-  tutorial_itchstart_string_detail_grades: 2-8 klasės
   tutorial_hopsub_string_detail_grades: 2-8 klasės
-  tutorial_itchmundos_string_detail_grades: 2+ klasės
-  tutorial_itchtenacity_string_detail_grades: 2+ klasės
   tutorial_kcjskiing_string_detail_grades: 2+ klasės
   tutorial_groksecurity_string_detail_grades: 6+ klasės
   tutorial_creaticode_string_detail_grades: 6+ klasės
@@ -12314,12 +12255,7 @@ lt:
   tutorial_nasabinary_string_platforms: Unplugged, Ekrano skaitytuvas
   tutorial_3dmaker_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
     kompiuteris, “iPad”, “Windows” telefonas, “Android” telefonas, “iPhone”
-  tutorial_itchstart_string_platforms: Visos šiuolaikinės naršyklės, “iPad”
   tutorial_hopsub_string_platforms: "“iPad”, “iPhone”"
-  tutorial_itchmundos_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
-    kompiuteris, “iPad”
-  tutorial_itchtenacity_string_platforms: Visos šiuolaikinės naršyklės, “Android”
-    planšetinis kompiuteris, “iPad”
   tutorial_kcjskiing_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_groksecurity_string_platforms: Visos šiuolaikinės naršyklės, “Android”
     planšetinis kompiuteris, “iPad”, “Windows” telefonas, “Android” telefonas, “iPhone”
@@ -12417,10 +12353,7 @@ lt:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12510,10 +12443,7 @@ lt:
     nuo kalbos (gali būti mokoma keliomis kalbomis)
   tutorial_nasabinary_string_detail_programming_languages: Binarinis kodas
   tutorial_3dmaker_string_detail_programming_languages: Blokai
-  tutorial_itchstart_string_detail_programming_languages: Blokai
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Blokai
-  tutorial_itchtenacity_string_detail_programming_languages: Blokai
   tutorial_kcjskiing_string_detail_programming_languages: Blokai
   tutorial_groksecurity_string_detail_programming_languages: Nėra - nereikia programavimo
   tutorial_creaticode_string_detail_programming_languages: Blokai
@@ -13633,6 +13563,16 @@ lt:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Šokių vakarėlis
+  tutorial_introtomlai_name: Įvadas į mašininį mokymąsi
+  tutorial_computervisionai_name: Kompiuterio vizija
+  tutorial_neuralnetworksai_name: Neuroniniai tinklai
+  tutorial_chatbotsllmai_name: Chatbots ir dideli kalbų modeliai
+  tutorial_generativeimagesai_name: Generatyviniai vaizdai
+  tutorial_algorithmicbiasai_name: Algoritminis šališkumas
+  tutorial_codeofethicsai_name: Mūsų dirbtinio intelekto etikos kodeksas
+  tutorial_socimpactofgenaiai_name: Generacinio AI poveikis visuomenei
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14103,6 +14043,43 @@ lt:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: Code a Dance Party pasidalinti su draugais.
+    “Beyoncé”, “Lizzo”, “Harry Styles”, “Lil Nas X”, Selena Gomez, muzika iš “Disney”
+    “Encanto” ir dar daugiau!
+  tutorial_introtomlai_longdescription: Sužinokite apie dirbtinio intelekto formą,
+    vadinamą mašininiu mokymusi, ir kaip jie gali naudoti problemų sprendimo procesą,
+    kad padėtų išmokyti robotą spręsti problemas. Dalyvaukite mašininio mokymosi veikloje,
+    kai robotas mokosi aptikti žuvų modelius.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Sužinokite, kaip veikia neuroniniai tinklai.
+    Naudokite valdiklius, kad galėtumėte ištirti neuroninius tinklus rankose. Žiūrėkite
+    vaizdo įrašą, paaiškinantį neuroninius tinklus. Galiausiai aptarti įvairių perspektyvų
+    poreikį kuriant rekomendacijų sistemas.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Sužinokite, kaip dirbtinis intelektas
+    gali generuoti vaizdus, tada ištirkite difuzinį AI valdiklį ir aptarkite, ar šie
+    modeliai yra kūrybingi.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Ištirkite generatyvinio AI poveikį
+    iš skirtingų perspektyvų, tada bendradarbiaukite kaip komanda, kad sugalvotumėte
+    gaires, kurios atitiktų daugiausiai visų dalyvių poreikių.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: 6+ klasės
   tutorial_bscomputing_string_detail_grades: 6+ klasės
   tutorial_stackpython_string_detail_grades: 6+ klasės
@@ -14204,7 +14181,7 @@ lt:
   tutorial_hwfanpage_string_detail_grades: 2+ klasės
   tutorial_hwillusion_string_detail_grades: 6+ klasės
   tutorial_caevolution_string_detail_grades: 6+ klasės
-  tutorial_bbbusybot_string_detail_grades: 6+ klasės
+  tutorial_bbbusybot_string_detail_grades: 9+ klasės
   tutorial_caaifarm_string_detail_grades: 6+ klasės
   tutorial_cafuture_string_detail_grades: 6+ klasės
   tutorial_dmscratch_string_detail_grades: 2-8 klasės
@@ -14234,6 +14211,16 @@ lt:
   tutorial_madmobile_string_detail_grades: 6+ klasės
   tutorial_intelinosmile_string_detail_grades: Išankstinis skaitytojas - 8 klasė
   tutorial_intelinoaisign_string_detail_grades: 2-8 klasės
+  tutorial_danceai2023_string_detail_grades: 2+ klasės
+  tutorial_introtomlai_string_detail_grades: 6+ klasės
+  tutorial_computervisionai_string_detail_grades: 6+ klasės
+  tutorial_neuralnetworksai_string_detail_grades: 6+ klasės
+  tutorial_chatbotsllmai_string_detail_grades: 6+ klasės
+  tutorial_generativeimagesai_string_detail_grades: 6+ klasės
+  tutorial_algorithmicbiasai_string_detail_grades: 6+ klasės
+  tutorial_codeofethicsai_string_detail_grades: 6+ klasės
+  tutorial_socimpactofgenaiai_string_detail_grades: 6+ klasės
+  tutorial_generationai_string_detail_grades: 2+ klasės
   tutorial_bsimage_string_platforms: "“Chrome”, “Firefox”, “Safari"
   tutorial_bscomputing_string_platforms: Atjungtas
   tutorial_stackpython_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
@@ -14404,6 +14391,26 @@ lt:
   tutorial_madmobile_string_platforms: Visos šiuolaikinės naršyklės
   tutorial_intelinosmile_string_platforms: Visos šiuolaikinės naršyklės, “iPad”
   tutorial_intelinoaisign_string_platforms: Visos šiuolaikinės naršyklės
+  tutorial_danceai2023_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
+    kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_introtomlai_string_platforms: Visos šiuolaikinės naršyklės, “Android” planšetinis
+    kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_computervisionai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_neuralnetworksai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_chatbotsllmai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_generativeimagesai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_algorithmicbiasai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_codeofethicsai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_socimpactofgenaiai_string_platforms: Visos šiuolaikinės naršyklės, “Android”
+    planšetinis kompiuteris, “iPad”, “Android” telefonas, “iPhone”
+  tutorial_generationai_string_platforms: "“Android” planšetinis kompiuteris, “iPad”,
+    “Windows” telefonas, “Android” telefonas, “iPhone”"
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14535,6 +14542,16 @@ lt:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Nepriklausoma kalba
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14660,12 +14677,22 @@ lt:
   tutorial_codecombathack_string_detail_programming_languages: Nepriklausoma kalba
   tutorial_toxicodewords_string_detail_programming_languages: Nepriklausoma kalba
   tutorial_mitstepmisinformation_string_detail_programming_languages: Atjungtas
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Atjungtas
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Atjungtas
   tutorial_mitstepintrotoml_string_detail_programming_languages: Atjungtas
   tutorial_naflogo_string_detail_programming_languages: "„JavaScript“"
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Blokai
   tutorial_intelinoaisign_string_detail_programming_languages: Blokai
+  tutorial_danceai2023_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_introtomlai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_computervisionai_string_detail_programming_language: Nepriklausoma kalba
+  tutorial_neuralnetworksai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_chatbotsllmai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_generativeimagesai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_codeofethicsai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Nepriklausoma kalba
+  tutorial_generationai_string_detail_programming_languages: Blokai, Python
   school_not_found_heading: Mes negalėjome rasti jūsų mokyklos. Prašome įvesti daugiau
     informacijos.
   school_name: Mokyklos pavadinimas
@@ -14804,6 +14831,10 @@ lt:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Kokios yra būtinos sąlygos atlikti kodo valandą?
   hoc_how_to_faq_answer_prerequisites: Kodo valanda yra paprasta paleisti - net pradedantiesiems.
     Jums nereikia patirties kompiuterių mokslo ar mokymo, kad įkvėptumėte studentus
@@ -15246,6 +15277,44 @@ lt:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Kiekvienas gali sužinoti apie AI, nesvarbu, ar esate klasės mokinys,
     ar pedagogas, atrakinantis mokymo ateitį su AI ir apie jį.
   hoc_ai_how_ai_works_video_series_desc: Ši trumpų vaizdo įrašų serija supažindins
@@ -15262,6 +15331,37 @@ lt:
     apie kai kurių AI problemų sprendimus.
   hoc_ai_activities_desc: Šios visiškai naujos “Hour of Code” veiklos įdomiai ir įtraukiamai
     supažindina vartotojus su dirbtinio intelekto pasauliu.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Beveik 100 Code.org darbuotojų, atitinkančių mėlynus
     ir geltonus marškinėlius, pozuoja viešbučio konferencijų salėje, skirtoje įmonės
     vasaros 2022 m. Codechella renginiui.
@@ -15890,9 +15990,10 @@ lt:
     kad galėtume pasinaudoti nenuilstančia platesnės informatikos švietimo bendruomenės
     pagalba, ir [dėkojame visiems partneriams ir asmenims, kurie palaikė mūsų poveikį
     per daugelį metų] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 m. metinė ataskaita] (%{report_url})
-    (Ankstesnės ataskaitos: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Mūsų pagrindinės vertybės ir pranešimų gairės]
     (%{core_url})"
   about_page_section_more_list_3: "[Mūsų mokymo programa ir pedagogikos filosofija]

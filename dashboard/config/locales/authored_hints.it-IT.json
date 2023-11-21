@@ -6614,9 +6614,9 @@
         },
         "courseC_artist_prog72022": {
           "courseC_artist_prog7_a": "Gli angoli sono di 45 o 90 gradi.",
-          "courseC_artist_prog7_b": "Al primo passo tutto procede bene?\\\nE al secondo?\\\nDov'è che qualcosa comincia a non funzionare?",
+          "courseC_artist_prog7_b": "Al primo passo tutto procede bene?  \nE al secondo?  \nDov'è che qualcosa inizia a non funzionare?",
           "courseC_artist_prog7_c": "Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!",
-          "courseC_artist_prog7_d": "Dovresti fare così:\n\n-   vai avanti\n-   gira a destra di 45 gradi\n-   vai avanti\n-   gira a destra di 90 gradi\n-   vai avanti\n-   gira a destra di 45 gradi\n\nRipeti questa sequenza per 2 volte!",
+          "courseC_artist_prog7_d": "Dovresti fare così:\n- vai avanti\n- gira a destra di 45 gradi\n- vai avanti\n- gira a destra di 90 gradi\n- vai avanti\n- gira a destra di 45 gradi\n\nRipeti questo schema per 2 volte!",
           "courseC_artist_prog7_e": "Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
         },
         "courseC_artist_prog7_2018": {
@@ -6649,9 +6649,9 @@
         },
         "courseC_artist_prog7_2023": {
           "courseC_artist_prog7_a": "Gli angoli sono di 45 o 90 gradi.",
-          "courseC_artist_prog7_b": "Al primo passo tutto procede bene?\\\nE al secondo?\\\nDov'è che qualcosa comincia a non funzionare?",
+          "courseC_artist_prog7_b": "Al primo passo tutto procede bene?  \nE al secondo?  \nDov'è che qualcosa inizia a non funzionare?",
           "courseC_artist_prog7_c": "Puoi usare il menù a discesa (▼) del blocco `gira a ...` per vedere gli angoli tra cui scegliere!",
-          "courseC_artist_prog7_d": "Dovresti fare così:\n\n-   vai avanti\n-   gira a destra di 45 gradi\n-   vai avanti\n-   gira a destra di 90 gradi\n-   vai avanti\n-   gira a destra di 45 gradi\n\nRipeti questa sequenza per 2 volte!",
+          "courseC_artist_prog7_d": "Dovresti fare così:\n- vai avanti\n- gira a destra di 45 gradi\n- vai avanti\n- gira a destra di 90 gradi\n- vai avanti\n- gira a destra di 45 gradi\n\nRipeti questo schema per 2 volte!",
           "courseC_artist_prog7_e": "Non aver paura di sbagliare! Prova ad aggiungere blocchi ed eseguire il codice per vedere cosa succede, anche se non hai ancora risolto l'esercizio."
         },
         "courseC_artist_prog_challenge1": {
@@ -11847,7 +11847,7 @@
         "courseE_artist_functions102022": {
           "courseD_artist_functions10_a": "Per evitare di usare più di un blocco `vai avanti`, crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.",
           "courseD_artist_functions10_b": "Questo esercizio in realtà è molto simile al precedente, ma ora la funzione `disegna una fila ...` è basata su una forma differente.",
-          "courseD_artist_functions10_c": "Riesci a vedere dove puoi usare una funzione denominata `disegna una fila di esagoni`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "Riesci a vedere dove questo disegno potrebbe utilizzare una funzione chiamata `line of hexagons`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions10_2018": {
           "courseD_artist_functions10_a": "Per evitare di usare più di un blocco `vai avanti`, crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.",
@@ -11872,7 +11872,7 @@
         "courseE_artist_functions10_2023": {
           "courseD_artist_functions10_a": "Per evitare di usare più di un blocco `vai avanti`, crea la funzione `disegna un esagono` e richiamala tutte le volte che serve.",
           "courseD_artist_functions10_b": "Questo esercizio in realtà è molto simile al precedente, ma ora la funzione `disegna una fila ...` è basata su una forma differente.",
-          "courseD_artist_functions10_c": "Riesci a vedere dove puoi usare una funzione denominata `disegna una fila di esagoni`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "Riesci a vedere dove questo disegno potrebbe utilizzare una funzione chiamata `line of hexagons`?\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
         },
         "courseE_artist_functions1_copy": {
           "courseE_artist_functions1_a": "Le lenti quadrate hanno i lati da 100 pixel, questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare la seconda lente.",
@@ -12158,11 +12158,11 @@
           "courseD_artist_functions9_e": "Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
         },
         "courseE_artist_functions92022": {
-          "courseD_artist_functions9_a": "Questo esercizio può essere suddiviso in tre parti:\n\n-   definisci la funzione `disegna un triangolo`,\n-   definisci la funzione `disegna una fila di triangoli`,\n-   usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.",
+          "courseD_artist_functions9_a": "Questo rompicapo può essere suddiviso in tre parti:\n  - definisci la funzione `draw a triangle`\n  - definisci la funzione `draw a line of triangles`\n  - utilizza la tua funzione `draw a line of triangles` per quattro volte, per completare il disegno",
           "courseD_artist_functions9_b": "Per fare questo disegno si deve disegnare per quattro volte una fila di triangoli, girando alternativamente di 60 e 120 gradi tra una fila e l'altra.",
-          "courseD_artist_functions9_c": "Per disegnare una fila di triangoli:\n\n-   ripeti 4 volte\n-   disegna un triangolo\n-   salta in avanti di 50 pixel",
-          "courseD_artist_functions9_d": "Per disegnare il rombo:\n\n-   ripeti 2 volte\n    -   disegna una fila di triangoli\n    -   gira di 60 gradi\n    -   disegna una fila di triangoli\n    -   gira di 120 gradi",
-          "courseD_artist_functions9_e": "Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
+          "courseD_artist_functions9_c": "Per disegnare una fila di triangoli:\n  - ripeti 4 volte\n    - disegna un triangolo\n    - salta in avanti di 50 pixel",
+          "courseD_artist_functions9_d": "Per disegnare un diamante:\n  - ripeti 2 volte\n    - disegna una fila di triangoli\n    - ruota di 60 gradi\n    - disegna una fila di triangoli\n    - ruota di 120 gradi",
+          "courseD_artist_functions9_e": "Riesci a individuare tutti e quattro i punti in cui `line of triangles` è utilizzabile, in questo disegno?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
         },
         "courseE_artist_functions9_2018": {
           "courseD_artist_functions9_a": "Questo esercizio può essere suddiviso in tre parti:\n\n-   definisci la funzione `disegna un triangolo`,\n-   definisci la funzione `disegna una fila di triangoli`,\n-   usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.",
@@ -12193,11 +12193,11 @@
           "courseD_artist_functions9_e": "Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
         },
         "courseE_artist_functions9_2023": {
-          "courseD_artist_functions9_a": "Questo esercizio può essere suddiviso in tre parti:\n\n-   definisci la funzione `disegna un triangolo`,\n-   definisci la funzione `disegna una fila di triangoli`,\n-   usa quattro volte la funzione `disegna una fila di triangoli` per completare il disegno.",
+          "courseD_artist_functions9_a": "Questo rompicapo può essere suddiviso in tre parti:\n  - definisci la funzione `draw a triangle`\n  - definisci la funzione `draw a line of triangles`\n  - utilizza la tua funzione `draw a line of triangles` per quattro volte, per completare il disegno",
           "courseD_artist_functions9_b": "Per fare questo disegno si deve disegnare per quattro volte una fila di triangoli, girando alternativamente di 60 e 120 gradi tra una fila e l'altra.",
-          "courseD_artist_functions9_c": "Per disegnare una fila di triangoli:\n\n-   ripeti 4 volte\n-   disegna un triangolo\n-   salta in avanti di 50 pixel",
-          "courseD_artist_functions9_d": "Per disegnare il rombo:\n\n-   ripeti 2 volte\n    -   disegna una fila di triangoli\n    -   gira di 60 gradi\n    -   disegna una fila di triangoli\n    -   gira di 120 gradi",
-          "courseD_artist_functions9_e": "Osservando questa animazione, riesci ad individuare tutti e quattro i punti in cui si può usare la funzione `disegna una fila di triangoli`?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
+          "courseD_artist_functions9_c": "Per disegnare una fila di triangoli:\n  - ripeti 4 volte\n    - disegna un triangolo\n    - salta in avanti di 50 pixel",
+          "courseD_artist_functions9_d": "Per disegnare un diamante:\n  - ripeti 2 volte\n    - disegna una fila di triangoli\n    - ruota di 60 gradi\n    - disegna una fila di triangoli\n    - ruota di 120 gradi",
+          "courseD_artist_functions9_e": "Riesci a individuare tutti e quattro i punti in cui `line of triangles` è utilizzabile, in questo disegno?\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)"
         },
         "courseE_artist_functions_challenge1": {
           "courseE_artist_functions_challenge1_a": "Se richiami la funzione ancora una volta, puoi completare il disegno nell'angolo mancante.",
@@ -14438,53 +14438,53 @@
           "Connect": "Verifica che il blocco `mangia` sia collegato al blocco evento. \n\nDovrebbero incastrarsi insieme come pezzi di un puzzle!"
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "Utilizza il blocco di cattura oggetti per fare in modo che la barca catturi il pesce",
-          "CatchUnder": "Il blocco degli oggetti catturati deve essere\ncollegato sotto l'evento La barca tocca \nil pesce."
+          "Catch": "Utilizza il blocco `cattura oggetto` per fare in modo che la barca catturi il pesce",
+          "CatchUnder": "Il blocco degli oggetti catturati deve essere\ncollegato sotto l'evento \"la barca tocca \nil pesce\"."
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Posiziona il blocco per cambiare costume all'interno del blocco \"se ci sono troppe alghe\".",
-          "Costume": "Se ci sono troppe alghe, il corallo verrà danneggiato. \n\nUtilizza quindi il blocco Cambia \"costume\".",
-          "TooMuch": "Collega il blocco «se ci sono troppe alghe» all'evento «quando il pesce tocca le alghe»."
+          "BlockInside": "Posiziona il blocco per cambiare costume all'interno del blocco \"se c'è troppa alga\".",
+          "Costume": "Se ci sono troppe alghe, il corallo verrà danneggiato. \n\nUtilizza quindi il blocco `cambia costume`.",
+          "TooMuch": "Collega il blocco `se c'è troppa alga` all'evento `quando il pesce tocca l'alga`."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
           "Below": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro nella quale hai concluso l'ultimo esercizio!",
-          "BlocksInside": "Se ci sono troppo poche alghe, il pesce se ne andrà. \n\nPosiziona gli altri blocchi all'interno del blocco di alghe se troppo piccolo.",
-          "TooLittle": "Collega il blocco di alghe \"se troppo piccolo\" all'evento «Quando il pesce tocca le alghe»."
+          "BlocksInside": "Se ci sono troppo poche alghe, il pesce se ne andrà. \n\nPosiziona gli altri blocchi all'interno del blocco `se c'è troppo poca alga`.",
+          "TooLittle": "Collega il blocco `se troppo poca alga` all'evento `quando il pesce tocca l'alga`."
         },
         "csc_ecosystems_ocean_fish_2023": {
           "No Code": "Non è ancora il momento di programmare. Basta osservare questo sistema in azione. "
         },
         "csc_ecosystems_ocean_justright_algae": {
           "Bellow": "Continua a collegare i blocchi nella parte inferiore dell'area di lavoro nella quale hai concluso l'ultimo esercizio!",
-          "JustRight": "Collega il blocco di alghe, se corretto, all'evento «Quando il pesce tocca le alghe».",
-          "costume": "Se la quantità di alghe è corretta, il corallo\ntornerà sano. \n\nUsa il blocco cambio costume all'interno del blocco alghe, se è corretto."
+          "JustRight": "Collega il blocco `se abbastanza alghe` (if just right ...) all'evento `Quando il pesce tocca le alghe`.",
+          "costume": "Se c'è abbastanza alga, il corallo\ntornerà sano. \n\nUsa il blocco cambio costume all'interno del blocco `se c'è abbastanza alga`."
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
           "hint1": "Ci sono troppi pappagalli! Cambia il numero\ndi pappagalli in modo che sia inferiore a 8."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "Prima dell'inizio del programma sono \nstati catturati 0 pesci. Usa il comando `set FishCaught to 0` nella \nparte superiore dell'area di lavoro.",
-          "hint2": "Usa la modifica `fishCaught by 1`\nsotto il blocco cattura i pesci per contare\nogni pesce catturato dalla barca.",
-          "hint3": "Collega il blocco\n`boat says` **sotto** al \nblocco \n`change FishCaught by 1` "
+          "hint1": "Prima dell'inizio del programma sono \nstati catturati 0 pesci. Usa il comando `imposta FishCaught a 0` nella \nparte superiore dell'area di lavoro.",
+          "hint2": "Usa la modifica `fishCaught di 1`\nsotto il blocco cattura i pesci per contare\nogni pesce catturato dalla barca.",
+          "hint3": "Collega il blocco\n`la barca dice` **sotto** al \nblocco \n`modifica FishCaught di 1` "
         },
         "csc_ecosystems_solution1b_2023": {
           "hint1": "Continua a collegare i blocchi \ndurante l'evento `when boat touches fish` in cui sei \narrivato all'ultimo esercizio!",
-          "hint2": "Per fare in modo che la barca smetta di pescare una volta raggiunto il numero di 5 pesci, collega il blocco `if fishCaught = 5` alla fine dell'evento `when boat touches fish`.",
-          "hint3": "Quindi aggiungi il blocco `remove boat` al-\nl'**interno** del blocco `if FishCaught = 5`"
+          "hint2": "Per fare in modo che la barca smetta di pescare una volta raggiunto il numero di 5 pesci, collega il blocco `se fishCaught = 5` alla fine dell'evento `quando la barca tocca il pesce`.",
+          "hint3": "Quindi aggiungi il blocco `togli barca` al-\n**l'interno** del blocco `se FishCaught = 5`"
         },
         "csc_ecosystems_solution2_2023": {
           "Hint1": "**Nota**: potrebbe essere necessario trascinare parte del codice </code>quando tocca<code style=\"color:black; background-color:#6AF36C\"> più in basso sulla schermata per adattarlo ai nuovi blocchi.",
-          "hint2": "Nella parte superiore dell'area di lavoro, collega il blocco di sfondo a \"quando si clicca su Esegui\".",
+          "hint2": "Nella parte superiore dello spazio di lavoro, collega il blocco di sfondo a `quando si clicca su esegui`.",
           "hint3": "Sullo sfondo\ncollega l'avvio\ndella pesca solo nella\nzona di pesca"
         },
         "csc_ecosystems_solution3A_2023": {
           "hint1": "Aggiungi i nuovi blocchi sotto il blocco\n`ripeti ogni 4 secondi`.",
           "hint2": "Collega lo `sfondo Pesca vietata` nella parte\nsuperiore dell'area di lavoro sotto \nil blocco `ogni 4 secondi`.",
-          "hint3": "Collega `iniziare senza pescare`\nsotto lo sfondo `nessun fondale`. "
+          "hint3": "Collega `inizia pesca vietata`\nsotto lo sfondo `nessun fondale`. "
         },
         "csc_ecosystems_solution3B_2023": {
           "hint1": "Aggiungi i nuovi blocchi sotto il blocco\ndi ripetizione `ogni 9 secondi`",
-          "hint2": "Usa i comportamenti `no fishing background`\ne `start no fishing season`"
+          "hint2": "Usa i comportamenti `sfondo pesca vietata`\ne `inizia pesca vietata`"
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "Assicurati di aggiungere un blocco `set background` e un blocco `change costume` sotto il tuo evento. \n\nNon dimenticare di premere la freccia rivolta verso il basso per attivare l'evento! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"
@@ -14534,6 +14534,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Usa il menu a discesa per scegliere tra diversi colori ed effetti.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "Collega un blocco \"AI genera effetto\" all'evento \"a misura 2\" nel tuo spazio di lavoro in questo modo: [blocca blocchi][0]",
+          "hint2": "Clicca sul blocco [blocca blocchi][0] per creare un nuovo effetto."
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 \\*\\*Ancora bloccato? \\*\\* Guarda di nuovo il video degli eventi per scoprire come funzionano.",
+          "hint2": "💡 Ecco un esempio di come dovrebbe apparire il tuo codice. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personalizza l'effetto cliccando sulle emoji sul blocco <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs»: [\"cool», \"cold», \"wavy \"], \"backgroundEffect» :\"sparkles», \"backgroundColor» :\"cool», \"foregroundEffect» :\"bubbles \"} nell'area di lavoro.</field>\n\n</block> </xml> ",
+          "Hint2": "💡 **Ancora bloccato?** Guarda il video per vedere come personalizzare l'effetto.",
+          "HintEdit": "💡 Se desideri utilizzare il codice scritto dall'AI, attiva la visualizzazione del codice e quindi clicca su \"Usa codice\". I blocchi sostituiranno il blocco \"A.I. genera effetto\" nel tuo spazio di lavoro. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Il ballerino deve essere lo stesso su entrambi i blocchi e la sequenza (ordine) è importante.  ",
+          "validation": "💡  Aggiungi questi blocchi di <code style=\"color:white; background-color:#FFBD46\">setup</code> per creare il tuo primo ballerino: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"next\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Collega il [blocco a blocchi][0] alla <code style=\"color:white; background-color:#FFBD46\">configurazione</code>. Quindi clicca su di esso per iniziare.",
+          "Hint3": "💡 Se vuoi rigenerare l'effetto o cambiare le emoji puoi cliccare nuovamente sul blocco \"A.I. genera effetto\". "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Ascolta la canzone e pensa all'atmosfera della musica.",
+          "Hint2": "💡 Collega il [blocco a blocchi][0] alla <code style=\"color:white; background-color:#FFBD46\">configurazione</code>. Quindi clicca su di esso per iniziare.",
+          "Hint3": "💡 Se vuoi rigenerare l'effetto o cambiare le emoji puoi cliccare nuovamente sul blocco \"A.I. genera effetto\"."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 I tuoi ballerini non risponderanno ai tuoi comandi a meno che la danza non sia in corso. ",
+          "hint2": "💡 Dopo aver premuto <code style=\"color:white; background-color:#FFBD46\">Esegui</code>, dai un comando ai tuoi ballerini premendo la freccia  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> destra o sinistra. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Fai clic e trascina un blocco `make new sprite` e collegalo sotto `when run`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

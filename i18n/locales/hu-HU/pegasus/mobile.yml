@@ -1504,6 +1504,7 @@
   header_report_abuse: "Visszaélés jelentése"
   header_legal: "Adatvédelem és jogi"
   header_legal_privacy: "Adatvédelmi Elvek"
+  header_legal_cookie_notice: "Sütikre vonatkozó figyelmeztetés"
   header_legal_tos: "Feltételek"
   header_tutorials: "Útmutatók"
   header_screen_reader_hamburger: "Menü"

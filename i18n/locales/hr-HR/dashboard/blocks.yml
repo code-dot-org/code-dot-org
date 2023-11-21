@@ -482,6 +482,12 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': čvrsto tijelo
+            '"liquid"': tečan
+            '"gas"': plin
       Mikelab_addTrainingData:
         options:
           NAME:

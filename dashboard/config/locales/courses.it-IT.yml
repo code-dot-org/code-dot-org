@@ -194,6 +194,8 @@ it:
           title: CSA Moduli Per Iniziare
         self-paced-pl-csa-2023:
           title: CSA Moduli Per Iniziare
+        self-paced-pl-csd-unit2-2023:
+          title: Insegnamento dello Sviluppo Web
         self-paced-pl-csp-2021:
           title: Insegnare i Principi Informatici
         self-paced-pl-csp-2022:
@@ -233,6 +235,8 @@ it:
         name: Guida al piano di studi
       csd_curriculum_guide/csd/2022:
         name: Guida al piano di studi
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/167tFcyJ1QsTsbgoFC_3DlkvYGXPPPsYmfIn64q-Ht8o/view
       csd_guide_to_debugging/csd/2021:
         name: Guida al debugging
       csd_guide_to_debugging/csd/2022:

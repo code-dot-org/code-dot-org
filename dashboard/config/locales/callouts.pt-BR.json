@@ -966,6 +966,15 @@
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
         },
+        "CSD U6 - Functions - SB1_2023": {
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
+        "CSD U6 - Functions - SB1_2222": {
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
+        "CSD U6 - Functions - SB1_mb2022": {
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
         },
@@ -3606,6 +3615,26 @@
           "New Artist Project_callout1": "Clique nas categorias para ver os blocos e a sua caixa de ferramentas! Arraste os blocos para o espaço de trabalho e adiciona-os ao seu programa. ",
           "New Artist Project_callout2": "Clique em \"Executar\" para salvar e executar seu programa",
           "sign_in_to_save_project": "Deseja acessar seu projeto depois? Faça Login para salvar esse projeto em sua conta!"
+        },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Use este bloco.",
+          "dance_callout_02": "Adicione o bloco I.A. gera o efeito aqui. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Use este bloco.",
+          "dance_callout_02": "Adicione o movimento dançar."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Clique aqui."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Comece aqui."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Use este bloco. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Use este bloco."
         },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Use este bloco para criar uma fada.",

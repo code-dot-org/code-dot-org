@@ -33,6 +33,8 @@ ar:
             '0.75': صغير
             '1.00': متوسط
             '2.00': كبير
+      Dancelab_ai:
+        text: 'يترتب على{IMAGE} تأثير {VALUE} '
       Dancelab_alternateMoves:
         text: |-
           {GROUP} بدل كل {N} مقياس
@@ -627,12 +629,14 @@ ar:
             '"none"': لا شيء
             '"rand"': "(عشوائي)"
             '"quads"': زوايا
+            '"blooming_petals"': بتلات مزهرة
             '"circles"': نفق
             '"color_cycle"': ألوان
             '"diamonds"': الماس
             '"disco_ball"': كرة ديسكو
             '"fireworks"': مفرقعات
             '"flowers"': زهور
+            '"frosted_grid"': شبكة مجمدة
             '"growing_stars"': النجوم المتنامية
             '"higher_power"': قوة أعلى
             '"swirl"': هيبنو
@@ -653,17 +657,27 @@ ar:
             '"stars"': نجوم
             '"music_wave"': أمواج
           PALETTE:
+            '"autumn"': الخريف
             '"rave"': أسود وأبيض
             '"cool"': الأزرق بدرجاته
             '"electronic"': إلكتروني
+            '"grayscale"': تدرّج رمادي
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
             '"ocean"': المحيط
             '"rainbow"': ألوان
+            '"roses"': الورود
+            '"sky"': سماوي
+            '"spring"': الربيع
+            '"summer"': الصيف
+            '"sunrise"': الشروق
+            '"sunset"': الغروب
             '"tropical"': استوائي
+            '"twinkling"': متلألئ
             '"vintage"': عتيق
             '"warm"': الأحمر بدرجاته
+            '"winter"': الشتاء
       Dancelab_setDanceSpeed:
         text: غيّر سرعة الرقص {SPRITE} إلى {SPEED}
         options:
@@ -1721,6 +1735,15 @@ ar:
         text: إحداثيات Y من {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} الانتقال إلى {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |-
+          إذا {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': صلب
+            '"liquid"': سائل
+            '"gas"': غاز
       KatiesBlocks_tumbling:
         text: الشقلبة
       Mikelab_addBehaviorSimple:

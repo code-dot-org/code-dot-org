@@ -286,6 +286,12 @@ hr:
         text: predstavlja {NUM} novih {ANIMATION_NAME} sprajtova [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}kaže{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plin
+            '"liquid"': tečan
+            '"solid"': čvrsto tijelo
       Mikelab_addTrainingData:
         options:
           LOCATION:

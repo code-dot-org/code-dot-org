@@ -40,7 +40,7 @@
   "create": "ایجاد کنید",
   "createNewFile": "ایجاد فایل جدید",
   "created": "ایجادشده",
-  "delete": "پاک کردن",
+  "delete": "پاک کنید",
   "deleteFileConfirmation": "آیا مطمئنید که می‌خواهید {filename} را حذف کنید؟",
   "disabledPeerReviewMessage": "داوری همتا را فعال کنید تا سایر دانش‌آموزان گروه نیز بتوانند درباره پروژه شما نظر بدهند.",
   "displayThemeDarkMode": "حالت تاریک",

@@ -71,6 +71,10 @@ ar:
           title: التعلم المهني الافتراضي CSA
         self-paced-pl-csd-unit1-2023:
           title: تعليم حل المشكلات والحوسبة
+        self-paced-pl-csd-unit2-2023:
+          title: تدريس تطوير المواقع الإلكترونية
+        self-paced-pl-csd-unit5-2023:
+          title: بيانات التدريس والمجتمع
     resources:
       curriculum/csd/2017:
         name: المناهج

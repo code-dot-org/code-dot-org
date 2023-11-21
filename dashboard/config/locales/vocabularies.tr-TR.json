@@ -2123,7 +2123,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/flappy/unversioned": {
-          "word": "kod",
+          "word": "kodlama",
           "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/flappy/unversioned": {
@@ -2363,7 +2363,12 @@
           "definition": "Bir şeylerin olmasına neden olan bir eylem."
         },
         "program/dance-ai/2023": {
-          "word": "Program"
+          "word": "Program",
+          "definition": "Bir makine tarafından, çalıştırılabilecek bir şeye kodlanmış bir algoritma.\n​"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Yapay Zeka (A.I.)",
+          "definition": "Verileri alan, bu verilerden kalıplar öğrenen ve daha sonra öğrendiklerine göre, kararlar veren bir bilgisayar programı."
         }
       }
     }

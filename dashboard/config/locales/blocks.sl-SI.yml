@@ -481,6 +481,8 @@ sl:
             '"rain"': dež
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}reci{TEXT1}"
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:
