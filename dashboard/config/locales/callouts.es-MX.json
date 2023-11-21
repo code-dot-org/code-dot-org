@@ -68,6 +68,9 @@
         "CSD U3 Boolean Predict_2023": {
           "": "Este programa imprimirá un resultado aquí"
         },
+        "CSD U3 Drawing Squares to Corners_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
+        },
         "CSD U3 L18 Predict_2023": {
           "CSD_U3_L11_S4_C1": "Agrega tu bloque aquí."
         },
@@ -639,6 +642,9 @@
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastra este bloque dentro del área de código."
         },
+        "CSD U3 ellipse_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastra este bloque dentro del área de código."
@@ -661,7 +667,8 @@
         },
         "CSD U3 fill_2023": {
           "CSD_U3_rect_c1": "Aquí está el código",
-          "CSD_U3_rect_c2": "Arrastra este bloque dentro del área de código."
+          "CSD_U3_rect_c2": "Arrastra este bloque dentro del área de código.",
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
         },
         "CSD U3 game backgrounds": {
           "CSD_U3_L18_S4_C2": "Área de funciones",
@@ -872,6 +879,9 @@
         "CSD U3 sequence_2022": {
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastra este bloque dentro del área de código."
+        },
+        "CSD U3 sequence_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
         },
         "CSD U3 shapes arc_2021": {
           "CSD_U3_rect_c1": "Aquí está el código",
@@ -3854,6 +3864,26 @@
           "New Artist Project_callout1": "¡Haz clic en las categorías para ver los bloques de tu caja de herramientas! Puedes arrastrar los bloques al área de trabajo para añadirlos a tu programa",
           "New Artist Project_callout2": "Presiona \"Ejecutar\" para guardar y ejecutar tu programa",
           "sign_in_to_save_project": "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!"
+        },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Usa este bloque.",
+          "dance_callout_02": "Agrega el bloque `A.I. genera efecto` aquí. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Usa este bloque.",
+          "dance_callout_02": "Agrega un bloque de baile."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Dale clic."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Empieza aquí."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Usa este bloque. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Usa este bloque."
         },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Utiliza este bloque para crear un sprite.",

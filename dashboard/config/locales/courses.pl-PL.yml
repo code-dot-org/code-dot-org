@@ -256,17 +256,22 @@ pl:
           version_title: "'23-'24"
         focus-on-coding-2023:
           title: Skoncentruj się na kodowaniu
+          version_title: "'23-'24"
         focus-on-creativity-2023:
           title: Skoncentruj się na kreatywności
           version_title: "'23-24"
         focus-on-data-2023:
           title: Skoncentruj się na danych
+          version_title: "'23-'24"
         focus-on-design-with-purpose-2023:
           title: Skoncentruj się na projektowaniu z celem
+          version_title: "'23-'24"
         focus-on-hardware-2023:
           title: Skoncentruj się na sprzęcie
+          version_title: "'23-'24"
         focus-on-impact-in-society-2023:
           title: Skoncentruj się na wpływie w społeczeństwie
+          version_title: "'23-'24"
         mike-test:
           title: Podstawy Informatyki
         pl-csd-summer-2023:
@@ -327,6 +332,130 @@ pl:
           version_title: "'22-'23"
         self-paced-pl-csd-2023:
           title: self-paced-pl-csd-2021
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit1-2023:
+          description_student: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce
+            online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po
+            ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz
+            gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie
+            problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób
+            uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:**
+            To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli
+            nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy
+            jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści
+            dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli
+            nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów
+            i informatyka. Możesz jednak **angażować się w kolejności materiału, która
+            najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org,
+            możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie
+            do nauczania rozwiązywania problemów i informatyki. "
+          description_teacher: "## Witamy\n\nWitamy w bezpłatnej samodzielnej nauce
+            online Code.org dla nauczycieli, aby rozpocząć nauczanie z Code.org! Po
+            ukończeniu tego profesjonalnego doświadczenia edukacyjnego, \\*\\* będziesz
+            gotowy, aby rozpocząć nauczanie Jednostki 1 CSD Code.org - Rozwiązywanie
+            problemów i informatyka\\*\\* ze swoimi uczniami.\n\n### Znajdź sposób
+            uczenia się, który Ci odpowiada\n\n-   **Podążaj we własnym tempie:**
+            To samodzielne doświadczenie uczenia się ma na celu umożliwienie Ci kontroli
+            nad własną nauką. Sugerowane czasy są podane dla każdej lekcji. Zachęcamy
+            jednak do **angażowania się we własnym temp.**\n\n-   **Wybierz treści
+            dla siebie:** Treści są uporządkowane w sugerowanym postępie dla nauczycieli
+            nowych zarówno w Code.org, jak i Jednostce 1 CSD - Rozwiązywanie problemów
+            i informatyka. Możesz jednak **angażować się w kolejności materiału, która
+            najlepiej spełnia Twoje potrzeby.** Jeśli znasz już platformę Code.org,
+            możesz pominąć Pierwsze kroki z Code.org i przejść bezpośrednio do Przygotowanie
+            do nauczania rozwiązywania problemów i informatyki. "
+          title: Nauczanie rozwiązywania problemów i informatyki
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit2-2023:
+          description_student: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 2 CSD na Code.org – Tworzenie stron internetowych**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 2 CSD  – Tworzenie stron internetowych. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania tworzenia stron internetowych.
+          description_teacher: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 2 CSD na Code.org – Tworzenie stron internetowych**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 2 CSD  – Tworzenie stron internetowych. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania tworzenia stron internetowych.
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit3-2023:
+          description_student: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 3 CSD na Code.org – Interaktywne animacje i gry**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 3 CSD  – Interaktywne animacje i gry. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Interaktywnych animacji i gier.
+          description_teacher: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 3 CSD na Code.org – Interaktywne animacje i gry**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 3 CSD  – Interaktywne animacje i gry. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Interaktywnych animacji i gier.
+          title: Nauczanie interaktywnych animacji i gier
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit4-2023:
+          description_student: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 4 CSD na Code.org – Proces projektowania**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 4 CSD  – Proces projektowania. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Procesu projektowania.
+          description_teacher: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 4 CSD na Code.org – Proces projektowania**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 4 CSD  – Proces projektowania. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania Procesu projektowania.
+          title: Nauczanie procesu projektowania
+          version_title: "'23-'24"
+        self-paced-pl-csd-unit5-2023:
+          description_student: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa.
+          description_teacher: |-
+            ## Powitanie
+
+            Witamy w bezpłatnej, samodzielnej nauce online Code.org dla nauczycieli, by rozpoczęli nauczanie z Code.org! Po ukończeniu tego doświadczenia zawodowego **będziesz gotowy, aby rozpocząć naukę ze swoimi uczniami Jednostki 5 CSD na Code.org – Dane i społeczeństwo**.
+
+            ### Wybierz sposób uczenia się, która Ci odpowiada
+
+            -   **Podążaj we własnym tempie:** Nauka we własnym tempie ma dać Ci kontrolę nad własną nauką. Sugerowane godziny zajęć podane są przy każdej lekcji. Zachęcamy Cię jednak do **zaangażowania się w treść we własnym tempie.**
+
+            -   **Wybierz treści dla siebie:** Treści są zorganizowane według sugerowanej kolejności dla nauczycieli, którzy są nowicjuszami zarówno w Code.org, jak i w Jednostce 5 CSD  – Dane i społeczeństwo. Możesz jednak **zaangażować się w przerabianie treści w kolejności, która najlepiej odpowiada Twoim potrzebom.** Jeśli znasz już platformę Code.org, możesz pominąć wprowadzenie do Code.org i przejść od razu do Przygotowanie do Nauczania na temat Danych i społeczeństwa.
+          title: Nauczanie o danych i społeczeństwie
           version_title: "'23-'24"
         self-paced-pl-csp-2021:
           title: self-paced-pl-csp-2021

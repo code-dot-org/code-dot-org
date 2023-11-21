@@ -7,10 +7,6 @@ import {behaviorDefMutator} from './mutators/behaviorDefMutator';
 import {behaviorGetMutator} from './mutators/behaviorGetMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
-
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -69,6 +65,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
+      'behaviors_name_validator',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -125,19 +122,43 @@ GoogleBlockly.Extensions.registerMutator(
 // This extension adds an SVG frame around behavior definition blocks.
 // Not used when the modal function editor is enabled.
 GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+    // Used to create and render an SVG frame instance.
+    const getColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this);
+    };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.behaviorEditorHeader(),
-      'blocklyFunctionalFrame'
+      'blocklyFunctionalFrame',
+      getColor
     );
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
+});
+
+// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
+// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
+  const nameField = this.getField('NAME');
+  nameField.setValidator(function (newValue) {
+    // The default validator provided by mainline Blockly. Strips whitespace.
+    const rename = Blockly.Procedures.rename.bind(this);
+    const legalName = rename(newValue);
+    if (
+      legalName &&
+      this.sourceBlock_.userCreated &&
+      this.sourceBlock_.behaviorId !== legalName
+    ) {
+      this.sourceBlock_.behaviorId = legalName;
+    }
+    return legalName;
+  });
 });
 
 GoogleBlockly.Extensions.registerMutator(
@@ -168,7 +189,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   // Otherwise, we render a "blank" behavior definition block
   if (functionEditorOpen) {
     // No-op - cannot create new behaviors while the modal editor is open
-  } else if (useModalFunctionEditor) {
+  } else if (Blockly.useModalFunctionEditor) {
     const newBehaviorButton = getNewBehaviorButtonWithCallback(
       workspace,
       behaviorDefinitionBlock

@@ -52,6 +52,7 @@ fr:
         age: 'Age'
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
+        ai_settings_header: 'Paramètres IA'
         finish_sign_up_header: 'Terminez la création de votre compte'
         finish_sign_up_header_error: 'Veuillez corriger les erreurs suivantes:'
         finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
@@ -63,6 +64,7 @@ fr:
           future: ne peut pas être dans le futur
         user_type: 'Type de compte'
         us_state: 'État'
+        ai_rubrics_disabled: 'Désactiver la rubrique AI'
   beta: "beta"
   hello: "Bonjour tout le monde"
   welcome_back: "Bienvenue %{name}"
@@ -1156,12 +1158,14 @@ fr:
         israel: 'Israël'
         jamaica: 'Jamaïque'
         kenya: 'Kenya'
+        kosovo: 'Kosovo'
         malaysia: 'Malaisie'
         maldives: 'Maldives'
         mexico: 'Mexique'
         mongolia: 'Mongolie'
         new_zealand: 'Nouvelle-Zélande'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
         portugal: 'Portugal'
         slovakia: 'Slovaquie'
         south_korea: 'Corée du Sud'
@@ -1313,4 +1317,3 @@ fr:
     binary: "Binaire"
     hexadecimal: "Hexadécimal"
     pixel_format_header: "Format de pixels"
-

@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --brand_primary_light: #aee4ea;
+  --brand_primary_light: #d6f2f5;
   --brand_primary_default: #008b9a;
   --brand_primary_dark: #176870;
   --brand_secondary_light: #c7b4df;
@@ -549,6 +549,28 @@ a.link-button.secondary {
 
 a.link-button.secondary:hover {
   background-color: var(--neutral_dark10);
+}
+
+a.link-button.secondary {
+  background: none;
+  border: 2px solid var(--brand_secondary_default);
+  color: var(--brand_secondary_default);
+}
+
+a.link-button.secondary:hover {
+  background-color: var(--neutral_dark10);
+}
+
+a.link-button.white {
+  background-color: var(--neutral_light);
+  border-color: var(--neutral_light);
+  color: var(--neutral_dark);
+}
+
+a.link-button.secondary.white {
+  background: none;
+  border-color: var(--neutral_white);
+  color: var(--neutral_white);
 }
 
 .continue-btn{

@@ -59,6 +59,11 @@ km:
             '"measures"': រង្វាស់
             '"seconds"': វិ​នាទី
         text: បន្ទាប់ពី {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': រង្វាស់
+            '"seconds"': វិ​នាទី
       Dancelab_changeColorBy:
         text: ប្ដូរ {COLOR} {METHOD} ដោយ {AMOUNT}
       Dancelab_changeMoveEachLR:
@@ -75,6 +80,21 @@ km:
             '"SLOTH"': ស្លូត (sloth)
             '"UNICORN"': សេះមានស្ដែង
             sprites: ទាំងអស់
+          MOVE:
+            '"rand"': ចៃដន្យ
+            MOVES.ClapHigh: ទេះដៃខ្ពស់
+            MOVES.Drop: ទម្លាក់ (Drop)
+            MOVES.Fresh: ស្រស់ស្រាយ
+            MOVES.Kick: ផ្កាយ
+            MOVES.Rest: គ្មាន
+            MOVES.Roll: ក្រឡេងខ្លួន
+            MOVES.ThisOrThat: នេះ ឬនោះ
+        text: "{GROUP} ធ្វើ {MOVE} {DIR} ជារៀងរហូត"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': ឆ្មា
+            '"SLOTH"': ស្លូត (sloth)
           MOVE:
             '"rand"': ចៃដន្យ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
@@ -437,6 +457,43 @@ km:
             '"snowflakes"': ព្រិល
             '"sparkles"': ផ្កាភ្លើង
             '"spiral"': រាងគូទខ្យង
+            '"stars"': ផ្កាយ
+            '"text"': ឈ្មោះបទចម្រៀង
+          PALETTE:
+            '"cool"': ត្រជាក់
+            '"default"': ពន្លឺ
+            '"electronic"': អេឡិចត្រូនិក
+            '"iceCream"': ការ៉េម
+            '"neon"': អ៊ីយូន (Neon)
+            '"rave"': ខ្មៅ និងស
+            '"tropical"': ត្រូពិច
+            '"warm"': កក់ក្តៅ
+        text: |-
+          កំណត់ផ្ទៃខាងក្រោយ
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': រង្វង់
+            '"color_cycle"': ពណ៌
+            '"diamonds"': ពេជ្រ
+            '"disco"': ការ៉េ
+            '"disco_ball"': បាល់ឌីស្កូ
+            '"fireworks"': កាំជ្រួច
+            '"flowers"': ផ្កា
+            '"galaxy"': space key
+            '"growing_stars"': ផ្កាយកុំពុងរីកមាឌ
+            '"higher_power"': ថាមពល
+            '"music_wave"': សញ្ញារលកតន្ត្រី
+            '"none"': គ្មាន
+            '"quads"': មុំ
+            '"rand"': ចៃដន្យ
+            '"ripples"': រលកកណ្ដាល
+            '"ripples_random"': ដំណក់រលកឥន្ទធនូ
+            '"snowflakes"': ព្រិល
+            '"sparkles"': ផ្កាភ្លើង
+            '"spiral"': រាងគូទខ្យង
+            '"starburst"': ផ្កាយផ្ទុះចេញ
             '"stars"': ផ្កាយ
             '"text"': ឈ្មោះបទចម្រៀង
           PALETTE:
@@ -1051,6 +1108,8 @@ km:
             '"spinning_right"': បង្វិលស្តាំ
             '"wandering"': វង្វេង
             '"wobbling"': អង្រួន
+      Poetry_whenPromptAnswered:
+        text: នៅពេលដែល {VAR} បានឆ្លើយ
       RyanLab_moveForward:
         text: ផ្លាស់ទីទៅមុខ
       RyanLab_turnLeft:
@@ -1447,6 +1506,8 @@ km:
         options:
           SIZE:
             '75': មធ្យម
+      gamelab_setPrompt:
+        text: prompt អ្នកប្រើប្រាស់ {QUESTION} សម្រាប់អថេរ {VAR}
       gamelab_setProp:
         options:
           PROPERTY:
@@ -1510,6 +1571,8 @@ km:
         text: នៅពេល {KEY} បានចុច
       gamelab_whenLeftArrow:
         text: នៅពេលចុចព្រួញខាងឆ្វេង
+      gamelab_whenPromptAnswered:
+        text: នៅពេលដែល {VAR} បានឆ្លើយ
       gamelab_whenRightArrow:
         text: នៅពេលចុចព្រួញស្តាំ
       gamelab_whenUpArrow:

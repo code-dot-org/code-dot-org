@@ -2,14 +2,43 @@
 sl:
   data:
     blocks:
+      AmysBlocks_addTarget:
+        options:
+          OPT:
+            '"avoids"': Izogiba se
+            '"follows"': Sledi
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': obrni se desno za
+            '"too little"': premalo
+            '"too much"': Preveč
+        text: Če
+      AmysBlocks_goldilocksElse:
+        text: Če preveč
+      AmysBlocks_makeNumSprites:
+        text: Ustvari nove like
+      AmysBlocks_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): premikanje NSEW s puščičnimi
+              tipkami
+      AmysBlocks_spriteSayVar:
+        text: "{SPRITE}reci{TEXT1}"
       BadGuys_setSizeAll_dropdown:
         options:
           SIZE:
             '1.00': srednje
+            '3.00': Zelo veliko
+        text: nastavite velikost vseh spritov na {SIZE}
       BadGuys_setSize_dropdown:
         options:
           SIZE:
             '1.00': srednje
+            '3.00': Zelo veliko
+        text: nastavite {SPRITE} velikost na {SIZE}
+      Dancelab_ai:
+        text: uporabite AI {IMAGE}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -23,8 +52,21 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
+          MOVE1:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+          MOVE2:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Dancelab_atTimestamp:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
+      Dancelab_atTimestampNotAfter:
         options:
           UNIT:
             '"seconds"': sekund(e)
@@ -47,15 +89,32 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           MOVE:
             '"next"': "(Naslednja)"
             '"prev"': "(Prejšnja)"
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': muce
+          MOVE:
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Dancelab_changeMoveLR:
         options:
           MOVE:
             '"next"': "(Naslednja)"
             '"prev"': "(Prejšnja)"
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -74,6 +133,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           PROPERTY:
             '"height"': višina
@@ -91,11 +151,35 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
+          MOVE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.XArmsUp: Pretegniti se
+            MOVES.XKnee: koleno
+            MOVES.XKneel: poklekniti
+            MOVES.XSlide: Pomik
+      Dancelab_doMoveLR:
+        options:
+          MOVE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.XArmsUp: Pretegniti se
+            MOVES.XKnee: koleno
+            MOVES.XKneel: poklekniti
+            MOVES.XSlide: Pomik
       Dancelab_everySeconds:
         options:
           UNIT:
             '"seconds"': sekund(e)
+      Dancelab_everyVerseChorus:
+        options:
+          UNIT:
+            '"chorus"': refren
+            '"verse"': verz
       Dancelab_getProp:
         options:
           PROPERTY:
@@ -105,6 +189,12 @@ sl:
         options:
           UNIT:
             '"seconds"': sekund(e)
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Dancelab_ifTime:
         options:
           UNIT:
@@ -113,6 +203,8 @@ sl:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_jumpToEach:
@@ -128,9 +220,12 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": naključno
       Dancelab_layoutSprites:
@@ -150,6 +245,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
       Dancelab_makeAnonymousDanceSprite:
         options:
@@ -163,6 +259,8 @@ sl:
             '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSprite:
@@ -177,6 +275,8 @@ sl:
             '"ROBOT"': robot
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": naključno
       Dancelab_makeNewDanceSpriteGroup:
@@ -192,6 +292,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
           LAYOUT:
             '"diamond"': diamant
             '"grid"': mreža
@@ -211,6 +312,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
       Dancelab_setProp:
         options:
@@ -230,6 +332,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           PROPERTY:
             '"height"': višina
@@ -252,6 +355,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           PROPERTY:
             '"height"': višina
@@ -269,6 +373,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
       Dancelab_setTintEachInline:
         options:
@@ -283,6 +388,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
       Dancelab_setVisible:
         options:
@@ -301,6 +407,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           VISIBILITY:
             'true': vidno
@@ -322,6 +429,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           PROPERTY:
             '"height"': višina
@@ -344,6 +452,7 @@ sl:
             '"PINEAPPLE"': ananasi
             '"ROBOT"': roboti
             '"SHARK"': morski psi
+            '"UNICORN"': samorogi
             sprites: vse
           PROPERTY:
             '"height"': višina
@@ -370,6 +479,10 @@ sl:
           EFFECT:
             '"hearts"': srca
             '"rain"': dež
+      FunctionBlocks_spriteSayVar:
+        text: "{SPRITE}reci{TEXT1}"
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -380,6 +493,8 @@ sl:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
       Mikelab_getProp:
         options:
@@ -403,6 +518,8 @@ sl:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
       Mikelab_groupDestroy:
         options:
@@ -438,6 +555,12 @@ sl:
         options:
           SELECT:
             '"all"': vse
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Mikelab_randomColor:
         text: naključna barva
       Mikelab_repeatUntilComplete:
@@ -461,6 +584,8 @@ sl:
         options:
           LOCATION:
             "{x: 100, y: 200}": levo
+            "{x: 200, y: 100}": zgoraj
+            "{x: 200, y: 300}": spodaj
             "{x: 300, y: 200}": desno
       Mikelab_whenKeyPressed:
         options:
@@ -617,6 +742,13 @@ sl:
           DIR:
             left: levo↺
             right: desno↻
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': obrni se desno za
+            '"too little"': premalo
+            '"too much"': Preveč
+        text: Če
       gamelab_atTime:
         options:
           UNIT:

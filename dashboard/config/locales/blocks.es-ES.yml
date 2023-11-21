@@ -2,6 +2,10 @@
 es:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -75,6 +79,11 @@ es:
             '"measures"': compaces
             '"seconds"': segundos
         text: después {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': compaces
+            '"seconds"': segundos
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -98,6 +107,27 @@ es:
             '"SLOTH"': perezas
             '"UNICORN"': unicornios
             sprites: todo
+          MOVE:
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Kick: Estrella
+            MOVES.Rest: Ninguna
+            MOVES.Roll: Vuelta completa
+            MOVES.ThisOrThat: Esto o aquello
+        text: "{GROUP} hace {MOVE} {DIR} para siempre"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': perezas
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
@@ -594,6 +624,50 @@ es:
             '"vintage"': Vintage
             '"warm"': Rojos
         text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Túnel
+            '"clouds"': Nubes
+            '"color_cycle"': Colores
+            '"diamonds"': Diamantes
+            '"disco"': Cuadrados
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fuegos artificiales
+            '"flowers"': Flores
+            '"galaxy"': Espacio
+            '"growing_stars"': Estrellas crecientes
+            '"kaleidoscope"': Caleidoscopio
+            '"lasers"': Pista de baile láser
+            '"music_wave"': Olas
+            '"none"': Ninguna
+            '"quads"': Ángulos
+            '"rainbow"': Arcoíris
+            '"rand"': "(Al azar)"
+            '"ripples"': Ondas
+            '"ripples_random"': Ondas aleatorias
+            '"snowflakes"': Nieve
+            '"sparkles"': Brillos
+            '"spiral"': Espiral
+            '"splatter"': Salpicaduras de pintura
+            '"squiggles"': Garabatos
+            '"starburst"': Explosión de estrellas
+            '"stars"': Estrellas
+            '"swirl"': Hipnótico
+            '"text"': Título de la canción
+          PALETTE:
+            '"cool"': Azules
+            '"default"': Luz
+            '"electronic"': Música electrónica
+            '"iceCream"': Helado
+            '"neon"': Neón
+            '"ocean"': Océano
+            '"rainbow"': Arcoíris
+            '"rave"': Blanco y negro
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Rojos
+        text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1032,6 +1106,15 @@ es:
         text: "{SPRITE}dice{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': líquido
+            '"solid"': sólido
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: cayendo
       Mikelab_addBehaviorSimple:
@@ -1969,6 +2052,10 @@ es:
             left: izquierda ↺
             right: derecha ↻
         text: girar a la {DIR}
+      ecosystems_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:

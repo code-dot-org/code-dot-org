@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Koodaustunti -sivustolla on yli 500 tietotekniikan aktiviteettia kaikenikäisille ja kaikille osaamistasoille. Sivuston on kehittänyt Code.org ja sen yhteistyökumppanit.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lisätietoja"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Liity joukkoomme"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Liity joukkoomme"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Liity joukkoomme"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "ai-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Aloita"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Kokeile"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Lue lisää"
+    }
+  }
+}

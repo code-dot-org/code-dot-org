@@ -5001,6 +5001,9 @@ pt:
         virtual-pl-csa-summer-2024-day1:
           title: Dia 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
           title: Dia 2
         virtual-pl-csp-summer-day3:
           title: Dia 3
@@ -5009,10 +5012,71 @@ pt:
         virtual-pl-csa-summer-day2:
           title: Dia 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
           title: Dia 3
         virtual-pl-csa-summer-day4:
           title: Dia 4
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
           title: Dia 1
         virtual-pl-csp-summer-day1:
           title: Dia 1
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e computação'
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Resolução de Problemas e Computação da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação à Resolução de Problemas e Computação.
+            -   Praticar conceitos-chave incluídos na unidade.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 30 minutos
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparação para ensinar Programação Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Preparação para ensinar Animações interativas e jogos
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Módulo 4: Preparação para ensinar o processo de design"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparação para ensinar Dados e Sociedade'

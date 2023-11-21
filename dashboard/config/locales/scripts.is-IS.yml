@@ -3728,6 +3728,17 @@ is:
               display_name: Innihald
             csd3_2:
               display_name: 'Kafli 2: Gerð leikja'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kynning
+          lessons:
+            lesson-7:
+              name: Kynning
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kynning
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3736,6 +3747,10 @@ is:
           lessons:
             lesson-3:
               name: Mat
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kynning
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

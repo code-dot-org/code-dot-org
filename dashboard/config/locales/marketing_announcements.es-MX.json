@@ -1,0 +1,67 @@
+{
+  "es-MX": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Aprende más",
+            "title": "Explore Inteligencia Artificial y Aprendizaje Automático"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Aprende más"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Aprende más"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Aprende más"
+          },
+          "codebytes-2020": {
+            "buttonText": "Aprende más"
+          },
+          "coldplay": {
+            "buttonText": "Pruébalo"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Comenzar"
+          },
+          "csjourneys": {
+            "buttonText": "Aprende más"
+          },
+          "csjourneys-22": {
+            "buttonText": "Aprende más"
+          },
+          "csleadersprize": {
+            "buttonText": "Aprende más"
+          },
+          "hoc-2023": {
+            "body": "Súmate a millones de personas en todo el mundo y organiza una hora de programación para aprender cómo funciona la Inteligencia Artificial. Cualquiera, en cualquier lugar puede hacerlo sin necesidad de experiencia previa.",
+            "buttonText": "Aprende más",
+            "title": "Hora del Código: Creatividad con IA"
+          },
+          "hoc-more": {
+            "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
+          },
+          "home-learning-2020": {
+            "buttonText": "Ver Ideas de Proyecto"
+          },
+          "superhero": {
+            "buttonText": "Aprenda más"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Anímate"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Designar a un docente"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Anímate"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Anímate"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1546,11 +1546,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "Codice",
-          "definition": "(v) Scrivere istruzioni per un computer"
+          "definition": "(verbo) Scrivere istruzioni per un computer"
         },
         "event/csc-adaptations/2023": {
           "word": "Evento",
-          "definition": "Un'azione che fa succedere qualcosa"
+          "definition": "Un'azione che fa accadere qualcosa"
         },
         "evolution/csc-adaptations/2023": {
           "word": "Evoluzione",
@@ -1606,47 +1606,47 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "Codice",
-          "definition": "(v) Scrivere istruzioni per un computer"
+          "definition": "(verbo) Scrivere istruzioni per un computer"
         },
         "condition/csc-ecosystems/2023": {
           "word": "Condizione",
-          "definition": "Qualcosa che un programma controlla per vedere se è vero prima di consentire un'azione"
+          "definition": "Una situazione che un programma controlla per decidere se permettere o meno una certa azione"
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Istruzioni condizionali",
-          "definition": "Dichiarazioni che vengono eseguite solo in determinate condizioni"
+          "definition": "Istruzioni eseguite solamente in determinate condizioni"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Ecosistema",
-          "definition": "Una comunità biologica di organismi interagenti e del loro ambiente"
+          "definition": "Una comunità biologica costituita da organismi che interagiscono tra loro e dal loro ambiente"
         },
         "event/csc-ecosystems/2023": {
           "word": "Evento",
-          "definition": "Un'azione che fa succedere qualcosa"
+          "definition": "Un'azione che fa accadere qualcosa"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "Pesca eccessiva",
-          "definition": "Rimozione dei pesci più velocemente di quanto possano riprodursi"
+          "definition": "Cattura dei pesci a un ritmo maggiore rispetto a quello con cui si riproducono"
         },
         "simulation/csc-ecosystems/2023": {
           "word": "Simulazione",
           "definition": "Un modello computerizzato a scopo di studio."
         },
         "debug/csc-ecosystems/2023": {
-          "word": "Eseguire il debug",
-          "definition": "Individuazione e correzione di errori o problemi nel codice."
+          "word": "Eseguire il debugging",
+          "definition": "Individuazione e correzione di errori o problemi nel programma."
         },
         "variable/csc-ecosystems/2023": {
           "word": "Variabile",
           "definition": "Un contenitore in grado di memorizzare un valore. "
         },
         "ecologist/csc-ecosystems/2023": {
-          "word": "Ecologista",
-          "definition": "Uno scienziato che studia come animali e piante interagiscono con il loro ambiente."
+          "word": "Ecologo",
+          "definition": "Uno scienziato che studia in che modo animali e piante interagiscono con il loro ambiente."
         },
         "energy/csc-ecosystems/2023": {
           "word": "Energia",
-          "definition": "Trasferito tra organismi nelle reti alimentari dai produttori ai consumatori. L'energia viene utilizzata dagli organismi per svolgere compiti complessi."
+          "definition": "Trasferita tra organismi nelle reti alimentari dai produttori ai consumatori. L'energia viene utilizzata dagli organismi per svolgere compiti complessi."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "Catena alimentare ",
@@ -2515,7 +2515,7 @@
         },
         "network/how-ai-works/2023": {
           "word": "Rete",
-          "definition": "Una raccolta di oggetti collegati tra loro. Seguendo queste connessioni è possibile rappresentare i passaggi di un algoritmo, ad esempio un diagramma di flusso."
+          "definition": "un insieme di elementi collegati tra loro. Queste connessioni possono rappresentare i passaggi di un algoritmo, come un diagramma di flusso."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Modello linguistico di grandi dimensioni (LLM)",
@@ -2526,11 +2526,11 @@
           "definition": "Un programma informatico progettato per prendere una decisione"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Diffusione AI",
-          "definition": "conversione di un'immagine in rumore e addestramento di un'intelligenza artificiale per invertire il processo"
+          "word": "Diffusione IA",
+          "definition": "convertire un'immagine in rumore e addestrare un'IA per invertire il processo"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (rete antagonistica generativa)",
+          "word": "GAN (Generative Adversarial Network ossia Rete Generativa Avversaria)",
           "definition": "un modo di utilizzare due modelli di intelligenza artificiale concorrenti per generare qualcosa"
         },
         "artificial_intelligence/how-ai-works/2023": {
@@ -2642,7 +2642,7 @@
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
         "code/flappy/unversioned": {
-          "word": "programmare (to code)",
+          "word": "programmare",
           "definition": "(v) programmare o scrivere istruzioni per un computer."
         },
         "debugging/flappy/unversioned": {
@@ -2871,6 +2871,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressione senza perdita",
           "definition": "un algoritmo di compressione dei dati che permette di ricostruire perfettamente i dati originali a partire dai dati compressi. Più comunemente usato per la compressione del testo (ad es. Compressione .zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Codice",
+          "definition": "(v) programmare o scrivere istruzioni per un computer."
+        },
+        "event/dance-ai/2023": {
+          "word": "Evento",
+          "definition": "Un'azione che fa accadere qualcosa."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programma",
+          "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Intelligenza artificiale (AI)",
+          "definition": "Un programma per computer che raccoglie dati, apprende modelli da tali dati e quindi prende decisioni in base a ciò che ha appreso."
         }
       }
     }

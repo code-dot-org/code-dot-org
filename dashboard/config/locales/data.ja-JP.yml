@@ -643,7 +643,7 @@ ja:
         csa_wrapper_classes_part_2: 'CSA: ラッパークラスパート 2'
         csa_writing_a_method: 'CSA: メソッドを書く'
         csc-ecosystems-intro: エコシステム入門
-        csc-event-short-intro: イベントショートイントロ
+        csc-event-short-intro: イベント・ショートイントロダクション
         csc-poem-art-intro: イントロビデオ
         csc-poem-art-outro: エンディングビデオ
         csc-sprite-lab-pixel-editor: 自分だけのスプライトを描こう
@@ -678,6 +678,7 @@ ja:
         csd_gamelab_velocity: 速度
         csd_how_teamwork_works: チームワークのしくみ
         csd_ml_ethics_ai: '倫理と人工知能 '
+        csd_ml_how_ai_works: 人工知能のしくみ
         csd_ml_import_model: AI モデルのインポート
         csd_ml_intro_ai_lab_july2021: AI ラボの紹介
         csd_ml_intro_to_ai_lab: AI ラボの紹介

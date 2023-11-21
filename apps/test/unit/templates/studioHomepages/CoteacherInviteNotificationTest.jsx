@@ -8,6 +8,7 @@ import DCDO from '@cdo/apps/dcdo';
 describe('CoteacherInviteNotification', () => {
   const defaultProps = {
     asyncLoadCoteacherInvite: () => {},
+    asyncLoadSectionData: () => {},
     coteacherInvite: {
       id: 1,
       invited_by_name: 'The Great Pumpkin',

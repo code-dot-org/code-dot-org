@@ -7009,8 +7009,9 @@ zh-CN:
         csc-ecosystems-2023:
           lessons:
             lesson-3:
-              name: 编写自己的生态系统 (2023)
-          title: 模拟海洋生态系统
+              name: 编写自己的生态系统（2023）
+          title: 模拟海洋生态系统（2023）
+          description: "## 本模块的建议准备工作\n\n**科学：**学生将在第1课和第2课中模拟海洋生物生态系统。为了熟悉这个生态系统，我们推荐这个[海洋动物视频](https://www.youtube.com/watch?v=8adtdg0N2-g)（9分42秒）。 \n\n在第2课中，学生将编写几种可持续的捕鱼方法。以下是一些读物，旨在积累一些背景知识并加深与现实世界的联系：[了解过度捕捞](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)（蒙特雷湾水族馆文章），或 [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)（儿童读物）。\n\n**计算机科学：**在本模块中，学生将学习新的编程概念，而这些概念对于刚接触计算机科学的学生来说可能存在困难。如果学生不熟悉Code.org的精灵图实验室，我们建议看看[使用精灵图实验室制作游泳的鱼](https://studio.code.org/s/coursee-2022/lessons/3)（55分钟）以了解该工具的基本内容。 \n\n该模块还使用被称为条件语句的高级计算机科学概念。学生以脚手架的方式学习这个概念，但是有些学生可能会受益于首先参与这个线下条件语句入门活动：[使用卡片的条件语句](https://studio.code.org/s/coursed-2022/lessons/12)（50分钟）。"
         csc-adaptations-2023:
           lessons:
             lesson-2:
@@ -8241,15 +8242,57 @@ zh-CN:
         virtual-pl-csa-summer-2024-day1:
           title: 第一天
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: 介绍
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
           title: 第二天
         virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: 异步第 1 部分
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
           title: 第三天
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
+            lessonGroup-5:
+              display_name: 异步第 2 部分
           title: 第四天
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: 闭幕式
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步第 1 部分
+            lessonGroup-3:
+              display_name: 异步第 1 部分
+            lessonGroup-4:
+              display_name: 同步第 2 部分
         virtual-pl-csa-summer-day2:
           lessons:
-            lesson-1:
-              name: 同步第 1 部分
             lesson-2:
               name: 异步第 1 部分
             lesson-3:
@@ -8269,11 +8312,9 @@ zh-CN:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: 同步第 1 部分
+              name: 介绍
             lesson-2:
               name: 异步第 1 部分
-            lesson-3:
-              name: 同步第 2 部分
             lesson-4:
               name: 异步第 2 部分
           lesson_groups:
@@ -8288,14 +8329,12 @@ zh-CN:
           title: 第三天
         virtual-pl-csa-summer-day4:
           lessons:
-            lesson-1:
-              name: 同步第 1 部分
             lesson-2:
               name: 异步第 1 部分
-            lesson-3:
-              name: 同步第 2 部分
             lesson-4:
               name: 异步第 2 部分
+            lesson-5:
+              name: 研讨会开幕式
           lesson_groups:
             lessonGroup-2:
               display_name: 同步第 1 部分
@@ -8309,11 +8348,17 @@ zh-CN:
         virtual-pl-csa-summer-day5:
           lessons:
             lesson-1:
-              name: 同步第 1 部分
+              name: 研讨会开幕式
+            lesson-2:
+              name: 异步第 1 部分
             lesson-3:
               name: 同步第 2 部分
             lesson-4:
               name: 异步第 2 部分
+            lesson-13:
+              name: 闭幕式
+            lesson-16:
+              name: 闭幕式
           lesson_groups:
             lessonGroup-2:
               display_name: 同步第 1 部分
@@ -8324,14 +8369,16 @@ zh-CN:
           title: '第 5 天 '
         virtual-pl-csa-summer-day1:
           lessons:
-            lesson-1:
-              name: 同步第 1 部分
             lesson-2:
               name: 异步第 1 部分
             lesson-3:
               name: 同步第 2 部分
             lesson-4:
               name: 异步第 2 部分
+            lesson-7:
+              name: 介绍
+            lesson-8:
+              name: 研讨会开幕式
           lesson_groups:
             lessonGroup-2:
               display_name: 同步第 1 部分
@@ -8341,6 +8388,8 @@ zh-CN:
               display_name: 同步第 2 部分
             lessonGroup-5:
               display_name: 异步第 2 部分
+            lessonGroup-7:
+              display_name: 介绍
           title: 第一天
         virtual-pl-csp-summer-day1:
           lesson_groups:
@@ -8353,3 +8402,17 @@ zh-CN:
             lessonGroup-5:
               display_name: 异步第 2 部分
           title: 第一天
+        self-paced-pl-csd-unit1-2-2023:
+          title: 模块1：准备问题解决和计算教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-   认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-   认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模块2：准备Web开发教学
+        self-paced-pl-csd-unit3-2-2023:
+          title: 准备互动动画和游戏教学
+          description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-   认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：** 120分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-   认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：** 120分钟"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 模块4：准备设计进程教学"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模块5：准备数据和社会教学

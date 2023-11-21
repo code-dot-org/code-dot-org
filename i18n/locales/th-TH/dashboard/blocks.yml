@@ -73,6 +73,11 @@ th:
           UNIT:
             '"measures"': ห้องดนตรี
             '"seconds"': วินาที
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ห้องดนตรี
+            '"seconds"': วินาที
       Dancelab_changeColorBy:
         text: เปลี่ยน {COLOR} {METHOD} จำนวน {AMOUNT}
         options:
@@ -112,6 +117,27 @@ th:
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
+        options:
+          GROUP:
+            '"CAT"': แมวทั้งหมด
+            '"SLOTH"': สล็อต
+          MOVE:
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Rest: ไม่มี
+            '"next"': "(ถัดไป)"
+            '"prev"': "(ก่อนหน้า)"
+            '"rand"': "(สุ่ม)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
         options:
@@ -570,6 +596,51 @@ th:
             '"iceCream"': ไอศกรีม
             '"default"': อ่อน
             '"neon"': นีออน
+            '"tropical"': ทรอปิคอล
+            '"vintage"': วินเทจ
+            '"warm"': แดง
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "กำหนดแบ็กกราวนด์เอฟเฟกต์
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': ไม่มี
+            '"rand"': "(สุ่ม)"
+            '"quads"': มุม
+            '"circles"': อุโมงค์
+            '"color_cycle"': สี
+            '"diamonds"': เพชร
+            '"disco_ball"': บอลดิสโก้
+            '"fireworks"': พลุ
+            '"flowers"': ดอกไม้
+            '"growing_stars"': ดาวเปล่งแสง
+            '"swirl"': ฮิปโน
+            '"kaleidoscope"': ภาพลานตา
+            '"lasers"': ฟลอร์เต้นรำเลเซอร์
+            '"splatter"': สาดสี
+            '"rainbow"': สายรุ้ง
+            '"ripples_random"': สุ่มระลอกคลื่น
+            '"ripples"': ระลอกคลื่น
+            '"snowflakes"': หิมะ
+            '"text"': ชื่อเพลง
+            '"galaxy"': พื้นที่
+            '"sparkles"': ประกาย
+            '"spiral"': วงก้นหอย
+            '"disco"': สี่เหลี่ยมจัตุรัส
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"starburst"': ดาวกระจาย
+            '"stars"': ดาว
+            '"music_wave"': คลื่น
+          PALETTE:
+            '"rave"': ขาวดำ
+            '"cool"': น้ำเงิน
+            '"electronic"': ไฟฟ้า
+            '"iceCream"': ไอศกรีม
+            '"default"': อ่อน
+            '"neon"': นีออน
+            '"ocean"': มหาสมุทร
+            '"rainbow"': สายรุ้ง
             '"tropical"': ทรอปิคอล
             '"vintage"': วินเทจ
             '"warm"': แดง
@@ -1618,6 +1689,12 @@ th:
         text: พิกัด y ของ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ของแข็ง
+            '"liquid"': ของเหลว
+            '"gas"': แก๊ส
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

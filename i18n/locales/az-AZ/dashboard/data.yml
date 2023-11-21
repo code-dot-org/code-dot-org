@@ -737,6 +737,7 @@ az:
         ai-ethis: Etika və Süni İntellekt
         how-ai-works-lessons: 'Süni intellekt (Sİ) necə işləyir: Ön baxış'
         se-cv-intro-to-lessons: 'Proqram təminatı mühəndisliyi və kompüter görməsi: dərslərə giriş'
+        csd_ml_how_ai_works: Süni İntelekt (Sİ) necə işləyir? 
     callout:
       text:
         drag_blocks: '"Get" blokunu sürükləyib şıqqıltı ilə digər blokun aşağısına yapışdırın'

@@ -6642,7 +6642,7 @@
           "name": "Bemelegítés"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Tevékenység (30-45 perc)"
+          "name": "Tevékenység"
         },
         "b2ed278d-0743-46d3-b237-72cb2f2c42b5": {
           "name": "Bemelegítés"
@@ -7573,6 +7573,12 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Szintek"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Első lépések"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Bemelegítés"
         }
       }
     }

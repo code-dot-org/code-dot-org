@@ -657,7 +657,7 @@ tr:
         csc-sprite-lab-pixel-editor: Kendi Hareketli Nesneni Çiz
         csa-pl-intro-to-strings: Java'da Dizgilere Giriş
         csa-pl-compareTo: Karşılaştırma () metodu
-        csc-event-short-intro: Etkinlikler Kısa Giriş
+        csc-event-short-intro: Olaylar için Kısa Tanıtım
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: Devre Oyun Alanına Genel Bakış
         csa-day-in-pm-pl: Proje yöneticisi ne yapar?
         csa-pl-intro-to-pm: Proje Yönetimine Giriş
@@ -728,6 +728,7 @@ tr:
         upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
         what-is-creativity: Yaratıcılık nedir?
         code-break: Kodlamaya biraz ara verin
+        csd_ml_how_ai_works: Yapay Zeka Nasıl Çalışır?
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

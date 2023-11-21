@@ -38,6 +38,10 @@ kn:
         options:
           UNIT:
             '"seconds"': ಸೆಕೆಂಡುಗಳು
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': ಸೆಕೆಂಡುಗಳು
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -45,6 +49,10 @@ kn:
             '"MOOSE"': ಮೂಸ್
             '"ROBOT"': ರೋಬೋಟಗ್‌ಗಳು
             sprites: ಎಲ್ಲ
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
       Dancelab_changeMoveLR:
@@ -186,6 +194,12 @@ kn:
         options:
           EFFECT:
             '"none"': ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"none"': ಯಾವುದೂ ಅಲ್ಲ
+          PALETTE:
+            '"ocean"': ಸಮುದ್ರ
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -336,6 +350,12 @@ kn:
         text: "{SPRITE}ಹೇಳಿ{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': ಅನಿಲ
+            '"liquid"': ಲಿಕ್ವಿಡ್
+            '"solid"': ಸಾಲಿಡ್
       KatiesBlocks_tumbling:
         text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:

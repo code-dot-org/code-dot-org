@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "Vissza",
+  "danceAiModalClose": "Bezár",
+  "danceAiModalCodeButton": "Kód",
+  "danceAiModalExplanationButton": "Tudj meg többet",
+  "danceAiModalStartOverButton": "Újrakezdés",
   "danceFeedbackDidntPress": "Mindenképpen nyomd meg a gombot, amíg a tánc folyamatban van.",
+  "danceFeedbackKeepCoding": "Minden szükséges blokkot felhasználtál, de nem megfelelően.",
   "danceFeedbackKeyEvent": "Bizonyosodj meg róla, hogy csatoltál kódot a <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"fel\"</title></block></xml> blokkhoz, és nyomd meg a gombot, amíg a tánc fut.",
   "danceFeedbackNeedBackup": "Létre kell hoznod háttértáncosok egy csoportját a <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> blokk segítségével.",
   "danceFeedbackNeedDifferentDance": "Másik táncot kell használnod.",

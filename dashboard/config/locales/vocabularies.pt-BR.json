@@ -382,7 +382,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2021": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2021": {
@@ -486,7 +486,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2021": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2021": {
@@ -585,7 +585,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2021": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2021": {
@@ -1082,7 +1082,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2022": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2022": {
@@ -1173,7 +1173,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2022": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2022": {
@@ -1272,7 +1272,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2022": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2022": {
@@ -1332,7 +1332,8 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "Inteligência Artificial"
+          "word": "Inteligência Artificial",
+          "definition": "Uma tecnologia que imite a inteligência humana, fazendo atividades como: entender um idioma, reconhecer padrões e tomar de decisões."
         },
         "adaptation/csc-adaptations/2023": {
           "word": "Adaptação",
@@ -1927,7 +1928,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursee/2023": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursee/2023": {
@@ -2018,7 +2019,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/coursef/2023": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/coursef/2023": {
@@ -2117,7 +2118,7 @@
           "definition": "Pesquisar, planejar e adquirir materiais para a atividade que estamos prestes a fazer."
         },
         "reflect/express/2023": {
-          "word": "Reflita",
+          "word": "Refletir",
           "definition": "Pensar com cuidado em algo com a intenção de melhorar o resultado no futuro."
         },
         "try/express/2023": {
@@ -2189,16 +2190,16 @@
           "definition": "Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Modelo de linguagem grande (LLM)",
-          "definition": "uma forma de IA de uso geral que é treinada em um corpo de conhecimento muito, muito grande"
+          "word": "Grande Modelo de Linguagem (LLM)",
+          "definition": "uma forma IA para vários propósitos que é treinada em um corpo de conhecimento muito, muito grande"
         },
         "model/how-ai-works/2023": {
           "word": "Modelo",
           "definition": "Um programa de computador projetado para tomar uma determinada decisão"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Difusão AI",
-          "definition": "convertendo uma imagem em ruído e treinando uma IA para reverter o processo"
+          "word": "IA de Difusão",
+          "definition": "convertendo uma imagem em ruído e treinando uma IA para reverter esse processo"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN (Rede Adversarial Generativa)",
@@ -2206,7 +2207,7 @@
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Inteligência Artificial",
-          "definition": "a capacidade das máquinas de aprender e resolver problemas."
+          "definition": "a capacidade das máquinas de aprender e solucionar problemas."
         },
         "code/aquatic/unversioned": {
           "word": "Código",
@@ -2304,7 +2305,7 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/flappy/unversioned": {
-          "word": "codificar",
+          "word": "código",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/flappy/unversioned": {
@@ -2520,6 +2521,126 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Compressão sem perdas",
           "definition": "Algoritmo de compactação de dados que permite que os dados originais sejam reconstruídos com perfeição a partir dos dados compactados. Mais usado para compactação de textos (ex.: compactação em zip)."
+        },
+        "decode/csd/2021": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2021": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
+        },
+        "decode/csd/2022": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2022": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
+        },
+        "decode/csd/2023": {
+          "word": "Decodifique",
+          "definition": "para mudar a forma como as informações são representadas para que possam ser lidas por uma pessoa"
+        },
+        "encode/csd/2023": {
+          "word": "Codifique",
+          "definition": "para alterar a forma como as informações são representadas para que possam ser lidas por um computador"
+        },
+        "generative_ai/ai-ethics/2023": {
+          "word": "IA generativa",
+          "definition": "Um tipo de Inteligência Artificial (IA) que usa padrões de conteúdo existente para criar novos conteúdos, como novos textos ou novas imagens."
+        },
+        "code/dance-ai/2023": {
+          "word": "Código",
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "event/dance-ai/2023": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programa",
+          "definition": "Um algoritmo que foi codificado tornando-se algo que pode ser administrado por uma máquina."
+        },
+        "binary_system/csd/2021": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "ascii/csd/2021": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "bit/csd/2021": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2021": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2021": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2021": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2021": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "ascii/csd/2022": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "binary_system/csd/2022": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "bit/csd/2022": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2022": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2022": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2022": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2022": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "ascii/csd/2023": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "binary_system/csd/2023": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "bit/csd/2023": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2023": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2023": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2023": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2023": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Inteligência Artificial (I.A.) ",
+          "definition": "Um programa de computador que recebe dados, aprende padrões com esses dados e então toma decisões com base no que aprendeu."
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
         }
       }
     }

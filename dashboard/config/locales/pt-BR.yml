@@ -4,6 +4,7 @@ pt:
     attributes:
       user:
         age: Idade
+        ai_settings_header: Configurações de I.A.
         current_password: Senha atual
         edit_header: Editar Detalhes da Conta
         email: E-mail
@@ -659,7 +660,7 @@ pt:
       playlab: Laboratório
       playlab_k1: Laboratório de Jogos (Pré-leitor)
       poetry: Poesia
-      poetry_hoc: Arte poética
+      poetry_hoc: Arte Poética
       scratch: Scratch
       settings: Configurações da conta
       signin: Entrar
@@ -1468,7 +1469,7 @@ pt:
     poem-art:
       body: Expresse-se! Use código para criar poemas animados.
       image_alt: Uma lula hipster se apresentando em um palco.
-      title: Arte poética
+      title: Arte Poética
     pre-express:
       image_alt: Um cachorro e um unicórnio em frente a uma árvore feita de peças
         de quebra-cabeça.

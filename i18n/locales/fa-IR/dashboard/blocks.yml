@@ -33,13 +33,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -73,6 +73,11 @@ fa:
           UNIT:
             '"measures"': اندازه‌ها
             '"seconds"': ثانیه
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': اندازه‌ها
+            '"seconds"': ثانیه
       Dancelab_changeColorBy:
         text: تغییر {COLOR}{METHOD} به اندازه {AMOUNT}
         options:
@@ -85,13 +90,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -110,6 +115,26 @@ fa:
             MOVES.Kick: ستاره
             MOVES.ThisOrThat: دیس اور دت (رقص)
             MOVES.Rest: هیچکدام
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} برای همیشه {MOVE}{DIR} را انجام می‌دهد"
+        options:
+          GROUP:
+            '"SLOTH"': خرس تنبلها
+          MOVE:
+            MOVES.Roll: بادی رول - خم شدن (رقص)
+            MOVES.ClapHigh: کلپ های (رقص)
+            MOVES.Dab: داب (رقص)
+            MOVES.DoubleJam: پریدن با دو پا روی زمین - دابل داون (رقص)
+            MOVES.Drop: انداختن
+            MOVES.Floss: فلاس - قر دادن (رقص)
+            MOVES.Fresh: فِرِش (رقص)
+            MOVES.Clown: گنگام (رقص)
+            MOVES.Kick: ستاره
+            MOVES.ThisOrThat: دیس اور دت (رقص)
+            MOVES.Rest: هیچکدام
+            '"next"': "(بعدی)"
+            '"prev"': "(قبلی)"
+            '"rand"': "(تصادفی)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} برای همیشه {MOVE}{DIR} را انجام بدهد"
         options:
@@ -142,13 +167,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -163,13 +188,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -298,20 +323,20 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_jumpToEach:
         text: "{GROUP} به {LOCATION} پرش می‌کند"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -324,20 +349,20 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": در هم
       Dancelab_layoutSprites:
         text: "{GROUP} را به شکل {FORMAT} طراحی کن"
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -383,7 +408,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSprite:
         text: یک {COSTUME} جدید بساز به نام {NAME} در محل {LOCATION}
@@ -410,7 +435,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": در هم
       Dancelab_makeNewDanceSpriteGroup:
         text: "{N} {COSTUME} جدید بساز با {LAYOUT}"
@@ -456,7 +481,7 @@ fa:
             '39': '39'
             '40': '40'
           COSTUME:
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"CAT"': گربه ها
             '"DOG"': سگ ها
@@ -464,7 +489,7 @@ fa:
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -516,7 +541,7 @@ fa:
             '"rainbow"': رنگین‌کمان (افکت)
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -555,7 +580,7 @@ fa:
             '"snowflakes"': برف (افکت)
             '"text"': اسم آواز (افکت)
             '"squiggles"': موج موج (افکت)
-            '"galaxy"': فضا  (افکت)
+            '"galaxy"': فضا
             '"sparkles"': درخشش (افکت)
             '"spiral"': مارپیچ (افکت)
             '"disco"': مربع (افکت)
@@ -568,6 +593,49 @@ fa:
             '"iceCream"': بستنی (پالت)
             '"default"': روشن (پالت)
             '"neon"': نئون (پالت)
+            '"tropical"': استوایی (پالت)
+            '"vintage"': آنتیک (پالت)
+            '"warm"': گرم (پالت)
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: تنظیم افکت پس‌زمینه روی {PALETTE}{EFFECT}
+        options:
+          EFFECT:
+            '"none"': هیچکدام
+            '"rand"': "(تصادفی)"
+            '"quads"': زاویه‌ (افکت)
+            '"circles"': دایره‌ها
+            '"color_cycle"': رنگ‌ها
+            '"diamonds"': لوزی‌ها
+            '"disco_ball"': دسکو بال
+            '"fireworks"': آتش‌بازی
+            '"flowers"': گلها (افکت)
+            '"growing_stars"': ستاره‌های بزرگ شونده (افکت)
+            '"swirl"': هیپنو (افکت)
+            '"kaleidoscope"': هزار رنگ (افکت)
+            '"lasers"': نور لیزر سالن رقص (افکت)
+            '"splatter"': رنگ پاشی (افکت)
+            '"rainbow"': رنگین‌کمان (افکت)
+            '"ripples_random"': شنهای تصادفی (افکت)
+            '"ripples"': شن (افکت)
+            '"snowflakes"': برف (افکت)
+            '"text"': اسم آواز (افکت)
+            '"galaxy"': فضا
+            '"sparkles"': درخشش (افکت)
+            '"spiral"': مارپیچ (افکت)
+            '"disco"': مربع (افکت)
+            '"squiggles"': موج موج (افکت)
+            '"starburst"': استارباست (افکت)
+            '"stars"': ستاره  (افکت)
+            '"music_wave"': امواج (افکت)
+          PALETTE:
+            '"rave"': سیاه و سفید (افکت)
+            '"cool"': جالب (پالت رنگ)
+            '"electronic"': الکترونیکی (پالت)
+            '"iceCream"': بستنی (پالت)
+            '"default"': روشن (پالت)
+            '"neon"': نئون (پالت)
+            '"ocean"': اقیانوس
+            '"rainbow"': رنگین‌کمان (افکت)
             '"tropical"': استوایی (پالت)
             '"vintage"': آنتیک (پالت)
             '"warm"': گرم (پالت)
@@ -585,13 +653,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -656,13 +724,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -688,13 +756,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -712,13 +780,13 @@ fa:
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -727,13 +795,13 @@ fa:
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -750,13 +818,13 @@ fa:
         options:
           THIS:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -782,13 +850,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -823,13 +891,13 @@ fa:
         options:
           GROUP:
             sprites: همه
-            '"ALIEN"': فضایی ها
+            '"ALIEN"': آدم فضایی‌ها
             '"BEAR"': خرسها
             '"DUCK"': اردکها
             '"FROG"': قورباغه‌ها
             '"MOOSE"': گوزن بزرگ
             '"PINEAPPLE"': آناناسها
-            '"ROBOT"': روبات ها
+            '"ROBOT"': روبات‌ها
             '"SHARK"': کوسه‌ها
             '"SLOTH"': خرس تنبلها
             '"UNICORN"': تک‌شاخها
@@ -1050,7 +1118,7 @@ fa:
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
       gamelab_clickedOn:
         text: وقتی {SPRITE} کلیک شد
       gamelab_clickedSpritePointer:
@@ -1188,7 +1256,7 @@ fa:
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
           KEY:
             '"up"': بالا
             '"down"': پایین
@@ -1451,7 +1519,7 @@ fa:
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': علمی تخیلی
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': زمین فوتبال
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': مرحله
-            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاره ها
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': ستاره‌ها
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': مترو
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': خورشید و رنگین کمان (تصویر)
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': نور خورشید
@@ -1530,7 +1598,7 @@ fa:
         options:
           CONDITION:
             '"when"': وقتی
-            '"while"': '"while"'
+            '"while"': هنگامی‌که
       gamelab_spriteSay:
         text: "{SPRITE} میگوید: {SPEECH}"
       gamelab_spriteSayTime:
@@ -1665,6 +1733,12 @@ fa:
         text: مختصات y مربوط به {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} آرام به {LOCATION} می‌رود"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': جامد
+            '"liquid"': مایع
+            '"gas"': گاز
       KatiesBlocks_tumbling:
         text: جست و خیز کردن
       Mikelab_addBehaviorSimple:
@@ -1703,7 +1777,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_getNext:
         text: دریافت شیء بعدی
@@ -1745,7 +1819,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_groupDestroy:
         text: "{SELECT}{COSTUME} را حذف کن"
@@ -1958,7 +2032,7 @@ fa:
             "{x: 100, y: 100}": بالا چپ
             "{x: 300, y: 100}": بالا راست
             "{x: 100, y: 300}": پایین چپ
-            "{x: 300, y: 300}": پایین راست
+            "{x: 300, y: 300}": سمت راست پایین
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": تصادفی
       Mikelab_whenClickedOn:
         text: وقتی {SPRITE} کلیک شد
@@ -2076,15 +2150,15 @@ fa:
             '"decorative"': تزئینی
             '"donuts"': دونات
             '"fire"': آتش
-            '"flowers"': گلها
+            '"flowers"': گل‌ها
             '"gilded"': طلاکاری شده
             '"hearts"': قلب
             '"iceCream"': بستنی
-            '"leaves"': برگ ها
+            '"leaves"': برگ‌ها
             '"metal"': قاب فلزی
             '"pawPrints"': رد پا
             '"rainbow"': رنگین کمان
-            '"stars"': ستاره ها
+            '"stars"': ستاره‌ها
             '"swirls"': چرخشی
             '"waves"': امواج
             '"wood"': قاب چوبی
@@ -2119,7 +2193,7 @@ fa:
           SOUND:
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': درخشان (صدا)
             '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': آرام (صدا)
-            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپ
+            '"sound://category_nature/steady_campfire_loop.mp3"': آتش کمپینگ
             '"sound://category_nature/rain_loop.mp3"': نم‌نم باران (صدا)
             '"sound://category_background/fire_burning.mp3"': کنار آتش (صدا)
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': جنگل
@@ -2316,11 +2390,11 @@ fa:
       Poetry_whenPromptAnswered:
         text: وقتی {VAR} پاسخ داده شد
       RyanLab_moveForward:
-        text: برو جلو
+        text: حرکت به جلو
       RyanLab_turnLeft:
-        text: بپیچ به چپ
+        text: به چپ بپیچید
       RyanLab_turnRight:
-        text: بپیچ به راست
+        text: به راست بپیچید
       Vector_createSpriteWith:
         text: |-
           ایجاد اسپرایت
@@ -2523,7 +2597,7 @@ fa:
       craft_log:
         text: ثبت پیام {MESSAGE}
       craft_moveForward:
-        text: برو جلو
+        text: حرکت به جلو
       craft_placeBlock:
         text: 'قرار بده: {blockType}'
         options:

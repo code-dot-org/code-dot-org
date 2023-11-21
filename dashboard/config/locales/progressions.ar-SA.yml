@@ -13,6 +13,7 @@ ar:
       'Artist: Variables': 'الفنان: المتغيرات'
       Assessment: التقييم
       Back and Forth: للخلف وللأمام
+      Balance an Ecosystem: تحقيق توازن النظام البيئي
       Bass, Mid, and Treble: صوت الجهير والنغمة متوسطة الطبقة والطنين الثلاثي
       Binary Numbers: أرقام ثنائية
       Board Events: أحداث اللوحة
@@ -20,6 +21,7 @@ ar:
       CS Discoveries Post-Course Survey: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
       Challenge: تحدي
       Change: تغيير
+      Check For Understanding: تحقق من الفهم
       Check for Understanding: تحقق من الفهم
       Collision Detection: كشف التصادم
       Collisions: التصادمات
@@ -36,6 +38,8 @@ ar:
       Designing for Accessibility: التصميم من أجل الوصول
       Dogger Example: مثال دودچر
       Drawing: الرسم
+      Ecosystems Simulation: محاكاة النظم البيئية
+      Ecosystems Video: فيديو النظم البيئية
       End of Course Projects: نهاية مشروعات الدورة
       Event Types: أنواع الحدث
       Events: الأحداث
@@ -43,6 +47,8 @@ ar:
       Example Projects: مشاريع كمثال
       Exploration: استكشاف
       Extra: إضافي
+      Final Dance Party Project: مشروع حفلة الرقص النهائية
+      Food Chain Setup: إعداد السلسلة الغذائية
       For Loops: للحلقات
       Free Play: اللعب الحر
       Functions: دوال
@@ -54,12 +60,15 @@ ar:
       Headings: العناوين
       Hello World: مرحبًا أيها العالم
       How to Make a Sprite: كيف تصنع "سبرايت"
+      If... then... Conditional Statements: إذا... فإن... جمل شَرطية
       Images in HTML: الصور بصيغة HTML
       Inspiration!: التلميح!
+      Intro Video: فيديو مقدمة
       Introducing Sprite Lab: التعريف بمشروع Sprite Lab (مختبر سبرايت)
       Introduction: مقدمة
       Introduction to Arrays: مقدمة عن المصفوفات
       Keeping Data Secret: الحفاظ على سرية البيانات
+      Key Press & At Measure Events: اضغط على المفاتيح وأحداث في القياس
       Keyboard Input: مدخلات لوحة المفاتيح
       Learning from Simulations: التعلّم من المحاكاة
       Lesson Extras: الدروس الإضافية
@@ -67,6 +76,7 @@ ar:
       Linking Pages: ربط الصفحات
       Linking Screens: ربط الشاشات
       Lists: القوائم
+      Make Dancer & Dance Move: اصنع راقصًا وحركة الرقص
       Making Music: إنشاء موسيقى
       Measures: الإجراءات
       'Minecraft: Hero''s Journey': 'ماين كرافت: رحلة البطل'
@@ -96,7 +106,10 @@ ar:
       Robot Doodle: الروبوت دودل
       Sample Programs: عينة برامج
       Share Out: المشاركة
+      Share Your Simulation: شارك المحاكاة الخاصة بك
       Skill Building: بناء المهارات
+      Solution 2 - Fishing Season: الحل ٢ - موسم الصيد
+      Solution 3 - Fishing Limits: الحل ٣ - حدود الصيد
       Speed it Up, Slow it Down: التسريع والإبطاء
       Sprite Lab Example Project: عينة من مشاريع مختبر الرسوم المتحركة
       Sprite Lab Project: مشروع Sprite Lab
@@ -106,6 +119,7 @@ ar:
       Text Compression: ضغط النص
       The Animation Tab: تبويب الرسوم المتحركة
       The Draw Loop: حلقة الرسم
+      The Food Chain: السلسلة الغذائية
       The Harvester: عامِلة الحصاد
       Train an AI to Clean the Ocean: تدريب الذكاء الاصطناعي لتنظيف المحيط
       Unplugged Activity: نشاط غير موصول
@@ -113,6 +127,7 @@ ar:
       Variables: المتغيرات
       Velocity: السرعة
       Video: فيديو
+      Video - Repeat Blocks: فيديو- مربعات التكرار البرمجية
       'Video: CS Matters': 'فيديو: أهمية علم الحاسوب'
       'Video: Outbreak Simulator: Introduction': 'فيديو: انفجار المحاكاة: مقدمة'
       'Video: Programming with Blocks': البرمجة بالقطع البرمجية

@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 ##Sample Chatbot
 
-* [**ELIZA**](https://web.njit.edu/~ronkowit/eliza.html) – an early natural language processing program written in the mid-1960s to demonstrate how superficial human to computer communications were at that time
+* [**ELIZA**](https://www.masswerk.at/elizabot/) – an early natural language processing program written in the mid-1960s to demonstrate how superficial human to computer communications were at that time
+
+* [**ELIZA**](https://www.masswerk.at/eliza/) - a more advanced implementation of the Eliza bot that incorporates speech.
 
 ##Current Work in NLP
 

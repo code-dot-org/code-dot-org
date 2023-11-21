@@ -1978,19 +1978,6 @@ sk-SK:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
-        markdown: |
-          # Weby na riešenie problémov
-
-          Tieto weby boli vytvorené na vyriešenie nejakého problému. Vyber si z nich dve a vyplň pomocou nich sprievodcu aktivitou.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: Sem pridať popis
       CSD U2 expand project_2018:
@@ -11483,7 +11470,7 @@ sk-SK:
         description: Každú z týchto simulácií ekosystému je potrebné upraviť. Vyberte
           ekosystém, spustite simuláciu, aby ste problém pozorovali, a upravte kód
           tak, aby ste ho opravili.
-        display_name: Vyberte si ekosystém!
+        display_name: Vyber si ekosystém!
       csc_ecosystems_conditionals_overview:
         markdown: "#Podmienky  - príčina a následok \n\n</div>\n\n## Teraz pridáš
           kód na kontrolu množstva rias vo vode <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
@@ -21549,11 +21536,6 @@ sk-SK:
 
           ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
       ml-models-shoe survey_2022:
-        markdown: |
-          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## [Klikni sem](https://docs.google.com/forms/d/e/1FAIpQLSfQ0hr1uImhBjvqzv6wnyUaa-WDDgsub2O0vx15eqz7azICdA/viewform) a vyplň dotazník Odporúčanie topánok.
-      ml-models-shoe survey_2023:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 

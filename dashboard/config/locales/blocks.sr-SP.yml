@@ -32,6 +32,10 @@ sr:
         options:
           UNIT:
             '"seconds"': секунде
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': секунде
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -51,6 +55,15 @@ sr:
             '"ROBOT"': роботи
             '"SHARK"': ајкуле
             sprites: све
+          MOVE:
+            '"next"': "(Наредни)"
+            '"prev"': "(Претходни)"
+            '"rand"': "(Насумичан)"
+            MOVES.Kick: Звезда
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': мачке
           MOVE:
             '"next"': "(Наредни)"
             '"prev"': "(Претходни)"
@@ -217,6 +230,10 @@ sr:
       Dancelab_randomColor:
         text: насумична боја
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': "(Насумичан)"
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"rand"': "(Насумичан)"

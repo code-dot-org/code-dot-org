@@ -69,6 +69,11 @@ ro:
           UNIT:
             '"measures"': măsuri
             '"seconds"': secunde
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': măsuri
+            '"seconds"': secunde
       Dancelab_changeColorBy:
         text: schimbă {COLOR} {METHOD} cu {AMOUNT}
         options:
@@ -108,6 +113,27 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fă {MOVE} {DIR} tot mereu"
+        options:
+          GROUP:
+            '"CAT"': pisicile
+            '"SLOTH"': leneși
+          MOVE:
+            MOVES.Roll: Corpul ca un val
+            MOVES.ClapHigh: Bate din palme sus
+            MOVES.Dab: Mişcare dab
+            MOVES.DoubleJam: Dublă jos
+            MOVES.Drop: Cădere
+            MOVES.Floss: Flutură
+            MOVES.Fresh: Vioi
+            MOVES.Clown: Stil Gangnam
+            MOVES.Kick: Stea
+            MOVES.ThisOrThat: Asta sau aia
+            MOVES.Rest: Nici unul
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
       Dancelab_changeMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
@@ -567,6 +593,51 @@ ro:
             '"iceCream"': Îngheţată
             '"default"': Lumină
             '"neon"': Neon
+            '"tropical"': Tropical
+            '"vintage"': Vechi
+            '"warm"': Cald
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          setează efectul de fundal la
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Nici unul
+            '"rand"': Aleatoriu
+            '"quads"': Îngeri
+            '"circles"': Cercuri
+            '"color_cycle"': Culori
+            '"diamonds"': Diamante
+            '"disco_ball"': Glob de discotecă
+            '"fireworks"': Artificii
+            '"flowers"': Flori
+            '"growing_stars"': Stele crescânde
+            '"swirl"': Hipnotic
+            '"kaleidoscope"': Caleidoscope
+            '"lasers"': Ring de dans cu lasere
+            '"splatter"': Stropi de vopsea
+            '"rainbow"': Curcubeu
+            '"ripples_random"': Ondulații aleatorii
+            '"ripples"': Ondulații
+            '"snowflakes"': Zăpadă
+            '"text"': Nume cântec
+            '"galaxy"': Spaţiu
+            '"sparkles"': Scântei
+            '"spiral"': Spirală
+            '"disco"': Pătrate
+            '"squiggles"': Mâzgălituri
+            '"starburst"': Accelerare
+            '"stars"': Stele
+            '"music_wave"': Valuri
+          PALETTE:
+            '"rave"': Negru şi alb
+            '"cool"': Interesant
+            '"electronic"': Electronic
+            '"iceCream"': Îngheţată
+            '"default"': Lumină
+            '"neon"': Neon
+            '"ocean"': Ocean
+            '"rainbow"': Curcubeu
             '"tropical"': Tropical
             '"vintage"': Vechi
             '"warm"': Cald
@@ -1617,6 +1688,12 @@ ro:
         text: coordonatele y ale {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': lichid
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

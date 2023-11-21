@@ -1188,11 +1188,11 @@
         },
         "code/csc-adaptations/2023": {
           "word": "Code",
-          "definition": "(v) Pour écrire des instructions pour un ordinateur"
+          "definition": "(v) Sert à écrire des instructions pour un ordinateur"
         },
         "event/csc-adaptations/2023": {
           "word": "Évènement",
-          "definition": "Une action qui fait bouger les choses"
+          "definition": "Une action qui provoque quelque chose"
         },
         "evolution/csc-adaptations/2023": {
           "word": "Évolution",
@@ -1248,11 +1248,11 @@
         },
         "code/csc-ecosystems/2023": {
           "word": "Code",
-          "definition": "(v) Pour écrire des instructions pour un ordinateur"
+          "definition": "(v) Sert à écrire des instructions pour un ordinateur"
         },
         "condition/csc-ecosystems/2023": {
           "word": "Condition",
-          "definition": "Quelque chose qu'un programme vérifie pour voir si c'est vrai avant d'autoriser une action"
+          "definition": "Une chose qu'un programme vérifie pour voir si elle est véridique avant d'autoriser une action"
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Instructions conditionnelles",
@@ -1260,11 +1260,11 @@
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Écosystème",
-          "definition": "Une communauté biologique d'organismes en interaction avec leur environnement"
+          "definition": "Une communauté biologique d'organismes qui interagissent entre eux et avec leur environnement"
         },
         "event/csc-ecosystems/2023": {
           "word": "Évènement",
-          "definition": "Une action qui fait bouger les choses"
+          "definition": "Une action qui provoque quelque chose"
         },
         "overfishing/csc-ecosystems/2023": {
           "word": "Surpêche",
@@ -1276,23 +1276,23 @@
         },
         "debug/csc-ecosystems/2023": {
           "word": "Déboguer",
-          "definition": "Recherche et correction d'erreurs ou de problèmes dans le code."
+          "definition": "Rechercher et corriger des erreurs ou problèmes au sein d'un code."
         },
         "variable/csc-ecosystems/2023": {
           "word": "Variable",
-          "definition": "Un conteneur qui peut stocker une valeur. "
+          "definition": "Un réceptacle qui peut stocker une valeur. "
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "Écologiste",
-          "definition": "Scientifique qui étudie la façon dont les animaux et les plantes interagissent avec leur environnement."
+          "definition": "Scientifique qui étudie comment les animaux et les plantes interagissent avec leur environnement."
         },
         "energy/csc-ecosystems/2023": {
           "word": "Énergie",
-          "definition": "Transféré entre les organismes des réseaux trophiques, des producteurs aux consommateurs. L'énergie est utilisée par les organismes pour effectuer des tâches complexes."
+          "definition": "Transférée entre les organismes au sein de réseaux trophiques, des producteurs aux consommateurs. Cette énergie est utilisée par les organismes pour effectuer des tâches complexes."
         },
         "food_chain/csc-ecosystems/2023": {
           "word": "Chaîne alimentaire ",
-          "definition": "Groupe d'organismes liés par ordre de nourriture, des producteurs aux consommateurs, et des proies aux prédateurs."
+          "definition": "Groupe d'organismes liés dans l'ordre de la nourriture qu'ils mangent, des producteurs aux consommateurs, et des proies aux prédateurs."
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "Code",
@@ -2315,6 +2315,22 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compression Sans Perte"
+        },
+        "code/dance-ai/2023": {
+          "word": "Code",
+          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+        },
+        "event/dance-ai/2023": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programme",
+          "definition": " Un algorithme codé de façon à pouvoir être exécuté par une machine."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "L'Intelligence artificielle (I.A.) ",
+          "definition": "Un programme informatique qui collecte des données, apprend des modèles à partir de ces données et prend ensuite des décisions sur la base de ce qu'il a appris."
         }
       }
     }

@@ -338,11 +338,16 @@ fil:
           title: 'Mga Batayan sa CS: Kurso E'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           lesson_groups:
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
         coursef-draft:
           title: 'Mga Batayan sa CS: Kurso F'
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         classic-hoc-impact-study:
           description_short: Subukan ang mga pangunahing kaalaman sa computer science gamit ang napakaraming nakaka-aliw na mga karakter!
         hoc-impact-study:
@@ -364,6 +369,10 @@ fil:
           lesson_groups:
             required:
               display_name: Buod
+        csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         csp5-support:
           description_short: Kurso ng Proseyonal na Pag-aaral ng mga Guro para sa CSP Yunit 5
           lesson_groups:
@@ -498,6 +507,8 @@ fil:
               display_name: Mag-ramp up sa Course E (Opsyonal)
             csf_e_2:
               display_name: Nilalaman ng Kurso na E
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
@@ -512,6 +523,8 @@ fil:
               display_name: Mag-ramp up sa Kursong F (Opsyonal)
             csf_f_2:
               display_name: Nilalaman ng Kursong F
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         csdnovice:
           title: Mga Baguhang Tagapangasiwa sa CS Discoveries na TeacherCon
@@ -661,6 +674,9 @@ fil:
           description_audience: 'Mga Edad: 9-18'
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          lesson_groups:
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2017:
           title: Hindi Marunong Magbasa Express
@@ -701,6 +717,8 @@ fil:
               display_name: Mag-ramp up sa Course E (Opsyonal)
             csf_e_2:
               display_name: Nilalaman ng Kurso na E
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
         new-d:
@@ -715,6 +733,9 @@ fil:
           student_description: Ang yunit na ito ay nagpapakilala sa mga batayang konsepto ng pag-program sa kompyuter, para sa mga estudyante sa Subgoals na Grupong A.
         new-express:
           title: Bagong Mabilis na Iskript
+          lesson_groups:
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         new-stages-sept-2017:
           title: Bagong mga Yugto para sa 9/17
         new-e:
@@ -724,6 +745,8 @@ fil:
               display_name: Mag-ramp up sa Course E (Opsyonal)
             csf_e_2:
               display_name: Nilalaman ng Kurso na E
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
         new-f:
@@ -733,6 +756,8 @@ fil:
               display_name: Mag-ramp up sa Kursong F (Opsyonal)
             csf_f_2:
               display_name: Nilalaman ng Kursong F
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         csd5-old:
           title: CSD Yunit 5 - Mga Datos at Lipunan
           description_short: Matututo kung paano ang mga tao gumamit ng mga kompyuter para malutas ang mga problem sa mga datos.
@@ -807,6 +832,8 @@ fil:
               display_name: Mag-ramp up sa Course E (Opsyonal)
             csf_e_2:
               display_name: Nilalaman ng Kurso na E
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
         course-f-2018:
@@ -815,6 +842,8 @@ fil:
               display_name: Mag-ramp up sa Kursong F (Opsyonal)
             csf_f_2:
               display_name: Nilalaman ng Kursong F
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         csd6-old:
           title: "(LUMA NA) CSD Yunit 6 - Pisikal na Pag-Compute"
           lesson_groups:
@@ -869,6 +898,7 @@ fil:
           title: Kursong B (2018)
           assignment_family_title: Kursong B
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursed-2018:
@@ -903,6 +933,8 @@ fil:
               display_name: Mag-ramp up sa Course E (Opsyonal)
             csf_e_2:
               display_name: Nilalaman ng Kurso na E
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             extra_course_content:
               display_name: Ekstra na Nilalaman ng Kurso
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
@@ -917,6 +949,8 @@ fil:
               display_name: Mag-ramp up sa Kursong F (Opsyonal)
             csf_f_2:
               display_name: Nilalaman ng Kursong F
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         csp1-2018:
           lesson_groups:
@@ -1126,12 +1160,16 @@ fil:
               display_name: Mga Sprites
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         coursed-2019:
           title: Kursong D (2019)
           description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_events:
               display_name: Mga event
             csf_loops:
@@ -1142,6 +1180,8 @@ fil:
               display_name: Binary
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
         coursee-2019:
           title: Kursong E (2019)
@@ -1160,12 +1200,17 @@ fil:
               display_name: Mga Loops na naka-nest
             csf_functions:
               display_name: Mga function
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         express-2019:
           title: Pinabilis na Kurso (2019)
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -1178,6 +1223,7 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         csd1-2019:
           description_short: "  Alamin kung paano ang mga tao gumagamit ng mga kompyuter para lutasan ang mga problema."
           lesson_groups:
@@ -1203,6 +1249,8 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_binary:
               display_name: Binary
             csf_loops:
@@ -1211,6 +1259,8 @@ fil:
               display_name: Mga event
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         csp-mid-survey:
           description_audience: CSP na mga Estudyante
@@ -1227,6 +1277,8 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
@@ -1235,10 +1287,13 @@ fil:
         courseb-2019:
           title: Kursong B (2019)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_impacts:
@@ -1247,13 +1302,17 @@ fil:
               display_name: Mga event
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         pre-express-2019:
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description_audience: 'Mga Edad: 4-8'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         csd2-2019:
           description: " Sa Yunit 2, matutunan mo kung paano lumikha at magbahagi ng nilalaman sa sarili mong mga web na pahina. Pagkatapos makapili kung anong nilalaman ang gusto mong ibahagi sa mundo, matutunan mo kung paano gawin at pagandahin ang iyong mga pahina gamit ang HTML at CSS. Ikaw ay magsasanay din sa isang napakahalagang kakayahan sa pag-program gaya ng pag-debug at paglagay ng mga komento. Sa pagtatapos ng yunit, ikaw ay magkakaroon ng isang sariling website na maaari mong ilathala sa Internet."
           description_short: "  Matutong bumuo ng iyong sariling we site sa Web Lab."
@@ -1529,6 +1588,8 @@ fil:
               display_name: Buod
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
@@ -1618,8 +1679,12 @@ fil:
               display_name: Mga Loops na naka-nest
             csf_functions:
               display_name: Mga function
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -1636,6 +1701,8 @@ fil:
               display_name: Pabilisin
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -1741,6 +1808,8 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
@@ -1749,10 +1818,13 @@ fil:
         courseb-2020:
           title: Kursong B (2020)
           description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_impacts:
@@ -1768,6 +1840,8 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_binary:
               display_name: Binary
             csf_loops:
@@ -1776,12 +1850,16 @@ fil:
               display_name: Mga event
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2020:
           title: Kursong D (2020)
           description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_events:
               display_name: Mga event
             csf_loops:
@@ -1792,6 +1870,8 @@ fil:
               display_name: Binary
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Nabuo ng mga mag-aaral ang kanilang pag-unawa sa mga loop, kondisyon, at mga event. Higit pa sa coding, natututo ang mga mag-aaral tungkol sa digital citizenship.
         coursee-2020:
           title: Kursong E (2020)
@@ -1810,6 +1890,8 @@ fil:
               display_name: Mga function
             csf_impacts:
               display_name: Epekto ng Pag-Compute
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Magsimulang mag-code gamit ang mga algoritmo, mga loop, mga kondisyonal, at mga pangyayari at pagkatapos ay pupunta ka sa mga function. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng capstone na proyekto na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2020:
           title: Kursong F (2020)
@@ -1829,12 +1911,17 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Matutong gumami sa iba't ibang uri ng mga loop, mga event, mga function, at mga kondisyonal. Siyasatin ang iba't ibang mga pamamaraan sa paglutas ng mga problema at talakayain ang mga epekto ng computing at internet sa lipunan. Sa ikalawang bahagi ng kursong ito, magdisenyo at maglikha ng isang capstone na proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2020:
           title: Pinabilis na Kurso (2020)
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -1847,14 +1934,21 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         pre-express-2020:
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description_audience: 'Mga Edad: 4-8'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         csp1-2020:
           lesson_groups:
             csp_unit1_2020:
@@ -2028,34 +2122,51 @@ fil:
             lessonGroup-2:
               display_name: Pagsisiyasat
         coursea-2021:
+          title: Kursong A (2021)
+          description: Nag-aalok ang kurso a ng kurikulum sa agham ng computer para sa mga nagsisimula na mambabasa, kabilang ang mga mag-aaral sa Kindergarten. Matututo ang mga mag-aaral na mag-program gamit ang mga utos tulad ng mga loop at mga kaganapan. Ang mga aralin na itinampok sa kursong ito ay nagtuturo din sa mga mag-aaral na makahulugan na makipagtulungan sa iba, siyasatin ang iba ' t ibang mga diskarte sa paglutas ng problema, magpatuloy sa harap ng mga mapaghamong gawain, at alamin ang tungkol sa kaligtasan sa internet.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+            lessonGroup-5:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         courseb-2021:
+          title: Kursong B (2021)
+          description: Binuo namin ang kurso B na nasa isip ang mga unang baitang. Habang ang mga konsepto sa Kurso b ay katumbas ng mga nasa kurso a, natututo ang mga mag-aaral ng mas sopistikadong mga aktibidad na hindi naka-plug at nagtatrabaho sa pamamagitan ng mas maraming iba ' t ibang mga puzzle. Matututuhan ng mga mag-aaral ang mga pangunahing kaalaman sa programming, mga diskarte sa pakikipagtulungan, pagsisiyasat at mga kritikal na kasanayan sa pag-iisip, pagtitiyaga sa harap ng kahirapan, at kaligtasan sa internet. Sa pagtatapos ng kursong ito, ang mga mag-aaral ay lumilikha ng mga laro sa kapaligiran ng programming ng Play Lab.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_impacts:
               display_name: Epekto ng Pag-Compute
             csf_events:
               display_name: Mga event
+            lessonGroup-6:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
         coursec-2021:
+          title: Kursong C (2021)
+          description: Bumuo kami ng kurso C para sa mga mag-aaral sa ikalawang baitang. Ang mga mag-aaral ay lilikha ng mga programa na may pagkakasunud-sunod, mga loop, at mga kaganapan. Susuriin nila ang mga diskarte sa paglutas ng problema at bubuo ng mga diskarte para sa pagbuo ng mga positibong komunidad kapwa online at offline. Sa pagtatapos ng kurso, ang mga mag-aaral ay lilikha ng mga interactive na laro na maaari nilang ibahagi.
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_binary:
               display_name: Binary
             csf_loops:
@@ -2064,10 +2175,15 @@ fil:
               display_name: Mga event
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
         coursed-2021:
+          description: 'Lumikha kami ng courseD para sa mga mag-aaral sa ikatlong baitang.  Ang kurso ay nagsisimula sa isang pagsusuri ng mga konsepto na matatagpuan sa mga naunang kurso, kabilang ang mga loop at mga kaganapan. Pagkaraan, bubuo ng mga mag-aaral ang kanilang pag-unawa sa mga algorithm, nested loops, habang ang mga loop, conditionals, at marami pa. '
           description_audience: 'Mga Edad: 7-11'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_events:
               display_name: Mga event
             csf_loops:
@@ -2078,9 +2194,15 @@ fil:
               display_name: Binary
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             lessonGroup-6:
               display_name: Digital na Pagkamamamayan
+          student_description: Alamin ang tungkol sa mga loop, kondisyon, at mga kaganapan. Higit pa sa coding, alamin ang tungkol sa digital citizenship.
         coursee-2021:
+          title: Kursong E (2021)
+          description: Lumikha kami ng kurso E para sa mga mag-aaral sa ika-apat na baitang. Ang kurso ay nagsisimula sa isang pagpapakilala sa Sprite Lab programming tool. Matututuhan ng mga mag-aaral na gumawa ng masaya, interactive na mga proyekto na nagpapatibay sa kung ano ang matututunan nila tungkol sa kaligtasan sa online. Kasunod ng mga araling ito, ang mga mag-aaral ay makikibahagi sa mas kumplikadong pag-coding. Malalaman ng mga mag-aaral ang tungkol sa nested loops, function, at conditionals. Sa pagtatapos ng kurso, pagsamahin ng mga mag-aaral ang mga konseptong ito upang malutas ang mga mapaghamong puzzle. Ang kurso ay nagtatapos sa isang bukas na proyekto kung saan ang mga mag-aaral ay lumilikha ng isang laro o pagguhit.
+          description_short: Alamin ang mga pangunahing kaalaman ng mga sprite, nested loop, at function.
           description_audience: 'Mga Edad: 8-12'
           lesson_groups:
             ramp_up:
@@ -2095,9 +2217,14 @@ fil:
               display_name: Mga function
             csf_impacts:
               display_name: Epekto ng Pag-Compute
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             lessonGroup-7:
               display_name: Epekto ng Pag-Compute
+          student_description: Simulan ang pag-coding sa mga algorithm, kaganapan, loop, kondisyon, at pag-andar! Sa pagtatapos ng kursong ito, magdisenyo at lumikha ng isang laro o pagguhit na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
         coursef-2021:
+          title: Kursong F (2021)
+          description: Lumikha kami ng kurso F para sa mga mag-aaral sa ikalimang baitang. Nagsisimula ang kurso sa pamamagitan ng pagtingin sa kung paano gumawa ng mga pagpipilian ang mga gumagamit sa mga app na ginagamit nila. Pagkatapos ay natututo ang mga mag-aaral na gumawa ng iba ' t ibang mga Sprite Lab app na nag-aalok din ng mga pagpipilian para sa gumagamit. Sa mga susunod na aralin sa kurso, matututunan ng mga mag-aaral ang mas advanced na mga konsepto, kabilang ang mga variable at "para sa" mga loop. Ang mga mag-aaral ay binibigyan ng higit na awtonomiya at higit pang mga pagpipilian sa buong kursong ito. Sa pagtatapos ng kurso, ang mga mag-aaral ay lumikha ng mga interactive na proyekto at likhang sining upang ibahagi sa kanilang mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
           lesson_groups:
@@ -2107,22 +2234,31 @@ fil:
               display_name: Digital na Pagkamamamayan
             csf_variables:
               display_name: For Loops
+            csf_data:
+              display_name: Data at simulation
             csf_for_loops:
               display_name: For Loops
             csf_sprites:
               display_name: Epekto ng Pag-Compute
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             lessonGroup-8:
               display_name: Mga variable
             lessonGroup-9:
               display_name: tanggalin
             lessonGroup-7:
               display_name: Digital na Pagkamamamayan
+          student_description: Alamin na mag-code sa mga sprite, variable, at mga loop at talakayin ang mga epekto sa lipunan ng computing at internet. Sa pagtatapos ng kursong ito, magdisenyo at lumikha ng isang proyekto na maaari mong ibahagi sa mga kaibigan at pamilya.
         express-2021:
+          title: Express Kurso (2021)
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
           lesson_groups:
             csf_warmup:
               display_name: Warm Up
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
@@ -2135,16 +2271,24 @@ fil:
               display_name: For Loops
             csf_sprites:
               display_name: Mga Sprites
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
             lessonGroup-9:
               display_name: Mga event
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         pre-express-2021:
+          title: Express kurso para sa mga pre-reader (2021)
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description_audience: 'Mga Edad: 4-8'
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
@@ -2522,6 +2666,8 @@ fil:
               display_name: Mga Sprites
             lessonGroup-3:
               display_name: Mga variable
+            lessonGroup-4:
+              display_name: Proyekto sa Katapusan ng Kurso
         csd6-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -2540,15 +2686,22 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+            lessonGroup-5:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Nag-aalok ang kurso a ng kurikulum sa agham ng computer para sa mga nagsisimula na mambabasa, kabilang ang mga mag-aaral sa Kindergarten. Matututo ang mga mag-aaral na mag-program gamit ang mga utos tulad ng mga loop at mga kaganapan. Ang mga aralin na itinampok sa kursong ito ay nagtuturo din sa mga mag-aaral na makahulugan na makipagtulungan sa iba, siyasatin ang iba ' t ibang mga diskarte sa paglutas ng problema, magpatuloy sa harap ng mga mapaghamong gawain, at alamin ang tungkol sa kaligtasan sa internet.
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_sprites:
               display_name: Mga Sprites
             lessonGroup-9:
@@ -2563,6 +2716,10 @@ fil:
               display_name: Mga variable
             csf_for_loops:
               display_name: For Loops
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
         csp1-2022:
@@ -2597,24 +2754,35 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_impacts:
               display_name: Epekto ng Pag-Compute
             csf_events:
               display_name: Mga event
+            lessonGroup-6:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Binuo namin ang kurso B na nasa isip ang mga unang baitang. Habang ang mga konsepto sa Kurso b ay katumbas ng mga nasa kurso a, natututo ang mga mag-aaral ng mas sopistikadong mga aktibidad na hindi naka-plug at nagtatrabaho sa pamamagitan ng mas maraming iba ' t ibang mga puzzle. Matututuhan ng mga mag-aaral ang mga pangunahing kaalaman sa programming, mga diskarte sa pakikipagtulungan, pagsisiyasat at mga kritikal na kasanayan sa pag-iisip, pagtitiyaga sa harap ng kahirapan, at kaligtasan sa internet. Sa pagtatapos ng kursong ito, ang mga mag-aaral ay lumilikha ng mga laro sa kapaligiran ng programming ng Play Lab.
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
         coursec-2022:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Bumuo kami ng kurso C para sa mga mag-aaral sa ikalawang baitang. Ang mga mag-aaral ay lilikha ng mga programa na may pagkakasunud-sunod, mga loop, at mga kaganapan. Susuriin nila ang mga diskarte sa paglutas ng problema at bubuo ng mga diskarte para sa pagbuo ng mga positibong komunidad kapwa online at offline. Sa pagtatapos ng kurso, ang mga mag-aaral ay lilikha ng mga interactive na laro na maaari nilang ibahagi.
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
@@ -2626,12 +2794,18 @@ fil:
           lesson_groups:
             lessonGroup-6:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_events:
               display_name: Mga event
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
               display_name: Mga conditional
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: 'Lumikha kami ng courseD para sa mga mag-aaral sa ikatlong baitang.  Ang kurso ay nagsisimula sa isang pagsusuri ng mga konsepto na matatagpuan sa mga naunang kurso, kabilang ang mga loop at mga kaganapan. Pagkaraan, bubuo ng mga mag-aaral ang kanilang pag-unawa sa mga algorithm, nested loops, habang ang mga loop, conditionals, at marami pa. '
+          student_description: Alamin ang tungkol sa mga loop, kondisyon, at mga kaganapan. Higit pa sa coding, alamin ang tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
         coursee-2022:
           lesson_groups:
@@ -2647,6 +2821,11 @@ fil:
               display_name: Mga conditional
             lessonGroup-7:
               display_name: Epekto ng Pag-Compute
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Lumikha kami ng kurso E para sa mga mag-aaral sa ika-apat na baitang. Ang kurso ay nagsisimula sa isang pagpapakilala sa Sprite Lab programming tool. Matututuhan ng mga mag-aaral na gumawa ng masaya, interactive na mga proyekto na nagpapatibay sa kung ano ang matututunan nila tungkol sa kaligtasan sa online. Kasunod ng mga araling ito, ang mga mag-aaral ay makikibahagi sa mas kumplikadong pag-coding. Malalaman ng mga mag-aaral ang tungkol sa nested loops, function, at conditionals. Sa pagtatapos ng kurso, pagsamahin ng mga mag-aaral ang mga konseptong ito upang malutas ang mga mapaghamong puzzle. Ang kurso ay nagtatapos sa isang bukas na proyekto kung saan ang mga mag-aaral ay lumilikha ng isang laro o pagguhit.
+          student_description: Simulan ang pag-coding sa mga algorithm, kaganapan, loop, kondisyon, at pag-andar! Sa pagtatapos ng kursong ito, magdisenyo at lumikha ng isang laro o pagguhit na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          description_short: Alamin ang mga pangunahing kaalaman ng mga sprite, nested loop, at function.
           description_audience: 'Mga Edad: 8-12'
         coursef-2022:
           lesson_groups:
@@ -2656,6 +2835,11 @@ fil:
               display_name: Digital na Pagkamamamayan
             lessonGroup-8:
               display_name: Mga variable
+            csf_data:
+              display_name: Data at simulation
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Lumikha kami ng kurso F para sa mga mag-aaral sa ikalimang baitang. Nagsisimula ang kurso sa pamamagitan ng pagtingin sa kung paano gumawa ng mga pagpipilian ang mga gumagamit sa mga app na ginagamit nila. Pagkatapos ay natututo ang mga mag-aaral na gumawa ng iba ' t ibang mga Sprite Lab app na nag-aalok din ng mga pagpipilian para sa gumagamit. Sa mga susunod na aralin sa kurso, malalaman ng mga mag-aaral ang tungkol sa mga variable sa iba ' t ibang mga konteksto. Ang mga mag-aaral ay binibigyan ng higit na awtonomiya at higit pang mga pagpipilian sa buong kursong ito. Sa pagtatapos ng kurso, ang mga mag-aaral ay lumikha ng mga interactive na proyekto upang ibahagi sa kanilang mga kaibigan at pamilya.
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
           description_audience: 'Mga Edad: 9-13'
         csa1-2022:
@@ -2664,12 +2848,16 @@ fil:
               display_name: Pagsisiyasat
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
           description_audience: 'Mga Edad: 4-8'
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
         cs4all-invasive-species:
           lessons:
             lesson-21:
@@ -2692,6 +2880,10 @@ fil:
               display_name: Mga Sprites
             lessonGroup-8:
               display_name: Mga variable
+            csf_data:
+              display_name: Data at simulation
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
         csa6-2022:
@@ -3067,14 +3259,20 @@ fil:
           title: Pagbuo ng Web
         pre-express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science para sa mga hindi marunong magbasa: pinagsama ang pinakamahusay sa aming kindergarten at unang baitang na mga kurso.'
           description_audience: 'Mga Edad: 4-8'
         express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_sprites:
               display_name: Mga Sprites
             lessonGroup-9:
@@ -3089,16 +3287,25 @@ fil:
               display_name: Mga variable
             csf_for_loops:
               display_name: For Loops
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
+          student_description: Alamin ang agham ng computer sa pamamagitan ng pagsubok sa mga aralin sa ibaba sa iyong sariling bilis! Alamin na lumikha ng mga programa sa computer, bumuo ng mga kasanayan sa paglutas ng problema, at magtrabaho sa mga nakakatuwang hamon! Gumawa ng mga laro at malikhaing proyekto upang ibahagi sa mga kaibigan, pamilya, at guro.
           description_short: 'Isang introduksyon sa computer science: pinagsama ang pinakamahusay na kurikulum sa mababang paaralan para sa nakakatandang mga estudyante.'
           description_audience: 'Mga Edad: 9-18'
         coursea-2023:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
+            lessonGroup-5:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Nag-aalok ang kurso a ng kurikulum sa agham ng computer para sa mga nagsisimula na mambabasa, kabilang ang mga mag-aaral sa Kindergarten. Matututo ang mga mag-aaral na mag-program gamit ang mga utos tulad ng mga loop at mga kaganapan. Ang mga aralin na itinampok sa kursong ito ay nagtuturo din sa mga mag-aaral na makahulugan na makipagtulungan sa iba, siyasatin ang iba ' t ibang mga diskarte sa paglutas ng problema, magpatuloy sa harap ng mga mapaghamong gawain, at alamin ang tungkol sa kaligtasan sa internet.
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
           description_short: Isang panimula sa computer science para sa mga hindi pa marunong magbasa.
           description_audience: 'Mga Edad: 4-7'
@@ -3106,24 +3313,35 @@ fil:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_impacts:
               display_name: Epekto ng Pag-Compute
             csf_events:
               display_name: Mga event
+            lessonGroup-6:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Binuo namin ang kurso B na nasa isip ang mga unang baitang. Habang ang mga konsepto sa Kurso b ay katumbas ng mga nasa kurso a, natututo ang mga mag-aaral ng mas sopistikadong mga aktibidad na hindi naka-plug at nagtatrabaho sa pamamagitan ng mas maraming iba ' t ibang mga puzzle. Matututuhan ng mga mag-aaral ang mga pangunahing kaalaman sa programming, mga diskarte sa pakikipagtulungan, pagsisiyasat at mga kritikal na kasanayan sa pag-iisip, pagtitiyaga sa harap ng kahirapan, at kaligtasan sa internet. Sa pagtatapos ng kursong ito, ang mga mag-aaral ay lumilikha ng mga laro sa kapaligiran ng programming ng Play Lab.
           student_description: Alamin ang mga pangunahing alituntunin sa computer science at kaligtasan sa internet. Sa pagtatapos ng kurso, maglikha ng iyong sariling laro o istorya na maaari mong ibahagi.
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
           description_audience: 'Mga Edad: 5-8'
         coursec-2023:
           lesson_groups:
             csf_digcit:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_loops:
               display_name: Mga loop
             csf_events:
               display_name: Mga event
             csf_data:
               display_name: Data
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Bumuo kami ng kurso C para sa mga mag-aaral sa ikalawang baitang. Ang mga mag-aaral ay lilikha ng mga programa na may pagkakasunud-sunod, mga loop, at mga kaganapan. Susuriin nila ang mga diskarte sa paglutas ng problema at bubuo ng mga diskarte para sa pagbuo ng mga positibong komunidad kapwa online at offline. Sa pagtatapos ng kurso, ang mga mag-aaral ay lilikha ng mga interactive na laro na maaari nilang ibahagi.
           student_description: Lumikha ng mga programa gamit ang pagsunod-sunod, mga loops, at mga pangyayari. Isalin ang iyong mga inisyal sa binary, siyasatin ang iba't ibang mga pamamaraan sa paglutas ng problema, at matuto kung paano tutugon sa cyberbullying. Sa dulo ng kurso, lilikha ng sarili mong laro o istorya na maaari mong ibahagi!
           description_short: Alamin ang mga pangunahing alituntunin ng computer science at lumikha ng iyong sariling sining, mga kuwento, at mga laro.
           description_audience: 'Mga Edad: 6-10'
@@ -3131,12 +3349,18 @@ fil:
           lesson_groups:
             lessonGroup-6:
               display_name: Digital na Pagkamamamayan
+            csf_sequencing:
+              display_name: Pagsunud-sunod
             csf_events:
               display_name: Mga event
             csf_loops:
               display_name: Mga loop
             csf_conditionals:
               display_name: Mga conditional
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: 'Lumikha kami ng courseD para sa mga mag-aaral sa ikatlong baitang.  Ang kurso ay nagsisimula sa isang pagsusuri ng mga konsepto na matatagpuan sa mga naunang kurso, kabilang ang mga loop at mga kaganapan. Pagkaraan, bubuo ng mga mag-aaral ang kanilang pag-unawa sa mga algorithm, nested loops, habang ang mga loop, conditionals, at marami pa. '
+          student_description: Alamin ang tungkol sa mga loop, kondisyon, at mga kaganapan. Higit pa sa coding, alamin ang tungkol sa digital citizenship.
           description_audience: 'Mga Edad: 7-11'
         coursee-2023:
           lesson_groups:
@@ -3152,6 +3376,11 @@ fil:
               display_name: Mga conditional
             lessonGroup-7:
               display_name: Epekto ng Pag-Compute
+            end_of_course_project:
+              display_name: Proyekto sa Katapusan ng Kurso
+          description: Lumikha kami ng kurso E para sa mga mag-aaral sa ika-apat na baitang. Ang kurso ay nagsisimula sa isang pagpapakilala sa Sprite Lab programming tool. Matututuhan ng mga mag-aaral na gumawa ng masaya, interactive na mga proyekto na nagpapatibay sa kung ano ang matututunan nila tungkol sa kaligtasan sa online. Kasunod ng mga araling ito, ang mga mag-aaral ay makikibahagi sa mas kumplikadong pag-coding. Malalaman ng mga mag-aaral ang tungkol sa nested loops, function, at conditionals. Sa pagtatapos ng kurso, pagsamahin ng mga mag-aaral ang mga konseptong ito upang malutas ang mga mapaghamong puzzle. Ang kurso ay nagtatapos sa isang bukas na proyekto kung saan ang mga mag-aaral ay lumilikha ng isang laro o pagguhit.
+          student_description: Simulan ang pag-coding sa mga algorithm, kaganapan, loop, kondisyon, at pag-andar! Sa pagtatapos ng kursong ito, magdisenyo at lumikha ng isang laro o pagguhit na maaari mong ibahagi sa iyong mga kaibigan at pamilya.
+          description_short: Alamin ang mga pangunahing kaalaman ng mga sprite, nested loop, at function.
           description_audience: 'Mga Edad: 8-12'
         problem-solving-computing-2023:
           lesson_groups:
@@ -3518,8 +3747,13 @@ fil:
               display_name: Mga Sprites
             lessonGroup-4:
               display_name: Mga variable
+            lessonGroup-5:
+              display_name: Data at simulation
+            lessonGroup-6:
+              display_name: Proyekto sa Katapusan ng Kurso
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+          description: Lumikha kami ng kurso F para sa mga mag-aaral sa ikalimang baitang. Nagsisimula ang kurso sa pamamagitan ng pagtingin sa kung paano gumawa ng mga pagpipilian ang mga gumagamit sa mga app na ginagamit nila. Pagkatapos ay natututo ang mga mag-aaral na gumawa ng iba ' t ibang mga Sprite Lab app na nag-aalok din ng mga pagpipilian para sa gumagamit. Sa mga susunod na aralin sa kurso, malalaman ng mga mag-aaral ang tungkol sa mga variable sa iba ' t ibang mga konteksto. Ang mga mag-aaral ay binibigyan ng higit na awtonomiya at higit pang mga pagpipilian sa buong kursong ito. Sa pagtatapos ng kurso, ang mga mag-aaral ay lumikha ng mga interactive na proyekto upang ibahagi sa kanilang mga kaibigan at pamilya.
         self-paced-pl-csp2-2023:
           title: 'Module 2: Pag-navigate sa Code.org'
         csa-frq-practice:
@@ -3553,6 +3787,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Pagsunud-sunod
             lessonGroup-4:
               display_name: Mga loop
             lessonGroup-5:
@@ -3565,6 +3801,8 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Pagsunud-sunod
             lessonGroup-4:
               display_name: Mga loop
             lessonGroup-5:
@@ -3580,19 +3818,26 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Pagsunud-sunod
             lessonGroup-4:
               display_name: Mga loop
             lessonGroup-5:
               display_name: Epekto ng Pag-Compute
             lessonGroup-6:
               display_name: Mga event
+            lessonGroup-7:
+              display_name: Proyekto sa Katapusan ng Kurso
             lessonGroup-8:
               display_name: Data
           description_audience: 'Mga Edad: 5-8'
+          description_short: Isang panimula sa computer science para sa mga pre-reader. Katulad ng kurso A, ngunit may idinagdag na lalim ng konsepto.
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Pagsunud-sunod
             lessonGroup-4:
               display_name: Mga loop
             lessonGroup-5:
@@ -3603,12 +3848,16 @@ fil:
           lesson_groups:
             lessonGroup-2:
               display_name: Digital na Pagkamamamayan
+            lessonGroup-3:
+              display_name: Pagsunud-sunod
             lessonGroup-4:
               display_name: Epekto ng Pag-Compute
             lessonGroup-6:
               display_name: Mga loop
             lessonGroup-7:
               display_name: Data
+            lessonGroup-8:
+              display_name: Proyekto sa Katapusan ng Kurso
           description_audience: 'Mga Edad: 7-11'
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
@@ -3616,23 +3865,33 @@ fil:
               display_name: Mga Loops na naka-nest
             lessonGroup-4:
               display_name: Mga function
+            lessonGroup-5:
+              display_name: Data at simulation
+            lessonGroup-6:
+              display_name: Proyekto sa Katapusan ng Kurso
           description_audience: 'Mga Edad: 8-12'
+          description_short: Alamin ang mga pangunahing kaalaman ng mga sprite, nested loop, at function.
         nevada-standards-aligned-fifth-grade-2023-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Sprites
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
+          description: Lumikha kami ng kurso F para sa mga mag-aaral sa ikalimang baitang. Nagsisimula ang kurso sa pamamagitan ng pagtingin sa kung paano gumawa ng mga pagpipilian ang mga gumagamit sa mga app na ginagamit nila. Pagkatapos ay natututo ang mga mag-aaral na gumawa ng iba ' t ibang mga Sprite Lab app na nag-aalok din ng mga pagpipilian para sa gumagamit. Sa mga susunod na aralin sa kurso, malalaman ng mga mag-aaral ang tungkol sa mga variable sa iba ' t ibang mga konteksto. Ang mga mag-aaral ay binibigyan ng higit na awtonomiya at higit pang mga pagpipilian sa buong kursong ito. Sa pagtatapos ng kurso, ang mga mag-aaral ay lumikha ng mga interactive na proyekto upang ibahagi sa kanilang mga kaibigan at pamilya.
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Sprites
             lessonGroup-3:
               display_name: Mga conditional
+            lessonGroup-4:
+              display_name: Data at simulation
             lessonGroup-5:
               display_name: Mga variable
             lessonGroup-6:
               display_name: Epekto ng Pag-Compute
+            lessonGroup-7:
+              display_name: Proyekto sa Katapusan ng Kurso
           description_audience: 'Mga Edad: 9-13'
           description_short: Alamin ang lahat ng mga konsepto sa mga Pangunahing Kaalaman sa Computer Science at maglikha ng iyong sariling sining, kuwento o laro.
         how-ai-works-2023:
@@ -3641,3 +3900,18 @@ fil:
           lessons:
             lesson-1:
               name: Ang aming Kodigo ng Etika sa AI.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Panimula
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Panimula
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Panimula
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Panimula

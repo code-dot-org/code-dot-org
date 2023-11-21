@@ -19,6 +19,8 @@ vi:
           lesson_groups:
             debugging:
               display_name: Sửa lỗi
+            haiku bot:
+              display_name: Bot Haiku
             introduction:
               display_name: Giới thiệu
             lessonGroup-3:
@@ -70,6 +72,12 @@ vi:
           student_description: Một dựng lên các khái niệm ngắn cho những sinh viên
             đã không thực hiện khóa học 2 và 3.
           title: Khóa học 4 điều kiện tiên quyết
+        ECSPD:
+          name: ECSPD
+        ECSPD-NexTech:
+          logo_image: nextech\_logo.png
+        ECSPD-iZone:
+          logo_image: izone\_logo.png
         ECSPD2:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -138,6 +146,10 @@ vi:
           description_short: Tìm hiểu lập trình chức năng thông qua đại số.
           student_description: Tìm hiểu lập trình chức năng thông qua đại số.
           title: Khoa học máy tính trong đại số
+        algebraPD-NexTech:
+          logo_image: nextech\_logo.png
+        algebraPD-iZone:
+          logo_image: izone\_logo.png
         algebraPD2a:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -161,6 +173,8 @@ vi:
           lessons:
             lesson-49:
               name: Âm nhạc
+            lesson-50:
+              name: Trò chuyện AI
           student_description: Tất cả các loại cấp bậc để người dùng thử nghiệm giao
             diện
           title: Tất cả những điều này!
@@ -205,8 +219,12 @@ vi:
         contagion-pilot:
           description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh bùng
             phát do vi rút.
+          description_audience: Lớp 5
           description_short: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
             bùng phát do vi rút.
+          lesson_groups:
+            haiku bot:
+              display_name: Bot Haiku
           student_description: Hãy sử dụng Sprite Lab để lập trình mô phỏng dịch bệnh
             bùng phát do vi rút.
         counting-csc:
@@ -1644,31 +1662,45 @@ vi:
           title: Khảo sát sau khoá học
         csd1-2017:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd1-2018:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd1-2019:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd1-2020:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd1-2021:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
           name: csd1-2021
         csd1-2022:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-5:
               display_name: Khảo sát
         csd1-dlp:
@@ -1691,32 +1723,51 @@ vi:
               display_name: Tổng quan
         csd1-pilot:
           lesson_groups:
+            csd1_1:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             cspSurvey:
               display_name: Khảo sát
         csd2-2017:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
           lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
             csd_survey:
               display_name: Khảo sát sau khoá học
         csd2-2018:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
           lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
             cspSurvey:
               display_name: Khảo sát
         csd2-2019:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
           lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
             cspSurvey:
               display_name: Khảo sát
         csd2-2020:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
           lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
             cspSurvey:
               display_name: Khảo sát
+          name: csd2-2020
         csd2-2021:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
@@ -1753,11 +1804,20 @@ vi:
           description_short: "  Tìm hiểu để xây dựng trang web riêng của bạn trong
             Kho Dữ liệu Web."
           lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
             cspSurvey:
               display_name: Khảo sát
         csd2-virtual:
           description_short: Tìm hiểu để xây dựng trang web riêng của bạn trong Kho
             Dữ liệu Web.
+          lesson_groups:
+            csd2_1:
+              display_name: 'Chương 1: Nội dung Web và HTML'
+            csd2_2:
+              display_name: 'Chương 2: Styling và CSS'
         csd3-1819draft:
           lesson_groups:
             cspSurvey:
@@ -1780,10 +1840,12 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd3-2020
         csd3-2021:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd3-2021
         csd3-2022:
           lesson_groups:
             cspSurvey:
@@ -1887,6 +1949,8 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd5-2021
+          title: Dữ liệu và Xã hội ('21-'22)
         csd5-2022:
           lesson_groups:
             cspSurvey:
@@ -1933,6 +1997,7 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+          name: csd6-2021
         csd6-2022:
           lesson_groups:
             lessonGroup-4:
@@ -2019,6 +2084,8 @@ vi:
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
         csl-vn:
+          description_audience: Tuổi 5-10
+          description_short: Khoa học máy tính cơ bản cho học sinh Việt Nam
           lesson_groups:
             csf_events:
               display_name: Các sự kiện
@@ -2133,18 +2200,28 @@ vi:
               display_name: Khảo sát
             cspSurvey2020:
               display_name: Khảo sát sau khoá học
+            csp_unit1_2020:
+              display_name: 'Bài 1: Thông tin kỹ thuật số'
+          name: csp1-2020
         csp1-2021:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+            csp_unit1_2020:
+              display_name: 'Bài 1: Thông tin kỹ thuật số'
+          title: Thông tin kỹ thuật số ('21-'22)
         csp1-2022:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+            csp_unit1_2020:
+              display_name: 'Bài 1: Thông tin kỹ thuật số'
         csp1-2023:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+            csp_unit1_2020:
+              display_name: 'Bài 1: Thông tin kỹ thuật số'
         csp1-dlp:
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Tài liệu học tập sâu hơn cho những người điều phối CSP
@@ -2233,11 +2310,27 @@ vi:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát sau khoá học
+            csp_unit2_2020:
+              display_name: 'Bài 2: Internet'
+          name: csp2-2020
           title: Các Quy tắc KHMT Phần 2 - Mạng Internet ('20-'21)
         csp2-2021:
           lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Bài 2: Internet'
             lessonGroup-2:
+              big_questions: Câu hỏi lớn
               display_name: Khảo sát
+          name: csp2-2021
+          title: Internet ('21-'22)
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Bài 2: Internet'
+        csp2-2023:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Bài 2: Internet'
         csp2-dlp:
           description_audience: Người điều phối nguyên lý CS trong đào tạo
           description_short: 'Phần 2 Tài liệu Học tập Sâu hơn cho người điều phối
@@ -2270,6 +2363,7 @@ vi:
               display_name: Dự án
             csp_variables:
               display_name: Các biến
+          title: 'Bài 2: Internet'
         csp2-support:
           lesson_groups:
             content:
@@ -2288,6 +2382,7 @@ vi:
               display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
+          name: csp3-2018
         csp3-2019:
           lesson_groups:
             cspAssessment:
@@ -2356,6 +2451,8 @@ vi:
               display_name: Đánh giá chương
             cspSurvey:
               display_name: Khảo sát
+            optional:
+              display_name: Tùy chọn
         csp4-2020:
           lesson_groups:
             cspSurvey2020:
@@ -2550,14 +2647,19 @@ vi:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát sau khoá học
+            csp_unit6_2020:
+              display_name: 'Bài 6: Thuật toán'
         csp6-2021:
           lesson_groups:
             csp_unit6_2020:
               display_name: các bước lập trình
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
+          title: Thuật toán ('21-'22)
         csp6-2022:
           lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Bài 6: Thuật toán'
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
         csp6-2023:
@@ -2586,10 +2688,12 @@ vi:
               display_name: Dự án
             csp_variables:
               display_name: Các biến
+          title: 'Bài 6: Thuật toán'
         csp7-2020:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát sau khoá học
+          name: csp7-2020
         csp7-2021:
           lesson_groups:
             lessonGroup-3:
@@ -2638,12 +2742,18 @@ vi:
           lesson_groups:
             cspSurvey2020:
               display_name: Khảo sát sau khoá học
+            csp_unit9_2020:
+              display_name: 'Bài 9: Dữ liệu'
         csp9-2021:
           lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Bài 9: Dữ liệu'
             lessonGroup-2:
               display_name: Khảo sát
         csp9-2022:
           lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Bài 9: Dữ liệu'
             lessonGroup-2:
               display_name: Khảo sát sau khoá học
         csp9-2023:
@@ -2660,6 +2770,7 @@ vi:
               display_name: Dự án
             csp_variables:
               display_name: Các biến
+          title: 'Bài 9: Dữ liệu'
         cspexam1-mWU7ilDYM9:
           description_short: Đánh giá nhiều lựa chọn bao gồm cả những câu hỏi về 7
             ý tưởng lớn về khoa học máy tính. Nó là phần 1 của bài kiểm tra 50 phần
@@ -2674,6 +2785,8 @@ vi:
               display_name: Nội dung
             required:
               display_name: Tổng quan
+        cspoptional:
+          description_short: Tùy chọn
         cspplayground:
           lesson_groups:
             csp_conditionals:
@@ -2776,6 +2889,12 @@ vi:
           lesson_groups:
             cspSurvey:
               display_name: Khảo sát
+            lesson group:
+              display_name: tên hiển thị
+        dani-test-2020:
+          lesson_groups:
+            lesson group:
+              display_name: tên hiển thị
         data-society-2023:
           lesson_groups:
             lessonGroup-4:
@@ -2900,6 +3019,7 @@ vi:
               display_name: Nội dung
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
+          name: express-2017
           student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính
             và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
             tạo câu chuyện của riêng bạn để có thể chia sẻ.
@@ -2917,6 +3037,9 @@ vi:
             và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
             tạo câu chuyện của riêng bạn để có thể chia sẻ.
           title: Khóa học cấp tốc
+        express-2018-vn:
+          description_short: Giới thiệu Khoa học máy tính cơ bản cho học sinh Việt
+            Nam.
         express-2019:
           description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài học dưới
             đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình máy tính,
@@ -2942,6 +3065,9 @@ vi:
               display_name: Nhân vật
             csf_variables:
               display_name: Các biến
+            csf_warmup:
+              display_name: Khởi động
+          name: express-2019
           student_description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài
             học dưới đây theo tốc độ của riêng bạn! Hãy học cách tạo các chương trình
             máy tính, phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách
@@ -2973,6 +3099,8 @@ vi:
               display_name: Nhân vật
             csf_variables:
               display_name: Các biến
+            csf_warmup:
+              display_name: Khởi động
             end_of_course_project:
               display_name: Dự án tổng kết khóa học
           student_description: Hãy tìm hiểu khoa học máy tính bằng cách thử các bài
@@ -3117,18 +3245,24 @@ vi:
           title: Khảo sát sau khoá học
         focus-on-coding1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-4:
               display_name: Khảo sát
         focus-on-creativity-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-creativity1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-4:
               display_name: Khảo sát
         focus-on-data-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-data1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-4:
               display_name: Khảo sát
         focus-on-data3-2023:
@@ -3143,18 +3277,24 @@ vi:
           title: Khảo sát sau khoá học
         focus-on-design-with-purpose1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-4:
               display_name: Khảo sát
         focus-on-hardware-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-hardware1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-5:
               display_name: Khảo sát
         focus-on-impact-in-society-post-survey-2023:
           title: Khảo sát sau khoá học
         focus-on-impact-in-society1-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
             lessonGroup-4:
               display_name: Khảo sát
         focus-on-impact-in-society4-2023:
@@ -3191,16 +3331,21 @@ vi:
           title: Phòng thí nghiệm trò chơi
         grade1:
           description_audience: 5-18 tuổi
+          title: Lớp 1
         grade2:
           description_audience: 5-18 tuổi
+          title: Lớp 2
         grade3:
           description_audience: 5-18 tuổi
         grade4:
           description_audience: 9-99 tuổi
+          title: Lớp 4
         grade5:
           description_audience: Độ tuổi 10-110
+          title: Lớp 5
         gradeKinder:
           description_audience: 5-18 tuổi
+          title: Mẫu giáo
         gumball:
           description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age
             Play Lab!
@@ -3217,6 +3362,8 @@ vi:
               display_name: Bài học 4
             Lesson 5:
               display_name: Bài học 5
+            haiku bot:
+              display_name: Bot Haiku
         hello-world-animals:
           title: 'Xin chào Thế giới: Động vật'
         hello-world-animals-2021:
@@ -3248,6 +3395,15 @@ vi:
           student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
             cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
           title: 'Minecraft: Hero''s Journey'
+        hoc-encryption:
+          description: Trong bài học này, học sinh được giới thiệu về nhu cầu mã hóa
+            và các kỹ thuật đơn giản để phá vỡ (hoặc bẻ khóa) các tin nhắn bí mật.
+          description_short: Trong bài học này, học sinh được giới thiệu về nhu cầu
+            mã hóa và các kỹ thuật đơn giản để phá vỡ (hoặc bẻ khóa) các tin nhắn
+            bí mật.
+          student_description: Trong bài học này, học sinh được giới thiệu về nhu
+            cầu mã hóa và các kỹ thuật đơn giản để phá vỡ (hoặc bẻ khóa) các tin nhắn
+            bí mật.
         hoc-impact-study:
           description_short: Thử các nền tảng của khoa học máy tính với các đặc tính
             dãy kí tự vui nhộn!
@@ -3308,6 +3464,10 @@ vi:
               display_name: Giới thiệu
             k5_getting_started_1:
               display_name: Giới thiệu
+        kaitie-test-script:
+          lesson_groups:
+            lesson group:
+              display_name: tên hiển thị
         mc:
           description: Sử dụng các khối mã lệnh để dẫn Steve hoặc Alex trên cuộc phiêu
             lưu qua thế giới Minecraft này.
@@ -3558,6 +3718,7 @@ vi:
           description_short: 'Giới thiệu về khoa học máy tính cho người đọc trước:
             kết hợp những gì tốt nhất của các khóa học mẫu giáo và lớp một của chúng
             tôi.'
+          name: pre-express-2017
           student_description: Hãy tìm hiểu kiến thức cơ bản về khoa học máy tính
             và truy cập Internet an toàn. Vào cuối khóa học, hãy làm game hoặc sáng
             tạo câu chuyện của riêng bạn để có thể chia sẻ.
@@ -3687,6 +3848,14 @@ vi:
             máy tính, phát triển kỹ năng giải quyết vấn đề và vượt qua các thử thách
             thú vị! Hãy làm game và các dự án sáng tạo để chia sẻ với bạn bè, gia
             đình và giáo viên.
+        problem-solving-computing-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
+        sciencePD-NexTech:
+          logo_image: nextech\_logo.png
+        sciencePD-iZone:
+          logo_image: izone\_logo.png
         sciencePD2b:
           description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
           description_short: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
@@ -3699,6 +3868,40 @@ vi:
           title: 'Học phần 2: Điều hướng trên Code.org'
         self-paced-pl-csa2-2023:
           title: 'Học phần 2: Điều hướng trên Code.org'
+        self-paced-pl-csd-unit1-2-2023:
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org.
+            \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm
+            chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời
+            gian đề xuất:** 30 phút"
+          title: 'Học phần 1: Chuẩn bị giảng dạy về Giải quyết vấn đề và máy tính'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Học phần 2: Chuẩn bị giảng dạy về Phát triển web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn
+            chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org. \n\n**Trong
+            Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần
+            Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm chính có trong
+            học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các dự án cuối bài
+            học.\n\n**Thời gian đề xuất:** 120 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp
+            bạn chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org.
+            \n\n**Trong Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen
+            với học phần Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm
+            chính có trong học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các
+            dự án cuối bài học.\n\n**Thời gian đề xuất:** 120 phút"
+          title: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Học phần 4: Chuẩn bị giảng dạy về Quy trình thiết kế"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Học phần 5: Chuẩn bị giảng dạy về Dữ liệu và xã hội'
         self-paced-pl-csd1-2021:
           description: |-
             Học phần này là phần giới thiệu ngắn về cả Code.org và khóa học chuyên môn này.
@@ -4233,6 +4436,10 @@ vi:
               display_name: Nhân vật
             ramp_up:
               display_name: Chuẩn bị
+        time4cs-experiment-unit-2:
+          description: "[Thêm mô tả]"
+          description_short: "[Thêm mô tả]"
+          student_description: "[Thêm mô tả]"
         time4csdemo:
           description_audience: Lớp 4
           lesson_groups:
@@ -4267,6 +4474,17 @@ vi:
           lesson_groups:
             content:
               display_name: Nội dung
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Giới thiệu
+          lessons:
+            lesson-7:
+              name: Giới thiệu
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Giới thiệu
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -4289,6 +4507,10 @@ vi:
           lessons:
             lesson-3:
               name: Đánh giá
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Giới thiệu
         virustest:
           description_short: Hãy sử dụng Sprite Lab để tạo ra bản mô phỏng dịch bệnh
             bùng phát vi rút.

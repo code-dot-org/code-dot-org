@@ -1,0 +1,67 @@
+{
+  "hu-HU": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Tudj meg többet",
+            "title": "Fedezd fel a mesterséges intelligenciát és a gépi tanulást"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Tudj meg többet"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Tudj meg többet"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Tudj meg többet"
+          },
+          "codebytes-2020": {
+            "buttonText": "Tudj meg többet"
+          },
+          "coldplay": {
+            "buttonText": "Próbáld ki"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Kezdés"
+          },
+          "csjourneys": {
+            "buttonText": "Tudj meg többet"
+          },
+          "csjourneys-22": {
+            "buttonText": "Tudj meg többet"
+          },
+          "csleadersprize": {
+            "buttonText": "Tudj meg többet"
+          },
+          "hoc-2023": {
+            "body": "A világon milliók szerveznek Kódolás óráját mesterséges intelligenciával vagy anélkül, s tanulnak arról, hogy hogyan működik az AI. Csatlakozz hozzájuk! Bárhol és bárki megteheti. Nincs szükség tapasztalatra.",
+            "buttonText": "Tudj meg többet",
+            "title": "Kód órája: Kreativitás AI-vel"
+          },
+          "hoc-more": {
+            "body": "A Code.org és partnerei által fejlesztett Kódolás Órája weboldal több mint 100 számítástechnikai programot kínál minden korosztály és minden képzettségi szint képviselői számára."
+          },
+          "home-learning-2020": {
+            "buttonText": "Projektötletek megtekintése"
+          },
+          "superhero": {
+            "buttonText": "Tudj meg többet"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Csatlakozz"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Nevezzen ki egy tanárt"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Csatlakozz"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Csatlakozz"
+          }
+        }
+      }
+    }
+  }
+}

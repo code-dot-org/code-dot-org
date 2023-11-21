@@ -532,13 +532,9 @@
   volunteer_engineer_submission_subtitle_generic: '100,000 giáo viên sẽ hướng dẫn một lớp Hour of Code trong lớp học của họ vào năm nay, từ ngày 7 đến 13 tháng 12, 2015. Họ cần sự trợ giúp từ bạn! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} giáo viên cần tình nguyện viên. <br>%{num_volunteers} tình nguyện viên đã đăng ký. Tham gia cùng họ."
   volunteer_engineer_submission_intro_background: "Hour of Code là một bước ngoặt toàn cầu về việc giới thiệu công nghệ thông tin trong một giờ đồng hồ, với mười triệu học sinh/sinh viên ở 180+ quốc gia. Xin vui lòng tham gia Tuần Lễ Công Nghệ Thông Tin, từ ngày 7 đến 13 tháng 12."
-  volunteer_engineer_submission_intro_recruit: 'Các giáo viên đang cần sự giúp đỡ từ một vài người <span style="font-family: ''Gotham 7r'', sans-serif;"> đam mê về việc giảng dạy công nghệ thông tin </span>, những người có thể trợ giúp trong lớp học, hoặc những người có thể <span style="font-family: ''Gotham 7r'', sans-serif;"> truyền cảm hứng </span> đến học sinh/sinh viên thông qua việc trò chuyện chi tiết về công nghệ thông tin (có thể được thực hiên bằng một cuộc gọi video).'
   volunteer_engineer_submission_intro_recruit_markdown: "Giáo viên rất muốn có ai đó **đam mê giảng dạy khoa học máy tính** có thể trợ giúp trong lớp học hoặc ai đó có thể **truyền cảm hứng** cho học sinh của họ bằng cách nói về tiềm năng rộng lớn của khoa học máy tính (có thể tiến hành thông qua cuộc gọi video)."
-  volunteer_engineer_submission_intro_guide: "Tìm hiểu thêm về Hour of Codechương trình tình nguyện tại đây</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Tìm hiểu thêm về [chương trình tình nguyện viên tại đây](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Xin vui lòng nhập vào thông tin sau đây nếu bạn là một sinh viên ngành công nghệ thông tin hay chuyên gia phần mềm. Những mục đánh dấu với <span class=\"form-required-field\">*</span> là bắt buộc."
   volunteer_engineer_submission_intro_signup_markdown: "Vui lòng nhập thông tin sau nếu bạn là học sinh học khoa học máy tính hoặc chuyên gia phần mềm. Bạn phải đủ 18 tuổi trở lên để đăng ký làm tình nguyện viên. Lưu ý rằng tất cả các thông tin bạn điền trong phần này sẽ được công bố rộng rãi cho bất kỳ ai xem [bản đồ tình nguyện viên](/volunteer/local). Các ô có dấu _*_ là thông tin bắt buộc."
-  volunteer_engineer_submission_intro_links: "Bạn có cần tìm tình nguyện viên? Hãy tìm một tình nguyện viên ở khu vực của bạn trên <a href=\"%{volunteer_local}\"> bản đồ tình nguyện viên của chúng tôi </a>."
   volunteer_engineer_submission_intro_links_markdown: "Bạn là giáo viên đang tìm kiếm tình nguyện viên? Hãy tìm tình nguyện viên tại địa phương trên [bản đồ tình nguyện viên](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Cập nhật thông tin của bạn"
   volunteer_engineer_submission_header_shared: "Thông tin chia sẻ với các giáo viên trên bản đồ tình nguyện viên"
@@ -1511,6 +1507,7 @@
   header_report_abuse: "Báo cáo lạm dụng"
   header_legal: "Quyền riêng tư & Pháp lý"
   header_legal_privacy: "Chính sách bảo mật"
+  header_legal_cookie_notice: "Thông báo về cookie"
   header_legal_tos: "Các điều khoản của Code.org"
   header_tutorials: "Hướng dẫn"
   header_screen_reader_hamburger: "Menu"

@@ -43,7 +43,7 @@ fa:
       'App: Where Should I Live?': 'برنامه: کجا باید زندگی کنم؟'
       Artist Intro with JR Hildebrand: معرفی Artist با JR Hildebrand
       Artist Intro with JR Hildebrande: معرفی Artist با JR Hildebrande
-      Artist Project: پروژه Artist
+      Artist Project: پروژه هنرمند
       'Artist: Variables': 'هنرمند: متغیرها'
       Assessment: ارزیابی
       Attribution: نسبت دادن
@@ -122,7 +122,7 @@ fa:
       Dance Crews: گروه رقص
       Data Visualization: به تصویر در آوردن داده ها
       De-bugging with the Step Button: اشکال زدایی با دکمه Step
-      Debugging: رفع اشکال
+      Debugging: رفع باگ
       Debugging with the Step Button: اشکال زدایی با دکمه Step
       'Demo App: Interactive Card': 'نمونه نمایشی برنامه: کارت تعاملی'
       Demo Apps: نمونه نمایشی برنامه ها
@@ -212,6 +212,7 @@ fa:
       Input with If-Else: ورودی با اگر-در غیر اینصورت
       InspirationalArtwork: کارهای گرافیکی انگیزشی
       Interactive Art: هنر تعاملی
+      Intro Video: ویدیوی مقدمه
       Intro to Flyer Game: معرفی بر بازی Flyer
       Intro to For Loops: معرفی حلقه های برای
       Intro to Side Scrollers: معرفی اسکرولرهای کناری
@@ -238,7 +239,7 @@ fa:
       Light Show: نمایش نور
       Linking Pages: صفحات پیوندی
       Linking Screens: صفحه نمایشهای پیوندی
-      Lists: فهرست‌ها
+      Lists: لیست ها
       Looking for Patterns: در جستجوی الگو
       Looping: در حال حلقه دار کردن
       Loops with the Artist: حلقه با Artist
@@ -390,7 +391,7 @@ fa:
       Social Sleuth: کارآگاه اجتماعی
       Songwriting - Functions Unplugged Activity: 'ترانه سرایی: فعالیت بدون کار با رایانه توابع'
       Speed it Up, Slow it Down: سرعت بالا، سرعت کم
-      Sprite Lab Project: پروژه آزمایشگاه اسپرایت
+      Sprite Lab Project: پروژه لابراتوار اسپرایت
       Sprite Movement: حرکت اسپرایت
       Sprite Properties: ویژگی‌های اسپرایت
       Sprites and the Draw Loop: اسپرایت ها و حلقه کشیدن
@@ -462,7 +463,7 @@ fa:
       'Video: De-bugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ (Step)'
       'Video: Debugging': 'فیلم: اشکال زدایی'
       'Video: Debugging with Scrat ': 'فیلم: اشکال زدایی با Scrat '
-      'Video: Debugging with the Step Button': 'ویدئو: اشکال زدایی با دکمه استپ (Step)'
+      'Video: Debugging with the Step Button': 'ویدئو: رفع باگ با دکمه استپ'
       'Video: Events': 'فیلم: رویدادها'
       'Video: Events in App Lab': 'فیلم: رویدادها در App Lab'
       'Video: Follow The Digital Trail': 'فیلم: پیروی از رد دیجیتال'
@@ -486,7 +487,7 @@ fa:
       'Video: Introducing Sprite Lab': 'ویدئو: معرفی لابراتوار اسپرایت'
       'Video: Introduction to Play Lab': 'ویدئو: معرفی لابراتوار بازی'
       'Video: Introduction to Variables': 'فیلم: معرفی و متغیرها'
-      'Video: Loops in Artist': 'ویدئو: حلقه ها در هنرمند'
+      'Video: Loops in Artist': 'ویدئو: حلقه‌ها در هنرمند'
       'Video: Loops with the Artist': 'ویدئو: حلقه ها با هنرمند'
       'Video: Lots of Sprites': 'فیلم: اسپرایت‌های بسیار'
       'Video: Managing Disagreement': 'فیلم: اختلاف مدیریت'
@@ -511,8 +512,8 @@ fa:
       'Video: Outbreak Simulator: Thinking Like a Scientist': 'فیلم: شبیه ساز شیوع: مثل دانشمندان اندیشیدن'
       'Video: Pair Programming': 'فیلم: برنامه نویسی دونفره'
       'Video: Pair Programming ': 'فیلم: برنامه نویسی دونفره'
-      'Video: Programming with Blocks': 'فیلم: برنامه نویسی با بلوک'
-      'Video: Programming with Rey and BB-8': 'فیلم: برنامه نویسی با Rey و BB-8'
+      'Video: Programming with Blocks': 'ویدئو: برنامه نویسی با بلوک'
+      'Video: Programming with Rey and BB-8': 'فیلم: برنامه نویسی با رِی و بی‌بی-8'
       'Video: Properties': 'ویدئو: ویژگی‌ها'
       'Video: Publishing Your Website': 'فیلم: انتشار وبسایت خود'
       'Video: Repeat Blocks': 'فیلم: بلوک های تکرار شونده'
@@ -526,8 +527,8 @@ fa:
       'Video: Text and Prompts': 'ویدئو: متن و دستورها'
       'Video: The Artist in Code Studio': 'ویدئو: هنرمند در استودیوی کدنویسی'
       'Video: The Big Event - Unplugged Activity': 'فیلم: رویداد بزرگ - فعالیت بدون کار با رایانه'
-      'Video: The Collector': 'فیلم: گردآورنده'
-      'Video: The Harvester': 'فیلم: هاروستر'
+      'Video: The Collector': 'ویدئو: گردآورنده'
+      'Video: The Harvester': 'ویدئو: دروگر'
       'Video: Training Data & Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Training Data and Bias': 'فیلم: داده های آموزشی و سوگیری'
       'Video: Unplugged Variables in Envelopes': 'ویدئو: متغیرهای بدون اتصال در پاکت'

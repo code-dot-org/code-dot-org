@@ -49,7 +49,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-space",
-    "serialized_at": "2023-07-03 05:13:51 UTC",
+    "serialized_at": "2023-11-17 23:08:00 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -211,6 +211,22 @@
       },
       "seeding_key": {
         "activity_section.key": "574954ea-9128-428b-9965-b0d34518c11d",
+        "lesson_activity.key": "cda96f31-2f49-4c74-946c-101bea687c76"
+      }
+    },
+    {
+      "key": "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nWant to keep the fun going but not sure how? Consider engaging in our self-paced professional learning module, [Preparing to Teach Interactive Animations and Games](https://studio.code.org/courses/self-paced-pl-csd-unit3-2023)! This unit teaches students to build exciting creations using sprites. This module will give you all the necessary tools, skills, and knowledge."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe",
         "lesson_activity.key": "cda96f31-2f49-4c74-946c-101bea687c76"
       }
     }
@@ -700,6 +716,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

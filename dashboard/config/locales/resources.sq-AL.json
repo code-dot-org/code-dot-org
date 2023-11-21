@@ -5984,7 +5984,7 @@
           "type": "Sllajdet"
         },
         "2022_change_log/courseb/2022": {
-          "name": "Regjistri i Ndryshimeve 2022"
+          "name": "Regjistri i ndryshimeve 2022"
         },
         "all_resources/courseb/2022": {
           "name": "Të gjitha Burimet",
@@ -6350,7 +6350,7 @@
           "type": "Burimi i mësimit"
         },
         "2022_change_log/coursed/2022": {
-          "name": "Regjistri i Ndryshimeve 2022"
+          "name": "Regjistri i ndryshimeve 2022"
         },
         "all_resources/coursed/2022": {
           "name": "Të gjitha burimet",
@@ -6550,19 +6550,19 @@
           "type": "Udhëzuesi i projektit"
         },
         "2022_change_log/coursee/2022": {
-          "name": "Regjistri i Ndryshimeve 2022"
+          "name": "Regjistri i ndryshimeve 2022"
         },
         "all_resources/coursee/2022": {
           "name": "Të gjitha burimet",
-          "url": "/s/kursef-2022/burimet"
+          "url": "/s/kursie-2022/burimet"
         },
         "all_standards/coursee/2022": {
           "name": "Të gjitha standardet",
-          "url": "/s/kursef-2022/standardet"
+          "url": "/s/kursie-2022/standardet"
         },
         "all_vocabulary/coursee/2022": {
           "name": "Fjalori",
-          "url": "/s/kursef-2022/fjalor"
+          "url": "/s/kursie-2022/fjalor"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Common Core dhe Udhëzuesi NGSS",
@@ -11441,7 +11441,8 @@
           "type": "Video"
         },
         "list_of_poems/poem-art/2021": {
-          "type": "Sllajdet"
+          "type": "Sllajdet",
+          "name": "Arti i poemës "
         },
         "poem_art_celebration/poem-art/2021": {
           "type": "Video"
@@ -11469,6 +11470,9 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Burim"
         }
       }
     }

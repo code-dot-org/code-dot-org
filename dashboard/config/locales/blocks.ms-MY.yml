@@ -72,6 +72,11 @@ ms:
             '"measures"': corak berirama
             '"seconds"': saat
         text: selepas {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': corak berirama
+            '"seconds"': saat
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -95,6 +100,27 @@ ms:
             '"SLOTH"': sloths
             '"UNICORN"': unikorn
             sprites: semua
+          MOVE:
+            '"next"': "(Seterusnya)"
+            '"prev"': "(Terdahulu)"
+            '"rand"': "(Rawak)"
+            MOVES.ClapHigh: Gerakan Tepukan Tinggi
+            MOVES.Clown: Gerakan Gangnam
+            MOVES.Dab: Gerakan Dab
+            MOVES.DoubleJam: Gerakan Turun Dua Kali
+            MOVES.Drop: Gerakan Jatuh
+            MOVES.Floss: Gerakan Flos
+            MOVES.Fresh: Gerakan Segar
+            MOVES.Kick: Gerakan Bintang
+            MOVES.Rest: Tiada
+            MOVES.Roll: Gerakan Gulung Badan
+            MOVES.ThisOrThat: Gerakan Ini atau Itu
+        text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kucing
+            '"SLOTH"': sloths
           MOVE:
             '"next"': "(Seterusnya)"
             '"prev"': "(Terdahulu)"
@@ -569,6 +595,51 @@ ms:
         text: |-
           tetapkan kesan latar belakang
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Bulatan
+            '"color_cycle"': Warna
+            '"diamonds"': Berlian
+            '"disco"': Segi Empat
+            '"disco_ball"': Bola Disko
+            '"fireworks"': Bunga Api
+            '"flowers"': Bunga
+            '"galaxy"': Ruang
+            '"growing_stars"': Bintang yang Semakin Meningkat
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Lantai Menari Laser
+            '"music_wave"': Gelombang
+            '"none"': Tiada
+            '"quads"': Sudut
+            '"rainbow"': Pelangi
+            '"rand"': "(Rawak)"
+            '"ripples"': Riak
+            '"ripples_random"': Riak Rawak
+            '"snowflakes"': Salji
+            '"sparkles"': Berkilau
+            '"spiral"': Lingkaran
+            '"splatter"': Percikan Cat
+            '"squiggles"': Cacing Kerawit
+            '"starburst"': Pecahan Cahaya
+            '"stars"': Bintang
+            '"swirl"': Hypno
+            '"text"': Nama Lagu
+          PALETTE:
+            '"cool"': Sejuk
+            '"default"': Lampu
+            '"electronic"': Elektronik
+            '"iceCream"': Aiskrim
+            '"neon"': Neon
+            '"ocean"': Laut
+            '"rainbow"': Pelangi
+            '"rave"': Hitam dan Putih
+            '"tropical"': Tropikal
+            '"vintage"': Vintaj
+            '"warm"': Hangat
+        text: |-
+          tetapkan kesan latar belakang
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1001,6 +1072,12 @@ ms:
         text: "{SPRITE}katakan{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': cecair
+            '"solid"': pepejal
       KatiesBlocks_tumbling:
         text: berguling
       Mikelab_addBehaviorSimple:

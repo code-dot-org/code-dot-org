@@ -68,6 +68,11 @@ pt:
             '"measures"': compassos
             '"seconds"': segundos
         text: após {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': compassos
+            '"seconds"': segundos
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -91,6 +96,27 @@ pt:
             '"SLOTH"': preguiças
             '"UNICORN"': todos unicórnios
             sprites: tudo
+          MOVE:
+            '"next"': "(Próximo)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatório)"
+            MOVES.ClapHigh: Bater palmas
+            MOVES.Clown: Palhaço
+            MOVES.Dab: Dança dab
+            MOVES.DoubleJam: Double Jam
+            MOVES.Drop: Dança drop
+            MOVES.Floss: Dança do fio dental
+            MOVES.Fresh: Novo
+            MOVES.Kick: Estrela
+            MOVES.Rest: Nenhum
+            MOVES.Roll: Rolar
+            MOVES.ThisOrThat: Isso ou Aquilo
+        text: "{GROUP} executa {MOVE} {DIR} para sempre"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': preguiças
           MOVE:
             '"next"': "(Próximo)"
             '"prev"': "(Anterior)"
@@ -560,6 +586,48 @@ pt:
             '"electronic"': Electrônica
             '"iceCream"': Sorvete
             '"neon"': Néon
+            '"rave"': Preto e branco
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Tons de vermelho
+        text: definir o efeito do plano de fundo {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Túnel
+            '"color_cycle"': Cores
+            '"diamonds"': Diamantes
+            '"disco"': Quadrados
+            '"disco_ball"': Bola de discoteca
+            '"fireworks"': Fogos de artifício
+            '"flowers"': Flores
+            '"galaxy"': Espaço
+            '"growing_stars"': Estrelas em crescimento
+            '"kaleidoscope"': Caleidoscópio
+            '"lasers"': Laser de pista de dança
+            '"music_wave"': Ondas
+            '"none"': Nenhum
+            '"quads"': Ângulos
+            '"rainbow"': Arco-íris
+            '"rand"': "(Aleatório)"
+            '"ripples"': Ondulação
+            '"ripples_random"': Ondulações Aleatórias
+            '"snowflakes"': Neve
+            '"sparkles"': Brilhos
+            '"spiral"': Espiral
+            '"splatter"': Respingos de tinta
+            '"squiggles"': Rabiscos
+            '"starburst"': Starburst
+            '"stars"': Estrelas
+            '"swirl"': Hipno
+            '"text"': Título da música
+          PALETTE:
+            '"cool"': Tons de azul
+            '"default"': Claro
+            '"electronic"': Electrônica
+            '"iceCream"': Sorvete
+            '"neon"': Néon
+            '"rainbow"': Arco-íris
             '"rave"': Preto e branco
             '"tropical"': Tropical
             '"vintage"': Vintage

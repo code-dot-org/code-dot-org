@@ -1,0 +1,67 @@
+{
+  "mr-IN": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "अधिक जाणून घ्या",
+            "title": "कृत्रिम बुद्धिमत्ता आणि मशीन लर्निंगबद्दल जाणून घ्या"
+          },
+          "ai-launch-2023": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "back-to-school-2021": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "codebytes-2020": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "coldplay": {
+            "buttonText": "करून पाहा"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "सुरुवात"
+          },
+          "csjourneys": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "csjourneys-22": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "csleadersprize": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "hoc-2023": {
+            "body": "AI सह किंवा शिवाय AI कसे कार्य करते हे जाणून घेण्यासाठी आणि अवर ऑफ कोड होस्ट करण्यासाठी जगभरातील लाखो लोकांमध्ये सामील व्हा. कोणीही, कुठेही करू शकतो. अनुभवाची गरज नाही.",
+            "buttonText": "अधिक जाणून घ्या",
+            "title": "अवर ऑफ कोड: AI सह सर्जनशीलता"
+          },
+          "hoc-more": {
+            "body": "अवर ऑफ कोड वेबसाईटवर सर्व वयांसाठी आणि अनुभवाच्या पातळ्यांसाठी Code.org आणि त्यांच्या भागीदारांनी तयार केलेल्या संगणक शास्त्रातील 500 पेक्षा जास्त कृती आहेत."
+          },
+          "home-learning-2020": {
+            "buttonText": "प्रोजेक्टच्या कल्पना पहा"
+          },
+          "superhero": {
+            "buttonText": "अधिक जाणून घ्या"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "आमच्यात सामील व्हा"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "एका शिक्षकाला नामनिर्देशित करा"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "आमच्यात सामील व्हा"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "आमच्यात सामील व्हा"
+          }
+        }
+      }
+    }
+  }
+}

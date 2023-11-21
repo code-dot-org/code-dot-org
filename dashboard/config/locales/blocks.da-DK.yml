@@ -59,6 +59,11 @@ da:
             '"measures"': målt
             '"seconds"': sekunder
         text: efter {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': målt
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -82,6 +87,27 @@ da:
             '"SLOTH"': plads
             '"UNICORN"': enhjørning
             sprites: alle
+          MOVE:
+            '"next"': "(Næste)"
+            '"prev"': "(Forrige)"
+            '"rand"': "(Tilfældig)"
+            MOVES.ClapHigh: Højt klap
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Ned to gange
+            MOVES.Drop: Slip
+            MOVES.Floss: Floss
+            MOVES.Fresh: Frisk
+            MOVES.Kick: Stjerne
+            MOVES.Rest: Ingen
+            MOVES.Roll: Kropsrulning
+            MOVES.ThisOrThat: Dette eller denne
+        text: "{GROUP} udfør {MOVE} {DIR} forevigt"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': katte
+            '"SLOTH"': plads
           MOVE:
             '"next"': "(Næste)"
             '"prev"': "(Forrige)"
@@ -549,6 +575,50 @@ da:
             '"electronic"': Elektronik
             '"iceCream"': Soft Ice
             '"neon"': Neon
+            '"rave"': Sort og hvid
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Rød
+        text: |-
+          "indstil baggrundseffekt
+          {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Farver
+            '"diamonds"': Diamanter
+            '"disco"': Kvadrater
+            '"disco_ball"': Diskokugle
+            '"fireworks"': Fyrværkeri
+            '"flowers"': Blomster
+            '"galaxy"': Ydre rum
+            '"growing_stars"': Voksende stjerner
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansegulv
+            '"music_wave"': Bølger
+            '"none"': Ingen
+            '"quads"': Vinkler
+            '"rainbow"': Regnbue
+            '"rand"': "(Tilfældig)"
+            '"ripples"': Krusninger
+            '"ripples_random"': Tilfældige krusninger
+            '"snowflakes"': Sne
+            '"sparkles"': Glitter
+            '"spiral"': Spiral
+            '"splatter"': Sprøjt af maling
+            '"squiggles"': Kruseduller
+            '"starburst"': Starburst
+            '"stars"': Stjerner
+            '"swirl"': Hypno
+            '"text"': Sangtitel
+          PALETTE:
+            '"cool"': Blå
+            '"default"': Lys
+            '"electronic"': Elektronik
+            '"iceCream"': Soft Ice
+            '"neon"': Neon
+            '"rainbow"': Regnbue
             '"rave"': Sort og hvid
             '"tropical"': Tropisk
             '"vintage"': Vintage

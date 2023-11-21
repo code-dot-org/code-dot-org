@@ -69,6 +69,11 @@ sv:
             '"measures"': takter
             '"seconds"': sekunder
         text: efter {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takter
+            '"seconds"': sekunder
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -92,6 +97,27 @@ sv:
             '"SLOTH"': sengångare
             '"UNICORN"': enhörningar
             sprites: alla
+          MOVE:
+            '"next"': "(Nästa)"
+            '"prev"': "(Föregående)"
+            '"rand"': "(Slumpad)"
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Färsk
+            MOVES.Kick: Stjärna
+            MOVES.Rest: Ingen
+            MOVES.Roll: Kroppsrullning
+            MOVES.ThisOrThat: Det här eller det där
+        text: "{GROUP} gör {MOVE} {DIR} för alltid"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': alla katter
+            '"SLOTH"': sengångare
           MOVE:
             '"next"': "(Nästa)"
             '"prev"': "(Föregående)"
@@ -581,6 +607,51 @@ sv:
             '"electronic"': Elektroniskt
             '"iceCream"': Glass
             '"neon"': Neon
+            '"rave"': Svartvitt
+            '"tropical"': Tropisk
+            '"vintage"': Vintage
+            '"warm"': Röda
+        text: |-
+          ställ in bakgrundseffekt
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Färger
+            '"diamonds"': Diamanter
+            '"disco"': Fyrkanter
+            '"disco_ball"': Discokula
+            '"fireworks"': Fyrverkerier
+            '"flowers"': Blommor
+            '"galaxy"': Rymd
+            '"growing_stars"': Växande Stjärnor
+            '"kaleidoscope"': Kalejdoskop
+            '"lasers"': Laserdansgolv
+            '"music_wave"': Vågor
+            '"none"': Ingen
+            '"quads"': Vinklar
+            '"rainbow"': Regnbåge
+            '"rand"': "(Slumpad)"
+            '"ripples"': Krusningar
+            '"ripples_random"': Slumpmässiga Krusningar
+            '"snowflakes"': Snö
+            '"sparkles"': Gnistror
+            '"spiral"': Spiral
+            '"splatter"': Färgstänk
+            '"squiggles"': Krumelurer
+            '"starburst"': Stjärnfall
+            '"stars"': Stjärnor
+            '"swirl"': Hypno
+            '"text"': Låttitel
+          PALETTE:
+            '"cool"': Blues
+            '"default"': Ljus
+            '"electronic"': Elektroniskt
+            '"iceCream"': Glass
+            '"neon"': Neon
+            '"ocean"': Hav
+            '"rainbow"': Regnbåge
             '"rave"': Svartvitt
             '"tropical"': Tropisk
             '"vintage"': Vintage

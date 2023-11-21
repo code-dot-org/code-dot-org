@@ -8982,7 +8982,7 @@
           "name": "Oportunitate interdisciplinară"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Activitate (30-45 minute)"
+          "name": "Activitate"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Încheiere"
@@ -10222,6 +10222,9 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Nivele"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Încheiere"
         }
       }
     }

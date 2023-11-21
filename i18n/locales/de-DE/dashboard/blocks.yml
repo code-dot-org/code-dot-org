@@ -71,6 +71,11 @@ de:
           UNIT:
             '"measures"': Takte
             '"seconds"': Sekunden
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': Takte
+            '"seconds"': Sekunden
       Dancelab_changeColorBy:
         text: ändern {COLOR} {METHOD} um {AMOUNT}
         options:
@@ -111,6 +116,31 @@ de:
             MOVES.ThisOrThat: Dies oder Das
             MOVES.Thriller: Zombie
             MOVES.Rest: Keiner
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tun {MOVE} {DIR} für immer"
+        options:
+          GROUP:
+            '"CAT"': alle Katzen
+            '"SLOTH"': Faultiere
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Oben klatschen
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Intensivieren
+            MOVES.Drop: Fallen lassen
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stern
+            MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Keiner
+            '"next"': "(nächste/r)"
+            '"prev"': "(vorherig/er)"
+            '"rand"': "(zufällig)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -582,6 +612,48 @@ de:
             '"iceCream"': Eiscreme
             '"default"': Hell
             '"neon"': Neon
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rots
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "hintergrundeffekt einstellen \n{PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Keiner
+            '"rand"': "(zufällig)"
+            '"quads"': Winkel
+            '"circles"': Tunnel
+            '"color_cycle"': Farben
+            '"diamonds"': Rauten
+            '"disco_ball"': Disco-Kugel
+            '"fireworks"': Feuerwerk
+            '"flowers"': Blumen
+            '"growing_stars"': Wachsende Sterne
+            '"swirl"': Hypno
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laser-Tanzfläche
+            '"splatter"': Farbspritzer
+            '"rainbow"': Regenbogen
+            '"ripples_random"': Zufällige Wellen
+            '"ripples"': Wellen
+            '"snowflakes"': Schnee
+            '"text"': Song-Titel
+            '"galaxy"': Leerzeichen
+            '"sparkles"': Funkeln
+            '"spiral"': Spirale
+            '"disco"': Quadrate
+            '"squiggles"': Schnörkel
+            '"starburst"': Starburst
+            '"stars"': Sterne
+            '"music_wave"': Wellen
+          PALETTE:
+            '"rave"': Schwarzweiß
+            '"cool"': Blaus
+            '"electronic"': Elektronisch
+            '"iceCream"': Eiscreme
+            '"default"': Hell
+            '"neon"': Neon
+            '"rainbow"': Regenbogen
             '"tropical"': Tropisch
             '"vintage"': Vintage
             '"warm"': Rots
@@ -1660,6 +1732,12 @@ de:
         text: y Koordinate von {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': Solid
+            '"liquid"': flüssig
+            '"gas"': Gas
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:

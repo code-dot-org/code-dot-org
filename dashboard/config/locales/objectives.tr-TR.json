@@ -3141,7 +3141,7 @@
           "description": "Yaratıcı bir eseri diğer öğrencilerle paylaşma."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Bilgisayarla görmenin, daha küçük bileşenleri nihai bir tahminde birleştiren katmanlardan nasıl oluşturulduğunu açıklayın"
+          "description": "Bilgisayar görüşünün, daha küçük bileşenleri nihai bir tahminde birleştiren katmanlardan nasıl oluştuğunu açıklayın"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
           "description": "Öneri sistemleri oluştururken farklı bakış açılarına duyulan ihtiyacı açıklayın"
@@ -3162,10 +3162,10 @@
           "description": "Bu modellerin yaratıcı olup olmadığını ve bu görüntülere kimin sahip olduğunu tartışın"
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Yapay zekanın difüzyon olarak bilinen bir süreçle oldukça gerçekçi görünümlü görüntüler üretebileceğini açıklayın - burada bir model ayrıntıları tersine çevirerek ayrıntıların nasıl çizileceğini öğrenir"
+          "description": "Yapay zekanın, yayılma (difüzyon) olarak bilinen bir süreç aracılığıyla oldukça gerçekçi görünen görüntüler üretebildiğini açıklayın - bir modelin ayrıntıları tersine çevirerek ayrıntıların nasıl çizileceğini öğrendiği yer"
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "Hangi tür görevlerin olduğunun nedeni bir algoritma tarafından tamamlanmamalıdır"
+          "description": "Hangi tür görevlerin bir algoritma tarafından tamamlanmaması gerektiğinin nedeni"
         },
         "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
           "description": "Yapay zekanın nasıl çalıştığını açıklayın"
@@ -3478,6 +3478,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Bilgisayarların yaratıcı süreçlere nasıl katkıda bulunabileceğini düşünün."
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Dans partilerinin görsel deneyimini geliştirmek için, seçilen emojilere göre uygun, özel efektleri seçmek ve oluşturmak için, Yapay Zekadan yararlanın."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Tuş vuruşları ve zamanlı olaylar gibi, kullanıcı girdilerine yanıt veren, etkileşimli öğeleri programlamak için, temel kodlama kavramlarını kullanın."
         }
       }
     }

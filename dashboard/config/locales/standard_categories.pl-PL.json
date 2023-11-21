@@ -5,11 +5,41 @@
         "1": {
           "description": "Uczniowie wykazują myślenie kreatywne, budują wiedzę i opracowują produkty oraz procesy innowacyjne z użyciem technologii."
         },
+        "1-A-i": {
+          "description": "Wyczuwanie - żywe istoty"
+        },
+        "1-A-ii": {
+          "description": "Czujniki - Czujniki komputerowe"
+        },
+        "1-A-iii": {
+          "description": "Wykrywanie - kodowanie cyfrowe"
+        },
+        "1-B-i": {
+          "description": "Przetwarzanie - wykrywanie a percepcja"
+        },
+        "1-B-ii": {
+          "description": "Przetwarzanie - ekstrakcja funkcji"
+        },
         "2": {
           "description": "Uczniowie używają mediów i środowisk cyfrowych, aby komunikować się i wspólnie pracować, z uwzględnieniem odległości, aby wspierać naukę indywidualną i przyczyniają się do tego, że uczą się inni."
         },
+        "2-A-i": {
+          "description": "Reprezentacja - abstrakcja"
+        },
+        "2-A-ii": {
+          "description": "Reprezentacja - reprezentacja symboliczna"
+        },
+        "2-A-iii": {
+          "description": "Reprezentacja - Struktury danych"
+        },
+        "2-A-iv": {
+          "description": "Reprezentacja - wektory cech"
+        },
+        "2-C-ii": {
+          "description": "Rozumowanie - algorytmy rozumowania"
+        },
         "3": {
-          "description": "Studenci stosują narzędzia cyfrowe do zbierania, oceniania i wykorzystywania informacji."
+          "description": "Uczniowie stosują narzędzia cyfrowe do zbierania, oceniania i wykorzystywania informacji."
         },
         "3-A-i": {
           "description": "Natura uczenia się - ludzie kontra maszyny"
@@ -47,8 +77,53 @@
         "4": {
           "description": "Uczniowie używają umiejętności krytycznego myślenia do zaplanowania i prowadzenia badań, zarządzają projektami, rozwiązują problemy oraz podejmują świadome decyzje z użyciem odpowiednich narzędzi i zasobów cyfrowych."
         },
+        "4-A-i": {
+          "description": "Język naturalny - struktura języka"
+        },
+        "4-A-ii": {
+          "description": "Język naturalny - struktura języka"
+        },
+        "4-A-iii": {
+          "description": "Język naturalny - struktura języka"
+        },
+        "4-A-iv": {
+          "description": "Język naturalny - Aplikacje"
+        },
+        "4-B-i": {
+          "description": "Rozumowanie zdroworozsądkowe"
+        },
+        "4-C-i": {
+          "description": "Rozumienie emocji"
+        },
         "5": {
-          "description": "Studenci rozumieją kwestie ludzkie, kulturowe i społeczne związane z technologią i praktyką zachowań prawnych i etycznych."
+          "description": "Uczniowie rozumieją kwestie ludzkie, kulturowe i społeczne związane z technologią i praktyką zachowań prawnych i etycznych."
+        },
+        "5-A-i": {
+          "description": "Etyczna AI - różnorodność zainteresowań i odmienne skutki"
+        },
+        "5-A-ii": {
+          "description": "Etyczna AI - kryteria etycznego projektowania"
+        },
+        "5-A-iii": {
+          "description": "Etyczna AI - praktykowanie etycznego projektowania"
+        },
+        "5-B-i": {
+          "description": "AI i kultura - sztuczna inteligencja w życiu codziennym"
+        },
+        "5-B-ii": {
+          "description": "AI i kultura — zaufanie i odpowiedzialność"
+        },
+        "5-C-i": {
+          "description": "AI i gospodarka - wpływ sztucznej inteligencji na sektory społeczne"
+        },
+        "5-C-ii": {
+          "description": "AI i gospodarka — wpływ na zatrudnienie"
+        },
+        "5-D-i": {
+          "description": "AI dla dobra społecznego - demokratyzacja technologii AI"
+        },
+        "5-D-ii": {
+          "description": "AI dla dobra społecznego - wykorzystanie AI do rozwiązywania problemów społecznych"
         },
         "6": {
           "description": "Uczniowie okazują głębokie zrozumienie pojęć, systemów i operacji technologicznych."

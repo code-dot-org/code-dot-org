@@ -495,10 +495,12 @@ az-AZ:
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
   coursea-2021_gradelevel: 4-7 yaş
+  coursea-2021_name: Kurs A (2021)
   coursea-2021_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
   coursea-2022_gradelevel: 4-7 yaş
+  coursea-2022_name: A kursu (2022)
   coursea-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
@@ -524,10 +526,12 @@ az-AZ:
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
   courseb-2021_gradelevel: 5-8 yaş
+  courseb-2021_name: Kurs B (2021)
   courseb-2021_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
   courseb-2022_gradelevel: 5-8 yaş
+  courseb-2022_name: B kursu (2022)
   courseb-2022_shortdescription_congrats: Kompüter elminin və internet təhlükəsizliyinin
     əsaslarını öyrənin. Kursun sonunda paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi
     yaradın.
@@ -555,11 +559,13 @@ az-AZ:
     üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda
     paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
   coursec-2021_gradelevel: 6-10 yaş
+  coursec-2021_name: Kurs C (2021)
   coursec-2021_shortdescription_congrats: Ardıcıllıq, döngələr və hadisələrlə proqramlar
     yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli
     üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda
     paylaşa biləcəyiniz öz oyununuzu və ya hekayənizi yaradın!
   coursec-2022_gradelevel: 6-10 yaş
+  coursec-2022_name: C kursu (2022)
   coursec-2022_shortdescription_congrats: Ardıcıllıq, döngələr və hadisələrlə proqramlar
     yaradın. Baş hərflərinizi binar hərflərə tərcümə edin, müxtəlif problemlərin həlli
     üsullarını araşdırın və kiber zorakılığa necə cavab verməyi öyrənin. Kursun sonunda
@@ -619,10 +625,12 @@ az-AZ:
     kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
     və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
   coursee-2021_gradelevel: 8-12 yaş
+  coursee-2021_name: Kurs E (2021)
   coursee-2021_shortdescription_congrats: Alqoritmlər, döngələr, şərtlər və hadisələrlə
     kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
     və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
   coursee-2022_gradelevel: 8-12 yaş
+  coursee-2022_name: E kursu (2022)
   coursee-2022_shortdescription_congrats: Alqoritmlər, döngələr, şərtlər və hadisələrlə
     kodlamağa başlayın və sonra funksiyalara keçin. Bu kursun ikinci hissəsində dostlarınız
     və ailənizlə paylaşa biləcəyiniz bir baş daşı layihəsi hazırlayın və yaradın.
@@ -651,12 +659,14 @@ az-AZ:
     edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz
     bir baş daşı layihəsi hazırlayın və yaradın.
   coursef-2021_gradelevel: 9-13 yaş
+  coursef-2021_name: Kurs F (2021)
   coursef-2021_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən,
     funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli
     üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə
     edin. Bu kursun ikinci hissəsində dostlarınız və ailənizlə paylaşa biləcəyiniz
     bir baş daşı layihəsi hazırlayın və yaradın.
   coursef-2022_gradelevel: 9-13 yaş
+  coursef-2022_name: F kursu (2022)
   coursef-2022_shortdescription_congrats: Müxtəlif növ döngələrdən, hadisələrdən,
     funksiyalardan və şərtlərdən istifadə etməyi öyrənin. Müxtəlif problemlərin həlli
     üsullarını araşdırın və hesablama və internetin cəmiyyətə təsirlərini müzakirə
@@ -1074,6 +1084,8 @@ az-AZ:
   express-2018_name: Ekspress Kurs (2018)
   express-2019_name: Ekspress Kurs (2019)
   express-2020_name: Ekspress Kurs (2020)
+  express-2021_name: Ekspres Kurs (2021)
+  express-2022_name: Ekspres Kurs (2022)
   express_name: Ekspress Kursu
   finch_beyond_gradelevel: 8+ yaş
   finch_beyond_longdescription: Finch kompüter elmləri təhsili üçün yeni robotdur.
@@ -1201,6 +1213,7 @@ az-AZ:
   header_incubator: İnkubator
   header_learn: Öyrənin
   header_legal: Məxfilik və Hüquq
+  header_legal_cookie_notice: Kuki Xəbərdarlığı
   header_legal_privacy: Məxfilik siyasəti
   header_legal_tos: Xidmət şərtləri
   header_my_dashboard: İdarəetmə panelim
@@ -2674,30 +2687,14 @@ az-AZ:
     milyonlarla tələbəni özünə cəlb edən kompüter elmlərinə bir saatlıq girişi sınamaq
     üçün qlobal hərəkatdır. Zəhmət olmasa 7-13 dekabr - Kompüter Elmləri Təhsil Həftəsi
     zamanı iştirak edin.
-  volunteer_engineer_submission_intro_guide: 'Bizim könüllülük proqramlarımız haqqında
-    burdan <a href="%{volunteer_guide}"> öyrənə bilərsiniz. '
   volunteer_engineer_submission_intro_guide_markdown: Haqqımızda daha çox məlumat
     əldə edin [könüllü proqramı burada](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Müəllim könüllü axtarırsınız? <a href="%{volunteer_local}">könüllülər
-    xəritəmizdə</a> yerli könüllü tapın.
   volunteer_engineer_submission_intro_links_markdown: Müəllim könüllü axtarırsınız?
     [könüllü xəritəmizdə](%{volunteer_local}) yerli könüllü tapın.
-  volunteer_engineer_submission_intro_recruit: 'Müəllimlər sinifdə kömək edə biləcək
-    <span style="font-family: ''Gotham 7r'', sans-serif;">kompüter elmləri təhsili
-    ilə maraqlanan</span> və ya <span style bilən kimsəyə sahib olmaq istərdilər.
-    ="font-family: ''Gotham 7r'', sans-serif;">tələbələrini informatika ilə bağlı
-    geniş imkanlar haqqında danışaraq ruhlandırın</span> (bunu video söhbət vasitəsilə
-    etmək olar).'
   volunteer_engineer_submission_intro_recruit_markdown: Müəllimlər sinifdə kömək edə
     biləcək **kompüter elmləri təhsili ilə maraqlanan** və ya informatika ilə bağlı
     imkanların genişliyi haqqında danışaraq tələbələrini **ilhamlandıra bilən kimsənin
     olmasını çox istərdilər (bunu vasitəsilə edilə bilər). video söhbət)
-  volunteer_engineer_submission_intro_signup: Əgər siz kompüter elmləri tələbəsisinizsə
-    və ya proqram təminatı üzrə mütəxəssissinizsə, zəhmət olmasa aşağıdakı məlumatları
-    daxil edin. Könüllü kimi qeydiyyatdan keçmək üçün ən azı 18 yaşınız olmalıdır.
-    Nəzərə alın ki, bu bölmədə doldurduğunuz bütün sahələr <a href="/volunteer/local">könüllülər
-    xəritəsinə</a> baxan hər kəs üçün açıq olacaq. <span class="form-required-field">*</span>
-    ilə işarələnmiş sahələr tələb olunur.
   volunteer_engineer_submission_intro_signup_markdown: Əgər siz kompüter elmləri tələbəsisinizsə
     və ya proqram təminatı üzrə mütəxəssissinizsə, zəhmət olmasa aşağıdakı məlumatları
     daxil edin. Könüllü kimi qeydiyyatdan keçmək üçün ən azı 18 yaşınız olmalıdır.

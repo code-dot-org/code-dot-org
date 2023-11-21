@@ -3588,10 +3588,10 @@
           "description": "Utilice sentencias condicionales para mostrar un escenario de causa y efecto en la naturaleza."
         },
         "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
-          "description": "Analizar los efectos de demasiadas, muy pocas o apenas la cantidad correcta de algas en un ecosistema marino. "
+          "description": "Analizar los efectos de demasiadas, muy pocas o justo en la cantidad adecuada de algas en un ecosistema marino. "
         },
         "2523ed88-7219-4356-a342-5077931e97df": {
-          "description": "Referirse al artículo científico incluido para orientar sus soluciones a la simulación de sobrepesca."
+          "description": "Consulta el artículo científico incluido para orientar sus soluciones a la simulación de sobrepesca."
         },
         "8123b6d5-695d-49e4-8880-0d1f532656df": {
           "description": "Crear y utilizar una variable para realizar un seguimiento de un valor cambiante en un programa."
@@ -5559,7 +5559,7 @@
           "description": " Aplicar el proceso de resolución de problemas para entrenar a una computadora en\\\n la resolución de un problema"
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Describir cómo se construye la visión por computadora de capas que combinan componentes más pequeños en una predicción final"
+          "description": "Describir como la visión por computadora se construye a partir de capas que combinan componentes más pequeños en una predicción final."
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
           "description": "Explicar la necesidad de diversas perspectivas a la hora de crear sistemas de recomendación"
@@ -5568,22 +5568,22 @@
           "description": "Utilizar los pesos de una neurona artificial para ajustar los resultados de un sistema de recomendación"
         },
         "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
-          "description": "Discutir los efectos secundarios positivos y negativos de estos modelos"
+          "description": "Analizar los efectos secundarios positivos y negativos de estos modelos."
         },
         "941fa029-220b-4d04-880f-29d93c952a9d": {
-          "description": "Colabore con la IA para crear un documento de texto creativo"
+          "description": "Colabora con la IA para crear un documento de texto creativo"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Describir que tener una gran cantidad de texto del que aprender permite que las computadoras parezcan inteligentes en forma escrita"
+          "description": "Describir que disponer de una gran cantidad de texto del que aprender permite que las computadoras parezcan inteligentes cuando escriben."
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discutir si estos modelos son creativos o no y quién es el dueño de estas imágenes"
+          "description": "Analizar si estos modelos son creativos o no y quién es el dueño de estas imágenes."
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Describir que la IA puede generar imágenes de aspecto bastante realista a través de un proceso conocido como difusión, donde un modelo aprende a dibujar detalles al revertir los detalles"
+          "description": "Describir que la IA puede generar imágenes de aspecto bastante realista a través de un proceso conocido como difusión, en donde un modelo aprende a dibujar detalles al revertirlos."
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "La razón sobre qué tipos de tareas no debe ser completada por un algoritmo"
+          "description": "La razón acerca de qué tipos de tareas no deben ser completadas por un algoritmo"
         },
         "62d59302-d8ba-4c91-a304-9e7cdecf634f": {
           "description": "Definir la inteligencia artificial (IA) con sus propias palabras, utilizando como ejemplo las tecnologías presentes en su vida cotidiana."
@@ -5905,6 +5905,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utiliza la terminología adecuada cuando te refieras a un ratón de ordenador, un trackpad o una pantalla táctil."
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Reflexionen sobre el uso de las computadoras en el proceso creativo"
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Utiliza la IA para seleccionar y generar efectos especiales basados en emojis para mejorar la experiencia visual de su fiesta de baile."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Utiliza conceptos básicos de las ciencias de la computación para programar elementos interactivos que respondan a la entrada del usuario, como pulsaciones de teclas y eventos cronometrados."
         }
       }
     }

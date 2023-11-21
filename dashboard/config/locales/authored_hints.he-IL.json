@@ -2910,6 +2910,10 @@
         "courseD_bee_conditionals8_2023": {
           "courseD_bee_conditionals8_a": "**זכור:** החידה הזו משתנה בכל ריצה חדשה. \n\nאתה תזדקק להשתמש בבלוק התניה (\"אם\" או \"אם/אחרת\") כדי לפתור את החידה."
         },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "עליך להוסיף את הבלוק 'זוז שמאלה' לאירוע 'כאשר חץ שמאלה' כדי לגרום למשחק הזה לעבוד:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "אל תשכח ללחוץ על \"הפעלה\" ולהעביר את היד לסל על מנת לפתור את החידה הזו."
+        },
         "courseD_collector_debugging1": {
           "courseD_collector_debugging1_c": "זכור להשתמש בבלוק 'אסוף' כדי לאסוף אוצר ברגע שהגעת אליו.  "
         },
@@ -4021,6 +4025,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "השתמש בתפריט הנפתח כדי לבחור בין צבעים ואפקטים שונים.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "חברו בלוק \"יצירת אפקט ב-AI\" לאירוע \"ב-2 מדידות\" בסביבת העבודה שלכם באופן הבא:\n\n[blockly block][0]",
+          "hint2": "לחצו על ה-[blockly block][0] כדי ליצור אפקט חדש."
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 \\*\\* עדיין תקועים? \\*\\* צפו שוב בסרטון האירועים כדי ללמוד כיצד הם פועלים. ",
+          "hint2": "💡 להלן דוגמה של כיצד הקוד שלכם יכול להיראות. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 התאימו אישית את האפקט על ידי לחיצה על אמוג'ים ב-<xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> ",
+          "Hint2": "💡 \\*\\* עדיין תקועים? \\*\\* צפו בסרטון כדי לראות כיצד ניתן להתאים אישית את האפקט. ",
+          "HintEdit": "💡 אם אתם רוצים להשתמש בקוד שה-AI כותב, לחצו כדי להציג את הקוד ולאחר מכן לחצו על \"השתמש בקוד\". הבלוקים יחליפו את הבלוק \"יצירת אפקט ב-AI\" בסביבת העבודה שלכם. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "הרקדן צריך להיות זהה בשני הבלוקים והסדר חשוב.",
+          "validation": "הוסיפו את הבלוקים להגדרת <code style=\"color:white; background-color:#FFBD46\"> </code> ליצירת הרקדן הראשון שלכם:\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"next\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 חברו את [blockly block][0] להגדרת <code style=\"color:white; background-color:#FFBD46\"> </code>. לאחר מכן, לחצו עליו כדי להתחיל.",
+          "Hint3": "💡 אם אתם רוצים ליצור מחדש את האפקט או להחליף את האמוג'ים, לחצו שוב על הבלוק \"יצירת אפקט ב-AI\"."
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 האזינו לשיר וחשבו על האווירה של המוזיקה.",
+          "Hint2": "💡 חברו את [blockly block][0] להגדרת <code style=\"color:white; background-color:#FFBD46\"> </code>. לאחר מכן, לחצו עליו כדי להתחיל.",
+          "Hint3": "💡 אם אתם רוצים ליצור מחדש את האפקט או להחליף את האמוג'ים, לחצו שוב על הבלוק \"יצירת אפקט ב-AI\"."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 הרקדנים שלכם לא יגיבו לפקודות שלכם אלא אם הריקוד פועל. ",
+          "hint2": "💡 לאחר שתלחצו על <code style=\"color:white; background-color:#FFBD46\">הרץ</code>, הזיזו את הרקדנים שלכם על ידי לחיצה על החץ  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> ימינה או שמאלה. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "לחץ וגרור בלוק 'צור ספרייט חדש' וחבר אותו תחת 'כאשר רוצה'. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

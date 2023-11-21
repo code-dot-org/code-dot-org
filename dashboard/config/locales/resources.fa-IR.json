@@ -663,7 +663,7 @@
           "type": "منبع"
         },
         "lists/csd/2021": {
-          "name": "فهرست‌ها",
+          "name": "لیست ها",
           "type": "منبع"
         },
         "digital-footprint/csd/2021": {
@@ -1696,7 +1696,7 @@
         "feeling-faces-image/coursea/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "pair-programming/coursea/2021": {
           "name": "برنامه نویسی اشتراکی",
@@ -1894,7 +1894,7 @@
         "feeling-faces-image/courseb/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "jigsaw/courseb/2021": {
           "name": "تمرین کشیدن و رها کردن",
@@ -2420,7 +2420,7 @@
         "feeling-faces-image/coursed/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "لحظه‌ای صبر کرده و آنلاین فکر کنید",
@@ -3087,7 +3087,7 @@
         "feeling-faces-image/pre-express/2021": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "برنامه نویسی اشتراکی ",
@@ -3095,7 +3095,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدیو"
         },
@@ -3266,7 +3266,7 @@
           "type": "راهنمای پروژه"
         },
         "lists/csd/2022": {
-          "name": "فهرست‌ها",
+          "name": "لیست ها",
           "type": "منبع"
         },
         "mini-project_html_web_page/csd/2022": {
@@ -4600,7 +4600,7 @@
         "feeling_faces/coursea/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "pair-programming/coursea/2022": {
           "name": "برنامه نویسی اشتراکی",
@@ -4765,7 +4765,7 @@
         "feeling_faces/courseb/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2022": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم"
@@ -5269,7 +5269,7 @@
         "feeling_faces/coursed/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "conditionals_with_cards/coursed/2022": {
           "name": "دستورهای شرطی با کمک کارت‌ها",
@@ -5761,7 +5761,7 @@
         "feeling_faces/pre-express/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2022": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
@@ -5774,7 +5774,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2022": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -6541,7 +6541,7 @@
           "type": "منبع"
         },
         "lists/csd/2023": {
-          "name": "فهرست‌ها",
+          "name": "لیست ها",
           "type": "منبع"
         },
         "video_debugging/csd/2023": {
@@ -8034,7 +8034,7 @@
         "feeling_faces/coursea/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "pair-programming/coursea/2023": {
           "name": "برنامه نویسی اشتراکی",
@@ -8198,7 +8198,7 @@
         "feeling_faces/courseb/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "how_to_make_a_class_section_on_code_org/courseb/2023": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم"
@@ -8738,7 +8738,7 @@
         "feeling_faces/coursed/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "conditionals_with_cards/coursed/2023": {
           "name": "دستورهای شرطی با کمک کارت‌ها",
@@ -9260,7 +9260,7 @@
         "feeling_faces/pre-express/2023": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
-          "type": "تصاویر احساسی"
+          "type": "تصاویر هیجان"
         },
         "how_to_make_a_class_section_on_code_org/pre-express/2023": {
           "name": "چگونه یک بخش کلاس در Code.org ایجاد کنیم",
@@ -9273,7 +9273,7 @@
           "type": "ویدئوی دانش‌آموز"
         },
         "wiggles_-_go_noodle/pre-express/2023": {
-          "name": "Wiggles - Go Noodle",
+          "name": "ویگلز - گو نودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
         },
@@ -9636,6 +9636,9 @@
           "name": "ویدیو: فشرده‌سازی متن با Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "ویدئو"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "منبع"
         }
       }
     }

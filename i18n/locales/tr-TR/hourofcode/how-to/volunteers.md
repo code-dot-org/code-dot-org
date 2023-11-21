@@ -134,7 +134,7 @@ Okul veya öğretmenle birlikte, neyin en mantıklı olacağını tartışın. �
 - Teknolojinin hayatımıza etkisini tüm çevrelerden öğrencileri ilgilendirecek örneklerle açıklayın (teknolojiyle hayat kurtarmaktan, insanlara yardım etmekten, insanlarla iletişime geçmekten bahsedin).
 - Eğer bir teknoloji şirketiyseniz şirketinizin üzerinde çalıştığı eğlenceli ve yenilikçi ürünleri gösterin. Teknoloji şirketi değilseniz şirketinizin sorunları çözmek ve hedeflere ulaşmak için teknolojiyi kullanma yollarından söz edin.
 - Şirketinizdeki yazılım mühendislerini, bilgisayar bilimi öğrenmeye ve üzerinde çalıştıkları projelere nasıl karar verdiklerini anlatmaya davet edin.
-- Etkinliğinizi kolaylaştıracak veya yerel bir okulda gönüllü olarak çalışacak bir personel grubunuz varsa grubunuz için [özel tişörtler](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) sipariş vermeyi düşünün.
+- Etkinliğinizi kolaylaştıracak veya yerel bir okulda gönüllü olarak çalışacak bir personel grubunuz varsa [özel tişörtler](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5 Grubunuz için -C3256FBA0220?ref_=ast_bln) sipariş vermeyi düşünün .
 
 ### 3. Teknolojik gereksinimlerinizi planlayın
 
@@ -187,7 +187,7 @@ Yardım etmenin en iyi yollarından biri, Hour of Code'u duyurmak ve tanıtmakt�
 
 ### 1. Etkinliğinizi Kaydettirin
 
-[Hour of Code etkinliğinizi kaydettirdiğinizde](/#join), başarılı bir Kodlama Saati düzenlemek için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
+[Hour of Code etkinliğinize kaydolduğunuzda](/events) başarılı bir Hour of Code'a ev sahipliği yapmak için haberler ve ipuçları içeren yararlı e-postalar alacaksınız. Aynı zamanda, bölgenizdeki okullara veya velilere, onların yakınında bir etkinlik düzenlediğinizi de bu şekilde bildirirsiniz.
 
 ### 2. Sosyal Medyada paylaşın
 

@@ -84,10 +84,10 @@ uk:
         обліковий запис.
     facebook: Facebook
     forgot_password: Забули пароль?
-    google_oauth2: обліковий запис Google
+    google_oauth2: обліковим записом Google
     invalid_provider: На жаль, облікові записи %{provider} не можна зв'язати з обліковими
       записами Code.org.
-    microsoft_v2_auth: обліковий запис Microsoft
+    microsoft_v2_auth: обліковим записом Microsoft
     migration_required: На жаль, ми не можемо підключати або відключати облікові записи,
       які використовують стару версію облікового запису. Оновіть, будь ласка, версію
       облікового запису.
@@ -108,7 +108,7 @@ uk:
       %{provider} аккаунту. Будь ласка, спробуйте ще раз.
     use_clever: Вибачте, ваш профіль Code.org не пов'язан з вашим %{provider}. Будь
       ласка, увійдіть через ваш Clever Portal замість цього.
-    windowslive: обліковий запис Microsoft
+    windowslive: обліковим записом Microsoft
   behaviors:
     this_sprite: цей спрайт
   beta: бета-версія
@@ -162,7 +162,7 @@ uk:
   course_offering:
     headers:
       csa_labs: Лабораторії CSA
-      csc: Інтеграція інформатики
+      csc: Інтегрована інформатика
       csf: Основи інформатики
       express: Експрес
       favorites: Улюблені
@@ -564,7 +564,7 @@ uk:
       sign_in_to_save: Увійдіть для збереження досягнень
       sprite_lab_documentation: Документація Спрайт Лабораторії
       stats: Статистика
-      teach: Вчити
+      teach: Навчати
       teacher_community: Спільнота вчителів
       tutorials: Навчальні матеріали
       web_lab_documentation: Документація веб-лабораторії
@@ -604,7 +604,7 @@ uk:
       loading: Завантаження...
       logout: Вийти
       makerlab: Maker Toolkit
-      minecraft_adventurer: Майнкрафт - Пригоди
+      minecraft_adventurer: 'Майнкрафт: Пригоди'
       minecraft_aquatic: 'Майнкрафт: Підводна подорож'
       minecraft_codebuilder: 'Майнкрафт: Кодове з''єднання'
       minecraft_designer: Майнкрафт
@@ -741,10 +741,10 @@ uk:
         other: 'Інше:'
         science: Природничі науки
       workshop_course:
-        csd: Відкриття інформатики
+        csd: Дослідження інформатики
         csf_af: Основи інформатики (Курси A-F)
-        csf_express: Основи інформатики (Вступ до прискорених та Прискорені)
-        csp: "'16-'17 принципи інформатики"
+        csf_express: Основи інформатики (Дошкільнята та Експрес-курс)
+        csp: Принципи інформатики
         not_applicable: Не застосовується
         other: Інше
     form_labels:
@@ -755,9 +755,9 @@ uk:
       email: Електронна пошта
       email_alternate: Додаткова адреса електронної пошти
       email_opt_in: Чи можемо ми написати Вам про міжнародну програму Code.org, оновлення
-        наших курсів або інших новинах інформатики?
+        наших курсів або інших новини інформатики?
       first_name: Ім'я
-      first_name_preferred: Бажане ім'я
+      first_name_preferred: Як до Вас звертатись
       gender: Гендерна приналежність
       last_name: Прізвище
       legal_opt_in: 'Відправляючи цю форму, ви погоджуєтеся дозволити Code.org ділитися
@@ -773,11 +773,11 @@ uk:
       resources: Який з наступних освітніх ресурсів CS ви використовуєте?
       robotics: Який з наступних ресурсів з робототехніки ви використовуєте?
       school: Школа
-      school_city: Шкільне місто
-      school_country: Країна твоєї школи
+      school_city: Місто
+      school_country: Країна
       school_name: Назва школи
       subjects: Яким предметам ви навчали в цьому році?
-      workshop_course: Курс практикуму
+      workshop_course: Курс підвищення кваліфікації
       workshop_facilitator: Семінар-практикум
       workshop_organizer: Організатор семінару
     international_opt_in:
@@ -796,7 +796,7 @@ uk:
         продовжуйте ділитися з нами своїми запитаннями та відгуками, пишучи нам на
         [support@code.org]%{support_email_url} або розміщуючи повідомлення на [форумі
         викладачів]%{teacher_forum_url}!
-      title: 'Семінар відвідування '
+      title: Відвідування семінарів
     logged_out:
       body: Для початку навчання, спочатку потрібно увійти у свій обліковий запис
         Code.org. Якщо вам потрібна додаткова інформація про програму перед тим, як

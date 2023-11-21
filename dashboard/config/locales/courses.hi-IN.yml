@@ -148,7 +148,11 @@ hi:
           description_short: कंप्यूटर साइंस की बुनियादी धारणाओं के बारे में जानें।
         mike-test:
           title: कंप्यूटर साइंस के मूल सिद्धांत
+        self-paced-pl-csd-unit2-2023:
+          title: वेब डेवलपमेंट सिखाना
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1yMQ3HD8vEOzB6gLEz9eneiwS3N8pj_z6Bd-N1rICH1s
       curriculum/csd/2017:
         name: पाठ्यक्रम
       curriculum/csd/2018:

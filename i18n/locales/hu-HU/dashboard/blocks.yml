@@ -69,6 +69,11 @@ hu:
           UNIT:
             '"measures"': ütem
             '"seconds"': másodperc
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ütem
+            '"seconds"': másodperc
       Dancelab_changeColorBy:
         text: 'változtatás: {COLOR} {METHOD}, ennyivel: {AMOUNT}'
         options:
@@ -108,6 +113,27 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} csináld {MOVE} {DIR} örökké"
+        options:
+          GROUP:
+            '"CAT"': összes macska
+            '"SLOTH"': lajhárok
+          MOVE:
+            MOVES.Roll: Csípőkörzés
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: dab
+            MOVES.DoubleJam: kétszer lenn
+            MOVES.Drop: Spárga
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
+            '"next"': "(Következő)"
+            '"prev"': "(Előző)"
+            '"rand"': "(Véletlen)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} örökké"
         options:
@@ -561,6 +587,51 @@ hu:
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
+            '"tropical"': Trópusi
+            '"vintage"': Régi
+            '"warm"': Vörösek
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          "Háttéreffektus beállítása
+          {PALETTE} {EFFECT}"
+        options:
+          EFFECT:
+            '"none"': Egyik sem
+            '"rand"': "(Véletlen)"
+            '"quads"': Sokszögek
+            '"circles"': Alagút
+            '"color_cycle"': Színek
+            '"diamonds"': Gyémántok
+            '"disco_ball"': Diszkógömb
+            '"fireworks"': Tűzijáték
+            '"flowers"': Virágok
+            '"growing_stars"': Növekvő csillagok
+            '"swirl"': Hipno
+            '"kaleidoscope"': Kaleidoszkóp
+            '"lasers"': Lézer táncparkett
+            '"splatter"': Festékfröccsenés
+            '"rainbow"': Szivárvány
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"ripples"': Lüktetés
+            '"snowflakes"': Hó
+            '"text"': Dalcím
+            '"galaxy"': Világűr
+            '"sparkles"': Ragyogás
+            '"spiral"': Spirál
+            '"disco"': Négyzetek
+            '"squiggles"': Kígyóvonalak
+            '"starburst"': Csillagrobbanás
+            '"stars"': Csillagok
+            '"music_wave"': Hullámok
+          PALETTE:
+            '"rave"': Fekete-fehér
+            '"cool"': Kékek
+            '"electronic"': Elektronikus
+            '"iceCream"': Fagyi
+            '"default"': Világos
+            '"neon"': Neon
+            '"ocean"': Óceán
+            '"rainbow"': Szivárvány
             '"tropical"': Trópusi
             '"vintage"': Régi
             '"warm"': Vörösek
@@ -1637,6 +1708,12 @@ hu:
         text: "{SPRITE} y koordinátája"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': szilárd
+            '"liquid"': folyékony
+            '"gas"': gáznemű
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

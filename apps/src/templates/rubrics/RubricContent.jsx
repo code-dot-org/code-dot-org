@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 import i18n from '@cdo/locale';
@@ -10,6 +10,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
+  aiEvaluationShape,
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
@@ -43,14 +44,15 @@ export default function RubricContent({
   onLevelForEvaluation,
   reportingData,
   visible,
+  aiEvaluations,
 }) {
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
-  const [aiEvaluation, setAiEvaluations] = useState(null);
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
+  const [feedbackAdded, setFeedbackAdded] = useState(false);
   const submitFeedbackToStudent = () => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
       ...reportingData,
@@ -76,36 +78,21 @@ export default function RubricContent({
         setIsSubmittingToStudent(false);
         setErrorSubmitting(true);
       });
+    if (feedbackAdded) {
+      analyticsReporter.sendEvent(
+        EVENTS.TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK,
+        {
+          ...reportingData,
+          studentId: studentLevelInfo.user_id,
+        }
+      );
+      setFeedbackAdded(false);
+    }
   };
 
-  useEffect(() => {
-    if (!!studentLevelInfo && teacherHasEnabledAi) {
-      const studentId = studentLevelInfo.user_id;
-      const rubricId = rubric.id;
-      const dataUrl = `/rubrics/${rubricId}/get_ai_evaluations?student_id=${studentId}`;
-
-      fetch(dataUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          setAiEvaluations(data);
-        })
-        .catch(error => {
-          console.log(
-            'There was a problem with the fetch operation:',
-            error.message
-          );
-        });
-    }
-  }, [rubric.id, studentLevelInfo, teacherHasEnabledAi]);
-
   const getAiUnderstanding = learningGoalId => {
-    if (!!aiEvaluation) {
-      const aiInfo = aiEvaluation.find(
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
       return aiInfo?.understanding;
@@ -115,11 +102,22 @@ export default function RubricContent({
   };
 
   const getAiConfidence = learningGoalId => {
-    if (!!aiEvaluation) {
-      const aiInfo = aiEvaluation.find(
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
         item => item.learning_goal_id === learningGoalId
       );
       return aiInfo?.ai_confidence;
+    } else {
+      return null;
+    }
+  };
+
+  const getAiInfo = learningGoalId => {
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo;
     } else {
       return null;
     }
@@ -201,6 +199,9 @@ export default function RubricContent({
             aiUnderstanding={getAiUnderstanding(lg.id)}
             aiConfidence={getAiConfidence(lg.id)}
             isStudent={false}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+            aiEvalInfo={getAiInfo(lg.id)}
           />
         ))}
       </div>
@@ -208,6 +209,7 @@ export default function RubricContent({
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
             <Button
+              id="ui-submitFeedbackButton"
               text={i18n.submitToStudent()}
               color={Button.ButtonColor.brandSecondaryDefault}
               onClick={submitFeedbackToStudent}
@@ -220,11 +222,13 @@ export default function RubricContent({
               </BodyThreeText>
             )}
             {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <BodyThreeText>
-                {i18n.feedbackSubmittedAt({
-                  timestamp: lastSubmittedTimestamp,
-                })}
-              </BodyThreeText>
+              <div id="ui-feedback-submitted-timestamp">
+                <BodyThreeText>
+                  {i18n.feedbackSubmittedAt({
+                    timestamp: lastSubmittedTimestamp,
+                  })}
+                </BodyThreeText>
+              </div>
             )}
           </div>
         </div>
@@ -241,6 +245,7 @@ RubricContent.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
   visible: PropTypes.bool,
+  aiEvaluations: PropTypes.arrayOf(aiEvaluationShape),
 };
 
 const InfoAlert = ({text}) => {

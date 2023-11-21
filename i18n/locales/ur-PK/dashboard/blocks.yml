@@ -71,6 +71,11 @@ ur:
           UNIT:
             '"measures"': پیمائشیں
             '"seconds"': سیکنڈز
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': پیمائشیں
+            '"seconds"': سیکنڈز
       Dancelab_changeColorBy:
         text: "{COLOR} {METHOD} کو {AMOUNT} سے تبدیل کریں"
         options:
@@ -110,6 +115,27 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} {MOVE} {DIR} ہمیشہ کیلئے کریں"
+        options:
+          GROUP:
+            '"CAT"': بلیاں
+            '"SLOTH"': سلاتھ
+          MOVE:
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
+            '"next"': "(اگلا)"
+            '"prev"': "(پچھلا)"
+            '"rand"': "(بے ترتیبانہ)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ہمیشہ کیلئے کریں"
         options:
@@ -563,6 +589,49 @@ ur:
             '"iceCream"': آئس کریم
             '"default"': روشنی
             '"neon"': نیون
+            '"tropical"': منطقہ حارہ
+            '"vintage"': ونٹیج
+            '"warm"': گرم
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "پس منظر اثر \n{PALETTE} {EFFECT} سیٹ کریں"
+        options:
+          EFFECT:
+            '"none"': کوئی نہيں
+            '"rand"': "(بے ترتیبانہ)"
+            '"quads"': زاویے
+            '"circles"': دائرے
+            '"color_cycle"': رنگ
+            '"diamonds"': ہیرے
+            '"disco_ball"': ڈسکو بال
+            '"fireworks"': آتش بازی
+            '"flowers"': پھول
+            '"growing_stars"': ابھرتے ستارے
+            '"swirl"': نیند آور
+            '"kaleidoscope"': کیلیڈواسکوپ
+            '"lasers"': لیزر ڈانس فلور
+            '"splatter"': پینٹ سپلیٹر
+            '"rainbow"': قوس قزح
+            '"ripples_random"': بے ترتیبانہ ریپلز
+            '"ripples"': ریپلز
+            '"snowflakes"': برف
+            '"text"': گانا کے نام
+            '"galaxy"': جگہ
+            '"sparkles"': پھلجھڑیاں
+            '"spiral"': مرغولہ
+            '"disco"': مربعے
+            '"squiggles"': سکویگلز
+            '"starburst"': اسٹاربسٹ
+            '"stars"': ستارہ
+            '"music_wave"': لہریں
+          PALETTE:
+            '"rave"': ستارہ
+            '"cool"': زبردست
+            '"electronic"': الیکٹرونک
+            '"iceCream"': آئس کریم
+            '"default"': روشنی
+            '"neon"': نیون
+            '"ocean"': سمندر
+            '"rainbow"': قوس قزح
             '"tropical"': منطقہ حارہ
             '"vintage"': ونٹیج
             '"warm"': گرم
@@ -1603,6 +1672,12 @@ ur:
         text: Y کے ہم آہنگ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ٹھوس
+            '"liquid"': مائع
+            '"gas"': گیس
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

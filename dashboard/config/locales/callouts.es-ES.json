@@ -68,6 +68,9 @@
         "CSD U3 Boolean Predict_2023": {
           "": "Este programa imprimirá un resultado aquí"
         },
+        "CSD U3 Drawing Squares to Corners_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
+        },
         "CSD U3 L18 Predict_2023": {
           "CSD_U3_L11_S4_C1": "Agrega tu bloque aquí."
         },
@@ -96,6 +99,9 @@
         },
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Observa atentamente este código."
+        },
+        "CSD U3 Random add_2023": {
+          "CSD U3L6.9 - part1": "¡Lee el código aquí!"
         },
         "CSD U3 Sprites anitab 1": {
           "": "Haz clic aquí para abrir la pestaña Animación"
@@ -132,6 +138,9 @@
         },
         "CSD U3 Sprites intro sprites_2023": {
           "": "Usa este bloque para crear un sprite"
+        },
+        "CSD U3 Sprites intro sprites_test2023": {
+          "CSD U3L7.5 - animation": "¡Puedes ver las animaciones aquí!"
         },
         "CSD U3 Sprites text": {
           "": "Usa este bloque para poner texto en la pantalla"
@@ -639,6 +648,9 @@
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
         },
+        "CSD U3 ellipse_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
+        },
         "CSD U3 fill": {
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
@@ -661,7 +673,8 @@
         },
         "CSD U3 fill_2023": {
           "CSD_U3_rect_c1": "Aquí está el código",
-          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+          "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código.",
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
         },
         "CSD U3 game backgrounds": {
           "CSD_U3_L18_S4_C2": "Área de funciones",
@@ -872,6 +885,9 @@
         "CSD U3 sequence_2022": {
           "CSD_U3_rect_c1": "Aquí está el código",
           "CSD_U3_rect_c2": "Arrastre este bloque dentro del área de código."
+        },
+        "CSD U3 sequence_2023": {
+          "U3L3.3 - grid": "¡Prende la red eléctrica aquí!"
         },
         "CSD U3 shapes arc_2021": {
           "CSD_U3_rect_c1": "Aquí está el código",

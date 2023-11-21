@@ -1995,34 +1995,34 @@
           "description": "Fournissez des commentaires et des réflexions constructifs sur les applications interactives de couverture de livre qu'ils utilisent, afin de favoriser un environnement d'apprentissage collaboratif."
         },
         "4094e6da-1294-4686-aefc-b5363d35070a": {
-          "description": "Développer une simulation des effets de la surpêche sur un écosystème aquatique"
+          "description": "Développer une simulation des effets de la surpêche sur un écosystème marin."
         },
         "fa9ae023-cf9e-40d1-9128-e260e85bb8c8": {
-          "description": "Utilisez des déclarations conditionnelles pour illustrer un scénario de cause à effet dans la nature."
+          "description": "Utilisez des instructions conditionnelles pour illustrer un scénario où il y a un lien de cause à effet dans la nature."
         },
         "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
-          "description": "Analysez les effets d'une trop grande quantité, d'une quantité insuffisante ou juste d'une quantité suffisante d'algues dans un écosystème marin. "
+          "description": "Analyser les effets de trop, de pas assez ou de juste assez d'algues au sein d'un écosystème marin."
         },
         "2523ed88-7219-4356-a342-5077931e97df": {
-          "description": "Référez-vous à l'article scientifique inclus pour orienter leurs solutions à la simulation de surpêche."
+          "description": "Faites référence à l'article scientifique inclus pour orienter leurs solutions à la surpêche dans la simulation. "
         },
         "8123b6d5-695d-49e4-8880-0d1f532656df": {
-          "description": "Créez et utilisez une variable pour suivre l'évolution d'une valeur dans un programme."
+          "description": "Créer et utiliser une variable pour suivre l'évolution d'une valeur dans un programme."
         },
         "025c46ee-bcd9-47e3-afa6-10d849dcd120": {
-          "description": "Expliquez en quoi les simulations informatiques peuvent être bénéfiques pour les scientifiques. "
+          "description": "Expliquer en quoi les simulations informatiques peuvent être utiles aux scientifiques. "
         },
         "621bdd35-b3ad-4df7-af0f-e8ba6e591131": {
-          "description": "Découvrez comment les modifications apportées à une partie de la chaîne alimentaire peuvent affecter l'ensemble de l'écosystème."
+          "description": "Faire des tests pour voir comment des changements qui surviennent à un niveau de la chaîne alimentaire peuvent avoir un impact sur l'ensemble de l'écosystème."
         },
         "977ebecc-d561-43b6-a4ad-33ff9807142a": {
-          "description": "Analyser les relations entre les plantes et les animaux dans une chaîne alimentaire et les effets de l'impact humain."
+          "description": "Analyser les relations entre les plantes et les animaux au sein d'une chaîne alimentaire et les effets de l'impact humain."
         },
         "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1": {
-          "description": "Identifiez la chaîne alimentaire dans différents types d'écosystèmes, tels que les forêts tropicales, les déserts, l'Arctique et les zones humides."
+          "description": "Identifier la chaîne alimentaire dans différents types d'écosystèmes, tels que les forêts tropicales, les déserts, l'Arctique et les zones humides."
         },
         "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
-          "description": "Modifiez le code dans une simulation pour rétablir l'équilibre d'un écosystème confronté à un défi, tel que la diminution d'une certaine espèce ou la prolifération d'une autre espèce."
+          "description": "Modifier le code au sein d'une simulation pour rétablir l'équilibre d'un écosystème confronté à un défi, tel que la diminution d'une certaine espèce ou la prolifération d'une autre espèce."
         },
         "80a85b7e-ae26-4786-98ed-9632de96ea24": {
           "description": "À partir d'une série de cartes illustrant différents composants, les élèves analyseront et compareront les différents objectifs de chaque carte. "
@@ -3256,6 +3256,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Réfléchissez à comment les ordinateurs peuvent contribuer aux processus créatifs."
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Utilisez l'I.A. pour sélectionner et générer des effets spéciaux adaptés aux emojis choisis afin d'améliorer l'expérience visuelle de la soirée dansante."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Utilisez les concepts de base du codage pour programmer des éléments interactifs qui réagissent aux données de l'utilisateur, telles que les frappes au clavier et les événements chronométrés."
         }
       }
     }

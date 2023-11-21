@@ -49,6 +49,7 @@ az:
           description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
           description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
         csd-pilot:
+          title: CSD Pilot Kursu
           description_student: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
         csp-2020:
           title: Kompüter Elmləri Prinsipləri ('20 -'21)
@@ -59,6 +60,8 @@ az:
           description_teacher: İnformatika Kəşfləri tələbələrə yaradıcılıq, ünsiyyət, problemlərin həlli və əyləncəli bir vasitə kimi vahid əsərlər yaratmaq və informatika ilə məşğul olmaq üçün imkan verən bir giriş informatika kursudur.
         csp-2021:
           description_short: Əsas informatika anlayışlarını öyrənin.
+        csd-2021:
+          title: Kompüter Elmləri Kəşfləri ('21-'22)
         mike-test:
           title: Kompüter Elmləri Əsasları.
         self-paced-pl-csd-2021:
@@ -69,6 +72,10 @@ az:
           title: CSA təcrübi vasitəçilər
         csp-2022:
           description_short: Əsas informatika anlayışlarını öyrənin.
+        csa-2022:
+          title: Kompüter Elmləri A ('22-'23)
+        csa-pilot-extra:
+          title: CSA Bölmələri 7 və 8 Pilot
         vpl-csd-summer-pilot-ci-2022:
           title: CS Discoveries Kurikulum Araşdırması
         self-paced-pl-csa-2022:
@@ -83,12 +90,20 @@ az:
           title: CSA Başlanğıc Modulları
         csd-2023:
           title: İnformatika Kəşfləri
+        focus-on-creativity-2023:
+          title: Yaradıcılığa diqqət yetirin '23-'24 (CS kəşfləri)
         vpl-csd-summer-ci-2023:
           title: CS Discoveries Kurikulum Araşdırması
         self-paced-pl-csd-2023:
           title: öz templi-pl-csd-2021
         self-paced-pl-csp-2023:
           title: öz templi-pl-csp-2021
+        vpl-csd-2023:
+          title: CSD Virtual Peşəkar Öyrənmə
+        self-paced-pl-csd-unit2-2023:
+          title: Veb İnkişafının Tədris
+        self-paced-pl-csd-unit5-2023:
+          title: Tədris Məlumatları və Cəmiyyət
     resources:
       curriculum/csd/2017:
         name: Kurikulum
@@ -124,3 +139,5 @@ az:
         name: Bütün Standartlar
       all_vocabulary_2/csd/2023:
         name: Bütün Lüğət
+      csd_syllabus/csd/2023:
+        name: CSD Tədris proqramı

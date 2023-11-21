@@ -4,6 +4,8 @@ es-MX:
     attributes:
       user:
         age: Edad
+        ai_rubrics_disabled: Desactivar la función de rúbrica de IA
+        ai_settings_header: Configuración de IA
         current_password: Contraseña actual
         edit_header: Editar información de la cuenta
         email: Correo electrónico
@@ -1348,6 +1350,12 @@ es-MX:
         un triángulo.
     conditionals:
       image_alt: Dos manos barajando un mazo de cartas.
+    course2:
+      image_alt: Un collage de rompecabezas de Code.org  mostrando un mago verde,
+        un artista y un pez naranja.
+    course3:
+      image_alt: Un collage de rompecabezas de Code.org que muestra un juego, un zombi
+        y un ninja.
     dance:
       title: Fiesta de baile
     dance-2019:

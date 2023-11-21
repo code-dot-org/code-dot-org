@@ -6597,7 +6597,7 @@
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "計算機視覺",
-          "overview": "本課圍繞[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)中的[人工智慧如何運行：計算機視覺] 影片為主題[0]視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n學生學習計算機視覺的運行方式。他們首先看到光學錯覺，以確定他們眼睛注意到的繪圖的特徵。學生觀看解釋計算機視覺和計算機如何「看到」的視訊。他們設計使用網路來決定七段顯示器顯示什麽數字的演算法。最後，學生測試他們的演算法。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "overview": "本課圍繞[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)中的[人工智慧如何運行：計算機視覺](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n學生學習計算機視覺的運行方式。他們首先看到光學錯覺，以確定他們眼睛注意到的繪圖的特徵。學生觀看解釋計算機視覺和計算機如何「看到」的視訊。他們設計使用網路來決定七段顯示器顯示什麽數字的演算法。最後，學生測試他們的演算法。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
           "preparation": "-   為每個小組列印計算機視覺網絡活動指南\n-   （可選）列印七段顯示器操控",
           "student_overview": "透過設計偵測數字的演算法，瞭解計算機視覺如何運行。"
         },
@@ -6615,13 +6615,13 @@
         },
         "how-ai-works-2023/Generative Images": {
           "name": "生成式圖像",
-          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：創造力和想像力？](https://www.youtube.com/watch?v=X994dDnmRmY)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n擴散模型產生圖像。擴散人工智慧將圖像轉換為噪聲，並訓練人工智慧來逆轉過程。在本課程中，學生將學習人工智慧如何生成圖像，然後探索擴散人工智慧小部件。最後，本課以關於這些模型是否有創造性的討論結束。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：創造力和想像力？](https://www.youtube.com/watch?v=X994dDnmRmY)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n擴散模型生成圖像。擴散人工智慧將圖像轉換為噪聲，並訓練人工智慧來逆轉過程。在本課程中，學生將學習人工智慧如何生成圖像，然後探索擴散人工智慧小部件。最後，本課以關於這些模型是否有創造性的討論結束。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
           "preparation": "-   為每個學生列印活動指南",
           "student_overview": "瞭解人工智慧如何通過探索擴散人工智慧小部件生成圖像。"
         },
         "how-ai-works-2023/Algorithmic Bias": {
           "name": "演算法偏見",
-          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：平等訪問和演算法偏差](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n在本課程中，學生將練習裁剪圖像，以發現Twitter裁剪演算法底層的偏見。然後，學生將閱讀並觀看關於發現這種偏見演算法的視訊。最後，學生將討論識別和減少偏見的方法，並分析Twitter對裁剪演算法中偏見指責的回應。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
+          "overview": "本課圍繞來自[人工智慧如何運行視訊系列](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)的[人工智慧如何運行：平等訪問和演算法偏差](https://youtu.be/tJQSyzBUAew?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)視訊展開。在探索課程計劃之前，請先觀看此視訊。\n\n在本課程中，學生將練習裁剪圖像，以揭示Twitter裁剪演算法底層的偏見。然後，學生將閱讀並觀看關於揭示這種偏見演算法的視訊。最後，學生將討論識別和減少偏見的方法，並分析Twitter對裁剪演算法中存在偏見的指責的回應。\n\n本課程可以單獨授課，也可以作為有關人工智慧如何運行的7課序列的一部分 - [點擊此處查看此序列中的所有課程](https://code.org/ai/how-ai-works)。",
           "preparation": "-   自己完成裁剪小部件活動，以便你可以查看學生對小部件的體驗以及他們可能會提出哪些問題。\n-   觀看課程計劃中引用的[「我們是否自動化種族主義？」](https://youtu.be/Ok5sKLXqynQ)視訊片段。\n-   閱讀來自下面連結部分的兩篇文章。",
           "student_overview": "在本課中，你將研究裁剪圖像，並討論教導機器如何裁剪圖像時所面臨的挑戰和偏見。"
         },
@@ -7388,6 +7388,12 @@
         },
         "vigenere/Vigenere": {
           "name": "維吉尼亞密碼"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "舞蹈派對：AI版",
+          "overview": "在本活動中，所有年齡段的學習者都將在一個安全、創造性的環境中獲得編碼和人工智慧的入門體驗。本課為所有年齡段學習者設計，但是需要閱讀。本活動需要學生播放音樂，因為這個教程是為響應音樂而構建的。",
+          "preparation": "### 如何規劃你的一小時玩程式\n\n在[here](https://hourofcode.com/us/how-to)找到您在學校計劃、實施和慶祝一小時玩程式所需的資源！",
+          "purpose": "使編碼成為令人興奮和愉快的體驗，對於培養對計算機科學的興趣至關重要。這個課程充滿了歡樂的時刻，學生通過簡單的拖放編碼模塊，使用代碼來編排包含色彩和動作的舞蹈場景。將向學生介紹AI機器人，他們將引導它找到符合他們的舞蹈情緒的完美效果。  "
         }
       }
     }

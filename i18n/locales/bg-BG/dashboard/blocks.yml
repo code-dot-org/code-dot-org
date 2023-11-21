@@ -93,6 +93,11 @@ bg:
           UNIT:
             '"measures"': мерки
             '"seconds"': секунди
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': мерки
+            '"seconds"': секунди
       Dancelab_changeColorBy:
         text: промяна на {COLOR} {METHOD} {AMOUNT}
         options:
@@ -131,6 +136,29 @@ bg:
             MOVES.Kick: Ритник
             MOVES.ThisOrThat: Това или онова
             MOVES.Rest: Без
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} направи {MOVE} {DIR} завинаги"
+        options:
+          GROUP:
+            '"CAT"': котки
+            '"SLOTH"': ленивци
+          MOVE:
+            MOVES.ClapHigh: Пляскай високо
+            MOVES.Dab: Бучица
+            MOVES.DoubleJam: Двойно почукване
+            MOVES.Drop: Капка
+            MOVES.Floss: Памук
+            MOVES.Fresh: Пресен
+            MOVES.Clown: Клоун
+            MOVES.Kick: Ритник
+            MOVES.ThisOrThat: Това или онова
+            MOVES.Rest: Без
+            '"next"': "(Следващ)"
+            '"prev"': "(Предишен)"
+            '"rand"': "(Случаен)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -615,6 +643,49 @@ bg:
             '"iceCream"': Сладолед
             '"default"': Светъл
             '"neon"': Неон
+            '"tropical"': Тропичен
+            '"vintage"': Ретро
+            '"warm"': Топъл
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: |-
+          задай фоннов ефект
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Без
+            '"rand"': "(Случаен)"
+            '"quads"': Ъгли
+            '"circles"': Кръгове
+            '"color_cycle"': Цветове
+            '"diamonds"': Диаманти
+            '"disco_ball"': Диско Топка
+            '"fireworks"': Фойерверки
+            '"flowers"': Цветя
+            '"growing_stars"': Порастващи Звезди
+            '"swirl"': Хипно
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерен Дансинг
+            '"rainbow"': Дъга
+            '"ripples_random"': Слуачйни Вълни
+            '"ripples"': Вълни
+            '"snowflakes"': Сняг
+            '"text"': Имена на Песни
+            '"galaxy"': Космос
+            '"sparkles"': Искри
+            '"spiral"': Спирала
+            '"disco"': Квадрати
+            '"squiggles"': Драскулки
+            '"stars"': Звезди
+            '"music_wave"': Вълни
+          PALETTE:
+            '"rave"': Черно и Бяло
+            '"cool"': Готино
+            '"electronic"': Електроннен
+            '"iceCream"': Сладолед
+            '"default"': Светъл
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Дъга
             '"tropical"': Тропичен
             '"vintage"': Ретро
             '"warm"': Топъл
@@ -1654,6 +1725,15 @@ bg:
         text: y координат на {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} се плъзга до {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           ако{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': твърдо
+            '"liquid"': течно
+            '"gas"': газообразно
       Mikelab_addBehaviorSimple:
         text: спрайт {SPRITE} започва да {BEHAVIOR}
       Mikelab_addTrainingData:

@@ -74,6 +74,11 @@ fil:
             '"measures"': measure
             '"seconds"': mga segundo
         text: makalipas ang {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': measure
+            '"seconds"': mga segundo
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -97,6 +102,27 @@ fil:
             '"SLOTH"': sloths
             '"UNICORN"': unicorns
             sprites: lahat
+          MOVE:
+            '"next"': "(Kasunod)"
+            '"prev"': "(Nauna)"
+            '"rand"': "(Random)"
+            MOVES.ClapHigh: Pumalakpak sa Itaas
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Mag-dab
+            MOVES.DoubleJam: Doble Pababa
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Sariwa
+            MOVES.Kick: Bituin
+            MOVES.Rest: Wala
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Ito o Iyan
+        text: "{GROUP} ang {MOVE} {DIR} magpakailanman"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mga Pusa
+            '"SLOTH"': sloths
           MOVE:
             '"next"': "(Kasunod)"
             '"prev"': "(Nauna)"
@@ -593,6 +619,50 @@ fil:
         text: |-
           "itakda ang background effect
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Mga bilog
+            '"color_cycle"': Mga Kulay
+            '"diamonds"': Diyamante
+            '"disco"': Mga kwadrado
+            '"disco_ball"': Disco Ball
+            '"fireworks"': Fireworks
+            '"flowers"': Mga Bulaklak
+            '"growing_stars"': Growing Stars
+            '"kaleidoscope"': Kaleidoscope
+            '"lasers"': Laser Dance Floor
+            '"music_wave"': Mga Alon
+            '"none"': Wala
+            '"quads"': Mga Anggulo
+            '"rainbow"': Bahaghari
+            '"rand"': "(Random)"
+            '"ripples"': Ripples
+            '"ripples_random"': Random Ripples
+            '"snowflakes"': Niyebe
+            '"sparkles"': Sparkles
+            '"spiral"': Spiral
+            '"splatter"': Isaboy ang Pintura
+            '"squiggles"': Squiggles
+            '"starburst"': Starburst
+            '"stars"': Mga Bituin
+            '"swirl"': Hypno
+            '"text"': Mga Pangalan ng Awit
+          PALETTE:
+            '"cool"': Cool
+            '"default"': Ilaw
+            '"electronic"': Electronic
+            '"iceCream"': Sorbetes
+            '"neon"': Neon
+            '"ocean"': Dagat
+            '"rainbow"': Bahaghari
+            '"rave"': Itim at Puti
+            '"tropical"': Tropical
+            '"vintage"': Vintage
+            '"warm"': Warm
+        text: |-
+          "itakda ang background effect
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1031,6 +1101,12 @@ fil:
         text: "{SPRITE}sabihin{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': likido
+            '"solid"': matibay
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:

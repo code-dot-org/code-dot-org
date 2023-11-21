@@ -1597,18 +1597,6 @@ bs-BA:
     da bi se isprobao jedan sat uvoda u računarstvo i koji doseže desetke miliona
     učenika u 180+ zemalja. Zovemo vas da se priključite tokom Edukacijske Sedmice
     Računarstva, Decembra 7-13.
-  volunteer_engineer_submission_intro_guide: Saznaj više o našem <a href="%{volunteer_guide}">
-    volonterskom programu ovdje</a>.
-  volunteer_engineer_submission_intro_links: Jeste li učitelj u potrazi za volonterima?
-    Pronađi lokalne volontere na našoj <a href="%{volunteer_local}">volonterskoj mapi</a>.
-  volunteer_engineer_submission_intro_recruit: 'Ovi nastavnici bi voljeli da imaju
-    nekoga<span style="font-family: ''Gotham 7r'', sans-serif;">ko ima strast za podučavanjem
-    računarstva</span>ko im može pomoći u učionici, ili ko može <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspirisati</span>njihove studente tako što će pričati
-    o mnogobrojnim mogućnostima u računarstvu (video chat je jedna od opcija za komunikaciju).'
-  volunteer_engineer_submission_intro_signup: Molimo da unesete slijedeću informaciju
-    ako ste student računarstva ili softverski poznavalac. Polja zabilježena sa <span
-    class="form-required-field">*</span>su obavezna.
   volunteer_engineer_submission_location_flexibility_curriculum: Spremni doprinijeti
     nastavnom planu projekta otvorenog koda
   volunteer_engineer_submission_location_flexibility_onsite: Na licu mjesta u školi

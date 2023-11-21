@@ -1,0 +1,50 @@
+@import "color";
+
+$preview-button-width: 32px;
+$preview-button-margin-left: 8px;
+$preview-button-border-width: 1px;
+
+.songSelectorWrapper {
+
+  .selectStyle {
+    width: calc(100% - ($preview-button-width + $preview-button-margin-left));
+    height: 32px;
+    color: $neutral_dark;
+    border-color: $neutral_dark;
+
+    &:focus-visible {
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      color: $light_gray_200;
+      border-color: $light_gray_200;
+      background-color: $neutral_white;
+    }
+  }
+
+  button.previewSongButton {
+    height: 32px;
+    width: $preview-button-width;
+    padding: 0;
+    margin: 0 0 10px 0;
+    margin-inline-start: $preview-button-margin-left;
+    border-width: $preview-button-border-width;
+
+    &.previewActiveButton {
+      color: $neutral_white;
+      background-color: $light_primary_500;
+      border-color: $light_primary_500;
+
+      &:hover {
+        background-color: $light_primary_700;
+        border-color: $light_primary_700;
+      }
+    }
+
+    span {
+      margin: 0;
+    }
+  }
+}

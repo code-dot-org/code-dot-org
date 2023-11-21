@@ -187,13 +187,11 @@ const Notification = ({
             {buttons &&
               buttons.map((button, index) => (
                 <Button
-                  __useDeprecatedTag
                   key={index}
                   href={button.link}
                   color={button.color || Button.ButtonColor.gray}
                   text={button.text}
                   style={{...styles.button, ...button.style}}
-                  target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
                 />
@@ -243,7 +241,6 @@ Notification.propTypes = {
     PropTypes.shape({
       text: PropTypes.string,
       link: PropTypes.string,
-      newWindow: PropTypes.bool,
       onClick: PropTypes.func,
       className: PropTypes.string,
       color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),

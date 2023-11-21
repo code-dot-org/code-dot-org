@@ -22,10 +22,18 @@ my:
         options:
           UNIT:
             '"seconds"': စက္ကန့်ပိုင်း
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': စက္ကန့်ပိုင်း
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
             sprites: အားလုံး
+          MOVE:
+            MOVES.Rest: ဘာမှမရှိ
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
           MOVE:
             MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveLR:
@@ -123,6 +131,10 @@ my:
           EFFECT:
             '"none"': ဘာမှမရှိ
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"none"': ဘာမှမရှိ
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"none"': ဘာမှမရှိ

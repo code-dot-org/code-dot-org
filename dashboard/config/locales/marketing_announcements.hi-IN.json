@@ -1,0 +1,67 @@
+{
+  "hi-IN": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "अधिक जानें",
+            "title": "  कृत्रिम बुद्धि और मशीन प्रशिक्षण की पड़ताल करें"
+          },
+          "ai-launch-2023": {
+            "buttonText": "अधिक जानें"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "अधिक जानें"
+          },
+          "back-to-school-2021": {
+            "buttonText": "अधिक जानें"
+          },
+          "codebytes-2020": {
+            "buttonText": "अधिक जानें"
+          },
+          "coldplay": {
+            "buttonText": "कर के देखे"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "शुरू करें"
+          },
+          "csjourneys": {
+            "buttonText": "अधिक जानें"
+          },
+          "csjourneys-22": {
+            "buttonText": "अधिक जानें"
+          },
+          "csleadersprize": {
+            "buttonText": "अधिक जानें"
+          },
+          "hoc-2023": {
+            "body": "AI के साथ या उसके बिना, कोडिंग का एक घंटा आयोजित करने और यह जानने के लिए कि AI कैसे काम करता है, दुनिया भर के लाखों लोगों के साथ जुड़ें। इसे कोई भी, कहीं भी कर सकता है। किसी अनुभव की आवश्यकता नहीं है।",
+            "buttonText": "अधिक जानें",
+            "title": "ऑवर ऑफ कोड: AI के साथ रचनात्मकता"
+          },
+          "hoc-more": {
+            "body": "आवर ऑफ़ कोड वेबसाइट पर हर आयु वर्ग और अनुभव स्तर के व्यक्तियों के लिए 100 से अधिक कंप्यूटर साइंस की गतिविधियां हैं, जो Code.org और साझेदारों द्वारा विकसित की गई हैं।"
+          },
+          "home-learning-2020": {
+            "buttonText": "प्रोजेक्ट आईडिया देखें"
+          },
+          "superhero": {
+            "buttonText": "अधिक जानें"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "हमसे जुड़ें"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "अध्यापक को मनोनीत करें"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "हमसे जुड़ें"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "हमसे जुड़ें"
+          }
+        }
+      }
+    }
+  }
+}

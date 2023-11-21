@@ -144,7 +144,11 @@ id:
           description_short: Pelajari konsep-konsep ilmu komputer dasar.
         mike-test:
           title: Computer Science Fundamentals
+        self-paced-pl-csd-unit2-2023:
+          title: Mengajarkan Pengembangan Web
     resources:
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw
       curriculum/csd/2017:
         name: Kurikulum
       curriculum/csd/2018:

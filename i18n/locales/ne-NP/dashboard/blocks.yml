@@ -48,6 +48,11 @@ ne:
           UNIT:
             '"measures"': मापनहरु
             '"seconds"': seconds
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': मापनहरु
+            '"seconds"': seconds
       Dancelab_changeColorBy:
         text: परिवर्तन
         options:
@@ -80,6 +85,25 @@ ne:
             MOVES.Clown: गमनम
             MOVES.Kick: तारा
             MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_changeMoveEachLR_slothcat:
+        text: सधैंभरिलाई
+        options:
+          GROUP:
+            '"SLOTH"': स्लथ्स
+          MOVE:
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
       Dancelab_changeMoveLR:
         text: सधैंलाई
         options:
@@ -294,6 +318,10 @@ ne:
         options:
           EFFECT: {}
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"rand"': अनियमित

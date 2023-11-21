@@ -65,6 +65,11 @@ uz:
             '"measures"': o'lchovlar
             '"seconds"': soniyalar
         text: " {TIMESTAMP} {UNIT} dan keyin"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': o'lchovlar
+            '"seconds"': soniyalar
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -88,6 +93,27 @@ uz:
             '"SLOTH"': yalqovlar
             '"UNICORN"': yakkashoxlar
             sprites: hamma
+          MOVE:
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.Rest: Hech biri
+            MOVES.Roll: dumalash
+            MOVES.ThisOrThat: U yoki bu
+        text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"SLOTH"': yalqovlar
           MOVE:
             '"next"': "(Keyingi)"
             '"prev"': "(Oldingi)"
@@ -566,6 +592,50 @@ uz:
         text: |-
           orqa fon effektini
           {PALETTE} {EFFECT} ga sozlash
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Aylanalar
+            '"color_cycle"': Ranglar
+            '"diamonds"': Brilliantlar
+            '"disco"': Kvadratlar
+            '"disco_ball"': Disko to'p
+            '"fireworks"': Feyerverklar
+            '"flowers"': Gullar
+            '"galaxy"': Qoinot
+            '"growing_stars"': O'sib borayotgan yulduzlar
+            '"kaleidoscope"': Kaleydoskop
+            '"lasers"': Lazerli raqs maydonchasi
+            '"music_wave"': Toʻlqinlar
+            '"none"': Hech biri
+            '"quads"': Burchaklar
+            '"rainbow"': Kamalak
+            '"rand"': "(Tasodifiy)"
+            '"ripples"': To‘lqinlar
+            '"ripples_random"': Tasodifiy to‘lqinlar
+            '"snowflakes"': Qor
+            '"sparkles"': Uchqunlar
+            '"spiral"': Spiral
+            '"splatter"': Bo'yoq sachratmalari
+            '"squiggles"': Siqilish (burmalar)
+            '"starburst"': Yulduzlar to'plami
+            '"stars"': Yulduzlar
+            '"swirl"': Gipno
+            '"text"': Qo'shiq nomlari
+          PALETTE:
+            '"cool"': Zo'r
+            '"default"': Chiroq
+            '"electronic"': Elektronik
+            '"iceCream"': Muzqaymoq
+            '"neon"': Neon
+            '"rainbow"': Kamalak
+            '"rave"': Qora va oq
+            '"tropical"': Tropik
+            '"vintage"': Vintaj
+            '"warm"': Iliq
+        text: |-
+          orqa fon effektini
+          {PALETTE} {EFFECT} ga sozlash
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -992,6 +1062,12 @@ uz:
         text: "{NUM} ta yangi {ANIMATION_NAME} animatsiya [BEHAVIOR][2] ifodalang"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}{TEXT1} deydi"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': suyuq
+            '"solid"': qattiq
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:

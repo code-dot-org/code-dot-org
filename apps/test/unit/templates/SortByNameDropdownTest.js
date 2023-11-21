@@ -1,28 +1,67 @@
+import $ from 'jquery';
 import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../util/reconfiguredChai';
-import {getStore} from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
+import sinon from 'sinon';
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {
-    const store = getStore();
     const wrapper = mount(
-      <Provider store={store}>
-        <SortByNameDropdown />
-      </Provider>
+      <UnconnectedSortByNameDropdown
+        isSortedByFamilyName={false}
+        setSortByFamilyName={() => {}}
+      />
     );
     expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').props().value).to.equal('displayName');
+  });
+  it('renders dropdown with family name selected', () => {
+    const wrapper = mount(
+      <UnconnectedSortByNameDropdown
+        isSortedByFamilyName={true}
+        setSortByFamilyName={() => {}}
+      />
+    );
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').props().value).to.equal('familyName');
   });
 
-  /*
-  TODO: Reenable this test when using localStorage to make preference persist
-  it('makes call to update familyName sorting in localStorage', () => {
-    localStorage.setItem('sortByFamilyName', 'false');
-    const wrapper = shallow(<SortByNameDropdown />);
-    wrapper.find('select').simulate('change', {value: 'true'});
-    expect(localStorage.getItem('sortByFamilyName')).to.equal('true');
+  it("saves the sort mode setting to the user's preferences", () => {
+    const sectionId = 1;
+    const unitName = 'course1';
+    const source = 'TeacherPanel';
+
+    sinon.spy($, 'post');
+
+    const setSortSpy = sinon.spy();
+
+    const wrapper = mount(
+      <UnconnectedSortByNameDropdown
+        sectionId={sectionId}
+        unitName={unitName}
+        source={source}
+        isSortedByFamilyName={false}
+        setSortByFamilyName={setSortSpy}
+      />
+    );
+
+    expect(wrapper.find('select').props().value).to.equal('displayName');
+
+    wrapper.find('select').simulate('change', {target: {value: 'familyName'}});
+
+    expect($.post).to.have.been.calledOnceWith(
+      '/api/v1/users/sort_by_family_name',
+      {
+        sort_by_family_name: true,
+      }
+    );
+    expect(setSortSpy).to.have.been.calledOnceWith(
+      true,
+      sectionId,
+      unitName,
+      source
+    );
+    $.post.restore();
   });
-  */
 });

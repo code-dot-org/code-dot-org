@@ -2,6 +2,21 @@ import Sounds from '../Sounds';
 import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
 import {fetchSignedCookies} from '../utils';
 
+const DEPRECATED_SONGS = [
+  'cantfeelmyface_theweeknd',
+  'countrygirl_lukebryan',
+  'dancinginthedark_brucespringsteen',
+  'levelup_ciara',
+  'macarena_losdelrio',
+  'shapeofyou_edsheeran',
+  'somebodylikeyou_keithurban',
+  'sorry_justinbieber',
+  'wecantstop_mileycyrus',
+  'ymca_villagepeople',
+  'firework_katyperry',
+  'showdaspoderosas_anitta',
+];
+
 /**
  * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
  * are needed before accessing restricted song files.
@@ -15,7 +30,7 @@ import {fetchSignedCookies} from '../utils';
 export async function getSongManifest(useRestrictedSongs, manifestFilename) {
   if (!manifestFilename || manifestFilename.length === 0) {
     manifestFilename = useRestrictedSongs
-      ? 'songManifest2023_v1.json'
+      ? 'songManifest2023_v4.json'
       : 'testManifest.json';
   }
 
@@ -87,6 +102,9 @@ export function loadSong(songId, songData, onPreloadError) {
 
 export function unloadSong(songId, songData) {
   const url = songData[songId].url;
+
+  // Stop playing sound before unloading it. Otherwise, the sound will continue play.
+  Sounds.getSingleton().stopPlayingURL(url);
   Sounds.getSingleton().unload(url);
 }
 
@@ -137,4 +155,8 @@ export function getFilterStatus(userType, under13) {
   // User is signed in (student or teacher) and the filter override is not turned on.
   // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
   return under13;
+}
+
+export function isSongDeprecated(songId) {
+  return DEPRECATED_SONGS.includes(songId);
 }

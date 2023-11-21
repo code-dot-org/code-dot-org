@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "بازگشت",
+  "danceAiModalClose": "ببند",
+  "danceAiModalCodeButton": "کد",
+  "danceAiModalExplanationButton": "بیشتر بیاموزید",
+  "danceAiModalStartOverButton": "شروع مجدد",
   "danceFeedbackDidntPress": "هنگام اجرای رقص، حتماً کلیدهای پیکان را فشار دهید.",
+  "danceFeedbackKeepCoding": "به برنامه نویسی ادامه بدید٬شما همه‌ی بلوک‌های مورد نیاز را بکار بردید، ولی نه به روش درست.",
   "danceFeedbackKeyEvent": "در حال اجرای رقص، از اتصال کد به بلوک <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"بالا\"</title></block></xml> و فشردن کلید اطمینان حاصل نمایید.",
   "danceFeedbackNeedBackup": "باید با بلوک <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">»تک‌شاخ»</title><title name=\"LAYOUT\">»دایره»</title></block></xml> گروهی از رقصندگان پشتیبان ایجاد کنید.",
   "danceFeedbackNeedDifferentDance": "باید از رقص متفاوتی استفاده کنید.",

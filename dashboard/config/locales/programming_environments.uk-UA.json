@@ -206,6 +206,13 @@
                 "addPair": {
                   "return_value": "Немає"
                 },
+                "declareAssign_object": {
+                  "examples": {
+                    "Choose Your Own Adventure": {
+                      "name": "Виберіть свою власну пригоду"
+                    }
+                  }
+                },
                 "declareAssign_x": {
                   "short_description": "Оголошує змінну з даним ім'ям після \"var\", і присвоює їй значення правої частини виразу"
                 }

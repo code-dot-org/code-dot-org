@@ -15,18 +15,20 @@ import {
   loadSong,
   unloadSong,
   loadSongMetadata,
+  isSongDeprecated,
 } from './songs';
-import GoogleBlockly from 'blockly/core';
+import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: GoogleBlockly.Field;
+  currentAiModalField?: Field;
   aiOutput?: AiOutput;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
+  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
@@ -37,6 +39,7 @@ const initialState: DanceState = {
   aiOutput: AiOutput.AI_BLOCK,
   isRunning: false,
   currentSongMetadata: undefined,
+  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -56,11 +59,17 @@ export const initSongs = createAsyncThunk(
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
+      onSongUnavailable?: (songId: string) => void;
     },
     {dispatch}
   ) => {
-    const {useRestrictedSongs, onAuthError, selectSongOptions, onSongSelected} =
-      payload;
+    const {
+      useRestrictedSongs,
+      onAuthError,
+      selectSongOptions,
+      onSongSelected,
+      onSongUnavailable,
+    } = payload;
 
     // Check for a user-specified manifest file.
     const userManifest = queryParams('manifest') as string;
@@ -80,6 +89,14 @@ export const initSongs = createAsyncThunk(
         !filteredSongSet.size || filteredSongSet.has(song.id)
     );
     const songData = parseSongOptions(songManifest) as SongData;
+
+    if (
+      selectSongOptions.selectedSong &&
+      isSongDeprecated(selectSongOptions.selectedSong) &&
+      onSongUnavailable
+    ) {
+      onSongUnavailable(selectSongOptions.selectedSong);
+    }
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);
 
     // Set selectedSong first, so we don't initially show the wrong song.
@@ -145,10 +162,9 @@ async function handleSongSelection(
   // manifest within Dance.js, and Lab2 Dance which reads the current song's manifest from Redux.
   if (onSongSelected) {
     onSongSelected(songId);
-  } else {
-    const metadata = await loadSongMetadata(songId);
-    dispatch(setCurrentSongMetadata(metadata));
   }
+  const metadata = await loadSongMetadata(songId);
+  dispatch(setCurrentSongMetadata(metadata));
 }
 
 const danceSlice = createSlice({
@@ -167,14 +183,22 @@ const danceSlice = createSlice({
     setCurrentSongMetadata: (state, action: PayloadAction<SongMetadata>) => {
       state.currentSongMetadata = action.payload;
     },
-    setCurrentAiModalField: (
-      state,
-      action: PayloadAction<GoogleBlockly.Field | undefined>
-    ) => {
-      state.currentAiModalField = action.payload;
-    },
     setAiOutput: (state, action: PayloadAction<AiOutput>) => {
       state.aiOutput = action.payload;
+    },
+    openAiModal: (
+      state,
+      action: PayloadAction<{
+        modalField: Field;
+        fromFlyout: boolean;
+      }>
+    ) => {
+      state.currentAiModalField = action.payload.modalField;
+      state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
+    },
+    closeAiModal: state => {
+      state.currentAiModalField = undefined;
+      state.aiModalOpenedFromFlyout = false;
     },
   },
 });
@@ -184,7 +208,8 @@ export const {
   setSelectedSong,
   setRunIsStarting,
   setCurrentSongMetadata,
-  setCurrentAiModalField,
   setAiOutput,
+  openAiModal,
+  closeAiModal,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

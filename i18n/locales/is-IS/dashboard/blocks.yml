@@ -62,6 +62,11 @@ is:
           UNIT:
             '"measures"': takta
             '"seconds"': sekúndur
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takta
+            '"seconds"': sekúndur
       Dancelab_changeColorBy:
         text: breyta {COLOR} {METHOD} um {AMOUNT}
         options:
@@ -101,6 +106,27 @@ is:
             MOVES.Kick: Stjarna
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gera {MOVE} {DIR} alltaf"
+        options:
+          GROUP:
+            '"CAT"': allir kettir
+            '"SLOTH"': letidýr
+          MOVE:
+            MOVES.Roll: Hlykkja
+            MOVES.ClapHigh: Háklappa
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dobla niður
+            MOVES.Drop: Droppa
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Freska
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjarna
+            MOVES.ThisOrThat: Þetta eða hitt
+            MOVES.Rest: Ekkert
+            '"next"': "(Næsti)"
+            '"prev"': "(Fyrri)"
+            '"rand"': "(Handahóf)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gerir {MOVE} {DIR} alltaf"
         options:
@@ -552,6 +578,48 @@ is:
             '"iceCream"': Rjómaís
             '"default"': Ljós
             '"neon"': Neon
+            '"tropical"': Hitabelti
+            '"vintage"': Klassískt
+            '"warm"': Hlýlegt
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: stilla bakgrunn {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': Ekkert
+            '"rand"': "(Handahóf)"
+            '"quads"': Horn
+            '"circles"': Hringir
+            '"color_cycle"': Litir
+            '"diamonds"': Demantar
+            '"disco_ball"': Diskókúla
+            '"fireworks"': Flugeldar
+            '"flowers"': Blóm
+            '"growing_stars"': Vaxandi stjörnur
+            '"swirl"': Dáleiðsla
+            '"kaleidoscope"': Breytilegt mynstur
+            '"lasers"': Laser dansgólf
+            '"splatter"': Málningarslettur
+            '"rainbow"': Regnbogi
+            '"ripples_random"': Handahófsgárur
+            '"ripples"': Gárur
+            '"snowflakes"': Snjór
+            '"text"': Nöfn laga
+            '"galaxy"': Geimur
+            '"sparkles"': Glitrandi
+            '"spiral"': Spírall
+            '"disco"': Reitir
+            '"squiggles"': Hrafnaspark
+            '"starburst"': Stjörnublossi
+            '"stars"': Stjörnur
+            '"music_wave"': Bylgjur
+          PALETTE:
+            '"rave"': Svarthvítt
+            '"cool"': Svalt
+            '"electronic"': Rafmagnað
+            '"iceCream"': Rjómaís
+            '"default"': Ljós
+            '"neon"': Neon
+            '"rainbow"': Regnbogi
             '"tropical"': Hitabelti
             '"vintage"': Klassískt
             '"warm"': Hlýlegt

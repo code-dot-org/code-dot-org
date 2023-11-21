@@ -45,6 +45,10 @@ ku:
           UNIT:
             '"measures"': پێوانەکان
         text: پاشان{TIMESTAMP}{UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': پێوانەکان
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -66,6 +70,25 @@ ku:
             '"ROBOT"': هەموو ڕۆبۆتەکان
             '"SHARK"': ماسی قرش
             '"UNICORN"': ئەسپی یەکشاخە
+          MOVE:
+            '"next"': "(دواتر)"
+            '"prev"': "(پێشتر)"
+            '"rand"': "(هەڕەمەکی)"
+            MOVES.ClapHigh: چەپڵەی بەهێز
+            MOVES.Clown: گانگنام
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: دووانە سەما
+            MOVES.Drop: درۆپ
+            MOVES.Floss: فڵۆس
+            MOVES.Fresh: فرێش
+            MOVES.Kick: ئەستێرە
+            MOVES.Roll: خل بوونەوە
+            MOVES.ThisOrThat: ئەمە یان ئەوە
+        text: "{GROUP} بەردەوام {MOVE}{DIR} تاهەتایە"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': هەموو پشیلەکان
           MOVE:
             '"next"': "(دواتر)"
             '"prev"': "(پێشتر)"
@@ -465,6 +488,41 @@ ku:
             '"electronic"': ئەلکترۆنی
             '"iceCream"': دۆندرمە
             '"neon"': نیۆن
+            '"rave"': ڕەش و سپی
+            '"tropical"': خولگەیی
+            '"vintage"': ڤینتەج
+            '"warm"': تۆنی سوور
+        text: |-
+          ئیفێکتی پاشبنەما دیاریبکە
+          {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': بازنە
+            '"color_cycle"': ڕەنگ
+            '"diamonds"': ئەڵماس
+            '"disco"': چوارگۆشە
+            '"disco_ball"': تۆپی دیسکۆ
+            '"fireworks"': یاری ئاگرین
+            '"galaxy"': بۆشایی ئاسمان
+            '"kaleidoscope"': كالیدۆسکۆپ
+            '"lasers"': تەختەی سەمای لێزەری
+            '"rainbow"': پەلكەزێرینە
+            '"rand"': "(هەڕەمەکی)"
+            '"snowflakes"': بەفر
+            '"sparkles"': بریسکە
+            '"spiral"': لوولپێچی
+            '"splatter"': پڕژێنەری بۆیە
+            '"stars"': ئەستێرە
+            '"swirl"': هایپنۆ
+            '"text"': ناوی گۆرانیەکان
+          PALETTE:
+            '"cool"': تۆنی شین
+            '"default"': ڕووناکی
+            '"electronic"': ئەلکترۆنی
+            '"iceCream"': دۆندرمە
+            '"neon"': نیۆن
+            '"rainbow"': پەلكەزێرینە
             '"rave"': ڕەش و سپی
             '"tropical"': خولگەیی
             '"vintage"': ڤینتەج
