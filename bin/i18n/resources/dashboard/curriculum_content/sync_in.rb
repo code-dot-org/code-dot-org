@@ -68,7 +68,8 @@ module I18n
           end
 
           def redact_file_content(i18n_source_file_path)
-            RedactRestoreUtils.backup_source_file(i18n_source_file_path)
+            i18n_original_file_path = i18n_source_file_path.sub(I18N_SOURCE_DIR_PATH, I18N_BACKUP_DIR_PATH)
+            I18nScriptUtils.copy_file(i18n_source_file_path, i18n_original_file_path)
 
             RedactRestoreUtils.redact(i18n_source_file_path, i18n_source_file_path, REDACT_RESTORE_PLUGINS)
           end
