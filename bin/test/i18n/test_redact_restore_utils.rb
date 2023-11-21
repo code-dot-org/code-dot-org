@@ -7,14 +7,6 @@ class RedactRestoreUtilsTest < Minitest::Test
   JSON_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_docs.json').freeze
   MARKDOWN_FIXTURE_PATH = CDO.dir('bin/test/fixtures/i18n_locales_source_dashboard_emails.md').freeze
 
-  def test_backup_source_file
-    expected_source_path = CDO.dir(I18N_SOURCE_DIR, 'i18n_locales_source_dashboard_docs.json').freeze
-    expected_original_path = CDO.dir(I18N_ORIGINAL_DIR, 'i18n_locales_source_dashboard_docs.json').freeze
-    I18nScriptUtils.stubs(:copy_file).with(expected_source_path, expected_original_path)
-
-    RedactRestoreUtils.backup_source_file(expected_source_path)
-  end
-
   def test_redaction_of_yaml_file
     expected_source_path = YAML_FIXTURE_PATH
     expected_source_data = 'expected_source_data'
@@ -51,7 +43,7 @@ class RedactRestoreUtilsTest < Minitest::Test
 
   def test_redaction_of_markdown_file
     expected_source_path = MARKDOWN_FIXTURE_PATH
-    expected_dest_path = "expected_dest_dir/dest.json"
+    expected_dest_path = "expected_dest_dir/dest.md"
     expected_plugins = %w[testPlugin]
     expected_format = 'md'
     expected_redacted_data = 'expected_redacted_data'

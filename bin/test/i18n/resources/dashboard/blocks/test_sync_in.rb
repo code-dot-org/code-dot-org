@@ -123,7 +123,7 @@ describe I18n::Resources::Dashboard::Blocks::SyncIn do
     it 'creates a backup and then redacts the i18n source file' do
       execution_sequence = sequence('execution')
 
-      RedactRestoreUtils.expects(:backup_source_file).with(i18n_source_file_path).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_original_file_path).in_sequence(execution_sequence)
       RedactRestoreUtils.expects(:redact).with(i18n_source_file_path, i18n_source_file_path, %w[blockfield], 'txt').in_sequence(execution_sequence)
 
       redact_i18n_source_file
