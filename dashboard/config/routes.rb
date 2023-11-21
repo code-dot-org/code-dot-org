@@ -265,6 +265,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
