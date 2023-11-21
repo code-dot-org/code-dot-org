@@ -295,7 +295,7 @@ class Ability
       end
 
       if user.has_ai_tutor_access?
-        can :chat_completion, :openai_chat
+        can :chat_completion, :chat_completion_for_validation, :openai_chat
       end
     end
 

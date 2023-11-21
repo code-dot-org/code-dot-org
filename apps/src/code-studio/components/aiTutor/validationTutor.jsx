@@ -22,7 +22,11 @@ const ValidationTutor = ({levelId}) => {
 
   const handleSend = async studentCode => {
     dispatch(
-      askAITutor({systemPrompt: systemPrompt, studentCode: studentCode})
+      askAITutor({
+        levelId: levelId,
+        systemPrompt: systemPrompt,
+        studentCode: studentCode,
+      })
     );
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION, {
       levelId: levelId,
@@ -54,7 +58,7 @@ const ValidationTutor = ({levelId}) => {
               isPending={aiTutorState.isWaitingForAIResponse}
               pendingText="waiting"
               onClick={() => handleSend(studentCode)}
-              disabled={true}
+              disabled={javalabState.validationPassed}
             />
             <p id="ai-response">{aiTutorState.aiResponse}</p>
           </>

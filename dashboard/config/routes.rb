@@ -1104,6 +1104,7 @@ Dashboard::Application.routes.draw do
     get '/get_token', to: 'authenticity_token#get_token'
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
+    post '/openai/chat_completion_for_validation', to: 'openai_chat#chat_completion_for_validation'
 
     # Policy Compliance
     get '/policy_compliance/child_account_consent/', to:
