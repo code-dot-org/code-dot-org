@@ -431,8 +431,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       } else if (generatedProgress === GENERATED_STEPS_COUNT - 1) {
         setMode(Mode.RESULTS);
       }
+    } else if (mode === Mode.EXPLANATION) {
+      if (explanationProgress < EXPLANATION_STEPS_COUNT - 1) {
+        playSound('ai-generate-no', {volume: 0.2});
+      } else {
+        playSound('ai-generate-yes', {volume: 0.2});
+      }
     }
-  }, [generatingProgress, generatedProgress, mode, playSound]);
+  }, [
+    generatingProgress,
+    generatedProgress,
+    explanationProgress,
+    mode,
+    playSound,
+  ]);
 
   const getGeneratingStepDuration = () => {
     return lerp(
