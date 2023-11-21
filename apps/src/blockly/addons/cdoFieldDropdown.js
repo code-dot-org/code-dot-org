@@ -19,7 +19,7 @@ export default class CdoFieldDropdown extends GoogleBlockly.FieldDropdown {
     } else {
       // For behavior picker blocks, we need to regenerate menu options each time,
       // in case a behavior has been renamed.
-      const useCache = !this.name === 'BEHAVIOR';
+      const useCache = this.name !== 'BEHAVIOR';
       for (const option of this.getOptions(useCache)) {
         if (option[1] === newValue) {
           return newValue;

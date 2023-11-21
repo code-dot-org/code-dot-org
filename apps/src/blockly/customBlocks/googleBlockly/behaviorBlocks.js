@@ -275,7 +275,12 @@ const getNewBehaviorButtonWithCallback = (
 // Added as a change listener. If a behavior name changes, we need to update any
 // behavior picker blocks that have the old name currently selected.
 function onBehaviorDefChange(event, block) {
-  if (event.type === Blockly.Events.CHANGE && block.id === event.blockId) {
+  if (
+    event.type === Blockly.Events.CHANGE &&
+    block.id === event.blockId &&
+    // Excludes changes to the description field.
+    event.name === 'NAME'
+  ) {
     const {oldValue, newValue} = event;
     updateBehaviorPickerBlocks(oldValue, newValue);
   }

@@ -315,6 +315,8 @@ export const blocks = {
           currentInputRow
             .appendField(inputConfig.label)
             .appendField(dropdownField, inputConfig.name);
+          // Behavior editing is only permitted using the modal function editor.
+          // Additionally, levels must have a toolbox and not read-only.
           if (
             behaviorsFound &&
             window.appOptions && // global appOptions is not available on level edit page
@@ -322,6 +324,7 @@ export const blocks = {
             !appOptions.readonlyWorkspace &&
             Blockly.useModalFunctionEditor &&
             block.inputList.length &&
+            // TODO: Support editing behaviors from within a modal editor workspace.
             block.workspace.id === Blockly.getMainWorkspace().id
           ) {
             const editButton = new Blockly.FieldButton({
@@ -341,9 +344,10 @@ export const blocks = {
               const fieldValue = block.getFieldValue(inputConfig.name);
               const procedureMap = block.workspace.getProcedureMap();
               let procedure = undefined;
-              for (const [, value] of procedureMap.entries()) {
+              for (const value of procedureMap.values()) {
                 if (value.name === fieldValue) {
                   procedure = value;
+                  break;
                 }
               }
               return procedure;
@@ -412,6 +416,8 @@ function getAllBehaviorOptions() {
   const behaviorBlocks = Blockly.getHiddenDefinitionWorkspace()
     .getTopBlocks()
     .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+  // Menu options are an array, each option containing a human-readable part,
+  // and a language-neutral string. Both are the same in this case.
   const behaviorOptions = behaviorBlocks.map(block => [
     block.getProcedureModel().name,
     block.getProcedureModel().name,

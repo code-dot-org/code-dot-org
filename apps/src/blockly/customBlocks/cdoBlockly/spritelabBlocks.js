@@ -292,6 +292,7 @@ export const blocks = {
             inputConfig.name
           );
         let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+        // Don't allow behaviors to be edited for uncategorized toolboxes or read only workspaces.
         if (
           window.appOptions && // global appOptions is not available on level edit page
           appOptions.level.toolbox &&
