@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
@@ -16,6 +16,11 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isSendInProgress, setIsSendInProgress] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    // Send an Amplitude event each time the guide is shown
+    analyticsReporter.sendEvent(EVENTS.HOC_GUIDE_DIALOG_SHOWN);
+  }, []);
 
   const onClose = () => {
     cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
