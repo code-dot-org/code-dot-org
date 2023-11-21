@@ -44,6 +44,7 @@
     = render partial: 'levels/editors/javalab', locals: {f: f} if @level.is_a? Javalab
     = render partial: 'levels/editors/poetry', locals: {f: f} if @level.is_a? Poetry
     = render partial: 'levels/editors/music', locals: {f: f} if @level.is_a? Music
+    = render partial: 'levels/editors/pythonlab', locals: {f: f} if @level.is_a? Pythonlab
     -# Widgets
     = render partial: 'levels/editors/frequency_analysis', locals: {f: f} if @level.is_a? FrequencyAnalysis
     = render partial: 'levels/editors/netsim', locals: {f: f} if @level.is_a? NetSim
