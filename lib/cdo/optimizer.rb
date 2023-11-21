@@ -78,6 +78,8 @@ module Cdo
 
   # ActiveJob that optimizes an image using ImageOptim, writing the result to cache.
   class OptimizeJob < ActiveJob::Base
+    self.queue_adapter = :async
+
     IMAGE_OPTIM = ImageOptim.new(
       config_paths: dashboard_dir('config/image_optim.yml'),
       cache_dir: dashboard_dir('tmp/cache/image_optim')

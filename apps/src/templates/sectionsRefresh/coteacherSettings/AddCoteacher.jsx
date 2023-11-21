@@ -14,12 +14,59 @@ import {convertAddCoteacherResponse} from './CoteacherUtils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
-export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
+const getErrorMessageFromResponse = (response, email) => {
+  if (response.ok) {
+    return '';
+  }
+  if (response.status === 404) {
+    return i18n.coteacherAddNoAccount({email});
+  }
+  if (response.status === 403) {
+    return i18n.coteacherUnableToEditCoteachers();
+  }
+
+  return response
+    .json()
+    .then(json => {
+      if (json.error.includes('already invited')) {
+        return i18n.coteacherAddAlreadyExists({email});
+      }
+      if (json.error.includes('section full')) {
+        return i18n.coteacherAddSectionFull();
+      }
+      if (json.error.includes('inviting self')) {
+        return i18n.coteacherCannotInviteSelf();
+      }
+      if (json.error.includes('already a student')) {
+        return i18n.coteacherAlreadyInCourse({email});
+      }
+      console.error('Coteacher validation error', response);
+      return i18n.coteacherUnknownSaveError({
+        email,
+      });
+    })
+    .catch(e => {
+      console.error('Coteacher validation error', e, response);
+      return i18n.coteacherUnknownSaveError({
+        email,
+      });
+    });
+};
+
+export const earlyValidation = email => {
   if (email === '') {
-    return Promise.resolve(i18n.coteacherAddNoEmail());
+    return i18n.coteacherAddNoEmail();
   }
   if (!isEmail(email)) {
-    return Promise.resolve(i18n.coteacherAddInvalidEmail({email}));
+    return i18n.coteacherAddInvalidEmail({email});
+  }
+  return null;
+};
+
+export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
+  const earlyValidationResult = earlyValidation(email);
+  if (earlyValidationResult !== null) {
+    return Promise.resolve(earlyValidationResult);
   }
   if (coteachersToAdd.some(coteacher => coteacher === email)) {
     return Promise.resolve(i18n.coteacherAddAlreadyExists({email}));
@@ -33,44 +80,7 @@ export const getInputErrorMessage = (email, coteachersToAdd, sectionId) => {
         'Content-Type': 'application/json; charset=utf-8',
       },
     }
-  ).then(response => {
-    if (response.ok) {
-      return '';
-    }
-    if (response.status === 404) {
-      return i18n.coteacherAddNoAccount({email});
-    }
-    if (response.status === 403) {
-      return i18n.coteacherUnableToEditCoteachers();
-    }
-
-    return response
-      .json()
-      .then(json => {
-        if (json.error.includes('already invited')) {
-          return i18n.coteacherAddAlreadyExists({email});
-        }
-        if (json.error.includes('section full')) {
-          return i18n.coteacherAddSectionFull();
-        }
-        if (json.error.includes('inviting self')) {
-          return i18n.coteacherCannotInviteSelf();
-        }
-        if (json.error.includes('already in section')) {
-          return i18n.coteacherAlreadyInCourse({email});
-        }
-        console.error('Coteacher validation error', response);
-        return i18n.coteacherUnknownValidationError({
-          email,
-        });
-      })
-      .catch(e => {
-        console.error('Coteacher validation error', e, response);
-        return i18n.coteacherUnknownValidationError({
-          email,
-        });
-      });
-  });
+  ).then(response => getErrorMessageFromResponse(response, email));
 };
 
 export default function AddCoteacher({
@@ -87,6 +97,11 @@ export default function AddCoteacher({
 
   const saveCoteacher = useCallback(
     (email, sectionId) => {
+      const earlyValidationResult = earlyValidation(email);
+      if (earlyValidationResult !== null) {
+        setAddError(earlyValidationResult);
+        return;
+      }
       fetch(`/api/v1/section_instructors`, {
         method: 'POST',
         headers: {
@@ -110,8 +125,7 @@ export default function AddCoteacher({
               return '';
             });
           }
-
-          return Promise.resolve(i18n.coteacherUnknownSaveError({email}));
+          return getErrorMessageFromResponse(response, email);
         })
         .then(errorMessage => {
           setAddError(errorMessage);
