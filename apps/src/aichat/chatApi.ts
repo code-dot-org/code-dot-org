@@ -1,17 +1,28 @@
 import {Role, Status, ChatCompletionMessage} from './types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {CHAT_COMPLETION_URL} from './constants';
+import {
+  CHAT_COMPLETION_URL,
+  CHAT_COMPLETION_FOR_VALIDATION_URL,
+} from './constants';
 import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
 
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
 export async function postOpenaiChatCompletion(
-  messagesToSend: OpenaiChatCompletionMessage[]
+  messagesToSend: OpenaiChatCompletionMessage[],
+  levelId: number
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = {messages: messagesToSend};
+  const chat_completion_url = levelId
+    ? CHAT_COMPLETION_FOR_VALIDATION_URL
+    : CHAT_COMPLETION_URL;
+
+  const payload = levelId
+    ? {levelId: levelId, messages: messagesToSend}
+    : {messages: messagesToSend};
+
   const response = await HttpClient.post(
-    CHAT_COMPLETION_URL,
+    chat_completion_url,
     JSON.stringify(payload),
     true,
     {
@@ -50,7 +61,7 @@ export async function getChatCompletionMessage(
   ];
   let response;
   try {
-    response = await postOpenaiChatCompletion(messagesToSend);
+    response = await postOpenaiChatCompletion(messagesToSend, 0);
   } catch (error) {
     Lab2MetricsReporter.logError(
       'Error in chat completion request',
