@@ -9,6 +9,13 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
+  # Adds a listener whose on_change() method will be invoked at least
+  # once whenever the configuration changes. The on_change() method
+  # will be invoked on an arbitrary thread and must not block.
+  def add_change_listener(listener)
+    @datastore_cache.add_change_listener(listener)
+  end
+
   # Updates the cached configuration, for testing only.
   def update_cache_for_test
     @datastore_cache.update_cache
