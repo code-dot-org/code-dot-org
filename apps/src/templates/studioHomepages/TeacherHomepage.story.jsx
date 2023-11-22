@@ -45,7 +45,6 @@ const Template = args => {
     <Provider store={reduxStore({teacherSections})}>
       <TeacherHomepage
         announcements={[announcement]}
-        isEnglish={true}
         showCensusBanner={false}
         {...args.props}
       />
