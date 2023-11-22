@@ -1,6 +1,6 @@
 Feature: Teaching Assistant
   Scenario: Student in experiment can make progress on AI-enabled level
-    Given I create a teacher-associated student named "AI Student"
+    Given I create a teacher-associated student named "Aiden"
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
@@ -14,13 +14,13 @@ Feature: Teaching Assistant
     And I wait until element "#confirm-button" is visible
     And I click selector "#confirm-button" to load a new page
 
-    When I sign in as "Teacher_AI Student"
+    When I sign in as "Teacher_Aiden"
     And I am on "http://studio.code.org/home"
-    And element "#sign_in_or_user " contains text "Teacher_AI"
+    And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load
-    And element ".teacher-panel td:eq(1)" contains text "AI Student"
+    And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
 
@@ -31,4 +31,4 @@ Feature: Teaching Assistant
     And element ".uitest-uses-ai" is visible
     And I click selector ".uitest-uses-ai:eq(0)"
     And I wait until element ".uitest-ai-assessment" is visible
-    And element ".uitest-ai-assessment" contains text "has achieved Extensive or Convincing Evidence"
+    And element ".uitest-ai-assessment" contains text "Aiden has achieved Extensive or Convincing Evidence"

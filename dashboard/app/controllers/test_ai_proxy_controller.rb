@@ -3,12 +3,6 @@ class TestAiProxyController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
-  # TODO: remove debug code
-  # GET /api/test/ai_proxy/get_stub_response
-  def get_stub_response
-    render plain: "stub response"
-  end
-
   # POST /api/test/ai_proxy/assessment
   def assessment
     rubric_rows = CSV.parse(params[:rubric], headers: true).map(&:to_h)

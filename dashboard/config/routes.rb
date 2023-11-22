@@ -872,7 +872,6 @@ Dashboard::Application.routes.draw do
             send(method, action, action: action)
           end
         end
-        get 'test/ai_proxy/get_stub_response', to: 'test_ai_proxy#get_stub_response'
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
