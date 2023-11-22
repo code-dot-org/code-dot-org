@@ -221,7 +221,8 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def get_openai_evaluations(openai_params)
-    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
+    origin = get_ai_proxy_origin
+    uri = URI.parse("#{origin}/assessment")
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
@@ -232,6 +233,11 @@ class EvaluateRubricJob < ApplicationJob
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
 
     JSON.parse(response.body)['data']
+  end
+
+  private def get_ai_proxy_origin
+    is_local_origin = CDO.ai_proxy_origin&.starts_with?('/')
+    is_local_origin ? CDO.studio_url(CDO.ai_proxy_origin, CDO.default_scheme) : CDO.ai_proxy_origin
   end
 
   private def validate_evaluations(evaluations, rubric)
