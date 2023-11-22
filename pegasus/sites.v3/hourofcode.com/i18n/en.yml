@@ -752,6 +752,8 @@
   subscribe_form_section_desc_csd: "Sign up to receive monthly emails about Code.org's Computer Science Discoveries and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_title_pl: "Get notified when Professional Learning registration opens"
+  subscribe_form_section_desc_pl: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"

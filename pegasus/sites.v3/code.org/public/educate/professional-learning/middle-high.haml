@@ -98,7 +98,7 @@ theme: responsive_full_width
 - if off_season_version
   %section
     .wrapper
-      ADD FORM HERE
+      = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title_pl), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_pl), form_height: "500px", form_src: "http://go.pardot.com/l/153401/2023-10-24/pqs3r1"
 - else
   %section
     .wrapper
