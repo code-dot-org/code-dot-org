@@ -298,6 +298,33 @@ export const blocks = {
     };
     generator.sprite_parameter_get = generator.variables_get;
   },
+
+  // All logic for behavior picker custom input type
+  behaviorPicker() {
+    return {
+      // PLACEHOLDER - required by block_utils
+      addInput(blockly, block, inputConfig, currentInputRow) {
+        console.log({
+          addInput: {
+            block: block,
+            inputConfig: inputConfig,
+            currentInputRow: currentInputRow,
+            this: this,
+          },
+        });
+      },
+      // PLACEHOLDER - required by block_utils
+      generateCode(block, arg) {
+        console.log({
+          generateCode: {
+            block: block,
+            arg: arg,
+          },
+        });
+        return '';
+      },
+    };
+  },
 };
 
 // HELPERS
