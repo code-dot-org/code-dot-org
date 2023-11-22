@@ -13,10 +13,22 @@ Feature: Teaching Assistant
     And I click selector "#submitButton"
     And I wait until element "#confirm-button" is visible
     And I click selector "#confirm-button" to load a new page
+
+    When I sign in as "Teacher_AI Student"
+    And I am on "http://studio.code.org/home"
+    And element "#sign_in_or_user " contains text "Teacher_AI"
+    And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
+    And I wait for the page to fully load
+    And element ".teacher-panel td:eq(1)" contains text "AI Student"
+    And I click selector ".teacher-panel td:eq(1)" to load a new page
     And I wait for the page to fully load
 
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
-
-
-
+    And element "#ui-floatingActionButton" is visible
+    And I click selector "#ui-floatingActionButton"
+    And I wait until element ".uitest-learning-goal" is visible
+    And element ".uitest-uses-ai" is visible
+    And I click selector ".uitest-uses-ai:eq(0)"
+    And I wait until element ".uitest-ai-assessment" is visible
+    And element ".uitest-ai-assessment" contains text "has achieved Extensive or Convincing Evidence"

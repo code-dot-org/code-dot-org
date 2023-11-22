@@ -2,6 +2,7 @@
 class TestController < ApplicationController
   include Pd::Application::ActiveApplicationModels
   layout false
+  skip_before_action :verify_authenticity_token
 
   def levelbuilder_access
     return unless (user = current_user)
