@@ -777,6 +777,14 @@ form {
         width: 100%;
       }
     }
+
+    &.right > * {
+      float: right;
+
+      html[dir="rtl"] & {
+        float: left;
+      }
+    }
   }
 
   .text-wrapper {
