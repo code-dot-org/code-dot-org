@@ -1464,6 +1464,7 @@
   header_report_abuse: "Nahlásiť zneužitie"
   header_legal: "Ochrana osobných údajov a právne predpisy"
   header_legal_privacy: "Zásady ochrany súkromia"
+  header_legal_cookie_notice: "Oznámenie o súboroch cookie"
   header_legal_tos: "Podmienky používania služby"
   header_tutorials: "Návody"
   header_screen_reader_hamburger: "Menu"

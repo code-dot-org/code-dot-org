@@ -88,6 +88,8 @@ ru:
           title: self-paced-pl-csd-2021
         self-paced-pl-csp-2023:
           title: self-paced-pl-csp-2021
+        self-paced-pl-csd-unit2-2023:
+          title: Преподавание по теме "Веб-разработка"
     resources:
       curriculum/csd/2017:
         name: Учебная программа

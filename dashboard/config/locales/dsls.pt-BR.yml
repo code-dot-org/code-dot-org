@@ -2573,19 +2573,6 @@ pt-BR:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
-        markdown: |
-          # Sites de Rolução de Problemas
-
-          Aqui estão alguns sites que foram criados para resolver um problema. Escolha dois sites e use-os para concluir o guia de atividades.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">] (https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">] (https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: descrição aqui
         markdown: |
@@ -3073,6 +3060,7 @@ pt-BR:
       CSD U2L2 - Prac_2023:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Níveis de Prática
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
         description: |-
           Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
@@ -6074,28 +6062,62 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Accelerometer - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Accelerometer - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Color LEDs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Color LEDs - Prac_2222:
+        display_name: Níveis de Prática
       CSD U6 - Combine Inputs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Combine Inputs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - If Variables - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - If Variables - Chal_2222:
@@ -6112,30 +6134,60 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Physical Input - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Input - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Physical Output - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Output - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Sensors - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Sensors - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 LED create intro:
         content1: descrição aqui
         markdown: |
@@ -6644,64 +6696,80 @@ pt-BR:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test algorithms multi2_2021:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test debugging multi:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2021:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2022:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
         - text: "O que um programador precisa saber ao criar um ouvinte de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
@@ -6709,76 +6777,117 @@ pt-BR:
             O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test hardware multi2:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 tugowar stop:
         markdown: |
           # Pare
@@ -7570,74 +7679,79 @@ pt-BR:
           * [CNet](https://www.cnet.com/smart-home/)
           * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       CSDU6 Innovation_2021:
-        markdown: |
-          # Pesquisa de inovação
-
-          Escolha um dos seguintes tópicos para analisar. Você vai querer encontrar informações sobre alguns dos dispositivos de computação inovadores mais recentes relacionados à sua categoria.
-
-          ## Tecnologia vestível A tecnologia
-          vestível inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes, se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível _e_ destinado a ajudar a melhorar sua saúde pessoal.
-
-          ## Saúde e segurança
-          O amplo tópico inclui tecnologia de consumo (coisas que você pode usar para melhorar sua saúde ou segurança) e tecnologia profissional (equipamento que um médico ou outro profissional possa usar).
-
-          ## Agricultura A
-          agricultura pode não ser um tópico óbvio, mas as inovações tecnológicas tiveram um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação de computadores aos equipamentos agrícolas existentes, o uso de sensores e robótica para monitorar as plantações e a análise de dados para melhorar a eficiência e a sustentabilidade.
-
-          ##
-          Os avanços na manufatura em prototipagem rápida, robótica industrial e automação tiveram um grande impacto na forma como os produtos são produzidos. Seja a tecnologia para permitir a fabricação acessível em pequena escala (como impressoras 3D e cortadores a laser) ou a integração de computadores ao trabalho na fábrica, há muitas áreas interessantes para pesquisar aqui.
-
-          ## Arte e design
-          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos comercialmente disponíveis relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todos os tipos de dispositivos de computação de maneiras criativas e expressivas.
-
-          ## Casa inteligente
-          O sonho de uma casa que compreende e até mesmo antecipa suas necessidades está mais perto do que nunca. Sejam controlados explicitamente por meio de comandos de voz ou usando sensores para monitorar e responder às mudanças nas condições, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas rotineiras ou repetitivas em casa.
-
-
-          # Considerações de pesquisa
-
-          Ao pesquisar dispositivos sobre seu tópico, lembre-se das seguintes considerações:
-
-          * Concentre-se em soluções baseadas em hardware em vez de programas de software
-          * Concentre-se em inovações recentes em vez de notícias antigas
-          * Siga o que lhe interessa
-
-          # Iniciando sua pesquisa
-
-          Verifique com seu professor os sites recomendados para iniciar sua pesquisa. Você também pode usar algumas das palavras-chave acima para começar a pesquisar ideias específicas na Internet. Por exemplo, considere consultar os vários sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para ver os produtos que ainda não foram lançados.
+        markdown: "# Pesquisa em Inovação\n\nEscolha um dos seguintes tópicos para
+          analisar. Você vai querer encontrar informações sobre alguns dos dispositivos
+          de computação inovadores mais recentes relacionados à sua categoria.\n\n##
+          Tecnologia Vestível \nA tecnologia vestível inclui qualquer forma de computação
+          projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada
+          como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes,
+          se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível
+          _e_ destinado a ajudar a melhorar sua saúde pessoal.\n\n## Saúde e Segurança\nO
+          amplo tópico inclui tecnologia de consumo (coisas que você pode usar para
+          melhorar sua saúde ou segurança) e tecnologia profissional (equipamento
+          que um médico ou outro profissional pode usar).\n\n## Agricultura \nA agricultura
+          pode não ser um tópico que bem à mente, mas as inovações tecnológicas tiveram
+          um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação
+          de computadores em equipamentos agrícolas existentes, o uso de sensores
+          e robótica para monitorar as plantações e a análise de dados para melhorar
+          a eficiência e a sustentabilidade.\n\n## Manufaturação\nOs avanços na fabricação
+          em prototipagem rápida, robótica industrial e automação tiveram um grande
+          impacto na forma como os produtos são produzidos. Seja atavés da tecnologia
+          facilitando a fabricação acessível em pequena escala (como impressoras 3D
+          e cortadores a laser) ou a integração de computadores no trabalho fabril,
+          há muitas áreas interessantes para se pesquisar aqui.\n\n## Arte e Design\nA
+          interseção entre expressão artística e computação pode produzir resultados
+          impressionantes e inesperados. Embora seja menos provável que você encontre
+          produtos comercialmente disponíveis relacionados à arte e ao design, você
+          encontrará uma grande variedade de criações caseiras que usam todos os tipos
+          de dispositivos de computação de maneiras criativas e expressivas.\n\n##
+          Casa Inteligente\nO sonho de uma casa que entende e até antecipa suas necessidades
+          está mais próximo do que nunca. Quer sejam controlados explicitamente por
+          meio de comandos de voz ou usando sensores para monitorar e responder às
+          mudanças nas condições, os dispositivos domésticos inteligentes cuidam de
+          qualquer número de tarefas rotineiras ou repetitivas em casa.\n\n\n# Considerações
+          para Pesquisa\n\nAo pesquisar dispositivos sobre seu tópico, lembre-se das
+          seguintes considerações:\n\n* Concentre-se em soluções baseadas em hardware
+          em vez de programas de software\n* Concentre-se em inovações recentes em
+          vez de antigas\n* Vá atrás do que lhe interessa\n\n# Iniciando sua Pesquisa\n\nVerifique
+          com seu professor os sites recomendados para iniciar sua pesquisa. Você
+          também pode usar algumas das palavras-chave acima para começar a pesquisar
+          ideias específicas na Internet. Por exemplo, considere visitar os vários
+          sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para
+          ver os produtos que ainda não foram lançados.\n"
         teacher_markdown: |+
-          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos estudantes porque, às vezes, esses sites são bloqueados por programas distritais de filtragem ou a inovação mais recente digna de notícias pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique se há conteúdo impróprio em cada site e certifique-se de que ele será carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
+          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos alunos porque, às vezes, esses sites são bloqueados por programas distritais de filtragem, ou a inovação mais recente digna de notícia pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique cada site em busca de conteúdo impróprio e certifique-se de que ele seja carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
 
-          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
+          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Isso pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
 
-          ### Tecnologia vestível
+          ### Tecnologia Vestível
 
           * [Wareable.com](https://www.wareable.com/)
 
-          ### Saúde e segurança
+          ### Saúde e Segurança
 
-          * [Saúde moderna] (http://www.modernhealthcare.com/section/medical-devices) * (http://www.medstartr.com/) ##
-           [Medstartr]
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
 
-          # Agricultura
+          ### Agricultura
 
-          * [Instituto Nacional de Alimentação e Agricultura] (https://nifa.usda.gov/topic/agriculture-technology)
-          * [Notícias da Indústria Agrícola] (http://www.farmindustrynews.com/technology)
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
 
-          ### Manufatura
+          ### Manufaturação
 
-          * [Semana da Indústria] (https://www.industryweek.com/technology-and-iiot)
-          * [Impressão 3D] (https://3dprinting.com/)
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
 
-          ### Arte e design
+          ### Arte e Design
 
           * [ArtFab](http://artfab.art.cmu.edu/)
           * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
 
-          ### Smart Home
+          ### Casa Inteligente
 
-          * (https://www.cnet.com/smart-home/) [CNet]
-          * [Evolução da IoT] (http://www.iotevolutionworld.com/smart-home/)
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
 
 
       CSP PD Example Question 1:
@@ -23921,11 +24035,11 @@ pt-BR:
           <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2022:
-        markdown: |-
-          ### Por favor, reserve um momento para responder estas **cinco questões**.
+        markdown: |
+          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anonimas</strong>. O seu professor pode ver as respostas de todos da classe, mas sem nomes associados a elas.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2023:
         markdown: |

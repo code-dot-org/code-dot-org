@@ -155,6 +155,8 @@ ro:
           title: Centrare pe Impactul în Societate (Descoperirile Informaticii)
         mike-test:
           title: Fundamentele informaticii
+        self-paced-pl-csd-unit2-2023:
+          title: Predarea Dezvoltării Web
     resources:
       curriculum/csd/2017:
         name: Curriculum

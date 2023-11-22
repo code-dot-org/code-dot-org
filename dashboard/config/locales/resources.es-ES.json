@@ -6741,7 +6741,8 @@
           "type": "Póster de Poemas"
         },
         "csf_course_a_lesson_slides/coursea/2022": {
-          "type": "Diapositivas"
+          "type": "Diapositivas",
+          "name": "Diapositivas de la lección A del curso CSF "
         },
         "20_20_20_rule/coursea/2022": {
           "name": "Regla 20/20/20",
@@ -8172,10 +8173,12 @@
           "type": "Guía de Actividad"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e inteligencia artificial: privacidad y el futuro del trabajo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guía de Actividad"
+          "type": "Guía de Actividad",
+          "name": "Imagina tu mundo"
         },
         "research_reflection_guide/ai-ethics/2023": {
           "type": "Guía de Actividad"

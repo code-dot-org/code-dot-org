@@ -142,6 +142,8 @@ de:
           description_short: Lerne grundlegende Konzepte der Informatik!
         mike-test:
           title: Informatik Grundlagen
+        self-paced-pl-csd-unit2-2023:
+          title: Webentwicklung unterrichten
     resources:
       curriculum/csd/2017:
         name: Lehrplan

@@ -459,7 +459,7 @@ uk:
         applab_hoc_welcome: Додаток лабораторії "Година коду" - Ласкаво просимо
         applab_hoc_setproperty: Додаток лабораторії "Година коду" - Встановлення властивостей
         applab_hoc_onevent: Додаток лабораторії "Година коду" - Події
-        applab_hoc_designmode: Додаток лабораторії "Година коду" - Режим дизайну
+        applab_hoc_designmode: Година коду в Програмній Лабораторії - режим дизайну
         applab_hoc_share: Додаток лабораторії "Година коду" - Поширити
         mc_2017_agent_intro: Година коду Minecraft - Агент
         mc_2017_repeat: Година коду Minecraft - Цикли і повторення
@@ -486,7 +486,7 @@ uk:
         applab_intro_welcome: Апп Лаб - Початок Роботи
         applab_intro_events: Апп Лаб - Додай інтерактиву
         applab_intro_sounds: Апп Лаб - Зображення та Звуки
-        applab_intro_designmode: Апп Лаб - Режим Дизайну
+        applab_intro_designmode: Програмна Лабораторія - режим дизайну
         applab_intro_share: Апп Лаб - Поділіться своїм Додатком
         csd_applab_arrays: Вступ до масивів
         CSF_skinOverview_Harvester: Фермерка
@@ -527,7 +527,7 @@ uk:
         what_is_an_event: Що таке подія?
         teaching_cs_pair_programming: 'Вивчаємо Основи інформатики: Програмування в парах'
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати проблеми'
-        csd_applab_designmode: 'Дослідження інформатики: Лабораторія застосунків - Режим дизайну'
+        csd_applab_designmode: 'Дослідження інформатики: Програмна Лабораторія - режим дизайну'
         csd_pair_programming: Парне програмування
         csd_gamelab_functions: Виклик та визначення функцій
         csd_applab_parameters: Функції з параметрами
@@ -538,7 +538,7 @@ uk:
         CSF_Spritelab_MakeSprite_v2: Як створити спрайт
         CSF_SpriteLab_SpritesInAction_v2: Спрайти в роботі
         csd_debugging: Налагодження
-        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
+        csd_applab_designmode_short: режим дизайну Програмної Лабораторії
         csp-pd-welcome: Ласкаво просимо до родини!
         CSF-Teaching-Problem-Solving: 'Основи інформатики: Навчаємось вирішувати проблеми'
         oceans_machine_learning: Машинне навчання
@@ -577,6 +577,7 @@ uk:
         what-is-creativity: Що таке креативність?
         code-break: Зробіть перерву на код
         se-cv-intro-to-lessons: 'Програмна інженерія та комп''ютерний зір: Вступ до уроків'
+        csd_ml_how_ai_works: Як працює ШІ
     callout:
       text:
         drag_blocks: Перетягни блок "рухатись" і прикріпи його під іншим блоком

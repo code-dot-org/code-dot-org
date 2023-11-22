@@ -24,6 +24,7 @@
   "designWorkspace_restoreThemeButton": "Застосувати тему",
   "designWorkspace_eventsTab": "ПОДІЇ",
   "designWorkspace_propertiesTab": "ВЛАСТИВОСТІ",
+  "designElement_button": "Кнопка",
   "designElement_button_clickEventDesc": "Запускається при клацанні кнопки мишею або натисканні на екран.",
   "designElement_canvas_clickEventDesc": "Запускається при клацанні полотна мишею або натисканні на екран.",
   "designElement_chart": "Діаграма",

@@ -3865,6 +3865,26 @@
           "New Artist Project_callout2": "Presiona \"Ejecutar\" para guardar y ejecutar tu programa",
           "sign_in_to_save_project": "¿Quieres ingresar a tu proyecto más tarde? ¡Ingresa para guardar este proyecto en tu cuenta!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Usa este bloque.",
+          "dance_callout_02": "Agrega el bloque `A.I. genera efecto` aquí. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Usa este bloque.",
+          "dance_callout_02": "Agrega un bloque de baile."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Dale clic."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Empieza aquí."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Usa este bloque. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Usa este bloque."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Utiliza este bloque para crear un sprite.",
           "hello_world_say": "Utiliza este bloque para hacer que los sprites hablen."

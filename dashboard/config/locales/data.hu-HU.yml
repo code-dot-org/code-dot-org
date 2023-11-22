@@ -776,6 +776,7 @@ hu:
         csd_debugging: Hibakeresés
         csd_gamelab_booleans: Logikai kifejezések
         csd_gamelab_velocity: Sebesség
+        csd_ml_how_ai_works: Hogyan működik az MI?
         csd_pair_programming: Páros programozás
         csd_problem_solving_process: A probléma-megoldási folyamat
         csd_sprite_properties: Sprite tulajdonságok
