@@ -11,9 +11,9 @@ class OpenaiChatController < ApplicationController
     if has_level_id_param?
       level_id = params[:levelId]
       level = Level.find(level_id)
-      test_file = level.validation["PainterPlusTest.java"]["text"]
+      test_file_contents = level.validation.values.first["text"]
       messages = params[:messages]
-      messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file}"
+      messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file_contents}"
       messages.second["content"] = "The student's code is: " + messages.second["content"]
     else
       messages = params[:messages]
