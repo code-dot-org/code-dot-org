@@ -8,7 +8,7 @@ type ValidateAndSetFieldValueLogger = (o: {
 }) => void;
 
 type ValidateAndSetFieldValueOptions = {
-  logger?: ValidateAndSetFieldValueLogger;
+  invalidValueLogger?: ValidateAndSetFieldValueLogger;
 };
 
 type ValidateAndSetFieldValueFunction = (
@@ -18,26 +18,30 @@ type ValidateAndSetFieldValueFunction = (
   options?: ValidateAndSetFieldValueOptions
 ) => void;
 
-// partial application of valdiateAndSetField. Given a logger function, returns
-// a validateAndSetFieldValue function with that logger.
+// partial application of valdiateAndSetField. Given a invalidValueLogger function, returns
+// a validateAndSetFieldValue function with that invalidValueLogger.
 export function getValidateAndSetFieldValueWithInvalidValueLogger(
-  logger: ValidateAndSetFieldValueLogger
+  invalidValueLogger: ValidateAndSetFieldValueLogger
 ) {
   const f: ValidateAndSetFieldValueFunction = (
     dropdown,
     value,
     field,
     options = {}
-  ) => validateAndSetFieldValue(dropdown, value, field, {logger, ...options});
+  ) =>
+    validateAndSetFieldValue(dropdown, value, field, {
+      invalidValueLogger,
+      ...options,
+    });
 
   return f;
 }
 
 // given a dropdown, a value, and a field, sets the value in the drop down.
-// optionally logs information if the value is not in the dropdown and a logger
+// optionally logs information if the value is not in the dropdown and a invalidValueLogger
 // is provided in options.
 export const validateAndSetFieldValue: ValidateAndSetFieldValueFunction =
-  function (dropdown, value, field, {logger} = {}) {
+  function (dropdown, value, field, {invalidValueLogger} = {}) {
     if (
       dropdown
         .getOptions()
@@ -45,7 +49,7 @@ export const validateAndSetFieldValue: ValidateAndSetFieldValueFunction =
     ) {
       dropdown.setValue(value);
     } else {
-      logger?.({
+      invalidValueLogger?.({
         message: 'Invalid generated value',
         value,
         field,
