@@ -346,20 +346,6 @@ export const blocks = {
       };
     }
   },
-  behaviorPickerGenerateCode(block, arg) {
-    const fieldValue = block.getFieldValue(arg.name);
-    const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
-    const behaviorId = Blockly.JavaScript.nameDB_?.getName(
-      fieldValue,
-      'PROCEDURE'
-    );
-    if (invalidBehavior) {
-      console.warn('No behaviors available');
-      return undefined;
-    } else {
-      return `new Behavior(${behaviorId}, [])`;
-    }
-  },
   // Get a list of behavior options for a dropdown field, based on
   // blocks found on the main workspace.
   getAllBehaviorOptions() {
