@@ -56,7 +56,7 @@ class DCDOBase < DynamicConfigBase
   end
 
   def refresh
-    @datastore_cache.update_cache
+    @datastore_cache.update_local_cache
   end
 end
 
