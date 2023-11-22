@@ -33,7 +33,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: `with: ${msg.thisSprite()}`,
+        text: msg.withThisSprite(),
       },
       {
         type: 'field_label',
