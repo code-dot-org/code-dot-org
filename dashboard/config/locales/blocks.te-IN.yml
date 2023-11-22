@@ -917,6 +917,12 @@ te:
           వహించండి"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}చెప్పండి{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': వాయువు
+            '"liquid"': ద్రవము
+            '"solid"': ఘనపదార్థం
       Mikelab_addTrainingData:
         options:
           LOCATION:

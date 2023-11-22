@@ -14517,6 +14517,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "使用下拉式清單選擇不同的顏色和效果。\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "將「AI生成效果」模塊連接到工作空間中的「at 2 measures」事件，如下所示：\n\n[blockly block][0]",
+          "hint2": "點擊[blockly block][0]模塊以製作新效果。 "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **仍然卡住？** 再次觀看事件視訊以瞭解它們如何運行。 ",
+          "hint2": "💡 以下是你的代碼應該如何的示例。<xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 點擊工作空間中<xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml>模塊上的表情符號，自訂效果。 ",
+          "Hint2": "💡 **仍然卡住？**觀看視訊以瞭解如何自訂效果。 ",
+          "HintEdit": "💡 如果你想使用AI編寫的代碼，請切換以顯示代碼，然後點擊「使用代碼」。這些模塊將取代工作空間中的「AI生成效果」模塊。 "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "舞者在兩個模塊上應該相同，序列（順序）很重要。  ",
+          "validation": "💡  添加這些模塊進行<code style=\"color:white; background-color:#FFBD46\">設定</code>以創建你的第一個舞者：\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"next\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 將[blockly block][0]連接到<code style=\"color:white; background-color:#FFBD46\">設定</code>中。然後點擊它以開始。",
+          "Hint3": "💡 如果要重新生成效果或更改表情符號，可以再次點擊「AI生成效果」模塊。 "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 聽歌曲並思考音樂的情緒。 ",
+          "Hint2": "💡 將[blockly block][0]連接到<code style=\"color:white; background-color:#FFBD46\">設定</code>中。然後點擊它以開始。",
+          "Hint3": "💡 如果要重新生成效果或更改表情符號，可以再次點擊「AI生成效果」模塊。 "
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 除非舞蹈正在運行，否則舞者不會響應你的提示。 ",
+          "hint2": "💡 按下<code style=\"color:white; background-color:#FFBD46\">運行</code>後，通過按 <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code>右箭頭或左箭頭來提示舞者。 "
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "單擊並拖動「創建新精靈」塊並將其連接在「運行時」下。 \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "要改變精靈圖的位置，點擊位置積木上的針腳，然後點擊你想讓它去的地方。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

@@ -1765,6 +1765,15 @@ zh-CN:
         text: "{SPRITE} 的y坐标"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': 固体
+            '"liquid"': 液体
+            '"gas"': 气体
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

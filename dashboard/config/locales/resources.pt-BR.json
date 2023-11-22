@@ -567,7 +567,8 @@
           "type": "Slides"
         },
         "problem-solving-process-exemplar-2020/csd/2021": {
-          "name": "Processo de resolução de problemas"
+          "name": "Processo de resolução de problemas",
+          "type": "Cópia"
         },
         "problem-solving-process-1/csd/2021": {
           "name": "Processo de resolução de problemas",
@@ -582,14 +583,15 @@
         },
         "solving-problems-exemplar-2020/csd/2021": {
           "name": "Resolução de Problemas",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "solving-problems-activity-guide-2020/csd/2021": {
           "name": "Resolução de Problemas",
           "type": "Guia de Atividades"
         },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "O que é um Computador?"
+          "name": "O que é um Computador?",
+          "type": "Cópia"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "name": "O que é um computador?",
@@ -602,14 +604,16 @@
           "type": "Guia de Atividades"
         },
         "input-and-output-2020/csd/2021": {
-          "name": "Entrada e Saída"
+          "name": "Entrada e Saída",
+          "type": "Cópia"
         },
         "input-and-output-1/csd/2021": {
           "name": "Entrada e Saída",
           "type": "Guia de Atividades"
         },
         "processing-2020/csd/2021": {
-          "name": "Aplicativos com Processamento"
+          "name": "Aplicativos com Processamento",
+          "type": "Cópia"
         },
         "apps-with-processing/csd/2021": {
           "name": "Aplicativos com Processamento",
@@ -619,7 +623,8 @@
           "type": "Vídeo"
         },
         "storage-1/csd/2021": {
-          "name": "Aplicativos com Armazenamento"
+          "name": "Aplicativos com Armazenamento",
+          "type": "Cópia"
         },
         "storage/csd/2021": {
           "name": "Aplicativos com Armazenamento",
@@ -664,7 +669,8 @@
           "type": "Guia de Atividades"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
-          "name": "Explorando páginas da Web"
+          "name": "Explorando páginas da Web",
+          "type": "Cópia"
         },
         "exploring-web-pages/csd/2021": {
           "name": "Explorando páginas da Web",
@@ -725,7 +731,8 @@
           "type": "Slides"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
-          "name": "Detetive social"
+          "name": "Detetive social",
+          "type": "Cópia"
         },
         "social-sleuth/csd/2021": {
           "name": "Detetive social",
@@ -758,7 +765,8 @@
           "type": "Guia do projeto"
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
-          "name": "Licenciando seu Trabalho"
+          "name": "Licenciando seu Trabalho",
+          "type": "Cópia"
         },
         "licensing-your-work-2020/csd/2021": {
           "name": "Licenciando seu Trabalho",
@@ -811,7 +819,8 @@
           "type": "Recurso"
         },
         "websites-for-a-purpose-2020/csd/2021": {
-          "name": "Websites com um Propósito"
+          "name": "Websites com um Propósito",
+          "type": "Cópia"
         },
         "websites-for-a-purpose/csd/2021": {
           "name": "Websites com um Propósito",
@@ -868,7 +877,8 @@
           "type": "Slides"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
-          "name": "Desenhando Formas"
+          "name": "Desenhando Formas",
+          "type": "Cópia"
         },
         "drawing_shapes_version_b_/csd/2021": {
           "type": "Guia de Atividades"
@@ -991,7 +1001,8 @@
           "type": "Vídeo"
         },
         "interactive-card-exemplar-2020/csd/2021": {
-          "name": "Cartão Interativo"
+          "name": "Cartão Interativo",
+          "type": "Cópia"
         },
         "interactive-card-project-guide-2019/csd/2021": {
           "name": "Cartão Interativo",
@@ -1020,7 +1031,8 @@
           "type": "Recurso"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "Detecção de Colisão"
+          "name": "Detecção de Colisão",
+          "type": "Cópia"
         },
         "collision_detection_version_b_/csd/2021": {
           "type": "Guia de Atividades"
@@ -1081,7 +1093,8 @@
           "type": "Guia de Atividades"
         },
         "designing_with_empathy_1/csd/2021": {
-          "name": "Projetando com Empatia"
+          "name": "Projetando com Empatia",
+          "type": "Cópia"
         },
         "reacting-as-your-user/csd/2021": {
           "type": "Guia de Atividades"
@@ -1127,7 +1140,8 @@
           "type": "Guia de Atividades"
         },
         "improve-a-screen-exemplar-19/csd/2021": {
-          "name": "Melhore uma Tela"
+          "name": "Melhore uma Tela",
+          "type": "Cópia"
         },
         "paper-prototype-sample-feedback/csd/2021": {
           "name": "Feedback do Protótipo",
@@ -1160,21 +1174,24 @@
           "type": "Guia de Atividades"
         },
         "app_design_kickoff/csd/2021": {
-          "name": "Pontapé para o Design de Aplicativos"
+          "name": "Pontapé para o Design de Aplicativos",
+          "type": "Cópia"
         },
         "market-research/csd/2021": {
           "name": "Pesquisa de mercado",
           "type": "Guia de Atividades"
         },
         "market_research/csd/2021": {
-          "name": "Pesquisa de mercado"
+          "name": "Pesquisa de mercado",
+          "type": "Cópia"
         },
         "explore-ui-elements/csd/2021": {
           "name": "Explore os Elementos de Interface com o Usuário (IU)",
           "type": "Guia de Atividades"
         },
         "explore_ui_elements/csd/2021": {
-          "name": "Explore os Elementos de Interface com o Usuário (IU)"
+          "name": "Explore os Elementos de Interface com o Usuário (IU)",
+          "type": "Cópia"
         },
         "paper-prototype-planning/csd/2021": {
           "name": "Planejamento do Protótipo em Papel",
@@ -1192,7 +1209,8 @@
           "type": "Recurso"
         },
         "paper_prototype_planning/csd/2021": {
-          "name": "Planejamento do Protótipo em Papel"
+          "name": "Planejamento do Protótipo em Papel",
+          "type": "Cópia"
         },
         "user-test-cases/csd/2021": {
           "name": "Casos de Testes de Usuários",
@@ -1207,10 +1225,12 @@
           "type": "Vídeo"
         },
         "paper_prototype_user_testing/csd/2021": {
-          "name": "Teste de Usuários dos Protótipos em Papel"
+          "name": "Teste de Usuários dos Protótipos em Papel",
+          "type": "Cópia"
         },
         "user_test_cases/csd/2021": {
-          "name": "Casos de Testes de Usuários"
+          "name": "Casos de Testes de Usuários",
+          "type": "Cópia"
         },
         "screen-ownership-2021/csd/2021": {
           "name": "Propriedade da Tela (2021)",
@@ -1261,7 +1281,8 @@
           "type": "Guia de Atividades"
         },
         "bugs_and_features/csd/2021": {
-          "name": "Erros e Recursos"
+          "name": "Erros e Recursos",
+          "type": "Cópia"
         },
         "updating-your-prototype/csd/2021": {
           "name": "Atualizando seu Protótipo",
@@ -1275,7 +1296,8 @@
           "name": "Modelo de Apresentação do Aplicativo"
         },
         "app-presentation-exemplar/csd/2021": {
-          "name": "Apresentação do Aplicativo"
+          "name": "Apresentação do Aplicativo",
+          "type": "Cópia"
         },
         "app_presentation_-_student_checklist/csd/2021": {
           "name": "Apresentação do Aplicativo - Lista de Verificação do Aluno"
@@ -1284,13 +1306,14 @@
           "type": "Slides"
         },
         "representation-matters-exemplar-2019/csd/2021": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "type": "Cópia"
         },
         "meals-data-resource-2019/csd/2021": {
           "type": "Recurso"
         },
         "representation-matters/csd/2021": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "type": "Guia de Atividades"
         },
         "representing-information-1/csd/2021": {
@@ -1304,50 +1327,60 @@
           "type": "Guia de Atividades"
         },
         "ascii_challenges/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "how-computers-work-data-and-binary/csd/2021": {
           "name": "Binário e Dados",
           "type": "Vídeo"
         },
         "representing-numbers-2021/csd/2021": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Representando os Números 2021"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "Representando Números"
+          "name": "Representando Números",
+          "type": "Cópia"
         },
         "activity-guide-pet-records/csd/2021": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Guia de Atividades - Históricos de Pets"
         },
         "keeping-data-secret/csd/2021": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Registros Médicos"
         },
         "unit_5_data_society/csd/2021": {
           "type": "Slides"
         },
         "secret_messages_2021/csd/2021": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Mensagens Secretas 2021"
         },
         "medical_records/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave",
+          "name": "Registros Médicos"
         },
         "unit_5_data_society_1/csd/2021": {
           "type": "Slides"
         },
         "create_a_representation/csd/2021": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Crie uma Representação"
         },
         "problem-solving-with-data/csd/2021": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Solução de Problemas a partir de Dados"
         },
         "structuring-data-2021/csd/2021": {
           "type": "Guia de Atividades"
         },
         "structuring_data/csd/2021": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "type": "Cópia"
         },
         "interpreting-data-exemplar-2019/csd/2021": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "type": "Cópia"
         },
         "interpreting-data/csd/2021": {
           "name": "Interpretando Dados",
@@ -1362,10 +1395,12 @@
           "type": "Guia de Atividades"
         },
         "problem-solving-process-with-data/csd/2021": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Processo de Solução de Problemas com Dados"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "type": "Cópia"
         },
         "data-decisions-resource/csd/2021": {
           "name": "Automatizando decisões de dados",
@@ -1376,23 +1411,28 @@
           "type": "Guia de Atividades"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Amazon e Dados"
         },
         "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Waze e Dados"
         },
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Netflix e Dados"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "Dados no Mundo Real"
+          "name": "Dados no Mundo Real",
+          "type": "Cópia"
         },
         "data-in-the-real-world/csd/2021": {
           "name": "Dados no Mundo Real",
           "type": "Guia de Atividades"
         },
         "video_impact_on_society/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Impacto na Sociedade"
         },
         "video_machine_learning/csd/2021": {
           "name": "Vídeo: Aprendizagem de Máquina",
@@ -1400,16 +1440,20 @@
           "type": "Vídeo"
         },
         "video_training_data_and_bias/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Dados de Treinamento e Viés"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
-          "type": "Revisão em grupo"
+          "type": "Revisão em grupo",
+          "name": "Faça uma Recomendação"
         },
         "make-a-recommendation-1/csd/2021": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Faça uma Recomendação"
         },
         "solve-a-data-problem/csd/2021": {
-          "type": "Guia do projeto"
+          "type": "Guia do projeto",
+          "name": "Faça uma Recomendação"
         },
         "unit_5_data_society_2/csd/2021": {
           "type": "Slides"
@@ -1583,7 +1627,7 @@
         },
         "types_of_machine_learning_2/csd/2021": {
           "name": "Tipos de Machine Learning",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "innovations_in_ai/csd/2021": {
           "type": "Slides"
@@ -1605,10 +1649,10 @@
           "type": "Recurso"
         },
         "patterns_in_data_3/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "_key_classification_models/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "classification_models/csd/2021": {
           "type": "Guia de Atividades"
@@ -1635,7 +1679,7 @@
           "type": "Vídeo"
         },
         "_key_training_a_model_in_ai_lab/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "accuracy_in_ai_lab/csd/2021": {
           "type": "Recurso"
@@ -1677,7 +1721,7 @@
           "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "selecting_a_label/csd/2021": {
           "type": "Recurso"
@@ -1698,10 +1742,10 @@
           "type": "Guia de Atividades"
         },
         "zombie_prediction_-_answer_key/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "_key_numerical_accuracy/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "numerical_data_in_ai_lab/csd/2021": {
           "name": "Dados numéricos no AI Lab",
@@ -1716,7 +1760,7 @@
           "type": "Vídeo"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "using_data_with_numerical_features/csd/2021": {
           "type": "Recurso"
@@ -1725,16 +1769,21 @@
           "type": "Slides"
         },
         "ai_code_of_ethics/csd/2021": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_reflection/csd/2021": {
-          "type": "Apostila do aluno"
+          "type": "Apostila do aluno",
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e IA: Acesso Igual e Viés Algorítmico"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "Slides"
@@ -2532,7 +2581,7 @@
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
           "name": "Inicialização de senha: Se... Então... Cenários",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
           "name": "Inicialização de senha: teste de lição",
@@ -2542,7 +2591,7 @@
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
           "name": "Inicialização de senha: teste de lição",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "name": "Inicialização de senha: slides da lição",
@@ -2557,7 +2606,7 @@
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
           "name": "Inicialização de senha: inicialize sua senha",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "activity-answer-graph-paper/coursed/2021": {
           "name": "Programação em papel quadriculado",
@@ -2636,7 +2685,7 @@
         "open-ended_programming_levels/coursed/2021": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Pare e pense on-line",
@@ -2646,7 +2695,7 @@
         "open-ended_programming_levels_1/coursed/2021": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "dance-party-playlist/coursed/2021": {
           "name": "Lista de reprodução do Spotify (todas as idades)",
@@ -2665,7 +2714,7 @@
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "Rostos sentimentais",
@@ -3369,7 +3418,8 @@
           "type": "Slides"
         },
         "problem_solving_process/csd/2022": {
-          "name": "Processo de resolução de problemas"
+          "name": "Processo de resolução de problemas",
+          "type": "Cópia"
         },
         "problem_solving_process_1/csd/2022": {
           "name": "O Processo de Resolução de Problemas",
@@ -3388,7 +3438,7 @@
         },
         "solving_problems/csd/2022": {
           "name": "Resolução de Problemas",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "solving_problems_1/csd/2022": {
           "name": "Resolução de Problemas",
@@ -3403,7 +3453,8 @@
           "type": "Vídeo"
         },
         "what_is_a_computer_/csd/2022": {
-          "name": "O que é um Computador?"
+          "name": "O que é um Computador?",
+          "type": "Cópia"
         },
         "what_is_a_computer_version_a_/csd/2022": {
           "name": "O que é um computador (versão A)",
@@ -3419,7 +3470,8 @@
           "type": "Slides"
         },
         "input_and_output/csd/2022": {
-          "name": "Entrada e Saída"
+          "name": "Entrada e Saída",
+          "type": "Cópia"
         },
         "input_and_output_1/csd/2022": {
           "name": "Entrada e Saída",
@@ -3430,7 +3482,8 @@
           "type": "Slides"
         },
         "apps_with_processing/csd/2022": {
-          "name": "Aplicativos com Processamento"
+          "name": "Aplicativos com Processamento",
+          "type": "Cópia"
         },
         "apps_with_processing_1/csd/2022": {
           "name": "Aplicativos com Processamento",
@@ -3441,7 +3494,8 @@
           "type": "Slides"
         },
         "apps_with_storage/csd/2022": {
-          "name": "Aplicativos com Armazenamento"
+          "name": "Aplicativos com Armazenamento",
+          "type": "Cópia"
         },
         "apps_with_storage_1/csd/2022": {
           "name": "Aplicativos com Armazenamento",
@@ -3528,7 +3582,8 @@
           "type": "Slides"
         },
         "exploring_web_pages/csd/2022": {
-          "name": "Explorando páginas da Web"
+          "name": "Explorando páginas da Web",
+          "type": "Cópia"
         },
         "exploring_web_pages_1/csd/2022": {
           "name": "Explorando páginas da Web",
@@ -3599,7 +3654,8 @@
           "type": "Slides"
         },
         "social_sleuth/csd/2022": {
-          "name": "Detetive social"
+          "name": "Detetive social",
+          "type": "Cópia"
         },
         "social_sleuth_1/csd/2022": {
           "name": "Detetive social",
@@ -3643,7 +3699,8 @@
           "type": "Vídeo"
         },
         "licensing_your_work/csd/2022": {
-          "name": "Licenciando seu Trabalho"
+          "name": "Licenciando seu Trabalho",
+          "type": "Cópia"
         },
         "licensing_your_work_1/csd/2022": {
           "name": "Licenciando seu Trabalho",
@@ -3712,7 +3769,8 @@
           "type": "Slides"
         },
         "websites_for_a_purpose/csd/2022": {
-          "name": "Websites com um Propósito"
+          "name": "Websites com um Propósito",
+          "type": "Cópia"
         },
         "websites_for_a_purpose_1/csd/2022": {
           "name": "Sites com um Propósito",
@@ -3810,7 +3868,8 @@
           "type": "Slides"
         },
         "drawing_shapes/csd/2022": {
-          "name": "Desenhando Formas"
+          "name": "Desenhando Formas",
+          "type": "Cópia"
         },
         "drawing_shapes_version_a_/csd/2022": {
           "name": "Desenhando formas (Versão A)",
@@ -3995,7 +4054,8 @@
           "type": "Recurso"
         },
         "interactive_card/csd/2022": {
-          "name": "Cartão Interativo"
+          "name": "Cartão Interativo",
+          "type": "Cópia"
         },
         "interactive_card_-_student_checklist/csd/2022": {
           "name": "Cartão Interativo - Lista de Verificação do Aluno"
@@ -4029,7 +4089,8 @@
           "type": "Slides"
         },
         "collision_detection/csd/2022": {
-          "name": "Detecção de Colisão"
+          "name": "Detecção de Colisão",
+          "type": "Cópia"
         },
         "collision_detection_1/csd/2022": {
           "name": "Detecção de Colisão",
@@ -4125,7 +4186,8 @@
           "type": "Guia de Atividades"
         },
         "designing_with_empathy_1/csd/2022": {
-          "name": "Projetando com Empatia"
+          "name": "Projetando com Empatia",
+          "type": "Cópia"
         },
         "problem_solving_process_with_empathy/csd/2022": {
           "name": "Processo de Resolução de Problemas com Empatia",
@@ -4196,7 +4258,8 @@
           "type": "Slides"
         },
         "improve_a_screen/csd/2022": {
-          "name": "Melhore uma Tela"
+          "name": "Melhore uma Tela",
+          "type": "Cópia"
         },
         "improve_a_screen_1/csd/2022": {
           "name": "Melhore uma Tela",
@@ -4241,7 +4304,8 @@
           "type": "Guia de Atividades"
         },
         "app_design_kickoff_1/csd/2022": {
-          "name": "Pontapé para o Design de Aplicativos"
+          "name": "Pontapé para o Design de Aplicativos",
+          "type": "Cópia"
         },
         "designing_apps_for_good/csd/2022": {
           "name": "Criando Aplicativos do Bem",
@@ -4252,7 +4316,8 @@
           "type": "Guia de Atividades"
         },
         "market_research_1/csd/2022": {
-          "name": "Pesquisa de mercado"
+          "name": "Pesquisa de mercado",
+          "type": "Cópia"
         },
         "market_research_2/csd/2022": {
           "name": "Pesquisa de mercado",
@@ -4263,7 +4328,8 @@
           "type": "Guia de Atividades"
         },
         "explore_ui_elements_1/csd/2022": {
-          "name": "Explore os Elementos de Interface com o Usuário (IU)"
+          "name": "Explore os Elementos de Interface com o Usuário (IU)",
+          "type": "Cópia"
         },
         "exploring_ui_elements/csd/2022": {
           "name": "Explorando Elementos da Interface do Usuário",
@@ -4282,7 +4348,8 @@
           "type": "Guia de Atividades"
         },
         "paper_prototype_planning_1/csd/2022": {
-          "name": "Planejamento do Protótipo em Papel"
+          "name": "Planejamento do Protótipo em Papel",
+          "type": "Cópia"
         },
         "phone_paper_prototype/csd/2022": {
           "name": "Protótipo de Telefone em Papel"
@@ -4296,14 +4363,16 @@
           "type": "Guia de Atividades"
         },
         "paper_prototype_user_testing_1/csd/2022": {
-          "name": "Teste de Usuários dos Protótipos em Papel"
+          "name": "Teste de Usuários dos Protótipos em Papel",
+          "type": "Cópia"
         },
         "user_test_cases/csd/2022": {
           "name": "Casos de Testes de Usuários",
           "type": "Guia de Atividades"
         },
         "user_test_cases_1/csd/2022": {
-          "name": "Casos de Testes de Usuários"
+          "name": "Casos de Testes de Usuários",
+          "type": "Cópia"
         },
         "what_s_for_lunch_testing/csd/2022": {
           "name": "Teste do \"O que tem para o almoço\"",
@@ -4378,7 +4447,8 @@
           "type": "Guia de Atividades"
         },
         "bugs_and_features_1/csd/2022": {
-          "name": "Erros e Recursos"
+          "name": "Erros e Recursos",
+          "type": "Cópia"
         },
         "bugs_and_features_2/csd/2022": {
           "name": "Erros e Recursos",
@@ -4400,7 +4470,8 @@
           "name": "Apresentação do Aplicativo - Lista de Verificação do Aluno"
         },
         "app_presentation_1/csd/2022": {
-          "name": "Apresentação do Aplicativo"
+          "name": "Apresentação do Aplicativo",
+          "type": "Cópia"
         },
         "app_presentation_template/csd/2022": {
           "name": "Modelo de Apresentação do Aplicativo",
@@ -4414,14 +4485,15 @@
           "type": "Recurso"
         },
         "representation_matters/csd/2022": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "type": "Cópia"
         },
         "representation_matters_1/csd/2022": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "type": "Guia de Atividades"
         },
         "representation_matters_2/csd/2022": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "type": "Slides"
         },
         "representing_information/csd/2022": {
@@ -4436,7 +4508,7 @@
           "type": "Guia de Atividades"
         },
         "ascii_challenges_1/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "ascii_text/csd/2022": {
           "type": "Recurso"
@@ -4454,60 +4526,72 @@
           "type": "Vídeo"
         },
         "representing_numbers/csd/2022": {
-          "name": "Representando Números"
+          "name": "Representando Números",
+          "type": "Cópia"
         },
         "representing_numbers_2021/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Representando os Números 2021"
         },
         "representing_numbers_1/csd/2022": {
           "name": "Representando Números",
           "type": "Slides"
         },
         "activity_guide_-_pet_records/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Guia de Atividades - Históricos de Pets"
         },
         "combining_representations/csd/2022": {
           "name": "Combinando Representações",
           "type": "Slides"
         },
         "medical_records/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Registros Médicos"
         },
         "medical_records_1/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave",
+          "name": "Registros Médicos"
         },
         "secret_messages_2021/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Mensagens Secretas 2021"
         },
         "keeping_data_secret_1/csd/2022": {
           "name": "Mantendo o segredo dos dados",
           "type": "Slides"
         },
         "create_a_representation_2/csd/2022": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Crie uma Representação"
         },
         "create_a_representation_3/csd/2022": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Crie uma Representação"
         },
         "problem_solving_with_data_1/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Solução de Problemas a partir de Dados"
         },
         "problem_solving_and_data/csd/2022": {
           "name": "Resolução de Problemas com Dados",
           "type": "Slides"
         },
         "structuring_data/csd/2022": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "type": "Cópia"
         },
         "structuring_data_2021/csd/2022": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Dados Estruturantes 2021"
         },
         "structuring_data_1/csd/2022": {
           "name": "Estruturação de dados",
           "type": "Slides"
         },
         "interpreting_data/csd/2022": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "type": "Cópia"
         },
         "interpreting_data_1/csd/2022": {
           "name": "Interpretando Dados",
@@ -4526,14 +4610,16 @@
           "type": "Guia de Atividades"
         },
         "problem_solving_process_with_data/csd/2022": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Processo de Solução de Problemas com Dados"
         },
         "making_decisions_with_data_2/csd/2022": {
           "name": "Tomando Decisões com Dados",
           "type": "Slides"
         },
         "automating_data_decisions/csd/2022": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "type": "Cópia"
         },
         "automating_data_decisions_1/csd/2022": {
           "name": "Automatizando decisões de dados",
@@ -4548,27 +4634,32 @@
           "type": "Slides"
         },
         "amazon_and_data/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Amazon e Dados"
         },
         "data_in_the_real_world/csd/2022": {
-          "name": "Dados no Mundo Real"
+          "name": "Dados no Mundo Real",
+          "type": "Cópia"
         },
         "data_in_the_real_world_1/csd/2022": {
           "name": "Dados no Mundo Real",
           "type": "Guia de Atividades"
         },
         "netflix_and_data/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Netflix e Dados"
         },
         "waze_and_data/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Waze e Dados"
         },
         "problem_solving_with_big_data/csd/2022": {
           "name": "Solução de Problemas com Big Data",
           "type": "Slides"
         },
         "video_impact_on_society/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Impacto na Sociedade"
         },
         "video_machine_learning/csd/2022": {
           "name": "Vídeo: Aprendizagem de Máquina",
@@ -4576,19 +4667,23 @@
           "type": "Vídeo"
         },
         "video_training_data_and_bias/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Dados de Treinamento e Viés"
         },
         "data_and_machine_learning/csd/2022": {
           "type": "Slides"
         },
         "make_a_recommendation/csd/2022": {
-          "type": "Revisão em grupo"
+          "type": "Revisão em grupo",
+          "name": "Faça uma Recomendação"
         },
         "make_a_recommendation_1/csd/2022": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Faça uma Recomendação"
         },
         "make_a_recommendation_2/csd/2022": {
-          "type": "Guia do projeto"
+          "type": "Guia do projeto",
+          "name": "Faça uma Recomendação"
         },
         "project_-_make_a_recommendation/csd/2022": {
           "name": "Projeto - Faça uma Recomendação",
@@ -4839,7 +4934,7 @@
         },
         "types_of_machine_learning_2/csd/2022": {
           "name": "Tipos de Machine Learning",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "innovations_in_ai/csd/2022": {
           "type": "Slides"
@@ -4855,7 +4950,7 @@
           "type": "Vídeo"
         },
         "_key_patterns_in_data/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "finding_patterns_in_data/csd/2022": {
           "name": "Encontrando padrões em dados",
@@ -4872,7 +4967,7 @@
           "type": "Recurso"
         },
         "_key_classification_models/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "classification_models/csd/2022": {
           "name": "Modelos de classificação",
@@ -4886,7 +4981,7 @@
           "type": "Recurso"
         },
         "_key_training_a_model_in_ai_lab/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "accuracy_in_ai_lab/csd/2022": {
           "type": "Recurso"
@@ -4933,7 +5028,7 @@
           "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "model_cards_in_ai_lab/csd/2022": {
           "name": "Cartões modelo no AI Lab",
@@ -4958,10 +5053,10 @@
           "type": "Recurso"
         },
         "_key_numerical_accuracy/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "_key_zombie_prediction/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "numerical_accuracy/csd/2022": {
           "name": "Precisão numérica",
@@ -4975,7 +5070,7 @@
           "type": "Guia de atividades"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "name": "Dados numéricos no AI Lab",
@@ -4996,16 +5091,21 @@
           "type": "Slides"
         },
         "ai_code_of_ethics/csd/2022": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_reflection/csd/2022": {
-          "type": "Apostila do aluno"
+          "type": "Apostila do aluno",
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e IA: Acesso Igual e Viés Algorítmico"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2022": {
           "type": "Rubrica"
@@ -5279,7 +5379,7 @@
         "artist_project_planning_guide_1/coursea/2022": {
           "name": "Guia de planejamento de projetos de artistas",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "csf_course_a_lesson_slides_12/coursea/2022": {
           "type": "Slides"
@@ -5485,7 +5585,7 @@
         "play_lab_project_planning_guide_1/courseb/2022": {
           "name": "Guia de planejamento de projetos do Play Lab",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "common_core_and_ngss_guidance/coursec/2022": {
           "name": "Orientação do Common Core e NGSS",
@@ -5630,11 +5730,11 @@
         "level_solutions/coursec/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "open-ended_programming_levels/coursec/2022": {
           "name": "Níveis de programação abertos",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "pause_and_think_online/coursec/2022": {
           "name": "Pare e pense on-line",
@@ -5644,7 +5744,7 @@
         "open-ended_programming_levels_1/coursec/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "graphing_data_from_play_lab/coursec/2022": {
           "name": "Representação gráfica de dados do Play Lab",
@@ -5738,7 +5838,7 @@
         "password_power-up_if_then_scenarios_1/coursed/2022": {
           "name": "Inicialização de senha: Se... Então... Cenários",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_quiz/coursed/2022": {
           "name": "Inicialização de senha: teste de lição",
@@ -5748,7 +5848,7 @@
         "password_power-up_lesson_quiz_1/coursed/2022": {
           "name": "Inicialização de senha: teste de lição",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_slides/coursed/2022": {
           "name": "Inicialização de senha: slides da lição",
@@ -5763,7 +5863,7 @@
         "password_power-up_power-up_your_password_1/coursed/2022": {
           "name": "Inicialização de senha: inicialize sua senha",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2022": {
           "type": "Slides"
@@ -5841,7 +5941,7 @@
         "open-ended_programming_levels/coursed/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "pause_and_think_online/coursed/2022": {
           "name": "Pare e pense on-line",
@@ -5850,12 +5950,12 @@
         },
         "open-ended_programming_levels_1/coursed/2022": {
           "name": "Níveis de programação abertos",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "sample_level_solutions/coursed/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "dance_party_project_guide/coursed/2022": {
           "name": "Guia do projeto Dance Party",
@@ -5869,7 +5969,7 @@
         "open-ended_programming_levels_2/coursed/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "spotify_playlist_all_ages_/coursed/2022": {
           "name": "Lista de reprodução do Spotify (todas as idades)",
@@ -5980,7 +6080,7 @@
         "private_and_personal_information_lesson_quiz_1/coursee/2022": {
           "name": "Informações pessoais e privadas: Lesson Quiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "private_and_personal_information_lesson_slides/coursee/2022": {
           "name": "Informações pessoais e privadas: slides de aula",
@@ -6126,7 +6226,7 @@
         "the_power_of_words_lesson_quiz_1/coursef/2022": {
           "name": "O poder das palavras: teste de lição",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "the_power_of_words_lesson_slides/coursef/2022": {
           "name": "O poder das palavras: slides da lição",
@@ -6154,7 +6254,7 @@
         "exploring_apps_1/coursef/2022": {
           "name": "Explorando aplicativos",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "introducing_sprite_lab_1/coursef/2022": {
           "name": "Introdução ao Sprite Lab",
@@ -6174,7 +6274,7 @@
         "blank_space_stories_1/coursef/2022": {
           "name": "Histórias do espaço em branco",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "mini_project_user_input_programs/coursef/2022": {
           "name": "Mini projeto: Programas de entrada do usuário",
@@ -6184,7 +6284,7 @@
         "mini_project_user_input_programs_1/coursef/2022": {
           "name": "Mini projeto: Programas de entrada do usuário",
           "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "teacher_sandbox_level/coursef/2022": {
           "name": "Nível Sandbox do professor",
@@ -6314,7 +6414,7 @@
         "open-ended_programming_levels/express/2022": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "spotify_playlist_all_ages_/express/2022": {
           "name": "Lista de reprodução do Spotify (todas as idades)",
@@ -6395,7 +6495,8 @@
         },
         "ai_code_of_ethics/ai-ethics/2023": {
           "type": "Slides",
-          "url": "[https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-\\\\\\_UNWybRq48pfH2PVo/template/preview](https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview)"
+          "url": "[https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-\\\\\\_UNWybRq48pfH2PVo/template/preview](https://docs.google.com/presentation/d/1sjTMJf2g1eJvvTjaIzk5aFkTi-_UNWybRq48pfH2PVo/template/preview)",
+          "name": "Código de Ética em IA"
         },
         "ai_research_areas/ai-ethics/2023": {
           "type": "Guia de Atividades",
@@ -7018,7 +7119,8 @@
           "type": "Slides"
         },
         "problem_solving_process/csd/2023": {
-          "name": "Processo de resolução de problemas"
+          "name": "Processo de resolução de problemas",
+          "type": "Cópia"
         },
         "problem_solving_process_1/csd/2023": {
           "name": "Processo de resolução de problemas",
@@ -7044,7 +7146,7 @@
         },
         "solving_problems/csd/2023": {
           "name": "Resolução de Problemas",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "solving_problems_1/csd/2023": {
           "name": "Resolução de Problemas",
@@ -7055,7 +7157,8 @@
           "type": "Vídeo"
         },
         "what_is_a_computer_/csd/2023": {
-          "name": "O que é um Computador?"
+          "name": "O que é um Computador?",
+          "type": "Cópia"
         },
         "what_is_a_computer_1/csd/2023": {
           "name": "O que é um computador?",
@@ -7068,7 +7171,8 @@
           "type": "Guia de Atividades"
         },
         "input_and_output/csd/2023": {
-          "name": "Entrada e Saída"
+          "name": "Entrada e Saída",
+          "type": "Cópia"
         },
         "input_and_output_1/csd/2023": {
           "name": "Entrada e Saída",
@@ -7079,7 +7183,8 @@
           "type": "Slides"
         },
         "apps_with_processing/csd/2023": {
-          "name": "Aplicativos com Processamento"
+          "name": "Aplicativos com Processamento",
+          "type": "Cópia"
         },
         "apps_with_processing_1/csd/2023": {
           "name": "Aplicativos com Processamento",
@@ -7090,7 +7195,8 @@
           "type": "Slides"
         },
         "apps_with_storage/csd/2023": {
-          "name": "Aplicativos com Armazenamento"
+          "name": "Aplicativos com Armazenamento",
+          "type": "Cópia"
         },
         "apps_with_storage_1/csd/2023": {
           "name": "Aplicativos com Armazenamento",
@@ -7168,10 +7274,10 @@
           "type": "Guia de Atividades"
         },
         "_key_warm_up_word_search/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "_key_web_design_for_users/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "exploring_web_pages_1/csd/2023": {
           "type": "Guia de Atividades"
@@ -7258,7 +7364,8 @@
           "type": "Slides"
         },
         "social_sleuth/csd/2023": {
-          "name": "Detetive social"
+          "name": "Detetive social",
+          "type": "Cópia"
         },
         "social_sleuth_1/csd/2023": {
           "name": "Detetive social",
@@ -7306,7 +7413,8 @@
           "type": "Slides"
         },
         "licensing_your_work/csd/2023": {
-          "name": "Licenciando seu Trabalho"
+          "name": "Licenciando seu Trabalho",
+          "type": "Cópia"
         },
         "licensing_your_work_1/csd/2023": {
           "name": "Licenciando seu Trabalho",
@@ -7368,7 +7476,8 @@
           "type": "Vídeo"
         },
         "websites_for_a_purpose/csd/2023": {
-          "name": "Websites com um Propósito"
+          "name": "Websites com um Propósito",
+          "type": "Cópia"
         },
         "websites_for_a_purpose_1/csd/2023": {
           "name": "Websites com um Propósito",
@@ -7447,7 +7556,7 @@
           "type": "Revisão em grupo"
         },
         "_warm_up_word_search_key_/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "app_design_for_users/csd/2023": {
           "type": "Guia de Atividades"
@@ -7462,7 +7571,8 @@
           "type": "Recurso"
         },
         "drawing_shapes/csd/2023": {
-          "name": "Desenhando Formas"
+          "name": "Desenhando Formas",
+          "type": "Cópia"
         },
         "drawing_shapes_version_a_/csd/2023": {
           "type": "Guia de Atividades"
@@ -7690,7 +7800,8 @@
           "type": "Slides"
         },
         "collision_detection/csd/2023": {
-          "name": "Detecção de Colisão"
+          "name": "Detecção de Colisão",
+          "type": "Cópia"
         },
         "collision_detection_1/csd/2023": {
           "name": "Detecção de Colisão",
@@ -7786,7 +7897,8 @@
           "type": "Guia de Atividades"
         },
         "designing_with_empathy_1/csd/2023": {
-          "name": "Projetando com Empatia"
+          "name": "Projetando com Empatia",
+          "type": "Cópia"
         },
         "designing_with_empathy_2/csd/2023": {
           "name": "Projetando com Empatia",
@@ -7860,7 +7972,8 @@
           "type": "Slides"
         },
         "improve_a_screen/csd/2023": {
-          "name": "Melhore uma Tela"
+          "name": "Melhore uma Tela",
+          "type": "Cópia"
         },
         "improve_a_screen_1/csd/2023": {
           "name": "Melhore uma Tela",
@@ -7901,7 +8014,8 @@
           "type": "Guia de Atividades"
         },
         "app_design_kickoff_1/csd/2023": {
-          "name": "Pontapé para o Design de Aplicativos"
+          "name": "Pontapé para o Design de Aplicativos",
+          "type": "Cópia"
         },
         "designing_apps_for_good/csd/2023": {
           "name": "Criando Aplicativos do Bem",
@@ -7915,7 +8029,8 @@
           "type": "Recurso"
         },
         "market_research_1/csd/2023": {
-          "name": "Pesquisa de mercado"
+          "name": "Pesquisa de mercado",
+          "type": "Cópia"
         },
         "market_research_2/csd/2023": {
           "name": "Pesquisa de mercado",
@@ -7926,7 +8041,8 @@
           "type": "Guia de Atividades"
         },
         "explore_ui_elements_1/csd/2023": {
-          "name": "Explore os Elementos de Interface com o Usuário (IU)"
+          "name": "Explore os Elementos de Interface com o Usuário (IU)",
+          "type": "Cópia"
         },
         "exploring_ui_elements/csd/2023": {
           "name": "Explorando Elementos da Interface do Usuário",
@@ -7949,7 +8065,8 @@
           "type": "Guia de Atividades"
         },
         "paper_prototype_planning_1/csd/2023": {
-          "name": "Planejamento do Protótipo em Papel"
+          "name": "Planejamento do Protótipo em Papel",
+          "type": "Cópia"
         },
         "phone_paper_prototype/csd/2023": {
           "name": "Protótipo de Telefone em Papel"
@@ -7959,7 +8076,8 @@
           "type": "Guia de Atividades"
         },
         "paper_prototype_user_testing_1/csd/2023": {
-          "name": "Teste de Usuários dos Protótipos em Papel"
+          "name": "Teste de Usuários dos Protótipos em Papel",
+          "type": "Cópia"
         },
         "prototype_testing/csd/2023": {
           "name": "Protótipo de Teste",
@@ -7970,7 +8088,8 @@
           "type": "Guia de Atividades"
         },
         "user_test_cases_1/csd/2023": {
-          "name": "Casos de Testes de Usuários"
+          "name": "Casos de Testes de Usuários",
+          "type": "Cópia"
         },
         "what_s_for_lunch_testing/csd/2023": {
           "name": "Teste do \"O que tem para o almoço\"",
@@ -8045,7 +8164,8 @@
           "type": "Guia de Atividades"
         },
         "bugs_and_features_1/csd/2023": {
-          "name": "Erros e Recursos"
+          "name": "Erros e Recursos",
+          "type": "Cópia"
         },
         "bugs_and_features_2/csd/2023": {
           "name": "Erros e Recursos",
@@ -8067,7 +8187,8 @@
           "name": "Apresentação do Aplicativo - Lista de Verificação do Aluno"
         },
         "app_presentation_1/csd/2023": {
-          "name": "Apresentação do Aplicativo"
+          "name": "Apresentação do Aplicativo",
+          "type": "Cópia"
         },
         "app_presentation_template/csd/2023": {
           "name": "Modelo de Apresentação do Aplicativo"
@@ -8080,14 +8201,15 @@
           "type": "Recurso"
         },
         "representation_matters/csd/2023": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação",
+          "type": "Cópia"
         },
         "representation_matters_1/csd/2023": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "type": "Guia de Atividades"
         },
         "representation_matters_2/csd/2023": {
-          "name": "Representação Importa",
+          "name": "Questões Relativas à Representação",
           "type": "Slides"
         },
         "patterns_and_representation/csd/2023": {
@@ -8106,7 +8228,7 @@
           "type": "Guia de Atividades"
         },
         "ascii_challenges_1/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "ascii_text/csd/2023": {
           "type": "Recurso"
@@ -8120,17 +8242,20 @@
           "type": "Vídeo"
         },
         "representing_numbers/csd/2023": {
-          "name": "Representando Números"
+          "name": "Representando Números",
+          "type": "Cópia"
         },
         "representing_numbers_1/csd/2023": {
           "name": "Representando Números",
           "type": "Slides"
         },
         "representing_numbers_2021/csd/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Representando os Números 2021"
         },
         "activity_guide_-_pet_records/csd/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Guia de Atividades - Históricos de Pets"
         },
         "combining_representations/csd/2023": {
           "name": "Combinando Representações",
@@ -8141,29 +8266,35 @@
           "type": "Slides"
         },
         "medical_records/csd/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Registros Médicos"
         },
         "medical_records_1/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave",
+          "name": "Registros Médicos"
         },
         "secret_messages_2021/csd/2023": {
           "type": "Guia de Atividades"
         },
         "create_a_representation_2/csd/2023": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Crie uma Representação"
         },
         "create_a_representation_3/csd/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Crie uma Representação"
         },
         "problem_solving_with_data_1/csd/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Solução de Problemas a partir de Dados"
         },
         "problem_solving_with_data_2/csd/2023": {
           "name": "Resolução de Problemas com Dados",
           "type": "Slides"
         },
         "structuring_data/csd/2023": {
-          "name": "Estruturação de dados"
+          "name": "Estruturação de dados",
+          "type": "Cópia"
         },
         "structuring_data_1/csd/2023": {
           "name": "Estruturação de dados",
@@ -8173,7 +8304,8 @@
           "type": "Guia de Atividades"
         },
         "interpreting_data/csd/2023": {
-          "name": "Interpretando Dados"
+          "name": "Interpretando Dados",
+          "type": "Cópia"
         },
         "interpreting_data_1/csd/2023": {
           "name": "Interpretando Dados",
@@ -8196,10 +8328,12 @@
           "type": "Slides"
         },
         "problem_solving_process_with_data/csd/2023": {
-          "type": "Recurso"
+          "type": "Recurso",
+          "name": "Processo de Solução de Problemas com Dados"
         },
         "automating_data_decisions/csd/2023": {
-          "name": "Automatizando decisões de dados"
+          "name": "Automatizando decisões de dados",
+          "type": "Cópia"
         },
         "automating_data_decisions_1/csd/2023": {
           "name": "Automatizando decisões de dados",
@@ -8214,30 +8348,35 @@
           "type": "Slides"
         },
         "amazon_and_data/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Amazon e Dados"
         },
         "data_in_the_real_world/csd/2023": {
-          "name": "Dados no Mundo Real"
+          "name": "Dados no Mundo Real",
+          "type": "Cópia"
         },
         "data_in_the_real_world_1/csd/2023": {
           "name": "Dados no Mundo Real",
           "type": "Guia de Atividades"
         },
         "netflix_and_data/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Netflix e Dados"
         },
         "problem_solving_with_big_data/csd/2023": {
           "name": "Solução de Problemas com Big Data",
           "type": "Slides"
         },
         "waze_and_data/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Waze e Dados"
         },
         "data_and_machine_learning/csd/2023": {
           "type": "Slides"
         },
         "video_impact_on_society/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Impacto na Sociedade"
         },
         "video_machine_learning/csd/2023": {
           "name": "Vídeo: Aprendizagem de Máquina",
@@ -8245,16 +8384,20 @@
           "type": "Vídeo"
         },
         "video_training_data_and_bias/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Vídeo: Dados de Treinamento e Viés"
         },
         "make_a_recommendation/csd/2023": {
-          "type": "Revisão em grupo"
+          "type": "Revisão em grupo",
+          "name": "Faça uma Recomendação"
         },
         "make_a_recommendation_1/csd/2023": {
-          "type": "Rubrica"
+          "type": "Rubrica",
+          "name": "Faça uma Recomendação"
         },
         "make_a_recommendation_2/csd/2023": {
-          "type": "Guia do projeto"
+          "type": "Guia do projeto",
+          "name": "Faça uma Recomendação"
         },
         "project_-_make_a_recommendation/csd/2023": {
           "name": "Projeto - Faça uma Recomendação",
@@ -8602,7 +8745,7 @@
         },
         "types_of_machine_learning_2/csd/2023": {
           "name": "Tipos de Machine Learning",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "innovations_in_ai/csd/2023": {
           "type": "Slides"
@@ -8618,7 +8761,7 @@
           "type": "Vídeo"
         },
         "_key_patterns_in_data/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "finding_patterns_in_data/csd/2023": {
           "type": "Vídeo"
@@ -8633,7 +8776,7 @@
           "type": "Recurso"
         },
         "_key_classification_models/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "classification_models/csd/2023": {
           "type": "Guia de Atividades"
@@ -8645,7 +8788,7 @@
           "type": "Recurso"
         },
         "_key_training_a_model_in_ai_lab/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "accuracy_in_ai_lab/csd/2023": {
           "type": "Recurso"
@@ -8692,7 +8835,7 @@
           "type": "Guia de Atividades"
         },
         "_key_zoo_models/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "model_cards_in_ai_lab/csd/2023": {
           "name": "Cartões modelo no AI Lab",
@@ -8717,10 +8860,10 @@
           "type": "Recurso"
         },
         "_key_numerical_accuracy/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "_key_zombie_prediction/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "numerical_accuracy/csd/2023": {
           "type": "Guia de Atividades"
@@ -8732,7 +8875,7 @@
           "type": "Guia de Atividades"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2023": {
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "numerical_data_in_ai_lab/csd/2023": {
           "name": "Dados numéricos no AI Lab",
@@ -8753,16 +8896,21 @@
           "type": "Slides"
         },
         "ai_code_of_ethics/csd/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_areas/csd/2023": {
-          "type": "Guia de Atividades"
+          "type": "Guia de Atividades",
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e IA: Acesso Igual e Viés Algorítmico"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2023": {
           "type": "Rubrica"
@@ -8814,13 +8962,16 @@
           "type": "Recurso"
         },
         "all_resources/coursea/2023": {
-          "url": "/s/coursea-2023/recursos"
+          "url": "/s/coursea-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/coursea/2023": {
-          "url": "/s/coursea-2023/standards"
+          "url": "/s/coursea-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/coursea/2023": {
-          "url": "/s/curso-2023/vocabulário"
+          "url": "/s/curso-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/coursea/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9021,16 +9172,19 @@
         "artist_project_planning_guide_1/coursea/2023": {
           "name": "Guia de planejamento de projetos de artistas",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "all_resources/courseb/2023": {
-          "url": "/s/courseb-2023/recursos"
+          "url": "/s/courseb-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/courseb/2023": {
-          "url": "/s/courseb-2023/standards"
+          "url": "/s/courseb-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/courseb/2023": {
-          "url": "/s/cursob-2023/vocabulário"
+          "url": "/s/cursob-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/courseb/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9241,16 +9395,19 @@
         "play_lab_project_planning_guide_1/courseb/2023": {
           "name": "Guia de planejamento de projetos do Play Lab",
           "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "all_resources/coursec/2023": {
-          "url": "/s/coursec-2023/recursos"
+          "url": "/s/coursec-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/coursec/2023": {
-          "url": "/s/coursec-2023/standards"
+          "url": "/s/coursec-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/coursec/2023": {
-          "url": "/s/cursoc-2023/vocabulário"
+          "url": "/s/cursoc-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/coursec/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9403,7 +9560,7 @@
         },
         "open-ended_programming_levels/coursec/2023": {
           "name": "Níveis de programação abertos",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "pause_and_think_online/coursec/2023": {
           "name": "Pare e pense on-line",
@@ -9413,12 +9570,12 @@
         "sample_level_solutions/coursec/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "open-ended_programming_levels_1/coursec/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "graphing_data_from_play_lab/coursec/2023": {
           "name": "Representação gráfica de dados do Play Lab",
@@ -9466,13 +9623,16 @@
           "type": "Recurso de aula"
         },
         "all_resources/coursed/2023": {
-          "url": "/s/curso-2023/recursos"
+          "url": "/s/curso-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/coursed/2023": {
-          "url": "/s/curso-2023/standards"
+          "url": "/s/curso-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/coursed/2023": {
-          "url": "/s/curso-2023/vocabulário"
+          "url": "/s/curso-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/coursed/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9530,7 +9690,7 @@
         "password_power-up_if_then_scenarios_1/coursed/2023": {
           "name": "Inicialização de senha: Se... Então... Cenários",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_quiz/coursed/2023": {
           "name": "Inicialização de senha: teste de lição",
@@ -9540,7 +9700,7 @@
         "password_power-up_lesson_quiz_1/coursed/2023": {
           "name": "Inicialização de senha: teste de lição",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "password_power-up_lesson_slides/coursed/2023": {
           "name": "Inicialização de senha: slides da lição",
@@ -9555,7 +9715,7 @@
         "password_power-up_power-up_your_password_1/coursed/2023": {
           "name": "Inicialização de senha: inicialize sua senha",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "csf_-_course_d_-_slides_2022-2023/coursed/2023": {
           "type": "Slides"
@@ -9633,7 +9793,7 @@
         "open-ended_programming_levels/coursed/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "pause_and_think_online/coursed/2023": {
           "name": "Pare e pense on-line",
@@ -9642,12 +9802,12 @@
         },
         "open-ended_programming_levels_1/coursed/2023": {
           "name": "Níveis de programação abertos",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "sample_level_solutions/coursed/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "dance_party_project_guide/coursed/2023": {
           "name": "Guia do projeto Dance Party",
@@ -9661,7 +9821,7 @@
         "open-ended_programming_levels_2/coursed/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "spotify_playlist_all_ages_/coursed/2023": {
           "name": "Lista de reprodução do Spotify (todas as idades)",
@@ -9708,13 +9868,16 @@
           "type": "Guia do projeto"
         },
         "all_resources/coursee/2023": {
-          "url": "/s/coursee-2023/recursos"
+          "url": "/s/coursee-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/coursee/2023": {
-          "url": "/s/coursee-2023/standards"
+          "url": "/s/coursee-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/coursee/2023": {
-          "url": "/s/curso-2023/vocabulário"
+          "url": "/s/curso-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/coursee/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9789,7 +9952,7 @@
         "private_and_personal_information_lesson_quiz_1/coursee/2023": {
           "name": "Informações pessoais e privadas: Lesson Quiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "private_and_personal_information_lesson_slides/coursee/2023": {
           "name": "Informações pessoais e privadas: slides de aula",
@@ -9882,13 +10045,16 @@
           "type": "Guia de Atividades"
         },
         "all_resources/coursef/2023": {
-          "url": "/s/coursef-2023/recursos"
+          "url": "/s/coursef-2023/recursos",
+          "name": "Todos os Recursos"
         },
         "all_standards/coursef/2023": {
-          "url": "/s/cursof-2023/standards"
+          "url": "/s/cursof-2023/standards",
+          "name": "Todos os Padrões"
         },
         "all_vocabulary/coursef/2023": {
-          "url": "/s/cursof-2023/vocabulário"
+          "url": "/s/cursof-2023/vocabulário",
+          "name": "Todo o Vocabulário"
         },
         "common_core_and_ngss_guidance/coursef/2023": {
           "name": "Orientação do Common Core e NGSS",
@@ -9939,7 +10105,7 @@
         "the_power_of_words_lesson_quiz_1/coursef/2023": {
           "name": "O poder das palavras: teste de lição",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "the_power_of_words_lesson_slides/coursef/2023": {
           "name": "O poder das palavras: slides da lição",
@@ -9967,7 +10133,7 @@
         "exploring_apps_1/coursef/2023": {
           "name": "Explorando aplicativos",
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "introducing_sprite_lab/coursef/2023": {
           "name": "Introdução ao Sprite Lab",
@@ -9992,7 +10158,7 @@
         "blank_space_stories_1/coursef/2023": {
           "name": "Histórias do espaço em branco",
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "mini_project_user_input_programs/coursef/2023": {
           "name": "Mini projeto: Programas de entrada do usuário",
@@ -10002,7 +10168,7 @@
         "mini_project_user_input_programs_1/coursef/2023": {
           "name": "Mini projeto: Programas de entrada do usuário",
           "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "teacher_sandbox_level/coursef/2023": {
           "name": "Nível Sandbox do professor",
@@ -10137,7 +10303,7 @@
         "open-ended_programming_levels/express/2023": {
           "name": "Níveis de programação abertos",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "spotify_playlist_all_ages_/express/2023": {
           "name": "Lista de reprodução do Spotify (todas as idades)",
@@ -10238,7 +10404,8 @@
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] Rede de Visão Computacional",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
+          "type": "Cópia"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "Visão Computacional",
@@ -10266,7 +10433,7 @@
           "type": "Vídeo"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "Como a IA funciona: como funcionam as redes neurais",
+          "name": "Como a IA Funciona: Como Funcionam as Redes Neurais",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "Vídeo"
         },
@@ -10281,56 +10448,57 @@
           "type": "Slides"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "Criadores de conteúdo do WeTube",
+          "name": "Criadores de Conteúdo do WeTube",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "Recurso"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(Opcional) Guia de atividades de Eliza",
+          "name": "(Opcional) Guia de Atividades - Eliza",
           "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
           "type": "Guia de Atividades"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "LLM generativo",
+          "name": "LLM Generativo",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "Slides"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "Como a IA funciona: chatbots e grandes modelos de linguagem (parte 1)",
+          "name": "Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem (Parte 1)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "Vídeo"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "Como a IA funciona: chatbots e grandes modelos de linguagem (parte 2)",
+          "name": "Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem (Parte 2)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "Vídeo"
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
-          "name": "[Key] Guia de vocabulário e vídeo",
+          "name": "[Key] Guia de Vocabulário e Vídeo",
           "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
-          "name": "Guia de vídeo e vocabulário",
+          "name": "Guia de Vídeo e Vocabulário",
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
           "type": "Guia de Atividades"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Guia escrito de atividades do simulador de voz",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+          "name": "[Exemplar] Guia de Atividade - Simulador de Voz Escrita",
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
+          "type": "Cópia"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
-          "name": "Guia escrito do simulador de voz",
+          "name": "Guia Simulador de Voz Escrita",
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
           "type": "Guia de Atividades"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "Guia do usuário do simulador de voz escrito",
+          "name": "Guia do Usuário - Simulador de Voz Escrita",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "Recurso"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
-          "name": "(Opcional) Guia de atividades do jogo GAN",
+          "name": "(Opcional) Guia de Atividade - GAN Game",
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
           "type": "Guia de Atividades"
         },
@@ -10340,31 +10508,32 @@
           "type": "Slides"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] Guia de atividades de imagens generativas",
+          "name": "[Key] Guia de Atividade - Imagens Generativas",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
-          "name": "Como a IA funciona: criatividade e imaginação",
+          "name": "Como a IA Funciona: Criatividade e Imaginação",
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
           "type": "Vídeo"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] Atividade de imagem ruidosa",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+          "name": "[Exemplar] Atividade sobre Imagem Ruidosa",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
+          "type": "Cópia"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "Guia de atividades do Noisy Image Widget",
+          "name": "Guia de Atividade - Widget Imagem Ruidosa",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
           "type": "Guia de Atividades"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "Guia do usuário: Noise Image Widget",
+          "name": "Guia do Usuário: Widget Imagem Ruidosa",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "Recurso"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
-          "name": "Guia de vídeo e vocabulário",
+          "name": "Guia de Vídeo e Vocabulário",
           "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
           "type": "Guia de Atividades"
         },
@@ -10374,41 +10543,47 @@
           "type": "Slides"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
-          "name": "Como a IA funciona - Impacto social",
+          "name": "Como a IA Funciona - Impacto Social",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "Vídeo"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "Compartilhando informações sobre nosso algoritmo de recorte de imagens (Twitter)",
+          "name": "Compartilhando conhecimentos sobre nosso algoritmo de recorte de imagens (Twitter)",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "Recurso"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "O Twitter diz que seu algoritmo de corte de imagens era tendencioso, então está se livrando dele (CNN)",
+          "name": "O Twitter diz que seu algoritmo de recorte de imagens era tendencioso, então o está descartando (CNN)",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "Recurso"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
           "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Código de Ética em IA"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
+          "name": "Áreas de Pesquisa em Ética em IA"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
-          "name": "Como a IA funciona — Privacidade e futuro do trabalho",
+          "name": "Como a IA Funciona — Privacidade e o Futuro do Trabalho",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vídeo"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "type": "Slides"
+          "type": "Slides",
+          "name": "Nosso Código de Ética em IA [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "A IA Possui Criatividade e Imaginação?"
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "Como funciona a IA",
@@ -10416,22 +10591,22 @@
           "type": "Slides"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "Como a IA funciona: ética e IA: igualdade de acesso e viés algorítmico",
+          "name": "Como a IA Funciona: Ética & IA: Igualdade de Acesso e Viés Algorítmico",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "Vídeo"
         },
         "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
-          "name": "Como a IA funciona: ética e IA: privacidade e o futuro do trabalho",
+          "name": "Como a IA Funciona: Ética & IA: Privacidade & o Futuro do Trabalho",
           "url": "https://youtu.be/zNxw5gJtHLc",
           "type": "Vídeo"
         },
         "how_ai_works_introduction/how-ai-works/2023": {
-          "name": "Como a IA funciona: introdução",
+          "name": "Como a IA Funciona: Introdução",
           "url": "https://youtu.be/Ok-xpKjKp2g",
           "type": "Vídeo"
         },
         "how_ai_works_training_data_and_bias/how-ai-works/2023": {
-          "name": "Como a IA funciona: Dados de Treinamento e Vieses",
+          "name": "Como a IA Funciona: Dados de Treinamento e Vieses",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
@@ -10442,17 +10617,18 @@
         },
         "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Como os Chatbots e os Grandes Modelos de Linguagem Funcionam"
         },
         "vocabulary_matching/how-ai-works/2023": {
-          "name": "Correspondência de vocabulário",
+          "name": "Correspondência de Vocabulário",
           "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
           "type": "Guia de Atividades"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
-          "name": "[Key] Correspondência de vocabulário",
+          "name": "[Key] Correspondência de Vocabulário",
           "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view",
-          "type": "Chave de resposta"
+          "type": "Resposta-chave"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introdução à Artista",
@@ -10572,6 +10748,988 @@
         },
         "animal_shapes/csd/2022": {
           "name": "Formas de Animais"
+        },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar/csd/2021": {
+          "type": "Cópia"
+        },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_3/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_3/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "project-guide-html-project-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "define-your-webpage-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "website-team-plan-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "links-and-research-1/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_2/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "cs_in_entertainment/csd/2021": {
+          "type": "Cópia"
+        },
+        "colored-shape-drawing/csd/2021": {
+          "type": "Cópia"
+        },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "type": "Cópia"
+        },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "type": "Cópia"
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_4/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_4/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "reacting-as-your-user-exemplar-19/csd/2021": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_2/csd/2021": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_3/csd/2021": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_4/csd/2021": {
+          "type": "Cópia"
+        },
+        "user_centered_design_define_prepare_/csd/2021": {
+          "type": "Cópia"
+        },
+        "user_centered_design_try_reflect_/csd/2021": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_1_1/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_1/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_2/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_5/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_5/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_5/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "type": "Cópia"
+        },
+        "representing_information_2/csd/2021": {
+          "type": "Cópia"
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "type": "Cópia"
+        },
+        "number-cards/csd/2021": {
+          "type": "Manipulativo"
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "type": "Cópia"
+        },
+        "ascii-to-binary-table/csd/2021": {
+          "name": "ASCII para Tabela Binária",
+          "type": "Referência"
+        },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "name": "Crie uma Representação",
+          "type": "Cópia"
+        },
+        "encode-a-thing/csd/2021": {
+          "name": "Crie uma Representação"
+        },
+        "create_a_representation_-_student_checklist/csd/2021": {
+          "name": "Crie uma Representação - Lista de Verificação do Aluno"
+        },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "name": "Solução de Problemas a partir de Dados",
+          "type": "Cópia"
+        },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "type": "Cópia"
+        },
+        "project_guide_exemplar/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "type": "Cópia"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2021": {
+          "name": "Faça uma Recomendação - Lista de Verificação para Estudantes"
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_6/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_6/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_1_1/csd/2021": {
+          "type": "Cópia"
+        },
+        "peer_review_2_1/csd/2021": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "type": "Cópia"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "Todo o Vocabulário"
+        },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "Áreas de Pesquisa em Ética em IA"
+        },
+        "all_resources_5/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_5/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "aluminum_boats/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_exemplar/csd/2022": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics/csd/2022": {
+          "type": "Cópia"
+        },
+        "build_a_newspaper_table/csd/2022": {
+          "type": "Cópia"
+        },
+        "spaghetti_bridge/csd/2022": {
+          "type": "Cópia"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2022": {
+          "type": "Cópia"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2022": {
+          "type": "Cópia"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "peer_review_-_html_web_page/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_html_project/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_-_your_personal_style/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_your_personal_style/csd/2022": {
+          "type": "Cópia"
+        },
+        "define_your_webpage/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_-_personal_website/csd/2022": {
+          "type": "Cópia"
+        },
+        "practices_reflection/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2022": {
+          "type": "Cópia"
+        },
+        "website_team_plan/csd/2022": {
+          "type": "Cópia"
+        },
+        "links_and_research/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_-_final_personal_website/csd/2022": {
+          "type": "Cópia"
+        },
+        "practices_reflection_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources_1/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_1/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_1/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "cs_in_entertainment_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "sample_shape_drawing/csd/2022": {
+          "type": "Cópia"
+        },
+        "mini_project_-_captioned_scenes/csd/2022": {
+          "type": "Cópia"
+        },
+        "animated_scene_planning/csd/2022": {
+          "type": "Cópia"
+        },
+        "interactive_card_-_marked_rubrics/csd/2022": {
+          "type": "Cópia"
+        },
+        "mini-project_guide_-_side_scroller/csd/2022": {
+          "type": "Cópia"
+        },
+        "flyer_game_-_project_guide/csd/2022": {
+          "type": "Cópia"
+        },
+        "planning_your_platform_game/csd/2022": {
+          "type": "Cópia"
+        },
+        "make_your_own_game/csd/2022": {
+          "type": "Cópia"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources_2/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_2/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_2/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "reacting_as_your_user_profile_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_3/csd/2022": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_4/csd/2022": {
+          "type": "Cópia"
+        },
+        "user_centered_design_define_prepare_/csd/2022": {
+          "type": "Cópia"
+        },
+        "user_centered_design_try_reflect_/csd/2022": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources_3/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_3/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_3/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "representing_information_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "representing_information_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "ascii/csd/2022": {
+          "type": "Cópia"
+        },
+        "number_cards_1/csd/2022": {
+          "name": "Cartões Numéricos",
+          "type": "Manipulativo"
+        },
+        "ascii_to_binary_table/csd/2022": {
+          "name": "ASCII para Tabela Binária",
+          "type": "Referência"
+        },
+        "pet_records/csd/2022": {
+          "type": "Cópia"
+        },
+        "create_a_representation/csd/2022": {
+          "name": "Crie uma Representação",
+          "type": "Cópia"
+        },
+        "create_a_representation_-_student_checklist/csd/2022": {
+          "name": "Crie uma Representação - Lista de Verificação do Aluno"
+        },
+        "create_a_representation_1/csd/2022": {
+          "name": "Crie uma Representação"
+        },
+        "create_a_representation_marked_rubrics/csd/2022": {
+          "type": "Cópia"
+        },
+        "problem_solving_with_data/csd/2022": {
+          "name": "Solução de Problemas a partir de Dados",
+          "type": "Cópia"
+        },
+        "making_decisions_with_data/csd/2022": {
+          "type": "Cópia"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2022": {
+          "name": "Faça uma Recomendação - Lista de Verificação para Estudantes"
+        },
+        "peer_review_exemplar_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "project_guide_exemplar_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_3/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources_6/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_6/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_6/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_bird_survey/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_1_-_lights_and_music/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_1_-_city_silhouette/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2022": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_monster_puppet/csd/2022": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_1/csd/2022": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_2/csd/2022": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_3/csd/2022": {
+          "type": "Cópia"
+        },
+        "all_resources_4/csd/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_4/csd/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_4/csd/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "ai_ethics_research_areas/csd/2022": {
+          "name": "Áreas de Pesquisa em Ética em IA"
+        },
+        "all_resources/coursea/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/coursea/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/coursea/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/courseb/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/courseb/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/courseb/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/coursec/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/coursec/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/coursec/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/coursed/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/coursed/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/coursed/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/coursee/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/coursee/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/coursee/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/coursef/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/coursef/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/coursef/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/express/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/express/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/express/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/pre-express/2022": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/pre-express/2022": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "aluminum_boats/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_exemplar/csd/2023": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics/csd/2023": {
+          "type": "Cópia"
+        },
+        "build_a_newspaper_table/csd/2023": {
+          "type": "Cópia"
+        },
+        "spaghetti_bridge/csd/2023": {
+          "type": "Cópia"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2023": {
+          "type": "Cópia"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2023": {
+          "type": "Cópia"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_5/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_5/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_5/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "peer_review_-_html_web_page/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_html_project/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_-_your_personal_style/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_your_personal_style/csd/2023": {
+          "type": "Cópia"
+        },
+        "define_your_webpage/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_-_personal_website/csd/2023": {
+          "type": "Cópia"
+        },
+        "practices_reflection/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2023": {
+          "type": "Cópia"
+        },
+        "website_team_plan/csd/2023": {
+          "type": "Cópia"
+        },
+        "links_and_research/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_-_final_personal_website/csd/2023": {
+          "type": "Cópia"
+        },
+        "practices_reflection_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_6/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_6/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_6/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "exemplar_-_animation_and_game_design_activity_guide/csd/2023": {
+          "type": "Cópia"
+        },
+        "sample_shape_drawing/csd/2023": {
+          "type": "Cópia"
+        },
+        "mini-project_-_robot_faces_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "type": "Cópia"
+        },
+        "animated_scene_planning/csd/2023": {
+          "type": "Cópia"
+        },
+        "interactive_card/csd/2023": {
+          "type": "Cópia"
+        },
+        "interactive_card_-_marked_rubrics/csd/2023": {
+          "type": "Cópia"
+        },
+        "mini-project_guide_-_side_scroller/csd/2023": {
+          "type": "Cópia"
+        },
+        "flyer_game_-_project_guide/csd/2023": {
+          "type": "Cópia"
+        },
+        "planning_your_platform_game/csd/2023": {
+          "type": "Cópia"
+        },
+        "make_your_own_game/csd/2023": {
+          "type": "Cópia"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_7/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_7/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_7/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "reacting_as_your_user_profile_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_2/csd/2023": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_3/csd/2023": {
+          "type": "Cópia"
+        },
+        "reacting_as_your_user_profile_4/csd/2023": {
+          "type": "Cópia"
+        },
+        "user_centered_design_define_prepare_/csd/2023": {
+          "type": "Cópia"
+        },
+        "user_centered_design_try_reflect_/csd/2023": {
+          "type": "Cópia"
+        },
+        "example_project_-_cooking_app_-_convincing_evidence/csd/2023": {
+          "type": "Cópia"
+        },
+        "example_project_-_cooking_app_-_extensive_evidence/csd/2023": {
+          "type": "Cópia"
+        },
+        "example_project_-_language_app_-_convincing_evidence/csd/2023": {
+          "type": "Cópia"
+        },
+        "example_project_-_language_app_-_limited_evidence/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_2/csd/2023": {
+          "type": "Cópia"
+        },
+        "sample_marked_rubrics_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_3/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_3/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_3/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "representing_information_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "representing_information_2/csd/2023": {
+          "type": "Cópia"
+        },
+        "ascii/csd/2023": {
+          "type": "Cópia"
+        },
+        "number_cards_1/csd/2023": {
+          "type": "Manipulativo"
+        },
+        "ascii_to_binary_table/csd/2023": {
+          "name": "ASCII para Tabela Binária",
+          "type": "Referência"
+        },
+        "pet_records/csd/2023": {
+          "type": "Cópia"
+        },
+        "create_a_representation/csd/2023": {
+          "name": "Crie uma Representação",
+          "type": "Cópia"
+        },
+        "create_a_representation_-_student_checklist/csd/2023": {
+          "name": "Crie uma Representação - Lista de Verificação do Aluno"
+        },
+        "create_a_representation_1/csd/2023": {
+          "name": "Crie uma Representação"
+        },
+        "create_a_representation_marked_rubrics/csd/2023": {
+          "type": "Cópia"
+        },
+        "problem_solving_with_data/csd/2023": {
+          "name": "Solução de Problemas a partir de Dados",
+          "type": "Cópia"
+        },
+        "making_decisions_with_data/csd/2023": {
+          "type": "Cópia"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2023": {
+          "name": "Faça uma Recomendação - Lista de Verificação para Estudantes"
+        },
+        "peer_review_exemplar_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "peer_review_exemplar_2/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_4/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_4/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_4/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "_exemplar_physical_designs/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_bird_survey/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_1_-_lights_and_music/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_1_-_city_silhouette/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2023": {
+          "type": "Cópia"
+        },
+        "exemplar_3_-_monster_puppet/csd/2023": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_2/csd/2023": {
+          "type": "Cópia"
+        },
+        "prototype_an_innovation_example_3/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_1/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_1/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_1/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "_exemplar_physical_designs_1/csd/2023": {
+          "type": "Cópia"
+        },
+        "all_resources_8/csd/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards_8/csd/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary_8/csd/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view"
+        },
+        "ai_ethics_research_reflection/csd/2023": {
+          "name": "Reflexões sobre Pesquisa em Ética em IA"
+        },
+        "all_resources/express/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/express/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/express/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/pre-express/2023": {
+          "name": "Todos os Recursos"
+        },
+        "all_standards/pre-express/2023": {
+          "name": "Todos os Padrões"
+        },
+        "all_vocabulary/pre-express/2023": {
+          "name": "Todo o Vocabulário"
+        },
+        "all_resources/how-ai-works/2023": {
+          "name": "Todos os Recursos",
+          "url": "/s/how-ai-works-2023/resources"
+        },
+        "all_standards/how-ai-works/2023": {
+          "name": "Todos os Padrões",
+          "url": "/s/how-ai-works-2023/standards"
+        },
+        "all_vocabulary/how-ai-works/2023": {
+          "name": "Todo o Vocabulário",
+          "url": "/s/how-ai-works-2023/vocab"
         }
       }
     }

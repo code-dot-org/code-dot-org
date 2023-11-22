@@ -164,7 +164,7 @@ fr:
         Unplug1: Introduction à l'informatique
         Unplug10: L'Internet
         Unplug11: Résumé et ouverture
-        Unplug2: Algorithmique
+        Unplug2: La pensée computationnelle
         Unplug3: Programmation sur papier quadrillé
         Unplug4: Algorithmes
         Unplug5: Fonctions
@@ -1003,6 +1003,7 @@ fr:
         csd_gamelab_velocity: Vitesse
         csd_how_teamwork_works: Comment fonctionne le Travail d'Équipe
         csd_ml_ethics_ai: 'Éthique et IA '
+        csd_ml_how_ai_works: Comment fonctionne l'IA
         csd_ml_import_model: Importer un modèle IA
         csd_ml_intro_ai_lab_july2021: Présentation d'AI Lab
         csd_ml_intro_to_ai_lab: Présentation d'AI Lab

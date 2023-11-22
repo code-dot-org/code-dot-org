@@ -3256,6 +3256,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Réfléchissez à comment les ordinateurs peuvent contribuer aux processus créatifs."
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Utilisez l'I.A. pour sélectionner et générer des effets spéciaux adaptés aux emojis choisis afin d'améliorer l'expérience visuelle de la soirée dansante."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Utilisez les concepts de base du codage pour programmer des éléments interactifs qui réagissent aux données de l'utilisateur, telles que les frappes au clavier et les événements chronométrés."
         }
       }
     }

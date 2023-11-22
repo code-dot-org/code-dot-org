@@ -1522,6 +1522,7 @@
   header_report_abuse: "Misbruik melden"
   header_legal: "Privacy & juridisch"
   header_legal_privacy: "Privacybeleid"
+  header_legal_cookie_notice: "Cookiebeleid"
   header_legal_tos: "Gebruiksvoorwaarden"
   header_tutorials: "Tutorials"
   header_screen_reader_hamburger: "Menu"

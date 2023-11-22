@@ -14306,7 +14306,7 @@
         "csc_ecosystems_ocean_coral_2023": {
           "BlockInside": "ضع المربع البرمجي لتغيير الزي داخل المربع البرمجي **إذا كان هناك الكثير من الطحالب**.",
           "Costume": "إذا كان هناك الكثير من الطحالب، فسوف يتضرر المرجان. \n\nاستخدم مربع تغيير الملابس بعد ذلك.",
-          "TooMuch": "قم بتوصيل المربع البرمجي \\*\\* اذا كان هناك الكثير من الطحالب\\*\\* بحدث **عندما تلمس الأسماك الطحالب**."
+          "TooMuch": "قم بتوصيل المربع البرمجي **اذا كان هناك الكثير من الطحالب** بحدث **عندما تلمس الأسماك الطحالب**."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
           "Below": "استمر في ربط المربعات البرمجية في الجزء السفلي من مساحة العمل حيث توقفت في المستوى الأخير!",
@@ -14396,6 +14396,35 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "استخدم القائمة المنسدلة للاختيار من بين ألوان وتأثيرات مختلفة.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "قم بتوصيل القطعة البرمجية \"الذكاء الاصطناعي ينشئ التأثير\" بحدث \"في القياسين\" في مساحة العمل الخاصة بك على النحو التالي: \n\n[blockly block][0]"
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **هل لا تزال تواجه مشكلة؟** شاهد فيديو الأحداث مرة أخرى لترى كيف تعمل.",
+          "hint2": "💡فيما يلي مثال لما يبدو عليه الرمز الخاص بك. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 خصص التأثير بالنقر فوق الرموز التعبيرية على <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> القطعة البرمجية في مكان العمل. ",
+          "Hint2": "💡 **هل لا تزال تواجه مشكلة؟** شاهد الفيديو لترى كيف يمكنك تخصيص التأثير.",
+          "HintEdit": "💡 إذا كنت ترغب في استخدام الكود الذي يكتبه الذكاء الاصطناعي، قم بالتبديل لإظهار الكود ثم انقر فوق \"استخدام الرمز\". ستحل القطع البرمجية محل القطعة البرمجية \"الذكاء الاصطناعي ينشئ التأثير\" في مساحة العمل الخاصة بك. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "  يجب أن يكون الراقص هو نفسه في القطع البرمجية ويكون التسلسل (الترتيب) مهمًا.",
+          "validation": "💡 أضف هذه القطع البرمجية إلى <code style=\"color:white; background-color:#FFBD46\">الإعداد</code> لإنشاء الراقص الأول الخاص بك:\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"next\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "قم بتوصيل [blockly block][0] بـ <code style=\"color:white; background-color:#FFBD46\">الإعداد</code>. ثم انقر عليه للبدء.",
+          "Hint3": "💡 إذا كنت ترغب في تجديد التأثير أو تغيير الرموز التعبيرية، يمكنك النقر فوق القطعة البرمجية \"الذكاء الاصطناعي ينشئ التأثير\" مرة أخرى."
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 استمع إلى الأغنية وفكر في نوع الموسيقى. ",
+          "Hint2": "قم بتوصيل [blockly block][0] بـ <code style=\"color:white; background-color:#FFBD46\">الإعداد</code>. ثم انقر عليه للبدء.",
+          "Hint3": "💡 إذا كنت ترغب في تجديد التأثير أو تغيير الرموز التعبيرية، يمكنك النقر فوق القطعة البرمجية \"الذكاء الاصطناعي ينشئ التأثير\" مرة أخرى."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 لن يستجيب الراقصون لإشاراتك ما لم تُشغل الرقصة. ",
+          "hint2": "💡 بعد الضغط على <code style=\"color:white; background-color:#FFBD46\">تشغيل</code>، قم بتوجيه الراقصين بالضغط على السهم <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> لليمين أو لليسار."
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "انقر واسحب كتلة «إنشاء رمز جديد» وقم بتوصيلها ضمن «عند التشغيل». \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

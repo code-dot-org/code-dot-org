@@ -1557,6 +1557,12 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': qattiq
+            '"liquid"': suyuq
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:

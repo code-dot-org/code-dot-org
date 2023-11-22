@@ -1098,6 +1098,15 @@ sk:
         text: "{SPRITE}hovorí{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plyn
+            '"liquid"': kvapalina
+            '"solid"': plný
+        text: |-
+          ak {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
       KatiesBlocks_spriteBirdSay:

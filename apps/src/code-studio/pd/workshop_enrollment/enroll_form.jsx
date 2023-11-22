@@ -446,7 +446,6 @@ export default class EnrollForm extends React.Component {
             required={true}
             onChange={this.handleChange}
             defaultValue={this.props.email}
-            readOnly={!!this.props.email}
             title={
               this.props.email ? 'Email can be changed in account settings' : ''
             }

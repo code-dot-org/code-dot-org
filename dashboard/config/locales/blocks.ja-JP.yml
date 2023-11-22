@@ -33,6 +33,8 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}は{VALUE}エフェクトを生成"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -614,6 +616,7 @@ ja:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': 花咲く花びら
             '"circles"': トンネル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
@@ -621,6 +624,7 @@ ja:
             '"disco_ball"': ミラーボール
             '"fireworks"': 花火
             '"flowers"': フラワー
+            '"frosted_grid"': つや消しグリッド
             '"galaxy"': 宇宙
             '"growing_stars"': 成長する星
             '"kaleidoscope"': 万華鏡
@@ -642,17 +646,27 @@ ja:
             '"swirl"': ヒプノ
             '"text"': 曲名
           PALETTE:
+            '"autumn"': 秋
             '"cool"': 青
             '"default"': 光
             '"electronic"': エレクトロニクス
+            '"grayscale"': グレースケール
             '"iceCream"': アイスクリーム
             '"neon"': ネオン
             '"ocean"': 海
             '"rainbow"': 虹
             '"rave"': 白黒
+            '"roses"': バラ
+            '"sky"': 空
+            '"spring"': 春
+            '"summer"': 夏
+            '"sunrise"': 日の出
+            '"sunset"': 日没
             '"tropical"': 熱帯
+            '"twinkling"': きらきら
             '"vintage"': ヴィンテージ
             '"warm"': 赤
+            '"winter"': 冬
         text: |-
           "バックグラウンド効果を設定します
           {PALETTE} {EFFECT}"
@@ -1094,6 +1108,15 @@ ja:
         text: "{SPRITE} が {TEXT1} と言う"
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': ガス
+            '"liquid"': 液体
+            '"solid"': 単色
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:

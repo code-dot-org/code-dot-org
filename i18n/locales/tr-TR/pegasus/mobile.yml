@@ -1517,6 +1517,7 @@
   header_report_abuse: "Hata Rapor Et"
   header_legal: "Gizlilik & Hukuk"
   header_legal_privacy: "Gizlilik Politikası"
+  header_legal_cookie_notice: "Çerez Bildirimi"
   header_legal_tos: "Hizmet Şartları"
   header_tutorials: "Eğitmler"
   header_screen_reader_hamburger: "Menü\n"
