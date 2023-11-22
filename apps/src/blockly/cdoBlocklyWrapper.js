@@ -1,5 +1,8 @@
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
-import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
@@ -351,6 +354,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // CDO Blockly does not have a concept of a hidden definition workspace,
   // so we return undefined here.
   blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
     return undefined;
   };
 

@@ -135,6 +135,10 @@ export default class FunctionEditor {
     return this.editorWorkspace.id;
   }
 
+  getWorkspace() {
+    return this.editorWorkspace;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
@@ -227,7 +231,7 @@ export default class FunctionEditor {
    * @returns a legal name for a new function definition.
    */
   getNameForNewFunction() {
-    let name = 'do something';
+    let name = msg.doSomething();
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
     while (
