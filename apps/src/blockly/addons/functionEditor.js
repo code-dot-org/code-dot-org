@@ -135,6 +135,10 @@ export default class FunctionEditor {
     return this.editorWorkspace.id;
   }
 
+  getWorkspace() {
+    return this.editorWorkspace;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
