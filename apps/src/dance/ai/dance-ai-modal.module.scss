@@ -47,6 +47,12 @@ $ai-modal-border-width: 8px;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
 
+  &Smaller {
+    top: 10px;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
+  }
+
   .headerArea {
     width: calc(100% - 2 * $ai-modal-border-width);
     height: 50px;

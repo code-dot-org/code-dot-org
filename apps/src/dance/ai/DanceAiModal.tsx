@@ -670,9 +670,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       ? i18n.danceAiModalExplanation2()
       : undefined;
 
+  // We have seen on Android devices that window.innerHeight will always be the
+  // same whether in landscape or portrait orientation.  Given that we tell
+  // users to rotate to landscape, adjust to match what we see on iOS devices.
+  const windowHeight = Math.min(window.innerWidth, window.innerHeight);
+  const useSmallerDialog = windowHeight < 580;
+
   return (
     <AccessibleDialog
-      className={moduleStyles.dialog}
+      className={classNames(
+        moduleStyles.dialog,
+        useSmallerDialog && moduleStyles.dialogSmaller
+      )}
       onClose={onClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
