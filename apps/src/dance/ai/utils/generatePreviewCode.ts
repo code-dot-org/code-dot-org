@@ -1,5 +1,5 @@
 import {BlockSvg, Workspace} from 'blockly';
-import {GeneratedEffect} from '@cdo/apps/dance/ai/types';
+import {GeneratedEffect} from '../ai-types';
 
 import {generateAiEffectBlocksFromResult} from './generateAiEffectBlocksFromResult';
 

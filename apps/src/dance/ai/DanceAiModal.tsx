@@ -22,7 +22,7 @@ import {
   FieldKey,
   GeneratedEffect,
   MinMax,
-} from '@cdo/apps/dance/ai/types';
+} from './ai-types';
 import {
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,

@@ -1,5 +1,5 @@
 import {FieldDropdown} from 'blockly';
-import {FieldKey} from '@cdo/apps/dance/ai/types';
+import {FieldKey} from '../ai-types';
 
 type ValidateAndSetFieldValueLogger = (o: {
   message: string;
