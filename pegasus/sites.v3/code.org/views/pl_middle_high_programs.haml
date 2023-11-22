@@ -28,6 +28,10 @@
     hoc_s(:pl_middle_high_programs_csa_hours)
   ]
 
+  aria_label_primary = [hoc_s(:aria_label_call_to_action_pl_apply_csd), hoc_s(:aria_label_call_to_action_pl_apply_csp), hoc_s(:aria_label_call_to_action_pl_apply_csa)]
+
+  aria_label_secondary = [hoc_s(:aria_label_call_to_action_learn_more_csd), hoc_s(:aria_label_call_to_action_learn_more_csp), hoc_s(:aria_label_call_to_action_learn_more_csa)]
+
   button_url_secondary = ["/csd", "/csp", "/csa"]
 
 .action-block__wrapper.action-block__wrapper--three-col{style: "margin-top: 2em"}
@@ -53,7 +57,7 @@
               =hoc_s(:pl_middle_high_programs_teach_ap_course)
 
       .content-footer
-        %a.link-button{href: "/educate/professional-learning/program-information"}
+        %a.link-button{href: "/educate/professional-learning/program-information", aria:{label: aria_label_primary[index]}}
           =hoc_s(:call_to_action_apply_now)
-        %a.link-button.secondary{href: button_url_secondary[index]}
+        %a.link-button.secondary{href: button_url_secondary[index], aria:{label: aria_label_secondary[index]}}
           =hoc_s(:call_to_action_learn_more)

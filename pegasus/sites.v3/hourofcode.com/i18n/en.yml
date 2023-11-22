@@ -366,6 +366,7 @@
   call_to_action_explore_self_paced_learning: "Explore self-paced learning"
   call_to_action_explore_k_5_workshops: "Explore K-5 workshops"
   call_to_action_for_intl_educators: "For international educators"
+  call_to_action_learn_more_program_region: "Learn more about the program in your region"
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
 
@@ -450,6 +451,12 @@
   aria_label_call_to_action_minecraft_2020: "Get started with Minecraft AI for Earth"
   aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
   aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
+  aria_label_call_to_action_pl_apply_csd: "Apply now for Computer Science Discoveries professional learning"
+  aria_label_call_to_action_pl_apply_csp: "Apply now for Computer Science Principles professional learning"
+  aria_label_call_to_action_pl_apply_csa: "Apply now for AP® Computer Science A professional learning"
+  aria_label_call_to_action_learn_more_csd: "Learn more about Computer Science Discoveries"
+  aria_label_call_to_action_learn_more_csp: "Learn more about Computer Science Principles"
+  aria_label_call_to_action_learn_more_csa: "Learn more about AP® Computer Science A"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -687,7 +694,7 @@
   heading_apply: "Apply"
   heading_acceptance: "Acceptance"
   heading_enroll: "Enroll"
-  heading_have_questions: " Have questions?"
+  heading_have_questions: "Have questions?"
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
@@ -1011,6 +1018,10 @@
   pl_middle_high_process_enroll_desc: "Sign up for the summer workshop in your region and get ready to start the yearlong program!"
   pl_middle_high_get_notified_heading: "Get notified when Professional Learning registration opens"
   pl_middle_high_get_notified_desc: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
+  pl_middle_high_cost_heading: "What does the program cost?"
+  pl_middle_high_cost_subhead: "The cost of the program varies by region."
+  pl_middle_high_cost_desc: "You may be eligible for a scholarship to cover the cost of your program."
+  pl_middle_high_additional_programs_desc: "In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers."
   pl_middle_high_additional_programs_heading: "Additional programs to meet diverse teacher needs"
   pl_middle_high_additional_programs_desc: "In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers."
 
