@@ -4,7 +4,7 @@ require_relative '../i18n_script_utils'
 
 module I18n
   module Utils
-    module PegasusMarkdown
+    class PegasusMarkdown
       def self.write_to(file_path, header, markdown)
         FileUtils.mkdir_p(File.dirname(file_path))
 
