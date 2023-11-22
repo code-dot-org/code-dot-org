@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
 import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -351,7 +352,50 @@ const customInputTypes = {
       )}'}`;
     },
   },
-  behaviorPicker: Blockly.customBlocks.behaviorPicker(),
+  behaviorPicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const dropdownField = new Blockly.FieldDropdown(
+        Blockly.customBlocks.getAllBehaviorOptions
+      );
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(dropdownField, inputConfig.name);
+      Blockly.customBlocks.addBehaviorPickerEditButton.call(
+        this,
+        block,
+        inputConfig,
+        currentInputRow,
+        dropdownField
+      );
+    },
+    generateCode(block, arg) {
+      const fieldValue = block.getFieldValue(arg.name);
+      const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
+      // variableDB_ was deprecated in Google Blockly but exists up to v9 and in CDO Blockly.
+      // TODO: After Sprite Lab has migrated to mainline, and before updating to v10,
+      // use nameDB_ exclusively.
+      const variableNameDB =
+        Blockly.JavaScript.nameDB_ || Blockly.JavaScript.variableDB_;
+      const behaviorId = variableNameDB.getName(fieldValue, 'PROCEDURE');
+      if (invalidBehavior) {
+        console.warn('No behaviors available');
+        return undefined;
+      } else {
+        return `new Behavior(${behaviorId}, [])`;
+      }
+    },
+    openEditor(e) {
+      e.stopPropagation();
+      if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
+        Blockly.behaviorEditor.openWithNewFunction();
+      } else {
+        Blockly.behaviorEditor.openEditorForFunction(
+          this,
+          this.getFieldValue('BEHAVIOR')
+        );
+      }
+    },
+  },
   limitedColourPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const options = {
