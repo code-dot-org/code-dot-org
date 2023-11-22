@@ -24,8 +24,8 @@ theme: responsive_full_width
         %li=hoc_s(:pl_middle_high_top_list_01)
         %li=hoc_s(:pl_middle_high_top_list_02)
         %li=hoc_s(:pl_middle_high_top_list_03)
-      %a.link-button{href: "/educate/professional-learning/program-information"}
-        =hoc_s(:call_to_action_apply_now)
+      %a.link-button{href: off_season_version ? "#subscribe-form" : "/educate/professional-learning/program-information"}
+        =hoc_s(off_season_version ? :call_to_action_get_notified_when_applications_open : :call_to_action_apply_now)
     .video-wrapper.col-50
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
@@ -92,11 +92,11 @@ theme: responsive_full_width
         %h4=hoc_s(:heading_enroll)
         %p=hoc_s(:pl_middle_high_process_enroll_desc)
     %div.centered
-      %a.link-button{href: "/educate/professional-learning/program-information"}
-        =hoc_s(:call_to_action_apply_now)
+      %a.link-button{href: off_season_version ? "#subscribe-form" : "/educate/professional-learning/program-information"}
+        =hoc_s(off_season_version ? :call_to_action_get_notified_when_applications_open : :call_to_action_apply_now)
 
 - if off_season_version
-  %section
+  %section#subscribe-form.no-padding-bottom
     .wrapper
       = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title_pl), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_pl), form_height: "500px", form_src: "http://go.pardot.com/l/153401/2023-10-24/pqs3r1"
 - else
