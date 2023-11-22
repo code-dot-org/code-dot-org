@@ -7,7 +7,8 @@ import {generateAiEffectBlocks} from './generateAiEffectBlocks';
 
 const validateAndSetFieldValue =
   getValidateAndSetFieldValueWithInvalidValueLogger(
-    Lab2MetricsReporter.logWarning.bind(Lab2MetricsReporter)
+    ({message, value, logValues}) =>
+      Lab2MetricsReporter.logWarning({message, value, field: logValues})
   );
 
 /**
