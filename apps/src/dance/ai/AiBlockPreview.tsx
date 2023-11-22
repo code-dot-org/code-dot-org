@@ -1,7 +1,7 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
-import {generateBlocksFromResult} from './utils';
+import {generateAiEffectBlocksFromResult} from './utils';
 import {GeneratedEffect} from '@cdo/apps/dance/ai/types';
 
 interface AiBlockPreviewProps {
@@ -36,7 +36,10 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     if (!blockPreviewContainerRef.current || !workspaceRef.current) {
       return;
     }
-    const blocksSvg = generateBlocksFromResult(workspaceRef.current, results);
+    const blocksSvg = generateAiEffectBlocksFromResult(
+      workspaceRef.current,
+      results
+    );
     blocksSvg.forEach((blockSvg: BlockSvg) => {
       blockSvg.initSvg();
       blockSvg.render();

@@ -24,10 +24,10 @@ import {
   MinMax,
 } from '@cdo/apps/dance/ai/types';
 import {
-  generateBlocks,
-  generateBlocksFromResult,
+  generateAiEffectBlocks,
+  generateAiEffectBlocksFromResult,
   generatePreviewCode,
-  getImageUrl,
+  getEmojiImageUrl,
   getLabelMap,
   getRangeArray,
   lerp,
@@ -246,7 +246,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const getLabels = () => {
     const tempWorkspace = new Workspace();
-    const blocksSvg = generateBlocks(tempWorkspace);
+    const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
       blocksSvg[0].getField('EFFECT') as FieldDropdown
@@ -453,7 +453,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       return;
     }
 
-    const blocksSvg = generateBlocksFromResult(
+    const blocksSvg = generateAiEffectBlocksFromResult(
       Blockly.getMainWorkspace(),
       generatedEffects.current.goodEffect
     );
@@ -1013,7 +1013,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
       key={item.id}
       onClick={onClick}
       style={{
-        backgroundImage: `url(${getImageUrl(item.id)})`,
+        backgroundImage: `url(${getEmojiImageUrl(item.id)})`,
       }}
       className={classNames(
         moduleStyles.emojiIcon,

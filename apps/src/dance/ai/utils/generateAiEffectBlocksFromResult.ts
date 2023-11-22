@@ -2,17 +2,17 @@ import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
 import {FieldKey, GeneratedEffect} from '@cdo/apps/dance/ai/types';
 
 import {validateAndSetFieldValue} from './validateAndSetFieldValue';
-import {generateBlocks} from './generateBlocks';
+import {generateAiEffectBlocks} from './generateAiEffectBlocks';
 
 /**
  * Generates blocks from the AI result in a given workspace,
  * and attaches them to each other.
  */
-export const generateBlocksFromResult = (
+export const generateAiEffectBlocksFromResult = (
   workspace: Workspace,
   effect: GeneratedEffect
 ): [BlockSvg, BlockSvg] => {
-  const blocksSvg = generateBlocks(workspace);
+  const blocksSvg = generateAiEffectBlocks(workspace);
 
   // Foreground block.
   validateAndSetFieldValue(

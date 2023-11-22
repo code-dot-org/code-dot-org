@@ -1,7 +1,7 @@
 import {BlockSvg, Workspace} from 'blockly';
 import {GeneratedEffect} from '@cdo/apps/dance/ai/types';
 
-import {generateBlocksFromResult} from './generateBlocksFromResult';
+import {generateAiEffectBlocksFromResult} from './generateAiEffectBlocksFromResult';
 
 /**
  * Generate code that can be executed to preview the output of the AI-generated blocks.
@@ -10,7 +10,7 @@ export const generatePreviewCode = (
   workspace: Workspace,
   effect: GeneratedEffect
 ): string => {
-  const blocks = generateBlocksFromResult(workspace, effect);
+  const blocks = generateAiEffectBlocksFromResult(workspace, effect);
   // Create a temporary setup block
   const setup: BlockSvg = workspace.newBlock('Dancelab_whenSetup') as BlockSvg;
 
