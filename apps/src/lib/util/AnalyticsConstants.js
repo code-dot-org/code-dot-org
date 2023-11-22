@@ -48,6 +48,7 @@ const EVENTS = {
   AFE_INELIGIBLE: 'AFE Ineligible',
   AFE_CONTINUE: 'AFE Continue',
   AFE_SUBMIT: 'AFE Submit',
+  AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
   COMPLETED_EVENT: 'Section Setup Completed',
