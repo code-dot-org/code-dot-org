@@ -33,7 +33,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: `with: ${msg.thisSprite()}`,
+        text: msg.withThisSprite(),
       },
       {
         type: 'field_label',
@@ -65,6 +65,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'behaviors_block_frame',
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
+      'behaviors_name_validator',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -139,6 +140,25 @@ GoogleBlockly.Extensions.register('behaviors_block_frame', function () {
       }
     });
   }
+});
+
+// This extension is used to update the block's behaviorId when a user-created behavior is renamed.
+// TODO: Add logic to update the dropdown options on behaviorPicker blocks too.
+GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
+  const nameField = this.getField('NAME');
+  nameField.setValidator(function (newValue) {
+    // The default validator provided by mainline Blockly. Strips whitespace.
+    const rename = Blockly.Procedures.rename.bind(this);
+    const legalName = rename(newValue);
+    if (
+      legalName &&
+      this.sourceBlock_.userCreated &&
+      this.sourceBlock_.behaviorId !== legalName
+    ) {
+      this.sourceBlock_.behaviorId = legalName;
+    }
+    return legalName;
+  });
 });
 
 GoogleBlockly.Extensions.registerMutator(

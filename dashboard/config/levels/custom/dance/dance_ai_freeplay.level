@@ -41,7 +41,7 @@
     "name_suffix": "_draft3",
     "skip_autosave": true,
     "default_song": "cupid_fiftyfifty",
-    "long_instructions": "###**Nice work!** \r\n- Now use A.I. and the skills you just learned to code your dance party. Get creative!\r\n",
+    "long_instructions": "###**Nice work!** \r\n- Now use the skills you just learned and A.I. to keep the dance party going. Get creative!\r\n",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -53,7 +53,7 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "short_instructions": "**Get creative!**\r\nNow use A.I. and the skills you just learned to code your dance party. ",
+    "short_instructions": "**Get creative!**\r\nNow use the skills you just learned and A.I. to keep the dance party going. ",
     "preload_asset_list": null
   },
   "published": true,

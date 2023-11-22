@@ -24,10 +24,6 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
-If you get the error `session not created: Chrome version must be between 71 and 75`, you may need a newer version of `chromedriver`. Download a version of chromedriver that matches your current version of Chrome [here]([url](https://chromedriver.chromium.org/downloads)), unzip it, and reference the file path of your new version of chromedriver [here](https://github.com/code-dot-org/code-dot-org/blob/d7b3ba84adf30ef2844c538e7206ca4bd3565ea9/dashboard/test/ui/utils/selenium_browser.rb#L9) as follows:
-
-`Selenium::WebDriver::Chrome.driver_path = [path to your chromedriver]`
-
 ### With remote browsers: Sauce Labs
 
 Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.

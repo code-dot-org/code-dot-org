@@ -1270,6 +1270,7 @@ it-IT:
   header_incubator: Incubatrice
   header_learn: Impara
   header_legal: Privacy & Legale
+  header_legal_cookie_notice: Informativa sui cookie
   header_legal_privacy: Informativa sulla privacy
   header_legal_tos: Termini di servizio
   header_my_dashboard: Controllo
@@ -1767,8 +1768,8 @@ it-IT:
   hourofcode_shortdescription: Impara a programmare con Mark Zuckerberg e Angry Birds!
   how_ai_works: Come funziona l'IA
   how_ai_works_tile_description: Scopri come funziona l'IA e perché è importante con
-    questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e un cast diversificato
-    di esperti.
+    questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e con un eterogeneo
+    gruppo di esperti.
   how_to_teach_hoc: Come insegnare un ora di codice
   i_agree: Accetto
   i_am_a: Io sono un

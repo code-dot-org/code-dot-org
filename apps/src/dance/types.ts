@@ -1,4 +1,5 @@
 import {LevelProperties, ProjectSources} from '../lab2/types';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 export type SongData = {
   [key: string]: {
@@ -60,3 +61,9 @@ export type MinMax = {
   minIndividualScore: number;
   maxTotalScore: number;
 };
+
+export interface AiFieldValue extends GeneratedEffect {
+  inputs: string[];
+}
+
+export type DanceAiSound = (typeof DANCE_AI_SOUNDS)[number];

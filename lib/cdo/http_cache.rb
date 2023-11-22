@@ -65,8 +65,8 @@ class HttpCache
   # A list of script levels that should not be cached, even though they are
   # in a cacheable script
   UNCACHED_UNIT_LEVEL_PATHS = [
-    '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
+    '/s/dance-ai-2023/lessons/1/levels/10',
     '/s/poem-art-2021/lessons/1/levels/9',
     '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
     '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
@@ -91,8 +91,8 @@ class HttpCache
     hero
     sports
     basketball
-    dance
     dance-2019
+    dance-ai-2023
     oceans
     poem-art-2021
     hello-world-food-2021

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_07_182805) do
+ActiveRecord::Schema.define(version: 2023_11_14_211036) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -837,8 +837,10 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.string "resource_link_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
     t.index ["context_id", "lti_integration_id"], name: "index_on_context_id_and_lti_integration_id"
     t.index ["course_id", "lti_integration_id"], name: "index_on_course_id_and_lti_integration_id"
+    t.index ["deleted_at"], name: "index_lti_courses_on_deleted_at"
     t.index ["lti_deployment_id"], name: "fk_rails_19886eb632"
     t.index ["lti_integration_id"], name: "index_lti_courses_on_lti_integration_id"
   end
@@ -875,6 +877,8 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.string "lms_section_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_lti_sections_on_deleted_at"
     t.index ["lti_course_id"], name: "index_lti_sections_on_lti_course_id"
     t.index ["section_id"], name: "index_lti_sections_on_section_id"
   end
@@ -885,6 +889,8 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "deleted_at"
+    t.index ["deleted_at"], name: "index_lti_user_identities_on_deleted_at"
     t.index ["lti_integration_id"], name: "index_lti_user_identities_on_lti_integration_id"
     t.index ["subject"], name: "index_lti_user_identities_on_subject"
     t.index ["user_id"], name: "index_lti_user_identities_on_user_id"
@@ -1505,12 +1511,13 @@ ActiveRecord::Schema.define(version: 2023_11_07_182805) do
   end
 
   create_table "potential_teachers", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.integer "source_course_offering_id"
+    t.string "name", null: false
+    t.string "email", null: false
+    t.integer "script_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "receives_marketing", default: false, null: false
+    t.index ["script_id"], name: "index_potential_teachers_on_script_id"
   end
 
   create_table "programming_classes", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|

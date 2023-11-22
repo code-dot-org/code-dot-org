@@ -16,15 +16,6 @@
             },
             {
               "type": "rating",
-              "name": "csdpilot_discuss_with_peers_m6",
-              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784')",
-              "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
-              "rateMax": 7,
-              "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
-            },
-            {
-              "type": "rating",
               "name": "better_prepared_unit5csd_m6",
               "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "I feel prepared to teach Unit 5 after attending this workshop.",
@@ -34,9 +25,45 @@
             },
             {
               "type": "rating",
+              "name": "better_prepared_unit8csp_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to teach Unit 8 (I feel prepared to teach concepts such as privacy and security, and global impact).",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "better_prepared_unit8csp_project_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I feel prepared to guide students through the project in Unit 8.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csp_ap_exam_multiplechoice_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I know how and when to prepare students for the multiple-choice section of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
               "name": "opportunities_discuss_peers_m6",
               "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
               "title": "I had opportunities to discuss teaching strategies with peers during this module.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "csdpilot_discuss_with_peers_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries' and ({workshop_id} = '12272' or {workshop_id} = '12784')",
+              "title": "I had opportunities to discuss CS Discoveries course implementation roadblocks and successes with peers during this module.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -61,39 +88,70 @@
             },
             {
               "type": "rating",
-              "name": "assess_cpt_m6",
+              "name": "barriers_m6",
               "visibleIf": "{workshop_course}='CS Principles'",
-              "title": "I am confident I can explain how students will be assessed on content and skills on the Create Performance Task of the AP exam.",
+              "title": "I have identified the barriers keeping students from feeling included in CS education at my school.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "strategies_ensure_inclusion_m6",
+              "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is welcoming to all students.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "plan_develop_m6",
+              "visibleIf": "{workshop_course}='CS Principles'",
+              "title": "I am committed to implementing a plan to differentiate teaching during unit 8.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree"
+            },
+            {
+              "type": "rating",
+              "name": "assess_cpt_m6",
+              "title": "I am confident I can explain how students will be assessed on content and skills on the Create Performance Task of the AP exam.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/21/2023 per PL team - NZM."
             },
             {
               "type": "rating",
               "name": "make_lessons_cpt_m6",
-              "visibleIf": "{workshop_course}='CS Principles'",
               "title": "After attending this workshop, I have strategies to lead my students through the Make lessons in Unit 7 to adequately prepare them for the Create Performance Task.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/21/2023 per PL team - NZM."
             },
             {
               "type": "rating",
               "name": "troublepoints_cpt_m6",
-              "visibleIf": "{workshop_course}='CS Principles'",
               "title": "Through my participation in this workshop, I feel prepared to support my students for the AP Exam’s Create Performance Task by identifying potential trouble points in their project ideas.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/21/2023 per PL team - NZM."
             },
             {
               "type": "rating",
               "name": "mvp_cpt_m6",
-              "visibleIf": "{workshop_course}='CS Principles'",
               "title": "I am confident I can help students keep their projects within the scope of the Create Performance Task while defining project ideas that fit the criteria of a minimum viable product.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Principles',11/21/2023 per PL team - NZM."
             },
             {
               "type": "rating",
