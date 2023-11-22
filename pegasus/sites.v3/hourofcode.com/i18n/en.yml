@@ -369,6 +369,8 @@
   call_to_action_learn_more_program_region: "Learn more about the program in your region"
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
+  call_to_action_get_notified_when_applications_open: "Get notified when applications open"
+  call_to_action_notify_me_when_i_can_apply: "Notify me when I can apply"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
