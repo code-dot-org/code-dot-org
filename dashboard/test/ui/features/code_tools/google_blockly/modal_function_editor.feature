@@ -25,6 +25,7 @@ Scenario: Can create a Function
   And the open flyout has 2 blocks
 
 Scenario: Can edit a Function
+  # Click the "edit" button on the block
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
