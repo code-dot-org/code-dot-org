@@ -80,7 +80,7 @@
       %br
       %button{type: 'button', onclick: 'Blockly.mainBlockSpace.clear()', class: 'btn btn-default btn-sm'}
         Clear workspace
-      - if @level.uses_google_blockly? || (params[:blocklyVersion] == 'google')
+      - if @level.uses_google_blockly? || (params[:blocklyVersion] == 'google') || (Experiment.enabled?(experiment_name: 'google_blockly', user: current_user))
         %button{type: 'button', onclick: 'Blockly.getMainWorkspace().undo(false)', class: 'btn btn-default btn-sm'}
           Undo
       %hr
