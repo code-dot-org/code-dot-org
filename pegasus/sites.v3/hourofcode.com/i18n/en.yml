@@ -369,8 +369,6 @@
   call_to_action_learn_more_program_region: "Learn more about the program in your region"
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
-  call_to_action_get_notified_when_applications_open: "Get notified when applications open"
-  call_to_action_notify_me_when_i_can_apply: "Notify me when I can apply"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -739,7 +737,7 @@
   pl_elementary_workshops_heading: "Elementary Workshops"
   pl_elementary_workshops_desc: "Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops."
   pl_outside_us_heading: "Outside the United States"
-  pl_outside_us_desc: "If you are an international teacher interested in professional learning. Learn more about what is offered in your area."
+  pl_outside_us_desc: "If you're an international teacher interested in professional learning, learn more about what's offered in your area."
   pl_regional_partner_desc: "Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!"
 
   no_devices_section_subhead: "Go ahead, cut the cord (for a while)!"
@@ -1020,8 +1018,6 @@
   pl_middle_high_process_apply_desc: "Fill out an application with information about you, your school, and the course you're teaching."
   pl_middle_high_process_acceptance_desc: "If accepted, you will be notified of your acceptance by your Regional Partner after applying."
   pl_middle_high_process_enroll_desc: "Sign up for the summer workshop in your region and get ready to start the yearlong program!"
-  pl_middle_high_get_notified_heading: "Get notified when Professional Learning registration opens"
-  pl_middle_high_get_notified_desc: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
   pl_middle_high_cost_heading: "What does the program cost?"
   pl_middle_high_cost_subhead: "The cost of the program varies by region."
   pl_middle_high_cost_desc: "You may be eligible for a scholarship to cover the cost of your program."
