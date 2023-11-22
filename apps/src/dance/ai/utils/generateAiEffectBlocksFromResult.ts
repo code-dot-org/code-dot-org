@@ -1,8 +1,14 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
 import {FieldKey, GeneratedEffect} from '@cdo/apps/dance/ai/types';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
-import {validateAndSetFieldValue} from './validateAndSetFieldValue';
+import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
 import {generateAiEffectBlocks} from './generateAiEffectBlocks';
+
+const validateAndSetFieldValue =
+  getValidateAndSetFieldValueWithInvalidValueLogger(
+    Lab2MetricsReporter.logWarning.bind(Lab2MetricsReporter)
+  );
 
 /**
  * Generates blocks from the AI result in a given workspace,
