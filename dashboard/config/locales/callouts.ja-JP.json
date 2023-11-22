@@ -2538,6 +2538,26 @@
           "New Artist Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
           "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ このブロックを使用する。",
+          "dance_callout_02": "ここにAI生成エフェクトブロックを追加する。"
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ このブロックを使用する。",
+          "dance_callout_02": "ダンスの動きを加える。"
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "ここをクリック。"
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ ここから始めよう。"
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ このブロックを使用する。"
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ このブロックを使用する。"
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。",
           "hello_world_say": "このブロックを使ってスプライトに何か言わせます。"

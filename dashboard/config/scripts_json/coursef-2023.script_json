@@ -6,14 +6,14 @@
     "properties": {
       "announcements": [
         {
-          "key": "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1",
-          "notice": "Extension Lessons with the micro:bit",
-          "details": "Interested in introducing your students to physical computing? Check out our new extension lessons from micro:bit to continue students’ learning.",
-          "link": "https://code.org/maker/csf-microbit",
+          "key": "9797909d-7ee9-436a-9c18-d58b3e7f1e0b",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn more"
+          "buttonText": "Get free resources"
         }
       ],
       "curriculum_umbrella": "CSF",
@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-11-14 15:48:03 UTC",
+    "serialized_at": "2023-11-20 21:01:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

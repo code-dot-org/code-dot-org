@@ -704,6 +704,7 @@ th:
         star_quilts_intro_to_artist: 'ผ้าห่มดาว: แนะนำศิลปิน'
         upload_sprites_backgrounds: การอัปโหลดสไปรท์และพื้นหลังแบบกำหนดเอง
         what-is-creativity: ความคิดสร้างสรรค์คืออะไร
+        csd_ml_how_ai_works: AI ทำงานอย่างไร
     callout:
       text:
         drag_blocks: ลากบล็อก “ย้าย” และสแนปไว้ด้านล่างบล็อกอื่น

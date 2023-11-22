@@ -1775,6 +1775,12 @@ ru:
         text: y координата {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': твердый
+            '"liquid"': жидкий
+            '"gas"': газ
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

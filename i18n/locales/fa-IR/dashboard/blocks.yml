@@ -1733,6 +1733,12 @@ fa:
         text: مختصات y مربوط به {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} آرام به {LOCATION} می‌رود"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': جامد
+            '"liquid"': مایع
+            '"gas"': گاز
       KatiesBlocks_tumbling:
         text: جست و خیز کردن
       Mikelab_addBehaviorSimple:

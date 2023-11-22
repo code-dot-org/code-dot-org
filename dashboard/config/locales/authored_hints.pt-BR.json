@@ -14572,6 +14572,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Use o menu suspenso para escolher entre diferentes cores e efeitos.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "Conecte um bloco 'I.A. gera efeito' ao evento 'a 2 medições' na sua área de trabalho, assim: \n\n[bloco blockly][0]",
+          "hint2": "Clique no bloco [bloco blockly][0] para criar um novo efeito. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **Ainda está com problemas?** Assista ao vídeo de eventos novamente para aprender como eles funcionam. ",
+          "hint2": "💡 Veja aqui um exemplo de como seria o seu código   . <xml> <xml xmlns=\"https://developers.google.com/blockly/xml\"> \n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\"> \n    <field name=\"KEY\">\"para cima\"</field> \n    <next> \n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\"> \n        <field name=\"GROUP\">\"URSO\"</field> \n        <field name=\"MOVE\">MOVES.Dab</field> \n        <field name=\"DIR\">-1</field> \n      </block> \n    </next> \n  </block> \n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personalize o efeito  clicando nos emojis no bloco <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\"> <field name=\"VALUE\">{\"inputs\":[\"legal\",\"frio\",\"ondulado\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field> \n\n</block> </xml>  no espaço de trabalho. ",
+          "Hint2": "💡 **Ainda está com problemas?** Assista ao vídeo para ver como  personalizar o efeito. ",
+          "HintEdit": "💡 Se quiser  utilizar o código escrito pela I.A. , alterne para exibir o código e em seguida, clique em 'Utilizar o código'. Os blocos  substituirão o bloco 'I.A. gera o efeito'  na sua área de trabalho. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "A dançarina deve ser a mesma em ambos os blocos e a sequência (ordem) é importante. ",
+          "validation": "💡 Adicione esses blocos para <code style=\"color:white; background-color:#FFBD46\">configurar</code> para criar sua primeira dançarina: \n<xml xmlns=\"https://developers.google.com/blockly/xml\"> \n    <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\"> \n      <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field> \n      <field name=\"LOCATION\">{x: 200, y: 200}</field> \n      <next> \n        <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\"> \n           <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field> \n           <field name=\"MOVE\">\"próximo\"</field> \n           <field name=\"DIR\">-1</field>\n        </block> \n      </next> \n    </block> \n  </statement> \n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Conecte o [bloco blockly][0] à <code style=\"color:white; background-color:#FFBD46\">configuração</code>. Em seguida, clique em no bloco para iniciar.",
+          "Hint3": "💡 Se quiser regenerar o efeito ou mudar o emoji, você pode clicar no bloco 'I.A. gera efeito'  novamente. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Ouça a música e pense sobre o astral da música. ",
+          "Hint2": "💡 Conecte o [bloco blockly][0] à <code style=\"color:white; background-color:#FFBD46\">configuração</code>. Em seguida, clique em no bloco para iniciar.",
+          "Hint3": "💡 Se quiser regenerar o efeito ou mudar o emoji, você pode clicar no bloco 'I.A. gera efeito'  novamente."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Seus dançarinos só responderão aos  comandos se a dança estiver sendo executada. ",
+          "hint2": "💡 Depois que você pressionar <code style=\"color:white; background-color:#FFBD46\">Executar</code>, movimento os dançarinos  pressionando a seta para a<code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> direita ou para a esquerda. "
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Clique e arraste um bloco `make new sprite` e conecte-o em `when run`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Mude uma fada de lugar, clique no pino no bloco de localização e em seguida, onde você quiser colocá-la. \n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

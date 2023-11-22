@@ -193,6 +193,7 @@ th:
   for_students_teacher_led_learning: 'สำหรับนักเรียน: การเรียนรู้ที่นำโดยผู้สอน'
   for_students_teacher_led_lessons: 'สำหรับนักเรียน: บทเรียนที่นำโดยผู้สอน'
   professional_development: การพัฒนาวิชาชีพ
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: สอนวิทยาการคอมพิวเตอร์
   explore_our_curriculum: สำรวจหลักสูตรของเรา
   start_professional_learning: เริ่มต้นการเรียนรู้อย่างมืออาชีพ
@@ -282,6 +283,8 @@ th:
   call_to_action_try_hoc_ai_activities: ลองใช้กิจกรรม Hour of Code AI
   call_to_action_explore_activities: สำรวจกิจกรรม
   call_to_action_explore_ai: สำรวจ AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: สำรวจเครื่องมือ
   call_to_action_explore_unit: สำรวจหน่วย
   call_to_action_explore_curriculum: สำรวจหลักสูตร
   call_to_action_explore_curricula: สำรวจหลักสูตร
@@ -591,6 +594,7 @@ th:
   module_label_accessibility_features_full: 'คุณสมบัติการช่วยการเข้าถึง:'
   module_label_educator_tool: เครื่องมือนักการศึกษา
   module_label_educator_course: หลักสูตรนักการศึกษา
+  module_label_educator_resources: Educator resources
   module_label_student_tool: เครื่องมือนักเรียน
   module_label_student_product: ผลิตภัณฑ์
   module_label_student_content_resources: เนื้อหาและแหล่งข้อมูล
@@ -599,6 +603,7 @@ th:
   module_label_available_now: พร้อมให้บริการแล้ว
   module_label_video_series: วีดีโอชุด
   module_label_self_paced: โมดูลที่ปรับได้เอง
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3105,19 +3110,14 @@ th:
   tutorial_csfirstdialogue_name: บทสนทนา
   tutorial_codemonkeybeaver_name: ผู้ประสบความสำเร็จของบีเวอร์
   tutorial_codestersdistance_name: 'Codesters: สไปรต์ระยะทางสังคม'
-  tutorial_itchspace_name: 'ItchCode: ผู้บุกรุกอวกาศ - RokCoder'
   tutorial_vidcodemagic_name: SFX เมจิก
   tutorial_vidcodemagices_name: SFX เมจิก
   tutorial_codespeakmeal_name: รหัสแอพอาหารเพื่อสุขภาพ
-  tutorial_itchfish_name: 'itchCode: ปลาเกมเกา'
   tutorial_bsdwebsite_name: เว็บไซต์รายการโปรดของฉัน
   tutorial_codespeaktime_name: รหัสแคปซูลเวลาในรอยขีดข่วน
-  tutorial_itchwebcam_name: 'ItchCode: เว็บแคม Augmented Reality'
-  tutorial_itchball_name: 'itchCode: ใหญ่ลูก'
   tutorial_ttrace_name: สภาพการแข่งขัน
   tutorial_plethora_name: 'มากมายเหลือเฟือ: สาเหตุและผลกระทบ'
   tutorial_educodesecret_name: ค้นพบความลับของหน่วยงาน!
-  tutorial_itchshapes_name: 'itchCode: รูปร่างและมุม'
   tutorial_codeguppytext_name: รู้เบื้องต้นเกี่ยวกับการเข้ารหัสตามข้อความ
   tutorial_vidcodeplastiche_name: PSA มลพิษพลาสติก
   tutorial_educativechatbot_name: สร้าง chatbot ของคุณเองใน Python
@@ -3139,7 +3139,6 @@ th:
   tutorial_codecapture_name: เรียนรู้การเขียนโปรแกรมด้วย JavaScript ในระยะเวลาอันสั้น
   tutorial_codehslitter_name: การเขียนโค้ดสำหรับชุมชนที่ปราศจากครอกน้อย
   tutorial_bsdocean_name: ชีวิตใต้น้ำ
-  tutorial_itchplatformer_name: 'itchCode: รอยขีดข่วน 3.0 platformer เกี่ยวกับการสอน'
   tutorial_codejika_name: 'CodeJika: เว็บไซต์ 5 นาที'
   tutorial_gamefrootclicker_name: เรียนรู้ตัวแปรรหัสเกม Clicker ของคุณเอง.
   tutorial_rmagicequity_name: ส่วนของผู้ถือหุ้นเทียบกับความเสมอภาค
@@ -5460,27 +5459,18 @@ th:
     เก็บไม้ และสร้างเขื่อนได้บีเวอร์ตัวเล็ก ๆ น้อย ๆ นี้ต้องการความช่วยเหลือของคุณใช้บล็อกง่ายๆของรหัสเพื่อให้เขื่อนในทะเลสาบเพื่อให้น้ำยังคงสงบสร้างบ้านและทำสมูทตี้!
   tutorial_codestersdistance_longdescription: เรียนรู้พื้นฐานของการเขียนโปรแกรมใน
     Python แล้วสร้างโปรแกรมที่คำนวณระยะห่างระหว่างสองสไปรท์เพื่อให้แน่ใจว่าพวกเขาอยู่ห่างทางสังคมหรือต้องสวมหน้ากาก
-  tutorial_itchspace_longdescription: กวดวิชานี้จะนำคุณผ่านการสร้างเกมบุกรุกพื้นที่คลาสสิกโดยใช้รอยขีดข่วนการเขียนโปรแกรมภาษา
-    MITสมัครสมาชิกช่อง RokCoder YouTube สำหรับวิดีโอรอยขีดข่วนตามเพิ่มเติมและบทช่วยสอน!วิดีโอแต่ละรายการเป็นบทช่วยสอนขนาดพอดีคำ
-    (ความยาวประมาณสิบนาที) ที่มีเป้าหมายตอนจบที่เฉพาะเจาะจงผลสุดท้ายคือที่มีคุณภาพสูง
-    Scratch เกมอาเขต.
   tutorial_vidcodemagic_longdescription: ทำให้กะพริบปรากฏแบบสุ่มรอบๆ หน้าจอโดยใช้วนลูป
   tutorial_vidcodemagices_longdescription: ทำให้กะพริบปรากฏแบบสุ่มรอบๆ หน้าจอโดยใช้วนลูป
   tutorial_codespeakmeal_longdescription: เรียนรู้การเขียนโค้ดแอปที่ช่วยให้ผู้ใช้ตัดสินใจเรื่องอาหารเพื่อสุขภาพ
-  tutorial_itchfish_longdescription: Scratch 3.0 กวดวิชาสำหรับการทำเกมที่มีการไล่ปลาฉลามและการกินปลาหยุดชะงักเมื่อนักดำน้ำจะกินโดยบังเอิญ
   tutorial_bsdwebsite_longdescription: หลักสูตรนี้ช่วยให้นักเรียนสามารถใช้รหัสเป็นวิธีการแบ่งปันสิ่งที่สำคัญหรือน่าสนใจให้กับพวกเขาพวกเขาสามารถทำตามบทเรียนหรือสร้างโครงการที่ไม่ซ้ำกันในขณะที่การเรียนรู้
     HTML, CSS และ JavaScriptพวกเขาจะได้รับคำแนะนำกับบทเรียนวิดีโอ, การเข้ารหัสสดและการเข้าถึงคำศัพท์รหัส.'เว็บไซต์
     My Favourites เน้นการสร้างเว็บเพจของ 3 อันดับแรกที่คุณสนใจหรือชอบทำ#codeisyourvoice
   tutorial_codespeaktime_longdescription: เรียนรู้วิธีการเขียนโค้ดแคปซูลเวลาแบบดิจิทัลเพื่อบันทึกและสะท้อนชีวิตของคุณในขณะนี้
-  tutorial_itchwebcam_longdescription: เรียนรู้เกี่ยวกับความเป็นจริงเสริมและสร้างพื้นที่เสมือนจริงเสริมของคุณเอง
-  tutorial_itchball_longdescription: รับลูกบอลเพื่อตีกลับรอบหน้าจอเรียนรู้เกี่ยวกับลูปและเงื่อนไขภายในลูป
   tutorial_ttrace_longdescription: โดยการเรียกฟังก์ชันและการออกแบบคลาส ผู้เล่นจะตั้งโปรแกรมรถแข่งของตนเองให้รวดเร็ว
     คล่องแคล่วและทรงพลัง ในระหว่างการแข่งขัน ผู้เล่นสามารถแฮ็คยานพาหนะของคู่แข่งเพื่อแย่งการควบคุมของตนได้
   tutorial_plethora_longdescription: 'ในกิจกรรมมากมายเหลือเฟือนี้คุณจะแก้ปัญหาความท้าทายสนุกภาพและเรียนรู้แนวคิดของสาเหตุและผลกระทบและการโต้ตอบของผู้ใช้ '
   tutorial_educodesecret_longdescription: สำรวจโลกแห่งความลับกับ Agent Smith ขณะที่คุณเจาะลึกเข้าไปในการเรียนรู้หากมีข้อความ
     สตริง และลูปสำหรับเข้าช่วยเหลือตัวแทนสมิ ธ หาผู้กระทำผิดและกำหนดค่าระบบปฏิบัติการของหน่วยงานสำหรับผู้ใช้ใหม่ของพวกเขาด้วยงูหลาม
-  tutorial_itchshapes_longdescription: เรียนรู้วิธีการวาดรูปร่างในรอยขีดข่วนนอกจากนี้คุณยังจะได้เรียนรู้วิธีการคำนวณเท่าใดคุณต้องเปิดสำหรับรูปร่างใด
-    ๆ
   tutorial_codeguppytext_longdescription: เรียนรู้พื้นฐานของการเขียนโค้ดตามข้อความโดยการสร้างโปรแกรมแรกของคุณในโปรแกรมแก้ไขการเข้ารหัสออนไลน์
   tutorial_vidcodeplastiche_longdescription: "  ปัญหาขยะพลาสติกกระจายเกลื่อนท้องทะเลกำลังเลวร้ายลงทุกขณะ
     แต่โชคดีที่คุณสามารถประกาศเจตนารมณ์ในเรื่องนี้ได้ด้วยการเขียนโค้ดผ่าน Plastic
@@ -5528,8 +5518,6 @@ th:
     ขยะมูลฝอยและของเสีย!ในการนี้เลือกของคุณเองผจญภัยชั่วโมงของรหัสคุณมีทางเลือกระหว่างพื้นฐานของงูหลามหรือพื้นฐานของการออกแบบเว็บไม่ว่าคุณจะเลือกอะไรคุณจะสำรวจวิธีที่คุณสามารถใช้วิทยาการคอมพิวเตอร์เพื่อลดปริมาณขยะในชุมชนของคุณ'
   tutorial_bsdocean_longdescription: ชีวิตด้านล่างน้ำหลั่งแสงในปัญหาเร่งด่วนที่เราเผชิญในปัจจุบัน
     - สภาพแวดล้อมของเราโครงการนี้มุ่งเน้นไปที่การแนะนำคุณในการเขียนโค้ดหน้าเว็บของคุณเองในการปกป้องน่านน้ำของเรา
-  tutorial_itchplatformer_longdescription: ง่ายต่อการปฏิบัติตาม กวดวิชา สำหรับวิธีการสร้างเกม
-    platformer ง่ายโดยใช้ รอยขีดข่วน
   tutorial_codejika_longdescription: แนะนำที่ดีในการเข้ารหัสโดยใช้ HTML และ CSSรหัสไม่กี่บรรทัดเห็นการส่งออกทันทีโดยไม่ได้รับการติดขึ้นใน
     Hows และ Whys โดยการสร้างหน้า Landing Page ที่ดีกับพื้นหลังไล่ระดับสีสองสีชื่อและวันที่เปิดตัวเว็บไซต์
   tutorial_gamefrootclicker_longdescription: ผู้เรียนเขียนโค้ดเกม Clicker ของตนเอง
@@ -6241,19 +6229,14 @@ th:
   tutorial_csfirstdialogue_string_detail_grades: เกรด 2-8
   tutorial_codemonkeybeaver_string_detail_grades: เครื่องอ่านล่วงหน้า - เกรด 5
   tutorial_codestersdistance_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
-  tutorial_itchspace_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_vidcodemagic_string_detail_grades: เกรด 2+
   tutorial_vidcodemagices_string_detail_grades: เกรด 2+
   tutorial_codespeakmeal_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
-  tutorial_itchfish_string_detail_grades: เกรด 2-8
   tutorial_bsdwebsite_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_codespeaktime_string_detail_grades: เกรด 2-8
-  tutorial_itchwebcam_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
-  tutorial_itchball_string_detail_grades: เกรด 2-8
   tutorial_ttrace_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
   tutorial_plethora_string_detail_grades: เกรด 2+
   tutorial_educodesecret_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
-  tutorial_itchshapes_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_codeguppytext_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
   tutorial_vidcodeplastiche_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_educativechatbot_string_detail_grades: เกรด 9+
@@ -6275,7 +6258,6 @@ th:
   tutorial_codecapture_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_codehslitter_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
   tutorial_bsdocean_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
-  tutorial_itchplatformer_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_codejika_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_gamefrootclicker_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
   tutorial_rmagicequity_string_detail_grades: เกรด 6-8 (อายุ 11-13 ปี)
@@ -7131,23 +7113,17 @@ th:
   tutorial_codemonkeybeaver_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต
     Android, iPad
   tutorial_codestersdistance_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดโปรแกรมอ่านหน้าจอ
-  tutorial_itchspace_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_vidcodemagic_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
     iPad, โปรแกรมอ่านหน้าจอ
   tutorial_vidcodemagices_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
     Android, iPad, โปรแกรมอ่านหน้าจอ
   tutorial_codespeakmeal_string_platforms: โครเมี่ยม ไฟร์ฟอกซ์
-  tutorial_itchfish_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_bsdwebsite_string_platforms: โครม
   tutorial_codespeaktime_string_platforms: โครเมี่ยม ไฟร์ฟอกซ์
-  tutorial_itchwebcam_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
-    iPad
-  tutorial_itchball_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_ttrace_string_platforms: โครม
   tutorial_plethora_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
     iPad
   tutorial_educodesecret_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
-  tutorial_itchshapes_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_codeguppytext_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
     iPad
   tutorial_vidcodeplastiche_string_platforms: เบราว์เซอร์รุ่นใหม่ทุกรุ่น, iPad, ออฟไลน์
@@ -7176,7 +7152,6 @@ th:
   tutorial_codehslitter_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
     iPad, Windows Phone, โทรศัพท์ Android, iPhone
   tutorial_bsdocean_string_platforms: โครม
-  tutorial_itchplatformer_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_codejika_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
     iPad, Windows Phone, โทรศัพท์ Android, iPhone
   tutorial_gamefrootclicker_string_platforms: เบราว์เซอร์รุ่นใหม่ทุกรุ่น, iPad, ออฟไลน์
@@ -7834,19 +7809,14 @@ th:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -7868,7 +7838,6 @@ th:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -8546,19 +8515,14 @@ th:
   tutorial_csfirstdialogue_string_detail_programming_languages: บล็อก, รอยขีดข่วน
   tutorial_codemonkeybeaver_string_detail_programming_languages: บล็อก
   tutorial_codestersdistance_string_detail_programming_languages: งูหลาม
-  tutorial_itchspace_string_detail_programming_languages: บล็อก
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: บล็อก
   tutorial_bsdwebsite_string_detail_programming_languages: จาวาสคริปต์, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: บล็อก
-  tutorial_itchwebcam_string_detail_programming_languages: บล็อก
-  tutorial_itchball_string_detail_programming_languages: บล็อก
   tutorial_ttrace_string_detail_programming_languages: จาวาสคริปต์, คอฟฟีสคริปต์
   tutorial_plethora_string_detail_programming_languages: ภาษาอิสระ (สามารถสอนได้หลายภาษา)
   tutorial_educodesecret_string_detail_programming_languages: งูหลาม
-  tutorial_itchshapes_string_detail_programming_languages: บล็อก
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: งูหลาม
@@ -8580,7 +8544,6 @@ th:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: ไพทอน, HTML
   tutorial_bsdocean_string_detail_programming_languages: จาวาสคริปต์, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: บล็อก
   tutorial_codejika_string_detail_programming_languages: จาวาสคริปต์, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: บล็อก
   tutorial_rmagicequity_string_detail_programming_languages: บล็อก, จาวาสคริปต์
@@ -9371,10 +9334,7 @@ th:
   tutorial_kodableshapes_name: สร้างรูปร่างด้วยโค้ด
   tutorial_nasabinary_name: 'รหัสไบนารี: วิธีการพูดคุยกับยานอวกาศ'
   tutorial_3dmaker_name: เครื่องสร้าง 3D
-  tutorial_itchstart_name: 'ITCHCode: เริ่มต้นบล็อก 5 รอยขีดข่วน'
   tutorial_hopsub_name: สร้าง Subway Surfers กับเพื่อน
-  tutorial_itchmundos_name: ลอสมันโด en ไมล์ มันโด_E2
-  tutorial_itchtenacity_name: ความดื้อรน
   tutorial_kcjskiing_name: 'กีฬา + รหัส: สกี'
   tutorial_groksecurity_name: 'การรักษาความปลอดภัยไซเบอร์: ป้องกันหมวกมืด'
   tutorial_creaticode_name: การเขียนโปรแกรม 3D กับบล็อกรอยขีดข่วน
@@ -9481,15 +9441,8 @@ th:
   tutorial_kodableshapes_longdescription: 'คณิตศาสตร์เป็นส่วนหนึ่งของชีวิตของเราทุกที่.ใช้คณิตศาสตร์และทักษะการเข้ารหัสที่จะทำให้เขาวงกตของคุณเองแล้วพยายามที่จะแก้มันเริ่มต้นด้วยตารางพื้นฐานแล้วดูว่าหลายรูปร่างที่แตกต่างกันคุณสามารถรวมในการออกแบบเขาวงกตของคุณ! '
   tutorial_nasabinary_longdescription: เรียนรู้วิธีที่เราใช้รหัสไบนารีเพื่อพูดคุยกับยานอวกาศแล้วลองด้วยตัวคุณเองโดยการแปลชื่อของคุณเป็นรหัสไบนารีบนแท็กชื่อสร้อยข้อมือหมุดหรือแม้แต่เสียง
   tutorial_3dmaker_longdescription: ทำให้ตัวเองเย็นจริงๆ, หมุนได้, วัตถุ 3 มิติได้อย่างรวดเร็วและง่ายดาย.
-  tutorial_itchstart_longdescription: บทเรียนนี้เป็นจุดเริ่มต้นที่ดีสำหรับเด็กเกรด
-    2 หรือ 3 ที่เพิ่งทดลองใช้ Scratch เป็นครั้งแรกพวกเขาจะได้รับที่จะเริ่มต้นด้วยชุดของ
-    5 บล็อกที่พวกเขาต้องใส่กันเพื่อให้ตัวละครของพวกเขาดำเนินการบางอย่าง
   tutorial_hopsub_longdescription: เรียนรู้วิธีการจับคู่โปรแกรมกับเพื่อนหรือเพื่อนร่วมชั้นและสร้างนักท่องรถไฟใต้ดินของคุณเองด้วยตัวละคร
     Hopscotch!
-  tutorial_itchmundos_longdescription: Conoceránรอยขีดข่วน, una herramienta para โปรแกรมาร์.Aregaránobjetos
-    y fondos, usarán bloques de eventos y apariencia para dar vida a su programa.
-  tutorial_itchtenacity_longdescription: En Este Proyecto โปรแกรมเมอร์ en รอยขีดข่วนเอลจำลองเดยกเลิกหุ่นยนต์
-    que limpia ลาส Aguas ท่าจอดเรือ.
   tutorial_kcjskiing_longdescription: 'มันสนุกและเกมจนกว่าจะมีคนล่มลงไปในต้นไม้… หรือว่าเป็นส่วนที่สนุก?สายคล้องบนสกีเหล่านั้นและโค้งงอที่หัวเข่าในขณะที่คุณแนะนำตัวละครของคุณลงเนินเขาของอุปสรรคแช่แข็งโดยใช้รหัสในกิจกรรม
     Scratch นี้ออกแบบหลักสูตร เพิ่มการเคลื่อนไหวและการตรวจจับ บวกกับการปะทะกันและการโต้ตอบ
     และความบูม - คุณจะได้เป็นภูเขาแห่งความสนุกสนาน '
@@ -9663,10 +9616,7 @@ th:
   tutorial_kodableshapes_language: ภาษาอังกฤษ
   tutorial_nasabinary_language: ภาษาอังกฤษ
   tutorial_3dmaker_language: ภาษาอังกฤษ
-  tutorial_itchstart_language: ภาษาอังกฤษ
   tutorial_hopsub_language: จีน (ประยุกต์), อังกฤษ, สเปน (สเปน), สเปน (เม็กซิโก)
-  tutorial_itchmundos_language: สเปน (เม็กซิโก)
-  tutorial_itchtenacity_language: สเปน (เม็กซิโก)
   tutorial_kcjskiing_language: อังกฤษ, ฝรั่งเศส
   tutorial_groksecurity_language: ภาษาอังกฤษ
   tutorial_creaticode_language: จีน (ตัวย่อ), จีน (ตัวเต็ม), อังกฤษ
@@ -9758,10 +9708,7 @@ th:
   tutorial_kodableshapes_string_detail_grades: เครื่องอ่านล่วงหน้า - เกรด 5
   tutorial_nasabinary_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_3dmaker_string_detail_grades: เกรด 2-8
-  tutorial_itchstart_string_detail_grades: เกรด 2-8
   tutorial_hopsub_string_detail_grades: เกรด 2-8
-  tutorial_itchmundos_string_detail_grades: เกรด 2+
-  tutorial_itchtenacity_string_detail_grades: เกรด 2+
   tutorial_kcjskiing_string_detail_grades: เกรด 2+
   tutorial_groksecurity_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_creaticode_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
@@ -9853,12 +9800,7 @@ th:
   tutorial_nasabinary_string_platforms: ถอดปลั๊ก, ตัวอ่านหน้าจอ
   tutorial_3dmaker_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
     iPad, Windows Phone, โทรศัพท์ Android, iPhone
-  tutorial_itchstart_string_platforms: เบราว์เซอร์รุ่นใหม่ทุกรุ่น, iPad, ออฟไลน์
   tutorial_hopsub_string_platforms: ไอแพด ไอโฟน
-  tutorial_itchmundos_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
-    iPad
-  tutorial_itchtenacity_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมดแท็บเล็ต Android,
-    iPad
   tutorial_kcjskiing_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_groksecurity_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
     iPad, Windows Phone, โทรศัพท์ Android, iPhone
@@ -9955,10 +9897,7 @@ th:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -10048,10 +9987,7 @@ th:
     (สามารถสอนได้หลายภาษา)
   tutorial_nasabinary_string_detail_programming_languages: รหัสไบนารี
   tutorial_3dmaker_string_detail_programming_languages: บล็อก
-  tutorial_itchstart_string_detail_programming_languages: บล็อก
   tutorial_hopsub_string_detail_programming_languages: ฮอปสกอตช์
-  tutorial_itchmundos_string_detail_programming_languages: บล็อก
-  tutorial_itchtenacity_string_detail_programming_languages: บล็อก
   tutorial_kcjskiing_string_detail_programming_languages: บล็อก
   tutorial_groksecurity_string_detail_programming_languages: ไม่มี - ไม่ต้องเขียนโปรแกรม
   tutorial_creaticode_string_detail_programming_languages: บล็อก
@@ -10904,7 +10840,7 @@ th:
   tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
   tutorial_ozobotbroadcast_name: Broadcast and Retrieve IR Messages with Ozobot
   tutorial_ozobotapplications_name: Basic Applications of IR Communications
-  tutorial_codecombatworlds_name: CodeCombat Worlds
+  tutorial_codecombatworlds_name: โลก CodeCombat
   tutorial_spherochatgpt_name: BOLT meets ChatGPT
   tutorial_spherorvrimage_name: 'AI with RVR+: Image Recognition'
   tutorial_spherorvrauto_name: 'AI with RVR+: Autonomous Vehicles'
@@ -11001,6 +10937,16 @@ th:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: งานเลี้ยงเต้นรำ
+  tutorial_introtomlai_name: ความรู้เบื้องต้นเกี่ยวกับการเรียนรู้ของเครื่อง
+  tutorial_computervisionai_name: วิสัยทัศน์คอมพิวเตอร์
+  tutorial_neuralnetworksai_name: โครงข่ายประสาท
+  tutorial_chatbotsllmai_name: Chatbots และรูปแบบภาษาขนาดใหญ่
+  tutorial_generativeimagesai_name: ภาพกำเนิด
+  tutorial_algorithmicbiasai_name: อคติอัลกอริทึม
+  tutorial_codeofethicsai_name: จรรยาบรรณ AI ของเรา
+  tutorial_socimpactofgenaiai_name: ผลกระทบต่อสังคมของ AI แบบสร้างสรรค์
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -11128,12 +11074,11 @@ th:
   tutorial_ozobotapplications_longdescription: Students will identify an everyday
     application of infrared communication andbuild a model of it with Ozobots and
     Ozobot Blockly.
-  tutorial_codecombatworlds_longdescription: Play your way to mastering the coding
-    skills needed for creating your own amazing Roblox games! Start in the Overworld,
-    where you'll code your own pets to harvest, battle, and play. Then, take on the
-    Learning Levels and master the core concepts of Luau coding. But the real magic
-    happens in Creative Mode, where you'll craft your own games with the help of AI.
-    The power to create is in your hands!
+  tutorial_codecombatworlds_longdescription: เล่นตามวิธีของคุณเพื่อเรียนรู้ทักษะการเขียนโค้ดที่จำเป็นในการสร้างเกม
+    Roblox ที่น่าทึ่! เริ่มต้นในโลกที่มีความคิด โดยคุณจะเขียนโค้ดของสัตว์เลี้ยงของคุณเองเพื่อเก็บเกี่ยว
+    สู้รบ และเล่น จากนั้น เข้าสู้ระดับการเรียนรู้และเรียนรู้คอนเซ็ปต์หลักของการเขียนโค้ด
+    Luau แต่เวทมนติจริงเกิดขึ้นในโหมดสร้างสรรค์ ที่คุณจะสร้างเกมของคุณเองด้วยความช่วยเหลือของปัญญาประดิษฐ์
+    ความสามารถในการสร้างอยู่ในมือของคุณ!
   tutorial_spherochatgpt_longdescription: ChatGPT, an artificially intelligent chatbot,
     is all the rage these days. Is there anything it doesn’t know? In this activity,
     explore whether or not ChatGPT can program your BOLT robot, then reflect on the
@@ -11471,6 +11416,36 @@ th:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: "  เขียนโค้ดปาร์ตี้เต้นรำเพื่อแชร์กับเพื่อนๆ
+    ฟีเจอริ่งกับ Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, และอีก 25
+    ศิลปิน!  "
+  tutorial_introtomlai_longdescription: เรียนรู้เกี่ยวกับรูปแบบของปัญญาประดิษฐ์ที่เรียกว่า
+    Machine Learning และวิธีการใช้กระบวนการแก้ปัญหาเพื่อช่วยในการฝึกอบรมหุ่นยนต์ในการแก้ปัญหามีส่วนร่วมในกิจกรรมการเรียนรู้ของเครื่องที่หุ่นยนต์กำลังเรียนรู้วิธีการตรวจจับรูปแบบในปลา
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: เรียนรู้วิธีการทำงานของเครือข่ายประสาทใช้เครื่องมือในการสำรวจเครือข่ายประสาทในมือเกี่ยวกับวิธีการที่ดูวิดีโออธิบายเครือข่ายประสาทสุดท้ายหารือเกี่ยวกับความจำเป็นในการมุมมองที่หลากหลายเมื่อมีการสร้างระบบข้อเสนอแนะ
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: เรียนรู้วิธีที่ AI สามารถสร้างภาพ จากนั้นสำรวจวิดเจ็ต
+    Diffusion AI และหารือว่าโมเดลเหล่านี้มีความสร้างสรรค์หรือไม่
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: ตรวจสอบผลกระทบของ AI แบบสร้างสรรค์จากมุมมองที่แตกต่างกัน
+    จากนั้นทำงานร่วมกันเป็นทีมเพื่อสร้างแนวทางที่ตอบสนองความต้องการมากที่สุดจากผู้เข้าร่วมทุกคน
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_bscomputing_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_stackpython_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
@@ -11572,7 +11547,7 @@ th:
   tutorial_hwfanpage_string_detail_grades: เกรด 2+
   tutorial_hwillusion_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_caevolution_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
-  tutorial_bbbusybot_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_bbbusybot_string_detail_grades: เกรด 9+
   tutorial_caaifarm_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_cafuture_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_dmscratch_string_detail_grades: เกรด 2-8
@@ -11602,6 +11577,16 @@ th:
   tutorial_madmobile_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
   tutorial_intelinosmile_string_detail_grades: เครื่องอ่านล่วงหน้า - เกรด 8
   tutorial_intelinoaisign_string_detail_grades: เกรด 2-8
+  tutorial_danceai2023_string_detail_grades: เกรด 2+
+  tutorial_introtomlai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_computervisionai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_neuralnetworksai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_chatbotsllmai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_generativeimagesai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_algorithmicbiasai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_codeofethicsai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_socimpactofgenaiai_string_detail_grades: เกรด 6+ (11 ขึ้นไป)
+  tutorial_generationai_string_detail_grades: เกรด 2+
   tutorial_bsimage_string_platforms: โครเมี่ยม ไฟร์ฟอกซ์ ซาฟารี
   tutorial_bscomputing_string_platforms: ถอดปลั๊ก
   tutorial_stackpython_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
@@ -11772,6 +11757,26 @@ th:
   tutorial_madmobile_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
   tutorial_intelinosmile_string_platforms: เบราว์เซอร์รุ่นใหม่ทุกรุ่น, iPad, ออฟไลน์
   tutorial_intelinoaisign_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด
+  tutorial_danceai2023_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
+    iPad, โทรศัพท์ Android, iPhone
+  tutorial_introtomlai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต Android,
+    iPad, โทรศัพท์ Android, iPhone
+  tutorial_computervisionai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_neuralnetworksai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_chatbotsllmai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_generativeimagesai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_algorithmicbiasai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_codeofethicsai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: เบราว์เซอร์ที่ทันสมัยทั้งหมด, แท็บเล็ต
+    Android, iPad, โทรศัพท์ Android, iPhone
+  tutorial_generationai_string_platforms: แท็บเล็ต Android, iPad, โทรศัพท์ Windows,
+    โทรศัพท์ Android, ไอโฟน
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -11903,6 +11908,16 @@ th:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: ภาษาอิสระ
   tutorial_stackpython_string_detail_programming_languages: งูหลาม
@@ -12028,12 +12043,22 @@ th:
   tutorial_codecombathack_string_detail_programming_languages: ภาษาอิสระ
   tutorial_toxicodewords_string_detail_programming_languages: ภาษาอิสระ
   tutorial_mitstepmisinformation_string_detail_programming_languages: ถอดปลั๊ก
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: ถอดปลั๊ก
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: ถอดปลั๊ก
   tutorial_mitstepintrotoml_string_detail_programming_languages: ถอดปลั๊ก
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: จาวาสคริปต์, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: บล็อก
   tutorial_intelinoaisign_string_detail_programming_languages: บล็อก
+  tutorial_danceai2023_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_introtomlai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_computervisionai_string_detail_programming_language: ภาษาอิสระ
+  tutorial_neuralnetworksai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_chatbotsllmai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_generativeimagesai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_algorithmicbiasai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_codeofethicsai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: ภาษาอิสระ
+  tutorial_generationai_string_detail_programming_languages: บล็อก, งูหลาม
   school_not_found_heading: เราหาโรงเรียนของคุณไม่เจอกรุณากรอกรายละเอียดเพิ่มเติม
   school_name: ชื่อโรงเรียน
   school_name_error: ต้องระบุชื่อโรงเรียน
@@ -12162,6 +12187,10 @@ th:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: ข้อกำหนดเบื้องต้นสำหรับ Hour of Code คืออะไร?
   hoc_how_to_faq_answer_prerequisites: Hour of Code นั้นง่ายต่อการใช้งาน - แม้สำหรับผู้เริ่มต้นคุณไม่จำเป็นต้องมีประสบการณ์ด้านวิทยาศาสตร์คอมพิวเตอร์หรือการสอนเพื่อสร้างแรงบันดาลใจให้นักเรียนสำรวจ
     สร้าง และเรียนรู้สิ่งใหม่ๆ
@@ -12561,6 +12590,44 @@ th:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: ทุกคนสามารถเรียนรู้เกี่ยวกับ AI ไม่ว่าคุณจะเป็นนักเรียนในห้องเรียนหรือนักการศึกษาที่ปลดล็อกอนาคตของการสอนด้วยและเกี่ยวกับ
     AI
   hoc_ai_how_ai_works_video_series_desc: วิดีโอสั้นชุดนี้จะแนะนำให้คุณรู้จักกับปัญญาประดิษฐ์ทำงานอย่างไรและเหตุใดจึงสำคัญจากนั้นเจาะลึกประเด็นต่างๆ
@@ -12571,6 +12638,37 @@ th:
   hoc_ai_impacts_desc: มีส่วนร่วมในห้องเรียนของคุณด้วยบทเรียนที่นำโดยครูซึ่งสำรวจผลกระทบของปัญญาประดิษฐ์และเชิญผู้เรียนคิดหาวิธีแก้ปัญหาบางประเด็นของ
     AI
   hoc_ai_activities_desc: กิจกรรม Hour of Code ใหม่เหล่านี้แนะนำผู้ใช้ให้รู้จักกับโลกของปัญญาประดิษฐ์ด้วยวิธีที่สนุกสนานและมีส่วนร่วม
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: เกือบ 100 พนักงาน Code.org ในการจับคู่สีฟ้าและสีเหลืองเสื้อยืดก่อให้เกิดในห้องประชุมโรงแรมสำหรับฤดูร้อนของ
     บริษัท ฯ 2022 เหตุการณ์ Codechella.
   careers_page_code_pride_alt_text: พนักงานสองคนนำเสนอผู้หญิงยิ้มในขณะที่ถือปลายของแบนเนอร์รุ้ง
@@ -13039,9 +13137,10 @@ th:
   about_page_section_more_description_3: งานของเราต่อยอดมาจาก [ความพยายามหลายทศวรรษโดยองค์กรและบุคคลจำนวนนับไม่ถ้วน](%{efforts_url})
     ซึ่งได้ช่วยสร้าง ให้ทุน และเผยแพร่การศึกษาด้านวิทยาการคอมพิวเตอร์ เรารู้สึกขอบคุณที่ได้รับประโยชน์จากความช่วยเหลืออย่างไม่เหน็ดเหนื่อยของชุมชนการศึกษาวิทยาการคอมพิวเตอร์ในวงกว้าง
     และ [เราขอขอบคุณพันธมิตรและบุคคลที่สนับสนุนผลกระทบของเราตลอดหลายปีที่ผ่านมา](%{partners_url}))
-  about_page_section_more_list_1: "[รายงานประจำปี Code.org 2021](%{report_url}) (รายงานที่ผ่านมา:
-    [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
-    [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[ค่านิยมหลักของเราและแนวทางในการส่งข้อความ](%{core_url})"
   about_page_section_more_list_3: "[หลักสูตรและปรัชญาการสอนของเรา](%{curriculum_url})"
   about_page_section_more_list_4: "[TEDx พูดคุยโดย Hadi Partovi ผู้ก่อตั้งของเราเกี่ยวกับสาเหตุที่วิทยาการคอมพิวเตอร์มีไว้สำหรับทุกคน

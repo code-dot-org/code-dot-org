@@ -2504,6 +2504,26 @@
           "New Artist Project_callout2": "अपने प्रोग्राम को सुरक्षित करने और चलाने के लिए \"चलाएं\" को दबाएं",
           "sign_in_to_save_project": "क्या आप बाद में अपने प्रोजेक्ट तक पहुंचना चाहते हैं? इस प्रोजेक्ट को अपने खाते में सुरक्षित करने के लिए साइन इन करें!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ इस ब्लॉक का इस्तेमाल करें। ",
+          "dance_callout_02": "यहां AI जनरेट इफेक्ट ब्लॉक शामिल करें। "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ इस ब्लॉक का इस्तेमाल करें। ",
+          "dance_callout_02": "डांस हरकत करें शामिल करें।"
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "यहां क्लिक करें।"
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ यहां शुरू करें।"
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ इस ब्लॉक का इस्तेमाल करें। "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ इस ब्लॉक का इस्तेमाल करें। "
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "स्प्राइट बनाने के लिए इस ब्लॉक का इस्तेमाल करें",
           "hello_world_say": "स्प्राइट के बोलने के लिए इस ब्लॉक का इस्तेमाल करें."

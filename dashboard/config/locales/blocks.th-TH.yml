@@ -1074,6 +1074,12 @@ th:
         text: "{SPRITE}พูด{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': แก๊ส
+            '"liquid"': ของเหลว
+            '"solid"': ของแข็ง
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

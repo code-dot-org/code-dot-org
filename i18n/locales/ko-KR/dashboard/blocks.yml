@@ -33,6 +33,8 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} 효과 생성"
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -614,12 +616,14 @@ ko:
             '"none"': 없음
             '"rand"': "(임의)"
             '"quads"': 앵글
+            '"blooming_petals"': 피어나는 꽃잎
             '"circles"': 터널
             '"color_cycle"': 색상
             '"diamonds"': 다이아몬드
             '"disco_ball"': 디스코 볼
             '"fireworks"': 불꽃놀이
             '"flowers"': 꽃
+            '"frosted_grid"': 서리에 덮인 창살
             '"growing_stars"': 커지는 별
             '"swirl"': 최면
             '"kaleidoscope"': 만화경
@@ -639,17 +643,27 @@ ko:
             '"stars"': 별
             '"music_wave"': 파도
           PALETTE:
+            '"autumn"': 가을
             '"rave"': 흑백
             '"cool"': 파란색
             '"electronic"': 일렉트로닉
+            '"grayscale"': 그레이 스케일
             '"iceCream"': 아이스크림
             '"default"': 빛
             '"neon"': 네온
             '"ocean"': 바다
             '"rainbow"': 무지개
+            '"roses"': 장미
+            '"sky"': 하늘
+            '"spring"': 봄
+            '"summer"': 여름
+            '"sunrise"': 일출
+            '"sunset"': 일몰
             '"tropical"': 열대
+            '"twinkling"': 반짝거림
             '"vintage"': 빈티지
             '"warm"': 빨간색
+            '"winter"': 겨울
       Dancelab_setDanceSpeed:
         text: "{SPRITE} 댄스 속도를 {SPEED}(으)로 변경하기"
         options:
@@ -1116,7 +1130,7 @@ ko:
         text: "{CONDITION} {SPRITE1} 다음에 닿음: {SPRITE2}"
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
       gamelab_clickedOn:
         text: 때 {SPRITE} 클릭
@@ -1254,7 +1268,7 @@ ko:
         text: "{CONDITION} {KEY} 누르면"
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
           KEY:
             '"up"': 위로
@@ -1585,7 +1599,7 @@ ko:
         text: "{CONDITION} {SPRITE} 클릭"
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
       gamelab_spriteSay:
         text: "{SPRITE}이(가) {SPEECH}을(를) 말함"
@@ -1725,6 +1739,15 @@ ko:
         text: y 좌표 {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           만약 {CONDITION}{SPRITE}이면
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': 고체
+            '"liquid"': 액체
+            '"gas"': 기체
       KatiesBlocks_tumbling:
         text: 텀블링
       Mikelab_addBehaviorSimple:

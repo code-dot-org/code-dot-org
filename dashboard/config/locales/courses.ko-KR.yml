@@ -94,6 +94,8 @@ ko:
           description_short: 기초적인 컴퓨터 과학의 원리를 배우기
         mike-test:
           title: 컴퓨터 과학 기초
+        self-paced-pl-csd-unit2-2023:
+          title: 교습 웹 개발
     resources:
       curriculum/csd/2017:
         name: 교과 과정

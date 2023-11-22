@@ -1523,6 +1523,7 @@
   header_report_abuse: "不正行為を報告"
   header_legal: "プライバシーと法的事項"
   header_legal_privacy: "プライバシー ポリシー"
+  header_legal_cookie_notice: "クッキーについての通知"
   header_legal_tos: "利用規約"
   header_tutorials: "チュートリアル"
   header_screen_reader_hamburger: "メニュー"

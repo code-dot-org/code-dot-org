@@ -3,6 +3,10 @@
     "data": {
       "bubble_choice_description": {
         "CSD U2 HTML Debug Paragraphs_2023": "Ta prosta strona internetowa ma pewne problemy, które sprawiają, że zawartość nie jest wyświetlana poprawnie. Zidentyfikuj problemy i je rozwiąż.",
+        "CSD U2 classes dance_2023": "Dopasuj elementy html do odpowiednich klas, aby naprawić stronę internetową.",
+        "CSD U2 hyperlink practice2_2023": "Znajdź i napraw wszystkie błędy w każdym z tagów hiperłączy, na każdej stronie html.",
+        "CSD U2 links buttons_2023": "Poznaj sposób na wystylizowanie hiperłączy, aby wyglądały jak przyciski",
+        "CSD U2 nav bar_2023": "Dodaj pasek nawigacyjny do wszystkich swoich stron internetowych.",
         "CSD U2L2 - ChalB_2023": "Czasami błędy pojawiają się w naszym kodzie, ponieważ coś błędnie napiszemy. Spróbuj poprawić błędy w poniższym kodzie, naprawiając błędy ortograficzne ",
         "CSD U2L2 - ChalC_2023": "Cały kod jest nieuporządkowany! Czy możemy zmienić układ kodu tak, aby był poprawnie sformatowany?",
         "CSD U2L2 - ChalD_2023": "Użyj tagów akapitów, aby napisać własną poezję, z każdym wierszem oddzielonym tagami akapitów!",
@@ -12,9 +16,11 @@
         "CSD U2L2 - PracC_2023": "Pomóż pisarzowi naprawić jego stronę internetową, aby każda linia dialogu pojawiała się w osobnym wierszu",
         "CSD U2L2 - PracD_2023": "Użyj tagów akapitów, aby utworzyć z symbolów * piramidę widzianą od boku.",
         "CSD Web Dev choice level list 1_2023": "Użyj swoich umiejętności debugowania, aby dojść do tego, dlaczego lista nie wyświetla się poprawnie.",
+        "CSD Web Headings Debug RGB_2023": "Użyj swoich umiejętności rozwiązywania problemów, aby dowiedzieć się, dlaczego styl RGB nie jest stosowany. ",
         "CSD Web Headings Free Play2_2023": "Spróbuj użyć nowo poznanego kodu, aby stworzyć własną stronę HTML o Twoich ulubionych filmach. ",
         "CSD Web Headings Free Play3_2023": "Spróbuj użyć nowo poznanego kodu, aby stworzyć własną stronę HTML o Twoich ulubionych grach. ",
         "CSD Web Headings Free Play_2023": "Spróbuj użyć nowo poznanego kodu, aby stworzyć własną stronę HTML o Twoich ulubionych książkach. ",
+        "CSD classes travel_2023": "Użyj swoich umiejętności debugowania, aby odkryć, czemu obrazy nie są poprawnie stylizowane na tej stronie internetowej.",
         "CourseF_app_computer": "Połącz wszystkie części i wymyśl, jak włączyć komputer!",
         "CourseF_app_computer2022": "Połącz wszystkie części i wymyśl, jak włączyć komputer!",
         "CourseF_app_computer_-2022-2": "Połącz wszystkie części i wymyśl, jak włączyć komputer!",

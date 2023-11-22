@@ -1659,6 +1659,12 @@ ta:
         text: y ஒருங்கிணைப்பு {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': திடமான
+            '"liquid"': திரவம்
+            '"gas"': கேஸ்
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:

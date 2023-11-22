@@ -802,7 +802,7 @@
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "name": "CSD Розділ 2 - Веброзробка",
-          "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy",
+          "url": "https://docs.google.com/presentation/d/1_wt2Ic_u9i_pPbdFE-DKG0V27xytUPntl2VnnBqQpT4/copy",
           "type": "Слайди"
         },
         "exemplar-text-website/csd/2021": {
@@ -1172,7 +1172,7 @@
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "name": "CSD Розділ 3 - Інтерактивні анімації та ігри",
-          "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
+          "url": "https://docs.google.com/presentation/d/1OAuHBaI_wcR6_W9_L9U0RQ2AKbdUEtS6DFgF5gfNqDQ/copy",
           "type": "Слайди"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
@@ -1523,8 +1523,8 @@
           "url": "/s/csd4-2021/vocab"
         },
         "unit-4-the-design-process/csd/2021": {
-          "name": "CSD Розділ 4 - Процес проєктування",
-          "url": "https://docs.google.com/presentation/d/1aM1QmHeYJTx1V-Puzinc4Jp8gpae7ZArLW1Y1sI3CYY/copy",
+          "name": "CSD Розділ 4 - Процес розробки",
+          "url": "https://docs.google.com/presentation/d/1rl43hE3n2_DufUKLQocoz3jLnWXtyz_UlE3RYrWY8IQ/copy",
           "type": "Слайди"
         },
         "pspe-image/csd/2021": {
@@ -1714,12 +1714,12 @@
           "url": "https://drive.google.com/file/d/1O_TFldMiOe6QWCnunqgaZFFT9qnansLo/view"
         },
         "design_mode/csd/2021": {
-          "name": "Режим конструктора",
+          "name": "режим дизайну",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Ресурс"
         },
         "design_mode_elements/csd/2021": {
-          "name": "Елементи режиму конструктора",
+          "name": "Елементи режиму дизайну",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -1769,17 +1769,17 @@
           "type": "Ресурс"
         },
         "intro_to_design_mode/csd/2021": {
-          "name": "Знайомство з режимом конструктора",
+          "name": "Знайомство з режимом дизайну",
           "url": "https://youtu.be/tAtvWkYBUoU",
           "type": "Відео"
         },
         "design_mode_1/csd/2021": {
-          "name": "Режим конструктора",
+          "name": "Режим дизайну",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Ресурс"
         },
         "design_mode_elements_1/csd/2021": {
-          "name": "Елементи режиму конструктора",
+          "name": "Елементи режиму дизайну",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -4420,7 +4420,8 @@
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "intro_to_problem_solving/csd/2022": {
-          "type": "Слайди"
+          "type": "Слайди",
+          "name": "Вступ до вирішення проблем"
         },
         "problem_solving_process/csd/2022": {
           "name": "Процес вирішення проблем",
@@ -4456,7 +4457,8 @@
           "type": "Інструкція до вправи"
         },
         "exploring_problem_solving/csd/2022": {
-          "type": "Слайди"
+          "type": "Слайди",
+          "name": "Досліджуємо вирішування проблем"
         },
         "what_is_a_computer/csd/2022": {
           "name": "Що таке комп’ютер",
@@ -5573,7 +5575,7 @@
           "type": "Зображення"
         },
         "designing_with_empathy_2/csd/2022": {
-          "name": "Дизайн з емпатією",
+          "name": "Розробка з емпатією",
           "type": "Слайди"
         },
         "profile_1/csd/2022": {
@@ -5777,12 +5779,12 @@
           "type": "Слайди"
         },
         "design_mode/csd/2022": {
-          "name": "Режим конструктора",
+          "name": "режим дизайну",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Ресурс"
         },
         "design_mode_elements/csd/2022": {
-          "name": "Елементи режиму конструктора",
+          "name": "Елементи режиму дизайну",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -5834,7 +5836,7 @@
           "type": "Слайди"
         },
         "intro_to_design_mode/csd/2022": {
-          "name": "Знайомство з режимом конструктора",
+          "name": "Знайомство з режимом дизайну",
           "type": "Відео"
         },
         "model_screen_design/csd/2022": {
@@ -5853,7 +5855,7 @@
           "type": "Інструкція до вправи"
         },
         "design_mode_in_app_lab/csd/2022": {
-          "name": "Режим конструктора в Програмній Лабораторії ",
+          "name": "Режим дизайну в Програмній Лабораторії",
           "type": "Слайди"
         },
         "build_a_digital_prototype/csd/2022": {
@@ -9026,7 +9028,8 @@
           "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-"
         },
         "intro_to_problem_solving/csd/2023": {
-          "type": "Слайди"
+          "type": "Слайди",
+          "name": "Вступ до вирішення проблем"
         },
         "problem_solving_process/csd/2023": {
           "name": "Процес вирішення проблем",
@@ -9054,7 +9057,8 @@
           "type": "Інструкція до вправи"
         },
         "exploring_problem_solving/csd/2023": {
-          "type": "Слайди"
+          "type": "Слайди",
+          "name": "Досліджуємо вирішування проблем"
         },
         "solving_problems/csd/2023": {
           "name": "Вирішення проблем",
@@ -10178,7 +10182,7 @@
           "type": "Зразок"
         },
         "designing_with_empathy_2/csd/2023": {
-          "name": "Дизайн з емпатією",
+          "name": "Розробка з емпатією",
           "type": "Слайди"
         },
         "problem_solving_process_with_empathy/csd/2023": {
@@ -10401,12 +10405,12 @@
           "type": "Слайди"
         },
         "design_mode/csd/2023": {
-          "name": "Режим конструктора",
+          "name": "режим дизайну",
           "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
           "type": "Ресурс"
         },
         "design_mode_elements/csd/2023": {
-          "name": "Елементи режиму конструктора",
+          "name": "Елементи режиму дизайну",
           "url": "https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing",
           "type": "Ресурс"
         },
@@ -10454,11 +10458,11 @@
           "type": "Відео"
         },
         "design_mode_in_app_lab/csd/2023": {
-          "name": "Режим конструктора в Програмній Лабораторії ",
+          "name": "Режим дизайну в Програмній Лабораторії",
           "type": "Слайди"
         },
         "intro_to_design_mode/csd/2023": {
-          "name": "Знайомство з режимом конструктора",
+          "name": "Знайомство з режимом дизайну",
           "type": "Відео"
         },
         "model_screen_design/csd/2023": {
@@ -13197,7 +13201,7 @@
           "type": "Відео"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "Як працює AI: як працюють нейронні мережі",
+          "name": "Як працює ШІ: як працюють нейронні мережі",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "Відео"
         },

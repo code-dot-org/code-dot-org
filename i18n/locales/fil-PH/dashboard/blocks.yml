@@ -1754,6 +1754,12 @@ fil:
         text: y ang mga {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': matibay
+            '"liquid"': likido
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:

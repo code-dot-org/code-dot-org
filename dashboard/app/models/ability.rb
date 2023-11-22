@@ -193,9 +193,7 @@ class Ability
 
       if user.teacher?
         can :manage, Section do |s|
-          # This s.user_id == user.id check will become unnecessary once we know
-          # there's a SectionInstructor object for every section's creator/owner
-          s.user_id == user.id || s.instructors.include?(user)
+          s.instructors.include?(user)
         end
         can :destroy, SectionInstructor do |si|
           can?(:manage, si.section) && si.instructor_id != si.section.user_id
