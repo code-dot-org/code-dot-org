@@ -35,12 +35,14 @@ describe('CoteacherInviteNotification', () => {
     expect(wrapper.find(Notification).length).to.equal(0);
   });
 
-  it('renders nothing if flag is not set', () => {
+  it('renders notification if there is a coteacher invite and flag is not set', () => {
     DCDO.reset();
-    const wrapper = shallow(
-      <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
-    );
-    expect(wrapper.find(Notification).length).to.equal(0);
+    const wrapper = shallow(<CoteacherInviteNotification {...defaultProps} />);
+    const notification = wrapper.find(Notification);
+    expect(notification.length).to.equal(1);
+    expect(notification.props().dismissible).to.equal(false);
+    expect(notification.props().type).to.equal(NotificationType.collaborate);
+    expect(notification.props().notice).to.include('The Great Pumpkin');
   });
 
   it('renders notification if there is a coteacher invite and flag is on', () => {
