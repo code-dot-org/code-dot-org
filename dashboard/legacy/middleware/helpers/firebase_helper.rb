@@ -134,16 +134,16 @@ class FirebaseHelper
 
   def self.create_shared_client
     raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
-    Firebase::Client.new \ # TODO: unfirebase
+    Firebase::Client.new \
       'https://cdo-v3-shared.firebaseio.com/',
-      CDO.firebase_shared_secret
+      CDO.firebase_shared_secret  # TODO: unfirebase
   end
 
   def self.create_client
     raise "CDO.firebase_name not defined" unless CDO.firebase_name
     raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
-    Firebase::Client.new \ # TODO: unfirebase
+    Firebase::Client.new \
       "https://#{CDO.firebase_name}.firebaseio.com/",
-      CDO.firebase_secret
+      CDO.firebase_secret  # TODO: unfirebase
   end
 end
