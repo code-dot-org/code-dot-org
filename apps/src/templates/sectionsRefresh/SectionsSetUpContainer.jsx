@@ -376,7 +376,7 @@ export default function SectionsSetUpContainer({
           moduleStyles.withBorderTop
         )}
       >
-        {DCDO.get('show-coteacher-ui', false) && renderCoteacherSection()}
+        {DCDO.get('show-coteacher-ui', true) && renderCoteacherSection()}
         {renderAdvancedSettings()}
       </div>
       <div
