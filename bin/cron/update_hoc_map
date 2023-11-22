@@ -34,6 +34,10 @@ def main
     puts 'Next'
     puts data
     puts processed_data
+    puts data['organization_name_s'].nil?
+    puts processed_data['location_p'].nil?
+    puts form[:review] != "approved"
+    puts processed_data['location_city_s'].nil?
     # ***
     # If these rules are changed and we wish to display a broader set of events,
     # update our JS code (hoc_events_map.js) that visualizes these events
@@ -43,6 +47,7 @@ def main
     # processed location, and city. With the exception that approved special events
     # don't need a city so we can show events like the Cocos Keeling Islands.
     next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
+    puts 'checkpoint'
     next if form[:review] != "approved" && processed_data['location_city_s'].nil?
 
     puts 'Not filtered out'
