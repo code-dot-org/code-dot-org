@@ -23,13 +23,17 @@ require_relative 'upload_to_mapbox'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
-CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2017)}".freeze
+CURRENT_HOC_SIGNUP = "HocSignup#{DCDO.get('hoc_year', 2023)}".freeze
 def main
   geojson = JSON.parse('{ "type": "FeatureCollection", "features": [] }')
 
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data]) rescue {}
+
+    puts 'Next'
+    puts data
+    puts processed_data
     # ***
     # If these rules are changed and we wish to display a broader set of events,
     # update our JS code (hoc_events_map.js) that visualizes these events
@@ -40,6 +44,8 @@ def main
     # don't need a city so we can show events like the Cocos Keeling Islands.
     next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
     next if form[:review] != "approved" && processed_data['location_city_s'].nil?
+
+    puts 'Not filtered out'
 
     organization_name =
       if !processed_data['nces_school_name_s'].to_s.strip.empty?
