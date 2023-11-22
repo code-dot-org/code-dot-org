@@ -1,5 +1,6 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
 import i18n from '@cdo/locale';
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 
 export const blocks = {
   // Called by block_utils when creating Sprite Lab blocks with mini-toolboxes.
@@ -279,4 +280,93 @@ export const blocks = {
     };
     generator.sprite_parameter_get = generator.variables_get;
   },
+
+  // All logic for behavior picker custom input type
+  behaviorPicker() {
+    return {
+      addInput(blockly, block, inputConfig, currentInputRow) {
+        currentInputRow
+          .appendField(inputConfig.label)
+          .appendField(
+            new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
+            inputConfig.name
+          );
+        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+        if (
+          window.appOptions && // global appOptions is not available on level edit page
+          appOptions.level.toolbox &&
+          !appOptions.readonlyWorkspace &&
+          !Blockly.hasCategories
+        ) {
+          allowBehaviorEditing = false;
+        }
+        if (allowBehaviorEditing) {
+          const editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+          Blockly.cdoUtils.bindBrowserEvent(
+            editLabel.fieldGroup_,
+            'mousedown',
+            block,
+            this.openEditor
+          );
+          currentInputRow.appendField(editLabel);
+        }
+      },
+      generateCode(block, arg) {
+        const invalidBehavior =
+          block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
+        const behaviorId = Blockly.JavaScript.variableDB_?.getName(
+          block.getFieldValue(arg.name),
+          'PROCEDURE'
+        );
+        if (invalidBehavior) {
+          console.warn('No behaviors available');
+          return undefined;
+        } else {
+          return `new Behavior(${behaviorId}, [])`;
+        }
+      },
+      openEditor(e) {
+        e.stopPropagation();
+        if (this.getFieldValue('BEHAVIOR') === NO_OPTIONS_MESSAGE) {
+          Blockly.behaviorEditor.openWithNewFunction();
+        } else {
+          Blockly.behaviorEditor.openEditorForFunction(
+            this,
+            this.getFieldValue('BEHAVIOR')
+          );
+        }
+      },
+    };
+  },
 };
+
+// HELPERS
+
+// Get a list of behavior options for a dropdown field, based on
+// blocks found on the main workspace.
+function getAllBehaviors() {
+  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+  const noBehaviorLabel = allowBehaviorEditing
+    ? `${i18n.createBlocklyBehavior()}\u2026`
+    : i18n.behaviorsNotFound();
+  const behaviors = [];
+  Blockly.mainBlockSpace?.getTopBlocks().forEach(function (block) {
+    if (
+      block.type === 'behavior_definition' &&
+      block.getProcedureInfo()?.name &&
+      block.getProcedureInfo()?.id
+    ) {
+      const newOption = [
+        block.getProcedureInfo().name,
+        block.getProcedureInfo().id,
+      ];
+      behaviors.push(newOption);
+    }
+  });
+  behaviors.sort();
+  // Add a "Create a behavior" or "No behaviors found" option
+  if (allowBehaviorEditing || behaviors.length === 0) {
+    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+  }
+  return behaviors;
+}
