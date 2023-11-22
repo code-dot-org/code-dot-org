@@ -115,6 +115,27 @@ ur:
             MOVES.Kick: ستارہ
             MOVES.ThisOrThat: یہ یا وہ
             MOVES.Rest: کوئی نہيں
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} {MOVE} {DIR} ہمیشہ کیلئے کریں"
+        options:
+          GROUP:
+            '"CAT"': بلیاں
+            '"SLOTH"': سلاتھ
+          MOVE:
+            MOVES.Roll: جسم گول کرنا
+            MOVES.ClapHigh: اوپر ہاتھ تالی بجانا
+            MOVES.Dab: ڈیب
+            MOVES.DoubleJam: دوگنا کریں
+            MOVES.Drop: چھوڑیں
+            MOVES.Floss: فلاس
+            MOVES.Fresh: تازہ
+            MOVES.Clown: گنگنم
+            MOVES.Kick: ستارہ
+            MOVES.ThisOrThat: یہ یا وہ
+            MOVES.Rest: کوئی نہيں
+            '"next"': "(اگلا)"
+            '"prev"': "(پچھلا)"
+            '"rand"': "(بے ترتیبانہ)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} کو ہمیشہ کیلئے کریں"
         options:
@@ -577,8 +598,8 @@ ur:
           EFFECT:
             '"none"': کوئی نہيں
             '"rand"': "(بے ترتیبانہ)"
-            '"circles"': دائرے
             '"quads"': زاویے
+            '"circles"': دائرے
             '"color_cycle"': رنگ
             '"diamonds"': ہیرے
             '"disco_ball"': ڈسکو بال
@@ -594,11 +615,11 @@ ur:
             '"ripples"': ریپلز
             '"snowflakes"': برف
             '"text"': گانا کے نام
-            '"squiggles"': سکویگلز
             '"galaxy"': جگہ
             '"sparkles"': پھلجھڑیاں
             '"spiral"': مرغولہ
             '"disco"': مربعے
+            '"squiggles"': سکویگلز
             '"starburst"': اسٹاربسٹ
             '"stars"': ستارہ
             '"music_wave"': لہریں
@@ -1651,6 +1672,12 @@ ur:
         text: Y کے ہم آہنگ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ٹھوس
+            '"liquid"': مائع
+            '"gas"': گیس
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

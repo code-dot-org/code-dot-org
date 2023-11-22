@@ -21,12 +21,14 @@ class DanceVisualizationColumn extends React.Component {
     levelIsRunning: PropTypes.bool,
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
+    unitId: PropTypes.number,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
     currentAiModalField: PropTypes.object,
     resetProgram: PropTypes.func.isRequired,
+    playSound: PropTypes.func.isRequired,
   };
 
   state = {
@@ -51,7 +53,7 @@ class DanceVisualizationColumn extends React.Component {
   }
 
   render() {
-    const {levelIsRunning} = this.props;
+    const {levelIsRunning, playSound} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -71,7 +73,10 @@ class DanceVisualizationColumn extends React.Component {
         )}
         {(this.props.over21 || this.props.userType === 'teacher') &&
           cookies.get('HourOfCodeGuideEmailDialogSeen') !== 'true' && (
-            <HourOfCodeGuideEmailDialog isSignedIn={isSignedIn} />
+            <HourOfCodeGuideEmailDialog
+              isSignedIn={isSignedIn}
+              unitId={this.props.unitId}
+            />
           )}
         <div style={{maxWidth: MAX_GAME_WIDTH}}>
           {!this.props.isShareView && (
@@ -107,7 +112,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && <DanceAiModal />}
+          {this.props.currentAiModalField && (
+            <DanceAiModal playSound={playSound} />
+          )}
         </div>
       </div>
     );
@@ -139,6 +146,7 @@ const styles = {
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
+  unitId: state.pageConstants.serverScriptId,
   songData: state.dance.songData,
   selectedSong: state.dance.selectedSong,
   userType: state.currentUser.userType,

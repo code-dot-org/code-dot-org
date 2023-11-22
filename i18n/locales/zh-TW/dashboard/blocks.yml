@@ -24,6 +24,8 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}生成{VALUE}效果"
       Dancelab_alternateMoves:
         text: |-
           群組 {GROUP} 每 {N} 小節交替
@@ -120,6 +122,31 @@ zh-TW:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: 無
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: 群組 {GROUP} 重複執行 {MOVE} {DIR} 無限次
+        options:
+          GROUP:
+            '"CAT"': 全部小貓
+            '"SLOTH"': 樹懶
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: DAB
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: 無
+            '"next"': 下一個
+            '"prev"': 上一個
+            '"rand"': 隨機
           DIR:
             '1': "→"
             "-1": "←"
@@ -601,13 +628,15 @@ zh-TW:
           EFFECT:
             '"none"': 無
             '"rand"': 隨機
-            '"circles"': 隧道
             '"quads"': 角
+            '"blooming_petals"': 盛開的花瓣
+            '"circles"': 隧道
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
             '"fireworks"': 煙火
             '"flowers"': 花朵
+            '"frosted_grid"': 磨砂網格
             '"growing_stars"': 星星
             '"higher_power"': Higher Power
             '"swirl"': 催眠
@@ -619,26 +648,36 @@ zh-TW:
             '"ripples"': 漣漪
             '"snowflakes"': 雪球
             '"text"': 歌曲標題
-            '"squiggles"': 蜿曲線段
             '"galaxy"': 太空
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 正方形
+            '"squiggles"': 蜿曲線段
             '"starburst"': 星爆
             '"stars"': 星星
             '"music_wave"': 音浪
           PALETTE:
+            '"autumn"': 秋天
             '"rave"': 黑白
             '"cool"': 藍調
             '"electronic"': 電子
+            '"grayscale"': 灰度
             '"iceCream"': 冰淇淋
             '"default"': 光亮
             '"neon"': 霓虹
             '"ocean"': 海洋
             '"rainbow"': 彩虹
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"sunrise"': 日出
+            '"sunset"': 日落
             '"tropical"': 熱帶
+            '"twinkling"': 閃爍
             '"vintage"': 復古
             '"warm"': 紅色
+            '"winter"': 冬天
       Dancelab_setDanceSpeed:
         text: 角色 {SPRITE} 跳舞速度設為 {SPEED}
         options:
@@ -1723,6 +1762,12 @@ zh-TW:
         text: y 座標 {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑動到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': 固體
+            '"liquid"': 液體
+            '"gas"': 氣體
       KatiesBlocks_tumbling:
         text: 翻滾
       Mikelab_addBehaviorSimple:

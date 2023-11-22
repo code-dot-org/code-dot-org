@@ -5479,7 +5479,7 @@
         },
         "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
           "name": "تلميحات مفيدة للمعلمين والمتعلمين",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+          "url": "https://docs.google.com/presentation/d/1yRixrbn4b4ekljh1xT7tD4b8OM7qnUE-sLf83z8eLK4/preview"
         },
         "resource_list_for_all_lessons/csc-adaptations/2023": {
           "name": "قائمة المصادر لجميع الدروس",
@@ -5522,7 +5522,7 @@
         },
         "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
           "name": "تلميحات مفيدة للمعلمين والمتعلمين",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1yRixrbn4b4ekljh1xT7tD4b8OM7qnUE-sLf83z8eLK4/preview",
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-bookcovers/2023": {
@@ -5617,7 +5617,7 @@
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
           "name": "تلميحات مفيدة للمعلمين والمتعلمين\t",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1yRixrbn4b4ekljh1xT7tD4b8OM7qnUE-sLf83z8eLK4/preview",
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
@@ -5657,7 +5657,7 @@
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
           "name": "تلميحات مفيدة للمعلمين والمتعلمين\t",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1yRixrbn4b4ekljh1xT7tD4b8OM7qnUE-sLf83z8eLK4/preview",
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
@@ -5913,7 +5913,7 @@
         },
         "helpful_hints_for_teachers_and_learners/poetry/2023": {
           "name": "تلميحات مفيدة للمعلمين والمتعلمين",
-          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1yRixrbn4b4ekljh1xT7tD4b8OM7qnUE-sLf83z8eLK4/preview",
           "type": "مصدر"
         },
         "resource_list_for_all_lessons/poetry/2023": {
@@ -9140,6 +9140,12 @@
         "project_guide_-_interactive_pet/csd/2023": {
           "name": "دليل المشروع - الحيوان التفاعلي الأليف",
           "url": "https://docs.google.com/document/d/1X0NCzO8s-6kxCgGT5wC8GXkGJrVeaW7F4_zyImbjq9s/edit#"
+        },
+        "the_problem_solving_process_with_data/csd/2023": {
+          "name": "عملية حل المشكلات باستخدام البيانات"
+        },
+        "the_problem_solving_process_with_data_1/csd/2023": {
+          "name": "عملية حل المشكلات باستخدام البيانات"
         }
       }
     }

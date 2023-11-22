@@ -105,6 +105,27 @@ el:
             MOVES.Kick: Αστέρι
             MOVES.ThisOrThat: Αυτό ή Εκείνο
             MOVES.Rest: Κανένα
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} κάντε {MOVE} {DIR} για πάντα"
+        options:
+          GROUP:
+            '"CAT"': όλες οι γάτες
+            '"SLOTH"': βραδύποδες
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Dab: Νταμπ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Drop: Πέσιμο
+            MOVES.Floss: Φλος
+            MOVES.Fresh: Φρέσκο
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Αστέρι
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+            MOVES.Rest: Κανένα
+            '"next"': "(Επόμενο)"
+            '"prev"': "(Προηγούμενο)"
+            '"rand"': "(Τυχαίο)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} κάνε {MOVE} {DIR} για πάντα"
         options:
@@ -565,8 +586,8 @@ el:
           EFFECT:
             '"none"': Κανένα
             '"rand"': "(Τυχαίο)"
-            '"circles"': Σήραγγα
             '"quads"': Γωνίες
+            '"circles"': Σήραγγα
             '"color_cycle"': Χρώματα
             '"diamonds"': Διαμάντια
             '"disco_ball"': Ντισκομπάλα
@@ -582,11 +603,11 @@ el:
             '"ripples"': Πτυχώσεις
             '"snowflakes"': Χιόνι
             '"text"': Τίτλος τραγουδιού
-            '"squiggles"': Μουτζούρες
             '"galaxy"': Διάστημα
             '"sparkles"': Αστράκια
             '"spiral"': Σπιράλ
             '"disco"': Τετράγωνα
+            '"squiggles"': Μουτζούρες
             '"starburst"': Οδοντωτός σύνδεσμος
             '"stars"': Αστέρια
             '"music_wave"': Κύματα
@@ -1534,6 +1555,12 @@ el:
         text: x συντεταγμένη του {SPRITE}
       gamelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': στερεό
+            '"liquid"': υγρό
+            '"gas"': αέριο
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:

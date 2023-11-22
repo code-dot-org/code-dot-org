@@ -32,6 +32,8 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} प्रभाव पैदा करें"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -108,6 +110,27 @@ hi:
             '"SLOTH"': निष्क्रियता
             '"UNICORN"': गेंडा
             sprites: सभी
+          MOVE:
+            '"next"': "(अगला)"
+            '"prev"': "(पिछला)"
+            '"rand"': "(बेतरतीब)"
+            MOVES.ClapHigh: ज़ोर से ताली बजाएं
+            MOVES.Clown: गंगनम
+            MOVES.Dab: हाथ फेरें
+            MOVES.DoubleJam: डबल डाउन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजा
+            MOVES.Kick: स्टार
+            MOVES.Rest: कोई नहीं
+            MOVES.Roll: बॉडी रोल
+            MOVES.ThisOrThat: यह या वह
+        text: "{GROUP} हमेशा {MOVE} {DIR} करता है"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': सभी बिल्लियां
+            '"SLOTH"': निष्क्रियता
           MOVE:
             '"next"': "(अगला)"
             '"prev"': "(पिछला)"
@@ -581,6 +604,7 @@ hi:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': खिलती पंखुड़ियाँ
             '"circles"': चक्र
             '"color_cycle"': रंग
             '"diamonds"': हीरा
@@ -588,6 +612,7 @@ hi:
             '"disco_ball"': डिस्को बॉल
             '"fireworks"': पटाखे
             '"flowers"': फूल
+            '"frosted_grid"': फ्रॉस्टेड ग्रिड
             '"galaxy"': खाली स्थान
             '"growing_stars"': उभरते तारे
             '"kaleidoscope"': कैलाइडोस्कोप
@@ -609,17 +634,27 @@ hi:
             '"swirl"': हिप्नो
             '"text"': गाने के नाम
           PALETTE:
+            '"autumn"': पतझड़
             '"cool"': शांत!
             '"default"': प्रकाश
             '"electronic"': इलेक्ट्रोनिक
+            '"grayscale"': धूसर
             '"iceCream"': आईस क्रीम
             '"neon"': निऑन
             '"ocean"': समुद्र
             '"rainbow"': इंद्रधनुष
             '"rave"': काला व सफेद
+            '"roses"': गुलाब के फूल
+            '"sky"': आसमान
+            '"spring"': बसंत
+            '"summer"': ग्रीष्म ऋतु
+            '"sunrise"': सूर्योदय
+            '"sunset"': सूर्यास्त
             '"tropical"': उष्णकटिबंधी
+            '"twinkling"': टिमटिमाहट
             '"vintage"': विंटेज
             '"warm"': गरम
+            '"winter"': शीतऋतु
         text: पृष्ठभूमि प्रभाव सेट करें {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
@@ -1057,6 +1092,15 @@ hi:
         text: "{SPRITE} {TEXT1} बोलता है"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': गैस
+            '"liquid"': द्रव
+            '"solid"': ठोस
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:

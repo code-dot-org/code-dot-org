@@ -668,6 +668,19 @@
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "מציאת טעויות"
+        },
+        "code/dance-ai/2023": {
+          "word": "קוד"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "בינה מלאכותית (AI).",
+          "definition": "תוכנת מחשב שמקבלת נתונים, לומדת מהם דפוסים ומקבלת החלטות על סמך מה שלמדה."
+        },
+        "program/dance-ai/2023": {
+          "definition": "אלגוריתם שתוכנת להיות מופעל על ידי מכונה."
+        },
+        "code/flappy/unversioned": {
+          "word": "קוד"
         }
       }
     }

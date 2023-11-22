@@ -123,6 +123,27 @@ es:
             MOVES.Roll: Vuelta completa
             MOVES.ThisOrThat: Esto o aquello
         text: "{GROUP} hace {MOVE} {DIR} para siempre"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': perezas
+          MOVE:
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Clown: Clown
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Kick: Estrella
+            MOVES.Rest: Ninguna
+            MOVES.Roll: Vuelta completa
+            MOVES.ThisOrThat: Esto o aquello
+        text: "{GROUP} hace {MOVE} {DIR} para siempre"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1085,6 +1106,15 @@ es:
         text: "{SPRITE}dice{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': líquido
+            '"solid"': sólido
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: cayendo
       Mikelab_addBehaviorSimple:

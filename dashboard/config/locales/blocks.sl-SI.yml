@@ -97,6 +97,16 @@ sl:
             MOVES.ClapHigh: Visoko ploskajte
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': muce
+          MOVE:
+            '"next"': "(Naslednja)"
+            '"prev"': "(Prejšnja)"
+            MOVES.ClapHigh: Visoko ploskajte
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -471,6 +481,8 @@ sl:
             '"rain"': dež
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}reci{TEXT1}"
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:

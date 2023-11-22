@@ -117,6 +117,27 @@ th:
             MOVES.Kick: สตาร์
             MOVES.ThisOrThat: ท่าเต้น This or That
             MOVES.Rest: ไม่มี
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
+        options:
+          GROUP:
+            '"CAT"': แมวทั้งหมด
+            '"SLOTH"': สล็อต
+          MOVE:
+            MOVES.Roll: บอดี้โรล
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Clown: กังนัม
+            MOVES.Kick: สตาร์
+            MOVES.ThisOrThat: ท่าเต้น This or That
+            MOVES.Rest: ไม่มี
+            '"next"': "(ถัดไป)"
+            '"prev"': "(ก่อนหน้า)"
+            '"rand"': "(สุ่ม)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} ทำ {MOVE} {DIR} ตลอดไป"
         options:
@@ -586,8 +607,8 @@ th:
           EFFECT:
             '"none"': ไม่มี
             '"rand"': "(สุ่ม)"
-            '"circles"': อุโมงค์
             '"quads"': มุม
+            '"circles"': อุโมงค์
             '"color_cycle"': สี
             '"diamonds"': เพชร
             '"disco_ball"': บอลดิสโก้
@@ -603,11 +624,11 @@ th:
             '"ripples"': ระลอกคลื่น
             '"snowflakes"': หิมะ
             '"text"': ชื่อเพลง
-            '"squiggles"': เส้นขะยุกขะยิก
             '"galaxy"': พื้นที่
             '"sparkles"': ประกาย
             '"spiral"': วงก้นหอย
             '"disco"': สี่เหลี่ยมจัตุรัส
+            '"squiggles"': เส้นขะยุกขะยิก
             '"starburst"': ดาวกระจาย
             '"stars"': ดาว
             '"music_wave"': คลื่น
@@ -1668,6 +1689,12 @@ th:
         text: พิกัด y ของ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ของแข็ง
+            '"liquid"': ของเหลว
+            '"gas"': แก๊ส
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

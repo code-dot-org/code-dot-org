@@ -15,6 +15,7 @@ class InlineHint extends React.Component {
   static propTypes = {
     block: PropTypes.object, // XML
     borderColor: PropTypes.string,
+    backgroundColor: PropTypes.string,
     markdown: PropTypes.string.isRequired,
     video: videoDataShape,
     ttsUrl: PropTypes.string,
@@ -48,6 +49,7 @@ class InlineHint extends React.Component {
     return (
       <ChatBubble
         borderColor={this.props.borderColor}
+        backgroundColor={this.props.backgroundColor}
         textToSpeechEnabled={this.props.textToSpeechEnabled}
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}

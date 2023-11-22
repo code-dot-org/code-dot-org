@@ -4341,3 +4341,33 @@ sk:
             -   dozviete sa viac o projektoch na konci kapitoly.
 
             **Odporúčaný čas:** 30 minút
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Príprava na výučbu vývoja webových stránok'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Príprava na výučbu interaktívnych animácií a hier
+          description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+          student_description: |-
+            Tento odborný vzdelávací modul je navrhnutý tak, aby vám pomohol pripraviť sa na výučbu učebného celku Interaktívne animácie a hry Code.org.
+
+            **V tomto odbornom vzdelávacom module:**
+
+            -   získate základy interaktívnych animácií a hier.
+            -   precvičíte si kľúčové pojmy zahrnuté v učebnom celku.
+            -   zapojíte sa do Game Lab.
+            -   dozviete sa viac o projektoch na konci kapitoly.
+
+            **Odporúčaný čas:** 120 minút
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modul 4: Príprava na výučbu procesu dizajnu'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Príprava na výučbu údajov a spoločnosti'

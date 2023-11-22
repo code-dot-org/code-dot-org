@@ -115,6 +115,27 @@ vi:
             MOVES.Kick: Ngôi sao
             MOVES.ThisOrThat: Đây hoặc đó
             MOVES.Rest: Không có
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} {MOVE} {DIR} mãi mãi"
+        options:
+          GROUP:
+            '"CAT"': mèo
+            '"SLOTH"': con lười
+          MOVE:
+            MOVES.Roll: Cuộn người
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Dab: Đáp
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
+            MOVES.Fresh: Tươi
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Ngôi sao
+            MOVES.ThisOrThat: Đây hoặc đó
+            MOVES.Rest: Không có
+            '"next"': "(Tiếp theo)"
+            '"prev"': "(Trước)"
+            '"rand"': "(Ngẫu nhiên)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} {MOVE} {DIR} mãi mãi"
         options:
@@ -585,8 +606,8 @@ vi:
           EFFECT:
             '"none"': Không có
             '"rand"': "(Ngẫu nhiên)"
-            '"circles"': Đường hầm
             '"quads"': Góc
+            '"circles"': Đường hầm
             '"color_cycle"': Màu sắc
             '"diamonds"': Kim cương
             '"disco_ball"': Bóng Disco
@@ -603,11 +624,11 @@ vi:
             '"ripples"': Gợn sóng
             '"snowflakes"': Tuyết
             '"text"': Tiêu đề bài hát
-            '"squiggles"': Nét nguệch ngoạc
             '"galaxy"': Không gian
             '"sparkles"': Lấp lánh
             '"spiral"': Xoắn ốc
             '"disco"': Hình vuông
+            '"squiggles"': Nét nguệch ngoạc
             '"starburst"': Lóe sáng
             '"stars"': Sao
           PALETTE:
@@ -1701,6 +1722,12 @@ vi:
         text: tọa độ y của nhân vật {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': rắn
+            '"liquid"': lỏng
+            '"gas"': khí
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

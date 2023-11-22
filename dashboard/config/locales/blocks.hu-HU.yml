@@ -114,6 +114,27 @@ hu:
             MOVES.Roll: Csípőkörzés
             MOVES.ThisOrThat: Ez vagy az
         text: "{GROUP} csináld {MOVE} {DIR} örökké"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': összes macska
+            '"SLOTH"': lajhárok
+          MOVE:
+            '"next"': "(Következő)"
+            '"prev"': "(Előző)"
+            '"rand"': "(Véletlen)"
+            MOVES.ClapHigh: Taps fent
+            MOVES.Clown: Gangnam
+            MOVES.Dab: dab
+            MOVES.DoubleJam: kétszer lenn
+            MOVES.Drop: Spárga
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Csillag
+            MOVES.Rest: Egyik sem
+            MOVES.Roll: Csípőkörzés
+            MOVES.ThisOrThat: Ez vagy az
+        text: "{GROUP} csináld {MOVE} {DIR} örökké"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1047,6 +1068,12 @@ hu:
         text: "{SPRITE} mondja: {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gáznemű
+            '"liquid"': folyékony
+            '"solid"': szilárd
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

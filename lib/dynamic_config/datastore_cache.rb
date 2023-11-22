@@ -9,10 +9,10 @@ require 'honeybadger/ruby'
 #      settings, and will only be read from on initialization and when a
 #      configuration value is updated.
 #
-#   2. The shared cache, which in production is ElastiCache. This is a middle
-#      ground shared between the frontend processes which will be kept up to
-#      date with the content in the datastore and from which processes will
-#      fetch updates on a configurable schedule.
+#   2. The shared cache, which in production is ElastiCache using Memcached.
+#      This is a middle ground shared between the frontend processes which will
+#      be kept up to date with the content in the datastore and from which
+#      processes will fetch updates on a configurable schedule.
 #
 #   3. The local in-memory cache, which in all environments is a simple hash.
 #      Each frontend processes will reference its local cache to serve the
@@ -100,7 +100,7 @@ class DatastoreCache
   # Updates the local cache with the latest values from the shared cache. Can
   # be called regularly, but only for a small subset of user requests.
   def update_local_cache
-    @local_cache = CDO.shared_cache.read(shared_cache_key)
+    @local_cache = CDO.shared_cache.read(shared_cache_key) || {}
     @local_cache_last_refreshed_at = Time.now
   end
 end

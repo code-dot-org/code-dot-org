@@ -113,6 +113,27 @@ cs:
             MOVES.Roll: Vlna tělem
             MOVES.ThisOrThat: Toto nebo ono
         text: "{GROUP} dělá {MOVE} {DIR} navždy"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': všechny kočky
+            '"SLOTH"': lenochodové
+          MOVE:
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodně)"
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Kick: Kopou
+            MOVES.Rest: Žádný
+            MOVES.Roll: Vlna tělem
+            MOVES.ThisOrThat: Toto nebo ono
+        text: "{GROUP} dělá {MOVE} {DIR} navždy"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1047,6 +1068,12 @@ cs:
         text: "{SPRITE}řekni{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plyn
+            '"liquid"': kapalina
+            '"solid"': pevná látka
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

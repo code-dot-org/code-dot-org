@@ -105,6 +105,27 @@ el:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: Αυτό ή Εκείνο
         text: "{GROUP} κάντε {MOVE} {DIR} για πάντα"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': όλες οι γάτες
+            '"SLOTH"': βραδύποδες
+          MOVE:
+            '"next"': "(Επόμενο)"
+            '"prev"': "(Προηγούμενο)"
+            '"rand"': "(Τυχαίο)"
+            MOVES.ClapHigh: Παλαμάκια Ψηλά
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Νταμπ
+            MOVES.DoubleJam: Διπλό κάτω
+            MOVES.Drop: Πέσιμο
+            MOVES.Floss: Φλος
+            MOVES.Fresh: Φρέσκο
+            MOVES.Kick: Αστέρι
+            MOVES.Rest: Κανένα
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Αυτό ή Εκείνο
+        text: "{GROUP} κάντε {MOVE} {DIR} για πάντα"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1027,6 +1048,12 @@ el:
         text: αντιπροσωπεύστε {NUM} νέος {ANIMATION_NAME} ξωτικά [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}πες{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': αέριο
+            '"liquid"': υγρό
+            '"solid"': στερεό
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:

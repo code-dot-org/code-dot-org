@@ -52,7 +52,7 @@ fr:
         age: 'Age'
         gender: 'Sexe'
         edit_header: 'Modifier les détails du compte'
-        ai_settings_header: 'Paramètres d''AI '
+        ai_settings_header: 'Paramètres IA'
         finish_sign_up_header: 'Terminez la création de votre compte'
         finish_sign_up_header_error: 'Veuillez corriger les erreurs suivantes:'
         finish_sign_up_subheader: 'Remplissez les informations suivantes pour finir de créer votre compte Code.org pour <strong>%{email}</strong>.'
@@ -1317,4 +1317,3 @@ fr:
     binary: "Binaire"
     hexadecimal: "Hexadécimal"
     pixel_format_header: "Format de pixels"
-

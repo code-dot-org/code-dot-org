@@ -51,6 +51,10 @@ kn:
             sprites: ಎಲ್ಲ
           MOVE:
             MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: ಯಾವುದೂ ಅಲ್ಲ
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -346,6 +350,12 @@ kn:
         text: "{SPRITE}ಹೇಳಿ{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': ಅನಿಲ
+            '"liquid"': ಲಿಕ್ವಿಡ್
+            '"solid"': ಸಾಲಿಡ್
       KatiesBlocks_tumbling:
         text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:

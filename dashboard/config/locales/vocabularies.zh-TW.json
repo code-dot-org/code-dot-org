@@ -2323,6 +2323,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "無損壓縮",
           "definition": "一種資料壓縮演算法，可讓壓縮資料完美重建成原始資料。最常用於文字壓縮（例如 .zip 壓縮）"
+        },
+        "code/dance-ai/2023": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "event/dance-ai/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/dance-ai/2023": {
+          "word": "程式",
+          "definition": "一種演算法，編碼為可以由電腦運行的東西。"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "人工智慧（AI）",
+          "definition": " 一種計算機程序，可以接收數據並從數據中學習模式，然後根據它所學到的內容做出決策。"
         }
       }
     }

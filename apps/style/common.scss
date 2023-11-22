@@ -87,14 +87,11 @@ em strong {
   clear: both;
 }
 
-html[dir="rtl"] #visualizationColumn {
-  right: 0;
-}
-
 #visualizationColumn {
   position: relative;
   top: 0;
-  left: 0;
+  left: auto;
+  right: auto;
   overflow: visible;
 }
 

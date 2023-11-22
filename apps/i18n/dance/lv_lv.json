@@ -1,4 +1,8 @@
 {
+  "danceAiModalBack": "Atpakaļ",
+  "danceAiModalClose": "Aizvērt",
+  "danceAiModalCodeButton": "Kods",
+  "danceAiModalExplanationButton": "Uzzini vairāk",
   "danceFeedbackKeepCoding": "Jūs izmantojat visus nepieciešamos bloka veidus, bet ne pareizā veidā.",
   "danceFeedbackNeedDifferentDance": "Izmanto citu deju.",
   "danceFeedbackNeedEveryTwoMeasures": "Pārliecinies, vai izmanto bloku 'katras 2 ritma kustības' (every 2 measures)",

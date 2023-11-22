@@ -109,6 +109,27 @@ uz:
             MOVES.Roll: dumalash
             MOVES.ThisOrThat: U yoki bu
         text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"SLOTH"': yalqovlar
+          MOVE:
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.Rest: Hech biri
+            MOVES.Roll: dumalash
+            MOVES.ThisOrThat: U yoki bu
+        text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1041,6 +1062,12 @@ uz:
         text: "{NUM} ta yangi {ANIMATION_NAME} animatsiya [BEHAVIOR][2] ifodalang"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}{TEXT1} deydi"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': suyuq
+            '"solid"': qattiq
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:

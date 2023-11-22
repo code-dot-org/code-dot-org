@@ -117,6 +117,27 @@ fil:
             MOVES.Kick: Bituin
             MOVES.ThisOrThat: Ito o Iyan
             MOVES.Rest: Wala
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ang {MOVE} {DIR} magpakailanman"
+        options:
+          GROUP:
+            '"CAT"': mga Pusa
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Pumalakpak sa Itaas
+            MOVES.Dab: Mag-dab
+            MOVES.DoubleJam: Doble Pababa
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Sariwa
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Bituin
+            MOVES.ThisOrThat: Ito o Iyan
+            MOVES.Rest: Wala
+            '"next"': "(Kasunod)"
+            '"prev"': "(Nauna)"
+            '"rand"': "(Random)"
       Dancelab_changeMoveLR:
         text: Gagawin ng {SPRITE} ang {MOVE} {DIR} magpakailanman
         options:
@@ -605,8 +626,8 @@ fil:
           EFFECT:
             '"none"': Wala
             '"rand"': "(Random)"
-            '"circles"': Mga bilog
             '"quads"': Mga Anggulo
+            '"circles"': Mga bilog
             '"color_cycle"': Mga Kulay
             '"diamonds"': Diyamante
             '"disco_ball"': Disco Ball
@@ -622,10 +643,10 @@ fil:
             '"ripples"': Ripples
             '"snowflakes"': Niyebe
             '"text"': Mga Pangalan ng Awit
-            '"squiggles"': Squiggles
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Mga kwadrado
+            '"squiggles"': Squiggles
             '"starburst"': Starburst
             '"stars"': Mga Bituin
             '"music_wave"': Mga Alon
@@ -1733,6 +1754,12 @@ fil:
         text: y ang mga {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': matibay
+            '"liquid"': likido
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:

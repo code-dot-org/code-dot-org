@@ -59,7 +59,7 @@ export const initSongs = createAsyncThunk(
       };
       onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
-      onSongUnavailable?: () => void;
+      onSongUnavailable?: (songId: string) => void;
     },
     {dispatch}
   ) => {
@@ -95,7 +95,7 @@ export const initSongs = createAsyncThunk(
       isSongDeprecated(selectSongOptions.selectedSong) &&
       onSongUnavailable
     ) {
-      onSongUnavailable();
+      onSongUnavailable(selectSongOptions.selectedSong);
     }
     const selectedSong = getSelectedSong(songManifest, selectSongOptions);
 

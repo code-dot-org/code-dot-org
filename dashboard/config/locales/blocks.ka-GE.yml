@@ -46,6 +46,10 @@ ka:
             sprites: ყველა
           MOVE:
             MOVES.Rest: არცერთი
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: არცერთი
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -502,6 +506,12 @@ ka:
         text: წარმოადგინეთ {NUM} ახალი {ANIMATION_NAME} სპრაიტები [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}თქვას{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': გაზი
+            '"liquid"': სითხე
+            '"solid"': მყარი
       Mikelab_addBehaviorSimple:
         text: სპრაიტი {SPRITE} იწყება {BEHAVIOR}
       Mikelab_changePropBy:

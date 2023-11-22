@@ -145,6 +145,27 @@ ca:
             MOVES.Kick: Estrella
             MOVES.ThisOrThat: Aquest o aquell
             MOVES.Rest: Cap
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fer {MOVE} {DIR} per sempre"
+        options:
+          GROUP:
+            '"CAT"': tots els gats
+            '"SLOTH"': peresosos
+          MOVE:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Deixar anar
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+            '"next"': "(Següent)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Aleatori)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} fer {MOVE} {DIR} per sempre"
         options:
@@ -611,8 +632,8 @@ ca:
           EFFECT:
             '"none"': Cap
             '"rand"': "(Aleatori)"
-            '"circles"': Túnel
             '"quads"': Angles
+            '"circles"': Túnel
             '"color_cycle"': Colors
             '"diamonds"': Diamants
             '"disco_ball"': Bola de discoteca
@@ -628,11 +649,11 @@ ca:
             '"ripples"': Ones
             '"snowflakes"': Neu
             '"text"': Títol de la cançó
-            '"squiggles"': Guixots
             '"galaxy"': Espai
             '"sparkles"': Guspires
             '"spiral"': Espiral
             '"disco"': Requadres
+            '"squiggles"': Guixots
             '"starburst"': esclat d'estrelles
             '"stars"': Estrelles
             '"music_wave"': Onades
@@ -1772,6 +1793,15 @@ ca:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sòlid
+            '"liquid"': líquid
+            '"gas"': gas
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} diu {SPEECH}"
         options:

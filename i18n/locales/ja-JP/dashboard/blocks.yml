@@ -33,6 +33,8 @@ ja:
             '0.75': 小
             '1.00': 普通
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}は{VALUE}エフェクトを生成"
       Dancelab_alternateMoves:
         text: |-
           {GROUP} は {MOVE1} と {MOVE2}
@@ -126,6 +128,27 @@ ja:
             MOVES.Kick: 星
             MOVES.ThisOrThat: ディス・オア・ザット
             MOVES.Rest: 設定なし
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} で実行 {MOVE} {DIR} ずっとくりかえす"
+        options:
+          GROUP:
+            '"CAT"': すべてのネコ
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: ボディロール
+            MOVES.ClapHigh: 手を高く上げてたたく
+            MOVES.Dab: ダブ
+            MOVES.DoubleJam: ダブルダウン
+            MOVES.Drop: ドロップ
+            MOVES.Floss: フロス
+            MOVES.Fresh: フレッシュ
+            MOVES.Clown: カンナム
+            MOVES.Kick: 星
+            MOVES.ThisOrThat: ディス・オア・ザット
+            MOVES.Rest: 設定なし
+            '"next"': "(次へ)"
+            '"prev"': "(前へ)"
+            '"rand"': "(ランダム)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} で実行 {MOVE} {DIR} ずっとくりかえす"
         options:
@@ -598,13 +621,15 @@ ja:
           EFFECT:
             '"none"': 設定なし
             '"rand"': "(ランダム)"
-            '"circles"': トンネル
             '"quads"': アングル
+            '"blooming_petals"': 花咲く花びら
+            '"circles"': トンネル
             '"color_cycle"': 色
             '"diamonds"': ダイヤモンド
             '"disco_ball"': ミラーボール
             '"fireworks"': 花火
             '"flowers"': フラワー
+            '"frosted_grid"': つや消しグリッド
             '"growing_stars"': 成長する星
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
@@ -615,26 +640,36 @@ ja:
             '"ripples"': さざ波
             '"snowflakes"': 雪
             '"text"': 曲名
-            '"squiggles"': 波線
             '"galaxy"': 宇宙
             '"sparkles"': きらめき
             '"spiral"': スパイラル
             '"disco"': 正方形
+            '"squiggles"': 波線
             '"starburst"': スターバースト
             '"stars"': 星
             '"music_wave"': 波
           PALETTE:
+            '"autumn"': 秋
             '"rave"': 白黒
             '"cool"': 青
             '"electronic"': エレクトロニクス
+            '"grayscale"': グレースケール
             '"iceCream"': アイスクリーム
             '"default"': 光
             '"neon"': ネオン
             '"ocean"': 海
             '"rainbow"': 虹
+            '"roses"': バラ
+            '"sky"': 空
+            '"spring"': 春
+            '"summer"': 夏
+            '"sunrise"': 日の出
+            '"sunset"': 日没
             '"tropical"': 熱帯
+            '"twinkling"': きらきら
             '"vintage"': ヴィンテージ
             '"warm"': 赤
+            '"winter"': 冬
       Dancelab_setDanceSpeed:
         text: "{SPRITE} のダンスの速さを {SPEED} に変更"
         options:
@@ -1723,6 +1758,15 @@ ja:
         text: y 座標 {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} が {LOCATION} へと進む"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           もし {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': 単色
+            '"liquid"': 液体
+            '"gas"': ガス
       KatiesBlocks_tumbling:
         text: ころがる
       Mikelab_addBehaviorSimple:

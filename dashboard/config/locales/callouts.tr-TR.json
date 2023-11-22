@@ -3212,6 +3212,26 @@
           "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
           "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Bu bloğu kullanın.",
+          "dance_callout_02": "\"A.I efekt oluştur\" bloğunu buraya ekleyin."
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Bu bloğu kullanın.",
+          "dance_callout_02": "Dans et hareketi ekleyin."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Buraya tıklayın."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Buradan başlayın."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Bu bloğu kullanın."
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Bu bloğu kullanın."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın.",
           "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın."

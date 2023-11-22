@@ -7482,6 +7482,9 @@
         },
         "vigenere/Vigenere": {
           "name": "Vigenere"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Potańcówka: edycja AI"
         }
       }
     }

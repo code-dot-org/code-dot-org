@@ -119,6 +119,27 @@ ru:
             MOVES.Kick: Звезда
             MOVES.ThisOrThat: То или это
             MOVES.Rest: Нет
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} делать {MOVE} {DIR} всегда"
+        options:
+          GROUP:
+            '"CAT"': кошки
+            '"SLOTH"': ленивцы
+          MOVE:
+            MOVES.Roll: Массажер
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Опустить
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Звезда
+            MOVES.ThisOrThat: То или это
+            MOVES.Rest: Нет
+            '"next"': "(Следующий)"
+            '"prev"': "(Предыдущий)"
+            '"rand"': "(Случайный)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} делать {MOVE} {DIR} всегда"
         options:
@@ -610,8 +631,8 @@ ru:
           EFFECT:
             '"none"': Нет
             '"rand"': "(Случайный)"
-            '"circles"': Туннель
             '"quads"': Углы
+            '"circles"': Туннель
             '"color_cycle"': Цвета
             '"diamonds"': Алмазы
             '"disco_ball"': Зеркальный шар
@@ -628,11 +649,11 @@ ru:
             '"ripples"': Круги на воде
             '"snowflakes"': Снег
             '"text"': Название песни
-            '"squiggles"': Завитки
             '"galaxy"': Космос
             '"sparkles"': Блестки
             '"spiral"': Спираль
             '"disco"': Квадраты
+            '"squiggles"': Завитки
             '"starburst"': Вспышка звёздообразования
             '"stars"': Звезды
             '"music_wave"': Волны
@@ -1754,6 +1775,12 @@ ru:
         text: y координата {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': твердый
+            '"liquid"': жидкий
+            '"gas"': газ
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

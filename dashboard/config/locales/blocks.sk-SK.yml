@@ -138,6 +138,27 @@ sk:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: This or That
         text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačiek
+            '"SLOTH"': leňochodi
+          MOVE:
+            '"next"': "(Ďalší)"
+            '"prev"': "(Predchádzajúci)"
+            '"rand"': "(Náhodný)"
+            MOVES.ClapHigh: Vysoký Tlesk
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Špagát
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Žiadne
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+        text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1077,6 +1098,15 @@ sk:
         text: "{SPRITE}hovorí{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plyn
+            '"liquid"': kvapalina
+            '"solid"': plný
+        text: |-
+          ak {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
       KatiesBlocks_spriteBirdSay:

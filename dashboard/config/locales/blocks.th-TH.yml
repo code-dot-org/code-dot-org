@@ -117,6 +117,27 @@ th:
             MOVES.Roll: บอดี้โรล
             MOVES.ThisOrThat: ท่าเต้น This or That
         text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': แมวทั้งหมด
+            '"SLOTH"': สล็อต
+          MOVE:
+            '"next"': "(ถัดไป)"
+            '"prev"': "(ก่อนหน้า)"
+            '"rand"': "(สุ่ม)"
+            MOVES.ClapHigh: ปรบมือสูง
+            MOVES.Clown: กังนัม
+            MOVES.Dab: ตบเบา ๆ
+            MOVES.DoubleJam: ดับเบิ้ลดาวน์
+            MOVES.Drop: ทิ้งตัว
+            MOVES.Floss: ท่าฟลอส
+            MOVES.Fresh: ท่าเต้นเฟรช
+            MOVES.Kick: สตาร์
+            MOVES.Rest: ไม่มี
+            MOVES.Roll: บอดี้โรล
+            MOVES.ThisOrThat: ท่าเต้น This or That
+        text: "{GROUP} ทำ {MOVE} {DIR} ตลอดไป"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1053,6 +1074,12 @@ th:
         text: "{SPRITE}พูด{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} พุ่งไปที่ {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': แก๊ส
+            '"liquid"': ของเหลว
+            '"solid"': ของแข็ง
       KatiesBlocks_tumbling:
         text: ตีลังกา
       Mikelab_addBehaviorSimple:

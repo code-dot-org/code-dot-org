@@ -2123,7 +2123,7 @@
           "definition": "Bir makine tarafından çalıştırılabilecek bir şeye kodlanmış bir algoritma."
         },
         "code/flappy/unversioned": {
-          "word": "kod",
+          "word": "kodlama",
           "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
         },
         "debugging/flappy/unversioned": {
@@ -2353,6 +2353,22 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Kayıpsız Sıkıştırma",
           "definition": "orijinal verilerin sıkıştırılmış verilerden mükemmel bir şekilde yeniden yapılandırılmasına izin veren bir veri sıkıştırma algoritması. Genelde metin sıkıştırma için kullanılır (örneğin zip sıkıştırma)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "(v) kod yazmak veya bir bilgisayara talimat yazmak için."
+        },
+        "event/dance-ai/2023": {
+          "word": "Etkinlik",
+          "definition": "Bir şeylerin olmasına neden olan bir eylem."
+        },
+        "program/dance-ai/2023": {
+          "word": "Program",
+          "definition": "Bir makine tarafından, çalıştırılabilecek bir şeye kodlanmış bir algoritma.\n​"
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Yapay Zeka (A.I.)",
+          "definition": "Verileri alan, bu verilerden kalıplar öğrenen ve daha sonra öğrendiklerine göre, kararlar veren bir bilgisayar programı."
         }
       }
     }

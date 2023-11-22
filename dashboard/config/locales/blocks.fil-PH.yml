@@ -118,6 +118,27 @@ fil:
             MOVES.Roll: Body Roll
             MOVES.ThisOrThat: Ito o Iyan
         text: "{GROUP} ang {MOVE} {DIR} magpakailanman"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mga Pusa
+            '"SLOTH"': sloths
+          MOVE:
+            '"next"': "(Kasunod)"
+            '"prev"': "(Nauna)"
+            '"rand"': "(Random)"
+            MOVES.ClapHigh: Pumalakpak sa Itaas
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Mag-dab
+            MOVES.DoubleJam: Doble Pababa
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Sariwa
+            MOVES.Kick: Bituin
+            MOVES.Rest: Wala
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Ito o Iyan
+        text: "{GROUP} ang {MOVE} {DIR} magpakailanman"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1080,6 +1101,12 @@ fil:
         text: "{SPRITE}sabihin{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} dumausdos sa {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': likido
+            '"solid"': matibay
       KatiesBlocks_tumbling:
         text: gumulung-gulong
       Mikelab_addBehaviorSimple:

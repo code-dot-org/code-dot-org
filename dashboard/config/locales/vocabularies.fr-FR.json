@@ -2315,6 +2315,22 @@
         },
         "lossless_compression/text-compression/unversioned": {
           "word": "Compression Sans Perte"
+        },
+        "code/dance-ai/2023": {
+          "word": "Code",
+          "definition": "(v) écrire du code ou écrire des instructions pour un ordinateur."
+        },
+        "event/dance-ai/2023": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programme",
+          "definition": " Un algorithme codé de façon à pouvoir être exécuté par une machine."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "L'Intelligence artificielle (I.A.) ",
+          "definition": "Un programme informatique qui collecte des données, apprend des modèles à partir de ces données et prend ensuite des décisions sur la base de ce qu'il a appris."
         }
       }
     }

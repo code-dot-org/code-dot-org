@@ -3,6 +3,8 @@ it:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con l''Ape'
+      "(Optional) Eliza Widget": "(Facoltativo) Componente Eliza"
+      "(Optional) GAN Guess Widget": "(Facoltativo) Componente GAN per pronosticare"
       8-Bit Binary Number Widget: Componente per numeri binari a 8-bit
       AI Lab and Isaac's Data: Laboratorio IA e i dati di Isaac
       AI Lab and Kim's Data: Laboratorio IA e i dati di Kim
@@ -58,6 +60,7 @@ it:
       Assessment: Valutazione
       Attribution: Attribuzione
       Back and Forth: Avanti e indietro!
+      Balance an Ecosystem: Rendere equilibrato l'ecosistema
       Basic Conditionals: Condizionali di Base
       Bass, Mid, and Treble: Bassi, medi e alti
       Be a Super Digital Citizen: Super cittadino digitale
@@ -98,8 +101,9 @@ it:
       Change: Modifica
       Changing Screens: Modificare le schermate
       Changing Sensor Scale: Modificare la scala del sensore
+      Check For Understanding: Verifica sulla comprensione
       Check Your Work: Controlla il tuo lavoro
-      Check for Understanding: Verifica la comprensione
+      Check for Understanding: Verifica sulla comprensione
       Check-In Survey: Sondaggio di ingresso
       Checking for a Winner: Alla ricerca di un vincitore
       'Choice Levels: Customize Your App': 'Esercizi di scelta: personalizza la tua
@@ -143,6 +147,7 @@ it:
       Create an App in App Lab: Crea un'app in Sviluppo App
       Create your project: Crea il tuo progetto
       Creative Commons Search: Creative Commons Search
+      Cropping Widget: Componente per il ritaglio
       Customize: Personalizza
       Customize Your App: Personalizza la tua app
       Customizing Your App: Personalizzazione della tua app
@@ -172,6 +177,8 @@ it:
       Drawing: Disegni
       Drawing Shapes: Disegnare Forme
       Driver Alert System: Sistema di avviso al conducente
+      Ecosystems Simulation: Simulazione di ecosistemi
+      Ecosystems Video: Video sugli ecosistemi
       Emotion Machine Example: Esempio di macchina delle emozioni
       End of Course Projects: Progetto di Fine Corso
       End-Of-Unit Survey: Sondaggio di Fine Unità
@@ -206,6 +213,7 @@ it:
       Extra Challenge: Sfide extra
       'Extra Challenge: Sound Board': 'Sfida extra: suoni della scheda'
       Field Collector App: App di recupero crediti
+      Final Dance Party Project: Progetto finale Dance Party
       Final Room Escape App: App Finale dell'Escape Room
       Find the Wizard: Trova il Mago
       Finish a Screen: Termina una schermata
@@ -216,6 +224,7 @@ it:
       Follow the Algorithm - Unplugged Activity: Segui l'algoritmo - Attività tradizionale
       Follow the Mouse: Segui il Topo
       Fonts and Style: Caratteri e Stile
+      Food Chain Setup: Configurazione della catena alimentare
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: Divertirsi con i cicli con contatore - Attività
         tradizionale
@@ -248,6 +257,7 @@ it:
       Ice Age Loops: Cicli dell'Era Glaciale
       If Statements: Istruzioni condizionali
       If-Else Statements: Istruzioni condizionali Se/Altrimenti
+      If... then... Conditional Statements: Se... allora... Istruzioni condizionali
       Images and Sounds: Immagini e suoni
       Images in HTML: Immagini in HTML
       Import Your Model: Importa il tuo modello
@@ -263,6 +273,7 @@ it:
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: Arte Interattiva
       Interactive Card: Cartolina interattiva
+      Intro Video: Video introduttivo
       Intro to Design Mode: Introduzione alla "Modalità interfaccia"
       Intro to Flyer Game: Introduzione a un gioco di personaggi volanti
       Intro to For Loops: Introduzione ai Cicli Per
@@ -279,6 +290,7 @@ it:
       Iteration and Parameters: Iterazione e Parametri
       Keep On Dancing!: Continua A Danzare!
       Keeping Data Secret: Mantenere segreti i dati
+      Key Press & At Measure Events: Eventi Key Press & At Measure
       Keyboard Input: Input da tastiera
       Kim's Survey: Il sondaggio di Kim
       Kim's Survey Data: Dati del sondaggio di Kim
@@ -298,6 +310,7 @@ it:
       Looking for Patterns: Alla ricerca di schemi
       Looping: Ciclo
       Loops with the Artist: Cicli con l'Artista
+      Make Dancer & Dance Move: Fai danzare il ballerino
       Make Your Sprites: Crea i tuoi personaggi
       Make a Prediction: Fai una previsione
       Make an Interactive Card: Crea una cartolina interattiva
@@ -356,6 +369,7 @@ it:
       Nested Loops with the Bee: Cicli Nidificati con l'Ape
       New Challenge Introduction: Introduzione alla Nuova Sfida
       New Shapes: Nuove Forme
+      Noisy Image Widget: Componente di immagine rumorosa
       Orientation: Orientamento
       Overview: Panoramica
       'Overview: Design Mode': 'Panoramica: Modalità interfaccia '
@@ -459,6 +473,7 @@ it:
       Share Out: Condividi
       Share Your App: Condividi la tua app
       Share Your Pages: Condividi le tue pagine
+      Share Your Simulation: Condividi la tua simulazione
       Share Your Stylesheets: Condividi i tuoi fogli di stile
       Shoe Recommendation Survey: Sondaggio sul suggeritore di scarpe
       Shoe Recommender: Suggeritore di scarpe
@@ -469,6 +484,9 @@ it:
       Sliders: Cursori
       Smart Bike - Blinkers: Bici Intelligente - Indicatori di direzione (frecce )
       Social Sleuth: Investigatore social
+      Solution 1 - Fishing Zone: Soluzione 1 - Zona di pesca
+      Solution 2 - Fishing Season: Soluzione 2 - Stagione di pesca
+      Solution 3 - Fishing Limits: Soluzione 3 - Limiti di pesca
       Songwriting - Functions Unplugged Activity: Composizione di canzoni - Attività
         tradizionale sulle funzioni
       Speed it Up, Slow it Down: Accelerare, rallentare
@@ -496,10 +514,12 @@ it:
       The Collector: Il Collezionista
       The Counter Pattern: Lo schema a contatore
       The Draw Loop: La funzione ciclica `draw()`
+      The Food Chain: La catena alimentare
       The Harvester: La contadina
       The Internet - Unplugged Activity: Internet - Attività tradizionale
       The Power of Words - Unplugged Activity: Il potere delle parole - Attività tradizionale
       The Right App - Unplugged Activity: L'app giusta - Attività tradizionale
+      Title, Author, Background: Titolo, autore, contesto
       Top Websites: I migliori siti web
       Train AI to Clean the Ocean: Addestra l'Intelligenza Artificiale a ripulire
         l'oceano
@@ -680,12 +700,15 @@ it:
       'Video: While Loops with the Farmer': Video - Cicli "mentre" con la contadina
       'Video: Wrap-up': Video - Conclusione
       Warm Up: Preparazione
+      WeTube Video Recommendations (Beta): Consigli sui video di WeTube (versione
+        beta)
       Website Project: Progetto del Sito Web
       Welcome to Monster Town: Benvenuto nella Città dei Mostri
       Where'd They Go?: Dove sono andati?
       While Loops with the Farmer: Cicli "mentre" con la contadina
       'Widget: Text Compression': 'Widget: Compressione Testuale'
       Wrap-up: Conclusione
+      Written Voice Simulator Widget: Componente del Simulatore di voce scritta
       'You Choose: Improve Your App': 'Scegli tu: migliora la tua app'
       'You Choose: Restaurant Recommendations': 'Scegli tu: consigli al ristorante'
       Your Personal Website: Il Tuo Sito Web Personale

@@ -90,6 +90,26 @@ te:
             MOVES.Roll: బాడీ రోల్
             MOVES.ThisOrThat: ఇది లేక అది
         text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': క్యాట్
+          MOVE:
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Kick: స్టార్
+            MOVES.Rest: ఏదీ కాదు
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ThisOrThat: ఇది లేక అది
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -897,6 +917,12 @@ te:
           వహించండి"
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}చెప్పండి{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': వాయువు
+            '"liquid"': ద్రవము
+            '"solid"': ఘనపదార్థం
       Mikelab_addTrainingData:
         options:
           LOCATION:

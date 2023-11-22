@@ -128,6 +128,27 @@ az:
             MOVES.Kick: Ulduz
             MOVES.ThisOrThat: bu və ya o
             MOVES.Rest: Heç biri
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} həmişəlik {MOVE} {DIR} edin"
+        options:
+          GROUP:
+            '"CAT"': pişiklər
+            '"SLOTH"': tənbəl heyvanlar
+          MOVE:
+            MOVES.Roll: Bədən Roll
+            MOVES.ClapHigh: Yüksək Alqış
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: ikiqat eniş
+            MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Clown: Qənqnəm
+            MOVES.Kick: Ulduz
+            MOVES.ThisOrThat: bu və ya o
+            MOVES.Rest: Heç biri
+            '"next"': "(Növbəti)"
+            '"prev"': "(Əvvəlki)"
+            '"rand"': "(İxtiyari)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} əbədi olaraq {MOVE} {DIR} edin"
         options:
@@ -614,8 +635,8 @@ az:
           EFFECT:
             '"none"': Heç biri
             '"rand"': "(İxtiyari)"
-            '"circles"': Çevrələr
             '"quads"': bucaqlar
+            '"circles"': Çevrələr
             '"clouds"': Buludlar
             '"color_cycle"': Rənglər
             '"diamonds"': Almazlar
@@ -632,11 +653,11 @@ az:
             '"ripples"': dalğalar
             '"snowflakes"': Qar
             '"text"': Mahnl Adları
-            '"squiggles"': Qıvrımlar
             '"galaxy"': Boşluq
             '"sparkles"': Parıltılar
             '"spiral"': Spiral
             '"disco"': Kvadratlar
+            '"squiggles"': Qıvrımlar
             '"starburst"': Ulduz partlaması
             '"stars"': Ulduzlar
             '"music_wave"': dalğalar
@@ -1742,6 +1763,12 @@ az:
         text: y koordinatı
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': bərk
+            '"liquid"': maye
+            '"gas"': qaz
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

@@ -426,6 +426,7 @@ sv:
         poetry_module_conditionals: Villkor – Koda med poesi
         poemart_intro: Poesi Konst Introduktion
         csp_applab_parameters: Funktioner med parametrar
+        csd_ml_how_ai_works: Hur AI fungerar
     callout:
       text:
         drag_blocks: Dra ett "gå framåt" block och fäst det under det andra blocket
