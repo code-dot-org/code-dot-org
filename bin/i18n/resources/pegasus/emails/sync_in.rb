@@ -18,7 +18,7 @@ module I18n
             LOCALIZABLE_FILE_SUBPATHS.each do |file_name|
               i18n_source_file_path = File.join(I18N_SOURCE_DIR_PATH, file_name)
               I18nScriptUtils.copy_file(File.join(ORIGIN_DIR_PATH, file_name), i18n_source_file_path)
-              I18n::Utils::PegasusMarkdown.sanitize_file_header(i18n_source_file_path)
+              I18n::Utils::PegasusEmail.sanitize_file_header(i18n_source_file_path)
             end
           end
         end
