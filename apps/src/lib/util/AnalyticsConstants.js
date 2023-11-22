@@ -107,6 +107,7 @@ const EVENTS = {
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+  HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
 
   // Hour of Code - Dance Party
