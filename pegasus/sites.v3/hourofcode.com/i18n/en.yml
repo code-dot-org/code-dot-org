@@ -373,6 +373,7 @@
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
   aria_label_call_to_action_teaching_csp: "Start the Teaching Computer Science Principles professional learning program"
   aria_label_call_to_action_teaching_problem_solving: "Start the Teaching Problem Solving and Computing professional learning program"
+  aria_label_call_to_action_teaching_interactive_animations_games: "Start the Teaching Interactive Animations and Games professional learning program"
   aria_label_call_to_action_teaching_csc: "Start the Teaching Computer Science Connections professional learning program"
   aria_label_call_to_action_teaching_ai: "Start the Teaching AI and Machine Learning professional learning program"
   aria_label_call_to_action_teaching_maker_cp: "Start the Teaching Creating Apps with Devices (Circuit Playground) professional learning program"
