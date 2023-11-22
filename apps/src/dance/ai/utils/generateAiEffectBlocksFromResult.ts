@@ -24,19 +24,19 @@ export const generateAiEffectBlocksFromResult = (
   validateAndSetFieldValue(
     blocksSvg[0].getField('EFFECT') as FieldDropdown,
     effect.foregroundEffect,
-    FieldKey.FOREGROUND_EFFECT
+    {logValues: FieldKey.FOREGROUND_EFFECT}
   );
 
   // Background block.
   validateAndSetFieldValue(
     blocksSvg[1].getField('EFFECT') as FieldDropdown,
     effect.backgroundEffect,
-    FieldKey.BACKGROUND_EFFECT
+    {logValues: FieldKey.BACKGROUND_EFFECT}
   );
   validateAndSetFieldValue(
     blocksSvg[1].getField('PALETTE') as FieldDropdown,
     effect.backgroundColor,
-    FieldKey.BACKGROUND_PALETTE
+    {logValues: FieldKey.BACKGROUND_PALETTE}
   );
 
   // Connect the blocks.

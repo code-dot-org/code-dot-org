@@ -1,20 +1,19 @@
 import {FieldDropdown} from 'blockly';
-import {FieldKey} from '../ai-types';
 
 type ValidateAndSetFieldValueLogger = (o: {
-  message: string;
-  value: string;
-  field: FieldKey;
+  message?: string;
+  value?: string;
+  logValues?: unknown;
 }) => void;
 
 type ValidateAndSetFieldValueOptions = {
+  logValues?: unknown;
   invalidValueLogger?: ValidateAndSetFieldValueLogger;
 };
 
 type ValidateAndSetFieldValueFunction = (
   dropdown: FieldDropdown,
   value: string,
-  field: FieldKey,
   options?: ValidateAndSetFieldValueOptions
 ) => void;
 
@@ -23,13 +22,8 @@ type ValidateAndSetFieldValueFunction = (
 export function getValidateAndSetFieldValueWithInvalidValueLogger(
   invalidValueLogger: ValidateAndSetFieldValueLogger
 ) {
-  const f: ValidateAndSetFieldValueFunction = (
-    dropdown,
-    value,
-    field,
-    options = {}
-  ) =>
-    validateAndSetFieldValue(dropdown, value, field, {
+  const f: ValidateAndSetFieldValueFunction = (dropdown, value, options = {}) =>
+    validateAndSetFieldValue(dropdown, value, {
       invalidValueLogger,
       ...options,
     });
@@ -41,7 +35,7 @@ export function getValidateAndSetFieldValueWithInvalidValueLogger(
 // optionally logs information if the value is not in the dropdown and a invalidValueLogger
 // is provided in options.
 export const validateAndSetFieldValue: ValidateAndSetFieldValueFunction =
-  function (dropdown, value, field, {invalidValueLogger} = {}) {
+  function (dropdown, value, {invalidValueLogger, logValues} = {}) {
     if (
       dropdown
         .getOptions()
@@ -52,7 +46,7 @@ export const validateAndSetFieldValue: ValidateAndSetFieldValueFunction =
       invalidValueLogger?.({
         message: 'Invalid generated value',
         value,
-        field,
+        logValues,
       });
     }
   };
