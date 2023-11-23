@@ -30,7 +30,8 @@
   ]
 
 .action-block.action-block--two-col
-  %img.col-50{src: "/images/dance-hoc/dance-party-activity-ai-edition.png", alt: hoc_s(:hoc_live)}
+  .media-wrapper.col-50
+    %img{src: "/images/dance-hoc/dance-party-activity-ai-edition.png", alt: ""}
   .text-wrapper.col-50
     .flex-container.justify-space-between.align-items-start
       %p.overline
@@ -42,8 +43,8 @@
       = hoc_s(:curriculum_name_dance_party_ai_edition)
     %p
       = hoc_s(:curriculum_desc_dance_party_ai_edition)
-    %a.link-button.disabled
-      = hoc_s(:call_to_action_coming_soon)
+    %a.link-button{href: CDO.studio_url("/s/dance-ai-2023/reset")}
+      = hoc_s(:call_to_action_start_dance_party_ai_edition)
   .clear
 
 .action-block__wrapper.action-block__wrapper--three-col

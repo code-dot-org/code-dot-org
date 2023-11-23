@@ -13,23 +13,16 @@ theme: responsive_full_width
 - icon_book = "fa-solid fa-book"
 - icon_person_chalkboard = "fa-solid fa-person-chalkboard"
 - icon_video = "fa-solid fa-video"
-- icon_megaphone = "fa-solid fa-megaphone"
 
 %section.hero-banner-basic.bg-neutral-dark{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-60
       %h1{style: "color: white"}=hoc_s(:ai_hero_heading)
       %p.body-one{style: "color: white"}=hoc_s(:ai_hero_desc)
-      %a.link-button.has-icon{href: "#ai-pl-callout"}
-        %div.flex-wrapper
-          %i{class: "#{icon_megaphone}"}
-          =hoc_s(:call_to_action_learning_opportunity)
     %figure.col-33{style: "float: right"}
       %img.fade-in-out{src: "/images/banners/ai-bot-wizard.svg", alt: "", style: "z-index: 10"}
       %img{src: "/images/banners/ai-bot-default.svg", alt: "", style: "position: relative;"}
     .clear
-
-= view :csa_ai_skinny_banner
 
 %section.intro
   .wrapper
@@ -60,15 +53,7 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-%section#ai-pl-callout.bg-primary-light.blog-post-callout
-  .wrapper
-    %i{class: "#{icon_megaphone}"}
-    .text-wrapper
-      %h2.heading-lg=hoc_s(:ai_pl_callout_title)
-      %p
-        %strong=hoc_s(:ai_pl_callout_desc_02)
-      %p.body-three=hoc_s(:ai_pl_callout_desc_01)
-      %a.link-button{href: "/ai/pl/101"}=hoc_s(:signup_submit_explore)
+= view :dance_party_ai_skinny_banner
 
 %section.bg-neutral-light
   .wrapper
