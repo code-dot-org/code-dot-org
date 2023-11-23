@@ -41,18 +41,29 @@ class RedactRestoreUtilsTest < Minitest::Test
     RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
   end
 
-  def test_redaction_of_markdown_file
+  def test_redact_markdown_with_md_file
     expected_source_path = MARKDOWN_FIXTURE_PATH
     expected_dest_path = "expected_dest_dir/dest.md"
     expected_plugins = %w[testPlugin]
     expected_format = 'md'
-    expected_redacted_data = 'expected_redacted_data'
+    expected_redacted_markdown = 'expected_redacted_markdown'
 
-    RedactRestoreUtils.stubs(:redact_file).with(expected_source_path, expected_plugins, expected_format).returns(expected_redacted_data)
+    RedactRestoreUtils.stubs(:redact_file).with(expected_source_path, expected_plugins, expected_format).returns(expected_redacted_markdown)
+    I18nScriptUtils.stubs(:write_file).with(expected_dest_path, expected_redacted_markdown)
 
-    I18nScriptUtils.stubs(:write_file).with(expected_dest_path, expected_redacted_data)
+    RedactRestoreUtils.redact_markdown(expected_source_path, expected_dest_path, expected_plugins, expected_format)
+  end
 
-    RedactRestoreUtils.redact(expected_source_path, expected_dest_path, expected_plugins, expected_format)
+  def test_redact_markdown_with_not_md_file
+    expected_source_path = JSON_FIXTURE_PATH
+    expected_dest_path = "expected_dest_dir/dest.json"
+    expected_plugins = %w[testPlugin]
+    expected_format = 'md'
+
+    RedactRestoreUtils.stubs(:redact_file).never
+    I18nScriptUtils.stubs(:write_file).never
+
+    RedactRestoreUtils.redact_markdown(expected_source_path, expected_dest_path, expected_plugins, expected_format)
   end
 
   def test_redaction_of_data_with_blockfield_plugin_with_txt_format
