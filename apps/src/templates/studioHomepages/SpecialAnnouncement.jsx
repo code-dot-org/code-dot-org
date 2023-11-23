@@ -1,45 +1,26 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {TwoColumnActionBlock} from './TwoColumnActionBlock';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-/* This component differs from the SpecialAnnouncementActionBlock because it
+/*
+This component differs from the SpecialAnnouncementActionBlock because it
 is not managed by the json system and can therefore be fully translated and
-can be shown to users viewing the site in languages other than English. */
+can be shown to users viewing the site in languages other than English.
+
+Note as of Nov 2023: this component may no longer be needed and can be replaced
+by the MarketingAnnouncementBanner component on the StudentHomepage component.
+*/
 export default class SpecialAnnouncement extends Component {
-  static propTypes = {
-    isEnglish: PropTypes.bool,
-    isTeacher: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    isEnglish: true,
-  };
-
   render() {
-    const {isEnglish, isTeacher} = this.props;
-    const headingText = isTeacher
-      ? i18n.teacherAnnouncementSpecialWinter2021Heading()
-      : i18n.studentAnnouncementHoc2023Heading();
-    const descriptionText = isTeacher
-      ? i18n.teacherAnnouncementSpecialWinter2021Body()
-      : i18n.studentAnnouncementHoc2023Body();
-    const buttonId = isTeacher
-      ? 'teacher_homepage_announcement_special_winter2021'
-      : 'student_homepage_announcement_special2020';
-    const url =
-      isTeacher && isEnglish ? pegasus('/hourofcode') : pegasus('/hourofcode');
-    const buttonText =
-      isTeacher && isEnglish ? i18n.joinUs() : i18n.learnMore();
-    const imageUrl =
-      isTeacher && isEnglish
-        ? pegasus(
-            '/shared/images/fill-540x300/announcement/announcement_hoc2020_ai.png'
-          )
-        : pegasus(
-            '/shared/images/fill-540x300/social-media/hoc2023_social.png'
-          );
+    const headingText = i18n.announcementHoc2023DanceAIHeading();
+    const descriptionText = i18n.announcementHoc2023DanceAIBody();
+    const buttonId = 'student_homepage_announcement_special2020';
+    const url = pegasus('/dance');
+    const buttonText = i18n.learnMore();
+    const imageUrl = pegasus(
+      '/images/dance-hoc/dance-party-activity-ai-edition.png'
+    );
 
     return (
       <TwoColumnActionBlock

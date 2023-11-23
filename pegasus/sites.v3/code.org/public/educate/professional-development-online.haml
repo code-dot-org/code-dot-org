@@ -217,6 +217,25 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_start_pl)
           %a.link-button.secondary{href: CDO.studio_url("/s/problem-solving-computing"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_problem_solving)}}
             =hoc_s(:call_to_action_explore_curriculum)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %p.overline=hoc_s(:module_grade_6_10_teachers)
+          %h3=hoc_s(:curriculum_name_teaching_animation)
+          %img{src: "/images/csd-unit-interactive-animations-games.png", alt: ""}
+          %p
+            %strong=hoc_s(:module_label_curriculum)
+            =hoc_s(:module_label_teaching_animations)
+          %p
+            %strong=hoc_s(:module_label_duration)
+            =hoc_s(:module_duration_3_hrs_20_minutes)
+          %p
+            %strong=hoc_s(:module_label_prerequisites)
+            =hoc_s(:module_prerequisites_none)
+        .content-footer
+          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-csd-unit3-2023"), aria:{label: hoc_s(:aria_label_call_to_action_teaching_interactive_animations_games)}}
+            =hoc_s(:call_to_action_start_pl)
+          %a.link-button.secondary{href: CDO.studio_url("/s/interactive-games-animations"), aria:{label: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games)}}
+            =hoc_s(:call_to_action_explore_curriculum)
 
 %section.bg-neutral-light
   .wrapper

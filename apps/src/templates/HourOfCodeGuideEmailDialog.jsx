@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {Heading1, Heading3} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
 import style from './hoc-guide-dialogue.module.scss';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 
@@ -16,6 +16,11 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
   const [isSendInProgress, setIsSendInProgress] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+
+  useEffect(() => {
+    // Send an Amplitude event each time the guide is shown
+    analyticsReporter.sendEvent(EVENTS.HOC_GUIDE_DIALOG_SHOWN);
+  }, []);
 
   const onClose = () => {
     cookies.set('HourOfCodeGuideEmailDialogSeen', 'true', {
@@ -84,7 +89,7 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
       {isOpen && (
         <AccessibleDialog styles={style} onClose={onClose}>
           <div tabIndex="0">
-            <Heading1>{i18n.welcomeToDanceParty()}</Heading1>
+            <Heading2>{i18n.welcomeToDanceParty()}</Heading2>
           </div>
           <div className={style.middle}>
             <Heading3>{i18n.learnHowToHost()}</Heading3>
