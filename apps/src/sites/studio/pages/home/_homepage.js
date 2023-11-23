@@ -95,7 +95,6 @@ function showHomepage() {
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
-            isEnglish={isEnglish}
             ncesSchoolId={homepageData.ncesSchoolId}
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
