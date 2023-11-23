@@ -20,7 +20,7 @@ layout: wide_index
 %section
   .wrapper
     .section-intro.centered
-      %h2 
+      %h2.centered 
         =hoc_s(:hoc_beyond_for_teachers_section_title)
       %p.body-two
         =hoc_s(:hoc_beyond_for_teachers_section_description)
@@ -33,7 +33,7 @@ layout: wide_index
           %p
             =hoc_s(:hoc_beyond_for_teachers_course_description_1)
         .content-footer
-          %a.link-button{href: "code.org/teach", target: "_blank", rel: "noopener noreferrer"}
+          %a.link-button{href: "https://code.org/teach", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hoc_beyond_for_teachers_course_link_1)
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -45,14 +45,14 @@ layout: wide_index
         .content-footer
           %a.link-button{href: "https://code.org/educate/curriculum/3rd-party", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hoc_beyond_for_teachers_course_link_2)
+
 %section.bg-neutral-light
   .wrapper
     = view :learn_carousels, variation:'beyond'
+
 %section{style: "text-align: center"}
   %h3 
     =hoc_s(:hoc_beyond_end_section_label, markdown: :inline, locals: {home_page: "https://code.org/"})
   %a{href: "https://code.org/"}
-    %img{:src=>'/images/logo.svg'}
-%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
-%script{:src=>'/js/jquery.touchSwipe.min.js'}
-%script{:src=>'/js/page/ai.js'}
+    %img{:src=>'/images/code-dot-org-logo-40x40.svg'}
+

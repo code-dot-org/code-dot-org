@@ -4,13 +4,6 @@ html {
   font-size: 16px;
 }
 
-h2 {
-  font-size: 2rem;
-  font-family: var(--main-font);
-  font-weight: var(--bold-font-weight);
-  margin: 0 0 1rem;
-  line-height: 1.2;
-}
 
 hr {
   margin: 4rem 0;
@@ -178,26 +171,6 @@ section.activities {
       &:hover {
         cursor: auto;
       }
-
-      #how_ai_works_lessons & {
-        height: 600px;
-
-        @media screen and (max-width: $width-sm) {
-          height: auto;
-        }
-      }
-
-      #ai_101_videos & {
-        height: 530px;
-
-        @media screen and (max-width: $width-sm) {
-          height: auto;
-        }
-
-        .content-footer p {
-          margin-bottom: 0;
-        }
-      }
     }
 
     @media (min-width: 640px) {
@@ -236,10 +209,14 @@ section.activities {
     background-color: white;
 }
 
-.carousel-main-title {
-  text-align: center;
-}
-
-.carousel-main-description {
-  text-align: center;
+@media (max-width: 500px) {
+  .button-wrapper {
+    display: none;
+  }
+  section{
+    padding: 4rem 1.5rem;
+  }
+  .action-block {
+    justify-content: center;
+  }
 }
