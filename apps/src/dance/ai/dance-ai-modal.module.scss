@@ -40,6 +40,12 @@ $ai-modal-border-width: 8px;
 }
 
 .dialog {
+  @media (max-height: 580px) {
+    top: 10px;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
+  }
+
   max-width: initial !important;
   width: 824px !important;
   height: 508px;
