@@ -7,7 +7,7 @@
 - if items.count > 0
   - if shuffle
     - items = items.to_a.shuffle.to_h
-  %h3{:class=>'course-carousel-title', :style=>"margin-bottom:8px"}!= heading
+  %h3{:class=>'course-carousel-title heading-xl', :style=>"margin-bottom:8px"}!= heading
 
   - unless subheading.nil_or_empty?
     %p!= subheading
@@ -26,7 +26,7 @@
                     .slide-img-1
                       %a{:href=>url, :target=>'_blank'}<
                         .slide-tags.age-tags= tutorial[:age]
-                      %h2{style: "font-size: 18px;"}
+                      %h4{style: "font-size: 18px;"}
                         = tutorial[:name]
                         %img{:src=>tutorial[:image].sub("/images/", CDO.code_org_url("/images/fit-520/")).sub(".png", ".jpg"), style: "margin-top: 10px;"}
                     .slide-text-1
@@ -34,9 +34,10 @@
                       %p.slide-longdescription= tutorial[:longdescription]
                     %a.link-button{:href=>url, :target=>'_blank'}<
                       =I18n.t(:go)
-        %button.slide-prev{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
-          %img{src: "/images/carousel/prev.svg", alt: "previous"}
-        %button.slide-next{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
-          %img{src: "/images/carousel/next.svg", alt: "next"}
+        .button-wrapper              
+          %button.slide-prev{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+            %img{src: "//code.org/images/carousel/prev.svg", alt: "previous"}
+          %button.slide-next{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+            %img{src: "//code.org/images/carousel/next.svg", alt: "next"}
       .pagination
         %div{:id => "pagination-#{id}"}
