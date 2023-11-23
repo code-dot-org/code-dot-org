@@ -33,7 +33,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       {
         type: 'field_label',
         name: 'THIS_SPRITE',
-        text: `with: ${msg.thisSprite()}`,
+        text: msg.withThisSprite(),
       },
       {
         type: 'field_label',
@@ -66,6 +66,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'behaviors_name_validator',
+      'updated_behavior_picker_blocks',
     ],
     mutator: 'behavior_def_mutator',
   },
@@ -160,6 +161,15 @@ GoogleBlockly.Extensions.register('behaviors_name_validator', function () {
     return legalName;
   });
 });
+
+GoogleBlockly.Extensions.register(
+  'updated_behavior_picker_blocks',
+  function () {
+    this.workspace.addChangeListener(event => {
+      onBehaviorDefChange(event, this);
+    });
+  }
+);
 
 GoogleBlockly.Extensions.registerMutator(
   'behavior_get_mutator',
@@ -260,4 +270,42 @@ const getNewBehaviorButtonWithCallback = (
     text: msg.createBlocklyBehavior(),
     callbackKey,
   };
+};
+
+// Added as a change listener. If a behavior name changes, we need to update any
+// behavior picker blocks that have the old name currently selected.
+function onBehaviorDefChange(event, block) {
+  if (
+    event.type === Blockly.Events.CHANGE &&
+    block.id === event.blockId &&
+    // Excludes changes to the description field.
+    event.name === 'NAME'
+  ) {
+    const {oldValue, newValue} = event;
+    updateBehaviorPickerBlocks(oldValue, newValue);
+  }
+}
+
+function updateBehaviorPickerBlocks(oldValue, newValue) {
+  const behaviorPickerBlocks = findAllBehaviorPickerBlocks();
+  if (behaviorPickerBlocks.length) {
+    const blocksToUpdate = behaviorPickerBlocks.filter(
+      block => block.getFieldValue('BEHAVIOR') === oldValue
+    );
+    blocksToUpdate.forEach(block => {
+      block.setFieldValue(newValue, 'BEHAVIOR');
+    });
+  }
+}
+
+const findAllBehaviorPickerBlocks = () => {
+  const blocks = [];
+  Blockly.Workspace.getAll().forEach(workspace =>
+    blocks.push(
+      ...workspace
+        .getAllBlocks()
+        .filter(block => block.type === 'gamelab_behaviorPicker')
+    )
+  );
+  return blocks;
 };
