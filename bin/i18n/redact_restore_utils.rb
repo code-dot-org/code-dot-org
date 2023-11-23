@@ -67,7 +67,20 @@ class RedactRestoreUtils
     return unless File.exist?(source)
     return unless File.exist?(redacted)
 
-    if I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)
+    if I18nScriptUtils.json_file?(source)
+      source_data = I18nScriptUtils.parse_file(source)
+      redacted_data = I18nScriptUtils.parse_file(redacted)
+      return unless source_data
+      return unless redacted_data
+
+      restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
+      I18nScriptUtils.write_json_file(dest, restored)
+      return
+    end
+
+    # yaml files have a locale key wrapping all content. Redacted files have the translated language key, while the
+    # un-redacted file keeps the English key. We need to extract the data inside the locale key to restore content.
+    if I18nScriptUtils.yaml_file?(source)
       source_data = I18nScriptUtils.parse_file(source)
       redacted_data = I18nScriptUtils.parse_file(redacted)
 
@@ -76,21 +89,18 @@ class RedactRestoreUtils
       return unless source_data&.values&.first&.length
       return unless redacted_data&.values&.first&.length
 
-      # yaml files have a locale key wrapping all content. Redacted files have the translated language key, while the
-      # un-redacted file keeps the English key. We need to extract the data inside the locale key to restore content.
-      if I18nScriptUtils.yaml_file?(source)
-        restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
-        redacted_key = redacted_data.keys.first
-        restored = {redacted_key => restored}
-        I18nScriptUtils.write_yaml_file(dest, restored)
-      else
-        restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
-        I18nScriptUtils.write_json_file(dest, restored)
-      end
+      restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
+      redacted_key = redacted_data.keys.first
 
-    else
+      restored = {redacted_key => restored}
+      I18nScriptUtils.write_yaml_file(dest, restored)
+      return
+    end
+
+    if File.extname(source) == '.md'
       restored = RedactRestoreUtils.restore_file(source, redacted, plugins, format)
       I18nScriptUtils.write_file(dest, restored)
+      return
     end
   end
 
