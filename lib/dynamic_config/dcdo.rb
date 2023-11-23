@@ -9,11 +9,6 @@ require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
-  # Updates the cached configuration, for testing only.
-  def update_cache_for_test
-    @datastore_cache.update_cache
-  end
-
   # Factory method for creating DCDOBase objects
   # @returns [DCDOBase]
   def self.create
