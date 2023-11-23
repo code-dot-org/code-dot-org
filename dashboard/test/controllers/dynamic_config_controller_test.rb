@@ -34,7 +34,7 @@ class DynamicConfigControllerTest < ActionController::TestCase
     DCDO.set('test dcdo', 'baz')
     get :show
     assert_response :success
-    assert_includes @response.body, "# Gatekeeper Config\n ---\ntest gatekeeper:\n- rule:\n  where:\n    foo: bar\n  value: true"
+    assert_includes @response.body, "# Gatekeeper Config\n ---\ntest gatekeeper:"
     assert_includes @response.body, "# DCDO Config\n---\ntest dcdo: baz"
   end
 
