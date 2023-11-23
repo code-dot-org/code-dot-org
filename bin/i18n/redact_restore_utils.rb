@@ -96,29 +96,36 @@ class RedactRestoreUtils
       I18nScriptUtils.write_yaml_file(dest, restored)
       return
     end
-
-    if File.extname(source) == '.md'
-      restored = RedactRestoreUtils.restore_file(source, redacted, plugins, format)
-      I18nScriptUtils.write_file(dest, restored)
-      return
-    end
   end
 
   # redact redacts the content of the source file, whether is a json, yml or other formats and write the output
   # into the dest file.
   def self.redact(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
+    return unless I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)
 
-    if I18nScriptUtils.json_file?(source) || I18nScriptUtils.yaml_file?(source)
-      source_data = I18nScriptUtils.parse_file(source)
-      redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
+    source_data = I18nScriptUtils.parse_file(source)
+    redacted = RedactRestoreUtils.redact_data(source_data, plugins, format)
 
-      I18nScriptUtils.write_yaml_file(dest, redacted) if I18nScriptUtils.yaml_file?(source)
-      I18nScriptUtils.write_json_file(dest, redacted) if I18nScriptUtils.json_file?(source)
-    else
-      redacted = redact_file(source, plugins, format)
-      I18nScriptUtils.write_file(dest, redacted)
-    end
+    I18nScriptUtils.write_yaml_file(dest, redacted) if I18nScriptUtils.yaml_file?(source)
+    I18nScriptUtils.write_json_file(dest, redacted) if I18nScriptUtils.json_file?(source)
+  end
+
+  def self.redact_markdown(source, dest, plugins = [], format = 'md')
+    return unless File.exist? source
+    return unless File.extname(source) == '.md'
+
+    redacted = redact_file(source, plugins, format)
+    I18nScriptUtils.write_file(dest, redacted)
+  end
+
+  def self.restore_markdown(source, redacted, dest, plugins = [], format = 'md')
+    return unless File.exist?(source)
+    return unless File.exist?(redacted)
+    return unless File.extname(source) == '.md'
+
+    restored = RedactRestoreUtils.restore_file(source, redacted, plugins, format)
+    I18nScriptUtils.write_file(dest, restored)
   end
 
   private_class_method def self.plugins_to_arg(plugins)
