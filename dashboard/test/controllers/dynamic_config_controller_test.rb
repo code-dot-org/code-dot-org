@@ -4,14 +4,25 @@ class DynamicConfigControllerTest < ActionController::TestCase
   test 'inaccessible by non-admins' do
     get :show
     assert_response :redirect
+    assert_redirected_to :new_user_session
     get :gatekeeper_show
     assert_response :redirect
+    assert_redirected_to :new_user_session
+    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
+    assert_response :redirect
+    assert_redirected_to :new_user_session
+    post :gatekeeper_delete, params: {feature: 'test access', where: '{}'}
+    assert_response :redirect
+    assert_redirected_to :new_user_session
 
-    user = create(:user)
-    sign_in(user)
+    sign_in(create(:user))
     get :show
     assert_response :forbidden
     get :gatekeeper_show
+    assert_response :forbidden
+    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
+    assert_response :forbidden
+    post :gatekeeper_delete, params: {feature: 'test access', where: '{}'}
     assert_response :forbidden
   end
 
@@ -21,6 +32,12 @@ class DynamicConfigControllerTest < ActionController::TestCase
     assert_response :success
     get :gatekeeper_show
     assert_response :success
+    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
+    assert_response :redirect
+    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test access'}
+    post :gatekeeper_delete, params: {feature: 'test access', where: '{}', value: 'true'}
+    assert_response :redirect
+    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test access'}
   end
 
   test 'can render dynamic config values' do
@@ -41,8 +58,9 @@ class DynamicConfigControllerTest < ActionController::TestCase
   test 'can update gatekeeper values' do
     sign_in(create(:admin))
     refute Gatekeeper.allows('test update', where: {foo: 'bar'})
-    post :gatekeeper_set, params: {feature: 'test update', where: {foo: 'bar'}.to_json, value: "true"}
+    post :gatekeeper_set, params: {feature: 'test update', where: {foo: 'bar'}.to_json, value: 'true'}
     assert_response :redirect # this endpoint redirects on successful update
+    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test update'}
     assert Gatekeeper.allows('test update', where: {foo: 'bar'})
   end
 
@@ -52,6 +70,7 @@ class DynamicConfigControllerTest < ActionController::TestCase
     assert Gatekeeper.allows('test delete', where: {foo: 'bar'})
     post :gatekeeper_delete, params: {feature: 'test delete', where: {foo: 'bar'}.to_json}
     assert_response :redirect # this endpoint redirects on successful deletion
+    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test delete'}
     refute Gatekeeper.allows('test delete', where: {foo: 'bar'})
   end
 end
