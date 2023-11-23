@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-22 03:46:55 UTC",
+    "serialized_at": "2023-11-22 15:55:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1346,7 +1346,7 @@
     },
     {
       "name": "Activity Guide (Version A) - Create PT Mock Exam",
-      "url": "https://docs.google.com/document/d/1uteRO991dirupYOQ31OQwP9NQrfxZA2rvvy1vtK-5FA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1_EaG_lr-0CPFqQlPgesAb1GUfc0gLz51qIhYIsy9gSM/edit?usp=drive_link",
       "key": "activity_guide_version_a_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
@@ -1358,7 +1358,7 @@
     },
     {
       "name": "Activity Guide (Version B) - Create PT Mock Exam",
-      "url": "https://docs.google.com/document/d/1AVi-LnwebAmTkmN10LxjVNPISMpvu9GNH08F6YE44dM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1fXMYzRmNV_O54AJQEL5SjqSfNHxvOHM7mELDwUvuKvw/edit?usp=drive_link",
       "key": "activity_guide_version_b_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
@@ -1521,7 +1521,7 @@
     },
     {
       "name": "Create PT Mock Exam Description",
-      "url": "https://docs.google.com/document/d/1LS48J0L_bMBaw4uS7HJeA5qbcLBySrdDUF9gjXYRQ9g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1yjtoFV0skP5iHRRPDJ30ZWHtPx9dU6rMtLHlcqIYfA4/edit?usp=drive_link",
       "key": "create_pt_mock_exam_description",
       "properties": {
         "audience": "Student",
@@ -1608,7 +1608,7 @@
     },
     {
       "name": "Unit 9 Lesson 5 - Create PT Mock Exam - Slides",
-      "url": "https://docs.google.com/presentation/d/1OQdK_Vt8QyQWBHJZidUyKgOkjhHVtXIkPaR4z3SmXZQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ndJrvTZB2rcUnV502a1KIuCoH21_b0IAPZtIpgnUInE/edit?usp=drive_link",
       "key": "unit_9_lesson_5_-_create_pt_mock_exam_-_slides",
       "properties": {
         "audience": "Teacher",
