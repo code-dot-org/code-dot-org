@@ -12,10 +12,11 @@ export interface TagsProps {
   styleAsDisabled?: boolean;
   /** Size of button */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
+  /** Optional className for custom styles, etc*/
+  className?: string;
 }
 
 // TODO:
-// - aria-labels ?
 // - tooltips always one line or multiline or both? (tooltip content: string or ReactNode?)
 // - connect icons (is left/right icon represents rtl/ltr? languages or should we create both at the same time?)
 // - CardLabels.jsx - refactor to use Tags component
@@ -39,20 +40,23 @@ const Tags: React.FunctionComponent<TagsProps> = ({
   tagsList,
   styleAsDisabled = false,
   size = 'm',
+  className,
 }) => (
   <div
     className={classNames(
       moduleStyles.tags,
       moduleStyles[`tags-${size}`],
-      styleAsDisabled && moduleStyles.disabledTags
+      styleAsDisabled && moduleStyles.disabledTags,
+      className
     )}
     data-testid="tags"
   >
-    {tagsList.map(({id, label, tooltipContent}) => (
+    {tagsList.map(({tooltipId, label, tooltipContent, ariaLabel}) => (
       <Tag
-        key={id || label}
-        id={id}
+        key={tooltipId || label}
+        tooltipId={tooltipId}
         label={label}
+        ariaLabel={ariaLabel}
         tooltipContent={tooltipContent}
       />
     ))}
