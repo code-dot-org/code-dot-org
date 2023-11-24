@@ -8,7 +8,21 @@ import Tags from '@cdo/apps/componentLibrary/tags';
 
 describe('Design System - Tags', () => {
   it('Tags - renders with correct label', () => {
-    render(<Tags tagsList={['tag1', 'tag2']} />);
+    render(
+      <Tags
+        tagsList={[
+          {tooltipId: 'tag1', label: 'tag1', tooltipContent: 'tag1'},
+          {
+            label: '+1',
+            tooltipContent: (
+              <>
+                <p>tag2</p> <p>test</p>
+              </>
+            ),
+          },
+        ]}
+      />
+    );
 
     const tags = screen.getByTestId('tags');
     expect(tags).to.exist;
@@ -20,7 +34,21 @@ describe('Design System - Tags', () => {
     const user = userEvent.setup();
 
     // Initial render
-    render(<Tags tagsList={['tag1', 'tag2']} />);
+    render(
+      <Tags
+        tagsList={[
+          {tooltipId: 'tag1', label: 'tag1', tooltipContent: 'tag1'},
+          {
+            label: '+1',
+            tooltipContent: (
+              <>
+                <p>tag2</p> <p>test</p>
+              </>
+            ),
+          },
+        ]}
+      />
+    );
 
     const tags = screen.getByTestId('tags');
     const tag1 = screen.getByText('tag1');
