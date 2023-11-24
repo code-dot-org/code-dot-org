@@ -8,6 +8,7 @@ import {
 } from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
 import moduleStyles from './tags.module.scss';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 // Allow the tooltips to display on focus so that the information
 // can be shown via keyboard
@@ -34,6 +35,8 @@ export interface TagProps {
   /** aria-label for the tag.
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
+  /** Icon to show next to text label (optional)*/
+  icon?: string;
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
@@ -41,6 +44,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
   tooltipContent,
   tooltipId,
   ariaLabel,
+  icon,
 }) => {
   return (
     <LabelOverlayTrigger
@@ -56,6 +60,8 @@ const Tag: React.FunctionComponent<TagProps> = ({
     >
       <div tabIndex={0} role="tooltip" aria-label={ariaLabel}>
         {label}
+        {/*Todo: create DSCO icon component. Empty className and title props are here to fix typescript type errors*/}
+        {icon && <FontAwesome icon={icon} className="" title="" />}
       </div>
     </LabelOverlayTrigger>
   );
