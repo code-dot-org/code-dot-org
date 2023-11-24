@@ -29,20 +29,24 @@ export interface TagProps {
   label: string;
   /** Tag tooltip text */
   tooltipContent: string | React.ReactNode;
-  /** Tag id */
-  id?: string;
+  /** Tag tooltip id (optional) */
+  tooltipId?: string;
+  /** aria-label for the tag.
+   *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
+  ariaLabel?: string;
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
   label,
   tooltipContent,
-  id,
+  tooltipId,
+  ariaLabel,
 }) => {
   return (
     <LabelOverlayTrigger
       overlay={(props: TooltipProps) => (
         <LabelTooltip
-          id={id || ''}
+          id={tooltipId || ''}
           className={moduleStyles.tagTooltip}
           {...props}
         >
@@ -50,7 +54,7 @@ const Tag: React.FunctionComponent<TagProps> = ({
         </LabelTooltip>
       )}
     >
-      <div tabIndex={0} role="tooltip">
+      <div tabIndex={0} role="tooltip" aria-label={ariaLabel}>
         {label}
       </div>
     </LabelOverlayTrigger>

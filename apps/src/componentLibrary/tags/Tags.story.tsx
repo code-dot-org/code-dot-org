@@ -32,9 +32,10 @@ const MultipleTemplate: Story<{
 export const DefaultTags = SingleTemplate.bind({});
 DefaultTags.args = {
   tagsList: [
-    {id: 'math', label: 'Math', tooltipContent: 'Math'},
+    {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
       label: '+1',
+      ariaLabel: 'Science, English',
       tooltipContent: (
         <>
           <p>Science,</p> <p>English</p>
@@ -43,12 +44,13 @@ DefaultTags.args = {
     },
   ],
   size: 'm',
+  className: 'test',
 };
 
 export const DisabledTags = SingleTemplate.bind({});
 DisabledTags.args = {
   tagsList: [
-    {id: 'math', label: 'Math', tooltipContent: 'Math'},
+    {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
       label: '+1',
       tooltipContent: (
@@ -67,7 +69,7 @@ GroupOfSizesOfTags.args = {
   components: [
     {
       tagsList: [
-        {id: 'math', label: 'Math S', tooltipContent: 'Math S'},
+        {tooltipId: 'math', label: 'Math S', tooltipContent: 'Math S'},
         {
           label: '+1',
           tooltipContent: (
@@ -81,7 +83,7 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {id: 'math', label: 'Math M', tooltipContent: 'Math M'},
+        {tooltipId: 'math', label: 'Math M', tooltipContent: 'Math M'},
         {
           label: '+1',
           tooltipContent: (
@@ -95,7 +97,7 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {id: 'math', label: 'Math L', tooltipContent: 'Math L'},
+        {tooltipId: 'math', label: 'Math L', tooltipContent: 'Math L'},
         {
           label: '+1',
           tooltipContent: (
