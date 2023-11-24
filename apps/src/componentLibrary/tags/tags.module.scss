@@ -8,6 +8,9 @@
   column-gap: 0.5em;
 
   > div {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
     color: $neutral-dark;
     padding: 0.13rem 0.5rem;
     background-color: $brand_primary_light;

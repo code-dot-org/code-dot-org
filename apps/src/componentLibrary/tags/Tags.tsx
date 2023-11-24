@@ -17,11 +17,11 @@ export interface TagsProps {
 }
 
 // TODO:
+// - are tooltips optional or required?
 // - tooltips always one line or multiline or both? (tooltip content: string or ReactNode?)
-// - connect icons (is left/right icon represents rtl/ltr? languages or should we create both at the same time?)
+// - (is left/right icon represents rtl/ltr? languages or should we create both at the same time?
 // - CardLabels.jsx - refactor to use Tags component
 // - refactor existing usages
-// - remove/refactor Card Labels
 
 /**
  * ### Production-ready Checklist:
