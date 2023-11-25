@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 
-class Lightbulb extends React.Component {
+export default class Lightbulb extends React.Component {
   static propTypes = {
     shouldAnimate: PropTypes.bool,
     count: PropTypes.number,
@@ -135,12 +134,6 @@ class Lightbulb extends React.Component {
     );
   }
 }
-
-export default connect(state => {
-  return {
-    isRtl: state.isRtl,
-  };
-})(Lightbulb);
 
 const styles = {
   count: {
