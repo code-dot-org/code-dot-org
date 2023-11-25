@@ -10,7 +10,7 @@ export default class Lightbulb extends React.Component {
     size: PropTypes.number,
     style: PropTypes.object,
     isMinecraft: PropTypes.bool,
-    isRtl: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool,
   };
 
   static defaultProps = {
