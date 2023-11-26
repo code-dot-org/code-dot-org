@@ -293,10 +293,15 @@ $ai-modal-border-width: 8px;
           position: absolute;
           backface-visibility: hidden;
           top: 0;
+        }
+
+        &Front {
           left: 0;
+          transform: translateZ(0);
         }
 
         &Back {
+          right: 0;
           transform: rotateY(180deg);
 
           .blockPreview {
