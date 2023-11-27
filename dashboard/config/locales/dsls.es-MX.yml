@@ -3773,6 +3773,9 @@ es-MX:
         description: Consulta tu guía de actividad para recomendar una de estas plantillas
           a cada cliente en función de sus necesidades.
         display_name: Plantillas de Animación y Diseño de Juegos
+      CSD U3 L7 review_2023:
+        description: Repasa los distintos tipos de bloques de figuras que hemos visto
+          hasta ahora. ¿Cuáles puedes utilizar para crear la cara de tu robot?
       CSD U3 Lesson Overview 1:
         markdown: |-
           # Visión general
@@ -19382,15 +19385,15 @@ es-MX:
           para empezar? ** Usa <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
           target=\"_blank\">este recurso</a> para compartir comentarios con tu pareja.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Todos los ecosistemas tienen una cadena alimentaria _delicadamente
-          equilibrada_\n## #The cadena alimentaria del ecosistema marino: >## #1.\n\n\n\n<img
+        markdown: "##**Todos los ecosistemas tienen una cadena alimentaria _delicadamente
+          equilibrada**\n###La cadena alimentaria del ecosistema marino:\n\n\n\n<img
           src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nEl sol proporciona
-          energía para que la fotosíntesis se produzca en las algas.\n>## #2. El alga
-          es comido por los peces.\n>## #3. Los peces son capturados y consumidos
-          por humanos, quienes utilizan barcos de pesca con redes. \n\n</div>\n\n\n##**Si
-          hay demasiado o muy poco de un organismo en la cadena alimentaria, hay efectos
-          en todo el ecosistema.**\n"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. El sol proporciona
+          energía para que se produzca la fotosíntesis en las algas.\n>###2. Las algas
+          se las comen los peces.\n>###3. Los peces son capturados y comidos por los
+          humanos, que utilizan barcos de pesca con redes. \n\n</div>\n\n\n##**Si
+          hay demasiado o muy poco de un organismo en la cadena alimentaria, se producen
+          efectos en todo el ecosistema.\n"
       csc_ecosystems_choice_freeplay_2023:
         description: Cada una de estas simulaciones de ecosistemas necesita ser ajustada.
           Elija un ecosistema, ejecute la simulación para observar el problema y ajuste
@@ -19401,7 +19404,7 @@ es-MX:
           código para verificar cuánta algas hay en el agua <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
           \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
           Primero, la computadora comprueba si una condición es verdadera o falsa.\n\n-
-          Si es cierto, entonces correrá los bloques en su interior.\n- Si es falso,
+          Si es cierto, entonces ejecutará los bloques en el interior.\n- Si es falso,
           entonces no va a hacer nada.\n\n<br>\n<br>\n<br>\n\n## Si hay demasiadas
           algas, entonces el coral se enferma\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
@@ -19424,11 +19427,11 @@ es-MX:
           Arrastre el código a la imagen coincidente.
 
         questions:
-        - text: "¡Crea una Zona de Pesca para embarcaciones! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)"
+        - text: "¡Crea una Zona de Pesca para barcos! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)"
         - text: |-
-            ¡Comienza una temporada de pesca y una temporada de no pesca
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: "¡Establezca límites de pesca! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)"
+            Iniciar una Temporada de Pesca y una Temporada de No Pesca
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Establecer Límites de Pesca ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
         title: Coincide el código con la imagen
       csc_ecosystems_matching_conditionals:
         answers:
@@ -19455,7 +19458,7 @@ es-MX:
         - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          Mira lo que sucede cuando los sprites tocan en ambas animaciones. A continuación, arrastre cada imagen de código a su imagen coincidente.
+          Observa lo que ocurre cuando los sprites se tocan en ambas animaciones. Luego arrastra cada imagen de código a su imagen correspondiente.
 
 
         questions:
@@ -19463,56 +19466,56 @@ es-MX:
         - text: Los peces se comen las algas. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: Coincide el código con la animación
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Práctica de Pesca #2:\n>># #Create a Temporada de
+        markdown: ">#Práctica de Pesca Sostenible nº 2:\n>>##Crea una Temporada de
           Pesca <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**Establecer límites
-          sobre cuándo las personas pueden pescar. Cuando no es temporada de pesca
-          el ecosistema tiene tiempo de recuperarse.** \n<br>\n\n#Save nuestros mares!
-          \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=400 style=\"margin-right: 30px; float: left\">\n**Establece límites
+          sobre cuándo se puede pescar. Cuando no es temporada de pesca, el ecosistema
+          tiene tiempo para recuperarse.** \n<br>\n\n#¡Salvemos nuestros Mares! \n<img
+          src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
-          La sobrepesca es un problema que puede dañar los ecosistemas de la vida
-          marina y las personas que dependen de ellos. Es importante practicar la
-          pesca sustentable para ayudar a proteger estos ecosistemas y garantizar
-          que las poblaciones de peces se mantengan saludables.\n\n\n\n<br>\n<br>\n<br>\n"
+          La sobrepesca es un problema que puede perjudicar a los ecosistemas marinos
+          y a las personas que dependen de ellos. Es importante practicar una pesca
+          sostenible para ayudar a proteger estos ecosistemas y garantizar que las
+          poblaciones de peces se mantengan sanas.\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Práctica de Pesca #3:\n>># #Set Límites de Pesca
+        markdown: ">#Práctica de Pesca Sostenible nº 3:\n>>##Fija Límites de Pesca
           <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**Los científicos
-          pueden ayudar a averiguar cuántos peces pueden ser capturados sin causar
-          daño al océano. Entonces los pescadores sabrán atrapar solo tantos peces.**
-          ¡ \n<br>\n<br>\n<br>\n\n#Save nuestros mares! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=300 style=\"margin-right: 30px; float: left\">\n**Los científicos
+          pueden ayudar a calcular cuántos peces pueden capturarse sin causar daños
+          al océano. Entonces los pescadores sabrán que sólo deben capturar esa cantidad
+          de peces.** \n<br>\n<br>\n<br>\n\n#¡Salvemos nuestros Mares! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          ¡Al trabajar juntos, podemos ayudar a mantener nuestros océanos llenos de
+          ¡Trabajando juntos, podemos ayudar a mantener nuestros océanos llenos de
           vida para las generaciones venideras!\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save nuestros mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Save nuestros Mares! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
           El océano tiene muchos peces en él, pero a veces la gente captura demasiados
           peces y puede ser malo para el ecosistema. En los siguientes niveles codificarás
           **tres prácticas de pesca sustentable** diferentes para ayudar a proteger
-          nuestros ecosistemas oceánicos.\n\n<br>\n\n## #To lee más sobre soluciones
-          sustentables para nuestros océanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">Haz clic aquí</a>\n<br>\n<br>\n\n> #Sustainable Fishing
-          Práctica #1:\n>> # #Fishing Zonas <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
-          \ width=300 style=\"margin-right: 30px; float: left\">\n**Los barcos de
-          pesca solo pueden pescar en áreas designadas. Algunas áreas están fuera
-          de los límites para los barcos de pesca por lo que el ecosistema puede recuperarse.**
-          \n<br>\n<br>\n\n\n"
+          nuestros ecosistemas oceánicos.\n\n<br>\n###Para leer más sobre soluciones
+          sostenibles para nuestros océanos: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Haz clic aquí</a>\n<br>\n<br>\n\n>#Práctica de Pesca Sostenible
+          nº 1:\n>> ##Zonas de Pesca <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          width=300 style=\"margin-right: 30px; float: left\">\n**Los barcos pesqueros
+          sólo pueden pescar en las zonas designadas. Algunas zonas están prohibidas
+          para los barcos de pesca para que el ecosistema pueda recuperarse.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #Share ¡Simulación de tu ecosistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
-          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**¡ Ecólogos!
-          ¡Es hora de compartir tu investigación! **\n\n## #Explain las siguientes
-          observaciones que hiciste:\n\n>1. Explica la cadena alimentaria en tu ecosistema
-          y cómo la codificaste.\n>2. ¿Había demasiado o muy poco organismo?\n>3.
-          Explique las modificaciones que realizó a la simulación. \n>4. ¿Qué notaste
-          después de cambiar los valores?\n</div>\n\n<div style=\"background-color:
-          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
-          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
-          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Listo
-          para más codificación? ** \nPrueba el [Curso Express] de code.org (https://studio.code.org/s/express-2022)
-          para aprender más ciencias de la computación a tu propio ritmo.   \n<br>\n</p></div>\n"
+        markdown: "##¡Comparte tu Simulación de Ecosistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**¡Ecólogos!
+          Es hora de compartir tu investigación!**\n\n###Explica las siguientes observaciones
+          que has hecho:\n\n>1. Explica la cadena alimentaria de tu ecosistema y cómo
+          la has codificado.\n>2. ¿Había demasiados o muy pocos organismos?\n>3. Explica
+          las modificaciones que hiciste en la simulación. \n>4. ¿Qué observaste después
+          de cambiar los valores?\n</div>\n\n<div style=\"color de fondo: #a6e3e8;
+          border-radius: 10px; color: #000000; anchura: 95%; padding: 0.5px 20px 1px
+          20px;\">\n\n<p style=\"altura de línea: 1,5; margen izquierdo: 10px; margen
+          derecho: 10px; margen superior: 20px; margen inferior: 20px; font-size:
+          18px; \">\n\n###**¿Preparado para codificar más?** \nPrueba el [Curso exprés]
+          de code.org (https://studio.code.org/s/express-2022) para aprender más informática
+          a tu propio ritmo.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan Tus Hitos Mapa
