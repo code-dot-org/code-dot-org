@@ -15,7 +15,7 @@ he:
           SIZE:
             '1.00': זמן בינוני
       Dancelab_ai:
-        text: "{IMAGE} צרו {VALUE} אפקט"
+        text: "{IMAGE} צור {VALUE} אפקט"
       Dancelab_alternateMoves:
         text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ל{MOVE2}"
         options:
@@ -630,7 +630,7 @@ he:
             '"rave"': שחור לבן
             '"cool"': מגניב
             '"electronic"': אלקטרוני
-            '"grayscale"': גווני אפור
+            '"grayscale"': גוני אפור
             '"iceCream"': גלידה
             '"default"': אוֹר
             '"neon"': נאון
