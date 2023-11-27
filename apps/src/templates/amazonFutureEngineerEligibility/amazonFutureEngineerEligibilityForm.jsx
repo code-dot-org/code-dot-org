@@ -141,6 +141,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       event: 'continue',
       data_json: JSON.stringify(submitData),
     });
+    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
     /*analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
       submitData: JSON.stringify(submitData),
     });*/

@@ -29,7 +29,8 @@ function showAmazonFutureEngineerEligibility() {
         study: 'amazon-future-engineer-eligibility',
         event: 'start',
       });
-      //analyticsReporter.sendEvent(EVENTS.AFE_START);
+      // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
+      // analyticsReporter.sendEvent(EVENTS.AFE_START);
 
       amazonFutureEngineerEligibilityElements.each(
         (index, amazonFutureEngineerEligibilityElement) => {

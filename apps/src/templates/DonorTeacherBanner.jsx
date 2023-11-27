@@ -37,6 +37,7 @@ export default class DonorTeacherBanner extends Component {
         event: 'submit',
         data_string: $('input[name="nces-id"]').val(),
       });
+      // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
       // analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page

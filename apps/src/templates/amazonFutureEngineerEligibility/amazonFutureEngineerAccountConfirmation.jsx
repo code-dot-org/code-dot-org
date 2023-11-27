@@ -21,7 +21,8 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
       },
       {callback: () => (window.location = SIGN_UP_URL)}
     );
-    //analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
+    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
+    // analyticsReporter.sendEvent(EVENTS.AFE_SIGN_UP_BUTTON_PRESS);
   };
 
   signInButtonPress = event => {
@@ -34,7 +35,8 @@ export default class AmazonFutureEngineerAccountConfirmation extends React.Compo
       },
       {callback: () => (window.location = SIGN_IN_URL)}
     );
-    //analyticsReporter.sendEvent(EVENTS.AFE_SIGN_IN_BUTTON_PRESS);
+    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
+    // analyticsReporter.sendEvent(EVENTS.AFE_SIGN_IN_BUTTON_PRESS);
   };
 
   render() {
