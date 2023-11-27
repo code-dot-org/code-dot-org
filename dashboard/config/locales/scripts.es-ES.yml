@@ -8903,6 +8903,11 @@ es:
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
           title: Fiesta de baile (remix 2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de baile: Edición IA'
+          title: 'Fiesta de baile: Edición IA'
         dance-draft:
           title: NO USAR
         dance-extras:
