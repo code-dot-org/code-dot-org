@@ -267,6 +267,18 @@ const CustomizableCurriculumCatalogCard = ({
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
+                className={style.quickViewButton}
+              />
+              <Button
+                __useDeprecatedTag
+                color={Button.ButtonColor.neutralDark}
+                type="button"
+                href={pathToCourse}
+                aria-label={i18n.quickViewDescription({
+                  course_name: courseDisplayName,
+                })}
+                text={i18n.learnMore()}
+                className={style.learnMoreButton}
               />
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
