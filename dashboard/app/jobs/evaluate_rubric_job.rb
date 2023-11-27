@@ -20,8 +20,8 @@ class EvaluateRubricJob < ApplicationJob
     }
   }
 
-  # This is raised if there is a PII violation and you query with exceptions
-  # enabled.
+  # This is raised if there is any raised error due to a rate limit, e.g. a 429
+  # received from the aiproxy service.
   class TooManyRequestsError < StandardError
     attr_reader :response
 
@@ -35,7 +35,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  AI_RUBRIC_METRICS_NAMESPACE = 'AIRubric'.freeze
+  AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
   # Write out metrics reflected in the response to CloudWatch
   #
