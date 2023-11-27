@@ -44,6 +44,9 @@ const ValidationTutor = ({levelId}) => {
     });
   };
 
+  const enableAskAITutor =
+    hasRunOrTestedCode && !hasCompilationError && !validationPassed;
+
   return (
     <div className={style.tutorContainer}>
       {!hasRunOrTestedCode && !validationPassed && (
@@ -56,7 +59,7 @@ const ValidationTutor = ({levelId}) => {
         </h4>
       )}
       {validationPassed && <h4>🎉 Your tests are passing. Wahoo!</h4>}
-      {hasRunOrTestedCode && !hasCompilationError && !validationPassed && (
+      {enableAskAITutor && (
         <>
           <h4>Why aren't my tests passing?</h4>
           <Button
@@ -64,7 +67,7 @@ const ValidationTutor = ({levelId}) => {
             isPending={isWaitingForAIResponse}
             pendingText="waiting"
             onClick={() => handleSend(studentCode)}
-            disabled={validationPassed}
+            disabled={enableAskAITutor}
           />
           <p id="ai-response">{aiResponse}</p>
         </>
