@@ -131,8 +131,10 @@ export default class SelectStartAnimations extends React.Component {
             hideAnimationNames={false}
             navigable
             hideBackgrounds={false}
+            hideCostumes={false}
             pickerType={PICKER_TYPE.spritelab}
             selectedAnimations={[]}
+            shouldWarnOnAnimationUpload={false}
           />
         </div>
         <h2>Generated Animation JSON:</h2>
