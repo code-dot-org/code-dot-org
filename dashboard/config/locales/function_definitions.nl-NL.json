@@ -291,7 +291,7 @@
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "patrol": {
             "name": "patrouilleer"
@@ -363,7 +363,7 @@
         },
         "Course 4 SCF 3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw an octagon": {
             "parameters": {
@@ -541,7 +541,7 @@
         },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -946,7 +946,7 @@
         },
         "Find the Wizard": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "FoodFight": {
@@ -1266,7 +1266,7 @@
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a hexagon": {
             "name": "teken een zeskant",
@@ -1277,7 +1277,7 @@
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "do iets",
+            "name": "doe iets",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1375,7 +1375,7 @@
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a triangle": {
             "description": "teken een driehoek",
@@ -1443,7 +1443,7 @@
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant",
@@ -1590,22 +1590,22 @@
         },
         "course3_artist_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1624,12 +1624,12 @@
         },
         "course4_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course4_artist_fwp_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a polygon": {
             "parameters": {
@@ -1740,27 +1740,27 @@
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseD_artist_binary1": {
@@ -2080,7 +2080,7 @@
         },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a hexagon": {
             "name": "teken een zeskant"
@@ -2103,47 +2103,47 @@
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions2": {
@@ -2298,7 +2298,7 @@
         },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2306,7 +2306,7 @@
         },
         "courseE_artist_functions82022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2314,7 +2314,7 @@
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2322,7 +2322,7 @@
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2330,7 +2330,7 @@
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2338,7 +2338,7 @@
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2346,7 +2346,7 @@
         },
         "courseE_artist_functions8_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2354,7 +2354,7 @@
         },
         "courseE_artist_functions8a2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2362,7 +2362,7 @@
         },
         "courseE_artist_functions8a_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2370,7 +2370,7 @@
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2378,7 +2378,7 @@
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2386,7 +2386,7 @@
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2394,7 +2394,7 @@
         },
         "courseE_artist_functions8a_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2402,7 +2402,7 @@
         },
         "courseE_artist_functions8b2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2410,7 +2410,7 @@
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2418,7 +2418,7 @@
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2426,7 +2426,7 @@
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2434,7 +2434,7 @@
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2442,7 +2442,7 @@
         },
         "courseE_artist_functions8b_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2450,7 +2450,7 @@
         },
         "courseE_artist_functions8c2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2458,7 +2458,7 @@
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2466,7 +2466,7 @@
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2474,7 +2474,7 @@
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2482,7 +2482,7 @@
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2490,7 +2490,7 @@
         },
         "courseE_artist_functions8c_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw square": {
             "name": "teken vierkant"
@@ -2498,37 +2498,37 @@
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functionsProj2022": {
@@ -2563,22 +2563,22 @@
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
@@ -2588,32 +2588,32 @@
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
@@ -2623,12 +2623,12 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -2678,37 +2678,37 @@
         },
         "courseE_artist_functions_predict2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2023": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_bee_concept4": {
@@ -2718,7 +2718,7 @@
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_bee_functions10": {
@@ -2743,27 +2743,27 @@
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_functions10b": {
@@ -2819,22 +2819,22 @@
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseF_apps_collector": {
@@ -2875,7 +2875,7 @@
             }
           },
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2899,7 +2899,7 @@
             }
           },
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant",
@@ -3041,7 +3041,7 @@
         },
         "courseF_artist_fwp_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a polygon": {
             "parameters": {
@@ -3056,7 +3056,7 @@
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw an octagon": {
             "parameters": {
@@ -3066,7 +3066,7 @@
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseF_bee_fwp4": {
