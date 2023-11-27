@@ -1864,6 +1864,18 @@ class UserTest < ActiveSupport::TestCase
     assert_empty teacher.sections_instructed
   end
 
+  test 'section_instructors get deleted when user gets deleted' do
+    section = create :section
+    teacher = section.teacher
+    section_instructors = section.section_instructors
+
+    refute_empty section_instructors
+
+    teacher.destroy!
+
+    assert_empty section_instructors
+  end
+
   test 'sections_instructed omits sections with in-active section_instructors' do
     section = create :section
     teacher = create :teacher
