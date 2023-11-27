@@ -51,7 +51,7 @@ class CoursesController < ApplicationController
       return
     end
 
-    sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
+    sections = current_user.try {|u| u.sections_instructed.all.reject(&:hidden).map(&:summarize)}
     @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
 
     @locale_code = request.locale
