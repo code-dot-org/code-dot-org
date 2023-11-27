@@ -1,0 +1,155 @@
+---
+title: Aprende a programar con la Hora del Código En Vivo
+video_player: true
+theme: responsive
+social:
+  "og:title": "Hora del Código En Vivo"
+  "og:description": "Learn CS with Hadi Partovi and the team at Code.org with a live weekly webcast and weekly challenges for students of all abilities"
+  "og:image": "http://code.org/images/marketing/hocbanner2.jpg"
+  "og:image:width": 850
+  "og:image:height": 502
+  "og:video": ""
+  "og:video:width": ""
+  "og:video:height": ""
+  "og:video:type": ""
+---
+
+%div{style: "background-color: #00adbc; padding: 15px; margin-top: 50px;"}
+  %img{src: "/images/marketing/hocbanner2.jpg", style: "max-width: 100%"}/
+%h1
+  = hoc_s(:envivo_main_title)
+.col-66{style: "padding-right: 28px; padding-bottom: 20px;"}
+  %p 
+    = hoc_s(:envivo_main_description_1, markdown: :inline, locals: { activities: "#activities" })
+  %p
+    =hoc_s(:envivo_main_description_2, markdown: :inline, locals: {person_link: "https://code.org/about/leadership/leonardo_ortiz_villacorta"})
+  %div{style: "clear: both;"}
+  %div{style: "max-width:100%;"}
+    %h2
+      =hoc_s(:envivo_registrate_title)
+    %p
+      =hoc_s(:envivo_registrate_description, markdown: :inline, locals: {julio: "https://miamiart.house/", joy: "https://twitter.com/solamentejoy", aqui: "https://bit.ly/3bMXzeY"})
+    .picture{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=T8Qzo3YfxwI&t=1283s"}
+        %img.responsive{src: "/images/hdcenvivo_joy.png", style: "padding-bottom: 10px; max-width: 100%"}/
+    .text-registrate
+      %p
+        =hoc_s(:envivo_registrate_link, markdown: :inline, locals: {facebook_registrate: "https://www.facebook.com/Code.org/", twitter_registrate: "https://twitter.com/codeorg"})
+.col-33{style: " border: solid 1px #bbb; border-radius: 5px; overflow: hidden; position: relative; float: left; box-sizing: border-box;"}
+  %img{src: "/images/marketing/code-break-callout-episode-0.jpg", style: "max-width:100%"}/
+  %a#signup
+  %div{style: "padding:8px 18px 0 8px;"}
+    %p{style: "margin: 10px 0 0 0;"} 
+      =hoc_s(:envivo_form_description)
+    %iframe{allowtransparency: "true", frameborder: "0", height: "305", src: "http://go.pardot.com/l/153401/2020-09-30/nwvb6j", style: "overflow:hidden", type: "text/html", width: "100%"}
+%div{style: "clear: both;"}
+%a#activities
+%div
+  %div{style: "clear: both;"}
+  %div{style: "max-width:100%;"}
+    %h2
+      =hoc_s(:envivo_divertido_title)
+    %p
+      =hoc_s(:envivo_divertido_description_1, markdown: :inline, locals: {cieancias: "https://code.org/promote"})
+    %p
+      =hoc_s(:envivo_divertido_description_2, markdown: :inline, locals: {fundacionales: "https://code.org/promote", estudios: "https://codeorg.medium.com/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536"})
+      %span{style: "color: #00adbc; font-weight: bold"}
+        =hoc_s(:envivo_divertido_span)
+    
+  %div{style: "clear: both;"}
+  %div{style: "background-color: #7665a0; margin-top:50px;"}
+    %h1{style: "color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;"} Episodios de la Hora del Código En Vivo
+  
+  %h2
+    =hoc_s(:episodios_item_title_1)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_1)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=NvAxi3xg-Qc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=1"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_1.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_1)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=NvAxi3xg-Qc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=1", facebook: "https://www.facebook.com/309754825787494/videos/2807659212815074"})
+  %div{style: "clear: both;"}
+  %h2 
+    =hoc_s(:episodios_item_title_2)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_2)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=hLd1KhhMzUQ&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=2"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_2.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_2)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=hLd1KhhMzUQ&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=2", facebook: "https://www.facebook.com/309754825787494/videos/350445992897892"})
+  %a#episode3
+  %div{style: "clear: both;"}
+  %h2 
+    =hoc_s(:episodios_item_title_3)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_3)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=kINgMoz7pzo&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=3"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_3.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_3)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=kINgMoz7pzo&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=3", facebook: "https://www.facebook.com/309754825787494/videos/379058319913083"})
+  %div{style: "clear: both;"}
+  %a#episode4
+  %div{style: "clear: both;"}
+  %h2 
+    =hoc_s(:episodios_item_title_4)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_4)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=tTtOVA1g2BU&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=4"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_4.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_4)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=NvAxi3xg-Qc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=4", facebook: "https://www.facebook.com/309754825787494/videos/817015702468291"})
+  %a#episode5
+  %div{style: "clear: both;"}
+  %h2 
+    =hoc_s(:episodios_item_title_5)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_5)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=ULlZRADiFjA&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=5"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_5.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_5)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=NvAxi3xg-Qc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=5", facebook: "https://www.facebook.com/309754825787494/videos/3239283816183563"})
+  %div{style: "clear: both;"}
+  %a#episode6
+  %div{style: "clear: both;"}
+  %h2 
+    =hoc_s(:episodios_item_title_6)
+  %div
+    %h4{style: "background:#00adbc;color:#ffffff; padding:8px;"} 
+      =hoc_s(:episodios_item_topic_6)
+    .col-50{style: "padding-right:20px"}
+      %a{href: "https://www.youtube.com/watch?v=2zx1VWGqlzc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=6"}
+        %img.responsive{src: "/images/marketing/HDCENVIVO_6.jpg", style: "padding-bottom: 10px; max-width: 100%"}/
+    .col-50
+      %p
+        =hoc_s(:episodios_item_description_6)
+      %p
+        =hoc_s(:episodios_item_links, markdown: :inline, locals: {youtube: "https://www.youtube.com/watch?v=NvAxi3xg-Qc&list=PLzdnOPI1iJNfSMYuR-d7C1wRhluXX7j7v&index=6", facebook: "https://www.facebook.com/309754825787494/videos/195391355536902"})
+    %div{style: "clear: both"}
+    %hr/
+    %div{style: "text-align:center"}
+      %img{src: "/images/athome/unescovid19.png", style: "width:35%"}/
