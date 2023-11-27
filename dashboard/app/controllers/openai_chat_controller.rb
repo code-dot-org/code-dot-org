@@ -10,8 +10,7 @@ class OpenaiChatController < ApplicationController
 
     if has_level_id_param?
       level_id = params[:levelId]
-      level = Level.find(level_id)
-      test_file_contents = level.validation.values.first["text"]
+      test_file_contents = get_validated_level_test_file_contents(level_id)
       messages = params[:messages]
       messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file_contents}"
       messages.second["content"] = "The student's code is: " + messages.second["content"]
@@ -32,5 +31,23 @@ class OpenaiChatController < ApplicationController
   # request to openai
   def has_level_id_param?
     params[:levelId].present?
+  end
+
+  def get_validated_level_test_file_contents(level_id)
+    level = Level.find(level_id)
+
+    unless level
+      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    end
+
+    if level.validation.values.empty?
+      return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
+    else
+      test_file_contents = ""
+      level.validation.values.each do |validation|
+        test_file_contents += validation["text"]
+      end
+      return test_file_contents
+    end
   end
 end
