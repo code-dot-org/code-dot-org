@@ -1,12 +1,12 @@
 import {FieldDropdown} from 'blockly';
 
-type ValidateAndSetFieldValueLogger = (o: {
-  message?: string;
-  value?: string;
+export type ValidateAndSetFieldValueLogger = (o: {
+  message: string;
+  value: string;
   logValues?: unknown;
 }) => void;
 
-type ValidateAndSetFieldValueOptions = {
+export type ValidateAndSetFieldValueOptions = {
   logValues?: unknown;
   invalidValueLogger?: ValidateAndSetFieldValueLogger;
 };
