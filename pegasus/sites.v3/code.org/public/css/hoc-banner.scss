@@ -1,9 +1,5 @@
 @import 'color.scss', 'font.scss', 'breakpoints.scss';
 
-#homepage #hero {
-  overflow: hidden;
-}
-
 // Code.org HoC homepage banner
 #bars {
   height: 450px;
@@ -27,14 +23,10 @@
       left: 0;
       top: -10%;
 
-      @media (min-width: 768px) and (max-width: 1190px) {
+      @media screen and (max-width: $width-md) {
         width: 45%;
         left: -9%;
-        top: -15%;
-      }
-
-      @media screen and (max-width: 800px) {
-        display: none;
+        top: -3rem;
       }
     }
 
@@ -46,8 +38,8 @@
       transform: translate(-50%, -50%);
 
       @media screen and (max-width: $width-lg) {
-        width: 610px;
-        margin-top: 0;
+        width: 570px;
+        margin-top: -0.5rem;
       }
 
       @media screen and (max-width: $width-sm) {
@@ -76,7 +68,6 @@
   line-height: 1.4;
   max-width: 860px;
   margin: 2rem auto 4rem;
-  padding: 0 1rem;
 
   h1, h2 {
     color: $white
@@ -85,14 +76,18 @@
   h1 {
     font-size: 4rem;
     font-family: var(--barlowSemiCondensed-semibold);
-    font-weight: var(--bold-font-weight);
     margin: 0 auto 0.5em;
 
-    @media screen and (max-width: 1024px) {
-      font-size: 3.5rem;
+    @media screen and (max-width: $width-lg) {
+      font-size: 3.75em;
     }
+
+    @media screen and (max-width: $width-md) {
+      font-size: 3.5em;
+    }
+
     @media screen and (max-width: $width-sm) {
-      font-size: 3rem;
+      font-size: 2.75em;
     }
   }
 
@@ -100,21 +95,14 @@
     margin: 0 auto 1rem;
     font-family: var(--main-font);
     font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      width: 80%;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      width: 100%;
-    }
   }
 
   // The Hour of Code is coming/here text
   p {
-    font-size: 2em;
+    font-size: 1.5rem;
     font-family: var(--main-font);
     font-weight: var(--semi-bold-font-weight);
+    margin-bottom: 0.25rem;
 
     @media screen and (max-width: $width-md) {
       font-size: 1.75em;
