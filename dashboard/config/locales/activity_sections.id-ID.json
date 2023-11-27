@@ -36183,7 +36183,8 @@
         },
         "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
           "name": "Gunakan A.I. untuk membuat efek khusus",
-          "description": "Dalam tiga level ini, siswa diperkenalkan dengan blok A.I. yang baru. Ada dua video yang mendampingi level ini. Minta siswa untuk menonton kembali video ini jika mereka merasa kesulitan. Untuk melewati level ini, siswa meminta A.I. untuk membuat kode dengan efek warna-warni yang selaras dengan pesta dansa mereka. Minta siswa untuk memilih tiga emoji yang menggambarkan mood yang ingin mereka sampaikan untuk pesta dansanya."
+          "description": "Dalam tiga level ini, siswa diperkenalkan dengan blok A.I. yang baru. Ada dua video yang mendampingi level ini. Minta siswa untuk menonton kembali video ini jika mereka merasa kesulitan. Untuk melewati level ini, siswa meminta A.I. untuk membuat kode dengan efek warna-warni yang selaras dengan pesta dansa mereka. Minta siswa untuk memilih tiga emoji yang menggambarkan mood yang ingin mereka sampaikan untuk pesta dansanya.",
+          "progression_name": "Gunakan A.I. "
         },
         "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
           "name": "Buat kode event untuk menambah interaksi",
@@ -36194,6 +36195,51 @@
           "name": "Berkreasilah!",
           "description": "Level terakhir ini ditujukan sebagai ruang untuk bermain bebas dan bereksplorasi. Minta siswa untuk berkreasi dan melatih keterampilan coding yang baru mereka pelajari untuk membuat pesta dansa mereka sendiri!",
           "progression_name": "Proyek Pesta Dansa Akhir"
+        },
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
+        },
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
+        },
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }
