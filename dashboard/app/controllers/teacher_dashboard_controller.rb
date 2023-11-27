@@ -3,13 +3,13 @@ class TeacherDashboardController < ApplicationController
 
   def show
     @section_summary = @section.summarize
-    @sections = current_user.sections.map(&:summarize)
+    @sections = current_user.sections_instructed.map(&:summarize)
     @locale_code = request.locale
   end
 
   def parent_letter
     @section_summary = @section.summarize
-    @sections = current_user.sections.map(&:summarize)
+    @sections = current_user.sections_instructed.map(&:summarize)
     render layout: false
   end
 end

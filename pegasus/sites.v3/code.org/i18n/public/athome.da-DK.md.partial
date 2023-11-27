@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Prøv en Hour of Code med disse sjove introduktionsvejledning</h2>
-<p>Prøv en <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">times tutorial</a> med populære spil og film som Minecraft, Frozen og Star Wars. Mange tutorials er struktureret som spil, designet til at undervise grundlæggende datalogiske koncepter på sjove, engagerende måder.</p>
+<p>Prøv en <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">times vejledning</a> med populære spil og film som Minecraft, Frozen og Star Wars. Mange tutorials er struktureret som spil, designet til at undervise grundlæggende datalogiske koncepter på sjove, engagerende måder.</p>
 
 <br>
 

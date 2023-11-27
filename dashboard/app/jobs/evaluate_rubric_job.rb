@@ -1,12 +1,6 @@
 class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
-  # To make this job get run in development, you have two options:
-  # 1. switch the queue_adapter value here to :async, or
-  # 2. leave the value as :delayed_job, and run the delayed job worker locally
-  #    via `dashboard/bin/delayed_job restart` or rake build
-  self.queue_adapter = :delayed_job
-
   S3_AI_BUCKET = 'cdo-ai'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
@@ -86,6 +80,40 @@ class EvaluateRubricJob < ApplicationJob
     raise exception
   end
 
+  rescue_from(ProfanityFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PROFANITY_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
+  rescue_from(PIIFilterException) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob Filter Error: #{exception.full_message} Type: #{exception.share_failure.type}"
+    end
+
+    # Record the failure, if we can
+    begin
+      rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+      rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:PII_VIOLATION]
+      rubric_ai_evaluation.save!
+    rescue StandardError
+      # Ignore cascading errors when the rubric record does not exist
+    end
+
+    # We gracefully just fail, here, and we do not file this exception
+  end
+
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
@@ -103,6 +131,11 @@ class EvaluateRubricJob < ApplicationJob
 
     channel_id = get_channel_id(user, script_level)
     code, project_version = read_user_code(channel_id)
+
+    # Check for PII / sharing failures
+    # Get the 2-character language code from the user's preferred locale
+    locale = (user.locale || 'en')[0...2]
+    ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
     openai_params = get_openai_params(lesson_s3_name, code)
     ai_evaluations = get_openai_evaluations(openai_params)

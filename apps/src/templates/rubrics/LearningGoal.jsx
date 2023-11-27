@@ -8,6 +8,7 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
   submittedEvaluationShape,
+  aiEvaluationShape,
 } from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -37,6 +38,9 @@ export default function LearningGoal({
   aiConfidence,
   submittedEvaluation,
   isStudent,
+  feedbackAdded,
+  setFeedbackAdded,
+  aiEvalInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isAutosaving, setIsAutosaving] = useState(false);
@@ -104,6 +108,9 @@ export default function LearningGoal({
       .then(() => {
         setIsAutosaving(false);
         setAutosaved(true);
+        if (!feedbackAdded) {
+          setFeedbackAdded(true);
+        }
       })
       .catch(error => {
         console.log(error);
@@ -165,6 +172,7 @@ export default function LearningGoal({
         <label className={style.evidenceLevelLabel}>
           <span>{i18n.feedback()}</span>
           <textarea
+            id="ui-teacherFeedback"
             className={style.inputTextbox}
             name="teacherFeedback"
             value={displayFeedback}
@@ -176,7 +184,7 @@ export default function LearningGoal({
           <span className={style.autosaveMessage}>{i18n.saving()}</span>
         ) : (
           autosaved && (
-            <span className={style.autosaveMessage}>
+            <span id="ui-autosaveConfirm" className={style.autosaveMessage}>
               <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
             </span>
           )
@@ -260,6 +268,7 @@ export default function LearningGoal({
       <div>
         {teacherHasEnabledAi &&
           !!studentLevelInfo &&
+          !!aiEvalInfo &&
           aiUnderstanding !== undefined && (
             <div className={style.openedAiAssessment}>
               <AiAssessment
@@ -267,6 +276,7 @@ export default function LearningGoal({
                 studentName={studentLevelInfo.name}
                 aiConfidence={aiConfidence}
                 aiUnderstandingLevel={aiUnderstanding}
+                aiEvalInfo={aiEvalInfo}
               />
             </div>
           )}
@@ -306,6 +316,9 @@ LearningGoal.propTypes = {
   aiConfidence: PropTypes.number,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
+  feedbackAdded: PropTypes.bool,
+  setFeedbackAdded: PropTypes.func,
+  aiEvalInfo: aiEvaluationShape,
 };
 
 const AiToken = () => {

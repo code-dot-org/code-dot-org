@@ -46,6 +46,7 @@ export default class SocialShare extends Component {
             <button
               type="button"
               style={{background: color.facebook_blue, ...styles.shareButton}}
+              onClick={e => e.preventDefault()}
             >
               <i className="fa fa-facebook" />
             </button>
@@ -61,6 +62,7 @@ export default class SocialShare extends Component {
             <button
               type="button"
               style={{background: color.twitter_blue, ...styles.shareButton}}
+              onClick={e => e.preventDefault()}
             >
               <i className="fa fa-twitter" />
             </button>

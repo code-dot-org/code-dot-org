@@ -3,7 +3,8 @@
 #
 "project_identifier" : "codeorg-testing"
 "project_id" : "346087"
-"base_path" : "i18n/locales"
+"base_path" : "i18n/locales/source"
+"preserve_hierarchy": true
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
@@ -18,7 +19,7 @@ files: [
   # Source files filter
   # e.g. "/resources/en/*.json"
   #
-  "source" : "/source/**/*.yml",
+  "source" : "/**/*.yml",
 
   #
   # where translations live
@@ -32,8 +33,8 @@ files: [
   #
   # hourofcode content is handled by the hourofcode-specific sync
   "ignore" : [
-    "/source/hourofcode/**",
-    "/source/dashboard/restricted.yml"
+    "/hourofcode/**",
+    "/dashboard/restricted.yml"
   ],
 
   #
@@ -43,13 +44,14 @@ files: [
   "update_option" : "update_as_unapproved"
  }, {
   # config for json content
-  "source" : "/source/**/*.json",
+  "source" : "/**/*.json",
   "translation" : "/%language%/**/%original_file_name%",
   "ignore" : [
-    "/source/hourofcode/**",
-    "/source/blockly-mooc/calc.json",
-    "/source/blockly-mooc/eval.json",
-    "/source/blockly-mooc/netsim.json"
+    "/hourofcode/**",
+    "/blockly-mooc/calc.json",
+    "/blockly-mooc/eval.json",
+    "/blockly-mooc/netsim.json",
+    "/blockly-mooc/mlPlayground.json"
   ],
   "update_option" : "update_as_unapproved"
  }

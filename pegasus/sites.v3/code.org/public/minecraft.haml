@@ -1,26 +1,49 @@
 ---
 title: Minecraft
-theme: responsive
-social:
-  twitter:card: photo
-  twitter:site: "@codeorg"
-  twitter:url: http://code.org/minecraft
-  twitter:image:src: https://code.org/images/mc/mc_social_2017.jpg
-  twitter:title: Minecraft Hour of Code
-  og:title: Minecraft Hour of Code
-  og:image: https://code.org/images/mc/mc_social_2017.jpg
-  og:image:width: '1200'
-  og:image:height: '630'
-  og:video: ''
-  og:video:width: ''
-  og:video:height: ''
-  og:video:type: ''
-video_player: true
-style_min: true
+theme: responsive_full_width
 ---
 
-:ruby
-  @header["social"]["twitter:description"] = I18n.t(:minecraft_og_agent)
-  @header["social"]["og:description"] = I18n.t(:minecraft_og_agent)
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/minecraft-styles.css", rel: "stylesheet"}
 
-= view :minecraft_content
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:minecraft_hero_heading)
+    %figure
+      %img{src: "/images/mc/minecraft-banner-figures.png", alt: ""}
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_available_on_code_dot_org)
+    %p=hoc_s(:minecraft_activities_desc, markdown: :inline, locals: {offline_url: CDO.studio_url("/download/mc")})
+    = view :"minecraft/minecraft_activities_carousel"
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2=hoc_s(:minecraft_education_activities_heading)
+    = view :"minecraft/minecraft_education_activities"
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_additional_resources)
+    = view :"minecraft/minecraft_resources"
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:heading_start_hoc_with_videos)
+    %p=hoc_s(:video_library_page_description_inspirational)
+    = view :carousel_inspirational_video
+
+%section
+  .wrapper
+    = view :ai_microsoft_block
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+%script{:src=>'/js/page/minecraft_page.js'}

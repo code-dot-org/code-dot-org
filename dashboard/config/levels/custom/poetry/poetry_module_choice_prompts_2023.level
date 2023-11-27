@@ -1,5 +1,9 @@
 <Poetry>
   <config><![CDATA[{
+  "game_id": 69,
+  "created_at": "2023-03-09T15:17:07.000Z",
+  "level_num": "custom",
+  "user_id": 13468,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -15,7 +19,7 @@
     "show_type_hints": true,
     "use_modal_function_editor": "false",
     "embed": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"new_prompt_block\",\r\n  \"callout_text\": \"Find the new prompt block here.\",\r\n  \"element_id\": \"[id=':5.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"new_prompt_block\",\"callout_text\":\"Find the new prompt block here.\",\"element_id\":\"[id=':5.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-4.label']\",\"localization_key\":\"new_prompt_block\",\"callout_text\":\"Find the new prompt block here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "instructions_important": "false",
     "long_instructions": "*Let's provide the user with choices about the words that work well in your poem.*\r\n\r\n**For each prompt in your program:**\r\n* Replace the current `prompt user` blocks with  `prompt user with choices` blocks.\r\n* Enter the words you wrote on your worksheet.\r\n* Run your code to make sure your program still works as expected.\r\n\r\n<xml><block type=\"gamelab_setPromptWithChoices\">\r\n      <value name=\"QUESTION\">\r\n        <block type=\"text\">\r\n          <title name=\"TEXT\"></title>\r\n        </block>\r\n      </value>\r\n      <value name=\"VAR\">\r\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\r\n          <title name=\"VAR\">word2</title>\r\n        </block>\r\n      </value>\r\n      <value name=\"A\">\r\n        <block type=\"Poetry_stringValue\">\r\n        <title name=\"TEXT\"></title>\r\n        </block>\r\n      </value>\r\n      <value name=\"B\">\r\n        <block type=\"Poetry_stringValue\">\r\n          <title name=\"TEXT\"></title>\r\n        </block>\r\n      </value>\r\n      <value name=\"C\">\r\n        <block type=\"Poetry_stringValue\">\r\n          <title name=\"TEXT\"></title>\r\n        </block>\r\n      </value>\r\n    </block></xml>",
     "submittable": "false",
@@ -43,11 +47,7 @@
     "name_suffix": "_2023",
     "preload_asset_list": null
   },
-  "game_id": 69,
   "published": true,
-  "created_at": "2023-03-09T15:17:07.000Z",
-  "level_num": "custom",
-  "user_id": 13468,
   "audit_log": "[{\"changed_at\":\"2023-03-09T15:17:07.045+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choice_prompts\\\"\"],\"cloned_from\":\"poetry_module_choice_prompts\"},{\"changed_at\":\"2023-03-14 21:22:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }

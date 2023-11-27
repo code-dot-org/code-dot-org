@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Kokeile Hour of Code -koodia näiden hauskojen johdanto-opetusohjelmien avulla</h2>
-<p>Kokeile <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">tunnin opetusohjelmaa</a> , joka sisältää suosittuja pelejä ja elokuvia, kuten Minecraft, Frozen ja Star Wars. Monet opetusohjelmat on jäsennelty kuten pelit, suunniteltu opettamaan tietojenkäsittelytieteen peruskäsitteitä hauskalla, kiinnostavalla tavalla.</p>
+<p>Kokeile <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">tunnin mittaista opetusohjelmaa,</a> joka sisältää suosittuja pelejä ja elokuvia, kuten Minecraft, Frozen ja Tähtien sota. Monet opetusohjelmat on jäsennelty kuten pelit, suunniteltu opettamaan tietojenkäsittelytieteen peruskäsitteitä hauskalla, kiinnostavalla tavalla.</p>
 
 <br>
 

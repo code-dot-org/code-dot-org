@@ -10004,12 +10004,16 @@ en:
               display_name: 'Unit 9: Create PT'
             lessonGroup-2:
               display_name: Post-Course Survey
+            lessonGroup-3:
+              display_name: Mock Exam
           title: Create PT Prep ('23-'24)
           description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Create PT Written Response Mock Exam
           name: csp9-2023
         csp10-2023:
           lesson_groups:
@@ -10171,7 +10175,19 @@ en:
               name: CSS Grid
             lesson-5:
               name: Assessments
-          lesson_groups: {}
+            lesson-6:
+              name: Lesson 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyber
+            lessonGroup-3:
+              display_name: CSD
+            lessonGroup-4:
+              display_name: Random
+            lessonGroup-5:
+              display_name: Coding w/AI
+            lessonGroup-6:
+              display_name: PL Stuff
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -13141,6 +13157,14 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 7 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: U7L7 Modal Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Lesson Reflection'
+            lesson-5:
+              name: 'Synchronous Session 4: Lesson Investigation'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m7
           title: Module 7
@@ -13152,6 +13176,12 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 8 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Conclusions and Connections'
+            lesson-4:
+              name: 'Synchronous Session 3: Equity Journey'
+            lesson-5:
+              name: 'Synchronous Session 4: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m8
           title: Module 8
@@ -13677,3 +13707,97 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Learn the key problem solving frameworks utilized in the unit\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 40 minutes"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Dance Party: A.I. Edition'
+          lesson_groups: {}
+          name: dance-ai-2023
+          title: 'Dance Party: AI Edition'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit2-1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit2-1-2023
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit2-2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit2-2-2023
+          title: Preparing to Teach Web Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit3-1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit3-1-2023
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+        self-paced-pl-csd-unit3-2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit3-2-2023
+          title: Preparing to Teach Interactive Animations and Games
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+        self-paced-pl-csd-unit4-1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit4-1-2023
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit4-2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit4-2-2023
+          title: Preparing to Teach The Design Process
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit5-1-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit5-1-2023
+          title: Getting Started with Code.org
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-csd-unit5-2-2023:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csd-unit5-2-2023
+          title: Preparing to Teach Data and Society
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: AI Tutor Test
+          lesson_groups: {}
+          name: ai-tutor-test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

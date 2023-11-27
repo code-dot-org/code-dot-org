@@ -41,16 +41,16 @@ CROWDIN_PROJECTS = {
 
 CROWDIN_TEST_PROJECTS = {
   'codeorg-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg-testing_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-testing_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_files_to_sync_out.json')
   },
   'codeorg-markdown-testing': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_markdown_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg-testing_markdown_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-testing_markdown_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-testing_markdown_files_to_sync_out.json')
   }
 }
 

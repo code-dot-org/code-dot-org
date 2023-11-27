@@ -52,6 +52,7 @@ export default function RubricContent({
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
   const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
+  const [feedbackAdded, setFeedbackAdded] = useState(false);
   const submitFeedbackToStudent = () => {
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_SUBMITTED, {
       ...reportingData,
@@ -77,6 +78,16 @@ export default function RubricContent({
         setIsSubmittingToStudent(false);
         setErrorSubmitting(true);
       });
+    if (feedbackAdded) {
+      analyticsReporter.sendEvent(
+        EVENTS.TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK,
+        {
+          ...reportingData,
+          studentId: studentLevelInfo.user_id,
+        }
+      );
+      setFeedbackAdded(false);
+    }
   };
 
   const getAiUnderstanding = learningGoalId => {
@@ -96,6 +107,17 @@ export default function RubricContent({
         item => item.learning_goal_id === learningGoalId
       );
       return aiInfo?.ai_confidence;
+    } else {
+      return null;
+    }
+  };
+
+  const getAiInfo = learningGoalId => {
+    if (!!aiEvaluations) {
+      const aiInfo = aiEvaluations.find(
+        item => item.learning_goal_id === learningGoalId
+      );
+      return aiInfo;
     } else {
       return null;
     }
@@ -177,6 +199,9 @@ export default function RubricContent({
             aiUnderstanding={getAiUnderstanding(lg.id)}
             aiConfidence={getAiConfidence(lg.id)}
             isStudent={false}
+            feedbackAdded={feedbackAdded}
+            setFeedbackAdded={setFeedbackAdded}
+            aiEvalInfo={getAiInfo(lg.id)}
           />
         ))}
       </div>
@@ -184,6 +209,7 @@ export default function RubricContent({
         <div className={style.rubricContainerFooter}>
           <div className={style.submitToStudentButtonAndError}>
             <Button
+              id="ui-submitFeedbackButton"
               text={i18n.submitToStudent()}
               color={Button.ButtonColor.brandSecondaryDefault}
               onClick={submitFeedbackToStudent}
@@ -196,11 +222,13 @@ export default function RubricContent({
               </BodyThreeText>
             )}
             {!errorSubmitting && !!lastSubmittedTimestamp && (
-              <BodyThreeText>
-                {i18n.feedbackSubmittedAt({
-                  timestamp: lastSubmittedTimestamp,
-                })}
-              </BodyThreeText>
+              <div id="ui-feedback-submitted-timestamp">
+                <BodyThreeText>
+                  {i18n.feedbackSubmittedAt({
+                    timestamp: lastSubmittedTimestamp,
+                  })}
+                </BodyThreeText>
+              </div>
             )}
           </div>
         </div>
