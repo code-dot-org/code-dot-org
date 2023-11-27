@@ -748,7 +748,8 @@
           "sign_in_to_save_project": "Хочете отримати доступ до вашого проєкту пізніше? Увійдіть, щоб зберегти проєкт у своєму обліковому записі!"
         },
         "New Sprite Lab Project": {
-          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проєкту."
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проєкту.",
+          "make_sprite": "Використовуй ці блоки, щоб зробити спрайт!"
         },
         "Overworld Chop Trees": {
           "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
@@ -787,15 +788,19 @@
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
         "Overworld Move to Sheep": {
+          "craft_drag_block_callout": "Перетягни блок \"рухатися вперед\" та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep2022": {
+          "craft_drag_block_callout": "Перетягни блок \"рухатися вперед\" та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep_2019": {
+          "craft_drag_block_callout": "Перетягни блок \"рухатися вперед\" та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep_2020": {
+          "craft_drag_block_callout": "Перетягни блок \"рухатися вперед\" та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep_2021": {
@@ -803,6 +808,7 @@
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Перетягни блок \"рухатися вперед\" та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
         "Overworld Place Wall": {

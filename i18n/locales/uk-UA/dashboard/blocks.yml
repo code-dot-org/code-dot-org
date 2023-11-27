@@ -37,13 +37,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -99,13 +99,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -183,13 +183,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -207,13 +207,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -359,13 +359,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -387,13 +387,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -419,14 +419,14 @@ uk:
         text: створити нового {COSTUME} в {LOCATION}
         options:
           COSTUME:
-            '"ALIEN"': інопланетянин
-            '"BEAR"': ведмідь
+            '"ALIEN"': інопланетянина
+            '"BEAR"': ведмедя
             '"CAT"': кіт
-            '"DOG"': пес
+            '"DOG"': собаку
             '"DUCK"': качку
-            '"FROG"': жаба
-            '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананас
+            '"FROG"': жабу
+            '"MOOSE"': лось
+            '"PINEAPPLE"': ананас
             '"ROBOT"': робот
             '"SHARK"': акула
             '"SLOTH"': лінивець
@@ -458,7 +458,7 @@ uk:
             '"PINEAPPLE"': ананаса
             '"ROBOT"': робота
             '"SHARK"': акулу
-            '"SLOTH"': лінивець
+            '"SLOTH"': лінивця
             '"UNICORN"': єдинорога
           LOCATION:
             "{x: 200, y: 100}": вгорі
@@ -497,13 +497,13 @@ uk:
             '19': '19'
             '20': '20'
           COSTUME:
-            '"ALIEN"': прибульців
+            '"ALIEN"': інопланетян
             '"BEAR"': ведмеді
             '"CAT"': котів
             '"DOG"': собак
             '"DUCK"': качки
             '"FROG"': жаб
-            '"MOOSE"': лосів
+            '"MOOSE"': лося
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботів
             '"SHARK"': акули
@@ -665,7 +665,7 @@ uk:
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
         options:
           SPEED:
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
             '0.5': повільно
@@ -675,20 +675,20 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
             '"SLOTH"': лінивці
             '"UNICORN"': єдинороги
           SPEED:
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
             '0.5': повільно
@@ -749,13 +749,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -785,13 +785,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -812,13 +812,13 @@ uk:
         options:
           THIS:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -829,13 +829,13 @@ uk:
         options:
           THIS:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -854,13 +854,13 @@ uk:
         options:
           THIS:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -889,13 +889,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -934,13 +934,13 @@ uk:
         options:
           GROUP:
             sprites: усі
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -1412,7 +1412,7 @@ uk:
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": дельфін
             "'sound://category_animals/chick.mp3'": пташеня
-            "'sound://category_animals/dog.mp3'": пес
+            "'sound://category_animals/dog.mp3'": собаку
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибнути
       gamelab_playSoundOptionsSoccer:
@@ -1545,7 +1545,7 @@ uk:
         options:
           SIZE:
             '3': повільно
-            '5': нормальний
+            '5': нормально
             '7': швидко
       gamelab_setTint:
         text: змінити колір {THIS} на {COLOR}
