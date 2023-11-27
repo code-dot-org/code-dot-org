@@ -3902,7 +3902,7 @@ ko:
             csf_data:
               display_name: 데이터 및 시뮬레이션
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           title: 과정 F (2022)
           description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.
           description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
@@ -5173,6 +5173,7 @@ ko:
           lessons:
             lesson-1:
               name: '댄스 파티: A.I. 에디션'
+          title: '댄스 파티: AI 에디션'
         self-paced-pl-csd-unit2-2-2023:
           title: '모듈 2: 웹 개발 교습 준비'
         self-paced-pl-csd-unit3-2-2023:
