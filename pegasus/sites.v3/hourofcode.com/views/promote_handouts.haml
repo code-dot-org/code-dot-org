@@ -2,8 +2,8 @@
   - hoc_one_pager = "/files/hoc-one-pager-canada.pdf"
   - schools_handout = "/files/schools-handout-canada.pdf"
 - else
-  - hoc_one_pager = localized_file('/files/hoc-one-pager.pdf')
-  - schools_handout = localized_file('/files/schools-handout.pdf')
+  - hoc_one_pager = "/promote/assets/hoc-one-pager-2023.pdf"
+  - schools_handout = "/promote/assets/hoc-participation-guide-2023.pdf"
 
 %h2.handouts-header= hoc_s(:handouts_section)
 
@@ -16,7 +16,7 @@
 %a{:id => "participationguide"}
 %div.handout.col-50
   .handout-text= hoc_s(:handouts_participationguide)
-  %a{:href => localized_file('/files/participation-guide.pdf')}
+  %a{:href => schools_handout}
     %img{:src => localized_image('/images/fit-250/participation-guide.png')}
 
 %div{:style => 'clear:both'}
