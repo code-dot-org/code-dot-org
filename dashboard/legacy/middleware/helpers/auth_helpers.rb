@@ -62,14 +62,14 @@ end
 #          Note: NOT always true for admins.
 def owns_section?(section_id)
   return false unless section_id && current_user_id
-  DASHBOARD_DB[:sections_instructed].where(id: section_id, user_id: current_user_id).any?
+  DASHBOARD_DB[:sections].where(id: section_id, user_id: current_user_id).any?
 end
 
 # @param [Integer] student_id
 # @returns [Boolean] true if the current user, or given user, is the teacher for the student of the given id
 def teaches_student?(student_id, user_id = current_user_id)
   return false unless student_id && user_id
-  DASHBOARD_DB[:sections_instructed].
+  DASHBOARD_DB[:sections].
     join(:followers, section_id: :sections__id).
     join(:users, id: :followers__student_user_id).
     where(sections__user_id: user_id, sections__deleted_at: nil).
