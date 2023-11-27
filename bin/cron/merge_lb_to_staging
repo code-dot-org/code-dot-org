@@ -20,8 +20,8 @@ def slack_permission?
   false
 end
 
-def new_commits?
-  return true if GitHub.behind?(base: 'staging', compare: 'levelbuilder')
+def new_changes?
+  return true if GitHub.behind_with_file_diffs?(base: 'staging', compare: 'levelbuilder')
 
   ChatClient.message 'staging', 'robo-DTS skipped (nothing new on levelbuilder)'
   false
@@ -29,7 +29,7 @@ end
 
 def main
   return unless slack_permission?
-  return unless new_commits?
+  return unless new_changes?
 
   ChatClient.message 'staging', 'incoming robo-DTS with levelbuilder content'
 

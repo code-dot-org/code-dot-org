@@ -200,7 +200,7 @@ module GitHub
   # @return [nil | Integer] The PR number of the newly created DTT if successful
   #   or nil if unsuccessful or unnecessary.
   def self.create_and_merge_pull_request(base:, head:, title:)
-    return nil unless behind?(base: head, compare: base)
+    return nil unless behind_with_file_diffs?(base: base, compare: head)
     pr_number = create_pull_request(base: base, head: head, title: title)
     success = merge_pull_request(pr_number, title)
     success ? pr_number : nil
@@ -249,6 +249,18 @@ module GitHub
     # This can happen for comparisons with extremely large diffs. See https://developer.github.com/v3/repos/commits/#compare-two-commits
     # In this case, we can safely assume that we are indeed behind, since there
     # otherwise would not be a diff to break on
+    true
+  end
+
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison branch to compare.
+  # @return [Boolean] Whether compare is behind base and has files changed
+  def self.behind_with_file_diffs?(base:, compare:)
+    response = Octokit.compare(REPO, base, compare)
+    response.behind_by > 0 && !response.files.empty?
+  rescue Octokit::InternalServerError
+    # This can happen for comparisons with extremely large diffs. See https://developer.github.com/v3/repos/commits/#compare-two-commits
     true
   end
 
