@@ -97,7 +97,12 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 export const editButtonHandler = function () {
   const procedure = this.getSourceBlock().getProcedureModel();
   if (procedure) {
-    Blockly.functionEditor.showForFunction(procedure);
+    // Blocklu v9 has a bug where the gesture event doesn't check whether the block has been disposed.
+    // For now, we use a timeout when we clear the workspace, so that that work happens after
+    // block.bringToFront can finish before the block is deleted.
+    setTimeout(() => {
+      Blockly.functionEditor.showForFunction(procedure);
+    }, 100); // Wait 0.1 seconds
   }
 };
 
@@ -111,8 +116,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   if (
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
-    !this.workspace.isFlyout &&
-    this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
+    !this.workspace.isFlyout
   ) {
     const button = new Blockly.FieldButton({
       value: msg.edit(),
@@ -216,27 +220,21 @@ GoogleBlockly.Extensions.registerMixin(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of block objects representing the flyout blocks
  */
-export function flyoutCategory(workspace, functionEditorOpen = false) {
+export function flyoutCategory(workspace) {
   const blockList = [];
 
-  // Note: Blockly.Msg was undefined when this code was extracted into global scope
-  const functionDefinitionBlock = {
-    kind: 'block',
-    type: BLOCK_TYPES.procedureDefinition,
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-  };
-
-  if (functionEditorOpen) {
-    // No-op - cannot create new functions while the modal editor is open
-  } else if (Blockly.useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(
-      workspace,
-      functionDefinitionBlock
-    );
+  if (Blockly.useModalFunctionEditor) {
+    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
     blockList.push(newFunctionButton);
   } else {
+    // Note: Blockly.Msg was undefined when this code was extracted into global scope
+    const functionDefinitionBlock = {
+      kind: 'block',
+      type: BLOCK_TYPES.procedureDefinition,
+      fields: {
+        NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
+      },
+    };
     blockList.push(functionDefinitionBlock);
   }
 
@@ -276,17 +274,16 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = (
-  workspace,
-  functionDefinitionBlock
-) => {
+const getNewFunctionButtonWithCallback = workspace => {
   let callbackKey, callback;
 
   callbackKey = 'newProcedureCallback';
-  callback = () =>
+  callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(
       BLOCK_TYPES.procedureDefinition
     );
+  };
 
   workspace.registerButtonCallback(callbackKey, callback);
 
