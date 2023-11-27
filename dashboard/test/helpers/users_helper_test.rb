@@ -455,7 +455,7 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal 2, destination_teacher.sections_instructed.count
     assert_equal 0, teacher.sections_instructed.count
     assert_equal 2, coteacher.sections_instructed.count
-    assert_equal section.user.id, destination_teacher.id
-    assert_equal section_instructor2.instructor.id, destination_teacher.id
+    assert_equal destination_teacher.id, section.user.id
+    assert_equal destination_teacher.id, section_instructor2.instructor.id
   end
 end
