@@ -3008,6 +3008,26 @@
           "New Artist Project_callout2": "Naciśnij przycisk \"Uruchom\", aby zapisać i uruchomić swój program",
           "sign_in_to_save_project": "Chcesz zapisać projekt na później? Zaloguj się i zapisz go na swoim koncie!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Użyj tego bloku.",
+          "dance_callout_02": "Dodaj tutaj blok \"użyj A.I. do\". "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Użyj tego bloku.",
+          "dance_callout_02": "Dodaj ruch do tańca."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Kliknij tutaj."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Zacznij tutaj."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Użyj tego bloku. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Użyj tego bloku."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Użyj tego bloku, aby utworzyć duszka.",
           "hello_world_say": "Użyj tego bloku, aby duszki mówiły."

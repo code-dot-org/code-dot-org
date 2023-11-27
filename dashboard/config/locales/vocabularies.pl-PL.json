@@ -2401,7 +2401,12 @@
           "definition": "Działanie, które powoduje, że coś się dzieje."
         },
         "program/dance-ai/2023": {
-          "word": "Program"
+          "word": "Program",
+          "definition": " Algorytm, który został zakodowany w coś, co może być uruchamiane przez maszynę."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Sztuczna Inteligencja (A.I.) ",
+          "definition": " Program komputerowy, który pobiera dane, uczy się wzorców z tych danych, a następnie podejmuje decyzje na podstawie tego, czego się nauczył."
         }
       }
     }
