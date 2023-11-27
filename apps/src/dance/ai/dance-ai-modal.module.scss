@@ -40,6 +40,12 @@ $ai-modal-border-width: 8px;
 }
 
 .dialog {
+  @media (max-height: 580px) {
+    top: 10px;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
+  }
+
   max-width: initial !important;
   width: 824px !important;
   height: 508px;
@@ -128,6 +134,7 @@ $ai-modal-border-width: 8px;
       display: flex;
       justify-content: space-around;
       animation: appear 0.3s;
+      margin-top: 3px;
 
       span {
         button {
@@ -152,8 +159,8 @@ $ai-modal-border-width: 8px;
       left: 50%;
       line-height: 25px;
       padding: 4px 0;
-      border-top: solid 1px $neutral_dark30;
-      border-bottom: solid 1px $neutral_dark30;
+      border-top: solid 1px $neutral_dark10;
+      border-bottom: solid 1px $neutral_dark10;
       white-space: pre-wrap;
       animation: appear 0.3s;
 
@@ -167,7 +174,8 @@ $ai-modal-border-width: 8px;
       width: 305px;
       height: 305px;
       top: 22px;
-      left: 320px;
+      transform: translate(-50%);
+      left: 50%;
 
       .inputsContainer {
         animation: appear 0.5s;
@@ -246,7 +254,7 @@ $ai-modal-border-width: 8px;
       display: flex;
       align-items: center;
       margin-top: 10px;
-      transition: left 1.5s, box-shadow 0.3s;
+      transition: left 1.5s, box-shadow 0.05s;
       left: 50%;
 
       &Yes {
@@ -304,7 +312,7 @@ $ai-modal-border-width: 8px;
       left: 630px;
       font-size: 100px;
       color: $yes-color;
-      animation: appear 0.5s;
+      animation: appear 0.05s;
     }
 
     .explanationArea {

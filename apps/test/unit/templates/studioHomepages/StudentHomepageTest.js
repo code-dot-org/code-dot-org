@@ -64,18 +64,9 @@ describe('StudentHomepage', () => {
     analyticsSpy.restore();
   });
 
-  it('shows the special announcement for English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
-    );
+  it('shows the special announcement for all languages', () => {
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     assert(wrapper.find('SpecialAnnouncement').exists());
-  });
-
-  it('does not show the special announcement for non-English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
-    );
-    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
   });
 
   it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {
