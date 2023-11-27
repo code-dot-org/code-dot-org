@@ -6741,7 +6741,7 @@
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
-          "overview": "Cette leçon est centrée sur [Comment fonctionne l'IA : qu'est-ce que l'apprentissage automatique ?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) vidéo de la [série de vidéos How AI Works](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant d'explorer le plan de cours.\n\nDans cette leçon, les élèves découvrent une forme d'intelligence artificielle appelée apprentissage automatique et la façon dont ils peuvent utiliser le processus de résolution de problèmes pour entraîner un robot à résoudre des problèmes. Ils participent à trois activités d'apprentissage automatique au cours desquelles un robot, AI Bot, apprend à détecter des modèles chez les poissons.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur le fonctionnement de l'IA - [cliquez ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works)."
+          "overview": "Cette leçon s'articule autour de la vidéo [Comment l'IA fonctionne : Qu'est-ce que l'apprentissage automatique ?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) dans la [série vidéos Comment l'IA fonctionne](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Regardez d'abord cette vidéo avant d'étudier le plan de cours.\n\nDans cette leçon, les élèves découvriront une forme d'intelligence artificielle qu'on appelle l'apprentissage automatique et apprendront comment ils peuvent utiliser le Processus de Résolution de Problèmes pour entraîner un robot à résoudre des problèmes. Ils participeront à trois activités d'apprentissage automatique au cours desquelles un robot, nommé Bot IA, apprendra à détecter des schémas chez les poissons.\n\nCette leçon peut être enseignée seule ou dans le cadre d'une séquence de 7 leçons sur comment l'IA fonctionne - [cliquer ici pour voir toutes les leçons de cette séquence](https://code.org/ai/how-ai-works)."
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Vision par ordinateur",
@@ -7119,7 +7119,7 @@
           "name": "Le labyrinthe"
         },
         "20-hour/Computational Thinking": {
-          "name": "Algorithmique"
+          "name": "La pensée computationnelle"
         },
         "20-hour/Graph Paper Programming": {
           "name": "Programmation sur papier quadrillé"
@@ -7284,7 +7284,7 @@
           "name": "Artiste: Boucles imbriquées"
         },
         "course3/Computational Thinking": {
-          "name": "Algorithmique"
+          "name": "La pensée computationnelle"
         },
         "course3/Maze": {
           "name": "Labyrinthe"
