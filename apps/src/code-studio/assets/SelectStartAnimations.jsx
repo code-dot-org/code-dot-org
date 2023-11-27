@@ -116,6 +116,8 @@ export default class SelectStartAnimations extends React.Component {
               hideBackgrounds={false}
               pickerType={PICKER_TYPE.spritelab}
               selectedAnimations={[]}
+              hideCostumes={false}
+              shouldWarnOnAnimationUpload={false}
             />
           </div>
         )}
