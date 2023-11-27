@@ -74,7 +74,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 - [Stampa gli attestati]({{ urls/certificates }}) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"]({{ promote/resources_stickers }}).
 - [Ordina magliette personalizzate](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) per i partecipanti.
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 
