@@ -37,7 +37,7 @@ module I18n
               target_file_path = File.join(ORIGIN_DIR_PATH, 'i18n', target_file_subpath)
 
               I18nScriptUtils.copy_file(crowdin_file_path, target_file_path)
-              I18n::Utils::PegasusMarkdown.restore_file_header(origin_markdown_file_path, target_file_path)
+              I18n::Utils::PegasusEmail.restore_file_header(origin_markdown_file_path, target_file_path)
             end
           end
         end
