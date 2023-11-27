@@ -1,21 +1,24 @@
-:css
-  a.poster {
-    display: inline-block;
+:scss
+  div.posters {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    a {
+      width: 150px;
+    }
   }
 
-  a.poster img {
-    margin: 0 .5em .75em 0;
-  }
-
-%a.poster{:href => '//downloads.code.org/posters/poster_steph.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_steph.png')}
-%a.poster{:href => '//downloads.code.org/posters/poster_malala.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_malala.png')}
-%a.poster{:href => '//downloads.code.org/posters/poster_hadi.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_hadi.png')}
-%a.poster{:href => '//downloads.code.org/posters/poster_mary.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_mary.png')}
-%a.poster{:href => '//downloads.code.org/posters/poster_satya.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_satya.png')}
-%a.poster{:href => '//downloads.code.org/posters/poster_shakira.pdf'}
-  %img{:src => localized_image('/images/fit-250/poster_shakira.png')}
+%div.posters.flex-container
+  %a{href: "//downloads.code.org/posters/poster_steph.pdf"}
+    %img{src: "/images/poster_steph.png"}
+  %a{href: "//downloads.code.org/posters/poster_malala.pdf"}
+    %img{src: "/images/poster_malala.png"}
+  %a{href: "//downloads.code.org/posters/poster_hadi.pdf"}
+    %img{src: "/images/poster_hadi.png"}
+  %a{href: "//downloads.code.org/posters/poster_mary.pdf"}
+    %img{src: "/images/poster_mary.png"}
+  %a{href: "//downloads.code.org/posters/poster_satya.pdf"}
+    %img{src: "/images/poster_satya.png"}
+  %a{href: "//downloads.code.org/posters/poster_shakira.pdf"}
+    %img{src: "/images/poster_shakira.png"}
