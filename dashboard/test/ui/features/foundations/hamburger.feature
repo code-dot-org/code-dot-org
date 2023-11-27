@@ -1,5 +1,16 @@
 @single_session
 Feature: Hamburger dropdown
+
+  @eyes_mobile
+  Scenario: Signed-out user sees the hamburger on mobile
+    Given I am on "http://code.org/"
+    And I open my eyes to test "Hamburger Menu in English Signed-out"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    And I see no difference for "Hamburger Menu: English Signed-out"
+    And I close my eyes
   @eyes
   Scenario: Student user sees the hamburger dropdown
     Given I create a student named "Sally Student" and go home
