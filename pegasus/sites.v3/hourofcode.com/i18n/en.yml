@@ -1983,6 +1983,7 @@
 
   tutorial_dance2019_name: "Dance Party"
   tutorial_danceparty_name: "Dance Party"
+  tutorial_dancepartyai_name: "Dance Party: AI Edition"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
@@ -2660,6 +2661,7 @@
   tutorial_meeempathy_name: "A Minecraft Tale of Two Villages"
 
   tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_dancepartyai_shortdescription: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. It's time to strut your stuff!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -3228,6 +3230,7 @@
 
   tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_dancepartyai_longdescription: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. It's time to strut your stuff!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -3906,6 +3909,7 @@
 
   tutorial_dance2019_string_detail_grades: "Grades 2+"
   tutorial_danceparty_string_detail_grades: "Grades 2+"
+  tutorial_dancepartyai_string_detail_grades: "Grade 3+"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
@@ -4584,6 +4588,7 @@
 
   tutorial_dance2019_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_dancepartyai_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_chibitronics_string_platforms: "All modern browsers, Screen reader"
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -5257,11 +5262,12 @@
   tutorial_catrobatembroidery_string_platforms: "Android phone, Screen reader"
   tutorial_irobotphone_string_platforms: "All modern browsers"
   tutorial_codeguppydraw_string_platforms: "All modern browsers"
-  tutorial_codejumper_string_platforms: "Unplugged, Sreen reader"
+  tutorial_codejumper_string_platforms: "Unplugged, Screen reader"
   tutorial_meeempathy_string_platforms: "All modern browsers, Mac, Windows, Chromebook, iPhone, iPad, Android phone, Android tablet"
 
   tutorial_dance2019_string_detail_platforms: ""
   tutorial_danceparty_string_detail_platforms: ""
+  tutorial_dancepartyai_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -5940,6 +5946,7 @@
 
   tutorial_dance2019_string_detail_programming_languages: "Blocks"
   tutorial_danceparty_string_detail_programming_languages: "Blocks"
+  tutorial_dancepartyai_string_detail_programming_languages: "Blocks"
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
