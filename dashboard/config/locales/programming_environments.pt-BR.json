@@ -374,6 +374,17 @@
               },
               "name": "Matemática"
             },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.on": {
+                  "examples": {
+                    "Four Corners": {
+                      "name": "Quatro Cantos"
+                    }
+                  }
+                }
+              }
+            },
             "turtle": {
               "expressions": {
                 "arcLeft": {
