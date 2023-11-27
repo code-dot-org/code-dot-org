@@ -5,6 +5,8 @@ require_relative '../i18n_script_utils'
 module I18n
   module Utils
     class PegasusMarkdown
+      TRANSLATABLE_HEADER_SECTIONS = %w[title].freeze
+
       def self.write_to(file_path, header, markdown)
         FileUtils.mkdir_p(File.dirname(file_path))
 
@@ -23,7 +25,7 @@ module I18n
       # Right now, this is just page titles but it could be expanded to include
       # any English content (description, social share stuff, etc).
       def self.sanitize_header(header)
-        header.slice('title')
+        header.slice(*self::TRANSLATABLE_HEADER_SECTIONS)
       end
 
       # YAML headers can include a lot of things we don't want translators to mess
