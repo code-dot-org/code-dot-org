@@ -184,26 +184,11 @@ GoogleBlockly.Extensions.registerMutator(
  * @param {WorkspaceSvg} workspace The workspace containing procedures.
  * @returns an array of XML block elements
  */
-export function flyoutCategory(workspace, functionEditorOpen = false) {
+export function flyoutCategory(workspace) {
   const blockList = [];
 
-  const behaviorDefinitionBlock = {
-    kind: 'block',
-    type: BLOCK_TYPES.behaviorDefinition,
-    fields: {
-      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-    },
-  };
-
-  // If the modal function editor is enabled, we render a button to open the editor
-  // Otherwise, we render a "blank" behavior definition block
-  if (functionEditorOpen) {
-    // No-op - cannot create new behaviors while the modal editor is open
-  } else if (Blockly.useModalFunctionEditor) {
-    const newBehaviorButton = getNewBehaviorButtonWithCallback(
-      workspace,
-      behaviorDefinitionBlock
-    );
+  if (Blockly.useModalFunctionEditor) {
+    const newBehaviorButton = getNewBehaviorButtonWithCallback(workspace);
     blockList.push(newBehaviorButton);
   }
 
@@ -256,14 +241,14 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewBehaviorButtonWithCallback = (
-  workspace,
-  behaviorDefinitionBlock
-) => {
+const getNewBehaviorButtonWithCallback = workspace => {
   const callbackKey = 'newBehaviorCallback';
-  workspace.registerButtonCallback(callbackKey, () => {
+  const callback = () => {
+    workspace.hideChaff();
     Blockly.functionEditor.newProcedureCallback(BLOCK_TYPES.behaviorDefinition);
-  });
+  };
+
+  workspace.registerButtonCallback(callbackKey, callback);
 
   return {
     kind: 'button',
