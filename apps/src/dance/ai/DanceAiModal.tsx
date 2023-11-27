@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -18,6 +18,7 @@ import AiBlockPreview from './AiBlockPreview';
 import {
   AiFieldValue,
   AiOutput,
+  DanceAiModelItem,
   DanceAiSound,
   FieldKey,
   GeneratedEffect,
@@ -240,7 +241,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   }, [currentAiModalField, mode, calculateMinMax]);
 
-  const getLabels = useCallback(() => {
+  const labels = useMemo(() => {
     const tempWorkspace = new Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
@@ -263,19 +264,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     };
   }, []);
 
-  const getAllItems = useCallback(() => {
-    return inputLibraryJson.items.map(item => {
-      return {
-        ...item,
-        available: !inputs.includes(item.id),
-      };
-    });
-  }, [inputs]);
-
-  const getItem = useCallback(
-    (id: string) => inputLibraryJson.items.find(item => item.id === id),
+  const itemsById = useMemo<{[key: string]: DanceAiModelItem}>(
+    () =>
+      inputLibraryJson.items.reduce(
+        (bucket, item) => ({...bucket, [item.id]: item}),
+        {}
+      ),
     []
   );
+
+  const getItem = useCallback((id: string) => itemsById[id], [itemsById]);
 
   const handleItemClick = useCallback(
     (id: string, available: boolean) => {
@@ -297,6 +295,22 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       }
     },
     [currentInputSlot, inputAddCount, inputs, playSound]
+  );
+
+  const allItems = useMemo(
+    () =>
+      inputLibraryJson.items.map((item, index) => {
+        const isItemAvailable = !inputs.includes(item.id);
+        return (
+          <EmojiIcon
+            key={index}
+            item={item}
+            onClick={() => handleItemClick(item.id, isItemAvailable)}
+            isHighlighted={!isItemAvailable}
+          />
+        );
+      }),
+    [inputs, handleItemClick]
   );
 
   const startAi = useCallback(() => {
@@ -607,8 +621,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const previewSize = 280;
   const previewSizeSmall = 90;
 
-  const labels = getLabels();
-
   // While generating, we render two previews at a time, so that as a new
   // one appears, it will smoothly fade in over the top of the previous one.
   const indexesToPreview = [];
@@ -710,16 +722,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         >
           {mode === Mode.SELECT_INPUTS && (
             <div id="inputs-container" className={moduleStyles.inputsContainer}>
-              {getAllItems().map((item, index) => {
-                return (
-                  <EmojiIcon
-                    key={index}
-                    item={item}
-                    onClick={() => handleItemClick(item.id, item.available)}
-                    isHighlighted={!item.available}
-                  />
-                );
-              })}
+              {allItems}
             </div>
           )}
         </div>
