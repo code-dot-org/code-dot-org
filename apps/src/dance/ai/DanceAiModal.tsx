@@ -138,7 +138,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   });
 
   const [mode, setMode] = useState(Mode.INITIAL);
-  const [currentInputSlot, setCurrentInputSlot] = useState(0);
+
   const [inputs, setInputs] = useState<string[]>([]);
   const [inputAddCount, setInputAddCount] = useState<number>(0);
   const [generatingProgress, setGeneratingProgress] =
@@ -161,6 +161,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
+
+  const currentInputSlot = inputs.length;
 
   const getGeneratedEffect = useCallback((step: number) => {
     if (step < BAD_GENERATED_RESULTS_COUNT) {
@@ -280,21 +282,19 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       if (available) {
         // Add item inputs.
         if (currentInputSlot < SLOT_COUNT) {
-          setInputs([...inputs, id]);
-          setCurrentInputSlot(currentInputSlot + 1);
-          setInputAddCount(inputAddCount + 1);
+          setInputs(inputs => [...inputs, id]);
+          setInputAddCount(inputAddCount => inputAddCount + 1);
 
           playSound('ai-select-emoji');
         }
       } else {
         // Remove item from inputs.
-        setInputs(inputs.filter(input => input !== id));
-        setCurrentInputSlot(currentInputSlot - 1);
+        setInputs(inputs => inputs.filter(input => input !== id));
 
         playSound('ai-deselect-emoji');
       }
     },
-    [currentInputSlot, inputAddCount, inputs, playSound]
+    [currentInputSlot, playSound]
   );
 
   const allItems = useMemo(
@@ -341,7 +341,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       emojis: inputs,
     });
     setInputs([]);
-    setCurrentInputSlot(0);
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setMode(Mode.SELECT_INPUTS);
@@ -575,8 +574,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     moduleStyles.dotThird,
   ];
 
-  const headerValue = useCallback(() => {
-    return (
+  const headerValue = useMemo(
+    () => (
       <div
         className={moduleStyles.inputsContainer}
         tabIndex={0}
@@ -593,8 +592,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           );
         })}
       </div>
-    );
-  }, [handleStartOverClick, inputs, getItem]);
+    ),
+    [handleStartOverClick, inputs, getItem]
+  );
 
   // The header comes from a localized string like this: "generate {input} effect".
   // We split the localized string on the "{input}", and rebuild the HTML but with
@@ -606,7 +606,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const headerContent = [
     headerTextSplit[0],
-    headerValue(),
+    headerValue,
     headerTextSplit[1],
   ].map((part: string, index: number) => {
     return <span key={index}>{part}</span>;
@@ -614,8 +614,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const currentGeneratedEffect = getGeneratedEffect(generatingProgress.step);
 
-  const lastInputItem =
-    currentInputSlot > 0 ? getItem(inputs[currentInputSlot - 1]) : undefined;
+  const lastInputItem = getItem(inputs[currentInputSlot - 1]);
 
   // Visualization preview size, in pixels.
   const previewSize = 280;
