@@ -62,11 +62,11 @@ Feature: Hamburger dropdown
     And I wait until element "a:contains(Help and support)" is visible
     And I wait until element "a:contains(Report a problem)" is visible
     And I wait until element "a:contains(Learn)" is visible
-    And I wait until element "a:contains(Teach)" is visible
+    And I wait until element "div:contains(Teach)" is visible
     And I wait until element "a:contains(Stats)" is visible
-    And I wait until element "a:contains(Help us)" is visible
-    And I wait until element "a:contains(About)" is visible
-    And I wait until element "a:contains(Privacy & Legal)" is visible
+    And I wait until element "a:contains(Help Us)" is visible
+    And I wait until element "div:contains(About)" is visible
+    And I wait until element "div:contains(Privacy & Legal)" is visible
     
 
 
