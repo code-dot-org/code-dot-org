@@ -1,23 +1,27 @@
 @import "color";
+@import "@cdo/apps/componentLibrary/common/styles/mixins";
 
 // Link common styles
 .link {
-  display: block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 // Sizes
 .link-l {
-  font-size: 1.25rem;
+  @include link-body-one;
 }
 
-.label-m {
-  font-size: 1rem;
+.link-m {
+  @include link-body-two;
 }
 
-.label-s {
-  font-size: 0.75rem;
+.link-s {
+  @include link-body-three;
 }
 
-.label-xs {
-  font-size: 0.625rem;
+.link-xs {
+  @include link-body-four;
 }
