@@ -8,6 +8,7 @@ require:
   - rubocop-rails
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
+  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
 
 AllCops:
   SuggestExtensions: false
