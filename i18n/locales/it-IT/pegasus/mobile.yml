@@ -136,7 +136,7 @@
   third_party_codecademy_btn_curriculum: "Scarica il curriculum Codecademy"
   third_party_codecademy_btn_site: "Visita Codecademy"
   third_party_organization: "Organizzazione"
-  third_party_curriculum: "Curriculum"
+  third_party_curriculum: "Corso"
   third_party_pricing: "Prezzi"
   third_party_cost_free: "Gratuito"
   third_party_cost_5permonth: "$5/ mese per ogni classe"
@@ -656,7 +656,7 @@
   dashboard_course_csins_desc: "Code.org ha collaborato con Project GUTS per fornire un'introduzione ai concetti di informatica all'interno di contesti di modellazione e simulazione."
   dashboard_course_ecs: "Esplorando l'Informatica"
   dashboard_course_ecs_desc: 'Esplorare l''Informatica in un corso annuale costituito da 6 unità. Interazione Uomo-Computer, Risoluzione Problemi, Web Design, Programmazione, Elaborazione ed Analisi dei Dati e Robotica.'
-  dashboard_course_csp: "Principi di informatica"
+  dashboard_course_csp: "Princìpi di informatica AP®"
   dashboard_course_csp_desc: "I corsi di Code.org sono stati progettati in modo rigoroso, coinvolgente e approcciabile in modo da esplorare le idee alla base dei fondamenti dell'informatica."
   dashboard_landing_loading: "Sto caricando..."
   dashboard_action_cancel: "Annulla"
@@ -784,7 +784,7 @@
   dashboard_unplugged: "Se non hai un computer, <a href='%{unplugged_url}'>usa queste lezioni tradizionali</a> nella tua classe."
   dashboard_unplugged_markdown: "Se non hai un computer, [prova queste lezioni tradizionali](%{unplugged_url}) nella tua classe."
   dashboard_tools: 'Strumenti: '
-  dashboard_curriculum: "Curriculum"
+  dashboard_curriculum: "Corso"
   dashboard_curriculum_overview: "K-5 Curriculum Overview"
   dashboard_overview: "Panoramica"
   dashboard_sequence: "Sequenza"
@@ -799,7 +799,7 @@
   dashboard_teacher_worksheet: "teacher worksheet"
   dashboard_curriculum_csina: 'Informatica in Algebra:'
   dashboard_curriculum_csins: 'Informatica nelle Scienze:'
-  dashboard_curriculum_csp: 'Principi di informatica:'
+  dashboard_curriculum_csp: 'Princìpi di informatica:'
   dashboard_curriculum_ecs: 'Esplorando l''Informatica:'
   dashboard_curriculum_csd: 'Alla scoperta dell''informatica: '
   dashboard_curriculum_apcsa: 'Informatica di PA in Java: '

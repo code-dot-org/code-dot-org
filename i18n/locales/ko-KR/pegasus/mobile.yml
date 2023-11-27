@@ -163,7 +163,7 @@
   thanks_for_submitting: "청원해 주셔서 감사합니다!"
   if_you_enjoyed: "재미있으면, 친구들과 함께 해보세요! 전세계 모든 사람들이 함께 하면 좋겠습니다."
   personalize_certificate: "개인별 인증서 만들기"
-  print_batch_certificates: "한 묶음의 인증서 인쇄"
+  print_batch_certificates: "인증서 일괄 인쇄하기"
   print_certificates: "인증서 인쇄하기"
   certificate_sponsor_message: "%{sponsor_name}가 학습을 후원하기 위해 선물을 했습니다."
   print_ice_art_from_frozen: "겨울 왕국 튜토리얼에서 아이스 아트 인쇄"
