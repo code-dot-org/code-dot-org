@@ -15,6 +15,7 @@ const initialState: AITutorState = {
 };
 
 interface ChatContext {
+  levelId?: number;
   systemPrompt: string;
   studentCode: string;
 }
@@ -31,10 +32,14 @@ export const askAITutor = createAsyncThunk(
       throw new Error('studentCode is undefined');
     }
 
-    const chatApiResponse = await postOpenaiChatCompletion([
-      {role: Role.SYSTEM, content: ChatContext.systemPrompt},
-      {role: Role.USER, content: ChatContext.studentCode},
-    ]);
+    const chatApiResponse = await postOpenaiChatCompletion(
+      [
+        {role: Role.SYSTEM, content: ChatContext.systemPrompt},
+        {role: Role.USER, content: ChatContext.studentCode},
+      ],
+      ChatContext.levelId
+    );
+
     thunkAPI.dispatch(addAIResponse(chatApiResponse?.content));
   }
 );
