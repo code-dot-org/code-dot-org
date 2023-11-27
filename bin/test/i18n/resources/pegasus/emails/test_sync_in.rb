@@ -11,7 +11,7 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
 
   before do
     STDOUT.stubs(:print)
-    I18n::Utils::PegasusMarkdown.stubs(:sanitize_file_header)
+    I18n::Utils::PegasusEmail.stubs(:sanitize_file_header)
   end
 
   it 'inherits from I18n::Utils::SyncInBase' do
@@ -36,7 +36,7 @@ describe I18n::Resources::Pegasus::Emails::SyncIn do
           expected_i18n_source_file_path = CDO.dir('i18n/locales/source/pegasus/emails/test.md')
 
           I18nScriptUtils.expects(:copy_file).with(origin_emails_file_path, expected_i18n_source_file_path).in_sequence(execution_sequence)
-          I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(expected_i18n_source_file_path).in_sequence(execution_sequence)
+          I18n::Utils::PegasusEmail.expects(:sanitize_file_header).with(expected_i18n_source_file_path).in_sequence(execution_sequence)
 
           run_process
         end

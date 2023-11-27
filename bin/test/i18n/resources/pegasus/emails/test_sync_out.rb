@@ -16,7 +16,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
 
   before do
     I18nScriptUtils.stubs(:source_lang?).with(language).returns(is_source_language)
-    I18n::Utils::PegasusMarkdown.stubs(:restore_file_header)
+    I18n::Utils::PegasusEmail.stubs(:restore_file_header)
   end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
@@ -36,7 +36,7 @@ describe I18n::Resources::Pegasus::Emails::SyncOut do
       I18nScriptUtils.expects(:copy_file).with(crowdin_file_path, email_i18n_file_path)
     end
     let(:expect_markdown_i18n_file_header_restoration) do
-      I18n::Utils::PegasusMarkdown.expects(:restore_file_header).with(origin_email_file_path, email_i18n_file_path)
+      I18n::Utils::PegasusEmail.expects(:restore_file_header).with(origin_email_file_path, email_i18n_file_path)
     end
     let(:expect_crowdin_locale_resource_dir_removing) do
       FileUtils.expects(:rm_r).with(crowdin_locale_resource_dir)
