@@ -147,6 +147,8 @@ it:
           lessons:
             lesson-1:
               name: Il nostro codice etico sulla IA
+            lesson-2:
+              name: Impatto sociale dell'IA generativa
         ai-lab:
           title: Laboratorio IA
         ai-temp:
@@ -262,6 +264,10 @@ it:
           student_description: Tutte le tipologie di livello per il test dell'interfaccia
             utente
           title: Tutte le cose!
+        amy-playground:
+          lessons:
+            lesson-4:
+              name: ecosistemi
         andrea-test:
           lesson_groups:
             content:
@@ -2054,10 +2060,38 @@ it:
               display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sondaggio
+        csc-adaptations-2023:
+          lessons:
+            lesson-2:
+              name: Comportamenti animali per la sopravvivenza
+            lesson-3:
+              name: Scrivi il tuo programma sull'adattamento
+          title: Modellizzazione dell'adattamento degli animali (2023)
         csc-ecosystems-2023:
+          description: "## Preparazione consigliata per questo modulo\n\n**Scienza:**
+            gli studenti simuleranno un ecosistema di vita marina nelle lezioni 1
+            e 2. Per acquisire familiarità con questo ecosistema, consigliamo questo
+            [Video Animali dell'Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g)
+            (9:42 minuti). \n\nNella lezione 2, gli studenti scriveranno un programma
+            per simulare diverse pratiche di pesca sostenibili. Queste sono alcune
+            letture per acquisire conoscenze di base e approfondire le connessioni
+            con il mondo reale: [Sottovalutare la pesca eccessiva](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (articolo sul Monterey Bay Aquarium) o [Mw, kwa Talks to the Loon] \\(libro
+            per bambini)[2],\n\n**Informatica:** in questo modulo, gli studenti impareranno
+            nuovi concetti di programmazione che potrebbero essere difficili per gli
+            studenti alle prime armi con l'informatica. Se gli studenti non hanno
+            familiarità con il Labratorio dei personaggi di Code.org, consigliamo
+            di provare [Pesce che nuota nel Labratorio dei personaggi](https://studio.code.org/s/coursee-2022/lessons/3)
+            (55 minuti) per un'introduzione di base allo strumento. \n\nQuesto modulo
+            utilizza anche un concetto informatico avanzato chiamato istruzioni condizionali.
+            Gli studenti imparano questo concetto in modo strutturato, ma alcuni potrebbero
+            trarre vantaggio dalla prima attività tradizionale introduttiva alle istruzioni
+            condizionali: [Istruzioni condizionali con le carte](https://studio.code.org/s/coursed-2022/lessons/12)
+            (50 minuti)."
           lessons:
             lesson-3:
               name: Programma il tuo ecosistema (2023)
+          name: csc-ecosistemi-2023
           title: Simulazione di un ecosistema marino (2023)
         csc-function-machines-pilot:
           lessons:
@@ -3438,7 +3472,7 @@ it:
             **Guida all'implementazione per l'Unità 7**
 
             -   Completa l'Unità 1 Capitolo 1 prima di iniziare questa unità
-            -   Questa unità presuppone che gli studenti abbiano familiarità con "Sviluppo App", in particolare nell'utilizzo della "modalità interfaccia" per creare un'interfaccia utente e nell'utilizzo degli eventi per cambiare le schermate quando si fa clic su un pulsante. [Fai clic qui](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) per saperne di più sui consigli per introdurre gli studenti a "Sviluppo App" prima di questa unità.
+            -   Questa unità presuppone che gli studenti abbiano familiarità con "Sviluppo App", in particolare nell'utilizzo della "modalità interfaccia" per creare un'interfaccia utente e nell'utilizzo degli eventi per cambiare le schermate quando si fa clic su un pulsante. [Clicca qui](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) per saperne di più sui consigli per introdurre gli studenti a "Sviluppo App" prima di questa unità.
             -   Si tratta di un'unità opzionale che può essere utilizzata al posto di un'altra unità del corso - Per ulteriori informazioni consultare la [Guida all'implementazione](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview)
             -   Per ulteriori informazioni su questa unità, è possibile visualizzare l'intera [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
 
@@ -4406,6 +4440,7 @@ it:
           lessons:
             lesson-1:
               name: 'Dance Party: edizione A.I.'
+          title: 'Ballando col codice: edizione IA'
         dance-extras:
           description: Vai oltre alla prima ora di programmazione creando progetti
             più complessi.
@@ -5337,7 +5372,7 @@ it:
           title: Labirinto Classico
         how-ai-works-2023:
           description: |-
-            Queste lezioni completano la serie di video [Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Ogni lezione è abbinata a un singolo video della serie, che approfondisce i concetti introdotti nei video. Le lezioni si concentrano sulla creazione di una prima esperienza entusiasmante per gli studenti, in cui gli studenti si impegnano in un'attività o in una simulazione e poi riflettono sull'esperienza come un modo per approfondire la comprensione dell'intelligenza artificiale e creare empatia con le persone colpite da essa. Alcune lezioni si concentrano maggiormente sulla tecnologia alla base dell'IA, mentre altre si concentrano sugli impatti sociali e sulle considerazioni etiche dell'IA.
+            Queste lezioni completano la [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Ogni lezione è abbinata a un singolo video della serie, che approfondisce i concetti introdotti nei video. Le lezioni si concentrano sulla creazione di una prima esperienza entusiasmante per gli studenti, in cui gli studenti si impegnano in un'attività o in una simulazione e poi riflettono sull'esperienza come un modo per approfondire la comprensione dell'intelligenza artificiale e creare empatia con le persone colpite da essa. Alcune lezioni si concentrano maggiormente sulla tecnologia alla base dell'IA, mentre altre si concentrano sugli impatti sociali e sulle considerazioni etiche dell'IA.
 
             **Supporti per gli insegnanti:** puoi saperne di più su come portare le lezioni di intelligenza artificiale in classe attraverso la nostra [serie AI 101 per insegnanti](https://code.org/ai/pl/101). AI 101 per insegnanti è una serie di apprendimento professionale online gratuita e fondamentale per qualsiasi insegnante ed educatore interessato al rivoluzionario mondo dell'intelligenza artificiale (IA) e al suo potenziale di trasformazione nell'istruzione.
 
@@ -5347,20 +5382,20 @@ it:
             Le lezioni da 1 a 7 possono essere insegnate come una sequenza di 7 giorni, in cui ogni giorno si concentra su un singolo video tratto dalla serie di video e approfondisce i concetti introdotti. Le classi che vanno in questa direzione dovrebbero nascondere la Lezione 8, che non rientra in questa sequenza. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
             :::
 
-            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnare una lezione specifica o integrarmi in un'altra classe»</span>]
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnare una lezione specifica o inserirla in un'altra materia»</span>]
             Ogni lezione può essere indipendente ed essere insegnata indipendentemente dalle altre. Ciò è particolarmente utile se desideri integrare una lezione in un'altra materia o in un corso esistente di informatica, intelligenza artificiale o istruzione generale. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne quella che si desidera insegnare. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
             :::
 
-            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«I Only Have a Day»</span>] La
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Ho solo un giorno di tempo»</span>] La
             lezione 8 è progettata per le classi che vogliono presentare l'IA agli studenti, ma hanno solo un giorno per farlo. In questa lezione gli studenti possono prendere appunti mentre la classe guarda l'intera sequenza video. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne la lezione 8. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
             :::
             <br />
             <br />
           name: come-funziona-lia-2023
           student_description: |-
-            Scopri come funziona l'IA partecipando a diverse esperienze e guardando la serie di[0] video Come funziona l'IA]!
+            Scopri come funziona l'IA partecipando a diverse esperienze e guardando la serie di video [Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
 
-            \*\*Vuoi insegnare queste lezioni? \*\* [Fai clic qui per visualizzare il piano di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor)
+            **Vuoi insegnare queste lezioni?** [Clicca qui per visualizzare il piano di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor)
           title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con

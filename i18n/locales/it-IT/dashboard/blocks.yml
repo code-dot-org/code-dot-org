@@ -2626,7 +2626,7 @@ it:
       ecosystems_makeNumSpritesAtLocation:
         text: crea {NUM} nuovi {ANIMATION_NAME} personaggi su {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
-        text: crea {NUM} nuovi {ANIMATION_NAME} sprite su {RANGE}
+        text: crea {NUM} nuovi {ANIMATION_NAME} personaggi {RANGE}
         options:
           RANGE:
             "{x1:0, x2:400, y1:200, y2:400}": In alto

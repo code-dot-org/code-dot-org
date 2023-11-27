@@ -1697,21 +1697,21 @@ it-IT:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2022:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample CSS text_2023:
         markdown: |
           # Sito web di esempio
 
-          Fai clic sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
+          Clicca sul sito web in basso per scoprire alcuni nuovi tipi di stile per le tue pagine.
 
           [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
       CSD U2 Sample classes_2021:
@@ -16718,7 +16718,7 @@ it-IT:
         markdown: |+
           ## Guarda le tre pratiche di pesca sostenibili
 
-          Trascina il codice sull'immagine corrispondente.
+          Trascina il codice in corrispondenza dell'immagine corretta.
 
         questions:
         - text: Crea una zona di pesca per le barche ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
@@ -16738,7 +16738,7 @@ it-IT:
         markdown: |
           ## Guarda i tre ecosistemi
 
-          Uno degli ecosistemi è equilibrato mentre gli altri due sono squilibrati in modi diversi. Trascina il codice sull'immagine corrispondente.
+          Uno degli ecosistemi è equilibrato mentre gli altri due sono squilibrati in modi diversi. Trascina il codice in corrispondenza dell'immagine corretta.
         questions:
         - text: Troppo poche alghe fanno andar via il pesce. ![] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
@@ -16801,17 +16801,16 @@ it-IT:
       csc_ecosystems_planning:
         markdown: "##Condividi la simulazione del tuo ecosistema!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ecologi!
-          È tempo di condividere la vostra ricerca!**\n\n###Spiegate le seguenti osservazioni
-          che hai fatto:\n\n>1. Spiegate la catena alimentare del vostro ecosistema
+          È tempo di condividere la vostra ricerca!**\n\n###Spiega le seguenti osservazioni
+          che hai fatto:\n\n>1. Spiega la catena alimentare del vostro ecosistema
           e come l'avete programmata.\n>2. C'era una quantità eccessiva o troppo esigua
-          di un certo organismo?\n>3. Spiegate le modifiche che hai apportato alla
-          simulazione. \n>4. Cosa avete notato dopo aver modificato i valori?\n</div>\n\n<div
-          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
-          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
-          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
-          20px; font-size: 18px; \">\n\n###**Pronti per altre attività di programmazione?
-          ** \nProva il [Corso rapido](https://studio.code.org/s/express-2022) di
-          code.org per imparare di più sull'informatica secondo i tuoi ritmi.   \n<br>\n</p></div>\n"
+          di un certo organismo?\n>3. Spiega le modifiche che hai apportato alla simulazione.
+          \n>4. Cosa hai notato dopo aver modificato i valori?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Pronto
+          per altre attività di programmazione?** \nProva il [Corso rapido](https://studio.code.org/s/express-2022)
+          di code.org per imparare di più sull'informatica sguendo i tuoi ritmi.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan La tua mappa dei punti di riferimento
@@ -17674,7 +17673,7 @@ it-IT:
 
           Grazie per aver dedicato del tempo per contribuire a rendere Alla scoperta dell'informatica ancora migliore!
 
-          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Fai clic qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
+          <a class="btn btn-large btn-success" href="/s/csd-post-survey-2021/lockable/1/levels/1/page/1" target="top">Clicca qui per completare il sondaggio post-corso di Alla scoperta dell'informatica</a>
 
           (si apre in una nuova scheda)
 

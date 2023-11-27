@@ -830,7 +830,7 @@ it:
         csd: Alla scoperta dell'informatica
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csp: Principi di informatica
+        csp: Princìpi di informatica
         not_applicable: Non applicabile
         other: Altro
     form_labels:
