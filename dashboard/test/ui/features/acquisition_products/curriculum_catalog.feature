@@ -143,6 +143,7 @@ Feature: Curriculum Catalog Page
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
 
   #Expanded card scenarios
+  @no_mobile
   Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
@@ -280,4 +281,12 @@ Feature: Curriculum Catalog Page
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
-
+  @only_mobile
+  Scenario: On mobile, User sees the Learn More button on Catalog Cards
+    Given I am on "http://studio.code.org/catalog"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "span:contains(Learn More)"
+    And I wait until element "h1:contains(AI for Oceans)" is visible
+    
