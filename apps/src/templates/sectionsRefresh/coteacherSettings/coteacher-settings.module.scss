@@ -108,6 +108,7 @@
     letter-spacing: 0.5px;
     color: $light_black;
     width: fit-content;
+    cursor: default;
   }
 
   &Active {
@@ -119,7 +120,8 @@
   }
 
   &Declined{
-    background-color: $product_negative_light;}
+    background-color: $product_negative_light;
+  }
 
   &Error{
     background-color: $neutral_dark10;
@@ -127,6 +129,12 @@
 
   &PillIcon {
     margin-right: 5px;
+  }
+
+  &ToolTipText {
+    font-size: 13px;
+    color: $neutral_white;
+    margin-bottom: 0;
   }
 }
 

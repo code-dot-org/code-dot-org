@@ -527,6 +527,7 @@
   "coteacherPending": "PENDING",
   "coteacherDeclined": "DECLINED",
   "coteacherError": "ERROR",
+  "coteacherPendingTooltip": "To accept a pending invitation, your co-teacher must click \"Accept\" on the invitation banner on their homepage",
   "count": "Count",
   "country": "Country",
   "course": "Course",
