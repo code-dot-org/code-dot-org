@@ -244,7 +244,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   }, [currentAiModalField, mode, calculateMinMax]);
 
-  const getLabels = () => {
+  const getLabels = useCallback(() => {
     const tempWorkspace = new Workspace();
     const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
@@ -265,40 +265,56 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       [FieldKey.BACKGROUND_EFFECT]: backgroundLabels,
       [FieldKey.BACKGROUND_PALETTE]: paletteLabels,
     };
-  };
+  }, []);
 
-  const getAllItems = () => {
+  const getAllItems = useCallback(() => {
     return inputLibraryJson.items.map(item => {
       return {
         ...item,
         available: !inputs.includes(item.id),
       };
     });
-  };
+  }, [inputs]);
 
-  const getItem = (id: string) =>
-    inputLibraryJson.items.find(item => item.id === id);
+  const getItem = useCallback(
+    (id: string) => inputLibraryJson.items.find(item => item.id === id),
+    []
+  );
 
-  const handleItemClick = (id: string, available: boolean) => {
-    if (available) {
-      // Add item inputs.
-      if (currentInputSlot < SLOT_COUNT) {
-        setInputs([...inputs, id]);
-        setCurrentInputSlot(currentInputSlot + 1);
-        setInputAddCount(inputAddCount + 1);
+  const handleItemClick = useCallback(
+    (id: string, available: boolean) => {
+      if (available) {
+        // Add item inputs.
+        if (currentInputSlot < SLOT_COUNT) {
+          setInputs([...inputs, id]);
+          setCurrentInputSlot(currentInputSlot + 1);
+          setInputAddCount(inputAddCount + 1);
 
-        playSound('ai-select-emoji');
+          playSound('ai-select-emoji');
+        }
+      } else {
+        // Remove item from inputs.
+        setInputs(inputs.filter(input => input !== id));
+        setCurrentInputSlot(currentInputSlot - 1);
+
+        playSound('ai-deselect-emoji');
       }
-    } else {
-      // Remove item from inputs.
-      setInputs(inputs.filter(input => input !== id));
-      setCurrentInputSlot(currentInputSlot - 1);
+    },
+    [currentInputSlot, inputAddCount, inputs, playSound]
+  );
 
-      playSound('ai-deselect-emoji');
-    }
-  };
+  const startAi = useCallback(() => {
+    generatedEffects.current = {
+      badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(() =>
+        chooseEffects(inputs, ChooseEffectsQuality.BAD)
+      ),
+      goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
+    };
 
-  const handleGenerateClick = () => {
+    minMaxAssociations.current = calculateMinMax(inputs);
+  }, [calculateMinMax, inputs]);
+
+  const handleGenerateClick = useCallback(() => {
     startAi();
 
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
@@ -306,9 +322,11 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     });
 
     setMode(Mode.GENERATING);
-  };
+  }, [inputs, startAi]);
 
-  const handleStartOverClick = () => {
+  const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
+
+  const handleStartOverClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
       emojis: inputs,
     });
@@ -317,9 +335,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setMode(Mode.SELECT_INPUTS);
-  };
+  }, [inputs]);
 
-  const handleRegenerateClick = () => {
+  const handleRegenerateClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
       emojis: inputs,
     });
@@ -327,18 +345,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
     handleGenerateClick();
-  };
+  }, [handleGenerateClick, inputs]);
 
-  const handleExplanationClick = () => {
+  const handleExplanationClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
       emojis: inputs,
     });
     setGeneratedProgress(0);
     setExplanationProgress(0);
     setMode(Mode.EXPLANATION);
-  };
+  }, [inputs]);
 
-  const handleUseClick = () => {
+  const handleUseClick = useCallback(() => {
     if (!generatedEffects.current.goodEffect) {
       // Effect should exist when Use is clicked
       return;
@@ -353,31 +371,34 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     };
     currentAiModalField?.setValue(JSON.stringify(currentValue));
     onClose();
-  };
+  }, [currentAiModalField, inputs, onClose]);
 
-  const handleLeaveExplanation = () => {
+  const handleLeaveExplanation = useCallback(() => {
     setMode(Mode.RESULTS);
-  };
+  }, []);
 
   // One-shot update of step & substep.
-  const updateGeneratingProgress = (progress: GeneratingProgress) => {
-    // Do a deep copy into a new object to ensure that a re-render
-    // is triggered at the end of this work.
-    const currentProgress: GeneratingProgress = {
-      ...progress,
-    };
+  const updateGeneratingProgress = useCallback(
+    (progress: GeneratingProgress) => {
+      // Do a deep copy into a new object to ensure that a re-render
+      // is triggered at the end of this work.
+      const currentProgress: GeneratingProgress = {
+        ...progress,
+      };
 
-    if (currentProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
-      // Bump substep.
-      currentProgress.subStep++;
-    } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT) {
-      // Bump step and reset substep.
-      currentProgress.step++;
-      currentProgress.subStep = 0;
-    }
+      if (currentProgress.subStep < GENERATING_SUBSTEP_COUNT - 1) {
+        // Bump substep.
+        currentProgress.subStep++;
+      } else if (currentProgress.step < BAD_GENERATED_RESULTS_COUNT) {
+        // Bump step and reset substep.
+        currentProgress.step++;
+        currentProgress.subStep = 0;
+      }
 
-    return currentProgress;
-  };
+      return currentProgress;
+    },
+    []
+  );
 
   // Handle moments when we should play a sound or do another action.
   useEffect(() => {
@@ -408,14 +429,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     playSound,
   ]);
 
-  const getGeneratingStepDuration = () => {
+  const getGeneratingStepDuration = useCallback(() => {
     return lerp(
       generatingProgress.step,
       BAD_GENERATED_RESULTS_COUNT,
       GENERATION_SUBSTEP_DURATION_MAX,
       GENERATION_SUBSTEP_DURATION_MIN
     );
-  };
+  }, [generatingProgress.step]);
 
   // Animate through the generating or explanation process.
   useInterval(
@@ -441,18 +462,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       : undefined
   );
 
-  const startAi = () => {
-    generatedEffects.current = {
-      badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(() =>
-        chooseEffects(inputs, ChooseEffectsQuality.BAD)
-      ),
-      goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
-    };
-
-    minMaxAssociations.current = calculateMinMax(inputs);
-  };
-
-  const handleConvertBlocks = () => {
+  const handleConvertBlocks = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
       emojis: inputs,
       ...generatedEffects.current.goodEffect,
@@ -502,23 +512,24 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       // End modal.
       onClose();
     }
-  };
+  }, [currentAiModalField, inputs, onClose]);
 
-  const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
-    if (!currentGeneratedEffect) {
-      return '';
-    }
+  const getPreviewCode = useCallback(
+    (currentGeneratedEffect?: GeneratedEffect): string => {
+      if (!currentGeneratedEffect) {
+        return '';
+      }
 
-    const tempWorkspace = new Workspace();
-    const previewCode = generatePreviewCode(
-      tempWorkspace,
-      currentGeneratedEffect
-    );
-    tempWorkspace.dispose();
-    return previewCode;
-  };
-
-  const onClose = () => dispatch(closeAiModal());
+      const tempWorkspace = new Workspace();
+      const previewCode = generatePreviewCode(
+        tempWorkspace,
+        currentGeneratedEffect
+      );
+      tempWorkspace.dispose();
+      return previewCode;
+    },
+    []
+  );
 
   const showUseButton =
     mode === Mode.RESULTS &&
@@ -554,7 +565,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     moduleStyles.dotThird,
   ];
 
-  const headerValue = () => {
+  const headerValue = useCallback(() => {
     return (
       <div
         className={moduleStyles.inputsContainer}
@@ -573,7 +584,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         })}
       </div>
     );
-  };
+  }, [handleStartOverClick, inputs, getItem]);
 
   // The header comes from a localized string like this: "generate {input} effect".
   // We split the localized string on the "{input}", and rebuild the HTML but with
