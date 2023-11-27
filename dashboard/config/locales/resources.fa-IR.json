@@ -568,7 +568,8 @@
           "type": "راهنمای فعالیت"
         },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "کامپیوتر چیست؟"
+          "name": "کامپیوتر چیست؟",
+          "type": "نمونه"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ویدئو"
@@ -670,7 +671,8 @@
           "type": "اسلایدها"
         },
         "social-sleuth-exemplar-2020/csd/2021": {
-          "name": "کارآگاه اجتماعی"
+          "name": "کارآگاه اجتماعی",
+          "type": "نمونه"
         },
         "social-sleuth/csd/2021": {
           "name": "کارآگاه اجتماعی",
@@ -909,7 +911,8 @@
           "type": "منبع"
         },
         "collision-detection-exemplar-2020/csd/2021": {
-          "name": "تشخیص تصادم"
+          "name": "تشخیص تصادم",
+          "type": "نمونه"
         },
         "collision_detection_version_b_/csd/2021": {
           "type": "راهنمای فعالیت"
@@ -1318,10 +1321,12 @@
           "type": "راهنمای پروژه"
         },
         "classifying_fish/csd/2021": {
-          "type": "راهنمای فعالیت"
+          "type": "راهنمای فعالیت",
+          "name": "طبقه‌بندی ماهی‌ها"
         },
         "introduction_to_machine_learning/csd/2021": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "معرفی یادگیری ماشینی"
         },
         "ai_what_is_machine_learning_/csd/2021": {
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
@@ -1472,16 +1477,21 @@
           "type": "اسلایدها"
         },
         "ai_code_of_ethics/csd/2021": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی"
         },
         "ai_ethics_research_reflection/csd/2021": {
-          "type": "جزوه دانش‌آموز"
+          "type": "جزوه دانش‌آموز",
+          "name": "بازتاب تحقیقاتی اخلاق هوش مصنوعی"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
-          "type": "ویدئو"
+          "type": "ویدئو",
+          "name": "اخلاق و هوش مصنوعی: دسترسی برابر و سوگیری الگوریتمی"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی ما [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "اسلایدها"
@@ -3137,7 +3147,8 @@
           "type": "ویدئو"
         },
         "what_is_a_computer_/csd/2022": {
-          "name": "کامپیوتر چیست؟"
+          "name": "کامپیوتر چیست؟",
+          "type": "نمونه"
         },
         "what_is_a_computer_version_a_/csd/2022": {
           "type": "راهنمای فعالیت"
@@ -3276,7 +3287,8 @@
           "type": "اسلایدها"
         },
         "social_sleuth/csd/2022": {
-          "name": "کارآگاه اجتماعی"
+          "name": "کارآگاه اجتماعی",
+          "type": "نمونه"
         },
         "social_sleuth_1/csd/2022": {
           "name": "کارآگاه اجتماعی",
@@ -3617,7 +3629,8 @@
           "type": "اسلایدها"
         },
         "collision_detection/csd/2022": {
-          "name": "تشخیص تصادم"
+          "name": "تشخیص تصادم",
+          "type": "نمونه"
         },
         "collision_detection_1/csd/2022": {
           "name": "تشخیص تصادم",
@@ -4228,10 +4241,12 @@
           "type": "ویدئو"
         },
         "classifying_fish/csd/2022": {
-          "type": "راهنمای فعالیت"
+          "type": "راهنمای فعالیت",
+          "name": "طبقه‌بندی ماهی‌ها"
         },
         "introduction_to_machine_learning/csd/2022": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "معرفی یادگیری ماشینی"
         },
         "types_of_machine_learning/csd/2022": {
           "type": "اسلایدها"
@@ -4381,16 +4396,21 @@
           "type": "اسلایدها"
         },
         "ai_code_of_ethics/csd/2022": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی"
         },
         "ai_ethics_research_reflection/csd/2022": {
-          "type": "جزوه دانش‌آموز"
+          "type": "جزوه دانش‌آموز",
+          "name": "بازتاب تحقیقاتی اخلاق هوش مصنوعی"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2022": {
-          "type": "ویدئو"
+          "type": "ویدئو",
+          "name": "اخلاق و هوش مصنوعی: دسترسی برابر و سوگیری الگوریتمی"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی ما [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2022": {
           "type": "سرفصل"
@@ -5787,7 +5807,8 @@
           "type": "اسلایدها"
         },
         "ai_code_of_ethics/ai-ethics/2023": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی"
         },
         "ai_research_areas/ai-ethics/2023": {
           "type": "راهنمای فعالیت"
@@ -6408,7 +6429,8 @@
           "type": "ویدئو"
         },
         "what_is_a_computer_/csd/2023": {
-          "name": "کامپیوتر چیست؟"
+          "name": "کامپیوتر چیست؟",
+          "type": "نمونه"
         },
         "what_is_a_computer_1/csd/2023": {
           "type": "اسلایدها"
@@ -6571,7 +6593,8 @@
           "type": "اسلایدها"
         },
         "social_sleuth/csd/2023": {
-          "name": "کارآگاه اجتماعی"
+          "name": "کارآگاه اجتماعی",
+          "type": "نمونه"
         },
         "social_sleuth_1/csd/2023": {
           "name": "کارآگاه اجتماعی",
@@ -6938,7 +6961,8 @@
           "type": "اسلایدها"
         },
         "collision_detection/csd/2023": {
-          "name": "تشخیص تصادم"
+          "name": "تشخیص تصادم",
+          "type": "نمونه"
         },
         "collision_detection_1/csd/2023": {
           "name": "تشخیص تصادم",
@@ -7656,10 +7680,12 @@
           "type": "ویدئو"
         },
         "classifying_fish/csd/2023": {
-          "type": "راهنمای فعالیت"
+          "type": "راهنمای فعالیت",
+          "name": "طبقه‌بندی ماهی‌ها"
         },
         "introduction_to_machine_learning/csd/2023": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "معرفی یادگیری ماشینی"
         },
         "types_of_machine_learning/csd/2023": {
           "type": "اسلایدها"
@@ -7815,16 +7841,21 @@
           "type": "اسلایدها"
         },
         "ai_code_of_ethics/csd/2023": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی"
         },
         "ai_ethics_research_areas/csd/2023": {
-          "type": "راهنمای فعالیت"
+          "type": "راهنمای فعالیت",
+          "name": "حوزه‌های تحقیقاتی اخلاق هوش مصنوعی"
         },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2023": {
-          "type": "ویدئو"
+          "type": "ویدئو",
+          "name": "اخلاق و هوش مصنوعی: دسترسی برابر و سوگیری الگوریتمی"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی ما [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "create_an_ml_app/csd/2023": {
           "type": "سرفصل"
@@ -7875,13 +7906,16 @@
           "type": "منبع"
         },
         "all_resources/coursea/2023": {
-          "url": "/S/دوره-2023/منابع"
+          "url": "/S/دوره-2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/coursea/2023": {
-          "url": "/S/دوره-2023/استانداردها"
+          "url": "/S/دوره-2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/coursea/2023": {
-          "url": "/S/دوره-2023/vocab"
+          "url": "/S/دوره-2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/coursea/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -8086,13 +8120,16 @@
           "type": "کلید پاسخ"
         },
         "all_resources/courseb/2023": {
-          "url": "/S/دوره 2023/منابع"
+          "url": "/S/دوره 2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/courseb/2023": {
-          "url": "/S/دوره 2023/استانداردها"
+          "url": "/S/دوره 2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/courseb/2023": {
-          "url": "/S/دوره-2023/vocab"
+          "url": "/S/دوره-2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/courseb/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -8308,13 +8345,16 @@
           "type": "کلید پاسخ"
         },
         "all_resources/coursec/2023": {
-          "url": "/s/دورس-2023/منابع"
+          "url": "/s/دورس-2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/coursec/2023": {
-          "url": "/s/coursec-2023/استانداردها"
+          "url": "/s/coursec-2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/coursec/2023": {
-          "url": "/s/دورس-2023/vocab"
+          "url": "/s/دورس-2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/coursec/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -8533,13 +8573,16 @@
           "type": "منبع درس"
         },
         "all_resources/coursed/2023": {
-          "url": "/S/دوره-2023/منابع"
+          "url": "/S/دوره-2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/coursed/2023": {
-          "url": "/S/دوره-2023/استانداردها"
+          "url": "/S/دوره-2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/coursed/2023": {
-          "url": "/S/دوره-2023/vocab"
+          "url": "/S/دوره-2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/coursed/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -8776,13 +8819,16 @@
           "type": "راهنمای پروژه"
         },
         "all_resources/coursee/2023": {
-          "url": "/s/دوره -2023/منابع"
+          "url": "/s/دوره -2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/coursee/2023": {
-          "url": "/s/دوره -2023/استانداردها"
+          "url": "/s/دوره -2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/coursee/2023": {
-          "url": "/s/دوره 2023/vocab"
+          "url": "/s/دوره 2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/coursee/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -8952,13 +8998,16 @@
           "type": "راهنمای فعالیت"
         },
         "all_resources/coursef/2023": {
-          "url": "/S/دوره-2023/منابع"
+          "url": "/S/دوره-2023/منابع",
+          "name": "تمام منابع"
         },
         "all_standards/coursef/2023": {
-          "url": "/S/دوره-2023/استانداردها"
+          "url": "/S/دوره-2023/استانداردها",
+          "name": "تمام استانداردها"
         },
         "all_vocabulary/coursef/2023": {
-          "url": "/S/دوره-2023/vocab"
+          "url": "/S/دوره-2023/vocab",
+          "name": "تمام واژگان"
         },
         "common_core_and_ngss_guidance/coursef/2023": {
           "name": "راهنمای مشترک و استانداردهای علوم نسل بعدی ",
@@ -9289,48 +9338,51 @@
         },
         "classifying_fish/how-ai-works/2023": {
           "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
-          "type": "راهنمای فعالیت"
+          "type": "راهنمای فعالیت",
+          "name": "طبقه‌بندی ماهی‌ها"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند - داده های آموزشی و تعصب",
+          "name": "هوش مصنوعی چگونه کار می‌کند - داده‌های آموزشی و بایاس",
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "ویدئو"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند - یادگیری ماشین چیست؟",
+          "name": "هوش مصنوعی چگونه کار می‌کند - یادگیری ماشین چیست؟",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "ویدئو"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
           "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "معرفی یادگیری ماشینی"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] شبکه بینایی کامپیوتر",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing",
+          "type": "نمونه"
         },
         "computer_vision/how-ai-works/2023": {
-          "name": "بینایی کامپیوتر",
+          "name": "بینایی کامپیوتری",
           "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
           "type": "اسلایدها"
         },
         "computer_vision_network/how-ai-works/2023": {
-          "name": "شبکه بینایی کامپیوتر",
+          "name": "شبکه بینایی کامپیوتری",
           "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
           "type": "راهنمای فعالیت"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "چگونه هوش مصنوعی کار می کند: چگونه بینایی کامپیوتر کار می کند",
+          "name": "هوش مصنوعی چگونه کار می‌کند: چگونگی عملکرد بینایی کامپیوتری",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "ویدئو"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "صفحه نمایش هفت بخش دستکاری شده",
+          "name": "راهنمای نمایش هفت بخش",
           "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
           "type": "راهنمای فعالیت"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
-          "name": "آنچه یک شبکه عصبی می بیند",
+          "name": "آنچه یک شبکه عصبی می‌بیند",
           "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
           "type": "ویدئو"
         },
@@ -9340,12 +9392,12 @@
           "type": "ویدئو"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "شبکه های عصبی",
+          "name": "شبکه‌های عصبی",
           "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
           "type": "راهنمای فعالیت"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "شبکه های عصبی",
+          "name": "شبکه‌های عصبی",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "اسلایدها"
         },
@@ -9360,17 +9412,17 @@
           "type": "راهنمای فعالیت"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "LLM تولیدی",
+          "name": "مدل زبانی بزرگ مولد ",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "اسلایدها"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: چت بات ها و مدل های زبان بزرگ (قسمت 1)",
+          "name": "هوش مصنوعی چگونه کار می‌کند: چت‌بات‌ها و مدل‌های زبانی بزرگ (قسمت 1)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "ویدئو"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: چت بات ها و مدل های زبان بزرگ (قسمت 2)",
+          "name": "هوش مصنوعی چگونه کار می‌کند: چت‌بات‌ها و مدل‌های زبانی بزرگ (قسمت 2)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "ویدئو"
         },
@@ -9386,7 +9438,8 @@
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] راهنمای فعالیت شبیه ساز صوتی نوشته شده",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/",
+          "type": "نمونه"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "راهنمای شبیه ساز صوتی نوشته شده",
@@ -9420,7 +9473,8 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] فعالیت تصویر پر سر و صدا",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/",
+          "type": "نمونه"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "راهنمای فعالیت ویجت تصویر پر سر و صدا",
@@ -9438,7 +9492,7 @@
           "type": "راهنمای فعالیت"
         },
         "algorithmic_bias/how-ai-works/2023": {
-          "name": "تورش الگوریتمی",
+          "name": "سوگیری الگوریتمی",
           "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
           "type": "اسلایدها"
         },
@@ -9459,13 +9513,16 @@
         },
         "ai_code_of_ethics/how-ai-works/2023": {
           "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing",
+          "name": "حوزه‌های تحقیقاتی اخلاق هوش مصنوعی"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing",
+          "name": "بازتاب تحقیقاتی اخلاق هوش مصنوعی"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
           "name": "هوش مصنوعی چگونه کار می کند - حریم خصوصی و آینده کار",
@@ -9473,18 +9530,22 @@
           "type": "ویدئو"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "منشور اخلاقی هوش مصنوعی ما [Template]",
+          "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
-          "type": "ویدئو"
+          "type": "ویدئو",
+          "name": "آیا هوش مصنوعی دارای خلاقیت و تخیل است؟"
         },
         "how_ai_works/how-ai-works/2023": {
           "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
-          "type": "اسلایدها"
+          "type": "اسلایدها",
+          "name": "هوش مصنوعی چگونه کار می‌کند"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "هوش مصنوعی چگونه کار می کند: اخلاق و هوش مصنوعی: دسترسی برابر و تعصب الگوریتمی",
+          "name": "هوش مصنوعی چگونه کار می‌کند: اخلاق و هوش مصنوعی: دسترسی برابر و سوگیری الگوریتمی",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "ویدئو"
         },
@@ -9510,7 +9571,8 @@
         },
         "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
-          "type": "ویدئو"
+          "type": "ویدئو",
+          "name": "چت‌بات‌ها و مدل‌های زبانی بزرگ چگونه کار می‌کنند"
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "تطبیق واژگان",
@@ -9639,6 +9701,1128 @@
         },
         "web_development_-_extra_code_in_challenge_levels/csd/2023": {
           "type": "منبع"
+        },
+        "aluminum-boats-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "input-and-output-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "processing-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "storage-1/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-propose-an-app-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "apps-and-problem-solving-marked-rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar/csd/2021": {
+          "type": "نمونه"
+        },
+        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "exploring-problem-solving-animal-theme-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "exploring-problem-solving-games-theme-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_3/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_3/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_3/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-html-project-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer-review-html-web-page-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "define-your-webpage-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "practices-reflection-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer-review-personal-website-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "website-team-plan-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "links-and-research-1/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-website-for-a-purpose-prepare-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "practices-reflection-l21-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "project-guide-website-for-a-purpose-reflect-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer-review-final-personal-website-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_2/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_2/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_2/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "cs_in_entertainment/csd/2021": {
+          "type": "نمونه"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "colored-shape-drawing/csd/2021": {
+          "type": "نمونه"
+        },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "mini-project-guide-side-scroller-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "flyer-game-project-guide-exemplar/csd/2021": {
+          "type": "نمونه"
+        },
+        "planning-your-platform-game-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "make-your-own-game-exemplar-2020/csd/2021": {
+          "type": "نمونه"
+        },
+        "make-your-own-game-sample-marked-rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_4/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_4/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_4/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "designing_with_empathy_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "reacting-as-your-user-exemplar-19/csd/2021": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_2/csd/2021": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_3/csd/2021": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_4/csd/2021": {
+          "type": "نمونه"
+        },
+        "user_centered_design_define_prepare_/csd/2021": {
+          "type": "نمونه"
+        },
+        "user_centered_design_try_reflect_/csd/2021": {
+          "type": "نمونه"
+        },
+        "improve-a-screen-exemplar-19/csd/2021": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "app_design_kickoff/csd/2021": {
+          "type": "نمونه"
+        },
+        "market_research/csd/2021": {
+          "type": "نمونه"
+        },
+        "explore_ui_elements/csd/2021": {
+          "type": "نمونه"
+        },
+        "paper_prototype_planning/csd/2021": {
+          "type": "نمونه"
+        },
+        "paper_prototype_user_testing/csd/2021": {
+          "type": "نمونه"
+        },
+        "user_test_cases/csd/2021": {
+          "type": "نمونه"
+        },
+        "bugs_and_features/csd/2021": {
+          "type": "نمونه"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_1_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_2/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_5/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_5/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_5/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "representing-information-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "representing_information_2/csd/2021": {
+          "type": "نمونه"
+        },
+        "ascii-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "pet-records-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "create-a-representation-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "create_a_representation_marked_rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "problem-solving-with-data-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "structuring_data/csd/2021": {
+          "type": "نمونه"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "making-decisions-with-data-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "type": "نمونه"
+        },
+        "project_guide_exemplar/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_2/csd/2021": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_6/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_6/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_6/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "make_a_game_sample_marked_rubrics/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_1_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "peer_review_2_1/csd/2021": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_4/csd/2021": {
+          "type": "نمونه"
+        },
+        "all_resources_7/csd/2021": {
+          "name": "تمام منابع"
+        },
+        "all_standards_7/csd/2021": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_7/csd/2021": {
+          "name": "تمام واژگان"
+        },
+        "ai_ethics_research_areas/csd/2021": {
+          "name": "حوزه‌های تحقیقاتی اخلاق هوش مصنوعی"
+        },
+        "all_resources_5/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_5/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_5/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "aluminum_boats/csd/2022": {
+          "type": "نمونه"
+        },
+        "problem_solving_process/csd/2022": {
+          "type": "نمونه"
+        },
+        "input_and_output/csd/2022": {
+          "type": "نمونه"
+        },
+        "apps_with_processing/csd/2022": {
+          "type": "نمونه"
+        },
+        "apps_with_storage/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_exemplar/csd/2022": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics/csd/2022": {
+          "type": "نمونه"
+        },
+        "build_a_newspaper_table/csd/2022": {
+          "type": "نمونه"
+        },
+        "spaghetti_bridge/csd/2022": {
+          "type": "نمونه"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2022": {
+          "type": "نمونه"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2022": {
+          "type": "نمونه"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "exploring_web_pages/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_-_html_web_page/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_html_project/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_-_your_personal_style/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_your_personal_style/csd/2022": {
+          "type": "نمونه"
+        },
+        "licensing_your_work/csd/2022": {
+          "type": "نمونه"
+        },
+        "define_your_webpage/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_-_personal_website/csd/2022": {
+          "type": "نمونه"
+        },
+        "practices_reflection/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2022": {
+          "type": "نمونه"
+        },
+        "websites_for_a_purpose/csd/2022": {
+          "type": "نمونه"
+        },
+        "website_team_plan/csd/2022": {
+          "type": "نمونه"
+        },
+        "links_and_research/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_-_final_personal_website/csd/2022": {
+          "type": "نمونه"
+        },
+        "practices_reflection_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources_1/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_1/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_1/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "cs_in_entertainment_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "drawing_shapes/csd/2022": {
+          "type": "نمونه"
+        },
+        "sample_shape_drawing/csd/2022": {
+          "type": "نمونه"
+        },
+        "mini_project_-_captioned_scenes/csd/2022": {
+          "type": "نمونه"
+        },
+        "animated_scene_planning/csd/2022": {
+          "type": "نمونه"
+        },
+        "interactive_card/csd/2022": {
+          "type": "نمونه"
+        },
+        "interactive_card_-_marked_rubrics/csd/2022": {
+          "type": "نمونه"
+        },
+        "mini-project_guide_-_side_scroller/csd/2022": {
+          "type": "نمونه"
+        },
+        "flyer_game_-_project_guide/csd/2022": {
+          "type": "نمونه"
+        },
+        "planning_your_platform_game/csd/2022": {
+          "type": "نمونه"
+        },
+        "make_your_own_game/csd/2022": {
+          "type": "نمونه"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources_2/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_2/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_2/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "designing_with_empathy_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_3/csd/2022": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_4/csd/2022": {
+          "type": "نمونه"
+        },
+        "user_centered_design_define_prepare_/csd/2022": {
+          "type": "نمونه"
+        },
+        "user_centered_design_try_reflect_/csd/2022": {
+          "type": "نمونه"
+        },
+        "improve_a_screen/csd/2022": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "app_design_kickoff_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "market_research_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "explore_ui_elements_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "paper_prototype_planning_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "paper_prototype_user_testing_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "user_test_cases_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "bugs_and_features_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "app_presentation_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources_3/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_3/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_3/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "representation_matters/csd/2022": {
+          "type": "نمونه"
+        },
+        "representing_information_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "representing_information_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "ascii/csd/2022": {
+          "type": "نمونه"
+        },
+        "representing_numbers/csd/2022": {
+          "type": "نمونه"
+        },
+        "pet_records/csd/2022": {
+          "type": "نمونه"
+        },
+        "create_a_representation/csd/2022": {
+          "type": "نمونه"
+        },
+        "create_a_representation_marked_rubrics/csd/2022": {
+          "type": "نمونه"
+        },
+        "problem_solving_with_data/csd/2022": {
+          "type": "نمونه"
+        },
+        "structuring_data/csd/2022": {
+          "type": "نمونه"
+        },
+        "interpreting_data/csd/2022": {
+          "type": "نمونه"
+        },
+        "making_decisions_with_data/csd/2022": {
+          "type": "نمونه"
+        },
+        "automating_data_decisions/csd/2022": {
+          "type": "نمونه"
+        },
+        "data_in_the_real_world/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "project_guide_exemplar_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_3/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources_6/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_6/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_6/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_bird_survey/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_1_-_lights_and_music/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_1_-_city_silhouette/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2022": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_monster_puppet/csd/2022": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_1/csd/2022": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_2/csd/2022": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_3/csd/2022": {
+          "type": "نمونه"
+        },
+        "all_resources_4/csd/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards_4/csd/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_4/csd/2022": {
+          "name": "تمام واژگان"
+        },
+        "ai_ethics_research_areas/csd/2022": {
+          "name": "حوزه‌های تحقیقاتی اخلاق هوش مصنوعی"
+        },
+        "all_resources/coursea/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/coursea/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/coursea/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/courseb/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/courseb/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/courseb/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/coursec/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/coursec/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/coursec/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/coursed/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/coursed/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/coursed/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/coursee/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/coursee/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/coursee/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/coursef/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/coursef/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/coursef/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/express/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/express/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/express/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/pre-express/2022": {
+          "name": "تمام منابع"
+        },
+        "all_standards/pre-express/2022": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/pre-express/2022": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "aluminum_boats/csd/2023": {
+          "type": "نمونه"
+        },
+        "problem_solving_process/csd/2023": {
+          "type": "نمونه"
+        },
+        "input_and_output/csd/2023": {
+          "type": "نمونه"
+        },
+        "apps_with_processing/csd/2023": {
+          "type": "نمونه"
+        },
+        "apps_with_storage/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_exemplar/csd/2023": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics/csd/2023": {
+          "type": "نمونه"
+        },
+        "build_a_newspaper_table/csd/2023": {
+          "type": "نمونه"
+        },
+        "spaghetti_bridge/csd/2023": {
+          "type": "نمونه"
+        },
+        "intro_to_problem_solving_-_paper_tower/csd/2023": {
+          "type": "نمونه"
+        },
+        "exploring_problem_solving_-_animal_theme/csd/2023": {
+          "type": "نمونه"
+        },
+        "exploring_problem_solving_-_games_theme/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_5/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_5/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_5/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "peer_review_-_html_web_page/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_html_project/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_-_your_personal_style/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_your_personal_style/csd/2023": {
+          "type": "نمونه"
+        },
+        "licensing_your_work/csd/2023": {
+          "type": "نمونه"
+        },
+        "define_your_webpage/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_personal_web_page_-_prepare/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_-_personal_website/csd/2023": {
+          "type": "نمونه"
+        },
+        "practices_reflection/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_personal_web_page_-_reflect/csd/2023": {
+          "type": "نمونه"
+        },
+        "websites_for_a_purpose/csd/2023": {
+          "type": "نمونه"
+        },
+        "website_team_plan/csd/2023": {
+          "type": "نمونه"
+        },
+        "links_and_research/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_website_for_a_purpose_-_prepare/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_-_final_personal_website/csd/2023": {
+          "type": "نمونه"
+        },
+        "practices_reflection_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "project_guide_-_website_for_a_purpose_-_reflect/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_6/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_6/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_6/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "exemplar_-_animation_and_game_design_activity_guide/csd/2023": {
+          "type": "نمونه"
+        },
+        "drawing_shapes/csd/2023": {
+          "type": "نمونه"
+        },
+        "sample_shape_drawing/csd/2023": {
+          "type": "نمونه"
+        },
+        "mini-project_-_robot_faces_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "mini_project_-_captioned_scenes/csd/2023": {
+          "type": "نمونه"
+        },
+        "animated_scene_planning/csd/2023": {
+          "type": "نمونه"
+        },
+        "interactive_card/csd/2023": {
+          "type": "نمونه"
+        },
+        "interactive_card_-_marked_rubrics/csd/2023": {
+          "type": "نمونه"
+        },
+        "mini-project_guide_-_side_scroller/csd/2023": {
+          "type": "نمونه"
+        },
+        "flyer_game_-_project_guide/csd/2023": {
+          "type": "نمونه"
+        },
+        "planning_your_platform_game/csd/2023": {
+          "type": "نمونه"
+        },
+        "make_your_own_game/csd/2023": {
+          "type": "نمونه"
+        },
+        "make_your_own_game_-_sample_marked_rubrics/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_7/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_7/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_7/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "designing_with_empathy_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_2/csd/2023": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_3/csd/2023": {
+          "type": "نمونه"
+        },
+        "reacting_as_your_user_profile_4/csd/2023": {
+          "type": "نمونه"
+        },
+        "user_centered_design_define_prepare_/csd/2023": {
+          "type": "نمونه"
+        },
+        "user_centered_design_try_reflect_/csd/2023": {
+          "type": "نمونه"
+        },
+        "improve_a_screen/csd/2023": {
+          "type": "نمونه"
+        },
+        "example_project_-_cooking_app_-_convincing_evidence/csd/2023": {
+          "type": "نمونه"
+        },
+        "example_project_-_cooking_app_-_extensive_evidence/csd/2023": {
+          "type": "نمونه"
+        },
+        "example_project_-_language_app_-_convincing_evidence/csd/2023": {
+          "type": "نمونه"
+        },
+        "example_project_-_language_app_-_limited_evidence/csd/2023": {
+          "type": "نمونه"
+        },
+        "app_design_kickoff_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "market_research_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "explore_ui_elements_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "paper_prototype_planning_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "paper_prototype_user_testing_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "user_test_cases_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "bugs_and_features_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "app_presentation_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_2/csd/2023": {
+          "type": "نمونه"
+        },
+        "sample_marked_rubrics_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_3/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_3/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_3/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "representation_matters/csd/2023": {
+          "type": "نمونه"
+        },
+        "representing_information_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "representing_information_2/csd/2023": {
+          "type": "نمونه"
+        },
+        "ascii/csd/2023": {
+          "type": "نمونه"
+        },
+        "representing_numbers/csd/2023": {
+          "type": "نمونه"
+        },
+        "pet_records/csd/2023": {
+          "type": "نمونه"
+        },
+        "create_a_representation/csd/2023": {
+          "type": "نمونه"
+        },
+        "create_a_representation_marked_rubrics/csd/2023": {
+          "type": "نمونه"
+        },
+        "problem_solving_with_data/csd/2023": {
+          "type": "نمونه"
+        },
+        "structuring_data/csd/2023": {
+          "type": "نمونه"
+        },
+        "interpreting_data/csd/2023": {
+          "type": "نمونه"
+        },
+        "making_decisions_with_data/csd/2023": {
+          "type": "نمونه"
+        },
+        "automating_data_decisions/csd/2023": {
+          "type": "نمونه"
+        },
+        "data_in_the_real_world/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "peer_review_exemplar_2/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_4/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_4/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_4/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "_exemplar_physical_designs/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_1_-_loose_papers_app/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_cats_vs_dogs_app/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_bird_survey/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_1_-_lights_and_music/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_magic_unicorn/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_red_light_green_light/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_1_-_city_silhouette/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_2_-_dual_landscape_painting/csd/2023": {
+          "type": "نمونه"
+        },
+        "exemplar_3_-_monster_puppet/csd/2023": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_2/csd/2023": {
+          "type": "نمونه"
+        },
+        "prototype_an_innovation_example_3/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_1/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_1/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_1/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "_exemplar_physical_designs_1/csd/2023": {
+          "type": "نمونه"
+        },
+        "all_resources_8/csd/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards_8/csd/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary_8/csd/2023": {
+          "name": "تمام واژگان"
+        },
+        "ai_ethics_research_reflection/csd/2023": {
+          "name": "بازتاب تحقیقاتی اخلاق هوش مصنوعی"
+        },
+        "all_resources/express/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards/express/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/express/2023": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/pre-express/2023": {
+          "name": "تمام منابع"
+        },
+        "all_standards/pre-express/2023": {
+          "name": "تمام استانداردها"
+        },
+        "all_vocabulary/pre-express/2023": {
+          "name": "تمام واژگان"
+        },
+        "all_resources/how-ai-works/2023": {
+          "name": "تمام منابع",
+          "url": "/s/how-ai-works-2023/منابع"
+        },
+        "all_standards/how-ai-works/2023": {
+          "name": "تمام استانداردها",
+          "url": "/s/how-ai-works-2023/استانداردها"
+        },
+        "all_vocabulary/how-ai-works/2023": {
+          "name": "تمام واژگان",
+          "url": "/s/how-ai-works-2023/واژگان"
         }
       }
     }

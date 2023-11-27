@@ -258,8 +258,8 @@
           "randomly change the size of a sprite": "به طور تصادفی اندازه یک اسپرایت را تغییر دهید",
           "randomly change the vertical position of a sprite": "به طور تصادفی موقعیت عمودی یک اسپرایت را تغییر دهید",
           "randomly set the rotation of a sprite": "چرخش یک اسپرایت را به طور تصادفی تنظیم کنید",
-          "rotate a sprite to its left": "چرخش اسپرایت به سمت چپ آن",
-          "rotate a sprite to its right": "چرخش اسپرایت به سمت راست آن"
+          "rotate a sprite to its left": "اسپرایت به سمت چپ آن بچرخانید.",
+          "rotate a sprite to its right": "اسپرایت را به سمت راست آن بچرخانید‌"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "یک اسپرایت را به سمت چپ روی صفحه حرکت دهید. هنگامی که از سمت چپ صفحه خارج می‌شود، آن را به سمت راست صفحه برگردانید.",
