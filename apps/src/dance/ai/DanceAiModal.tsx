@@ -27,7 +27,6 @@ import {
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
   generatePreviewCode,
-  getEmojiImageUrl,
   getLabelMap,
   getRangeArray,
   lerp,
@@ -36,6 +35,8 @@ import {
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
+
+import EmojiIcon from './EmojiIcon';
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
@@ -60,11 +61,6 @@ export enum Mode {
   RESULTS = 'results',
   EXPLANATION = 'explanation',
 }
-
-type AiModalItem = {
-  id: string;
-  emoji: string;
-};
 
 // Progress in the generating mode has a step and a substep.
 // Each step is a now effect, while each substep shows progress for
@@ -1012,40 +1008,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         </div>
       </div>
     </AccessibleDialog>
-  );
-};
-
-interface EmojiIconProps {
-  item: AiModalItem;
-  onClick?: () => void;
-  className?: string;
-  isHighlighted?: boolean;
-}
-
-const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
-  item,
-  onClick,
-  className,
-  isHighlighted,
-}) => {
-  const isButton = onClick !== undefined;
-  const Tag = isButton ? 'button' : 'div';
-  return (
-    <Tag
-      type={isButton ? 'button' : undefined}
-      key={item.id}
-      onClick={onClick}
-      style={{
-        backgroundImage: `url(${getEmojiImageUrl(item.id)})`,
-      }}
-      className={classNames(
-        moduleStyles.emojiIcon,
-        isButton && moduleStyles.emojiIconButton,
-        isHighlighted && moduleStyles.emojiIconButtonHighlighted,
-        className
-      )}
-      aria-label={item.emoji}
-    />
   );
 };
 
