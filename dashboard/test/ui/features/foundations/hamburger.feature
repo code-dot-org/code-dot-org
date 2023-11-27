@@ -1,48 +1,74 @@
 @single_session
 Feature: Hamburger dropdown
-
-  @eyes_mobile
-  Scenario: Signed-out user sees the hamburger on mobile
-    Given I am on "http://code.org/"
-    And I open my eyes to test "Hamburger Menu in English Signed-out"
-    And I rotate to portrait
-    And I wait for 0.5 seconds
-    Then I wait until element "#hamburger-icon" is visible
-    And I click selector "#hamburger-icon"
-    And I see no difference for "Hamburger Menu: English Signed-out"
-    And I close my eyes
-
   @eyes
-  @eyes_mobile
   Scenario: Student user sees the hamburger dropdown
     Given I create a student named "Sally Student" and go home
     And I open my eyes to test "Hamburger Menu in English Student"
     Then I wait until element "#hamburger-icon" is visible
     And I click selector "#hamburger-icon"
-    And I wait for 0.5 seconds
-    And I see no difference for "Hamburger Menu: English Student"
+    And I see no difference for "Hamburger Menu: English Student" using stitch mode "none"
     And I close my eyes
 
   @eyes
-  @eyes_mobile
-  Scenario: Student user sees the Teach dropdown in hamburger
+  Scenario: Student user sees the Teach, about and Legal dropdowns in hamburger
     Given I create a student named "Sally Student" and go home
-    And I open my eyes to test "Teach dropdown in English Student"
+    And I open my eyes to test "Hamburger Dropdowns in English Student"
     Then I wait until element "#hamburger-icon" is visible
     And I click selector "#hamburger-icon"
     Then I wait until element "#educate_entries" is visible
     And I click selector "#educate_entries"
-    And I see no difference for "Teach Entries Hamburger Menu: English Student"
+    And I see no difference for "Teach Entries Hamburger Menu: English Student" using stitch mode "none"
     Then I wait until element "#educate_entries" is visible
     And I click selector "#educate_entries"
     Then I wait until element "#about_entries" is visible
     And I click selector "#about_entries"
-    And I see no difference for "About Entries Hamburger Menu: English Student"
+    And I see no difference for "About Entries Hamburger Menu: English Student" using stitch mode "none"
     And I click selector "#about_entries"
     Then I wait until element "#legal_entries" is visible
     And I click selector "#legal_entries"
-    And I see no difference for "Legal Entries Hamburger Menu: English Student"
+    And I see no difference for "Legal Entries Hamburger Menu: English Student" using stitch mode "none"
     And I close my eyes
+  
+  @eyes
+  Scenario: Teacher user sees the Teach, about and Legal dropdowns in hamburger
+    Given I create a teacher named "Teacher Tom" and go home
+    And I open my eyes to test "Hamburger Dropdowns in English Teacher"
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    And I see no difference for "Teach Entries Hamburger Menu: English Teacher" using stitch mode "none"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    Then I wait until element "#about_entries" is visible
+    And I click selector "#about_entries"
+    And I see no difference for "About Entries Hamburger Menu: English Teacher" using stitch mode "none"
+    And I click selector "#about_entries"
+    Then I wait until element "#legal_entries" is visible
+    And I click selector "#legal_entries"
+    And I see no difference for "Legal Entries Hamburger Menu: English Teacher" using stitch mode "none"
+    And I close my eyes
+
+  @only_mobile
+  Scenario: Signed out user in English can see hamburger on mobile
+    Given I am on "http://code.org/"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
+    Then I wait until element "#hamburger-icon" is visible
+    And I click selector "#hamburger-icon"
+    And I wait until element "a:contains(Course Catalog)" is visible
+    And I wait until element "a:contains(Projects)" is visible
+    And I wait until element "a:contains(Incubator)" is visible
+    And I wait until element "a:contains(Help and support)" is visible
+    And I wait until element "a:contains(Report a problem)" is visible
+    And I wait until element "a:contains(Learn)" is visible
+    And I wait until element "a:contains(Teach)" is visible
+    And I wait until element "a:contains(Stats)" is visible
+    And I wait until element "a:contains(Help us)" is visible
+    And I wait until element "a:contains(About)" is visible
+    And I wait until element "a:contains(Privacy & Legal)" is visible
+    
+
 
   @no_mobile
   Scenario: Signed out user in English should not see hamburger on desktop
