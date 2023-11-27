@@ -11,7 +11,7 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
-Scenario: It Renders
+Scenario: It renders
   When I open my eyes to test "basic rendering test"
   And I see no difference for "variety of start blocks"
   Then I scroll the main blockspace to block "uitest-show-title"

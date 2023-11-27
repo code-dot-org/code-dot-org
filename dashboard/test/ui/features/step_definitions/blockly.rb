@@ -305,12 +305,6 @@ Then(/^the open flyout has (.*?) blocks$/) do |n|
   expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
-Then(/^I drag and drop block "(.*?)" to offset (.*?), (.*?)$/) do |block_id, dx, dy|
-  id_selector = get_id_selector
-  element = @browser.find_element(:css, "[#{id_selector}='#{block_id}']")
-  @browser.action.drag_and_drop_by(element, dx.to_i, dy.to_i).perform
-end
-
 # This only works for Google Blockly
 Then(/^the function editor workspace has (\d+) blocks$/) do |n|
   script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"

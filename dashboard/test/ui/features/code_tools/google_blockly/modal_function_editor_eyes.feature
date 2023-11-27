@@ -11,17 +11,14 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
-Scenario: Edit a Function
+Scenario: Edit a function
   When I open my eyes to test "edit a function"
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-d"
-  # We need to drag and drop blockly blocks in two steps.
-  And I drag and drop block "new-sprite-block" to offset 70, 177
-  And I wait for 1 seconds
-  And I drag and drop block "new-sprite-block" to offset -30, 0
-  And I wait for 1 seconds
+  # Drag block to top of function
+  And I drag block "new-sprite-block" to offset "40, 100"
   And I see no difference for "add a new block to the function"
   # Close function
   And I press "closeModalFunctionEditor"

@@ -10,7 +10,7 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
-Scenario: Can create a Function
+Scenario: Can create a function
   Then element "#blockly-9" is visible
   And element "#modalFunctionEditor" is not visible
   And I press "blockly-9"
@@ -24,17 +24,14 @@ Scenario: Can create a Function
   Then I press "blockly-9"
   And the open flyout has 2 blocks
 
-Scenario: Can edit a Function
+Scenario: Can edit a function
   # Click the "edit" button on the block
   Then I click block field that is number 1 in the list of blocks and number 1 in the field row
   And element "#modalFunctionEditor" is visible
   # Open Sprites flyout
   And I press "blockly-d"
-  # We need to drag and drop blockly blocks in two steps.
-  And I drag and drop block "new-sprite-block" to offset 70, 177
-  And I wait for 1 seconds
-  And I drag and drop block "new-sprite-block" to offset -30, 0
-  And I wait for 1 seconds
+  # Drag block to top of function
+  And I drag block "new-sprite-block" to offset "40, 100"
   # Close function
   And I press "closeModalFunctionEditor"
   And element "#modalFunctionEditor" is not visible
