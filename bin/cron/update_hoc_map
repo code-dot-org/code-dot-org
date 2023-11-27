@@ -67,7 +67,7 @@ def main
       }
   end
   file = Tempfile.new(['hocevents', 'geojson'])
-  tiles = Tempfile.new(['hoctiles', 'mbtiles'])
+  tiles = Tempfile.new(['hoctiles-dev', 'mbtiles'])
   file.write(JSON.pretty_generate(geojson))
   _stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
@@ -78,7 +78,7 @@ def main
   )
   upload_successful = false
   if tippecanoe_status.success?
-    upload_successful = upload_maptiles(tiles.path, 'hoctiles')
+    upload_successful = upload_maptiles(tiles.path, 'hoctiles-dev')
   end
   unless tippecanoe_status.success? && upload_successful
     Honeybadger.notify(

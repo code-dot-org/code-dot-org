@@ -49,9 +49,9 @@ $(document).ready(function () {
   }
 
   map.on('load', function () {
-    map.addSource('hoctiles', {
+    map.addSource('hoctiles-dev', {
       type: 'vector',
-      url: 'mapbox://codeorg.hoctiles',
+      url: 'mapbox://codeorg.hoctiles-dev',
     });
 
     // The order we add layers matters here as layers are added on top of each
@@ -60,7 +60,7 @@ $(document).ready(function () {
     map.addLayer({
       id: 'hoc-events',
       type: 'symbol',
-      source: 'hoctiles',
+      source: 'hoctiles-dev',
       'source-layer': 'hoc',
       layout: {
         visibility: 'visible',
@@ -74,7 +74,7 @@ $(document).ready(function () {
     map.addLayer({
       id: 'hoc-special-events',
       type: 'symbol',
-      source: 'hoctiles',
+      source: 'hoctiles-dev',
       'source-layer': 'hoc',
       layout: {
         visibility: 'visible',
