@@ -137,14 +137,18 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
     return;
   }
 
+  const renderToolboxBeforeStack = true;
   const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
     this
-  )(undefined, true);
+  )(undefined, renderToolboxBeforeStack);
+  const renderingInFunctionEditor = true;
   Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton,
-    true
+    renderingInFunctionEditor
   );
+  // Open mini-toolbox by default
+  flyoutToggleButton.setIcon(false);
 });
 
 // This extension adds an SVG frame around procedures definition blocks.
