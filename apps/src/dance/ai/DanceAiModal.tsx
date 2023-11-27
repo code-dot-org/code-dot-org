@@ -22,7 +22,7 @@ import {
   FieldKey,
   GeneratedEffect,
   MinMax,
-} from './ai-types';
+} from './types';
 import {
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,

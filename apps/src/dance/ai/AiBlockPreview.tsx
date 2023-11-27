@@ -2,7 +2,7 @@ import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
 import {generateAiEffectBlocksFromResult} from './utils';
-import {GeneratedEffect} from './ai-types';
+import {GeneratedEffect} from './types';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;

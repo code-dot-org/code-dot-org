@@ -6,7 +6,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 import {SongData, SongMetadata} from './types';
-import {AiOutput} from './ai/ai-types';
+import {AiOutput} from './ai/types';
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
 import {

@@ -1,5 +1,5 @@
 import {BlockSvg, Workspace, FieldDropdown} from 'blockly';
-import {FieldKey, GeneratedEffect} from '../ai-types';
+import {FieldKey, GeneratedEffect} from '../types';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
 import {getValidateAndSetFieldValueWithInvalidValueLogger} from './validateAndSetFieldValue';
