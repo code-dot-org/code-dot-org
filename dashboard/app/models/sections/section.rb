@@ -243,6 +243,8 @@ class Section < ApplicationRecord
 
     si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
     if si.blank?
+      if SectionInstructor.with_deleted.where(section_id: id).exists?
+      end
       SectionInstructor.create!(section_id: id, instructor: user, status: :active)
     elsif si.deleted?
       si.restore
