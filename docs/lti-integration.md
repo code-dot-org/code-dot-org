@@ -1,6 +1,6 @@
-# LTI v1.3 Integration
+# LTI 1.3 Integration
 
-Code.org is developing an LTI v1.3 compliant integration for Canvas. This integration is undergoing beta testing with a small group of Canvas users and is expected to release broadly in 2024.
+Code.org is developing an LTI 1.3 compliant integration for Canvas. This integration is undergoing beta testing with a small group of Canvas users and is expected to release broadly in 2024.
 
 The following documentation details the steps required to install Code.org as an
 LTI Tool in Canvas. Completing the following steps will generate a `Client ID`
