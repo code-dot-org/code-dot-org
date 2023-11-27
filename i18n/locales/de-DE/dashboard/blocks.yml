@@ -119,6 +119,31 @@ de:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tun {MOVE} {DIR} für immer"
+        options:
+          GROUP:
+            '"CAT"': alle Katzen
+            '"SLOTH"': Faultiere
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Oben klatschen
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Intensivieren
+            MOVES.Drop: Fallen lassen
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stern
+            MOVES.ThisOrThat: Dies oder Das
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Keiner
+            '"next"': "(nächste/r)"
+            '"prev"': "(vorherig/er)"
+            '"rand"': "(zufällig)"
+          DIR:
+            '1': "→"
+            "-1": "←"
       Dancelab_changeMoveLR:
         text: "{SPRITE} macht {MOVE} {DIR} für immer"
         options:
@@ -596,8 +621,8 @@ de:
           EFFECT:
             '"none"': Keiner
             '"rand"': "(zufällig)"
-            '"circles"': Tunnel
             '"quads"': Winkel
+            '"circles"': Tunnel
             '"color_cycle"': Farben
             '"diamonds"': Rauten
             '"disco_ball"': Disco-Kugel
@@ -613,11 +638,11 @@ de:
             '"ripples"': Wellen
             '"snowflakes"': Schnee
             '"text"': Song-Titel
-            '"squiggles"': Schnörkel
             '"galaxy"': Leerzeichen
             '"sparkles"': Funkeln
             '"spiral"': Spirale
             '"disco"': Quadrate
+            '"squiggles"': Schnörkel
             '"starburst"': Starburst
             '"stars"': Sterne
             '"music_wave"': Wellen
@@ -1707,6 +1732,12 @@ de:
         text: y Koordinate von {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': Solid
+            '"liquid"': flüssig
+            '"gas"': Gas
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:

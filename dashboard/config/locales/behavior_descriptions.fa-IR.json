@@ -2839,7 +2839,7 @@
         "courseF_groups_practice_bunny_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "یک اسپرایت را به سمت چپ روی صفحه حرکت دهید. هنگامی که از سمت چپ صفحه خارج می‌شود، آن را به سمت راست صفحه برگردانید.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "یک اسپرایت را به سمت راست روی صفحه حرکت دهید. هنگامی که از سمت راست صفحه خارج می‌شود، آن را به سمت چپ صفحه برگردانید.",
-          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "حرکت جن تا در سراسر صفحه نمایش. هنگامی که آن را خاموش می رود بالای صفحه نمایش، حرکت آن را به پایین صفحه نمایش.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "یک اسپرایت را به بالای صفحه حرکت دهید، هنگامی که به بالای صفحه رسید، آن را به پایین ضفحه بازگردانید.",
           "change the size of a sprite": "تغییر اندازه یک اسپرایت",
           "move a sprite across the screen, reversing direction if it touches the edges": "یک اسپرایت را در سراسر صفحه حرکت دهید و اگر لبه‌ها را لمس کرد، جهت را معکوس کنید",
           "move a sprite downwards across the screen": "حرکت اسپرایت رو به پایین در سراسر صفحه نمایش",
@@ -2877,7 +2877,7 @@
         "courseF_groups_practice_costumes_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "یک اسپرایت را به سمت چپ روی صفحه حرکت دهید. هنگامی که از سمت چپ صفحه خارج می‌شود، آن را به سمت راست صفحه برگردانید.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "یک اسپرایت را به سمت راست روی صفحه حرکت دهید. هنگامی که از سمت راست صفحه خارج می‌شود، آن را به سمت چپ صفحه برگردانید.",
-          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "حرکت جن تا در سراسر صفحه نمایش. هنگامی که آن را خاموش می رود بالای صفحه نمایش، حرکت آن را به پایین صفحه نمایش.",
+          "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "یک اسپرایت را به بالای صفحه حرکت دهید، هنگامی که به بالای صفحه رسید، آن را به پایین ضفحه بازگردانید.",
           "change the size of a sprite": "تغییر اندازه یک اسپرایت",
           "move a sprite across the screen, reversing direction if it touches the edges": "یک اسپرایت را در سراسر صفحه حرکت دهید و اگر لبه‌ها را لمس کرد، جهت را معکوس کنید",
           "move a sprite downwards across the screen": "حرکت اسپرایت رو به پایین در سراسر صفحه نمایش",

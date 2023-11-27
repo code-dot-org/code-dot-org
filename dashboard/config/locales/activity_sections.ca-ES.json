@@ -35673,6 +35673,38 @@
         },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Recapitulació"
+        },
+        "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
+          "name": "Filtrar la música"
+        },
+        "524efe4b-796a-48eb-b1c6-f4e138699443": {
+          "name": "Acompanyament general"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Introducció de vídeo"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
+          "name": "Comentaris"
+        },
+        "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
+          "name": "Celebració"
+        },
+        "07a73ab9-8996-453a-a87f-63628f2387db": {
+          "name": "Propers passos",
+          "description": "Digueu als alumnes que, si els ha agradat l'activitat d'avui, tenen moltes opcions per seguir programant. Animeu-los a visitar code.org/learn per trobar-les totes, o si teniu pensat fer alguna de les activitats d'ampliació, expliqueu-los què fareu el pròxim dia."
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Fem-ho viral!"
         }
       }
     }

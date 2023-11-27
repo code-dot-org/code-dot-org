@@ -6741,7 +6741,8 @@
           "type": "Póster de Poemas"
         },
         "csf_course_a_lesson_slides/coursea/2022": {
-          "type": "Diapositivas"
+          "type": "Diapositivas",
+          "name": "Diapositivas de la lección A del curso CSF "
         },
         "20_20_20_rule/coursea/2022": {
           "name": "Regla 20/20/20",
@@ -8172,10 +8173,12 @@
           "type": "Guía de Actividad"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e inteligencia artificial: privacidad y el futuro del trabajo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guía de Actividad"
+          "type": "Guía de Actividad",
+          "name": "Imagina tu mundo"
         },
         "research_reflection_guide/ai-ethics/2023": {
           "type": "Guía de Actividad"
@@ -12793,7 +12796,7 @@
           "name": "Todo el Vocabulario"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
+          "url": "https://docs.google.com/document/d/19J30X8eWuYCwvVEIPthWVYMJqPhtm6RVwA_ZYVwpPA8/",
           "type": "Guía de Actividad"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
@@ -12813,12 +12816,12 @@
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] Red de visión artificial",
-          "url": "https://docs.google.com/presentation/d/15yV1_yDu-uUtVeCZLVfrGM6k_gTdP0EIBpxh3Xfu7sk/",
+          "url": "https://docs.google.com/presentation/d/1Uph725muqovrujOqe1FoRuMa6qIkZGqkHxAhc6SmY8M/view",
           "type": "Ejemplo"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "Visión artificial",
-          "url": "https://docs.google.com/presentation/d/1_9zHn5Jo8wWXZQtepm5deHTBOgLUIsdwIlWrbhJH9a0/",
+          "url": "https://docs.google.com/presentation/d/1Uph725muqovrujOqe1FoRuMa6qIkZGqkHxAhc6SmY8M/view",
           "type": "Diapositivas"
         },
         "computer_vision_network/how-ai-works/2023": {
@@ -12908,7 +12911,7 @@
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(Opcional) Guía de actividades del juego GAN",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
+          "url": "https://docs.google.com/document/d/1WFBaHvmFyJWq27YqrmsaYcXBferYdS9d2dmFqcJZ4x4/",
           "type": "Guía de Actividad"
         },
         "generative_images/how-ai-works/2023": {
@@ -12991,7 +12994,7 @@
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "Cómo funciona la Inteligencia Artificial",
-          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1kTGbS-P50ELD14a3zE5s3q6dpQQHj1_uaOkKPFqfe5I/",
           "type": "Diapositivas"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {

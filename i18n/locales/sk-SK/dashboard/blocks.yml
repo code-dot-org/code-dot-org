@@ -138,6 +138,27 @@ sk:
             MOVES.Kick: Star
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} robte {MOVE} \n{DIR} donekonečna"
+        options:
+          GROUP:
+            '"CAT"': mačiek
+            '"SLOTH"': leňochodi
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Vysoký Tlesk
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Špagát
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Rest: Žiadne
+            '"next"': "(Ďalší)"
+            '"prev"': "(Predchádzajúci)"
+            '"rand"': "(Náhodný)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} rob {MOVE} \n{DIR} donekonečna"
         options:
@@ -602,8 +623,8 @@ sk:
           EFFECT:
             '"none"': Žiadne
             '"rand"': "(Náhodný)"
-            '"circles"': Kruhy
             '"quads"': Uhly
+            '"circles"': Kruhy
             '"color_cycle"': Farby
             '"diamonds"': Diamanty
             '"disco_ball"': Disco guľa
@@ -619,11 +640,11 @@ sk:
             '"ripples"': Vlnky
             '"snowflakes"': Sneh
             '"text"': Názvy pesničiek
-            '"squiggles"': Haky - baky
             '"galaxy"': Vesmír
             '"sparkles"': Trblietky
             '"spiral"': Špirála
             '"disco"': Štvorce
+            '"squiggles"': Haky - baky
             '"starburst"': Žiara
             '"stars"': Hviezdy
             '"music_wave"': Vlny
@@ -1707,6 +1728,15 @@ sk:
         text: y súradnica {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} kĺzať sa do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |-
+          ak {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': plný
+            '"liquid"': kvapalina
+            '"gas"': plyn
       KatiesBlocks_makeNumSpritesNear:
         text: vytvor {NUM} nových {ANIMATION_NAME} postáv pri {LOCATION}
       KatiesBlocks_spriteBirdSay:

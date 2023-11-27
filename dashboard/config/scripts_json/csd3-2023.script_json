@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "7c0b3b50-62ba-43c3-bd32-37a58e1622fc",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-31 03:43:43 UTC",
+    "serialized_at": "2023-11-20 21:03:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16652,6 +16664,7 @@
       "key": "functions",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

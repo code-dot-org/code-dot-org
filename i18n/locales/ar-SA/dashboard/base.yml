@@ -206,6 +206,8 @@ ar:
     parent_account_email_progress_permission: "هل يمكننا إرسال تحديثات إليك عبر البريد الإلكتروني حول تقدم طفلك ومشاريعه وتحديثات حول الدورة التدريبية وعلم الحاسوب؟ [(راجع سياسة الخصوصية لدينا)] %{privacy_policy_url}"
     parent_account_email_label: "البريد الإلكتروني للوالد / الوصي"
     us_state: 'الولاية'
+    us_state_dropdown_options:
+      other: "أنا أعيش في مكان غير مدرج هنا"
   school_info:
     title: 'معلومات المدرسة (اختيارية)'
     school_country: 'بلد المدرسة'
@@ -275,6 +277,8 @@ ar:
   parent_mailer:
     student_associated_subject: 'معلومات الدخول على Code.org'
     parent_email_added_subject: 'مرحبا بكم في Code.org!'
+    parent_permission_request_subject: "موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org"
+    parent_permission_reminder_subject: "تذكير، موافقة الوالدين مطلوبة لوصول طفلك إلى Code.org"
   teacher_mailer:
     new_teacher_subject: 'مرحبا بكم في Code.org!'
     delete_teacher_subject: 'إشعار من Code.org: لقد تم إلغاء حسابك'
@@ -1288,4 +1292,3 @@ ar:
     binary: "ثنائي"
     hexadecimal: "نظام سداسي عشري"
     pixel_format_header: "صيغة البيكسل"
-

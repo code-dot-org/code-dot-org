@@ -3551,6 +3551,10 @@ ja:
           description_short: ダンスパーティーをコーディングして友達とシェアしよう。ビヨンセ、ハリー・スタイルズ、リッツォ、リル・ナズ・エックス、セレーナ・ゴメス、ディズニーの「エンカント」の音楽などをフィーチャー！
           student_description: 自分だけのダンスパーティーをプログラムして友達と共有しましょう。
           title: ダンスパーティー (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: ダンスパーティー：AI版
         dance-draft:
           title: 使用禁止
         dance-extras:
@@ -3712,6 +3716,10 @@ ja:
               display_name: ステージ 1
             lessonGroup-3:
               display_name: ステージ 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: アワー・オブ・コードのレッスンプランのテンプレート
         e-f-ramp:
           lesson_groups:
             csf_e_1:
@@ -4620,6 +4628,20 @@ ja:
             \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
             \  チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
           title: 'モジュール 1: 問題解決と計算を教えるための準備'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'モジュール 2: ウェブ開発を教えるための準備'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。
+            \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
+            \  Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。
+            \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
+            \  Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+          title: インタラクティブなアニメーションとゲームを教える準備をする
+        self-paced-pl-csd-unit4-2-2023:
+          title: " モジュール 4: デザインプロセスを教えるための準備"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'モジュール 5: データとソサエティを教えるための準備'
         self-paced-pl-csd1-2021:
           description: |-
             このモジュールは、Code.orgとこの専門学習コースの両方を簡単に紹介するものです。
@@ -5239,6 +5261,9 @@ ja:
             lesson-3:
               name: 評価
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 非同期アクティビティの入門
           title: 1日目
         virtual-pl-csp-summer-day2:
           lessons:

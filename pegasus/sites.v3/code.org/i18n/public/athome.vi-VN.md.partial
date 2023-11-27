@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Hãy thử Giờ lập trình với bài hướng dẫn giới thiệu thú vị sau</h2>
-<p>Hãy thử <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">bài hướng dẫn một giờ</a> có các game và tựa phim phổ biến như Minecraft, Frozen và Chiến tranh giữa các vì sao. Nhiều bài hướng dẫn có cấu trúc giống như game, được thiết kế để dạy các khái niệm cơ bản về khoa học máy tính theo những phương pháp thú vị và hấp dẫn.</p>
+<p>Hãy thử một <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">hướng dẫn kéo dài một</a> giờ với các trò chơi và phim phổ biến như Minecraft, Frozen và Star Wars. Nhiều bài hướng dẫn có cấu trúc giống như game, được thiết kế để dạy các khái niệm cơ bản về khoa học máy tính theo những phương pháp thú vị và hấp dẫn.</p>
 
 <br>
 

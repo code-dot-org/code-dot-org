@@ -1,5 +1,11 @@
 {
+  "danceAiModalCodeButton": "Code",
+  "danceAiModalStartOverButton": "Neu starten",
+  "danceAiModalExplanationButton": "Mehr erfahren",
+  "danceAiModalBack": "Zurück",
+  "danceAiModalClose": "Schließen",
   "danceFeedbackDidntPress": "Achte darauf, dass du die Pfeiltasten drückst, während dein Tanz abläuft.",
+  "danceFeedbackKeepCoding": "Du verwendest alle nötigen Bausteine, aber noch nicht auf die richtige Weise.",
   "danceFeedbackKeyEvent": "Stelle sicher, dass du dem Baustein <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> Code hinzufügst. Drücke dann die Taste, während Dein Tanz abläuft.",
   "danceFeedbackNeedBackup": "Du musst eine Gruppe von Backup-Tänzern mit dem <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> Block erstellen.",
   "danceFeedbackNeedDifferentDance": "Du solltest einen anderen Tanz benutzen.",

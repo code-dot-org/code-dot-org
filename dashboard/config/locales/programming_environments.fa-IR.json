@@ -24,7 +24,7 @@
                 "circle": {
                   "palette_params": {
                     "radius": {
-                      "description": "شعاع دایره، در پیکسل."
+                      "description": "شعاع دایره، بر حسب پیکسل."
                     }
                   }
                 },
@@ -126,10 +126,10 @@
                 "rect": {
                   "palette_params": {
                     "height": {
-                      "description": "ارتفاع عمودی در پیکسل مستطیل."
+                      "description": "ارتفاع مستطیل بر حسب پیکسل."
                     },
                     "width": {
-                      "description": "عرض افقی در پیکسل مستطیل."
+                      "description": "عرض مستطیل بر حسب پیکسل."
                     },
                     "x": {
                       "description": "موقعیت x برحسب پیکسل گوشه سمت چپ بالای مستطیل برای ترسیم."
@@ -284,7 +284,7 @@
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
-                      "description": "مقدار بازگردانده شده توسط تابع setTimeOut برای لغو."
+                      "description": "مقدار به‌دست‌آمده از تابع setTimeOut برای لغو‌کردن."
                     }
                   }
                 },
@@ -458,7 +458,8 @@
                     }
                   }
                 }
-              }
+              },
+              "name": "سازنده"
             },
             "math": {
               "expressions": {
@@ -492,20 +493,20 @@
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "بزگرترین عدد را برمی گرداند"
+                      "description": "حداکثر عدد برگردانده"
                     },
                     "min": {
-                      "description": "حداقل تعداد بازگشت"
+                      "description": "حداقل عدد برگردانده"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "بزگرترین عدد را برمی گرداند"
+                      "description": "حداکثر عدد برگردانده"
                     },
                     "min": {
-                      "description": "حداقل تعداد بازگشت"
+                      "description": "حداقل عدد برگردانده"
                     }
                   }
                 }
@@ -563,7 +564,7 @@
             "turtle": {
               "expressions": {
                 "arcLeft": {
-                  "short_description": "لاکپشت را به سمت جلو و چپ در یک مسیر قوس دار ملایم حرکت میدهد."
+                  "short_description": "لاکپشت را در مسیری قوس‌دار و پیوسته، به سمت چپ جلو می‌برد."
                 },
                 "getX": {
                   "short_description": "مختصات x فعلی را بر حسب پیکسل لاک‌پشت دریافت می‌کند."
@@ -638,7 +639,7 @@
             "ui_controls": {
               "expressions": {
                 "button": {
-                  "short_description": "ایجاد یک دکمه بر روی صفحه نمایش برای نمایش متن ارائه شده و ارجاع شده توسط شناسه داده شده در محل پیش فرض (0,0)."
+                  "short_description": "دکمه‌ای روی صفحه ایجاد می‌کند که متن ارائه‌شده و ارجاع‌شده توسط شناسه موجود را در مکان پیش‌فرض (0,0) نشان می‌دهد."
                 },
                 "getProperty": {
                   "palette_params": {
@@ -674,7 +675,7 @@
                       "type": "بولی"
                     }
                   },
-                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده پخش می کند."
+                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده را پخش می‌کند."
                 },
                 "playSpeech": {
                   "palette_params": {
@@ -748,6 +749,12 @@
                     }
                   }
                 },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
+                },
                 "getValue": {
                   "palette_params": {
                     "key": {
@@ -776,7 +783,7 @@
               "name": "متغیرها"
             }
           },
-          "description": "اپ لب (آزمایشگاه اپ) یک محیط برنامه‌نویسیست که می‌توانید در آن اپ‌های ساده‌ای بسازید. اپ طراحی کنید و با کمک جاوااسکریپت یا بلوکها آنرا کدنویسی کنید تا کار کند. بعد می‌توانید اپ خود را ظرف چند ثانیه به اشتراک بگذارید.",
+          "description": "لابراتوار اپ (App Lab) یک محیط برنامه‌نویسی است که می‌توانید در آن برنامه‌های ساده‌ای بسازید. اپ طراحی کنید و با کمک جاوااسکریپت یا بلوک‌ها آنرا کدنویسی کنید تا کار کنند. سپس می‌توانید اپ خود را ظرف چند ثانیه به اشتراک بگذارید.",
           "name": "لابراتوار اپ"
         },
         "gamelab": {
@@ -1083,7 +1090,7 @@
                       "type": "رشته"
                     }
                   },
-                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده پخش می کند."
+                  "short_description": "فایل صوتی MP3 از آدرس مشخص شده را پخش می‌کند."
                 },
                 "playSpeech": {
                   "palette_params": {
@@ -1311,7 +1318,7 @@
                   }
                 }
               },
-              "name": "گروه ها"
+              "name": "گروه‌ها"
             },
             "math": {
               "expressions": {
@@ -1335,20 +1342,20 @@
                 "randomNumber": {
                   "palette_params": {
                     "max": {
-                      "description": "بزگرترین عدد را برمی گرداند"
+                      "description": "حداکثر عدد برگردانده"
                     },
                     "min": {
-                      "description": "حداقل تعداد بازگشت"
+                      "description": "حداقل عدد برگردانده"
                     }
                   }
                 },
                 "randomNumber_min_max": {
                   "palette_params": {
                     "max": {
-                      "description": "بزگرترین عدد را برمی گرداند"
+                      "description": "حداکثر عدد برگردانده"
                     },
                     "min": {
-                      "description": "حداقل تعداد بازگشت"
+                      "description": "حداقل عدد برگردانده"
                     }
                   }
                 }
@@ -1472,7 +1479,13 @@
             "variables": {
               "expressions": {
                 "assign_x": {
-                  "short_description": "یک مقدار به یکی از متغییر های موجود بدهید. برای مثال x=0;"
+                  "short_description": "یک مقدار به یکی از متغییرهای موجود بدهید. برای مثال x=0;"
+                },
+                "declareAssign_x": {
+                  "short_description": "یک مقدار اولیه را به یک متغیر اعلام و نسبت می‌دهد."
+                },
+                "declareNoAssign_x": {
+                  "short_description": "متغیری را با نام داده شده اعلام می‌کند."
                 },
                 "includes": {
                   "palette_params": {
@@ -1498,7 +1511,7 @@
           "name": "لابراتوار بازی"
         },
         "weblab": {
-          "name": "آزمایشگاه شبکه"
+          "name": "لابراتوار شبکه"
         }
       }
     }

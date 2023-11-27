@@ -4753,6 +4753,10 @@ id:
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
             ke teman-teman Anda!
           title: Pesta Dansa (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Pesta Dansa: Edisi AI'
         dance-draft:
           title: JANGAN MENGGUNAKAN
         dance-extras:
@@ -4938,6 +4942,10 @@ id:
               display_name: Tahap 1
             lessonGroup-3:
               display_name: Tahap 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: templat rencana pelajaran hour of code
         drafting:
           name: drafting
         e-f-ramp:
@@ -6127,6 +6135,36 @@ id:
 
             **Waktu yang disarankan:** 30 menit
           title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          title: Bersiap Mengajarkan Animasi Interaktif dan Game
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'
         self-paced-pl-csd1-2021:
           description: |-
             Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
@@ -6818,6 +6856,9 @@ id:
             lesson-3:
               name: Penilaian
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Pengantar Kegiatan Asinkron
           title: Hari 1
         virtual-pl-csp-summer-day2:
           lessons:

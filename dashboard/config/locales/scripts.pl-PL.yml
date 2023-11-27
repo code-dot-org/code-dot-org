@@ -236,6 +236,11 @@ pl:
               name: "[Lekcja obrazów generatywnych (dall-e-esque)]"
           name: ai-temp
           title: "[Temp] Wprowadzenie do AI"
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test
         ai-unit-pilot:
           description_short: Pilotaż Jednostki AI w CSD
           lesson_groups:
@@ -466,6 +471,7 @@ pl:
         artist:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
           student_description: Rysuj fajne obrazki i wzory z Artystą!
           title: Artysta
         artistExemplar:
@@ -475,11 +481,11 @@ pl:
         aws-demo:
           title: Demo AWS
         basketball:
-          description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description_short: Wybierz swoją drużynę i zrób grę w koszykówkę
+          description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description_short: Wybierz swoją drużynę i utwórz grę w koszykówkę
           name: piłka do kosza
-          student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          title: Wybierz swoją drużynę i zrób grę w koszykówkę
+          student_description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          title: Wybierz swoją drużynę i utwórz grę w koszykówkę
         blockchain-2023:
           description: To jest jednostka na Blockchain!
           lessons:
@@ -6632,6 +6638,12 @@ pl:
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij
             ją swoim znajomym.
           title: Potańcówka (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja AI'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'
         dance-draft:
           title: NIE UŻYWAJ
         dance-extras:
@@ -6771,7 +6783,7 @@ pl:
             lesson-11:
               name: Proces rozwiązywania problemów z programowaniem
           name: urządzenia-2022
-          title: Tworzenie aplikacji dla urządzeń
+          title: Tworzenie aplikacji z urządzeniami (Circuit Playground)
         devices-2023:
           lesson_groups:
             lessonGroup-3:
@@ -7886,6 +7898,7 @@ pl:
             z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
             z Disney Infinity w rolach głównych.
+          name: nieskończoność
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami
             z Disney Infinity w rolach głównych.
           title: Disney Infinity Play Lab
@@ -9343,6 +9356,8 @@ pl:
           lessons:
             lesson-1:
               name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
             lesson-2:
               name: Asynchroniczna Część 1
             lesson-3:
@@ -9422,6 +9437,8 @@ pl:
               name: Asynchroniczna Część 2
             lesson-5:
               name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
           name: virtual-pl-csa-summer-day5
           title: 'Dzień 5 '
         virtual-pl-csd-summer-day1:
@@ -9649,6 +9666,8 @@ pl:
               name: Wstęp
             lesson-6:
               name: Witamy w opisie kursu i egzaminu
+            lesson-8:
+              name: Poprzednio w… Jednostka 1 Lekcja 8
           name: virtual-pl-csp-summer-day2
           title: Dzień 2
         virtual-pl-csp-summer-day3:
@@ -9852,12 +9871,16 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
         vpl-csd-ci-1:

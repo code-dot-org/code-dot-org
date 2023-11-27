@@ -90,6 +90,21 @@ km:
             MOVES.Kick: ផ្កាយ
             MOVES.ThisOrThat: នេះ ឬនោះ
             MOVES.Rest: គ្មាន
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ធ្វើ {MOVE} {DIR} ជារៀងរហូត"
+        options:
+          GROUP:
+            '"CAT"': ឆ្មា
+            '"SLOTH"': ស្លូត (sloth)
+          MOVE:
+            MOVES.Roll: ក្រឡេងខ្លួន
+            MOVES.ClapHigh: ទេះដៃខ្ពស់
+            MOVES.Drop: ទម្លាក់ (Drop)
+            MOVES.Fresh: ស្រស់ស្រាយ
+            MOVES.Kick: ផ្កាយ
+            MOVES.ThisOrThat: នេះ ឬនោះ
+            MOVES.Rest: គ្មាន
+            '"rand"': ចៃដន្យ
       Dancelab_changeMoveLR:
         text: "{SPRITE} ធ្វើ {MOVE} {DIR} ជារៀងរហូត"
         options:
@@ -464,8 +479,8 @@ km:
           EFFECT:
             '"none"': គ្មាន
             '"rand"': ចៃដន្យ
-            '"circles"': រង្វង់
             '"quads"': មុំ
+            '"circles"': រង្វង់
             '"color_cycle"': ពណ៌
             '"diamonds"': ពេជ្រ
             '"disco_ball"': បាល់ឌីស្កូ

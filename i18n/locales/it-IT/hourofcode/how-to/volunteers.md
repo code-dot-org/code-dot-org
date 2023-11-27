@@ -12,7 +12,7 @@ title: Guida pratica all'Ora del Codice per i volontari
 
 Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
-L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per demistificare il "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
+L'ora del codice è un'ora di lezione introduttiva all'informatica progettata per fare chiarezza sul "codice", mostrare che chiunque può apprenderne le basi e ampliare la partecipazione nel campo dell'informatica. Puoi contribuire ad aumentare la consapevolezza del movimento dell'informatica e fare volontariato per invogliare più studenti a provare l'informatica, in particolare le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente emarginati.
 
 - [Chi può fare volontariato?](#who-can-volunteer)
 - [Perché fare volontariato?](#why-volunteer)

@@ -33,6 +33,8 @@ ko:
             '0.75': 작음
             '1.00': 보통
             '2.00': 큰
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} 효과 생성"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -108,6 +110,27 @@ ko:
             '"SLOTH"': 나무늘보
             '"UNICORN"': 유니콘
             sprites: 모두
+          MOVE:
+            '"next"': "(다음)"
+            '"prev"': "(이전)"
+            '"rand"': "(임의)"
+            MOVES.ClapHigh: 높이 손뼉치기
+            MOVES.Clown: 강남
+            MOVES.Dab: 댑
+            MOVES.DoubleJam: 더블 다운
+            MOVES.Drop: 드롭
+            MOVES.Floss: 플로스
+            MOVES.Fresh: 프레시
+            MOVES.Kick: 별
+            MOVES.Rest: 없음
+            MOVES.Roll: 구르기
+            MOVES.ThisOrThat: 이것저것
+        text: "{GROUP}이(가) {MOVE} {DIR}을(를) 영원히 실행"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': 모든 고양이
+            '"SLOTH"': 나무늘보
           MOVE:
             '"next"': "(다음)"
             '"prev"': "(이전)"
@@ -587,6 +610,7 @@ ko:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': 피어나는 꽃잎
             '"circles"': 터널
             '"color_cycle"': 색상
             '"diamonds"': 다이아몬드
@@ -594,6 +618,7 @@ ko:
             '"disco_ball"': 디스코 볼
             '"fireworks"': 불꽃놀이
             '"flowers"': 꽃
+            '"frosted_grid"': 서리에 덮인 창살
             '"galaxy"': 우주
             '"growing_stars"': 커지는 별
             '"kaleidoscope"': 만화경
@@ -615,17 +640,27 @@ ko:
             '"swirl"': 최면
             '"text"': 음악 제목
           PALETTE:
+            '"autumn"': 가을
             '"cool"': 파란색
             '"default"': 빛
             '"electronic"': 일렉트로닉
+            '"grayscale"': 그레이 스케일
             '"iceCream"': 아이스크림
             '"neon"': 네온
             '"ocean"': 바다
             '"rainbow"': 무지개
             '"rave"': 흑백
+            '"roses"': 장미
+            '"sky"': 하늘
+            '"spring"': 봄
+            '"summer"': 여름
+            '"sunrise"': 일출
+            '"sunset"': 일몰
             '"tropical"': 열대
+            '"twinkling"': 반짝거림
             '"vintage"': 빈티지
             '"warm"': 빨간색
+            '"winter"': 겨울
         text: |-
           "배경 효과 설정
           {PALETTE} {EFFECT}"
@@ -1059,6 +1094,15 @@ ko:
         text: "{SPRITE}이(가) {TEXT1}을(를) 말함"
       KatiesBlocks_glideTo:
         text: "{SPRITE}이(가) {LOCATION}(으)로 글라이딩"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 기체
+            '"liquid"': 액체
+            '"solid"': 고체
+        text: |2-
+           만약 {CONDITION}{SPRITE}이면
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: 텀블링
       Mikelab_addBehaviorSimple:
@@ -1447,6 +1491,7 @@ ko:
           SOUND:
             '"sound://category_background/inside_plane.mp3"': 웅웅
             '"sound://category_background/ocean_waves.mp3"': 바다
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 열대우림
             '"sound://category_background/repitition.mp3"': 라이딩
             '"sound://category_background/wavering_wind.mp3"': 잠 자는
             '"sound://category_loops/faultering_desicion_loop1.mp3"': 귀신 들린
@@ -1886,7 +1931,7 @@ ko:
       gamelab_checkTouching:
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
         text: "{CONDITION} {SPRITE1} 다음에 닿음: {SPRITE2}"
       gamelab_clickedOn:
@@ -2024,7 +2069,7 @@ ko:
       gamelab_keyPressed:
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
           KEY:
             '"a"': a
@@ -2364,7 +2409,7 @@ ko:
       gamelab_spriteClicked:
         options:
           CONDITION:
-            '"when"': "~할 때"
+            '"when"': 할 때
             '"while"': 할 동안
         text: "{CONDITION} {SPRITE} 클릭"
       gamelab_spriteSay:

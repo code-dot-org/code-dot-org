@@ -11,6 +11,8 @@ const INPUTS = {
   FLYOUT: 'flyout_input',
   STACK: 'STACK',
 };
+import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
 export const blocks = {
@@ -297,6 +299,73 @@ export const blocks = {
       return [`new Behavior(${name}, [])`, generator.ORDER_ATOMIC];
     };
     generator.sprite_parameter_get = generator.variables_get;
+  },
+
+  // All logic for behavior picker custom input type
+  addBehaviorPickerEditButton(
+    block,
+    inputConfig,
+    currentInputRow,
+    dropdownField
+  ) {
+    const behaviorsFound =
+      dropdownField.getOptions().length > 1 ||
+      dropdownField.getOptions()[0][1] !== NO_OPTIONS_MESSAGE;
+
+    // Behavior editing is only permitted using the modal function editor.
+    if (
+      behaviorsFound &&
+      Blockly.useModalFunctionEditor &&
+      // TODO: Support editing behaviors from within a modal editor workspace.
+      block.workspace.id === Blockly.getMainWorkspace().id
+    ) {
+      const editButton = new Blockly.FieldButton({
+        value: msg.edit(),
+        onClick: editButtonHandler,
+        colorOverrides: {button: 'blue', text: 'white'},
+      });
+      block.inputList[block.inputList.length - 1].appendField(
+        editButton,
+        'EDIT'
+      );
+      // getProcedureModel is defined on procedure blocks as part of
+      // @blockly/block-shareable-procedures
+      // For this block, we will get the procedure based on selected
+      // dropdown field option.
+      block.getProcedureModel = function () {
+        const fieldValue = block.getFieldValue(inputConfig.name);
+        const procedureMap = block.workspace.getProcedureMap();
+        let procedure = undefined;
+        for (const value of procedureMap.values()) {
+          if (value.name === fieldValue) {
+            procedure = value;
+            break;
+          }
+        }
+        return procedure;
+      };
+    }
+  },
+  // Get a list of behavior options for a dropdown field, based on
+  // blocks found on the main workspace.
+  getAllBehaviorOptions() {
+    const noBehaviorLabel = msg.behaviorsNotFound();
+    // Behavior definition blocks are always moved to the hidden workspace.
+    const behaviorBlocks = Blockly.getHiddenDefinitionWorkspace()
+      .getTopBlocks()
+      .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
+    // Menu options are an array, each option containing a human-readable part,
+    // and a language-neutral string. Both are the same in this case.
+    const behaviorOptions = behaviorBlocks.map(block => [
+      block.getProcedureModel().name,
+      block.getProcedureModel().name,
+    ]);
+    behaviorOptions.sort();
+    // Add a "No behaviors found" option, if needed
+    if (behaviorOptions.length === 0) {
+      behaviorOptions.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+    }
+    return behaviorOptions;
   },
 };
 

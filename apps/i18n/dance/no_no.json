@@ -1,5 +1,10 @@
 {
+  "danceAiModalBack": "Tilbake",
+  "danceAiModalClose": "Lukk",
+  "danceAiModalCodeButton": "Kode",
+  "danceAiModalExplanationButton": "Lær mer",
   "danceFeedbackDidntPress": "Hold piltasten imens dansen kjører.",
+  "danceFeedbackKeepCoding": "Fortsett kodingen! Men det er noe som fortsatt ikke stemmer.",
   "danceFeedbackKeyEvent": "Pass på at du fester kode til <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"opp\"</title></block></xml>-blokken og trykk på \"pil opp\"-knappen mens dansen din kjører.",
   "danceFeedbackNeedBackup": "Du må lage en gruppe med bakgrunnsdansere med <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> block.",
   "danceFeedbackNeedDifferentDance": "Du må bruke en annen dans.",

@@ -3,7 +3,7 @@
 Feature: Personal Project Gallery
 
 Background:
-  Given I create a student named "Project_Creator"
+  Given I create a teacher-associated student named "Project_Creator"
 
 Scenario: Can Toggle to the Public Project Gallery
   Given I am on "http://studio.code.org/projects"

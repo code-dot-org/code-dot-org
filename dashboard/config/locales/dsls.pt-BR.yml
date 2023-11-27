@@ -772,11 +772,11 @@ pt-BR:
         display_name: Revisão de CSS
       CSD End of Unit Survey - Unit 1 - IntroMD_2022:
         markdown: |-
-          ### Reserve um momento para responder a essas **três perguntas rápidas**.
+          ### Por favor reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
         teacher_markdown: |
-          **Pesquisas de Conclusão da Unidade para Professores: ** Enquanto seus alunos respondem à pesquisa, gostaríamos que você respondesse a uma outra rápida pesquisa para os professores
+          **Pesquisas de Conclusão da Unidade para Professores: ** Enquanto seus alunos respondem à pesquisa, gostaríamos que você respondesse a uma rápida pesquisa para os professores
 
           ## [Clique aqui para ver a Pesquisa para Professores] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data unit_number =1)%5B%5D
       CSD End of Unit Survey - Unit 1 - IntroMD_2023:
@@ -785,7 +785,7 @@ pt-BR:
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
         teacher_markdown: |
-          **Pesquisas de Conclusão da Unidade para Professores: ** Enquanto seus alunos respondem à pesquisa, gostaríamos que você respondesse a uma outra rápida pesquisa para os professores
+          **Pesquisas de Conclusão da Unidade para Professores: ** Enquanto seus alunos respondem à pesquisa, gostaríamos que você respondesse a uma rápida pesquisa para os professores
 
           ## [Clique aqui para ver a Pesquisa para Professores] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data unit_number =1)%5B%5D
       CSD Games Parameters challenge_2021:
@@ -1096,9 +1096,9 @@ pt-BR:
       CSD Physical Computing Post-Project Test_2022:
         title: Teste Pós-Projeto de Computação Física
       CSD Student End of Unit Survey - Unit 1_2022:
-        title: Pesquisa de Conclusão da Unidade do Descobertas da CC!
+        title: Pesquisa de Conclusão da Unidade Descobertas da CC!
       CSD Student End of Unit Survey - Unit 1_2023:
-        title: Pesquisa de Conclusão da Unidade do Descobertas da CC!
+        title: Pesquisa de Conclusão da Unidade Descobertas da CC!
       CSD U1 IOSP match:
         answers:
         - text: Obtenha a previsão do tempo do dia na Internet
@@ -1125,8 +1125,8 @@ pt-BR:
         - text: Combine as condições climáticas com os outfits que são bons para essa
             condição
         content1: Uma equipe está criando um aplicativo que ajudará as pessoas a decidirem
-          qual outfit usar pela manhã. Combine quatro coisas que o aplicativo faz
-          com entrada, saída, armazenamento e processamento.
+          qual roupa usar pela manhã. Combine quatro coisas que o aplicativo faz com
+          entrada, saída, armazenamento e processamento.
         questions:
         - text: Entrada
         - text: Saída
@@ -1136,14 +1136,14 @@ pt-BR:
       CSD U1 IOSP match_2022:
         answers:
         - text: Obtenha a previsão do tempo do dia na Internet
-        - text: Mostre uma foto de um bom outfit para o usuário
-        - text: Matenha uma lista dos outfits disponíveis e em que tipo de clima elas
+        - text: Mostre uma foto de um boa roupa para o usuário
+        - text: Matenha uma lista de roupas disponíveis e em que tipo de clima elas
             são usadas
-        - text: Combine as condições climáticas com os outfits que são bons para essa
+        - text: Combine as condições climáticas com as roupas que são boas para essa
             condição
         content1: Uma equipe está criando um aplicativo que ajudará as pessoas a decidirem
-          qual outfit usar pela manhã. Combine quatro coisas que o aplicativo faz
-          com entrada, saída, armazenamento e processamento.
+          qual roupa usar pela manhã. Combine quatro coisas que o aplicativo faz com
+          entrada, saída, armazenamento e processamento.
         questions:
         - text: Entrada
         - text: Saída
@@ -1314,7 +1314,7 @@ pt-BR:
           que é necessário fazer com uma etapa do processo de solução de problemas
         questions:
         - text: Preparar
-        - text: Reflita
+        - text: Refletir
         - text: Tentar
         - text: Definir
         teacher_markdown: "**Conteúdo: Unidade 1, Lição 2**\n"
@@ -1332,7 +1332,7 @@ pt-BR:
           o que eles estão fazendo com uma etapa do processo de resolução de problemas.
         questions:
         - text: Preparar
-        - text: Reflita
+        - text: Refletir
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1348,7 +1348,7 @@ pt-BR:
           o que eles estão fazendo com uma etapa do processo de resolução de problemas.
         questions:
         - text: Preparar
-        - text: Reflita
+        - text: Refletir
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1358,13 +1358,14 @@ pt-BR:
             e quem fará cada parte.
         - text: Discutindo o que eles gostam no mural e como poderiam melhorá-lo.
         - text: Pintando o mural.
-        - text: Perguntar aos professores que tipo de mural eles precisam fazer e
-            quão grande ele precisa ser
-        content1: Cinco estudantes estão pintando um mural no muro da escola. Combine
-          o que eles estão fazendo com uma etapa do processo de resolução de problemas.
+        - text: Perguntando aos professores que tipo de mural eles precisam fazer
+            e quão grande ele precisa ser
+        content1: Cinco estudantes estão pintando um mural na lateral da sua escola.
+          Combine o que eles estão fazendo com uma etapa do processo de resolução
+          de problemas.
         questions:
         - text: Preparar
-        - text: Reflita
+        - text: Refletir
         - text: Tentar
         - text: Definir
         title: Questão 2
@@ -1407,8 +1408,8 @@ pt-BR:
           text: Uma máquina que recebe, fornece, armazena e processa informações
         - text: Uma máquina que usa eletricidade (de um cabo ou bateria)
         questions:
-        - text: Quais das DUAS opções a seguir são as melhores maneiras de definir
-            um computador? (Escolha DUAS)
+        - text: Quais DUAS opções a seguir são as melhores maneiras de definir um
+            computador? (Escolha DUAS)
         title: Questão 1
       CSD U1 Test define problem:
         answers:
@@ -1437,8 +1438,8 @@ pt-BR:
             mas é mais difícil criar regras sobre o espírito escolar
         - text: Espírito escolar, porque você sempre pode ter mais espírito escolar,
             mas a fila do almoço já pode ser a mais curta possível
-        - text: Espírito escolar, porque é uma coisa melhor para os alunos, mas os
-            adultos devem se encarregar da fila do almoço
+        - text: Espírito escolar, porque é uma coisa melhor para os alunos fazerem,
+            mas os adultos devem se encarregar da fila do almoço
         questions:
         - text: Duas turmas querem melhorar sua escola. Uma turma quer reduzir o tempo
             que os alunos esperam na fila do almoço. Outra turma quer aumentar o espírito
@@ -1454,8 +1455,8 @@ pt-BR:
             mas é mais difícil criar regras sobre o espírito escolar
         - text: Espírito escolar, porque você sempre pode ter mais espírito escolar,
             mas a fila do almoço já pode ser a mais curta possível
-        - text: Espírito escolar, porque é uma coisa melhor para os alunos, mas os
-            adultos devem se encarregar da fila do almoço
+        - text: Espírito escolar, porque é uma coisa melhor para os alunos fazerem,
+            mas os adultos deveriam se encarregar da fila do almoço
         questions:
         - text: Duas turmas querem melhorar sua escola. Uma turma quer reduzir o tempo
             que os alunos esperam na fila do almoço. Outra turma quer aumentar o espírito
@@ -1464,7 +1465,7 @@ pt-BR:
       CSD U1 Test_2021:
         title: Teste Pós-Projeto para Computadores e Resolução de Problemas
       CSD U1 Test_2022:
-        title: Teste Pós-Projeto para Computadores e Resolução de Problemas
+        title: Teste Pós-Projeto de Computadores e Resolução de Problemas
       CSD U1 Test_2023:
         title: Teste Pós-Projeto para Computadores e Resolução de Problemas
       CSD U2 CSS challenge_pilot_2021:
@@ -2572,19 +2573,6 @@ pt-BR:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
-        markdown: |
-          # Sites de Rolução de Problemas
-
-          Aqui estão alguns sites que foram criados para resolver um problema. Escolha dois sites e use-os para concluir o guia de atividades.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">] (https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">] (https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: descrição aqui
         markdown: |
@@ -3072,6 +3060,7 @@ pt-BR:
       CSD U2L2 - Prac_2023:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Níveis de Prática
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
         description: |-
           Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
@@ -5467,8 +5456,8 @@ pt-BR:
         - {}
       CSD U5 MC Q5_2023:
         answers:
-        - {}
-        - {}
+        - text: Codifique
+        - text: Decodifique
         - {}
         - correct: true
         - {}
@@ -6073,28 +6062,62 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Accelerometer - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Accelerometer - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Color LEDs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Color LEDs - Prac_2222:
+        display_name: Níveis de Prática
       CSD U6 - Combine Inputs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Combine Inputs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - If Variables - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - If Variables - Chal_2222:
@@ -6111,30 +6134,60 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Physical Input - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Input - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Physical Output - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Output - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Sensors - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Sensors - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 LED create intro:
         content1: descrição aqui
         markdown: |
@@ -6643,64 +6696,80 @@ pt-BR:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test algorithms multi2_2021:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test debugging multi:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2021:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2022:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
         - text: "O que um programador precisa saber ao criar um ouvinte de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
@@ -6708,76 +6777,117 @@ pt-BR:
             O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test hardware multi2:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 tugowar stop:
         markdown: |
           # Pare
@@ -7569,74 +7679,79 @@ pt-BR:
           * [CNet](https://www.cnet.com/smart-home/)
           * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       CSDU6 Innovation_2021:
-        markdown: |
-          # Pesquisa de inovação
-
-          Escolha um dos seguintes tópicos para analisar. Você vai querer encontrar informações sobre alguns dos dispositivos de computação inovadores mais recentes relacionados à sua categoria.
-
-          ## Tecnologia vestível A tecnologia
-          vestível inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes, se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível _e_ destinado a ajudar a melhorar sua saúde pessoal.
-
-          ## Saúde e segurança
-          O amplo tópico inclui tecnologia de consumo (coisas que você pode usar para melhorar sua saúde ou segurança) e tecnologia profissional (equipamento que um médico ou outro profissional possa usar).
-
-          ## Agricultura A
-          agricultura pode não ser um tópico óbvio, mas as inovações tecnológicas tiveram um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação de computadores aos equipamentos agrícolas existentes, o uso de sensores e robótica para monitorar as plantações e a análise de dados para melhorar a eficiência e a sustentabilidade.
-
-          ##
-          Os avanços na manufatura em prototipagem rápida, robótica industrial e automação tiveram um grande impacto na forma como os produtos são produzidos. Seja a tecnologia para permitir a fabricação acessível em pequena escala (como impressoras 3D e cortadores a laser) ou a integração de computadores ao trabalho na fábrica, há muitas áreas interessantes para pesquisar aqui.
-
-          ## Arte e design
-          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos comercialmente disponíveis relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todos os tipos de dispositivos de computação de maneiras criativas e expressivas.
-
-          ## Casa inteligente
-          O sonho de uma casa que compreende e até mesmo antecipa suas necessidades está mais perto do que nunca. Sejam controlados explicitamente por meio de comandos de voz ou usando sensores para monitorar e responder às mudanças nas condições, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas rotineiras ou repetitivas em casa.
-
-
-          # Considerações de pesquisa
-
-          Ao pesquisar dispositivos sobre seu tópico, lembre-se das seguintes considerações:
-
-          * Concentre-se em soluções baseadas em hardware em vez de programas de software
-          * Concentre-se em inovações recentes em vez de notícias antigas
-          * Siga o que lhe interessa
-
-          # Iniciando sua pesquisa
-
-          Verifique com seu professor os sites recomendados para iniciar sua pesquisa. Você também pode usar algumas das palavras-chave acima para começar a pesquisar ideias específicas na Internet. Por exemplo, considere consultar os vários sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para ver os produtos que ainda não foram lançados.
+        markdown: "# Pesquisa em Inovação\n\nEscolha um dos seguintes tópicos para
+          analisar. Você vai querer encontrar informações sobre alguns dos dispositivos
+          de computação inovadores mais recentes relacionados à sua categoria.\n\n##
+          Tecnologia Vestível \nA tecnologia vestível inclui qualquer forma de computação
+          projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada
+          como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes,
+          se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível
+          _e_ destinado a ajudar a melhorar sua saúde pessoal.\n\n## Saúde e Segurança\nO
+          amplo tópico inclui tecnologia de consumo (coisas que você pode usar para
+          melhorar sua saúde ou segurança) e tecnologia profissional (equipamento
+          que um médico ou outro profissional pode usar).\n\n## Agricultura \nA agricultura
+          pode não ser um tópico que bem à mente, mas as inovações tecnológicas tiveram
+          um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação
+          de computadores em equipamentos agrícolas existentes, o uso de sensores
+          e robótica para monitorar as plantações e a análise de dados para melhorar
+          a eficiência e a sustentabilidade.\n\n## Manufaturação\nOs avanços na fabricação
+          em prototipagem rápida, robótica industrial e automação tiveram um grande
+          impacto na forma como os produtos são produzidos. Seja atavés da tecnologia
+          facilitando a fabricação acessível em pequena escala (como impressoras 3D
+          e cortadores a laser) ou a integração de computadores no trabalho fabril,
+          há muitas áreas interessantes para se pesquisar aqui.\n\n## Arte e Design\nA
+          interseção entre expressão artística e computação pode produzir resultados
+          impressionantes e inesperados. Embora seja menos provável que você encontre
+          produtos comercialmente disponíveis relacionados à arte e ao design, você
+          encontrará uma grande variedade de criações caseiras que usam todos os tipos
+          de dispositivos de computação de maneiras criativas e expressivas.\n\n##
+          Casa Inteligente\nO sonho de uma casa que entende e até antecipa suas necessidades
+          está mais próximo do que nunca. Quer sejam controlados explicitamente por
+          meio de comandos de voz ou usando sensores para monitorar e responder às
+          mudanças nas condições, os dispositivos domésticos inteligentes cuidam de
+          qualquer número de tarefas rotineiras ou repetitivas em casa.\n\n\n# Considerações
+          para Pesquisa\n\nAo pesquisar dispositivos sobre seu tópico, lembre-se das
+          seguintes considerações:\n\n* Concentre-se em soluções baseadas em hardware
+          em vez de programas de software\n* Concentre-se em inovações recentes em
+          vez de antigas\n* Vá atrás do que lhe interessa\n\n# Iniciando sua Pesquisa\n\nVerifique
+          com seu professor os sites recomendados para iniciar sua pesquisa. Você
+          também pode usar algumas das palavras-chave acima para começar a pesquisar
+          ideias específicas na Internet. Por exemplo, considere visitar os vários
+          sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para
+          ver os produtos que ainda não foram lançados.\n"
         teacher_markdown: |+
-          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos estudantes porque, às vezes, esses sites são bloqueados por programas distritais de filtragem ou a inovação mais recente digna de notícias pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique se há conteúdo impróprio em cada site e certifique-se de que ele será carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
+          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos alunos porque, às vezes, esses sites são bloqueados por programas distritais de filtragem, ou a inovação mais recente digna de notícia pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique cada site em busca de conteúdo impróprio e certifique-se de que ele seja carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
 
-          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
+          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Isso pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
 
-          ### Tecnologia vestível
+          ### Tecnologia Vestível
 
           * [Wareable.com](https://www.wareable.com/)
 
-          ### Saúde e segurança
+          ### Saúde e Segurança
 
-          * [Saúde moderna] (http://www.modernhealthcare.com/section/medical-devices) * (http://www.medstartr.com/) ##
-           [Medstartr]
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
 
-          # Agricultura
+          ### Agricultura
 
-          * [Instituto Nacional de Alimentação e Agricultura] (https://nifa.usda.gov/topic/agriculture-technology)
-          * [Notícias da Indústria Agrícola] (http://www.farmindustrynews.com/technology)
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
 
-          ### Manufatura
+          ### Manufaturação
 
-          * [Semana da Indústria] (https://www.industryweek.com/technology-and-iiot)
-          * [Impressão 3D] (https://3dprinting.com/)
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
 
-          ### Arte e design
+          ### Arte e Design
 
           * [ArtFab](http://artfab.art.cmu.edu/)
           * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
 
-          ### Smart Home
+          ### Casa Inteligente
 
-          * (https://www.cnet.com/smart-home/) [CNet]
-          * [Evolução da IoT] (http://www.iotevolutionworld.com/smart-home/)
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
 
 
       CSP PD Example Question 1:
@@ -9339,6 +9454,131 @@ pt-BR:
           diárias para guiar seus estudantes, com atividades desplugadas que você
           pode fazer sem um computador, e com os fóruns para se conectar a outros
           professores.\n\n\n"
+      OPD-K5 CS Courses_copy:
+        markdown: "# Começando na Code.org\n\n\n## Passo 1: Escolha um curso\nTodos
+          os nossos cursos - desde pré-leitores até alunos do ensino médio - estão
+          listados em nosso **<a href=\"https://studio.code.org/courses\" target=\"blank\"
+          rel=\"noopener noreferrer\">course catalog</a>**. Todos os nossos cursos
+          estão disponíveis gratuitamente. Converse com colegas da sua escola para
+          determinar como o currículo do curso pode ser integrado a uma variedade
+          de disciplinas.\n\n<table style=\"width:100%; border-style:none;\">\n  <tr>\n
+          \   <th style=\"background-color:#ff9900; text-align:center; border-style:none;
+          font-weight:bold;\"\"\">\n      <b>Curso A</b><br/>\n      <i>Jardim de
+          Infância</i>\n    </th>\n    <th style=\"background-color:#f1c232; text-align:center;
+          border-style:none;\"\"\">\n        Curso B<br/>\n        <i>1º Ano</i>\n
+          \   </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
+          border-style:none;\"\"\">\n        Curso C<br/>\n        <i>2º Ano</i>\n
+          \   </th>\n    <th style=\"background-color:#53bac2; text-align:center;
+          border-style:none;\"\"\">\n        Curso D<br/>\n        <i>3º Ano</i>\n
+          \   </th>\n    <th style=\"background-color:#0094ca; text-align:center;
+          border-style:none;\"\"\">\n        Curso E<br/>\n        <i>4º Ano</i>\n
+          \   </th>\n    <th style=\"background-color:#7664a0; text-align:center;
+          border-style:none;\"\"\">\n        Curso F<br/>\n        <i>5º Ano</i>\n
+          \   </th>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 lições, ~12 horas para
+          ser concluído</td>\n    <td style=\"background-color:#ffe599; color:black;
+          border-style:none; vertical-align: text-top;\"\">12 lições, ~12 horas para
+          ser concluído</td>\n    <td style=\"background-color:#d2da0e; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lições, ~18 horas para
+          ser concluído</td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lições, ~18 horas para
+          ser concluído</td>\n    <td style=\"background-color:#9ed7ed; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lições, ~18-20 horas
+          para ser concluído</td>\n    <td style=\"background-color:#c9c1e9; color:black;
+          border-style:none; vertical-align: text-top;\"\">18 lições, ~20-22 horas
+          para ser concluído</td>\n  </tr>\n  <tr>\n    <td colspan=\"6\" style=\"text-align:center;width:96%;background-color:#d9d9d9;color:black;
+          border-style:none;\">Conceitos</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Cidadania Digital</li>\n        <li>Sequenciamento</li>\n
+          \       <li>Loops</li>\n        <li>Eventos</li>\n      </ul>\n    </td>\n
+          \   <td style=\"background-color:#ffe599; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Cidadania Digital</li>\n        <li>Sequenciamento</li>\n        <li>Loops</li>\n
+          \       <li>Impactos da Computação</li>\n        <li>Eventos</li>\n      </ul>\n
+          \   </td>\n    <td style=\"background-color:#d2da0e; color:black; border-style:none;
+          vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Cidadania Digital</li>\n        <li>Sequenciamento</li>\n        <li>Binário</li>\n
+          \       <li>Loops</li>\n        <li>Eventos</li>\n        <li>Dados</li>\n
+          \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
+          border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
+          \       <li>Sequenciamentos</li>\n        <li>Eventos</li>\n        <li>Loops</li>\n
+          \       <li>Condicionais</li>\n        <li>Binário</li>\n        <li>Cidadania
+          Digital</li>\n      </ul>\n    </td>\n    <td style=\"background-color:#9ed7ed;
+          color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
+          style=\"font-style:italic;\">\n        <li>Sprites</li>\n        <li>Cidadania
+          Digital</li>\n        <li>Impactos da Computação</li>\n        <li>Loops
+          Aninhados</li>\n        <li>Funções</li>\n      </ul>\n    </td>\n    <td
+          style=\"background-color:#c9c1e9; color:black; border-style:none; vertical-align:
+          text-top;\"\">\n      <ul style=\"font-style:italic;\">\n        <li>Variáveis</li>\n
+          \       <li>Dados</li>\n        <li>Para Loops</li>\n        <li>Internet</li>\n
+          \       <li>Sprites</li>\n        <li>Cidadania Digital</li>\n        </ul>\n
+          \   </td>\n  <tr>\n  \t<td style=\"background-color:#f9cb9c\">\n     <a
+          href=\"https://studio.code.org/s/coursea\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursea\"
+          target=\"_blank\" style='text-decoration:none'>\n          <button>Planos
+          de aula</button>\n      </a>\n    </td>\n    <td style=\"background-color:#ffe599\">\n
+          \   <a href=\"https://studio.code.org/s/courseb\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/courseb\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
+          de aula</button>\n      </a>\n    </td>   \n   \t<td style=\"background-color:#d2da0e\">\n
+          \   <a href=\"https://studio.code.org/s/coursec\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursec\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
+          de aulas</button>\n      </a>\n    </td>   \n    <td style=\"background-color:#68ebf5\">\n
+          \   <a href=\"https://studio.code.org/s/coursed\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursed\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
+          de aula</button>\n      </a>\n    </td>  \n    <td style=\"background-color:#9ed7ed\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso/button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
+          de aula</button>\n      </a>\n    </td>  \n     <td style=\"background-color:#c9c1e9\">\n
+          \   <a href=\"https://studio.code.org/s/coursee\" target=\"_blank\" style='text-decoration:none'>\n
+          \       <button>Ver curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
+          target=\"_blank\" style='text-decoration:none'>\n        <button>Planos
+          de aula</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
+          Passo 2: Configure a sua seção de sala de aula\nConfigure uma seção de sala
+          de aula para visualizar o progresso de seus alunos, imprimir cartões de
+          login para seus alunos, gerenciar suas contas e imprimir certificados que
+          eles poderão levar para casa quando terminarem o curso. Clique neste link
+          para **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          target=\"blank\" rel=\"noopener noreferrer\">assistir a um vídeo curto/a</a>**
+          que demonstra como configurar sua primeira aula de ciência da computação
+          na Code.org. Você também pode encontrar as etapas **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
+          target=\"blank\" rel=\"noopener noreferrer\">neste artigo de suporte</a>**.\n\n***\n##
+          Passo 3: Atribua o curso à sua seção\nClique no curso que você está lecionando.
+          Você pode então clicar em \"Atribuir curso\" e atribuir esse curso a uma
+          de suas seções. \n***\n## Passo 4: Começe a lecionar! \nBasta apenas uma
+          lição para trazer conceitos de ciência da computação para sua sala de aula.
+          Depois de perceber o entusiasmo de seus alunos pela ciência da computação,
+          vá além com planos de aula diários para orientá-los, atividades desplugadas
+          que você pode realizar sem um computador e fóruns para se conectar com outros
+          professores.\n"
+      OPD-K5 CS Courses_dani:
+        markdown: "# Planejamento > Começando na Code.org\n\n\n## Etapa 1: Escolha
+          um curso\nTodos os nossos cursos, de pré-leitores a alunos do ensino médio,
+          estão listados em nosso ** [catálogo de cursos] (https://studio.code.org/courses)**.
+          Para encontrar as lições Fundamentos da CC com as quais você está praticando,
+          acesse nossa **[página elementar](https://code.org/educate/curriculum/elementary-school)**
+          e desça até a seção “Cursos”. Todos os nossos cursos estão disponíveis sem
+          nenhum custo. Converse com colegas da sua escola para determinar como o
+          currículo de cursos pode ser integrado a uma variedade de disciplinas.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Etapa 2: Configure sua seção de sala de aula\nConfigure uma seção de sala
+          de aula para ver o progresso dos seus alunos, imprimir cartões de login
+          para seus alunos, gerenciar suas contas e imprimir certificados que eles
+          podem levar para casa quando terminarem o curso. Clique neste link para
+          **[assistir a um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          ** que demonstra como organizar sua primeira aula de ciência da computação
+          na Code.org. Você também pode encontrar as etapas **[neste artigo de suporte]
+          (https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Etapa 3: Atribua o curso à sua seção\nClique no curso que você está lecionando
+          -- você verá uma tela parecida com a que está abaixo. Em seguida, você pode
+          clicar em “Atribuir curso” e atribuir esse curso a uma de suas seções. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Etapa 4: Comece a ensinar! \nBasta somente uma aula para trazer conceitos
+          de ciência da computação para dentro de sua sala de aula. Depois de ver
+          o entusiasmo de seus alunos pela ciência da computação, vá mais longe com
+          planos de aula diários para orientá-los, atividades desplugadas que você
+          pode realizar sem um computador e fóruns para se conectar a outros professores.\n\n\n\n"
       OPD-K5 CS Tips:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -13170,7 +13410,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Estou confiante de que tenho a capacidade de aprender ciência da computação.
+        - text: Estou confiante que tenho a capacidade de aprender ciência da computação.
       confident-ability-to-learn_2022:
         answers:
         - correct: true
@@ -13188,7 +13428,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Estou confiante de que tenho a capacidade de aprender ciência da computação.
+        - text: Estou confiante que tenho a capacidade de aprender ciência da computação.
       confident-ability-to-learn_2023:
         answers:
         - correct: true
@@ -13206,7 +13446,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Estou confiante de que tenho a capacidade de aprender ciência da computação.
+        - text: Estou confiante que tenho a capacidade de aprender ciência da computação.
       confident-ability-to-learn_mb2022:
         answers:
         - correct: true
@@ -13224,7 +13464,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Estou confiante de que tenho a capacidade de aprender ciência da computação.
+        - text: Estou confiante que tenho a capacidade de aprender ciência da computação.
       contained_Choose_2_Test:
         answers:
         - correct: true
@@ -19056,7 +19296,7 @@ pt-BR:
       csd-pre-survey-levelgroup_21_22:
         title: Questionário prévio para Estudantes do Descobertas de CC
       csd-pre-survey-levelgroup_21_22_2022:
-        title: Questionário prévio para Estudantes do Descobertas de CC
+        title: Pesquisa Pré-Curso para Estudantes do Descobertas de CC
       csd-pre-survey-levelgroup_21_22_2023:
         title: Pesquisa pré-curso para estudantes
       csd-pulse-check-survey-1-levelgroup U1Ch2:
@@ -23795,11 +24035,11 @@ pt-BR:
           <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2022:
-        markdown: |-
-          ### Por favor, reserve um momento para responder estas **cinco questões**.
+        markdown: |
+          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anonimas</strong>. O seu professor pode ver as respostas de todos da classe, mas sem nomes associados a elas.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2023:
         markdown: |
@@ -24930,8 +25170,8 @@ pt-BR:
 
           Por que essa pesquisa está aqui?
           * Um dos principais objetivos deste curso é ampliar a participação na ciência da computação.
-          * Tentamos medir como as atitudes e crenças dos alunos sobre ciência da computação podem mudar durante o curso por meio de pré- e pós-pesquisas.
-          * Concluí-lo também nos ajuda a entender melhorias importantes que podemos fazer no currículo para melhorar a experiência do professor e do aluno.
+          * Tentamos medir como as atitudes e crenças dos alunos sobre ciência da computação podem mudar durante o curso por meio de pré e pós-pesquisas.
+          * Concluí-la também nos ajuda a entender importantes melhorias que podemos fazer no currículo para melhorar a experiência do professor e do aluno.
 
 
           * Por favor, ajude fazendo com que seus alunos contribuam com esse conjunto de dados importantes. Suas vozes fazem a diferença!
@@ -25114,7 +25354,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Gosto de ciência da computação.
+        - text: Eu gosto de ciência da computação.
       csp-pre-survey-2017-q10_2022:
         answers:
         - correct: true
@@ -25132,7 +25372,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Gosto de ciência da computação.
+        - text: Eu gosto de ciência da computação.
       csp-pre-survey-2017-q10_copy2_2023:
         answers:
         - correct: true
@@ -25297,8 +25537,8 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Acho que serei melhor em ciência da computação do que os outros alunos
-            da minha escola.
+        - text: Eu acho que serei melhor em ciência da computação do que os outros
+            alunos da minha escola.
       csp-pre-survey-2017-q13_2023:
         answers:
         - correct: true
@@ -26329,7 +26569,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Espero usar a ciência da computação no meu trabalho.
+        - text: Eu espero usar a ciência da computação no meu trabalho.
       csp-pre-survey-2017-q30_2023:
         answers:
         - correct: true
@@ -26995,7 +27235,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu posso realmente ser eu mesma na escola.
+        - text: Eu posso realmente ser eu mesmo na escola.
       csp-pre-survey-2017-q9_2022:
         answers:
         - correct: true
@@ -27013,7 +27253,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu posso realmente ser eu mesma na escola.
+        - text: Eu posso realmente ser eu mesmo na escola.
       csp-pre-survey-2017-q9_copy2_2023:
         answers:
         - correct: true
@@ -27142,9 +27382,9 @@ pt-BR:
         - correct: true
           text: Sim, um curso depois da escola
         - correct: true
-          text: Sim, atividades on-line independentes
+          text: Sim, atividades online independentes
         - correct: true
-          text: Sim, um intensivão ou curso de verão
+          text: Sim, um intensivo ou curso de verão
         - correct: true
           text: Não, eu nunca fiz ciência da computação fora da escola
         questions:
@@ -27155,9 +27395,9 @@ pt-BR:
         - correct: true
           text: Sim, um curso depois da escola
         - correct: true
-          text: Sim, atividades on-line independentes
+          text: Sim, atividades online independentes
         - correct: true
-          text: Sim, um intensivão ou curso de verão
+          text: Sim, um intensivo ou curso de verão
         - correct: true
           text: Não, eu nunca fiz ciência da computação fora da escola
         questions:
@@ -27168,9 +27408,9 @@ pt-BR:
         - correct: true
           text: Sim, um curso depois da escola
         - correct: true
-          text: Sim, atividades on-line independentes
+          text: Sim, atividades online independentes
         - correct: true
-          text: Sim, um intensivão ou curso de verão
+          text: Sim, um intensivo ou curso de verão
         - correct: true
           text: Não, eu nunca fiz ciência da computação fora da escola
         questions:
@@ -27181,9 +27421,9 @@ pt-BR:
         - correct: true
           text: Sim, um curso depois da escola
         - correct: true
-          text: Sim, atividades on-line independentes
+          text: Sim, atividades online independentes
         - correct: true
-          text: Sim, um intensivão ou curso de verão
+          text: Sim, um intensivo ou curso de verão
         - correct: true
           text: Não, eu nunca fiz ciência da computação fora da escola
         questions:

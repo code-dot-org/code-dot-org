@@ -5836,6 +5836,11 @@
         "courseE_playLab_scaffold5": {
           "courseE_playLab_scaffold5_a": "Om dit level te halen, moet je winnen of verliezen.  Gebruik een `eindig het spel als gewonnen`- of `eindig het spel als verloren`-blok als einde."
         },
+        "courseF_artist_for10_2021": {
+          "courseF_artist_for10_a": "De afbeelding in de tekening is gemaakt met een teller voor de `set alpha` en `teller`/10 als penseelgrootte.",
+          "courseF_artist_for10_b": "De afbeelding in de tekening maakt gebruik van een draai van 61 graden.",
+          "courseF_artist_for10_c": "Wil je weten hoe de voorbeeldafbeelding is gemaakt?\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "courseF_artist_for4": {
           "courseF_artist_for4_a": "**Wat is het kleinste nummer dat je nodig hebt?\nWat is het grootste nummer?\nHoe groot is de toename iedere keer?**\n\nDit zijn vragen die je jezelf moet stellen wanneer je de leegtes in de `herhaal` lus invult."
         },
@@ -5847,6 +5852,10 @@
         },
         "courseF_artist_for4_2020": {
           "courseF_artist_for4_a": "**Wat is het kleinste nummer dat je nodig hebt?\nWat is het grootste nummer?\nHoe groot is de toename iedere keer?**\n\nDit zijn vragen die je jezelf moet stellen wanneer je de leegtes in de `herhaal` lus invult."
+        },
+        "courseF_artist_for9_2021": {
+          "courseF_artist_for9_a": "Als je het blok `set alpha` in je voorwaardelijke lus plaatst en de variabele `teller` gebruikt om het te wijzigen, kun je een ontwerp zoals dit maken.",
+          "courseF_artist_for9_b": "Het blok \\`set alpha' verandert de doorzichtigheid van een kleur. Hoe kleiner de waarde, hoe transparanter de kleur is."
         },
         "courseF_artist_for_challenge1": {
           "courseF_artist_for_challenge1_a": "De `pendikte` is 1. De eerste vierkant heeft en zijde van 50 pixels. Ieder volgend vierkant is 50 pixels breder dan het vorige.",
@@ -5911,6 +5920,8 @@
           "courseF_artist_for_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
         "courseF_artist_for_challenge2_2021": {
+          "courseF_artist_for_challenge2_a": "De kleurverandering gebeurt met het blok `kleur instellen op rood, groen, blauw`. Rood is constant ingesteld op 255, groen is altijd de waarde van `teller` en blauw is altijd `255 - teller`.",
+          "courseF_artist_for_challenge2_b": "De code hiervoor is eenvoudiger dan je zou denken. Stel gewoon de kleur in de voorwaardelijke lus in, ga vooruit en draai dan om.",
           "courseF_artist_for_challenge2_c": "De `for lus` gaat van 5 tot 250 in stappen van 2. ",
           "courseF_artist_for_challenge2_d": "**Oplossing:**\n\n<xml>\n<block type=\"when_run\" deletable=\"false\" movable=\"false\">\n<next>\n<block type=\"draw_width\" inline=\"false\">\n<value name=\"WIDTH\">\n<block type=\"math_number\">\n<title name=\"NUM\">1</title>\n</block>\n</value>\n<next>\n<block type=\"controls_for_counter\" inline=\"true\">\n<mutation counter=\"counter\"></mutation>\n<value name=\"FROM\">\n<block type=\"math_number\">\n<title name=\"NUM\">5</title>\n</block>\n</value>\n<value name=\"TO\">\n<block type=\"math_number\">\n<title name=\"NUM\">250</title>\n</block>\n</value>\n<value name=\"BY\">\n<block type=\"math_number\">\n<title name=\"NUM\">2</title>\n</block>\n</value>\n<statement name=\"DO\">\n<block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n<value name=\"COLOUR\">\n<block type=\"colour_rgb\" inline=\"false\">\n<value name=\"RED\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"GREEN\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<value name=\"BLUE\">\n<block type=\"math_arithmetic\" inline=\"true\">\n<title name=\"OP\">MINUS</title>\n<value name=\"A\">\n<block type=\"math_number\">\n<title name=\"NUM\">255</title>\n</block>\n</value>\n<value name=\"B\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n</block>\n</value>\n</block>\n</value>\n<next>\n<block type=\"draw_move\" inline=\"true\">\n<title name=\"DIR\">moveForward</title>\n<value name=\"VALUE\">\n<block type=\"variables_get\">\n<title name=\"VAR\">counter</title>\n</block>\n</value>\n<next>\n<block type=\"draw_turn\" inline=\"true\">\n<title name=\"DIR\">turnRight</title>\n<value name=\"VALUE\">\n<block type=\"math_number\">\n<title name=\"NUM\">80</title>\n</block>\n</value>\n</block>\n</next>\n</block>\n</next>\n</block>\n</statement>\n</block>\n</next>\n</block>\n</next>\n</block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
         },
@@ -5959,6 +5970,12 @@
         "courseF_bee_conditionals8": {
           "courseF_bee_conditionals8_a": "**Herinnering:** De puzzel verandert iedere keer hij wordt uitgevoerd.\n\nJe zult een voorwaardelijke blok (`als` of `als/anders`) moeten gebruiken om deze uitdaging op te lossen."
         },
+        "courseF_bee_for11_2021": {
+          "courseF_bee_for11_a": "Hoeveel is 12 minder dan 15? \\\nHoeveel is 9 minder dan 12?\n\nZie je een patroon?"
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "Je hebt twee blokken nodig in je 'herhalingslus' om alle nectar te verzamelen."
+        },
         "courseF_bee_for2": {
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
@@ -5975,10 +5992,16 @@
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
         "courseF_bee_for2_2021": {
+          "courseF_bee_for2_a": "Test je code regematig. Probeer eerst nectar uit 1 bloem te halen, lukt dit probeer dan ook de tweede bloem enz.",
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
         },
         "courseF_bee_for2_2023": {
           "courseF_bee_for2_b": "Denk eraan om voorwaarts te bewegen tussen elke loop, zodat je elke bloem bereikt."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_a": "Gebruik een `voorwaardelijke` lus van 1 tot 7 in stappen van 1 om deze puzzel op te lossen.",
+          "courseF_bee_for4_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
+          "courseF_bee_for4_c": "Zorg ervoor dat je de variabele `teller` in je geneste herhaalblok gebruikt om genoeg nectar te krijgen!"
         },
         "courseF_bee_for5": {
           "courseF_bee_for5_b": "Gebruik de `counter` variabele in elke lus zodat de bij verschillende afstanden aflegt tussen elke bloem."
@@ -6017,6 +6040,8 @@
           "courseF_bee_for6_c": "Je lus zou moeten tellen **van 5 naar 1**."
         },
         "courseF_bee_for6_2021": {
+          "courseF_bee_for6_a": "Vergeet niet om een `teller` variabele in je herhaallus te gebruiken.",
+          "courseF_bee_for6_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
           "courseF_bee_for6_c": "Je lus zou moeten tellen **van 5 naar 1**."
         },
         "courseF_bee_for6_2023": {
@@ -6038,10 +6063,17 @@
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
         },
         "courseF_bee_for7_2021": {
+          "courseF_bee_for7_a": "Je voorwaardelijke lus moet van 1 tot 7 tellen in stappen van 2.",
+          "courseF_bee_for7_b": "Binnen je `voorwaardelijke` lus wil je een `beweeg vooruit` commando hebben, en een lus om nectar te verzamelen.",
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
         },
         "courseF_bee_for7_2023": {
           "courseF_bee_for7_c": "Denk eraan om de `counter` variabele te gebruiken in je `herhaal` lus."
+        },
+        "courseF_bee_for8_2021": {
+          "courseF_bee_for8_a": "Bij elke herhaling van je lus wordt de stapgrootte telkens bij je tellervariabele opgeteld. \n\nHoeveel moet je bij elk getal optellen om de volgende hoeveelheid nectar te krijgen?",
+          "courseF_bee_for8_b": "In deze puzzel moet je in een trappenpatroon bewegen om bij de bloemen te komen.",
+          "courseF_bee_for8_c": "Je lus telt van 3 tot 15 met een bepaalde stapgrootte. Wat is de stapgrootte?"
         },
         "courseF_bee_for_challenge2": {
           "courseF_bee_for_challenge2_c": "Merk op dat er binnen één `voor` loop meerdere standaard lussen moeten zitten die zich `counter` keer herhalen om het stijgende trap patroon te creëren.\n\nDe andere 'voor`lus heeft slechts één standaard lus nodig om`counter\\` keer honing te maken.",

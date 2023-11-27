@@ -25,6 +25,8 @@ id:
             '0.75': kecil
             '1.00': sedang
             '2.00': besar
+      Dancelab_ai:
+        text: "{IMAGE}buat {VALUE} efek"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -102,6 +104,27 @@ id:
             '"SLOTH"': sloths
             '"UNICORN"': unicorn
             sprites: semua
+          MOVE:
+            '"next"': "(Berikutnya)"
+            '"prev"': "(Sebelumnya)"
+            '"rand"': Acak
+            MOVES.ClapHigh: Tepuk tangan di atas
+            MOVES.Clown: Badut
+            MOVES.Dab: Oleskan
+            MOVES.DoubleJam: Gandakan
+            MOVES.Drop: Jatuh
+            MOVES.Floss: Floss
+            MOVES.Fresh: Segar
+            MOVES.Kick: Bintang
+            MOVES.Rest: Tidak Ada
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Ini atau Itu
+        text: lakukan {GROUP} {MOVE} {DIR} selamanya
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': semua kucing
+            '"SLOTH"': sloths
           MOVE:
             '"next"': "(Berikutnya)"
             '"prev"': "(Sebelumnya)"
@@ -606,6 +629,7 @@ id:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Kelopak Mekar
             '"circles"': Lingkaran
             '"color_cycle"': Warna
             '"diamonds"': Berlian
@@ -613,6 +637,7 @@ id:
             '"disco_ball"': Bola Disko
             '"fireworks"': Kembang Api
             '"flowers"': Bunga
+            '"frosted_grid"': Kotak Buram
             '"galaxy"': Spasi
             '"growing_stars"': Bintang Tumbuh
             '"higher_power"': Higher Power
@@ -635,17 +660,27 @@ id:
             '"swirl"': Hypno
             '"text"': Nama Lagu
           PALETTE:
+            '"autumn"': Musim Gugur
             '"cool"': Keren
             '"default"': Lampu
             '"electronic"': Elektronik
+            '"grayscale"': Skala Abu-abu
             '"iceCream"': Es Krim
             '"neon"': Neon
             '"ocean"': Lautan
             '"rainbow"': Pelangi
             '"rave"': Hitam dan Putih
+            '"roses"': Mawar
+            '"sky"': Langit
+            '"spring"': Musim Semi
+            '"summer"': Musim Panas
+            '"sunrise"': Matahari Terbit
+            '"sunset"': Matahari Terbenam
             '"tropical"': Tropis
+            '"twinkling"': Berkelip
             '"vintage"': Vintage
             '"warm"': Hangat
+            '"winter"': Musim Dingin
         text: |-
           tetapkan efek latar belakang
           {PALETTE} {EFFECT}
@@ -1087,6 +1122,12 @@ id:
         text: "{SPRITE}ucapkan{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': cair
+            '"solid"': padat
       KatiesBlocks_tumbling:
         text: jatuh
       Mikelab_addBehaviorSimple:

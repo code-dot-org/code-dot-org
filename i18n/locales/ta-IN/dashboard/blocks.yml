@@ -110,6 +110,26 @@ ta:
             MOVES.Kick: ஸ்டார்
             MOVES.ThisOrThat: இது அல்லது அது
             MOVES.Rest: எதுவுமில்லை
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} செய்க {MOVE} {DIR} எப்போதும்"
+        options:
+          GROUP:
+            '"CAT"': பூனைகள்
+          MOVE:
+            MOVES.Roll: பாடி ரோல்
+            MOVES.ClapHigh: உயரே கைதட்டுக
+            MOVES.Dab: டாப்
+            MOVES.DoubleJam: டபுள் டவுன்
+            MOVES.Drop: ட்ராப்
+            MOVES.Floss: ஃப்ளாஸ்
+            MOVES.Fresh: ஃப்ரெஷ்
+            MOVES.Clown: கங்கனம்
+            MOVES.Kick: ஸ்டார்
+            MOVES.ThisOrThat: இது அல்லது அது
+            MOVES.Rest: எதுவுமில்லை
+            '"next"': "(அடுத்த)"
+            '"prev"': "(முந்தைய)"
+            '"rand"': "(ரான்டம்)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} செய்க {MOVE} {DIR} எப்போதும்"
         options:
@@ -563,8 +583,8 @@ ta:
           EFFECT:
             '"none"': எதுவுமில்லை
             '"rand"': "(ரான்டம்)"
-            '"circles"': வட்டங்கள்
             '"quads"': கோணங்கள்
+            '"circles"': வட்டங்கள்
             '"color_cycle"': வண்ணங்கள்
             '"diamonds"': டயமன்ட்ஸ்
             '"disco_ball"': டிஸ்கோ பால்
@@ -580,11 +600,11 @@ ta:
             '"ripples"': சிற்றலைகள்
             '"snowflakes"': பனி
             '"text"': பாடல் பெயர்கள்
-            '"squiggles"': சிறு வளை கோடுகள்
             '"galaxy"': ஸ்பேஸ்
             '"sparkles"': ஜொலிப்புகள்
             '"spiral"': ஸ்பைரல்
             '"disco"': சதுரங்கள்
+            '"squiggles"': சிறு வளை கோடுகள்
             '"stars"': நட்சத்திரங்கள்
             '"music_wave"': அலைகள்
           PALETTE:
@@ -1639,6 +1659,12 @@ ta:
         text: y ஒருங்கிணைப்பு {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': திடமான
+            '"liquid"': திரவம்
+            '"gas"': கேஸ்
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:

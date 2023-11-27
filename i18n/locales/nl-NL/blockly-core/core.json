@@ -286,7 +286,7 @@
     "PROCEDURES_CALLRETURN_TOOLTIP": "Voer de door de gebruiker gedefinieerde functie '%1' uit en gebruik haar output.",
     "PROCEDURES_CREATE_DO": "Maak '%1'",
     "PROCEDURES_DEFNORETURN_HELPURL": "https://nl.wikipedia.org/wiki/Subprogramma",
-    "PROCEDURES_DEFNORETURN_PROCEDURE": "do iets",
+    "PROCEDURES_DEFNORETURN_PROCEDURE": "doe iets",
     "PROCEDURES_DEFNORETURN_TITLE": "aan",
     "PROCEDURES_DEFNORETURN_TOOLTIP": "Maakt een functie zonder uitvoer.",
     "PROCEDURES_DEFRETURN_HELPURL": "https://nl.wikipedia.org/wiki/Subprogramma",

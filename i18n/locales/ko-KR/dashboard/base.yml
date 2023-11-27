@@ -205,6 +205,8 @@ ko:
     parent_account_email_progress_permission: "귀 자녀의 진도와 프로젝트 및 과정과 컴퓨터 과학에 대한 업데이트를 종종 이메일로 알려드려도 되겠습니까? [(당사 개인정보 보호정책 참조)](%{privacy_policy_url})"
     parent_account_email_label: "학부모/보호자 이메일"
     us_state: '주'
+    us_state_dropdown_options:
+      other: "이 목록에 없는 곳에 살고 있습니다"
   school_info:
     title: '학교 정보(선택사항)'
     school_country: '학교 국가'
@@ -273,6 +275,7 @@ ko:
   parent_mailer:
     student_associated_subject: 'Code.org 로그인 정보'
     parent_email_added_subject: 'Code.org에 오신 것을 환영합니다!'
+    parent_permission_request_subject: "아이가 Code.org에 접속하기 위해선 보호자의 동의가 필요합니다."
   teacher_mailer:
     new_teacher_subject: 'Code.org에 오신 것을 환영합니다!'
     delete_teacher_subject: 'Code.org 알림: 계정이 삭제되었습니다'
@@ -1180,4 +1183,3 @@ ko:
   reset_predict_progress_button: "답 삭제"
   pixelation:
     binary: "2진"
-

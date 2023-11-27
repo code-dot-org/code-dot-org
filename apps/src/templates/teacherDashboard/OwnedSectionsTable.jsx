@@ -71,7 +71,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <Button
           __useDeprecatedTag
           text={i18n.coursesCardAction()}
-          href={'/courses'}
+          href={'/catalog'}
           color={Button.ButtonColor.neutralDark}
         />
       )}

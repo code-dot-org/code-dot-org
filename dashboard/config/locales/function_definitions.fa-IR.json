@@ -255,7 +255,7 @@
           "jump": {
             "name": "پرش",
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "height": "ارتفاع"
             }
           }
@@ -268,21 +268,21 @@
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
-              "actor": "بازیگر"
+              "actor": "عامل"
             }
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
-              "actor": "بازیگر"
+              "actor": "عامل"
             }
           }
         },
         "Course 4 Play Lab Params 7": {
           "patrol": {
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "speed": "سرعت"
             }
           }
@@ -290,7 +290,7 @@
         "Course 4 Play Lab Params 8": {
           "patrol": {
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "speed": "سرعت"
             }
           }
@@ -1501,13 +1501,13 @@
           "jump": {
             "name": "پرش",
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "height": "ارتفاع"
             }
           },
           "patrol": {
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "speed": "سرعت"
             }
           }
@@ -1574,13 +1574,13 @@
           "jump": {
             "name": "پرش",
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "height": "ارتفاع"
             }
           },
           "patrol": {
             "parameters": {
-              "actor": "بازیگر",
+              "actor": "عامل",
               "speed": "سرعت"
             }
           }

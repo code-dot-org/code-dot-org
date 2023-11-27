@@ -113,6 +113,27 @@ ro:
             MOVES.Kick: Stea
             MOVES.ThisOrThat: Asta sau aia
             MOVES.Rest: Nici unul
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} fă {MOVE} {DIR} tot mereu"
+        options:
+          GROUP:
+            '"CAT"': pisicile
+            '"SLOTH"': leneși
+          MOVE:
+            MOVES.Roll: Corpul ca un val
+            MOVES.ClapHigh: Bate din palme sus
+            MOVES.Dab: Mişcare dab
+            MOVES.DoubleJam: Dublă jos
+            MOVES.Drop: Cădere
+            MOVES.Floss: Flutură
+            MOVES.Fresh: Vioi
+            MOVES.Clown: Stil Gangnam
+            MOVES.Kick: Stea
+            MOVES.ThisOrThat: Asta sau aia
+            MOVES.Rest: Nici unul
+            '"next"': "(Următorul)"
+            '"prev"': "(Precedentul)"
+            '"rand"': Aleatoriu
       Dancelab_changeMoveLR:
         text: "{SPRITE} fă {MOVE} {DIR} tot mereu"
         options:
@@ -583,8 +604,8 @@ ro:
           EFFECT:
             '"none"': Nici unul
             '"rand"': Aleatoriu
-            '"circles"': Cercuri
             '"quads"': Îngeri
+            '"circles"': Cercuri
             '"color_cycle"': Culori
             '"diamonds"': Diamante
             '"disco_ball"': Glob de discotecă
@@ -600,11 +621,11 @@ ro:
             '"ripples"': Ondulații
             '"snowflakes"': Zăpadă
             '"text"': Nume cântec
-            '"squiggles"': Mâzgălituri
             '"galaxy"': Spaţiu
             '"sparkles"': Scântei
             '"spiral"': Spirală
             '"disco"': Pătrate
+            '"squiggles"': Mâzgălituri
             '"starburst"': Accelerare
             '"stars"': Stele
             '"music_wave"': Valuri
@@ -1667,6 +1688,12 @@ ro:
         text: coordonatele y ale {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': lichid
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

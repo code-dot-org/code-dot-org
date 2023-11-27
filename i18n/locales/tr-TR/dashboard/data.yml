@@ -728,6 +728,7 @@ tr:
         upload_sprites_backgrounds: Özel Sprite ve Arka Planlar Yükleme
         what-is-creativity: Yaratıcılık nedir?
         code-break: Kodlamaya biraz ara verin
+        csd_ml_how_ai_works: Yapay Zeka Nasıl Çalışır?
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

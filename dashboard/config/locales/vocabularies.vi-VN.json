@@ -2278,6 +2278,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Nén dữ liệu không giảm chất lượng",
           "definition": "thuật toán nén dữ liệu cho phép dữ liệu gốc được tái tạo hoàn hảo từ dữ liệu đã nén. Thường được sử dụng nhiều nhất để nén văn bản (ví dụ: nén .zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "Mã",
+          "definition": "(động từ) viết code (mã lệnh) hoặc viết chỉ dẫn cho máy tính."
+        },
+        "event/dance-ai/2023": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/dance-ai/2023": {
+          "word": "Chương trình"
         }
       }
     }

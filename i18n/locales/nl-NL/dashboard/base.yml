@@ -45,6 +45,7 @@ nl:
         personal_email_markdown: "Persoonlijk e-mailadres [(Klik hier als je geen e-mailadres hebt)](%{url})"
         username: 'gebruikersnaam'
         password: 'Wachtwoord'
+        verified_teacher: 'Geverifieerde Leraar'
         password_confirmation: 'Wachtwoord bevestiging'
         current_password: 'Huidig wachtwoord'
         locale: 'Taal'
@@ -644,6 +645,7 @@ nl:
       cta: 'Leer hoe'
     aquatic:
       title: "Minecraft"
+      image_alt: 'Steve en Alex uit Minecraft kijken naar je.'
     dance-2019:
       title: 'Dansfeest'
     dance:
@@ -917,7 +919,7 @@ nl:
       subjects:
         cs: 'informaticawetenschappen'
         ict: 'ICT'
-        math: 'wiskundige'
+        math: 'Wiskunde'
         science: 'Wetenschap'
         la: 'Taalvaardigheden'
         music: 'Muziek'
@@ -968,4 +970,3 @@ nl:
   teacher_feedback: "Docenten feedback"
   pixelation:
     binary: "Binaire"
-

@@ -106,6 +106,27 @@ is:
             MOVES.Kick: Stjarna
             MOVES.ThisOrThat: Þetta eða hitt
             MOVES.Rest: Ekkert
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} gera {MOVE} {DIR} alltaf"
+        options:
+          GROUP:
+            '"CAT"': allir kettir
+            '"SLOTH"': letidýr
+          MOVE:
+            MOVES.Roll: Hlykkja
+            MOVES.ClapHigh: Háklappa
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dobla niður
+            MOVES.Drop: Droppa
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Freska
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Stjarna
+            MOVES.ThisOrThat: Þetta eða hitt
+            MOVES.Rest: Ekkert
+            '"next"': "(Næsti)"
+            '"prev"': "(Fyrri)"
+            '"rand"': "(Handahóf)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} gerir {MOVE} {DIR} alltaf"
         options:
@@ -566,8 +587,8 @@ is:
           EFFECT:
             '"none"': Ekkert
             '"rand"': "(Handahóf)"
-            '"circles"': Hringir
             '"quads"': Horn
+            '"circles"': Hringir
             '"color_cycle"': Litir
             '"diamonds"': Demantar
             '"disco_ball"': Diskókúla
@@ -583,11 +604,11 @@ is:
             '"ripples"': Gárur
             '"snowflakes"': Snjór
             '"text"': Nöfn laga
-            '"squiggles"': Hrafnaspark
             '"galaxy"': Geimur
             '"sparkles"': Glitrandi
             '"spiral"': Spírall
             '"disco"': Reitir
+            '"squiggles"': Hrafnaspark
             '"starburst"': Stjörnublossi
             '"stars"': Stjörnur
             '"music_wave"': Bylgjur

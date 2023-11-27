@@ -2,8 +2,8 @@
   "pages": {
     "/projects": "coldplay",
     "/certificates": "hoc-more",
-    "/courses": "ai-launch-2023",
-    "/home": "state-of-cs-2023"
+    "/courses": "hoc-2023-dance-ai",
+    "/home": "hoc-2023-dance-ai"
   },
   "banners": {
     "csleadersprize": {
@@ -168,6 +168,22 @@
       "buttonText": "Read report",
       "buttonUrl": "https://advocacy.code.org/stateofcs",
       "buttonId": "state-of-cs-2023"
+    },
+    "hoc-2023": {
+      "image": "/shared/images/fill-540x300/social-media/hoc2023_social.png",
+      "title": "Hour of Code: Creativity with AI",
+      "body": "Join millions across the globe in organizing an hour of coding, with or without AI and learning how AI works. Anyone, anywhere can do it. No experience needed.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/hourofcode",
+      "buttonId": "hoc-2023"
+    },
+    "hoc-2023-dance-ai": {
+      "image": "/images/dance-hoc/dance-party-activity-ai-edition.png",
+      "title": "Dance Party: AI Edition",
+      "body": "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. With dozens of songs to choose from, reach every student no matter their music taste. It's time to strut your stuff!",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/dance",
+      "buttonId": "hoc-2023-dance-ai"
     }
   }
 }

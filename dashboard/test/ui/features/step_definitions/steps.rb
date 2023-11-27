@@ -1052,6 +1052,13 @@ And /^I dismiss the teacher panel$/ do
   GHERKIN
 end
 
+And /^I dismiss the hoc guide dialog$/ do
+  steps <<~GHERKIN
+    And I click selector "#uitest-no-email-guide" once I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
+  GHERKIN
+end
+
 # Call `execute_async_script` on the provided `js` code.
 # Provides a workaround for Appium (mobile) which doesn't support execute_async_script on HTTPS.
 # For Appium, wrap `execute_script` with a polling wait on a window variable that records the result.

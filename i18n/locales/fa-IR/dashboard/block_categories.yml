@@ -1,7 +1,7 @@
 fa:
   data:
     block_categories:
-      Actions: عمل‌ها
+      Actions: اقدامات
       Advanced: پیشرفته
       Behaviors: عملکردها
       'Behaviors ': 'رفتارها'
@@ -20,7 +20,7 @@ fa:
       'Functions ': 'توابع '
       Game/Score: بازی‌/امتیاز
       Games/Score: بازی‌ها/امتیاز
-      Groups: گروه ها
+      Groups: گروه‌ها
       Input: ورودی
       Location: مکان
       Locations: موقعیت‌های مکانی
@@ -32,6 +32,7 @@ fa:
       Picker: انتخابگر
       Prebuilt: پیش‌ساخت
       Properties: مشخصات
+      Shapes: شکل‌ها
       Sprites: اسپرایت
       String: رشته
       Text: متن

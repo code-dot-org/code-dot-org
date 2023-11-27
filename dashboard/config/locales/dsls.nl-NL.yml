@@ -4500,6 +4500,18 @@ nl-NL:
           text: nee
         questions:
         - {}
+      courseAB_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseAB_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseAB_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC_2021:
+        display_name: Project aan het einde van de cursus
       courseC_multi_artist_prog6_predict1:
         answers:
         - feedback: Fout. De artiest tekent een vierkant.
@@ -4726,20 +4738,28 @@ nl-NL:
             waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
-        - {}
-        - {}
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
+        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
+            draait.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_debugging8_predict12022_2023:
         answers:
-        - {}
+        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
-        - {}
-        - {}
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
+        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
+            draait.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
@@ -4774,20 +4794,43 @@ nl-NL:
             waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
+        - feedback: Onjuist. Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
         - correct: true
-        - text: Geen idee.
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Er zitten twee fouten in deze code. Eerst draait Scrat de verkeerde
+            kant op, dan zet Scrat niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Geen idee.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
+        - feedback: Onjuist. Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
         - correct: true
-        - {}
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Er zitten twee fouten in deze code. Eerst draait Scrat de verkeerde
+            kant op, dan zet Scrat niet genoeg stappen vooruit om de eikel te bereiken.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_programming8_predict1:
         answers:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
@@ -5118,6 +5161,14 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC_2021:
+        display_name: Project aan het einde van de cursus
       courseD_multi_artist_binary8_predict1:
         answers:
         - feedback: Fout.
@@ -6434,6 +6485,20 @@ nl-NL:
         - text: Geen idee.
         questions:
         - {}
+      courseE_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples2022:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples_2021:
+        display_name: Project aan het einde van de cursus
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -6703,6 +6768,26 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseExpress_EOC_2020:
+        description: Je hebt de laatste les van de Express Course bereikt! Kies een
+          project om te maken.
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples_2021:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples2022:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples_2021:
+        display_name: Project aan het einde van de cursus
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -6990,13 +7075,26 @@ nl-NL:
         - {}
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
+        - feedback: Onjuist. Met de `voorwaardelijke'-lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit gaan en alle nectar van elke bloem verzamelen. '
         - correct: true
           feedback: Juist!
-        - {}
-        - {}
+          text: De bij zal vooruit gaan en alle nectar van elke bloem verzamelen,
+            behalve één.
+        - feedback: Onjuist. Met de `voorwaardelijke'-lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit bewegen en van elke bloem één nectar verzamelen. '
+        - feedback: Onjuist. Met de voorwaardelijke lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit bewegen en één nectar verzamelen van bloemen nummer
+            1 en 4. '
+        markdown: |+
+          Ah! Het gebruik van `voorwaardelijke` lussen maakt deze puzzel een stuk eenvoudiger!
+
+
         questions:
-        - {}
+        - text: Lees de code hieronder. Wat gebeurt er als je op „Start” klikt?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -12564,6 +12662,16 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      express_EOC2022:
+        display_name: Project aan het einde van de cursus
+      express_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      express_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      express_EOC_examples_2021:
+        description: Je staat op het punt om aan je eindproject te beginnen. Voordat
+          je begint, moet je wat tijd besteden aan het bekijken van de voorbeeldprojecten.
+        display_name: Voorbeelden van projecten
       family_encourage:
         answers:
         - correct: true

@@ -1,3 +1,13 @@
 {
-  "continue": "Продовжити"
+  "allMessagesSentAreRecorded": "Усі повідомлення, надіслані в AI Chat, записуються.",
+  "anythingPersonalCanNotBeSubmitted": "З метою захисту вашої конфіденційності будь-яка особиста інформація (ім'я, номер телефону, адреса тощо) не повинна надсилатися в чат ШІ.",
+  "continue": "Продовжити",
+  "inappropriateMessagesAreFlagged": "Невідповідні повідомлення будуть виявлені, а ваш вчитель отримає сповіщення.",
+  "inappropriateUserMessage": "Це повідомлення було позначено як недоречне.",
+  "tooPersonalUserMessage": "Це повідомлення було позначено як надто особисте.",
+  "userChatMessagePlaceholder": "Додати повідомлення в чаті...",
+  "waitingForChatResponse": "Чекаємо відповіді...",
+  "warningModalHeader": "Не забувайте спілкуватися відповідально!",
+  "warningModalOkButtonText": "Почати спілкуватися",
+  "whatIsPersonalInformation": "Що вважається персональною інформацією?"
 }

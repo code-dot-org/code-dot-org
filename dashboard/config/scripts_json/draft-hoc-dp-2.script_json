@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "draft-hoc-dp-2",
-    "serialized_at": "2023-10-30 22:01:53 UTC",
+    "serialized_at": "2023-10-31 19:06:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1087,6 +1087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_video_intro_draft3"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1109,6 +1112,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_dancer_draft3"
+        ],
         "progression": "Code a Dancer and Moves"
       },
       "bonus": false,
@@ -1131,6 +1137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_cosmic_draft3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -1153,6 +1162,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_drag_ai_sad_draft3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -1175,6 +1187,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_Drag_ai_happy_debug_draft3"
+        ],
         "progression": "Generate with AI "
       },
       "bonus": false,
@@ -1197,6 +1212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "events_try_keypress"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1219,6 +1237,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_1_draft3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1241,6 +1262,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "events_try_at_measure"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1263,6 +1287,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_key_press_events_2_draft3"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -1285,6 +1312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "draft_ai_dance_party_free_play_draft3"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1299,94 +1329,6 @@
       },
       "level_keys": [
         "draft_ai_dance_party_free_play_draft3"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge Choices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "AI Dance Choices"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      },
-      "level_keys": [
-        "AI Dance Choices"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge Choices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "choice-backup-dancers"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      },
-      "level_keys": [
-        "choice-backup-dancers"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 13,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge Choices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "choice-properties"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      },
-      "level_keys": [
-        "choice-properties"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 14,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenge Choices"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "choice-edit-code"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      },
-      "level_keys": [
-        "choice-edit-code"
       ]
     }
   ],
@@ -1701,54 +1643,6 @@
         "lesson_group.key": "",
         "script.name": "draft-hoc-dp-2",
         "activity_section.key": "a99dcd4b-7e19-4cb8-a836-88eb782bb307"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "AI Dance Choices",
-        "script_level.level_keys": [
-          "AI Dance Choices"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "choice-backup-dancers",
-        "script_level.level_keys": [
-          "choice-backup-dancers"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "choice-properties",
-        "script_level.level_keys": [
-          "choice-properties"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "choice-edit-code",
-        "script_level.level_keys": [
-          "choice-edit-code"
-        ],
-        "lesson.key": "Hour of Code (October Pilot - Version B)",
-        "lesson_group.key": "",
-        "script.name": "draft-hoc-dp-2",
-        "activity_section.key": "502eb425-2b92-403d-9728-8e4018f894a0"
       }
     }
   ],

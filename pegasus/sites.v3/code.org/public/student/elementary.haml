@@ -12,14 +12,14 @@ theme: responsive
 %p{style: "font-size: 20px;"}
   =hoc_s(:elementary_page_main_description)
 
-%section 
+%section
   %h2
     =hoc_s(:middle_high_page_hero_title)
   %p
     =hoc_s(:middle_high_page_hero_description)
-  .action-block.action-block--two-col.video-101__text
-    .video-101__image
-      %img{src: "/images/houreofcode-students-banner.png", style: "width: 100%" }
+  .action-block.action-block--two-col
+    .media-wrapper.col-50
+      %img{src: "/images/houreofcode-students-banner.png", alt: ""}
     .text-wrapper.col-50
       %p.overline
       %h3
@@ -30,10 +30,10 @@ theme: responsive
         =hoc_s(:middle_high_page_hourofcode_link)
 = view :section_divider_line
 
-%section 
+%section
   %h2
     =hoc_s(:elementary_page_own_pace_title)
-  %p 
+  %p
     =hoc_s(:elementary_page_own_pace_description)
 
   .action-block__wrapper.action-block__wrapper--two-col
@@ -63,12 +63,12 @@ theme: responsive
           =hoc_s(:elementary_page_own_pace_link_2)
 = view :section_divider_line
 
-%section 
+%section
   %h2
     =hoc_s(:elementary_page_make_your_own_games_title)
-  .action-block.action-block--two-col.video-101__text
-    .video-101__image
-      %img{src: "/images/sprite-lab-banner.png", style: "width: 100%" }
+  .action-block.action-block--two-col
+    .media-wrapper.col-50
+      %img{src: "/images/sprite-lab-banner.png", alt: ""}
     .text-wrapper.col-50
       %p.overline
         =hoc_s(:module_age_07)
@@ -80,13 +80,13 @@ theme: responsive
         =hoc_s(:elementary_page_make_your_own_games_link)
 = view :section_divider_line
 
-%section 
+%section
   %h2
     =hoc_s(:middle_high_page_additional_resources_title)
   %p=hoc_s(:middle_high_page_additional_resources_description)
-  .action-block.action-block--two-col.video-101__text
-    .video-101__image
-      %img{src: "/images/video-library-banner.png", style: "width: 100%" }
+  .action-block.action-block--two-col{style: "margin-bottom: 2rem"}
+    .media-wrapper.col-50
+      %img{src: "/images/video-library-banner.png", alt: ""}
     .text-wrapper.col-50
       %h3
         =hoc_s(:middle_high_page_video_library_title)
@@ -94,9 +94,9 @@ theme: responsive
         =hoc_s(:middle_high_page_video_library_description)
       %a.link-button{href: "https://code.org/videos"}
         =hoc_s(:middle_high_page_video_library_link)
-  .action-block.action-block--two-col.video-101__text
-    .video-101__image
-      %img{src: "/images/cs-journeys-banner.png", style: "width: 100%" }
+  .action-block.action-block--two-col
+    .media-wrapper.col-50
+      %img{src: "/images/cs-journeys-banner.png", alt: ""}
     .text-wrapper.col-50
       %h3
         =hoc_s(:middle_high_page_cs_journeys_title)
@@ -106,17 +106,17 @@ theme: responsive
         =hoc_s(:middle_high_page_cs_journeys_link)
 = view :section_divider_line
 
-%section 
+%section
   %h2
     =hoc_s(:elementary_page_computer_science_title)
-  %p 
+  %p
     =hoc_s(:elementary_page_computer_science_description)
 
   .action-block__wrapper.action-block__wrapper--two-col
     .action-block.action-block--one-col.flex-space-between
       .content-wrapper
         %p.overline
-          grades 
+          grades
           =hoc_s(:module_grade_k_5)
         %h3
           =hoc_s(:elementary_page_computer_science_card_title_1)
@@ -129,7 +129,7 @@ theme: responsive
     .action-block.action-block--one-col.flex-space-between
       .content-wrapper
         %p.overline
-          grades 
+          grades
           =hoc_s(:module_grade_3_5)
         %h3
           =hoc_s(:elementary_page_computer_science_card_title_2)

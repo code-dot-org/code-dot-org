@@ -2388,6 +2388,24 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "all_resources/express/2022": {
+          "url": "/s/express-2022/bronnen"
+        },
+        "all_standards/express/2022": {
+          "url": "/s/express-2022/standaarden"
+        },
+        "all_vocabulary/express/2022": {
+          "url": "/s/express-2022/vocabulaire"
+        },
+        "all_resources/express/2023": {
+          "url": "/s/express-2022/bronnen"
+        },
+        "all_standards/express/2023": {
+          "url": "/s/express-2022/standaarden"
+        },
+        "all_vocabulary/express/2023": {
+          "url": "/s/express-2022/vocabulaire"
         }
       }
     }

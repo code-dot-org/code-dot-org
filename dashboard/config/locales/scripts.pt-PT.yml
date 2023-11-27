@@ -6044,6 +6044,36 @@ pt:
             **Duração sugerida:** 30 minutos
           title: 'Módulo 1: Preparação para ensinar sobre Resolução de Problemas e
             computação'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparação para ensinar Programação Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          student_description: |-
+            Este módulo de aprendizagem profissional foi concebido para o(a) ajudar a preparar as suas aulas da unidade de Animação e jogos interativos da Code.org.
+
+            **Neste módulo de aprendizagem profissional, irá:**
+
+            -   Ter uma apresentação sobre Animações e jogos interativos.
+            -   Praticar conceitos-chave incluidos na unidade.
+            -   Envolver-se no Lab de Jogos.
+            -   Explorar os projetos de fim de capítulo.
+
+            **Duração sugerida:** 120 minutos
+          title: Preparação para ensinar Animações interativas e jogos
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Módulo 4: Preparação para ensinar o processo de design"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparação para ensinar Dados e Sociedade'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:

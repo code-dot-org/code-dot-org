@@ -1,5 +1,11 @@
 {
+  "danceAiModalBack": "返回",
+  "danceAiModalClose": "关闭",
+  "danceAiModalCodeButton": "代码",
+  "danceAiModalExplanationButton": "了解详情",
+  "danceAiModalStartOverButton": "重新开始",
   "danceFeedbackDidntPress": "在你编排的舞蹈进行时请尝试按下方向键。",
+  "danceFeedbackKeepCoding": "继续编码！有些地方还不完全正确。",
   "danceFeedbackKeyEvent": "确保在<xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">“向上”</title></block></xml>块中加入一些代码，并在舞蹈运行时按下这些键。",
   "danceFeedbackNeedBackup": "你需要通过 <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"UNICORN\"</title><title name=\"LAYOUT\">\"circle\"</title></block></xml> 块来创建一组替补的舞者。",
   "danceFeedbackNeedDifferentDance": "需要采用不同的舞蹈。",

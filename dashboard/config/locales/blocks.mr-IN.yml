@@ -111,6 +111,26 @@ mr:
             MOVES.Roll: बॉडी रोल
             MOVES.ThisOrThat: हे किंवा ते
         text: "{GROUP} नेहेमी {MOVE} {DIR} करतात"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': मांजरी
+          MOVE:
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Previous)"
+            MOVES.ClapHigh: वरची टाळी
+            MOVES.Clown: गंगनम
+            MOVES.Dab: डॅब
+            MOVES.DoubleJam: डबल डाऊन
+            MOVES.Drop: ड्रॉप
+            MOVES.Floss: फ्लॉस
+            MOVES.Fresh: ताजे
+            MOVES.Kick: स्टार
+            MOVES.Rest: कुठलेच नाही
+            MOVES.Roll: बॉडी रोल
+            MOVES.ThisOrThat: हे किंवा ते
+        text: "{GROUP} नेहेमी {MOVE} {DIR} करतात"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -960,6 +980,12 @@ mr:
         text: "{SPRITE}म्हणा{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': गॅस
+            '"liquid"': तरल
+            '"solid"': ठोस
       KatiesBlocks_tumbling:
         text: टंबलिंग
       Mikelab_addBehaviorSimple:

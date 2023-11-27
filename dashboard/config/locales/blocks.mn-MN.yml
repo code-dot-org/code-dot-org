@@ -103,6 +103,27 @@ mn:
             MOVES.Roll: Биеийн эргэлт
             MOVES.ThisOrThat: Энэ эсвэл тэр
         text: "{GROUP} {MOVE} {DIR}-г үүрд хийх"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': муур
+            '"SLOTH"': зальхай
+          MOVE:
+            '"next"': "(Дараагийнх)"
+            '"prev"': "(Өмнөх)"
+            '"rand"': "(Санамсаргүй)"
+            MOVES.ClapHigh: Чанга алга таших
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Хатгах
+            MOVES.DoubleJam: Хоёр давхар доошоо
+            MOVES.Drop: Унах
+            MOVES.Floss: Утас
+            MOVES.Fresh: Цэвэр
+            MOVES.Kick: Од
+            MOVES.Rest: Байхгүй
+            MOVES.Roll: Биеийн эргэлт
+            MOVES.ThisOrThat: Энэ эсвэл тэр
+        text: "{GROUP} {MOVE} {DIR}-г үүрд хийх"
       Dancelab_changeMoveLR:
         options:
           MOVE:

@@ -2311,6 +2311,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "无损压缩",
           "definition": "允许从压缩的数据中完美地重建原始数据的一种数据压缩算法。最常用于文本压缩（例如zip压缩）"
+        },
+        "code/dance-ai/2023": {
+          "word": "代码",
+          "definition": "(v) 编写代码或编写计算机指令。"
+        },
+        "event/dance-ai/2023": {
+          "word": "事件",
+          "definition": "导致某些事情发生的操作。"
+        },
+        "program/dance-ai/2023": {
+          "word": "程序"
         }
       }
     }

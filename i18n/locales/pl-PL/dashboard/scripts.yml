@@ -34,6 +34,7 @@ pl:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
           student_description: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
         hourofcode:
           title: Klasyczny labirynt
           description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
@@ -67,6 +68,7 @@ pl:
           description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
+          name: nieskończoność
         netsim:
           title: Symulator internetowy
           description: Dowiedz się, jak działa Internet.
@@ -439,10 +441,10 @@ pl:
             practice:
               display_name: Praktyki nauczania
         basketball:
-          title: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description_short: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
+          title: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description_short: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          student_description: Wybierz swoją drużynę i utwórz grę w koszykówkę
           name: piłka do kosza
         csd2-2017:
           title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
@@ -5819,7 +5821,7 @@ pl:
             lessonGroup-4:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: urządzenia-2022
-          title: Tworzenie aplikacji dla urządzeń
+          title: Tworzenie aplikacji z urządzeniami (Circuit Playground)
           description: "W jednostce Tworzenie aplikacji za pomocą urządzeń uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc, jak prosty zgrubny prototyp może doprowadzić do gotowego produktu. Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów. \n\n**Wskazówki dotyczące wdrażania tworzenia aplikacji za pomocą urządzeń**\n\n-   Ta jednostka wymaga od uczniów dostępu do Circuit Playground - [kliknij tutaj](/s/microbit-2023), aby uzyskać więcej informacji na temat korzystania z Circuit Playground w klasie\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://code.org/maker/circuitplayground) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview)\n\n\\*\\*Rozwój zawodowy: \\*\\* Jeśli jesteś zainteresowany prowadzeniem tego kursu, zalecamy ukończenie bezpłatnego [Tworzenie aplikacji z urządzeniami Moduł Profesjonalnego rozwoju zawodowego we własnym tempie](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview). Moduł został zaprojektowany na 2 godziny. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją."
         allthevalidation:
           lessons:
@@ -7429,12 +7431,16 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
         ai-ethics-2023:
@@ -7475,6 +7481,8 @@ pl:
               name: Wstęp
             lesson-6:
               name: Witamy w opisie kursu i egzaminu
+            lesson-8:
+              name: Poprzednio w… Jednostka 1 Lekcja 8
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7560,6 +7568,8 @@ pl:
               name: 'Eksploracja lekcji: U1L8 - Dziedziczenie'
             lesson-9:
               name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7623,6 +7633,8 @@ pl:
               name: Asynchroniczna Część 2
             lesson-5:
               name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
             lesson-10:
               name: Przejście do trybu asynchronicznego
             lesson-13:
@@ -7725,3 +7737,14 @@ pl:
           name: self-paced-pl-csd-unit1-1-2023
         self-paced-pl-csd-unit1-2-2023:
           name: self-paced-pl-csd-unit1-2-2023
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja AI'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test

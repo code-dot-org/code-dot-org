@@ -30087,6 +30087,22 @@
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Προθέρμανση"
+        },
+        "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
+          "tips": [
+            null
+          ]
+        },
+        "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
+          "progression_name": "Εισαγωγικό Βίντεο"
+        },
+        "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
+          "tips": [
+            null
+          ]
+        },
+        "fb665f5b-457e-484e-924a-7aa4f2e097be": {
+          "name": "Ευρεία απήχηση"
         }
       }
     }

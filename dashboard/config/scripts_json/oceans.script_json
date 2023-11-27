@@ -56,7 +56,7 @@
     },
     "new_name": null,
     "family_name": "oceans",
-    "serialized_at": "2023-08-01 22:53:25 UTC",
+    "serialized_at": "2023-11-17 22:53:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -346,6 +346,22 @@
       },
       "seeding_key": {
         "activity_section.key": "0cc68ced-0af8-4fbf-a8df-4df044149a60",
+        "lesson_activity.key": "b304de28-91d8-4215-a853-27f5a3f8a157"
+      }
+    },
+    {
+      "key": "5ff66bb0-517f-486e-b70f-cad0319c23df",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nAre you interested in teaching your students more about AI? Consider engaging in our self-paced professional learning module, [Preparing to Teach AI and Machine Learning](https://studio.code.org/courses/self-paced-pl-aiml-2023)! This module will give you all the tools, skills, and knowledge you need to teach your students our AI and Machine Learning unit.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5ff66bb0-517f-486e-b70f-cad0319c23df",
         "lesson_activity.key": "b304de28-91d8-4215-a853-27f5a3f8a157"
       }
     },

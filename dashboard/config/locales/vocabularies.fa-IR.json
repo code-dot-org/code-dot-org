@@ -1171,7 +1171,7 @@
           "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
         },
         "artificial_intelligence/ai-ethics/2023": {
-          "word": "رده: هوش مصنوعی"
+          "word": "هوش مصنوعی"
         },
         "adaptation/csc-adaptations/2023": {
           "word": "اقتباس",
@@ -2000,7 +2000,7 @@
           "definition": "راهی برای استفاده از دو مدل هوش مصنوعی رقیب برای تولید چیزی"
         },
         "artificial_intelligence/how-ai-works/2023": {
-          "word": "رده: هوش مصنوعی",
+          "word": "هوش مصنوعی",
           "definition": "توانایی ماشین آلات برای یادگیری و حل مشکل."
         },
         "code/aquatic/unversioned": {
@@ -2334,6 +2334,17 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "فشرده‌سازی بدون اتلاف",
           "definition": "یک الگوریتم فشرده‌سازی داده که اجازه می‌دهد داده‌های اصلی به طور کامل از داده‌های فشرده بازسازی شوند. بیشتر برای فشرده‌سازی متن استفاده می‌شود (به عنوان مثال فشرده‌سازی zip)"
+        },
+        "code/dance-ai/2023": {
+          "word": "کد",
+          "definition": "(v) برای نوشتن کد، یا نوشتن دستورالعمل برای کامپیوتر."
+        },
+        "event/dance-ai/2023": {
+          "word": "رویداد",
+          "definition": "عملی که باعث می‌شود اتفاقی بیفتد."
+        },
+        "program/dance-ai/2023": {
+          "word": "برنامه"
         }
       }
     }

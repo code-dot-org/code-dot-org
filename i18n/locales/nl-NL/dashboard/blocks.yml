@@ -113,6 +113,27 @@ nl:
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} doe {MOVE} {DIR} voor altijd"
+        options:
+          GROUP:
+            '"CAT"': katten
+            '"SLOTH"': traagheid
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Ster
+            MOVES.ThisOrThat: Dit of dat.
+            MOVES.Rest: Geen
+            '"next"': "(Volgende)"
+            '"prev"': "(Vorige)"
+            '"rand"': "(Willekeurig)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doe {MOVE} {DIR} voor altijd"
         options:
@@ -570,8 +591,8 @@ nl:
           EFFECT:
             '"none"': Geen
             '"rand"': "(Willekeurig)"
-            '"circles"': Tunnel
             '"quads"': Hoeken
+            '"circles"': Tunnel
             '"color_cycle"': Kleuren
             '"diamonds"': Ruiten
             '"disco_ball"': Discobal
@@ -586,11 +607,11 @@ nl:
             '"ripples"': Rimpelingen
             '"snowflakes"': Sneeuw
             '"text"': Titel van het lied
-            '"squiggles"': Kronkels
             '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
             '"spiral"': Spiraal
             '"disco"': Vierkanten
+            '"squiggles"': Kronkels
             '"starburst"': Sterrenvorming
             '"stars"': Sterren
             '"music_wave"': Golven
@@ -1048,7 +1069,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
       gamelab_clickedSpritePointer:
@@ -1175,7 +1196,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
           KEY:
             '"up"': omhoog
             '"down"': omlaag
@@ -1470,7 +1491,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
       gamelab_spriteSay:
         text: "{SPRITE} zegt {SPEECH}"
       gamelab_spriteSayTime:

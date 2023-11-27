@@ -90,6 +90,21 @@ km:
             MOVES.Roll: ក្រឡេងខ្លួន
             MOVES.ThisOrThat: នេះ ឬនោះ
         text: "{GROUP} ធ្វើ {MOVE} {DIR} ជារៀងរហូត"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': ឆ្មា
+            '"SLOTH"': ស្លូត (sloth)
+          MOVE:
+            '"rand"': ចៃដន្យ
+            MOVES.ClapHigh: ទេះដៃខ្ពស់
+            MOVES.Drop: ទម្លាក់ (Drop)
+            MOVES.Fresh: ស្រស់ស្រាយ
+            MOVES.Kick: ផ្កាយ
+            MOVES.Rest: គ្មាន
+            MOVES.Roll: ក្រឡេងខ្លួន
+            MOVES.ThisOrThat: នេះ ឬនោះ
+        text: "{GROUP} ធ្វើ {MOVE} {DIR} ជារៀងរហូត"
       Dancelab_changeMoveLR:
         options:
           MOVE:

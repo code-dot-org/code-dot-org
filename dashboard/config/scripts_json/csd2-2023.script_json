@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "e3458a81-c04c-4053-be7f-7e24689e0143",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,7 +29,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-09 17:38:45 UTC",
+    "serialized_at": "2023-11-20 21:02:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3599,7 +3611,7 @@
       "key": "ad7fc03e-a022-4a6a-907e-d8ca286da27d",
       "position": 3,
       "properties": {
-        "description": "**Journal:** Think about some of the photos, drawings, and written work that you have created in the past, or even the web site that you will create in this class. Without a clear license, all of those things are covered under the fully restrictive copyright. Which Creative Commons license would you rather use (if any) and why?",
+        "description": "**Journal:** Think about some of the photos, drawings, and written work that you have created in the past, or even the web site that you will create in this class. Without a clear license, all of those things are covered under the fully restrictive copyright. Which Creative Commons license would you rather use (if any) and why?\n\n* Check out the [Creative Commons license chooser](https://creativecommons.org/choose/)",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3616,7 +3628,6 @@
       "key": "45ddb5d2-6542-46ab-a787-dd0d0299bf7e",
       "position": 4,
       "properties": {
-        "description": "* Check out the [Creative Commons license chooser](https://creativecommons.org/choose/)"
       },
       "seeding_key": {
         "activity_section.key": "45ddb5d2-6542-46ab-a787-dd0d0299bf7e",

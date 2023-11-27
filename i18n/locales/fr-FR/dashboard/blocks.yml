@@ -33,6 +33,8 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
+      Dancelab_ai:
+        text: "{IMAGE}généré {VALUE} effet"
       Dancelab_alternateMoves:
         text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
@@ -127,6 +129,28 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} faire {MOVE} {DIR} indéfiniment"
+        options:
+          GROUP:
+            '"CAT"': les chats
+            '"SLOTH"': les paresseux
+          MOVE:
+            MOVES.Roll: Bodyroll (vague)
+            MOVES.ClapHigh: Tape des mains en l'air
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Étoile
+            MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
+            MOVES.Rest: Aucun
+            '"next"': "(Suivant)"
+            '"prev"': "(Précédent)"
+            '"rand"': "(Aléatoire)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} faire {MOVE} {DIR} indéfiniment"
         options:
@@ -611,13 +635,15 @@ fr:
           EFFECT:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
-            '"circles"': Tunnel
             '"quads"': Angles
+            '"blooming_petals"': Pétales éclos
+            '"circles"': Tunnel
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
             '"fireworks"': Feux d'artifice
             '"flowers"': Fleurs
+            '"frosted_grid"': Grille givrée
             '"growing_stars"': Étoiles montantes
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
@@ -628,25 +654,35 @@ fr:
             '"ripples"': Ondulations
             '"snowflakes"': Neige
             '"text"': Titres de chanson
-            '"squiggles"': Gribouillis
             '"galaxy"': Espace
             '"sparkles"': Éclats
             '"spiral"': Spirale
             '"disco"': Carrés
+            '"squiggles"': Gribouillis
             '"starburst"': Starburst
             '"stars"': Étoiles
             '"music_wave"': Vagues
           PALETTE:
+            '"autumn"': Automne
             '"rave"': Noir et blanc
             '"cool"': Cool
             '"electronic"': Électronique
+            '"grayscale"': Nuance de gris
             '"iceCream"': Glace
             '"default"': Lumière
             '"neon"': Néon
             '"rainbow"': Arc-en-ciel
+            '"roses"': Roses
+            '"sky"': Ciel
+            '"spring"': Printemps
+            '"summer"': Été
+            '"sunrise"': Levée du soleil
+            '"sunset"': Coucher du soleil
             '"tropical"': Tropical
+            '"twinkling"': Scintillant
             '"vintage"': Vintage
             '"warm"': Rouges
+            '"winter"': Hiver
       Dancelab_setDanceSpeed:
         text: changer la vitesse de la danse à {SPEED} pour {SPRITE}
         options:
@@ -1079,7 +1115,7 @@ fr:
       FunctionBlocks_communicate:
         text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
-        text: faire un {NUM} nouveau {ANIMATION_NAME}Sprites {BEHAVIOR}
+        text: faire {NUM} nouveau(x) sprites {ANIMATION_NAME} {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: représente {NUM} nouveaux {ANIMATION_NAME} sprites [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
@@ -1496,7 +1532,7 @@ fr:
       gamelab_resetTimer:
         text: réinitialiser le chronomètre
       gamelab_setAnimation:
-        text: modifier {THIS} costume en {ANIMATION}
+        text: changer le costume de {THIS} en {ANIMATION}
       gamelab_setBackground:
         text: définir la couleur du fond {COLOR}
       gamelab_setBackgroundImage:
@@ -1600,7 +1636,7 @@ fr:
       gamelab_spriteSay:
         text: "{SPRITE} dit {SPEECH}"
       gamelab_spriteSayTime:
-        text: "{SPRITE}dit{TEXT1}pour{NUM}secondes"
+        text: "{SPRITE}dit{TEXT1}pendant{NUM}secondes"
       gamelab_spriteThink:
         text: "{SPRITE} pense {SPEECH}"
       gamelab_spriteThinkTime:
@@ -1735,6 +1771,15 @@ fr:
         text: coordonnées y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} glisser vers {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': Solide
+            '"liquid"': Liquide
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: culbute
       Mikelab_addBehaviorSimple:
@@ -1775,6 +1820,8 @@ fr:
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: retirer {SPRITE}
       Mikelab_eval:
         text: evaluer {CODE}
       Mikelab_getNext:
@@ -2616,12 +2663,12 @@ fr:
       ecosystems_makeNewSpriteBetween:
         text: 'créer {N} un nouveau {GROUP} entre les emplacements x : {X} y: {Y}'
       ecosystems_makeNumSpritesAtLocation:
-        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {LOCATION_GENERATOR}
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
-        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {RANGE}
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {RANGE}
         options:
           RANGE:
-            "{x1:0, x2:400, y1:200, y2:400}": Haut
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
             "{x1:0, x2:400, y1:150, y2:250}": Au milieu
             "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
       ecosystems_randomLocationWithinRange:
@@ -2629,7 +2676,7 @@ fr:
       ecosystems_randomLocationWithinSelectedRange:
         options:
           RANGE:
-            "{x1:0, x2:400, y1:200, y2:400}": Haut
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
             "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
       storylab_printText:
         text: imprimer {TEXT}

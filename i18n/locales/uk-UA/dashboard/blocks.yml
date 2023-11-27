@@ -2,13 +2,20 @@
 uk:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
+      AmysBlocks_makeNumSprites:
+        text: створити {NUM} нових {ANIMATION_NAME} спрайтів {LOCATION}
       AmysBlocks_setPromptWithChoices:
         text: запитати користувача {QUESTION} для значення змінної {VAR} з варіантів {A}{B}{C}
       AmysBlocks_spriteSayVar:
-        text: "{SPRITE}скажи{TEXT1}"
+        text: "{SPRITE} говорить {TEXT1}"
       BadGuys_makeNewBadGuysSprite:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: встановити розмір усіх спрайтів у значення {SIZE}
         options:
           SIZE:
             '0.50': дуже маленький
@@ -16,12 +23,15 @@ uk:
             '1.00': середньо
             '2.00': великий
       BadGuys_setSize_dropdown:
+        text: встановити для {SPRITE} розмір у значення {SIZE}
         options:
           SIZE:
             '0.50': дуже маленький
             '0.75': маленький
             '1.00': середньо
             '2.00': великий
+      Dancelab_ai:
+        text: "{IMAGE}генерує ефект {VALUE}"
       Dancelab_alternateMoves:
         text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
         options:
@@ -72,6 +82,7 @@ uk:
             '"measures"': такти
             '"seconds"': секунди
       Dancelab_atTimestampNotAfter:
+        text: після {TIMESTAMP} {UNIT}
         options:
           UNIT:
             '"measures"': такти
@@ -116,6 +127,28 @@ uk:
             MOVES.ThisOrThat: Це або те
             MOVES.Thriller: Зомбі
             MOVES.Rest: Немає
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} виконувати рух {MOVE} {DIR} постійно"
+        options:
+          GROUP:
+            '"CAT"': коти
+            '"SLOTH"': лінивці
+          MOVE:
+            MOVES.Roll: Хвиля
+            MOVES.ClapHigh: Плескання вгорі
+            MOVES.Dab: Деб
+            MOVES.DoubleJam: Подвійний вниз
+            MOVES.Drop: Відпустити
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Фреш
+            MOVES.Clown: Гангнам
+            MOVES.Kick: Зірка
+            MOVES.ThisOrThat: Це або те
+            MOVES.Thriller: Зомбі
+            MOVES.Rest: Немає
+            '"next"': "(Наступний)"
+            '"prev"': "(Попередній)"
+            '"rand"': "(Випадковий)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} виконувати рух {MOVE} {DIR} постійно"
         options:
@@ -272,7 +305,7 @@ uk:
             '"y"': вертикальне положення
             '"tint"': відтінок
       Dancelab_getTime:
-        text: "{UNIT} минуло"
+        text: поточний час {UNIT}
         options:
           UNIT:
             '"measures"': такти
@@ -387,15 +420,15 @@ uk:
         options:
           COSTUME:
             '"ALIEN"': інопланетянин
-            '"BEAR"': Ведмідь
+            '"BEAR"': ведмідь
             '"CAT"': кіт
             '"DOG"': пес
             '"DUCK"': качку
-            '"FROG"': Жаба
+            '"FROG"': жаба
             '"MOOSE"': лосі
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
-            '"SHARK"': Акула
+            '"SHARK"': акула
             '"SLOTH"': лінивець
             '"UNICORN"': єдиноріг
           LOCATION:
@@ -421,7 +454,7 @@ uk:
             '"DOG"': собаку
             '"DUCK"': качку
             '"FROG"': жабу
-            '"MOOSE"': лося
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаса
             '"ROBOT"': робота
             '"SHARK"': акулу
@@ -542,8 +575,8 @@ uk:
             '"warm"': Теплий
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          "установити фоновий ефект
-          {PALETTE} {EFFECT}"
+          установити фоновий ефект
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Немає
@@ -585,14 +618,14 @@ uk:
             '"warm"': Теплий
       Dancelab_setBackgroundEffectWithPaletteAI:
         text: |-
-          "установити фоновий ефект
-          {PALETTE} {EFFECT}"
+          установити фоновий ефект
+          {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Немає
             '"rand"': "(Випадковий)"
-            '"circles"': Коло
             '"quads"': Кути
+            '"circles"': Коло
             '"color_cycle"': Кольори
             '"diamonds"': Ромби
             '"disco_ball"': Дискокуля
@@ -609,11 +642,11 @@ uk:
             '"ripples"': Брижі
             '"snowflakes"': Сніг
             '"text"': Назва пісні
-            '"squiggles"': Звивання
             '"galaxy"': Відступ
             '"sparkles"': Блискітки
             '"spiral"': спіраль
             '"disco"': Квадрати
+            '"squiggles"': Звивання
             '"starburst"': Вибухаюча зірка
             '"stars"': Зірки
             '"music_wave"': Хвилі
@@ -669,7 +702,7 @@ uk:
             '"confetti"': Конфеті
             '"hearts_red"': Серця
             '"music_notes"': Музичні ноти
-            '"pineapples"': Ананаси
+            '"pineapples"': ананаси
             '"pizzas"': Піцци
             '"smiling_poop"': Какашка
             '"rain"': Дощ
@@ -691,7 +724,7 @@ uk:
             '"hearts_red"': Серця
             '"music_notes"': Музичні ноти
             '"paint_drip"': Патьоки фарби
-            '"pineapples"': Ананаси
+            '"pineapples"': ананаси
             '"pizzas"': Піцци
             '"smiling_poop"': Какашка
             '"rain"': Дощ
@@ -1035,6 +1068,7 @@ uk:
           INPUT1:
             '1': лимонний сік
       DansBlocks_setForegroundEffect2:
+        text: "[Don't Use] виконувати ефект {EFFECT}"
         options:
           EFFECT:
             '"bubbles"': Бульбашки
@@ -1052,8 +1086,10 @@ uk:
         text: створити {NUM} нових {ANIMATION_NAME} спрайтів {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: представити {NUM} нових {ANIMATION_NAME} спрайтів [BEHAVIOR][2]
+      FunctionBlocks_representManipulative_test:
+        text: "[testing] представляти {NUM} нових {ANIMATION_NAME} спрайтів"
       FunctionBlocks_spriteSayVar:
-        text: "{SPRITE}скажи{TEXT1}"
+        text: "{SPRITE} говорить {TEXT1}"
       gamelab_addBehaviorSimple:
         text: спрайт {SPRITE} починає {BEHAVIOR}
       gamelab_addTarget:
@@ -1135,6 +1171,8 @@ uk:
         text: наступні цілі
       gamelab_getAllSprites:
         text: всі спрайти
+      gamelab_getCostume:
+        text: спрайти з костюмом {SPRITE}
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1158,6 +1196,8 @@ uk:
           UNIT:
             '"seconds"': секунди
             '"frames"': кадри
+      gamelab_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
       gamelab_hideTitleScreen:
         text: приховати заголовок екрана
       gamelab_ifVarEquals:
@@ -1288,6 +1328,7 @@ uk:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: створити ефект {EFFECT} з {NUM} спрайтами {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': вибух
@@ -1316,6 +1357,7 @@ uk:
             '180': ліворуч
             '270': вгору
       gamelab_makeSpritesWithSize:
+        text: створити {NUM} нових {SIZE} спрайтів {COSTUME}
         options:
           SIZE:
             '30': маленький
@@ -1359,7 +1401,7 @@ uk:
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хрускіт
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": бульбашка
-            "'sound://category_animals/bear.mp3'": Ведмідь
+            "'sound://category_animals/bear.mp3'": ведмідь
             "'sound://category_animals/cat.mp3'": кіт
             "'sound://category_animals/cow.mp3'": корова
             "'sound://category_animals/pig.mp3'": свиня
@@ -1369,6 +1411,7 @@ uk:
             "'sound://category_animals/rooster.mp3'": півень
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/dolphin.mp3'": дельфін
+            "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/dog.mp3'": пес
             "'sound://category_animals/tiger.mp3'": тигр
             "'sound://category_digital/jump_7.mp3'": стрибнути
@@ -1405,7 +1448,7 @@ uk:
             new Behavior(driving_with_arrow_keys, []): рух за стрілками
             draggable(): при перетягуванні
       gamelab_pointInDirection:
-        text: Точки {SPRITE} {DIRECTION}
+        text: повернути {SPRITE} на {DIRECTION}
         options:
           DIRECTION:
             '"North"': Північ
@@ -1523,6 +1566,8 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_spriteSay:
+        text: "{SPRITE} говорить {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}говорить{TEXT1}протягом{NUM}секунд"
       gamelab_spriteThinkTime:
@@ -1555,6 +1600,8 @@ uk:
             '"left"': ліворуч
       gamelab_updateTitleWithColor:
         text: показати початковий екран {BREAK} заголовок {TITLE} колір {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: коли відповіли на всі питання
       gamelab_whenDownArrow:
         text: при натисканні стрілки вниз
       gamelab_whenKey:
@@ -1621,6 +1668,19 @@ uk:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
+      KatiesBlocks_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': твердий
+            '"liquid"': рідкий
+            '"gas"': газ
+      KatiesBlocks_spriteBirdSay:
+        text: "{SPRITE} говорить {SPEECH}"
       KatiesBlocks_tumbling:
         text: спотикатись
       Mikelab_addBehaviorSimple:
@@ -1677,7 +1737,7 @@ uk:
             '"all"': усі
             '"this"': це
       Mikelab_groupChangePropBy:
-        text: Змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
+        text: змінити {PROPERTY} з {SELECT} {COSTUME} за {VAL}
         options:
           SELECT:
             '"all"': усі
@@ -1970,7 +2030,10 @@ uk:
             '"rainbow"': веселка
             '"stars"': зірки
             '"waves"': хвилі
+      Poetry_glideTo:
+        text: "{SPRITE} ковзати до {LOCATION}"
       Poetry_makeBurst:
+        text: створити ефект {EFFECT} з {NUM} спрайтами {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': вибух
@@ -1982,6 +2045,7 @@ uk:
       Poetry_playMusic:
         options:
           SOUND:
+            '"sound://category_nature/steady_campfire_loop.mp3"': багаття
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/summer_night_loop.mp3"': ніч
@@ -2130,10 +2194,20 @@ uk:
         options:
           PORTION:
             '1': усі
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
       aalab_someStartIntervention:
         options:
           PORTION:
             '1': усі
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
+      aalab_spriteSayChoices:
+        text: "{SPRITE} говорить {SPEECH}"
+      aalab_startIntervention:
+        options:
+          BEHAVIOR:
+            '"quarantining"': карантин при хворобі
       adaptations_adaptationBehaviors:
         options:
           BEHAVIOR:
@@ -2144,6 +2218,8 @@ uk:
             new Behavior(wobbling, []): хитання
             new Behavior(wandering, []): бродіння
             new Behavior(patrolling, []): патрулювання
+      adaptations_spriteBirdSay:
+        text: "{SPRITE} говорить {SPEECH}"
       adaptations_toggleBehaviorSimple:
         options:
           TOGGLE:
@@ -2234,7 +2310,7 @@ uk:
       craft_moveForward:
         text: рухатись вперед
       craft_placeBlock:
-        text: постав {blockType}
+        text: поставити {blockType}
         options:
           blockType:
             '"strippedOak"': очищений дуб
@@ -2263,7 +2339,7 @@ uk:
             '"kelp"': ламінарія
             '"polishedGranite"': полірований граніт
       craft_placePrismarine:
-        text: постав призмарин
+        text: поставити призмарин
       craft_placeTorch:
         text: поставити факел
       craft_repeatUntilConduit:
@@ -2290,6 +2366,10 @@ uk:
           DIR:
             right: праворуч ↻
             left: ліворуч ↺
+      ecosystems_goldilocks:
+        text: |-
+          якщо {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:

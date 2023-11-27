@@ -1888,94 +1888,152 @@ es-ES:
         answers:
         - text: Tu fecha de nacimiento
         - text: Tu dirección
-        - {}
+        - text: Tu número de teléfono
         - text: Tu nombre
         - correct: true
           text: Todo lo anterior
         questions:
-        - {}
+        - text: "¿Cuál de las opciones siguientes es un ejemplo de tu huella digital?"
+        teacher_markdown: "**Contenido: Unidad 2 Lección 5**\n"
       CSD U2 MC Q11_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Publicado anónimamente
+        - text: Las imágenes son de alta calidad
+        - text: Muchos anuncios
         - correct: true
+          text: Se citan las fuentes
         questions:
-        - {}
+        - text: "¿Cuál de los siguientes elementos es más probable que aumente la
+            fiabilidad de un sitio web?"
+        teacher_markdown: "**Contenido: Unidad 2 Lección 16**"
       CSD U2 MC Q1_2023:
         answers:
         - text: HTML
         - correct: true
           text: CSS
-        - {}
+        - text: Etiqueta
         - text: Cabecera
-        - {}
+        - text: Elemento
         questions:
-        - {}
+        - text: ¿Qué palabra define mejor "un lenguaje utilizado para describir el
+            estilo de los elementos HTML"?
+        teacher_markdown: "**Contenido: Unidad 2 Lección 6**\n"
       CSD U2 MC Q2_2023:
         answers:
         - correct: true
-        - {}
-        - {}
+          text: Cambia el color de fondo
+        - text: Añade una imagen
+        - text: Añade un enlace
         - correct: true
-        - {}
+          text: Cambia el tamaño de fuente
+        - text: Añade texto
         questions:
-        - {}
+        - text: "¿Cuáles de estas tareas son las más apropiadas para CSS? (Selecciona
+            todas las que procedan)"
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lecciones 6, 11, 17**
+
+          CSS se utiliza para dar estilo a una página web. Cambiar el color de fondo y el tamaño de la fuente son cambios de estilo.
+          HTML se utiliza para añadir contenido, como imágenes, enlaces y texto.
       CSD U2 MC Q3_2023:
         answers:
         - correct: true
-        - {}
+          text: "![](https://images.code.org/c6bc7e8a8cf8f1657d0a1f64db16166c-Q3A.png)"
+        - text: "![](https://images.code.org/452f76834bf0e2f515609b91e2cc93ab-Q3B.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/fc4436f26aab128b600627593df6fabe-Q3C.png)"
+        - text: "![](https://images.code.org/6d583761b5ad33fead10f5a20fa1dfb8-Q3D.png)"
+        - text: "![](https://images.code.org/47f793758bfc9dfdb7acdbb2cd463bec-Q3E.png)"
         questions:
-        - {}
+        - text: "¿Qué es lo más probable que encuentres en un archivo CSS? (Selecciona
+            todo lo que corresponda)"
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lecciones 6, 11, 17**
+
+          En los archivos CSS, las reglas se encuentran dentro de llaves `{}` y cada regla consta de un nombre de propiedad y un valor, separados por dos puntos `:`. Las etiquetas HTML utilizan `<>`.
       CSD U2 MC Q4_2023:
         answers:
-        - {}
+        - text: "![](https://images.code.org/d49981e345a88ce58647add3ba6807bc-Q4A.png)"
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/540bb99c455f60eef6b53dbc2a331800-Q4B.png)"
+        - text: "![](https://images.code.org/190cfc23694120427d44f5906d8010f6-Q4C.png)"
+        - text: "![](https://images.code.org/74ea8b1198ccf40d8db98e24bec9d736-Q4D.png)"
+        - text: "![](https://images.code.org/ff1b9a3fb0056055aee686115100e6f4-Q4E.png)"
+        markdown: |
+          Teniendo en cuenta el siguiente sitio web, ¿qué añadirías al archivo CSS para que las imágenes de nubes y arco iris tengan una altura de 50 px?
+
+
+          ![](https://images.code.org/38a38bae67a6e5649ea73a2764789caa-Q4Q.png)
         questions:
         - {}
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 17**
+
+          La imagen de las nubes y la imagen del arco iris tienen la clase weather. Para escribir un conjunto de reglas de estilo para esa clase, el selector del conjunto de reglas tiene un `.` antes del nombre de la clase.
       CSD U2 MC Q6_2023:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: "![](https://images.code.org/dc571a891739ecd66b791a79e791c800-Q5A.png)"
+        - text: "![](https://images.code.org/a0a6bbb84c540cf54a56a18d3c3d7350-Q5B.png)"
+        - text: "![](https://images.code.org/f2e692ea730b4355824599dd81b9c182-Q5C.png)"
+        - text: "![](https://images.code.org/e2ef2fed28f1e1cb61ac4b7a79fa516d-Q5D.png)"
+        - text: "![](https://images.code.org/c2506628884c40faee24f4b963d5b9aa-Q5E.png)"
+        markdown: '<img src="https://images.code.org/9998bbd054bfd8f796732c6a9b5910dc-Q5Q.png">
+
+          '
         questions:
-        - {}
+        - text: Teniendo en cuenta esta página web, predice el HTML.
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 3**
+
+          Las cabeceras son los títulos de sección de diferentes tamaños que aparecen en una página web. Hay cabeceras de diferentes tamaños, marcadas por el número que aparece junto a la h en la etiqueta de cabecera. Van de `<h1>` a `<h6>`.
         title: Pregunta 1
       CSD U2 MC Q7_2023:
         answers:
-        - {}
-        - {}
+        - text: No debería existir el atributo `alt`
+        - text: "`img` debería ser `image`."
         - correct: true
-        - {}
-        - {}
+          text: Añade una comilla inicial al nombre del archivo `rainbow.jpg`.
+        - text: Añade una etiqueta de cierre `</img>`.
+        - text: No es necesario ningún cambio
         questions:
-        - {}
+        - text: Depura la siguiente etiqueta de imagen `<img src=arcoiris.jpg" alt="un
+            arcoiris">`
+        teacher_markdown: "**Contenido: Unidad 2 Lección 9**\n"
       CSD U2 MC Q8_2023:
         answers:
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ac762e4fe3140059502bb732b090ad6f-Q7A.png)"
+        - text: "![](https://images.code.org/0fa7bd96dbfa60be99c5dd71ed9951dd-Q7B.png)"
         - correct: true
-        - {}
-        - {}
+          text: "![](https://images.code.org/19afd172367c596ac262dfa63fec531f-Q7C.png)"
+        - text: "![](https://images.code.org/31dc21ab905ced882b83096b77e8c905-Q7D.png)"
+        - text: "![](https://images.code.org/eb3daf7e55fc47da35adce7e68bdfa07-Q7E.png)"
+        markdown: |
+          | Página web      | HTML |
+          | ----------- | ----------- |
+          | <img src="https://images.code.org/09e13c1790fd937ec1aa2d1e54c438b2-CSDunit2csswebpage.png" style="height: 200px">      | <img src="https://images.code.org/97c4c191ff04d6cb949998db4a1e1540-CSDunit2csshtml.png" style="height: 200px">       |
         questions:
-        - {}
+        - text: Partiendo de esta página web y su HTML, predice el CSS.
+        teacher_markdown: |
+          **Contenido: Unidad 2 Lección 6, 11**
+
+          El tamaño de `<h1>` es menor que el de `<p>`. Teniendo en cuenta que `<h1>` es normalmente más grande que `<p>`, esto debe significar que hay reglas en el CSS que cambian el tamaño de fuente de una o ambas etiquetas. Además, `<p>` es de color azul.
       CSD U2 Match Q1_2023:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: especifica el color del texto
+        - text: especifica el tamaño de una fuente
+        - text: coloca un elemento en el lado izquierdo o derecho de la pantalla y
+            permite que el texto y otros elementos lo envuelvan
+        content1: Empareja CSS con sus definiciones
         questions:
         - text: color
-        - {}
-        - {}
+        - text: tamaño de fuente
+        - text: flotante
+        teacher_markdown: |+
+          **Contenido: Unidad 2 Lección 6, 11, 17**
+
+
+
       CSD U2 PSP Programming:
         markdown: |
           # El proceso de resolución de problemas de programación
@@ -2589,19 +2647,6 @@ es-ES:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
-        markdown: |
-          # Sitios Web para la Resolución de Problemas
-
-          Aquí tienes algunas páginas web creadas para resolver problemas.  Elige dos sitios y utilízalos para completar la guía de actividades.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: descripción aquí
         markdown: |-
@@ -2682,6 +2727,7 @@ es-ES:
           clic para mostrar a los alumnos las páginas web de muestra.
       CSD U2 hyperlinks practice_2023:
         description: Practica tus nuevas habilidades aquí.
+        display_name: Usando hipervínculos
       CSD U2 image debug match:
         answers:
         - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -3718,6 +3764,9 @@ es-ES:
         description: Consulta tu guía de actividad para recomendar una de estas plantillas
           a cada cliente en función de sus necesidades.
         display_name: Plantillas de Animación y Diseño de Juegos
+      CSD U3 L7 review_2023:
+        description: Repasa los distintos tipos de bloques de figuras que hemos visto
+          hasta ahora. ¿Cuáles puedes utilizar para crear la cara de tu robot?
       CSD U3 Lesson Overview 1:
         markdown: |-
           # Visión general

@@ -1506,6 +1506,7 @@
   header_report_abuse: "학대 사례 신고"
   header_legal: "개인정보 보호 및 법률"
   header_legal_privacy: "개인정보보호 정책"
+  header_legal_cookie_notice: "쿠키 방침"
   header_legal_tos: "이용 약관"
   header_tutorials: "튜토리얼"
   header_screen_reader_hamburger: "메뉴"

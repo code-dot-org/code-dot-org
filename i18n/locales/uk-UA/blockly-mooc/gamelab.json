@@ -1,4 +1,9 @@
 {
+  "dropletBlock_Game.width_description": "Ширина полотна для малювання.",
+  "dropletBlock_Game.height_description": "Висота полотна для малювання.",
+  "dropletBlock_createSprite_description": "Створює спрайт у зазначеному початковому положенні.",
+  "dropletBlock_createSprite_param0_description": "Початкова координата x.",
+  "dropletBlock_createSprite_param1_description": "Початкова координата y.",
   "dropletBlock_createSprite_param2": "ширина",
   "dropletBlock_createSprite_param3": "висота",
   "dropletBlock_setCollider_param0": "тип",

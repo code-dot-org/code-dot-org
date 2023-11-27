@@ -84,6 +84,32 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  test 'returns all sections instructed by teacher' do
+    cotaught_section = create(:section, user: create(:teacher), login_type: 'word')
+    create(:section_instructor, instructor: @teacher, section: cotaught_section, status: :active)
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
+  test 'returns sections co-taught with a deleted instructor' do
+    cotaught_section = create(:section, user: @teacher, login_type: 'word')
+    coteacher = create(:teacher)
+    create(:section_instructor, instructor: coteacher, section: cotaught_section, status: :active)
+    coteacher.destroy!
+
+    sign_in @teacher
+    get :index
+    assert_response :success
+
+    expected = [@section, @section_with_unit_group, @section_with_script, cotaught_section].map(&:summarize_without_students).as_json
+    assert_equal expected, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,

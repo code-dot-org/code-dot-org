@@ -113,6 +113,27 @@ hu:
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} csináld {MOVE} {DIR} örökké"
+        options:
+          GROUP:
+            '"CAT"': összes macska
+            '"SLOTH"': lajhárok
+          MOVE:
+            MOVES.Roll: Csípőkörzés
+            MOVES.ClapHigh: Taps fent
+            MOVES.Dab: dab
+            MOVES.DoubleJam: kétszer lenn
+            MOVES.Drop: Spárga
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Csillag
+            MOVES.ThisOrThat: Ez vagy az
+            MOVES.Rest: Egyik sem
+            '"next"': "(Következő)"
+            '"prev"': "(Előző)"
+            '"rand"': "(Véletlen)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} csináld {MOVE} {DIR} örökké"
         options:
@@ -577,8 +598,8 @@ hu:
           EFFECT:
             '"none"': Egyik sem
             '"rand"': "(Véletlen)"
-            '"circles"': Alagút
             '"quads"': Sokszögek
+            '"circles"': Alagút
             '"color_cycle"': Színek
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
@@ -594,11 +615,11 @@ hu:
             '"ripples"': Lüktetés
             '"snowflakes"': Hó
             '"text"': Dalcím
-            '"squiggles"': Kígyóvonalak
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
             '"spiral"': Spirál
             '"disco"': Négyzetek
+            '"squiggles"': Kígyóvonalak
             '"starburst"': Csillagrobbanás
             '"stars"': Csillagok
             '"music_wave"': Hullámok
@@ -1687,6 +1708,12 @@ hu:
         text: "{SPRITE} y koordinátája"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': szilárd
+            '"liquid"': folyékony
+            '"gas"': gáznemű
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

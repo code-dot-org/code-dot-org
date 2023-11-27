@@ -978,12 +978,18 @@
   coursed-2020_name: Kursong D (2020)
   coursee-2020_name: Kursong E (2020)
   coursef-2020_name: Kursong F (2020)
+  coursea-2021_name: Kursong A (2021)
+  courseb-2021_name: Kursong B (2021)
+  coursec-2021_name: Kursong C (2021)
+  coursee-2021_name: Kursong E (2021)
+  coursef-2021_name: Kursong F (2021)
   express-2018_name: Mabilis na Kurso
   pre-express-2018_name: Pre-reader na Pinabilis na Kurso (2018)
   express-2019_name: Pinabilis na Kurso (2019)
   pre-express-2019_name: Pre-reader na Pinabilis na Kurso (2019)
   express-2020_name: Pinabilis na Kurso (2020)
   pre-express-2020_name: Pre-reader na Pinabilis na Kurso (2020)
+  express-2021_name: Express Kurso (2021)
   pre-express-2021_name: Pre-reader na Pinabilis na Kurso (2021)
   pre-express-2022_name: Pre-reader na Pinabilis na Kurso (2022)
   csd2_name: 'Yunit 2: Pagbuo ng Web'
@@ -1502,6 +1508,7 @@
   header_report_abuse: "I-report ang pag-abuso"
   header_legal: "Pagkapribado at Legal"
   header_legal_privacy: "Patakaran sa Pagkapribado"
+  header_legal_cookie_notice: "Paunawa ng Cookie"
   header_legal_tos: "Mga Alituntunin ng Serbisyo"
   header_tutorials: "Mga Tutorial"
   header_screen_reader_hamburger: "Menu"
