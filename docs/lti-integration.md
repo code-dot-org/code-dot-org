@@ -83,7 +83,7 @@ configuration. Below is the JSON you can paste directly into the
             "message_type": "LtiResourceLinkRequest"       
           },
           {
-            "placement": "submission_type",
+            "placement": "submission_type_selection",
             "message_type": "LtiResourceLinkRequest"
           }
         ]
