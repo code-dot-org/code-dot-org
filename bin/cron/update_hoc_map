@@ -84,6 +84,8 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
   )
   upload_successful = false
+  puts stderr
+  puts tippecanoe_status
   if tippecanoe_status.success?
     upload_successful = upload_maptiles(tiles.path, 'hoctiles-dev')
     puts 'Was it successful?'
