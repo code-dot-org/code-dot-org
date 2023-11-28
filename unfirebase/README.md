@@ -20,7 +20,7 @@ See: https://docs.brew.sh/FAQ#can-i-edit-formulae-myself
 # For Linux:
 
 ## Install linux deps
-1. `apt-get install clang rapidjson-dev libboost-iostreams-dev build-essential libboost-system-dev`
+1. `apt-get install clang rapidjson-dev libboost-iostreams-dev build-essential libboost-system-dev libboost-thread-dev`
 
 ## Same problem, need to build from source to get -DWITH_JDBC=ON
 1. `git clone https://github.com/mysql/mysql-connector-cpp.git`
