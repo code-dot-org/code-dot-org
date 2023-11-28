@@ -290,7 +290,7 @@
     "PROCEDURES_DEFNORETURN_TITLE": "aan",
     "PROCEDURES_DEFNORETURN_TOOLTIP": "Maakt een functie zonder uitvoer.",
     "PROCEDURES_DEFRETURN_HELPURL": "https://nl.wikipedia.org/wiki/Subprogramma",
-    "PROCEDURES_DEFRETURN_PROCEDURE": "do iets",
+    "PROCEDURES_DEFRETURN_PROCEDURE": "doe iets",
     "PROCEDURES_DEFRETURN_TITLE": "aan",
     "PROCEDURES_DEFRETURN_RETURN": "uitvoer",
     "PROCEDURES_DEFRETURN_TOOLTIP": "Maakt een functie met een uitvoer.",
@@ -370,7 +370,7 @@
     "VARIABLES_GET_CREATE_SET": "Maak 'verander %1'",
     "VARIABLES_GET_TOOLTIP": "Geeft de waarde van deze variabele.",
     "VARIABLES_SET_CREATE_GET": "Maak 'krijg %1'",
-    "VARIABLES_SET_TAIL": "om",
-    "VARIABLES_SET_TITLE": "zetten",
+    "VARIABLES_SET_TAIL": "in op",
+    "VARIABLES_SET_TITLE": "stel",
     "VARIABLES_SET_TOOLTIP": "Verandert de waarde van de variabele naar de waarde van de invoer."
 }

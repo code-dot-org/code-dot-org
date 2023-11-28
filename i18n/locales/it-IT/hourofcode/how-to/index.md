@@ -138,7 +138,7 @@ Cosa fare se uno studente finisce prima?
 
 - [Stampa gli attestati]({{ urls/certificates }}) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"]({{ urls/promote_stickers }}).
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
 
