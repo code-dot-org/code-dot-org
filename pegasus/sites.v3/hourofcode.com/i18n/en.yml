@@ -1890,6 +1890,18 @@
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
 
+  poster_aria_label_minecraft: "Download a poster featuring Minecraft Education: Generation AI"
+  poster_aria_label_dance_ai_01: "Download a poster featuring Dance Party: AI Edition frog, moose, and cat characters"
+  poster_aria_label_dance_ai_02: "Download a poster featuring Dance Party: AI Edition robot, sloth, and shark characters"
+  poster_aria_label_oceans_01: "Download a poster featuring AI for Oceans underwarer scene with AI Bot selecting a fish"
+  poster_aria_label_oceans_02: "Download a poster featuring AI for Oceans fish characters with different emotions"
+  poster_aria_label_steph: "Download a poster featuring NBA star Steph Curry"
+  poster_aria_label_malala: "Download a poster featuring activist Malala Yousafzai"
+  poster_aria_label_hadi: "Download a poster featuring Code.org founder Hadi Partovi"
+  poster_aria_label_mary: "Download a poster featuring General Motors CEO Mary Barra"
+  poster_aria_label_satya: "Download a poster featuring Microsoft CEO Satya Nadella"
+  poster_aria_label_shakira: "Download a poster featuring singer-songwriter Shakira"
+
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
