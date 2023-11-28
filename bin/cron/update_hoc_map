@@ -30,9 +30,6 @@ def main
   DB_READONLY[:forms].where(kind: CURRENT_HOC_SIGNUP).paged_each(rows_per_fetch: 10_000) do |form|
     data = JSON.parse(form[:data])
     processed_data = JSON.parse(form[:processed_data]) rescue {}
-    puts 'Start'
-    puts data
-    puts processed_data
     # ***
     # If these rules are changed and we wish to display a broader set of events,
     # update our JS code (hoc_events_map.js) that visualizes these events
@@ -41,8 +38,6 @@ def main
     # In order to be placed on the map, all events require an organization name and
     # a processed location.
     next if data['organization_name_s'].nil? || processed_data['location_p'].nil?
-
-    puts 'Not skipped'
 
     organization_name =
       if !processed_data['nces_school_name_s'].to_s.strip.empty?
@@ -71,11 +66,8 @@ def main
         type: "Feature"
       }
   end
-  puts geojson["features"]
-  puts 'Done with map info'
   file = Tempfile.new(['hocevents', 'geojson'])
-  tiles = Tempfile.new([CDO.mapbox_upload_tileset, 'mbtiles'])
-  puts CDO.mapbox_upload_tileset
+  tiles = Tempfile.new(['hoctiles', 'mbtiles'])
   file.write(JSON.pretty_generate(geojson))
   _stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
@@ -85,15 +77,10 @@ def main
     "tippecanoe -Z 1 -rg --cluster-distance=2 -o #{tiles.path} -l \"hoc\" --force #{file.path}"
   )
   upload_successful = false
-  puts stderr
-  puts tippecanoe_status
   if tippecanoe_status.success?
-    upload_successful = upload_maptiles(tiles.path, CDO.mapbox_upload_tileset)
-    puts 'Was it successful?'
-    puts upload_successful
+    upload_successful = upload_maptiles(tiles.path, 'hoctiles')
   end
   unless tippecanoe_status.success? && upload_successful
-    puts 'Failure'
     Honeybadger.notify(
       error_message: "Updating HOC map on Mapbox failed",
       error_class: "HOC Map Update Failure",
