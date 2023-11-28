@@ -454,7 +454,7 @@ fa-IR:
   csedweek_map_legend_title: افسانه
   csedweek_map_search_placeholder: جست و جو برای رویداد های "ساعت کدنویسی"
   csedweek_map_search_reset: تنظیم مجدد
-  csedweek_map_search_search: جستجو کن
+  csedweek_map_search_search: جستجو کنید
   csedweek_map_signup: رویدادتان را ثبت کنید
   csedweek_og_description: 3-9 دسامبر, 2018. یادگیری علوم کامپیوتر برای هر دانش آموز
     لازم است.
@@ -466,8 +466,8 @@ fa-IR:
   csfirst_gradelevel: سنین 9-14
   csfirst_platformtext: مرورگرهای وب مدرن
   dashboard_action_cancel: لغو
-  dashboard_action_confirm: پاک گردد؟
-  dashboard_action_delete: پاک کردن
+  dashboard_action_confirm: پاک شود؟
+  dashboard_action_delete: پاک کنید
   dashboard_action_delete_no: نه
   dashboard_action_delete_yes: بله
   dashboard_action_done: انجام شد
@@ -491,7 +491,7 @@ fa-IR:
   dashboard_course_ecs_desc: 'کاوش در علوم کامپیوتر یک دوره ی یک ساله شامل 6 واحد
     است: همکاری انسان کامپیوتر، حل مساله، طراحی وب، برنامه نویسی، محاسبه و آنالیز
     داده ها، و رباتیک.'
-  dashboard_curriculum: برنامه آموزشی
+  dashboard_curriculum: برنامه درسی
   dashboard_curriculum_csina: 'علوم کامپیوتر در جبر:'
   dashboard_curriculum_csins: 'علوم کامپیوتر در علم:'
   dashboard_curriculum_csp: 'مفاهیم ® AP علوم کامپیوتر:'
@@ -501,6 +501,7 @@ fa-IR:
   dashboard_curriculum_middle_title: منابع آموزشی دوره راهنمایی
   dashboard_curriculum_overview: بررسی اجمالی برنامه کلاس پنجمی ها
   dashboard_debugging: 'اشکال‌زدایی:'
+  dashboard_download_csv: دانلود CSV
   dashboard_faq: پرسش و پاسخ‌های متداول
   dashboard_faq_k5: پرسش های متداول پیش از دبستان
   dashboard_filter_all: همه
@@ -612,9 +613,9 @@ fa-IR:
     ارائه کنید، یک <b>کلمه</b> یا <b>تصویر</b> سرّی برای آن بخش را انتخاب کنید.
   dashboard_sections_close: ببند
   dashboard_sections_email_question: همه دانش آموزان یک آدرس ایمیل معتبر دارید؟
-  dashboard_sections_jumbotron_instruction: ایجاد بخش های جدید و افزودن دانش آموزان
-    به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
-    کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید.
+  dashboard_sections_jumbotron_instruction: ایجاد بخش‌های جدید و اضافه کردن دانش‌آموزان
+    به آن‌ها. بخش‌ها به شما کمک می‌کنند دانش آموزان را در گروه‌های کوچکتر سازماندهی
+    کنید تا بتوانید پیشرفت آن‌ها را پیگیری کرده و حساب کاربریشان را مدیریت نمایید.
   dashboard_sections_login_type_explanation: این جدول به توضیح این که شما کدامیک از
     روش های ورود به سیستم،<b> مثل تصویر، کلمه، یا ایمیل</b>، را می خواهید برای یک
     بخش انتخاب کنید کمک می کند.
@@ -818,9 +819,10 @@ fa-IR:
   header_help_us: به ما کمک کنید
   header_learn: یادگیری
   header_legal: حریم خصوصی و مسائل حقوقی
+  header_legal_cookie_notice: هشدار کوکی
   header_legal_privacy: قوانین حفظ حریم خصوصی
   header_legal_tos: شرایط
-  header_my_dashboard: دَشبورد من
+  header_my_dashboard: داشبورد من
   header_professional_learning: یادگیری پیشرفته
   header_project_gallery: پروژه‌ها
   header_report_bug: گزارش مشکل
@@ -856,6 +858,8 @@ fa-IR:
     ویدیو را مشاهده کن.
   hoc2018_dance_amazon_about_future_engineer_button: بیشتر بیاموزید
   hoc2018_dance_keep_on_dancing_box_title: به رقصیدن ادامه دهید
+  hoc2018_dance_party_box_description: یک مهمانی رقص را کد نویسی کنید تا با دوستان
+    خود به اشتراک بگذارید!
   hoc2018_dance_party_box_title: مهمانی رقص
   hoc2018_dance_party_button: شروع کنید
   hoc2018_dance_party_main_heading: مهمانی رقص
@@ -1481,7 +1485,7 @@ fa-IR:
     این که ابتدا راجع به آن ها بحث کنند. این درس به بچه ها ارتباط بین نماد ها و کار
     ها را می آموزد، همان طور که مهارت خیلی با ارزش رفع عیب را می آموزد.
   thinkersmithspanish_platformtext: بدون کامپیوتر
-  third_party_curriculum: برنامه آموزشی
+  third_party_curriculum: برنامه درسی
   third_party_gradelevel_2to8: رده ی سنی  2-8
   third_party_gradelevel_4to12: رده ی سنی 4-12
   third_party_gradelevel_5to12: رده ی سنی 5-12

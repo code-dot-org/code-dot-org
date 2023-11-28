@@ -816,6 +816,11 @@ en:
         ai_dance_meetat_draft: AI Dance Meet AI Draft
         ai_dance_editblocks_draft: AI Dance Party Edit Blocks Draft
         csd_ml_how_ai_works: How AI Works
+        hoc-dance-ai-warmup: 'Dance Party AI Edition: Warm Up'
+        dance_ai_events_intro: Dance Party AI Edition Intro to Events
+        dance_ai_intro_to_ai: Dance Party AI Edition Intro to AI
+        dance_ai_how_ai_works: Dance Party AI Edition How AI Works
+        dance_ai_event_at_measure: Dance Party AI Edition - At Measure Event
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

@@ -37,18 +37,18 @@
     "never_autoplay_video": "false",
     "examples_required": "false",
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
     "validation_enabled": "false",
     "discard_background": "false",
     "enable_download_image": "false",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2023-11-17 16:42:43 +0000\",\"changed\":[\"published\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:43:35 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:43:56 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:45:43 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:45:52 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:46:35 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:49:02 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-11-17 16:42:43 +0000\",\"changed\":[\"published\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:43:35 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:43:56 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:45:43 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:45:52 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:46:35 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-17 16:49:02 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\",\"solution_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-20 17:58:30 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"predraw_blocks\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-11-20 17:58:50 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"predraw_blocks\",\"encrypted_examples\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

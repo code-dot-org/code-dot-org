@@ -17,13 +17,13 @@
         },
         {
           "key": "42ff0897-3ca0-44ed-a684-55320e70267c",
-          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
-          "details": "Have students that are planning to study computer science, engineering or robotics in college? Have them apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
-          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
           "type": "bullhorn",
           "visibility": "Teacher-only",
           "dismissible": true,
-          "buttonText": "Learn more"
+          "buttonText": "Get free resources"
         }
       ],
       "curriculum_umbrella": "CSP",
@@ -40,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-14 02:06:52 UTC",
+    "serialized_at": "2023-11-20 21:06:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
