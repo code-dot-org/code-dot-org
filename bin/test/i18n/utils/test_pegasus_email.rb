@@ -1,5 +1,5 @@
 require_relative '../../test_helper'
-require_relative '../../../i18n/utils/pegasus_markdown'
+require_relative '../../../i18n/utils/pegasus_email'
 
 describe I18n::Utils::PegasusEmail do
   describe '.sanitize_header' do
