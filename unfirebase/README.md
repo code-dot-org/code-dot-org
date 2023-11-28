@@ -1,7 +1,9 @@
 # For MacOS:
 
 ## Edit mysql-connector-c++ to install jdbc.h
-Need to edit the mysql-connector-c++ formula first (UGH! they don't include the jdbc bits required for an AWS RDS instance which doesn't support x plugin, used by the newer connector APIs 😥). See: https://docs.brew.sh/FAQ#can-i-edit-formulae-myself
+Need to edit the mysql-connector-c++ formula first (UGH! they don't include the jdbc bits required for an AWS RDS instance which doesn't support x plugin, used by the newer connector APIs 😥, edits are based off parallel in freebsd ports: https://cgit.freebsd.org/ports/commit/?id=adcb80f3fa92f9f25c3aa84fc4b1e1e79919acc0). 
+
+See: https://docs.brew.sh/FAQ#can-i-edit-formulae-myself
 
 1. export HOMEBREW_NO_INSTALL_FROM_API=1
 2. `brew edit mysql-connector-c++`
@@ -10,7 +12,7 @@ Need to edit the mysql-connector-c++ formula first (UGH! they don't include the 
 5. `brew reinstall --build-from-source mysql-connector-c++`
 6. Verify the jdbc.h header is now installed: `ls /opt/homebrew/include/mysql/jdbc.h`
 7. For docs on using the legacy jdbc.h API see: https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
-8. 
+
 ## Build parse-json-firebase
 1. `brew install rapidjson boost`
 2. make
