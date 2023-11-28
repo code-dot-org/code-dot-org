@@ -31,8 +31,6 @@ class ProjectAppTypeArea extends React.Component {
     // Hide projects that don't have thumbnails
     hideWithoutThumbnails: PropTypes.bool,
 
-    showReportAbuseHeader: PropTypes.bool,
-
     // from redux state
     hasOlderProjects: PropTypes.bool.isRequired,
 
@@ -81,7 +79,7 @@ class ProjectAppTypeArea extends React.Component {
         projects={filteredList}
         galleryType={this.props.galleryType}
         isDetailView={this.props.isDetailView}
-        showReportAbuseHeader={this.props.showReportAbuseHeader}
+        showReportAbuseHeader
       />
     );
   }

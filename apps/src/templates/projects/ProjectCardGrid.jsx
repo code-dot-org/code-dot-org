@@ -37,7 +37,6 @@ class ProjectCardGrid extends Component {
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
-    showReportAbuseHeader: PropTypes.bool,
     // Controls hiding/showing view more links for App Lab and Game Lab.
     limitedGallery: PropTypes.bool,
   };
@@ -89,7 +88,6 @@ class ProjectCardGrid extends Component {
                 navigateFunction={this.onSelectApp}
                 isDetailView={false}
                 hideWithoutThumbnails={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             <ProjectAppTypeArea
@@ -102,7 +100,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="poetry"
@@ -114,7 +111,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="gamelab"
@@ -127,7 +123,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="applab"
@@ -140,7 +135,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="spritelab"
@@ -152,7 +146,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="playlab"
@@ -164,7 +157,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="events"
@@ -176,7 +168,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="artist"
@@ -188,7 +179,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="minecraft"
@@ -200,7 +190,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
             <ProjectAppTypeArea
               labKey="k1"
@@ -212,7 +201,6 @@ class ProjectCardGrid extends Component {
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideWithoutThumbnails={true}
-              showReportAbuseHeader={this.props.showReportAbuseHeader}
             />
           </div>
         )}
@@ -229,7 +217,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={false}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'dance' && (
@@ -242,7 +229,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'poetry' && (
@@ -255,7 +241,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'gamelab' && (
@@ -269,7 +254,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'applab' && (
@@ -283,7 +267,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'spritelab' && (
@@ -296,7 +279,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'playlab' && (
@@ -309,7 +291,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'events' && (
@@ -322,7 +303,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'artist' && (
@@ -335,7 +315,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'minecraft' && (
@@ -348,7 +327,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
             {this.state.showApp === 'k1' && (
@@ -361,7 +339,6 @@ class ProjectCardGrid extends Component {
                 galleryType={this.props.galleryType}
                 navigateFunction={this.viewAllProjects}
                 isDetailView={true}
-                showReportAbuseHeader={this.props.showReportAbuseHeader}
               />
             )}
           </div>
