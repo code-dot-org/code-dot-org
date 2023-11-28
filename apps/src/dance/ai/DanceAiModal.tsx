@@ -26,6 +26,7 @@ import {
   chooseEffects,
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
+  getItem,
   getPreviewCode,
   getGeneratedEffectScores,
   getLabelMap,
@@ -150,19 +151,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
 
-  const getItem = useMemo<(id: string) => DanceAiModelItem>(() => {
-    const itemsById: {[key: string]: DanceAiModelItem} =
-      inputLibraryJson.items.reduce(
-        (bucket, item) => ({...bucket, [item.id]: item}),
-        {}
-      );
-    return id => itemsById[id];
-  }, []);
-
   const currentInputSlot = inputs.length;
   const selectedEmojis = useMemo(
     () => inputs.map(getItem).filter(item => item !== undefined),
-    [inputs, getItem]
+    [inputs]
   );
 
   const getGeneratedEffect = useCallback((step: number) => {
@@ -533,7 +525,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const currentGeneratedEffect = getGeneratedEffect(generatingProgress.step);
 
-  const lastInputItem = getItem(inputs[currentInputSlot - 1]);
+  const lastInputItem = selectedEmojis[currentInputSlot - 1];
 
   // Visualization preview size, in pixels.
   const previewSizeSmall = 90;
