@@ -180,8 +180,6 @@ export default class AnimationPickerBody extends React.Component {
     let assetType;
     switch (this.props.pickerType) {
       case PICKER_TYPE.animationJson:
-        assetType = msg.costumeMode();
-        break;
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
         break;
@@ -202,7 +200,8 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete,
       shouldWarnOnAnimationUpload,
     } = this.props;
-    const animationJsonMode = this.props.pickerType === 'animationJson';
+    const animationJsonMode =
+      this.props.pickerType === PICKER_TYPE.animationJson;
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
