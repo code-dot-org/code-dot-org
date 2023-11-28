@@ -606,10 +606,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               }}
               useRebrandedLikeStyles
             >
-              <button key={0} type="button" value={Toggle.EFFECT}>
+              <button type="button" value={Toggle.EFFECT}>
                 {i18n.danceAiModalEffectButton()}
               </button>
-              <button key={1} type="button" value={Toggle.CODE}>
+              <button type="button" value={Toggle.CODE}>
                 {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
@@ -618,9 +618,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
         {text && (
           <div id="text-area" className={moduleStyles.textArea}>
-            <div key={text} className={moduleStyles.text}>
-              {text}
-            </div>
+            <div className={moduleStyles.text}>{text}</div>
           </div>
         )}
 
@@ -685,7 +683,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           <div id="explanation-area" className={moduleStyles.explanationArea}>
             <div className={moduleStyles.key}>
               {selectedEmojis.map((item, index) => (
-                <div key={index} className={moduleStyles.emojiSlot}>
+                <div key={item.id} className={moduleStyles.emojiSlot}>
                   <div
                     className={classNames(
                       moduleStyles.dot,
