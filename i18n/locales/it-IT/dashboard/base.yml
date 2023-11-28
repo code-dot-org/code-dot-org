@@ -1213,7 +1213,7 @@ it:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
         csd: 'Alla scoperta dell''informatica'
-        csp: 'Principi di informatica'
+        csp: 'Princìpi di informatica'
         other: 'Altro'
         not_applicable: "Non applicabile"
       email_opt_in:

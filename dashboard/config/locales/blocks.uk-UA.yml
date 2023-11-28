@@ -36,13 +36,13 @@ uk:
       Dancelab_alternateMoves:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -98,13 +98,13 @@ uk:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -182,13 +182,13 @@ uk:
       Dancelab_changePropEachBy:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -206,13 +206,13 @@ uk:
       Dancelab_doMoveEachLR:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -358,13 +358,13 @@ uk:
       Dancelab_jumpToEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -402,13 +402,13 @@ uk:
             '"top"': верхня шеренга
             '"x"': хрестик
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -419,14 +419,14 @@ uk:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
-            '"ALIEN"': інопланетянин
-            '"BEAR"': ведмідь
+            '"ALIEN"': інопланетянина
+            '"BEAR"': ведмедя
             '"CAT"': кіт
-            '"DOG"': пес
+            '"DOG"': собаку
             '"DUCK"': качку
-            '"FROG"': жаба
-            '"MOOSE"': лосі
-            '"PINEAPPLE"': Ананас
+            '"FROG"': жабу
+            '"MOOSE"': лось
+            '"PINEAPPLE"': ананас
             '"ROBOT"': робот
             '"SHARK"': акула
             '"SLOTH"': лінивець
@@ -456,7 +456,7 @@ uk:
             '"PINEAPPLE"': ананаса
             '"ROBOT"': робота
             '"SHARK"': акулу
-            '"SLOTH"': лінивець
+            '"SLOTH"': лінивця
             '"UNICORN"': єдинорога
           LOCATION:
             "{x: 100, y: 100}": верхній лівий кут
@@ -475,13 +475,13 @@ uk:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
-            '"ALIEN"': прибульців
+            '"ALIEN"': інопланетян
             '"BEAR"': ведмеді
             '"CAT"': котів
             '"DOG"': собак
             '"DUCK"': качки
             '"FROG"': жаб
-            '"MOOSE"': лосів
+            '"MOOSE"': лося
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботів
             '"SHARK"': акули
@@ -667,20 +667,20 @@ uk:
           SPEED:
             '0.25': дуже повільно
             '0.5': повільно
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
         text: змінити для {SPRITE} швидкість танцю на {SPEED}
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -690,7 +690,7 @@ uk:
           SPEED:
             '0.25': дуже повільно
             '0.5': повільно
-            '1': нормальний
+            '1': нормально
             '2': швидко
             '4': дуже швидко
         text: встановити для {GROUP} швидкість танцю в {SPEED}
@@ -748,13 +748,13 @@ uk:
       Dancelab_setPropEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -784,13 +784,13 @@ uk:
       Dancelab_setPropRandomEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -811,13 +811,13 @@ uk:
       Dancelab_setTintEach:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -828,13 +828,13 @@ uk:
       Dancelab_setTintEachInline:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -853,13 +853,13 @@ uk:
       Dancelab_setVisibleEach:
         options:
           THIS:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -888,13 +888,13 @@ uk:
       Dancelab_startMappingEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -933,13 +933,13 @@ uk:
       Dancelab_stopMappingEach:
         options:
           GROUP:
-            '"ALIEN"': прибульці
+            '"ALIEN"': інопланетяни
             '"BEAR"': ведмеді
             '"CAT"': коти
             '"DOG"': собаки
             '"DUCK"': качки
             '"FROG"': жаби
-            '"MOOSE"': лосі
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананаси
             '"ROBOT"': роботи
             '"SHARK"': акули
@@ -2126,7 +2126,7 @@ uk:
             "'sound://category_animals/chick.mp3'": пташеня
             "'sound://category_animals/chicken.mp3'": курка
             "'sound://category_animals/cow.mp3'": корова
-            "'sound://category_animals/dog.mp3'": пес
+            "'sound://category_animals/dog.mp3'": собаку
             "'sound://category_animals/dolphin.mp3'": дельфін
             "'sound://category_animals/elephant.mp3'": слон
             "'sound://category_animals/goat.mp3'": коза
@@ -2273,7 +2273,7 @@ uk:
         options:
           SIZE:
             '3': повільно
-            '5': нормальний
+            '5': нормально
             '7': швидко
         text: встановити швидкість {SPRITE} у значення {SIZE}
       gamelab_setTint:
