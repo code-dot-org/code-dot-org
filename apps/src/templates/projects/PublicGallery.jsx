@@ -66,7 +66,6 @@ class PublicGallery extends Component {
           galleryType="public"
           limitedGallery={limitedGallery}
           includeDanceParty={includeDanceParty}
-          showReportAbuseHeader
         />
         <div style={styles.bottomButton}>
           <Button
