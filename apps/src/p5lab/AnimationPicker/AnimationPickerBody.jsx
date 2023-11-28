@@ -272,12 +272,6 @@ export default class AnimationPickerBody extends React.Component {
                   onUploadClick={onUploadClick}
                   shouldWarnOnAnimationUpload={shouldWarnOnAnimationUpload}
                   isBackgroundsTab={isBackgroundsTab}
-                  inRestrictedShareMode={false}
-                  teacherHasConfirmedUploadWarning={false}
-                  refreshInRestrictedShareMode={() => {}}
-                  refreshTeacherHasConfirmedUploadWarning={() => {}}
-                  showingUploadWarning={() => {}}
-                  exitedUploadWarning={() => {}}
                 />
               </div>
             )}
