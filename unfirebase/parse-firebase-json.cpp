@@ -10,6 +10,7 @@
 #include <boost/lockfree/queue.hpp>
 #include <boost/lockfree/spsc_queue.hpp>
 #include <boost/thread/thread.hpp>
+#include <chrono>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -157,6 +158,9 @@ atomic<uint64_t> numRecordBytes {0};
 uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
 
+chrono::system_clock::time_point bandwidthStartClock;
+uint64_t bandwidthStartNumRecordBytes = 0;
+
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
 boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
@@ -173,7 +177,14 @@ void loadData(string tsvFilename) {
   numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
   double percent = (round(100 * 100 * numRecordBytes / (double)originalJSONBytes) / 100);
-  cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB (~" << percent << "%)" << endl;
+  cout << "Written to MySQL: "
+    << "\033[1m"
+    << (round(numRecordBytes / (1000000000.0) * 100) / 100)
+    << "GB"
+    << "\033[0m"
+    << ", \033[1;32m"
+    << "~" << percent << "%\033[0m" << endl;
+  
   numRecordBytesMutex.unlock();
 
   std::filesystem::remove(tsvFilename);
@@ -249,6 +260,28 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
   if (unComittedRecords >= NUMBER_OF_RECORDS_BEFORE_COMMIT) {
     commitRecords();
   }
+
+  double bandwidthSamplingDuration = chrono::duration_cast<chrono::seconds>(chrono::system_clock::now() - bandwidthStartClock
+  ).count();
+  if (bandwidthSamplingDuration > 3.0f /* seconds*/) {
+    numRecordBytesMutex.lock();
+    if (bandwidthStartNumRecordBytes != 0) {
+      uint64_t bytesTransferred = numRecordBytes - bandwidthStartNumRecordBytes;
+      double bytesPerSecond = bytesTransferred / bandwidthDuration;
+      cout << "Current Bandwidth: "
+           << "\033[1;35m"
+           << (round(bytesPerSecond / (1000000.0) * 100) / 100)
+           << "MB/s"
+           << "\033[0m"
+           << endl;
+    }
+
+    
+    // reset our start values for the next measure interval
+    bandwidthStartClock = std::chrono::system_clock::now();
+    bandwidthStartNumRecordBytes = numRecordBytes;
+    numRecordBytesMutex.unlock();
+  };
 }
 
 void endChannel() {
