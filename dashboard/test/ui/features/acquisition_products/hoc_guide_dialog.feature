@@ -2,10 +2,10 @@ Feature: HOC Guide Email Conversion Dialog
 
   @eyes
   Scenario: View and Close Dialog as signed in Instructor
-    When I open my eyes to test "signedIn"
+    When I open my eyes to test "dialogForSignedInInstructor"
     Given I create a teacher named "Coach"
     And I sign in as "Coach"
-    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
+    Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
     And I see no difference for "signedInGuide"
     And I dismiss the hoc guide dialog
     And I wait for the page to fully load
@@ -14,12 +14,12 @@ Feature: HOC Guide Email Conversion Dialog
   Scenario: Send Email as signed In Instructor
     Given I create a teacher named "Coach"
     And I sign in as "Coach"
-    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
+    Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
     And I click selector "#uitest-email-guide" once I see it
 
   @eyes
   Scenario: View Dialog and send Email as signed out User
-    When I open my eyes to test "signedOut"
+    When I open my eyes to test "dialogForSignedOutInstructor"
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
     And I wait for the page to fully load
     And I wait for 3 seconds
