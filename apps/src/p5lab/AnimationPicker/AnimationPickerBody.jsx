@@ -179,6 +179,9 @@ export default class AnimationPickerBody extends React.Component {
   render() {
     let assetType;
     switch (this.props.pickerType) {
+      case PICKER_TYPE.animationJson:
+        assetType = msg.costumeMode();
+        break;
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
         break;
@@ -199,6 +202,7 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete,
       shouldWarnOnAnimationUpload,
     } = this.props;
+    const animationJsonMode = this.props.pickerType === 'animationJson';
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
@@ -210,7 +214,9 @@ export default class AnimationPickerBody extends React.Component {
     // Not currently searching and not in a category, unless that category is backgrounds
     // OR they are searching but there were no results
     const showDrawAndUploadButtons =
-      (!searching && (!inCategory || isBackgroundsTab)) || results.length === 0;
+      ((!searching && (!inCategory || isBackgroundsTab)) ||
+        results.length === 0) &&
+      !animationJsonMode;
 
     return (
       <div style={{marginBottom: 10}}>

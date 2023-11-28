@@ -51,7 +51,7 @@ export default class SelectStartAnimations extends React.Component {
   addAnimationToList = animation => {
     const key = createUuid();
 
-    let updatedOrderedKeys = [key].concat(this.state.orderedKeys);
+    let updatedOrderedKeys = this.state.orderedKeys.concat([key]);
     this.setState({orderedKeys: updatedOrderedKeys});
 
     let propsByKey = {...this.state.propsByKey};
@@ -86,6 +86,26 @@ export default class SelectStartAnimations extends React.Component {
     });
   };
 
+  displayAnimationPickerBody = libraryManifest => {
+    return (
+      <AnimationPickerBody
+        onDrawYourOwnClick={() => console.log('Not supported at this time')}
+        onPickLibraryAnimation={this.addAnimationToList}
+        onAnimationSelectionComplete={() => {}}
+        onUploadClick={() => console.log('Not supported at this time')}
+        playAnimations={false}
+        libraryManifest={libraryManifest}
+        hideAnimationNames={false}
+        navigable
+        hideBackgrounds={false}
+        pickerType={PICKER_TYPE.animationJson}
+        selectedAnimations={[]}
+        hideCostumes={false}
+        shouldWarnOnAnimationUpload={false}
+      />
+    );
+  };
+
   render() {
     const {orderedKeys, propsByKey} = this.state;
     return (
@@ -99,45 +119,17 @@ export default class SelectStartAnimations extends React.Component {
         {this.props.useAllSprites && (
           <div style={styles.pageBreak}>
             <h3>
-              Hidden Animations (Animations that don't normally appear in the
+              Level-only Animations (Animations that don't normally appear in
               animation library):
             </h3>
-            <AnimationPickerBody
-              onDrawYourOwnClick={() =>
-                console.log('Not supported at this time')
-              }
-              onPickLibraryAnimation={this.addAnimationToList}
-              onAnimationSelectionComplete={() => {}}
-              onUploadClick={() => console.log('Not supported at this time')}
-              playAnimations={false}
-              libraryManifest={this.state.levelAnimationsManifest}
-              hideAnimationNames={false}
-              navigable
-              hideBackgrounds={false}
-              pickerType={PICKER_TYPE.spritelab}
-              selectedAnimations={[]}
-              hideCostumes={false}
-              shouldWarnOnAnimationUpload={false}
-            />
+            {this.displayAnimationPickerBody(
+              this.state.levelAnimationsManifest
+            )}
           </div>
         )}
         <div style={styles.pageBreak}>
           <h3>Library Animations:</h3>
-          <AnimationPickerBody
-            onDrawYourOwnClick={() => console.log('Not supported at this time')}
-            onPickLibraryAnimation={this.addAnimationToList}
-            onAnimationSelectionComplete={() => {}}
-            onUploadClick={() => console.log('Not supported at this time')}
-            playAnimations={false}
-            libraryManifest={this.state.libraryManifest}
-            hideAnimationNames={false}
-            navigable
-            hideBackgrounds={false}
-            pickerType={PICKER_TYPE.spritelab}
-            selectedAnimations={[]}
-            hideCostumes={false}
-            shouldWarnOnAnimationUpload={false}
-          />
+          {this.displayAnimationPickerBody(this.state.libraryManifest)}
         </div>
         <h2>Generated Animation JSON:</h2>
         <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
