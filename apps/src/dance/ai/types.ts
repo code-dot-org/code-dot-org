@@ -36,3 +36,27 @@ export type DanceAiModelItem = {
   emoji: string;
   modelDescriptiveName: string;
 };
+
+export type CachedWeightsMapping = {
+  emojiAssociations: {[key: string]: number[]};
+  output: string[];
+};
+
+export enum ChooseEffectsQuality {
+  GOOD = 'good',
+  BAD = 'bad',
+}
+
+export enum Mode {
+  INITIAL = 'initial',
+  SELECT_INPUTS = 'selectInputs',
+  GENERATING = 'generating',
+  GENERATED = 'generated',
+  RESULTS = 'results',
+  EXPLANATION = 'explanation',
+}
+
+export enum Toggle {
+  EFFECT = 'effect',
+  CODE = 'code',
+}

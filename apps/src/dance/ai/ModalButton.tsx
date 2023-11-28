@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@cdo/apps/templates/Button';
-import {Mode} from './DanceAiModal';
+import {Mode} from './types';
 
 interface ModalButtonProps extends React.ComponentProps<typeof Button> {
   currentMode: Mode;

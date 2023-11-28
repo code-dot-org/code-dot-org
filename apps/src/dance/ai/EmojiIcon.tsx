@@ -25,10 +25,10 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
 }) => {
   const isButton = onClick !== undefined;
   const Tag = isButton ? 'button' : 'div';
+
   return (
     <Tag
       type={isButton ? 'button' : undefined}
-      key={item.id}
       onClick={onClick}
       style={{
         backgroundImage: `url(${getEmojiImageUrl(item.id)})`,
@@ -44,4 +44,4 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
   );
 };
 
-export default EmojiIcon;
+export default React.memo(EmojiIcon);
