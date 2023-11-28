@@ -18,7 +18,7 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {PICKER_TYPE} from './AnimationPicker.jsx';
 import style from './animation-picker-body.module.scss';
-import {UnconnectedAnimationUploadButton as AnimationUploadButton} from './AnimationUploadButton.jsx';
+import AnimationUploadButton from './AnimationUploadButton.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
 
