@@ -9027,7 +9027,7 @@
           "name": "Actividad de cierre"
         },
         "1684b440-4813-446c-a62d-201cf832b0fd": {
-          "name": "Oportuntitas de Extensión "
+          "name": "Oportunidades de Extensión "
         },
         "2acd0565-f462-437c-9be3-66bd44962646": {
           "name": "Preparación Recomendada"
@@ -13450,6 +13450,12 @@
         },
         "62475558-6554-4337-b3fb-9fb6ba9a886c": {
           "name": "Después de la actividad"
+        },
+        "00f9385c-daa7-4590-a138-13a063e6f8c8": {
+          "name": "Opción 1: Código ético de la IA"
+        },
+        "dcf77a0c-cc1a-49b0-92f2-96369e9773fa": {
+          "name": "Opción 2: Crea un Manifiesto"
         }
       }
     }

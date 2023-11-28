@@ -9532,12 +9532,16 @@ en:
               display_name: 'Unit 9: Create PT'
             lessonGroup-2:
               display_name: Post-Course Survey
+            lessonGroup-3:
+              display_name: Mock Exam
           title: Create PT Prep ('23-'24)
           description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Create PT Written Response Mock Exam
           name: csp9-2023
         csp10-2023:
           lesson_groups:
@@ -9702,7 +9706,19 @@ en:
               name: CSS Grid
             lesson-5:
               name: Assessments
-          lesson_groups: {}
+            lesson-6:
+              name: Lesson 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Cyber
+            lessonGroup-3:
+              display_name: CSD
+            lessonGroup-4:
+              display_name: Random
+            lessonGroup-5:
+              display_name: Coding w/AI
+            lessonGroup-6:
+              display_name: PL Stuff
           name: angelina-playground
           title: Angelina's Place To Do Stuff
           description_audience: ''
@@ -13037,8 +13053,8 @@ en:
           title: Preparing to Teach Interactive Animations and Games
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
         self-paced-pl-csd-unit4-1-2023:
           lessons: {}
           lesson_groups: {}

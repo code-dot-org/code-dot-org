@@ -236,7 +236,7 @@ uk:
   learn_how_ai_works: Дізнайтеся, як працює штучний інтелект
   ai_101_for_educators: AI 101 для освітян
   learn_about_ai_impacts: Дізнайтеся про вплив штучного інтелекту
-  hoc_ai_activities: Година коду діяльності AI
+  hoc_ai_activities: Діяльності Години коду з ШІ
   subscribe_to_emails_heading: Підпишіться на електронні листи
   subscribe_to_emails_desc: Читайте про те, що відбувається на Code.org та в освіті
     з інформатики через щоквартальні оновлення через наш список розсилки.
@@ -656,12 +656,11 @@ uk:
     Вирішуючи проблем проєктування, учні більш емпатійно сприймають потреби інших
     людей і тому розробляють максимально успішні рішення.
   curriculum_desc_data_society: Підкресліть роль даних у вирішенні проблем і значення
-    комп'ютерів у цьому процесі. Тут розглядаються системи представлення інформації
-    та пов'язані з цим проблеми. Крім того, учні дізнаються, як збір даних допомагає
-    вирішувати складні проблеми.
+    комп'ютерів для цього. Розгляньте системи представлення інформації та пов'язані
+    з цим проблеми. Учні дізнаються, як дані допомагають вирішувати складні проблеми.
   curriculum_desc_creating_apps_with_devices: Досліджуйте роль фізичних пристроїв
-    в обчислювальних процесах. Розробляйте програми, які використовують апаратні введення
-    й виведення. Існує версія цього блоку як для micro:bit, так і для Circuit Playground.
+    в обчислювальних процесах. Розробляйте програми, які використовують апаратне введення
+    й виведення. Є версії для micro:bit, і для Circuit Playground.
   curriculum_desc_csa: Познайомте учнів з програмною інженерією та об'єктно-орієнтованим
     дизайном, поки вони вивчають мову програмування Java у цій безкоштовній навчальній
     програмі AP® Computer Science A (AP® CSA).
@@ -1334,7 +1333,7 @@ uk:
   how_ai_works_lesson_title_05: Генеративні зображення
   how_ai_works_lesson_desc_05: Дізнайтеся, як AI може генерувати зображення, а потім
     вивчіть дифузійний віджет AI та обговоріть, чи є ці моделі творчими чи ні.
-  how_ai_works_lesson_title_06: Алгоритмічний упередження
+  how_ai_works_lesson_title_06: Алгоритмічні упередження
   how_ai_works_lesson_desc_06: Практикуйте обрізання зображень, щоб виявити упередженість,
     що лежить в основі алгоритму обрізання Twitter, а потім прочитайте та перегляньте
     відео про відкриття цього упередженого алгоритму. Нарешті, обговоріть способи
@@ -13508,7 +13507,7 @@ uk:
   tutorial_neuralnetworksai_name: Нейронні мережі
   tutorial_chatbotsllmai_name: Чат-боти та великі мовні моделі
   tutorial_generativeimagesai_name: Генеративні зображення
-  tutorial_algorithmicbiasai_name: Алгоритмічний упередження
+  tutorial_algorithmicbiasai_name: Алгоритмічні упередження
   tutorial_codeofethicsai_name: Наш Кодекс етики AI
   tutorial_socimpactofgenaiai_name: Суспільний вплив генеративного ШІ
   tutorial_generationai_name: Покоління ШІ
@@ -14709,7 +14708,7 @@ uk:
   hoc_how_to_top_view_guide: Переглянути посібник для
   hoc_how_to_nav_main_aria_label: Виберіть керівництво
   hoc_how_to_nav_sidebar_aria_label: Навігація на бічній панелі
-  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_heading: Як спланувати Годину коду
   hoc_how_to_educators_intro_desc: Година коду - це одногодинний вступ до інформатики,
     який використовує веселі навчальні посібники, щоб показати, що кожен може вивчити
     основи. Цього року ми піднімаємо Годину коду на нові висоти, пропонуючи можливості
@@ -14758,10 +14757,10 @@ uk:
   hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
     Hour of Code event will show your representative the impact and need for computer
     science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
+  hoc_how_to_public_officials_intro_desc_02: Щоб успішно провести "Годину коду", залучивши
+    до неї представників влади, виконайте ці завдання до того, як вони відвідають
+    вашу школу. Це завдання включає координацію з контактною особою, запрошення для
+    ЗМІ, відмову від запрошень та планування програми заходу.
   hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
   hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
     to computer science, using fun tutorials to show that anybody can learn the basics.
@@ -14859,7 +14858,7 @@ uk:
   hoc_how_to_step_label_register_event: Зареєструйте свій захід
   hoc_how_to_step_label_register_your_hoc: Зареєструйте свою Годину коду
   hoc_how_to_step_label_tell: Розкажіть своїм учням, школі та громаді
-  hoc_how_to_step_label_get_coding: Отримайте кодування!
+  hoc_how_to_step_label_get_coding: Починайте кодувати!
   hoc_how_to_step_label_celebrate: Відсвяткуйте
   hoc_how_to_step_label_beyond_hoc: Поза годиною коду
   hoc_how_to_step_label_prepare_your_event: Prepare for your event
@@ -14883,10 +14882,11 @@ uk:
   hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
   hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
     these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_desc_generic: Інформатика не повинна закінчуватися Годиною
+    коду! Хоча 90% батьків хочуть, щоб їхня дитина вивчала інформатику, більшість
+    шкіл все ще не викладають її. Ознайомтеся з різноманітними пропозиціями навчальних
+    програм від партнерів «Години коду» та дізнайтеся, як принести інформатику у вашу
+    школу вже сьогодні!
   hoc_how_to_step_plan_hour_desc_01: 'Ось зразок порядку денного для початку:'
   hoc_how_to_step_choose_activities_desc_01: Цього року темою Години коду є творчість
     зі штучним інтелектом (ШІ). Незалежно від того, чи це кодування нових застосунків
@@ -14930,9 +14930,9 @@ uk:
     які можна виконати без пристроїв взагалі, тому їх можна робити навіть на вулиці!
   hoc_how_to_step_educators_spread_word_desc_01: Допоможіть нам поширювати інформацію
     у вашій спільноті за допомогою [цих шаблонів електронної пошти] (%{email_url}).
-  hoc_how_to_step_educators_spread_word_desc_02: Запросіть двох колег [register](%{register_url})
-    влаштувати діяльність Години коду. Вони, в свою чергу, можуть запросити ще двох
-    колег, які можуть запросити двох колег і т.д.
+  hoc_how_to_step_educators_spread_word_desc_02: Запросіть двох колег [зареєструватись](%{register_url}),
+    щоб влаштувати Годину коду. Вони, в свою чергу, можуть запросити ще двох колег,
+    які можуть запросити двох колег і т.д.
   hoc_how_to_step_educators_spread_word_desc_03: Попросіть свого директора [провести
     загальношкільну подію] ()%{host_url}. Коли беруть участь 300 і більше дітей, ви
     можете отримати спеціальний набір для зацікавлення із футболками, плакатами, наклейками
@@ -14948,7 +14948,7 @@ uk:
     інтелект'
   hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Вчитель резюмує і завершує
     захід'
-  hoc_how_to_step_educators_get_coding_desc: Спрямовуйте своїх учнів на діяльність,
+  hoc_how_to_step_educators_get_coding_desc: Скеруйте своїх учнів до діяльніості,
     наприклад, поділившись посиланням на дошці або через систему керування навчанням
     у вашому класі. Ваші учні можуть зіткнутися з проблемами - це нормально! Навчитися
     програмувати - це як вивчити нову мову; нею неможливо вільно оволодіти відразу.
@@ -15002,19 +15002,19 @@ uk:
   hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
     of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
     so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
+  hoc_how_to_step_districts_beyond_desc_01: Інформатика не повинна закінчуватися Годиною
+    коду! Щоб допомогти учням вашої громади здобути навички та знання, які підготують
+    їх до подальшого навчання та кар'єри, ознайомтеся з нашими безкоштовними веб-базованими
+    матеріалами!
+  hoc_how_to_step_districts_beyond_desc_01_v2: Інформатика не повинна закінчуватися
+    Годиною коду! Щоб допомогти учням вашої громади здобути навички та знання, які
+    підготують їх до подальшого навчання та кар'єри, ознайомтеся з різноманітними
+    навчальними програмами від партнерів Години Коду!
+  hoc_how_to_step_events_register_desc_01: Зареєструйте свою подію Години коду, щоб
+    отримати ранній доступ до інформації про нові заходи та спеціальні акції! Якщо
+    у заході візьмуть участь 300 або більше учнів, ви можете отримати спеціальний
+    набір для залучення з футболками, плакатами, наклейками на ноутбук тощо. [Поділіться
+    планом заходів для всієї школи] (%{share_url}), щоб отримати право на участь.
   hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
     to see your event, and know that your dedication is part of a worldwide movement.
   hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
@@ -15191,11 +15191,11 @@ uk:
   hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
     discuss these logistics with the teacher ahead of time to better understand their
     needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
+  hoc_how_to_step_volunteer_plan_list_01: Яка ваша роль як волонтера на заході? Якщо
+    ви працюєте в технічній сфері, вас можуть попросити поділитися особистим досвідом
+    чи історією. Чи можете ви допомогти вчителю підготуватися, виконавши вправу разом
+    заздалегідь? Чи можете ви ходити по класу, щоб відповідати на запитання або заохочувати
+    учнів під час Години коду?
   hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
     This can determine what times you need to be present and in what capacity.
   hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
@@ -15252,10 +15252,10 @@ uk:
     ask a parent to print at home. Show off their achievement and share photos and
     videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
     so we can highlight your success, too! (Publicity or privacy policies may apply.)'
-  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. To help, Hour of Code partners have diverse
-    curriculum offerings. Learn how to bring these offerings to schools today.
+  hoc_how_to_step_virtual_beyond_desc_01: Інформатика не повинна закінчуватися з Годиною
+    коду! Хоча 90% батьків хочуть, щоб їхні діти вивчали інформатику, у більшості
+    шкіл її досі не викладають. Щоб допомогти, партнери Години коду пропонують різноманітні
+    навчальні програми. Дізнайтеся, як принести ці пропозиції до шкіл вже сьогодні.
   hoc_ai_top_desc: Будь-хто може дізнатися про штучний інтелект, незалежно від того,
     чи ви студент у класі чи вчитель, який відкриває майбутнє навчання за допомогою
     штучного інтелекту та про нього.

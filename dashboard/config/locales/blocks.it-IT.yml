@@ -1991,7 +1991,7 @@ it:
             "{x1:0, x2:400, y1:0, y2:200}": In basso
             "{x1:0, x2:400, y1:150, y2:250}": Al centro
             "{x1:0, x2:400, y1:200, y2:400}": In alto
-        text: crea {NUM} nuovi {ANIMATION_NAME} sprite su {RANGE}
+        text: crea {NUM} nuovi {ANIMATION_NAME} personaggi {RANGE}
       ecosystems_randomLocationWithinRange:
         text: x min{X1}x max{X2}y min{Y1}y max{Y2}
       ecosystems_randomLocationWithinSelectedRange:

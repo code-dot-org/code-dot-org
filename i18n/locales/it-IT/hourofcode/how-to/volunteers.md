@@ -172,7 +172,7 @@ Dopo che gli studenti o gli ospiti hanno completato l'Ora del Codice, è il mome
 
 - [Condividi i certificati]({{ urls/certificates }}) per partecipanti e studenti.
 - [Stampa gli adesivi "Ho fatto un'Ora di Codice!""]({{ promote/resources_stickers }}) o trova altri premi e gadget sul [negozio Amazon di Code.org](https://code.org/shop).
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
 

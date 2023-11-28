@@ -1,4 +1,13 @@
 {
+  "allMessagesSentAreRecorded": "所有发送到 AI Chat 的消息都会被记录下来。",
+  "anythingPersonalCanNotBeSubmitted": "为了保护您的隐私，请勿提交任何个人信息（姓名、电话号码、地址等）给 AI chat。",
   "continue": "继续",
-  "waitingForChatResponse": "正在等待回应..."
+  "inappropriateMessagesAreFlagged": "系统将举报不当的消息并通知您的老师。",
+  "inappropriateUserMessage": "此消息已被标记为不当。",
+  "tooPersonalUserMessage": "此消息已被标记为涉及隐私。",
+  "userChatMessagePlaceholder": "添加聊天消息...",
+  "waitingForChatResponse": "正在等待回应...",
+  "warningModalHeader": "请负责任地聊天！",
+  "warningModalOkButtonText": "开始聊天",
+  "whatIsPersonalInformation": "什么被视为个人信息？"
 }
