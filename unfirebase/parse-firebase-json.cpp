@@ -267,7 +267,7 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
     numRecordBytesMutex.lock();
     if (bandwidthStartNumRecordBytes != 0) {
       uint64_t bytesTransferred = numRecordBytes - bandwidthStartNumRecordBytes;
-      double bytesPerSecond = bytesTransferred / bandwidthDuration;
+      double bytesPerSecond = bytesTransferred / bandwidthSamplingDuration;
       cout << "Current Bandwidth: "
            << "\033[1;35m"
            << (round(bytesPerSecond / (1000000.0) * 100) / 100)
