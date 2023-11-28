@@ -22,12 +22,16 @@ import {
   FieldKey,
   GeneratedEffect,
   MinMax,
-} from '../types';
+} from './types';
 import {
-  generateBlocks,
-  generateBlocksFromResult,
+  generateAiEffectBlocks,
+  generateAiEffectBlocksFromResult,
   generatePreviewCode,
+  getEmojiImageUrl,
   getLabelMap,
+  getRangeArray,
+  lerp,
+  useInterval,
 } from './utils';
 import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
@@ -86,50 +90,8 @@ const aiBotBodyThinkImages = [
   aiBotBodyThink2,
 ];
 
-// Adapted from https://overreacted.io/making-setinterval-declarative-with-react-hooks/
-function useInterval(callback: () => void, delay: number | undefined) {
-  const savedCallback = useRef<() => void>();
-
-  // Remember the latest callback.
-  useEffect(() => {
-    savedCallback.current = callback;
-  }, [callback]);
-
-  // Set up the interval.
-  useEffect(() => {
-    function tick() {
-      if (savedCallback.current) {
-        savedCallback.current();
-      }
-    }
-    if (delay !== undefined) {
-      const id = setInterval(tick, delay);
-      return () => clearInterval(id);
-    }
-  }, [delay]);
-}
-
 // How many emojis are to be selected.
 const SLOT_COUNT = 3;
-
-const getImageUrl = (id: string) => {
-  return `/blockly/media/dance/ai/emoji/${id}.svg`;
-};
-
-// Returns an array containing [min, min+1, min+2, ..., max]
-const getRangeArray = (min: number, max: number) => {
-  const len = max - min + 1;
-  const arr = new Array(len);
-  for (let i = 0; i < len; i++) {
-    arr[i] = min + i;
-  }
-  return arr;
-};
-
-// Linear interpolation.
-const lerp = (step: number, steps: number, min: number, max: number) => {
-  return (step / steps) * (max - min) + min;
-};
 
 interface DanceAiModalProps {
   playSound: (name: DanceAiSound, options?: object) => void;
@@ -284,7 +246,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const getLabels = () => {
     const tempWorkspace = new Workspace();
-    const blocksSvg = generateBlocks(tempWorkspace);
+    const blocksSvg = generateAiEffectBlocks(tempWorkspace);
 
     const foregroundLabels = getLabelMap(
       blocksSvg[0].getField('EFFECT') as FieldDropdown
@@ -500,7 +462,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       return;
     }
 
-    const blocksSvg = generateBlocksFromResult(
+    const blocksSvg = generateAiEffectBlocksFromResult(
       Blockly.getMainWorkspace(),
       generatedEffects.current.goodEffect
     );
@@ -1063,7 +1025,7 @@ const EmojiIcon: React.FunctionComponent<EmojiIconProps> = ({
       key={item.id}
       onClick={onClick}
       style={{
-        backgroundImage: `url(${getImageUrl(item.id)})`,
+        backgroundImage: `url(${getEmojiImageUrl(item.id)})`,
       }}
       className={classNames(
         moduleStyles.emojiIcon,

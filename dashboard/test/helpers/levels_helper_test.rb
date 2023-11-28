@@ -14,6 +14,7 @@ class LevelsHelperTest < ActionView::TestCase
   setup do
     @level = create(:maze)
     @game = Game.custom_maze
+    @is_start_mode = false
 
     def request
       OpenStruct.new(
@@ -108,7 +109,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'embed' is true for widget levels not in start mode" do
     @level = create(:applab, embed: false, widget_mode: true)
-    @is_start_mode = false
     assert blockly_options[:embed]
   end
 
@@ -360,6 +360,21 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
+  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    refute use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly otherwise' do
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
   test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
     Experiment.stubs(:enabled?).returns(true)
     @level = build :level
@@ -376,7 +391,17 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_optiond even if level uses google_blockly' do
+  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(false)
+    view_options(blocklyVersion: 'google')
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
     Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'cdo')
     @level = build :level
