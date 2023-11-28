@@ -821,6 +821,7 @@ en:
         dance_ai_intro_to_ai: Dance Party AI Edition Intro to AI
         dance_ai_how_ai_works: Dance Party AI Edition How AI Works
         dance_ai_event_at_measure: Dance Party AI Edition - At Measure Event
+        dance_ai_events_measure_noST: Dance Party AI Edition - Events At Measure no sub
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
