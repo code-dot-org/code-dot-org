@@ -130,12 +130,12 @@ UnconnectedAnimationUploadButton.propTypes = {
   shouldWarnOnAnimationUpload: PropTypes.bool.isRequired,
   isBackgroundsTab: PropTypes.bool.isRequired,
   // populated from redux
-  inRestrictedShareMode: PropTypes.bool,
-  teacherHasConfirmedUploadWarning: PropTypes.bool,
-  refreshInRestrictedShareMode: PropTypes.func,
-  refreshTeacherHasConfirmedUploadWarning: PropTypes.func,
-  showingUploadWarning: PropTypes.func,
-  exitedUploadWarning: PropTypes.func,
+  inRestrictedShareMode: PropTypes.bool.isRequired,
+  teacherHasConfirmedUploadWarning: PropTypes.bool.isRequired,
+  refreshInRestrictedShareMode: PropTypes.func.isRequired,
+  refreshTeacherHasConfirmedUploadWarning: PropTypes.func.isRequired,
+  showingUploadWarning: PropTypes.func.isRequired,
+  exitedUploadWarning: PropTypes.func.isRequired,
   currentUserType: PropTypes.string,
 };
 
