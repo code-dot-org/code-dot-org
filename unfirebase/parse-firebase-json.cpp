@@ -154,6 +154,7 @@ sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
 uint64_t unComittedRecords = 0;
 uint64_t totalRecordsCount = 0;
 atomic<uint64_t> numRecordBytes {0};
+uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
 
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
@@ -171,7 +172,8 @@ void loadData(string tsvFilename) {
 
   numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
-  cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB" << endl;
+  double percent = (round(100 * 100 * numRecordBytes / (double)originalJSONBytes) / 100);
+  cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB (~" << percent << "%)" << endl;
   numRecordBytesMutex.unlock();
 
   std::filesystem::remove(tsvFilename);
@@ -412,9 +414,18 @@ void parseFirebaseJSON(string filename) {
   loadDataBufferDir = "/tmp/" + filename + "-tsvs/";
   filesystem::create_directories(loadDataBufferDir);
 
-      if (ends_with(filename, ".gz")) {
+  originalJSONBytes = std::filesystem::file_size(filename);
+
+  if (ends_with(filename, ".gz")) {
     cerr << "WARNING: parsing gzipped file, this will be 2x slower due to "
             "rapidjson details" << endl;
+
+    // For percentage progress we assume the unzipped file
+    // is 10x. We're seeing a 10x compression ratio, and since
+    // our schema is relatively constant, this is probably
+    // accurate for most/much data 🤷‍♀️
+    originalJSONBytes *= 10;
+
     ifstream jsonFile(filename, ios::binary);
     boost::iostreams::filtering_istreambuf inbuf;
     inbuf.push(boost::iostreams::gzip_decompressor());
@@ -428,7 +439,7 @@ void parseFirebaseJSON(string filename) {
   }
   else {
     FILE *fp = fopen(filename.c_str(), "r");
-
+    
     char readBuffer[65536];
     FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     reader.Parse(is, handler);
