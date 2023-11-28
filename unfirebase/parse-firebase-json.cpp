@@ -61,8 +61,7 @@ sql::Connection *getDB() {
   return driver->connect(options);
 }
 
-string lastKey = "";
-uint depth = 0;
+
 
 const bool RAW_DEBUG = false;
 const bool FINE_DEBUG = false;
@@ -72,9 +71,10 @@ const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 
 const uint MAX_DEPTH = 256;
+uint depth = 0;
 
 std::vector<string> lastKeys = std::vector<string>(MAX_DEPTH);
-
+string lastKey = "";
 /*
 { // 1
   "v3": { // 2
@@ -151,15 +151,15 @@ void startChannel(string channelName) {
 
 // "INSERT INTO unfirebase VALUES (?, ?)"
 sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
-uint unComittedRecords = 0;
-uint totalRecordsCount = 0;
-atomic<uint> numRecordBytes {0};
+uint64_t unComittedRecords = 0;
+uint64_t totalRecordsCount = 0;
+atomic<uint64_t> numRecordBytes {0};
 std::mutex numRecordBytesMutex;
 
-const uint NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
+const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
 boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
-std::atomic<int> numDataJobsQueued {0};
+std::atomic<uint64_t> numDataJobsQueued{0};
 
 void loadData(string tsvFilename) {
   std::unique_ptr<sql::Statement> stmt(db->createStatement());
