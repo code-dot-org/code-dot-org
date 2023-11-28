@@ -74,7 +74,8 @@ def main
   puts geojson["features"]
   puts 'Done with map info'
   file = Tempfile.new(['hocevents', 'geojson'])
-  tiles = Tempfile.new(['hoctiles-dev', 'mbtiles'])
+  tiles = Tempfile.new([CDO.mapbox_upload_tileset, 'mbtiles'])
+  puts CDO.mapbox_upload_tileset
   file.write(JSON.pretty_generate(geojson))
   _stdout, stderr, tippecanoe_status = Open3.capture3(
     # Tippecanoe will generate a map that has a min zoom of 1 (approx the whole world),
@@ -87,7 +88,7 @@ def main
   puts stderr
   puts tippecanoe_status
   if tippecanoe_status.success?
-    upload_successful = upload_maptiles(tiles.path, 'hoctiles-dev')
+    upload_successful = upload_maptiles(tiles.path, CDO.mapbox_upload_tileset)
     puts 'Was it successful?'
     puts upload_successful
   end
