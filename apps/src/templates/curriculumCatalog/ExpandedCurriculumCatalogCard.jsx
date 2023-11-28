@@ -62,10 +62,14 @@ const ExpandedCurriculumCatalogCard = ({
     'Rubric',
   ];
 
+  const availableResourcesCount = availableResources
+    ? Object.keys(availableResources).length
+    : 0;
+
   let availableResourceCounter = 0;
 
   const displayDivider = () => {
-    return ++availableResourceCounter < Object.keys(availableResources).length;
+    return ++availableResourceCounter < availableResourcesCount;
   };
 
   useEffect(() => {
@@ -138,7 +142,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources && (
+                    {availableResourcesCount > 0 && (
                       <div>
                         <Heading4 visualAppearance="heading-xs">
                           {i18n.availableResources()}
