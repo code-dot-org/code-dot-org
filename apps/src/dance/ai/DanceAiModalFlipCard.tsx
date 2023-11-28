@@ -6,6 +6,7 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import AiBlockPreview from './AiBlockPreview';
 
 import {Mode, Toggle} from './types';
+import {getPreviewCode} from './utils';
 
 type DanceAiModalFlipCardProps = {
   mode: Mode;
@@ -14,7 +15,6 @@ type DanceAiModalFlipCardProps = {
   currentToggle: Toggle;
   previewAppearDuration: number;
   currentGeneratedEffect: any;
-  getPreviewCode: any;
   getGeneratedEffect: any;
 };
 
@@ -27,7 +27,6 @@ const DanceAiModalFlipCard: React.FunctionComponent<
   currentToggle,
   previewAppearDuration,
   currentGeneratedEffect,
-  getPreviewCode,
   getGeneratedEffect,
 }) => {
   // Visualization preview size, in pixels.

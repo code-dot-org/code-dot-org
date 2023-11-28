@@ -9,9 +9,9 @@ type AiModalItem = {
 
 interface DanceAiEmojiIconProps {
   item: AiModalItem;
-  handleItemClick?: (itemId: string, isItemAvailable: boolean) => void;
+  handleItemClick: (itemId: string, isItemAvailable: boolean) => void;
   className?: string;
-  isItemAvailable?: boolean;
+  isItemAvailable: boolean;
 }
 
 const DanceAiEmojiIcon: React.FunctionComponent<DanceAiEmojiIconProps> = ({

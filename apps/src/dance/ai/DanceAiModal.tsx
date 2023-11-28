@@ -13,7 +13,6 @@ import AiVisualizationPreview from './AiVisualizationPreview';
 import {
   AiFieldValue,
   AiOutput,
-  DanceAiModelItem,
   DanceAiSound,
   FieldKey,
   GeneratedEffect,
@@ -38,12 +37,10 @@ import color from '@cdo/apps/util/color';
 const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
 const i18n = require('../locale');
 
-import DanceAiEmojiIcon from './DanceAiEmojiIcon';
+import EmojiIcon from './EmojiIcon';
 import DanceAiModalHeader from './DanceAiModalHeader';
 import DanceAiModalFlipCard from './DanceAiModalFlipCard';
 import DanceAiModalEmojiInputGrid from './DanceAiModalEmojiInputGrid';
-
-import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
 import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
 import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
@@ -606,7 +603,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               id="flying-emoji"
               className={moduleStyles.flyingEmoji}
             >
-              <DanceAiEmojiIcon
+              <EmojiIcon
                 item={lastInputItem}
                 className={moduleStyles.emojiSlotIcon}
               />
@@ -647,7 +644,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             currentToggle={currentToggle}
             previewAppearDuration={previewAppearDuration}
             currentGeneratedEffect={currentGeneratedEffect}
-            getPreviewCode={getPreviewCode}
             getGeneratedEffect={getGeneratedEffect}
           />
         )}
@@ -670,7 +666,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
                     )}
                   />
 
-                  <DanceAiEmojiIcon
+                  <EmojiIcon
                     item={item}
                     className={moduleStyles.emojiSlotIcon}
                   />
