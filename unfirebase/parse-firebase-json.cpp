@@ -13,6 +13,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iostream>
+#include <mutex>
 #include <string>
 #include <thread>
 
@@ -153,6 +154,7 @@ sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
 uint unComittedRecords = 0;
 uint totalRecordsCount = 0;
 atomic<uint> numRecordBytes {0};
+std::mutex numRecordBytesMutex;
 
 const uint NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
@@ -166,9 +168,12 @@ void loadData(string tsvFilename) {
                 "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
                 "TERMINATED BY '\n';");
   stmt->execute("COMMIT;");
+
+  numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
   cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB"
-       << endl;
+  numRecordBytesMutex.unlock();
+
   std::filesystem::remove(tsvFilename);
 }
 
