@@ -3,23 +3,24 @@
 #include <fstream>
 #include <string>
 
-using namespace std;
-
 #include <rapidjson/reader.h>
 #include <rapidjson/filereadstream.h>
 #include <rapidjson/istreamwrapper.h>
 
+// We're using the ancient JDBC C++ api, because the new X DevAPI
+// requires the X Plugin to be enabled on the MySQL server, and
+// AWS RDS explicitly does not support that :-( Also, its not
+// enabled by default in MySQL 5.7 anyway, so ... whatevs
+//
+// Docs on the old API are here:
+// https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
+#include <mysql/jdbc.h>
+
+sql::Connection *db;
+
+using namespace std;
 using namespace rapidjson;
 
-// #include <mysqlx/xdevapi.h>
-
-// using namespace mysqlx;
-
-// Client cli("user:password@host_name/db_name", ClientOption::POOL_MAX_SIZE, 7);
-// Session sess = cli.getSession();
-
-// // use Session sess as usual
-// cli.close(); // close all Sessions
 
 string lastKey = "";
 uint depth = 0;
@@ -216,7 +217,6 @@ struct RawJSONHandler
 
     return true;
   }
-
 };
 
 inline bool ends_with(std::string const &value, std::string const &ending)
@@ -229,21 +229,12 @@ inline bool ends_with(std::string const &value, std::string const &ending)
 #include <boost/iostreams/filter/gzip.hpp>
 #include <boost/iostreams/filtering_streambuf.hpp>
 #include <boost/iostreams/copy.hpp>
-
-int main(int argc, char *argv[])
-{
-  if (argc != 2) {
-    cout << "Usage: " << argv[0] << " <json file>" << endl;
-    return 1;
-  }
-
-  string filename = argv[1];
-  cout << "parsing: " << filename << endl;
-
+void parseFirebaseJSON(string filename) {
   RawJSONHandler handler;
   Reader reader;
 
-  if (ends_with(filename, ".gz")) {
+  if (ends_with(filename, ".gz"))
+  {
     cerr << "WARNING: parsing gzipped file, this will be 2x slower due to rapidjson details" << endl;
     ifstream jsonFile(filename, ios::binary);
     boost::iostreams::filtering_istreambuf inbuf;
@@ -255,13 +246,71 @@ int main(int argc, char *argv[])
     IStreamWrapper isw(gzipStream);
 
     reader.Parse(isw, handler);
-  } else {
+  }
+  else
+  {
     FILE *fp = fopen(filename.c_str(), "r");
 
     char readBuffer[65536];
     FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     reader.Parse(is, handler);
   }
+}
+
+#define DEFAULT_URI 
+#define EXAMPLE_USER 
+#define EXAMPLE_PASS ""
+#define EXAMPLE_DB "test"
+
+int main(int argc, char *argv[])
+{
+  if (argc != 2) {
+    cout << "Usage: " << argv[0] << " <json file>" << endl;
+    return 1;
+  }
+
+  string filename = argv[1];
+  cout << "parsing: " << filename << endl;
+
+  cout << "Connecting to MySQL..." << endl;
+
+  const char *url = "tcp://localhost:3306";
+  const string user = "root";
+  const string password = "";
+  const string database = "unfirebase";
+
+  try {
+    //  get_driver_instance(), is not thread-safe. Either avoid invoking these methods from within multiple threads at once, or surround the calls with a mutex to prevent simultaneous execution in multiple threads.
+    sql::Driver *driver = sql::mysql::get_driver_instance();
+
+    db = driver->connect(url, user, password);
+    db->setSchema(database);
+
+    if (db->isValid()) {
+      cout << "Connected to MySQL!" << endl;
+    } else {
+      cerr << "Failed to connect to MySQL!" << endl;
+      return EXIT_FAILURE;
+    }
+
+    parseFirebaseJSON(filename);
+  }
+  catch (sql::SQLException &e)
+  {
+    cout << "# ERR: SQLException in " << __FILE__;
+    cout << "(" << "EXAMPLE_FUNCTION" << ") on line " << __LINE__ << endl;
+    cout << "# ERR: " << e.what();
+    cout << " (MySQL error code: " << e.getErrorCode();
+    cout << ", SQLState: " << e.getSQLState() << " )" << endl;
+
+    return EXIT_FAILURE;
+  }
+
+
+  db->close();
+  delete db;
+
+  cout << "DONE with parse-firebase-json!" << endl;
 
   // If you launch like:
   // `MallocStackLogging=1 ./parse lil-prod.json`
