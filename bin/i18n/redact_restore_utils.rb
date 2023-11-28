@@ -69,8 +69,9 @@ class RedactRestoreUtils
 
     if I18nScriptUtils.json_file?(source)
       source_data = I18nScriptUtils.parse_file(source)
-      redacted_data = I18nScriptUtils.parse_file(redacted)
       return unless source_data
+
+      redacted_data = I18nScriptUtils.parse_file(redacted)
       return unless redacted_data
 
       restored = RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)
@@ -82,11 +83,11 @@ class RedactRestoreUtils
     # un-redacted file keeps the English key. We need to extract the data inside the locale key to restore content.
     if I18nScriptUtils.yaml_file?(source)
       source_data = I18nScriptUtils.parse_file(source)
-      redacted_data = I18nScriptUtils.parse_file(redacted)
-
       return unless source_data
-      return unless redacted_data
       return unless source_data&.values&.first&.length
+
+      redacted_data = I18nScriptUtils.parse_file(redacted)
+      return unless redacted_data
       return unless redacted_data&.values&.first&.length
 
       restored = RedactRestoreUtils.restore_data(source_data.values.first, redacted_data.values.first, plugins, format)
