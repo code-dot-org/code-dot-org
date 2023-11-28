@@ -58,14 +58,6 @@ const DanceAiModalFlipCard: React.FunctionComponent<
     previewAreaClass = moduleStyles.previewAreaYes;
   }
 
-  if (
-    mode !== Mode.GENERATING &&
-    mode !== Mode.GENERATED &&
-    mode !== Mode.RESULTS
-  ) {
-    return null;
-  }
-
   return (
     <div
       id="preview-area"

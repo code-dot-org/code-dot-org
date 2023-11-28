@@ -40,6 +40,7 @@ const i18n = require('../locale');
 import DanceAiEmojiIcon from './DanceAiEmojiIcon';
 import DanceAiModalHeader from './DanceAiModalHeader';
 import DanceAiModalFlipCard from './DanceAiModalFlipCard';
+import DanceAiModalEmojiInputGrid from './DanceAiModalEmojiInputGrid';
 
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
 
@@ -283,29 +284,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     },
     [playSound]
   );
-
-  const emojiInputGrid = useMemo(() => {
-    if (mode !== Mode.SELECT_INPUTS) {
-      return null;
-    }
-    return (
-      <div id="inputs-area" className={moduleStyles.inputsArea}>
-        <div id="inputs-container" className={moduleStyles.inputsContainer}>
-          {inputLibraryJson.items.map(item => {
-            const isItemAvailable = !inputs.includes(item.id);
-            return (
-              <DanceAiEmojiIcon
-                key={item.id}
-                item={item}
-                handleItemClick={handleItemClick}
-                isItemAvailable={isItemAvailable}
-              />
-            );
-          })}
-        </div>
-      </div>
-    );
-  }, [mode, inputs, handleItemClick]);
 
   const startAi = useCallback(() => {
     generatedEffects.current = {
@@ -622,7 +600,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           </div>
         )}
 
-        {emojiInputGrid}
+        {mode === Mode.SELECT_INPUTS && (
+          <DanceAiModalEmojiInputGrid
+            selectedEmojis={selectedEmojis}
+            handleItemClick={handleItemClick}
+          />
+        )}
 
         <div id="bot-area" className={moduleStyles.botArea}>
           {mode === Mode.SELECT_INPUTS && lastInputItem && (
@@ -662,16 +645,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           )}
         </div>
 
-        <DanceAiModalFlipCard
-          mode={mode}
-          generatingProgressStep={generatingProgress.step}
-          badGeneratedResultsCount={BAD_GENERATED_RESULTS_COUNT}
-          currentToggle={currentToggle}
-          previewAppearDuration={previewAppearDuration}
-          currentGeneratedEffect={currentGeneratedEffect}
-          getPreviewCode={getPreviewCode}
-          getGeneratedEffect={getGeneratedEffect}
-        />
+        {(mode === Mode.GENERATING ||
+          mode === Mode.GENERATED ||
+          mode === Mode.RESULTS) && (
+          <DanceAiModalFlipCard
+            mode={mode}
+            generatingProgressStep={generatingProgress.step}
+            badGeneratedResultsCount={BAD_GENERATED_RESULTS_COUNT}
+            currentToggle={currentToggle}
+            previewAppearDuration={previewAppearDuration}
+            currentGeneratedEffect={currentGeneratedEffect}
+            getPreviewCode={getPreviewCode}
+            getGeneratedEffect={getGeneratedEffect}
+          />
+        )}
 
         {mode === Mode.GENERATED && (
           <div id="check-area" className={moduleStyles.checkArea}>
