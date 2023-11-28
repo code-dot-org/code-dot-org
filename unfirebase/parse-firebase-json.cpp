@@ -130,13 +130,13 @@ std::atomic<int> numDataJobsQueued {0};
 
 void loadData(string tsvFilename) {
   std::unique_ptr<sql::Statement> stmt(db->createStatement());
-  cout << "LOADING DATA from " << tsvFilename << endl;
+  cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
   stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
                 "' INTO TABLE unfirebase FIELDS TERMINATED BY '\t' LINES "
                 "TERMINATED BY '\n';");
+  stmt->execute("COMMIT;");
   numRecordBytes += std::filesystem::file_size(tsvFilename);
   std::filesystem::remove(tsvFilename);
-  cout << "DONE LOADING " << tsvFilename << endl;
 }
 
 boost::atomic<bool> done(false);
@@ -215,7 +215,7 @@ void endChannel() {
     writer = nullptr;
     writerBuffer = nullptr;
   } else {
-    insertIntoFirebase(currentChannelName, "booobooobear");
+    insertIntoFirebase(currentChannelName, "{ 'FAKE': 'DATA IS FAKE'}");
   }
 
   if (FINE_DEBUG) cout << "END CHANNEL " << currentChannelName << endl;
@@ -445,7 +445,7 @@ int main(int argc, char *argv[]) {
       parseFirebaseJSON(filename);
     }
     filesystem::remove_all(loadDataBufferDir);
-    
+
   } catch (sql::SQLException &e) {
     cout << "# ERR: SQLException in " << __FILE__ << "on line " << __LINE__ << endl;
     cout << "# ERR: " << e.what();
