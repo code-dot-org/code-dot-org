@@ -13,10 +13,28 @@ See: https://docs.brew.sh/FAQ#can-i-edit-formulae-myself
 6. Verify the jdbc.h header is now installed: `ls /opt/homebrew/include/mysql/jdbc.h`
 7. For docs on using the legacy jdbc.h API see: https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
 
-## Build parse-json-firebase
+## Install mac deps
 1. `brew install rapidjson boost`
-2. make
-3. ./parse-firebase-json lil-prod.json
+
+
+# For Linux:
+
+## Install linux deps
+1. `apt-get install clang rapidjson-dev libboost-iostreams-dev build-essential libboost-system-dev`
+
+## Same problem, need to build from source to get -DWITH_JDBC=ON
+1. `git clone https://github.com/mysql/mysql-connector-cpp.git`
+2. cd mysql-connector-cpp
+3. `cmake -DCMAKE_INSTALL_LIBDIR=lib -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DWITH_JDBC=ON .`
+4. `cmake --build .`
+5. `sudo cmake --build . --target install`
+6. This is super annoying but I haven't figured out how to fix it with proper build args to the cmake, and this is limited use so here's the hack: `sudo mv /usr/local/lib64/libmysqlcppconn* /usr/local/lib`
+7. `sudo ldconfig`
+
+
+# For everyone:
 
 You can use the `get-latest-firebase-data.sh` script to fetch the latest backup from firebase.
 
+1. make
+2. ./parse-firebase-json lil-prod.json

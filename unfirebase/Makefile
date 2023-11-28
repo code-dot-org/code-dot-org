@@ -1,2 +1,2 @@
 parse-firebase-json: parse-firebase-json.cpp Makefile
-	c++ -O3 -std=c++17 -Wc++17-extensions -g -lboost_system -lboost_iostreams -lmysqlcppconn -L /opt/homebrew/lib -I /opt/homebrew/include/ -o parse-firebase-json parse-firebase-json.cpp
+	clang++ -O3 -std=c++17 -g -pthread -L /usr/local/lib -L /opt/homebrew/lib -I /opt/homebrew/include/ -o parse-firebase-json parse-firebase-json.cpp -lboost_system -lboost_iostreams -lmysqlcppconn
