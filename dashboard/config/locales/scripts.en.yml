@@ -13801,3 +13801,55 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapter 1: Creating Webpages'
+            lessonGroup-3:
+              display_name: 'Chapter 2: Multi-page Websites'
+          title: Unit 2 - Web Development ('23-'24)
+          description: |-
+            In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
+
+            ::: details [**Chapter 1 Overview**]
+            **Description:** Students use computing as a form of self expression as they design and develop basic web pages.   Focusing on the tags, keywords, and syntax used to communicate instructions to the computer, students use HTML to structure the content of a web page. They also explore the privacy and intellectual property implications of publishing their work online.
+
+            **Goals:**
+            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
+            * Create a website as a form of personal expression.
+            * Use different programming languages to solve different problems.
+            * Examine their role and responsibilities as both creators and consumers of digital media.
+
+            **Big Questions:**
+            * Why do people create websites?
+            * How can text communicate content, structure, and style on a web page?
+            * How do I safely and appropriately make use of the content published on the Internet?
+            * What strategies can I use when coding to find and fix issues?
+            :::
+
+            ::: details [**Chapter 2 Overview**]
+            **Description:** Students expand their ideas of websites beyond personal expression and begin to see them as a way to solve problems.  Students build on their collaborative skills and work in teams to create multi-page websites that solve a problem.
+
+            **Goals:**
+            * Create digital artifacts that use multiple computer languages to control the structure and style of their content.
+            * Create a website that solves a problem.
+            * Use different programming languages to solve different problems.
+            * Examine their role and responsibilities as both creators and consumers of digital media.
+
+            **Big Questions:**
+            * How can websites be used to address problems in the world?
+            * What strategies can teams use to work better together?
+            * How do I know what information can be trusted online?
+            :::
+
+
+            ::: details [**Implementation Guidance for Web Development**]
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)
+            - You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit
+            :::
+
+            ## Finished Teaching This Unit?
+            Answer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went.
+          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          description_short: " Learn to build your own web site in Web Lab."
+          description_audience: ''
