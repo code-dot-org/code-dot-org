@@ -32,6 +32,8 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
+      Dancelab_ai:
+        text: "{IMAGE}gerar {VALUE} efeito"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -627,6 +629,7 @@ pt:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Pétalas florescentes
             '"circles"': Túnel
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
@@ -634,6 +637,7 @@ pt:
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fogos de artifício
             '"flowers"': Flores
+            '"frosted_grid"': Malha congelada
             '"galaxy"': Espaço
             '"growing_stars"': Estrelas em crescimento
             '"kaleidoscope"': Caleidoscópio
@@ -655,17 +659,27 @@ pt:
             '"swirl"': Hipno
             '"text"': Título da música
           PALETTE:
+            '"autumn"': Outono
             '"cool"': Tons de azul
             '"default"': Claro
             '"electronic"': Electrônica
+            '"grayscale"': Escala cinza
             '"iceCream"': Sorvete
             '"neon"': Néon
             '"ocean"': Oceano
             '"rainbow"': Arco-íris
             '"rave"': Preto e branco
+            '"roses"': Rosas
+            '"sky"': Céu
+            '"spring"': Primavera
+            '"summer"': Verão
+            '"sunrise"': Nascer do sol
+            '"sunset"': Pôr do sol
             '"tropical"': Tropical
+            '"twinkling"': Cintilante
             '"vintage"': Vintage
             '"warm"': Tons de vermelho
+            '"winter"': Inverno
         text: definir o efeito do plano de fundo {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
@@ -1105,6 +1119,13 @@ pt:
         text: "{SPRITE}diga{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gás
+            '"liquid"': líquido
+            '"solid"': sólido
+        text: if {CONDITION}{SPRITE} {STATEMENT}
       KatiesBlocks_tumbling:
         text: em queda
       Mikelab_addBehaviorSimple:

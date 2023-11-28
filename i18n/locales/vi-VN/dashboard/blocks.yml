@@ -1722,6 +1722,12 @@ vi:
         text: tọa độ y của nhân vật {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': rắn
+            '"liquid"': lỏng
+            '"gas"': khí
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

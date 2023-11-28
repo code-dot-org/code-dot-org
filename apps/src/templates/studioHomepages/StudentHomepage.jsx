@@ -21,7 +21,6 @@ export default class StudentHomepage extends Component {
     sections: shapes.sections,
     canViewAdvancedTools: PropTypes.bool,
     studentId: PropTypes.number.isRequired,
-    isEnglish: PropTypes.bool.isRequired,
     showVerifiedTeacherWarning: PropTypes.bool,
     showDeprecatedCalcAndEvalWarning: PropTypes.bool,
   };
@@ -37,7 +36,6 @@ export default class StudentHomepage extends Component {
       sections,
       topCourse,
       hasFeedback,
-      isEnglish,
       showVerifiedTeacherWarning,
       showDeprecatedCalcAndEvalWarning,
     } = this.props;
@@ -62,7 +60,7 @@ export default class StudentHomepage extends Component {
               dismissible={false}
             />
           )}
-          {isEnglish && <SpecialAnnouncement isTeacher={false} />}
+          {<SpecialAnnouncement />}
           {showVerifiedTeacherWarning && (
             <Notification
               type={NotificationType.failure}

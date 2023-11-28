@@ -647,6 +647,8 @@ sl:
             '"left"': levo
             '"right"': desno
             '"space"': vesolje
+      KatiesBlocks_goldilocks:
+        text: Če
       Mikelab_changePropBy:
         options:
           PROPERTY:

@@ -6,6 +6,9 @@
           "rubric_performance_level_1": "Cała treść jest zwarta w tagach, używa tagów akapitów, nagłówków o różnych wielkościach, oraz co najmniej jednej listy w logicznie spójny sposób.",
           "rubric_performance_level_2": "Cała treść zawarta jest w tagach, używa tagów akapitów, nagłówków i listy w rozsądny sposób."
         },
+        "CSD U2 classes haikus_2023": {
+          "rubric_performance_level_1": "Klasa i zestaw reguł zostały poprawnie stworzone, zawarte są wszystkie elementy wybranego haiku, a w zestawach reguł znajdują się co najmniej trzy reguły"
+        },
         "CSD U2L2 - PracC_2023": {
           "rubric_key_concept": "Użyj poprawnej składni HTML, aby stworzyć akapity",
           "rubric_performance_level_1": "Cały tekst jest zawarty pomiędzy tagami akapitów. Właściwa strona internetowa odpowiada podglądowi w instrukcjach poziomu.",

@@ -653,6 +653,7 @@ ko:
         csc-ecosystems-intro: 해양 생태계 시뮬레이션
         what-is-creativity: 창의력이란?
         code-break: 코드 브레이크 선택
+        csd_ml_how_ai_works: AI 작동방법
     callout:
       text:
         drag_blocks: '"움직이기" 블럭을 끌어다가 다른 블럭의 아래에 탁 붙여보세요.'

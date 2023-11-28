@@ -3,6 +3,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 $(document).ready(() => {
+  analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT);
+
   document
     .getElementById('signup_form_submit')
     .addEventListener('click', () => {

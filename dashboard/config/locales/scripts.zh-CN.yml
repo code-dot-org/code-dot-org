@@ -7711,6 +7711,20 @@ zh-CN:
           student_description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
             \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
           title: 模块1：准备问题解决和计算教学
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模块2：准备Web开发教学
+        self-paced-pl-csd-unit3-2-2023:
+          description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+          student_description: "这个专业学习模块旨在帮助你准备Code.org的互动动画和游戏单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
+            \  认识互动动画和游戏。\n-   实践单元中包含的关键概念。\n-   参与游戏实验室。\n-   探索章节结尾项目。\n\n**建议时间：**
+            120分钟"
+          title: 准备互动动画和游戏教学
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 模块4：准备设计进程教学"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模块5：准备数据和社会教学
         self-paced-pl-csd1-2021:
           description: "本模块简要介绍了 Code.org 和本专业学习课程。 \n\n**你会：**\n\n\\-获取 Code.org
             和 CS Discovery 的简介。\n\\-学习如何参与这门专业学习课程。\n\n**建议时间：** 10 分钟"

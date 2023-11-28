@@ -1769,6 +1769,15 @@ es:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sólido
+            '"liquid"': líquido
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: cayendo
       Mikelab_addBehaviorSimple:

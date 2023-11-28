@@ -690,6 +690,12 @@ es:
       image_alt: 'La caricatura de una persona sosteniendo un enorme lápiz y dibujando un triángulo.'
     conditionals:
       image_alt: 'Dos manos barajando un mazo de cartas.'
+    course2:
+      image_alt: 'Un collage de rompecabezas de Code.org que muestra a un mago verde, un artista y un pez naranja.'
+    course3:
+      image_alt: 'Un collage de rompecabezas de Code.org que muestra un juego, un zombi y un ninja.'
+    coursec:
+      image_alt: ''
     dance-2019:
       title: 'Fiesta de Baile'
     dance:

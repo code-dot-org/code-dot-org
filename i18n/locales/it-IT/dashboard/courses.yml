@@ -120,6 +120,8 @@ it:
           title: Investigazione Curriculare di CS Discoveries
         self-paced-pl-csp-2023:
           title: Insegnare i Principi Informatici
+        self-paced-pl-csd-unit2-2023:
+          title: Insegnamento dello Sviluppo Web
     resources:
       curriculum/csd/2017:
         name: Curriculum
@@ -185,6 +187,8 @@ it:
         name: Tutti gli standard
       all_vocabulary_2/csd/2023:
         name: Tutte le voci di glossario
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/167tFcyJ1QsTsbgoFC_3DlkvYGXPPPsYmfIn64q-Ht8o/view
       csd_guide_to_differentiation_1/csd/2023:
         name: Guida alla differenziazione
       csd_guide_to_using_resources_1/csd/2023:

@@ -1526,6 +1526,7 @@
   header_report_abuse: "Segnala abuso"
   header_legal: "Privacy & Legale"
   header_legal_privacy: "Informativa sulla privacy"
+  header_legal_cookie_notice: "Informativa sui cookie"
   header_legal_tos: "Termini di servizio"
   header_tutorials: "Corsi"
   header_screen_reader_hamburger: "Menu"

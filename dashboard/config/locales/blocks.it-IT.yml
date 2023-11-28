@@ -2,6 +2,21 @@
 it:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': abbastanza
+            '"too little"': troppo poco
+            '"too much"': troppo
+        text: |2-
+           se {CONDITION}{SPRITE}
+          {STATEMENT}
+      AmysBlocks_goldilocksElse:
+        text: |2-
+           se troppo{SPRITE}
+          {STATEMENT}altrimenti se abbastanza
+          {STATEMENT3}altrimenti se troppo poco
+          {STATEMENT2}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -28,6 +43,8 @@ it:
             '2.00': grande
             '3.00': Extra Large
         text: imposta la dimensione di {SPRITE} a {SIZE}
+      Dancelab_ai:
+        text: "{IMAGE}generare {VALUE} effetti"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -415,7 +432,7 @@ it:
         options:
           COSTUME:
             '"ALIEN"': alieno
-            '"BEAR"': Orso
+            '"BEAR"': orso
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
@@ -444,7 +461,7 @@ it:
         options:
           COSTUME:
             '"ALIEN"': alieno
-            '"BEAR"': Orso
+            '"BEAR"': orso
             '"CAT"': gatto
             '"DOG"': cane
             '"DUCK"': un'anatra
@@ -617,6 +634,7 @@ it:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Petali in fiore
             '"circles"': Tunnel
             '"clouds"': Nuvole
             '"color_cycle"': Colori
@@ -625,6 +643,7 @@ it:
             '"disco_ball"': Palla da discoteca
             '"fireworks"': Fuochi d'artificio
             '"flowers"': Fiori
+            '"frosted_grid"': Griglia satinata
             '"galaxy"': Spazio
             '"growing_stars"': Stelle nascenti
             '"higher_power"': Higher Power
@@ -647,17 +666,27 @@ it:
             '"swirl"': Ipnotico
             '"text"': Titolo della canzone
           PALETTE:
+            '"autumn"': Autunno
             '"cool"': Blu
             '"default"': Chiaro
             '"electronic"': Elettronica
+            '"grayscale"': Scala di grigi
             '"iceCream"': Gelati
             '"neon"': Neon
             '"ocean"': Oceano
             '"rainbow"': Arcobaleno
             '"rave"': Bianco e nero
+            '"roses"': Rose
+            '"sky"': Cielo
+            '"spring"': Primavera
+            '"summer"': Estate
+            '"sunrise"': Alba
+            '"sunset"': Tramonto
             '"tropical"': Tropicale
+            '"twinkling"': Scintillante
             '"vintage"': Vintage
             '"warm"': Rossi
+            '"winter"': Inverno
         text: |-
           imposta effetto di sfondo
           {PALETTE} {EFFECT}
@@ -1098,6 +1127,15 @@ it:
         text: "{SPRITE} dice {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} scivola a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': liquido
+            '"solid"': solido
+        text: |2-
+           se {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: ruzzolando
       Mikelab_addBehaviorSimple:
@@ -1138,6 +1176,8 @@ it:
             "{x: 300, y: 200}": a destra
             "{x: 300, y: 300}": in basso a destra
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Casuale
+      Mikelab_destroy:
+        text: elimina {SPRITE}
       Mikelab_getAnim:
         text: "{SPRITE} [COSTUME][1]"
       Mikelab_getNext:
@@ -1363,10 +1403,10 @@ it:
             '"y"': posizione y
       Mikelab_setupSim:
         text: |-
-          imposta simolazione con
+          imposta simulazione con
           {SPRITE1N}{SPRITE1COSTUME}velocità{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}velocità{SPRITE2SPEED}
-          raccolta
+          raccogliendo
           {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
@@ -1914,6 +1954,19 @@ it:
             left: sinistra ↺
             right: destra ↻
         text: gira a {DIR}
+      ecosystems_catchMe:
+        text: cattura {THIS}
+      ecosystems_eat:
+        text: mangia {THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': abbastanza
+            '"too little"': troppo poco
+            '"too much"': troppo
+        text: |2-
+           se {CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1928,6 +1981,24 @@ it:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: 'crea {N} nuovo {GROUP} tra la posizione x: {X} y: {Y}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: crea {NUM} nuovi {ANIMATION_NAME} personaggi su {LOCATION_GENERATOR}
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": In basso
+            "{x1:0, x2:400, y1:150, y2:250}": Al centro
+            "{x1:0, x2:400, y1:200, y2:400}": In alto
+        text: crea {NUM} nuovi {ANIMATION_NAME} sprite su {RANGE}
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": In basso
+            "{x1:0, x2:400, y1:200, y2:400}": In alto
       gamelab_addBehaviorSimple:
         text: il personaggio {SPRITE} inizia {BEHAVIOR}
       gamelab_addTarget:
@@ -2143,6 +2214,8 @@ it:
             '"y"': y
             '"z"': z
         text: "{CONDITION} {KEY} premuto"
+      gamelab_layoutGrid:
+        text: disponi i personaggi come in una griglia
       gamelab_layoutSprites:
         options:
           FORMAT:
@@ -2211,6 +2284,7 @@ it:
             '100': grande
             '30': piccolo
             '50': mediamente
+        text: crea {NUM} {COSTUME} di {SIZE} per i nuovi personaggi
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -2245,7 +2319,7 @@ it:
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": accento
-            "'sound://category_animals/bear.mp3'": Orso
+            "'sound://category_animals/bear.mp3'": orso
             "'sound://category_animals/cat.mp3'": gatto
             "'sound://category_animals/chick.mp3'": pulcino
             "'sound://category_animals/chicken.mp3'": pollo
@@ -2348,7 +2422,7 @@ it:
       gamelab_resetTimer:
         text: azzera il timer
       gamelab_setAnimation:
-        text: "{THIS} usa il costume {ANIMATION}"
+        text: cambia il costume {THIS} a {ANIMATION}
       gamelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       gamelab_setBackgroundImage:
@@ -2385,7 +2459,7 @@ it:
               fluttuante
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': isola
               con alberi
-            '"https://studio.code.org/blockly/media/skins/studio/background.png"': corte
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': tribunale
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': deserto
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': griglia
@@ -2441,19 +2515,22 @@ it:
       gamelab_setSpeed_dropdown:
         options:
           SIZE:
+            '1': extra lento
             '3': lenta
             '5': normale
             '7': veloce
+            '9': extra veloce
+        text: imposta la velocità di {SPRITE} su {SIZE}
       gamelab_setTint:
         text: colora {THIS} di {COLOR}
       gamelab_setupScoreboard:
         text: "disegna un tabellone segnapunti \n{SPRITE1COSTUME}punteggio{VAR1}{SPRITE2COSTUME}punteggio{VAR2}obiettivo{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
-          imposta simolazione con
+          imposta simulazione con
           {SPRITE1N}{SPRITE1COSTUME}velocità{SPRITE1SPEED}
           {SPRITE2N}{SPRITE2COSTUME}velocità{SPRITE2SPEED}
-          raccolta
+          raccogliendo
           {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: mostra schermata introduttiva {BREAK} titolo {TITLE} testo {SUBTITLE}
@@ -2467,6 +2544,41 @@ it:
         text: "{SPRITE} dice {SPEECH}"
       gamelab_spriteSayTime:
         text: "{SPRITE}dice{TEXT1}per{NUM}secondi"
+      gamelab_spriteThink:
+        text: "{SPRITE} pensa {SPEECH}"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}pensa{TEXT1}per{NUM}secondi"
+      gamelab_spriteThink_fables2:
+        options:
+          THOUGHT:
+            '"Hmm..."': Uhm...
+            '"I am actually a wolf."': In realtà sono un lupo.
+            '"She''ll never recognize me now."': Ora non mi riconoscerà più.
+            '"This costume keeps me warm."': Questo costume mi tiene al caldo.
+            '"Time to make friends with the sheep."': È ora di fare amicizia con le
+              pecore.
+        text: "{SPRITE} pensa {THOUGHT}"
+      gamelab_spriteThink_fables3:
+        options:
+          THOUGHT:
+            '"Hmm..."': Uhm...
+            '"I''m feeling sleepy."': Mi sento assonnata.
+            '"I''ve done this race before."': Ho già fatto questa gara.
+            '"My feet are bigger than Turtle''s feet."': I miei piedi sono più grandi
+              dei piedi della Tartaruga.
+            '"No one could ever beat me."': Nessuno potrebbe mai battermi.
+        text: "{SPRITE} pensa {THOUGHT}"
+      gamelab_spriteThink_fables4:
+        options:
+          THOUGHT:
+            '"Hmm..."': Uhm...
+            '"I''ll trick everyone into giving me their food."': Farò in modo che
+              tutti mi diano da mangiare.
+            '"I''m a visitor in this town."': In questa città sono un visitatore.
+            '"I''m so hungry."': Ho tanta fame.
+            '"If we share, we''ll all have something to eat. "': Se condividiamo,
+              avremo tutti qualcosa da mangiare.
+        text: "{SPRITE} pensa {THOUGHT}"
       gamelab_startAvoiding:
         text: "{SPRITE} inizia ad evitare {TARGET}"
       gamelab_startFollowing:
@@ -2521,7 +2633,7 @@ it:
       gamelab_whenRightArrow:
         text: quando viene premuta la freccia a destra
       gamelab_whenSpriteCreated:
-        text: quando {SPRITE} è stato creato
+        text: quando {SPRITE} viene creato
       gamelab_whenTouching:
         text: quando {SPRITE1} tocca {SPRITE2}
       gamelab_whenUpArrow:

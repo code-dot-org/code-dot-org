@@ -5,20 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Interactive Animations and Games Mini-Projects 
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
+##### **Mini-projects** are smaller projects that appear throughout the unit. These projects act as checkpoints in the curricula and cover a smaller set of skills than the entire unit. We recommend using these opportunities for formative assessment.
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; "><strong>Mini-projects</strong> are smaller projects that appear throughout the unit. These projects act as checkpoints in the curricula and cover a smaller set of skills than the entire unit. We recommend using these opportunities for formative assessment.
-</p></div>
 
 ## Overview of Mini-Projects
 
-##### Click the dropdown arrows below to view mini-project overviews.
+###### Click the dropdown arrows below to view mini-project overviews.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 7: Mini-Project - Robot Faces</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/4b4d8ef65e3e8679481e8907162a02a7-image-1680741010890.gif" alt="Image of exemplar project guide" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; margin-bottom:50px;">
+<img src="https://images.code.org/4b4d8ef65e3e8679481e8907162a02a7-image-1680741010890.gif" alt="Image of exemplar robot faces of different sizes, shapes, and colors" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; margin-bottom:50px;">
 
 **Question of the Day:** How can we use shapes, variables, and randomness to express our creativity?
 
@@ -28,7 +26,7 @@ Students are introduced to their first creative project of the unit. Using the p
 
 **Students will be able to:** 
 * Use a structured process to plan and develop a program.
-* Apply variables, shapes, and ranomNumber concepts to create a program.
+* Apply variables, shapes, and `randomNumber` concepts to create a program.
 
 <a href="https://studio.code.org/s/csd3-2023/lessons/7" target="blank" rel="noopener noreferrer" >Lesson Plan</a>
 </p></div>
@@ -38,7 +36,7 @@ Students are introduced to their first creative project of the unit. Using the p
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 11: Mini-Project - Captioned Scenes</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-<img src="https://images.code.org/69d4c5e7daab8d72cf54e246417083d1-image-1680741490576.png" alt="Image of sample websites" width="250px" style="float:left; margin-left:20px;  padding-right: 30px; margin-bottom:30px;">
+<img src="https://images.code.org/69d4c5e7daab8d72cf54e246417083d1-image-1680741490576.png" alt="Image of a sample captioned scene" width="250px" style="float:left; margin-left:20px;  padding-right: 30px; margin-bottom:30px;">
 
 **Question of the Day:** How can we use Game Lab to express our creativity?
 
@@ -58,7 +56,7 @@ Students work on their next creative project of the unit. Using the problem-solv
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 14: Mini-Project - Animation</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/62b46f2e657246feba70b719b1d7f3df-image-1680741746375.gif" alt="Image of sample websites" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
+<img src="https://images.code.org/62b46f2e657246feba70b719b1d7f3df-image-1680741746375.gif" alt="Image of a sample animation" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
 
 **Question of the Day:** How can we combine different programming patterns to make a complete animation?
 
@@ -78,7 +76,7 @@ This lesson is a chance for students to get more creative with what they have le
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 21: Mini-Project - Side Scroller</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/d53c6788cea810550e682e91c1af6142-image-1680742268857.gif" alt="Image of sample websites" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
+<img src="https://images.code.org/d53c6788cea810550e682e91c1af6142-image-1680742268857.gif" alt="Image of sample a sample side scroller game" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
 
 **Question of the Day:** How can the new types of sprite movement and collision detection be used to create a game?
 
@@ -98,7 +96,7 @@ This lesson is a chance for students to get more creative with what they have le
     <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 24: Mini-Project - Flyer Game</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
-<img src="https://images.code.org/7dc70e76e75bf1a7cd84264ea4ec97c1-image-1680742538851.gif" alt="Image of sample websites" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
+<img src="https://images.code.org/7dc70e76e75bf1a7cd84264ea4ec97c1-image-1680742538851.gif" alt="Image of sample flyer game" width="250px" style="float:left; margin-left:10px;  padding-right: 30px; padding-bottom:20px;">
 
 **Question of the Day:** How can the new types of collisions and modeling movement be used to create a game?
 
@@ -119,14 +117,4 @@ This lesson is another chance for students to get more creative with what they h
 ## Pacing Recommendation
 
 ##### Though they are only scoped for a single day, teachers may decide to extend these projects as a way to support or challenge students. Extending these projects may allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. 
-
-![]()
-
-![]()
-
-![]()
-
-![]()
-
-![]()
 MARKDOWN

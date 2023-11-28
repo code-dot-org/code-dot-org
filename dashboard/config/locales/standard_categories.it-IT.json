@@ -33,7 +33,7 @@
           "description": "Reti neurali: struttura di una rete neurale"
         },
         "3-B-ii": {
-          "description": "Reti neurali: regolazione del peso"
+          "description": "Reti neurali: regolazione della ponderazione"
         },
         "3-C-i": {
           "description": "Set di dati - set di funzionalità"

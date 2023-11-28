@@ -1068,6 +1068,12 @@ cs:
         text: "{SPRITE}řekni{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plyn
+            '"liquid"': kapalina
+            '"solid"': pevná látka
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

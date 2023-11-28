@@ -2304,7 +2304,12 @@
           "definition": "Tindakan yang menyebabkan terjadinya sesuatu."
         },
         "program/dance-ai/2023": {
-          "word": "Program"
+          "word": "Program",
+          "definition": " Sebuah algoritma yang telah dikodekan menjadi sesuatu yang dapat dijalankan oleh mesin."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Artificial Intelligence (A.I.) ",
+          "definition": "Sebuah program komputer yang mengambil data, mempelajari pola dari data tersebut, lalu membuat keputusan berdasarkan apa yang telah dipelajarinya."
         }
       }
     }

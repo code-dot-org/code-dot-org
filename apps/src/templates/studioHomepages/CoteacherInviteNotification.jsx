@@ -15,7 +15,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const showCoteacherInviteNotification = coteacherInvite => {
-  return !!coteacherInvite && DCDO.get('show-coteacher-ui', false);
+  return !!coteacherInvite && DCDO.get('show-coteacher-ui', true);
 };
 
 const CoteacherInviteNotification = ({

@@ -211,6 +211,7 @@ sv:
   for_students_teacher_led_learning: 'För studenter: Lärarstyrt lärande'
   for_students_teacher_led_lessons: 'För studenter: Lärarledda lektioner'
   professional_development: Professionell utveckling
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -309,6 +310,8 @@ sv:
   call_to_action_try_hoc_ai_activities: Prova Hour of Code AI-aktiviteter
   call_to_action_explore_activities: Utforska aktiviteter
   call_to_action_explore_ai: Utforska AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Utforska verktyg
   call_to_action_explore_unit: Utforska enheten
   call_to_action_explore_curriculum: Utforska läroplanen
   call_to_action_explore_curricula: Utforska läroplaner
@@ -526,7 +529,7 @@ sv:
   aria_label_call_to_action_minecraft_designer: Get started with Minecraft Designer
   aria_label_call_to_action_minecraft_designer_lesson: View Minecraft Designer lesson
     plan
-  aria_label_call_to_action_minecraft_2023: Get started with Minecraft Generation
+  aria_label_call_to_action_minecraft_2023: Kom igång med Minecraft Generationens
     AI
   aria_label_call_to_action_minecraft_2022: Get started with Minecraft Escape Estate
   aria_label_call_to_action_minecraft_2021: Get started with Minecraft TimeCraft
@@ -682,6 +685,7 @@ sv:
   module_label_accessibility_features_full: 'Tillgänglighet Funktioner:'
   module_label_educator_tool: Verktyg för pedagog
   module_label_educator_course: Utbildare kurs
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Student verktyg
   module_label_student_product: Produkt
   module_label_student_content_resources: Innehåll & resurser
@@ -690,6 +694,7 @@ sv:
   module_label_available_now: Tillgängligt nu
   module_label_video_series: Video-serien
   module_label_self_paced: Modulen i egen takt
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -980,7 +985,7 @@ sv:
     you can learn basic computer science skills to create your own Minecraft game
     to share with others!
   minecraft_education_activities_heading: Available in Minecraft Education
-  minecraft_education_activity_title_2023: Minecraft Generation AI
+  minecraft_education_activity_title_2023: Minecraft-generationens AI
   minecraft_education_activity_desc_2023: Venture through time to create your AI-powered
     inventions! The new Minecraft Hour of Code tutorial is now available in Minecraft
     Education for Windows, Mac, Chromebook, iPad and Mobile. Get started with free
@@ -3516,19 +3521,14 @@ sv:
   tutorial_csfirstdialogue_name: Dialog
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters: Social Distancing Sprites'
-  tutorial_itchspace_name: 'ItchCode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magi
   tutorial_vidcodemagices_name: SFX Magi
   tutorial_codespeakmeal_name: Kod en hälsosam måltidsapp
-  tutorial_itchfish_name: 'ItchCode: Fish skrapspel'
   tutorial_bsdwebsite_name: Min Favoritwebbplats
   tutorial_codespeaktime_name: Kod en tidskapsel i Scratch
-  tutorial_itchwebcam_name: 'ItchCode: Webbkamera förstärkt verklighet'
-  tutorial_itchball_name: 'ItchCode: Studsande boll'
   tutorial_ttrace_name: Race skick
   tutorial_plethora_name: 'Plethora: Orsak och verkan'
   tutorial_educodesecret_name: Avslöja byråns hemligheter!
-  tutorial_itchshapes_name: 'ItchCode: Former och vinklar'
   tutorial_codeguppytext_name: Introduktion till textbaserad kodning
   tutorial_vidcodeplastiche_name: Plastförorening PSA
   tutorial_educativechatbot_name: Bygg din egen chatbot i Python
@@ -3552,7 +3552,6 @@ sv:
   tutorial_codecapture_name: Lär dig programmera med JavaScript i en Jiffy
   tutorial_codehslitter_name: Kodning för en kullfri gemenskap
   tutorial_bsdocean_name: Livet under vatten
-  tutorial_itchplatformer_name: 'ItchCode: Handledning för Scratch 3.0 Plattformsspel'
   tutorial_codejika_name: 'CodeJika: 5 minuters webbplats'
   tutorial_gamefrootclicker_name: Lär dig variabler. Koda ditt eget Clicker-spel.
   tutorial_rmagicequity_name: Jämställdhet kontra jämlikhet
@@ -7335,19 +7334,12 @@ sv:
   tutorial_codestersdistance_longdescription: Lär dig grunderna för kodning i Python,
     skapa sedan ett program som beräknar avståndet mellan två sprites för att se till
     att de är socialt distanserade eller behöver bära en mask.
-  tutorial_itchspace_longdescription: Denna handledning tar dig igenom skapandet av
-    ett klassiskt Space Invaders-spel med programmeringsspråket Scratch MIT. Prenumerera
-    på RokCoder YouTube-kanal för mer Scratch-baserade videor och handledning! Varje
-    video är en liten handledning (ungefär tio minuter lång) som innehåller sina egna
-    specifika slutmål. Slutresultatet är ett högkvalitativt Scratch arkadspel.
   tutorial_vidcodemagic_longdescription: Få blixtar att visas slumpmässigt runt skärmen
     med en slinga.
   tutorial_vidcodemagices_longdescription: Få blixtar att visas slumpmässigt runt
     skärmen med en slinga.
   tutorial_codespeakmeal_longdescription: Lär dig att koda en app som hjälper användare
     att fatta beslut om hälsosam mat.
-  tutorial_itchfish_longdescription: Scratch 3.0-handledning för att göra ett spel
-    med en haj som jagar och äter fisk störd när en dykare äts av misstag.
   tutorial_bsdwebsite_longdescription: 'Denna kurs gör det möjligt för studenter att
     använda kod som ett sätt att dela vad som är viktigt eller intressant för dem.
     De kan följa lektionen eller skapa unika projekt medan de lär sig HTML, CSS och
@@ -7356,10 +7348,6 @@ sv:
     du är intresserad av eller älskar att göra. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Lär dig hur du kodar en digital tidskapsel
     för att spela in och reflektera över ditt liv just nu.
-  tutorial_itchwebcam_longdescription: Lär dig mer om förstärkt verklighet och skapa
-    ditt eget virtuella utrymme med förstärkt verklighet.
-  tutorial_itchball_longdescription: Få en boll att studsa runt skärmen. Lär dig mer
-    om loopar och villkor i loopar.
   tutorial_ttrace_longdescription: Genom att ringa funktioner och utforma klasser
     programmerar spelarna sin egen racerbil för att vara snabb, smidig och kraftfull;
     under tävlingar kan de sedan hacka sina konkurrenters fordon för att kryptera
@@ -7370,9 +7358,6 @@ sv:
     Smith när du dyker djupare in i att lära dig uttalanden, strängar, for-in-loopar.
     Hjälp Agent Smith hitta de skyldiga och konfigurera byråns operativsystem för
     sina nya användare med Python.
-  tutorial_itchshapes_longdescription: Lär dig hur du ritar former i Scratch. Du kommer
-    också att lära dig hur du beräknar hur mycket du behöver vända för vilken form
-    som helst.
   tutorial_codeguppytext_longdescription: Lär dig grunderna i textbaserad kodning
     genom att skapa ditt första program i en online kodningsredigerare.
   tutorial_vidcodeplastiche_longdescription: "  Problemet med plast i våra hav blir
@@ -7450,8 +7435,6 @@ sv:
   tutorial_bsdocean_longdescription: Life below Water belyser en angelägen fråga som
     vi står inför nuförtiden - vår miljö. Detta projekt fokuserar på att vägleda dig
     att koda din egen webbsida för att skydda våra vatten.
-  tutorial_itchplatformer_longdescription: En lätt att följa handledning för hur man
-    skapar ett enkelt plattformsspel med Scratch.
   tutorial_codejika_longdescription: En bra introduktion till kodning med HTML och
     CSS. Koda några rader, se omedelbar produktion utan att fastna i Hows and Whys
     genom att skapa en fin målsida med en tvåfärgad gradientbakgrund, namn och webbplatsens
@@ -8247,19 +8230,14 @@ sv:
   tutorial_csfirstdialogue_string_detail_grades: Årskurs 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Förläsare - Årskurs 5
   tutorial_codestersdistance_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_itchspace_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_vidcodemagic_string_detail_grades: Årskurs 2 och uppåt
   tutorial_vidcodemagices_string_detail_grades: Årskurs 2 och uppåt
   tutorial_codespeakmeal_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_itchfish_string_detail_grades: Årskurs 2-8
   tutorial_bsdwebsite_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codespeaktime_string_detail_grades: Årskurs 2-8
-  tutorial_itchwebcam_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_itchball_string_detail_grades: Årskurs 2-8
   tutorial_ttrace_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_plethora_string_detail_grades: Årskurs 2 och uppåt
   tutorial_educodesecret_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_itchshapes_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codeguppytext_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_vidcodeplastiche_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_educativechatbot_string_detail_grades: Årskurs 9 och uppåt
@@ -8281,7 +8259,6 @@ sv:
   tutorial_codecapture_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codehslitter_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_bsdocean_string_detail_grades: Åk 6-8 (ålder 11-13)
-  tutorial_itchplatformer_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_codejika_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_gamefrootclicker_string_detail_grades: Åk 6-8 (ålder 11-13)
   tutorial_rmagicequity_string_detail_grades: Åk 6-8 (ålder 11-13)
@@ -9113,23 +9090,17 @@ sv:
   tutorial_codemonkeybeaver_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_codestersdistance_string_platforms: Alla moderna webbläsare
-  tutorial_itchspace_string_platforms: Alla moderna webbläsare
   tutorial_vidcodemagic_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_vidcodemagices_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: Alla moderna webbläsare
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: Alla moderna webbläsare, Android-surfplatta,
-    iPad
-  tutorial_itchball_string_platforms: Alla moderna webbläsare
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_educodesecret_string_platforms: Alla moderna webbläsare
-  tutorial_itchshapes_string_platforms: Alla moderna webbläsare
   tutorial_codeguppytext_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad
   tutorial_vidcodeplastiche_string_platforms: Alla moderna webbläsare, iPad, inte
@@ -9159,7 +9130,6 @@ sv:
   tutorial_codehslitter_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad, Windows-telefon, Android-telefon, iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: Alla moderna webbläsare
   tutorial_codejika_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad, Windows-telefon, Android-telefon, iPhone
   tutorial_gamefrootclicker_string_platforms: Alla moderna webbläsare, iPad, inte
@@ -9817,19 +9787,14 @@ sv:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9851,7 +9816,6 @@ sv:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10519,20 +10483,15 @@ sv:
   tutorial_csfirstdialogue_string_detail_programming_languages: Block, Skrapa
   tutorial_codemonkeybeaver_string_detail_programming_languages: Block
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Block
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Block
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Block
-  tutorial_itchwebcam_string_detail_programming_languages: Block
-  tutorial_itchball_string_detail_programming_languages: Block
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Språk oberoende (kan undervisas
     på flera språk)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Block
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10556,7 +10515,6 @@ sv:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Block
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Block
   tutorial_rmagicequity_string_detail_programming_languages: Block, JavaScript
@@ -11519,10 +11477,7 @@ sv:
   tutorial_kodableshapes_name: Skapa former med kod
   tutorial_nasabinary_name: 'Binär kod: Hur man pratar med ett rymdskepp'
   tutorial_3dmaker_name: 3D Maker
-  tutorial_itchstart_name: 'ItchCode: Scratch 5 Block Starter'
   tutorial_hopsub_name: Bygg Subway Surfers med en vän
-  tutorial_itchmundos_name: Los mundos och mi Mundo_E2
-  tutorial_itchtenacity_name: Uthärdighet
   tutorial_kcjskiing_name: 'Sport + Kod: Skidåkning'
   tutorial_groksecurity_name: 'Cybersäkerhet: Försvar mot mörka hattar'
   tutorial_creaticode_name: 3D-programmering med Scratch Blocks
@@ -11663,17 +11618,8 @@ sv:
     kod på en namnskylt, armband, stift eller till och med ljud.
   tutorial_3dmaker_longdescription: Gör dina egna riktigt coola, roterbara 3D-objekt
     snabbt och enkelt.
-  tutorial_itchstart_longdescription: Den här lektionen är en bra startpunkt för barn
-    klass 2 eller 3 som bara testar Scratch för första gången. De kommer att börja
-    med en uppsättning av 5 block som de behöver sätta ihop för att få sin karaktär
-    att utföra vissa åtgärder.
   tutorial_hopsub_longdescription: Lär dig hur du parar ihop program med en vän eller
     klasskamrat, och skapa din egen tunnelbanesurfare med Hopscotch-karaktärer!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, en herramienta för programvara.
-    Agrarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
-    a su programa.
-  tutorial_itchtenacity_longdescription: En här proyecto programvara en Scratch el
-    simulador de un robot que limpia las aguas marinas.
   tutorial_kcjskiing_longdescription: 'Det är allt kul och spel tills någon kraschar
     in i ett träd… eller ÄR det den roliga delen? Spänn på dessa skidor och böj vid
     knäna när du guidar din karaktär nerför en kulle med frusna hinder med hjälp av
@@ -11957,11 +11903,8 @@ sv:
   tutorial_kodableshapes_language: Svenska
   tutorial_nasabinary_language: Svenska
   tutorial_3dmaker_language: Svenska
-  tutorial_itchstart_language: Svenska
   tutorial_hopsub_language: Kinesiska (förenklad), engelska, spanska (Spanien), spanska
     (Mexiko)
-  tutorial_itchmundos_language: Spanska (Mexiko)
-  tutorial_itchtenacity_language: Spanska (Mexiko)
   tutorial_kcjskiing_language: Engelska, franska
   tutorial_groksecurity_language: Svenska
   tutorial_creaticode_language: Kinesiska (förenklad), kinesiska (traditionell), engelska
@@ -12055,10 +11998,7 @@ sv:
   tutorial_kodableshapes_string_detail_grades: Förläsare - Årskurs 5
   tutorial_nasabinary_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_3dmaker_string_detail_grades: Årskurs 2-8
-  tutorial_itchstart_string_detail_grades: Årskurs 2-8
   tutorial_hopsub_string_detail_grades: Årskurs 2-8
-  tutorial_itchmundos_string_detail_grades: Årskurs 2 och uppåt
-  tutorial_itchtenacity_string_detail_grades: Årskurs 2 och uppåt
   tutorial_kcjskiing_string_detail_grades: Årskurs 2 och uppåt
   tutorial_groksecurity_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_creaticode_string_detail_grades: Klass 6+ (11 eller fler)
@@ -12149,12 +12089,7 @@ sv:
   tutorial_nasabinary_string_platforms: Unplugged, Skärmläsare
   tutorial_3dmaker_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad, Windows-telefon, Android-telefon, iPhone
-  tutorial_itchstart_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Alla moderna webbläsare, Android-surfplatta,
-    iPad
-  tutorial_itchtenacity_string_platforms: Alla moderna webbläsare, Android-surfplatta,
-    iPad
   tutorial_kcjskiing_string_platforms: Alla moderna webbläsare
   tutorial_groksecurity_string_platforms: Alla moderna webbläsare, Android-surfplatta,
     iPad, Windows-telefon, Android-telefon, iPhone
@@ -12251,10 +12186,7 @@ sv:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12344,10 +12276,7 @@ sv:
     (kan läras ut på flera språk)
   tutorial_nasabinary_string_detail_programming_languages: Binär kod
   tutorial_3dmaker_string_detail_programming_languages: Block
-  tutorial_itchstart_string_detail_programming_languages: Block
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Block
-  tutorial_itchtenacity_string_detail_programming_languages: Block
   tutorial_kcjskiing_string_detail_programming_languages: Block
   tutorial_groksecurity_string_detail_programming_languages: Ingen - ingen programmering
     krävs
@@ -13367,7 +13296,7 @@ sv:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy: lär dig att programmera enkelt'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13454,6 +13383,15 @@ sv:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Dansparty
+  tutorial_introtomlai_name: Introduktion till maskininlärning
+  tutorial_computervisionai_name: Dator Vision
+  tutorial_neuralnetworksai_name: Neurala nätverk
+  tutorial_chatbotsllmai_name: Chatbots och stora språkmodeller
+  tutorial_generativeimagesai_name: Generativa bilder
+  tutorial_algorithmicbiasai_name: Algoritmisk bias
+  tutorial_codeofethicsai_name: Vår AI-etiska kod
+  tutorial_socimpactofgenaiai_name: Samhällseffekt av generativ AI
   tutorial_generationai_name: AI-generationen
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -13627,11 +13565,11 @@ sv:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Hedy är det enkla sättet att komma igång med
+    textprogrammeringsspråk! är gratis att använda, öppen källkod, flerspråkig, du
+    kan använda Hedy på ditt eget språk; är gradvis, så att du kan lära dig ett koncept
+    och dess syntax en tid är byggd för klassrummet, vilket gör att lärare kan helt
+    anpassa sin elevs upplevelse.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -13925,7 +13863,43 @@ sv:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: 'Ge dig ut på äventyr genom tid och rum för att skapa dina egna uppfinningar med hjälp av AI i nya Minecraft – En timme med kod: AI-generationen. Använd problemlösning, kreativitet och tekniskt tänkande enligt etiken kring artificiell intelligens. Med kodning i block eller Python kan du lära dig grunderna i kodning och hur man bygger en bättre AI för alla.'
+  tutorial_danceai2023_longdescription: "  Koda ett dansparty att dela med dina vänner.
+    Med Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara och ytterligare 25
+    artister!  "
+  tutorial_introtomlai_longdescription: Lär dig mer om en form av artificiell intelligens
+    som kallas maskininlärning och hur de kan använda problemlösningsprocessen för
+    att träna en robot för att lösa problem. Delta i maskininlärningsaktiviteter där
+    en robot lär sig att upptäcka mönster i fisk.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Lär dig hur neurala nätverk fungerar.
+    Använd en widgets för att utforska neurala nätverk på ett händer på väg. Titta
+    på en video som förklarar neurala nätverk. Slutligen diskutera behovet av olika
+    perspektiv när man skapar rekommendationssystem.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Lär dig hur AI kan generera bilder,
+    utforska sedan en diffusion AI-widget och diskutera om dessa modeller är kreativa
+    eller inte.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Undersök effekten av generativ AI från
+    olika perspektiv, samarbeta sedan som ett team för att komma med riktlinjer som
+    tillgodoser de flesta behov från alla deltagare.
+  tutorial_generationai_longdescription: 'Ge dig ut på äventyr genom tid och rum för
+    att skapa dina egna uppfinningar med hjälp av AI i nya Minecraft – En timme med
+    kod: AI-generationen. Använd problemlösning, kreativitet och tekniskt tänkande
+    enligt etiken kring artificiell intelligens. Med kodning i block eller Python
+    kan du lära dig grunderna i kodning och hur man bygger en bättre AI för alla.'
   tutorial_bsimage_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_bscomputing_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_stackpython_string_detail_grades: Klass 6+ (11 eller fler)
@@ -14027,7 +14001,7 @@ sv:
   tutorial_hwfanpage_string_detail_grades: Årskurs 2 och uppåt
   tutorial_hwillusion_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_caevolution_string_detail_grades: Klass 6+ (11 eller fler)
-  tutorial_bbbusybot_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_bbbusybot_string_detail_grades: Årskurs 9 och uppåt
   tutorial_caaifarm_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_cafuture_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_dmscratch_string_detail_grades: Årskurs 2-8
@@ -14057,7 +14031,16 @@ sv:
   tutorial_madmobile_string_detail_grades: Klass 6+ (11 eller fler)
   tutorial_intelinosmile_string_detail_grades: Förläsare - Årskurs 8
   tutorial_intelinoaisign_string_detail_grades: Årskurs 2-8
-  tutorial_generationai_string_detail_grades: Årskurs 1–4 (åldrar 7–10 ) Årskurs 5–7 (åldrar 11–13 ) Årskurs 8+ (ålder 14+)
+  tutorial_danceai2023_string_detail_grades: Årskurs 2 och uppåt
+  tutorial_introtomlai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_computervisionai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_neuralnetworksai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_chatbotsllmai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_generativeimagesai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_algorithmicbiasai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_codeofethicsai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_socimpactofgenaiai_string_detail_grades: Klass 6+ (11 eller fler)
+  tutorial_generationai_string_detail_grades: Årskurs 2 och uppåt
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Urkopplad
   tutorial_stackpython_string_platforms: Alla moderna webbläsare, Android-surfplatta,
@@ -14228,7 +14211,26 @@ sv:
   tutorial_madmobile_string_platforms: Alla moderna webbläsare
   tutorial_intelinosmile_string_platforms: Alla moderna webbläsare, iPad, inte uppkopplad
   tutorial_intelinoaisign_string_platforms: Alla moderna webbläsare
-  tutorial_generationai_string_platforms: Datorer (Windows PC, Mac), Android (Chromebooks), iPad
+  tutorial_danceai2023_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_introtomlai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_computervisionai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_neuralnetworksai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_chatbotsllmai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_generativeimagesai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_codeofethicsai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Alla moderna webbläsare, Android-surfplatta,
+    iPad, Android-telefon, iPhone
+  tutorial_generationai_string_platforms: Android-surfplatta, iPad, Windows-telefon,
+    Android-telefon, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14360,6 +14362,15 @@ sv:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
   tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Språkoberoende
@@ -14486,12 +14497,21 @@ sv:
   tutorial_codecombathack_string_detail_programming_languages: Språkoberoende
   tutorial_toxicodewords_string_detail_programming_languages: Språkoberoende
   tutorial_mitstepmisinformation_string_detail_programming_languages: Urkopplad
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Urkopplad
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Urkopplad
   tutorial_mitstepintrotoml_string_detail_programming_languages: Urkopplad
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Block
   tutorial_intelinoaisign_string_detail_programming_languages: Block
+  tutorial_danceai2023_string_detail_programming_languages: Språkoberoende
+  tutorial_introtomlai_string_detail_programming_languages: Språkoberoende
+  tutorial_computervisionai_string_detail_programming_language: Språkoberoende
+  tutorial_neuralnetworksai_string_detail_programming_languages: Språkoberoende
+  tutorial_chatbotsllmai_string_detail_programming_languages: Språkoberoende
+  tutorial_generativeimagesai_string_detail_programming_languages: Språkoberoende
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Språkoberoende
+  tutorial_codeofethicsai_string_detail_programming_languages: Språkoberoende
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Språkoberoende
   tutorial_generationai_string_detail_programming_languages: Block, Python
   school_not_found_heading: Vi kunde inte hitta din skola. Ange mer information.
   school_name: Skolans namn
@@ -14629,6 +14649,10 @@ sv:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Vilka är förutsättningarna för att göra en
     Hour of Code?
   hoc_how_to_faq_answer_prerequisites: Hour of Code är enkel att köra - även för nybörjare.
@@ -15068,6 +15092,44 @@ sv:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Vem som helst kan lära sig om AI, oavsett om du är student i klassrummet
     eller en lärare som låser upp framtiden för undervisning med och om AI.
   hoc_ai_how_ai_works_video_series_desc: Denna serie korta videor kommer att introducera
@@ -15084,6 +15146,37 @@ sv:
     på några av AI-problemen.
   hoc_ai_activities_desc: Dessa helt nya Hour of Code-aktiviteter introducerar användare
     till världen av artificiell intelligens på ett roligt och engagerande sätt.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Nästan 100 Code.org-anställda i matchande blå och
     gula t-shirts poserar i ett hotellkonferensrum för företagets Codechella-evenemang
     sommaren 2022.
@@ -15695,9 +15788,10 @@ sv:
     för att dra nytta av den outtröttliga hjälpen från det bredare datavetenskapliga
     utbildningssamhället, och [vi tackar alla partners och individer som har stött
     vår inverkan genom åren] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org Årsredovisning 2021] (%{report_url})
-    (Tidigare rapporter: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](), (%{past_url_4}) [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Våra kärnvärden och riktlinjer för meddelanden]
     (%{core_url})"
   about_page_section_more_list_3: "[Vår läroplan och pedagogisk filosofi] (%{curriculum_url})"

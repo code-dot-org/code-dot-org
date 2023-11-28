@@ -3,18 +3,18 @@
     "data": {
       "mini_rubric": {
         "CDU U6 Playground Sound Board_2019": {
-          "rubric_key_concept": "Crie e modifique matrizes, desenvolva software para controlar uma variedade de dispositivos físicos.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos do tabuleiro, cada um acionando uma série diferente de notas. ",
-          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um evento específico do tabuleiro, mas pode haver erros no código que impeçam que ele funcione exatamente como descrito.",
-          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas na campainha, mas o código não pode ser acionado por um evento do tabuleiro, ou erros significativos no código impedem que as notas sejam tocadas.",
-          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir a saída da campainha."
+          "rubric_key_concept": "Crie e modifique matrizes, desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos de placa, cada um acionando uma série diferente de notas. ",
+          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um determinado evento de placa, mas pode haver erros no código que o impeçam de funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas no buzzer, mas o código não pode ser acionado por um evento de placa, ou erros significativos no código impedem que as notas sejam tocadas.",
+          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir uma saída no buzzer."
         },
         "CDU U6 Playground Sound Board_2021": {
-          "rubric_key_concept": "Crie e modifique matrizes, desenvolva software para controlar uma variedade de dispositivos físicos.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos do tabuleiro, cada um acionando uma série diferente de notas. ",
-          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um evento específico do tabuleiro, mas pode haver erros no código que impeçam que ele funcione exatamente como descrito.",
-          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas na campainha, mas o código não pode ser acionado por um evento do tabuleiro, ou erros significativos no código impedem que as notas sejam tocadas.",
-          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir a saída da campainha."
+          "rubric_key_concept": "Crie e modifique matrizes, desenvolva um software para controlar uma variedade de dispositivos físicos.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com pelo menos quatro eventos de placa, cada um acionando uma série diferente de notas. ",
+          "rubric_performance_level_2": "O programa toca uma série de notas quando acionado por um determinado evento de placa, mas pode haver erros no código que o impeçam de funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "Há um código no programa que pode produzir uma série de notas no buzzer, mas o código não pode ser acionado por um evento de placa, ou erros significativos no código impedem que as notas sejam tocadas.",
+          "rubric_performance_level_4": "Não há sequências de notas no programa ou não há código para produzir uma saída no buzzer."
         },
         "CSD Games properties assessment_2021": {
           "rubric_key_concept": "Use a notação de pontos para atualizar as propriedades de um sprite.",
@@ -699,35 +699,68 @@
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
         "CSD U6 - Board Inputs - A_2023": {
+          "rubric_key_concept": "Use os botões e o interruptor no circuit playground  para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_2": "A maior parte do aplicativo funciona conforme descrito, mas algumas das ações não correspondem à descrição, como alterar o tamanho ou alterar os emojis",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "Use os botões e o interruptor no circuit playground  para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_2": "A maior parte do aplicativo funciona conforme descrito, mas algumas das ações não correspondem à descrição, como alterar o tamanho ou alterar os emojis",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Board Inputs - PracB_mb2022": {
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
+          "rubric_performance_level_3": "O aplicativo altera elementos na tela, mas não corresponde à descrição do programa",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "rubric_key_concept": "Responda à entrada do usuário usando o LED e o buzzer no circuit playground",
+          "rubric_performance_level_1": "Cada botão corresponde corretamente à descrição de sua emoção, usando blocos de LED e de buzzer em cada botão.\n",
+          "rubric_performance_level_2": "Cada botão usa blocos de LED e buzzer, mas os parâmetros podem não corresponder à descrição correta (por exemplo: todos tendo a mesma duração)",
+          "rubric_performance_level_3": "Alguns botões não possuem blocos inteiros de LED ou buzzer",
+          "rubric_performance_level_4": "Nenhum bloco adicional de LED ou de buzzer foi adicionado ao programa"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Responda à entrada do usuário usando o LED e o buzzer no circuit playground",
+          "rubric_performance_level_1": "Cada botão corresponde corretamente à descrição de sua emoção, usando blocos de LED e de buzzer em cada botão.\n",
+          "rubric_performance_level_2": "Cada botão usa blocos de LED e buzzer, mas os parâmetros podem não corresponder à descrição correta (por exemplo: todos tendo a mesma duração)",
+          "rubric_performance_level_3": "Alguns botões não possuem blocos inteiros de LED ou buzzer",
+          "rubric_performance_level_4": "Nenhum bloco adicional de LED ou de buzzer foi adicionado ao programa"
         },
         "CSD U6 - Screen Outputs - ChalB_2023": {
           "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Screen Outputs - ChalB_mb2022": {
           "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
+          "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
+          "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 LED all_2019": {
-          "rubric_key_concept": "Desenvolva software para controlar uma variedade de dispositivos físicos.",
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
           "rubric_performance_level_1": "O programa funciona conforme descrito nas instruções, com os botões acionando o LED para acender, piscar, pulsar ou desligar. Não há código desnecessário.",
           "rubric_performance_level_2": "Os botões liga/desliga do programa funcionam, mas pode haver um código desnecessário que não afete a funcionalidade desses dois botões.",
           "rubric_performance_level_3": "Pelo menos um dos botões, exceto o botão “ligar”, funciona, ou os blocos corretos para controlar o LED estão incluídos no programa, mas não são acionados corretamente por um evento.",
           "rubric_performance_level_4": "Nenhum botão além do botão “ligar” funciona e não há código que possa ser usado para controlar o LED."
         },
         "CSD U6 LED all_2021": {
-          "rubric_key_concept": "Desenvolva software para controlar uma variedade de dispositivos físicos.",
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
           "rubric_performance_level_1": "O programa funciona conforme descrito nas instruções, com os botões acionando o LED para acender, piscar, pulsar ou desligar. Não há código desnecessário.",
           "rubric_performance_level_2": "Os botões liga/desliga do programa funcionam, mas pode haver um código desnecessário que não afete a funcionalidade desses dois botões.",
           "rubric_performance_level_3": "Pelo menos um dos botões, exceto o botão “ligar”, funciona, ou os blocos corretos para controlar o LED estão incluídos no programa, mas não são acionados corretamente por um evento.",
@@ -735,98 +768,106 @@
         },
         "CSD U6 analog rgb 3_2019": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, incluindo aquelas que o usuário controla e não controla ativamente. Reconheça a necessidade de vários tipos de entrada, analógica e digital, e represente os valores dessas entradas de várias maneiras.",
-          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há código desnecessário no programa.",
+          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há códigos desnecessários no programa.",
           "rubric_performance_level_2": "O programa detecta mudanças na luz, temperatura e sons e muda de cor visivelmente em resposta a pelo menos um desses sensores.",
           "rubric_performance_level_3": "O programa muda de cor e usa pelo menos um dos três sensores analógicos para detectar mudanças no ambiente.",
-          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor alguma."
+          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor de jeito nenhum."
         },
         "CSD U6 analog rgb 3_2021": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, incluindo aquelas que o usuário controla e não controla ativamente. Reconheça a necessidade de vários tipos de entrada, analógica e digital, e represente os valores dessas entradas de várias maneiras.",
-          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há código desnecessário no programa.",
+          "rubric_performance_level_1": "O programa exibe uma ampla variedade de cores em resposta às mudanças de luz, temperatura e som. Não há códigos desnecessários no programa.",
           "rubric_performance_level_2": "O programa detecta mudanças na luz, temperatura e sons e muda de cor visivelmente em resposta a pelo menos um desses sensores.",
           "rubric_performance_level_3": "O programa muda de cor e usa pelo menos um dos três sensores analógicos para detectar mudanças no ambiente.",
-          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor alguma."
+          "rubric_performance_level_4": "O programa usa sensores analógicos ou não muda de cor de jeito nenhum."
         },
         "CSD U6 circuit smart bike blinker buttons_2019": {
-          "rubric_key_concept": "Conecte, solucione problemas e depure dispositivos externos e sistemas de computação integrados.",
+          "rubric_key_concept": "Conecte, teste e depure dispositivos externos e sistemas de computação integrados.",
           "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED externo esquerdo piscando quando o botão esquerdo é pressionado e o LED externo direito piscando quando o botão direito é pressionado.",
-          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no playground do circuito, mas pode não funcionar exatamente como descrito.",
-          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao playground do circuito e há um código para controlar o LED do programa, mas erros impedem que ele responda adequadamente à placa.",
-          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há código que permita ao programa controlar o LED."
+          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no circuit playground, mas pode não funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao circuit playground e existe um código para controlar o LED a partir do programa, mas erros impedem que ele responda adequadamente à placa.",
+          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há códigos que permitam ao programa controlar o LED."
         },
         "CSD U6 circuit smart bike blinker buttons_2021": {
-          "rubric_key_concept": "Conecte, solucione problemas e depure dispositivos externos e sistemas de computação integrados.",
+          "rubric_key_concept": "Conecte, teste e depure dispositivos externos e sistemas de computação integrados.",
           "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED externo esquerdo piscando quando o botão esquerdo é pressionado e o LED externo direito piscando quando o botão direito é pressionado.",
-          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no playground do circuito, mas pode não funcionar exatamente como descrito.",
-          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao playground do circuito e há um código para controlar o LED do programa, mas erros impedem que ele responda adequadamente à placa.",
-          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há código que permita ao programa controlar o LED."
+          "rubric_performance_level_2": "Um LED externo responde quando um botão é pressionado no circuit playground, mas pode não funcionar exatamente como descrito.",
+          "rubric_performance_level_3": "O LED externo está fisicamente conectado ao circuit playground e existe um código para controlar o LED a partir do programa, mas erros impedem que ele responda adequadamente à placa.",
+          "rubric_performance_level_4": "Não há LED externo conectado à placa ou não há códigos que permitam ao programa controlar o LED."
         },
         "CSD U6 circuit smart bike final_2019": {
           "rubric_key_concept": "Desenvolva um protótipo físico interativo que integre hardware e software, incluindo circuitos simples.  ",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla a campainha e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
-          "rubric_performance_level_2": "O programa funciona geralmente conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação da placa.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla o buzzer e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
+          "rubric_performance_level_2": "O programa funciona de forma geral conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação na placa.",
           "rubric_performance_level_3": "O programa incorpora alguns elementos do design, incluindo pelo menos um elemento externo conectado à placa com um circuito e que responde ou aciona uma resposta da placa.",
           "rubric_performance_level_4": "O programa não incorpora elementos externos ou os elementos externos não podem interagir com a placa."
         },
         "CSD U6 circuit smart bike final_2021": {
           "rubric_key_concept": "Desenvolva um protótipo físico interativo que integre hardware e software, incluindo circuitos simples.  ",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla a campainha e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
-          "rubric_performance_level_2": "O programa funciona geralmente conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação da placa.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com um botão externo que controla o buzzer e dois LEDs externos controlados pelos botões esquerdo e direito. Os LEDs coloridos acendem no escuro.",
+          "rubric_performance_level_2": "O programa funciona de forma geral conforme descrito, com um botão externo acionando a resposta da placa e LEDs externos controlados pela interação na placa.",
           "rubric_performance_level_3": "O programa incorpora alguns elementos do design, incluindo pelo menos um elemento externo conectado à placa com um circuito e que responde ou aciona uma resposta da placa.",
           "rubric_performance_level_4": "O programa não incorpora elementos externos ou os elementos externos não podem interagir com a placa."
         },
         "CSD U6 create LED app 2_2019": {
-          "rubric_key_concept": "Desenvolva software para controlar uma variedade de dispositivos físicos.",
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
           "rubric_performance_level_1": "O programa permite que o usuário controle o LED de várias maneiras, e todos os elementos interativos parecem funcionar conforme o esperado.",
           "rubric_performance_level_2": "O programa permite que o usuário controle o LED, mas pode haver pequenos erros nos elementos interativos do aplicativo.",
           "rubric_performance_level_3": "O programa tem um código relacionado ao LED, mas há erros significativos que impedem o usuário de controlar o LED conforme o esperado.",
           "rubric_performance_level_4": "Não há código relacionado ao controle do LED no aplicativo."
         },
         "CSD U6 create LED app 2_2021": {
-          "rubric_key_concept": "Desenvolva software para controlar uma variedade de dispositivos físicos.",
+          "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
           "rubric_performance_level_1": "O programa permite que o usuário controle o LED de várias maneiras, e todos os elementos interativos parecem funcionar conforme o esperado.",
           "rubric_performance_level_2": "O programa permite que o usuário controle o LED, mas pode haver pequenos erros nos elementos interativos do aplicativo.",
           "rubric_performance_level_3": "O programa tem um código relacionado ao LED, mas há erros significativos que impedem o usuário de controlar o LED conforme o esperado.",
           "rubric_performance_level_4": "Não há código relacionado ao controle do LED no aplicativo."
         },
         "CSD U6 emotion machine 4_2019": {
-          "rubric_key_concept": "Use manipuladores de eventos para responder à interação do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
-          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção aparecem. ",
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção são exibidos. ",
           "rubric_performance_level_2": "O programa tem três botões e responde de alguma forma a cada clique no botão, mas a resposta pode não ser exatamente como descrita nas instruções.",
           "rubric_performance_level_3": "Pelo menos um botão diferente do botão “Feliz” responde ao ser clicado de alguma forma.",
           "rubric_performance_level_4": "Nenhum botão além do botão “Feliz” responde ao ser clicado."
         },
         "CSD U6 emotion machine 4_2021": {
-          "rubric_key_concept": "Use manipuladores de eventos para responder à interação do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
-          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção aparecem. ",
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário e use configurações para manipular as propriedades dos elementos em um sistema.",
+          "rubric_performance_level_1": "O programa tem três botões com rótulos corretos e, quando um botão é clicado, o ícone correto e a descrição da emoção são exibidos. ",
           "rubric_performance_level_2": "O programa tem três botões e responde de alguma forma a cada clique no botão, mas a resposta pode não ser exatamente como descrita nas instruções.",
           "rubric_performance_level_3": "Pelo menos um botão diferente do botão “Feliz” responde ao ser clicado de alguma forma.",
           "rubric_performance_level_4": "Nenhum botão além do botão “Feliz” responde ao ser clicado."
         },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz"
+        },
         "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
           "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
-          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops e não há erros no código.",
-          "rubric_performance_level_3": "Os loops For são usados para ligar e desligar os LEDs, mas pode haver erros que impeçam que os botões funcionem conforme descrito.",
-          "rubric_performance_level_4": "Não há quatro loops no código."
+          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
+          "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
+          "rubric_performance_level_4": "Não há for loops no código."
         },
         "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "Use um for loop para iterar sobre uma matriz",
           "rubric_performance_level_1": "Todos os cinco botões funcionam conforme descrito usando for loops, e os loops usam o comprimento da matriz como condição de saída, sem erros ou códigos desnecessários.",
-          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops e não há erros no código.",
-          "rubric_performance_level_3": "Os loops For são usados para ligar e desligar os LEDs, mas pode haver erros que impeçam que os botões funcionem conforme descrito.",
-          "rubric_performance_level_4": "Não há quatro loops no código."
+          "rubric_performance_level_2": "Os botões liga/desliga funcionam conforme descrito usando for loops, e não há erros no código.",
+          "rubric_performance_level_3": "Os for loops são usados para ligar e desligar os LEDs, mas podem haver erros que impeçam os botões de funcionarem conforme descrito.",
+          "rubric_performance_level_4": "Não há for loops no código."
         },
         "CSD U6 getProperty buzzer_2019": {
           "rubric_key_concept": "Use getters para acessar as propriedades dos elementos em um sistema.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar o comprimento da campainha.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar a duração do buzzer.",
           "rubric_performance_level_2": "O programa usa o valor do menu suspenso, mas pode haver pequenos erros que impedem que o programa seja executado exatamente como descrito.",
-          "rubric_performance_level_3": "O programa inclui código para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
+          "rubric_performance_level_3": "O programa inclui códigos para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
           "rubric_performance_level_4": "O programa não acessa o valor do menu suspenso."
         },
         "CSD U6 getProperty buzzer_2021": {
           "rubric_key_concept": "Use getters para acessar as propriedades dos elementos em um sistema.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar o comprimento da campainha.",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando o valor do menu suspenso para alterar a duração do buzzer.",
           "rubric_performance_level_2": "O programa usa o valor do menu suspenso, mas pode haver pequenos erros que impedem que o programa seja executado exatamente como descrito.",
-          "rubric_performance_level_3": "O programa inclui código para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
+          "rubric_performance_level_3": "O programa inclui códigos para obter o valor do menu suspenso, mas erros graves no código impedem que ele funcione corretamente.",
           "rubric_performance_level_4": "O programa não acessa o valor do menu suspenso."
         },
         "CSD U6 goalie_2019": {
@@ -844,42 +885,42 @@
           "rubric_performance_level_4": "A posição atual da bola não é usada para atualizar sua propriedade “x”."
         },
         "CSD U6 light pattern off_2019": {
-          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva software para controlar uma variedade de dispositivos físicos. ",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais acendem os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há código desnecessário no programa.",
-          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
+          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva um software para controlar uma variedade de dispositivos físicos. ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais ligam os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto, e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
           "rubric_performance_level_3": "Há um código no programa que liga e desliga os LEDs, mas pode haver erros graves que impeçam o programa de funcionar corretamente.",
           "rubric_performance_level_4": "Não há um novo código que ligue e desligue os LEDs."
         },
         "CSD U6 light pattern off_2021": {
-          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva software para controlar uma variedade de dispositivos físicos. ",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais acendem os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há código desnecessário no programa.",
-          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
+          "rubric_key_concept": "Acesse elementos em matrizes e desenvolva um software para controlar uma variedade de dispositivos físicos. ",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, tem três botões, dois dos quais ligam os LEDs coloridos em um padrão distinto e um dos quais desliga os LEDs coloridos. Não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa geralmente funciona conforme descrito, tem três botões, dois dos quais acendem as luzes em um padrão distinto, e uma função que desliga os LEDs coloridos. Pode haver pequenos erros no programa.",
           "rubric_performance_level_3": "Há um código no programa que liga e desliga os LEDs, mas pode haver erros graves que impeçam o programa de funcionar corretamente.",
           "rubric_performance_level_4": "Não há um novo código que ligue e desligue os LEDs."
         },
         "CSD U6 params starchaser 5_2019": {
-          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (MoveStar, LoopStar e CheckStar)",
+          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (moveStar, loopStar e checkStar)",
           "rubric_performance_level_2": "O programa inclui várias funções com parâmetros e geralmente funciona conforme descrito, mas pode incluir pequenos erros que afetam a jogabilidade.",
           "rubric_performance_level_3": "O programa inclui pelo menos uma função com parâmetros, mas pode haver erros graves no código que impeçam o jogo de funcionar.",
           "rubric_performance_level_4": "O programa não inclui nenhuma função com parâmetros."
         },
         "CSD U6 params starchaser 5_2021": {
-          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (MoveStar, LoopStar e CheckStar)",
+          "rubric_performance_level_1": "O programa funciona conforme descrito e inclui todas as funções com parâmetros conforme descrito nas instruções. (moveStar, loopStar e checkStar)",
           "rubric_performance_level_2": "O programa inclui várias funções com parâmetros e geralmente funciona conforme descrito, mas pode incluir pequenos erros que afetam a jogabilidade.",
           "rubric_performance_level_3": "O programa inclui pelo menos uma função com parâmetros, mas pode haver erros graves no código que impeçam o jogo de funcionar.",
           "rubric_performance_level_4": "O programa não inclui nenhuma função com parâmetros."
         },
         "CSD U6 setProperty hidden 2_2019": {
-          "rubric_key_concept": "Use manipuladores de eventos para responder à interação do usuário",
-          "rubric_performance_level_1": "Quando o botão “StopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há código extra no programa.",
-          "rubric_performance_level_2": "Quando o “StopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário",
+          "rubric_performance_level_1": "Quando o botão “stopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há códigos extras no programa.",
+          "rubric_performance_level_2": "Quando o “stopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
           "rubric_performance_level_3": "Um segundo evento foi criado, mas ele pode não ser acionado nos momentos apropriados, ou o programa pode ter criado eventos desnecessários.",
           "rubric_performance_level_4": "Nenhum evento novo foi criado."
         },
         "CSD U6 setProperty hidden 2_2021": {
-          "rubric_key_concept": "Use manipuladores de eventos para responder à interação do usuário",
-          "rubric_performance_level_1": "Quando o botão “StopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há código extra no programa.",
-          "rubric_performance_level_2": "Quando o “StopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
+          "rubric_key_concept": "Use manipuladores de eventos para responder às interações do usuário",
+          "rubric_performance_level_1": "Quando o botão “stopAlarmButton” é pressionado, o texto de status muda para “OFF” e o botão desaparece. Não há códigos extras no programa.",
+          "rubric_performance_level_2": "Quando o “stopAlarmButton” é pressionado, o programa responde de alguma forma, mas não necessariamente conforme descrito nas instruções, ou pode haver um código desnecessário acionado pelo evento.",
           "rubric_performance_level_3": "Um segundo evento foi criado, mas ele pode não ser acionado nos momentos apropriados, ou o programa pode ter criado eventos desnecessários.",
           "rubric_performance_level_4": "Nenhum evento novo foi criado."
         },
@@ -900,14 +941,14 @@
         "CSD U6 tugowar buzzer_2019": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, crie e use uma função que usa parâmetros para generalizar o comportamento. ",
           "rubric_performance_level_1": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
-          "rubric_performance_level_2": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
+          "rubric_performance_level_2": "O programa responde a pelo menos uma entrada de hardware e usa pelo menos uma função com o parâmetro como descrito no guia do projeto.",
           "rubric_performance_level_3": "O programa responde à entrada do hardware e usa uma função com um parâmetro, mas pode haver erros que impeçam que eles funcionem conforme descrito.",
           "rubric_performance_level_4": "O programa não usa entrada de hardware ou não inclui uma função com parâmetros."
         },
         "CSD U6 tugowar buzzer_2021": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware, crie e use uma função que usa parâmetros para generalizar o comportamento. ",
           "rubric_performance_level_1": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
-          "rubric_performance_level_2": "O programa responde aos botões esquerdo e direito e usa várias funções com parâmetros, conforme descrito no guia do projeto.",
+          "rubric_performance_level_2": "O programa responde a pelo menos uma entrada de hardware e usa pelo menos uma função com o parâmetro como descrito no guia do projeto.",
           "rubric_performance_level_3": "O programa responde à entrada do hardware e usa uma função com um parâmetro, mas pode haver erros que impeçam que eles funcionem conforme descrito.",
           "rubric_performance_level_4": "O programa não usa entrada de hardware ou não inclui uma função com parâmetros."
         },
@@ -1067,44 +1108,44 @@
         },
         "CSDU6 - LED toggle buttonL up_2019": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há código desnecessário.",
-          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver código desnecessário incluído no programa.",
-          "rubric_performance_level_3": "O programa usa um manipulador de eventos da placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
-          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de tabuleiro."
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há códigos desnecessários.",
+          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver códigos desnecessários incluídos no programa.",
+          "rubric_performance_level_3": "O programa usa uma manipulador de eventos de placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
+          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de placa."
         },
         "CSDU6 - LED toggle buttonL up_2021": {
           "rubric_key_concept": "Desenvolva um programa que responda a uma variedade de entradas de hardware.",
-          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há código desnecessário.",
-          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver código desnecessário incluído no programa.",
-          "rubric_performance_level_3": "O programa usa um manipulador de eventos da placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
-          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de tabuleiro."
+          "rubric_performance_level_1": "O programa funciona conforme descrito, com o LED acendendo quando o usuário pressiona o botão e se apaga novamente quando o usuário solta o botão. Não há códigos desnecessários.",
+          "rubric_performance_level_2": "O programa usa um manipulador de eventos para detectar a liberação do botão, mas ele pode não responder conforme descrito ou pode haver códigos desnecessários incluídos no programa.",
+          "rubric_performance_level_3": "O programa usa uma manipulador de eventos de placa, mas há erros significativos o suficiente para que o programa não consiga detectar a liberação do botão.",
+          "rubric_performance_level_4": "O programa não usa um manipulador de eventos de placa."
         },
         "CSDU6 arrays select variable_2019": {
           "rubric_key_concept": "Acesse um elemento em uma matriz.",
-          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há código desnecessário no programa.",
-          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possam haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
-          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver erros graves no programa que impeçam que ele seja executado corretamente.",
+          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possa haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver grandes erros no programa que impeçam que ele seja executado corretamente.",
           "rubric_performance_level_4": "A notação de índice não é usada."
         },
         "CSDU6 arrays select variable_2021": {
           "rubric_key_concept": "Acesse um elemento em uma matriz.",
-          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há código desnecessário no programa.",
-          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possam haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
-          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver erros graves no programa que impeçam que ele seja executado corretamente.",
+          "rubric_performance_level_1": "O programa exibe aleatoriamente uma combinação de cores e ícones correspondentes, conforme descrito nas instruções. Os elementos na matriz são acessados usando a variável “myIndex” e não há códigos desnecessários no programa.",
+          "rubric_performance_level_2": "O programa exibe aleatoriamente uma combinação de cores e ícones. Os elementos na matriz são acessados usando a variável “myIndex”, embora possa haver pequenos erros que impeçam que o programa seja executado exatamente como descrito.",
+          "rubric_performance_level_3": "A notação de índice é usada para acessar um elemento de uma matriz, embora possa haver grandes erros no programa que impeçam que ele seja executado corretamente.",
           "rubric_performance_level_4": "A notação de índice não é usada."
         },
         "CSDU6 making new arrays_2019": {
-          "rubric_key_concept": "Crie e modifique matrizes.",
+          "rubric_key_concept": "Crie e modifique as matrizes.",
           "rubric_performance_level_1": "Uma nova matriz é criada e armazenada em uma variável, e os elementos da matriz são acessados aleatoriamente para serem reproduzidos quando o botão direito é pressionado.",
           "rubric_performance_level_2": "Uma nova matriz é criada e armazenada em uma variável, mas pode haver erros não relacionados que impeçam que uma nota seja tocada quando o botão direito é pressionado.",
-          "rubric_performance_level_3": "Uma nova matriz é criada, mas ela não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
+          "rubric_performance_level_3": "Uma nova matriz é criada, mas não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
           "rubric_performance_level_4": "Não há matrizes no programa."
         },
         "CSDU6 making new arrays_2021": {
-          "rubric_key_concept": "Crie e modifique matrizes.",
+          "rubric_key_concept": "Crie e modifique as matrizes.",
           "rubric_performance_level_1": "Uma nova matriz é criada e armazenada em uma variável, e os elementos da matriz são acessados aleatoriamente para serem reproduzidos quando o botão direito é pressionado.",
           "rubric_performance_level_2": "Uma nova matriz é criada e armazenada em uma variável, mas pode haver erros não relacionados que impeçam que uma nota seja tocada quando o botão direito é pressionado.",
-          "rubric_performance_level_3": "Uma nova matriz é criada, mas ela não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
+          "rubric_performance_level_3": "Uma nova matriz é criada, mas não é armazenada em um elemento ou está vazia, portanto, o programa não pode funcionar conforme descrito.",
           "rubric_performance_level_4": "Não há matrizes no programa."
         },
         "U4 Model Design 7_2019": {

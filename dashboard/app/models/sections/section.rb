@@ -243,17 +243,7 @@ class Section < ApplicationRecord
 
     si = SectionInstructor.with_deleted.find_by(instructor: user, section_id: id)
     if si.blank?
-      # Using insert instead of create saves on queries to re-read the section
-      # and user from the DB to validate these are still actual objects.
-      SectionInstructor.insert(
-        {
-          instructor_id: user_id,
-          section_id: id,
-          status: :active,
-          created_at: Time.now,
-          updated_at: Time.now
-        }
-      )
+      SectionInstructor.create!(section_id: id, instructor: user, status: :active)
     elsif si.deleted?
       si.restore
       si.status = :active
@@ -633,7 +623,7 @@ class Section < ApplicationRecord
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
       raise ArgumentError.new('already invited')
-    elsif pl_section? && students.exists?(email: instructor.email)
+    elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
   end

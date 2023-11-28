@@ -769,12 +769,12 @@ uk:
         alg_7_function: Інформатика в Алгебрі - Функції
         alg_8_design_recipe: Інформатика в Алгебрі - Набір правил Структури коду
         alg_9_booleans: Інформатика в Алгебрі - Логічні значення
-        applab_hoc_designmode: Додаток лабораторії "Година коду" - Режим дизайну
+        applab_hoc_designmode: Година коду в Програмній Лабораторії - режим дизайну
         applab_hoc_onevent: Додаток лабораторії "Година коду" - Події
         applab_hoc_setproperty: Додаток лабораторії "Година коду" - Встановлення властивостей
         applab_hoc_share: Додаток лабораторії "Година коду" - Поширити
         applab_hoc_welcome: Додаток лабораторії "Година коду" - Ласкаво просимо
-        applab_intro_designmode: Апп Лаб - Режим Дизайну
+        applab_intro_designmode: Програмна Лабораторія - режим дизайну
         applab_intro_events: Апп Лаб - Додай інтерактиву
         applab_intro_share: Апп Лаб - Поділіться своїм Додатком
         applab_intro_sounds: Апп Лаб - Зображення та Звуки
@@ -789,9 +789,9 @@ uk:
         csc_bookcovers_intro: Кодування обкладинки книги
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_applab_arrays: Вступ до масивів
-        csd_applab_designmode: 'Дослідження інформатики: Лабораторія застосунків -
-          Режим дизайну'
-        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
+        csd_applab_designmode: 'Дослідження інформатики: Програмна Лабораторія - режим
+          дизайну'
+        csd_applab_designmode_short: режим дизайну Програмної Лабораторії
         csd_applab_loops: Цикли в Програмній Лабораторії
         csd_applab_parameters: Функції з параметрами
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
@@ -820,6 +820,7 @@ uk:
         csd_gamelab_sprites_2: Анімація спрайтів
         csd_gamelab_variables_1: Вступ до змінних - Частина 1
         csd_gamelab_velocity: Швидкість
+        csd_ml_how_ai_works: Як працює ШІ
         csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
         csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
         csd_ml_model_cards_july2021: Картки моделі в Лабораторії ШІ

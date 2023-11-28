@@ -7248,6 +7248,12 @@
         },
         "vigenere/Vigenere": {
           "name": "Vigenere"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Pesta Dansa: Edisi AI",
+          "overview": "Dalam kegiatan ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan kecerdasan buatan (artificial intelligence) di lingkungan yang aman dan kreatif. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini mengharuskan siswa untuk memutar suara karena tutorialnya dibuat untuk merespon musik.",
+          "preparation": "### Cara Merencanakan Hour of Code Anda\n\nTemukan sumber daya yang Anda butuhkan untuk merencanakan, menerapkan, dan merayakan Hour of Code di sekolah Anda! [di sini](https://hourofcode.com/us/how-to)!",
+          "purpose": "Menjadikan coding sebagai pengalaman yang menarik dan menyenangkan sangat penting dalam menumbuhkan minat terhadap ilmu komputer. Pelajaran ini diisi dengan momen penuh kegembiraan, di mana siswa menggunakan kode untuk membuat koreografi penampilan tari penuh warna dan gerakan menggunakan blok coding drag-and-drop yang sederhana. Siswa akan diperkenalkan dengan A.I. Bot yang akan mereka gunakan untuk membantu menemukan efek sempurna yang sesuai dengan mood tarian mereka."
         }
       }
     }

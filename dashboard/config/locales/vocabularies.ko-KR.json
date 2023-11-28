@@ -2452,7 +2452,12 @@
           "definition": " 무언가를 일으키는 행위."
         },
         "program/dance-ai/2023": {
-          "word": "프로그램 "
+          "word": "프로그램 ",
+          "definition": " 머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "인공지능(A.I.) ",
+          "definition": "데이터로 받아들이고 그 데이터에서 패턴을 학습한 다음 학습한 내용을 기반으로 결정을 내리는 컴퓨터 프로그램."
         }
       }
     }

@@ -1080,6 +1080,12 @@ fa:
         text: "{SPRITE} میگوید: {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} آرام به {LOCATION} می‌رود"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': گاز
+            '"liquid"': مایع
+            '"solid"': جامد
       KatiesBlocks_tumbling:
         text: جست و خیز کردن
       Mikelab_addBehaviorSimple:

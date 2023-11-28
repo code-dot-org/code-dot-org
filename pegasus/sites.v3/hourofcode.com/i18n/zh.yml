@@ -156,6 +156,7 @@ zh:
   for_students_teacher_led_learning: 針對學生：教師主導的學習
   for_students_teacher_led_lessons: 針對學生：教師指導的課程
   professional_development: 專業發展
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: 教授計算機科學
   explore_our_curriculum: 探索我們的課程
   start_professional_learning: 開始專業學習
@@ -213,7 +214,7 @@ zh:
   call_to_action_register_event: 註冊您的活動
   call_to_action_register_your_hoc: 註冊您的一小時玩程式
   call_to_action_register_now: 馬上註冊
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: 分享您的活動計劃
   call_to_action_select_activity: 選擇活動
   call_to_action_select_coding_activity: 選擇編碼活動
   call_to_action_start_activity: 開始活動
@@ -221,13 +222,13 @@ zh:
   call_to_action_print_certificates: 列印證書
   call_to_action_go_beyond_hoc: 超越一小時玩程式
   call_to_action_see_volunteer_guide: 請參閱志工指南
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_see_teacher_guide: 參閱教師操作指南
+  call_to_action_see_event_guide: 參閱活動操作指南
   call_to_action_join_advocacy_coalition: 加入倡導聯盟
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_become_an_advocate: 成為倡導者
+  call_to_action_share_event_w_parents: 與家長分享您的活動
   call_to_action_sign_up_to_volunteer: 註冊志工
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: 在社交媒體上分享
   call_to_action_explore_all_hoc_activities: 探索Code.org上的所有一小時玩程式活動
   call_to_action_start_dance_party: 開始舞蹈派對
   call_to_action_start_part_02: 開始第二部分
@@ -241,6 +242,8 @@ zh:
   call_to_action_try_hoc_ai_activities: 嘗試編碼一小時 AI 活動
   call_to_action_explore_activities: 探索活動
   call_to_action_explore_ai: 探索人工智慧
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: 探索工具
   call_to_action_explore_unit: 探索單位
   call_to_action_explore_curriculum: 探索課程
   call_to_action_explore_curricula: 探索課程
@@ -301,7 +304,7 @@ zh:
   call_to_action_explore_teacher_forums: 探索教師論壇
   call_to_action_explore_teacher_forum: 探索教師論壇
   call_to_action_explore_career_resources: 探索職業資源
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: 探索統計數據和資訊圖表
   call_to_action_watch_videos: 觀看視訊
   call_to_action_download_posters: 下載海報
   call_to_action_contact_support: 聯絡Code.org支援
@@ -340,7 +343,7 @@ zh:
   call_to_action_coming_soon: 即將推出！
   call_to_action_learn_how_ai_works: 瞭解AI如何運行
   call_to_action_learn_about_ai: 瞭解AI
-  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_learn_more_about_ai: 進一步瞭解AI
   call_to_action_get_started: 開始使用
   aria_label_call_to_action_hoc_how_to_educators: 查看教育工作者操作指南
   aria_label_call_to_action_hoc_how_to_companies: 查看公司操作指南
@@ -519,6 +522,7 @@ zh:
   module_label_accessibility_features_full: 無障礙功能：
   module_label_educator_tool: 教育工作者工具
   module_label_educator_course: 教育工作者課程
+  module_label_educator_resources: Educator resources
   module_label_student_tool: 學生工具
   module_label_student_product: 产品
   module_label_student_content_resources: 內容和資源
@@ -527,6 +531,7 @@ zh:
   module_label_available_now: 現在可用
   module_label_video_series: 影片系列
   module_label_self_paced: 自定進度模塊
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -1858,7 +1863,7 @@ zh:
   meta_tag_og_description_campaign: "「一小時玩程式」是一項全球性的活動，向數以千萬計的不同年齡層的學生在 180 多個國家和
     45 多種語言學習計算機科學。"
   twitter_default_text: '我將要參加今年的 #HourOfCode，你呢？@codeorg'
-  twitter_donor_text: '今年的 #HourOfCode 是關於創造力.我在！你是嗎？（感謝 %{random_donor} 支持 @codeorg）'
+  twitter_donor_text: 今年的#HourOfCode主題是創造力。我參加了！你呢？（感謝%{random_donor}支持 @codeorg）
   twitter_donor_text_2019: '今年的 #HourOfCode 是關於 #CSforGood.我在！你是嗎？（感謝 %{random_donor}
     支持 @codeorg）'
   twitter_default_text_donor: '我參加了今年的 #HourOfCode, 是嗎?（感謝 %{random_donor} 支持 @codeorg）'
@@ -2655,19 +2660,14 @@ zh:
   tutorial_csfirstdialogue_name: 对话
   tutorial_codemonkeybeaver_name: 海狸成就者
   tutorial_codestersdistance_name: 代碼員：社交距離精靈
-  tutorial_itchspace_name: 'ITCHCode: 太空侵略者-六碼'
   tutorial_vidcodemagic_name: 音效魔術
   tutorial_vidcodemagices_name: 音效魔術
   tutorial_codespeakmeal_name: 編寫健康膳食應用程序
-  tutorial_itchfish_name: 遊戲代碼：魚刮刮遊戲
   tutorial_bsdwebsite_name: 我的收藏網站
   tutorial_codespeaktime_name: 在划痕中編碼時間膠囊
-  tutorial_itchwebcam_name: 目錄代碼：網絡攝像頭增強現實
-  tutorial_itchball_name: 目前代碼：彈跳球
   tutorial_ttrace_name: 競爭條件
   tutorial_plethora_name: 過多：原因和影響
   tutorial_educodesecret_name: 揭開機構的秘密！
-  tutorial_itchshapes_name: 代碼：形狀和角度
   tutorial_codeguppytext_name: 基於文本的編碼簡介
   tutorial_vidcodeplastiche_name: Plastic Pollution PSA
   tutorial_educativechatbot_name: 在 Python 中建立您自己的聊天機器人
@@ -2689,7 +2689,6 @@ zh:
   tutorial_codecapture_name: 學習編程與 JavaScript 在一個瞬間
   tutorial_codehslitter_name: 為一個無雜亂的社區編碼
   tutorial_bsdocean_name: 水下生活
-  tutorial_itchplatformer_name: 它的代碼：從無到有 3.0 平台遊戲教程
   tutorial_codejika_name: 法典：5 分鐘網站
   tutorial_gamefrootclicker_name: 學習變數。編寫您自己的答題器遊戲。
   tutorial_rmagicequity_name: 公平與平等
@@ -4350,22 +4349,16 @@ zh:
   tutorial_csfirstdialogue_longdescription: 編程兩個精靈之間的對話。獲得創意，同時與代碼在划痕與 CS 第一通信！
   tutorial_codemonkeybeaver_longdescription: 幫助海狸實現其目標！通過充滿樂趣的編碼活動，潛入這隻海狸的自然棲息地，從而快速開始您的編碼教育。海狸可以游泳，收集木材並建造水壩。這隻小海狸需要你的幫助。使用簡單的代碼塊來完成湖中的水壩，使水保持平靜，蓋房子並製作冰沙！
   tutorial_codestersdistance_longdescription: 學習 Python 編碼的基礎知識，然後創建一個計算兩個精靈之間距離的程序，以確保它們與社交距離或需要戴口罩。
-  tutorial_itchspace_longdescription: 本教程將帶您完成使用 Scratch MIT 編程語言創建經典的太空侵略者遊戲。訂閱 RokCoder
-    YouTube 頻道以獲取更多基於抓點的視頻和教程！每部影片都是一口大小的教學課程 (大約十分鐘的長度)，其中包含自己的特定最終目標。最終的結果是一個高品質的划痕街機遊戲。
   tutorial_vidcodemagic_longdescription: 使閃光燈使用循環隨機出現在屏幕周圍。
   tutorial_vidcodemagices_longdescription: 使閃光燈使用循環隨機出現在屏幕周圍。
   tutorial_codespeakmeal_longdescription: 學習編寫可幫助用戶做出健康食物決策的應用程序。
-  tutorial_itchfish_longdescription: Scratch 3.0 教程，用於製作與鯊魚追逐和吃魚的遊戲，當潛水員被意外吃掉時破壞。
   tutorial_bsdwebsite_longdescription: 本課程允許學生使用代碼作為一種方式來分享他們重要或有趣的內容。他們可以在學習 HTML，CSS
     和 JavaScript 的同時按照課程或創建獨特的項目。他們提供視頻教程，實時編碼和訪問代碼詞彙表的指導。「我的收藏夾網站專注於創建一個網頁，其中包含您感興趣或喜歡做的三件事。#codeisyourvoice
   tutorial_codespeaktime_longdescription: 了解如何編寫數字時間囊以記錄並反映您的生活。
-  tutorial_itchwebcam_longdescription: 了解擴增實境並製作自己的擴增實境虛擬空間。
-  tutorial_itchball_longdescription: 得到一個球在屏幕上反彈。了解循環內的循環和條件。
   tutorial_ttrace_longdescription: 通過調用函數和設計課程，玩家可以將自己的賽車編程為快速，靈活和強大; 在比賽期間，他們可以破解競爭對手的車輛以爭奪他們的控制。
   tutorial_plethora_longdescription: '在這個過多的活動中，您將解決視覺有趣的挑戰，並學習因果和用戶交互的概念。 '
   tutorial_educodesecret_longdescription: 當您深入了解語句，字符串，for-in 循環時，與 Agent Smith 一起探索秘密世界。幫助代理史密斯找到罪魁禍首，並使用
     Python 為其新用戶配置該機構的操作系統。
-  tutorial_itchshapes_longdescription: 學習如何在 Scratch 中繪製形狀。您還將學習如何計算任何形狀需要轉動多少。
   tutorial_codeguppytext_longdescription: 通過在線編碼編輯器中創建您的第一個程序來學習基於文本的編碼的基礎知識。
   tutorial_vidcodeplastiche_longdescription: "   塑料充斥海洋的問題持續惡化。幸運的是，你可以透過塑料汙染公益廣告用程式碼發出你的聲音。在使用
     JavaScript 編寫一個關於塑料汙染的公益廣告後，你可以再製作一個有關你關心的任意主題的視訊！學會使用迴圈、正弦波和自定義表情來製作一個獨特的專案。
@@ -4398,7 +4391,6 @@ zh:
   tutorial_codehslitter_longdescription: 了解如何使用編程來幫助解決世界上最大的問題之一：垃圾和浪費！在這個選擇你自己的冒險一小時玩程式中，你可以選擇
     Python 的基礎知識或網頁設計的基礎知識。無論您選擇哪種方式，您都將探索如何使用計算機科學來減少社區中的垃圾量。
   tutorial_bsdocean_longdescription: 水下的生活揭示了我們現在面臨的緊迫問題-我們的環境。該項目的重點是指導您編寫自己的網頁，以保護我們的水域。
-  tutorial_itchplatformer_longdescription: 一個易於遵循的教程，介紹如何使用 Scratch 創建一個簡單的平台遊戲。
   tutorial_codejika_longdescription: 使用 HTML 和 CSS 編碼的一個很好的介紹。編寫幾行，通過創建一個帶有兩色漸變背景，名稱和網站啟動日期的漂亮登陸頁面來查看即時輸出，而不會陷入
     Hows 和 Whys。
   tutorial_gamefrootclicker_longdescription: 學習者編寫自己的點擊器遊戲，並在此過程中學習變量，不同的數據類型，條件邏輯，比較運算符，並獲得一些有價值的見解，以了解專業遊戲開發人員如何設計和製作真實遊戲。在本教程結束時，您將編碼不同的變量類型，發布了一個遊戲，並在本土環境中與計算機科學互動。
@@ -5066,19 +5058,14 @@ zh:
   tutorial_csfirstdialogue_string_detail_grades: 年級 2-8
   tutorial_codemonkeybeaver_string_detail_grades: 學前 - 年級 5
   tutorial_codestersdistance_string_detail_grades: 年級 6+
-  tutorial_itchspace_string_detail_grades: 年級 6+
   tutorial_vidcodemagic_string_detail_grades: 年級 2+
   tutorial_vidcodemagices_string_detail_grades: 年級 2+
   tutorial_codespeakmeal_string_detail_grades: 年級 6+
-  tutorial_itchfish_string_detail_grades: 年級 2-8
   tutorial_bsdwebsite_string_detail_grades: 年級 6+
   tutorial_codespeaktime_string_detail_grades: 年級 2-8
-  tutorial_itchwebcam_string_detail_grades: 年級 6+
-  tutorial_itchball_string_detail_grades: 年級 2-8
   tutorial_ttrace_string_detail_grades: 年級 6-8
   tutorial_plethora_string_detail_grades: 年級 2+
   tutorial_educodesecret_string_detail_grades: 年級 6+
-  tutorial_itchshapes_string_detail_grades: 年級 6+
   tutorial_codeguppytext_string_detail_grades: 年級 6-8
   tutorial_vidcodeplastiche_string_detail_grades: 年級 6+
   tutorial_educativechatbot_string_detail_grades: 年級 9+
@@ -5100,7 +5087,6 @@ zh:
   tutorial_codecapture_string_detail_grades: 年級 6+
   tutorial_codehslitter_string_detail_grades: 年級 6-8
   tutorial_bsdocean_string_detail_grades: 年級 6-8
-  tutorial_itchplatformer_string_detail_grades: 年級 6+
   tutorial_codejika_string_detail_grades: 年級 6+
   tutorial_gamefrootclicker_string_detail_grades: 年級 6-8
   tutorial_rmagicequity_string_detail_grades: 年級 6-8
@@ -5820,19 +5806,14 @@ zh:
   tutorial_csfirstdialogue_string_platforms: 所有的主流瀏覽器
   tutorial_codemonkeybeaver_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codestersdistance_string_platforms: 所有的主流瀏覽器
-  tutorial_itchspace_string_platforms: 所有的主流瀏覽器
   tutorial_vidcodemagic_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_vidcodemagices_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: 所有的主流瀏覽器
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
-  tutorial_itchball_string_platforms: 所有的主流瀏覽器
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_educodesecret_string_platforms: 所有的主流瀏覽器
-  tutorial_itchshapes_string_platforms: 所有的主流瀏覽器
   tutorial_codeguppytext_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_vidcodeplastiche_string_platforms: 所有的主流瀏覽器, iPad
   tutorial_educativechatbot_string_platforms: 所有的主流瀏覽器
@@ -5857,7 +5838,6 @@ zh:
   tutorial_codehslitter_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
     iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: 所有的主流瀏覽器
   tutorial_codejika_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
     iPhone
   tutorial_gamefrootclicker_string_platforms: 所有的主流瀏覽器, iPad
@@ -6509,19 +6489,14 @@ zh:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -6543,7 +6518,6 @@ zh:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -7196,19 +7170,14 @@ zh:
   tutorial_csfirstdialogue_string_detail_programming_languages: 積木式, Scratch
   tutorial_codemonkeybeaver_string_detail_programming_languages: 積木式
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: 積木式
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: 積木式
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: 積木式
-  tutorial_itchwebcam_string_detail_programming_languages: 積木式
-  tutorial_itchball_string_detail_programming_languages: 積木式
   tutorial_ttrace_string_detail_programming_languages: 咖啡稿
   tutorial_plethora_string_detail_programming_languages: 不受語言影響（可用多種語言教授）
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: 積木式
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -7230,7 +7199,6 @@ zh:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: 蟒蛇, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: 積木式
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: 積木式
   tutorial_rmagicequity_string_detail_programming_languages: 積木式, JavaScript
@@ -7917,10 +7885,7 @@ zh:
   tutorial_kodableshapes_name: 使用程式碼製作形狀
   tutorial_nasabinary_name: 二進制代碼：如何與航天器交談
   tutorial_3dmaker_name: 3D 製造商
-  tutorial_itchstart_name: 它代碼：從刮 5 塊入門
   tutorial_hopsub_name: 與朋友一起建造地鐵衝浪者
-  tutorial_itchmundos_name: 世界上的洛杉磯世界 _E2
-  tutorial_itchtenacity_name: 堅韌
   tutorial_kcjskiing_name: 體育 + 代碼：滑雪
   tutorial_groksecurity_name: 網絡安全：防禦黑帽
   tutorial_creaticode_name: 3D 編程與划痕塊
@@ -8013,11 +7978,7 @@ zh:
   tutorial_kodableshapes_longdescription: '數學是我們生活中無處不在的一部分。使用數學和編碼技能來製作自己的迷宮，然後嘗試解決它。從基本的正方形開始，然後看看您可以在迷宮設計中包含多少種不同的形狀！ '
   tutorial_nasabinary_longdescription: 了解我們如何使用二進制代碼與航天器交談，然後通過將您的名字翻譯成名稱標籤，手鐲，別針甚至聲音上的二進制代碼來嘗試一下。
   tutorial_3dmaker_longdescription: 快速輕鬆地製作自己的非常酷，可旋轉的 3D 對象。
-  tutorial_itchstart_longdescription: 對於 2 或 3 年級的孩子來說，本課程是一個很好的切入點，這些孩子們只是第一次嘗試 Scratch。他們將從一組
-    5 塊開始，他們需要放在一起才能使他們的角色執行一些動作。
   tutorial_hopsub_longdescription: 了解如何將程序與朋友或同學配對，並使用跳房子角色創建自己的地鐵衝浪者！
-  tutorial_itchmundos_longdescription: 劃傷划痕, 一個程序的工具.阿格瑞加連物件和資金，活動博客和公寓達爾生活和蘇程序。
-  tutorial_itchtenacity_longdescription: 這是一個項目和划痕程序模擬一個機器人從拉斯加碼頭.
   tutorial_kcjskiing_longdescription: '這一切都是樂趣和遊戲，直到有人崩潰到樹… 或 IS 有趣的部分？在此划痕活動中使用代碼將角色引導到冰凍障礙的山坡上時，將滑雪板綁在膝蓋上並彎曲膝蓋。設計課程，添加運動和感應，再加上一些碰撞互動和繁榮-您已經擁有了一座充滿樂趣的山。 '
   tutorial_groksecurity_longdescription: 在這個簡短的介紹中戴上您的網絡偵探帽，以確保在線安全。您將了解有關安全密碼，網絡釣魚，安全設置，社交媒體等的信息！
   tutorial_creaticode_longdescription: 學習使用划痕塊構建令人驚嘆的 3D 項目！
@@ -8127,10 +8088,7 @@ zh:
   tutorial_kodableshapes_language: English
   tutorial_nasabinary_language: English
   tutorial_3dmaker_language: English
-  tutorial_itchstart_language: English
   tutorial_hopsub_language: 中文 (簡體), 英文, 西班牙文 (西班牙), 西班牙文 (墨西哥)
-  tutorial_itchmundos_language: 西班牙語（墨西哥）
-  tutorial_itchtenacity_language: 西班牙語（墨西哥）
   tutorial_kcjskiing_language: 英文, 法文
   tutorial_groksecurity_language: English
   tutorial_creaticode_language: 中文 (簡體), 中文 (繁體), 英文
@@ -8217,10 +8175,7 @@ zh:
   tutorial_kodableshapes_string_detail_grades: 學前 - 年級 5
   tutorial_nasabinary_string_detail_grades: 年級 6+
   tutorial_3dmaker_string_detail_grades: 年級 2-8
-  tutorial_itchstart_string_detail_grades: 年級 2-8
   tutorial_hopsub_string_detail_grades: 年級 2-8
-  tutorial_itchmundos_string_detail_grades: 年級 2+
-  tutorial_itchtenacity_string_detail_grades: 年級 2+
   tutorial_kcjskiing_string_detail_grades: 年級 2+
   tutorial_groksecurity_string_detail_grades: 年級 6+
   tutorial_creaticode_string_detail_grades: 年級 6+
@@ -8309,10 +8264,7 @@ zh:
   tutorial_nasabinary_string_platforms: 已拔掉電源、螢幕閱讀器
   tutorial_3dmaker_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
     iPhone
-  tutorial_itchstart_string_platforms: 所有的主流瀏覽器, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
-  tutorial_itchtenacity_string_platforms: 所有現代瀏覽器，Android平板電腦，iPad
   tutorial_kcjskiing_string_platforms: 所有的主流瀏覽器
   tutorial_groksecurity_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
     iPhone
@@ -8404,10 +8356,7 @@ zh:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -8494,10 +8443,7 @@ zh:
   tutorial_kodableshapes_string_detail_programming_languages: JavaScript, 不受語言影響（可用多種語言教授）
   tutorial_nasabinary_string_detail_programming_languages: 二進制代碼
   tutorial_3dmaker_string_detail_programming_languages: 積木式
-  tutorial_itchstart_string_detail_programming_languages: 積木式
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: 積木式
-  tutorial_itchtenacity_string_detail_programming_languages: 積木式
   tutorial_kcjskiing_string_detail_programming_languages: 積木式
   tutorial_groksecurity_string_detail_programming_languages: 無-無需編程
   tutorial_creaticode_string_detail_programming_languages: 積木式
@@ -9250,7 +9196,7 @@ zh:
   tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
   tutorial_ozobotbroadcast_name: Broadcast and Retrieve IR Messages with Ozobot
   tutorial_ozobotapplications_name: Basic Applications of IR Communications
-  tutorial_codecombatworlds_name: CodeCombat Worlds
+  tutorial_codecombatworlds_name: 代碼戰鬥世界
   tutorial_spherochatgpt_name: BOLT meets ChatGPT
   tutorial_spherorvrimage_name: 'AI with RVR+: Image Recognition'
   tutorial_spherorvrauto_name: 'AI with RVR+: Autonomous Vehicles'
@@ -9347,6 +9293,15 @@ zh:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: 舞蹈派對
+  tutorial_introtomlai_name: 機器學習簡介
+  tutorial_computervisionai_name: 電腦視覺
+  tutorial_neuralnetworksai_name: 神經網絡
+  tutorial_chatbotsllmai_name: 聊天機器人和大語言模型
+  tutorial_generativeimagesai_name: 生成圖像
+  tutorial_algorithmicbiasai_name: 算法偏差
+  tutorial_codeofethicsai_name: 我們的 AI 道德守則
+  tutorial_socimpactofgenaiai_name: 生成人工智能的社會影響
   tutorial_generationai_name: 人工智慧時代
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -9475,12 +9430,7 @@ zh:
   tutorial_ozobotapplications_longdescription: Students will identify an everyday
     application of infrared communication andbuild a model of it with Ozobots and
     Ozobot Blockly.
-  tutorial_codecombatworlds_longdescription: Play your way to mastering the coding
-    skills needed for creating your own amazing Roblox games! Start in the Overworld,
-    where you'll code your own pets to harvest, battle, and play. Then, take on the
-    Learning Levels and master the core concepts of Luau coding. But the real magic
-    happens in Creative Mode, where you'll craft your own games with the help of AI.
-    The power to create is in your hands!
+  tutorial_codecombatworlds_longdescription: 以遊戲方式掌握編寫自己令人驚奇的Roblox遊戲所需的編程技能！從大世界開始，您將編寫自己的寵物來收穫、戰鬥和玩耍。然後，挑戰學習關卡，掌握Luau編程的核心概念。但真正的魔力在創意模式中發生，您將借助人工智能來製作自己的遊戲。創造的力量就在您手中！
   tutorial_spherochatgpt_longdescription: ChatGPT, an artificially intelligent chatbot,
     is all the rage these days. Is there anything it doesn’t know? In this activity,
     explore whether or not ChatGPT can program your BOLT robot, then reflect on the
@@ -9755,10 +9705,7 @@ zh:
     on the different poses. They will follow step-by-step instructions and easily
     drag the blocks to solve the exercises. Your curious students can also deep dive
     into how AI works.
-  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
-    then train an AI to play the game on its own! Learn core JavaScript concepts including
-    Variables, Functions and Events, and get hands-on experience with Neural Networks
-    and Machine Learning.
+  tutorial_kcjpong_longdescription: 使用JavaScript重新創建經典Pong遊戲，然後訓練AI自己玩遊戲！學習變量、函數和事件等核心JavaScript概念，獲得神經網絡和機器學習的實踐經驗。
   tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
     Day and promote clean energy to replace fossil fuels and help the environment.  Your
     task is to collect the sun's rays to power a city. Students will start with the
@@ -9818,7 +9765,30 @@ zh:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: '在全新的 Minecraft「一個小時程式設計：人工智慧時代」中穿越時空，創造你的 AI 發明。根據負責任 AI 原則，運用解決問題、創造力和運算思維。使用程式方塊或 Python，「一小時程式設計」可以讓任何人學習程式設計的基本知識，以及如何為大眾建造更好的 AI。'
+  tutorial_danceai2023_longdescription: "  編寫一個舞蹈派對，與你的朋友分享。Katy Perry、Madonna、J.
+    Balvin、Sia、Keith Urban、Ciara 等超過 25 位歌手將為你帶來精彩的表演！  "
+  tutorial_introtomlai_longdescription: 瞭解一種稱為機器學習的人工智慧形式，以及他們如何使用問題解決程序來協助訓練機器人來解決問題。參與機器學習活動，機器人正在學習如何檢測魚類中的模式。
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: 瞭解神經網路如何運作。使用小部件以手中的方式探索神經網絡。觀看解釋神經網絡的視頻。最後討論在建立推薦系統時對不同觀點的需求。
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: 了解 AI 如何生成圖像，然後探索擴散 AI 小部件並討論這些模型是否具有創意。
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: 從不同角度調查生成人工智能的影響，然後以團隊合作制定準則，以滿足所有參與者最多需求的指導方針。
+  tutorial_generationai_longdescription: 在全新的 Minecraft「一個小時程式設計：人工智慧時代」中穿越時空，創造你的
+    AI 發明。根據負責任 AI 原則，運用解決問題、創造力和運算思維。使用程式方塊或 Python，「一小時程式設計」可以讓任何人學習程式設計的基本知識，以及如何為大眾建造更好的
+    AI。
   tutorial_bsimage_string_detail_grades: 年級 6+
   tutorial_bscomputing_string_detail_grades: 年級 6+
   tutorial_stackpython_string_detail_grades: 年級 6+
@@ -9920,7 +9890,7 @@ zh:
   tutorial_hwfanpage_string_detail_grades: 年級 2+
   tutorial_hwillusion_string_detail_grades: 年級 6+
   tutorial_caevolution_string_detail_grades: 年級 6+
-  tutorial_bbbusybot_string_detail_grades: 年級 6+
+  tutorial_bbbusybot_string_detail_grades: 年級 9+
   tutorial_caaifarm_string_detail_grades: 年級 6+
   tutorial_cafuture_string_detail_grades: 年級 6+
   tutorial_dmscratch_string_detail_grades: 年級 2-8
@@ -9950,7 +9920,16 @@ zh:
   tutorial_madmobile_string_detail_grades: 年級 6+
   tutorial_intelinosmile_string_detail_grades: 學前 - 年級 8
   tutorial_intelinoaisign_string_detail_grades: 年級 2-8
-  tutorial_generationai_string_detail_grades: 適合 2-5 年級 (7-10 歲) 6-8 年級 (11-13 歲) 9+ 年級 (14+ 歲)
+  tutorial_danceai2023_string_detail_grades: 年級 2+
+  tutorial_introtomlai_string_detail_grades: 年級 6+
+  tutorial_computervisionai_string_detail_grades: 年級 6+
+  tutorial_neuralnetworksai_string_detail_grades: 年級 6+
+  tutorial_chatbotsllmai_string_detail_grades: 年級 6+
+  tutorial_generativeimagesai_string_detail_grades: 年級 6+
+  tutorial_algorithmicbiasai_string_detail_grades: 年級 6+
+  tutorial_codeofethicsai_string_detail_grades: 年級 6+
+  tutorial_socimpactofgenaiai_string_detail_grades: 年級 6+
+  tutorial_generationai_string_detail_grades: 年級 2+
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: 不插電活動
   tutorial_stackpython_string_platforms: 所有現代瀏覽器, Android平板電腦, iPad, Windows手機, Android手機,
@@ -10116,7 +10095,16 @@ zh:
   tutorial_madmobile_string_platforms: 所有的主流瀏覽器
   tutorial_intelinosmile_string_platforms: 所有的主流瀏覽器, iPad
   tutorial_intelinoaisign_string_platforms: 所有的主流瀏覽器
-  tutorial_generationai_string_platforms: 電腦 (Windows PC 、Mac)、Android (Chromebook)、iPad
+  tutorial_danceai2023_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_introtomlai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_computervisionai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_neuralnetworksai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_chatbotsllmai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_generativeimagesai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_algorithmicbiasai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_codeofethicsai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_socimpactofgenaiai_string_platforms: 主流的瀏覽器、Android 平板、iPad、Android 手機、iPhone
+  tutorial_generationai_string_platforms: 安卓平板電腦, iPad, 視窗手機, 安卓手機, 蘋果
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -10248,6 +10236,15 @@ zh:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
   tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: 不受語言影響
@@ -10374,13 +10371,22 @@ zh:
   tutorial_codecombathack_string_detail_programming_languages: 不受語言影響
   tutorial_toxicodewords_string_detail_programming_languages: 不受語言影響
   tutorial_mitstepmisinformation_string_detail_programming_languages: 不插電活動
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: 不插電活動
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: 不插電活動
   tutorial_mitstepintrotoml_string_detail_programming_languages: 不插電活動
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 積木式
   tutorial_intelinoaisign_string_detail_programming_languages: 積木式
-  tutorial_generationai_string_detail_programming_languages: Block, Python
+  tutorial_danceai2023_string_detail_programming_languages: 不受語言影響
+  tutorial_introtomlai_string_detail_programming_languages: 不受語言影響
+  tutorial_computervisionai_string_detail_programming_language: 不受語言影響
+  tutorial_neuralnetworksai_string_detail_programming_languages: 不受語言影響
+  tutorial_chatbotsllmai_string_detail_programming_languages: 不受語言影響
+  tutorial_generativeimagesai_string_detail_programming_languages: 不受語言影響
+  tutorial_algorithmicbiasai_string_detail_programming_languages: 不受語言影響
+  tutorial_codeofethicsai_string_detail_programming_languages: 不受語言影響
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: 不受語言影響
+  tutorial_generationai_string_detail_programming_languages: 積木式, Python
   school_not_found_heading: 我們找不到你的學校。請輸入更多資訊。
   school_name: 學校名稱
   school_name_error: 需填寫學校名稱。
@@ -10436,7 +10442,7 @@ zh:
   step_06: 第6步
   step_07: 第7步
   step_08: 第8步
-  step_09: Step 9
+  step_09: 第9步
   what: 什麼：
   when: 什麼時候：
   where: 在哪裡：
@@ -10450,58 +10456,28 @@ zh:
   hoc_how_to_companies_intro_heading: 你的公司可以如何參與一小時玩程式
   hoc_how_to_companies_intro_desc_01: 一小時玩程式是為時一小時的計算機科學入門，它使用有趣的教程來展示任何人都可以學習基礎知識。今年，我們將通過提供涵蓋人工智慧（AI）和非人工智慧元件的編程機會，將一小時玩程式推向新的高度。
   hoc_how_to_companies_intro_desc_02: 你的所有努力都可以對來自邊緣化種族和族裔群體的年輕女性和學生看待計算機科學及其自身潛力的方式產生巨大影響。
-  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
-    Code
-  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    Districts who fully engage with Hour of Code can help raise awareness of the computer
-    science movement and inspire more students to try computer science, particularly
-    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_districts_intro_heading: 讓整個學區參與一小時玩程式
+  hoc_how_to_districts_intro_desc_01: 一小時玩程式是一小時的計算機科學介紹，使用有趣的教程來表明任何人都可以學習基礎知識。充分參與一小時玩程式的地區可以幫助提高人們對計算機科學運動的認識，激勵更多學生嘗試計算機科學，特別是來自歷史上被邊緣化的種族和民族群體的年輕女性和學生。
   hoc_how_to_events_intro_heading: 如何規劃一場「一小時玩程式」活動
-  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.
-    Your efforts can make a huge impact on the way students view computer science
-    and their own potential.
-  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
-    Hour of Code can help raise awareness of the computer science movement and inspire
-    more students to try computer science, particularly young women and students from
-    historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_desc_01: 一小時玩程式是一小時的計算機科學介紹，使用有趣的教程來表明任何人都可以學習基礎知識。您的工作可以對學生看待計算機科學的方式和其潛力產生巨大的影響。
+  hoc_how_to_events_intro_desc_02: 充分參與一小時玩程式的學校和組織可以幫助提高人們對計算機科學運動的認識，激勵更多學生嘗試計算機科學，特別是來自歷史上被邊緣化的種族和民族群體的年輕女性和學生。
   hoc_how_to_parents_intro_heading: 如何與孩子一起學習一小時玩程式
-  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
-    to introduce your child to computer science, perhaps for the very first time.
-    Not only is computer science foundational to all fields of study, but recent studies
-    show: children who study computer science perform better in other subjects, excel
-    at problem-solving, and are 17% more likely to enroll in college.'
-  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
-    students worldwide in this global event. Together, we can inspire kids to learn,
-    break stereotypes, and help children discover a newfound interest. Best of all,
-    you already have everything you need to bring the Hour of Code into your home!
-  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
-    of Code
-  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
-    Hour of Code event will show your representative the impact and need for computer
-    science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
-  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    As a volunteer, your efforts can make a huge impact on the way students view computer
-    science and their own potential.
-  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
-    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
-    of all backgrounds participate. The Hour of Code features a large variety of activities
-    for all ages and skill levels, so you don't need to be a programming expert to
-    volunteer.
+  hoc_how_to_parents_intro_desc_01: 嘗試一小時玩程式是向孩子介紹計算機科學（很可能是第一次）的簡單而有趣的方法。計算機科學是所有研究領域的基礎，最近的研究還表明：學習計算機科學的孩子在其他科目中表現更好，在解決問題方面表現出色，進入大學的可能性要高17%。
+  hoc_how_to_parents_intro_desc_02: 您和孩子可以與世界各地數十萬名學生一起參加這個全球性活動。我們可以一起激勵孩子學習，打破刻板思想，幫助孩子發現新興趣。最重要的是，您已經擁有將一小時玩程式帶入家中所需的一切！
+  hoc_how_to_public_officials_intro_heading: 在您的一小時玩程式活動中接待一名民選官員
+  hoc_how_to_public_officials_intro_desc_01: 邀請民選官員參加您的一小時玩程式活動，可以向您的代表展示計算機科學教育的影響和必要性，學生可以獲得政府榜樣的激勵。
+  hoc_how_to_public_officials_intro_desc_02: 為了在民選官員參與的情況下舉行成功的一小時玩程式活動，請在民選官員來學校之前完成這些任務。任務包括與他們的聯絡人協調、媒體邀請、豁免和議程計劃。
+  hoc_how_to_volunteers_intro_heading: 如何為一小時玩程式做志工
+  hoc_how_to_volunteers_intro_desc_01: 一小時玩程式是一小時的計算機科學介紹，使用有趣的教程來表明任何人都可以學習基礎知識。作為志工，您的工作可以對學生看待計算機科學的方式和其潛力產生巨大的影響。
+  hoc_how_to_volunteers_intro_desc_02: 任何對計算機科學教育和增加科技的多樣性充滿熱情的人都可以成為志工！我們希望看到各種背景的志工參加。一小時玩程式提供適合所有年齡段和技能水平的各種活動，因此你不需要成為編程專家即可進行志工服務。
+  hoc_how_to_virtual_event_intro_heading: 如何舉辦虛擬一小時玩程式
+  hoc_how_to_virtual_event_intro_desc_02: 一小時玩程式可以在教室中舉行，但您不需要面對面即也可享受樂趣！您可以利用這裏面的其中一些建議舉辦互動和勵志的遠程活動。
   hoc_how_to_faq_question_prerequisites: 進行一小時玩程式的先決條件是什麼？
   hoc_how_to_faq_answer_prerequisites: 一小時玩程式的運行很簡單，即使是初學者也是如此。激發學生探索、創造和學習新事物不需要計算機科學或教學方面的經驗。
   hoc_how_to_faq_question_devices: 我需要哪些裝置才能進行一小時玩程式？
   hoc_how_to_faq_answer_devices_01: 你可以使用的裝置：
   hoc_how_to_faq_answer_devices_02: 如果裝置有限或無法使用，請嘗試[結對編程](%{pair_url})或探索我們的[缐下活動](%{unplugged_url})，無需任何裝置就可以學習！
-  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
-    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_answer_devices_02_v2: 如果您家中沒有設備，請探索我們的[缐下活動](%{unplugged_url})，在沒有任何設備的情況下學習！
   hoc_how_to_faq_question_volunteer: 誰可以做志工？
   hoc_how_to_faq_answer_volunteer: 任何對計算機科學教育和增加科技的多樣性充滿熱情的人都可以成為志願者！我們希望看到各種背景的志願者參加。一小時玩程式提供適合所有年齡段和技能水平的各種活動，因此你不需要成為編程專家即可進行志願者服務！
   hoc_how_to_faq_question_full_hour: 一小時玩程式是否需要一整個小時？
@@ -10522,9 +10498,7 @@ zh:
   hoc_how_to_faq_question_classroom_visit: 課堂訪問持續多長時間？
   hoc_how_to_faq_answer_classroom_visit: 實體課程通常為 60-90 分鐘，而網絡課程通常為 20-30 分鐘。
   hoc_how_to_faq_question_age_groups: 一小時玩程式活動是提供給哪個年齡層使用的？
-  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
-    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
-    Everyone—even adults—can have fun learning!
+  hoc_how_to_faq_answer_age_groups: Code.org和我們的合作夥伴設計了所有的一小時玩程式活動，鼓勵各種背景、各個年級（K-12）的學生參與其中。每個人，甚至成年人都可以在其中快樂地學習！
   hoc_how_to_resources_heading_educators: 給教師的其他一小時玩程式活動資源：
   hoc_how_to_resources_heading_default: 其他一小時玩程式資源
   hoc_how_to_resources_promo_heading: 推廣資源
@@ -10533,22 +10507,20 @@ zh:
   hoc_how_to_resources_discover_desc: 探索各種專為所有年齡段設計的一小時教程（超過45種語言）。
   hoc_how_to_resources_get_involved_heading: 如何參與
   hoc_how_to_resources_get_involved_desc: 幫助傳播有關一小時玩程式的消息！探索讓您的社區參與的方法。
-  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
-  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
-    look for ways to promote the Hour of Code in your district communication to stakeholders.
-    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_resources_hoc_stats_heading: 一小時玩程式統計數據
+  hoc_how_to_resources_hoc_stats_desc: 在您尋找在地區通訊中向利益相關者推廣一小時玩程式的方式時，請使用範例訊息和資訊圖表。查找有影響力的資訊圖表和統計數據，以與您的社區分享！
   hoc_how_to_step_label_plan: 計劃一小時玩程式活動的地點和時間
   hoc_how_to_step_label_choose_activity: 選擇您的活動
   hoc_how_to_step_label_choose_activities: 選擇您的活動
   hoc_how_to_step_label_test_activity: 測試您的活動
-  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_get_familiar_activities: 熟悉活動
   hoc_how_to_step_label_register_event: 註冊您的活動
   hoc_how_to_step_label_register_your_hoc: 註冊您的一小時玩程式
   hoc_how_to_step_label_tell: 告訴您的學生、學校和社區
   hoc_how_to_step_label_get_coding: 開始編碼！
   hoc_how_to_step_label_celebrate: 慶祝
   hoc_how_to_step_label_beyond_hoc: 超越一小時玩程式
-  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_prepare_your_event: 為活動做準備
   hoc_how_to_step_label_plan_your_event: 計劃您的活動
   hoc_how_to_step_label_plan_your_hour: 計劃您的時間
   hoc_how_to_step_label_help_spread_word: 幫助傳播信息
@@ -10556,30 +10528,23 @@ zh:
   hoc_how_to_step_label_inspire_employees: 激勵您的員工
   hoc_how_to_step_label_encourage_employees: 鼓勵員工做志工
   hoc_how_to_step_label_plan_internal_event: 計劃內部活動
-  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
-  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
-    in Hour of Code
-  hoc_how_to_step_label_after_event: After the event
-  hoc_how_to_step_label_invite_elected_official: Invite an elected official
-  hoc_how_to_step_label_coordinate_media: Coordinate with Media
-  hoc_how_to_step_label_confirm_details: Confirm all details
-  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
-  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_label_recruit_school_participation: 招募學校參與
+  hoc_how_to_step_label_promote_district_involvement: 促進您所在的地區參與一小時玩程式
+  hoc_how_to_step_label_after_event: 活動後
+  hoc_how_to_step_label_invite_elected_official: 邀請一名民選官員
+  hoc_how_to_step_label_coordinate_media: 媒體協調
+  hoc_how_to_step_label_confirm_details: 確認所有細節
+  hoc_how_to_step_label_volunteer_decide: 決定您想如何做志工
+  hoc_how_to_step_label_plan_classroom_visit: 計劃您的課堂參觀
   hoc_how_to_step_beyond_hoc_subhead: 它不會止於此！
-  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
-  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
-    these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: 將學習擴展到教程之外。
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 通過以下建議保持興奮：
+  hoc_how_to_step_beyond_hoc_desc_generic: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然不教授它。立即查看一小時玩程式合作伙伴提供的各種課程，瞭解如何將計算機科學帶到你的學校。
   hoc_how_to_step_plan_hour_desc_01: 以下是一個幫助你開始的示例議程：
   hoc_how_to_step_choose_activities_desc_01: 今年，一小時玩程式主題是人工智慧（AI）創造力。無論是編碼新的應用程式和演算法、製作獨特的藝術品，還是製作編舞來讓我們跳舞，AI都在為數位表達打開新的機會，從而擴大我們對創造力的理解。完成編碼活動並學習AI，讓今年變得特別。
   hoc_how_to_step_choose_activities_desc_02: 首先，[探索數百個編碼活動](%{activities_url})，根據群組的年齡、經驗、興趣等從中選擇一個。[這些精選活動](%{ai_activities_url})將人工智慧作為關鍵主題或課程。
   hoc_how_to_step_choose_activities_desc_03: 然後，[瞭解關於AI的所有信息](%{ai_url})。學生可以觀看該領域專家的短片，還有用於擴展活動和指導進一步討論的附帶課程計劃。或者，我們為教育工作者提供免費專業學習，開啟利用AI教學和關於AI教學的未來。
-  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
-    Students can watch short videos featuring experts in the field, and there are
-    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_choose_activities_desc_03_short: 然後，[瞭解關於AI的所有信息](%{ai_url})。學生可以觀看該領域專家的短片，還有用於擴展活動和指導進一步討論的附帶課程計劃。
   hoc_how_to_step_beyond_advocacy_desc_01: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然沒有教學，成千上萬的工作崗位空缺。學習如何將計算機科學帶到您所在地區的更多學校，並宣導將計算機科學作為一項畢業要求。
   hoc_how_to_step_educators_register_desc: 首先註冊你的活動，承諾與學生一起進行一小時玩程式。註冊後，你將收到有用的電子郵件，其中包含舉辦成功的一小時玩程式的新聞和提示。你還將被[放在地圖上](%{map_url})。我們集體努力的可見整體表明了對計算機科學運動的全球承諾，這將幫助我們為系統性變革建立動力。
   hoc_how_to_step_educators_plan_desc_01: 在活動前，請自行嘗試活動以確保它們可以在學生裝置上運行，並準備好回答問題！頻寬低？計劃在課堂上展示視訊，這樣就不需要每個學生都下載自己的視訊。
@@ -10601,237 +10566,100 @@ zh:
   hoc_how_to_step_companies_plan_desc_02: 儘早做出承諾並提前註冊您的活動。註冊後，您將收到有用的電子郵件，其中包含成功舉辦一小時玩程式的新聞和技巧。您也將[列在地圖上](%{map_url})。我們集體努力的可見總體表明了全球對計算機科學運動的承諾，這將幫助我們建立系統性變革的勢頭。
   hoc_how_to_step_companies_choose_activities_desc_03: 然後，[全面瞭解AI](%{ai_url})。員工可以觀看介紹該領域專家的簡短視訊。
   hoc_how_to_step_companies_spread_word_desc_01: 活動結束後，用個性化的完成證書祝賀你的員工。分享一小時玩程式活動的照片和視訊，並使用#HourOfCode和@codeorg展示你對支持計算機科學運動的承諾。
-  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
-    the resources provided in our how-to guides for educators and school assemblies.
-    With your support, teachers and school administrators can decide which type of
-    event best meets the interest of your schools.
-  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
-    When you register your Hour of Code event, you'll receive helpful emails with
-    news and tips for hosting a successful Hour of Code. It's also how you can let
-    local volunteers know your school is participating. Volunteers are a great resource
-    and can come speak to your class about computer science or help your students
-    with Hour of Code activities.
-  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
-    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
-    Instagram and your district's homepage! Explore our sample emails which help you
-    share your Hour of Code event with your community.
-  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
-    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
-    so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
-  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
-    to see your event, and know that your dedication is part of a worldwide movement.
-  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
-    your event, as well as the tech capabilities of your space. Students can work
-    on their own devices, in pairs on one device, or together as a classroom on a
-    projector, and there are even unplugged tutorials that can be completed with no
-    devices at all!
-  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
-    official or influential business person and invite them to speak. [Check out our
-    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
-    of Code for more info.
-  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
-    as a local news station, newspaper, or education/tech bloggers. [See our press
-    kit for help](%{press_kit_url}).
-  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
-    [inspirational videos](%{videos_url}).'
-  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
-    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
-  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
-    about their background and how technology and computer science plays an important
-    role in their everyday lives'
-  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
-    of Code demo for the school. Fun twist: have them teach the principal, politician,
-    or other students!'
-  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
-    activity and how computer science can be taught without using computers.'
-  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
-    organize school-wide event gives closing remarks.'
-  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
-    take pictures to commemorate the event, and to post on your organization's social
-    media networks. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
-    and that it remains on track to end on time—especially if any special guests have
-    other scheduled commitments to attend.
-  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
-    sure to:'
-  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
-    and congratulate your students.
-  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
-    great for students to do) and offer to answer any follow-up questions they may
-    have.
-  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
-    the day on social media. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
-    on how to make next year's event even better.
+  hoc_how_to_step_districts_recruit_desc_01: 通過分享我們的教育工作者和學校聚會操作指南中提供的資源來招募學校參與。在您的支持下，教師和學校管理員可以決定哪種類型的活動最符合學校的興趣。
+  hoc_how_to_step_districts_register_desc_01: 叫每個舉辦活動的人註冊！當您註冊一小時玩程式活動時，您將收到有用的電子郵件，其中包含有關舉辦成功的一小時玩程式的新聞和提示。這也是您可以讓當地志願者知道您的學校正在參與的方式。志願者是一個很好的資源，可以向您的班級講解計算機科學，或幫助您的學生進行一小時玩程式活動。
+  hoc_how_to_step_districts_promote_desc_01: 讓社區成員和利益相關者知道您參與一小時玩程式活動！發布到臉書、推特、Instagram和您所在地區的主頁！探索我們的示例電子郵件，它們可幫助您與社區分享您的一小時玩程式活動。
+  hoc_how_to_step_districts_celebrate_desc_01: 分享一小時玩程式活動的照片和視訊，展示學生的成就。使用#HourOfCode和@codeorg，讓我們可以看到您們地區的行動！
+  hoc_how_to_step_districts_beyond_desc_01: 計算機科學教育不必隨一小時玩程式結束！為了為您所在地區的學生提供技能和知識，讓他們為大學和職業做好準備，請查看我們的免費使用的網路課程！
+  hoc_how_to_step_districts_beyond_desc_01_v2: 計算機科學教育不必隨一小時玩程式結束！為了為您所在地區的學生提供技能和知識，讓他們為大學和職業做好準備，請查看來自一小時玩程式合作夥伴的多樣化網路課程！
+  hoc_how_to_step_events_register_desc_01: 註冊您的一小時玩程式活動，提前獲取有關新活動和特別推廣的資訊！當300名以上的學生參加時，您可以獲得一個特殊的參與套件，包括T恤、海報、筆記本電腦貼紙等。[分享整個學校的活動計劃](%{share_url})以獲得資格。
+  hoc_how_to_step_events_register_desc_02: 您可以[查看一小時玩程式地圖](%{map_url})以查看您的活動，知道您的奉獻是全球運動的一部分。
+  hoc_how_to_step_events_prepare_desc_01: 考慮您想舉辦活動的地點和時間以及空間的技術能力。學生可以在自己的設備上工作，在一台設備上結對工作，或全班通過投影機一起工作，甚至還有無需設備即可完成的免費缐下教程！
+  hoc_how_to_step_events_prepare_desc_02: 將[信函](%{letter_url})發送給民選官員或有影響力的商人，邀請他們發言。在一小時玩程式期間接待民選官員時，[查看我們的操作工具包](%{toolkit_url})以獲取更多資訊。
+  hoc_how_to_step_events_prepare_desc_03: 您還可以邀請當地媒體，例如當地新聞台、報紙或教育/科技博客。[參閱我們的新聞工具包以獲取幫助](%{press_kit_url})。
+  hoc_how_to_step_events_plan_hour_desc_02: 上午10:00-10:05：以一個[勵志視訊](%{videos_url})開始。
+  hoc_how_to_step_events_plan_hour_desc_03: 上午10:05 - 10:15：校長介紹計算機科學的重要性。[使用這些統計數據和資訊圖表](%{stats_url})。
+  hoc_how_to_step_events_plan_hour_desc_04: 上午10:15 - 10:30：特邀嘉賓講述他們的背景以及科技和計算機科學如何在他們的日常生活中扮演重要角色。
+  hoc_how_to_step_events_plan_hour_desc_05: 上午10:30 - 10:40：學生為學校進行一小時玩程式演示。有趣的轉換：讓學生教校長、政治家和其他學生。
+  hoc_how_to_step_events_plan_hour_desc_06: 上午10:40 - 11:00：學生演示缐下活動，如何在沒有計算機的情況下教授計算機科學。
+  hoc_how_to_step_events_plan_hour_desc_07: 上午11:00 - 11:05 ：協助組織全校活動的教師致閉幕辭。
+  hoc_how_to_step_events_get_coding_desc_01: 當學生正在進行活動時，拍照留念，並在貴組織的社交媒體網路上發布。（可能適用宣傳政策或隱私政策。）
+  hoc_how_to_step_events_get_coding_desc_02: 確保議程順利運行並準時結束，尤其是特邀嘉賓有其他預定事務要出席的情況下。
+  hoc_how_to_step_events_after_desc_01: 成功完成一小時玩程式活動後，請務必：
+  hoc_how_to_step_events_after_desc_02: 慶祝！為完成活動列印證書並祝賀您的學生。
+  hoc_how_to_step_events_after_desc_03: 感謝特邀嘉賓的時間（讓學生來做尤為適合），詢問他們是否有任何後續問題。
+  hoc_how_to_step_events_after_desc_04: 在社交媒體上發布當天的照片、視訊或值得注意的名言。（可能適用宣傳政策或隱私政策。）
+  hoc_how_to_step_events_after_desc_05: 跟進志工或嘉賓，以獲取有關如何讓明年的活動更好的反饋。
   hoc_how_to_step_events_after_desc_06: 聯絡學校的家長教師學生協會或在家長通訊中分享，讓他們知道孩子正在學習的內容。
-  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
-    of Code with your child by registering. When you register your event, you'll receive
-    helpful emails with news and tips for hosting a successful Hour of Code. You'll
-    also be [put on the map](%{map_url}) so you can show your child that they are
-    part of a global movement.
-  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
-    get to work together. They may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. Computer science
-    is all about learning how to "debug" situations that didn't turn out the way we
-    thought they would. Together, you and your child can think of creative ways to
-    solve the problem!
-  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
-    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
-    your child to show off their achievement!
-  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
-    a school-wide event. When 300 or more kids participate, you can receive a special
-    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
-    whole school event plan](%{share_url}) to qualify.
-  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
-    hosting a company-wide event or encouraging other employees to host their own
-    Hour of Code event.
-  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
-    that features one of their favorite role models.
-  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
-    and why it matters.
-  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
-    with your child right away to get them excited or save it for the end of your
-    Hour of Code as a special prize."
-  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
-    your school today."
-  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
-    both your event and the elected official.
-  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
-    from your event (e.g., school administrator) and for the elected official attending
-    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
-    for the day of the event.
-  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
-    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
-  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
-    your Hour of Code event to register and put your event on the map. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
-    map](%{map_url}) to see your event, and know that your dedication is part of a
-    worldwide movement."
-  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
-    day and make sure all parties participating (teachers, students, administrators,
-    elected officials and their staff) are aware of what is happening and when. Things
-    to consider:'
-  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
-    each part of the event?
-  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
-    or rotate between many students during the event? (You may want to coordinate
-    this ahead of time with the official's staffer.)
-  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
-    as a group?
-  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
-    What if the official is running late? What if some students finish their activity
-    before others?
-  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
-    to talk about their background and how technology and computer science plays an
-    important role in their everyday life.'
-  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
-    their Hour of Code activity. Fun twist: have a group of students teach the principal,
-    politician, or other students!'
-  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
-    gives closing remarks.'
-  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
-    coordinating media invitations. It could be the school, the district, the official's
-    office, or any combination.
-  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
-    per your state/district/school policy.
-  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
-    (DocuSign - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
-    (Download and print)"
-  hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
-    - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
-    and print)"
-  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
-    official 72 hours prior to the event. Include event dress code, who will greet
-    them, which classroom or event they will attend with teacher's name, and agenda
-    for the event.
-  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
-    technology the day before and day of the event to ensure the event runs smoothly.
-  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
-    feel welcome and engaged, greet the elected official at the door of the event
-    to show them where to go and answer any questions they may have. It is always
-    great to have a student help greet them!
-  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
-    to commemorate the visit and to post on your organization's social media networks.
-    (Publicity or privacy policies may apply).
-  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
-    smoothly and that it remains on track to end on time. The official may have other
-    visits or meetings scheduled following your event.
-  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
-    of completion and congratulate your students.
-  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
-    and offer to answer any follow-up questions they may have.
-  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
-    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
-    or privacy policies may apply.)'
-  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
-    you note. It's especially thoughtful to get students to sign!
-  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
-    on each side for feedback on how to make next year’s event even better.
-  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
-    or a degree in computer science—you''re already qualified as you are! There are
-    a few ways you can get involved in Hour of Code as a volunteer:'
-  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
-    Email a local teacher or administrator to see if they need support for their Hour
-    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
-    started!"
-  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
-    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
-    Hour of Code event!"
-  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
-    there, teachers in your area will be able to reach out to you. Teachers will review
-    your profile on the [map](%{map_url}), so try to complete as much as possible
-    to increase the chance that a teacher will contact you."
-  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
-    work with your event organizer to register your Hour of Code event. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
-    discuss these logistics with the teacher ahead of time to better understand their
-    needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
-  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
-    This can determine what times you need to be present and in what capacity.
-  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
-    Depending on their procedures you may need to complete a background check or arrive
-    a little early for check-in at an in-person event.
-  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
-    with Artificial Intelligence (AI). Make this year special by completing a coding
-    activity AND learning about AI.
-  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
-    science movement by sharing your volunteer plans with your friends and colleagues
-    on your social media accounts (e.g. LinkedIn).
-  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
-    free to answer questions—but try not to give them the solution outright. Ask them
-    questions so they can answer themselves what went wrong. Encourage students to
-    help each other if they get stuck.
-  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
-    okay! Let the student know that you're in this together and work alongside them
-    to figure it out.
-  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
-  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
-    to stop with the Hour of Code. Consider volunteering year round with programs
-    like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_parents_register_desc_01: 開始：通過註冊承諾與孩子一起進行一小時玩程式。當您註冊活動時，您將收到有用的電子郵件，其中包含有關舉辦成功的一小時玩程式的新聞和提示。您還將被[放在地圖上](%{map_url})，以便您可以向孩子展示他們是全球運動的一部分。
+  hoc_how_to_step_parents_get_coding_desc_01: 引導孩子參加活動並一起工作。他們可能會遇到挑戰，這沒關係！學習編程就像學習一種新語言一樣；您將不會立即流利。計算機科學讓人們學習如何「調試」與預想不一樣的情況。您和孩子可以一起想出有創意的方法來解決問題！
+  hoc_how_to_step_parents_celebrate_desc_01: 一定要慶祝成功！在社交媒體上分享一小時玩程式的照片和視訊。使用#HourOfCode和@codeorg，這樣我們也可以突出你們的成功！
+  hoc_how_to_step_parents_celebrate_desc_02: 你還可以為孩子列印證書，展示他們的成就！
+  hoc_how_to_step_parents_spread_word_desc_02: 請校長舉辦全校活動。當300名以上的孩子參加時，你可以獲得特別參與套件，包括T恤、海報、筆記本電腦貼紙等。[分享你的全校活動計劃](%{share_url})以獲得資格。
+  hoc_how_to_step_parents_spread_word_desc_03: 叫你的雇主參加，舉辦公司範圍內的活動或鼓勵其他員工舉辦他們自己的一小時玩程式活動。
+  hoc_how_to_step_parents_beyond_list_01: 向他們展示一個[勵志視訊](%{video_url})，其中包含他們最喜歡的榜樣。
+  hoc_how_to_step_parents_beyond_list_02: 瞭解[AI如何運行](%{ai_url})以及它為什麽重要。
+  hoc_how_to_step_parents_beyond_list_03: "[訂購一些物品](%{swag_url})！立即與您的孩子分享以使他們興奮，或將其保存好，在一小時玩程式結束時作為特殊獎品。"
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url})如何立即將計算機科學帶到你的學校。"
+  hoc_how_to_step_public_officials_invite_desc_01: 確定您的活動和民選官員的負責人員。
+  hoc_how_to_step_public_officials_invite_desc_02: 協調活動中的負責人員（例如學校管理員）和民選官員出席的負責人員（例如員工或計劃員）。確保活動當天雙方擁有彼此的聯絡信息。
+  hoc_how_to_step_public_officials_invite_desc_03: 從左到右：阿肯色州、北卡羅來納州和亞利桑那州州長參加一小時玩程式
+  hoc_how_to_step_public_officials_register_desc_01: 與組織一小時玩程式活動的各方合作，註冊您的活動並將其放在地圖上。提前訪問有關新活動和特別推廣的資訊！
+  hoc_how_to_step_public_officials_register_desc_02: "[查看一小時玩程式地圖](%{map_url})以查看您的活動，知道您的奉獻是全球運動的一部分。"
+  hoc_how_to_step_public_officials_plan_desc_01: 為當天建立特定的議程，確保所有參與方（教師、學生、管理員、民選官員及其工作員工）都知道流程和時間。要考慮的事項：
+  hoc_how_to_step_public_officials_plan_list_01: 每位參與者在活動的每個部分做什麼？
+  hoc_how_to_step_public_officials_plan_list_02: 官員會在活動期間與一名學生一起坐還是在多個學生之間輪流？（您可能需要提前與官員的工作人員進行協調。）
+  hoc_how_to_step_public_officials_plan_list_03: 官員會以小組形式與學生講話嗎？
+  hoc_how_to_step_public_officials_plan_list_04: 在議程中考慮靈活性。如果官員遲到了怎麼辦？如果有些學生比其他學生先完成活動怎麼辦？
+  hoc_how_to_step_public_officials_agenda_list_03: 上午10:10 - 10:15：民選官員講述他們的背景以及科技和計算機科學如何在他們的日常生活中扮演重要角色。
+  hoc_how_to_step_public_officials_agenda_list_04: 上午10:15 - 10:55：學生進行編一小時玩程式活動。有趣的轉變：讓一群學生來教校長、政治家或其他學生！
+  hoc_how_to_step_public_officials_agenda_list_05: 上午10:55 - 11:00：教師/管理員致閉幕辭。
+  hoc_how_to_step_public_officials_media_desc_01: 知道誰將負責協調媒體邀請。可以是學校、地區、官員辦公室或任何組合。
+  hoc_how_to_step_public_officials_media_desc_02: 根據您所在的州/地區/學校政策，針對所有學生的安全媒體豁免。
+  hoc_how_to_step_public_officials_media_list_01: "[成人/普通](%{general_send_url})（DocuSign
+    - 發送連結給簽署者）"
+  hoc_how_to_step_public_officials_media_list_02: "[成人/普通](%{general_print_url})（下載和列印）"
+  hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url})（DocuSign
+    - 發送連結給簽署者）"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url})（下載和列印）"
+  hoc_how_to_step_public_officials_confirm_desc_01: 活動開始前72小時將公共議程發送給官方。包括活動的服裝要求、誰會迎接他們、他們將參加哪個教室或活動及教師姓名、活動議程等。
+  hoc_how_to_step_public_officials_confirm_desc_02: 在活動前一天和當天檢查議程並測試所有技術設備，以確保活動順利進行。
+  hoc_how_to_step_public_officials_get_coding_desc_01: 為確保民選官員感受到歡迎和參與，請在活動門口迎接民選官員，告訴他們該去哪裡，並回答他們的問題。有學生迎接他們總是很好的安排！
+  hoc_how_to_step_public_officials_get_coding_desc_02: 在活動期間拍照留念，並在貴組織的社交媒體網路上發布。（可能適用宣傳政策或隱私政策）。
+  hoc_how_to_step_public_officials_get_coding_desc_03: 確保議程順利運行並準時結束。官員可能會在您的活動後安排其他訪問或會議。
+  hoc_how_to_step_public_officials_after_list_01: 慶祝！為完成活動[列印證書](%{certificate_url})並祝賀您的學生。
+  hoc_how_to_step_public_officials_after_list_02: 感謝官員的時間，並詢問他們是否有任何後續問題。
+  hoc_how_to_step_public_officials_after_list_03: 使用#HourOfCode和@codeorg在社交媒體上發布當天的照片、視訊或值得注意的名言。（可能適用宣傳政策或隱私政策。）
+  hoc_how_to_step_public_officials_after_list_04: 向官員發送跟進感謝信。讓學生簽名將是周到之舉！
+  hoc_how_to_step_public_officials_after_list_05: 跟進各方的負責人員，以獲取有關如何讓明年的活動更好的反饋。
+  hoc_how_to_step_volunteer_decide_desc_01: 您不需要技術背景或計算機科學學位，您已經符合資格！有幾種作為志工參與一小時玩程式的方法：
+  hoc_how_to_step_volunteer_decide_list_01: "**與您所在地區的學校聯絡。**發送電子郵件給當地教師或管理員，看看他們是否需要一小時玩程式活動的支持。查看我們的[示例電子郵件](%{email_url})
+    ，瞭解志工如何開始！"
+  hoc_how_to_step_volunteer_decide_list_02: "**與您的公司一起舉辦活動。**查看我們的[公司操作指南](%{companies_url})以組織整個機構範圍内的一小時玩程式活動！"
+  hoc_how_to_step_volunteer_decide_list_03: "**在志工地圖上註冊。**在那裡，您所在地區的教師將能夠與您聯絡。教師會在[map](%{map_url})上查看您的個人資料，因此請盡可能填寫完整，以增加教師與您聯絡的機會。"
+  hoc_how_to_step_volunteer_register_desc_01: 無論您如何決定做志工，請與您的活動組織者合作註冊您的一小時玩程式活動。您可以提前訪問有關新活動和特別推廣的資訊！
+  hoc_how_to_step_volunteer_plan_desc_01: 如果您在教室做志工，請提前與教師討論這些後勤，以更好地了解他們的需求：
+  hoc_how_to_step_volunteer_plan_list_01: 作為志工，您在活動中的角色是什麼？如果您從事科技工作，可能會讓您分享您的個人經驗或故事。您是否可以通過提前一起進行活動來幫助教師做好準備？您是否可以在課堂上走動以回答問題或在學生進行一小時玩程式時鼓勵他們？
+  hoc_how_to_step_volunteer_plan_list_02: 你是虛擬還是面對面志工。這將決定你需要在什麼時間和以什麼身份出現。
+  hoc_how_to_step_volunteer_plan_list_03: 本地和學校健康和安全指引。根據他們的程序，您可能需要完成背景檢查，或在面對面活動中提早抵達以進行簽到。
+  hoc_how_to_step_volunteer_plan_list_04: 今年，一小時玩程式主題是人工智慧（AI）創造力。通過完成編碼活動並學習AI，使今年變得特別。
+  hoc_how_to_step_volunteer_spread_word_desc_01: 通過在您的社交媒體帳戶（例如LinkedIn）上與朋友和同事分享您的志工計劃，幫助提高對計算機科學運動的意識。
+  hoc_how_to_step_volunteer_get_coding_desc_01: 當學生正在工作時，可以回答問題，但盡量不要直接給他們解決方案。向他們提出問題，以便他們自己回答哪裏出錯了。鼓勵學生在遇到困難時互相幫助。
+  hoc_how_to_step_volunteer_get_coding_desc_02: 如果你沒有答案，那沒關係！讓學生知道，你們一起參與，並與他們一起努力解決問題。
+  hoc_how_to_step_volunteer_beyond_desc_01: 全年支持計算機科學學習！
+  hoc_how_to_step_volunteer_beyond_desc_02: 如果您玩得開心，則工作不必隨一小時玩程式結束。考慮通過[TEALS](%{teals_url})等項目全年做志工，或倡導計算機科學教育。
+  hoc_how_to_step_virtual_register_desc_01: 註冊您的一小時代碼活動，提前訪問有關新活動和特別推廣的資訊。
+  hoc_how_to_step_virtual_register_desc_02: 您可能不會面對面聚會，但您仍然是運動的一部分。使用主持人的位置將您的活動添加到一小時玩程式地圖，知道您的奉獻是全球運動的一部分。
+  hoc_how_to_step_virtual_choose_activities_desc_04: 提前決定是為所有學生選擇單一教程，還是讓每個學生自己選擇。
+  hoc_how_to_step_virtual_plan_list_01: 上午10:00 - 10:05：以[勵志視訊](%{videos_url})或主持人對計算機科學基礎知識重要性的簡短介紹開始
+  hoc_how_to_step_virtual_plan_list_02: 上午10:05 - 10:45：學生進行編碼活動
+  hoc_how_to_step_virtual_plan_list_03: 上午10:45 - 10:55：學生瞭解人工智慧
+  hoc_how_to_step_virtual_plan_list_04: 上午10:55 - 11:00：教師致閉幕辭
+  hoc_how_to_step_virtual_plan_desc_02: 提前測試您的技術設置和活動。考慮您的學生將如何加入通話，以及他們是否可以在通話的同時在單獨視窗中完成活動。顯示視訊時，共享您的螢幕和電腦的聲音。
+  hoc_how_to_step_virtual_plan_desc_03: 在編碼活動期間，您可以要求學生靜音，除非他們有問題。或者，如果您的會議工具支持，請考慮使用分組討論室供學生結對或分組合作。
+  hoc_how_to_step_virtual_get_coding_desc_01: 在會議工具的聊天框中分享連結或通過課堂的學習管理系統，引導學生參與活動。學生可能會遇到挑戰，這沒關係！學習編程就像學習一種新語言，你不會立即變得流利。如果學生不知道答案，鼓勵他們結對，一起弄清楚。
+  hoc_how_to_step_virtual_celebrate_desc_01: 一定要慶祝成功！您可以提前列印證書並將其發送給您的學生，或叫每個學生讓家長在家中列印。展示他們的成就，並在社交媒體上分享您的一小時玩程式活動的照片和視訊。使用#HourOfCode和@codeorg，這樣我們也可以突出您的成功！（可能適用宣傳政策或隱私政策。）
+  hoc_how_to_step_virtual_beyond_desc_01: 計算機科學不必以一小時玩程式結束！雖然90％的父母希望他們的孩子學習計算機科學，但大多數學校仍然不教授它。為了提供幫助，一小時玩程式的合作夥伴提供了各種各樣的課程。立即瞭解如何將這些内容帶到學校。
   hoc_ai_top_desc: 無論您是教室中的學生還是教育工作者，任何人都可以學習 AI 的知識。
   hoc_ai_how_ai_works_video_series_desc: 這系列短視頻將向您介紹人工智能的工作原理以及為什麼重要。然後深入研究演算法偏見和
     AI 決策道德等問題。
@@ -10839,6 +10667,37 @@ zh:
   hoc_ai_101_for_educators_desc: 通過我們為教育工作者提供的免費線上學習系列，探索人工智慧（AI）在教育中的變革潛力。
   hoc_ai_impacts_desc: 透過教師指導的課程，探討人工智慧的影響，並邀請學生思考解決某些 AI 問題的解決方案。
   hoc_ai_activities_desc: 這些全新的一小時代碼活動以有趣且引人入勝的方式向用戶介紹人工智能世界。
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: 將近 100 名員工穿著藍色和黃色 T 恤的 Code.org 員工在酒店會議室舉辦的 2022 年夏季
     Codechella 活動中擺姿勢。
   careers_page_code_pride_alt_text: 兩位女性呈現的員工微笑著，同時拿著代碼的末端。組織品牌的彩虹橫幅。在他們背後，有幾個人穿著
@@ -11151,7 +11010,10 @@ zh:
     Partovi](%{partovi_url})通過一個推廣計算機科學的[video](%{video_url})推出。該視訊在YouTube上成為當天排名第一的視訊，15萬間學校聯絡我們尋求協助。從那時起，我們已經從一支啟動志願者團隊擴展到了一個全面的組織，支持全球運動。我們相信，每個孩子都應該獲得優質的計算機科學教育，而不只是少數幸運者。
   about_page_section_more_description_2: 為了支持我們的目標，我們的教育範疇包括設計自己的課程或與他人、培訓教師合作，與大型學區合作，協助改變政府政策，通過合作夥伴關係拓展國際化，進行行銷以打破刻板印象。
   about_page_section_more_description_3: 我們的工作基於[數十年的努力、無數組織和個人](%{efforts_url})，他們幫助建立、資助和傳播計算機科學教育。我們為受益於更廣泛的計算機科學教育社區的不懈幫助表示感謝，同時[我們對所有在多年來支持我們的工作的所有合作夥伴和個人表示感謝](%{partners_url})。
-  about_page_section_more_list_1: "[Code.org 2021年度報告](%{report_url})（過去的報告：[2020](%{past_url_1})，[2019](%{past_url_2})，[2018](%{past_url_3})，[2017](%{past_url_4})，[2016](%{past_url_5})，[2015](%{past_url_6})，[2014](%{past_url_7})）"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[我們的核心價值觀和訊息指南](%{core_url})"
   about_page_section_more_list_3: "[我們的課程和教學哲學](%{curriculum_url})"
   about_page_section_more_list_4: "[我們的創始人Hadi Partovi關於為什麼計算機科學適合所有人的TEDx講座（視訊）](%{tedx_url})"

@@ -34,6 +34,8 @@ fr:
             '0.75': petit(s)
             '1.00': moyen(s)
             '2.00': grand(s)
+      Dancelab_ai:
+        text: "{IMAGE}généré {VALUE} effet"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -631,6 +633,7 @@ fr:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Pétales éclos
             '"circles"': Tunnel
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
@@ -638,6 +641,7 @@ fr:
             '"disco_ball"': Boule disco
             '"fireworks"': Feux d'artifice
             '"flowers"': Fleurs
+            '"frosted_grid"': Grille givrée
             '"galaxy"': Espace
             '"growing_stars"': Étoiles montantes
             '"kaleidoscope"': Kaléidoscope
@@ -659,16 +663,26 @@ fr:
             '"swirl"': Hypno
             '"text"': Titres de chanson
           PALETTE:
+            '"autumn"': Automne
             '"cool"': Cool
             '"default"': Lumière
             '"electronic"': Électronique
+            '"grayscale"': Nuance de gris
             '"iceCream"': Glace
             '"neon"': Néon
             '"rainbow"': Arc-en-ciel
             '"rave"': Noir et blanc
+            '"roses"': Roses
+            '"sky"': Ciel
+            '"spring"': Printemps
+            '"summer"': Été
+            '"sunrise"': Levée du soleil
+            '"sunset"': Coucher du soleil
             '"tropical"': Tropical
+            '"twinkling"': Scintillant
             '"vintage"': Vintage
             '"warm"': Rouges
+            '"winter"': Hiver
         text: définir l'effet d'arrière-plan {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
@@ -1102,13 +1116,22 @@ fr:
       FunctionBlocks_communicate:
         text: Communiquez [VAR1]et[0] avec {SPRITE1COSTUME}
       FunctionBlocks_makeManipulative2:
-        text: faire un {NUM} nouveau {ANIMATION_NAME}Sprites {BEHAVIOR}
+        text: faire {NUM} nouveau(x) sprites {ANIMATION_NAME} {BEHAVIOR}
       FunctionBlocks_representManipulative:
         text: représente {NUM} nouveaux {ANIMATION_NAME} sprites [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}dit{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} glisser vers {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': Liquide
+            '"solid"': Solide
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: culbute
       Mikelab_addBehaviorSimple:
@@ -1150,6 +1173,8 @@ fr:
             "{x: 300, y: 200}": vers la droite
             "{x: 300, y: 300}": en bas à droite
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": Random
+      Mikelab_destroy:
+        text: retirer {SPRITE}
       Mikelab_eval:
         text: evaluer {CODE}
       Mikelab_getNext:
@@ -2021,21 +2046,21 @@ fr:
       ecosystems_makeNewSpriteBetween:
         text: 'créer {N} un nouveau {GROUP} entre les emplacements x : {X} y: {Y}'
       ecosystems_makeNumSpritesAtLocation:
-        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {LOCATION_GENERATOR}
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {LOCATION_GENERATOR}
       ecosystems_makeNumSpritesWithinRange:
         options:
           RANGE:
             "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
             "{x1:0, x2:400, y1:150, y2:250}": Au milieu
-            "{x1:0, x2:400, y1:200, y2:400}": Haut
-        text: créer {NUM} de nouveaux {ANIMATION_NAME} sprites {RANGE}
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
+        text: créer {NUM} de nouveaux sprites {ANIMATION_NAME} à {RANGE}
       ecosystems_randomLocationWithinRange:
         text: x min{X1}x max{X2}y min{Y1}y max{Y2}
       ecosystems_randomLocationWithinSelectedRange:
         options:
           RANGE:
             "{x1:0, x2:400, y1:0, y2:200}": Vers le bas
-            "{x1:0, x2:400, y1:200, y2:400}": Haut
+            "{x1:0, x2:400, y1:200, y2:400}": En haut
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} se met à {BEHAVIOR}
       gamelab_addTarget:
@@ -2461,7 +2486,7 @@ fr:
       gamelab_resetTimer:
         text: réinitialiser le chronomètre
       gamelab_setAnimation:
-        text: modifier {THIS} costume en {ANIMATION}
+        text: changer le costume de {THIS} en {ANIMATION}
       gamelab_setBackground:
         text: définir la couleur du fond {COLOR}
       gamelab_setBackgroundImage:
@@ -2578,7 +2603,7 @@ fr:
       gamelab_spriteSay:
         text: "{SPRITE} dit {SPEECH}"
       gamelab_spriteSayTime:
-        text: "{SPRITE}dit{TEXT1}pour{NUM}secondes"
+        text: "{SPRITE}dit{TEXT1}pendant{NUM}secondes"
       gamelab_spriteThink:
         text: "{SPRITE} pense {SPEECH}"
       gamelab_spriteThinkTime:

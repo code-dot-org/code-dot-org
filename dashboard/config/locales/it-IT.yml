@@ -4,6 +4,7 @@ it:
     attributes:
       user:
         age: Età
+        ai_settings_header: Impostazioni IA
         current_password: Password attuale
         edit_header: Modifica i dettagli dell'account
         email: Indirizzo email

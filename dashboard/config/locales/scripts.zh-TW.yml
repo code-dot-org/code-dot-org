@@ -5795,6 +5795,10 @@ zh-TW:
           description_short: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
           title: 舞蹈派對 2019
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 舞蹈派對：AI版
         dance-draft:
           title: 請勿使用
         dance-extras:
@@ -7784,6 +7788,20 @@ zh-TW:
           student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
             \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
           title: 模組1：準備問題解決和計算教學
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模組2：準備Web開發教學
+        self-paced-pl-csd-unit3-2-2023:
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          title: 準備互動動畫和遊戲教學
+        self-paced-pl-csd-unit4-2-2023:
+          title: 模組4：準備設計進程教學
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模組5：準備數據和社會教學
         self-paced-pl-csd1-2021:
           description: "本單元是 Code.org 和這個專業學習課程的簡短介紹。 \n\n\\*\\* 您將：\\*\\*\n\n\\-取得
             Code.org 和 CS 探索的簡介。\n\\-學習如何參與此專業學習課程。\n\n\\*\\* 建議時間：\\*\\* 10 分鐘"

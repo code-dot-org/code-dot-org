@@ -67,6 +67,8 @@ hi:
           description_short: कंप्यूटर साइंस की बुनियादी धारणाओं के बारे में जानें।
         csd-2023:
           title: कंप्यूटर साइंस के अन्वेषण
+        self-paced-pl-csd-unit2-2023:
+          title: वेब डेवलपमेंट सिखाना
     resources:
       curriculum/csd/2017:
         name: पाठ्यक्रम

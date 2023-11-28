@@ -1672,6 +1672,12 @@ ur:
         text: Y کے ہم آہنگ {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ٹھوس
+            '"liquid"': مائع
+            '"gas"': گیس
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

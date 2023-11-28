@@ -100,6 +100,9 @@
         "CSD U3 Random add_2022": {
           "CSD_U3_butterfly": "Observa atentamente este código."
         },
+        "CSD U3 Random add_2023": {
+          "CSD U3L6.9 - part1": "¡Lee el código aquí!"
+        },
         "CSD U3 Sprites anitab 1": {
           "": "Haz clic aquí para abrir la pestaña Animación"
         },
@@ -135,6 +138,9 @@
         },
         "CSD U3 Sprites intro sprites_2023": {
           "": "Usa este bloque para crear un sprite"
+        },
+        "CSD U3 Sprites intro sprites_test2023": {
+          "CSD U3L7.5 - animation": "¡Puedes ver las animaciones aquí!"
         },
         "CSD U3 Sprites text": {
           "": "Usa este bloque para poner texto en la pantalla"

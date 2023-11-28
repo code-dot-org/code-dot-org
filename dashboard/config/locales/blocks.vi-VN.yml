@@ -1074,6 +1074,12 @@ vi:
         text: "{SPRITE}nói{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': khí
+            '"liquid"': lỏng
+            '"solid"': rắn
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

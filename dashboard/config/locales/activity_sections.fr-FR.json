@@ -23599,7 +23599,7 @@
         },
         "aa9723bf-a22c-4655-8761-a357f2e53e0b": {
           "tips": [
-            "Les niveaux 2 à 9 sont conçus pour être adaptés à votre propre rythme. Les élèves peuvent progresser à des vitesses différentes. Vous pouvez envisager de mettre en place une programmation en binôme avec des étudiants dont vous savez qu'ils auront besoin d'un soutien ou d'une concentration supplémentaires. Si vous prévoyez de faire participer vos élèves à un programme de jumelage, regardez</a> une <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">vidéo avec votre classe. Pour en savoir plus sur la configuration de la programmation par paires, <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">cliquez ici</a>. \n\nSi vos élèves utilisent Sprite Lab pour la première fois, consultez cette</a> ressource d'astuces <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">utiles. "
+            "Les niveaux 2 à 9 sont conçus pour être adaptés au rhythme individuel des élèves. Les élèves pourront progresser à différentes vitesses. Vous pouvez envisager de mettre en place la programmation en binômes avec des élèves dont vous savez qu'ils auront besoin de soutien ou d'aide pour se concentrer. Si vous prévoyez de faire programmer en binôme vos élèves, regardez <a href=\"https://www.youtube.com/watch?v=sxToW3ixrwo\" target=\"_blank\">cette vidéo</a> ensemble en classe. Pour en savoir plus sur comment organiser la programmation en binômes, <a href=\"https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-\" target=\"_blank\">cliquez ici</a>. \n\nSi c'est la première fois que vos élèves utilisent le Labo des Sprites, consultez cette ressource pour obtenir quelques <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">astuces utiles</a>. "
           ],
           "progression_name": "Développement des Compétences"
         },
@@ -35991,35 +35991,73 @@
           "progression_name": "Si... alors...  Expressions conditionnelles"
         },
         "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
-          "name": "Filtrer la musique"
+          "name": "Filtrer la musique",
+          "description": "Ce tutoriel propose des chansons d'artistes populaires. Pour avoir un aperçu de la liste des chansons contenues dans ce tutoriel, consultez cette liste de lecture Spotify (tous âges confondus). Nous utilisons des versions radiophoniques sûres pour toutes les chansons et pour les élèves de moins de 13 ans."
         },
         "524efe4b-796a-48eb-b1c6-f4e138699443": {
-          "name": "Soutien général"
+          "name": "Soutien général",
+          "description": "En tant qu'enseignant, votre rôle est avant tout d'aider les élèves à progresser dans le cadre du tutoriel. Voici quelques conseils qui devraient aider les élèves, quel que soit leur niveau.\n\n-   **Collaborer avec vos voisins:** Encouragez les élèves à consulter leurs voisins lorsqu'ils sont bloqués. Étant donné que ce tutoriel comprend des vidéos et que les élèves peuvent porter des écouteurs, cela peut facilement les isoler.  Aidez à briser ces barrières en mettant activement ensemble les élèves qui semblent avoir besoin d'aide. Selon l'âge et les capacités de vos élèves, vous pouvez envisager de former des groupes de deux pour compléter le tutoriel en recourant à la programmation en binôme.\n-   **Lisez les instructions:** Les instructions indiquent les étapes à suivre pour compléter le niveau. .\n-   **Débrouillez-vous ? Cherchez des indices:** Chaque niveau comprend un indice avec des détails supplémentaires sur la façon de passer le niveau. Si les élèves essaient de passer les niveaux le plus rapidement possible, ils se rendront peut-être compte qu'il leur faudra attendre un certain temps pour que tout le code se déroule avant de continuer. \n    \\-\\*\\*Passer à autre chose et revenir :\\*\\*Certains élèves seront plus à l'aise en revenant sur les niveaux qui leur semble difficiles. Tous les niveaux sont indépendants les uns des autres, bien qu'ils s'appuient parfois sur des concepts introduits précédemment.\n-   \\*\\*Prenez votre temps et expérimentez  \\*\\* : Il y a des instructions explicites et des conseils pour aider les étudiants à passer chaque niveau. En plus de réussir, les étudiants doivent se sentir libres de tester leurs propres idées en faisant des essais avec différents danseurs, mouvements de danse, effets et sons."
         },
         "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            null
+            "Pour acquérir des connaissances de base sur l'intelligence artificielle ou prolonger l'apprentissage, consultez les vidéos, les cours et les possibilités de formation professionnelle sur notre [page Créer avec l'I.A.](https://hourofcode.com/ca).\n\nSi vous avez le temps et souhaitez organiser une activité débranchée pour vos élèves, vous pouvez proposer [Dance Party : Unplugged](https://studio.code.org/s/dance-unplugged/lessons/1) avant l'Heure de code. Cette brève leçon présente aux étudiants le concept d'événements déclenchant différents mouvements de danse."
           ]
         },
         "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
-          "progression_name": "Vidéo d'introduction"
+          "progression_name": "Vidéo d'introduction",
+          "name": "Introduction à la soirée dansante",
+          "description": "Dans cette vidéo, les élèves verront un exemple de codage créatif dans le monde réel qui les aidera à coder leur propre fête de danse interactive. Cette vidéo explique également les différents éléments de leur plateforme de codage, tels que la manette d'instructions, l'espace de travail, la boîte à outils et l'espace de jeu. "
         },
         "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
           "tips": [
-            null
+            "Les vidéos intégrées seront affichées au-dessus du niveau la première fois qu'un utilisateur l'ouvrira. Les élèves peuvent quitter la vidéo une fois qu'ils ont fini de la regarder. S'ils souhaitent regarder à nouveau la vidéo, il leur suffira de cliquer sur le bouton \"Exécuter\"."
           ]
         },
         "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
-          "name": "Compte rendu"
+          "name": "Compte rendu",
+          "description": "Profitez de l'expérience positive acquise en matière de codage. \n\n**Discuter:** \n\nSi c'est la première fois qu'ils font du codage, demandez-leur : \" \n\n-   Qu'est-ce qui vous a plu dans l'activité d'aujourd'hui ? \n    ou \n-   Comment avez-vous fait preuve de créativité et utilisé l'informatique aujourd'hui ?\n\nSi vos élèves ont déjà codé auparavant, posez-leur la question de savoir : \"Quelle est la nouvelle chose que vous avez codée aujourd'hui ?\n\n-   Quelle est la nouvelle chose que vous avez codée aujourd'hui et que vous n'aviez pas faite auparavant ?\n\nEnsuite, **réfléchissez à l'utilisation de l'I.A.** pour les aider à coder :\n\n-   Pensez-vous qu'il est plus amusant de créer des choses tout seul ou de travailler avec un ordinateur ou un robot ? Pourquoi ?\n-   Comment l'I.A. pourrait-elle être utilisée à l'école pour aider les élèves à être plus créatifs ?\n-   Pouvez-vous imaginer une histoire ou un dessin amusant que vous aimeriez qu'un ordinateur vous aide à créer ? Comment pourrait-il vous aider ?"
         },
         "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
-          "name": "Fêtez ça"
+          "name": "Fêtez ça",
+          "description": "Dites que vous allez passer une heure à coder aujourd'hui parce que cette semaine est la semaine de l'éducation à la science et à la technologie et que des millions d'autres élèves à travers le monde ont également participé à l'heure de code cette semaine. Félicitez les élèves pour leur participation à ce mouvement mondial.\n\nRemettez à chaque élève un [certificate](http://code.org/certificates) portant son nom."
         },
         "07a73ab9-8996-453a-a87f-63628f2387db": {
           "name": "Prochaines étapes"
         },
         "fb665f5b-457e-484e-924a-7aa4f2e097be": {
-          "name": "Devenez viral"
+          "name": "Devenez viral",
+          "description": "L'Heure du code est axée sur la créativité, et nous avons hâte de voir ce que vous allez créer ! N'hésitez pas à partager vos créations, photos et vidéos sur les réseaux sociaux ! Enseignants, filmez votre classe pendant qu'elle réalise les activités de codage d'une danse ou exécute la danse en question.\n\nN'oubliez pas de mentionner #HourOfCode et de nous taguer sur Facebook, Twitter et Instagram. Vous obtiendrez des points bonus si vous citez l'artiste dont vos élèves ont utilisé la musique. Code.org partagera à nouveau nos publications préférées avec nos millions d'adeptes.\n\n_Il est important de respecter la politique de votre école en matière de réseaux sociaux._"
+        },
+        "596336ba-e584-4453-a2cd-2268dc3c59bc": {
+          "description": "Aujourd'hui, nous allons faire quelque chose de très créatif avec le code ! Le \"code\" est un ensemble d'instructions que l'ordinateur comprend. Avant de commencer, comment aimes-tu être créatif ou t'exprimer ?"
+        },
+        "84a173a8-19dd-407d-88cb-6747bdc1122d": {
+          "description": "Encouragez les élèves à partager les façons dont ils expriment leur créativité, par exemple par l'art, la danse, la musique et l'écriture."
+        },
+        "66891774-46dc-4488-a30b-5d231e4145ff": {
+          "description": "De même que le choix des couleurs de peinture ou des mots utilisés pour écrire est un moyen d'exprimer sa créativité. Le choix du code que vous écrivez et la façon dont les gens interagissent avec lui sont autant d'occasions d'exprimer votre créativité !\nDans cette activité de codage créatif, vous découvrirez un nouvel outil très utile : L'intelligence artificielle, également connue sous le nom d'I.A. ! L'I.A. est un programme informatique qui fonctionne comme le cerveau d'un être humain. Le robot I.A. de cette activité peut vous aider à choisir les effets spéciaux très rapidement."
+        },
+        "b98db6e3-3139-4e85-bd62-60603e22af96": {
+          "description": "**Discussion:** Comment pensez-vous que les ordinateurs et les robots peuvent nous aider à être plus créatifs ?\n\n**Objectif de la discussion:** Les élèves devraient réfléchir à la manière dont l'intelligence artificielle pourrait être utile dans le processus créatif. Voici quelques idées : \n\n-   **Génération d'idée :** L'IA peut aider à trouver des idées nouvelles et passionnantes pour des histoires, des dessins et d'autres projets créatifs lorsque l'on se sent bloqué. \n-   **Inspiration artistique:** L'IA peut suggérer des couleurs, des styles et des thèmes pour vos œuvres d'art, vous donnant ainsi de l'inspiration pour votre prochain chef-d'œuvre.\n-   **Collaboration:** L'IA peut être un partenaire créatif, qui vous aidera à réfléchir et à collaborer avec d'autres personnes sur des projets."
+        },
+        "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf": {
+          "name": "Dansons",
+          "description": "À ce niveau, les élèves doivent créer un nouveau danseur à l'aide d'un bloc de code et lui faire exécuter un mouvement de danse à l'aide d'un second bloc de code. Encouragez-les à utiliser les menus déroulants pour explorer différents danseurs, mouvements de danse et chansons.  ",
+          "progression_name": "Créer un danseur et un mouvement de danse"
+        },
+        "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
+          "name": "Utiliser l'I.A. pour générer des effets spéciaux",
+          "description": "Dans les trois niveaux, les élèves sont initiés au nouveau bloc d'I.A.. Deux vidéos accompagnent les niveaux. Encouragez-les à visionner à nouveau ces vidéos s'ils se sentent bloqués. Pour réussir ces niveaux, les élèves demanderont à l'I.A. de générer du code pour des effets colorés qui accompagneront leur soirée dansante. Encouragez les élèves à choisir trois emojis qui décrivent l'ambiance qu'ils veulent donner à leur soirée dansante."
+        },
+        "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
+          "name": "Coder des événements pour ajouter une interaction ",
+          "description": "Les apprenants sont désormais familiarisés avec les événements. Il s'agit du concept de codage le plus délicat de ce tutoriel. Les événements sont spéciaux. Ils ne se connectent pas au bloc d'installation, mais sont plutôt des mini-programmes autonomes. Pensez à un événement comme une oreille attentive qui exécutera tout code qu'il contient dès qu'il sera déclenché. Le premier événement utilisé par les étudiants est \"quand on appuie sur la flèche\". Il permet aux élèves de générer de nouveaux blocs de code en appuyant sur une touche de leur clavier. Le deuxième événement est l'événement \"sur mesure\" qui fonctionne plus comme une minuterie sur une horloge. Lorsque la chanson dure un certain temps, le nouveau code est activé. \n\nEncouragez les élèves à revoir les vidéos sur les événements qui accompagnent deux de ces niveaux. ",
+          "progression_name": "Appui sur les touches et événements de mesure"
+        },
+        "7f2f14df-e85e-4dea-bf5a-5d9537baca14": {
+          "name": "Soyez créatif !",
+          "description": "Ce dernier niveau se veut un espace de jeu libre et d'exploration. Encouragez les élèves à faire preuve de créativité et à mettre en pratique leurs nouvelles compétences en matière de codage pour créer une soirée dansante originale !  ",
+          "progression_name": "Projet final de la soirée dansante"
         }
       }
     }

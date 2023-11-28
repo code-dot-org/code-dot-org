@@ -7447,3 +7447,37 @@ tr:
             -   Bölüm sonu projelerini keşfetmek.
 
             **Önerilen süre:** 30 dakika
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Dans Partisi: A.I Sürümü'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modül 2: Web Geliştirmeyi Öğretme Hazırlığı'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Etkileşimli Animasyonlar ve Oyunları Öğretme Hazırlığı
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Etkileşimli Animasyonlar ve Oyunlar ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Etkileşimli Animasyonlar ve Oyunlara giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Oyun Laboratuvarı ile çalışmak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Etkileşimli Animasyonlar ve Oyunlar ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Etkileşimli Animasyonlar ve Oyunlara giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Oyun Laboratuvarı ile çalışmak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 120 dakika
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modül 4: Tasarım Sürecini Öğretme Hazırlığı"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modül 5: Veri ve Toplumu Öğretme Hazırlığı'

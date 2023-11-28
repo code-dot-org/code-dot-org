@@ -1068,6 +1068,12 @@ ur:
         text: "{SPRITE}کہتا ہے{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} چلتا ہے بجانب {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': گیس
+            '"liquid"': مائع
+            '"solid"': ٹھوس
       KatiesBlocks_tumbling:
         text: قلابازیاں کھاتے ہوئے
       Mikelab_addBehaviorSimple:

@@ -5,10 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Chapter 1 Project: Interactive Card
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px; font-size: 18px; ">Chapter 1 of the Interactive Animations and Games unit concludes with a project where students will bring together all the skills they have learned so far (drawing, variables, sprites, images, conditionals, user input) in one place. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.
-</p></div>
+##### Chapter 1 of the Interactive Animations and Games unit concludes with a project where students will bring together all the skills they have learned so far (drawing, variables, sprites, images, conditionals, user input) in one place. In this project, students plan for and develop an interactive greeting card using all of the programming techniques they've learned to this point. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.
 
 ## Sample Student Projects
 
@@ -16,10 +13,10 @@ markdown <<MARKDOWN
 
 <div style="float: left; text-align:center;"><strong>Monster Music </strong><br /><a href="https://studio.code.org/projects/gamelab/PYYww4gdgma7_JPQwMrX1nwcMftAofr4goWIqGBvpQs/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px;  margin-top:0px;" src="https://images.code.org/29eea57d8f8c150959fa093fab9d3e32-image-1649279163793.JPG" width="200px"; alt="Image of monster music app"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Happy Birthday</strong><br /><a href="https://studio.code.org/projects/gamelab/YTs75XPApiMUuLPXjIqMj6g1Iv21h_4ME0CBbP0BRqc/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;" src="https://images.code.org/8690269b9907e761fda6a7e20fdf71ce-image-1652298277832.44.22 PM.png" width="200px" alt="Immage of birthday card"></a></div>
-
+<div style="float: left; text-align:center;"><strong>Happy Birthday</strong><br /><a href="https://studio.code.org/projects/gamelab/YTs75XPApiMUuLPXjIqMj6g1Iv21h_4ME0CBbP0BRqc/view" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;" src="https://images.code.org/8690269b9907e761fda6a7e20fdf71ce-image-1652298277832.44.22 PM.png" width="200px" alt="Image of birthday card"></a></div>
 
 <div style="clear:both"/>
+<br>
 
 ## Pacing recommendation
 

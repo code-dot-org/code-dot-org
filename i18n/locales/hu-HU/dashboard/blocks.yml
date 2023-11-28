@@ -1708,6 +1708,12 @@ hu:
         text: "{SPRITE} y koordinátája"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': szilárd
+            '"liquid"': folyékony
+            '"gas"': gáznemű
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

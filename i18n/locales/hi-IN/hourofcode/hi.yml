@@ -234,6 +234,7 @@ hi:
   for_students_teacher_led_learning: 'छात्रों के लिए: शिक्षक के नेतृत्व में शिक्षण'
   for_students_teacher_led_lessons: 'छात्रों के लिए: शिक्षक के नेतृत्व में पाठ'
   professional_development: पेशेवर विकास
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: कंप्यूटर विज्ञान पढ़ाएं
   explore_our_curriculum: हमारे पाठ्यक्रम की छान-बीन करें
   start_professional_learning: पेशेवर शिक्षण शुरू करें
@@ -305,7 +306,7 @@ hi:
   call_to_action_register_event: अपना ईवेंट रजिस्टर करें
   call_to_action_register_your_hoc: अपना Hour of Code रजिस्टर करें
   call_to_action_register_now: अभी पंजीकरण करें
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: अपनी इवेंट योजना साझी करें
   call_to_action_select_activity: कोई गतिविधि चुनें
   call_to_action_select_coding_activity: कोई कोडिंग गतिविधि चुनें
   call_to_action_start_activity: कोई गतिविधि शुरू करें
@@ -313,13 +314,13 @@ hi:
   call_to_action_print_certificates: प्रमाण-पत्र प्रिंट करें
   call_to_action_go_beyond_hoc: ऑवर ऑफ़ कोड के आगे जाएं
   call_to_action_see_volunteer_guide: वालंटियर मार्गदर्शिका देखें
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_see_teacher_guide: शिक्षक का मार्गदर्शन कैसे करें देखें
+  call_to_action_see_event_guide: इवेंट का मार्गदर्शन कैसे करें देखें
   call_to_action_join_advocacy_coalition: वकालत गठबंधन में शामिल हों
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_become_an_advocate: एक अधिवक्ता बनें
+  call_to_action_share_event_w_parents: अपने इवेंट को माता-पिता के साथ साझा करें
   call_to_action_sign_up_to_volunteer: वालंटियर बनने के लिए साइन अप करें
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: सोशल मीडिया पर साझा करें
   call_to_action_explore_all_hoc_activities: Code.org से ऑवर ऑफ़ कोड की सभी गतिविधियों
     का अन्वेषण करें
   call_to_action_start_dance_party: डांस पार्टी शुरू करें
@@ -334,6 +335,8 @@ hi:
   call_to_action_try_hoc_ai_activities: ऑवर ऑफ़ कोड AI गतिविधियों को आज़माएँ
   call_to_action_explore_activities: गतिविधियों की छान-बीन करें
   call_to_action_explore_ai: AI का अन्वेषण करें
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: टूल एक्सप्लोर करें
   call_to_action_explore_unit: यूनिट एक्सप्लोर करें
   call_to_action_explore_curriculum: पाठ्यक्रम का अन्वेषण करें
   call_to_action_explore_curricula: पाठ्यक्रम का अन्वेषण करें
@@ -394,7 +397,7 @@ hi:
   call_to_action_explore_teacher_forums: शिक्षक फ़ोरम देखें
   call_to_action_explore_teacher_forum: शिक्षक फोरम का अन्वेषण करें
   call_to_action_explore_career_resources: कैरियर संसाधनों का अन्वेषण करें
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: आंकड़ों और इन्फोग्राफिक्स की छान-बीन करें
   call_to_action_watch_videos: वीडियोज़ देखें
   call_to_action_download_posters: पोस्टर डाउनलोड करें
   call_to_action_contact_support: Code.org सहायता से संपर्क करें
@@ -433,7 +436,7 @@ hi:
   call_to_action_coming_soon: जल्द आ रहा है!
   call_to_action_learn_how_ai_works: जानें कि AI कैसे काम करता है
   call_to_action_learn_about_ai: AI के बारे में जानें
-  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_learn_more_about_ai: AI के बारे में और अधिक जानें
   call_to_action_get_started: शुरू हो जाओ
   aria_label_call_to_action_hoc_how_to_educators: शिक्षकों के लिए मार्गदर्शन कैसे
     करें देखें
@@ -729,6 +732,7 @@ hi:
   module_label_accessibility_features_full: 'एक्सेसिबिलिटी फीचर्स:'
   module_label_educator_tool: शिक्षक उपकरण
   module_label_educator_course: एजुकेटर कोर्स
+  module_label_educator_resources: Educator resources
   module_label_student_tool: स्टूडेंट टूल
   module_label_student_product: प्रोडक्ट
   module_label_student_content_resources: सामग्री और संसाधन
@@ -737,6 +741,7 @@ hi:
   module_label_available_now: अभी उपलब्ध
   module_label_video_series: वीडियो श्रृंखला
   module_label_self_paced: सेल्फ-पेस्ड मॉड्यूल
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3631,19 +3636,14 @@ hi:
   tutorial_csfirstdialogue_name: डायलॉग
   tutorial_codemonkeybeaver_name: बीवर अचीवर
   tutorial_codestersdistance_name: 'कोडेस्टर्स: सोशल डिस्टेंसिंग स्प्राइट्स'
-  tutorial_itchspace_name: 'TitchCode: अंतरिक्ष आक्रमणकारी - रॉककोडर'
   tutorial_vidcodemagic_name: SFX मैजिक
   tutorial_vidcodemagices_name: SFX मैजिक
   tutorial_codespeakmeal_name: एक स्वस्थ भोजन ऐप को कोड करें
-  tutorial_itchfish_name: 'ItchCode: फिश स्क्रैच गेम'
   tutorial_bsdwebsite_name: मेरी पसंदीदा वेबसाइट
   tutorial_codespeaktime_name: स्क्रैच में टाइम कैप्सूल को कोड करें
-  tutorial_itchwebcam_name: 'ItchCode: वेबकैम ऑगमेंटेड रियलिटी'
-  tutorial_itchball_name: 'IchCode: बाउंसिंग बॉल'
   tutorial_ttrace_name: रेस कंडीशन
   tutorial_plethora_name: 'प्लेथोरा: कारण और प्रभाव'
   tutorial_educodesecret_name: एजेंसी के रहस्यों को उजागर करें!
-  tutorial_itchshapes_name: 'इचकोड: आकृतियाँ और कोण'
   tutorial_codeguppytext_name: टेक्स्ट आधारित कोडिंग का परिचय
   tutorial_vidcodeplastiche_name: प्लास्टिक प्रदूषण PSA
   tutorial_educativechatbot_name: पायथन में अपना खुद का चैटबॉट बनाएं
@@ -3666,7 +3666,6 @@ hi:
   tutorial_codecapture_name: एक पल में जावास्क्रिप्ट के साथ प्रोग्रामिंग सीखें
   tutorial_codehslitter_name: कूड़े-मुक्त समुदाय के लिए कोडिंग
   tutorial_bsdocean_name: पानी के नीचे का जीवन
-  tutorial_itchplatformer_name: 'ItchCode: स्क्रैच 3.0 प्लेटफ़ॉर्मर ट्यूटोरियल'
   tutorial_codejika_name: 'कोडजिका: 5 मिनट की वेबसाइट'
   tutorial_gamefrootclicker_name: वेरिएबल्स सीखें। अपना खुद का क्लिकर गेम कोड करें।
   tutorial_rmagicequity_name: समानता बनाम समानता
@@ -7606,21 +7605,12 @@ hi:
   tutorial_codestersdistance_longdescription: पायथन में कोडिंग की मूल बातें जानें,
     फिर एक प्रोग्राम बनाएं जो दो स्प्राइट्स के बीच की दूरी की गणना करता है ताकि यह
     सुनिश्चित हो सके कि वे सामाजिक दूरी पर हैं या उन्हें मास्क पहनने की आवश्यकता है।
-  tutorial_itchspace_longdescription: यह ट्यूटोरियल आपको स्क्रैच एमआईटी प्रोग्रामिंग
-    भाषा का उपयोग करके एक क्लासिक स्पेस इनवेडर्स गेम के निर्माण के बारे में बताता
-    है। अधिक स्क्रैच-आधारित वीडियो और ट्यूटोरियल के लिए RokCoder YouTube चैनल को सब्सक्राइब
-    करें! प्रत्येक वीडियो एक छोटे आकार का ट्यूटोरियल होता है (लगभग दस मिनट लंबा) जिसमें
-    अपने विशिष्ट अंतिम लक्ष्य होते हैं। अंतिम परिणाम एक उच्च गुणवत्ता वाला स्क्रैच
-    आर्केड गेम है।
   tutorial_vidcodemagic_longdescription: लूप का उपयोग करके स्क्रीन के चारों ओर बेतरतीब
     ढंग से फ्लैश दिखाएं।
   tutorial_vidcodemagices_longdescription: लूप का उपयोग करके स्क्रीन के चारों ओर बेतरतीब
     ढंग से फ्लैश दिखाएं।
   tutorial_codespeakmeal_longdescription: ऐसे ऐप को कोड करना सीखें, जो उपयोगकर्ताओं
     को स्वस्थ भोजन के निर्णय लेने में मदद करता है।
-  tutorial_itchfish_longdescription: जब एक गोताखोर गलती से खा जाता है, तो शार्क का
-    पीछा करने और मछली खाने के साथ एक गेम बनाने के लिए स्क्रैच 3.0 ट्यूटोरियल बाधित
-    होता है।
   tutorial_bsdwebsite_longdescription: 'यह कोर्स छात्रों को उनके लिए महत्वपूर्ण या
     दिलचस्प चीज़ों को साझा करने के तरीके के रूप में कोड का उपयोग करने की अनुमति देता
     है। वे HTML, CSS और JavaScript सीखते समय पाठ का अनुसरण कर सकते हैं या अद्वितीय
@@ -7630,10 +7620,6 @@ hi:
     #codeisyourvoice'
   tutorial_codespeaktime_longdescription: अभी अपने जीवन को रिकॉर्ड करने और प्रतिबिंबित
     करने के लिए डिजिटल टाइम कैप्सूल को कोड करने का तरीका जानें।
-  tutorial_itchwebcam_longdescription: संवर्धित वास्तविकता के बारे में जानें और अपनी
-    खुद की संवर्धित वास्तविकता वर्चुअल स्पेस बनाएं।
-  tutorial_itchball_longdescription: स्क्रीन के चारों ओर बाउंस करने के लिए एक गेंद
-    लें। लूप के अंदर लूप और कंडीशनल्स के बारे में जानें।
   tutorial_ttrace_longdescription: फ़ंक्शन कॉल करके और क्लास डिज़ाइन करके, खिलाड़ी
     अपनी खुद की रेस कार को तेज़, फुर्तीला और शक्तिशाली बनाने के लिए प्रोग्राम करते
     हैं; दौड़ के दौरान, वे फिर अपने प्रतिद्वंद्वियों के वाहनों को हैक करके उनके नियंत्रण
@@ -7644,9 +7630,6 @@ hi:
     अन्वेषण करें, जब आप स्टेटमेंट, स्ट्रिंग्स, फॉर-इन लूप्स सीखने में गहराई से गोता
     लगाते हैं। एजेंट स्मिथ को अपराधियों को खोजने में मदद करें और पायथन के साथ अपने
     नए उपयोगकर्ताओं के लिए एजेंसी के ऑपरेटिंग सिस्टम को कॉन्फ़िगर करें।
-  tutorial_itchshapes_longdescription: स्क्रैच में आकृतियाँ बनाना सीखें। आप यह भी
-    सीखेंगे कि किसी भी आकार के लिए आपको कितना मुड़ने की आवश्यकता है, इसकी गणना कैसे
-    करें।
   tutorial_codeguppytext_longdescription: ऑनलाइन कोडिंग एडिटर में अपना पहला प्रोग्राम
     बनाकर टेक्स्ट आधारित कोडिंग की मूल बातें जानें।
   tutorial_vidcodeplastiche_longdescription: "  हमारे समुद्रों में प्लास्टिक जमा होते
@@ -7729,8 +7712,6 @@ hi:
     प्रकाश डालता है जिसका हम आजकल सामना कर रहे हैं - हमारा पर्यावरण। यह प्रोजेक्ट
     हमारे पानी की सुरक्षा के लिए अपने स्वयं के वेबपेज को कोड करने के लिए आपका मार्गदर्शन
     करने पर केंद्रित है।
-  tutorial_itchplatformer_longdescription: स्क्रैच का उपयोग करके एक सरल प्लेटफ़ॉर्मर
-    गेम बनाने के तरीके के लिए अनुसरण करने में आसान ट्यूटोरियल।
   tutorial_codejika_longdescription: HTML और CSS का उपयोग करके कोडिंग का एक शानदार
     परिचय। कुछ लाइनों को कोड करें, दो-रंग की ग्रेडिएंट बैकग्राउंड, नाम और वेबसाइट
     लॉन्च की तारीख के साथ एक अच्छा लैंडिंग पेज बनाकर Hows and Whys में फंसने के बिना
@@ -8533,19 +8514,14 @@ hi:
   tutorial_csfirstdialogue_string_detail_grades: ग्रेड 2-8
   tutorial_codemonkeybeaver_string_detail_grades: प्री-रीडर - ग्रेड 5
   tutorial_codestersdistance_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_itchspace_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_vidcodemagic_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_vidcodemagices_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_codespeakmeal_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_itchfish_string_detail_grades: ग्रेड 2-8
   tutorial_bsdwebsite_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_codespeaktime_string_detail_grades: ग्रेड 2-8
-  tutorial_itchwebcam_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_itchball_string_detail_grades: ग्रेड 2-8
   tutorial_ttrace_string_detail_grades: ग्रेड 6-8
   tutorial_plethora_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_educodesecret_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_itchshapes_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_codeguppytext_string_detail_grades: ग्रेड 6-8
   tutorial_vidcodeplastiche_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_educativechatbot_string_detail_grades: ग्रेड 9+
@@ -8567,7 +8543,6 @@ hi:
   tutorial_codecapture_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_codehslitter_string_detail_grades: ग्रेड 6-8
   tutorial_bsdocean_string_detail_grades: ग्रेड 6-8
-  tutorial_itchplatformer_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_codejika_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_gamefrootclicker_string_detail_grades: ग्रेड 6-8
   tutorial_rmagicequity_string_detail_grades: ग्रेड 6-8
@@ -9383,21 +9358,16 @@ hi:
   tutorial_codemonkeybeaver_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
     आईपैड
   tutorial_codestersdistance_string_platforms: सभी आधुनिक ब्राउज़र, स्क्रीन रीडर
-  tutorial_itchspace_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_vidcodemagic_string_platforms: सभी आधुनिक ब्राउज़र, एंड्रॉइड टैबलेट, आईपैड,
     स्क्रीन रीडर
   tutorial_vidcodemagices_string_platforms: सभी आधुनिक ब्राउज़र, एंड्रॉइड टैबलेट,
     आईपैड, स्क्रीन रीडर
   tutorial_codespeakmeal_string_platforms: क्रोम, फ़ायरफ़ॉक्स
-  tutorial_itchfish_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_bsdwebsite_string_platforms: क्रोम
   tutorial_codespeaktime_string_platforms: क्रोम, फ़ायरफ़ॉक्स
-  tutorial_itchwebcam_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड
-  tutorial_itchball_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_ttrace_string_platforms: क्रोम
   tutorial_plethora_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड
   tutorial_educodesecret_string_platforms: सभी आधुनिक ब्राउज़र्स
-  tutorial_itchshapes_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_codeguppytext_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
     आईपैड
   tutorial_vidcodeplastiche_string_platforms: सभी आधुनिक ब्राउज़र, iPad
@@ -9425,7 +9395,6 @@ hi:
   tutorial_codehslitter_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
     आईपैड, विंडोज फोन, एंड्रॉइड फोन, आईफोन
   tutorial_bsdocean_string_platforms: क्रोम
-  tutorial_itchplatformer_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_codejika_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड,
     विंडोज फोन, एंड्रॉइड फोन, आईफोन
   tutorial_gamefrootclicker_string_platforms: सभी आधुनिक ब्राउज़र, iPad
@@ -10080,19 +10049,14 @@ hi:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10114,7 +10078,6 @@ hi:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10808,21 +10771,16 @@ hi:
   tutorial_csfirstdialogue_string_detail_programming_languages: ब्लॉक, स्क्रैच
   tutorial_codemonkeybeaver_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_codestersdistance_string_detail_programming_languages: पायथन
-  tutorial_itchspace_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_vidcodemagic_string_detail_programming_languages: जावास्क्रिप्ट
   tutorial_vidcodemagices_string_detail_programming_languages: जावास्क्रिप्ट
   tutorial_codespeakmeal_string_detail_programming_languages: जावास्क्रिप्ट
-  tutorial_itchfish_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_bsdwebsite_string_detail_programming_languages: जावास्क्रिप्ट, एचटीएमएल,
     सीएसएस
   tutorial_codespeaktime_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
-  tutorial_itchwebcam_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
-  tutorial_itchball_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_ttrace_string_detail_programming_languages: जावास्क्रिप्ट, कॉफीस्क्रिप्ट
   tutorial_plethora_string_detail_programming_languages: स्वतंत्र भाषा (कई भाषाओं
     में सिखाई जा सकती है)
   tutorial_educodesecret_string_detail_programming_languages: पायथन
-  tutorial_itchshapes_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_codeguppytext_string_detail_programming_languages: जावास्क्रिप्ट
   tutorial_vidcodeplastiche_string_detail_programming_languages: जावास्क्रिप्ट
   tutorial_educativechatbot_string_detail_programming_languages: पायथन
@@ -10850,7 +10808,6 @@ hi:
   tutorial_codehslitter_string_detail_programming_languages: पायथन, एचटीएमएल
   tutorial_bsdocean_string_detail_programming_languages: जावास्क्रिप्ट, एचटीएमएल,
     सीएसएस
-  tutorial_itchplatformer_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_codejika_string_detail_programming_languages: जावास्क्रिप्ट, एचटीएमएल,
     सीएसएस
   tutorial_gamefrootclicker_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
@@ -11836,10 +11793,7 @@ hi:
   tutorial_kodableshapes_name: कोड के साथ आकृतियाँ बनाएं
   tutorial_nasabinary_name: 'बाइनरी कोड: अंतरिक्ष यान से कैसे बात करें'
   tutorial_3dmaker_name: 3D मेकर
-  tutorial_itchstart_name: 'IchCode: स्क्रैच 5 ब्लॉक स्टार्टर'
   tutorial_hopsub_name: एक दोस्त के साथ सबवे सर्फर्स बनाएं
-  tutorial_itchmundos_name: लॉस मुंडोस एन मी मुंडो_e2
-  tutorial_itchtenacity_name: तप
   tutorial_kcjskiing_name: 'स्पोर्ट + कोड: स्कीइंग'
   tutorial_groksecurity_name: 'साइबर सिक्योरिटी: डिफेंस अगेंस्ट द डार्क हैट्स'
   tutorial_creaticode_name: स्क्रैच ब्लॉक के साथ 3 डी प्रोग्रामिंग
@@ -11981,17 +11935,8 @@ hi:
     ध्वनि पर अपने नाम को बाइनरी कोड में अनुवाद करके इसे स्वयं आज़माएं।
   tutorial_3dmaker_longdescription: अपनी खुद की बहुत अच्छी, घूमने योग्य, 3 डी वस्तुओं
     को तेजी से और आसानी से बनाएं।
-  tutorial_itchstart_longdescription: यह पाठ कक्षा 2 या 3 के बच्चों के लिए एक अच्छा
-    प्रवेश बिंदु है जो अभी पहली बार स्क्रैच आज़मा रहे हैं। उन्हें 5 ब्लॉकों के एक
-    सेट के साथ शुरुआत करनी होगी, जिन्हें उन्हें अपने चरित्र को कुछ क्रियाएं करने के
-    लिए एक साथ रखना होगा।
   tutorial_hopsub_longdescription: किसी दोस्त या सहपाठी के साथ प्रोग्राम पेयर करना
     सीखें, और हॉपस्कॉच वर्णों के साथ अपना खुद का सबवे सर्फर बनाएं!
-  tutorial_itchmundos_longdescription: स्क्रैच को जानें, जो प्रोग्राम करने के लिए
-    एक उपकरण है। Agregarán objetos y fondos, usarán bloques de eventos y apariencia
-    para dar vida a su programa।
-  tutorial_itchtenacity_longdescription: एन एस्टे प्रोटेक्टो प्रोग्रामन एन स्क्रैच
-    एल सिमुलैडोर डे अन रोबोट कुए लिम्पिया लास अगुआस मारिनास।
   tutorial_kcjskiing_longdescription: 'यह सब मजेदार है जब तक कि कोई पेड़… से टकरा
     न जाए या यह मजेदार हिस्सा है? उन स्की पर स्ट्रैप करें और इस स्क्रैच गतिविधि में
     कोड का उपयोग करके अपने चरित्र को जमी हुई बाधाओं की एक पहाड़ी के नीचे ले जाते हुए
@@ -12286,10 +12231,7 @@ hi:
   tutorial_kodableshapes_language: अंग्रेजी
   tutorial_nasabinary_language: अंग्रेजी
   tutorial_3dmaker_language: अंग्रेजी
-  tutorial_itchstart_language: अंग्रेजी
   tutorial_hopsub_language: चीनी (सरलीकृत), अंग्रेज़ी, स्पेनिश (स्पेन), स्पेनिश (मेक्सिको)
-  tutorial_itchmundos_language: स्पैनिश (मेक्सिको)
-  tutorial_itchtenacity_language: स्पैनिश (मेक्सिको)
   tutorial_kcjskiing_language: अंग्रेज़ी, फ़्रेंच
   tutorial_groksecurity_language: अंग्रेजी
   tutorial_creaticode_language: चीनी (सरलीकृत), चीनी (पारंपरिक), अंग्रेज़ी
@@ -12382,10 +12324,7 @@ hi:
   tutorial_kodableshapes_string_detail_grades: प्री-रीडर - ग्रेड 5
   tutorial_nasabinary_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_3dmaker_string_detail_grades: ग्रेड 2-8
-  tutorial_itchstart_string_detail_grades: ग्रेड 2-8
   tutorial_hopsub_string_detail_grades: ग्रेड 2-8
-  tutorial_itchmundos_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
-  tutorial_itchtenacity_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_kcjskiing_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_groksecurity_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_creaticode_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
@@ -12476,11 +12415,7 @@ hi:
   tutorial_nasabinary_string_platforms: अनप्लग्ड, स्क्रीन रीडर
   tutorial_3dmaker_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड,
     विंडोज फोन, एंड्रॉइड फोन, आईफोन
-  tutorial_itchstart_string_platforms: सभी आधुनिक ब्राउज़र, iPad
   tutorial_hopsub_string_platforms: आईपैड, आईफोन
-  tutorial_itchmundos_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड
-  tutorial_itchtenacity_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
-    आईपैड
   tutorial_kcjskiing_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_groksecurity_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट,
     आईपैड, विंडोज फोन, एंड्रॉइड फोन, आईफोन
@@ -12575,10 +12510,7 @@ hi:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12668,10 +12600,7 @@ hi:
     स्वतंत्र (कई भाषाओं में पढ़ाया जा सकता है)
   tutorial_nasabinary_string_detail_programming_languages: बाइनरी कोड
   tutorial_3dmaker_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
-  tutorial_itchstart_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_hopsub_string_detail_programming_languages: हॉपस्कॉच
-  tutorial_itchmundos_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
-  tutorial_itchtenacity_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_kcjskiing_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_groksecurity_string_detail_programming_languages: कोई नहीं - प्रोग्रामिंग
     की आवश्यकता नहीं
@@ -13717,7 +13646,7 @@ hi:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy:  आसानी से प्रोग्राम करना सीखें'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13804,6 +13733,16 @@ hi:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: डांस पार्टी
+  tutorial_introtomlai_name: मशीन लर्निंग का परिचय
+  tutorial_computervisionai_name: कंप्यूटर विज़न
+  tutorial_neuralnetworksai_name: न्यूरल नेटवर्क
+  tutorial_chatbotsllmai_name: चैटबॉट्स और बड़ी भाषा के मॉडल
+  tutorial_generativeimagesai_name: जनरेटिव इमेज
+  tutorial_algorithmicbiasai_name: एल्गोरिथम बायस
+  tutorial_codeofethicsai_name: हमारी AI आचार संहिता
+  tutorial_socimpactofgenaiai_name: जनरेटिव एआई का सामाजिक प्रभाव
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13976,11 +13915,11 @@ hi:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: हेडी टेक्स्टुअल प्रोग्रामिंग भाषाओं के साथ शुरुआत
+    करने का आसान तरीका है! उपयोग करने के लिए स्वतंत्र है, खुला स्रोत है, बहुभाषी है,
+    आप हेडी का उपयोग अपनी भाषा में कर सकते हैं; क्रमिक है, इसलिए आप एक अवधारणा सीख
+    सकते हैं और इसका वाक्य-विन्यास कक्षा के लिए एक समय बनाया गया है, जिससे शिक्षक
+    अपने छात्र के अनुभव को पूरी तरह से अनुकूलित कर सकते हैं।
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -14211,10 +14150,10 @@ hi:
     on the different poses. They will follow step-by-step instructions and easily
     drag the blocks to solve the exercises. Your curious students can also deep dive
     into how AI works.
-  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
-    then train an AI to play the game on its own! Learn core JavaScript concepts including
-    Variables, Functions and Events, and get hands-on experience with Neural Networks
-    and Machine Learning.
+  tutorial_kcjpong_longdescription: JavaScript का इस्तेमाल करते हुए Pong क्लासिक गेम
+    को फिर से बनाएं, फिर अपने आप गेम को खेलने के लिए एक AI को प्रशिक्षित करें! वेरिएबल्स,
+    फ़ंक्शंस और इवेंट्स सहित JavaScript की मुख्य अवधारणाओं को सीखें, और न्यूरल नेटवर्क्स
+    और मशीन लर्निंग के साथ व्यावहारिक अनुभव प्राप्त करें।
   tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
     Day and promote clean energy to replace fossil fuels and help the environment.  Your
     task is to collect the sun's rays to power a city. Students will start with the
@@ -14274,6 +14213,44 @@ hi:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: "  अपने दोस्तों के साथ साझा करने के लिए डांस
+    पार्टी की कोडिंग करें। जिसमें शामिल हैं केटी पेरी, मैडोना, जे. बॉलविन, सिया, कीथ
+    अरबन, सियारा और साथ ही 25 और लोग!  "
+  tutorial_introtomlai_longdescription: मशीन लर्निंग नामक कृत्रिम बुद्धिमत्ता के एक
+    रूप के बारे में जानें और समस्याओं को हल करने के लिए रोबोट को प्रशिक्षित करने में
+    मदद करने के लिए वे समस्या समाधान प्रक्रिया का उपयोग कैसे कर सकते हैं। मशीन लर्निंग
+    गतिविधियों में भाग लें जहां एक रोबोट सीख रहा है कि मछली में पैटर्न का पता कैसे
+    लगाया जाए।
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: जानें कि न्यूरल नेटवर्क कैसे काम करते
+    हैं। व्यावहारिक तरीके से तंत्रिका नेटवर्क का पता लगाने के लिए विजेट्स का उपयोग
+    करें। तंत्रिका नेटवर्क की व्याख्या करने वाला एक वीडियो देखें। अंत में सिफारिश
+    प्रणाली बनाते समय विविध दृष्टिकोणों की आवश्यकता पर चर्चा करें।
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: जानें कि AI छवियों को कैसे उत्पन्न
+    कर सकता है, फिर एक प्रसार AI विजेट का पता लगाएं और चर्चा करें कि ये मॉडल रचनात्मक
+    हैं या नहीं।
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: विभिन्न दृष्टिकोणों से जनरेटिव एआई
+    के प्रभाव की जांच करें, फिर सभी प्रतिभागियों की सबसे अधिक ज़रूरतों को पूरा करने
+    वाले दिशानिर्देशों के साथ आने के लिए एक टीम के रूप में सहयोग करें।
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_bscomputing_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_stackpython_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
@@ -14375,7 +14352,7 @@ hi:
   tutorial_hwfanpage_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_hwillusion_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_caevolution_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
-  tutorial_bbbusybot_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_bbbusybot_string_detail_grades: ग्रेड 9+
   tutorial_caaifarm_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_cafuture_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_dmscratch_string_detail_grades: ग्रेड 2-8
@@ -14405,6 +14382,16 @@ hi:
   tutorial_madmobile_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
   tutorial_intelinosmile_string_detail_grades: प्री-रीडर - ग्रेड 8
   tutorial_intelinoaisign_string_detail_grades: ग्रेड 2-8
+  tutorial_danceai2023_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
+  tutorial_introtomlai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_computervisionai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_neuralnetworksai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_chatbotsllmai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_generativeimagesai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_algorithmicbiasai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_codeofethicsai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_socimpactofgenaiai_string_detail_grades: ग्रेड 6+ (11 और ऊपर)
+  tutorial_generationai_string_detail_grades: ग्रेड 2+ (क्राउडिन लिंक)
   tutorial_bsimage_string_platforms: क्रोम, फायरफॉक्स, सफारी
   tutorial_bscomputing_string_platforms: अनप्लग्ड
   tutorial_stackpython_string_platforms: सभी आधुनिक ब्राउज़र्स, एंड्रॉइड टैबलेट, आईपैड,
@@ -14573,6 +14560,26 @@ hi:
   tutorial_madmobile_string_platforms: सभी आधुनिक ब्राउज़र्स
   tutorial_intelinosmile_string_platforms: सभी आधुनिक ब्राउज़र, iPad
   tutorial_intelinoaisign_string_platforms: सभी आधुनिक ब्राउज़र्स
+  tutorial_danceai2023_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड,
+    एंड्रॉयड फोन, iPhone
+  tutorial_introtomlai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट, आईपैड,
+    एंड्रॉयड फोन, iPhone
+  tutorial_computervisionai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_neuralnetworksai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_chatbotsllmai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_generativeimagesai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_algorithmicbiasai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_codeofethicsai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: सभी आधुनिक ब्राउज़रों, एंड्रॉयड टैबलेट,
+    आईपैड, एंड्रॉयड फोन, iPhone
+  tutorial_generationai_string_platforms: एंड्रॉइड टैबलेट, आईपैड, विंडोज फोन, एंड्रॉइड
+    फोन, आईफोन
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14704,6 +14711,16 @@ hi:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: भाषा स्वतंत्र
   tutorial_stackpython_string_detail_programming_languages: पायथन
@@ -14838,13 +14855,23 @@ hi:
   tutorial_codecombathack_string_detail_programming_languages: भाषा स्वतंत्र
   tutorial_toxicodewords_string_detail_programming_languages: भाषा स्वतंत्र
   tutorial_mitstepmisinformation_string_detail_programming_languages: अनप्लग्ड
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: अनप्लग्ड
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: अनप्लग्ड
   tutorial_mitstepintrotoml_string_detail_programming_languages: अनप्लग्ड
   tutorial_naflogo_string_detail_programming_languages: जावास्क्रिप्ट
   tutorial_madmobile_string_detail_programming_languages: जावास्क्रिप्ट, एचटीएमएल,
     सीएसएस
   tutorial_intelinosmile_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
   tutorial_intelinoaisign_string_detail_programming_languages: ब्लॉक (क्राउडिन लिंक)
+  tutorial_danceai2023_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_introtomlai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_computervisionai_string_detail_programming_language: भाषा स्वतंत्र
+  tutorial_neuralnetworksai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_chatbotsllmai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_generativeimagesai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_algorithmicbiasai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_codeofethicsai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: भाषा स्वतंत्र
+  tutorial_generationai_string_detail_programming_languages: ब्लॉक्स, पायथन
   school_not_found_heading: हम आपका स्कूल नहीं ढूंढ सके।कृपया अधिक जानकारी दर्ज करें।
   school_name: स्कूल का नाम
   school_name_error: स्कूल का नाम आवश्यक है।
@@ -14915,7 +14942,7 @@ hi:
   step_06: चरण 6
   step_07: चरण 7
   step_08: चरण 8
-  step_09: Step 9
+  step_09: चरण 9
   what: 'क्या:'
   when: 'कब:'
   where: 'कहां:'
@@ -14942,51 +14969,58 @@ hi:
   hoc_how_to_companies_intro_desc_02: आपके सारे प्रयास अधिकारहीन नस्लीय और जातीय समूहों
     की युवा महिलाओं और छात्रों के कंप्यूटर विज्ञान और उनकी अपनी क्षमता को देखने के
     तरीके पर बड़ा प्रभाव डाल सकते हैं।
-  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
-    Code
-  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    Districts who fully engage with Hour of Code can help raise awareness of the computer
-    science movement and inspire more students to try computer science, particularly
-    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_districts_intro_heading: एक ऑवर ऑफ कोड में पूरे स्कूल जिले को शामिल करें
+  hoc_how_to_districts_intro_desc_01: आवर ऑफ कोड यह दिखाने के लिए मजेदार ट्यूटोरियल्स
+    का इस्तेमाल करके कंप्यूटर विज्ञान का एक घंटे का परिचय है कि कोई भी मूल बातें सीख
+    सकता है। ऑवर ऑफ कोड में पूरी तरह से शामिल जिले कंप्यूटर विज्ञान आंदोलन के बारे
+    में जागरूकता बढ़ाने में मदद कर सकते हैं और अधिक छात्रों, विशेष रूप से युवा महिलाओं
+    और ऐतिहासिक रूप से अधिकारहीन नस्लीय और जातीय समूहों के छात्रों को कंप्यूटर विज्ञान
+    में प्रयास करने के लिए प्रेरित कर सकते हैं।
   hoc_how_to_events_intro_heading: ऑवर ऑफ़ कोड असेंबली या इवेंट का आयोजन कैसे करें
-  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.
-    Your efforts can make a huge impact on the way students view computer science
-    and their own potential.
-  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
-    Hour of Code can help raise awareness of the computer science movement and inspire
-    more students to try computer science, particularly young women and students from
-    historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_desc_01: आवर ऑफ कोड यह दिखाने के लिए मजेदार ट्यूटोरियल्स
+    का इस्तेमाल करके कंप्यूटर विज्ञान का एक घंटे का परिचय है कि कोई भी मूल बातें सीख
+    सकता है। आपके प्रयास छात्रों के कंप्यूटर विज्ञान और उनकी अपनी क्षमता को देखने
+    के तरीके पर बड़ा प्रभाव डाल सकते हैं।
+  hoc_how_to_events_intro_desc_02: ऑवर ऑफ कोड में पूरी तरह से शामिल स्कूल और संगठन
+    कंप्यूटर विज्ञान आंदोलन के बारे में जागरूकता बढ़ाने में मदद कर सकते हैं और अधिक
+    छात्रों, विशेष रूप से युवा महिलाओं और ऐतिहासिक रूप से अधिकारहीन नस्लीय और जातीय
+    समूहों के छात्रों को कंप्यूटर विज्ञान में प्रयास करने के लिए प्रेरित कर सकते हैं।
   hoc_how_to_parents_intro_heading: अपने बच्चे के साथ एक ऑवर ऑफ़ कोड कैसे करें
-  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
-    to introduce your child to computer science, perhaps for the very first time.
-    Not only is computer science foundational to all fields of study, but recent studies
-    show: children who study computer science perform better in other subjects, excel
-    at problem-solving, and are 17% more likely to enroll in college.'
-  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
-    students worldwide in this global event. Together, we can inspire kids to learn,
-    break stereotypes, and help children discover a newfound interest. Best of all,
-    you already have everything you need to bring the Hour of Code into your home!
-  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
-    of Code
-  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
-    Hour of Code event will show your representative the impact and need for computer
-    science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
-  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    As a volunteer, your efforts can make a huge impact on the way students view computer
-    science and their own potential.
-  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
-    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
-    of all backgrounds participate. The Hour of Code features a large variety of activities
-    for all ages and skill levels, so you don't need to be a programming expert to
-    volunteer.
+  hoc_how_to_parents_intro_desc_01: 'एक ऑवर ऑफ कोड को आज़माना आपके बच्चे को कंप्यूटर
+    विज्ञान से परिचित कराने, शायद पहली बार, का एक सरल और मज़ेदार तरीका है। न केवल
+    कंप्यूटर विज्ञान पढ़ाई के सभी क्षेत्रों के लिए मूलभूत है, बल्कि हाल के अध्ययनों
+    ने दिखाया है: जो बच्चे कंप्यूटर विज्ञान पढ़ते हैं, वे अन्य विषयों में बेहतर प्रदर्शन
+    करते हैं, समस्या-समाधान में उत्कृष्ट होते हैं, और उनके कॉलेज में दाखिला लेने की
+    संभावना 17% अधिक होती है।'
+  hoc_how_to_parents_intro_desc_02: आप और आपका बच्चा इस वैश्विक इवेंट में दुनिया भर
+    के लाखों छात्रों के साथ जुड़ सकते हैं। साथ मिलकर, हम बच्चों को सीखने के लिए, रूढ़िवादिता
+    को तोड़ने के लिए प्रेरित कर सकते हैं और नई रुचि खोजने में बच्चों की मदद कर सकते
+    हैं। सबसे अच्छी बात यह है कि आपके पास वह सब कुछ पहले से ही है जो आपको अपने घर
+    में ऑवर ऑफ कोड लाने के लिए आवश्यक है!
+  hoc_how_to_public_officials_intro_heading: अपने ऑवर ऑफ कोड पर एक निर्वाचित अधिकारी
+    की मेजबानी करना
+  hoc_how_to_public_officials_intro_desc_01: अपने ऑवर ऑफ कोड इवेंट में किसी निर्वाचित
+    अधिकारी को आमंत्रित करना आपके प्रतिनिधि को कंप्यूटर विज्ञान शिक्षा का प्रभाव और
+    आवश्यकता दिखाएगा, और आपके छात्र सरकार में रोल मॉडल से प्रेरित होंगे।
+  hoc_how_to_public_officials_intro_desc_02: निर्वाचित अधिकारियों को शामिल करते हुए
+    सफल ऑवर ऑफ कोड इवेंट को चलाने के लिए, निर्वाचित अधिकारी के आपके स्कूल में उपस्थित
+    होने से पहले इन कार्यों को पूरा करें। कार्य में उनके संपर्क स्थान के साथ समन्वय,
+    मीडिया आमंत्रण, छूटें और आपके एजेंडा की योजना बनाना शामिल है।
+  hoc_how_to_volunteers_intro_heading: एक ऑवर ऑफ कोड के लिए वालंटियर कैसे बनें
+  hoc_how_to_volunteers_intro_desc_01: आवर ऑफ कोड यह दिखाने के लिए मजेदार ट्यूटोरियल्स
+    का इस्तेमाल करके कंप्यूटर विज्ञान का एक घंटे का परिचय है कि कोई भी मूल बातें सीख
+    सकता है। एक वालंटियर के रूप में, आपके प्रयास छात्रों के कंप्यूटर विज्ञान और उनकी
+    अपनी क्षमता को देखने के तरीके पर बड़ा प्रभाव डाल सकते हैं।
+  hoc_how_to_volunteers_intro_desc_02: कंप्यूटर विज्ञान शिक्षा और तकनीक में बढ़ती विविधता
+    का शौक रखने वाला कोई भी व्यक्ति वालंटियर बन सकता है! हमें सभी पृष्ठभूमियों के
+    वालंटियर्स को भाग लेते देखना अच्छा लगता है। ऑवर ऑफ कोड में सभी आयु और कौशल स्तरों
+    के लिए गतिविधियों की एक बड़ी विविधता शामिल है, इसलिए आपको वालंटियर बनने के लिए
+    कोई प्रोग्रामिंग विशेषज्ञ होने की आवश्यकता नहीं है।
+  hoc_how_to_virtual_event_intro_heading: एक वर्चुअल ऑवर ऑफ कोड मेजबानी कैसे करें
+  hoc_how_to_virtual_event_intro_desc_02: जबकि ऑवर ऑफ कोड को कक्षा में आयोजित किया
+    जा सकता है, आपको आनंद का मजा लेने के लिए व्यक्तिगत रूप से उपस्थित होने की आवश्यकता
+    नहीं होती है! आप इनमें से कुछ सिफारिशों का इस्तेमाल करके एक इंटरैक्टिव और प्रेरणादायक
+    दूरस्थ इवेंट की मेजबानी कर सकते हैं।
   hoc_how_to_faq_question_prerequisites: एक ऑवर ऑफ कोड करने की आवश्यक पूर्व शर्तें
     क्या हैं?
   hoc_how_to_faq_answer_prerequisites: ऑवर ऑफ कोड चलाना आसान है — यहां तक कि शुरुआती
@@ -14998,8 +15032,9 @@ hi:
   hoc_how_to_faq_answer_devices_02: यदि डिवाइसेस सीमित या अनुपलब्ध हैं, तो बिना किसी
     डिवाइस के सीखने के लिए [पेअर प्रोग्रामिंग](%{pair_url}) आज़माएं या हमारी [अनप्लग्ड
     गतिविधियों](%{unplugged_url}) का अन्वेषण करें!
-  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
-    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_answer_devices_02_v2: यदि आपके पास घर में कोई डिवाइस नहीं है, तो
+    बिना किसी डिवाइसेस के सीखने के लिए हमारी [अनप्लग्ड गतिविधियाँ](%{unplugged_url})
+    देखें!
   hoc_how_to_faq_question_volunteer: वालंटियर कौन कर सकता है?
   hoc_how_to_faq_answer_volunteer: कंप्यूटर विज्ञान शिक्षा और तकनीक में बढ़ती विविधता
     के संबंध में भावुक कोई भी व्यक्ति स्वयंसेवक हो सकता है! हम सभी पृष्ठभूमियों के
@@ -15048,9 +15083,9 @@ hi:
     60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
   hoc_how_to_faq_question_age_groups: ऑवर ऑफ कोड एक्टिविटी किस उम्र के लोगों के लिए
     उपयुक्त है?
-  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
-    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
-    Everyone—even adults—can have fun learning!
+  hoc_how_to_faq_answer_age_groups: Code.org और हमारे भागीदार सभी पृष्ठभूमियों के
+    सभी ग्रेड स्तरों (K-12) के छात्रों को शामिल करने के लिए सभी ऑवर ऑफ कोड की गतिविधियों
+    को तैयार करते हैं। हर कोई—यहाँ तक कि बड़े भी—सीखने का आनंद ले सकते हैं!
   hoc_how_to_resources_heading_educators: शिक्षकों के लिए ऑवर ऑफ़ कोड के अन्य संसाधन
   hoc_how_to_resources_heading_default: अन्य ऑवर ऑफ कोड संसाधन
   hoc_how_to_resources_promo_heading: प्रचार संबंधी संसाधन
@@ -15062,22 +15097,23 @@ hi:
   hoc_how_to_resources_get_involved_heading: कैसे शामिल हों
   hoc_how_to_resources_get_involved_desc: ऑवर ऑफ कोड के बारे में प्रचार करने में मदद
     करें! अपने समुदाय को शामिल करने के तरीके पता लगाएं।
-  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
-  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
-    look for ways to promote the Hour of Code in your district communication to stakeholders.
-    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_resources_hoc_stats_heading: ऑवर ऑफ कोड के आंकड़े
+  hoc_how_to_resources_hoc_stats_desc: जब आप हितधारकों के साथ अपने जिले के संचार में
+    ऑवर ऑफ कोड को बढ़ावा देने के तरीकों की तलाश कर रहे हों तो नमूना संदेश भेजने और
+    इन्फोग्राफिक्स का इस्तेमाल करें। अपने समुदाय के साथ साझा करने के लिए प्रभावशाली
+    इन्फोग्राफिक्स और आँकड़े खोजें!
   hoc_how_to_step_label_plan: योजना बनाएं कि आप अपना ऑवर ऑफ कोड कहाँ और कब करेंगे
   hoc_how_to_step_label_choose_activity: अपनी गतिविधि चुनें
   hoc_how_to_step_label_choose_activities: अपनी गतिविधियां चुनें
   hoc_how_to_step_label_test_activity: अपनी गतिविधि की जाँच करें
-  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_get_familiar_activities: गतिविधियों के साथ परिचित हों
   hoc_how_to_step_label_register_event: अपना ईवेंट रजिस्टर करें
   hoc_how_to_step_label_register_your_hoc: अपना Hour of Code रजिस्टर करें
   hoc_how_to_step_label_tell: अपने छात्रों, स्कूल, और समुदाय को बताएं
   hoc_how_to_step_label_get_coding: कोडिंग पाएं!
   hoc_how_to_step_label_celebrate: जश्न मनाएं
   hoc_how_to_step_label_beyond_hoc: ऑवर ऑफ कोड के आगे
-  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_prepare_your_event: अपने इवेंट की तैयारी करें
   hoc_how_to_step_label_plan_your_event: अपने ईवेंट की योजना बनाएं
   hoc_how_to_step_label_plan_your_hour: अपने घंटे की योजना बनाएं
   hoc_how_to_step_label_help_spread_word: प्रचार करने में मदद करें
@@ -15086,23 +15122,25 @@ hi:
   hoc_how_to_step_label_encourage_employees: कर्मचारियों को वालंटियर बनने के लिए प्रोत्साहित
     करें
   hoc_how_to_step_label_plan_internal_event: एक आंतरिक इवेंट की योजना बनाएं
-  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
-  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
-    in Hour of Code
-  hoc_how_to_step_label_after_event: After the event
-  hoc_how_to_step_label_invite_elected_official: Invite an elected official
-  hoc_how_to_step_label_coordinate_media: Coordinate with Media
-  hoc_how_to_step_label_confirm_details: Confirm all details
-  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
-  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_label_recruit_school_participation: स्कूल भागीदारी की नियुक्ति करें
+  hoc_how_to_step_label_promote_district_involvement: ऑवर ऑफ कोड में अपने जिले की
+    भागीदारी को उत्साहित करें
+  hoc_how_to_step_label_after_event: इवेंट के बाद
+  hoc_how_to_step_label_invite_elected_official: एक निर्वाचित अधिकारी को आमंत्रित
+    करें
+  hoc_how_to_step_label_coordinate_media: मीडिया के साथ संयोजन करें
+  hoc_how_to_step_label_confirm_details: सारे विवरणों की पुष्टि करें
+  hoc_how_to_step_label_volunteer_decide: तय करें कि आप कैसे वालंटियर बनना चाहते हैं
+  hoc_how_to_step_label_plan_classroom_visit: अपनी कक्षा के दौरे की योजना बनाएं
   hoc_how_to_step_beyond_hoc_subhead: यह यहीं खत्म नहीं होता है!
-  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
-  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
-    these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: एक ट्यूटोरियल से आगे अपने शिक्षण
+    को बढ़ाएं।
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'इन सुझावों के साथ उत्साह को बनाए
+    रखें:'
+  hoc_how_to_step_beyond_hoc_desc_generic: कंप्यूटर विज्ञान ऑवर ऑफ कोड के साथ समाप्त
+    नहीं होना चाहिए! जबकि 90% माता-पिता चाहते हैं कि उनका बच्चा कंप्यूटर विज्ञान सीखे,
+    लेकिन अधिकांश स्कूल अभी भी इसे नहीं सिखाते हैं। ऑवर ऑफ कोड के भागीदारों की विविध
+    पाठ्यक्रम पेशकशों को देखें, और जानें कि आज ही CS को अपने स्कूल में कैसे लाया जाए!
   hoc_how_to_step_plan_hour_desc_01: 'आपको शुरू कराने के लिए यहां एक नमूना एजेंडा
     उपलब्ध है:'
   hoc_how_to_step_choose_activities_desc_01: इस वर्ष, ऑवर ऑफ़ कोड थीम आर्टिफिशियल इंटेलिजेंस
@@ -15119,9 +15157,9 @@ hi:
     करने और आगे की चर्चा को निर्देशित करने के लिए साथ में पाठ योजनाएं भी हैं। या,
     हम शिक्षकों को AI के साथ और उसके बारे में शिक्षण के भविष्य को अनलॉक करने के लिए
     मुफ्त पेशेवर शिक्षा की पेशकश करते हैं।
-  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
-    Students can watch short videos featuring experts in the field, and there are
-    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_choose_activities_desc_03_short: फिर, [AI के बारे में सब कुछ जानें](%{ai_url})।
+    छात्र क्षेत्र के विशेषज्ञों के छोटे वीडियोस देख सकते हैं, और गतिविधि को आगे बढ़ाने
+    और आगे की चर्चा में मार्गदर्शन के लिए पाठ योजनाएं भी हैं।
   hoc_how_to_step_beyond_advocacy_desc_01: कंप्यूटर विज्ञान का अंत ऑवर ऑफ कोड के साथ
     नहीं होता है! जबकि 90% माता-पिता चाहते हैं कि उनका बच्चा कंप्यूटर विज्ञान सीखे,
     लेकिन ज्यादातर स्कूल अभी भी इसे नहीं पढ़ाते हैं और सैकड़ों-हजारों नौकरियाँ खाली
@@ -15202,239 +15240,294 @@ hi:
     को पूरा करने के के वैयक्तिकृत प्रमाणपत्रों के साथ बधाई दें। अपने ऑवर ऑफ कोड इवेंट
     की तस्वीरें और वीडियोस साझा करें और #HourOfCode और @codeorg का इस्तेमाल करते हुए
     कंप्यूटर विज्ञान आंदोलन का समर्थन करने के लिए अपनी वचनबद्धता दिखाएं।'
-  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
-    the resources provided in our how-to guides for educators and school assemblies.
-    With your support, teachers and school administrators can decide which type of
-    event best meets the interest of your schools.
-  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
-    When you register your Hour of Code event, you'll receive helpful emails with
-    news and tips for hosting a successful Hour of Code. It's also how you can let
-    local volunteers know your school is participating. Volunteers are a great resource
-    and can come speak to your class about computer science or help your students
-    with Hour of Code activities.
-  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
-    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
-    Instagram and your district's homepage! Explore our sample emails which help you
-    share your Hour of Code event with your community.
-  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
-    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
-    so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
-  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
-    to see your event, and know that your dedication is part of a worldwide movement.
-  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
-    your event, as well as the tech capabilities of your space. Students can work
-    on their own devices, in pairs on one device, or together as a classroom on a
-    projector, and there are even unplugged tutorials that can be completed with no
-    devices at all!
-  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
-    official or influential business person and invite them to speak. [Check out our
-    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
-    of Code for more info.
-  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
-    as a local news station, newspaper, or education/tech bloggers. [See our press
-    kit for help](%{press_kit_url}).
-  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
-    [inspirational videos](%{videos_url}).'
-  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
-    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
-  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
-    about their background and how technology and computer science plays an important
-    role in their everyday lives'
-  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
-    of Code demo for the school. Fun twist: have them teach the principal, politician,
-    or other students!'
-  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
-    activity and how computer science can be taught without using computers.'
-  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
-    organize school-wide event gives closing remarks.'
-  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
-    take pictures to commemorate the event, and to post on your organization's social
-    media networks. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
-    and that it remains on track to end on time—especially if any special guests have
-    other scheduled commitments to attend.
-  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
-    sure to:'
-  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
-    and congratulate your students.
-  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
-    great for students to do) and offer to answer any follow-up questions they may
-    have.
-  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
-    the day on social media. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
-    on how to make next year's event even better.
+  hoc_how_to_step_districts_recruit_desc_01: शिक्षकों और स्कूल असेंबलियों के लिए हमारी
+    'कैसे करें' मार्गदर्शिकाओं में उपलब्ध संसाधनों को साझा करके स्कूल भागीदारी की
+    नियुक्ति करें। आपकी सहायता से, शिक्षक और स्कूल के प्रशासक यह तय कर सकते हैं कि
+    किस प्रकार का इवेंट आपके स्कूलों के हित को सबसे अच्छा पूरा करता है।
+  hoc_how_to_step_districts_register_desc_01: किसी इवेंट की मेजबानी करने वाले प्रत्येक
+    व्यक्ति को पंजीकरण करने के लिए कहें! जब आप अपना ऑवर ऑफ कोड इवेंट रजिस्टर करते
+    हैं, तो आपको एक सफल ऑवर ऑफ कोड की मेज़बानी करने के लिए समाचार और सुझावों वाली उपयोगी
+    ईमेल्स प्राप्त होंगे। यह भी बताया गया है कि आप स्थानीय वालंटियर्स को कैसे बता
+    सकते हैं कि आपका स्कूल भाग ले रहा है। वालंटियर्स एक शानदार संसाधन हैं और कंप्यूटर
+    विज्ञान के बारे में आपकी कक्षा में बोलने के लिए आ सकते हैं या ऑवर ऑफ कोड गतिविधियों
+    में आपके छात्रों की मदद कर सकते हैं।
+  hoc_how_to_step_districts_promote_desc_01: समुदाय के सदस्यों और हितधारकों को ऑवर
+    ऑफ कोड इवेंट में अपनी भागीदारी के बारे में बताएं! Facebook, Twitter, Instagram
+    और अपने जिले के होमपेज पर पोस्ट करें! हमारी नमूना ईमेल्स देखें जो आपको अपने ऑवर
+    ऑफ कोड ईवेंट को आपके समुदाय के साथ साझा करने में मदद करती हैं।
+  hoc_how_to_step_districts_celebrate_desc_01: 'अपने ऑवर ऑफ कोड इवेंट की तस्वीरें
+    और वीडियोस साझा करें और अपने छात्रों की उपलब्धियां दिखाएं। #HourOfCode और @codeorg
+    का इस्तेमाल करें ताकि हम आपके जिले को क्रियान्वित होते देख सकें!'
+  hoc_how_to_step_districts_beyond_desc_01: कंप्यूटर विज्ञान की शिक्षा ऑवर ऑफ कोड
+    के साथ समाप्त नहीं होनी चाहिए! अपने जिले के छात्रों को ऐसे कौशल और ज्ञान देने
+    में मदद करने के लिए जो उन्हें कॉलेज और करियर के लिए तैयार करेंगे, हमारे उपयोग
+    के लिए मुफ्त वेब-आधारित पाठ्यक्रम को देखें!
+  hoc_how_to_step_districts_beyond_desc_01_v2: कंप्यूटर विज्ञान की शिक्षा ऑवर ऑफ कोड
+    के साथ समाप्त नहीं होनी चाहिए! अपने जिले के छात्रों को ऐसे कौशल और ज्ञान देने
+    में मदद करने के लिए जो उन्हें कॉलेज और करियर के लिए तैयार करेंगे, ऑवर ऑफ कोड के
+    भागीदारों की विविध पाठ्यक्रम पेशकशों को देखें!
+  hoc_how_to_step_events_register_desc_01: नई गतिविधियों और विशेष प्रचारों के बारे
+    में जानकारी तक जल्द पहुंच पाने के लिए अपना ऑवर ऑफ कोड ईवेंट पंजीकृत करें! जब 300
+    या उससे अधिक छात्र भाग लेते हैं, तो आप टी-शर्ट्स, पोस्टरों, लैपटॉप स्टिकरों, और
+    बहुत कुछ आदि वाली एक विशेष सहभागिता किट प्राप्त कर सकते हैं। योग्य होने के लिए
+    [अपनी पूरी स्कूल इवेंट योजना साझा करें](%{share_url})।
+  hoc_how_to_step_events_register_desc_02: अपना ईवेंट देखने के लिए आप [ऑवर ऑफ कोड
+    का नक्शा भी देख](%{map_url}) सकते हैं, और जानें कि आपका समर्पण एक विश्वव्यापी
+    आंदोलन का हिस्सा है।
+  hoc_how_to_step_events_prepare_desc_01: विचार करें कि आप अपना इवेंट कहाँ और कब आयोजित
+    करना चाहते हैं, साथ ही अपने स्थान की तकनीकी क्षमताओं पर भी विचार करें। छात्र अपने
+    खुद के डिवाइसेस पर, एक डिवाइस पर जोड़ियों में, या प्रोजेक्टर पर एक कक्षा के रूप
+    में मिलकर काम कर सकते हैं, और यहां अनप्लग्ड ट्यूटोरियल्स भी दिए गए हैं जिन्हें
+    बिना किसी डिवाइसेस के पूरा किया जा सकता है!
+  hoc_how_to_step_events_prepare_desc_02: किसी निर्वाचित अधिकारी या प्रभावशाली व्यवसायी
+    व्यक्ति को [एक पत्र](%{letter_url}) भेजें और उन्हें बोलने के लिए आमंत्रित करें।
+    [अधिक जानकारी के लिए एक ऑवर ऑफ कोड के दौरान किसी निर्वाचित अधिकारी की मेजबानी
+    करते समय [हमारी टूलकिट का उपयोग कैसे करें देखें](%{toolkit_url})।
+  hoc_how_to_step_events_prepare_desc_03: आप स्थानीय मीडिया, जैसे कि स्थानीय समाचार
+    स्टेशन, समाचार पत्र, या शिक्षा/तकनीकी ब्लॉगर्स को भी आमंत्रित कर सकते हैं। [सहायता
+    के लिए हमारी प्रेस किट देखें](%{press_kit_url})।
+  hoc_how_to_step_events_plan_hour_desc_02: 'सुबह 10:00-10:05 बजे: हमारी किसी [प्रेरणादायक
+    वीडियोस](%{videos_url}) के साथ शुरूआत करें'
+  hoc_how_to_step_events_plan_hour_desc_03: 'सुबह 10:05 - 10:15 बजे: मुख्य अध्यापक
+    कंप्यूटर विज्ञान के महत्व पर प्रकाश डालते हुए एक परिचय देते हैं। [इन आँकड़ों और
+    इन्फोग्राफिक्स का उपयोग करें](%{stats_url})।'
+  hoc_how_to_step_events_plan_hour_desc_04: 'सुबह 10:15 - 10:30 बजे: विशेष मेहमान
+    अपनी पृष्ठभूमि के बारे में बात करेंगे और बताएंगे कि प्रौद्योगिकी और कंप्यूटर विज्ञान
+    उनके रोजमर्रा के जीवनों में कैसे महत्वपूर्ण भूमिका निभाते हैं।'
+  hoc_how_to_step_events_plan_hour_desc_05: 'सुबह 10:30 - 10:40 बजे: छात्र स्कूल के
+    लिए एक ऑवर ऑफ कोड का डेमो करते हैं। मजेदार मोड़: उन्हें मुख्य अध्यापक, राजनेता
+    या अन्य छात्रों को पढ़ाने के लिए कहें!'
+  hoc_how_to_step_events_plan_hour_desc_06: 'सुबह 10:40 - 11:00 बजे: छात्र किसी अनप्लग्ड
+    गतिविधि का डेमो करते हैं और बताते हैं कि कंप्यूटरों का इस्तेमाल किए बिना कंप्यूटर
+    विज्ञान कैसे पढ़ाया जा सकता है।'
+  hoc_how_to_step_events_plan_hour_desc_07: 'सुबह 11:00 - 11:05 बजे: स्कूल-व्यापी
+    इवेंट आयोजित करने में मदद करने वाले शिक्षक समापन टिप्पणियाँ देते हैं।'
+  hoc_how_to_step_events_get_coding_desc_01: जब छात्र अपनी गतिविधि पर काम कर रहे होते
+    हैं, तो इवेंट का जश्न मनाने, और अपने संगठन के सोशल मीडिया नेटवर्क्स पर पोस्ट करने
+    के लिए तस्वीरें लें। (प्रचार या गोपनीयता नीतियां लागू हो सकती हैं।)
+  hoc_how_to_step_events_get_coding_desc_02: सुनिश्चित करें कि एजेंडा सुचारू ढंग से
+    चल रहा है, और यह समय पर समाप्त होने की राह पर है—खासकर यदि किसी विशेष मेहमान की
+    शामिल होने की अन्य निर्धारित वचनबद्धताएँ हैं।
+  hoc_how_to_step_events_after_desc_01: 'एक सफल ऑवर ऑफ कोड इवेंट के बाद, यह सुनिश्चित
+    करें:'
+  hoc_how_to_step_events_after_desc_02: जश्न मनाएं! पूरा होने के प्रमाणपत्र प्रिंट
+    करें और अपने छात्रों को बधाई दें।
+  hoc_how_to_step_events_after_desc_03: किसी विशेष मेहमान का उनका समय देने के लिए
+    धन्यवाद करें (विशेष रूप से छात्रों के लिए यह करना बहुत अच्छा है) और उनके हो सकने
+    वाले कोई भी फॉलो-अप प्रश्नों का उत्तर देने की पेशकश करें।
+  hoc_how_to_step_events_after_desc_04: सोशल मीडिया पर उस दिन की तस्वीरें, वीडियोस,
+    या उल्लेखनीय उद्धरण पोस्ट करें। (प्रचार या गोपनीयता नीतियां लागू हो सकती हैं।)
+  hoc_how_to_step_events_after_desc_05: अगले वर्ष के इवेंट को और भी बेहतर कैसे बनाया
+    जाए, इस पर फीडबैक के लिए वालंटियर्स या मेहमानों के साथ फॉलो-अप करें।
   hoc_how_to_step_events_after_desc_06: अपने स्कूल के माता-पिता शिक्षक छात्र संघ को
     मिलें या माता-पिता न्यूज़लेटर्स में साझा करें, उन्हें बताएं कि उनके बच्चे क्या
     सीख रहे हैं।
-  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
-    of Code with your child by registering. When you register your event, you'll receive
-    helpful emails with news and tips for hosting a successful Hour of Code. You'll
-    also be [put on the map](%{map_url}) so you can show your child that they are
-    part of a global movement.
-  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
-    get to work together. They may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. Computer science
-    is all about learning how to "debug" situations that didn't turn out the way we
-    thought they would. Together, you and your child can think of creative ways to
-    solve the problem!
-  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
-    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
-    your child to show off their achievement!
-  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
-    a school-wide event. When 300 or more kids participate, you can receive a special
-    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
-    whole school event plan](%{share_url}) to qualify.
-  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
-    hosting a company-wide event or encouraging other employees to host their own
-    Hour of Code event.
-  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
-    that features one of their favorite role models.
-  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
-    and why it matters.
-  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
-    with your child right away to get them excited or save it for the end of your
-    Hour of Code as a special prize."
-  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
-    your school today."
-  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
-    both your event and the elected official.
-  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
-    from your event (e.g., school administrator) and for the elected official attending
-    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
-    for the day of the event.
-  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
-    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
-  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
-    your Hour of Code event to register and put your event on the map. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
-    map](%{map_url}) to see your event, and know that your dedication is part of a
-    worldwide movement."
-  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
-    day and make sure all parties participating (teachers, students, administrators,
-    elected officials and their staff) are aware of what is happening and when. Things
-    to consider:'
-  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
-    each part of the event?
-  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
-    or rotate between many students during the event? (You may want to coordinate
-    this ahead of time with the official's staffer.)
-  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
-    as a group?
-  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
-    What if the official is running late? What if some students finish their activity
-    before others?
-  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
-    to talk about their background and how technology and computer science plays an
-    important role in their everyday life.'
-  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
-    their Hour of Code activity. Fun twist: have a group of students teach the principal,
-    politician, or other students!'
-  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
-    gives closing remarks.'
-  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
-    coordinating media invitations. It could be the school, the district, the official's
-    office, or any combination.
-  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
-    per your state/district/school policy.
-  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
-    (DocuSign - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
-    (Download and print)"
+  hoc_how_to_step_parents_register_desc_01: पंजीकरण करके अपने बच्चे के साथ एक ऑवर
+    ऑफ कोड करने की वचनबद्धता के साथ शुरुआत करें। जब आप अपना ईवेंट पंजीकृत करते हैं,
+    तो आपको सफल ऑवर ऑफ कोड की मेजबानी करने के लिए समाचारों और सुझावों वाली उपयोगी
+    ईमेल्स प्राप्त होंगी। आपको [नक्शे पर भी ले जाया जाएगा](%{map_url}) ताकि आप अपने
+    बच्चे को दिखा सकें कि वे एक वैश्विक आंदोलन का हिस्सा हैं।
+  hoc_how_to_step_parents_get_coding_desc_01: अपने बच्चे को गतिविधि की ओर ले जाएं
+    और साथ मिलकर काम करें। उनके सामने चुनौतियां आ सकती हैं—यह ठीक है! प्रोग्राम बनाना
+    सीखना एक नई भाषा सीखने जैसा होता है; आप तुरंत सहज नहीं होंगे। कंप्यूटर विज्ञान
+    पूरी तरह से यह सीखने के बारे में है कि उन स्थितियों को "डीबग" कैसे करें जो उस
+    तरह से नहीं हुईं जैसा हमने सोचा था। मिलकर, आप और आपका बच्चा समस्या को हल करने
+    के रचनात्मक तरीके सोच सकते हैं!
+  hoc_how_to_step_parents_celebrate_desc_01: 'सफलता का जश्न मनाना सुनिश्चित करें!
+    सोशल मीडिया पर अपने ऑवर ऑफ कोड की फ़ोटोस और वीडियोस साझा करें। #HourOfCode और @codeorg
+    का उपयोग करें ताकि हम आपकी सफलता को भी उजागर कर सकें!'
+  hoc_how_to_step_parents_celebrate_desc_02: आप अपने बच्चे की उपलब्धि दिखाने के लिए
+    उसके लिए प्रमाणपत्र भी प्रिंट कर सकते हैं!
+  hoc_how_to_step_parents_spread_word_desc_02: अपने बच्चे के मुख्य अध्यापक से स्कूल-व्यापी
+    इवेंट की मेजबानी करने के लिए कहें। जब 300 या उससे अधिक बच्चे भाग लेते हैं, तो
+    आप टी-शर्ट्स, पोस्टरों, लैपटॉप स्टिकरों, और बहुत कुछ आदि वाली एक विशेष सहभागिता
+    किट प्राप्त कर सकते हैं। योग्य होने के लिए [अपनी पूरी स्कूल इवेंट योजना साझा करें](%{share_url})।
+  hoc_how_to_step_parents_spread_word_desc_03: अपने नियोक्ता को कंपनी-व्यापी इवेंट
+    की मेजबानी करके शामिल होने या अन्य कर्मचारियों को उनके स्वयं के ऑवर ऑफ कोड इवेंट
+    की मेजबानी करने के लिए प्रोत्साहित करने के लिए कहें।
+  hoc_how_to_step_parents_beyond_list_01: उन्हें उनके किसी पसंदीदा रोल मॉडल को दिखाती
+    एक [प्रेरणादायक वीडियो](%{video_url}) दिखाएं।
+  hoc_how_to_step_parents_beyond_list_02: इस बारे में सब कुछ जानें कि [AI कैसे काम
+    करता है](%{ai_url}), और यह क्यों मायने रखता है।
+  hoc_how_to_step_parents_beyond_list_03: "[कुछ स्वैग का आदेश दें](%{swag_url})! अपने
+    बच्चे को उत्साहित करने के लिए उनके साथ तुरंत इसे साझा करें या एक विशेष पुरस्कार
+    के रूप में इसे अपने ऑवर ऑफ कोड के अंत के लिए सहेज कर रखें।"
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) आज ही CS को अपने
+    स्कूल में कैसे लाया जाए।"
+  hoc_how_to_step_public_officials_invite_desc_01: अपने इवेंट और निर्वाचित अधिकारी
+    दोनों के लिए स्थान व्यक्ति निर्धारित करें।
+  hoc_how_to_step_public_officials_invite_desc_02: अपने इवेंट के स्थान व्यक्ति (उदाहरण
+    के लिए, स्कूल प्रशासक) और शामिल होने वाले निर्वाचित अधिकारी (उदाहरण के लिए, स्टाफर
+    या अनुसूचक) दोनों के बीच संयोजन करें। सुनिश्चित करें कि दोनों पक्षों के पास इवेंट
+    के दिन के लिए एक-दूसरे की संपर्क जानकारी हो।
+  hoc_how_to_step_public_officials_invite_desc_03: 'बाएं से दाएं: अर्कांसस, उत्तरी
+    कैरोलिना, और एरिज़ोना के गवर्नर एक ऑवर ऑफ कोड में शामिल हो रहे हैं'
+  hoc_how_to_step_public_officials_register_desc_01: आपके इवेंट को पंजीकृत करने और
+    उसे नक्शे पर रखने के लिए अपने ऑवर ऑफ कोड इवेंट का आयोजन करने वाले पक्षों के साथ
+    काम करें। आपको नई गतिविधियों और विशेष प्रचारों के बारे में जानकारी तक शीघ्र पहुंच
+    मिलेगी!
+  hoc_how_to_step_public_officials_register_desc_02: अपना ईवेंट देखने के लिए [ऑवर
+    ऑफ कोड का नक्शा देखें](%{map_url}), और जानें कि आपका समर्पण एक विश्वव्यापी आंदोलन
+    का हिस्सा है।
+  hoc_how_to_step_public_officials_plan_desc_01: 'दिन का विशिष्ट एजेंडा तैयार करें
+    और सुनिश्चित करें कि भाग लेने वाले सभी पक्ष (शिक्षक, छात्र, प्रशासक, निर्वाचित
+    अधिकारी और उनके कर्मचारी) को पता है कि क्या और कब हो रहा है। विचार करने वाली बातें:'
+  hoc_how_to_step_public_officials_plan_list_01: इवेंट के प्रत्येक हिस्से के दौरान
+    प्रत्येक भागीदार क्या कर रहा है?
+  hoc_how_to_step_public_officials_plan_list_02: क्या अधिकारी एक छात्र के साथ बैठ
+    जाएगा, या इवेंट के दौरान कई छात्रों के बीच घूमेगा? (आप इसका समय से पहले अधिकारी
+    के स्टाफर के साथ संयोजन करना चाह सकते हैं।)
+  hoc_how_to_step_public_officials_plan_list_03: क्या अधिकारी समूह के रूप में छात्रों
+    से बात करेंगे?
+  hoc_how_to_step_public_officials_plan_list_04: एजेंडे में लचीलेपन की योजना बनाएं।
+    यदि अधिकारी देरी से चल रहा है तो क्या होगा? यदि कुछ छात्र दूसरों से पहले अपनी
+    गतिविधि समाप्त कर लेते हैं तो क्या होगा?
+  hoc_how_to_step_public_officials_agenda_list_03: 'सुबह 10:10 - 10:15 बजे: निर्वाचित
+    अधिकारी अपनी पृष्ठभूमि के बारे में बात करेंगे और बताएंगे कि प्रौद्योगिकी और कंप्यूटर
+    विज्ञान उनके रोजमर्रा के जीवन में कैसे महत्वपूर्ण भूमिका निभाते हैं।'
+  hoc_how_to_step_public_officials_agenda_list_04: 'सुबह 10:15 - 10:55 बजे: छात्र
+    अपनी ऑवर ऑफ कोड गतिविधि करते हैं। मजेदार मोड़: छात्रों के समूह को मुख्य अध्यापक,
+    राजनेता या अन्य छात्रों को पढ़ाने के लिए कहें!'
+  hoc_how_to_step_public_officials_agenda_list_05: 'सुबह 10:55 - 11:00 बजे: शिक्षक/प्रशासक
+    समापन टिप्पणी देते हैं।'
+  hoc_how_to_step_public_officials_media_desc_01: जानें कि कौन मीडिया आमंत्रणों के
+    समन्वय के लिए जिम्मेदार होगा। यह स्कूल, जिला, अधिकारी का कार्यालय, या कोई भी संयोजन
+    हो सकता है।
+  hoc_how_to_step_public_officials_media_desc_02: आपके राज्य/जिला/स्कूल की नीति के
+    अनुसार, सभी छात्रों के लिए सुरक्षित मीडिया छूट।
+  hoc_how_to_step_public_officials_media_list_01: "[वयस्क/सामान्य](%{general_send_url})
+    (DocuSign - हस्ताक्षरकर्ता को लिंक भेजें)"
+  hoc_how_to_step_public_officials_media_list_02: "[वयस्क/सामान्य](%{general_print_url})
+    (डाउनलोड करें और प्रिंट करें)"
   hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
-    - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
-    and print)"
-  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
-    official 72 hours prior to the event. Include event dress code, who will greet
-    them, which classroom or event they will attend with teacher's name, and agenda
-    for the event.
-  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
-    technology the day before and day of the event to ensure the event runs smoothly.
-  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
-    feel welcome and engaged, greet the elected official at the door of the event
-    to show them where to go and answer any questions they may have. It is always
-    great to have a student help greet them!
-  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
-    to commemorate the visit and to post on your organization's social media networks.
-    (Publicity or privacy policies may apply).
-  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
-    smoothly and that it remains on track to end on time. The official may have other
-    visits or meetings scheduled following your event.
-  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
-    of completion and congratulate your students.
-  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
-    and offer to answer any follow-up questions they may have.
-  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
-    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
-    or privacy policies may apply.)'
-  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
-    you note. It's especially thoughtful to get students to sign!
-  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
-    on each side for feedback on how to make next year’s event even better.
-  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
-    or a degree in computer science—you''re already qualified as you are! There are
-    a few ways you can get involved in Hour of Code as a volunteer:'
-  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
-    Email a local teacher or administrator to see if they need support for their Hour
-    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
-    started!"
-  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
-    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
-    Hour of Code event!"
-  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
-    there, teachers in your area will be able to reach out to you. Teachers will review
-    your profile on the [map](%{map_url}), so try to complete as much as possible
-    to increase the chance that a teacher will contact you."
-  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
-    work with your event organizer to register your Hour of Code event. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
-    discuss these logistics with the teacher ahead of time to better understand their
-    needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
-  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
-    This can determine what times you need to be present and in what capacity.
-  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
-    Depending on their procedures you may need to complete a background check or arrive
-    a little early for check-in at an in-person event.
-  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
-    with Artificial Intelligence (AI). Make this year special by completing a coding
-    activity AND learning about AI.
-  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
-    science movement by sharing your volunteer plans with your friends and colleagues
-    on your social media accounts (e.g. LinkedIn).
-  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
-    free to answer questions—but try not to give them the solution outright. Ask them
-    questions so they can answer themselves what went wrong. Encourage students to
-    help each other if they get stuck.
-  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
-    okay! Let the student know that you're in this together and work alongside them
-    to figure it out.
-  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
-  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
-    to stop with the Hour of Code. Consider volunteering year round with programs
-    like [TEALS](%{teals_url}) or advocate for computer science education.
+    - हस्ताक्षरकर्ता को लिंक भेजें)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (डाउनलोड
+    करें और प्रिंट करें)"
+  hoc_how_to_step_public_officials_confirm_desc_01: इवेंट से 72 घंटे पहले अधिकारी
+    को सार्वजनिक एजेंडा भेजें। इवेंट का ड्रेस कोड, कौन उनका स्वागत करेगा, शिक्षक के
+    नाम के साथ वे किस कक्षा या इवेंट में भाग लेंगे, और इवेंट का एजेंडा शामिल करें।
+  hoc_how_to_step_public_officials_confirm_desc_02: एजेंडे की समीक्षा करें और इवेंट
+    के सुचारू संचालन को सुनिश्चित करने के लिए इवेंट के एक दिन पहले और इवेंट के दिन
+    सभी प्रौद्योगिकी की जांच करें।
+  hoc_how_to_step_public_officials_get_coding_desc_01: यह सुनिश्चित करने के लिए कि
+    निर्वाचित अधिकारी स्वागत और शामिल हुआ महसूस करें, इवेंट के दरवाजे पर निर्वाचित
+    अधिकारी का स्वागत करें ताकि उन्हें बताया जा सके कि कहाँ जाना है और उनके हो सकने
+    वाले कोई भी प्रश्नों का उत्तर दें। किसी छात्र की उनका स्वागत करने में मदद करना
+    हमेशा बहुत अच्छा होता है!
+  hoc_how_to_step_public_officials_get_coding_desc_02: दौरे का जश्न मनाने के लिए और
+    अपने संगठन के सोशल मीडिया नेटवर्क्स पर पोस्ट करने के लिए इवेंट के दौरान तस्वीरें
+    लें। (प्रचार या गोपनीयता नीतियां लागू हो सकती हैं)।
+  hoc_how_to_step_public_officials_get_coding_desc_03: सुनिश्चित करें कि एजेंडा सुचारू
+    ढंग से चल रहा है और यह समय पर समाप्त होने की राह पर चलता है। आपके इवेंट के बाद
+    अधिकारी अन्य दौरे या बैठकें निर्धारित कर सकते हैं।
+  hoc_how_to_step_public_officials_after_list_01: जश्न मनाएं! पूरा होने के [प्रमाणपत्र
+    प्रिंट करें](%{certificate_url}) और अपने छात्रों को बधाई दें।
+  hoc_how_to_step_public_officials_after_list_02: समय देने के लिए अधिकारी का धन्यवाद
+    करें और उनके हो सकने वाले कोई भी फॉलो-अप प्रश्नों का उत्तर देने की पेशकश करें।
+  hoc_how_to_step_public_officials_after_list_03: "#HourOfCode और @codeorg के साथ
+    सोशल मीडिया पर उस दिन की तस्वीरें, वीडियोस, या उल्लेखनीय उद्धरण पोस्ट करें। (प्रचार
+    या गोपनीयता नीतियां लागू हो सकती हैं।)"
+  hoc_how_to_step_public_officials_after_list_04: अधिकारी को फॉलो-अप धन्यवाद नोट भेजें।
+    छात्रों से हस्ताक्षर करवाना विशेष रूप से विचारणीय है!
+  hoc_how_to_step_public_officials_after_list_05: अगले वर्ष के इवेंट को और भी बेहतर
+    कैसे बनाया जाए, इस पर फीडबैक के लिए प्रत्येक पक्ष के स्टाफ स्थान व्यक्ति के साथ
+    संपर्क करें।
+  hoc_how_to_step_volunteer_decide_desc_01: 'आपको कंप्यूटर विज्ञान में किसी तकनीकी
+    पृष्ठभूमि या डिग्री की आवश्यकता नहीं होती है - आप जैसे हैं पहले से ही योग्य हैं!
+    ऐसे कुछ तरीके हैं जिनसे आप एक वालंटियर के रूप में ऑवर ऑफ कोड में शामिल हो सकते
+    हैं:'
+  hoc_how_to_step_volunteer_decide_list_01: "**अपने क्षेत्र के किसी स्कूल के साथ संपर्क
+    करें।** यह देखने के लिए किसी स्थानीय शिक्षक या प्रशासक को ईमेल करें कि क्या उन्हें
+    अपने ऑवर ऑफ कोड इवेंट के लिए सहायता की आवश्यकता है। शुरू करने के लिए वालंटियर्स
+    के लिए हमारी [नमूना ईमेल](%{email_url}) देखें!"
+  hoc_how_to_step_volunteer_decide_list_02: "**अपनी कंपनी के साथ एक इवेंट चलाएँ।**
+    एक संगठन-व्यापी ऑवर ऑफ कोड इवेंट निर्धारित करने के लिए हमारी [कंपनियों का मार्गदर्शन
+    कैसे करें](%{companies_url}) देखें!"
+  hoc_how_to_step_volunteer_decide_list_03: "**वालंटियर नक्शे पर साइन अप करें।** वहां
+    से, आपके क्षेत्र के शिक्षक आप तक पहुंच करने में सक्षम होंगें। शिक्षक [map](%{map_url})
+    पर आपकी प्रोफ़ाइल की समीक्षा करेंगे, इसलिए शिक्षक के आपसे संपर्क करने की संभावना
+    को बढ़ाने के लिए जितना अधिक संभव हो सके पूरा करने का प्रयास करें।"
+  hoc_how_to_step_volunteer_register_desc_01: इस बात से कोई फर्क नहीं पड़ता कि आप
+    वालंटियर बनने का निर्णय कैसे लेते हैं, अपने ऑवर ऑफ कोड इवेंट को पंजीकृत करने के
+    लिए अपने इवेंट आयोजक के साथ काम करें। आपको नई गतिविधियों और विशेष प्रचारों के
+    बारे में जानकारी तक शीघ्र पहुंच मिलेगी!
+  hoc_how_to_step_volunteer_plan_desc_01: 'यदि आप किसी कक्षा में वालंटियर बन रहे हैं,
+    तो उनकी आवश्यकताओं को बेहतर तरीके से समझने के लिए शिक्षक के साथ समय से पहले इन
+    लॉजिस्टिक्स पर चर्चा करें:'
+  hoc_how_to_step_volunteer_plan_list_01: इवेंट में एक वालंटियर के रूप में आपकी क्या
+    भूमिका है? यदि आप टेक में काम करते हैं, तो आपको अपना व्यक्तिगत अनुभव या कहानी
+    को साझा करने के लिए कहा जा सकता है। क्या आप पहले से ही मिलकर गतिविधि करके शिक्षक
+    को तैयारी में मदद कर सकते हैं? क्या आप प्रश्नों के उत्तर देने के लिए कक्षा में
+    घूम सकते हैं या विद्यार्थियों को अपना ऑवर ऑफ कोड करने के दौरान प्रोत्साहित कर
+    सकते हैं?
+  hoc_how_to_step_volunteer_plan_list_02: यदि आप वर्चुअल रूप में या व्यक्तिगत रूप
+    में वालंटियर बनेंगे। यह निर्धारित कर सकता है कि आपको किस समय और किस क्षमता में
+    उपस्थित होने की आवश्यकता होती है।
+  hoc_how_to_step_volunteer_plan_list_03: स्थानीय और स्कूल स्वास्थ्य और सुरक्षा दिशानिर्देश।
+    उनकी प्रक्रियाओं के आधार पर आपको पृष्ठभूमि की जांच पूरी करने या किसी व्यक्तिगत
+    इवेंट में चेक-इन के लिए थोड़ा जल्दी पहुंचने की आवश्यकता हो सकती है।
+  hoc_how_to_step_volunteer_plan_list_04: इस वर्ष, ऑवर ऑफ कोड थीम आर्टिफिशियल इंटेलिजेंस
+    (AI) के साथ रचनात्मकता है। एक कोडिंग गतिविधि को पूरा करके और AI के बारे में सीखकर
+    इस वर्ष को विशेष बनाएं।
+  hoc_how_to_step_volunteer_spread_word_desc_01: अपने सोशल मीडिया खातों (उदाहरण के
+    लिए LinkedIn) पर अपने दोस्तों और साथियों के साथ अपनी वालंटियर योजनाओं को साझा
+    करके कंप्यूटर विज्ञान आंदोलन संबंध में जागरूकता बढ़ाने में सहायता करें।
+  hoc_how_to_step_volunteer_get_coding_desc_01: चूंकि छात्र काम कर रहे हैं, बेझिझक
+    प्रश्नों के उत्तर दें-लेकिन उन्हें सीधे समाधान न देने की कोशिश करें। उनसे प्रश्न
+    पूछें ताकि वे स्वयं उत्तर दे सकें कि क्या गलत हुआ। यदि छात्र फंस जाएं तो उन्हें
+    एक-दूसरे की सहायता करने के लिए प्रोत्साहित करें।
+  hoc_how_to_step_volunteer_get_coding_desc_02: यदि आपके पास उत्तर नहीं है, तो कोई
+    बात नहीं! छात्र को बताएं कि इसमें आप एक साथ हैं और इसका पता लगाने के लिए उनके
+    साथ मिलकर काम कर रहे हैं।
+  hoc_how_to_step_volunteer_beyond_desc_01: पूरा वर्ष कंप्यूटर विज्ञान सीखने में सहायता
+    करें!
+  hoc_how_to_step_volunteer_beyond_desc_02: यदि आपने मजा किया, तो काम को ऑवर ऑफ कोड
+    के साथ रोकने की आवश्यकता नहीं है। [TEALS](%{teals_url}) जैसे कार्यक्रमों के साथ
+    पूरे वर्ष वालंटियर बनने पर विचार करें या कंप्यूटर विज्ञान शिक्षा के लिए वकालत
+    करें।
+  hoc_how_to_step_virtual_register_desc_01: नई गतिविधियों और विशेष प्रचारों के बारे
+    में जानकारी तक जल्द ही पहुंच पाने के लिए अपने ऑवर ऑफ कोड ईवेंट का पंजीकरण करें।
+  hoc_how_to_step_virtual_register_desc_02: आप शायद व्यक्तिगत रूप से एकत्रित न हों,
+    लेकिन आप अभी भी आंदोलन का हिस्सा हैं। अपने ईवेंट को ऑवर ऑफ कोड नक्शे में शामिल
+    करने के लिए अपने होस्ट के स्थान का इस्तेमाल करें, और जानें कि आपका समर्पण विश्वव्यापी
+    आंदोलन का हिस्सा है।
+  hoc_how_to_step_virtual_choose_activities_desc_04: यदि आप अपने सभी छात्रों के लिए
+    एक ही ट्यूटोरियल चुनना चाहते हैं, या प्रत्येक छात्र को अपना स्वयं का ट्यूटोरियल
+    चुनने देना चाहते हैं, तो समय से पहले निर्णय लें।
+  hoc_how_to_step_virtual_plan_list_01: 'सुबह 10:00 - 10:05 बजे: एक [प्रेरणादायक वीडियो](%{videos_url})
+    या कंप्यूटर विज्ञान के बुनियादी सिद्धांतों के महत्व के बारे में होस्ट के किसी
+    छोटे परिचय के साथ शुरुआत करें।'
+  hoc_how_to_step_virtual_plan_list_02: 'सुबह 10:05 - 10:45 बजे: छात्र अपनी कोडिंग
+    गतिविधि करते हैं'
+  hoc_how_to_step_virtual_plan_list_03: 'सुबह 10:45 - 10:55 बजे: छात्र AI के बारे
+    में सीखते हैं'
+  hoc_how_to_step_virtual_plan_list_04: 'सुबह 10:55 - 11:00 बजे: होस्ट समापन टिप्पणियां
+    देते हैं'
+  hoc_how_to_step_virtual_plan_desc_02: अपने प्रौद्योगिकी सेट अप और गतिविधियों को
+    पहले से जांच लें। इस बारे में सोचें कि आपके छात्र कॉल में कैसे शामिल होंगे और
+    क्या वे किसी अलग विंडो में अपनी गतिविधि को पूरा करते समय कॉल पर रह सकते हैं। वीडियो
+    दिखाते समय, अपनी स्क्रीन और अपने कंप्यूटर की ध्वनि को साझा करें।
+  hoc_how_to_step_virtual_plan_desc_03: कोडिंग गतिविधि के दौरान, आप छात्रों से उनके
+    पास प्रश्न होने तक म्यूट करने के लिए कह सकते हैं। या, यदि आपका कॉन्फ़्रेंस टूल
+    इसका समर्थन करता है, तो छात्रों के लिए जोड़ों या समूहों में एक साथ मिलकर काम करने
+    के लिए ब्रेकआउट रूम्स का इस्तेमाल करने पर विचार करें।
+  hoc_how_to_step_virtual_get_coding_desc_01: अपने छात्रों को कॉन्फ़्रेंस टूल के चैट
+    बॉक्स में लिंक साझा करके या अपनी कक्षा की शिक्षण प्रबंधन प्रणाली के जरिए गतिविधि
+    पर निर्देशित करें। आपके विद्यार्थियों के सामने चुनौतियां आ सकती हैं—यह ठीक है!
+    प्रोग्राम बनाना सीखना एक नई भाषा सीखने जैसा होता है; आप तुरंत सहज नहीं होंगे।
+    यदि कोई छात्र उत्तर नहीं जानता है, तो उन्हें जोड़ी बनाने और मिलकर इसे हल करने
+    के लिए प्रोत्साहित करें।
+  hoc_how_to_step_virtual_celebrate_desc_01: 'सफलता का जश्न मनाना सुनिश्चित करें!
+    आप पहले ही प्रमाणपत्र प्रिंट कर सकते हैं और उन्हें अपने छात्रों को भेज सकते हैं,
+    या प्रत्येक छात्र को अपने माता-पिता से घर पर प्रिंट करने के लिए कह सकते हैं। उनकी
+    उपलब्धि दिखाएं और सोशल मीडिया पर अपने ऑवर ऑफ कोड इवेंट की तस्वीरें और वीडियोस
+    साझा करें। #HourOfCode और @codeorg का इस्तेमाल करें ताकि हम आपकी सफलता को भी उजागर
+    कर सकें! (प्रचार या गोपनीयता नीतियां लागू हो सकती हैं।)'
+  hoc_how_to_step_virtual_beyond_desc_01: कंप्यूटर विज्ञान ऑवर ऑफ कोड के साथ समाप्त
+    नहीं होना चाहिए! जबकि 90% माता-पिता चाहते हैं कि उनका बच्चा कंप्यूटर विज्ञान सीखे,
+    लेकिन अधिकांश स्कूल अभी भी इसे नहीं सिखाते हैं। सहायता के लिए, ऑवर ऑफ कोड के भागीदारों
+    के पास पाठ्यक्रम की विविध पेशकशें होती हैं। आज ही इन पेशकशों को स्कूलों में लाने
+    का तरीका जानें।
   hoc_ai_top_desc: AI के बारे में कोई भी जान सकता है, चाहे आप कक्षा में छात्र हों
     या AI के साथ और उसके बारे में पढ़ाने के भविष्य को अनलॉक करने वाले शिक्षक हों।
   hoc_ai_how_ai_works_video_series_desc: लघु वीडियो की यह श्रृंखला आपको बताएगी कि
@@ -15450,6 +15543,37 @@ hi:
     के समाधान के बारे में सोचने के लिए आमंत्रित करते हैं।
   hoc_ai_activities_desc: ऑवर ऑफ़ कोड की ये सभी नई गतिविधियाँ उपयोगकर्ताओं को एक मजेदार,
     आकर्षक तरीके से आर्टिफिशियल इंटेलिजेंस की दुनिया से परिचित कराती हैं।
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: नीली और पीली टी-शर्ट से मेल खाने वाले लगभग 100 Code.org
     कर्मचारी कंपनी के समर 2022 कोडेचेला कार्यक्रम के लिए एक होटल के सम्मेलन कक्ष में
     पोज देते हैं।
@@ -16093,9 +16217,10 @@ hi:
     शिक्षा समुदाय की अथक मदद से लाभ उठाने के लिए आभारी हैं, और [हम उन सभी भागीदारों
     और व्यक्तियों का धन्यवाद करते हैं जिन्होंने वर्षों से हमारे प्रभाव का समर्थन किया
     है](%{partners_url})।
-  about_page_section_more_list_1: "[Code.org 2021 वार्षिक रिपोर्ट](%{report_url})
-    (पिछली रिपोर्टें: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[हमारे मुख्य मूल्य और मैसेजिंग के दिशानिर्देश](%{core_url})"
   about_page_section_more_list_3: "[हमारा पाठ्यक्रम और पेडागोजी फिलासफी](%{curriculum_url})"
   about_page_section_more_list_4: "[TEDx इस बारे में हमारे संस्थापक हादी पार्टोवी
