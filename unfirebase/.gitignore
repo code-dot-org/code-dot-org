@@ -1,0 +1,4 @@
+chunks
+node_modules
+*gz
+error.json
