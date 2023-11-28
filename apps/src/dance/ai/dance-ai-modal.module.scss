@@ -19,6 +19,15 @@ $ai-modal-border-width: 8px;
   }
 }
 
+@keyframes flying-emoji-x-rtl {
+  0% {
+    left: 65px;
+  }
+  100% {
+    left: 115px;
+  }
+}
+
 @keyframes flying-emoji-y {
   0% {
     top: 0;
@@ -200,12 +209,20 @@ $ai-modal-border-width: 8px;
       pointer-events: none;
       z-index: 1;
 
+      html[dir='rtl'] & {
+        right: 0;
+      }
+
       .flyingEmoji {
         position: absolute;
         left: 110px;
         top: 100px;
 
         animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+
+        html[dir='rtl'] & {
+          animation: flying-emoji-x-rtl 0.4s linear, flying-emoji-y 0.4s ease-in;
+        }
       }
 
       .botContainer {
@@ -221,8 +238,16 @@ $ai-modal-border-width: 8px;
           transform: rotate(0deg);
           pointer-events: none;
 
+          html[dir='rtl'] & {
+            transform-origin: bottom right;
+          }
+
           &Open {
             transform: rotate(-60deg);
+
+            html[dir='rtl'] & {
+              transform: rotate(60deg);
+            }
           }
         }
 
@@ -318,6 +343,10 @@ $ai-modal-border-width: 8px;
       font-size: 100px;
       color: $yes-color;
       animation: appear 0.05s;
+
+      html[dir='rtl'] & {
+        left: 80px;
+      }
     }
 
     .explanationArea {
