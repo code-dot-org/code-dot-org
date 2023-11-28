@@ -105,3 +105,21 @@ fa:
         name: برنامه درسی
       teacher_forum/csd/2020:
         name: انجمن استادان
+      all_resources_1/csd/2021:
+        name: تمام منابع
+      all_standards_1/csd/2021:
+        name: تمام استانداردها
+      all_vocabulary_1/csd/2021:
+        name: تمام واژگان
+      all_resources_7/csd/2022:
+        name: تمام منابع
+      all_standards_7/csd/2022:
+        name: تمام استانداردها
+      all_vocabulary_7/csd/2022:
+        name: تمام واژگان
+      all_resources_2/csd/2023:
+        name: تمام منابع
+      all_standards_2/csd/2023:
+        name: تمام استانداردها
+      all_vocabulary_2/csd/2023:
+        name: تمام واژگان

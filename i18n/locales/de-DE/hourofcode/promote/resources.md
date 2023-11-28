@@ -18,7 +18,7 @@ title: Ressourcen
 
 ## Hängen Sie diese Plakate in Ihrer Schule aus
 
-Es gibt ein neues Posterset mit Malala, Stephen Curry, Shakira und vielen anderen Motiven! In diesem Jahr enthält jedes Set 6 Plakate und 126 Aufkleber "I did the Hour of Code". Der Vorrat ist begrenzt, [bestellen Sie Ihr Poster](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) möglichst bald. Drucken Sie Ihr eigenes Poster. Klicken Sie auf das folgende Bild, um sich die Druckversion anzusehen und sie auszudrucken.
+Es gibt ein neues Posterset mit Malala, Stephen Curry, Shakira und vielen anderen Motiven! In diesem Jahr enthält jedes Set 6 Plakate und 126 Aufkleber "I did the Hour of Code". Drucken Sie Ihr eigenes Poster. Klicken Sie auf das folgende Bild, um sich die Druckversion anzusehen und sie auszudrucken.
 
 {{ promote_new_posters }}
 
