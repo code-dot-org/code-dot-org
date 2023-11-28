@@ -28,10 +28,32 @@
 using namespace std;
 using namespace rapidjson;
 
-sql::Connection *db;
-
 const string DB_NAME = "unfirebase";
 const string TABLE_NAME = "unfirebase";
+
+thread_local sql::Connection *db = nullptr;
+sql::Driver *driver = nullptr;
+
+sql::Connection *getDB() {
+  //  get_driver_instance(), is not thread-safe. Either avoid invoking these
+  //  methods from within multiple threads at once, or surround the calls with
+  //  a mutex to prevent simultaneous execution in multiple threads.
+  //
+  // TODO: make this thread-safe if we can't share driver between threads
+  // we might be OK since we initialize this in the main thread and its NOT thread_local atm
+  if (!driver) {
+    driver = sql::mysql::get_driver_instance();
+  }
+
+  sql::ConnectOptionsMap options;
+  options["hostName"] = "localhost";
+  options["userName"] = "root";
+  options["password"] = "root";
+  options["port"] = 3306;
+  options["OPT_LOCAL_INFILE"] = 1;
+
+  return driver->connect(options);
+}
 
 string lastKey = "";
 uint depth = 0;
@@ -41,6 +63,7 @@ const bool FINE_DEBUG = false;
 const bool USE_WRITER_TO_COLLECT_STRING = true;
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 const bool LOAD_DATA_IN_THREAD = true;
+const uint NUM_DATA_THREADS = 4;
 
 const uint MAX_DEPTH = 256;
 
@@ -128,7 +151,7 @@ atomic<uint> numRecordBytes {0};
 
 const uint NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
-boost::lockfree::queue<char *, boost::lockfree::capacity<4>> loadDataFilenameQueue;
+boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
 std::atomic<int> numDataJobsQueued {0};
 
 void loadData(string tsvFilename) {
@@ -146,6 +169,11 @@ void loadData(string tsvFilename) {
 
 boost::atomic<bool> done(false);
 void loadDataThread() {
+  db = getDB();
+
+  std::unique_ptr<sql::Statement> stmt(db->createStatement());
+  db->setSchema(DB_NAME);
+
   cout << "loadDataThread: starting" << endl;
   char *tsvFilename;
   while (!done) {
@@ -164,6 +192,7 @@ void loadDataThread() {
     delete tsvFilename;
   }
 
+  delete db;
   cout << "loadDataThread: done" << endl;
 }
 
@@ -408,20 +437,7 @@ int main(int argc, char *argv[]) {
 
   cout << "Connecting to MySQL..." << endl;
   try {
-    //  get_driver_instance(), is not thread-safe. Either avoid invoking these
-    //  methods from within multiple threads at once, or surround the calls with
-    //  a mutex to prevent simultaneous execution in multiple threads.
-    sql::Driver *driver = sql::mysql::get_driver_instance();
-
-    sql::ConnectOptionsMap options;
-    options["hostName"] = "localhost";
-    options["userName"] = "root";
-    options["password"] = "root";
-    options["port"] = 3306;
-    options["OPT_LOCAL_INFILE"] = 1;
-
-    // db = driver->connect(url, user, password);
-    db = driver->connect(options);
+    db = getDB();
 
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
     stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
@@ -436,8 +452,7 @@ int main(int argc, char *argv[]) {
     stmt->execute("SET unique_checks=0;");
     stmt->execute("COMMIT;");
 
-    insertUnfirebaseStatement =
-        db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
+    insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
 
     if (db->isValid()) {
       cout << "Connected to MySQL!" << endl;
@@ -447,10 +462,13 @@ int main(int argc, char *argv[]) {
     }
 
     if (LOAD_DATA_IN_THREAD) {
-      std::thread t(loadDataThread);
+      boost::thread_group dataThreads;
+      for (int i = 0; i < NUM_DATA_THREADS; i++) {
+        dataThreads.create_thread(loadDataThread);
+      }
       parseFirebaseJSON(filename);
       done = true;
-      t.join();
+      dataThreads.join_all();
     } else {
       parseFirebaseJSON(filename);
     }
