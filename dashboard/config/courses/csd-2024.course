@@ -1,7 +1,15 @@
 {
   "name": "csd-2024",
   "script_names": [
-
+    "csd1-2024",
+    "csd2-2024",
+    "csd3-2024",
+    "csd4-2024",
+    "csd5-2024",
+    "csd6a-2024",
+    "csd6b-2024",
+    "csd7-2024",
+    "csd-post-survey-2024"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
