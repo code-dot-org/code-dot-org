@@ -370,6 +370,3 @@ Feature: Curriculum Catalog Page
     And the "Grade 1" checkbox is selected
     And I press keys ":escape"
     Then I wait until element ".dropdown-menu" is not visible
-
-
-
