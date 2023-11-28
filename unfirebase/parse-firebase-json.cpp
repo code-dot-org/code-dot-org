@@ -6,6 +6,8 @@
 #include <rapidjson/reader.h>
 #include <rapidjson/filereadstream.h>
 #include <rapidjson/istreamwrapper.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/writer.h>
 
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
@@ -27,6 +29,8 @@ uint depth = 0;
 
 const bool RAW_DEBUG = false;
 const bool FINE_DEBUG = true;
+const bool USE_WRITER_TO_COLLECT_STRING = true;
+const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 const uint MAX_DEPTH = 256;
 
 std::vector<string> lastKeys = std::vector<string>(MAX_DEPTH);
@@ -88,16 +92,77 @@ const int TABLE_NAME_DEPTH = 6;
 const string NO_CHANNEL = "";
 string currentChannelName = NO_CHANNEL;
 
+StringBuffer *writerBuffer = nullptr;
+Writer<StringBuffer> *writer = nullptr;
+ofstream *loadDataBufferTSV = nullptr;
+
 void startChannel(string channelName) {
   assert(currentChannelName == NO_CHANNEL);
 
   if (FINE_DEBUG)
     cout << "START CHANNEL " << channelName << endl;
   currentChannelName = channelName;
+
+  if (USE_WRITER_TO_COLLECT_STRING) {
+    writerBuffer = new StringBuffer();
+    writer = new Writer<StringBuffer>(*writerBuffer);
+  }
+}
+
+// "INSERT INTO unfirebase VALUES (?, ?)"
+sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
+uint unComittedRecords = 0;
+const uint NUMBER_OF_RECORDS_BEFORE_COMMIT = 20000;
+
+void commitRecords() {
+  std::unique_ptr<sql::Statement> stmt(db->createStatement());
+
+  if (LOAD_DATA_INSTEAD_OF_INSERT) {
+    cout << "LOADING DATA!" << endl;
+    stmt->execute("LOAD DATA LOCAL INFILE '/tmp/load-data-buffer.tsv' INTO TABLE unfirebase FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n';");
+    cout << "DONE LOADING DATA!" << endl;
+    delete loadDataBufferTSV;
+    loadDataBufferTSV = nullptr;
+  }
+
+  cout << "COMMITTING!" << endl;
+  stmt->execute("COMMIT;");
+  
+  unComittedRecords = 0;
+}
+
+inline void insertIntoFirebase(string &channelId, const char *value) {
+  unComittedRecords++;
+
+  if (LOAD_DATA_INSTEAD_OF_INSERT) {
+    if (!loadDataBufferTSV) {
+      loadDataBufferTSV = new ofstream("/tmp/load-data-buffer.tsv");
+    }
+    *loadDataBufferTSV << channelId << "\t" << value << endl;
+  } else {
+    insertUnfirebaseStatement->setString(1, currentChannelName);
+    insertUnfirebaseStatement->setString(2, value);
+    insertUnfirebaseStatement->execute();
+  }
+
+  if (unComittedRecords > NUMBER_OF_RECORDS_BEFORE_COMMIT) {
+    commitRecords();
+  }
 }
 
 void endChannel() {
   assert(currentChannelName != NO_CHANNEL);
+
+  if (writer)
+  {
+    insertIntoFirebase(currentChannelName, writerBuffer->GetString());
+    delete writer;
+    delete writerBuffer;
+    writer = nullptr;
+    writerBuffer = nullptr;
+  } else {
+    insertIntoFirebase(currentChannelName, "booobooobear");
+  }
 
   if (FINE_DEBUG)
     cout << "END CHANNEL " << currentChannelName << endl;
@@ -132,10 +197,15 @@ struct RawJSONHandler
       startChannel(lastKey);
     }
 
+    if (writer)
+      return writer->StartObject();
+
     return true;
   }
   bool Key(const char *key, SizeType length, bool copy)
   {
+    if (writer) return writer->Key(key, length, copy);
+
     if (RAW_DEBUG) cout << "Key(" << key << ", depth=" << depth << ")" << endl;
     lastKey = key;
     lastKeys[depth] = key;
@@ -146,65 +216,93 @@ struct RawJSONHandler
   {
     if (RAW_DEBUG) cout << "EndObject(" << memberCount << ")" << endl;
 
+    if (writer)
+      writer->EndObject(memberCount);
+
     if (depth == CHANNEL_DEPTH && lastKeys[CHANNELS_DEPTH-1] == CHANNELS_TOKEN) {
       endChannel();
     }
     lastKeys[depth] = string();
     depth--;
+
+    
+
     return true;
   }
   bool StartArray()
   {
+    if (writer) return writer->StartArray();
+
     if (RAW_DEBUG) cout << "StartArray()" << endl;
     return true;
   }
   bool EndArray(SizeType elementCount)
   {
+    if (writer) return writer->EndArray(elementCount);
+
     if (RAW_DEBUG) cout << "EndArray(" << elementCount << ")" << endl;
     return true;
   }
   bool Null()
   {
+    if (writer) return writer->Null();
+
     if (RAW_DEBUG) cout << "Null()" << endl;
     return true;
   }
   bool Bool(bool b)
   {
+    if (writer) return writer->Bool(b);
+
     if (RAW_DEBUG) cout << "Bool(" << boolalpha << b << ")" << endl;
     return true;
   }
   bool Int(int i)
   {
+    if (writer) return writer->Int(i);
+
     if (RAW_DEBUG) cout << "Int(" << i << ")" << endl;
     return true;
   }
   bool Uint(unsigned u)
   {
+    if (writer) return writer->Uint(u);
+
     if (RAW_DEBUG) cout << "Uint(" << u << ")" << endl;
     return true;
   }
   bool Int64(int64_t i)
   {
+    if (writer) return writer->Int64(i);
+
     if (RAW_DEBUG) cout << "Int64(" << i << ")" << endl;
     return true;
   }
   bool Uint64(uint64_t u)
   {
+    if (writer) return writer->Uint64(u);
+
     if (RAW_DEBUG) cout << "Uint64(" << u << ")" << endl;
     return true;
   }
   bool Double(double d)
   {
+    if (writer) return writer->Double(d);
+
     if (RAW_DEBUG) cout << "Double(" << d << ")" << endl;
     return true;
   }
   bool RawNumber(const char *str, SizeType length, bool copy)
   {
+    if (writer) return writer->RawNumber(str, length, copy);
+
     if (RAW_DEBUG) cout << "Number(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
     return true;
   }
   bool String(const char *str, SizeType length, bool copy)
   {
+    if (writer) return writer->String(str, length, copy);
+
     if (RAW_DEBUG) cout << "String(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
 
     if (lastKeys[RECORDS_DEPTH] == RECORDS_TOKEN)
@@ -255,12 +353,8 @@ void parseFirebaseJSON(string filename) {
     FileReadStream is(fp, readBuffer, sizeof(readBuffer));
     reader.Parse(is, handler);
   }
+  //commitRecords();
 }
-
-#define DEFAULT_URI 
-#define EXAMPLE_USER 
-#define EXAMPLE_PASS ""
-#define EXAMPLE_DB "test"
 
 int main(int argc, char *argv[])
 {
@@ -276,15 +370,34 @@ int main(int argc, char *argv[])
 
   const char *url = "tcp://localhost:3306";
   const string user = "root";
-  const string password = "";
+  const string password = "root";
   const string database = "unfirebase";
 
   try {
     //  get_driver_instance(), is not thread-safe. Either avoid invoking these methods from within multiple threads at once, or surround the calls with a mutex to prevent simultaneous execution in multiple threads.
     sql::Driver *driver = sql::mysql::get_driver_instance();
 
-    db = driver->connect(url, user, password);
+    sql::ConnectOptionsMap options;
+    options["hostName"] = "localhost";
+    options["userName"] = "root";
+    options["password"] = "root";
+    options["port"] = 3306;
+    options["schema"] = "unfirebase";
+    options["OPT_LOCAL_INFILE"] = 1;
+
+    // db = driver->connect(url, user, password);
+    db = driver->connect(options);
+
     db->setSchema(database);
+
+    std::unique_ptr<sql::Statement> stmt(db->createStatement());
+    stmt->execute("SET autocommit=0;");
+    stmt->execute("SET unique_checks=0;");
+    stmt->execute("DELETE FROM unfirebase;");
+    stmt->execute("SET GLOBAL max_allowed_packet=10000000000;");
+    stmt->execute("COMMIT;");
+
+    insertUnfirebaseStatement = db->prepareStatement("INSERT INTO unfirebase VALUES (?, ?)");
 
     if (db->isValid()) {
       cout << "Connected to MySQL!" << endl;
@@ -297,8 +410,7 @@ int main(int argc, char *argv[])
   }
   catch (sql::SQLException &e)
   {
-    cout << "# ERR: SQLException in " << __FILE__;
-    cout << "(" << "EXAMPLE_FUNCTION" << ") on line " << __LINE__ << endl;
+    cout << "# ERR: SQLException in " << __FILE__ << "on line " << __LINE__ << endl;
     cout << "# ERR: " << e.what();
     cout << " (MySQL error code: " << e.getErrorCode();
     cout << ", SQLState: " << e.getSQLState() << " )" << endl;
@@ -306,7 +418,7 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
   }
 
-
+  delete insertUnfirebaseStatement;
   db->close();
   delete db;
 
