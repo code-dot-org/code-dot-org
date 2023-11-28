@@ -4,7 +4,7 @@ require 'fileutils'
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_out_base'
-require_relative '../../../utils/pegasus_markdown'
+require_relative '../../../utils/pegasus_email'
 require_relative '../emails'
 
 module I18n
