@@ -9,7 +9,7 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
-import {UnconnectedAnimationUploadButton as AnimationUploadButton} from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
+import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
 const emptyFunction = function () {};
 
@@ -33,6 +33,12 @@ describe('AnimationPickerBody', function () {
     onAnimationSelectionComplete: emptyFunction,
     pickerType: PICKER_TYPE.gamelab,
     shouldWarnOnAnimationUpload: false,
+    isRestrictedMode: false,
+    teacherHasConfirmedUploadWarning: false,
+    refreshInRestrictedShareMode: emptyFunction,
+    refreshTeacherHasConfirmedUploadWarning: emptyFunction,
+    showingUploadWarning: false,
+    exitedUploadWarning: emptyFunction,
   };
 
   describe('upload warning', function () {
