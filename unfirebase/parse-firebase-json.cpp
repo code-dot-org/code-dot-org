@@ -25,10 +25,13 @@
 // https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
 #include <mysql/jdbc.h>
 
-sql::Connection *db;
-
 using namespace std;
 using namespace rapidjson;
+
+sql::Connection *db;
+
+const string DB_NAME = "unfirebase";
+const string TABLE_NAME = "unfirebase";
 
 string lastKey = "";
 uint depth = 0;
@@ -132,7 +135,7 @@ void loadData(string tsvFilename) {
   std::unique_ptr<sql::Statement> stmt(db->createStatement());
   cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
   stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
-                "' INTO TABLE unfirebase FIELDS TERMINATED BY '\t' LINES "
+                "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
                 "TERMINATED BY '\n';");
   stmt->execute("COMMIT;");
   numRecordBytes += std::filesystem::file_size(tsvFilename);
@@ -415,21 +418,26 @@ int main(int argc, char *argv[]) {
     options["userName"] = "root";
     options["password"] = "root";
     options["port"] = 3306;
-    options["schema"] = "unfirebase";
     options["OPT_LOCAL_INFILE"] = 1;
 
     // db = driver->connect(url, user, password);
     db = driver->connect(options);
 
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
+    stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
+    stmt->execute("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
+
+    db->setSchema(DB_NAME);
+
+    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+    //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
     stmt->execute("SET autocommit=0;");
     stmt->execute("SET unique_checks=0;");
-    stmt->execute("DELETE FROM unfirebase;");
-    stmt->execute("SET GLOBAL max_allowed_packet=10000000000;");
     stmt->execute("COMMIT;");
 
     insertUnfirebaseStatement =
-        db->prepareStatement("INSERT INTO unfirebase VALUES (?, ?)");
+        db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
 
     if (db->isValid()) {
       cout << "Connected to MySQL!" << endl;
