@@ -28,8 +28,13 @@
 using namespace std;
 using namespace rapidjson;
 
-const string DB_NAME = "unfirebase";
-const string TABLE_NAME = "unfirebase";
+const char *getEnv(string envVar, const char *defaultVal) {
+  const char *env = getenv(envVar.c_str());
+  return env ? env : defaultVal;
+}
+
+const string DB_NAME = getEnv("MYSQL_DB", "unfirebase");
+const string TABLE_NAME = getEnv("MYSQL_TABLE", "unfirebase");
 
 thread_local sql::Connection *db = nullptr;
 sql::Driver *driver = nullptr;
@@ -46,10 +51,10 @@ sql::Connection *getDB() {
   }
 
   sql::ConnectOptionsMap options;
-  options["hostName"] = "localhost";
-  options["userName"] = "root";
-  options["password"] = "root";
-  options["port"] = 3306;
+  options["hostName"] = getEnv("MYSQL_HOST", "localhost");
+  options["userName"] = getEnv("MYSQL_USER", "root");
+  options["password"] = getEnv("MYSQL_PWD", "root");
+  options["port"] = atoi(getEnv("MYSQL_TCP_PORT", "3306"));
   options["OPT_LOCAL_INFILE"] = 1;
 
   return driver->connect(options);
