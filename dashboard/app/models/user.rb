@@ -483,7 +483,7 @@ class User < ApplicationRecord
 
   has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
-  has_many :section_instructors, foreign_key: 'instructor_id'
+  has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
   has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
 
@@ -1389,7 +1389,7 @@ class User < ApplicationRecord
 
   #sections owned by the user AND not deleted
   def owned_section_ids
-    sections.select(:id).all
+    sections_instructed.select(:id).all
   end
 
   # Is the provided script_level hidden, on account of the section(s) that this
@@ -1920,7 +1920,7 @@ class User < ApplicationRecord
   end
 
   def all_sections
-    sections_as_teacher = student? ? [] : sections.to_a
+    sections_as_teacher = student? ? [] : sections_instructed.to_a
     sections_as_teacher.concat(sections_as_student).uniq
   end
 
@@ -2637,13 +2637,13 @@ class User < ApplicationRecord
 
   # Returns a list of all grades that the teacher currently has sections for
   private def grades_being_taught
-    @grades_being_taught ||= sections.map(&:grades).flatten.uniq
+    @grades_being_taught ||= sections_instructed.map(&:grades).flatten.uniq
   end
 
   # Returns a list of all curriculums that the teacher currently has sections for
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
-    @curriculums_being_taught ||= sections.filter_map {|section| section.script&.curriculum_umbrella}.uniq
+    @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
   end
 
   private def has_attended_pd?
@@ -2673,7 +2673,7 @@ class User < ApplicationRecord
     # If we're a teacher, we want to go through each of our sections and return
     # a mapping from section id to hidden lessons/units in that section
     hidden_by_section = {}
-    sections.each do |section|
+    sections_instructed.each do |section|
       hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
     end
     hidden_by_section

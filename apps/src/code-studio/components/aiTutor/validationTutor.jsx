@@ -33,12 +33,19 @@ const ValidationTutor = ({levelId}) => {
 
   const handleSend = async studentCode => {
     dispatch(
-      askAITutor({systemPrompt: systemPrompt, studentCode: studentCode})
+      askAITutor({
+        levelId: levelId,
+        systemPrompt: systemPrompt,
+        studentCode: studentCode,
+      })
     );
     analyticsReporter.sendEvent(EVENTS.AI_TUTOR_ASK_ABOUT_VALIDATION, {
       levelId: levelId,
     });
   };
+
+  const enableAskAITutor =
+    hasRunOrTestedCode && !hasCompilationError && !validationPassed;
 
   return (
     <div className={style.tutorContainer}>
@@ -52,7 +59,7 @@ const ValidationTutor = ({levelId}) => {
         </h4>
       )}
       {validationPassed && <h4>🎉 Your tests are passing. Wahoo!</h4>}
-      {hasRunOrTestedCode && !hasCompilationError && !validationPassed && (
+      {enableAskAITutor && (
         <>
           <h4>Why aren't my tests passing?</h4>
           <Button
@@ -60,7 +67,7 @@ const ValidationTutor = ({levelId}) => {
             isPending={isWaitingForAIResponse}
             pendingText="waiting"
             onClick={() => handleSend(studentCode)}
-            disabled={true}
+            disabled={enableAskAITutor}
           />
           <p id="ai-response">{aiResponse}</p>
         </>
