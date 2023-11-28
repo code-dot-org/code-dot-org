@@ -551,8 +551,7 @@ module Pd::Application
 
         program: PROGRAM_OPTIONS,
 
-        csd_which_grades: (6..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
+        csd_which_grades: (6..12).map(&:to_s),
 
         csd_course_hours_per_week: [
           '5 or more course hours per week',
@@ -566,8 +565,7 @@ module Pd::Application
 
         csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
-        csp_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
+        csp_which_grades: (9..12).map(&:to_s),
 
         csp_course_hours_per_week: [
           'More than 5 course hours per week',
@@ -585,6 +583,13 @@ module Pd::Application
           'We will offer both introductory and AP-level courses'
         ],
 
+        will_teach: [
+          'Yes',
+          'No',
+          "No, but I plan to in the #{NEXT_APPLICATION_YEAR} school year",
+          "Not sure"
+        ],
+
         csp_ap_exam: [
           'Yes, all students will be expected to take the AP CS Principles exam',
           "Students will be encouraged to take the exam, but it won't be required",
@@ -595,8 +600,7 @@ module Pd::Application
 
         csa_phone_screen: [YES, NO],
 
-        csa_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CSA in the #{year} school year",
+        csa_which_grades: (9..12).map(&:to_s),
 
         csa_how_offer: [
           'As a non-AP introductory Java programming course',
