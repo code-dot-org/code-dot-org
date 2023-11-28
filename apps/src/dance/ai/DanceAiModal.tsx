@@ -556,6 +556,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
         onClose={onClose}
         handleStartOverClick={handleStartOverClick}
         selectedEmojis={selectedEmojis}
+        slotCount={SLOT_COUNT}
       />
 
       <div id="ai-modal-inner-area" className={moduleStyles.innerArea}>

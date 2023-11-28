@@ -11,31 +11,38 @@ interface DanceAiModalHeaderProps {
   onClose: () => void;
   handleStartOverClick: () => void;
   selectedEmojis: DanceAiModelItem[];
+  slotCount: number;
 }
 
 const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
   onClose,
   handleStartOverClick,
   selectedEmojis,
+  slotCount,
 }) => {
-  const headerValue = useMemo(
-    () => (
+  const headerValue = useMemo(() => {
+    const filledSelectedEmojis: (DanceAiModelItem | undefined)[] = [
+      ...selectedEmojis,
+    ];
+    filledSelectedEmojis.length = slotCount;
+    filledSelectedEmojis.fill(undefined, selectedEmojis.length, slotCount);
+
+    return (
       <div
         className={moduleStyles.inputsContainer}
         tabIndex={0}
         onClick={handleStartOverClick}
       >
-        {selectedEmojis.map(item => (
-          <div key={item.id} className={moduleStyles.emojiSlot}>
+        {filledSelectedEmojis.map((item, index) => (
+          <div key={item?.id || index} className={moduleStyles.emojiSlot}>
             {item && (
               <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
             )}
           </div>
         ))}
       </div>
-    ),
-    [handleStartOverClick, selectedEmojis]
-  );
+    );
+  }, [handleStartOverClick, selectedEmojis, slotCount]);
 
   // The header comes from a localized string like this: "generate {input} effect".
   // We split the localized string on the "{input}", and rebuild the HTML but with
