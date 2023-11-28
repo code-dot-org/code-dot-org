@@ -171,7 +171,7 @@ void loadData(string tsvFilename) {
 
   numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
-  cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB"
+  cout << "Written to MySQL: " << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB" << endl;
   numRecordBytesMutex.unlock();
 
   std::filesystem::remove(tsvFilename);
