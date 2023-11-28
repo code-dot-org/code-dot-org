@@ -263,19 +263,18 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
 
   double bandwidthSamplingDuration = chrono::duration_cast<chrono::seconds>(chrono::system_clock::now() - bandwidthStartClock
   ).count();
-  if (bandwidthSamplingDuration > 3.0f /* seconds*/) {
+  if (bandwidthSamplingDuration > 10.0f /* seconds*/) {
     numRecordBytesMutex.lock();
     if (bandwidthStartNumRecordBytes != 0) {
       uint64_t bytesTransferred = numRecordBytes - bandwidthStartNumRecordBytes;
       double bytesPerSecond = bytesTransferred / bandwidthSamplingDuration;
       cout << "Current Bandwidth: "
-           << "\033[1;35m"
-           << (round(bytesPerSecond / (1000000.0) * 100) / 100)
-           << "MB/s"
-           << "\033[0m"
-           << endl;
+        << "\033[1;35m"
+        << (round(bytesPerSecond / (1000000.0) * 100) / 100)
+        << "MB/s"
+        << "\033[0m"
+        << endl;
     }
-
     
     // reset our start values for the next measure interval
     bandwidthStartClock = std::chrono::system_clock::now();
