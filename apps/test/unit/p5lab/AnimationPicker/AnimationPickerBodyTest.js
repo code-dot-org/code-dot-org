@@ -9,7 +9,7 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import testAnimationLibrary from '../testAnimationLibrary.json';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
-import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
+import {UnconnectedAnimationUploadButton as AnimationUploadButton} from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 
 const emptyFunction = function () {};
 
