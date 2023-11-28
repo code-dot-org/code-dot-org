@@ -24,7 +24,12 @@ const getPendingPill = () => {
           {i18n.coteacherPending()}
         </StrongText>
       </div>
-      <ReactTooltip id={'pending-tooltip'} role="tooltip" effect="solid">
+      <ReactTooltip
+        id={'pending-tooltip'}
+        role="tooltip"
+        effect="solid"
+        place="top"
+      >
         <BodyTwoText className={styles.tableToolTipText}>
           {i18n.coteacherPendingTooltip()}
         </BodyTwoText>
