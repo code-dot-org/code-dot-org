@@ -2,20 +2,20 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 #thanks
-  %h1 Thank you for submitting your application!
+  %h1 Thank you for submitting your application! You will receive confirmation that your application has been submitted at the email used to complete this application.
 
   %p
-    In most regions, applications are accepted on a rolling basis. And in most cases, our local partner will get back
-    to you within two to four weeks to let you know your application status. If you have not heard back within two weeks,
-    please reach out to them directly.
+    In most regions, applications are accepted on a rolling basis. In most cases, our Regional Partner will respond
+    within two to four weeks to let you know your application status. If you have not heard from them within two weeks,
+    please reach out to them directly at:
+
+    %p= @application.effective_regional_partner_name
+    %p= @application.regional_partner&.contact_email
 
 
   %p
-    In the meantime, help us support local CS expansion by visiting
-    = link_to 'https://code.org/yourschool', 'https://code.org/yourschool'
-    and telling us more about what computer science opportunities are available in your school. Or, visit
-    = link_to 'https://code.org/educate', 'https://code.org/educate'
-    for additional resources to support computer science at your school.
+    In the meantime, you can start to learn more about teaching with Code.org at
+    = link_to 'https://code.org/teach', 'https://code.org/teach'
 
   %p
     Thank you for supporting computer science education at your school!

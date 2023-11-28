@@ -58,7 +58,7 @@ module Pd
         first_name: 'First name',
         last_name: 'Last name',
         account_email: 'Account email',
-        alternate_email: 'If you used your school email and can be reached at a better email address in the summer months, please enter it here:',
+        alternate_email: 'If you have another email address that you check in the summer months, please enter it here:',
         phone: 'Home or cell phone',
         street_address: 'Home street address',
         city: 'Home city',
@@ -70,7 +70,7 @@ module Pd
         current_role: 'What is your current role at your school?',
         previous_yearlong_cdo_pd: clean_multiline(
           "Have you participated in previous yearlong Code.org Professional Learning Programs?
-           If so, mark the programs you've participated in."
+           If so, mark the programs in which you have participated."
         ),
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
@@ -116,7 +116,7 @@ module Pd
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
-          pay_fee: 'Will your school be able to pay the fee?',
+          pay_fee: 'Will your school or district be able to pay a fee for the program?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
