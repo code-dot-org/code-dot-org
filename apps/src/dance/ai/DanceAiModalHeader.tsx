@@ -45,7 +45,10 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
     .danceAiModalHeading({input: INPUT_KEY})
     .split(INPUT_KEY);
 
-  const headerContent = [headerTextSplit[0], headerValue, headerTextSplit[1]];
+  const headerContent = useMemo(
+    () => [headerTextSplit[0], headerValue, headerTextSplit[1]],
+    [headerTextSplit, headerValue]
+  );
 
   return (
     <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
