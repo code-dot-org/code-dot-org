@@ -119,7 +119,7 @@ export default class SelectStartAnimations extends React.Component {
         {this.props.useAllSprites && (
           <div style={styles.pageBreak}>
             <h3>
-              Level-only Animations (Animations that don't normally appear in
+              Level-specific Animations (Animations that do not appear in the
               animation library):
             </h3>
             {this.displayAnimationPickerBody(
