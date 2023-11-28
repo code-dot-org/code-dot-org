@@ -173,7 +173,7 @@ export default function RubricSettings({
 
   return (
     <div
-      className={classnames(style.settings, {
+      className={classnames('uitest-rubric-settings', style.settings, {
         [style.settingsVisible]: visible,
         [style.settingsHidden]: !visible,
       })}
@@ -196,7 +196,11 @@ export default function RubricSettings({
           >
             {polling && <i className="fa fa-spinner fa-spin" />}
           </Button>
-          {statusText() && <BodyTwoText>{statusText()}</BodyTwoText>}
+          {statusText() && (
+            <BodyTwoText className="uitest-eval-status-text">
+              {statusText()}
+            </BodyTwoText>
+          )}
         </div>
       )}
     </div>
