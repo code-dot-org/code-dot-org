@@ -26,7 +26,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 
     const xml = `
       <xml>
-        <block type="Dancelab_setForegroundEffectExtended" x="20" y="0">
+        <block type="Dancelab_setForegroundEffectExtended">
           <field name="EFFECT">"${results.foregroundEffect}"</field>
           <next>
             <block type="Dancelab_setBackgroundEffectWithPaletteAI">
