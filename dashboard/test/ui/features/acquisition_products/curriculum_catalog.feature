@@ -372,11 +372,4 @@ Feature: Curriculum Catalog Page
     Then I wait until element ".dropdown-menu" is not visible
 
 
-    
-    
-
-
-
-
-
 
