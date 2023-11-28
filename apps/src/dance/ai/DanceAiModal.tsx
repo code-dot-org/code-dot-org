@@ -76,6 +76,35 @@ const aiBotBodyThinkImages = [
 // How many emojis are to be selected.
 const SLOT_COUNT = 3;
 
+// How many low-scoring results we show before the chosen one.
+const BAD_GENERATED_RESULTS_COUNT = 7;
+
+// How many substeps for each step in the generating mode.
+const GENERATING_SUBSTEP_COUNT = 3;
+
+// How long we spend in each substep in the generating mode.
+// Perform a linear interpolation from the first to the second, so
+// that we gradually speed up.
+const GENERATION_SUBSTEP_DURATION_MAX = 360;
+const GENERATION_SUBSTEP_DURATION_MIN = 360;
+
+// How many steps in the generated mode.
+const GENERATED_STEPS_COUNT = 3;
+
+// How long we spend in each step of the generated mode.
+const GENERATED_STEP_DURATION = 1500;
+
+// How many steps in the explanation mode.
+const EXPLANATION_STEPS_COUNT = 5;
+
+// How long we spend in each step of the explanation mode.
+const EXPLANATION_STEP_DURATION = 900;
+
+// The explanation shows the last (EXPLANATION_STEPS_COUNT-1) bad effects and the
+// one good effect.
+const EXPLANATION_START_INDEX =
+  BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1;
+
 interface DanceAiModalProps {
   playSound: (name: DanceAiSound, options?: object) => void;
 }
@@ -84,35 +113,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   playSound,
 }) => {
   const dispatch = useAppDispatch();
-
-  // How many low-scoring results we show before the chosen one.
-  const BAD_GENERATED_RESULTS_COUNT = 7;
-
-  // How many substeps for each step in the generating mode.
-  const GENERATING_SUBSTEP_COUNT = 3;
-
-  // How long we spend in each substep in the generating mode.
-  // Perform a linear interpolation from the first to the second, so
-  // that we gradually speed up.
-  const GENERATION_SUBSTEP_DURATION_MAX = 360;
-  const GENERATION_SUBSTEP_DURATION_MIN = 360;
-
-  // How many steps in the generated mode.
-  const GENERATED_STEPS_COUNT = 3;
-
-  // How long we spend in each step of the generated mode.
-  const GENERATED_STEP_DURATION = 1500;
-
-  // How many steps in the explanation mode.
-  const EXPLANATION_STEPS_COUNT = 5;
-
-  // How long we spend in each step of the explanation mode.
-  const EXPLANATION_STEP_DURATION = 900;
-
-  // The explanation shows the last (EXPLANATION_STEPS_COUNT-1) bad effects and the
-  // one good effect.
-  const EXPLANATION_START_INDEX =
-    BAD_GENERATED_RESULTS_COUNT - EXPLANATION_STEPS_COUNT + 1;
 
   const generatedEffects = useRef<GeneratedEffects>({
     badEffects: [],
