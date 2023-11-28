@@ -3,6 +3,7 @@ import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
 import {generateAiEffectBlocksFromResult} from './utils';
 import {GeneratedEffect} from './types';
+import {useSelector} from 'react-redux';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;
@@ -16,6 +17,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
 }) => {
   const blockPreviewContainerRef = useRef<HTMLSpanElement>(null);
   const workspaceRef = useRef<Workspace | null>(null);
+  const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);
 
   // Create the workspace once the container has been rendered.
   useEffect(() => {
@@ -27,9 +29,9 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockPreviewContainerRef.current,
       emptyBlockXml,
-      {}
+      {rtl: isRtl}
     );
-  }, [blockPreviewContainerRef]);
+  }, [blockPreviewContainerRef, isRtl]);
 
   // Build out the blocks.
   useEffect(() => {
