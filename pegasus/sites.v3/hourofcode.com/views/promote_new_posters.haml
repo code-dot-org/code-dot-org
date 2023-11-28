@@ -1,5 +1,6 @@
 :scss
   div.posters {
+    display: flex;
     justify-content: start;
     flex-wrap: wrap;
     gap: 1rem;
@@ -9,26 +10,66 @@
     }
   }
 
-%div.posters.flex-container
-  %a{href: "//downloads.code.org/posters/poster_minecraft.pdf"}
-    %img{src: "/images/poster_minecraft.png"}
-  %a{href: "//downloads.code.org/posters/poster_dance_ai_01.pdf"}
-    %img{src: "/images/poster_dance_ai_01.png"}
-  %a{href: "//downloads.code.org/posters/poster_dance_ai_02.pdf"}
-    %img{src: "/images/poster_dance_ai_02.png"}
-  %a{href: "//downloads.code.org/posters/poster_oceans_01.pdf"}
-    %img{src: "/images/poster_oceans_01.png"}
-  %a{href: "//downloads.code.org/posters/poster_oceans_02.pdf"}
-    %img{src: "/images/poster_oceans_02.png"}
-  %a{href: "//downloads.code.org/posters/poster_steph.pdf"}
-    %img{src: "/images/poster_steph.png"}
-  %a{href: "//downloads.code.org/posters/poster_malala.pdf"}
-    %img{src: "/images/poster_malala.png"}
-  %a{href: "//downloads.code.org/posters/poster_hadi.pdf"}
-    %img{src: "/images/poster_hadi.png"}
-  %a{href: "//downloads.code.org/posters/poster_mary.pdf"}
-    %img{src: "/images/poster_mary.png"}
-  %a{href: "//downloads.code.org/posters/poster_satya.pdf"}
-    %img{src: "/images/poster_satya.png"}
-  %a{href: "//downloads.code.org/posters/poster_shakira.pdf"}
-    %img{src: "/images/poster_shakira.png"}
+:ruby
+  poster_list = [
+    {
+      url: "poster_minecraft.pdf",
+      aria_label: hoc_s(:poster_aria_label_minecraft),
+      thumbnail_img: "poster_minecraft.png"
+    },
+    {
+      url: "poster_dance_ai_01.pdf",
+      aria_label: hoc_s(:poster_aria_label_dance_ai_01),
+      thumbnail_img: "poster_dance_ai_01.png"
+    },
+    {
+      url: "poster_dance_ai_02.pdf",
+      aria_label: hoc_s(:poster_aria_label_dance_ai_02),
+      thumbnail_img: "poster_dance_ai_02.png"
+    },
+    {
+      url: "poster_oceans_01.pdf",
+      aria_label: hoc_s(:poster_aria_label_oceans_01),
+      thumbnail_img: "poster_oceans_01.png"
+    },
+    {
+      url: "poster_oceans_02.pdf",
+      aria_label: hoc_s(:poster_aria_label_oceans_02),
+      thumbnail_img: "poster_oceans_02.png"
+    },
+    {
+      url: "poster_steph.pdf",
+      aria_label: hoc_s(:poster_aria_label_steph),
+      thumbnail_img: "poster_steph.png"
+    },
+    {
+      url: "poster_malala.pdf",
+      aria_label: hoc_s(:poster_aria_label_malala),
+      thumbnail_img: "poster_malala.png"
+    },
+    {
+      url: "poster_hadi.pdf",
+      aria_label: hoc_s(:poster_aria_label_hadi),
+      thumbnail_img: "poster_hadi.png"
+    },
+    {
+      url: "poster_mary.pdf",
+      aria_label: hoc_s(:poster_aria_label_mary),
+      thumbnail_img: "poster_mary.png"
+    },
+    {
+      url: "poster_satya.pdf",
+      aria_label: hoc_s(:poster_aria_label_satya),
+      thumbnail_img: "poster_satya.png"
+    },
+    {
+      url: "poster_shakira.pdf",
+      aria_label: hoc_s(:poster_aria_label_shakira),
+      thumbnail_img: "poster_shakira.png"
+    },
+  ]
+
+%div.posters
+  - poster_list.each do |poster_list|
+    %a{href: "//downloads.code.org/posters/#{poster_list[:url]}", aria:{label: poster_list[:aria_label]}}
+      %img{src: "/images/#{poster_list[:thumbnail_img]}", alt: ""}
