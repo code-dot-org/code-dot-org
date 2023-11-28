@@ -45,8 +45,10 @@ class OmniAuthSection < Section
       oauth_section.user_id = owner_id
     else
       # create a section instructor record if one doesn't exist
-      section_instructor = oauth_section.section_instructors.where(instructor_id: owner_id).first_or_create(status: :active)
+      section_instructor = oauth_section.section_instructors.with_deleted.where(instructor_id: owner_id).first_or_create(status: :active)
       section_instructor.restore if section_instructor.deleted?
+      section_instructor.status = :active
+      section_instructor.save! if section_instructor.changed?
     end
     oauth_section.login_type = type
 
