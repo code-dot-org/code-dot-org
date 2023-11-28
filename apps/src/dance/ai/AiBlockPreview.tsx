@@ -1,7 +1,6 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
-import {generateAiEffectBlocksFromResult} from './utils';
 import {GeneratedEffect} from './types';
 import {useSelector} from 'react-redux';
 
@@ -25,33 +24,27 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       return;
     }
 
-    const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
+    const xml = `
+      <xml>
+        <block type="Dancelab_setForegroundEffectExtended" x="-20" y="0">
+          <field name="EFFECT">"${results.foregroundEffect}"</field>
+          <next>
+            <block type="Dancelab_setBackgroundEffectWithPaletteAI">
+              <field name="PALETTE">"${results.backgroundColor}"</field>
+              <field name="EFFECT">"${results.backgroundEffect}"</field>
+            </block>
+          </next>
+        </block>
+      </xml>
+      `;
+
+    const blocks = Blockly.utils.xml.textToDom(xml);
     workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockPreviewContainerRef.current,
-      emptyBlockXml,
+      blocks,
       {rtl: isRtl}
     );
-  }, [blockPreviewContainerRef, isRtl]);
-
-  // Build out the blocks.
-  useEffect(() => {
-    if (!blockPreviewContainerRef.current || !workspaceRef.current) {
-      return;
-    }
-    const blocksSvg = generateAiEffectBlocksFromResult(
-      workspaceRef.current,
-      results
-    );
-    blocksSvg.forEach((blockSvg: BlockSvg) => {
-      blockSvg.initSvg();
-      blockSvg.render();
-    });
-    Blockly.svgResize(workspaceRef.current as WorkspaceSvg);
-
-    return () => {
-      workspaceRef.current?.clear();
-    };
-  }, [blockPreviewContainerRef, results]);
+  }, [blockPreviewContainerRef, isRtl, results]);
 
   // Dispose of the workspace on unmount.
   useEffect(() => () => workspaceRef.current?.dispose(), []);
