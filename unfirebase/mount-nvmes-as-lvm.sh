@@ -26,7 +26,7 @@ else
 
   mkdir -p /$name
   chmod a+rwx /$name
-  echo "/dev/$name/$name /$name ext4 defaults,noatime,nobarrier 0 2" >> /etc/fstab
+  echo "/dev/$name/$name /$name ext4 defaults,auto,noatime,nobarrier 0 2" >> /etc/fstab
 fi
 
 mount /$name
