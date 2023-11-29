@@ -10,13 +10,15 @@ device_list=$(
 )
 
 name="scratch"
-if lvs $name ; then
+if [[ $(lvs $name) ]]; then
   echo "[$(basename $0)] Logical volume $name already exists:"
   lvs -o lv_name,vg_name,devices $name
   echo
   lvs -o lv_name,lv_path,lv_size $name
-
 else
+  # if something goes wrong you can destroy ALL of the
+  # things created here with:
+  # vgremove scratch
   pvcreate $device_list
   vgcreate $name $device_list
   lvcreate -n $name -l 100%FREE $name
