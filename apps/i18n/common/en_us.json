@@ -2171,7 +2171,7 @@
   "sectionSignInInfo": "Alternatively, share this section's sign in page with your students: ",
   "sectionsJoined": "Classroom Sections I've Joined",
   "sectionsTitle": "Classroom Sections",
-  "sectionsNotificationAlreadyOwned": "You are already the owner of section {sectionId}.",
+  "sectionsNotificationAlreadyOwned": "You are already an instructor for section {sectionId}.",
   "sectionsNotificationCantBeParticipant": "You do not have the permissions to join section {sectionId}. If you think this is a mistake please reach out to support@code.org for assistance.",
   "sectionsNotificationFailure": "Couldn't join section",
   "sectionsNotificationJoinExists": "You have already joined section {sectionName}.",
