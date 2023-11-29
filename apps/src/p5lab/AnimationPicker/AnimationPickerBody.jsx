@@ -209,9 +209,11 @@ export default class AnimationPickerBody extends React.Component {
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();
-    // We show the draw your own and upload buttons if the user is either:
-    // Not currently searching and not in a category, unless that category is backgrounds
-    // OR they are searching but there were no results
+    // We show the draw your own and upload buttons if the user is:
+    // Either Not currently searching and not in a category, unless that category is backgrounds
+    // OR they are searching but there were no results,
+    // AND they are not in animationJsonMode.
+    // animationJsonMode is used for the Gneerate Animation JSON levelbuilder tool in SelectStartAnimations.
     const showDrawAndUploadButtons =
       ((!searching && (!inCategory || isBackgroundsTab)) ||
         results.length === 0) &&
