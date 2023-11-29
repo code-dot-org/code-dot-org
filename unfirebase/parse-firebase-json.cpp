@@ -159,7 +159,8 @@ atomic<uint64_t> numRecordBytes {0};
 uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
 
-chrono::system_clock::time_point bandwidthStartClock = std::chrono::system_clock::now();
+chrono::system_clock::time_point bandwidthStartClock;
+bool bandwidthStartClockInitialized = false;
 uint64_t bandwidthStartNumRecordBytes = 0;
 double bandwidthSamplingDurationTarget = 5000.0f /* seconds, start small for first sample */;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
@@ -169,10 +170,12 @@ std::atomic<uint64_t> numDataJobsQueued{0};
 
 void loadData(string tsvFilename) {
   std::unique_ptr<sql::Statement> stmt(db->createStatement());
+  numRecordBytesMutex.lock();
   cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
   stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
                 "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
                 "TERMINATED BY '\n';");
+  numRecordBytesMutex.unlock();
   stmt->execute("COMMIT;");
 
   numRecordBytesMutex.lock();
@@ -220,7 +223,16 @@ void loadDataThread() {
   cout << "loadDataThread: done" << endl;
 }
 
+void resetBandwidthTiming() {
+  bandwidthStartClockInitialized = true;
+  bandwidthStartClock = std::chrono::system_clock::now();
+  bandwidthStartNumRecordBytes = numRecordBytes;
+}
 void printBandWidthTiming() {
+  if (!bandwidthStartClockInitialized) {
+    return resetBandwidthTiming();
+  }
+
   double bandwidthSamplingDuration = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - bandwidthStartClock).count();
   if (bandwidthSamplingDuration > bandwidthSamplingDurationTarget /* ms*/) {
     bandwidthSamplingDurationTarget = 20000.0f;
@@ -235,8 +247,7 @@ void printBandWidthTiming() {
       << endl;
     
     // reset our start values for the next measure interval
-    bandwidthStartClock = std::chrono::system_clock::now();
-    bandwidthStartNumRecordBytes = numRecordBytes;
+    resetBandwidthTiming();
     numRecordBytesMutex.unlock();
   };
 }
