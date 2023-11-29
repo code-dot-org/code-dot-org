@@ -12,7 +12,10 @@
     "hoc2023-soon-hoc": {
       "hoc_modes": ["soon-hoc"],
       "class": "hoc-banner homepage",
-      "desktopImage": "/images/hoc2023-hero-banner.svg",
+      "desktopImage": "/images/hoc2023-codeorg-hero-banner.png",
+      "mobileImage": "/images/hoc2023-codeorg-hero-banner-mobile.png",
+      "leftImage": "/images/hoc2023-codeorg-hero-banner-left.svg",
+      "rightImage": "/images/hoc2023-codeorg-hero-banner-right.svg",
       "actions": [
         {
           "type": "text",
@@ -20,16 +23,16 @@
         },
         {
           "type": "heading",
-          "text": "hoc2023_header"
+          "text": "curriculum_name_dance_party_ai_edition"
         },
         {
           "type": "heading-two",
-          "text": "hoc2023_hero_desc_homepage"
+          "text": "codeorg_homepage_hoc2023_body"
         },
         {
           "type": "cta_button_solid_yellow",
           "text": "hoc2022_cta_primary",
-          "url": "/hourofcode"
+          "url": "/dance"
         },
         {
           "type": "cta_button_solid_white",

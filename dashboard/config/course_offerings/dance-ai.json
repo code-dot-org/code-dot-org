@@ -11,11 +11,11 @@
   "image": "https://images.code.org/ec283654e85e5d6429a1600157b6c789-dance_ai.jpg",
   "cs_topic": "art_and_design,artificial_intelligence,games_and_animations,programming",
   "school_subject": null,
-  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"ideal\",\"no_device\":\"\"}",
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
   "description": "In this activity, learners of all ages get an introductory experience with coding and artificial intelligence in a safe and creative environment. ",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null,
+  "video": "https://www.youtube-nocookie.com/embed/m4fcHdJ-65o/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=m4fcHdJ-65o&wmode=transparent",
+  "published_date": "2023-11-28 05:00:00 UTC",
   "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

@@ -48,6 +48,7 @@ const EVENTS = {
   AFE_INELIGIBLE: 'AFE Ineligible',
   AFE_CONTINUE: 'AFE Continue',
   AFE_SUBMIT: 'AFE Submit',
+  AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
   COMPLETED_EVENT: 'Section Setup Completed',
@@ -104,6 +105,7 @@ const EVENTS = {
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
   AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
+  AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
