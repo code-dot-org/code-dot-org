@@ -1,3 +1,4 @@
+// clang-format off
 #include <assert.h>
 #include <rapidjson/filereadstream.h>
 #include <rapidjson/istreamwrapper.h>
@@ -158,9 +159,9 @@ atomic<uint64_t> numRecordBytes {0};
 uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
 
-chrono::system_clock::time_point bandwidthStartClock;
+chrono::system_clock::time_point bandwidthStartClock = std::chrono::system_clock::now();
 uint64_t bandwidthStartNumRecordBytes = 0;
-
+double bandwidthSamplingDurationTarget = 5000.0f /* seconds, start small for first sample */;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
 boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
@@ -219,6 +220,27 @@ void loadDataThread() {
   cout << "loadDataThread: done" << endl;
 }
 
+void printBandWidthTiming() {
+  double bandwidthSamplingDuration = chrono::duration_cast<chrono::milliseconds>(chrono::system_clock::now() - bandwidthStartClock).count();
+  if (bandwidthSamplingDuration > bandwidthSamplingDurationTarget /* ms*/) {
+    bandwidthSamplingDurationTarget = 20000.0f;
+    numRecordBytesMutex.lock();
+    uint64_t bytesTransferred = numRecordBytes - bandwidthStartNumRecordBytes;
+    double bytesPerSecond = bytesTransferred / (bandwidthSamplingDuration / 1000.0f);
+    cout << "Current Bandwidth: "
+      << "\033[1;35m"
+      << (round(bytesPerSecond / (1000000.0) * 100) / 100)
+      << "MB/s"
+      << "\033[0m"
+      << endl;
+    
+    // reset our start values for the next measure interval
+    bandwidthStartClock = std::chrono::system_clock::now();
+    bandwidthStartNumRecordBytes = numRecordBytes;
+    numRecordBytesMutex.unlock();
+  };
+}
+
 void commitRecords() {
   if (LOAD_DATA_INSTEAD_OF_INSERT) {
     if (LOAD_DATA_IN_THREAD) {
@@ -236,6 +258,7 @@ void commitRecords() {
     cout << "COMMITTING!" << endl;
     stmt->execute("COMMIT;");
   }
+  printBandWidthTiming();
   unComittedRecords = 0;
 }
 
@@ -260,27 +283,6 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
   if (unComittedRecords >= NUMBER_OF_RECORDS_BEFORE_COMMIT) {
     commitRecords();
   }
-
-  double bandwidthSamplingDuration = chrono::duration_cast<chrono::seconds>(chrono::system_clock::now() - bandwidthStartClock
-  ).count();
-  if (bandwidthSamplingDuration > 10.0f /* seconds*/) {
-    numRecordBytesMutex.lock();
-    if (bandwidthStartNumRecordBytes != 0) {
-      uint64_t bytesTransferred = numRecordBytes - bandwidthStartNumRecordBytes;
-      double bytesPerSecond = bytesTransferred / bandwidthSamplingDuration;
-      cout << "Current Bandwidth: "
-        << "\033[1;35m"
-        << (round(bytesPerSecond / (1000000.0) * 100) / 100)
-        << "MB/s"
-        << "\033[0m"
-        << endl;
-    }
-    
-    // reset our start values for the next measure interval
-    bandwidthStartClock = std::chrono::system_clock::now();
-    bandwidthStartNumRecordBytes = numRecordBytes;
-    numRecordBytesMutex.unlock();
-  };
 }
 
 void endChannel() {
