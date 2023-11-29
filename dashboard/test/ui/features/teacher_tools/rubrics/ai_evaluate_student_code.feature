@@ -37,6 +37,8 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-rubric-settings" is visible
     And element ".uitest-eval-status-text" is visible
     Then element ".uitest-eval-status-text" contains text "AI analysis already completed for this project."
+    # Make settings tab visible to the human eye
+    And I wait for 1 second
 
     # Teacher views AI evaluation results in rubric tab
     When I click selector ".uitest-rubric-header-tab:contains('Rubric')"
