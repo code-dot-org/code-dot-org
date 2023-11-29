@@ -398,7 +398,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      # TeacherApplicationMailer.send(email.email_type, self).deliver_now
+      TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
