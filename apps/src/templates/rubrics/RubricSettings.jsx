@@ -84,7 +84,6 @@ export default function RubricSettings({
   // console.log(`SECTION ID: ${sectionId}`);
 
   const statusText = () => {
-    console.log(`User status: ${status}`);
     switch (status) {
       case STATUS.INITIAL_LOAD:
         return i18n.aiEvaluationStatus_initial_load();
@@ -110,7 +109,6 @@ export default function RubricSettings({
   };
 
   const statusAllText = () => {
-    console.log(`All status: ${statusAll}`);
     switch (statusAll) {
       case STATUS_ALL.INITIAL_LOAD:
         return i18n.aiEvaluationStatus_initial_load();
@@ -166,7 +164,6 @@ export default function RubricSettings({
             } else {
               setStatus(STATUS.READY);
             }
-            // console.log(`User status: ${status}`);
           });
         }
       });
@@ -175,7 +172,6 @@ export default function RubricSettings({
           setStatusAll(STATUS_ALL.ERROR);
         } else {
           response.json().then(data => {
-            console.log(data);
             // we can't fetch the csrf token from the DOM because CSRF protection
             // is disabled on script level pages.
             setCsrfToken(data.csrfToken);
@@ -183,12 +179,10 @@ export default function RubricSettings({
             if (data.attemptedCount === 0) {
               setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
             } else if (data.attemptedUnevaluatedCount === 0) {
-              console.log('ALREADY EVALUATED');
               setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
             } else {
               setStatusAll(STATUS_ALL.READY);
             }
-            // console.log(`All status: ${statusAll}`);
           });
         }
       });
@@ -226,14 +220,12 @@ export default function RubricSettings({
               }
             });
           }
-          // console.log(`User status: ${status}`);
         });
         fetchAiEvaluationStatusAll(rubricId, sectionId).then(response => {
           if (!response.ok) {
             setStatusAll(STATUS_ALL.ERROR);
           } else {
             response.json().then(data => {
-              console.log(data);
               // we can't fetch the csrf token from the DOM because CSRF protection
               // is disabled on script level pages.
               setCsrfToken(data.csrfToken);
@@ -241,12 +233,10 @@ export default function RubricSettings({
               if (data.attemptedCount === 0) {
                 setStatusAll(STATUS_ALL.NOT_ATTEMPTED);
               } else if (data.attemptedUnevaluatedCount === 0) {
-                console.log('ALREADY EVALUATED');
                 setStatusAll(STATUS_ALL.ALREADY_EVALUATED);
               } else {
                 setStatusAll(STATUS_ALL.READY);
               }
-              // console.log(`All status: ${statusAll}`);
             });
           }
         });
