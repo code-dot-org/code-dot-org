@@ -29,7 +29,7 @@ class Services::Lti
   end
 
   def self.create_lti_user_identity(user)
-    auth_option = user.authentication_options.find {|ao| ao.credential_type == AuthenticationOption::LTI_V1}
+    auth_option = user.authentication_options.find(&:lti?)
     issuer, client_id, subject = auth_option.authentication_id.split('|')
     lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
     LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
