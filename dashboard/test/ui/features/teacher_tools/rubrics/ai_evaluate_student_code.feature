@@ -37,6 +37,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element ".uitest-rubric-header-tab:contains('Settings')" is visible
     And I click selector ".uitest-rubric-header-tab:contains('Settings')"
     And I wait until element ".uitest-rubric-settings" is visible
+    And element ".uitest-run-ai-assessment" is disabled
     And element ".uitest-eval-status-text" is visible
     Then element ".uitest-eval-status-text" contains text "AI analysis already completed for this project."
     # Make settings tab visible to the human eye

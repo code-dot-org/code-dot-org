@@ -188,6 +188,7 @@ export default function RubricSettings({
             <BodyTwoText>{i18n.runAiAssessmentDescription()}</BodyTwoText>
           </div>
           <Button
+            className="uitest-run-ai-assessment"
             text={i18n.runAiAssessment()}
             color={Button.ButtonColor.brandSecondaryDefault}
             onClick={handleRunAiAssessment}
