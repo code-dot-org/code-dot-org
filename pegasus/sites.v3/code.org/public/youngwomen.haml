@@ -35,7 +35,7 @@ theme: responsive_full_width
     .flex-container.justify-space-between.align-items-center.wrap.gap-2.rounded-corners
       .text-wrapper
         %h3.heading-md
-          =hoc_s(:cs_ambassador_application_date)
+          =hoc_s((!applications_closed ? :cs_ambassador_application_date : :cs_ambassador_application_closed_title))
         - if !applications_closed
           %p.heading-xs
             =hoc_s(:cs_ambassador_application_subhead)
