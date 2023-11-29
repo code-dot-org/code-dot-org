@@ -11,6 +11,7 @@ import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
+const noop = () => undefined;
 
 /*
   Renders one or two animation selectors for content writers to choose sprites and generate
@@ -89,10 +90,10 @@ export default class SelectStartAnimations extends React.Component {
   displayAnimationPickerBody = libraryManifest => {
     return (
       <AnimationPickerBody
-        onDrawYourOwnClick={() => {}}
+        onDrawYourOwnClick={noop}
         onPickLibraryAnimation={this.addAnimationToList}
-        onAnimationSelectionComplete={() => {}}
-        onUploadClick={() => {}}
+        onAnimationSelectionComplete={noop}
+        onUploadClick={noop}
         playAnimations={false}
         libraryManifest={libraryManifest}
         hideAnimationNames={false}
