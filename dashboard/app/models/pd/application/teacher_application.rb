@@ -681,6 +681,8 @@ module Pd::Application
         race
 
         agree
+
+        will_teach
       )
     end
 
@@ -698,16 +700,18 @@ module Pd::Application
           end
         end
 
-        if hash[:program] == PROGRAMS[:csd]
-          required << :csd_which_grades
-        elsif hash[:program] == PROGRAMS[:csp]
-          required << :csp_which_grades
-          required << :csp_how_offer
-        elsif hash[:program] == PROGRAMS[:csa]
-          required << :csa_which_grades
-          required << :csa_how_offer
-          required << :csa_already_know
-          required << :csa_phone_screen
+        if hash[:will_teach] == 'Yes'
+          if hash[:program] == PROGRAMS[:csd]
+            required << :csd_which_grades
+          elsif hash[:program] == PROGRAMS[:csp]
+            required << :csp_which_grades
+            required << :csp_how_offer
+          elsif hash[:program] == PROGRAMS[:csa]
+            required << :csa_which_grades
+            required << :csa_how_offer
+            required << :csa_already_know
+            required << :csa_phone_screen
+          end
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -1000,19 +1004,19 @@ module Pd::Application
       case course
       when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
-          (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+          (responses[:csd_which_grades] & options[:csd_which_grades]).present? ? YES : NO
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       when 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
-          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csp_which_grades].present?) ? YES : NO
         took_csp_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       when 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
-          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+          (responses[:csa_which_grades] & options[:csa_which_grades]).present? ? YES : NO
         took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
