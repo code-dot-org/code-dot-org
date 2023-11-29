@@ -172,10 +172,10 @@ void loadData(string tsvFilename) {
   std::unique_ptr<sql::Statement> stmt(db->createStatement());
   numRecordBytesMutex.lock();
   cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
+  numRecordBytesMutex.unlock();
   stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
                 "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
                 "TERMINATED BY '\n';");
-  numRecordBytesMutex.unlock();
   stmt->execute("COMMIT;");
 
   numRecordBytesMutex.lock();
