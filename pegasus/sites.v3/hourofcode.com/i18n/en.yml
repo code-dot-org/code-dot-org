@@ -9961,38 +9961,6 @@
   elementary_page_computer_science_description_1: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   elementary_page_computer_science_description_2: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
 
-  envivo_main_title: Hora del Código En Vivo
-  envivo_main_description_1: ¡Aprender a programar puede ser muy divertido! Con estos  [episodios y actividades para elegir](%{activities}), puedes aprender sobre inteligencia artificial con Eduardo España, programar tu propia fiesta de baile con Erika de la Vega, o crear tu propia app con Simón Borrero.
-  envivo_main_description_2: Cada episodio es presentado por el Vicepresidente de Alianzas Internacionales, [Leonardo Ortiz Villacorta](%{person_link}), y Directora de Alianzas Internacionales para las Américas, Lara Sepúlveda Machado, quienes enseñan conceptos de ciencias de computación acompañados de diversos invitados especiales.
-  envivo_registrate_title: Regístrate para participar
-  envivo_registrate_description: Los invitamos a participar en un episodio especial de la Hora del Código En Vivo con el productor [Julio Reyes Copello](%{julio}) y la cantante [Joy](%{joy}). Este episodio es el primero de una serie especial en torno a la creatividad, la música y la programación. ¡No te lo pierdas! Regístrate [aquí](%{aqui}).
-  envivo_registrate_link: Síguenos en [Facebook](%{facebook_registrate}) o en [Twitter](%{twitter_registrate}).
-  envivo_form_description: ¡Manténgase informado! Únase a nuestra lista de distribución para recibir noticias de Code.org y para ser el primero en conocer sobre recursos para continuar el aprendizaje en casa.
-  envivo_divertido_title: Divertido y fundacional
-  envivo_divertido_description_1: Las ciencias de computación son súper divertidas porque son una actividad creativa y lúdica. Ya sea resolviendo rompecabezas, programando arte o diseñando una aplicación, los estudiantes prefieren aprender mientras exploran en lugar de memorizar. [Ciencias de computación](%{cieancias}) son una de las materias preferidas de los estudiantes, solo después de sus clases de arte, música y danza.
-  envivo_divertido_description_2: "Las ciencias de computación son [fundacionales](%{fundacionales}) para todos los ámbitos de estudio, pero como muchas escuelas aún no las ofrecen, esta es una oportunidad única para apoyar a sus hijos, estudiantes o familiares a que aprendan algo nuevo. Además, [estudios recientes demuestran](%{estudios}):"
-  envivo_divertido_span: "y el 17% es más probable que ingrese a la universidad."
-  episodios_main_title: Episodios de la Hora del Código En Vivo
-  episodios_item_title_1: Episodio 1
-  episodios_item_title_2: Episodio 2
-  episodios_item_title_3: Episodio 3
-  episodios_item_title_4: Episodio 4
-  episodios_item_title_5: Episodio 5
-  episodios_item_title_6: Episodio 6
-  episodios_item_topic_1: Algoritmos con Nashla Aguilar e Ilona Bodnar
-  episodios_item_topic_2: Inteligencia Artificial con Eduardo España y Alejandra Flores
-  episodios_item_topic_3: Información Digital con Simón Borrero y Vicky Ricaurte
-  episodios_item_topic_4: Eventos con Erika de la Vega
-  episodios_item_topic_5: Internet con Daniel Rabinovich y la Dra. Yuly Fuentes-Medel
-  episodios_item_topic_6: Encriptación con Juan Pablo Consuegra y la Dra. Liza Videla
-  episodios_item_description_1: La actriz Nashla Aguilar y la ingeniera y Technolochica Ilona Bodnar participan en el primer episodio de la Hora del Código En Vivo. Aprendemos sobre algoritmos a través de un divertido ejercicio 'desenchufado', seguido de una programación en vivo de código artístico!
-  episodios_item_description_2: El actor y comediante Eduardo España y la Gerente de Producto en Amazon, Alejandra Flores, nos ayudan a explicar qué es la inteligencia artificial y discutimos lo importante que es usar la tecnología para el bien.
-  episodios_item_description_3: El CEO y Co-Fundador de Rappi, Simón Borrero, y la CEO y Co-Fundadora de Arukay, Vicky Ricaurte, nos ayudan a explicar qué es la información digital, comenzando con una actividad 'desenchufada' para aprender sobre pixeles, seguido de una programación en vivo para crear tu propia app.
-  episodios_item_description_4: La productora, comediante y actriz, Erika De la Vega, nos acompaña en este episodio para ayudarnos a explicar eventos en programación, los cuales son comandos que causan una acción.
-  episodios_item_description_5: Daniel Rabinovich, COO de Mercado Libre, y la Dra. Yuly Fuentes-Medel, Directora de Programas en el Massachusetts Institute of Technology (MIT), nos ayudan a explicar cómo funciona el internet y la importancia de los protocolos.
-  episodios_item_description_6: Juan Pablo Consuegra, Director para la Región Andina en Facebook, y la Dra. Liza Videla Altieri, Astrónoma del Observatorio ALMA nos acompañan para ayudarnos a explicar la encriptación.
-  episodios_item_links: "[Ver en Youtube](%{youtube}) I [Ver en Facebook](%{facebook})"
-
   language_code:
     ar: "Arabic"
     az: "Azerbaijani"
