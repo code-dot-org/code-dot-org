@@ -89,10 +89,10 @@ export default class SelectStartAnimations extends React.Component {
   displayAnimationPickerBody = libraryManifest => {
     return (
       <AnimationPickerBody
-        onDrawYourOwnClick={() => console.log('Not supported at this time')}
+        onDrawYourOwnClick={() => {}}
         onPickLibraryAnimation={this.addAnimationToList}
         onAnimationSelectionComplete={() => {}}
-        onUploadClick={() => console.log('Not supported at this time')}
+        onUploadClick={() => {}}
         playAnimations={false}
         libraryManifest={libraryManifest}
         hideAnimationNames={false}
