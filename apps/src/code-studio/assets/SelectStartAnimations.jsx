@@ -51,7 +51,7 @@ export default class SelectStartAnimations extends React.Component {
   addAnimationToList = animation => {
     const key = createUuid();
 
-    let updatedOrderedKeys = [key].concat(this.state.orderedKeys);
+    let updatedOrderedKeys = this.state.orderedKeys.concat([key]);
     this.setState({orderedKeys: updatedOrderedKeys});
 
     let propsByKey = {...this.state.propsByKey};
