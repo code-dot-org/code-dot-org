@@ -118,7 +118,6 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    # is_ai_experiment_enabled = true
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
@@ -138,9 +137,6 @@ class RubricsController < ApplicationController
     return head :ok
   end
 
-  # CEARA TODO: make new function like above, pull multiple students w/ unsubmitted
-  # project, run ai for each
-
   def run_ai_evaluations_for_all
     section_id = params.transform_keys(&:underscore).require(:section_id)
 
@@ -149,7 +145,6 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    # is_ai_experiment_enabled = true
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
@@ -157,27 +152,28 @@ class RubricsController < ApplicationController
     return head :bad_request unless is_level_ai_enabled
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
-    @rubric.lesson.script.user_scripts.where(user_id: user_ids).each do |user_script|
-      @user = User.find(user_script.user_id)
+    user_ids.each do |user_id|
+      @user = User.find(user_id)
       next unless @user&.student_of?(current_user)
-      # do some stuff
-      puts @user.name
 
       attempted = attempted_at
-      # TODO: count errors, return count of not attempted/ already evaluated/ runs
-      evaluated = ai_evaluated_at
-      if attempted && !evaluated
-        # EvaluateRubricJob.perform_later(
-        #   user_id: @user.id,
-        #   requester_id: current_user.id,
-        #   script_level_id: script_level.id,
-        # )
-        puts @user.name
-      elsif !attempted
-        #count this for return msg
-      elsif evaluated
-        #count this for return msg
+      last_eval_time = nil # any evaluation- pending, success, or failure
+
+      rubric_ai_evaluation = RubricAiEvaluation.where(
+        rubric_id: @rubric.id,
+        user_id: user_id
+      ).order(updated_at: :desc).first
+
+      if rubric_ai_evaluation&.status
+        last_eval_time = rubric_ai_evaluation.created_at
       end
+
+      next unless attempted && (!last_eval_time || last_eval_time < attempted)
+      EvaluateRubricJob.perform_later(
+        user_id: @user.id,
+        requester_id: current_user.id,
+        script_level_id: script_level.id,
+      )
     end
     return head :ok
   end
@@ -189,7 +185,6 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    # is_ai_experiment_enabled = true
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
@@ -221,7 +216,6 @@ class RubricsController < ApplicationController
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
 
-    # is_ai_experiment_enabled = true
     is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
@@ -232,12 +226,22 @@ class RubricsController < ApplicationController
     last_attempt_evaluated_count = 0
 
     user_ids = Section.find_by(id: section_id).followers.pluck(:student_user_id)
-    @rubric.lesson.script.user_scripts.where(user_id: user_ids).each do |user_script|
-      @user = User.find(user_script.user_id)
+    user_ids.each do |user_id|
+      @user = User.find(user_id)
       next unless @user&.student_of?(current_user)
       attempted = attempted_at
-      evaluated = ai_evaluated_at
-      attempted_unevaluated_count += 1 if !!attempted && (!evaluated || (!!evaluated && evaluated < attempted))
+      evaluated = ai_evaluated_at # only finished, successful evaluations
+      rubric_ai_evaluation = RubricAiEvaluation.where(
+        rubric_id: @rubric.id,
+        user_id: user_id
+      ).order(updated_at: :desc).first
+
+      last_eval_time = nil # any evaluation- pending, success, or failure
+      if rubric_ai_evaluation&.status
+        last_eval_time = rubric_ai_evaluation.created_at
+      end
+
+      attempted_unevaluated_count += 1 if !!attempted && (!last_eval_time || (!!last_eval_time && last_eval_time < attempted))
       attempted_count += 1 if !!attempted
       last_attempt_evaluated_count += 1 if !!attempted && !!evaluated && evaluated >= attempted
     end
