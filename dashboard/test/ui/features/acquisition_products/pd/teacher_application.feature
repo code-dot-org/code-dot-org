@@ -37,6 +37,7 @@ Scenario: Teacher starts a new application and submits it
 
   # Section 6
   Then I wait until element "h3" contains text "Section 6: Implementation Plan"
+  And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
@@ -172,6 +173,7 @@ Scenario: Teacher starts a new csp application and submits it
 
   # Section 6
   Then I wait until element "h3" contains text "Section 6: Implementation Plan"
+  And I press the first "input[name='willTeach']" element
   And I press the first "input[name='cspWhichGrades']" element
   And I press the first "input[name='cspHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
@@ -213,6 +215,7 @@ Scenario: Teacher starts a new csa application and submits it
 
   # Section 6
   Then I wait until element "h3" contains text "Section 6: Implementation Plan"
+  And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csaWhichGrades']" element
   And I press the first "input[name='csaHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
