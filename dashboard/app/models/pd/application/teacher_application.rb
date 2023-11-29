@@ -398,7 +398,7 @@ module Pd::Application
       end
 
       # email_type maps to the mailer action
-      TeacherApplicationMailer.send(email.email_type, self).deliver_now
+      # TeacherApplicationMailer.send(email.email_type, self).deliver_now
     end
 
     # Return a string if the principal approval state is complete, in-progress, or not required.
@@ -1004,7 +1004,7 @@ module Pd::Application
       case course
       when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
-          (responses[:csd_which_grades] & options[:csd_which_grades]).present? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csd_which_grades].present?) ? YES : NO
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
@@ -1016,7 +1016,7 @@ module Pd::Application
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       when 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
-          (responses[:csa_which_grades] & options[:csa_which_grades]).present? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csa_which_grades].present?) ? YES : NO
         took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
