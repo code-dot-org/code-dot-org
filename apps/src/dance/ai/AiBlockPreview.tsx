@@ -1,8 +1,9 @@
-import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
+import {Workspace} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
 import {GeneratedEffect} from './types';
 import {useSelector} from 'react-redux';
+import {generateAiEffectBlocksXmlFromResult} from './utils';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;
@@ -24,20 +25,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       return;
     }
 
-    const xml = `
-      <xml>
-        <block type="Dancelab_setForegroundEffectExtended">
-          <field name="EFFECT">"${results.foregroundEffect}"</field>
-          <next>
-            <block type="Dancelab_setBackgroundEffectWithPaletteAI">
-              <field name="PALETTE">"${results.backgroundColor}"</field>
-              <field name="EFFECT">"${results.backgroundEffect}"</field>
-            </block>
-          </next>
-        </block>
-      </xml>
-      `;
-
+    const xml = generateAiEffectBlocksXmlFromResult(results);
     const blocks = Blockly.utils.xml.textToDom(xml);
     workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
       blockPreviewContainerRef.current,
