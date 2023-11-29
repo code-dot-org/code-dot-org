@@ -2,6 +2,8 @@
 Feature: Evaluate student code against rubrics using AI
   Scenario: Student code is evaluated by AI when student submits project
     Given I create a teacher-associated student named "Aiden"
+    And I am on "http://studio.code.org/home"
+    And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
     And I wait for the page to fully load

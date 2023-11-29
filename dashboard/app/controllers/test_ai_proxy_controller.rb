@@ -1,6 +1,8 @@
 class TestAiProxyController < ApplicationController
   layout false
 
+  # CSRF token is not available to the requester, because this API is called
+  # from an Active Job and not from the browser.
   skip_before_action :verify_authenticity_token
 
   # POST /api/test/ai_proxy/assessment
