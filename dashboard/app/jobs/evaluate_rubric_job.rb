@@ -2,6 +2,7 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
+  STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
   # which will be used for AI evaluation.
@@ -239,8 +240,7 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def get_ai_proxy_origin
-    is_local_origin = CDO.ai_proxy_origin&.starts_with?('/')
-    is_local_origin ? CDO.studio_url(CDO.ai_proxy_origin, CDO.default_scheme) : CDO.ai_proxy_origin
+    CDO.ai_proxy_origin.presence || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
   end
 
   private def validate_evaluations(evaluations, rubric)
