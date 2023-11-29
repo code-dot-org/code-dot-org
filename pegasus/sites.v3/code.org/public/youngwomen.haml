@@ -3,6 +3,10 @@ title: Young Women in CS
 theme: responsive_full_width
 ---
 
+-# Set this to true or false when applications open
+-# or close to show the corresponding version of the page.
+- applications_closed = true
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/young-women-in-cs-styles.css", rel: "stylesheet"}
 
@@ -13,8 +17,9 @@ theme: responsive_full_width
         =hoc_s(:yw_page_top_heading)
       %p.body-one{style: "color: white"}
         =hoc_s(:yw_page_top_desc)
-      %a.link-button.white.has-external-link{href: "https://docs.google.com/forms/d/e/1FAIpQLScKoT8ttOeWU3mWp_fDaFV0qQ5niXk3tSi1INALHhGWFQtVjw/viewform", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:call_to_action_applications_open)
+      - if !applications_closed
+        %a.link-button.white.has-external-link{href: "https://docs.google.com/forms/d/e/1FAIpQLScKoT8ttOeWU3mWp_fDaFV0qQ5niXk3tSi1INALHhGWFQtVjw/viewform", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_applications_open)
 
 %section.intro
   .wrapper
@@ -31,11 +36,13 @@ theme: responsive_full_width
       .text-wrapper
         %h3.heading-md
           =hoc_s(:cs_ambassador_application_date)
-        %p.heading-xs
-          =hoc_s(:cs_ambassador_application_subhead)
+        - if !applications_closed
+          %p.heading-xs
+            =hoc_s(:cs_ambassador_application_subhead)
         %p.body-three.no-margin-bottom
-          =hoc_s(:cs_ambassador_application_questions, markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
-      = view :"young_women_in_cs/yw_apply_button"
+          =hoc_s((!applications_closed ? :cs_ambassador_application_questions : :cs_ambassador_application_closed_subhead), markdown: :inline, locals:{email_url: "mailto:youngwomen@code.org"})
+      - if !applications_closed
+        = view :"young_women_in_cs/yw_apply_button"
 
 = view :section_divider_line
 
@@ -53,12 +60,14 @@ theme: responsive_full_width
   .wrapper.centered
     %h2=hoc_s(:cs_ambassador_steps_heading)
     = view :"young_women_in_cs/yw_prerequisites"
-    = view :"young_women_in_cs/yw_apply_button"
+    - if !applications_closed
+      = view :"young_women_in_cs/yw_apply_button"
 
 %section
   .wrapper
     %h2.centered
       =hoc_s(:cs_ambassador_benefits_heading)
     = view :"young_women_in_cs/yw_icon_list"
-    .centered
-      = view :"young_women_in_cs/yw_apply_button"
+    - if !applications_closed
+      .centered
+        = view :"young_women_in_cs/yw_apply_button"
