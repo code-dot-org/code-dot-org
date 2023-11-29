@@ -197,7 +197,8 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    generator.sprite_parameter_get = generator.variables_get;
+    generator.forBlock['sprite_parameter_get'] =
+      generator.forBlock['variables_get'];
 
     Blockly.Blocks.gamelab_behavior_get = {
       init() {
