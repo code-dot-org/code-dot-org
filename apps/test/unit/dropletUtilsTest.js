@@ -75,6 +75,11 @@ const BASE_DROPLET_CONFIG = Object.freeze({
       color: '#FFB74D',
       title: 'Math.abs',
     },
+    'Math.log': {
+      value: true,
+      color: '#FFB74D',
+      title: 'Math.log',
+    },
     'Math.max': {
       value: true,
       color: '#FFB74D',

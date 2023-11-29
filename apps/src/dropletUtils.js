@@ -134,6 +134,13 @@ export const dropletBuiltinConfigBlocks = [
     params: ['__'],
     docFunc: 'mathSqrt',
   },
+  {
+    func: 'Math.log',
+    category: 'Math',
+    type: 'value',
+    params: ['__'],
+    docFunc: 'mathLog',
+  },
 ];
 
 export const dropletStringBlocks = [
@@ -314,6 +321,7 @@ standardConfig.blocks = [
   {func: 'mathSqrt', block: 'Math.sqrt(__)', category: 'Math'},
   {func: 'mathIncrement', block: '__++', category: 'Math'},
   {func: 'mathDecrement', block: '__--', category: 'Math'},
+  {func: 'mathLog', block: 'Math.log(__)', category: 'Math'},
 
   // Variables
   {func: 'declareAssign_x', block: 'var x = __;', category: 'Variables'},
