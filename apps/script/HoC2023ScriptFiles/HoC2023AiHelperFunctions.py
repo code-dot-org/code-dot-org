@@ -16,7 +16,7 @@ sys.path.append(os.path.abspath(module_path))
 
 # KNOWN ISSUE: Their version of utils was a custom library file unique to their bedrock tutorial located here: https://github.com/aws-samples/amazon-bedrock-workshop/blob/109ed616fd14c9eb26eda9bef96eb78c490d5ef6/utils/bedrock.py
 # While it WAS working before, it doesn't work now and the code contains within the utils folder will need to be migrated out to get this working locally
-from utils import bedrock, print_ww
+from aws_utils import bedrock
 
 # ---- ⚠️ Un-comment and edit the below lines as needed for your AWS setup ⚠️ ----
 
