@@ -64,7 +64,7 @@
   "fishvtrash-predicting-init1": "Ora vediamo se l'IA sa che aspetto ha un \"pesce\".",
   "fishvtrash-predicting-init2": "L'IA analizzerà una serie casuale di oggetti e li etichetterà in base al tuo addestramento.",
   "fishvtrash-predicting-init3": "Andiamo!",
-  "fishvtrash-training-init1": "I rifiuti scaricati nell'acqua influiscono sulla vita marina. In questa attività, programmerai o addestrerai l'IA (intelligenza artificiale) per identificare pesci o rifiuti. Puliamo l'oceano! Fai clic in un punto qualsiasi dello schermo per continuare.",
+  "fishvtrash-training-init1": "I rifiuti scaricati nell'acqua influiscono sulla vita marina. In questa attività, programmerai o addestrerai l'IA (intelligenza artificiale) per identificare pesci o rifiuti. Puliamo l'oceano! Clicca in un punto qualsiasi della schermata per continuare.",
   "fishvtrash-training-init2": "Incontriamo l'IA",
   "fishvtrash-training-init3": "L'IA non sa se un oggetto è un pesce o un rifiuto, ma può elaborare immagini e identificare schemi.",
   "fishvtrash-training-init4": "Per programmare l'IA, usa i pulsanti per etichettare un'immagine come \"Pesce\" o \"Non Pesce\". L'addestramento che fornisci insegnerà all'IA per riconoscere gli schemi per conto proprio. Iniziamo!",
