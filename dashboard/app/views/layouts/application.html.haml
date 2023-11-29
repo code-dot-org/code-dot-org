@@ -5,10 +5,6 @@
   %head
     = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
-    -# Setup variables used by the Offline feature.
-    :javascript
-      window.OFFLINE_SERVICE_WORKER_PATH =
-        "/s/express-2021/lessons/1#{webpack_offline_asset_path('js/offline-service-worker.js')}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title

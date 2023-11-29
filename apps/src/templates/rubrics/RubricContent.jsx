@@ -90,13 +90,15 @@ export default function RubricContent({
     }
   };
 
-  const getAiEvaluationForLearningGoal = learningGoalId => {
+  const getAiInfo = learningGoalId => {
     if (!!aiEvaluations) {
-      return aiEvaluations.find(
-        aiEvaluation => aiEvaluation.learning_goal_id === learningGoalId
+      const aiInfo = aiEvaluations.find(
+        item => item.learning_goal_id === learningGoalId
       );
+      return aiInfo;
+    } else {
+      return null;
     }
-    return null;
   };
 
   let infoText = null;
@@ -172,7 +174,6 @@ export default function RubricContent({
             canProvideFeedback={canProvideFeedback}
             reportingData={reportingData}
             studentLevelInfo={studentLevelInfo}
-            aiEvaluation={getAiEvaluationForLearningGoal(lg.id)}
             isStudent={false}
             feedbackAdded={feedbackAdded}
             setFeedbackAdded={setFeedbackAdded}

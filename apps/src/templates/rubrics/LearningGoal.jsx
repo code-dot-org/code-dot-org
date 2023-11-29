@@ -9,7 +9,6 @@ import {
   reportingDataShape,
   studentLevelInfoShape,
   submittedEvaluationShape,
-  aiEvaluationShape,
 } from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
@@ -35,7 +34,6 @@ export default function LearningGoal({
   canProvideFeedback,
   reportingData,
   studentLevelInfo,
-  aiEvaluation,
   submittedEvaluation,
   isStudent,
   feedbackAdded,
@@ -271,7 +269,7 @@ export default function LearningGoal({
             <AiAssessment
               isAiAssessed={learningGoal.aiEnabled}
               studentName={studentLevelInfo.name}
-              aiEvaluation={aiEvaluation}
+              aiEvaluation={aiEvalInfo}
               studentSubmitted={!!studentLevelInfo.submitted}
               learningGoalKey={learningGoal.key}
             />
@@ -309,7 +307,6 @@ LearningGoal.propTypes = {
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  aiEvaluation: aiEvaluationShape,
   submittedEvaluation: submittedEvaluationShape,
   isStudent: PropTypes.bool,
   feedbackAdded: PropTypes.bool,
