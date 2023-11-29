@@ -6,6 +6,7 @@ import {EditorState} from '@codemirror/state';
 import {editorSetup} from '../javalab/editorSetup';
 import {darkMode} from '../javalab/editorThemes';
 import {python} from '@codemirror/lang-python';
+import moduleStyles from './python-editor.module.scss';
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
@@ -26,9 +27,15 @@ const PythonEditor: React.FunctionComponent = () => {
   }, [editorRef]);
 
   return (
-    <PanelContainer id="python-editor" headerText="Editor" hideHeaders={false}>
-      <div ref={editorRef} className={classNames('codemirror-container')} />
-    </PanelContainer>
+    <div className={moduleStyles.editorContainer}>
+      <PanelContainer
+        id="python-editor"
+        headerText="Editor"
+        hideHeaders={false}
+      >
+        <div ref={editorRef} className={classNames('codemirror-container')} />
+      </PanelContainer>
+    </div>
   );
 };
 

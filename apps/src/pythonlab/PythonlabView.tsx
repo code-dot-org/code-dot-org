@@ -1,19 +1,13 @@
 // Pythonlab view
 import React from 'react';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import PythonEditor from './PythonEditor';
+import moduleStyles from './pythonlab-view.module.scss';
+import SidePanel from './SidePanel';
 
 const PythonlabView: React.FunctionComponent = () => {
   return (
-    <div>
-      <PanelContainer
-        id="instructions-panel"
-        headerText="Instructions"
-        hideHeaders={false}
-      >
-        <Instructions layout={'vertical'} />
-      </PanelContainer>
+    <div className={moduleStyles.pythonLab}>
+      <SidePanel />
       <PythonEditor />
     </div>
   );
