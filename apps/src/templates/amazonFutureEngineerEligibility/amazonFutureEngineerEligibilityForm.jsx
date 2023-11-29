@@ -191,10 +191,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       requiredFields.push('consentCSTA');
     }
 
-    if (this.state.inspirationKit) {
-      requiredFields.push('street1', 'city', 'state', 'zip');
-    }
-
     const missingRequiredFields = requiredFields.filter(f => {
       return !this.state[f];
     });

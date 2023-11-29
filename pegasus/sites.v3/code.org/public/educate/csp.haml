@@ -74,6 +74,6 @@ theme: responsive_full_width
 
 %section#csp-newsletter-signup{style: "padding-top: 2rem"}
   .wrapper
-    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csp), form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjm14"
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csp), form_height: "375px", form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjm14"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSP_CURRICULUM_PAGE_VISITED_EVENT
