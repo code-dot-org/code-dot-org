@@ -8,7 +8,13 @@ export default {
 };
 
 const Template = args => (
-  <AiAssessment isAiAssessed studentName={'Ada'} studentSubmitted {...args} />
+  <AiAssessment
+    isAiAssessed
+    studentName={'Ada'}
+    studentSubmitted
+    studentStarted
+    {...args}
+  />
 );
 
 export const NotAiAssessed = Template.bind({});

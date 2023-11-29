@@ -17,6 +17,7 @@ export default function AiAssessmentBox({
   studentName,
   aiEvaluation,
   studentSubmitted,
+  studentStarted,
 }) {
   const hasAiInfo = !!aiEvaluation;
   const aiUnderstandingLevel = aiEvaluation?.understanding;
@@ -42,8 +43,10 @@ export default function AiAssessmentBox({
         studentName: studentName,
         understandingLevel: assessment,
       });
+    } else if (!studentStarted) {
+      return i18n.aiEvaluation_student_not_started();
     } else if (!studentSubmitted) {
-      return i18n.aiEvaluation_student_must_submit();
+      return i18n.aiEvaluation_student_not_submitted();
     } else {
       return i18n.aiEvaluation_not_run();
     }
@@ -87,4 +90,5 @@ AiAssessmentBox.propTypes = {
   studentName: PropTypes.string,
   aiEvaluation: aiEvaluationShape,
   studentSubmitted: PropTypes.bool,
+  studentStarted: PropTypes.bool,
 };

@@ -270,6 +270,7 @@ export default function LearningGoal({
               isAiAssessed={learningGoal.aiEnabled}
               studentName={studentLevelInfo.name}
               aiEvaluation={aiEvalInfo}
+              studentStarted={studentLevelInfo.attempts > 0}
               studentSubmitted={!!studentLevelInfo.submitted}
               learningGoalKey={learningGoal.key}
             />

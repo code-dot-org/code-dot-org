@@ -30,7 +30,10 @@ export default function AiAssessment({
       </div>
       {hasAiInfo && (
         <div>
-          <AiAssessmentFeedback learningGoalKey={learningGoalKey} />
+          <AiAssessmentFeedback
+            learningGoalKey={learningGoalKey}
+            aiEvalInfo={aiEvaluation}
+          />
         </div>
       )}
     </div>
