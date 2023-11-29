@@ -12,7 +12,7 @@ const PythonlabView: React.FunctionComponent = () => {
         headerText="Instructions"
         hideHeaders={false}
       >
-        <Instructions />
+        <Instructions layout={'vertical'} />
       </PanelContainer>
       <PythonEditor />
     </div>
