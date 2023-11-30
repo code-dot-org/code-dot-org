@@ -9986,6 +9986,19 @@
   elementary_page_computer_science_description_1: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   elementary_page_computer_science_description_2: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
 
+  hoc_beyond_hero_description: "Now that you've completed your Hour of Code, take your learning to the next level! Many partners offer free, engaging options for teachers and students alike - no experience needed."
+  hoc_beyond_for_teachers_section_title: "For Teachers"
+  hoc_beyond_for_teachers_section_description: "You've held an Hour of Code event in your classroom... now what? Join the more than 2 million educators who use Code.org to teach computer science. Anyone can learn!"
+  hoc_beyond_for_teachers_course_title_1: "Teach with Code.org’s Courses"
+  hoc_beyond_for_teachers_course_title_2: "Teach Courses from Other Providers"
+  hoc_beyond_for_teachers_course_description_1: "Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge."
+  hoc_beyond_for_teachers_course_description_2: "Compare options by different partners, organized by grade band."
+  hoc_beyond_for_teachers_course_link_1: "Teach with Code.org"
+  hoc_beyond_for_teachers_course_link_2: "Explore other providers"
+  hoc_beyond_carousel_title: "For Students"
+  hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
+  hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
   language_code:
     ar: "Arabic"
     az: "Azerbaijani"
