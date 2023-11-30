@@ -3014,3 +3014,19 @@ hu:
           lesson_groups:
             lessonGroup-7:
               display_name: Bevezető
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kérdőív
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csd-post-survey-2024:
+          title: Tanfomlyam Utáni Felmérés

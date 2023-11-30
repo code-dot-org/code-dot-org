@@ -104,6 +104,11 @@
       "title": "Hour of Code: Yapay Zeka ile Yaratıcılık",
       "body": "Yapay zeka ile veya yapay zeka olmadan bir saatlik kodlama düzenlemek ve yapay zekanın nasıl çalıştığını öğrenmek için dünya çapındaki milyonlara katılın. Herkes, her yerde bunu yapabilir. Deneyime gerek yok.",
       "buttonText": "Daha fazlasını öğren"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Dans Partisi: AI (Yapay Zeka) Sürümü",
+      "body": "Günümüzün en iyi sanatçılarının sergilendiği kendi sanal dans partinizi oluşturmak için yapay zeka (AI) konseptleri hakkında bilgi edinin. Aralarından seçim yapabileceğiniz onlarca şarkıyla müzik zevki ne olursa olsun her öğrenciye ulaşın. Kendinizi gösterme zamanı geldi!",
+      "buttonText": "Daha fazlasını öğren"
     }
   }
 }

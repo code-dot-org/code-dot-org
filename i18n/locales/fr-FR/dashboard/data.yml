@@ -729,6 +729,7 @@ fr:
         what-is-creativity: Qu'est-ce que la Créativité ?
         code-break: Prends une Pause de Code
         csd_ml_how_ai_works: Comment fonctionne l'IA
+        hoc-dance-ai-warmup: 'Soirée dansante édition IA : Exercice préparatoire'
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.
