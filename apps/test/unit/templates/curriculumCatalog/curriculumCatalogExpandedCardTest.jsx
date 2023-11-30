@@ -46,6 +46,8 @@ describe('CurriculumCatalogExpandedCard', () => {
       isInUS: true,
       imageSrc:
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
+      isSignedOut: false,
+      isTeacher: true,
     };
   });
 

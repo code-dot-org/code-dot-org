@@ -255,7 +255,11 @@ describe('CurriculumCatalogCard', () => {
   });
 
   it('renders Assign button with descriptive label', () => {
-    renderCurriculumCard();
+    renderCurriculumCard({
+      ...defaultProps,
+      isSignedOut: false,
+      isTeacher: true,
+    });
 
     screen.getByRole('button', {
       name: new RegExp(
@@ -307,25 +311,6 @@ describe('CurriculumCatalogCard', () => {
     fireEvent.click(assignButton);
     screen.getByRole('heading', {
       name: 'Create class section to assign a curriculum',
-    });
-  });
-
-  it('clicking Assign button as a student shows dialog to upgrade account', () => {
-    renderCurriculumCard({
-      ...defaultProps,
-      isSignedOut: false,
-      isTeacher: false,
-    });
-
-    const assignButton = screen.getByRole('button', {
-      name: new RegExp(
-        `Assign ${defaultProps.courseDisplayName} to your classroom`
-      ),
-    });
-
-    fireEvent.click(assignButton);
-    screen.getByRole('heading', {
-      name: 'Use a teacher account to assign a curriculum',
     });
   });
 
