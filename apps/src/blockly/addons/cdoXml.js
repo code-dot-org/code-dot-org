@@ -133,6 +133,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   // (e.g. shared behaviors).
   // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
   // expects this kind of extra state in a mutator.
+  // Note: Whenever we read these attributes, we expect them to be strings representing booleans.
   const usercreatedAttribute = blockElement.getAttribute('usercreated');
   const userCreated = usercreatedAttribute === 'true';
   mutationElement.setAttribute('userCreated', userCreated);
