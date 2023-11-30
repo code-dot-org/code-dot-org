@@ -1,7 +1,8 @@
-// This is copied from
+// This is copied and modified from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
-// We needed a bug fix not present in our current version of the plugin, and we needed to not run the
-// on change handler if the block is not in a runnable workspace.
+// We need a bug fix not present in our current (v9) version of the mixin, and
+// we need to not run the on change handler if the block is not in a runnable workspace.
+// We may be able to extend the mixin once we upgrade to v10.
 const procedureCallerOnChangeMixin = {
   /**
    * Procedure calls cannot exist without the corresponding procedure
