@@ -63,6 +63,7 @@ describe('CurriculumCatalogCard', () => {
       scriptId: 1,
       isSignedOut: true,
       onQuickViewClick: () => {},
+      isTeacher: false,
     };
   });
 
