@@ -179,7 +179,6 @@ export default class AnimationPickerBody extends React.Component {
   render() {
     let assetType;
     switch (this.props.pickerType) {
-      case PICKER_TYPE.animationJson:
       case PICKER_TYPE.spritelab:
         assetType = msg.costumeMode();
         break;
@@ -229,7 +228,7 @@ export default class AnimationPickerBody extends React.Component {
           />
         )}
         <h1 style={dialogStyles.title}>
-          {msg.animationPicker_title({assetType})}
+          {!animationJsonMode && msg.animationPicker_title({assetType})}
         </h1>
         {showDrawAndUploadButtons && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>

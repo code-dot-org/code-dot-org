@@ -72,6 +72,7 @@ export default class SelectStartAnimations extends React.Component {
 
   displaySelectedSprites = () => {
     const {propsByKey, orderedKeys} = this.state;
+    // 'Selected animations will be displayed here'.
     return orderedKeys.map(key => {
       return (
         <img
@@ -117,22 +118,23 @@ export default class SelectStartAnimations extends React.Component {
           Sprite Lab levels (including CS Connections subtypes such as Story and
           Science levels) and Poetry levels. Costumes and backgrounds, once
           selected, will show up in the same order that students will view them
-          from their dropdown menu.
+          from their dropdown menu. Generated Animation JSON will update at the
+          bottom of this page after each animation is selected.
         </p>
         <p>
-          Level-specific animations contain images uploaded specifically for
-          certain levels. They are not available to students in the animations
-          library.
+          <strong>Note:</strong> Level-specific animations contain images
+          uploaded specifically for certain levels. They are not available to
+          students in the Animations Library.
         </p>
         <div style={styles.pageBreak}>
-          <h3>Selected Animations:</h3>
+          <h2>Selected Animations:</h2>
           {this.displaySelectedSprites()}
         </div>
         {this.props.useAllSprites && (
           <div style={styles.pageBreak}>
             <h3>
               Level-specific Animations (Animations that do not appear in the
-              animation library):
+              Library Animations):
             </h3>
             {this.displayAnimationPickerBody(
               this.state.levelAnimationsManifest
