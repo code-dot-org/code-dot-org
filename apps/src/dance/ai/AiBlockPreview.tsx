@@ -32,6 +32,10 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
       blocks,
       {rtl: isRtl}
     );
+
+    return () => {
+      workspaceRef.current?.clear();
+    };
   }, [blockPreviewContainerRef, isRtl, results]);
 
   // Dispose of the workspace on unmount.
