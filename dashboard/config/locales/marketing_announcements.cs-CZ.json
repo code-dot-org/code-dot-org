@@ -1,0 +1,67 @@
+{
+  "cs-CZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Zjisti více",
+            "title": "Probádejte umělou inteligenci a strojové učení"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Zjisti více"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Zjisti více"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Zjisti více"
+          },
+          "codebytes-2020": {
+            "buttonText": "Zjisti více"
+          },
+          "coldplay": {
+            "buttonText": "Zkuste to"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Spustit"
+          },
+          "csjourneys": {
+            "buttonText": "Zjisti více"
+          },
+          "csjourneys-22": {
+            "buttonText": "Zjisti více"
+          },
+          "csleadersprize": {
+            "buttonText": "Zjisti více"
+          },
+          "hoc-2023": {
+            "body": "Připojte se k milionům lidí po celém světě a zorganizujte hodinu programování, s AI nebo bez ní, a naučte se, jak AI funguje. Zvládne to kdokoliv a kdekoliv. Nejsou zapotřebí žádné zkušenosti.",
+            "buttonText": "Zjisti více",
+            "title": "Hodina programování: Kreativita s AI"
+          },
+          "hoc-more": {
+            "body": "Webové stránky Hodiny kódu mají více než 500 počítačových aktivit pro lidi v každém věku a na jakékoliv úrovni a jsou vyvinuté Code.org a partnery."
+          },
+          "home-learning-2020": {
+            "buttonText": "Zobrazit Nápady na projekty"
+          },
+          "superhero": {
+            "buttonText": "Další informace"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Připojte se k nám"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Nominovat učitele"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Připojte se k nám"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Připojte se k nám"
+          }
+        }
+      }
+    }
+  }
+}

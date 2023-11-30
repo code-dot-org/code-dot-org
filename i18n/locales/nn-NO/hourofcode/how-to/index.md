@@ -8,7 +8,7 @@ title: Veiledning for kodetime
 
 ### Bli med i bevegelsen og introduser studentene dine for informatikk med disse trinnene.
 
-Students today should learn how to create technology, not just use it.
+Studenter i dag bør lære å lage teknologi, ikke bare bruke den.
 
 Å prøve en kodetime er en enkel og morsom måte å introdusere studenter for informatikk, kanskje for aller første gang! Finn en aktivitet som passer til innstillingen din, enten det er i klassen eller etter skoletid, personlig eller virtuelt. Ta en titt på vår [deltakelsesguide hvis du fortsatt har spørsmål]({{ localized_files/participation_guide }}) etter å ha sjekket trinnene nedenfor:
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Når du [registrerer deg for Kodetimen din](/#join), vil du motta nyttig e-postkommunikasjon med nyheter og tips for å være vert for en vellykket Kodetime. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Når du [registrerer deg for Hour of Code-arrangementet](/events), vil du motta nyttig e-postkommunikasjon med nyheter og tips for å være vert for en vellykket Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,7 +136,7 @@ Kva kan eg gjere om ein elev blir tidleg ferdig?
 
 [/col-33]
 
-- [Skriv ut diplomer]({{ urls/certificates }}) fo dine deltakere.
+- [Skriv ut sertifikater]({{ urls/certificates }}) for studentene dine.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Del bilete og videoar frå Kodetimen på sosiale medier. Bruk #HourOfCode, #Kodetimen og @codeorg så vi og kan vise fram suksessen din!
 

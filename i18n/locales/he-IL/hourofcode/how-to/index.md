@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-כאשר אתם [ נרשמים אל אירוע Hour of Code שלכם ](/#join), תקבלו תברוקת מיילים מסייעים עם חדשות וטיפים לארח Hour of Code מוצלח. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+כשאתה נר [שם לאירוע Hour of Code שלך](/events), תקבל הודעות דוא"ל מועילות עם חדשות וטיפים לאירוח שעת קוד מוצלחת. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### גרמו לתלמידים שלכם להתרגש
 

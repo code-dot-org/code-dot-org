@@ -134,7 +134,7 @@ Comenteu amb l'escola o el professor què té més sentit. Hem vist esdeveniment
 - Expliqueu les formes en què la tecnologia ha tingut un impacte en les vostres vides, amb exemples dels quals els estudiants de tots els entorns es preocuparan - parleu de la tecnologia que està salvant les seves vides, ajudant a les persones, connectant a les persones.
 - Si sou una empresa de tecnologia, parleu sobre demo fun, els productes innovadors amb els quals està treballant la vostra companyia. Si no sou una empresa de tecnologia, parleu sobre les diferents formes en què la vostra empresa utilitza tecnologia per resoldre problemes i assolir objectius. 
 - Convideu a enginyers de la vostra empresa per parlar sobre per què han decidit estudiar ciències informàtiques i els projectes en els quals estan treballant.
-- Si teniu un grup d'empleats que s'encarregarà d'organitzar el vostre esdeveniment o faran de voluntaris en una escola propera, podeu demanar [samarretes personalitzades](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per al vostre grup.
+- Si teniu un grup de personal que us estarà facilitant el vostre esdeveniment o voluntariat amb una escola local, considereu demanar samarretes [personalitzades](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) per al vostre grup.
 
 ### 3. Planifiqueu les vostres necessitats tecnològiques
 
@@ -189,7 +189,7 @@ Un cop els alumnes o participants hagin acabat l'Hora del Codi, arriba el moment
 
 ### 1. Registrar el Vostre Esdeveniment
 
-Quan us [registreu a un Esdeveniment de l'Hora del Codi](/#join), rebreu comunicacions útils per email amb notícies i recomanacions per acollir una Hora de Codi amb èxit. També és la forma de fer saber a les escoles properes o als pares dels alumnes que esteu organitzant un esdeveniment.
+Quan us [inscriviu a l'esdeveniment Hora del Codi](/events), rebreu comunicacions per correu electrònic útils amb notícies i consells per allotjar una Hora del Codi amb èxit. També és la forma de fer saber a les escoles properes o als pares dels alumnes que esteu organitzant un esdeveniment.
 
 ### 2. Publiqueu a les xarxes socials
 

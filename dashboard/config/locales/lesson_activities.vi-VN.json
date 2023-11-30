@@ -11268,7 +11268,7 @@
           "name": "Khởi động"
         },
         "ca6b9610-b612-418d-87bf-bc1776fbd110": {
-          "name": "Hoạt động (30-45 phút)"
+          "name": "Hoạt động"
         },
         "a5fa2c8b-163e-4cc1-a54b-0ad5d98bb92f": {
           "name": "Tổng kết"
@@ -12643,6 +12643,45 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Cấp độ"
+        },
+        "687f8be1-c863-4391-971d-5ffa5360ed71": {
+          "name": "Khởi động"
+        },
+        "5ec2cf3c-e372-4dc6-9b3e-4aaca8be2740": {
+          "name": "Khởi động"
+        },
+        "b6364f64-7652-413c-b216-00e84f75dc46": {
+          "name": "Khởi động"
+        },
+        "b66f054d-7a1a-4d77-b19c-6b012d2b87a1": {
+          "name": "Khởi động"
+        },
+        "6f886134-c10b-497a-880f-f54e2888cf1d": {
+          "name": "Khởi động"
+        },
+        "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
+          "name": "Khởi động"
+        },
+        "7387ce3c-05c0-477a-a59c-d72b1e06f2a2": {
+          "name": "Khởi động"
+        },
+        "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
+          "name": "Khởi động"
+        },
+        "ffddef55-14cd-4e97-a3bf-7ceb8fdeaa1d": {
+          "name": "Khởi động"
+        },
+        "74d6f1a0-c861-4cc6-9662-c02682b1f65c": {
+          "name": "Khởi động"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Bắt đầu"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Khởi động"
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Tổng kết"
         }
       }
     }

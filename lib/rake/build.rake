@@ -118,7 +118,9 @@ namespace :build do
           # to manually kill workers 8 and 9 (zero-based). otherwise, those
           # workers will continue to run jobs using older code indefinitely.
           RakeUtils.system 'bin/delayed_job', '-n', '10', 'restart'
-        else
+        elsif !rack_env?(:development)
+          # development environment does not use delayed_job by default.
+          # all other non-production daemons should run one worker.
           RakeUtils.system 'bin/delayed_job', 'restart'
         end
 

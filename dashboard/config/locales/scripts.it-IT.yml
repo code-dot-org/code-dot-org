@@ -138,6 +138,7 @@ it:
         ai-classroom-test:
           title: Laboratorio IA - Test in aula
         ai-ethics:
+          description_audience: da 11 a 17 anni
           title: Il nostro codice etico sulla IA
         ai-ethics-2021:
           description_audience: Da 11 a 17 anni
@@ -146,9 +147,16 @@ it:
           lessons:
             lesson-1:
               name: Il nostro codice etico sulla IA
+            lesson-2:
+              name: Impatto sociale dell'IA generativa
         ai-lab:
           title: Laboratorio IA
         ai-temp:
+          lessons:
+            lesson-5:
+              name: "[Lezione sulle reti neurali]"
+            lesson-6:
+              name: "[Lezione sulla Visione Artificiale]"
           title: Come funziona l'IA
         aiml-2021:
           lesson_groups:
@@ -256,6 +264,10 @@ it:
           student_description: Tutte le tipologie di livello per il test dell'interfaccia
             utente
           title: Tutte le cose!
+        amy-playground:
+          lessons:
+            lesson-4:
+              name: ecosistemi
         andrea-test:
           lesson_groups:
             content:
@@ -611,7 +623,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -635,7 +647,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -663,7 +675,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -694,7 +706,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -724,7 +736,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -1169,7 +1181,7 @@ it:
             csf_functions:
               display_name: Funzioni
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_nested_loops:
               display_name: Cicli annidati
             csf_sprites:
@@ -1199,7 +1211,7 @@ it:
             csf_functions:
               display_name: Funzioni
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_nested_loops:
               display_name: Cicli annidati
             csf_sprites:
@@ -1232,7 +1244,7 @@ it:
             csf_functions:
               display_name: Funzioni
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_nested_loops:
               display_name: Istruzioni condizionali
             csf_sprites:
@@ -1240,7 +1252,7 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
             lessonGroup-7:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             ramp_up:
               display_name: Cicli annidati
           student_description: Inizia a programmare con algoritmi, eventi, cicli,
@@ -1271,7 +1283,7 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
             lessonGroup-7:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             ramp_up:
               display_name: Cicli annidati
           student_description: Inizia a programmare con algoritmi, eventi, cicli,
@@ -1302,7 +1314,7 @@ it:
             end_of_course_project:
               display_name: Progetto di fine corso
             lessonGroup-7:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             ramp_up:
               display_name: Cicli annidati
           student_description: Inizia a programmare con algoritmi, eventi, cicli,
@@ -1459,7 +1471,7 @@ it:
             csf_for_loops:
               display_name: Cicli con contatore
             csf_sprites:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_variables:
               display_name: Cicli con contatore
             end_of_course_project:
@@ -1575,6 +1587,11 @@ it:
           title: Supporto con la programmazione basata sul testo
         csa-pl-test:
           name: csa-pl-test
+        csa-postap-se-and-computer-vision-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale
         csa-self-paced-pl:
           description: "Questo modulo è progettato per orientarti agli strumenti che
             userai durante l'insegnamento della CSA, per assistere gli studenti nell'apprendimento.
@@ -1584,9 +1601,17 @@ it:
           name: piattaforma-di-autoapprendimento-csa
           title: Navigare nel sito Code.org per gli Insegnanti di CSA Pilota
         csa-software-engineering:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Capitolo 2: Visione Artificiale'
           lessons:
+            lesson-7:
+              name: Sondaggio preliminare su ingegneria del software e visione artificiale
+            lesson-8:
+              name: Sondaggio preliminare su ingegneria del software e visione artificiale
             lesson-9:
               name: Configurazione
+          title: Sondaggio preliminare su ingegneria del software e visione artificiale
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -1627,6 +1652,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
             lessonGroup-5:
@@ -1635,12 +1662,16 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa1-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Sondaggio
             lessonGroup-3:
               display_name: Contenuto
+            lessonGroup-4:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Lezioni alternative
           lessons:
@@ -1652,16 +1683,22 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa1-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
           name: facilitatore-pilota-csa1
@@ -1669,20 +1706,28 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sondaggio
         csa2-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa2-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
           lessons:
@@ -1692,16 +1737,22 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa2-pilot:
           lesson_groups:
             lesson group:
               display_name: Contenuto
+            lessonGroup-2:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
         csa2-pilot-facilitator:
           lesson_groups:
             lesson group:
               display_name: Contenuto
+            lessonGroup-2:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
           name: facilitatore-pilota-csa2
@@ -1709,14 +1760,20 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
           lessons:
@@ -1728,16 +1785,22 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa3-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa3-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
           name: facilitatore-pilota-csa3
@@ -1745,14 +1808,20 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
           lessons:
@@ -1766,18 +1835,26 @@ it:
               display_name: Contenuto
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lesson_group:
               display_name: Contenuto
+            show_what_you_know:
+              display_name: Mostra ciò che sai
         csa4-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
         csa4-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
           name: facilitatore-pilota-csa4
@@ -1785,6 +1862,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -1793,24 +1872,32 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
           name: esemplari-csa5
           title: 'Unità 5: organizzazione degli oggetti [Exemplars]'
         csa5-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
         csa5-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sandbox
           name: facilitatore-pilota-csa5
@@ -1822,44 +1909,60 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Lezioni alternative
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa6-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa6-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa7-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa7-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Lezioni alternative
           lessons:
@@ -1869,38 +1972,52 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa7-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sondaggio
         csa8-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-4:
               display_name: Sondaggio
             lessonGroup-5:
@@ -1909,30 +2026,73 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
         csa8-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa8-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sandbox
         csa8-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+            lessonGroup-3:
+              display_name: Mostra ciò che sai
             lessonGroup-5:
               display_name: Sondaggio
+        csc-adaptations-2023:
+          lessons:
+            lesson-2:
+              name: Comportamenti animali per la sopravvivenza
+            lesson-3:
+              name: Scrivi il tuo programma sull'adattamento
+          title: Modellizzazione dell'adattamento degli animali (2023)
+        csc-ecosystems-2023:
+          description: "## Preparazione consigliata per questo modulo\n\n**Scienza:**
+            gli studenti simuleranno un ecosistema di vita marina nelle lezioni 1
+            e 2. Per acquisire familiarità con questo ecosistema, consigliamo questo
+            [Video Animali dell'Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g)
+            (9:42 minuti). \n\nNella lezione 2, gli studenti scriveranno un programma
+            per simulare diverse pratiche di pesca sostenibili. Queste sono alcune
+            letture per acquisire conoscenze di base e approfondire le connessioni
+            con il mondo reale: [Sottovalutare la pesca eccessiva](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (articolo sul Monterey Bay Aquarium) o [Mw, kwa Talks to the Loon] \\(libro
+            per bambini)[2],\n\n**Informatica:** in questo modulo, gli studenti impareranno
+            nuovi concetti di programmazione che potrebbero essere difficili per gli
+            studenti alle prime armi con l'informatica. Se gli studenti non hanno
+            familiarità con il Labratorio dei personaggi di Code.org, consigliamo
+            di provare [Pesce che nuota nel Labratorio dei personaggi](https://studio.code.org/s/coursee-2022/lessons/3)
+            (55 minuti) per un'introduzione di base allo strumento. \n\nQuesto modulo
+            utilizza anche un concetto informatico avanzato chiamato istruzioni condizionali.
+            Gli studenti imparano questo concetto in modo strutturato, ma alcuni potrebbero
+            trarre vantaggio dalla prima attività tradizionale introduttiva alle istruzioni
+            condizionali: [Istruzioni condizionali con le carte](https://studio.code.org/s/coursed-2022/lessons/12)
+            (50 minuti)."
+          lessons:
+            lesson-3:
+              name: Programma il tuo ecosistema (2023)
+          name: csc-ecosistemi-2023
+          title: Simulazione di un ecosistema marino (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -2348,7 +2508,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) per far sapere al team del piano di studi di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) per far sapere al team del piano di studi di Code.org com'è andata l'unità.
           description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1v2:
@@ -2579,7 +2739,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) per far sapere al team del programma di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) per far sapere al team del programma di Code.org com'è andata l'unità.
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
@@ -2760,7 +2920,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) per far sapere al team del curriculum di Code.org com'è andata l'unità.
           description_short: "  Scopri come progettare un programma che soddisfi le
             esigenze dei tuoi utenti."
           lesson_groups:
@@ -3017,7 +3177,7 @@ it:
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) per far sapere al team del curriculum di Code.org com'è andata l'unità.
           description_short: Scopri come le persone utilizzano i computer per risolvere
             problemi relativi ai dati.
           lesson_groups:
@@ -3312,7 +3472,7 @@ it:
             **Guida all'implementazione per l'Unità 7**
 
             -   Completa l'Unità 1 Capitolo 1 prima di iniziare questa unità
-            -   Questa unità presuppone che gli studenti abbiano familiarità con "Sviluppo App", in particolare nell'utilizzo della "modalità interfaccia" per creare un'interfaccia utente e nell'utilizzo degli eventi per cambiare le schermate quando si fa clic su un pulsante. [Fai clic qui](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) per saperne di più sui consigli per introdurre gli studenti a "Sviluppo App" prima di questa unità.
+            -   Questa unità presuppone che gli studenti abbiano familiarità con "Sviluppo App", in particolare nell'utilizzo della "modalità interfaccia" per creare un'interfaccia utente e nell'utilizzo degli eventi per cambiare le schermate quando si fa clic su un pulsante. [Clicca qui](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) per saperne di più sui consigli per introdurre gli studenti a "Sviluppo App" prima di questa unità.
             -   Si tratta di un'unità opzionale che può essere utilizzata al posto di un'altra unità del corso - Per ulteriori informazioni consultare la [Guida all'implementazione](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview)
             -   Per ulteriori informazioni su questa unità, è possibile visualizzare l'intera [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
 
@@ -4276,6 +4436,11 @@ it:
           student_description: Crea un progetto in "Ballando col codice" da condividere
             con i tuoi amici
           title: Ballando col codice (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Dance Party: edizione A.I.'
+          title: 'Ballando col codice: edizione IA'
         dance-extras:
           description: Vai oltre alla prima ora di programmazione creando progetti
             più complessi.
@@ -4305,6 +4470,7 @@ it:
             con i tuoi amici! (Versione per connessioni lente)
           title: Ballando col codice (versione per connessioni lente)
         dance-unplugged:
+          description_audience: da 5 a 17 anni
           title: Ora del Codice - Ballando col codice - Lezione tradizionale
         dani-june-2020-test:
           lesson_groups:
@@ -4450,6 +4616,10 @@ it:
               display_name: Lezione 1
             lessonGroup-3:
               display_name: Lezione 2
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modello di piano delle lezioni basato sull'ora del codice
         drafting:
           name: drafting
         e-f-ramp:
@@ -5201,6 +5371,31 @@ it:
             di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
           title: Labirinto Classico
         how-ai-works-2023:
+          description: |-
+            Queste lezioni completano la [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Ogni lezione è abbinata a un singolo video della serie, che approfondisce i concetti introdotti nei video. Le lezioni si concentrano sulla creazione di una prima esperienza entusiasmante per gli studenti, in cui gli studenti si impegnano in un'attività o in una simulazione e poi riflettono sull'esperienza come un modo per approfondire la comprensione dell'intelligenza artificiale e creare empatia con le persone colpite da essa. Alcune lezioni si concentrano maggiormente sulla tecnologia alla base dell'IA, mentre altre si concentrano sugli impatti sociali e sulle considerazioni etiche dell'IA.
+
+            **Supporti per gli insegnanti:** puoi saperne di più su come portare le lezioni di intelligenza artificiale in classe attraverso la nostra [serie AI 101 per insegnanti](https://code.org/ai/pl/101). AI 101 per insegnanti è una serie di apprendimento professionale online gratuita e fondamentale per qualsiasi insegnante ed educatore interessato al rivoluzionario mondo dell'intelligenza artificiale (IA) e al suo potenziale di trasformazione nell'istruzione.
+
+            **Opzioni di implementazione:** fai clic su una delle opzioni seguenti per espandere e visualizzare maggiori dettagli.
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnarle tutte!»</span>]
+            Le lezioni da 1 a 7 possono essere insegnate come una sequenza di 7 giorni, in cui ogni giorno si concentra su un singolo video tratto dalla serie di video e approfondisce i concetti introdotti. Le classi che vanno in questa direzione dovrebbero nascondere la Lezione 8, che non rientra in questa sequenza. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Voglio insegnare una lezione specifica o inserirla in un'altra materia»</span>]
+            Ogni lezione può essere indipendente ed essere insegnata indipendentemente dalle altre. Ciò è particolarmente utile se desideri integrare una lezione in un'altra materia o in un corso esistente di informatica, intelligenza artificiale o istruzione generale. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne quella che si desidera insegnare. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: dettagli [<span style="font-size: 1em; font-weight: bold;">«Ho solo un giorno di tempo»</span>] La
+            lezione 8 è progettata per le classi che vogliono presentare l'IA agli studenti, ma hanno solo un giorno per farlo. In questa lezione gli studenti possono prendere appunti mentre la classe guarda l'intera sequenza video. Le classi che vanno in questa direzione dovrebbero nascondere tutte le lezioni tranne la lezione 8. [Fai clic qui per saperne di più su come nascondere una lezione](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
+          name: come-funziona-lia-2023
+          student_description: |-
+            Scopri come funziona l'IA partecipando a diverse esperienze e guardando la serie di video [Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
+
+            **Vuoi insegnare queste lezioni?** [Clicca qui per visualizzare il piano di queste lezioni](/s/how-ai-works-2023?viewAs=Instructor)
           title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con
@@ -5353,7 +5548,7 @@ it:
             lessonGroup-5:
               display_name: Variabili
             lessonGroup-6:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             lessonGroup-7:
               display_name: Progetto di fine corso
         nevada-standards-aligned-fifth-grade-2023-2023:
@@ -5383,7 +5578,7 @@ it:
             lessonGroup-4:
               display_name: Cicli
             lessonGroup-5:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             lessonGroup-6:
               display_name: Eventi
             lessonGroup-7:
@@ -5433,7 +5628,7 @@ it:
             lessonGroup-4:
               display_name: Cicli
             lessonGroup-5:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             lessonGroup-6:
               display_name: Dati
           lessons:
@@ -5474,7 +5669,7 @@ it:
             lessonGroup-3:
               display_name: Sequenze di istruzioni
             lessonGroup-4:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             lessonGroup-6:
               display_name: Cicli
             lessonGroup-7:
@@ -5798,6 +5993,45 @@ it:
           student_description: 'Fase 2 Online: Studio estivo in modalità ibrida (blended
             learning)'
           title: Informatica nello Sviluppo Professionale scientifico fase 2b
+        self-paced-pl-csd-unit1-2-2023:
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per l'insegnamento sull'unità Risoluzione dei
+            problemi e Informatica di Code.org. \n\n**In questo modulo di apprendimento
+            professionale, imparerai a:**\n\n-   Riceverai un'introduzione alla Risoluzione
+            dei problemi e all'Informatica.\n-   Ti eserciterai con i concetti chiave
+            inclusi nell'unità.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            suggerito:** 30 minuti"
+          title: 'Modulo 1: preparazione all''insegnamento della risoluzione dei problemi
+            e dell''informatica'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modulo 2: preparazione all''insegnamento dello Sviluppo Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+          student_description: "Questo modulo di apprendimento professionale è progettato
+            per aiutarti a preparare per 'insegnamento dell'unità Animazioni e Giochi
+            interattivi di Code.org. \n\n**In questo modulo di apprendimento professionale,
+            imparerai a:**\n\n-   Ottenere un'introduzione su Animazioni e Giochi
+            interattivi.\n-   Esercitarti con i concetti chiave inclusi nell'unità.\n-
+            \  Impegnarti con il Web Lab.\n-   Scoprire la fine dei progetti dei capitoli.\n\n**Tempo
+            stimato:** 120 minuti"
+          title: Preparazione all'insegnamento di animazioni e giochi interattivi
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modulo 4: preparazione all'insegnamento del Processo di progettazione"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modulo 5: preparazione all''insegnamento dei Dati e della Società'
         self-paced-pl-csd5-2022:
           title: Insegnare IA e Apprendimento Automatico
         self-paced-pl-csd5-2023:
@@ -5874,7 +6108,7 @@ it:
             lessonGroup-4:
               display_name: Cicli
             lessonGroup-5:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
         test-teaching-ap-cs-unit-1:
           lesson_groups:
             content:
@@ -5909,7 +6143,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -5939,7 +6173,7 @@ it:
             csf_events:
               display_name: Eventi
             csf_impacts:
-              display_name: Impatti dell'informatica
+              display_name: Impatto dell'informatica
             csf_loops:
               display_name: Cicli
             csf_sequencing:
@@ -5984,10 +6218,19 @@ it:
         virtual-pl-csa-summer-2024-day1:
           title: 1° giorno
         virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduzione
+          lessons:
+            lesson-7:
+              name: Introduzione
           title: 1° giorno
         virtual-pl-csa-summer-day2:
           title: 2° giorno
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduzione
           title: 3° giorno
         virtual-pl-csa-summer-day4:
           title: 4° giorno
@@ -6019,8 +6262,14 @@ it:
               name: Valutazione
           title: Giorno 5
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introduzione alle attività asincrone
           title: 1° giorno
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduzione
           title: 2° giorno
         virtual-pl-csp-summer-day3:
           title: 3° giorno

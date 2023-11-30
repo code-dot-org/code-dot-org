@@ -33,6 +33,14 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal delete_time.utc.to_s, already_deleted_follower.deleted_at.to_s
   end
 
+  test "destroying section destroys associated LTI section" do
+    section = create :section
+    lti_section = create :lti_section, section: section
+    section.destroy
+    assert lti_section.reload.deleted_at.present?, "LTI section should be soft deleted"
+    assert LtiSection.without_deleted.where(id: lti_section.id).empty?, "LTI section should be soft deleted"
+  end
+
   test "restoring section restores appropriate followers" do
     old_deleted_follower = create :follower, section: @section
     Timecop.freeze(Time.now - 1.day) do
@@ -315,6 +323,17 @@ class SectionTest < ActiveSupport::TestCase
     end
   end
 
+  test 'add_student returns failure for section instructor' do
+    section_owner = create :teacher
+    section = create :section, user: section_owner
+    create :section_instructor, section: section, instructor: @teacher, status: :active
+
+    assert_does_not_create(Follower) do
+      add_student_return = section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
   test 'add_student returns failure if user does not meet participant_type for section' do
     section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
@@ -472,7 +491,7 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -522,7 +541,7 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -539,7 +558,8 @@ class SectionTest < ActiveSupport::TestCase
     Timecop.freeze(Time.zone.now) do
       section = create :section
       coteacher_user = create :teacher
-      section.add_instructor(coteacher_user.email, current_user)
+      primary_section_instructor_id = section.section_instructors[0].id
+      coteacher_section_instructor = section.add_instructor(coteacher_user.email, current_user)
       section.reload
 
       expected = {
@@ -575,8 +595,8 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
-                             {status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}]
+        sectionInstructors: [{id: primary_section_instructor_id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email},
+                             {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -629,7 +649,7 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
 
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -676,7 +696,7 @@ class SectionTest < ActiveSupport::TestCase
         is_assigned_csa: false,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
-        sectionInstructors: [{status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
+        sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}]
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)

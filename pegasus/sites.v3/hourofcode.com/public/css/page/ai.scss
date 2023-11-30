@@ -173,8 +173,9 @@ section.activities {
   &.blocks {
 
     .action-block {
-      min-width: 300px;
+      min-width: 290px;
       max-width: 420px;
+      text-align: initial;
       margin: 0 auto;
       justify-content: space-between;
 
@@ -200,6 +201,10 @@ section.activities {
         .content-footer p {
           margin-bottom: 0;
         }
+      }
+
+      #educator_resources & {
+        min-height: 600px;
       }
     }
 

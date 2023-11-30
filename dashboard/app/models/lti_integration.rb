@@ -32,6 +32,8 @@ class LtiIntegration < ApplicationRecord
 
   before_create :set_uuid
 
+  has_many :lti_deployments, dependent: :destroy
+
   def set_uuid
     self.platform_id = SecureRandom.uuid
   end

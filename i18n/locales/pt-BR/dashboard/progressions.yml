@@ -2,10 +2,14 @@ pt:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" com a Abelha'
+      "(Optional) Eliza Widget": "(Opcional) Widget Eliza"
+      "(Optional) GAN Guess Widget": "(Opcional) Widget GAN Guess"
       8-Bit Binary Number Widget: Widget de Número Binário de 8 bits
       AI Lab and Isaac's Data: Laboratório de IA e dados do Isaac
       AI Lab and Kim's Data: Laboratório de IA e dados da Kim
       AI Machine Learning - Video: Aprendizado de Máquina com IA - Vídeo
+      'AI for Oceans: Fish vs Not Fish': 'IA para Oceanos: Peixe Versus Não-Peixe'
+      'AI for Oceans: Types of Fish': 'IA para Oceanos: Tipos de Peixes'
       'AI: Impact on Society - Video': 'IA: Impacto na sociedade - Vídeo'
       'AI: Training Data & Bias - Video': 'IA: Dados de treinamento e viés - Vídeo'
       Accelerometer Events: Eventos do Acelerômetro
@@ -30,20 +34,20 @@ pt:
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
       'App Project: Screen Import': 'Projeto do Aplicativo: Importação de Tela'
-      'App: Choose a Kid''s Movie': 'Aplicativo: Choose a Kid''s Movie'
-      'App: Friend Finder': 'Aplicativo: Friend Finder'
-      'App: Guess the Number': 'Aplicativo: Guess the Number'
-      'App: How Many Countries': 'Aplicativos: How Many Countries'
+      'App: Choose a Kid''s Movie': 'Aplicativo: Escolha um Filme Infantil'
+      'App: Friend Finder': 'App: Localizador de Amigos'
+      'App: Guess the Number': 'Aplicativo: Adivinhe o Número'
+      'App: How Many Countries': 'Aplicativos: Quantos Países'
       'App: Improved Pet App': 'Aplicativo: Pets Aprimorado'
-      'App: Is It Your Birthday?': 'Aplicativo: Is It Your Birthday?'
-      'App: My Famous Birthday': 'Aplicativo: My Famous Birthday'
-      'App: National Parks': 'Aplicativo: National Parks'
-      'App: Outfit Picker': 'Aplicativo: Outfit Picker'
-      'App: Pet Chooser': 'Aplicativo: Pet Chooser'
-      'App: Stamp Notebook': 'Aplicativo: Stamp Notebook'
-      'App: Story Creator': 'Aplicativo: Story Creator'
-      'App: The Fastest Finger': 'Aplicativo: The Fastest Finger'
-      'App: Where Should I Live?': 'Aplicativo: Where Should I Live?'
+      'App: Is It Your Birthday?': 'Aplicativo: É seu aniversário?'
+      'App: My Famous Birthday': 'Aplicativo: Meu Aniversário Famoso'
+      'App: National Parks': 'Aplicativo: Parques Nacionais'
+      'App: Outfit Picker': 'Aplicativo: Selecionador de Look'
+      'App: Pet Chooser': 'App: Selecionador de Animal de Estimação'
+      'App: Stamp Notebook': 'Aplicativo: Caderno de Selos'
+      'App: Story Creator': 'App: Criador de Histórias'
+      'App: The Fastest Finger': 'Aplicativo: O Dedo Mais Rápido'
+      'App: Where Should I Live?': 'Aplicativo: Onde eu Devo Morar?'
       Arrays: Vetores
       Artist Intro with JR Hildebrand: Introdução do Artista com JR Hildebrand
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
@@ -52,6 +56,7 @@ pt:
       Assessment: Avaliação
       Attribution: Atribuição
       Back and Forth: Vai e volta
+      Balance an Ecosystem: Equilíbrio de um ecossistema
       Basic Conditionals: Condicionais Básicas
       Bass, Mid, and Treble: Grave, Médio e Agudo
       Be a Super Digital Citizen: Seja um Cidadão Super Digital
@@ -96,6 +101,7 @@ pt:
       Change: Mudança
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
+      Check For Understanding: Verifique se todos compreenderam
       Check Your Work: Verifique Seu Trabalho
       Check for Understanding: Verifique a compreensão
       Check-In Survey: Pesquisa de verificação
@@ -144,6 +150,7 @@ pt:
       Create your project: Crie seu projeto
       Creating Sprites: Fazendo Sprites
       Creative Commons Search: Busca Creative Commons
+      Cropping Widget: Widget Recorte
       Customize: Personalizar
       Customize Your App: Personalize seu aplicativo
       Customizing Your App: Personalizando seu aplicativo
@@ -172,6 +179,8 @@ pt:
       Drawing: Desenho
       Drawing Shapes: Desenhando Formas
       Driver Alert System: Sistema de alerta de motorista
+      Ecosystems Simulation: Simulação de ecossistema
+      Ecosystems Video: Vídeo sobre ecossistemas
       Editing Images: Editando Imagens
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
@@ -203,6 +212,7 @@ pt:
       Exploring CS in Entertainment: Explorando Ciências da Computação no Entretenimento
       Exploring more CSS: Explorando mais CSS
       Extra: Extra
+      Final Dance Party Project: Projeto final da festa dançante
       Final Personal Website: Website pessoal final
       Final Room Escape App: App Final Sala de Escape
       Find the Wizard: Encontre o Mago
@@ -214,6 +224,7 @@ pt:
       Follow the Algorithm - Unplugged Activity: Siga o Algoritmo - Atividade offline
       Follow the Mouse: Siga o Mouse
       Fonts and Style: Fontes e Estilo
+      Food Chain Setup: Configuração da cadeia alimentar
       FoodFight: GuerraDeComida
       For Loop Fun - Unplugged Activity: Diversão com loops for - Atividade offline
       For Loops: Laços para
@@ -245,6 +256,7 @@ pt:
       Ice Age Loops: Laços da Era do Gelo
       If Statements: Instruções Se
       If-Else Statements: Instruções Se/Senão
+      If... then... Conditional Statements: Se... então... Declarações condicionais
       Images and Sounds: Imagens e Sons
       Images in HTML: Imagens em HTML
       Import Your Model: Importe seu modelo
@@ -260,6 +272,7 @@ pt:
       Inspiration!: Inspiração!
       InspirationalArtwork: ArteInspiradora
       Interactive Card: Cartão Interativo
+      Intro Video: Vídeo de introdução
       Intro to Design Mode: Introdução ao Modo Design
       Intro to Flyer Game: Introdução ao Jogo de Folhetos
       Intro to For Loops: Introdução para Laços "For"
@@ -275,6 +288,7 @@ pt:
       Iteration and Parameters: Iteração e Parâmetros
       Keep On Dancing!: Continue Dançando!
       Keeping Data Secret: Mantendo o segredo dos dados
+      Key Press & At Measure Events: Eventos Pressionar Tecla e Medição
       Keyboard Input: Entrada de Teclado
       Kim's Survey: Pesquisa da Kim
       Kim's Survey Data: Dados da pesquisa da Kim
@@ -293,6 +307,7 @@ pt:
       Looking for Patterns: Procurando padrões
       Looping: Repetição
       Loops with the Artist: Laços com o Artista
+      Make Dancer & Dance Move: Criar Dançarina e Movimento de Dança
       Make Your Sprites: Faça seus Sprites
       Make a Prediction: Faça uma Predição
       Make an Interactive Card: Faça um Cartão Interativo
@@ -337,11 +352,13 @@ pt:
       Naming Variables: Nomeando Variáveis
       Nested Loops with the Bee: Laços Alinhados com a Abelha
       New Shapes: Novas Formas
+      Noisy Image Widget: Widget Imagem Ruidosa
       Orientation: Orientação
       Overview: Visão geral
       Pair Programming: Programação em duplas
       Pet Recommender: Recomendador de animais de estimação
       Picturing Data: Estruturação de dados
+      Pizza Party Data: Dados da Festa da Pizza
       Pizza Recommendations: Recomendações de pizza
       Plan Your Project: Planeje seu projeto
       Plan Your Scene: Planeje sua Cena
@@ -406,7 +423,7 @@ pt:
       Run a simulation: Executar uma Simulação
       Same Game: O Jogo Igual
       Sample App: Aplicativo exemplo
-      Sample Apps for Good: Exemplos de Apps for Good
+      Sample Apps for Good: Exemplos de Aplicativos do Bem
       Sample Game: Jogo de Exemplo
       Sample Games: Jogos de Exemplo
       Sample Personal Web Pages: Exemplos de Páginas Web Pessoais
@@ -428,6 +445,7 @@ pt:
       Share Out: Compartilhar
       Share Your App: Compartilhe Seu App
       Share Your Pages: Compartilhe Suas Páginas
+      Share Your Simulation: Compartilhe sua simulação
       Share Your Stylesheets: Compartilhe Suas Folhas de Estilo
       Shoe Recommendation Survey: Pesquisa de recomendação de calçado
       Shoe Recommender: Recomendador de sapato
@@ -437,6 +455,8 @@ pt:
       Sliders: Barras de Rolagem
       Smart Bike - Blinkers: Bicicleta Inteligente - Blinkers
       Social Sleuth: Detetive social
+      Solution 2 - Fishing Season: Solução 2 - Estação de pesca
+      Solution 3 - Fishing Limits: Solução 3 - Limites de pesca
       Speed it Up, Slow it Down: Acelerar, retardar
       Sprite Interactions: Interações com Sprite
       Sprite Interactions Review: Revisão de interações de Sprite
@@ -460,7 +480,8 @@ pt:
       The Buzzer: A Campainha
       The Collector: O Coletor
       The Counter Pattern: O padrão Contador
-      The Draw Loop: O laço de desenho
+      The Draw Loop: O Desenho do Laço
+      The Food Chain: A cadeia alimentar
       The Harvester: A Colheitadeira
       Top Websites: Principais Sites
       Tour of Design Mode: Introdução ao Modo Design
@@ -487,6 +508,7 @@ pt:
       Velocity and the Counter Pattern Review: Revisão de Velocidade e o Padrão Contador
       Video: Vídeo
       'Video: "If/Else" Statements': 'Vídeo: Declarações Condicionais'
+      'Video: Amazon and Data': 'Vídeo: Amazon e Dados'
       'Video: Booleans': 'Vídeo: Boleanos'
       'Video: CS Matters': 'Vídeo: Importância da Ciência da Computação'
       'Video: Conditional Statements': 'Vídeo: Declarações Condicionais'
@@ -500,6 +522,7 @@ pt:
       'Video: How Search Works': 'Vídeo: Como Funciona a Ferramenta de Busca'
       'Video: IOSP Model': 'Vídeo: Modelo IOSP'
       'Video: If/Else Statements': 'Vídeo: Condicionais'
+      'Video: Impact on Society': 'Vídeo: Impacto na Sociedade'
       'Video: Intro to CSS': 'Vídeo: Introdução a CSS'
       'Video: Intro to CSS - Part 1': 'Vídeo: Introdução ao CSS - Parte 1'
       'Video: Intro to CSS - Part 2': 'Vídeo: Introdução a CSS - Parte 2'
@@ -512,6 +535,7 @@ pt:
       'Video: Introduction to Variables': 'Vídeo: Introdução às variáveis'
       'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao Laço de Desenho'
       'Video: Managing Disagreement': 'Vídeo: Gerenciando Conflitos'
+      'Video: Netflix and Data': 'Vídeo: Netflix e Dados'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
       'Video: Pair Programming': 'Vídeo: Programação em pares'
       'Video: Problem Solving Process': 'Vídeo: O Processo de Resolução de Problemas'
@@ -519,14 +543,20 @@ pt:
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'
       'Video: Teamwork': 'Vídeo: Trabalho em Equipe'
       'Video: The Animation Tab': 'Vídeo: A guia de Animação'
+      'Video: Training Data and Bias': 'Vídeo: Dados de Treinamento e Viés'
       'Video: Velocity': 'Video: Velocidade'
+      'Video: Waze and Data': 'Vídeo: Waze e Dados'
       'Video: What Makes a Computer, a Computer?': 'Vídeo: O que faz de um computador um computador?'
+      'Video: What is Machine Learning?': 'Vídeo: O que é Aprendizado de Máquina?'
       Warm Up: Aquecimento
+      WeTube Video Recommendations (2.0): Recomendações de Vídeo WeTube (2.0)
+      WeTube Video Recommendations (Beta): Recomendações de Vídeo WeTube (Beta)
       Website Project: Projeto do SIte
       Welcome to Monster Town: Seja bem-vindo à Monster Town
       Where'd They Go?: Onde eles foram?
       While Loops with the Farmer: While Loops com o agricultor
       Wrap-up: Resumo
+      Written Voice Simulator Widget: Widget Simulador de Voz Escrita
       'You Choose: Improve Your App': 'Você escolhe: Melhore seu aplicativo'
       'You Choose: Restaurant Recommendations': 'Você escolhe: Recomendações de restaurantes'
       Your Personal Website: Seu Site Pessoal

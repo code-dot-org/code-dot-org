@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Il sito Web “The Hour of Code” offre più di 100 attività legate all’informatica adatte a tutte le età e a tutti livelli di esperienza, sviluppate da Code.org e dai suoi partner.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Unisciti a noi"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Unisciti a noi"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Nomina un Insegnante"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Unisciti a noi"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Visualizza le idee di progetto"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "ai-2020": {
+      "title": "Esplora l'intelligenza artificiale e l'apprendimento automatico",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Inizia"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Prova"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ulteriori informazioni"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Ora del Codice - La creatività con l'Intelligenza Artificiale",
+      "body": "Unisciti a milioni di persone in tutto il mondo per organizzare un'ora di programmazione, con o senza AI, e scoprire come funziona l'AI. Chiunque, ovunque può farlo. Non è necessaria alcuna esperienza.",
+      "buttonText": "Ulteriori informazioni"
+    }
+  }
+}

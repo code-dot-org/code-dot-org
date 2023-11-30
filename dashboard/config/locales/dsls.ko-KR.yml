@@ -2452,11 +2452,11 @@ ko-KR:
         - {}
       CSD U4 MC Q4_2023:
         answers:
-        - {}
+        - text: 버튼
         - correct: true
+        - text: 드롭다운
         - {}
-        - {}
-        - {}
+        - text: 체크박스
         questions:
         - {}
       CSD U4 MC Q5_2023:
@@ -2980,7 +2980,7 @@ ko-KR:
       CSD U6 MC Q2_2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -2990,7 +2990,7 @@ ko-KR:
       CSD U6 MC Q2_6b2023:
         answers:
         - {}
-        - {}
+        - text: 버튼
         - {}
         - correct: true
           text: 가속도 센서
@@ -6434,7 +6434,7 @@ ko-KR:
         display_name: 과정말 프로젝트
       courseB_EOC2022:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseB_EOC2022_2023:
         description: 마지막 레슨에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -7005,7 +7005,7 @@ ko-KR:
         - text: 아래 코드를 주의 깊게 보세요. "실행"을 클릭하면 무슨 일이 벌어집니까?
       courseD_EOC2022:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
-        display_name: 과정말 프로젝트
+        display_name: 종합 프로젝트
       courseD_EOC2022_2023:
         description: 과정 D의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
@@ -8619,15 +8619,17 @@ ko-KR:
         description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_examples2022_2022_pilot_-2022-2:
-        display_name: 과정말 프로젝트
+        description: 과정 F의 마지막에 도달했습니다! 체험할 프로젝트를 선택하세요.
+        display_name: 종합 프로젝트
       courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: 과정 F의 마지막에 도달했습니다! 체험할 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_examples_2021:
         description: 과정 F의 마지막에 도달했습니다! 만들 프로젝트를 선택하세요.
         display_name: 과정말 프로젝트
       courseF_EOC_samples2022:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
-        display_name: 과정말 프로젝트
+        display_name: 종합  프로젝트
       courseF_EOC_samples2022_2023:
         description: 최종 프로젝트를 시작하려고 합니다. 시작하기 전에, 잠시 시간을 내어 예시 프로젝트를 살펴보십시오.
         display_name: 과정말 프로젝트
@@ -16310,11 +16312,6 @@ ko-KR:
 
           ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
       ml-models-shoe survey_2022:
-        markdown: |
-          ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
-
-          ## 신발 추천 설문조사에 참여하려면 [여기를 클릭하세요] (https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform)
-      ml-models-shoe survey_2023:
         markdown: |
           ![] (https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 

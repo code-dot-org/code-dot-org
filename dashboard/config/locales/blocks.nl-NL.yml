@@ -69,6 +69,11 @@ nl:
             '"measures"': maten
             '"seconds"': seconden
         text: na {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': maten
+            '"seconds"': seconden
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -92,6 +97,27 @@ nl:
             '"SLOTH"': traagheid
             '"UNICORN"': eenhoorns
             sprites: alle
+          MOVE:
+            '"next"': "(Volgende)"
+            '"prev"': "(Vorige)"
+            '"rand"': "(Willekeurig)"
+            MOVES.ClapHigh: Hoog klappen
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double down
+            MOVES.Drop: Naar de grond
+            MOVES.Floss: Floss
+            MOVES.Fresh: Vers
+            MOVES.Kick: Ster
+            MOVES.Rest: Geen
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: Dit of dat.
+        text: "{GROUP} doe {MOVE} {DIR} voor altijd"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': katten
+            '"SLOTH"': traagheid
           MOVE:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
@@ -550,6 +576,49 @@ nl:
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
             '"neon"': Neon
+            '"rave"': Zwart-wit
+            '"tropical"': Tropisch
+            '"vintage"': Vintage
+            '"warm"': Rood
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunnel
+            '"color_cycle"': Kleuren
+            '"diamonds"': Ruiten
+            '"disco"': Vierkanten
+            '"disco_ball"': Discobal
+            '"fireworks"': Vuurwerk
+            '"flowers"': Bloemen
+            '"galaxy"': Ruimte
+            '"growing_stars"': Groeiende sterren
+            '"kaleidoscope"': Caleidoscoop
+            '"lasers"': Laser-dansvloer
+            '"music_wave"': Golven
+            '"none"': Geen
+            '"quads"': Hoeken
+            '"rainbow"': Regenboog
+            '"rand"': "(Willekeurig)"
+            '"ripples"': Rimpelingen
+            '"ripples_random"': Willekeurige rimpelingen
+            '"snowflakes"': Sneeuw
+            '"sparkles"': Twinkelingen
+            '"spiral"': Spiraal
+            '"splatter"': Verfspetters
+            '"squiggles"': Kronkels
+            '"starburst"': Sterrenvorming
+            '"stars"': Sterren
+            '"text"': Titel van het lied
+          PALETTE:
+            '"cool"': Blauw
+            '"default"': Licht
+            '"electronic"': Elektronisch
+            '"iceCream"': Ijsco
+            '"neon"': Neon
+            '"rainbow"': Regenboog
             '"rave"': Zwart-wit
             '"tropical"': Tropisch
             '"vintage"': Vintage
@@ -1702,7 +1771,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
         text: "{CONDITION} {SPRITE1} raakt {SPRITE2}"
       gamelab_clickedOn:
         text: wanneer {SPRITE} klikte
@@ -1832,7 +1901,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
           KEY:
             '"a"': a
             '"b"': b
@@ -2138,7 +2207,7 @@ nl:
         options:
           CONDITION:
             '"when"': wanneer
-            '"while"': terwijl
+            '"while"': zolang
         text: "{CONDITION} {SPRITE} geklikt"
       gamelab_spriteSay:
         text: "{SPRITE} zegt {SPEECH}"

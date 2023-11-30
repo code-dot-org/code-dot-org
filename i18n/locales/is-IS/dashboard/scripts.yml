@@ -3534,3 +3534,18 @@ is:
               display_name: Lokaverkefni námskeiðs
           description_audience: 'Aldur: 9-13'
           description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu til eigin myndir, sögur og leiki.
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Kynning
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Kynning
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Kynning
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kynning

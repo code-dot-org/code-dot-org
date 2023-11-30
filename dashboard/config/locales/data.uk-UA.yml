@@ -769,12 +769,12 @@ uk:
         alg_7_function: Інформатика в Алгебрі - Функції
         alg_8_design_recipe: Інформатика в Алгебрі - Набір правил Структури коду
         alg_9_booleans: Інформатика в Алгебрі - Логічні значення
-        applab_hoc_designmode: Додаток лабораторії "Година коду" - Режим дизайну
+        applab_hoc_designmode: Година коду в Програмній Лабораторії - режим дизайну
         applab_hoc_onevent: Додаток лабораторії "Година коду" - Події
         applab_hoc_setproperty: Додаток лабораторії "Година коду" - Встановлення властивостей
         applab_hoc_share: Додаток лабораторії "Година коду" - Поширити
         applab_hoc_welcome: Додаток лабораторії "Година коду" - Ласкаво просимо
-        applab_intro_designmode: Апп Лаб - Режим Дизайну
+        applab_intro_designmode: Програмна Лабораторія - режим дизайну
         applab_intro_events: Апп Лаб - Додай інтерактиву
         applab_intro_share: Апп Лаб - Поділіться своїм Додатком
         applab_intro_sounds: Апп Лаб - Зображення та Звуки
@@ -784,13 +784,14 @@ uk:
         code-break: Зробіть перерву на код
         csc-ecosystems-intro: Імітація морської екосистеми
         csc-mapmakers-intro: Кодування інтерактивних карт
-        csc-starquilts-intro: Кодуємо геометричний зірковий узор
+        csc-starquilts-intro: Кодування геометричного зіркового узору
         csc_animal_adaptations_intro: Моделювання адаптацій тварин
+        csc_bookcovers_intro: Кодування обкладинки книги
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_applab_arrays: Вступ до масивів
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим
+        csd_applab_designmode: 'Дослідження інформатики: Програмна Лабораторія - режим
           дизайну'
-        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
+        csd_applab_designmode_short: режим дизайну Програмної Лабораторії
         csd_applab_loops: Цикли в Програмній Лабораторії
         csd_applab_parameters: Функції з параметрами
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
@@ -819,6 +820,7 @@ uk:
         csd_gamelab_sprites_2: Анімація спрайтів
         csd_gamelab_variables_1: Вступ до змінних - Частина 1
         csd_gamelab_velocity: Швидкість
+        csd_ml_how_ai_works: Як працює ШІ
         csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
         csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
         csd_ml_model_cards_july2021: Картки моделі в Лабораторії ШІ
@@ -887,7 +889,7 @@ uk:
         hoc_dance_properties: Танцювальна вечірка - Властивості
         hoc_dance_properties_2019: Танцювальна вечірка 2019 — Властивості
         hoc_dance_warmup: Танцювальна вечірка - Розминка
-        hoc_dance_warmup_2019: Танцювальна вечірка 2019 — Розминка
+        hoc_dance_warmup_2019: Танцювальна вечірка — Розминка
         hoc_wrapup: Підсумок години коду
         iceage_events: Година коду Льодовикового періоду - Події
         iceage_intro: Година коду Льодовикового періоду - Вступ
@@ -934,6 +936,8 @@ uk:
         playlab_intro: Представляємо Ігрову студію
         playlab_repeat_forever: Ігрова студія - Повторювати постійно
         repeat_block: Використання блоку повторів
+        se-cv-intro-to-lessons: 'Програмна інженерія та комп''ютерний зір: Вступ до
+          уроків'
         starwars_blocks_congrats: 'Зоряні війни: Закодуємо далеку Галактику - Вітання'
         starwars_blocks_events: 'Зоряні війни: Закодуємо далеку Галактику - Події'
         starwars_blocks_intro: 'Зоряні війни: Закодуємо далеку Галактику - Вступ'

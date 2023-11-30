@@ -996,3 +996,18 @@ bn:
               display_name: শর্তযুক্ত
             lessonGroup-5:
               display_name: চলকগুলো
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: ভূমিকা
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: ভূমিকা
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ভূমিকা

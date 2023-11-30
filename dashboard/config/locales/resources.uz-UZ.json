@@ -9097,6 +9097,9 @@
         "video-text-compression/text-compression/unversioned": {
           "name": "Video: Aloe Blak bilan matnni siqish",
           "type": "Video"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Manba"
         }
       }
     }

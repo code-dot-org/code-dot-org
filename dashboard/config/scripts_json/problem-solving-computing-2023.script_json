@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "456afea7-f9d2-4bf4-9025-8ee6c8ba5d8a",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Want to teach CS Discoveries, but not sure where to start? Code.org has released a professional learning module all about CSD's Unit 1: Problem Solving and Computing. This two-hour, self-paced module will teach you what you need to know to teach CSD. Check it out at this link!",
+          "link": "https://studio.code.org/courses/self-paced-pl-csd-unit1-2023",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Unit 1 Self-Paced PL"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -19,7 +31,7 @@
     },
     "new_name": null,
     "family_name": "problem-solving-computing",
-    "serialized_at": "2023-10-12 18:10:28 UTC",
+    "serialized_at": "2023-10-27 19:25:44 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

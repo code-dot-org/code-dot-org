@@ -60,7 +60,7 @@ def get_browser(test_run_name)
   browser = nil
   if ENV['TEST_LOCAL'] == 'true'
     headless = ENV['TEST_LOCAL_HEADLESS'] == 'true'
-    browser = SeleniumBrowser.local(headless, ENV['BROWSER_CONFIG'])
+    browser = SeleniumBrowser.local(browser: ENV['BROWSER_CONFIG'], headless: headless)
   else
     browser = Retryable.retryable(tries: MAX_CONNECT_RETRIES) do
       saucelabs_browser(test_run_name)

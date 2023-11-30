@@ -1,5 +1,5 @@
 ---
-title: Un esempio di delibera per supportare la Settimana di Educazione all'Informatica e l'Ora del Codice
+title: Un esempio di delibera per supportare la Settimana Internazionale di Educazione all'Informatica e l'Ora del Codice
 ---
 
 {{ signup_button }}
@@ -37,7 +37,7 @@ Considerando che tutti gli studenti meritano una preparazione completa nell'inse
 
 considerando che l'istruzione informatica presenta sfide da affrontare, tra cui il miglioramento dell'accesso ai corsi di informatica per tutti gli studenti e lo sviluppo professionale degli insegnanti di informatica;
 
-Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a demistificare il campo dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi di informatica;
+Considerando che la partecipazione a un'Ora del Codice durante la settimana dell'insegnamento dell'informatica può servire a fare chiarezza sul tema dell'informatica e incoraggiare un maggior numero di studenti a intraprendere ulteriori studi in questo ambito;
 
 considerando che il campo dell'informatica presenta notevoli barriere di equità da affrontare, tra cui l'attrazione e il mantenimento di un gruppo di candidati diversi per razza, etnia e genere a tutti i livelli e settori;
 

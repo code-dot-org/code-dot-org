@@ -1140,9 +1140,9 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test 'milestone with student in experiment triggers rubric eval job' do
-    create :single_section_experiment, section: @section, name: 'ai-rubrics'
+    create :single_section_experiment, section: @section, name: 'ai-rubrics', script: @script
     EvaluateRubricJob.stubs(:ai_enabled?).with(@script_level).returns(true)
-    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, script_level_id: @script_level.id).once
+    EvaluateRubricJob.expects(:perform_later).with(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id).once
     sign_in @student
 
     post :milestone, params: @milestone_rubric_params

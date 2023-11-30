@@ -453,8 +453,6 @@
   volunteer_engineer_submission_title: "Frymëzo nxënësit dhe vullnetarizo"
   volunteer_engineer_submission_subtitle_generic: '100,000 mësues do të organizojnë një Orë të Kodimit në klasën e tyre këtë vit. më 7-13 dhjetor 2015. Ata duan ndihmën tënde! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} e mësuesve kanë nevojë për vullnetarë.<br>%{num_volunteers} vullnetarë janë regjistruar. Bashkoju atyre."
-  volunteer_engineer_submission_intro_signup: "Ju lutemi shkruani të dhënat e mëposhtme në qoftë se jeni student i shkencës kompjuterike ose profesionist i software. Fushat e shënuara me një<span class=\"form-required-field\">*</span>janë të domosdoshme."
-  volunteer_engineer_submission_intro_links: "Keni nevojë të gjeni vullnetarë? Gjej një vullnetar vendor në hartën tonë<a href=\"%{volunteer_local}\">të vullnetarëve</a>."
   volunteer_engineer_submission_field_name: "Emri"
   volunteer_engineer_submission_field_name_placeholder: "Emri i plotë"
   volunteer_engineer_submission_field_company: "Firma (ose Universiteti)"
@@ -1248,6 +1246,7 @@
   header_report_abuse: "Raporto abuzim"
   header_legal: "Privatësia & Ligjore"
   header_legal_privacy: "Rregullat e Privatësisë"
+  header_legal_cookie_notice: "Njoftim për Cookie"
   header_legal_tos: "Kushtet e shërbimit"
   header_tutorials: "Tutoriale"
   user_header_label: "Përshëndetje %{username}"

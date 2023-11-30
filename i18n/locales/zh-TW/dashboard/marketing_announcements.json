@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "一小時玩程式的網站匯集了由 Code.org 及其合作夥伴所設計的超過 500 多項計算機科學活動，適用於所有年齡和不同經驗水平的人。",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "繼續學習"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "加入我們"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "加入我們"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "任命為老師"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "加入我們"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "查看專案靈感"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "ai-2020": {
+      "title": "探索人工智能和機器學習",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "開始"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "試一試"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "進一步了解"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "一小時玩程式：利用人工智慧進行創意",
+      "body": "與全球數百萬人一起組織一小時玩程式，無論是否使用AI，都可以學習AI如何運行。任何人，任何地方都可以開展。無需經驗。",
+      "buttonText": "進一步了解"
+    }
+  }
+}

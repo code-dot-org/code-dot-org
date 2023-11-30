@@ -768,6 +768,20 @@ form {
   flex-wrap: wrap;
   overflow: hidden;
 
+  // Use this wrapper on the image or video
+  // to add a margin around it
+  .media-wrapper {
+    & > * {
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+
   .text-wrapper {
     padding: 1rem 1.5rem;
   }
@@ -776,7 +790,8 @@ form {
     @include heading-sm;
 
     &.heading-md {
-      @include heading-md
+      @include heading-md;
+      font-weight: unset;
     }
   }
 

@@ -72,7 +72,7 @@ Propagujte Hodinu kódu medzi ostatnými učiteľmi, ktorí by sa k vám mohli 
 
 ### Informujte dobrovoľníkov tým, že svoje podujatie zaregistrujete
 
-Keď svoje [podujatie Hodiny kódu zaregistrujete](/#join), budete dostávať užitočnú e-mailovú komunikáciu s novinkami a tipmi, ako Hodinu kódu úspešne usporiadať. Takýmto spôsobom tiež informujete miestnych dobrovoľníkov o tom, že vaša škola sa zapája do Hodiny kódu. Dobrovoľníci sú výborným zdrojom pomoci. Môžu napríklad prísť do triedy a porozprávať vašim žiakom o informatike alebo im jednoducho pomáhať s aktivitami, ktoré budú robiť v rámci Hodiny kódu. 
+Keď si [zaregistrujete svoju Hodinu kódu](/events), dostanete užitočné informácie s novinkami a tipmi na usporiadanie úspešnej Hodiny kódu. Takýmto spôsobom tiež informujete miestnych dobrovoľníkov o tom, že vaša škola sa zapája do Hodiny kódu. Dobrovoľníci sú výborným zdrojom pomoci. Môžu napríklad prísť do triedy a porozprávať vašim žiakom o informatike alebo im jednoducho pomáhať s aktivitami, ktoré budú robiť v rámci Hodiny kódu. 
 
 ### Snažte sa svojich žiakov nadchnúť
 

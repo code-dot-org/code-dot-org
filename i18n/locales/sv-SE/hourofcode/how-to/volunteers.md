@@ -76,7 +76,7 @@ Om du får för många förfrågningar från lärare kan du alltid uppdatera din
 
 Du behöver inte använda vår volontärkarta för att vara volontär! Faktum är att vi rekommenderar att du kontaktar lärare och administratörer direkt om det finns ett klassrum du vill arbeta volontär med.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - Om du har en annan skola i åtanke, besök deras webbplats för att hitta lämpliga kontakter att nå ut till, till exempel en rektor eller vice rektor, teknik- eller datavetenskapsinstruktörer, eller till och med skolans PTSA. Du kan också samarbeta med organisationer som Boys & Girls Clubs of America, Junior Achievement, en YMCA-gren och mer för att vara värd för ett evenemang. – Om du inte kan hitta en skola som är värd för en Hour of Code kan du frivilligt hjälpa till att driva ditt eget event med ditt företag. Kolla in vår [Vägledningsguide för företag](https://hourofcode.com/us/how-to/companies) för att lära dig mer och bli inspirerad.
+För att komma igång: - Om du är förälder eller vårdnadshavare, skicka [det här e-post](https://hourofcode.com/us/promote/resources#help-schools) meddelandet till ditt barns lärare som erbjuder att hjälpa dem att köra en Hour of Code. - Om du har en annan skola i åtanke, besök deras webbplats för att hitta lämpliga kontakter att nå ut till, till exempel en rektor eller vice rektor, teknik- eller datavetenskapsinstruktörer, eller till och med skolans PTSA. Du kan också samarbeta med organisationer som Boys & Girls Clubs of America, Junior Achievement, en YMCA-gren och mer för att vara värd för ett evenemang. – Om du inte kan hitta en skola som är värd för en Hour of Code kan du frivilligt hjälpa till att driva ditt eget event med ditt företag. Kolla in vår [Vägledningsguide för företag](https://hourofcode.com/us/how-to/companies) för att lära dig mer och bli inspirerad.
 
 * * *
 
@@ -126,14 +126,14 @@ Arbeta med skolan eller läraren för att diskutera vad som ger mest betydelse. 
 
 #### Exempel på agenda:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? Vad och vem inspirerade dig? Hur blev du intresserad av Datavetenskap? Hade du en mentor? Ställ frågor till eleverna och lämna tid för frågor och svar. | |30-60 minutes | Code! Om ditt evenemang är personligt är det här dags att svara på frågor och guida eleverna genom tuffa pussel. Försök att inte ge dem lösningen direkt, försök istället att ställa frågor till dem så att de själva kan svara på vad som gick fel, och uppmuntra eleverna att fråga varandra om de har frågor. Om du är volontär virtuellt, samarbeta med läraren om vad det bästa sättet kan vara. Det kan vara mer meningsfullt att återvända i slutet av sessionen för att se vilka framsteg eleverna har gjort. | |1-3 minuter | Tack alla och dela inspirerande avskedsord. Dela ut något av ditt företags swag ([dekaler](#celebrate) är fantastiska)! | | <br />
+|Tid | Dagordning | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\--- | \---\---\---\---\----- | |1-5 minuter | Visa en [inspirationsvideo](https://hourofcode.com/us/promote/resources#videos)| |5-10 minuter | Presentera dig själv och lär dig mer om eleverna: Var arbetar du, vad gör du och vad älskar du mest med ditt jobb? Vad och vem inspirerade dig? Hur blev du intresserad av Datavetenskap? Hade du en mentor? Ställ frågor till eleverna och lämna tid för frågor och svar. | |30-60 minuter | Kod! Om ditt evenemang är personligt är det här dags att svara på frågor och guida eleverna genom tuffa pussel. Försök att inte ge dem lösningen direkt, försök istället att ställa frågor till dem så att de själva kan svara på vad som gick fel, och uppmuntra eleverna att fråga varandra om de har frågor. Om du är volontär virtuellt, samarbeta med läraren om vad det bästa sättet kan vara. Det kan vara mer meningsfullt att återvända i slutet av sessionen för att se vilka framsteg eleverna har gjort. | |1-3 minuter | Tack alla och dela inspirerande avskedsord. Dela ut något av ditt företags swag ([dekaler](#celebrate) är fantastiska)! | | <br />
 
 #### Andra ideer att lägga till ditt event
 
 - Förklara hur teknik påverkar våra liv, med exempel som studenter av alla bakgrunder kommer att bry sig om - prata om teknik som räddar liv, hjälper människor, kopplar samman människor.
 - Om du är ett teknikföretag, demo roliga, innovativa produkter som ditt företag arbetar med. Om du inte är ett teknikföretag, diskutera hur ditt företag använder teknik för att lösa problem och uppnå mål.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- Om du har en grupp personal som kommer att underlätta ditt evenemang eller som volontär med en lokal skola, överväg att beställa [anpassade t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) till din grupp.
+- Om du har en grupp personal som kommer att underlätta ditt evenemang eller volontärarbeta med en lokal skola, överväga att beställa [anpassade t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) till din grupp.
 
 ### 3. Planera dina tekniska behov
 
@@ -186,7 +186,7 @@ Ett av de bästa sätten att hjälpa till är att sprida ordet och marknadsföra
 
 ### 1. Registrera ditt Evenemang
 
-När du [registrerar ditt Hour of Code-evenemang](/#join)får du användbar e-postkommunikation med nyheter och tips för att vara värd för en framgångsrik Hour of Code. Det är också hur du kan låta lokala skolor eller föräldrar veta att du är värd för ett evenemang nära dem.
+När du [registrerar dig för ditt Hour of Code-evenemang](/events)får du användbar e-postkommunikation med nyheter och tips för att vara värd för en framgångsrik Hour of Code. Det är också hur du kan låta lokala skolor eller föräldrar veta att du är värd för ett evenemang nära dem.
 
 ### 2. Lägg ut på Sociala Medier
 
@@ -199,7 +199,7 @@ Hjälp till att öka medvetenheten om datavetenskapsrörelsen med detta exempeli
 
 #### Statistik
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
+- Visste du att endast 53% av amerikanska skolor undervisar i datavetenskap? Ge varje elev chansen att lära sig en #HourOfCode https://hourofcode.com/
 - I USA är endast 26 % av mjukvaruproffsen kvinnor. Introducera fler unga kvinnor till datavetenskap med #HourOfCode https://hourofcode.com/
 - 67 % av datorjobben i USA är inte inom tekniksektorn. Hjälp till att sätta in datavetenskap i standardläroplanen med #HourOfCode https://hourofcode.com/
 

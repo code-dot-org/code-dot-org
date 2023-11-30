@@ -28,7 +28,7 @@ class TeacherSections extends Component {
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool,
+    sectionsAreLoaded: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -55,7 +55,7 @@ class TeacherSections extends Component {
       <div id="classroom-sections">
         <ContentContainer heading={i18n.createSection()}>
           <SetUpSections />
-          {!this.props.asyncLoadComplete && (
+          {!this.props.sectionsAreLoaded && (
             <Spinner size="large" style={styles.spinner} />
           )}
         </ContentContainer>
@@ -91,7 +91,7 @@ export default connect(
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+    sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   }),
   {
     asyncLoadCoteacherInvite,

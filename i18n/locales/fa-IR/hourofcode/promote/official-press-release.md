@@ -4,43 +4,41 @@ title: اعلامیه مطبوعاتی ساعت کد برای مقامات من�
 
 {{ signup_button }}
 
-# Sample press release for elected officials
+# نمونه ای از بیانیه مطبوعاتی برای مقامات منتخب
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### از این نمونه زبان بیانیه مطبوعاتی برای کمک به ایجاد پیام خود در مورد شرکت در ساعت کدنویسی استفاده کنید. 
 
 * * *
 
-#### For Immediate Release  
+#### برای انتشار فوری  
 
 
-#### [DATE]  
+####   
 
 
-#### Contact: [CONTACT INFORMATION]
+#### اطلاعات تماس
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+فرماندار/نماینده مجلس/شهردار/عضو شورا [نام را وارد کنید] که در ساعت کد نویسی دانش آموزان محلی شرکت کرده است. <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+جامعه برای افزایش آگاهی در مورد اهمیت آموزش علوم کامپیوتر با شرکت در هفته آموزش علوم کامپیوتر گرد هم می آید.<br /> <br />
 
-**DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
+(تاریخ - نام را وارد کنید) امروز برای (نام رویداد) به مدیران و اعضای هیئت علمی (نام مدرسه)، رهبران کسب و کار و خانواده های محلی پیوست و در ساعت برنامه نویسی به عنوان بخشی از هفته آموزش علوم رایانه شرکت کرد. (نام را وارد کنید) و اعضای جامعه در میان ده ها میلیون نفر در سراسر جهان بودند که در بزرگترین رویداد آموزشی تاریخ شرکت کردند. <br />
 
-[**INSERT DETAILS OF EVENT, USE DESCRIPTIVE AND QUANTIFIABLE LANGUAGE. FOR EXAMPLE:**]  
-“Daniels Run Elementary school held a school-wide Hour of Code event to introduce its students to computer science. More than 700 students from all grades did at least one Hour of Code. A dozen parents and volunteers from the community helped with the day and brought the kids together for an assembly showcasing why computer science matters in the lives of these students.” <br />
+جزئیات رویداد را درج کنید، از زبانی توصیفی و قابل سنجش استفاده کنید. برای مثال: مدرسه ابتدایی Daniels Run یک رویداد ساعت کد نویسی در سطح مدرسه برگزار کرد تا دانش‌آموزان خود را با علوم کامپیوتر آشنا کند. بیش از 700 دانش آموز از همه پایه ها حداقل یک ساعت کد نویسی را انجام دادند. ده ها والدین و داوطلبان جامعه در این روز کمک کردند و بچه ها را برای یک مجلس گرد هم آوردند که نشان می دهد چرا علم کامپیوتر در زندگی این دانش آموزان اهمیت دارد." <br />
 
-[**SAMPLE STOCK TEXT FOR CONTEXT:**]  
-Computers are everywhere, but fewer schools teach computer science than 10 years ago. Girls and students of color are severely underrepresented. The good news is we’re changing this for the better. The Hour of Code is gateway toward providing all students with access to high-quality computer science education. <br />
+نمونه موجود برای متن: کامپیوترها همه جا هستند، اما مدارس کمتری نسبت به 10 سال پیش علوم کامپیوتر را آموزش می دهند. دختران و دانش آموزان رنگین پوست به شدت کمتر حضور داشتند. خبر خوب این است که ما این را به سمت بهتر شدن تغییر می دهیم. ساعت کدنویسی دریچه ای برای دسترسی همه دانش آموزان به آموزش علوم کامپیوتر با کیفیت بالا است. <br />
 
-Over 100 million students worldwide have already tried an Hour of Code. Thanks to the Hour of Code, computer science was on homepages of Google, MSN, Yahoo!, and Disney. President Obama, Shakira, and Ashton Kutcher have all kicked off the Hour of Code with videos. Over 100 partners came together to support this movement. <br />
+بیش از 100 میلیون دانش آموز در سراسر جهان قبلاً یک ساعت کدنویسی را امتحان کرده اند. به لطف ساعت کدنویسی، علوم کامپیوتر در صفحات اصلی Google، MSN، Yahoo! و Disney قرار گرفت. رئیس جمهور اوباما، شکیرا و اشتون کوچر همگی ساعت نویسی را با ویدئوهایی آغاز کرده اند. بیش از ۱۰۰ شریک برای حمایت از این جنبش گرد هم آمدند. <br />
 
-[**INSERT QUOTE FROM SPOKESPERSON, EXAMPLE BELOW:**]  
-“We need to encourage and embrace our students’ interest in computer science,” said [**INSERT NAME**]. “Every student deserves the chance to learn computer science to access the best careers of the 21st century.” <br />
+[**وارد کردن نقل قول از سخنگوی، مثال زیر:**]  
+«ما باید علاقه دانش آموزان مان به علوم کامپیوتر را تشویق کنیم و پذیرا باشیم» [نام**را وارد**کنید]. «هر دانش آموز سزاوار فرصتی برای یادگیری علوم کامپیوتر برای دسترسی به بهترین حرفه های قرن بیست و یکم است.» <br />
 
-[**INSERT MORE INFORMATION ABOUT YOUR EVENT AND/OR YOUR ORGANIZATION**] <br />
+[**اطلاعات بیشتر در مورد رویداد و/یا سازمان خود را وارد کنید**] <br />
 
-[**INSERT QUOTE FROM ANOTHER ORGANIZATION OR SOMEONE WHO ATTENDED THE EVENT**] <br />
+[**درج نقل قول از یک سازمان یا شخصی که در این رویداد شرکت کرده است**] <br />
 
-For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
+برای اطلاعات بیشتر درباره [**EVENT/PROGRAM/ETC**]، از [**INSERT WEBSITE**] دیدن کنید یا با [**INSERT CONTACT INFORMATION**] تماس بگیرید.
 
 {{ signup_button }}

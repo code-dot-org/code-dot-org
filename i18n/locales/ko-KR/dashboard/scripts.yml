@@ -3797,7 +3797,7 @@ ko:
             csf_events:
               display_name: 이벤트
             lessonGroup-6:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           title: 과정 B (2022)
           description: 우리는 1학년생을 염두에 두고 코스 B를 개발했습니다.코스 B의 개념은 코스 A의 개념과 유사하지만, 학생들은 보다 정교한 언플러그드 활동을 배우고 더 다양한 퍼즐을 풀게 됩니다.학생들은 프로그래밍, 협업 기술, 조사 및 비판적 사고 기술, 어려움에 직면한 끈기, 인터넷 안전의 기초를 배우게 됩니다.이 강좌를 마치면 학생들은 Play Lab 프로그래밍 환경에서 게임을 제작하게 됩니다.
           student_description: 컴퓨터 과학의 기초와 인터넷 안전에 관해 배우세요. 과정이 끝날 때 공유할 수 있는 자신의 게임 또는 스토리를 만드세요.
@@ -3816,7 +3816,7 @@ ko:
             csf_data:
               display_name: 데이터
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합  프로젝트
           title: 과정 C (2022)
           description: 우리는 2학년 학생들을 위해 코스 C를 개발했습니다.학생들은 시퀀싱, 루프 및 이벤트가 포함된 프로그램을 만들 것입니다.문제 해결 기법을 연구하고 온라인과 오프라인 모두에서 긍정적인 커뮤니티를 구축하기 위한 전략을 개발할 것입니다.강좌를 마치면 학생들은 공유할 수 있는 인터랙티브 게임을 만들게 됩니다.
           student_description: 시퀸스와 루프, 이벤트로 프로그램을 만드세요. 이니셜을 바이너리로 바꾸고 다른 문제해결기법을 조사하며 사이버 폭력에 대응하는 방식을 배우세요. 이 과정의 끝부분에서 공유할 수 있는 게임 또는 스토리를 직접 만드세요.
@@ -3867,7 +3867,7 @@ ko:
             csf_conditionals:
               display_name: 조건
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           title: 과정 D (2022)
           description: '3학년 학생들을 위해 코스 D를 만들었습니다.이 강좌는 루프와 이벤트를 포함하여 이전 강좌에서 찾은 개념에 대한 복습으로 시작됩니다.그 후 학생들은 알고리즘, 중첩 루프, while 루프, 조건문 등에 대한 이해를 발전시킬 것입니다. '
           description_short: 조건문에 대해 배우세요. 자신의 아트와 게임, 심지어 댄스 파티를 만드세요.
@@ -3902,7 +3902,7 @@ ko:
             csf_data:
               display_name: 데이터 및 시뮬레이션
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
           title: 과정 F (2022)
           description: 5학년 학생들을 위해 코스 F를 만들었습니다.이 강좌는 사용자들이 사용하는 앱에서 어떤 선택을 하는지 살펴보는 것으로 시작됩니다.그런 다음 학생들은 사용자가 선택할 수 있는 다양한 Sprite Lab 앱을 만드는 방법을 배웁니다.이 과정의 후반부 수업에서 학생들은 다양한 상황에서의 변수에 대해 배우게 됩니다.학생들은 이 과정을 통해 더 큰 자율성과 더 많은 선택권을 갖게 됩니다.강좌를 마치면 학생들은 대화형 프로젝트를 만들어 친구 및 가족과 공유할 수 있습니다.
           description_short: 컴퓨터 과학 기초에서의 모든 개념을 배우고 미술작품과 스토리 또는 게임을 만드세요.
@@ -4408,6 +4408,12 @@ ko:
               display_name: 앱 랩 소개
             lessonGroup-3:
               display_name: 인풋 및 아웃풋
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: 나만의 에코시스템을 코딩하세요 (2023)
+          title: 해양 생태계 시뮬레이션 (2023)
+          description: "## 모듈에 권장하는 예습\n\n\\*\\*과학 자료: \\*\\* 학생들은 수업 1과 2에서 해양 생물 생태계를 연구합니다. 학생들이 해양생태계와 친숙해지도록 이 [해양 동물 동영상](https://www.youtube.com/watch?v=8adtdg0N2-g)(9:42)을 추천합니다.\n\n수업 2에서는 지속 가능한 어업 방식 몇 가지를 코딩합니다. 배경지식을 쌓고 현실 세계와의 연관성을 심화할 자료들을 참고하세요: [남획의 이해](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)(몬터레이 베이 아쿠아리움 자료) 또는 [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)(아동 도서).\n\n\\*\\*컴퓨터 과학 자료: \\*\\* 본 모듈에서는 컴퓨터 과학을 처음 접하는 학생들에게는 어려울 수 있는 새로운 코딩 개념을 배웁니다. Code.org 스프라이트 랩에 익숙하지 않은 학생이라면 툴의 기본 기능을 익히기 위해 [스프라이트 랩과 함께하는 헤엄치는 물고기](https://studio.code.org/s/coursee-2022/lessons/3)(55분)를 미리 사용해 보기를 권합니다.\n\n본 모듈에서는 조건문이라는 고급 컴퓨터 과학 개념도 사용합니다. 학생들은 단계적으로 이 개념을 학습하게 되지만, 조건문 입문 언플러그드 활동인 [조건문 카드](https://studio.code.org/s/coursed-2022/lessons/12)(50분)를 예습한다면 도움이 될 것입니다."
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5123,6 +5129,9 @@ ko:
         virtual-pl-csa-summer-2024-day1:
           title: 1 일차
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: 소개
           title: 2 일차
         virtual-pl-csp-summer-day3:
           title: 3일차
@@ -5133,10 +5142,45 @@ ko:
         virtual-pl-csa-summer-day2:
           title: 2 일차
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: 소개
           title: 3일차
         virtual-pl-csa-summer-day4:
           title: 4일차
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: 소개
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 소개
           title: 1 일차
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: 비동기 액티비티 소개
           title: 1 일차
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 아워오브코드 수업 계획 템플릿
+        self-paced-pl-csd-unit1-2-2023:
+          title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
+          description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+          student_description: "이 전문 학습 모듈은 귀하가 Code.org의 문제해결 및 컴퓨팅 단원을 가르칠 준비를 하는 데 도움을 주도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다.**\n\n-   문제 해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장 시간:** 30분"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: '댄스 파티: A.I. 에디션'
+          title: '댄스 파티: AI 에디션'
+        self-paced-pl-csd-unit2-2-2023:
+          title: '모듈 2: 웹 개발 교습 준비'
+        self-paced-pl-csd-unit3-2-2023:
+          title: 인터랙티브 애니메이션 및 게임 교습 준비
+          description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+          student_description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장 시간:** 120분"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 모듈 4: 디자인 프로세스 교습 준비"
+        self-paced-pl-csd-unit5-2-2023:
+          title: '모듈 5: 데이터 및 사회 교습 준비'

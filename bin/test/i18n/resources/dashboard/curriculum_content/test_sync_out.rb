@@ -157,7 +157,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
     let(:flatten_types_i18n_data) {'flatten_types_i18n_data'}
     let(:restored_lesson_keys_i18n_data) {'restored_lesson_keys_i18n_data'}
     let(:restored_reference_guide_keys_i18n_data) {'restored_reference_guide_keys_i18n_data'}
-    let(:fixed_resource_urls_i18n_data) {{fixed_resource_urls: 'i18n_data'}}
+    let(:fixed_resource_urls_i18n_data) {{fixed_resource_urls: {i18n_key: 'i18n_data'}}}
 
     before do
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -173,7 +173,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
       described_instance.expects(:restore_reference_guide_i18n_keys).with(restored_lesson_keys_i18n_data).in_sequence(execution_sequence).returns(restored_reference_guide_keys_i18n_data)
       described_instance.expects(:fix_resource_urls).with(restored_reference_guide_keys_i18n_data).in_sequence(execution_sequence).returns(fixed_resource_urls_i18n_data)
 
-      assert_equal({'fixed_resource_urls' => 'i18n_data'}, types_i18n_data)
+      assert_equal({'fixed_resource_urls' => {'i18n_key' => 'i18n_data'}}, types_i18n_data)
     end
   end
 

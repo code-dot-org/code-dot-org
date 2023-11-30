@@ -8,7 +8,7 @@ title: Guia prático da Hora do Código
 
 ### Participe do movimento e apresente seus alunos à ciência da computação com essas etapas.
 
-Students today should learn how to create technology, not just use it.
+Os estudantes de hoje devem aprender a criar tecnologia, não apenas usá-la.
 
 Experimentar uma Hora do Código é uma maneira simples e divertida de apresentar aos alunos a ciência da computação, talvez pela primeira vez! Encontre uma atividade que se adapte ao seu ambiente, seja na sala de aula ou depois da escola, presencial ou virtual. Dê uma olhada em nosso guia de [participação se você ainda tiver dúvidas]({{ localized_files/participation_guide }}) depois de conferir as etapas abaixo:
 
@@ -19,7 +19,7 @@ Experimentar uma Hora do Código é uma maneira simples e divertida de apresenta
 - [Como começar sua Hora do Código com força](#how-to-start)
 - [Obtenha a codificação](#code)
 - [Comemore o sucesso de seus alunos](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Outros recursos da Hora do Código para educadores](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Ao se [inscrever em seu evento da Hora do Código](/#join), você receberá comunicações úteis por e-mail com notícias e dicas para organizar uma Hora do Código de sucesso. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Ao se [inscrever em seu evento da Hora do Código](/events), você receberá comunicações úteis por e-mail com notícias e dicas para organizar uma Hora do Código de sucesso. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -136,9 +136,9 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Imprima certificados]({{ urls/certificates }}) para seus alunos.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Compartilhe fotos e vídeos do seu evento da Hora do Código nas redes sociais. Use #HourOfCode e @codeorg para que possamos destacar seu sucesso também!
 
 * * *
 
@@ -147,7 +147,7 @@ What if a student finishes early?
 ## Outros recursos da Hora do Código para educadores:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Leia as perguntas frequentes sobre a [Hora do Código](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### What comes after the Hour of Code?
 

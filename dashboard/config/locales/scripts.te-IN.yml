@@ -54,10 +54,18 @@ te:
           lesson_groups:
             lessonGroup-2:
               display_name: యాప్ ల్యాబ్ కు పరిచయం
+        alltheplcthings:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         allthethings:
           lessons:
             lesson-49:
               name: సంగీతం
+        andrea-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         applab-intro:
           title: యాప్ ల్యాబ్ కు పరిచయం
         aquatic:
@@ -457,6 +465,14 @@ te:
           lessons:
             lesson-1:
               name: ఆ శబ్దం ఏమిటి?
+        csd-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd-novice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csd-post-survey-2021:
           description: ఈ యూనిట్‌లో కోర్సు-పూర్వ సర్వే CS అన్వేషణలు ఉన్నాయి. విద్యార్థులు
             CS అన్వేషణలలో వారికి కేటాయించిన అఖరి యూనిట్ పూర్తి చేసిన తర్వాత ఈ యూనిట్
@@ -470,10 +486,58 @@ te:
             కేటాయించబడవచ్చు.
           student_description: ఈ యూనిట్‌లో CS అన్వేషణలను క్లాసు పూర్తి చేసినప్పుడు
             ఒక సర్వే ఉంది. ఈ సర్వే చేయడానికి సమయం వచ్చినప్పుడు మీ టీచర్ మీకు చెప్తారు.
+        csd1-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd2-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csd2-old:
           description_short: వెబ్ అభివృద్ధి
+        csd3-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csd3-virtual:
           title: గేమ్ ల్యాబ్ కు స్వీయ ఒరవడి పరిచయము
+        csd4-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd5-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd6-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csd6-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csd7-2021:
           title: AI మరియు మెషీన్ లెర్నింగ్
         csd7-2023:
@@ -498,6 +562,38 @@ te:
               display_name: ఈవెంట్లు
             csf_loops:
               display_name: ఉచ్చులు
+        csp-apprentice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-create-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-explore-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-novice-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp-online-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp1-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp1-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -507,6 +603,9 @@ te:
             csp_variables:
               display_name: వేరియబుల్స్
         csp1-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
           title: యూనిట్ 1 ఆన్‌లైన్ ప్రొఫెషనల్ లెర్నింగ్ కోర్సు
         csp10-pilot-staging:
           lesson_groups:
@@ -516,6 +615,18 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        csp2-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp2-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp2-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp2-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -524,6 +635,26 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        csp2-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp3-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp4-2020:
           lesson_groups:
             csp_conditionals:
@@ -556,6 +687,14 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        csp4-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp4-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp4-pilot:
           lesson_groups:
             csp_conditionals:
@@ -564,6 +703,8 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+            required:
+              display_name: ఓవర్ వ్యూ
         csp4-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -580,6 +721,10 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        csp4-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp5-2020:
           lesson_groups:
             csp_lists:
@@ -604,18 +749,32 @@ te:
               display_name: డేటా
             csp_loops:
               display_name: ఉచ్చులు
+        csp5-dlp:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        csp5-dlp-18:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp5-pilot:
           lesson_groups:
             csp_lists:
               display_name: జాబితాలు
             csp_loops:
               display_name: ఉచ్చులు
+            required:
+              display_name: ఓవర్ వ్యూ
         csp5-pilot-staging:
           lesson_groups:
             csp_lists:
               display_name: జాబితాలు
             csp_loops:
               display_name: ఉచ్చులు
+        csp5-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp5-virtual:
           title: యాప్ ల్యాబ్‌లో ఈవెంట్‌చే-నడపబడే ప్రోగ్రామింగ్
         csp6-2021:
@@ -628,6 +787,10 @@ te:
               display_name: జాబితాలు
             lessonGroup-3:
               display_name: ఉచ్చులు
+        csp6-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp6-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -636,6 +799,10 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        csp7-pilot:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         csp8-pilot-staging:
           lesson_groups:
             csp_conditionals:
@@ -652,6 +819,10 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        cspnovice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         cspplayground:
           lesson_groups:
             csp_conditionals:
@@ -660,6 +831,10 @@ te:
               display_name: విధులు
             csp_variables:
               display_name: వేరియబుల్స్
+        cspunit1-support:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         cspunit4draft:
           description_short: డేటా
         dance:
@@ -676,6 +851,46 @@ te:
           title: అవర్ ఆఫ్ కోడ్ - డాన్స్ పార్టీ - అన్‌ప్లగ్ చేయబడింది
         devices-2022:
           title: ఉపరికరణాలతో అనువర్తనాలను సృష్టించుట (సర్క్యూట్ ప్లేగ్రౌండ్)
+        dlp19-csd-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csd-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-fit:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w2:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w3:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        dlp19-csp-mod-w4:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         events:
           description: ఈవెంట్లు
           description_short: ఈవెంట్లు
@@ -747,6 +962,18 @@ te:
               display_name: వేరియబుల్స్
             lessonGroup-9:
               display_name: ఈవెంట్లు
+        fit-test:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        fit2019-apprentice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
+        fit2019-novice:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         flappy:
           description: మీ స్వంత ఆటను 10 నిమిషాల్లోపు రాయాలనుకుంటున్నారా? మా Flappy
             కోడ్ ట్యుటోరియల్ని ప్రయత్నించండి!
@@ -874,6 +1101,8 @@ te:
             lessonGroup-7:
               display_name: డేటా
         oceans:
+          student_description: ప్రపంచ సమస్యలను పరిష్కరించడానికి AI మరియు మెషిన్ లెర్నింగ్
+            ఎలా ఉపయోగించవచ్చో తెలుసుకోండి.
           title: AI ఫర్ ఓషన్స్
         outbreak:
           title: ఔట్‌బ్రేక్ సిమ్యులేటర్
@@ -1247,12 +1476,20 @@ te:
           title: 'స్టార్ వార్స్: కోడ్ తో ఒక గెలాక్సీని నిర్మించడం (బ్లాక్‌లీ)'
         step:
           title: దశ
+        teachercon:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: డిజిటల్ పౌరసత్వం
             lessonGroup-4:
               display_name: ఉచ్చులు
+        test-teaching-ap-cs-unit-1:
+          lesson_groups:
+            required:
+              display_name: ఓవర్ వ్యూ
         testing-focus-on-creativity2:
           title: వెబ్ అభివృద్ధి
         text-compression:
@@ -1287,6 +1524,17 @@ te:
               display_name: ఈవెంట్లు
             csf_loops:
               display_name: ఉచ్చులు
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: పరిచయం
+          lessons:
+            lesson-7:
+              name: పరిచయం
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: పరిచయం
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -1295,6 +1543,10 @@ te:
           lessons:
             lesson-3:
               name: అసెస్మెంట్
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: పరిచయం
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:

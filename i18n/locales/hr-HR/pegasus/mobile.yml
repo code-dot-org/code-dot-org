@@ -304,7 +304,6 @@
   are_you_teacher: "Jeste li učitelj?"
   volunteer_engineer_submission_title: "Potakni učenike i volontere na Sat Kodiranja."
   volunteer_engineer_submission_subtitle_generic: '100,000 učitelja će ove godine održati Sat Kodiranja u svojim učionicama, od 7. do 13. Prosinca 2015. Oni žele tvoju pomoć! '
-  volunteer_engineer_submission_intro_signup: "Ako si student računarstva ili iskusni programer, molimo te da uneseš sljedeće informacije. Polja označena s <span class=\"form-required-field\">*</span> su obavezna."
   volunteer_engineer_submission_field_name: "Ime"
   volunteer_engineer_submission_field_name_placeholder: "Ime i prezime"
   volunteer_engineer_submission_field_company: "Kompanija (ili Sveučilište)"

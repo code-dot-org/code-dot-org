@@ -1734,6 +1734,11 @@ he:
             של דיסני ועוד!
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           title: מסיבת ריקודים (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'מסיבת ריקודים: מהדורת AI'
+          title: 'מסיבת ריקודים: מהדורת AI'
         dance-extras:
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
           student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
@@ -2431,6 +2436,17 @@ he:
           lesson_groups:
             csd3_2:
               display_name: 'פרק 2: יצירת משחקים'
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: מבוא
+          lessons:
+            lesson-7:
+              name: מבוא
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: מבוא
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -2439,6 +2455,10 @@ he:
           lessons:
             lesson-3:
               name: הערכה
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: מבוא
         virustest:
           description_short: השתמשו במעבדת הדמויות כדי ליצור סימולציה מתוך התפרצות
             וירוסים.

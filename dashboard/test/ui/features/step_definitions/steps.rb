@@ -805,9 +805,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
@@ -1049,6 +1053,13 @@ And /^I dismiss the teacher panel$/ do
   steps <<~GHERKIN
     And I click selector ".teacher-panel > .hide-handle > .fa-chevron-right"
     And I wait until I see selector ".teacher-panel > .show-handle > .fa-chevron-left"
+  GHERKIN
+end
+
+And /^I dismiss the hoc guide dialog$/ do
+  steps <<~GHERKIN
+    And I click selector "#uitest-no-email-guide" once I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
   GHERKIN
 end
 

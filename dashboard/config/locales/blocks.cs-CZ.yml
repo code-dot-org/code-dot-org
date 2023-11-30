@@ -69,6 +69,11 @@ cs:
             '"measures"': takty
             '"seconds"': sekund
         text: po {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': takty
+            '"seconds"': sekund
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -92,6 +97,27 @@ cs:
             '"SLOTH"': lenochodové
             '"UNICORN"': jednorožci
             sprites: vše
+          MOVE:
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodně)"
+            MOVES.ClapHigh: Clap High
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Kick: Kopou
+            MOVES.Rest: Žádný
+            MOVES.Roll: Vlna tělem
+            MOVES.ThisOrThat: Toto nebo ono
+        text: "{GROUP} dělá {MOVE} {DIR} navždy"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': všechny kočky
+            '"SLOTH"': lenochodové
           MOVE:
             '"next"': "(Další)"
             '"prev"': "(Předchozí)"
@@ -567,6 +593,49 @@ cs:
             '"vintage"': Retro
             '"warm"': Červené
         text: nastav efekt pozadí {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Tunel
+            '"color_cycle"': Barvy
+            '"diamonds"': Diamanty
+            '"disco"': Čtverce
+            '"disco_ball"': Disco koule
+            '"fireworks"': Ohňostroj
+            '"flowers"': Květiny
+            '"galaxy"': Vesmír
+            '"growing_stars"': Zvětšující se hvězdy
+            '"kaleidoscope"': Kaleidoskop
+            '"lasers"': Laserový taneční parket
+            '"music_wave"': Vlny
+            '"none"': Žádný
+            '"quads"': Úhly
+            '"rainbow"': Duha
+            '"rand"': "(Náhodně)"
+            '"ripples"': Vlny
+            '"ripples_random"': Náhodné vlny
+            '"snowflakes"': Sníh
+            '"sparkles"': Lesky
+            '"spiral"': Spirála
+            '"splatter"': Barevný stříkanec
+            '"squiggles"': Klikyháky
+            '"starburst"': Výbuch hvězdy
+            '"stars"': Hvězdy
+            '"swirl"': Hypno
+            '"text"': Název skladby
+          PALETTE:
+            '"cool"': Modré
+            '"default"': Světlo
+            '"electronic"': Elektronika
+            '"iceCream"': Zmrzlina
+            '"neon"': Neon
+            '"ocean"': Oceán
+            '"rainbow"': Duha
+            '"rave"': Černá a bílá
+            '"tropical"': Tropické
+            '"vintage"': Retro
+            '"warm"': Červené
+        text: nastav efekt pozadí {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -999,6 +1068,12 @@ cs:
         text: "{SPRITE}řekni{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': plyn
+            '"liquid"': kapalina
+            '"solid"': pevná látka
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

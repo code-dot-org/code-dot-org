@@ -23,6 +23,10 @@ hr:
         options:
           UNIT:
             '"seconds"': sekunde
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -30,6 +34,10 @@ hr:
             '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mačke
       Dancelab_changePropBy:
         options:
           PROPERTY:
@@ -474,6 +482,12 @@ hr:
             '"left"': lijevo
             '"right"': desno
             '"space"': svemir
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': čvrsto tijelo
+            '"liquid"': tečan
+            '"gas"': plin
       Mikelab_addTrainingData:
         options:
           NAME:

@@ -528,13 +528,9 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 Lehrer machen dieses Jahr vom 7. bis 13. Dezember 2015 eine Hour of Code mit ihren Klassen. Sie brauchen Ihre Hilfe! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} Lehrer brauchen Freiwillige.<br>%{num_volunteers} Freiwillige haben sich angemeldet. Machen Sie auch mit!"
   volunteer_engineer_submission_intro_background: "Hour of Code ist eine globale Bewegung, die erste Schritte in der Informatik fördert. Millionen von Schülern in über 180 Ländern machen mit. Beteiligen auch Sie sich während der Informatikwoche vom 7. bis 13. Dezember"
-  volunteer_engineer_submission_intro_recruit: 'Viele Lehrer brauchen <span style="font-family: ''Gotham 7r'', sans-serif;">Informatikbegeisterte</span>, die im Unterricht helfen möchten oder <span style="font-family: ''Gotham 7r'', sans-serif;">Schüler inspirieren</span>, indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat).'
   volunteer_engineer_submission_intro_recruit_markdown: "Viele Lehrer brauchen **Informatikbegeisterte**, die im Unterricht helfen möchten oder Schüler **inspirieren**, indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat)."
-  volunteer_engineer_submission_intro_guide: "Erfahre mehr über unser <a href=\"%{volunteer_guide}\">Volunteerprogramm hier</a>."
   volunteer_engineer_submission_intro_guide_markdown: "Mehr Informationen über unser [Freiwilligen Programm hier](%{volunteer_guide})."
-  volunteer_engineer_submission_intro_signup: "Wenn Sie Informatikstudent oder Softwareexperte sind, geben Sie bitte folgende Informationen ein. Die mit <span class=\"form-required-field\">*</span> markierten Felder sind obligatorisch."
   volunteer_engineer_submission_intro_signup_markdown: "Bitte geben Sie die folgenden Informationen ein, wenn Sie Informatikstudent oder Softwareprofi sind. Sie müssen mindestens 18 Jahre alt sein, um sich als Freiwilliger anmelden zu können. Beachten Sie, dass alle Felder, die Sie in diesem Abschnitt ausfüllen, für alle öffentlich zugänglich sind, die sich die [Unterstützerkarte](/volunteer/Local) ansehen. Die mit _*_ gekennzeichneten Felder sind Pflichtfelder."
-  volunteer_engineer_submission_intro_links: "Suchen Sie Freiwillige? Finden Sie Freiwillige vor Ort auf unserer <a href=\"%{volunteer_local}\">Unterstützerkarte</a>."
   volunteer_engineer_submission_intro_links_markdown: "Sind die Lehrer und suchen Freiwillige? Finden Sie Freiwillige vor Ort auf unserer [Unterstützerkarte](%{volunteer_local})."
   volunteer_engineer_submission_update_information: "Aktualisieren Sie Ihre Daten"
   volunteer_engineer_submission_header_shared: "Mit Lehrern geteilte Informationen auf der Unterstützerkarte"
@@ -1515,6 +1511,7 @@
   header_report_abuse: "Missbrauch melden"
   header_legal: "Privatsphäre und Rechtliches"
   header_legal_privacy: "Datenschutzerklärung"
+  header_legal_cookie_notice: "Cookie-Meldung"
   header_legal_tos: "AGBs"
   header_tutorials: "Einführungen"
   header_screen_reader_hamburger: "Speisekarte"

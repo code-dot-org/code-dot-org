@@ -72,7 +72,7 @@ I-promote ang Hour of Code sa ibang mga guro na maaaring gustong sumali sa saya!
 
 ### Let Volunteers Know by Registering Your Event
 
-Kapag [ iyong na sign-up ang iyong Hour of Code event](/#join) ikaw ay makakatanggap ng mga sulatronikong komunikasyon kasama ng mga balita at mungkahi para sa pag-host ng matagumpay na Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+When you [sign up your Hour of Code event](/events), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 

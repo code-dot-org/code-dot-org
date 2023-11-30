@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Únete a nosotros"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Únete a nosotros"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Designar a un docente"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Únete a nosotros"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Ver Ideas de Proyecto"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "ai-2020": {
+      "title": "Explore Inteligencia Artificial y Aprendizaje Automático",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Inicio"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Pruébalo"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Más información"
+    }
+  }
+}

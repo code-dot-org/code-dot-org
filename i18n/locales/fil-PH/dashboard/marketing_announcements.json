@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Ang website ng Hour of Code ay mayroong mahigit 500 na aktibidad sa computer science para sa lahat ng edad at antas ng karanasan, na binuo ng Code.org at mga partner.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Dagdagan ang Kaalaman"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Samahan niyo kami"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Samahan niyo kami"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Magrekomenda ng Guro"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Samahan niyo kami"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Tingnan ang Mga Ideya ng Proyekto"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "ai-2020": {
+      "title": "I-explore ang Artificial Intelligence at Machine Learning",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Panimula"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Subukan mo"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Matuto nang higit pa"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Pagigigng Malikhain gamit ang AI",
+      "body": "Sumali sa milyun-milyong tao sa buong mundo sa pag-organisa ng isang oras ng pag-coding, na may AI o walang AI at matuto kung paano gumagana ang AI. Maaaring gawin ito ng sinuman, saanman. Hindi kailangan ng karanasan.",
+      "buttonText": "Matuto nang higit pa"
+    }
+  }
+}

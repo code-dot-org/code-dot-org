@@ -325,6 +325,15 @@ roles = {
       '!Ref ContributorSecretsPolicy',
     ]
   },
+  TempS3LessEngineerRole: {
+    RoleName: 'Temp_S3less_Engineer',
+    GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/PowerUserAccess',
+      'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
+      '!Ref NoS3ForYouPolicy',
+    ]
+  },
   EngineeringMusicLabContributorRole: {
     RoleName: 'Engineering_MusicLabContributor',
     ManagedPolicyArns: [
@@ -389,6 +398,18 @@ roles.each do |name, config| %>
         - Key: sqlworkbench-team
           Value: codedotorg
 <%- end -%>
+
+  NoS3ForYouPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: NoS3ForYouPolicy
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Deny
+            Action:
+              - s3:*
+            Resource: '*'
 
   DataAnalystPolicy:
     Type: AWS::IAM::ManagedPolicy
@@ -597,6 +618,7 @@ roles.each do |name, config| %>
             Action: secretsmanager:GetSecretValue
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/properties_encryption_key-KUJqKF
+              - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/firebase_secret-ngO5yy
 
   MusicLabS3ReadWritePolicy:
     Type: AWS::IAM::ManagedPolicy

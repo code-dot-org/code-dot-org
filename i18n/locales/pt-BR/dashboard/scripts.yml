@@ -65,7 +65,7 @@ pt:
           student_description: Aprenda programação funcional com álgebra
           name: álgebra
         infinity:
-          title: Laboratório Infinito Disney
+          title: Disney Infinity Play Lab
           description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           description_short: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
           student_description: Use o Laboratório para criar uma história ou um jogo usando personagens da Disney Infinity.
@@ -345,17 +345,17 @@ pt:
           description_short: Programação
           student_description: Esta unidade introduz os conceitos fundamentais de programação de computadores, que ajudam na habilidade de criar ricos aplicativos interativos. Esse curso usa JavaScript como linguagem de programação, e o Laboratório de Aplicativo App Lab é o ambiente de programação para construir aplicativos, mas os conceitos aprendidos nessas lições envolvem todas as ferramentas e linguagens de programação.
         gumball:
-          title: Laboratório do Gumball
+          title: Gumball Play Lab
           description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           description_short: Crie uma história ou faça um jogo com o Laboratório do Gumball!
           student_description: Crie uma história ou faça um jogo com o Laboratório do Gumball!
         starwars:
-          title: 'Star Wars: Construa uma galáxia com a programação (JavaScript)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (JavaScript)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
         starwarsblocks:
-          title: 'Star Wars: Construa uma galáxia com programação (Blocos)'
+          title: 'Star Wars: Construindo uma Galáxia com Código (Blockly)'
           description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
           student_description: Aprenda a programar droids, e crie seu próprio jogo do Star Wars em uma galáxia muito, muito distante.
@@ -742,7 +742,7 @@ pt:
         flappy-impact-study:
           title: Flappy Code com pesquisa
         coursea-draft:
-          title: 'Fundamentos de Ciência da Computação: Curso A'
+          title: 'Fundamentos da CC: Curso A'
           description_short: Uma introdução à ciência da computação para novos leitores.
         courseb-draft:
           title: 'Fundamentos da CC: Curso B'
@@ -3810,7 +3810,7 @@ pt:
           title: Desenvolvimento da Unidade 8 do CSA
         poem-art:
           name: Arte poética
-          title: Arte poética
+          title: Arte Poética
         poetry:
           name: poesia
           title: Ciência da Computação e Poesia
@@ -3858,7 +3858,7 @@ pt:
           title: Nosso Código de Ética em I.A.
           description_audience: Entre sexto ano do fundamental e terceiro do ensino médio
         poem-art-2021:
-          title: Arte poética
+          title: Arte Poética
         poetry-2021:
           title: Codificação com Poesia
         hello-world-emoji-2021:
@@ -4675,6 +4675,12 @@ pt:
               display_name: Entradas e saídas
         blockchain-2023:
           student_description: Aprenda como o Blockchain funciona participando de diferentes experiências imersivas e assistindo à série de vídeos [Como o Blockchain funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf)!
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Codifique seu próprio ecossistema (2023)
+          title: Simulação de um ecossistema marinho (2023)
+          description: "## Trabalho prévio sugerido para este módulo. Alunos de\n\n\\*_Ciências_ devem simular um ecossistema de vida marinha nas Lições 1 e 2. Para desenvolver familiaridade com esse ecossistema, recomendamos este [Vídeo sobre Animais do Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos). \n\nNa Lição 2, os alunos vão codificar diversas práticas de pesca sustentável. Eis aqui alguns textos para desenvolver conhecimentos sobre os fundamentos e se aprofundar nas conexões com o mundo real: [Compreenda a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Artigo sobre o Aquário da Baía de Monterey), ou [Mw,kwa Talks to Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livro infantil).\n\n \\*_Ciência da Computação:_ Neste módulo, os alunos vão aprender novos conceitos de codificação que podem ser difíceis para alunos novatos em ciência da computação. Se os alunos não estiverem familiarizados com o laboratório de fadas do Code.org, recomendamos que experimentem o [Peixes Nadando com o Laboratório de Fadas](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo também utiliza um conceito avançado de CC conhecido como declarações condicionais. Os alunos aprendem esse conceito de forma gradual, mas alguns podem se beneficiar participando desta atividade introdutória offline sobre declarações condicionais: [Declarações condicionais com cartas](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutos)."
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5427,6 +5433,24 @@ pt:
           title: Módulo 1
         how-ai-works-2023:
           title: Como funciona a IA
+          description: |-
+            Essas lições complementam a série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Cada lição é combinada com um único vídeo da série, aprofundando os conceitos introduzidos nos vídeos. As lições se concentram na criação de uma primeira experiência empolgante para os alunos, na qual os alunos participam de uma atividade ou simulação e depois refletem sobre a experiência como uma forma de construir seu entendimento sobre a IA e criar empatia com as pessoas afetadas por ela. Algumas lições se concentram mais na tecnologia por trás da IA, enquanto outras se concentram nos impactos sociais e nas considerações éticas da IA.
+
+            **Suporte para Professores:** Você pode aprender mais sobre como levar as lições de IA para sua sala de aula por meio de nossa série [IA 101 para Professores](https://code.org/ai/pl/101). AI 101 para Professores é uma série de aprendizado profissional on-line gratuita e fundamental para qualquer professor e educador interessado no mundo inovador da inteligência artificial (IA) e em seu potencial transformador na educação.
+
+            **Opções de Implementação:** Clique em uma das opções abaixo para expandir e ver mais detalhes.
+
+            ::: details [<span style="font-size: 1em; font-weight: bold;">“Eu quero ensinar todas elas!”</span>]
+            As lições de 1 a 7 podem ser lecionadas em uma sequência de 7 dias, em que cada dia se concentra em um vídeo individual da série de vídeos e se aprofunda nos conceitos introduzidos. As salas de aula que seguem essa direção devem ocultar a Lição 8, que não se encaixa nessa sequência. [Clique aqui para saber mais sobre como ocultar uma lição](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            ::: details [<span style="font-size: 1em; font-weight: bold;">“Quero lecionar uma lição específica ou integrá-la a outra lição”</span>]
+            Cada lição pode ser sustentada sozinha e ser lecionada independentemente das outras. Isso é útil se você quiser integrar uma lição em outra disciplina ou em uma aula já definida de ciência da computação, inteligência artificial ou educação geral. As salas de aula que querem seguir esse formato devem esconder todas as lições, exceto a que você deseja lecionar. [Clique aqui para saber mais sobre como esconder a lição](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            ::
+            ::: details [<span style="font-size: 1em; font-weight: bold;">“Eu Só Tenho um Dia”</span>] A
+            lição 8 foi projetada para salas de aula que desejam apresentar a IA aos alunos, mas têm apenas um dia para fazer isso. Esta lição fornece um caderno de anotações para os alunos enquanto a turma assiste a toda a sequência de vídeos. As salas de aula que querem seguir esse formato devem esconder todas as lições, exceto a Lição 8. [Clique aqui para saber mais sobre como esconder a lição](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
           student_description: |-
             Aprenda como a IA funciona participando de diferentes experiências e assistindo à série de vídeos [Como a IA funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y)!
 
@@ -5468,6 +5492,9 @@ pt:
         virtual-pl-csa-summer-2024-day1:
           title: Dia 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introdução
           title: Dia 2
         virtual-pl-csp-summer-day3:
           title: Dia 3
@@ -5476,15 +5503,50 @@ pt:
         virtual-pl-csa-summer-day2:
           title: Dia 2
         virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introdução
           title: Dia 3
         virtual-pl-csa-summer-day4:
           title: Dia 4
         virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Introdução
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introdução
           title: Dia 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Introdução às atividades assíncronas
           title: Dia 1
         csa-postap-se-and-computer-vision-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capítulo 2: Visão Computacional'
           title: Engenharia de Software e Visão Computacional
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: modelo de plano de aula do Hour of Code
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e computação'
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Festa dançante: Edição de I.A.'
+          title: 'Festa dançante: edição IA'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparação para ensinar o desenvolvimento via internet'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Preparação para lecionar sobre animações e jogos interativos
+          description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+          student_description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de animações e jogos interativos do Code.org. \n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n\n– Ver uma introdução às animações e jogos interativos. \n– Praticar conceitos-chave lecionados na unidade. \n– Envolver-se com o laboratório de jogos. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 120 minutos"
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Módulo 4: Preparação para lecionar sobre o processo de elaboração de projetos'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparação para lecionar sobre dados e a sociedade'

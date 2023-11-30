@@ -1,0 +1,61 @@
+{
+  "nl-NL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Leer meer"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Leer meer"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Leer meer"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Leer meer"
+          },
+          "codebytes-2020": {
+            "buttonText": "Leer meer"
+          },
+          "coldplay": {
+            "buttonText": "Probeer het"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Start"
+          },
+          "csjourneys": {
+            "buttonText": "Leer meer"
+          },
+          "csjourneys-22": {
+            "buttonText": "Leer meer"
+          },
+          "csleadersprize": {
+            "buttonText": "Leer meer"
+          },
+          "hoc-2023": {
+            "buttonText": "Leer meer"
+          },
+          "hoc-more": {
+            "body": "De website van Hour of Code heeft meer dan 100 informatica-activiteiten voor alle leeftijden en ervaringsniveaus, ontwikkeld door Code.org en haar partners."
+          },
+          "home-learning-2020": {
+            "buttonText": "Bekijk projectideeën"
+          },
+          "superhero": {
+            "buttonText": "Leer meer"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Doe mee"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Doe mee"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Doe mee"
+          }
+        }
+      }
+    }
+  }
+}

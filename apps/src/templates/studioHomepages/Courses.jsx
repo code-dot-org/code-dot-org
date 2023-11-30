@@ -6,12 +6,13 @@ import HeaderBanner from '../HeaderBanner';
 import {CourseBlocksIntl} from './CourseBlocks';
 import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import SpecialAnnouncement from './SpecialAnnouncement';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import color from '../../util/color';
 import fontConstants from '@cdo/apps/fontConstants';
+import shapes from './shapes';
+import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 
 class Courses extends Component {
   static propTypes = {
@@ -20,6 +21,7 @@ class Courses extends Component {
     studentsCount: PropTypes.string.isRequired,
     modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
     showAiCard: PropTypes.bool,
+    specialAnnouncement: shapes.specialAnnouncement,
   };
 
   componentDidMount() {
@@ -46,8 +48,12 @@ class Courses extends Component {
   }
 
   render() {
-    const {isEnglish, isSignedOut, modernElementaryCoursesAvailable} =
-      this.props;
+    const {
+      isEnglish,
+      isSignedOut,
+      modernElementaryCoursesAvailable,
+      specialAnnouncement,
+    } = this.props;
 
     const {headingText, subHeadingText, description, buttonText} =
       this.getHeroStrings();
@@ -82,7 +88,12 @@ class Courses extends Component {
             {/* English */}
             {isEnglish && (
               <div className={'announcements'}>
-                <SpecialAnnouncement />
+                {specialAnnouncement && (
+                  <MarketingAnnouncementBanner
+                    announcement={specialAnnouncement}
+                    marginBottom="60px"
+                  />
+                )}
                 <CoursesStudentEnglish />
               </div>
             )}
@@ -91,6 +102,7 @@ class Courses extends Component {
             {!isEnglish && (
               <CourseBlocksIntl
                 showModernElementaryCourses={modernElementaryCoursesAvailable}
+                specialAnnouncement={specialAnnouncement}
               />
             )}
           </div>

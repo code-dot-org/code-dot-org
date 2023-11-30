@@ -5795,6 +5795,11 @@ zh-TW:
           description_short: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
           title: 舞蹈派對 2019
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 舞蹈派對：AI版
+          title: 舞蹈派對：AI版
         dance-draft:
           title: 請勿使用
         dance-extras:
@@ -6052,6 +6057,10 @@ zh-TW:
           title: 2021 CS 原則深入學習概述
         dlp21-overview:
           name: 概述
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 一小時玩程式課程計劃模板
         drafting:
           description_audience: CSP 學生見解小組
           title: 雲端服務提供者草案更新
@@ -7774,6 +7783,26 @@ zh-TW:
             CS 連接模塊。\n\n練習課程中包含的關鍵概念。\n\n\\-預覽功能和資源。\n\n考慮創建積極的 CS 學習體驗的策略。\n\n\\*\\*
             建議時間：\\*\\* 75 分鐘"
           title: 僅為主持人教授 CS 連接
+        self-paced-pl-csd-unit1-2-2023:
+          description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
+          title: 模組1：準備問題解決和計算教學
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模組2：準備Web開發教學
+        self-paced-pl-csd-unit3-2-2023:
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          title: 準備互動動畫和遊戲教學
+        self-paced-pl-csd-unit4-2-2023:
+          title: 模組4：準備設計進程教學
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模組5：準備數據和社會教學
         self-paced-pl-csd1-2021:
           description: "本單元是 Code.org 和這個專業學習課程的簡短介紹。 \n\n\\*\\* 您將：\\*\\*\n\n\\-取得
             Code.org 和 CS 探索的簡介。\n\\-學習如何參與此專業學習課程。\n\n\\*\\* 建議時間：\\*\\* 10 分鐘"
@@ -8368,15 +8397,19 @@ zh-TW:
               display_name: 同步部分 2
             lessonGroup-5:
               display_name: 非同步第 2 部分
+            lessonGroup-7:
+              display_name: 介紹
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
             lesson-3:
               name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
+            lesson-7:
+              name: 介紹
+            lesson-8:
+              name: 工坊揭幕戰
           title: 第 1 天
         virtual-pl-csa-summer-day2:
           lesson_groups:
@@ -8389,8 +8422,6 @@ zh-TW:
             lessonGroup-5:
               display_name: 非同步第 2 部分
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
             lesson-3:
@@ -8410,11 +8441,9 @@ zh-TW:
               display_name: 非同步第 2 部分
           lessons:
             lesson-1:
-              name: 同步零件 1
+              name: 介紹
             lesson-2:
               name: 非同步第 1 部分
-            lesson-3:
-              name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
           title: 第 3 天
@@ -8429,14 +8458,12 @@ zh-TW:
             lessonGroup-5:
               display_name: 非同步第 2 部分
           lessons:
-            lesson-1:
-              name: 同步零件 1
             lesson-2:
               name: 非同步第 1 部分
-            lesson-3:
-              name: 同步部分 2
             lesson-4:
               name: 非同步第 2 部分
+            lesson-5:
+              name: 工坊揭幕戰
           title: 第 4 天
         virtual-pl-csa-summer-day5:
           lesson_groups:
@@ -8448,7 +8475,13 @@ zh-TW:
               display_name: 非同步第 2 部分
           lessons:
             lesson-1:
-              name: 同步零件 1
+              name: 工坊揭幕戰
+            lesson-13:
+              name: 閉幕式
+            lesson-16:
+              name: 閉幕式
+            lesson-2:
+              name: 非同步第 1 部分
             lesson-3:
               name: 同步部分 2
             lesson-4:
@@ -8565,13 +8598,60 @@ zh-TW:
               display_name: 非同步第 1 部分
             lessonGroup-5:
               display_name: 非同步第 2 部分
+          lessons:
+            lesson-5:
+              name: 非同步活動簡介
           title: 第 1 天
         virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          lessons:
+            lesson-5:
+              name: 介紹
           title: 第 2 天
         virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
+          lessons:
+            lesson-2:
+              name: 非同步第 1 部分
           title: 第 3 天
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+            lessonGroup-5:
+              display_name: 非同步第 2 部分
           title: 第 4 天
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 同步零件 1
+            lessonGroup-3:
+              display_name: 非同步第 1 部分
+            lessonGroup-4:
+              display_name: 同步部分 2
+          lessons:
+            lesson-6:
+              name: 閉幕式
         virustest:
           description_short: '使用精靈圖實驗室創建一個病毒爆發模擬。 '
           lesson_groups:

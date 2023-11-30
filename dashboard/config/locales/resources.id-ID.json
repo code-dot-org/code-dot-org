@@ -1364,7 +1364,8 @@
           "type": "Video"
         },
         "our_ai_code_of_ethics_template_/csd/2021": {
-          "type": "Slide"
+          "type": "Slide",
+          "url": "https://docs.google.com/presentation/d/1HIDFStA6GGPcoO4_xrDrNG-aOAtqQPKswPv1k58lKII"
         },
         "make_a_machine_learning_app/csd/2021": {
           "type": "Slide"
@@ -4191,7 +4192,8 @@
           "type": "Video"
         },
         "our_ai_code_of_ethics_template_/csd/2022": {
-          "type": "Slide"
+          "type": "Slide",
+          "url": "https://docs.google.com/presentation/d/1HIDFStA6GGPcoO4_xrDrNG-aOAtqQPKswPv1k58lKII"
         },
         "create_an_ml_app/csd/2022": {
           "type": "Rubrik"
@@ -7466,7 +7468,8 @@
           "type": "Video"
         },
         "our_ai_code_of_ethics_template_/csd/2023": {
-          "type": "Slide"
+          "type": "Slide",
+          "url": "https://docs.google.com/presentation/d/1HIDFStA6GGPcoO4_xrDrNG-aOAtqQPKswPv1k58lKII"
         },
         "create_an_ml_app/csd/2023": {
           "type": "Rubrik"
@@ -8917,7 +8920,7 @@
           "type": "Video"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/1LHLJMR4xnnZLRY37lIHA7DU91W7HETWpFrkYwrBFNVA"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "Cara Kerja AI - Data Latihan dan Bias",
@@ -8930,21 +8933,21 @@
           "type": "Video"
         },
         "introduction_to_machine_learning/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview",
+          "url": "https://docs.google.com/presentation/d/1cnapdTIvDEXU-DMD-CVzSJFAYCwELIB2LR19ohXP3SA",
           "type": "Slide"
         },
         "_example_computer_vision_network/how-ai-works/2023": {
           "name": "[Example] Computer Vision Network",
-          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+          "url": "https://docs.google.com/presentation/d/1J4xsOxTKguzN1fRV2uCHUnaywh_8u7RZR9rYOZ2s3QU/"
         },
         "computer_vision/how-ai-works/2023": {
           "name": "Computer Vision",
-          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview",
+          "url": "https://docs.google.com/presentation/d/1umtdEbSrfc_Ks0rbFnUitKLk1td_JX6fhSde4YkPnMU/",
           "type": "Slide"
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "Jaringan Visi Komputer",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+          "url": "https://docs.google.com/document/d/1PKZmyo1yd3c4Z2inKYvPGrRI1sEXapxpZ2Xh3jL4i98/"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
           "name": "Cara Kerja AI: Cara Kerja Computer Vision",
@@ -8953,7 +8956,7 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "Manipulatif Layar Seven-Segment",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/1OFaut1zpZ0kofZco9tJBB0ALVaG6NXIm58U6YZLrhnI/"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "Apa yang Dilihat Oleh Neural Network",
@@ -8967,25 +8970,25 @@
         },
         "neural_networks/how-ai-works/2023": {
           "name": "Neural Networks",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1dwGvUod35Md6ZaP3tVNUQ0rZ-AeS_6OJ-CUo1fKq0MY"
         },
         "neural_networks_1/how-ai-works/2023": {
           "name": "Neural Networks",
-          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
+          "url": "https://docs.google.com/presentation/d/1PsAZhyay4tawxmTxVXD9R6r-h7PnfrwWI_MzPjMCHyM/",
           "type": "Slide"
         },
         "wetube_content_creators/how-ai-works/2023": {
           "name": "Kreator Konten WeTube",
-          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
+          "url": "https://docs.google.com/document/d/1CnauXNhTDYwpSYfRXfYx8Xo2C2pt-JMsdjVs_2qiTOI/",
           "type": "Sumber Daya"
         },
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "(Opsional) Panduan Kegiatan Eliza",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+          "url": "https://docs.google.com/document/d/12UdnXrJplgT0yiUmQxPqV3iUNxwkebY02MHUE4e7I9A"
         },
         "generative_llm/how-ai-works/2023": {
           "name": "LLM Generatif",
-          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
+          "url": "https://docs.google.com/presentation/d/1H9neH3B_CNKNtLDlrZw75DVKCRXo0Wo0MblEIICs8u8",
           "type": "Slide"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
@@ -9000,38 +9003,38 @@
         },
         "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
           "name": "[Key] Kosa Kata dan Panduan Video",
-          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit",
+          "url": "https://docs.google.com/document/d/1AT8YYUc2oFPuzyLmaJpIEPoVez8ZvcjCUfP8sEuVDmg",
           "type": "Kunci Jawaban"
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "Panduan Video dan Kosakata",
-          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+          "url": "https://docs.google.com/document/d/1E8pKFq4dLPNh9Oe-t23Rihlhb7JytHBS3BIDX7RvhXs/"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] Panduan Kegiatan Written Voice Simulator",
-          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+          "url": "https://docs.google.com/document/d/1UQjyBVo4PU4lg66qqPig0WUCch4XxuST_4S0kW5c2DY/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "Panduan Written Voice Simulator",
-          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+          "url": "https://docs.google.com/document/d/1BvFJz97hTX0Jxe2nBElQzfz3NmhHMstYebwBH-M_SC8"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "Panduan Pengguna Written Voice Simulator",
-          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
+          "url": "https://docs.google.com/presentation/d/17iRK-Tlm9KZfqc4NNKdtTaZjxKyEzcCpNusBBgzhZBM/",
           "type": "Sumber Daya"
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(Opsional) Panduan Kegiatan Game GAN",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+          "url": "https://docs.google.com/document/d/1ztBQW-JfwpaeBmQyuUdZlNCz7mj7VfirKqUIUIwtdmE"
         },
         "generative_images/how-ai-works/2023": {
           "name": "Gambar Generatif",
-          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
+          "url": "https://docs.google.com/presentation/d/1SjoIqp6cf1WvmobLjfbhDf8lFew19aYg7piSB4SmQGo/",
           "type": "Slide"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
           "name": "[Key] Panduan Kegiatan Gambar Generatif",
-          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
+          "url": "https://docs.google.com/document/d/1gSRVF0wt0JMcvI5cCGPX5Gtycy1VQ1JZlfXLjETOE1Y",
           "type": "Kunci Jawaban"
         },
         "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
@@ -9041,25 +9044,25 @@
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] Kegiatan Gambar Noise",
-          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+          "url": "https://docs.google.com/document/d/1NHE4fOCh8f7ldcFZ4Irr8gwx6NacFVrP3xFeL55fh4s/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "Panduan Kegiatan Noisy Image Widget",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
+          "url": "https://docs.google.com/document/d/1rmMkrBNYsZL94lTVp3_rVO3hpEYxUe4hJJ0G5DqKeTc",
           "type": "Panduan Kegiatan"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "Panduan Pengguna: Widget Gambar Noise",
-          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
+          "url": "https://docs.google.com/presentation/d/1-eOCRiLgjQg0tjbDhaj--ZQCD0edqnCMF83pX2nVOOI/",
           "type": "Sumber Daya"
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "Panduan Video dan Kosakata",
-          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/17K3ZoBuHPPweiR4xzIXcUks6d5uvXvvZdCyd149ELgE"
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "Bias Algoritma",
-          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview",
+          "url": "https://docs.google.com/presentation/d/1n_7wkOIYIBmricPovKFqqLtIqVCACfuixqbjulkBA4w/",
           "type": "Slide"
         },
         "how_ai_works_-_societal_impact/how-ai-works/2023": {
@@ -9078,14 +9081,14 @@
           "type": "Sumber Daya"
         },
         "ai_code_of_ethics/how-ai-works/2023": {
-          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1aKazji_JEHxy1g4jCyNRlS52B2418PFwJ2W4KhJ0QVM/",
           "type": "Slide"
         },
         "ai_ethics_research_areas/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1RLoQL1BQa0ZZi6FtQ3RrFX2lGQR14yKYX9mC2O2ItPQ"
         },
         "ai_ethics_research_reflection/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1HMw0yDgISmeQxA7e8I9l6E7wcuKiBNi_ct19AzDDv9s"
         },
         "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
           "name": "Cara Kerja AI - Privasi dan Masa Depan Pekerjaan",
@@ -9093,7 +9096,8 @@
           "type": "Video"
         },
         "our_ai_code_of_ethics_template_/how-ai-works/2023": {
-          "type": "Slide"
+          "type": "Slide",
+          "url": "https://docs.google.com/presentation/d/1HIDFStA6GGPcoO4_xrDrNG-aOAtqQPKswPv1k58lKII"
         },
         "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
           "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
@@ -9101,7 +9105,7 @@
         },
         "how_ai_works/how-ai-works/2023": {
           "name": "Bagaimana AI bekerja",
-          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview",
+          "url": "https://docs.google.com/presentation/d/1xEOULrCyLXdDM9XynRDSKXkOxHcCWkHvnkOKMvB0JVQ",
           "type": "Slide"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
@@ -9135,7 +9139,7 @@
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "Pencocokan Kosakata",
-          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+          "url": "https://docs.google.com/document/d/12I5W9VyZWRhs8mkH1BJFhbGQ-0pi48K-eTh7uN3W-Hs"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] Pencocokan Kosakata",
@@ -9252,6 +9256,33 @@
           "name": "Video: Kompresi Teks dengan Aloe Blacc",
           "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Video"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Sumber Daya"
+        },
+        "csd_guide_to_curriculum_videos_1/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_2/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_3/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_4/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_5/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_6/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_7/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
+        },
+        "csd_guide_to_curriculum_videos_8/csd/2023": {
+          "url": "https://docs.google.com/document/d/1BHnI8-X3arZcqgNmggNxTMHqpQcVk3MX-t3e_8TVEzw"
         }
       }
     }

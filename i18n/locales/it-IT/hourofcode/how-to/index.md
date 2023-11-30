@@ -6,7 +6,7 @@ title: Guida pratica all'Ora del Codice
 
 # Come pianificare la tua Ora del Codice
 
-### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
+### Unisciti al movimento e introduci i tuoi alunni all'informatica seguendo questi passaggi.
 
 Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla.
 
@@ -72,11 +72,11 @@ Parla dell'Ora del Codice anche con gli altri docenti, che forse vorranno unirsi
 
 ### Registra il tuo evento così che i volontari ne vengano a conoscenza
 
-Registrando [la tua "Ora del Codice"](/#join), riceverai comunicazioni utilissime tramite email contenenti notizie e suggerimenti per programmare con successo questa attività. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
+Quando ti [iscrivi al tuo evento L'Ora del Codice](/events), riceverai utili comunicazioni via e-mail con notizie e suggerimenti per organizzare un'Ora del Codice di successo. Tramite la registrazione, permetterai ai volontari della tua zona di venire a sapere che la tua scuola partecipa all'iniziativa. I volontari sono una grande risorsa: possono venire a parlare di computer alla tua classe o possono aiutare i tuoi studenti durante le attività dell'Ora del Codice.
 
 ### Emoziona e coinvolgi i tuoi studenti
 
-Prepara l'evento condividendo [i video ispiratori](/promote/resources) che mettono in risalto persone diverse e modi creativi in cui l'informatica può essere utilizzata. Oppure stampa poster stimolanti per la tua classe! Gli studenti partecipano con più entusiasmo a un argomento quando vedono persone che li incoraggiano.
+Prepara l'evento condividendo [video motivazionali](/promote/resources) che mettano in risalto persone diverse e modi creativi in cui può essere utilizzata l'informatica. Oppure stampa poster stimolanti per la tua classe! Gli studenti partecipano con più entusiasmo a un argomento quando vedono persone che li incoraggiano.
 
 {{ promote_new_posters }}
 
@@ -138,7 +138,7 @@ Cosa fare se uno studente finisce prima?
 
 - [Stampa gli attestati]({{ urls/certificates }}) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"]({{ urls/promote_stickers }}).
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 * * *
 

@@ -2999,3 +2999,18 @@ hu:
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját, és hozzon létre saját művészetét, történetét vagy
         how-ai-works-2023:
           title: Hogyan működik az MI?
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Bevezető
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Bevezető
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-7:
+              name: Bevezető
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Bevezető

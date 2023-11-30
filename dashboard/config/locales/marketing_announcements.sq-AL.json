@@ -1,0 +1,58 @@
+{
+  "sq-AL": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Mëso më shumë"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Mëso më shumë"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Mëso më shumë"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Mëso më shumë"
+          },
+          "codebytes-2020": {
+            "buttonText": "Mëso më shumë"
+          },
+          "coldplay": {
+            "buttonText": "Provoje"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Fillo"
+          },
+          "csjourneys": {
+            "buttonText": "Mëso më shumë"
+          },
+          "csjourneys-22": {
+            "buttonText": "Mëso më shumë"
+          },
+          "csleadersprize": {
+            "buttonText": "Mëso më shumë"
+          },
+          "hoc-2023": {
+            "buttonText": "Mëso më shumë"
+          },
+          "home-learning-2020": {
+            "buttonText": "Shikoni ide të projekteve"
+          },
+          "superhero": {
+            "buttonText": "Mëso më shumë"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Na u bashko!"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Na u bashko!"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Na u bashko!"
+          }
+        }
+      }
+    }
+  }
+}

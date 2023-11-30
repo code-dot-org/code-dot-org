@@ -1,90 +1,90 @@
 ---
-title: Hour of Code How-to Guide for After-school
+title: Leiðbeiningar um klukkustund kóða fyrir eftir skóla
 ---
 
 {{ signup_button }}
 
-# How to teach one Hour of Code in after-school classes and clubs
+# Hvernig á að kenna eina klukkustund kóða í námskeiðum og klúbbum eftir skóla
 
 ### Taktu þátt í hreyfingunni og kynntu nemendum þínum tölvunarfræði með þessum skrefum.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Tölvuhugsun hjálpar til við að hlúa að færni til að leysa vandamál, rökfræði og sköpunargáfu. Og tæknin er að umbreyta öllum atvinnugreinum á jörðinni. Nemendur í dag ættu að læra að búa til tækni, ekki bara nota hana. Með því að byrja snemma munu þeir hafa grunn að velgengni á hvaða starfsbraut sem er á 21. öld.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Trying an Hour of Code er einföld og skemmtileg leið til að kynna nemendur fyrir tölvunarfræði, kannski í fyrsta skipti. Ef þú vilt auka höndum til að hjálpa út geturðu fundið sjálfboðaliða á [staðnum til að hjálpa til við]({{ urls/volunteer_local }}) að keyra Hour of Code í bekknum þínum eftir skóla eða klúbbnum.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Einnig er hægt að hýsa klukkustund kóða lítillega! Til að byrja skaltu skoða ábend [ingar okkar um að hýsa raunverulegur Hour of Code viðburð](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
-## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Horfðu á þetta hvernig á að gera myndband <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-## 2. Choose a tutorial
+## 2. Veldu kennslu
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+Við bjóðum upp á margs konar [skemmtileg, klukkutíma löng námskeið]({{ urls/learn }}) fyrir þátttakendur á öllum aldri, búin til af ýmsum samstarfsaðilum. [Prófaðu þá!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**Allar kennsluefni Hour of Code kre** fjast lágmarks prep-tíma fyrir skipuleggjendur, og eru sjálf-leiðsögn - leyfa krökkum að vinna á eigin hraða og færni-stigi.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**Þarftu kennsluáætlun fyrir Hour of Code eftir skóla?** Skoðaðu þetta sni [ðmát](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
-## 3. Promote your Hour of Code
+## 3. Kynntu kóðastund þína
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+Efla Hour of Code þína [með þessum verkfærum]({{ urls/promote }}) og hvetja aðra til að hýsa eigin viðburði sína.
 
-## 4. Plan your technology needs - computers are optional
+## 4. Skipuleggðu tækniþarfir þínar - tölvur eru valfrjálsar
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. En þú **** þarft ekki tölvu fyrir hvert barn og þú getur jafnvel gert Hour of Code án tölvu yfirleitt.
 
-Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+Make sure to test tutorials on student computers or devices to ensure they work properly on browsers with sound and video. **Ertu með litla bandbreidd?** Ætla að sýna myndbönd fremst í bekknum, svo hver nemandi sé ekki að hlaða niður eigin myndböndum. Eða prófaðu kennsluforritin sem eru tengd eða án nettengingar.
 
 Provide headphones for your class, or ask students to bring their own, if the tutorial you choose works best with sound.
 
-**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+**Ertu ekki með nóg tæki?** Notaðu [parforritun](https://www.youtube.com/watch?v=vgkahOzFH2Q). When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
 
-## 5. Start your Hour of Code off with an inspiring video
+## 5. Byrjaðu Hour of Code með hvetjandi myndbandi
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
 **Sýna hvetjandi myndband:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational videos [here](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Upprunalega Code.org sjósetja myndbandið, lögun Bill Gates, Mark Zuckerberg, og NBA stjörnu Chris Bosh - það eru [1 mínútna](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 mínútna](https://www.youtube.com/watch?v=nKIu9yen5nc), og [9 mínútna](https://www.youtube.com/watch?v=dU1xS07N-FA) útgáfur í boði.
+- H [our of Code vídeó um allan heim](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [Obama kallaði alla nemendur til að læra tölvunarfræði](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Finndu fleiri innblástur myndbönd [hér](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 **Það er í lagi að þú ert nýgræðingur í tölvufræðum. Hér eru nokkrar hugmyndir til að kynna "Klukkutíma af forritun":**
 
 - Útskýrðu hvernig tækni hefur áhrif á líf þitt, með dæmum sem vekja áhuga hjá bæði drengjum og stúlkum (talaðu um öpp og tækni sem notuð eru til að bjarga mannslífum, hjálpa fólki, tengja fólk o.s.frv.).
 - Teldu upp hluti sem nota kóða dagsdaglega.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Sjá ráð til að fá stelpur áhuga á tölvunarfræði [hér]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**Þarftu frekari leiðbeiningar?** Sæktu þetta sni [ðmát kennsluáætlun](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
-## 6. Code!
+## 6. Kóði!
 
-**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+**Beina þátttakendum að starfseminni** - Skrifaðu kennsluhlekkinn á hvítborð. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
-**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+**Þegar einhver rekst á erfiðleika er allt í lagi að svara:** - “Ég veit það ekki. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
 
-**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+**Hvað á að gera ef einhver lýkur snemma?** - Hvetja þátttakendur til að prófa aðra Hour of Code virkni á [hourofcode.com/learn]({{ urls/learn }}) - Eða, biðja þá sem klára snemma að hjálpa öðrum sem eru í vandræðum.
 
-## 7. Celebrate
+## 7. Fagnaðu
 
-- [Print certificates]({{ urls/certificates }}) for your students.
-- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Prentaðu skír]({{ urls/certificates }}) teini fyrir nemendur þína.
+- [Prenta “Ég gerði klukkutíma kóða!”]({{ promote/resources_stickers }}) límmiðar fyrir nemendur þína.
+- [Pantaðu sérsniðna boli](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) r fyrir þátttakendur.
 - Deildu myndum og myndböndum af þinni Klukkustund kóðunar á samfélagsmiðlum. Notaðu #HourOfCode og @codeorg svo að við getum líka dregið athygli að góðu gengi ykkar!
 
-## Other Hour of Code resources for educators
+## Önnur Hour of Code auðlindir fyrir kennara
 
 - Skoðaðu [bestu verkefnin](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) frá "Klukkutíma af forritun" skipuleggjendum.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Horfðu á upptökuna af ve [fritinu Kennarans Guide to the Hour of Code.](https://youtu.be/EJeMeSW2-Mw)
+- Heimsæktu [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) til að fá ráðgjöf, innsýn og stuðning frá öðrum skipuleggjendum.
+- Farið yfir al [gengar spurningar um Hour of Code](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+The Hour of Code er aðeins fyrsta skrefið á ferð til að læra meira um hvernig tæknin virkar og hvernig á að búa til hugbúnaðarforrit. Hjálpaðu nemendum að halda áfram ferð sinni og hvetja þá til að [læra meira á netinu](/beyond)!
 
 {{ signup_button }}

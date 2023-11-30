@@ -40,6 +40,16 @@ const EVENTS = {
   // Marketing site pages
   ADMIN_INTEREST_FORM_SUBMIT_EVENT: 'Administrator Interest Form Submitted',
 
+  // Amazon future engineer
+  AFE_START: 'AFE Start',
+  AFE_SIGN_IN_BUTTON_PRESS: 'AFE Sign In Button Press',
+  AFE_SIGN_UP_BUTTON_PRESS: 'AFE Sign Up Button Press',
+  AFE_SUBMIT_SCHOOL_INFO: 'AFE Submit School Info',
+  AFE_INELIGIBLE: 'AFE Ineligible',
+  AFE_CONTINUE: 'AFE Continue',
+  AFE_SUBMIT: 'AFE Submit',
+  AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
+
   // Sections
   COMPLETED_EVENT: 'Section Setup Completed',
   CURRICULUM_ASSIGNED: 'Section Curriculum Assigned',
@@ -85,15 +95,77 @@ const EVENTS = {
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
   TA_RUBRIC_ON_STUDENT_WORK_UNLOADED: 'TA Rubric On Student Work Unloaded',
   TA_RUBRIC_SUBMITTED: 'TA Rubric Submitted',
+  TA_RUBRIC_SUBMITTEED_WRITTEN_FEEDBACK:
+    'TA Rubric Submitted Written Feedback To Student',
   TA_RUBRIC_EVIDENCE_LEVEL_SELECTED: 'TA Rubric Evidence Level Selected',
+  TA_RUBRIC_RUN_BUTTON_CLICKED:
+    'TA Rubric Teacher clicked RUN button on student work',
+
+  // AI Tutor
+  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
+  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
+  AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
+  AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+  HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
+
+  // Hour of Code - Dance Party
+  DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
+  DANCE_PARTY_LEVEL_COMPLETED: 'Dance Party Level Completed',
+  DANCE_PARTY_AI_BACKGROUND_GENERATED: 'Dance Party AI Background Generated',
+  DANCE_PARTY_AI_BACKGROUND_REGENERATED:
+    'Dance Party AI Background Regenerated',
+  DANCE_PARTY_AI_BACKGROUND_USED: 'Dance Party AI Background Used',
+  DANCE_PARTY_AI_BACKGROUND_RESTARTED: 'Dance Party AI Background Restarted',
+  DANCE_PARTY_AI_BACKGROUND_EDITED: 'Dance Party AI Background Edited',
+  DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
+  DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
+  DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+
+  // videos
+  VIDEO_LOADED: 'Video Loaded',
+  VIDEO_STARTED: 'Video Started',
+  VIDEO_PAUSED: 'Video Paused',
+  VIDEO_ENDED: 'Video Played To Completion',
 
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_HOC_CONGRATS_PAGE_VISITED:
     'Teacher Hour of Code Congrats Page Visited ',
+
+  // Coteacher
+  COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
+  COTEACHER_EMAIL_INVALID: 'Coteacher Email Invalid',
+  COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
+  COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
+  COTEACHER_REMOVED: 'Coteacher Removed',
 };
 
-export {EVENTS};
+const EVENT_GROUP_NAMES = {
+  VIDEO_EVENTS: 'video-events',
+  DANCE_PARTY: 'dance-party-events',
+};
+
+const EVENT_GROUPS = {
+  // Hour of Code - Dance Party
+  [EVENTS.DANCE_PARTY_ACTIVITY_STARTED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_LEVEL_COMPLETED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_EMOJI_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_SONG_UNAVAILABLE]: EVENT_GROUP_NAMES.DANCE_PARTY,
+
+  // videos
+  [EVENTS.VIDEO_LOADED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+  [EVENTS.VIDEO_STARTED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+  [EVENTS.VIDEO_PAUSED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+  [EVENTS.VIDEO_ENDED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,
+};
+
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS};

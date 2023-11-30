@@ -1,0 +1,55 @@
+{
+  "bn-BD": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "আরও জানুন"
+          },
+          "ai-launch-2023": {
+            "buttonText": "আরও জানুন"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "আরও জানুন"
+          },
+          "back-to-school-2021": {
+            "buttonText": "আরও জানুন"
+          },
+          "codebytes-2020": {
+            "buttonText": "আরও জানুন"
+          },
+          "coldplay": {
+            "buttonText": "এটা চেষ্টা করুন।"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "শুরু করুন"
+          },
+          "csjourneys": {
+            "buttonText": "আরও জানুন"
+          },
+          "csjourneys-22": {
+            "buttonText": "আরও জানুন"
+          },
+          "csleadersprize": {
+            "buttonText": "আরও জানুন"
+          },
+          "hoc-2023": {
+            "buttonText": "আরও জানুন"
+          },
+          "superhero": {
+            "buttonText": "আরও জানুন"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "আমাদের সাথে যোগ দিন"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "আমাদের সাথে যোগ দিন"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "আমাদের সাথে যোগ দিন"
+          }
+        }
+      }
+    }
+  }
+}

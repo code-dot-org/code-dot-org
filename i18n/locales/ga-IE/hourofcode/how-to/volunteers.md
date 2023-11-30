@@ -1,264 +1,264 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: Treoir Conas Uair an Chóid do Dhaonálacha
 ---
 
-# How to volunteer with a school or classroom
+# Conas oibriú deonach le scoil nó seomra ranga
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### Tá na mílte múinteoirí ag lorg deonacha chun a gcuid mac léinn a spreagadh. Déan difríocht inniu!
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Cláraigh le bheith deonach</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+Cuidíonn smaointeoireacht ríomhaireachta le scileanna réiteach fadhbanna, loighic agus cruth Agus tá an teicneolaíocht ag athrú gach tionscal ar an pláinéad. Ba chóir do mhic léinn inniu foghlaim conas teicneolaíocht a chruthú, ní amháin í a úsáid
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+Is réamhrá uair an chloig ar ríomheolaíocht ríomhaireachta é The Hour of Code atá deartha chun “cód,” a thaispeáint gur féidir le duine ar bith na buneilimintí a fhoghlaim, agus rannpháirtíocht i réimse na ríomheolaíochta a leathnú. Féadfaidh tú cuidiú le feasacht a ardú ar an ngluaiseacht ríomheolaíochta agus oibriú deonach chun níos mó mac léinn a spreagadh chun triail a bhaint as ríomheolaíocht, go háirithe mná óga agus mic léinn ó ghrúpaí
 
-- [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [Cé atá in ann obair dheonach?](#who-can-volunteer)
+- [Cén fáth a bheith deonach](#why-volunteer)
+- [Conas a roghnaítear oibrithe deonacha?](#selection)
+- [Cad a tharlaíonn más mian liom obair dheonach a dhéanamh le scoil ar leith?](#choose-a-school)
+- [Conas ullmhú](#how-to-prepare)
+- [Nuair a bhíonn imeacht á óstáil agat](#hosting-an-event)
+- [Scaipeadh an focal faoi Uair an Chód](#promote-hour-of-code)
+- [Tuilleadh bealaí chun tacú leis an Uair an Chód](#support-hour-of-code)
+- [Coitianta Deonacha](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+Cibé an bhfuil tú deonach beagnach, go pearsanta, nó le do chuideachta, is féidir le d'iarrachtaí tionchar mór a imirt ar an mbealach a fheiceann mic léinn ar an eolaíocht ríomhaireachta agus ar a gcumas féin. Féach ar ár bhfoireann u [irlisí deonacha má tá ceisteanna agat]({{ localized_files/hoc_volunteer_toolkit }})fós.
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## Cé atá in ann obair dheonach?
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+Is féidir le duine ar bith atá paiseanta faoi oideachas ríomheolaíochta agus éagsúlacht mhéadaithe sa teicneolaíocht Ba bhreá linn oibrithe deonacha de gach cúlra a fheiceáil páirt. Tá éagsúlacht mhór gníomhaíochtaí san Uair an Chód do gach aois agus leibhéal scile, mar sin ní gá duit a bheith i do shaineolaí cláir chun deonach a dhéanamh!
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+Féadfaidh tú a bheith ina aoi chainteoir i seomra ranga, nó cabhrú le múinteoir an ghníomhaíocht a reáchtáil. [Cláraigh inniu](https://code.org/volunteer) chun mic léinn a spreagadh chun ríomheolaíocht a fhoghlaim.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Cén fáth a bheith deonach
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+Is í ríomheolaíocht réimse sainmhínithe an 21ú haois, ach ní mhúineann mórchuid na scoileanna é fós. B'fhéidir gurb é Uair an Chód an rochtain is mó ar ríomheolaíocht a fhaigheann na mic léinn seo i mbliain áirithe. Trí dheonach a dhéanamh, is féidir leat é a dhéanamh níos éasca fós do mhúinteoirí CS a thabhairt isteach ina seomra ranga.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+Amharc ar roinnt teistiméireachtaí ó dheonacha roimhe seo
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
-- “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
+- “Ba é an chuid is fearr de mo thaithí ná gur mná agus daoine daite iad an rang ar fad. Tugann sé go maith do thodhchaí ár dtionscail deis a bheith agat na páistí seo a bhaint amach agus a spreagadh.”
+- “Go háirithe taitneamh as cailíní óga a spreagadh sa teicneolaíocht Bhraith mé go raibh mé ag cabhrú leis an gcéad ghlúin eile i mo cheantar áitiúil.”
+- “Is breá liom a fheiceáil cé chomh spreagúil a bhí na páistí. Rud iontach amháin ná gur thug na múinteoirí faoi deara go raibh cuid de na mic léinn nár éirigh chomh maith go acadúil ag smaoineamh mar fhorbróir agus ag cabhrú le daoine eile - ag tabhairt áit dóibh le bheith muiníneach.”
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Cláraigh le bheith deonach</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## Conas a roghnaítear oibrithe deonacha?
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+Is féidir le múinteoirí cuardach a dhéanamh ar dheonacha ar ár [léarscáil](http://code.org/volunteer/local)oibri Má tá tú lonnaithe in aice lena seomra ranga, déanfaidh múinteoirí athbhreithniú ar do phróifíl ar an léarscáil, mar sin déan iarracht an oiread agus is féidir a chur i gcrích chun an seans go dtiocfaidh múinteoir teagmháil leat
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+Nuair a roghnófar é, déanfaidh múinteoir teagmháil leat tríd an ardán deonach (ní roinnfimid do sheoladh ríomhphoist leis an múinteoir riamh). Oibrigh leo chun a chinneadh an chaoi is fearr is féidir leat cur lena n-imeacht, agus an mbeidh tú ag tabhairt cuairte go pearsanta nó go deonach beagnach.
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+Má tá an iomarca iarratais á fháil agat ó mhúinteoirí, is féidir leat do chuid roghanna a nuashonrú nó díliostáil i gcónaí trí chliceáil ar an nasc a chuirtear ar fáil ag bun aon iarratais ríomhphoist ó mhúinteoir.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## Cad a tharlaíonn más mian liom obair dheonach a dhéanamh le scoil ar leith?
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+Ní gá duit ár léarscáil oibrithe deonacha a úsáid chun deonach a dhéanamh! Déanta na fírinne, molaimid teagmháil a dhéanamh go díreach le múinteoirí agus riarthóirí má tá seomra ranga ann ar mhaith leat oibriú deonach leis.
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+Chun tosú: - Más tuismitheoir nó caomhnóir tú, seol an ríomhphost [seo chuig múinteoir](https://hourofcode.com/us/promote/resources#help-schools) do pháiste ag tairiscint chun cabhrú leo Uair Cód a reáchtáil. - Má tá scoil eile i gcuimhne agat, tabhair cuairt ar a suíomh gréasáin chun teagmhálacha iomchuí a fháil chun teagmháil a dhéanamh leo mar phríomhoide nó leas-phríomhoide, teagascóirí teicneolaíochta nó ríomheolaíochta, nó fiú PTSA na scoile. D'fhéadfá comhpháirtíocht freisin le heagraíochtaí mar Clubanna Cail & íní Buachaillí Mheiriceá, Junior Achievement, brainse YMCA, agus go leor eile chun ócáid a chomóstáil. - Mura bhfuil tú in ann scoil a aimsiú atá ag óstáil Uair an Chód, is féidir leat deonach a dhéanamh chun cabhrú le d'imeacht féin a reáchtáil le do chuideachta. Amharc ar ár d [Treoir Conas do Chuideachtaí](https://hourofcode.com/us/how-to/companies) chun níos mó a fhoghlaim agus spreagadh a fháil.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Conas ullmhú
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+Cibé an bhfuil tú ag freastal ar imeacht Uair an Chód go cianda nó go pearsanta, beidh taithí i bhfad níos réidh agat má dhéanann tú na hullmhúcháin seo roimh ré.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### Téigh in aithne leis an Eagraí
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+Má tá tú ag obair dheonach le seomra ranga, plé na lóistíochta seo leis an múinteoir roimh am:
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology?
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early.
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity.
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together.
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time.
+- Do ról ag an ócáid. Má oibríonn tú sa teicneolaíocht, b'fhéidir go n-iarrfaí ort d'eispéiris nó scéal pearsanta a roinnt: Conas a chuaigh tú páirt i ngairm bheatha sa teicneolaíocht? Cén fáth a bhfuil ríomheolaíocht tábhachtach duit? Cad iad roinnt rudaí a dhéanann tú mar chuid de do phost agus conas a bhaineann sé sin le teicneolaíocht?
+- Má tá tú ag obair dheonach go pearsanta, déan cinnte go dtuigeann tú treoirlínte sláinte agus sábháilteachta áitiúla agus scoile Ag brath ar a gcuid nósanna imeachta b'fhéidir go mbeidh ort teacht beagán luath.
+- Má bheidh tú ag obair dheonach beagnach nó go pearsanta mar is féidir leis seo a chinneadh cé na hamanna is gá duit a bheith i láthair agus cén cumas.
+- Má tá tú ag obair dheonach beagnach, oibrigh leis an múinteoir chun an t-ardán físchomhdhála is fearr le húsáid a chinneadh agus déan iarracht tástáil den ócáid a dhéanamh le chéile.
+- Má tá gníomhaíochtaí Uair an Chód réamhshocraithe ag an múinteoir don ócáid, bí ar an eolas ionas gur féidir leat iad a ini [úch](https://hourofcode.com/us/learn) adh roimh am.
 
-### Think about your participants
+### Smaoinigh ar do rannpháirtithe
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate.
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code.
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- Smaoinigh ar na mic léinn a bheidh tú ag labhairt leo agus cad a d'fhéadfadh athshonrú leo. Mar dheonach, is féidir leat cabhrú leo a thuiscint go bhfuil ríomhaireacht i ngach áit agus gur féidir leo a bheith ina eolaithe ríomhaireachta freisin. Smaoinigh ar a n-aoiseanna, cúlraí agus féiniúlachtaí inscne agus déan ullmhaithe le hábhair a d'fhéadfadh achomharc a dhéanamh dá leasanna. Seo treoir bhreise maidir le conas mná óga a spreag [adh chun páirt](http://code.org/girls) a ghlacadh.
+- Cuir na mic léinn ar bís! Oibrigh leis an múinteoir chun físeán [inspioráideach a roghnú a chabhróidh leis an rang a dhíriú agus iad a chur ar bís Uair an Chód a dhéanamh.](https://hourofcode.com/us/promote/resources#videos)
+- Más deonach fíorúil tú, smaoinigh ar cúpla sleamhnán a dhéanamh mar chuid de do chur i láthair chun cabhrú le mic léinn a choinneáil i mbun gníomhaíochta
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+Níos mó acmhainní uait? [Amharc ar na leideanna eile seo](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## Nuair a bhíonn imeacht á óstáil agat
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+Má tá tú ina óstach ar imeacht le seomra ranga, bain úsáid as an gclár oibre samplach chun tú a threorú. Deimhnigh an sceideal comhaontaithe don lá agus plé aon phointí cainte leis an múinteoir roimh ré. Má tá tú ag tabhairt cuairte go fisiciúil ar an rang, déan cinnte go síníonn tú isteach sa scoil agus beannacht ar an múinteoir lá d'imeachta.
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+Má tá tú ag smaoineamh ar an Uair an Chód a óstáil sa bhaile nó sa phobal, molaimid breathnú ar roinnt dár dTreoracha Conas Domhain do thuismithe [oirí](https://hourofcode.com/us/how-to/parents) agus d'eagra [íochtaí nó do chuideachtaí](https://hourofcode.com/us/how-to/companies).
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Féach ar an bhfíseán conas seo <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Déan dáta, formáid agus suíomh do d'imeacht a chinneadh
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Oibrigh leis an scoil nó leis an múinteoir chun na rudaí is ciall a phlé. Chonaiceamar imeachtaí atá fíor [úil](https://hourofcode.com/us/how-to/virtual) nó go pearsanta, ag oifig na cuideachta nó a reáchtáil sa phobal, agus do mhic léinn de gach aois! Is féidir leat breathnú freisin ar an méid a rinne comhpháirtithe [corparáideacha](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) agus [deontóirí eile san](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) am atá caite le haghaidh roinnt smaointe spreagúla.
 
 <br />
 
-#### Sample Agenda:
+#### Clár Oibre Samplach:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Am | Mír Clár Oibre | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 nóiméad | Taispeáin físeán [inspioráideach | |5-10 nóiméad](https://hourofcode.com/us/promote/resources#videos)| Cuir isteach tú féin agus foghlaim níos mó faoi na mic léinn: Cá n-oibríonn tú, cad a dhéanann tú, agus cad is mó a thaitníonn leat faoi do phost? Cad nó cé a spreag tú? Conas a fuair tú suim san ríomheolaíocht? An raibh meantóir agat? Cuir ceisteanna ar na mic léinn agus fág am do Q&A. | | 30-60 nóiméad | Cód! Má tá d'imeacht go pearsanta, is é seo an t-am chun ceisteanna a fhreagairt agus mic léinn a threorú trí phuzal diana. Déan iarracht gan an réiteach a thabhairt dóibh go díreach, ina ionad sin, déan iarracht ceisteanna a chur orthu ionas gur féidir leo a fhreagairt dóibh féin cad a chuaigh mícheart, agus mic léinn a spreagadh chun a chur ar a chéile má tá ceisteanna acu. Má tá tú ag obair dheonach beagnach, oibrigh leis an múinteoir ar an gcur chuige is fearr a d'fhéadfadh a bheith. B'fhéidir go mbeidh sé níos ciallmhaire filleadh ag deireadh an tseisiúin chun a fheiceáil cén dul chun cinn atá déanta ag mic léinn. | | |1-3 nóiméad | Buíochas le gach duine agus roinn focail scartha inspioráideacha. Tabhair amach aon cheann de do chuid swag cuideachta (tá gream[áin u](#celebrate) amhnach)! | <br />
 
-#### Other ideas to add to your event
+#### Smaointe eile le cur le d'imeacht
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Mínigh ar na bealaí a bhíonn tionchar ag teicneolaíocht ar ár saol, le samplaí a mbeidh cúram ag mic léinn de gach cúlra - labhair faoi theicneolaíocht atá ag sábháil beatha, ag cabhrú le daoine,
+- Más cuideachta ardteicneolaíochta tú, taispeána spraoi, táirgí nuálacha atá ag obair orthu. Mura cuideachta ardteicneolaíochta tú, plé ar bhealaí a úsáideann do chuideachta teicneolaíocht chun fadhbanna a réiteach agus spriocanna
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- Má tá grúpa foirne agat a bheidh ag éascú d'imeacht nó ag obair dheonach le scoil áitiúil, smaoinigh ar t-léinte sain [cheaptha a ordú](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) do do ghrúpa.
 
-### 3. Plan your technology needs
+### 3. Pleanáil do chuid riachtanais teic
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Feistí:
 
-Áirítear ar an taithí is fearr leis an gCód Uair den Chód ríomhairí ceangailte le Idirlíon. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+Áirítear ar an taithí is fearr leis an gCód Uair den Chód ríomhairí ceangailte le Idirlíon. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! Maidir le gníomhaíochtaí neamhphlugáilte, ní gá ach an rannán Teicneolaíocht Seomra Ranga a scagadh chun roghanna a thaispeáint le haghaidh
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. Feicfidh siad freisin go bhfuil an eolaíocht eolaíochta sóisialta agus comhoibríoch.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Gníomhaíochtaí tá** stála ar ríomhairí nó feistí Déan cinnte go n-oibríonn siad i gceart ar bhrabhsálaithe le fuaim agus físe
+- **Níl go leor feistí agat?** Úsáid cláir péire. When students partner up, they help each other and rely less on the teacher. Feicfidh siad freisin go bhfuil an eolaíocht eolaíochta sóisialta agus comhoibríoch.
+- **Cuir cluasáin ar** fáil do do rannpháirtithe nó iarr orthu a gcuid féin a thabhairt a thabhairt má bheidh siad ag triail ranganna teagaisc a oibríonn is fearr le fuaimeanna.
+- **An bhfuil bandaleithead íseal**agat? Plean físeáin a thaispeáint ag tosaigh na hócáide, ionas nach bhfuil gach rannpháirtí ag íoslódáil a gcuid físeáin féin. Nó bain triail as na gníomhaíochtaí neamhphlugáilte/as líne.
 
-#### Virtual Events:
+#### Imeachtaí Fíorúla:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Má tá d'imeacht chun a bheith fíorúil, beidh tú ag iarraidh cinneadh a dhéanamh ar d'ardán comhdhála (agus é a thástáil) roimh d'imeacht. D'fhéadfadh sé seo tionchar a imirt ar líon na mac léinn a mbraitheann tú compordach a bheith páirteach, mar sin is fearr é seo a chinneadh sula gcuirfidh tú cuireadh chuig seomra ranga nó d'imeacht Le haghaidh smaointe maidir le conas Uair an Chód iargúlta a reáchtáil, léigh ár leideanna [maidir le himeacht fíorúil Uair an Chód](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Roghnaigh gníomhaíocht
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Soláthraímid réimse ranganna teagaisc spraoi, treoraithe ó mhic léinn do gach aoisghrúpa agus leibhéal taithí. Tá sé coitianta do mhic léinn ranganna teagaisc féin-stiúir a thriail, cé b'fhéidir gur mhaith leat an ócáid a thosú le físeán [inspioráideach do gach duine](https://hourofcode.com/us/promote/resources#videos) féachaint le chéile.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Déan iniúchadh ar na gníomhaíochtaí agus déan cinneadh roimh am más mian leat teagaisc amháin a roghnú do d'aíonna go lé</a> ir, nó lig do gach leanbh a gcuid féin a roghnú. Ní mór íospartaíocht íosta a bheith ag gníomhaíochtaí uile Uair an Chóid, agus tá siad féin-threoraithe - rud a ligeann do rannpháirtithe a bheith ag obair ar a luas féin agus ar leibhéal scile.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Nuair a bheidh treochlár láidir agat do d'imeacht, is féidir leat tosú ag tabhairt cuireadh do mhic léinn, scoil, nó don phobal níos mó. Molaimid tosú le scoil áitiúil a bhfuil caidreamh agat leis nó ár léarsc [áil](https://hourofcode.com/us/map) d'imeachtaí Uair an Chód a bhrabhsáil.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Ceiliúradh
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Tar éis do mhic léinn nó aíonna a n-Uair an Chód a chur i gcrích, tá sé in am a n-rath a cheiliúradh. Seo roinnt smaointe chun d'imeacht a dhéanamh níos spraoi fós:
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- [Teastais]({{ urls/certificates }}) a roinnt do rannpháirtithe agus do mhic
+- [Priontáil “Rinne mé Uair an Chód! greamáin”]({{ promote/resources_stickers }}) nó faigh duaiseanna agus swag eile ar an [Code.org Amazon Store.](https://code.org/shop)
+- Roinn grianghraif agus físeáin de d'imeacht Uair an Chód ar na meáin shóisialta. Úsáid #HourOfCode agus @codeorg ionas gur féidir linn aird a tharraingt ar do rath freisin!
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## Scaipeadh an focal faoi Uair an Chód
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Ceann de na bealaí is fearr le cabhrú ná an focal a scaipeadh agus Uair an Chód a chur chun cinn.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Cláraigh Do Imeacht
 
-Nuair a [chláraíonn tú do ócáid Uair an Chóid](/#join), beidh tú a fháil cumarsáide r-phost cabhrach le nuacht agus leideanna chun óstáil Uair rathúil de Chód. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Nuair a ch [láraíonn tú d'imeacht Uair an Chód](/events), gheobhaidh tú cumarsáid ríomhphoist cabhrach le nuacht agus leideanna chun Uair an Chód rathúil a óstáil. Is é freisin an chaoi is féidir leat a chur in iúl do scoileanna áitiúla nó do thuismitheoirí go bhfuil imeacht á óstáil agat in aice leo.
 
-### 2. Post on Social Media
+### 2. Postáil ar na Meáin Shóisialta
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Cuidigh le feasacht a ardú ar ghluaiseacht na heolaíochta ríomhaireachta leis an ábhar samplach seo le postáil ar na meáin shóisialta agus a roinnt
 
-#### Hour of Code general announcement
+#### Fógra ginearálta Uair an Chóid
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Tá ríomheolaíocht ag athrú ár saol. Cuidigh le mic léinn a bheith mar chuid den athrú seo ag tosú le ceann #HourOfCode. https://hourofcode.com/
+- Ná húsáid teicneolaíocht amháin - foghlaim conas í a thógáil. Cuidigh le duine tosú le #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Staitisticí
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- An raibh a fhios agat ach 53% de scoileanna na SA a mhúineann ríomheolaíocht? Tabhair deis do gach mac léinn ceann a fhoghlaim #HourOfCode https://hourofcode.com/
+- Sna SA, níl ach 26% de ghairmithe bogearraí ná mná. Tabhair isteach níos mó mná óga don ríomheolaíocht le #HourOfCode https://hourofcode.com/
+- Níl 67% de phoist ríomhaireachta sna SA san earnáil na teicneolaíochta. Cuidigh le ríomheolaíocht a chur sa churaclam caighdeánach le #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Cruthaigh do chuid féin
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Is féidir le ceann #HourOfCode a bheith mar thoradh ar [líon isteach do scéal]. https://hourofcode.com/
+- Táim ag tacú le #HourOfCode mar [líon isteach do chuid smaointe]. Bí linn https://hourofcode.com
 
-#### Engineer-specific
+#### Sonrach don innealtóir
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Má d'athraigh do chéad líne cód do shaol, cuidigh le mic léinn in aice leat a gcéad #HourOfCode a scríobh https://code.org/volunteer
+- Má d'fhoghlaim tú cód - cad é do scéal? Spreagadh mac léinn in aice leat trína gcéad #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Níos mó a fho</a> ghlaim faoi phóstaeir, físeáin, greamáin agus bealaí eile chun d'imeacht a chur chun cinn do phobal.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Tuilleadh bealaí chun tacú leis an Uair an Chód
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
+- Feasacht a scaipeadh trí swag [Code.org a chaitheamh](https://store.code.org/) (téann gach fáltas chun tacú le níos mó mac léinn rochtain a fháil ar oideachas ríomheolaíochta).
+- Roghnaigh leas a bhaint as Code.org agus tú ag siopadóireacht ar [AmazonSmile](https://code.org/donate/amazonsmile).
+- Iarr ar do PHF ríomhphost a sheoladh ar fud na cuideachta ag béim ar thábhacht ríomheolaíochta agus fostaithe a spreagadh chun an focal a scaipeadh
+- Bíodh spraoi agat le comhoibrithe i bhfeachtas bron [nta.](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)
+- [Sínigh an achain](https://code.org/promote) í seo chun a chinntiú go bhfuil an deis ag gach mac léinn ríomheolaíocht a fhoghlaim.
+- [Tabhair le](https://code.org/donate) Code.org ionas gur féidir linn ár n-acmhainní oideachais a choinneáil saor in aisce agus inrochtana do gach duine.
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+Le haghaidh tuilleadh moltaí maidir le conas tacú le Code.org agus Uair an Chód, tabhair cuairt ar Code.org/Hel [p](https://code.org/help)
 
 * * *
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## Coitianta Deonach
 
-### I haven't been contacted by a teacher yet. How can I still volunteer?
+### Níor rinne múinteoir teagmháil liom go fóill. Conas is féidir liom obair dheonach fós?
 
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.  
-
-
-### How long do classroom visits last for?
-
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+Déan iarracht cuardach a dhéanamh ar scoileanna áitiúla agus glaoigh ar an bpríomhoide/múinteoir/oifig tosaigh agus fiafraigh conas  
 
 
-### What age group is the Hour of Code activity appropriate for?
+### Cá fhad a mhaireann cuairteanna seomra ranga?
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
-
-
-### How do I get selected as a technical volunteer or guest speaker?
-
-Teachers will be searching for volunteers on our [volunteer map](https://code.org/volunteer/local). Try to make your profile as complete as possible to increase the chance that a teacher will select you. If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
+De ghnáth maireann cuairt phearsanta seomra ranga 60-90 nóiméad agus is gnách go maireann cuairt fíorúil seomra ranga 20-30 nóimé   
 
 
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.   
+### Cén aoisghrúpa a bhfuil gníomhaíocht Uair an Chód oiriúnach dó?
+
+Déanann Code.org agus ár gcomhpháirtithe na gníomhaíochtaí uile Uair an Chód a dhearadh chun mic léinn de gach leibhéal grád (K-12) a mhealladh ó gach cúlra. Is féidir le gach duine - fiú daoine fásta - spraoi a bheith ag imirt!   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+### Conas a roghnófar mé mar dheonach teicniúil nó mar aoichainteoir?
+
+Beidh múinteoirí ag cuardach saorálacha ar ár léarsc [áil saorál](https://code.org/volunteer/local)acha. Déan iarracht do phróifíl a dhéanamh chomh iomlán agus is féidir chun an seans a mhéadú go roghnóidh múinteoir tú. Má tá rogha agat ar an gcaoi ar mhaith leat obair dheonach a dhéanamh, mar shampla a bheith ina n-aoi cainteoir nó mar thacaíocht theicniúil, cuir in iúl é sin sa tuairisc ar do phróifíl.   
+
+
+Nuair a roghnófar é, déanfaidh múinteoir teagmháil leat tríd an ardán deonach (ní roinnfear do sheoladh ríomhphoist leis an múinteoir riamh). Má tá an iomarca iarratais á fháil agat ó mhúinteoirí, is féidir leat do chuid roghanna a nuashonrú i gcónaí trí chliceáil ar an nasc chun d'fhaisnéis a chur in eagar nó díliostáil, a chuirtear ar fáil ag bun aon ríomhphoist ó mhúinteoir.   
+
+
+[<button>Cláraigh le bheith deonach</button>]({{ urls/volunteer }})

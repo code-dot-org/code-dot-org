@@ -1,0 +1,67 @@
+{
+  "ar-SA": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "اعرف المزيد",
+            "title": "اكتشف الذكاء الاصطناعي والتعلم الآلي"
+          },
+          "ai-launch-2023": {
+            "buttonText": "اعرف المزيد"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "اعرف المزيد"
+          },
+          "back-to-school-2021": {
+            "buttonText": "اعرف المزيد"
+          },
+          "codebytes-2020": {
+            "buttonText": "اعرف المزيد"
+          },
+          "coldplay": {
+            "buttonText": "جربها"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "إبدأ"
+          },
+          "csjourneys": {
+            "buttonText": "اعرف المزيد"
+          },
+          "csjourneys-22": {
+            "buttonText": "اعرف المزيد"
+          },
+          "csleadersprize": {
+            "buttonText": "اعرف المزيد"
+          },
+          "hoc-2023": {
+            "body": "انضم إلى الملايين في جميع أنحاء العالم لتنظيم أنشطة \"ساعة البرمجة\"، باستخدام الذكاء الاصطناعي أو بدونه وتعلم كيفية عمل الذكاء الاصطناعي. يمكن لأي شخص في أي مكان القيام بذلك. ليس هناك حاجة للخبرة.",
+            "buttonText": "اعرف المزيد",
+            "title": "ساعة البرمجة: الإبداع مع الذكاء الاصطناعي"
+          },
+          "hoc-more": {
+            "body": "يحتوي موقع Hour of Code \"ساعة من البرمجة\" على أكثر من 100 نشاط في علم الحاسوب لجميع الأعمار ومستويات الخبرة التي طورها موقع Code.org وشركاؤه."
+          },
+          "home-learning-2020": {
+            "buttonText": "اعرض أفكار المشروع"
+          },
+          "superhero": {
+            "buttonText": "تعلّم المزيد"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "انضم إلينا"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "ترشيح معلم"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "انضم إلينا"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "انضم إلينا"
+          }
+        }
+      }
+    }
+  }
+}

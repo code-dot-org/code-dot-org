@@ -3097,6 +3097,29 @@ tr:
               display_name: Deneme Sınavları
             lessonGroup-4:
               display_name: Sandbox'lar
+        csc-ecosystems-2023:
+          description: "## Bu Modül için Önerilen Ön Çalışma\n\n**Bilim:** Öğrenciler
+            1. ve 2. derslerde deniz yaşamı ekosistemini simüle edeceklerdir. Bu ekosisteme
+            aşinalık oluşturmak için bu [Okyanus Hayvanları Videosunu](https://www.youtube.com/watch?v=8adtdg0N2-g)
+            (9:42 dakika) öneriyoruz. \n\n2.  derste öğrenciler birkaç sürdürülebilir
+            balıkçılık uygulamasını kodlayacaklar. Biraz temel bilgi almak ve gerçek
+            dünyayla daha rahat bağlantı kurmak için okunabilecek materyaller: [Aşırı
+            Avlanmayı Anlama](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing)
+            (Monterey Bay Akvaryumu makalesi) veya [Mw, kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC)
+            (Çocuk kitabı).\n\n**Bilgisayar Bilimi:** Bu modülde öğrenciler, yeni
+            bilgisayar bilimleri öğrencileri için zor olabilecek yeni kodlama kavramlarını
+            öğreneceklerdir. Öğrenciler Code.org'un Hareketli Nesne Laboratuvarı'na
+            aşina değilse araca temel giriş için [Hareketli Nesne Laboratuvarı ile
+            Yüzen Balıklar](https://studio.code.org/s/coursee-2022/lessons/3) (55
+            dakika) videosunu denemenizi öneririz. \n\nBu modül ayrıca koşullu ifadeler
+            adı verilen gelişmiş bir CS kavramını kullanır. Öğrenciler bu kavramı
+            rehberli bir şekilde öğrenirler ancak bazı öğrenciler için ilk önce, bağımsız
+            koşullara giriş aktivitesine katılmak yararlı olabilir: [Kartlarla Koşullar](https://studio.code.org/s/coursed-2022/lessons/12)
+            (50 dakika)."
+          lessons:
+            lesson-3:
+              name: Kendi Ekosisteminizi Kodlayın (2023)
+          title: Deniz Ekosistemi Simülasyonu (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
@@ -7673,6 +7696,11 @@ tr:
             müzikleri ve dahası ile!
           student_description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
           title: Dans Partisi (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Dans Partisi: A.I Sürümü'
+          title: 'Dans Partisi: AI (Yapay Zeka) Sürümü'
         dance-draft:
           title: KULLANMA
         dance-extras:
@@ -7940,6 +7968,10 @@ tr:
           title: 2021 BB İlkeleri Derinlemesine Öğrenmeye Genel Bakış
         dlp21-overview:
           name: dlp21-genel bakış
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: hour of code ders planı şablonu
         duino:
           description: Arduino'lar ile öğretim için bazı araçları test etme
           student_description: Arduino'lar ile öğretim için bazı araçları test etme
@@ -8827,6 +8859,25 @@ tr:
             dene!
           title: Klasik Labirent
         how-ai-works-2023:
+          description: |-
+            Bu dersler [Yapay Zeka Nasıl Çalışır](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) video serisini tamamlamaktadır. Her ders, serideki tek bir videoyla eşleştirilerek videolarda tanıtılan kavramların daha derinlemesine incelenmesi sağlanır. Dersler, öğrencilerin bir aktiviteye veya simülasyona katıldığı ve daha sonra yapay zeka hakkında anlayış geliştirmenin ve bundan etkilenenlerle empati kurmanın bir yolu olarak bu deneyim üzerinde derinlemesine düşündüğü, öğrenciler için heyecan verici bir ilk deneyim yaratmaya odaklanır. Bazı dersler daha çok yapay zekanın arkasındaki teknolojiye odaklanırken, diğer dersler yapay zekanın toplumsal etkilerine ve etik hususlara odaklanıyor.
+
+            **Öğretmenler için Destekler:** [Öğretmenler için AI 101 serimiz] aracılığıyla yapay zeka derslerini sınıfınıza taşıma hakkında daha fazla bilgi edinebilirsiniz[1]. Öğretmenler için AI 101, yapay zekanın (AI) çığır açan dünyası ve onun eğitimdeki dönüştürücü potansiyeli ile ilgilenen tüm öğretmenler ve eğitimciler için ücretsiz, temel bir çevrimiçi profesyonel öğrenme serisidir.
+
+            **Uygulama Seçenekleri:** Genişletmek ve daha fazla ayrıntı görüntülemek için aşağıdaki seçeneklerden birini tıklayın.
+
+            ::: ayrıntılar [<span style="font-size: 1em; font-weight: bold;">"Hepsini öğretmek istiyorum!"</span>]
+            1'den 7'ye kadar olan dersler, her gün video serisinden ayrı bir videoya odaklanılan ve tanıtılan kavramların daha derinlemesine incelendiği 7 günlük bir dizi halinde öğretilebilir. Bu yöne giden sınıflar, bu sıraya uymayan Ders 8'i gizlemelidir. [Dersi gizleme hakkında daha fazla bilgi edinmek için buraya tıklayın](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+
+            ::: ayrıntılar [<span style="font-size: 1em; font-weight: bold;">"Belirli bir ders vermek veya başka bir sınıfa entegre olmak istiyorum"</span>]
+            Her ders kendi başına ayakta durabilir ve diğerlerinden bağımsız olarak öğretilebilir. Bir dersi başka bir konuya veya mevcut bir bilgisayar bilimi, yapay zeka veya genel eğitim sınıfına entegre etmek istiyorsanız bu özellikle kullanışlıdır. Bu yöne giden sınıflar, öğretmek istediğiniz ders dışındaki tüm dersleri gizlemelidir. [Dersi gizleme hakkında daha fazla bilgi edinmek için buraya tıklayın](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            ::: ayrıntılar [<span style="font-size: 1em; font-weight: bold;">"Yalnızca Bir Günüm Var"</span>]
+            Ders 8, öğrencilere yapay zekayı tanıtmak isteyen ancak bunun için yalnızca bir günü olan sınıflar için tasarlanmıştır. Bu ders, sınıf tüm video dizisini izlerken öğrencilere not alma olanağı sağlar. Bu yöne giden sınıflar, Ders 8 dışındaki tüm dersleri gizlemelidir. [Dersi gizleme hakkında daha fazla bilgi edinmek için burayı tıklayın](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
+            :::
+            <br />
+            <br />
           title: Yapay Zeka Nasıl Çalışır?
         iceage:
           description: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
@@ -9725,6 +9776,58 @@ tr:
             -   Öğrencilerinizle üniteyi uygulamak için bir plan yapın.
 
             **Önerilen Süre:** 120 dakika
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Problem Çözme ve Bilgi İşlem ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Problem Çözme ve Hesaplamaya giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 30 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Problem Çözme ve Bilgi İşlem ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Problem Çözme ve Hesaplamaya giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 30 dakika
+          title: 'Modül 1: Problem Çözme ve Bilgi İşlemi Öğretme Hazırlığı'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modül 2: Web Geliştirmeyi Öğretme Hazırlığı'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Etkileşimli Animasyonlar ve Oyunlar ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Etkileşimli Animasyonlar ve Oyunlara giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Oyun Laboratuvarı ile çalışmak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 120 dakika
+          student_description: |-
+            Bu profesyonel öğrenim modülü, Code.org'un Etkileşimli Animasyonlar ve Oyunlar ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
+
+            **Bu profesyonel öğrenim modülünde şunları yapacaksınız:**
+
+            -   Etkileşimli Animasyonlar ve Oyunlara giriş.
+            -   Ünitede yer alan temel kavramları uygulamak.
+            -   Oyun Laboratuvarı ile çalışmak.
+            -   Bölüm sonu projelerini keşfetmek.
+
+            **Önerilen süre:** 120 dakika
+          title: Etkileşimli Animasyonlar ve Oyunları Öğretme Hazırlığı
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modül 4: Tasarım Sürecini Öğretme Hazırlığı"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modül 5: Veri ve Toplumu Öğretme Hazırlığı'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:
@@ -10233,15 +10336,17 @@ tr:
               display_name: Eşzamanlı Bölüm 2
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
+            lessonGroup-7:
+              display_name: Giriş
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
             lesson-3:
               name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
+            lesson-7:
+              name: Giriş
           title: Gün 1
         virtual-pl-csa-summer-day2:
           lesson_groups:
@@ -10254,8 +10359,6 @@ tr:
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
             lesson-3:
@@ -10275,11 +10378,9 @@ tr:
               display_name: Eşzamansız Bölüm 2
           lessons:
             lesson-1:
-              name: Eşzamanlı Bölüm 1
+              name: Giriş
             lesson-2:
               name: Eşzamansız Bölüm 1
-            lesson-3:
-              name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
           title: Gün 3
@@ -10294,12 +10395,8 @@ tr:
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
             lesson-2:
               name: Eşzamansız Bölüm 1
-            lesson-3:
-              name: Eşzamanlı Bölüm 2
             lesson-4:
               name: Eşzamansız Bölüm 2
           title: Gün 4
@@ -10312,8 +10409,8 @@ tr:
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
           lessons:
-            lesson-1:
-              name: Eşzamanlı Bölüm 1
+            lesson-2:
+              name: Eşzamansız Bölüm 1
             lesson-3:
               name: Eşzamanlı Bölüm 2
             lesson-4:
@@ -10397,13 +10494,57 @@ tr:
               display_name: Eşzamansız Bölüm 1
             lessonGroup-5:
               display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-5:
+              name: Eşzamansız Faaliyetlere Giriş
           title: Gün 1
         virtual-pl-csp-summer-day2:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-5:
+              name: Giriş
           title: Gün 2
         virtual-pl-csp-summer-day3:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
+          lessons:
+            lesson-2:
+              name: Eşzamansız Bölüm 1
           title: Gün 3
         virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
+            lessonGroup-5:
+              display_name: Eşzamansız Bölüm 2
           title: Gün 4
+        virtual-pl-csp-summer-day5:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Eşzamanlı Bölüm 1
+            lessonGroup-3:
+              display_name: Eşzamansız Bölüm 1
+            lessonGroup-4:
+              display_name: Eşzamanlı Bölüm 2
         virustest:
           description_short: Bir virüs salgınının simülasyonunu yapmak için Sprite
             Lab'ı kullanın.

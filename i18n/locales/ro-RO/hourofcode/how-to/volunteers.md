@@ -133,7 +133,7 @@ Colaborează cu școala sau cu profesorul pentru a stabili care sunt datele și 
 - Explică modul în care tehnologia are impact asupra vieții noastre, cu exemple care să îi intereseze pe cursanții din toate mediile - vorbește despre tehnologii care salvează vieți, care îi ajută pe oameni, care îi conectează.
 - Dacă reprezinți o companie de tehnologie, fă demonstrații în care să utilizezi produse amuzante și inovatoare la care lucrează compania ta. Dacă nu reprezinți o astfel de companie, discută despre modul în care compania ta folosește tehnologia pentru a rezolva probleme și a-și atinge obiectivele.
 - Invită IT-iști din compania ta să vorbească despre motivul alegerii carierei lor și despre proiectele la care lucrează.
-- Dacă ai un grup de angajați care vor facilita evenimentul sau care vor fi voluntari la o școală locală, ia în considerare posibilitatea de a comanda [tricouri personalizate pentru](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) grupul tău.
+- Dacă aveți un grup de personal care vă va facilita evenimentul sau vă va oferi voluntariat la o școală locală, luați în considerare să comand [ați tricouri personalizate](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) pentru grupul dvs.
 
 ### 3. Planifică nevoile tehnologice
 
@@ -186,7 +186,7 @@ Una dintre cele mai bune modalități prin care poți fi de ajutor este să le s
 
 ### 1. Înregistrează-ți evenimentul
 
-Atunci când vă înscrieți la [evenimentul Hour of Code](/#join), veți primi comunicări folositoare prin email cu știri și sfaturi pentru găzduirea unei Hour of Code reușite. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
+Când vă [înscrieți la evenimentul Ora de programare](/events), veți primi comunicări utile prin e-mail cu știri și sfaturi pentru găzduirea cu succes a unei Ore de programare. Un aspect important este și modul în care poți anunța școlile din zona ta sau pe părinți că organizezi un eveniment în apropiere.
 
 ### 2. Postează pe rețelele de socializare
 

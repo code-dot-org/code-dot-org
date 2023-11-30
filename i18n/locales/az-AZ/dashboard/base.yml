@@ -437,6 +437,7 @@ az:
       playlab: 'Oyun labı'
       playlab_k1: 'Play Lab (Pre-reader)'
       poetry: 'Şeir'
+      poetry_hoc: 'Şeir sənəti'
       scratch: 'Cızıq'
       sports: 'İdman'
       spritelab: 'Sprite Laboratoriyası'
@@ -793,6 +794,7 @@ az:
     playlab:
       image_alt: 'Mavi pişik, axmaq it və tarix öncəsi mışovul göstərən bir şəkil kolajı.'
     poem-art:
+      title: 'Şeir sənəti'
       body: 'Özünü ifadə et! Animasiyalı şeirlər yaratmaq üçün koddan istifadə edin.'
       image_alt: 'Səhnədə çıxış edən hipster kalamar.'
     pre-express-2017:
@@ -1319,4 +1321,3 @@ az:
   course_deprecated:
     title: "Diqqət edin! Bu kurikulum artıq mövcud deyil, lakin Code.org sizin üçün daha yeni seçimlərə malikdir."
     button: "Yeni kurrikuluma baxın"
-

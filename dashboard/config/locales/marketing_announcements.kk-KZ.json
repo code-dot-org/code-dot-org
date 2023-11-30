@@ -1,0 +1,55 @@
+{
+  "kk-KZ": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "толығырақ білу"
+          },
+          "ai-launch-2023": {
+            "buttonText": "толығырақ білу"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "толығырақ білу"
+          },
+          "back-to-school-2021": {
+            "buttonText": "толығырақ білу"
+          },
+          "codebytes-2020": {
+            "buttonText": "толығырақ білу"
+          },
+          "coldplay": {
+            "buttonText": "Қолданып көріңіз"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Бастау"
+          },
+          "csjourneys": {
+            "buttonText": "толығырақ білу"
+          },
+          "csjourneys-22": {
+            "buttonText": "толығырақ білу"
+          },
+          "csleadersprize": {
+            "buttonText": "толығырақ білу"
+          },
+          "hoc-2023": {
+            "buttonText": "толығырақ білу"
+          },
+          "superhero": {
+            "buttonText": "Толығырақ"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Бізге қосыл"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Бізге қосыл"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Бізге қосыл"
+          }
+        }
+      }
+    }
+  }
+}

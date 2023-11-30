@@ -34,6 +34,7 @@ pl:
           description: Rysuj fajne obrazki i wzory z Artystą!
           description_short: Rysuj fajne obrazki i wzory z Artystą!
           student_description: Rysuj fajne obrazki i wzory z Artystą!
+          name: artysta
         hourofcode:
           title: Klasyczny labirynt
           description: Poznaj podstawy informatyki z postaciami z Angry Birds, Plants vs Zombies i Wiewióra z Epoki lodowcotej!
@@ -67,6 +68,7 @@ pl:
           description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           description_short: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
+          name: nieskończoność
         netsim:
           title: Symulator internetowy
           description: Dowiedz się, jak działa Internet.
@@ -439,10 +441,10 @@ pl:
             practice:
               display_name: Praktyki nauczania
         basketball:
-          title: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description_short: Wybierz swoją drużynę i zrób grę w koszykówkę
-          description: Wybierz swoją drużynę i zrób grę w koszykówkę
-          student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
+          title: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description_short: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          description: Wybierz swoją drużynę i utwórz grę w koszykówkę
+          student_description: Wybierz swoją drużynę i utwórz grę w koszykówkę
           name: piłka do kosza
         csd2-2017:
           title: CSD Jednostka 2 - Rozwój sieci ('17- '18)
@@ -5819,7 +5821,7 @@ pl:
             lessonGroup-4:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: urządzenia-2022
-          title: Tworzenie aplikacji dla urządzeń
+          title: Tworzenie aplikacji z urządzeniami (Circuit Playground)
           description: "W jednostce Tworzenie aplikacji za pomocą urządzeń uczniowie badają rolę urządzeń fizycznych w informatyce. Korzystając z App Lab i Adafruit Circuit Playground, uczniowie opracowują programy, które wykorzystują te same wejścia i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc, jak prosty zgrubny prototyp może doprowadzić do gotowego produktu. Następnie uczniowie badają, w jaki sposób można wykorzystać urządzenia fizyczne do reagowania na otaczający ich świat, używając sposobu myślenia „twórcy” do tworzenia prototypów z codziennych materiałów. \n\n**Wskazówki dotyczące wdrażania tworzenia aplikacji za pomocą urządzeń**\n\n-   Ta jednostka wymaga od uczniów dostępu do Circuit Playground - [kliknij tutaj](/s/microbit-2023), aby uzyskać więcej informacji na temat korzystania z Circuit Playground w klasie\n-   Wskazówki dotyczące wspierania uczniów na poziomach programowania i różnicowania zadań są dostępne w [Przewodniku po poziomach programowania](https://code.org/maker/circuitplayground) i [Przewodnik po różnicowaniu](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview)\n\n\\*\\*Rozwój zawodowy: \\*\\* Jeśli jesteś zainteresowany prowadzeniem tego kursu, zalecamy ukończenie bezpłatnego [Tworzenie aplikacji z urządzeniami Moduł Profesjonalnego rozwoju zawodowego we własnym tempie](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview). Moduł został zaprojektowany na 2 godziny. Nie zakłada się wcześniejszego doświadczenia z kodowaniem lub sztuczną inteligencją."
         allthevalidation:
           lessons:
@@ -7403,24 +7405,42 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 5 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Aplikacje i narzędzia'
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Refleksje z lekcji'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m5
           title: Moduł 5
         vpl-csd-2023-m6:
           lessons:
             lesson-2:
               name: Moduł CSD 6 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
+            lesson-4:
+              name: 'Sesja synchroniczna 3: Różnicowanie'
+            lesson-5:
+              name: 'Sesja synchroniczna 4: Wspieranie równości'
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m6
           title: Moduł 6
         vpl-csd-2023-m7:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
         ai-ethics-2023:
@@ -7448,26 +7468,108 @@ pl:
           name: virtual-pl-csa-summer-2024-day1
           title: Dzień 1
         virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-1:
+              name: "TLO #1: U1L7 - czarno-białe obrazy"
+            lesson-2:
+              name: "TLO #2: U1L9 - Kompresja bezstratna"
+            lesson-3:
+              name: "TLO #3: U1L10 - Kompresja stratna"
+            lesson-4:
+              name: Rola nauczyciela w ocenie kształtującej
+            lesson-5:
+              name: Wstęp
+            lesson-6:
+              name: Witamy w opisie kursu i egzaminu
+            lesson-8:
+              name: Poprzednio w… Jednostka 1 Lekcja 8
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
           name: virtual-pl-csp-summer-day2
           title: Dzień 2
         virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-1:
+              name: Rozumienie siebie i naszej pozycji
+            lesson-2:
+              name: "TLO #4: U2L2 - Budowanie sieci"
+            lesson-4:
+              name: Stosowanie naszej wiedzy na temat tożsamości i stronniczości
+            lesson-5:
+              name: "TLO #6: U2L4 - Routery i redundancja"
+            lesson-6:
+              name: Wprowadzenie do Modułu 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
           name: virtual-pl-csp-summer-day3
           title: Dzień 3
         virtual-pl-csp-summer-day4:
+          lessons:
+            lesson-1:
+              name: "TLO #7: U3L2 - Wprowadzenie do trybu projektowania"
+            lesson-2:
+              name: U3L3 — Rozwijanie pomysłu na projekt
+            lesson-3:
+              name: "TLO #8: U3L5 - Wprowadzenie do programowania"
+            lesson-7:
+              name: Wprowadzenie do Modułu 4
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
+            lessonGroup-5:
+              display_name: Asynchroniczna Część 2
           name: virtual-pl-csp-summer-day4
           title: Dzień 4
         virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-5:
+              name: Planowanie swojego roku
+            lesson-6:
+              name: Ceremonie zamknięcia
+            lesson-7:
+              name: Wprowadzenie do Modułu 5
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchroniczna Część 1
+            lessonGroup-3:
+              display_name: Asynchroniczna Część 1
+            lessonGroup-4:
+              display_name: Synchroniczna Część 2
           name: virtual-pl-csp-summer-day5
         virtual-pl-csa-summer-day2:
           lessons:
             lesson-1:
-              name: Synchroniczna Część 1
+              name: Podsumowanie asynchroniczne
             lesson-2:
               name: Asynchroniczna Część 1
             lesson-3:
               name: Synchroniczna Część 2
             lesson-4:
               name: Asynchroniczna Część 2
+            lesson-5:
+              name: 'Eksploracja lekcji: U1L8 - Dziedziczenie'
+            lesson-9:
+              name: Podsumowanie asynchroniczne
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7482,13 +7584,15 @@ pl:
         virtual-pl-csa-summer-day3:
           lessons:
             lesson-1:
-              name: Synchroniczna Część 1
+              name: Wstęp
             lesson-2:
               name: Asynchroniczna Część 1
-            lesson-3:
-              name: Synchroniczna Część 2
             lesson-4:
               name: Asynchroniczna Część 2
+            lesson-9:
+              name: Wprowadzenie do oceniania
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7502,14 +7606,12 @@ pl:
           title: Dzień 3
         virtual-pl-csa-summer-day4:
           lessons:
-            lesson-1:
-              name: Synchroniczna Część 1
             lesson-2:
               name: Asynchroniczna Część 1
-            lesson-3:
-              name: Synchroniczna Część 2
             lesson-4:
               name: Asynchroniczna Część 2
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7523,14 +7625,22 @@ pl:
           title: Dzień 4
         virtual-pl-csa-summer-day5:
           lessons:
-            lesson-1:
-              name: Synchroniczna Część 1
             lesson-2:
               name: Część asychroniczna 1
             lesson-3:
               name: Synchroniczna Część 2
             lesson-4:
               name: Asynchroniczna Część 2
+            lesson-5:
+              name: Wprowadzenie do Jednostki 3
+            lesson-7:
+              name: Ćwicz używanie tablic
+            lesson-10:
+              name: Przejście do trybu asynchronicznego
+            lesson-13:
+              name: Ceremonie zamknięcia
+            lesson-16:
+              name: Ceremonie zamknięcia
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7545,13 +7655,17 @@ pl:
         virtual-pl-csa-summer-day1:
           lessons:
             lesson-1:
-              name: Synchroniczna Część 1
+              name: Podsumowanie asynchroniczne
             lesson-2:
               name: Asynchroniczna Część 1
             lesson-3:
               name: Synchroniczna Część 2
             lesson-4:
               name: Asynchroniczna Część 2
+            lesson-7:
+              name: Wstęp
+            lesson-10:
+              name: Wprowadzenie do Async
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7561,9 +7675,14 @@ pl:
               display_name: Synchroniczna Część 2
             lessonGroup-5:
               display_name: Asynchroniczna Część 2
+            lessonGroup-7:
+              display_name: Wstęp
           name: virtual-pl-csa-summer-day1
           title: Dzień 1
         virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Wprowadzenie do działań asynchronicznych
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -7586,5 +7705,46 @@ pl:
           lessons:
             lesson-1:
               name: Godzina Kodowania (Szkic 2)
+            lesson-2:
+              name: szablon planu lekcji Godziny Kodowania
           name: draft-hoc-dp-2
           title: Potańcówka (Szkic 2)
+        self-paced-pl-problem-solving-and-computing-1-2023:
+          name: self-paced-pl-problem-solving-and-computing-1-2023
+        self-paced-pl-problem-solving-and-computing-2-2023:
+          name: self-paced-pl-problem-solving-and-computing-2-2023
+        draft-hoc-dp-2-a:
+          name: draft-hoc-dp-2-a
+          title: 'Potańcówka (październikowy pilot - wersja A) '
+          description_short: Wszystkie piosenki
+          description: Wszystkie piosenki
+        draft-hoc-dp-2-:
+          name: draft-hoc-dp-2-
+          title: 'Potańcówka (październikowy pilot - wersja A) '
+          description_short: Scoped Songs
+          description: Scoped Songs
+        draft-hoc-dp-2-b:
+          name: draft-hoc-dp-2-b
+          title: 'Potańcówka (październikowy pilot - wersja B) '
+          description: Scoped Songs
+        hoc-dp-oct-beta:
+          name: hoc-dp-oct-beta
+          title: 'Potańcówka (Grupa A) Beta '
+        hoc-dp-oct-beta-b:
+          name: hoc-dp-oct-beta-b
+          title: Potańcówka (Grupa B) Beta
+        self-paced-pl-csd-unit1-1-2023:
+          name: self-paced-pl-csd-unit1-1-2023
+        self-paced-pl-csd-unit1-2-2023:
+          name: self-paced-pl-csd-unit1-2-2023
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Potańcówka: edycja A.I.'
+          name: dance-ai-2023
+          title: 'Potańcówka: edycja AI'
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test

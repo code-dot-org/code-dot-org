@@ -9,7 +9,7 @@ title: Indlela yokuqondisa yovolontiya beHora loKufingqwa
 
 ***
 
-## Why volunteer?
+## Kungani uvolontiya?
 Check out some testimony from past volunteers:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -58,7 +58,7 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 | Isikhathi     | Agenda item                                                                                                                                                                                                                                                                                                                                                  |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1-5 minutes   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                         |
-| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>What or who inspired you?</li><li>How did you get interested in computer science?</li><li>Did you have a mentor?</li><li>Share a story about how tech affects everyone.</li><br>Ask the students questions and leave time for Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
+| 5-10 minutes  | Introduce yourself and learn more about the students: </ul><li>What do you work, what do you do, and what do you love most about your job?</li><li>Yini okanye ngubani okufake intshisakalo?</li><li>How did you get interested in computer science?</li><li>Ubunaye umsizi na?</li><li>Share a story about how tech affects everyone.</li><br>Ask the students questions and leave time for Q&A.</br> <li> What jobs are they interested in, what are their favorite tech gadgets or apps, and how do they think they are built? </li><li> Do the students have any questions for you?</ul> |
 | 30-60 minutes | **Code!** Walk around, answer questions, and guide them through tough puzzles. Try not to give students the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. Learning from each other is a great learning opportunity.                  |
 | 1-3 minutes   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                              |
 | After         | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Go to [code.org/yourschool](https://code.org/yourschool) with your teacher to fill in what this school teaches today and encourage them to pledge to bring ccomputer science to their classroom.                                          |
@@ -78,9 +78,9 @@ When you're hosting an Hour of Code event, follow the sample agenda below to hel
 ## Volunteering during the Hour of Code FAQ
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+Zama ukufunisela ezikoleni esiseduze futhi shayela uthishanhloko/ uthisha/ihovisi eliphambili noma ungasiza kanjani.
 
-### How long do classroom visits last for?
+### Ukuvakashela amakilasi kuthatha isikhathi esingakanani?
 An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
 
 ### What age group is the Hour of Code activity appropriate for?

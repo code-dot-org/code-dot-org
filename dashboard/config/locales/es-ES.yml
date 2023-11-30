@@ -4,6 +4,8 @@ es:
     attributes:
       user:
         age: Edad
+        ai_rubrics_disabled: Desactivar la función de rúbrica de IA
+        ai_settings_header: Los ajustes de IA
         current_password: Contraseña actual
         edit_header: Editar información de la cuenta
         email: Correo electrónico
@@ -701,6 +703,8 @@ es:
       týmto účtom, aby ste boli informovaný o pokroku a projektoch vášho dieťaťa!"
   parent_mailer:
     parent_email_added_subject: "¡Bienvenido a Code.org!"
+    parent_permission_request_subject: Se necesita el consentimiento de los padres
+      para que su hijo tenga acceso a Code.org
     student_associated_subject: Información de inicio de sesión para Code.org
   password:
     change_form:
@@ -1160,6 +1164,8 @@ es:
     teacher_educator_guide: Consulta la Guía del educador
     title: Regístrate en Code.org
     us_state: Estado/provincia
+    us_state_dropdown_options:
+      other: Vivo en un lugar que no aparece aquí
     user_type: "¿Eres estudiante o profesor?"
     user_type_button: Actualizar el tipo de cuenta
     user_type_label: Tipo de cuenta
@@ -1312,6 +1318,12 @@ es:
         un triángulo.
     conditionals:
       image_alt: Dos manos barajando un mazo de cartas.
+    course2:
+      image_alt: Un collage de rompecabezas de Code.org que muestra a un mago verde,
+        un artista y un pez naranja.
+    course3:
+      image_alt: Un collage de rompecabezas de Code.org que muestra un juego, un zombi
+        y un ninja.
     dance:
       title: Fiesta de Baile
     dance-2019:

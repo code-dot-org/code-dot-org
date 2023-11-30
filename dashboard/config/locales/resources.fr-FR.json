@@ -605,7 +605,8 @@
           "type": "Vidéo"
         },
         "the-problem-solving-process/csd/2021": {
-          "name": "Le Processus de Résolution de Problèmes"
+          "name": "Le Processus de Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "problem-solving-process/csd/2021": {
           "name": "Processus de Résolution De Problème"
@@ -623,13 +624,15 @@
           "name": "Entrée et Sortie"
         },
         "input-and-output-1/csd/2021": {
-          "name": "Entrée et Sortie"
+          "name": "Entrée et Sortie",
+          "type": "Guide d'activité"
         },
         "what-do-computers-do/csd/2021": {
           "type": "Vidéo"
         },
         "app-proposal-project/csd/2021": {
-          "name": "Les Applications et La Résolution de Problèmes"
+          "name": "Les Applications et La Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "Les Applications et La Résolution de Problèmes",
@@ -656,7 +659,8 @@
         },
         "exploring-web-pages/csd/2021": {
           "name": "Explorer des Pages Web",
-          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/"
+          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
+          "type": "Guide d'activité"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "Diapositives"
@@ -730,7 +734,8 @@
         },
         "social-sleuth/csd/2021": {
           "name": "Limier social",
-          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
+          "type": "Guide d'activité"
         },
         "intro_to_css_-_part_1/csd/2021": {
           "name": "Introduction à CSS - Partie 1",
@@ -768,7 +773,8 @@
           "type": "Guide projet"
         },
         "licensing-your-work-2020/csd/2021": {
-          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
+          "type": "Guide d'activité"
         },
         "creative-commons-video/csd/2021": {
           "type": "Vidéo"
@@ -784,7 +790,8 @@
           "type": "Ressource"
         },
         "define-your-web-page/csd/2021": {
-          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
+          "type": "Guide d'activité"
         },
         "body-styling/csd/2021": {
           "url": "https://drive.google.com/file/d/1joTTFiq8LxbeUOXCFnyNXDDNYDL9_H8O/view"
@@ -835,7 +842,8 @@
           "type": "Ressource"
         },
         "websites-for-a-purpose/csd/2021": {
-          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
+          "type": "Guide d'activité"
         },
         "teamwork-dealing-with-disagreement/csd/2021": {
           "url": "https://youtu.be/6GgrUeVT-xs",
@@ -846,20 +854,23 @@
           "type": "Vidéo"
         },
         "website-team-plan/csd/2021": {
-          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
+          "type": "Guide d'activité"
         },
         "links-and-research-1/csd/2021": {
           "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
         },
         "links-and-research/csd/2021": {
-          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit"
+          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit",
+          "type": "Guide d'activité"
         },
         "how-search-works-video/csd/2021": {
           "url": "https://youtu.be/LVV_93mBfSU",
           "type": "Vidéo"
         },
         "internet-scavenger-hunt/csd/2021": {
-          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
+          "type": "Guide d'activité"
         },
         "classes/csd/2021": {
           "name": "Classes",
@@ -1080,7 +1091,8 @@
           "type": "Rubrique"
         },
         "market-research/csd/2021": {
-          "name": "Étude de Marché"
+          "name": "Étude de Marché",
+          "type": "Guide d'activité"
         },
         "market_research/csd/2021": {
           "name": "Étude de Marché"
@@ -1144,10 +1156,12 @@
           "type": "Ressource"
         },
         "representation-matters/csd/2021": {
-          "name": "Questions de Représentation"
+          "name": "Questions de Représentation",
+          "type": "Guide d'activité"
         },
         "representing-information-1/csd/2021": {
-          "name": "Représenter l'Information"
+          "name": "Représenter l'Information",
+          "type": "Guide d'activité"
         },
         "ascii-text/csd/2021": {
           "type": "Ressource"
@@ -1180,14 +1194,16 @@
           "name": "Interpréter les Données"
         },
         "interpreting-data/csd/2021": {
-          "name": "Interpréter les Données"
+          "name": "Interpréter les Données",
+          "type": "Guide d'activité"
         },
         "interpreting-data-1/csd/2021": {
           "name": "Interpréter les Données",
           "type": "Ressource"
         },
         "making-decisions-with-data/csd/2021": {
-          "name": "Prendre des Décisions avec des Données"
+          "name": "Prendre des Décisions avec des Données",
+          "type": "Guide d'activité"
         },
         "problem-solving-process-with-data/csd/2021": {
           "type": "Ressource"
@@ -1200,7 +1216,8 @@
           "type": "Ressource"
         },
         "automating-data-decisions-1/csd/2021": {
-          "name": "Automatiser les Décisions Relatives Aux Données"
+          "name": "Automatiser les Décisions Relatives Aux Données",
+          "type": "Guide d'activité"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
           "type": "Vidéo"
@@ -1215,7 +1232,8 @@
           "name": "Les Données dans le Monde Réel"
         },
         "data-in-the-real-world/csd/2021": {
-          "name": "Les Données dans le Monde Réel"
+          "name": "Les Données dans le Monde Réel",
+          "type": "Guide d'activité"
         },
         "video_impact_on_society/csd/2021": {
           "type": "Vidéo"
@@ -1244,7 +1262,8 @@
           "type": "Ressource"
         },
         "computing-innovations/csd/2021": {
-          "name": "Innovations Informatiques"
+          "name": "Innovations Informatiques",
+          "type": "Guide d'activité"
         },
         "internet-of-things-video/csd/2021": {
           "type": "Vidéo"
@@ -1491,7 +1510,8 @@
           "type": "Diapositives"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
-          "name": "Données numériques dans un laboratoire d'IA"
+          "name": "Données numériques dans un laboratoire d'IA",
+          "type": "Guide d'activité"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "Données numériques dans un laboratoire d'IA",
@@ -2807,7 +2827,8 @@
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Histoires d'espace vide ",
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+          "type": "Guide d'activité"
         },
         "variables_blank_space_stories/coursef/2021": {
           "name": "Variables : Histoires d'espaces vides ",
@@ -2836,7 +2857,8 @@
         },
         "user_input_programs/coursef/2021": {
           "name": " Programmes avec saisies de l'utilisateur ",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "type": "Guide d'activité"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Faire une Pause et réfléchir en ligne",
@@ -3151,7 +3173,8 @@
           "name": "Processus de Résolution De Problème"
         },
         "the_problem_solving_process/csd/2022": {
-          "name": "Le Processus de Résolution de Problèmes"
+          "name": "Le Processus de Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "the_problem_solving_process_1/csd/2022": {
           "name": "Le Processus de Résolution de Problèmes",
@@ -3180,7 +3203,8 @@
           "name": "Entrée et Sortie"
         },
         "input_and_output_1/csd/2022": {
-          "name": "Entrée et Sortie"
+          "name": "Entrée et Sortie",
+          "type": "Guide d'activité"
         },
         "input_and_output_2/csd/2022": {
           "name": "Entrée et Sortie",
@@ -3199,7 +3223,8 @@
           "type": "Diapositives"
         },
         "apps_and_problem_solving/csd/2022": {
-          "name": "Les Applications et La Résolution de Problèmes"
+          "name": "Les Applications et La Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2022": {
           "type": "Ressource"
@@ -3269,7 +3294,8 @@
         },
         "exploring_web_pages_1/csd/2022": {
           "name": "Explorer des Pages Web",
-          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/"
+          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
+          "type": "Guide d'activité"
         },
         "exploring_web_pages_2/csd/2022": {
           "name": "Explorer des Pages Web",
@@ -3358,7 +3384,8 @@
         },
         "social_sleuth_1/csd/2022": {
           "name": "Limier social",
-          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
+          "type": "Guide d'activité"
         },
         "intro_to_css_-_part_1/csd/2022": {
           "name": "Introduction à CSS - Partie 1",
@@ -3409,7 +3436,8 @@
           "type": "Vidéo"
         },
         "licensing_your_work_1/csd/2022": {
-          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
+          "type": "Guide d'activité"
         },
         "intellectual_property/csd/2022": {
           "name": "Propriété intellectuelle",
@@ -3431,7 +3459,8 @@
           "type": "Diapositives"
         },
         "define_your_web_page/csd/2022": {
-          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
+          "type": "Guide d'activité"
         },
         "websites_for_expression/csd/2022": {
           "name": "Sites web pour s'exprimer",
@@ -3502,7 +3531,8 @@
           "type": "Diapositives"
         },
         "websites_for_a_purpose_1/csd/2022": {
-          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
+          "type": "Guide d'activité"
         },
         "websites_for_a_purpose_2/csd/2022": {
           "url": "https://docs.google.com/presentation/d/1MIFVttm0GFmNx58oducL80wvbINe9kxoLxzm3eNgw_o/template/preview",
@@ -3517,7 +3547,8 @@
           "type": "Vidéo"
         },
         "website_team_plan_1/csd/2022": {
-          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
+          "type": "Guide d'activité"
         },
         "team_problem_solving/csd/2022": {
           "name": "La Résolution De Problèmes en Équipe",
@@ -3525,13 +3556,15 @@
           "type": "Diapositives"
         },
         "internet_scavenger_hunt/csd/2022": {
-          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
+          "type": "Guide d'activité"
         },
         "links_and_research/csd/2022": {
           "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
         },
         "links_and_research_1/csd/2022": {
-          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit"
+          "url": "https://docs.google.com/document/d/1fx7eXn3778CUU2GHHagCj1AXY95ll_HJssfeZDbN4gk/edit",
+          "type": "Guide d'activité"
         },
         "video_how_search_works/csd/2022": {
           "url": "https://youtu.be/LVV_93mBfSU",
@@ -3970,7 +4003,8 @@
           "type": "Diapositives"
         },
         "market_research/csd/2022": {
-          "name": "Étude de Marché"
+          "name": "Étude de Marché",
+          "type": "Guide d'activité"
         },
         "market_research_1/csd/2022": {
           "name": "Étude de Marché"
@@ -4080,14 +4114,16 @@
           "name": "Questions de Représentation"
         },
         "representation_matters_1/csd/2022": {
-          "name": "Questions de Représentation"
+          "name": "Questions de Représentation",
+          "type": "Guide d'activité"
         },
         "representation_matters_2/csd/2022": {
           "name": "Questions de Représentation",
           "type": "Diapositives"
         },
         "representing_information/csd/2022": {
-          "name": "Représenter l'Information"
+          "name": "Représenter l'Information",
+          "type": "Guide d'activité"
         },
         "patterns_and_representation/csd/2022": {
           "name": "Modèles et Représentation",
@@ -4148,7 +4184,8 @@
           "name": "Interpréter les Données"
         },
         "interpreting_data_1/csd/2022": {
-          "name": "Interpréter les Données"
+          "name": "Interpréter les Données",
+          "type": "Guide d'activité"
         },
         "interpreting_data_2/csd/2022": {
           "name": "Interpréter les Données",
@@ -4159,7 +4196,8 @@
           "type": "Diapositives"
         },
         "making_decisions_with_data_1/csd/2022": {
-          "name": "Prendre des Décisions avec des Données"
+          "name": "Prendre des Décisions avec des Données",
+          "type": "Guide d'activité"
         },
         "problem_solving_process_with_data/csd/2022": {
           "type": "Ressource"
@@ -4176,7 +4214,8 @@
           "type": "Ressource"
         },
         "automating_data_decisions_2/csd/2022": {
-          "name": "Automatiser les Décisions Relatives Aux Données"
+          "name": "Automatiser les Décisions Relatives Aux Données",
+          "type": "Guide d'activité"
         },
         "automating_data_decisions_3/csd/2022": {
           "name": "Automatiser les Décisions Relatives Aux Données",
@@ -4189,7 +4228,8 @@
           "name": "Les Données dans le Monde Réel"
         },
         "data_in_the_real_world_1/csd/2022": {
-          "name": "Les Données dans le Monde Réel"
+          "name": "Les Données dans le Monde Réel",
+          "type": "Guide d'activité"
         },
         "netflix_and_data/csd/2022": {
           "type": "Vidéo"
@@ -4232,7 +4272,8 @@
           "type": "Vidéo"
         },
         "computing_innovations_1/csd/2022": {
-          "name": "Innovations Informatiques"
+          "name": "Innovations Informatiques",
+          "type": "Guide d'activité"
         },
         "computing_innovations_research_areas/csd/2022": {
           "type": "Ressource"
@@ -4552,7 +4593,8 @@
           "type": "Diapositives"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
-          "name": "Données numériques dans un laboratoire d'IA"
+          "name": "Données numériques dans un laboratoire d'IA",
+          "type": "Guide d'activité"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "name": "Données numériques dans un laboratoire d'IA",
@@ -5631,7 +5673,8 @@
           "type": "Rubrique"
         },
         "end_of_course_project_guide/coursee/2022": {
-          "name": "Guide de projet de fin de cours"
+          "name": "Guide de projet de fin de cours",
+          "type": "Guide d'activité"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Tronc commun et directives de la NGSS ",
@@ -5726,7 +5769,8 @@
         },
         "blank_space_stories/coursef/2022": {
           "name": "Histoires d'espace vide ",
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+          "type": "Guide d'activité"
         },
         "blank_space_stories_1/coursef/2022": {
           "name": "Histoires d'espace vide ",
@@ -5750,7 +5794,8 @@
         },
         "user_input_programs/coursef/2022": {
           "name": " Programmes avec saisies de l'utilisateur ",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "type": "Guide d'activité"
         },
         "running_simulations/coursef/2022": {
           "name": "Exécuter des Simulations",
@@ -5802,7 +5847,8 @@
           "type": "Rubrique"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "Guide de projet de fin de cours"
+          "name": "Guide de projet de fin de cours",
+          "type": "Guide d'activité"
         },
         "debugging_guide/express/2022": {
           "name": "Guide de débogage",
@@ -5974,12 +6020,12 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-adaptations/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-adaptations/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6022,7 +6068,7 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-bookcovers/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
@@ -6112,17 +6158,17 @@
           "type": "Diapositives"
         },
         "cs_connections_landing_page/csc-ecosystems/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-ecosystems/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
         "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
-          "name": "Conseils utiles pour les enseignants et les apprenants\t",
+          "name": "Astuces utiles pour les enseignants et les élèves ",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "Ressource"
         },
@@ -6143,26 +6189,27 @@
           "type": "Diapositives"
         },
         "understanding_overfishing_article/csc-ecosystems/2023": {
-          "name": "Article sur la compréhension de la surpêche",
+          "name": "Article « Comprendre de la surpêche »",
           "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing",
           "type": "Ressource"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "Carnet de notes d'écologiste",
-          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
+          "name": "Carnet d'écologiste",
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
+          "type": "Guide d'activité"
         },
         "cs_connections_landing_page/csc-mappinglandmarks/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
         "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
-          "name": "Conseils utiles pour les enseignants et les apprenants\t",
+          "name": "Astuces utiles pour les enseignants et les élèves ",
           "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview",
           "type": "Ressource"
         },
@@ -6200,7 +6247,8 @@
         },
         "activity_guide_planning_1/csc-mappinglandmarks/2023": {
           "name": "Plan du projet",
-          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview",
+          "type": "Guide d'activité"
         },
         "interactive_map_rubric/csc-mappinglandmarks/2023": {
           "name": "Rubrique de codage de cartes interactives",
@@ -6209,7 +6257,8 @@
         },
         "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
           "name": "Points de repère locaux : carte, réflexion et observation",
-          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview"
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview",
+          "type": "Guide d'activité"
         },
         "books_about_maps_list/csc-mappinglandmarks/2023": {
           "name": "Livres sur Maps List",
@@ -6217,12 +6266,12 @@
           "type": "Ressource"
         },
         "cs_connections_landing_page/csc-starquilts/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-starquilts/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6305,12 +6354,12 @@
           "url": "/s/csc-timecapsule-2023/vocab"
         },
         "cs_connections_landing_page/csc-timecapsule/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/csc-timecapsule/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6403,12 +6452,12 @@
           "url": "https://studio.code.org/s/poetry-2023/vocab"
         },
         "cs_connections_landing_page/poetry/2023": {
-          "name": "Page d'accueil de CS Connections",
+          "name": "Connexions Informatiques – Page d'accueil",
           "url": "https://code.org/educate/csc",
           "type": "Ressource"
         },
         "csc_extended_connections_book_list/poetry/2023": {
-          "name": "Liste des livres CSC Extended Connections",
+          "name": "Liste des livres CSC Connexions Étendues",
           "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview",
           "type": "Ressource"
         },
@@ -6534,7 +6583,8 @@
           "type": "Diapositives"
         },
         "the_problem_solving_process_5/csd/2023": {
-          "name": "Le Processus de Résolution de Problèmes"
+          "name": "Le Processus de Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "exploring_problem_solving/csd/2023": {
           "name": "Explorer la Résolution de Problèmes",
@@ -6556,7 +6606,8 @@
           "name": "Entrée et Sortie"
         },
         "input_and_output_1/csd/2023": {
-          "name": "Entrée et Sortie"
+          "name": "Entrée et Sortie",
+          "type": "Guide d'activité"
         },
         "input_and_output_2/csd/2023": {
           "name": "Entrée et Sortie",
@@ -6572,7 +6623,8 @@
           "type": "Vidéo"
         },
         "apps_and_problem_solving/csd/2023": {
-          "name": "Les Applications et La Résolution de Problèmes"
+          "name": "Les Applications et La Résolution de Problèmes",
+          "type": "Guide d'activité"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2023": {
           "type": "Ressource"
@@ -6719,7 +6771,8 @@
         },
         "social_sleuth_1/csd/2023": {
           "name": "Limier social",
-          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view",
+          "type": "Guide d'activité"
         },
         "intro_to_css_-_part_1/csd/2023": {
           "name": "Introduction à CSS - Partie 1",
@@ -6772,7 +6825,8 @@
           "type": "Diapositives"
         },
         "licensing_your_work_1/csd/2023": {
-          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/",
+          "type": "Guide d'activité"
         },
         "creative_commons_search/csd/2023": {
           "name": "Recherche sur la licence Creative Commons",
@@ -6788,7 +6842,8 @@
           "type": "Diapositives"
         },
         "define_your_web_page/csd/2023": {
-          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/"
+          "url": "https://docs.google.com/document/d/1T410ZSCp3WuuapICLcZYq3tMcONumEMi6HSkpOx4iq4/",
+          "type": "Guide d'activité"
         },
         "websites_for_expression/csd/2023": {
           "name": "Sites web pour s'exprimer",
@@ -6851,7 +6906,8 @@
           "type": "Vidéo"
         },
         "websites_for_a_purpose_1/csd/2023": {
-          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit"
+          "url": "https://docs.google.com/document/d/18UiOaX7ThahC5cfDeWVMNjCpEy_BKPNz5MDOjLlSkbU/edit",
+          "type": "Guide d'activité"
         },
         "websites_for_a_purpose_2/csd/2023": {
           "type": "Diapositives"
@@ -6869,10 +6925,12 @@
           "type": "Vidéo"
         },
         "website_team_plan_1/csd/2023": {
-          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/"
+          "url": "https://docs.google.com/document/d/1OchbcAqSQLvL0-ho3tOFTc3sd461KK-4Mz0qHI_6kHc/",
+          "type": "Guide d'activité"
         },
         "internet_scavenger_hunt/csd/2023": {
-          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit"
+          "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
+          "type": "Guide d'activité"
         },
         "links_and_research/csd/2023": {
           "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE"
@@ -7251,7 +7309,8 @@
           "type": "Diapositives"
         },
         "market_research/csd/2023": {
-          "name": "Étude de Marché"
+          "name": "Étude de Marché",
+          "type": "Guide d'activité"
         },
         "market_research_-_research_areas/csd/2023": {
           "type": "Ressource"
@@ -7356,7 +7415,8 @@
           "name": "Questions de Représentation"
         },
         "representation_matters_1/csd/2023": {
-          "name": "Questions de Représentation"
+          "name": "Questions de Représentation",
+          "type": "Guide d'activité"
         },
         "representation_matters_2/csd/2023": {
           "name": "Questions de Représentation",
@@ -7367,7 +7427,8 @@
           "type": "Diapositives"
         },
         "representing_information/csd/2023": {
-          "name": "Représenter l'Information"
+          "name": "Représenter l'Information",
+          "type": "Guide d'activité"
         },
         "ascii_and_binary_representation/csd/2023": {
           "name": "La Représentation ASCII et binaire",
@@ -7424,7 +7485,8 @@
           "name": "Interpréter les Données"
         },
         "interpreting_data_1/csd/2023": {
-          "name": "Interpréter les Données"
+          "name": "Interpréter les Données",
+          "type": "Guide d'activité"
         },
         "interpreting_data_2/csd/2023": {
           "name": "Interpréter les Données",
@@ -7435,7 +7497,8 @@
           "type": "Diapositives"
         },
         "making_decisions_with_data_1/csd/2023": {
-          "name": "Prendre des Décisions avec des Données"
+          "name": "Prendre des Décisions avec des Données",
+          "type": "Guide d'activité"
         },
         "making_decisions_with_data_2/csd/2023": {
           "name": "Prendre des Décisions avec des Données",
@@ -7452,7 +7515,8 @@
           "type": "Ressource"
         },
         "automating_data_decisions_2/csd/2023": {
-          "name": "Automatiser les Décisions Relatives Aux Données"
+          "name": "Automatiser les Décisions Relatives Aux Données",
+          "type": "Guide d'activité"
         },
         "automating_data_decisions_3/csd/2023": {
           "name": "Automatiser les Décisions Relatives Aux Données",
@@ -7465,7 +7529,8 @@
           "name": "Les Données dans le Monde Réel"
         },
         "data_in_the_real_world_1/csd/2023": {
-          "name": "Les Données dans le Monde Réel"
+          "name": "Les Données dans le Monde Réel",
+          "type": "Guide d'activité"
         },
         "netflix_and_data/csd/2023": {
           "type": "Vidéo"
@@ -7910,7 +7975,8 @@
           "type": "Diapositives"
         },
         "numerical_data_in_ai_lab_1/csd/2023": {
-          "name": "Données numériques dans un laboratoire d'IA"
+          "name": "Données numériques dans un laboratoire d'IA",
+          "type": "Guide d'activité"
         },
         "numerical_data_in_ai_lab_2/csd/2023": {
           "name": "Données numériques dans un laboratoire d'IA",
@@ -9038,7 +9104,8 @@
           "type": "Rubrique"
         },
         "end_of_course_project_guide/coursee/2023": {
-          "name": "Guide de projet de fin de cours"
+          "name": "Guide de projet de fin de cours",
+          "type": "Guide d'activité"
         },
         "all_resources/coursef/2023": {
           "url": "/s/coursef-2023/ressources"
@@ -9145,7 +9212,8 @@
         },
         "blank_space_stories/coursef/2023": {
           "name": "Histoires d'espace vide ",
-          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
+          "type": "Guide d'activité"
         },
         "blank_space_stories_1/coursef/2023": {
           "name": "Histoires d'espace vide ",
@@ -9169,7 +9237,8 @@
         },
         "user_input_programs/coursef/2023": {
           "name": " Programmes avec saisies de l'utilisateur ",
-          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview",
+          "type": "Guide d'activité"
         },
         "running_simulations/coursef/2023": {
           "name": "Exécuter des Simulations",
@@ -9221,7 +9290,8 @@
           "type": "Rubrique"
         },
         "end_of_course_project_guide/coursef/2023": {
-          "name": "Guide de projet de fin de cours"
+          "name": "Guide de projet de fin de cours",
+          "type": "Guide d'activité"
         },
         "debugging_guide/express/2023": {
           "name": "Guide de débogage",
@@ -9373,7 +9443,8 @@
           "type": "Vidéo"
         },
         "classifying_fish/how-ai-works/2023": {
-          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view",
+          "type": "Guide d'activité"
         },
         "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
           "name": "Comment fonctionne l'IA - Données d'entraînement et biais",
@@ -9400,7 +9471,8 @@
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "Réseau de vision par ordinateur",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
+          "type": "Guide d'activité"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
           "name": "Comment fonctionne l'IA : Comment fonctionne la vision par ordinateur",
@@ -9409,7 +9481,8 @@
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
           "name": "Manipulateur d'affichage à sept segments",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
+          "type": "Guide d'activité"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "Ce que voit un réseau neuronal",
@@ -9423,7 +9496,8 @@
         },
         "neural_networks/how-ai-works/2023": {
           "name": "Réseaux neuronaux",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+          "type": "Guide d'activité"
         },
         "neural_networks_1/how-ai-works/2023": {
           "name": "Réseaux neuronaux",
@@ -9437,7 +9511,8 @@
         },
         "eliza_activity_guide/how-ai-works/2023": {
           "name": "(Facultatif) Guide d'activités Eliza",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
+          "type": "Guide d'activité"
         },
         "generative_llm/how-ai-works/2023": {
           "name": "LLM génératif",
@@ -9461,7 +9536,8 @@
         },
         "video_and_vocabulary_guide/how-ai-works/2023": {
           "name": "Guide vidéo et de vocabulaire",
-          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4",
+          "type": "Guide d'activité"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
           "name": "[Exemplar] Guide d'activité écrit sur le simulateur vocal",
@@ -9469,7 +9545,8 @@
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
           "name": "Guide écrit du simulateur vocal",
-          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn",
+          "type": "Guide d'activité"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
           "name": "Guide de l'utilisateur du simulateur vocal écrit",
@@ -9478,7 +9555,8 @@
         },
         "_optional_gan_game_activity_guide/how-ai-works/2023": {
           "name": "(Facultatif) Guide d'activités du jeu GAN",
-          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit",
+          "type": "Guide d'activité"
         },
         "generative_images/how-ai-works/2023": {
           "name": "Images génératives",
@@ -9501,7 +9579,8 @@
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
           "name": "Guide d'activité du widget Noisy Image",
-          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/",
+          "type": "Guide d'activité"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
           "name": "Guide de l'utilisateur : Widget Noise Image",
@@ -9510,7 +9589,8 @@
         },
         "video_and_vocabulary_guide_1/how-ai-works/2023": {
           "name": "Guide vidéo et de vocabulaire",
-          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing",
+          "type": "Guide d'activité"
         },
         "algorithmic_bias/how-ai-works/2023": {
           "name": "Biais algorithmique",
@@ -9592,7 +9672,8 @@
         },
         "vocabulary_matching/how-ai-works/2023": {
           "name": "Correspondance de vocabulaire",
-          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit",
+          "type": "Guide d'activité"
         },
         "_key_vocabulary_matching/how-ai-works/2023": {
           "name": "[Key] Correspondance de vocabulaire",
@@ -9672,6 +9753,588 @@
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Vidéo"
+        },
+        "aluminum-boats-activity-guide-2020/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "solving-problems-activity-guide-2020/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "what-is-a-computer-version-b/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "what-is-a-computer-version-a/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "apps-with-processing/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "storage/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "build-a-newspaper-table/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "paper-planes/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "solving-problems-activity-guide-animal-2020/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "solving-problems-activity-guide-game-2020/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "cs-entertainment-activity/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_b_/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_a_/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "sprite-scene-planning/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "animated-scene/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_b_/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_a_/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "designing_with_empathy/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "reacting-as-your-user/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-centered-design-2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-centered-design-reflect-2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-experience-computer/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-experience-user/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "improve-a-screen/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-interviews-1/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "app-design-kickoff-2019/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "explore-ui-elements/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "paper-prototype-planning/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "user-test-cases/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "paper-prototype-user-testing-1-2/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "screen-ownership-2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "screen-design-1/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "digital-prototype-user-testing/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "bugs-and-features-planning/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "updating-your-prototype/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "ascii-challenges/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "representing-numbers-2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "activity-guide-pet-records/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "keeping-data-secret/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "secret_messages_2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "problem-solving-with-data/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "structuring-data-2021/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "input-and-events/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "make-game-guide/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "classifying_fish/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "types_of_machine_learning_1/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "patterns_in_data_1/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "classification_models/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "model_cards_1/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "zoo_models/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "numerical_accuracy_-_activity_guide/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "zombie_prediction_-_activity_guide/csd/2021": {
+          "type": "Guide d'activité"
+        },
+        "aluminum_boats_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "what_is_a_computer_version_a_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "what_is_a_computer_version_b_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "apps_with_processing_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "apps_with_storage_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "build_a_newspaper_table_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "spaghetti_bridge_-_activity_guide/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "paper_tower/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_2/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_3/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "cs_in_entertainment/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_a_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_b_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "sprite_scene_planning/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "animated_scene_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_a_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_b_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "planning_your_platform_game_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "designing_with_empathy/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "reacting_as_your_user/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_centered_design_define_prepare_2021/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_centered_design_try_reflect_2021/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_testing_computer_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_testing_user_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "improve_a_screen_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_interviews/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "app_design_kickoff/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "explore_ui_elements/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "paper_prototype_planning/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "paper_prototype_user_testing/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "user_test_cases/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "screen_design_2021_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "screen_ownership_2021_/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "digital_prototype_user_testing/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "bugs_and_features/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "updating_your_prototype/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "ascii_challenges/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "representing_numbers_2021/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "activity_guide_-_pet_records/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "medical_records/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "secret_messages_2021/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "problem_solving_with_data_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "structuring_data_2021/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_on-the-go_app/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_human_device_interaction/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_interactive_art/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "prototype_an_innovation_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "classifying_fish/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "types_of_machine_learning_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "patterns_in_data_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "classification_models/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "training_a_model_in_ai_lab/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "model_cards_1/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "zoo_models/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "numerical_accuracy/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "zombie_prediction/csd/2022": {
+          "type": "Guide d'activité"
+        },
+        "ai_research_areas/ai-ethics/2023": {
+          "type": "Guide d'activité"
+        },
+        "create_a_manifesto/ai-ethics/2023": {
+          "type": "Guide d'activité"
+        },
+        "imagine_your_world/ai-ethics/2023": {
+          "type": "Guide d'activité"
+        },
+        "research_reflection_guide/ai-ethics/2023": {
+          "type": "Guide d'activité"
+        },
+        "aluminum_boats_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "what_is_a_computer_version_a_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "what_is_a_computer_version_b_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "apps_with_processing_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "apps_with_storage_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "build_a_newspaper_table_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "spaghetti_bridge_-_activity_guide/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "paper_tower/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_2/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "solving_problems_3/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "exploring_web_pages_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "web_design_for_users_b_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "_warm_up_word_search_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "web_development_-_extra_code_in_challenge_levels/csd/2023": {
+          "type": "Ressource"
+        },
+        "links_and_research_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "app_design_for_users/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "_warm_up_word_search_unit_3/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_a_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "drawing_shapes_version_b_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "activity_guide_-_robot_face_planning/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "sprite_scene_planning/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "animated_scene_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "interactive_card_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "interactive_card_2/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_a_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "collision_detection_version_b_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "side_scroller_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "flyer_game_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "planning_your_platform_game_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "make_your_own_game_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "make_your_own_game_2/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "designing_with_empathy/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "reacting_as_your_user/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_centered_design_define_prepare_2021/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_centered_design_try_reflect_2021/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_testing_computer_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_testing_user_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "improve_a_screen_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_interviews/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "app_design_kickoff/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "explore_ui_elements/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "paper_prototype_planning/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "paper_prototype_user_testing/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "user_test_cases/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "screen_design_2021_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "screen_ownership_2021_/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "digital_prototype_user_testing/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "bugs_and_features/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "updating_your_prototype/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "ascii_challenges/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "representing_numbers_2021/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "activity_guide_-_pet_records/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "medical_records/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "secret_messages_2021/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "problem_solving_with_data_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "structuring_data_2021/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "physical_designs/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "_warm_up_word_search_unit_6/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_field_collector_app/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_human_device_interaction/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_interactive_art/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "prototype_an_innovation_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_field_collector_app_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_human_device_interaction_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "project_guide_-_interactive_pet/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "prototype_an_innovation_3/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "classifying_fish/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "types_of_machine_learning_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "innovations_in_ai_-_activity_guide/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "patterns_in_data_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "classification_models/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "training_a_model_in_ai_lab/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "model_cards_1/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "zoo_models/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "numerical_accuracy/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "zombie_prediction/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "ai_ethics_research_areas/csd/2023": {
+          "type": "Guide d'activité"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "type": "Guide d'activité"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "type": "Guide d'activité"
         }
       }
     }

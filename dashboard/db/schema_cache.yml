@@ -2417,6 +2417,74 @@ columns:
     comment:
   - *6
   - *7
+  learning_goal_ai_evaluation_feedbacks:
+  - *27
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: learning_goal_ai_evaluation_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: teacher_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_feedback_approval
+    sql_type_metadata: *20
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: false_positive
+    sql_type_metadata: *20
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: false_negative
+    sql_type_metadata: *20
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: vague
+    sql_type_metadata: *20
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: feedback_other
+    sql_type_metadata: *20
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: other_content
+    sql_type_metadata: *12
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - *32
+  - *33
   learning_goal_ai_evaluations:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2951,6 +3019,59 @@ columns:
   - *64
   - *6
   - *7
+  lti_courses:
+  - *27
+  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_integration_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_deployment_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: context_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: course_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: nrps_url
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: resource_link_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - *32
+  - *33
+  - *16
   lti_deployments:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -2961,14 +3082,7 @@ columns:
     default_function:
     collation: utf8_unicode_ci
     comment:
-  - &65 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: lti_integration_id
-    sql_type_metadata: *30
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
+  - *65
   - *32
   - *33
   lti_integrations:
@@ -3047,6 +3161,35 @@ columns:
     comment:
   - *32
   - *33
+  lti_sections:
+  - *27
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lti_course_id
+    sql_type_metadata: *30
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - &120 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: section_id
+    sql_type_metadata: *2
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: lms_section_id
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8_unicode_ci
+    comment:
+  - *32
+  - *33
+  - *16
   lti_user_identities:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -3061,6 +3204,7 @@ columns:
   - *13
   - *32
   - *33
+  - *16
   metrics:
   - *5
   - *6
@@ -4521,6 +4665,21 @@ columns:
   - *54
   - *6
   - *7
+  potential_teachers:
+  - *27
+  - *49
+  - *41
+  - *26
+  - *32
+  - *33
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: receives_marketing
+    sql_type_metadata: *20
+    'null': false
+    default: '0'
+    default_function:
+    collation:
+    comment:
   programming_classes:
   - *27
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5701,14 +5860,7 @@ columns:
   - *19
   section_hidden_scripts:
   - *5
-  - &120 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: section_id
-    sql_type_metadata: *2
-    'null': false
-    default:
-    default_function:
-    collation:
-    comment:
+  - *120
   - *31
   section_hidden_stages:
   - *5
@@ -5856,6 +6008,14 @@ columns:
     sql_type_metadata: *30
     'null': true
     default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: ai_tutor_enabled
+    sql_type_metadata: *20
+    'null': true
+    default: '0'
     default_function:
     collation:
     comment:
@@ -7439,6 +7599,7 @@ primary_keys:
   google_sheets_shared_cdo_donors: id
   google_sheets_shared_cdo_languages: id
   hint_view_requests: id
+  learning_goal_ai_evaluation_feedbacks: id
   learning_goal_ai_evaluations: id
   learning_goal_evidence_levels: id
   learning_goal_teacher_evaluations: id
@@ -7456,8 +7617,10 @@ primary_keys:
   levels: id
   levels_script_levels:
   libraries: id
+  lti_courses: id
   lti_deployments: id
   lti_integrations: id
+  lti_sections: id
   lti_user_identities: id
   metrics: id
   objectives: id
@@ -7511,6 +7674,7 @@ primary_keys:
   plc_enrollment_unit_assignments: id
   plc_learning_modules: id
   plc_user_course_enrollments: id
+  potential_teachers: id
   programming_classes: id
   programming_environment_categories: id
   programming_environments: id
@@ -7629,6 +7793,7 @@ data_sources:
   google_sheets_shared_cdo_donors: true
   google_sheets_shared_cdo_languages: true
   hint_view_requests: true
+  learning_goal_ai_evaluation_feedbacks: true
   learning_goal_ai_evaluations: true
   learning_goal_evidence_levels: true
   learning_goal_teacher_evaluations: true
@@ -7646,8 +7811,10 @@ data_sources:
   levels: true
   levels_script_levels: true
   libraries: true
+  lti_courses: true
   lti_deployments: true
   lti_integrations: true
+  lti_sections: true
   lti_user_identities: true
   metrics: true
   objectives: true
@@ -7701,6 +7868,7 @@ data_sources:
   plc_enrollment_unit_assignments: true
   plc_learning_modules: true
   plc_user_course_enrollments: true
+  potential_teachers: true
   programming_classes: true
   programming_environment_categories: true
   programming_environments: true
@@ -8968,6 +9136,20 @@ indexes:
     type:
     using: :btree
     comment:
+  learning_goal_ai_evaluation_feedbacks:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: learning_goal_ai_evaluation_feedbacks
+    name: index_feedback_on_learning_goal_ai_evaluation
+    unique: false
+    columns:
+    - learning_goal_ai_evaluation_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   learning_goal_ai_evaluations:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: learning_goal_ai_evaluations
@@ -9363,6 +9545,74 @@ indexes:
     using: :btree
     comment:
   libraries: []
+  lti_courses:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: index_lti_courses_on_lti_integration_id
+    unique: false
+    columns:
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: fk_rails_19886eb632
+    unique: false
+    columns:
+    - lti_deployment_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: index_on_context_id_and_lti_integration_id
+    unique: false
+    columns:
+    - context_id
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: index_on_course_id_and_lti_integration_id
+    unique: false
+    columns:
+    - course_id
+    - lti_integration_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_courses
+    name: index_lti_courses_on_deleted_at
+    unique: false
+    columns:
+    - deleted_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   lti_deployments:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_deployments
@@ -9430,6 +9680,46 @@ indexes:
     type:
     using: :btree
     comment:
+  lti_sections:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_lti_course_id
+    unique: false
+    columns:
+    - lti_course_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_section_id
+    unique: false
+    columns:
+    - section_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_sections
+    name: index_lti_sections_on_deleted_at
+    unique: false
+    columns:
+    - deleted_at
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
   lti_user_identities:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: lti_user_identities
@@ -9463,6 +9753,19 @@ indexes:
     unique: false
     columns:
     - subject
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: lti_user_identities
+    name: index_lti_user_identities_on_deleted_at
+    unique: false
+    columns:
+    - deleted_at
     lengths: {}
     orders: {}
     opclasses: {}
@@ -10990,6 +11293,20 @@ indexes:
     unique: false
     columns:
     - plc_course_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  potential_teachers:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: potential_teachers
+    name: index_potential_teachers_on_script_id
+    unique: false
+    columns:
+    - script_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -12863,7 +13180,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20231026194936
+version: 20231114211036
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

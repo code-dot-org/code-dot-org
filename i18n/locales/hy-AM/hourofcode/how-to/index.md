@@ -8,7 +8,7 @@ title: Ժամ օրենսգրքի ինչպես ուղեցույցը
 
 ### Միացեք շարժմանը և ձեր աշակերտներին ծանոթացրեք համակարգչային գիտությանը այս քայլերով:
 
-Students today should learn how to create technology, not just use it.
+Ուսանողներն այսօր պետք է սովորեն, թե ինչպես ստեղծել տեխնոլոգիա, այլ ոչ թե պարզապես օգտագործել այն։
 
 Փորձելով մեկ ժամ օրենսգրքի մի պարզ եւ զվարճալի միջոց է ներկայացնել ուսանողներին համակարգչային գիտության, թերեւս, հենց առաջին անգամ! Գտեք այնպիսի գործունեություն, որը համապատասխանում է ձեր պարամետրին ՝ լինի դասարան, թե դպրոցական, անձամբ կամ վիրտուալ: Նայեք մեր [մասնակցության ուղեցույցին, եթե ստորև նշված քայլերը]({{ localized_files/participation_guide }}) ստուգելուց հետո դեռ հարցեր ունեք.
 
@@ -19,7 +19,7 @@ Students today should learn how to create technology, not just use it.
 - [Ինչպես սկսել ձեր Hour Code ուժեղ](#how-to-start)
 - [Ստանալ կոդավորում](#code)
 - [Նշեք ձեր ուսանողների հաջողությունները](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Կոդի ժամի այլ ռեսուրսներ մանկավարժների համար](#other-resources)
 
 * * *
 
@@ -72,7 +72,7 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-Երբ [գրանցվեք ձեր Hour of Code միջոցառումը](/#join), դուք կստանաք օգտակար էլփոստի հաղորդակցություն նորություններով և խորհուրդներով ՝ հաջող օրենսգրքի ժամ հյուրընկալելու համար: It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Երբ դուք գրանց [վեք ձեր Hour of Code միջոցառմանը](/events), դուք կստանաք օգտակար էլփոստի հաղորդակցություններ ՝ նորություններով և խորհուրդներով ՝ հաջող “Code Hour” հյուրընկալելու համար: It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
@@ -139,9 +139,9 @@ Direct students to the activity
     
     [/col-33]
     
-    - [Print certificates]({{ urls/certificates }}) for your students.
+    - [Տպեք վկայագր]({{ urls/certificates }}) եր ձեր ուսանողների համար:
     - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
-    - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+    - Կիսվեք ձեր Hour of Code միջոցառման լուսանկարներով և տեսանյութերով սոցիալական մեդիայում: Օգտագործեք #HourOfCode եւ @codeorg, որպեսզի մենք կարողանանք ընդգծել ձեր հաջողությունը, նույնպես!
     
     * * *
     
@@ -153,7 +153,7 @@ Direct students to the activity
     ## Ուսուցիչների համար կոդային ռեսուրսների այլ ժամ.
     
     - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-    - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+    - Վերանայեք “Կ [ոդի ժամի” FAQ-](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)ը:
     
     ### What comes after the Hour of Code?
     

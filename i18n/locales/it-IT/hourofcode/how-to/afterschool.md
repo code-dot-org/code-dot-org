@@ -6,7 +6,7 @@ title: Guida pratica all'Ora del Codice per il doposcuola
 
 # Come insegnare un'Ora del Codice nel doposcuola
 
-### Unisciti al movimento e presenta ai tuoi alunni l'informatica con questi passaggi.
+### Unisciti al movimento e introduci i tuoi alunni all'informatica seguendo questi passaggi.
 
 Il pensiero computazionale aiuta a coltivare capacità di risoluzione dei problemi, logica e creatività. La tecnologia sta trasformando ogni azienda del pianeta. Gli studenti oggi dovrebbero imparare a creare tecnologia, non solo a usarla. Iniziando presto, avranno le basi per il successo in qualsiasi percorso di carriera del 21° secolo.
 
@@ -51,7 +51,7 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 - Il video di lancio originale del sito Code.org, in collaborazione con Bill Gates, Mark Zuckerberg e la stella del basket americano Chris Bosh (Ci sono versioni da [1 minuto](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minuti](https://www.youtube.com/watch?v=nKIu9yen5nc), e [9 minuti](https://www.youtube.com/watch?v=dU1xS07N-FA)) (solo in inglese).
 - Il [video globale dell'Ora del Codice](https://www.youtube.com/watch?v=KsOIlDT145A) (in inglese).
 - [Il messaggio del Presidente Obama che invita tutti gli studenti ad imparare informatica](https://www.youtube.com/watch?v=6XvmhE1J9PY) (in inglese).
-- Puoi trovare altri video stimolanti in inglese [qui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) oppure [alcuni in italiano](https://www.programmailfuturo.it/notizie/messaggeri-del-codice) sul sito di Programma il Futuro.
+- Puoi trovare altri video motivazionali in inglese [qui](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) oppure [alcuni in italiano](https://www.programmailfuturo.it/notizie/messaggeri-del-codice) sul sito di Programma il Futuro.
 
 **Non preoccuparti se sei digiuno di informatica. Ecco alcune idee per farti familiarizzare con le attività dell'Ora del Codice:**
 
@@ -73,8 +73,8 @@ Dai il via alla tua Ora del Codice stimolando i partecipanti e discutendo di com
 
 - [Stampa gli attestati]({{ urls/certificates }}) in inglese oppure <a href="https://www.programmailfuturo.it/come/attestati-personalizzati" target="_blank">la versione italiana di Programma il Futuro</a>.
 - Stampa gli adesivi ["Ho completato un'Ora del Codice!"]({{ promote/resources_stickers }}).
-- [Ordina T-shirt personalizzate](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) per i partecipanti.
-- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #OradelCodice, #HourOfCode, @codeorg e @programmafuturo così anche noi possiamo condividere il tuo successo!
+- [Ordina magliette personalizzate](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) per i partecipanti.
+- Condividi le foto e i video del tuo evento dell'Ora del Codice sui social network. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo così anche noi possiamo condividere il tuo successo!
 
 ## Altre risorse dell'Ora del Codice per gli insegnanti:
 

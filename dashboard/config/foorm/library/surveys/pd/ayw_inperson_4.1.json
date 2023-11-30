@@ -35,20 +35,22 @@
             {
               "type": "rating",
               "name": "unit6_level_types_m78",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
               "title": "I recognize different lesson level types and how to use each of them to support Unit 6 instruction.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Discoveries', 11/22/2023 and moved to AYW3, per PL team - NZM."
             },
             {
               "type": "rating",
               "name": "problem_solve_proc_prog_m78",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
               "title": "Through this workshop, I feel prepared to use the Problem Solving Process for Programming to reinforce persistence and support students when facing challenges.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Discoveries', 11/22/2023 and moved to AYW3, per PL team - NZM."
             },
             {
               "type": "rating",

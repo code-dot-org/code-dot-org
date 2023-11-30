@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "Hour of Codeのウェブサイトは、年齢や経験レベルを問わずに利用できる、Code.org とパートナーが開発した 100 以上のコンピューター サイエンスのアクティビティを掲載しています。",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっとくわしく見る"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "参加しませんか"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "参加しませんか"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "先生を指名する\n"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "参加しませんか"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "プロジェクトのアイデアを見る"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "ai-2020": {
+      "title": "人工知能と機械学習を探索する",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "はじめる"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "挑戦してみる"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "もっと詳しく知る"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "アワー・オブ・コード：AIによる創造性 ",
+      "body": "世界中の何百万人もの人たちと一緒に、AIの有無にかかわらず、1時間のコーディングを企画し、AIの仕組みを学びましょう。誰でも、どこでもできます。経験は必要ありません。",
+      "buttonText": "もっと詳しく知る"
+    }
+  }
+}

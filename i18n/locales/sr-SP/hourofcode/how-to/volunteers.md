@@ -15,10 +15,10 @@ Computational thinking helps nurture problem-solving skills, logic, and creativi
 The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
 - [Who can volunteer?](#who-can-volunteer)
-- [Why volunteer?](#why-volunteer)
+- [Зашто волонтирати?](#why-volunteer)
 - [How do volunteers get selected?](#selection)
 - [What if I want to volunteer with a specific school?](#choose-a-school)
-- [How to prepare](#how-to-prepare)
+- [Како се припремити](#how-to-prepare)
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
@@ -40,7 +40,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 <a id="why-volunteer"></a>
 
-## Why volunteer?
+## Зашто волонтирати?
 
 Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
@@ -48,8 +48,8 @@ Computer science is the defining field of the 21st century, yet most schools sti
 
 Check out some testimonials from past volunteers:
 
-- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
-- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
+- „Најбољи део мог искуства је пун разред жена и људи различитие боје. То је добро за будућност наше индустрије, имати прилику допрети до те деце и одушевити их.”
+- „Посебно сам уживао успевши подстакнути девојке у технологији. Осећај је био као да сам помогао следећој генерацији у својој средини.”
 - „СВИДЕЛО МИ СЕ што видим колико су деца била узбуђена. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”
 
 [<button>Sign up to volunteer</button>]({{ urls/volunteer }})
@@ -82,7 +82,7 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 <a id="how-to-prepare"></a>
 
-## How to prepare
+## Како се припремити
 
 Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
 
@@ -133,7 +133,7 @@ Work with the school or teacher to discuss what makes the most sense. We’ve se
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for your group.
 
 ### 3. Plan your technology needs
 
@@ -186,7 +186,7 @@ One of the best ways to help is to spread the word and promote the Hour of Code.
 
 ### 1. Register Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Када [се пријавите да одржите Сат програмирања](/events), добићете низ корисних и-мејл порука са новостима и саветима како бисте били успешни као домаћин Сата програмирања. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
 ### 2. Post on Social Media
 

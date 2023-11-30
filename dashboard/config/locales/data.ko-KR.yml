@@ -633,6 +633,7 @@ ko:
         conditionals_with_cards: '언플러그드 레슨 인 액션: 카드 조건문'
         cs-principles-intro-to-objects: 'CS 기초: 객체 소개'
         csc-ecosystems-intro: 해양 생태계 시뮬레이션
+        csc-event-short-intro: 이벤트 간략 소개
         csc-poem-art-intro: 소개 영상
         csc-poem-art-outro: 아우트로 동영상
         csc-starquilts-intro: 기하학적 별무늬 퀼트 코딩
@@ -662,6 +663,7 @@ ko:
         csd_gamelab_velocity: 속도
         csd_how_teamwork_works: 팀워크 작동 방식
         csd_ml_ethics_ai: '윤리와 AI '
+        csd_ml_how_ai_works: AI 작동방법
         csd_ml_intro_ai_lab_july2021: AI 연구실 소개
         csd_ml_intro_to_ai_lab: AI 연구실 소개
         csd_ml_model_cards_july2021: AI 랩 모델 카드

@@ -52,6 +52,7 @@ pt:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
+        ai_settings_header: 'Configurações de I.A.'
         finish_sign_up_header: 'Finalize a criação da sua conta'
         finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
@@ -429,7 +430,7 @@ pt:
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
       poetry: 'Poesia'
-      poetry_hoc: 'Arte poética'
+      poetry_hoc: 'Arte Poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
@@ -786,7 +787,7 @@ pt:
     playlab:
       image_alt: 'Uma colagem de imagens mostrando um gato azul, um cachorro pateta e uma doninha pré-histórica.'
     poem-art:
-      title: 'Arte poética'
+      title: 'Arte Poética'
       body: 'Expresse-se! Use código para criar poemas animados.'
       image_alt: 'Uma lula hipster se apresentando em um palco.'
     pre-express-2017:
@@ -1288,4 +1289,3 @@ pt:
     binary: "Binário"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Formato de pixel"
-

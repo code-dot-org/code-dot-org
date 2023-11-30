@@ -1324,9 +1324,24 @@ da:
           description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           student_description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           title: Usability test
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduktion
+          lessons:
+            lesson-7:
+              name: Introduktion
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduktion
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduktion
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduktion
         virustest:
           description_short: 'Brug Sprite Lab til at oprette en simulation ud af et

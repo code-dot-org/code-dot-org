@@ -24,6 +24,7 @@
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
@@ -66,6 +67,8 @@ class Section < ApplicationRecord
   has_many :section_instructors, dependent: :destroy
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
+  has_one :lti_section
+  after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -98,6 +101,10 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -305,6 +312,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
+    return ADD_STUDENT_FAILURE if section_instructors.exists?(instructor: student)
     return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
@@ -588,6 +596,7 @@ class Section < ApplicationRecord
 
   public def add_instructor(email, current_user)
     instructor = User.find_by!(email: email, user_type: :teacher)
+    raise ArgumentError.new('inviting self') if instructor == current_user
 
     deleted_section_instructor = validate_instructor(instructor)
     deleted_section_instructor&.really_destroy!
@@ -614,6 +623,8 @@ class Section < ApplicationRecord
     # Can't re-add someone who is already an instructor (or invited/declined)
     elsif si.present?
       raise ArgumentError.new('already invited')
+    elsif students.exists?(email: instructor.email)
+      raise ArgumentError.new('already a student')
     end
   end
 end

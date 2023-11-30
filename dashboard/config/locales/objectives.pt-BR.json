@@ -3627,10 +3627,10 @@
           "description": "Compartilhar um artefato criativo com outros alunos."
         },
         "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
-          "description": "Descreva como a visão computacional é construída com camadas que combinam componentes menores em uma previsão final"
+          "description": "Descreva como a visão computacional é construída a partir de camadas que combinam componentes menores em uma previsão final"
         },
         "5bb33a90-28cb-40cb-9647-59a1818980b8": {
-          "description": "Explique a necessidade de perspectivas diversas ao criar sistemas de recomendação"
+          "description": "Explique a necessidade de perspectivas diversas ao se criar sistemas de recomendação"
         },
         "bb862e7c-9808-4414-b027-fc747d58b6c0": {
           "description": "Use os pesos de um neurônio artificial para ajustar as saídas de um sistema de recomendação"
@@ -3642,16 +3642,16 @@
           "description": "Colabore com a IA para criar um documento de texto criativo"
         },
         "f766948a-55ae-4083-9e67-cd42e929adcc": {
-          "description": "Descreva que ter uma grande quantidade de texto para aprender permite que os computadores pareçam inteligentes na forma escrita."
+          "description": "Descreva que ter uma grande quantidade de texto para aprender permite que os computadores pareçam inteligentes na forma escrita"
         },
         "13fca3f5-45af-4888-8d22-71ce991caf3d": {
-          "description": "Discuta se esses modelos são criativos ou não e quem é o proprietário dessas imagens"
+          "description": "Discuta se esses modelos são criativos ou não e quem possui essas imagens"
         },
         "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
-          "description": "Descreva que a IA pode gerar imagens com aparência bastante realista por meio de um processo conhecido como difusão, em que um modelo aprende a desenhar detalhes invertendo detalhes."
+          "description": "Descreva sobre que a IA pode gerar imagens com aparência bastante realista por meio de um processo conhecido como difusão - em que um modelo aprende a desenhar detalhes através da inversão de detalhes"
         },
         "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
-          "description": "O motivo pelo qual os tipos de tarefas não devem ser concluídos por um algoritmo"
+          "description": "A razão pela qual quais tipos de taferas não devem ser realizadas por um algoritmo"
         },
         "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
           "description": "Explique como a IA funciona"
@@ -3964,6 +3964,174 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Use a terminologia apropriada ao se referir a um mouse de computador, painel tátil (touchpad), ou tela sensível ao toque."
+        },
+        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
+          "description": "Analisar e selecionar as estratégias mais adequadas para atender às necessidades do usuário."
+        },
+        "81d19c33-2675-415e-9b35-12643f8c33be": {
+          "description": "Usar um protótipo em papel para testar o design de um aplicativo."
+        },
+        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
+          "description": "Obter e analisar o feedback da testagem dos usuários a partir de um protótipo em papel."
+        },
+        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
+          "description": "Usar o feedback para criar um plano para o desenvolvimento adicional de um aplicativo"
+        },
+        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
+          "description": "Melhorar o design da tela com base no feedback do usuário."
+        },
+        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
+          "description": "Crie um evento que detecte e responda à entrada do usuário"
+        },
+        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
+          "description": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final."
+        },
+        "e5edbdd5-a926-4a68-9b96-2e206b4330dd": {
+          "description": "Analisar e selecionar as estratégias mais adequadas para atender às necessidades do usuário."
+        },
+        "1e818391-5de9-4ad0-828e-8457cb34805e": {
+          "description": "Usar um protótipo em papel para testar o design de um aplicativo."
+        },
+        "2b3a24a7-98b6-4a3d-b446-4630bd4e7a9a": {
+          "description": "Obter e analisar o feedback da testagem dos usuários a partir de um protótipo em papel."
+        },
+        "3c008c53-63fc-4e2c-b766-5e35441f0b48": {
+          "description": "Usar o feedback para criar um plano para o desenvolvimento adicional de um aplicativo"
+        },
+        "4c0488ad-53bf-4650-abbf-6e249543b988": {
+          "description": "Melhorar o design da tela com base no feedback do usuário."
+        },
+        "b3491bac-8eca-4817-8658-c1d0dd04e8ec": {
+          "description": "Categorizar e priorizar o feedback do usuário para um aplicativo"
+        },
+        "32449f20-2f87-4259-99ef-cd7e58d4b8f3": {
+          "description": "Crie um evento que detecte e responda à entrada do usuário"
+        },
+        "f902f391-277d-45cb-8ae4-279065ec94c4": {
+          "description": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final."
+        },
+        "4fc03bf6-53da-4c5a-b5b0-40657a3f1ddf": {
+          "description": "Analisar e selecionar as estratégias mais adequadas para atender às necessidades do usuário."
+        },
+        "1491e773-6e63-4c99-a5ed-98b2b4151608": {
+          "description": "Usar um protótipo em papel para testar o design de um aplicativo."
+        },
+        "51887d12-5cb8-450f-8da7-996b1b306d6d": {
+          "description": "Obter e analisar o feedback da testagem dos usuários a partir de um protótipo em papel."
+        },
+        "040492e6-76fb-42a8-b8a0-443c39a621cc": {
+          "description": "Usar o feedback para criar um plano para o desenvolvimento adicional de um aplicativo"
+        },
+        "6948d57a-cc2a-4308-be29-ca9563182fc3": {
+          "description": "Melhorar o design da tela com base no feedback do usuário."
+        },
+        "b54c900e-3944-46ad-b9f2-d9db5f46867b": {
+          "description": "Crie um evento que detecte e responda à entrada do usuário"
+        },
+        "044a47f9-7afe-4c66-9cb0-eaf6dbc3c740": {
+          "description": "Integre todos os componentes do trabalho colaborativo em um artefato computacional final."
+        },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
+        },
+        "0d580f25-ee71-432a-8b69-7349fa960674": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
+        },
+        "ffc8e923-dff2-40b1-8b1d-f0a09ab29a62": {
+          "description": "Criar e usar um sistema para representar informações"
+        },
+        "bacc4aa3-ff69-4379-ae28-3a2636c64c27": {
+          "description": "Descrever os recursos necessários de um sistema para representar informações"
+        },
+        "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
+          "description": "Dar exemplos de como a representação de dados de maneiras diferentes pode afetar sua capacidade de resolver problemas diferentes."
+        },
+        "5d843877-4608-49b0-a6a5-c33fdab204ba": {
+          "description": "Escolher a melhor forma de representar algumas informações com base em como elas serão usadas."
+        },
+        "f7ff9c67-ed9a-40c2-8082-1ebb78dae095": {
+          "description": "Identificar inovações na computação em um campo específico"
+        },
+        "bb5539ee-e0af-4379-9179-2bebc947c741": {
+          "description": "Use um for loop para iterar sobre uma matriz"
+        },
+        "56d03b70-1f5b-408c-a3d4-bd8439cc372e": {
+          "description": "Aplique o Processo de Resolução de Problemas para treinar um computador a resolver um problema"
+        },
+        "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c": {
+          "description": "Defina inteligência artificial (IA) com suas próprias palavras, usando tecnologias que eles encontram em suas vidas diárias como exemplos."
+        },
+        "88f6eb6d-2837-4d90-be14-132d823a3ab1": {
+          "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
+        },
+        "173089ae-6d54-457a-a391-0a8f5510aaca": {
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+        },
+        "078fec6a-9fc8-4d1c-be3b-145bbe8c44c9": {
+          "description": "Escolher a melhor forma de representar algumas informações com base em como elas serão usadas."
+        },
+        "9cd5c970-3a55-4940-958d-61605147d5c2": {
+          "description": "Dar exemplos de como a representação de dados de maneiras diferentes pode afetar sua capacidade de resolver problemas diferentes."
+        },
+        "1f78c6a5-ed31-43ec-b895-c6a8e229ffaa": {
+          "description": "Descrever os impactos do dispositivo na sociedade"
+        },
+        "3f866c04-e2cf-4699-9575-cce49347325a": {
+          "description": "Identificar inovações na computação em um campo específico"
+        },
+        "4f3e3425-fbaf-46ed-a48b-1a3c14c5e784": {
+          "description": "Descrever as entradas e saídas de um dispositivo"
+        },
+        "90a07378-8a2f-4986-9124-1b14f1f57de9": {
+          "description": "Aplique o Processo de Resolução de Problemas para treinar um computador a resolver um problema"
+        },
+        "28ffbc12-c87c-4c54-a7e3-fea76b847f08": {
+          "description": "Defina inteligência artificial (IA) com suas próprias palavras, usando tecnologias que eles encontram em suas vidas diárias como exemplos."
+        },
+        "29b5771f-9013-40f0-8664-65114cd1a39e": {
+          "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
+        },
+        "96b0c2a4-2817-4da1-a183-bb8615f96a07": {
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+        },
+        "2547cb4c-1965-492b-83e7-8c71e8225ae6": {
+          "description": "Escolher a melhor forma de representar algumas informações com base em como elas serão usadas."
+        },
+        "7c60dc98-4be3-4bbf-b7aa-af6fe35ffe3c": {
+          "description": "Dar exemplos de como a representação de dados de maneiras diferentes pode afetar sua capacidade de resolver problemas diferentes."
+        },
+        "536d72a6-6441-4862-932f-ef5a5001ce63": {
+          "description": "Aplique o Processo de Resolução de Problemas para treinar um computador a resolver um problema"
+        },
+        "0caa35ad-752c-48ab-9ad2-7b9903d68b25": {
+          "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
+        },
+        "2a58bbe6-0187-456f-825a-7cf23e16030e": {
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+        },
+        "95887ced-8b2d-4703-bd0d-234da5ab332b": {
+          "description": "Defina inteligência artificial (IA) com suas próprias palavras, usando tecnologias que eles encontram em suas vidas diárias como exemplos."
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Reflita sobre como os computadores podem contribuir em processos criativos."
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Use a I.A. para selecionar e gerar efeitos especiais adequados, com base nos emojis escolhidos, para otimizar a experiência visual da sua festa dançante."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Use os principais conceitos de codificação para programar elementos interativos que respondam às entradas do usuário, como teclas pressionadas e eventos cronometrados."
+        },
+        "3e951438-f445-449e-98da-bdfe37cd84d5": {
+          "description": "Aplique o Processo de Resolução de Problemas para treinar um computador a resolver um problema"
+        },
+        "62d59302-d8ba-4c91-a304-9e7cdecf634f": {
+          "description": "Defina inteligência artificial (IA) com suas próprias palavras, usando tecnologias que eles encontram em suas vidas diárias como exemplos."
+        },
+        "63a78751-6eac-4d76-a0ef-412f4dca1fad": {
+          "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
+        },
+        "a8074c06-9394-43f7-94a4-7055c9e44135": {
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
         }
       }
     }

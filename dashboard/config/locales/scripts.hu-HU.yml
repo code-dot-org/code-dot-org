@@ -3663,6 +3663,17 @@ hu:
           lesson_groups:
             content:
               display_name: Tartalom
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Bevezető
+          lessons:
+            lesson-7:
+              name: Bevezető
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Bevezető
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -3671,6 +3682,10 @@ hu:
           lessons:
             lesson-3:
               name: Értékelés
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Bevezető
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:

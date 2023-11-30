@@ -679,7 +679,7 @@ ar:
         csc-sprite-lab-pixel-editor: ارسم العفريت الخاص بك
         csa-pl-intro-to-strings: مقدمة إلى السلاسل في Java
         csa-pl-compareTo: طريقة المقارنة بـ ()
-        csc-event-short-intro: مقدمة قصيرة للأحداث
+        csc-event-short-intro: مقدمة قصيرة للأحداث البرمجية
         PL_CSD_CircuitPlayground_Overview_AppsWithDevices: نظرة عامة على وحدة ملعب الدائرة
         csa-day-in-pm-pl: ماذا يفعل مدير المشروع؟
         csa-pl-intro-to-pm: مقدمة لإدارة المشاريع
@@ -747,8 +747,10 @@ ar:
         csa_sorting_algorithms: 'CSA: خوارزميات الفرز'
         star_quilts_intro_to_artist: 'ستار كويلتس: مقدمة للفنان'
         upload_sprites_backgrounds: تحميل العفاريت والخلفيات المخصصة
+        csc_bookcovers_intro: برمجة أغلفة الكتب
         what-is-creativity: ما هو الابداع؟
         code-break: خذ استراحة من البرمجة
+        csd_ml_how_ai_works: كيف يعمل الذكاء الاصطناعي
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

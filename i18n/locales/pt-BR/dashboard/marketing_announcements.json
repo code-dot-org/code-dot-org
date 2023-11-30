@@ -1,0 +1,109 @@
+{
+  "banners": {
+    "csleadersprize": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "csjourneys-22": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "hoc-more": {
+      "title": "",
+      "body": "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros.",
+      "buttonText": ""
+    },
+    "superhero": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba Mais"
+    },
+    "csjourneys": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "class-schedule-survey": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "back-to-school-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "teacher-apps-open-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Participe"
+    },
+    "teacher-apps-closing-2021": {
+      "title": "",
+      "body": "",
+      "buttonText": "Participe"
+    },
+    "teacher-apps-nominate-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Indique um Professor"
+    },
+    "teacher-apps-stillon-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Participe"
+    },
+    "home-learning-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Visualizar as Ideias do Projeto"
+    },
+    "soonhoc-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "codebytes-2020": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "ai-2020": {
+      "title": "Explore a inteligência artificial e a aprendizagem de máquina",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "congrats-certificate-share": {
+      "title": "",
+      "body": "",
+      "buttonText": "Começar"
+    },
+    "coldplay": {
+      "title": "",
+      "body": "",
+      "buttonText": "Experimente"
+    },
+    "ai-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "ai-pl-launch-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": "Saiba mais"
+    },
+    "state-of-cs-2023": {
+      "title": "",
+      "body": "",
+      "buttonText": ""
+    },
+    "hoc-2023": {
+      "title": "Hour of Code: Criatividade com I.A.",
+      "body": "Junte-se a milhões de pessoas pelo mundo na organização de uma hora de codificação, com ou sem I.A. e aprenda como funciona a I.A. Qualquer pessoa, em qualquer lugar pode participar. Não é preciso ter experiência.",
+      "buttonText": "Saiba mais"
+    }
+  }
+}

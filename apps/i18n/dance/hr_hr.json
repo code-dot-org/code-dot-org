@@ -1,5 +1,10 @@
 {
+  "danceAiModalBack": "Nazad",
+  "danceAiModalClose": "Zatvori",
+  "danceAiModalCodeButton": "Kôd",
+  "danceAiModalExplanationButton": "Doznaj više",
   "danceFeedbackDidntPress": "Pazi da pritiskaš tipke sa strelicama dok traje ples.",
+  "danceFeedbackKeepCoding": "Koristiš sve potrebne vrste blokova, ali na pogrešan način.",
   "danceFeedbackKeyEvent": "Provjeri jesi li dodao neki kod u blok <xml></block><block type=\"Dancelab_whenKey\"><title name=\"KEY\">\"up\"</title></block></xml> i pritisni tipku dok traje ples.",
   "danceFeedbackNeedBackup": "Moraš stvoriti grupu pomoćnih plesača s blokom <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10</title><title name=\"COSTUME\">\"JEDNOROG\"</title> <title name=\"LAYOUT\">\"krug\"</title></block></xml>.",
   "danceFeedbackNeedDifferentDance": "Moraš koristiti drugačiji ples.",

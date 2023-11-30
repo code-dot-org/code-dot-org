@@ -4,9 +4,8 @@ import {nameComparator} from '@cdo/apps/util/sort';
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
-// In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
-// we would need to send that property from the backend and save it in lab2Redux.
-const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
+import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin';
+import procedureCallerMutator from './mutators/procedureCallerMutator';
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -110,9 +109,10 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
   // TODO: After we updgrade to Blockly v10, check if this issue has been fixed, and if it has,
   // remove the check on functionEditor workspace id.
   if (
-    useModalFunctionEditor &&
+    Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
+    this.workspace.toolbox_ &&
     this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
   ) {
     const button = new Blockly.FieldButton({
@@ -138,29 +138,37 @@ GoogleBlockly.Extensions.register('procedure_def_mini_toolbox', function () {
     return;
   }
 
+  const renderToolboxBeforeStack = true;
   const flyoutToggleButton = Blockly.customBlocks.initializeMiniToolbox.bind(
     this
-  )(undefined, true);
+  )(undefined, renderToolboxBeforeStack);
+  const renderingInFunctionEditor = true;
   Blockly.customBlocks.appendMiniToolboxToggle.bind(this)(
     miniToolboxBlocks,
     flyoutToggleButton,
-    true
+    renderingInFunctionEditor
   );
+  // Open mini-toolbox by default
+  flyoutToggleButton.setIcon(false);
 });
 
 // This extension adds an SVG frame around procedures definition blocks.
 // Not used in Music Lab or wherever the modal function is enabled.
 GoogleBlockly.Extensions.register('procedures_block_frame', function () {
-  if (!useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+  if (!Blockly.useModalFunctionEditor && !this.workspace.noFunctionBlockFrame) {
+    const getColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this);
+    };
     this.functionalSvg_ = new BlockSvgFrame(
       this,
       msg.function(),
-      'blocklyFunctionalFrame'
+      'blocklyFunctionalFrame',
+      getColor
     );
 
     this.setOnChange(function () {
       if (!this.isInFlyout) {
-        this.functionalSvg_.render(this.svgGroup_, this.RTL);
+        this.functionalSvg_.render();
       }
     });
   }
@@ -190,6 +198,21 @@ GoogleBlockly.Extensions.registerMutator(
   procedureDefMutator
 );
 
+// TODO: After updating to Blockly v10, use the original
+// procedure_caller_mutator and procedure_caller_on_change_mixin.
+// https://codedotorg.atlassian.net/browse/CT-148
+GoogleBlockly.Extensions.unregister('procedure_caller_mutator');
+GoogleBlockly.Extensions.registerMutator(
+  'procedure_caller_mutator',
+  procedureCallerMutator
+);
+
+GoogleBlockly.Extensions.unregister('procedure_caller_onchange_mixin');
+GoogleBlockly.Extensions.registerMixin(
+  'procedure_caller_onchange_mixin',
+  procedureCallerOnChangeMixin
+);
+
 /**
  * Constructs the blocks required by the flyout for the procedure category.
  * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
@@ -212,7 +235,7 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
 
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
-  } else if (useModalFunctionEditor) {
+  } else if (Blockly.useModalFunctionEditor) {
     const newFunctionButton = getNewFunctionButtonWithCallback(
       workspace,
       functionDefinitionBlock

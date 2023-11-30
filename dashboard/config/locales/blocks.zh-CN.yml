@@ -2,6 +2,15 @@
 zh-CN:
   data:
     blocks:
+      AmysBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': 恰到好处
+            '"too little"': 太少
+            '"too much"': 太多
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
       AmysBlocks_playerBehaviors:
         text: "{BEHAVIOR}"
       AmysBlocks_setPromptWithChoices:
@@ -72,6 +81,11 @@ zh-CN:
             '"measures"': 衡量
             '"seconds"': " 秒"
         text: 在 {TIMESTAMP} {UNIT} 后
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': 衡量
+            '"seconds"': " 秒"
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -95,6 +109,27 @@ zh-CN:
             '"SLOTH"': 树懒
             '"UNICORN"': 独角兽
             sprites: 所有
+          MOVE:
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
+            '"rand"': 随机
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 江南
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Kick: 踢腿
+            MOVES.Rest: 没有
+            MOVES.Roll: 身体转动
+            MOVES.ThisOrThat: 交替摆臂
+        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': 猫
+            '"SLOTH"': 树懒
           MOVE:
             '"next"': "(下一步)"
             '"prev"': "(前一步)"
@@ -595,6 +630,52 @@ zh-CN:
         text: |-
           设置背景效果
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': 隧道
+            '"color_cycle"': 颜色
+            '"diamonds"': 菱形
+            '"disco"': 方形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
+            '"flowers"': 花朵
+            '"galaxy"': 空间
+            '"growing_stars"': 变大的星星
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"music_wave"': 波浪
+            '"none"': 没有
+            '"quads"': 角度
+            '"rainbow"': 彩虹
+            '"rand"': 随机
+            '"ripples"': 波纹
+            '"ripples_random"': 随机波纹
+            '"snowflakes"': 雪
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"splatter"': 气泡
+            '"squiggles"': 花体
+            '"starburst"': 星爆
+            '"stars"': 星星
+            '"swirl"': 催眠
+            '"text"': 歌曲标题
+          PALETTE:
+            '"cool"': 蓝色
+            '"default"': 光
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
+            '"neon"': 霓虹
+            '"ocean"': 海洋
+            '"rainbow"': 彩虹
+            '"rave"': 黑白
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
+        text: |-
+          设置背景效果
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1031,6 +1112,15 @@ zh-CN:
         text: "{SPRITE}说{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 气体
+            '"liquid"': 液体
+            '"solid"': 固体
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:
@@ -1909,6 +1999,19 @@ zh-CN:
             left: 左 ↺
             right: 右 ↻
         text: 转向{DIR}
+      ecosystems_catchMe:
+        text: 抓{THIS}
+      ecosystems_eat:
+        text: 吃{THIS}
+      ecosystems_goldilocks:
+        options:
+          CONDITION:
+            '"just right"': 恰到好处
+            '"too little"': 太少
+            '"too much"': 太多
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
       ecosystems_int10:
         options:
           VALUE:
@@ -1923,6 +2026,24 @@ zh-CN:
             '8': '8'
             '9': '9'
         text: "{VALUE}"
+      ecosystems_makeNewSpriteBetween:
+        text: '在位置x: {X} y: {Y}之间制作{N}个新{GROUP}'
+      ecosystems_makeNumSpritesAtLocation:
+        text: 在{LOCATION_GENERATOR}制作{NUM}个新{ANIMATION_NAME}精灵图
+      ecosystems_makeNumSpritesWithinRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": 底部
+            "{x1:0, x2:400, y1:150, y2:250}": 中间
+            "{x1:0, x2:400, y1:200, y2:400}": 顶部
+        text: 在{RANGE}制作{NUM}个新{ANIMATION_NAME}精灵图
+      ecosystems_randomLocationWithinRange:
+        text: x min{X1}x max{X2}y min{Y1}y max{Y2}
+      ecosystems_randomLocationWithinSelectedRange:
+        options:
+          RANGE:
+            "{x1:0, x2:400, y1:0, y2:200}": 底部
+            "{x1:0, x2:400, y1:200, y2:400}": 顶部
       gamelab_addBehaviorSimple:
         text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
       gamelab_addTarget:

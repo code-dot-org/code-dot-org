@@ -251,7 +251,7 @@ describe('RubricContent', () => {
 
   it('passes down aiUnderstanding and aiConfidence to the LearningGoal', async () => {
     const aiEvaluations = [
-      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     const wrapper = mount(
       <RubricContent

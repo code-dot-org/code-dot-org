@@ -48,6 +48,11 @@ te:
           UNIT:
             '"measures"': మెజర్స్
             '"seconds"': సెకండ్లు
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': మెజర్స్
+            '"seconds"': సెకండ్లు
       Dancelab_changeColorBy:
         text: మార్చు {COLOR} {METHOD} by {AMOUNT}
         options:
@@ -85,6 +90,26 @@ te:
             MOVES.Kick: స్టార్
             MOVES.ThisOrThat: ఇది లేక అది
             MOVES.Rest: ఏదీ కాదు
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} చేయండి {MOVE} {DIR} ఎప్పటికీ"
+        options:
+          GROUP:
+            '"CAT"': క్యాట్
+          MOVE:
+            MOVES.Roll: బాడీ రోల్
+            MOVES.ClapHigh: క్లాప్ హై
+            MOVES.Dab: డాబ్
+            MOVES.DoubleJam: డబుల్ డౌన్
+            MOVES.Drop: డ్రాప్
+            MOVES.Floss: ఫ్లాస్
+            MOVES.Fresh: ఫ్రెష్
+            MOVES.Clown: గాంగ్నమ్
+            MOVES.Kick: స్టార్
+            MOVES.ThisOrThat: ఇది లేక అది
+            MOVES.Rest: ఏదీ కాదు
+            '"next"': "(తరువాత)"
+            '"prev"': "(ముందటి)"
+            '"rand"': "(రాండమ్)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} చేయండి {MOVE} {DIR} ఎప్పటికీ"
         options:
@@ -479,6 +504,39 @@ te:
             '"iceCream"': ఐస్ క్రీమ్
             '"default"': లైట్
             '"neon"': నియోన్
+            '"tropical"': ట్రాపికల్
+            '"vintage"': వింటేజ్
+            '"warm"': వామ్
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        text: "బ్యాక్‌గ్రౌండ్ ఎఫెక్ట్ \n{PALETTE} {EFFECT} సెట్ చేయండి"
+        options:
+          EFFECT:
+            '"none"': ఏదీ కాదు
+            '"rand"': "(రాండమ్)"
+            '"circles"': సర్కిల్స్
+            '"color_cycle"': రంగులు
+            '"diamonds"': డైమండ్స్
+            '"disco_ball"': డిస్కో బాల్
+            '"fireworks"': ఫైర్‌వర్క్స్
+            '"swirl"': హిప్నో
+            '"lasers"': లేజర్ డాన్స్ ఫ్లోర్
+            '"splatter"': పెయింట్ స్ప్లాట్టర్
+            '"rainbow"': రెయిన్‌బో
+            '"snowflakes"': స్నో
+            '"text"': పాట పేర్లు
+            '"galaxy"': స్పేస్
+            '"sparkles"': స్పార్కల్స్
+            '"spiral"': స్పైరల్
+            '"disco"': స్క్వైర్స్
+            '"stars"': స్టార్స్
+          PALETTE:
+            '"rave"': బ్లాక్ అండ్ వైట్
+            '"cool"': కూల్
+            '"electronic"': ఎలక్ట్రానిక్
+            '"iceCream"': ఐస్ క్రీమ్
+            '"default"': లైట్
+            '"neon"': నియోన్
+            '"rainbow"': రెయిన్‌బో
             '"tropical"': ట్రాపికల్
             '"vintage"': వింటేజ్
             '"warm"': వామ్
@@ -1146,6 +1204,12 @@ te:
             '"w"': w
             '"s"': s
             '"d"': d
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ఘనపదార్థం
+            '"liquid"': ద్రవము
+            '"gas"': వాయువు
       Mikelab_addTrainingData:
         options:
           NAME:

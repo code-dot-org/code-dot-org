@@ -1,0 +1,55 @@
+{
+  "si-LK": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "ai-launch-2023": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "back-to-school-2021": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "codebytes-2020": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "coldplay": {
+            "buttonText": "එය උත්සහ කරන්න"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "ආරම්භ කරන්න"
+          },
+          "csjourneys": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "csjourneys-22": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "csleadersprize": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "hoc-2023": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "superhero": {
+            "buttonText": "වැඩිදුර ඉගෙන ගන්න"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "අප හා එක් වන්න"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "අප හා එක් වන්න"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "අප හා එක් වන්න"
+          }
+        }
+      }
+    }
+  }
+}

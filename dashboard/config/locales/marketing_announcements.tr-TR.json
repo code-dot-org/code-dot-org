@@ -1,0 +1,67 @@
+{
+  "tr-TR": {
+    "data": {
+      "marketing_announcements": {
+        "banners": {
+          "ai-2020": {
+            "buttonText": "Daha fazlasını öğren",
+            "title": "Yapay Zeka ve Makine Öğrenimini Keşfedin"
+          },
+          "ai-launch-2023": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "ai-pl-launch-2023": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "back-to-school-2021": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "codebytes-2020": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "coldplay": {
+            "buttonText": "Deneyin"
+          },
+          "congrats-certificate-share": {
+            "buttonText": "Başlayın"
+          },
+          "csjourneys": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "csjourneys-22": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "csleadersprize": {
+            "buttonText": "Daha fazlasını öğren"
+          },
+          "hoc-2023": {
+            "body": "Yapay zeka ile veya yapay zeka olmadan bir saatlik kodlama düzenlemek ve yapay zekanın nasıl çalıştığını öğrenmek için dünya çapındaki milyonlara katılın. Herkes, her yerde bunu yapabilir. Deneyime gerek yok.",
+            "buttonText": "Daha fazlasını öğren",
+            "title": "Hour of Code: Yapay Zeka ile Yaratıcılık"
+          },
+          "hoc-more": {
+            "body": "Kodlama Saati internet sitesi Code.org ve iş ortakları tarafından geliştirilen her yaşa ve deneyim seviyesine uygun 100’den fazla bilgisayar bilimi faaliyeti içerir."
+          },
+          "home-learning-2020": {
+            "buttonText": "Proje Fikirlerini Görüntüle"
+          },
+          "superhero": {
+            "buttonText": "Daha Fazla Bilgi Edinin"
+          },
+          "teacher-apps-closing-2021": {
+            "buttonText": "Bize katılın"
+          },
+          "teacher-apps-nominate-2020": {
+            "buttonText": "Bir öğretmen ata"
+          },
+          "teacher-apps-open-2021": {
+            "buttonText": "Bize katılın"
+          },
+          "teacher-apps-stillon-2020": {
+            "buttonText": "Bize katılın"
+          }
+        }
+      }
+    }
+  }
+}

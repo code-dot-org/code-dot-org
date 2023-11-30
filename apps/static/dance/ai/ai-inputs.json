@@ -1,104 +1,129 @@
 {
   "items": [
     {
-      "id": "poopy",
-      "name": "poopy"
+      "emoji": "🌀",
+      "id": "cyclone",
+      "modelDescriptiveName": "cyclone swirl icy blue"
     },
     {
-      "id": "romantic",
-      "name": "romantic"
+      "emoji": "🥰",
+      "id": "smiling-face-with-hearts",
+      "modelDescriptiveName": "romantic hearts cozy warm"
     },
     {
-      "id": "party",
-      "name": "party"
+      "emoji": "🎉",
+      "id": "party-popper",
+      "modelDescriptiveName": "party celebrate"
     },
     {
-      "id": "silly",
-      "name": "silly"
+      "emoji": "💎",
+      "id": "gem-stone",
+      "modelDescriptiveName": "diamond gem stone geometric shapes"
     },
     {
-      "id": "sparkle",
-      "name": "sparkle"
+      "emoji": "🌱",
+      "id": "seedling",
+      "modelDescriptiveName": "green plant springtime"
     },
     {
-      "id": "happy",
-      "name": "happy"
+      "emoji": "✨",
+      "id": "sparkles",
+      "modelDescriptiveName": "sparkly star"
     },
     {
-      "id": "magic",
-      "name": "magic"
+      "emoji": "🌹",
+      "id": "rose",
+      "modelDescriptiveName": "flower springtime"
     },
     {
-      "id": "spooky",
-      "name": "spooky"
+      "emoji": "👑",
+      "id": "crown",
+      "modelDescriptiveName": "crown geometric grid round gems"
     },
     {
-      "id": "cute",
-      "name": "cute"
+      "emoji": "👻",
+      "id": "ghost",
+      "modelDescriptiveName": "ghost autumn spooky"
     },
     {
-      "id": "funky",
-      "name": "funky"
+      "emoji": "🍦",
+      "id": "soft-ice-cream",
+      "modelDescriptiveName": "ice cream sweet summer fruit"
     },
     {
-      "id": "wavy",
-      "name": "wavy"
+      "emoji": "🏁",
+      "id": "chequered-flag",
+      "modelDescriptiveName": "checkered flag black-and-white geometric fast"
     },
     {
-      "id": "lights",
-      "name": "lights"
+      "emoji": "🌊",
+      "id": "water-wave",
+      "modelDescriptiveName": "waves water ocean"
     },
     {
+      "emoji": "🌈",
       "id": "rainbow",
-      "name": "rainbow"
+      "modelDescriptiveName": "prism"
     },
     {
+      "emoji": "💡",
+      "id": "light-bulb",
+      "modelDescriptiveName": "stars light"
+    },
+    {
+      "emoji": "🤖",
       "id": "robot",
-      "name": "robot"
+      "modelDescriptiveName": "electronic"
     },
     {
-      "id": "chaotic",
-      "name": "chaotic"
+      "emoji": "😵‍💫",
+      "id": "face-with-spiral-eyes",
+      "modelDescriptiveName": "wavy ripple hypnotic turbulent spiral"
     },
     {
-      "id": "disco",
-      "name": "disco"
+      "emoji": "🥶",
+      "id": "cold-face",
+      "modelDescriptiveName": "icy winter cold"
     },
     {
-      "id": "zen",
-      "name": "zen"
+      "emoji": "🎨",
+      "id": "artist-palette",
+      "modelDescriptiveName": "art paint palette"
     },
     {
-      "id": "fast",
-      "name": "fast"
+      "emoji": "🪩",
+      "id": "mirror-ball",
+      "modelDescriptiveName": "disco ball party grid"
     },
     {
-      "id": "evil",
-      "name": "evil"
+      "emoji": "🎵",
+      "id": "musical-note",
+      "modelDescriptiveName": "music notes sound"
     },
     {
-      "id": "cold",
-      "name": "cold"
+      "emoji": "💩", 
+      "id": "pile-of-poo",
+      "modelDescriptiveName": "poopy funny stinky"
     },
     {
-      "id": "cosmic",
-      "name": "cosmic"
+      "emoji": "🚀",
+      "id": "rocket",
+      "modelDescriptiveName": "rocket space cosmic galaxy"
     },
     {
-      "id": "sad",
-      "name": "sad"
+      "emoji": "😋",
+      "id": "face-savoring-food",
+      "modelDescriptiveName": "savory hungry food"
     },
     {
-      "id": "black-and-white",
-      "name": "black & white"
+      "emoji": "🔥",
+      "id": "fire",
+      "modelDescriptiveName": "hot fire sun"
     },
     {
-      "id": "warm",
-      "name": "warm"
-    },
-    {
-      "id": "cool",
-      "name": "cool"
+      "emoji": "😃",
+      "id": "grinning-face-with-big-eyes",
+      "modelDescriptiveName": "happy grin"
     }
   ]
 }
