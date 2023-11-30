@@ -28,10 +28,11 @@ const LabelTooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
 export interface TagProps {
   /** Tag label */
   label: string;
-  /** Tag tooltip text */
+  /** Tag tooltip content. Can be a simple string or ReactNode (some jsx/html markup/view).
+   *  For example - check Tags.story.tsx*/
   tooltipContent: string | React.ReactNode;
-  /** Tag tooltip id (optional) */
-  tooltipId?: string;
+  /** Tag tooltip id (required for accessibility) */
+  tooltipId: string;
   /** aria-label for the tag.
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
