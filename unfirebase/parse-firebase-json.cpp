@@ -154,7 +154,7 @@ void startChannel(string channelName) {
 // "INSERT INTO unfirebase VALUES (?, ?)"
 sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
 uint64_t unComittedRecords = 0;
-uint64_t totalRecordsCount = 0;
+uint64_t totalRecordsCount = 992000;
 atomic<uint64_t> numRecordBytes {0};
 uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
@@ -278,6 +278,7 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
 
   if (LOAD_DATA_INSTEAD_OF_INSERT) {
     if (!loadDataBufferTSV) {
+      //string shortFilename = filesystem::path(filename).filename();
       loadDataBufferTSVFilename = loadDataBufferDir + to_string(totalRecordsCount) + ".tsv";
       loadDataBufferTSV = new ofstream(loadDataBufferTSVFilename);
     }
