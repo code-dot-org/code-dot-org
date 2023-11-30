@@ -33,6 +33,23 @@ theme: responsive_full_width
     %a.link-button.has-external-link{href: "https://donate.code.org/campaign/computer-science-education/c142257", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_start_fundraiser)
 
+%section.campaigns.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:donate_page_campaigns_heading)
+    .action-block.action-block--two-col.white
+      .media-wrapper.col-50
+        %img{src: "/images/farsi/farsi-students-snacking.png", alt: ""}
+      .text-wrapper.col-50
+        %h3=hoc_s(:farsi_page_top_heading)
+        %p=hoc_s(:donate_page_campaigns_farsi_desc)
+        .button-wrapper
+          %a.link-button.has-external-link{href: "https://donate.code.org/CodeDotOrgInFarsi", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:aria_label_call_to_action_farsi_donate)}}
+            =hoc_s(:call_to_action_donate)
+          %a.link-button.secondary{href: "/farsi", aria:{label: hoc_s(:aria_label_call_to_action_farsi_learn_more)}}
+            =hoc_s(:call_to_action_learn_more)
+    .clear
+
 %section.donate-options
   .wrapper
     %h2.centered

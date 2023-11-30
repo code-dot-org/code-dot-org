@@ -337,6 +337,7 @@
   call_to_action_open_positions: "View open positions"
   call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate: "Donate"
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
@@ -441,6 +442,8 @@
   aria_label_call_to_action_minecraft_2020: "Get started with Minecraft AI for Earth"
   aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
   aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
+  aria_label_call_to_action_farsi_donate: "Donate to support the Code.org in Farsi campaign"
+  aria_label_call_to_action_farsi_learn_more: "Learn more about Code.org in Farsi"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -1319,6 +1322,8 @@
   donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
   donate_page_fundraise_title: "Fundraise for Code.org"
   donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_campaigns_heading: "Support a campaign"
+  donate_page_campaigns_farsi_desc: "Talent is widespread, but opportunity often isn't. The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi speakers, from countries like Iran, Afghanistan, and Tajikistan to global diasporas, access to educational resources currently available in other major languages. Let's make it a reality."
   donate_page_other_ways_title: "Other ways to give"
   donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
