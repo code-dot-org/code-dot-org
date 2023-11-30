@@ -740,6 +740,21 @@ class UserTest < ActiveSupport::TestCase
     refute_nil user.errors[:email]
   end
 
+  test "LTI users should have a LtiUserIdentity when created" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.save
+    assert user.lti_user_identities
+    assert_equal 1, user.lti_user_identities.count
+  end
+
+  test "non LTI users should not have a LtiUserIdentity when created" do
+    user = create :user
+    assert_empty user.lti_user_identities
+  end
+
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
@@ -1864,6 +1879,18 @@ class UserTest < ActiveSupport::TestCase
     assert_empty teacher.sections_instructed
   end
 
+  test 'section_instructors get deleted when user gets deleted' do
+    section = create :section
+    teacher = section.teacher
+    section_instructors = section.section_instructors
+
+    refute_empty section_instructors
+
+    teacher.destroy!
+
+    assert_empty section_instructors
+  end
+
   test 'sections_instructed omits sections with in-active section_instructors' do
     section = create :section
     teacher = create :teacher
@@ -1899,7 +1926,8 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'can delete own account if LTI student' do
-    user = create :student, :with_lti_authentication_option
+    user = create :student
+    user.authentication_options << create(:lti_authentication_option)
     refute user.teacher_managed_account?
     assert user.can_delete_own_account?
   end
@@ -2922,9 +2950,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.sections_as_student
     assert_equal [], other_user.sections_as_student
 
-    assert_equal [], student.sections
-    assert_equal [section], teacher.sections
-    assert_equal [], other_user.sections
+    assert_equal [], student.sections_instructed
+    assert_equal [section], teacher.sections_instructed
+    assert_equal [], other_user.sections_instructed
 
     # can_pair? method
     assert_equal true, student.can_pair?

@@ -445,7 +445,7 @@ module LevelsHelper
   # 3. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
   #    have fully transitioned to Google Blockly.
   def use_google_blockly
-    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user)
+    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user) && !@is_start_mode
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
     return true if @level.uses_google_blockly?

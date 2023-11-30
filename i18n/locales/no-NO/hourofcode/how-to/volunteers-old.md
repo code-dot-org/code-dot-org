@@ -1,0 +1,91 @@
+---
+title: Veiledning for Kodetimen frivillige
+---
+
+{{ signup_button }}
+
+# Veiledning for frivillige
+### Du kan gjøre en forskjell i en klasse i dag!
+
+***
+
+## Hvorfor bli frivillig?
+Se hva noen tidligere frivillige har sagt:
+
+- “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
+- “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
+- "Jeg ELSKET å se hvor glade barna var. Det var fascinerende for lærerne å se at noen av de elevene som vanligvis ikke gjorde det så godt på skolen viste seg å være svært gode til å tenke som utviklere, og til å hjelpe andre - slik at de fikk en helt ny mestringsarena.
+
+## Hvem som helst kan stille som frivillig
+### Volunteers and speakers in tech:
+Do you have a connection to CS or tech? Hvis du arbeider innenfor programvareutvikling, i et teknologifirma (teknisk eller ikke-teknisk stilling), eller har fulgt kurs i programmering, kan du være til inspirasjon for elevene! Mange av elevene har aldri før møtt noen som arbeider innenfor dette fagfeltet, og mange lærere setter pris på å kunne knytte kontakter med fagfolk og studenter.
+
+You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science.
+<br>
+<br>
+
+<a href="https://code.org/volunteer"><button>Meld deg som frivillig idag!</button>
+
+<br>
+<br>
+
+### Anyone passionate about expanding opportunity:
+Do you believe that learning computer science can open doors of opportunity for students? Hjelp til på en skole i nærmiljøet, eller sett i gang et tilbud etter skoletid! Du trenger ingen bakgrunn innenfor informatikk for å arrangere Kodetimen. Og husk, bare det å tilby å hjelpe er ofte det som skal til for å overbevise ditt barns lærer, en venn, eller en lokal fritidsklubb, til å teste en time.
+
+### Hvordan komme i gang?
+
+1. [Send this email]({{ promote/help_schools }}) to your child’s teacher offering to help them run an Hour of Code.
+2. Offer to host an Hour of Code event after school at a local school. [Use this How-To Guide]({{ urls/how_to_guide }}) to help you plan.
+
+## Verv noen kolleger som frivillige
+Fortell venner og kolleger om Kodetimen. Mange lærere er på utkikk etter hjelp, så få dem til å [melde seg som frivillige](https://code.org/volunteer). Få arbeidsgiveren din til å bidra. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
+
+## Hvordan forberede seg
+- [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
+- Sjekk ut hva som finnes av oversikter, timeplaner, forberedelseshjelp, markedsføringsmateriell og annet i [Kodetimens Verktøykasse](/files/hoc-volunteer-toolkit.pdf). Der finner du alt du trenger for å gjøre deg klar til å gjøre en innsats!
+- If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
+- Hvis du skal besøke en skole, husk å sette deg inn i og gjennomføre eventuelle påkrevde bakgrunnssjekker og papirarbeid i god tid.
+- Sjekk ut [disse tipsene](https://code.org/files/CSTT_Volunteers.pdf) om hvordan man best samhandler med elevene.
+- Delta i diskusjoner på Facebook, Twitter, Instagram og Tumblr under emneknaggen #HourOfCode.
+- Ta kontakt med læreren for å fortelle og diskutere hvilke temaer du har tenkt til å ta opp i din presentasjon.
+- Hvis du er en virtuell frivillig, husk å teste at lyd og bilde samt skjermdelingsfunksjon fungerer på forhånd.
+
+## Dagen for Kodetimen
+Når du skal arrangere Kodetimen, følg eksempel-agendaen nedenfor for å guide deg gjennom dagen. Men før du kommer så langt, husk å registrere deg ifølge skolens reglement, og hils på læreren. Dere bør være enig om timeplanen, og kan gjerne gå gjennom og diskutere hovedpunktene en gang til.
+
+### Eksempel på timeplan:
+
+| Tid            | Tema                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 minutter   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                                    |
+| 5-10 minutter  | Introduce yourself and learn more about the students: </ul><li>Hvor arbeider du, hva driver du med, og hvorfor trives du med jobben din?</li><li>Hvem eller hva har inspirert deg?</li><li>Hvordan ble du interessert i informatikk?</li><li>Hadde du en personlig veileder?</li><li>Fortell en liten historie om hvordan informasjonsteknologi griper inn i alles hverdag.</li><br>Still noen spørsmål til klassen, og husk å sette av tid til en runde spørsmål og svar.</br> <li> Hvilke yrker og hva slags jobber er elevene interessert i, hva er favoritt-dingsen eller den mest populære app'en, hvordan tror elevene de er laget? </li><li> Har elevene noen spørsmål til deg?</ul> |
+| 30-60 minutter | **Code!** Walk around, answer questions, and guide them through tough puzzles. Prøv å ikke servere løsninger direkte. Prøv istedet å stille spørsmål så de selv kan finne ut hva som gikk galt, og forsøk å oppmuntre dem til å spørre og hjelpe hverandre når de står fast. Det aller beste er om de kan lære av hverandre.                                                            |
+| 1-3 minutter   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                                         |
+| Etterpå        | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Gå sammen om å fylle ut skjemaet på [code.org/yourschool](https://code.org/yourschool) om hva som undervises ved skolen i dag, og vær en pådriver for å få informatikk som fast innslag på timeplanen.                                                               |
+
+### Etter arrangementet:
+- Del bilder og erfaringer med Code.org på giving@code.org.
+- Husk å registrere tiden du har brukt på frivillig arbeid hos arbeidsgiveren din, hvis dere har et system for det.
+- Del dine erfaringer på sosiale medier under #HourOfCode!
+- If you do take pictures/videos during the event, **especially with students**, make sure you get teacher/parent permission if you would like to post your stories on social media.
+- Ta kontakt igjen med læreren etter en måneds tid og hør om det er interesse for å etablere et informatikkurs på skolen. Del [ressurser og profesjonell læringsstøtte](https://code.org/yourschool) for å forenkle etableringen.
+
+## Hvordan bli valgt som teknisk ressurs eller gjesteforeleser
+- Lærere leter etter aktuelle frivillige på [kartet](https://code.org/volunteer/local).
+- Prøv å fylle inn profilen din så nøyaktig og fullstendig som mulig for å øke sjansene for å bli valgt.
+- Læreren vil ta kontakt med deg via dette skjemaet (vi gir aldri e-postadressen din ut til læreren). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
+
+## Ofte Stilte Spørsmål for Kodetimens frivillige
+
+### I haven't been contacted by a teacher yet. How can I still volunteer?
+Søk etter lokale skoler og ring rektor/lærer/ekspedisjon, og spør hvordan du kan hjelpe.
+
+### Hvor lenge varer et klasseromsbesøk?
+Et besøk i person til et klasserom varer vanligvis 60-90 minutter mens et besøk i et virtuelt klasserom varer vanligvis 20-30 minutter.
+
+### Hvilken aldersgruppe passer Hour of Code-aktiviteten for?
+Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+
+
+
+{{ signup_button }}

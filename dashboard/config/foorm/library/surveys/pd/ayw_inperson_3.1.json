@@ -25,9 +25,9 @@
             },
             {
               "type": "rating",
-              "name": "better_prepared_unit5csd_m56",
+              "name": "better_prepared_unit6csd_m56",
               "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
-              "title": "I feel prepared to teach Unit 5 after attending this workshop.",
+              "title": "I feel prepared to teach Unit 6 after attending this workshop.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -108,7 +108,7 @@
               "type": "rating",
               "name": "strategies_ensure_inclusion_m56",
               "visibleIf": "{workshop_course}='CS Discoveries' or {workshop_course}='CS Principles'",
-              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom is welcoming to all students.",
+              "title": "This workshop provided me with new ideas and strategies to ensure that my classroom fosters a sense of belonging.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -175,7 +175,7 @@
               "type": "rating",
               "name": "learning_in_context_m56",
               "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
-              "title": "After attending this workshop I feel prepared to incorporate strategies to promote learning in context in my CS classroom.",
+              "title": "After attending this workshop I feel prepared to incorporate strategies to promote learning through creation in my CS classroom.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
               "maxRateDescription": "Strongly agree"
@@ -183,7 +183,7 @@
             {
               "type": "rating",
               "name": "min_stereotype_m56",
-              "visibleIf": "{workshop_course}='CS Discoveries'",
+              "visibleIf": "{workshop_course}='CS Discoveries'and ({regional_partner_name} <> 'Broward County Public Schools' and {regional_partner_name}<>  'Florida International University' and {regional_partner_name} <> 'Orlando Science Center' and {regional_partner_name} <> 'Tampa Bay STEM Network' and {regional_partner_name} <> 'University of North Florida & STEM2 Hub')",
               "title": "As a result of this workshop, I want to implement strategies to minimize stereotype threats in my classroom (e.g. present role models from diverse groups, promote a growth mindset about intelligence, support students’ sense of belonging, create fair tests, convey high standards and assure students of their ability to meet them).",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
@@ -191,21 +191,43 @@
             },
             {
               "type": "rating",
+              "name": "unit6_level_types_m56",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "I recognize different lesson level types and how to use each of them to support Unit 6 instruction.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NOTE: added 11/22/2023, before it was in AYW4 - NZM."
+            },
+            {
+              "type": "rating",
+              "name": "problem_solve_proc_prog_m56",
+              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12273' and {workshop_id} <> '12786' and {workshop_id} <> '13094'",
+              "title": "Through this workshop, I feel prepared to use the Problem Solving Process for Programming to reinforce persistence and support students when facing challenges.",
+              "rateMax": 7,
+              "minRateDescription": "Strongly disagree",
+              "maxRateDescription": "Strongly agree",
+              "natalia_comment": "NOTE: added 11/22/2023, before it was in AYW4 - NZM."
+            },
+            {
+              "type": "rating",
               "name": "differentiation_m56",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "After attending this workshop I understand how to apply differentiation strategies when teaching Unit 5.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Discoveries',11/22/2023 per PL team - NZM."
             },
             {
               "type": "rating",
               "name": "data_analysis_m56",
-              "visibleIf": "{workshop_course}='CS Discoveries' and {workshop_id} <> '12272' and {workshop_id} <> '12784'",
               "title": "Through this workshop, I feel ready to guide students in the use of the Problem Solving Process for Data to draw conclusions about data.",
               "rateMax": 7,
               "minRateDescription": "Strongly disagree",
-              "maxRateDescription": "Strongly agree"
+              "maxRateDescription": "Strongly agree",
+              "visible": false,
+              "natalia_comment": "NOTE: removed by setting visible = false, removing visibleIf: {workshop_course}='CS Discoveries',11/22/2023 per PL team - NZM."
             },
             {
               "type": "rating",

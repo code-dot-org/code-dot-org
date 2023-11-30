@@ -2,7 +2,7 @@ import UntypedCachedBackgroundEffects from '@cdo/static/dance/ai/model/cached_ba
 import UntypedCachedForegroundEffects from '@cdo/static/dance/ai/model/cached_foreground_effects_map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached_palettes_map.json';
 
-import {FieldKey, GeneratedEffect} from '../types';
+import {FieldKey, GeneratedEffect} from './types';
 
 export enum ChooseEffectsQuality {
   GOOD = 'good',
