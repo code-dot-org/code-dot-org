@@ -6238,6 +6238,11 @@ az:
               name: Və Maddənin Dövlətləri
             lesson-5:
               name: Yoxlamalar
+            lesson-6:
+              name: Dərs 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Təsadüf
           name: angelina-oyun meydançası
         csp-playground:
           title: CSP Oyun Meydançası
@@ -7402,3 +7407,77 @@ az:
             lessonGroup-5:
               display_name: Sorğu sonrası
           title: Proqram təminatı mühəndisliyi və kompüter görməsi
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: Bu bölmədə siz öz veb səhifələrinizdə məzmun yaratmağı və paylaşmağı öyrənəcəksiniz. Hansı məzmunu dünya ilə bölüşmək istədiyinizə qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizin quruluşunu və üslubunu öyrənəcəksiniz. Siz həmçinin sazlama, resurslardan istifadə və komanda işi kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sorğu
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Problemin Həlli Prosesi'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+          student_description: Problemlərin həlli və hesablama, problemlərin həlli üçün daha geniş axtarış çərçivəsində qurulduğu kimi, kompüter elmləri sahəsinə yüksək interaktiv və birgə girişdir. Bir sıra tapmacalar, problemlər və real dünya ssenarilərini həll etmək üçün problem həlli prosesindən istifadə edərək məşq edəcəksiniz. Sonra, kompüterlərin insanlara problemləri həll etməyə kömək etmək üçün məlumatları necə daxil etdiyini, çıxardığını, saxladığını və emal etdiyini öyrənəcəksiniz. Bölmə, seçdiyiniz problemi həll etməyə kömək edən bir proqram hazırladığınız bir layihə ilə yekunlaşır.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: Bu bölmədə siz öz veb səhifələrinizdə məzmun yaratmağı və paylaşmağı öyrənəcəksiniz. Hansı məzmunu dünya ilə bölüşmək istədiyinizə qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizin quruluşunu və üslubunu öyrənəcəksiniz. Siz həmçinin sazlama, resurslardan istifadə və komanda işi kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq edəcəksiniz.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
+            lessonGroup-3:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
+          student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır. Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+          student_description: rəy
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Məlumatı təmsil etmək'
+            lessonGroup-3:
+              display_name: həll etmək
+          student_description: Bu bölmə problemlərin həllində məlumatların əhəmiyyətindən bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır. Birinci fəsil kompüterdə məlumatı təmsil etmək üçün istifadə edilən müxtəlif sistemləri və onlardan istifadə zamanı yaranan çətinlikləri və mübadilələri araşdırır. İkinci fəsildə siz məlumat kolleksiyalarının problemlərin həlli üçün necə istifadə edildiyini və kompüterlərin bu prosesin addımlarını avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz. Fəsil məlumat probleminin həlli prosesinin seçdiyiniz sahəyə necə tətbiq oluna biləcəyini nəzərdən keçirməklə yekunlaşır.
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən necə istifadə etdiyini öyrənin.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: App Laboratoriyasına giriş
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Girişlər və Çıxışlar'
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: aparat
+          description_short: Fiziki cihazlarla proqramlaşdırmağı öyrənin.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Laboratoriyasına giriş
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Proqram laboratoriyasına giriş
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: 2-ci Fəsil
+          student_description: cədvəlli
+        csd-post-survey-2024:
+          title: Kursdan Sonra Sorğusu

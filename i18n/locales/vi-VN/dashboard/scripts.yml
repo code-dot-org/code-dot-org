@@ -4066,3 +4066,19 @@ vi:
           title: " Học phần 4: Chuẩn bị giảng dạy về Quy trình thiết kế"
         self-paced-pl-csd-unit5-2-2023:
           title: 'Học phần 5: Chuẩn bị giảng dạy về Dữ liệu và xã hội'
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Khảo sát
+            lessonGroup-2:
+              display_name: 'Chương 1: Quá trình giải quyết vấn đề'
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Giới thiệu về AppLab
+            lessonGroup-2:
+              display_name: Chương 1
+            lessonGroup-3:
+              display_name: Chương 2
+        csd-post-survey-2024:
+          title: Khảo sát sau khoá học
