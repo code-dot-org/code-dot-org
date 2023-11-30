@@ -109,12 +109,6 @@ module Pd::Application
           "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year(year)})",
           TEXT_FIELDS[:other_with_text]
         ],
-        replace_course: [
-          YES,
-          'No, this course will be added to the schedule in addition to an existing computer science course',
-          'No, computer science is new to my school',
-          TEXT_FIELDS[:dont_know_explain]
-        ],
         pay_fee: [
           'Yes, my school would be able to pay the full program fee.',
           'No, my school would not be able to pay the program fee. We would like to be considered for a scholarship.'
@@ -145,7 +139,6 @@ module Pd::Application
               :american_indian,
               :other,
               :committed_to_master_schedule,
-              :replace_course,
               :understand_fee,
               :pay_fee
             )
@@ -161,7 +154,6 @@ module Pd::Application
     def additional_text_fields
       [
         [:committed_to_master_schedule],
-        [:replace_course, TEXT_FIELDS[:dont_know_explain], :replace_course_other],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]
