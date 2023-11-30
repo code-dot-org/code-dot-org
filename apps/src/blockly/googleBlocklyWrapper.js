@@ -88,6 +88,7 @@ const BlocklyWrapper = function (blocklyInstance) {
   this.version = BlocklyVersion.GOOGLE;
   this.blockly_ = blocklyInstance;
   this.mainWorkspace = undefined;
+  this.nonRunnableWorkspaces = [];
 
   this.wrapReadOnlyProperty = function (propertyName) {
     Object.defineProperty(this, propertyName, {
@@ -517,6 +518,19 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.JavaScript;
   };
 
+  blocklyWrapper.addNonRunnableWorkspace = function (workspace) {
+    this.nonRunnableWorkspaces.push(workspace.id);
+  };
+
+  // By default, a workspace is runnable unless we have specifically marked it
+  // as not runnable when creating a read only block space.
+  blocklyWrapper.isRunnableWorkspace = function (workspace) {
+    if (this.nonRunnableWorkspaces.includes(workspace.id)) {
+      return false;
+    }
+    return true;
+  };
+
   // TODO - used for validation in CS in Algebra.
   blocklyWrapper.findEmptyContainerBlock = function () {};
   blocklyWrapper.BlockSpace = {
@@ -538,6 +552,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
     },
 
+    // By default we skip loading hidden definitions for a read only block space
+    // because read only block spaces are used for things like hint blocks,
+    // which do not need procedure definitions as they will never be run.
+    // Trying to load hidden definitions when there are none
+    // can wipe our existing hidden definition workspace.
     createReadOnlyBlockSpace: (
       container,
       xml,
@@ -552,7 +571,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
         RTL: options.rtl,
         renderer: options.renderer || Renderers.DEFAULT,
       });
-      workspace.isReadOnlyBlockSpace = true;
+      // A read only block space is different from a read only attribute, it means
+      // we will not run code from this workspace. Therefore we mark this workspace
+      // as not runnable to avoid trying to run logic on it to ensure things run properly
+      // (such as procedures).
+      blocklyWrapper.addNonRunnableWorkspace(workspace);
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
         {
@@ -641,7 +664,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
-    workspace.isReadOnlyBlockSpace = false;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;

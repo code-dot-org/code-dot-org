@@ -1,7 +1,7 @@
 // This is copied from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
 // We needed a bug fix not present in our current version of the plugin, and we needed to not run the
-// on change handler if the block is in a read only block space.
+// on change handler if the block is not in a runnable workspace.
 const procedureCallerOnChangeMixin = {
   /**
    * Procedure calls cannot exist without the corresponding procedure
@@ -10,13 +10,13 @@ const procedureCallerOnChangeMixin = {
    * @this {Blockly.Block}
    */
   onchange: function (event) {
-    // If the block is in a read only block space, we don't create a procedure definition.
-    // A read only block space is a specific type of read only workspace where we are rendering blocks
-    // that will never run code (for example, in instructions or hints).
+    // If the block is not in a runnable workspace, we don't create a procedure definition.
+    // A non-runnable workspace does not need any procedure definitions, and trying to add them
+    // will cause confusing UI (for example, an empty procedure definition in a hint).
     if (
       this.disposed ||
       this.workspace.isFlyout ||
-      this.workspace.isReadOnlyBlockSpace
+      !Blockly.isRunnableWorkspace(this.workspace)
     )
       return;
     if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
