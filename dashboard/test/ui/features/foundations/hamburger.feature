@@ -8,8 +8,9 @@ Feature: Hamburger dropdown
     And I rotate to portrait
     And I wait for 0.5 seconds
     Then I wait until element "#hamburger-icon" is visible
+    And I scroll the "#hamburger-icon" element into view
     And I click selector "#hamburger-icon"
-    And I see no difference for "Hamburger Menu: English Signed-out" using stitch mode "css"
+    And I see no difference for "Hamburger Menu: English Signed-out" using stitch mode "none"
     And I close my eyes
 
   @eyes
