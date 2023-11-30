@@ -71,10 +71,12 @@ class Services::LtiTest < ActiveSupport::TestCase
   end
 
   test 'create_lti_user_identity should create an LtiUserIdentity when given LTI User' do
-    @id_token[@roles_key] = ['not-a-teacher-role']
-    user = Services::Lti.initialize_lti_user(@id_token)
-    user.age = 15
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
     user.save
+
     lti_user_identity = Services::Lti.create_lti_user_identity(user)
     assert lti_user_identity
   end
