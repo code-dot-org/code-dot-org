@@ -30,6 +30,9 @@ km:
             required:
               display_name: ទិដ្ឋភាពទូទៅ
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: ចៃដន្យ
           lessons:
             lesson-5:
               name: ការវាយតម្លៃ
