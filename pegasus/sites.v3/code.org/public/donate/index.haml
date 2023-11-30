@@ -61,6 +61,23 @@ theme: responsive_full_width
     %p.body-three
       =hoc_s(:donate_page_501c3)
 
+%section.supporters.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:donate_page_supporters_heading)
+    %p=hoc_s(:donate_page_supporters_desc)
+    .logos.flex-container.justify-center.wrap
+      %img{src: "/images/avatars/amazon.png", alt: ""}
+      %img{src: "/images/avatars/microsoft.png", alt: ""}
+      %img{src: "/images/avatars/google.png", alt: ""}
+      %img{src: "/images/avatars/coinbase.png", alt: ""}
+      %img{src: "/images/avatars/ballmer_group.png", alt: ""}
+      %img{src: "/images/avatars/vista_equity_partners.png", alt: ""}
+    .button-wrapper.flex-container.justify-center
+      %a.link-button.has-external-link{href: "https://donate.code.org/give/141992/#!/donation/checkout", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_donate)
+      %a.link-button.secondary{href: "/about/supporters"}
+        =hoc_s(:call_to_action_view_our_supporters)
+
 %section.bg-primary-light
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper

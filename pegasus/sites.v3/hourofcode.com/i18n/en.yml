@@ -360,6 +360,7 @@
   call_to_action_learn_about_ai: "Learn about AI"
   call_to_action_learn_more_about_ai: "Learn more about AI"
   call_to_action_get_started: "Get started"
+  call_to_action_view_our_supporters: "View our supporters"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -1327,6 +1328,8 @@
   donate_page_other_ways_title: "Other ways to give"
   donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_supporters_heading: "Join top industry leaders supporting Code.org"
+  donate_page_supporters_desc: "Prominent names nationwide trust and support our mission. View our esteemed supporters and consider adding your own commitment to Code.org's transformative cause."
   donate_page_donation_policy_title: "Understanding our Donation Policy"
   donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
   donate_tabs_tab_label_daf_direct: "DAF Direct"
