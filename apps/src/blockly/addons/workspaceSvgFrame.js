@@ -108,7 +108,11 @@ export default class WorkspaceSvgFrame extends SvgFrame {
 
   getFrameX() {
     // In LTR the svg should be to the right of the toolbox, plus a margin.
-    let frameX = this.element_.toolbox_.width_ + frameSizes.MARGIN_SIDE / 2;
+    let frameX = frameSizes.MARGIN_SIDE / 2;
+    const toolbox = this.element_.toolbox_;
+    if (toolbox) {
+      frameX += toolbox.width_;
+    }
     if (this.element_.RTL) {
       // In RTL the toolbox is on the right, so we don't need to leave space for
       // it. However, if the content is wider than the available space, we need to
