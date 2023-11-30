@@ -1,7 +1,6 @@
 import React from 'react';
 import Link, {LinkProps} from './index';
 import {Meta, Story} from '@storybook/react';
-// import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 export default {
   title: 'DesignSystem/Link Component',
@@ -19,19 +18,57 @@ const MultipleTemplate: Story<{
   components: LinkProps[];
 }> = args => (
   <>
-    {args.components?.map(componentArg => (
-      // TODO: fix key
-      <Link key={componentArg.size} {...componentArg} />
-    ))}
+    <p>
+      * Margins on this screen does not represent Component's margins, and are
+      only added to improve storybook view *{' '}
+    </p>
+    <p>Multiple Links:</p>
+    <div style={{display: 'flex', gap: '20px'}}>
+      {args.components?.map(componentArg => (
+        <Link key={`${componentArg.children}`} {...componentArg} />
+      ))}
+    </div>
   </>
 );
 
 export const DefaultLink = SingleTemplate.bind({});
 DefaultLink.args = {
   children: 'Default Link',
+  href: '#',
+  onClick: e => {
+    e.preventDefault();
+    alert('clicked');
+  },
   size: 'm',
 };
 
+export const DisabledLink = SingleTemplate.bind({});
+DisabledLink.args = {
+  children: 'Disabled Link',
+  onClick: e => {
+    e.preventDefault();
+    alert('clicked');
+  },
+  disabled: true,
+  size: 'm',
+};
+
+export const GroupOfColorsOfLinks = MultipleTemplate.bind({});
+GroupOfColorsOfLinks.args = {
+  components: [
+    {
+      children: 'Link M Primary',
+      href: '#',
+      size: 'm',
+    },
+    {
+      children: 'Link M Secondary',
+      href: '#',
+      color: 'secondary',
+      size: 'm',
+    },
+  ],
+};
 export const GroupOfSizesOfLinks = MultipleTemplate.bind({});
 GroupOfSizesOfLinks.args = {
   components: [
@@ -43,13 +80,11 @@ GroupOfSizesOfLinks.args = {
     {
       children: 'Link S',
       href: '#',
-
       size: 's',
     },
     {
       children: 'Link M',
       href: '#',
-
       size: 'm',
     },
     {

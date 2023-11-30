@@ -7,6 +7,27 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  &-primary {
+    color: $light_secondary_500;
+
+    &:hover, :active {
+      color: $light_secondary_700;
+    }
+  }
+
+  &-secondary {
+    color: $light_black;
+
+    &:hover, :active {
+      color: $light_gray_800;
+    }
+  }
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+    color: $light_gray_300;
+  }
 }
 
 // Sizes
