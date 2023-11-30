@@ -1,7 +1,7 @@
 // This is copied from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
-// Once we upgrade to Blockly v10 we can go back to using the original mixin.
-// We needed a bug fix not present in our current version of the plugin.
+// We needed a bug fix not present in our current version of the plugin, and we needed to not run the
+// on change handler if the block is in a read only block space.
 const procedureCallerOnChangeMixin = {
   /**
    * Procedure calls cannot exist without the corresponding procedure
@@ -10,7 +10,15 @@ const procedureCallerOnChangeMixin = {
    * @this {Blockly.Block}
    */
   onchange: function (event) {
-    if (this.disposed || this.workspace.isFlyout) return;
+    // If the block is in a read only block space, we don't create a procedure definition.
+    // A read only block space is a specific type of read only workspace where we are rendering blocks
+    // that will never run code (for example, in instructions or hints).
+    if (
+      this.disposed ||
+      this.workspace.isFlyout ||
+      this.workspace.isReadOnlyBlockSpace
+    )
+      return;
     if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
     if (
       event.type !== Blockly.Events.FINISHED_LOADING &&

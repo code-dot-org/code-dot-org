@@ -179,6 +179,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('common');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
   blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
+  blocklyWrapper.wrapReadOnlyProperty('config');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ConnectionType');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
@@ -537,7 +538,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
       }
     },
 
-    createReadOnlyBlockSpace: (container, xml, options) => {
+    createReadOnlyBlockSpace: (
+      container,
+      xml,
+      options,
+      loadHiddenDefinitions = false
+    ) => {
       const theme = cdoUtils.getUserTheme(options.theme);
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
@@ -546,6 +552,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         RTL: options.rtl,
         renderer: options.renderer || Renderers.DEFAULT,
       });
+      workspace.isReadOnlyBlockSpace = true;
       const svg = Blockly.utils.dom.createSvgElement(
         'svg',
         {
@@ -565,7 +572,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
       svg.appendChild(workspace.createDom());
       Blockly.cdoUtils.loadBlocksToWorkspace(
         workspace,
-        Blockly.Xml.domToText(xml)
+        Blockly.Xml.domToText(xml),
+        loadHiddenDefinitions
       );
 
       // Loop through all the parent blocks and remove vertical translation value
@@ -633,6 +641,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
     blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+    workspace.isReadOnlyBlockSpace = false;
 
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
