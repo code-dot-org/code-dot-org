@@ -273,6 +273,10 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
+  after_create if: -> {Policies::Lti.lti? self} do
+    Services::Lti.create_lti_user_identity(self)
+  end
+
   before_destroy :soft_delete_channels
 
   before_validation on: :create, if: -> {gender.present?} do
