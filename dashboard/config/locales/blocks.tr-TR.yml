@@ -13,8 +13,8 @@ tr:
             '"just right"': harfi harfine
             '"too little"': çok az
             '"too much"': çok fazla
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
       AmysBlocks_goldilocksElse:
         text: |2-
@@ -1175,8 +1175,8 @@ tr:
             '"gas"': gaz
             '"liquid"': sıvı
             '"solid"': katı
-        text: |-
-          Eğer {CONDITION}{SPRITE}
+        text: |2-
+          eğer {CONDITION}{SPRITE}
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
