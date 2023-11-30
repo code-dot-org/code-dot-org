@@ -52,8 +52,7 @@ export default class SelectStartAnimations extends React.Component {
   addAnimationToList = animation => {
     const key = createUuid();
 
-    let updatedOrderedKeys = this.state.orderedKeys.concat([key]);
-    this.setState({orderedKeys: updatedOrderedKeys});
+    this.setState({orderedKeys: [...this.state.orderedKeys, key]});
 
     let propsByKey = {...this.state.propsByKey};
     propsByKey[key] = animation;
@@ -113,6 +112,7 @@ export default class SelectStartAnimations extends React.Component {
       <React.Fragment>
         <a href="/sprites">Back to Asset Management</a>
         <h2>Generate Animation JSON for a level</h2>
+        <p>This tool...</p>
         <div style={styles.pageBreak}>
           <h3>Selected Animations:</h3>
           {this.displaySelectedSprites()}
