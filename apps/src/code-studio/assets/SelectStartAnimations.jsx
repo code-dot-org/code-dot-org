@@ -113,15 +113,16 @@ export default class SelectStartAnimations extends React.Component {
         <a href="/sprites">Back to Asset Management</a>
         <h2>Generate Animation JSON for a level</h2>
         <p>
-          This tool generates Animation JSON (costumes and backgrounds) for
-          Sprite Lab levels. Costumes and backgrounds, once selected, will show
-          up in the same order that students will view them from their dropdown
-          menu.
+          This tool generates Animation JSON for costumes and backgrounds in
+          Sprite Lab levels (including CS Connections subtypes such as Story and
+          Science levels) and Poetry levels. Costumes and backgrounds, once
+          selected, will show up in the same order that students will view them
+          from their dropdown menu.
         </p>
         <p>
           Level-specific animations contain images uploaded specifically for
-          certain levels. They are not available to students in the default
-          Sprite library.
+          certain levels. They are not available to students in the animations
+          library.
         </p>
         <div style={styles.pageBreak}>
           <h3>Selected Animations:</h3>
