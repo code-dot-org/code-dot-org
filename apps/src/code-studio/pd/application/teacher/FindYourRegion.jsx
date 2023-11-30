@@ -10,7 +10,7 @@ import {
   Col,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
-import {styles} from './TeacherApplicationConstants';
+import {getProgramInfo, styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
@@ -41,6 +41,8 @@ const FindYourRegion = props => {
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
   const [lastRPLogged, setLastRPLogged] = useState(regionalPartner?.name);
+
+  const programInfo = getProgramInfo(data.program);
 
   useEffect(() => {
     onChange({
@@ -140,8 +142,8 @@ const FindYourRegion = props => {
           </p>
           <p>
             Code.org will review your application and contact you with options
-            for joining a virtual cohort of {data.program} teachers from another
-            region.
+            for joining a virtual cohort of {programInfo.name} teachers from
+            another region.
           </p>
         </>
       );

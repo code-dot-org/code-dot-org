@@ -89,38 +89,6 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
-  const renderCostNote = () => {
-    if (hasRegionalPartner) {
-      return (
-        <label>
-          {regionalPartner.name} may have scholarships available to cover some
-          or all costs associated with the program.{' '}
-          <a
-            href={
-              pegasus('/educate/professional-learning/program-information') +
-              (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Click here to check the fees and discounts for your program
-          </a>
-          . Let us know if your school or district would be able to pay the fee
-          or if you need to be considered for a scholarship.
-        </label>
-      );
-    } else {
-      return (
-        <label>
-          When you are matched with a partner, they may have scholarships
-          available to cover some or all costs associated with the program. Let
-          us know if your school or district would be able to pay the fee or if
-          you need to be considered for a scholarship.
-        </label>
-      );
-    }
-  };
-
   const openPrivacyDialog = event => {
     // preventDefault so clicking this link inside the label doesn't
     // also check the checkbox.
@@ -223,8 +191,6 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         )}
         <div>
-          {renderCostNote(hasRegionalPartner)}
-          <LabeledSingleCheckbox name="understandFee" />
           <LabeledRadioButtons name="payFee" />
           {data.payFee === TextFields.noPayFee && (
             <LabeledLargeInput name="scholarshipReasons" />
@@ -280,10 +246,6 @@ ProfessionalLearningProgramRequirements.getDynamicallyRequiredFields = data => {
     data.regionalPartnerWorkshopIds.length > 0
   ) {
     requiredFields.push('ableToAttendMultiple', 'committed');
-  }
-
-  if (data.regionalPartnerId) {
-    requiredFields.push('payFee', 'understandFee');
   }
 
   if (data.regionalPartnerId && data.payFee === TextFields.noPayFee) {

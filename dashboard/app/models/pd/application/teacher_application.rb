@@ -47,7 +47,7 @@ module Pd::Application
 
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
-      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)',
       csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values

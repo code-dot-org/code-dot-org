@@ -117,7 +117,6 @@ module Pd
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
           pay_fee: 'Will your school or district be able to pay a fee for the program?',
-          understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
           agree: 'By submitting this application, I agree to share this application, my contact information, and aggregate class information with my local Code.org Regional Partner.'
         },
