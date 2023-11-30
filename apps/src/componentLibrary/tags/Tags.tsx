@@ -17,7 +17,15 @@ export interface TagsProps {
 }
 
 // TODO:
-// - are tooltips optional or required?
+// - tooltips are required;
+// - we can have left icon OR right icon, NOT both;
+// - tooltip should have max width of 325px / 20.312rem;
+// - tooltip can be one line OR multiline OR both;
+// - tag should have an optional onClick handler;
+// - disabled tag should not have onClick handler, but everything else it should have;
+
+// TODO 2: check if we can add an icons inside of native html select item/option content
+
 // - tooltips always one line or multiline or both? (tooltip content: string or ReactNode?)
 // - (is left/right icon represents rtl/ltr? languages or should we create both at the same time?
 // - CardLabels.jsx - refactor to use Tags component
