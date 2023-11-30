@@ -504,6 +504,15 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
+  const handleOnClose = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
+      emojis: inputs,
+      mode,
+    });
+
+    onClose();
+  };
+
   const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
     if (!currentGeneratedEffect) {
       return '';
@@ -656,7 +665,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             className={moduleStyles.closeButton}
             data-dismiss="modal"
             type="button"
-            onClick={onClose}
+            onClick={handleOnClose}
           >
             <i className="fa fa-close" aria-hidden={true} />
             <span className="sr-only">{i18n.danceAiModalClose()}</span>
