@@ -81,7 +81,7 @@ const ImplementationPlan = props => {
           />
         </>
       );
-    } else {
+    } else if (!!data.willTeach) {
       return (
         <p style={styles.error}>
           Note: This program is designed to work best for teachers who are
