@@ -450,46 +450,21 @@ inline bool ends_with(std::string const &value, std::string const &ending) {
   return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
 
-#include <boost/iostreams/copy.hpp>
-#include <boost/iostreams/filter/gzip.hpp>
-#include <boost/iostreams/filtering_streambuf.hpp>
 void parseFirebaseJSON(string filename) {
   RawJSONHandler handler;
   Reader reader;
 
-  loadDataBufferDir = "/tmp/" + filename + "-tsvs/";
+  loadDataBufferDir = "/scratch/" + filename + "-tsvs/";
   filesystem::create_directories(loadDataBufferDir);
 
   originalJSONBytes = std::filesystem::file_size(filename);
 
-  if (ends_with(filename, ".gz")) {
-    cerr << "WARNING: parsing gzipped file, this will be 2x slower due to "
-            "rapidjson details" << endl;
+  FILE *fp = fopen(filename.c_str(), "r");
+  
+  char readBuffer[65536];
+  FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+  reader.Parse(is, handler);
 
-    // For percentage progress we assume the unzipped file
-    // is 10x. We're seeing a 10x compression ratio, and since
-    // our schema is relatively constant, this is probably
-    // accurate for most/much data 🤷‍♀️
-    originalJSONBytes *= 10;
-
-    ifstream jsonFile(filename, ios::binary);
-    boost::iostreams::filtering_istreambuf inbuf;
-    inbuf.push(boost::iostreams::gzip_decompressor());
-    inbuf.push(jsonFile);
-    istream gzipStream(&inbuf);
-
-    // ifstream ifs(filename);
-    IStreamWrapper isw(gzipStream);
-
-    reader.Parse(isw, handler);
-  }
-  else {
-    FILE *fp = fopen(filename.c_str(), "r");
-    
-    char readBuffer[65536];
-    FileReadStream is(fp, readBuffer, sizeof(readBuffer));
-    reader.Parse(is, handler);
-  }
   commitRecords();
 }
 
