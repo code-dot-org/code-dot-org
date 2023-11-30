@@ -298,19 +298,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
-  const handleGenerateClick = (
-    _: React.SyntheticEvent,
-    regenerating = false
-  ) => {
+  const startGenerating = () => {
     startAi();
-
-    if (!regenerating) {
-      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-        emojis: inputs,
-      });
-    }
-
     setMode(Mode.GENERATING);
+  };
+
+  const handleGenerateClick = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+      emojis: inputs,
+    });
+
+    startGenerating();
   };
 
   const handleStartOverClick = () => {
@@ -324,14 +322,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setMode(Mode.SELECT_INPUTS);
   };
 
-  const handleRegenerateClick = (e: React.SyntheticEvent) => {
+  const handleRegenerateClick = () => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
       emojis: inputs,
     });
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    handleGenerateClick(e, true);
+    startGenerating();
   };
 
   const handleExplanationClick = () => {
