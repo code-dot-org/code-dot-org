@@ -298,12 +298,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
-  const handleGenerateClick = () => {
+  const handleGenerateClick = (
+    _: React.SyntheticEvent,
+    regenerating = false
+  ) => {
     startAi();
 
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-      emojis: inputs,
-    });
+    if (!regenerating) {
+      analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
+        emojis: inputs,
+      });
+    }
 
     setMode(Mode.GENERATING);
   };
@@ -319,14 +324,14 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setMode(Mode.SELECT_INPUTS);
   };
 
-  const handleRegenerateClick = () => {
+  const handleRegenerateClick = (e: React.SyntheticEvent) => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
       emojis: inputs,
     });
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    handleGenerateClick();
+    handleGenerateClick(e, true);
   };
 
   const handleExplanationClick = () => {
@@ -508,6 +513,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
       emojis: inputs,
       mode,
+      currentToggle,
+      generatingStep: generatingProgress.step,
     });
 
     onClose();
@@ -644,7 +651,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
-      onClose={onClose}
+      onClose={handleOnClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
