@@ -35,6 +35,7 @@ DefaultTags.args = {
     {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
       label: '+1',
+      tooltipId: 'science-english',
       ariaLabel: 'Science, English',
       tooltipContent: (
         <>
@@ -47,31 +48,15 @@ DefaultTags.args = {
   className: 'test',
 };
 
-export const DisabledTags = SingleTemplate.bind({});
-DisabledTags.args = {
-  tagsList: [
-    {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
-    {
-      label: '+1',
-      tooltipContent: (
-        <>
-          <p>Science,</p> <p>English</p>
-        </>
-      ),
-    },
-  ],
-  styleAsDisabled: true,
-  size: 'm',
-};
-
 export const GroupOfSizesOfTags = MultipleTemplate.bind({});
 GroupOfSizesOfTags.args = {
   components: [
     {
       tagsList: [
-        {tooltipId: 'math', label: 'Math S', tooltipContent: 'Math S'},
+        {tooltipId: 'mathS', label: 'Math S', tooltipContent: 'Math S'},
         {
           label: '+1',
+          tooltipId: 'science-englishS',
           tooltipContent: (
             <>
               <p>Science S,</p> <p>English S</p>
@@ -83,9 +68,10 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {tooltipId: 'math', label: 'Math M', tooltipContent: 'Math M'},
+        {tooltipId: 'mathM', label: 'Math M', tooltipContent: 'Math M'},
         {
           label: '+1',
+          tooltipId: 'science-englishM',
           tooltipContent: (
             <>
               <p>Science M,</p> <p>English M</p>
@@ -97,9 +83,10 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {tooltipId: 'math', label: 'Math L', tooltipContent: 'Math L'},
+        {tooltipId: 'mathL', label: 'Math L', tooltipContent: 'Math L'},
         {
           label: '+1',
+          tooltipId: 'science-englishL',
           tooltipContent: (
             <>
               <p>Science L,</p> <p>English L</p>

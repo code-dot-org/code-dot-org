@@ -20,13 +20,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
-  &.disabledTags {
-    > div {
-      color: $light_white;
-      background-color: $light_gray_200;
-    }
-  }
 }
 
 .tagTooltip {

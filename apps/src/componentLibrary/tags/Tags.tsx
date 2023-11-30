@@ -8,8 +8,6 @@ import moduleStyles from './tags.module.scss';
 export interface TagsProps {
   /** Array of tags to be rendered */
   tagsList: TagProps[];
-  /** Whether we style the tags as disabled or not */
-  styleAsDisabled?: boolean;
   /** Size of button */
   size?: Exclude<ComponentSizeXSToL, 'xs'>;
   /** Optional className for custom styles, etc*/
@@ -20,9 +18,7 @@ export interface TagsProps {
 // - tooltips are required;
 // - we can have left icon OR right icon, NOT both;
 // - tooltip should have max width of 325px / 20.312rem;
-// - tooltip can be one line OR multiline OR both;
-// - tag should have an optional onClick handler;
-// - disabled tag should not have onClick handler, but everything else it should have;
+// - tooltip can be one line OR multiline OR both; +
 
 // TODO 2: check if we can add an icons inside of native html select item/option content
 
@@ -46,7 +42,6 @@ export interface TagsProps {
  */
 const Tags: React.FunctionComponent<TagsProps> = ({
   tagsList,
-  styleAsDisabled = false,
   size = 'm',
   className,
 }) => (
@@ -54,7 +49,6 @@ const Tags: React.FunctionComponent<TagsProps> = ({
     className={classNames(
       moduleStyles.tags,
       moduleStyles[`tags-${size}`],
-      styleAsDisabled && moduleStyles.disabledTags,
       className
     )}
     data-testid="tags"
