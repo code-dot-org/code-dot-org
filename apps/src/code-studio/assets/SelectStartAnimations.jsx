@@ -72,19 +72,26 @@ export default class SelectStartAnimations extends React.Component {
 
   displaySelectedSprites = () => {
     const {propsByKey, orderedKeys} = this.state;
-    // 'Selected animations will be displayed here'.
-    return orderedKeys.map(key => {
+    if (orderedKeys.length === 0) {
       return (
-        <img
-          key={key}
-          src={propsByKey[key].sourceUrl}
-          alt={propsByKey[key].name}
-          style={styles.thumbnail}
-          role="button"
-          onClick={() => this.removeAnimationFromList(key)}
-        />
+        <p>
+          <i>Selected animations will be displayed here.</i>
+        </p>
       );
-    });
+    } else {
+      return orderedKeys.map(key => {
+        return (
+          <img
+            key={key}
+            src={propsByKey[key].sourceUrl}
+            alt={propsByKey[key].name}
+            style={styles.thumbnail}
+            role="button"
+            onClick={() => this.removeAnimationFromList(key)}
+          />
+        );
+      });
+    }
   };
 
   displayAnimationPickerBody = libraryManifest => {
@@ -126,7 +133,7 @@ export default class SelectStartAnimations extends React.Component {
           uploaded specifically for certain levels. They are not available to
           students in the Animations Library.
         </p>
-        <div style={styles.pageBreak}>
+        <div>
           <h2>Selected Animations:</h2>
           {this.displaySelectedSprites()}
         </div>
