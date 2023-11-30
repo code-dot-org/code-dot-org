@@ -20,12 +20,14 @@ class HooksUtils
   #   * any file with spaces in the name
   #   * any file in /code.org/public/images/avatars with non-lowercase letters in the filename
   # @param filename [String] A filename.
-  # @return [Boolean] Whether the filename should be prohibited in a commit.
+  # @return [Array<String>, Boolean] An array of error messages if the file is prohibited for one or more reasons; `false` otherwise
   def self.prohibited?(filename)
-    return true if ['.mp4', '.mov'].include? File.extname(filename)
-    return true if File.extname(filename) != File.extname(filename).downcase
-    return true if filename.match?(/\s/)
-    return true if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
-    false
+    problems = []
+    problems << "file uses a .mp4 or .mov extension" if ['.mp4', '.mov'].include? File.extname(filename)
+    problems << "non-lowercase characters in extension" if File.extname(filename) != File.extname(filename).downcase
+    problems << "spaces in filename" if filename.match?(/\s/)
+    problems << "non-lowercase characters in avatar image" if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
+    return problems unless problems.empty?
+    return false
   end
 end

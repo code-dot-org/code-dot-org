@@ -23,7 +23,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -35,7 +35,7 @@ describe('RubricContainer', () => {
   it('fetches AI evaluations and passes them to children', async () => {
     const mockFetch = sinon.stub(window, 'fetch');
     const mockAiEvaluations = [
-      {learning_goal_id: 2, understanding: 2, ai_confidence: 2},
+      {id: 2, learning_goal_id: 2, understanding: 2, ai_confidence: 2},
     ];
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify(mockAiEvaluations)))
@@ -44,7 +44,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open
@@ -65,7 +65,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         studentLevelInfo={{}}
-        initialTeacherHasEnabledAi={true}
+        teacherHasEnabledAi={true}
         currentLevelName={'test_level'}
         reportingData={{}}
         open

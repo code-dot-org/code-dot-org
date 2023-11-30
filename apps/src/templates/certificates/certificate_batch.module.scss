@@ -267,3 +267,37 @@ a.linkButton {
 .catalogButton {
   margin: 20px 0 40px 0 !important;
 }
+
+.studentButtonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.courseContainer {
+  margin-bottom: 35px;
+}
+
+.container {
+  width: 100%;
+  max-width: $width-md;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.divider {
+  border-color: $lightest_gray;
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  margin: 20px 0;
+}
+
+.extraLinkContainer {
+  clear: both;
+  padding-top: 20px;
+}
+
+.extraLink {
+  color: $teal;
+  font-size: 14px;
+}

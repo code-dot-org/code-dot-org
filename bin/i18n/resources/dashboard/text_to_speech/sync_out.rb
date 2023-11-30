@@ -13,7 +13,6 @@ module I18n
     module Dashboard
       module TextToSpeech
         class SyncOut < I18n::Utils::SyncOutBase
-          TTS_LOCALES = (::TextToSpeech::VOICES.keys - %i[en-US]).freeze
           METRIC_CONTEXT = 'update_level_i18n'.freeze
 
           def perform
@@ -24,7 +23,7 @@ module I18n
               next unless unit.text_to_speech_enabled?
 
               unit.levels.merge(Blockly.all).find_each do |level|
-                I18nScriptUtils.process_in_threads(TTS_LOCALES) do |locale|
+                I18nScriptUtils.process_in_threads(I18nScriptUtils::TTS_LOCALES) do |locale|
                   upload_tts_short_instructions_l10n(level, locale)
                   upload_tts_long_instructions_l10n(level, locale) unless unit.csf_international? || unit.twenty_hour?
                   upload_tts_authored_hints_l10n(level, locale)

@@ -44,7 +44,7 @@ const styles = {
     fontSize: 20,
     lineHeight: '22px',
     ...fontConstants['main-font-semi-bold'],
-    color: color.teal,
+    color: color.light_secondary_500,
     clear: 'both',
     display: 'inline',
     fontWeight: 'bold',
@@ -53,7 +53,7 @@ const styles = {
   },
   chevron: {
     display: 'inline',
-    color: color.teal,
+    color: color.light_secondary_500,
     fontSize: 20,
     fontWeight: 'bold',
   },

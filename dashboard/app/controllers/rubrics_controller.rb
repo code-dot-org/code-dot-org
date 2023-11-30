@@ -86,10 +86,13 @@ class RubricsController < ApplicationController
     return head :forbidden unless can?(:manage, student)
 
     # Get the latest rubric evaluation
-    rubric_ai_evaluation = RubricAiEvaluation.where(rubric_id: permitted_params[:id]).order(updated_at: :desc).first
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: permitted_params[:id],
+      user_id: student.id
+    ).order(updated_at: :desc).first
 
     # Get the most recent learning goals based on the most recent graded rubric
-    learning_goal_ai_evaluations = rubric_ai_evaluation.learning_goal_ai_evaluations
+    learning_goal_ai_evaluations = rubric_ai_evaluation&.learning_goal_ai_evaluations || []
 
     render json: learning_goal_ai_evaluations.map(&:summarize_for_instructor)
   end
@@ -110,13 +113,14 @@ class RubricsController < ApplicationController
     @user = User.find_by(id: user_id)
     return head :forbidden unless @user&.student_of?(current_user)
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
-    return head :forbidden unless is_ai_experiment_enabled
-
     # Find the rubric (must have something to evaluate)
     return head :bad_request unless @rubric
 
     script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level.script, experiment_name: 'ai-rubrics')
+    return head :forbidden unless is_ai_experiment_enabled
+
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
 
@@ -138,16 +142,28 @@ class RubricsController < ApplicationController
     @user = User.find_by(id: user_id)
     return head :forbidden unless @user&.student_of?(current_user)
 
-    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
+
+    is_ai_experiment_enabled = current_user && Experiment.enabled?(user: current_user, script: script_level&.script, experiment_name: 'ai-rubrics')
     return head :forbidden unless is_ai_experiment_enabled
 
-    script_level = @rubric.lesson.script_levels.find {|sl| sl.levels.include?(@rubric.level)}
     is_level_ai_enabled = EvaluateRubricJob.ai_enabled?(script_level)
     return head :bad_request unless is_level_ai_enabled
+
+    rubric_ai_evaluation = RubricAiEvaluation.where(
+      rubric_id: @rubric.id,
+      user_id: user_id
+    ).order(updated_at: :desc).first
+
+    status = nil
+    if rubric_ai_evaluation&.status
+      status = rubric_ai_evaluation.status
+    end
 
     attempted = attempted_at
     evaluated = ai_evaluated_at
     render json: {
+      status: status,
       attempted: !!attempted,
       lastAttemptEvaluated: !!attempted && !!evaluated && evaluated >= attempted,
       csrfToken: form_authenticity_token
@@ -189,7 +205,7 @@ class RubricsController < ApplicationController
 
   def ai_evaluated_at
     RubricAiEvaluation.
-      where(rubric_id: @rubric.id, user_id: @user.id).
+      where(rubric_id: @rubric.id, user_id: @user.id, status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]).
       order(updated_at: :desc).
       first&.
       created_at

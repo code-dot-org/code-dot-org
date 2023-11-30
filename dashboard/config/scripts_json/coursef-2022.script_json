@@ -29,7 +29,8 @@
       "project_widget_visible": true,
       "supported_locales": [
         "fa-AF",
-        "fa-IR"
+        "fa-IR",
+        "sq-AL"
       ],
       "tts": true,
       "version_year": "2022",
@@ -37,7 +38,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2023-08-08 17:55:10 UTC",
+    "serialized_at": "2023-11-01 21:17:17 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

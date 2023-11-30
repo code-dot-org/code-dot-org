@@ -827,6 +827,7 @@ sq-AL:
   header_incubator: Inkubatori
   header_learn: Mëso
   header_legal: Privatësia & Ligjore
+  header_legal_cookie_notice: Njoftim për Cookie
   header_legal_privacy: Rregullat e Privatësisë
   header_legal_tos: Kushtet e shërbimit
   header_my_dashboard: Paneli im
@@ -1781,11 +1782,6 @@ sq-AL:
     nga ana e mësuesve lokal.
   volunteer_engineer_submission_header_private: Informata u mbajt private dhe nuk
     shpërndahet
-  volunteer_engineer_submission_intro_links: Keni nevojë të gjeni vullnetarë? Gjej
-    një vullnetar vendor në hartën tonë<a href="%{volunteer_local}">të vullnetarëve</a>.
-  volunteer_engineer_submission_intro_signup: Ju lutemi shkruani të dhënat e mëposhtme
-    në qoftë se jeni student i shkencës kompjuterike ose profesionist i software.
-    Fushat e shënuara me një<span class="form-required-field">*</span>janë të domosdoshme.
   volunteer_engineer_submission_location_flexibility_curriculum: Të gatshëm për të
     ndihmuar në kontributin e kurrikulës së projekteve open-source
   volunteer_engineer_submission_location_flexibility_onsite: Merr pjesë te një shkollë

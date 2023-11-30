@@ -73,7 +73,8 @@ export const behaviorDefMutator = {
         this.description = node.textContent;
       }
     }
-    this.behaviorId = xmlElement.nextElementSibling.getAttribute('id');
+    this.behaviorId = xmlElement.getAttribute('behaviorId');
+    this.userCreated = xmlElement.getAttribute('userCreated');
   },
 
   /**
@@ -84,6 +85,7 @@ export const behaviorDefMutator = {
     const state = Object.create(null);
     state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
+    state['userCreated'] = this.userCreated;
 
     state['description'] = getBlockDescription(this);
 
@@ -114,6 +116,7 @@ export const behaviorDefMutator = {
    */
   loadExtraState: function (state) {
     this.behaviorId = state['behaviorId'];
+    this.userCreated = state['userCreated'];
     const map = this.workspace.getProcedureMap();
     const procedureId = state['procedureId'];
     if (

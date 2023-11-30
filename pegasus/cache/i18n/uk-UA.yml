@@ -604,7 +604,7 @@ uk-UA:
   dashboard_coursed: 'Курс D: '
   dashboard_coursee: 'Курс E: '
   dashboard_coursef: 'Курс F: '
-  dashboard_curriculum: Навчальний план
+  dashboard_curriculum: Програма
   dashboard_curriculum_csd: 'Дослідження інформатики CS Discoveries: '
   dashboard_curriculum_csina: 'Інформатика в алгебрі:'
   dashboard_curriculum_csins: 'Інформатика в науці:'
@@ -1004,7 +1004,7 @@ uk-UA:
   header_screen_reader_help: Допомога
   header_sections: Секції
   header_stats: Статистика
-  header_teach: Вчити
+  header_teach: Навчати
   header_teacher_community: Спільнота вчителів
   header_tutorials: Навчальні матеріали
   hello: Привіт, світ!
@@ -1072,8 +1072,8 @@ uk-UA:
   hoc2018_dance_keep_on_dancing_description: Рухайся далі однієї години з розширеними
     проєктними ідеями.
   hoc2018_dance_keep_on_dancing_specs: Мова| Формат| Вік 13+
-  hoc2018_dance_measure: Крок
-  hoc2018_dance_measure_colon: 'Крок:'
+  hoc2018_dance_measure: Такт
+  hoc2018_dance_measure_colon: 'Такт:'
   hoc2018_dance_party_box_description: Закодуй танцювальну вечірку і поділися з друзями!
   hoc2018_dance_party_box_title: Танцювальна вечірка
   hoc2018_dance_party_button: Початок
@@ -1098,7 +1098,7 @@ uk-UA:
     всі серії (5 хв)
   hoc2018_mc_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
-  hoc2018_mc_adventurer_title: Майнкрафт - Пригоди
+  hoc2018_mc_adventurer_title: 'Майнкрафт: Пригоди'
   hoc2018_mc_aquatic_description: Майнкрафт повернувся до Години коду з новеньким
     підручником! Подорожуйте Майнкрафтом з кодом.
   hoc2018_mc_aquatic_title: 'Minecraft: Підводна подорож'
@@ -1610,7 +1610,7 @@ uk-UA:
   mc_shortdescription: Використайте блоки коду, щоб допомогти Стіву чи Алекс в їхніх
     пригодах у світі Майнкрафт.
   mc_specs: Багато мов | Сучасні браузери та планшети| Вік 6-106
-  minecraft_adventurer: Майнкрафт - Пригоди
+  minecraft_adventurer: 'Майнкрафт: Пригоди'
   minecraft_adventurer_button: Початок
   minecraft_adventurer_description: Скористайся кодом, щоб запросити Алекс чи Стіва
     на пригоду.
@@ -1618,6 +1618,8 @@ uk-UA:
   minecraft_agent_button: Початок
   minecraft_agent_description: Майнкрафт повернувся до Години коду з новеньким підручником!
     Подорожуйте Майнкрафтом з кодом.
+  minecraft_continue_learning: 'Інформатика для всіх: виходьте за рамки Години коду
+    з Microsoft Store'
   minecraft_designer: Майнкрафт - Розробник
   minecraft_designer_button: Початок
   minecraft_designer_description: Запрограмуй тварин та інших істот Майнкрафт у власній
@@ -1695,7 +1697,7 @@ uk-UA:
   participant_select: "-Виберіть-"
   participant_student: Учень
   participants: учасники
-  personalize_certificate: Персоналізувати ваш сертифікат
+  personalize_certificate: Персоналізувати сертифікат
   petition_age: Вік
   petition_join_others: 'Приєднатися до # інших'
   petition_join_others_num: Приєднуйтесь до %{num} інших
@@ -1730,6 +1732,7 @@ uk-UA:
   print_batch_certificates: Роздрукуйте комплект сертифікатів
   print_certificates: Друкувати сертифікати
   print_ice_art: Надрукувати свої крижані узори
+  print_one_here_certificates: Надрукуйте один тут.
   privacy_doc_explanation: 'Клацніть тут, щоб отримати наші документи про конфіденційність,
     якими можна поділитися або роздрукувати для учнів. '
   privacy_practices_children: Переглянути політику конфіденційності для дітей
@@ -2016,7 +2019,7 @@ uk-UA:
   third_party_cost_free_10: Спробувати безкоштовно, $9.99/місяць
   third_party_cost_free_2: Спробувати безкоштовно, $2/учень
   third_party_cost_free_399: Спробувати безкоштовно, $399/клас
-  third_party_curriculum: Навчальний план
+  third_party_curriculum: Програма
   third_party_desc_10to12_kto3: Приблизно 10-12 уроків, орієнтованих на 3 клас
   third_party_desc_10to12_kto5: Приблизно 10-12 уроків, орієнтованих на 5 клас
   third_party_desc_10to15_3to12: Між 10 та 15 уроків, орієнтованих на 3-12 класи
@@ -2283,24 +2286,10 @@ uk-UA:
   volunteer_engineer_submission_intro_background: Година коду - це глобальний рух
     годинного вступу до програмування, що охоплює десятки мільйонів учнів у більш,
     як 180 країнах. Залучайтесь до тижня інформатики 7-13 грудня.
-  volunteer_engineer_submission_intro_guide: Дізнайтеся більше про нашу <a href="%{volunteer_guide}">волонтерську
-    програму тут</a>.
   volunteer_engineer_submission_intro_guide_markdown: 'Дізнайтеся більше про нашу
     [програму волонтерів тут] (%{volunteer_guide}). '
-  volunteer_engineer_submission_intro_links: Не шукаєте волонтера? <a href="%{learn_more}">Дізнайтесь
-    більше</a> про організацію власного заходу Години коду і пошук місцевих волонтерів
-    на нашій <a href="%{volunteer_local}">карті волонтерів</a>.
   volunteer_engineer_submission_intro_links_markdown: 'Ви - вчитель і шукаєте волонтерів?
     Знайдіть місцевого волонтера на нашій [карті волонтерів](%{volunteer_local}). '
-  volunteer_engineer_submission_intro_recruit: 'Ці вчителі хочуть, щоб хтось, <span
-    style="font-family: ''Gotham 7r'', sans-serif;">захоплений інформатичною освітою</span>
-    допоміг їм у класі, або <span style="font-family: ''Gotham 7r'', sans-serif;">надихнув</span>
-    їхніх учнів, розповідаючи про широкі можливості інформатики (можна через відео-чат).
-    Якщо Ви не шукаєте волонтера, <a href="%{url}">дізнайтесь більше</a> про організацію
-    власного заходу Години коду.'
-  volunteer_engineer_submission_intro_signup: Вкажіть наступну інформацію, якщо ви
-    студент галузі комп'ютерних наук чи професійний програміст. Поля, позначені <span
-    class="form-required-field">*</span> є обов'язковими для заповнення.
   volunteer_engineer_submission_intro_signup_markdown: 'Будь ласка, вкажіть наступну
     інформацію, якщо ви студент галузі комп''ютерних наук чи професійний програміст.  Вам
     має бути щонайменше 18 років, щоб зареєструватися добровольцем. Зверніть увагу,
@@ -2343,8 +2332,8 @@ uk-UA:
   w3schools_beyond_name: Вивчіть HTML
   w3schools_beyond_platformtext: Сучасні веб-браузери
   w3schools_beyond_shortdescription: Навчіться створювати веб-сайти
-  want_a_blank_certificate_template: Вам потрібен пустий шаблон сертифіката, щоб виписувати
-    його на ім'я студента?
+  want_a_blank_certificate_template: Вам потрібен пустий шаблон сертифіката, щоб виписати
+    його на ім'я учня?
   watch_inspirational_videos: Перед початком роботи перегляньте ці відео для натхнення
   what_gender: Якої ви статі?
   who_has_done_hoc: 'Хто пройшов Годину коду #HourOfCode? @codeorg'

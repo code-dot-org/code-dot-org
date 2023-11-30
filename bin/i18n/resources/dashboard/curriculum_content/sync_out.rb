@@ -258,7 +258,7 @@ module I18n
             types_i18n_data = restore_reference_guide_i18n_keys(types_i18n_data)
             types_i18n_data = fix_resource_urls(types_i18n_data)
 
-            types_i18n_data.stringify_keys
+            types_i18n_data.deep_stringify_keys
           end
 
           def distribute_localization(language)

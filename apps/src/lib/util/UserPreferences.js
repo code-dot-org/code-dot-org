@@ -40,6 +40,16 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   }
 
   /**
+   * Save the student list sorting preference
+   * @param {boolean} sortByFamilyName: True if sorting by family name, false otherwise.
+   */
+  setSortByFamilyName(sortByFamilyName) {
+    return $.post(`/api/v1/users/sort_by_family_name`, {
+      sort_by_family_name: sortByFamilyName,
+    });
+  }
+
+  /**
    * Save the background music user preference
    * @param {boolean} muteMusic: True if background music muted
    */

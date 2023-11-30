@@ -55,7 +55,7 @@ en:
             '2.00': large
             '3.00': extra large
       Dancelab_ai:
-        text: "[IMAGE][0]generate [VALUE][1] stage"
+        text: "[IMAGE][0]generate [VALUE][1] effect"
       Dancelab_alternateMoves:
         text: "[GROUP][0] alternate every [N][1] measures \nbetween [MOVE1][2] and [MOVE2][3]"
         options:
@@ -151,6 +151,31 @@ en:
             MOVES.ThisOrThat: This or That
             MOVES.Thriller: Zombie
             MOVES.Rest: None
+          DIR:
+            '1': "→"
+            "-1": "←"
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "[GROUP][0] do [MOVE][1] [DIR][2] forever"
+        options:
+          GROUP:
+            '"CAT"': cats
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Body Roll
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Star
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+            MOVES.Rest: None
+            '"next"': "(Next)"
+            '"prev"': "(Previous)"
+            '"rand"': "(Random)"
           DIR:
             '1': "→"
             "-1": "←"
@@ -664,9 +689,9 @@ en:
           EFFECT:
             '"none"': None
             '"rand"': "(Random)"
-            '"circles"': Circles
             '"quads"': Angles
             '"blooming_petals"': Blooming Petals
+            '"circles"': Circles
             '"clouds"': Clouds
             '"color_cycle"': Colors
             '"diamonds"': Diamonds
@@ -685,11 +710,11 @@ en:
             '"ripples"': Ripples
             '"snowflakes"': Snow
             '"text"': Song Names
-            '"squiggles"': Squiggles
             '"galaxy"': Space
             '"sparkles"': Sparkles
             '"spiral"': Spiral
             '"disco"': Squares
+            '"squiggles"': Squiggles
             '"starburst"': Starburst
             '"stars"': Stars
             '"music_wave"': Waves
@@ -1851,6 +1876,15 @@ en:
         text: y coordinate of [SPRITE][0]
       KatiesBlocks_glideTo:
         text: "[SPRITE][0] glide to [LOCATION][1]"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           if [CONDITION][0][SPRITE][1]
+          [STATEMENT][2]
+        options:
+          CONDITION:
+            '"solid"': solid
+            '"liquid"': liquid
+            '"gas"': gas
       KatiesBlocks_makeNumSpritesNear:
         text: make [NUM][0] new [ANIMATION_NAME][1] sprites near [LOCATION][2]
       KatiesBlocks_spriteBirdSay:
@@ -2531,7 +2565,7 @@ en:
       Poetry_stringValue:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
       Poetry_textConcat:
-        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
+        text: join[ADD0][0][ADD1][1]
       Poetry_textVariableJoin:
         text: "[VAR][0][TEXT2][1]"
       Poetry_whenLineShows:
