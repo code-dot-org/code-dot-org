@@ -138,6 +138,7 @@ Scenario: Teacher saves, re-opens, and submits an application
 
   # Section 6
   Then I wait until element "h3" contains text "Section 6: Implementation Plan"
+  And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
   And I press the first "input[name='replaceExisting']" element
