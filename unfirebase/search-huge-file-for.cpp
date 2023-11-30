@@ -10,7 +10,7 @@ const uint64_t BLOCK_SIZE = 1048576;
 
 using namespace std;
 int main(int argc, char *argv[]) {
-  if (argc != 2) {
+  if (argc != 3) {
     cout << "Really really really fast search for a fixed string in a huge file, gives byte offset" << endl;
     cout << "Usage: " << argv[0] << " SEARCH_STRING FILE" << endl;
     cout << "CAVEAT: reads the file in 1MB blocks, so in theory it might miss your string if it happens to span a block split" << endl;
