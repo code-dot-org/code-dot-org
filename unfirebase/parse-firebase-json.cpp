@@ -19,6 +19,15 @@
 #include <string>
 #include <thread>
 
+const bool RAW_DEBUG = false;
+const bool FINE_DEBUG = false;
+const bool USE_WRITER_TO_COLLECT_STRING = true;
+const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
+const bool LOAD_DATA_IN_THREAD = false;
+const uint NUM_DATA_THREADS = 4;
+const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
+const bool SEND_RECORDS_TO_MYSQL = false;
+
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
 // AWS RDS explicitly does not support that :-( Also, its not
@@ -63,20 +72,12 @@ sql::Connection *getDB() {
   return driver->connect(options);
 }
 
-
-
-const bool RAW_DEBUG = false;
-const bool FINE_DEBUG = false;
-const bool USE_WRITER_TO_COLLECT_STRING = true;
-const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
-const bool LOAD_DATA_IN_THREAD = true;
-const uint NUM_DATA_THREADS = 4;
-
 const uint MAX_DEPTH = 256;
 uint depth = 0;
 
 std::vector<string> lastKeys = std::vector<string>(MAX_DEPTH);
 string lastKey = "";
+
 /*
 { // 1
   "v3": { // 2
@@ -139,8 +140,12 @@ ofstream *loadDataBufferTSV = nullptr;
 string loadDataBufferTSVFilename = "";
 string loadDataBufferDir = "";
 
+bool inAChannel = false;
+
 void startChannel(string channelName) {
-  assert(currentChannelName == NO_CHANNEL);
+  //assert(currentChannelName == NO_CHANNEL);
+
+  inAChannel = true;
 
   if (FINE_DEBUG) cout << "START CHANNEL " << channelName << endl;
   currentChannelName = channelName;
@@ -154,7 +159,7 @@ void startChannel(string channelName) {
 // "INSERT INTO unfirebase VALUES (?, ?)"
 sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
 uint64_t unComittedRecords = 0;
-uint64_t totalRecordsCount = 992000;
+uint64_t totalRecordsCount = 0;
 atomic<uint64_t> numRecordBytes {0};
 uint64_t originalJSONBytes = 0;
 std::mutex numRecordBytesMutex;
@@ -163,21 +168,23 @@ chrono::system_clock::time_point bandwidthStartClock;
 bool bandwidthStartClockInitialized = false;
 uint64_t bandwidthStartNumRecordBytes = 0;
 double bandwidthSamplingDurationTarget = 5000.0f /* seconds, start small for first sample */;
-const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 
 boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
 std::atomic<uint64_t> numDataJobsQueued{0};
 
 void loadData(string tsvFilename) {
-  std::unique_ptr<sql::Statement> stmt(db->createStatement());
   numRecordBytesMutex.lock();
   cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
   numRecordBytesMutex.unlock();
-  stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
-                "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
-                "TERMINATED BY '\n';");
-  stmt->execute("COMMIT;");
 
+  if (SEND_RECORDS_TO_MYSQL) {
+    std::unique_ptr<sql::Statement> stmt(db->createStatement());
+    stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
+                  "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
+                  "TERMINATED BY '\n';");
+    stmt->execute("COMMIT;");
+  }
+  
   numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
   double percent = (round(100 * 100 * numRecordBytes / (double)originalJSONBytes) / 100);
@@ -265,9 +272,11 @@ void commitRecords() {
     delete loadDataBufferTSV;
     loadDataBufferTSV = nullptr;
   } else {
-    std::unique_ptr<sql::Statement> stmt(db->createStatement());
-    cout << "COMMITTING!" << endl;
-    stmt->execute("COMMIT;");
+    cout << "COMMIT; (totalRecordsCount=" << totalRecordsCount << ")" << endl;
+    if (SEND_RECORDS_TO_MYSQL) {
+      std::unique_ptr<sql::Statement> stmt(db->createStatement());
+      stmt->execute("COMMIT;");
+    }
   }
   printBandWidthTiming();
   unComittedRecords = 0;
@@ -285,9 +294,11 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
     *loadDataBufferTSV << channelId << "\t" << value << endl;
   } else {
     numRecordBytes += strlen(value);
-    insertUnfirebaseStatement->setString(1, currentChannelName);
-    insertUnfirebaseStatement->setString(2, value);
-    insertUnfirebaseStatement->execute();
+    if (SEND_RECORDS_TO_MYSQL) {
+      insertUnfirebaseStatement->setString(1, currentChannelName);
+      insertUnfirebaseStatement->setString(2, value);
+      insertUnfirebaseStatement->execute();
+    }
   }
 
   totalRecordsCount++;
@@ -311,7 +322,8 @@ void endChannel() {
   }
 
   if (FINE_DEBUG) cout << "END CHANNEL " << currentChannelName << endl;
-  currentChannelName = NO_CHANNEL;
+  //currentChannelName = NO_CHANNEL;
+  inAChannel = false;
 }
 
 void startTable(string tableName) {
@@ -328,6 +340,18 @@ void handleRecord(string channelId, string tableName, string recordId,
     cout << "RECORD(" << channelId << ", " << tableName << ", " << channelId << ") = " << jsonString << endl;
 }
 
+// uint debugCount = 0;
+
+void printLastKeys() {
+  cout << "lastKeys: ";
+  for (int i =0; i <= depth; i++) {
+    cout << lastKeys[i] << ".";
+  }
+  cout << endl;
+}
+
+uint debugCount = 0;
+
 struct RawJSONHandler {
   bool StartObject() {
     depth++;
@@ -340,16 +364,30 @@ struct RawJSONHandler {
       startChannel(lastKey);
     }
 
-    if (writer) return writer->StartObject();
+    // if (debugCount++ > 90000) {
+    //   //throw std::runtime_error("DEBUG");
+    //   //return false;
+    //   printLastKeys();
+    //   return false;
+    // }
+
+    if (writer) {
+      if (!writer->StartObject()) {
+        cout << "StartObject() failed" << endl;
+        return false;
+      }
+      return true;
+    }
 
     return true;
   }
   bool Key(const char *key, SizeType length, bool copy) {
-    if (writer) return writer->Key(key, length, copy);
+    lastKeys[depth] = key;
+
+    if (writer) { if (!writer->Key(key, length, copy)) { cout << "Key(key, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Key(" << key << ", depth=" << depth << ")" << endl;
     lastKey = key;
-    lastKeys[depth] = key;
 
     return true;
   }
@@ -368,68 +406,68 @@ struct RawJSONHandler {
     return true;
   }
   bool StartArray() {
-    if (writer) return writer->StartArray();
+    if (writer) { if (!writer->StartArray()) { cout << "StartArray() failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "StartArray()" << endl;
     return true;
   }
   bool EndArray(SizeType elementCount) {
-    if (writer) return writer->EndArray(elementCount);
+    if (writer) { if (!writer->EndArray(elementCount)) { cout << "EndArray(elementCount) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "EndArray(" << elementCount << ")" << endl;
     return true;
   }
   bool Null() {
-    if (writer) return writer->Null();
+    if (writer) { if (!writer->Null()) { cout << "Null() failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Null()" << endl;
     return true;
   }
   bool Bool(bool b) {
-    if (writer) return writer->Bool(b);
+    if (writer) { if (!writer->Bool(b)) { cout << "Bool(b) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Bool(" << boolalpha << b << ")" << endl;
     return true;
   }
   bool Int(int i) {
-    if (writer) return writer->Int(i);
+    if (writer) { if (!writer->Int(i)) { cout << "Int(i) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Int(" << i << ")" << endl;
     return true;
   }
   bool Uint(unsigned u) {
-    if (writer) return writer->Uint(u);
+    if (writer) { if (!writer->Uint(u)) { cout << "Uint(u) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Uint(" << u << ")" << endl;
     return true;
   }
   bool Int64(int64_t i) {
-    if (writer) return writer->Int64(i);
+    if (writer) { if (!writer->Int64(i)) { cout << "Int64(i) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Int64(" << i << ")" << endl;
     return true;
   }
   bool Uint64(uint64_t u) {
-    if (writer) return writer->Uint64(u);
+    if (writer) { if (!writer->Uint64(u)) { cout << "Uint64(u) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Uint64(" << u << ")" << endl;
     return true;
   }
   bool Double(double d) {
-    if (writer) return writer->Double(d);
+    if (writer) { if (!writer->Double(d)) { cout << "Double(d) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Double(" << d << ")" << endl;
     return true;
   }
   bool RawNumber(const char *str, SizeType length, bool copy) {
-    if (writer) return writer->RawNumber(str, length, copy);
+    if (writer) { if (!writer->RawNumber(str, length, copy)) { cout << "RawNumber(str, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG)
       cout << "Number(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
     return true;
   }
   bool String(const char *str, SizeType length, bool copy) {
-    if (writer) return writer->String(str, length, copy);
+    if (writer) { if (!writer->String(str, length, copy)) { cout << "String(str, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG)
       cout << "String(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
@@ -463,9 +501,20 @@ void parseFirebaseJSON(string filename) {
   
   char readBuffer[65536];
   FileReadStream is(fp, readBuffer, sizeof(readBuffer));
+
+  // Start the parse going, everything happens here
   reader.Parse(is, handler);
 
   commitRecords();
+
+  cout << "Were we in the middle of a channel when we quit? " << boolalpha << inAChannel << endl;
+  if (inAChannel) {
+    cout << "Here's what we have so far of " << currentChannelName << endl << endl;
+    cout << writerBuffer->GetString() << endl;
+    cout << endl;
+  }
+  cout << "Last channelID: " << currentChannelName << endl;
+  cout << "Total Records: " << totalRecordsCount << endl;
 }
 
 int main(int argc, char *argv[]) {
