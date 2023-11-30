@@ -9,7 +9,7 @@ class CurriculumCatalogController < ApplicationController
     @language_native_name = language_info[:native]
 
     @is_signed_out = current_user.nil?
-    @is_teacher = current_user&.teacher?
+    @is_teacher = current_user&.teacher? || false
 
     if @is_teacher
       @sections_for_teacher = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
