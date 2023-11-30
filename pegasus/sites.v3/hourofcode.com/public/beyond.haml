@@ -20,7 +20,7 @@ layout: wide_index
 %section
   .wrapper
     .section-intro.centered
-      %h2.centered.heading-xxl 
+      %h2.centered.heading-xxl
         =hoc_s(:hoc_beyond_for_teachers_section_title)
       %p.body-two
         =hoc_s(:hoc_beyond_for_teachers_section_description)
@@ -50,9 +50,4 @@ layout: wide_index
   .wrapper
     = view :learn_carousels, variation:'beyond'
 
-%section{style: "text-align: center"}
-  %h3 
-    =hoc_s(:hoc_beyond_end_section_label, markdown: :inline, locals: {home_page: "https://code.org/"})
-  %a{href: "https://code.org/"}
-    %img{:src=>'/images/code-dot-org-logo-40x40.svg'}
-
+= view :organized_by_cdo
