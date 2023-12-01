@@ -1507,14 +1507,6 @@ FactoryBot.define do
       grade_07_offered {true}
       grade_08_offered {true}
     end
-
-    # Schools eligible for circuit playground discount codes
-    # are schools where over 50% of students are eligible
-    # for free and reduced meals.
-    trait :is_maker_high_needs_school do
-      frl_eligible_total {51}
-      students_total {100}
-    end
   end
 
   # Default school to public school. More specific factories below
@@ -1542,12 +1534,6 @@ FactoryBot.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
-      end
-    end
-
-    trait :is_maker_high_needs_school do
-      after(:create) do |school|
-        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1635,16 +1621,6 @@ FactoryBot.define do
     storage_app_id {1}
     association :level
     storage_id {storage_user.try(:id) || 2}
-  end
-
-  factory :circuit_playground_discount_application do
-    user {create :teacher}
-  end
-
-  factory :circuit_playground_discount_code do
-    sequence(:code) {|n| "FAKE#{n}_asdf123"}
-    full_discount {true}
-    expiration {Time.now + 30.days}
   end
 
   factory :seeded_s3_object do
