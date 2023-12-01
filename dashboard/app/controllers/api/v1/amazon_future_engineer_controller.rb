@@ -14,9 +14,9 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     return head :forbidden unless current_user&.teacher?
 
     # Retrieve the school to fill in address (and other) details
+    afe_params = submit_params
     school = School.find_by(id: afe_params['schoolId'])
 
-    afe_params = submit_params
     submission_body = Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
