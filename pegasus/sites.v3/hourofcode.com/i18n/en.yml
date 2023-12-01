@@ -178,8 +178,14 @@
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
   donors_block_microsoft_infosys: "We thank Microsoft and Infosys Foundation USA for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+
   microsoft_logo_alt: "Microsoft logo"
   infosys_logo_alt: "Infosys Foundation USA logo"
+  amazon_logo_alt: "Amazon logo"
+  google_logo_alt: "Google logo"
+  coinbase_logo_alt: "Coinbase logo"
+  ballmer_group_logo_alt: "Ballmer Group logo"
+  vista_equity_partners_logo_alt: "Vista Equity Partners logo"
 
   grade_level: "Grade level"
   grade_level_label_elementary: "Elementary School"
@@ -341,6 +347,7 @@
   call_to_action_open_positions: "View open positions"
   call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate: "Donate"
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
@@ -363,6 +370,7 @@
   call_to_action_learn_about_ai: "Learn about AI"
   call_to_action_learn_more_about_ai: "Learn more about AI"
   call_to_action_get_started: "Get started"
+  call_to_action_view_our_supporters: "View our supporters"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -445,6 +453,8 @@
   aria_label_call_to_action_minecraft_2020: "Get started with Minecraft AI for Earth"
   aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
   aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
+  aria_label_call_to_action_farsi_donate: "Donate to support the Code.org in Farsi campaign"
+  aria_label_call_to_action_farsi_learn_more: "Learn more about Code.org in Farsi"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -1323,9 +1333,13 @@
   donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
   donate_page_fundraise_title: "Fundraise for Code.org"
   donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_campaigns_heading: "Support a campaign"
+  donate_page_campaigns_farsi_desc: "Talent is widespread, but opportunity often isn't. The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas, access to educational resources currently available in other major languages. Let's make it a reality."
   donate_page_other_ways_title: "Other ways to give"
   donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_supporters_heading: "Join top industry leaders supporting Code.org"
+  donate_page_supporters_desc: "Prominent names nationwide trust and support our mission. View our esteemed supporters and consider adding your own commitment to Code.org's transformative cause."
   donate_page_donation_policy_title: "Understanding our Donation Policy"
   donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
   donate_tabs_tab_label_daf_direct: "DAF Direct"
