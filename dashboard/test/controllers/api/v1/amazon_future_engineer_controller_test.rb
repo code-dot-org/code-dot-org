@@ -181,36 +181,9 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     assert_equal '', actual_args[:school_district_name]
   end
 
-  test 'sends address info from request if preset' do
-    # This scenario reflects what happens when a teacher signs up for CSTA Plus
-    # and also for the AFE Inspirational Marketing Kit, so we asked the teacher
-    # for a school address as part of the form.
-    school = create :school
-    refute_equal 'example-street-1', school.address_line1
-
-    actual_args = capture_csta_args_for_request(
-      valid_params.merge(
-        'csta' => true,
-        'schoolId' => school.id,
-        'street1' => 'example-street-1',
-        'street2' => 'example-street-2',
-        'city' => 'example-city',
-        'state' => 'Florida',
-        'zip' => 'example-zip'
-      )
-    )
-
-    assert_equal 'example-street-1', actual_args[:street_1]
-    assert_equal 'example-street-2', actual_args[:street_2]
-    assert_equal 'example-city', actual_args[:city]
-    assert_equal 'Florida', actual_args[:state]
-    assert_equal 'example-zip', actual_args[:zip]
-  end
-
-  test 'sends address info from our records if request does not include address' do
-    # This scenario reflects what happens when a teacher signs up for CSTA Plus
-    # but does not opt-in to the AFE Inspirational Marketing Kit, so we don't
-    # ask them for a school address on the client.
+  test 'sends address info from our records if teacher signs up for CSTA Plus or Marketing Kit' do
+    # This scenario reflects what happens when a teacher signs up for CSTA Plus or the AFE
+    # Inspirational Marketing Kit, so we pull their school address information using the nces id.
     school = create :school
 
     actual_args = capture_csta_args_for_request(
