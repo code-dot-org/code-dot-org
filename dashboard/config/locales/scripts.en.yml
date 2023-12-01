@@ -13922,6 +13922,8 @@ en:
           student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
+          lessons: {}
+          name: csd2-2024
         csd3-2024:
           lesson_groups:
             lessonGroup-2:
