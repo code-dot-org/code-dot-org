@@ -56,7 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
-      makeLockedBlocksImmovable(xmlChild);
+      processAllBlocks(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
@@ -149,25 +149,42 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
+ * A helper function designed to process each individual block in an XML tree.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processAllBlocks(block) {
+  processIndividualBlock(block);
+
+  // Blocks can contain other blocks so we must process them recursively.
+  const childBlocks = block.querySelectorAll('block');
+  childBlocks.forEach(childBlock => {
+    processAllBlocks(childBlock);
+  });
+}
+
+/**
+ * Perform any need manipulations for a given XML block element.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processIndividualBlock(block) {
+  // Convert unsupported can_disconnect_from_parent attributes.
+  makeLockedBlockImmovable(block);
+}
+
+/**
  * CDO Blockly supported a can_disconnect_from_parent attribute that
  * effectively worked like the modern movable property. To prevent
  * unintended movability changes to student code, we convert the unsupported
  * can_disconnect_from_parentto movable.
- * @param {Element} blockElement - The XML element for a single block.
+ * @param {Element} block - The XML element for a single block.
  */
-export function makeLockedBlocksImmovable(block) {
+function makeLockedBlockImmovable(block) {
   const canDisconnectValue = block.getAttribute('can_disconnect_from_parent');
   // If present, value will be either "true" or "false" (string, not boolean)
   if (canDisconnectValue) {
     block.setAttribute('movable', canDisconnectValue);
     block.removeAttribute('can_disconnect_from_parent');
   }
-
-  // Blocks can contain other blocks so we must process them recursively.
-  const childBlocks = block.querySelectorAll('block');
-  childBlocks.forEach(childBlock => {
-    makeLockedBlocksImmovable(childBlock);
-  });
 }
 
 /**
