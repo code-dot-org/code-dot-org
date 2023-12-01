@@ -5,8 +5,7 @@ const initialChatMessages: ChatCompletionMessage[] = [
   {
     id: 1,
     role: Role.ASSISTANT,
-    chatMessageText:
-      'Welcome to AI Chat! I am your assistant - please ask me questions according to the instructions given.',
+    chatMessageText: "Hi! I'm your AI Tutor. Type your question below.",
     status: Status.OK,
   },
 ];

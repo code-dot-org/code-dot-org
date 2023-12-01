@@ -7,7 +7,6 @@ import {initialChatMessages} from '../constants';
 import {getChatCompletionMessage} from '../chatApi';
 import {
   ChatCompletionMessage,
-  AichatLevelProperties,
   Status,
   Role,
 } from '../types';
@@ -40,8 +39,10 @@ export const submitChatMessage = createAsyncThunk(
   'aichat/submitChatMessage',
   async (message: string, thunkAPI) => {
     const state = thunkAPI.getState() as {lab: LabState; aichat: AichatState};
-    const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
-      ?.systemPrompt;
+    // const systemPrompt = (state.lab.levelProperties as AichatLevelProperties)
+    //   ?.systemPrompt;
+    const systemPrompt =
+      'You are an assistant teacher in a high school classroom where the students are learning Java using the Code.org curriculum. Answer their questions in plain, easy-to-understanding English. Do not write any code in your response.';
     // TODO: move a check for undefined systemPrompt to AIchatView and throw an error dialog
     // there if systemPrompt is undefined.
     if (systemPrompt === undefined) {
