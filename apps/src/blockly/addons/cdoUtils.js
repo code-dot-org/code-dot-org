@@ -32,12 +32,12 @@ import * as blockUtils from '../../block_utils';
 export function loadBlocksToWorkspace(
   workspace,
   source,
-  loadHiddenDefinitions = true
+  includeHiddenDefinitions = true
 ) {
   const {mainSource, hiddenDefinitionSource, blockOrderMap} =
     prepareSourcesForWorkspaces(source);
   // We intentionally load hidden definitions before other blocks on the main workspace.
-  if (loadHiddenDefinitions) {
+  if (includeHiddenDefinitions) {
     loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
   }
   Blockly.serialization.workspaces.load(mainSource, workspace);

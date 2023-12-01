@@ -3,12 +3,12 @@ import React from 'react';
 
 /**
  * Many of our hints include Blockly blocks. Unfortunately, Blockly
- * BlockSpaces have a real problem with being created before they are
- * in the DOM, so we need to inject this BlockSpace outside of our
+ * workspace have a real problem with being created before they are
+ * in the DOM, so we need to inject this workspace outside of our
  * React render method once we're confident that this component is in
  * the DOM.
  */
-export default class ReadOnlyBlockSpace extends React.Component {
+export default class EmbeddedWorkspace extends React.Component {
   static propTypes = {
     block: PropTypes.object.isRequired,
     isRtl: PropTypes.bool,
@@ -16,17 +16,17 @@ export default class ReadOnlyBlockSpace extends React.Component {
 
   state = {
     height: 100,
-    blockSpace: undefined,
+    workspace: undefined,
   };
 
   componentDidMount() {
     if (!document.body.contains(this.container)) {
       return new Error(
-        'ReadOnlyBlockSpace component MUST be rendered into a container that already exists in the DOM'
+        'EmbeddedWorkspace component MUST be rendered into a container that already exists in the DOM'
       );
     }
 
-    let blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    let workspace = Blockly.createEmbeddedWorkspace(
       this.container,
       this.props.block,
       {
@@ -35,22 +35,22 @@ export default class ReadOnlyBlockSpace extends React.Component {
       }
     );
 
-    let metrics = blockSpace.getMetrics();
+    let metrics = workspace.getMetrics();
     let height = metrics.contentHeight + metrics.contentTop;
 
     // Setting state here will trigger an immediate re-render; however,
     // that is unavaoidable given that we cannot know what size our
-    // blockspace is until it's already in the DOM
+    // workspace is until it's already in the DOM
     // eslint-disable-next-line react/no-did-mount-set-state
     this.setState({
       height,
-      blockSpace,
+      workspace,
     });
   }
 
   componentDidUpdate() {
-    if (this.state.blockSpace) {
-      Blockly.cdoUtils.workspaceSvgResize(this.state.blockSpace);
+    if (this.state.workspace) {
+      Blockly.cdoUtils.workspaceSvgResize(this.state.workspace);
     }
   }
 

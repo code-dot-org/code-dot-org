@@ -1,7 +1,7 @@
 // This is copied and modified from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285
 // We need a bug fix not present in our current (v9) version of the mixin, and
-// we need to not run the on change handler if the block is not in a runnable workspace.
+// we need to not run the on change handler if the block is an embedded workspace.
 // We may be able to extend the mixin once we upgrade to v10.
 const procedureCallerOnChangeMixin = {
   /**
@@ -11,13 +11,13 @@ const procedureCallerOnChangeMixin = {
    * @this {Blockly.Block}
    */
   onchange: function (event) {
-    // If the block is not in a runnable workspace, we don't create a procedure definition.
-    // A non-runnable workspace does not need any procedure definitions, and trying to add them
+    // If the block is in an embedded workspace, we don't create a procedure definition.
+    // An embedded workspace does not need any procedure definitions, and trying to add them
     // will cause confusing UI (for example, an empty procedure definition in a hint).
     if (
       this.disposed ||
       this.workspace.isFlyout ||
-      !Blockly.isRunnableWorkspace(this.workspace)
+      Blockly.isEmbeddedWorkspace(this.workspace)
     )
       return;
     if (event.type === Blockly.Events.BLOCK_MOVE) this.updateArgsMap_(true);
