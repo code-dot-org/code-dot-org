@@ -2973,12 +2973,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/highlight@npm:1.0.0, @lezer/highlight@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@lezer/highlight@npm:1.0.0"
+"@lezer/highlight@npm:^1.0.0, @lezer/highlight@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@lezer/highlight@npm:1.2.0"
   dependencies:
     "@lezer/common": ^1.0.0
-  checksum: 9ce6c4ea041598e2500f11610e74163eba0361954df8dbf5d12b96dc8b5ab5da8af2defda7ff5728ca460d49f053a7502f2840361bcd8dcf30e8a23f7c30672a
+  checksum: 5b9dfe741f95db13f6124cb9556a43011cb8041ecf490be98d44a86b04d926a66e912bcd3a766f6a3d79e064410f1a2f60ab240b50b645a12c56987bf4870086
   languageName: node
   linkType: hard
 
@@ -7685,7 +7685,7 @@ __metadata:
     "@codemirror/state": ^6.3.2
     "@codemirror/view": ^6.22.1
     "@dsco_/link": ^1.1.2
-    "@lezer/highlight": 1.0.0
+    "@lezer/highlight": ^1.2.0
     "@microsoft/immersive-reader-sdk": ^1.1.0
     "@react-bootstrap/pagination": ^1.0.0
     "@reduxjs/toolkit": ^1.9.3

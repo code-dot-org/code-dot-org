@@ -262,7 +262,7 @@
     "@codemirror/state": "^6.3.2",
     "@codemirror/view": "^6.22.1",
     "@dsco_/link": "^1.1.2",
-    "@lezer/highlight": "1.0.0",
+    "@lezer/highlight": "^1.2.0",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "@reduxjs/toolkit": "^1.9.3",
     "@types/chai": "^4.3.5",
