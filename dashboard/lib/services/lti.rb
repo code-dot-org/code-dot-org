@@ -1,4 +1,5 @@
 require 'policies/lti'
+require 'queries/lti'
 require 'user'
 require 'authentication_option'
 
@@ -25,6 +26,13 @@ class Services::Lti
     )
     user.authentication_options = [ao]
     user
+  end
+
+  def self.create_lti_user_identity(user)
+    auth_option = user.authentication_options.find(&:lti?)
+    issuer, client_id, subject = auth_option.authentication_id.split('|')
+    lti_integration = Queries::Lti.get_lti_integration(issuer, client_id)
+    LtiUserIdentity.create(user: user, subject: subject, lti_integration: lti_integration)
   end
 
   def self.get_claim_from_list(id_token, keys_array)
