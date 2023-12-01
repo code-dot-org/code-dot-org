@@ -2959,14 +2959,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@lezer/common@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@lezer/common@npm:1.0.0"
-  checksum: 0ba652b39f9ff073a6a8a3376a74279f2c2d2ccdd4d2bb57c7b607341dbdbf64baf9c23a196314f09349d175623bc73a6a0b6a0eeb2cc63f3a1190fd631f7c31
-  languageName: node
-  linkType: hard
-
-"@lezer/common@npm:^1.1.0":
+"@lezer/common@npm:^1.0.0, @lezer/common@npm:^1.1.0":
   version: 1.1.1
   resolution: "@lezer/common@npm:1.1.1"
   checksum: 1e540c152c5e6000d81aee0d6998dc340f35685d0f3aebf9c83213674b8a84509e0f6a04ea9b28d9d04499f68c2e57b484703bde53eaacf426bc2fac6a9e892c
