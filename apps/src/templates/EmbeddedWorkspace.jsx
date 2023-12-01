@@ -3,7 +3,7 @@ import React from 'react';
 
 /**
  * Many of our hints include Blockly blocks. Unfortunately, Blockly
- * workspace have a real problem with being created before they are
+ * workspaces have a real problem with being created before they are
  * in the DOM, so we need to inject this workspace outside of our
  * React render method once we're confident that this component is in
  * the DOM.
