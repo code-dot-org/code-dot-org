@@ -13,6 +13,7 @@ import {createPlusField} from './field_plus';
 import {createMinusField} from './field_minus';
 var msg = require('@cdo/locale');
 
+const MINIMUM_INPUTS = 2;
 const textJoinMutator = {
   /**
    * Number of text inputs on this block.
@@ -66,6 +67,7 @@ const textJoinMutator = {
    * @private
    */
   updateShape_: function (targetCount) {
+    targetCount = Math.max(targetCount, 1);
     while (this.itemCount_ < targetCount) {
       this.addPart_();
     }
@@ -91,7 +93,7 @@ const textJoinMutator = {
    * @this {GoogleBlockly.Block}
    */
   minus: function () {
-    if (this.itemCount_ === 0) {
+    if (this.itemCount_ <= MINIMUM_INPUTS) {
       return;
     }
     this.removePart_();
@@ -110,11 +112,14 @@ const textJoinMutator = {
         this.removeInput('EMPTY');
       }
       this.topInput_ = this.appendValueInput('ADD' + this.itemCount_)
-        .appendField(createPlusField(), 'PLUS')
         // Use @cdo/locale to get localized 'join' string
         .appendField(msg.joinText());
     } else {
       this.appendValueInput('ADD' + this.itemCount_);
+    }
+    if (this.itemCount_ === MINIMUM_INPUTS - 1) {
+      this.iconInput_ = this.getIconInput();
+      this.iconInput_.insertFieldAt(0, createPlusField(), 'PLUS');
     }
     // Because item inputs are 0-index we decrement first, increment last.
     this.itemCount_++;
@@ -131,34 +136,46 @@ const textJoinMutator = {
     this.removeInput('ADD' + this.itemCount_);
     if (this.itemCount_ === 0) {
       this.topInput_ = this.appendDummyInput('EMPTY')
-        .appendField(createPlusField(), 'PLUS')
         .appendField(this.newQuote_(true))
         .appendField(this.newQuote_(false));
+    }
+    if (this.itemCount_ === MINIMUM_INPUTS) {
+      this.iconInput_ = this.getInput(this.getIconInput());
+      if (!this.getField('PLUS')) {
+        this.iconInput_.insertFieldAt(0, createPlusField(), 'PLUS');
+      }
     }
   },
 
   /**
-   * Makes it so the minus is visible iff there is an input available to remove.
+   * Makes it so the minus is visible if there is an input available to remove.
    * @private
    */
   updateMinus_: function () {
     const minusField = this.getField('MINUS');
-    if (!minusField && this.itemCount_ > 0) {
-      this.topInput_.insertFieldAt(1, createMinusField(), 'MINUS');
-    } else if (minusField && this.itemCount_ < 1) {
-      this.topInput_.removeField('MINUS');
+    this.iconInput_ = this.getIconInput();
+    if (!minusField && this.itemCount_ > MINIMUM_INPUTS) {
+      this.iconInput_.insertFieldAt(1, createMinusField(), 'MINUS');
+    } else if (minusField && this.itemCount_ <= MINIMUM_INPUTS) {
+      this.iconInput_.removeField('MINUS');
     }
+  },
+
+  getIconInput: function () {
+    return (
+      this.getInput('EMPTY') || this.getInput('ADD' + (MINIMUM_INPUTS - 1))
+    );
   },
 };
 
 /**
  * Adds the quotes mixin to the block. Also updates the shape so that if no
- * mutator is provided the block has two inputs.
+ * mutator is provided the minimum number of inputs are added.
  * @this {GoogleBlockly.Block}
  */
 const textJoinHelper = function () {
   GoogleBlockly.Extensions.apply('text_quotes', this, false);
-  this.updateShape_(2);
+  this.updateShape_(MINIMUM_INPUTS);
 };
 
 if (GoogleBlockly.Extensions.isRegistered('text_join_mutator')) {
