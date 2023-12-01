@@ -2565,7 +2565,7 @@ en:
       Poetry_stringValue:
         text: "[LEFT_QUOTE][0][TEXT][1][RIGHT_QUOTE][2]"
       Poetry_textConcat:
-        text: join[ADD0][0][ADD1][1]
+        text: "[LEFT_QUOTE][0][TEXT1][1][TEXT2][2][RIGHT_QUOTE][3]"
       Poetry_textVariableJoin:
         text: "[VAR][0][TEXT2][1]"
       Poetry_whenLineShows:
