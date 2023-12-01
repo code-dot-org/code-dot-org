@@ -11,6 +11,7 @@
 import GoogleBlockly from 'blockly/core';
 import {createPlusField} from './field_plus';
 import {createMinusField} from './field_minus';
+var msg = require('@cdo/locale');
 
 const textJoinMutator = {
   /**
@@ -110,7 +111,8 @@ const textJoinMutator = {
       }
       this.topInput_ = this.appendValueInput('ADD' + this.itemCount_)
         .appendField(createPlusField(), 'PLUS')
-        .appendField(GoogleBlockly.Msg['TEXT_JOIN_TITLE_CREATEWITH']);
+        // Use @cdo/locale to get localized 'join' string
+        .appendField(msg.joinText());
     } else {
       this.appendValueInput('ADD' + this.itemCount_);
     }
