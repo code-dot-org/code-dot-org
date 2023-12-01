@@ -66,12 +66,12 @@ theme: responsive_full_width
     %h2=hoc_s(:donate_page_supporters_heading)
     %p=hoc_s(:donate_page_supporters_desc)
     .logos.flex-container.justify-center.wrap
-      %img{src: "/images/avatars/amazon.png", alt: ""}
-      %img{src: "/images/avatars/microsoft.png", alt: ""}
-      %img{src: "/images/avatars/google.png", alt: ""}
-      %img{src: "/images/avatars/coinbase.png", alt: ""}
-      %img{src: "/images/avatars/ballmer_group.png", alt: ""}
-      %img{src: "/images/avatars/vista_equity_partners.png", alt: ""}
+      %img{src: "/images/avatars/amazon.png", alt: hoc_s(:amazon_logo_alt)}
+      %img{src: "/images/avatars/microsoft.png", alt: hoc_s(:microsoft_logo_alt)}
+      %img{src: "/images/avatars/google.png", alt: hoc_s(:google_logo_alt)}
+      %img{src: "/images/avatars/coinbase.png", alt: hoc_s(:coinbase_logo_alt)}
+      %img{src: "/images/avatars/ballmer_group.png", alt: hoc_s(:ballmer_group_logo_alt)}
+      %img{src: "/images/avatars/vista_equity_partners.png", alt: hoc_s(:vista_equity_partners_logo_alt)}
     .button-wrapper.flex-container.justify-center
       %a.link-button.has-external-link{href: "https://donate.code.org/give/141992/#!/donation/checkout", target: "_blank", rel: "noopener noreferrer"}
         =hoc_s(:call_to_action_donate)
