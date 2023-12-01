@@ -177,6 +177,10 @@
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
+  donors_block_microsoft_infosys: "We thank Microsoft and Infosys Foundation USA for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  microsoft_logo_alt: "Microsoft logo"
+  infosys_logo_alt: "Infosys Foundation USA logo"
+
   grade_level: "Grade level"
   grade_level_label_elementary: "Elementary School"
   grade_level_label_middle: "Middle School"
