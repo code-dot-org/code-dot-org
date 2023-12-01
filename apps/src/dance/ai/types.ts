@@ -1,4 +1,4 @@
-import {DANCE_AI_SOUNDS} from '@cdo/apps/dance/ai/constants';
+import {DANCE_AI_SOUNDS} from '../constants';
 
 export enum AiOutput {
   AI_BLOCK = 'ai_block',
