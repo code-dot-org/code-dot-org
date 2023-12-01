@@ -7,22 +7,43 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  text-decoration: underline;
+
+
+  &:focus-visible {
+    outline: 2px solid $light_primary_500;
+    border-radius: 0.25rem;
+    outline-offset: 2px;
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    text-decoration: none;
+  }
 
   &-primary {
     color: $light_secondary_500;
 
-    &:hover, :active {
+    &:hover, :active, :visited {
       color: $light_secondary_700;
+    }
+
+    &:focus-visible {
+      color: $light_secondary_500;
     }
   }
 
   &-secondary {
     color: $light_black;
 
-    &:hover, :active {
+    &:hover, :active, :visited {
       color: $light_gray_800;
     }
+
+    &:focus-visible {
+      color: $light_black;
+    }
   }
+
 
   &[aria-disabled="true"] {
     cursor: not-allowed;
