@@ -40,7 +40,6 @@ Scenario: Teacher starts a new application and submits it
   And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   Then I see no difference for "Section 6: Implementation Plan"
   And I press the first "button#next" element
 
@@ -140,7 +139,6 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press the first "input[name='willTeach']" element
   And I press the first "input[name='csdWhichGrades']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7
@@ -177,7 +175,6 @@ Scenario: Teacher starts a new csp application and submits it
   And I press the first "input[name='cspWhichGrades']" element
   And I press the first "input[name='cspHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7
@@ -219,7 +216,6 @@ Scenario: Teacher starts a new csa application and submits it
   And I press the first "input[name='csaWhichGrades']" element
   And I press the first "input[name='csaHowOffer']" element
   And I press the first "input[name='enoughCourseHours']" element
-  And I press the first "input[name='replaceExisting']" element
   And I press the first "button#next" element
 
   # Section 7

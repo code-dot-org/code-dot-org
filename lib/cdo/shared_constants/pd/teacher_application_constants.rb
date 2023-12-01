@@ -109,7 +109,6 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
         will_teach: "Are you planning to teach this course in the #{YEAR} school year?"
       },
       professional_learning_program_requirements:
@@ -180,7 +179,6 @@ module Pd
           parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
         how_heard: PAGE_LABELS[:about_you][:how_heard] + " (Teacher's response)",
