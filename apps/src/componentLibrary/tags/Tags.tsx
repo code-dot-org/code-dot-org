@@ -14,12 +14,6 @@ export interface TagsProps {
   className?: string;
 }
 
-// TODO:
-// - tooltips are required;
-// - we can have left icon OR right icon, NOT both;
-// - tooltip should have max width of 325px / 20.312rem;
-// - tooltip can be one line OR multiline OR both; +
-
 // TODO 2: check if we can add an icons inside of native html select item/option content
 
 // - tooltips always one line or multiline or both? (tooltip content: string or ReactNode?)
@@ -30,7 +24,7 @@ export interface TagsProps {
 /**
  * ### Production-ready Checklist:
  * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
+ * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/TagsTest.jsx)
  * * (?) passes accessibility checks;
@@ -53,12 +47,13 @@ const Tags: React.FunctionComponent<TagsProps> = ({
     )}
     data-testid="tags"
   >
-    {tagsList.map(({tooltipId, label, tooltipContent, ariaLabel}) => (
+    {tagsList.map(({tooltipId, label, tooltipContent, ariaLabel, icon}) => (
       <Tag
-        key={tooltipId || label}
+        key={tooltipId}
         tooltipId={tooltipId}
         label={label}
         ariaLabel={ariaLabel}
+        icon={icon}
         tooltipContent={tooltipContent}
       />
     ))}

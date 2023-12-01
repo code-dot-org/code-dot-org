@@ -31,27 +31,28 @@ export interface TagProps {
   /** Tag tooltip content. Can be a simple string or ReactNode (some jsx/html markup/view).
    *  For example - check Tags.story.tsx*/
   tooltipContent: string | React.ReactNode;
-  /** Tag tooltip id (required for accessibility) */
+  /** Tag tooltip id (required for better accessibility, see ) */
   tooltipId: string;
   /** aria-label for the tag.
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
-  /** Icon to show next to text label (optional)*/
-  icon?: string;
+  /** Icon (object) to show next to text label (optional).
+   *  Icon object consists of icon(icon code/className, title for screenReader,
+   *  and the placement of the icon (left or right))*/
+  icon?: {icon: string; title: string; placement: 'left' | 'right'};
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
   label,
   tooltipContent,
   tooltipId,
-  ariaLabel,
   icon,
 }) => {
   return (
     <LabelOverlayTrigger
       overlay={(props: TooltipProps) => (
         <LabelTooltip
-          id={tooltipId || ''}
+          id={tooltipId}
           className={moduleStyles.tagTooltip}
           {...props}
         >
@@ -59,10 +60,15 @@ const Tag: React.FunctionComponent<TagProps> = ({
         </LabelTooltip>
       )}
     >
-      <div tabIndex={0} role="tooltip" aria-label={ariaLabel}>
-        {label}
+      <div tabIndex={0} role="tooltip" aria-describedby={tooltipId}>
+        {icon && icon.placement === 'left' && (
+          <FontAwesome icon={icon.icon} className="" title={icon.title} />
+        )}
+        <span>{label}</span>
         {/*Todo: create DSCO icon component. Empty className and title props are here to fix typescript type errors*/}
-        {icon && <FontAwesome icon={icon} className="" title="" />}
+        {icon && icon.placement === 'right' && (
+          <FontAwesome icon={icon.icon} className="" title={icon.title} />
+        )}
       </div>
     </LabelOverlayTrigger>
   );
