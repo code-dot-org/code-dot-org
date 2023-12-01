@@ -149,6 +149,36 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
+ * Adds a mutation element to a block if it's a text join block with an input count.
+ * CDO Blockly uses an unsupported method for serializing input count state
+ * where an arbitrary block attribute could be used to manage extra state.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToTextJoinBlocks(blockElement) {
+  if (blockElement.getAttribute('type') !== 'text_join_simple') {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of the expected number of inputs in order to create them all.
+  // If not, it needs a static behavior id in order to be translatable
+  // (e.g. shared behaviors).
+  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
+  // expects this kind of extra state in a mutator.
+  const inputCount = blockElement.getAttribute('inputcount');
+  mutationElement.setAttribute('items', inputCount);
+  // Remove the inputcount attribute from the parent block element.
+  blockElement.removeAttribute('inputcount');
+}
+
+/**
  * A helper function designed to process each individual block in an XML tree.
  * @param {Element} block - The XML element for a single block.
  */
@@ -169,6 +199,7 @@ function processAllBlocks(block) {
 function processIndividualBlock(block) {
   // Convert unsupported can_disconnect_from_parent attributes.
   makeLockedBlockImmovable(block);
+  addMutationToTextJoinBlocks(block);
 }
 
 /**
