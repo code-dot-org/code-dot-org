@@ -56,6 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
+      makeLockedBlocksImmovable(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
@@ -145,6 +146,28 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
     // Create new mutation attribute based on original block attribute.
     mutationElement.setAttribute('behaviorId', idAttribute);
   }
+}
+
+/**
+ * CDO Blockly supported a can_disconnect_from_parent attribute that
+ * effectively worked like the modern movable property. To prevent
+ * unintended movability changes to student code, we convert the unsupported
+ * can_disconnect_from_parentto movable.
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function makeLockedBlocksImmovable(block) {
+  const canDisconnectValue = block.getAttribute('can_disconnect_from_parent');
+  // If present, value will be either "true" or "false" (string, not boolean)
+  if (canDisconnectValue) {
+    block.setAttribute('movable', canDisconnectValue);
+    block.removeAttribute('can_disconnect_from_parent');
+  }
+
+  // Blocks can contain other blocks so we must process them recursively.
+  const childBlocks = block.querySelectorAll('block');
+  childBlocks.forEach(childBlock => {
+    makeLockedBlocksImmovable(childBlock);
+  });
 }
 
 /**
