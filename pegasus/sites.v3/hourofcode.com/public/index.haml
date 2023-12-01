@@ -106,12 +106,7 @@ social:
           =hoc_s(:call_to_action_try_activities)
 
   -# Organized by Code.org
-  %section{style: "margin-bottom: -4rem"}
-    .wrapper.centered
-      %p.body-two
-        =hoc_s(:hoc_homepage_organized_by, markdown: :inline, locals: {codeorg_url: resolve_url('https://code.org')})
-      %a{href: 'https://code.org'}
-        %img{src: '/images/code-dot-org-logo-40x40.svg'}
+  = view :organized_by_cdo
 
 :javascript
 
