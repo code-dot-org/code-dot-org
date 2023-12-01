@@ -12,15 +12,26 @@ export default {
 //
 //  Using marginTop to separate components in storybook and prevent tooltip from hiding under the Storybook HUD.
 const SingleTemplate: Story<TagsProps> = args => (
-  <div style={{marginTop: 50}}>
-    <Tags {...args} />
-  </div>
+  <>
+    <p>
+      * Margins on this screen does not represent Component's margins, and are
+      only added to improve storybook view *{' '}
+    </p>
+    <div style={{marginTop: 50}}>
+      <Tags {...args} />
+    </div>
+  </>
 );
 
 const MultipleTemplate: Story<{
   components: TagsProps[];
 }> = args => (
   <>
+    <p>
+      * Margins on this screen does not represent Component's margins, and are
+      only added to improve storybook view *{' '}
+    </p>
+
     {args.components?.map(componentArg => (
       <div key={componentArg.size} style={{marginTop: 45}}>
         <Tags {...componentArg} />
@@ -35,13 +46,19 @@ DefaultTags.args = {
     {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
       label: '+1',
+      icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
       tooltipId: 'science-english',
-      ariaLabel: 'Science, English',
       tooltipContent: (
         <>
           <p>Science,</p> <p>English</p>
         </>
       ),
+    },
+    {
+      label: '+1',
+      icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'right'},
+      tooltipId: 'english-science',
+      tooltipContent: 'English, Science',
     },
   ],
   size: 'm',
@@ -57,11 +74,22 @@ GroupOfSizesOfTags.args = {
         {
           label: '+1',
           tooltipId: 'science-englishS',
+          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
           tooltipContent: (
             <>
               <p>Science S,</p> <p>English S</p>
             </>
           ),
+        },
+        {
+          tooltipId: 'englishS',
+          label: 'English S',
+          tooltipContent: 'English S',
+          icon: {
+            icon: ' fa-solid fa-check',
+            title: 'check',
+            placement: 'right',
+          },
         },
       ],
       size: 's',
@@ -72,11 +100,22 @@ GroupOfSizesOfTags.args = {
         {
           label: '+1',
           tooltipId: 'science-englishM',
+          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
           tooltipContent: (
             <>
               <p>Science M,</p> <p>English M</p>
             </>
           ),
+        },
+        {
+          tooltipId: 'englishM',
+          label: 'English M',
+          tooltipContent: 'English M',
+          icon: {
+            icon: ' fa-solid fa-check',
+            title: 'check',
+            placement: 'right',
+          },
         },
       ],
       size: 'm',
@@ -87,11 +126,22 @@ GroupOfSizesOfTags.args = {
         {
           label: '+1',
           tooltipId: 'science-englishL',
+          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
           tooltipContent: (
             <>
               <p>Science L,</p> <p>English L</p>
             </>
           ),
+        },
+        {
+          tooltipId: 'englishL',
+          label: 'English L',
+          tooltipContent: 'English L',
+          icon: {
+            icon: ' fa-solid fa-check',
+            title: 'check',
+            placement: 'right',
+          },
         },
       ],
       size: 'l',

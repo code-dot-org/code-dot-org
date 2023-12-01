@@ -12,13 +12,26 @@
     align-items: baseline;
     gap: 2px;
     color: $neutral-dark;
-    padding: 0.13rem 0.5rem;
+    padding: 2px 12px;
     background-color: $brand_primary_light;
     border-radius: 6.25rem;;
     max-width: 15em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    i {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:has(i:first-child) {
+      padding-inline-start: 8px;
+    }
+
+    &:has(i:not(:first-child)) {
+      padding-inline-end: 8px;
+    }
   }
 }
 
@@ -50,21 +63,48 @@
 // Sizes
 .tags-l {
   > div {
-    @include overline-one;
-    margin-bottom: 0;
+    span {
+      @include overline-one;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.875rem;
+      line-height: 1.25;
+      width: 1.25rem;
+      height: 1.125rem;
+    }
   }
 }
 
 .tags-m {
   > div {
-    @include overline-two;
-    margin-bottom: 0;
+    span {
+      @include overline-two;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.75rem;
+      line-height: 1.25;
+      width: 1.125rem;
+      height: 0.9375rem;
+    }
   }
 }
 
 .tags-s {
   > div {
-    @include overline-three;
-    margin-bottom: 0;
+    span {
+      @include overline-three;
+      margin-bottom: 0;
+    }
+
+    i {
+      font-size: 0.625rem;
+      line-height: 1.25;
+      width: 1rem;
+      height: 0.8125rem;
+    }
   }
 }
