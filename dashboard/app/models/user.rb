@@ -251,8 +251,6 @@ class User < ApplicationRecord
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
-  has_one :circuit_playground_discount_application
-
   has_many :pd_applications,
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
