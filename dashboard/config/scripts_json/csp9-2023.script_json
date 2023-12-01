@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-22 15:55:26 UTC",
+    "serialized_at": "2023-11-30 22:49:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1350,6 +1350,7 @@
       "key": "activity_guide_version_a_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1362,6 +1363,7 @@
       "key": "activity_guide_version_b_-_create_pt_mock_exam",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1425,30 +1427,6 @@
       },
       "seeding_key": {
         "resource.key": "ap_cs_principles_course_and_exam_description_ced_"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Scoring Guidelines",
-      "url": "https://apcentral.collegeboard.org/media/pdf/ap21-sg-computer-science-principles.pdf",
-      "key": "apcsp_ct_20-21_scoring_guidelines",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
-      }
-    },
-    {
-      "name": "APCSP CT 20-21 Task Instructions",
-      "url": "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf",
-      "key": "apcsp_ct_20-21_task_instructions",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
@@ -1525,6 +1503,7 @@
       "key": "create_pt_mock_exam_description",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -1537,6 +1516,7 @@
       "key": "create_pt_survival_guide_23-24",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Resource"
       },
       "seeding_key": {
@@ -1636,18 +1616,6 @@
       "seeding_key": {
         "lesson.key": "Create PT   Make a Plan",
         "resource.key": "csp_unit_9_-_lesson_3_-_make_a_plan"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "apcsp_ct_20-21_scoring_guidelines"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create PT - Complete the Task (12 hrs)",
-        "resource.key": "apcsp_ct_20-21_task_instructions"
       }
     },
     {
