@@ -53,8 +53,6 @@ const REQUIRED_SCHOOL_INFO_FIELDS = [
   'totalStudentEnrollment',
   'freeLunchPercent',
   ...RACE_LIST,
-  'committedToMasterSchedule',
-  'payFee',
 ];
 // Since the rails model allows empty principal approvals as placeholders, we require these fields here
 const ALWAYS_REQUIRED_FIELDS = [
@@ -144,14 +142,6 @@ const PrincipalApprovalComponent = props => {
   };
 
   const renderSchoolInfoSection = () => {
-    let showPayFeeNote =
-      data.committedToMasterSchedule &&
-      !data.committedToMasterSchedule.includes(
-        `Yes, I plan to include this course in the ${Year} master schedule`
-      ) &&
-      data.payFee &&
-      data.payFee.includes('No, ');
-
     return (
       <div>
         {renderSchoolSection()}
@@ -179,31 +169,6 @@ const PrincipalApprovalComponent = props => {
             />
           );
         })}
-        <LabeledRadioButtonsWithAdditionalTextFields
-          name="committedToMasterSchedule"
-          textFieldMap={{
-            [TextFields.otherWithText]: 'other',
-          }}
-          label={`Are you committed to including ${teacherApplication.course} on the master schedule in ${Year} if ${teacherApplication.name} is accepted into the program? Note: the program may be listed under a different course name as determined by your district.`}
-        />
-        <div>
-          <LabeledRadioButtons name="payFee" />
-          {showPayFeeNote && (
-            <div>
-              <p style={styles.red}>
-                Note: To be eligible for scholarship support, your school must
-                commit to including this course in the {Year} master schedule.
-                If you are able to commit to offering this course in {Year} ,
-                please update your answer above before submitting in order to
-                retain scholarship eligibility.
-              </p>
-              <br />
-            </div>
-          )}
-
-          <LabeledInput name="contactInvoicing" required={false} />
-          <LabeledInput name="contactInvoicingDetail" required={false} />
-        </div>
         {teacherApplication.course === 'Computer Science Principles' && (
           <div>
             <p style={styles.questionText}>
@@ -348,7 +313,6 @@ PrincipalApprovalComponent.propTypes = {
 PrincipalApprovalComponent.associatedFields = [
   ...Object.keys(PageLabels),
   'doYouApprove',
-  'committedToMasterSchedule',
   'contactInvoicing',
   'contactInvoicingDetail',
 ];

@@ -1179,7 +1179,6 @@ module Pd::Application
           principal_other_percent: principal_response[:other] ? format("%0.02f%%", principal_response[:other]) : nil,
           principal_wont_replace_existing_course: replace_course_string,
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_pay_fee: principal_response[:pay_fee],
           principal_contact_invoicing: principal_response[:contact_invoicing],
           principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }

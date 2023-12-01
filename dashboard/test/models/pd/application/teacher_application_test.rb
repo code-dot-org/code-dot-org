@@ -535,7 +535,6 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
@@ -575,7 +574,6 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
@@ -617,7 +615,6 @@ module Pd::Application
         committed: options[:committed].first,
         race: options[:race].first(2),
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_free_lunch_percent: 50,
         principal_underrepresented_minority_percent: 50
 
@@ -688,7 +685,6 @@ module Pd::Application
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
@@ -728,7 +724,6 @@ module Pd::Application
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
@@ -770,7 +765,6 @@ module Pd::Application
         committed: options[:committed].last,
         race: [options[:race].first],
         principal_approval: principal_options[:do_you_approve].last,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].third,
         principal_free_lunch_percent: 49,
         principal_underrepresented_minority_percent: 49
 
@@ -803,8 +797,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].fourth
+        principal_approval: principal_options[:do_you_approve].first
 
       application = create :pd_teacher_application, form_data_hash: application_hash
 
@@ -848,7 +841,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build TEACHER_APPLICATION_HASH_FACTORY,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 1,
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
@@ -869,7 +861,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
@@ -888,7 +879,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_schedule_confirmed: principal_options[:committed_to_master_schedule].first,
         principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1

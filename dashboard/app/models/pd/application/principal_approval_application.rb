@@ -103,16 +103,6 @@ module Pd::Application
         school_state: COMMON_OPTIONS[:state],
         school_type: COMMON_OPTIONS[:school_type],
         do_you_approve: [YES, NO, TEXT_FIELDS[:other_with_text]],
-        committed_to_master_schedule: [
-          "Yes, I plan to include this course in the #{year} master schedule",
-          "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
-          "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year(year)})",
-          TEXT_FIELDS[:other_with_text]
-        ],
-        pay_fee: [
-          'Yes, my school would be able to pay the full program fee.',
-          'No, my school would not be able to pay the program fee. We would like to be considered for a scholarship.'
-        ]
       }
     end
 
@@ -138,9 +128,7 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
-              :committed_to_master_schedule,
               :understand_fee,
-              :pay_fee
             )
           end
         end
@@ -153,7 +141,6 @@ module Pd::Application
 
     def additional_text_fields
       [
-        [:committed_to_master_schedule],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]

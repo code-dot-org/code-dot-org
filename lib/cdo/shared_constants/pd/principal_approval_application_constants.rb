@@ -31,7 +31,6 @@ module Pd
       american_indian: 'American Indian or Native Alaskan',
       other: 'Other',
       replace_course: 'Will this course replace an existing computer science course in the master schedule?',
-      pay_fee: 'If there is a fee for the program, would your school be able to pay for the fee?',
       contact_invoicing: "Contact name for invoicing (if applicable)",
       contact_invoicing_detail: "Contact email or phone number for invoicing (if applicable)",
       confirm_principal: 'By submitting this application, I confirm that I am an Administrator/School Leader of this school and agree to share my contact info, school info, and this application with [regional partner].',
