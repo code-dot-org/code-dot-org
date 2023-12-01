@@ -14,19 +14,21 @@
 %p
   %strong
     Please complete the
-    = link_to('mandatory Administrator/School Leader approval form', @application.principal_approval_url)
+    = link_to('required Administrator/School Leader approval form', @application.principal_approval_url)
     in support of the submitted teacher application.
   Please note that
   = @application.first_name + "'s"
-  application is not considered complete and will not be reviewed for acceptance until
+  application is not considered complete and will not be considered for acceptance until
   we receive this form.
 
 %p
   Registration for the
   = @application.course_name
-  Professional Learning Program may have a cost, but there may also be scholarships available. Please
-  = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
-  to see the cost of the program in your region.
+  Professional Learning Program may have a cost, but there may also be scholarships available.
+  - if @application.regional_partner
+    Please
+    = link_to 'review this page', 'https://code.org/educate/professional-learning/program-information'
+    to see the cost of the program in your region.
 
 %p
   Participating teachers are asked to commit to Code.org's yearlong Professional Learning Program
@@ -41,7 +43,13 @@
   and refer to this
   = link_to('brochure', 'https://code.org/files/programs/codeorg-program-brochure.pdf')
   that highlights how to bring computer science to your school.
-  Please send any additional questions to your regional partner below.
+  - if @application.regional_partner
+    As
+    = @application.regional_partner.name
+    is Code.org's Regional Partner in your area, I am also here to answer additional questions you
+    may have about the program or application.
+  - else
+    Please let me know if you have any questions.
   Thank you very much for your support of computer science for all!
 
 = render partial: 'questions_concerns'

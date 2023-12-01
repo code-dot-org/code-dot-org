@@ -55,7 +55,7 @@ pl:
             '2.00': duży
             '3.00': bardzo duży
       Dancelab_ai:
-        text: użyj AI do {IMAGE}
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:

@@ -1,0 +1,91 @@
+---
+title: Návod pro dobrovolníky Hodiny kódu
+---
+
+{{ signup_button }}
+
+# Návod pro dobrovolníky
+### Změňte nějakou třídu hned dnes!
+
+***
+
+## Proč se stát dobrovolníkem?
+Zde jsou výpovědi některých našich dobrovolníků z minula:
+
+- “Nejlepší na mém zážitku bylo, že celá třída byli ženy a lidé barevných ras. Je dobrým znamením pro budoucnost našeho oboru, že máme příležitost oslovit tyto děti a vzrušit je.”
+- “Zejména jsem si užíval, že jsem se dostal k tomu povzbuzovat mladé dívky do technologie. Měl jsem pocit, že pomáhám další generaci v mé místní oblasti.”
+- „Bylo úžasné vidět, jak jsou děti nadšené. Skvělé bylo, když si učitelé všimli, že někteří studenti, kteří nebyli tak dobří v akademických disciplínách, vynikali vývojářským myšlením a pomáhali ostatním učit se - to jim dodávalo sebevědomí."
+
+## Každý může být dobrovolník
+### Dobrovolníci a mluvčí v technickém sektoru:
+Máte nějaké napojení na počítačové vědy nebo na technický sektor? Pokud pracujete v softwarovém inženýrství, v technologické společnosti v jakékoli roli (neinženýrské nebo inženýrské), nebo jste absolvovali kurzy informatiky, můžete pomoci inspirovat studenty! Mnozí studenti, kteří se nikdy s nikým nesetkali, pracují v technologickém průmyslu, a naši učitelé jsou rádi, že mohou spojit své třídy s profesionály a s univerzitními studenty.
+
+Můžete být pozvaný mluvčí ve třídě nebo pomáhat učitelům provozovat tuto aktivitu. Navštivte některou místní třídu a inspirujte studenty, aby se nadále učili počítačovou vědu.
+<br>
+<br>
+
+<a href="https://code.org/volunteer"><button>Zaregistrujte se dnes a staňte se dobrovolníkem v technice!</button>
+
+<br>
+<br>
+
+### Každý, kdo má vášeň pro rozšiřování příležitostí:
+Věříte, že výuka počítačových věd může studentům otevírat dveře příležitostí? Pomáhejte v místní školní třídě nebo uspořádejte akci po škole! K pořádání Hodiny programování nemusíte mít žádné znalosti počítačové vědy. A pouhé nabídnutí pomoci často postačuje k přesvědčení učitele Vašeho dítěte, přítele nebo klubu, aby zkusili hodinu programování.
+
+### Jak začít?
+
+1. [Pošlete tento e-mail]({{ promote/help_schools }}) učiteli svého dítěte a nabídněte mu, že mu pomůžete pořádat Hodinu programování.
+2. Nabídněte, že byste v místní škole pořádali Hodinu programování po škole. [Použijte tohoto Návodného průvodce,]({{ urls/how_to_guide }}) který vám s Vaším plánem pomůže.
+
+## Zapojte své spolupracovníky do dobrovolnictví
+Řekněte svým přátelům a spolupracovníkům o Hodině programování. Tisíce učitelů hledají dobrovolníky, takže je požádejte, aby [se zaregistrovali jako dobrovolníci](https://code.org/volunteer). Požádejte svého zaměstnavatele, aby se zapojil. [Pošlete tento e-mail]({{ promote/sample_emails }}) svému manažerovi nebo CEO, aby se všichni zapojili.
+
+## Jak se připravit
+- [Vyberte video,]({{ promote/videos }}) které uvedete, abyste zlepšili soustředění třídy a vzrušili je pro Hodinu programování.
+- Podívejte se do [Dobrovolnické nástrojové sady hodina programování,](/files/hoc-volunteer-toolkit.pdf) v které je uveden přehled, časový rámec, přípravný materiál a marketingový materiál. Vše, co potřebujete pro svůj zážitek dobrovolníka!
+- Jestliže budete během vaší relace dělat výukový kurz, stravte 30 minut vyzkoušením alespoň jednoho výukového kurzu [Hodiny programování]({{ urls/learn }}).
+- Jestliže navštěvujete nějakou školu, vyplňte veškeré osobnostní testy nebo potřebné papíry.
+- [Podívejte se na tyto tipy](https://code.org/files/CSTT_Volunteers.pdf) o tom, jak interagovat se studenty.
+- Zapojte se do konverzace na Facebooku, Twitteru, Instagramu, a Tumblr s #HourOfCode.
+- Spojte se s učitelem a proberte s ním, o čem budete chtít mluvit ve výuce.
+- Jestliže jste virtuálním dobrovolníkem, vyzkoušejte předem své schopnosti přenosu audiovizuálního signálu a sdílení obrazovky.
+
+## Jednodenní akce Hodiny programování
+Když budete pořádat akci Hodina programování, postupujte v souladu s níže uvedenou vzorovou agendou, která dá rámec Vašemu dni. Předtím se nezapomeňte do školy registrovat a den před akcí přivítat učitele. Potvrďte schválený plán dne a diskutujte o případných diskusních bodech.
+
+### Příklad agendy:
+
+| Čas           | Položka agendy                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 - 5 minut   | [Přehrajte inspirační video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                 |
+| 5 - 10 minut  | Představte se a zjistěte si více o studentech: </ul><li>Na čem pracujete, co děláte, a co máte na své práci nejraději?</li><li>Kde nebo u koho jste čerpali inspiraci?</li><li>Co vás přimělo zajímat se o počítačovou vědu?</li><li>Měli jste mentora?</li><li>Sdílejte nějaký příběh o tom, jaký vliv má technologie na všechny.</li><br>Pokládejte studentům otázky a vyhraďte určitý čas na Otázky a odpovědi.</br> <li> O jaké práce mají zájem, jaká jsou jejich oblíbená technická zařízení nebo aplikace a jak si myslí, že jsou dělány? </li><li> Mají pro Vás studenti nějaké otázky?</ul> |
+| 30 - 60 minut | **Programujte!** Projděte se, odpovídejte na otázky, a napovídejte jim při hlavolamech. Snažte se nedat studentům přímo řešení. Spíše se snažte klást jim otázky tak, aby si mohli sami odpovědět, co se stalo špatně, a vybízejte studenty, aby se navzájem dotazovali, zda mají nějaké otázky. Učit se od ostatních je velká učební příležitost.                  |
+| 1 - 3 minuty  | Poděkujte všem a sdělte jim inspirativní slova na rozloučenou. Rozdejte veškeré firemní pozornosti (úžasné bývají nálepky)!                                                                                                                                                                                                                                         |
+| Poté          | **Udělejte trvalou změnu:** Promluvte si s učitelem o tom, jak udělat z Hodiny programování kompletní kurz počítačových věd! Jděte se svým učitelem na [code.org/yourschool](https://code.org/yourschool), vyplňte to, co tato škola učí dnes, a vybídněte je, aby do svých tříd zavedli počítačovou vědu.                                                          |
+
+### Po akci:
+- Sdílejte své fotografie a příběhy s Code.org na giving@code.org.
+- Nezapomeňte zadat své dobrovolnické hodiny do portálu sledování dobrovolníků ve své společnosti.
+- Sdílejte svůj prožitek na sociálních médiích #HourOfCode!
+- Jestliže na akci pořídíte obrázky nebo videa, **zejména pokud na nich budou studenti**, nezapomeňte získat svolení učitele a rodičů, pokud budete chtít zveřejnit své příběhy na sociálním médiu.
+- A vraťte se zpět za měsíc: má učitel zájem nabízet kurz počítačové vědy? Sdílejte [prostředky a profesní výukové příležitosti, abyste mu v tom pomohli](https://code.org/yourschool).
+
+## Jak se můžete nechat vybrat jako technický dobrovolník nebo pozvaný mluvčí
+- Učitelé budou hledat dobrovolníky na naší [mapě dobrovolníků](https://code.org/volunteer/local).
+- Snažte se vytvořit pokud možno co nejúplnější profil, aby se zvýšila šance, že vás nějaký učitel vybere.
+- Když budete vybráni, učitel Vás kontaktuje prostřednictvím tohoto formuláře (Vaše e-mailová adresa nebude učiteli nikdy sdělena). *Jestliže dostáváte příliš mnoho požadavků od učitelů, vždycky máte možnost aktualizovat své preference kliknutím na odkaz k editaci Vašich informací nebo k odhlášení od komunikace, který najdete vespod každého e-mailu od učitele.*
+
+## Nejčastější dotazy k dobrovolnictví při Hodině kódu
+
+### Zatím mě nekontaktoval žádný učitel. Jak se i přesto mohu zapojit?
+Zkuste najít nějakou místní školu, zavolejte řediteli, učiteli nebo kontaktní osobě školy a zeptejte se, jak můžete pomoct.
+
+### Jak dlouho bude návštěva třídy trvat?
+Osobní účast na výuce ve třídě trvá obyčejně 60-90 minut, zatímco virtuální výuková návštěva obyčejně trvá 20-30 minut.
+
+### Pro jakou věkovou skupinu je Hodina kódu vhodná?
+Code.org a naši partneři navrhli všechny aktivity Hodiny programování tak, aby zaujaly studenty všech úrovní (K-12), chlapce i dívky, všech původů. Všichni, i dospělí, se mohou bavit hrou!
+
+
+
+{{ signup_button }}

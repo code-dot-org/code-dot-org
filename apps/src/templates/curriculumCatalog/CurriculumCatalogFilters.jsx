@@ -13,7 +13,7 @@ import {
   translatedCourseOfferingCsTopics,
   translatedInterdisciplinary,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDurations,
+  translatedCourseOfferingDurationsWithTime,
   translatedCourseOfferingMarketingInitiatives,
   translatedGradeLevels,
   gradeLevelsMap,
@@ -30,7 +30,7 @@ const filterTypes = {
   duration: {
     name: 'duration',
     label: i18n.duration(),
-    options: translatedCourseOfferingDurations,
+    options: translatedCourseOfferingDurationsWithTime,
   },
   topic: {
     name: 'topic',

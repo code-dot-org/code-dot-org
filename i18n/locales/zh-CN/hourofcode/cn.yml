@@ -153,7 +153,7 @@ cn:
   for_students_teacher_led_learning: 针对学生：教师主导的学习
   for_students_teacher_led_lessons: 针对学生：教师主导的课程
   professional_development: 专业发展
-  additional_educator_resources: Additional Educator Resources
+  additional_educator_resources: 其他教育资源
   teach_computer_science: 教授计算机科学
   explore_our_curriculum: 探索我们的课程
   start_professional_learning: 开始专业学习
@@ -212,27 +212,27 @@ cn:
   call_to_action_register_event: 注册您的活动
   call_to_action_register_your_hoc: 注册您的编程一小时
   call_to_action_register_now: '马上注册 '
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: 分享您的活动计划
   call_to_action_select_activity: 选择一项活动
   call_to_action_select_coding_activity: 选择编程活动
   call_to_action_start_activity: 开始一项活动
   call_to_action_get_certificates: 获取证书
   call_to_action_print_certificates: 打印证书
   call_to_action_go_beyond_hoc: 超越编程一小时
-  call_to_action_see_volunteer_guide: See volunteer guide
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
-  call_to_action_join_advocacy_coalition: Join the advocacy coalition
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_see_volunteer_guide: 参见志愿者指南
+  call_to_action_see_teacher_guide: 参见教师操作指南
+  call_to_action_see_event_guide: 参见活动指南
+  call_to_action_join_advocacy_coalition: 加入倡导联盟
+  call_to_action_become_an_advocate: 成为倡导者
+  call_to_action_share_event_w_parents: 与家长分享您的活动
   call_to_action_sign_up_to_volunteer: 注册志愿者
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: 分享到社交媒体
   call_to_action_explore_all_hoc_activities: 浏览Code.org上的所有编程一小时活动
   call_to_action_start_dance_party: 开始舞会
   call_to_action_start_part_02: 从第二部分开始
   call_to_action_start_unplugged_activity: 开始不插电的活动
   call_to_action_view_promo_resources: 查看促销资源
-  call_to_action_get_involved: Get involved
+  call_to_action_get_involved: 参与其中
   call_to_action_learn_more: 了解更多
   call_to_action_watch_now: 立即观看
   call_to_action_try_activity: 尝试活动
@@ -240,7 +240,7 @@ cn:
   call_to_action_try_hoc_ai_activities: 试试 “编程一小时” 人工智能活动
   call_to_action_explore_activities: 探索活动
   call_to_action_explore_ai: 探索人工智能
-  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_resources: 探索资源
   call_to_action_explore_tool: 浏览工具
   call_to_action_explore_unit: 探索单元
   call_to_action_explore_curriculum: 探索课程
@@ -302,7 +302,7 @@ cn:
   call_to_action_explore_teacher_forums: 浏览教师论坛
   call_to_action_explore_teacher_forum: 探索教师论坛
   call_to_action_explore_career_resources: 探索职业资源
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: 探索统计数据和信息图表
   call_to_action_watch_videos: 观看视频
   call_to_action_download_posters: 下载海报
   call_to_action_contact_support: 联系Code.org支持服务
@@ -330,12 +330,12 @@ cn:
   call_to_action_become_partner_usa: 成为美国合作伙伴
   call_to_action_become_partner_intl: 成为国际合作伙伴
   call_to_action_become_a_volunteer: 成为志愿者
-  call_to_action_become_a_volunteer_today: Become a volunteer today!
+  call_to_action_become_a_volunteer_today: 现在成为一名志愿者！
   call_to_action_start_translating: 开始翻译
   call_to_action_learn_about_advocacy: 了解我们的倡导活动
   call_to_action_visit_store: 访问商店
   call_to_action_view_faqs: 查看更多常见问题解答
-  call_to_action_view_resources: View more resources
+  call_to_action_view_resources: 查看更多资源
   call_to_action_applications_open: 现已开放申请
   call_to_action_apply_cs_ambassador: 申请成为 CS 大使
   call_to_action_coming_soon: 即将推出！
@@ -9024,7 +9024,7 @@ cn:
   tutorial_mitimagebot_name: Building an ImageBot with MIT App Inventor
   tutorial_mitconverse_name: Conversational AI with MIT App Inventor
   tutorial_nasamarsreturn_name: 'NASA: Mars Sample Return Coding Challenge'
-  tutorial_nasaradio_name: 'NASA: Coding a Radio Message in Space'
+  tutorial_nasaradio_name: NASA：在太空中编码无线电信息
   tutorial_nasahelicopter_name: 'NASA: Code a Mars Helicopter Video Game'
   tutorial_nasacollection_name: 'NASA: Code a Mars Sample Collection Video Game'
   tutorial_wizclock_name: 'Clock: creating a clock with code'
@@ -10289,7 +10289,7 @@ cn:
   hoc_how_to_top_view_guide: 查看指南
   hoc_how_to_nav_main_aria_label: 选择指南
   hoc_how_to_nav_sidebar_aria_label: 侧栏导航
-  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_heading: 如何计划你的“编程一小时”
   hoc_how_to_educators_intro_desc: "《编程一小时》是一小时的计算机科学入门，它使用有趣的教程来展示任何人都可以学习基础知识。今年，我们通过提供包含人工智能
     (AI) 和非 AI 组件的编程机会，将 “编程一小时” 推向新的高度。无论您或您的学生是经验丰富的程序员，还是所有人都在开始第一次计算机科学探险，这个 “编程一小时”
     都将带来一段非凡的旅程。"

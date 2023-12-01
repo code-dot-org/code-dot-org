@@ -1629,7 +1629,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 

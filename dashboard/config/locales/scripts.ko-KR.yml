@@ -1133,7 +1133,7 @@ ko:
             csf_data:
               display_name: 데이터 및 시뮬레이션
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-7:
               display_name: 디지털 시민의식
             lessonGroup-8:
@@ -4204,6 +4204,7 @@ ko:
           lessons:
             lesson-1:
               name: '댄스 파티: A.I. 에디션'
+          title: '댄스 파티: AI 에디션'
         dance-draft:
           title: 사용하지 마시오
         dance-extras:
