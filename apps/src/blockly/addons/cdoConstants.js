@@ -44,7 +44,7 @@ export const frameSizes = {
   MARGIN_TOP: 10,
   MARGIN_BOTTOM: 5,
   BLOCK_HEADER_HEIGHT: 25,
-  WORKSPACE_HEADER_HEIGHT: 50,
+  WORKSPACE_HEADER_HEIGHT: 40,
 };
 
 export const customConnectionBlockTypes = {
