@@ -4,15 +4,10 @@ import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 /**
  * Reads a boolean attribute from an XML element.
  *
- * This function retrieves the value of an attribute from a given XML element
- * and returns a boolean based on the attribute value. It specifically checks
- * if the attribute value is the string 'true'. The function returns false
- * in any other case, including the attribute being absent, null, an empty string,
- * 'false', or any other string.
- *
  * @param {Element} xmlElement - The XML element from which the attribute will be read.
  * @param {string} attribute - The name of the attribute to be read from the XML element.
  * @returns {boolean} True if the attribute value is exactly 'true', otherwise false.
+ * If we ever need to return true for unset attributes, we can update this function.
  */
 export function readBooleanAttribute(xmlElement, attribute) {
   const attributeValue = xmlElement.getAttribute(attribute);
