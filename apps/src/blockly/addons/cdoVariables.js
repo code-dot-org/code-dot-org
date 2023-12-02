@@ -1,9 +1,26 @@
 export default function initializeVariables(blocklyWrapper) {
-  // TODO - required for sprite variable blocks
-  blocklyWrapper.Variables.registerGetter = function (category, blockName) {};
+  blocklyWrapper.Variables.getters = {
+    Default: 'variables_get',
+  };
 
-  // TODO - required for all variable blocks
+  blocklyWrapper.Variables.registerGetter = function (category, blockName) {
+    Blockly.Variables.getters[category] = blockName;
+  };
+
+  blocklyWrapper.Variables.allVariablesFromBlock = function (block) {
+    if (!block.getVars) {
+      return [];
+    }
+    var varsByCategory = block.getVars();
+    return Object.keys(varsByCategory).reduce(function (vars, category) {
+      return vars.concat(varsByCategory[category]);
+    }, []);
+  };
+
   blocklyWrapper.Variables.getVars = function (opt_category) {
-    return {};
+    var category = opt_category || Blockly.Variables.DEFAULT_CATEGORY;
+    var vars = {};
+    vars[category] = [this.getTitleValue('VAR')];
+    return vars;
   };
 }
