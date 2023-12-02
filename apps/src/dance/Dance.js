@@ -10,7 +10,7 @@ var dom = require('../dom');
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';
-import {ASSET_BASE, DANCE_AI_SOUNDS, DancelabReservedWords} from './constants';
+import {ASSET_BASE, DancelabReservedWords} from './constants';
 import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
@@ -42,6 +42,7 @@ import utils from './utils';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import {DANCE_AI_SOUNDS} from './ai/constants';
 
 const ButtonState = {
   UP: 0,

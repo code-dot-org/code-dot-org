@@ -118,10 +118,3 @@ export const DANCE_FOREGROUND_EFFECTS = [
   'exploding_stars',
   'paint_drip',
 ];
-
-export const DANCE_AI_SOUNDS = [
-  'ai-select-emoji',
-  'ai-deselect-emoji',
-  'ai-generate-no',
-  'ai-generate-yes',
-] as const;
