@@ -8,6 +8,16 @@ export default function initializeGenerator(blocklyWrapper) {
 
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
+  blocklyWrapper.Generator.xmlToBlocks = function (name, xml) {
+    var div = document.createElement('div');
+    var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(div, xml, {
+      disableEventBindings: true,
+    });
+    return blockSpace.getTopBlocks(true);
+  };
+
+  // This function was a custom addition in CDO Blockly, so we need to add it here
+  // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function (name, opt_typeFilter) {
     const generator = blocklyWrapper.getGenerator();
     generator.init(blocklyWrapper.mainBlockSpace);
