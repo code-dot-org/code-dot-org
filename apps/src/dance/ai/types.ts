@@ -42,7 +42,7 @@ export type CachedWeightsMapping = {
   output: string[];
 };
 
-export enum ChooseEffectsQuality {
+export enum EffectsQuality {
   GOOD = 'good',
   BAD = 'bad',
 }

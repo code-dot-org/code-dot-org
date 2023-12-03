@@ -17,7 +17,7 @@ import {
   FieldKey,
   GeneratedEffect,
   MinMax,
-  ChooseEffectsQuality,
+  EffectsQuality,
   Mode,
   Toggle,
 } from './types';
@@ -216,7 +216,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
         generatedEffects.current = {
           badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(
-            () => chooseEffects(previousInput.inputs, ChooseEffectsQuality.BAD)
+            () => chooseEffects(previousInput.inputs, EffectsQuality.BAD)
           ),
           goodEffect: previousInput,
         };
@@ -277,9 +277,9 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const startAi = useCallback(() => {
     generatedEffects.current = {
       badEffects: getRangeArray(0, BAD_GENERATED_RESULTS_COUNT - 1).map(() =>
-        chooseEffects(inputs, ChooseEffectsQuality.BAD)
+        chooseEffects(inputs, EffectsQuality.BAD)
       ),
-      goodEffect: chooseEffects(inputs, ChooseEffectsQuality.GOOD),
+      goodEffect: chooseEffects(inputs, EffectsQuality.GOOD),
     };
 
     minMaxAssociations.current = calculateMinMax(inputs);

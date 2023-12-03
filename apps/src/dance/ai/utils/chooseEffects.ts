@@ -1,5 +1,5 @@
 import {cachedWeightsMappings} from '../constants';
-import {FieldKey, GeneratedEffect, ChooseEffectsQuality} from '../types';
+import {FieldKey, GeneratedEffect, EffectsQuality} from '../types';
 
 import {calculateOutputSummedWeights} from './calculateOutputSummedWeights';
 import {getSortedOptions} from './getSortedOptions';
@@ -13,7 +13,7 @@ const NUM_RANDOM_BOTTOM_OPTIONS = 20;
  * associated; if quality is BAD, then choose one of the worst associated.  Also return
  * the score for each returned value.
  * @param {array} selectedEmojis: the list of three emojis the user selected
- * @param {ChooseEffectsQuality} quality: whether we want good or bad scoring effects
+ * @param {EffectsQuality} quality: whether we want good or bad scoring effects
  * @returns {GeneratedEffect} an object containing the effects that were chosen, for example:
  * {
  *   "backgroundEffect": "sparkles",
@@ -23,7 +23,7 @@ const NUM_RANDOM_BOTTOM_OPTIONS = 20;
  */
 export function chooseEffects(
   selectedEmojis: string[],
-  quality: ChooseEffectsQuality
+  quality: EffectsQuality
 ): GeneratedEffect {
   const chosenEffects: GeneratedEffect = {
     [FieldKey.BACKGROUND_EFFECT]: '',
@@ -37,7 +37,7 @@ export function chooseEffects(
     // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
     const allSortedOptions = getSortedOptions(weightVector, mapping);
     const topOrBottomOptions =
-      quality === ChooseEffectsQuality.GOOD
+      quality === EffectsQuality.GOOD
         ? allSortedOptions.slice(0, NUM_RANDOM_TOP_OPTIONS)
         : allSortedOptions.slice(-NUM_RANDOM_BOTTOM_OPTIONS);
 
