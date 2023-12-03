@@ -67,14 +67,6 @@ type GeneratedEffects = {
   goodEffect?: GeneratedEffect;
 };
 
-type MetricsData = {
-  emojis: string[];
-  goodEffect?: GeneratedEffect;
-  mode: Mode;
-  currentToggle: Toggle;
-  generatingStep: number;
-};
-
 const aiBotBodyThinkImages = [
   aiBotBodyThink0,
   aiBotBodyThink1,
@@ -155,30 +147,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const aiOutput = useSelector(
     (state: {dance: DanceState}) => state.dance.aiOutput
   );
-
-  const metricsData = useRef<MetricsData>({
-    emojis: inputs,
-    generatingStep: generatingProgress.step,
-    mode,
-    currentToggle,
-    goodEffect: generatedEffects.current.goodEffect,
-  });
-
-  useEffect(() => {
-    metricsData.current = {
-      emojis: inputs,
-      generatingStep: generatingProgress.step,
-      mode,
-      currentToggle,
-      goodEffect: generatedEffects.current.goodEffect,
-    };
-  }, [
-    inputs,
-    generatingProgress.step,
-    mode,
-    currentToggle,
-    generatedEffects.current.goodEffect,
-  ]);
 
   const currentInputSlot = inputs.length;
   const selectedEmojis = useMemo(
@@ -317,52 +285,49 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     minMaxAssociations.current = calculateMinMax(inputs);
   }, [calculateMinMax, inputs]);
 
-  const startGenerating = useCallback(() => {
-    startAi();
-    setMode(Mode.GENERATING);
-  }, [startAi]);
-
   const handleGenerateClick = useCallback(() => {
+    startAi();
+
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-      emojis: metricsData.current.emojis,
+      emojis: inputs,
     });
 
-    startGenerating();
-  }, [startGenerating]);
+    setMode(Mode.GENERATING);
+  }, [startAi, inputs]);
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
   const handleStartOverClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_RESTARTED, {
-      emojis: metricsData.current.emojis,
+      emojis: inputs,
     });
 
     setInputs([]);
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setMode(Mode.SELECT_INPUTS);
-  }, []);
+  }, [inputs]);
 
   const handleRegenerateClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_REGENERATED, {
-      emojis: metricsData.current.emojis,
+      emojis: inputs,
     });
 
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    startGenerating();
-  }, [startGenerating]);
+    handleGenerateClick();
+  }, [handleGenerateClick, inputs]);
 
   const handleExplanationClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
-      emojis: metricsData.current.emojis,
+      emojis: inputs,
     });
 
     setGeneratedProgress(0);
     setExplanationProgress(0);
     setMode(Mode.EXPLANATION);
-  }, []);
+  }, [inputs]);
 
   const handleUseClick = useCallback(() => {
     if (!generatedEffects.current.goodEffect) {
@@ -370,8 +335,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       return;
     }
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_USED, {
-      emojis: metricsData.current.emojis,
-      ...metricsData.current.goodEffect,
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect,
     });
     const currentValue: AiFieldValue = {
       inputs,
@@ -384,18 +349,6 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const handleLeaveExplanation = useCallback(() => {
     setMode(Mode.RESULTS);
   }, []);
-
-  const handleOnClose = useCallback(() => {
-    const {emojis, mode, currentToggle, generatingStep} = metricsData.current;
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
-      emojis,
-      mode,
-      currentToggle,
-      generatingStep,
-    });
-
-    onClose();
-  }, [onClose]);
 
   // One-shot update of step & substep.
   const updateGeneratingProgress = useCallback(
@@ -484,8 +437,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const handleConvertBlocks = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED, {
-      emojis: metricsData.current.emojis,
-      ...metricsData.current.goodEffect,
+      emojis: inputs,
+      ...generatedEffects.current.goodEffect,
     });
 
     if (!generatedEffects.current.goodEffect) {
@@ -532,7 +485,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       // End modal.
       onClose();
     }
-  }, [currentAiModalField, onClose]);
+  }, [currentAiModalField, onClose, inputs]);
 
   const showUseButton =
     mode === Mode.RESULTS &&
@@ -595,12 +548,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
-      onClose={handleOnClose}
+      onClose={onClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
       <DanceAiModalHeader
-        onClose={handleOnClose}
+        onClose={onClose}
         handleStartOverClick={handleStartOverClick}
         selectedEmojis={selectedEmojis}
         slotCount={SLOT_COUNT}

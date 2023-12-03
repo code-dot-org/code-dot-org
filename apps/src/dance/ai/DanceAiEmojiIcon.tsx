@@ -1,11 +1,7 @@
 import React, {useCallback} from 'react';
 
 import EmojiIcon from './EmojiIcon';
-
-type AiModalItem = {
-  id: string;
-  emoji: string;
-};
+import {AiModalItem} from './types';
 
 interface DanceAiEmojiIconProps {
   item: AiModalItem;

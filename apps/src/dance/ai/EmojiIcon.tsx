@@ -2,13 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {getEmojiImageUrl} from './utils';
+import {AiModalItem} from './types';
 
 import moduleStyles from './dance-ai-modal.module.scss';
-
-type AiModalItem = {
-  id: string;
-  emoji: string;
-};
 
 interface EmojiIconProps {
   item: AiModalItem;
