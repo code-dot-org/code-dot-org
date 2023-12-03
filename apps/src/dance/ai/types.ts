@@ -60,8 +60,3 @@ export enum Toggle {
   EFFECT = 'effect',
   CODE = 'code',
 }
-
-export type AiModalItem = {
-  id: string;
-  emoji: string;
-};

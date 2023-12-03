@@ -25,7 +25,7 @@ import {
   chooseEffects,
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
-  getItem,
+  getDanceAiModalItem,
   getPreviewCode,
   getGeneratedEffectScores,
   getLabelMap,
@@ -150,7 +150,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
   const currentInputSlot = inputs.length;
   const selectedEmojis = useMemo(
-    () => inputs.map(getItem).filter(item => item !== undefined),
+    () => inputs.map(getDanceAiModalItem).filter(item => item !== undefined),
     [inputs]
   );
 

@@ -8,4 +8,5 @@ const itemsById: {[key: string]: DanceAiModelItem} =
     {}
   );
 
-export const getItem = (id: string): DanceAiModelItem => itemsById[id];
+export const getDanceAiModalItem = (id: string): DanceAiModelItem =>
+  itemsById[id];

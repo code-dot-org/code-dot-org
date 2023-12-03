@@ -7,7 +7,7 @@ export * from './getGeneratedEffectScores';
 export * from './getLabelMap';
 export * from './getPreviewCode';
 export * from './getRangeArray';
-export * from './getItem';
+export * from './getDanceAiModalItem';
 export * from './linearInterpolation';
 export * from './useInterval';
 export * from './validateAndSetFieldValue';

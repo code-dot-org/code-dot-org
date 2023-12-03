@@ -1,10 +1,10 @@
 import React, {useCallback} from 'react';
 
 import EmojiIcon from './EmojiIcon';
-import {AiModalItem} from './types';
+import {DanceAiModelItem} from './types';
 
 interface DanceAiEmojiIconProps {
-  item: AiModalItem;
+  item: DanceAiModelItem;
   handleItemClick: (itemId: string, isItemAvailable: boolean) => void;
   className?: string;
   isItemAvailable: boolean;

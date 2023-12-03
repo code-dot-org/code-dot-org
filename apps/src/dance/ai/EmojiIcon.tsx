@@ -2,12 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 
 import {getEmojiImageUrl} from './utils';
-import {AiModalItem} from './types';
+import {DanceAiModelItem} from './types';
 
 import moduleStyles from './dance-ai-modal.module.scss';
 
 interface EmojiIconProps {
-  item: AiModalItem;
+  item: DanceAiModelItem;
   onClick?: () => void;
   className?: string;
   isHighlighted?: boolean;
