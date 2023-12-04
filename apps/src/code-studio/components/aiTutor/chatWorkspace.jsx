@@ -8,9 +8,9 @@ import style from './ai-tutor.module.scss';
  * Renders the AI Tutor main chat workspace component.
  */
 const ChatWorkspace = () => {
-  const storedMessages = useSelector(state => state.aichat.chatMessages);
+  const storedMessages = useSelector(state => state.aiTutor.chatMessages);
   const isWaitingForChatResponse = useSelector(
-    state => state.aichat.isWaitingForChatResponse
+    state => state.aiTutor.isWaitingForChatResponse
   );
 
   const showWaitingAnimation = () => {

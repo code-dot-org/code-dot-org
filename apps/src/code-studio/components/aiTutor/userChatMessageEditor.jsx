@@ -1,7 +1,7 @@
 import React, {useState, useCallback} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import style from './ai-tutor.module.scss';
-import {submitChatMessage} from '@cdo/apps/aichat/redux/aichatRedux';
+import {submitChatMessage} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useSelector} from 'react-redux';
 
@@ -12,7 +12,7 @@ const UserChatMessageEditor = () => {
   const [userMessage, setUserMessage] = useState('');
 
   const isWaitingForChatResponse = useSelector(
-    state => state.aichat.isWaitingForChatResponse
+    state => state.aiTutor.isWaitingForChatResponse
   );
 
   const dispatch = useAppDispatch();
