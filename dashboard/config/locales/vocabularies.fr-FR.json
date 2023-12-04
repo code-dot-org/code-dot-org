@@ -1985,11 +1985,11 @@
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algorithme",
-          "definition": "une série d'étapes pour résoudre un problème ou prendre une décision"
+          "definition": "série d'étapes permettant de résoudre un problème ou de prendre une décision"
         },
         "network/how-ai-works/2023": {
           "word": "Réseau",
-          "definition": "Une collection d'objets connectés entre eux. Le fait de suivre ces connexions peut représenter les étapes d'un algorithme, comme un organigramme."
+          "definition": "Un regroupement d'éléments connectés entre eux. Le fait de suivre ces connexions peut correspondre aux étapes d'un algorithme, comme dans un organigramme."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Modèle linguistique étendu (LLM)",
