@@ -284,7 +284,7 @@ class ActiveSupport::TestCase
     expressions.zip(exps).each_with_index do |(code, e), i|
       error  = "#{code.inspect} didn't change"
       error  = "#{message}.\n#{error}" if message
-      assert_not_equal(before[i], e.call, error)
+      refute_equal(before[i], e.call, error)
     end
   end
 
@@ -356,7 +356,7 @@ class ActiveSupport::TestCase
   #   class MyTest < ActiveSupport::TestCase
   #     freeze_time
   #     #...
-  def self.freeze_time(time=nil)
+  def self.freeze_time(time = nil)
     time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
@@ -533,7 +533,7 @@ class ActionController::TestCase
     end
   end
 
-  def assert_sharing_meta_tags(opts={})
+  def assert_sharing_meta_tags(opts = {})
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />

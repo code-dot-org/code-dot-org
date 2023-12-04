@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -36,6 +36,7 @@ const ExpandedCurriculumCatalogCard = ({
   imageAltText,
   availableResources,
 }) => {
+  const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
       icon: 'circle-check',
@@ -67,8 +68,16 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < Object.keys(availableResources).length;
   };
 
+  useEffect(() => {
+    const yOffset =
+      expandedCardRef.current.getBoundingClientRect().top +
+      window.scrollY -
+      150;
+    window.scrollTo({top: yOffset, behavior: 'smooth'});
+  }, [expandedCardRef]);
+
   return (
-    <div>
+    <div ref={expandedCardRef}>
       <div
         className={`${style.arrowContainer} ${centererStyle.arrowContainer}`}
       />
@@ -111,7 +120,7 @@ const ExpandedCurriculumCatalogCard = ({
                           height="100%"
                           style={{border: 'none'}}
                           src={video}
-                          title=""
+                          title="Youtube embed"
                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
                         />
@@ -129,7 +138,7 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {Object.keys(availableResources).length > 0 && (
+                    {availableResources && (
                       <div>
                         <Heading4 visualAppearance="heading-xs">
                           {i18n.availableResources()}
@@ -138,7 +147,7 @@ const ExpandedCurriculumCatalogCard = ({
                         {resoucesOrder.map(
                           resource =>
                             availableResources[resource] && (
-                              <div>
+                              <div key={resource}>
                                 <BodyTwoText>
                                   {translatedAvailableResources[resource]}{' '}
                                 </BodyTwoText>
@@ -194,7 +203,7 @@ const ExpandedCurriculumCatalogCard = ({
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
                 {Object.keys(devices).map(device => (
-                  <div className={style.iconWithDescription}>
+                  <div key={device} className={style.iconWithDescription}>
                     <FontAwesome
                       icon={iconData[devices[device]].icon}
                       className={`fa-solid ${iconData[devices[device]].color}`}
@@ -226,7 +235,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={assignButtonOnClick}
+                  onClick={() => assignButtonOnClick('expanded-card')}
                   aria-label={assignButtonDescription}
                   text={i18n.assignToClassSections()}
                   style={{flex: 1}}
@@ -239,6 +248,7 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
+                  aria-label="Close Button"
                 />
               </div>
               <div className={style.relatedContainer} style={{display: 'none'}}>
@@ -261,10 +271,10 @@ ExpandedCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  professionalLearningProgram: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
   pathToCourse: PropTypes.string,
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,

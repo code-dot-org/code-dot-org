@@ -24,6 +24,7 @@ class Ability
       ProgrammingEnvironment, # see override below
       ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
+      Rubric,
       :reports,
       User,
       UserPermission,
@@ -63,7 +64,7 @@ class Ability
       Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
-      LearningGoalEvaluation
+      LearningGoalTeacherEvaluation
     ]
     cannot :index, Level
 
@@ -110,7 +111,7 @@ class Ability
 
       can :create, CodeReview do |code_review, project|
         code_review.user_id == user.id &&
-        project.owner_id == user.id
+          project.owner_id == user.id
       end
       can :edit, CodeReview, user_id: user.id
       can :index_code_reviews, Project do |project|
@@ -176,13 +177,13 @@ class Ability
             level_to_view.id
 
           if user != user_to_assume &&
-            !user_to_assume.student_of?(user) &&
-            can?(:code_review, user_to_assume) &&
-            CodeReview.open_reviews.find_by(
-              user_id: user_to_assume.id,
-              script_id: script_level.script_id,
-              project_level_id: project_level_id
-            )
+              !user_to_assume.student_of?(user) &&
+              can?(:code_review, user_to_assume) &&
+              CodeReview.open_reviews.find_by(
+                user_id: user_to_assume.id,
+                script_id: script_level.script_id,
+                project_level_id: project_level_id
+              )
             can_view_as_user_for_code_review = true
           end
         end
@@ -191,7 +192,13 @@ class Ability
       end
 
       if user.teacher?
-        can :manage, Section, user_id: user.id
+        can :manage, Section do |s|
+          s.instructors.include?(user)
+        end
+        can :destroy, SectionInstructor do |si|
+          can?(:manage, si.section) && si.instructor_id != si.section.user_id
+        end
+        can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
           user.students.include?(u)
@@ -211,7 +218,8 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
-        can :manage, LearningGoalEvaluation, teacher_id: user.id
+        can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
+        can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -284,7 +292,7 @@ class Ability
         can :report_csv, :peer_review_submissions
       end
 
-      if user.permission?(UserPermission::AI_CHAT_ACCESS)
+      if user.has_ai_tutor_access?
         can :chat_completion, :openai_chat
       end
     end
@@ -376,8 +384,8 @@ class Ability
     # levelbuilder permission will mimic levelbuilder_mode instead of production
     # by default.
     if user.persisted? &&
-      user.permission?(UserPermission::LEVELBUILDER) &&
-      (Rails.application.config.levelbuilder_mode || rack_env?(:test))
+        user.permission?(UserPermission::LEVELBUILDER) &&
+        (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
         SharedBlocklyFunction,
@@ -390,6 +398,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        Rubric,
         DataDoc,
         CourseOffering,
         UnitGroup,

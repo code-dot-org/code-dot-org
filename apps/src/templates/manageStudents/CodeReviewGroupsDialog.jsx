@@ -8,6 +8,7 @@ import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import {addDroppableIdToGroups} from '../codeReviewGroups/CodeReviewGroupsUtils';
 import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import fontConstants from '@cdo/apps/fontConstants';
 
 // Width taken from UI mocks (meant to fit in a minimum screen width of 1024px with some extra space)
 const DIALOG_WIDTH = 934;
@@ -170,11 +171,11 @@ const styles = {
     padding: 5,
   },
   successMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.level_perfect,
   },
   errorMessageContainer: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
   },
   button: {

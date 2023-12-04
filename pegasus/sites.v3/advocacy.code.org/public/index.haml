@@ -49,6 +49,16 @@ video_player: false
 
     .clear{style: "clear:both"}
 
+    .teach-ai-container
+      %img{src: "/images/teach-ai-logo.svg", alt: ""}
+      .teach-ai-text{style: "text-align: center"}
+        %p.heading-sm{style: "color: white;"}
+          =hoc_s(:teach_ai_title)
+        %p{style: "color: white; margin-bottom: 0"}
+          =hoc_s(:teach_ai_description)
+      %a.link-button.has-external-link{style: "flex: 0 0 auto;", href: "https://teachai.org/toolkit", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:teach_ai_button_label)
+
     %h2
       Drive the change in your state
 

@@ -65,7 +65,8 @@
 }
 
 .banner h1 {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-size: 36px;
   margin-top: 220px;
   margin-bottom: 10px;
@@ -100,4 +101,33 @@ h2 {
 #audienceblocks {
   text-align: center;
   margin-top: 0px;
+}
+
+.teach-ai-container {
+  background-color: #032D83;
+  margin: 3rem auto 4rem;
+  padding: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.teach-ai-container img {
+  width: 260px;
+}
+
+@media(max-width: 969px) {
+  .teach-ai-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .teach-ai-container p {
+    text-align: center;
+  }
+
+  .teach-ai-container img {
+    width: 60%;
+  }
 }

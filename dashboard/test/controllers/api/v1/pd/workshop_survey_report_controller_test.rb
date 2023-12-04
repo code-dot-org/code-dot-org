@@ -14,7 +14,7 @@ module Api::V1::Pd
 
     setup do
       @controller.stubs(:get_score_for_workshops)
-      AWS::S3.stubs(:download_from_bucket).returns(Hash[@workshop.course.to_sym, {}].to_json)
+      AWS::S3.stubs(:download_from_bucket).returns({@workshop.course.to_sym => {}}.to_json)
     end
 
     API = '/api/v1/pd/workshops'
@@ -73,7 +73,6 @@ module Api::V1::Pd
       assert_nil response_hash['all_my_teachercons']['things_facilitator_did_well']
     end
 
-    # TODO: remove this test when workshop_organizer is deprecated
     test 'teachercon survey report for program manager workshop organizer' do
       teachercon_1 = create :workshop, :teachercon, organizer: @program_manager, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10
       teachercon_2 = create :workshop, :teachercon, organizer: teachercon_1.organizer, num_facilitators: 2, num_sessions: 5, num_completed_surveys: 10

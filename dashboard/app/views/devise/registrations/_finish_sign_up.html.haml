@@ -1,4 +1,5 @@
 - require '../shared/middleware/helpers/experiments'
+- require 'policies/lti'
 - SignUpTracking.log_load_finish_sign_up session, (@user.provider || 'email')
 - require 'cpa'
 - require 'geocoder'
@@ -6,18 +7,26 @@
 - country_code = location&.country_code.to_s.upcase
 -# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
 - us_ip = ['US', 'RD'].include?(country_code)
-- @page_title = t('activerecord.attributes.user.finish_sign_up_header')
+- if @user.errors.any?
+  - @page_title = t('activerecord.attributes.user.finish_sign_up_header_error')
+- else
+  - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
+
   .row
     .span10.header
-      %h1= @page_title
+      %h1= t('activerecord.attributes.user.finish_sign_up_header')
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     .row
       .span10
         %p
-          - if @user.provider.present?
+          - if Policies::Lti.lti? @user
+            - issuer_url = Policies::Lti.issuer @user
+            - issuer = URI.parse(issuer_url).host
+            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer, email: @user.email, markdown: :inline).html_safe
+          - elsif @user.provider.present?
             - provider = t("auth.#{@user.provider}")
             = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: :inline).html_safe
           - else
@@ -27,31 +36,43 @@
     = f.hidden_field :locale, value: locale
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
-    .row
-      .span3.signup-field-label{:id => 'signup-select-user-type-label'}
-        = f.label :user_type, t('signup_form.user_type_label')
-        - if @user.errors[:user_type].present?
-          %p.error= t('activerecord.errors.messages.blank')
-      -# Sign-up user type variant
-      .span5{:id => 'select-user-type-variant'}
-        %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
-          %b.user-type-name= t('signup_form.user_type_student')
-          %p.user-type-desc= t('signup_form.user_type_student_desc')
-          %ul.user-type-abilities-unordered-list
-            %li= t('signup_form.user_type_student_ability_1')
-            %li= t('signup_form.user_type_student_ability_2')
-        %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
-          %b.user-type-name= t('signup_form.user_type_teacher')
-          %p.user-type-desc= t('signup_form.user_type_teacher_desc')
-          %ul.user-type-abilities-unordered-list
-            %li= t('signup_form.user_type_teacher_ability_1')
-            %li= t('signup_form.user_type_teacher_ability_2')
-            %li= t('signup_form.user_type_teacher_ability_3')
-            %li= t('signup_form.user_type_teacher_ability_4')
-      -# Sign-up user type original
-      .span5{:id => 'select-user-type-original'}
-        = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
-      .span2
+    - if @user.errors.any?
+      .row
+        .span8
+          .padded-container#sign_up_errors
+            .errors
+              %h4= t('activerecord.attributes.user.finish_sign_up_header_error')
+              %ul
+              - @user.errors.full_messages.each do |msg|
+                %li= msg
+
+    - if Policies::Lti.lti? @user
+      = f.hidden_field :user_type, value: @user.user_type
+    - else
+      .row
+        .span3.signup-field-label{:id => 'signup-select-user-type-label'}
+          = f.label :user_type, t('signup_form.user_type_label')
+          - if @user.errors[:user_type].present?
+            %p.error= t('activerecord.errors.messages.blank')
+        -# Sign-up user type variant
+        .span5{:id => 'select-user-type-variant'}
+          %button.select-user-type-student-button{id: 'select-user-type-student', type: 'button', onClick: 'selectUserTypeStudent()'}
+            %b.user-type-name= t('signup_form.user_type_student')
+            %p.user-type-desc= t('signup_form.user_type_student_desc')
+            %ul.user-type-abilities-unordered-list
+              %li= t('signup_form.user_type_student_ability_1')
+              %li= t('signup_form.user_type_student_ability_2')
+          %button.select-user-type-teacher-button{id: 'select-user-type-teacher', type: 'button', onClick: 'selectUserTypeTeacher()'}
+            %b.user-type-name= t('signup_form.user_type_teacher')
+            %p.user-type-desc= t('signup_form.user_type_teacher_desc')
+            %ul.user-type-abilities-unordered-list
+              %li= t('signup_form.user_type_teacher_ability_1')
+              %li= t('signup_form.user_type_teacher_ability_2')
+              %li= t('signup_form.user_type_teacher_ability_3')
+              %li= t('signup_form.user_type_teacher_ability_4')
+        -# Sign-up user type original
+        .span5{:id => 'select-user-type-original'}
+          = f.select :user_type, user_type_options, {include_blank: true}, {disabled: @user.should_disable_user_type?}
     .row#parent-email-container
       .span8#parent-email-section
         .padded-container

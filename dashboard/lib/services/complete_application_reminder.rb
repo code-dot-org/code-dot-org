@@ -45,9 +45,9 @@ class Services::CompleteApplicationReminder
     def incomplete_applications_with_email
       Pd::Application::TeacherApplication.
         where(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR, status: 'incomplete').
-          select do |app|
-            app.email.present?
-          end
+        select do |app|
+          app.email.present?
+        end
     end
 
     def most_recently_updated(application)

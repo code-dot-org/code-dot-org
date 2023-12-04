@@ -1,150 +1,260 @@
 require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/dashboard/curriculum_content/sync_in'
 
-class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
-  def test_performing
-    exec_seq = sequence('execution')
+describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
+  let(:described_class) {I18n::Resources::Dashboard::CurriculumContent::SyncIn}
+  let(:described_instance) {described_class.new}
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:serialize).in_sequence(exec_seq)
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:redact).in_sequence(exec_seq)
-
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.perform
+  around do |test|
+    DatabaseCleaner.start
+    FakeFS.with_fresh {test.call}
+    DatabaseCleaner.clean
   end
 
-  def test_serialization
-    exec_seq = sequence('execution')
-    expected_serialized_data = {expected: {expected_data: 'expected_data', unexpected_blank: {}}, unexpeted: 'unexpeted_data'}
-    script_serializer_mock = mock(as_json: mock(compact: expected_serialized_data))
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory/expected_script_name.json')
-
-    script = FactoryBot.build_stubbed(:script, is_migrated: true, name: 'expected_script_name')
-
-    ::Unit.expects(:find_each).in_sequence(exec_seq).yields(script)
-    ::ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
-
-    ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
-
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).in_sequence(exec_seq)
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).in_sequence(exec_seq)
-
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.serialize
+  it 'inherits from I18n::Utils::SyncInBase' do
+    assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  def test_serialization_of_not_migrated_script
-    script = FactoryBot.build_stubbed(:script, is_migrated: false, name: 'unmigrated')
+  describe '#translatable_units' do
+    let(:translatable_units) {described_instance.send(:translatable_units)}
 
-    ::Unit.expects(:find_each).once.yields(script)
-    ::ScriptConstants.expects(:i18n?).with(script.name).never
-    ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).never
+    let(:untranslatable_unit) {FactoryBot.create(:unit, name: 'untranslatable')}
+    let(:translatable_unit) {FactoryBot.create(:unit, name: 'translatable')}
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.serialize
+    before do
+      untranslatable_unit
+      translatable_unit
+    end
+
+    it 'returns only translatable Unit records' do
+      ScriptConstants.stub_const(:TRANSLATEABLE_UNITS, [translatable_unit.name]) do
+        assert_equal [translatable_unit.name], translatable_units.pluck(:name)
+      end
+    end
   end
 
-  def test_serialization_of_untranslatable_script
-    script = FactoryBot.build_stubbed(:script, is_migrated: true, name: 'untranslatable')
+  describe '#get_unit_subdirectory' do
+    let(:unit_subdirectory) {described_instance.send(:get_unit_subdirectory, unit)}
 
-    ::Unit.expects(:find_each).once.yields(script)
-    ::ScriptConstants.expects(:i18n?).with(script.name).once.returns(false)
-    ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).never
+    let(:course_version_key) {'expected-course-version-key'}
+    let(:course_offering_key) {'expected-course-offering-key'}
+    let(:unit_course_version) do
+      FactoryBot.build(
+        :course_version,
+        key: course_version_key,
+        course_offering: FactoryBot.build(
+          :course_offering,
+          key: course_offering_key
+        )
+      )
+    end
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.serialize
+    let(:unit_name) {'expected-unit-name'}
+    let(:unit) {FactoryBot.create(:unit, name: unit_name, course_version: unit_course_version)}
+
+    before do
+      Unit.stubs(:unit_in_category?).with('hoc', unit_name).returns(false)
+      unit.stubs(:csf?).returns(false)
+      unit.stubs(:csc?).returns(false)
+    end
+
+    it 'returns the unit subdirectory path based on course_version and course_offering keys' do
+      assert_equal "#{course_version_key}/#{course_offering_key}", unit_subdirectory
+    end
+
+    context 'when the unit is `csc`' do
+      before do
+        unit.expects(:csc?).returns(true)
+      end
+
+      it 'returns the csc unit subdirectory path' do
+        assert_equal "#{course_version_key}/csc", unit_subdirectory
+      end
+    end
+
+    context 'when the unit is `csf`' do
+      before do
+        unit.expects(:csf?).returns(true)
+      end
+
+      it 'returns the csf unit subdirectory path' do
+        assert_equal "#{course_version_key}/csf", unit_subdirectory
+      end
+    end
+
+    context 'when the init does not have a course version' do
+      let(:unit_course_version) {nil}
+
+      it 'returns subdirectory path for "other" units' do
+        assert_equal 'other', unit_subdirectory
+      end
+    end
+
+    context 'when the init in the "hoc" category' do
+      before do
+        Unit.expects(:unit_in_category?).with('hoc', unit_name).returns(true)
+      end
+
+      it 'returns subdirectory path for "Hour of Code" units' do
+        assert_equal 'Hour of Code', unit_subdirectory
+      end
+    end
   end
 
-  def test_serialization_of_script_with_blank_data
-    exec_seq = sequence('execution')
-    expected_serialized_data = {expected: {unexpected_blank: {}}, unexpeted: 'unexpeted_data'}
-    script_serializer_mock = mock(as_json: mock(compact: expected_serialized_data))
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory/expected_script_name.json')
+  describe '#redact_file_content' do
+    let(:redact_i18n_source_file_content) {described_instance.send(:redact_file_content, i18n_source_file_path)}
 
-    script = FactoryBot.build_stubbed(:script, is_migrated: true, name: 'expected_script_name')
+    let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/curriculum_content/test.json')}
+    let(:i18n_original_file_path) {CDO.dir('i18n/locales/original/curriculum_content/test.json')}
 
-    ::Unit.expects(:find_each).in_sequence(exec_seq).yields(script)
-    ::ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
-    ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
+    before do
+      FileUtils.mkdir_p File.dirname(i18n_source_file_path)
+      FileUtils.touch(i18n_source_file_path)
+    end
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).never.returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).never.returns(false)
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never
+    it 'creates the backup and then redact the i18n source file content' do
+      execution_sequence = sequence('execution')
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.serialize
+      I18nScriptUtils.expects(:copy_file).with(i18n_source_file_path, i18n_original_file_path).in_sequence(execution_sequence)
+
+      RedactRestoreUtils.
+        expects(:redact_file).
+        with(i18n_source_file_path, %w[resourceLink vocabularyDefinition]).
+        in_sequence(execution_sequence).
+        returns({'i18n_key' => 'redacted_i18n_val'})
+
+      redacted_i18n_source_file_content = <<~JSON.strip
+        {
+          "i18n_key": "redacted_i18n_val"
+        }
+      JSON
+      I18nScriptUtils.expects(:write_file).with(i18n_source_file_path, redacted_i18n_source_file_content).in_sequence(execution_sequence)
+
+      redact_i18n_source_file_content
+    end
   end
 
-  def test_serialization_of_script_with_unit_directory_changed_file
-    exec_seq = sequence('execution')
-    expected_serialized_data = {expected: {expected_data: 'expected_data', unexpected_blank: {}}, unexpeted: 'unexpeted_data'}
-    script_serializer_mock = mock(as_json: mock(compact: expected_serialized_data))
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory/expected_script_name.json')
+  describe '#process' do
+    let(:process_resource) {described_instance.send(:process)}
 
-    script = FactoryBot.build_stubbed(:script, is_migrated: true, name: 'expected_script_name')
+    let(:unit_name) {'expected_unit_name'}
+    let(:unit_is_migrated) {true}
+    let(:unit) {FactoryBot.build_stubbed(:unit, name: unit_name, is_migrated: unit_is_migrated)}
 
-    ::Unit.expects(:find_each).in_sequence(exec_seq).yields(script)
-    ::ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
+    let(:i18n_source_dir) {CDO.dir('i18n/locales/source/curriculum_content')}
+    let(:unit_subdirectory) {'expected_unit_subdirectory'}
+    let(:unit_file_name) {"#{unit_name}.json"}
+    let(:i18n_source_file_path) {File.join(i18n_source_dir, unit_subdirectory, unit_file_name)}
 
-    ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
+    let(:crowdin_serializer) {stub(as_json: unit_serialized_data)}
+    let(:translatable_units) do
+      translatable_units = [unit]
+      translatable_units.stubs(:find_each).yields(*translatable_units)
+      translatable_units
+    end
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never
+    let(:unit_serialized_data) do
+      {
+        'unit_key' => {
+          'i18n_key' => 'i18n_val',
+          'blank' => '',
+        }
+      }
+    end
+    let(:expected_i18n_source_file_content) do
+      <<~JSON.strip
+        {
+          "i18n_key": "i18n_val"
+        }
+      JSON
+    end
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.serialize
-  end
+    let(:expect_i18n_source_file_creation) do
+      I18nScriptUtils.expects(:write_file).with(i18n_source_file_path, expected_i18n_source_file_content)
+    end
+    let(:expect_i18n_source_file_redaction) do
+      described_instance.expects(:redact_file_content).with(i18n_source_file_path)
+    end
 
-  def test_redaction
-    exec_seq = sequence('execution')
-    expected_i18n_source_file_path = CDO.dir('i18n/locales/source/curriculum_content/test.json')
+    before do
+      described_instance.stubs(:translatable_units).returns(translatable_units)
 
-    Dir.expects(:[]).with(CDO.dir('i18n/locales/source/curriculum_content/**/*.json')).in_sequence(exec_seq).returns([expected_i18n_source_file_path])
+      Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.
+        stubs(:new).
+        with(unit, scope: {only_numbered_lessons: true}).
+        returns(crowdin_serializer)
 
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/original/curriculum_content')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(expected_i18n_source_file_path, CDO.dir('i18n/locales/original/curriculum_content/test.json')).in_sequence(exec_seq)
+      described_instance.stubs(:get_unit_subdirectory).with(unit).returns(unit_subdirectory)
+      I18nScriptUtils.stubs(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(false)
+    end
 
-    RedactRestoreUtils.expects(:redact_file).with(expected_i18n_source_file_path, %w[resourceLink vocabularyDefinition]).in_sequence(exec_seq).returns({expected: 'redacted_data'})
-    File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected": "redacted_data"\n}]).in_sequence(exec_seq)
+    it 'prepares the i18n source file' do
+      execution_sequence = sequence('execution')
 
-    I18n::Resources::Dashboard::CurriculumContent::SyncIn.redact
-  end
+      expect_i18n_source_file_creation.in_sequence(execution_sequence)
+      expect_i18n_source_file_redaction.in_sequence(execution_sequence)
 
-  def test_getting_subdirectory_of_hoc_category_script
-    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+      process_resource
+    end
 
-    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').once.returns(true)
+    context 'when the unit i18n data is blank' do
+      let(:unit_serialized_data) do
+        {
+          'unit_key' => {
+            'blank' => '',
+          }
+        }
+      end
 
-    assert_equal 'Hour of Code', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
-  end
+      it 'does not prepare the i18n source file' do
+        expect_i18n_source_file_redaction.never
 
-  def test_getting_subdirectory_of_script_without_course_version
-    exec_seq = sequence('execution')
-    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+        process_resource
 
-    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
-    script.expects(:get_course_version).in_sequence(exec_seq).returns({})
+        refute File.exist?(i18n_source_file_path)
+      end
+    end
 
-    assert_equal 'other', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
-  end
+    context 'when the unit i18n data is nil' do
+      let(:unit_serialized_data) do
+        {
+          'unit_key' => nil
+        }
+      end
 
-  def test_getting_subdirectory_of_csf_script
-    exec_seq = sequence('execution')
-    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+      it 'does not prepare the i18n source file' do
+        expect_i18n_source_file_redaction.never
 
-    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
-    script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key'))
-    script.expects(:csf?).in_sequence(exec_seq).returns(true)
+        process_resource
 
-    assert_equal 'expected_course_version_key/csf', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
-  end
+        refute File.exist?(i18n_source_file_path)
+      end
+    end
 
-  def test_getting_subdirectory_of_not_csf_script
-    exec_seq = sequence('execution')
-    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+    context 'when the unit directory is changed' do
+      before do
+        I18nScriptUtils.expects(:unit_directory_change?).with(i18n_source_dir, unit_file_name, i18n_source_file_path).returns(true)
+      end
 
-    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
-    script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key', course_offering: stub(key: 'expected_course_offering_key')))
-    script.expects(:csf?).in_sequence(exec_seq).returns(false)
+      it 'does not prepare the i18n source file' do
+        expect_i18n_source_file_redaction.never
 
-    assert_equal 'expected_course_version_key/expected_course_offering_key', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
+        process_resource
+
+        refute File.exist?(i18n_source_file_path)
+      end
+    end
+
+    context 'when the unit is not migrated' do
+      let(:unit_is_migrated) {false}
+
+      it 'does not prepare the i18n source file' do
+        expect_i18n_source_file_redaction.never
+
+        process_resource
+
+        refute File.exist?(i18n_source_file_path)
+      end
+    end
   end
 end

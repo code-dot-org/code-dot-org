@@ -11,7 +11,7 @@ layout: wide
 
 # Smjernice za kreiranje i slanje tutorijala i lekcija za Sat kodiranja™ i Sedmicu obrazovanja računarskih nauka
 
-Code.org domaćin je raznih aktivnosti, lekcija i videozapisa Hour of Code™ na web stranicama Code.org i Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org domaćin je raznih aktivnosti, lekcija i videozapisa Hour of Code™ na web stranicama Code.org i Hour of Code. Trenutna lista je na []({{ urls/learn }})hourofcode.com/learn.
 
 Želite li predati vlastiti vlastiti vodič, lekciju koju vodi nastavnik ili aktivnost robotike/proizvođača koja objašnjava princip računarske nauke? Pridružite se ovom globalnom pokretu i pomozite učesnicima širom svijeta da započnu sa satom koda ili krenu dalje s aktivnostima s više lekcija, dan-dugo ili sedmično.
 
@@ -46,7 +46,7 @@ Nekoliko savjeta:
 
 Ove aktivnosti su namijenjene studentima da se samostalno usmjeravaju kroz tutorial. Ne zahtijevaju puno nastave od nastavnika ili nastavnika.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Učiteljska lekcija ([primjer](https://studio.code.org/s/course1/lessons/2/levels/1), [predložak](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Sada kada su stotine hiljada edukatora isprobali Sat kodiranja, mnoge učionice su spremne za kreativnije aktivnosti koje podučavaju osnove informatike. Da bismo pomogli naprednijim nastavnicima da pronađu inspiraciju, prikupljamo i kuriramo lekcije i planove aktivnosti “vođenih nastavnicima” za veterane Sata kodiranja.
 
@@ -85,11 +85,11 @@ Cilj Sata kodiranja je da početnicima pruži pristupačan prvi ukus informatike
 
 Aktivnosti bi trebale podučavati koncept informatike kao što su petlje, uslovnici, enkripcija ili kako Internet funkcionira. Aktivnost također može podučavati o tome kako se računarska nauka povezuje sa zanimanjima iz stvarnog svijeta, događajima ili historijom. Na primjer, podučavanje UX dizajna za izradu aplikacija koje su značajne za publiku ili uzrok. Mi obeshrabrujemo aktivnosti koje se fokusiraju na sintaksu programiranja, a ne na koncepte. Na primjer, mi ćemo navesti, ali ne i istaknuti, aktivnosti koje podučavaju HTML. Slično tome, obeshrabrujemo lekcije blokiranja programiranja koje se fokusiraju na podešavanje/mijenjanje opcija konfiguracije, a ne na učenje modeliranja algoritma ili procesa.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktivnosti koje zahtijevaju instalaciju aplikacije, desktop aplikaciju ili doživljaje igraće konzole su u redu, ali nisu idealne. Nećemo popisati aktivnosti koje zahtijevaju prijavu ili plaćanje. (Aktivnosti robotike mogu zahtijevati kupovinu robotike.)
+*Tehnički zahtjevi:* Zbog širokog spektra postavki školske i učionice, najbolje su aktivnosti zasnovane na webu ili pametnim telefonima ili na drugi način unplugged-style aktivnosti koje podučavaju koncepte informatike bez upotrebe računara (vidi http://csunplugged.com/). [](http://csunplugged.com/) Aktivnosti koje zahtijevaju instalaciju aplikacije, desktop aplikaciju ili doživljaje igraće konzole su u redu, ali nisu idealne. Nećemo popisati aktivnosti koje zahtijevaju prijavu ili plaćanje. (Aktivnosti robotike mogu zahtijevati kupovinu robotike.)
 
 *Studentski (Self-vođeni) Format:* Originalni Sat kodiranja izgrađen je uglavnom na uspjehu samo-vođenih tutorijala ili lekcija, opcionalno olakšan od strane nastavnika. Postoji mnogo postojećih opcija, ali ako želite stvoriti novu, ove aktivnosti trebaju biti dizajnirane tako da mogu biti zabavne za učenika koji radi sam ili u učionici čiji nastavnik ima minimalnu prep ili CS pozadinu. Oni bi trebali pružiti upute za studente, za razliku od otvorenog satnog izazova. U idealnom slučaju, upute i vodiči integriraju se izravno u programsku platformu, kako bi se izbjeglo prebacivanje kartica ili prozora između vodiča i programske platforme.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Da biste dobili osjećaj širokog spektra vrsta vodiča i planova lekcija koje možete kreirati, posjetite stranicu [Sat aktivnosti koda.](https://hourofcode.com/us/learn)
 
 [**Nazad na vrh**](#top)
 
@@ -142,11 +142,11 @@ Ono što će vam trebati:
     * Unplugged
 * Snimak zaslona ili marketinška slika aktivnosti Sat koda. Pošaljite barem jednu sliku sa dimenzijama 4:3. Trebao bi biti najmanje 520px po 390px. Ova slika na sebi ne bi trebala imati tekst (osim vašeg logotipa), kako bi bila pristupačnija govornicima koji nisu engleski. Ako odgovarajuća slika nije pružena, možemo snimiti vlastiti snimak zaslona vašeg vodiča ILI možemo odlučiti da je ne nabrojamo. Sve slike moraju biti poslane kao URL link na .jpg, .jpeg ili .png.
 * Da bi preciznije pratili učešće, partneri udžbenika treće strane moraju uključiti slike za praćenje od 1 piksela na prvu stranicu svojih tutorijala za sat koda. Pogledajte odjeljak [Praćenje Pixel](#pixel) u nastavku za više detalja.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Po završetku aktivnosti, korisnici bi trebali biti usmjereni na [code.org/api/hour/finish gdje](https://code.org/api/hour/finish) će moći: 
     * Podijelite na društvenim mrežama da su završili Sat kodiranja
     * Primite potvrdu da su završili Sat kodiranja
     * Pogledajte tabele o tome koje zemlje/gradovi imaju najviše stope učešća u aktivnostima Hour of Code
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Za korisnike koji provode sat vremena na vašoj aktivnosti i ne dovršavaju je, uključite gumb na vašoj aktivnosti na kojem piše “Završio sam sa svojim Satom koda” koje se vraća i na [code.org/api/hour/finish](https://code.org/api/hour/finish) .
 * (Opcionalno) Možemo slijediti vezu putem internetske ankete/obrasca koja traži izvješće o sljedećim mjernim podacima aktivnosti: 
     * Za online aktivnosti (posebno aplikacije za pametne telefone/tablete): 
         * Broj korisnika
@@ -263,7 +263,7 @@ NAPOMENA: ovo nije važno učiniti za aplikacije koje se mogu instalirati (iOS/A
 
 Primjer praćenja piksela za Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Nazad na vrh**](#top)

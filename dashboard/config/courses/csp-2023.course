@@ -59,6 +59,16 @@
       }
     },
     {
+      "name": "Create PT Written Response Practice Opportunities",
+      "url": "https://docs.google.com/document/d/1MElyqUf08j_M69PDmeGianVGqWT3RyXhFEFHgxlU5RQ/edit?usp=sharing",
+      "key": "create_pt_callouts",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_callouts"
+      }
+    },
+    {
       "name": "Debugging",
       "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
       "key": "debugging",

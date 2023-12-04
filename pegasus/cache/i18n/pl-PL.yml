@@ -1228,6 +1228,7 @@ pl-PL:
   header_incubator: Inkubator
   header_learn: Ucz się
   header_legal: Prywatność i legalność
+  header_legal_cookie_notice: Informacja o plikach cookie
   header_legal_privacy: Polityka prywatności
   header_legal_tos: Regulamin
   header_my_dashboard: Mój pulpit
@@ -2718,30 +2719,14 @@ pl-PL:
     inicjatywą godzinnego wprowadzenia do informatyki, podejmowaną przez dziesiątki
     milionów uczniów w 180+ krajach. Weź udział w tej inicjatywie podczas Tygodnia
     Edukacji Informatycznej w dniach 7-13 grudnia.
-  volunteer_engineer_submission_intro_guide: Dowiedz się tutaj więcej o naszym <a
-    href="%{volunteer_guide}"> programie dla wolontariuszy</a>.
   volunteer_engineer_submission_intro_guide_markdown: Dowiedz się tutaj więcej o naszym  [programie
     dla wolontariuszy](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Czy jesteś nauczycielem poszukującym
-    wolontariusza? Odszukaj wolontariusza w okolicy na naszej <a href="%{volunteer_local}">
-    mapie wolontariuszy</a>.
   volunteer_engineer_submission_intro_links_markdown: Czy jesteś nauczycielem poszukującym
     wolontariuszy? Odszukaj wolontariusza w okolicy na naszej  [mapie wolontariuszy](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Nauczyciele byliby szczęśliwi mając
-    kogoś <span style="font-family: ''Gotham 7r'', sans-serif;">, pasjonata edukacji
-    informatycznej </span>, kto mógłby pomóc w klasie, lub kogoś, kto potrafi <span
-    style="font-family: ''Gotham 7r'', sans-serif;"> zainspirować</span> uczniów opowiadając
-    o szerokich możliwościach informatyki (na przykład za pośrednictwem wideo czatu).'
   volunteer_engineer_submission_intro_recruit_markdown: Nauczyciele byliby szczęśliwi
     mając kogoś , **pasjonata edukacji informatycznej**, kto mógłby pomóc w klasie,
     lub kogoś, kto potrafi  **zainspirować** uczniów opowiadając o szerokich możliwościach
     informatyki (na przykład za pośrednictwem wideo czatu).
-  volunteer_engineer_submission_intro_signup: Podaj następujące informacje, jeśli
-    jesteś studentem informatyki lub profesjonalnym programistą. Aby zarejestrować
-    się jako wolontariusz, musisz mieć co najmniej 18 lat. Pamiętaj, że wszystkie
-    pola, które wypełnisz w tej sekcji, będą dostępne dla każdego, kto przegląda <a
-    href="/volunteer/local"> mapę wolontariuszy</a>. Pola oznaczone <span class="form-required-field">*</span>
-    są wymagane.
   volunteer_engineer_submission_intro_signup_markdown: Podaj następujące informacje,
     jeśli jesteś studentem informatyki lub profesjonalnym programistą. Musisz mieć
     ukończone 18 lat i zgłosić się jako wolontariusz. Należy mieć na uwadze, że wszystkie

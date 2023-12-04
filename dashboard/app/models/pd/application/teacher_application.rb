@@ -367,7 +367,7 @@ module Pd::Application
 
     def workshop_present_if_required_for_status
       if regional_partner&.applications_decision_emails == RegionalPartner::SENT_BY_SYSTEM &&
-        WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
+          WORKSHOP_REQUIRED_STATUSES.include?(status) && !pd_workshop_id
         errors.add :status, "#{status} requires workshop to be assigned"
       end
     end

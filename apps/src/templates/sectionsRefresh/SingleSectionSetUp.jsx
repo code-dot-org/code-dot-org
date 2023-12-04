@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MultiSelectGroup from '@cdo/apps/templates/teacherDashboard/MultiSelectGroup';
 import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import moduleStyles from './sections-refresh.module.scss';
 import i18n from '@cdo/locale';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import Chips from '@cdo/apps/componentLibrary/chips';
 
 export default function SingleSectionSetUp({
   sectionNum,
@@ -23,7 +23,7 @@ export default function SingleSectionSetUp({
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
         <Heading2>{i18n.classSection()}</Heading2>
-        <label className={moduleStyles.typographyLabel}>
+        <label className={moduleStyles.typographyLabelTwo}>
           {i18n.className()}
           <input
             required
@@ -37,7 +37,7 @@ export default function SingleSectionSetUp({
       </div>
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
-          <MultiSelectGroup
+          <Chips
             label={i18n.chooseGrades()}
             name="grades"
             required={true}

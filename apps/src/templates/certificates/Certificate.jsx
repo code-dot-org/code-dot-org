@@ -3,12 +3,19 @@ import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from '../BackToFrontConfetti';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';
 import LargeChevronLink from './LargeChevronLink';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import style from './congrats.module.scss';
+import {
+  BodyTwoText,
+  BodyThreeText,
+  Heading1,
+  Heading2,
+  Heading3,
+} from '@cdo/apps/componentLibrary/typography';
 
 /**
  * Without this, we get an error on the server "invalid byte sequence in UTF-8".
@@ -94,6 +101,10 @@ function Certificate(props) {
     return `/certificates/${encoded}`;
   };
 
+  const getExternalCertificateSharePath = () => {
+    return `${window.location.origin}${getCertificateSharePath()}`;
+  };
+
   const {
     responsiveSize,
     tutorial,
@@ -110,18 +121,19 @@ function Certificate(props) {
     ? personalizedCertificate
     : initialCertificateImageUrl;
   const certificateShareLink = getCertificateSharePath();
+  const externalCertificateShareLink = getExternalCertificateSharePath();
   const desktop =
     responsiveSize === ResponsiveSize.lg ||
     responsiveSize === ResponsiveSize.md;
-  const headingStyle = desktop ? styles.heading : styles.mobileHeading;
-  const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
+  const headingStyle = desktop ? style.heading : style.mobileHeading;
+  const certificateStyle = desktop ? style.desktopHalf : style.mobileFull;
 
   const facebook = queryString.stringify({
-    u: certificateShareLink,
+    u: externalCertificateShareLink,
   });
 
   const twitter = queryString.stringify({
-    url: certificateShareLink,
+    url: externalCertificateShareLink,
     related: 'codeorg',
     text: randomDonorTwitter
       ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
@@ -131,53 +143,73 @@ function Certificate(props) {
   const print = getPrintPath();
 
   return (
-    <div style={styles.container}>
-      <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
+    <div className={style.container}>
+      <div className={style.headerContainer}>
+        <Heading1 className={`${headingStyle} ${style.header}`}>
+          {i18n.congratsCertificateHeading()}
+        </Heading1>
+      </div>
       {tutorial && (
         <LargeChevronLink
           link={`/s/${tutorial}`}
           linkText={i18n.backToActivity()}
         />
       )}
-      <div id="uitest-certificate" style={certificateStyle}>
-        <BackToFrontConfetti active={personalized} style={styles.confetti} />
-        <a href={certificateShareLink}>
-          <img src={imgSrc} />
-        </a>
-      </div>
-      <div style={certificateStyle}>
-        {tutorial && !personalized && (
-          <div>
-            <h2>{i18n.congratsCertificatePersonalize()}</h2>
-            <input
-              id="name"
-              type="text"
-              style={styles.nameInput}
-              placeholder={i18n.yourName()}
-              ref={nameInputRef}
-            />
-            <button
-              type="button"
-              style={styles.submit}
-              onClick={personalizeCertificate.bind(this, certificateId)}
-            >
-              {i18n.submit()}
-            </button>
-          </div>
-        )}
-        {tutorial && personalized && (
-          <div>
-            <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
-            <p>{i18n.congratsCertificateContinue()}</p>
-          </div>
-        )}
-        <h2>{i18n.congratsCertificateShare()}</h2>
-        <SocialShare
-          facebook={facebook}
-          twitter={twitter}
-          print={print}
-          under13={under13}
-        />
+      <div className={style.certificateContainer}>
+        <div id="uitest-certificate" className={certificateStyle}>
+          <BackToFrontConfetti
+            active={personalized}
+            className={style.confetti}
+          />
+          <a href={certificateShareLink}>
+            <img src={imgSrc} />
+          </a>
+        </div>
+        <div className={`${certificateStyle} ${style.inputContainer}`}>
+          {tutorial && !personalized && (
+            <div>
+              <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
+              <BodyThreeText className={style.enterName}>
+                {i18n.enterYourName()}
+              </BodyThreeText>
+              <div className={style.inputButtonContainer}>
+                <input
+                  id="name"
+                  type="text"
+                  className={style.nameInput}
+                  placeholder={i18n.yourName()}
+                  ref={nameInputRef}
+                />
+                <button
+                  type="button"
+                  className={style.submit}
+                  onClick={personalizeCertificate.bind(this, certificateId)}
+                >
+                  {i18n.submit()}
+                </button>
+              </div>
+            </div>
+          )}
+          {tutorial && personalized && (
+            <div>
+              <Heading2>
+                <div id="uitest-thanks">{i18n.congratsCertificateThanks()}</div>
+              </Heading2>
+              <BodyTwoText>{i18n.congratsCertificateContinue()}</BodyTwoText>
+            </div>
+          )}
+          <hr />
+          <Heading3>{i18n.congratsCertificateShare()}</Heading3>
+          <BodyThreeText>
+            {i18n.congratsCertificateShareMessage()}
+          </BodyThreeText>
+          <SocialShare
+            facebook={facebook}
+            twitter={twitter}
+            print={print}
+            under13={under13}
+          />
+        </div>
       </div>
       {children}
     </div>
@@ -194,39 +226,6 @@ Certificate.propTypes = {
   children: PropTypes.node,
   initialCertificateImageUrl: PropTypes.string.isRequired,
   isHocTutorial: PropTypes.bool,
-};
-
-const styles = {
-  heading: {
-    width: '100%',
-  },
-  container: {
-    marginBottom: 50,
-    float: 'left',
-  },
-  mobileHeading: {
-    fontSize: 24,
-    lineHeight: 1.5,
-  },
-  desktopHalf: {
-    width: '50%',
-    float: 'left',
-  },
-  mobileFull: {
-    width: '100%',
-    float: 'left',
-  },
-  nameInput: {
-    height: 32,
-    margin: 0,
-  },
-  submit: {
-    background: color.orange,
-    color: color.white,
-  },
-  confetti: {
-    top: 100,
-  },
 };
 
 export default connect(state => ({

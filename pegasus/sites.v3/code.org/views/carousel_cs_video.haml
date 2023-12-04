@@ -1,0 +1,23 @@
+- video_cs_index = 9
+- video_cs_id = ["meow_wolf", "mbari", "nasa", "tanium", "instagram", "microsoft", "facebook", "google", "electronic_arts"]
+- video_cs_caption = [hoc_s(:video_library_page_cs_video_title_1), hoc_s(:video_library_page_cs_video_title_6), hoc_s(:video_library_page_cs_video_title_2), hoc_s(:video_library_page_cs_video_title_7), hoc_s(:video_library_page_cs_video_title_3), hoc_s(:video_library_page_cs_video_title_8),
+hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_title_8), hoc_s(:video_library_page_cs_video_title_5), hoc_s(:video_library_page_cs_video_title_9)]
+- video_cs = ["dhvQ7L5UScs", "FBTWICxTG08", "2uXTNK9W-gQ", "IRMWwc9gfns", "t0-Z_LfGwUM", "EUF2mad21jo", "suJZ9z426P0",  "RfbbDgx6l1g", "tTSEFaYjV30"]
+
+.carousel-wrapper#cs_works_collection
+  .carousel.cs_works_collection
+    .slides
+      - video_cs_index.times do |index|
+        .slide
+          .video-wrapper.video-wrapper--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_cs_id[index], video_code: video_cs[index], play_button: 'center', letterbox: 'false', caption: video_cs_caption[index]
+
+  .pagination
+    #cs_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_7
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_7
+      %img{src: "/images/carousel/next.svg", alt: "next"}

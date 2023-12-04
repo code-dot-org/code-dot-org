@@ -1,6 +1,5 @@
 - facebook ||= nil
 - twitter ||= nil
-- tumblr ||= nil
 - instagram ||= nil
 
 - unless facebook.nil?
@@ -10,10 +9,6 @@
 - unless twitter.nil?
   %a{href: "https://twitter.com/#{twitter}", target: "_blank"}
     %i.fa.fa-twitter.fa-lg
-  &nbsp; &nbsp;
-- unless tumblr.nil?
-  %a{href: "#{tumblr}", target: "_blank"}
-    %i.fa.fa-tumblr.fa-lg
   &nbsp; &nbsp;
 - unless instagram.nil?
   %a{href: "https://www.instagram.com/#{instagram}", target: "_blank"}

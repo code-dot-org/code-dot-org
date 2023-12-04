@@ -1,11 +1,11 @@
 name 'CSA U6L6-L8_2023'
 title 'Check for Understanding'
 
-right '`mystery("no");`'
+right '`mystery("noon");`'
 wrong '`mystery("on");`'
 wrong '`mystery("nnoo");`'
 wrong '`mystery("nono");`'
-wrong '`mystery("noon");`'
+wrong '`mystery("no");`'
 
 allow_multiple_attempts true
 
@@ -34,5 +34,5 @@ In the method, a new `String` variable `temp` is initialized to an empty `String
 
 Finally, the method checks if the resulting `temp` is equal to the original `str` using the `equals()` method. If the two `String`s are equal, the method returns `true`. Otherwise, it returns `false`.
 
-In option A, the input string `"no"` is a palindrome, because it is the same forwards and backwards. When the `mystery()` method is called with this input, it will correctly reverse the `String` and return `true`, because `temp` and `str` are equal. In the other options, the input `String`s are not palindromes and therefore the `mystery()` method will return `false`.
+In option A, the input string `"noon"` is a palindrome, because it is the same forwards and backwards. When the `mystery()` method is called with this input, it will correctly reverse the `String` and return `true`, because `temp` and `str` are equal. In the other options, the input `String`s are not palindromes and therefore the `mystery()` method will return `false`.
 MARKDOWN

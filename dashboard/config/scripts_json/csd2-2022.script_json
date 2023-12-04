@@ -34,13 +34,16 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "supported_locales": [
+        "it-IT"
+      ],
       "tts": true,
       "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-04-03 14:13:25 UTC",
+    "serialized_at": "2023-08-31 17:36:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12412,6 +12415,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

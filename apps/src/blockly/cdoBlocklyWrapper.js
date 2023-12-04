@@ -1,8 +1,14 @@
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
-import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
+import {getStore} from '@cdo/apps/redux';
+import {setHasIncompatibleSources} from '../redux/blockly';
+import * as blockUtils from '../block_utils';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -248,10 +254,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     loadBlocksToWorkspace(blockSpace, source) {
       const isXml = stringIsXml(source);
       if (!isXml) {
-        console.warn(
-          `Source string was JSON. Use Version History to recover a working version of this project.`,
-          `This likely occurred by opening a project that was last saved with Google Blockly.`
-        );
+        getStore().dispatch(setHasIncompatibleSources(true));
         source = '';
       }
       Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
@@ -332,6 +335,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     partitionBlocksByType() {
       // Google Blockly only. Used to load/render certain block types before others.
+    },
+    appendSharedFunctions(blocksXml, functionsXml) {
+      return blockUtils.appendNewFunctions(blocksXml, functionsXml);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;

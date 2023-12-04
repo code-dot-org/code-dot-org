@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -202,7 +203,7 @@ const styles = {
     minHeight: 30,
     fontSize: 16,
     lineHeight: '25px',
-    fontFamily: '"Gotham 5r"',
+    ...fontConstants['main-font-semi-bold'],
     color: color.teal,
     marginBottom: 10,
     marginLeft: MARGIN,

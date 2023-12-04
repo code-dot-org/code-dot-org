@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-30 22:06:08 UTC",
+    "serialized_at": "2023-11-08 15:55:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1160,7 +1160,13 @@
       "key": "9bff3697-6a50-4733-8524-532f782875c4",
       "position": 2,
       "properties": {
-        "progression_name": "App Development Activity"
+        "progression_name": "App Development Activity",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Explain how the use of procedural abstraction manages complexity in a program.*\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit#slide=id.g245f5bd1dc2_0_0)\n\n**Sample Response for Instructors**"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9bff3697-6a50-4733-8524-532f782875c4",
@@ -1789,7 +1795,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n"
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n\n**Extension Opportunities:** Levels 1 and 2: Students can add additional features to the two apps in levels 1 and 2 using the library functions made available.\n"
           }
         ]
       },
@@ -1799,8 +1805,24 @@
       }
     },
     {
-      "key": "93b3de83-7181-42c4-9d8b-366dd792b579",
+      "key": "8c357cee-1c8c-4670-a3ef-0f3de6ca9e1a",
       "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Compare the original, unmodified algorithm with the algorithm that you have modified. Clearly explain what you have changed, why you made those changes, and how it affects the program as a whole.</i>\n\nAny of investigate lessons from U4,  U6, and U7 should work well for algorithmic comparison. [Level 1](https://studio.code.org/s/csp7-2023/lessons/7/levels/1) would make an excellent choice here. The template provided below will work for any place where students are asked to interpret and modify code.\n\n<a href=\"https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit#slide=id.g22e15123a99_0_388\">Sample Writing Template for Algorithm Comparison</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8c357cee-1c8c-4670-a3ef-0f3de6ca9e1a",
+        "lesson_activity.key": "e7baa204-ea22-4177-a159-d973d92f7332"
+      }
+    },
+    {
+      "key": "93b3de83-7181-42c4-9d8b-366dd792b579",
+      "position": 5,
       "properties": {
         "progression_name": "Using Libraries"
       },
@@ -1811,7 +1833,7 @@
     },
     {
       "key": "bea52ab0-c3a5-47b4-b0f2-7dfe5fde3827",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n\n**Levels 3-5 Debugging Libraries:** Students practice debugging code that will be used in a library before sending it to a classmate. This is useful help before the project in the next lesson where students will develop a library.\n\n* Level 3: Students debug a simple library for manipulating numbers\n* Level 4: Students debug a simple library for manipulating strings\n* Level 5: Students debug and finish writing a simple library for manipulating strings\n\n",
         "tips": [
@@ -1828,15 +1850,9 @@
     },
     {
       "key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "progression_name": "Testing Libraries",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Extension Opportunities:** Levels 1 and 2: Students can add additional features to the two apps in levels 1 and 2 using the library functions made available."
-          }
-        ]
+        "progression_name": "Testing Libraries"
       },
       "seeding_key": {
         "activity_section.key": "fdcb0d2a-0a76-40f2-be08-7caf860558b7",
@@ -2155,6 +2171,22 @@
       },
       "seeding_key": {
         "activity_section.key": "a2265c8b-e1a8-4cc8-a3ae-50f21f4a4135",
+        "lesson_activity.key": "7df9dd2c-655a-49ab-b480-99bfc165feea"
+      }
+    },
+    {
+      "key": "fd94a680-9fbe-4f8f-932b-4218479d4c79",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Analyze one of the functions (procedures) that you have written for your library. Describe two calls to the selected function. Each call must pass different arguments (inputs) that cause a different segment of code in the algorithm to execute. Then, describe what condition(s) is being tested by each call to the procedure. Finally, identify the result (output) of each call.\n</i>\n\n\n<a href=\"https://docs.google.com/document/d/1EO9J47qre36SGGWm-ohnXCapV2V_8fbMYLbPZv1fI74/edit?usp=sharing\">Make a Library Project Step 8:  Free Response</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd94a680-9fbe-4f8f-932b-4218479d4c79",
         "lesson_activity.key": "7df9dd2c-655a-49ab-b480-99bfc165feea"
       }
     },
@@ -4711,6 +4743,20 @@
         "lesson.key": "Libraries Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.J.1"
       }
     },
     {

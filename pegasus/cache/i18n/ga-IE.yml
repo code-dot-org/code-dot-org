@@ -2473,32 +2473,15 @@ ga-IE:
     gluaiseacht dhomhanda le rún na milliúin dalta ar fud an domhain a spreagadh chun
     triail a bhaint as an ríomheolaíocht. Glac páirt le linn Seachtain na Ríomheolaíochta,
     7-13 Mí na Nollag.
-  volunteer_engineer_submission_intro_guide: Faigh tuilleadh eolais faoi <a href="%{volunteer_guide}">oibriú
-    deonach anseo</a>.
   volunteer_engineer_submission_intro_guide_markdown: Gheobhaidh tú tuilleadh eolais
     faoi obair dheonach [anseo](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: An múinteoir thú? An bhfuil tú ag lorg
-    cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an <a href="%{volunteer_local}">léarscáil</a>
-    atá againn.
   volunteer_engineer_submission_intro_links_markdown: An múinteoir thú? An bhfuil
     tú ag lorg cúnaimh ó shaorálaí? Cuardaigh na saorálaithe go léir ar an [léarscáil](%{volunteer_local})
     atá againn.
-  volunteer_engineer_submission_intro_recruit: 'Ba bhreá le go leor múinteoirí dul
-    i dteagmháil le saorálaí atá <span style="font-family: ''Gotham 7r'', sans-serif;">díograiseach
-    i dtaobh na ríomheolaíochta</span> chun cabhrú sa seomra ranga, nó a bheadh in
-    ann <span style="font-family: ''Gotham 7r'', sans-serif;">daltaí a spreagadh</span>
-    faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí
-    fhíschomhrá).'
   volunteer_engineer_submission_intro_recruit_markdown: Ba bhreá le go leor múinteoirí
     dul i dteagmháil le saorálaí atá **díograiseach i dtaobh na ríomheolaíochta**
     chun cabhrú sa seomra ranga, nó a bheadh in ann daltaí a **spreagadh** faoi na
     rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí fhíschomhrá).
-  volunteer_engineer_submission_intro_signup: Líon isteach na réimsí seo a leanas
-    más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Ní mór duit
-    a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair faoi
-    deara go mbeidh na sonraí a chuireann tú isteach sa rannán seo ar fáil go poiblí
-    d'aon duine ag féachaint ar <a href="/volunteer/local">léarscáil na saorálaithe</a>.
-    Tá na réimsí marcáilte le <span class="form-required-field">*</span> riachtanach.
   volunteer_engineer_submission_intro_signup_markdown: Líon isteach na réimsí seo
     a leanas más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú.
     Ní mór duit a bheith ar a laghad 18 mbliana d'aois chun clárú mar shaorálaí. Tabhair

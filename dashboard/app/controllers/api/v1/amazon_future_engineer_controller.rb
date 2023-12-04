@@ -96,8 +96,8 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
 
   private def submit_params
     params.require(:amazon_future_engineer).
-           permit(*PERMITTED_PARAMETERS).
-           tap {|p| p.require(REQUIRED_PARAMETERS)}
+      permit(*PERMITTED_PARAMETERS).
+      tap {|p| p.require(REQUIRED_PARAMETERS)}
   end
 
   private def to_bool(val)

@@ -86,3 +86,19 @@
     }
   }
 }
+
+.computer-vision {
+  figure {
+    background: url("/images/ai/ai-curriculum-computer-vision.png") center no-repeat;
+    background-size: cover;
+    height: auto;
+
+    @media screen and (max-width: $width-md) {
+      height: 420px;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      height: 185px;
+    }
+  }
+}

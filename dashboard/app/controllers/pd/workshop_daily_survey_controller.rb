@@ -310,7 +310,7 @@ module Pd
       return true
     end
 
-    def get_foorm_survey_data(workshop, day=nil, workshop_agenda=nil)
+    def get_foorm_survey_data(workshop, day = nil, workshop_agenda = nil)
       facilitator_data = workshop.facilitators.each_with_index.map do |facilitator, i|
         {
           Pd::WorkshopSurveyFoormConstants::FACILITATOR_ID => facilitator.id,
