@@ -166,8 +166,6 @@ Feature: Curriculum Catalog Page
     And I click selector "a:contains(Facilitator led workshops)"
     Then I wait for jquery to load
     And I wait until current URL contains "/professional-development-workshops"
-    
-
 
   # Expanded Card Assign button scenarios
   Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
@@ -183,9 +181,8 @@ Feature: Curriculum Catalog Page
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
-
     And I click selector "[aria-label='View details about AI for Oceans']"
-    And I wait until element  "button:contains(Assign to class sections)" is not visible
+    And I wait until element "span:contains(Assign to class sections)" is not visible
 
   Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
     Given I create a teacher named "Teacher Tom"
