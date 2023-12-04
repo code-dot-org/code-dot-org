@@ -124,6 +124,7 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
   DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_VALIDATION: 'Dance Party Validation',
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
