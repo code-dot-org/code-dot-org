@@ -3,7 +3,10 @@
  * Copyright 2020 Google LLC
  * SPDX-License-Identifier: Apache-2.0
  *
- * This file is sourced from @blockly/block-plus-minus
+ * This file is based on code originally part of @blockly/block-plus-minus
+ * Modifications:
+ * - A minus field is added to else statements when created and on load
+ * - The plus field adds an else statement unless one already exists
  */
 
 /**
@@ -53,9 +56,9 @@ const controlsIfMutator = {
     const targetCount = parseInt(xmlElement.getAttribute('elseif'), 10) || 0;
     this.hasElse_ = !!parseInt(xmlElement.getAttribute('else'), 10) || 0;
     if (this.hasElse_ && !this.getInput('ELSE')) {
-      this.appendStatementInput('ELSE').appendField(
-        GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE']
-      );
+      this.appendStatementInput('ELSE')
+        .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
+        .appendField(createMinusField(), 'MINUS_ELSE');
     }
     this.updateShape_(targetCount);
   },
@@ -89,9 +92,9 @@ const controlsIfMutator = {
     const targetCount = state['elseIfCount'] || 0;
     this.hasElse_ = state['hasElse'] || false;
     if (this.hasElse_ && !this.getInput('ELSE')) {
-      this.appendStatementInput('ELSE').appendField(
-        GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE']
-      );
+      this.appendStatementInput('ELSE')
+        .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
+        .appendField(createMinusField(), 'MINUS_ELSE');
     }
     this.updateShape_(targetCount);
   },
@@ -116,21 +119,37 @@ const controlsIfMutator = {
    * Callback for the plus field. Adds an else-if input to the block.
    */
   plus: function () {
-    this.addElseIf_();
+    if (this.hasElse_) {
+      this.addElseIf_();
+    } else {
+      this.addElse_();
+    }
   },
 
   /**
    * Callback for the minus field. Triggers "removing" the input at the specific
    * index.
    * @see removeInput_
-   * @param {number} index The index of the else-if input to "remove".
+   * @param {number} index The index of the else-if input to "remove". Undefined for else input.
    * @this {GoogleBlockly.Block}
    */
   minus: function (index) {
-    if (this.elseIfCount_ === 0) {
+    if ((index && this.elseIfCount_ === 0) || (!index && !this.hasElse_)) {
       return;
     }
-    this.removeElseIf_(index);
+    index ? this.removeElseIf_(index) : this.removeElse_();
+  },
+
+  /**
+   * Adds an else statement input to the bottom of the block.
+   * @this {GoogleBlockly.Block}
+   * @private
+   */
+  addElse_: function () {
+    this.appendStatementInput('ELSE')
+      .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
+      .appendField(createMinusField(), 'MINUS_ELSE');
+    this.hasElse_ = true;
   },
 
   /**
@@ -156,6 +175,16 @@ const controlsIfMutator = {
     if (this.getInput('ELSE')) {
       this.moveInputBefore('ELSE', /* put at end */ null);
     }
+  },
+
+  /**
+   * Removes the else statement from the bottom of the block
+   * @this {GoogleBlockly.Block}
+   * @private
+   */
+  removeElse_: function (index = undefined) {
+    this.removeInput('ELSE');
+    this.hasElse_ = false;
   },
 
   /**
