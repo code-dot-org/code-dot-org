@@ -32,6 +32,8 @@ es:
             '2.00': grande
             '3.00': extra grande
         text: configurar el tamaño de {SPRITE} a {SIZE}
+      Dancelab_ai:
+        text: "{IMAGE} genera efecto {VALUE} "
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -627,6 +629,7 @@ es:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Florecimiento
             '"circles"': Túnel
             '"clouds"': Nubes
             '"color_cycle"': Colores
@@ -635,6 +638,7 @@ es:
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
+            '"frosted_grid"': Marco de hielo
             '"galaxy"': Espacio
             '"growing_stars"': Estrellas crecientes
             '"kaleidoscope"': Caleidoscopio
@@ -656,17 +660,27 @@ es:
             '"swirl"': Hipnótico
             '"text"': Título de la canción
           PALETTE:
+            '"autumn"': Otoño
             '"cool"': Azules
             '"default"': Luz
             '"electronic"': Música electrónica
+            '"grayscale"': Escala de grises
             '"iceCream"': Helado
             '"neon"': Neón
             '"ocean"': Océano
             '"rainbow"': Arcoíris
             '"rave"': Blanco y negro
+            '"roses"': Rosas
+            '"sky"': Cielo
+            '"spring"': Primavera
+            '"summer"': Verano
+            '"sunrise"': Salida del sol
+            '"sunset"': Puesta del sol
             '"tropical"': Tropical
+            '"twinkling"': Parpadeante
             '"vintage"': Vintage
             '"warm"': Rojos
+            '"winter"': Invierno
         text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:

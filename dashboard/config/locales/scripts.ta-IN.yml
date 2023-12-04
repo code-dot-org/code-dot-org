@@ -1233,6 +1233,14 @@ ta:
               display_name: அத்தியாயம் 2
             lessonGroup-4:
               display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
+            lessonGroup-4:
+              display_name: பயன்பாட்டு ஆய்வகத்திற்கு அறிமுகம்
         csdu6-playground:
           description_short: CSD U6 விளையாட்டு மைதானம். கேள்விகளுக்கு டான் ஷ்னீடரைப்
             பார்க்கவும்
