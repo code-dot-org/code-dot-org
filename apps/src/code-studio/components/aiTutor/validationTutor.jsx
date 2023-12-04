@@ -67,7 +67,7 @@ const ValidationTutor = ({levelId}) => {
             isPending={isWaitingForAIResponse}
             pendingText="waiting"
             onClick={() => handleSend(studentCode)}
-            disabled={enableAskAITutor}
+            disabled={!enableAskAITutor}
           />
           <p id="ai-response">{aiResponse}</p>
         </>
