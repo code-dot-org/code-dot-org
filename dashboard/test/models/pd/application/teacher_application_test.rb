@@ -650,7 +650,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        will_teach: 'Yes',
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],

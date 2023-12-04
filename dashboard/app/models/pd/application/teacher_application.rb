@@ -700,6 +700,7 @@ module Pd::Application
           end
         end
 
+        # If the applicant will teach the course, we require extra information
         if hash[:will_teach] == 'Yes'
           if hash[:program] == PROGRAMS[:csd]
             required << :csd_which_grades
