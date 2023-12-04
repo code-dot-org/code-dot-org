@@ -13,6 +13,34 @@ Feature: Hamburger dropdown
     And I see no difference for "Hamburger Menu: English Signed-out"
     And I close my eyes
 
+  @eyes_mobile
+  Scenario: Signed-out user sees Teach, About and Legal dropdowns in hamburger
+    Given I am on "http://code.org/"
+    And I open my eyes to test "Hamburger Dropdowns in English Signed-out"
+    And I rotate to portrait
+    And I wait for 0.5 seconds
+    Then I wait until element "#hamburger-icon" is visible
+    And I scroll the "#hamburger-icon" element into view
+    And I click selector "#hamburger-icon"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    Then I scroll the "#educate-overview" element into view
+    And I see no difference for "Teach Entries Mobile Part 1 Hamburger Menu: English Signed-out"
+    Then I scroll the "a:contains(Online Community)" element into view
+    And I see no difference for "Teach Entries Mobile Part 2 Hamburger Menu: English Signed-out"
+    Then I wait until element "#educate_entries" is visible
+    And I click selector "#educate_entries"
+    Then I wait until element "#about_entries" is visible
+    And I click selector "#about_entries"
+    Then I scroll the "#about_entries-items" element into view
+    And I see no difference for "About Entries Hamburger Menu: English Signed-out"
+    And I click selector "#about_entries"
+    Then I wait until element "#legal_entries" is visible
+    And I click selector "#legal_entries" if it exists
+    Then I scroll the "#legal_entries-items" element into view
+    And I see no difference for "Legal Entries Hamburger Menu: English Signed-out"
+    And I close my eyes
+
   @eyes
   Scenario: Student user sees the hamburger dropdown
     Given I create a student named "Sally Student" and go home
@@ -23,7 +51,7 @@ Feature: Hamburger dropdown
     And I close my eyes
 
   @eyes
-  Scenario: Student user sees the Teach, about and Legal dropdowns in hamburger
+  Scenario: Student user sees the Teach, About and Legal dropdowns in hamburger
     Given I create a student named "Sally Student" and go home
     And I open my eyes to test "Hamburger Dropdowns in English Student"
     Then I wait until element "#hamburger-icon" is visible
@@ -43,7 +71,7 @@ Feature: Hamburger dropdown
     And I close my eyes
   
   @eyes
-  Scenario: Teacher user sees hamburger menu, Teach, about and Legal dropdowns in hamburger
+  Scenario: Teacher user sees hamburger menu, Teach, About and Legal dropdowns in hamburger
     Given I create a teacher named "Teacher Tom" and go home
     And I open my eyes to test "Hamburger Dropdowns in English Teacher"
     Then I wait until element "#hamburger-icon" is visible
