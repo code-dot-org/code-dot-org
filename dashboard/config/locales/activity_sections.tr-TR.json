@@ -39622,36 +39622,120 @@
           "description": "Öğrencilerin kendi başlarına sessizce beyin fırtınası yapmalarını, ardından yanındakilerle paylaşmalarını ve son olarak da tüm sınıfla paylaşmalarını sağlayın."
         },
         "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
-          "name": "Müzik Filtreleme"
+          "name": "Müzik Filtreleme",
+          "description": "Bu eğitimde popüler sanatçıların şarkıları yer alıyor. Bu eğitimdeki şarkı listesinin önizlemesini görmek için bu Spotify Çalma Listesine (her yaş için) göz atın. Tüm şarkıların radyo korumalı versiyonlarını ve 13 yaşın altındaki öğrenciler için kullanıyoruz."
         },
         "524efe4b-796a-48eb-b1c6-f4e138699443": {
-          "name": "Genel Destek"
+          "name": "Genel Destek",
+          "description": "Bir öğretmen olarak, göreviniz öncelikle, öğrencilerin ders boyunca ilerlemelerini desteklemektir. Üzerinde çalıştıkları seviye ne olursa olsun öğrencilere yardımcı olacak, birkaç ipucunu burada bulabilirsiniz.\n\n-   **Çevrenizdekilerle İşbirliği Yapın:** Öğrencileri, sıkışıp kaldıklarında çevresindeki birine danışmaya teşvik edin. Bu eğitim videolar içerdiğinden ve öğrenciler kulaklık takıyor olabileceğinden, kolayca izole olabilirler. Yardıma ihtiyaçları varmış gibi, görünen öğrencileri aktif bir şekilde eşleştirerek, engelleri aşmalarına yardımcı olun. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, dersi çift programlamayı kullanarak tamamlamak için, sınıfınızı çiftlere ayırmayı düşünebilirsiniz.\n-   **Talimatları okuyun:** Talimatlar seviyeyi tamamlamak için gereken adımları sağlar.\n-   **Takıldınız mı? İpuçları arayın:** Her seviyede, seviyenin nasıl geçileceğine ilişkin, daha fazla ayrıntı içeren bir ipucu bulunur. Öğrenciler seviyeleri olabildiğince çabuk geçmeye çalışıyorlarsa, devam etmeden önce tüm kodun oynanması için, belirli bir süre beklemeleri gerektiğini görebilirler.\n-   \\*\\*Devam Et ve Geri Dön: \\*\\*Bazen öğrenciler zorlu bir seviyeye geri dönmekten daha çok faydalanabilirler. Tüm seviyeler birbirinden bağımsızdır, ancak bazen önceden tanıtılan kavramlara dayanırlar.\n-   **Acele etmeyin ve denemeler yapın.** Öğrencilerin her seviyeyi geçmelerine yardımcı olacak, açık talimatlar ve ipuçları vardır. Öğrenciler, seviyeyi geçmenin yanı sıra farklı dansçılar, dans hareketleri, efektler ve şarkılar deneyerek kendi fikirlerini denemekten de çekinmemelidir.\n    ​"
         },
         "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            null
+            "Yapay Zeka hakkında temel bilgisi oluşturmak ve/veya öğrenmeyi genişletmek için [Yapay Zeka ile Yaratıcılık sayfamızdaki](https://hourofcode.com/ca) videolara, derslere ve profesyonel öğrenme fırsatlarına göz atın. \n\nZamanınız varsa ve öğrencilerinizi bilgisayarsız bir aktiviteye hazırlamak istiyorsanız, Hour of Code etkinliğinizden önce [Dans Partisi: Bağlantısız](https://studio.code.org/s/dance-unplugged/lessons/1) yapmayı düşünün. Bu kısa ders, öğrencilere farklı dans hareketlerini tetikleyen olaylar fikrini tanıtır."
           ]
         },
         "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
-          "progression_name": "Giriş Videosu"
+          "progression_name": "Giriş Videosu",
+          "name": "Dans Partisi'ne Giriş",
+          "description": "Bu videoda öğrenciler, kendi etkileşimli dans partilerini kodlamalarına ilham verecek, gerçek dünyada yaratıcı kodlamanın bir örneğini görecekler. Bu video, ayrıca kodlama platformunun Talimat Paneli, Çalışma Alanı, Araç Kutusu ve Oyun Alanı gibi farklı öğelerini de açıklıyor."
         },
         "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
           "tips": [
-            null
+            "Gömülü videolar, kullanıcı seviyeyi ilk kez açtığında, seviyenin üzerine bindirilecektir. Öğrenciler izlemeyi bitirdikten sonra, videoyu kapatabilirler. Videoyu tekrar izlemek isterlerse, \"çalıştır\" butonunun altında mevcut olacaktır."
           ]
         },
         "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
-          "name": "Dönüt Alın"
+          "name": "Dönüt Alın",
+          "description": "Kodlamayla ilgili olumlu deneyimlerinden yararlanın.\n\n**Tartışın:**\n\n_Eğer bu onların ilk kodlamasıysa, şunu sorun:_\n\n-   Bugünkü etkinlikte hoşunuza giden şey neydi?\n     veya\n-   Bugün yaratıcılığı ve bilgisayar bilimini nasıl kullandınız?\n\n_Öğrencileriniz daha önce kodlama yaptıysa şunu sorun:_\n\n-   Bugün kodladığınız, daha önce yapmadığınız yeni şey nedir?\n\nArdından, kodlamalarına yardımcı olmak için **yapay zeka kullanma süreci üzerinde düşünün**:\n\n-   Sizce bir şeyleri tek başınıza yapmak daha mı iyi, yoksa bir bilgisayar ya da robotla birlikte çalışmak mı daha eğlenceli? Neden?\n-   Öğrencilerin daha yaratıcı olmalarına yardımcı olmak için, okullarda yapay zekanın kullanılabileceği harika yöntemler nelerdir?\n-   Bir bilgisayarın yaratmanıza yardımcı olmasını isteyeceğiniz, eğlenceli bir hikaye veya çizim düşünebiliyor musunuz? Size nasıl yardımcı olabilir?"
         },
         "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
-          "name": "Tebrik Edin"
+          "name": "Tebrik Edin",
+          "description": "Bu haftanın Bilgisayar Bilimleri Eğitim Haftası olması nedeniyle, bugünün bir saat kodlamaya harcadığınızı ve dünya çapında milyonlarca öğrencinin de bu hafta bir Hour of Code öğrendiğini açıklayın. Öğrencileri dünya çapındaki bu hareketin parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
         },
         "07a73ab9-8996-453a-a87f-63628f2387db": {
           "name": "Sonraki Adımlar",
           "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Öğrencileri diğer seçenekler için code.org/learn adresine yönlendirin veya takip eden ekstra etkinliklerinden herhangi birini planlıyorsanız, öğrencilere sırada ne işleyeceğinizi söyleyin."
         },
         "fb665f5b-457e-484e-924a-7aa4f2e097be": {
-          "name": "Viral Olun"
+          "name": "Viral Olun",
+          "description": "Hour of Code, yaratıcılıkla ilgilidir ve ne yarattığınızı görmek için sabırsızlanıyoruz! Lütfen öğrencilerin yarattıklarını, fotoğraflarını ve videolarını sosyal medyada paylaşın! Öğretmenler, sınıfınızı bir dansı kodlarken veya dans ederken kaydedin.\n\n# HourOfCode'u eklemeyi ve bizi Facebook, Twitter ve Instagram'da etiketlemeyi unutmayın. Öğrencilerinizin müziğini kullandığı sanatçıyı etiketlediğinizde, bonus puan kazanırsınız. Code.org, favori gönderilerimizi milyonlarca takipçimizle yeniden paylaşacak."
+        },
+        "596336ba-e584-4453-a2cd-2268dc3c59bc": {
+          "description": "Bugün kodla gerçekten yaratıcı bir şey yapacağız! “Kod” bir bilgisayarın anlayabileceği bir dizi talimattır. Başlamadan önce, yaratıcı olmayı veya kendinizi ifade etmeyi sevdiğiniz yollar nelerdir?"
+        },
+        "84a173a8-19dd-407d-88cb-6747bdc1122d": {
+          "description": "_Öğrencileri sanat, dans, müzik ve yazı gibi yaratıcılıklarını ifade etme yollarını paylaşmaya teşvik edin._"
+        },
+        "66891774-46dc-4488-a30b-5d231e4145ff": {
+          "description": "Tıpkı hangi boya renklerini kullanacağınız veya yazacağınız kelimeleri seçmeniz, yaratıcılığı ifade etmenin yollarıdır. Hangi kodu yazacağınızı ve insanların onunla nasıl etkileşimde bulunacağını seçmek, yaratıcılığınızı da ifade etmek için bir fırsat olabilir!\nBu yaratıcı kodlama aktivitesinde, yeni ve yararlı bir araçla tanışacaksınız: Yapay Zeka, aynı zamanda A.I. olarak da bilinir! A.I. insan beyni gibi, çalışan bir bilgisayar programıdır. Bu aktivitedeki A.I. Bot, özel efektler için, çok hızlı seçimler yaparak size yardımcı olabilir."
+        },
+        "b98db6e3-3139-4e85-bd62-60603e22af96": {
+          "description": "**Tartışın:** Bilgisayarların ve robotların daha yaratıcı olmamıza nasıl yardımcı olabileceğini düşünüyorsunuz?\n\n**Tartışma Hedefi:** Öğrenciler, yapay zekanın yaratıcı süreçte yardımcı olabileceği yollar hakkında düşünmeye başlamalıdır. Bazı fikirler şunları içerebilir:\n\n-   **Fikir üretme:** Yapay Zeka, kendinizi sıkışmış hissettiğinizde hikayeler, çizimler ve diğer yaratıcı projeler için, yeni ve heyecan verici fikirler bulmanıza yardımcı olabilir.\n-   **Sanatsal İlham:** Yapay Zeka, sanat eseriniz için renkler, stiller ve temalar önererek, bir sonraki başyapıtınız için, size ilham verebilir.\n-   **İşbirliği:** Yapay Zeka, projeler üzerinde beyin fırtınası yapmanıza ve başkalarıyla işbirliği yapmanıza, yardımcı olan yaratıcı bir ortak olabilir."
+        },
+        "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf": {
+          "name": "Dans edelim",
+          "description": "Bu seviye, öğrencilerin bir kod bloğuyla, yeni bir dansçı yapmasını ve ikinci bir kod bloğuyla, bu dansçıya bir dans hareketi yapmasını sağlamasını gerektirir. Öğrencileri farklı dansçıları, dans hareketlerini ve şarkıları keşfetmek için, açılır menüleri kullanmaya teşvik edin.",
+          "progression_name": "Dansçı ve Dans Hareketi Yap"
+        },
+        "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
+          "name": "Özel efektler oluşturmak için Yapay Zekayı kullanın",
+          "description": "Bu üç seviyede, öğrenciler yeni A.I. bloğuyla tanışır. Bu seviyelere eşlik eden iki video var. Öğrenciler kendilerini takılmış hissediyorlarsa, bu videoları yeniden izlemeye teşvik edin. Öğrenciler bu seviyeleri geçmek için, yapay zekadan dans partilerine eşlik edecek, renkli efektler için kod üretmesini ister. Öğrencileri, dans partileri için, göstermek istedikleri ruh halini tanımlayan üç emoji seçmeye teşvik edin.",
+          "progression_name": "Yapay zekayı kullanın. "
+        },
+        "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
+          "name": "Etkileşim eklemek için olayları kodlayın",
+          "description": "Artık, öğrenciler etkinliklerle tanıştırılıyor. Bu, bu eğitimdeki en zorlu kodlama konseptidir. Olaylar özeldir. Kurulum bloğuna bağlanmazlar, bunun yerine kendi başlarına mini programlardır. Bir olayı, tetiklendiğinde altındaki kod ne olursa olsun, çalıştıracak bir dinleyen kulak olarak düşünün. Öğrencilerin kullandığı ilk olay, öğrencilerin klavyelerindeki bir tuşa basarak, yeni kod parçalarını tetiklemelerine olanak tanıyan \"oka basıldığında\" olaylarıdır. İkinci olay, daha çok saat üzerindeki bir zamanlayıcı gibi çalışan 'ölçüde' olayıdır. Şarkı, belirli bir ölçü miktarı boyunca çalıştırıldığında, yeni kod tetiklenecektir.\n\nÖğrencileri bu seviyelerden ikisine eşlik eden etkinliklerle ilgili videoları yeniden izlemeye teşvik edin.\n​",
+          "progression_name": "Tuşa Basma ve Ölçüm Olayları"
+        },
+        "7f2f14df-e85e-4dea-bf5a-5d9537baca14": {
+          "name": "Yaratıcı olun! ",
+          "description": "Bu son seviye, özgürce oynamak ve keşif için bir alan olmasını amaçlıyor. Öğrencileri yaratıcı olmaya ve kendilerine ait bir dans partisi oluşturmak için, yeni kodlama becerilerini uygulamaya teşvik edin!\n​",
+          "progression_name": "Final Dans Partisi Projesi"
+        },
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
+        },
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
+        },
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

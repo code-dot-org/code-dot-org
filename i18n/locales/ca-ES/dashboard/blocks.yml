@@ -1793,6 +1793,15 @@ ca:
         text: coordenada y de {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} patina cap a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sòlid
+            '"liquid"': líquid
+            '"gas"': gas
       KatiesBlocks_spriteBirdSay:
         text: "{SPRITE} diu {SPEECH}"
         options:

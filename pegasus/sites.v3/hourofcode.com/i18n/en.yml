@@ -177,6 +177,16 @@
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
+  donors_block_microsoft_infosys: "We thank Microsoft and Infosys Foundation USA for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+
+  microsoft_logo_alt: "Microsoft logo"
+  infosys_logo_alt: "Infosys Foundation USA logo"
+  amazon_logo_alt: "Amazon logo"
+  google_logo_alt: "Google logo"
+  coinbase_logo_alt: "Coinbase logo"
+  ballmer_group_logo_alt: "Ballmer Group logo"
+  vista_equity_partners_logo_alt: "Vista Equity Partners logo"
+
   grade_level: "Grade level"
   grade_level_label_elementary: "Elementary School"
   grade_level_label_middle: "Middle School"
@@ -244,6 +254,7 @@
   call_to_action_share_on_social_media: "Share on social media"
   call_to_action_explore_all_hoc_activities: "Explore all Hour of Code activities from Code.org"
   call_to_action_start_dance_party: "Start Dance Party"
+  call_to_action_start_dance_party_ai_edition: "Start Dance Party: AI Edition"
   call_to_action_start_part_02: "Start part two"
   call_to_action_start_unplugged_activity: "Start unplugged activity"
   call_to_action_view_promo_resources: "View promo resources"
@@ -336,6 +347,7 @@
   call_to_action_open_positions: "View open positions"
   call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate: "Donate"
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
@@ -358,6 +370,7 @@
   call_to_action_learn_about_ai: "Learn about AI"
   call_to_action_learn_more_about_ai: "Learn more about AI"
   call_to_action_get_started: "Get started"
+  call_to_action_view_our_supporters: "View our supporters"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -375,6 +388,7 @@
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
   aria_label_call_to_action_teaching_csp: "Start the Teaching Computer Science Principles professional learning program"
   aria_label_call_to_action_teaching_problem_solving: "Start the Teaching Problem Solving and Computing professional learning program"
+  aria_label_call_to_action_teaching_interactive_animations_games: "Start the Teaching Interactive Animations and Games professional learning program"
   aria_label_call_to_action_teaching_csc: "Start the Teaching Computer Science Connections professional learning program"
   aria_label_call_to_action_teaching_ai: "Start the Teaching AI and Machine Learning professional learning program"
   aria_label_call_to_action_teaching_maker_cp: "Start the Teaching Creating Apps with Devices (Circuit Playground) professional learning program"
@@ -439,6 +453,8 @@
   aria_label_call_to_action_minecraft_2020: "Get started with Minecraft AI for Earth"
   aria_label_call_to_action_register_student_workshop: "Register for a free student workshop"
   aria_label_call_to_action_view_more_cs_resources: "View more computer science resources"
+  aria_label_call_to_action_farsi_donate: "Donate to support the Code.org in Farsi campaign"
+  aria_label_call_to_action_farsi_learn_more: "Learn more about Code.org in Farsi"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
 
@@ -459,6 +475,7 @@
   curriculum_name_csd: "Computer Science Discoveries"
   curriculum_name_csp: "Computer Science Principles"
   curriculum_name_problem_solving: "Problem Solving and Computing"
+  curriculum_name_teaching_animation: "Teaching Interactive Animations and Games"
   curriculum_name_csc: "Computer Science Connections"
   curriculum_name_csa: "AP® Computer Science A"
   curriculum_name_csa_ai: "Software Engineering & Computer Vision"
@@ -589,6 +606,7 @@
   module_duration_1_hr: "1 hour"
   module_duration_2_hrs: "2 hours"
   module_duration_3_hrs: "3 hours"
+  module_duration_3_hrs_20_minutes: "3 hours 20 minutes"
   module_duration_5_hrs: "5 hours"
   module_duration_5_hrs_plus: "5+ hours"
   module_duration_8_hrs: "8 hours"
@@ -610,6 +628,7 @@
   module_label_teaching_csd: "Teaching Computer Science Discoveries"
   module_label_teaching_csp: "Teaching Computer Science Principles"
   module_label_teaching_problem_solving: "Teaching Problem Solving and Computing"
+  module_label_teaching_animations: "Interactive Animations and Games"
   module_label_teaching_csc: "Teaching Computer Science Connections"
   module_label_teaching_ai: "Teaching AI and Machine Learning"
   module_label_teaching_maker_cp: "Teaching Creating Apps with Devices (Circuit Playground)"
@@ -845,6 +864,7 @@
   ai_curriculum_title_06: "Societal Impact of Generative AI"
   ai_curriculum_desc_06: "Investigate the impact of generative AI from different perspectives, then collaborate as a team to come up with guidelines that address the most needs from all participants."
   ai_curriculum_btn_aria_label_06: "View Societal Impact of Generative AI lesson plan"
+  ai_curriculum_btn_aria_label_dance_ai: "Try the Dance Party: AI Edition activity"
   ai_carousel_heading: "What teachers say about AI with Code.org:"
   ai_carousel_quote_01: "This lesson also gave my students the opportunity to see that there is an element of opinion in classification systems. Later, when we started to see how bias can end up in AI, I was able to pull them back and remind them that the data used to train their models was based on choices."
   ai_carousel_quote_02: "My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!"
@@ -1313,9 +1333,13 @@
   donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
   donate_page_fundraise_title: "Fundraise for Code.org"
   donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_campaigns_heading: "Support a campaign"
+  donate_page_campaigns_farsi_desc: "Talent is widespread, but opportunity often isn't. The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas, access to educational resources currently available in other major languages. Let's make it a reality."
   donate_page_other_ways_title: "Other ways to give"
   donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_supporters_heading: "Join top industry leaders supporting Code.org"
+  donate_page_supporters_desc: "Prominent names nationwide trust and support our mission. View our esteemed supporters and consider adding your own commitment to Code.org's transformative cause."
   donate_page_donation_policy_title: "Understanding our Donation Policy"
   donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
   donate_tabs_tab_label_daf_direct: "DAF Direct"
@@ -1884,6 +1908,18 @@
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
 
+  poster_aria_label_minecraft: "Download a poster featuring Minecraft Education: Generation AI"
+  poster_aria_label_dance_ai_01: "Download a poster featuring Dance Party: AI Edition frog, moose, and cat characters"
+  poster_aria_label_dance_ai_02: "Download a poster featuring Dance Party: AI Edition robot, sloth, and shark characters"
+  poster_aria_label_oceans_01: "Download a poster featuring AI for Oceans underwarer scene with AI Bot selecting a fish"
+  poster_aria_label_oceans_02: "Download a poster featuring AI for Oceans fish characters with different emotions"
+  poster_aria_label_steph: "Download a poster featuring NBA star Steph Curry"
+  poster_aria_label_malala: "Download a poster featuring activist Malala Yousafzai"
+  poster_aria_label_hadi: "Download a poster featuring Code.org founder Hadi Partovi"
+  poster_aria_label_mary: "Download a poster featuring General Motors CEO Mary Barra"
+  poster_aria_label_satya: "Download a poster featuring Microsoft CEO Satya Nadella"
+  poster_aria_label_shakira: "Download a poster featuring singer-songwriter Shakira"
+
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
   videos_hoc_2014: Hour of Code is Here - Anybody Can Learn
@@ -1977,6 +2013,7 @@
 
   tutorial_dance2019_name: "Dance Party"
   tutorial_danceparty_name: "Dance Party"
+  tutorial_dancepartyai_name: "Dance Party: AI Edition"
   tutorial_chibitronics_name: "Chibitronics: Illuminated Story"
   tutorial_athlete_name: "Code your own sports game"
   tutorial_moana_name: "Moana: Wayfinding with Code"
@@ -2654,6 +2691,7 @@
   tutorial_meeempathy_name: "A Minecraft Tale of Two Villages"
 
   tutorial_danceparty_shortdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_dancepartyai_shortdescription: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. It's time to strut your stuff!"
   tutorial_chibitronics_shortdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_shortdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_shortdescription: "Moana is brave, fearless, and is determined to find her own path."
@@ -3222,6 +3260,7 @@
 
   tutorial_dance2019_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
   tutorial_danceparty_longdescription: "Code a Dance Party to share with your friends. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's 'Encanto', and more!"
+  tutorial_dancepartyai_longdescription: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists. It's time to strut your stuff!"
   tutorial_chibitronics_longdescription: "Program a paper circuit to light up your own story."
   tutorial_athlete_longdescription: "Choose between making a basketball game or mix and match across sports!"
   tutorial_moana_longdescription: "The new Disney Hour of Code tutorial uses a visual programming language using blocks where students simply drag and drop visual blocks to write code. Visual programming is a fun and easily understood way to teach the logic of coding. Exposure to visual programming lays the foundation for text-based programming, a more complex activity. The tutorial is targeted for kids ages 8+ and those trying coding for the first time. Available in 23 languages and localized outside of the United States. This tutorial is available free online and includes a digital toolkit in English and Spanish for educators and event organizers."
@@ -3900,6 +3939,7 @@
 
   tutorial_dance2019_string_detail_grades: "Grades 2+"
   tutorial_danceparty_string_detail_grades: "Grades 2+"
+  tutorial_dancepartyai_string_detail_grades: "Grade 3+"
   tutorial_chibitronics_string_detail_grades: "Grades 2-5"
   tutorial_athlete_string_detail_grades: "Grades 2+"
   tutorial_moana_string_detail_grades: "Grades 2+"
@@ -4578,6 +4618,7 @@
 
   tutorial_dance2019_string_platforms: "All modern browsers, Android tablet, iPad, Unplugged"
   tutorial_danceparty_string_platforms: "All modern browsers, Android tablet, iPad"
+  tutorial_dancepartyai_string_platforms: "All modern browsers, Android tablet, iPad"
   tutorial_chibitronics_string_platforms: "All modern browsers, Screen reader"
   tutorial_athlete_string_platforms: "All modern browsers"
   tutorial_moana_string_platforms: "All modern browsers, Android tablet, iPad"
@@ -5251,11 +5292,12 @@
   tutorial_catrobatembroidery_string_platforms: "Android phone, Screen reader"
   tutorial_irobotphone_string_platforms: "All modern browsers"
   tutorial_codeguppydraw_string_platforms: "All modern browsers"
-  tutorial_codejumper_string_platforms: "Unplugged, Sreen reader"
+  tutorial_codejumper_string_platforms: "Unplugged, Screen reader"
   tutorial_meeempathy_string_platforms: "All modern browsers, Mac, Windows, Chromebook, iPhone, iPad, Android phone, Android tablet"
 
   tutorial_dance2019_string_detail_platforms: ""
   tutorial_danceparty_string_detail_platforms: ""
+  tutorial_dancepartyai_string_detail_platforms: ""
   tutorial_chibitronics_string_detail_platforms: "Chibitronics Chibi Chip and Circuit Sticker LEDs"
   tutorial_athlete_string_detail_platforms: ""
   tutorial_moana_string_detail_platforms: ""
@@ -5934,6 +5976,7 @@
 
   tutorial_dance2019_string_detail_programming_languages: "Blocks"
   tutorial_danceparty_string_detail_programming_languages: "Blocks"
+  tutorial_dancepartyai_string_detail_programming_languages: "Blocks"
   tutorial_chibitronics_string_detail_programming_languages: "Blocks"
   tutorial_athlete_string_detail_programming_languages: "Blocks"
   tutorial_moana_string_detail_programming_languages: "Blocks"
@@ -9960,6 +10003,19 @@
   elementary_page_computer_science_card_title_2: "Computer Science Connections"
   elementary_page_computer_science_description_1: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   elementary_page_computer_science_description_2: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
+
+  hoc_beyond_hero_description: "Now that you've completed your Hour of Code, take your learning to the next level! Many partners offer free, engaging options for teachers and students alike - no experience needed."
+  hoc_beyond_for_teachers_section_title: "For Teachers"
+  hoc_beyond_for_teachers_section_description: "You've held an Hour of Code event in your classroom... now what? Join the more than 2 million educators who use Code.org to teach computer science. Anyone can learn!"
+  hoc_beyond_for_teachers_course_title_1: "Teach with Code.org’s Courses"
+  hoc_beyond_for_teachers_course_title_2: "Teach Courses from Other Providers"
+  hoc_beyond_for_teachers_course_description_1: "Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge."
+  hoc_beyond_for_teachers_course_description_2: "Compare options by different partners, organized by grade band."
+  hoc_beyond_for_teachers_course_link_1: "Teach with Code.org"
+  hoc_beyond_for_teachers_course_link_2: "Explore other providers"
+  hoc_beyond_carousel_title: "For Students"
+  hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
+  hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
 
   language_code:
     ar: "Arabic"

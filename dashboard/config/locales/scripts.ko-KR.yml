@@ -1133,7 +1133,7 @@ ko:
             csf_data:
               display_name: 데이터 및 시뮬레이션
             end_of_course_project:
-              display_name: 과정말 프로젝트
+              display_name: 종합 프로젝트
             lessonGroup-7:
               display_name: 디지털 시민의식
             lessonGroup-8:
@@ -4200,6 +4200,11 @@ ko:
             고메즈, 디즈니의 “엔칸토” 음악 등이 등장합니다!
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           title: 댄스 파티 (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: '댄스 파티: A.I. 에디션'
+          title: '댄스 파티: AI 에디션'
         dance-draft:
           title: 사용하지 마시오
         dance-extras:
@@ -5444,6 +5449,22 @@ ko:
             해결 및 컴퓨팅에 대한 소개 학습.\n-   해당 단원에 포함된 핵심 개념 연습.\n-   챕터 마지막의 프로젝트 탐구.\n\n**권장
             시간:** 30분"
           title: '모듈 1: 문제 해결과 컴퓨팅 교습 준비'
+        self-paced-pl-csd-unit2-2-2023:
+          title: '모듈 2: 웹 개발 교습 준비'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를 돕도록 고안되어
+            있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션 및 게임에
+            대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트 탐구.\n\n**권장
+            시간:** 120분"
+          student_description: "이 전문 학습 모듈은 Code.org의 인터랙티브 애니메이션과 게임 단원을 교습할 준비를
+            돕도록 고안되어 있습니다. \n\n**이 전문 학습 모듈에서, 귀하는 다음을 수행하게 됩니다:**\n\n-   인터랙티브 애니메이션
+            및 게임에 대한 도입 학습.\n-   단원에 포함된 핵심 개념 연습.\n-   게임 랩에 참여.\n-   챕터 마지막 프로젝트
+            탐구.\n\n**권장 시간:** 120분"
+          title: 인터랙티브 애니메이션 및 게임 교습 준비
+        self-paced-pl-csd-unit4-2-2023:
+          title: " 모듈 4: 디자인 프로세스 교습 준비"
+        self-paced-pl-csd-unit5-2-2023:
+          title: '모듈 5: 데이터 및 사회 교습 준비'
         self-paced-pl-csd1-2021:
           lesson_groups:
             lessonGroup-2:

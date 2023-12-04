@@ -239,6 +239,7 @@ mn:
   for_students_teacher_led_learning: 'Оюутнуудад зориулсан: Багшийн удирдсан сургалт'
   for_students_teacher_led_lessons: 'Оюутнуудад зориулсан: Багшийн удирдсан хичээл'
   professional_development: Мэргэжлийн хөгжил
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -338,6 +339,8 @@ mn:
   call_to_action_try_hoc_ai_activities: Hour of Code AI үйл ажиллагааг туршиж үзээрэй
   call_to_action_explore_activities: Үйл ажиллагааг судлах
   call_to_action_explore_ai: AI судлах
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Хэрэгсэл судлах
   call_to_action_explore_unit: Нэгж судлах
   call_to_action_explore_curriculum: Сургалтын хөтөлбөрийг судлах
   call_to_action_explore_curricula: Сургалтын хөтөлбөрийг судлах
@@ -731,6 +734,7 @@ mn:
   module_label_accessibility_features_full: 'Хүртээмжийн онцлог шинж чанарууд:'
   module_label_educator_tool: Сурган хүмүүжүүлэгч хэрэгсэл
   module_label_educator_course: Сурган хүмүүжүүлэгчийн сургалт
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Оюутны хэрэгсэл
   module_label_student_product: Бүтээгдэхүүний
   module_label_student_content_resources: Агуулга ба нөөц
@@ -739,6 +743,7 @@ mn:
   module_label_available_now: Одоо ашиглах боломжтой
   module_label_video_series: Видео цуврал
   module_label_self_paced: Өөрөө хурдацтай модуль
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3628,19 +3633,14 @@ mn:
   tutorial_csfirstdialogue_name: Харилцан яриа
   tutorial_codemonkeybeaver_name: Минж хүрэх
   tutorial_codestersdistance_name: 'Кодестерууд: Нийгмийн алслагдсан спрайт'
-  tutorial_itchspace_name: 'ItchCode: Сансрын түрэмгийлэгчид - RokCoder'
   tutorial_vidcodemagic_name: SFX шидэт
   tutorial_vidcodemagices_name: SFX шидэт
   tutorial_codespeakmeal_name: Эрүүл хоол Апп код
-  tutorial_itchfish_name: 'ItchCode: Загасны зурлага тоглоом'
   tutorial_bsdwebsite_name: Миний дуртай вэбсайт
   tutorial_codespeaktime_name: Scratch дахь капсул цаг код
-  tutorial_itchwebcam_name: 'ItCCode: Вэбкам нэмэгдсэн бодит байдал'
-  tutorial_itchball_name: 'ЗтКод: Бөмбөгийг үсрэх'
   tutorial_ttrace_name: Тэмцээний нөхцөл
   tutorial_plethora_name: 'Ойлтын: Шалтгаан ба үр нөлөө'
   tutorial_educodesecret_name: Агентлагийн нууцыг илрүүл!
-  tutorial_itchshapes_name: 'ЗагатКод: Хэлбэр ба өнцөг'
   tutorial_codeguppytext_name: Текст дээр суурилсан кодчиллын танилцуулга
   tutorial_vidcodeplastiche_name: Хуванцар бохирдол PSA
   tutorial_educativechatbot_name: Python өөрийн chatbot бий болгох
@@ -3663,7 +3663,6 @@ mn:
   tutorial_codecapture_name: А Jiffy онд JavaScript програмчлалын суралц
   tutorial_codehslitter_name: Хог хаягдалгүй нийгэмлэгийн кодчилол
   tutorial_bsdocean_name: Усны доор амьдрал
-  tutorial_itchplatformer_name: 'ItchCode: Scratch 3.0 Платформын заавар'
   tutorial_codejika_name: Код:5 минутын вэбсайт
   tutorial_gamefrootclicker_name: Хувьсагчуудыг суралц. Код өөрийн Clicker Тоглоомын.
   tutorial_rmagicequity_name: Тэгш байдал ба тэгш байдал
@@ -7493,20 +7492,12 @@ mn:
   tutorial_codestersdistance_longdescription: Python-д кодлох үндсийг сурч, дараа
     нь нийгмийн зайд байгаа эсвэл маск өмсөх шаардлагатай эсэхийг шалгахын тулд хоёр
     sprites хоорондын зайг тооцоолох програм бий болгох.
-  tutorial_itchspace_longdescription: Энэхүү заавар нь Scratch MIT програмчлалын хэлийг
-    ашиглан сонгодог Space Invaders тоглоом бүтээх замаар таныг авч явдаг. Илүү зураас
-    дээр суурилсан видео, хичээл нь RokCoder YouTube сувагт бүртгүүлэх! Видео бүр
-    нь өөрийн гэсэн тодорхой төгсгөлийн зорилгыг агуулсан хазуулсан хэмжээтэй заавар
-    (ойролцоогоор арван минутын урттай) юм. эцсийн үр дүн нь өндөр чанарын Scratch
-    Зоосон машин тоглоом юм.
   tutorial_vidcodemagic_longdescription: Гогцоо ашиглан дэлгэцийн эргэн тойронд санамсаргүй
     байдлаар гарч ирнэ.
   tutorial_vidcodemagices_longdescription: Гогцоо ашиглан дэлгэцийн эргэн тойронд
     санамсаргүй байдлаар гарч ирнэ.
   tutorial_codespeakmeal_longdescription: Хэрэглэгчдэд эрүүл хоол хүнсний шийдвэр
     гаргахад тусалдаг апп-ыг кодолж сур.
-  tutorial_itchfish_longdescription: нь шумбагч санамсаргүйгээр идэж байгаа үед тасалдсан
-    загас хөөж, идэх нь акул нь тоглоом хийх Scratch 3.0 заавар.
   tutorial_bsdwebsite_longdescription: 'Энэ курс нь оюутнуудад кодыг тэдэнд чухал
     эсвэл сонирхолтой зүйлээ хуваалцах арга зам болгон ашиглах боломжийг олгодог.
     Тэд HTML, CSS болон JavaScript-ийг сурч байхдаа хичээлийг дагаж эсвэл өвөрмөц
@@ -7515,10 +7506,6 @@ mn:
     болгох вэб хуудас шилдэг 3 зүйл та сонирхож байгаа, эсвэл хийж хайртай. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Яг одоо амьдралаа тэмдэглэж, эргэцүүлэн
     бодохын тулд дижитал цагийн капсулыг хэрхэн кодчилохыг сур.
-  tutorial_itchwebcam_longdescription: Augmented бодит байдлын талаар суралцаж, өөрийн
-    Augmented бодит байдлыг виртуал орон зай болгох.
-  tutorial_itchball_longdescription: Дэлгэцийн эргэн тойронд сэргэж нь бөмбөг авах.
-    Гогцоонууд доторх гогцоо ба нөхцлийн талаар олж мэдээрэй.
   tutorial_ttrace_longdescription: Чиг үүрэг дуудаж, анги зохион гэхэд, тоглогчид
     хурдан байх өөрсдийн уралдааны машин програмтай, nimble,, хүчирхэг; уралдааны
     үеэр, Тэд дараа нь тэдний хяналтыг тэмцэлдэх нь тэдний өрсөлдөгчдийн тээврийн
@@ -7530,9 +7517,6 @@ mn:
     гэж агент Смит нь нууцыг ертөнцийг судлах, мөр, нь гогцоонууд. Agent Смит буруутнуудыг
     олж, Python нь тэдний шинэ хэрэглэгчдэд Агентлагийн үйлдлийн системийг тохируулах
     нь тусал.
-  tutorial_itchshapes_longdescription: Scratch дээр хэлбэрийг хэрхэн зурахаа сур.
-    Та мөн ямар ч хэлбэрийн хувьд хичнээн их эргэлт хийх хэрэгтэйг тооцоолох талаар
-    сурах болно.
   tutorial_codeguppytext_longdescription: Онлайн кодлох засварлагч нь таны анхны програмыг
     бий болгох замаар текст дээр суурилсан кодлох үндсийг суралц.
   tutorial_vidcodeplastiche_longdescription: Манай далай тэнгисийг дүүргэх хуванцар
@@ -7615,8 +7599,6 @@ mn:
   tutorial_bsdocean_longdescription: Ус доор амьдрал бид өнөө үед тулгарч буй тулгамдсан
     асуудал дээр гэрэл цутгадаг - бидний хүрээлэн буй орчин. Энэ төсөл нь бидний усыг
     хамгаалах талаар өөрийн вэб хуудсыг код нь таныг чиглүүлэх тал дээр анхаарна.
-  tutorial_itchplatformer_longdescription: Хялбар Scratch ашиглан энгийн platformer
-    тоглоом хэрхэн бий болгох заавар дагах.
   tutorial_codejika_longdescription: HTML болон CSS ашиглан кодлох агуу танилцуулга.
     Хэд хэдэн мөрийг код, хоёр өнгийн градиент дэвсгэр, нэр, вэбсайт эхлүүлэх огноо
     бүхий сайхан буух хуудас үүсгэх замаар Hows and Whys-д аваачигдахгүйгээр шууд
@@ -8417,19 +8399,14 @@ mn:
   tutorial_csfirstdialogue_string_detail_grades: 2-8-р анги
   tutorial_codemonkeybeaver_string_detail_grades: Урьдчилсан уншигч - 5-р анги
   tutorial_codestersdistance_string_detail_grades: 6+ анги
-  tutorial_itchspace_string_detail_grades: 6+ анги
   tutorial_vidcodemagic_string_detail_grades: Анги 2+
   tutorial_vidcodemagices_string_detail_grades: Анги 2+
   tutorial_codespeakmeal_string_detail_grades: 6+ анги
-  tutorial_itchfish_string_detail_grades: 2-8-р анги
   tutorial_bsdwebsite_string_detail_grades: 6+ анги
   tutorial_codespeaktime_string_detail_grades: 2-8-р анги
-  tutorial_itchwebcam_string_detail_grades: 6+ анги
-  tutorial_itchball_string_detail_grades: 2-8-р анги
   tutorial_ttrace_string_detail_grades: 6-8-р анги
   tutorial_plethora_string_detail_grades: Анги 2+
   tutorial_educodesecret_string_detail_grades: 6+ анги
-  tutorial_itchshapes_string_detail_grades: 6+ анги
   tutorial_codeguppytext_string_detail_grades: 6-8-р анги
   tutorial_vidcodeplastiche_string_detail_grades: 6+ анги
   tutorial_educativechatbot_string_detail_grades: 9+ анги
@@ -8451,7 +8428,6 @@ mn:
   tutorial_codecapture_string_detail_grades: 6+ анги
   tutorial_codehslitter_string_detail_grades: 6-8-р анги
   tutorial_bsdocean_string_detail_grades: 6-8-р анги
-  tutorial_itchplatformer_string_detail_grades: 6+ анги
   tutorial_codejika_string_detail_grades: 6+ анги
   tutorial_gamefrootclicker_string_detail_grades: 6-8-р анги
   tutorial_rmagicequity_string_detail_grades: 6-8-р анги
@@ -9273,21 +9249,16 @@ mn:
   tutorial_codemonkeybeaver_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет,
     iPad
   tutorial_codestersdistance_string_platforms: Орчин үеийн бүх хөтчүүд, Дэлгэц уншигч
-  tutorial_itchspace_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_vidcodemagic_string_platforms: Орчин үеийн бүх хөтөч, Android таблет, iPad,
     Дэлгэц уншигч
   tutorial_vidcodemagices_string_platforms: Орчин үеийн бүх хөтөч, Android таблет,
     iPad, Дэлгэц уншигч
   tutorial_codespeakmeal_string_platforms: Хром, Firefox
-  tutorial_itchfish_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_bsdwebsite_string_platforms: хром
   tutorial_codespeaktime_string_platforms: Хром, Firefox
-  tutorial_itchwebcam_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет, iPad
-  tutorial_itchball_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_ttrace_string_platforms: хром
   tutorial_plethora_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет, iPad
   tutorial_educodesecret_string_platforms: Орчин үеийн бүх хөтчүүд
-  tutorial_itchshapes_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_codeguppytext_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет,
     iPad
   tutorial_vidcodeplastiche_string_platforms: Орчин үеийн бүх хөтчүүд, iPad
@@ -9315,7 +9286,6 @@ mn:
   tutorial_codehslitter_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
     Ipad, Windows утас, Android утас, Iphone
   tutorial_bsdocean_string_platforms: хром
-  tutorial_itchplatformer_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_codejika_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет, Ipad,
     Windows утас, Android утас, Iphone
   tutorial_gamefrootclicker_string_platforms: Орчин үеийн бүх хөтчүүд, iPad
@@ -9972,19 +9942,14 @@ mn:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10006,7 +9971,6 @@ mn:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10691,20 +10655,15 @@ mn:
   tutorial_csfirstdialogue_string_detail_programming_languages: Блок, зураас
   tutorial_codemonkeybeaver_string_detail_programming_languages: Блокууд
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Блокууд
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Блокууд
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Блокууд
-  tutorial_itchwebcam_string_detail_programming_languages: Блокууд
-  tutorial_itchball_string_detail_programming_languages: Блокууд
   tutorial_ttrace_string_detail_programming_languages: JavaScript, КофеScript
   tutorial_plethora_string_detail_programming_languages: Хэл бие даасан (олон хэл
     дээр зааж болно)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Блокууд
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10729,7 +10688,6 @@ mn:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Питон, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Блокууд
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Блокууд
   tutorial_rmagicequity_string_detail_programming_languages: Блокууд, JavaScript
@@ -11708,10 +11666,7 @@ mn:
   tutorial_kodableshapes_name: Код нь хэлбэр хийх
   tutorial_nasabinary_name: 'Хоёртын код: Сансрын хөлөгтэй хэрхэн ярилцах вэ'
   tutorial_3dmaker_name: 3D үйлдвэрлэгч
-  tutorial_itchstart_name: 'ItchCode: Scratch 5 Блок гарааны'
   tutorial_hopsub_name: Найзтайгаа метроны эрэгчдэд барих
-  tutorial_itchmundos_name: Дэлхийн Лос, Ми Мюндо_E2
-  tutorial_itchtenacity_name: Хүч чадал
   tutorial_kcjskiing_name: 'Спорт + Код: Цанаар гулгах'
   tutorial_groksecurity_name: 'Кибер аюулгүй байдал: Харанхуй малгайны эсрэг хамгаалалт'
   tutorial_creaticode_name: Scratch Blocks нь 3D програмчлал
@@ -11853,18 +11808,9 @@ mn:
     дуу авиа дээр хоёртын код болгон орчуулж өөрөө туршиж үзээрэй.
   tutorial_3dmaker_longdescription: Өөрийнхөө үнэхээр сэрүүн, эргүүлэх боломжтой,
     3D объектыг хурдан бөгөөд амархан хий.
-  tutorial_itchstart_longdescription: Энэ хичээл нь Scratch-ийг анх удаа туршиж байгаа
-    2 эсвэл 3-р ангийн хүүхдүүдэд зориулсан сайн нэвтрэх цэг юм. Тэд өөрсдийн зан
-    чанарыг зарим үйлдлийг гүйцэтгэхийн тулд хамтдаа хийх хэрэгтэй 5 блокуудын багцаас
-    эхлэх болно.
   tutorial_hopsub_longdescription: Найз эсвэл ангийнхаа найзтайгаа хөтөлбөрийг хэрхэн
     хослуулж, Hopscotch тэмдэгтүүдтэй өөрийн метроны серфингийн машиныг бий болгохыг
     сур!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, програм хангамжийн нэг хэрэгсэл.
-    Оршил, фондыг авч үзэх, үйл явдлын блок, үйл явдал, хөтөлбөр нь үйл явдал, үйл
-    явдал үйл явдал, үйл явдлын програм хангамж.
-  tutorial_itchtenacity_longdescription: Энэ төсөл хөтөлбөр, Scratch симулятор робот
-    Лас aguas marinas хязгаар юм.
   tutorial_kcjskiing_longdescription: 'Энэ нь хэн нэгэн мод руу осолдож хүртэл бүх
     хөгжилтэй, тоглоом юм… эсвэл хөгжилтэй хэсэг гэж байна? Эдгээр цанаар гулгаж,
     өвдөг дээрээ бөхийж, энэ Scratch үйл ажиллагаанд код ашиглан хөлдөөсөн саад тотгорыг
@@ -12152,11 +12098,8 @@ mn:
   tutorial_kodableshapes_language: Англи хэл
   tutorial_nasabinary_language: Англи хэл
   tutorial_3dmaker_language: Англи хэл
-  tutorial_itchstart_language: Англи хэл
   tutorial_hopsub_language: Хятад (Хялбаршуулсан), Англи, Испани (Испани), Испани
     (Мексик)
-  tutorial_itchmundos_language: Испани (Мексик)
-  tutorial_itchtenacity_language: Испани (Мексик)
   tutorial_kcjskiing_language: Англи, Франц
   tutorial_groksecurity_language: Англи хэл
   tutorial_creaticode_language: Хятад хэл (Хялбаршуулсан), Хятад (Уламжлалт), Англи
@@ -12250,10 +12193,7 @@ mn:
   tutorial_kodableshapes_string_detail_grades: Урьдчилсан уншигч - 5-р анги
   tutorial_nasabinary_string_detail_grades: 6+ анги
   tutorial_3dmaker_string_detail_grades: 2-8-р анги
-  tutorial_itchstart_string_detail_grades: 2-8-р анги
   tutorial_hopsub_string_detail_grades: 2-8-р анги
-  tutorial_itchmundos_string_detail_grades: Анги 2+
-  tutorial_itchtenacity_string_detail_grades: Анги 2+
   tutorial_kcjskiing_string_detail_grades: Анги 2+
   tutorial_groksecurity_string_detail_grades: 6+ анги
   tutorial_creaticode_string_detail_grades: 6+ анги
@@ -12344,11 +12284,7 @@ mn:
   tutorial_nasabinary_string_platforms: Салгагдаагүй, Дэлгэц уншигч
   tutorial_3dmaker_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет, Ipad,
     Windows утас, Android утас, Iphone
-  tutorial_itchstart_string_platforms: Орчин үеийн бүх хөтчүүд, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет, iPad
-  tutorial_itchtenacity_string_platforms: Орчин үеийн бүх хөтчүүд, Android таблет,
-    iPad
   tutorial_kcjskiing_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_groksecurity_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
     Ipad, Windows утас, Android утас, Iphone
@@ -12443,10 +12379,7 @@ mn:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12536,10 +12469,7 @@ mn:
     даасан (олон хэл дээр зааж болно)
   tutorial_nasabinary_string_detail_programming_languages: Хоёртын код
   tutorial_3dmaker_string_detail_programming_languages: Блокууд
-  tutorial_itchstart_string_detail_programming_languages: Блокууд
   tutorial_hopsub_string_detail_programming_languages: Хопскотч
-  tutorial_itchmundos_string_detail_programming_languages: Блокууд
-  tutorial_itchtenacity_string_detail_programming_languages: Блокууд
   tutorial_kcjskiing_string_detail_programming_languages: Блокууд
   tutorial_groksecurity_string_detail_programming_languages: Байхгүй - ямар ч програмчлалын
     шаардлагатай
@@ -13652,6 +13582,16 @@ mn:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Бүжгийн үдэшлэг
+  tutorial_introtomlai_name: Машины сургалтын танилцуулга
+  tutorial_computervisionai_name: Компьютерийн алсын хараа
+  tutorial_neuralnetworksai_name: Мэдрэлийн сүлжээ
+  tutorial_chatbotsllmai_name: Chatbots ба том хэлний загварууд
+  tutorial_generativeimagesai_name: Генератив зураг
+  tutorial_algorithmicbiasai_name: Алгоритмын хэвийсэн
+  tutorial_codeofethicsai_name: Манай AI ёс зүйн дүрэм
+  tutorial_socimpactofgenaiai_name: Генератив АИ-ийн нийгэмд үзүүлэх нөлөө
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14122,6 +14062,42 @@ mn:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: Найзуудтайгаа хуваалцахын тулд бүжгийн үдэшлэгийг
+    кодчилно уу. Кэти Перри, Мадонна, Ж.Балвин, Сиа, Кэйт Урбан, Сиара, 25 бусад!
+  tutorial_introtomlai_longdescription: Машин суралцах гэж нэрлэгддэг хиймэл оюун
+    ухааны нэг хэлбэр, асуудлыг шийдэхийн тулд роботыг сургахад туслахын тулд Асуудал
+    шийдвэрлэх үйл явцыг хэрхэн ашиглаж болох талаар олж мэдээрэй. Робот загасны хэв
+    маягийг хэрхэн илрүүлэх талаар сурч байгаа машин сургалтын үйл ажиллагаанд оролцох.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Мэдрэлийн сүлжээ хэрхэн ажилладаг талаар
+    суралц. замдаа гарт мэдрэлийн сүлжээг судлах нь виджетүүд ашиглах. Мэдрэлийн сүлжээг
+    тайлбарлах видео үзэх. Эцэст нь зөвлөмжийн системийг бий болгох үед янз бүрийн
+    хэтийн хэрэгцээг хэлэлцэх.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: AI хэрхэн зураг үүсгэж болохыг олж
+    мэдээд дараа нь диффузийн AI виджетийг судалж, эдгээр загварууд нь бүтээлч эсэх
+    талаар ярилцаарай.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Генератив АИ-ийн нөлөөллийг янз бүрийн
+    өнцгөөс судалж, дараа нь бүх оролцогчдоос хамгийн их хэрэгцээг шийдвэрлэх удирдамжийг
+    гаргаж ирэхийн тулд баг болгон хамтран ажиллана.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: 6+ анги
   tutorial_bscomputing_string_detail_grades: 6+ анги
   tutorial_stackpython_string_detail_grades: 6+ анги
@@ -14223,7 +14199,7 @@ mn:
   tutorial_hwfanpage_string_detail_grades: Анги 2+
   tutorial_hwillusion_string_detail_grades: 6+ анги
   tutorial_caevolution_string_detail_grades: 6+ анги
-  tutorial_bbbusybot_string_detail_grades: 6+ анги
+  tutorial_bbbusybot_string_detail_grades: 9+ анги
   tutorial_caaifarm_string_detail_grades: 6+ анги
   tutorial_cafuture_string_detail_grades: 6+ анги
   tutorial_dmscratch_string_detail_grades: 2-8-р анги
@@ -14253,6 +14229,16 @@ mn:
   tutorial_madmobile_string_detail_grades: 6+ анги
   tutorial_intelinosmile_string_detail_grades: Урьдчилсан уншигч - 8-р анги
   tutorial_intelinoaisign_string_detail_grades: 2-8-р анги
+  tutorial_danceai2023_string_detail_grades: Анги 2+
+  tutorial_introtomlai_string_detail_grades: 6+ анги
+  tutorial_computervisionai_string_detail_grades: 6+ анги
+  tutorial_neuralnetworksai_string_detail_grades: 6+ анги
+  tutorial_chatbotsllmai_string_detail_grades: 6+ анги
+  tutorial_generativeimagesai_string_detail_grades: 6+ анги
+  tutorial_algorithmicbiasai_string_detail_grades: 6+ анги
+  tutorial_codeofethicsai_string_detail_grades: 6+ анги
+  tutorial_socimpactofgenaiai_string_detail_grades: 6+ анги
+  tutorial_generationai_string_detail_grades: Анги 2+
   tutorial_bsimage_string_platforms: Хром, гал унтраах, сафари
   tutorial_bscomputing_string_platforms: Залгаагдаагүй
   tutorial_stackpython_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
@@ -14422,6 +14408,26 @@ mn:
   tutorial_madmobile_string_platforms: Орчин үеийн бүх хөтчүүд
   tutorial_intelinosmile_string_platforms: Орчин үеийн бүх хөтчүүд, iPad
   tutorial_intelinoaisign_string_platforms: Орчин үеийн бүх хөтчүүд
+  tutorial_danceai2023_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_introtomlai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_computervisionai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_neuralnetworksai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_chatbotsllmai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_generativeimagesai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_algorithmicbiasai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_codeofethicsai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_socimpactofgenaiai_string_platforms: Бүх орчин үеийн хөтчүүд, Android таблет,
+    Ipad, Android утас, Iphone
+  tutorial_generationai_string_platforms: Android таблет, Ipad, Windows утас, Android
+    утас, Iphone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14553,6 +14559,16 @@ mn:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Хэл бие даасан
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14678,12 +14694,22 @@ mn:
   tutorial_codecombathack_string_detail_programming_languages: Хэл бие даасан
   tutorial_toxicodewords_string_detail_programming_languages: Хэл бие даасан
   tutorial_mitstepmisinformation_string_detail_programming_languages: Залгаагдаагүй
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Залгаагдаагүй
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Залгаагдаагүй
   tutorial_mitstepintrotoml_string_detail_programming_languages: Залгаагдаагүй
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Блокууд
   tutorial_intelinoaisign_string_detail_programming_languages: Блокууд
+  tutorial_danceai2023_string_detail_programming_languages: Хэл бие даасан
+  tutorial_introtomlai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_computervisionai_string_detail_programming_language: Хэл бие даасан
+  tutorial_neuralnetworksai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_chatbotsllmai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_generativeimagesai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_codeofethicsai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Хэл бие даасан
+  tutorial_generationai_string_detail_programming_languages: Блок, Python
   school_not_found_heading: Бид танай сургуулийг олж чадаагүй. Дэлгэрэнгүй мэдээллийг
     оруулна уу.
   school_name: Сургуулийн нэр
@@ -14825,6 +14851,10 @@ mn:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Кодын цаг хийх урьдчилсан нөхцөл юу вэ?
   hoc_how_to_faq_answer_prerequisites: Кодын цаг ажиллуулахад хялбар байдаг - эхлэгчдэд
     ч гэсэн. Оюутнуудад шинэ зүйлийг судлах, бүтээх, сурахад урам зориг өгөхийн тулд
@@ -15272,6 +15302,44 @@ mn:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Та ангийн оюутан, эсвэл АИ-тэй багшлах ирээдүйг нээх сурган хүмүүжүүлэгч
     эсэхээс үл хамааран АИ-ийн талаар хэн ч мэдэж болно.
   hoc_ai_how_ai_works_video_series_desc: Энэхүү богино хэмжээний видеоны цуврал нь
@@ -15288,6 +15356,37 @@ mn:
     байна.
   hoc_ai_activities_desc: Кодын цагийн эдгээр бүх шинэ үйл ажиллагаа нь хэрэглэгчдийг
     хиймэл оюун ухааны ертөнцтэй хөгжилтэй, сонирхолтой байдлаар танилцуулдаг.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Цэнхэр, шар өнгийн подволктой тохирсон 100 орчим Code.org-ийн
     ажилчид компанийн зуны 2022 оны Codechella арга хэмжээнд зориулж зочид буудлын
     хурлын өрөөнд байрладаг.
@@ -15936,9 +16035,10 @@ mn:
     Компьютерийн шинжлэх ухааны боловсролын өргөн хүрээний хамтын нийгэмлэгийн уйгагүй
     тусламжийг хүртэж байгаадаа бид талархаж байна, [бид олон жилийн туршид бидний
     нөлөөллийг дэмжсэн бүх түншүүд, хувь хүмүүст талархаж байна] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 оны жилийн тайлан] (%{report_url})
-    (Өнгөрсөн тайлангууд: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Бидний үндсэн үнэт зүйлс ба мессежийн удирдамж]
     (%{core_url})"
   about_page_section_more_list_3: "[Бидний сургалтын хөтөлбөр, сурган хүмүүжүүлэх

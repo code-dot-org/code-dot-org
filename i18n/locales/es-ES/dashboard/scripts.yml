@@ -8025,3 +8025,18 @@ es:
           title: 'Módulo 1: Preparación para la Enseñanza de la Resolución de Problemas y la Computación'
           description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
           student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Resolución de Problemas y Computación de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a la Resolución de Problemas y Computación.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 30 minutos"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Fiesta de baile: Edición IA'
+          title: 'Fiesta de baile: Edición IA'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Módulo 2: Preparación para la Enseñanza del Desarrollo Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Preparación para la Enseñanza de Animaciones y Juegos Interactivos
+          description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a las Animaciones y Juegos Interactivos.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 120 minutos"
+          student_description: "Este módulo de aprendizaje profesional está diseñado para ayudarte en la enseñanza de la unidad de Animaciones y Juegos Interactivos de Code.org. \n\n**En este módulo de aprendizaje profesional, podrás:**\n\n-   Obtener una introducción a las Animaciones y Juegos Interactivos.\n-   Practicar los conceptos clave incluidos en la unidad.\n-   Interactuar con el Laboratorio Web.\n-   Explorar los proyectos de fin de capítulo.\n\n**Tiempo sugerido:** 120 minutos"
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Módulo 4:  Preparación para la Enseñanza del Proceso de Diseño'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Módulo 5: Preparación para la Enseñanza de los Datos y la Sociedad'

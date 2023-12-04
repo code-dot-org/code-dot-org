@@ -1020,6 +1020,12 @@ ta:
         text: "{SPRITE} சொல் {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} சறுக்கி {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': கேஸ்
+            '"liquid"': திரவம்
+            '"solid"': திடமான
       KatiesBlocks_tumbling:
         text: உருளும்
       Mikelab_addBehaviorSimple:

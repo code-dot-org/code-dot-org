@@ -350,6 +350,12 @@ kn:
         text: "{SPRITE}ಹೇಳಿ{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': ಅನಿಲ
+            '"liquid"': ಲಿಕ್ವಿಡ್
+            '"solid"': ಸಾಲಿಡ್
       KatiesBlocks_tumbling:
         text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:

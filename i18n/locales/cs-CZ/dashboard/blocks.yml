@@ -1711,6 +1711,12 @@ cs:
         text: y souřadnice {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': pevná látka
+            '"liquid"': kapalina
+            '"gas"': plyn
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

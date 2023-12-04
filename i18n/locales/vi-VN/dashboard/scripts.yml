@@ -4056,3 +4056,13 @@ vi:
           title: 'Học phần 1: Chuẩn bị giảng dạy về Giải quyết vấn đề và máy tính'
           description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org. \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 30 phút"
           student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phần Giải quyết vấn đề và máy tính của Code.org. \n\n**Trong học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Giải quyết vấn đề và máy tính.\n-   Thực hành các khái niệm chính có trong bài học.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 30 phút"
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Học phần 2: Chuẩn bị giảng dạy về Phát triển web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Chuẩn bị giảng dạy về Hoạt ảnh và game tương tác
+          description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org. \n\n**Trong Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 120 phút"
+          student_description: "Học phần đào tạo chuyên môn này được thiết kế để giúp bạn chuẩn bị giảng dạy học phẩn Hoạt ảnh và game tương tác của Code.org. \n\n**Trong Học phần đào tạo chuyên môn này, bạn sẽ:**\n\n-   Làm quen với học phần Hoạt ảnh và game tương tác.\n-   Thực hành các khái niệm chính có trong học phần.\n-   Tương tác với Game Lab.\n-   Khám phá các dự án cuối bài học.\n\n**Thời gian đề xuất:** 120 phút"
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Học phần 4: Chuẩn bị giảng dạy về Quy trình thiết kế"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Học phần 5: Chuẩn bị giảng dạy về Dữ liệu và xã hội'

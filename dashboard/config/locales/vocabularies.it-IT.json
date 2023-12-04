@@ -212,7 +212,7 @@
         },
         "machine_learning/csd/2021": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "features/csd/2021": {
           "word": "Caratteristiche",
@@ -580,7 +580,7 @@
         },
         "machine_learning/coursef/2021": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "dns/coursef/2021": {
           "word": "DNS",
@@ -980,7 +980,7 @@
         },
         "machine_learning/csd/2022": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "features/csd/2022": {
           "word": "Caratteristiche",
@@ -1331,7 +1331,7 @@
         },
         "machine_learning/coursef/2022": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "dns/coursef/2022": {
           "word": "DNS",
@@ -1948,7 +1948,7 @@
         },
         "machine_learning/csd/2023": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "features/csd/2023": {
           "word": "Caratteristiche",
@@ -2299,7 +2299,7 @@
         },
         "machine_learning/coursef/2023": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "dns/coursef/2023": {
           "word": "DNS",
@@ -2507,7 +2507,7 @@
         },
         "machine_learning/how-ai-works/2023": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "algorithm/how-ai-works/2023": {
           "word": "Algoritmo",
@@ -2515,7 +2515,7 @@
         },
         "network/how-ai-works/2023": {
           "word": "Rete",
-          "definition": "Una raccolta di oggetti collegati tra loro. Seguendo queste connessioni è possibile rappresentare i passaggi di un algoritmo, ad esempio un diagramma di flusso."
+          "definition": "un insieme di elementi collegati tra loro. Queste connessioni possono rappresentare i passaggi di un algoritmo, come un diagramma di flusso."
         },
         "large_language_model_llm_/how-ai-works/2023": {
           "word": "Modello linguistico di grandi dimensioni (LLM)",
@@ -2526,8 +2526,8 @@
           "definition": "Un programma informatico progettato per prendere una decisione"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Diffusione AI",
-          "definition": "conversione di un'immagine in rumore e addestramento di un'intelligenza artificiale per invertire il processo"
+          "word": "Diffusione IA",
+          "definition": "convertire un'immagine in rumore e addestrare un'IA per invertire il processo"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN (Generative Adversarial Network ossia Rete Generativa Avversaria)",
@@ -2642,7 +2642,7 @@
           "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
         },
         "code/flappy/unversioned": {
-          "word": "programmare (to code)",
+          "word": "programmare",
           "definition": "(v) programmare o scrivere istruzioni per un computer."
         },
         "debugging/flappy/unversioned": {
@@ -2787,7 +2787,7 @@
         },
         "machine_learning/oceans/unversioned": {
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
-          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+          "definition": "Il modo in cui i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
         "event/outbreak/unversioned": {
           "word": "Evento",
@@ -2881,7 +2881,12 @@
           "definition": "Un'azione che fa accadere qualcosa."
         },
         "program/dance-ai/2023": {
-          "word": "Programma"
+          "word": "Programma",
+          "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Intelligenza artificiale (AI)",
+          "definition": "Un programma per computer che raccoglie dati, apprende modelli da tali dati e quindi prende decisioni in base a ciò che ha appreso."
         }
       }
     }

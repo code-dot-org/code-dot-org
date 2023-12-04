@@ -1732,6 +1732,12 @@ de:
         text: y Koordinate von {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} gleite zu {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': Solid
+            '"liquid"': flüssig
+            '"gas"': Gas
       KatiesBlocks_tumbling:
         text: hingefallen
       Mikelab_addBehaviorSimple:

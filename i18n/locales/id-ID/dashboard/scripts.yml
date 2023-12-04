@@ -5531,3 +5531,38 @@ id:
             -   Mengkesplorasi proyek akhir chapter.
 
             **Waktu yang disarankan:** 30 menit
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Pesta Dansa: Edisi AI'
+          title: 'Pesta Dansa: Edisi AI'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Bersiap Mengajarkan Animasi Interaktif dan Game
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'

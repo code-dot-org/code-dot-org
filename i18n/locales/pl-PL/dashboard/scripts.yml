@@ -7431,12 +7431,16 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
         ai-ethics-2023:
@@ -7736,6 +7740,11 @@ pl:
         dance-ai-2023:
           lessons:
             lesson-1:
-              name: 'Potańcówka: edycja AI'
+              name: 'Potańcówka: edycja A.I.'
           name: dance-ai-2023
           title: 'Potańcówka: edycja AI'
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test

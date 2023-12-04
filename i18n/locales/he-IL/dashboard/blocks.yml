@@ -14,6 +14,8 @@ he:
         options:
           SIZE:
             '1.00': זמן בינוני
+      Dancelab_ai:
+        text: "{IMAGE} צור {VALUE} אפקט"
       Dancelab_alternateMoves:
         text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ל{MOVE2}"
         options:
@@ -597,12 +599,14 @@ he:
             '"none"': כלום
             '"rand"': "(אקראי)"
             '"quads"': מלאכים
+            '"blooming_petals"': עלי כותרת פורחים
             '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
             '"disco_ball"': כדור דיסקו
             '"fireworks"': זיקוקים
             '"flowers"': פרחים
+            '"frosted_grid"': רשת עמומה
             '"growing_stars"': כוכבים גדלים
             '"swirl"': הִיפְּנוֹ
             '"kaleidoscope"': קליידוסקופ
@@ -622,17 +626,27 @@ he:
             '"stars"': כוכבים
             '"music_wave"': גלים
           PALETTE:
+            '"autumn"': סתיו
             '"rave"': שחור לבן
             '"cool"': מגניב
             '"electronic"': אלקטרוני
+            '"grayscale"': גוני אפור
             '"iceCream"': גלידה
             '"default"': אוֹר
             '"neon"': נאון
             '"ocean"': אוקיינוס
             '"rainbow"': קשת
+            '"roses"': ורדים
+            '"sky"': שמיים
+            '"spring"': אביב
+            '"summer"': קיץ
+            '"sunrise"': זריחה
+            '"sunset"': שקיעה
             '"tropical"': טרופי
+            '"twinkling"': הבהוב
             '"vintage"': וינטאג'
             '"warm"': חמים
+            '"winter"': חורף
       Dancelab_setDanceSpeed:
         text: קבע את מהירות הריקוד של {SPRITE} ל {SPEED}
         options:
@@ -1585,6 +1599,12 @@ he:
         text: x קואורדינטות של {SPRITE}
       gamelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': מוצק
+            '"liquid"': נוזל
+            '"gas"': גז
       Mikelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_addTrainingData:

@@ -71,6 +71,10 @@ zh-CN:
           title: CSA 虚拟专业学习
         self-paced-pl-csd-unit1-2023:
           title: 教授问题解决和计算
+        self-paced-pl-csd-unit2-2023:
+          title: Web开发教学
+        self-paced-pl-csd-unit5-2023:
+          title: 教学数据与社会
     resources:
       curriculum/csd/2017:
         name: 课程

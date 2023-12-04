@@ -6388,7 +6388,8 @@
         },
         "ai-ethics-2023/lesson-1": {
           "name": "Nuestro Código Ético de la Inteligencia Artificial",
-          "student_overview": "Investigue de forma colaborativa sobre la ética de la IA y cree un código de conducta que se pueda compartir."
+          "student_overview": "Investigue de forma colaborativa sobre la ética de la IA y cree un código de conducta que se pueda compartir.",
+          "overview": "Esta lección se basa en actividades previas relacionadas con la investigación y la búsqueda de fuentes para justificar un argumento. En grupos pequeños, los estudiantes realizan investigaciones utilizando artículos y vídeos que exponen las dificultades éticas en un área de inteligencia artificial (IA) de su elección. Después, los estudiantes pueden elegir formas de sintetizar lo que han aprendido para hacer recomendaciones sobre cómo utilizar la IA en la sociedad: crear un código de ética de la IA, crear un manifiesto sobre la IA o diseñar una representación artística con el lema «Imagina tu mundo»."
         },
         "csc-adaptations-2023/Modeling Animal Adaptations (pilot)": {
           "name": "Introducción a las adaptaciones animales",
@@ -8958,6 +8959,16 @@
         },
         "vigenere/Vigenere": {
           "name": "Vigenere"
+        },
+        "ai-ethics-2023/lesson-2": {
+          "overview": "Los estudiantes exploran el impacto de la IA generativa al participar en un juego colaborativo. Empiezan viendo un vídeo en el que se presenta cómo funcionan los modelos de lenguaje de gran tamaño, como los chatbots o las imágenes generativas. Luego, los estudiantes adoptan el papel de alguien afectado por la IA generativa para leer algunos artículos y reaccionar como personajes. Luego, los estudiantes forman grupos y se les presenta un escenario que involucra sus personajes y la IA generativa. Trabajando juntos, elaboran directrices sobre cómo debe implementarse la IA generativa en este escenario, que incluye las voces y perspectivas de todas las partes interesadas. Por último, los estudiantes comparten sus resultados con la clase y reflexionan sobre este proceso.",
+          "student_overview": "Aprenda sobre la IA generativa adoptando un personaje y elaborando las pautas adecuadas para la IA generativa"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Fiesta de baile: Edición IA",
+          "overview": "En esta actividad, los estudiantes de todas las edades tendrán una primera experiencia con la programación y la inteligencia artificial en un entorno seguro y creativo. Esta lección ha sido creada para estudiantes de todas las edades, pero es importante saber leer. Además, esta actividad requiere que los estudiantes reproduzcan sonidos, ya que el tutorial fue diseñado para responder a la música.",
+          "preparation": "### Cómo Planificar Tu Hora del Código\n\n¡Encuentra los recursos que necesitas para planificar, implementar y celebrar la Hora del Código en tu escuela! [here](https://hourofcode.com/us/how-to)",
+          "purpose": "Fare della programmazione un'esperienza emozionante e piacevole è essenziale per coltivare l'interesse per l'informatica. Questa lezione è piena di momenti di felicità, in cui gli studenti usano il codice per creare la coreografia di uno spettacolo di danza fatto di colori e movimenti utilizzando semplici blocchi di codice trascinabili. Agli studenti verrà presentato un Bot A.I. che indirizzeranno per aiutarli a trovare gli effetti perfetti in base all'atmosfera della loro danza."
         }
       }
     }

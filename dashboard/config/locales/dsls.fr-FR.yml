@@ -13225,20 +13225,19 @@ fr-FR:
           target=\"_blank\">cette ressource</a> pour faire part de vos commentaires
           à votre partenaire.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Tous les écosystèmes ont une chaîne alimentaire _délicatement
-          équilibrée**\n## #The chaîne alimentaire de l'écosystème marin : >## #1.\n\n\n\n<img
-          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nLe soleil fournit
-          l'énergie nécessaire à la photosynthèse des algues.\n>## #2. Les algues
-          sont consommées par les poissons.\n>## #3. Les poissons sont capturés et
-          mangés par les humains, qui utilisent des bateaux de pêche munis de filets.
-          \n\n</div>\n\n\n##**S'il y a trop ou trop peu d'un organisme dans la chaîne
-          alimentaire, cela a des effets sur l'ensemble de l'écosystème.**\n"
+        markdown: "\n##**Tous les écosystèmes ont une chaîne alimentaire _à léquilibre
+          délicat_**\n###La chaîne alimentaire d'écosystème marin : \n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. Le soleil
+          fournit l'énergie nécessaire à la photosynthèse des algues.\n>## #2. Les
+          algues sont consommées par les poissons.\n>## #3. Les poissons sont attrapés
+          et mangés par les humains, qui utilisent des bateaux de pêche munis de filets.
+          \n\n</div>\n\n\n##**S'il y a trop ou trop peu d'un organisme au sein de
+          la chaîne alimentaire, il y a des effets sur l'ensemble de l'écosystème.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: Chacune de ces simulations d'écosystème doit être ajustée. Choisissez
-          un écosystème, exécutez la simulation pour observer le problème et ajustez
-          le code pour le résoudre.
-        display_name: Choisissez un écosystème !
+        description: Chacune de ces simulations d'écosystème doit être ajustée. Choisir
+          un écosystème, exécuter la simulation pour observer le problème et ajuster
+          le code afin de résoudre celui-ci.
+        display_name: Choisis un écosystème !
       csc_ecosystems_conditionals_overview:
         markdown: "# Instructions conditionnelles cause-effet \n\n</div>\n\n## Ensuite,
           on va ajouter du code qui va vérifier la quantité d'algues dans l'eau <br>\n<img
@@ -13262,11 +13261,8 @@ fr-FR:
         - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
         - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
         - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
-        markdown: |+
-          ## Regardez les trois pratiques de pêche durables
-
-          Faites glisser le code vers l'image correspondante.
-
+        markdown: "## Regarder les trois pratiques de pêche durables\n\nFaire glisser
+          le code vers l'image qui lui correspond.\n\n "
         questions:
         - text: Créer une zone de pêche pour les bateaux ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
@@ -13294,9 +13290,9 @@ fr-FR:
         title: Associer le code à l'image correspondante
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: Regarder ce qui se passe lorsque les sprites se touchent dans les
           deux animations. Ensuite, faire glisser chaque image de code vers l'image
@@ -13345,19 +13341,19 @@ fr-FR:
           interdites aux bateaux de pêche afin que l'écosystème puisse se rétablir.**
           \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "#Share Votre simulation d'écosystème !\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+        markdown: "#Partage ta simulation d'écosystème !\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Écologistes !
-          C'est le moment de partager vos recherches ! **\n\n## #Explain les observations
-          suivantes que vous avez faites :\n\n>1. Expliquez la chaîne alimentaire
-          de votre écosystème et comment vous l'avez codée.\n>2. Y avait-il trop ou
-          trop peu d'organisme ?\n>3. Expliquez les modifications que vous avez apportées
-          à la simulation. \n>4. Qu'avez-vous remarqué après avoir modifié les valeurs ?\n</div>\n\n<div
+          C'est le moment de partager vos recherches ! **\n\n###Expliquer les observations
+          suivantes qu'on a faites :\n\n>1. Expliquer la chaîne alimentaire de notre
+          écosystème et comment on l'a codée.\n>2. Y avait-il trop ou trop peu d'organisme ?\n>3.
+          Expliquer les modifications qui ont été apportées à la simulation. \n>4.
+          Qu'a-t-on pu remarquer après avoir modifié les valeurs ?\n</div>\n\n<div
           style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
           width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
           1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
-          20px; font-size: 18px; \">\n\n###**Prêt pour plus de codage ? ** \nEssayez
-          le [cours express] de code.org (https://studio.code.org/s/express-2022)
-          pour en savoir plus sur l'informatique à votre rythme.   \n<br>\n</p></div>\n"
+          20px; font-size: 18px; \">\n\n###**Prêt pour plus de codage ? ** \nEssaie
+          le [Cours Express] de Code.org (https://studio.code.org/s/express-2022)
+          pour en apprendre plus sur l'informatique à ton propre rythme.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan Votre carte des points de repère

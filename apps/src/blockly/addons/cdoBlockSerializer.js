@@ -25,12 +25,10 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
 
     for (const blockState of blockStates) {
       try {
-        if (
-          Blockly.useModalFunctionEditor &&
-          PROCEDURE_DEFINITION_TYPES.includes(blockState.type)
-        ) {
-          // Ensure that procedure definitions can be moved/edited on the main workspace.
-          blockState.movable = true;
+        if (PROCEDURE_DEFINITION_TYPES.includes(blockState.type)) {
+          // Procedure definitions should not be movable on the modal workspace.
+          blockState.movable = !Blockly.useModalFunctionEditor;
+          // Ensure that procedure definitions are editable.
           blockState.editable = true;
         }
         GoogleBlockly.serialization.blocks.append(blockState, workspace, {

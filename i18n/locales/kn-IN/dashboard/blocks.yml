@@ -895,6 +895,12 @@ kn:
         text: y {SPRITE} ನ ಕೋಆರ್ಡಿನೇಟ್
       KatiesBlocks_glideTo:
         text: "{SPRITE} ಇದು {LOCATION} ಗ್ಲೈಡ್ ಮಾಡಿ"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': ಸಾಲಿಡ್
+            '"liquid"': ಲಿಕ್ವಿಡ್
+            '"gas"': ಅನಿಲ
       KatiesBlocks_tumbling:
         text: ಟಂಬ್ಲಿಂಗ್
       Mikelab_addBehaviorSimple:

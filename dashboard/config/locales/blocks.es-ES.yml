@@ -1106,6 +1106,15 @@ es:
         text: "{SPRITE}dice{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': líquido
+            '"solid"': sólido
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: cayendo
       Mikelab_addBehaviorSimple:

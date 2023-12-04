@@ -14,6 +14,7 @@ class LevelsHelperTest < ActionView::TestCase
   setup do
     @level = create(:maze)
     @game = Game.custom_maze
+    @is_start_mode = false
 
     def request
       OpenStruct.new(
@@ -108,7 +109,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "blockly_options 'embed' is true for widget levels not in start mode" do
     @level = create(:applab, embed: false, widget_mode: true)
-    @is_start_mode = false
     assert blockly_options[:embed]
   end
 
@@ -352,48 +352,74 @@ class LevelsHelperTest < ActionView::TestCase
     refute_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'uses_google_blockly is false if not set' do
+  test 'use_google_blockly is false if not set' do
+    Experiment.stubs(:enabled?).returns(false)
     @level = build :level
     refute use_google_blockly
+    Experiment.unstub(:enabled?)
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if Experiment is enabled but is_start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    refute use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly otherwise' do
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+  end
+
+  test 'use_google_blockly is true if Experiment is enabled for google_blockly' do
+    Experiment.stubs(:enabled?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
   end
 
   test 'use_google_blockly is true if blocklyVersion is set to Google in view_options' do
+    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'google')
     @level = build :level
     assert use_google_blockly
-
+    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options' do
+  test 'use_google_blockly is true if blocklyVersion is set to Google in view_options even if start_mode is true' do
+    @is_start_mode = true
+    Experiment.stubs(:enabled?).returns(false)
+    view_options(blocklyVersion: 'google')
+    @level = build :level
+    assert use_google_blockly
+    Experiment.unstub(:enabled?)
+    reset_view_options
+  end
+
+  test 'use_google_blockly is false if blocklyVersion is set to Cdo in view_options even if level uses google_blockly' do
+    Experiment.stubs(:enabled?).returns(false)
     view_options(blocklyVersion: 'cdo')
     @level = build :level
+    @level.stubs(:uses_google_blockly?).returns(true)
     refute use_google_blockly
-
+    Experiment.unstub(:enabled?)
     reset_view_options
   end
 
-  test 'use_google_blockly is true if level.uses_google_blockly?' do
-    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
+  test 'use_google_blockly is true if level uses google_blockly and blocklyVersion is not set to cdo' do
+    Experiment.stubs(:enabled?).returns(false)
+    view_options(blocklyVersion: nil)
     @level = build :level
+    @level.stubs(:uses_google_blockly?).returns(true)
     assert use_google_blockly
-
-    Level.unstub(:uses_google_blockly?)
-  end
-
-  test 'use_google_blockly is false if level.uses_google_blockly? but disable_google_blockly is set' do
-    GamelabJr.any_instance.stubs(:uses_google_blockly?).returns(true)
-    @level = build :spritelab
-    assert use_google_blockly
-
-    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['GamelabJr'])
-    refute use_google_blockly
-
-    # Should be case insensitive
-    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['gamelabjr'])
-    refute use_google_blockly
-
-    DCDO.unstub(:get)
+    @level.unstub(:uses_google_blockly?)
+    Experiment.unstub(:enabled?)
+    reset_view_options
   end
 
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do

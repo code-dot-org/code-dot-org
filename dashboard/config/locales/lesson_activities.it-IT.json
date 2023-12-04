@@ -12387,7 +12387,7 @@
           "name": "Dopo la lezione"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(Facoltativo) Attività di estensione"
+          "name": "(Facoltativo) Attività di approfondimento"
         },
         "4d668e14-f593-43b6-84e7-c6f6e8b1baa1": {
           "name": "Prima della lezione"
@@ -12405,7 +12405,7 @@
           "name": "Dopo la lezione"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(Facoltativo) Attività GAN"
+          "name": "(Facoltativo) Attività sulle \"GAN\""
         },
         "3d692c8b-130c-4a16-94e5-1ea6276228e1": {
           "name": "Prima della lezione"
@@ -12444,7 +12444,7 @@
           "name": "Che cos'è l'apprendimento automatico?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Dati di formazione e distorsioni"
+          "name": "Dati di apprendimento e distorsioni (bias)"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Come funzionano le reti neurali"
@@ -12456,7 +12456,7 @@
           "name": "Come funzionano i Chatbot e i Modelli linguistici di grandi dimensioni"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
-          "name": "L'intelligenza artificiale ha creatività e immaginazione?"
+          "name": "L'intelligenza artificiale dispone di creatività e immaginazione?"
         },
         "3c37c274-5b3f-4542-8363-59de96bef286": {
           "name": "Etica e intelligenza artificiale: parità di accesso e pregiudizi algoritmici"
@@ -13432,6 +13432,9 @@
         },
         "02b4486f-d09d-4031-8235-0cf728733456": {
           "name": "Conclusione"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Dopo l'attività"
         }
       }
     }

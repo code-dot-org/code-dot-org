@@ -6,8 +6,11 @@ uk:
       8-Bit Binary Number Widget: 8-бітний віджет двійкових чисел
       AI Lab and Isaac's Data: Лабораторія ШІ та дані Айзека
       AI Lab and Kim's Data: Лабораторія ШІ та дані Кіма
+      AI Machine Learning - Video: Машинне навчання ШІ - Відео
       'AI for Oceans: Fish vs Not Fish': 'ШІ для океанів: Риба чи не риба'
       'AI for Oceans: Types of Fish': 'ШІ для океанів: Види риб'
+      'AI: Impact on Society - Video': 'ШІ: Вплив на суспільство - Відео'
+      'AI: Training Data & Bias - Video': 'ШІ: Навчальні дані та упередженість - Відео'
       Accelerometer Events: Події акселерометра
       Add Content and HTML: Додавання вмісту та HTML
       Add Content and Structure to Your Page: Додавання вмісту та структури на свою
@@ -27,6 +30,7 @@ uk:
       Analog Sensors: Аналогові датчики
       Animate Your Scene: Анімація вашої сцени
       Animating Sprites: Анімація спрайтів
+      Animation and Game Templates: Шаблони анімацій та ігор
       App Lab Intro - Video: Вступ до лабораторії додатків - відео
       'App Project: Screen Design': 'Проєкт застосунка: Дизайн екрану'
       'App: Choose a Kid''s Movie': 'Застосунок: Виберіть дитяче кіно'
@@ -54,6 +58,7 @@ uk:
       Basic Conditionals: Основні умовні умови
       Bass, Mid, and Treble: Баси, середні та високі частоти
       Be a Super Digital Citizen: Стань суперцифровим громадянином
+      Begin planning your project: Починаємо планувати проєкт
       Begin planning your project_2018: Починаємо планувати проєкт
       Binary Bracelets - Unplugged Activity: Двійкові браслети - Безмашинна вправа
       Binary Number Widget: Віджет двійкових чисел
@@ -63,21 +68,25 @@ uk:
       Board Input and Output: Вхід і вивід плати
       Book Recommender App: Застосунок Рекомендатор книг
       Book Recommender Model Card: Картка моделі Рекомендатор книг
+      Book Summary: Короткий зміст книги
       Boolean Comparison: Логічне порівняння
       Booleans and Comparison Operators: Булеві та оператори порівняння
       Build a Platform Jumper: Створення гри "Стрибунець"
       Build a Screen: Створення екрана
+      Building a UI with Design Mode: Створення інтерфейсу користувача у режимі проектування
       Building an App: Створення програми
       Button Circuits: Кнопкові схеми
       Buttons and Switch: Кнопки та перемикач
       CS Discoveries Post-Course Survey: Опитування після курсу CS Discoveries
       CS Discoveries Post-course Survey: Опитування після курсу Дослідження інформатики
+      CSD U3 Interactive Card Exemplar: Зразок інтерактивної картки CSD U3
       CSS Classes: Класи CSS
       CSS Text Properties: Властивості тексту CSS
       CSS and Style Sheets: CSS та аркуші (таблиці) стилів
       Cake Defender: Торт захисник
       Challenge: Виклик
       Challenge Levels: Завдання рівнів
+      Challenge/Practice: Виклик/Практика
       'Challenge: Add More Inputs': 'Виклик: Додати більше входів'
       'Challenge: Checking for Multiple Conditions': 'Виклик: Перевірка кількох умов'
       'Challenge: Draw an Image': 'Завдання: намалюй зображення'
@@ -90,11 +99,14 @@ uk:
       Change: Змінити
       Changing Screens: Зміна екранів
       Changing Sensor Scale: Зміна шкали датчика
+      Check For Understanding: Перевірка розуміння
       Check Your Work: Перевірка своєї роботи
       Check for Understanding: Перевірка на розуміння
       Check-In Survey: Вхідне опитування
       Checking for a Winner: Перевірка переможця
+      Choice: Вибір
       'Choice Levels: Customize Your App': 'Рівні вибору: Налаштування свого застосунку'
+      Choose Your Own Adventure: Виберіть свою власну пригоду
       'Circuit Playground: Buzzer': 'Circuit Playground: зумер'
       'Circuit Playground: Color LEDs': 'Circuit Playground: кольорові світлодіоди'
       'Circuit Playground: LEDs': 'Circuit Playground: LED-лампочки'
@@ -140,8 +152,8 @@ uk:
       Demo - Bug Grab: Демо - Bug Grab
       'Demo App: Interactive Card': 'Демо-застосунок: Інтерактивна листівка'
       Demo Apps: Демо додаток
-      Design Mode: Режим конструктора
-      Design Mode Elements: Елементи режиму конструктора
+      Design Mode: режим дизайну
+      Design Mode Elements: Елементи режиму дизайну
       Design Your Prototype: Створення свого прототипу
       Design a Screen for your App: Створення екрану застосунка
       Design an AI App - AI Lab: Розробка Застосунка ШІ - Лабораторія ШІ
@@ -157,6 +169,8 @@ uk:
       Editing Images: Редагування зображень
       Emotion Machine Example: Приклад машини емоцій
       End of Course Projects: Кінець курсових проєктів
+      End-Of-Unit Survey: Підсумкове опитування
+      End-of-Unit Survey: Опитування на кінець підрозділу
       Event Types: Типи подій
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
@@ -182,6 +196,7 @@ uk:
       Extra: Додатково
       Extra Challenge: Додаткове завдання
       'Extra Challenge: Sound Board': 'Додаткове завдання: звукова плата'
+      Final Project: Підсумковий проєкт
       Finish a Screen: Завершення екрана
       Finish the Prototype: Закінчити прототип
       Finishing Functions: Завершення функцій
@@ -230,8 +245,10 @@ uk:
       Input Examples: Приклади вводу
       Input with If-Else: Введення за допомогою if-Else
       Inspiration!: Натхнення!
+      Interactive Art: Інтерактивне мистецтво
       Interactive Card: Інтерактивна картка
-      Intro to Design Mode: Знайомство з режимом конструктора
+      Interactive Card Examples: Приклади інтерактивних листівок
+      Intro to Design Mode: Знайомство з режимом дизайну
       Intro to Flyer Game: Вступ до гри Літун
       Intro to For Loops: Вступ до циклів
       Intro to Side Scrollers: Знайомство з сайд-скролером
@@ -338,6 +355,7 @@ uk:
       Practice: Практика
       Predict: Прогнозування
       Prediction: Прогнозування
+      Problem Solving: Вирішення проблем
       Programming with Rey and BB-8: Програмування з Рей та BB-8
       Programs that Repeat: Програми, які повторюються
       Project: Проєкт
@@ -436,7 +454,7 @@ uk:
       The Power of Words - Unplugged Activity: Сила слова - Безмашинна вправа
       The Right App - Unplugged Activity: Застосунок, як треба - Безмашинна вправа
       Top Websites: Топ-сайти
-      Tour of Design Mode: Тур по дизайну режиму
+      Tour of Design Mode: Тур по режиму дизайну
       Train AI to Clean the Ocean: Навчаємо ШІ для очищення океану
       Train a Model in AI Lab: Тренування моделі в Лабораторії ШІ
       Ultimate Shoe Recommender: Остаточний рекомендатор взуття
@@ -510,7 +528,7 @@ uk:
       'Video: Intro to CSS': 'Відео: Вступ до CSS'
       'Video: Intro to CSS - Part 1': 'Відео: Вступ до CSS - Частина 1'
       'Video: Intro to CSS - Part 2': 'Відео: Вступ до CSS - Частина 2'
-      'Video: Intro to Design Mode': 'Відео: Вступ до режиму конструктора'
+      'Video: Intro to Design Mode': 'Відео: Вступ до режиму дизайну'
       'Video: Intro to Web Lab - Part 1': |2-
 
         Відео: Вступ до Веб Лабораторії - частина 1

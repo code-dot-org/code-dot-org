@@ -1112,6 +1112,15 @@ zh-CN:
         text: "{SPRITE}说{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 气体
+            '"liquid"': 液体
+            '"solid"': 固体
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

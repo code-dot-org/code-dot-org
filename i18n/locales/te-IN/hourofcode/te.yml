@@ -231,6 +231,7 @@ te:
   for_students_teacher_led_learning: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలో అభ్యసనం'
   for_students_teacher_led_lessons: 'విద్యార్థుల కోసం: ఉపాధ్యాయుల నేతృత్వంలో పాఠాలు'
   professional_development: వృత్తిపరమైన అభివృద్ధి
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: కంప్యూటర్ సైన్స్ బోధించండి
   explore_our_curriculum: మా పాఠ్యాంశ ప్రణాళికను అన్వేషించండి
   start_professional_learning: వృత్తినైపుణ్యమైన అభ్యసనాన్ని ప్రారంభించండి
@@ -330,6 +331,8 @@ te:
   call_to_action_try_hoc_ai_activities: అవర్ ఆఫ్ కోడ్ AI కార్యకలాపాలను ప్రయత్నించండి
   call_to_action_explore_activities: కార్యకలాపాలను అన్వేషించండి
   call_to_action_explore_ai: AI ని అన్వేషించండి
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: సాధనాన్ని అన్వేషించండి
   call_to_action_explore_unit: యూనిట్ను అన్వేషించండి
   call_to_action_explore_curriculum: పాఠ్యాంశాలను అన్వేషించండి
   call_to_action_explore_curricula: పాఠ్యాంశాలను అన్వేషణ చేయండి
@@ -721,6 +724,7 @@ te:
   module_label_accessibility_features_full: 'యాక్సెసిబిలిటీ ఫీచర్స్:'
   module_label_educator_tool: విద్యాబోధకుల సాధనం
   module_label_educator_course: విద్యాబోధకుల కోర్సు
+  module_label_educator_resources: Educator resources
   module_label_student_tool: విద్యార్థి సాధనం
   module_label_student_product: ఉత్పాదన
   module_label_student_content_resources: కంటెంట్ మరియు వనరులు
@@ -729,6 +733,7 @@ te:
   module_label_available_now: ఇప్పుడు అందుబాటులో ఉంది
   module_label_video_series: వీడియో సిరీస్
   module_label_self_paced: స్వీయ కనబరిచిన మాడ్యూల్
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -3606,19 +3611,14 @@ te:
   tutorial_csfirstdialogue_name: సంభాషణ
   tutorial_codemonkeybeaver_name: బీవర్ అచీవర్
   tutorial_codestersdistance_name: 'కోడెస్టర్లు: సామాజిక దూరం స్ప్రిట్స్'
-  tutorial_itchspace_name: 'ఇచ్‌కోడ్: స్పేస్ ఇన్వేడర్స్ - రోక్‌కోడర్'
   tutorial_vidcodemagic_name: SFX మ్యాజిక్
   tutorial_vidcodemagices_name: SFX మ్యాజిక్
   tutorial_codespeakmeal_name: ఆరోగ్యకరమైన భోజన అనువర్తనం కోడ్
-  tutorial_itchfish_name: 'IchCode: ఫిష్ స్క్రాచ్ గేమ్'
   tutorial_bsdwebsite_name: నా ఇష్టమైన వెబ్సైట్
   tutorial_codespeaktime_name: స్క్రాచ్ లో టైమ్ క్యాప్సూల్ కోడ్
-  tutorial_itchwebcam_name: 'ఇట్చ్కోడ్: వెబ్క్యామ్ ఆగ్మెంటెడ్ రియాలిటీ'
-  tutorial_itchball_name: 'ఇట్చ్కోడ్: బౌన్స్ బాల్'
   tutorial_ttrace_name: రేస్ కండిషన్
   tutorial_plethora_name: 'ప్లెథోరా: కారణం మరియు ప్రభావం'
   tutorial_educodesecret_name: ఏజెన్సీ రహస్యాలు వెలికి తీయండి!
-  tutorial_itchshapes_name: 'ఇట్చ్కోడ్: ఆకారాలు & కోణాలు'
   tutorial_codeguppytext_name: టెక్స్ట్ బేస్డ్ కోడింగ్ పరిచయం
   tutorial_vidcodeplastiche_name: ప్లాస్టిక్ కాలుష్య PSA
   tutorial_educativechatbot_name: పైథాన్లో మీ స్వంత చాట్బాట్ను నిర్మించండి
@@ -3642,7 +3642,6 @@ te:
   tutorial_codecapture_name: Jiffy లో జావాస్క్రిప్ట్ తో ప్రోగ్రామింగ్ తెలుసుకోండి
   tutorial_codehslitter_name: లిటర్-ఫ్రీ కమ్యూనిటీ కోసం కోడింగ్
   tutorial_bsdocean_name: నీటి క్రింద జీవితం
-  tutorial_itchplatformer_name: 'ఇట్చ్కోడ్: స్క్రాచ్ 3.0 ప్లాట్ఫార్మర్ ట్యుటోరియల్'
   tutorial_codejika_name: 'CodeJika: 5 నిమిషాల వెబ్సైట్'
   tutorial_gamefrootclicker_name: వేరియబుల్స్ నేర్చుకోండి. మీ స్వంత క్లిక్కర్ గేమ్ను
     కోడ్ చేయండి.
@@ -7575,20 +7574,12 @@ te:
   tutorial_codestersdistance_longdescription: పైథాన్లో కోడింగ్ యొక్క ప్రాథమికాలను
     తెలుసుకోండి, ఆపై రెండు స్ప్రిట్ల మధ్య దూరాన్ని లెక్కించే ప్రోగ్రామ్ను సృష్టించండి,
     అవి సామాజిక దూరం లేదా ముసుగు ధరించాల్సిన అవసరం ఉందని నిర్ధారించుకోండి.
-  tutorial_itchspace_longdescription: స్క్రాచ్ MIT ప్రోగ్రామింగ్ భాషను ఉపయోగించి క్లాసిక్
-    స్పేస్ ఇన్వేడర్స్ గేమ్ను సృష్టించడం ద్వారా ఈ ట్యుటోరియల్ మిమ్మల్ని తీసుకెళుతుంది.
-    మరిన్ని స్క్రాచ్-ఆధారిత వీడియోలు మరియు ట్యుటోరియల్స్ కోసం RokCoder YouTube ఛానెల్కు
-    సభ్యత్వాన్ని పొందండి! ప్రతి వీడియో కాటు-పరిమాణ ట్యుటోరియల్ (సుమారు పది నిమిషాల
-    పొడవు), ఇది దాని స్వంత నిర్దిష్ట ముగింపు లక్ష్యాలను కలిగి ఉంటుంది. తుది ఫలితం
-    అధిక నాణ్యత గల స్క్రాచ్ ఆర్కేడ్ గేమ్.
   tutorial_vidcodemagic_longdescription: లూప్ ఉపయోగించి స్క్రీన్ చుట్టూ యాదృచ్ఛికంగా
     మెరుపులు కనిపించేలా చేయండి.
   tutorial_vidcodemagices_longdescription: లూప్ ఉపయోగించి స్క్రీన్ చుట్టూ యాదృచ్ఛికంగా
     మెరుపులు కనిపించేలా చేయండి.
   tutorial_codespeakmeal_longdescription: ఆరోగ్యకరమైన ఆహార నిర్ణయాలు తీసుకోవడంలో వినియోగదారులకు
     సహాయపడే అనువర్తనాన్ని కోడ్ చేయడం నేర్చుకోండి.
-  tutorial_itchfish_longdescription: స్క్రాచ్ 3.0 ఒక లోయీతగత్తెని అనుకోకుండా తింటారు
-    ఉన్నప్పుడు ఒక షార్క్ చేజింగ్ మరియు తినడం చేపలు అంతరాయం తో ఒక ఆట చేసినందుకు ట్యుటోరియల్.
   tutorial_bsdwebsite_longdescription: 'ఈ కోర్సు విద్యార్థులకు ముఖ్యమైన లేదా ఆసక్తికరమైన
     వాటిని పంచుకునే మార్గంగా కోడ్ను ఉపయోగించడానికి అనుమతిస్తుంది. HTML, CSS మరియు
     జావాస్క్రిప్ట్ నేర్చుకునేటప్పుడు వారు పాఠాన్ని అనుసరించవచ్చు లేదా ప్రత్యేకమైన
@@ -7597,10 +7588,6 @@ te:
     వెబ్పేజీ సృష్టించడం దృష్టి పెడుతుంది 3 మీరు ఆసక్తి లేదా చేయడం ప్రేమ విషయాలు. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: ప్రస్తుతం మీ జీవితాన్ని రికార్డ్ చేయడానికి
     మరియు ప్రతిబింబించడానికి డిజిటల్ టైమ్ క్యాప్సూల్ను ఎలా కోడ్ చేయాలో తెలుసుకోండి.
-  tutorial_itchwebcam_longdescription: అనుబంధ వాస్తవికత గురించి తెలుసుకోండి మరియు
-    మీ స్వంత వృద్ధి చెందిన రియాలిటీ వర్చువల్ స్థలాన్ని తయారు చేయండి.
-  tutorial_itchball_longdescription: స్క్రీన్ చుట్టూ బౌన్స్ అవ్వడానికి బంతిని పొందండి.
-    ఉచ్చులు లోపల ఉచ్చులు మరియు షరతుల గురించి తెలుసుకోండి.
   tutorial_ttrace_longdescription: ఫంక్షన్లను పిలవడం మరియు తరగతుల రూపకల్పన ద్వారా,
     ఆటగాళ్ళు తమ సొంత రేసు కారును వేగంగా, అతి చురుకైన మరియు శక్తివంతంగా ఉండేలా ప్రోగ్రామ్
     చేస్తారు; రేసుల సమయంలో, వారు తమ నియంత్రణలను పెనుగులాట చేయడానికి తమ పోటీదారుల వాహనాలను
@@ -7612,8 +7599,6 @@ te:
     నేర్చుకోవటానికి మీరు లోతుగా డైవ్ చేస్తున్నప్పుడు ఏజెంట్ స్మిత్తో రహస్యాల ప్రపంచాలను
     అన్వేషించండి. ఏజెంట్ స్మిత్ నేరస్థులను కనుగొని, పైథాన్తో వారి క్రొత్త వినియోగదారుల
     కోసం ఏజెన్సీ యొక్క ఆపరేటింగ్ సిస్టమ్ను కాన్ఫిగర్ చేయడంలో సహాయపడండి.
-  tutorial_itchshapes_longdescription: స్క్రాచ్లో ఆకారాలను ఎలా గీయాలో తెలుసుకోండి.
-    మీరు ఏ ఆకారం కోసం తిరగాలి ఎంత లెక్కించాలో కూడా మీరు నేర్చుకుంటారు.
   tutorial_codeguppytext_longdescription: ఆన్లైన్ కోడింగ్ ఎడిటర్లో మీ మొదటి ప్రోగ్రామ్ను
     సృష్టించడం ద్వారా టెక్స్ట్ ఆధారిత కోడింగ్ యొక్క ప్రాథమికాలను తెలుసుకోండి.
   tutorial_vidcodeplastiche_longdescription: మన మహాసముద్రాలను నింపే ప్లాస్టిక్ సమస్య
@@ -7696,8 +7681,6 @@ te:
   tutorial_bsdocean_longdescription: నీటి క్రింద ఉన్న జీవితం ఈ రోజుల్లో మనం ఎదుర్కొంటున్న
     సమస్యపై వెలుగునిస్తుంది - మన వాతావరణం. ఈ ప్రాజెక్ట్ మా జలాలను రక్షించడంలో మీ స్వంత
     వెబ్పేజీని కోడ్ చేయడానికి మీకు మార్గనిర్దేశం చేయడంపై దృష్టి పెడుతుంది.
-  tutorial_itchplatformer_longdescription: స్క్రాచ్ ఉపయోగించి సాధారణ ప్లాట్ఫార్మర్
-    గేమ్ను ఎలా సృష్టించాలో ట్యుటోరియల్ను అనుసరించడం సులభం.
   tutorial_codejika_longdescription: HTML మరియు CSS ఉపయోగించి కోడింగ్కు గొప్ప పరిచయం.
     కొన్ని పంక్తులను కోడ్ చేయండి, రెండు రంగుల ప్రవణత నేపథ్యం, పేరు మరియు వెబ్సైట్
     ప్రయోగ తేదీతో చక్కని ల్యాండింగ్ పేజీని సృష్టించడం ద్వారా హౌస్ అండ్ వైస్లో చిక్కుకోకుండా
@@ -8500,19 +8483,14 @@ te:
   tutorial_csfirstdialogue_string_detail_grades: 2-8 తరగతులు
   tutorial_codemonkeybeaver_string_detail_grades: ప్రీ-రీడర్ - గ్రేడ్ 5
   tutorial_codestersdistance_string_detail_grades: తరగతులు 6+
-  tutorial_itchspace_string_detail_grades: తరగతులు 6+
   tutorial_vidcodemagic_string_detail_grades: తరగతులు 2+
   tutorial_vidcodemagices_string_detail_grades: తరగతులు 2+
   tutorial_codespeakmeal_string_detail_grades: తరగతులు 6+
-  tutorial_itchfish_string_detail_grades: 2-8 తరగతులు
   tutorial_bsdwebsite_string_detail_grades: తరగతులు 6+
   tutorial_codespeaktime_string_detail_grades: 2-8 తరగతులు
-  tutorial_itchwebcam_string_detail_grades: తరగతులు 6+
-  tutorial_itchball_string_detail_grades: 2-8 తరగతులు
   tutorial_ttrace_string_detail_grades: 6-8 తరగతులు
   tutorial_plethora_string_detail_grades: తరగతులు 2+
   tutorial_educodesecret_string_detail_grades: తరగతులు 6+
-  tutorial_itchshapes_string_detail_grades: తరగతులు 6+
   tutorial_codeguppytext_string_detail_grades: 6-8 తరగతులు
   tutorial_vidcodeplastiche_string_detail_grades: తరగతులు 6+
   tutorial_educativechatbot_string_detail_grades: 9+ తరగతులు
@@ -8534,7 +8512,6 @@ te:
   tutorial_codecapture_string_detail_grades: తరగతులు 6+
   tutorial_codehslitter_string_detail_grades: 6-8 తరగతులు
   tutorial_bsdocean_string_detail_grades: 6-8 తరగతులు
-  tutorial_itchplatformer_string_detail_grades: తరగతులు 6+
   tutorial_codejika_string_detail_grades: తరగతులు 6+
   tutorial_gamefrootclicker_string_detail_grades: 6-8 తరగతులు
   tutorial_rmagicequity_string_detail_grades: 6-8 తరగతులు
@@ -9376,22 +9353,16 @@ te:
   tutorial_codemonkeybeaver_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్
   tutorial_codestersdistance_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, స్క్రీన్ రీడర్
-  tutorial_itchspace_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_vidcodemagic_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్, స్క్రీన్ రీడర్
   tutorial_vidcodemagices_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్, స్క్రీన్ రీడర్
   tutorial_codespeakmeal_string_platforms: క్రోమ్, ఫైర్ఫాక్స్
-  tutorial_itchfish_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_bsdwebsite_string_platforms: క్రోమ్
   tutorial_codespeaktime_string_platforms: క్రోమ్, ఫైర్ఫాక్స్
-  tutorial_itchwebcam_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
-    ఐప్యాడ్
-  tutorial_itchball_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_ttrace_string_platforms: క్రోమ్
   tutorial_plethora_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్, ఐప్యాడ్
   tutorial_educodesecret_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
-  tutorial_itchshapes_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_codeguppytext_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్
   tutorial_vidcodeplastiche_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, ఐప్యాడ్
@@ -9419,7 +9390,6 @@ te:
   tutorial_codehslitter_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్, విండోస్ ఫోన్, Android ఫోన్, ఐఫోన్
   tutorial_bsdocean_string_platforms: క్రోమ్
-  tutorial_itchplatformer_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_codejika_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్, ఐప్యాడ్,
     విండోస్ ఫోన్, Android ఫోన్, ఐఫోన్
   tutorial_gamefrootclicker_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, ఐప్యాడ్
@@ -10078,19 +10048,14 @@ te:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10112,7 +10077,6 @@ te:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10801,20 +10765,15 @@ te:
   tutorial_csfirstdialogue_string_detail_programming_languages: బ్లాక్స్, స్క్రాచ్
   tutorial_codemonkeybeaver_string_detail_programming_languages: బ్లాక్స్
   tutorial_codestersdistance_string_detail_programming_languages: పైథాన్
-  tutorial_itchspace_string_detail_programming_languages: బ్లాక్స్
   tutorial_vidcodemagic_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_vidcodemagices_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_codespeakmeal_string_detail_programming_languages: జావాస్క్రిప్ట్
-  tutorial_itchfish_string_detail_programming_languages: బ్లాక్స్
   tutorial_bsdwebsite_string_detail_programming_languages: జావాస్క్రిప్ట్, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: బ్లాక్స్
-  tutorial_itchwebcam_string_detail_programming_languages: బ్లాక్స్
-  tutorial_itchball_string_detail_programming_languages: బ్లాక్స్
   tutorial_ttrace_string_detail_programming_languages: జావాస్క్రిప్ట్, కాఫీస్క్రిప్ట్
   tutorial_plethora_string_detail_programming_languages: భాషా స్వతంత్ర (బహుళ భాషలలో
     బోధించవచ్చు)
   tutorial_educodesecret_string_detail_programming_languages: పైథాన్
-  tutorial_itchshapes_string_detail_programming_languages: బ్లాక్స్
   tutorial_codeguppytext_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_vidcodeplastiche_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_educativechatbot_string_detail_programming_languages: పైథాన్
@@ -10839,7 +10798,6 @@ te:
   tutorial_codecapture_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_codehslitter_string_detail_programming_languages: పైథాన్, HTML
   tutorial_bsdocean_string_detail_programming_languages: జావాస్క్రిప్ట్, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: బ్లాక్స్
   tutorial_codejika_string_detail_programming_languages: జావాస్క్రిప్ట్, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: బ్లాక్స్
   tutorial_rmagicequity_string_detail_programming_languages: బ్లాక్స్, జావాస్క్రిప్ట్
@@ -11835,10 +11793,7 @@ te:
   tutorial_kodableshapes_name: కోడ్తో ఆకారాలు చేయండి
   tutorial_nasabinary_name: 'బైనరీ కోడ్: స్పేస్క్రాఫ్ట్తో ఎలా మాట్లాడాలి'
   tutorial_3dmaker_name: 3 డి మేకర్
-  tutorial_itchstart_name: 'ItchCode: స్క్రాచ్ 5 బ్లాక్ స్టార్టర్'
   tutorial_hopsub_name: స్నేహితుడితో సబ్వే సర్ఫర్లను రూపొందించండి
-  tutorial_itchmundos_name: నా ముండో_ఇ 2 లో ప్రపంచం
-  tutorial_itchtenacity_name: జిగి
   tutorial_kcjskiing_name: 'క్రీడ+కోడ్: స్కీయింగ్'
   tutorial_groksecurity_name: 'సైబర్ సెక్యూరిటీ: చీకటి టోపీలకు వ్యతిరేకంగా రక్షణ'
   tutorial_creaticode_name: స్క్రాచ్ బ్లాక్స్ తో 3D ప్రోగ్రామింగ్
@@ -11981,15 +11936,8 @@ te:
     ధ్వనిపై బైనరీ కోడ్గా అనువదించడం ద్వారా మీరే ప్రయత్నించండి.
   tutorial_3dmaker_longdescription: మీ స్వంత నిజంగా చల్లని, తిప్పగలిగే, 3D వస్తువులను
     వేగంగా మరియు సులభంగా చేయండి.
-  tutorial_itchstart_longdescription: ఈ పాఠం పిల్లలకు గ్రేడ్ 2 లేదా 3 కోసం మంచి ఎంట్రీ
-    పాయింట్, ఇది మొదటిసారి స్క్రాచ్ను ప్రయత్నిస్తోంది. వారు 5 బ్లాకుల సమితితో ప్రారంభిస్తారు,
-    వారి పాత్ర కొన్ని చర్యలను చేయడానికి వారు కలిసి ఉంచాలి.
   tutorial_hopsub_longdescription: స్నేహితుడు లేదా క్లాస్మేట్తో ప్రోగ్రామ్ను ఎలా జత
     చేయాలో తెలుసుకోండి మరియు హాప్స్కోచ్ అక్షరాలతో మీ స్వంత సబ్వే సర్ఫర్ను సృష్టించండి!
-  tutorial_itchmundos_longdescription: కోనోసెరోన్ స్క్రాచ్, ప్రోగ్రామ్ కోసం ఒక హెర్మెంట్.
-    అగ్రీగార్న్ ఆబ్జెక్ట్లు మరియు ఫండోస్, ఈవెంట్ బ్లాక్లు మరియు ప్రోగ్రాం కోసం అపెరియన్స్.
-  tutorial_itchtenacity_longdescription: ఈ ప్రాజెక్ట్ ప్రాజెక్ట్ స్క్రాచ్ ఒక రోబోట్
-    యొక్క సిమ్యులేటర్ యొక్క సిమ్యులేటర్, ఇది అగువాస్ మెరీనాస్ కోసం ఒక ప్రాజెక్ట్.
   tutorial_kcjskiing_longdescription: 'ఇది ఎవరైనా ఒక చెట్టు లోకి క్రాష్ వరకు అన్ని
     ఆహ్లాదకరమైన మరియు గేమ్స్ వార్తలు… లేదా సరదాగా భాగంగా IS? ఈ స్క్రాచ్ కార్యాచరణలో
     కోడ్ను ఉపయోగించి స్తంభింపచేసిన అడ్డంకుల కొండపైకి మీ పాత్రను మార్గనిర్దేశం చేస్తున్నప్పుడు
@@ -12278,11 +12226,8 @@ te:
   tutorial_kodableshapes_language: ఆంగ్ల
   tutorial_nasabinary_language: ఆంగ్ల
   tutorial_3dmaker_language: ఆంగ్ల
-  tutorial_itchstart_language: ఆంగ్ల
   tutorial_hopsub_language: చైనీస్ (సరళీకృత), ఇంగ్లీష్, స్పానిష్ (స్పెయిన్), స్పానిష్
     (మెక్సికో)
-  tutorial_itchmundos_language: స్పానిష్ (మెక్సికో)
-  tutorial_itchtenacity_language: స్పానిష్ (మెక్సికో)
   tutorial_kcjskiing_language: ఆంగ్లం, ఫ్రెంచ్
   tutorial_groksecurity_language: ఆంగ్ల
   tutorial_creaticode_language: చైనీస్ (సరళీకృత), చైనీస్ (సాంప్రదాయ), ఇంగ్లీష్
@@ -12376,10 +12321,7 @@ te:
   tutorial_kodableshapes_string_detail_grades: ప్రీ-రీడర్ - గ్రేడ్ 5
   tutorial_nasabinary_string_detail_grades: తరగతులు 6+
   tutorial_3dmaker_string_detail_grades: 2-8 తరగతులు
-  tutorial_itchstart_string_detail_grades: 2-8 తరగతులు
   tutorial_hopsub_string_detail_grades: 2-8 తరగతులు
-  tutorial_itchmundos_string_detail_grades: తరగతులు 2+
-  tutorial_itchtenacity_string_detail_grades: తరగతులు 2+
   tutorial_kcjskiing_string_detail_grades: తరగతులు 2+
   tutorial_groksecurity_string_detail_grades: తరగతులు 6+
   tutorial_creaticode_string_detail_grades: తరగతులు 6+
@@ -12471,12 +12413,7 @@ te:
   tutorial_nasabinary_string_platforms: అన్ప్లగ్డ్, స్క్రీన్ రీడర్
   tutorial_3dmaker_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్, ఐప్యాడ్,
     విండోస్ ఫోన్, Android ఫోన్, ఐఫోన్
-  tutorial_itchstart_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, ఐప్యాడ్
   tutorial_hopsub_string_platforms: ఐప్యాడ్, ఐఫోన్
-  tutorial_itchmundos_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
-    ఐప్యాడ్
-  tutorial_itchtenacity_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
-    ఐప్యాడ్
   tutorial_kcjskiing_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_groksecurity_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
     ఐప్యాడ్, విండోస్ ఫోన్, Android ఫోన్, ఐఫోన్
@@ -12572,10 +12509,7 @@ te:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12665,10 +12599,7 @@ te:
     స్వతంత్ర (బహుళ భాషలలో బోధించవచ్చు)
   tutorial_nasabinary_string_detail_programming_languages: బైనరీ కోడ్
   tutorial_3dmaker_string_detail_programming_languages: బ్లాక్స్
-  tutorial_itchstart_string_detail_programming_languages: బ్లాక్స్
   tutorial_hopsub_string_detail_programming_languages: హాప్స్కోచ్
-  tutorial_itchmundos_string_detail_programming_languages: బ్లాక్స్
-  tutorial_itchtenacity_string_detail_programming_languages: బ్లాక్స్
   tutorial_kcjskiing_string_detail_programming_languages: బ్లాక్స్
   tutorial_groksecurity_string_detail_programming_languages: ఏదీ లేదు - ప్రోగ్రామింగ్
     అవసరం లేదు
@@ -13708,7 +13639,7 @@ te:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: సులభంగా ప్రోగ్రామ్ చేయడం నేర్చుకోండి
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13795,6 +13726,16 @@ te:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: డాన్స్ పార్టీ
+  tutorial_introtomlai_name: మెషిన్ లెర్నింగ్ పరిచయం
+  tutorial_computervisionai_name: కంప్యూటర్ విజన్
+  tutorial_neuralnetworksai_name: న్యూరల్ నెట్వర్క్లు
+  tutorial_chatbotsllmai_name: చాట్బాట్లు మరియు పెద్ద భాషా నమూనాలు
+  tutorial_generativeimagesai_name: ఉత్పాదక చిత్రాలు
+  tutorial_algorithmicbiasai_name: అల్గారిథమిక్ బయాస్
+  tutorial_codeofethicsai_name: మా AI కోడ్ ఆఫ్ ఎథిక్స్
+  tutorial_socimpactofgenaiai_name: జనరేటివ్ AI యొక్క సామాజిక ప్రభావం
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13967,11 +13908,11 @@ te:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: టెక్స్ట్యువల్ ప్రోగ్రామింగ్ లాంగ్వేజ్‌లతో ప్రారంభించడానికి
+    హేడీ సులభమైన మార్గం! ఉపయోగించడానికి ఉచితం, ఓపెన్ సోర్స్, బహుభాషా, మీరు మీ స్వంత
+    భాషలో Hedyని ఉపయోగించవచ్చు; క్రమక్రమంగా ఉంటుంది, కాబట్టి మీరు ఒక భావనను నేర్చుకోవచ్చు
+    మరియు దాని వాక్యనిర్మాణం తరగతి గది కోసం రూపొందించబడింది, ఉపాధ్యాయులు వారి విద్యార్థి
+    అనుభవాన్ని పూర్తిగా అనుకూలీకరించడానికి అనుమతిస్తుంది.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -14265,6 +14206,43 @@ te:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: మీ స్నేహితులతో భాగస్వామ్యం చేయడానికి డాన్స్
+    పార్టీని కోడ్ చేయండి. కాటి పెర్రీ, మడోన్నా, జె. బాల్విన్, సియా, కీత్ అర్బన్, సియారా
+    మరియు మరో 25 మంది నటించారు!
+  tutorial_introtomlai_longdescription: మెషిన్ లెర్నింగ్ అని పిలువబడే ఒక రకమైన కృత్రిమ
+    మేధస్సు గురించి తెలుసుకోండి మరియు సమస్యలను పరిష్కరించడానికి రోబోట్కు శిక్షణ ఇవ్వడానికి
+    వారు సమస్య పరిష్కార ప్రక్రియను ఎలా ఉపయోగించవచ్చో తెలుసుకోండి. చేపలలో నమూనాలను
+    ఎలా గుర్తించాలో రోబోట్ నేర్చుకునే యంత్ర అభ్యాస కార్యకలాపాల్లో పాల్గొనండి.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: న్యూరల్ నెట్వర్క్లు ఎలా పనిచేస్తాయో తెలుసుకోండి.
+    మార్గంలో ఒక చేతిలో నాడీ నెట్వర్క్లు అన్వేషించడానికి ఒక విడ్జెట్లను ఉపయోగించండి.
+    న్యూరల్ నెట్వర్క్లను వివరించే వీడియో చూడండి. చివరగా సిఫారసు వ్యవస్థలను సృష్టించేటప్పుడు
+    విభిన్న దృక్పథాల అవసరాన్ని చర్చించండి.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: AI చిత్రాలను ఎలా ఉత్పత్తి చేయగలదో తెలుసుకోండి,
+    ఆపై విస్తరణ AI విడ్జెట్ను అన్వేషించండి మరియు ఈ నమూనాలు సృజనాత్మకంగా ఉన్నాయో లేదో
+    చర్చించండి.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: వేర్వేరు దృక్పథాల నుండి జనరేటివ్ AI
+    యొక్క ప్రభావాన్ని పరిశోధించండి, ఆపై పాల్గొనేవారందరి నుండి చాలా అవసరాలను పరిష్కరించే
+    మార్గదర్శకాలతో ముందుకు రావడానికి బృందంగా సహకరించండి.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: తరగతులు 6+
   tutorial_bscomputing_string_detail_grades: తరగతులు 6+
   tutorial_stackpython_string_detail_grades: తరగతులు 6+
@@ -14366,7 +14344,7 @@ te:
   tutorial_hwfanpage_string_detail_grades: తరగతులు 2+
   tutorial_hwillusion_string_detail_grades: తరగతులు 6+
   tutorial_caevolution_string_detail_grades: తరగతులు 6+
-  tutorial_bbbusybot_string_detail_grades: తరగతులు 6+
+  tutorial_bbbusybot_string_detail_grades: 9+ తరగతులు
   tutorial_caaifarm_string_detail_grades: తరగతులు 6+
   tutorial_cafuture_string_detail_grades: తరగతులు 6+
   tutorial_dmscratch_string_detail_grades: 2-8 తరగతులు
@@ -14396,6 +14374,16 @@ te:
   tutorial_madmobile_string_detail_grades: తరగతులు 6+
   tutorial_intelinosmile_string_detail_grades: ప్రీ-రీడర్ - గ్రేడ్ 8
   tutorial_intelinoaisign_string_detail_grades: 2-8 తరగతులు
+  tutorial_danceai2023_string_detail_grades: తరగతులు 2+
+  tutorial_introtomlai_string_detail_grades: తరగతులు 6+
+  tutorial_computervisionai_string_detail_grades: తరగతులు 6+
+  tutorial_neuralnetworksai_string_detail_grades: తరగతులు 6+
+  tutorial_chatbotsllmai_string_detail_grades: తరగతులు 6+
+  tutorial_generativeimagesai_string_detail_grades: తరగతులు 6+
+  tutorial_algorithmicbiasai_string_detail_grades: తరగతులు 6+
+  tutorial_codeofethicsai_string_detail_grades: తరగతులు 6+
+  tutorial_socimpactofgenaiai_string_detail_grades: తరగతులు 6+
+  tutorial_generationai_string_detail_grades: తరగతులు 2+
   tutorial_bsimage_string_platforms: క్రోమ్, ఫైర్ఫాక్స్, సఫారి
   tutorial_bscomputing_string_platforms: అన్ప్లగ్డ్
   tutorial_stackpython_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
@@ -14565,6 +14553,26 @@ te:
   tutorial_madmobile_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
   tutorial_intelinosmile_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, ఐప్యాడ్
   tutorial_intelinoaisign_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు
+  tutorial_danceai2023_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_introtomlai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_computervisionai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_neuralnetworksai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_chatbotsllmai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_generativeimagesai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_algorithmicbiasai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_codeofethicsai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_socimpactofgenaiai_string_platforms: అన్ని ఆధునిక బ్రౌజర్లు, Android టాబ్లెట్,
+    ఐప్యాడ్, Android ఫోన్, ఐఫోన్
+  tutorial_generationai_string_platforms: Android టాబ్లెట్, ఐప్యాడ్, విండోస్ ఫోన్,
+    Android ఫోన్, ఐఫోన్
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14696,6 +14704,16 @@ te:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: భాషా స్వతంత్ర
   tutorial_stackpython_string_detail_programming_languages: పైథాన్
@@ -14823,12 +14841,22 @@ te:
   tutorial_codecombathack_string_detail_programming_languages: భాషా స్వతంత్ర
   tutorial_toxicodewords_string_detail_programming_languages: భాషా స్వతంత్ర
   tutorial_mitstepmisinformation_string_detail_programming_languages: అన్ప్లగ్డ్
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: అన్ప్లగ్డ్
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: అన్ప్లగ్డ్
   tutorial_mitstepintrotoml_string_detail_programming_languages: అన్ప్లగ్డ్
   tutorial_naflogo_string_detail_programming_languages: జావాస్క్రిప్ట్
   tutorial_madmobile_string_detail_programming_languages: జావాస్క్రిప్ట్, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: బ్లాక్స్
   tutorial_intelinoaisign_string_detail_programming_languages: బ్లాక్స్
+  tutorial_danceai2023_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_introtomlai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_computervisionai_string_detail_programming_language: భాషా స్వతంత్ర
+  tutorial_neuralnetworksai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_chatbotsllmai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_generativeimagesai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_algorithmicbiasai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_codeofethicsai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: భాషా స్వతంత్ర
+  tutorial_generationai_string_detail_programming_languages: బ్లాక్స్, పైథాన్
   school_not_found_heading: మీ పాఠశాలను మేము కనుగొనలేక పోయాము. దయచేసి మరింత సమాచారం
     ఎంటర్ చేయండి.
   school_name: పాఠశాల పేరు
@@ -14969,6 +14997,10 @@ te:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: ఒక అవర్ ఆఫ్ కోడ్ చేయడానికి అవసరమైన అవసరాలు
     ఏమిటి?
   hoc_how_to_faq_answer_prerequisites: అవర్ ఆఫ్ కోడ్ అమలు చేయడం చాలా సులభం - ప్రారంభకులకు
@@ -15421,6 +15453,44 @@ te:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: ఎవరైనా AI గురించి తెలుసుకోవచ్చు, మీరు తరగతి గదిలో విద్యార్థి అయినా
     లేదా AI తో బోధన యొక్క భవిష్యత్తును అన్లాక్ చేసే విద్యావేత్త అయినా మరియు AI గురించి.
   hoc_ai_how_ai_works_video_series_desc: ఈ చిన్న వీడియోల శ్రేణి కృత్రిమ మేధస్సు ఎలా
@@ -15436,6 +15506,37 @@ te:
     ఆలోచించమని అభ్యాసకులను ఆహ్వానించండి.
   hoc_ai_activities_desc: ఈ అన్ని-కొత్త అవర్ ఆఫ్ కోడ్ కార్యకలాపాలు వినియోగదారులను
     ఆహ్లాదకరమైన, ఆకర్షణీయమైన రీతిలో కృత్రిమ మేధస్సు ప్రపంచానికి పరిచయం చేస్తాయి.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: నీలం మరియు పసుపు టీ-షర్టులతో సరిపోలే దాదాపు 100 Code.org
     ఉద్యోగులు సంస్థ యొక్క వేసవి 2022 కోడెచెల్లా ఈవెంట్ కోసం హోటల్ సమావేశ గదిలో ఉన్నారు.
   careers_page_code_pride_alt_text: కోడ్ చివరలను పట్టుకొని ఇద్దరు స్త్రీ-ప్రదర్శించే
@@ -16073,9 +16174,10 @@ te:
     విద్యా సంఘం యొక్క అలసిపోని సహాయం నుండి ప్రయోజనం పొందినందుకు మేము కృతజ్ఞతలు తెలుపుతున్నాము,
     మరియు [సంవత్సరాలుగా మా ప్రభావానికి మద్దతు ఇచ్చిన అన్ని భాగస్వాములు మరియు వ్యక్తులకు
     మేము కృతజ్ఞతలు తెలుపుతున్నాము] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 వార్షిక నివేదిక] (%{report_url})
-    (గత నివేదికలు: [2020] [2019](%{past_url_1}), (%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[మా ప్రధాన విలువలు మరియు సందేశ మార్గదర్శకాలు] (%{core_url})"
   about_page_section_more_list_3: "[మా పాఠ్యాంశాలు మరియు బోధనా తత్వశాస్త్రం] (%{curriculum_url})"
   about_page_section_more_list_4: "[కంప్యూటర్ సైన్స్ అందరికీ ఎందుకు అని మా వ్యవస్థాపకుడు

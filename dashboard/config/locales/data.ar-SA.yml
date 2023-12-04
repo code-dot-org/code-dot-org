@@ -921,6 +921,7 @@ ar:
         csd_gamelab_velocity: السرعة
         csd_how_teamwork_works: كيف يعمل العمل الجماعي
         csd_ml_ethics_ai: 'الأخلاق والذكاء الاصطناعي '
+        csd_ml_how_ai_works: كيف يعمل الذكاء الاصطناعي
         csd_ml_import_model: استيراد نموذج AI
         csd_ml_intro_ai_lab_july2021: مقدمة لمختبر الذكاء الاصطناعي
         csd_ml_intro_to_ai_lab: مقدمة لمختبر الذكاء الاصطناعي

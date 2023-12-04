@@ -7450,6 +7450,12 @@
         },
         "vigenere/Vigenere": {
           "name": "Şifre karesi"
+        },
+        "dance-ai-2023/lesson-1": {
+          "name": "Dans Partisi: A.I Sürümü",
+          "overview": "Bu aktivitede, her yaştan öğrenci, güvenli ve yaratıcı bir ortamda, kodlama ve yapay zekaya giriş deneyimi yaşar. Bu ders her yaştan öğrenci için tasarlanmıştır ancak okuyabilme gerektirir. Öğretici müziğe yanıt verecek şekilde tasarlandığından, bu aktivite öğrencilerin ses çalmasını gerektirir.",
+          "preparation": "### Kodlama Saatinizi Nasıl Planlayabilirsiniz?\n\nOkulunuzda Hour of Code'u planlamak, uygulamak ve kutlamak için, ihtiyacınız olan kaynakları [here](https://hourofcode.com/us/how-to) bulun!",
+          "purpose": "Kodlamayı, heyecan verici ve keyifli bir deneyim haline getirmek, bilgisayar bilimine olan ilgiyi geliştirmek için çok önemlidir. Bu ders, öğrencilerin basit sürükle ve bırak kodlama bloklarını kullanarak, renk ve hareketten oluşan bir dans gösterisinin koreografisini yapmak için, kodu kullandıkları neşeli anlarla doludur. Öğrencilere, danslarının ruh haline uyacak, mükemmel efektleri bulmalarına yardımcı olacak, bir Yapay Zeka Robotu tanıtılacak."
         }
       }
     }

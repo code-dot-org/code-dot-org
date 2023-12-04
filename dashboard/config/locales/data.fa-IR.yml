@@ -764,7 +764,7 @@ fa:
         PL_CSP_TeacherTips_EIPM: 'نکات معلم: فرایند EIPM'
         PL_CSP_TeacherTips_IntroToCSP: 'نکات معلم: معرفی اصول CS'
         PL_CSP_TeacherTips_LeadLearner: 'نکات معلم: چگونه یادگیرنده اصلی باشیم'
-        PL_CS_Journeys_Overview: سفرهای cs
+        PL_CS_Journeys_Overview: سفرهای علوم کامپیوتر
         PL_Equity_in_CS_Education: عدالت در آموزش CS
         PL_overview_CSD: اکتشافات علوم کامپیوتر چیست؟
         PL_overview_CSP: اصول علوم کامپیوتر چیست؟
@@ -892,6 +892,7 @@ fa:
         csd_gamelab_velocity: سرعت
         csd_how_teamwork_works: نحوه کار کار گروهی
         csd_ml_ethics_ai: 'اخلاقیات و هوش مصنوعی '
+        csd_ml_how_ai_works: هوش مصنوعی چگونه کار می‌کند
         csd_ml_import_model: وارد کردن مدل هوش مصنوعی
         csd_ml_intro_ai_lab_july2021: معرفی آزمایشگاه هوش مصنوعی
         csd_ml_intro_to_ai_lab: معرفی آزمایشگاه هوش مصنوعی
@@ -972,6 +973,8 @@ fa:
         hoc_dance_warmup: مهمانی رقص - آماده شوید
         hoc_dance_warmup_2019: مهمانی رقص - آماده شوید
         hoc_wrapup: جمع بندی ساعتی با کد
+        how-ai-works-creativity-full: آیا هوش مصنوعی دارای خلاقیت و تخیل است؟
+        how-ai-works-llms-full: چت‌بات‌ها و مدل‌های زبانی بزرگ چگونه کار می‌کنند
         how-to-k5-workshops: 'مبانی CS Code.org: امتحان از کودک - تأیید از سوی معلم'
         iceage_events: ساعت کدنویسی عصر یخبندان - رویدادها
         iceage_intro: ساعت کدنویسی عصر یخبندان - مقدمه

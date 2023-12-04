@@ -563,7 +563,7 @@ fa:
       legal_cookie_notice: هشدار کوکی
       legal_privacy: قوانین حفظ حریم خصوصی
       legal_tos: شرایط
-      my_dashboard: دَشبورد من
+      my_dashboard: داشبورد من
       professional_learning: یادگیری پیشرفته
       project_gallery: پروژه‌ها
       report_bug: گزارش مشکل
@@ -1023,7 +1023,7 @@ fa:
     address_not_allowed: به نظر میرسد یک آدرس در آن وجود دارد. سعی کنید متن را تغییر
       دهید.
     bounce_og_title: بازی Bounce من را ببین
-    check_out_what_i_made: 'آنچه من ساخته ام را امتحان کن '
+    check_out_what_i_made: ببینید چه چیزی درست کرده‌ام
     email_not_allowed: به نظر میرسد یک ایمیل در آن وجود دارد. سعی کنید متن را تغییر
       دهید.
     flappy_og_title: بازی Flappy من را ببین
@@ -1397,7 +1397,7 @@ fa:
     create_personal_login_under_13_username: نام کاربری (از نام واقعی خودتان استفاده
       نکنید!)
     current_password_hint: "(کلمه عبور برای ذخیره تغییرات لازم است)"
-    delete: حسابت راحذف کن
+    delete: حذف حساب کاربری
     delete_confirm: آیا مطمئنید که میخواهید حسابتان را حذف کنید؟
     delete_text: با کلیک روی دکمه زیر حسابت حذف میشود.
     delete_text_teacher_managed_note: مجوز حدف این حساب کاربری را ندارید چون استادتان
@@ -1430,7 +1430,7 @@ fa:
     parent_email_hint: "(این برای بازیابی کلمه عبور استفاده می‌شود)"
     parent_email_label: آدرس ایمیل والدین/سرپرست (اختیاری)
     parent_guardian_email_label: ایمیل والدین/سرپرست
-    remove_parent_email_label: حذف کن
+    remove_parent_email_label: حذف کنید
     update: بروزرسانی حساب کاربری
     update_email: به روز رسانی
   user_level:

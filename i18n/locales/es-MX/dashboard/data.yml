@@ -741,6 +741,7 @@ es-MX:
         generative-ai-cobranded: 'Cómo funciona la IA: IA generativa'
         what-is-creativity: '¿Qué es la creatividad?'
         code-break: '¡Tómate un descanso de código!'
+        csd_ml_how_ai_works: Cómo funciona la Inteligencia Artificial
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

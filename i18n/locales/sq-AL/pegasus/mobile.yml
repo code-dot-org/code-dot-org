@@ -1246,6 +1246,7 @@
   header_report_abuse: "Raporto abuzim"
   header_legal: "Privatësia & Ligjore"
   header_legal_privacy: "Rregullat e Privatësisë"
+  header_legal_cookie_notice: "Njoftim për Cookie"
   header_legal_tos: "Kushtet e shërbimit"
   header_tutorials: "Tutoriale"
   user_header_label: "Përshëndetje %{username}"

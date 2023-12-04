@@ -31,6 +31,8 @@ hi:
             '0.75': छोटा
             '1.00': मध्यम
             '2.00': बड़ा
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} प्रभाव पैदा करें"
       Dancelab_alternateMoves:
         text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को बदलता है"
         options:
@@ -604,12 +606,14 @@ hi:
             '"none"': कोई नहीं
             '"rand"': "(बेतरतीब)"
             '"quads"': कोण
+            '"blooming_petals"': खिलती पंखुड़ियाँ
             '"circles"': चक्र
             '"color_cycle"': रंग
             '"diamonds"': हीरा
             '"disco_ball"': डिस्को बॉल
             '"fireworks"': पटाखे
             '"flowers"': फूल
+            '"frosted_grid"': फ्रॉस्टेड ग्रिड
             '"growing_stars"': उभरते तारे
             '"swirl"': हिप्नो
             '"kaleidoscope"': कैलाइडोस्कोप
@@ -629,17 +633,27 @@ hi:
             '"stars"': स्टार
             '"music_wave"': तरंगें
           PALETTE:
+            '"autumn"': पतझड़
             '"rave"': काला व सफेद
             '"cool"': शांत!
             '"electronic"': इलेक्ट्रोनिक
+            '"grayscale"': धूसर
             '"iceCream"': आईस क्रीम
             '"default"': प्रकाश
             '"neon"': निऑन
             '"ocean"': समुद्र
             '"rainbow"': इंद्रधनुष
+            '"roses"': गुलाब के फूल
+            '"sky"': आसमान
+            '"spring"': बसंत
+            '"summer"': ग्रीष्म ऋतु
+            '"sunrise"': सूर्योदय
+            '"sunset"': सूर्यास्त
             '"tropical"': उष्णकटिबंधी
+            '"twinkling"': टिमटिमाहट
             '"vintage"': विंटेज
             '"warm"': गरम
+            '"winter"': शीतऋतु
       Dancelab_setDanceSpeed:
         text: "{SPRITE} की डांस स्पीड {SPEED} पर सेट करें"
         options:
@@ -1717,6 +1731,15 @@ hi:
         text: "{SPRITE} का y निर्देशांक"
       KatiesBlocks_glideTo:
         text: "{SPRITE} चुपके से {LOCATION} पर जाता है"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           यदि {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': ठोस
+            '"liquid"': द्रव
+            '"gas"': गैस
       KatiesBlocks_tumbling:
         text: कलाबाजियां खाना
       Mikelab_addBehaviorSimple:

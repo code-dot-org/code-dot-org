@@ -33,6 +33,7 @@
   "designElementProperty_zOrder": "عمق",
   "designElementTheme_classic": "كلاسيكي",
   "designElementTheme_default": "الافتراضي",
+  "designElement_label": "التسمية",
   "designToolboxDescription": "اسحب العناصر إلى تطبيقك!",
   "designToolboxHeader": "صندوق أدوات التصميم",
   "designWorkspaceDescription": "انقر فوق عنصر أو اختره من القائمة المنسدلة أدناه لتحرير خصائصه. قم بإنشاء التعليمات البرمجية في الأحداث.",

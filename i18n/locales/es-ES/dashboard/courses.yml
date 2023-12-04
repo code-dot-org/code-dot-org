@@ -286,6 +286,16 @@ es:
         self-paced-pl-csd-unit1-2023:
           title: Enseñanza de la Resolución de Problemas y la Informática
           version_title: 23-24
+        self-paced-pl-csd-unit2-2023:
+          title: Enseñando el Desarrollo Web
+          version_title: 23-24
+        self-paced-pl-csd-unit3-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit4-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit5-2023:
+          title: Enseñanza de Datos y Sociedad
+          version_title: 23-24
     resources:
       curriculum/csd/2017:
         name: Currículum

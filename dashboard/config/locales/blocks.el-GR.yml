@@ -1048,6 +1048,12 @@ el:
         text: αντιπροσωπεύστε {NUM} νέος {ANIMATION_NAME} ξωτικά [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}πες{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': αέριο
+            '"liquid"': υγρό
+            '"solid"': στερεό
       Mikelab_addBehaviorSimple:
         text: χαρακτήρας {SPRITE} ξεκινάει {BEHAVIOR}
       Mikelab_addTrainingData:
