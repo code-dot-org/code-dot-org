@@ -141,6 +141,9 @@ const textJoinMutator = {
     this.itemCount_--;
     this.removeInput('ADD' + this.itemCount_);
     if (this.itemCount_ === 0) {
+      // This is unreachable as long as MINIMUM_INPUT > 0. This functionality is being
+      // left in place in case we want to make the minimum settable per-block or per-level
+      // at some point in the future.
       this.topInput_ = this.appendDummyInput('EMPTY')
         .appendField(this.newQuote_(true))
         .appendField(this.newQuote_(false));

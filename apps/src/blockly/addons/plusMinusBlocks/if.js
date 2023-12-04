@@ -56,9 +56,7 @@ const controlsIfMutator = {
     const targetCount = parseInt(xmlElement.getAttribute('elseif'), 10) || 0;
     this.hasElse_ = !!parseInt(xmlElement.getAttribute('else'), 10) || 0;
     if (this.hasElse_ && !this.getInput('ELSE')) {
-      this.appendStatementInput('ELSE')
-        .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
-        .appendField(createMinusField(), 'MINUS_ELSE');
+      this.addElse_();
     }
     this.updateShape_(targetCount);
   },
@@ -92,9 +90,7 @@ const controlsIfMutator = {
     const targetCount = state['elseIfCount'] || 0;
     this.hasElse_ = state['hasElse'] || false;
     if (this.hasElse_ && !this.getInput('ELSE')) {
-      this.appendStatementInput('ELSE')
-        .appendField(GoogleBlockly.Msg['CONTROLS_IF_MSG_ELSE'])
-        .appendField(createMinusField(), 'MINUS_ELSE');
+      this.addElse_();
     }
     this.updateShape_(targetCount);
   },
@@ -130,7 +126,8 @@ const controlsIfMutator = {
    * Callback for the minus field. Triggers "removing" the input at the specific
    * index.
    * @see removeInput_
-   * @param {number} index The index of the else-if input to "remove". Undefined for else input.
+   * @param {number} index The index of the else-if input to "remove". Value will always be 1 or greater,
+   * or undefined for if we are removing the else statement input.
    * @this {GoogleBlockly.Block}
    */
   minus: function (index) {

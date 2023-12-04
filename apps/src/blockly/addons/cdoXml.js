@@ -56,7 +56,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
-      processAllBlocks(xmlChild);
+      processBlockAndChildren(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
@@ -172,10 +172,7 @@ export function addMutationToTextJoinBlocks(blockElement) {
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
 
   // We need to keep track of the expected number of inputs in order to create them all.
-  // If not, it needs a static behavior id in order to be translatable
-  // (e.g. shared behaviors).
-  // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
-  // expects this kind of extra state in a mutator.
+  // Google Blockly expects this kind of extra state to be in a mutator.
   const inputCount = blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', inputCount);
 }
@@ -184,13 +181,13 @@ export function addMutationToTextJoinBlocks(blockElement) {
  * A helper function designed to process each individual block in an XML tree.
  * @param {Element} block - The XML element for a single block.
  */
-function processAllBlocks(block) {
+function processBlockAndChildren(block) {
   processIndividualBlock(block);
 
   // Blocks can contain other blocks so we must process them recursively.
   const childBlocks = block.querySelectorAll('block');
   childBlocks.forEach(childBlock => {
-    processAllBlocks(childBlock);
+    processBlockAndChildren(childBlock);
   });
 }
 
