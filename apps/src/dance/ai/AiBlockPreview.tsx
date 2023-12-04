@@ -24,7 +24,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     }
 
     const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
-    workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
       emptyBlockXml,
       {}
