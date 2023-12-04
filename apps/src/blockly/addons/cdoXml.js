@@ -178,8 +178,6 @@ export function addMutationToTextJoinBlocks(blockElement) {
   // expects this kind of extra state in a mutator.
   const inputCount = blockElement.getAttribute('inputcount');
   mutationElement.setAttribute('items', inputCount);
-  // Remove the inputcount attribute from the parent block element.
-  blockElement.removeAttribute('inputcount');
 }
 
 /**
