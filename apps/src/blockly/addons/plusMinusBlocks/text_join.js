@@ -2,6 +2,12 @@
  * @license
  * Copyright 2020 Google LLC
  * SPDX-License-Identifier: Apache-2.0
+ *
+ * This file is based on code originally part of @blockly/block-plus-minus
+ * Modifications:
+ * - Supports a minimum number of possible inputs (2)
+ * - Label text changed from "create text with" to "join" (using CDO localizations)
+ * - Image fields are moved to the second input row, if it exists.
  */
 
 /**
