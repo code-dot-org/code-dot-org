@@ -159,7 +159,7 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
  */
 export function addMutationToTextJoinBlocks(blockElement) {
   if (
-    ['text_join', 'text_join_simple'].includes(
+    !['text_join', 'text_join_simple'].includes(
       blockElement.getAttribute('type')
     )
   ) {
