@@ -318,7 +318,7 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Would you like to replace the existing animation?';
+        return 'Filename already exists at this path. Would you like to replace the existing animation and metadata?';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
