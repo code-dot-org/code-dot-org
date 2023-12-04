@@ -3462,48 +3462,64 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa2-pilot:
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa3-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa4-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa5-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
         csa6-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         k5-onlinepd-2021:
@@ -3643,10 +3659,14 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa2-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -3665,6 +3685,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -3705,6 +3727,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
           name: coordenador-piloto-csa1
@@ -3712,6 +3736,8 @@ pt:
           lesson_groups:
             lesson group:
               display_name: Conteúdo
+            lessonGroup-2:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa2
@@ -3719,6 +3745,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
           name: coordenador-piloto-csa3
@@ -3726,6 +3754,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa4
@@ -3733,6 +3763,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Área restrita
           name: coordenador-piloto-csa5
@@ -3778,10 +3810,14 @@ pt:
               display_name: Conteúdo
             content:
               display_name: Conteúdo
+            show_what_you_know:
+              display_name: Mostre o Que Você Sabe
             lesson_group:
               display_name: Conteúdo
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         ai-ethics:
           title: Nosso Código de Ética em I.A.
           description_audience: 6ª à 12ª séries
@@ -3830,6 +3866,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
           name: csa5-exemplars
           title: Unidade 5 – Organização de objetos [Exemplars]
         csd-post-survey-2021:
@@ -3852,6 +3890,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         ai-ethics-2021:
@@ -3875,6 +3915,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         2022drafting:
           lesson_groups:
             lessonGroup-5:
@@ -3889,6 +3931,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csf-2022-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -3907,16 +3951,22 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa7-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         coursea-2022:
@@ -4111,6 +4161,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Áreas restritas
             lessonGroup-5:
@@ -4129,10 +4181,14 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -4143,6 +4199,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa5-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4151,18 +4209,24 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         self-paced-pl-csa2-2022:
           title: 'Módulo 2: Navegação no Code.org'
         csa7-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         coursef-2022-pilot:
@@ -4181,24 +4245,32 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa7-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Área restrita
         csa8-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Questionário
         csa2-2022-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         vpl-csd1-ci-pilot-2022:
           title: 'Módulo 1: Preparação para lecionar sobre solução de problemas e computação'
           description: "Este módulo de aprendizagem profissional foi projetado para ajudar você a se preparar para lecionar a unidade de Solução de Problemas e Computação do Code.org.\n\n\\*\\* Neste módulo de aprendizagem profissional, você vai: \\*\\* \n– Ver uma introdução à solução de problemas e computação. \n– Praticar conceitos-chave lecionados na unidade. \n– Explorar os projetos no final do capítulo. \n\n\\*\\* Tempo sugerido: \\*\\* 30 minutos"
@@ -4409,18 +4481,26 @@ pt:
               display_name: Questionário
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa2-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa4-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa5-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
@@ -4429,14 +4509,20 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa7-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa8-validation-pilot-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-5:
               display_name: Questionário
         csa1-2023:
@@ -4450,6 +4536,8 @@ pt:
               display_name: Questionário
             lessonGroup-3:
               display_name: Conteúdo
+            lessonGroup-4:
+              display_name: Mostre o Que Você Sabe
         csa2-2023:
           lessons:
             lesson-4:
@@ -4457,6 +4545,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa3-2023:
           lessons:
             lesson-1:
@@ -4466,6 +4556,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa4-2023:
           lessons:
             lesson-9:
@@ -4473,14 +4565,20 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa5-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa6-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa7-2023:
           lessons:
             lesson-6:
@@ -4488,10 +4586,14 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
         csa8-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+            lessonGroup-3:
+              display_name: Mostre o Que Você Sabe
             lessonGroup-4:
               display_name: Questionário
         csa-magpie-lab:
@@ -4683,9 +4785,9 @@ pt:
         csc-ecosystems-2023:
           lessons:
             lesson-3:
-              name: Codifique seu próprio ecossistema (2023)
-          title: Simulação de um ecossistema marinho (2023)
-          description: "## Trabalho prévio sugerido para este módulo. Alunos de\n\n\\*_Ciências_ devem simular um ecossistema de vida marinha nas Lições 1 e 2. Para desenvolver familiaridade com esse ecossistema, recomendamos este [Vídeo sobre Animais do Oceano](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos). \n\nNa Lição 2, os alunos vão codificar diversas práticas de pesca sustentável. Eis aqui alguns textos para desenvolver conhecimentos sobre os fundamentos e se aprofundar nas conexões com o mundo real: [Compreenda a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Artigo sobre o Aquário da Baía de Monterey), ou [Mw,kwa Talks to Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livro infantil).\n\n \\*_Ciência da Computação:_ Neste módulo, os alunos vão aprender novos conceitos de codificação que podem ser difíceis para alunos novatos em ciência da computação. Se os alunos não estiverem familiarizados com o laboratório de fadas do Code.org, recomendamos que experimentem o [Peixes Nadando com o Laboratório de Fadas](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo também utiliza um conceito avançado de CC conhecido como declarações condicionais. Os alunos aprendem esse conceito de forma gradual, mas alguns podem se beneficiar participando desta atividade introdutória offline sobre declarações condicionais: [Declarações condicionais com cartas](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutos)."
+              name: Programe Seu Próprio Ecossistema (2023)
+          title: Simulando um Ecossistema Marinho (2023)
+          description: "## Pré-trabalho Sugerido para este Módulo\n\n**Ciência:** Os alunos simularão um ecossistema de vida marinha nas Lições 1 e 2. Para se familiarizar com esse ecossistema, recomendamos este [Vídeo sobre Animais Oceânicos](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutos). \n\nNa Lição 2, os alunos programarão várias práticas de pesca sustentável. Estas são algumas leituras para construir um conhecimento básico e aprofundar as conexões com o mundo real: [Entendedo a Pesca Predatória](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (artigo do Monterey Bay Aquarium) ou [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livro infantil).\n\n**Ciência da Computação:** Neste módulo, os alunos aprenderão novos conceitos de codificação que podem ser difíceis para alunos iniciantes na ciência da computação. Se os alunos não estiverem familiarizados com o Sprite Lab da Code.org, recomendamos experimentar [Nandando com Peixes no Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutos) para uma introdução básica à ferramenta. \n\nEste módulo também usa um conceito de CC avançado chamado declarações condicionais. Os alunos aprendem esse conceito de forma estruturada, mas pode ser melhor alguns alunos participarem primeiro desta introdução à atividade condicional desplugada : [Condicionais com Cartas](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutos)."
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:

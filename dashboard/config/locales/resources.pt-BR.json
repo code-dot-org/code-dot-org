@@ -6713,15 +6713,18 @@
           "type": "Recurso"
         },
         "resource_list_for_all_lessons/csc-ecosystems/2023": {
-          "name": "Lista de Recursos para Todas as Lições"
+          "name": "Lista de Recursos para Todas as Lições",
+          "url": "/s/csc-ecossystems-2023/resources"
         },
         "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
           "name": "Padrões na Simulação de um Ecossistema Marinho ",
-          "type": "Recurso"
+          "type": "Recurso",
+          "url": "/s/csc-ecossystems-2023/standards"
         },
         "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
           "name": "Vocabulário na Simulação de um Ecossistema Marinho",
-          "type": "Recurso"
+          "type": "Recurso",
+          "url": "/s/csc-ecossystems-2023/vocab"
         },
         "ecosystems/csc-ecosystems/2023": {
           "name": "Simulação de um ecossistema marinho",
@@ -6734,7 +6737,7 @@
           "type": "Recurso"
         },
         "ecologist_s_notebook/csc-ecosystems/2023": {
-          "name": "Caderno do ecologista",
+          "name": "Caderno do Ecologista",
           "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview",
           "type": "Guia de Atividade"
         },

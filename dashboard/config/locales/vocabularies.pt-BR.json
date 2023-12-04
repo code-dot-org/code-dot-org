@@ -1437,15 +1437,15 @@
         },
         "ecologist/csc-ecosystems/2023": {
           "word": "Ecologista",
-          "definition": "Cientista que estuda como animais e plantas interagem com o meio ambiente."
+          "definition": "Um cientista que estuda como animais e plantas interagem com o meio ambiente."
         },
         "energy/csc-ecosystems/2023": {
           "word": "Energia",
           "definition": "Transferido entre organismos em cadeias alimentares de produtores para consumidores. A energia é usada pelos organismos para realizar tarefas complexas."
         },
         "food_chain/csc-ecosystems/2023": {
-          "word": "Cadeia alimentar ",
-          "definition": "Um grupo de organismos ligados na ordem dos alimentos que comem, de produtores a consumidores e de presas a predadores."
+          "word": "Cadeia Alimentar ",
+          "definition": "Um grupo de organismos ligados na ordem dos alimentos que comem, dos produtores aos consumidores e das presas aos predadores."
         },
         "code/csc-mappinglandmarks/2023": {
           "word": "Código",

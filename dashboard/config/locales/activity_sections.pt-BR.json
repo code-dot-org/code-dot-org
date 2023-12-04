@@ -13673,7 +13673,7 @@
           "progression_name": "Exploração: Apps de exemplo"
         },
         "f321b39c-8051-4fc9-9e40-24f25216f88c": {
-          "name": "Compartilhar",
+          "name": "Compartilhe",
           "description": "\\*\\*Discuta: \\*\\* Quais foram as escolhas mais interessantes que você conseguiu fazer com esses aplicativos? Alguma vez você desejou poder mudar algo no aplicativo, mas não teve a escolha?\n\n\\*\\*Objetivo: \\*\\* Os alunos devem ser capazes de nomear escolhas específicas que fizeram, mas também devem discutir por que acham que o criador nos deu essa escolha. As opções para destacar incluem as palavras que você digita (por exemplo, Chat Bot), o tipo de sprites que são usados (por exemplo, Jogo de Colecionador) ou a maneira como você interage com algo. "
         },
         "efa336e3-b101-4300-9bce-45771a6e114d": {
@@ -26575,11 +26575,11 @@
         },
         "c8103731-20b1-4450-bf84-5a7f726c3984": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Vídeo Sobre Ecossistemas”\n\n**Faça isso**: Mostre o vídeo de introdução para toda a turma",
-          "progression_name": "Vídeo sobre ecossistemas"
+          "progression_name": "Vídeo sobre Ecossistemas"
         },
         "37930866-a6ed-47a0-9be5-f009204e8950": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Teste a simulação”\n\n**Faça isso**: Peça aos alunos que experimentem a simulação ainda inacabada em seus próprios computadores. Faça perguntas orientadoras para ajudá-los a perceber o que está faltando em suas simulações.",
-          "progression_name": "Simulação de ecossistema"
+          "progression_name": "Simulação de Ecossistemas"
         },
         "7782afb7-cd17-487c-9b04-547c5476271b": {
           "description": "**Perguntas Orientadoras**:\n\n-   O que está mudando na tela?\n-   Plantas e animais estão sendo adicionados? Removidos?\n-   Por que há tantas algas?\n-   O que você esperaria que acontecesse quando o barco tocasse no peixe?\n-   Esse é um ecossistema equilibrado?\n-   A cadeia alimentar está em ação?\n-   O que poderia tornar essa simulação melhor? \n\n**Objetivo da Discussão**: Os alunos reconhecerão que há muitas algas porque os peixes não as estão comendo. Além disso, o barco não está pescando o peixe. A simulação seria melhor se modelasse a cadeia alimentar: os peixes comem a águia e as pessoas no barco comem o peixe. "
@@ -26591,7 +26591,7 @@
         },
         "4965bd27-8ecf-4ca5-9c82-4ecabe2a6ad0": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Codifique a Cadeia Alimentar”\n\n**Faça isso**: Peça aos alunos que concluam os níveis 3-5 de sozinhos para configurar o ecossistema aquático. Eles adicionarão blocos de eventos à simulação para fazer com que os peixes comam as algas e sejam removidos quando tocarem no barco. \n\n**Nível 3** - Os alunos encontram o bloco de eventos `When fish touches algae` e adicionam um bloco `eats object algae` abaixo do evento. \n\n**Nível 4** - Os alunos encontram o bloco de eventos `When boat touches fish` e adicionam um bloco  `catches object fish` abaixo do evento.\n\n**Nível 5** - Você pode usar esse nível de correspondência como uma verificação de entendimento e para reforçar o aprendizado dos níveis 3-4. Os alunos arrastam a imagem do código que corresponde ao GIF. Um GIF mostra o peixe comendo algas e o outro GIF mostra o barco pegando peixes. ",
-          "progression_name": "Vídeo sobre ecossistemas"
+          "progression_name": "Vídeo sobre Ecossistemas"
         },
         "d57207f8-fc64-4d78-a47c-b7030eb457f0": {
           "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Conceito-chave”\n\n**Faça isso**: Assim que alguns alunos concluírem o Nível 5, reúna toda a turma para visualizar o Nível 6. Leia os cenários de causa e efeito quanto houver algas em excesso, muito poucas algas e o suficiente. Participe da conversa após o aquecimento para lembrar os alunos sobre ecossistemas desequilibrados. Nessa simulação, a quantidade de algas faz com que o sistema fique desequilibrado. \n\n-   **Condição** - Algo que um programa verifica para ver se é verdadeiro antes de permitir uma ação.\n\n-   **Condicionais** - Declarações que só são executadas sob certas condições.\n\n**Objetivo da Discussão**: Os alunos entenderão que os computadores podem verificar se algo é verdadeiro ou falso e “decidir” qual ação executar com base na resposta."
@@ -26675,17 +26675,18 @@
         },
         "695cd2f0-863b-47e7-bcf6-13415299464f": {
           "name": "Solução para a Pesca Predatória #1 - Estabeleça Áreas Marinhas Protegidas",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 1-2 - Estabeleça Áreas Marinhas Protegidas”\n\n**Faça isso**: Peça aos alunos que leiam as instruções para concluir os níveis 1 e 2. Lembre os alunos de tentarem executar o código várias vezes e usar as dicas integradas para descobrir a solução antes de pedir ajuda aos colegas. Considere fazer uma conexão com o texto exibido no slide.\n\n**Nível 1** - Os alunos aprenderão a Prática de Pesca Sustentável #1: Zonas de Pesca. Os barcos de pesca só podem pescar em áreas designadas. Algumas áreas estão proibidas para barcos de pesca para que o ecossistema possa se recuperar.\n\n**Nível 2** - Os alunos adicionarão um código para alterar o comportamento do barco para que ele permaneça dentro da zona de pesca especificada."
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 1-2 - Estabeleça Áreas Marinhas Protegidas”\n\n**Faça isso**: Peça aos alunos que leiam as instruções para concluir os níveis 1 e 2. Lembre os alunos de tentarem executar o código várias vezes e usar as dicas integradas para descobrir a solução antes de pedir ajuda aos colegas. Considere fazer uma conexão com o texto exibido no slide.\n\n**Nível 1** - Os alunos aprenderão a Prática de Pesca Sustentável #1: Zonas de Pesca. Os barcos de pesca só podem pescar em áreas designadas. Algumas áreas estão proibidas para barcos de pesca para que o ecossistema possa se recuperar.\n\n**Nível 2** - Os alunos adicionarão um código para alterar o comportamento do barco para que ele permaneça dentro da zona de pesca especificada.",
+          "progression_name": "Solução 1 - Zona de Pesca"
         },
         "072db4ea-d8ac-439e-ab0e-c8ef67d7b860": {
           "name": "Solução para a Pesca Predatória #2 - Crie uma “Temporada de Pesca”",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 3-5 - Crie uma Temporada de Pesca”\n\n**Faça isso**: Peça aos alunos que preencham o código nesses níveis em seu próprio ritmo. Considere reunir a turma para fazer uma conexão com o texto no Nível 3.\n\n**Nível 3** - Os alunos aprenderão a Prática de Pesca Sustentável #2: Crie uma Temporada de Pesca. Estabeleça limites para quando as pessoas podem pescar. Quando não é temporada de pesca, o ecossistema se recupera.\n\n**Nível 4** - Os alunos adicionarão um código para criar uma temporada de proibição de pesca.\n\n**Nível 5** - Os alunos adicionarão um código para criar uma temporada de pesca que se repita. O ecossistema alternará entre as temporadas de pesca e sem pesca.",
-          "progression_name": "Solução 2 - Estação de pesca"
+          "progression_name": "Solução 2 - Temporada de Pesca"
         },
         "48e4c3b2-150f-4524-b1a8-55dfc170c1b6": {
           "name": "Solução para a Pesca Predatória #3 - Limite o Número de Peixes Capturados",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Níveis 6-8 - Limite o Número de Peixes Capturados”\n\n**Faça isso**: Peça aos alunos que preencham o código usando as instruções nos níveis 6-8 em seu próprio ritmo. Considere reunir a turma para fazer uma conexão com o texto no Nível 6.\n\n**Nível 6** - Os alunos aprenderão a Prática de Pesca Sustentável #3: Estabeleça Limites de Pesca. Os cientistas podem ajudar a descobrir quantos peixes podem ser capturados sem causar danos ao oceano. Então, os pescadores saberão que só devem pescar um número determinado de peixes.\n\n**Nível 7** - Os alunos criarão uma nova variável para rastrear quantos peixes o barco pescou e aumentarão a variável em 1 para cada novo peixe capturado.\n\n**Nível 8** - Os alunos usarão uma condicional para definir o limite de pesca e remover o barco quando ele atingir esse limite.",
-          "progression_name": "Solução 3 - Limites de pesca"
+          "progression_name": "Solução 3 - Limites de Pesca"
         },
         "676d8a66-e8c0-4388-9600-eb00bf91e63e": {
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Exibir: Mostre o slide “Nível 9 - Verificar o Entendimento”\n\n**O Nível 9** é uma verificação final de entendimento. Os alunos examinarão três práticas de pesca sustentável\ne arrastarão o código para a imagem correspondente.",
@@ -26695,10 +26696,11 @@
           "tips": [
             "Pode ser útil aos alunos que estão trabalhando no mesmo ritmo que se reúnam em duplas ou em pequenos grupos para discutir a pergunta do Nível 9 - Verificar a Entendimento antes de enviar suas respostas. Oriente os alunos a explicar cada linha de código e sua finalidade na simulação. Depois de discutir em pequenos grupos, os alunos devem estar mais bem preparados para responder às perguntas correspondentes. \n\nTambém pode ajudar fornecer aos alunos algums tópicos iniciais para suas discussões. Você pode escrevê-las em um pedaço de papel ou no quadro da sala de aula, conforme necessário. \n\n-   O coral permanece saudável nesta simulação porque… \n-   O coral não fica doente nesta simulação porque…"
           ],
-          "progression_name": "Verifique se todos compreenderam"
+          "progression_name": "Verificação de Entendimento"
         },
         "a758b35b-192c-4765-b0f7-f419f9d55a88": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Mostre o Que você Sabe”\n\n**Diga:** \n\n-   _Cite TRÊS blocos de código usados na Lição 3: Equilibrando o Ecossistema._ \n-   _Descreva DUAS soluções para o problema da pesca predatória._ \n-   _Explique sua parte MAIS favorita da lição._ \n\n**Faça isso**: \n\nPeça aos alunos que registrem suas respostas em notas adesivas, em um caderno, um formulário do Google ou outro sistema de gerenciamento de conteúdo usado em sua aula. _Opcional: Leitura e discussão estendidas._"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Mostre o Que você Sabe”\n\n**Diga:** \n\n-   _Cite TRÊS blocos de código usados na Lição 3: Equilibrando o Ecossistema._ \n-   _Descreva DUAS soluções para o problema da pesca predatória._ \n-   _Explique sua parte MAIS favorita da lição._ \n\n**Faça isso**: \n\nPeça aos alunos que registrem suas respostas em notas adesivas, em um caderno, um formulário do Google ou outro sistema de gerenciamento de conteúdo usado em sua aula. _Opcional: Leitura e discussão estendidas._",
+          "name": "Mostre o Que Você Sabe"
         },
         "a9a34da7-fec1-45cb-98d5-ce3ad961fa6b": {
           "description": "Aprendemos muito sobre programação de computadores ao explorar os efeitos da pesca predatória em um ecossistema que tem peixes, algas e corais. Programamos três soluções diferentes para ajudar a manter os corais saudáveis por mais tempo. Qual você acha que é a melhor solução? Justifique sua resposta usando evidências da simulação \n\nEm conclusão, reserve um tempo para considerar o seu papel em seu ecossistema local. Pense em como os humanos podem estar impactando os ecossistemas aquáticos e como podemos trabalhar para manter nossos ecossistemas em equilíbrio para que todos os organismos possam prosperar. "
@@ -26727,48 +26729,48 @@
         "81bd8cd7-0a8a-41d4-9ea9-34e285777719": {
           "name": "Análise da Cadeia Alimentar",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 1 - A Cadeia Alimentar”\n\n**Faça isso**: Analise o delicado equilíbrio de uma cadeia alimentar usando exemplos de causa e efeito da lição 1.",
-          "progression_name": "A cadeia alimentar"
+          "progression_name": "A Cadeia Alimentar"
         },
         "277c72a1-2eb0-4508-88ab-ea1467d9dc3d": {
           "description": "A cadeia alimentar é um equilíbrio delicado. Se houver muito de um organismo, pode haver efeitos em outras plantas ou animais. Na simulação marinha com a qual trabalhamos, o impacto humano causou um desequilíbrio no ecossistema. O barco tirou muitos peixes do oceano. Como os peixes comem as algas, removê-los significava que as algas cresceriam demais. O excesso de algas no ecossistema fez com que o coral morresse.",
-          "progression_name": "A cadeia alimentar"
+          "progression_name": "A Cadeia Alimentar"
         },
         "09231b15-08f9-4770-8abd-22c1b8c4729e": {
           "name": "Observe, Modifique, Registre",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 2 - Nível de Escolha”\n\n**Faça isso**: Dê a cada aluno uma cópia do Guia de Atividade. Revise as seções Observe, Modifique e Registre antes que os alunos iniciem seu nível de escolha no computador. ",
-          "progression_name": "Equilíbrio de um ecossistema"
+          "progression_name": "Equilibre um ecossistema"
         },
         "0a65cbdc-a7b3-4262-975b-c5963bc30c29": {
           "description": "Nesse nível, há quatro exemplos de ecossistemas que estão enfrentando desafios decorrentes da interferência humana. Você pode escolher qual ecossistema equilibrar. Você será um ecologista de floresta tropical, de deserto, de zonas úmidas ou do Ártico? \n\nComece observando a simulação do ecossistema em ação. Anote suas observações no Caderno do Ecologista. \n\nEm seguida, siga as instruções para modificar o código para ajudar a equilibrar o ecossistema. \n\nExecute a simulação novamente e observe como a mudança no código mudou a simulação. Por fim, registre suas observações sobre as mudanças no Caderno do Ecologista. \n\nVocê pode explorar outro ecossistema se tiver tempo!"
         },
         "9216fede-49ad-4b19-a1d3-aea5e42900a9": {
-          "name": "Compartilhar",
+          "name": "Compartilhe",
           "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 3 - Compartilhe”\n\n**Faça isso**: Agrupe os alunos de uma forma aleatória, de preferência com colegas que escolheram um ecossistema diferente. ",
-          "progression_name": "Compartilhe sua simulação"
+          "progression_name": "Compartilhe Sua Simulação"
         },
         "7ad0e8a1-2be5-47d2-a203-a6c9c3bb5bd8": {
           "description": "Uma das grandes vantagens da ciência da computação é que geralmente há mais de uma solução correta para um problema. Ao conversar com seu grupo/colega, comece explicando o ecossistema que você escolheu e o desafio que ele apresentou.\n\n1.  Explique a cadeia alimentar em seu ecossistema e como você a codificou.\n2.  Havia muito ou pouco de um organismo?\n\nEm seguida, mostre as modificações feitas no código e explique como isso mudou a simulação.\n\n3.  Explique as modificações que você fez na simulação.\n4.  O que você notou depois de alterar os valores?"
         },
         "cb2a879c-6ef3-4f45-a5ce-de3b695cad85": {
           "tips": [
-            "Incentive os alunos a usarem o Caderno do Engenheiro para apoiar a conversa e compartilhar com o grupo. Você pode agrupar as perguntas em duas partes: A) Explique o ecossistema, a cadeia alimentar e o impacto humano. B) Mostre o código, aponte as modificações e execute a simulação final. Dê aos alunos uma dica para mudarem para que todos os membros do grupo tenham tempo de compartilhar seus trabalhos. "
+            "Incentive os alunos a usarem o Caderno do Engenheiro para auxiliá-los na conversa e ao compartilhar com o grupo. Você pode agrupar as perguntas em duas partes: A) Explique o ecossistema, a cadeia alimentar e o impacto humano. B) Mostre o código, aponte as modificações e execute a simulação final. Dê aos alunos um toque para que todos os membros do grupo tenham tempo de compartilhar seus trabalhos. "
           ]
         },
         "ea776062-2f16-4d74-95c5-015ddf9a1e90": {
-          "name": "Vire e fale",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Mantendo a sustentabilidade”\n\n**Discuta**: \nPor que tipos de regulamentações podem ajudar a manter seu ecossistema sustentável, equilibrado e saudável?\n\n\\*\\*Objetivo da discussão: \\*\\* Os alunos farão uma conexão com a Lição 2 e aplicarão ideias das três possíveis práticas de pesca sustentável introduzidas em todos os níveis. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Reflita”\n\n**Discuta**: Por que é importante manter todos os ecossistemas equilibrados e saudáveis? O que VOCÊ pode fazer para ajudar o ecossistema em que vive? \n\n\\*\\*Objetivo da discussão: \\*\\* Os alunos farão uma conexão com o mundo real. Eles serão capazes de explicar a necessidade de manter os diferentes ecossistemas equilibrados e saudáveis e as possíveis soluções para isso."
+          "name": "Vire & Fale",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Mantendo-o Sustentável”\n\n**Discuta**: \nPor que alguns tipos de regulamentações podem ajudar a manter seu ecossistema sustentável, equilibrado e saudável?\n\n**Objetivo da Discussão:** Os alunos deverão fazer uma conexão com a Lição 2 e aplicarão ideias das três possíveis práticas de pesca sustentável introduzidas em todos os níveis. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Refletir”\n\n**Discuta**: Por que é importante manter todos os ecossistemas equilibrados e saudáveis? O que VOCÊ pode fazer para ajudar o ecossistema em que vive? \n\n\\*\\*Objetivo da Discussão: \\*\\* Os alunos deverão fazer uma conexão com o mundo real. Eles deverão ser capazes de explicar a necessidade de manter diferentes ecossistemas equilibrados e saudáveis, e possíveis soluções para isso."
         },
         "9682670e-68d2-453d-9f22-b93126eb808f": {
-          "description": "Ótimo trabalho, ecologistas! Juntos, usamos a ciência da computação para ajudar a aprender e entender o delicado equilíbrio de uma cadeia alimentar em um ecossistema. Cientistas usam simulações como essas para testar novas ideias e soluções para proteger os ecossistemas em todo o mundo! Talvez você seja um ecologista usando a ciência da computação no futuro! "
+          "description": "Ótimo trabalho, ecologistas! Juntos, usamos a ciência da computação para aprender e entender o delicado equilíbrio de uma cadeia alimentar em um ecossistema. Os cientistas usam simulações como essas para testar novas ideias e soluções para proteger os ecossistemas em todo o mundo! Talvez você seja um ecologista usando a ciência da computação no futuro! "
         },
         "2ac3ae1c-b9e7-455a-91a3-b30db502e3b2": {
-          "name": "Crie um ecossistema local",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 10 - Jogo Livre”\n\n**Faça isso**: Os alunos podem usar os animais e os planos de fundo para criar seu próprio ecossistema. \n\n\\*\\* (Opcional) Faça isso\\*\\*: É possível fazer um remix do nível Free Play na Lição 1 e depois fazer upload de suas próprias imagens para usar nos sprites. Você pode usar essa técnica para colocar uma lente local no último nível. <a href=\"https://youtu.be/8KCAvNt4jRg\" target=\"_blank\">Este é um vídeo</a> \nque explica como fazer upload de suas próprias imagens para seus alunos usarem como sprites."
+          "name": "Crie um Ecossistema Local",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Exibir**: Mostre o slide “Nível 10 - Atividade Livre”\n\n**Faça isso**: Os alunos podem usar os animais e os planos de fundo para criarem seus próprios ecossistemas. \n\n\\*\\* (Opcional) Faça isso\\*\\*: É possível fazer uso do nível Atividade Livre na Lição 1 e depois carregar suas próprias imagens para usar em sprites. Você pode usar essa técnica para trazer para um contexto local no último nível. <a href=\"https://youtu.be/8KCAvNt4jRg\" target=\"_blank\">Este é um vídeo</a> \nque explica como fazer upload de suas próprias imagens para seus alunos usarem como sprites."
         },
         "9fda5c5f-e72e-4695-accb-10fe0ecad953": {
-          "description": "Experimente adicionar um plano de fundo e sprites que representem um ecossistema em nossa área! Há novas opções de sprite e plano de fundo disponíveis para você neste nível. \n\n-   Como os organismos desse ecossistema se movem? Experimente adicionar comportamentos!\n-   Como os organismos desse ecossistema interagem? Experimente adicionar eventos!\n-   Como a energia flui (teia alimentar) nesse ecossistema?  \n-   Sua simulação é um ecossistema equilibrado ou um organismo está causando um desequilíbrio?  ",
+          "description": "Experimente adicionar um plano de fundo e sprites que representem um ecossistema em nossa área! Há novas opções de sprites e planos de fundo disponíveis para você neste nível. \n\n-   Como os organismos desse ecossistema se movem? Experimente adicionar comportamentos!\n-   Como os organismos desse ecossistema interagem? Experimente adicionar eventos!\n-   Como a energia flui (cadeia alimentar) nesse ecossistema?  \n-   Sua simulação é um ecossistema equilibrado ou um organismo está causando um desequilíbrio?  ",
           "tips": [
-            "Outras extensões incluem: \n\n\\*\\*Conteúdo científico: \\*\\*  \n\n-   Módulo   <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">CSC: Aulas 1-3 de adaptações de animais</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projeto: Modelagem de ciclos de vida no Sprite Lab - AI</a> \n    <a href=\"https://code.org/oceans\" target=\"_blank\">para oceanos</a> \n\n\\*\\*Conceitos de ciência da computação: \\*\\*  \n\n-   Simulações:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">simulação de experimentos</a> e <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">surtos</a> \n-   Condicionais: Minecraft <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\"></a> \n-   Condições If/Else: <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Bee</a> \n-   Eventos: Dance Party <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\"></a> "
+            "Outras extensões incluem: \n\n**Conteúdo Científico:**  \n\n-   <a href=\"http://studio.code.org/s/csc-adaptations-2023\" target=\"_blank\">Módulo CCC: Adaptações de Animais, Lições 1-3</a> \n-   <a href=\"https://docs.google.com/document/d/1C8cz6hKlBuEMz_1ocauAaEWkwLVENDC5u8N_qQED8vU/edit?usp=sharing\" target=\"_blank\">Projeto: Modelando Ciclos de Vida no Sprite Lab</a> \n    <a href=\"https://code.org/oceans\" target=\"_blank\">AI para Oceanos</a> \n\n**Conceitos da Ciência da Computação:**  \n\n-   Simulações:  <a href=\"https://studio.code.org/s/coursef-2022/lessons/12\" target=\"_blank\">Simulação de Experimentos</a> e <a href=\"https://studio.code.org/s/coursef-2022/lessons/13\" target=\"_blank\">Surtos</a> \n-   Condicionais: <a href=\"https://studio.code.org/s/coursee-2022/lessons/12\" target=\"_blank\">Minecraft</a> \n-   If/Else Conditional: <a href=\"https://studio.code.org/s/coursed-2022/lessons/14\" target=\"_blank\">Bee</a> \n-   Eventos: <a href=\"https://studio.code.org/s/coursed-2022/lessons/8\" target=\"_blank\">Festa de Dança</a> "
           ]
         },
         "4acb696c-b168-4868-996d-4d721669b233": {
@@ -40842,10 +40844,10 @@
           "description": "**Faça Isso:** Os alunos devem trabalhar em grupos para criar pilhas de tiras de papel para que cada pilha seja uma categoria de feedback. As categorias devem corresponder às necessidades ou aos problemas semelhantes aos abordados pelo feedback. Por exemplo, vários comentários podem ser sobre o fato de a fonte ser muito pequena para ser lida. Ao categorizar o feedback, eles também devem discutir em quais categorias gostariam de se concentrar e por quê.\n\n**Circule:** Monitore o progresso dos alunos, pedindo aos grupos que expliquem como estão formando suas categorias. Não há um agrupamento correto de feedback aqui, mas os alunos devem estar preparados para justificar suas categorias. Peça aos alunos que expliquem quais categorias eles escolheram como mais importantes de serem abordadas e por quê.\n\n**Compartilhe:** Depois que todos os grupos categorizarem seus comentários, peça algumas sugestões dos tipos de categorias que eles criaram."
         },
         "fe9aa8cf-961f-4691-b15b-1d9eb8ab89bb": {
-          "progression_name": "Configuração da cadeia alimentar"
+          "progression_name": "Configuração da Cadeia Alimentar"
         },
         "8aa3a6e2-5df5-4f7c-bafa-b5363f7cb1dc": {
-          "progression_name": "Se... então... Declarações condicionais"
+          "progression_name": "If... then... Declarações condicionais"
         },
         "20dd7202-2d0c-4779-8781-6c038fc7746c": {
           "description": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**"
