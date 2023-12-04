@@ -1390,22 +1390,67 @@
           "rubric_key_concept": "Conceito-chave"
         },
         "ml-club app-review submit": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-club app-review submit_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-club app-review submit_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4-2021": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "ml-intro app lab-book recommender 4_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
           "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-models in applab-zoo assessment": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
         }
       }
     }
