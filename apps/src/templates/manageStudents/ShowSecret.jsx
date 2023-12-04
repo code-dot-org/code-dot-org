@@ -145,9 +145,12 @@ class ShowSecret extends Component {
               <p>{this.props.secretWord}</p>
             )}
             {this.props.loginType === SectionLoginType.picture && (
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
               <img
                 src={pegasus('/images/' + this.props.secretPicture)}
                 style={styles.image}
+                alt=""
               />
             )}
             <Button

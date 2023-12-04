@@ -353,19 +353,19 @@ module Pd::Application
       assert_includes(csv_header_csd, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       refute_includes(csv_header_csd, csa_plan_offer_question)
-      assert_equal 85, csv_header_csd.length
+      assert_equal 83, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute_includes(csv_header_csp, csd_plan_offer_question)
       assert_includes(csv_header_csp, csp_plan_offer_question)
       refute_includes(csv_header_csp, csa_plan_offer_question)
-      assert_equal 87, csv_header_csp.length
+      assert_equal 85, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
       refute_includes(csv_header_csa, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       assert_includes(csv_header_csa, csa_plan_offer_question)
-      assert_equal 89, csv_header_csa.length
+      assert_equal 87, csv_header_csa.length
     end
 
     test 'school cache' do
@@ -539,6 +539,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -553,6 +554,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -577,6 +579,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -591,6 +594,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -617,6 +621,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 50
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:NO]
       application.auto_score!
 
       assert_equal(
@@ -633,6 +638,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
+            not_teaching_in_access_report: YES,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -663,7 +669,9 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
           },
-          meets_scholarship_criteria_scores: {},
+          meets_scholarship_criteria_scores: {
+            not_teaching_in_access_report: YES,
+          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -686,6 +694,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -700,6 +709,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -724,6 +734,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -738,6 +749,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -764,6 +776,7 @@ module Pd::Application
         principal_underrepresented_minority_percent: 49
 
       application = create :pd_teacher_application, form_data_hash: application_hash
+      create :census_summary, school_year: application.census_year, school_id: application.school_id, teaches_cs: Census::CensusSummary::TEACHES[:YES]
       application.auto_score!
 
       assert_equal(
@@ -780,6 +793,7 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
+            not_teaching_in_access_report: NO,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -934,19 +948,22 @@ module Pd::Application
     test 'meets_scholarship_criteria' do
       application = create :pd_teacher_application
       test_cases = [
-        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
-        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
-        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
-        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO}
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, not_teaching_in_access_report: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, not_teaching_in_access_report: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, not_teaching_in_access_report: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, not_teaching_in_access_report: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, not_teaching_in_access_report: NO, verdict: NO},
       ]
 
       test_cases.each do |test_case|
-        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent, :not_teaching_in_access_report)
         application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
 
         output = application.meets_scholarship_criteria

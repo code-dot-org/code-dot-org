@@ -2541,6 +2541,50 @@
       "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\""
     }
   },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
+    "long_instructions": "This is an allthethings level used to test the modal function editor.",
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "change the size of a sprite": "change the size of a sprite",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
+    "long_instructions": "This is an allthethings Sprite Lab level that uses a variety of blocks",
+    "behavior_descriptions": {
+      "rotate a sprite to its left": "rotate a sprite to its left",
+      "change the size of a sprite": "change the size of a sprite",
+      "randomly change the size of a sprite": "randomly change the size of a sprite",
+      "rotate a sprite to its right": "rotate a sprite to its right",
+      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
+      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
+      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
+      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
+      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
+      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
+      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
+      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
+      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
+      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
+      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
+      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
+      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/37/levels/1": {
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
   },

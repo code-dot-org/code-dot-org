@@ -864,6 +864,9 @@ sv:
   cs_ambassador_application_date: Ansökningarna är öppna till den 8 november 2023
   cs_ambassador_application_subhead: Arbeta med en lärare för att skicka in din ansökan
     idag
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Frågor? Vänligen kontakta [youngwomen@code.org]
     (%{email_url})
   cs_ambassador_do_heading: Vad gör CS-ambassadörer?

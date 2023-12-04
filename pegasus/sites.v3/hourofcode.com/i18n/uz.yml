@@ -955,6 +955,9 @@ uz:
   cs_ambassador_application_date: Arizalar 2023 yil 8 noyabrgacha ochiladi
   cs_ambassador_application_subhead: Bugun arizangizni topshirish uchun o'qituvchi
     bilan ishlang
+  cs_ambassador_application_closed_title: Applications have now closed.
+  cs_ambassador_application_closed_subhead: Questions about future opportunities or
+    want to learn more? Please contact [youngwomen@code.org](%{email_url}).
   cs_ambassador_application_questions: Savollarmi? Iltimos, [youngwomen@code.org]
     bilan bog'laning (%{email_url})
   cs_ambassador_do_heading: CS elchilari nima qilishadi?

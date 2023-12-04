@@ -391,21 +391,6 @@
   line-height: 1em;
 }
 
-/* Share buttons */
-.share-buttons {
-  margin: 0;
-}
-.share-buttons button {
-  width: auto;
-  height: auto;
-  font-family: var(--main-font);
-  font-weight: var(--semi-bold-font-weight);
-  margin: 10px 10px 0 0;
-}
-.share-buttons button i {
-  margin-right: .5em;
-}
-
 #map .mapboxgl-popup-close-button {
   margin-top: 0px;
   background-color: var(--brand_secondary_default);

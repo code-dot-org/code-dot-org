@@ -13,10 +13,10 @@ import moduleStyles from './Lab2Wrapper.module.scss';
 import ErrorBoundary from '../ErrorBoundary';
 import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
 const i18n = require('@cdo/locale');
 
 import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import Lab2Registry from '../Lab2Registry';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
@@ -37,9 +37,11 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
       onError={(error, componentStack) =>
-        Lab2MetricsReporter.logError('Uncaught React Error', error, {
-          componentStack,
-        })
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Uncaught React Error', error, {
+            componentStack,
+          })
       }
     >
       <div

@@ -65,7 +65,7 @@ const Video = ({id, onClose}) => {
             height="100%"
             style={{border: 'none'}}
             src="https://www.youtube-nocookie.com/embed/ab2SBrfkKXU?rel=0"
-            title=""
+            title="Project Beats Introduction"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />

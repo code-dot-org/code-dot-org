@@ -64,6 +64,7 @@ class Services::Lti
   def self.parse_nrps_response(nrps_response)
     sections = {}
     members = nrps_response[:members]
+    context_title = nrps_response.dig(:context, :title)
     members.each do |member|
       next if member[:status] == 'Inactive' || member[:roles].exclude?(Policies::Lti::CONTEXT_LEARNER_ROLE)
       # TODO: handle multiple messages. Shouldn't be needed until we support Deep Linking.
@@ -81,7 +82,7 @@ class Services::Lti
           sections[section_id][:members] << member
         else
           sections[section_id] = {
-            name: member_section_names[index],
+            name: "#{context_title}: #{member_section_names[index]}",
             members: [member],
           }
         end
@@ -126,18 +127,20 @@ class Services::Lti
     end
 
     nrps_sections.keys.each do |lms_section_id|
+      section_name = nrps_sections[lms_section_id][:name]
       # Check if lti_sections already contains a section with this lms_section_id
       lti_section = lti_sections.find_by(lms_section_id: lms_section_id)
       if lti_section.nil?
         section = Section.new(
           {
             user_id: section_owner_id,
-            name: nrps_sections[lms_section_id][:name],
+            name: section_name,
             login_type: Section::LOGIN_TYPE_LTI_V1,
           }
         )
         lti_section = LtiSection.create(lti_course_id: lti_course.id, lms_section_id: lms_section_id, section: section)
       end
+      lti_section.section.update(name: section_name) unless lti_section.section.name == section_name
       sync_section_roster(lti_integration, lti_section, nrps_sections[lms_section_id][:members])
     end
   end

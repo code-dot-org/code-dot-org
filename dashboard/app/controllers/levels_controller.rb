@@ -51,6 +51,7 @@ class LevelsController < ApplicationController
     Pixelation,
     Poetry,
     PublicKeyCryptography,
+    Pythonlab,
     StandaloneVideo,
     StarWarsGrid,
     Studio,
@@ -448,6 +449,8 @@ class LevelsController < ApplicationController
         @game = Game.music
       elsif @type_class == Aichat
         @game = Game.aichat
+      elsif @type_class == Pythonlab
+        @game = Game.pythonlab
       end
       @level = @type_class.new
       render :edit
