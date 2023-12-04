@@ -332,6 +332,7 @@ es:
   call_to_action_explore_all_hoc_activities: Explora todas las actividades de la Hora
     del Código en Code.org
   call_to_action_start_dance_party: Crea una fiesta de baile
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Comenzar la segunda parte
   call_to_action_start_unplugged_activity: Iniciar actividad fuera de línea
   call_to_action_view_promo_resources: Ver recursos promocionales
@@ -446,6 +447,15 @@ es:
   call_to_action_learn_about_ai: Aprende sobre la IA
   call_to_action_learn_more_about_ai: Saber más sobre la IA
   call_to_action_get_started: Comenzar
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Ver la guía práctica para educadores
   aria_label_call_to_action_hoc_how_to_companies: Ver la guía práctica para empresas
   aria_label_call_to_action_hoc_how_to_districts: Ver la guía práctica para distritos
@@ -471,6 +481,8 @@ es:
     para la enseñanza de los principios de la informática
   aria_label_call_to_action_teaching_problem_solving: Inicia el programa de aprendizaje
     profesional de enseñanza de resolución de problemas y computación
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Comience el programa de aprendizaje profesional
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Inicie el programa de aprendizaje profesional
@@ -578,6 +590,16 @@ es:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Programa de aprendizaje profesional de
     Code.org
   curriculum_name_csf: Fundamentos de la informática
@@ -597,6 +619,7 @@ es:
   curriculum_name_csd: Descubrimientos en ciencias de la computación
   curriculum_name_csp: Principios de informática
   curriculum_name_problem_solving: Resolución de problemas e informática
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Conexiones informáticas
   curriculum_name_csa: AP® Ciencias de la Computación A
   curriculum_name_csa_ai: Ingeniería de software y visión artificial
@@ -740,6 +763,7 @@ es:
   module_label_languages: 'Idiomas compatibles:'
   module_label_accessibility_features: 'Accesibilidad:'
   module_label_accessibility_features_full: 'Características de accesibilidad:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Herramienta para educadores
   module_label_educator_course: Curso para educadores
   module_label_educator_resources: Recursos para educadores
@@ -793,6 +817,7 @@ es:
   module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 horas
   module_duration_5_hrs_plus: Más de 5 horas
   module_duration_8_hrs: 8 horas
@@ -814,6 +839,7 @@ es:
   module_label_teaching_csd: Enseñanza de descubrimientos en ciencias de la computación
   module_label_teaching_csp: Principios de enseñanza de la informática
   module_label_teaching_problem_solving: Enseñanza de resolución de problemas e informática
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Conexiones para la enseñanza de la informática
   module_label_teaching_ai: Enseñanza de IA y aprendizaje automático
   module_label_teaching_maker_cp: Enseñar a crear aplicaciones con dispositivos (Circuit
@@ -887,6 +913,12 @@ es:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Disponible en Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Si eres una estudiante de secundaria apasionada por animar
     a más mujeres jóvenes a estudiar informática en tu escuela, ¡te necesitamos!
   cs_ambassador_desc: Todos los campos, incluidos la medicina, el entretenimiento,
@@ -964,6 +996,19 @@ es:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Los talleres presenciales y virtuales
     comenzarán este verano.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: "¡Adelante, corta el cable (por un tiempo)!"
   no_devices_section_desc: La educación sobre informática no siempre tiene que impartirse
     frente a una pantalla y el acceso a los dispositivos no debería ser una barrera
@@ -990,6 +1035,11 @@ es:
   subscribe_form_section_desc_csp: Inscríbase para recibir correos electrónicos mensuales
     sobre los principios de informática de Code.org y reciba recordatorios, consejos
     y actualizaciones útiles directamente en su bandeja de entrada.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Puedes darte de baja en cualquier momento.
   hoc_page_what_is_hoc_heading: "¿Qué es la Hora del Código?"
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1196,6 +1246,7 @@ es:
     aborden la mayoría de las necesidades de todos los participantes.
   ai_curriculum_btn_aria_label_06: Vea el plan de lección sobre el impacto social
     de la IA generativa
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Qué dicen los profesores sobre la IA con Code.org:'
   ai_carousel_quote_01: Esta lección también les dio a mis alumnos la oportunidad
     de ver que hay un elemento de opinión en los sistemas de clasificación. Más tarde,
@@ -1414,6 +1465,68 @@ es:
   ai_vid_ethics1_caption: 'Ética e IA: igualdad de acceso y sesgo algorítmico'
   ai_vid_ethics2_caption: 'Ética e inteligencia artificial: la privacidad y el futuro
     del trabajo'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Aprendizaje profesional a su propio ritmo para educadores
   self_paced_pl_hero_desc: Ofertas de aprendizaje profesional para apoyar a los maestros
     en cada etapa de su trayectoria docente en ciencias de la computación.
@@ -3129,6 +3242,7 @@ es:
     o [lee la Guía Práctica](%{howto_url})'
   tutorial_dance2019_name: Fiesta de baile
   tutorial_danceparty_name: Fiesta de baile
+  tutorial_dancepartyai_name: 'Fiesta de baile: edición de IA'
   tutorial_chibitronics_name: 'Chibitronics: Historia ilustrada'
   tutorial_athlete_name: Programa tu propio juego de deportes
   tutorial_moana_name: 'Moana: busca el camino a través de la programación'
@@ -3825,6 +3939,9 @@ es:
   tutorial_danceparty_shortdescription: Programa una Fiesta de baile y compártela
     con tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y
     25 artistas más!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Programa un circuito de papel para darle
     vida a tu propia historia.
   tutorial_athlete_shortdescription: "¡Elige entre crear un partido de baloncesto
@@ -5100,6 +5217,9 @@ es:
   tutorial_danceparty_longdescription: Programa una Fiesta de baile y compártela con
     tus amigos. ¡Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara y 25
     artistas más!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Programa un circuito de papel para darle
     vida a tu propia historia.
   tutorial_athlete_longdescription: "¡Elige entre crear un partido de baloncesto o
@@ -8264,6 +8384,7 @@ es:
     y la inclusión, y aceptarán la diversidad que nos hace a todos tan únicos y especiales.
   tutorial_dance2019_string_detail_grades: A partir de Grado 2
   tutorial_danceparty_string_detail_grades: A partir de Grado 2
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Prelector - Grado 5
   tutorial_athlete_string_detail_grades: A partir de Grado 2
   tutorial_moana_string_detail_grades: A partir de Grado 2
@@ -8942,6 +9063,8 @@ es:
     iPad, sin conexión
   tutorial_danceparty_string_platforms: Todos los navegadores modernos, tablets Android,
     iPad
+  tutorial_dancepartyai_string_platforms: Todos los navegadores modernos, tablets
+    Android, iPad
   tutorial_chibitronics_string_platforms: Todos los navegadores modernos
   tutorial_athlete_string_platforms: Todos los navegadores modernos
   tutorial_moana_string_platforms: Todos los navegadores modernos, tablets Android,
@@ -9845,6 +9968,7 @@ es:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chip Chibitronics Chibi y LEDs Circuit
     Sticker
   tutorial_athlete_string_detail_platforms: ''
@@ -10528,6 +10652,7 @@ es:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloques
   tutorial_danceparty_string_detail_programming_languages: Bloques
+  tutorial_dancepartyai_string_detail_programming_languages: Bloques
   tutorial_chibitronics_string_detail_programming_languages: Bloques
   tutorial_athlete_string_detail_programming_languages: Bloques
   tutorial_moana_string_detail_programming_languages: Bloques

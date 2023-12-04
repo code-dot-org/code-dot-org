@@ -326,6 +326,7 @@ ro:
   call_to_action_explore_all_hoc_activities: Explorează toate activitățile Hour of
     Code de la Code.org
   call_to_action_start_dance_party: Începeți petrecerea de dans
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Începeți partea a doua
   call_to_action_start_unplugged_activity: Începeți activitatea deconectată
   call_to_action_view_promo_resources: Vizualizați resursele promoționale
@@ -442,6 +443,15 @@ ro:
   call_to_action_learn_about_ai: Învață despre IA
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Incepe
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Vizualizați ghidul instrucțiunilor
     pentru educatori
   aria_label_call_to_action_hoc_how_to_companies: Vizualizați ghidul de instrucțiuni
@@ -470,6 +480,8 @@ ro:
     a principiilor de predare a informaticii
   aria_label_call_to_action_teaching_problem_solving: Începeți programul de învățare
     profesională de predare a rezolvării problemelor și calculatoare
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Începeți programul profesional de învățare  Predarea
     Conexiunilor de Informatică
   aria_label_call_to_action_teaching_ai: Începeți programul de învățare profesională
@@ -577,6 +589,16 @@ ro:
     atelier gratuit pentru cursanți
   aria_label_call_to_action_view_more_cs_resources: Vizualizează mai multe resurse
     informatice
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Programul de învățare profesională al
     Code.org
   curriculum_name_csf: Bazele informaticii
@@ -596,6 +618,7 @@ ro:
   curriculum_name_csd: Descoperiri în informatică
   curriculum_name_csp: Principiile informaticii
   curriculum_name_problem_solving: Rezolvarea Problemelor și Calculul Informatic
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Conexiunile Informaticii
   curriculum_name_csa: Informatică A
   curriculum_name_csa_ai: Inginerie software și viziune computerizată
@@ -738,6 +761,7 @@ ro:
   module_label_languages: 'Limbi Scceptate:'
   module_label_accessibility_features: 'Accesibilitate:'
   module_label_accessibility_features_full: 'Caracteristici de accesibilitate:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Instrument pentru educatori
   module_label_educator_course: Curs pentru educatori
   module_label_educator_resources: Educator resources
@@ -791,6 +815,7 @@ ro:
   module_duration_1_hr: 1 oră
   module_duration_2_hrs: 2 ore
   module_duration_3_hrs: 3 ore
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 ore
   module_duration_5_hrs_plus: 5+ ore
   module_duration_8_hrs: 8 ore
@@ -812,6 +837,7 @@ ro:
   module_label_teaching_csd: Predarea descoperirilor în informatică
   module_label_teaching_csp: Predarea principiilor informaticii
   module_label_teaching_problem_solving: Predarea rezolvării problemelor și calculului
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Predarea Conexiunilor de Informatică
   module_label_teaching_ai: Predarea AI și învățarea automată
   module_label_teaching_maker_cp: Predarea creării de aplicații cu dispozitive (Circuit
@@ -883,6 +909,12 @@ ro:
   heading_attend_free_workshop: Participă la un atelier gratuit pentru cursanți
   heading_access_more_cs_resources: Accesează mai multe resurse informatice
   heading_available_on_code_dot_org: Disponibil pe Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Dacă ești un elev de liceu pasionat de încurajarea mai multor
     femei tinere să ia informatică la școala ta, atunci avem nevoie de tine!
   cs_ambassador_desc: Fiecare domeniu, inclusiv medicina, divertismentul, sportul,
@@ -954,6 +986,19 @@ ro:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Ateliere personale și virtuale
     începând din această vară.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Haideți, tăiați cablul (pentru o vreme)!
   no_devices_section_desc: Educația informatică nu trebuie să se desfășoare întotdeauna
     în fața unui ecran, iar accesul la dispozitive nu ar trebui să fie o barieră în
@@ -980,6 +1025,11 @@ ro:
   subscribe_form_section_desc_csp: Înscrieți-vă pentru a primi e-mailuri lunare despre
     Principiile de Informatică ale Code.org și pentru a primi mementouri utile, sfaturi
     și actualizări trimise direct în căsuța de e-mail.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Vă puteți dezabona în orice moment.
   hoc_page_what_is_hoc_heading: Ce este Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) este o mișcare globală care ajunge
@@ -1185,6 +1235,7 @@ ro:
     celor mai multe nevoi ale tuturor participanților.
   ai_curriculum_btn_aria_label_06: Vizualizați planul de lecție al impactului social
     al IA generativă
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Ce spun profesorii despre AI cu Code.org:'
   ai_carousel_quote_01: Această lecție a oferit, de asemenea, elevilor mei posibilitatea
     de a vedea că există un element de opinie în sistemele de clasificare. Mai târziu,
@@ -1393,6 +1444,68 @@ ro:
   ai_vid_computervision_caption: Viziune computerizată
   ai_vid_ethics1_caption: 'Etică și AI: acces egal și părtinire algoritmică'
   ai_vid_ethics2_caption: 'Etică și AI: Confidențialitatea și viitorul muncii'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Învățare profesională în ritm propriu pentru educatori
   self_paced_pl_hero_desc: Oferte de învățare profesională pentru a sprijini profesorii
     în fiecare etapă a călătoriei lor de predare a informaticii.
@@ -3088,6 +3201,7 @@ ro:
     Ghidul de Inițiere](%{howto_url})'
   tutorial_dance2019_name: Petrecere dansantă 2019
   tutorial_danceparty_name: Petrecere de dans
+  tutorial_dancepartyai_name: 'Petrecere de dans: Ediția AI'
   tutorial_chibitronics_name: 'Chibitronics: Poveste iluminată'
   tutorial_athlete_name: Programează-ți propriul joc sportiv
   tutorial_moana_name: 'Moana: Cum să te descurci cu Cod'
@@ -3777,6 +3891,9 @@ ro:
   tutorial_danceparty_shortdescription: Programează o Petrecere Dansantă pentru a
     o partaja cu prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara și încă 25!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Programează un circuit de hârtie pentru
     a-ți lumina propria poveste.
   tutorial_athlete_shortdescription: Alege între crearea unui joc de baschet sau o
@@ -5040,6 +5157,9 @@ ro:
   tutorial_danceparty_longdescription: Programează o Petrecere Dansantă pentru a o
     partaja cu prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
     Ciara și încă 25!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Programează un circuit de hârtie pentru a-ți
     lumina propria poveste.
   tutorial_athlete_longdescription: Alege între crearea unui joc de baschet sau o
@@ -8078,6 +8198,7 @@ ro:
     îmbrățișa diversitatea care ne face pe toți speciali.
   tutorial_dance2019_string_detail_grades: Clasele II+
   tutorial_danceparty_string_detail_grades: Clasele II+
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Clasele 2-5
   tutorial_athlete_string_detail_grades: Clasele II+
   tutorial_moana_string_detail_grades: Clasele II+
@@ -8755,6 +8876,8 @@ ro:
   tutorial_dance2019_string_platforms: Toate browserele moderne, tableta Android,
     iPad, Deconectate
   tutorial_danceparty_string_platforms: Toate browserele moderne, tableta Android,
+    iPad
+  tutorial_dancepartyai_string_platforms: Toate browserele moderne, tableta Android,
     iPad
   tutorial_chibitronics_string_platforms: Toate browserele moderne
   tutorial_athlete_string_platforms: Toate browserele moderne
@@ -9626,6 +9749,7 @@ ro:
     iPhone, iPad, telefon Android, tabletă Android
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chibi Chip și
     LED-uri pentru autocolante
   tutorial_athlete_string_detail_platforms: ''
@@ -10308,6 +10432,7 @@ ro:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blocuri
   tutorial_danceparty_string_detail_programming_languages: Blocuri
+  tutorial_dancepartyai_string_detail_programming_languages: Blocuri
   tutorial_chibitronics_string_detail_programming_languages: Blocuri
   tutorial_athlete_string_detail_programming_languages: Blocuri
   tutorial_moana_string_detail_programming_languages: Blocuri

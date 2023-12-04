@@ -14,7 +14,7 @@ tr:
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
-           if {CONDITION}{SPRITE}
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
       AmysBlocks_goldilocksElse:
         text: |2-
@@ -1176,7 +1176,7 @@ tr:
             '"liquid"': sıvı
             '"solid"': katı
         text: |2-
-           if {CONDITION}{SPRITE}
+          eğer {CONDITION}{SPRITE}
           {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
@@ -1191,7 +1191,7 @@ tr:
       KatiesBlocks_tumbling:
         text: karıştır
       Mikelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       Mikelab_addTrainingData:
         options:
           LOCATION:
@@ -2198,7 +2198,7 @@ tr:
             "{x1:0, x2:400, y1:0, y2:200}": Alt
             "{x1:0, x2:400, y1:200, y2:400}": Üst
       gamelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       gamelab_addTarget:
         options:
           OPT:
