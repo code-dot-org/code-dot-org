@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -51,6 +51,8 @@ import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ModalButton from './ModalButton';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Globals from '../Globals';
 
 export enum Mode {
   INITIAL = 'initial',
@@ -153,9 +155,13 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
-  const currentAiModalField = useSelector(
-    (state: {dance: DanceState}) => state.dance.currentAiModalField
-  );
+  const currentAiModalField = useMemo(() => {
+    const field = Globals.getCurrentDanceAiModalField();
+    if (field === null) {
+      Lab2MetricsReporter.logWarning('AI modal opened without a field');
+    }
+    return field;
+  }, []);
 
   const aiModalOpenedFromFlyout = useSelector(
     (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
