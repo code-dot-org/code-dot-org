@@ -1,39 +1,44 @@
-AWSTemplateFormatVersion: "2010-09-09"
-Description: "S3 Buckets for Various Purposes"
-
+AWSTemplateFormatVersion: 2010-09-09
+Description: "S3 Buckets for various purposes with common configurations"
 Parameters:
   DeveloperAccount:
     Type: String
     NoEcho: true
 
 Resources:
-  CommonBucketProperties: &CommonBucketProperties
-    BucketEncryption:
-      ServerSideEncryptionConfiguration:
-        - ServerSideEncryptionByDefault:
-            SSEAlgorithm: "aws:kms"
-    PublicAccessBlockConfiguration:
-      BlockPublicAcls: true
-      BlockPublicPolicy: true
-      IgnorePublicAcls: true
-      RestrictPublicBuckets: true
+  # Common configurations for S3 buckets
+  CommonBucketProperties:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      # Common Logging Configuration for all buckets
+      LoggingConfiguration:
+        DestinationBucketName: "cdo-logs"
+      # Common Public Access Block Configuration for all buckets
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
 
+  # S3 bucket for student libraries
   LibraryBucket:
     Type: "AWS::S3::Bucket"
     Properties:
-      <<: *CommonBucketProperties
       BucketName: "cdo-v3-libraries"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
       VersioningConfiguration:
         Status: "Enabled"
-      LoggingConfiguration:
-        DestinationBucketName: "cdo-logs"
-        LogFilePrefix: "s3/cdo-v3-libraries"
+      LogFilePrefix: "s3/cdo-v3-libraries"
+      CommonBucketProperties: {}
 
+  # S3 bucket for student sources (project code)
   SourcesBucket:
     Type: "AWS::S3::Bucket"
     DeletionPolicy: Retain
     Properties:
-      <<: *CommonBucketProperties
       BucketName: "cdo-v3-sources"
       VersioningConfiguration:
         Status: "Enabled"
@@ -51,24 +56,103 @@ Resources:
             NoncurrentVersionExpirationInDays: 1
             Prefix: "sources_circle/"
             Status: "Enabled"
-      LoggingConfiguration:
-        DestinationBucketName: "cdo-logs"
-        LogFilePrefix: "s3/cdo-v3-sources/"
+      LogFilePrefix: "s3/cdo-v3-sources/"
+      CommonBucketProperties: {}
 
-  # If needed please add any other  bucket resources here...
+  # S3 bucket for storing various files
+  FilesBucket:
+    Type: "AWS::S3::Bucket"
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-v3-files"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LifecycleConfiguration:
+        Rules:
+          - Id: "365-day expiration of old versions"
+            NoncurrentVersionExpirationInDays: 365
+            Status: "Enabled"
+      CommonBucketProperties: {}
 
+  # Bucket policy for granting permissions to Drone
+  DroneLibraryBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref LibraryBucket
+      PolicyDocument:
+        Statement:
+          - Sid: Grant Drone permission to objects created by CI tests.
+            Effect: "Allow"
+            Action: "s3:*"
+            Resource: "arn:aws:s3:::cdo-v3-libraries/libraries_circle/*"
+            Principal:
+              AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]
+          - Sid: Grant Drone permission to list objects for CI tests.
+            Effect: "Allow"
+            Action: "s3:ListBucket*"
+            Resource: "arn:aws:s3:::cdo-v3-libraries"
+            Condition:
+              StringLike:
+                "s3:Prefix": "libraries_circle/*"
+            Principal:
+              AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]
+
+  # S3 bucket for curriculum development
+  CurriculumBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "cdo-curriculum-devel"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LogFilePrefix: "s3/cdo-curriculum-devel"
+      CommonBucketProperties: {}
+
+  # S3 bucket for internal data sharing
   DataSharingInternalBucket:
     Type: "AWS::S3::Bucket"
     DeletionPolicy: Retain
     Properties:
-      <<: *CommonBucketProperties
       BucketName: "cdo-data-sharing-internal"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
+      CommonBucketProperties: {}
 
+  # S3 bucket for storing trained ML models
   MLModelsBucket:
     Type: "AWS::S3::Bucket"
     DeletionPolicy: Retain
     Properties:
-      <<: *CommonBucketProperties
       BucketName: "cdo-v3-trained-ml-models"
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "aws:kms"
       VersioningConfiguration:
         Status: "Enabled"
+      CommonBucketProperties: {}
+
+  # Bucket policy for granting permissions to Drone for MLModelsBucket
+  MLModelsBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref MLModelsBucket
+      PolicyDocument:
+        Statement:
+          - Sid: Grant Drone permission to objects created by CI tests.
+            Effect: "Allow"
+            Action: "s3:*"
+            Resource: "arn:aws:s3:::cdo-v3-trained-ml-models/*"
+            Principal:
+              AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]
+          - Sid: Grant Drone permission to list objects for CI tests.
+            Effect: "Allow"
+            Action: "s3:ListBucket"
+            Resource: "arn:aws:s3:::cdo-v3-trained-ml-models"
+            Principal:
+              AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"]
