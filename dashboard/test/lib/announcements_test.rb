@@ -74,6 +74,7 @@ class AnnouncementsTest < ActiveSupport::TestCase
   end
 
   test 'returns nil for announcement behind false dcdo flag' do
+    DCDO.instance_variable_get(:@datastore_cache).set('announcement-dcdo-test', false)
     announcement = Announcements.get_announcement_for_page("/dcdo-test")
     assert_nil announcement
   end
