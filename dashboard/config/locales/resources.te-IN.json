@@ -1001,7 +1001,8 @@
           "type": "రిసోర్స్"
         },
         "ai_training_data_bias/csd/2021": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "model_cards/csd/2021": {
           "type": "స్లయిడ్లను"
@@ -2403,13 +2404,17 @@
           "type": "వర్క్షీట్"
         },
         "ai-ml/coursef/2021": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: మెషిన్ లెర్నింగ్"
         },
         "ai-societal/coursef/2021": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: సమాజంపై ప్రభావం",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "ai-training/coursef/2021": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "అంతర్జాలం",
@@ -3530,7 +3535,8 @@
           "type": "స్లయిడ్లను"
         },
         "ai_training_data_bias/csd/2022": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "model_cards/csd/2022": {
           "type": "స్లయిడ్లను"
@@ -4747,13 +4753,17 @@
           "type": "వర్క్షీట్"
         },
         "ai_impact_on_society/coursef/2022": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: సమాజంపై ప్రభావం",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "ai_machine_learning/coursef/2022": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: మెషిన్ లెర్నింగ్"
         },
         "ai_training_data_bias/coursef/2022": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "get-site-ip-com/coursef/2022": {
           "name": "గెట్-సైట్-ఐపి-కామ్",
@@ -6514,7 +6524,8 @@
           "type": "స్లయిడ్లను"
         },
         "ai_training_data_bias/csd/2023": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "model_cards/csd/2023": {
           "type": "స్లయిడ్లను"
@@ -7791,13 +7802,17 @@
           "type": "వర్క్షీట్"
         },
         "ai_impact_on_society/coursef/2023": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: సమాజంపై ప్రభావం",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "ai_machine_learning/coursef/2023": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: మెషిన్ లెర్నింగ్"
         },
         "ai_training_data_bias/coursef/2023": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "get-site-ip-com/coursef/2023": {
           "name": "గెట్-సైట్-ఐపి-కామ్",
@@ -8202,13 +8217,17 @@
           "type": "వీడియో"
         },
         "ai-ml/oceans/unversioned": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: మెషిన్ లెర్నింగ్"
         },
         "ai-societal/oceans/unversioned": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: సమాజంపై ప్రభావం",
+          "url": "https://youtu.be/ng4c1g3COfs"
         },
         "ai-training/oceans/unversioned": {
-          "type": "వీడియో"
+          "type": "వీడియో",
+          "name": "AI: ట్రైనింగ్ డేటా & బయాస్"
         },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
