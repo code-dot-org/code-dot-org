@@ -47,6 +47,7 @@ class SectionProgress extends Component {
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
     showStandardsIntroDialog: PropTypes.bool,
+    sectionVersionId: PropTypes.number,
   };
 
   constructor(props) {
@@ -137,6 +138,7 @@ class SectionProgress extends Component {
       scriptData,
       sectionId,
       showStandardsIntroDialog,
+      sectionVersionId,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -147,6 +149,8 @@ class SectionProgress extends Component {
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+    console.log(coursesWithProgress);
+    console.log(sectionVersionId);
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -155,7 +159,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              coursesWithProgress={coursesWithProgress}
+              coursesWithProgress={coursesWithProgress.reverse()}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />

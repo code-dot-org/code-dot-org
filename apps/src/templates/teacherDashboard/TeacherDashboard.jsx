@@ -28,6 +28,7 @@ function TeacherDashboard({
   studentCount,
   coursesWithProgress,
   location,
+  sectionVersionId,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -87,7 +88,6 @@ function TeacherDashboard({
   const includeHeader =
     location.pathname !== TeacherDashboardPath.loginInfo &&
     location.pathname !== TeacherDashboardPath.standardsReport;
-
   return (
     <div>
       {includeHeader && (
@@ -163,6 +163,7 @@ TeacherDashboard.propTypes = {
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
+  sectionVersionId: PropTypes.number.isRequired,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,
