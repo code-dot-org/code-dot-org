@@ -69,6 +69,12 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
       last_name: 'test',
       email: 'test@code.org',
       nces_id: '123456789012',
+      # Will not find an nces_id match: address fields will submit empty
+      street_1: '',
+      street_2: '',
+      city: '',
+      state: '',
+      zip: '',
       marketing_kit: '0',
       csta_plus: '0',
       amazon_terms: '1',
@@ -135,6 +141,12 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
         email: 'test@code.org',
         school_district_name: '',
         school_name: '',
+        # Will not find an nces_id match: address fields will submit empty
+        street_1: '',
+        street_2: '',
+        city: '',
+        state: '',
+        zip: '',
         professional_role: 'test role with space',
         grades_teaching: 'K-5, 6-8, ',
         privacy_permission: true
