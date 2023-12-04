@@ -491,10 +491,7 @@ class User < ApplicationRecord
   has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
   has_many :sections_instructed, -> {without_deleted}, through: :active_section_instructors, source: :section
 
-  # "sections" previously referred to what is now called :sections_owned.
-  def sections
-    sections_instructed
-  end
+  # REMOVING TO TEST WHERE IT IS FAILING TESTS. DO NOT MERGE
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
