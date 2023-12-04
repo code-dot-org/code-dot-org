@@ -4,12 +4,15 @@ pl:
     attributes:
       user:
         age: Wiek
+        ai_rubrics_disabled: Wyłącz funkcję rubryki AI
+        ai_settings_header: Ustawienia AI
         current_password: Aktualne hasło
         edit_header: Edytuj dane konta
         email: e-mail
         error:
           future: nie może być w przyszłości
         finish_sign_up_header: Zakończ tworzenie swojego konta
+        finish_sign_up_header_error: 'Proszę poprawić następujące błędy:'
         finish_sign_up_subheader: Wypełnij poniższe informacje, aby zakończyć tworzenie
           konta Code.org dla <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Wypełnij poniższe informacje, aby zakończyć
@@ -31,6 +34,7 @@ pl:
           masz adresu e-mail)](%{url})
         reset_password_token: Link do resetowania hasła, z którego skorzystałeś
         us_state: Stan
+        user_type: Typ konta
         username: Nazwa użytkownika
         verified_teacher: Zweryfikowany nauczyciel
     errors:
@@ -175,6 +179,7 @@ pl:
       sports: Zawody
       summer_workshops_612: Warsztaty Letnie dla uczniów w klasach 6-12
       teacher_led: Prowadzony przez nauczyciela
+      unsupported: Nieobsługiwany
       virtual_academic_year_workshops_612: Wirtualne Warsztaty Roku Akademickiego
         dla uczniów w klasach 6-12
       workshops_k5: Warsztaty dla uczniów w klasach K-5
@@ -408,6 +413,44 @@ pl:
     starwars_javascript_name: 'Star Wars: Budowanie Galaktyki za pomocą kodu (JavaScript)'
     title: Pobieranie godziny kodowania
     windows: Windows (64-bitowy)
+  hoc_tutorial_email_content:
+    create_classroom_section: "**Utwórz sekcję klasy** (chociaż opcjonalnie… , ale
+      bardzo przydatne!): Tworzenie sekcji z klasy umożliwi Ci śledzenie postępów
+      uczniów, przeglądanie ich prac, a takze zostawianie im uwag! [Skonfiguruj swoją
+      sekcję tutaj] (%{section_setup_url}). A dla wszystkich naszych początkujących,
+      oto [przydatny przewodnik] (%{guide_url}), który Ci pomoże!"
+    dear_teacher: Szanowna/y %{teacher_name},
+    explore_course: Poznaj naszą skarbnicę bezpłatnych kursów
+    founder: Założyciel, Code.org
+    hip_hip_hooray: "**Hip, Hip, Hur!**: Gdy godzina się skończy, świętujmy tych genialnych
+      młodych programistów. Certyfikaty, naklejki, a nawet oklaski — wszystko się
+      liczy. Znajdź nasze [certyfikaty do druku tutaj] (%{url})."
+    intro_step_by_step_guide: 'Jesteśmy bardzo podekscytowani, że organizujesz wydarzenie
+      Godziny Kodowania, korzystając z bezpłatnych zajęć i samouczków Code.org! Jesteśmy
+      zaszczyceni, że nauczyciele tacy jak Ty wprowadzają uczniów w ekscytujący świat
+      kodowania. Oto przewodnik krok po kroku, aby zapewnić udane wydarzenie Godziny
+      Kodowania:'
+    learn_about_ai: Poznaj sztuczną inteligencję (AI)
+    let_fun_begin: "** Niech zabawa się zacznie!**: Kierując się planem lekcji, rozpocznij
+      swoją podróż do świata kodowania. Pamiętaj: nie musisz znać wszystkich odpowiedzi!
+      Twój entuzjazm i wspólna ciekawość z uczniami pomogą wszystkim uczyć się razem."
+    more_adventures_await: "**Czeka więcej przygód**: Czy zauważyłeś nowych programistów
+      spragnionych więcej? Przedstaw im więcej programów nauczania informatyki na
+      Code.org!"
+    pick_perfect_activity: "**Wybierz idealną aktywność**: [Wybierz najlepszy samouczek
+      Godziny Kodowania] (%{url}) na swoje wydarzenie. Zapoznaj się z opcjami i przypisz
+      wybrany samouczek do swojej sekcji, aby Twoi uczniowie dokładnie wiedzieli,
+      od czego zacząć."
+    plan_like_pro: "**Planuj jak profesjonalista**: Wiele naszych samouczków zawiera
+      [plan lekcji] ()%{lesson_plan_url}. To jak sekretny przepis na sukces! Sprawdź
+      swój plan lekcji przed wielkim wydarzeniem."
+    sign_up_step: "**Zarejestruj się** (Opcjonalnie…, ale niesamowite!): Utwórz bezpłatne
+      konto Code.org, aby uzyskać dostęp do osobistego pulpitu, z którego możesz zarządzać
+      Godziną Kodowania w swojej klasie! [Zarejestruj się tutaj] (%{url})."
+    thank_you: DZIĘKUJEMY za wspieranie edukacji informatycznej. Nasz zespół życzy
+      Tobie i Twoim uczniom niezapomnianych Godzin Kodowania!
+    your_friends: Twoi znajomi na Code.org
+  hoc_tutorial_email_subject: Przeżyj Godzinę Kodowania dzięki samouczkom Code.org!
   home:
     20hour_overview: Ten 20-godzinny godzinny kurs wprowadza podstawowe pojęcia z
       zakresu informatyki i programowania. Kurs jest przeznaczony do użytku klasach
@@ -808,7 +851,9 @@ pl:
         mongolia: Mongolia
         new_zealand: Nowa Zelandia
         paraguay: Paragwaj
+        philippines: Filipiny
         portugal: Portugalia
+        puerto_rico: Portoryko
         slovakia: Słowacja
         south_korea: Korea Południowa
         spain: Hiszpania

@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
   userHasPassword: true,
   isGoogleClassroomStudent: false,
   isCleverStudent: false,
+  personalAccountLinkingEnabled: true,
 };
 
 const mockAuthenticationOptions = {

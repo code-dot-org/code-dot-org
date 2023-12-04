@@ -1,0 +1,44 @@
+:ruby
+  list_item = [
+    {
+      icon: "fa-solid fa-people-group",
+      title: hoc_s(:cs_ambassador_benefits_list_title_01),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_01)
+    },
+    {
+      icon: "fa-solid fa-handshake-angle",
+      title: hoc_s(:cs_ambassador_benefits_list_title_02),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_02, markdown: :inline, locals:{award_url: "https://presidentialserviceawards.gov/"})
+    },
+    {
+      icon: "fa-solid fa-trophy",
+      title: hoc_s(:cs_ambassador_benefits_list_title_03),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_03)
+    },
+    {
+      icon: "fa-solid fa-shirt",
+      title: hoc_s(:cs_ambassador_benefits_list_title_04),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_04)
+    },
+    {
+      icon: "fa-solid fa-file-certificate",
+      title: hoc_s(:cs_ambassador_benefits_list_title_05),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_05)
+    },
+    {
+      icon: "fa-solid fa-graduation-cap",
+      title: hoc_s(:cs_ambassador_benefits_list_title_06),
+      desc: hoc_s(:cs_ambassador_benefits_list_desc_06)
+    },
+  ]
+
+%ul.icon-bullet-list
+  - list_item.each do |list_item|
+    %li
+      %div
+        %i{class: "#{list_item[:icon]}"}
+      .text-wrapper
+        %h3
+          = list_item[:title]
+        %p.has-external-link
+          = list_item[:desc]

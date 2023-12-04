@@ -14,15 +14,17 @@ nl-NL:
             <br/> zet een driehoek rechts van de parallellogram
         - text: Begin met een vierkant <br/> zet een driehoek onder het vierkant <br/>
             zet een parallellogram rechts van de driehoek
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Kies een algoritme voor de gegeven afbeelding.
         title: Meerkeuze
       2-3 Algorithms Multi 2:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         content1: Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats
           nog een driehoek onder het vierkant
         questions:
@@ -30,23 +32,25 @@ nl-NL:
         title: Meerkeuze
       2-3 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Koppelen
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Gebruik de sleutel om elke code met zijn letter te combineren
         questions:
         - text: "<strong>N</strong>"
@@ -56,74 +60,93 @@ nl-NL:
         title: Koppelen
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: Welke set van kaarten is volgens de spelregels goed geturfd?
+        teacher_markdown: |
+          ## Leraren:
+
+          Leerlingen werken mogelijk vanuit een misverstand, en dit is een geweldige plek om dat uit te zoeken. Als leerlingen denken dat er *geen* juist antwoord is dan hebben ze waarschijnlijk een misverstand over conditionals.
+
+          Hier is een video die helpt met uitleggen wat er in deze vraag aan de hand is:
+
+          https://youtu.be/TbUaEnAYPjI
         title: Meerkeuze
       2-3 Getting Loopy Multi 1:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Hoe zou je deze reeks vereenvoudigen met lussen?
         title: Meerkeuze
       2-3 Graph Paper Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Combineer het raster met het programma.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Koppelen
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Welk programma maakt het plaatje?
         title: Meerkeuze
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Doolhof Combinatie
       2-3 Maze Multi 2:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Met welke blokken kom ik bij het varken?
         title: Doolhof Meerkeuze
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         - correct: true
+          text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Welk programma maakt deze afbeelding **niet**?
         title: Meerkeuze
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         - correct: true
+          text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         questions:
         - text: In welke combinatie van afbeeldingsprogramma's zitten geen vergissingen?
         title: Meerkeuze
@@ -134,8 +157,11 @@ nl-NL:
           text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
-        - {}
+        - text: Wat zou je moeten oplossen om er een volledige cirkel van te maken?
+        title: Kunstenaar Debugging Meerkeuze 1
       2-3 artist functions multi 1:
         answers:
         - correct: true
@@ -147,91 +173,106 @@ nl-NL:
         title: Kunstenaar Functies Meerkeuze Eén
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Koppel de juiste lus op de juiste vorm
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: Kunstenaar Loops Matchen 1
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Welke vorm wordt door deze lus gemaakt?
         title: Kunstenaar lussen meerkeuze
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         - correct: true
+          text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Welke vorm is door dit programma gemaakt?
         title: Kunstenaar lussen meerkeuze
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Combineer de vorm met het blok dat het afmaakt.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: Kunstenaar koppelen
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Welke van de volgende vergelijkingen is waar?
         title: Bij Condities Meerkeuze
       2-3 bee conditionals multi 3:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Kies de beste blokken.
         title: Bij Condities Meerkeuze
       2-3 bee loops multi 1:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Welke blokken verzamelen alle nectar?
         title: Bij Lussen Meerkeuze Eén
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: Doolhof koppelen één
       2-3 maze multi 1:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Welke blokken zijn het goede antwoord?
         title: Meerkeuze doolhof één
@@ -494,9 +535,20 @@ nl-NL:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Games variables practice_2021:
         display_name: Variabelen oefenen
       CSD Games variables practice_2022:
+        display_name: Variabelen oefenen
+      CSD Games variables practice_2023:
         display_name: Variabelen oefenen
       CSD Header Size MC:
         answers:
@@ -523,6 +575,12 @@ nl-NL:
         - {}
         - {}
       CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2023:
         answers:
         - {}
         - correct: true
@@ -561,6 +619,60 @@ nl-NL:
         - {}
         - text: Opslag
         - {}
+      CSD U1 MC Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Muziek
+        - text: Plaats
+        - correct: true
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Invoer
+        - text: Opslag
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Definiëren
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -665,6 +777,95 @@ nl-NL:
         content1: beschrijving hier
       CSD U2 Lesson 6 Overview:
         content1: beschrijving hier
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: Je verjaardag
+        - text: Je adres
+        - {}
+        - text: Jouw naam
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: kleur
+        - {}
+        - {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -874,6 +1075,19 @@ nl-NL:
         - {}
         - {}
         - {}
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -935,6 +1149,8 @@ nl-NL:
       CSD U2 project guide_2018_2019_pilot_2021:
         content1: beschrijving hier
       CSD U2 project guide_2018_2019_pilot_2022:
+        content1: beschrijving hier
+      CSD U2 project guide_2018_2019_pilot_2023:
         content1: beschrijving hier
       CSD U3 - conditionals - Matching:
         answers:
@@ -1001,6 +1217,19 @@ nl-NL:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - correct: true
@@ -1038,6 +1267,15 @@ nl-NL:
         - {}
         title: titel
       CSD U3 Boolean MC_2018_2019_pilot_2022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
         answers:
         - correct: true
         - {}
@@ -1095,6 +1333,12 @@ nl-NL:
         - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1174,6 +1418,138 @@ nl-NL:
           ## Resources
 
           * [Inleiding tot variabelen](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 MC Q10_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - text: '0'
+        - text: '1'
+        - text: '5'
+        - correct: true
+          text: '6'
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - text: y
+        - text: breedte
+        - text: hoogte
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
@@ -1207,6 +1583,14 @@ nl-NL:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1456,6 +1840,17 @@ nl-NL:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: beschrijving hier
       CSD U3 game intro_2018:
@@ -1474,6 +1869,67 @@ nl-NL:
         content1: beschrijving hier
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: beschrijving hier
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: beschrijving hier
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - correct: true
+        - text: Geef feedback
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -1635,6 +2091,84 @@ nl-NL:
         content1: beschrijving hier
       CSD U5 L13 SFLP Interpreting Data:
         content1: beschrijving hier
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - correct: true
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: beschrijving hier
       CSD U5 crosstab warmup_2018:
@@ -1802,6 +2336,130 @@ nl-NL:
         content1: beschrijving hier
       CSD U6 LED create intro_2021:
         content1: beschrijving hier
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - text: Licht
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -1874,7 +2532,23 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -2012,17 +2686,25 @@ nl-NL:
         display_name: Uitdagingen
       CSD games cake challenge choice_2022:
         display_name: Uitdagingen
+      CSD games cake challenge choice_2023:
+        display_name: Uitdagingen
       CSD games functions practice choice_2021:
         display_name: Functies oefenen
       CSD games functions practice choice_2022:
+        display_name: Functies oefenen
+      CSD games functions practice choice_2023:
         display_name: Functies oefenen
       CSD games platform challenge choice_2021:
         display_name: Uitdagingen
       CSD games platform challenge choice_2022:
         display_name: Uitdagingen
+      CSD games platform challenge choice_2023:
+        display_name: Uitdagingen
       CSD web conditionals practice choice_2021:
         display_name: Voorwaardelijke instructies oefenen
       CSD web conditionals practice choice_2022:
+        display_name: Voorwaardelijke instructies oefenen
+      CSD web conditionals practice choice_2023:
         display_name: Voorwaardelijke instructies oefenen
       CSP PD Example Question 1:
         answers:
@@ -2233,7 +2915,119 @@ nl-NL:
           u simulatie met anderen als u klaar bent. Deel uw boodschap over hoe we
           anderen in goede gezondheid kunnen houden als een virus een stad bezoekt.
           \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: programmeer uw eigen simulatie\n\n## Welkom bij Monster
+          Town!\nMonster Town was altijd een gelukkig en gezond stadje. De monsters
+          van Monster Town vonden het leuk om rond te zwerven en hun vrienden te bezoeken.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nOp een dag begon een van de monsters zich ziek te
+          voelen. Het monster had een **virus** opgelopen! Een virus is een kleine
+          ziektekiem dat je ziek kan maken. De andere monsters maakten zich geen zorgen
+          en bleven hun vrienden bezoeken.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nNiet lang daarna werden nog twee monsters ziek. Het
+          was hetzelfde virus!. Het leek erop dat ze het virus van hun vriend hadden
+          gekregen.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nLangzaam verspreide het virus zich over de andere
+          monsters in de nabijheid. De gezonde monsters begonnen zich zorgen te maken
+          dat ze allemaal ziek zouden worden. De zieke monsters begonnen zich zorgen
+          te maken dat ze het virus aan iedereen zouden doorgeven.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## De verspreiding stooppen.\nNa het
+          onderzoeken van het virus deden de bewoners van de omliggende stadjes van
+          Monster Town gelukkig een belangrijke ontdekking. Ze kwamen erachter dat
+          het virus minder werd verspreidt als ze mondkapjes droegen, en dankzij mondkapjes
+          konden zieke monster het virus niet zo gauw meer doorgeven aan gezonde monsters.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Wat zal er nu gebeuren?\n\nVandaag gaat u een programma schrijven om je
+          eigen **simulatie** van de virusuitbraak in Monster Town te programmeren
+          en uit te voeren. Een simulatie is een computermodel van een proces of systeem.
+          Leer te programmeren en maak voorspellingen over wat er zal gebeuren met
+          de naburige stadjes van Monster Town.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Hoe snel zal het virus zich verspreiden?*\n\n*
+          *Zal iedereen ziek worden?*\n\n* *Hoe kunnen mondkapjes helpen?*\n\n\nDeel
+          u simulatie met anderen als u klaar bent. Deel uw boodschap over hoe we
+          anderen in goede gezondheid kunnen houden als een virus een stad bezoekt.
+          \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: beschrijving hier
+        markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
+          dingen te leren die moeilijk waar te nemen zijn in de echte wereld. Ze helpen
+          wetenschapers bij het oplossen van problemen en het veilig en efficient
+          testen van nieuwe ideeën. Uw simulatie is een manier om te demonstreren
+          hoe een virusuitbraak in Monster Town eruit kan zien.\n\n## Resetten en
+          opnieuw spelen!\nZelfs als u het programma zelf schrijft, is het onmogelijk
+          om precies te weten wat er gaat gebeuren als u op uitvoeren drukt. De monster
+          zwerven willekeurig rond, en dus weet u niet of het virus snel of langzaam
+          zal verspreiden. Als u wijzigingen aanbrengt in uw programma, voer dan uw
+          simulatie meerdere keren uit. Niets zal twee keer precies hetzelfde gebeuren.\n\n##
+          Data verzamelen\nMaak notities tijdens het uitvoeren van uw simulatie. U
+          kunt het aantal monster dat ziek wordt tellen of een timer gebruiken om
+          te zien hoe snel de dingen veranderen. Hoe lang duurt het bijvoorbeeld dat
+          alle monsters ziek worden als geen van hen een mondkapje draagt? \n\n##
+          Voorspellingen doen\nAls u uw model goed begrijpt, dan kunt u het gebruiken
+          om voorspellingen te doen. U kunt zelfs het uitvoeren van uw simulatie veranderenen
+          en raden welke gebeurtenissen anders zullen verlopen. Bijvoorbeeld:\n* Wat
+          gebeurt er als er twee keer zoveel monsters zijn?\n* Wat gebeurt er als
+          de monster op slechts halve snelheid liepen?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Is Monster Town net als de echte wereld?\nElk
+          model heeft een grens wat betreft het realisme. \n* Wat heeft uw uitbraaksimulatie
+          gemeen met virusuitbraken in de echte wereld?\n* Wat zijn de verschillen?\nWanneer
+          u deze activiteit hebt afgerond, den kunt u deze vragen bespreken met uw
+          leraren of uw gezin.\n\n## Waar kunnen we nog meer een model van maken?\nU
+          hebt reeds een werkend model gemaakt van de uitbraak in Monster Town. Wat
+          kan uw simulatie niet doen of laten zien dat u wenste dat het kon? Druk
+          op Doorgaan om verder te gaan en maak beter kennis met het model:\n* Het
+          aantal monsters in de simulatie te laten toenemen\n* Monsters helpen met
+          genezen van het virus\n* Waarschijnlijkheid, immuniteit, vaccins en meer.\n\nTevens
+          kunt u uw simulatiemodel delen met anderen, of een boodschap delen over
+          wat u denkt dat wij kunnen doen om anderen in goede gezondheid te houden
+          als een virus het stadje bezoekt. \n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: beschrijving hier
         markdown: "# Uitbraak: denken als een wetenschapper\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulaties zijn een goede manier om
@@ -2463,20 +3257,23 @@ nl-NL:
         title: Koppelen
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Koppelen
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         - correct: true
+          text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: Welk dier heeft de grootste digitale voetafdruk wat hem of haar de
             <strong>meest onveilige</strong> maakt?
@@ -2923,7 +3720,147 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - correct: true
         - correct: true
@@ -3036,6 +3973,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -3048,6 +3996,17 @@ nl-NL:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - correct: true
         - correct: true
@@ -3080,6 +4039,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -3092,6 +4062,17 @@ nl-NL:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - correct: true
         - correct: true
@@ -3124,6 +4105,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -3132,6 +4124,13 @@ nl-NL:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
         - correct: true
@@ -3152,6 +4151,13 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -3164,6 +4170,17 @@ nl-NL:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
         - correct: true
@@ -3196,6 +4213,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - correct: true
@@ -3208,6 +4236,17 @@ nl-NL:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - correct: true
         - correct: true
@@ -3297,6 +4336,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - feedback: Fout.
@@ -3344,6 +4394,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - correct: true
@@ -3356,6 +4417,28 @@ nl-NL:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -3409,6 +4492,26 @@ nl-NL:
           text: nee
         questions:
         - {}
+      counselor_encourage_2023:
+        answers:
+        - correct: true
+          text: ja
+        - correct: true
+          text: nee
+        questions:
+        - {}
+      courseAB_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseAB_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseAB_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseB_EOC_2021:
+        display_name: Project aan het einde van de cursus
       courseC_multi_artist_prog6_predict1:
         answers:
         - feedback: Fout. De artiest tekent een vierkant.
@@ -3424,6 +4527,18 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Fout. De artiest tekent een vierkant.
+          text: De artiest zal een driehoek tekenen met drie gelijke zijden.
+        - feedback: Fout. De artiest tekent een vierkant.
+          text: De artiest zal een enkele lijn tekenen.
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Fout. De artiest tekent een vierkant.
           text: De artiest zal een driehoek tekenen met drie gelijke zijden.
@@ -3504,6 +4619,23 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
             verzamelen als je op `start` klikt?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '4'
+        - correct: true
+          feedback: Juist!
+          text: '12'
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '15'
+        - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
+            maal 4 is 12!
+          text: '20'
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel pompoenen zal de boer
+            verzamelen als je op `start` klikt?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Fout.  De boer zal in elk van de 3 lussen 4 pompoenen verzamelen.  3
             maal 4 is 12!
@@ -3606,12 +4738,28 @@ nl-NL:
             waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict12022:
         answers:
-        - {}
+        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
-        - {}
-        - {}
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
+        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
+            draait.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
+        - correct: true
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
+        - text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op
+            draait.
+        questions:
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - feedback: Fout. Scrat gaat de verkeerde kant op na zijn laatste draai.
@@ -3646,20 +4794,43 @@ nl-NL:
             waardoor het programma zal mislukken?
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
-        - {}
+        - feedback: Onjuist. Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
         - correct: true
-        - text: Geen idee.
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Er zitten twee fouten in deze code. Eerst draait Scrat de verkeerde
+            kant op, dan zet Scrat niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Geen idee.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
+        - feedback: Onjuist. Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel bereiken. Er zitten geen bugs in de code.
         - correct: true
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat hij de verkeerde kant op draait.
         - correct: true
-        - {}
+          feedback: Juist! Eerst draait Scrat de verkeerde kant op, dan zet Scrat
+            niet genoeg stappen vooruit om de eikel te bereiken.
+          text: Scrat zal de eikel niet bereiken omdat er niet genoeg `beweeg vooruit`
+            blokken zijn.
+        - feedback: Er zitten twee fouten in deze code. Eerst draait Scrat de verkeerde
+            kant op, dan zet Scrat niet genoeg stappen vooruit om de eikel te bereiken.
         questions:
-        - {}
+        - text: Zoek naar fouten in deze code. Zal Scrat de eikel bereiken of is er
+            een probleem?
       courseC_multi_maze_programming8_predict1:
         answers:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
@@ -3684,6 +4855,21 @@ nl-NL:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De vogel zal tegen de TNT aan lopen.
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
+        questions:
+        - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De angry bird eindigt een stap voordat hij het biggetje zou bereiken.
+        - correct: true
+          feedback: Juist!
+          text: De angry bird zal het biggetje bereiken.
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de TNT aan lopen.
+        - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
         questions:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
@@ -3739,6 +4925,7 @@ nl-NL:
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
           text: De vogel zal tegen de TNT aan lopen.
         - feedback: Fout. Dit programma brengt de angry bird precies bij het biggetje.
+          text: De vogel zal tegen de muur lopen.
         questions:
         - text: Lees onderstaande code zorgvuldig door. Wat zal er gebeuren als je
             op `Start` drukt?
@@ -3759,6 +4946,21 @@ nl-NL:
         questions:
         - text: Wat zal er gebeuren als je op `Start` drukt?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+          text: BB-8 zal niet bewegen.
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+          text: BB-8 zal maar een plek vooruit bewegen.
+        - correct: true
+          feedback: Juist!
+          text: BB-8 zal 5 keer vooruit bewegen en alle schroot verzamelen.
+        - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
+            zal bewegen.
+        questions:
+        - text: Wat zal er gebeuren als je op `Start` drukt?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Fout. Het `herhaal`-blok zorgt er voor dat BB-8 5 keer vooruit
             zal bewegen.
@@ -3871,6 +5073,23 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+          text: BB-8 zal in de eerste lus te ver bewegen.
+        - correct: true
+          feedback: Juist!
+          text: BB-8 zal in de eerste lus niet ver genoeg bewegen om alle schroot
+            te pakken te krijgen.
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+          text: BB-8 zal probleemloos alle schroot verzamelen.
+        - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
+            terwijl hij eigenlijk 3 plekken vooruit moet.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Fout. De eerste lus laat BB-8 maar 2 plekken vooruit bewegen,
@@ -3942,6 +5161,14 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseD_EOC_2021:
+        display_name: Project aan het einde van de cursus
       courseD_multi_artist_binary8_predict1:
         answers:
         - feedback: Fout.
@@ -4016,6 +5243,22 @@ nl-NL:
         - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
             maken als je op "Start" drukt?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Juist!
+          text: A
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+          text: B
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+          text: C
+        - feedback: Fout. De binnenste lus tekent een vijfhoek, en de buitenste lus
+            herhaalt dit 4 keer in een cirkel.
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Welke tekening zal dit programma
+            maken als je op "Start" drukt?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Juist!
@@ -4139,6 +5382,23 @@ nl-NL:
             kunnen staan. Als er een staat, moet de bij er nectar uit halen. Maar
             als er geen bloem is mag de bij niets doen.  Kijk eens goed naar onderstaande
             code. Wat denk je dat er zal gebeuren als je op "Start" drukt?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+          text: De bij zal naar de wolk vliegen, en hoe dan ook proberen om nectar
+            te halen.
+        - correct: true
+          feedback: Juist!
+          text: De bij zal naar de wolk vliegen, en alleen maar nectar halen als er
+            een bloem onder staat.
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij zal
+            proberen nectar te halen, als er een bloem onder de wolk staat.
+          text: De bij zal naar de wolk vliegen en verder hoe dan ook niets doen.
+        - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
+            zal proberen nectar te halen, als er een bloem onder de wolk staat.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Fout. Het `als op de bloem`-blok zorgt er voor dat de bij alleen
@@ -4295,6 +5555,17 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om nectar
+            te halen.
+        - text: De bij zal zowel bij bloemen als bij honingraten proberen om honing
+            te maken.
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4366,6 +5637,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
             als je op `start` klikt?
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+          text: De bij zal vooruit gaan en maar een keer nectar halen.
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+          text: De bij zal slechts 2 eenheden nectar krijgen.
+        - correct: true
+          feedback: Juist!
+          text: De bij zal alle nectar krijgen.
+        - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
+            verzamelen herhalen, en zo de puzzle oplossen.
+        questions:
+        - text: Kijk eens goed naar onderstaande geneste lussen. Wat zal er gebeuren
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - feedback: Fout.  De bij zal de geluste actie van vooruit bewegen en nectar
             verzamelen herhalen, en zo de puzzle oplossen.
@@ -4471,6 +5758,29 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
             als je op `start` klikt?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '4'
+        - correct: true
+          feedback: Juist!
+          text: '8'
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '10'
+        - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
+            beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
+            gebeurt binnen een andere lus, die 2 keer uitgevoerd wordt. 2 maal 4 is
+            8!
+          text: '12'
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Hoeveel honing zal de bij maken
+            als je op `start` klikt?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Fout. De bij verzamelt in een lus 2 nectar terwijl hij vooruit
             beweegt, en daarna 2 nectar terwijl hij naar beneden beweegt. Dit alles
@@ -4630,6 +5940,16 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - text: De oogster zal alle oogst verzamelen.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: De oogster zal alle oogst verzamelen.
@@ -4711,6 +6031,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
             je dat programma uitvoert?
       courseD_multi_farmer_while10_predict22022:
+        answers:
+        - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+          text: Niets. Het programma zal alleen platgemaakte grond grond achterlaten
+        - correct: true
+          feedback: Juist!
+          text: Deze code zal de hoop zand laten staan.
+        - feedback: Fout. De `herhaal`-lus zal gaten van elke grootte opvullen, maar
+            er staat geen instructie in om zand van een hoop te verwijderen.
+          text: Deze code zal de gaten niet vullen.
+        - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
+            verwijderen.
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er overblijven nadat
+            je dat programma uitvoert?
+      courseD_multi_farmer_while10_predict22022_2023:
         answers:
         - feedback: Fout. Deze code bevat geen instructies om zand uit een hoop te
             verwijderen.
@@ -4828,6 +6164,23 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_farmer_while4_predict12022_2023:
+        answers:
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+          text: Er zal niets gebeuren.
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+          text: De boer zal nooit stoppen met zand verwijderen.
+        - correct: true
+          feedback: Juist!
+          text: De boer zal zand verwijderen zolang er een stapel ligt, en stoppen
+            zodra de stapel weg is.
+        - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
+            en stoppen zodra de stapel weg is
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - feedback: Fout. De boer zal zand verwijderen zolang er een stapel ligt,
@@ -4929,6 +6282,17 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - text: De zombie zal de zonnebloem bereiken.
+        - text: De zombie zal bij de eerste kruising rechtsaf slaan, en alsmaar in
+            een kringetje blijven rondlopen.
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -4994,6 +6358,25 @@ nl-NL:
         - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
             op `Start` drukt?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
+            zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+          text: De angry bird zal helemaal niet bewegen.
+        - correct: true
+          feedback: Juist!
+          text: De angry bird zal het biggetje bereiken.
+        - feedback: Fout. De code zal de vogel net zolang vooruit laten bewegen zolang
+            er een veilig pad is, en dan linksaf slaan. En dat doet ie net zolang
+            totdat ie bij het varken is!
+          text: De angry bird zal vooruit bewegen en tegen de TNT aan botsen.
+        - feedback: De code zal de vogel net zolang vooruit laten bewegen zolang er
+            een pad is, en dan linksaf slaan. En dat doet ie net zolang totdat ie
+            bij het varken is!
+        questions:
+        - text: Kijk eens goed naar de code hieronder. Wat zal er gebeuren als je
+            op `Start` drukt?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Fout. De code zal de angry bird net zolang vooruit laten bewegen
             zolang er een pad is, en dan linksaf slaan. En dat doet ie net zolang
@@ -5102,6 +6485,20 @@ nl-NL:
         - text: Geen idee.
         questions:
         - {}
+      courseE_EOC2022:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples2022:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseE_EOC_examples_2021:
+        display_name: Project aan het einde van de cursus
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true
@@ -5147,6 +6544,16 @@ nl-NL:
         questions:
         - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - text: De oogster zal twee pompoenen plukken.
+        - text: De oogster zal alle pompoenen plukken.
+        - correct: true
+          feedback: Juist!
+          text: De oogster zal de sla plukken
+        - text: De oogster zal de mais plukken.
+        questions:
+        - text: Kijk naar de functies hieronder. Wat zal de oogster plukken?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - text: De oogster zal twee pompoenen plukken.
         - text: De oogster zal alle pompoenen plukken.
@@ -5212,6 +6619,21 @@ nl-NL:
         questions:
         - text: Wat zal er gebeuren als je op 'Start' drukt?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+          text: Niets. De functie wordt niet aangeroepen in het programma.
+        - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
+          text: De artiest zal een enkel vierkant tekenen.
+        - feedback: Fout. De zijde van elk vierkant is maar 100 pixels lang, maar
+            de artiest maakt een sprong van 175 pixels tussen de functie-aanroepen.
+          text: De artiest zal twee vierkanten tekenen die over elkaar heen vallen.
+        - correct: true
+          feedback: Goed! De functie wordt twee keer aangeropen in het programma,
+            met een sprong er tussen in.
+          text: De artiest zal twee vierkanten tekenen met wat lege ruimte er tussen.
+        questions:
+        - text: Wat zal er gebeuren als je op 'Start' drukt?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Fout. De functie wordt wel degelijk aangeroepen in het programma.
           text: Niets. De functie wordt niet aangeroepen in het programma.
@@ -5326,6 +6748,16 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - text: Er zal niets gebeuren.
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        questions:
+        - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
+            op `start` klikt?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Er zal niets gebeuren.
@@ -5336,6 +6768,26 @@ nl-NL:
         questions:
         - text: Kijk eens goed naar onderstaande code. Wat zal er gebeuren als je
             op `start` klikt?
+      courseExpress_EOC_2020:
+        description: Je hebt de laatste les van de Express Course bereikt! Kies een
+          project om te maken.
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_2020:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_examples_2021:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples2022:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples2022_2023:
+        display_name: Project aan het einde van de cursus
+      courseF_EOC_samples_2021:
+        display_name: Project aan het einde van de cursus
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -5379,7 +6831,23 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -5397,6 +6865,15 @@ nl-NL:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -5460,6 +6937,15 @@ nl-NL:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Juist!
@@ -5551,6 +7037,15 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -5580,13 +7075,26 @@ nl-NL:
         - {}
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
+        - feedback: Onjuist. Met de `voorwaardelijke'-lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit gaan en alle nectar van elke bloem verzamelen. '
         - correct: true
           feedback: Juist!
-        - {}
-        - {}
+          text: De bij zal vooruit gaan en alle nectar van elke bloem verzamelen,
+            behalve één.
+        - feedback: Onjuist. Met de `voorwaardelijke'-lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit bewegen en van elke bloem één nectar verzamelen. '
+        - feedback: Onjuist. Met de voorwaardelijke lus kan de bij de juiste hoeveelheid
+            nectar verzamelen, maar deze is ingesteld om slechts 4 bloemen te bereiken.
+          text: 'De bij zal vooruit bewegen en één nectar verzamelen van bloemen nummer
+            1 en 4. '
+        markdown: |+
+          Ah! Het gebruik van `voorwaardelijke` lussen maakt deze puzzel een stuk eenvoudiger!
+
+
         questions:
-        - {}
+        - text: Lees de code hieronder. Wat gebeurt er als je op „Start” klikt?
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -5619,6 +7127,14 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -5627,7 +7143,23 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -5651,9 +7183,19 @@ nl-NL:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: beschrijving hier
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: beschrijving hier
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: beschrijving hier
       coursee_prediction_artistfunction2:
         answers:
@@ -5672,6 +7214,22 @@ nl-NL:
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
+            een rij veelhoeken`.
+          text: De artiest zal deze functie correct oplossen.
+        - correct: true
+          feedback: Juist!
+          text: De artiest zal vier vierkanten tekenen in een venster-patroon.
+        - feedback: Fout. Het programma roept de `teken een rij veelhoeken`-functie
+            niet aan.
+          text: De artiest zal slechts een rij vierkanten tekenen.
+        - feedback: Fout. De lus draait 90 graden tussen de aanroepen van `teken een
+            veelhoek`.
+          text: De artiest zal vier vierkanten boven op elkaar tekenen.
+        questions:
+        - text: Wat gebeurt er als je op `Start` drukt?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Fout. De lus gebruikt `teken ene veelhoek` in plaats van `teken
             een rij veelhoeken`.
@@ -5751,6 +7309,42 @@ nl-NL:
           text: De artiest zal vier vierkanten boven op elkaar tekenen.
         questions:
         - text: Wat gebeurt er als je op `Start` drukt?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Juist!
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: beschrijving hier
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -6257,6 +7851,28 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-q26:
         answers:
         - correct: true
@@ -6396,6 +8012,36 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - correct: true
+          text: Ja
+        - correct: true
+          text: Nee
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: beschrijving hier
       csd-post-survey-unit2-preamble:
@@ -6496,6 +8142,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - correct: true
@@ -6563,6 +8220,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -6651,6 +8319,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -6760,6 +8439,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - correct: true
@@ -6848,7 +8538,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -6991,6 +8703,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - correct: true
@@ -7058,6 +8781,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -7146,6 +8880,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -7255,6 +9000,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - correct: true
@@ -7343,7 +9099,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -7486,6 +9264,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - correct: true
@@ -7553,6 +9342,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -7641,6 +9441,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -7750,6 +9561,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - correct: true
@@ -7838,7 +9660,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -7981,6 +9825,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - correct: true
@@ -8048,6 +9903,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -8136,6 +10002,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -8245,6 +10122,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - correct: true
@@ -8333,7 +10221,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -8476,6 +10386,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - correct: true
@@ -8543,6 +10464,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - correct: true
         - correct: true
@@ -8631,6 +10563,17 @@ nl-NL:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - correct: true
         - correct: true
@@ -8740,6 +10683,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - correct: true
@@ -8828,7 +10782,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -8887,6 +10863,8 @@ nl-NL:
         content1: beschrijving hier
       csf_be_a_super_digital_citizen2022:
         content1: beschrijving hier
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: beschrijving hier
       csf_be_a_super_digital_citizen_2021:
         content1: beschrijving hier
       csf_digital_trails:
@@ -8895,6 +10873,11 @@ nl-NL:
 
           ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
       csf_digital_trails2022:
+        markdown: |-
+          # Volg het digitale pad
+
+          ## Welke informatie is OKE om in je digitale voetafdruk te hebben?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Volg het digitale pad
 
@@ -8908,11 +10891,15 @@ nl-NL:
         content1: beschrijving hier
       csf_password_power-up2022:
         content1: beschrijving hier
+      csf_password_power-up2022_2023:
+        content1: beschrijving hier
       csf_password_power-up_2021:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness2022:
+        content1: beschrijving hier
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: beschrijving hier
       csf_putting_a_stop_to_online_meanness_2021:
         content1: beschrijving hier
@@ -8922,6 +10909,11 @@ nl-NL:
 
           ## Hoe beweeg je veilig online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |
+          # Mijn Online Woonwijk
+
+          ## Hoe beweeg je veilig online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |
           # Mijn Online Woonwijk
 
@@ -9141,6 +11133,17 @@ nl-NL:
         questions:
         - {}
       csp-post-survey-2017-q22_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-post-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -9428,6 +11431,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - correct: true
@@ -9516,6 +11530,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - correct: true
@@ -9582,6 +11607,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - correct: true
@@ -9616,6 +11652,17 @@ nl-NL:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -9692,6 +11739,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - correct: true
@@ -9758,6 +11816,28 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - correct: true
@@ -9814,6 +11894,28 @@ nl-NL:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10044,6 +12146,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - correct: true
@@ -10078,6 +12191,28 @@ nl-NL:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10189,6 +12324,17 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - correct: true
@@ -10245,6 +12391,39 @@ nl-NL:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10387,9 +12566,29 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: beschrijving hier
       curriculum-how-challenging:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -10431,6 +12630,22 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       ever-learned-cs_2022:
         answers:
         - correct: true
@@ -10439,6 +12654,24 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      ever-learned-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      express_EOC2022:
+        display_name: Project aan het einde van de cursus
+      express_EOC2022_2023:
+        display_name: Project aan het einde van de cursus
+      express_EOC_2021:
+        display_name: Project aan het einde van de cursus
+      express_EOC_examples_2021:
+        description: Je staat op het punt om aan je eindproject te beginnen. Voordat
+          je begint, moet je wat tijd besteden aan het bekijken van de voorbeeldprojecten.
+        display_name: Voorbeelden van projecten
       family_encourage:
         answers:
         - correct: true
@@ -10448,6 +12681,14 @@ nl-NL:
         questions:
         - {}
       family_encourage_2022:
+        answers:
+        - correct: true
+          text: ja
+        - correct: true
+          text: nee
+        questions:
+        - {}
+      family_encourage_2023:
         answers:
         - correct: true
           text: ja
@@ -10474,6 +12715,22 @@ nl-NL:
         - text: Kijk eens goed naar onderstaand programma. Als je dit programma draait,
             hoeveel schatten zal Laurel dan verzamelen?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal met dit programma vier schatten verzamelen.
+        - correct: true
+          feedback: Juist!
+          text: " Laurel zal proberen een schat te verzamelen op een plek waar niets
+            ligt, en dat veroorzaakt een fout."
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+          text: Laurel zal alle schatten verzamelen.
+        - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
+            niets ligt, en dat veroorzaakt een fout.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Fout. Laurel probeert een schat te verzamelen op een plek waar
             niets ligt, en dat veroorzaakt een fout.
@@ -10679,6 +12936,310 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - correct: true
@@ -10711,6 +13272,17 @@ nl-NL:
         questions:
         - {}
       naturally-better-at-cs_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      naturally-better-at-cs_copy2_2023:
         answers:
         - correct: true
         - correct: true
@@ -10847,6 +13419,17 @@ nl-NL:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - correct: true
         - correct: true
@@ -11199,6 +13782,18 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       same-ability:
         answers:
         - correct: true
@@ -11219,6 +13814,14 @@ nl-NL:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - correct: true
+          text: ja
+        - correct: true
+          text: nee
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - correct: true
           text: ja
@@ -11254,6 +13857,14 @@ nl-NL:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - correct: true
+          text: ja
+        - correct: true
+          text: nee
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - correct: true
           text: ja
@@ -11330,6 +13941,28 @@ nl-NL:
         - correct: true
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - correct: true
@@ -11353,6 +13986,17 @@ nl-NL:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - correct: true
         - correct: true

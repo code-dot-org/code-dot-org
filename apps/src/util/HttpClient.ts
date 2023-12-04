@@ -102,7 +102,30 @@ async function post(
   return response;
 }
 
+async function put(
+  endpoint: string,
+  body: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  if (useAuthenticityToken) {
+    const token = await getAuthenticityToken();
+    headers[AUTHENTICITY_TOKEN_HEADER] = token;
+  }
+  const response = await fetch(endpoint, {
+    method: 'PUT',
+    body,
+    headers,
+  });
+  if (!response.ok) {
+    throw new Error(response.status + ' ' + response.statusText);
+  }
+
+  return response;
+}
+
 export default {
   fetchJson,
   post,
+  put,
 };

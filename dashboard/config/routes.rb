@@ -201,6 +201,7 @@ Dashboard::Application.routes.draw do
       get '/lockout', to: 'sessions#lockout'
       get '/users/existing_account', to: 'registrations#existing_account'
       post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
+      get '/users/edit', to: 'registrations#edit'
     end
     devise_for :users, controllers: {
       omniauth_callbacks: 'omniauth_callbacks',
@@ -264,6 +265,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_publish_age_status", to: 'projects#can_publish_age_status'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -335,8 +337,6 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
-
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
         get 'quick_assign_course_offerings'
@@ -359,6 +359,9 @@ Dashboard::Application.routes.draw do
 
       resources :reference_guides, param: 'key', path: 'guides'
     end
+
+    resources :potential_teachers, only: [:create]
+    get '/potential_teachers/:id', param: :id, to: 'potential_teachers#show'
 
     # CSP 20-21 lockable lessons with lesson plan redirects
     get '/s/csp1-2020/lockable/2(*all)', to: redirect(path: '/s/csp1-2020/lessons/14%{all}')
@@ -609,6 +612,7 @@ Dashboard::Application.routes.draw do
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -879,6 +883,9 @@ Dashboard::Application.routes.draw do
         post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
         post 'users/:user_id/display_theme', to: 'users#update_display_theme'
         post 'users/:user_id/mute_music', to: 'users#post_mute_music'
+
+        post 'users/sort_by_family_name', to: 'users#post_sort_by_family_name'
+
         get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
         get 'users/:user_id/display_theme', to: 'users#get_display_theme'
         get 'users/:user_id/mute_music', to: 'users#get_mute_music'
@@ -920,6 +927,15 @@ Dashboard::Application.routes.draw do
         # Routes used by the peer reviews admin pages
         get 'peer_review_submissions/index', to: 'peer_review_submissions#index'
         get 'peer_review_submissions/report_csv', to: 'peer_review_submissions#report_csv'
+
+        get 'section_instructors/check', to: 'section_instructors#check'
+        resources :section_instructors, only: [:index, :create, :destroy] do
+          member do
+            put 'accept'
+            put 'decline'
+          end
+        end
+        get 'section_instructors/:section_id', to: 'section_instructors#show'
 
         resources :ml_models, only: [:show, :destroy] do
           collection do
@@ -1040,7 +1056,28 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :learning_goal_evaluations, only: [:create, :update]
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        get 'get_ai_evaluations'
+        get 'get_teacher_evaluations'
+        get 'ai_evaluation_status_for_user'
+        post 'run_ai_evaluations_for_user'
+        post 'submit_evaluations'
+      end
+    end
+
+    resources :learning_goal_teacher_evaluations, only: [:create, :update] do
+      collection do
+        get :get_evaluation
+        post :get_or_create_evaluation
+      end
+    end
+
+    resources :learning_goal_ai_evaluation_feedbacks, only: [:create, :update] do
+      collection do
+        post :get_by_ai_evaluation_id
+      end
+    end
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

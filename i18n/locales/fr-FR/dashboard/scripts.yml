@@ -475,7 +475,7 @@ fr:
           student_description: Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie lointaine, très lointaine.
           name: starwarsblocks
         mc:
-          title: Hour of Code Minecraft
+          title: Aventurier de Minecraft
           description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
           description_short: Explore un monde Minecraft à travers son code.
           student_description: Utilise des blocs de code pour emmener Steve ou Alex vivre une aventure dans le monde de Minecraft.
@@ -4167,7 +4167,7 @@ fr:
               display_name: Contenu
               description: Croire en sa propre identité d'ingénieur logiciel développe la confiance et la persévérance. Cette leçon présente les valeurs fondamentales du génie logiciel et explore les perceptions communes que les étudiants peuvent avoir. Les étudiants réfléchissent à la façon dont ils mettent déjà en pratique bon nombre de ces valeurs pour découvrir leur propre identité en génie logiciel.
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4180,7 +4180,7 @@ fr:
             lesson group:
               display_name: Contenu
             lessonGroup-2:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-3:
               display_name: Enquête pilote
             lessonGroup-4:
@@ -4194,7 +4194,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4208,7 +4208,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4222,7 +4222,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4233,7 +4233,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4244,7 +4244,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4255,7 +4255,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4600,7 +4600,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA1
           title: Unité 1 - Programmation orientée objet [Exemplars]
         csa2-exemplars:
@@ -4608,7 +4608,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA2
           title: Unité 2 - Donner un état [Exemplars]aux objets
         csa-videos:
@@ -4631,7 +4631,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 3 - Expansion des données du programme [Exemplars]
         ai-lab:
           title: Laboratoire d'IA
@@ -4704,7 +4704,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4717,7 +4717,7 @@ fr:
             lesson group:
               display_name: Contenu
             lessonGroup-2:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-3:
               display_name: Enquête pilote
             lessonGroup-4:
@@ -4730,7 +4730,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4743,7 +4743,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4756,7 +4756,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Le jeu Sandbox
             lessonGroup-5:
@@ -4811,13 +4811,13 @@ fr:
             content:
               display_name: Contenu
             show_what_you_know:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lesson_group:
               display_name: Contenu
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 4 - Élargir la logique du programme [Exemplars]
         ai-ethics:
           title: Notre code d'éthique en matière d'IA
@@ -4882,7 +4882,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: csa5-exemplars
           title: Module 5 - Organiser des objets [Exemplaires]
         csa-examples-21:
@@ -4908,7 +4908,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -4946,7 +4946,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA6
           title: Unité 6 - Élargir les capacités du programme [Exemplars]
         2022drafting:
@@ -4973,7 +4973,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA7
           title: Unité 7 - Développement de la conception logicielle [Exemplars]
         csf-2022-pilot:
@@ -5002,7 +5002,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           name: Exemplaires CSA8
           title: Unité 8 - Donner vie aux objets [Exemplars]
         alltheselfpacedplthings:
@@ -5013,7 +5013,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5024,7 +5024,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5301,7 +5301,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5323,7 +5323,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Structure et conception des classes (22-2023)
@@ -5332,7 +5332,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Tableaux et algorithmes ('22-'23)
@@ -5360,7 +5360,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Conditions et logique ('22-'23)
@@ -5378,7 +5378,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
         self-paced-pl-csa2-2022:
           title: 'Module 2 : Navigation sur Code.org'
         self-paced-pl-csa3-2022:
@@ -5388,7 +5388,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5400,7 +5400,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête pilote
             lessonGroup-5:
@@ -5436,7 +5436,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5448,7 +5448,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5461,7 +5461,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -5533,7 +5533,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
           title: Unité 2 - Structure et conception des classes [Exemplars]
         k5-onlinepd-2022:
           lesson_groups:
@@ -5977,7 +5977,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
         csa2-validation-pilot-2022:
@@ -5985,7 +5985,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Structure et conception des classes (22-2023)
@@ -5994,7 +5994,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Tableaux et algorithmes ('22-'23)
@@ -6003,7 +6003,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Conditions et logique ('22-'23)
@@ -6021,7 +6021,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Listes de tableaux et méthodes de chaîne ('22-'23)
@@ -6031,7 +6031,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
           title: Méthode de décomposition et de récursion ('22-'23)
@@ -6041,7 +6041,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Bacs à sable
             lessonGroup-5:
@@ -6110,7 +6110,7 @@ fr:
             lessonGroup-3:
               display_name: Contenu
             lessonGroup-4:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-5:
               display_name: Leçons alternatives
             lessonGroup-6:
@@ -6156,7 +6156,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6200,7 +6200,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6246,7 +6246,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6290,7 +6290,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6334,7 +6334,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Leçons alternatives
             lessonGroup-5:
@@ -6378,7 +6378,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête de fin d'unité
             lessonGroup-5:
@@ -6440,7 +6440,7 @@ fr:
             lessonGroup-2:
               display_name: Contenu
             lessonGroup-3:
-              display_name: Montrez ce que vous savez
+              display_name: Montre ce que tu sais
             lessonGroup-4:
               display_name: Enquête
             lessonGroup-5:
@@ -6792,7 +6792,7 @@ fr:
             lessonGroup-3:
               display_name: Suivi d'après cours
           title: Cybersécurité et impacts mondiaux (23-24)
-          description: "Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent constituer une menace pour notre confidentialité et notre sécurité et comment le cryptage et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence sur « l'école du futur » au cours de laquelle vous et une équipe soumettez une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.\n\n : : détails [**\\U0001unité F9D0 Philosophie et pédagogie**]\n\n#### Apprendre grâce à la simulation en classe complète\n\nLe projet de simulation qui sous-tend cette unité répond à plusieurs objectifs importants. Il permet de contextualiser ce que les élèves apprennent en passant d'idées abstraites de confidentialité ou de sécurité à des innovations potentielles concrètes. La simulation étant basée sur la modernisation des écoles, les élèves peuvent envisager les conséquences des innovations informatiques dans un environnement familier. En assumant un rôle assigné et en interagissant avec un groupe de coéquipiers qui ont fait de même, les élèves doivent prendre en compte un large éventail d'intérêts et d'objectifs qui dépassent les leurs lorsqu'il s'agit d'innover dans les écoles. \n\n#### Terminer l'année en tant que « décideurs »\n\nL'un des principaux thèmes abordés par les élèves tout au long de cette unité est la nécessité de prendre en compte les deux aspects de l'innovation technologique. La technologie informatique a apporté des avantages et des inconvénients à la culture, à l'économie et à la société dans son ensemble. Pour répondre aux questions importantes auxquelles notre monde est confronté, il faut comprendre la technologie et être capable d'identifier et d'interpréter les impacts qu'elle provoque. Cette unité n'est pas conçue pour défendre un point de vue particulier sur l'impact de la technologie. Néanmoins, cela devrait permettre aux étudiants de voir et d'évaluer habilement les conséquences de la technologie qui les entoure. Bien que le projet Create PT puisse sembler être le projet le plus important de ce cours, l'exigence Explore Curricular et les questions abordées dans cette unité sont sans doute plus cruciales. La plupart des jeunes qui suivent CS Principles peuvent poursuivre des études ou des carrières dans le cadre desquelles ils sont des « créateurs » dans le domaine de la technologie, mais ils devront tous être des « décideurs » réfléchis dans un monde profondément façonné par l'informatique. \n : : :\n\n : : détails [** ⭐️ Évaluation et projets principaux**]\n\nLes élèves participent à la simulation Future School Convention tout au long de cette unité. Travaillant en équipes d'environ cinq personnes, les étudiants se voient attribuer un rôle et un ensemble d'intérêts qu'ils devront étudier. Ils recherchent des innovations concrètes qui pourraient améliorer les écoles et répondre aux intérêts de leur personnage. Tout au long de l'unité, ils ont la possibilité d'affiner leurs propositions en équipe et de débattre des avantages et des risques des différentes innovations informatiques. Finalement, leur équipe soumet une proposition globale pour la Future School, et tous les étudiants votent pour l'équipe et l'innovation qu'ils considèrent comme les meilleures. Les étudiants effectueront également une évaluation de fin d'unité alignée sur les objectifs du cadre CS Principles abordés dans cette unité.\n : : :\n\n : : détails [** ✅ Connexions AP**]\n\nCette unité et ce projet d'unité contribuent à la réalisation des connaissances durables énumérées ci-dessous. Pour une cartographie détaillée des unités par rapport aux objectifs d'apprentissage et aux EK, veuillez consulter la page « Normes » de cette unité.\n\n-   IOC-1 : Bien que les innovations informatiques soient généralement conçues pour atteindre un objectif précis, elles peuvent avoir des conséquences imprévues.\n-   IOC-2 : L'utilisation d'innovations informatiques peut présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette unité inclut du contenu des rubriques suivantes du cadre de principes AP CS. Pour plus d'informations sur la couverture des sujets, consultez la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing).\n\n-   5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n## Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte enquête\\*\\*](<>) pour informer l'équipe du programme de Code.org du déroulement de l'unité."
+          description: "Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent constituer une menace pour notre confidentialité et notre sécurité et comment le cryptage et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence sur « l'école du futur » au cours de laquelle vous et une équipe soumettez une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.\n\n : : détails [**\\U0001unité F9D0 Philosophie et pédagogie**]\n\n#### Apprendre grâce à la simulation en classe complète\n\nLe projet de simulation qui sous-tend cette unité répond à plusieurs objectifs importants. Il permet de contextualiser ce que les élèves apprennent en passant d'idées abstraites de confidentialité ou de sécurité à des innovations potentielles concrètes. La simulation étant basée sur la modernisation des écoles, les élèves peuvent envisager les conséquences des innovations informatiques dans un environnement familier. En assumant un rôle assigné et en interagissant avec un groupe de coéquipiers qui ont fait de même, les élèves doivent prendre en compte un large éventail d'intérêts et d'objectifs qui dépassent les leurs lorsqu'il s'agit d'innover dans les écoles. \n\n#### Terminer l'année en tant que « décideurs »\n\nL'un des principaux thèmes abordés par les élèves tout au long de cette unité est la nécessité de prendre en compte les deux aspects de l'innovation technologique. La technologie informatique a apporté des avantages et des inconvénients à la culture, à l'économie et à la société dans son ensemble. Pour répondre aux questions importantes auxquelles notre monde est confronté, il faut comprendre la technologie et être capable d'identifier et d'interpréter les impacts qu'elle provoque. Cette unité n'est pas conçue pour défendre un point de vue particulier sur l'impact de la technologie. Néanmoins, cela devrait permettre aux étudiants de voir et d'évaluer habilement les conséquences de la technologie qui les entoure. Bien que le projet Create PT puisse sembler être le projet le plus important de ce cours, l'exigence Explore Curricular et les questions abordées dans cette unité sont sans doute plus cruciales. La plupart des jeunes qui suivent CS Principles peuvent poursuivre des études ou des carrières dans le cadre desquelles ils sont des « créateurs » dans le domaine de la technologie, mais ils devront tous être des « décideurs » réfléchis dans un monde profondément façonné par l'informatique. \n : : :\n\n : : détails [** ⭐️ Évaluation et projets principaux**]\n\nLes élèves participent à la simulation Future School Convention tout au long de cette unité. Travaillant en équipes d'environ cinq personnes, les étudiants se voient attribuer un rôle et un ensemble d'intérêts qu'ils devront étudier. Ils recherchent des innovations concrètes qui pourraient améliorer les écoles et répondre aux intérêts de leur personnage. Tout au long de l'unité, ils ont la possibilité d'affiner leurs propositions en équipe et de débattre des avantages et des risques des différentes innovations informatiques. Finalement, leur équipe soumet une proposition globale pour la Future School, et tous les étudiants votent pour l'équipe et l'innovation qu'ils considèrent comme les meilleures. Les étudiants effectueront également une évaluation de fin d'unité alignée sur les objectifs du cadre CS Principles abordés dans cette unité.\n : : :\n\n : : détails [** ✅ Connexions AP**]\n\nCette unité et ce projet d'unité contribuent à la réalisation des connaissances durables énumérées ci-dessous. Pour une cartographie détaillée des unités par rapport aux objectifs d'apprentissage et aux EK, veuillez consulter la page « Normes » de cette unité.\n\n-   IOC-1 : Bien que les innovations informatiques soient généralement conçues pour atteindre un objectif précis, elles peuvent avoir des conséquences imprévues.\n-   IOC-2 : L'utilisation d'innovations informatiques peut présenter des risques pour votre sécurité et votre identité personnelles.\n\nCette unité inclut du contenu des rubriques suivantes du cadre de principes AP CS. Pour plus d'informations sur la couverture des sujets, consultez la revue du cours [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing).\n\n-   5.1 Effets bénéfiques et nocifs\n-   5.6 Sécurité informatique\n\n : : :\n\n## Vous avez fini d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte enquête\\*\\*](https://studio.code.org/form/teacher_csp_unit_survey?survey_data%5Bunit_number%5D=8) pour informer l'équipe du programme de Code.org du déroulement de l'unité."
           student_description: Dans cette unité, découvrez comment les innovations informatiques ont eu un impact bénéfique et néfaste sur notre monde. Découvrez comment les données peuvent représenter une menace pour notre confidentialité et notre sécurité et comment le chiffrement et d'autres techniques sont utilisés pour les protéger. Tout au long de l'unité, participez à une conférence « l'école du futur » au cours de laquelle vous et une équipe faites une proposition sur la meilleure façon d'améliorer la vie scolaire grâce aux innovations informatiques.
           description_short: 'Faites des recherches et débattez de l''actualité à l''intersection des données, des politiques publiques, du droit, de l''éthique et de l''impact sociétal. '
         csp9-2023:
@@ -6869,6 +6869,11 @@ fr:
               name: Grille CSS
             lesson-5:
               name: Évaluations
+            lesson-6:
+              name: Leçon 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Random
           name: aire de jeux Angelina
           title: L'endroit où faire des choses d'Angelina
         csc-pilot-fa2022-timecapsule:
@@ -7042,8 +7047,9 @@ fr:
         csc-ecosystems-2023:
           lessons:
             lesson-3:
-              name: Codez votre propre écosystème (2023)
-          title: Simulation d'un écosystème marin
+              name: Coder son propre écosystème (2023)
+          title: Simuler un écosystème marin (2023)
+          description: "## Travaux préparatoires suggérés pour ce module\n\n**Science :** Les élèves simuleront un écosystème marin dans les leçons 1 et 2. Pour se familiariser avec cet écosystème, nous vous invitons à consulter la [Vidéo sur les animaux marins](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nAu cours de la leçon 2, les élèves coderont diverses pratiques de pêche durable. Voici quelques textes que nous vous invitons à leur faire lire pour acquérir des connaissances de base et approfondir le lien qu'ils font avec le monde réel : [Comprendre ce qu'est la surpêche](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (article sur l'Aquarium de la baie de Monterey), ou [Mwâkwa parle au plongeon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (livre pour enfants).\n\n**Informatique :** Dans ce module, les élèves apprendront de nouvelles notions de codage potentiellement difficiles à assimiler pour ceux qui ne maîtrisent pas encore l'informatique. Si les élèves ne maîtrisent pas le Labo des Sprites de Code.org, nous vous conseillons de leur faire essayer [Les Poissons qui Nagent dans le Labo des Sprites](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) pour une initiation de base à l'outil. \n\nCe module repose également sur une notion informatique avancée qui s'appelle les instructions conditionnelles. Les élèves apprendront cette notion à travers un enseignement en échafaudage, mais certains d'entre eux pourraient néanmoins bénéficier s'ils effectuent en premier lieu cette activité déconnectée d'introduction aux instructions conditionnelles : [Les instructions conditionnelles avec des cartes](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes)."
         csc-adaptations-2023:
           lessons:
             lesson-2:
@@ -8255,3 +8261,283 @@ fr:
           title: Module 7
         vpl-csd-2023-m8:
           title: Module 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Notre code d'éthique en matière d'IA
+        virtual-pl-csa-summer-2024-day1:
+          title: Jour 1
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
+              name: Introduction
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 2
+        virtual-pl-csp-summer-day3:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 3
+        virtual-pl-csp-summer-day4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 4
+        virtual-pl-csp-summer-day5:
+          lessons:
+            lesson-6:
+              name: Cérémonies de clôture
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+        virtual-pl-csa-summer-day2:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 2
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-4:
+              name: Asynchrone, partie 2
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 3
+        virtual-pl-csa-summer-day4:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-4:
+              name: Asynchrone, partie 2
+            lesson-5:
+              name: Ouverture de l'atelier
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 4
+        virtual-pl-csa-summer-day5:
+          lessons:
+            lesson-1:
+              name: Ouverture de l'atelier
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+            lesson-13:
+              name: Cérémonies de clôture
+            lesson-16:
+              name: Cérémonies de clôture
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: 'Jour 5 '
+        virtual-pl-csa-summer-day1:
+          lessons:
+            lesson-2:
+              name: Asynchrone, partie 1
+            lesson-3:
+              name: Synchrone, partie 2
+            lesson-4:
+              name: Asynchrone, partie 2
+            lesson-7:
+              name: Introduction
+            lesson-8:
+              name: Ouverture de l'atelier
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Asynchrone, partie 1
+            lessonGroup-4:
+              display_name: Synchrone, partie 2
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+            lessonGroup-7:
+              display_name: Introduction
+          title: Jour 1
+        virtual-pl-csp-summer-day1:
+          lessons:
+            lesson-5:
+              name: Présentation des activités asynchrones
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchrone, partie 1
+            lessonGroup-3:
+              display_name: Synchrone, partie 2
+            lessonGroup-4:
+              display_name: Asynchrone, partie 1
+            lessonGroup-5:
+              display_name: Asynchrone, partie 2
+          title: Jour 1
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: Modèle de programme de cours de l'heure de code
+        self-paced-pl-csd-unit1-2-2023:
+          title: 'Module 1 : Se préparer à l''enseignement sur la résolution de problèmes et l''informatique'
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner aux élèves la résolution de problèmes et l'informatique de Code.org. \n\n**Dans le cadre de ce module de formation professionnelle, vous pourrez :**\n\n-   Obtenir un aperçu de la résolution de problèmes et de l'informatique.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Explorer les projets de fin de chapitre.\n\n\\*\\*Durée prévue : \\*\\* 30 minutes"
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Soirée dansante : Édition I.A.'
+          title: 'Soirée dansante : Édition IA'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Module 2 : Se préparer à enseigner le développement Web'
+        self-paced-pl-csd-unit3-2-2023:
+          title: Se préparer à enseigner les animations et les jeux interactifs
+          description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Animations et jeux interactifs de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à Game Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 120 minutes"
+          student_description: "Ce module de formation professionnelle est conçu pour vous aider à vous préparer à enseigner le module Animations et jeux interactifs de Code.org. \n\n**Dans ce module de formation professionnelle, vous allez :**\n\n-   Découvrir les jeux et animations interactifs.\n-   Mettre en pratique les concepts clés inclus dans le module.\n-   Participer à Game Lab.\n-   Explorer les projets de fin de chapitre.\n\n**Durée prévue :** 120 minutes"
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Module 4 : Se préparer à enseigner le processus de conception'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Module 5 : Se préparer à enseigner les Données et la Société'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Création de pages Web'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Sites Web multipages'
+          title: Unité 2 - Développement Web ('23-'24)
+          student_description: " Dans cette unité, vous allez apprendre à créer et à partager du contenu sur vos propres pages Web. Après avoir décidé du contenu que vous souhaitez partager avec le monde entier, vous apprendrez à structurer et à styliser vos pages à l'aide du HTML et du CSS. Vous mettrez également en pratique de précieuses compétences en programmation, telles que le débogage, l'utilisation des ressources et le travail d'équipe.  "
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Enquête
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+            lessonGroup-4:
+              display_name: Leçons alternatives
+          title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
+          student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Création de pages Web'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Sites Web multipages'
+          title: Unité 2 - Développement Web ('23-'24)
+          student_description: " Dans cette unité, vous allez apprendre à créer et à partager du contenu sur vos propres pages Web. Après avoir décidé du contenu que vous souhaitez partager avec le monde entier, vous apprendrez à structurer et à styliser vos pages à l'aide du HTML et du CSS. Vous mettrez également en pratique de précieuses compétences en programmation, telles que le débogage, l'utilisation des ressources et le travail d'équipe.  "
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+          title: Unité 3 - Animations et jeux interactifs ('23-'24)
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience de codage en programmant des animations, de l'art interactif et des jeux dans le Labo des Jeux. L'unité commence avec des formes simples et progresse vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les mêmes concepts de programmation et le processus de conception que les informaticiens utilisent quotidiennement. Dans le projet final, tu développeras un programme personnalisé et interactif.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+          title: Unité 4 - Le processus de conception (23-24)
+          student_description: L'unité 4 présente les impacts sociaux plus larges de l'informatique. À travers une série de défis de conception, tu apprendras à mieux comprendre les besoins des autres, tout en développant une solution à un problème. La seconde moitié de l'unité consiste en un projet d'équipe itératif, au cours duquel les équipes ont la possibilité d'identifier un besoin qui leur tient à cœur, de prototyper des solutions sur papier et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs pour obtenir des commentaires et procéder à une itération supplémentaire.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          title: Unité 5 - Données et société (23-24)
+          student_description: L'Unité 5 traite de l'importance des données dans la résolution des problèmes et met en évidence la façon dont les ordinateurs peuvent aider dans ce processus. Le premier chapitre explore les différents systèmes utilisés pour représenter l'information dans un ordinateur et les défis et les compromis posés par leur utilisation. Dans le deuxième chapitre, tu apprendras comment les données collectées sont utilisées pour résoudre les problèmes et comment les ordinateurs aident à automatiser les étapes de ce processus. Le chapitre conclut en examinant comment le processus de résolution de problèmes de données peut être appliqué à une zone de ton choix.
+          description_short: Apprends comment les gens utilisent les ordinateurs pour résoudre des problèmes de données.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Présentation d'App Lab
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Entrées et sorties'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          title: Unité 6A - (Option A) Création d'applications avec des appareils - Circuit Playground (23—24)
+          student_description: Cette unité explore le rôle des plateformes matérielles dans l'informatique et explique comment différents capteurs peuvent fournir des entrées et des sorties plus efficaces que le clavier, la souris et le moniteur traditionnels. À l'aide d'App Lab et de Circuit Playground d'Adafruit, vous développerez des programmes qui utilisent les mêmes entrées et sorties matérielles que celles des appareils intelligents, en étudiant comment un simple prototype peut mener à un produit fini. L'unité se termine par un défi de conception consistant à utiliser le Circuit Playground comme base pour une innovation de votre propre conception.
+          description_short: Apprend à programmer des objets.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Présentation d'App Lab
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-4:
+              display_name: Création de prototypes physiques
+          title: Unité 6B - (Option B) Création d'applications avec des appareils (micro:bit)
+          student_description: Cette unité explore le rôle des plateformes matérielles dans l'informatique et explique comment différents capteurs peuvent fournir des entrées et des sorties plus efficaces que le clavier, la souris et le moniteur traditionnels. À l'aide d'App Lab et de BBC micro:bit, vous allez développer des programmes qui utilisent les mêmes entrées et sorties matérielles que celles des appareils intelligents, en étudiant comment un simple prototype peut mener à un produit fini. L'unité se termine par un défi de conception consistant à utiliser le micro:bit comme base pour une innovation de votre propre conception.
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+          title: IA et apprentissage automatique
+          student_description: Cette unité est une introduction pratique au développement d'un modèle d'apprentissage automatique avec des données tabulaires. Vous découvrirez comment les ordinateurs tirent parti des données pour prendre des décisions, puis développerez vos propres projets d'apprentissage automatique à partir de données du monde réel. L'unité se termine par la conception de votre propre application d'apprentissage automatique pour résoudre un problème personnel.
+        csd-post-survey-2024:
+          title: Suivi d'après cours
+          description: Cette unité contient l'enquête postérieure au cours. Cette unité peut être attribuée une fois que les étudiants ont terminé leur dernière unité de ce cours.

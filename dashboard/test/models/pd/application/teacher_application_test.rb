@@ -14,7 +14,7 @@ module Pd::Application
       assert_nil teacher_application.application_guid
 
       teacher_application.save!
-      assert_not_nil teacher_application.application_guid
+      refute_nil teacher_application.application_guid
     end
 
     test 'existing guid is preserved' do
@@ -180,7 +180,7 @@ module Pd::Application
 
       application.update_user_school_info!
       refute_equal original_user_school_info_id, user.school_info_id
-      assert_not_nil user.school_info_id
+      refute_nil user.school_info_id
     end
 
     test 'update_user_school_info does nothing when user has no school info and does not have enough info for new school' do

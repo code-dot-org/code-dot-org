@@ -82,7 +82,7 @@ class SampleData
     # Delete any existing test data
     user = User.find_by_email_or_hashed_email(email)
     unless user.nil?
-      user.sections.each do |section|
+      user.sections_instructed.each do |section|
         # Hard-delete all students in each section.
         section.students.each do |student_user|
           raise "Not a sample student - #{student_user.name}" unless SAMPLE_STUDENT_NAME_REGEX.match?(student_user.name)

@@ -4,11 +4,11 @@ fa:
       Blue: آبی
       Green: سبز
       Red: قرمز
-      actor: بازیگر
+      actor: عامل
       age: سن
       answer: پاسخ
       binary: دو دویی
-      birds: پرنده ها
+      birds: پرندگان
       color: رنگ
       counter: شمارشگر
       height: ارتفاع
@@ -25,6 +25,7 @@ fa:
       right: سمت راست
       score: امتیاز
       shout: فریاد
+      sides: اضلاع
       size: اندازه
       speed: سرعت
       type: نوع

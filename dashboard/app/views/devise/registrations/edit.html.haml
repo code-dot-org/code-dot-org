@@ -1,4 +1,6 @@
 - require '../shared/middleware/helpers/experiments'
+- require 'cpa'
+- require 'policies/child_account'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
@@ -7,6 +9,10 @@
   %span= t('crud.back')
 
 %h2= @page_title
+
+- unless current_user.migrated?
+  -# Mount point for React MigrateToMultiAuth component.
+  %div#migrate-multi-auth
 
 = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
   - email_mismatch = current_user.errors.delete(:email_mismatch)
@@ -110,6 +116,33 @@
           = t('user.remove_parent_email_label')
       )
     %p= t('user.only_one_parent_email_supported_warning')
+
+- if current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user)
+  %div#lockout-linked-accounts{
+    data: {
+      request_date: @request_date&.iso8601,
+      pending_email: @pending_email,
+      api_url: url_for(
+        action: :child_account_consent,
+        controller: :policy_compliance
+      ),
+      permission_status: @permission_status,
+      user_email: current_user.hashed_email,
+    }
+  }
+
+-# Skip this section as ai-rubrics experiment needs to be unit aware
+-# if Experiment.enabled?(user: current_user, experiment_name: 'ai-rubrics')
+  - if current_user.verified_teacher?
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |form|
+      %hr
+      %h2= t('activerecord.attributes.user.ai_settings_header')
+      .field
+        = form.label :ai_rubrics_disabled, class: "label-bold" do
+          = form.check_box :ai_rubrics_disabled
+          %span{style: "position: relative; top: 3px"}
+            = t('activerecord.attributes.user.ai_rubrics_disabled')
+      %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
@@ -231,7 +264,8 @@
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
       dependentStudents: current_user.dependent_students,
-      studentCount: current_user.students.count
+      studentCount: current_user.students.count,
+      personalAccountLinkingEnabled: @personal_account_linking_enabled,
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

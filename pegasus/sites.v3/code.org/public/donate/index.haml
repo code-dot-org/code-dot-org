@@ -1,0 +1,62 @@
+---
+title: Donate
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/donate-styles.css", rel: "stylesheet"}
+
+-# Donate with Amazon
+%script{async: "", src: "https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"}
+
+-# Double the Donation
+:javascript
+  var DDCONF = { API_KEY: "#{CDO.ddconf_api_key}" };
+%script{src: "https://doublethedonation.com/api/js/ddplugin.js"}
+
+%section.top
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper.col-50
+      %h1=hoc_s(:donate_page_top_heading)
+      %p.body-one
+        =hoc_s(:donate_page_top_desc)
+      %a.link-button.has-external-link{href: "https://donate.code.org/campaign/match-for-10th-anniversary-gala/c529456", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_donate_to_cdo)
+    %figure.col-45
+      %img.rounded-corners.box-shadow-primary{src: "/images/donate-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
+
+%section.fundraise.bg-neutral-dark
+  .wrapper.centered
+    %h2=hoc_s(:donate_page_fundraise_title)
+    %p=hoc_s(:donate_page_fundraise_desc)
+    %a.link-button.has-external-link{href: "https://donate.code.org/campaign/computer-science-education/c142257", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_start_fundraiser)
+
+%section.donate-options
+  .wrapper
+    %h2.centered
+      =hoc_s(:donate_page_other_ways_title)
+    %p.centered
+      =hoc_s(:donate_page_other_ways_desc)
+    = view :"tabs_section/donate/donate_tabs"
+    %hr
+    %p.body-three
+      =hoc_s(:donate_page_501c3)
+
+%section.bg-primary-light
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h2.heading-lg
+        =hoc_s(:donate_page_donation_policy_title)
+      %p.no-margin-bottom
+        =hoc_s(:donate_page_donation_policy_desc)
+    .cta-wrapper
+      %a.link-button{href: "/about/donation-policy"}
+        =hoc_s(:call_to_action_view_donation_policy)
+
+%section.seals
+  .wrapper
+    = view :about_seals
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::DONATE_PAGE_VISITED_EVENT

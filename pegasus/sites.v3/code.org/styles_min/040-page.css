@@ -1,18 +1,60 @@
 /*
-  Uses color and typography variables from /styles_min/050-theme.css
+  Variables are duplicated from shared/css/color.scss
+  and shared/css/font.scss
 
-  See shared/css/typography.scss for more info on how typography
-  styles are used.
+  See shared/css/typography.scss for more info on how
+  typography styles are used.
 */
 
-/* for homepage 2.0.. */
-#homepage .clear {
-  clear: both;
+:root {
+  /* Colors */
+  --brand_primary_light: #ABDFE5;
+  --brand_primary_default: #009EB0;
+  --brand_primary_dark: #008291;
+  --brand_secondary_light: #E0D1EC;
+  --brand_secondary_default: #9660BF;
+  --brand_secondary_dark: #6F488E;
+  --brand_accent_default: #ED6060;
+  --neutral_white: #FFFFFF;
+  --neutral_light: #F7F8FA;
+  --neutral_dark10: #EAEBEB;
+  --neutral_dark20: #D4D5D7;
+  --neutral_dark30: #BFC1C3;
+  --neutral_dark40: #A9ACAF;
+  --neutral_dark50: #94979B;
+  --neutral_dark60: #7F8286;
+  --neutral_dark70: #6A6E73;
+  --neutral_dark80: #54595E;
+  --neutral_dark90: #3F444B;
+  --neutral_dark: #292F36;
+  --orange: #ffa400; /* legacy color */
+  /* Typography */
+  --barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
+  --barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
+  --main-font: 'Metropolis', sans-serif;
+  --thin-font-weight: 100;
+  --extra-light-font-weight: 200;
+  --light-font-weight: 300;
+  --regular-font-weight: 400;
+  --medium-font-weight: 500;
+  --semi-bold-font-weight: 600;
+  --bold-font-weight: 700;
+  --extra-bold-font-weight: 800;
+  --black-font-weight: 900;
 }
-/* ..end homepage 2.0 */
+
+html {
+  height: 100%;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: var(--gotham-regular);
+  background-color: var(--neutral_white);
+  height: 100%;
+  font-family: var(--main-font);
+  font-weight: var(--regular-font-weight);
+  font-style: normal;
   font-size: 14px;
   color: var(--neutral_dark);
   margin: 0;
@@ -52,7 +94,8 @@ h4,
 
 h5,
 .heading-sm {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1.25rem;
   line-height: 1.40;
   margin-bottom: 0.5em;
@@ -60,7 +103,8 @@ h5,
 
 h6,
 .heading-xs {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 1rem;
   line-height: 1.48;
   margin-bottom: 0.5em;
@@ -97,14 +141,16 @@ p {
 
 figcaption,
 .video_caption_link {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 0.875rem;
   margin: 0.5em 0 1em;
-  line-height: 1.64;
+  line-height: 1.4;
 }
 
 .overline-one {
-  font-family: var(--gotham-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.875rem;
@@ -113,7 +159,8 @@ figcaption,
 }
 
 .overline-two {
-  font-family: var(--gotham-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.75rem;
@@ -122,7 +169,8 @@ figcaption,
 }
 
 .overline-three {
-  font-family: var(--gotham-bold), sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-transform: uppercase;
   letter-spacing: 0.04rem;
   font-size: 0.625rem;
@@ -132,7 +180,8 @@ figcaption,
 
 a,
 a:link {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   color: var(--brand_secondary_default);
   text-decoration: underline;
   transition: color ease-in-out .2s;
@@ -151,12 +200,39 @@ a:link:has(*) {
   text-decoration: none;
 }
 
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
+.has-external-link a::after,
+a.has-external-link::after {
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  margin: 0 2px 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  margin: 0 4px 0 2px;
+}
+
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin: 0 0 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a.link-button::after,
+html[dir="rtl"] a.link-button.has-external-link::after {
+  margin: 0 4px 0 0;
+}
+
 strong {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 }
 
 em {
-  font-family: var(--gotham-italics);
+  font-family: var(--main-font);
+  font-style: italic;
 }
 
 li > ul {
@@ -208,6 +284,12 @@ td {
   padding: 15px;
 }
 
+/* for homepage 2.0.. */
+#homepage .clear {
+  clear: both;
+}
+/* ..end homepage 2.0 */
+
 .narrow_hr {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -231,7 +313,7 @@ td {
 }
 
 #petition_form a {
-  font-family: var(--gotham-regular);
+  font-family: var(--main-font);
 }
 
 #petition_form a:link, #petition_form a:visited {
@@ -245,7 +327,8 @@ td {
 }
 
 .listed_supporter{
-  font-family: var(--gotham-extra-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   font-weight: normal;
 }
 
@@ -263,12 +346,14 @@ td {
 
 .about_list_item_selected {
   color: var(--brand_secondary_default);
-  font-family: var(--gotham-extra-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
 }
 
 a.about_list_item {
   color: var(--neutral_dark60);
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   text-decoration: none;
 }
 
@@ -310,9 +395,9 @@ button {
   color: var(--neutral_white);
   cursor: pointer;
   display: inline-block;
-  font-family: var(--gotham-regular);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-size: 14px;
-  font-weight: normal;
   height: 34px;
   letter-spacing: normal;
   line-height: 20px;
@@ -381,6 +466,7 @@ button {
 }
 
 label {
-  font-family: var(--gotham-bold);
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   font-weight: normal;
 }

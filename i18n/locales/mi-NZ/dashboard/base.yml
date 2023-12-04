@@ -39,8 +39,10 @@ mi:
         age: 'Pakeke'
         gender: 'Ira'
         edit_header: 'Whakatika Taipitopito Pūkete'
+        finish_sign_up_header_error: 'Tēnā whakatikaina ngā hapa e haere ake nei:'
         error:
           future: tē āhei haere ake nei
+        user_type: 'Momo Pūkete'
   beta: "beta"
   hello: "Tēnā koe e te ao"
   welcome_back: "Hoki mai rā, %{name}"
@@ -725,4 +727,3 @@ mi:
   copy: 'Tārua'
   pixelation:
     binary: "Tāhūrua"
-

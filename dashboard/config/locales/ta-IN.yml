@@ -10,6 +10,7 @@ ta:
         error:
           future: எதிர்காலத்தில் இருக்க முடியாது
         finish_sign_up_header: உங்கள் கணக்கை உருவாக்குவதை முடிக்கவும்
+        finish_sign_up_header_error: 'பின்வரும் பிழைகளைத் திருத்துக:'
         finish_sign_up_subheader: Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும் தகவலை
           நிரப்பவும்<strong>%{email}</strong>
         finish_sign_up_subheader_markdown: Code.org கணக்கை உருவாக்கி முடிக்க பின்வரும்
@@ -31,6 +32,7 @@ ta:
           முகவரி இல்லையென்றால் இங்கே கிளிக் செய்யவும்)]%{url}
         reset_password_token: நீங்கள் பின்பற்றிய கடவுச்சொல்லை மீட்டமைக்கும் இணைப்பு
         us_state: மாநிலம்
+        user_type: கணக்கு வகை
         username: பயனர் பெயர்
         verified_teacher: சரிபார்க்கப்பட்ட ஆசிரியர்
     errors:

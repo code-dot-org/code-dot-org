@@ -206,6 +206,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Kirjurimehiläinen"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Tietojenkäsittelyn Perusteet"
+        },
         "csd2-2019/Lists": {
           "name": "Listat"
         },
@@ -289,6 +292,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Kirjurimehiläinen"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Silmukat"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Tapahtumat"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funktiot"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Muuttujat"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Silmukat"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Iloiset kartat"
@@ -404,6 +425,9 @@
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Tietojenkäsittelyn Perusteet"
+        },
         "csd3-2022/Variables": {
           "name": "Muuttujat"
         },
@@ -464,8 +488,68 @@
         "express-2022/Conditionals in Minecraft: Voyage Aquatic": {
           "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Kooditunti 2013"
+        "csd3-2023/Variables": {
+          "name": "Muuttujat"
+        },
+        "csd3-2023/Text": {
+          "name": "teksti"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Ehtolausekkeet"
+        },
+        "csd3-2023/Velocity": {
+          "name": "Nopeus"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funktiot"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funktiot"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funktiot"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Iloiset kartat"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Liikuta, liikuta"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Mennään silmukoille"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Suuri tapahtuma"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binäärikorut"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Ruutupaperiohjelmointi"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Releohjelmointi"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Ehtolauseet pelikorteilla"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Säveltäminen"
+        },
+        "coursee-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internetti"
+        },
+        "express-2023/Dance Party": {
+          "name": "Tanssibileet"
+        },
+        "express-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
         "aquatic/Aquatic": {
           "name": "Minecraft: Merellinen matka"
@@ -505,12 +589,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Koodaustunti Minecraft Suunnittelija"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Pelilabra"
@@ -856,6 +934,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Äärimmäinen haaste - Kokonaisuus"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Kooditunti 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Palapeli"

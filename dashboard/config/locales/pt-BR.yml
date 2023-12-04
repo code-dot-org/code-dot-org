@@ -4,12 +4,14 @@ pt:
     attributes:
       user:
         age: Idade
+        ai_settings_header: Configurações de I.A.
         current_password: Senha atual
         edit_header: Editar Detalhes da Conta
         email: E-mail
         error:
           future: não pode estar no futuro
         finish_sign_up_header: Finalize a criação da sua conta
+        finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: Preencha as informações a seguir para concluir a
           criação da sua conta Code.org <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Preencha as informações a seguir para concluir
@@ -32,6 +34,7 @@ pt:
         personal_email_markdown: E-mail pessoal [(clique aqui caso não tenha um e-mail)](%{url})
         reset_password_token: O link de redefinição de senha que você seguiu
         us_state: Estado
+        user_type: Tipo de conta
         username: Nome de usuário
         verified_teacher: Professor Verificado
     errors:
@@ -657,7 +660,7 @@ pt:
       playlab: Laboratório
       playlab_k1: Laboratório de Jogos (Pré-leitor)
       poetry: Poesia
-      poetry_hoc: Arte poética
+      poetry_hoc: Arte Poética
       scratch: Scratch
       settings: Configurações da conta
       signin: Entrar
@@ -1306,7 +1309,7 @@ pt:
   try_k8intro: Experimente nossa introdução do curso de Ciência da Computação (15-25
     horas) para o Ensino Fundamental
   try_reloading: Tente recarregar a página
-  unit_prefix: Unidade 1
+  unit_prefix: Unidade  %{n}
   unplugged_activity: Atividade off-line
   unsubmit: Cancelar envio
   upsell:
@@ -1466,7 +1469,7 @@ pt:
     poem-art:
       body: Expresse-se! Use código para criar poemas animados.
       image_alt: Uma lula hipster se apresentando em um palco.
-      title: Arte poética
+      title: Arte Poética
     pre-express:
       image_alt: Um cachorro e um unicórnio em frente a uma árvore feita de peças
         de quebra-cabeça.

@@ -231,6 +231,11 @@
             "name": "ನನ್ನ ಪ್ರಶ್ನೆ"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "ನನ್ನ ಫಂಕ್ಷನ್‌"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್"
@@ -342,6 +347,69 @@
           "draw a star": {
             "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
             "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "small flower": {
+            "name": "ಸಣ್ಣ ಫ್ಲವರ್"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
+          "LOGIC FLOWER": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್"
+          },
+          "LOGIC FLOWERS": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್ಸ್‌"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ಲಾಜಿಕ್ ಫ್ಲವರ್ಸ್‌2"
+          },
+          "draw a circle": {
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ಸೆಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a star": {
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
             "parameters": {
               "length": "ಉದ್ದ",
               "points": "ಪಾಯಿಂಟ್‌ಗಳು"
@@ -562,6 +630,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ಸೆಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a star": {
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
@@ -662,6 +780,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "ಕೊಟ್ಟಿರುವ ತ್ರಿಜ್ಯದ ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ವೃತ್ತವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "radius": "ತ್ರಿಜ್ಯ"
+            }
+          },
+          "draw a house": {
+            "name": "ಮನೆಯನ್ನು ಸೆಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "ಪಿನ್ವೀಲ್ ಅನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "repeat": "ಪುನರಾವರ್ತನೆ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a shape": {
+            "name": "ಆಕಾರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "sides": "ಬದಿಗಳು"
+            }
+          },
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          },
+          "draw a star": {
+            "description": "ಕೊಟ್ಟಿರುವ ಬಿಂದುಗಳು ಮತ್ತು ನಿರ್ದಿಷ್ಟ ಉದ್ದದ ಬದಿಗಳೊಂದಿಗೆ ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ",
+              "points": "ಪಾಯಿಂಟ್‌ಗಳು"
+            }
+          },
+          "draw a triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ",
+            "parameters": {
+              "length": "ಉದ್ದ"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "ಗೇಮ್ ರಿಸೆಟ್ ಮಾಡಿ"
@@ -673,6 +841,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "ಗೇಮ್ ರಿಸೆಟ್ ಮಾಡಿ"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "ಗೇಮ್ ರಿಸೆಟ್ ಮಾಡಿ"
           }
@@ -710,6 +883,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "ಬ್ರಿಡ್ಜ್‌ ನಿರ್ಮಿಸಿ"
           }
@@ -807,6 +985,11 @@
             "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "ದಾರಿ ತೆರವುಗೊಳಿಸಿ"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
@@ -840,6 +1023,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          },
+          "fix short path": {
+            "name": "ಸಣ್ಣ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "ಉದ್ದನೆಯ ದಾರಿಯನ್ನು ಸರಿಪಡಿಸಿ"
           },
@@ -887,6 +1078,14 @@
             "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "ಉದ್ದನೆಯ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          },
+          "build short bridge": {
+            "name": "ಸಣ್ಣ ಸೇತುವೆ ನಿರ್ಮಿಸಿ"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "ಫಂಕ್ಷನ್ 1"
@@ -920,6 +1119,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "ಫಂಕ್ಷನ್ 1"
+          },
+          "function 2": {
+            "name": "ಫಂಕ್ಷನ್ 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "ಫಂಕ್ಷನ್ 1"
           },
@@ -1377,6 +1584,11 @@
             "name": "ಸಂಭಾವ್ಯ ಪರಿಹಾರ"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "ಸಂಭಾವ್ಯ ಪರಿಹಾರ"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "ಬೆಂಕಿ ಎಳೆಯಿರಿ"
@@ -1473,6 +1685,11 @@
             "name": "ಬೂಸ್ಟರ್‌"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "ಬೂಸ್ಟರ್‌"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
@@ -1489,6 +1706,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
           }
@@ -1603,6 +1825,17 @@
             "name": "ಷಡ್ಭುಜಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw hexagon": {
+            "name": "ಷಡ್ಭುಜಗಳನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw line of hexagons": {
+            "name": "ಷಡ್ಭುಜಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
@@ -1661,6 +1894,14 @@
             "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw ear stems": {
+            "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
@@ -1700,6 +1941,11 @@
         "courseE_artist_functions3_2021": {
           "draw a star": {
             "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions3_2023": {
+          "draw a star": {
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ"
           }
         },
         "courseE_artist_functions4": {
@@ -1747,6 +1993,11 @@
             "name": "ಸ್ಟಾರ್ ಎಳೆಯಿರಿ"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "ನಕ್ಷತ್ರವನ್ನು ಎಳೆಯಿರಿ"
@@ -1783,6 +2034,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ಕಿಟಕಿಯನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "ಕಿಟಕಿಯನ್ನು ಎಳೆಯಿರಿ"
           }
@@ -1868,6 +2124,20 @@
             "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
@@ -1906,6 +2176,14 @@
           },
           "draw a square": {
             "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
           }
         },
         "courseE_artist_functions8b2022": {
@@ -1953,6 +2231,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
           },
@@ -2033,6 +2322,20 @@
             "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
@@ -2089,6 +2392,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw line of triangles": {
+            "name": "ತ್ರಿಕೋನಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw triangle": {
+            "name": "ತ್ರಿಕೋನವನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
           },
@@ -2184,6 +2498,23 @@
             "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "ಚೌಕಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw hexagon": {
+            "name": "ಷಡ್ಭುಜಗಳನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw line of hexagons": {
+            "name": "ಷಡ್ಭುಜಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw square": {
+            "name": "ಆಯತ ಎಳೆಯಿರಿ"
+          },
+          "staggered squares": {
+            "name": "ಅಡ್ಡಾದಿಡ್ಡಿ ಚೌಕಗಳು"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
@@ -2222,6 +2553,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "my design": {
+            "name": "ನನ್ನ ವಿನ್ಯಾಸ"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
           },
@@ -2274,6 +2613,14 @@
             "name": "ನನ್ನ ವಿನ್ಯಾಸ"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "my design": {
+            "name": "ನನ್ನ ವಿನ್ಯಾಸ"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
@@ -2315,6 +2662,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw ear stems": {
+            "name": "ಕಿವಿ ಸ್ಟೆಮ್‌ಗಳನ್ನು ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "ಒಂದು ಚೌಕವನ್ನು ಎಳೆಯಿರಿ"
           },
@@ -2394,6 +2749,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "ಏನಾದರೂ ಮಾಡು"
+          },
+          "draw line of polygons": {
+            "name": "ಬಹುಭುಜಾಕೃತಿಗಳ ರೇಖೆಯನ್ನು ಎಳೆಯಿರಿ"
+          },
+          "draw polygon": {
+            "name": "ಬಹುಭುಜಾಕೃ ಎಳೆಯಿರಿ"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "ಏನಾದರೂ ಮಾಡು"
           },
@@ -2504,6 +2870,20 @@
             "name": "ಕುಂಬಳಕಾಯಿ ಚೌಕ"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          },
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "pumpkin square": {
+            "name": "ಕುಂಬಳಕಾಯಿ ಚೌಕ"
+          }
+        },
         "courseE_farmer_functions11_predict2022": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
@@ -2573,6 +2953,23 @@
           }
         },
         "courseE_farmer_functions11_predict_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          },
+          "get produce": {
+            "name": "ಉತ್ಪನ್ನ ಪಡೆಯಿರಿ"
+          },
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          },
+          "pumpkin square": {
+            "name": "ಕುಂಬಳಕಾಯಿ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions11_predict_2023": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
           },
@@ -2659,6 +3056,20 @@
             "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಪರಿಶೀಲಿಸಿ"
+          },
+          "corn rectangle": {
+            "name": "ಕಾರ್ನ್ ಆಯತ"
+          },
+          "lettuce stairs": {
+            "name": "ಲೆಟಿಸ್ ಮೆಟ್ಟಿಲುಗಳು"
+          },
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
@@ -2684,6 +3095,11 @@
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
@@ -2705,6 +3121,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
           }
@@ -2742,6 +3163,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
           },
@@ -2804,6 +3233,17 @@
             "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          },
+          "pick along path": {
+            "name": "ಹಾದಿಯಲ್ಲಿ ಆರಿಸಿ"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
@@ -2844,6 +3284,14 @@
             "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
           }
         },
+        "courseE_farmer_functions3c_2023": {
+          "check square for corn": {
+            "name": "ಜೋಳಕ್ಕಾಗಿ ಚೌಕವನ್ನು ಪರಿಶೀಲಿಸಿ"
+          },
+          "get all pumpkins": {
+            "name": "ಎಲ್ಲಾ ಕುಂಬಳಕಾಯಿಗಳನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
         "courseE_farmer_functions7a12022": {
           "garden square": {
             "name": "ಉದ್ಯಾನ ಚೌಕ"
@@ -2865,6 +3313,11 @@
           }
         },
         "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions7a1_2023": {
           "garden square": {
             "name": "ಉದ್ಯಾನ ಚೌಕ"
           }
@@ -2894,6 +3347,11 @@
             "name": "ಉದ್ಯಾನ ಚೌಕ"
           }
         },
+        "courseE_farmer_functions8a1_2023": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
         "courseE_farmer_functions9a12022": {
           "garden square": {
             "name": "ಉದ್ಯಾನ ಚೌಕ"
@@ -2915,6 +3373,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "ಉದ್ಯಾನ ಚೌಕ"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "ಉದ್ಯಾನ ಚೌಕ"
           }
@@ -2950,6 +3413,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "ಕೊನೆಯ ಆಟ"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "ಕೊನೆಯ ಆಟ"
           }
@@ -3179,6 +3647,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "ಸರಿಸಿ ಮತ್ತು ಕೌಂಟರ್‌ನೊಂದಿಗೆ ಮಕರಂದವನ್ನು ಪಡೆಯಿರಿ"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "ಸರಿಸಿ ಮತ್ತು ಕೌಂಟರ್‌ನೊಂದಿಗೆ ಮಕರಂದವನ್ನು ಪಡೆಯಿರಿ"
           }

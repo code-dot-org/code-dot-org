@@ -53,6 +53,7 @@ ru:
         gender: 'Пол'
         edit_header: 'Изменить учетные данные'
         finish_sign_up_header: 'Завершите создание учетной записи'
+        finish_sign_up_header_error: 'Исправьте следующие ошибки:'
         finish_sign_up_subheader: 'Заполните следующую информацию для завершения создания учётной записи на Code.org для <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Заполните следующую информацию для завершения создания учётной записи на Code.org для **%{email}**.'
         finish_sign_up_subheader_provider: 'Заполните следующую информацию для завершения создания учетной записи на Code.org с <strong>%{provider}</strong> <strong>%{email}</strong>.'
@@ -60,6 +61,7 @@ ru:
         reset_password_token: "Ссылка для восстановления пароля, по которой вы перешли,"
         error:
           future: не может быть в будущем
+        user_type: 'Тип учётной Записи'
         us_state: 'Штат (регион, область)'
   beta: "бета-версия"
   hello: "Привет, мир!"
@@ -1283,4 +1285,3 @@ ru:
     binary: "Двоичный"
     hexadecimal: "Шестнадцатеричный"
     pixel_format_header: "Формат Пикселей"
-

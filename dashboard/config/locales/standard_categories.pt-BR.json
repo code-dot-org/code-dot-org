@@ -353,6 +353,9 @@
         "D2.Eco": {
           "description": "Economia"
         },
+        "D2.Geo": {
+          "description": "Geografia"
+        },
         "D2.His": {
           "description": "História"
         },

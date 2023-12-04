@@ -68,6 +68,39 @@
           "creepy": "strašidelné",
           "cute": "milý"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "1584 Maple St": "Dlhá 18",
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Closest pet shop:": "Najbližší obchod so zvieratami:",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Downtown Pets and More": "Mega zvieratká s.r.o.",
+          "Find it!": "Nájsť zvieratko",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
+          "No": "Nie",
+          "Open Now!": "Máme otvorené!",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
+          "cute": "milý"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
           "Click here to start!": "Spusti kliknutím tu!",
@@ -124,6 +157,34 @@
           "creepy": "strašidelné",
           "cute": "milý"
         },
+        "CSD U1 IO Pet Chooser_2023": {
+          "Are you allergic to pet fur?": "Máš alergiu na zvieraciu srsť?",
+          "Click here to start!": "Spusti kliknutím tu!",
+          "Crowd": "Prispôsobovanie",
+          "Different": "Odlišovanie",
+          "Do you like going outside?": "Baví ťa chodiť von?",
+          "Do you want to play with the pet?": "Chceš sa so zvieratkom hrať?",
+          "Get a bettafish!": "Zožeň si bojovnicu!",
+          "Get a dog!": "Zožeň si psa!",
+          "Get a goat!": "Zožeň si kozu!",
+          "Get a hamster!": "Zožeň si škrečka!",
+          "Get a parrot!": "Zožeň si papagája!",
+          "Get a rat!": "Zožeň si potkana!",
+          "Get a scorpion!": "Zožeň si škorpióna!",
+          "Get a tarantula!": "Zožeň si tarantulu!",
+          "How cute should the pet be?": "Aké milé by malo zvieratko byť?",
+          "Medium Cute": "Stredne milé",
+          "No": "Nie",
+          "Pet Chooser!": "zvieratka!",
+          "Should the pet be noisy?": "Malo by byť zvieratko hlučné?",
+          "Should your pet be cute or creepy?": "Chceš milé alebo strašidelné zvieratko?",
+          "The Ultimate": "Výber",
+          "Very Cute": "Veľmi milé",
+          "Would you rather go with the crowd or be different?": "Zvykneš sa prispôsobovať ostatným, alebo sa radšej odlišuješ?",
+          "Yes": "Áno",
+          "creepy": "strašidelné",
+          "cute": "milý"
+        },
         "CSD U1 IO Story_2021": {
           "City": "Mesto",
           "Color": "Farba",
@@ -136,6 +197,17 @@
           "text": "text"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Mesto",
+          "Color": "Farba",
+          "Emotion": "Emócia",
+          "Fill in the blanks to create a custom story!": "Vyplň prázdne políčka a vytvor si vlastný príbeh!",
+          "Food": "Jedlo",
+          "Make a Sci-Fi Story!": "Vytvor sci-fi príbeh!",
+          "Make a Western Story!": "Vytvor westernový príbeh!",
+          "Name": "Meno",
+          "text": "text"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Mesto",
           "Color": "Farba",
           "Emotion": "Emócia",
@@ -190,6 +262,28 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing countries_2021": {
           "How Many Countries...": "Koľko krajín...",
           "are bigger than Alaska?": "je väčších než Aljaška?",
@@ -210,6 +304,16 @@
           "have sent people to space?": "vyslalo ľudí na mesiac?",
           "have won the World Cup?": "vyhralo majstrovstvá sveta vo futbale?"
         },
+        "CSD U1 processing countries_2023": {
+          "How Many Countries...": "Koľko krajín...",
+          "are bigger than Alaska?": "je väčších než Aljaška?",
+          "are decreasing population?": "má klesajúci počet obyvateľov?",
+          "are land locked?": "nemá spojenie s morom?",
+          "have more than a billion people?": "má viac ako miliardu obyvateľov?",
+          "have no land borders?": "nemá pozemné hranice?",
+          "have sent people to space?": "vyslalo ľudí na mesiac?",
+          "have won the World Cup?": "vyhralo majstrovstvá sveta vo futbale?"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "It's a tie!": "Je to remíza!",
@@ -219,6 +323,14 @@
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "It's a tie!": "Je to remíza!",
+          "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Polož jeden prst na kláves „s“ a druhý na kláves „k“. Potom ťukaj klávesmi tak rýchlo, ako len vieš.",
+          "Which finger is the FASTEST?": "Ktorý prst je RÝCHLEJŠÍ?",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "It's a tie!": "Je to remíza!",
           "Put one finger on the 's' key and the other on the 'k' key. Then click as fast as you can.": "Polož jeden prst na kláves „s“ a druhý na kláves „k“. Potom ťukaj klávesmi tak rýchlo, ako len vieš.",
@@ -368,6 +480,77 @@
           "Your guess:": "Tvoj tip:",
           "text": "text"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "41": "41",
+          "42": "42",
+          "43": "43",
+          "44": "44",
+          "45": "45",
+          "46": "46",
+          "47": "47",
+          "48": "48",
+          "49": "49",
+          "5": "5",
+          "50": "50",
+          "51": "51",
+          "52": "52",
+          "53": "53",
+          "54": "54",
+          "55": "55",
+          "56": "56",
+          "57": "57",
+          "58": "58",
+          "59": "59",
+          "6": "6",
+          "60": "60",
+          "61": "61",
+          "62": "62",
+          "63": "63",
+          "64": "64",
+          "65": "65",
+          "66": "66",
+          "67": "67",
+          "68": "68",
+          "69": "69",
+          "7": "7",
+          "70": "70",
+          "71": "71",
+          "72": "72",
+          "73": "73",
+          "74": "74",
+          "75": "75",
+          "76": "76",
+          "77": "77",
+          "78": "78",
+          "79": "79",
+          "8": "8",
+          "80": "80",
+          "81": "81",
+          "83": "83",
+          "9": "9",
+          "?": "?",
+          "Can you guess it?": "Podarí sa ti uhádnuť ho?",
+          "I'm thinking of a number from 1 to 100.": "Myslím na číslo od 1 do 100.",
+          "You haven't guessed yet.": "Zatiaľ ho nemáš.",
+          "You only have 5 tries.": "Máš iba 5 pokusov.",
+          "Your guess:": "Tvoj tip:",
+          "text": "text"
+        },
         "CSD U1 processing live_2021": {
           "bear": "medveď",
           "rat": "potkan",
@@ -378,12 +561,24 @@
           "rat": "potkan",
           "walking": "kráčajúci"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "mačka",
+          "chicken": "kurča",
+          "dog": "pes",
+          "horse": "kôň",
+          "walking": "kráčajúci"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "Správne!",
           "National Park Quiz": "Kvíz o národných parkoch",
           "Sorry!": "Prepáč!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "Správne!",
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "Správne!",
           "National Park Quiz": "Kvíz o národných parkoch",
           "Sorry!": "Prepáč!"
@@ -432,11 +627,37 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Naspäť",
           "Friend Finder": "Nájdi svojich priateľov"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Naspäť",
+          "Friend Finder": "Nájdi svojich priateľov"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Naspäť",
           "Friend Finder": "Nájdi svojich priateľov"
         },
@@ -480,6 +701,26 @@
           "You wanted to watch a:": "Chcel/-a si si pozrieť:",
           "text": "text"
         },
+        "CSD U1 storage movies_2023": {
+          "Action": "Akčné",
+          "Based on your preferences, we think you should watch:": "Na základe tvojich preferencií si myslíme, že dobrou voľbou bude:",
+          "Choose a Kids Movie: Great for Babysitters!": "Odporúčanie detských filmov: super, ak opatrujete deti!",
+          "Comedy": "Komédia",
+          "Do you want an animated movie?": "Chceš animovaný film?",
+          "Harry Potter": "Harry Potter",
+          "Musical": "Muzikál",
+          "My Neighbor Totoro": "Môj susedTotoro",
+          "No": "Nie",
+          "Select your favorite movie": "Vyber svoj obľúbený film",
+          "Star Wars": "Star Wars",
+          "Tangled": "Na vlásku",
+          "The LEGO Movie": "Lego príbeh",
+          "What Should I Watch?": "Čo si mám pozrieť?",
+          "What are you in the mood for?": "Na čo máš náladu?",
+          "Yes": "Áno",
+          "You wanted to watch a:": "Chcel/-a si si pozrieť:",
+          "text": "text"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "Vymazať",
           "Outfit Picker": "Výber oblečenia",
@@ -491,6 +732,16 @@
           "white": "biela"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Vymazať",
+          "Outfit Picker": "Výber oblečenia",
+          "What is the weather like today?": "Aké je dnes počasie?",
+          "black": "čierne",
+          "green": "zelená",
+          "pink": "ružová",
+          "purple": "fialová",
+          "white": "biela"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "Vymazať",
           "Outfit Picker": "Výber oblečenia",
           "What is the weather like today?": "Aké je dnes počasie?",
@@ -535,41 +786,121 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Dokázal/a si to!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Dokázal/a si to!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Šťastná"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Šťastná"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Vek",
+          "Happy": "Šťastná",
+          "Name": "Meno"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Nie",
+          "Yes": "Áno"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Ryba"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Ryba"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Úspešne!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Východ",
+          "North": "Sever",
+          "South": "Juh",
+          "West": "Západ"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Východ",
@@ -577,17 +908,37 @@
           "South": "Juh",
           "West": "Západ"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Stredný"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Stredný"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "zelená",
+          "left": "vľavo",
+          "purple": "fialová",
+          "red": "červená",
+          "right": "vpravo",
+          "yellow": "žltá"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "zelená",
@@ -596,6 +947,10 @@
           "red": "červená",
           "right": "vpravo",
           "yellow": "žltá"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "vľavo",
+          "right": "vpravo"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "rýchlo",
@@ -606,14 +961,38 @@
           "short": "krátky",
           "slow": "pomaly"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "rýchlo",
+          "high": "vysoké",
+          "long": "dlhý",
+          "low": "nízke",
+          "on": "zapnuté",
+          "short": "krátky",
+          "slow": "pomaly"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Red": "Červená"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Modrá",
           "Green": "Zelená",
           "Red": "Červená"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "vľavo",
+          "right": "vpravo"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "vľavo",
           "right": "vpravo"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "modrá",
+          "green": "zelená",
+          "orange": "pomaranč",
+          "yellow": "žltá"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "modrá",
@@ -621,12 +1000,30 @@
           "orange": "pomaranč",
           "yellow": "žltá"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Test",
+          "quiet": "ticho"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Test",
           "quiet": "ticho"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "spodný riadok",
+          "top row": "horný riadok"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "dlhý",
+          "short": "krátky"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "dlhý",
+          "short": "krátky"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "vysoké",
+          "long": "dlhý",
+          "low": "nízke",
           "short": "krátky"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -635,18 +1032,53 @@
           "low": "nízke",
           "short": "krátky"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "dlhý",
+          "short": "krátky"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "dlhý",
           "short": "krátky"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Riadok"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Riadok"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Modrá",
+          "Red": "Červená"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Modrá",
           "Red": "Červená"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Modrá",
+          "Red": "Červená"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -654,14 +1086,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Meno"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Meno"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Meno"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Šťastná"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Šťastná"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -671,6 +1132,16 @@
           "E": "V",
           "F": "F",
           "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G",
+          "Note:": "Poznámka:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -682,7 +1153,25 @@
           "G": "G",
           "Note:": "Poznámka:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -700,6 +1189,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "V",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -709,69 +1207,198 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Skóre"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Skóre"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Skóre"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Úspešne!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Úspešne!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Úspešne!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Meno:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Meno:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Meno:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Red": "Červená"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Modrá",
           "Green": "Zelená",
           "Red": "Červená"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Red": "Červená"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Name:": "Meno:",
+          "Red": "Červená",
+          "Save": "Uložiť"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Modrá",
@@ -780,10 +1407,31 @@
           "Red": "Červená",
           "Save": "Uložiť"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Name:": "Meno:",
+          "Red": "Červená",
+          "Save": "Uložiť"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "čierne",
+          "white": "biela"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "čierne",
+          "white": "biela"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "čierne",
           "white": "biela"
         },
@@ -791,12 +1439,40 @@
           "black": "čierne",
           "white": "biela"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "čierne",
+          "white": "biela"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "čierne",
+          "white": "biela"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "Šťastná"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "Šťastná"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "Šťastná"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "nadpis"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "nadpis"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "nadpis"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Red": "Červená",
+          "White": "Biela"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Modrá",
@@ -804,41 +1480,111 @@
           "Red": "Červená",
           "White": "Biela"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Modrá",
+          "Green": "Zelená",
+          "Red": "Červená",
+          "White": "Biela"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "dole",
+          "left": "vľavo",
+          "right": "vpravo",
+          "up": "hore"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "dole",
           "left": "vľavo",
           "right": "vpravo",
           "up": "hore"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "dole",
+          "left": "vľavo",
+          "right": "vpravo",
+          "up": "hore"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "meno"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "meno"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "meno"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "vypnuté",
+          "on": "zapnuté"
+        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "vypnuté",
           "on": "zapnuté"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "vysoké",
+          "low": "nízke",
+          "text": "text"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "vysoké",
           "low": "nízke",
           "text": "text"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "vysoké",
+          "low": "nízke",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "hodnota"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Aktualizovať",
           "value": "hodnota"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Aktualizovať",
           "value": "hodnota"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Aktualizovať",
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "hodnota"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "hodnota"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "hodnota"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "hodnota"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "hodnota"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "hodnota"
         },
         "CSD U6 Driver pt 2": {
@@ -1445,7 +2191,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Úspešne!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Úspešne!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Úspešne!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "Úspešne!"
         },
         "CSDU6 circuit playground piano": {
@@ -1520,6 +2272,94 @@
           "F": "F",
           "G": "G"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Kliknutím na tlačidlá nižšie vytvoríte odhad toho, čo sa riadi pravidlom",
+          "Computer's Guess FOLLOWS Rule": "Pravidlo Computer Guess NASLEDUJE",
+          "Computer's Guess does NOT follow the Rule": "Počítačový odhad sa neriadi pravidlom",
+          "Computer's Guess:": "Počítačový odhad:",
+          "Current Guess": "Aktuálny odhad",
+          "Previous Guesses": "Predchádzajúce odhady",
+          "Submit Guess": "Odoslať Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Porozprávajte sa s Eliza zadaním textu do poľa výzvy. Po dokončení zadajte do výzvy ukončiť."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: „Dynamit“",
+          "Back": "Naspäť",
+          "Change Voice": "Zmeniť hlas",
+          "Choose a voice to model": "Vyberte hlas na modelovanie",
+          "Choose the Save file you want to load from the dropdown below": "Z rozbaľovacej ponuky nižšie vyberte súbor Uložiť, ktorý chcete načítať",
+          "Copy / Paste or type the words you want to create a model based on below": "Skopírujte/Prilepte alebo zadajte slová, na základe ktorých chcete vytvoriť model, na základe ktorého je uvedené nižšie",
+          "Create my own!": "Vytvorte si svoj vlastný!",
+          "Delete Text": "Odstrániť text",
+          "Dr Seuss: Green Eggs and Ham": "Dr Seuss: Zelené vajcia a šunka",
+          "Generate!": "Generovať!",
+          "Give the voice a name": "Dajte hlasu meno",
+          "Give your save file a name": "Dajte svojmu uložený súbor názov",
+          "Load Save": "Načítať Uložiť",
+          "Load this story": "Načítať tento príbeh",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: „Vták v klietke“",
+          "Model This Voice!": "Model tohto hlasu!",
+          "Modeling Voice": "Modelovanie hlasu",
+          "Pharell: \"Happy\"": "Pharell: „Šťastný“",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: „Kto Abuelito“",
+          "Save Text": "Uložiť text",
+          "Save!": "Uložiť!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Vyberte jedného z tvorcov obsahu nižšie a vygenerujte odporúčania pre vás. Kliknutím na ich meno sa zobrazia ďalšie informácie o nich. Po výbere niekoho kliknite na tlačidlo „Zobraziť odporúčania“, aby ste videli, aký je váš video kanál! Pozri Odporúčania! ➡️ Vaše odporúčaniaToto sú videá, ktoré ste odporučili na základe toho, koho ste vybrali na poslednej obrazovke.Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte viac. Pomocou tlačidiel vľavo filtrovať podľa určitých kategórií.Príklad! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte novú osobu",
+          "Example!": "Príklad!",
+          "Let's Get Started! ➡️": "Začnime! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "Keď niekoho vyberiete, kliknite na tlačidlo „Zobraziť odporúčania“, aby ste videli, aký je váš informačný kanál videa!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. ",
+          "See Recommendations! ➡️": "Pozri Odporúčania! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Vyberte aspoň jednu osobu, ktorú chcete použiť, aby ste mohli pokračovať v odporúčaniach!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Jednoducho si vyberte, ktorých tvorcov obsahu chcete sledovať, a potom si pozrite svoje odporúčania pre videá!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Toto sú videá, ktoré vám boli odporúčané na základe toho, koho ste vybrali na poslednej obrazovke.Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. Pomocou tlačidiel vľavo filtrovať podľa určitých kategórií.Príklad! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte novú osobu",
+          "Use the buttons on the left to filter by certain categories.": "Pomocou tlačidiel vľavo môžete filtrovať podľa určitých kategórií.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Zhromaždili sme všetky vaše obľúbené osobnosti, aby sme vytvorili videá, ktoré zodpovedajú vašim záujmom, A aby sme pomohli spravovať váš video kanál.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube je nová mediálna webová stránka pre všetkých vašich obľúbených tvorcov obsahu. Zhromaždili sme všetky vaše obľúbené osobnosti, aby sme vytvorili videá, ktoré zodpovedajú vašim záujmom, A aby sme vám pomohli spravovať váš video kanál. Jednoducho vyberte, ktorých tvorcov obsahu chcete sledovať, a potom si pozrite svoje odporúčania pre videá! Začnime! ➡️ Vyberte aspoň jednu osobu, ktorú chcete použiť, aby ste mohli pokračovať! Vyberte jedného z tvorcov obsahu nižšie, aby vám vygeneroval odporúčania. Kliknutím na ich meno sa zobrazia ďalšie informácie o nich. Po výbere niekoho kliknite na tlačidlo „Zobraziť odporúčania“, aby ste videli, aký je váš video kanál! Pozri Odporúčania! ➡️ Vaše odporúčaniaToto sú videá, ktoré ste odporučili na základe toho, koho ste vybrali na poslednej obrazovke.Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte viac. Pomocou tlačidiel vľavo filtrovať podľa určitých kategórií.Príklad! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte novú osobu",
+          "Your Recommendations": "Vaše odporúčania",
+          "⬅️ Select New Person": "⬅️ Vyberte novú osobu",
+          "⬆️ Scroll Up ⬆️": "⬆️ Posunúť nahor ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Posuňte sa nadol ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 znamená, že ich názor nie je vôbec zahrnutý vo vašich odporúčaniach",
+          "10 means they have a huge influence on the recommendations you receive": "10 znamená, že majú obrovský vplyv na odporúčania, ktoré dostanete",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Vyberte si jedného z tvorcov obsahu nižšie a potom pomocou posuvníka upravte, do akej miery chcete, aby ovplyvnili vaše odporúčania! 0 znamená, že ich názor vôbec nie je zahrnutý vo vašich odporúčaniach10 znamená, že majú obrovský vplyv na odporúčania, ktoré dostanete. ➡️ FeatureValueVaše odporúčaniaToto sú videá, ktoré vám boli odporúčané na základe toho, ako ste upravili hmotnosti na poslednej obrazovke. Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. Pomocou tlačidiel vľavo filtrovať podľa určitých VideoSexample! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte Nové váhy",
+          "Example!": "Príklad!",
+          "Let's Get Started! ➡️": "Začnime! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. ",
+          "See Recommendations! ➡️": "Pozri Odporúčania! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Vyberte aspoň jednu osobu, ktorú chcete použiť, aby ste mohli pokračovať v odporúčaniach!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Jednoducho si vyberte, ktorých tvorcov obsahu chcete dodržiavať, aby ste videli vaše odporúčania!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Toto sú videá, ktoré vám boli odporúčané na základe toho, ako ste upravili hmotnosti na poslednej obrazovke. Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. Pomocou tlačidiel vľavo filtrovať podľa určitých VideoSexample! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte Nové váhy",
+          "Use the buttons on the left to filter by certain videos": "Pomocou tlačidiel vľavo môžete filtrovať podľa určitých videí",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Zhromaždili sme všetky vaše obľúbené osobnosti, aby sme vytvorili videá, ktoré zodpovedajú vašim záujmom.",
+          "WeTube Video Recommendations": "Odporúčania pre video WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube je nová mediálna webová stránka pre všetkých vašich obľúbených tvorcov obsahu. Zhromaždili sme všetky vaše obľúbené osobnosti, aby sme vytvorili videá, ktoré zodpovedajú vašim záujmom. Jednoducho vyberte tvorcov obsahu, ktorých chcete sledovať, aby ste videli vaše odporúčania! Začnime! ➡️ Vyberte aspoň jednu osobu, ktorú chcete použiť, aby ste mohli pokračovať! Vyberte jedného z tvorcov obsahu nižšie a potom pomocou posuvníka upravte, do akej miery chcete, aby ovplyvnili vaše odporúčania! 0 znamená, že ich názor vôbec nie je zahrnutý vo vašich odporúčaniach10 znamená, že majú obrovský vplyv na odporúčania, ktoré dostanete. ➡️ FeatureValueVaše odporúčaniaToto sú videá, ktoré vám boli odporúčané na základe toho, ako ste upravili hmotnosti na poslednej obrazovke. Súčasne sa zobrazujú iba 3 videá - pomocou tlačidiel Posúvanie zobrazíte ďalšie. Pomocou tlačidiel vľavo filtrovať podľa určitých VideoSexample! Príklad! Príklad! ⬆️ Posunúť nahor ⬆️⬇️ Posuňte sa nadol ⬇️⬅️ Vyberte Nové váhy",
+          "Your Recommendations": "Vaše odporúčania",
+          "featureLabel": "FeatureLabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Vyberte nové váhy",
+          "⬆️ Scroll Up ⬆️": "⬆️ Posunúť nahor ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Posuňte sa nadol ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Buďte trpezliví! Hlučné načítanie obrázkov!",
+          "Move the slider to add more or less generations of noise to the image": "Posunutím jazdca pridáte do obrázka viac alebo menej generácií šumu",
+          "New Image": "Nový obrázok",
+          "Noise Generations:": "Generácie hluku:",
+          "Noise Generations: ": "Generácie hluku: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Plodina",
+          "Image Select": "Výber obrázka",
+          "Reset": "Obnoviť"
+        },
         "allthethings design mode elements": {
           "text": "text"
         },
@@ -1542,11 +2382,19 @@
           "Start": "Spustiť",
           "flying": "letieť"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Spustiť",
+          "flying": "letieť"
+        },
         "csd-apps for good-2": {
           "Home": "Domov",
           "Next": "Ďalší"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Domov",
+          "Next": "Ďalší"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Domov",
           "Next": "Ďalší"
         },
@@ -1564,11 +2412,22 @@
           "4": "4",
           "???": "???"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "???": "???"
+        },
         "csd-explore ui-2": {
           "Home": "Domov",
           "Next": "Ďalší"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Domov",
+          "Next": "Ďalší"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Domov",
           "Next": "Ďalší"
         },
@@ -1616,12 +2475,39 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "Správne!",
           "National Park Quiz": "Kvíz o národných parkoch",
           "Sorry!": "Prepáč!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "Správne!",
+          "National Park Quiz": "Kvíz o národných parkoch",
+          "Sorry!": "Prepáč!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "Správne!",
           "National Park Quiz": "Kvíz o národných parkoch",
           "Sorry!": "Prepáč!"
@@ -1670,10 +2556,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Ďalší"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Ďalší"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Ďalší"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1686,10 +2597,18 @@
           "Green Glass Door": "Zelené sklenené dvere",
           "Rejected": "Odmietnuté"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Prijaté",
+          "Green Glass Door": "Zelené sklenené dvere",
+          "Rejected": "Odmietnuté"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Ďalší"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Ďalší"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Ďalší"
         },
         "ml-customize-raspado-2021": {
@@ -1706,6 +2625,13 @@
           "preference": "preferencia",
           "yes": "áno"
         },
+        "ml-customize-raspado_2023": {
+          "Predict": "Predpoveď",
+          "Raspado Recommender": "Program na odporúčanie ľadových džúsov",
+          "no": "nie",
+          "preference": "preferencia",
+          "yes": "áno"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "Pokračovať",
           "Loading...": "Načítavanie..."
@@ -1714,11 +2640,19 @@
           "Continue": "Pokračovať",
           "Loading...": "Načítavanie..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Pokračovať",
+          "Loading...": "Načítavanie..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Predict": "Predpoveď",
           "Silly": "Smiešna"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Predict": "Predpoveď",
           "Silly": "Smiešna"
         },
@@ -1736,11 +2670,22 @@
           "no": "nie",
           "yes": "áno"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "Z",
+          "head": "hlava",
+          "no": "nie",
+          "yes": "áno"
+        },
         "ml-model cards-book recommender model card": {
           "Predict": "Predpoveď",
           "Silly": "Smiešna"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Predict": "Predpoveď",
+          "Silly": "Smiešna"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Predict": "Predpoveď",
           "Silly": "Smiešna"
         },
@@ -1756,6 +2701,12 @@
           "3": "3",
           "Predict": "Predpoveď"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Predpoveď"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
@@ -1763,6 +2714,12 @@
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Predpoveď"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1782,6 +2739,13 @@
           "Back": "Naspäť",
           "Predict": "Predpoveď"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Naspäť",
+          "Predict": "Predpoveď"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
@@ -1789,6 +2753,12 @@
           "Predict": "Predpoveď"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Predict": "Predpoveď"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3",
@@ -1806,12 +2776,23 @@
           "Predict": "Predpoveď",
           "Yes": "Áno"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Nie",
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Nie",
           "Predict": "Predpoveď",
           "Yes": "Áno"
         },
         "ml-models in applab-zoo model embed_2022": {
+          "No": "Nie",
+          "Predict": "Predpoveď",
+          "Yes": "Áno"
+        },
+        "ml-models in applab-zoo model embed_2023": {
           "No": "Nie",
           "Predict": "Predpoveď",
           "Yes": "Áno"
@@ -1824,16 +2805,26 @@
           "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
           "Sports": "Športy"
         },
+        "ml-models-shoes decision tree_2023": {
+          "Improved Shoe Recommender": "Lepšie odporúčanie topánok",
+          "Sports": "Športy"
+        },
         "ml-models-shoes points-2021": {
           "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
         "ml-models-shoes points_2022": {
           "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
         },
+        "ml-models-shoes points_2023": {
+          "Ultimate Shoe Recommender": "Najlepšie odporúčanie topánok"
+        },
         "ml-models-shoes random-2021": {
           "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-models-shoes random_2022": {
+          "Shoe Recommender": "Odporúčanie topánok"
+        },
+        "ml-models-shoes random_2023": {
           "Shoe Recommender": "Odporúčanie topánok"
         },
         "ml-use model card-example3A-2021": {
@@ -1847,6 +2838,16 @@
           "snow": "sneh"
         },
         "ml-use model card-example3A_2022": {
+          "Driver Alert System": "Výstražný systém pre vodičov",
+          "Get Started": "Začíname",
+          "Predict": "Predpoveď",
+          "cloudy": "oblačno",
+          "dusk": "Súmrak",
+          "night": "noc",
+          "rain": "dážď",
+          "snow": "sneh"
+        },
+        "ml-use model card-example3A_2023": {
           "Driver Alert System": "Výstražný systém pre vodičov",
           "Get Started": "Začíname",
           "Predict": "Predpoveď",

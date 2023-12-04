@@ -85,6 +85,20 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "CourseE_Project_SpriteLab_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "CourseE_Project_SpriteLab_cupcake_examples2022": {
           "growing": "o'sish",
           "growing2": "o‘sish2",
@@ -132,6 +146,27 @@
           "wandering2": "daydish2",
           "wobbling": "gandiraklash"
         },
+        "CourseE_Project_SpriteLab_cupcake_examples_2023": {
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
+        },
         "CourseE_Project_SpriteLab_examples2022": {
           "growing": "o'sish",
           "growing2": "o‘sish2",
@@ -178,6 +213,27 @@
           "wandering": "daydish",
           "wandering2": "daydish2",
           "wobbling": "gandiraklash"
+        },
+        "CourseE_Project_SpriteLab_examples_2023": {
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
         },
         "CourseE_hoops": {
           "being hungry": "och bo'lmoq",
@@ -264,6 +320,10 @@
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
+        "CourseF_outbreak1_2023": {
+          "recovering": "tiklanish",
+          "wandering": "daydish"
+        },
         "CourseF_outbreak2": {
           "recovering": "tiklanish",
           "wandering": "daydish"
@@ -272,11 +332,19 @@
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
+        "CourseF_outbreak2_2023": {
+          "recovering": "tiklanish",
+          "wandering": "daydish"
+        },
         "CourseF_outbreak3": {
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
         "CourseF_outbreak3_-2022-2": {
+          "recovering": "tiklanish",
+          "wandering": "daydish"
+        },
+        "CourseF_outbreak3_2023": {
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
@@ -312,6 +380,22 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "CourseF_outbreak4_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "recovering": "tiklanish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "CourseF_outbreak5": {
           "recovering": "tiklanish",
           "wandering": "daydish"
@@ -320,11 +404,19 @@
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
+        "CourseF_outbreak5_2023": {
+          "recovering": "tiklanish",
+          "wandering": "daydish"
+        },
         "CourseF_outbreak6": {
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
         "CourseF_outbreak6_-2022-2": {
+          "recovering": "tiklanish",
+          "wandering": "daydish"
+        },
+        "CourseF_outbreak6_2023": {
           "recovering": "tiklanish",
           "wandering": "daydish"
         },
@@ -360,6 +452,22 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "CourseF_outbreak7_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "recovering": "tiklanish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "CourseF_outbreak8": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -377,6 +485,22 @@
           "wandering": "daydish"
         },
         "CourseF_outbreak8_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving left and right": "chapga va o'ngga harakat qilish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "recovering": "tiklanish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "CourseF_outbreak8_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -730,6 +854,19 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "Fish Tank 2-validated_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "Fish Tank 3-validated2022": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -770,6 +907,19 @@
           "wandering": "daydish"
         },
         "Fish Tank 3-validated_2021": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "Fish Tank 3-validated_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -834,6 +984,19 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "Fish Tank 4-validated_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "Fish Tank 5-validated2022": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -886,6 +1049,19 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "Fish Tank 5-validated_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "Fish Tank 6-validated2022": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -926,6 +1102,19 @@
           "wandering": "daydish"
         },
         "Fish Tank 6-validated_2021": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "Fish Tank 6-validated_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -1066,6 +1255,21 @@
           "wandering": "daydish",
           "wobbling": "gandiraklash"
         },
+        "Virtual Pet 1_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "Virtual Pet 2": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -1123,6 +1327,20 @@
           "wandering": "daydish"
         },
         "Virtual Pet 2_2021": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "Virtual Pet 2_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -1197,6 +1415,26 @@
           "wandering2": "daydish2"
         },
         "Virtual Pet 3_2021": {
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
+        },
+        "Virtual Pet 3_2023": {
           "growing": "o'sish",
           "growing2": "o‘sish2",
           "jittering": "titrash",
@@ -1627,6 +1865,20 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseE_aboutme_2_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseE_aboutme_3": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -1670,6 +1922,20 @@
           "wandering": "daydish"
         },
         "courseE_aboutme_3_2021": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseE_aboutme_3_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -1739,6 +2005,20 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseE_aboutme_4_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseE_aboutme_5": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -1782,6 +2062,20 @@
           "wandering": "daydish"
         },
         "courseE_aboutme_5_2021": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseE_aboutme_5_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -1866,6 +2160,29 @@
           "wandering": "daydish",
           "wandering2": "daydish2"
         },
+        "courseF_apps_aquarium_2023": {
+          "driving with arrow keys2": "o'q tugmalari bilan harakatlantiring",
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "moving with arrow keys2": "o'q tugmalari bilan yurishni boshqaring",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
+        },
         "courseF_apps_card": {
           "blocking movement": "Bloklash harakati",
           "driving with arrow keys": "o'q tugmalari bilan harakatlanish",
@@ -1900,6 +2217,22 @@
           "wandering": "daydish"
         },
         "courseF_apps_card_-2022-2": {
+          "blocking movement": "Bloklash harakati",
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_apps_card_2023": {
           "blocking movement": "Bloklash harakati",
           "growing": "o'sish",
           "jittering": "titrash",
@@ -1965,6 +2298,30 @@
           "wandering2": "daydish2"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "blocking movement": "Bloklash harakati",
+          "driving with arrow keys2": "o'q tugmalari bilan harakatlantiring",
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "moving with arrow keys2": "o'q tugmalari bilan yurishni boshqaring",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
+        },
+        "courseF_apps_chatbot_2023": {
           "blocking movement": "Bloklash harakati",
           "driving with arrow keys2": "o'q tugmalari bilan harakatlantiring",
           "growing": "o'sish",
@@ -2056,6 +2413,28 @@
           "wandering": "daydish",
           "wandering2": "daydish2"
         },
+        "courseF_apps_collector_2023": {
+          "driving with arrow keys2": "o'q tugmalari bilan harakatlantiring",
+          "growing": "o'sish",
+          "growing2": "o‘sish2",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving north2": "shimolga yurish2",
+          "moving south": "janubga yurish",
+          "moving south2": "janubga yurish2",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "moving with arrow keys2": "o'q tugmalari bilan yurishni boshqaring",
+          "patrolling": "patrullash",
+          "patrolling2": "qo'riqlash2",
+          "shrinking": "kichrayish",
+          "shrinking2": "kichrayish2",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish",
+          "wandering2": "daydish2"
+        },
         "courseF_apps_madlib": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2091,6 +2470,21 @@
           "wandering": "daydish"
         },
         "courseF_apps_madlib_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_apps_madlib_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2155,6 +2549,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_apps_pet_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_editable_card": {
           "blocking movement": "Bloklash harakati",
           "driving with arrow keys": "o'q tugmalari bilan harakatlanish",
@@ -2173,6 +2582,22 @@
           "wandering": "daydish"
         },
         "courseF_editable_card_-2022-2": {
+          "blocking movement": "Bloklash harakati",
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_editable_card_2023": {
           "blocking movement": "Bloklash harakati",
           "growing": "o'sish",
           "jittering": "titrash",
@@ -2221,6 +2646,22 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_editable_chatbot_2023": {
+          "blocking movement": "Bloklash harakati",
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_editable_madlib": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2241,6 +2682,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_editable_madlib_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_editable_madlib_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2298,7 +2754,32 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_choice_conflict2_2023": {
+          "growing": "o'sish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_choice_conflict_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_choice_conflict_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2341,6 +2822,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_choice_penguin_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_choice_pufferfish": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2359,6 +2853,19 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_choice_pufferfish_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_choice_pufferfish_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2400,6 +2907,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_conflict_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_freeplay_air": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2417,6 +2937,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_freeplay_air_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_freeplay_air_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2456,6 +2988,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_freeplay_animals_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_freeplay_aquatic": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2473,6 +3017,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_freeplay_aquatic_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_freeplay_aquatic_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2512,6 +3068,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_freeplay_blank_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_freeplay_food": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2529,6 +3097,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_freeplay_food_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_freeplay_food_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2568,6 +3148,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_freeplay_space_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_key": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2586,6 +3178,19 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_key_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_key_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2631,6 +3236,20 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_practice_reorder_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_predict": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -2647,6 +3266,21 @@
           "wandering": "daydish"
         },
         "courseF_events_predict_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "running east": "sharqqa yugirish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_events_predict_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2691,6 +3325,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_review_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_events_ship": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2709,6 +3356,19 @@
           "wobbling": "gandiraklash"
         },
         "courseF_events_ship_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_events_ship_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2780,6 +3440,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_events_time_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_extras_sim": {
           "wandering 1": "wandering 1",
           "wandering 2": "wandering 2"
@@ -2814,6 +3487,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_label_predict_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "running east": "sharqqa yugirish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_place_fruit": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2830,6 +3518,17 @@
           "wobbling": "gandiraklash"
         },
         "courseF_place_fruit_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "courseF_place_fruit_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2877,6 +3576,16 @@
           "spinning left": "chap tarafga aylanish",
           "spinning right": "o'ng tarafga aylanish"
         },
+        "courseF_sprites_behaviors_2023": {
+          "growing": "o'sish",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
         "courseF_sprites_clouds": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2894,6 +3603,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_clouds_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_sprites_clouds_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2931,6 +3652,17 @@
           "spinning left": "chap tarafga aylanish",
           "spinning right": "o'ng tarafga aylanish"
         },
+        "courseF_sprites_desert_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
         "courseF_sprites_freeplay_air": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -2948,6 +3680,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_freeplay_air_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_sprites_freeplay_air_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -2987,6 +3731,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_sprites_freeplay_animals_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_sprites_freeplay_aquatic": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3004,6 +3760,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_freeplay_aquatic_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_sprites_freeplay_aquatic_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3043,6 +3811,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_sprites_freeplay_blank_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_sprites_freeplay_food": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3060,6 +3840,18 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_freeplay_food_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_sprites_freeplay_food_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3099,6 +3891,18 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_sprites_freeplay_space_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_sprites_make": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3115,6 +3919,17 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_make_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "courseF_sprites_make_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3151,6 +3966,17 @@
           "spinning left": "chap tarafga aylanish",
           "spinning right": "o'ng tarafga aylanish"
         },
+        "courseF_sprites_moreSprites_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
         "courseF_sprites_positioning": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3167,6 +3993,17 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_positioning_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "courseF_sprites_positioning_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3207,6 +4044,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_sprites_predict_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "running east": "sharqqa yugirish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_sprites_properties": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3223,6 +4075,17 @@
           "wobbling": "gandiraklash"
         },
         "courseF_sprites_properties_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "courseF_sprites_properties_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3259,6 +4122,17 @@
           "spinning left": "chap tarafga aylanish",
           "spinning right": "o'ng tarafga aylanish"
         },
+        "courseF_sprites_ship_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
         "courseF_text_answer": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3276,6 +4150,19 @@
           "wandering": "daydish"
         },
         "courseF_text_answer_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_text_answer_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3317,6 +4204,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_text_choice_color_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_text_choice_conversation": {
           "driving with arrow keys": "o'q tugmalari bilan harakatlanish",
           "fluttering": "qaltirash",
@@ -3338,6 +4238,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_text_choice_conversation_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3387,6 +4302,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_text_choice_events_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_text_choice_freeplay": {
           "driving with arrow keys": "o'q tugmalari bilan harakatlanish",
           "fluttering": "qaltirash",
@@ -3408,6 +4338,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3457,6 +4402,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_text_choice_interview_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_text_choice_multiprompt": {
           "driving with arrow keys": "o'q tugmalari bilan harakatlanish",
           "fluttering": "qaltirash",
@@ -3478,6 +4438,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_text_choice_multiprompt_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_text_choice_multiprompt_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3521,6 +4496,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_text_choice_title_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_text_concat": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3538,6 +4526,19 @@
           "wandering": "daydish"
         },
         "courseF_text_concat_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_text_concat_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3579,6 +4580,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_text_events_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_text_print": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3596,6 +4610,19 @@
           "wandering": "daydish"
         },
         "courseF_text_print_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_text_print_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3637,6 +4664,19 @@
           "spinning right": "o'ng tarafga aylanish",
           "wandering": "daydish"
         },
+        "courseF_text_prompts_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
         "courseF_text_review": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3654,6 +4694,19 @@
           "wandering": "daydish"
         },
         "courseF_text_review_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "courseF_text_review_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3686,6 +4739,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_variables_card_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_variables_card_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3734,6 +4802,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_variables_card_finish_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_variables_chatbot": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3754,6 +4837,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_variables_chatbot_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3802,6 +4900,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_variables_madlib": {
           "fluttering": "qaltirash",
           "growing": "o'sish",
@@ -3822,6 +4935,21 @@
           "wobbling": "gandiraklash"
         },
         "courseF_variables_madlib_-2022-2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "courseF_variables_madlib_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -3870,6 +4998,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "courseF_variables_predict": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -3900,6 +5043,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "courseF_variables_predict_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "running east": "sharqqa yugirish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "coursee_helloworld_events": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -3911,6 +5069,214 @@
           "shrinking": "kichrayish",
           "spinning left": "chap tarafga aylanish",
           "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "coursee_helloworld_events_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptaions_fishschool": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_birds": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_bugs": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_butterfly": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_choice2": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_choice3": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_fish": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_groups": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_migration": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_animal_adaptations_speed": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_ecosystems_giraffe_evo_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_ecosystems_whale_explain_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "csc_ecosystems_whale_movement_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
         "helloworld_animals_backgrounds": {
@@ -4066,6 +5432,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "helloworld_food_backgrounds_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "growing": "o'sish",
           "jittering": "titrash",
@@ -4111,7 +5492,33 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish"
         },
+        "helloworld_food_behaviors_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
         "helloworld_food_costumes": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish"
+        },
+        "helloworld_food_costumes_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -4136,6 +5543,21 @@
           "wandering": "daydish"
         },
         "helloworld_food_sounds": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
+        },
+        "helloworld_food_sounds_2023": {
           "growing": "o'sish",
           "jittering": "titrash",
           "moving east": "sharqqa yurish",
@@ -4489,6 +5911,21 @@
           "swimming left and right": "chapga va o'ngga suzish",
           "wandering": "daydish",
           "wobbling": "gandiraklash"
+        },
+        "simcustom_2023": {
+          "growing": "o'sish",
+          "jittering": "titrash",
+          "moving east": "sharqqa yurish",
+          "moving north": "shimolga yurish",
+          "moving south": "janubga yurish",
+          "moving west": "g'arbga yurish",
+          "moving with arrow keys": "o'q tugmalari bilan harakatlantiring",
+          "patrolling": "patrullash",
+          "shrinking": "kichrayish",
+          "spinning left": "chap tarafga aylanish",
+          "spinning right": "o'ng tarafga aylanish",
+          "swimming left and right": "chapga va o'ngga suzish",
+          "wandering": "daydish"
         }
       }
     }

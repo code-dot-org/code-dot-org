@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "911a37d1-01f6-4910-b5a8-c115b583c332",
+          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
+          "details": "Planning to study computer science, engineering or robotics in college? Apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
+          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
+          "type": "bullhorn",
+          "visibility": "Student-only",
+          "dismissible": true,
+          "buttonText": "Apply now"
+        },
+        {
+          "key": "42ff0897-3ca0-44ed-a684-55320e70267c",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-29 04:56:11 UTC",
+    "serialized_at": "2023-11-20 21:06:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6012,11 +6034,10 @@
     },
     {
       "name": "The Ethics of Computer-Generated Actors",
-      "url": "https://mediaethicsinitiative.org/2019/02/13/the-ethics-of-computer-generated-actors/",
+      "url": "https://mediaengagement.org/research/the-ethics-of-computer-generated-actors/",
       "key": "the_ethics_of_computer-generated_actors",
       "properties": {
-        "audience": "Student",
-        "type": "Article"
+        "audience": "Student"
       },
       "seeding_key": {
         "resource.key": "the_ethics_of_computer-generated_actors"

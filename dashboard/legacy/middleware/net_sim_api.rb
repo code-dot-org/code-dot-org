@@ -312,7 +312,7 @@ class NetSimApi < Sinatra::Base
   def validate_router(shard_id, router)
     return VALIDATION_ERRORS[:malformed] unless router.key?('routerNumber')
     existing_routers = get_table(shard_id, TABLE_NAMES[:node]).
-        to_a.select {|x| x['type'] == NODE_TYPES[:router]}
+      to_a.select {|x| x['type'] == NODE_TYPES[:router]}
 
     # Check for routerNumber collisions and router limits
     return VALIDATION_ERRORS[:limit_reached] unless existing_routers.count < CDO.netsim_max_routers
@@ -455,7 +455,7 @@ class NetSimApi < Sinatra::Base
   # @return [Boolean]
   def has_json_utf8_headers?(request)
     request.content_type.to_s.split(';').first == 'application/json' &&
-        request.content_charset.to_s.casecmp?('utf-8')
+      request.content_charset.to_s.casecmp?('utf-8')
   end
 
   # Perform delete operation, potentially on multiple rows at once,

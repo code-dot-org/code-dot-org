@@ -4,6 +4,6 @@ title: Sự tham gia của toàn bộ trường học
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Kêu gọi cả trường bạn tham gia
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Thông tin về việc thu hút toàn trường tham gia Giờ Mã sẽ được cung cấp tại đây.

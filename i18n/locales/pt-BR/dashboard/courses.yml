@@ -93,6 +93,8 @@ pt:
           title: Foco na Codificação (Descobertas da CC)
         focus-on-impact-in-society-2023:
           title: Foco no Impacto na Sociedade (Descobertas da CC)
+        self-paced-pl-csd-unit2-2023:
+          title: Ensino de desenvolvimento via internet
     resources:
       curriculum/csd/2017:
         name: Currículo
@@ -110,7 +112,27 @@ pt:
         name: Currículo
       teacher_forum/csd/2020:
         name: Fórum do professor
+      all_resources_1/csd/2021:
+        name: Todos os Recursos
+      all_standards_1/csd/2021:
+        name: Todos os Padrões
+      all_vocabulary_1/csd/2021:
+        name: Todo o Vocabulário
       getting_started_with_csd/csd/2021:
         name: Para começar a usar com o CSD
+      all_resources_7/csd/2022:
+        name: Todos os Recursos
+      all_standards_7/csd/2022:
+        name: Todos os Padrões
+      all_vocabulary_7/csd/2022:
+        name: Todo o Vocabulário
       csd_implementation_guide/csd/2022:
-        url: "<https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview>"
+        url: https://docs.google.com/document/d/1ybEuPafLkexT1MYjGmkdFCx3hO18iyg98e9ldLTUq3I/preview
+      all_resources_2/csd/2023:
+        name: Todos os Recursos
+      all_standards_2/csd/2023:
+        name: Todos os Padrões
+      all_vocabulary_2/csd/2023:
+        name: Todo o Vocabulário
+      csd_guide_to_curriculum_videos/csd/2023:
+        url: https://docs.google.com/document/d/1SIpzFmX7RqxwkEy4AyFe19-8hoWAS0A0D6C8Yzr-BHM/edit

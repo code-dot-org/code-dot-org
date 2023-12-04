@@ -3,15 +3,26 @@ import {
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
 import {
+  ScrollBlockDragger,
+  ScrollOptions,
+} from '@blockly/plugin-scroll-options';
+import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
+import msg from '@cdo/locale';
+import {disableOrphans} from '@cdo/apps/blockly/eventHandlers';
+import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
-  MODAL_EDITOR_NAME_INPUT_ID,
-  MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
+import CdoConnectionChecker from './cdoConnectionChecker';
+import CdoMetricsManager from './cdoMetricsManager';
+import WorkspaceSvgFrame from './workspaceSvgFrame';
+import {BLOCK_TYPES} from '../constants';
+import {frameSizes} from './cdoConstants';
+import CdoTrashcan from './cdoTrashcan';
 
-// This class is a work in progress. It is used for the modal function editor,
-// which is used by Sprite Lab and Artist.
+// This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
   constructor(
     opt_msgOverrides,
@@ -42,45 +53,53 @@ export default class FunctionEditor {
 
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
-      toolbox: options.toolbox,
+      comments: false, // Disables Blockly's built-in comment functionality.
+      media: options.media,
+      move: {
+        drag: false,
+        scrollbars: {
+          horizontal: false,
+          vertical: true,
+        },
+        wheel: true,
+      },
+      plugins: {
+        metricsManager: CdoMetricsManager,
+        blockDragger: ScrollBlockDragger,
+        connectionChecker: CdoConnectionChecker,
+      },
+      readOnly: options.readOnly,
+      renderer: options.renderer,
+      rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
+      toolbox: options.toolbox,
+      trashcan: false, // Don't use default trashcan.
     });
+    const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
+    scrollOptionsPlugin.init();
+
+    // Disable blocks that aren't attached. We don't want these to generate
+    // code in the hidden workspace.
+    this.editorWorkspace.addChangeListener(disableOrphans);
 
     // Close handler
     document
       .getElementById(MODAL_EDITOR_CLOSE_ID)
       .addEventListener('click', () => this.hide());
 
-    // Rename handler
-    this.nameInput = document.getElementById(MODAL_EDITOR_NAME_INPUT_ID);
-    this.nameInput.addEventListener('input', e => {
-      this.block.getProcedureModel().setName(e.target.value);
-    });
-
-    // Description handler
-    this.functionDescriptionInput = document.getElementById(
-      MODAL_EDITOR_DESCRIPTION_INPUT_ID
-    );
-    this.functionDescriptionInput.addEventListener('input', e => {
-      this.block.description = e.target.value;
-      this.updateHiddenDefinitionDescription();
-    });
-
     // Delete handler
     document
       .getElementById(MODAL_EDITOR_DELETE_ID)
-      .addEventListener('click', this.handleDelete.bind(this));
-
-    // Main workspace toolbox procedure category callback
-    Blockly.mainBlockSpace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(Blockly.mainBlockSpace, true)
-    );
+      .addEventListener('click', this.onDeletePressed.bind(this));
 
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
     // false to not show the new function button inside the modal editor
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(Blockly.mainBlockSpace, false)
+      functionsFlyoutCategory(Blockly.mainBlockSpace, true)
+    );
+    this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
+      behaviorsFlyoutCategory(Blockly.mainBlockSpace, true)
     );
 
     // Set up the "new procedure" button in the toolbox
@@ -94,11 +113,15 @@ export default class FunctionEditor {
     );
 
     this.setUpEditorWorkspaceChangeListeners();
+
+    const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
+    functionEditorTrashcan.init();
   }
 
   hide() {
     if (this.dom) {
       this.dom.style.display = 'none';
+      this.editorWorkspace.hideChaff();
     }
   }
 
@@ -106,6 +129,10 @@ export default class FunctionEditor {
   // function editor, but its logic is the same as hide.
   hideIfOpen() {
     this.hide();
+  }
+
+  getWorkspaceId() {
+    return this.editorWorkspace.id;
   }
 
   // TODO
@@ -118,17 +145,11 @@ export default class FunctionEditor {
    * Show the given procedure in the function editor. Either load from
    * the procedure workspace if it already exists, or create a new block.
    * @param {Procedure} procedure The procedure to show.
+   * @param {string} procedureType The type of procedure to show. Only used if the
+   * procedure does not already exist.
    */
-  showForFunction(procedure) {
-    // We disable events while clearing the workspace in order to skip
-    // propogating those events to the other workspaces. We would be propogating
-    // delete events, but we aren't actually deleting the blocks, just removing them
-    // from the editor workspace.
-    Blockly.Events.disable();
-    this.editorWorkspace.clear();
-    Blockly.Events.enable();
-
-    this.nameInput.value = procedure.getName();
+  showForFunction(procedure, procedureType) {
+    this.clearEditorWorkspace();
 
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -150,27 +171,55 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
+
       Blockly.Events.enable();
     } else {
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        type: 'procedures_defnoreturn',
+        type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
+          userCreated: true,
         },
         fields: {
           NAME: procedure.getName(),
         },
         deletable: false,
-        movable: false,
       };
+
       this.block = Blockly.serialization.blocks.append(
         this.addEditorWorkspaceBlockConfig(newDefinitionBlock),
         this.editorWorkspace
       );
     }
-    this.functionDescriptionInput.value = this.block.description || '';
+
+    // We hide the delete button unless it is a function or user-created behavior.
+    const shouldShowDeleteButton =
+      this.block.type === BLOCK_TYPES.procedureDefinition ||
+      this.block.userCreated;
+    const modalEditorDeleteButton = document.getElementById(
+      MODAL_EDITOR_DELETE_ID
+    );
+    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
+      ? 'visible'
+      : 'hidden';
+
+    const type = procedureType || existingProcedureBlock.type;
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+
+    // Used to create and render an SVG frame instance.
+    const getDefinitionBlockColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this.block);
+    };
+
+    this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
+      this.editorWorkspace,
+      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      'blocklyWorkspaceSvgFrame',
+      getDefinitionBlockColor
+    );
+    this.editorWorkspace.svgFrame_.render();
   }
 
   /**
@@ -178,7 +227,7 @@ export default class FunctionEditor {
    * @returns a legal name for a new function definition.
    */
   getNameForNewFunction() {
-    let name = 'do something';
+    let name = msg.doSomething();
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
     while (
@@ -198,7 +247,7 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback() {
+  newProcedureCallback = procedureType => {
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       Blockly.getHiddenDefinitionWorkspace(),
@@ -234,10 +283,25 @@ export default class FunctionEditor {
     this.editorWorkspace.getProcedureMap().add(editorProcedureModel);
     Blockly.Events.enable();
 
-    this.showForFunction(hiddenProcedure);
+    this.showForFunction(hiddenProcedure, procedureType);
+  };
+
+  onDeletePressed() {
+    /// We use "delete" for cancel and "keep" for confirm so that the
+    // delete button is red and the keep button is purple.
+    Blockly.customSimpleDialog({
+      bodyText: msg.confirmDeleteFunctionWarning({
+        functionName: this.block.getProcedureModel().getName(),
+      }),
+      cancelText: msg.delete(),
+      isDangerCancel: true, // gives us a red button
+      confirmText: msg.keep(),
+      onConfirm: null, // No-op
+      onCancel: this.onDeleteConfirmed.bind(this),
+    });
   }
 
-  handleDelete() {
+  onDeleteConfirmed() {
     // delete all caller blocks from the procedure workspace
     Blockly.Procedures.getCallers(
       this.block.getProcedureModel().getName(),
@@ -315,50 +379,15 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(blockConfig) {
-    const returnValue = {
-      ...blockConfig,
-      x: 50,
-      y: 210,
-    };
-    return returnValue;
-  }
+    // Position the blocks within the workspace svg frame.
+    const x = frameSizes.MARGIN_SIDE + 5;
+    const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
 
-  /**
-   * Constructs the blocks required by the flyout for the procedure category.
-   * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
-   * Derived from core Google Blockly:
-   * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
-   * @param {WorkspaceSvg} workspace The workspace containing procedures.
-   * @returns an array of XML block elements
-   */
-  // Equivalent to blockly-samples registerToolboxCategoryCallback->modalProceduresToolboxCallback
-  flyoutCategory(workspace, includeNewButton = true) {
-    const blockList = [];
-    if (includeNewButton) {
-      blockList.push({
-        kind: 'button',
-        text: 'Create a Function',
-        callbackKey: 'newProcedureCallback',
-      });
-    }
-
-    // Get all the procedures from the workspace and create call blocks for them
-    workspace
-      .getProcedureMap()
-      .getProcedures()
-      .forEach(procedure => blockList.push(this.createCallBlock(procedure)));
-    return blockList;
-  }
-
-  createCallBlock(procedure) {
-    const name = procedure.getName();
     return {
-      kind: 'block',
-      type: 'procedures_callnoreturn',
-      extraState: {
-        name: name,
-        id: procedure.getId(),
-      },
+      ...blockConfig,
+      movable: false,
+      x,
+      y,
     };
   }
 
@@ -393,15 +422,29 @@ export default class FunctionEditor {
     );
   }
 
-  updateHiddenDefinitionDescription() {
-    const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
-    const blockToUpdate = topBlocks.find(
-      topBlock =>
-        topBlock.getProcedureModel().getId() ===
-        this.block.getProcedureModel().getId()
-    );
-    if (blockToUpdate) {
-      blockToUpdate.description = this.block.description;
+  // Clear the editor workspace to prepare for a new function definition.
+  clearEditorWorkspace() {
+    if (this.block) {
+      const topBlocks = this.editorWorkspace.getTopBlocks();
+      // Find all blocks that are not attached to the procedure definition.
+      const orphanedBlocks = topBlocks.filter(
+        block => block.id !== this.block.id
+      );
+
+      // Dispose of all non-procedure-definition top blocks (aka orphaned blocks)
+      // and propagate the delete event to the hidden workspace.
+      orphanedBlocks.forEach(block => block.dispose(false));
     }
+    const workspaceSvgFrame = this.editorWorkspace.svgFrame_;
+    if (workspaceSvgFrame) {
+      workspaceSvgFrame.dispose();
+    }
+
+    // Now call clear() to have Blockly handle the rest of the workspace clearing.
+    // Also disable events here to ensure we don't delete the procedure model or the
+    // procedure definition.
+    Blockly.Events.disable();
+    this.editorWorkspace.clear();
+    Blockly.Events.enable();
   }
 }

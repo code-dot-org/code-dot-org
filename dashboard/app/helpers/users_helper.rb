@@ -40,6 +40,9 @@ module UsersHelper
 
       # If both users are teachers, transfer ownership of sections
       if source_user.teacher? && destination_user.teacher?
+        SectionInstructor.where(instructor: source_user).each do |si|
+          si.update! instructor: destination_user
+        end
         Section.where(user: source_user).each do |owned_section|
           owned_section.update! user: destination_user
         end
@@ -208,7 +211,7 @@ module UsersHelper
   #   3: {}
   # }
   private def teacher_feedbacks_by_student_by_level(users, unit)
-    initial_hash = Hash[users.map {|user| [user.id, {}]}]
+    initial_hash = users.map {|user| [user.id, {}]}.to_h
     TeacherFeedback.
       get_latest_feedbacks_received(users.map(&:id), nil, unit.id).
       group_by(&:student_id).

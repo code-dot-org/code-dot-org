@@ -7,13 +7,28 @@
             "name": "x"
           }
         },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "details"
+          },
+          "draw eyebrow": {
+            "name": "teken wenkbrauw"
+          },
+          "draw pupil": {
+            "name": "teken pupil"
+          }
+        },
         "2-3 Artist 3.4": {
+          "draw a car": {
+            "name": "teken een auto"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
+            "name": "draw_rect",
             "parameters": {
               "height": "hoogte",
               "width": "breedte"
@@ -21,14 +36,75 @@
           }
         },
         "2-3 Artist Debugging 10": {
+          "draw R pad": {
+            "name": "teken R pad"
+          },
+          "draw a button": {
+            "name": "teken een knop"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           },
+          "draw cord": {
+            "name": "teken kabel"
+          },
           "draw square": {
+            "name": "teken vierkant",
             "parameters": {
               "height": "hoogte",
               "width": "breedte"
             }
+          },
+          "jump to controller top left": {
+            "name": "spring naar controller linksboven"
+          },
+          "jump to middle": {
+            "name": "spring naar midden"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw a head": {
+            "name": "teken een hoofd"
+          },
+          "draw body and arms": {
+            "name": "teken lichaam en armen"
+          },
+          "draw left leg": {
+            "name": "teken linkerbeen"
+          },
+          "draw right leg": {
+            "name": "teken rechterbeen"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw arms": {
+            "name": "teken armen"
+          },
+          "draw head": {
+            "name": "teken hoofd"
+          },
+          "draw left leg": {
+            "name": "teken linkerbeen"
+          },
+          "draw right leg": {
+            "name": "teken rechterbeen"
+          },
+          "draw sitting stick figure": {
+            "name": "teken een zittend stok figuur"
+          },
+          "jump to neck": {
+            "name": "spring naar nek"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw D": {
+            "name": "teken D"
+          },
+          "draw E": {
+            "name": "teken E"
+          },
+          "draw O": {
+            "name": "teken O"
           }
         },
         "2-3 Artist Functions 11": {
@@ -77,6 +153,9 @@
           }
         },
         "4-5 Artist 7": {
+          "draw a car": {
+            "name": "teken een auto"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           }
@@ -177,6 +256,20 @@
             }
           }
         },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "teken een vierkant 20"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a line of squares": {
+            "description": "teken 6 vierkanten achter elkaar",
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a square 20": {
+            "name": "teken een vierkant 20"
+          }
+        },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "parameters": {
@@ -212,7 +305,7 @@
         },
         "Course 4 Play Lab Params 4": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "patrol": {
             "name": "patrouilleer"
@@ -272,6 +365,13 @@
         "Course 4 SCF 1": {
           "draw a hexagon": {
             "name": "teken een zeskant"
+          },
+          "draw a line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
           }
         },
         "Course 4 SCF 1a": {
@@ -282,9 +382,19 @@
             }
           }
         },
+        "Course 4 SCF 2": {
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
+          }
+        },
         "Course 4 SCF 3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
           },
           "draw an octagon": {
             "parameters": {
@@ -298,6 +408,11 @@
           }
         },
         "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "mijn functie"
+          }
+        },
+        "Course E: Artist Project_examples_2023": {
           "my function": {
             "name": "mijn functie"
           }
@@ -404,9 +519,60 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -609,6 +775,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "teken een cirkel met gegeven straal",
@@ -709,9 +925,59 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "teken een cirkel met gegeven straal",
+            "name": "teken een cirkel",
+            "parameters": {
+              "radius": "straal"
+            }
+          },
+          "draw a house": {
+            "name": "teken een huis",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teken een windmolen",
+            "parameters": {
+              "length": "lengte",
+              "repeat": "herhaal",
+              "sides": "zijden"
+            }
+          },
+          "draw a shape": {
+            "name": "teken een vorm",
+            "parameters": {
+              "length": "lengte",
+              "sides": "zijden"
+            }
+          },
+          "draw a square": {
+            "name": "teken een vierkant",
+            "parameters": {
+              "length": "lengte"
+            }
+          },
+          "draw a star": {
+            "description": "teken een ster met gegeven punten en zijden van gegeven lengte",
+            "name": "teken een ster",
+            "parameters": {
+              "length": "lengte",
+              "points": "punten"
+            }
+          },
+          "draw a triangle": {
+            "name": "teken een driehoek",
+            "parameters": {
+              "length": "lengte"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "FoodFight": {
@@ -742,6 +1008,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "bouw brug"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "bouw brug"
           }
@@ -842,6 +1113,11 @@
             "name": "pad leegmaken"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "pad leegmaken"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "repareer lang pad"
@@ -875,6 +1151,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "repareer lang pad"
+          },
+          "fix short path": {
+            "name": "repareer kort pad"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "repareer lang pad"
           },
@@ -922,6 +1206,14 @@
             "name": "bouw korte brug"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "bouw lange brug"
+          },
+          "build short bridge": {
+            "name": "bouw korte brug"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "functie 1"
@@ -962,6 +1254,57 @@
             "name": "functie 2"
           }
         },
+        "MC_HOC_2017_FP20x20_2023": {
+          "function 1": {
+            "name": "functie 1"
+          },
+          "function 2": {
+            "name": "functie 2"
+          }
+        },
+        "NEW Course 4 Artist Functions 11": {
+          "draw a line of  squares": {
+            "description": "teken 6 vierkanten achter elkaar",
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a square 20": {
+            "name": "teken een vierkant 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a square 20": {
+            "name": "teken een vierkant 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 14": {
+          "draw a line of squares": {
+            "description": "teken een lijn van vierkanten ",
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
+          },
+          "draw a square 40": {
+            "description": "Teken een vierkant met kanten van 40 lang",
+            "name": "teken een vierkant 40"
+          }
+        },
         "NEW Course 4 Artist Functions 3": {
           "draw a square": {
             "name": "teken een vierkant"
@@ -997,9 +1340,10 @@
         },
         "NEW Course 4 Artist Params 10": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a hexagon": {
+            "description": "teken een zeshoek van 100 pixels groot met een lengte-parameter",
             "name": "teken een zeskant",
             "parameters": {
               "length": "lengte"
@@ -1008,13 +1352,14 @@
         },
         "NEW Course 4 Artist Params 11": {
           "do something": {
-            "name": "do iets",
+            "name": "doe iets",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
             }
           },
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1023,6 +1368,8 @@
         },
         "NEW Course 4 Artist Params 12": {
           "draw a polygon": {
+            "description": "teken een veelhoek met zijden en lengte parameters",
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1031,6 +1378,8 @@
         },
         "NEW Course 4 Artist Params 12a": {
           "draw a polygon": {
+            "description": "teken een veelhoek met zijden en lengte parameters",
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1039,6 +1388,7 @@
         },
         "NEW Course 4 Artist Params 13": {
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1106,7 +1456,7 @@
         },
         "NEW Course 4 Artist Params 2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a triangle": {
             "description": "teken een driehoek",
@@ -1115,11 +1465,13 @@
         },
         "NEW Course 4 Artist Params 3": {
           "draw a triangle": {
+            "description": "teken een driehoek met kanten van 50 pixels",
             "name": "teken een driehoek"
           }
         },
         "NEW Course 4 Artist Params 4": {
           "draw a triangle with length": {
+            "name": "teken een driehoek met lengte",
             "parameters": {
               "length": "lengte"
             }
@@ -1127,6 +1479,8 @@
         },
         "NEW Course 4 Artist Params 5": {
           "draw a pentagon": {
+            "description": "teken een vijfhoek van 100 pixels",
+            "name": "teken een vijfhoek",
             "parameters": {
               "length": "lengte"
             }
@@ -1134,6 +1488,7 @@
         },
         "NEW Course 4 Artist Params 6": {
           "draw a hexagon": {
+            "description": "teken een zeshoek met kanten van 100 pixels",
             "name": "teken een zeskant",
             "parameters": {
               "length": "lengte"
@@ -1159,6 +1514,7 @@
         },
         "NEW Course 4 Artist Params 7": {
           "draw a triangle": {
+            "description": "teken een driehoek met een lengte parameter\n",
             "name": "teken een driehoek",
             "parameters": {
               "length": "lengte"
@@ -1167,6 +1523,7 @@
         },
         "NEW Course 4 Artist Params 8": {
           "draw a triangle with length": {
+            "name": "teken een driehoek met lengte",
             "parameters": {
               "length": "lengte"
             }
@@ -1174,7 +1531,7 @@
         },
         "NEW Course 4 Artist Params 9": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant",
@@ -1185,6 +1542,7 @@
         },
         "NEW Course 4 Artist Params inspire": {
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -1284,6 +1642,16 @@
             }
           }
         },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "teken hoofd"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "teken hoofd"
+          }
+        },
         "Standalone_Artist_7": {
           "draw a flower": {
             "name": "teken een bloem"
@@ -1311,22 +1679,22 @@
         },
         "course3_artist_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_bee_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course3_bee_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course4_artist_binary_challenge1": {
@@ -1345,17 +1713,22 @@
         },
         "course4_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "course4_artist_fwp_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "sides": "zijden"
             }
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
           },
           "draw background": {
             "parameters": {
@@ -1412,6 +1785,11 @@
             "name": "mogelijke oplossing"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "mogelijke oplossing"
+          }
+        },
         "courseC_artist_prog3": {
           "draw flame": {
             "parameters": {
@@ -1456,22 +1834,27 @@
         },
         "courseC_data wizard": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseC_data wizard_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          }
+        },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "doe iets"
           }
         },
         "courseD_artist_binary1": {
@@ -1791,7 +2174,7 @@
         },
         "courseE_artist_concept1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a hexagon": {
             "name": "teken een zeskant"
@@ -1803,53 +2186,106 @@
           }
         },
         "courseE_artist_concept4": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
           "draw a square": {
             "name": "teken een vierkant"
           }
         },
         "courseE_artist_concept4_2018": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
           "draw a square": {
             "name": "teken een vierkant"
           }
         },
         "courseE_artist_concept_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_concept_challenge1_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions10": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions102022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions10_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions10_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions10_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          }
+        },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "doe iets"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
           }
         },
         "courseE_artist_functions2": {
@@ -1878,6 +2314,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "teken een vierkant"
           }
@@ -1913,6 +2354,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "teken een ster"
           }
@@ -1962,6 +2408,11 @@
             "name": "teken een ster"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "teken een ster"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "teken een ster"
@@ -1989,37 +2440,84 @@
         },
         "courseE_artist_functions8": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8a2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2027,7 +2525,7 @@
         },
         "courseE_artist_functions8a_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2035,7 +2533,7 @@
         },
         "courseE_artist_functions8a_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2043,7 +2541,7 @@
         },
         "courseE_artist_functions8a_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2051,7 +2549,15 @@
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2059,102 +2565,273 @@
         },
         "courseE_artist_functions8b2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "doe iets"
+          },
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions9": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions92022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          }
+        },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "doe iets"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "teken een lijn van vierkanten"
+          },
+          "draw hexagon": {
+            "name": "teken zeshoek"
+          },
+          "draw line of hexagons": {
+            "name": "teken een lijn van zeshoeken"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge12022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge1_2020": {
@@ -2164,27 +2841,32 @@
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
+          "do something": {
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge22022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_challenge2_2020": {
@@ -2194,7 +2876,12 @@
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          }
+        },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict1": {
@@ -2227,6 +2914,11 @@
             "name": "teken een vierkant"
           }
         },
+        "courseE_artist_functions_predict1_2023": {
+          "draw a square": {
+            "name": "teken een vierkant"
+          }
+        },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "teken een vierkant"
@@ -2239,32 +2931,37 @@
         },
         "courseE_artist_functions_predict2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict22022": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2018": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2019": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2020": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_artist_functions_predict2_2021": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
+          "do something": {
+            "name": "doe iets"
           }
         },
         "courseE_bee_concept4": {
@@ -2274,7 +2971,7 @@
         },
         "courseE_bee_functions1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_bee_functions10": {
@@ -2299,27 +2996,27 @@
         },
         "courseE_bee_functions_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_bee_functions_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_concept3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_farmer_functions10b": {
@@ -2375,22 +3072,22 @@
         },
         "courseE_playLab_scaffold1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold3": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseE_playLab_scaffold4": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseF_apps_collector": {
@@ -2404,6 +3101,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "einde spel"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "einde spel"
           }
@@ -2426,7 +3128,7 @@
             }
           },
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant"
@@ -2450,7 +3152,7 @@
             }
           },
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a square": {
             "name": "teken een vierkant",
@@ -2493,6 +3195,8 @@
         },
         "courseF_artist_fwp4": {
           "draw a polygon": {
+            "description": "teken een veelhoek met zijden en lengte parameters",
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -2501,6 +3205,7 @@
         },
         "courseF_artist_fwp5": {
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "length": "lengte",
               "sides": "zijden"
@@ -2592,12 +3297,17 @@
         },
         "courseF_artist_fwp_challenge1": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           },
           "draw a polygon": {
+            "name": "teken een veelhoek",
             "parameters": {
               "sides": "zijden"
             }
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
           },
           "draw background": {
             "parameters": {
@@ -2607,7 +3317,11 @@
         },
         "courseF_artist_fwp_challenge2": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
+          },
+          "draw a square 20": {
+            "description": "teken een vierkant van 20 pixels",
+            "name": "teken een vierkant 20"
           },
           "draw an octagon": {
             "parameters": {
@@ -2617,7 +3331,7 @@
         },
         "courseF_bee_functions8a": {
           "do something": {
-            "name": "do iets"
+            "name": "doe iets"
           }
         },
         "courseF_bee_fwp4": {

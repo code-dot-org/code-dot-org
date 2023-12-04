@@ -37,6 +37,7 @@ mt:
         age: 'Età'
         gender: 'Sess'
         edit_header: 'Editja id-dettalji tal-Account'
+        finish_sign_up_header_error: 'Jekk jogħġbok ikkoreġu dawn l-iżbalji:'
         error:
           future: ma tistax tkun fil-futur
   beta: "verzjoni beta"
@@ -389,4 +390,3 @@ mt:
         male: 'Maskili'
         female: 'Femminili'
         none: 'Nippreferi li ma nwegiebx'
-

@@ -10,6 +10,10 @@ lv:
         options:
           UNIT:
             '"seconds"': sekundes
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -115,6 +119,11 @@ lv:
             '"color_cycle"': Krāsas
             '"disco"': Kvadrāti
       Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"color_cycle"': Krāsas
+            '"disco"': Kvadrāti
+      Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
             '"color_cycle"': Krāsas

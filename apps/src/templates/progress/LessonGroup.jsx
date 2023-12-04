@@ -12,6 +12,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {lessonIsVisible} from './progressHelpers';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -42,9 +43,9 @@ class LessonGroup extends React.Component {
 
   openLessonGroupInfoDialog = () => {
     /*
-    Because the info button is on the header which collapses when clicked we have to
-    reverse the collapsing when you click the info button
-    */
+        Because the info button is on the header which collapses when clicked we have to
+        reverse the collapsing when you click the info button
+        */
     this.setState({
       collapsed: !this.state.collapsed,
       lessonGroupInfoDialogOpen: true,
@@ -147,7 +148,7 @@ const styles = {
     padding: 20,
     backgroundColor: color.purple,
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: 'white',
     borderTopLeftRadius: 4,
     borderTopRightRadius: 4,

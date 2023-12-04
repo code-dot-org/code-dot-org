@@ -83,7 +83,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
     assert_nil attendance.enrollment
     assert attendance.save
-    assert_not_nil attendance.reload.enrollment
+    refute_nil attendance.reload.enrollment
     assert_equal enrollment.id, attendance.enrollment.id
   end
 
@@ -100,7 +100,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
   test 'resolve_enrollment' do
     teacher = create :teacher
-    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email
+    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email_for_enrollments
     attendance = create :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
 
     # by user id

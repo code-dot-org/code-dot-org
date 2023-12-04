@@ -123,11 +123,11 @@ class UserPermissionGranteeTest < ActiveSupport::TestCase
     assert user.workshop_organizer?
   end
 
-  test 'ai_chat_access?' do
+  test 'ai_tutor_access?' do
     user = create :teacher
-    refute user.ai_chat_access?
-    user.permission = UserPermission::AI_CHAT_ACCESS
-    assert user.ai_chat_access?
+    refute user.ai_tutor_access?
+    user.permission = UserPermission::AI_TUTOR_ACCESS
+    assert user.ai_tutor_access?
   end
 
   test 'grant admin permission logs to infrasecurity' do

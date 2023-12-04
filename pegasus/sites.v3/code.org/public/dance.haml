@@ -1,9 +1,7 @@
 ---
-theme: responsive
+title: Code a Dance Party!
+theme: responsive_full_width
 ---
-
-:ruby
-  @header["title"] = I18n.t(:hoc2018_dance_party_landing_title)
 
 :javascript
   window.pegasus = window.pegasus || {};
@@ -16,61 +14,54 @@ theme: responsive
 %link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
 %link{href: "/css/generated/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
-%link{href: "/shared/css/barlow-semi-condensed-font.css", rel: "stylesheet"}
-%link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/dance-styles.css", rel: "stylesheet"}
 
-%div{dir: language_dir_class}
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:dance_hero_heading)
+    %figure
+      %img{src: "/images/dance-hoc/dance-party-characters-banner.png", alt: ""}
 
-  - if DCDO.get("higher-power-promotion", false)
-    =view :dance_tutorial_section_higher_power
-  - else
-    =view :dance_tutorial_section
-    .dance-text-icon-container.desktop-only
-      %a.translate-link{href: "/translate/dance"}
-        .dance-translate-link-text
-          =I18n.t(:hoc2018_dance_party_subheading)
-        %i.fa.fa-chevron-right.dance-chevron-icon
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:dance_featuring_songs_by_short)
+    = view :"dance/featured_artists"
 
-  =view :dance_teacher_resources
+%section
+  .wrapper
+    %h2=hoc_s(:dance_choose_activity)
+    = view :"dance/dance_party_activities"
+    .centered{style: "margin-top: 3rem"}
+      %hr
+      %a.link-button.secondary.centered{href: CDO.studio_url("/catalog?marketingInitiative=hoc")}
+        =hoc_s(:call_to_action_explore_all_hoc_activities)
 
-  .dance-text-versions-container
-    !=I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'), markdown: true)
+%section#artist-list.bg-neutral-light
+  .wrapper.centered
+    %h2.heading-sm
+      =hoc_s(:dance_featuring_songs_by_long)
+    %p.body-three
+      - Homepage.get_dance_stars.each do |star|
+        = star
+        •
+      %span.and-more
+        = hoc_s(:dance_and_more)
 
-  =view :dance_sponsor_logo
+%section
+  .wrapper
+    %h2=hoc_s(:heading_featured_student_projects)
+    #student_dance_projects
 
-  %h2.dance-responsive-padding.add-margintop-between-sections= I18n.t(:hoc2018_dance_featured_student_creations_title)
-  #student_dance_projects
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:heading_start_hoc_with_videos)
+    = view :"dance/dance_inspirational_videos"
 
-  %h2.dance-responsive-padding= I18n.t(:hoc2018_dance_videos_section_heading)
-  .thumbnail-wrapper
-    .dance-videos.dance-clear-element
-      =view :dance_creativity_video
-      .col-50.dance-add-padding
-        .videothumbnail
-          .thumbnail-wrapper
-            %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank"}
-              %img.dance-thumbnail-tile-img{src:"/images/dance-hoc/dance_playlist_thumbnail.png"}
-            .dance-thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
-
-  .dance-videos.dance-clear-element
-    =view :dance_videos
-
-- if request.language == 'en'
-  %link{href: "/css/full-resource-block.css", rel: "stylesheet"}
-  %link{href: "/css/tools.css", rel: "stylesheet"}
-  %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
-  .full-resource-block{style: "margin-top: 20px;"}
-    %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
-      %img.full-resource-image{src: "/images/AFE-person-2019.jpg"}
-    .tutorial-info{style: "padding: 30px;"}
-      %span
-        %h2.resource-title Amazon Future Engineer
-        Amazon Future Engineer is a four-part, childhood-to-career program that aims to inspire and educate children and young adults from underserved and underrepresented communities to try computer science. Learn more at
-        %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
-          www.amazonfutureengineer.com
-
-
-  %br/
-  %br/
-
-  .amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)
+%section
+  .wrapper
+    = view :afe_partnership_block
+    %p.body-four.centered
+      =hoc_s(:dance_afe_disclaimer)

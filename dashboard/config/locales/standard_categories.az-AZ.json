@@ -47,8 +47,17 @@
         "CC": {
           "description": "Saymaq və Element sayı"
         },
+        "CD": {
+          "description": "Kompüterlər və Rabitə Cihazları"
+        },
         "CED": {
           "description": "Funksiyalar yaratmaq"
+        },
+        "CI": {
+          "description": "Cəmiyyət, Qlobal və Etik Təsirlər"
+        },
+        "CL": {
+          "description": "Əməkdaşlıq"
         },
         "CN": {
           "description": "Kompleks Ədədlər Sistemi"
@@ -59,20 +68,47 @@
         "CP": {
           "description": "Şərti Ehtimal və Ehtimalın qaydaları"
         },
+        "CPP": {
+          "description": "Hesablama Praktikası və Proqramlaşdırma"
+        },
         "CRD-2.C": {
           "description": "Proqrama giriş(lər)i müəyyən edin."
         },
         "CRD-2.E": {
           "description": "İnkişaf prosesindən istifadə edərək proqram hazırlayın."
         },
+        "CS": {
+          "description": "Hesablama sistemləri "
+        },
         "CT": {
           "description": "Hesablama təfəkkürü"
+        },
+        "D2.Civ": {
+          "description": "Vətəndaş"
+        },
+        "D2.Eco": {
+          "description": "İqtisadiyyat"
+        },
+        "D2.Geo": {
+          "description": "Coğrafiya"
         },
         "D2.His": {
           "description": "Tarix"
         },
+        "DA": {
+          "description": "Məlumat və analiz "
+        },
         "EE": {
           "description": "İfadələr və Bərabərliklər"
+        },
+        "ESS2": {
+          "description": "Yer sistemləri"
+        },
+        "ESS3": {
+          "description": "Yer və insan fəaliyyəti"
+        },
+        "ETS1": {
+          "description": "Mühəndis dizaynı"
         },
         "F": {
           "description": "Funksiyalar"
@@ -85,6 +121,9 @@
         },
         "GPE": {
           "description": "Həndəsi Xassələrin Tənliklərlə İfadə Edilməsi"
+        },
+        "IC": {
+          "description": "Hesablamanın təsirləri"
         },
         "ID": {
           "description": "Kateqorik və Kəmiyyət Məlumatlarının Şərh Edilməsi"
@@ -104,8 +143,20 @@
         "NF": {
           "description": "Ədəd və Hesablama Əməlləri - Fraksiyalar"
         },
+        "NI": {
+          "description": "Şəbəkələr və İnternet"
+        },
         "NS": {
           "description": "Say Sistemi"
+        },
+        "PS": {
+          "description": "Fizika Elmləri"
+        },
+        "PS1": {
+          "description": "Maddə və onun qarşılıqlı təsirləri"
+        },
+        "PS3": {
+          "description": "Enerji"
         },
         "Q": {
           "description": "Miqdarlar"
@@ -122,6 +173,9 @@
         "RST": {
           "description": "Elm/texniki oxumaq"
         },
+        "SL": {
+          "description": "Danışıq və dinləmə"
+        },
         "SP": {
           "description": "Statistika və Ehtimal"
         },
@@ -130,6 +184,9 @@
         },
         "TF": {
           "description": "Triqonometrik Funksiyalar"
+        },
+        "W": {
+          "description": "Yazı"
         }
       }
     }

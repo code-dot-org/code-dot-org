@@ -919,7 +919,7 @@ pt:
           matrizes'
         csa_row_major_traversal: 'CSA: Linha principal de travessia'
         csa_scanner_class_methods: 'CSA: Métodos de classe de scanner'
-        csa_searching_algorithms: 'CSA: Algoritmos de busca'
+        csa_searching_algorithms: 'CSA: Algoritmos de Busca'
         csa_software_engineering_code_reviews: 'CSA: Engenharia de software - Revisões
           de código'
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
@@ -980,9 +980,11 @@ pt:
         csd_gamelab_drawloop: Introdução ao Draw Loop
         csd_gamelab_functions: Chamando e Definindo Funções
         csd_gamelab_if_else: Declarações Se/Senão
+        csd_gamelab_sprites_1: Introdução aos Sprites
         csd_gamelab_velocity: Velocidade
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_ml_ethics_ai: 'Ética e IA '
+        csd_ml_how_ai_works: Como funciona a IA
         csd_ml_import_model: Importando um modelo de IA
         csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
         csd_ml_intro_to_ai_lab: Introdução ao AI Lab
@@ -996,14 +998,14 @@ pt:
         csd_u6_call_define_functions: 'CSD: Chamando e definindo funções'
         csd_u6_circuit_playground: Computação Física
         csd_u6_if_statements: 'CSD: Declarações If'
-        csd_u6_input_output: Entrada e saída
+        csd_u6_input_output: Entrada e Saída
         csd_u6_variables_part2: Variáveis - Parte 2
         csd_weblab_css_1: Introdução para CSS - Parte 1
         csd_weblab_css_2: Introdução para CSS - Parte 2
         csd_weblab_intro_1: Introdução para o Laboratório Web - Parte 1
         csd_weblab_intro_2: Introdução para o Laboratório Web - Parte 2
         csd_weblab_intro_3: Introdução para o Laboratório Web - Parte 3
-        csd_what_computers_are: O que é um computador?
+        csd_what_computers_are: O que é um Computador?
         csd_what_computers_do: O que os computadores fazem?
         csf21pilot_events: 'Sprite Lab: Sprites em ação'
         csf21pilot_prompts: 'Sprite Lab: texto e instruções'
@@ -1059,6 +1061,7 @@ pt:
         hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
         hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
         hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
         hoc_dance_congrats: Festa Dançante - Festejar!
         hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
         hoc_dance_events: Festa Dançante - Eventos
@@ -1069,6 +1072,9 @@ pt:
         hoc_dance_warmup: Festa Dançante - Aquecimento
         hoc_dance_warmup_2019: Dance Party 2019 - Aquecimento
         hoc_wrapup: Conclusão da Hora do Código
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem
+          Funcionam
         how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor
           aprovado'
         iceage_events: Hora do Código com A Era do Gelo - Eventos
@@ -1140,6 +1146,8 @@ pt:
         rough_poemart_events: v1Eventos de Arte de Poema
         rough_poemart_imagery: v1 Imagens de Arte de Poema
         rough_poemart_intro: v1 Introdução à Arte de Poema
+        se-cv-intro-to-lessons: 'Engenharia de Software e Visão Computacional: Introdução
+          às Lições'
         songwriting_with_functions: Lição offline em Ação - Composição de músicas
           com funções
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'

@@ -4,24 +4,24 @@ display_name 'Design Your Game'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Physical Computing - End of Chapter 1 Project
-## Lesson 10: Project:  Human Device Interaction
-**Estimated time: 20 minutes**
+# Creating Apps with Devices - End of Chapter 1 Project
+## Chapter 1 Project:  Human Device Interaction
 
-Physical Computing, Chapter 1 ends with Lesson 10 in which students develop an app of their own design that uses the Circuit Playground so it interacts with the physical environment around it.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
+> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/11" target="blank">U6AL11 Lesson Plan: Human Device Interaction</a>
+> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/10" target="blank">U6BL10 Lesson Plan: Human Device Interaction</a>
 
+##### Unit 6 - Creating Apps with Devices, Chapter 1 ends with a proejct in which students design an app  that uses their device to interact with the physical environment around it.  Students have the opportunity to show what they've learned throughout Chapter 1 (event handlers, using the Circuit Playground as output, etc).
 
-## Explore Physical Computing - Chapter 1 Project Resources
+## Explore Creating Apps with Devices - Chapter 1 Project Resources
 
-* Review the lesson plan, <a href="https://studio.code.org/s/csd6-2022/lessons/10" target="_blank">Lesson 10: Project - Human Device Interaction</a>
+* ##### Review the lesson plan of your choosing, linked above.
 
-	* Focus on the project resources included:
-    	* rubric
-        * CS practices reflection
-        * project guide
-        * sample marked rubrics
-        	* <a href="https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view" target="_blank">Unit 6 Chapter 1 Project student rubric</a> 
+	* ##### Focus on the project resources, including the:
+    	* ##### rubric
+        * ##### checklist
+        * ##### project guide
+        * ##### exemplars
 
-* Preview the code used to program the Circuit Playground required for this project.
+* ##### Preview the code required for this project.
 
 MARKDOWN

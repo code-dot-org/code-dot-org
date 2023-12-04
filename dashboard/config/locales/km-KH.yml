@@ -10,6 +10,7 @@ km:
         error:
           future: មិន​អាច​នៅ​ក្នុង​ថ្ងៃ​ក្រោយ
         finish_sign_up_header: បញ្ចប់ការបង្កើតគណនីរបស់អ្នក
+        finish_sign_up_header_error: សូមកែរនូវកំហុសដែលមានបន្តបន្ទាប់
         finish_sign_up_subheader: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
           Code.org សម្រាប់ <strong>%{email}</strong>។
         finish_sign_up_subheader_markdown: ចូរបំពេញព័ត៌មានខាងក្រោមដើម្បីបញ្ចប់ការបង្កើតគណនីមួយជាមួយ
@@ -31,6 +32,7 @@ km:
           បើសិនជាអត់ទាន់មានអាស័យដ្ឋានសារអេឡិចត្រូនិច)](%{url})
         reset_password_token: តំណភ្ជាប់សម្រាប់ការផ្លាស់ប្តូរលេខសម្ងាត់ដែលអ្នកបានធ្វើតាម
         us_state: រដ្ឋ​(សាលា)
+        user_type: ប្រភេទនៃគណនេយ្យ
         username: ឈ្មោះ​អ្នកប្រើ
         verified_teacher: គ្រូដែលបានផ្ទៀងផ្ទាត់
     errors:
@@ -215,6 +217,7 @@ km:
     thank_you: <a href="https://code.org/about/partners">
     tos: លក្ខខណ្ឌ
     tos_short: លក្ខខណ្ឌ
+    trademark: ចងចាំថាត្រូវឆ្ពោះទៅមុខរវាងរង្វិលជុំនីមួយៗ ដូច្នេះអ្នកទៅដល់ផ្កានីមួយៗ។
     translate: ជួយ​ពួក​យើង​ក្នុង​ការ​បកប្រែ​ទៅ​ភាសា​របស់​អ្នក
     try_hour_of_code: សាកល្បងរៀនជាមួយHour of Code!
   gender:
@@ -508,7 +511,7 @@ km:
     try_hoc: សាក​ល្បង Hour of Code សិន
   signin_form:
     login: អ៊ីម៉ែល
-    login_username: Email or Username
+    login_username: អ៊ីមែល ឬ ឈ្មោះ​អ្នក​ប្រើប្រាស់
     password: ពាក្យ​សម្ងាត់
     remember: ចងចាំ​ខ្ញុំ
     submit: ចូល​គណនី

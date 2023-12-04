@@ -10,11 +10,19 @@
           "No": "होइन",
           "Yes": "हो"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "होइन",
+          "Yes": "हो"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "होइन",
           "Yes": "हो"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "होइन",
+          "Yes": "हो"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "होइन",
           "Yes": "हो"
         },
@@ -30,11 +38,25 @@
           "Name": "नाम",
           "text": "text"
         },
+        "CSD U1 IO Story_2023": {
+          "City": "City",
+          "Color": "Color",
+          "Name": "नाम",
+          "text": "text"
+        },
         "CSD U1 processing guess_2021": {
           "text": "text"
         },
         "CSD U1 processing guess_2022": {
           "text": "text"
+        },
+        "CSD U1 processing guess_2023": {
+          "text": "text"
+        },
+        "CSD U1 processing live_2023": {
+          "cat": "cat",
+          "chicken": "chicken",
+          "dog": "dog"
         },
         "CSD U1 processing npark_2021": {
           "Sorry!": "माफ गर्नु होला "
@@ -42,10 +64,16 @@
         "CSD U1 processing npark_2022": {
           "Sorry!": "माफ गर्नु होला "
         },
+        "CSD U1 processing npark_2023": {
+          "Sorry!": "माफ गर्नु होला "
+        },
         "CSD U1 storage friends_2021": {
           "Back": "पछाडि"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "पछाडि"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "पछाडि"
         },
         "CSD U1 storage movies_2021": {
@@ -60,6 +88,12 @@
           "Yes": "हो",
           "text": "text"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "होइन",
+          "Star Wars": "Star Wars",
+          "Yes": "हो",
+          "text": "text"
+        },
         "CSD U1 storage outfit_2021": {
           "black": "कालो",
           "green": "हरियो"
@@ -68,8 +102,29 @@
           "black": "कालो",
           "green": "हरियो"
         },
+        "CSD U1 storage outfit_2023": {
+          "black": "कालो",
+          "green": "हरियो"
+        },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "उमेर",
+          "Name": "नाम"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "होइन",
+          "Yes": "हो"
+        },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "मध्यम"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "मध्यम"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "हरियो",
+          "left": "बाँया",
+          "red": "रातो",
+          "right": "दाँया"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "हरियो",
@@ -77,19 +132,43 @@
           "red": "रातो",
           "right": "दाँया"
         },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "बाँया",
+          "right": "दाँया"
+        },
         "CSD U6 - Combine Inputs - CA_2022": {
           "long": "long",
           "short": "short"
+        },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "long": "long",
+          "short": "short"
+        },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "बाँया",
+          "right": "दाँया"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "बाँया",
           "right": "दाँया"
         },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "निलो",
+          "green": "हरियो"
+        },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "निलो",
           "green": "हरियो"
         },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "long",
+          "short": "short"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
+          "long": "long",
+          "short": "short"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
           "long": "long",
           "short": "short"
         },
@@ -97,18 +176,54 @@
           "long": "long",
           "short": "short"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "long",
+          "short": "short"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "long",
           "short": "short"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-"
         },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
           "-": "-"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "नाम"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "नाम"
         },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "नाम"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "क ",
+          "B": "ख ",
+          "C": "ग ",
+          "D": "घ \n",
+          "E": "पू",
+          "F": "ङ",
+          "G": "च "
+        },
         "CSD U6 - Music - ChalD_2222": {
+          "A": "क ",
+          "B": "ख ",
+          "C": "ग ",
+          "D": "घ \n",
+          "E": "पू",
+          "F": "ङ",
+          "G": "च "
+        },
+        "CSD U6 - Music - Piano_2023": {
           "A": "क ",
           "B": "ख ",
           "C": "ग ",
@@ -126,7 +241,25 @@
           "F": "ङ",
           "G": "च "
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "क ",
+          "B": "ख ",
+          "C": "ग ",
+          "D": "घ \n",
+          "E": "पू",
+          "F": "ङ",
+          "G": "च "
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "क ",
+          "B": "ख ",
+          "C": "ग ",
+          "D": "घ \n",
+          "E": "पू",
+          "F": "ङ",
+          "G": "च "
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "क ",
           "B": "ख ",
           "C": "ग ",
@@ -144,6 +277,15 @@
           "F": "ङ",
           "G": "च "
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "क ",
+          "B": "ख ",
+          "C": "ग ",
+          "D": "घ \n",
+          "E": "पू",
+          "F": "ङ",
+          "G": "च "
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "क ",
           "B": "ख ",
@@ -153,23 +295,65 @@
           "F": "ङ",
           "G": "च "
         },
+        "CSD U6 - Physical Input - PA_2023": {
+          "Score": "Score"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "Score"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "Score": "Score"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Save": "सङ्ग्रह गर्नुहोस्"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
+          "Save": "सङ्ग्रह गर्नुहोस्"
+        },
+        "CSD U6 - Screen Inputs - P_mb2022": {
           "Save": "सङ्ग्रह गर्नुहोस्"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
           "black": "कालो"
         },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "कालो"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
+          "black": "कालो"
+        },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
           "black": "कालो"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "कालो"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "कालो"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "title"
         },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "title"
         },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "title"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "White": "White"
+        },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "White": "White"
+        },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "White": "White"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "तल",
+          "left": "बाँया",
+          "right": "दाँया",
+          "up": "माथि"
         },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "तल",
@@ -177,13 +361,37 @@
           "right": "दाँया",
           "up": "माथि"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "तल",
+          "left": "बाँया",
+          "right": "दाँया",
+          "up": "माथि"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "name"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "name"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "name"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "text": "text"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "text"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Update"
+        },
         "CSD U6 - Sensors - SB2_2222": {
+          "Update": "Update"
+        },
+        "CSD U6 - Sensors - SB2_mb2022": {
           "Update": "Update"
         },
         "CSD U6 analog light": {
@@ -534,6 +742,12 @@
           "F": "ङ",
           "G": "च "
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "पछाडि"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Reset"
+        },
         "allthethings design mode elements": {
           "text": "text"
         },
@@ -549,10 +763,16 @@
         "csd u5 recommender sample_2022": {
           "Start": "Start"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Start"
+        },
         "csd-apps for good-2": {
           "Next": "अर्को"
         },
         "csd-apps for good-2_2022": {
+          "Next": "अर्को"
+        },
+        "csd-apps for good-2_2023": {
           "Next": "अर्को"
         },
         "csd-explore ui-2": {
@@ -561,16 +781,25 @@
         "csd-explore ui-2_2022": {
           "Next": "अर्को"
         },
+        "csd-explore ui-2_2023": {
+          "Next": "अर्को"
+        },
         "csd-explore ui-4": {
           "Sorry!": "माफ गर्नु होला "
         },
         "csd-explore ui-4_2022": {
           "Sorry!": "माफ गर्नु होला "
         },
+        "csd-explore ui-4_2023": {
+          "Sorry!": "माफ गर्नु होला "
+        },
         "csd-explore ui-6": {
           "Next": "अर्को"
         },
         "csd-explore ui-6_2022": {
+          "Next": "अर्को"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "अर्को"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -581,10 +810,17 @@
           "Accepted": "Accepted",
           "Rejected": "फर्काइयो"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Accepted",
+          "Rejected": "फर्काइयो"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "अर्को"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "अर्को"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "अर्को"
         },
         "ml-customize-raspado-2021": {
@@ -595,11 +831,19 @@
           "no": "होइन",
           "yes": "हो"
         },
+        "ml-customize-raspado_2023": {
+          "no": "होइन",
+          "yes": "हो"
+        },
         "ml-intro ai lab- fruit veggie widget": {
           "Continue": "जारी राख्नुहोस्",
           "Loading...": "लोड हुदैछ..."
         },
         "ml-intro ai lab- fruit veggie widget_2022": {
+          "Continue": "जारी राख्नुहोस्",
+          "Loading...": "लोड हुदैछ..."
+        },
+        "ml-intro ai lab- fruit veggie widget_2023": {
           "Continue": "जारी राख्नुहोस्",
           "Loading...": "लोड हुदैछ..."
         },
@@ -615,10 +859,19 @@
           "no": "होइन",
           "yes": "हो"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "क ",
+          "W": "प",
+          "no": "होइन",
+          "yes": "हो"
+        },
         "ml-models in applab-choice intended warnings": {
           "Back": "पछाडि"
         },
         "ml-models in applab-choice intended warnings_2022": {
+          "Back": "पछाडि"
+        },
+        "ml-models in applab-choice intended warnings_2023": {
           "Back": "पछाडि"
         },
         "ml-models in applab-zoo assessment": {
@@ -631,6 +884,11 @@
           "No": "होइन",
           "Yes": "हो"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "ख ",
+          "No": "होइन",
+          "Yes": "हो"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "होइन",
           "Yes": "हो"
@@ -639,11 +897,19 @@
           "No": "होइन",
           "Yes": "हो"
         },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "होइन",
+          "Yes": "हो"
+        },
         "ml-use model card-example3A-2021": {
           "cloudy": "बादल लागेको",
           "night": "राति"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "बादल लागेको",
+          "night": "राति"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "बादल लागेको",
           "night": "राति"
         }

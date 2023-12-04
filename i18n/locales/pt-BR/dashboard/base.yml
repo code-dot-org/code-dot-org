@@ -52,7 +52,9 @@ pt:
         age: 'Idade'
         gender: 'Gênero'
         edit_header: 'Editar Detalhes da Conta'
+        ai_settings_header: 'Configurações de I.A.'
         finish_sign_up_header: 'Finalize a criação da sua conta'
+        finish_sign_up_header_error: 'Corrija os seguintes erros:'
         finish_sign_up_subheader: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Preencha as informações a seguir para concluir a criação da sua conta Code.org para **%{email}**.'
         finish_sign_up_subheader_provider: 'Preencha as informações a seguir para concluir a criação de uma conta do Code.org usando seu <strong>%{provider}</strong> para <strong>%{email}</strong>.'
@@ -60,6 +62,7 @@ pt:
         reset_password_token: "O link de redefinição de senha que você seguiu"
         error:
           future: não pode estar no futuro
+        user_type: 'Tipo de conta'
         us_state: 'Estado'
   beta: "beta"
   hello: "Olá, mundo!"
@@ -427,7 +430,7 @@ pt:
       playlab: 'Laboratório'
       playlab_k1: 'Laboratório de Jogos (Pré-leitor)'
       poetry: 'Poesia'
-      poetry_hoc: 'Arte poética'
+      poetry_hoc: 'Arte Poética'
       scratch: 'Scratch'
       sports: 'Esportes'
       spritelab: 'Laboratório de Sprite'
@@ -784,7 +787,7 @@ pt:
     playlab:
       image_alt: 'Uma colagem de imagens mostrando um gato azul, um cachorro pateta e uma doninha pré-histórica.'
     poem-art:
-      title: 'Arte poética'
+      title: 'Arte Poética'
       body: 'Expresse-se! Use código para criar poemas animados.'
       image_alt: 'Uma lula hipster se apresentando em um palco.'
     pre-express-2017:
@@ -1257,7 +1260,7 @@ pt:
     not_now: "Agora não"
   behaviors:
     this_sprite: "este personagem"
-  unit_prefix: "Unidade 1"
+  unit_prefix: "Unidade  %{n}"
   code_org_logo_alt: "Code.org Home"
   teacher_feedback: "Feedback do Professor"
   lesson_lock:
@@ -1286,4 +1289,3 @@ pt:
     binary: "Binário"
     hexadecimal: "Hexadecimal"
     pixel_format_header: "Formato de pixel"
-

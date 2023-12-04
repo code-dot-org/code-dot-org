@@ -2,10 +2,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
 Parameters:
+  # ---------------------------------------------
+  # Domain Names - Each Stack operates 5 sites (examples are for production):
+  # 1) Learning Platform ("Dashboard") - https://studio.code.org
+  # 2) Corporate Website ("Pegasus") - https://code.org
+  # 3) Advocacy Website (runs on Pegasus) - https://advocacy.code.org
+  # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
+  # 5) Code Projects (host user created content) - https://codeprojects.org
+  # ---------------------------------------------
   BaseDomainName:
     Type: String
     Default: code.org
-    Description: Base domain name.
+    Description: Base domain name for primary learning platform and corporate web site.
   DashboardSubdomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
@@ -14,6 +22,19 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
+  HourOfCodeBaseDomainName:
+    Type: String
+    Default: hourofcode.com
+    Description: Hour Of Code base domain name.
+  HourOfCodeHostedZoneId:
+    Type: String
+    # Default to ID for `hourofcode.com`
+    Default: Z3TQLAV9VNIB0G
+    Description: Route 53 Hosted Zone ID for Hour of Code base domain name.
+  HourOfCodeSubdomainName:
+    Type: String
+    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
+    Description: Subdomain name for Hour Of Code site.
   InstanceType:
     Type: String
     Default: <%=INSTANCE_TYPE%>
@@ -44,6 +65,31 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
+
+  HourOfCodeCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+<% if rack_env?(:production) -%>
+      DomainName: !Sub "${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% else -%>
+      DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      SubjectAlternativeNames:
+        - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
+          HostedZoneId: !Ref HourOfCodeHostedZoneId
+<% end -%>
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
@@ -213,12 +259,21 @@ Resources:
       LoadBalancerArn: !Ref ALB
       Port: 443
       Protocol: HTTPS
+      # Default certificate. Even though the datatype of the Certificates Property is Array, there can only be one.
       Certificates:
       - CertificateArn: <%=certificate_arn%>
       SslPolicy: ELBSecurityPolicy-2016-08
       DefaultActions:
       - Type: forward
         TargetGroupArn: !Ref ALBTargetGroup
+  # Full list of certificates used by the Listener for Viewers that support SNI.xl
+  HTTPSListenerCertificates:
+      Type: AWS::ElasticLoadBalancingV2::ListenerCertificate
+      Properties:
+        Certificates:
+          - CertificateArn: <%=certificate_arn%>
+          - CertificateArn: !Ref HourOfCodeCertificate
+        ListenerArn: !GetAtt HTTPSListener.ListenerArn
 
   ALBTargetGroup:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
@@ -510,6 +565,7 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
+      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
@@ -521,11 +577,15 @@ Resources:
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
         <%
-          # Most of our instances use 64-gigabyte volumes, but we want to use a
-          # slightly larger one for production and a larger one still for test.
+          # Historically, our instances have used 64-gigabyte volumes. That's
+          # smaller than we'd like, but updating the volume size requires
+          # recreating the whole stack. We have been gradually rolling out
+          # updates on a per-environment basis, with the goal of eventually
+          # upgrading everything to 256.
           default_volume_size = 64
           volume_size_overrides = {
-            production: 128,
+            production: 256,
+            staging: 256,
             test: 256
           }
         %>
@@ -538,7 +598,7 @@ Resources:
           #!/bin/bash -x
           <%=indent(erb_file(BOOTSTRAP_CHEF,
             resource_id: daemon,
-            node_name: '$STACK',
+            node_name: frontends ? '$ENVIRONMENT-daemon' : '$STACK',
             run_list: CDO.chef_local_mode ? ['recipe[cdo-apps]', 'recipe[cdo-home-ubuntu]'] : ['role[daemon]'],
             commit: nil, # track branch
             daemon: true
@@ -580,6 +640,7 @@ Resources:
     DeletionPolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
+      # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref ConsoleInstanceType
       IamInstanceProfile: !Ref FrontendInstanceProfile
@@ -589,7 +650,7 @@ Resources:
         - {Key: Name, Value: <%=environment%>-console}
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
-          Ebs: {VolumeSize: 64, VolumeType: gp2}
+          Ebs: {VolumeSize: 256, VolumeType: gp2}
       UserData:
         Fn::Base64: !Sub |
           #!/bin/bash -x

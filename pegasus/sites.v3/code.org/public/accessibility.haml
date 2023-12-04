@@ -35,7 +35,7 @@ theme: responsive_full_width
           .text-wrapper
             %h3.heading-sm
               =hoc_s("accessibility_efforts_card_title_#{index + 1}")
-            %p.body-three
+            %p.body-three.has-external-link
               - if index == 1
                 =hoc_s(:accessibility_efforts_card_desc_2, markdown: :inline, locals: {voluntary_url: "https://www.section508.gov/sell/vpat/"})
               - elsif index == 3
@@ -50,7 +50,7 @@ theme: responsive_full_width
       %img{src: "/images/accessibility/explore.jpg", alt: hoc_s(:accessibility_explore_title), class: "col-50"}
       .text-wrapper.col-50
         %p.heading-sm=hoc_s(:accessibility_explore_text)
-        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
+        %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", class: "link-button has-external-link", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_explore_title")}}
           =hoc_s(:accessibility_explore_button)
     .clear
 
@@ -59,7 +59,7 @@ theme: responsive_full_width
     .text-wrapper
       %h2=hoc_s(:accessibility_help_us_title)
       %p=hoc_s(:accessibility_help_us_text)
-      %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_help_us_title")}}
+      %a{href: "https://support.code.org/hc/en-us/sections/15186591538957-Accessibility", target: "_blank", class: "link-button has-external-link", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_help_us_title")}}
         =hoc_s(:accessibility_help_us_button)
 
 %section.accessibility-commit
@@ -94,5 +94,5 @@ theme: responsive_full_width
               =accessibility_partner_levels[index]
             %p=hoc_s("accessibility_card_text_#{index + 1}")
           .content-footer
-            %a.link-button{href: accessibility_partner_links[index], target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_card_title_#{index + 1}")}}
+            %a.link-button.has-external-link{href: accessibility_partner_links[index], target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s("accessibility_card_title_#{index + 1}")}}
               = hoc_s(:call_to_action_learn_more)

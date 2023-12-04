@@ -1,4 +1,14 @@
 {
+  "aichatWorkspaceHeader": "KI-Chat",
+  "allMessagesSentAreRecorded": "Alle an KI Chat gesendeten Nachrichten werden aufgezeichnet.",
+  "anythingPersonalCanNotBeSubmitted": "Um Ihre Privatsphäre zu schützen, sollten keine personenbezogenen Daten (Name, Telefonnummer, Adresse usw.) an den KI-Chat übermittelt werden.",
   "continue": "Weiter",
-  "waitingForChatResponse": "Warte auf eine Antwort..."
+  "inappropriateMessagesAreFlagged": "Unangemessene Nachrichten werden gekennzeichnet und dein Lehrer wird benachrichtigt.",
+  "inappropriateUserMessage": "Diese Nachricht wurde als unangemessen gekennzeichnet.",
+  "tooPersonalUserMessage": "Diese Nachricht wurde als zu persönlich gekennzeichnet.",
+  "userChatMessagePlaceholder": "Eine Chat-Nachricht hinzufügen...",
+  "waitingForChatResponse": "Warte auf eine Antwort...",
+  "warningModalHeader": "Denken Sie daran, verantwortungsbewusst zu chatten!",
+  "warningModalOkButtonText": "Beginne zu chatten",
+  "whatIsPersonalInformation": "Was gilt als persönliche Information?"
 }

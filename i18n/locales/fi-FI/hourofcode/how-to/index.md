@@ -1,37 +1,37 @@
 ---
-title: Hour of Code How-to Guide
+title: Hour of Code -opas
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### Liity liikkeeseen ja esittele oppilaasi tietojenkäsittelytieteeseen näiden vaiheiden avulla.
 
-Students today should learn how to create technology, not just use it.
+Nykypäivän opiskelijoiden tulisi oppia luomaan tekniikkaa, ei vain käyttämään sitä.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time! Find an activity that fits your setting, whether in-class or after-school, in-person or virtual. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}) after checking out the steps below:
+Hour of Code -kokeilu on yksinkertainen ja hauska tapa esitellä opiskelijat tietojenkäsittelytieteeseen, ehkä ensimmäistä kertaa! Etsi aktiviteetti, joka sopii asetukseesi, joko luokassa tai koulun jälkeen, henkilökohtaisesti tai virtuaalisesti. Tutustu [osallistumisoppaaseemme, jos sinulla on vielä kysyttävää alla olevien vaiheiden tarkistamisen]({{ localized_files/participation_guide }}) jälkeen:
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Katso Hour of Code -ohjevideo](#how-to-video)
+- [Tutustu aktiviteetteihin ja opetusohjelmiin](#explore-activities)
+- [Luo päiväsi suunnitelma](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
-- [Other Hour of Code resources for educators](#other-resources)
+- [Kuinka aloittaa Hour of Code -tunnuksesi vahvana](#how-to-start)
+- [Hanki koodaus](#code)
+- [Juhli oppilaidesi menestystä](#celebrate)
+- [Muut Hour of Code -resurssit opettajille](#other-resources)
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+## 1. Katso Hour of Code -ohjevideo <iframe width="500" height="255" src="https://www.youtube-nocookie.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Tutustu aktiviteetteihin ja opetusohjelmiin
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -43,7 +43,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Luo päiväsi suunnitelma
 
 ### Think about your technology needs - computers are optional!
 
@@ -56,13 +56,13 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 5-11) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+Ihmiset ympäri maailmaa osallistuvat Hour of Code -juhlaan CS Education Week -viikolla (5.-11. Joulukuuta), kun uusimmat opetusohjelmat ja aktiviteetit julkaistaan. But you can do an Hour of Code any day of the year!
 
 * * *
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Mainosta Hour of Code
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -72,11 +72,11 @@ Promote the Hour of Code to other teachers who may want to join in on the fun! T
 
 ### Let Volunteers Know by Registering Your Event
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
+Kun [rekisteröidyt Hour of Code -tapahtumaan](/events), saat hyödyllisiä sähköpostiviestejä, joissa on uutisia ja vinkkejä onnistuneen Hour of Code -tapahtuman järjestämiseen. It’s also how you can let local volunteers know your school is participating. Volunteers are a great resource and can come speak to your class about computer science or simply help your students with Hour of Code activities.
 
 ### Get your Students Excited
 
-Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Or print inspirational posters for your classroom! Students are more excited to participate in a subject when they see people who look like them encouraging it.
+Lead up to the event by sharing [inspirational videos](/promote/resources) highlighting diverse people and creative ways that computer science can be used. Tai tulosta inspiroivia julisteita luokkahuoneeseesi! Students are more excited to participate in a subject when they see people who look like them encouraging it.
 
 {{ promote_new_posters }}
 
@@ -86,7 +86,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Kuinka aloittaa Hour of Code -tunnuksesi vahvana
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -97,21 +97,21 @@ Show an inspirational video:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+On okei, jos sekä sinä että opiskelijat olette aivan uusia tietojenkäsittelytieteessä. Tässä on joitain ideoita, joiden avulla voit esitellä Hour of Code -toimintasi:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - As a class, list things that use code in everyday life.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Katso [täältä vinkkejä nuorten naisten kiinnostamiseen tietotekniikasta]({{ urls/girls }}).
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Hanki koodaus!
 
 Direct students to the activity
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}).
+- Kirjoita opetusohjelman linkki taululle. Etsi linkki, joka on lueteltu valitsemasi opetusohjelman []({{ urls/learn }})tiedoista.
 
 When your students come across difficulties it's okay to respond:
 
@@ -128,7 +128,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Juhli oppilaidesi menestystä
 
 [col-33]
 
@@ -136,7 +136,7 @@ What if a student finishes early?
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Tulosta todist]({{ urls/certificates }}) ukset opiskelijoillesi.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - Jaa kuvia ja videoita sinun koodaustunnistasi sosiaalisessa mediassa. Kaytä #HourOfCode ja @codeorg jotta voimme korostaa sinun onnistumista, myös!
 
@@ -147,10 +147,10 @@ What if a student finishes early?
 ## Muut koodaustunti resurssit opettajille:
 
 - Visit the [Hour of Code Teacher Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other educators.
-- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Tutustu H [our of Code -usein kysyttyihin kysymyksiin](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ### Mitä koodaustunnin jälkeen?
 
-Computer science doesn’t have to end with the Hour of Code! [Learn how](/beyond) to bring CS to your school and students.
+Tietojenkäsittelytieteen ei tarvitse päättyä Hour of Code -tapahtumaan! [Opi](/beyond) tuomaan CS koulullesi ja oppilaillesi.
 
 {{ signup_button }}

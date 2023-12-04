@@ -38,6 +38,7 @@ hy:
         age: 'Տարիք'
         gender: 'Սեռ'
         edit_header: 'Խմբագրել Հաշիվը Մանրամասներ'
+        finish_sign_up_header_error: 'Խնդրում ենք ուղղել հետեւյալ սխալներ:'
         error:
           future: հակում է լինի ապագայում
   beta: "բետա"
@@ -646,4 +647,3 @@ hy:
   copy: 'պատճեն'
   pixelation:
     binary: "երկուական"
-

@@ -46,7 +46,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
-**Show an inspirational video:**
+**Aurkeztu bideo inspirazio bat:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)
@@ -73,7 +73,7 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 - [Print certificates]({{ urls/certificates }}) for your students.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
-- [Order custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for participants.
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
 - Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 ## Other Hour of Code resources for educators

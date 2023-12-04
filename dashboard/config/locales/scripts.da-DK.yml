@@ -884,6 +884,8 @@ da:
           description: Overskrid den første time med udvidede projektideer.
           student_description: Overskrid den første time med udvidede projektideer.
           title: Bliv ved med at danse
+        dance-unplugged:
+          title: Dansefest unplugged
         dlp19-csd-mod-fit:
           lesson_groups:
             required:
@@ -1120,7 +1122,6 @@ da:
           description_short: Udforsk en Minecraft-verden gennem kode
           student_description: Brug kodeblokke til at lede Steve eller Alex gennem
             et eventyr i denne Minecraft-verden.
-          title: Minecraft Hour of Code
         minecraft:
           description: Programmer dyr og andre Minecraft-væsner i din egen udgave
             af Minecraft.
@@ -1128,6 +1129,7 @@ da:
             af Minecraft.
           student_description: Programmer dyr og andre Minecraft-væsner i din egen
             udgave af Minecraft.
+          title: Minecraft Designer
         netsim:
           title: Internet Simulator
         nevada-standards-aligned-fifth-grade-2023:
@@ -1322,9 +1324,24 @@ da:
           description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           student_description: Et udvalg af øvelser med 4 niveauer til brugervenlighedstest.
           title: Usability test
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduktion
+          lessons:
+            lesson-7:
+              name: Introduktion
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduktion
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduktion
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduktion
         virustest:
           description_short: 'Brug Sprite Lab til at oprette en simulation ud af et

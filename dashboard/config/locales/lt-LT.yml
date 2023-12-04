@@ -9,6 +9,7 @@ lt:
         email: El. paštas
         error:
           future: negali būti ateitis
+        finish_sign_up_header_error: 'Ištaisyk šias klaidas:'
         gender: Lytis
         locale: Kalba
         name: Tavo vardas
@@ -16,6 +17,7 @@ lt:
         password: Slaptažodis
         password_confirmation: Slaptažodžio patvirtinimas
         us_state: Valstija
+        user_type: Paskyros tipas
         username: Naudotojo vardas
     errors:
       messages:

@@ -4,12 +4,14 @@ it:
     attributes:
       user:
         age: Età
+        ai_settings_header: Impostazioni IA
         current_password: Password attuale
         edit_header: Modifica i dettagli dell'account
         email: Indirizzo email
         error:
           future: non può essere in futuro
         finish_sign_up_header: Completa la creazione del tuo account
+        finish_sign_up_header_error: 'Per favore correggi i seguenti errori:'
         finish_sign_up_subheader: Compila i seguenti dati per terminare la creazione
           del tuo account Code.org per <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Compila i seguenti dati per terminare la
@@ -33,6 +35,7 @@ it:
         reset_password_token: Il link per la reimpostazione della password che hai
           usato
         us_state: Stato
+        user_type: Tipo di account
         username: Nome utente
         verified_teacher: Insegnante Verificato
     errors:
@@ -164,8 +167,8 @@ it:
       collections: Collezioni
       csa_labs: Laboratori CSA
       csc: Informatica interdisciplinare
-      csf: Corsi base
-      express: Esprimi
+      csf: Fondamenti di informatica
+      express: Corsi rapidi
       favorites: Preferiti
       hello_world: Ciao mondo
       labs_and_skills: Laboratori e competenze
@@ -583,11 +586,11 @@ it:
       documentation: Documentazione
       educate_beyond: Dopo Code.org
       educate_community: Comunità Online
-      educate_elementary: Scuola elementare
-      educate_high: Scuola superiore
+      educate_elementary: Scuola primaria
+      educate_high: Scuola secondaria di secondo grado
       educate_hoc: L'Ora del Codice
       educate_inspire: Ispira uno studente
-      educate_middle: Scuola media
+      educate_middle: Scuola secondaria di primo grado
       educate_overview: Panoramica dei corsi
       educate_partner: Collabora con noi
       educate_requirements: Requisiti Tecnici
@@ -827,7 +830,7 @@ it:
         csd: Alla scoperta dell'informatica
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csp: Principi di informatica
+        csp: Princìpi di informatica
         not_applicable: Non applicabile
         other: Altro
     form_labels:

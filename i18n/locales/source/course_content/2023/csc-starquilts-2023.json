@@ -1,0 +1,137 @@
+{
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/1/levels/2": {
+    "dsls": {
+      "markdown": "##Plan Your Star Quilt\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png\" />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>It's time to plan your star quilt.</strong>\n</h4>\n\n>First you will select four different colors and fill in your Star Quilt. Then you'll do some more activities with patterns.\n\n**Ready to get started?** Use <a href=\"https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview\" target=\"_blank\">this resource</a>.\n\n\n</div>\n\n\n"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/2": {
+    "short_instructions": "Code the artist to draw a rhombus stamp with your choice of color. ",
+    "long_instructions": "<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/06a8b602b8991cbbc8f0bd416a71340e-image-1681764440052.47.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n**Use a rhombus stamp**\n\n-   Drag the <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block and snap it under the <code style=\"color:black; background-color:#FFBD46\">when run</code> block.\n-   Use the drop down menu to select a rhombus color.\n-   Click run to test your code and then click finish to move on to the next level."
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/3": {
+    "short_instructions": "Code the artist to place another rhombus shape to the right of the existing one, making sure to use the correct angle measurement.",
+    "long_instructions": "**Place another rhombus shape next to the existing one.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/e4dfaffd86ff224e99402ad8960d916f-image-1681764629926.49.16 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus"
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/4": {
+    "short_instructions": "Code the artist to repeat the pattern to create a 6-point star.",
+    "long_instructions": "**Repeat this pattern to create a 6 point star.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/6a511e7bc29e77fe57c52c3763a6ece7-image-1681764668704.50.11 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right by</code> block to get in the correct position for the next rhombus\n-   Use the drop down menu to select the correct angle measurement\n-   Then, use a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block to create your next rhombus\n-   Repeat until you have a 6-point star"
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/6": {
+    "short_instructions": "Experiment with the turn block in your code to create a 4-point star.",
+    "long_instructions": "**Experiment with the turn block in your code to create a 4 point star.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/d41506d78eef114f1badb99b9bb99d52-image-1649479710971.48.27 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Modify the angle of the turn block to find the correct angle for a four point star. \n-   How many times should your loop repeat?",
+    "authored_hints": {
+      "hint1": "This is the chunk of code that repeats: \n[blockly block][0]",
+      "hint2": "Put the chunk of code into a loop block: \n\n[blockly block][0]",
+      "hint3": "How many times does the pattern repeat? \n4 times. \n\nPut the number 4 in the number field of the loop block. \n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/7": {
+    "short_instructions": "Experiment with the angle in the turn block in your code to create a 12-point star.",
+    "long_instructions": "**Can you make a 12 point star?**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/4552aa081b4bdee39efaabcf7356cf4f-image-1649479860235.50.55 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Modify the angle of the turn block to find the correct angle for a 12 point star. \n-   How many times should your loop repeat?",
+    "authored_hints": {
+      "hint1": "Put the number `12` in the number field of the loop block. \nChange the `turn right` block to 30 degrees.\n\n[blockly block][0]"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/2/levels/8": {
+    "short_instructions": "Experiment with colors, angles, and loops to draw your own awesome star shape!",
+    "long_instructions": "_Draw an awesome star shape! Make it your own by experimenting with colors, angles and looping._\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/3c88a975a9c71b75221c6e0ba8433d96-image-1681766663084.20.41 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/62f7f872cc51c09f8fda4d57b1dfc5b4-image-1681766683472.20.47 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/095bf15e224af76829dd488875e64c5c-image-1681766694663.19.10 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/e3c3ffae1c9acd779cf31a5b018b418d-image-1681766701926.20.05 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/50426267bfcdcb46bd3243182d56f0e5-image-1681766752647.16.10 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>",
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/1": {
+    "short_instructions": "First, let's practice using comments in our code.",
+    "long_instructions": "Keep your code organized by always using the comment block first. \n\n-   Drag a the <code style=\"color:black; background-color:#c9c9c9\">comment</code> block and snap it under <code style=\"color:black; background-color:#FFBD46\">when run</code>\n-   Drag the <code style=\"color:black; background-color:#E4CBE6\">set length to 35</code> block and snap it under your <code style=\"color:black; background-color:#c9c9c9\">comment</code>\n-   Click Finish\n\nNote: Nothing will happen yet and that's ok! We're getting our code organized. ",
+    "authored_hints": {
+      "hint1": "Your code should look like this: \n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/2": {
+    "short_instructions": "Code Row 1 to add the first rhombus shape. There will be a total of 5 Rows to make 1-point of a larger 8-point star.",
+    "long_instructions": "**Make the first row of one point of your star.**\n\nThere will be 5 rows in all to complete one point of your 8-point star. \n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/ba5c12d7a9b393722dc4f38a17cc6cd1-image-1649476785659.59.38 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Drag a new <code style=\"color:black; background-color:#c9c9c9\">comment</code> block to start Row 1\n-   Drag a <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block and snap it under your <code style=\"color:black; background-color:#c9c9c9\">comment</code> block ",
+    "authored_hints": {
+      "hing1": "Your code should look like this: \n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/3": {
+    "short_instructions": "Code Row 2 to have your artist draw two more rhombus shapes above Row 1.",
+    "long_instructions": "**Let’s move on to Row 2** \n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/f2554464b2f58942368b3ffee50e3be8-image-1649371239864.40.36 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Add a new <code style=\"color:black; background-color:#c9c9c9\">comment</code> block for \"Row 2\"\n-   The Artist needs to jump <code style=\"color:black; background-color:#61d19d\">diagonalRight</code> \n-   Add a new <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block\n-   Then use the <code style=\"color:black; background-color:#61d19d\">bumpLeft</code> block to nudge the Artist over\n-   Add another <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block",
+    "authored_hints": {
+      "finished code": "Your finished code should look like this [blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/4": {
+    "short_instructions": "Code Row 3 to add three more rhombus shapes above Row 2. ",
+    "long_instructions": "**Time to make Row 3**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/4d91d7110f590dbfa60bbd1cab7cf3be-image-1649477100014.04.04 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Start with a \"Row 3\" <code style=\"color:black; background-color:#c9c9c9\">comment</code> block \n-   Have the Artist jump <code style=\"color:black; background-color:#61d19d\">diagonalLeft</code>\n-   Then, add a new <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block\n-   Have the Artist <code style=\"color:black; background-color:#61d19d\">bumpRight</code> \n-   Make another rhombus\n-   Then, <code style=\"color:black; background-color:#61d19d\">bumpRight</code> again\n-   Make your last rhombus of this row",
+    "authored_hints": {
+      "hint1": "Your code should look like this: \n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/5": {
+    "short_instructions": "Code Row 4 to add two rhombus shapes above Row 3. ",
+    "long_instructions": "**We're getting close! Draw the next row.**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/e8851b7865fb3c8ef8f998a08a41603b-image-1649477249523.07.25 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Start with a \"Row 4\" <code style=\"color:black; background-color:#c9c9c9\">comment</code> block \n-   Have the Artist jump <code style=\"color:black; background-color:#61d19d\">diagonalLeft</code>\n-   Add a new <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block \n-   Nudge the Artist over with <code style=\"color:black; background-color:#61d19d\">bumpLeft</code>\n-   Add another <code style=\"color:black; background-color:#5ED5DD\">draw shape</code> block",
+    "authored_hints": {
+      "hint1": "Your code should look like this:\n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/6": {
+    "short_instructions": "Code the final Row 5 to the last rhombus shape above Row 4. ",
+    "long_instructions": "**Finally time for Row 5!**\n\n<div style=\"float:right;padding:20px\">\n<img src=\"https://images.code.org/6eb1b6e0414be4267f8c57f1da0042a9-image-1649477364299.09.21 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\n<p style=\"text-align: center\">\nexample\n</p>\n</div>\n\n-   Start with a \"Row 5\" <code style=\"color:black; background-color:#c9c9c9\">comment</code> block\n-   Make the Artist jump <code style=\"color:black; background-color:#61d19d\">diagonalRight</code> \n-   Draw your final rhombus shape\n-   Last, <code style=\"color:black; background-color:#5ED5DD\">jump to middle center</code> to get the Artist back in starting position",
+    "authored_hints": {
+      "hint1": "Your code should look like this: \n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/8": {
+    "short_instructions": "Code the 8-point Star Quilt using the repeat block with the chunk of code that needs to be repeated!",
+    "long_instructions": "**Let's make an 8-point Star Quilt!**\n\n-   Use the <code style=\"color:black; background-color:#5ED5DD\">turn right</code> block and set it to <code style=\"color:black; background-color:#D1BDE8\">45</code> degrees to get the artist ready for the next point of the star. \n-   Which chunk of code needs to be repeated to complete the star quilt?\n-   Use the <code style=\"color:black; background-color:#FD9EFD\">repeat</code> block to complete your star quilt. (How many times should this pattern repeat?)",
+    "authored_hints": {
+      "hint1": "Your code should look like this: \n[blockly block][0]"
+    },
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  },
+  "https://studio.code.org/s/csc-starquilts-2023/lessons/3/levels/9": {
+    "short_instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
+    "long_instructions": "**Free Play: Now it’s your turn to customize your star quilt.** \n\nYou could:\n\n-   Change the color pattern of your quilt\n-   Make more or less points using different rhombuses with different angles ",
+    "callouts": {
+      "New Artist Project_callout1": "Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program",
+      "New Artist Project_callout2": "Hit \"Run\" to save and run your program",
+      "sign_in_to_save_project": "Want to access your project later? Sign in to save this project to your account!"
+    }
+  }
+}

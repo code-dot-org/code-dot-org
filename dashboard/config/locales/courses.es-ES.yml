@@ -327,17 +327,22 @@ es:
           version_title: 23-24
         focus-on-coding-2023:
           title: Centrarse en la Codificación
+          version_title: 23-24
         focus-on-creativity-2023:
           title: Centrarse en la Creatividad
           version_title: 23-24
         focus-on-data-2023:
           title: Centrarse en los Datos
+          version_title: 23-24
         focus-on-design-with-purpose-2023:
           title: Centrarse en el Diseño con Finalidad
+          version_title: 23-24
         focus-on-hardware-2023:
           title: Centrarse en el Hardware
+          version_title: 23-24
         focus-on-impact-in-society-2023:
           title: Centrarse en el Impacto Social
+          version_title: 23-24
         mike-test:
           title: Fundamentos de la informatica
         pl-csd-summer-2023:
@@ -354,6 +359,29 @@ es:
             empatía por la experiencia de los estudiantes. \n-   Formar parte de una
             red de educadores que realizan un trabajo similar."
           title: Taller de verano - Descubrimientos de Informática
+        self-paced-pl-aiml-2023:
+          description_student: |-
+            ## Bienvenido
+
+            ¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.
+
+            ### Encuentra la formación que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado.
+          description_teacher: |-
+            ## Bienvenido
+
+            ¡Bienvenido al aprendizaje en línea gratuito de Code.org dirigido a educadores que deseen empezar a enseñar con Code.org! Después de completar esta experiencia de aprendizaje profesional, **estarás preparado para empezar a enseñar la Unidad de Creación de AI y Aprendizaje Automatizado** de Code.org con tus alumnos.
+
+            ### Encuentra la formación que funciona para ti
+
+            -   **Ve a tu propio ritmo:** Esta experiencia de aprendizaje autodidacta está diseñada para darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada lección.  Sin embargo, te animamos a **interactuar con el contenido a tu propio ritmo.**
+
+            -   **Elige tu contenido:** El contenido está organizado en la progresión sugerida para los educadores nuevos tanto en Code.org como en la unidad de Creación de AI y Aprendizaje Automatizado. Si ya está familiarizado con la plataforma Code.org, puedes saltarte la Introducción a Code.org y pasar directamente a la Preparación para Enseñar a crear AI y Aprendizaje Automatizado.
+          title: 'Preparación para la Enseñanza de Inteligencia Artificial y Aprendizaje
+            Automático '
         self-paced-pl-csa-2022:
           title: autodidáctico-pl-csa
           version_title: 22-23
@@ -428,6 +456,19 @@ es:
 
             -   **Elige tu contenido:** El contenido de este curso de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Descubrimientos de Informática. Sin embargo, puedes **comprometerte con el contenido en el orden que mejor se adapte a tus necesidades.** Recomendamos a todos los profesores **empezar con la breve unidad de bienvenida** para aprender más sobre este curso de aprendizaje profesional antes de empezar.
           title: autodidáctico-pl-csd-2021
+          version_title: 23-24
+        self-paced-pl-csd-unit1-2023:
+          title: Enseñanza de la Resolución de Problemas y la Informática
+          version_title: 23-24
+        self-paced-pl-csd-unit2-2023:
+          title: Enseñando el Desarrollo Web
+          version_title: 23-24
+        self-paced-pl-csd-unit3-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit4-2023:
+          version_title: 23-24
+        self-paced-pl-csd-unit5-2023:
+          title: Enseñanza de Datos y Sociedad
           version_title: 23-24
         self-paced-pl-csp-2021:
           description_student: |-
@@ -593,6 +634,9 @@ es:
           title: virtual-pl-csd-verano-2023
         vpl-csa-2023:
           title: Aprendizaje Profesional Virtual de CSA
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
         vpl-csd-ayw-pilot-2022:
           title: Descubrimientos de Informática - Talleres virtuales del Año Académico
         vpl-csd-summer-ci-2023:
@@ -615,6 +659,8 @@ es:
         vpl-csd-summer-pilot-ci-2022:
           title: vpl-csd-verano-piloto-ci
           version_title: 21-22
+        vpl-csp-2023:
+          version_title: '2023'
     resources:
       all_code/csd/2021:
         name: Todos los Códigos

@@ -524,10 +524,6 @@
   volunteer_engineer_submission_subtitle_generic: '100.000 kennarar ætla að halda Klukkustund kóðunar í skólastofunni 7.-13. des. 2015. Þeir þurfa aðstoð þína! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} kennara vantar sjálfboðaliða.<br>%{num_volunteers} sjálfboðaliðar hafa skráð sig. Slástu í hópinn."
   volunteer_engineer_submission_intro_background: "Klukkustund kóðunar er alheimsátak í að prófa einnar klukkustundar inngang að tölvunarfræði. Það nær til tuga miljóna nemenda í 180+ löndum. Taktu þátt á einhvern hátt í Fræðsluviku tölvunarfræði 7.-13. desember."
-  volunteer_engineer_submission_intro_recruit: 'Þessir kennarar mundu gjarnan vilja fá einhvern <span style="font-family: ''Gotham 7r'', sans-serif;">með brennandi áhuga á að fræða um tölvunarfræði</span> sem getur hjálpað í skólastofunni eða einhvern sem getur <span style="font-family: ''Gotham 7r'', sans-serif;">hvatt</span> nemendur þeirra með því að tala um hin fjölmörgu tækifæri í tölvunarfræði (þetta gæti farið fram með netspjalli).'
-  volunteer_engineer_submission_intro_guide: "Fáðu að vita meira um <a href=\"%{volunteer_guide}\">sjálfboðaliðastarfið okkar hér</a>."
-  volunteer_engineer_submission_intro_signup: "Vinsamlegast skráðu eftirfarandi upplýsingar ef þú ert tölvunarfræðinemi eða hugbúnaðarsérfræðingur. Reiti merkta með <span class=\"form-required-field\">*</span> þarf að fylla út."
-  volunteer_engineer_submission_intro_links: "Þarft þú að finna sjálfboðaliða? Finndu nálægan sjálfboðaliða á <a href=\"%{volunteer_local}\">liðveislukortinu</a> okkar."
   volunteer_engineer_submission_update_information: "Uppfærðu upplýsingar þínar"
   volunteer_engineer_submission_header_shared: "Upplýsingar sem deildar eru með kennurum á korti sjálfboðaliða"
   volunteer_engineer_submission_field_name: "Nafn"

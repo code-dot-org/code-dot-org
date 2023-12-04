@@ -1,5 +1,5 @@
 name 'CSA U3L2-L7_2023'
-display_name 'Practice: Modifying Values'
+display_name 'Practice: Creating 1D Arrays'
 description 'Access and modify the values stored in a 1D array.'
 
 sublevels

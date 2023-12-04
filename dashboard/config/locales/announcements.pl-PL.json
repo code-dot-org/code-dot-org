@@ -167,6 +167,31 @@
           "notice": "Lekcje rozszerzeń z mikro:bitem",
           "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
           "buttonText": "Dowiedz się więcej"
+        },
+        "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1": {
+          "notice": "Lekcje rozszerzeń z mikro:bitem",
+          "details": "Czy jesteś zainteresowany przybliżeniem swoim uczniom informatytki z urzadzeniami fizycznymi? Sprawdź nasze nowe rozszerzone lekcje z micro:bitem, aby kontynuowali naukę.",
+          "buttonText": "Dowiedz się więcej"
+        },
+        "409174a0-d76d-4992-8486-cfd9801c329e": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "f503efed-1d08-4a36-b7ba-e64f583d5209": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
+          "buttonText": "Dowiedz się więcej"
+        },
+        "f8e11610-8bc9-448e-bb7e-25e58ecb193e": {
+          "notice": "Nowy moduł rozwiju zawodowego we własnym tempem!",
+          "details": "Chcesz uczyć Odkryć Informatyki, ale nie wiesz, od czego zacząć? Code.org wydało profesjonalny moduł edukacyjny dotyczący Jednostki 1 CSD: Rozwiązywanie problemów i informatyka. Ten dwugodzinny moduł do przerobienia we własnym tempie nauczy Cię, co musisz wiedzieć, aby uczyć CSD. Sprawdź to pod tym linkiem!",
+          "buttonText": "Jednostka 1 Rozwiju zawodowego we własnym tempem"
+        },
+        "7c0b3b50-62ba-43c3-bd32-37a58e1622fc": {
+          "notice": "Nowy moduł rozwiju zawodowego we własnym tempem!"
         }
       }
     }

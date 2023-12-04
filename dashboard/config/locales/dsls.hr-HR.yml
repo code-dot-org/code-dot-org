@@ -462,6 +462,15 @@ hr-HR:
         - {}
         questions:
         - {}
+      CSD Games Properties multi predict_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD Header Size MC:
         answers:
         - {}
@@ -487,6 +496,12 @@ hr-HR:
         - {}
         - {}
       CSD Header Size MC_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -525,6 +540,60 @@ hr-HR:
         - {}
         - {}
         - {}
+      CSD U1 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U1 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - text: Glazba
+        - text: Lokacija
+        - {}
+        questions:
+        - {}
+      CSD U1 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U1 Match Q5_2023:
+        answers:
+        - text: Ulaz
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      CSD U1 Match Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - text: Definirati
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -629,6 +698,95 @@ hr-HR:
         content1: opis ovdje
       CSD U2 Lesson 6 Overview:
         content1: opis ovdje
+      CSD U2 MC Q10_2023:
+        answers:
+        - text: Tvoj rođendan
+        - text: Tvoja adresa
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U2 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: boja
+        - {}
+        - {}
       CSD U2 Test Classes:
         answers:
         - {}
@@ -838,6 +996,19 @@ hr-HR:
         - {}
         - {}
         - {}
+      CSD U2 image debug match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U2 image debug match_pilot_2021:
         answers:
         - {}
@@ -899,6 +1070,8 @@ hr-HR:
       CSD U2 project guide_2018_2019_pilot_2021:
         content1: opis ovdje
       CSD U2 project guide_2018_2019_pilot_2022:
+        content1: opis ovdje
+      CSD U2 project guide_2018_2019_pilot_2023:
         content1: opis ovdje
       CSD U3 - conditionals - Matching:
         answers:
@@ -965,6 +1138,19 @@ hr-HR:
         - {}
         - {}
         - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Boolean MC:
         answers:
         - {}
@@ -1010,6 +1196,15 @@ hr-HR:
         questions:
         - {}
         title: naslov
+      CSD U3 Boolean MC_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: naslov
       CSD U3 Card Examples_2018:
         content1: opis ovdje
       CSD U3 Card Examples_2018_2019:
@@ -1046,6 +1241,12 @@ hr-HR:
         - {}
         - {}
         - {}
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 Keypress Matching:
         answers:
         - {}
@@ -1070,6 +1271,137 @@ hr-HR:
         - {}
         - {}
         questions:
+        - {}
+        - {}
+        - {}
+      CSD U3 MC Q10_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q11_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q12_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q14_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Match Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q2_2023:
+        answers:
+        - text: x
+        - {}
+        - text: širina
+        - text: visina
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Match Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
         - {}
         - {}
         - {}
@@ -1106,6 +1438,14 @@ hr-HR:
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -1355,6 +1695,17 @@ hr-HR:
         - {}
         - {}
         - {}
+      CSD U3 drawSprites placement match_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U3 game intro:
         content1: opis ovdje
       CSD U3 game intro_2018:
@@ -1373,6 +1724,67 @@ hr-HR:
         content1: opis ovdje
       CSD U3 platform intro_2018_2019_pilot_2022:
         content1: opis ovdje
+      CSD U3 platform intro_2018_2019_pilot_2023:
+        content1: opis ovdje
+      CSD U4 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U4 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: Pošaljite povratne informacije
+        questions:
+        - {}
       CSD U4 test feature match:
         answers:
         - {}
@@ -1534,6 +1946,84 @@ hr-HR:
         content1: opis ovdje
       CSD U5 L13 SFLP Interpreting Data:
         content1: opis ovdje
+      CSD U5 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q8_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U5 MC Q9_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U5 crosstab warmup:
         content1: opis ovdje
       CSD U5 crosstab warmup_2018:
@@ -1695,6 +2185,130 @@ hr-HR:
         content1: opis ovdje
       CSD U6 LED create intro_2021:
         content1: opis ovdje
+      CSD U6 MC Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q1_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q2_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q3_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q4_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q5_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q6_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 MC Q7_6b2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U6 array multi:
         answers:
         - {}
@@ -1767,7 +2381,23 @@ hr-HR:
         - {}
         questions:
         - {}
+      CSD U6 setProperty predict multi_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       CSD U6 setProperty predict multi_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_mb2022:
         answers:
         - {}
         - {}
@@ -1927,7 +2557,11 @@ hr-HR:
         content1: opis ovdje
       CourseF_outbreak_story2022_2022_pilot_-2022-2:
         content1: opis ovdje
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: opis ovdje
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: opis ovdje
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: opis ovdje
       Eval Contracts F:
         answers:
@@ -1941,7 +2575,8 @@ hr-HR:
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
-        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+        - correct: true
+          text: "/script_assets/k_1_images/artist_images/E-S-S.png"
         - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
         content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
@@ -2066,7 +2701,8 @@ hr-HR:
         title: Višestruki izbor
       K-1 Maze Loops Multi 1:
         answers:
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - correct: true
+          text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
         content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
@@ -2077,7 +2713,8 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+        - correct: true
+          text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Izaberite ispravan blok ponavljanja.
@@ -2119,7 +2756,8 @@ hr-HR:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
-        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+        - correct: true
+          text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Koji korak bi trebao biti na početku programa?
@@ -2127,7 +2765,8 @@ hr-HR:
       K-1 Plant a Seed Multi 2:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
-        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+        - correct: true
+          text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
@@ -2314,6 +2953,11 @@ hr-HR:
           # Snaga riječi
 
           ## Što bi trebao učiniti kad netko koristi zli ili uvredljiv jezik na internetu?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          # Snaga riječi
+
+          ## Što bi trebao učiniti kad netko koristi zli ili uvredljiv jezik na internetu?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           # Snaga riječi
@@ -2327,6 +2971,11 @@ hr-HR:
       Prepare for your presentation:
         content1: opis ovdje
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # Privatni i osobni podaci
+
+          ## Koje podatke o sebi možeš dijeliti na internetu?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |-
           # Privatni i osobni podaci
 
@@ -2350,7 +2999,147 @@ hr-HR:
         - {}
         questions:
         - {}
+      Student End of Unit Survey - Q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q1_copy6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       Student End of Unit Survey - Q2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      Student End of Unit Survey - Q2_copy6_2023:
         answers:
         - {}
         - {}
@@ -2465,6 +3254,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - {}
@@ -2477,6 +3277,17 @@ hr-HR:
         questions:
         - {}
       aiml-ch1-pulse-survey-q2_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q2_2023:
         answers:
         - {}
         - {}
@@ -2509,6 +3320,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-ch1-pulse-survey-q4_2021:
         answers:
         - {}
@@ -2521,6 +3343,17 @@ hr-HR:
         questions:
         - {}
       aiml-ch1-pulse-survey-q4_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-ch1-pulse-survey-q4_2023:
         answers:
         - {}
         - {}
@@ -2553,6 +3386,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey-q5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - {}
@@ -2561,6 +3405,13 @@ hr-HR:
         questions:
         - {}
       aiml-intro-pulse-survey-q1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q1_2023:
         answers:
         - {}
         - {}
@@ -2581,6 +3432,13 @@ hr-HR:
         - {}
         questions:
         - {}
+      aiml-intro-pulse-survey-q2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - {}
@@ -2593,6 +3451,17 @@ hr-HR:
         questions:
         - {}
       aiml-intro-pulse-survey-q3_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q3_2023:
         answers:
         - {}
         - {}
@@ -2625,6 +3494,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      aiml-intro-pulse-survey-q4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       aiml-intro-pulse-survey-q5_2021:
         answers:
         - {}
@@ -2637,6 +3517,17 @@ hr-HR:
         questions:
         - {}
       aiml-intro-pulse-survey-q5_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      aiml-intro-pulse-survey-q5_2023:
         answers:
         - {}
         - {}
@@ -2726,6 +3617,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      be-myself-in-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       behaviors 1 predict:
         answers:
         - {}
@@ -2769,6 +3671,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      comfortable-in-cs-class_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       confident-ability-to-learn:
         answers:
         - {}
@@ -2781,6 +3694,28 @@ hr-HR:
         questions:
         - {}
       confident-ability-to-learn_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      confident-ability-to-learn_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      confident-ability-to-learn_mb2022:
         answers:
         - {}
         - {}
@@ -2829,6 +3764,12 @@ hr-HR:
         - text: ne
         questions:
         - {}
+      counselor_encourage_2023:
+        answers:
+        - text: da
+        - text: ne
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1:
         answers:
         - {}
@@ -2838,6 +3779,14 @@ hr-HR:
         questions:
         - {}
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2893,6 +3842,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - {}
@@ -2934,6 +3891,15 @@ hr-HR:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Scrat će doći do žira. U programskom kodu nema grešaka.
+        - text: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
+        - text: Scrat neće doći do žira jer nema dovoljno blokova za "pomicanje naprijed".
+        - feedback: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
+        questions:
+        - text: Potražite greške u ovom kodu. Hoće li Scrat doći do žira ili postoji
+            problem?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - text: Scrat će doći do žira. U programskom kodu nema grešaka.
         - text: Scrat neće doći do žira jer se okrenuo u krivom smjeru.
@@ -3006,6 +3972,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
@@ -3047,6 +4021,14 @@ hr-HR:
         questions:
         - {}
       courseC_multi_starWars_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3102,6 +4084,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
@@ -3135,6 +4125,9 @@ hr-HR:
         questions:
         - {}
       courseD_EOC2022:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseD_EOC2022_2023:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
       courseD_EOC_2020:
@@ -3191,6 +4184,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -3232,6 +4233,14 @@ hr-HR:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3303,6 +4312,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - {}
@@ -3351,6 +4368,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3392,6 +4417,14 @@ hr-HR:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - {}
         - {}
@@ -3455,6 +4488,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3511,6 +4552,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3552,6 +4601,14 @@ hr-HR:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3607,6 +4664,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - {}
@@ -3648,6 +4713,14 @@ hr-HR:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3716,6 +4789,9 @@ hr-HR:
       courseE_EOC2022:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
+      courseE_EOC2022_2023:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
       courseE_EOC_2020:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
@@ -3723,6 +4799,9 @@ hr-HR:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
       courseE_EOC_examples2022:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      courseE_EOC_examples2022_2023:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
       courseE_EOC_examples_2021:
@@ -3753,6 +4832,14 @@ hr-HR:
         questions:
         - {}
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - {}
         - {}
@@ -3801,6 +4888,14 @@ hr-HR:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3876,6 +4971,14 @@ hr-HR:
           | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Snowflake Flowers (Frozen)](https://images.code.org/09990050d5f9055734c923b460e4dc6e-image-1592506430990.png "Snowflake Flowers (Frozen)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
           | Krenimo kreativno s ugniježđenim petljama! | Krenimo kreativno s funkcijama! |
       courseE_swim_fish_behavior_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3959,7 +5062,23 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3977,6 +5096,15 @@ hr-HR:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4041,6 +5169,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - {}
@@ -4098,6 +5234,14 @@ hr-HR:
         questions:
         - {}
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4185,6 +5329,14 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -4193,7 +5345,23 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4217,9 +5385,19 @@ hr-HR:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: opis ovdje
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: opis ovdje
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: opis ovdje
       coursee_prediction_artistfunction2:
         answers:
@@ -4230,6 +5408,14 @@ hr-HR:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - {}
@@ -4269,6 +5455,41 @@ hr-HR:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: opis ovdje
       csd-post-survey-2017-q11_2018:
         answers:
         - {}
@@ -4749,6 +5970,28 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-post-survey-confidence-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-interested-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-q26:
         answers:
         - {}
@@ -4888,6 +6131,34 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-post-survey-show-friend_mb2022:
+        answers:
+        - text: Da
+        - text: Ne
+        questions:
+        - {}
+      csd-post-survey-solve-real-world_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-post-survey-take-more-classes_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-unit1-preamble:
         content1: opis ovdje
       csd-post-survey-unit2-preamble:
@@ -4988,6 +6259,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U2Ch2:
         answers:
         - {}
@@ -5055,6 +6337,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -5143,6 +6436,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q1 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -5252,6 +6556,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U5Ch2:
         answers:
         - {}
@@ -5340,7 +6655,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q1 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q1 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -5483,6 +6820,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U2Ch2:
         answers:
         - {}
@@ -5550,6 +6898,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -5638,6 +6997,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q2 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -5747,6 +7117,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U5Ch2:
         answers:
         - {}
@@ -5835,7 +7216,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q2 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q2 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -5978,6 +7381,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U2Ch2:
         answers:
         - {}
@@ -6045,6 +7459,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -6133,6 +7558,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q3 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -6242,6 +7678,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U5Ch2:
         answers:
         - {}
@@ -6330,7 +7777,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q3 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q3 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -6473,6 +7942,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U2Ch2:
         answers:
         - {}
@@ -6540,6 +8020,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -6628,6 +8119,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q4 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -6737,6 +8239,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U5Ch2:
         answers:
         - {}
@@ -6825,7 +8338,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q4 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q4 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -6968,6 +8503,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U2Ch1_2019_pilot_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U2Ch2:
         answers:
         - {}
@@ -7035,6 +8581,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U3Ch1_2019_pilot_2023:
         answers:
         - {}
         - {}
@@ -7123,6 +8680,17 @@ hr-HR:
         questions:
         - {}
       csd-pulse-check-survey-1-q5 U4Ch1_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U4Ch1_2023:
         answers:
         - {}
         - {}
@@ -7232,6 +8800,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U5Ch1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U5Ch2:
         answers:
         - {}
@@ -7320,7 +8899,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_2023a_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-pulse-check-survey-1-q5 U6Ch1_2222:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csd-pulse-check-survey-1-q5 U6Ch1_mb2022:
         answers:
         - {}
         - {}
@@ -7387,6 +8988,12 @@ hr-HR:
           # Super digitalni građanin
 
           ## Kako možemo reagirati kada vidimo internetsko zlostavljanje?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: opis ovdje
+        markdown: |
+          # Super digitalni građanin
+
+          ## Kako možemo reagirati kada vidimo internetsko zlostavljanje?
       csf_be_a_super_digital_citizen_2021:
         content1: opis ovdje
         markdown: |
@@ -7399,6 +9006,11 @@ hr-HR:
 
           ## Koje podatke možemo imati u svom digitalnom otisku?
       csf_digital_trails2022:
+        markdown: |-
+          # Slijedite Digitalni trag
+
+          ## Koje podatke možemo imati u svom digitalnom otisku?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Slijedite Digitalni trag
 
@@ -7423,6 +9035,20 @@ hr-HR:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: opis ovdje
+        markdown: |
+          # Ojačajte zaporku
+
+          ## Savjeti za sigurnijom zaporkom
+
+          * Korisi ** frazu ** koju nećeš zaboraviti.
+          * Samo tvoji ** roditelji ** trebaju znati tvoju zaporku.
+          * Nikada u zaporci ne koristi ** privatne ** podatke o identitetu.
+          * Neka tvoje zaporke imaju najmanje ** osam ** znakova.
+          * U zaporkama koristi slova, brojke i ** simbole **.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: opis ovdje
         markdown: |
           # Ojačajte zaporku
@@ -7476,6 +9102,19 @@ hr-HR:
           * **P**aziti i razmišljati dok sam online.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: opis ovdje
+        markdown: |
+          # STOP podlosti
+
+          ## Što bi trebao učiniti ako je netko na internetu zločest prema tebi?
+
+          *S**mjesta otići.
+          *T** Reći odrasloj osobi od povjerenja.
+          * **O**dlaziti na sigurna web sjedišta.
+          * **P**aziti i razmišljati dok sam online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: opis ovdje
         markdown: |
@@ -7495,6 +9134,11 @@ hr-HR:
 
           ## Kako sigurno odlazite na mjesta na mreži?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Moja internetska četvrt
+
+          ## Kako sigurno odlazite na mjesta na mreži?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Moja internetska četvrt
 
@@ -7714,6 +9358,17 @@ hr-HR:
         questions:
         - {}
       csp-post-survey-2017-q22_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-post-survey-2017-q22_mb2022:
         answers:
         - {}
         - {}
@@ -8001,6 +9656,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q10_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q11:
         answers:
         - {}
@@ -8089,6 +9755,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q13_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q14:
         answers:
         - {}
@@ -8155,6 +9832,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q16_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q17:
         answers:
         - {}
@@ -8189,6 +9877,17 @@ hr-HR:
         questions:
         - {}
       csp-pre-survey-2017-q17_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q17_copy2_2023:
         answers:
         - {}
         - {}
@@ -8265,6 +9964,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q19_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q1_2018:
         answers:
         - {}
@@ -8331,6 +10041,28 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q20_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q20_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q21:
         answers:
         - {}
@@ -8387,6 +10119,28 @@ hr-HR:
         questions:
         - {}
       csp-pre-survey-2017-q22_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q22_mb2022:
         answers:
         - {}
         - {}
@@ -8617,6 +10371,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q30_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q31:
         answers:
         - {}
@@ -8651,6 +10416,28 @@ hr-HR:
         questions:
         - {}
       csp-pre-survey-2017-q31_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q31_mb2022:
         answers:
         - {}
         - {}
@@ -8754,6 +10541,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q3_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp-pre-survey-2017-q4:
         answers:
         - {}
@@ -8808,6 +10606,39 @@ hr-HR:
         questions:
         - {}
       csp-pre-survey-2017-q4_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy1_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csp-pre-survey-2017-q4_mb2022:
         answers:
         - {}
         - {}
@@ -8950,9 +10781,29 @@ hr-HR:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017-q9_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csp_unit_assessment_overview:
         content1: opis ovdje
       curriculum-how-challenging:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      curriculum-how-challenging_mb2022:
         answers:
         - {}
         - {}
@@ -8994,6 +10845,22 @@ hr-HR:
         - {}
         questions:
         - {}
+      ever-learned-cs-outside-school_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      ever-learned-cs-outside-school_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       ever-learned-cs_2022:
         answers:
         - {}
@@ -9002,7 +10869,18 @@ hr-HR:
         - {}
         questions:
         - {}
+      ever-learned-cs_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       express_EOC2022:
+        description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
+          koji želiš izraditi.
+      express_EOC2022_2023:
         description: Stigao si do posljednje lekcije Express tečaja! Odaberite projekt
           koji želiš izraditi.
       express_EOC_2021:
@@ -9020,6 +10898,12 @@ hr-HR:
         - text: ne
         questions:
         - {}
+      family_encourage_2023:
+        answers:
+        - text: da
+        - text: ne
+        questions:
+        - {}
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -9029,6 +10913,14 @@ hr-HR:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - {}
@@ -9191,6 +11083,310 @@ hr-HR:
         - {}
         questions:
         - {}
+      interested-in-learning-cs_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      interested-in-learning-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q1_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q2_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q3_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q4_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd1_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd3_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd4_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd5_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      intro-pulse-survey-q5_csd6_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       made-choices-about-assignments:
         answers:
         - {}
@@ -9233,6 +11429,17 @@ hr-HR:
         - {}
         questions:
         - {}
+      naturally-better-at-cs_copy2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       outbreak_freeplay_choice:
         display_name: Slobodna igra
       outbreak_story:
@@ -9248,6 +11455,17 @@ hr-HR:
         questions:
         - {}
       post-assessment survey q31-a-2017b:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      post-assessment survey q31-a-2017b_mb2022:
         answers:
         - {}
         - {}
@@ -9580,6 +11798,18 @@ hr-HR:
         - {}
         questions:
         - {}
+      reasons-took-course-csd_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       same-ability:
         answers:
         - {}
@@ -9598,6 +11828,12 @@ hr-HR:
         questions:
         - {}
       someone_else_encourage_2022:
+        answers:
+        - text: da
+        - text: ne
+        questions:
+        - {}
+      someone_else_encourage_2023:
         answers:
         - text: da
         - text: ne
@@ -9625,6 +11861,12 @@ hr-HR:
         questions:
         - {}
       teacher_encourage_2022:
+        answers:
+        - text: da
+        - text: ne
+        questions:
+        - {}
+      teacher_encourage_2023:
         answers:
         - text: da
         - text: ne
@@ -9695,6 +11937,28 @@ hr-HR:
         - {}
         questions:
         - {}
+      will-be-myself-in-cs_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      will-be-myself-in-cs_mb2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       worried-less-capable:
         answers:
         - {}
@@ -9718,6 +11982,17 @@ hr-HR:
         questions:
         - {}
       worried-seen-incapable_2022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      worried-seen-incapable_2023:
         answers:
         - {}
         - {}

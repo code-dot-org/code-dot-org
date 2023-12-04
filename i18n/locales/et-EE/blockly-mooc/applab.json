@@ -30,7 +30,6 @@
   "designElementProperty_zOrder": "sügavus",
   "designElementTheme_classic": "Klassikaline",
   "designElementTheme_default": "Vaikimisi",
-  "downloadMakerAppFor": "Laadige alla Code.org Maker App {OS} ({installerVersion})",
   "dropletBlock_appendItem_description": "Lisa üksus massiivi lõppu.",
   "dropletBlock_appendItem_param0_description": "Muudetav massiiv.",
   "dropletBlock_appendItem_param1_description": "Massiivi lõppu lisatav üksus.",

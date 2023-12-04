@@ -99,5 +99,19 @@ describe('Certificate', () => {
       const expectedSrc = `/certificate_images/${expectedFilename}.jpg`;
       expect(image.prop('src')).to.equal(expectedSrc);
     });
+
+    it('passes down full urls to SocialShare', () => {
+      const initialCertificateImageUrl =
+        'https://code.org/images/placeholder-hoc-image.jpg';
+      const wrapper = wrapperWithParams({
+        tutorial: 'dance',
+        certificateId: 'sessionId',
+        initialCertificateImageUrl,
+        isHocTutorial: true,
+      });
+      const socialShare = wrapper.find('SocialShare');
+      expect(socialShare.props().facebook).to.include('studio.code.org');
+      expect(socialShare.props().twitter).to.include('studio.code.org');
+    });
   });
 });

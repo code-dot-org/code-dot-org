@@ -257,6 +257,24 @@
         "pre-express-2019/Spelling Bee": {
           "name": "Сөз жазушы Ара"
         },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Ілмек"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Шаралар"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Шарттар"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Функциялар"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Айнымалылар"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "For ілмектері"
+        },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Көңілді Карталар"
         },
@@ -389,8 +407,53 @@
         "coursef-2022/The Internet": {
           "name": "Ғаламтор"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Код Жазу Сағаты 2013"
+        "csd3-2023/Variables": {
+          "name": "Айнымалылар"
+        },
+        "csd3-2023/Text": {
+          "name": "Мәтін"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Шарттар"
+        },
+        "csd3-2023/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Функциялар"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Функциялар"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Ғаламтор"
         },
         "artist/Artist": {
           "name": "Кейіпкер"
@@ -418,12 +481,6 @@
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "Minecraft кодтау сағатының дизайнеры"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Ойындар Лабораториясы"
@@ -751,6 +808,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Өте Қиын жаттығулар - Kешенді"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Код Жазу Сағаты 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Бас қатырғыш"

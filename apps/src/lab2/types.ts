@@ -96,6 +96,7 @@ export interface LevelProperties {
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
+  freePlay?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require

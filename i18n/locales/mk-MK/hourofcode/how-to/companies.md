@@ -1,127 +1,127 @@
 ---
-title: Hour of Code How-To Guide for Companies
+title: Часот на кодот Водич за инструкции за компании
 ---
 
 {{ signup_button }}
 
-# How your company can engage with the Hour of Code
+# Како вашата компанија може да се вклучи во Часот на Кодот
 
-### Find out how you and your employees can inspire students to try computer science!
+### Дознајте како вие и вашите вработени можете да ги инспирирате учениците да пробаат компјутерски науки!
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Компјутерското размислување помага да се негуваат вештини за решавање проблеми, логика и креативност. Технологијата ја трансформира секоја индустрија на планетата. Студентите денес треба да научат како да создаваат технологија, а не само да ја користат. Со почетокот на почетокот, тие ќе имаат основа за успех во кој било кариерен пат од 21 век.
 
-During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
+За време на кампањата Hour of Code, вашата компанија може да помогне во подигнувањето на свеста за движењето за компјутерски науки. Без разлика дали волонтирате како поединец или планирате настан за вашата компанија, сите ваши напори можат да направат огромно влијание врз начинот на кој младите жени и студентите од маргинализираните расни и етнички групи гледаат на компјутерската наука и сопствениот потенцијал.
 
-Check out the steps below to get started, and see our [guide for corporate partners](/files/hoc-corporate-toolkit.pdf) for more on how to get your company excited about the Hour of Code.
+Проверете ги чекорите подолу за да започнете и видете го нашиот [водич за корпоративни партнери](/files/hoc-corporate-toolkit.pdf) за повеќе за тоа како да ја возбудите вашата компанија за Часот на кодот.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
-- [Host your own Hour of Code event](#host-hour-of-code)
+- [Поврзете се со локално училиште](#connect-with-a-school)
+- [Охрабрете ги вработените да волонтираат во училница](#encourage-employees)
+- [Домаќин на свој настан “Час на код”](#host-hour-of-code)
 - [Promote the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Повеќе начини за поддршка на Часот на кодексот](#support-hour-of-code)
 
 * * *
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Поврзете се со локално училиште
 
-It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
+Секогаш е најдобро да започнете локално, со училишта со кои вие или вашите вработени имате силна врска, како алма матер, детско училиште или локална организација или училиште кое е фокусирано на опслужување на населението кое е историски недоволно застапено во компјутерските науки.
 
 [![](/images/fit-600/Marketing/2018_HoC-392.jpg)]({{ urls/learn }})
 
-From there, you can visit the school’s website to find appropriate contacts to reach out to, like a principal, vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations like the Boys & Girls Clubs of America, a YMCA branch, and more to co-host an event.
+Оттаму, можете да ја посетите веб-страницата на училиштето за да најдете соодветни контакти за да контактирате, како директор, заменик директор, инструктори по технологија или компјутерски науки, па дури и PTSA на училиштето. Можете исто така да соработувате со организации како Клубовите за & девојки за момчиња во Америка, филијала на YMCA и многу повеќе за да бидете ко-домаќини на настан.
 
-If you are unable to connect with a school, please [contact us](https://support.code.org/hc/en-us/requests/new) and we’ll connect you with one of our local partners if possible.
+Ако не можете да се поврзете со училиште, ве молиме кон [тактирајте не](https://support.code.org/hc/en-us/requests/new) и ние ќе ве поврземе со некој од нашите локални партнери доколку е можно.
 
 * * *
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Охрабрете ги вработените да волонтираат во училница
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 
-One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology has impacted your role.
+Еден од најисполнувачките начини да учествувате во Часот на кодексот е да волонтирате во локална училница, лично или виртуелно. Најдобро од сè, не мора да бидете инженер за да волонтирате. Сè уште можете да им обезбедите значајно искуство на студентите со споделување на сопственото искуство во кариерата и како CS или технологијата влијаеле на вашата улога.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>Пријавете се за волонтирање</button>]({{ urls/volunteer }})
 
-Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
+Откако волонтерот ќе се регистрира, наставникот може да го прегледа својот профил на нашата [волонтерска мапа](https://code.org/volunteer/local) - така профилите треба да бидат доставени што е можно поцелосни. Ако сте добро одговара за нивната училница, наставникот ќе ве контактира преку платформата (никогаш нема да ја споделиме вашата е-адреса со наставникот). Потоа можете да ги координирате деталите директно со наставникот околу тоа [како најдобро да волонтирате со нивната училница](https://hourofcode.com/us/how-to/volunteers).
 
-For more guidance on volunteering and sample messaging to get your company excited about the Hour of Code, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+За повеќе насоки за волонтирање и пораки со примероци за да ја возбудите вашата компанија за Часот на кодот, проверете го нашиот [водич за корпоративни партнери]({{ localized_files/hoc_corporate_toolkit }}).
 
 * * *
 
-<h4><font color="00adbc"><i>“I LOVED seeing how excited the kids were. One amazing thing was the teachers noticed some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.”</i></font></h4>
+<h4><font color="00adbc"><i>“Сакав да гледам колку се возбудени децата. Една неверојатна работа беше што наставниците забележаа дека некои од учениците кои не успеале толку добро академски се одлични во размислувањето како развивач и помагајќи им на другите - давајќи им место да се чувствуваат сигурни”.</i></font></h4>
 
--Hour of Code volunteer
+-Волонтер на Часот на Кодот
 
 * * *
 
 <a id="host-hour-of-code"></a>
 
-## Host your own Hour of Code event
+## Домаќин на свој настан “Час на код”
 
-If you want to go the extra mile, your company can also host an Hour of Code event. There is no specific formula for hosting an event so we encourage you to be creative! Given that our staff size is small (but mighty!), Code.org does not have a team dedicated to coordinating Hour of Code events. However, here are some tips to get started.
+Ако сакате да одите дополнителна милја, вашата компанија исто така може да биде домаќин на настан Hour of Code. Не постои специфична формула за домаќин на настан затоа ве охрабруваме да бидете креативни! Со оглед на тоа што големината на нашиот персонал е мала (но моќна!) , Code.org нема тим посветен на координирање на настаните на Hour of Code. Сепак, еве неколку совети за да започнете.
 
-### 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+### 1. Погледнете го ова видео со инструкции <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. Одредете датум, формат и локација за вашиот настан
 
-We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+Видовме настани кои се [виртуелни](https://hourofcode.com/us/how-to/virtual) или лично, во канцеларијата на компанијата или се одржуваат во заедницата и за студенти од сите возрасти! Можете исто така да погледнете што другите [корпоративни партнери](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) и [донатори направ](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) иле во минатото за некои инспиративни идеи.
 
 <br />
 
-#### Sample Agenda:
+#### Пример агенда:
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)| |5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? What or who inspired you? How did you get interested in computer science? Did you have a mentor? Ask the students questions and leave time for Q&A. | |30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|Време | Точка на дневен ред | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 минути | Прикажи [инспиративно видео](https://hourofcode.com/us/promote/resources#videos)| |5-10 минути | Претставете се и дознајте повеќе за учениците: Каде работите, што работите и што најмногу сакате во вашата работа? Што или кој ве инспирираше? Како се заинтересиравте за компјутерски науки? Дали имавте ментор? Поставувајте им прашања на учениците и оставете време за Q&A. | | 30-60 минути | Код! Ако вашиот настан е лично, ова е време да одговорите на прашања и да ги водите учениците низ тешки загатки. Обидете се да не им го дадете решението директно, наместо тоа, обидете се да им поставите прашања за да можат сами да одговорат што тргнало наопаку и охрабрете ги учениците да се прашуваат едни со други ако имаат прашања. Ако виртуелно волонтирате, работете со наставникот за тоа кој би можел да биде најдобриот пристап. Можеби има повеќе смисла да се вратите на крајот од сесијата за да видите каков напредок постигнале учениците. | | |1-3 минути | Благодарам на сите и споделете инспиративни разделбени зборови. Поделете кој било од вашите компании ([налепниците](#celebrate) се прекрасни)! | | <br />
 
-#### Other ideas to add to your event
+#### Други идеи за додавање на вашиот настан
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people.
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- Објаснете ги начините на кои технологијата влијае на нашите животи, со примери за кои ќе се грижат учениците од сите средини - зборувајте за технологијата што спасува животи, помага на луѓето, поврзува луѓе.
+- Ако сте технолошка компанија, демо забавни, иновативни производи на кои работи вашата компанија. Ако не сте технолошка компанија, разговарајте за начините на кои вашата компанија ја користи технологијата за решавање проблеми и остварување на целите.
 - Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
 
-### 3. Plan your technology needs
+### 3. Планирајте ги вашите технолошки потреби
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### Уреди:
 
-The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+The best Hour of Code experience includes Internet-connected computers. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! За исклучени активности, едноставно филтрирајте го делот Технологија во училницата за да ги прикажете опциите за “Нема компјутери или уреди”.
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- **Тести** рање активности на компјутери или уреди. Осигурајте се дека тие работат правилно на прелистувачите со звук и видео.
+- **Немате доволно уреди?** Користете програмирање на парови. When students partner up, they help each other and rely less on the teacher. They’ll also see that computer science is social and collaborative.
+- **Обезбедете слушалки** за вашите учесници или побарајте од нив да донесат свои ако тие ќе се обидуваат упатства кои најдобро функционираат со звуци.
+- **Имате низок опсег**? Планирајте да прикажувате видеа на предниот дел на настанот, така што секој учесник не презема свои видеа. Или пробајте ги исклучените/офлајн активностите.
 
-#### Virtual Events:
+#### Виртуелни настани:
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+Ако вашиот настан ќе биде виртуелен, ќе сакате да одлучите за вашата конференциска платформа (и да ја тестирате) пред вашиот настан. Ова може да влијае на бројот на ученици со кои се чувствувате удобно да ги ангажирате, па затоа најдобро е да го одредите ова пред да поканите во училница или да го промовирате вашиот настан. За идеи за тоа како да стартувате далечински Hour of Code, прочитајте ги нашите [совети за виртуелен настан Hour of Code](https://hourofcode.com/us/how-to/virtual).
 
-### 4. Choose an activity
+### 4. Изберете активност
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+Ние обезбедуваме различни забавни упатства водени од студентите за сите возрасни групи и нивоа на искуство. Популарно е учениците да пробаат упатства што се водат самостојно, иако можеби ќе сакате да го започнете настанот со [инспиративно видео](https://hourofcode.com/us/promote/resources#videos) за сите да го гледаат заедно.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Истражете ги активностите</a> и одлучете однапред дали сакате да изберете едно упатство за сите ваши гости или оставете го секое дете да го избере своето. **Сите активности на Часот на Кодот** бараат минимално време за подготовка и се само-водени - овозможувајќи им на учесниците да работат со свое темпо и ниво на вештини.
 
 [![](/images/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+Откако ќе имате солиден патоказ за вашиот настан, тогаш можете да започнете да поканувате ученици, училиште или поголемата заедница. Препорачуваме да започнете со локално училиште со кое имате врска или да ја пре [листувате нашата мапа на настани](https://hourofcode.com/us/map) на Часот на кодот.
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. Прославете
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+Откако студентите или гостите ќе го завршат својот Час на кодот, време е да го прослават нивниот успех. Еве неколку идеи за да го направите вашиот настан уште позабавен:
 
 - [Print certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop).
-- Share photos and videos of your Hour of Code event on social media. Use [#HourOfCode](https://twitter.com/hashtag/hourofcode) and [@codeorg](https://twitter.com/codeorg) so we can highlight your success, too!
+- [Печати “Направив час на код! налепници “]({{ promote/resources_stickers }}) или најдете други награди и swag на [Code.org Амазон продавница.](https://code.org/shop)
+- Share photos and videos of your Hour of Code event on social media. Корист [ете #HourOfCode](https://twitter.com/hashtag/hourofcode) и [@codeorg](https://twitter.com/codeorg) за да можеме да го истакнеме вашиот успех, исто така!
 
 * * *
 
@@ -129,56 +129,57 @@ After students or guests have completed their Hour of Code, it’s time to celeb
 
 ## Promote the Hour of Code
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+Еден од најдобрите начини да се помогне е да се шири зборот и да се промовира Часот на кодот.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. Регистрирајте го вашиот настан
 
-When you [sign up your Hour of Code event](/#join), you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+Кога ќе се [регистрирате на вашиот настан Hour of Code](/events), ќе добивате корисни комуникации со е-пошта со вести и совети за хостирање на успешен Hour of Code. Исто така, можете да ги споделите со локалните училишта или родителите да знаат дека сте домаќин на настан во нивна близина.
 
-### 2. Post on Social Media
+### 2. Објавување на социјалните медиуми
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+Помогнете да се подигне свеста за движењето за компјутерски науки со оваа примерок содржина за објавување на социјалните медиуми и споделување со вашите вработени.
 
-#### Hour of Code general announcement
+#### Општи оглас за Часот на Кодот
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/
+- Компјутерската наука го менува нашиот свет. Помогнете им на учениците да бидат дел од оваа промена почнувајќи со еден #HourOfCode. https://hourofcode.com/
+- Не користете само технологија - научете како да ја изградите. Помогнете некому да започне со #HourOfCode. https://hourofcode.com/
 
-#### Stats
+#### Статистика
 
-- Did you know only 53% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/
+- Дали знаевте дека само 53% од американските училишта учат компјутерски науки? Дајте му шанса на секој ученик да научи по еден #HourOfCode https://hourofcode.com/
+- Во САД, само 26% од софтверските професионалци се жени. Запознајте повеќе млади жени со компјутерски науки со #HourOfCode https://hourofcode.com/
+- 67% од компјутерските работни места во САД не се во технолошкиот сектор. Помогнете да се стави компјутерски науки во стандардната наставна програма со #HourOfCode https://hourofcode.com/
 
-#### Create your own
+#### Создадете свој
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com
+- Еден #HourOfCode може да доведе до [пополнете ја вашата приказна]. https://hourofcode.com/
+- Јас го поддржувам #HourOfCode затоа што [пополнете ги вашите мисли]. Придружете ни се https://hourofcode.com
 
-#### Engineer-specific
+#### Специфични за инженерот
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- Ако вашата прва линија на код го промени вашиот живот, помогнете им на учениците во ваша близина да го напишат својот прв #HourOfCode https://code.org/volunteer
+- Ако научивте да кодирате - која е вашата приказна? Инспирирајте студент во ваша близина преку нивниот прв #HourOfCode https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Find more</a> posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">Најдете повеќе</a> постери, видеа, налепници и други начини за промовирање на вашиот настан во вашата заедница.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## Повеќе начини за поддршка на Часот на кодексот
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile).
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science.
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all.
-
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
-
-{{ signup_button }}
+- Ширење на свеста со носење на [Code.org swag](https://store.code.org/) (сите приходи одат за поддршка на повеќе студенти да добијат пристап до компјутерски науки образование).
+- Изберете да имате корист од Code.org кога купувате на [Amazon](https://code.org/donate/amazonsmile)Smile.
+- Побарајте од вашиот извршен директор да испрати е-пошта низ целата компанија нагласувајќи ја важноста на компјутерските науки и охрабрувајќи ги вработените да го шират зборот.
+- Забавувајте се со соработниците во кампања</a>за подарување.</li> 
+    
+    - [Потпишете ја оваа петиција](https://code.org/promote) за да бидете сигурни дека секој студент има можност да научи компјутерски науки.
+    - [Дони](https://code.org/donate) рајте на Code.org за да можеме да ги одржуваме нашите образовни ресурси бесплатни и достапни за сите.</ul> 
+    
+    За повеќе предлози за тоа како да го поддржите Code.org и Часот на кодот, посет [ете Code.org/Help](https://code.org/help)
+    
+    {{ signup_button }}

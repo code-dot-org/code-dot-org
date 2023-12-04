@@ -37,7 +37,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           MOVE1:
             MOVES.ClapHigh: Taps fent
@@ -70,6 +70,11 @@ hu:
             '"measures"': ütem
             '"seconds"': másodperc
         text: "{TIMESTAMP} {UNIT} után"
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': ütem
+            '"seconds"': másodperc
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -91,8 +96,29 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
+          MOVE:
+            '"next"': "(Következő)"
+            '"prev"': "(Előző)"
+            '"rand"': "(Véletlen)"
+            MOVES.ClapHigh: Taps fent
+            MOVES.Clown: Gangnam
+            MOVES.Dab: dab
+            MOVES.DoubleJam: kétszer lenn
+            MOVES.Drop: Spárga
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Csillag
+            MOVES.Rest: Egyik sem
+            MOVES.Roll: Csípőkörzés
+            MOVES.ThisOrThat: Ez vagy az
+        text: "{GROUP} csináld {MOVE} {DIR} örökké"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': összes macska
+            '"SLOTH"': lajhárok
           MOVE:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
@@ -151,7 +177,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           PROPERTY:
             '"height"': magasság
@@ -175,7 +201,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           MOVE:
             '"rand"': "(Véletlen)"
@@ -320,7 +346,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           LOCATION:
             "{x: 100, y: 100}": balra fent
@@ -364,7 +390,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
         text: "{GROUP} elrendezése így: {FORMAT}"
       Dancelab_makeAnonymousDanceSprite:
@@ -437,7 +463,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           LAYOUT:
             '"border"': határ
             '"bottom"': alsó sor
@@ -565,6 +591,51 @@ hu:
         text: |-
           "Háttéreffektus beállítása
           {PALETTE} {EFFECT}"
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Alagút
+            '"color_cycle"': Színek
+            '"diamonds"': Gyémántok
+            '"disco"': Négyzetek
+            '"disco_ball"': Diszkógömb
+            '"fireworks"': Tűzijáték
+            '"flowers"': Virágok
+            '"galaxy"': Világűr
+            '"growing_stars"': Növekvő csillagok
+            '"kaleidoscope"': Kaleidoszkóp
+            '"lasers"': Lézer táncparkett
+            '"music_wave"': Hullámok
+            '"none"': Egyik sem
+            '"quads"': Sokszögek
+            '"rainbow"': Szivárvány
+            '"rand"': "(Véletlen)"
+            '"ripples"': Lüktetés
+            '"ripples_random"': Véletlenszerű lüktetés
+            '"snowflakes"': Hó
+            '"sparkles"': Ragyogás
+            '"spiral"': Spirál
+            '"splatter"': Festékfröccsenés
+            '"squiggles"': Kígyóvonalak
+            '"starburst"': Csillagrobbanás
+            '"stars"': Csillagok
+            '"swirl"': Hipno
+            '"text"': Dalcím
+          PALETTE:
+            '"cool"': Kékek
+            '"default"': Világos
+            '"electronic"': Elektronikus
+            '"iceCream"': Fagyi
+            '"neon"': Neon
+            '"ocean"': Óceán
+            '"rainbow"': Szivárvány
+            '"rave"': Fekete-fehér
+            '"tropical"': Trópusi
+            '"vintage"': Régi
+            '"warm"': Vörösek
+        text: |-
+          "Háttéreffektus beállítása
+          {PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -588,7 +659,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           SPEED:
             '0.25': nagyon lassú
@@ -662,7 +733,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           PROPERTY:
             '"height"': magasság
@@ -698,7 +769,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           PROPERTY:
             '"height"': magasság
@@ -725,7 +796,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
         text: 'állítsd {THIS} árnyalat: {VAL}'
       Dancelab_setTintEachInline:
@@ -742,7 +813,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
         text: 'állítsd {THIS} árnyalat: {VAL}'
       Dancelab_setTintInline:
@@ -767,7 +838,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           VISIBILITY:
             'false': láthatatlan
@@ -802,7 +873,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           PROPERTY:
             '"height"': magasság
@@ -847,7 +918,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
             sprites: összes
           PROPERTY:
             '"direction"': mozgás iránya
@@ -997,6 +1068,12 @@ hu:
         text: "{SPRITE} mondja: {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gáznemű
+            '"liquid"': folyékony
+            '"solid"': szilárd
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

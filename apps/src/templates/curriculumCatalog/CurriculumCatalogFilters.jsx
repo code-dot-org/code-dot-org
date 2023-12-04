@@ -13,7 +13,8 @@ import {
   translatedCourseOfferingCsTopics,
   translatedInterdisciplinary,
   translatedCourseOfferingDeviceTypes,
-  translatedCourseOfferingDurations,
+  translatedCourseOfferingDurationsWithTime,
+  translatedCourseOfferingMarketingInitiatives,
   translatedGradeLevels,
   gradeLevelsMap,
 } from '../teacherDashboard/CourseOfferingHelpers';
@@ -29,7 +30,7 @@ const filterTypes = {
   duration: {
     name: 'duration',
     label: i18n.duration(),
-    options: translatedCourseOfferingDurations,
+    options: translatedCourseOfferingDurationsWithTime,
   },
   topic: {
     name: 'topic',
@@ -43,6 +44,11 @@ const filterTypes = {
     name: 'device',
     label: i18n.device(),
     options: translatedCourseOfferingDeviceTypes,
+  },
+  marketingInitiative: {
+    name: 'marketingInitiative',
+    label: i18n.curriculum(),
+    options: translatedCourseOfferingMarketingInitiatives,
   },
 };
 
@@ -149,6 +155,26 @@ const filterByDevice = (curriculum, deviceFilters) => {
   return true;
 };
 
+const filterByMarketingInitiative = (
+  curriculum,
+  marketingInitiativeFilters
+) => {
+  if (marketingInitiativeFilters.length > 0) {
+    if (!curriculum.marketing_initiative) {
+      return false;
+    } else if (
+      marketingInitiativeFilters.includes(
+        curriculum.marketing_initiative.toLowerCase()
+      )
+    ) {
+      return true;
+    }
+    return false;
+  }
+
+  return true;
+};
+
 const CurriculumCatalogFilters = ({
   curriculaData,
   filteredCurricula,
@@ -172,6 +198,10 @@ const CurriculumCatalogFilters = ({
         filterByDuration(curriculum, appliedFilters['duration']) &&
         filterByTopic(curriculum, appliedFilters['topic']) &&
         filterByDevice(curriculum, appliedFilters['device']) &&
+        filterByMarketingInitiative(
+          curriculum,
+          appliedFilters['marketingInitiative']
+        ) &&
         (!appliedFilters['translated'] || curriculum.is_translated)
     );
     const newNumFilteredTranslatedCurricula = newFilteredCurricula.filter(
@@ -266,10 +296,21 @@ const CurriculumCatalogFilters = ({
 
   return (
     <div className={style.catalogFiltersContainer}>
-      <div className={style.catalogDropdownFilters}>
+      <div className={style.catalogDropdownFiltersTopRow}>
         <Heading6 className={style.catalogFiltersRowLabel}>
           {i18n.filterBy()}
         </Heading6>
+        <Button
+          id="clear-filters"
+          className={style.catalogClearFiltersButton}
+          type="button"
+          onClick={handleClear}
+          text={i18n.clearFilters()}
+          styleAsText
+          color={Button.ButtonColor.brandSecondaryDefault}
+        />
+      </div>
+      <div className={style.catalogDropdownFilters}>
         {Object.keys(filterTypes).map(filterKey => (
           <CheckboxDropdown
             key={filterKey}
@@ -282,15 +323,6 @@ const CurriculumCatalogFilters = ({
             handleClearAll={() => handleClearAllOfFilter(filterKey)}
           />
         ))}
-        <Button
-          id="clear-filters"
-          className={style.catalogClearFiltersButton}
-          type="button"
-          onClick={handleClear}
-          text={i18n.clearFilters()}
-          styleAsText
-          color={Button.ButtonColor.brandSecondaryDefault}
-        />
       </div>
       {!isEnglish && (
         <div className={style.catalogLanguageFilterRow}>
@@ -300,12 +332,12 @@ const CurriculumCatalogFilters = ({
                 numCurricula: numFilteredTranslatedCurricula,
                 language: languageNativeName,
               })}
+              <FontAwesome
+                icon="language"
+                className={`fa-solid ${style.iconVerticalCenter}`}
+                title={i18n.courseInYourLanguage()}
+              />
             </BodyTwoText>
-            <FontAwesome
-              icon="language"
-              className="fa-solid"
-              title={i18n.courseInYourLanguage()}
-            />
           </div>
           <Toggle
             name="filterTranslatedToggle"

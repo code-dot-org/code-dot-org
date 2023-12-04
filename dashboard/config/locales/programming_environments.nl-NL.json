@@ -81,12 +81,53 @@
                 }
               }
             },
+            "circuit": {
+              "expressions": {
+                "buzzer.play": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "buzzer.playNotes": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "buzzer.playSong": {
+                  "palette_params": {
+                    "tempo": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "isPressed": {
+                  "return_value": "Boolean"
+                },
+                "toggleSwitch.isOpen": {
+                  "return_value": "Boolean"
+                }
+              }
+            },
             "control": {
               "expressions": {
+                "stopTimedLoop": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "timedLoop": {
                   "palette_params": {
                     "callback": {
                       "type": "Functie"
+                    },
+                    "ms": {
+                      "type": "Getal"
                     }
                   }
                 }
@@ -149,8 +190,46 @@
             "functions": {
               "name": "Functies"
             },
+            "maker": {
+              "expressions": {
+                "pinMode": {
+                  "palette_params": {
+                    "pin": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
+            },
             "math": {
               "expressions": {
+                "mathPow": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "max": {
@@ -172,7 +251,59 @@
                   }
                 }
               },
-              "name": "wiskundige"
+              "name": "Wiskunde"
+            },
+            "micro_bit": {
+              "expressions": {
+                "ledScreen.off": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.on": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.scrollNumber": {
+                  "palette_params": {
+                    "number": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ledScreen.toggle": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
+            },
+            "turtle": {
+              "expressions": {
+                "penRGB": {
+                  "palette_params": {
+                    "r": {
+                      "type": "Getal"
+                    }
+                  }
+                }
+              }
             },
             "ui_controls": {
               "expressions": {
@@ -184,7 +315,28 @@
                   }
                 },
                 "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
                   "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Getal"
+                    },
+                    "b": {
+                      "type": "Getal"
+                    },
+                    "g": {
+                      "type": "Getal"
+                    },
+                    "r": {
+                      "type": "Getal"
+                    }
+                  }
                 }
               }
             },
@@ -207,10 +359,166 @@
           "categories": {
             "drawing": {
               "expressions": {
+                "arc": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "start": {
+                      "type": "Getal"
+                    },
+                    "stop": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "ellipse": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "line": {
+                  "palette_params": {
+                    "x1": {
+                      "type": "Getal"
+                    },
+                    "x2": {
+                      "type": "Getal"
+                    },
+                    "y1": {
+                      "type": "Getal"
+                    },
+                    "y2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "point": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "rect": {
+                  "palette_params": {
+                    "h": {
+                      "type": "Getal"
+                    },
+                    "w": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "regularPolygon": {
+                  "palette_params": {
+                    "sides": {
+                      "type": "Getal"
+                    },
+                    "size": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "rgb": {
+                  "palette_params": {
+                    "a": {
+                      "type": "Getal"
+                    },
+                    "b": {
+                      "type": "Getal"
+                    },
+                    "g": {
+                      "type": "Getal"
+                    },
+                    "r": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "shape": {
                   "examples": {
                     "Star": {
                       "name": "Ster"
+                    }
+                  },
+                  "palette_params": {
+                    "x1": {
+                      "type": "Getal"
+                    },
+                    "x2": {
+                      "type": "Getal"
+                    },
+                    "y1": {
+                      "type": "Getal"
+                    },
+                    "y2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "strokeWeight": {
+                  "palette_params": {
+                    "size": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "text": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "width": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "textSize": {
+                  "palette_params": {
+                    "pixels": {
+                      "type": "Getal"
                     }
                   }
                 }
@@ -230,17 +538,137 @@
                   }
                 },
                 "playSound": {
+                  "palette_params": {
+                    "loop": {
+                      "type": "Boolean"
+                    }
+                  },
                   "short_description": "Speelt het MP3-geluidsbestand via de opgegeven URL."
+                },
+                "showMobileControls": {
+                  "palette_params": {
+                    "dpadFourWay": {
+                      "type": "Boolean"
+                    },
+                    "dpadVisible": {
+                      "type": "Boolean"
+                    },
+                    "mobileOnly": {
+                      "type": "Boolean"
+                    },
+                    "spaceButtonVisible": {
+                      "type": "Boolean"
+                    }
+                  }
                 }
               },
               "name": "Game Lab"
             },
             "groups": {
               "expressions": {
+                "get": {
+                  "palette_params": {
+                    "i": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "pointToEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setColliderEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "rotationOffset": {
+                      "type": "Getal"
+                    },
+                    "width/radius": {
+                      "type": "Getal"
+                    },
+                    "yOffset": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
                       "type": "Kleur"
+                    }
+                  }
+                },
+                "setHeightEach": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setLifetimeEach": {
+                  "palette_params": {
+                    "lifetime": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setMirrorXEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setMirrorYEach": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setRotateToDirectionEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setRotationEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setRotationSpeedEach": {
+                  "palette_params": {
+                    "speed": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setScaleEach": {
+                  "palette_params": {
+                    "scale": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setSpeedAndDirectionEach": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    },
+                    "speed": {
+                      "type": "Getal"
                     }
                   }
                 },
@@ -250,12 +678,67 @@
                       "type": "Kleur"
                     }
                   }
+                },
+                "setVelocityEach": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocityXEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocityYEach": {
+                  "palette_params": {
+                    "velocity": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVisibleEach": {
+                  "palette_params": {
+                    "bool": {
+                      "type": "Boolean"
+                    }
+                  }
+                },
+                "setWidthEach": {
+                  "palette_params": {
+                    "width": {
+                      "type": "Getal"
+                    }
+                  }
                 }
               },
               "name": "Groepen"
             },
             "math": {
               "expressions": {
+                "mathSqrt": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "moduloOperator": {
+                  "palette_params": {
+                    "value1": {
+                      "type": "Getal"
+                    },
+                    "value2": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "randomNumber": {
                   "palette_params": {
                     "max": {
@@ -277,14 +760,100 @@
                   }
                 }
               },
-              "name": "wiskundige"
+              "name": "Wiskunde"
             },
             "sprites": {
               "expressions": {
+                "createSprite": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "width": {
+                      "type": "Getal"
+                    },
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
                 "getSpeed": {
                   "examples": {
                     "Spiral": {
                       "name": "Spiraal"
+                    }
+                  }
+                },
+                "mirrorX": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "mirrorY": {
+                  "palette_params": {
+                    "dir": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "pointTo": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setCollider": {
+                  "palette_params": {
+                    "height": {
+                      "type": "Getal"
+                    },
+                    "rotationOffset": {
+                      "type": "Getal"
+                    },
+                    "width/radius": {
+                      "type": "Getal"
+                    },
+                    "xOffset": {
+                      "type": "Getal"
+                    },
+                    "yOffset": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setFrame": {
+                  "palette_params": {
+                    "frame": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setSpeedAndDirection": {
+                  "palette_params": {
+                    "angle": {
+                      "type": "Getal"
+                    },
+                    "speed": {
+                      "type": "Getal"
+                    }
+                  }
+                },
+                "setVelocity": {
+                  "palette_params": {
+                    "x": {
+                      "type": "Getal"
+                    },
+                    "y": {
+                      "type": "Getal"
                     }
                   }
                 }

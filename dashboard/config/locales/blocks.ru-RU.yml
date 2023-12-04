@@ -76,6 +76,11 @@ ru:
             '"measures"': такты
             '"seconds"': секунд
         text: после {TIMESTAMP} {UNIT}
+      Dancelab_atTimestampNotAfter:
+        options:
+          UNIT:
+            '"measures"': такты
+            '"seconds"': секунд
       Dancelab_changeColorBy:
         options:
           METHOD:
@@ -99,6 +104,27 @@ ru:
             '"SLOTH"': ленивцы
             '"UNICORN"': единороги
             sprites: все
+          MOVE:
+            '"next"': "(Следующий)"
+            '"prev"': "(Предыдущий)"
+            '"rand"': "(Случайный)"
+            MOVES.ClapHigh: Высокий хлопок
+            MOVES.Clown: Гангнам
+            MOVES.Dab: Дэб
+            MOVES.DoubleJam: Удвоить усилия
+            MOVES.Drop: Опустить
+            MOVES.Floss: Флосс
+            MOVES.Fresh: Свежий
+            MOVES.Kick: Звезда
+            MOVES.Rest: Нет
+            MOVES.Roll: Массажер
+            MOVES.ThisOrThat: То или это
+        text: "{GROUP} делать {MOVE} {DIR} всегда"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': кошки
+            '"SLOTH"': ленивцы
           MOVE:
             '"next"': "(Следующий)"
             '"prev"': "(Предыдущий)"
@@ -598,6 +624,52 @@ ru:
         text: |-
           "установить фоновый эффект
           {PALETTE} {EFFECT}
+      Dancelab_setBackgroundEffectWithPaletteAI:
+        options:
+          EFFECT:
+            '"circles"': Туннель
+            '"color_cycle"': Цвета
+            '"diamonds"': Алмазы
+            '"disco"': Квадраты
+            '"disco_ball"': Зеркальный шар
+            '"fireworks"': Фейерверк
+            '"flowers"': Цветы
+            '"galaxy"': Космос
+            '"growing_stars"': Растущие звезды
+            '"higher_power"': Higher Power
+            '"kaleidoscope"': Калейдоскоп
+            '"lasers"': Лазерный танцпол
+            '"music_wave"': Волны
+            '"none"': Нет
+            '"quads"': Углы
+            '"rainbow"': Радуга
+            '"rand"': "(Случайный)"
+            '"ripples"': Круги на воде
+            '"ripples_random"': Случайные круги на воде
+            '"snowflakes"': Снег
+            '"sparkles"': Блестки
+            '"spiral"': Спираль
+            '"splatter"': Брызги краски
+            '"squiggles"': Завитки
+            '"starburst"': Вспышка звёздообразования
+            '"stars"': Звезды
+            '"swirl"': Гипно
+            '"text"': Название песни
+          PALETTE:
+            '"cool"': Классный
+            '"default"': Свет
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
+            '"neon"': Неон
+            '"ocean"': Океан
+            '"rainbow"': Радуга
+            '"rave"': Черно-белый
+            '"tropical"': Тропический
+            '"vintage"': Винтаж
+            '"warm"': Красный
+        text: |-
+          "установить фоновый эффект
+          {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
           SPEED:
@@ -1041,6 +1113,12 @@ ru:
         text: "{SPRITE}сказать{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': газ
+            '"liquid"': жидкий
+            '"solid"': твердый
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

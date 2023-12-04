@@ -10,6 +10,7 @@ nn:
         error:
           future: kan ikkje vere i framtida
         finish_sign_up_header: Fullfør oppretting av kontoen
+        finish_sign_up_header_error: 'Ver snill og endre følgande feil:'
         finish_sign_up_subheader: Fyll ut følgande informasjon for å gjere ferdig
           Code.org-konto for <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Fyll ut følgande informasjon for å gjere
@@ -31,6 +32,7 @@ nn:
           har ei e-postadresse)](%{url})
         reset_password_token: Passordlenka for nullstilling du har fulgt
         us_state: Fylke
+        user_type: Kontotype
         username: Brukarnamn
     errors:
       messages:

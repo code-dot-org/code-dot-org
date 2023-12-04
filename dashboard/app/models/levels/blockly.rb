@@ -102,7 +102,7 @@ class Blockly < Level
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     xml_node = Nokogiri::XML(super(options))
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do
@@ -322,11 +322,7 @@ class Blockly < Level
 
         set_unless_nil(level_options, 'longInstructions', localized_long_instructions)
         set_unless_nil(level_options, 'failureMessageOverride', localized_failure_message_override)
-
-        # We are not localizing startHtml content until platform team addresses issues that break
-        # current curriculum for students. For more details see Jira P20-102.
-        # https://codedotorg.atlassian.net/browse/P20-102
-        # set_unless_nil(level_options, 'startHtml', localized_start_html(level_options['startHtml']))
+        set_unless_nil(level_options, 'startLibraries', localized_start_libraries(level_options['startLibraries']))
 
         # Unintuitively, it is completely possible for a Blockly level to use
         # Droplet, so we need to confirm the editor style before assuming that
@@ -354,7 +350,6 @@ class Blockly < Level
 
       level_options
     end
-
     options.freeze
   end
 
@@ -400,6 +395,7 @@ class Blockly < Level
 
       if is_a? Applab
         level_prop['startHtml'] = try(:project_template_level).try(:start_html) || start_html
+        level_prop['startLibraries'] = try(:project_template_level).try(:start_libraries) || start_libraries
         level_prop['dataTables'] = try(:project_template_level).try(:data_tables) || data_tables
         level_prop['dataProperties'] = try(:project_template_level).try(:data_properties) || data_properties
         level_prop['name'] = name
@@ -427,9 +423,9 @@ class Blockly < Level
 
       # Blockly requires these fields to be objects not strings
       %w(map initialDirt serializedMaze goal softButtons inputOutputTable scale).
-          concat(NetSim.json_object_attrs).
-          concat(Craft.json_object_attrs).
-          each do |x|
+        concat(NetSim.json_object_attrs).
+        concat(Craft.json_object_attrs).
+        each do |x|
         level_prop[x] = JSON.parse(level_prop[x]) if level_prop[x].is_a? String
       end
 
@@ -472,28 +468,30 @@ class Blockly < Level
     localized_blockly_in_text(localized_long_instructions)
   end
 
-  def localized_start_html(start_html)
-    return unless start_html
-    start_html_doc = Nokogiri::HTML(start_html, &:noblanks)
+  def localized_start_libraries(start_libraries)
+    return unless start_libraries
+    level_libraries = JSON.parse(start_libraries)
+    level_libraries.each_with_index do |library, index|
+      library_name = library["name"]
+      next unless /^i18n_/i.match?(library_name)
 
-    # match any element that contains text
-    start_html_doc.xpath('//*[text()[normalize-space()]]').each do |element|
-      localized_text = I18n.t(
-        element.text,
-        scope: [:data, :start_html, name],
-        default: nil,
+      library_source = library["source"]
+      translation_text = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+      translation_json = JSON.parse(translation_text)
+      next if translation_json.blank?
+
+      translations = I18n.t(
+        library_name,
+        scope: [:data, :start_libraries, name],
+        default: translation_json,
         smart: true
       )
-      element.content = localized_text if localized_text
-    end
 
-    # returning the children of body removes extra <html><body> tags added by parsing with ::HTML
-    # the save_with option prevents the to_html method from pretty printing and adding newlines
-    # see: https://github.com/premailer/premailer/issues/345
-    start_html_doc.xpath("//body").children.to_html(
-      encoding: 'UTF-8',
-      save_with: Nokogiri::XML::Node::SaveOptions::DEFAULT_HTML ^ Nokogiri::XML::Node::SaveOptions::FORMAT
-    )
+      localized_json = translation_json.merge(translations.stringify_keys)
+      library_source.gsub!(translation_text, JSON.pretty_generate(localized_json))
+      level_libraries[index] = library
+    end
+    JSON.generate(level_libraries)
   end
 
   def localized_authored_hints
@@ -773,6 +771,7 @@ class Blockly < Level
       studio_ask
       math_change
       gamelab_textVariableJoin
+      gamelab_ifVarEquals
     ]
 
     # Localize each 'catch-all' block type.
@@ -780,7 +779,7 @@ class Blockly < Level
       block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
         # Find all <title/field name="VAR" /> blocks and maybe update their
         # content if there exists a localization key for them.
-        block.xpath("./#{tag}[@name=\"VAR\"]").each do |var|
+        block.xpath("./#{tag}[@name=\"VAR\" or @name=\"NUM\"]").each do |var|
           localized_name = I18n.t(
             var.content,
             scope: [:data, :variable_names],

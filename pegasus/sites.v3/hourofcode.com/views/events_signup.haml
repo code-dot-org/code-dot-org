@@ -1,0 +1,9 @@
+%a#hocsignupform{name: 'signup'}
+- if [false].include?(hoc_mode)
+  %p.signup-closed.body-two.no-margin-bottom
+    =hoc_s(:signup_registration_closed_2022_markdown, markdown: :inline, locals: {hoc_activities_url: resolve_url('/learn')})
+- else
+  %h1#thanks-header{style: "display:none;"}
+    =hoc_s(:census_thanks)
+  %div
+    =view :signup_form

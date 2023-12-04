@@ -1038,17 +1038,25 @@ StudioApp.prototype.addChangeHandler = function (newHandler) {
   this.changeHandlers.push(newHandler);
 };
 
-StudioApp.prototype.runChangeHandlers = function () {
+StudioApp.prototype.runChangeHandlers = function (e) {
   if (!this.changeHandlers) {
     return;
   }
-  this.changeHandlers.forEach(handler => handler());
+  this.changeHandlers.forEach(handler => handler(e));
 };
 
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
     Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      // If we have a hidden definition workspace, run change listeners on it too.
+      // This ensures code changes in the hidden workspace trigger updates.
+      Blockly.addChangeListener(
+        Blockly.getHiddenDefinitionWorkspace(),
+        runAllHandlers
+      );
+    }
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -1242,14 +1250,9 @@ StudioApp.prototype.initReadonly = function (options) {
 /**
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
- * @param {string | undefined} hiddenDefinitions Text representation of hidden procedure definitions (JSON)
  */
-StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
-    source,
-    hiddenDefinitions
-  );
+StudioApp.prototype.loadBlocks = function (source) {
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -2119,7 +2122,6 @@ StudioApp.prototype.configureDom = function (config) {
       // Modify the arrangement of toolbox blocks so categories align left
       if (config.level.edit_blocks === TOOLBOX_EDIT_MODE) {
         this.blockYCoordinateInterval = 80;
-        config.blockArrangement = {category: {x: 20}};
       }
       // Enable if/else, param & var editing in levelbuilder, regardless of level setting
       config.level.disableIfElseEditing = false;
@@ -2277,7 +2279,17 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function () {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function (config) {
-  if (!config.level.libraries && config.level.startLibraries) {
+  // We use start libaries if we should ignore last attempt, the level has contained levels,
+  // or if the level does not have libraries saved to it yet.
+  // Always use the source code from the level definition for contained and embed levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (
+    (!config.level.libraries ||
+      config.ignoreLastAttempt ||
+      config.hasContainedLevels) &&
+    config.level.startLibraries
+  ) {
     config.level.libraries = JSON.parse(config.level.startLibraries);
   }
   if (!config.level.libraries) {
@@ -2739,13 +2751,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   }
   var startBlocks = config.level.startBlocks || '';
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
-  // For now, if we aren't loading last attempt hidden definitions will always be undefined.
-  let startHiddenDefinitions = undefined;
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
-    startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
+  // Only used in Sprite Lab.
+  if (config.level.sharedFunctions) {
+    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+      startBlocks,
+      config.level.sharedFunctions
+    );
+  }
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
@@ -2757,14 +2773,6 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
         config.forceInsertTopBlock
       );
     }
-    // Only used in Sprite Lab.
-    if (config.level.sharedFunctions) {
-      // TODO: Re-implement for JSON before migrating Sprite Lab
-      startBlocks = blockUtils.appendNewFunctions(
-        startBlocks,
-        config.level.sharedFunctions
-      );
-    }
     // Not needed if source is JSON, as these blocks will already have positions.
     startBlocks = this.arrangeBlockPosition(
       startBlocks,
@@ -2772,7 +2780,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks, startHiddenDefinitions);
+    this.loadBlocks(startBlocks);
   } catch (e) {
     if (loadLastAttempt) {
       try {
@@ -3250,6 +3258,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+
+  return renderElement;
 };
 
 /**

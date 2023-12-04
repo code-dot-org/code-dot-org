@@ -52,7 +52,9 @@ it:
         age: 'Età'
         gender: 'Sesso'
         edit_header: 'Modifica i dettagli dell''account'
+        ai_settings_header: 'Impostazioni IA'
         finish_sign_up_header: 'Completa la creazione del tuo account'
+        finish_sign_up_header_error: 'Per favore correggi i seguenti errori:'
         finish_sign_up_subheader: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org per **%{email}**.'
         finish_sign_up_subheader_provider: 'Compila i seguenti dati per terminare la creazione del tuo account Code.org con <strong>%{provider}</strong> per <strong>%{email}</strong>.'
@@ -60,6 +62,7 @@ it:
         reset_password_token: "Il link per la reimpostazione della password che hai usato"
         error:
           future: non può essere in futuro
+        user_type: 'Tipo di account'
         us_state: 'Stato'
   beta: "versione provvisoria"
   hello: "Ciao mondo"
@@ -362,9 +365,9 @@ it:
       web_lab_documentation: "Documentazione Sviluppo Web"
       project_beats_documentation: "Documentazione Project Beats"
       educate_overview: "Panoramica dei corsi"
-      educate_elementary: "Scuola elementare"
-      educate_middle: "Scuola media"
-      educate_high: "Scuola superiore"
+      educate_elementary: "Scuola primaria"
+      educate_middle: "Scuola secondaria di primo grado"
+      educate_high: "Scuola secondaria di secondo grado"
       educate_hoc: "L'Ora del Codice"
       educate_partner: "Collabora con noi"
       educate_beyond: "Dopo Code.org"
@@ -1210,7 +1213,7 @@ it:
         csf_af: 'Fondamenti di Informatica (Corsi A-F)'
         csf_express: 'Fondamenti di Informatica (Corsi rapidi)'
         csd: 'Alla scoperta dell''informatica'
-        csp: 'Principi di informatica'
+        csp: 'Princìpi di informatica'
         other: 'Altro'
         not_applicable: "Non applicabile"
       email_opt_in:
@@ -1241,8 +1244,8 @@ it:
       hello_world: 'Ciao mondo'
       popular_media: 'Media popolari'
       sports: 'Sport'
-      express: 'Esprimi'
-      csf: 'Corsi base'
+      express: 'Corsi rapidi'
+      csf: 'Fondamenti di informatica'
       csc: 'Informatica interdisciplinare'
       year_long: 'Per tutto l''anno'
       csa_labs: 'Laboratori CSA'
@@ -1307,4 +1310,3 @@ it:
     binary: "Binario"
     hexadecimal: "Esadecimale"
     pixel_format_header: "Formato Pixel"
-

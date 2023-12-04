@@ -646,6 +646,7 @@ zh-TW:
         csd_gamelab_velocity: 速度
         csd_how_teamwork_works: 團隊是如何運作
         csd_ml_ethics_ai: '倫理與人工智能 '
+        csd_ml_how_ai_works: 人工智慧是如何運作的
         csd_ml_import_model: 匯入 AI 模型
         csd_ml_intro_ai_lab_july2021: AI Lab 的介紹
         csd_ml_intro_to_ai_lab: AI Lab 的介紹
@@ -718,6 +719,7 @@ zh-TW:
         hint_videos_d_11_7_last: 提示影片：D.11.7 在最後
         hint_videos_d_11_9_first: 提示影片：D.11.9 在最前
         hint_videos_d_11_9_last: 提示影片：D.11.9 在最後
+        hoc-dance-ai-warmup: 舞會AI版：熱身
         hoc_dance_congrats: 舞蹈派對 - 還不快動起來！
         hoc_dance_congrats_2019: 舞蹈派對 2019 - 開跳！
         hoc_dance_events: 舞蹈派對 - 事件（Evnets）

@@ -10,6 +10,7 @@ mn:
         error:
           future: ирээдүйд байж болохгүй
         finish_sign_up_header: Бүртгэлээ үүсгэж дуусгах
+        finish_sign_up_header_error: 'Дараах алдааг засаарай:'
         finish_sign_up_subheader: "<strong>%{email}</strong>-д зориулж Code.org-н
           бүртгэл үүсгэж дуусгахын тулд дараах мэдээллийг бөглөөрэй."
         finish_sign_up_subheader_markdown: "**%{email}**-д зориулж Code.org-н бүртгэл
@@ -31,6 +32,7 @@ mn:
           хаяг байхгүй бол энд дараарай)(%{url})
         reset_password_token: Таны дагасан нууц үг шинэчлэх холбоос
         us_state: Муж
+        user_type: Бүртгэлийн төрөл
         username: Хэрэглэгчийн нэр
         verified_teacher: Баталгаажсан багш
     errors:

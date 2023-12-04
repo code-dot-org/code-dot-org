@@ -438,19 +438,18 @@ module LevelsHelper
       }
   end
 
-  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
-  #  1. Setting the blocklyVersion view_option, usually configured by a URL parameter.
-  #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
-  #     have fully transitioned to Google Blockly.
-  #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
-  #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
+  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses.
+  # In priority order they, are:
+  # 1. Enrolling in the google_blockly experiment using the set_single_user_experiment endpoint (persists across levels).
+  # 2. Setting the blocklyVersion view_option, usually configured by a URL parameter (not persistent across levels).
+  # 3. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
+  #    have fully transitioned to Google Blockly.
   def use_google_blockly
+    return true if Experiment.enabled?(experiment_name: 'google_blockly', user: current_user) && !@is_start_mode
     return true if view_options[:blocklyVersion]&.downcase == 'google'
     return false if view_options[:blocklyVersion]&.downcase == 'cdo'
-    return false unless @level.uses_google_blockly?
-
-    # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
-    DCDO.get('disable_google_blockly', []).map(&:downcase).exclude?(@level.class.to_s.downcase)
+    return true if @level.uses_google_blockly?
+    return false
   end
 
   # Options hash for Widget
@@ -688,9 +687,7 @@ module LevelsHelper
       callback: @callback,
       sublevelCallback: @sublevel_callback,
     }
-    dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
-    use_restricted_songs = CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
-    app_options[:useRestrictedSongs] = use_restricted_songs if @game == Game.dance
+    app_options[:useRestrictedSongs] = @game.use_restricted_songs?
     app_options[:isStartMode] = @is_start_mode || false
 
     if params[:blocks]
@@ -713,7 +710,7 @@ module LevelsHelper
     # Request-dependent option
     if request
       app_options[:isUS] = request.location.try(:country_code) == 'US' ||
-          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+        (!Rails.env.production? && request.location.try(:country_code) == 'RD')
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
@@ -770,13 +767,13 @@ module LevelsHelper
     unless @blockly_loaded
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-      content_tag(:style, '.blocklySvg { background: none; }') +
-      content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-      content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
+        content_tag(:style, '.blocklySvg { background: none; }') +
+        content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
+        content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
+        content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
+        content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+        content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+        content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
     end
 
     blocks
@@ -1014,7 +1011,7 @@ module LevelsHelper
   #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source, upgrade=false)
+  def find_or_create_level_source_image(level_image, level_source, upgrade = false)
     level_source_image = nil
     # Store the image only if the image is set, and either the image has not been
     # saved or the saved image is smaller than the provided image

@@ -5,7 +5,7 @@ theme: responsive
 :ruby
 
   resources = {
-    left_link: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/"),
+    left_link: CDO.studio_url("/s/oceans/lessons/1"),
     left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
     left_heading: hoc_s(:oceans_landing_teacher_resources),
     left_description: hoc_s(:oceans_landing_teacher_resources_desc),
@@ -79,7 +79,7 @@ theme: responsive
   }
 
 %div{dir: language_dir_class}
-  %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self', style: "font-family: 'Gotham 4r', sans-serif; text-decoration: none"}
+  %a{href: CDO.studio_url('/s/oceans/reset'), target: '_self', style: "text-decoration: none"}
     .tutorial-promo-container
       = view :oceans_promo
       .tutorial-details.desktop-feature

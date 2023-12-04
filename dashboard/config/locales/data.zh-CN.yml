@@ -602,7 +602,7 @@ zh-CN:
         csa_wrapper_classes_part_2: CSA：包装类第 2 部分
         csa_writing_a_method: CSA：编写方法
         csc-ecosystems-intro: 生态系统简介
-        csc-event-short-intro: 活动简短介绍
+        csc-event-short-intro: 事件简介
         csc-poem-art-intro: 简介视频
         csc-poem-art-outro: 结尾视频
         csc-sprite-lab-pixel-editor: 画自己的精灵图
@@ -639,6 +639,7 @@ zh-CN:
         csd_gamelab_velocity: 矢量
         csd_how_teamwork_works: 如何运用团队合作
         csd_ml_ethics_ai: 伦理与人工智能
+        csd_ml_how_ai_works: AI 的工作原理
         csd_ml_import_model: 导入 AI 模型
         csd_ml_intro_ai_lab_july2021: 人工智能实验室的介绍
         csd_ml_intro_to_ai_lab: 人工智能实验室的介绍
@@ -707,6 +708,7 @@ zh-CN:
         hint_videos_d_11_7_last: 提示视频：D.11.7 最后一个
         hint_videos_d_11_9_first: '提示视频: D.11.9 第一个'
         hint_videos_d_11_9_last: 提示视频：D.11.9 最后一个
+        hoc-dance-ai-warmup: 舞会AI版：热身
         hoc_dance_congrats: 舞会 - 继续！
         hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
         hoc_dance_events: 舞蹈派对 - 事件

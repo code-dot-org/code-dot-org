@@ -1415,7 +1415,7 @@ ne:
           description_short: Explore a Minecraft world through code
           student_description: Use blocks of code to take Steve or Alex on an adventure
             through this Minecraft world
-          title: Minecraft Hour of Code
+          title: Minecraft Adventurer
         minecraft:
           description: Program animals and other Minecraft creatures in your own version
             of Minecraft.
@@ -1512,6 +1512,33 @@ ne:
               display_name: घटनाहरु
             csf_loops:
               display_name: Loops
+        self-paced-pl-csd-unit1-2-2023:
+          description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          student_description: |-
+            Ce module d'apprentissage professionnel est conçu pour vous aider à vous préparer à enseigner l'unité Résolution de problèmes et informatique de Code.org.
+
+            **Dans ce module d'apprentissage professionnel, vous devrez :**.
+
+            -   Obtenir une introduction à la résolution de problèmes et à l'informatique.
+            -   Mettre en pratique les concepts clés inclus dans l'unité.
+            -   Explorer les projets de fin de chapitre.
+
+            \*\*Durée suggérée : 30 minutes.
+
+            Traduit avec www.DeepL.com/Translator (version gratuite)
+          title: 'Module 1 : Préparation à l''enseignement de la résolution de problèmes
+            et de l''informatique'
         soccer:
           name: प्राप्तांक
         spelling-bee:
@@ -1613,9 +1640,24 @@ ne:
           lesson_groups:
             content:
               display_name: Content
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Introduction
+          lessons:
+            lesson-7:
+              name: Introduction
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Introduction
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Introduction
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Introduction
         vpl-csd-ci-1:
           description: |-

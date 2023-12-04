@@ -34,20 +34,6 @@ Layout/HashAlignment:
 Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 
-# Offense count: 462
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: aligned, indented, indented_relative_to_receiver
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
-
-# Offense count: 190
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: aligned, indented
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
 # Offense count: 292
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
@@ -185,14 +171,6 @@ Rails/Pluck:
 Rails/RakeEnvironment:
   Enabled: false
 
-# Offense count: 1975
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, Include.
-# SupportedStyles: assert_not, refute
-# Include: **/test/**/*
-Rails/RefuteMethods:
-  Enabled: false
-
 # Offense count: 106
 # Configuration parameters: ForbiddenMethods, AllowedMethods.
 # ForbiddenMethods: decrement!, decrement_counter, increment!, increment_counter, insert, insert!, insert_all, insert_all!, toggle!, touch, touch_all, update_all, update_attribute, update_column, update_columns, update_counters, upsert, upsert_all
@@ -291,12 +269,6 @@ Style/GlobalStdStream:
 # Offense count: 325
 # Configuration parameters: AllowedVariables.
 Style/GlobalVars:
-  Enabled: false
-
-# Offense count: 20
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: AllowSplatArgument.
-Style/HashConversion:
   Enabled: false
 
 # Offense count: 31

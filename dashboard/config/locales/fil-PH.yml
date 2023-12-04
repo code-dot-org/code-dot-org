@@ -10,6 +10,7 @@ fil:
         error:
           future: hindi maaari sa hinaharap
         finish_sign_up_header: Tapusin ang paglikha ng iyong account
+        finish_sign_up_header_error: 'Pakiwasto ang mga sumusunod na mga error:'
         finish_sign_up_subheader: Punan ang sumusunod na impormasyon upang matapos
           ang paglikha ng isang Code.org account para kay <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Punan ang sumusunod na impormasyon upang
@@ -33,6 +34,7 @@ fil:
           ka pang email address)](%{url})
         reset_password_token: Ang sinunod mong link ng pag-reset ng password
         us_state: Estado
+        user_type: Uri ng Account
         username: Username
         verified_teacher: Beripikadong Guro
     errors:
@@ -579,7 +581,7 @@ fil:
       about_us: Tungkol sa Amin
       app_lab_documentation: Dokumentasyon ng App Lab
       app_lab_tutorials: Mga Tutorial sa App Lab
-      course_catalog: Catalog ng Kurso
+      course_catalog: Katalogo ng Kurso
       documentation: Dokumentasyon
       educate_beyond: Pagkatapos ng Code.org
       educate_community: Online na Komunidad

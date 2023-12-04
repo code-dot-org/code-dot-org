@@ -188,6 +188,9 @@
         "pre-express-2018/Spelling Bee": {
           "name": "Abella que Soletrea"
         },
+        "K5-OnlinePD/Computer Science Fundamentals": {
+          "name": "Fundamentos de Informática"
+        },
         "csd2-2019/Lists": {
           "name": "Listas"
         },
@@ -256,6 +259,24 @@
         },
         "pre-express-2019/Spelling Bee": {
           "name": "Abella que Soletrea"
+        },
+        "k5-onlinepd-2019/Loops": {
+          "name": "Bucles"
+        },
+        "k5-onlinepd-2019/Events": {
+          "name": "Eventos"
+        },
+        "k5-onlinepd-2019/Conditionals": {
+          "name": "Condicionais"
+        },
+        "k5-onlinepd-2019/Functions": {
+          "name": "Funcións"
+        },
+        "k5-onlinepd-2019/Variables": {
+          "name": "Variables"
+        },
+        "k5-onlinepd-2019/For Loops": {
+          "name": "Bucles \"Para\" (For)"
         },
         "coursea-2020/Programming: Happy Maps": {
           "name": "Mapas Felices"
@@ -344,6 +365,9 @@
         "coursef-2021/Internet": {
           "name": "A Internet"
         },
+        "kodea-pd-2021/Computer Science Fundamentals": {
+          "name": "Fundamentos de Informática"
+        },
         "csd3-2022/Variables": {
           "name": "Variables"
         },
@@ -389,8 +413,53 @@
         "coursef-2022/The Internet": {
           "name": "A Internet"
         },
-        "Hour of Code/Hour of Code 2013": {
-          "name": "Hora de Código 2013"
+        "csd3-2023/Variables": {
+          "name": "Variables"
+        },
+        "csd3-2023/Text": {
+          "name": "Texto"
+        },
+        "csd3-2023/Conditionals": {
+          "name": "Condicionais"
+        },
+        "csd3-2023/Functions": {
+          "name": "Funcións"
+        },
+        "csd6a-2023/Functions": {
+          "name": "Funcións"
+        },
+        "csd6b-2023/Functions": {
+          "name": "Funcións"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Mapas Felices"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Creando camiños"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Bucleándose"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "O Gran Evento"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Pulseiras Binarias"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Programación por relevos"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Condicionais con cartas"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Composición"
+        },
+        "coursef-2023/The Internet": {
+          "name": "A Internet"
         },
         "artist/Artist": {
           "name": "Artista"
@@ -415,12 +484,6 @@
         },
         "mc/Hour of Code 2015": {
           "name": "Hora do Código Minecraft"
-        },
-        "outbreak/Outbreak": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
         },
         "playlab/Play Lab": {
           "name": "Laboratorio de Xogos"
@@ -745,6 +808,9 @@
         },
         "course4/Extreme Challenge - Comprehensive": {
           "name": "Desafío extremo - completo"
+        },
+        "Hour of Code/Hour of Code 2013": {
+          "name": "Hora de Código 2013"
         },
         "jigsaw/Jigsaw": {
           "name": "Crebacabezas"

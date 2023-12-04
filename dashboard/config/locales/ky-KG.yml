@@ -6,6 +6,7 @@ ky:
         age: Жашы
         current_password: Учурдагы сырсөз
         email: Эмейл
+        finish_sign_up_header_error: 'Кийинки каталарды оңдогула:'
         locale: Тили
         name: Атын көрсөт
         name_example: Атын көрсөт (м. Мыкты кодер же Жаңыл)

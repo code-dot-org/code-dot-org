@@ -12,12 +12,22 @@
           "Yes": "Da",
           "cute": "drăguț"
         },
+        "CSD U1 IO Pet Chooser 2_2023": {
+          "No": "Nu",
+          "Yes": "Da",
+          "cute": "drăguț"
+        },
         "CSD U1 IO Pet Chooser_2021": {
           "No": "Nu",
           "Yes": "Da",
           "cute": "drăguț"
         },
         "CSD U1 IO Pet Chooser_2022": {
+          "No": "Nu",
+          "Yes": "Da",
+          "cute": "drăguț"
+        },
+        "CSD U1 IO Pet Chooser_2023": {
           "No": "Nu",
           "Yes": "Da",
           "cute": "drăguț"
@@ -30,6 +40,13 @@
           "text": "text"
         },
         "CSD U1 IO Story_2022": {
+          "City": "Oraş",
+          "Color": "Culoare",
+          "Food": "Alimente",
+          "Name": "Nume",
+          "text": "text"
+        },
+        "CSD U1 IO Story_2023": {
           "City": "Oraş",
           "Color": "Culoare",
           "Food": "Alimente",
@@ -80,12 +97,39 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing bday_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 processing fastest_2021": {
           "0": "0",
           "k": "k",
           "s": "s"
         },
         "CSD U1 processing fastest_2022": {
+          "0": "0",
+          "k": "k",
+          "s": "s"
+        },
+        "CSD U1 processing fastest_2023": {
           "0": "0",
           "k": "k",
           "s": "s"
@@ -138,6 +182,30 @@
           "?": "?",
           "text": "text"
         },
+        "CSD U1 processing guess_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9",
+          "?": "?",
+          "text": "text"
+        },
         "CSD U1 processing live_2021": {
           "bear": "ursi",
           "rat": "șobolan",
@@ -148,11 +216,22 @@
           "rat": "șobolan",
           "walking": "plimbare"
         },
+        "CSD U1 processing live_2023": {
+          "cat": "pisică",
+          "chicken": "gaina",
+          "dog": "câine",
+          "horse": "cal",
+          "walking": "plimbare"
+        },
         "CSD U1 processing npark_2021": {
           "Correct!": "Corect!",
           "Sorry!": "Îmi pare rău!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "Corect!",
+          "Sorry!": "Îmi pare rău!"
+        },
+        "CSD U1 processing npark_2023": {
           "Correct!": "Corect!",
           "Sorry!": "Îmi pare rău!"
         },
@@ -200,10 +279,35 @@
           "8": "8",
           "9": "9"
         },
+        "CSD U1 processing writers_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "CSD U1 storage friends_2021": {
           "Back": "Înapoi"
         },
         "CSD U1 storage friends_2022": {
+          "Back": "Înapoi"
+        },
+        "CSD U1 storage friends_2023": {
           "Back": "Înapoi"
         },
         "CSD U1 storage movies_2021": {
@@ -218,6 +322,12 @@
           "Yes": "Da",
           "text": "text"
         },
+        "CSD U1 storage movies_2023": {
+          "No": "Nu",
+          "Star Wars": "Star Wars",
+          "Yes": "Da",
+          "text": "text"
+        },
         "CSD U1 storage outfit_2021": {
           "Clear": "Ştergere",
           "black": "negru",
@@ -227,6 +337,14 @@
           "white": "alb"
         },
         "CSD U1 storage outfit_2022": {
+          "Clear": "Ştergere",
+          "black": "negru",
+          "green": "verde",
+          "pink": "roz",
+          "purple": "purpuriu",
+          "white": "alb"
+        },
+        "CSD U1 storage outfit_2023": {
           "Clear": "Ştergere",
           "black": "negru",
           "green": "verde",
@@ -269,41 +387,121 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - PD_2023": {
+          "You did it!": "Ai facut-o!"
         },
         "CSD U6 - Accelerometer - PD_2222": {
           "You did it!": "Ai facut-o!"
         },
+        "CSD U6 - Accelerometer - PF_2023": {
+          "0": "0"
+        },
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - PF_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - P_2023": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - PracC_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - SB1_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - SB1_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - SB2_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Board Inputs - SB2_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Inputs - SB3_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Board Inputs - SB3_2222": {
           "Success!": "Succes!"
+        },
+        "CSD U6 - Board Outputs - A_2023": {
+          "Happy": "Fericit"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Fericit"
         },
+        "CSD U6 - Board Outputs - A_mb2022": {
+          "Age": "Vârsta",
+          "Happy": "Fericit",
+          "Name": "Nume"
+        },
+        "CSD U6 - Board Outputs - ChalC_mb2022": {
+          "No": "Nu",
+          "Yes": "Da"
+        },
+        "CSD U6 - Board Outputs - P_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Board Outputs - P_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Board Outputs - PracD_mb2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "CSD U6 - Board Outputs - SB1_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Board Outputs - SB2_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Board Outputs - SB2_2222": {
           "Success!": "Succes!"
+        },
+        "CSD U6 - Board Outputs - SB4_2023": {
+          "Fish": "Pește"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Pește"
         },
+        "CSD U6 - Board Outputs - Setup_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Board Outputs - Setup_2222": {
           "Success!": "Succes!"
+        },
+        "CSD U6 - Board Outputs - Setup_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Color LEDs - ChalD_2023": {
+          "East": "Est",
+          "North": "Nord",
+          "South": "Sud",
+          "West": "Vest"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Est",
@@ -311,17 +509,37 @@
           "South": "Sud",
           "West": "Vest"
         },
+        "CSD U6 - Color LEDs - PracA_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Color LEDs - PracA_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Color LEDs - SB2_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Color LEDs - SB3_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Color LEDs - SB3_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Color LEDs - SB4_2023": {
+          "Medium": "Medium"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Medium"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "green": "verde",
+          "left": "stânga",
+          "purple": "purpuriu",
+          "red": "roşu",
+          "right": "dreapta",
+          "yellow": "galben"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "verde",
@@ -330,6 +548,10 @@
           "red": "roşu",
           "right": "dreapta",
           "yellow": "galben"
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "left": "stânga",
+          "right": "dreapta"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
           "fast": "repede",
@@ -340,14 +562,38 @@
           "short": "scurt",
           "slow": "încet"
         },
+        "CSD U6 - Combine Inputs - CA_2023": {
+          "fast": "repede",
+          "high": "mare",
+          "long": "lung",
+          "low": "mic",
+          "on": "pornit",
+          "short": "scurt",
+          "slow": "încet"
+        },
+        "CSD U6 - Combine Inputs - ChalG_2023": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Red": "Roșu"
+        },
         "CSD U6 - Combine Inputs - ChalG_2222": {
           "Blue": "Albastru",
           "Green": "Verde",
           "Red": "Roșu"
         },
+        "CSD U6 - Combine Inputs - PracA_2023": {
+          "left": "stânga",
+          "right": "dreapta"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "stânga",
           "right": "dreapta"
+        },
+        "CSD U6 - Combine Inputs - PracC_2023": {
+          "blue": "albastru",
+          "green": "verde",
+          "orange": "portocală / oranj",
+          "yellow": "galben"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "albastru",
@@ -355,12 +601,30 @@
           "orange": "portocală / oranj",
           "yellow": "galben"
         },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "Test": "Test",
+          "quiet": "liniștit"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "Test": "Test",
           "quiet": "liniștit"
         },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "bottom row": "rândul de jos",
+          "top row": "rândul de sus"
+        },
+        "CSD U6 - Combine Inputs - SB2_2023": {
+          "long": "lung",
+          "short": "scurt"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "lung",
+          "short": "scurt"
+        },
+        "CSD U6 - Combine Inputs - SB3_2023": {
+          "high": "mare",
+          "long": "lung",
+          "low": "mic",
           "short": "scurt"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
@@ -369,18 +633,53 @@
           "low": "mic",
           "short": "scurt"
         },
+        "CSD U6 - Combine Inputs - SB4_2023": {
+          "long": "lung",
+          "short": "scurt"
+        },
         "CSD U6 - Combine Inputs - SB4_2222": {
           "long": "lung",
           "short": "scurt"
+        },
+        "CSD U6 - Combine Inputs - SB4v2_mb2022": {
+          "Row": "Rând"
+        },
+        "CSD U6 - Combine Inputs - SB5v2_mb2022": {
+          "Row": "Rând"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "Blue": "Albastru",
+          "Red": "Roșu"
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Albastru",
           "Red": "Roșu"
         },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "Blue": "Albastru",
+          "Red": "Roșu"
+        },
+        "CSD U6 - Functions - P_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
         },
+        "CSD U6 - Functions - P_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "0": "0"
+        },
         "CSD U6 - Functions - SB7_2222": {
+          "0": "0"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - If Variables - ChalD_2023": {
+          "+": "+",
+          "-": "-",
           "0": "0"
         },
         "CSD U6 - If Variables - ChalD_2222": {
@@ -388,14 +687,43 @@
           "-": "-",
           "0": "0"
         },
+        "CSD U6 - If Variables - ChalD_mb2022": {
+          "+": "+",
+          "-": "-",
+          "0": "0"
+        },
+        "CSD U6 - If Variables - SB3_2023": {
+          "Name": "Nume"
+        },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Nume"
+        },
+        "CSD U6 - If Variables - SB3_mb2022": {
+          "Name": "Nume"
+        },
+        "CSD U6 - If Variables - SB4_2023": {
+          "0": "0"
         },
         "CSD U6 - If Variables - SB4_2222": {
           "0": "0"
         },
+        "CSD U6 - If Variables - SB4_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Music - A_2023": {
+          "Happy": "Fericit"
+        },
         "CSD U6 - Music - A_2222": {
           "Happy": "Fericit"
+        },
+        "CSD U6 - Music - ChalD_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -405,6 +733,16 @@
           "E": "E",
           "F": "F",
           "G": "G"
+        },
+        "CSD U6 - Music - Piano_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G",
+          "Note:": "Notă:"
         },
         "CSD U6 - Music - Piano_2222": {
           "A": "A",
@@ -416,7 +754,25 @@
           "G": "G",
           "Note:": "Notă:"
         },
+        "CSD U6 - Music - SB1_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB1_2222": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
+        "CSD U6 - Music - SB2.5_2023": {
           "A": "A",
           "B": "B",
           "C": "C",
@@ -434,6 +790,15 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB3_2023": {
+          "A": "A",
+          "B": "B",
+          "C": "C",
+          "D": "D",
+          "E": "E",
+          "F": "F",
+          "G": "G"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "A",
           "B": "B",
@@ -443,69 +808,198 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Music - SB4_2222": {
           "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "1": "1",
+          "2": "2"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "1": "1",
+          "2": "2"
+        },
+        "CSD U6 - Physical Input - ChalA_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Input - ChalA_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - ChalA_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - ChalB_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Input - ChalB_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - ChalC_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Input - ChalC_2222": {
           "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - ChalC_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - PA_2023": {
+          "0": "0",
+          "Score": "Scor"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Scor"
         },
+        "CSD U6 - Physical Input - PA_mb2022": {
+          "0": "0",
+          "Score": "Scor"
+        },
+        "CSD U6 - Physical Input - PC_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Input - PC_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - PD_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Input - PD_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Input - PD_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - SB1_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Input - SB1_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Input - SB1_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - ChalA_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Output - ChalA_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - ChalB_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Output - ChalB_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - ChalB_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - ChalC_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Output - ChalC_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - PB_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Output - PB_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - PB_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - PC_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Output - PC_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Output - PC_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - P_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Output - P_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - P_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - SB1_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Output - SB1_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Output - SB1_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - SB2.2_2023": {
+          "Success!": "Succes!"
+        },
         "CSD U6 - Physical Output - SB2.2_2222": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - SB2.2_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Physical Output - SB2_2023": {
           "Success!": "Succes!"
         },
         "CSD U6 - Physical Output - SB2_2222": {
           "Success!": "Succes!"
         },
+        "CSD U6 - Physical Output - SB2_mb2022": {
+          "Success!": "Succes!"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "Name:": "Nume:"
+        },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Nume:"
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "Name:": "Nume:"
+        },
+        "CSD U6 - Screen Inputs - ChalB_2023": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Red": "Roșu"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Albastru",
           "Green": "Verde",
           "Red": "Roșu"
+        },
+        "CSD U6 - Screen Inputs - ChalB_mb2022": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Red": "Roșu"
+        },
+        "CSD U6 - Screen Inputs - P_2023": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Name:": "Nume:",
+          "Red": "Roșu",
+          "Save": "Salvează"
         },
         "CSD U6 - Screen Inputs - P_2222": {
           "Blue": "Albastru",
@@ -514,10 +1008,31 @@
           "Red": "Roșu",
           "Save": "Salvează"
         },
+        "CSD U6 - Screen Inputs - P_mb2022": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Name:": "Nume:",
+          "Red": "Roșu",
+          "Save": "Salvează"
+        },
+        "CSD U6 - Screen Inputs - PracD_2023": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
+        "CSD U6 - Screen Inputs - PracD_mb2022": {
+          "0": "0"
+        },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "black": "negru",
+          "white": "alb"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_2023": {
+          "black": "negru",
+          "white": "alb"
+        },
+        "CSD U6 - Screen Inputs - SB2.1_mb2022": {
           "black": "negru",
           "white": "alb"
         },
@@ -525,12 +1040,40 @@
           "black": "negru",
           "white": "alb"
         },
+        "CSD U6 - Screen Inputs - SB2.2_2023": {
+          "black": "negru",
+          "white": "alb"
+        },
+        "CSD U6 - Screen Inputs - SB2.2_mb2022": {
+          "black": "negru",
+          "white": "alb"
+        },
+        "CSD U6 - Screen Outputs - ChalB_2023": {
+          "?": "?",
+          "Happy": "Fericit"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
           "Happy": "Fericit"
         },
+        "CSD U6 - Screen Outputs - ChalB_mb2022": {
+          "?": "?",
+          "Happy": "Fericit"
+        },
+        "CSD U6 - Screen Outputs - P_2023": {
+          "title": "titlu"
+        },
         "CSD U6 - Screen Outputs - P_2222": {
           "title": "titlu"
+        },
+        "CSD U6 - Screen Outputs - P_mb2022": {
+          "title": "titlu"
+        },
+        "CSD U6 - Screen Outputs - PracA_2023": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Red": "Roșu",
+          "White": "Alb"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
           "Blue": "Albastru",
@@ -538,41 +1081,111 @@
           "Red": "Roșu",
           "White": "Alb"
         },
+        "CSD U6 - Screen Outputs - PracA_mb2022": {
+          "Blue": "Albastru",
+          "Green": "Verde",
+          "Red": "Roșu",
+          "White": "Alb"
+        },
+        "CSD U6 - Screen Outputs - PracB_2023": {
+          "down": "jos",
+          "left": "stânga",
+          "right": "dreapta",
+          "up": "sus"
+        },
         "CSD U6 - Screen Outputs - PracB_2222": {
           "down": "jos",
           "left": "stânga",
           "right": "dreapta",
           "up": "sus"
         },
+        "CSD U6 - Screen Outputs - PracB_mb2022": {
+          "down": "jos",
+          "left": "stânga",
+          "right": "dreapta",
+          "up": "sus"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_2023": {
+          "name": "nume"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
           "name": "nume"
+        },
+        "CSD U6 - Screen Outputs - SB1.1_mb2022": {
+          "name": "nume"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "0": "0"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
         },
+        "CSD U6 - Sensors - A_mb2022": {
+          "0": "0"
+        },
+        "CSD U6 - Sensors - PC_2023": {
+          "off": "oprit",
+          "on": "pornit"
+        },
         "CSD U6 - Sensors - PC_2222": {
           "off": "oprit",
           "on": "pornit"
+        },
+        "CSD U6 - Sensors - P_2023": {
+          "high": "mare",
+          "low": "mic",
+          "text": "text"
         },
         "CSD U6 - Sensors - P_2222": {
           "high": "mare",
           "low": "mic",
           "text": "text"
         },
+        "CSD U6 - Sensors - P_mb2022": {
+          "high": "mare",
+          "low": "mic",
+          "text": "text"
+        },
+        "CSD U6 - Sensors - SB1_2023": {
+          "value": "valoare"
+        },
         "CSD U6 - Sensors - SB1_2222": {
+          "value": "valoare"
+        },
+        "CSD U6 - Sensors - SB2_2023": {
+          "Update": "Actualizează",
           "value": "valoare"
         },
         "CSD U6 - Sensors - SB2_2222": {
           "Update": "Actualizează",
           "value": "valoare"
         },
+        "CSD U6 - Sensors - SB2_mb2022": {
+          "Update": "Actualizează",
+          "value": "valoare"
+        },
+        "CSD U6 - Sensors - SB3_2023": {
+          "value": "valoare"
+        },
         "CSD U6 - Sensors - SB3_2222": {
+          "value": "valoare"
+        },
+        "CSD U6 - Sensors - SB3_mb2022": {
+          "value": "valoare"
+        },
+        "CSD U6 - Sensors - SB4.1_2023": {
           "value": "valoare"
         },
         "CSD U6 - Sensors - SB4.1_2222": {
           "value": "valoare"
         },
+        "CSD U6 - Sensors - SB4_2023": {
+          "value": "valoare"
+        },
         "CSD U6 - Sensors - SB4_2222": {
+          "value": "valoare"
+        },
+        "CSD U6 - Sensors - SB4_mb2022": {
           "value": "valoare"
         },
         "CSD U6 Driver pt 2": {
@@ -1178,7 +1791,13 @@
         "CSDU6 Circuit Playground Test_2021": {
           "Success!": "Succes!"
         },
+        "CSDU6 Circuit Playground Test_2023": {
+          "Success!": "Succes!"
+        },
         "CSDU6 Circuit Playground Test_2222": {
+          "Success!": "Succes!"
+        },
+        "CSDU6 Circuit Playground Test_mb2022": {
           "Success!": "Succes!"
         },
         "CSDU6 circuit playground piano": {
@@ -1253,6 +1872,94 @@
           "F": "F",
           "G": "G"
         },
+        "GAN Guess Widget_ai23": {
+          "Click on the buttons below to build a guess for what follows the rule": "Faceți clic pe butoanele de mai jos pentru a construi o estimare pentru ceea ce urmează regula",
+          "Computer's Guess FOLLOWS Rule": "Ghicirea calculatorului urmează regula",
+          "Computer's Guess does NOT follow the Rule": "Computer's Guess nu respectă regula",
+          "Computer's Guess:": "Presupunerea calculatorului:",
+          "Current Guess": "Ghicirea curentă",
+          "Previous Guesses": "Precedentele ghiciri",
+          "Submit Guess": "Trimite Guess"
+        },
+        "LLM - Eliza_ai23": {
+          "Talk to Eliza by entering text in the prompt box. When you are finished, type quit in the prompt.": "Discutați cu Eliza introducând text în caseta de prompt. Când ați terminat, tastați quit în prompt."
+        },
+        "LLM - Written Voice Simulator_ai23": {
+          "BTS: \"Dynamite\"": "BTS: „Dinamită”",
+          "Back": "Înapoi",
+          "Change Voice": "Schimbați vocea",
+          "Choose a voice to model": "Alegeți o voce pe care să o modelați",
+          "Choose the Save file you want to load from the dropdown below": "Alegeți fișierul Salvare pe care doriți să îl încărcați din meniul derulant de mai jos",
+          "Copy / Paste or type the words you want to create a model based on below": "Copiați/Lipiți sau tastați cuvintele pe care doriți să creați un model bazat pe mai jos",
+          "Create my own!": "Creează-mi propriul!",
+          "Delete Text": "Ștergeți textul",
+          "Dr Seuss: Green Eggs and Ham": "Dr. Seuss: Ouă verzi și șuncă",
+          "Generate!": "Genera!",
+          "Give the voice a name": "Dați vocii un nume",
+          "Give your save file a name": "Dați un nume fișierului de salvare",
+          "Load Save": "Încărcați Salvați",
+          "Load this story": "Încărcați această poveste",
+          "Maya Angelou: \"Caged Bird\"": "Maya Angelou: „Pasăre în cușcă”",
+          "Model This Voice!": "Modelează această voce!",
+          "Modeling Voice": "Modelarea vocii",
+          "Pharell: \"Happy\"": "Pharell: „Fericit”",
+          "Sandra Cisneros: \"Abuelito Who\"": "Sandra Cisneros: „Abuelito Who”",
+          "Save Text": "Salvează textul",
+          "Save!": "Salvează!"
+        },
+        "Neural Networks - Perceptron - Beta_ai23": {
+          "Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Alegeți unul dintre creatorii de conținut de mai jos pentru a genera recomandări pentru dvs. Dacă faceți clic pe numele lor, veți afișa mai multe informații despre ei.După ce ați selectat pe cineva, faceți clic pe butonul „Afișați recomandările” pentru a vedea fluxul dvs. video! Vezi Recomandări! ➡️ Recomandările dvs.Acestea sunt videoclipurile care v-au fost recomandate în funcție de cine ați selectat în ultimul ecran.Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite categorii.Exemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați o persoană nouă",
+          "Example!": "Exemplu!",
+          "Let's Get Started! ➡️": "Să începem! ➡️",
+          "Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!": "După ce ați selectat pe cineva, faceți clic pe butonul „Afișați recomandările” pentru a vedea care este fluxul dvs. video!",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. ",
+          "See Recommendations! ➡️": "Vezi Recomandări! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Selectați cel puțin o persoană pe care să o utilizați pentru recomandări pentru a continua!",
+          "Simply pick which content creators you want to follow and then see your video recommendations!": "Pur și simplu alegeți creatorii de conținut pe care doriți să îi urmați și apoi vedeți recomandările dvs. video!",
+          "These are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "Acestea sunt videoclipurile care v-au fost recomandate în funcție de cine ați selectat în ultimul ecran.Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite categorii.Exemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați o persoană nouă",
+          "Use the buttons on the left to filter by certain categories.": "Utilizați butoanele din stânga pentru a filtra după anumite categorii.",
+          "We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.": "Am adunat toate personalitățile tale preferate pentru a crea videoclipuri care se potrivesc intereselor tale ȘI pentru a ajuta la curatarea fluxului video.",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests AND to help curate your video feed.Simply pick which content creators you want to follow and then see your video recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below to generate recommendations for you. Clicking their name will show more information about them.Once you've selected someone, click the \"Show Recommendations\" button to see what your video feed!See Recommendations! ➡️Your RecommendationsThese are the videos you've been recommended based on who you selected in the last screen.Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain categories.Example!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Person": "WeTube este un nou site media pentru toți creatorii de conținut preferați. Am adunat toate personalitățile tale preferate pentru a crea videoclipuri care să corespundă intereselor tale ȘI pentru a ajuta la curățarea feedului video. Pur și simplu alege creatorii de conținut pe care vrei să îi urmezi și apoi vezi recomandările tale video! Să începem! ➡️ Selectați cel puțin o persoană pe care să o utilizați pentru recomandări pentru a continua! Alegeți unul dintre creatorii de conținut de mai jos pentru a genera recomandări pentru dvs. Dacă faceți clic pe numele lor, veți afișa mai multe informații despre ei.După ce ați selectat pe cineva, faceți clic pe butonul „Afișați recomandările” pentru a vedea fluxul dvs. video! Vezi Recomandări! ➡️ Recomandările dvs.Acestea sunt videoclipurile care v-au fost recomandate în funcție de cine ați selectat în ultimul ecran.Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite categorii.Exemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați o persoană nouă",
+          "Your Recommendations": "Recomandările Dumneavoastră",
+          "⬅️ Select New Person": "⬅️ Selectați o persoană nouă",
+          "⬆️ Scroll Up ⬆️": "⬆️ Derulați în sus ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Derulați în jos ⬇️"
+        },
+        "Neural Networks - Perceptron - Full_ai23": {
+          "0 means their opinion isn't included in your recommendations at all": "0 înseamnă că opinia lor nu este inclusă deloc în recomandările dvs.",
+          "10 means they have a huge influence on the recommendations you receive": "10 înseamnă că au o influență uriașă asupra recomandărilor pe care le primiți",
+          "Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Alegeți unul dintre creatorii de conținut de mai jos, apoi utilizați glisorul pentru a ajusta cât de mult doriți ca aceștia să vă influențeze recomandările! 0 înseamnă că opinia lor nu este deloc inclusă în recomandările dvs.10 înseamnă că au o influență uriașă asupra recomandărilor pe care le primițiFeatureBelaVezi Recomandări! ➡️ FeatureValueRecomandările dvs.Acestea sunt videoclipurile care v-au fost recomandate în funcție de modul în care ați ajustat greutățile de pe ultimul ecran. Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite videoclipuriExemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați greutăți noi",
+          "Example!": "Exemplu!",
+          "Let's Get Started! ➡️": "Să începem! ➡️",
+          "Only 3 videos are shown at a time - use the Scroll buttons to see more. ": "Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. ",
+          "See Recommendations! ➡️": "Vezi Recomandări! ➡️",
+          "Select at least one person to use for recommendations to continue!": "Selectați cel puțin o persoană pe care să o utilizați pentru recomandări pentru a continua!",
+          "Simply pick which content creators you want to follow to see your recommendations!": "Pur și simplu alegeți creatorii de conținut pe care doriți să îi urmați pentru a vedea recomandările dvs.!",
+          "These are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "Acestea sunt videoclipurile care v-au fost recomandate în funcție de modul în care ați ajustat greutățile de pe ultimul ecran. Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite videoclipuriExemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați greutăți noi",
+          "Use the buttons on the left to filter by certain videos": "Utilizați butoanele din stânga pentru a filtra după anumite videoclipuri",
+          "We've gathered all your favorite personalities to make videos that match your interests.": "Am adunat toate personalitățile tale preferate pentru a crea videoclipuri care se potrivesc intereselor tale.",
+          "WeTube Video Recommendations": "Recomandări video WeTube",
+          "WeTube is a new media website for all your favorite content creators. We've gathered all your favorite personalities to make videos that match your interests.Simply pick which content creators you want to follow to see your recommendations!Let's Get Started! ➡️Select at least one person to use for recommendations to continue!Choose one of the content creators below, then use the slider to adjust how much you want them to influence your recommendations!0 means their opinion isn't included in your recommendations at all10 means they have a huge influence on the recommendations you receivefeatureLabelSee Recommendations! ➡️featureValueYour RecommendationsThese are the videos you've been recommended based on how you adjusted the weights on the last screen. Only 3 videos are shown at a time - use the Scroll buttons to see more. Use the buttons on the left to filter by certain videosExample!Example!Example!⬆️ Scroll Up ⬆️⬇️ Scroll Down ⬇️⬅️ Select New Weights": "WeTube este un nou site media pentru toți creatorii de conținut preferați. Am adunat toate personalitățile tale preferate pentru a crea videoclipuri care să corespundă intereselor tale. Pur și simplu alege ce creatori de conținut vrei să urmezi pentru a-ți vedea recomandările! Să începem! ➡️ Selectați cel puțin o persoană pe care să o utilizați pentru recomandări pentru a continua! Alegeți unul dintre creatorii de conținut de mai jos, apoi utilizați glisorul pentru a ajusta cât de mult doriți ca aceștia să vă influențeze recomandările! 0 înseamnă că opinia lor nu este deloc inclusă în recomandările dvs.10 înseamnă că au o influență uriașă asupra recomandărilor pe care le primițiFeatureBelaVezi Recomandări! ➡️ FeatureValueRecomandările dvs.Acestea sunt videoclipurile care v-au fost recomandate în funcție de modul în care ați ajustat greutățile de pe ultimul ecran. Doar 3 videoclipuri sunt afișate simultan - utilizați butoanele Scroll pentru a vedea mai multe. Utilizați butoanele din stânga pentru a filtra după anumite videoclipuriExemplu! Exemplu! Exemplu! ⬆️ Derulați în sus ⬆️⬇️ Derulați în jos ⬇️⬅️ Selectați greutăți noi",
+          "Your Recommendations": "Recomandările Dumneavoastră",
+          "featureLabel": "CaracteristicăLabel",
+          "featureValue": "FeatureValue",
+          "⬅️ Select New Weights": "⬅️ Selectați greutăți noi",
+          "⬆️ Scroll Up ⬆️": "⬆️ Derulați în sus ⬆️",
+          "⬇️ Scroll Down ⬇️": "⬇️ Derulați în jos ⬇️"
+        },
+        "Noisy Image Widget_ai23": {
+          "0%": "0%",
+          "Be patient! Noisy image loading!": "Fii răbdător! Încărcare zgomotoasă a imaginii!",
+          "Move the slider to add more or less generations of noise to the image": "Mutați glisorul pentru a adăuga mai multe sau mai puține generații de zgomot la imagine",
+          "New Image": "Imagine nouă",
+          "Noise Generations:": "Generații de zgomot:",
+          "Noise Generations: ": "Generații de zgomot: "
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Crop": "Culturi",
+          "Image Select": "Selectare imagine",
+          "Reset": "Resetează"
+        },
         "allthethings design mode elements": {
           "text": "text"
         },
@@ -1271,11 +1978,18 @@
         "csd u5 recommender sample_2022": {
           "Start": "Începe"
         },
+        "csd u5 recommender sample_2023": {
+          "Start": "Începe"
+        },
         "csd-apps for good-2": {
           "Home": "Acasă",
           "Next": "Următor"
         },
         "csd-apps for good-2_2022": {
+          "Home": "Acasă",
+          "Next": "Următor"
+        },
+        "csd-apps for good-2_2023": {
           "Home": "Acasă",
           "Next": "Următor"
         },
@@ -1291,11 +2005,21 @@
           "3": "3",
           "4": "4"
         },
+        "csd-apps for good-3_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4"
+        },
         "csd-explore ui-2": {
           "Home": "Acasă",
           "Next": "Următor"
         },
         "csd-explore ui-2_2022": {
+          "Home": "Acasă",
+          "Next": "Următor"
+        },
+        "csd-explore ui-2_2023": {
           "Home": "Acasă",
           "Next": "Următor"
         },
@@ -1343,11 +2067,37 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-3_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-4": {
           "Correct!": "Corect!",
           "Sorry!": "Îmi pare rău!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "Corect!",
+          "Sorry!": "Îmi pare rău!"
+        },
+        "csd-explore ui-4_2023": {
           "Correct!": "Corect!",
           "Sorry!": "Îmi pare rău!"
         },
@@ -1395,10 +2145,35 @@
           "8": "8",
           "9": "9"
         },
+        "csd-explore ui-5_2023": {
+          "1": "1",
+          "10": "10",
+          "11": "11",
+          "12": "12",
+          "13": "13",
+          "14": "14",
+          "15": "15",
+          "16": "16",
+          "17": "17",
+          "18": "18",
+          "19": "19",
+          "2": "2",
+          "20": "20",
+          "3": "3",
+          "4": "4",
+          "5": "5",
+          "6": "6",
+          "7": "7",
+          "8": "8",
+          "9": "9"
+        },
         "csd-explore ui-6": {
           "Next": "Următor"
         },
         "csd-explore ui-6_2022": {
+          "Next": "Următor"
+        },
+        "csd-explore ui-6_2023": {
           "Next": "Următor"
         },
         "ml-L2 supervised - green glass door-2021": {
@@ -1409,10 +2184,17 @@
           "Accepted": "Acceptat",
           "Rejected": "Respins"
         },
+        "ml-L2 supervised - green glass door_2023": {
+          "Accepted": "Acceptat",
+          "Rejected": "Respins"
+        },
         "ml-L2 unsupervised - 1-2021": {
           "Next": "Următor"
         },
         "ml-L2 unsupervised - 1_2022": {
+          "Next": "Următor"
+        },
+        "ml-L2 unsupervised - 1_2023": {
           "Next": "Următor"
         },
         "ml-customize-raspado-2021": {
@@ -1420,6 +2202,10 @@
           "yes": "da"
         },
         "ml-customize-raspado_2022": {
+          "no": "nu",
+          "yes": "da"
+        },
+        "ml-customize-raspado_2023": {
           "no": "nu",
           "yes": "da"
         },
@@ -1431,10 +2217,17 @@
           "Continue": "Continuă",
           "Loading...": "Se încarcă..."
         },
+        "ml-intro ai lab- fruit veggie widget_2023": {
+          "Continue": "Continuă",
+          "Loading...": "Se încarcă..."
+        },
         "ml-intro app lab-book recommender demo-2021": {
           "Silly": "Neajutorat"
         },
         "ml-intro app lab-book recommender demo_2022": {
+          "Silly": "Neajutorat"
+        },
+        "ml-intro app lab-book recommender demo_2023": {
           "Silly": "Neajutorat"
         },
         "ml-model card-medical app v2 2021-2": {
@@ -1451,10 +2244,20 @@
           "no": "nu",
           "yes": "da"
         },
+        "ml-model card-medical app v2 2021-2_2023": {
+          "A": "A",
+          "W": "V",
+          "head": "cap",
+          "no": "nu",
+          "yes": "da"
+        },
         "ml-model cards-book recommender model card": {
           "Silly": "Neajutorat"
         },
         "ml-model cards-book recommender model card_2022": {
+          "Silly": "Neajutorat"
+        },
+        "ml-model cards-book recommender model card_2023": {
           "Silly": "Neajutorat"
         },
         "ml-models in applab-choice if quotes": {
@@ -1467,12 +2270,22 @@
           "2": "2",
           "3": "3"
         },
+        "ml-models in applab-choice if quotes_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
         "ml-models in applab-choice if wrong place": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice if wrong place_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1489,12 +2302,23 @@
           "3": "3",
           "Back": "Înapoi"
         },
+        "ml-models in applab-choice intended warnings_2023": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "Back": "Înapoi"
+        },
         "ml-models in applab-choice predict typos": {
           "1": "1",
           "2": "2",
           "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
+          "2": "2",
+          "3": "3"
+        },
+        "ml-models in applab-choice predict typos_2023": {
           "1": "1",
           "2": "2",
           "3": "3"
@@ -1509,6 +2333,11 @@
           "No": "Nu",
           "Yes": "Da"
         },
+        "ml-models in applab-zoo assessment_2023": {
+          "B": "B",
+          "No": "Nu",
+          "Yes": "Da"
+        },
         "ml-models in applab-zoo model embed": {
           "No": "Nu",
           "Yes": "Da"
@@ -1517,10 +2346,17 @@
           "No": "Nu",
           "Yes": "Da"
         },
+        "ml-models in applab-zoo model embed_2023": {
+          "No": "Nu",
+          "Yes": "Da"
+        },
         "ml-models-shoes decision tree-2021": {
           "Sports": "Sporturi (Sports)"
         },
         "ml-models-shoes decision tree_2022": {
+          "Sports": "Sporturi (Sports)"
+        },
+        "ml-models-shoes decision tree_2023": {
           "Sports": "Sporturi (Sports)"
         },
         "ml-use model card-example3A-2021": {
@@ -1531,6 +2367,13 @@
           "snow": "zăpadă"
         },
         "ml-use model card-example3A_2022": {
+          "cloudy": "înnorat",
+          "dusk": "Amurg",
+          "night": "noapte",
+          "rain": "ploaie",
+          "snow": "zăpadă"
+        },
+        "ml-use model card-example3A_2023": {
           "cloudy": "înnorat",
           "dusk": "Amurg",
           "night": "noapte",

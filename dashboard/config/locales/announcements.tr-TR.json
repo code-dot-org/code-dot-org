@@ -42,6 +42,23 @@
           "notice": "micro:bit ile Uzatma Dersleri",
           "details": "Öğrencilerinizi fiziksel bilgi işlemle tanıştırmakla ilgileniyor musunuz? Öğrencilerin öğrenmeye devam etmesi için micro:bit'ten yeni uzantı derslerimize göz atın.",
           "buttonText": "Daha fazlasını öğren"
+        },
+        "488fc86d-7f7d-48fe-9bc2-0b8869fb6ae1": {
+          "notice": "micro:bit ile Uzatma Dersleri",
+          "details": "Öğrencilerinizi fiziksel bilgi işlemle tanıştırmakla ilgileniyor musunuz? Öğrencilerin öğrenmeye devam etmesi için micro:bit'ten yeni uzantı derslerimize göz atın.",
+          "buttonText": "Daha fazlasını öğren"
+        },
+        "409174a0-d76d-4992-8486-cfd9801c329e": {
+          "buttonText": "Daha fazlasını öğren"
+        },
+        "3c4621e3-cd67-459f-a4f7-2199b7ab5bcc": {
+          "buttonText": "Daha Fazla Bilgi Edinin"
+        },
+        "f503efed-1d08-4a36-b7ba-e64f583d5209": {
+          "buttonText": "Daha Fazla Bilgi Edinin"
+        },
+        "d79fdf44-5b59-4229-bca8-f8b4e2786ccb": {
+          "buttonText": "Daha Fazla Bilgi Edinin"
         }
       }
     }

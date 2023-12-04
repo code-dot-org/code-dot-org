@@ -34,6 +34,8 @@ cron:
 - dashboard.contained_levels
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
+- dashboard.parental_permission_requests:
+    remove_column: [parent_email]
 - dashboard.plc_course_units
 - dashboard.plc_courses
 - dashboard.plc_enrollment_module_assignments
@@ -71,6 +73,7 @@ cron:
     - tell_us_more
     - inaccuracy_comment
 - dashboard.census_submissions_school_infos
+- dashboard.census_summaries
 - dashboard.standards
 - dashboard.stages_standards
 - dashboard.standard_categories

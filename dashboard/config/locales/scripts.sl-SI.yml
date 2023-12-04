@@ -1310,7 +1310,7 @@ sl:
           description_short: Razišči svet Minecraft-a s pomočjo kode
           student_description: Uporabite kodo in popeljite Steva ali Alexa na pustolovščino
             v svet Minecraft-a
-          title: Minecraft Ura za kodo
+          title: Minecraft Pustolovec
         minecraft:
           description: Sprogramiraj živali in druga Minecraft bitja v svoji lastni
             različici Minecrafta.
@@ -1487,7 +1487,22 @@ sl:
           lesson_groups:
             content:
               display_name: Vsebina
+        virtual-pl-csa-summer-day1:
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Uvod
+          lessons:
+            lesson-7:
+              name: Uvod
+        virtual-pl-csa-summer-day3:
+          lessons:
+            lesson-1:
+              name: Uvod
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
+              name: Uvod
+        virtual-pl-csp-summer-day2:
+          lessons:
+            lesson-5:
               name: Uvod

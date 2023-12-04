@@ -23,7 +23,7 @@ class PegasusTest < Minitest::Test
       "#{page[:site]}#{page[:uri]}"
     end
     CDO.log.info "Found #{documents.length} Pegasus documents."
-    assert_operator documents.length, :>, 2000
+    assert_operator documents.length, :>, 1500
   end
 
   # All documents expected to return 200 status-codes, with the following exceptions:
@@ -78,8 +78,8 @@ class PegasusTest < Minitest::Test
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
       page[:uri].end_with?('/splat', '/splat.fetch') ||
-      # Private routes not yet handled.
-      page[:uri].start_with?('/private')
+        # Private routes not yet handled.
+        page[:uri].start_with?('/private')
     end
 
     tidy = system('which tidy >/dev/null 2>&1')
