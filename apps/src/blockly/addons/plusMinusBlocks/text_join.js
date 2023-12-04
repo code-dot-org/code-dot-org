@@ -180,7 +180,9 @@ const textJoinMutator = {
  * @this {GoogleBlockly.Block}
  */
 const textJoinHelper = function () {
-  GoogleBlockly.Extensions.apply('text_quotes', this, false);
+  if (MINIMUM_INPUTS === 0) {
+    GoogleBlockly.Extensions.apply('text_quotes', this, false);
+  }
   this.updateShape_(MINIMUM_INPUTS);
 };
 
