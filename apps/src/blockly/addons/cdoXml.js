@@ -158,7 +158,11 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addMutationToTextJoinBlocks(blockElement) {
-  if (blockElement.getAttribute('type') !== 'text_join_simple') {
+  if (
+    ['text_join', 'text_join_simple'].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
     return;
   }
   const mutationElement =
