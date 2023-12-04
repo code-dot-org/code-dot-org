@@ -1376,7 +1376,9 @@
           "type": "نموذج التقييم"
         },
         "issue_statements/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة",
+          "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy"
         },
         "survey_planning/csd/2021": {
           "name": "تصميم أداة لجمع البيانات",
@@ -4218,7 +4220,8 @@
           "name": "قم بإنشاء تطبيق التعلم الآلي"
         },
         "issue_statements/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة"
         },
         "creating_a_survey/csd/2022": {
           "type": "مصدر",
@@ -7534,7 +7537,8 @@
           "name": "قم بإنشاء تطبيق التعلم الآلي"
         },
         "issue_statements/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات المشكلة"
         },
         "creating_a_survey/csd/2023": {
           "type": "مصدر",
@@ -9628,6 +9632,28 @@
         "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
           "name": "نموذج - دليل مشروع تصميم تطبيق الذكاء الاصطناعي",
           "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "5_why_s_-_activity_guide/csd/2021": {
+          "name": "5 لماذا - دليل الأنشطة",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2021": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "5_why_s_-_activity_guide/csd/2022": {
+          "name": "5 لماذا - دليل الأنشطة",
+          "url": "https://docs.google.com/presentation/d/1G8bmEuCtGcnQkL8DAcPUqhN4WsbwTnIBc6ihH2i86lU/view"
+        },
+        "app_brainstorm_-_activity_guide/csd/2022": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة",
+          "url": "https://docs.google.com/document/d/1ocmp1I80kRxFDYByT0B-IIjbK-c01cTmnsy_Lz1DApM/view"
+        },
+        "5_why_s_-_activity_guide/csd/2023": {
+          "name": "5 لماذا - دليل الأنشطة"
+        },
+        "app_brainstorm_-_activity_guide/csd/2023": {
+          "name": "تطبيق العصف الذهني - دليل الأنشطة"
         }
       }
     }
