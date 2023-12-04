@@ -128,7 +128,6 @@ module Pd::Application
               :pacific_islander,
               :american_indian,
               :other,
-              :understand_fee,
             )
           end
         end

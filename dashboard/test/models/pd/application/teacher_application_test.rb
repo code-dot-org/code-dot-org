@@ -353,19 +353,19 @@ module Pd::Application
       assert_includes(csv_header_csd, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       refute_includes(csv_header_csd, csa_plan_offer_question)
-      assert_equal 90, csv_header_csd.length
+      assert_equal 88, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute_includes(csv_header_csp, csd_plan_offer_question)
       assert_includes(csv_header_csp, csp_plan_offer_question)
       refute_includes(csv_header_csp, csa_plan_offer_question)
-      assert_equal 92, csv_header_csp.length
+      assert_equal 90, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
       refute_includes(csv_header_csa, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       assert_includes(csv_header_csa, csa_plan_offer_question)
-      assert_equal 94, csv_header_csa.length
+      assert_equal 92, csv_header_csa.length
     end
 
     test 'school cache' do
@@ -549,7 +549,6 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
@@ -588,7 +587,6 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
@@ -631,7 +629,6 @@ module Pd::Application
             committed: YES,
             previous_yearlong_cdo_pd: YES,
             principal_approval: YES,
-            principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: YES,
@@ -699,7 +696,6 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
@@ -738,7 +734,6 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
@@ -781,7 +776,6 @@ module Pd::Application
             committed: NO,
             previous_yearlong_cdo_pd: NO,
             principal_approval: NO,
-            principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
@@ -804,8 +798,7 @@ module Pd::Application
       application.auto_score!
 
       response_scores_hash = application.response_scores_hash
-
-      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
+      assert_nil response_scores_hash[:meets_minimum_criteria_scores][:free_lunch_percent]
     end
 
     test 'principal_approval_state' do
@@ -841,7 +834,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build TEACHER_APPLICATION_HASH_FACTORY,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural] + 1,
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
         regional_partner_id: regional_partner.id
@@ -861,7 +853,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1,
         regional_partner_id: regional_partner.id
@@ -879,7 +870,6 @@ module Pd::Application
       principal_options = Pd::Application::PrincipalApprovalApplication.options
       application_hash = build :pd_teacher_application_hash,
         principal_approval: principal_options[:do_you_approve].first,
-        principal_wont_replace_existing_course: principal_options[:replace_course].first,
         principal_free_lunch_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:frl_not_rural],
         principal_underrepresented_minority_percent: REGIONAL_PARTNER_DEFAULT_GUARDRAILS[:urg] - 1
 

@@ -1032,15 +1032,6 @@ module Pd::Application
         meets_minimum_criteria_scores[:principal_approval] =
           responses[:principal_approval] == principal_options[:do_you_approve].first ? YES : NO
 
-        meets_minimum_criteria_scores[:principal_schedule_confirmed] =
-          if responses[:principal_schedule_confirmed]&.in?(principal_options[:committed_to_master_schedule].slice(0..1))
-            YES
-          elsif responses[:principal_schedule_confirmed] == principal_options[:committed_to_master_schedule][2]
-            NO
-          else
-            nil
-          end
-
         school_stats = get_latest_school_stats(school_id)
 
         free_lunch_percent = responses[:principal_free_lunch_percent].present? ?

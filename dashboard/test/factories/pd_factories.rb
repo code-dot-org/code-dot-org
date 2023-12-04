@@ -607,14 +607,6 @@ FactoryBot.define do
       do_you_approve {'No'}
     end
 
-    trait :replace_course_yes_csp do
-      replace_course {'Yes'}
-    end
-
-    trait :replace_course_yes_csd do
-      replace_course {'Yes'}
-    end
-
     trait :approved_yes do
       do_you_approve {'Yes'}
       with_approval_fields
@@ -636,7 +628,6 @@ FactoryBot.define do
       pacific_islander {'12'}
       american_indian {'11'}
       other {'10'}
-      replace_course {Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]}
     end
   end
 
@@ -650,13 +641,11 @@ FactoryBot.define do
     course {'csp'}
     transient do
       approved {'Yes'}
-      replace_course {Pd::Application::PrincipalApprovalApplication.options[:replace_course][1]}
       form_data_hash do
         build(
           :pd_principal_approval_application_hash_common,
           "approved_#{approved.downcase}".to_sym,
           course: course,
-          replace_course: replace_course
         )
       end
     end

@@ -49,10 +49,8 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        principal_schedule_confirmed: "Yes, I plan to include this course in the #{@teacher_application.year} master schedule",
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
-        principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
       }
       actual_principal_fields = @teacher_application.sanitized_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields
@@ -101,7 +99,6 @@ module Api::V1::Pd::Application
 
       expected_principal_fields = {
         principal_approval: "Other: this is the other for do you approve",
-        principal_schedule_confirmed: "Other: this is the other for master schedule",
         principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
