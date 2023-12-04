@@ -306,6 +306,7 @@ ps:
   call_to_action_explore_all_hoc_activities: د Code.org څخه د کوډ ټولې ساعتي فعالیتونه
     وپلټئ
   call_to_action_start_dance_party: د رقص پارټۍ پیل کړئ
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: دوه برخه پیل کړئ
   call_to_action_start_unplugged_activity: غیر پلګ شوی فعالیت پیل کړئ
   call_to_action_view_promo_resources: پرومو سرچینې وګورئ
@@ -420,6 +421,15 @@ ps:
   call_to_action_learn_about_ai: د AI په اړه زده کړئ
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: پیل وکړئ
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: د ښوونکو لپاره څنګه لارښود وګورئ
   aria_label_call_to_action_hoc_how_to_companies: د شرکتونو لپاره لارښود وګورئ
   aria_label_call_to_action_hoc_how_to_districts: د ولسوالیو لپاره لارښود وګورئ
@@ -443,6 +453,8 @@ ps:
     پیل کړئ
   aria_label_call_to_action_teaching_problem_solving: د تدریسي ستونزې حل او کمپیوټر
     مسلکي زده کړې پرو
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: د کمپیوټر ساینس ارتباطاتو مسلکي زده کړې
     پروګرام پیل کړئ
   aria_label_call_to_action_teaching_ai: د تدریس AI او ماشین زده کړې مسلکي زده کړې
@@ -538,6 +550,16 @@ ps:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.org د مسلکي زده کړې پروګرام
   curriculum_name_csf: د کمپیوټر ساینس اساسات
   curriculum_name_csf_02: د CS هر اساسات (کورس AF)
@@ -556,6 +578,7 @@ ps:
   curriculum_name_csd: د کمپیوټر ساینس موندنې
   curriculum_name_csp: د کمپیوټر ساینس اصول
   curriculum_name_problem_solving: د ستونزې حل کول او کمپیوټري
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: د کمپیوټر ساینس اړیکې
   curriculum_name_csa: AP® کمپیوټر ساینس A
   curriculum_name_csa_ai: د سافټویر انجینرۍ او کمپیوټر لید
@@ -684,6 +707,7 @@ ps:
   module_label_languages: 'ملاتړ شوي ژبې:'
   module_label_accessibility_features: 'لاسرسی:'
   module_label_accessibility_features_full: 'د لاسرسي ځانګړتیاوې:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: ښوونکی وسیله
   module_label_educator_course: د ښوونکي کورس
   module_label_educator_resources: Educator resources
@@ -737,6 +761,7 @@ ps:
   module_duration_1_hr: 1 ساعت
   module_duration_2_hrs: 2 ساعته
   module_duration_3_hrs: 3 ساعته
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 ساعتونو
   module_duration_5_hrs_plus: 5+ ساعته
   module_duration_8_hrs: 8 ساعتونو
@@ -758,6 +783,7 @@ ps:
   module_label_teaching_csd: د کمپیوټر ساینس موندنې تدریس
   module_label_teaching_csp: د کمپیوټر ساینس اصول تدریس
   module_label_teaching_problem_solving: د ستونزې حل کولو او کمپیوټر در
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: د کمپیوټر ساینس ارتباطاتو تدریس
   module_label_teaching_ai: د AI او ماشین زده کړې ښوونه
   module_label_teaching_maker_cp: د وسیلو سره د ایپسونو رامینځته کولو ښوونه (د سرکټ
@@ -825,6 +851,12 @@ ps:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: که تاسو د لوړي ښوونځو زده کونکي زده کوونکي یاست چې ستاسو
     په ښوونځي کې د کمپیوټر ساینس واخلو لپاره د نورو ځوانانو ښ
   cs_ambassador_desc: د طب، تفریح، لوبې، زده کړې، سوداګرۍ، فیشن، او سوداګرۍ په شمول
@@ -892,6 +924,19 @@ ps:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: په شخصي او مجازی ورکشاپونو کې
     پدې دوبي کې پیل کیږي.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: مخکې لاړ شئ، کنډک پرې کړئ (د یو څه وخت لپاره)!
   no_devices_section_desc: د CS تعلیم تل اړتیا نلري د سکرین مخې ته وي او د وسیلې لاسرسی
     باید د کمپیوټر ساینس مفاهیمو زده کړې لپاره خنډ نه وي.
@@ -916,6 +961,11 @@ ps:
   subscribe_form_section_desc_csp: د Code.org کمپیوټر ساینس اصولو په اړه میاشتني بریښنالیکونو
     ترلاسه کولو لپاره لاسلیک وکړئ او ګټور یادداشتونه، لارښوونې، او تازه معلومات ترلاسه
     کړئ چې سم ستاسو ان باکس ته لیږل شوي.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: تاسو کولی شئ په هر وخت کې ګډون لغوه کړئ.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1110,6 +1160,7 @@ ps:
   ai_curriculum_desc_06: د مختلفو لیدلو څخه د جنراتیو AI اغیزې څیړنه کړئ، بیا د ټیم
     په توګه همکاري وکړئ ترڅو لارښوونونو سره راشي چې د ټولو ګډونوالو څخه
   ai_curriculum_btn_aria_label_06: د جنراتیو AI درس پلان ټولنیز اغیزې وګورئ
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'د Code.org سره د AI په اړه څه ښوونکي وايي:'
   ai_carousel_quote_01: دې لوست زما زده کونکو ته دا فرصت هم ورکړ چې وګوري چې د ډلبندۍ
     سیسټمونو کې د نظر عنصر شتون لري. وروسته، کله چې موږ لیدل پیل کړل چې څنګه تعصب
@@ -1301,6 +1352,68 @@ ps:
   ai_vid_computervision_caption: د کمپیوټر لید
   ai_vid_ethics1_caption: 'اخالقي او AI: مساوي لاسرسي او الګوریتمیک تعصب'
   ai_vid_ethics2_caption: 'اخالقي او AI: محرمیت او د کار راتلونکی'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: د ښوونکو لپاره د ځان ګړندۍ مسلکي زده کړه
   self_paced_pl_hero_desc: د دوی د کمپیوټر ساینس ښوونې سفر په هر مرحله کې د ښوونکو
     ملاتړ لپاره د مسلکي زده کړې وړاندیزونه.
@@ -2892,6 +3005,7 @@ ps:
     لارښود څرنګوالی ولولئ] ()%{howto_url}'
   tutorial_dance2019_name: د نڅا ګوند
   tutorial_danceparty_name: د نڅا ګوند
+  tutorial_dancepartyai_name: 'د رقص پارټۍ: AI نسخه'
   tutorial_chibitronics_name: 'چیبټرونیکس: روښانه کیسه'
   tutorial_athlete_name: خپله د سپورت لوبه کوډ کړئ
   tutorial_moana_name: 'موانا: د کوډ سره لاره موندنه'
@@ -3576,6 +3690,9 @@ ps:
   tutorial_danceparty_shortdescription: د خپلو ملګرو سره شریکولو لپاره د نڅا ګوند
     کوډ کړئ. د بیونسي، لیزو، هیري سټایلونو، لیل ناس ایکس، سیلینا ګومز، د ډیزني 'اینکانټو'
     څخه میوزیک، او نور ډیر څه وړاندې کول!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: د خپلې کیسې روښانه کولو لپاره د کاغذ سرکټ
     برنامه کړئ.
   tutorial_athlete_shortdescription: د باسکیټبال لوبې جوړولو یا د سپورتونو په اوږدو
@@ -4766,6 +4883,9 @@ ps:
   tutorial_danceparty_longdescription: د خپلو ملګرو سره شریکولو لپاره د نڅا ګوند کوډ
     کړئ. د بیونسي، لیزو، هیري سټایلونو، لیل ناس ایکس، سیلینا ګومز، د ډیزني 'اینکانټو'
     څخه میوزیک، او نور ډیر څه وړاندې کول!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: د خپلې کیسې روښانه کولو لپاره د کاغذ سرکټ
     برنامه کړئ.
   tutorial_athlete_longdescription: د باسکیټبال لوبې جوړولو یا د سپورتونو په اوږدو
@@ -7575,6 +7695,7 @@ ps:
     ډول ځانګړي کوو.
   tutorial_dance2019_string_detail_grades: 2+ درجې
   tutorial_danceparty_string_detail_grades: 2+ درجې
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: د 2-5 درجې
   tutorial_athlete_string_detail_grades: 2+ درجې
   tutorial_moana_string_detail_grades: 2+ درجې
@@ -8252,6 +8373,7 @@ ps:
   tutorial_dance2019_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad،
     غیر پلګ شوی
   tutorial_danceparty_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
+  tutorial_dancepartyai_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
   tutorial_chibitronics_string_platforms: ټول عصري براوزرونه، د سکرین لوستونکی
   tutorial_athlete_string_platforms: ټول عصري براوزرونه
   tutorial_moana_string_platforms: ټول عصري براوزرونه، د Android ټابلیټ، iPad
@@ -9101,6 +9223,7 @@ ps:
     آی فون، آی پیډ، Android تلیفون، د Android ټابلیټ
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: چیبټرونیکس چیبي چپ او سرکټ سټیکر
     LEDs
   tutorial_athlete_string_detail_platforms: ''
@@ -9780,6 +9903,7 @@ ps:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: بلاکونه
   tutorial_danceparty_string_detail_programming_languages: بلاکونه
+  tutorial_dancepartyai_string_detail_programming_languages: بلاکونه
   tutorial_chibitronics_string_detail_programming_languages: بلاکونه
   tutorial_athlete_string_detail_programming_languages: بلاکونه
   tutorial_moana_string_detail_programming_languages: بلاکونه

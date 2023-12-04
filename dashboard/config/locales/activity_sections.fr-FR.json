@@ -34013,99 +34013,99 @@
           "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Faire ceci :** Demandez aux élèves de choisir une expression qu'ils souhaitent apprendre au Bot IA à reconnaître, et de noter cette information dans leurs guides d'activité. Les élèves devraient progresser par eux-mêmes dans le niveau, en notant les informations dans leurs guides d'activité. Sur le dernier écran, demandez aux élèves d'appuyer sur l'icône d'information et de noter les fonctionnalités les plus importantes apprises par le Bot IA.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circuler :** Vérifiez que les élèves remplissent bien leurs guides d'activité au fur et à mesure qu'ils complètent les étapes. Demandez aux élèves quelles caractéristiques ils examinent pour déterminer si un poisson répond à leurs critères. Les élèves diront probablement qu'ils utilisent principalement les yeux et la bouche pour déterminer leur expression, mais lorsqu'ils cliquent sur l'icône Informations sur le dernier écran, le Bot AI utilisera peut-être des fonctionnalités supplémentaires telles que la couleur et le corps pour prendre sa décision. Invitez les élèves à réfléchir à ce qu'ils en pensent en comparant cela à leur expérience personnelle. Imaginons, par exemple, si quelqu'un pensait qu'ils avaient l'air de faire une tête « bête » ou « fâchée » principalement à cause de leurs vêtements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher :** Montrez la diapositive du Bot IA apprenant à identifier un poisson « fâché ». Demandez aux élèves de parler du message affiché à l'écran : _En regardant cet écran, pourquoi pensez-vous que la couleur est apparue comme étant la deuxième caractéristique la plus importante ?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Les élèves devraient remarquer que même si les yeux et la bouche ont tendance à paraître « fâchés » sur chaque poisson, il semble également y avoir beaucoup de poissons violets à l'écran. Par conséquent, il se peut que le Bot IA se soit mis à penser que le fait qu'un poisson soit « violet » était une autre façon de savoir si un poisson est en colère ou non."
         },
         "5b8653c5-26ef-405b-a0ae-b8839027a4b8": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discutez :** \\_Pensez-vous qu'il est normal de considérer un poisson comme « en colère » à cause de sa couleur ? \\_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **À discuter :** _Pensez-vous qu'il soit acceptable de considérer qu'un poisson est « en colère » sur la base de sa couleur ?_"
         },
         "a70f681d-ab68-4296-a56c-30117dbee4c3": {
-          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Pour la première partie de la question, faites remarquer aux élèves qu'il y a beaucoup de poissons violets à l'écran afin que le robot AI puisse penser que les poissons violets sont plus susceptibles d'être en colère que les autres poissons.",
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Pour la première partie de la question, faites remarquer aux élèves qu'il y a beaucoup de poissons violets à l'écran, et que du coup, le Bot I.A. pourrait penser que les poissons violets sont plus susceptibles d'être en colère que les autres poissons.",
           "tips": [
             null
           ]
         },
         "2db7f0c8-caa6-4356-bf4c-b3f8cb3ec73f": {
-          "description": "Même avec un petit exemple comme celui-ci, nous constatons que l'apprentissage automatique peut avoir des problèmes et apprendre quelque chose de faux sur un type de poisson en particulier. Le fait de disposer de plus de données et de s'assurer qu'elles représentent tous les types de poissons peut aider à résoudre ce problème. Ces types d'exemples se produisent également dans la vie réelle et peuvent avoir de graves conséquences, par exemple si vous recevez des soins médicaux ou si vous recevez une offre d'emploi. Lorsque nous apprenons à utiliser l'apprentissage automatique pour résoudre des problèmes, nous devons toujours nous demander : quel en est l'impact et qui est inclus ou exclu ?"
+          "description": "Même avec un petit exemple comme celui-ci, on voit que l'apprentissage automatique peut rencontrer des problèmes et apprendre quelque chose de faux concernant un certain type de poisson. Avoir plus de données et s'assurer qu'elles représentent bien tous les types de poissons peut aider à résoudre ce problème. Ces types d'exemples se produisent également dans la vie réelle et peuvent avoir de graves conséquences : comme sur si l'on reçoit ou non des soins médicaux ou une offre d'emploi. Lorsque on apprend à utiliser l'apprentissage automatique pour résoudre des problèmes, il faut toujours se demander : quel en est l'impact et qui est inclus ou exclu ?"
         },
         "9ba16cf2-8e9c-4d77-b668-6aa7ed4a5347": {
           "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vidéo :** Montrez aux élèves la vidéo dans les diapositives\n[r how_ai_works_-_training_data_and_bias/how-ai-works/2023]"
         },
         "e781b2a2-1f5f-4cf5-97de-6e064a67e7c2": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt :** \\_Dans quelle situation il peut être utile d'utiliser l'apprentissage automatique pour résoudre un problème ? \\_\n\nEncouragez les élèves à partager avec vous en sortant ou à écrire leurs réponses sur un post-it qui pourra être affiché en classe. Si vous enseignez des leçons supplémentaires dans le cadre de cette unité, vous pouvez vous référer à ces post-its car ces sujets sont abordés dans d'autres leçons."
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Amorce :** \\_Quelle est un exemple de situation où il pourrait être utile d'utiliser l'apprentissage automatique pour résoudre un problème ? \\_\n\nEncouragez les élèves à vous dire leur réponse en sortant de la classe ou à les écrire sur un post-it que vous pourrez afficher en classe. Si vous allez enseigner des leçons supplémentaires relatives à cette unité, vous pourrez faire référence à ces post-its, car ces sujets seront abordés dans d'autres leçons. "
         },
         "0908008c-2b65-45ce-ad57-53cd07a86842": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "316385e5-2df8-4e34-b964-6ee28ecc3e7f": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "eb99e343-c072-48cd-84dd-49b6e56e8108": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "a7c37a28-46be-4a1a-b767-99482e8cf353": {
-          "name": "Se préparer à donner une leçon sur Code.org",
+          "name": "Se préparer à enseigner une leçon Code.org",
           "description": "**Se lancer avec Code.org :** Pensez à regarder notre série de vidéos [Se lancer avec Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) pour avoir un aperçu de comment naviguer les plans de cours, configurer une section classe et concernant d'autres fonctionnalités importantes de la plateforme Code.org. Chaque vidéo est également dôtée d'un article d'assistance si vous préférez lire ou imprimer les instructions (cliquer ici pour en savoir plus)[1].\n\n**Configurer une section classe :** Vous pouvez utiliser une section classe dans Code.org pour gérer vos élèves, voir leurs progrès et leur confier des programmes spécifiques - [cliquer ici pour en savoir plus].[2]\n\nSi vous utilisez un système de gestion d'apprentissage, il vous faudra peut-être compléter quelques étapes supplémentaires pour synchroniser vos cours avec Code.org :\n\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) pour savoir comment configurer vos cours avec Google Classroom\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) pour savoir comment configurer vos cours avec Clever\n\n**Devenir enseignant vérifié :** Les plans de cours et les niveaux proposent des ressources supplémentaires et des corrigés pour les Enseignants Vérifiés ; processus rapide qui permet de confirmer votre poste au sein d'un établissement d'enseignement. [Cliquez ici pour remplir le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) et vous devriez avoir accès aux ressources pour enseignants vérifiés dans environ un jour ouvrable.\n\n**Assistance aux enseignants :** Vous pouvez en savoir plus sur comment introduire des leçons d'IA dans votre classe grâce à notre [série Les Bases de l'IA pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour Enseignants est une série de formation professionnelle en ligne gratuite sur les notions fondamentales destinée à tout enseignant ou autre éducateur intéressé par le monde révolutionnaire de l'intelligence artificielle (l'IA) et son potentiel transformateur dans le domaine de l'éducation."
         },
         "50d849e2-460c-447c-b9d0-be4d24640b35": {
           "name": "Illusions d'optique",
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Affichage :** Montrez l'image sur la diapositive aux élèves.\n\n(Cliquez pour agrandir et agrandir)\n\n![expandable](<https://images.code.org/305fda68795441dcebb6130a57bd59ca-optical illusion.png>)"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher :** Montrez l'image sur la diapositive aux élèves.\n\n(Cliquer pour agrandir et voir en plus grand)\n\n![expandable](<https://images.code.org/305fda68795441dcebb6130a57bd59ca-optical illusion.png>)"
         },
         "21fa3039-c5a0-4bc5-b3cc-8aa08abc640b": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demande :** _Quel animal voyez-vous sur cette image ? Écrivez votre réponse sur une feuille de papier_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demander :** _Quel animal voyez-vous sur cette image ? Écrivez votre réponse sur une feuille de papier._"
         },
         "42c28e84-5095-424a-be24-d37b2763084a": {
-          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Après une courte pause, demandez aux élèves de partager. Les élèves remarqueront probablement l'un des deux animaux suivants : un canard ou un lapin. Une fois les deux options choisies, les élèves peuvent « changer » leur façon de voir l'image : parfois c'est un canard, parfois c'est un lapin."
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Après un petit moment, demandez aux élèves de partager leurs réponses. Les élèves auront probablement vu l'un de ces deux animaux : un canard ou un lapin. Une fois les deux options ont été dites, il se peut que les élèves « changent » ce qu'ils voient dans l'image : parfois cela leur semblera être un canard, et parfois, un lapin."
         },
         "cb5bd873-f96e-4f85-8b46-028c71552bae": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demande :** \\_Si c'était un argument et que vous vouliez convaincre quelqu'un d'autre que votre animal a raison, que diriez-vous ? Quelles **caractéristiques** de l'image aident votre argumentation ? \\_"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demander :** \\_S'il s'agissait d'un débat et qu'il vous fallait convaincre quelqu'un d'autre que c'est l'animal que vous voyez qui est le bon, que diriez-vous ? Quelles **caractéristiques** de l'image aideraient votre argument ? \\_"
         },
         "4db2790f-4664-4197-875d-c40946427ea2": {
-          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Cette invite vise à aider les élèves à identifier les caractéristiques du dessin que leurs yeux ont remarquées pour les aider à prendre une décision. Les deux arguments identifieront probablement le point noir au centre comme étant l'œil de l'animal. Les arguments du canard identifieront l'élément de gauche comme étant le bec ou la bouche du canard, tandis que les arguments du lapin identifieront ceux comme les oreilles. Insistez sur le fait que les élèves utilisent des caractéristiques spécifiques pour prendre leur décision (par exemple : œil, oreilles, bouche, lapin)."
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Cette question vise à aider les élèves à identifier les caractéristiques du dessin que leurs yeux ont remarquées pour les aider à prendre une décision. Dans les deux arguments, le fait que le point noir au centre semble être l'œil de l'animal sera probablement souligné. Les arguments pro-canard identifieront la forme à gauche comme étant le bec ou la bouche du canard, tandis que les arguments pro-lapin feront correspondre celle-ci aux oreilles. Soulignez bien le fait que les élèves sont en train d'utiliser des caractéristiques spécifiques pour prendre leur décision (soit : œil + oreilles + bouche = lapin)."
         },
         "a7a874cb-0a14-4671-96ab-b397249ddcb7": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Affichage :** Afficher la diapositive avec des illusions d'optique supplémentaires",
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher :** Affichez la diapositive avec des illusions d'optique supplémentaires",
           "tips": [
-            "**Illusions :** Les illusions sont les suivantes :\n\n-   **La robe :** Certaines personnes voient une robe bleue ; d'autres voient une robe dorée ; d'autres voient une variété de couleurs différentes. Cette photo est devenue virale il y a plusieurs années à la suite de débats sur la couleur de la robe\n     : **Jeune femme contre femme plus âgée** : selon la façon dont vous la voyez, cette image ressemble soit à une jeune femme regardant au loin, soit à une femme plus âgée regardant vers le bas. Le menton et les oreilles de la jeune femme sont le nez et les yeux de la femme plus âgée.\n-   **Chiens et bagels** : Ce n'est pas vraiment une illusion d'optique. Si vous regardez de plus près, certaines images sont des chiens et d'autres des bagels. En un coup d'œil, il est facile de ne pas savoir lequel est lequel."
+            "**Illusions :** Les illusions sont les suivantes :\n\n-   **La robe :** Certaines personnes voient une robe bleue ; d'autres voient une robe dorée ; d'autres encore voient diverses couleurs différentes. Cette photo est devenue virale il y a plusieurs années dans la foulée de débats concernant la couleur de la robe.\n     : **Jeune femme ou vieille femme** : Selon la manière dont on la regarde, cette image paraît soit être celle d'une jeune femme qui détourne le regard au loin, soit cele d'une femme plus âgée qui fixe le sol. Le menton et les oreilles de la jeune femme sont le nez et les yeux de la vieille femme.\n-   **Chiens et bagels** : Il ne s'agit pas vraiment une illusion d'optique. Si on regarde de près, certaines images sont des chiens et d'autres des bagels. Si on ne fait qu'y jeter un  coup d'œil rapide, on peut facilement ne pas les distinguer."
           ]
         },
         "97826b58-f921-4888-a01f-17538aad9d78": {
-          "description": "Nous utilisons nos yeux et notre sens de la vue pour identifier des objets, et parfois une image présentant des caractéristiques identiques peut être interprétée de différentes manières. Mais qu'en est-il d'un ordinateur ? Que « verrait-il » s'il voyait l'une de ces photos ? La robe est-elle dorée ou bleue ? Est-ce une jeune femme qui regarde ailleurs ou une vieille femme qui regarde vers le bas ? Est-ce une bande de chiens ou une bande de bagels ? Aujourd'hui, nous allons parler de la façon dont les ordinateurs peuvent « voir » et détecter les images"
+          "description": "On utilise nos yeux et notre sens de la vue pour identifier des objets, et parfois une image présentant des caractéristiques identiques peut être interprétée de différentes manières. Mais qu'en est-il pour un ordinateur ? Que « verrait-il » s'il voyait l'une de ces images ? La robe est-elle dorée ou bleue ? Est-ce une jeune femme qui détourne le regard ou une vieille femme qui regarde vers le bas ? S'agit-il de tout un tas de chiens ou tout un tas de bagels ? Aujourd'hui, on va parler de la comment les ordinateurs font pour « voir » et détecter des images."
         },
         "e032f9e4-0fc4-4d91-8f8e-c971c51cba46": {
           "name": "Algorithme de reconnaissance d'image",
-          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vidéo :** Montrez la vidéo \n[how \\ _ai \\ _works \\ _how \\ _computer \\ _vision \\ _works].[0]",
+          "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vidéo :** Montrez la vidéo \n[r how_ai_works_how_computer_vision_works/how-ai-works/2023].",
           "tips": [
             "Des vidéos sont employées tout au long du programme pour susciter des discussions, compléter les concepts clés par des explications et des exemples supplémentaires, et exposer les élèves aux rôles et expériences de différents individus en informatique.\n\nQuand vous lancez la vidéo, mettez aussi les sous-titres pour que les élèves puissent lire en même temps qu'ils regardent.\n\nPour encourager une implication et une réflexion actives, utilisez une ou plusieurs des stratégies décrites dans le **[Guide pour les vidéos du programme](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
           ]
         },
         "bbb02df0-d802-44c3-b971-0002980644e6": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demande :** Comment résumeriez-vous la façon dont un ordinateur « voit » quelque chose dans une image ?"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demander :** Comment résumeriez-vous la façon dont un ordinateur « voit » quelque chose dans une image ?"
         },
         "1429cf51-44a7-4e66-a701-660fe12a1911": {
-          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Écoutez les élèves décrire comment une image est divisée en plusieurs parties, puis comment elle les combine en couches pour créer des formes plus complexes. Les élèves peuvent se fier aux images des formes présentées dans la vidéo ou aux images représentant un chien et un muffin."
+          "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Écoutez les élèves décrire comment l'ordinateur divise une image en différentes parties, puis comment il les associe en couches pour créer des formes plus complexes. Les élèves se fieront peut-être aux formes visuelles présentées dans la vidéo ou aux images de chiens et de muffins."
         },
         "87a00b83-085c-486a-a567-60c33d438bb0": {
-          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulaire :** Afficher la diapositive avec le vocabulaire de la leçon d'aujourd'hui"
+          "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulaire :** Affichez la diapositive avec le vocabulaire de la leçon d'aujourd'hui."
         },
         "6b3d0a2a-474a-4205-bb58-ca2f818a023e": {
-          "description": "-   **Algorithme** - une série d'étapes pour résoudre un problème ou prendre une décision\n-   **Réseau** - Un ensemble d'éléments connectés entre eux. Le fait de suivre ces connexions peut représenter les étapes d'un algorithme, comme un organigramme."
+          "description": "-   **Algorithme** - une série d'étapes permettant de résoudre un problème ou prendre une décision\n-   **Réseau** - Un ensemble d'éléments connectés entre eux. Le fait de suivre ces connexions peut représenter les étapes d'un algorithme, comme dans un organigramme."
         },
         "d2f9b793-92df-4ef6-9200-00a07d1c6e9f": {
-          "description": "Aujourd'hui, nous allons créer notre propre **algorithme** de reconnaissance d'images. Un algorithme est une série d'étapes visant à résoudre un problème ou à prendre une décision. Nous allons créer un algorithme qui utilise un **réseau** pour prendre une décision, comme dans la vidéo"
+          "description": "Aujourd'hui, on va créer notre propre **algorithme** de reconnaissance d'images. Un algorithme est une série d'étapes visant à résoudre un problème ou à prendre une décision. On va créer un algorithme qui utilise un **réseau** pour prendre une décision, exactement comme dans la vidéo."
         },
         "9b2135d2-d3ba-4513-9932-da5d72abf04e": {
-          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Affichage :** Afficher la diapositive avec un tableau de bord d'un match de baseball"
+          "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Afficher :** Affichez la diapositive avec le tableau d'affichage d'un match de baseball."
         },
         "83663ff0-5023-4e46-928b-34ef18845c9c": {
-          "description": "Nous aidons une arène sportive à améliorer son tableau de bord. Nous voulons entraîner une caméra à détecter les scores afin qu'ils puissent être diffusés sur un récepteur radio. Pour que cela fonctionne, il doit détecter quel chiffre est affiché sur le tableau de bord. Chaque numéro est représenté par l'un de ces écrans, qui utilise 7 segments pour créer des images."
+          "description": "On aide un stade de sport à améliorer son tableau d'affichage. On veut former une caméra à pouvoir détecter les scores pour qu'ils puissent être envoyés à un récepteur radio. Pour que cela fonctionne, elle doit détecter quel chiffre s'affiche sur le tableau d'affichage. Chaque nombre est représenté par l'un de ces écrans, qui utilise 7 segments pour créer des images."
         },
         "6489827a-09c4-46d2-a646-7572e1b93f19": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demande :** Comment symboliseriez-vous votre anniversaire à l'aide de ces chiffres ? Esquissez votre réponse sur une feuille de papier brouillon"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demander :** Comment feriez-vous pour représenter la date de votre anniversaire à l'aide de ces chiffres ? Faire un croquis de votre réponse sur une feuille de papier brouillon. "
         },
         "2fc904d9-6df1-4cf4-a8ed-678612cd3f11": {
-          "description": "Pendant que les élèves esquissent leurs réponses, commencez à distribuer le guide d'activités."
+          "description": "Pendant que les élèves font le croquis de leurs réponses, mettez-vous à distribuer le guide d'activité."
         },
         "9e2464a2-5662-4766-b1c2-2b986f03ba33": {
-          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Diffuser :** Distribuez le guide d'\nactivités [r computer_vision_network/how-ai-works/2023]",
+          "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribuer :** Distribuez le guide d'activité [r computer_vision_network/how-ai-works/2023].",
           "tips": [
             "**Going Big :** Envisagez d'imprimer des copies des outils de manipulation en 7 segments et de demander aux élèves de travailler sur des tableaux blancs, du papier pour affiches, des rouleaux de papier de boucherie, ou même de ranger des objets individuels et de les relier avec de la ficelle ou du fil."
           ]
@@ -34172,15 +34172,15 @@
           "description": "\\*\\* (Facultatif) Extension :\\*\\* Pensez à regarder la[0] vidéo [what \\ _a \\ _neural \\ _network \\ _sees] depuis la page [Experiments with Google].[1] La courte vidéo donne un exemple en direct du fonctionnement de la classification d'images en tant que réseau neuronal, où vous pouvez voir les entrées et les couches cachées. "
         },
         "b8fc8bcd-f477-431a-9586-9c2ad827f9da": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "17a1b7e1-7b2b-47ae-baa2-d3053ddea5dd": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "38017a5c-eb05-4397-b122-8711c1559789": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "5a1c68ad-e858-4aa4-8a9d-b9edaef7dfde": {
           "description": "**Se lancer avec Code.org :** Pensez à regarder notre série de vidéos [Se lancer avec Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) pour avoir un aperçu de comment naviguer les plans de cours, configurer une section classe et concernant d'autres fonctionnalités importantes de la plateforme Code.org. Chaque vidéo est également dôtée d'un article d'assistance si vous préférez lire ou imprimer les instructions (cliquer ici pour en savoir plus)[1].\n\n**Configurer une section classe :** Vous pouvez utiliser une section classe dans Code.org pour gérer vos élèves, voir leurs progrès et leur confier des programmes spécifiques - [cliquer ici pour en savoir plus].[2]\n\nSi vous utilisez un système de gestion d'apprentissage, il vous faudra peut-être compléter quelques étapes supplémentaires pour synchroniser vos cours avec Code.org :\n\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) pour savoir comment configurer vos cours avec Google Classroom\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) pour savoir comment configurer vos cours avec Clever\n\n**Devenir enseignant vérifié :** Les plans de cours et les niveaux proposent des ressources supplémentaires et des corrigés pour les Enseignants Vérifiés ; processus rapide qui permet de confirmer votre poste au sein d'un établissement d'enseignement. [Cliquez ici pour remplir le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) et vous devriez avoir accès aux ressources pour enseignants vérifiés dans environ un jour ouvrable.\n\n**Assistance aux enseignants :** Vous pouvez en savoir plus sur comment introduire des leçons d'IA dans votre classe grâce à notre [série Les Bases de l'IA pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour Enseignants est une série de formation professionnelle en ligne gratuite sur les notions fondamentales destinée à tout enseignant ou autre éducateur intéressé par le monde révolutionnaire de l'intelligence artificielle (l'IA) et son potentiel transformateur dans le domaine de l'éducation."
@@ -34310,15 +34310,15 @@
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Cette invite est l'occasion de passer en revue et de synthétiser la dernière partie de l'activité d'aujourd'hui, dans laquelle les élèves ont examiné la façon dont les systèmes de recommandation dépendent des données utilisées pour les créer. Encouragez les élèves à établir des liens entre cette invite et certains des systèmes de recommandation qu'ils ont évoqués lors de l'échauffement, en considérant comment un vaste ensemble de données peut aider à garantir que le système fonctionne pour tout le monde plutôt que pour un sous-ensemble spécifique de personnes."
         },
         "baa54416-708e-4655-85be-bcf5cfa48590": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "96703b12-be00-4549-add6-28fffea6e76f": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "fde8393e-139e-40ef-b275-1d93b32daf61": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "2913480b-0273-4c5a-95c8-23b002a842a0": {
           "description": "**Se lancer avec Code.org :** Pensez à regarder notre série de vidéos [Se lancer avec Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) pour avoir un aperçu de comment naviguer les plans de cours, configurer une section classe et concernant d'autres fonctionnalités importantes de la plateforme Code.org. Chaque vidéo est également dôtée d'un article d'assistance si vous préférez lire ou imprimer les instructions (cliquer ici pour en savoir plus)[1].\n\n**Configurer une section classe :** Vous pouvez utiliser une section classe dans Code.org pour gérer vos élèves, voir leurs progrès et leur confier des programmes spécifiques - [cliquer ici pour en savoir plus].[2]\n\nSi vous utilisez un système de gestion d'apprentissage, il vous faudra peut-être compléter quelques étapes supplémentaires pour synchroniser vos cours avec Code.org :\n\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) pour savoir comment configurer vos cours avec Google Classroom\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) pour savoir comment configurer vos cours avec Clever\n\n**Devenir enseignant vérifié :** Les plans de cours et les niveaux proposent des ressources supplémentaires et des corrigés pour les Enseignants Vérifiés ; processus rapide qui permet de confirmer votre poste au sein d'un établissement d'enseignement. [Cliquez ici pour remplir le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) et vous devriez avoir accès aux ressources pour enseignants vérifiés dans environ un jour ouvrable.\n\n**Assistance aux enseignants :** Vous pouvez en savoir plus sur comment introduire des leçons d'IA dans votre classe grâce à notre [série Les Bases de l'IA pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour Enseignants est une série de formation professionnelle en ligne gratuite sur les notions fondamentales destinée à tout enseignant ou autre éducateur intéressé par le monde révolutionnaire de l'intelligence artificielle (l'IA) et son potentiel transformateur dans le domaine de l'éducation."
@@ -34440,15 +34440,15 @@
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** \nCette discussion fait le lien entre la vidéo et des expériences vécues par les étudiants : ils ont probablement vu du texte prédictif dans des e-mails ou des téléphones portables, et ont probablement entendu parler de ChatGPT, par exemple. Les élèves peuvent imaginer utiliser cette technologie pour tout ce qui génère du texte, y compris la rédaction de code ou d'articles de presse. Si les élèves ont du mal à trouver des réponses, vous pouvez fournir des exemples de texte prédictif et/ou démontrer."
         },
         "9c0c2fff-b384-4ac6-ac73-58a8e121487d": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "e1924cec-7b85-408e-b577-211abaf1f02f": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "e22c70e5-cc6f-4d97-9eff-5736cbb0031a": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "57b4147e-478a-451f-8931-a3b624c15095": {
           "name": "Eliza : un chatbot qui n'est pas un LLM",
@@ -34538,15 +34538,15 @@
           "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Objectif de la discussion :** Les élèves peuvent avoir des réponses très différentes à cette question. Certains peuvent penser que les modèles de diffusion sont créatifs parce qu'ils créent des choses qui n'ont jamais été créées auparavant à partir d'instructions. D'autres remarqueront qu'il ne fait que recréer des détails qu'il a vus auparavant dans de nouvelles configurations"
         },
         "aa1caf44-9127-400c-a5d0-291fedca756d": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "5563b254-81f3-4d70-aa2a-c1551f9b8342": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "5da9894d-da25-4e52-9baa-3da9650a59b5": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "b4aa3386-cb77-4253-89c8-2c255a7d620f": {
           "name": "Activité GAN (facultatif)",
@@ -34653,15 +34653,15 @@
           "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> \\*\\* (Facultatif) Vidéo :\\*\\* Regardez la vidéo \n[r how_ai_works_-_societal_impact/how-ai-works/2023] pour un aperçu détaillé de l'impact de l'IA sur la société et des préoccupations relatives aux préjugés au-delà de cet exemple."
         },
         "0b1baac9-5323-4fc0-9a06-b715d53561a2": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "8eec1224-f52f-468c-95ef-a7bcb08099ca": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "3b11d58b-5f61-4c4e-8ba2-576cbf7d6c45": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "17bd5635-8ba9-4318-96e4-d1e3bedf918b": {
           "description": "**Se lancer avec Code.org :** Pensez à regarder notre série de vidéos [Se lancer avec Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) pour avoir un aperçu de comment naviguer les plans de cours, configurer une section classe et concernant d'autres fonctionnalités importantes de la plateforme Code.org. Chaque vidéo est également dôtée d'un article d'assistance si vous préférez lire ou imprimer les instructions (cliquer ici pour en savoir plus)[1].\n\n**Configurer une section classe :** Vous pouvez utiliser une section classe dans Code.org pour gérer vos élèves, voir leurs progrès et leur confier des programmes spécifiques - [cliquer ici pour en savoir plus].[2]\n\nSi vous utilisez un système de gestion d'apprentissage, il vous faudra peut-être compléter quelques étapes supplémentaires pour synchroniser vos cours avec Code.org :\n\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) pour savoir comment configurer vos cours avec Google Classroom\n-   [Cliquez ici](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) pour savoir comment configurer vos cours avec Clever\n\n**Devenir enseignant vérifié :** Les plans de cours et les niveaux proposent des ressources supplémentaires et des corrigés pour les Enseignants Vérifiés ; processus rapide qui permet de confirmer votre poste au sein d'un établissement d'enseignement. [Cliquez ici pour remplir le formulaire](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) et vous devriez avoir accès aux ressources pour enseignants vérifiés dans environ un jour ouvrable.\n\n**Assistance aux enseignants :** Vous pouvez en savoir plus sur comment introduire des leçons d'IA dans votre classe grâce à notre [série Les Bases de l'IA pour Enseignants](https://code.org/ai/pl/101). Les Bases de l'IA pour Enseignants est une série de formation professionnelle en ligne gratuite sur les notions fondamentales destinée à tout enseignant ou autre éducateur intéressé par le monde révolutionnaire de l'intelligence artificielle (l'IA) et son potentiel transformateur dans le domaine de l'éducation."
@@ -34703,15 +34703,15 @@
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discutez :** \\_Comment décririez-vous « l'éthique de l'IA » à un membre de votre famille ou à un ami qui n'a pas participé à la leçon d'aujourd'hui ? \\_\n\nEncouragez les étudiants à utiliser les preuves issues de leurs recherches pour expliquer ce qu'est l'éthique de l'IA et la nécessité d'un code d'éthique."
         },
         "b14ca57e-bb0c-4cdc-bcc6-f0d2fee69b03": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "086a57eb-d6b8-46d9-860c-cc3cd0dc9c52": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "8c9e0a32-aa02-41bc-b26d-131dea4ceac6": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "1b97cdf1-c60b-4103-9144-5414aa7a2183": {
           "description": "Aujourd'hui, nous allons en apprendre davantage sur la technologie de l'IA ! Qu'est-ce que l'IA, demandez-vous ? Découvrons-le ensemble !"
@@ -34747,7 +34747,7 @@
           "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vidéo :** Regardez la vidéo [how \\ _ai \\ _works \\ _how \\ _computer \\ _vision \\ _works] en classe.[0]\n Les élèves doivent être à l'écoute des termes de vocabulaire qui correspondent à ceux de leur preneur de notes."
         },
         "91f068d1-296f-4804-b1b0-ca40f9f12fdc": {
-          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demande :** Comment résumeriez-vous la façon dont un ordinateur « voit » quelque chose dans une image ?"
+          "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Demander :** Comment résumeriez-vous la façon dont un ordinateur « voit » quelque chose dans une image ?"
         },
         "849d8c16-2171-4350-90cb-2755499a5ad3": {
           "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Vidéo :** Regardez la vidéo [how \\ _chatbots \\ _and \\ _large \\ _language \\ _models \\ _work] en classe.[0]\n Les élèves doivent être à l'écoute des termes de vocabulaire qui correspondent à ceux de leur preneur de notes."
@@ -34774,15 +34774,15 @@
           "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt :** Comment l'IA change-t-elle votre vision de votre travail et de votre carrière futurs ?"
         },
         "22d6a465-1588-4f86-8b85-53d2b9f85a1f": {
-          "description": "Nous aimerions en savoir plus sur les personnes qui enseignent ces leçons et sur l'expérience en classe. Faites-le nous savoir dans le cadre de cette [enquête sur le fonctionnement de l'IA auprès des enseignants](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
+          "description": "On aimerait beaucoup en savoir plus sur ceux qui enseignent ces leçons et l'expérience que la classe en fait. Faites-le nous savoir au travers de cette [Enquête enseignant « Comment fonctionne l'IA »](https://docs.google.com/forms/d/e/1FAIpQLSd5Usml_xrjQQ8DdBmZjQc771LcB13FKukCYc3NGLKfVwIneg/viewform)."
         },
         "9f7f1bb2-91d4-4640-b226-7e511cd54e9b": {
           "name": "Leçons supplémentaires",
-          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série de vidéos How AI Works, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)"
+          "description": "Si vous souhaitez enseigner des leçons supplémentaires tirées de la série vidéo Comment fonctionne l'IA, [cliquez ici pour découvrir des ressources supplémentaires](https://code.org/ai/how-ai-works)."
         },
         "6fcccbbf-5b1b-4d65-98bd-8c37c03da53b": {
-          "name": "Unité d'IA et d'apprentissage automatique",
-          "description": "Si vous souhaitez approfondir l'IA et l'apprentissage automatique, pensez à explorer notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquez ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
+          "name": "Unité « l'IA et l'apprentissage automatique »",
+          "description": "Si vous souhaitez approfondir encore plus vos connaissances sur l'IA et l'apprentissage automatique, envisagez de jeter un œil sur notre unité de 5 semaines sur l'IA et l'apprentissage automatique. [Cliquer ici pour voir l'unité et en savoir plus](https://studio.code.org/s/aiml-2023?viewAs=Instructor)"
         },
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introduction",
