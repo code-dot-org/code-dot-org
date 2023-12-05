@@ -291,6 +291,7 @@
     "pa11y-ci": "^2.3.0",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.2",
     "prop-types": "^15.6.2",
+    "pyodide": "^0.24.1",
     "qrcode.react": "^0.8.0",
     "query-string": "4.1.0",
     "react-ace": "^9.2.1",

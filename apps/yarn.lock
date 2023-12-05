@@ -7494,6 +7494,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"base-64@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "base-64@npm:1.0.0"
+  checksum: d10b64a1fc9b2c5a5f39f1ce1e6c9d1c5b249222bbfa3a0604c592d90623caf74419983feadd8a170f27dc0c3389704f72faafa3e645aeb56bfc030c93ff074a
+  languageName: node
+  linkType: hard
+
 "base64-arraybuffer@npm:0.1.5":
   version: 0.1.5
   resolution: "base64-arraybuffer@npm:0.1.5"
@@ -7835,6 +7842,7 @@ __metadata:
     progress-bar-webpack-plugin: ^2.1.0
     prop-types: ^15.6.2
     pusher-js: 4.1.0
+    pyodide: ^0.24.1
     qrcode.react: ^0.8.0
     qtip2: 2.2.0
     query-string: 4.1.0
@@ -22298,6 +22306,16 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"pyodide@npm:^0.24.1":
+  version: 0.24.1
+  resolution: "pyodide@npm:0.24.1"
+  dependencies:
+    base-64: ^1.0.0
+    ws: ^8.5.0
+  checksum: ab18e5eed3195b919c0e70b39a81bab0449ab56e42f28e8635664e688dba732da060492505719c3cb477302979791dbcc1df09ff39dc9e0816064b69818f283d
+  languageName: node
+  linkType: hard
+
 "qjobs@npm:^1.1.4":
   version: 1.1.5
   resolution: "qjobs@npm:1.1.5"
@@ -29330,6 +29348,21 @@ temporal@latest:
     utf-8-validate:
       optional: true
   checksum: 2152cf862cae0693f3775bc688a6afb2e989d19d626d215e70f5fcd8eb55b1c3b0d3a6a4052905ec320e2d7734e20aeedbf9744496d62f15a26ad79cf4cf7dae
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.5.0":
+  version: 8.14.2
+  resolution: "ws@npm:8.14.2"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 3ca0dad26e8cc6515ff392b622a1467430814c463b3368b0258e33696b1d4bed7510bc7030f7b72838b9fdeb8dbd8839cbf808367d6aae2e1d668ce741d4308b
   languageName: node
   linkType: hard
 
