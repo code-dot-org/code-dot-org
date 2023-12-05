@@ -235,6 +235,7 @@ class TestController < ApplicationController
       previous_yearlong_cdo_pd: ['CS in Science'],
       enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
+      will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
       csp_how_offer: 'As an AP course',
       csd_which_grades: ['6', '7'],
