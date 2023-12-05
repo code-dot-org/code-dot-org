@@ -20,6 +20,8 @@
 #include <string>
 #include <thread>
 
+#include "munged-reader.h"
+
 using namespace std;
 using namespace rapidjson;
 
@@ -544,7 +546,8 @@ void handleParseError(ParseResult result, string filename) {
 
 void parseFirebaseJSON(string filename) {
   RawJSONHandler handler;
-  Reader reader;
+  //Reader reader;
+  MungedReader<UTF8<>, UTF8<> > reader;
 
   loadDataBufferDir =  TMP_DIR + filename + "-tsvs/";
   filesystem::create_directories(loadDataBufferDir);
