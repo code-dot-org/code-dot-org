@@ -19,6 +19,7 @@ class LtiV1Controller < ApplicationController
   def login
     if params[:client_id]
       query_params = {client_id: params[:client_id], issuer: params[:iss]}
+      p "query params: #{query_params}"
     elsif params[:platform_id]
       query_params = {platform_id: params[:platform_id]}
     else
@@ -26,6 +27,7 @@ class LtiV1Controller < ApplicationController
     end
 
     lti_integration = LtiIntegration.find_by(query_params)
+    p "LTI Integration name: #{lti_integration.name}"
     return unauthorized_status unless lti_integration
 
     state_and_nonce = create_state_and_nonce
@@ -47,12 +49,13 @@ class LtiV1Controller < ApplicationController
       nonce: state_and_nonce[:nonce],
       prompt: 'none',
     }.to_query
-
+    p "auth redirect url #{auth_redirect_url}"
     redirect_to auth_redirect_url.to_s
   end
 
   def authenticate
     id_token = params[:id_token]
+    p "authenticate handler, id_token = #{id_token}"
     return unauthorized_status unless id_token
     begin
       decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
