@@ -4,11 +4,6 @@ import classNames from 'classnames';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 import moduleStyles from './link.module.scss';
 
-const disabledLinkProps = {
-  role: 'link',
-  'aria-disabled': true,
-};
-
 export interface LinkProps {
   /** Link content */
   children: React.ReactNode;
@@ -32,20 +27,15 @@ export interface LinkProps {
   color?: 'primary' | 'secondary';
 }
 
-// TODO:
-// - fix typescript errors
-// - Add tests
-// - update changelog
-
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/LinkTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Link Component.
  * Used for internal or external links. Shortcut for general <a> HTML tag (with DSCO styles applied).
@@ -64,7 +54,6 @@ const Link: React.FunctionComponent<LinkProps> = ({
   color = 'primary',
 }) => {
   return (
-    // eslint-disable-next-line react/jsx-no-target-blank
     <a
       className={classNames(
         moduleStyles.link,
@@ -72,12 +61,13 @@ const Link: React.FunctionComponent<LinkProps> = ({
         moduleStyles[`link-${size}`],
         className
       )}
+      role="link"
       href={!disabled ? href : undefined}
       id={id}
       onClick={!disabled ? onClick : undefined}
       rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
-      target={openInNewTab ? '_blank' : undefined}
-      {...(disabled ? disabledLinkProps : {})}
+      target={(openInNewTab || undefined) && '_blank'}
+      {...(disabled ? {'aria-disabled': true} : {})}
     >
       {children}
     </a>
