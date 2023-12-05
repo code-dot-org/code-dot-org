@@ -54,7 +54,7 @@ const char *getEnv(string envVar, const char *defaultVal) {
   return env ? env : defaultVal;
 }
 
-const string DB_NAME = getEnv("MYSQL_DB", "unfirebase");
+const string DB_NAME = getEnv("MYSQL_DB", "unfirebasetxt");
 const string TABLE_NAME = getEnv("MYSQL_TABLE", "unfirebase");
 
 thread_local sql::Connection *db = nullptr;
@@ -624,13 +624,13 @@ int main(int argc, char *argv[]) {
     db = getDB();
 
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
-    // stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
+    stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
     stmt->execute("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
 
     db->setSchema(DB_NAME);
 
-    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
-    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
+    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
     stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
     //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
     stmt->execute("SET autocommit=0;");
