@@ -108,8 +108,9 @@ Resources:
               SSEAlgorithm: "aws:kms"
       VersioningConfiguration:
         Status: "Enabled"
-      LogFilePrefix: "s3/cdo-curriculum-devel"
-      CommonBucketProperties: {}
+      LoggingConfiguration:
+        DestinationBucketName: "cdo-logs"
+        LogFilePrefix: "s3/cdo-curriculum-devel"
 
   # S3 bucket for internal data sharing
   DataSharingInternalBucket:
