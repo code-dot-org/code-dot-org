@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-09-28 14:31:56 UTC",
+    "serialized_at": "2023-11-04 17:53:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2019,6 +2019,10 @@
           {
             "type": "teachingTip",
             "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\r\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Combine and modify existing algorithms*\n\n[Level 1](https://studio.code.org/s/csp7-2023/lessons/7/levels/1) in this lesson provides students a chance to combine existing algorithms to make a new one.\n\n**[Example Solution for Instructors](https://studio.code.org/projects/applab/baPQ3qxDV3Lp7AAbF3_ctHvflMD11dpU7vh9evNFii4/view)**"
           }
         ]
       },
@@ -2053,7 +2057,13 @@
       "key": "301fe84f-df47-4dca-becc-1a0b353c4057",
       "position": 6,
       "properties": {
-        "progression_name": "Testing Libraries"
+        "progression_name": "Testing Libraries",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Identify inputs and corresponding expected outputs or behaviors that can be used to check the correctness of an algorithm or program.*\n\n[Level 5](https://studio.code.org/s/csp7-2023/lessons/7/levels/5) has students write test for an existing algorithm.\n\n**[Example Solution for Instructors](https://studio.code.org/projects/applab/ldNnJgdxcW_xp_g8OyBUKopHfPv4YiDSgXgfO3OKiuM/view)**"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "301fe84f-df47-4dca-becc-1a0b353c4057",
@@ -4507,6 +4517,20 @@
     {
       "seeding_key": {
         "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.M.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.J.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-14"
       }
@@ -4800,6 +4824,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

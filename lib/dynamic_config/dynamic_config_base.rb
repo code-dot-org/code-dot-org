@@ -32,12 +32,6 @@ class DynamicConfigBase
     @datastore_cache.clear
   end
 
-  # The datastore needs to restart the update thread
-  # after a fork.
-  def after_fork
-    @datastore_cache.after_fork
-  end
-
   # Returns the current dcdo config state as yaml
   # @returns [String]
   def to_yaml

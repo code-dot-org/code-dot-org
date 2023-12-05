@@ -28,7 +28,7 @@ social:
 {{ spritelab_module, title: "Смайлики", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", alt_text: "Three fun emoji characters with different expressions in front of a disco ball", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
 {{ clearfix }}
 
-{{ teacher_info, heading: "Про вчителя", title: "Як продовжити навчання після Hello World", description: "Hello World — це ідеальний перший крок для класів, перш ніж вони спробують виконувати відкриті проекти в рамках нашої нової навчальної програми, CS Connections! Засвоївши певні основи програмування, учні зможуть переходити до міжпредметних проектів CS Connections.", button_text: "Дізнатися більше", url: "/educate/csc" }}
+{{ teacher_info, heading: "Про вчителя", title: "Як продовжити навчання після Hello World", description: "Hello World — це ідеальний перший крок для класів, перш ніж вони спробують виконувати відкриті проєкти в рамках нашої нової навчальної програми, CS Connections! Засвоївши певні основи програмування, учні зможуть переходити до міжпредметних проєктів CS Connections.", button_text: "Дізнатися більше", url: "/educate/csc" }}
 
 ## Вибрані роботи учнів
 

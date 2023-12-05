@@ -254,8 +254,21 @@ a.link-button {
 ul {
   margin: 1rem;
 
-  li p {
-    @include body-three;
+  li {
+    line-height: 1.4;
+    margin: 0.5rem 0;
+
+    &:before {
+      color: $neutral-dark;
+    }
+
+    p {
+      @include body-three;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   // Clear spacing and list dots
@@ -319,79 +332,6 @@ ul {
     }
   }
 
-  // Lists that have an arrow shape as li backgrounds
-  &.arrow-list {
-    margin: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    li {
-      height: 12rem;
-      background: $brand_primary_light;
-      position: relative;
-      padding: 1.5rem 2.5rem;
-      text-indent: 0 !important;
-      display: flex;
-      align-content: start;
-      flex-wrap: wrap;
-      margin: 1.5rem 0;
-
-      @media screen and (max-width: $width-md) {
-        padding: 1rem 1rem 1rem 2rem;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100% !important;
-        margin-bottom: 0;
-      }
-
-      h3 {
-        @include heading-sm;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-left: 1rem solid $neutral_white;
-        border-top: calc(12rem / 2) solid transparent;
-        border-bottom: calc(12rem / 2) solid transparent;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        right: -1rem;
-        bottom: 0;
-        width: 0;
-        height: 0;
-        border-left: 1rem solid $brand_primary_light;
-        border-top: calc(12rem / 2) solid transparent;
-        border-bottom: calc(12rem / 2) solid transparent;
-      }
-
-      &:nth-child(1) {
-        background: rgba($brand_primary_light, .4);
-
-        &:before {
-          border-left: 1rem solid rgba($brand_primary_light, .4);
-        }
-      }
-
-      &:nth-child(2) {
-        background: rgba($brand_primary_light, .6);
-
-        &:before {
-          border-left: 1rem solid rgba($brand_primary_light, .6);
-        }
-      }
-    }
-  }
-
   // Lists of links with icons
   &.link-list {
     margin: 2rem 0 0;
@@ -434,6 +374,56 @@ ul {
     }
   }
 
+  // Lists that have progressive content between elements
+  &.progressive-list {
+    margin: 3rem 0 0;
+    display: grid;
+    grid-gap: 1.5rem;
+
+    &.three-col {
+      @media screen and (min-width: $width-lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    li {
+      position: relative;
+      text-indent: 0 !important;
+      margin: 1.5rem 0;
+      padding: 1.25rem 1.25rem 1.35rem;
+      background: var(--neutral_light);
+      border-radius: $border-radius;
+
+      // Little top arrow
+      &:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 1.25rem;
+        border-bottom: 10px solid var(--neutral_light);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+      }
+
+      span {
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+        width: 100%;
+        height: 0.5rem;
+        border-radius: 1rem;
+      }
+
+      &:nth-of-type(1) span { background: var(--brand_primary_light) }
+      &:nth-of-type(2) span { background: var(--brand_primary_default); opacity: 0.75; }
+      &:nth-of-type(3) span { background: var(--brand_primary_dark)}
+
+      h3 {
+        @include heading-sm;
+      }
+    }
+  }
+
   // Lists that show supporters or other text content in a table format
   &.supporters-list {
     margin: 3rem auto;
@@ -456,15 +446,6 @@ ul {
       &:before {
         content: "";
       }
-    }
-  }
-
-  li {
-    line-height: 1.4;
-    margin: 0.5rem 0;
-
-    &:before {
-      color: $neutral-dark;
     }
   }
 }
@@ -761,12 +742,50 @@ form {
     padding-right: 0.5rem;
     margin: 1rem 0 0;
   }
+
+  // Removes margins on the display_video_thumbnail view
+  // so the play button image is vertically centered
+  .videothumbnail {
+    margin-bottom: 1rem;
+
+    .thumbnail-wrapper .thumbnail-image {
+      margin-bottom: 0;
+    }
+  }
+
+  // Shows download button image correctly on modal
+  .modal-body img {
+    width: unset;
+    margin-bottom: 0;
+  }
 }
 
 // Two column action block
 .action-block--two-col {
   flex-wrap: wrap;
   overflow: hidden;
+
+  // Use this wrapper on the image or video
+  // to add a margin around it
+  .media-wrapper {
+    & > * {
+      margin: 1.25rem;
+      width: calc(100% - 1.25rem);
+
+      @media (max-width: $width-md) {
+        margin: 0;
+        width: 100%;
+      }
+    }
+
+    &.right > * {
+      float: right;
+
+      html[dir="rtl"] & {
+        float: left;
+      }
+    }
+  }
 
   .text-wrapper {
     padding: 1rem 1.5rem;
@@ -776,7 +795,8 @@ form {
     @include heading-sm;
 
     &.heading-md {
-      @include heading-md
+      @include heading-md;
+      font-weight: unset;
     }
   }
 
@@ -1000,12 +1020,12 @@ form {
 
         &::before {
           content: "\f10d";
-          margin: 0 8px 0 0;
+          margin: 0 4px 0 0;
         }
 
         &::after {
           content: "\f10e";
-          margin: 0 0 0 8px;
+          margin: 0 0 0 4px;
         }
       }
     }
@@ -1329,6 +1349,7 @@ section.quote {
 
   @media screen and (max-width: $width-sm) {
     padding: 1rem;
+    background-size: 50%;
   }
 
   .text-wrapper {

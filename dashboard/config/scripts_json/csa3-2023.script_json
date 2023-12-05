@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "d96e0b8e-869c-4169-bfdc-dd7ef4c0a050",
+          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
+          "details": "Planning to study computer science, engineering or robotics in college? Apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
+          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
+          "type": "bullhorn",
+          "visibility": "Student-only",
+          "dismissible": true,
+          "buttonText": "Apply now"
+        },
+        {
+          "key": "00a51a2d-352d-4fe2-9653-e08591fc9b38",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-12 16:51:33 UTC",
+    "serialized_at": "2023-11-20 21:11:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7367,7 +7389,7 @@
     },
     {
       "name": "[EXEMPLAR] U3L5 Guided Notes",
-      "url": "https://docs.google.com/document/d/1Y3Q7liMQxgxq4buJPbXsy3c-ZsEKd57IRGqeT1LJFpg/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1iLTD_kaEY5Lz2mKWKMA7Tr9c0fntUVxICyYem6q1cV0/edit?usp=sharing",
       "key": "_exemplar_u3l5_guided_notes",
       "properties": {
         "audience": "Verified Teacher",

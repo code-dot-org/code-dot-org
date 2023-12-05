@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -451,6 +451,21 @@ class ProjectsController < ApplicationController
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  def can_publish_age_status
+    project = Project.find_by_channel_id(params[:channel_id])
+    unless project.apply_project_age_publish_limits?
+      return render json: {
+        project_existed_long_enough_to_publish: true,
+        user_existed_long_enough_to_publish: true
+      }
+    end
+
+    render json: {
+      project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
+      user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
+    }
   end
 
   private def uses_asset_bucket?(project_type)

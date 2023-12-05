@@ -93,7 +93,7 @@ class BubbleChoice < DSLDefined
 
       if script_level
         previous_level_url = script_level.previous_level ? build_script_level_url(script_level.previous_level) : nil
-        redirect_url = script_level.next_level_or_redirect_path_for_user(user, nil, true)
+        redirect_url = script_level.next_level_or_redirect_path_for_user(user, bubble_choice_parent: true)
 
         summary.merge!(
           {

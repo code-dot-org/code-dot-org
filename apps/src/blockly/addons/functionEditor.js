@@ -2,6 +2,10 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
+import {
+  ScrollBlockDragger,
+  ScrollOptions,
+} from '@blockly/plugin-scroll-options';
 import {flyoutCategory as functionsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from '@cdo/apps/blockly/customBlocks/googleBlockly/behaviorBlocks';
 import msg from '@cdo/locale';
@@ -11,9 +15,12 @@ import {
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
 } from './functionEditorConstants';
+import CdoConnectionChecker from './cdoConnectionChecker';
 import CdoMetricsManager from './cdoMetricsManager';
 import WorkspaceSvgFrame from './workspaceSvgFrame';
 import {BLOCK_TYPES} from '../constants';
+import {frameSizes} from './cdoConstants';
+import CdoTrashcan from './cdoTrashcan';
 
 // This class creates the modal function editor, which is used by Sprite Lab and Artist.
 export default class FunctionEditor {
@@ -47,6 +54,7 @@ export default class FunctionEditor {
     // Customize auto-populated Functions toolbox category.
     this.editorWorkspace = Blockly.blockly_.inject(modalEditor, {
       comments: false, // Disables Blockly's built-in comment functionality.
+      media: options.media,
       move: {
         drag: false,
         scrollbars: {
@@ -57,12 +65,18 @@ export default class FunctionEditor {
       },
       plugins: {
         metricsManager: CdoMetricsManager,
+        blockDragger: ScrollBlockDragger,
+        connectionChecker: CdoConnectionChecker,
       },
+      readOnly: options.readOnly,
       renderer: options.renderer,
+      rtl: options.rtl,
       theme: Blockly.cdoUtils.getUserTheme(options.theme),
       toolbox: options.toolbox,
       trashcan: false, // Don't use default trashcan.
     });
+    const scrollOptionsPlugin = new ScrollOptions(this.editorWorkspace);
+    scrollOptionsPlugin.init();
 
     // Disable blocks that aren't attached. We don't want these to generate
     // code in the hidden workspace.
@@ -99,6 +113,9 @@ export default class FunctionEditor {
     );
 
     this.setUpEditorWorkspaceChangeListeners();
+
+    const functionEditorTrashcan = new CdoTrashcan(this.editorWorkspace);
+    functionEditorTrashcan.init();
   }
 
   hide() {
@@ -163,12 +180,12 @@ export default class FunctionEditor {
         type: procedureType,
         extraState: {
           procedureId: procedure.getId(),
+          userCreated: true,
         },
         fields: {
           NAME: procedure.getName(),
         },
         deletable: false,
-        movable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -176,13 +193,31 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+
+    // We hide the delete button unless it is a function or user-created behavior.
+    const shouldShowDeleteButton =
+      this.block.type === BLOCK_TYPES.procedureDefinition ||
+      this.block.userCreated;
+    const modalEditorDeleteButton = document.getElementById(
+      MODAL_EDITOR_DELETE_ID
+    );
+    modalEditorDeleteButton.style.visibility = shouldShowDeleteButton
+      ? 'visible'
+      : 'hidden';
+
     const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+
+    // Used to create and render an SVG frame instance.
+    const getDefinitionBlockColor = () => {
+      return Blockly.cdoUtils.getBlockColor(this.block);
+    };
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
       isBehavior ? msg.behaviorEditorHeader() : msg.function(),
-      'blocklyWorkspaceSvgFrame'
+      'blocklyWorkspaceSvgFrame',
+      getDefinitionBlockColor
     );
     this.editorWorkspace.svgFrame_.render();
   }
@@ -192,7 +227,7 @@ export default class FunctionEditor {
    * @returns a legal name for a new function definition.
    */
   getNameForNewFunction() {
-    let name = 'do something';
+    let name = msg.doSomething();
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
     while (
@@ -344,12 +379,16 @@ export default class FunctionEditor {
    * @returns Block configuration with x and y coordinates
    */
   addEditorWorkspaceBlockConfig(blockConfig) {
-    const returnValue = {
+    // Position the blocks within the workspace svg frame.
+    const x = frameSizes.MARGIN_SIDE + 5;
+    const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
+
+    return {
       ...blockConfig,
-      x: 20,
-      y: 40,
+      movable: false,
+      x,
+      y,
     };
-    return returnValue;
   }
 
   // Copy all procedure models from the hidden definition workspace to the editor workspace,

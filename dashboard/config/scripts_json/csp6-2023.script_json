@@ -4,6 +4,28 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "d838b471-cc64-4b66-8dfe-0e19b0574fb1",
+          "notice": "A 2:1 scholarship opportunity from Amazon Future Engineer",
+          "details": "Planning to study computer science, engineering or robotics in college? Apply to the Amazon Future Engineer Scholarship. 400 high school seniors will be awarded scholarships and get paid internship opportunities.",
+          "link": "https://www.amazonfutureengineer.com/scholarships?utm_campaign=Code.org&utm_medium=Scholarship&utm_source=US&utm_content=Email",
+          "type": "bullhorn",
+          "visibility": "Student-only",
+          "dismissible": true,
+          "buttonText": "Apply now"
+        },
+        {
+          "key": "b068f15c-b571-48ff-91db-cc9558d0bd7c",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +40,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-30 21:34:10 UTC",
+    "serialized_at": "2023-11-20 21:08:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1345,6 +1367,22 @@
       }
     },
     {
+      "key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "<b>Create Performance Task Written Response Practice</b>\n\nIn order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\n</br>\n\nSample Prompt: <i>Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n<a href=\"https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0\">Unit Journal Template</a>\n\n<b>Sample Response for Instructors</b> (<i>coming soon...</i>)\n\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0dc1f1be-422f-4495-90f6-42c09d3df6f0",
+        "lesson_activity.key": "d8d90c1f-ef23-4b03-bc33-0d11e4b6d68a"
+      }
+    },
+    {
       "key": "06650a30-26ab-4006-b412-6bc08cc2942f",
       "position": 1,
       "properties": {
@@ -1932,7 +1970,13 @@
       "key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
       "position": 9,
       "properties": {
-        "progression_name": "For Loop Practice"
+        "progression_name": "For Loop Practice",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop.</i>\n\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g28a3d051caa_0_0) \n\n**Sample Response for Instructors**\n\n\n\n![](https://images.code.org/8618586759adcfae2539e60b9cbf819d-Screenshot 2023-11-04 at 11.16.43 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "cac9dbfa-11e2-420c-ba4d-cc15ba3a6f0d",
@@ -1954,7 +1998,13 @@
       "key": "8277a753-5403-4923-a480-2e22c5e2e6cd",
       "position": 11,
       "properties": {
-        "progression_name": "Loops and Screen Elements"
+        "progression_name": "Loops and Screen Elements",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): \n* Identify the error.\n* Correct the error.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit#slide=id.g296d9c820e5_2_0) You may choose to reuse this debugging journal template if you think it will help support your students becoming stronger debuggers.\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c097084c3ab965c6395296f733095c91-Screenshot 2023-11-03 at 11.23.26 AM.png)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8277a753-5403-4923-a480-2e22c5e2e6cd",
@@ -2313,7 +2363,13 @@
       "properties": {
         "description": "**Levels 3-4:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which patterns were used in the apps today.",
         "name": "Traversal Patterns",
-        "progression_name": "Traversal Patterns"
+        "progression_name": "Traversal Patterns",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s):  \n- Write iteration statements to traverse a list. \n- Determine the result of an algorithm that includes list traversals.\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=sharing)\n\n**Sample Response for Instructors**\n\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2815843a-607d-421a-a710-a89ee57ae819",

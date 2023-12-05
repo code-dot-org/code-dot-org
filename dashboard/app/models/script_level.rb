@@ -146,7 +146,7 @@ class ScriptLevel < ApplicationRecord
   def next_level_or_redirect_path_for_user(
     user,
     extras_lesson = nil,
-    bubble_choice_parent = false
+    bubble_choice_parent: false
   )
 
     if valid_progression_level?(user)
@@ -583,7 +583,7 @@ class ScriptLevel < ApplicationRecord
   # @param [boolean] use_existing_level_keys - If true, use existing information in the level_keys property if available
   #   instead of re-querying associated levels. We want to reuse this data during seeding, but not during serialization.
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.
-  def seeding_key(seed_context, use_existing_level_keys = true)
+  def seeding_key(seed_context, use_existing_level_keys: true)
     my_key = {
       'script_level.level_keys': get_level_keys(seed_context, use_existing_level_keys)
     }
