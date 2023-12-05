@@ -605,7 +605,7 @@ int main(int argc, char *argv[]) {
     stmt->execute("SET autocommit=0;");
     stmt->execute("SET unique_checks=0;");
     stmt->execute("SET foreign_key_checks=0;");
-    stmt->execute("SET sql_log_bin=0;");
+    //stmt->execute("SET sql_log_bin=0;"); // NEEDS SUPER privs
     stmt->execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
     stmt->execute("COMMIT;");
 
