@@ -270,7 +270,8 @@ void commitRecords() {
     if (LOAD_DATA_IN_THREAD) {
       // we're using threads, but we're not in one, just queue it up
       char *filename = strdup(loadDataBufferTSVFilename.c_str());
-      while (!loadDataFilenameQueue.push(filename));
+      while (!loadDataFilenameQueue.push(filename))
+        this_thread::sleep_for(std::chrono::milliseconds(1));
       cout << "Num data jobs queued: " << numDataJobsQueued++ << endl;
     } else {
       loadData(loadDataBufferTSVFilename);
