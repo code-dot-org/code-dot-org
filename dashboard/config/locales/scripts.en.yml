@@ -14002,3 +14002,14 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        melissasandbox-2024-1:
+          lessons:
+            lesson-1:
+              name: 'Part II: Algorithms and Sequencing'
+          lesson_groups: {}
+          name: melissasandbox-2024-1
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
