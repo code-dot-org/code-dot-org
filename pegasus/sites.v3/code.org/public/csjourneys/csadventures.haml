@@ -14,7 +14,7 @@ social:
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 
-%section#top
+%section#top.no-padding-bottom
   .wrapper
     %h1 Virtual field trips and career chats
     %a{href: "/csjourneys"}
@@ -26,10 +26,12 @@ social:
       %li
         %a{href: "#chats"} Career chats
 
-%section#trips.bg-neutral-light
+%section#trips
   .wrapper
     %h2 Virtual field trips
     = view :csjourneys_virtual_field_trips
+
+= view :section_divider_line
 
 %section#chats
   .wrapper
