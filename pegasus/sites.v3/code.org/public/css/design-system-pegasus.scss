@@ -674,6 +674,10 @@ form {
   display: flex;
   align-content: baseline;
 
+  &.white {
+    background: var(--neutral_white);
+  }
+
   .new {
     color: var(--neutral_white);
     background: var(--brand_accent_default);

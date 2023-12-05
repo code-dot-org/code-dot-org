@@ -18,7 +18,7 @@ title: Resources
 
 ## Appendi questi poster nella tua scuola (solo in inglese)
 
-È disponibile una nuova serie di poster con Malala, Stephen Curry, Shakira e molti altri! Quest'anno, ogni kit verrà fornito con 6 poster e 126 adesivi "I did the Hour of Code". Le forniture sono limitate, quindi [ordina i poster](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) al più presto. Per stampare in auonomia, è sufficiente cliccare su una delle immagini qui sotto per visualizzare e salvare una versione stampabile.
+È disponibile una nuova serie di poster con Malala, Stephen Curry, Shakira e molti altri! Quest'anno, ogni kit verrà fornito con 6 poster e 126 adesivi "I did the Hour of Code". Per stampare in auonomia, è sufficiente cliccare su una delle immagini qui sotto per visualizzare e salvare una versione stampabile.
 
 {{ promote_new_posters }}
 
@@ -42,21 +42,21 @@ title: Resources
 
 [Scarica le versioni ad alta risoluzione](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" e "Ora del Codice" sono marchi di fabbrica. Non vogliamo impedire il loro utilizzo, ma vogliamo assicurarci che l'utilizzo rientri entro alcuni limiti:**
+**"Hour of Code" e "Hora del Código" sono marchi registrati. Non vogliamo impedire il loro utilizzo, ma vogliamo assicurarci che l'utilizzo rientri entro alcuni limiti:**
 
-1. Qualsiasi riferimento a "Hour of Code" o "Ora del Codice" deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune.
+1. Qualsiasi riferimento a "Hour of Code" o "Hora del Código" deve essere fatto in modo che non suggerisca che sia un tuo marchio, ma piuttosto si riferisca all'Ora del Codice come un movimento di gente comune.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Un esempio di uso corretto</strong>: "Partecipa all'Ora del Codice™ su YOUR-COMPANY.com."
+    <strong>Un esempio di uso corretto</strong>: "Partecipa all'Hour of Code™ su YOUR-COMPANY.com."
   </li>
   <li>
-    <strong>Un uso scorretto</strong>: "Prova l'Ora del Codice di YOUR-COMPANY."
+    <strong>Un uso scorretto</strong>: "Prova l'Hour of Code di YOUR-COMPANY."
   </li>
 </ul>
 
 1. Utilizza un apice "TM" dove menzioni ""Hour of Code"" e un apice "Ⓡ" nei punti più importanti dove citi "Hora del Código", sia nel tuo sito web che nelle descrizioni delle app.
-2. Includi la lingua nella tua pagina (o nel piè di pagina), inclusi i link alla CSEdWeek e al sito Web[Code.org]({{ codeorg_link }}) , che dice quanto segue:
+2. Includi la lingua nella tua pagina (o nel piè di pagina), inclusi i link alla CSEdWeek e al sito Web [Code.org]({{ codeorg_link }}) , che dice quanto segue:
     
     *“La 'Hour of Code™'/'Hora del Código®' è un'iniziativa nazionale della Computer Science Education Week [csedweek.org] e di Code.org [code.org] per introdurre milioni di studenti ad un'ora di informatica e programmazione."*
 
@@ -72,7 +72,7 @@ title: Resources
 
 <a id="sample-emails"></a>
 
-## Invita le persone della tua comunità all'Ora del Codice e promuovi il tuo evento tramite tramite posta elettronica
+## Invita le persone della tua comunità all'Ora del Codice e promuovi il tuo evento tramite posta elettronica
 
 ### Trova [maggiori informazioni e suggerimenti sul linguaggio da utilizzare]({{ promote/stats_url }}) per promuovere l'Ora del Codice.
 
@@ -82,13 +82,13 @@ title: Resources
 
 ### Chiedi alla tua scuola, al tuo datore di lavoro o ai tuoi amici di iscriversi:
 
-**Oggetto:** Unisciti a me e ad oltre 100 milioni di studenti per un'Ora del Codice <br />
+**Oggetto:** Unisciti a me e a oltre 100 milioni di studenti per un'Ora del Codice <br />
 
 I computer sono ovunque e stanno cambiando ogni industria del pianeta. Ma solo il 51% di tutte le scuole superiori insegna informatica (negli Stati Uniti). La buona notizia è che intendiamo cambiare rotta! Se hai già sentito parlare dell'Ora del Codice, probabilmente sai già che ha fatto la storia. Più di 100 milioni di studenti hanno provato un'Ora del Codice.
 
 Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice e leader come il Presidente Obama ed il primo ministro canadese Justin Trudeau hanno scritto le prime righe di codice come parte della campagna.
 
-Quest'anno facciamo in modo che cresca ancora di più. Ti sto chiedendo di unirti all'Ora del Codice {{ campaign_date/year }}. Sarebbe ottimo se ti facessi coinvolgere in un evento dell'Ora del Codice durante la Settimana di Educazione all'Informatica, {{ campaign_date/full }}.
+Quest'anno facciamo in modo che cresca ancora di più. Ti sto chiedendo di unirti all'Ora del Codice {{ campaign_date/year }}. Sarebbe ottimo se ti facessi coinvolgere in un evento dell'Ora del Codice durante la Settimana Internazionale di Educazione all'Informatica, {{ campaign_date/full }}.
 
 Spargi la voce. Organizza un evento. Chiedi ad una scuola di iscriversi. Prova tu stesso l'Ora del Codice — Chiunque può trarre beneficio dell'apprendimento dei concetti fondamentali dell'informatica.
 
@@ -102,9 +102,9 @@ Per iniziare leggi l'introduzione all'Ora del Codice sul sito italiano http://ho
 
 #### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
 
-**Oggetto:** Possiamo aiutarvi ad ospitare un'Ora del Codice?
+**Oggetto:** Possiamo aiutarvi a ospitare un'Ora del Codice?
 
-Nel periodo {{ campaign_date/short }}, il dieci per cento degli studenti di tutto il mondo celebrerà la Settimana di Educazione all'Informatica partecipando ad un evento dell'Ora del Codice nella propria scuola. Per ogni bambino è un'opportunità per imparare come funziona la tecnologia intorno a noi.
+Nel periodo {{ campaign_date/short }}, il dieci per cento degli studenti di tutto il mondo celebrerà la Settimana Internazionale di Educazione all'Informatica partecipando ad un evento dell'Ora del Codice nella propria scuola. Per ogni bambino è un'opportunità per imparare come funziona la tecnologia intorno a noi.
 
 [Alla nostra organizzazione / Mio nome] piacerebbe aiutare la scuola [nome della scuola] a svolgere un evento dell'Ora del Codice. Possiamo aiutare gli insegnanti ad ospitare un'Ora del Codice nelle loro classi (non abbiamo nemmeno bisogno computer!) o, se preferite organizzare un'assemblea di tutta la scuola, possiamo partecipare come testimonial per spiegare come funziona la tecnologia e cosa significa essere un ingegnere informatico.
 
@@ -128,7 +128,7 @@ Viviamo in un mondo in cui siamo circondati dalla tecnologia. E sappiamo che qua
 
 Ma solo una piccola parte di noi sta imparando **come** funziona la tecnologia. Solo il 51% di tutte le scuole superiori insegna informatica (negli Stati Uniti).
 
-Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana di Educazione all'Informatica ({{ campaign_date/full }}). Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice. L'Ora del Codice è una dichiarazione che la scuola [NOME SCUOLA] è pronta ad insegnare queste competenze fondamentali per raggiungere il successo nel XXI secolo. Per poter continuare a mettere a disposizione dei vostri studenti altre attività riguardanti la programmazione, abbiamo bisogno che il nostro evento dell'Ora del Codice abbia un'enorme visibilità. Vi incoraggio ad offrirvi volontari, a contattare i media locali, a diffondere la notizia sui social network e a prendere in considerazione la possibilità di organizzare altri eventi dell'Ora del Codice nella vostra comunità.
+Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana Internazionale di Educazione all'Informatica ({{ campaign_date/full }}). Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice. L'Ora del Codice è una dichiarazione che la scuola [NOME SCUOLA] è pronta ad insegnare queste competenze fondamentali per raggiungere il successo nel XXI secolo. Per poter continuare a mettere a disposizione dei vostri studenti altre attività riguardanti la programmazione, abbiamo bisogno che il nostro evento dell'Ora del Codice abbia un'enorme visibilità. Vi incoraggio ad offrirvi volontari, a contattare i media locali, a diffondere la notizia sui social network e a prendere in considerazione la possibilità di organizzare altri eventi dell'Ora del Codice nella vostra comunità.
 
 Questa è una possibilità di cambiare il futuro dell'istruzione a [NOME CITTA'].
 
@@ -148,7 +148,7 @@ I computer sono ovunque e stanno cambiando ogni industria del pianeta, ma solo i
 
 Con l'Ora del Codice, l'informatica è stata sulle homepage di Google, MSN, Yahoo! e Disney. Più di 100 partner si sono uniti per supportare questo movimento. Ogni Apple Store nel mondo ha ospitato un'Ora del Codice. Anche il presidente Obama ha scritto la sua prima riga di codice nell'ambito di questa campagna.
 
-Ecco perché ognuno dei [X numero] studenti della scuola [NOME SCUOLA] sta prendendo parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana di Educazione all'Informatica (dal 6 al 12 dicembre).
+Ecco perché ognuno dei [X numero] studenti della scuola [NOME SCUOLA] sta prendendo parte al più grande evento nella storia dell'apprendimento: l'Ora del Codice, durante la Settimana Internazionale di Educazione all'Informatica (a inizio dicembre).
 
 Ti scrivo per invitarti a partecipare alla nostra riunione di lancio e vedere i ragazzi che iniziano l'attività il [DATA].
 
@@ -174,7 +174,7 @@ Sapeva che l'informatica è la principale fonte di retribuzione negli Stati Unit
 
 L'informatica è oggi fondamentale per ogni settore. Eppure la maggior parte delle scuole non la insegnano. Nella scuola [NOME DELLA SCUOLA] stiamo cercando di cambiare la situazione.
 
-Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana di Educazione all'Informatica ({{ campaign_date/full }}). Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice.
+Ecco perché tutta la nostra scuola si è unita al più grande evento di apprendimento della storia: L'Ora del Codice, durante la Settimana Internazionale di Educazione all'Informatica ({{ campaign_date/full }}). Più di 100 milioni di studenti di tutto il mondo hanno già provato l'Ora del Codice.
 
 Le scrivo per invitarla a partecipare al nostro evento dell'Ora del Codice e a parlare al nostro incontro di lancio. L'evento si svolgerà il giorno [DATA, ORA, LUOGO] e costituirà una forte dichiarazione che [REGIONE O CITTA'] è pronta per insegnare ai nostri studenti le competenze fondamentali per avere successo nel XXI secolo. Vogliamo assicurarci che i nostri studenti siano all'avanguardia nella creazione delle tecnologie del futuro — non ne siano solo dei consumatori.
 

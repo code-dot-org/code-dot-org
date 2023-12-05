@@ -863,8 +863,8 @@
           "type": "Revisión de compañeros"
         },
         "computer-science-practices/csd/2021": {
-          "name": "Prácticas de las ciencias de la computación",
-          "url": "https://docs.google.com/document/d/1HvuGaW0nADVZv69TTFDGAVSdMfJaBfBS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "name": "Prácticas de las Ciencias de la Computación ",
+          "url": "https://docs.google.com/document/d/1sxOayek2GIyQ0FRx7ZYHgMjS9CmkTZKrBLOOQ9Nh6-k/edit?usp=sharing",
           "type": "Reflexión"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
@@ -9019,10 +9019,12 @@
           "type": "Guía de Actividades"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e inteligencia artificial: privacidad y el futuro del trabajo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guía de Actividades"
+          "type": "Guía de Actividades",
+          "name": "Imagina tu mundo"
         },
         "research_reflection_guide/ai-ethics/2023": {
           "type": "Guía de Actividades"
