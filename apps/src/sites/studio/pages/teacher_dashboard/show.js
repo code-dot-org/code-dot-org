@@ -41,7 +41,7 @@ const {
   hasSeenStandardsReportInfo,
   coursesWithProgress,
 } = scriptData;
-console.log(scriptData);
+
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function () {
@@ -82,7 +82,7 @@ $(document).ready(function () {
   }
 
   store.dispatch(setCoursesWithProgress(coursesWithProgress));
-  console.log(section.course_version_id);
+
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
