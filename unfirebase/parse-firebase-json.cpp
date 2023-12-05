@@ -23,10 +23,10 @@ const bool RAW_DEBUG = false;
 const bool FINE_DEBUG = false;
 const bool USE_WRITER_TO_COLLECT_STRING = true;
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
-const bool LOAD_DATA_IN_THREAD = false;
+const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
-const bool SEND_RECORDS_TO_MYSQL = false;
+const bool SEND_RECORDS_TO_MYSQL = true;
 
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
