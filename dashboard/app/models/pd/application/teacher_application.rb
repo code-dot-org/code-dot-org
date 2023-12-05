@@ -125,6 +125,11 @@ module Pd::Application
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
     end
 
+    # The census lags by two years, so the census year is the first application year minus 2
+    def census_year
+      application_year.split('-').first.to_i - 1
+    end
+
     # @override
     def set_type_and_year
       self.application_type = TEACHER_APPLICATION
@@ -1076,6 +1081,9 @@ module Pd::Application
             nil
           end
       end
+
+      meets_scholarship_criteria_scores[:not_teaching_in_access_report] =
+        !!Census::CensusSummary.find_by(school_id: school_id, school_year: census_year)&.does_teach? ? NO : YES
 
       update(
         response_scores: response_scores_hash.deep_merge(
