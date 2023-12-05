@@ -57,7 +57,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
-      makeLockedBlocksImmovable(xmlChild);
+      processBlockAndChildren(xmlChild);
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
@@ -149,25 +149,72 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
+ * Adds a mutation element to a block if it's a text join block with an input count.
+ * CDO Blockly uses an unsupported method for serializing input count state
+ * where an arbitrary block attribute could be used to manage extra state.
+ * Mainline Blockly expects a mutator. The presence of the mutation element
+ * will trigger the block's domToMutation function to run, if it exists.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function addMutationToTextJoinBlocks(blockElement) {
+  if (
+    !['text_join', 'text_join_simple'].includes(
+      blockElement.getAttribute('type')
+    )
+  ) {
+    return;
+  }
+  const mutationElement =
+    blockElement.querySelector('mutation') ||
+    blockElement.ownerDocument.createElement('mutation');
+  // Place mutator before fields, values, and other nested blocks.
+  blockElement.insertBefore(mutationElement, blockElement.firstChild);
+
+  // We need to keep track of the expected number of inputs in order to create them all.
+  // Google Blockly expects this kind of extra state to be in a mutator.
+  const inputCount = blockElement.getAttribute('inputcount');
+  mutationElement.setAttribute('items', inputCount);
+}
+
+/**
+ * A helper function designed to process each individual block in an XML tree.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processBlockAndChildren(block) {
+  processIndividualBlock(block);
+
+  // Blocks can contain other blocks so we must process them recursively.
+  const childBlocks = block.querySelectorAll('block');
+  childBlocks.forEach(childBlock => {
+    processBlockAndChildren(childBlock);
+  });
+}
+
+/**
+ * Perform any need manipulations for a given XML block element.
+ * @param {Element} block - The XML element for a single block.
+ */
+function processIndividualBlock(block) {
+  // Convert unsupported can_disconnect_from_parent attributes.
+  makeLockedBlockImmovable(block);
+  addMutationToTextJoinBlocks(block);
+}
+
+/**
  * CDO Blockly supported a can_disconnect_from_parent attribute that
  * effectively worked like the modern movable property. To prevent
  * unintended movability changes to student code, we convert the unsupported
  * can_disconnect_from_parentto movable.
- * @param {Element} blockElement - The XML element for a single block.
+ * @param {Element} block - The XML element for a single block.
  */
-export function makeLockedBlocksImmovable(block) {
+function makeLockedBlockImmovable(block) {
   const canDisconnectValue = block.getAttribute('can_disconnect_from_parent');
   // If present, value will be either "true" or "false" (string, not boolean)
   if (canDisconnectValue) {
     block.setAttribute('movable', canDisconnectValue);
     block.removeAttribute('can_disconnect_from_parent');
   }
-
-  // Blocks can contain other blocks so we must process them recursively.
-  const childBlocks = block.querySelectorAll('block');
-  childBlocks.forEach(childBlock => {
-    makeLockedBlocksImmovable(childBlock);
-  });
 }
 
 /**
