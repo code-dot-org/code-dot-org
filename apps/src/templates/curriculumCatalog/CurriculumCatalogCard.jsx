@@ -82,7 +82,11 @@ const CurriculumCatalogCard = ({
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
-    pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    pathToCourse={`${
+      isSignedOut || isTeacher
+        ? pathToCourse + '?viewAs=Instructor'
+        : pathToCourse
+    }`}
     onAssignSuccess={onAssignSuccess}
     deviceCompatibility={deviceCompatibility}
     description={description}
@@ -224,7 +228,7 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
-  const studentButtonColor =
+  const quickViewButtonColor =
     !isSignedOut && !isTeacher
       ? Button.ButtonColor.brandSecondaryDefault
       : Button.ButtonColor.neutralDark;
@@ -273,7 +277,7 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={studentButtonColor}
+                color={quickViewButtonColor}
                 type="button"
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}

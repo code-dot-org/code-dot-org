@@ -63,7 +63,7 @@ describe('CurriculumCatalogCard', () => {
       scriptId: 1,
       isSignedOut: true,
       onQuickViewClick: () => {},
-      isTeacher: false,
+      isTeacher: true,
     };
   });
 
@@ -259,7 +259,6 @@ describe('CurriculumCatalogCard', () => {
     renderCurriculumCard({
       ...defaultProps,
       isSignedOut: false,
-      isTeacher: true,
     });
 
     screen.getByRole('button', {

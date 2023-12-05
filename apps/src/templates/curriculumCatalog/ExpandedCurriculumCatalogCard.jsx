@@ -82,7 +82,7 @@ const ExpandedCurriculumCatalogCard = ({
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
 
-  const studentButtonColor =
+  const quickViewButtonColor =
     !isSignedOut && !isTeacher
       ? Button.ButtonColor.brandSecondaryDefault
       : Button.ButtonColor.neutralDark;
@@ -172,6 +172,7 @@ const ExpandedCurriculumCatalogCard = ({
                     )}
                   </div>
                   {isInUS &&
+                    (isSignedOut || isTeacher) &&
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
@@ -234,7 +235,7 @@ const ExpandedCurriculumCatalogCard = ({
               <div className={style.buttonsContainer}>
                 <Button
                   __useDeprecatedTag
-                  color={studentButtonColor}
+                  color={quickViewButtonColor}
                   type="button"
                   href={pathToCourse}
                   aria-label={i18n.quickViewDescription({
