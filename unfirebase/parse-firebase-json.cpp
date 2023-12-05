@@ -502,13 +502,15 @@ void parseFirebaseJSON(string filename) {
   filesystem::create_directories(loadDataBufferDir);
 
   #if __linux__
-  cout << "Capacity of " << TMP_DIR << " is: " << filesystem::space(TMP_DIR).capacity << endl;
   if (filesystem::space(TMP_DIR).capacity != TMP_DIR_TMPFS_SIZE) {
-    cerr << "WARNING: " << TMP_DIR << " not the right size!!!!" << endl;
+    cerr << "Capacity of " << TMP_DIR << " is: " << filesystem::space(TMP_DIR).capacity << endl;
+    cerr << "WARNING: " << TMP_DIR << " not the right size!!!! Expected: " << TMP_DIR_TMPFS_SIZE << " bytes" << endl;
+    cerr << endl;
     cerr << "Make sure you have a tmpfs mounted at " << TMP_DIR << "." << endl;
     string cmd = "sudo mount -t tmpfs -o size=" + to_string(TMP_DIR_TMPFS_SIZE) + " tmpfs " + TMP_DIR;
     cerr << "If not, run: " << cmd << endl;
     cerr << endl;
+    this_thread::sleep_for (std::chrono::seconds(2));
   }
   #endif
 
