@@ -44,20 +44,6 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One-to-two tours per week</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Explore the universe with NASA's Chandra X-ray Observatory</h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px"><strong>2023 tour dates to be announced.</strong></div>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/iRobot-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
       </a>
