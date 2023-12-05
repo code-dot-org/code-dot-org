@@ -145,7 +145,7 @@ class ExperimentTest < ActiveSupport::TestCase
     section = mock('section')
     section.stubs(:user_id).returns(teacher.id)
     student.stubs(:sections_as_student).returns([section])
-    teacher.stubs(:sections).returns([section])
+    teacher.stubs(:sections_instructed).returns([section])
 
     assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher, script: @script)
     assert Experiment.enabled?(experiment_name: experiment1.name, user: student, script: @script)

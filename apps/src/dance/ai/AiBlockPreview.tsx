@@ -1,8 +1,8 @@
 import {BlockSvg, Workspace, WorkspaceSvg} from 'blockly';
 import React, {useEffect, useRef} from 'react';
 import moduleStyles from './ai-block-preview.module.scss';
-import {generateBlocksFromResult} from './utils';
-import {GeneratedEffect} from '../types';
+import {generateAiEffectBlocksFromResult} from './utils';
+import {GeneratedEffect} from './types';
 
 interface AiBlockPreviewProps {
   results: GeneratedEffect;
@@ -24,7 +24,7 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     }
 
     const emptyBlockXml = Blockly.utils.xml.textToDom('<xml></xml>');
-    workspaceRef.current = Blockly.BlockSpace.createReadOnlyBlockSpace(
+    workspaceRef.current = Blockly.createEmbeddedWorkspace(
       blockPreviewContainerRef.current,
       emptyBlockXml,
       {}
@@ -36,7 +36,10 @@ const AiBlockPreview: React.FunctionComponent<AiBlockPreviewProps> = ({
     if (!blockPreviewContainerRef.current || !workspaceRef.current) {
       return;
     }
-    const blocksSvg = generateBlocksFromResult(workspaceRef.current, results);
+    const blocksSvg = generateAiEffectBlocksFromResult(
+      workspaceRef.current,
+      results
+    );
     blocksSvg.forEach((blockSvg: BlockSvg) => {
       blockSvg.initSvg();
       blockSvg.render();

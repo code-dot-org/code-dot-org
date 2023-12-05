@@ -528,6 +528,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
+        will_teach: options[:will_teach].first,
         csd_which_grades: ['6'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Principles'],
@@ -566,6 +567,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -605,6 +607,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].first,
         csa_already_know: options[:csa_already_know].first,
         csa_phone_screen: options[:csa_phone_screen].first,
         csa_which_grades: ['12'],
@@ -647,6 +650,7 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
+        will_teach: options[:will_teach].first,
         csp_which_grades: ['12'],
         enough_course_hours: options[:enough_course_hours].first,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
@@ -677,7 +681,8 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
-        csd_which_grades: %w(11 12),
+        will_teach: options[:will_teach].last,
+        csd_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         committed: options[:committed].last,
@@ -715,7 +720,8 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csp],
-        csp_which_grades: [options[:csp_which_grades].last],
+        will_teach: options[:will_teach].last,
+        csp_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'CS Principles',
         csp_how_offer: options[:csp_how_offer].first,
@@ -754,9 +760,10 @@ module Pd::Application
 
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csa],
+        will_teach: options[:will_teach].last,
         csa_already_know: options[:csa_already_know].last,
         csa_phone_screen: options[:csa_phone_screen].last,
-        csa_which_grades: [options[:csa_which_grades].last],
+        csa_which_grades: nil,
         enough_course_hours: options[:enough_course_hours].last,
         previous_yearlong_cdo_pd: 'Computer Science A (CSA)',
         csa_how_offer: options[:csa_how_offer].first,

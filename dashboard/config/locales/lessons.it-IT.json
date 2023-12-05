@@ -3081,7 +3081,7 @@
         },
         "csd3-2021/Text": {
           "name": "Testo",
-          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
+          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Clicca all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
           "overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nQuesta lezione introduce le istruzioni  testuali di Sviluppo Giochi, offrendo agli studenti più pratica nell'uso del piano e dei parametri delle coordinate. All'inizio della lezione, agli studenti viene chiesto di aggiungere una didascalia a un cartone animato creato in Sviluppo Giochi. Passeranno quindi a Code Studio, dove si esercitano a posizionare il testo sullo schermo e a controllare altre proprietà del testo, come le dimensioni. Gli studenti che completano la valutazione in anticipo possono continuare a imparare blocchi più impegnativi relativi alle proprietà del testo. ",
           "purpose": "Questa lezione introduce il testo, di cui gli studenti avranno bisogno quando inizieranno a creare programmi più complessi (ad esempio giochi con tabelloni). Questo è l'ultimo tipo di elemento che gli studenti posizioneranno sullo schermo. Successivamente, gli studenti si concentreranno su come possono controllare il movimento e le interazioni di questi elementi.",
           "student_overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nIn questa lezione imparerai a usare le istruzioni testuali di Sviluppo Giochi per aggiungere didascalie alle tue scene. "
@@ -3797,7 +3797,7 @@
         "coursea-2021/Programming: Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -4496,14 +4496,14 @@
         "express-2021/lesson-2": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2021/lesson-3": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -4615,7 +4615,7 @@
         "express-2021/lesson-4": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -5102,7 +5102,7 @@
         },
         "csd3-2022/Text": {
           "name": "Testo",
-          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Fai clic all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
+          "assessment_opportunities": "**1. Aggiungere testo**\n\nUsa l'esercizio 5 come valutazione per gli studenti. Clicca all'interno dell'esercizio per visualizzare una tabella con i criteri di valutazione.",
           "overview": "**Domanda del giorno: come possiamo usare il testo per migliorare le nostre scene e le nostre animazioni?**\n\nQuesta lezione introduce le istruzioni  testuali di Sviluppo Giochi, offrendo agli studenti più pratica nell'uso del piano e dei parametri delle coordinate. All'inizio della lezione, agli studenti viene chiesto di aggiungere una didascalia a un cartone animato creato in Sviluppo Giochi. Passeranno quindi a Code Studio, dove si esercitano a posizionare il testo sullo schermo e a controllare altre proprietà del testo, come le dimensioni. Gli studenti che completano la valutazione in anticipo possono continuare a imparare blocchi più impegnativi relativi alle proprietà del testo. ",
           "preparation": "-   Controlla il forum [\"Aula insegnanti\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) per insegnanti verificati per trovare strategie o risorse aggiuntive condivise dagli altri colleghi insegnanti\n-   Se stai facendo una lezione virtuale, valuta la possibilità di controllare le nostre [Modifiche alla lezione virtuale](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "purpose": "Questa lezione introduce il testo, di cui gli studenti avranno bisogno quando inizieranno a creare programmi più complessi (ad esempio giochi con tabelloni). Questo è l'ultimo tipo di elemento che gli studenti posizioneranno sullo schermo. Successivamente, gli studenti si concentreranno su come possono controllare il movimento e le interazioni di questi elementi.",
@@ -5850,7 +5850,7 @@
         "coursea-2022/Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -6461,14 +6461,14 @@
         "express-2022/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2022/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -6579,7 +6579,7 @@
         "express-2022/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -6707,12 +6707,14 @@
           "overview": "In questa lezione integrata di CS e scienza, gli studenti useranno i comportamenti dell'informatica per rappresentare i comportamenti di sopravvivenza degli animali. Quando gli studenti usano i `comportamenti` in Sprite Lab, danno al loro sprite una serie di istruzioni da eseguire più e più volte come un'animazione. Per prima cosa, gli studenti proveranno diversi comportamenti predefiniti, tra cui i modelli migratori di balene e farfalle, le danze degli uccelli usate per attirare un compagno e i pesci che viaggiano in gruppo. Quindi, gli studenti si eserciteranno a modificare e codificare i propri comportamenti animali.    ",
           "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Determina in anticipo quali livelli potrebbero essere più impegnativi per gli studenti.\n-   Rivedi le diapositive e decidi qual è il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Fornisci del materiale da scrivere per prepararti alla riflessione e per concludere il biglietto di uscita.\n-   Considerate queste opzioni di estensione correlate ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/2#activity-4165453)) da esplorare dopo l'ultima lezione.",
           "purpose": "Utilizzando la codifica per modellare i comportamenti dei gruppi di animali, gli studenti possono esplorare i modelli e le dinamiche degli animali sociali in modo pratico e coinvolgente. Questa lezione incoraggia gli studenti ad applicare le proprie capacità di programmazione in un contesto significativo e pertinente. Gli studenti saranno in grado di lavorare in modo creativo scegliendo sfondi, sprite e comportamenti, permettendo loro di realizzare progetti unici.",
-          "student_overview": "Oggi esplorerai molti animali e i loro comportamenti (a volte stupidi). Gli animali hanno sviluppato determinati movimenti e comportamenti per sopravvivere e riprodursi. Il tuo codice controllerà le animazioni degli sprite nel playspace. "
+          "student_overview": "Oggi esplorerai molti animali e i loro comportamenti (a volte stupidi). Gli animali hanno sviluppato determinati movimenti e comportamenti per sopravvivere e riprodursi. Il tuo codice controllerà le animazioni degli sprite nel playspace. ",
+          "name": "Comportamenti animali per la sopravvivenza"
         },
         "csc-adaptations-2023/lesson-3": {
           "overview": "In questa lezione integrata di CS e scienza, gli studenti impareranno come modificare i comportamenti degli animali nel codice. Per prima cosa, gli studenti faranno una previsione sul comportamento misterioso di una volpe. Quindi, nei livelli seguenti, useranno il pulsante «modifica» per eseguire il debug di diversi comportamenti animali, tra cui velocità, direzione e stile di rotazione. Infine, gli studenti sceglieranno uno scenario di cambiamento ambientale e useranno il proprio codice creativo per modellare un nuovo e unico adattamento animale! \n\nAlla fine della lezione, gli studenti condivideranno i loro progetti personalizzati con i loro compagni di classe. Gli studenti avranno la possibilità di riflettere su ciò che hanno imparato sui comportamenti nei codici e sui comportamenti degli animali nella vita reale. ",
           "preparation": "-   Rivedi e completa tu stesso il tutorial online.\n-   Determina in anticipo quali livelli potrebbero essere più impegnativi per gli studenti.\n-   Rivedi le diapositive e decidi qual è il ritmo tra l'orario di lavoro degli studenti e le lezioni di gruppo.\n-   Considerate queste opzioni di estensione correlate ([link](https://studio.code.org/s/csc-adaptations-2023/lessons/3#activity-4233684)) da approfondire dopo questa lezione.",
-          "purpose": "Gli studenti faranno previsioni su comportamenti misteriosi ed eseguiranno il debug dei comportamenti degli animali che non funzionano correttamente. Quindi, useranno le loro abilità per codificare un adattamento animale unico che non è mai stato visto prima, immaginando un improvviso cambiamento nell'ambiente. Con la funzione di sfondo e costume da sprite «Upload My Own», gli studenti possono creare un ambiente tutto loro."
+          "purpose": "Gli studenti faranno previsioni su comportamenti misteriosi ed eseguiranno il debug dei comportamenti degli animali che non funzionano correttamente. Quindi, useranno le loro abilità per codificare un adattamento animale unico che non è mai stato visto prima, immaginando un improvviso cambiamento nell'ambiente. Con la funzione di sfondo e costume da sprite «Upload My Own», gli studenti possono creare un ambiente tutto loro.",
+          "name": "Scrivi il tuo programma sull'adattamento"
         },
         "csc-bookcovers-2023/Learn to Code a Book Cover ": {
           "name": "Impara a codificare la copertina di un libro ",
@@ -7568,7 +7570,7 @@
         "coursea-2023/Happy Maps": {
           "name": "Mappe felici",
           "overview": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni capiscono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuta gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
-          "preparation": "-   Stampare un **\\*foglio di lavoro \\*\\* e un set di \\*_\\\\_Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
+          "preparation": "-   Stampa un **\\*foglio di lavoro** e un set di **\\*Schede da ritagliare** per gruppi di 2-3.\n-   Fai in modo che ogni alunno abbia un diario per le proprie riflessioni.",
           "purpose": "Il passaggio da algoritmo a programmazione può essere più immediato se gli alunni comprendono la differenza tra pianificare una sequenza e codificare tale sequenza in un linguaggio opportuno. Questa attività aiuterà gli alunni ad acquisire esperienza leggendo e scrivendo del codice costituito da semplici simboli.",
           "student_overview": "Scrivi le istruzioni per portare il Flurb fino al frutto."
         },
@@ -8179,14 +8181,14 @@
         "express-2023/Making Sprites": {
           "name": "Creazione di personaggi",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" e senza limiti di tempo, nella quale possono realizzare ciò che vogliono. Gli alunni scrivono programmi e imparano i due concetti principali del Laboratorio dei personaggi: personaggi e comportamenti.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
+          "preparation": "Supera gli esercizi e ripassa le \\*_\\\\_diapositive delle lezioni\\*.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione nel Laboratorio dei Personaggi. Gli alunni inizieranno a comprendere il modello di programmazione di questo strumento ed esploreranno i modi in cui possono usarlo per esprimersi.",
           "student_overview": "In questa lezione scriverai programmi e scoprirai personaggi e comportamenti."
         },
         "express-2023/Sprites in Action": {
           "name": "Personaggi in azione",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni lavorano attraverso una serie di esercizi di programmazione al computer, concludendo con un'attività di \"gioco libero\" senza limiti di tempo, nella quale possono realizzare ciò che desiderano. Gli alunni scrivono programmi che rispondono a eventi a tempo e input dell'utente. ",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Questa lezione è progettata per introdurre gli alunni alla programmazione con eventi. Durante questo corso, gli eventi saranno il modo principale in cui gli alunni cambieranno il modo in cui i loro programmi vengono eseguiti nel tempo o in risposta all'input dell'utente.",
           "student_overview": "Lavorerai con esercizi di programmazione e giungerai alla conclusione con un'attività di \"gioco libero\" senza limiti di tempo, nella quale potrai costruire quello che preferisci."
         },
@@ -8297,7 +8299,7 @@
         "express-2023/Text and Prompts": {
           "name": "Testo e richieste all'utente",
           "overview": "Questa lezione è una **palestra delle competenze**: gli alunni fanno pratica con le variabili nel Laboratorio dei personaggi.",
-          "preparation": "Gioca attraverso gli esercizi e ripassa le diapositive delle lezioni.",
+          "preparation": "Supera gli esercizi e ripassa le diapositive delle lezioni.",
           "purpose": "Le variabili verranno utilizzate in questo corso per memorizzare e modificare i dati. A questo punto, gli alunni memorizzeranno e recupereranno semplicemente i valori senza modificarli. Nelle lezioni successive, gli alunni memorizzeranno i valori numerici e li modificheranno nel tempo per tenere traccia di cose come il punteggio di un giocatore in una partita.",
           "student_overview": "in questa lezione farai pratica con le variabili nel Laboratorio dei personaggi.  "
         },
@@ -8425,7 +8427,7 @@
         "how-ai-works-2023/Neural Networks": {
           "name": "Reti neurali",
           "overview": "Questa lezione è incentrata sul video [Come funziona l'IA: reti neurali](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) tratto dalla [serie di video Come funziona l'IA](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Guarda questo video prima di esplorare il piano delle lezioni.\n\nGli studenti imparano come funzionano le reti neurali. Per prima cosa discutono di un esempio di esperienza che ti consiglia alcune cose. Quindi utilizzano un componente che consiglia i video in base a una persona. Gli studenti guardano un video che spiega le reti neurali. Usano un componente aggiornato per regolare i pesi di ogni persona. Infine, gli studenti discutono della necessità di prospettive diverse nella creazione di sistemi di raccomandazione.\n\nQuesta lezione può essere insegnata singolarmente o come parte di una serie di 7 lezioni su Come funziona l'IA - [clicca qui per visualizzare tutte le lezioni in questa sequenza](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Stampa copie della risorsa WeTube Content Creators per ogni studente\n-   Stampa copie della guida alle attività della Rete neurale per ogni studente",
+          "preparation": "-   Stampa copie della risorsa WeTube: creatori di contenuti per ogni studente\n-   Stampa copie della guida alle attività della Rete neurale per ogni studente",
           "student_overview": "Scopri come funzionano le reti neurali regolando la ponderazione di un sistema di raccomandazione per regolare gli output."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
@@ -9184,7 +9186,8 @@
           "name": "Vigenere"
         },
         "ai-ethics-2023/lesson-2": {
-          "overview": "Gli studenti esplorano l'impatto dell'IA generativa partecipando a un gioco collaborativo. Iniziano guardando un video che presenta come funzionano i modelli linguistici di grandi dimensioni, come i chatbot, o le immagini generate da IA. Poi, gli studenti vestono i panni di una persona colpita dall'intelligenza artificiale generativa leggendo alcuni articoli e reagendo in prima persona. Quindi, gli studenti formano gruppi e ricevono uno scenario che coinvolge la loro persona e l'intelligenza artificiale generativa. Lavorando insieme, elaborano linee guida su come implementare l'IA generativa in questo scenario, che include le voci e le prospettive di tutte le parti interessate. Infine, gli studenti condividono i risultati con la classe e riflettono su questo processo."
+          "overview": "Gli studenti esplorano l'impatto dell'IA generativa partecipando a un gioco collaborativo. Iniziano guardando un video che presenta come funzionano i modelli linguistici di grandi dimensioni, come i chatbot, o le immagini generate da IA. Poi, gli studenti vestono i panni di una persona colpita dall'intelligenza artificiale generativa leggendo alcuni articoli e reagendo in prima persona. Quindi, gli studenti formano gruppi e ricevono uno scenario che coinvolge la loro persona e l'intelligenza artificiale generativa. Lavorando insieme, elaborano linee guida su come implementare l'IA generativa in questo scenario, che include le voci e le prospettive di tutte le parti interessate. Infine, gli studenti condividono i risultati con la classe e riflettono su questo processo.",
+          "name": "Impatto sociale dell'IA generativa"
         },
         "dance-ai-2023/lesson-1": {
           "name": "Dance Party: edizione A.I.",

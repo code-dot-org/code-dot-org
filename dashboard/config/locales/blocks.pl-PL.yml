@@ -56,7 +56,7 @@ pl:
             '3.00': bardzo duży
         text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_ai:
-        text: użyj AI do {IMAGE}
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         options:
           GROUP:
