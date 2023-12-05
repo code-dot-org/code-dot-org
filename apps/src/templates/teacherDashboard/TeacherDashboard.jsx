@@ -28,6 +28,7 @@ function TeacherDashboard({
   studentCount,
   coursesWithProgress,
   location,
+  sectionVersionId,
 }) {
   const usePrevious = value => {
     const ref = useRef();
@@ -142,7 +143,9 @@ function TeacherDashboard({
         )}
         <Route
           path={TeacherDashboardPath.progress}
-          component={props => <SectionProgress />}
+          component={props => (
+            <SectionProgress sectionVersionId={sectionVersionId} />
+          )}
         />
         <Route
           path={TeacherDashboardPath.textResponses}
@@ -163,6 +166,7 @@ TeacherDashboard.propTypes = {
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
   coursesWithProgress: PropTypes.array.isRequired,
+  sectionVersionId: PropTypes.number.isRequired,
 
   // Provided by React router in parent.
   location: PropTypes.object.isRequired,

@@ -47,6 +47,7 @@ class SectionProgress extends Component {
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
     showStandardsIntroDialog: PropTypes.bool,
+    sectionVersionId: PropTypes.number,
   };
 
   constructor(props) {
@@ -137,6 +138,7 @@ class SectionProgress extends Component {
       scriptData,
       sectionId,
       showStandardsIntroDialog,
+      sectionVersionId,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -147,6 +149,23 @@ class SectionProgress extends Component {
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+
+    // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+    // Also adds "(Current Section)" label to the course version in the currently viewed section.
+    if (coursesWithProgress[0].id !== sectionVersionId) {
+      let currentCourse;
+      currentCourse = coursesWithProgress.splice(
+        coursesWithProgress.findIndex(course => {
+          return course.id === sectionVersionId;
+        }),
+        1
+      )[0];
+      currentCourse.display_name =
+        '(Current Section) ' + currentCourse.display_name;
+      coursesWithProgress.push(currentCourse);
+      coursesWithProgress.reverse();
+    }
+
     return (
       <div>
         <div style={styles.topRowContainer}>

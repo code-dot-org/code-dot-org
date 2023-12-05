@@ -95,6 +95,7 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
+              sectionVersionId={section.course_version_id}
             />
           )}
         />
