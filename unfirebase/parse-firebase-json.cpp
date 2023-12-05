@@ -31,7 +31,7 @@ const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
-const bool SEND_RECORDS_TO_MYSQL = false;
+const bool SEND_RECORDS_TO_MYSQL = true;
 
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 const uint64_t BYTES_PER_RECORD = 250000;
