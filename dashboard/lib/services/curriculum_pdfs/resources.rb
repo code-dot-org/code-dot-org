@@ -4,6 +4,11 @@ require 'cdo/google/drive'
 require 'open-uri'
 require 'pdf/collate'
 require 'pdf/conversion'
+require 'uri'
+require 'google/apis/drive_v3'
+require 'google/api_client/client_secrets'
+require 'googleauth'
+require 'googleauth/stores/file_token_store'
 
 module Services
   module CurriculumPdfs
@@ -11,6 +16,9 @@ module Services
     # resources within a given script.
     module Resources
       extend ActiveSupport::Concern
+
+      Drive = Google::Apis::DriveV3
+
       class_methods do
         # Build the full path of the resource PDF for the given script. This
         # will be based not only on the name of the script but also the current
@@ -164,14 +172,22 @@ module Services
         # to the given path. Supports Google Docs, PDFs hosted on Google Drive,
         # and arbitrary URLs that end in ".pdf"
         def fetch_url_to_path(url, path)
+          service = Drive::DriveService.new
+          service.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
+            json_key_io: StringIO.new(CDO.gdrive_export_secret || ""),
+            scope: Google::Apis::DriveV3::AUTH_DRIVE,
+          )
           if url.start_with?("https://docs.google.com/document/d/")
-            file = google_drive_file_by_url(url)
-            file.export_as_file(path, "application/pdf")
+            file_id = url_to_id(url)
+            service.export_file(file_id, 'application/pdf', download_dest: path)
+            puts "File downloaded successfully to #{path}"
             return path
           elsif url.start_with?("https://drive.google.com/")
-            file = google_drive_file_by_url(url)
-            return nil unless file.available_content_types.include? "application/pdf"
-            file.download_to_file(path)
+            file_id = url_to_id(url)
+            file = service.getFile(file_id)
+            return nil unless file.export_links.include? "application/pdf"
+            service.export_file(file_id, 'application/pdf', download_dest: path)
+            puts "File downloaded successfully to #{path}"
             return path
           elsif url.end_with?(".pdf")
             IO.copy_stream(URI.parse(url)&.open, path)
@@ -191,14 +207,42 @@ module Services
           return nil
         end
 
-        # Returns a GoogleDrive::File object for the given url
-        #
-        # @see https://www.rubydoc.info/gems/google_drive/GoogleDrive/File
-        def google_drive_file_by_url(url)
-          @google_drive_session ||= GoogleDrive::Session.from_service_account_key(
-            StringIO.new(CDO.gdrive_export_secret&.to_json || "")
-          )
-          return @google_drive_session.file_by_url(url)
+        # # Returns a file_id for a google drive doc
+        # # borrowed from GoogleDrive api
+        # # See: https://github.com/gimite/google-drive-ruby/blob/55b996b2c287cb0932824bf2474248a498469328/lib/google_drive/session.rb#L693C5-L731C8
+        def url_to_id(url)
+          uri = URI.parse(url)
+          if ['spreadsheets.google.com', 'docs.google.com', 'drive.google.com'].include?(uri.host)
+            case uri.path
+              # Document feed.
+            when /^\/feeds\/\w+\/private\/full\/\w+%3A(.*)$/
+              return Regexp.last_match(1)
+              # Worksheets feed of a spreadsheet.
+            when /^\/feeds\/worksheets\/([^\/]+)/
+              return Regexp.last_match(1)
+              # Human-readable new spreadsheet/document.
+            when /\/d\/([^\/]+)/
+              return Regexp.last_match(1)
+              # Human-readable new folder page.
+            when /^\/drive\/[^\/]+\/([^\/]+)/
+              return Regexp.last_match(1)
+              # Human-readable old folder view.
+            when /\/folderview$/
+              if (uri.query || '').split('&').find {|s| s =~ /^id=(.*)$/}
+                return Regexp.last_match(1)
+              end
+              # Human-readable old spreadsheet.
+            when /\/ccc$/
+              if (uri.query || '').split('&').find {|s| s =~ /^key=(.*)$/}
+                return Regexp.last_match(1)
+              end
+            end
+            case uri.fragment
+              # Human-readable old folder page.
+            when /^folders\/(.+)$/
+              return Regexp.last_match(1)
+            end
+          end
         end
       end
     end
