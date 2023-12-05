@@ -7,7 +7,7 @@ import {MetricDimension} from '@cdo/apps/lib/metrics/types';
 interface ReportingProperties {
   channelId?: string;
   appName?: string;
-  currentLevelId?: string;
+  currentLevelId?: string | number;
   scriptId?: number;
 }
 

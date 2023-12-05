@@ -1,3 +1,5 @@
+import './addons/plusMinusBlocks/if.js';
+import './addons/plusMinusBlocks/text_join.js';
 import {javascriptGenerator} from 'blockly/javascript';
 import {
   ScrollBlockDragger,
