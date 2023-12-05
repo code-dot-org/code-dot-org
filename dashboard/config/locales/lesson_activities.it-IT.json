@@ -8907,7 +8907,7 @@
           "name": "Conclusione "
         },
         "a418e7ac-0146-460d-89e6-0acc14aefbb6": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "6f886134-c10b-497a-880f-f54e2888cf1d": {
           "name": "Preparazione"
@@ -8919,7 +8919,7 @@
           "name": "Conclusione"
         },
         "59dd1048-c18b-43fb-a14c-4feb2887a274": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "e280ae49-7bb9-4bc9-8dd6-a8c5de968600": {
           "name": "Preparazione"
@@ -8931,7 +8931,7 @@
           "name": "Conclusione"
         },
         "40033029-9a13-473d-9a2a-e6f090865876": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "3a69a53a-6bb6-40f5-a3cc-ff9b3057085f": {
           "name": "Preparazione consigliata"
@@ -8997,7 +8997,7 @@
           "name": "Conclusione"
         },
         "08357969-2113-4ff3-a041-0889105ffc89": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "ed5b5a6d-063d-493f-a4f3-bbd78d100172": {
           "name": "Preparazione consigliata"
@@ -9012,7 +9012,7 @@
           "name": "Conclusione"
         },
         "98fd68a6-ea5e-47f5-93d1-5f6b9aabbe39": {
-          "name": "Opzioni di estensione"
+          "name": "Approfondimenti opzionali"
         },
         "29950b6f-42c7-4fae-8b5b-14520331e3f2": {
           "name": "Preparazione"
@@ -9024,7 +9024,7 @@
           "name": "Conclusione"
         },
         "1684b440-4813-446c-a62d-201cf832b0fd": {
-          "name": "Opportunità di estensione "
+          "name": "Opportunità di approfondimento "
         },
         "2acd0565-f462-437c-9be3-66bd44962646": {
           "name": "Preparazione consigliata"
@@ -9162,7 +9162,7 @@
           "name": "Conclusione"
         },
         "0e7086c2-52d3-419a-b55c-9881ed7a8335": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "281ef28f-2969-4c60-80a4-8bdad8662658": {
           "name": "Preparazione consigliata"
@@ -9177,7 +9177,7 @@
           "name": "Conclusione"
         },
         "aad4dda1-507b-42a5-a62c-1aac5671cb91": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "f3ff3f84-baa4-4480-9970-252a7478e738": {
           "name": "Preparazione"
@@ -9189,7 +9189,7 @@
           "name": "Conclusione"
         },
         "9484e482-4713-4747-84d0-fba065c7e4a1": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "1bf99ed8-87aa-4bc1-b29e-77d8836cbff5": {
           "name": "Preparazione"
@@ -9201,7 +9201,7 @@
           "name": "Conclusione"
         },
         "7934c32a-f4ba-48b1-8c92-903075552224": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "62058ba3-874c-4aae-9d67-8bed1cf236ae": {
           "name": "Preparazione"
@@ -9213,7 +9213,7 @@
           "name": "Conclusione"
         },
         "e57a4ee9-956b-410e-8d3e-b321b0abe71c": {
-          "name": "Opportunità di estensione"
+          "name": "Opportunità di approfondimento"
         },
         "360c949e-7bb0-4183-8580-6f9cf3d3a2e1": {
           "name": "Configurazione dell'ambiente di classe"
@@ -12387,7 +12387,7 @@
           "name": "Dopo la lezione"
         },
         "9ed44af4-506a-4faf-94b6-fd4e7b8bcd8c": {
-          "name": "(Facoltativo) Attività di estensione"
+          "name": "(Facoltativo) Attività di approfondimento"
         },
         "4d668e14-f593-43b6-84e7-c6f6e8b1baa1": {
           "name": "Prima della lezione"
@@ -12405,7 +12405,7 @@
           "name": "Dopo la lezione"
         },
         "8e09a958-4202-48e1-bd2e-7d0afa3a0c6d": {
-          "name": "(Facoltativo) Attività GAN"
+          "name": "(Facoltativo) Attività sulle \"GAN\""
         },
         "3d692c8b-130c-4a16-94e5-1ea6276228e1": {
           "name": "Prima della lezione"
@@ -12444,7 +12444,7 @@
           "name": "Che cos'è l'apprendimento automatico?"
         },
         "15ce8356-ae91-4918-9c0b-2c9e456efa4c": {
-          "name": "Dati di formazione e distorsioni"
+          "name": "Dati di apprendimento e distorsioni (bias)"
         },
         "792cc1d7-8c32-478d-ab2f-49ef09d3e832": {
           "name": "Come funzionano le reti neurali"
@@ -12453,10 +12453,10 @@
           "name": "Come funziona la visione artificiale"
         },
         "93d41a54-5e26-42f6-8d4a-81bd5649efa8": {
-          "name": "Come funzionano i Chatbot e i Modelli Linguistici"
+          "name": "Come funzionano i Chatbot e i Modelli linguistici di grandi dimensioni"
         },
         "fbfdf89d-c6bb-464e-9a2a-246c34f33b55": {
-          "name": "L'intelligenza artificiale ha creatività e immaginazione?"
+          "name": "L'intelligenza artificiale dispone di creatività e immaginazione?"
         },
         "3c37c274-5b3f-4542-8363-59de96bef286": {
           "name": "Etica e intelligenza artificiale: parità di accesso e pregiudizi algoritmici"
@@ -13420,6 +13420,21 @@
         },
         "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
           "name": "Esercizi"
+        },
+        "99f155a9-1d50-44df-a647-c8dbaddea32c": {
+          "name": "Introduzione"
+        },
+        "d12dc50d-c901-43db-a188-eb1b273239c3": {
+          "name": "Preparazione"
+        },
+        "81f0f5ed-90c2-4cb4-8f2e-8f017df18dc6": {
+          "name": "Attività "
+        },
+        "02b4486f-d09d-4031-8235-0cf728733456": {
+          "name": "Conclusione"
+        },
+        "62475558-6554-4337-b3fb-9fb6ba9a886c": {
+          "name": "Dopo l'attività"
         }
       }
     }

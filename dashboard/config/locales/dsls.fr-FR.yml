@@ -13225,35 +13225,34 @@ fr-FR:
           target=\"_blank\">cette ressource</a> pour faire part de vos commentaires
           à votre partenaire.\n\n"
       csc_ecosystemes_foodchain_info:
-        markdown: "\n##**Tous les écosystèmes ont une chaîne alimentaire _délicatement
-          équilibrée**\n## #The chaîne alimentaire de l'écosystème marin : >## #1.\n\n\n\n<img
-          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nLe soleil fournit
-          l'énergie nécessaire à la photosynthèse des algues.\n>## #2. Les algues
-          sont consommées par les poissons.\n>## #3. Les poissons sont capturés et
-          mangés par les humains, qui utilisent des bateaux de pêche munis de filets.
-          \n\n</div>\n\n\n##**S'il y a trop ou trop peu d'un organisme dans la chaîne
-          alimentaire, cela a des effets sur l'ensemble de l'écosystème.**\n"
+        markdown: "\n##**Tous les écosystèmes ont une chaîne alimentaire _à léquilibre
+          délicat_**\n###La chaîne alimentaire d'écosystème marin : \n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###1. Le soleil
+          fournit l'énergie nécessaire à la photosynthèse des algues.\n>## #2. Les
+          algues sont consommées par les poissons.\n>## #3. Les poissons sont attrapés
+          et mangés par les humains, qui utilisent des bateaux de pêche munis de filets.
+          \n\n</div>\n\n\n##**S'il y a trop ou trop peu d'un organisme au sein de
+          la chaîne alimentaire, il y a des effets sur l'ensemble de l'écosystème.**\n"
       csc_ecosystems_choice_freeplay_2023:
-        description: Chacune de ces simulations d'écosystème doit être ajustée. Choisissez
-          un écosystème, exécutez la simulation pour observer le problème et ajustez
-          le code pour le résoudre.
-        display_name: Choisissez un écosystème !
+        description: Chacune de ces simulations d'écosystème doit être ajustée. Choisir
+          un écosystème, exécuter la simulation pour observer le problème et ajuster
+          le code afin de résoudre celui-ci.
+        display_name: Choisis un écosystème !
       csc_ecosystems_conditionals_overview:
-        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Ensuite, vous allez
-          ajouter du code pour vérifier la quantité d'algues dans l'eau <br>\n<img
+        markdown: "# Instructions conditionnelles cause-effet \n\n</div>\n\n## Ensuite,
+          on va ajouter du code qui va vérifier la quantité d'algues dans l'eau <br>\n<img
           src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
           \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
-          Tout d'abord, l'ordinateur vérifie si une condition est vraie ou fausse.\n\n-
-          Si c'est vrai, alors il exécutera les blocs qu'il contient.\n- Si c'est
-          faux, cela ne fera rien.\n\n<br>\n<br>\n<br>\n\n## S'il y a trop d'algues,
-          le corail tombe malade\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          D'abord, l'ordinateur va vérifier si une condition est vraie ou fausse.\n\n-
+          Si elle est vraie, alors il exécutera les blocs qui sont dedans.\n- Si elle
+          est fausse, rien ne se passera.\n\n<br>\n<br>\n<br>\n\n## S'il y a trop
+          d'algues, alors le corail tombera malade\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
           \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
-          S'il y a trop peu d'algues, le poisson partira\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          S'il y a trop peu d'algues, alors les poissons s'en iront\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
           \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
-          S'il y a juste assez d'algues, alors le l'écosystème est en bonne santé\n\n<img
+          S'il y a juste assez d'algues, alors l'écosystème sera en bonne santé\n\n<img
           src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
           \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
           \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
@@ -13262,18 +13261,15 @@ fr-FR:
         - text: "![](https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
         - text: "![](https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
         - text: "![](https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
-        markdown: |+
-          ## Regardez les trois pratiques de pêche durables
-
-          Faites glisser le code vers l'image correspondante.
-
+        markdown: "## Regarder les trois pratiques de pêche durables\n\nFaire glisser
+          le code vers l'image qui lui correspond.\n\n "
         questions:
         - text: Créer une zone de pêche pour les bateaux ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
             Mettre en place une saison de pêche et une saison de non-pêche
              ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
         - text: Fixer des limites à la pêche ![](https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
-        title: Faites correspondre le code à l'image
+        title: Associer le code à l'image correspondante
       csc_ecosystems_matching_conditionals:
         answers:
         - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
@@ -13283,79 +13279,81 @@ fr-FR:
         - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
-          ## Regardez les trois écosystèmes
+          ## Regarder les trois écosystèmes
 
-          L'un est équilibré et les deux autres sont déséquilibrés de différentes manières. Faites glisser le code vers l'image correspondante.
+          L'un est équilibré et les deux autres sont déséquilibrés de différentes manières. Faire glisser le code vers l'image correspondante.
         questions:
         - text: Trop peu d'algues fait partir les poissons. ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: Trop d'algues rend le corail malade. <br> ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: Tout juste assez d'algues permet au corail malade de guérir et aux
             poissons de rester en bonne santé, aussi.  ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
-        title: Faites correspondre le code à l'image
+        title: Associer le code à l'image correspondante
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
-        markdown: "Regarder ce qui se passe lorsque les sprites se touchent dans les
+        markdown: Regarder ce qui se passe lorsque les sprites se touchent dans les
           deux animations. Ensuite, faire glisser chaque image de code vers l'image
-          qui lui correspond.\n\n"
+          qui lui correspond.
         questions:
         - text: Le bateau attrape le poisson. ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
         - text: Les poissons mangent l'algue. ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
-        title: Associez le code à l'animation
+        title: Associer le code à l'animation
       csc_ecosystems_overfishing_solution2_overview:
-        markdown: "> #Sustainable Fishing Practice #2 :\n>># #Create une saison de
-          pêche <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
-          \ width=400 style=\"margin-right: 30px; float: left\">\n**Fixez des limites
-          quant aux moments où les gens peuvent attraper du poisson. Lorsque ce n'est
-          pas la saison de pêche, l'écosystème a le temps de se rétablir.** \n<br>\n\n#Save
-          our Seas ! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+        markdown: "> #Pratique de pêche durable #2 :\n>># #Créer une saison de pêche
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Fixer des limites
+          quant aux périodes durant lesquelles les gens peuvent attraper des poissons.
+          Hors saison de pêche, l'écosystème aura le temps de se rétablir.** \n<br>\n\n#Sauvons
+          nos mers ! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
           src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
           width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
           La surpêche est un problème qui peut nuire aux écosystèmes marins et aux
-          personnes qui en dépendent. Il est important de pratiquer une pêche durable
-          pour protéger ces écosystèmes et garantir la santé des populations de poissons.\n\n\n\n<br>\n<br>\n<br>\n"
+          personnes qui en dépendent. Il est important de pratiquer un mode de pêche
+          durable pour protéger ces écosystèmes et garantir la santé des populations
+          de poissons.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #Sustainable Fishing Practice #3 :\n>># #Set Limites de pêche
-          <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: "> #Pratique de pêche durable #3 :\n>>## Définir des limites à la
+          pêche <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Les scientifiques
-          peuvent vous aider à déterminer combien de poissons peuvent être capturés
+          peuvent nous aider à déterminer combien de poissons peuvent être capturés
           sans nuire à l'océan. Les pêcheurs sauront alors qu'il ne faut pêcher que
-          ce nombre de poissons.** \n<br>\n<br>\n<br>\n\n#Save our Seas ! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          ce nombre de poissons.** \n<br>\n<br>\n<br>\n\n#Sauvons nos mers ! \n<img
+          src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          En travaillant ensemble, nous pouvons contribuer à ce que nos océans soient
-          pleins de vie pour les générations à venir !\n\n\n\n<br>\n<br>\n<br>\n\n"
+          En travaillant ensemble, on peut contribuer à garder nos océans pleins de
+          vie pour les générations à venir !\n\n\n\n<br>\n<br>\n<br>\n\n"
       csc_ecosystems_overfishing_solutions_overview:
-        markdown: "#Save Nos mers ! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+        markdown: "#Sauvons nos mers ! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
           width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
-          L'océan contient beaucoup de poissons, mais parfois les gens attrapent trop
-          de poissons et cela peut nuire à l'écosystème. Dans les niveaux suivants,
-          vous allez coder **trois pratiques de pêche durables différentes** pour
-          aider à protéger nos écosystèmes océaniques.\n\n<br>\n\n## #To En savoir
-          plus sur les solutions durables pour nos océans : <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">Cliquez ici</a>\n<br>\n<br>\n\n> #Sustainable Fishing
-          Pratique #1 :\n>> # #Fishing Zones <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          Il y a beaucoup de poissons dans l'océan, mais parfois les humains en attrapent
+          trop, et cela peut nuire à l'écosystème. Dans les niveaux suivants, on va
+          coder **trois pratiques de pêche durables différentes** pour aider à protéger
+          nos écosystèmes marins.\n\n<br>\n\n## #Pour en savoir plus sur les solutions
+          durables pour nos océans : <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Cliquer ici</a>\n<br>\n<br>\n\n> #Pratique de pêche durable
+          #1 :\n>> # #Zones de pêche <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**Les bateaux de
           pêche ne peuvent pêcher que dans les zones désignées. Certaines zones sont
           interdites aux bateaux de pêche afin que l'écosystème puisse se rétablir.**
           \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "#Share Votre simulation d'écosystème !\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+        markdown: "#Partage ta simulation d'écosystème !\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Écologistes !
-          C'est le moment de partager vos recherches ! **\n\n## #Explain les observations
-          suivantes que vous avez faites :\n\n>1. Expliquez la chaîne alimentaire
-          de votre écosystème et comment vous l'avez codée.\n>2. Y avait-il trop ou
-          trop peu d'organisme ?\n>3. Expliquez les modifications que vous avez apportées
-          à la simulation. \n>4. Qu'avez-vous remarqué après avoir modifié les valeurs ?\n</div>\n\n<div
+          C'est le moment de partager vos recherches ! **\n\n###Expliquer les observations
+          suivantes qu'on a faites :\n\n>1. Expliquer la chaîne alimentaire de notre
+          écosystème et comment on l'a codée.\n>2. Y avait-il trop ou trop peu d'organisme ?\n>3.
+          Expliquer les modifications qui ont été apportées à la simulation. \n>4.
+          Qu'a-t-on pu remarquer après avoir modifié les valeurs ?\n</div>\n\n<div
           style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
           width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
           1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
-          20px; font-size: 18px; \">\n\n###**Prêt pour plus de codage ? ** \nEssayez
-          le [cours express] de code.org (https://studio.code.org/s/express-2022)
-          pour en savoir plus sur l'informatique à votre rythme.   \n<br>\n</p></div>\n"
+          20px; font-size: 18px; \">\n\n###**Prêt pour plus de codage ? ** \nEssaie
+          le [Cours Express] de Code.org (https://studio.code.org/s/express-2022)
+          pour en apprendre plus sur l'informatique à ton propre rythme.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+
           # #Plan Votre carte des points de repère

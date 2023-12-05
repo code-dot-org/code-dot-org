@@ -45,7 +45,7 @@ Sehen Sie sich die Aktivitäten an und entscheiden Sie bereits im Vorfeld, ob Si
 
 ## 3. Erstellen Sie Ihren Plan für den Tag
 
-### Denken Sie über die technischen Anforderungen Ihres Projekts nach - Computern sind optional! 
+### Denken Sie über die technologischen Anforderungen Ihres Projekts nach - die Verwendung von Computern ist optional! 
 
 - Die "Hour of Code" gelingt am besten auf Computern mit Internetanschluss. Aber Sie brauchen nicht für jedes Kind einen Computer, und Sie können die Hour of Code sogar ganz ohne Computer durchführen! Wenn Sie [Aufgaben ohne Computer ](/learn) durchführen möchten, suchen Sie einfach im Bereich „Klassenzimmer-Technik“ die Option "ohne Computer oder Geräte". 
 - Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. Schwaches Internet? Planen Sie, die Videos vorne in der Klasse zu zeigen, damit nicht jeder Schüler seine eigenen Videos herunterlädt. Probieren Sie auch die Offline Tutorials aus.

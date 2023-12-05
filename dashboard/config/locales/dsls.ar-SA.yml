@@ -9351,22 +9351,23 @@ ar-SA:
           target=\"_blank\">هذا المورد</a> لمشاركة التعليقات مع شريكك.\n\n"
       csc_ecosystemes_foodchain_info:
         markdown: "\n##** تحتوي جميع النظم البيئية على سلسلة غذائية _متوازنة بدقة_
-          **\n## #The سلسلة غذائية للنظام البيئي البحري: >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
-          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n#1## توفر الشمس الطاقة
-          لعملية التمثيل الضوئي التي تحدث في الطحالب.\n>## #2. الطحالب تؤكل من قِبل
-          الأسماك.\n>## #3. يتم صيد الأسماك وأكلها من قِبل البشر الذين يستخدمون قوارب
-          الصيد بالشباك. \n\n</div>\n\n\n##** إذا كان هناك الكثير أو القليل جدًا من
-          كائن حي واحد في السلسلة الغذائية، فهناك تأثيرات على النظام البيئي بأكمله.**\n"
+          **\n### السلسلة الغذائية للنظام البيئي البحري:\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\n>###١. توفر الشمس
+          الطاقة لعملية التمثيل الضوئي التي تحدث في الطحالب.\n>###٢. الطحالب تؤكل
+          من قِبل الأسماك.\n>###٣. يتم صيد الأسماك وأكلها من قِبل البشر الذين يستخدمون
+          قوارب الصيد والشباك. \n\n</div>\n\n\n##** إذا كان هناك الكثير أو القليل
+          جدًا من كائن حي واحد في السلسلة الغذائية، فهناك تأثيرات على النظام البيئي
+          بأكمله.**\n"
       csc_ecosystems_choice_freeplay_2023:
         description: يجب تعديل كل عمليات محاكاة النظام البيئي هذه. اختر نظامًا بيئيًا،
           وقم بتشغيل المحاكاة لمراقبة المشكلة، واضبط الكود لإصلاحه.
         display_name: اختر نظامًا بيئيًا!
       csc_ecosystems_conditionals_overview:
-        markdown: "#الجمل الشرطية: السبب والنتيجة \n\n</div>\n\n## بعد ذلك ستضيف كوداً
+        markdown: "#الجمل الشرطية: السبب والنتيجة \n\n<div/>\n\n## بعد ذلك ستضيف كوداً
           للتحقق لمعرفة كمية الطحالب الموجودة في الماء <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
           \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
           أولاً، يتحقق الكمبيوتر لمعرفة ما إذا كان الشرط صحيحاً أم خاطئاً.\n\n- إذا
-          كان صحيحًا، فسيتم تشغيل الكود في الداخل.\n- إذا كان خاطئاً، فلن dفعل أي
+          كان صحيحًا، فسيتم تشغيل الكود في الداخل.\n- إذا كان خاطئاً، فلن تفعل أي
           شيء.\n\n<br>\n<br>\n<br>\n\n## إذا كان هناك الكثير من الطحالب، فإن المرجان
           يمرض\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
           \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
@@ -9388,45 +9389,54 @@ ar-SA:
           اسحب الكود إلى الصورة المطابقة.
 
         questions:
-        - text: قم بإنشاء منطقة صيد للقوارب! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            قم بإنشاء منطقة صيد للقوارب
+            ![](https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
         - text: |-
             ابدأ موسم الصيد وموسم عدم الصيد
-            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
-        - text: ضع حدودًا للصيد! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+            ![](https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: "ضع حدودًا للصيد\n(https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)[]! "
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
           ## انظر إلى النظم البيئية الثلاثة
 
-          أحد النظم البيئية متوازن والآخران غير متوازنين بطرق مختلفة. اسحب الرمز إلى الصورة المطابقة.
+          أحد النظم البيئية متوازن والآخران غير متوازنين بطرق مختلفة. اسحب الكود إلى الصورة المطابقة.
         questions:
-        - text: الطحالب الصغيرة جدًا تجعل الأسماك تغادر.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
         - text: |-
-            الكثير من الطحالب تجعل المرجان مريضًا. <br>
-            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
-        - text: تسمح الكمية المناسبة من الطحالب للمرجان المريض بالشفاء والحفاظ على
-            صحة الأسماك أيضًا.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+            الطحالب الصغيرة جدًا تجعل الأسماك تغادر.
+            ![](https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            الكثير من الطحالب يجعل المرجان مريضًا. <br>
+            ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: |-
+            تسمح الكمية المناسبة من الطحالب للمرجان المريض بالشفاء والحفاظ على صحة الأسماك أيضًا.
+            ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_events:
         answers:
-        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+        - text: "![](https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
             PM.png)"
-        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+        - text: "![](https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
             PM.png)"
         markdown: |+
-          انظر إلى ما يحدث عندما تلمس الكائنات المتحركة في كلا الرسوم المتحركة. ثم اسحب كل صورة من الكود إلى الصورة المطابقة لها.
+          انظر إلى ما يحدث عندما تتلامس الكائنات المتحركة في كلا الرسوم المتحركة. ثم اسحب صورة كل كود إلى الصورة المطابقة لها.
 
 
         questions:
-        - text: القارب يصطاد السمك.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
-        - text: الأسماك تأكل الطحالب.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        - text: |
+            القارب يصطاد السمك.
+             ![](https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: |-
+            الأسماك تأكل الطحالب.
+            ![](https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
         title: قم بمطابقة الكود بالرسوم المتحركة
       csc_ecosystems_overfishing_solution2_overview:
         markdown: "> # ممارسة الصيد المستدامة #2:\n>># #أنشئ موسمًا للصيد <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
@@ -9440,7 +9450,7 @@ ar-SA:
           يعتمدون عليها. من المهم ممارسة الصيد المستدام للمساعدة في حماية هذه النظم
           البيئية وضمان بقاء مجموعات الأسماك صحية.\n\n\n\n<br>\n<br>\n<br>\n"
       csc_ecosystems_overfishing_solution3_overview:
-        markdown: "> #ممارسة الصيد المستدامة #3:\n>># #ضبط حدود الصيد <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+        markdown: "> #ممارسة الصيد المستدامة #٣:\n>>##ضبط حدود الصيد <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**يمكن للعلماء المساعدة
           في معرفة عدد الأسماك التي يمكن صيدها دون التسبب في ضرر للمحيط. عندها سيعلم
           الصيادون أن عليهم أن يصطادوا هذا العدد من الأسماك فقط.**\n<br>\n<br>\n\n#أنقذوا
@@ -9454,15 +9464,15 @@ ar-SA:
           يحتوي المحيط على الكثير من الأسماك، ولكن في بعض الأحيان يصطاد الناس الكثير
           من الأسماك ويمكن أن يكون ذلك ضارًا بالنظام البيئي. في المستويات التالية،
           ستقوم ببرمجة **ثلاث ممارسات صيد مستدامة مختلفة** للمساعدة في حماية النظم
-          البيئية للمحيطات.\n\n<br>\n\n## #To اقرأ المزيد عن الحلول المستدامة لمحيطاتنا:
+          البيئية للمحيطات.\n\n<br>\n\n###لقراءة المزيد عن الحلول المستدامة لمحيطاتنا:
           <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
-          target=\"_blank\">انقر هنا</a>\n<br>\n<br>\n\n> # ممارسات الصيد المستدامة
-          #1:\n>> مناطق الصيد # # <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          target=\"_blank\">انقر هنا</a>\n<br>\n<br>\n\n>#ممارسات الصيد المستدامة
+          #١:\n>>## مناطق الصيد \n<img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
           \ width=300 style=\"margin-right: 30px; float: left\">\n**يمكن لقوارب الصيد
-          الصيد فقط في المناطق المخصصة. بعض المناطق محظورة على قوارب الصيد حتى يتمكن
-          النظام البيئي من التعافي. ** \n<br>\n<br>\n\n\n"
+          فقط في المناطق المخصصة. بعض المناطق محظورة على قوارب الصيد حتى يتمكن النظام
+          البيئي من التعافي.** \n<br>\n<br>\n\n\n"
       csc_ecosystems_planning:
-        markdown: "# #شارك محاكاة النظام البيئي الخاص بك!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+        markdown: "##شارك محاكاة النظام البيئي الخاص بك!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
           PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** علماء
           البيئة! حان الوقت لمشاركة بحثك! **\n\n## #اشرح الملاحظات التالية التي قدمتها:\n\n>1.
           اشرح السلسلة الغذائية في نظامك البيئي وكيف قمت ببرمجتها.\n>2. هل كان هناك
@@ -9472,7 +9482,7 @@ ar-SA:
           20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
           10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**
           هل أنت مستعد للمزيد من البرمجة؟ ** \nجرب [الدورة التدريبية السريعة] الخاصة
-          بـ code.org (https://studio.code.org/s/express-2022) لتعلم المزيد من علوم
+          بـcode.org (https://studio.code.org/s/express-2022) لتعلم المزيد من علوم
           الكمبيوتر وفقًا لسرعتك الخاصة.   \n<br>\n</p></div>\n"
       csc_mappinglandmarks_markdown_lesson_2:
         markdown: |+

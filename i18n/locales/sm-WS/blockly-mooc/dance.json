@@ -1,5 +1,9 @@
 {
+  "danceAiModalCodeButton": "Faailo",
+  "danceAiModalStartOverButton": "Toe Amata",
+  "danceAiModalClose": "tapuni",
   "danceFeedbackDidntPress": "Tautuana e oomi ki au a o alu le siva",
+  "danceFeedbackKeepCoding": "Faaauau pea ona faailo! O loo iai se faaletonu",
   "danceFeedbackKeyEvent": "Tautuana e faapipii se faailo i le <block type=\"Dancelab_whenKey\">\"up\"</block>polka ma oomi le ki ao faaalu le siva",
   "danceFeedbackNeedBackup": "E manaomia le fai o se au siva e lagolago ma le <block type=\"Dancelab_makeNewDanceSpriteGroup\"><title name=\"N\">10<title name=\"COSTUME\">\"UNICORN\"<title name=\"LAYOUT\">\"circle\"</block> poloka",
   "danceFeedbackNeedDifferentDance": "E manaomia lou faaaoga o se isi siva",

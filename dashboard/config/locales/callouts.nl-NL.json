@@ -378,6 +378,9 @@
         "Course 4 Artist For Loops 4": {
           "place_counter_variable": "Sleep je teller-variabele in dit blok"
         },
+        "Course 4 Artist Functions challenge": {
+          "Course_4_Artist_Functions_challenge_1": "Merk op dat we alle blokken in categorieën hebben gesorteerd om het overzichtelijk te houden. Klik hier om alle blokken die je nodig hebt te vinden."
+        },
         "Course 4 Artist Vars 1": {
           "repeat_blocks": "Gebruik het \"Herhaal\" blok en plaats dit rond de blokken in de werkruimte"
         },
@@ -1709,6 +1712,9 @@
         },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Je vindt de voorwaardelijke lus hier!"
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."

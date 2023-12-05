@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Coba Hour of Code menggunakan tutorial pengantar yang seru ini</h2>
-<p>Cobalah <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">tutorial satu jam</a> yang menampilkan game dan film populer seperti Minecraft, Frozen, dan Star Wars. Banyak tutorial yang strukturnya mirip game, yang dirancang untuk mengajarkan konsep-konsep ilmu komputer dasar dengan cara-cara yang seru dan mengasyikkan.</p>
+<p>Cobalah tutorial <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">satu jam</a> yang menampilkan game dan film populer seperti Minecraft, Frozen, dan Star Wars. Banyak tutorial yang strukturnya mirip game, yang dirancang untuk mengajarkan konsep-konsep ilmu komputer dasar dengan cara-cara yang seru dan mengasyikkan.</p>
 
 <br>
 

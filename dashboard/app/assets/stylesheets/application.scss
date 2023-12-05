@@ -13,7 +13,6 @@
  *
  * Vendor assets
  *= require add2home
- *= require gotham-font
  *= require jquery.qtip.min
  *
  * Application assets
@@ -484,6 +483,7 @@ img.video_thumbnail {
 
 .main {
   padding: 10px;
+
   a:link, a:visited, a:hover, a:active {
     @include main-font-bold;
     color: $brand_secondary_default;
@@ -494,6 +494,17 @@ img.video_thumbnail {
     color: $brand_secondary_dark;
     text-decoration: underline;
   }
+
+  a:link, a:visited, a:active {
+    &:has(.visual-block) {
+      text-decoration: unset;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
@@ -4059,4 +4070,3 @@ a {
 }
 
 @import "NpsSurveyBlock";
-@import "DanceAiModal";

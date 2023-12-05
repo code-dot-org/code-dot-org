@@ -8,8 +8,8 @@ tr:
             '"follows"': takip eder
             '"avoids"': kaçınır
       AmysBlocks_goldilocks:
-        text: |2-
-           if {CONDITION}{SPRITE}
+        text: |-
+          Eğer {CONDITION}{SPRITE}
           {STATEMENT}
         options:
           CONDITION:
@@ -53,6 +53,8 @@ tr:
             '1.00': orta
             '2.00': Büyük
             '3.00': ekstra büyük
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} efekti oluşturur"
       Dancelab_alternateMoves:
         text: "{MOVE1} ve {MOVE2} arasındaki her {N} ölçümünde  {GROUP} değiştirilir"
         options:
@@ -144,6 +146,27 @@ tr:
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} sürekli {MOVE} {DIR} yap"
+        options:
+          GROUP:
+            '"CAT"': kediler
+            '"SLOTH"': tembel hayvanlar
+          MOVE:
+            MOVES.Roll: Body roll
+            MOVES.ClapHigh: Yüksek Alkış
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Çift Aşağı
+            MOVES.Drop: Bırak
+            MOVES.Floss: Floss
+            MOVES.Fresh: Taze
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Yıldız
+            MOVES.ThisOrThat: Şu ya da Bu
+            MOVES.Rest: Hiçbiri
+            '"next"': "(Sonraki)"
+            '"prev"': "(Önceki)"
+            '"rand"': "(Rastgele)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} sürekli {MOVE} {DIR} yap"
         options:
@@ -629,13 +652,15 @@ tr:
           EFFECT:
             '"none"': Hiçbiri
             '"rand"': "(Rastgele)"
-            '"circles"': Çemberler
             '"quads"': Açılar
+            '"blooming_petals"': Çiçek Açan Yapraklar
+            '"circles"': Çemberler
             '"color_cycle"': Renkler
             '"diamonds"': Elmaslar
             '"disco_ball"': Disko Topu
             '"fireworks"': Havai fişekler
             '"flowers"': Çiçekler
+            '"frosted_grid"': Buzlu Izgara
             '"growing_stars"': Büyüyen Yıldızlar
             '"higher_power"': Higher Power
             '"swirl"': Hipnozcu
@@ -647,26 +672,36 @@ tr:
             '"ripples"': Dalgalar
             '"snowflakes"': Kar
             '"text"': Şarkı Adları
-            '"squiggles"': Karalamalar
             '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"spiral"': Sarmal
             '"disco"': Kareler
+            '"squiggles"': Karalamalar
             '"starburst"': Yıldız patlaması
             '"stars"': Yıldızlar
             '"music_wave"': Dalgalar
           PALETTE:
+            '"autumn"': Sonbahar
             '"rave"': Siyah Beyaz
             '"cool"': Havalı
             '"electronic"': Elektronik
+            '"grayscale"': Gri ton
             '"iceCream"': Dondurma
             '"default"': Işık
             '"neon"': Neon
             '"ocean"': Okyanus
             '"rainbow"': Gökkuşağı
+            '"roses"': Güller
+            '"sky"': Gökyüzü
+            '"spring"': İlkbahar
+            '"summer"': Yaz
+            '"sunrise"': Gün Doğumu
+            '"sunset"': Gün batımı
             '"tropical"': Tropik
+            '"twinkling"': Parıldayan
             '"vintage"': Eski tip
             '"warm"': Sıcak
+            '"winter"': Kış
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
         options:
@@ -1131,7 +1166,7 @@ tr:
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}, {TEXT1} der"
       gamelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       gamelab_addTarget:
         text: "{SPRITE},   {OPT} ile {TARGET} 'e erişir."
         options:
@@ -1800,6 +1835,15 @@ tr:
         text: "{SPRITE} 'ın y koordinatı "
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
+      KatiesBlocks_goldilocks:
+        text: |-
+          Eğer {CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': katı
+            '"liquid"': sıvı
+            '"gas"': gaz
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
       KatiesBlocks_spriteBirdSay:
@@ -1811,7 +1855,7 @@ tr:
       KatiesBlocks_tumbling:
         text: karıştır
       Mikelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       Mikelab_addTrainingData:
         text: 'eğitim verileri ekleyin: {NAME},{LOCATION}'
         options:

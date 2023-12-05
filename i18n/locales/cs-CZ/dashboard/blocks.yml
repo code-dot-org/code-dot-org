@@ -113,6 +113,27 @@ cs:
             MOVES.Kick: Kopou
             MOVES.ThisOrThat: Toto nebo ono
             MOVES.Rest: Žádný
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} dělá {MOVE} {DIR} navždy"
+        options:
+          GROUP:
+            '"CAT"': všechny kočky
+            '"SLOTH"': lenochodové
+          MOVE:
+            MOVES.Roll: Vlna tělem
+            MOVES.ClapHigh: Clap High
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Dvojitě dolů
+            MOVES.Drop: Roznožka
+            MOVES.Floss: Tančí floss
+            MOVES.Fresh: Tančí fresh
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Kopou
+            MOVES.ThisOrThat: Toto nebo ono
+            MOVES.Rest: Žádný
+            '"next"': "(Další)"
+            '"prev"': "(Předchozí)"
+            '"rand"': "(Náhodně)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} dělá {MOVE} {DIR} navždy"
         options:
@@ -578,8 +599,8 @@ cs:
           EFFECT:
             '"none"': Žádný
             '"rand"': "(Náhodně)"
-            '"circles"': Tunel
             '"quads"': Úhly
+            '"circles"': Tunel
             '"color_cycle"': Barvy
             '"diamonds"': Diamanty
             '"disco_ball"': Disco koule
@@ -595,11 +616,11 @@ cs:
             '"ripples"': Vlny
             '"snowflakes"': Sníh
             '"text"': Název skladby
-            '"squiggles"': Klikyháky
             '"galaxy"': Vesmír
             '"sparkles"': Lesky
             '"spiral"': Spirála
             '"disco"': Čtverce
+            '"squiggles"': Klikyháky
             '"starburst"': Výbuch hvězdy
             '"stars"': Hvězdy
             '"music_wave"': Vlny
@@ -1690,6 +1711,12 @@ cs:
         text: y souřadnice {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} klouže na {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': pevná látka
+            '"liquid"': kapalina
+            '"gas"': plyn
       KatiesBlocks_tumbling:
         text: cvičení
       Mikelab_addBehaviorSimple:

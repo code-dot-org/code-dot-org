@@ -125,6 +125,27 @@ zh-CN:
             MOVES.Kick: 踢腿
             MOVES.ThisOrThat: 交替摆臂
             MOVES.Rest: 没有
+      Dancelab_changeMoveEachLR_slothcat:
+        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
+        options:
+          GROUP:
+            '"CAT"': 猫
+            '"SLOTH"': 树懒
+          MOVE:
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
+            '"next"': "(下一步)"
+            '"prev"': "(前一步)"
+            '"rand"': 随机
       Dancelab_changeMoveLR:
         text: "{SPRITE} 一直重复 {MOVE} {DIR}"
         options:
@@ -617,8 +638,8 @@ zh-CN:
           EFFECT:
             '"none"': 没有
             '"rand"': 随机
-            '"circles"': 隧道
             '"quads"': 角度
+            '"circles"': 隧道
             '"color_cycle"': 颜色
             '"diamonds"': 菱形
             '"disco_ball"': 迪斯科球
@@ -635,11 +656,11 @@ zh-CN:
             '"ripples"': 波纹
             '"snowflakes"': 雪
             '"text"': 歌曲标题
-            '"squiggles"': 花体
             '"galaxy"': 空间
             '"sparkles"': 火花
             '"spiral"': 螺旋
             '"disco"': 方形
+            '"squiggles"': 花体
             '"starburst"': 星爆
             '"stars"': 星星
             '"music_wave"': 波浪
@@ -1744,6 +1765,15 @@ zh-CN:
         text: "{SPRITE} 的y坐标"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: |2-
+           如果{CONDITION}{SPRITE}
+          {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': 固体
+            '"liquid"': 液体
+            '"gas"': 气体
       KatiesBlocks_tumbling:
         text: 翻滚
       Mikelab_addBehaviorSimple:

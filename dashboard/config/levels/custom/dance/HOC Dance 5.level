@@ -53,8 +53,7 @@
       "https://curriculum.code.org/images/sprites/spritesheet_sm/ALIEN_Thriller.png"
     ],
     "custom_helper_library": "SPRITE_NAMES = [\"ALIEN\", \"CAT\", \"DUCK\", \"MOOSE\", \"ROBOT\"];",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add your new dancer here\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"10\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "contained_level_names": null
+    "callout_json": "[{\"localization_key\":\"\",\"callout_text\":\"Add your new dancer here\",\"element_id\":\".svgGroup [block-id=\\\"10\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top right\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklySvg [data-id=\\\"10\\\"]\",\"localization_key\":\"\",\"callout_text\":\"Add your new dancer here\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top right\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]"
   },
   "published": true,
   "notes": "",
@@ -71,7 +70,7 @@
             <block type="Dancelab_setBackgroundEffect">
               <title name="EFFECT">"disco"</title>
               <next>
-                <block type="Dancelab_makeNewDanceSprite">
+                <block type="Dancelab_makeNewDanceSprite" id="10">
                   <title name="COSTUME" config="&quot;ALIEN&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;MOOSE&quot;, &quot;ROBOT&quot;" id="add_here">"CAT"</title>
                   <title name="NAME">lead_dancer</title>
                   <title name="LOCATION">{x: 200, y: 200}</title>

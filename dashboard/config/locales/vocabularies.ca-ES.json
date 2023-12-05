@@ -2264,6 +2264,17 @@
         "program/starwarsblocks/unversioned": {
           "word": "Programa",
           "definition": "Un algorisme que s'ha codificat en alguna cosa que pot ser executada per una màquina."
+        },
+        "code/dance-ai/2023": {
+          "word": "Codi",
+          "definition": "Escriure un programa o codi, és a dir, les instruccions que ha de seguir l'ordinador."
+        },
+        "event/dance-ai/2023": {
+          "word": "Esdeveniment",
+          "definition": "Una acció que fa que passi alguna cosa."
+        },
+        "program/dance-ai/2023": {
+          "word": "Programa"
         }
       }
     }

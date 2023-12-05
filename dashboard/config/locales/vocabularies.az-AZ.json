@@ -2024,6 +2024,17 @@
         },
         "poetry_circle/poetry/2023": {
           "word": "Şeir dairəsi"
+        },
+        "code/dance-ai/2023": {
+          "word": "Kod",
+          "definition": "kod yazmaq və ya kompüter üçün təlimatlar yazmaq."
+        },
+        "event/dance-ai/2023": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "program/dance-ai/2023": {
+          "word": "Proqram"
         }
       }
     }

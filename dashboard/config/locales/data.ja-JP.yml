@@ -678,6 +678,7 @@ ja:
         csd_gamelab_velocity: 速度
         csd_how_teamwork_works: チームワークのしくみ
         csd_ml_ethics_ai: '倫理と人工知能 '
+        csd_ml_how_ai_works: 人工知能のしくみ
         csd_ml_import_model: AI モデルのインポート
         csd_ml_intro_ai_lab_july2021: AI ラボの紹介
         csd_ml_intro_to_ai_lab: AI ラボの紹介
@@ -746,6 +747,7 @@ ja:
         hint_videos_d_11_7_last: 'ヒントビデオ: D.11.7 最後'
         hint_videos_d_11_9_first: 'ヒントビデオ: D.11.9 最初'
         hint_videos_d_11_9_last: 'ヒントビデオ: D.11.9 最後'
+        hoc-dance-ai-warmup: ダンスパーティーAI版：ウォームアップ
         hoc_dance_congrats: ダンスパーティー - パーティーオン！
         hoc_dance_congrats_2019: ダンスパーティー2019 - パーティーオン！
         hoc_dance_events: ダンスパーティー - イベント

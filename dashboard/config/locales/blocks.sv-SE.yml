@@ -113,6 +113,27 @@ sv:
             MOVES.Roll: Kroppsrullning
             MOVES.ThisOrThat: Det här eller det där
         text: "{GROUP} gör {MOVE} {DIR} för alltid"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': alla katter
+            '"SLOTH"': sengångare
+          MOVE:
+            '"next"': "(Nästa)"
+            '"prev"': "(Föregående)"
+            '"rand"': "(Slumpad)"
+            MOVES.ClapHigh: Klappa högt
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dabba
+            MOVES.DoubleJam: Dubbelt ner
+            MOVES.Drop: Släpp
+            MOVES.Floss: Flossa
+            MOVES.Fresh: Färsk
+            MOVES.Kick: Stjärna
+            MOVES.Rest: Ingen
+            MOVES.Roll: Kroppsrullning
+            MOVES.ThisOrThat: Det här eller det där
+        text: "{GROUP} gör {MOVE} {DIR} för alltid"
       Dancelab_changeMoveLR:
         options:
           MOVE:

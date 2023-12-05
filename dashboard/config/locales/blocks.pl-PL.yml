@@ -56,7 +56,7 @@ pl:
             '3.00': bardzo duży
         text: ustaw {SPRITE} woelkość na {SIZE}
       Dancelab_ai:
-        text: użyj AI do {IMAGE}
+        text: "{IMAGE}generuj {VALUE} efekt"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -137,6 +137,30 @@ pl:
             '"SLOTH"': leniuchy
             '"UNICORN"': jednorożce
             sprites: wszystkie
+          MOVE:
+            '"next"': "(Następny)"
+            '"prev"': "(Poprzedni)"
+            '"rand"': "(Losowy)"
+            MOVES.ClapHigh: Clap high
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Double Down
+            MOVES.Drop: Drop
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresh
+            MOVES.Kick: Star
+            MOVES.Rest: Żaden
+            MOVES.Roll: Body Roll
+            MOVES.ThisOrThat: This or That
+            MOVES.Thriller: Zombie
+        text: "{GROUP} wykonuje {MOVE} {DIR} bez końca"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          DIR:
+            '1': "→"
+          GROUP:
+            '"CAT"': koty
+            '"SLOTH"': leniuchy
           MOVE:
             '"next"': "(Następny)"
             '"prev"': "(Poprzedni)"
@@ -652,6 +676,7 @@ pl:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Kwitnące płatki
             '"circles"': Kółka
             '"color_cycle"': Kolory
             '"diamonds"': Diamenty
@@ -659,6 +684,7 @@ pl:
             '"disco_ball"': Kula dyskotekowa
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
+            '"frosted_grid"': Matowa siatka
             '"galaxy"': Przestrzeń
             '"growing_stars"': Powiększające się gwiazdy
             '"higher_power"': Higher Power
@@ -685,6 +711,7 @@ pl:
             '"cool"': Chłodny
             '"default"': Jasne
             '"electronic"': Elektroniczny
+            '"grayscale"': Skala szarości
             '"iceCream"': Lody
             '"neon"': Neon
             '"ocean"': Ocean
@@ -697,6 +724,7 @@ pl:
             '"sunrise"': Wschód słońca
             '"sunset"': Zachód słońca
             '"tropical"': Tropikalne
+            '"twinkling"': Migotanie
             '"vintage"': Starocie
             '"warm"': Ciepły
             '"winter"': Zima
@@ -1169,6 +1197,15 @@ pl:
         text: "{SPRITE}powiedz {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} skocz do {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': ciecz
+            '"solid"': trwały
+        text: |2-
+           jeśli {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: utwórz {NUM} nowe {ANIMATION_NAME} duszki blisko {LOCATION}
       KatiesBlocks_spriteBirdSay:

@@ -115,6 +115,27 @@ vi:
             MOVES.Roll: Cuộn người
             MOVES.ThisOrThat: Đây hoặc đó
         text: "{GROUP} {MOVE} {DIR} mãi mãi"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': mèo
+            '"SLOTH"': con lười
+          MOVE:
+            '"next"': "(Tiếp theo)"
+            '"prev"': "(Trước)"
+            '"rand"': "(Ngẫu nhiên)"
+            MOVES.ClapHigh: Vỗ tay cao
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Đáp
+            MOVES.DoubleJam: Giảm gấp đôi
+            MOVES.Drop: Thả
+            MOVES.Floss: Chỉ tơ nha khoa
+            MOVES.Fresh: Tươi
+            MOVES.Kick: Ngôi sao
+            MOVES.Rest: Không có
+            MOVES.Roll: Cuộn người
+            MOVES.ThisOrThat: Đây hoặc đó
+        text: "{GROUP} {MOVE} {DIR} mãi mãi"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1053,6 +1074,12 @@ vi:
         text: "{SPRITE}nói{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} trượt tới {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': khí
+            '"liquid"': lỏng
+            '"solid"': rắn
       KatiesBlocks_tumbling:
         text: lộn nhào
       Mikelab_addBehaviorSimple:

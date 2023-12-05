@@ -34,6 +34,13 @@
           "csleadersprize": {
             "buttonText": "Más información"
           },
+          "hoc-2023": {
+            "buttonText": "Más información"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Más información",
+            "title": "Fiesta de baile: Edición IA"
+          },
           "hoc-more": {
             "body": "El sitio web de la Hora del Código cuenta con más de 500 actividades sobre ciencias de la computación para todas las edades y niveles de experiencia, desarrolladas por Code.org y nuestros socios."
           },

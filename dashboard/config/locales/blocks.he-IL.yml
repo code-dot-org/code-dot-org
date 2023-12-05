@@ -14,6 +14,8 @@ he:
         options:
           SIZE:
             '1.00': זמן בינוני
+      Dancelab_ai:
+        text: "{IMAGE} צור {VALUE} אפקט"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -91,6 +93,28 @@ he:
             '"SLOTH"': עצלנים
             '"UNICORN"': חדי-קרן
             sprites: כולם
+          MOVE:
+            '"next"': "(הבא)"
+            '"prev"': "(קודם)"
+            '"rand"': "(אקראי)"
+            MOVES.ClapHigh: קלאפ היי
+            MOVES.Clown: גאנגם
+            MOVES.Dab: דֶאבּ
+            MOVES.DoubleJam: דָאבֵּל דָאוּן
+            MOVES.Drop: דְרוֹפּ
+            MOVES.Floss: פְלוֹס
+            MOVES.Fresh: פְרֶשׁ
+            MOVES.Kick: כוכב
+            MOVES.Rest: כלום
+            MOVES.Roll: בָּאדִי רוֹל / גלגול גוף
+            MOVES.ThisOrThat: כך וכך
+            MOVES.Thriller: זומבי
+        text: "{GROUP} עושים {MOVE} {DIR} לנצח"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': חתולים
+            '"SLOTH"': עצלנים
           MOVE:
             '"next"': "(הבא)"
             '"prev"': "(קודם)"
@@ -571,6 +595,7 @@ he:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': עלי כותרת פורחים
             '"circles"': מעגלים
             '"color_cycle"': צבעים
             '"diamonds"': יהלומים
@@ -578,6 +603,7 @@ he:
             '"disco_ball"': כדור דיסקו
             '"fireworks"': זיקוקים
             '"flowers"': פרחים
+            '"frosted_grid"': רשת עמומה
             '"galaxy"': חלל
             '"growing_stars"': כוכבים גדלים
             '"kaleidoscope"': קליידוסקופ
@@ -599,17 +625,27 @@ he:
             '"swirl"': הִיפְּנוֹ
             '"text"': כותרת שיר
           PALETTE:
+            '"autumn"': סתיו
             '"cool"': מגניב
             '"default"': אוֹר
             '"electronic"': אלקטרוני
+            '"grayscale"': גוני אפור
             '"iceCream"': גלידה
             '"neon"': נאון
             '"ocean"': אוקיינוס
             '"rainbow"': קשת
             '"rave"': שחור לבן
+            '"roses"': ורדים
+            '"sky"': שמיים
+            '"spring"': אביב
+            '"summer"': קיץ
+            '"sunrise"': זריחה
+            '"sunset"': שקיעה
             '"tropical"': טרופי
+            '"twinkling"': הבהוב
             '"vintage"': וינטאג'
             '"warm"': חמים
+            '"winter"': חורף
         text: קבע אפקט רקע {PALETTE} {EFFECT}
       Dancelab_setDanceSpeed:
         options:
@@ -1041,6 +1077,12 @@ he:
         text: תייצגו {NUM} חדשים{ANIMATION_NAME}שדונים [BEHAVIOR][2]
       FunctionBlocks_spriteSayVar:
         text: "{SPRITE}תגידו{TEXT1}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': גז
+            '"liquid"': נוזל
+            '"solid"': מוצק
       Mikelab_addBehaviorSimple:
         text: דמות {SPRITE} מתחילה {BEHAVIOR}
       Mikelab_addTrainingData:

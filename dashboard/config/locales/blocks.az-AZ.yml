@@ -128,6 +128,27 @@ az:
             MOVES.Roll: Bədən Roll
             MOVES.ThisOrThat: bu və ya o
         text: "{GROUP} həmişəlik {MOVE} {DIR} edin"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': pişiklər
+            '"SLOTH"': tənbəl heyvanlar
+          MOVE:
+            '"next"': "(Növbəti)"
+            '"prev"': "(Əvvəlki)"
+            '"rand"': "(İxtiyari)"
+            MOVES.ClapHigh: Yüksək Alqış
+            MOVES.Clown: Qənqnəm
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: ikiqat eniş
+            MOVES.Drop: Burax
+            MOVES.Floss: ip
+            MOVES.Fresh: təzə
+            MOVES.Kick: Ulduz
+            MOVES.Rest: Heç biri
+            MOVES.Roll: Bədən Roll
+            MOVES.ThisOrThat: bu və ya o
+        text: "{GROUP} həmişəlik {MOVE} {DIR} edin"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1085,6 +1106,12 @@ az:
         text: əlavə səkkiz
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': qaz
+            '"liquid"': maye
+            '"solid"': bərk
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

@@ -1,7 +1,7 @@
 <Dancelab>
   <config><![CDATA[{
   "game_id": 50,
-  "created_at": "2018-10-05T21:49:27.000Z",
+  "created_at": "2018-10-05T22:28:35.000Z",
   "level_num": "custom",
   "user_id": 182,
   "properties": {
@@ -54,13 +54,12 @@
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Drop.png",
       "https://curriculum.code.org/images/sprites/spritesheet_sm/MOOSE_Floss.png"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"Add this block to your program!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"\",\"callout_text\":\"Add this block to your program!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"\",\"callout_text\":\"Add this block to your program!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"bottom center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "parent_level_id": 14634,
     "name_suffix": "_draft",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"**How do I pass this level?**\\n* Make sure a dancer appears on the screen.\\n\\n*This level ends after 4 measures.*\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b738b0f8464fcea6bd8c56a620a73ec/HOC Dance 0_draft.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"**Optional Challenges**\\n* Choose a different song to play.\\n* Choose a different that looks like a moose!\\n* Rename your dancer.\",\"hint_id\":\"challenges\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a48a342fcd3cd3ad2266ae98e987e74a/HOC Dance 0_draft.mp3\"}]",
     "default_song": "hammer",
-    "long_instructions": "*Let's have a dance party!*\r\n\r\nDrag a <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> block into the workspace. \r\n\r\nConnect it inside the <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement name=\"DO\"></statement></block></xml> block to create your first dancer.\r\n\r\n* *You can also click the lightbulb to the left if you want more information or extra challenges.*",
-    "contained_level_names": null
+    "long_instructions": "*Let's have a dance party!*\r\n\r\nDrag a <xml><block type=\"Dancelab_makeNewDanceSprite\"><title name=\"COSTUME\" config=\"&quot;CAT&quot;, &quot;CAT&quot;\">\"CAT\"</title><title name=\"NAME\">my&#95;first&#95;dancer</title><title name=\"LOCATION\">{x: 200, y: 200}</title></block></xml> block into the workspace. \r\n\r\nConnect it inside the <xml><block type=\"Dancelab_whenSetupSong\" movable=\"false\"><title name=\"SONG\">\"hammer\"</title><statement name=\"DO\"></statement></block></xml> block to create your first dancer.\r\n\r\n* *You can also click the lightbulb to the left if you want more information or extra challenges.*"
   },
   "published": true,
   "notes": "",
@@ -78,7 +77,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="Dancelab_makeNewDanceSprite">
+        <block type="Dancelab_makeNewDanceSprite" id="1">
           <title name="COSTUME" config="&quot;CAT&quot;, &quot;CAT&quot;">"CAT"</title>
           <title name="NAME">my_first_dancer</title>
           <title name="LOCATION">{x: 200, y: 200}</title>

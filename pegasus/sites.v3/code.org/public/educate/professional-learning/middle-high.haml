@@ -3,32 +3,29 @@ title: Professional Learning Program Details
 theme: responsive_full_width
 ---
 
+-# When this DCDO flag is set to 'true' it shows the off-season version of the page
+- off_season_version = !!DCDO.get('pl-teacher-application-off-season', false)
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/pl-middle-high-styles.css", rel: "stylesheet"}
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::MIDDLE_AND_HIGH_SCHOOL_PL_PAGE_VISITED_EVENT
 
-%section.hero-banner-basic{style: "background: #FFDFA1"}
+%section.top
   .wrapper
-    .text-wrapper
-      %h1 Code.org Professional Learning
-      %h2.heading-lg Help today's students become tomorrow's superheroes.
-      %p.no-margin-bottom Find your local professional learning workshops for middle and high school and apply today!
-    .clear
-    %img{src: "/images/professional-learning/pl-superhero-girl-crop.png", alt: ""}
-
-%section
-  .wrapper
-    %div.col-45{style: "margin-bottom: 1rem"}
-      %h2 Why Code.org professional learning?
-      %p Our engaging workshops are for new and experienced computer science teachers!
-      %p <strong>In this program, you will:</strong>
+    %h1{style: "margin-bottom: 3rem"}
+      =hoc_s(:pl_middle_high_top_heading)
+    .text-wrapper.col-50{style: "margin-bottom: 1rem"}
+      %p.body-one
+        =hoc_s(:pl_middle_high_top_desc)
+      %p
+        %strong=hoc_s(:pl_middle_high_top_desc_02)
       %ul
-        %li Explore the curriculum and learning tools
-        %li Experience the course as a teacher and a learner
-        %li Collaborate with fellow teachers
-      %a{href: "/educate/professional-learning/program-information", class: "link-button"} Apply now
-    %div.col-50{style: "float: right"}
+        %li=hoc_s(:pl_middle_high_top_list_01)
+        %li=hoc_s(:pl_middle_high_top_list_02)
+        %li=hoc_s(:pl_middle_high_top_list_03)
+      %a.link-button{href: off_season_version ? "#subscribe-form" : "/educate/professional-learning/program-information"}
+        =hoc_s(off_season_version ? :call_to_action_applications_get_notified : :call_to_action_apply_now)
+    .video-wrapper.col-50
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/dScOdk0yY38", title: "YouTube video player", allowfullscreen: "true", frameborder: "0"}
@@ -40,152 +37,121 @@ theme: responsive_full_width
       %figure.col-33{style: "margin-top: 10px;"}
         %img{src: "/images/professional-learning/pl-carousel.png", alt: ""}
       %div.col-60{style: "float: right"}
-        %h2 What teachers are saying about Code.org professional learning:
+        %h2.heading-lg.no-margin-bottom
+          =hoc_s(:pl_middle_high_quotes_heading)
         = view :pl_middle_high_carousel
   .clear
 
 %section
   .wrapper
-    %h2 Professional learning programs specific to the course
-    %p Join one of our professional learning programs in your area. The programs are designed to prepare you before and during your first year teaching <a href="/educate/csd" target="_blank" rel="noopener noreferrer">CS Discoveries</a>, <a href="/educate/csp" target="_blank" rel="noopener noreferrer">CS Principles</a>, or <a href="/educate/csa" target="_blank" rel="noopener noreferrer">AP® CSA</a>.
-    .action-block__wrapper.action-block__wrapper--three-col{style: "margin-top: 2em"}
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Beginner
-          %h3 CS Discoveries
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/uQim0hBHco0", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li No computer science experience required
-            %li Based in United States
-            %li Teaching 25+ hours of course to a class in next school year
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Beginner
-          %h3 CS Principles
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/DMr1iFYacGQ", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li No computer science experience required
-            %li Based in United States
-            %li Teaching 100+ hours of course to a class in next school year
-            %li Teach AP or non-AP course
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline Intermediate
-          %h3 AP® CSA
-          %figure.video-responsive
-            %div
-              %iframe{src: "https://www.youtube-nocookie.com/embed/lFkFi2jGs70", title: "YouTube video player", frameborder: "0", allowfullscreen: "true"}
-          %p.no-margin-bottom <strong>Teacher Requirements:</strong>
-          %ul
-            %li Able to use functions, conditionals, loops, and arrays
-            %li Based in United States
-            %li Teaching 140+ hours of course to a class  in next school year
-            %li Teach AP or non-AP course
-        .content-footer
-          %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more
+    %h2=hoc_s(:pl_middle_high_programs_heading)
+    %p
+      =hoc_s(:pl_middle_high_programs_desc, markdown: :inline, locals:{csd_url: "/csd", csp_url: "/csp", csa_url: "/csa"})
+    = view :pl_middle_high_programs
   .clear
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2 Program design
-    %p The yearlong professional learning programs all follow a similar design. Regional Partners across the country provide our programs and offer local workshops led by trained facilitators.
-    %ul.arrow-list
-      %li{style: "width: 32%"}
-        %h3 Summer Workshops
-        %p Attend a 5 day summer workshop to get familiar with the curriculum and prepare for the school year.
-      %li{style: "width: 32%"}
-        %h3 Academic Year Workshops
-        %p Attend workshops during the year to receive support as you teach the curriculum
-      %li{style: "width: 32%"}
-        %h3 Community Support
-        %p Collaborate with your regional cohort of teachers and get the support of a nationwide online teacher community
-    %a{href: "/educate/professional-learning/program-information"} Find out more about the program specifics in your region.
+    %h2=hoc_s(:heading_program_design)
+    %p=hoc_s(:pl_middle_high_program_design_desc)
+    %ul.progressive-list.three-col
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_summer_title)
+        %p=hoc_s(:pl_middle_high_program_design_summer_desc)
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_year_title)
+        %p=hoc_s(:pl_middle_high_program_design_year_desc)
+      %li
+        %span
+        %h3=hoc_s(:pl_middle_high_program_design_community_title)
+        %p=hoc_s(:pl_middle_high_program_design_community_desc)
 
 %section.bg-neutral-light
   .wrapper
-    %h2 How does the application process work?
-    %ol.steps-list
+    %h2.centered
+      =hoc_s(:heading_how_does_application_process_work)
+    %ol.steps-list.three-col
       %li
         %h3
           %span 1
-        %h4 Apply
-        %p Fill out an application with information about you, your school and the course you're teaching.
+        %h4=hoc_s(:heading_apply)
+        %p=hoc_s(:pl_middle_high_process_apply_desc)
       %li
         %h3
           %span 2
-        %h4 Application Review
-        %p In some regions you will need to get approval from a school administrator in order to get accepted into the program.
+        %h4=hoc_s(:heading_acceptance)
+        %p=hoc_s(:pl_middle_high_process_acceptance_desc)
       %li
         %h3
           %span 3
-        %h4 Acceptance
-        %p If accepted, you will be notified of your acceptance by your Regional Partner 2-4 weeks after applying.
-      %li
-        %h3
-          %span 4
-        %h4 Enroll
-        %p Sign up for the summer workshop in your region and get ready to start the yearlong program!
+        %h4=hoc_s(:heading_enroll)
+        %p=hoc_s(:pl_middle_high_process_enroll_desc)
     %div.centered
-      %a{href: "/educate/professional-learning/program-information", class: "link-button"} Apply now
+      %a.link-button{href: off_season_version ? "#subscribe-form" : "/educate/professional-learning/program-information"}
+        =hoc_s(off_season_version ? :call_to_action_applications_get_notified : :call_to_action_apply_now)
+
+- if off_season_version
+  %section#subscribe-form.no-padding-bottom
+    .wrapper
+      = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title_pl), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_pl), form_height: "500px", form_src: "http://go.pardot.com/l/153401/2023-10-24/pqs3r1"
+- else
+  %section
+    .wrapper
+      %h2=hoc_s(:pl_middle_high_cost_heading)
+      .action-block.action-block--two-col
+        .media-wrapper.col-50
+          %img{src: "/images/professional-learning/pl-teacher-group.png", alt: ""}
+        .text-wrapper.col-50
+          %h3=hoc_s(:pl_middle_high_cost_subhead)
+          %p=hoc_s(:pl_middle_high_cost_desc)
+          %a.link-button{href: "/educate/professional-learning/program-information"}
+            =hoc_s(:call_to_action_learn_more_program_region)
+      .clear
+
+  = view :section_divider_line
 
 %section
   .wrapper
-    %h2 What does the program cost?
-    .action-block.action-block--two-col
-      %img{src: "/images/professional-learning/pl-teacher-group.png", alt: "", class: "col-50"}
-      .text-wrapper.col-50
-        %h3.heading-sm The cost of the program varies by region.
-        %p You may be eligible for a scholarship to cover the cost of your program.
-        %a{href: "/educate/professional-learning/program-information", class: "link-button"} Learn more about the program in your region
-  .clear
-
-= view :section_divider_line
-
-%section
-  .wrapper
-    %h2 Additional programs to meet diverse teacher needs
-    %p In addition to our in-person facilitator led options for middle and high school teachers we have several other programs to meet the diverse needs of our teachers.
+    %h2=hoc_s(:pl_middle_high_additional_programs_heading)
+    %p=hoc_s(:pl_middle_high_additional_programs_desc)
     .action-block__wrapper.action-block__wrapper--three-col
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Self-Paced Learning
-          %p Learn at your own pace using our online learning modules. You can start whenever is convenient for you and the courses are free.
+          %h3=hoc_s(:pl_self_paced_learning_heading)
+          %p=hoc_s(:pl_self_paced_learning_desc)
         .content-footer
-          %a{href: "/educate/professional-development-online", class: "link-button secondary"} Learn more
+          %a.link-button.secondary{href: "/educate/professional-development-online"}
+            =hoc_s(:call_to_action_explore_self_paced_learning)
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Elementary Workshops
-          %p Do you teach Kindergarten through 5th grade? Check out the link below to learn more about our K5 workshops.
+          %h3=hoc_s(:pl_elementary_workshops_heading)
+          %p=hoc_s(:pl_elementary_workshops_desc)
         .content-footer
-          %a{href: "/professional-development-workshops", class: "link-button secondary"} Learn more
+          %a.link-button.secondary{href: "/professional-development-workshops"}
+            =hoc_s(:call_to_action_explore_k_5_workshops)
       .action-block.action-block--one-col.secondary.flex-space-between
         .content-wrapper
-          %h3 Outside the United States
-          %p If you are an international teacher interested in professional learning. Learn more about what is offered in your area.
+          %h3=hoc_s(:pl_outside_us_heading)
+          %p=hoc_s(:pl_outside_us_desc)
         .content-footer
-          %a{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", class: "link-button secondary has-external-link"} Learn more
+          %a.link-button.secondary.has-external-link{href: "https://support.code.org/hc/en-us/articles/115003865532-I-teach-outside-of-the-US-Are-there-resources-to-help-me-teach-computer-science-", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:call_to_action_for_intl_educators)
 
 = view :section_divider_line
 
 %section
   .wrapper
-    %h2 Have questions?
+    %h2=hoc_s(:heading_have_questions)
     .action-block.action-block--two-col
       .text-wrapper.col-50
-        %p Your local Code.org Regional Partner provides high quality Code.org professional learning to teachers, and can help guide your school or district on implementation, certification, funding, and more. They are happy to answer any questions you may have about the program!
+        %p=hoc_s(:pl_regional_partner_desc)
         = view :professional_development_workshops_regional_partner_search
-        %a{href: "https://support.code.org/", class: "link-button secondary has-external-link", target: "_blank", rel: "noopener noreferrer"} Visit our support center
-      %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: "", class: "col-50"}
+        %a.link-button.secondary.has-external-link{href: "https://support.code.org/", target: "_blank", rel: "noopener noreferrer"}
+          =hoc_s(:call_to_action_visit_support_center)
+      .media-wrapper.right.col-50
+        %img{src: "/images/professional-learning/pl-teachers-talking.png", alt: ""}
   .clear

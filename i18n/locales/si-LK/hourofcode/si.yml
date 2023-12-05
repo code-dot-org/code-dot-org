@@ -59,6 +59,8 @@ si:
     පරිගණක විද්යාව භාවිතා කරන්න!
   codeorg_homepage_hoc2022_body: විශ්වය ගවේෂණය කරන්න, ඉලක්කයක් ලබා ගන්න, පියවරක් ගන්න
     - පරිගණක විද්යාව අත්හදා බැලීමට බොහෝ ක්රම තිබේ.
+  codeorg_homepage_hoc2023_body: Get ready to strut your stuff and get creative with
+    AI! Create your own dance party featuring hits by your favorite artists.
   hoc2022_codeorg_title: නාසා සහ තවත් බොහෝ දේ සමඟ පැය කේතය සමරන්න
   hoc2022_codeorg_description: 10 වන පැය කේතය මේ ලෝකයෙන් බැහැර ය! එන්න ගවේෂණය කරන්න,
     සෙල්ලම් කරන්න, සහ අප සමඟ නිර්මාණය කරන්න.
@@ -219,6 +221,10 @@ si:
   for_students_teacher_led_learning: 'සිසුන් සඳහා: ගුරුවරයා විසින් මෙහෙයවන ඉගෙනීම'
   for_students_teacher_led_lessons: 'සිසුන් සඳහා: ගුරුවරයා විසින් මෙහෙයවන පාඩම්'
   professional_development: වෘත්තීය සංවර්ධනය
+  additional_educator_resources: Additional Educator Resources
+  teach_computer_science: Teach Computer Science
+  explore_our_curriculum: Explore Our Curriculum
+  start_professional_learning: Start Professional Learning
   how_ai_works_video_series: AI වීඩියෝ මාලාව ක්රියා කරන ආකාරය
   learn_how_ai_works: AI ක්රියා කරන ආකාරය ඉගෙන ගන්න
   ai_101_for_educators: අධ්යාපනඥයින් සඳහා AI 101
@@ -284,16 +290,30 @@ si:
   call_to_action_hold_an_event: සිදුවීමක් පැවැත්වීමට
   call_to_action_register_event: ඔබේ සිදුවීම ලියාපදිංචි කරන්න
   call_to_action_register_your_hoc: ඔබේ කේත පැය ලියාපදිංචි කරන්න
+  call_to_action_register_now: Register now
+  call_to_action_share_event_plan: Share your event plan
   call_to_action_select_activity: ක්රියාකාරකමක් තෝරන්න
+  call_to_action_select_coding_activity: කේතීකරණ ක්රියාකාරකමක් තෝරන්න
   call_to_action_start_activity: ක්රියාකාරකමක් ආරම්භ කරන්න
   call_to_action_get_certificates: සහතික ලබා ගන්න
+  call_to_action_print_certificates: සහතික මුද්රණය කරන්න
   call_to_action_go_beyond_hoc: සංග්රහයේ පැය ඉක්මවා යන්න
+  call_to_action_see_volunteer_guide: See volunteer guide
+  call_to_action_see_teacher_guide: See teacher how-to guide
+  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_join_advocacy_coalition: Join the advocacy coalition
+  call_to_action_become_an_advocate: Become an advocate
+  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_sign_up_to_volunteer: ස්වේච්ඡා සේවයට ලියාපදිංචි වන්න
+  call_to_action_share_on_social_media: Share on social media
   call_to_action_explore_all_hoc_activities: Code.org වෙතින් සියලුම පැය කේත ක්රියාකාරකම්
     ගවේෂණය කරන්න
   call_to_action_start_dance_party: නර්තන සාදය ආරම්භ කරන්න
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: දෙවන කොටස ආරම්භ කරන්න
   call_to_action_start_unplugged_activity: විසන්ධි කළ ක්රියාකාරකම් ආරම්භ කරන්න
   call_to_action_view_promo_resources: ප්රවර්ධන සම්පත් බලන්න
+  call_to_action_get_involved: Get involved
   call_to_action_learn_more: තවත් ඉගෙන ගන්න
   call_to_action_watch_now: දැන් නරඹන්න
   call_to_action_try_activity: ක්රියාකාරකම් උත්සාහ කරන්න
@@ -301,6 +321,8 @@ si:
   call_to_action_try_hoc_ai_activities: හෝර් ඔෆ් කෝඩ් AI ක්රියාකාරකම් අත්හදා බලන්න
   call_to_action_explore_activities: ක්රියාකාරකම් ගවේෂණය කරන්න
   call_to_action_explore_ai: AI ගවේෂණය කරන්න
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: මෙවලම ගවේෂණය කරන්න
   call_to_action_explore_unit: ඒකකය ගවේෂණය කරන්න
   call_to_action_explore_curriculum: විෂය මාලාව ගවේෂණය කරන්න
   call_to_action_explore_curricula: විෂයමාලාව ගවේෂණය කරන්න
@@ -325,6 +347,10 @@ si:
   call_to_action_explore_maker: විෂයමාලා සාදන්නා ගවේෂණය කරන්න
   call_to_action_explore_hoc: කේත නිබන්ධන පැය ගවේෂණය කරන්න
   call_to_action_explore_hoc_short: කේත පැය ගවේෂණය කරන්න
+  call_to_action_explore_how_ai_works: Explore How AI Works
+  call_to_action_explore_dance_party: Explore Dance Party
+  call_to_action_explore_ai_for_oceans: Explore AI For Oceans
+  call_to_action_explore_minecraft: Explore Minecraft
   call_to_action_try_app_lab: යෙදුම් විද්යාගාරය උත්සාහ කරන්න
   call_to_action_view_lesson_plan: පාඩම් සැලැස්ම බලන්න
   call_to_action_self_paced_pl: ස්වයං මට්ටමේ වෘත්තීය ඉගෙනීම ආරම්භ කරන්න
@@ -351,11 +377,13 @@ si:
   call_to_action_explore_ai_curricula: AI විෂය ගවේෂණය කරන්න
   call_to_action_explore_curriculum_catalog: විෂයමාලා නාමාවලිය ගවේෂණය කරන්න
   call_to_action_see_full_curriculum_catalog: සම්පූර්ණ විෂයමාලා නාමාවලිය බලන්න
+  call_to_action_view_curriculum_catalog: View Curriculum Catalog
   call_to_action_find_self_paced_modules: ස්වයං-වේගවත් මොඩියුල සොයා ගන්න
   call_to_action_join_teacher_forums: ගුරු සංසදවලට සම්බන්ධ වන්න
   call_to_action_explore_teacher_forums: ගුරු සංසද ගවේෂණය කරන්න
   call_to_action_explore_teacher_forum: ගුරු සංසදය ගවේෂණය කරන්න
   call_to_action_explore_career_resources: වෘත්තීය සම්පත් ගවේෂණය කරන්න
+  call_to_action_explore_stats_infographics: Explore statistics & infographics
   call_to_action_watch_videos: වීඩියෝ නරඹන්න
   call_to_action_download_posters: පෝස්ටර් බාගන්න
   call_to_action_contact_support: Code.org සහාය අමතන්න
@@ -366,6 +394,7 @@ si:
   call_to_action_start_modules: මොඩියුල ආරම්භ කරන්න
   call_to_action_see_course_details: පාඨමාලා විස්තර බලන්න
   call_to_action_see_lesson_details: පාඩම් විස්තර බලන්න
+  call_to_action_see_more_insp_videos: See more inspirational videos
   call_to_action_learn_about_approach: අපගේ ප්රවේශය ගැන තව දැනගන්න
   call_to_action_try_java_lab: ජාවා විද්යාගාරය උත්සාහ කරන්න
   call_to_action_notify_available: ලබා ගත හැකි විට මට දැනුම් දෙන්න
@@ -382,15 +411,28 @@ si:
   call_to_action_become_partner_usa: එක්සත් ජනපද හවුල්කරුවෙකු වන්න
   call_to_action_become_partner_intl: ජාත්යන්තර හවුල්කරුවෙකු වන්න
   call_to_action_become_a_volunteer: ස්වේච්ඡා සේවකයෙකු වන්න
+  call_to_action_become_a_volunteer_today: Become a volunteer today!
   call_to_action_start_translating: පරිවර්තනය ආරම්භ කරන්න
   call_to_action_learn_about_advocacy: අපගේ උපදේශකත්වය ගැන ඉගෙන ගන්න
   call_to_action_visit_store: ගබඩාවට පිවිසෙන්න
   call_to_action_view_faqs: තවත් නිතර අසන ප්රශ්න බලන්න
+  call_to_action_view_resources: View more resources
   call_to_action_applications_open: යෙදුම් දැන් විවෘත වේ
   call_to_action_apply_cs_ambassador: CS තානාපතිවරයෙකු වීමට අයදුම් කරන්න
   call_to_action_coming_soon: ළඟදීම එයි!
   call_to_action_learn_how_ai_works: AI ක්රියා කරන ආකාරය ඉගෙන ගන්න
   call_to_action_learn_about_ai: AI ගැන ඉගෙන ගන්න
+  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_get_started: ආරම්භ කරන්න
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: අධ්යාපනඥයින් සඳහා මාර්ගෝපදේශය බලන්න
   aria_label_call_to_action_hoc_how_to_companies: සමාගම් සඳහා මාර්ගෝපදේශය බලන්න
   aria_label_call_to_action_hoc_how_to_districts: දිස්ත්රික්ක සඳහා මාර්ගෝපදේශය බලන්න
@@ -414,6 +456,10 @@ si:
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
   aria_label_call_to_action_teaching_csp: ඉගැන්වීමේ පරිගණක විද්යා මූලධර්ම වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
+  aria_label_call_to_action_teaching_problem_solving: ඉගැන්වීමේ ගැටළු විසඳීම සහ පරිගණක
+    වෘත්තීය ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: ඉගැන්වීමේ පරිගණක විද්යා සම්බන්ධතා වෘත්තීය
     ඉගෙනුම් වැඩසටහන ආරම්භ කරන්න
   aria_label_call_to_action_teaching_ai: ඉගැන්වීමේ AI සහ යන්ත්ර ඉගෙනුම් වෘත්තීය ඉගෙනුම්
@@ -432,6 +478,8 @@ si:
     කරන්න
   aria_label_call_to_action_curriculum_csp: පරිගණක විද්යා මූලධර්ම විෂය මාලාව ගවේෂණය
     කරන්න
+  aria_label_call_to_action_curriculum_problem_solving: ගැටළු විසඳීම සහ පරිගණක විෂය
+    නිර්දේශය ගවේෂණය කරන්න
   aria_label_call_to_action_curriculum_csc: පරිගණක විද්යා සම්බන්ධතා විෂය මාලාව ගවේෂණය
     කරන්න
   aria_label_call_to_action_curriculum_ai: AI සහ යන්ත්ර ඉගෙනුම් විෂය මාලාව ගවේෂණය
@@ -492,6 +540,39 @@ si:
     බලන්න
   aria_label_call_to_action_how_ai_works_lesson_07: අපගේ AI ආචාර ධර්ම සංග්රහය පාඩම
     විස්තර බලන්න
+  aria_label_call_to_action_learn_more_teach: Learn more about teaching computer science
+  aria_label_call_to_action_learn_more_self_paced_pl: Learn more about self-paced
+    professional learning
+  aria_label_call_to_action_minecraft_aquatic: Get started with Minecraft Voyage Aquatic
+  aria_label_call_to_action_minecraft_aquatic_lesson: View Minecraft Voyage Aquatic
+    lesson plan
+  aria_label_call_to_action_minecraft_journey: Get started with Minecraft Hero's Journey
+  aria_label_call_to_action_minecraft_journey_lesson: View Minecraft Hero's Journey
+    lesson plan
+  aria_label_call_to_action_minecraft_adventurer: Get started with Minecraft Adventurer
+  aria_label_call_to_action_minecraft_adventurer_lesson: View Minecraft Adventurer
+    lesson plan
+  aria_label_call_to_action_minecraft_designer: Get started with Minecraft Designer
+  aria_label_call_to_action_minecraft_designer_lesson: View Minecraft Designer lesson
+    plan
+  aria_label_call_to_action_minecraft_2023: Get started with Minecraft Generation
+    AI
+  aria_label_call_to_action_minecraft_2022: Get started with Minecraft Escape Estate
+  aria_label_call_to_action_minecraft_2021: Get started with Minecraft TimeCraft
+  aria_label_call_to_action_minecraft_2020: Get started with Minecraft AI for Earth
+  aria_label_call_to_action_register_student_workshop: Register for a free student
+    workshop
+  aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.org හි වෘත්තීය ඉගෙනුම් වැඩසටහන
   curriculum_name_csf: පරිගණක විද්යා මූලධර්ම
   curriculum_name_csf_02: ඕනෑම CS මූලධර්ම (පාඨමාලාව AF)
@@ -509,6 +590,8 @@ si:
   curriculum_name_csf_teacher_led: ගුරුවරයා විසින් පාඩම
   curriculum_name_csd: පරිගණක විද්යා සොයාගැනීම්
   curriculum_name_csp: පරිගණක විද්යා මූලධර්ම
+  curriculum_name_problem_solving: ගැටළු විසඳීම සහ පරිගණකකරණය
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: පරිගණක විද්යා සම්බන්ධතා
   curriculum_name_csa: AP® පරිගණක විද්යාව A
   curriculum_name_csa_ai: මෘදුකාංග ඉංජිනේරු සහ පරිගණක දැක්ම
@@ -524,6 +607,8 @@ si:
   curriculum_name_dance_party_02: දිගටම නටන්න
   curriculum_name_dance_party_unplugged: ඩාන්ස් පාර්ටි නොප්ලග්
   curriculum_name_dance_party_ai_edition: 'නර්තන සාදය: AI සංස්කරණය'
+  curriculum_name_ai_for_oceans: සාගර සඳහා කෘෂිකර්ම උපදේශක
+  curriculum_name_minecraft: Minecraft
   curriculum_name_problem_solving_computing: ගැටළු විසඳීම සහ පරිගණකකරණය
   curriculum_name_web_development: වෙබ් සංවර්ධන
   curriculum_name_interactive_animations_games: අන්තර් ක්රියාකාරී සජීවිකරණ සහ ක්රීඩා
@@ -634,8 +719,10 @@ si:
   module_label_languages: 'සහාය දක්වන භාෂා:'
   module_label_accessibility_features: 'ප්රවේශ්යතාව:'
   module_label_accessibility_features_full: 'ප්රවේශ්යතා විශේෂාංග:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: අධ්යාපනඥ මෙවලම
   module_label_educator_course: අධ්යාපනඥ පාඨමාලාව
+  module_label_educator_resources: Educator resources
   module_label_student_tool: ශිෂ්ය මෙවලම
   module_label_student_product: නිෂ්පාදන
   module_label_student_content_resources: අන්තර්ගතය සහ සම්පත්
@@ -644,6 +731,7 @@ si:
   module_label_available_now: දැන් ලබාගත හැකිය
   module_label_video_series: වීඩියෝ මාලාව
   module_label_self_paced: ස්වයං-වේග මොඩියුලය
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -673,6 +761,7 @@ si:
   module_age_11: වයස අවුරුදු 11+
   module_age_13: වයස අවුරුදු 13+
   module_age_all_age: සියලුම වයස්
+  module_professional_learning: Professional learning
   module_grade_k_5_teachers: K-5 ගුරුවරුන්
   module_grade_6_10_teachers: 6-10 ගුරුවරුන්
   module_grade_9_12_teachers: 9-12 ගුරුවරුන්
@@ -684,6 +773,7 @@ si:
   module_duration_1_hr: පැය 1 යි
   module_duration_2_hrs: පැය 2 යි
   module_duration_3_hrs: පැය 3 යි
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: පැය 5 යි
   module_duration_5_hrs_plus: 5+ පැය
   module_duration_8_hrs: පැය 8
@@ -704,6 +794,8 @@ si:
   module_label_teaching_csf: පරිගණක විද්යා මූලධර්ම ඉගැන්වීම
   module_label_teaching_csd: පරිගණක විද්යා සොයාගැනීම් ඉගැන්වීම
   module_label_teaching_csp: පරිගණක විද්යා මූලධර්ම ඉගැන්වීම
+  module_label_teaching_problem_solving: ගැටළු විසඳීම සහ පරිගණක ඉගැන්වීම
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: පරිගණක විද්යා සම්බන්ධතා ඉගැන්වීම
   module_label_teaching_ai: AI සහ යන්ත්ර ඉගෙනීම ඉගැන්වීම
   module_label_teaching_maker_cp: උපාංග සමඟ යෙදුම් නිර්මාණය කිරීම ඉගැන්වීම (පරිපථ
@@ -773,6 +865,15 @@ si:
   heading_cs_ambassador_program: සීඑස් තානාපති වැඩසටහන
   heading_featured_student_projects: විශේෂිත ශිෂ්ය ව්යාපෘති
   heading_start_hoc_with_videos: ආශ්වාදජනක වීඩියෝ සමඟ ඔබේ කේත පැය ආරම්භ කරන්න
+  heading_attend_free_workshop: Attend a free student workshop
+  heading_access_more_cs_resources: Access more computer science resources
+  heading_available_on_code_dot_org: Available on Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: ඔබ උසස් පාසැල් ශිෂ්යයෙක් නම් ඔබේ පාසලේ පරිගණක විද්යාව ගැනීමට
     වැඩි තරුණ කාන්තාවන් දිරිමත් කිරීම ගැන උද්යෝගිමත්, එවිට අපට ඔබව අවශ්යයි!
   cs_ambassador_desc: වෛද්ය විද්යාව, විනෝදාස්වාදය, ක්රීඩා, අධ්යාපනය, ව්යාපාර, විලාසිතා
@@ -843,6 +944,19 @@ si:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: මෙම ගිම්හානයේදී ආරම්භ වන පුද්ගල
     හා අතථ්ය වැඩමුළු.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: ඉදිරියට යන්න, ලණුව කපන්න (ටික වේලාවක්)!
   no_devices_section_desc: CS අධ්යාපනය සෑම විටම තිරයක් ඉදිරිපිට තිබිය යුතු නොවන අතර
     පරිගණක විද්යා සංකල්ප ඉගෙන ගැනීමට උපාංග ප්රවේශය බාධකයක් නොවිය යුතුය.
@@ -867,7 +981,52 @@ si:
   subscribe_form_section_desc_csp: Code.org හි පරිගණක විද්යා මූලධර්ම පිළිබඳ මාසික
     ඊමේල් ලබා ගැනීමට ලියාපදිංචි වන්න සහ ප්රයෝජනවත් මතක් කිරීම් ලබා ගන්න, ඉඟි, සහ යාවත්කාලීන
     කිරීම් ඔබගේ එන ලිපි වෙත යවනු ලැබේ.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: ඔබට ඕනෑම වේලාවක දායකත්වයෙන් ඉවත් විය හැකිය.
+  hoc_page_what_is_hoc_heading: What is Hour of Code?
+  hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
+    of millions of students in 180+ countries. Anyone, anywhere can organize an Hour
+    of Code event or try any of the over 500+ one-hour tutorials, available in over
+    45 languages."
+  hoc_page_desc_2023: This year Hour of Code is exploring the limitless realms of
+    creativity empowered by AI! Whether you or your students are experienced coders
+    or you are setting out on your very first computer science expedition, this Hour
+    of Code promises an extraordinary voyage.
+  hoc_page_place_to_start: 'There are several places you can start, choose which one
+    is right for you and your students:'
+  hoc_page_lead_activity_heading: Lead an Hour of Code Activity
+  hoc_page_lead_activity_desc: With more than 700 activities to choose from with classifications
+    by grade level, experience, and inclusion of AI, your choices are vast. When you
+    know your plans, please [register your activity](%{register_activity_url}) so
+    we can celebrate all the events happening across the globe.
+  hoc_page_activity_minecraft_desc: Build and explore with Minecraft! Learn basic
+    computer science skills with lots of different Minecraft activities to choose
+    from.
+  hoc_page_how_ai_works_desc: Learn the inner workings of ChatGPT, computer vision,
+    and other AI concepts, explained by the people who created these technologies
+    through videos and accompanying lesson plans.
+  hoc_page_how_ai_works_title: 'Lesson Plans: How AI Works'
+  hoc_page_ai_101_heading: Engage with AI 101 for Teachers
+  hoc_page_ai_101_desc: AI 101 for Teachers is a five-part professional learning video
+    series that will demystify AI, explore responsible implementation, address bias,
+    and showcase how AI-powered learning can revolutionize student outcomes.
+  hoc_page_ai_101_block_title: 'Video Series: AI 101 for Teachers'
+  hoc_page_ai_101_block_desc: A free, foundational online learning series for any
+    teacher and educator interested in the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education.
+  hoc_page_go_beyond_hoc: Go beyond Hour of Code
+  hoc_page_go_beyond_hoc_card_desc_teach: Join the global community of over 2 million
+    educators empowering the next generation of innovators, problem solvers, and digital
+    citizens.
+  hoc_page_go_beyond_hoc_card_desc_curriculum: Tap into your students' full potential
+    with Code.org's free, flexible, and fun Computer Science curriculum. There's something
+    for every classroom.
+  hoc_page_go_beyond_hoc_card_desc_pl: Our free, self-paced modules help you develop
+    your own understanding while preparing to teach computer science in your classroom.
   dance_hero_heading: නර්තන සාදයක් කේතනය කරන්න
   dance_featuring_songs_by_short: 'ගීත රචනා කරන්නේ:'
   dance_featuring_songs_by_long: 'නර්තන සාදයට ගීත ඇතුළත් වේ:'
@@ -875,6 +1034,46 @@ si:
   dance_choose_activity: ඔබේ නර්තන සාදය තෝරන්න
   dance_afe_disclaimer: කාගේ සංගීතය මෙම නිබන්ධනය භාවිතා කරන කලාකරුවන් Code.org වෙත
     ඔවුන්ගේ සංගීතය භාවිතය බලපත්ර කොටසක් ලෙස ඇමසන් අනුග්රහය හෝ අනුමත නොකරයි.
+  minecraft_hero_heading: Minecraft Hour of Code Tutorials
+  minecraft_activities_desc: All tutorials are available in many languages and compatible
+    with modern browsers and tablets. Don't have internet? [Download the offline version
+    of Minecraft Adventurer!](%{offline_url})
+  minecraft_cdo_activity_title_aquatic: Minecraft Voyage Aquatic
+  minecraft_cdo_activity_desc_aquatic: Build and explore with Minecraft! Use your
+    creativity and problem solving skills to explore and build underwater worlds with
+    code.
+  minecraft_cdo_activity_title_journey: Minecraft Hero's Journey
+  minecraft_cdo_activity_desc_journey: Build and explore with Minecraft! Players write
+    code that instructs the Agent to execute their commands and overcome in-game obstacles.
+  minecraft_cdo_activity_title_adventurer: Minecraft Adventurer
+  minecraft_cdo_activity_desc_adventurer: Learn the basics of computer science by
+    programming Alex or Steve to move through a simulated piece of a Minecraft world.
+  minecraft_cdo_activity_title_designer: Minecraft Designer
+  minecraft_cdo_activity_desc_designer: You make the rules in this activity, where
+    you can learn basic computer science skills to create your own Minecraft game
+    to share with others!
+  minecraft_education_activities_heading: Available in Minecraft Education
+  minecraft_education_activity_title_2023: Minecraft Generation AI
+  minecraft_education_activity_desc_2023: Venture through time to create your AI-powered
+    inventions! The new Minecraft Hour of Code tutorial is now available in Minecraft
+    Education for Windows, Mac, Chromebook, iPad and Mobile. Get started with free
+    educator resources, trainings, and videos.
+  minecraft_education_activity_title_2022: Minecraft Escape Estate
+  minecraft_education_activity_desc_2022: Escape the mysterious mansion by dawn and
+    earn a million emeralds!
+  minecraft_education_activity_title_2021: Minecraft TimeCraft
+  minecraft_education_activity_desc_2021: Travel back in time to save the future in
+    this free coding lesson in Minecraft Education.
+  minecraft_education_activity_title_2020: Minecraft AI for Earth
+  minecraft_education_activity_desc_2020: Program the Minecraft Agent to collect data
+    about forest fires. Learn coding basics and explore a real-world example of artificial
+    intelligence.
+  minecraft_resources_desc_01: Utilize this on demand [free course](%{course_url})
+    or register your entire class to attend a live Hour of Code workshop with a guest
+    teacher. Offered at multiple times during CSEdWeek, %{campaign_date}.
+  minecraft_resources_desc_02: Inspire STEM passion in K-12 learners with 200 hours
+    of computer science curriculum, from block to python, supported by professional
+    development.
   blockchain_hero_heading: බ්ලොක්චේන් ක්රියා කරන ආකාරය
   blockchain_hero_desc: අපගේ නව වීඩියෝ මාලාව සහ ඒ සමඟ ඇති පාඩම් “බ්ලොක්චේන් ක්රියා
     කරන ආකාරය” සමඟ බ්ලොක්චේන් ලෝකයට කිමිදෙන්න!
@@ -985,6 +1184,7 @@ si:
     ඉන්පසු සියලුම සහභාගිවන්නන්ගෙන් වඩාත්ම අවශ්යතා විසඳන මාර්ගෝපදේශ ඉදිරිපත් කිරීමට
     කණ්ඩායමක් ලෙස සහයෝගයෙන් කටයුතු කරන්න.
   ai_curriculum_btn_aria_label_06: උත්පාදක AI පාඩම් සැලැස්මේ සමාජ බලපෑම බලන්න
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Code.org සමඟ AI ගැන ගුරුවරුන් පවසන දේ:'
   ai_carousel_quote_01: මෙම පාඩම මගේ සිසුන්ට වර්ගීකරණ පද්ධතිවල මතයේ අංගයක් ඇති බව
     දැකීමට අවස්ථාව ලබා දුන්නේය. පසුව, AI හි නැඹුරුව අවසන් වන්නේ කෙසේදැයි බැලීමට පටන්
@@ -1182,6 +1382,68 @@ si:
   ai_vid_computervision_caption: පරිගණක දැක්ම
   ai_vid_ethics1_caption: 'ආචාර ධර්ම සහ AI: සමාන ප්රවේශය සහ ඇල්ගොරිතම නැඹුරුව'
   ai_vid_ethics2_caption: 'ආචාර ධර්ම සහ AI: පෞද්ගලිකත්වය සහ රැකියාවේ අනාගතය'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: අධ්යාපනඥයින් සඳහා ස්වයං-වේගවත් වෘත්තීය ඉගෙනුම්
   self_paced_pl_hero_desc: ඔවුන්ගේ පරිගණක විද්යාව ඉගැන්වීමේ ගමනේ සෑම අදියරකදීම ගුරුවරුන්ට
     සහාය වීම සඳහා වෘත්තීය ඉගෙනුම් පිරිනැමීම්.
@@ -2336,6 +2598,10 @@ si:
     සෑම වසරකම දෙසැම්බර් මාසයේදී ඔබේ පන්තියට පරිගණක විද්යා අධ්යාපන සතිය සමරමින් ලොව
     පුරා සිටින මිලියන සංඛ්යාත සිසුන්ට පැය කේතය සමඟ සම්බන්ධ විය හැකිය. වාර්ෂික සැමරුම
     සඳහා ලියාපදිංචි වීම සෑම වසරකම ඔක්තෝබර් මාසයේදී ආරම්භ වේ.
+  hoc_homepage_join_the_celebration_description: Your class or group can join millions
+    around the world doing the Hour of Code! This year, the annual Computer Science
+    Education Week celebration is %{campaign_date} and registration begins in October.
+    Though, Hour of Code is available year-round.
   hoc_homepage_what_is_hoc_subhead: භාෂා 45 කට අධික සංඛ්යාවකින් පැය එකක නිබන්ධන. අත්දැකීම්
     අවශ්ය නොවේ. පැය කේත ක්රියාකාරකම් වසර පුරා නොමිලේ ලබා ගත හැකිය.
   hoc_homepage_what_is_hoc_description: Hour of Code යනු පරිගණක විද්යාව සඳහා පැයක
@@ -2790,6 +3056,7 @@ si:
     [කෙසේද මාර්ගෝපදේශය කියවන්න] ()%{howto_url}'
   tutorial_dance2019_name: නර්තන පක්ෂය
   tutorial_danceparty_name: නර්තන පක්ෂය
+  tutorial_dancepartyai_name: 'නර්තන සාදය: AI සංස්කරණය'
   tutorial_chibitronics_name: 'චිබිට්රොනික්ස්: ආලෝකමත් කතාව'
   tutorial_athlete_name: ඔබේම ක්රීඩා ක්රීඩාව කේත කරන්න
   tutorial_moana_name: 'වර්ගය: කේතය සමඟ මාර්ග සොයා ගැනීම'
@@ -3392,19 +3659,14 @@ si:
   tutorial_csfirstdialogue_name: සංවාදය
   tutorial_codemonkeybeaver_name: බීවර් අචිවර්
   tutorial_codestersdistance_name: 'කෝඩෙස්ටර්ස්: සමාජ දුරස්ථ ස්ප්රීතු'
-  tutorial_itchspace_name: 'IchCode: අභ්යවකාශ ආක්රමණිකයන් - RokCoder'
   tutorial_vidcodemagic_name: SFX මැජික්
   tutorial_vidcodemagices_name: SFX මැජික්
   tutorial_codespeakmeal_name: කේතය සහ සෞඛ්ය සම්පන්න ආහාර වේලක් යෙදුම
-  tutorial_itchfish_name: 'IchCode: මාළු සීරීම් ක්රීඩාව'
   tutorial_bsdwebsite_name: මගේ ප්රියතම වෙබ් අඩවිය
   tutorial_codespeaktime_name: සීරීම් තුළ කාල කැප්සියුලය කේත කරන්න
-  tutorial_itchwebcam_name: 'IchCode: වෙබ් කැමරාව වැඩිදියුණු කළ යථාර්ථය'
-  tutorial_itchball_name: 'IchCode: ලක්මල් බෝලය'
   tutorial_ttrace_name: ජාතිය තත්වය
   tutorial_plethora_name: 'රාශිය: හේතුව සහ බලපෑම'
   tutorial_educodesecret_name: ඒජන්සියේ රහස් අනාවරණය කරගන්න!
-  tutorial_itchshapes_name: 'IchCode: හැඩයන් සහ කෝණ'
   tutorial_codeguppytext_name: පෙළ පදනම් කරගත් කේතීකරණය හඳුන්වාදීම
   tutorial_vidcodeplastiche_name: ප්ලාස්ටික් දූෂණය PSA
   tutorial_educativechatbot_name: පයිතන් හි ඔබේම චැට්බෝට් එකක් සාදන්න
@@ -3427,7 +3689,6 @@ si:
   tutorial_codecapture_name: JavaScript සමඟ ක්රමලේඛනය ඉගෙන ගන්න
   tutorial_codehslitter_name: ලිටර්-නිදහස් ප්රජාවක් සඳහා කේතීකරණය
   tutorial_bsdocean_name: ජල පහත ජීවිතය
-  tutorial_itchplatformer_name: 'IchCode: සීරීම් 3.0 වේදිකා නිබන්ධනය'
   tutorial_codejika_name: 'කෝඩෙජිකා: 5 මිනිත්තු වෙබ් අඩවිය'
   tutorial_gamefrootclicker_name: විචල්යයන් ඉගෙන ගන්න. ඔබේ ම Clicker ගේම් කේතය.
   tutorial_rmagicequity_name: සමානාත්මතාවය එදිරිව සමානාත්මතාවය
@@ -3480,6 +3741,9 @@ si:
   tutorial_danceparty_shortdescription: ඔබේ මිතුරන් සමඟ බෙදා ගැනීමට නර්තන සාදයක් කේත
     කරන්න. බියොන්සේ, ලිසෝ, හැරී ස්ටයිල්ස්, ලීල් නාස් එක්ස්, සෙලීනා ගෝමස්, ඩිස්නි හි
     'එන්කැන්ටෝ' හි සංගීතය සහ තවත් බොහෝ දේ ඇතුළත් වේ!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: ඔබේම කතාව ආලෝකමත් කිරීම සඳහා කඩදාසි පරිපථයක්
     වැඩසටහන්ගත කරන්න.
   tutorial_athlete_shortdescription: පැසිපන්දු ක්රීඩාවක් කිරීම හෝ ක්රීඩා හරහා මිශ්ර
@@ -4692,6 +4956,9 @@ si:
   tutorial_danceparty_longdescription: ඔබේ මිතුරන් සමඟ බෙදා ගැනීමට නර්තන සාදයක් කේත
     කරන්න. බියොන්සේ, ලිසෝ, හැරී ස්ටයිල්ස්, ලීල් නාස් එක්ස්, සෙලීනා ගෝමස්, ඩිස්නි හි
     'එන්කැන්ටෝ' හි සංගීතය සහ තවත් බොහෝ දේ ඇතුළත් වේ!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: ඔබේම කතාව ආලෝකමත් කිරීම සඳහා කඩදාසි පරිපථයක්
     වැඩසටහන්ගත කරන්න.
   tutorial_athlete_longdescription: පැසිපන්දු ක්රීඩාවක් කිරීම හෝ ක්රීඩා හරහා මිශ්ර
@@ -7232,21 +7499,12 @@ si:
   tutorial_codestersdistance_longdescription: පයිතන් හි කේතීකරණයේ මූලික කරුණු ඉගෙන
     ගන්න, ඉන්පසු ස්ප්රීතු දෙකක් අතර දුර ගණනය කරන වැඩසටහනක් සාදන්න ඒවා සමාජ දුරස්ථභාවය
     හෝ වෙස්මුහුණක් පැළඳිය යුතු බවට වග බලා ගන්න.
-  tutorial_itchspace_longdescription: මෙම නිබන්ධනය සීරීම් එම්අයිටී ක්රමලේඛන භාෂාව
-    භාවිතා කරමින් සම්භාව්ය අභ්යවකාශ ආක්රමණිකයින්ගේ ක්රීඩාවක් නිර්මාණය කිරීම හරහා ඔබව
-    ගෙන යයි. වැඩි සීරීම් මත පදනම් වූ වීඩියෝ සහ නිබන්ධන සඳහා රොක්කෝඩර් යූ ටියුබ් නාලිකාවට
-    දායක වන්න! සෑම වීඩියෝවක්ම බයිට් ප්රමාණයේ නිබන්ධනයකි (දළ වශයෙන් මිනිත්තු දහයක්
-    දිග) එහි නිශ්චිත අවසන් ඉලක්ක අඩංගු වේ. අවසාන ප්රති result ලය වන්නේ උසස් තත්ත්වයේ
-    සීරීම් ආකේඩ් ක්රීඩාවකි.
   tutorial_vidcodemagic_longdescription: ලූපයක් භාවිතා කරමින් තිරය වටා අහඹු ලෙස දැල්වීම
     සිදු කරන්න.
   tutorial_vidcodemagices_longdescription: ලූපයක් භාවිතා කරමින් තිරය වටා අහඹු ලෙස
     දැල්වීම සිදු කරන්න.
   tutorial_codespeakmeal_longdescription: පරිශීලකයින්ට සෞඛ්ය සම්පන්න ආහාර තීරණ ගැනීමට
     උපකාරී වන යෙදුමක් කේත කිරීමට ඉගෙන ගන්න.
-  tutorial_itchfish_longdescription: සීරීම් 3.0 මෝරෙකු සමඟ ක්රීඩාවක් කිරීම සහ කිමිදුම්කරුවෙකු
-    අහම්බෙන් ආහාරයට ගන්නා විට මාළු ආහාරයට ගැනීම කඩාකප්පල් කරන ලද මාළු ආහාරයට ගැනීම
-    සඳහා නිබන්ධනය.
   tutorial_bsdwebsite_longdescription: 'මෙම පා course මාලාව සිසුන්ට වැදගත් හෝ රසවත්
     දේ බෙදා ගැනීමට ක්රමයක් ලෙස කේත භාවිතා කිරීමට ඉඩ ලබා දේ. HTML, CSS සහ JavaScript
     ඉගෙන ගන්නා අතරතුර ඔවුන්ට පාඩම අනුගමනය කිරීමට හෝ අද්විතීය ව්යාපෘති නිර්මාණය කළ
@@ -7255,10 +7513,6 @@ si:
     කෙරෙහි අවධානය යොමු කරයි 3 ඔබ උනන්දුවක් දක්වන හෝ කරන්නේ ආදරය කරන දේවල්. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: දැන් ඔබේ ජීවිතය පටිගත කිරීමට සහ පිළිබිඹු
     කිරීමට ඩිජිටල් කාලය කරලක් කේත කරන ආකාරය ඉගෙන ගන්න.
-  tutorial_itchwebcam_longdescription: වැඩි දියුණු කළ යථාර්ථය ගැන ඉගෙන ගෙන ඔබේම වැඩි
-    දියුණු කළ යථාර්ථය අතථ්ය අවකාශයක් සාදන්න.
-  tutorial_itchball_longdescription: තිරය වටා පිම්බීමට බෝලයක් ලබා ගන්න. ලූප තුළ ලූප
-    සහ කොන්දේසි ගැන ඉගෙන ගන්න.
   tutorial_ttrace_longdescription: කාර්යයන් ඇමතීමෙන් සහ පන්ති සැලසුම් කිරීමෙන්, ක්රීඩකයින්
     තමන්ගේම ධාවන මෝටර් රථය වේගවත්, වේගවත් හා බලවත් ලෙස වැඩසටහන්ගත කරයි; ධාවන තරඟ අතරතුර,
     ඔවුන්ගේ පාලනයන් සීරීමට ඔවුන්ගේ තරඟකරුවන්ගේ වාහන හැක් කළ හැකිය.
@@ -7268,8 +7522,6 @@ si:
     නියෝජිත ස්මිත් සමග රහස් ලෝකයන් ගවේෂණය, නූල්, වළළු සඳහා-දී. ඒජන්ත ස්මිත්ට වැරදිකරුවන්
     සොයා ගැනීමට සහ ඔවුන්ගේ නව පරිශීලකයින් සඳහා ඒජන්සියේ මෙහෙයුම් පද්ධතිය පයිතන් සමඟ
     වින්යාස කිරීමට උදව් කරන්න.
-  tutorial_itchshapes_longdescription: Scratch දී හැඩ අඳින්න ආකාරය ඉගෙන ගන්න. ඕනෑම
-    හැඩයක් සඳහා හැරවීමට කොපමණ ප්රමාණයක් ගණනය කිරීමට ඔබ ඉගෙන ගනු ඇත.
   tutorial_codeguppytext_longdescription: මාර්ගගත කේතීකරණ සංස්කාරකයක ඔබේ පළමු වැඩසටහන
     නිර්මාණය කිරීමෙන් පෙළ පදනම් කරගත් කේතීකරණයේ මූලික කරුණු ඉගෙන ගන්න.
   tutorial_vidcodeplastiche_longdescription: අපගේ සාගර ප්ලාස්ටික් පිරවීමේ ගැටළුව දිගින්
@@ -7350,8 +7602,6 @@ si:
   tutorial_bsdocean_longdescription: ජලය පහත ජීවිතය වර්තමානයේ අප මුහුණ දෙන දැවෙන ප්රශ්නයක්
     මත ආලෝකය විහිදුවයි - අපේ පරිසරය. මෙම ව්යාපෘතිය අපගේ ජලය ආරක්ෂා කිරීම සඳහා ඔබේම
     වෙබ් පිටුවක් කේත කිරීමට ඔබට මඟ පෙන්වීම කෙරෙහි අවධානය යොමු කරයි.
-  tutorial_itchplatformer_longdescription: සීරීම් භාවිතා කරමින් සරල වේදිකා ක්රීඩාවක්
-    නිර්මාණය කරන්නේ කෙසේද යන්න සඳහා නිබන්ධනය අනුගමනය කිරීමට පහසුය.
   tutorial_codejika_longdescription: HTML සහ CSS භාවිතා කේතනය කිරීම සඳහා විශිෂ්ට හැඳින්වීමක්.
     පේළි කිහිපයක් කේත කරන්න, වර්ණ දෙකක ශ්රේණියේ පසුබිමක්, නම සහ වෙබ් අඩවි දියත් කිරීමේ
     දිනය සහිත ලස්සන ගොඩබෑමේ පිටුවක් නිර්මාණය කිරීමෙන් හොව්ස් සහ වයිස් වලට හසු නොවී
@@ -7551,6 +7801,7 @@ si:
     අද්විතීය ලෙස විශේෂ වන විවිධත්වය වැලඳ ගනී.
   tutorial_dance2019_string_detail_grades: ශ්රේණි 2+
   tutorial_danceparty_string_detail_grades: ශ්රේණි 2+
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: 2-5 ශ්රේණි
   tutorial_athlete_string_detail_grades: ශ්රේණි 2+
   tutorial_moana_string_detail_grades: ශ්රේණි 2+
@@ -8147,19 +8398,14 @@ si:
   tutorial_csfirstdialogue_string_detail_grades: 2-8 ශ්රේණි
   tutorial_codemonkeybeaver_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
   tutorial_codestersdistance_string_detail_grades: 6+ ශ්රේණි
-  tutorial_itchspace_string_detail_grades: 6+ ශ්රේණි
   tutorial_vidcodemagic_string_detail_grades: ශ්රේණි 2+
   tutorial_vidcodemagices_string_detail_grades: ශ්රේණි 2+
   tutorial_codespeakmeal_string_detail_grades: 6+ ශ්රේණි
-  tutorial_itchfish_string_detail_grades: 2-8 ශ්රේණි
   tutorial_bsdwebsite_string_detail_grades: 6+ ශ්රේණි
   tutorial_codespeaktime_string_detail_grades: 2-8 ශ්රේණි
-  tutorial_itchwebcam_string_detail_grades: 6+ ශ්රේණි
-  tutorial_itchball_string_detail_grades: 2-8 ශ්රේණි
   tutorial_ttrace_string_detail_grades: 6-8 ශ්රේණි
   tutorial_plethora_string_detail_grades: ශ්රේණි 2+
   tutorial_educodesecret_string_detail_grades: 6+ ශ්රේණි
-  tutorial_itchshapes_string_detail_grades: 6+ ශ්රේණි
   tutorial_codeguppytext_string_detail_grades: 6-8 ශ්රේණි
   tutorial_vidcodeplastiche_string_detail_grades: 6+ ශ්රේණි
   tutorial_educativechatbot_string_detail_grades: ශ්රේණි 9+
@@ -8181,7 +8427,6 @@ si:
   tutorial_codecapture_string_detail_grades: 6+ ශ්රේණි
   tutorial_codehslitter_string_detail_grades: 6-8 ශ්රේණි
   tutorial_bsdocean_string_detail_grades: 6-8 ශ්රේණි
-  tutorial_itchplatformer_string_detail_grades: 6+ ශ්රේණි
   tutorial_codejika_string_detail_grades: 6+ ශ්රේණි
   tutorial_gamefrootclicker_string_detail_grades: 6-8 ශ්රේණි
   tutorial_rmagicequity_string_detail_grades: 6-8 ශ්රේණි
@@ -8234,6 +8479,8 @@ si:
   tutorial_dance2019_string_platforms: සියලු නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලට්, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්
+  tutorial_dancepartyai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්
   tutorial_chibitronics_string_platforms: සියලුම නවීන බ්රව්සර්, තිර කියවනය
   tutorial_athlete_string_platforms: සියලුම නවීන බ්රව්සර්
@@ -9029,22 +9276,16 @@ si:
   tutorial_codemonkeybeaver_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්
   tutorial_codestersdistance_string_platforms: සියලුම නවීන බ්රව්සර්, තිර කියවනය
-  tutorial_itchspace_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_vidcodemagic_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්, තිර කියවනය
   tutorial_vidcodemagices_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්, තිර කියවනය
   tutorial_codespeakmeal_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්
-  tutorial_itchfish_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_bsdwebsite_string_platforms: ක්රෝම්
   tutorial_codespeaktime_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්
-  tutorial_itchwebcam_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
-    අයිපෑඩ්
-  tutorial_itchball_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_ttrace_string_platforms: ක්රෝම්
   tutorial_plethora_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්
   tutorial_educodesecret_string_platforms: සියලුම නවීන බ්රව්සර්
-  tutorial_itchshapes_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_codeguppytext_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්
   tutorial_vidcodeplastiche_string_platforms: සියලුම නවීන බ්රව්සර්, අයිපෑඩ්
@@ -9073,7 +9314,6 @@ si:
   tutorial_codehslitter_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
   tutorial_bsdocean_string_platforms: ක්රෝම්
-  tutorial_itchplatformer_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_codejika_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්,
     වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
   tutorial_gamefrootclicker_string_platforms: සියලුම නවීන බ්රව්සර්, අයිපෑඩ්
@@ -9134,6 +9374,7 @@ si:
     අයිෆෝන්, අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, ඇන්ඩ්රොයිඩ් ටැබ්ලටය
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: චිබිට්රොනික්ස් චිබි චිප් සහ පරිපථ
     ස්ටිකර් LED
   tutorial_athlete_string_detail_platforms: ''
@@ -9732,19 +9973,14 @@ si:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9766,7 +10002,6 @@ si:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -9820,6 +10055,7 @@ si:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: බ්ලොක්
   tutorial_danceparty_string_detail_programming_languages: බ්ලොක්
+  tutorial_dancepartyai_string_detail_programming_languages: බ්ලොක්
   tutorial_chibitronics_string_detail_programming_languages: බ්ලොක්
   tutorial_athlete_string_detail_programming_languages: බ්ලොක්
   tutorial_moana_string_detail_programming_languages: බ්ලොක්
@@ -10454,20 +10690,15 @@ si:
   tutorial_csfirstdialogue_string_detail_programming_languages: බ්ලොක්, සීරීම්
   tutorial_codemonkeybeaver_string_detail_programming_languages: බ්ලොක්
   tutorial_codestersdistance_string_detail_programming_languages: පයිතන්
-  tutorial_itchspace_string_detail_programming_languages: බ්ලොක්
   tutorial_vidcodemagic_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
   tutorial_vidcodemagices_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
   tutorial_codespeakmeal_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
-  tutorial_itchfish_string_detail_programming_languages: බ්ලොක්
   tutorial_bsdwebsite_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: බ්ලොක්
-  tutorial_itchwebcam_string_detail_programming_languages: බ්ලොක්
-  tutorial_itchball_string_detail_programming_languages: බ්ලොක්
   tutorial_ttrace_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, කෝපි ස්ක්රිප්ට්
   tutorial_plethora_string_detail_programming_languages: භාෂා ස්වාධීන (බහු භාෂාවලින්
     ඉගැන්විය හැකිය)
   tutorial_educodesecret_string_detail_programming_languages: පයිතන්
-  tutorial_itchshapes_string_detail_programming_languages: බ්ලොක්
   tutorial_codeguppytext_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
   tutorial_vidcodeplastiche_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
   tutorial_educativechatbot_string_detail_programming_languages: පයිතන්
@@ -10492,7 +10723,6 @@ si:
   tutorial_codecapture_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
   tutorial_codehslitter_string_detail_programming_languages: පයිතන්, එච්ටීඑම්එල්
   tutorial_bsdocean_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: බ්ලොක්
   tutorial_codejika_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: බ්ලොක්
   tutorial_rmagicequity_string_detail_programming_languages: බ්ලොක්, ජාවාස්ක්රිප්ට්
@@ -11467,10 +11697,7 @@ si:
   tutorial_kodableshapes_name: කේතය සමඟ හැඩතල සාදන්න
   tutorial_nasabinary_name: 'ද්විමය කේතය: අභ්යවකාශ යානයක් සමඟ කතා කරන්නේ කෙසේද'
   tutorial_3dmaker_name: 3D සාදන්නා
-  tutorial_itchstart_name: 'IchCode: සීරීම් 5 බ්ලොක් ආරම්භකය'
   tutorial_hopsub_name: මිතුරෙකු සමඟ උමං මාර්ග රළ පහරවල් සාදන්න
-  tutorial_itchmundos_name: ලොස් මුන්ඩෝස් එන් මයි මුන්ඩෝ_ඊ 2
-  tutorial_itchtenacity_name: ස්ථීරභාවය
   tutorial_kcjskiing_name: 'ක්රීඩා+කේතය: ස්කීං'
   tutorial_groksecurity_name: 'සයිබර් ආරක්ෂාව: අඳුරු තොප්පි වලට එරෙහිව ආරක්ෂාව'
   tutorial_creaticode_name: සීරීම් බ්ලොක් සමඟ ත්රිමාණ වැඩසටහන්කරණය
@@ -11609,16 +11836,8 @@ si:
     නම ද්විමය කේතයක් බවට පරිවර්තනය කිරීමෙන් එය ඔබම උත්සාහ කරන්න.
   tutorial_3dmaker_longdescription: ඔබේ ම ඇත්තටම සිසිල්, rotatable, 3D වස්තූන් වේගවත්
     හා පහසුවෙන් කරන්න.
-  tutorial_itchstart_longdescription: මෙම පාඩම 2 හෝ 3 ශ්රේණියේ ළමයින් සඳහා හොඳ පිවිසුම්
-    ස්ථානයක් වන අතර එය පළමු වරට සීරීම් අත්හදා බලමින් සිටී. ඔවුන්ගේ චරිතය යම් ක්රියාවක්
-    සිදු කිරීම සඳහා ඔවුන් එකට එකතු කළ යුතු කොටස් 5 කින් ආරම්භ කිරීමට ඔවුන්ට ලැබෙනු
-    ඇත.
   tutorial_hopsub_longdescription: මිතුරෙකු හෝ පන්තියේ මිතුරෙකු සමඟ වැඩසටහන යුගල කරන්නේ
     කෙසේදැයි ඉගෙන ගන්න, සහ හොප්ස්කොච් අක්ෂර සමඟ ඔබේම උමං මාර්ග සර්ෆර් එකක් සාදන්න!
-  tutorial_itchmundos_longdescription: ළමය, ක්රමලේඛය සඳහා මූලික මූලික ගැලපීම. Agrán
-    objetos y fondos, usarán bloques de eventos y apariencia para dar vida a su වැඩසටහන.
-  tutorial_itchtenacity_longdescription: මෙම ප්රොජෙක්ටෝ වැඩසටහන් සහ සීරීම් ද රොබෝ
-    que මොනිටර් ලාස් aguas marinas අනුකරණය කරයි.
   tutorial_kcjskiing_longdescription: 'යමෙකු ගසකට කඩා වැටෙන තුරු ඒ සියල්ලම විනෝදජනක
     හා ක්රීඩා වේ… හෝ එය විනෝදජනක කොටස? ඔබ මෙම ළමය ක්රියාකාරකම් කේතය භාවිතා ශීත කළ
     බාධක කන්දක් පහළට ඔබේ චරිතය මග පෙන්වන ලෙස එම ස්කී මත Strap හා දණින් නැමී. පා course
@@ -11902,11 +12121,8 @@ si:
   tutorial_kodableshapes_language: English
   tutorial_nasabinary_language: English
   tutorial_3dmaker_language: English
-  tutorial_itchstart_language: English
   tutorial_hopsub_language: චීන (සරල), ඉංග්රීසි, ස්පා Spanish ් ((ස්පා Spain ්) ය),
     ස්පා Spanish ් ((මෙක්සිකෝව)
-  tutorial_itchmundos_language: ස්පාඤ්ඤ (මෙක්සිකෝව)
-  tutorial_itchtenacity_language: ස්පාඤ්ඤ (මෙක්සිකෝව)
   tutorial_kcjskiing_language: ඉංග්රීසි, ප්රංශ
   tutorial_groksecurity_language: English
   tutorial_creaticode_language: චීන (සරල), චීන (සාම්ප්රදායික), ඉංග්රීසි
@@ -12000,10 +12216,7 @@ si:
   tutorial_kodableshapes_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
   tutorial_nasabinary_string_detail_grades: 6+ ශ්රේණි
   tutorial_3dmaker_string_detail_grades: 2-8 ශ්රේණි
-  tutorial_itchstart_string_detail_grades: 2-8 ශ්රේණි
   tutorial_hopsub_string_detail_grades: 2-8 ශ්රේණි
-  tutorial_itchmundos_string_detail_grades: ශ්රේණි 2+
-  tutorial_itchtenacity_string_detail_grades: ශ්රේණි 2+
   tutorial_kcjskiing_string_detail_grades: ශ්රේණි 2+
   tutorial_groksecurity_string_detail_grades: 6+ ශ්රේණි
   tutorial_creaticode_string_detail_grades: 6+ ශ්රේණි
@@ -12095,12 +12308,7 @@ si:
   tutorial_nasabinary_string_platforms: ඉවත් නොකළ, තිර කියවනය
   tutorial_3dmaker_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්,
     වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
-  tutorial_itchstart_string_platforms: සියලුම නවීන බ්රව්සර්, අයිපෑඩ්
   tutorial_hopsub_string_platforms: අයිපෑඩ්, අයිෆෝන්
-  tutorial_itchmundos_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
-    අයිපෑඩ්
-  tutorial_itchtenacity_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
-    අයිපෑඩ්
   tutorial_kcjskiing_string_platforms: සියලුම නවීන බ්රව්සර්
   tutorial_groksecurity_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
     අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
@@ -12196,10 +12404,7 @@ si:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12289,10 +12494,7 @@ si:
     ස්වාධීන (බහු භාෂාවලින් ඉගැන්විය හැකිය)
   tutorial_nasabinary_string_detail_programming_languages: ද්විමය කේතය
   tutorial_3dmaker_string_detail_programming_languages: බ්ලොක්
-  tutorial_itchstart_string_detail_programming_languages: බ්ලොක්
   tutorial_hopsub_string_detail_programming_languages: හොප්ස්කොච්
-  tutorial_itchmundos_string_detail_programming_languages: බ්ලොක්
-  tutorial_itchtenacity_string_detail_programming_languages: බ්ලොක්
   tutorial_kcjskiing_string_detail_programming_languages: බ්ලොක්
   tutorial_groksecurity_string_detail_programming_languages: කිසිවක් නැත - ක්රමලේඛයක්
     අවශ්ය නොවේ
@@ -13269,6 +13471,1273 @@ si:
   tutorial_kcjhealth_string_detail_programming_languages: බ්ලොක්
   tutorial_msftwakanda_string_detail_programming_languages: බ්ලොක්
   tutorial_nafbrand_string_detail_programming_languages: පයිතන්
+  tutorial_bsimage_name: Image Composition - A Wintry Puzzle!
+  tutorial_bscomputing_name: Computing Needs All Voices
+  tutorial_stackpython_name: Learn Python Programming by Building A Robot
+  tutorial_questcastle_name: Minecraft Cyber Castle Challenge
+  tutorial_bsdata_name: Hour of Data
+  tutorial_blockscadroblox_name: BlocksCAD Roblox Characters
+  tutorial_blockscadcoin_name: Coin-Flipping Simulator
+  tutorial_blockscadsolar_name: Building Solar Power with Loops
+  tutorial_blockscadstarwars_name: Star Wars and BB-8 with Geometry and Code
+  tutorial_blockscadgame_name: Custom Game Consoles with Code
+  tutorial_carnegieaccelerate_name: Acceleration City
+  tutorial_codespeakcctrivia_name: Create a Climate Change Trivia Game on Scratch
+  tutorial_edisonsquare_name: It's hip to be a square
+  tutorial_carnegiemachine_name: Machine Vision in Robotics (Virtual)
+  tutorial_skoolparts_name: 'Plugged Coding Activity: Parts of A Plant'
+  tutorial_skoolplant_name: 'Plugged Coding Activity: Parts of A Plant'
+  tutorial_mitchatgpt_name: Building a mobile ChatGPT app with MIT App Inventor
+  tutorial_mitimagebot_name: Building an ImageBot with MIT App Inventor
+  tutorial_mitconverse_name: Conversational AI with MIT App Inventor
+  tutorial_nasamarsreturn_name: 'NASA: Mars Sample Return Coding Challenge'
+  tutorial_nasaradio_name: 'NASA: Coding a Radio Message in Space'
+  tutorial_nasahelicopter_name: 'NASA: Code a Mars Helicopter Video Game'
+  tutorial_nasacollection_name: 'NASA: Code a Mars Sample Collection Video Game'
+  tutorial_wizclock_name: 'Clock: creating a clock with code'
+  tutorial_wizmoon_name: 'Moon Phase: creating the moon phases with code'
+  tutorial_wiztraffic_name: 'Traffic light: creating a traffic light with code'
+  tutorial_wizpacman_name: 'Pacman game: creating a Pacman game with code'
+  tutorial_wizsea_name: 'Saving the sea: creating a game with code'
+  tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
+  tutorial_bekidsadventure_name: Creative Coding Adventures
+  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
+  tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
+  tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
+    Thunkable
+  tutorial_ozobotircomm_name: Intro to IR Communications
+  tutorial_gsmonster_name: Create Monster Maze with GameSalad
+  tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
+  tutorial_ozobotbroadcast_name: Broadcast and Retrieve IR Messages with Ozobot
+  tutorial_ozobotapplications_name: Basic Applications of IR Communications
+  tutorial_codecombatworlds_name: CodeCombat Worlds
+  tutorial_spherochatgpt_name: BOLT meets ChatGPT
+  tutorial_spherorvrimage_name: 'AI with RVR+: Image Recognition'
+  tutorial_spherorvrauto_name: 'AI with RVR+: Autonomous Vehicles'
+  tutorial_spherofeedback_name: Feedback Loops and AI
+  tutorial_spheroindi_name: Autonomous indi
+  tutorial_codetribeplatform_name: My First Platformer Game
+  tutorial_codetribespace_name: My Space Explorer
+  tutorial_codetribelanding_name: My First Landing Page
+  tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
+  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
+  tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
+  tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
+  tutorial_pickcodecookie_name: 'Pickcode: Click a Cookie Game'
+  tutorial_pickcodeexoplanet_name: 'Pickcode: Exoplanet Explorer'
+  tutorial_firiahaunted_name: Haunted Code Chronicles
+  tutorial_googlediscoverai_name: Discover AI in Daily Life
+  tutorial_msftsparksfly_name: Sparks Flying!
+  tutorial_msftsparksflyjr_name: Sparks Flying Junior
+  tutorial_seesawemrobot_name: Em Builds a Robot With Hardware
+  tutorial_brilliantthinking_name: Thinking in Code
+  tutorial_seesawtomika_name: Tomika Programs With ScratchJr
+  tutorial_seesawrobot_name: Create a Hardware Robot with Em
+  tutorial_brilliantcreate_name: Creative Coding
+  tutorial_seesawscratch_name: Program With Scratch and Tomika
+  tutorial_seesawkeyboard_name: Robo Keyboard and the Typing Device
+  tutorial_seesawrobocar_name: Robo Car Introduces Scratch
+  tutorial_seesawrobowand_name: Robo Car Introduces Scratch
+  tutorial_seesawinventor_name: Robo Inventor and the Creative Coding Project
+  tutorial_codeartobjects_name: 'Falling Objects: Game Design on Scratch'
+  tutorial_microsoftmanor_name: 'Spooky Manor: Uncover the Haunted Mysteries with
+    VS Code for Education'
+  tutorial_nasaartemis_name: 'NASA: Artemis II Coding Challenge'
+  tutorial_codejikaresume_name: 'CodeJIKA: My Web Resume'
+  tutorial_codejikabiz_name: 'CodeJIKA: My Biz Website'
+  tutorial_codejikasnake_name: 'CodeJIKA: Snake Arcade Game'
+  tutorial_codespeakplant_name: Build a Grow a Plant! Game in Scratch
+  tutorial_codespeakaichat_name: Build an AI Chatbot in Python
+  tutorial_icteachmicrobit_name: Micro:bit Cyber Pin Code Generator
+  tutorial_codeyallawebsite_name: 'CodeYalla: 5 Minute Website'
+  tutorial_usicastle_name: Program Your Own Castle
+  tutorial_bootupparty_name: නර්තන පක්ෂය
+  tutorial_codespeakrocket_name: 'Rocket Blaster: Build a Scratch Project'
+  tutorial_bootupstarry_name: Starry Night
+  tutorial_bootupsea_name: Under the Sea
+  tutorial_bootupanimal_name: Animal House
+  tutorial_bootupdance_name: Dance Fever
+  tutorial_unrulyart_name: 'Found Art Challenge: Creating Art through Code'
+  tutorial_intelinoabc_name: ABC Code with intelino
+  tutorial_robotcodeline_name: Code a Line Follower
+  tutorial_cospacepirate_name: මුහුදු කොල්ලකරුවන්ගේ ප්ලන්ඩර්
+  tutorial_bwai_name: Artificial Intelligence Lesson and Questions
+  tutorial_simplepython_name: 'Python in Pieces: Explore text outputs and print statements'
+  tutorial_codestersfire_name: 'Codesters: Fireworks!'
+  tutorial_codehskinder_name: Training AI Using Data K-1
+  tutorial_codehsaielem_name: Training AI Using Data 2-5
+  tutorial_codespeaktrivia_name: How to Code A Trivia Game on Scratch Using AI
+  tutorial_hwescape_name: 'Escape Room: Tower Conquest'
+  tutorial_hwlava_name: Floor is Lava
+  tutorial_hwgallery_name: Show and Tell Gallery
+  tutorial_hwfanpage_name: Fan Page
+  tutorial_hwillusion_name: Color Illusion Challenge
+  tutorial_caevolution_name: 'Silicon Synapses: Evolution of AI'
+  tutorial_bbbusybot_name: BusyBot!
+  tutorial_caaifarm_name: Old MacDonald Hacked a farm, AI, AI Drone
+  tutorial_cafuture_name: Face the Future
+  tutorial_dmscratch_name: Scratch - Book to Code
+  tutorial_dmliteracy_name: Data Literacy in the AI Era Workshop
+  tutorial_dmwind_name: Scratch - Planet Wind
+  tutorial_dmbeatbox_name: Scratch - Beat-Box
+  tutorial_kinderaikibo_name: An Introduction to AI with KIBO
+  tutorial_kinderairvr_name: AI - Design a KIBO Mars Rover
+  tutorial_bbtai_name: AI for All
+  tutorial_cagenius_name: Gesture Genius
+  tutorial_tynkerweather_name: Weather Control
+  tutorial_tynkerbalance_name: Balancing Act
+  tutorial_tynkertickle_name: Tickle Monster
+  tutorial_tynkerfruit_name: Fruit Fighter
+  tutorial_codemonkeyhoot_name: 'AI is a Hoot: Pose Detection'
+  tutorial_kcjpong_name: Teach an AI to Play Pong
+  tutorial_dmsolar_name: Scratch - Solar Power Hour
+  tutorial_mindmakersneural_name: AI & Neural Networks
+  tutorial_blocksmithrescue_name: A.I. Rescue
+  tutorial_cstaheroes_name: CSTA CS Heroes
+  tutorial_codecombathack_name: CodeCombat AI HackStack
+  tutorial_toxicodewords_name: 'N-Gram Explorers: Quest for Words'
+  tutorial_mitstepmisinformation_name: 'Developing AI Literacy (DAILy) 2.0: Spread
+    of Misinformation'
+  tutorial_mitstepdeepfakes_name: 'Developing AI Literacy (DAILy) 2.0: Deepfakes +
+    Ethical Matrix'
+  tutorial_mitstepintrotoml_name: 'Developing AI Literacy (DAILy) 2.0: Intro to Supervised
+    Machine Learning'
+  tutorial_naflogo_name: 'Code your Brand: Make a Logo'
+  tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
+  tutorial_intelinosmile_name: Smile to Drive intelino
+  tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: නර්තන පක්ෂය
+  tutorial_introtomlai_name: යන්ත්ර ඉගෙනීම පිළිබඳ හැඳින්වීම
+  tutorial_computervisionai_name: පරිගණක දැක්ම
+  tutorial_neuralnetworksai_name: ස්නායුක ජාල
+  tutorial_chatbotsllmai_name: චැට්බෝට් සහ විශාල භාෂා ආකෘති
+  tutorial_generativeimagesai_name: උත්පාදක රූප
+  tutorial_algorithmicbiasai_name: ඇල්ගොරිතම නැඹුරුව
+  tutorial_codeofethicsai_name: ආචාර ධර්ම අපගේ කෘෂිකර්ම උපදේශක සංග්රහය
+  tutorial_socimpactofgenaiai_name: උත්පාදක AI හි සමාජ බලපෑම
+  tutorial_generationai_name: Generation AI
+  tutorial_bsimage_longdescription: In this lesson students engage with a series of
+    scaffolded self-paced activities in our Parley editor that introduce them to the
+    Pyret programming language, image-producing functions, defining values and image
+    placement using coordinates. By the end they'll be able to modify code to solve
+    a puzzle that generates a snowman scene!  Students looking for a challenge can
+    even add their own elements.
+  tutorial_bscomputing_longdescription: Free downloadable Poster Series and accompanying
+    lesson in which students learn about a diverse group of pioneers in computing
+    and consider the problem solving advantages that diverse teams foster.
+  tutorial_stackpython_longdescription: Learn to build and program a robot using python
+    language.
+  tutorial_questcastle_longdescription: 'The Cyber Castle Challenge is an exciting,
+    gamified approach to learning cyber security using Minecraft: Education. Designed
+    for ages 8-13, students collaborate to conquer 4 seasons of real-world cyber security
+    challenges. Using the analogy of castles, chickens and foxes, students will have
+    to identify who is a friend or who is foe, while developing defences to protect
+    their important assets. Can your students identify a threat? Can they strategize
+    to protect themselves and others? Put them to the test with the Cyber Castle Challenge.'
+  tutorial_bsdata_longdescription: This Hour of Data lesson is a self-guided Desmos
+    activity. Students explore data visualization, introductory programming using
+    The Pyret Programming Language, and the application of Data Science to solve real
+    problems. Students will investigate a data set of vehicle-wildlife collisions
+    in Vermont and make recommendations about where to build wildlife overpasses.
+  tutorial_blockscadroblox_longdescription: 'One of the winners of the Roblox avatar
+    contest - and now quite a popular character - was Gang O’ Fries. This avatar is
+    made of relatively simple geometric shapes: cylinders and cubes. You can make
+    and customize your own in BlocksCAD!'
+  tutorial_blockscadcoin_longdescription: Use logic and loops in combination with
+    geometric shapes to program any probability simulator you want. Can you program
+    a game you love that involves probability?
+  tutorial_blockscadsolar_longdescription: Harnessing solar power relies on large
+    solar panels that can capture as much sunlight as possible. They are made up of
+    many, many copies of solar cells. Can you build a geometric solar cell and then
+    creatively iterate it with loops?
+  tutorial_blockscadstarwars_longdescription: One of the most loveable characters
+    of the recent Star Wars movies is the droid BB-8 despite its very simple construction
+    and lack of facial features. Can you build him with basic geometry and code? What
+    else in the galaxy can you design?
+  tutorial_blockscadgame_longdescription: If you’re a video game company imagining
+    new styles and shapes for your controllers and consoles, you need designers to
+    first render them digitally before producing physical models to test out. What
+    features do you think make for an optimal controller or a sleek console? What
+    shapes can you use to create these designs in a CAD platform like BlocksCAD?
+  tutorial_carnegieaccelerate_longdescription: 'Welcome to Acceleration City, where
+    fun is only limited by your drive! Explore a wild world filled with races and
+    stunts. Every vehicle is equipped with a personal CoBot companion, which can generate
+    ramps, platforms, and boost pads to help you in the world. The CoBot can be programmed
+    to respond to your keypresses, as well as key colored trigger zones when racing. '
+  tutorial_codespeakcctrivia_longdescription: Code a trivia game on climate change
+    and learn what’s beneficial for our planet and how to take good care of it.
+  tutorial_edisonsquare_longdescription: It’s hip to be a square… or a triangle… or
+    even a hexagon! What sort of shapes can you get Edison to drive in and what specific
+    instructions do you need to use?
+  tutorial_carnegiemachine_longdescription: Learn how Machine Vision can be integrated
+    into robotics systems to automatically perform tasks such as image detection and
+    quality control. Train a vision-based quality control system in a simulation that
+    leverages the vision data in machine learning modules.
+  tutorial_skoolparts_longdescription: In this plugged coding activity, we guide our
+    little ones to appreciate our natural surroundings with the use of a tech toy.
+    We facilitate outdoor play by merging technology and nature to enhance preschoolers'
+    learning experience.
+  tutorial_skoolplant_longdescription: In this plugged coding activity, we guide our
+    little ones to appreciate our natural surroundings with the use of a tech toy.
+    We facilitate outdoor play by merging technology and nature to enhance preschoolers’
+    learning experience.
+  tutorial_mitchatgpt_longdescription: Have you ever wondered how it is possible to
+    create your very own ChatGPT app that will allow you, wherever you are, to tap
+    into a world of useful information? In this tutorial, you will build a simple
+    app with MIT App Inventor that allows users to connect to ChatGPT, ask questions,
+    and have a conversation.
+  tutorial_mitimagebot_longdescription: Have you ever wondered how to create your
+    own generative AI app for wildly imaginative visualizations? In this tutorial,
+    you will build a simple app with MIT App Inventor that allows users to connect
+    to OpenAI’s DALL-E generative AI program, submit their own prompts, and see the
+    result in exciting artistic visions from the AI.
+  tutorial_mitconverse_longdescription: In these tutorials, you will learn how to
+    use the MIT App Inventor's Conversational AI Interface to create your own Amazon
+    Alexa skills for Alexa. (No Amazon device required.)
+  tutorial_nasamarsreturn_longdescription: In this collaborative project, student
+    teams each take on a component of the Mars Sample Return mission in order to construct
+    and code a model of a device capable of sending Martian rocks to Earth. Groups
+    can use multiple coding languages simultaneously to allow all levels of coders
+    to participate.
+  tutorial_nasaradio_longdescription: In this activity, students use their knowledge
+    of coding to create a system that can send and receive radio signals. Students
+    then encode a message into the signal that can be decoded by other students.
+  tutorial_nasahelicopter_longdescription: In this activity, students create a Mars
+    helicopter game using the Scratch programming language. They will engage in computational
+    thinking, use math and include elements of real Mars helicopter planning to design
+    their game.
+  tutorial_nasacollection_longdescription: In this project, you will use Scratch,
+    a visual programming language, to create a video game that simulates the way NASA
+    collects samples on Mars!
+  tutorial_wizclock_longdescription: Learn to create a clock with ScratchJr
+  tutorial_wizmoon_longdescription: Learn the different moon phases and create your
+    own moon phase with ScratchJr
+  tutorial_wiztraffic_longdescription: Learn how to program traffic light using ScratchJr.
+  tutorial_wizpacman_longdescription: Learn to program characters of the pacman game
+    using ScratchJr
+  tutorial_wizsea_longdescription: Learn to create saving the sea game using ScratchJr
+  tutorial_wizroad_longdescription: Learn to road crossing game program with ScratchJr
+  tutorial_bekidsadventure_longdescription: Explore creativity through two engaging
+    games with block-based programming! Create fun geometric patterns, and craft car
+    routes through exciting challenges. Unleash creativity, enhance logic, and get
+    to know the art of programming!
+  tutorial_myqpixel_longdescription: In this MyQ activity, you will solve visual fun
+    challenges to help our cute dog find its bones, while leraning the concepts of
+    cause and effect and user interactions.
+  tutorial_creaticodechatgpt_longdescription: Learn to use OpenAI's ChatGPT AI as
+    a chatting and reasoning engine to build fun games and smart apps. Scratch-like
+    blocks and user interface are used so no need to install any software or learn
+    more complex languages.
+  tutorial_thunkabletranslator_longdescription: Build an app that translates languages
+    for you and turns your speech into text.
+  tutorial_ozobotircomm_longdescription: Students will be introduced to the idea that
+    Ozobot can detect and respond toobjects around it.
+  tutorial_gsmonster_longdescription: Learn to build your own game were your monster
+    navigates a maze and collects candy!
+  tutorial_gsspacerocks_longdescription: Build the game Space Rocks with GameSalad
+    and learn to use game physics and loops. Student should have some familiarity
+    with GameSalad to complete the activity in one hour.
+  tutorial_ozobotbroadcast_longdescription: Students will work in pairs or small groups
+    with two devices and twoOzobots, which students will program to communicate with
+    each other.
+  tutorial_ozobotapplications_longdescription: Students will identify an everyday
+    application of infrared communication andbuild a model of it with Ozobots and
+    Ozobot Blockly.
+  tutorial_codecombatworlds_longdescription: Play your way to mastering the coding
+    skills needed for creating your own amazing Roblox games! Start in the Overworld,
+    where you'll code your own pets to harvest, battle, and play. Then, take on the
+    Learning Levels and master the core concepts of Luau coding. But the real magic
+    happens in Creative Mode, where you'll craft your own games with the help of AI.
+    The power to create is in your hands!
+  tutorial_spherochatgpt_longdescription: ChatGPT, an artificially intelligent chatbot,
+    is all the rage these days. Is there anything it doesn’t know? In this activity,
+    explore whether or not ChatGPT can program your BOLT robot, then reflect on the
+    pros and cons of this new technology.
+  tutorial_spherorvrimage_longdescription: Artificial intelligence is making technology
+    smart. Computing systems can do more and more on their own these days, including
+    recognizing objects in images. In this activity, explore the role of human trainers
+    in image recognition.
+  tutorial_spherorvrauto_longdescription: It’s impossible to have a conversation about
+    how Artificial Intelligence (AI) will impact our lives without discussing autonomous,
+    or self-driving, vehicles. In this activity, program RVR+ to drive on its own
+    and explore how humans and machines can work together to safely automate driving.
+  tutorial_spherofeedback_longdescription: A feedback loop uses the output of a program
+    to change how the program functions in the next cycle. Artificial Intelligence
+    (AI) uses feedback loops to learn new information and present that information
+    to the user. In this lesson, students will explore feedback loops and how they
+    relate to AI.
+  tutorial_spheroindi_longdescription: One day self-driving cars may take over our
+    roads but indi can drive autonomously right now! In this lesson, students will
+    be introduced to the concept of self-driving cars and explore how they can be
+    “trained.
+  tutorial_codetribeplatform_longdescription: Build your own Super-Mario-style game
+    in just 22 minutes using this amazing tutorial. Powered by Kaboom.js ( a simplified
+    version of Javascript) you'll write functions and add sprites within the first
+    lesson.
+  tutorial_codetribespace_longdescription: 'You will code this fast-paced and thrilling
+    space shooter game from scratch using the simplified version of javascript: Kaboom.js.
+    You''ll learn how to simply manage different controls, keep score, and randomize
+    the obstacles.'
+  tutorial_codetribelanding_longdescription: Deepdive into CSS and a colorful world
+    of linear gradients. This is the best way to introduce syntax programming as the
+    learner builds a beautiful design using tags and the HTML structure which she
+    codes from scratch in this sequence of self-directed micro-challenges.
+  tutorial_cakeyboard_longdescription: Join Juno and Max on an electrifying educational
+    journey exploring computing systems. Dive into portable electronic devices, decode
+    hardware/software glitches, master inputs/outputs, and conquer navigation. Sharpen
+    literacy skills, letter recognition and capitalization, and troubleshoot problems.
+    Complete the 5 tasks in an hour or split for junior students. Additional activities
+    included.
+  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
+    programming languages! Hedy is free to use, open source, and unlike any other
+    textual programming language in three ways: you can use Hedy in your own language,
+    you can learn one concept and its syntax a time, is built for the classroom, allowing
+    teachers to fully customize their student''s experience.'
+  tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
+    a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
+    but will demonstrate some important concepts in AI.
+  tutorial_pickcodegenart_longdescription: In this lesson, we'll use code to generate
+    art. While our program won't be as complicated as Generative AI like Dall-E, we'll
+    notice some similarities as our code gets more advanced.
+  tutorial_pickcodecarbon_longdescription: In this lesson, we'll make a chatbot that
+    will ask a user questions to calculate their carbon footprint -- how much their
+    actions impact the environment.
+  tutorial_pickcodecookie_longdescription: In this lesson, we're going to make Click
+    a Cookie, a very advanced game that counts how many times the player clicks a
+    picture of a cookie.
+  tutorial_pickcodeexoplanet_longdescription: In this lesson, we're going to learn
+    all about them and we're going to write code for a chatbot that helps scientists
+    classify exoplanets based on their properties.
+  tutorial_firiahaunted_longdescription: Explore the mysteries of the Haunted House
+    as you write Python code to guide your CodeBot through its spooky corridors! Fear
+    not, you will be guided step-by-step with the concepts needed to build your Python
+    coding skills as you learn to control CodeBot’s motors, sensors, and more. Fun
+    and exciting challenges await, with an infinite number of creative solutions.
+    How will YOU code your way through?
+  tutorial_googlediscoverai_longdescription: Have you ever wondered how an app can
+    recommend movies that you may like? Or how a computer can suggest words to finish
+    a sentence you’re typing? In this Applied Digital Skills lesson, you will learn
+    what artificial intelligence is, how people use it every day, and its benefits
+    and challenges using Quick, Draw!, AutoDraw, Google Translate, and Google Slides.
+  tutorial_msftsparksfly_longdescription: Take a trip back to prehistoric times and
+    create a game that challenges you to light a fire to keep yourself warm.
+  tutorial_msftsparksflyjr_longdescription: You live in a cave in prehistoric times
+    - code a game to help you light a fire quickly!
+  tutorial_seesawemrobot_longdescription: Learn about hardware and complete multiple
+    activities to sort hardware, match hardware components with their functions, and
+    use hardware to build a robot.
+  tutorial_brilliantthinking_longdescription: Start thinking like a programmer! Learn
+    how to write programs step-by- step and identify patterns in code.
+  tutorial_seesawtomika_longdescription: Learn how to navigate ScratchJr to create
+    a project by adding and customizing a sprite and backdrop. Then, explore code
+    blocks to program your sprite to move.
+  tutorial_seesawrobot_longdescription: Learn about hardware and complete multiple
+    activities to sort, identify, and match common hardware components with their
+    functions. Then, use your hardware knowledge to build a robot.
+  tutorial_brilliantcreate_longdescription: Use block-based variables and conditions
+    to code dynamic shapes, adjust colors and sizes, and create brilliant works of
+    art.
+  tutorial_seesawscratch_longdescription: Learn how to navigate Scratch to create
+    a project by adding and customizing a sprite and backdrop. Then, explore code
+    blocks to program your sprite to move.
+  tutorial_seesawkeyboard_longdescription: Learn the difference between hardware and
+    software and how they work together with inputs and outputs in a model. Then,
+    work with a partner to design a new texting device and explain how it works.
+  tutorial_seesawrobocar_longdescription: Explore the Scratch programming app and
+    code Robo Car to get to the Waste Center. Then, practice coding a partner with
+    code blocks digitally and unplugged.
+  tutorial_seesawrobowand_longdescription: Create and use variables to help Robo Wand
+    accomplish a secret mission and to program Robo Wand on Scratch. Then, work with
+    a partner to use variables in a hands-on Roll It game.
+  tutorial_seesawinventor_longdescription: Explore how other coders incorporate their
+    interests and cultures into Scratch coding projects. Then, creatively code and
+    collaborate with a partner to iterate a coding project.
+  tutorial_codeartobjects_longdescription: Code a fun and artistic game using Scratch!
+    For this lesson, you'll code a Falling Objects game and then express yourself
+    creatively through modifying and enhancing the game using the skills you learned.
+  tutorial_microsoftmanor_longdescription: In this text-based Python adventure game,
+    you'll explore an old house. Beware, not all is as it seems in Spooky Manor! Using
+    Visual Studio Code for Education, can you escape before dawn, while rescuing your
+    friends who have mysteriously vanished and uncover the Manor's hidden secrets?
+  tutorial_nasaartemis_longdescription: Students learn about the Artemis II mission
+    and the NASA App Development Challenge (ADC). The goal is for students to follow-along
+    steps we've created using Code.org's App Lab to learn basic programming skills
+    while utilizing block code.
+  tutorial_codejikaresume_longdescription: Build an amazing online resume to present
+    your skills and talents through an attractive and engaging online CV website built
+    with HTML, CSS and emojis.
+  tutorial_codejikabiz_longdescription: Learn how to build an online business website
+    with HTML, CSS and JavaScript. In this, you will learn how to use forms to place
+    orders for customers, reset information, and set limits to the numbers of orders.
+  tutorial_codejikasnake_longdescription: Build a fun classic snake arcade game using
+    JavaScript. We will take you through all the necessary steps. Let the game begin.
+  tutorial_codespeakplant_longdescription: Learn how to grow a plant on Scratch using
+    coding concepts like loops and conditional statements.
+  tutorial_codespeakaichat_longdescription: 'Learn to code a Python interactive questions
+    game using Artificial Intelligence. '
+  tutorial_icteachmicrobit_longdescription: Use this micro:bit-based teacher resource
+    for generating random 4-digit PINs, ideal for educators experienced in tech or
+    beginners. Micro:bits facilitate coding and computational thinking, allowing you
+    to teach cybersecurity through hands-on PIN generator projects, fostering coding
+    skills and security awareness.
+  tutorial_codeyallawebsite_longdescription: A great introduction to coding using
+    HTML and CSS. Learn how to code in Arabic by creating a nice landing page with
+    a two-color gradient background, name and website launch date.
+  tutorial_usicastle_longdescription: Develop a functional approach to programming
+    by learning to call functions and to pass arguments to produce castle parts. Then
+    compose lists of parts into a castle inspired by the three medieval castles of
+    Bellinzona that protected Italy from the Swiss in the Middle Ages.
+  tutorial_bootupparty_longdescription: 'In this teacher-led lesson, young learners
+    code a Silly Dance Party in ScratchJr. They use start on green flag and motion
+    blocks. This project integrates CCSS Math standards: K (numbers, attributes) and
+    1 (indirect measurement, place value). It fosters coding skills while reinforcing
+    math concepts.'
+  tutorial_codespeakrocket_longdescription: Learn to program rockets, and create your
+    own Rocket Blaster game.
+  tutorial_bootupstarry_longdescription: In this teacher-led lesson, coders use repeat
+    forever, looks, and control blocks to create a simulated environment. The project
+    introduces new blocks triggered with the green flag. Students ask questions, define
+    problems, and develop models to illustrate object stability, aligning with K-2
+    NGSS standards.
+  tutorial_bootupsea_longdescription: In this teacher-led lesson, coders review how
+    to use repeat forever blocks with looks and control blocks to create a different
+    simulated environment. Students ask questions, define problems, and develop models
+    to illustrate object stability, aligning with K-2 NGSS standards.
+  tutorial_bootupanimal_longdescription: In this teacher-led lesson, coders use a
+    variety of blocks and sprites to create their own interactive diorama about animals
+    on a farm.  The purpose of this project is to introduce coders to the sound blocks.
+  tutorial_bootupdance_longdescription: In this teacher-led lesson, coders will use
+    the start on bump block to create a contagious dance party using motion blocks.
+    The purpose of this project is to introduce young coders to triggering algorithms
+    using the start on bump block.
+  tutorial_unrulyart_longdescription: This lesson uses the power of coding to unleash
+    students’ creativity and imagination by transforming ordinary classroom objects
+    into Unruly sculptures!
+  tutorial_intelinoabc_longdescription: Crack the code and find the secret word that
+    the intelino train spells out in this combo ELA and unplugged coding activity.
+  tutorial_robotcodeline_longdescription: Learn to code a line following robot that
+    uses sensors to detect what it’s driving over. This fun and challenging tutorial
+    teaches you about electronics, programming, robotics and AI. Line following can
+    be used to solve real-world problems, such as guiding robots through warehouses
+    or factories. Self-driving cars use more complex sensors and AI, but you can learn
+    the basic concepts in this lesson.
+  tutorial_cospacepirate_longdescription: Help our pirate captain to reach his treasure
+    by dragging and dropping visual blocks to write code. Climb, fight, collect, and
+    walk your way through challenges of increasing complexity, while learning to create
+    efficient code with loops and write intelligent behaviour with conditions. This
+    student-guided activity is targeted to kids aged 7+ and first-time-coders.
+  tutorial_bwai_longdescription: Learn about the history and development of artificial
+    intelligence with digital interactive slides.
+  tutorial_simplepython_longdescription: In this lesson students will learn what a
+    'string' is in Python, the use of the print block to print strings and numbers,
+    how to add strings and how to multiply a string by a number, and how to format
+    text with line-breaks.
+  tutorial_codestersfire_longdescription: Learn Python basics and events while creating
+    your own firework generator. Click the screen to shoot off a firework! Customize
+    the firework size, speed, colors, and more!
+  tutorial_codehskinder_longdescription: Explore, understand, and model how artificial
+    intelligence is trained with data to make predictions!
+  tutorial_codehsaielem_longdescription: Students will explore, understand, and model
+    how artificial intelligence is trained with data to make predictions!
+  tutorial_codespeaktrivia_longdescription: Learn how to use prompt engineering with
+    ChatGPT to program a trivia game on Scratch
+  tutorial_hwescape_longdescription: In this project, you'll create a tower for other
+    players to escape from! The tower will contain three floors and each floor will
+    require players to solve a riddle or puzzle in order to unlock the door to the
+    next floor.
+  tutorial_hwlava_longdescription: In this project, you will design and build a floor
+    is lava game! While players race through the game avoiding the lava, they will
+    also be trying to collect different objects in order to finish the game.
+  tutorial_hwgallery_longdescription: In this project, you'll design a gallery that's
+    all about you! Your gallery will have three rooms and each room will show something
+    about yourself that you want to share. You will design rooms about your family,
+    your hobbies, and something unique that you can choose!
+  tutorial_hwfanpage_longdescription: In this project, you'll create a webpage for
+    a review of a movie, show, book, or something else you like.
+  tutorial_hwillusion_longdescription: In this project, you'll build a game where
+    the user must correctly name the color of a word before their time is up.
+  tutorial_caevolution_longdescription: Discover the defining moments that shaped
+    the world of AI and the rapid evolution that has brought AI into our everyday
+    lives. Navigate the world of chatbots, recommendation engines, autonomous vehicles
+    and creative AI.  Take a deep dive into the transformative power of AI in healthcare,
+    education, and beyond. Embrace the future where AI isn't just a tool—it's a partner.
+  tutorial_bbbusybot_longdescription: Teach a robot to build!
+  tutorial_caaifarm_longdescription: AI meets agriculture! Join Sakura and Niko at
+    the smart farm to explore groundbreaking agriculture like never before. Uncover
+    how smart tech like drones and agribots are transforming farms, improving crop
+    growth, and predicting weather patterns. Get started and sow the seeds of a tech-driven,
+    green future.
+  tutorial_cafuture_longdescription: This 60-minute lesson introduces the concept
+    of biometric authentication and explores Facial Recognition Technology (FRT) in
+    depth. It offers a fun and practical activity creating facial signatures and matching
+    them to photos. Students will discuss the vast array of positive applications
+    of FRT but will also weigh its ethical implications, including equity, accuracy,
+    and bias.
+  tutorial_dmscratch_longdescription: Book to Code is a project that celebrates books
+    and reading.  We will help Tera, our heroine, in her quest to get back home. But
+    not only will you help Tera!, you will also learn the tools you need to create
+    a Scratch project about your favorite book. Students will start with the traditional
+    Scratch blocks and then incorporate artificial intelligence using the Translate
+    extension in Scratch.
+  tutorial_dmliteracy_longdescription: This workshop will get students thinking about
+    the place of data in their daily lives and show them that they can understand
+    it and learn to use it to navigate the world more easily.
+  tutorial_dmwind_longdescription: This Scratch activity celebrates planet Earth,
+    promotes clean energy to replace fossil fuels, and helps the environment.  Students
+    will start with the traditional Scratch blocks, then recreate and enhance their
+    project using Artificial Intelligence and the experimental Scratch blocks with
+    Face Sensing.
+  tutorial_dmbeatbox_longdescription: Beat-Box is a project that celebrates music
+    and the creation of your own sound device.  Your task is to make wonderful sounds
+    with your creation.  Students will start with the traditional Scratch blocks and
+    then incorporate artificial intelligence using the Text-to-Speech extension in
+    Scratch.
+  tutorial_kinderaikibo_longdescription: Students will explore the big ideas of artificial
+    intelligence and see how they relate to their own experiences. They’ll review
+    some fundamentals of KIBO programming that relate to AI. They’ll gain practice
+    with creating programs using repeat loops that allow KIBO to operate independently.
+  tutorial_kinderairvr_longdescription: Students will create a rover robot that uses
+    its sensors and programming to explore a new environment and operate independently.
+    KIBO will illustrate the “sense – think – act” cycle that is fundamental to both
+    robotics and AI.
+  tutorial_bbtai_longdescription: It's time to get hands-on with AI! Train and test
+    a real image recognition model, and use it to control your code.
+  tutorial_cagenius_longdescription: This 2 hour activity will introduce students
+    to machine learning models and sign language. They will engage in hands-on programming
+    to train a model to recognize two different signs and integrate their model into
+    an interactive Scratch project. During the activity they will learn about the
+    importance of diverse training data to avoid bias.
+  tutorial_tynkerweather_longdescription: Create a fun interactive project that controls
+    the weather. Program hand gestures to control different weather conditions using
+    Tynker's AI Pose Tracking library.
+  tutorial_tynkerbalance_longdescription: Create an interactive game using Tynker's
+    Physics and AI pose tracking libraries. Players balance an object by moving their
+    face on camera!
+  tutorial_tynkertickle_longdescription: Create a virtual tickle monster and use Tynker's
+    AI Pose Tracking library to make the character respond to hand gestures.
+  tutorial_tynkerfruit_longdescription: 'Create a fun Fruit Ninja-style game that
+    recognizes hand movements using p5.js. '
+  tutorial_codemonkeyhoot_longdescription: Create games using AI and blocks! In this
+    short course, your students will learn to train an AI model using different poses.
+    The students will use their model to control the owl and change its scale based
+    on the different poses. They will follow step-by-step instructions and easily
+    drag the blocks to solve the exercises. Your curious students can also deep dive
+    into how AI works.
+  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
+    then train an AI to play the game on its own! Learn core JavaScript concepts including
+    Variables, Functions and Events, and get hands-on experience with Neural Networks
+    and Machine Learning.
+  tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
+    Day and promote clean energy to replace fossil fuels and help the environment.  Your
+    task is to collect the sun's rays to power a city. Students will start with the
+    traditional Scratch blocks and then recreate and improve their project using Artificial
+    Intelligence and the experimental Scratch blocks with Face Sensing.
+  tutorial_mindmakersneural_longdescription: From your first steps in programming
+    to Neural Networks, all in just 16 challenges! Understand how AI techniques contribute
+    to programming, using Text-to-Speech (TTS), Speech-to-Text (STT), and training
+    your first neural networks to classify text, images, and poses.
+  tutorial_blocksmithrescue_longdescription: Can you rescue the A.I. and human crew?  Play
+    a game made with AI while learning about AI. Control a robot to rescue the Artificial
+    Intelligence and human crew on a stranded spaceship, while learning how neural
+    networks operate. Find each of the missing neurons to reconstruct the AI's brain
+    then train the AI with specific datasets, and finally test it in a quiz, all as
+    fast as possible!
+  tutorial_cstaheroes_longdescription: Each year, CSTA showcases various CS heroes
+    on our CSEdweek website. These heroes represent different industries and communities.
+    Students will research CS heroes that have made an impact in computing while focusing
+    on the positive, negative, and neutral influences on artificial intelligence.
+    Students will be able to plan poster and design posters, and share their posters
+    with others.
+  tutorial_codecombathack_longdescription: Discover the future of AI with CodeCombat
+    AI HackStack! This cutting-edge tool is your gateway to AI mastery, offering access
+    to top LLMs like ChatGPT-4, Claude, Stable Diffusion, DALL-E, and more. In just
+    minutes, unleash your creativity and go from ideas to fully published projects
+    like - games, art, websites, and code. HackStack is your new AI companion for
+    limitless possibilities!
+  tutorial_toxicodewords_longdescription: Unlock some of the secrets behind computer-assisted
+    words and sentences crafting, with our dynamic exploration.
+  tutorial_mitstepmisinformation_longdescription: Play out a simulation game of the
+    spread misinformation. Learn about how and why misinformation spreads. As an extension,
+    learn how to spot and stop misinformation.
+  tutorial_mitstepdeepfakes_longdescription: Explore what deepfakes are, how realistic
+    they can look, and ways to identify them. Practice identifying deepfakes and create
+    their own ethical matrices. Learn that deepfakes can impact people differently,
+    and that relationships between these stakeholders and values can be visually represented
+    using an ethical matrix.
+  tutorial_mitstepintrotoml_longdescription: Learn how supervised machine learning
+    can be trained to classify complex datasets based on labeled data. Train a Teachable
+    Machine model and see how it can learn to make predictions about new pictures
+    and live video feeds!
+  tutorial_naflogo_longdescription: A personal logo is a unique way to communicate
+    your values, knowledge and what makes you special. Within seconds of seeing your
+    logo, your audience will be captivated and understand your personal brand and
+    professionalism. Learn about the key steps marketers take in the development of
+    a logo using an Artificial Intelligence tool, brainstorm ideas, and then code
+    your own!
+  tutorial_madmobile_longdescription: Our HCJ Builder template allows you to input
+    HTML, CSS and Javascript code to create your own interactive and customized app
+    screen. This lesson allows users to experiment with ChatGPT and task its AI to
+    create code to input in your own mobile app. The lesson shows examples of ChatGPT
+    prompts and the code it generated.
+  tutorial_intelinosmile_longdescription: Control the intelino train - with your face!
+    Learn to use AI face sensing to make your computer recognize facial expressions.
+    Program events in intelino Scratch and see how your smile makes intelino drive!
+  tutorial_intelinoaisign_longdescription: Become the intelino train conductor - with
+    the help of AI and intelino Scratch! Create and train an AI model that recognizes
+    signs. Then, use this model in intelino Scratch to program and control movement
+    and steering of the intelino train.
+  tutorial_danceai2023_longdescription: ඔබේ මිතුරන් සමඟ බෙදා ගැනීමට නර්තන සාදයක් කේත
+    කරන්න. බියොන්සේ, ලිසෝ, හැරී ස්ටයිල්ස්, ලීල් නාස් එක්ස්, සෙලීනා ගෝමස්, ඩිස්නි හි
+    'එන්කැන්ටෝ' හි සංගීතය සහ තවත් බොහෝ දේ ඇතුළත් වේ!
+  tutorial_introtomlai_longdescription: යන්ත්ර ඉගෙනීම නමින් හැඳින්වෙන කෘතිම බුද්ධියක්
+    සහ ගැටළු විසඳීම සඳහා රොබෝවෙකු පුහුණු කිරීමට ඔවුන්ට ගැටළු විසඳීමේ ක්රියාවලිය භාවිතා
+    කළ හැකි ආකාරය ගැන ඉගෙන ගන්න. රොබෝ මාළු රටාවන් හඳුනා ගැනීමට ආකාරය ඉගෙන එහිදී යන්ත්රය
+    ඉගෙනුම් කටයුතු සහභාගි.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: ස්නායුක ජාල ක්රියා කරන ආකාරය ඉගෙන ගන්න.
+    මාර්ගයක ස්නායුක ජාල ගවේෂණය කිරීමට විජට් එකක් භාවිතා කරන්න. ස්නායුක ජාල පැහැදිලි
+    කරන වීඩියෝවක් නරඹන්න. නිර්දේශ පද්ධති නිර්මාණය කිරීමේදී විවිධ දෘෂ්ටිකෝණවල අවශ්යතාවය
+    අවසාන වශයෙන් සාකච්ඡා කරන්න.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: AI මඟින් රූප ජනනය කළ හැකි ආකාරය ඉගෙන
+    ගන්න, ඉන්පසු විසරණය AI විජට් එකක් ගවේෂණය කර මෙම ආකෘති නිර්මාණශීලී ද නැද්ද යන්න
+    සාකච්ඡා කරන්න.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: විවිධ දෘෂ්ටිකෝණයන්ගෙන් උත්පාදක AI හි
+    බලපෑම විමර්ශනය කරන්න, ඉන්පසු සියලුම සහභාගිවන්නන්ගෙන් වඩාත්ම අවශ්යතා විසඳන මාර්ගෝපදේශ
+    ඉදිරිපත් කිරීමට කණ්ඩායමක් ලෙස සහයෝගයෙන් කටයුතු කරන්න.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
+  tutorial_bsimage_string_detail_grades: 6+ ශ්රේණි
+  tutorial_bscomputing_string_detail_grades: 6+ ශ්රේණි
+  tutorial_stackpython_string_detail_grades: 6+ ශ්රේණි
+  tutorial_questcastle_string_detail_grades: ශ්රේණි 2+
+  tutorial_bsdata_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blockscadroblox_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blockscadcoin_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blockscadsolar_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blockscadstarwars_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blockscadgame_string_detail_grades: 6+ ශ්රේණි
+  tutorial_carnegieaccelerate_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_codespeakcctrivia_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_edisonsquare_string_detail_grades: 6+ ශ්රේණි
+  tutorial_carnegiemachine_string_detail_grades: 6+ ශ්රේණි
+  tutorial_skoolparts_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_skoolplant_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_mitchatgpt_string_detail_grades: 6+ ශ්රේණි
+  tutorial_mitimagebot_string_detail_grades: 6+ ශ්රේණි
+  tutorial_mitconverse_string_detail_grades: 6+ ශ්රේණි
+  tutorial_nasamarsreturn_string_detail_grades: 6+ ශ්රේණි
+  tutorial_nasaradio_string_detail_grades: 6+ ශ්රේණි
+  tutorial_nasahelicopter_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_nasacollection_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_wizclock_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_wizmoon_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_wiztraffic_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_wizpacman_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_wizsea_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_wizroad_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_bekidsadventure_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_myqpixel_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_creaticodechatgpt_string_detail_grades: ශ්රේණි 2+
+  tutorial_thunkabletranslator_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_ozobotircomm_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_gsmonster_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_gsspacerocks_string_detail_grades: 6+ ශ්රේණි
+  tutorial_ozobotbroadcast_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_ozobotapplications_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_codecombatworlds_string_detail_grades: ශ්රේණි 2+
+  tutorial_spherochatgpt_string_detail_grades: 6+ ශ්රේණි
+  tutorial_spherorvrimage_string_detail_grades: 6+ ශ්රේණි
+  tutorial_spherorvrauto_string_detail_grades: 6+ ශ්රේණි
+  tutorial_spherofeedback_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_spheroindi_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_codetribeplatform_string_detail_grades: 6+ ශ්රේණි
+  tutorial_codetribespace_string_detail_grades: 6+ ශ්රේණි
+  tutorial_codetribelanding_string_detail_grades: ශ්රේණි 2+
+  tutorial_cakeyboard_string_detail_grades: පෙර-පාඨකයා
+  tutorial_hedytext_string_detail_grades: ශ්රේණි 2+
+  tutorial_pickcodelanguage_string_detail_grades: 6+ ශ්රේණි
+  tutorial_pickcodegenart_string_detail_grades: 6+ ශ්රේණි
+  tutorial_pickcodecarbon_string_detail_grades: 6+ ශ්රේණි
+  tutorial_pickcodecookie_string_detail_grades: 6+ ශ්රේණි
+  tutorial_pickcodeexoplanet_string_detail_grades: 6+ ශ්රේණි
+  tutorial_firiahaunted_string_detail_grades: 6+ ශ්රේණි
+  tutorial_googlediscoverai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_msftsparksfly_string_detail_grades: ශ්රේණි 2+
+  tutorial_msftsparksflyjr_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_seesawemrobot_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_brilliantthinking_string_detail_grades: ශ්රේණි 2+
+  tutorial_seesawtomika_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_seesawrobot_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_brilliantcreate_string_detail_grades: 6+ ශ්රේණි
+  tutorial_seesawscratch_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_seesawkeyboard_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_seesawrobocar_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_seesawrobowand_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_seesawinventor_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_codeartobjects_string_detail_grades: 6+ ශ්රේණි
+  tutorial_microsoftmanor_string_detail_grades: 6+ ශ්රේණි
+  tutorial_nasaartemis_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_codejikaresume_string_detail_grades: ශ්රේණි 2+
+  tutorial_codejikabiz_string_detail_grades: ශ්රේණි 2+
+  tutorial_codejikasnake_string_detail_grades: ශ්රේණි 2+
+  tutorial_codespeakplant_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_codespeakaichat_string_detail_grades: 6+ ශ්රේණි
+  tutorial_icteachmicrobit_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_codeyallawebsite_string_detail_grades: ශ්රේණි 2+
+  tutorial_usicastle_string_detail_grades: 6+ ශ්රේණි
+  tutorial_bootupparty_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_codespeakrocket_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_bootupstarry_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_bootupsea_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_bootupanimal_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_bootupdance_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_unrulyart_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_intelinoabc_string_detail_grades: පෙර කියවනය - 8 ශ්රේණිය
+  tutorial_robotcodeline_string_detail_grades: 6+ ශ්රේණි
+  tutorial_cospacepirate_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_bwai_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_simplepython_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_codestersfire_string_detail_grades: 6+ ශ්රේණි
+  tutorial_codehskinder_string_detail_grades: පෙර කියවනය - 1 ශ්රේණිය
+  tutorial_codehsaielem_string_detail_grades: 2-5 ශ්රේණි
+  tutorial_codespeaktrivia_string_detail_grades: ශ්රේණි 2+
+  tutorial_hwescape_string_detail_grades: 6+ ශ්රේණි
+  tutorial_hwlava_string_detail_grades: ශ්රේණි 2+
+  tutorial_hwgallery_string_detail_grades: ශ්රේණි 2+
+  tutorial_hwfanpage_string_detail_grades: ශ්රේණි 2+
+  tutorial_hwillusion_string_detail_grades: 6+ ශ්රේණි
+  tutorial_caevolution_string_detail_grades: 6+ ශ්රේණි
+  tutorial_bbbusybot_string_detail_grades: ශ්රේණි 9+
+  tutorial_caaifarm_string_detail_grades: 6+ ශ්රේණි
+  tutorial_cafuture_string_detail_grades: 6+ ශ්රේණි
+  tutorial_dmscratch_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_dmliteracy_string_detail_grades: ශ්රේණි 9+
+  tutorial_dmwind_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_dmbeatbox_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_kinderaikibo_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_kinderairvr_string_detail_grades: පෙර කියවනය - 5 ශ්රේණිය
+  tutorial_bbtai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_cagenius_string_detail_grades: 6+ ශ්රේණි
+  tutorial_tynkerweather_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_tynkerbalance_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_tynkertickle_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_tynkerfruit_string_detail_grades: ශ්රේණි 9+
+  tutorial_codemonkeyhoot_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_kcjpong_string_detail_grades: 6+ ශ්රේණි
+  tutorial_dmsolar_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_mindmakersneural_string_detail_grades: 6+ ශ්රේණි
+  tutorial_blocksmithrescue_string_detail_grades: ශ්රේණි 2+
+  tutorial_cstaheroes_string_detail_grades: ශ්රේණි 2+
+  tutorial_codecombathack_string_detail_grades: 6+ ශ්රේණි
+  tutorial_toxicodewords_string_detail_grades: ශ්රේණි 2+
+  tutorial_mitstepmisinformation_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_mitstepdeepfakes_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_mitstepintrotoml_string_detail_grades: 6-8 ශ්රේණි
+  tutorial_naflogo_string_detail_grades: 6+ ශ්රේණි
+  tutorial_madmobile_string_detail_grades: 6+ ශ්රේණි
+  tutorial_intelinosmile_string_detail_grades: පෙර කියවනය - 8 ශ්රේණිය
+  tutorial_intelinoaisign_string_detail_grades: 2-8 ශ්රේණි
+  tutorial_danceai2023_string_detail_grades: ශ්රේණි 2+
+  tutorial_introtomlai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_computervisionai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_neuralnetworksai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_chatbotsllmai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_generativeimagesai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_algorithmicbiasai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_codeofethicsai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_socimpactofgenaiai_string_detail_grades: 6+ ශ්රේණි
+  tutorial_generationai_string_detail_grades: ශ්රේණි 2+
+  tutorial_bsimage_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්, සෆාරි
+  tutorial_bscomputing_string_platforms: ඉවත් කර ඇත
+  tutorial_stackpython_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_questcastle_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_bsdata_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_blockscadroblox_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_blockscadcoin_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_blockscadsolar_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone"
+  tutorial_blockscadstarwars_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_blockscadgame_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_carnegieaccelerate_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codespeakcctrivia_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්, සෆාරි
+  tutorial_edisonsquare_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_carnegiemachine_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_skoolparts_string_platforms: ඉවත් කර ඇත
+  tutorial_skoolplant_string_platforms: ඉවත් කර ඇත
+  tutorial_mitchatgpt_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_mitimagebot_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_mitconverse_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_nasamarsreturn_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_nasaradio_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_nasahelicopter_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_nasacollection_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wizclock_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wizmoon_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wiztraffic_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wizpacman_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wizsea_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_wizroad_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_bekidsadventure_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_myqpixel_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්,
+    වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_creaticodechatgpt_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_thunkabletranslator_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_ozobotircomm_string_platforms: ඉවත් කර ඇත
+  tutorial_gsmonster_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_gsspacerocks_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_ozobotbroadcast_string_platforms: ඉවත් කර ඇත
+  tutorial_ozobotapplications_string_platforms: ඉවත් කර ඇත
+  tutorial_codecombatworlds_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_spherochatgpt_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_spherorvrimage_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_spherorvrauto_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_spherofeedback_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_spheroindi_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codetribeplatform_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codetribespace_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codetribelanding_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_cakeyboard_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_hedytext_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්,
+    වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_pickcodelanguage_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_pickcodegenart_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_pickcodecarbon_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_pickcodecookie_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_pickcodeexoplanet_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_firiahaunted_string_platforms: Microsoft Edge, Chrome, Firefox
+  tutorial_googlediscoverai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_msftsparksfly_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_msftsparksflyjr_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_seesawemrobot_string_platforms: ඉවත් කර ඇත
+  tutorial_brilliantthinking_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්, සෆාරි
+  tutorial_seesawtomika_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_seesawrobot_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_brilliantcreate_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්, සෆාරි
+  tutorial_seesawscratch_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_seesawkeyboard_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_seesawrobocar_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_seesawrobowand_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_seesawinventor_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codeartobjects_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්
+  tutorial_microsoftmanor_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_nasaartemis_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codejikaresume_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codejikabiz_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codejikasnake_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codespeakplant_string_platforms: ක්රෝම්, සෆාරි
+  tutorial_codespeakaichat_string_platforms: ක්රෝම්, සෆාරි
+  tutorial_icteachmicrobit_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codeyallawebsite_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_usicastle_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_bootupparty_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codespeakrocket_string_platforms: ක්රෝම්, ෆයර්ෆොක්ස්, සෆාරි
+  tutorial_bootupstarry_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_bootupsea_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_bootupanimal_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_bootupdance_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_unrulyart_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_intelinoabc_string_platforms: ඉවත් කර ඇත
+  tutorial_robotcodeline_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_cospacepirate_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්
+  tutorial_bwai_string_platforms: ඉවත් කර ඇත
+  tutorial_simplepython_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codestersfire_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codehskinder_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codehsaielem_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codespeaktrivia_string_platforms: ක්රෝම්
+  tutorial_hwescape_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_hwlava_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_hwgallery_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_hwfanpage_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_hwillusion_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_caevolution_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්
+  tutorial_bbbusybot_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_caaifarm_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය, අයිපෑඩ්
+  tutorial_cafuture_string_platforms: ඉවත් කර ඇත
+  tutorial_dmscratch_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_dmliteracy_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_dmwind_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_dmbeatbox_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_kinderaikibo_string_platforms: ඉවත් කර ඇත
+  tutorial_kinderairvr_string_platforms: ඉවත් කර ඇත
+  tutorial_bbtai_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_cagenius_sstring_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_tynkerweather_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_tynkerbalance_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_tynkertickle_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_tynkerfruit_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_codemonkeyhoot_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_kcjpong_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_dmsolar_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_mindmakersneural_string_platforms: මයික්රොසොෆ්ට් එජ්, ක්රෝම්
+  tutorial_blocksmithrescue_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_cstaheroes_string_platforms: ඉවත් කර ඇත
+  tutorial_codecombathack_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_toxicodewords_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, වින්ඩෝස් දුරකථනය, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_mitstepmisinformation_string_platforms: ඉවත් කර ඇත
+  tutorial_mitstepdeepfakes_string_platforms: ඉවත් කර ඇත
+  tutorial_mitstepintrotoml_string_platforms: ඉවත් කර ඇත
+  tutorial_naflogo_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_madmobile_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_intelinosmile_string_platforms: සියලුම නවීන බ්රව්සර්, අයිපෑඩ්
+  tutorial_intelinoaisign_string_platforms: සියලුම නවීන බ්රව්සර්
+  tutorial_danceai2023_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_introtomlai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_computervisionai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_neuralnetworksai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_chatbotsllmai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_generativeimagesai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ්
+    ටැබ්ලටය, අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_algorithmicbiasai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_codeofethicsai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ් ටැබ්ලටය,
+    අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_socimpactofgenaiai_string_platforms: සියලුම නවීන බ්රව්සර්, ඇන්ඩ්රොයිඩ්
+    ටැබ්ලටය, අයිපෑඩ්, ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_generationai_string_platforms: ඇන්ඩ්රොයිඩ් ටැබ්ලට්, අයිපෑඩ්, වින්ඩෝස් දුරකථනය,
+    ඇන්ඩ්රොයිඩ් දුරකථනය, අයිෆෝන්
+  tutorial_bsimage_string_detail_platforms: ''
+  tutorial_bscomputing_string_detail_platforms: ''
+  tutorial_stackpython_string_detail_platforms: ''
+  tutorial_questcastle_string_detail_platforms: ''
+  tutorial_bsdata_string_detail_platforms: ''
+  tutorial_blockscadroblox_string_detail_platforms: ''
+  tutorial_blockscadcoin_string_detail_platforms: ''
+  tutorial_blockscadsolar_string_detail_platforms: ''
+  tutorial_blockscadstarwars_string_detail_platforms: ''
+  tutorial_blockscadgame_string_detail_platforms: ''
+  tutorial_carnegieaccelerate_string_detail_platforms: ''
+  tutorial_codespeakcctrivia_string_detail_platforms: ''
+  tutorial_edisonsquare_string_detail_platforms: එඩිසන් රොබෝ
+  tutorial_carnegiemachine_string_detail_platforms: ''
+  tutorial_skoolparts_string_detail_platforms: Beebot
+  tutorial_skoolplant_string_detail_platforms: Matatalab Coding Blocks
+  tutorial_mitchatgpt_string_detail_platforms: ''
+  tutorial_mitimagebot_string_detail_platforms: ''
+  tutorial_mitconverse_string_detail_platforms: ''
+  tutorial_nasamarsreturn_string_detail_platforms: ආර්ඩුයිනෝ
+  tutorial_nasaradio_string_detail_platforms: ආර්ඩුයිනෝ
+  tutorial_nasahelicopter_string_detail_platforms: ''
+  tutorial_nasacollection_string_detail_platforms: ''
+  tutorial_wizclock_string_detail_platforms: ''
+  tutorial_wizmoon_string_detail_platforms: ''
+  tutorial_wiztraffic_string_detail_platforms: ''
+  tutorial_wizpacman_string_detail_platforms: ''
+  tutorial_wizsea_string_detail_platforms: ''
+  tutorial_wizroad_string_detail_platforms: ''
+  tutorial_bekidsadventure_string_detail_platforms: ''
+  tutorial_myqpixel_string_detail_platforms: ''
+  tutorial_creaticodechatgpt_string_detail_platforms: ''
+  tutorial_thunkabletranslator_string_detail_platforms: ''
+  tutorial_ozobotircomm_string_detail_platforms: Ozobot Evo
+  tutorial_gsmonster_string_detail_platforms: ''
+  tutorial_gsspacerocks_string_detail_platforms: ''
+  tutorial_ozobotbroadcast_string_detail_platforms: Ozobot Evo
+  tutorial_ozobotapplications_string_detail_platforms: Ozobot Evo
+  tutorial_codecombatworlds_string_detail_platforms: ''
+  tutorial_spherochatgpt_string_detail_platforms: ස්පෙරෝ බෝල්ට්
+  tutorial_spherorvrimage_string_detail_platforms: Sphero RVR+
+  tutorial_spherorvrauto_string_detail_platforms: Sphero RVR+
+  tutorial_spherofeedback_string_detail_platforms: littleBits STEAM + Coding Kit
+  tutorial_spheroindi_string_detail_platforms: ස්පෙරෝ ඉන්ඩි
+  tutorial_codetribeplatform_string_detail_platforms: ''
+  tutorial_codetribespace_string_detail_platforms: ''
+  tutorial_codetribelanding_string_detail_platforms: ''
+  tutorial_cakeyboard_string_detail_platforms: ''
+  tutorial_hedytext_string_detail_platforms: ''
+  tutorial_pickcodelanguage_string_detail_platforms: ''
+  tutorial_pickcodegenart_string_detail_platforms: ''
+  tutorial_pickcodecarbon_string_detail_platforms: ''
+  tutorial_pickcodecookie_string_detail_platforms: ''
+  tutorial_pickcodeexoplanet_string_detail_platforms: ''
+  tutorial_firiahaunted_string_detail_platforms: ''
+  tutorial_googlediscoverai_string_detail_platforms: ''
+  tutorial_msftsparksfly_string_detail_platforms: ''
+  tutorial_msftsparksflyjr_string_detail_platforms: ''
+  tutorial_seesawemrobot_string_detail_platforms: ''
+  tutorial_brilliantthinking_string_detail_platforms: ''
+  tutorial_seesawtomika_string_detail_platforms: ''
+  tutorial_seesawrobot_string_detail_platforms: ''
+  tutorial_brilliantcreate_string_detail_platforms: ''
+  tutorial_seesawscratch_string_detail_platforms: ''
+  tutorial_seesawkeyboard_string_detail_platforms: ''
+  tutorial_seesawrobocar_string_detail_platforms: ''
+  tutorial_seesawrobowand_string_detail_platforms: ''
+  tutorial_seesawinventor_string_detail_platforms: ''
+  tutorial_codeartobjects_string_detail_platforms: ''
+  tutorial_microsoftmanor_string_detail_platforms: ''
+  tutorial_nasaartemis_string_detail_platforms: ''
+  tutorial_codejikaresume_string_detail_platforms: ''
+  tutorial_codejikabiz_string_detail_platforms: ''
+  tutorial_codejikasnake_string_detail_platforms: ''
+  tutorial_codespeakplant_string_detail_platforms: ''
+  tutorial_codespeakaichat_string_detail_platforms: ''
+  tutorial_icteachmicrobit_string_detail_platforms: ''
+  tutorial_codeyallawebsite_string_detail_platforms: ''
+  tutorial_usicastle_string_detail_platforms: ''
+  tutorial_bootupparty_string_detail_platforms: ''
+  tutorial_codespeakrocket_string_detail_platforms: ''
+  tutorial_bootupstarry_string_detail_platforms: ''
+  tutorial_bootupsea_string_detail_platforms: ''
+  tutorial_bootupanimal_string_detail_platforms: ''
+  tutorial_bootupdance_string_detail_platforms: ''
+  tutorial_unrulyart_string_detail_platforms: ''
+  tutorial_intelinoabc_string_detail_platforms: intelino smart train set
+  tutorial_robotcodeline_string_detail_platforms: ''
+  tutorial_cospacepirate_string_detail_platforms: ''
+  tutorial_bwai_string_detail_platforms: ''
+  tutorial_simplepython_string_detail_platforms: ''
+  tutorial_codestersfire_string_detail_platforms: ''
+  tutorial_codehskinder_string_detail_platforms: ''
+  tutorial_codehsaielem_string_detail_platforms: ''
+  tutorial_codespeaktrivia_string_detail_platforms: ''
+  tutorial_hwescape_string_detail_platforms: ''
+  tutorial_hwlava_string_detail_platforms: ''
+  tutorial_hwgallery_string_detail_platforms: ''
+  tutorial_hwfanpage_string_detail_platforms: ''
+  tutorial_hwillusion_string_detail_platforms: ''
+  tutorial_caevolution_string_detail_platforms: ''
+  tutorial_bbbusybot_string_detail_platforms: ''
+  tutorial_caaifarm_string_detail_platforms: ''
+  tutorial_cafuture_string_detail_platforms: ''
+  tutorial_dmscratch_string_detail_platforms: ''
+  tutorial_dmliteracy_string_detail_platforms: ''
+  tutorial_dmwind_string_detail_platforms: ''
+  tutorial_dmbeatbox_string_detail_platforms: ''
+  tutorial_kinderaikibo_string_detail_platforms: කිබෝ රොබෝ කට්ටලය
+  tutorial_kinderairvr_string_detail_platforms: කිබෝ රොබෝ කට්ටලය
+  tutorial_bbtai_string_detail_platforms: ''
+  tutorial_cagenius_string_detail_platforms: ''
+  tutorial_tynkerweather_string_detail_platforms: ''
+  tutorial_tynkerbalance_string_detail_platforms: ''
+  tutorial_tynkertickle_string_detail_platforms: ''
+  tutorial_tynkerfruit_string_detail_platforms: ''
+  tutorial_codemonkeyhoot_string_detail_platforms: ''
+  tutorial_kcjpong_string_detail_platforms: ''
+  tutorial_dmsolar_string_detail_platforms: ''
+  tutorial_mindmakersneural_string_detail_platforms: ''
+  tutorial_blocksmithrescue_string_detail_platforms: ''
+  tutorial_cstaheroes_string_detail_platforms: ''
+  tutorial_codecombathack_string_detail_platforms: ''
+  tutorial_toxicodewords_string_detail_platforms: ''
+  tutorial_mitstepmisinformation_string_detail_platforms: ''
+  tutorial_mitstepdeepfakes_string_detail_platforms: ''
+  tutorial_mitstepintrotoml_string_detail_platforms: ''
+  tutorial_naflogo_string_detail_platforms: ''
+  tutorial_madmobile_string_detail_platforms: ''
+  tutorial_intelinosmile_string_detail_platforms: intelino smart train set
+  tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
+  tutorial_bsimage_string_detail_programming_languages: Pyret
+  tutorial_bscomputing_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_stackpython_string_detail_programming_languages: පයිතන්
+  tutorial_questcastle_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_bsdata_string_detail_programming_languages: Pyret
+  tutorial_blockscadroblox_string_detail_programming_languages: බ්ලොක්
+  tutorial_blockscadcoin_string_detail_programming_languages: බ්ලොක්
+  tutorial_blockscadsolar_string_detail_programming_languages: බ්ලොක්
+  tutorial_blockscadstarwars_string_detail_programming_languages: බ්ලොක්
+  tutorial_blockscadgame_string_detail_programming_languages: බ්ලොක්
+  tutorial_carnegieaccelerate_string_detail_programming_languages: බ්ලොක්
+  tutorial_codespeaktrivia_string_detail_programming_languages: HTML
+  tutorial_edisonsquare_string_detail_programming_languages: බ්ලොක්
+  tutorial_carnegiemachine_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_skoolparts_string_detail_programming_languages: බ්ලොක්
+  tutorial_skoolplant_string_detail_programming_languages: බ්ලොක්
+  tutorial_mitchatgpt_string_detail_programming_languages: MIT App Inventor
+  tutorial_mitimagebot_string_detail_programming_languages: MIT App Inventor
+  tutorial_mitconverse_string_detail_programming_languages: MIT App Inventor
+  tutorial_nasamarsreturn_string_detail_programming_languages: බ්ලොක්, පයිතන්
+  tutorial_nasaradio_string_detail_programming_languages: බ්ලොක්, පයිතන්
+  tutorial_nasahelicopter_string_detail_programming_languages: බ්ලොක්
+  tutorial_nasacollection_string_detail_programming_languages: බ්ලොක්
+  tutorial_wizclock_string_detail_programming_languages: බ්ලොක්
+  tutorial_wizmoon_string_detail_programming_languages: බ්ලොක්
+  tutorial_wiztraffic_string_detail_programming_languages: බ්ලොක්
+  tutorial_wizpacman_string_detail_programming_languages: බ්ලොක්
+  tutorial_wizsea_string_detail_programming_languages: බ්ලොක්
+  tutorial_wizroad_string_detail_programming_languages: බ්ලොක්
+  tutorial_bekidsadventure_string_detail_programming_languages: බ්ලොක්
+  tutorial_myqpixel_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_creaticodechatgpt_string_detail_programming_languages: බ්ලොක්
+  tutorial_thunkabletranslator_string_detail_programming_languages: බ්ලොක්
+  tutorial_ozobotircomm_string_detail_programming_languages: බ්ලොක්
+  tutorial_gsmonster_string_detail_programming_languages: බ්ලොක්
+  tutorial_gsspacerocks_string_detail_programming_languages: බ්ලොක්
+  tutorial_ozobotbroadcast_string_detail_programming_languages: බ්ලොක්
+  tutorial_ozobotapplications_string_detail_programming_languages: බ්ලොක්
+  tutorial_codecombatworlds_string_detail_programming_languages: Luau
+  tutorial_spherochatgpt_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_spherorvrimage_string_detail_programming_languages: බ්ලොක්
+  tutorial_spherorvrauto_string_detail_programming_languages: බ්ලොක්
+  tutorial_spherofeedback_string_detail_programming_languages: බ්ලොක්
+  tutorial_spheroindi_string_detail_programming_languages: ''
+  tutorial_codetribeplatform_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_codetribespace_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_codetribelanding_string_detail_programming_languages: HTML, CSS
+  tutorial_cakeyboard_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_hedytext_string_detail_programming_languages: Python, Hedy
+  tutorial_pickcodelanguage_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_pickcodegenart_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_pickcodecarbon_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_pickcodecookie_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_pickcodeexoplanet_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_firiahaunted_string_detail_programming_languages: පයිතන්
+  tutorial_googlediscoverai_string_detail_programming_languages: ''
+  tutorial_msftsparksfly_string_detail_programming_languages: බ්ලොක්
+  tutorial_msftsparksflyjr_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawemrobot_string_detail_programming_languages: බ්ලොක්
+  tutorial_brilliantthinking_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawtomika_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawrobot_string_detail_programming_languages: බ්ලොක්
+  tutorial_brilliantcreate_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawscratch_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawkeyboard_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawrobocar_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawrobowand_string_detail_programming_languages: බ්ලොක්
+  tutorial_seesawinventor_string_detail_programming_languages: බ්ලොක්
+  tutorial_codeartobjects_string_detail_programming_languages: බ්ලොක්
+  tutorial_microsoftmanor_string_detail_programming_languages: පයිතන්
+  tutorial_nasaartemis_string_detail_programming_languages: බ්ලොක්, පයිතන්
+  tutorial_codejikaresume_string_detail_programming_languages: HTML, CSS
+  tutorial_codejikabiz_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML,
+    CSS
+  tutorial_codejikasnake_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML,
+    CSS
+  tutorial_codespeakplant_string_detail_programming_languages: බ්ලොක්
+  tutorial_codespeakaichat_string_detail_programming_languages: පයිතන්
+  tutorial_icteachmicrobit_string_detail_programming_languages: ''
+  tutorial_codeyallawebsite_string_detail_programming_languages: HTML, CSS
+  tutorial_usicastle_string_detail_programming_languages: පයිතන්
+  tutorial_bootupparty_string_detail_programming_languages: බ්ලොක්
+  tutorial_codespeakrocket_string_detail_programming_languages: බ්ලොක්
+  tutorial_bootupstarry_string_detail_programming_languages: බ්ලොක්
+  tutorial_bootupsea_string_detail_programming_languages: බ්ලොක්
+  tutorial_bootupanimal_string_detail_programming_languages: බ්ලොක්
+  tutorial_bootupdance_string_detail_programming_languages: බ්ලොක්
+  tutorial_unrulyart_string_detail_programming_languages: බ්ලොක්
+  tutorial_intelinoabc_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_robotcodeline_string_detail_programming_languages: බ්ලොක්, ජාවාස්ක්රිප්ට්
+  tutorial_cospacepirate_string_detail_programming_languages: බ්ලොක්
+  tutorial_bwai_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_simplepython_string_detail_programming_languages: බ්ලොක්, පයිතන්
+  tutorial_codestersfire_string_detail_programming_languages: පයිතන්
+  tutorial_codehskinder_string_detail_programming_languages: බ්ලොක්
+  tutorial_codehsaielem_string_detail_programming_languages: බ්ලොක්
+  tutorial_codespeakcctrivia_string_detail_programming_languages: බ්ලොක්
+  tutorial_hwescape_string_detail_programming_languages: බ්ලොක්
+  tutorial_hwlava_string_detail_programming_languages: බ්ලොක්
+  tutorial_hwgallery_string_detail_programming_languages: බ්ලොක්
+  tutorial_hwfanpage_string_detail_programming_languages: HTML, CSS
+  tutorial_hwillusion_string_detail_programming_languages: පයිතන්
+  tutorial_caevolution_string_detail_programming_languages: න්යාය පදනම් කරගත්
+  tutorial_bbbusybot_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_caaifarm_string_detail_programming_languages: න්යාය පදනම් කරගත්
+  tutorial_cafuture_string_detail_programming_languages: න්යාය පදනම් කරගත්
+  tutorial_dmscratch_string_detail_programming_languages: බ්ලොක්
+  tutorial_dmliteracy_string_detail_programming_languages: බ්ලොක්
+  tutorial_dmwind_string_detail_programming_languages: බ්ලොක්
+  tutorial_dmbeatbox_string_detail_programming_languages: බ්ලොක්
+  tutorial_kinderaikibo_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_kinderairvr_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_bbtai_string_detail_programming_languages: බ්ලොක්
+  tutorial_cagenius_string_detail_programming_languages: බ්ලොක්
+  tutorial_tynkerweather_string_detail_programming_languages: බ්ලොක්
+  tutorial_tynkerbalance_string_detail_programming_languages: බ්ලොක්
+  tutorial_tynkertickle_string_detail_programming_languages: බ්ලොක්
+  tutorial_tynkerfruit_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, p5.js
+  tutorial_codemonkeyhoot_string_detail_programming_languages: බ්ලොක්
+  tutorial_kcjpong_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_dmsolar_string_detail_programming_languages: බ්ලොක්
+  tutorial_mindmakersneural_string_detail_programming_languages: බ්ලොක්
+  tutorial_blocksmithrescue_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_cstaheroes_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_codecombathack_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_toxicodewords_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_mitstepmisinformation_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_mitstepintrotoml_string_detail_programming_languages: ඉවත් කර ඇත
+  tutorial_naflogo_string_detail_programming_languages: ජාවාස්ක්රිප්ට්
+  tutorial_madmobile_string_detail_programming_languages: ජාවාස්ක්රිප්ට්, HTML, CSS
+  tutorial_intelinosmile_string_detail_programming_languages: බ්ලොක්
+  tutorial_intelinoaisign_string_detail_programming_languages: බ්ලොක්
+  tutorial_danceai2023_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_introtomlai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_computervisionai_string_detail_programming_language: භාෂාව ස්වාධීන
+  tutorial_neuralnetworksai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_chatbotsllmai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_generativeimagesai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_algorithmicbiasai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_codeofethicsai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: භාෂාව ස්වාධීන
+  tutorial_generationai_string_detail_programming_languages: බ්ලොක්, පයිතන්
   school_not_found_heading: අපට ඔබේ පාසල සොයාගත නොහැකි විය. කරුණාකර වැඩි විස්තර ඇතුළත්
     කරන්න.
   school_name: පාසලේ නම
@@ -13337,6 +14806,10 @@ si:
   step_06: පියවර 6
   step_07: පියවර 7
   step_08: පියවර 8
+  step_09: Step 9
+  what: 'කුමක්ද:'
+  when: 'කවදාද:'
+  where: 'කොහෙද:'
   hoc_how_to_top_heading: කේතයේ පැය සඳහා ඔබේ මාර්ගෝපදේශය
   hoc_how_to_top_desc: හොඳම පැය කේත අත්දැකීම් සඳහා මාර්ගෝපදේශ සකස් කර ඇත.
   hoc_how_to_top_view_guide: සඳහා මාර්ගෝපදේශය බලන්න
@@ -13349,6 +14822,63 @@ si:
     අවස්ථා ලබා දීමෙන් නව උසකට ගෙන යන්නෙමු. ඔබ හෝ ඔබේ සිසුන් පළපුරුදු කේතකයින් වේවා
     හෝ ඔබ සියල්ලන්ම ඔබේ පළමු පරිගණක විද්යා ගවේෂණයට පැමිණෙනවාද, මෙම කේත පැය අසාමාන්ය
     ගමනක් පොරොන්දු වේ.
+  hoc_how_to_companies_intro_heading: ඔබේ සමාගමට කේත පැය සමඟ සම්බන්ධ විය හැක්කේ කෙසේද
+  hoc_how_to_companies_intro_desc_01: 'The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    This year, we''re taking Hour of Code to new heights by offering coding opportunities
+    that encompass both artificial intelligence (AI) and non-AI components. '
+  hoc_how_to_companies_intro_desc_02: All of your efforts can make a huge impact on
+    the way young women and students from marginalized racial and ethnic groups view
+    computer science and their own potential.
+  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
+    Code
+  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    Districts who fully engage with Hour of Code can help raise awareness of the computer
+    science movement and inspire more students to try computer science, particularly
+    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_heading: How to organize an Hour of Code assembly or event
+  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
+    computer science, using fun tutorials to show that anybody can learn the basics.
+    Your efforts can make a huge impact on the way students view computer science
+    and their own potential.
+  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
+    Hour of Code can help raise awareness of the computer science movement and inspire
+    more students to try computer science, particularly young women and students from
+    historically marginalized racial and ethnic groups.
+  hoc_how_to_parents_intro_heading: How to do an Hour of Code with your child
+  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
+    to introduce your child to computer science, perhaps for the very first time.
+    Not only is computer science foundational to all fields of study, but recent studies
+    show: children who study computer science perform better in other subjects, excel
+    at problem-solving, and are 17% more likely to enroll in college.'
+  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
+    students worldwide in this global event. Together, we can inspire kids to learn,
+    break stereotypes, and help children discover a newfound interest. Best of all,
+    you already have everything you need to bring the Hour of Code into your home!
+  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
+    of Code
+  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
+    Hour of Code event will show your representative the impact and need for computer
+    science education, and your students will be inspired by a role model in government.
+  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
+    Code event while engaging elected officials, complete these tasks prior to the
+    elected official attending your school. The task includes coordination with their
+    point of contact, media invitations, waivers, and planning your agenda.
+  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
+  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
+    to computer science, using fun tutorials to show that anybody can learn the basics.
+    As a volunteer, your efforts can make a huge impact on the way students view computer
+    science and their own potential.
+  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
+    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
+    of all backgrounds participate. The Hour of Code features a large variety of activities
+    for all ages and skill levels, so you don't need to be a programming expert to
+    volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: පැය සංග්රහයක් කිරීම සඳහා පූර්ව අවශ්යතා මොනවාද?
   hoc_how_to_faq_answer_prerequisites: කේතයේ පැය ධාවනය කිරීම සරලයි - ආරම්භකයින් සඳහා
     පවා. නව යමක් ගවේෂණය කිරීමට, නිර්මාණය කිරීමට සහ ඉගෙන ගැනීමට සිසුන්ට පෙළඹවීම සඳහා
@@ -13358,6 +14888,8 @@ si:
   hoc_how_to_faq_answer_devices_02: උපාංග සීමිත හෝ ලබා ගත නොහැකි නම්, කිසිදු උපාංගයක්
     නොමැතිව ඉගෙන ගැනීමට [යුගල වැඩසටහන්කරණය] (%{pair_url}) උත්සාහ කරන්න හෝ අපගේ [unplugged
     ක්රියාකාරකම්] (%{unplugged_url}) ගවේෂණය කරන්න!
+  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
+    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
   hoc_how_to_faq_question_volunteer: ස්වේච්ඡාවෙන් කටයුතු කළ හැක්කේ කාටද
   hoc_how_to_faq_answer_volunteer: පරිගණක විද්යා අධ්යාපනය සහ තාක්ෂණයේ විවිධත්වය වැඩි
     කිරීම ගැන උනන්දුවක් දක්වන ඕනෑම කෙනෙකුට ස්වේච්ඡා සේවකයකු විය සියලු පසුබිම් වල ස්වේච්ඡා
@@ -13372,78 +14904,458 @@ si:
   hoc_how_to_faq_answer_account: කේතයේ පැය උත්සාහ කිරීම සඳහා සිසුන්ට ලියාපදිංචි වීමක්
     හෝ පිවිසුමක් අවශ්ය නොවේ. කේත පැය සඳහා ලියාපදිංචි වීම ස්වයංක්රීයව Code.org ගිණුමක්
     නිර්මාණය නොකරයි.
+  hoc_how_to_faq_question_organize_specific_school: How do I organize with a specific
+    school?
+  hoc_how_to_faq_answer_organize_specific_school: We recommend reaching out to teachers
+    and administrators directly if there's a classroom you'd like to volunteer with.
+    If you're a parent or guardian, [send this email](%{email_url}) to your child's
+    teacher offering to help them run an Hour of Code. Send an email to the school
+    you have in mind using our [sample text](%{sample_text_url}) as a guide.
+  hoc_how_to_faq_question_prepare: How do I prepare for Hour of Code?
+  hoc_how_to_faq_answer_prepare_01: Try out some of the activities yourself before
+    heading to the classroom.
+  hoc_how_to_faq_answer_prepare_02: 'Discuss your role at the event with the teacher.
+    You may want to prepare to share your story: How did you get involved in a career
+    in tech or why is tech important to you?'
+  hoc_how_to_faq_answer_prepare_03: Get the students excited! [Pick out a video](%{video_url})
+    to help focus the class and get them excited to do an Hour of Code.
+  hoc_how_to_faq_answer_prepare_04: If you are a virtual volunteer, test A/V and screen
+    sharing capabilities beforehand.
+  hoc_how_to_faq_question_when_company_host: When can my company host an Hour of Code
+    event?
+  hoc_how_to_faq_answer_when_company_host: People around the world join the Hour of
+    Code celebration during CS Education Week (%{campaign_date}) when the latest tutorials
+    and activities are released. But you can do an Hour of Code any day of the year!
+  hoc_how_to_faq_question_volunteer_teacher_contact: මට තාම ගුරුවරයෙක් සම්බන්ධ වෙලා
+    නැහැ. මට තවමත් ස්වේච්ඡාවෙන් කටයුතු කරන්නේ කෙසේද?
+  hoc_how_to_faq_answer_volunteer_teacher_contact: දේශීය පාසල් සෙවීමට උත්සාහ කර විදුහල්පති/ගුරුවරයා/ඉදිරිපස
+    කාර්යාලයට අමතන්න සහ ඔබට උදව් කළ හැක්කේ කෙසේදැයි විමසන්න.
+  hoc_how_to_faq_question_classroom_visit: පන්ති කාමර සංචාරය කොපමණ කාලයක් පවතිනවාද?
+  hoc_how_to_faq_answer_classroom_visit: An in-person classroom visit usually lasts
+    60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+  hoc_how_to_faq_question_age_groups: කේත පැය ක්රියාකාරිත්වය සුදුසු වන්නේ කුමන වයස්
+    කාණ්ඩයටද?
+  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
+    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
+    Everyone—even adults—can have fun learning!
   hoc_how_to_resources_heading_educators: අධ්යාපනඥයන් සඳහා වෙනත් පැය සංග්රහය සම්පත්
+  hoc_how_to_resources_heading_default: Other Hour of Code resources
   hoc_how_to_resources_promo_heading: ප්රවර්ධන සම්පත්
   hoc_how_to_resources_promo_desc: ඔබේ පැය කේතය කෙරෙහි අවධානය යොමු කිරීම සඳහා ඔබට
     අවශ්ය සියලුම සම්පත් - මුද්රණය සහ ඩිජිටල්-සොයා ගන්න.
   hoc_how_to_resources_discover_heading: ක්රියාකාරකම් සොයා ගන්න
   hoc_how_to_resources_discover_desc: භාෂා 45 කට අධික සංඛ්යාවකින් සියලු වයස් කාණ්ඩ
     සඳහා නිර්මාණය කර ඇති පැයක නිබන්ධන පුළුල් තේරීමක් ගවේෂණය කරන්න.
+  hoc_how_to_resources_get_involved_heading: How to Get Involved
+  hoc_how_to_resources_get_involved_desc: Help spread the word about Hour of Code!
+    Discover ways to get your community involved.
+  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
+  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
+    look for ways to promote the Hour of Code in your district communication to stakeholders.
+    Find impactful infographics and statistics to share with your community!
   hoc_how_to_step_label_plan: ඔබ ඔබේ පැය කේතය කරන්නේ කොතැනද සහ කවදාද යන්න සැලසුම්
     කරන්න
   hoc_how_to_step_label_choose_activity: ඔබේ ක්රියාකාරිත්වය තෝරන්න
+  hoc_how_to_step_label_choose_activities: ඔබේ ක්රියාකාරකම් තෝරන්න
   hoc_how_to_step_label_test_activity: ඔබේ ක්රියාකාරිත්වය පරීක්ෂා කරන්න
+  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
   hoc_how_to_step_label_register_event: ඔබේ සිදුවීම ලියාපදිංචි කරන්න
+  hoc_how_to_step_label_register_your_hoc: ඔබේ කේත පැය ලියාපදිංචි කරන්න
   hoc_how_to_step_label_tell: ඔබේ සිසුන්ට, පාසලට සහ ප්රජාවට කියන්න
   hoc_how_to_step_label_get_coding: කේතීකරණය ලබා ගන්න!
   hoc_how_to_step_label_celebrate: සමරන්න
   hoc_how_to_step_label_beyond_hoc: කේතයේ පැයට ඔබ්බට
+  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_plan_your_event: ඔබේ උත්සවය සැලසුම් කරන්න
+  hoc_how_to_step_label_plan_your_hour: ඔබේ පැය සැලසුම් කරන්න
+  hoc_how_to_step_label_help_spread_word: වචනය පැතිරවීමට උදව් කරන්න
+  hoc_how_to_step_label_connect_with_school: දේශීය පාසලක් සමඟ සම්බන්ධ වන්න
+  hoc_how_to_step_label_inspire_employees: Inspire your employees
+  hoc_how_to_step_label_encourage_employees: Encourage employees to volunteer
+  hoc_how_to_step_label_plan_internal_event: Plan an internal event
+  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
+  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
+    in Hour of Code
+  hoc_how_to_step_label_after_event: After the event
+  hoc_how_to_step_label_invite_elected_official: Invite an elected official
+  hoc_how_to_step_label_coordinate_media: Coordinate with Media
+  hoc_how_to_step_label_confirm_details: Confirm all details
+  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
+  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
   hoc_how_to_step_beyond_hoc_subhead: එය මෙතැනින් අවසන් නොවේ!
-  hoc_how_to_step_beyond_hoc_desc: පරිගණක විද්යාව සංග්රහයේ පැය සමඟ අවසන් විය යුතු
-    නැත! දෙමව්පියන්ගෙන් 90% ක් තම දරුවාට පරිගණක විද්යාව ඉගෙන ගැනීමට අවශ්ය වුවත් බොහෝ
-    පාසල් තවමත් එය උගන්වන්නේ නැත. අද ඔබේ දරුවාගේ පාසලට CS ගෙන්වන ආකාරය ඉගෙන ගන්න.
-  hoc_how_to_step_01_educators_subhead: ඔබ සතුව ඇති සිසුන් සහ උපාංග සංඛ්යාව සඳහා ක්රියා
-    කරන සිදුවීම් කාලය සහ අවකාශයක් තෝරන්න.
-  hoc_how_to_step_01_educators_desc_01: ඔබේ පැය කේතය කිරීමට ඔබට ලබා ගත හැකි අවකාශයන්
-    මොනවාද? ඔබේ අවකාශයේ තාක්ෂණික හැකියාවන් සහ ඔබේ සිසුන් වැඩ කිරීමට අපේක්ෂා කරන උපාංග
-    වර්ග සලකා බලන්න. සිසුන්ට තනි උපාංගයක නිබන්ධන මත වැඩ කළ හැකිය, හවුල් උපාංගයක් භාවිතා
-    කරමින් හැරී යාමට හෝ පන්ති කාමරයේ වයිට්බෝඩ් එකක නිබන්ධනයක් උත්සාහ කළ හැකිය. කිසිසේත්
-    උපාංග නොමැතිව සම්පූර්ණ කළ හැකි unplugged නිබන්ධන පවා තිබේ. විසන්ධි කළ විකල්ප ඕනෑම
-    තැනක කළ හැකිය - එළිමහනේ පවා!
-  hoc_how_to_step_01_educators_desc_02: නවතම නිබන්ධන හා ක්රියාකාරකම් නිකුත් කරන %{campaign_date}
-    විට CS අධ්යාපන සතිය තුළ Hour of Code සැමරුමට ලොව පුරා ජනතාව එක්වෙති. නමුත් ඔබට
-    අවුරුද්දේ ඕනෑම දිනක පැය කේතයක් කළ හැකිය!
-  hoc_how_to_step_02_educators_desc_01: ඔබේ කණ්ඩායමේ වයස, අත්දැකීම්, අවශ්යතා සහ තවත්
-    දේ මත පදනම්ව ක්රියාකාරකම් ගවේෂණය කරන්න. සිසුන්ට ස්වයං මෙහෙයවන නිබන්ධන උත්සාහ කිරීම
-    ජනප්රියයි, බොහෝ ක්රියාකාරකම්වලට ගුරුවරුන්ට සාකච්ඡාවට මඟ පෙන්වීම හෝ ක්රියාකාරකම්
-    දීර්ඝ කිරීම සඳහා පාඩම් සැලසුම් ඇතුළත් වේ.
-  hoc_how_to_step_02_educators_desc_02: ඔබේ සියලු සිසුන් සඳහා තනි නිබන්ධනයක් තෝරා
-    ගැනීමට අවශ්ය නම්, හෝ එක් එක් දරුවා තමන්ගේම තෝරා ගැනීමට ඉඩ දෙන්න නම් කලින් තීරණය
-    කරන්න.
-  hoc_how_to_step_02_educators_desc_03: මෙම වසරේ, ඔබට සහ ඔබේ සිසුන්ට නිබන්ධන, පාඩම්
-    සැලසුම් සහ අපගේ නව AI වැඩ කරන ආකාරය වීඩියෝ මාලාව හරහා [AI ගැන සියල්ල ඉගෙන ගන්න]
-    (%ai_url) කළ හැකිය.
-  hoc_how_to_step_03_educators_desc_01: ඔබ පන්ති කාමරයට පිවිසීමට පෙර නිබන්ධනය ඔබම
-    උත්සාහ කරන්න, එවිට ඔබට ප්රශ්නවලට පිළිතුරු දිය හැකිය!
-  hoc_how_to_step_03_educators_desc_02: ඔවුන් ශබ්ද සහ වීඩියෝ සහාය සහතික කිරීම සඳහා
-    ශිෂ්ය පරිගණක හෝ උපාංග මත නිබන්ධන පරීක්ෂා කළ හැකිය. අඩු කලාප පළල තිබේද? පන්තියේ
-    ඉදිරිපස වීඩියෝ පෙන්වීමට සැලසුම් කරන්න, එබැවින් එක් එක් ශිෂ්යයා තමන්ගේම වීඩියෝ
-    බාගත නොකරයි.
-  hoc_how_to_step_03_educators_desc_03: ඔබේ පන්තිය සඳහා හෙඩ්ෆෝන් සැපයීම සලකා බලන්න,
-    නැතහොත් ඔබ තෝරා ගන්නා නිබන්ධනය ශබ්දය සමඟ වඩාත් හොඳින් ක්රියා කරන්නේ නම් සිසුන්ගෙන්
-    ඔවුන්ගේම ගෙන ඒමට ඉල්ලා සිටින්න.
-  hoc_how_to_step_04_educators_desc_01: ඔබ ඔබේ පැය කේත සිදුවීම ලියාපදිංචි කරන විට,
-    සාර්ථක පැය කේතයක් සත්කාරකත්වය සඳහා ප්රවෘත්ති සහ ඉඟි සහිත ප්රයෝජනවත් ඊමේල් ඔබට
-    ලැබෙනු ඇත. ඔබේ පාසල සහභාගී වන බව දේශීය ස්වේච්ඡා සේවකයින්ට දැනුම් දිය හැකි ආකාරය
-    ද එයයි. ස්වේච්ඡා සේවකයින් විශාල සම්පතක් වන අතර පරිගණක විද්යාව ගැන ඔබේ පන්තියට
-    කතා කිරීමට හෝ ඔබේ සිසුන්ට පැය කේත ක්රියාකාරකම් සඳහා උදව් කළ හැකිය.
-  hoc_how_to_step_05_educators_desc_01: සැබෑ ලෝකයේ පරිගණක විද්යාව භාවිතා කළ හැකි විවිධ
-    පුද්ගලයින් සහ නිර්මාණාත්මක ක්රම ඉස්මතු කරමින් [ආශ්වාදජනක වීඩියෝ] (%{videos_url})
-    බෙදා හදා ගැනීමෙන් ඔබේ සිසුන් උත්සවය සඳහා උද්යෝගයට පත් වන්න.
-  hoc_how_to_step_05_educators_desc_02: විනෝදය සඳහා සම්බන්ධ වීමට අවශ්ය විය හැකි වෙනත්
-    ගුරුවරුන් සමඟ ඔබේ පැය කේත සැලසුම් බෙදා ගන්න! ඔබේ පාසලේ මව් ගුරු ශිෂ්ය සංගමය වෙත
-    ළඟා වීමට හෝ ඔවුන්ගේ දරුවන් ඉගෙන ගන්නා දේ ඔවුන්ට දන්වා දෙමින් මව් පුවත් පත් වල
-    බෙදා ගැනීමට මෙය කදිම අවස්ථාවක් වේ.
-  hoc_how_to_step_06_educators_desc_01: ඔබේ සිසුන් ක්රියාකාරකම් වෙත යොමු කරන්න, සමහර
-    විට පුවරුවේ ඇති සබැඳිය බෙදා ගැනීමෙන් හෝ ඔබේ පන්ති කාමරයේ ඉගෙනුම් කළමනාකරණ පද්ධතිය
-    හරහා. ඔබේ සිසුන්ට අභියෝගවලට මුහුණ දිය හැකිය - එය කමක් නැත! වැඩසටහනක් ඉගෙන ගැනීම
-    නව භාෂාවක් ඉගෙන ගැනීමට සමාන ය; ඔබ වහාම චතුර නොවනු ඇත. ඔබ පිළිතුර නොදන්නේ නම්,
-    ඔබට එය එකට සොයා ගත හැකිය.
-  hoc_how_to_step_07_educators_desc_01: 'සාර්ථකත්වය සැමරීමට වග බලා ගන්න! ඔබේ පැය කේත
-    සිදුවීමේ ඡායාරූප සහ වීඩියෝ සමාජ මාධ්ය ඔස්සේ බෙදා ගන්න. #HourOfCode සහ @codeorg
-    භාවිතා කරන්න එවිට අපට ඔබේ සාර්ථකත්වය ඉස්මතු කළ හැකිය!'
-  hoc_how_to_step_07_educators_desc_02: ඔබේ සිසුන්ට ඔවුන්ගේ ජයග්රහණය පෙන්වීමට ඔබට
-    සහතික මුද්රණය කළ හැකිය!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
+    these suggestions:'
+  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. Check out the diverse curriculum offerings
+    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_plan_hour_desc_01: 'ඔබ ආරම්භ කිරීම සඳහා ආදර්ශ න්යාය පත්රයක් මෙන්න:'
+  hoc_how_to_step_choose_activities_desc_01: මෙවර සංග්රහයේ පැය තේමාව වන්නේ කෘතිම බුද්ධිය
+    (AI) සමඟ නිර්මාණශීලීත්වයයි. නව යෙදුම් සහ ඇල්ගොරිතම කේතනය කිරීම, අද්විතීය කලාව
+    උත්පාදනය කිරීම හෝ අපට නැටුම් ලබා ගැනීම සඳහා කොරියෝග්රැෆි ශිල්පය වේවා, AI නිර්මාණශීලීත්වය
+    පිළිබඳ අපගේ අවබෝධය පුළුල් කරන ඩිජිටල් ප්රකාශනය සඳහා නැවුම් අවස්ථා විවර කරයි. කේතීකරණ
+    කටයුත්තක් සම්පූර්ණ කිරීමෙන් සහ AI ගැන ඉගෙන ගැනීමෙන් මෙම වසර විශේෂ කරන්න.
+  hoc_how_to_step_choose_activities_desc_02: පළමුව, [කේතීකරණ ක්රියාකාරකම් සිය ගණනක්
+    ගවේෂණය කරන්න] (%{activities_url}) සහ ඔබේ කණ්ඩායමේ වයස, අත්දැකීම්, අවශ්යතා සහ තවත්
+    දේ මත පදනම්ව එකක් තෝරන්න. [මෙම තෝරාගත් ක්රියාකාරකම්] (%{ai_activities_url}) කෘතිම
+    බුද්ධිය ප්රධාන මාතෘකාවක් හෝ පාඩමක් ලෙස දැක්වේ.
+  hoc_how_to_step_choose_activities_desc_03: එවිට, [AI ගැන සියල්ල ඉගෙන ගන්න] (%{ai_url}).
+    සිසුන්ට ක්ෂේත්රයේ ප්රවීණයන් අංග කෙටි වීඩියෝ නැරඹිය හැකි අතර, ක්රියාකාරිත්වය දීර්ඝ
+    කිරීමට සහ වැඩිදුර සාකච්ඡාවට මග පෙන්වීම සඳහා අනුබද්ධ පාඩම් සැලසුම් ඇත. නැතහොත්,
+    AI සමඟ සහ ගැන ඉගැන්වීමේ අනාගතය අගුලු දැමීම සඳහා අපි අධ්යාපනඥයන් සඳහා නොමිලේ වෘත්තීය
+    ඉගෙනුම් ලබා දෙන්නෙමු.
+  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
+    Students can watch short videos featuring experts in the field, and there are
+    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_beyond_advocacy_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it and hundreds of thousands of jobs go unfilled.
+    Learn how to bring computer science to more schools in your area and advocate
+    for computer science to be a graduation requirement.
+  hoc_how_to_step_educators_register_desc: ඔබේ සිද්ධිය ලියාපදිංචි කිරීමෙන් ඔබේ සිසුන්
+    සමඟ කේත පැයක් කිරීම සඳහා කැපවීමෙන් ආරම්භ කරන්න. ඔබ ලියාපදිංචි වූ විට, සාර්ථක කේත
+    පැයක් සත්කාරකත්වය සඳහා ප්රවෘත්ති සහ ඉඟි සහිත ප්රයෝජනවත් ඊමේල් ඔබට ලැබෙනු ඇත. ඔබත්
+    [සිතියමේ තබන්න] (%{map_url}) වනු ඇත. අපගේ සාමූහික ප්රයත්නයන්හි දෘශ්යමාන සමස්තය
+    පරිගණක විද්යා ව්යාපාරය සඳහා ඇති ගෝලීය කැපවීම පෙන්නුම් කරන අතර එමඟින් පද්ධතිමය
+    වෙනසක් සඳහා ගම්යතාව ගොඩනැගීමට අපට උපකාරී වනු ඇත.
+  hoc_how_to_step_educators_plan_desc_01: ඔබේ උත්සවයට පෙර, ක්රියාකාරකම් ඔබම අත්හදා
+    බලන්න එවිට ඔවුන් ශිෂ්ය උපාංග මත වැඩ සහතික කළ හැකි අතර ප්රශ්න වලට පිළිතුරු දීමට
+    ඔබ සූදානම්! අඩු කලාප පළල තිබේද? පන්තියේ ඉදිරිපස වීඩියෝ පෙන්වීමට සැලසුම් කරන්න,
+    ඒ නිසා එක් එක් ශිෂ්යයා තමන්ගේම වීඩියෝ බාගත කරන්නේ නැත.
+  hoc_how_to_step_educators_plan_desc_02: පරිගණක විද්යා අධ්යාපන සතිය (%{campaign_date})
+    අතරතුර ලොව පුරා මිනිසුන් බොහෝ විට Hour of Code සැමරුමට එක්වන නමුත් වසරේ ඕනෑම දිනක
+    ඔබට Hour of Code එකක් කළ හැකිය!
+  hoc_how_to_step_educators_plan_desc_03: ඔබට ලබා ගත හැකි සිසුන් සහ උපාංග සංඛ්යාව
+    සඳහා ක්රියා කරන අවකාශයක් තෝරන්න. සිසුන්ට තනි උපාංගවල ක්රියාකාරකම් උත්සාහ කළ හැකිය,
+    උපාංගයක් බෙදා හැරී, හෝ වයිට්බෝඩ් එකක පන්තියක් ලෙස. කිසිසේත් උපාංග නොමැතිව සම්පූර්ණ
+    කළ හැකි unplugged ක්රියාකාරකම් පවා ඇත, එබැවින් ඒවා පිටතින් පවා කළ හැකිය!
+  hoc_how_to_step_educators_spread_word_desc_01: "[මෙම විද්යුත් තැපැල් සැකිලි] (%{email_url})
+    සමඟ ඔබේ ප්රජාව තුළ වචනය ව්යාප්ත කිරීමට අපට උදව් කරන්න."
+  hoc_how_to_step_educators_spread_word_desc_02: සගයන් දෙදෙනෙකුගෙන් විමසන්න [register](%{register_url})
+    සහ හෝර් ඔෆ් කෝඩ් ක්රියාකාරිත්වයක් සත්කාරකත්වය දරන්න ඔවුන්, අනෙක් අතට, සගයන් දෙදෙනෙකු
+    සුරක්ෂිත කළ හැකි, සගයන් දෙදෙනෙකු සුරක්ෂිත කළ හැකි ආදිය.
+  hoc_how_to_step_educators_spread_word_desc_03: "[පාසල් පුරා උත්සවයක් පැවැත්වීමට]
+    ඔබේ විදුහල්පතිවරයාගෙන් ඉල්ලා සිටින්න (%{host_url}). ළමයින් 300 ක් හෝ ඊට වැඩි සංඛ්යාවක්
+    සහභාගී වන විට, ඔබට ටී-ෂර්ට්, පෝස්ටර්, ලැප්ටොප් ස්ටිකර් සහ තවත් බොහෝ දේ සමඟ විශේෂ
+    විවාහ ගිවිසුම් කට්ටලයක් ලබා සුදුසුකම් ලැබීමට [ඔබේ මුළු පාසල් උත්සව සැලැස්ම%{share_url}බෙදා
+    ගන්න] ()."
+  hoc_how_to_step_educators_spread_word_desc_04: ඔබේ පාසලේ දෙමාපිය ගුරු ශිෂ්ය සංගමය
+    වෙත ළඟා වන්න හෝ දෙමව්පියන්ගේ පුවත් පත් වල බෙදා ගන්න, ඔවුන්ගේ දරුවන් ඉගෙන ගන්නා
+    දේ ඔවුන්ට දන්වන්න.
+  hoc_how_to_step_educators_plan_hour_desc_02: 'පෙරවරු 10:00-10:05: [ආශ්වාදජනක වීඩියෝවක්]
+    සමඟ ආරම්භ කරන්න ()%{video_url}'
+  hoc_how_to_step_educators_plan_hour_desc_03: '10:05-10:45am: සිසුන් ඔවුන්ගේ කේතීකරණ
+    ක්රියාකාරකම් සිදු කරයි'
+  hoc_how_to_step_educators_plan_hour_desc_04: 'පෙරවරු 10:45-10:55: සිසුන් AI ගැන
+    ඉගෙන ගනී'
+  hoc_how_to_step_educators_plan_hour_desc_05: 'පෙරවරු 10:55-11:00: ගුරුවරයා අවසන්
+    අදහස් දක්වයි'
+  hoc_how_to_step_educators_get_coding_desc: ඔබේ සිසුන් ක්රියාකාරකම් වෙත යොමු කරන්න,
+    සමහර විට පුවරුවේ ඇති සබැඳිය බෙදා ගැනීමෙන් හෝ ඔබේ පන්ති කාමරයේ ඉගෙනුම් කළමනාකරණ
+    පද්ධතිය හරහා. ඔබේ සිසුන්ට අභියෝගවලට මුහුණ දිය හැකිය - එය කමක් නැත! වැඩසටහනක් ඉගෙන
+    ගැනීම නව භාෂාවක් ඉගෙන ගැනීමට සමාන ය; ඔබ වහාම චතුර නොවනු ඇත. ඔබ පිළිතුර නොදන්නේ
+    නම්, ඔබට එය එකට සොයා ගත හැකිය.
+  hoc_how_to_step_educators_celebrate_desc: 'ඔබේ උත්සවයෙන් පසුව, සම්පූර්ණ කිරීමේ සහතික
+    මුද්රණය කර ඔබේ සිසුන්ට සුබ පැතීම. ඔබේ හෝර් ඔෆ් කෝඩ් උත්සවයේ ඡායාරූප සහ වීඩියෝ
+    බෙදා හදා ගන්න #HourOfCode සහ @codeorg භාවිතා කරමින් ඔබේ ශිෂ්ය ජයග්රහණ පෙන්වන්න.'
+  hoc_how_to_step_companies_inspire_desc_01: Share this video at an All Staff meeting
+    or in an email to all employees to show how companies like yours can make a huge
+    impact on the global movement to bring computer science education to all students
+    in all schools through the Hour of Code.
+  hoc_how_to_step_companies_encourage_desc_01: One of the most fulfilling ways to
+    participate in the Hour of Code is to volunteer with a local classroom, either
+    in-person or virtually. Best of all, you don't have to be an engineer or someone
+    with a technical background in order to volunteer. You can still provide a meaningful
+    experience to students by sharing your own career experience and how computer
+    science or technology has impacted your role. Direct your employees to the volunteer
+    guide to learn more.
+  hoc_how_to_step_companies_plan_desc_01: The Hour of Code isn't just for K-12 students
+    but for learners of all ages and all skill levels. Connect with your company's
+    events team to host an Hour of Code event for all employees.
+  hoc_how_to_step_companies_plan_desc_02: Make an early commitment and register your
+    event in advance. When you register, you'll receive helpful emails with news and
+    tips for hosting a successful Hour of Code. You'll also be [put on the map](%{map_url}).
+    The visible totality of our collective efforts demonstrates the global commitment
+    to the computer science movement, which will help us build momentum for systemic
+    change.
+  hoc_how_to_step_companies_choose_activities_desc_03: Then, [learn all about AI](%{ai_url}).
+    Employees can watch short videos featuring experts in the field.
+  hoc_how_to_step_companies_spread_word_desc_01: 'After your event, congratulate your
+    employees with personalized certificates of completion. Share photos and videos
+    of your Hour of Code event and show off your commitment to supporting the computer
+    science movement using #HourOfCode and @codeorg.'
+  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
+    the resources provided in our how-to guides for educators and school assemblies.
+    With your support, teachers and school administrators can decide which type of
+    event best meets the interest of your schools.
+  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
+    When you register your Hour of Code event, you'll receive helpful emails with
+    news and tips for hosting a successful Hour of Code. It's also how you can let
+    local volunteers know your school is participating. Volunteers are a great resource
+    and can come speak to your class about computer science or help your students
+    with Hour of Code activities.
+  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
+    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
+    Instagram and your district's homepage! Explore our sample emails which help you
+    share your Hour of Code event with your community.
+  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
+    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
+    so we can see your district in action!'
+  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
+    to end with the Hour of Code! To help provide students in your district with skills
+    and knowledge that will prepare them to be college and career ready, check out
+    our free to use web-based curriculum!
+  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
+    have to end with the Hour of Code! To help provide students in your district with
+    skills and knowledge that will prepare them to be college and career ready, check
+    out the diverse curriculum offerings from Hour of Code partners!
+  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions! When
+    300 or more students participate, you can receive a special engagement kit with
+    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
+    to qualify.
+  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
+    to see your event, and know that your dedication is part of a worldwide movement.
+  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
+    your event, as well as the tech capabilities of your space. Students can work
+    on their own devices, in pairs on one device, or together as a classroom on a
+    projector, and there are even unplugged tutorials that can be completed with no
+    devices at all!
+  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
+    official or influential business person and invite them to speak. [Check out our
+    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
+    of Code for more info.
+  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
+    as a local news station, newspaper, or education/tech bloggers. [See our press
+    kit for help](%{press_kit_url}).
+  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
+    [inspirational videos](%{videos_url}).'
+  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
+    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
+  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
+    about their background and how technology and computer science plays an important
+    role in their everyday lives'
+  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
+    of Code demo for the school. Fun twist: have them teach the principal, politician,
+    or other students!'
+  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
+    activity and how computer science can be taught without using computers.'
+  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
+    organize school-wide event gives closing remarks.'
+  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
+    take pictures to commemorate the event, and to post on your organization's social
+    media networks. (Publicity or privacy policies may apply.)
+  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
+    and that it remains on track to end on time—especially if any special guests have
+    other scheduled commitments to attend.
+  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
+    sure to:'
+  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
+    and congratulate your students.
+  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
+    great for students to do) and offer to answer any follow-up questions they may
+    have.
+  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
+    the day on social media. (Publicity or privacy policies may apply.)
+  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
+    on how to make next year's event even better.
+  hoc_how_to_step_events_after_desc_06: ඔබේ පාසලේ දෙමාපිය ගුරු ශිෂ්ය සංගමය වෙත ළඟා
+    වන්න හෝ දෙමව්පියන්ගේ පුවත් පත් වල බෙදා ගන්න, ඔවුන්ගේ දරුවන් ඉගෙන ගන්නා දේ ඔවුන්ට
+    දන්වන්න.
+  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
+    of Code with your child by registering. When you register your event, you'll receive
+    helpful emails with news and tips for hosting a successful Hour of Code. You'll
+    also be [put on the map](%{map_url}) so you can show your child that they are
+    part of a global movement.
+  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
+    get to work together. They may encounter challenges—that's okay! Learning to program
+    is like learning a new language; you won't be fluent right away. Computer science
+    is all about learning how to "debug" situations that didn't turn out the way we
+    thought they would. Together, you and your child can think of creative ways to
+    solve the problem!
+  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
+    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too!'
+  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
+    your child to show off their achievement!
+  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
+    a school-wide event. When 300 or more kids participate, you can receive a special
+    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
+    whole school event plan](%{share_url}) to qualify.
+  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
+    hosting a company-wide event or encouraging other employees to host their own
+    Hour of Code event.
+  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
+    that features one of their favorite role models.
+  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
+    and why it matters.
+  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
+    with your child right away to get them excited or save it for the end of your
+    Hour of Code as a special prize."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
+    your school today."
+  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
+    both your event and the elected official.
+  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
+    from your event (e.g., school administrator) and for the elected official attending
+    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
+    for the day of the event.
+  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
+    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
+  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
+    your Hour of Code event to register and put your event on the map. You'll receive
+    early access to information about new activities and special promotions!
+  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
+    map](%{map_url}) to see your event, and know that your dedication is part of a
+    worldwide movement."
+  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
+    day and make sure all parties participating (teachers, students, administrators,
+    elected officials and their staff) are aware of what is happening and when. Things
+    to consider:'
+  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
+    each part of the event?
+  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
+    or rotate between many students during the event? (You may want to coordinate
+    this ahead of time with the official's staffer.)
+  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
+    as a group?
+  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
+    What if the official is running late? What if some students finish their activity
+    before others?
+  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
+    to talk about their background and how technology and computer science plays an
+    important role in their everyday life.'
+  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
+    their Hour of Code activity. Fun twist: have a group of students teach the principal,
+    politician, or other students!'
+  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
+    gives closing remarks.'
+  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
+    coordinating media invitations. It could be the school, the district, the official's
+    office, or any combination.
+  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
+    per your state/district/school policy.
+  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
+    (DocuSign - send link to signer)"
+  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
+    (Download and print)"
+  hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
+    - send link to signer)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
+    and print)"
+  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
+    official 72 hours prior to the event. Include event dress code, who will greet
+    them, which classroom or event they will attend with teacher's name, and agenda
+    for the event.
+  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
+    technology the day before and day of the event to ensure the event runs smoothly.
+  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
+    feel welcome and engaged, greet the elected official at the door of the event
+    to show them where to go and answer any questions they may have. It is always
+    great to have a student help greet them!
+  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
+    to commemorate the visit and to post on your organization's social media networks.
+    (Publicity or privacy policies may apply).
+  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
+    smoothly and that it remains on track to end on time. The official may have other
+    visits or meetings scheduled following your event.
+  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
+    of completion and congratulate your students.
+  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
+    and offer to answer any follow-up questions they may have.
+  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
+    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
+    or privacy policies may apply.)'
+  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
+    you note. It's especially thoughtful to get students to sign!
+  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
+    on each side for feedback on how to make next year’s event even better.
+  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
+    or a degree in computer science—you''re already qualified as you are! There are
+    a few ways you can get involved in Hour of Code as a volunteer:'
+  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
+    Email a local teacher or administrator to see if they need support for their Hour
+    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
+    started!"
+  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
+    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
+    Hour of Code event!"
+  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
+    there, teachers in your area will be able to reach out to you. Teachers will review
+    your profile on the [map](%{map_url}), so try to complete as much as possible
+    to increase the chance that a teacher will contact you."
+  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
+    work with your event organizer to register your Hour of Code event. You'll receive
+    early access to information about new activities and special promotions!
+  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
+    discuss these logistics with the teacher ahead of time to better understand their
+    needs:'
+  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
+    event? If you work in tech, you might be asked to share your personal experience
+    or story. Can you help the teacher prepare by doing the activity together in advance?
+    Can you walk around the classroom to answer questions or encourage students as
+    they do their Hour of Code?
+  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
+    This can determine what times you need to be present and in what capacity.
+  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
+    Depending on their procedures you may need to complete a background check or arrive
+    a little early for check-in at an in-person event.
+  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
+    with Artificial Intelligence (AI). Make this year special by completing a coding
+    activity AND learning about AI.
+  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
+    science movement by sharing your volunteer plans with your friends and colleagues
+    on your social media accounts (e.g. LinkedIn).
+  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
+    free to answer questions—but try not to give them the solution outright. Ask them
+    questions so they can answer themselves what went wrong. Encourage students to
+    help each other if they get stuck.
+  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
+    okay! Let the student know that you're in this together and work alongside them
+    to figure it out.
+  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
+  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
+    to stop with the Hour of Code. Consider volunteering year round with programs
+    like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: AI ගැන ඕනෑම කෙනෙකුට ඉගෙන ගත හැකිය, ඔබ පන්ති කාමරයේ ශිෂ්යයෙකු හෝ
     අධ්යාපනඥයෙකු වේවා AI සමඟ සහ AI සමඟ ඉගැන්වීමේ අනාගතය අගුලු දැමීම.
   hoc_ai_how_ai_works_video_series_desc: කෘතිම බුද්ධිය ක්රියා කරන ආකාරය සහ එය වැදගත්
@@ -13459,6 +15371,37 @@ si:
     ඉගෙනුම්කරුවන්ට ආරාධනා කරන්න.
   hoc_ai_activities_desc: මෙම නව හෝර් ඔෆ් කෝඩ් ක්රියාකාරකම් මඟින් පරිශීලකයින් විනෝදජනක,
     ආකර්ෂණීය ආකාරයකින් කෘතිම බුද්ධි ලෝකයට හඳුන්වා දෙයි.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: නිල් සහ කහ ටී ෂර්ට් වලට ගැලපෙන Code.org සේවකයින් 100
     කට ආසන්න සංඛ්යාවක් සමාගමේ ගිම්හාන 2022 කෝඩෙචෙල්ලා උත්සවය සඳහා හෝටල් සම්මන්ත්රණ
     කාමරයක පෙනී සිටිති.
@@ -14078,9 +16021,10 @@ si:
     අධ්යාපන ප්රජාවගේ වෙහෙස මහන්සි සහයෙන් ප්රතිලාභ ලැබීමට අපි ස්තූතිවන්ත වන අතර [වසර
     ගණනාවක් පුරා අපගේ බලපෑමට සහාය දුන් සියලුම හවුල්කරුවන්ට සහ පුද්ගලයන්ට අපි ස්තූතිවන්ත
     වෙමු] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 වාර්ෂික වාර්තාව] (%{report_url})
-    (අතීත වාර්තා: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[අපගේ මූලික වටිනාකම් සහ පණිවිඩ මාර්ගෝපදේශ] (%{core_url})"
   about_page_section_more_list_3: "[අපගේ විෂය මාලාව සහ අධ්යයන දර්ශනය] (%{curriculum_url})"
   about_page_section_more_list_4: "[පරිගණක විද්යාව සැමට ඇයි යන්න ගැන අපේ නිර්මාතෘ

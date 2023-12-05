@@ -115,6 +115,27 @@ ms:
             MOVES.Kick: Gerakan Bintang
             MOVES.ThisOrThat: Gerakan Ini atau Itu
             MOVES.Rest: Tiada
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
+        options:
+          GROUP:
+            '"CAT"': kucing
+            '"SLOTH"': sloths
+          MOVE:
+            MOVES.Roll: Gerakan Gulung Badan
+            MOVES.ClapHigh: Gerakan Tepukan Tinggi
+            MOVES.Dab: Gerakan Dab
+            MOVES.DoubleJam: Gerakan Turun Dua Kali
+            MOVES.Drop: Gerakan Jatuh
+            MOVES.Floss: Gerakan Flos
+            MOVES.Fresh: Gerakan Segar
+            MOVES.Clown: Gerakan Gangnam
+            MOVES.Kick: Gerakan Bintang
+            MOVES.ThisOrThat: Gerakan Ini atau Itu
+            MOVES.Rest: Tiada
+            '"next"': "(Seterusnya)"
+            '"prev"': "(Terdahulu)"
+            '"rand"': "(Rawak)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} lakukan {MOVE} {DIR} selamanya"
         options:
@@ -581,8 +602,8 @@ ms:
           EFFECT:
             '"none"': Tiada
             '"rand"': "(Rawak)"
-            '"circles"': Bulatan
             '"quads"': Sudut
+            '"circles"': Bulatan
             '"color_cycle"': Warna
             '"diamonds"': Berlian
             '"disco_ball"': Bola Disko
@@ -598,11 +619,11 @@ ms:
             '"ripples"': Riak
             '"snowflakes"': Salji
             '"text"': Nama Lagu
-            '"squiggles"': Cacing Kerawit
             '"galaxy"': Ruang
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
+            '"squiggles"': Cacing Kerawit
             '"starburst"': Pecahan Cahaya
             '"stars"': Bintang
             '"music_wave"': Gelombang
@@ -1701,6 +1722,12 @@ ms:
         text: y koordinat dari {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': pepejal
+            '"liquid"': cecair
+            '"gas"': gas
       KatiesBlocks_tumbling:
         text: berguling
       Mikelab_addBehaviorSimple:

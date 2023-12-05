@@ -48,7 +48,7 @@ Se utilizzerai un solo dispositivo o se desideri semplicemente rendere la tua Or
 <h3>Emoziona e coinvolgi i ragazzi! </h3>
 Questa è una grande opportunità per aggiungere un nuovo tipo di attività alla giornata di tuo figlio. Puoi estendere il divertimento oltre un'esercitazione con questi suggerimenti:
 
-- Mostragli un <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video motivazionale</a> che presenta uno dei loro modelli di ruolo preferiti
+- Mostragli un <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ">video motivazionale</a> che presenta alcune figure di riferimento tra le più stimate
 - Ispirali con un video su una delle <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">tante carriere</a> a cui le competenze informatiche possono  condurre
 - <a href="https://store.code.org/">Ordina un po' di gadget</a>! Puoi scegliere tra magliette, adesivi o persino tatuaggi temporanei. Condividili subito con loro per entusiasmarli o salvali per la fine della tua Ora del Codice come premio speciale.
 

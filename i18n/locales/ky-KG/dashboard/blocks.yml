@@ -32,6 +32,10 @@ ky:
             sprites: баары
           MOVE:
             MOVES.Rest: Жок
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          MOVE:
+            MOVES.Rest: Жок
       Dancelab_changeMoveLR:
         options:
           MOVE:

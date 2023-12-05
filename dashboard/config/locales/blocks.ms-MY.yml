@@ -116,6 +116,27 @@ ms:
             MOVES.Roll: Gerakan Gulung Badan
             MOVES.ThisOrThat: Gerakan Ini atau Itu
         text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': kucing
+            '"SLOTH"': sloths
+          MOVE:
+            '"next"': "(Seterusnya)"
+            '"prev"': "(Terdahulu)"
+            '"rand"': "(Rawak)"
+            MOVES.ClapHigh: Gerakan Tepukan Tinggi
+            MOVES.Clown: Gerakan Gangnam
+            MOVES.Dab: Gerakan Dab
+            MOVES.DoubleJam: Gerakan Turun Dua Kali
+            MOVES.Drop: Gerakan Jatuh
+            MOVES.Floss: Gerakan Flos
+            MOVES.Fresh: Gerakan Segar
+            MOVES.Kick: Gerakan Bintang
+            MOVES.Rest: Tiada
+            MOVES.Roll: Gerakan Gulung Badan
+            MOVES.ThisOrThat: Gerakan Ini atau Itu
+        text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
       Dancelab_changeMoveLR:
         options:
           MOVE:
@@ -1051,6 +1072,12 @@ ms:
         text: "{SPRITE}katakan{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': cecair
+            '"solid"': pepejal
       KatiesBlocks_tumbling:
         text: berguling
       Mikelab_addBehaviorSimple:

@@ -103,6 +103,27 @@ fi:
             MOVES.Kick: Tähti
             MOVES.ThisOrThat: Sitä tai tätä
             MOVES.Rest: Ei mitään
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} tee liikettä {MOVE} {DIR} ikuisesti"
+        options:
+          GROUP:
+            '"CAT"': kaikki kissat
+            '"SLOTH"': laiskiaiset
+          MOVE:
+            MOVES.Roll: Korin kallistus
+            MOVES.ClapHigh: Taputa korkealle
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Panoksen tuplaus
+            MOVES.Drop: Pudota
+            MOVES.Floss: Flossaa
+            MOVES.Fresh: Fressaa
+            MOVES.Clown: Gangnam
+            MOVES.Kick: Tähti
+            MOVES.ThisOrThat: Sitä tai tätä
+            MOVES.Rest: Ei mitään
+            '"next"': "(Seuraava)"
+            '"prev"': "(Edellinen)"
+            '"rand"': "(Satunnainen)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} tee liikettä {MOVE} {DIR} ikuisesti"
         options:
@@ -562,8 +583,8 @@ fi:
           EFFECT:
             '"none"': Ei mitään
             '"rand"': "(Satunnainen)"
-            '"circles"': Ympyrät
             '"quads"': Kulmat
+            '"circles"': Ympyrät
             '"color_cycle"': Värit
             '"diamonds"': Timantit
             '"disco_ball"': Diskopallo

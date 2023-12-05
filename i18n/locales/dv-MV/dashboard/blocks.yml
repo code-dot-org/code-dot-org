@@ -78,6 +78,25 @@ dv:
             MOVES.Clown: ގަންގަމް
             MOVES.Kick: ސްޓަރ - ތަރި
             MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} ހަދާ {MOVE} {DIR} އަބަދަށް"
+        options:
+          GROUP:
+            '"SLOTH"': ސްލޮތު
+          MOVE:
+            MOVES.Roll: ހަށިގަނޑު އަނބުރާލުން
+            MOVES.ClapHigh: މަތިން އަތްތިލަބަޑި ޖެހުން
+            MOVES.Dab: ޑެބް ކުރުން
+            MOVES.DoubleJam: ޑަބަލް ޑައުން
+            MOVES.Drop: ޑްރޮޕް
+            MOVES.Floss: ފްލޮސް
+            MOVES.Fresh: ފްރެޝް
+            MOVES.Clown: ގަންގަމް
+            MOVES.Kick: ސްޓަރ - ތަރި
+            MOVES.ThisOrThat: މީތި ނޫނީ އޭތި
+            '"next"': "(ނެކްސްޓް - ކުރިއަށް)"
+            '"prev"': "(ޕްރީވިއަސް - ފަހަތަށް)"
+            '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} ހަދާ {MOVE} {DIR} އަބަދަށް"
         options:
@@ -445,8 +464,8 @@ dv:
         options:
           EFFECT:
             '"rand"': "(ރެންޑަމް - ވަކި ދިމާލެއް ނެތް)"
-            '"circles"': ސަރކަލް (ވަށްބުރު)
             '"quads"': އެންޖެލްސް
+            '"circles"': ސަރކަލް (ވަށްބުރު)
             '"color_cycle"': ކުލަ
             '"diamonds"': ޑަޔަމަންޑް
             '"disco_ball"': ޑިސްކޯ ބޯޅަ
@@ -462,11 +481,11 @@ dv:
             '"ripples"': ރިޕްލްސް
             '"snowflakes"': ސްނޯ
             '"text"': ލަވައިގެ ނަން
-            '"squiggles"': ސްކުއިގްލްސް
             '"galaxy"': ސްޕޭސް
             '"sparkles"': ސްޕާކްލްސް
             '"spiral"': ސްޕައިރަލް
             '"disco"': ސްކޮޔަރ (ހަތަރެސްކަން)
+            '"squiggles"': ސްކުއިގްލްސް
             '"starburst"': ސްޓަރ ބަރސްޓް
             '"stars"': ސްޓަރ - ތަރި
             '"music_wave"': ވޭވްސް

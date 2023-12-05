@@ -34,6 +34,14 @@
           "csleadersprize": {
             "buttonText": "Zjisti více"
           },
+          "hoc-2023": {
+            "body": "Připojte se k milionům lidí po celém světě a zorganizujte hodinu programování, s AI nebo bez ní, a naučte se, jak AI funguje. Zvládne to kdokoliv a kdekoliv. Nejsou zapotřebí žádné zkušenosti.",
+            "buttonText": "Zjisti více",
+            "title": "Hodina programování: Kreativita s AI"
+          },
+          "hoc-2023-dance-ai": {
+            "buttonText": "Zjisti více"
+          },
           "hoc-more": {
             "body": "Webové stránky Hodiny kódu mají více než 500 počítačových aktivit pro lidi v každém věku a na jakékoliv úrovni a jsou vyvinuté Code.org a partnery."
           },

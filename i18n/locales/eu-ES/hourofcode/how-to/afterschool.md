@@ -46,7 +46,7 @@ Provide headphones for your class, or ask students to bring their own, if the tu
 
 Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
 
-**Show an inspirational video:**
+**Aurkeztu bideo inspirazio bat:**
 
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh - there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available.
 - The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A)

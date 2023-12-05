@@ -107,6 +107,27 @@ uz:
             MOVES.Kick: Yulduz raqsi
             MOVES.ThisOrThat: U yoki bu
             MOVES.Rest: Hech biri
+      Dancelab_changeMoveEachLR_slothcat:
+        text: "{GROUP} buni {MOVE} {DIR} doimiy qiladi"
+        options:
+          GROUP:
+            '"CAT"': mushuklar
+            '"SLOTH"': yalqovlar
+          MOVE:
+            MOVES.Roll: dumalash
+            MOVES.ClapHigh: yuqori qarsak
+            MOVES.Dab: Dab (qirmoq)
+            MOVES.DoubleJam: Ikki marta pastga
+            MOVES.Drop: Tashlash
+            MOVES.Floss: Ip
+            MOVES.Fresh: Fresh raqsi
+            MOVES.Clown: Gangnam raqsi
+            MOVES.Kick: Yulduz raqsi
+            MOVES.ThisOrThat: U yoki bu
+            MOVES.Rest: Hech biri
+            '"next"': "(Keyingi)"
+            '"prev"': "(Oldingi)"
+            '"rand"': "(Tasodifiy)"
       Dancelab_changeMoveLR:
         text: "{SPRITE} doimo {MOVE} {DIR} qiladi"
         options:
@@ -577,8 +598,8 @@ uz:
           EFFECT:
             '"none"': Hech biri
             '"rand"': "(Tasodifiy)"
-            '"circles"': Aylanalar
             '"quads"': Burchaklar
+            '"circles"': Aylanalar
             '"color_cycle"': Ranglar
             '"diamonds"': Brilliantlar
             '"disco_ball"': Disko to'p
@@ -594,11 +615,11 @@ uz:
             '"ripples"': To‘lqinlar
             '"snowflakes"': Qor
             '"text"': Qo'shiq nomlari
-            '"squiggles"': Siqilish (burmalar)
             '"galaxy"': Qoinot
             '"sparkles"': Uchqunlar
             '"spiral"': Spiral
             '"disco"': Kvadratlar
+            '"squiggles"': Siqilish (burmalar)
             '"starburst"': Yulduzlar to'plami
             '"stars"': Yulduzlar
             '"music_wave"': Toʻlqinlar
@@ -1536,6 +1557,12 @@ uz:
         text: "{SPRITE} x koordinatasi"
       gamelab_yLocationOf:
         text: "{SPRITE} y koordinatasi"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': qattiq
+            '"liquid"': suyuq
+            '"gas"': gaz
       KatiesBlocks_tumbling:
         text: dumboloq oshish
       Mikelab_addBehaviorSimple:

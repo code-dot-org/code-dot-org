@@ -4775,7 +4775,7 @@
           "type": "동영상"
         },
         "pair_programming/coursea/2022": {
-          "name": "페어 프로그래밍",
+          "name": "짝 프로그래밍",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "학생용 동영상"
         },
@@ -5896,10 +5896,11 @@
         },
         "cs_fundamentals_final_project/coursef/2022": {
           "name": "CS 기초 최종 프로젝트",
-          "type": "채점판"
+          "type": "평가 기준"
         },
         "final_project_design_1/coursef/2022": {
-          "name": "과정말 프로젝트 가이드"
+          "name": "종합 프로젝트 가이드",
+          "type": "활동 가이드라인"
         },
         "debugging_guide/express/2022": {
           "name": "디버깅 가이드",
@@ -9557,7 +9558,7 @@
           "type": "동영상"
         },
         "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
-          "name": "AI 작동 원리 - 머신 러닝이란?",
+          "name": "AI 작동 방식 - 머신 러닝이란?",
           "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "동영상"
         },
@@ -9577,16 +9578,18 @@
         },
         "computer_vision_network/how-ai-works/2023": {
           "name": "컴퓨터 비전 네트워크",
-          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit",
+          "type": "액티비티 가이드"
         },
         "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
-          "name": "AI 작동 방식: 컴퓨터 비전의 작동 방식",
+          "name": "AI 작동 방식: 컴퓨터 비전 작동 방식",
           "url": "https://youtu.be/2hXG8v8p0KM",
           "type": "동영상"
         },
         "seven_segment_display_manipulative/how-ai-works/2023": {
-          "name": "세븐 세그먼트 디스플레이 매니퓰레이티브",
-          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+          "name": "7개 세그먼트 디스플레이 학습 교구",
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit",
+          "type": "액티비티 가이드"
         },
         "what_a_neural_network_sees/how-ai-works/2023": {
           "name": "신경망이 보는 것",
@@ -9594,40 +9597,42 @@
           "type": "동영상"
         },
         "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
-          "name": "AI 작동 방식: 신경망의 작동 원리",
+          "name": "AI 작동 방식: 신경망 작동 방식",
           "url": "https://youtu.be/JrXazCEACVo",
           "type": "동영상"
         },
         "neural_networks/how-ai-works/2023": {
-          "name": "뉴럴 네트워크",
-          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+          "name": "신경망",
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing",
+          "type": "액티비티 가이드"
         },
         "neural_networks_1/how-ai-works/2023": {
-          "name": "뉴럴 네트워크",
+          "name": "신경망",
           "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview",
           "type": "슬라이드"
         },
         "wetube_content_creators/how-ai-works/2023": {
-          "name": "웹튜브 콘텐츠 크리에이터",
+          "name": "WeTube 콘텐츠 제작자",
           "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing",
           "type": "자료"
         },
         "eliza_activity_guide/how-ai-works/2023": {
-          "name": "(선택 사항) 엘리자 액티비티 가이드",
-          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+          "name": "(선택 사항) Eliza 활동 가이드",
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6",
+          "type": "활동 가이드"
         },
         "generative_llm/how-ai-works/2023": {
-          "name": "제너레이티브 LLM",
+          "name": "생성형 LLM",
           "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview",
           "type": "슬라이드"
         },
         "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
-          "name": "AI 작동 방식: 챗봇과 대형 언어 모델 (1부)",
+          "name": "AI 작동 방식: 챗봇과 대규모 언어 모델 (1부)",
           "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
           "type": "동영상"
         },
         "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
-          "name": "AI 작동 방식: 챗봇과 대형 언어 모델 (2부)",
+          "name": "AI 작동 방식: 챗봇과 대규모 언어 모델 (2부)",
           "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
           "type": "동영상"
         },
@@ -9641,7 +9646,7 @@
           "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
         },
         "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] 서면 음성 시뮬레이터 활동 가이드",
+          "name": "[Exemplar] Written Voice Simulator 활동 가이드",
           "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
         },
         "written_voice_simulator_guide/how-ai-works/2023": {
@@ -9649,7 +9654,7 @@
           "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
         },
         "written_voice_simulator_user_guide/how-ai-works/2023": {
-          "name": "서면 음성 시뮬레이터 사용 설명서",
+          "name": "서면 음성 시뮬레이터 사용자 가이드",
           "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit",
           "type": "자료"
         },
@@ -9658,12 +9663,12 @@
           "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
         },
         "generative_images/how-ai-works/2023": {
-          "name": "제너레이티브 이미지",
+          "name": "생성형 이미지",
           "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview",
           "type": "슬라이드"
         },
         "generative_images_activity_guide/how-ai-works/2023": {
-          "name": "[Key] 제너레이티브 이미지 활동 가이드",
+          "name": "[Key] 생성형 이미지 활동 가이드",
           "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit",
           "type": "답안지"
         },
@@ -9673,15 +9678,15 @@
           "type": "동영상"
         },
         "noisy_image_activity_exemplar/how-ai-works/2023": {
-          "name": "[Exemplar] 노이즈가 많은 이미지 활동",
+          "name": "[Exemplar] Noisy Image 활동",
           "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
         },
         "noisy_image_widget_activity_guide/how-ai-works/2023": {
-          "name": "노이즈 이미지 위젯 액티비티 가이드",
+          "name": "Noisy Image 위젯 활동 가이드",
           "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
         },
         "user_guide_noise_image_widget/how-ai-works/2023": {
-          "name": "사용자 안내서: 노이즈 이미지 위젯",
+          "name": "사용자 가이드: Noisy Image 위젯",
           "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view",
           "type": "자료"
         },
@@ -9700,12 +9705,12 @@
           "type": "동영상"
         },
         "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
-          "name": "이미지 크로핑 알고리즘에 대한 지식 공유 (Twitter)",
+          "name": "이미지 자르기 알고리즘에 대한 학습 공유 (트위터)",
           "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm",
           "type": "자료"
         },
         "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
-          "name": "트위터는 이미지 자르기 알고리즘이 편향되어 있다고 말하므로 포기하고 있습니다 (CNN)",
+          "name": "트위터, 이미지 자르기 알고리즘이 편향되어 있어서 폐기하겠다고 말하다 (CNN)",
           "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html",
           "type": "자료"
         },
@@ -9742,7 +9747,7 @@
           "type": "슬라이드"
         },
         "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
-          "name": "AI 작동 방식: 윤리 및 AI: 평등 액세스 및 알고리즘 편향",
+          "name": "AI 작동 방식: 윤리 및 AI: 평등한 액세스 및 알고리즘 편향",
           "url": "https://youtu.be/tJQSyzBUAew",
           "type": "동영상"
         },

@@ -544,6 +544,10 @@ te:
           lesson_groups:
             lessonGroup-4:
               display_name: యాప్ ల్యాబ్ కు పరిచయం
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: యాప్ ల్యాబ్ కు పరిచయం
         csf-2021-pilot:
           lesson_groups:
             lessonGroup-3:
@@ -1101,6 +1105,8 @@ te:
             lessonGroup-7:
               display_name: డేటా
         oceans:
+          student_description: ప్రపంచ సమస్యలను పరిష్కరించడానికి AI మరియు మెషిన్ లెర్నింగ్
+            ఎలా ఉపయోగించవచ్చో తెలుసుకోండి.
           title: AI ఫర్ ఓషన్స్
         outbreak:
           title: ఔట్‌బ్రేక్ సిమ్యులేటర్

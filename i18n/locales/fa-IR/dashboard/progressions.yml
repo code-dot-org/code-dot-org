@@ -2,6 +2,8 @@ fa:
   data:
     progressions:
       '"If/Else" with the Bee': '*اگر/در غیر این صورت* با the Bee'
+      "(Optional) Eliza Widget": "(اختیاری) ویجت الیزا "
+      "(Optional) GAN Guess Widget": "(اختیاری) ویجت حدس شبکه‌های زایای دشمن‌گونه"
       8-Bit Binary Number Widget: ویجت 8 بیتی عدد دودویی
       AI Lab and Isaac's Data: آزمایشگاه هوش مصنوعی و داده های Isaac
       AI Lab and Kim's Data: آزمایشگاه هوش مصنوعی و داده های Kim
@@ -43,7 +45,7 @@ fa:
       'App: Where Should I Live?': 'برنامه: کجا باید زندگی کنم؟'
       Artist Intro with JR Hildebrand: معرفی Artist با JR Hildebrand
       Artist Intro with JR Hildebrande: معرفی Artist با JR Hildebrande
-      Artist Project: پروژه Artist
+      Artist Project: پروژه هنرمند
       'Artist: Variables': 'هنرمند: متغیرها'
       Assessment: ارزیابی
       Attribution: نسبت دادن
@@ -116,6 +118,7 @@ fa:
       Create a Story: خلق داستان
       Create an App in App Lab: ساخت برنامه در App Lab
       Create your project: پروژه خود را ایجاد کنید
+      Cropping Widget: ویجت برش
       Customize: سفارشی ‎سازی
       Customize Your App: سفارشی سازی برنامه خود
       Customizing Your App: در حال سفارشی سازی برنامه خود
@@ -212,6 +215,7 @@ fa:
       Input with If-Else: ورودی با اگر-در غیر اینصورت
       InspirationalArtwork: کارهای گرافیکی انگیزشی
       Interactive Art: هنر تعاملی
+      Intro Video: ویدیوی مقدمه
       Intro to Flyer Game: معرفی بر بازی Flyer
       Intro to For Loops: معرفی حلقه های برای
       Intro to Side Scrollers: معرفی اسکرولرهای کناری
@@ -238,7 +242,7 @@ fa:
       Light Show: نمایش نور
       Linking Pages: صفحات پیوندی
       Linking Screens: صفحه نمایشهای پیوندی
-      Lists: فهرست‌ها
+      Lists: لیست ها
       Looking for Patterns: در جستجوی الگو
       Looping: در حال حلقه دار کردن
       Loops with the Artist: حلقه با Artist
@@ -291,6 +295,7 @@ fa:
       Nested Loops with the Bee: حلقه های تو در تو با the Bee
       New Challenge Introduction: معرفی چالش جدید
       New Shapes: شکلهای جدید
+      Noisy Image Widget: ویجت تصویر دارای نویز
       Orientation: جهت گیری
       Overview: مرور کلی
       'Overview: Design Mode': 'نمای کلی: حالت طراحی'
@@ -336,9 +341,9 @@ fa:
       RGB Exploration: کاوش RGB
       Raspado Recommender: پیشنهاد Raspado
       Reading Sensors: حسگرهای خوانش
-      Recognizing Expressions: عبارت شناسایی
-      Recognizing Fish: ماهی شناسایی
-      Recognizing Fish Features: ویژگیهای ماهی شناسایی
+      Recognizing Expressions: شناسایی حالت‌های چهره
+      Recognizing Fish: شناخت ماهی
+      Recognizing Fish Features: تشخیص ویژگی‌های ماهی‌ها
       Recognizing Shapes: اشکال شناسایی
       Reflection: فکر کنید
       Relay Programming - Unplugged Activity: برنامه نویسی رله- فعالیت بدون کامپیوتر
@@ -390,7 +395,7 @@ fa:
       Social Sleuth: کارآگاه اجتماعی
       Songwriting - Functions Unplugged Activity: 'ترانه سرایی: فعالیت بدون کار با رایانه توابع'
       Speed it Up, Slow it Down: سرعت بالا، سرعت کم
-      Sprite Lab Project: پروژه آزمایشگاه اسپرایت
+      Sprite Lab Project: پروژه لابراتوار اسپرایت
       Sprite Movement: حرکت اسپرایت
       Sprite Properties: ویژگی‌های اسپرایت
       Sprites and the Draw Loop: اسپرایت ها و حلقه کشیدن
@@ -539,12 +544,15 @@ fa:
       'Video: While Loops with the Farmer': 'ویدئو: حلقه های «تا زمانی که» با کشاورز'
       'Video: Wrap-up': 'ویدئو: جمع‌بندی'
       Warm Up: آماده شوید
+      WeTube Video Recommendations (2.0): پیشنهادهای ویدیویی WeTube (2.0) 
+      WeTube Video Recommendations (Beta): پیشنهادهای ویدیویی WeTube (بتا)
       Website Project: پروژه وبسایتی
       Welcome to Monster Town: به شهر هیولاها خوش آمدید
       Where'd They Go?: کجا رفتند؟
       While Loops with the Farmer: حلقه های درحالیکه با Farmer
       'Widget: Text Compression': 'ویجت: فشرده سازی متن'
       Wrap-up: خلاصه
+      Written Voice Simulator Widget: ویجت شبیه‌ساز صدای نوشتاری
       'You Choose: Improve Your App': 'انتخاب شما: ارتقای برنامه خود'
       'You Choose: Restaurant Recommendations': 'انتخاب شما: پیشنهاد رستوران'
       Your Personal Website: وبسایت شخصی شما

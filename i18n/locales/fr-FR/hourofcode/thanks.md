@@ -2,32 +2,32 @@
 title: Merci de vous être inscrit(e) pour organiser une Heure de Code !
 ---
 
-# Merci de vous être inscrit(e) pour organiser une Heure de Code !
+# Thanks for signing up for Hour of Code!
 
-<br /> **L'Heure du code se déroulera pendant {{ campaign_date/full }} et nous vous tiendrons informés des nouveaux tutoriels et autres informations passionnantes au fur et à mesure de leur parution. En attendant, que faire ?</p> 
+<br /> **Your event is now registered. By volunteering to host an Hour of Code event, you're making it possible for more students to learn computer science. While Hour of Code events are held all over the world during the celebration of Computer Science Education Week, you can choose to organize an Hour of Code event or events at any time! Here are some steps to get started.**
 
-## 1. Passez le message auprès de votre école et de votre communeauté
+## 1. Planifiez votre évènement
 
-Vous venez de rejoindre le mouvement "Heure du code". Parlez-en à vos amis avec **#HourOfCode** !
+Begin by exploring our library of [Hour of Code activities](/learn) and review this [how-to guide](/how-to) for helpful tips on how to find an activity, inspire students, and determine your technology needs. Try [diving into the world of artificial intelligence](/ai) - an exciting area of technology that’s shaping our future. There are various approaches to AI: empower your students to learn how AI works and your teachers to learn with AI 101 for teachers.
 
-{{ social_media_hoc }} <br /> Encouragez les gens à participer en envoyant nos [modèles de mails.]({{ promote/sample_emails }}) Contactez le directeur de votre école et invitez toutes les classes de votre établissement à s'inscrire. Contactez des groupes locaux - clubs de scouts, églises, universités, groupes d'anciens combattants, syndicats, ou même des amis. Pas besoin d'être à l'école pour apprendre de nouvelles compétences. Invitez un politicien ou un décideur local à visiter votre école lors de l'évènement "Hour of Code" (l'heure du code). Ça pourrait aider à agrandir le groupe des amoureux d'informatique de votre région au-delà du projet d'une heure.
+## 2. Spread the word
 
-Utilisez ces [affiches, banderoles, autocollants, vidéos et plus encore]({{ promote/resources }}) pour votre évènement.
+We need your help to inspire volunteers and organizers from across the globe. Tell your friends about your #HourOfCode and [use these helpful resources](/resources) to promote your event. <br />
 
-## 2. Trouvez un bénévole à proximité pour vous aider lors de votre événement
+You can also help engage more people from your school and community by [sending our sample emails](/promote/resources#sample-emails) to your principal, a local group, or even some friends.
 
-[Recherchez sur notre carte des bénévoles]({{ urls/volunteer_local }}) qui seront disposés à se rendre dans votre classe ou à participer à des vidéoconférences afin de faire découvrir à vos élèves l'étendue des possibilités qu'offre l'informatique.
+{{ social_media_hoc }}
 
-## 3. Planifiez votre Heure de Code
+## 3. Find a local volunteer to help you with your event.
 
-Choisissez une [activité de l'Heure de Code](https://hourofcode.com/learn) pour votre classe et [consultez le présent guide pratique]({{ urls/how_to_guide }}).
+[Search our volunteer map](https://code.org/volunteer/local) to find volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-### 4. Faire le plein de cadeaux
+## 4. Check out Hour of Code swag
 
-Commandez du matériel pour stimuler l'intérêt des élèves pour votre événement en vous rendant sur la boutique Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). Commandez des affiches, des kits de Hour of Code, des autocollants et bien plus encore ! Mais faites vite, les stocks sont limités.
+Swag is a great way to get students excited about the Hour of Code and reward them for completing their activity. If you are hosting an event for your entire school, consider [sharing your Hour of Code plan](https://docs.google.com/forms/d/e/1FAIpQLSdD90kD2nkNZqTUMcAb2cQdOhUv99Q5XDQmkLDec25yZJHYhw/viewform) to receive a special engagement kit with t-shirts, posters, laptop stickers, and more. [At the Code.org store](https://store.code.org/), you can order Hour of Code swag kits, fun stickers, buttons, temporary tattoos, and more. But hurry, supplies are limited.
 
-# Après avoir fait Une Heure de Code
+## 5. Encourage kids to continue learning
 
-{{ go_beyond_hoc }}
+An Hour of Code is just the beginning! We hear over and over again how much students love the Hour of Code and discover a newfound interest in computer science. Encourage them to continue learning. Whether you're an administrator, teacher, or advocate, we have professional learning, free classroom curriculum and lesson plans, and resources to help you [bring computer science classes to your school](https://code.org/teach) or expand your offerings.
 
-{{ popup_window.js }}
+Many of the organizations offering activities on HourofCode.com also have curriculum and professional learning available as well. We've highlighted curriculum providers that can help you or your students [go beyond an hour](/beyond).

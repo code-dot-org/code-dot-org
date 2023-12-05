@@ -88,6 +88,26 @@ bs:
             MOVES.Roll: Igra kukovima
             MOVES.ThisOrThat: Ovo ili ono
         text: "{GROUP} radi {MOVE} {DIR} zauvijek"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': sve mačke
+          MOVE:
+            '"next"': "(Sljedeća)"
+            '"prev"': "(Prethodna)"
+            '"rand"': "(Slučajna)"
+            MOVES.ClapHigh: Klapni visoko
+            MOVES.Clown: Gangnam
+            MOVES.Dab: Digni ruke
+            MOVES.DoubleJam: Čučanj
+            MOVES.Drop: Spuštanje
+            MOVES.Floss: Zabaci
+            MOVES.Fresh: Okreni
+            MOVES.Kick: Zvijezda
+            MOVES.Rest: Nijedno
+            MOVES.Roll: Igra kukovima
+            MOVES.ThisOrThat: Ovo ili ono
+        text: "{GROUP} radi {MOVE} {DIR} zauvijek"
       Dancelab_changeMoveLR:
         options:
           MOVE:

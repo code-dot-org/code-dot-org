@@ -39,6 +39,8 @@ es-MX:
             '2.00': grande
             '3.00': extra grande
         text: configurar el tamaño de {SPRITE} a {SIZE}
+      Dancelab_ai:
+        text: "{IMAGE} genera efecto {VALUE} "
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -114,6 +116,27 @@ es-MX:
             '"SLOTH"': perezosos
             '"UNICORN"': unicornios
             sprites: todo
+          MOVE:
+            '"next"': "(Siguiente)"
+            '"prev"': "(Anterior)"
+            '"rand"': "(Al azar)"
+            MOVES.ClapHigh: Palmas hacia arriba
+            MOVES.Clown: Payaso
+            MOVES.Dab: Dab
+            MOVES.DoubleJam: Doble abajo
+            MOVES.Drop: Caída
+            MOVES.Floss: Floss
+            MOVES.Fresh: Fresco
+            MOVES.Kick: Estrella
+            MOVES.Rest: Ninguna
+            MOVES.Roll: Vuelta completa
+            MOVES.ThisOrThat: Esto o aquello
+        text: "{GROUP} hacer {MOVE} {DIR} para siempre"
+      Dancelab_changeMoveEachLR_slothcat:
+        options:
+          GROUP:
+            '"CAT"': gatos
+            '"SLOTH"': perezosos
           MOVE:
             '"next"': "(Siguiente)"
             '"prev"': "(Anterior)"
@@ -614,6 +637,7 @@ es-MX:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Florecimiento
             '"circles"': Túnel
             '"clouds"': Nubes
             '"color_cycle"': Colores
@@ -622,6 +646,7 @@ es-MX:
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fuegos artificiales
             '"flowers"': Flores
+            '"frosted_grid"': Marco de hielo
             '"galaxy"': Espacio
             '"growing_stars"': Estrellas crecientes
             '"kaleidoscope"': Caleidoscopio
@@ -643,17 +668,27 @@ es-MX:
             '"swirl"': Hipnótico
             '"text"': Título de la canción
           PALETTE:
+            '"autumn"': Otoño
             '"cool"': Azules
             '"default"': Luz
             '"electronic"': Música electrónica
+            '"grayscale"': Escala de grises
             '"iceCream"': Helado
             '"neon"': Neón
             '"ocean"': Océano
             '"rainbow"': Arcoíris
             '"rave"': Blanco y negro
+            '"roses"': Rosas
+            '"sky"': Cielo
+            '"spring"': Primavera
+            '"summer"': Verano
+            '"sunrise"': Amanecer
+            '"sunset"': Puesta de sol
             '"tropical"': Tropical
+            '"twinkling"': Centelleo
             '"vintage"': Vintage
             '"warm"': Rojos
+            '"winter"': Invierno
         text: "establecer efecto de fondo \n{PALETTE} {EFFECT}"
       Dancelab_setDanceSpeed:
         options:
@@ -1100,6 +1135,15 @@ es-MX:
         text: "{SPRITE} dice {TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} vuela a {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaseoso
+            '"liquid"': Líquido
+            '"solid"': sólido
+        text: |2-
+           si {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_tumbling:
         text: rodando
       Mikelab_addBehaviorSimple:

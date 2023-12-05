@@ -565,6 +565,9 @@ zh-TW:
           student_description: 這段說明較長，我嘗試在製作一個課程…仍然在想概述與內容來自哪裡…
           title: andrea-test
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: 隨機
           lessons:
             lesson-1:
               name: 物质状态
@@ -574,6 +577,8 @@ zh-TW:
               name: CSS 網格
             lesson-5:
               name: 評量
+            lesson-6:
+              name: 第一課
           name: 安吉利娜遊樂場
           title: 安吉麗娜的地方做事
         applab-1hour:
@@ -2921,6 +2926,9 @@ zh-TW:
         csd-post-survey-2023:
           description: 本單元包含課後問卷調查。學生完成本課程的最終單元後，可以分配此單元。
           title: 課後調查
+        csd-post-survey-2024:
+          description: 本單元包含課後問卷調查。學生完成本課程的最終單元後，可以分配此單元。
+          title: 課後調查
         csd-sample-online:
           title: 電腦科學探索線上活動範例
         csd-test-saving-state:
@@ -3023,6 +3031,18 @@ zh-TW:
           student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
           title: 問題解決與計算 ('22-'23)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：解決問題的流程
+            lessonGroup-3:
+              display_name: 第 2 章：計算機與問題解決能力
+            lessonGroup-4:
+              display_name: 替代課程
+            lessonGroup-5:
+              display_name: 問卷
+          student_description: 問題解決和計算是對計算機科學領域的高度互動性和協作性的介紹，框架在解決問題的更廣泛追求中。您將練習使用問題解決過程來解決一系列難題，挑戰和現實世界場景。接下來，您將瞭解電腦如何輸入、輸出、儲存和處理資訊，以協助人類解決問題。該單元結束了一個項目，您在其中設計了一個應用程序，有助於解決您選擇的問題。
+          title: 單元一-問題解決和計算（'23-'24）
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 第 1 章：解決問題的流程
@@ -3214,6 +3234,19 @@ zh-TW:
             as debugging and commenting.  By the end of the unit, you’ll have a personal
             website that you can publish to the Internet.
           title: Web 開發
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+          title: Web 開發
         csd2-dlp:
           description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 2。你將可在這裡找到反思提示與指引，以表現出熟練
             Code.org CS 探索課程的單元 2。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
@@ -3380,6 +3413,14 @@ zh-TW:
           lessons:
             lesson-18:
               name: 小型項目-機器人臉
+          student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
+          title: 第三單元-互動動畫和遊戲（'23-'24）
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：圖像和動畫
+            lessonGroup-3:
+              display_name: 第 2 章：創建遊戲
           student_description: 在單元 3 中，你將會以自己的程式設計經驗為基礎，在 Game Lab 中設計動畫、互動藝術與遊戲程式。單元開始時會供各種簡單圖形，並製作成為更高級的角色遊戲，其中會使用與電腦科學家每天使用的相同程式設計概念與設計流程。在期末專案中，你將會開發個人化的互動程式。
           title: 第三單元-互動動畫和遊戲（'23-'24）
         csd3-dlp:
@@ -3569,6 +3610,15 @@ zh-TW:
           student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
             App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
           title: 第四單元-設計過程（'23-'24）
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：用戶為中心的設計
+            lessonGroup-3:
+              display_name: 第 2 章︰ 應用程式原型
+          student_description: 單元 4 會介紹電腦運算對社會產生的更廣泛影響。在一系列的設計挑戰中，你會學習怎樣更瞭解別人的需要，同時制定一套解決方案去處理問題。單元的下半部分含有反覆改良的專案，期間團隊有機會確認他們關注的需要、在紙上和
+            App Lab 中製作原型，然後讓真實的使用者測試解決方案，從而取得回饋意見並推動反覆改良。
+          title: 第四單元-設計過程（'23-'24）
         csd4-dlp:
           description: 這是提供給 Code.org CS 探索課程受訓中輔導員的深入學習計畫單元 4。你將可在這裡找到反思提示與指引，以表現出熟練
             Code.org CS 探索課程的單元 4。為單元提交你自己的反思後，同儕審查項目便會在本頁底部提供。
@@ -3742,6 +3792,16 @@ zh-TW:
             2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
           title: 數據與社會 ('22-'23)
         csd5-2023:
+          description_short: 瞭解大家怎樣使用電腦解決資料問題。
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：表達信息
+            lessonGroup-3:
+              display_name: 第 2 章：解決數據問題
+          student_description: 單元 5 用於說明資料在解決問題中有多重要，並強調電腦在此流程中如何提供協助。第 1 章旨在探索有哪些不同系統用來表示電腦中的資訊，以及使用這些系統會有哪些挑戰與限制。在第
+            2 章中，你會學習收集到的資料如何用來解決問題，以及電腦怎樣協助把這個流程自動化。在第 2 章的末尾處會做出總結，思考資料問題解決流程可怎樣應用於你選擇的範疇。
+          title: 第五單元-數據與社會（'23-'24）
+        csd5-2024:
           description_short: 瞭解大家怎樣使用電腦解決資料問題。
           lesson_groups:
             lessonGroup-2:
@@ -4008,6 +4068,19 @@ zh-TW:
             App Lab 和 Adafruit 的 Circuit 遊樂場，您將開發使用與智能設備中相同的硬件輸入和輸出的程序，以查看簡單的粗略原型如何導致成品。該單位最後面臨的設計挑戰，以使用
             Circuit 遊樂場作為您自己設計創新的基礎。
           title: 單元 6A-（選項 A）使用設備創建應用程序-電路遊樂場（'23-'24）
+        csd6a-2024:
+          description_short: 在實體裝置上開發程式
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第 1 章：輸入和輸出
+            lessonGroup-3:
+              display_name: 第 2 章：建立物理原型
+            lessonGroup-4:
+              display_name: 應用程式實驗室簡介
+          student_description: 本單元探討硬體平台在運算中的作用，以及不同的感測器如何比傳統鍵盤、滑鼠和顯示器提供更有效的輸入和輸出。使用
+            App Lab 和 Adafruit 的 Circuit 遊樂場，您將開發使用與智能設備中相同的硬件輸入和輸出的程序，以查看簡單的粗略原型如何導致成品。該單位最後面臨的設計挑戰，以使用
+            Circuit 遊樂場作為您自己設計創新的基礎。
+          title: 單元 6A-（選項 A）使用設備創建應用程序-電路遊樂場（'23-'24）
         csd6b-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4017,6 +4090,18 @@ zh-TW:
             lessonGroup-4:
               display_name: 建立實體原型
           name: CSD6b
+          student_description: '本單元探討硬體平台在運算中的作用，以及不同的感測器如何比傳統鍵盤、滑鼠和顯示器提供更有效的輸入和輸出。使用
+            App Lab 和 BBC micro: bit，您將開發使用與智能設備相同的硬件輸入和輸出的程序，以查看簡單的粗略原型如何導致成品。該單元以設計挑戰為結束，要使用
+            micro: bit 作為您自己設計創新的基礎。'
+          title: 單元 6B-（選項 B）使用設備創建應用程序（微：位）
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 應用程式實驗室簡介
+            lessonGroup-3:
+              display_name: 輸入與輸出
+            lessonGroup-4:
+              display_name: 建立實體原型
           student_description: '本單元探討硬體平台在運算中的作用，以及不同的感測器如何比傳統鍵盤、滑鼠和顯示器提供更有效的輸入和輸出。使用
             App Lab 和 BBC micro: bit，您將開發使用與智能設備相同的硬件輸入和輸出的程序，以查看簡單的粗略原型如何導致成品。該單元以設計挑戰為結束，要使用
             micro: bit 作為您自己設計創新的基礎。'
@@ -4052,6 +4137,16 @@ zh-TW:
           student_description: 本單元是用表格資料開發機器學習模型的實際操作簡介。您將探索電腦如何從資料中學習並做出決策，然後圍繞真實世界的資料開發自己的機器學習專案。該單元通過設計自己的機器學習應用程序來解決與個人相關的問題達到高潮。
           title: 人工智能與機器學習（'22-'23）
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
+            lessonGroup-4:
+              display_name: App Lab 入門
+          student_description: 本單元是用表格資料開發機器學習模型的實際操作簡介。您將探索電腦如何從資料中學習並做出決策，然後圍繞真實世界的資料開發自己的機器學習專案。該單元通過設計自己的機器學習應用程序來解決與個人相關的問題達到高潮。
+          title: 第七單元-人工智能與機器學習（'23-'24）
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 第1章
@@ -5795,6 +5890,11 @@ zh-TW:
           description_short: 編寫一個舞蹈派對與你的朋友分享。裏面有碧昂絲、哈利·史泰爾斯、麗佐、納斯小子、塞萊娜·戈麥斯、迪士尼魔法滿屋的音樂等等！
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
           title: 舞蹈派對 2019
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 舞蹈派對：AI版
+          title: 舞蹈派對：AI版
         dance-draft:
           title: 請勿使用
         dance-extras:
@@ -6052,6 +6152,10 @@ zh-TW:
           title: 2021 CS 原則深入學習概述
         dlp21-overview:
           name: 概述
+        draft-hoc-dp-2:
+          lessons:
+            lesson-2:
+              name: 一小時玩程式課程計劃模板
         drafting:
           description_audience: CSP 學生見解小組
           title: 雲端服務提供者草案更新
@@ -7780,6 +7884,20 @@ zh-TW:
           student_description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
             \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
           title: 模組1：準備問題解決和計算教學
+        self-paced-pl-csd-unit2-2-2023:
+          title: 模組2：準備Web開發教學
+        self-paced-pl-csd-unit3-2-2023:
+          description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          student_description: "這個專業學習模組旨在幫助你準備Code.org的互動動畫和遊戲單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
+            \  認識互動動畫和遊戲。\n-   實踐單元中包含的關鍵概念。\n-   參與遊戲實驗室。\n-   探索章節結尾項目。\n\n**建議時間：**
+            120分鐘"
+          title: 準備互動動畫和遊戲教學
+        self-paced-pl-csd-unit4-2-2023:
+          title: 模組4：準備設計進程教學
+        self-paced-pl-csd-unit5-2-2023:
+          title: 模組5：準備數據和社會教學
         self-paced-pl-csd1-2021:
           description: "本單元是 Code.org 和這個專業學習課程的簡短介紹。 \n\n\\*\\* 您將：\\*\\*\n\n\\-取得
             Code.org 和 CS 探索的簡介。\n\\-學習如何參與此專業學習課程。\n\n\\*\\* 建議時間：\\*\\* 10 分鐘"
@@ -8575,6 +8693,9 @@ zh-TW:
               display_name: 非同步第 1 部分
             lessonGroup-5:
               display_name: 非同步第 2 部分
+          lessons:
+            lesson-5:
+              name: 非同步活動簡介
           title: 第 1 天
         virtual-pl-csp-summer-day2:
           lesson_groups:
@@ -9097,6 +9218,19 @@ zh-TW:
           title: 模組 7
         vpl-csp-2023-m8:
           title: 模組 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '第1章: 建立網頁'
+            lessonGroup-3:
+              display_name: '第2章: 多網頁網站'
+          student_description: In Unit 2, you’ll learn how to create and share the
+            content on your own web pages. After deciding what content you want to
+            share with the world, you’ll learn how to structure and style your pages
+            using HTML and CSS. You’ll also practice valuable programming skills such
+            as debugging and commenting.  By the end of the unit, you’ll have a personal
+            website that you can publish to the Internet.
+          title: Web 開發
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

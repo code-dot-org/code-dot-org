@@ -785,7 +785,9 @@ pl:
           Jednostka 1 Powiązania i wnioski
         PL_CSP_SummerAsync_U2ConnectionsConclusions: 'Jednostka 3: Wnioski i powiązania'
         PL_CSP_SummerAsync_U3ConnectionsConclusions: 'Jednostka 2: Wnioski i powiązania'
+        PL_CSP_SummerAsync_U3L1Computers: Poprzednio, w... Jednostka  3
         PL_CSP_SummerAsync_U3L7Debugging: Jednostka 3 Lekcja 7 - Debugowanie
+        PL_CSP_SummerAsync_Unit2Internet: Poprzednio, w... Jednostka  2
         PL_CSP_TeacherTips_APExam: 'Wskazówki dla nauczycieli: Przygotowanie do egzaminu
           AP'
         PL_CSP_TeacherTips_Advice: 'Wskazówki dla nauczycieli: Porady dla nowych nauczycieli
@@ -983,6 +985,7 @@ pl:
         csd_gamelab_velocity: Prędkość
         csd_how_teamwork_works: Na czym polega praca zespołowa
         csd_ml_ethics_ai: Etyka i AI
+        csd_ml_how_ai_works: Jak działa AI
         csd_ml_import_model: Importowanie modelu AI
         csd_ml_intro_ai_lab_july2021: Wprowadzenie do AI Lab
         csd_ml_intro_to_ai_lab: Wprowadzenie do AI Lab
@@ -995,7 +998,7 @@ pl:
         csd_teamwork_and_disagreement: Praca zespołowa - Postępowanie w przypadku
           nieporozumienia
         csd_u6_call_define_functions: 'CSD: Wywoływanie i definiowanie funkcji'
-        csd_u6_circuit_playground: Oiczenia fizyczne
+        csd_u6_circuit_playground: Informatyka z urządzeniami fizycznymi
         csd_u6_if_statements: 'CSD: Instrukcje "jeśli"'
         csd_u6_input_output: Wejście i Wyjście
         csd_u6_variables_part2: Zmienne - Część 2

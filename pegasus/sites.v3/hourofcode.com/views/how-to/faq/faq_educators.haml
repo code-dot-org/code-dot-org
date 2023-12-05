@@ -9,7 +9,7 @@
     .flex-container
       %h2
         =hoc_s(:heading_faq)
-      %a.link-button.secondary{href: "/faq"}
+      %a.link-button.secondary{href: resolve_url("/faq")}
         =hoc_s(:call_to_action_view_faqs)
     - faq_educators_index.times do |index|
       %details
@@ -30,5 +30,5 @@
           %p
             =hoc_s(:hoc_how_to_faq_answer_devices_02, markdown: :inline, locals: {pair_url: "https://www.youtube.com/watch?v=q7d_JtyCq1A", unplugged_url: "/learn?platform=no-computers"})
         - if index === 2
-          %a{href: "/how-to/volunteers"}
+          %a{href: resolve_url("/how-to/volunteers")}
             =hoc_s(:call_to_action_become_a_volunteer)
