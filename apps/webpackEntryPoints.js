@@ -176,7 +176,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
   'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
-  'code.org/views/regional_partner_search': './src/sites/code.org/pages/views/regional_partner_search.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
