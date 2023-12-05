@@ -56,7 +56,7 @@ export default function initializeVariables(blocklyWrapper) {
    *   variables if not specified
    * @return {!Array.<string>} Array of variable names.
    */
-  Blockly.Variables.allVariables = function (opt_blocks, opt_category) {
+  blocklyWrapper.Variables.allVariables = function (opt_blocks, opt_category) {
     if (
       opt_category &&
       opt_category !== Blockly.Variables.DEFAULT_CATEGORY &&
