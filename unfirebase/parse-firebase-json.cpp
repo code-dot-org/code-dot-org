@@ -77,6 +77,7 @@ sql::Connection *getDB() {
   options["password"] = getEnv("MYSQL_PWD", "root");
   options["port"] = atoi(getEnv("MYSQL_TCP_PORT", "3306"));
   options["OPT_LOCAL_INFILE"] = 1;
+  options["CLIENT_COMPRESS"] = true;
 
   return driver->connect(options);
 }
@@ -292,6 +293,32 @@ void commitRecords() {
 }
 
 inline void insertIntoFirebase(string &channelId, const char *value) {
+  unComittedRecords++;
+
+  if (LOAD_DATA_INSTEAD_OF_INSERT) {
+    if (!loadDataBufferTSV) {
+      //string shortFilename = filesystem::path(filename).filename();
+      loadDataBufferTSVFilename = loadDataBufferDir + to_string(totalRecordsCount) + ".tsv";
+      loadDataBufferTSV = new ofstream(loadDataBufferTSVFilename);
+    }
+    *loadDataBufferTSV << channelId << "\t" << value << endl;
+  } else {
+    numRecordBytes += strlen(value);
+    if (SEND_RECORDS_TO_MYSQL) {
+      insertUnfirebaseStatement->setString(1, currentChannelName);
+      insertUnfirebaseStatement->setString(2, value);
+      insertUnfirebaseStatement->execute();
+    }
+  }
+
+  totalRecordsCount++;
+
+  if (unComittedRecords >= NUMBER_OF_RECORDS_BEFORE_COMMIT) {
+    commitRecords();
+  }
+}
+
+inline void insertIntoFirebasePerRecord(string &channelId, string &tableName, uint64_t recordId, const char *value) {
   unComittedRecords++;
 
   if (LOAD_DATA_INSTEAD_OF_INSERT) {
@@ -612,6 +639,13 @@ int main(int argc, char *argv[]) {
     //stmt->execute("SET sql_log_bin=0;"); // NEEDS SUPER privs
     stmt->execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
     stmt->execute("COMMIT;");
+
+    std::unique_ptr< sql::ResultSet >
+      res(stmt->executeQuery("SHOW SESSION STATUS LIKE \"Compression\""));
+    while (res->next())
+    {
+      cout << "\t... MySQL replies: " << res->getString(1) << " " << res->getString(2) << endl;
+    }
 
     insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
 
