@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-20 21:12:14 UTC",
+    "serialized_at": "2023-12-04 21:21:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7527,7 +7527,7 @@
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
-        "type": "Answer Key"
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l9_extra_practice"
