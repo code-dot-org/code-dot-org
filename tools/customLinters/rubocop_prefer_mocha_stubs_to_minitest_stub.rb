@@ -1,5 +1,3 @@
-require 'pry'
-
 module CustomCops
   class PreferMochaStubsToMinitestStub < RuboCop::Cop::Base
     MSG = "Looks like you're trying to stub with Minitest; we recommend using Mocha instead."
