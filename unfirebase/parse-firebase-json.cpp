@@ -19,6 +19,9 @@
 #include <string>
 #include <thread>
 
+using namespace std;
+using namespace rapidjson;
+
 const bool RAW_DEBUG = false;
 const bool FINE_DEBUG = false;
 const bool USE_WRITER_TO_COLLECT_STRING = true;
@@ -27,6 +30,7 @@ const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 const bool SEND_RECORDS_TO_MYSQL = true;
+const string TMP_DIR = "/tmp/parse-firebase-json/";
 
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
@@ -36,9 +40,6 @@ const bool SEND_RECORDS_TO_MYSQL = true;
 // Docs on the old API are here:
 // https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
 #include <mysql/jdbc.h>
-
-using namespace std;
-using namespace rapidjson;
 
 const char *getEnv(string envVar, const char *defaultVal) {
   const char *env = getenv(envVar.c_str());
@@ -492,8 +493,10 @@ void parseFirebaseJSON(string filename) {
   RawJSONHandler handler;
   Reader reader;
 
-  loadDataBufferDir = "/scratch/" + filename + "-tsvs/";
+  loadDataBufferDir =  TMP_DIR + filename + "-tsvs/";
   filesystem::create_directories(loadDataBufferDir);
+
+  cerr << "Make sure you have a tmpfs mounted at " << TMP_DIR << ". If not, run: sudo mount -t tmpfs -o size=24G tmpfs " << TMP_DIR << endl;
 
   originalJSONBytes = std::filesystem::file_size(filename);
 
