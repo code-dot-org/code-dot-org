@@ -40,4 +40,5 @@ set -x
 bundle install --quiet
 bundle exec rake install
 bundle exec rake build
+bundle exec rake lint
 bundle exec rake circle:run_tests
