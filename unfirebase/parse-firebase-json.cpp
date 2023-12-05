@@ -5,6 +5,7 @@
 #include <rapidjson/reader.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
+#include <rapidjson/error/en.h>
 #include <unistd.h>
 
 #include <boost/atomic.hpp>
@@ -27,10 +28,10 @@ const bool FINE_DEBUG = false;
 const bool USE_WRITER_TO_COLLECT_STRING = true;
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 const bool LOAD_DATA_IN_THREAD = true;
-const uint NUM_DATA_THREADS = 8;
+const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
-const bool SEND_RECORDS_TO_MYSQL = true;
+const bool SEND_RECORDS_TO_MYSQL = false;
 
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 const uint64_t BYTES_PER_RECORD = 250000;
@@ -494,6 +495,52 @@ inline bool ends_with(std::string const &value, std::string const &ending) {
   return std::equal(ending.rbegin(), ending.rend(), value.rbegin());
 }
 
+void handleParseError(ParseResult result, string filename) {
+  uint64_t offset = result.Offset();
+
+  cerr << endl;
+  cerr << "JSON parse error at byte offset " << offset << ", code " << result.Code() << ": " << GetParseError_En(result.Code()) << endl;
+  cerr << endl;
+
+  cout << "Were we in the middle of a channel when we quit? " << boolalpha << inAChannel << endl;
+  if (inAChannel) {
+    string channelSoFarName = "error-channel-write-buffer-" + currentChannelName + ".json";
+    ofstream channelSoFar(channelSoFarName);
+    channelSoFar << writerBuffer->GetString() << endl;
+    channelSoFar.close();
+    cout << "Wrote parsed channel JSON so far to: " << channelSoFarName << endl;
+  }
+
+  cout << "Last channelID: " << currentChannelName << endl;
+  cout << "Current Record Number: " << totalRecordsCount << endl;
+
+  const uint64_t BLOCK_SIZE = 4096;
+  string block(BLOCK_SIZE, ' ');
+  ifstream file(filename, ios::binary);
+
+  // Write out the bytes before the error
+  file.seekg(offset-BLOCK_SIZE);
+  file.read(&block[0], BLOCK_SIZE);
+  ofstream bytesBeforeError("error-bytes-before.json");
+  bytesBeforeError << block << endl;
+  bytesBeforeError.close();
+  cout << "Wrote file contents before error byte offset to: " << "error-bytes-before.json" << endl;
+
+  // Write out the bytes after the error
+  file.seekg(offset);
+  file.read(&block[0], BLOCK_SIZE);
+  ofstream bytesAfterError("error-bytes-after.json");
+  bytesAfterError << block << endl;
+  bytesAfterError.close();
+  cout << "Wrote file contents after error byte offset to: " << "error-bytes-after.json" << endl;
+
+  cerr << endl;
+  cerr << "JSON parse error at byte offset " << offset << ", code " << result.Code() << ": " << GetParseError_En(result.Code()) << endl;
+  cerr << endl;
+
+  exit(EXIT_FAILURE);
+}
+
 void parseFirebaseJSON(string filename) {
   RawJSONHandler handler;
   Reader reader;
@@ -522,18 +569,14 @@ void parseFirebaseJSON(string filename) {
   FileReadStream is(fp, readBuffer, sizeof(readBuffer));
 
   // Start the parse going, everything happens here
-  reader.Parse(is, handler);
+  ParseResult ok = reader.Parse(is, handler);
+  if (!ok) {
+    handleParseError(ok, filename);
+  } else {
+    cout << "JSON parse succeeded!" << endl;
+  }
 
   commitRecords();
-
-  cout << "Were we in the middle of a channel when we quit? " << boolalpha << inAChannel << endl;
-  if (inAChannel) {
-    cout << "Here's what we have so far of " << currentChannelName << endl << endl;
-    cout << writerBuffer->GetString() << endl;
-    cout << endl;
-  }
-  cout << "Last channelID: " << currentChannelName << endl;
-  cout << "Total Records: " << totalRecordsCount << endl;
 }
 
 int main(int argc, char *argv[]) {
