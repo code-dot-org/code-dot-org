@@ -602,7 +602,8 @@ int main(int argc, char *argv[]) {
 
     db->setSchema(DB_NAME);
 
-    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
     stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
     //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
     stmt->execute("SET autocommit=0;");
