@@ -35,7 +35,7 @@ const bool SEND_RECORDS_TO_MYSQL = true;
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 const uint64_t BYTES_PER_RECORD = 250000;
 const uint64_t BYTES_PER_DATA_FILE = BYTES_PER_RECORD * NUMBER_OF_RECORDS_BEFORE_COMMIT;
-const uint64_t TMP_DIR_MEMFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE * 8; // 24GB
+const uint64_t TMP_DIR_TMPFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE * 4;
 
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
@@ -503,10 +503,10 @@ void parseFirebaseJSON(string filename) {
 
   #if __linux__
   cout << "Capacity of " << TMP_DIR << " is: " << filesystem::space(TMP_DIR).capacity << endl;
-  if (filesystem::space(TMP_DIR).capacity != TMP_DIR_MEMFS_SIZE) {
+  if (filesystem::space(TMP_DIR).capacity != TMP_DIR_TMPFS_SIZE) {
     cerr << "WARNING: " << TMP_DIR << " not the right size!!!!" << endl;
     cerr << "Make sure you have a tmpfs mounted at " << TMP_DIR << "." << endl;
-    string cmd = "sudo mount -t tmpfs -o size=" + to_string(TMP_DIR_MEMFS_SIZE) + " tmpfs " + TMP_DIR;
+    string cmd = "sudo mount -t tmpfs -o size=" + to_string(TMP_DIR_TMPFS_SIZE) + " tmpfs " + TMP_DIR;
     cerr << "If not, run: " << cmd << endl;
     cerr << endl;
   }
