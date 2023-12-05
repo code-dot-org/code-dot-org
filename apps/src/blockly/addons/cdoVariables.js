@@ -4,6 +4,7 @@ export default function initializeVariables(blocklyWrapper) {
   // Functionality pulled from https://github.com/code-dot-org/blockly/blob/main/core/utils/variables.js
   // Omits the following functions from the original file: 1. renameVariable, 2. deleteVariable,
   // 3. flyoutCategory, 4. getGetter, 5. getSetter
+  blocklyWrapper.Names.PREFIX_ = '$_';
 
   blocklyWrapper.Variables.NAME_TYPE = 'VARIABLE';
   blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
@@ -94,7 +95,8 @@ export default function initializeVariables(blocklyWrapper) {
         var varName = blockVariables[y];
         // Variable name may be null if the block is only half-built.
         if (varName) {
-          variableHash[Blockly.Names.PREFIX_ + varName.toLowerCase()] = varName;
+          variableHash[blocklyWrapper.Names.PREFIX_ + varName.toLowerCase()] =
+            varName;
         }
       }
     }
