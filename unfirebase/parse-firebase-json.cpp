@@ -28,10 +28,14 @@ const bool USE_WRITER_TO_COLLECT_STRING = true;
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
+const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
 const bool SEND_RECORDS_TO_MYSQL = true;
+
 const string TMP_DIR = "/tmp/parse-firebase-json/";
-const uint64_t TMP_DIR_MEMFS_SIZE = 24000000000; // 24GB
+const uint64_t BYTES_PER_RECORD = 250000;
+const uint64_t BYTES_PER_DATA_FILE = BYTES_PER_RECORD * NUMBER_OF_RECORDS_BEFORE_COMMIT;
+const uint64_t TMP_DIR_MEMFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE * 8; // 24GB
 
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
@@ -171,7 +175,7 @@ bool bandwidthStartClockInitialized = false;
 uint64_t bandwidthStartNumRecordBytes = 0;
 double bandwidthSamplingDurationTarget = 5000.0f /* seconds, start small for first sample */;
 
-boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_THREADS * 2>> loadDataFilenameQueue;
+boost::lockfree::queue<char *, boost::lockfree::capacity<NUM_DATA_FILES_QUEUED>> loadDataFilenameQueue;
 std::atomic<uint64_t> numDataJobsQueued{0};
 
 void loadData(string tsvFilename) {
