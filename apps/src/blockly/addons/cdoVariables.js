@@ -15,11 +15,11 @@ export default function initializeVariables(blocklyWrapper) {
   };
 
   blocklyWrapper.Variables.registerGetter = function (category, blockName) {
-    Blockly.Variables.getters[category] = blockName;
+    blocklyWrapper.Variables.getters[category] = blockName;
   };
 
   blocklyWrapper.Variables.registerSetter = function (category, blockName) {
-    Blockly.Variables.setters[category] = blockName;
+    blocklyWrapper.Variables.setters[category] = blockName;
   };
 
   /**
@@ -42,7 +42,7 @@ export default function initializeVariables(blocklyWrapper) {
    * @param {string=} opt_category Variable category, defaults to 'Default'
    */
   blocklyWrapper.Variables.getVars = function (opt_category) {
-    var category = opt_category || Blockly.Variables.DEFAULT_CATEGORY;
+    var category = opt_category || blocklyWrapper.Variables.DEFAULT_CATEGORY;
     var vars = {};
     vars[category] = [this.getTitleValue('VAR')];
     return vars;
@@ -59,7 +59,7 @@ export default function initializeVariables(blocklyWrapper) {
   blocklyWrapper.Variables.allVariables = function (opt_blocks, opt_category) {
     if (
       opt_category &&
-      opt_category !== Blockly.Variables.DEFAULT_CATEGORY &&
+      opt_category !== blocklyWrapper.Variables.DEFAULT_CATEGORY &&
       Blockly.valueTypeTabShapeMap &&
       Blockly.valueTypeTabShapeMap[opt_category] === undefined
     ) {
@@ -71,8 +71,8 @@ export default function initializeVariables(blocklyWrapper) {
       blocks = opt_blocks.reduce(function (blocks, block) {
         return blocks.concat(block.getDescendants());
       }, []);
-    } else if (Blockly.mainBlockSpace) {
-      blocks = Blockly.mainBlockSpace.getAllBlocks();
+    } else if (blocklyWrapper.mainBlockSpace) {
+      blocks = blocklyWrapper.mainBlockSpace.getAllBlocks();
     } else {
       return [];
     }
@@ -86,7 +86,9 @@ export default function initializeVariables(blocklyWrapper) {
       if (opt_category) {
         blockVariables = blocks[x].getVars()[opt_category] || [];
       } else {
-        blockVariables = Blockly.Variables.allVariablesFromBlock(blocks[x]);
+        blockVariables = blocklyWrapper.Variables.allVariablesFromBlock(
+          blocks[x]
+        );
       }
       for (var y = 0; y < blockVariables.length; y++) {
         var varName = blockVariables[y];
@@ -112,10 +114,10 @@ export default function initializeVariables(blocklyWrapper) {
    */
   blocklyWrapper.Variables.generateUniqueName = function (baseName) {
     if (baseName) {
-      return Blockly.Variables.generateUniqueNameFromBase_(baseName);
+      return blocklyWrapper.Variables.generateUniqueNameFromBase_(baseName);
     }
 
-    var variableList = Blockly.Variables.allVariables();
+    var variableList = blocklyWrapper.Variables.allVariables();
     var newName = '';
     if (variableList.length) {
       variableList.sort(caseInsensitiveCompare);
@@ -168,7 +170,7 @@ export default function initializeVariables(blocklyWrapper) {
    * @param {string} baseName
    */
   blocklyWrapper.Variables.generateUniqueNameFromBase_ = function (baseName) {
-    var variableList = Blockly.Variables.allVariables();
+    var variableList = blocklyWrapper.Variables.allVariables();
     if (variableList.indexOf(baseName) === -1) {
       return baseName;
     }
