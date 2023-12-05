@@ -509,6 +509,7 @@ void handleParseError(ParseResult result, string filename) {
     channelSoFar << writerBuffer->GetString() << endl;
     channelSoFar.close();
     cout << "Wrote parsed channel JSON so far to: " << channelSoFarName << endl;
+    printLastKeys();
   }
 
   cout << "Last channelID: " << currentChannelName << endl;
