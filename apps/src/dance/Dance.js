@@ -601,7 +601,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
 
   analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
     result,
-    danceMessage,
+    message,
     testResults: this.testResults,
   });
 
