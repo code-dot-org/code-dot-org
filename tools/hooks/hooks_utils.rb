@@ -15,9 +15,6 @@ class HooksUtils
   end
 
   def self.get_changed_files_between_branches(first_branch, second_branch)
-    begin
-      puts "intentional linting error"
-    end
     Dir.chdir File.expand_path('../../../', __FILE__)
     sanitize_file_paths(`git diff --name-only #{first_branch}...#{second_branch}`)
   end
