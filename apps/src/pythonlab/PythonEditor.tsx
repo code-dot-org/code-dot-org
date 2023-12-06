@@ -3,7 +3,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import classNames from 'classnames';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
-import {loadPyodide} from 'pyodide';
 import {editorSetup} from '../javalab/editorSetup';
 import {darkMode} from '../javalab/editorThemes';
 import {python} from '@codemirror/lang-python';
@@ -11,6 +10,7 @@ import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, setCode} from './pythonlabRedux';
 import Button from '../templates/Button';
+import {runPythonAsync} from './pyodideRunner';
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
@@ -45,10 +45,8 @@ const PythonEditor: React.FunctionComponent = () => {
     });
   }, [dispatch, editorRef]);
 
-  const handleRun = async () => {
-    const pyodide = await loadPyodide({indexURL: '../../lib/pyodide/'});
-    const result = await pyodide.runPythonAsync(code);
-    console.log(result);
+  const handleRun = () => {
+    runPythonAsync(code);
   };
 
   return (
@@ -61,7 +59,7 @@ const PythonEditor: React.FunctionComponent = () => {
         <div ref={editorRef} className={classNames('codemirror-container')} />
       </PanelContainer>
       <div>
-        <Button type={'button'} value="Run" onClick={handleRun} />
+        <Button type={'button'} text="Run" onClick={handleRun} />
       </div>
     </div>
   );
