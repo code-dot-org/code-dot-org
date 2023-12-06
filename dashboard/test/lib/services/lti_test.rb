@@ -3,7 +3,7 @@ require 'user'
 require 'authentication_option'
 require 'policies/lti'
 
-class Services::LtiTest < ActionDispatch::IntegrationTest
+class Services::LtiTest < ActiveSupport::TestCase
   setup do
     @roles_key = Policies::Lti::LTI_ROLES_KEY
     @custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
