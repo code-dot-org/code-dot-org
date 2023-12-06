@@ -25,6 +25,7 @@ class Services::CurriculumPdfs::ResourcesTest < ActiveSupport::TestCase
 
     @fake_service = mock('DriveService')
     Google::Apis::DriveV3::DriveService.stubs(:new).returns(@fake_service)
+    Google::Auth::ServiceAccountCredentials.stubs(:make_creds).returns("test_auth")
     @fake_service.stubs(:authorization=)
     @fake_service.stubs(:export_file)
 
