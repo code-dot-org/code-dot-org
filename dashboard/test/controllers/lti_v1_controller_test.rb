@@ -1,11 +1,16 @@
 require 'json'
 require 'jwt'
 require 'policies/lti'
+require "services/lti"
+require "clients/lti_advantage_client"
 require 'test_helper'
 
 class LtiV1ControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
+
   setup_all do
     @integration = create :lti_integration
+    @deployment = create :lti_deployment, lti_integration: @integration, deployment_id: SecureRandom.uuid
     # create an arbitrary key for testing JWTs
     @key = SecureRandom.alphanumeric 10
     # create arbitary state and nonce values
@@ -42,6 +47,10 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     roles_key = Policies::Lti::LTI_ROLES_KEY
     custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
     teacher_roles = Policies::Lti::TEACHER_ROLES
+    nrps_url_key = Policies::Lti::LTI_NRPS_CLAIM
+    resource_link_key = Policies::Lti::LTI_RESOURCE_LINK_CLAIM
+    deployment_id_key = Policies::Lti::LTI_DEPLOYMENT_ID_CLAIM
+    context_key = Policies::Lti::LTI_CONTEXT_CLAIM
     {
       aud: aud,
       azp: @integration.client_id,
@@ -57,7 +66,17 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         given_name: 'Han',
         family_name: 'Solo',
       },
-      roles_key => teacher_roles
+      roles_key => teacher_roles,
+      nrps_url_key => {
+        context_memberships_url: 'https://example.com/nrps',
+      },
+      resource_link_key => {
+        id: SecureRandom.uuid,
+      },
+      deployment_id_key => @deployment.deployment_id,
+      context_key => {
+        id: SecureRandom.uuid,
+      },
     }
   end
 
@@ -201,5 +220,40 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
+  end
+
+  test 'sync - should redirect students to homepage without syncing' do
+    user = create :student
+    sign_in user
+    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
+    assert_response :redirect
+    assert_equal home_path, '/' + @response.redirect_url.split('/').last
+  end
+
+  test 'sync - should sync and redirect to the homepage' do
+    user = create :teacher
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).once
+    Services::Lti.expects(:sync_course_roster).once
+
+    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    assert_response :redirect
+  end
+
+  test 'sync - should be able to sync from a section code' do
+    user = create :teacher
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+    lti_section = create :lti_section, lti_course: lti_course
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).once
+    Services::Lti.expects(:sync_course_roster).once
+
+    get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
+    assert_response :redirect
   end
 end
