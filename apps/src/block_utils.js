@@ -1227,21 +1227,6 @@ exports.installCustomBlocks = function ({
     }
   });
 
-  // TODO: extract Sprite-Lab-specific logic.
-  if (
-    blockly.Blocks.gamelab_location_variable_set &&
-    blockly.Blocks.gamelab_location_variable_get
-  ) {
-    Blockly.Variables.registerGetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_get'
-    );
-    Blockly.Variables.registerSetter(
-      Blockly.BlockValueType.LOCATION,
-      'gamelab_location_variable_set'
-    );
-  }
-
   return blocksByCategory;
 };
 

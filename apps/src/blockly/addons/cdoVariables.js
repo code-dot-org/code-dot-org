@@ -1,32 +1,19 @@
 export default function initializeVariables(blocklyWrapper) {
+  // TODO: Remove support for sprite variables as a separate variable type
   blocklyWrapper.Variables.getters = {
     Default: 'variables_get',
   };
-  blocklyWrapper.Variables.setters = {
-    Default: 'variables_set',
-  };
-
   blocklyWrapper.Variables.registerGetter = function (category, blockName) {
     blocklyWrapper.Variables.getters[category] = blockName;
   };
 
-  blocklyWrapper.Variables.registerSetter = function (category, blockName) {
-    blocklyWrapper.Variables.setters[category] = blockName;
-  };
-
   /**
    * Find all the variables used in the provided block.
-   * @param {Blockly.Block} block Block to check for variables
-   * @returns {string[]} Array of all the variables used.
+   * @param {Blockly.Block} block Block to check for variables.
+   * @returns {string[]} Array of all the variable IDs used.
    */
   blocklyWrapper.Variables.allVariablesFromBlock = function (block) {
-    if (!block.getVars) {
-      return [];
-    }
-    var varsByCategory = block.getVars();
-    return Object.keys(varsByCategory).reduce(function (vars, category) {
-      return vars.concat(varsByCategory[category]);
-    }, []);
+    return block.getVars();
   };
 
   /**
@@ -36,7 +23,7 @@ export default function initializeVariables(blocklyWrapper) {
   blocklyWrapper.Variables.getVars = function (opt_category) {
     var category = opt_category || blocklyWrapper.Variables.DEFAULT_CATEGORY;
     var vars = {};
-    vars[category] = [this.getTitleValue('VAR')];
+    vars[category] = [this.getFieldValue('VAR')];
     return vars;
   };
 
