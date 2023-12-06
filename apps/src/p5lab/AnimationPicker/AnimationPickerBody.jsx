@@ -146,6 +146,13 @@ export default class AnimationPickerBody extends React.Component {
     if (this.props.hideBackgrounds) {
       categories = categories.filter(category => category !== 'backgrounds');
     }
+    // Library animations have more than 6 categories. Level-specific animations have
+    // fewer than 6 categories. We want to hide the "animals" and "" categories.
+    if (categories.length < 6) {
+      categories = categories.filter(
+        category => category !== '' && category !== 'animals'
+      );
+    }
     categories.push('all');
     return categories.map(category => (
       <AnimationPickerListItem
