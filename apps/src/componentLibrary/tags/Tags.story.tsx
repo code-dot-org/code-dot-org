@@ -109,7 +109,8 @@ GroupOfSizesOfTags.args = {
         },
         {
           tooltipId: 'englishM',
-          label: 'English M',
+          label:
+            'English M English M English M English M English M English M English M English M English M',
           tooltipContent: 'English M',
           icon: {
             icon: ' fa-solid fa-check',
