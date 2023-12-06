@@ -1,4 +1,8 @@
-import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {
+  BLOCK_TYPES,
+  PROCEDURE_DEFINITION_TYPES,
+  UNNAMED_FUNCTION_NAME,
+} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {readBooleanAttribute} from '../utils';
 
@@ -167,12 +171,13 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
 }
 
 /**
- *
+ * In the event that a legacy project has functions without names, add a name
+ * to the definition block's NAME field.
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   const blockType = blockElement.getAttribute('type');
-  if (blockType !== 'procedures_defnoreturn') {
+  if (blockType !== BLOCK_TYPES.procedureDefinition) {
     return;
   }
   const fieldElement = blockElement.querySelector('field[name="NAME"]');
@@ -181,17 +186,19 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   }
 
   if (fieldElement.textContent === '') {
-    fieldElement.textContent = 'unnamed';
+    fieldElement.textContent = UNNAMED_FUNCTION_NAME;
   }
 }
 
 /**
+ * In the event that a legacy project has functions without names, add a name
+ * to a call block's mutator.
  *
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addNameToBlockFunctionCallBlock(blockElement) {
   const blockType = blockElement.getAttribute('type');
-  if (blockType !== 'procedures_callnoreturn') {
+  if (blockType !== BLOCK_TYPES.procedureCall) {
     return;
   }
   const mutationElement =
@@ -200,7 +207,7 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
   if (!mutationElement.getAttribute('name')) {
-    mutationElement.setAttribute('name', 'unnamed');
+    mutationElement.setAttribute('name', UNNAMED_FUNCTION_NAME);
   }
 }
 
