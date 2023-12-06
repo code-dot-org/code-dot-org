@@ -371,7 +371,6 @@
   call_to_action_learn_more_about_ai: "Learn more about AI"
   call_to_action_get_started: "Get started"
   call_to_action_view_our_supporters: "View our supporters"
-<<<<<<< HEAD
   call_to_action_explore_self_paced_pl: "Explore self-paced professional learning"
   call_to_action_applications_get_notified: "Get notified when applications open"
   call_to_action_applications_notify_me: "Notify me when I can apply"
@@ -382,9 +381,7 @@
   call_to_action_learn_more_program_region: "Learn more about the program in your region"
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
-=======
   call_to_action_download_video: "Download video"
->>>>>>> origin/staging-next
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
