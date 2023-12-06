@@ -1338,6 +1338,8 @@ hu:
           title: Számítástechnika felfedezése c. tanfolyam utáni felmérés
         csd-post-survey-2023:
           title: Tanfomlyam Utáni Felmérés
+        csd-post-survey-2024:
+          title: Tanfomlyam Utáni Felmérés
         csd1-2017:
           description: Az 1. Egység egy nagyon interaktív és kollaboratív bemutató
             a számítástudomány világába, a problémamegoldás szélesebb körébe illesztve.
@@ -1428,6 +1430,14 @@ hu:
             cspSurvey:
               display_name: Kérdőív
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: '1.  fejezet: A probléma-megoldási folyamat'
+            lessonGroup-3:
+              display_name: '2.  fejezet: Számítógépek és problémamegoldás'
+            lessonGroup-5:
+              display_name: Kérdőív
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: '1.  fejezet: A probléma-megoldási folyamat'
@@ -2113,6 +2123,12 @@ hu:
             lessonGroup-4:
               display_name: Kérdőív
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 1.  fejezet
