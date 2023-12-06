@@ -805,9 +805,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
