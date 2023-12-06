@@ -298,14 +298,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
-  const handleGenerateClick = () => {
+  const startGenerating = () => {
     startAi();
+    setMode(Mode.GENERATING);
+  };
 
+  const handleGenerateClick = () => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
       emojis: inputs,
     });
 
-    setMode(Mode.GENERATING);
+    startGenerating();
   };
 
   const handleStartOverClick = () => {
@@ -326,7 +329,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    handleGenerateClick();
+    startGenerating();
   };
 
   const handleExplanationClick = () => {
@@ -504,6 +507,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
+  const handleOnClose = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
+      emojis: inputs,
+      mode,
+      currentToggle,
+      generatingStep: generatingProgress.step,
+    });
+
+    onClose();
+  };
+
   const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
     if (!currentGeneratedEffect) {
       return '';
@@ -635,7 +649,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
-      onClose={onClose}
+      onClose={handleOnClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
@@ -656,7 +670,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             className={moduleStyles.closeButton}
             data-dismiss="modal"
             type="button"
-            onClick={onClose}
+            onClick={handleOnClose}
           >
             <i className="fa fa-close" aria-hidden={true} />
             <span className="sr-only">{i18n.danceAiModalClose()}</span>
