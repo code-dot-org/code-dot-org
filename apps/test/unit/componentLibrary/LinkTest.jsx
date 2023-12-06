@@ -42,23 +42,15 @@ describe('Design System - Link', () => {
     expect(link.href).to.equal('https://studio.code.org/home');
   });
 
-  it('Link - calls onClick', async () => {
+  it('Link - onClick is correctly called when clicked', async () => {
     const user = userEvent.setup();
     const spyOnClick = sinon.spy();
 
-    const {rerender} = render(
-      <Link href="/" onClick={spyOnClick}>
-        Home
-      </Link>
-    );
+    const {rerender} = render(<Link onClick={spyOnClick}>Home</Link>);
 
     await user.click(screen.getByText('Home'));
 
-    rerender(
-      <Link href="/" onClick={spyOnClick}>
-        Home
-      </Link>
-    );
+    rerender(<Link onClick={spyOnClick}>Home</Link>);
 
     expect(spyOnClick).to.have.been.calledOnce;
   });
@@ -73,7 +65,7 @@ describe('Design System - Link', () => {
     );
 
     rerender(
-      <Link href="/" disabled onClick={spyOnClick}>
+      <Link disabled onClick={spyOnClick}>
         Home
       </Link>
     );
