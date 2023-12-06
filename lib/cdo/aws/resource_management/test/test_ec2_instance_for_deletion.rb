@@ -31,9 +31,8 @@ class TestEC2InstanceForDeletion < Minitest::Test
 
   def test_eligible_instance_can_be_deleted
     instance = tagged_instance(READY_TO_DELETE_TIME_IN_SECS, false)
-    instance.stub(:has_critical_stack?, false) do
-      assert instance.can_be_deleted?, "Instance should be eligible for deletion"
-    end
+    instance.stubs(:has_critical_stack?).returns(false)
+    assert instance.can_be_deleted?, "Instance should be eligible for deletion"
   end
 
   def test_cannot_be_deleted_scenario_time_ready
