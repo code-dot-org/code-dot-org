@@ -13,7 +13,7 @@ class EC2InstanceForDeletion
   CRITICAL_STACKS = %w[autoscale-prod test staging levelbuilder adhoc-bugcrowd]
 
   # Initialize EC2 instance and optional deletion configuration options
-  def initialize(instance, opts = {})
+  def initialize(instance, deletion_tag: nil, minimum_time_stopped_in_seconds:  6 * 24 * 60 * 60, dry_run: false)
     @instance = instance
     @deletion_tag = opts[:deletion_tag]
     @minimum_time_stopped_in_seconds = opts.fetch(:minimum_time_stopped_in_seconds, 6 * 24 * 60 * 60) # Default 6 days
