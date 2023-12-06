@@ -2,6 +2,7 @@ class EvaluateRubricJob < ApplicationJob
   queue_as :default
 
   S3_AI_BUCKET = 'cdo-ai'.freeze
+  STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files in S3
   # which will be used for AI evaluation.
@@ -14,6 +15,9 @@ class EvaluateRubricJob < ApplicationJob
       'CSD U3 Sprites scene challenge_2023' => 'New-U3-2022-L10',
       'CSD web project animated review_2023' => 'New-U3-2022-L13',
       'CSD games sidescroll review_2023' => 'New-U3-2022-L20'
+    },
+    'allthethings' => {
+      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-lesson-48',
     }
   }
 
@@ -221,7 +225,8 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   private def get_openai_evaluations(openai_params)
-    uri = URI.parse("#{CDO.ai_proxy_origin}/assessment")
+    origin = get_ai_proxy_origin
+    uri = URI.parse("#{origin}/assessment")
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
@@ -232,6 +237,13 @@ class EvaluateRubricJob < ApplicationJob
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
 
     JSON.parse(response.body)['data']
+  end
+
+  private def get_ai_proxy_origin
+    unless CDO.ai_proxy_origin || [:development, :test].include?(rack_env)
+      raise "CDO.ai_proxy_origin is required outside of development and test environments"
+    end
+    CDO.ai_proxy_origin || CDO.studio_url(STUB_AI_PROXY_PATH, CDO.default_scheme)
   end
 
   private def validate_evaluations(evaluations, rubric)

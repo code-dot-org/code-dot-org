@@ -186,7 +186,7 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2017/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2017/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -954,7 +954,7 @@
           "name": "Pesquisa Pós-curso do Descobertas da CC"
         },
         "csd5-2018/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2018/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -1809,7 +1809,7 @@
           "name": "Projeto - Apresentação do App"
         },
         "csd5-2019/Representation Matters": {
-          "name": "Representação Importa"
+          "name": "Questões Relativas à Representação"
         },
         "csd5-2019/Patterns and Representation": {
           "name": "Padrões e Representações"
@@ -3230,7 +3230,7 @@
         "csd7-2021/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
           "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
-          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "csd7-2021/Types of Machine Learning": {
           "name": "Tipos de Machine Learning"
@@ -7129,32 +7129,32 @@
         },
         "how-ai-works-2023/Introduction to Machine Learning": {
           "name": "Introdução ao Machine Learning",
-          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: o que é Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da [Série de vídeos Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada machine learning e como eles podem usar o Processo de Resolução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de machine learning em que um robô - AI Bot - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: O que é Machine Learning?](https://youtu.be/KHbwOetbmbs?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da [Série de vídeos Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nNesta lição, os alunos são apresentados a uma forma de inteligência artificial chamada machine learning e a como eles podem usar o Processo de Resolução de Problemas para ajudar a treinar um robô para resolver problemas. Eles participam de três atividades de machine learning em que um robô - Robô I.A. - está aprendendo a detectar padrões em peixes.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
           "student_overview": "Aprenda os conceitos básicos de machine learning ajudando o AI Bot a reconhecer peixes para limpar o oceano",
-          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "how-ai-works-2023/Computer Vision": {
           "name": "Visão Computacional",
-          "overview": "Esta lição gira é centrada ni vídeo [Como a IA Funciona: Visão Computacional](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades da Rede de VIsão Computacional para cada grupo\n-   (Opcional) Imprima cópias do Display Manipulativo de Sete Segmentos ",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Visão Computacional](https://youtu.be/2hXG8v8p0KM?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como a visão computacional funciona. Eles primeiro examinam as ilusões de ótica para identificar as características do desenho que seus olhos notaram. Os alunos assistem a um vídeo explicando a visão computacional e como um computador “vê”. Eles projetam um algoritmo que usa uma rede para decidir qual número a tela de sete segmentos está exibindo. Finalmente, os alunos testam seu algoritmo.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições desta sequência](https://code.org/ai/how-ai-works).",
+          "preparation": "-   Imprima cópias do guia de atividade da Rede de VIsão Computacional para cada grupo\n-   (Opcional) Imprima cópias do Display Manipulativo de Sete Segmentos ",
           "student_overview": "Aprenda como a visão computacional funciona projetando um algoritmo para detectar números."
         },
         "how-ai-works-2023/Neural Networks": {
           "name": "Redes Neurais",
           "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Redes Neurais](https://youtu.be/JrXazCEACVo?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) da série [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nOs alunos aprendem como as redes neurais funcionam. Primeiro, eles discutem um exemplo de uma experiência que recomenda coisas para você. Em seguida, eles usam um widget que recomenda vídeos com base em uma pessoa. Os alunos assistem a um vídeo explicando as redes neurais. Eles usam um widget atualizado para ajustar a influência de cada pessoa. Finalmente, os alunos discutem a necessidade de perspectivas diversas ao criar sistemas de recomendação.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do recurso Criadores de Conteúdo do WeTube para cada aluno\n-   Imprima cópias do guia de atividades da Rede Neural para cada aluno",
+          "preparation": "-   Imprima cópias do recurso Criadores de Conteúdo do WeTube para cada aluno\n-   Imprima cópias do guia de atividade da Rede Neural para cada aluno",
           "student_overview": "Aprenda como as redes neurais funcionam ajustando os pesos de um sistema de recomendação para ajustar as saídas."
         },
         "how-ai-works-2023/Chatbots and Large Language Models (LLMs)": {
           "name": "Chatbots e Grandes Modelos de Linguagem (LLMs)",
           "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Chatbots e Grandes Modelos de Linguagem](https://youtu.be/X-AWdfSFCHQ) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nGrandes Modelos de Linguagem (LLMs) geram um novo texto. O texto gerado pelos LLMs parece serem escritos por um ser humano porque modelos de linguagem grandes são construídos com base em grandes corpos de texto, como a Wikipedia. Nesta lição, os alunos aprendem o que é um LLM e como ele funciona e, em seguida, usam um LLM para co-criar um texto com a IA. Finalmente, a lição termina com uma discussão sobre se os LLMs são ou não inteligentes ou criativos.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência](https://code.org/ai/how-ai-works).",
-          "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
+          "preparation": "-   Imprima cópias do guia de atividade para cada aluno",
           "student_overview": "Os Grandes Modelos de Linguagem (LLMs) são inteligentes ou criativos? Decida você mesmo ao passo em que trabalha com eles para criar algo e aprende mais sobre como eles funcionam!"
         },
         "how-ai-works-2023/Generative Images": {
           "name": "Imagens Generativas",
-          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Criatividade e Imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina outra IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de difusão de IA. Finalmente, a aul taermina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência].[2]",
-          "preparation": "-   Imprima cópias do guia de atividades para cada aluno",
+          "overview": "Esta lição é centrada no vídeo [Como a IA Funciona: Criatividade e Imaginação?](https://www.youtube.com/watch?v=X994dDnmRmY) da série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y). Assista a este vídeo antes de explorar o plano de aula.\n\nModelos de difusão geram imagens. A IA de difusão converte uma imagem em ruído e treina outra IA para reverter o processo. Nesta lição, os alunos aprendem como a IA pode gerar imagens e, em seguida, exploram um widget de difusão de IA. Finalmente, a aula termina com uma discussão sobre se esses modelos são criativos ou não.\n\nEsta lição pode ser lecionada sozinha ou como parte de uma sequência de 7 lições sobre Como a IA Funciona - [clique aqui para ver todas as lições nesta sequência].[2]",
+          "preparation": "-   Imprima cópias do guia de atividade para cada aluno",
           "student_overview": "Saiba como a IA pode gerar imagens explorando um widget de difusão de IA."
         },
         "how-ai-works-2023/Algorithmic Bias": {
@@ -7172,7 +7172,7 @@
         "how-ai-works-2023/How AI Works In a Day": {
           "name": "Como a IA Funciona Em um Dia",
           "overview": "⚠️ Esta lição é destinada às salas de aula que desejam exibir toda a série de vídeos [Como a IA Funciona](https://www.youtube.com/playlist?list=PLzdnOPI1iJNeehd1RXhnVMBFi1WhWLx_Y) em um único dia\\*\\*. Não se foi projetada para ser lecionada em sequência com as outras lições desta unidade, as quais apresentam um vídeo a cada dia.\n\nOs alunos acompanham cada vídeo combinando o vocabulário do vídeo e, em seguida, respondendo a uma pergunta de reflexão sobre cada vídeo. O plano de aula e os slides são muito esparsos e abertos para permitir a improvisação e a personalização de acordo com a sua sala de aula.",
-          "preparation": "-   Imprima o guia de atividades\n-   Projete os slides em um projetor de vídeo"
+          "preparation": "-   Imprima o guia de atividade\n-   Projete os slides em um projetor de vídeo"
         },
         "applab-intro/Intro to App Lab": {
           "name": "Introdução Laboratório de Aplicativos",
@@ -7935,14 +7935,14 @@
           "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."
         },
         "csd7-2021/Patterns in Data": {
-          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "csd7-2021/AI Code of Ethics": {
           "name": "Código de Ética em IA",
           "preparation": "-   Prepare-se para compartilhar on-line uma apostila sobre **Áreas de Pesquisa em Ética em IA** por grupo.\n-   Imprima ou prepare-se para compartilhar on-line uma apostila **Reflexões sobre Pesquisa em Ética em IA** por grupo.\n-   Prepare um documento web compartilhável, apresentação de slides, modelo de vídeo ou qualquer outra forma de mídia para ser usada para compor o recurso “Nosso Código de Ética em IA” da sua turma."
         },
         "csd7-2021/Mini-Project: Make a Machine Learning App": {
-          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividades para cada aluno"
+          "preparation": "-   Revise os níveis do Code Studio antes da aula\n-   Imprima cópias do guia de atividade para cada aluno"
         },
         "csd5-2022/Data and Machine Learning": {
           "student_overview": "\\*\\*Pergunta do Dia: Como as máquinas “aprendem”? \\*\\*\n\nNesta lição, você começa a trabalhar com Inteligência Artificial e a aprender sobre Aprendizado de Máquina."

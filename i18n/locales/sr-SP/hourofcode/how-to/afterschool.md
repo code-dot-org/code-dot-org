@@ -1,0 +1,90 @@
+---
+title: Hour of Code How-to Guide for After-school
+---
+
+{{ signup_button }}
+
+# Како подучавати један час кодирања у ваннаставним активностима и школским клубовима
+
+### Придружите се покрету и своје ученике уведите у свет рачунарства путем ових корака.
+
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+
+### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+
+* * *
+
+## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe> 
+
+## 2. Изаберите упутства
+
+We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+
+**Сва упутства часа кодирања** захтевају минимално време припреме за организаторе те су самостално вођене - омогућујући деци да раде властитим темпом и нивоом вештине.
+
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
+
+**Потребна вам је наставна припрема за Ваш ваннаставни час кодирања?** Погледајте овај [пример](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+
+## 3. Promote your Hour of Code
+
+Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+
+## Планирајте ваше технолошке потребе - рачунари нису обавезни
+
+The best Hour of Code experience includes Internet-connected computers. **Није** потребан рачунар за свако дете а час кодирања можете одржавати и без рачунара.
+
+Свакако тестирајте водиче о ученичким рачунарима или уређајима како би се осигурало да раде исправно у прегледачима са звуком и видео записом. **Имате мали бендвич?** Планирајте да покажете видео записе испред разреда, тако да сваки студент не би морао да преузима своје личне видео записе. Или покушајте с упутствима ван мреже.
+
+Омогућите слушалице за своје ученике или их питајте да донесу своје, ако упутство које сте изабрали ради боље с звуком.
+
+**Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). Када ученици раде с партнером, они помажу један другоме и мање се ослањају на наставника. They’ll also see that computer science is social and collaborative.
+
+## Започните свој час кодирања с инспиративним видео записом
+
+Kick off your Hour of Code by inspiring participants and discussing how computer science impacts every part of our lives.
+
+**Show an inspirational video:**
+
+- Оригинални Code.org видео запис у ком учествују Бил Гејтс, Марк Закерберг и НБА звезда Крис Бош - овде су [1 минутна](https://www.youtube.com/watch?v=qYZF6oIZtfc),[5 минутна](https://www.youtube.com/watch?v=nKIu9yen5nc), и [9 минутна](https://www.youtube.com/watch?v=dU1xS07N-FA) верзија.
+- [Видео запис светског часа кодирања](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- Пронађите више инспиративних видео записа [овде](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+
+**Уреду је ако сте потпуно нови у свету рачунара. Овде су неке идеје како да представите своју активност часа кодирања:**
+
+- Објасните како технологија утиче на наше животе, с примерима који ће бити занимљиви како дечацима, тако и девојчицама (разговарајте о апликацијама и технологији која се користи за спашавање живота, помоћ људима, повезује људе итд).
+- Набројите ствари које користе програм - код у свакодневном животу.
+- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+
+**Потребно вам је још водича?** Преузмите овај [пример плана часова](/files/AfterschoolEducatorLessonPlanOutline.docx).
+
+## 6. Code!
+
+**Direct participants to the activity** - Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+
+**When someone comes across difficulties it's okay to respond:** - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”
+
+**What to do if someone finishes early?** - Encourage participants to try another Hour of Code activity at [hourofcode.com/learn]({{ urls/learn }}) - Or, ask those who finish early to help others who are having trouble.
+
+## 7. Celebrate
+
+- [Print certificates]({{ urls/certificates }}) for your students.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers for your students.
+- [Order custom t-shirts](https://www.amazon.com/stores/Code/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220?ref_=ast_bln) for participants.
+- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+
+## Други извори часа кодирања за наставнике
+
+- Проверите [најбоље праксе](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) од претходних организатора часа кодирања.
+- Погледајте видео запис нашег [водича за вебинар часа кодирања](https://youtu.be/EJeMeSW2-Mw).
+- Посетите [форум часа кодирања](http://forum.code.org/c/plc/hour-of-code) како бисте добили савете, увиде и подршку других организатора.
+- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+
+## What comes after the Hour of Code?
+
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
+
+{{ signup_button }}

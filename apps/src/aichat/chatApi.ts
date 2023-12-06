@@ -7,9 +7,13 @@ import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
  * This function sends a POST request to the chat completion backend controller.
  */
 export async function postOpenaiChatCompletion(
-  messagesToSend: OpenaiChatCompletionMessage[]
+  messagesToSend: OpenaiChatCompletionMessage[],
+  levelId?: number
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = {messages: messagesToSend};
+  const payload = levelId
+    ? {levelId: levelId, messages: messagesToSend}
+    : {messages: messagesToSend};
+
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
     JSON.stringify(payload),

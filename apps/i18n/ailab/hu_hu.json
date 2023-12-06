@@ -1,15 +1,15 @@
 {
   "dataDisplayFeatures": "Válasszon egy vagy több oszlopot bemenetként az előrejelzés elkészítéséhez.",
   "dataDisplayLabel": "Válasszon egy oszlopot az előrejelzéshez.",
-  "generateResults": "A modelled tesztelés alatt.",
-  "modelSummary": "Sikeresen kialakította mentette modelljét. Tekintse át a modell adatait, és kattintson a Befejezés gombra a képzett modell használatához az App Lab alkalmazásban.",
+  "generateResults": "A modelled tesztelés alatt van.",
+  "modelSummary": "Sikeresen kialakítottad és mentetted a modelledet. Tekintsd át a modell adatait, és kattints a Befejezés gombra a betanított modell használatához az App Lab alkalmazásban.",
   "results": "Tekintsd át az eredményeket.",
   "resultsDetails": "Az eredmények részletei megjelennek.",
-  "saveModel": "Mentse el a kialakított modellt az App Lab alkalmazáshoz.",
+  "saveModel": "Mentse el a betanított modellt az App Lab alkalmazáshoz.",
   "selectDataset": "Válassza ki a használni kívánt adatkészletet.",
-  "selectedDataset": "Most választott ki egy adatkészletet.",
+  "selectedDataset": "Kiválasztottál egy adatkészletet.",
   "selectedFeatureCategorical": "Most választott ki egy kategorikus funkciót.",
-  "selectedFeatureNumerical": "Most választott ki egy numerikus funkciót.",
-  "trainModel": "A modelled kialakítás alatt.",
-  "uploadedDataset": "Most töltöttél fel egy adatkészletet."
+  "selectedFeatureNumerical": "Kiválasztott ki egy numerikus funkciót.",
+  "trainModel": "A modelled betanítás alatt van.",
+  "uploadedDataset": "Feltöltöttél egy adatkészletet."
 }

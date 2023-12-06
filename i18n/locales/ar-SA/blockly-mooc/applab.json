@@ -18,6 +18,7 @@
   "designToolboxHeader": "صندوق أدوات التصميم",
   "designWorkspaceDescription": "انقر فوق عنصر أو اختره من القائمة المنسدلة أدناه لتحرير خصائصه. قم بإنشاء التعليمات البرمجية في الأحداث.",
   "designWorkspaceHeader": "مساحة العمل: ",
+  "designElement_label": "التسمية",
   "designElementPhotoSelectClickName": "تغيير",
   "designElementPhotoSelectClickDescription": "يتم تشغيله عند تحديد صورة.",
   "designElementEvent_change": "تغيير",

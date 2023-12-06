@@ -1,4 +1,5 @@
 {
+  "backward": "atzeraka",
   "blocksUsed": "Erabilitako blokeak: %1",
   "branches": "adarrak",
   "catColour": "Kolorea",
@@ -36,6 +37,7 @@
   "drawATree": "marraztu zuhaitz bat",
   "drawATriangle": "marraztu triangelu bat",
   "drawLowerWave": "marraztu beheko uhina",
+  "drawShape": "marraztu forma",
   "drawSticker": "eranskailua margotu",
   "drawStickerWithSize": "eranskailua margotu tamainarekin",
   "drawUpperWave": "marraztu goiko uhina",
