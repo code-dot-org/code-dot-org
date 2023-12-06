@@ -2547,6 +2547,7 @@
   "unhideAndAssignHeader": "This unit is currently hidden from the section",
   "unhideUnitAndAssign": "Unhide unit and assign",
   "unnamedFunction": "You have a variable or function that does not have a name. Don't forget to give everything a descriptive name.",
+  "unnamedFunctionName": "unnamed",
   "unplugged": "Unplugged",
   "unpluggedActivity": "Unplugged Activity",
   "unpluggedLesson": "Unplugged Lesson",

@@ -51,7 +51,6 @@ export const DEFAULT_SOUND = 'sound://category_digital/ping.mp3';
 export const NO_OPTIONS_MESSAGE = 'uninitialized';
 export const EMPTY_OPTION = '???';
 export const WORKSPACE_PADDING = 16;
-export const UNNAMED_FUNCTION_NAME = 'unnamed';
 
 export function stringIsXml(str) {
   try {
