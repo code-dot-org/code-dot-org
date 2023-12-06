@@ -26,7 +26,7 @@ class DanceVisualizationColumn extends React.Component {
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
-    isAiModalOpen: PropTypes.bool.isRequired,
+    currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
     playSound: PropTypes.func.isRequired,
   };
@@ -44,7 +44,7 @@ class DanceVisualizationColumn extends React.Component {
 
   componentDidUpdate(prevProps) {
     // Reset the program when the AI modal is opened
-    if (!prevProps.isAiModalOpen && this.props.isAiModalOpen) {
+    if (!prevProps.currentAiModalBlockId && this.props.currentAiModalBlockId) {
       this.props.resetProgram();
     }
   }
@@ -109,7 +109,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.isAiModalOpen && <DanceAiModal playSound={playSound} />}
+          {this.props.currentAiModalBlockId && (
+            <DanceAiModal playSound={playSound} />
+          )}
         </div>
       </div>
     );
@@ -149,5 +151,5 @@ export default connect(state => ({
   over21: state.currentUser.over21,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
-  isAiModalOpen: state.dance.isAiModalOpen,
+  currentAiModalBlockId: state.dance.currentAiModalBlockId,
 }))(DanceVisualizationColumn);

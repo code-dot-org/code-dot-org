@@ -52,7 +52,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ModalButton from './ModalButton';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import Globals from '../Globals';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
+import {DANCE_AI_FIELD_NAME} from './constants';
 
 export enum Mode {
   INITIAL = 'initial',
@@ -155,13 +156,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
-  const currentAiModalField = useMemo(() => {
-    const field = Globals.getCurrentDanceAiModalField();
-    if (field === null) {
+  const aiModalBlockId = useSelector(
+    (state: {dance: DanceState}) => state.dance.currentAiModalBlockId
+  );
+
+  const currentAiModalField: CdoFieldDanceAi | null = useMemo(() => {
+    if (aiModalBlockId === undefined) {
       Lab2MetricsReporter.logWarning('AI modal opened without a field');
+      return null;
     }
-    return field;
-  }, []);
+
+    const field = Blockly.getMainWorkspace()
+      .getBlockById(aiModalBlockId)
+      ?.getField(DANCE_AI_FIELD_NAME);
+
+    if (field === null) {
+      Lab2MetricsReporter.logWarning('Could not find AI field');
+      return null;
+    }
+
+    return field as CdoFieldDanceAi;
+  }, [aiModalBlockId]);
 
   const aiModalOpenedFromFlyout = useSelector(
     (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
@@ -637,6 +652,12 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       : mode === Mode.EXPLANATION
       ? i18n.danceAiModalExplanation2()
       : undefined;
+
+  // If the AI modal was somehow not opened by an AI block, or we couldn't find the source field,
+  // don't render anything.
+  if (currentAiModalField === null) {
+    return null;
+  }
 
   return (
     <AccessibleDialog

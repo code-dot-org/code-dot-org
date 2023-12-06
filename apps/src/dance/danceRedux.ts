@@ -18,30 +18,28 @@ import {
   loadSongMetadata,
   isSongDeprecated,
 } from './songs';
-import CdoFieldDanceAi from './ai/cdoFieldDanceAi';
-import Globals from './Globals';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  isAiModalOpen: boolean;
+  currentAiModalBlockId: string | undefined;
   aiOutput?: AiOutput;
+  aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
-  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
-  isAiModalOpen: false,
+  currentAiModalBlockId: undefined,
   aiOutput: AiOutput.AI_BLOCK,
+  aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
-  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -155,24 +153,6 @@ export const setSong = createAsyncThunk(
   }
 );
 
-export const openAiModal = (field: CdoFieldDanceAi, fromFlyout: boolean) => {
-  return (
-    dispatch: ThunkDispatch<DanceState, unknown, PayloadAction<boolean>>
-  ) => {
-    Globals.setCurrentDanceAiModalField(field);
-    dispatch(setAiModalOpen(fromFlyout));
-  };
-};
-
-export const closeAiModal = () => {
-  return (
-    dispatch: ThunkDispatch<DanceState, unknown, PayloadAction<void>>
-  ) => {
-    Globals.setCurrentDanceAiModalField(null);
-    dispatch(setAiModalClosed());
-  };
-};
-
 async function handleSongSelection(
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
   songId: string,
@@ -206,19 +186,22 @@ const danceSlice = createSlice({
     setAiOutput: (state, action: PayloadAction<AiOutput>) => {
       state.aiOutput = action.payload;
     },
-    setAiModalOpen: (state, action: PayloadAction<boolean>) => {
-      state.isAiModalOpen = true;
-      state.aiModalOpenedFromFlyout = action.payload;
+    openAiModal: (
+      state,
+      action: PayloadAction<{
+        blockId: string;
+        fromFlyout: boolean;
+      }>
+    ) => {
+      state.currentAiModalBlockId = action.payload.blockId;
+      state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
     },
-    setAiModalClosed: state => {
-      state.isAiModalOpen = false;
+    closeAiModal: state => {
+      state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
   },
 });
-
-// Should not be used outside of this slice. The AI modal should only be opened/closed via thunk actions.
-const {setAiModalOpen, setAiModalClosed} = danceSlice.actions;
 
 export const {
   setSongData,
@@ -226,5 +209,7 @@ export const {
   setRunIsStarting,
   setCurrentSongMetadata,
   setAiOutput,
+  openAiModal,
+  closeAiModal,
 } = danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};
