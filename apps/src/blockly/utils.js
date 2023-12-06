@@ -2,27 +2,6 @@ import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
 /**
- * Performs a case-insensitive comparison of two strings.
- * @param {string} str1 - First string.
- * @param {string} str2 - Second string.
- * @returns {number} - Returns -1, 0, or 1 depending on whether str1 is considered
- * less, equal to, or greater than str2, in a case-insensitive manner.
- */
-export function caseInsensitiveCompare(str1, str2) {
-  // Convert both strings to lowercase for case-insensitive comparison
-  var lowerStr1 = str1.toLowerCase();
-  var lowerStr2 = str2.toLowerCase();
-
-  if (lowerStr1 < lowerStr2) {
-    return -1; // str1 is less than str2
-  }
-  if (lowerStr1 > lowerStr2) {
-    return 1; // str1 is greater than str2
-  }
-  return 0; // str1 is equal to str2
-}
-
-/**
  * Reads a boolean attribute from an XML element.
  * @param {Element} xmlElement - The XML element from which the attribute will be read.
  * @param {string} attribute - The name of the attribute to be read from the XML element.
