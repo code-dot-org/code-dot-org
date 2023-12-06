@@ -41,6 +41,8 @@ class Services::Lti
 
   def self.get_claim(id_token, key)
     id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS, key)
+  end
+
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
     # TODO DAYNE don't do [0]
     custom_claims = nrps_member[:message][0][Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]

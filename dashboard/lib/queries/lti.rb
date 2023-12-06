@@ -9,6 +9,8 @@ class Queries::Lti
 
   def self.get_lti_integration(issuer, client_id)
     LtiIntegration.find_by(issuer: issuer, client_id: client_id)
+  end
+
   def self.get_user_from_nrps(client_id:, issuer:, nrps_member:)
     id_token = {
       sub: nrps_member[:user_id],
