@@ -9,16 +9,19 @@
 
   > div {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     gap: 2px;
     color: $neutral-dark;
     padding: 2px 12px;
     background-color: $brand_primary_light;
     border-radius: 6.25rem;;
     max-width: 15em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+    span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
 
     i {
       display: flex;
@@ -63,9 +66,12 @@
 // Sizes
 .tags-l {
   > div {
+    height: 1.625rem;
+
     span {
       @include overline-one;
       margin-bottom: 0;
+      line-height: unset;
     }
 
     i {
@@ -79,9 +85,11 @@
 
 .tags-m {
   > div {
+    height: 1.5rem;
     span {
       @include overline-two;
       margin-bottom: 0;
+      line-height: unset;
     }
 
     i {
@@ -95,9 +103,12 @@
 
 .tags-s {
   > div {
+    height: 1.125rem;
+
     span {
       @include overline-three;
       margin-bottom: 0;
+      line-height: unset;
     }
 
     i {
