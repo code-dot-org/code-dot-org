@@ -86,14 +86,8 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
-def do_linting(base = nil, current = nil)
-  modified_files =
-    if base.nil? || current.nil?
-      HooksUtils.get_staged_files
-    else
-      HooksUtils.get_changed_files_between_branches(base, current)
-    end
-
+def do_linting
+  modified_files = HooksUtils.get_staged_files
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
     Object.method(:run_scss_dashboard) => filter_scss(modified_files),
@@ -111,4 +105,4 @@ def do_linting(base = nil, current = nil)
   end
 end
 
-do_linting(*ARGV)
+do_linting

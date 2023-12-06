@@ -1,22 +1,17 @@
 class HooksUtils
   def self.get_modified_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    sanitize_file_paths(`git ls-files --exclude-standard --modified`)
+    `git ls-files --exclude-standard --modified`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
   end
 
   def self.get_unstaged_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    sanitize_file_paths(`git ls-files --exclude-standard --others`)
+    `git ls-files --exclude-standard --others`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
   end
 
   def self.get_staged_files
     Dir.chdir File.expand_path('../../../', __FILE__)
-    sanitize_file_paths(`git diff --cached --name-only --diff-filter AMR`)
-  end
-
-  def self.get_changed_files_between_branches(first_branch, second_branch)
-    Dir.chdir File.expand_path('../../../', __FILE__)
-    sanitize_file_paths(`git diff --name-only #{first_branch}...#{second_branch}`)
+    `git diff --cached --name-only --diff-filter AMR`.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
   end
 
   # Returns whether a filename should be prohibited from a staging commit. Reasons for this:
@@ -34,13 +29,5 @@ class HooksUtils
     problems << "non-lowercase characters in avatar image" if filename.include?('/code.org/public/images/avatars/') && File.basename(filename).downcase != File.basename(filename)
     return problems unless problems.empty?
     return false
-  end
-
-  class << self
-    private
-
-    def sanitize_file_paths(output)
-      return output.split("\n").map(&:chomp).map {|x| File.expand_path("../../../#{x}", __FILE__)}
-    end
   end
 end
