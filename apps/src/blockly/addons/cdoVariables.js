@@ -1,5 +1,8 @@
 export default function initializeVariables(blocklyWrapper) {
-  // TODO: Remove support for sprite variables as a separate variable type
+  blocklyWrapper.Variables.DEFAULT_CATEGORY = 'Default';
+
+  // TODO: Removing support for sprite variables as a separate variable type is
+  // captured in https://codedotorg.atlassian.net/browse/CT-213
   blocklyWrapper.Variables.getters = {
     Default: 'variables_get',
   };
