@@ -9,8 +9,8 @@ export default function initializeGenerator(blocklyWrapper) {
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.xmlToBlocks = function (name, xml) {
-    var div = document.createElement('div');
-    var workspace = blocklyWrapper.createEmbeddedWorkspace(div, xml, {
+    const div = document.createElement('div');
+    const workspace = blocklyWrapper.createEmbeddedWorkspace(div, xml, {
       disableEventBindings: true,
     });
     return workspace.getTopBlocks(true);
