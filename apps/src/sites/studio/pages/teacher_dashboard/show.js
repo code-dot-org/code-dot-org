@@ -79,8 +79,16 @@ $(document).ready(function () {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-
-  store.dispatch(setCoursesWithProgress(coursesWithProgress));
+  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
+  const reorderedCourses = [
+    ...coursesWithProgress.filter(
+      course => course.id !== section.course_version_id
+    ),
+    ...coursesWithProgress.filter(
+      course => course.id === section.course_version_id
+    ),
+  ].reverse();
+  store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -95,7 +103,6 @@ $(document).ready(function () {
               sectionName={section.name}
               studentCount={section.students.length}
               coursesWithProgress={coursesWithProgress}
-              sectionVersionId={section.course_version_id}
             />
           )}
         />

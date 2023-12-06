@@ -47,7 +47,6 @@ class SectionProgress extends Component {
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
     showStandardsIntroDialog: PropTypes.bool,
-    sectionVersionId: PropTypes.number,
   };
 
   constructor(props) {
@@ -138,7 +137,6 @@ class SectionProgress extends Component {
       scriptData,
       sectionId,
       showStandardsIntroDialog,
-      sectionVersionId,
     } = this.props;
     const levelDataInitialized = this.levelDataInitialized();
     const lessons = scriptData ? scriptData.lessons : [];
@@ -150,13 +148,6 @@ class SectionProgress extends Component {
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
 
-    // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-    // Also adds "(Current Section)" label to the course version in the currently viewed section.
-    const reorderedCourses = [
-      ...coursesWithProgress.filter(course => course.id !== sectionVersionId),
-      ...coursesWithProgress.filter(course => course.id === sectionVersionId),
-    ].reverse();
-
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -165,7 +156,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              coursesWithProgress={reorderedCourses}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
