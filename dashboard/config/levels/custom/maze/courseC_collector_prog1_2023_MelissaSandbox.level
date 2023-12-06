@@ -27,8 +27,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
-    "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
+    "long_instructions": "**Let's practice using blocks:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -46,7 +45,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-12-04T21:48:42.999+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog1_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog1_2023\"},{\"changed_at\":\"2023-12-04 21:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-12-04T21:48:42.999+00:00\",\"changed\":[\"cloned from \\\"courseC_collector_prog1_2023\\\"\"],\"cloned_from\":\"courseC_collector_prog1_2023\"},{\"changed_at\":\"2023-12-04 21:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-05 17:41:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2023-12-05 17:42:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

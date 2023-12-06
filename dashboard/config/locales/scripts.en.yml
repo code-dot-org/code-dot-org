@@ -14006,6 +14006,8 @@ en:
           lessons:
             lesson-1:
               name: 'Part II: Algorithms and Sequencing'
+            lesson-2:
+              name: 'Intro to Computer Science: Overview'
           lesson_groups: {}
           name: melissasandbox-2024-1
           title: ''
