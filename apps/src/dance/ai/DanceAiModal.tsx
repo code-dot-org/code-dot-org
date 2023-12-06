@@ -692,10 +692,20 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               }}
               useRebrandedLikeStyles
             >
-              <button key={0} type="button" value={Toggle.EFFECT}>
+              <button
+                id="toggle-effect-button"
+                key={0}
+                type="button"
+                value={Toggle.EFFECT}
+              >
                 {i18n.danceAiModalEffectButton()}
               </button>
-              <button key={1} type="button" value={Toggle.CODE}>
+              <button
+                id="toggle-code-button"
+                key={1}
+                type="button"
+                value={Toggle.CODE}
+              >
                 {i18n.danceAiModalCodeButton()}
               </button>
             </ToggleGroup>
