@@ -83,6 +83,7 @@ Scenario: Teacher starts a new application and submits it
   Then I press the first "input[name='committedToMasterSchedule']" element
   Then I press the first "input[name='replaceCourse']" element
 
+  Then I press the first "#understandFee" element
   Then I press the first "input[name='payFee']" element
   Then I press the first "#confirmPrincipal" element
 
