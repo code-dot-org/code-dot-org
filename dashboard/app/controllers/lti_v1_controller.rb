@@ -104,11 +104,11 @@ class LtiV1Controller < ApplicationController
 
       if user
         sign_in user
-        redirect_to target_link_uri + '?' + redirect_params.to_query
+        redirect_to "#{target_link_uri}?#{redirect_params.to_query}"
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = target_link_uri + '?' + redirect_params.to_query
+        session[:user_return_to] = "#{target_link_uri}?#{redirect_params.to_query}"
         redirect_to new_user_registration_url
       end
     else
