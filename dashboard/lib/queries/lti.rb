@@ -27,4 +27,16 @@ class Queries::Lti
   def self.get_course_from_context(lti_integration_id, context_id)
     LtiCourse.find_by(lti_integration_id: lti_integration_id, context_id: context_id)
   end
+
+  def self.get_lti_course_from_section_code(section_code)
+    Section.find_by(code: section_code).lti_course
+  end
+
+  def self.find_or_create_lti_course(lti_integration_id:, context_id:, deployment_id:, nrps_url:, resource_link_id:)
+    LtiCourse.find_or_create_by(lti_integration_id: lti_integration_id, context_id: context_id) do |c|
+      c.lti_deployment_id = deployment_id
+      c.nrps_url = nrps_url
+      c.resource_link_id = resource_link_id
+    end
+  end
 end

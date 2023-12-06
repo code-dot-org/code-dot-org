@@ -130,7 +130,7 @@ class LtiV1Controller < ApplicationController
     return redirect_to home_path unless current_user.teacher?
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
 
-    lti_course = Section.find_by(code: params[:section_code]).lti_course if params[:section_code].present?
+    lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code]) if params[:section_code].present?
     lti_integration = lti_course.lti_integration unless lti_course.nil?
     lti_integration_id = params[:lti_integration_id] || lti_integration.id
     deployment_id = params[:deployment_id] || lti_course.lti_deployment_id
@@ -138,11 +138,13 @@ class LtiV1Controller < ApplicationController
     resource_link_id = params[:rlid] || lti_course.resource_link_id
     nrps_url = params[:nrps_url] || lti_course.nrps_url
 
-    lti_course ||= LtiCourse.find_or_create_by(lti_integration_id: lti_integration_id, context_id: context_id) do |c|
-      c.lti_deployment_id = deployment_id
-      c.nrps_url = nrps_url
-      c.resource_link_id = resource_link_id
-    end
+    lti_course ||= Queries::Lti.find_or_create_lti_course(
+      lti_integration_id: lti_integration_id,
+      context_id: context_id,
+      deployment_id: deployment_id,
+      nrps_url: nrps_url,
+      resource_link_id: resource_link_id
+    )
     lti_integration ||= LtiIntegration.find(lti_integration_id)
     return head :bad_request unless lti_integration
 

@@ -54,4 +54,24 @@ class Services::LtiTest < ActiveSupport::TestCase
 
     assert_equal lti_course, Queries::Lti.get_course_from_context(lti_integration.id, context_id)
   end
+
+  test 'finds an LTI Course given a section code' do
+    section_code = SecureRandom.alphanumeric(6)
+    lti_course = create :lti_course
+    create :lti_section, lti_course: lti_course, section: create(:section, code: section_code)
+
+    assert_equal lti_course, Queries::Lti.get_lti_course_from_section_code(section_code)
+  end
+
+  test 'creates an LTI course given metadata from an LTI launch ID token' do
+    lti_integration = create :lti_integration
+    lti_course = Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: 'context-id', deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
+    assert lti_course
+  end
+
+  test 'finds an existing LTI course given metadata from an LTI launch ID token' do
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid
+    assert_equal lti_course, Queries::Lti.find_or_create_lti_course(lti_integration_id: lti_integration.id, context_id: lti_course.context_id, deployment_id: 'deployment-id', nrps_url: 'http://some-nrps-url.com', resource_link_id: 'rlid')
+  end
 end
