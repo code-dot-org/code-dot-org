@@ -40,7 +40,7 @@ export const SUCCESS = 'success';
 class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    studioUrlPrefix: PropTypes.string.isRequired,
+    studioUrlPrefix: PropTypes.string,
     // Provided by Redux
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
