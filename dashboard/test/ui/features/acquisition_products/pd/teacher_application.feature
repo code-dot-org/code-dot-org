@@ -150,7 +150,7 @@ Scenario: Teacher starts a new csp application and submits it
   And I am on "http://studio.code.org/pd/application/teacher"
   And I wait until element "h1" contains text "Professional Learning Program Teacher Application"
   Then I wait until element "h3" contains text "Section 1: Choose Your Program"
-  And I press the first "input[name='program'][value='Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)']" element
+  And I press the first "input[name='program'][value='Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or non-AP introductory course)']" element
   And I press the first "button#next" element
 
   # Section 2
