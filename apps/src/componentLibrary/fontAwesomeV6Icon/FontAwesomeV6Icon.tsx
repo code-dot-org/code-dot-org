@@ -2,7 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface FontAwesomeV6IconProps {
-  /** Icon style.
+  /**
+   * Icon style.
    * Style vs Figma font-weight:
    *  * solid - 900
    *  * regular - 400
@@ -12,7 +13,8 @@ export interface FontAwesomeV6IconProps {
   iconStyle: 'solid' | 'regular' | 'light' | 'thin';
   /** Icon name */
   iconName: string;
-  /** Icon title.
+  /**
+   *  Icon title.
    *  Title should be used for semantic icons. If not given, the screenreader will not read the icon
    *  See https://fontawesome.com/docs/web/dig-deeper/accessibility#icons-used-as-semantic-elements*/
   title?: string;
