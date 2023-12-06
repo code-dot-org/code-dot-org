@@ -10,15 +10,28 @@ import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, setCode} from './pythonlabRedux';
 import Button from '../templates/Button';
-import {runPython} from './pyodideRunner';
+import PyodideRunner from './pyodideRunner';
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
   const code = useSelector(
     (state: {pythonlab: PythonlabState}) => state.pythonlab.code
   );
-  const [output, setOutput] = useState<string>('');
   const dispatch = useDispatch();
+  const [pyodideLoaded, setPyodideLoaded] = useState<boolean>(false);
+  const [pyodideRunner, setPyodideRunner] = useState<PyodideRunner | null>(
+    null
+  );
+
+  useEffect(() => {
+    setPyodideRunner(new PyodideRunner(setPyodideLoaded));
+  }, []);
+
+  useEffect(() => {
+    if (pyodideRunner) {
+      pyodideRunner.initialize();
+    }
+  }, [pyodideRunner]);
 
   useEffect(() => {
     if (editorRef.current === null) {
@@ -47,7 +60,9 @@ const PythonEditor: React.FunctionComponent = () => {
   }, [dispatch, editorRef]);
 
   const handleRun = () => {
-    runPython(code, setOutput);
+    if (pyodideRunner) {
+      pyodideRunner.runPython(code);
+    }
   };
 
   return (
@@ -60,7 +75,12 @@ const PythonEditor: React.FunctionComponent = () => {
         <div ref={editorRef} className={classNames('codemirror-container')} />
       </PanelContainer>
       <div>
-        <Button type={'button'} text="Run" onClick={handleRun} />
+        <Button
+          type={'button'}
+          text="Run"
+          onClick={handleRun}
+          disabled={!pyodideLoaded}
+        />
       </div>
     </div>
   );
