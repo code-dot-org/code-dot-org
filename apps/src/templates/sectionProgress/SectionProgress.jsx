@@ -152,19 +152,10 @@ class SectionProgress extends Component {
 
     // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
     // Also adds "(Current Section)" label to the course version in the currently viewed section.
-    if (coursesWithProgress[0].id !== sectionVersionId) {
-      let currentCourse;
-      currentCourse = coursesWithProgress.splice(
-        coursesWithProgress.findIndex(course => {
-          return course.id === sectionVersionId;
-        }),
-        1
-      )[0];
-      currentCourse.display_name =
-        '(Current Section) ' + currentCourse.display_name;
-      coursesWithProgress.push(currentCourse);
-      coursesWithProgress.reverse();
-    }
+    const reorderedCourses = [
+      ...coursesWithProgress.filter(course => course.id !== sectionVersionId),
+      ...coursesWithProgress.filter(course => course.id === sectionVersionId),
+    ].reverse();
 
     return (
       <div>
@@ -174,7 +165,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              coursesWithProgress={coursesWithProgress}
+              coursesWithProgress={reorderedCourses}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
