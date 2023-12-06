@@ -10,7 +10,7 @@ class EC2InstanceForDeletion
   # Constants defining tags and critical stacks
   DISABLED_API_TERMINATION_TAG = 'disableApiTermination'.freeze
   CLOUD_FORMATION_TAG = 'aws:cloudformation:stack-name'.freeze
-  CRITICAL_STACKS = %w[autoscale-prod test staging levelbuilder adhoc-bugcrowd]
+  CRITICAL_STACKS = %w[autoscale-prod test staging levelbuilder adhoc-bugcrowd].freeze
 
   # Initialize EC2 instance and optional deletion configuration options
   def initialize(instance, deletion_tag: nil, minimum_time_stopped_in_seconds:  6 * 24 * 60 * 60, dry_run: false)
