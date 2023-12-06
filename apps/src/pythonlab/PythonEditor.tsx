@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import classNames from 'classnames';
 import {EditorView, ViewUpdate} from '@codemirror/view';
@@ -10,13 +10,14 @@ import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, setCode} from './pythonlabRedux';
 import Button from '../templates/Button';
-import {runPythonAsync} from './pyodideRunner';
+import {runPython} from './pyodideRunner';
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
   const code = useSelector(
     (state: {pythonlab: PythonlabState}) => state.pythonlab.code
   );
+  const [output, setOutput] = useState<string>('');
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -46,7 +47,7 @@ const PythonEditor: React.FunctionComponent = () => {
   }, [dispatch, editorRef]);
 
   const handleRun = () => {
-    runPythonAsync(code);
+    runPython(code, setOutput);
   };
 
   return (
