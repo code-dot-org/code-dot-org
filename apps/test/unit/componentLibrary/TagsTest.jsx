@@ -14,6 +14,7 @@ describe('Design System - Tags', () => {
           {tooltipId: 'tag1', label: 'tag1', tooltipContent: 'tag1'},
           {
             label: '+1',
+            tooltipId: 'tag2',
             tooltipContent: (
               <>
                 <p>tag2</p> <p>test</p>
@@ -40,6 +41,7 @@ describe('Design System - Tags', () => {
           {tooltipId: 'tag1', label: 'tag1', tooltipContent: 'tag1'},
           {
             label: '+1',
+            tooltipId: 'tag2',
             tooltipContent: (
               <>
                 <p>tag2</p> <p>test</p>
