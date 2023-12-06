@@ -37,8 +37,8 @@ echo "Wrote secrets from env vars into locals.yml."
 
 set -x
 
-bundle install --quiet
-bundle exec rake install
-bundle exec rake build
-bundle exec rake lint
-bundle exec rake circle:run_tests
+time bundle install --quiet
+time bundle exec rake install
+time bundle exec rake build
+time bundle exec rake lint
+time bundle exec rake circle:run_tests
