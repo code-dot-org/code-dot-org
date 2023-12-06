@@ -1,43 +1,56 @@
 require 'test_helper'
 
 class DynamicConfigControllerTest < ActionController::TestCase
-  test 'inaccessible by non-admins' do
-    get :show
-    assert_response :redirect
-    assert_redirected_to :new_user_session
-    get :gatekeeper_show
-    assert_response :redirect
-    assert_redirected_to :new_user_session
-    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
-    assert_response :redirect
-    assert_redirected_to :new_user_session
-    post :gatekeeper_delete, params: {feature: 'test access', where: '{}'}
-    assert_response :redirect
-    assert_redirected_to :new_user_session
+  GET_ROUTES = %i[show gatekeeper_show].freeze
+  POST_ROUTES = %i[gatekeeper_set gatekeeper_delete].freeze
+  ALL_ROUTES = (GET_ROUTES + POST_ROUTES).freeze
 
+  # The routes currently defined by this controller are pretty consistently
+  # structured, so it's possible to define a basic helper that naively executes
+  # a "default" HTTP interaction for a given route.
+  #
+  # This can be used in individual tests to easily verify functionality for
+  # every single route as a bulk operation.
+  def perform_default_http_interaction_for_route(route)
+    case route.to_sym
+    when *GET_ROUTES
+      get route
+    when *POST_ROUTES
+      post route, params: {feature: 'test access', where: '{}', value: 'true'}
+    else
+      raise "Don't know what the default HTTP interaction is for #{route.inspect}"
+    end
+  end
+
+  test 'inaccessible by non-admins' do
+    # Including both anonymous users
+    ALL_ROUTES.each do |route|
+      perform_default_http_interaction_for_route(route)
+      assert_response :redirect
+      assert_redirected_to :new_user_session
+    end
+
+    # And signed-in users without elevated permissions
     sign_in(create(:user))
-    get :show
-    assert_response :forbidden
-    get :gatekeeper_show
-    assert_response :forbidden
-    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
-    assert_response :forbidden
-    post :gatekeeper_delete, params: {feature: 'test access', where: '{}'}
-    assert_response :forbidden
+    ALL_ROUTES.each do |route|
+      perform_default_http_interaction_for_route(route)
+      assert_response :forbidden
+    end
   end
 
   test 'accessible by admins' do
     sign_in(create(:admin))
-    get :show
-    assert_response :success
-    get :gatekeeper_show
-    assert_response :success
-    post :gatekeeper_set, params: {feature: 'test access', where: '{}', value: 'true'}
-    assert_response :redirect
-    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test access'}
-    post :gatekeeper_delete, params: {feature: 'test access', where: '{}', value: 'true'}
-    assert_response :redirect
-    assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test access'}
+
+    GET_ROUTES.each do |route|
+      perform_default_http_interaction_for_route(route)
+      assert_response :success
+    end
+
+    POST_ROUTES.each do |route|
+      perform_default_http_interaction_for_route(route)
+      assert_response :redirect
+      assert_redirected_to action: 'gatekeeper_show', params: {feature: 'test access'}
+    end
   end
 
   test 'can render dynamic config values' do
