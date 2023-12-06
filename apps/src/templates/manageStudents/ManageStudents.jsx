@@ -30,7 +30,7 @@ class ManageStudents extends React.Component {
           <div>
             <SyncOmniAuthSectionControl
               sectionId={sectionId}
-              studioUrlPrefix={this.props.studioUrlPrefix}
+              studioUrlPrefix={studioUrlPrefix}
             />
             <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
           </div>
