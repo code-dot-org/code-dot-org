@@ -13,6 +13,16 @@ When(/^I click block "([^"]*)"$/) do |block|
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
+# This helps click on a field in Google Blockly.
+When(/^I click block field "([^"]*)"$/) do |selector|
+  code = <<~CODE
+    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
+    $("#{selector}")[0].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
+  CODE
+
+  @browser.execute_script(code)
+end
+
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
   drag_block_relative(get_block_id(block_id), dx, dy)
