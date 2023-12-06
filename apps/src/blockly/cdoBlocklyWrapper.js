@@ -228,6 +228,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return strip(code);
   };
 
+  // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    return Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, options);
+  };
+
   // The second argument to Google Blockly's blockToCode specifies whether to
   // generate code for the whole block stack or just the single block. The
   // second argument to Cdo Blockly's blockToCode specifies whether to generate

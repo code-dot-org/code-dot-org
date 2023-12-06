@@ -177,6 +177,16 @@
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
+  donors_block_microsoft_infosys: "We thank Microsoft and Infosys Foundation USA for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+
+  microsoft_logo_alt: "Microsoft logo"
+  infosys_logo_alt: "Infosys Foundation USA logo"
+  amazon_logo_alt: "Amazon logo"
+  google_logo_alt: "Google logo"
+  coinbase_logo_alt: "Coinbase logo"
+  ballmer_group_logo_alt: "Ballmer Group logo"
+  vista_equity_partners_logo_alt: "Vista Equity Partners logo"
+
   grade_level: "Grade level"
   grade_level_label_elementary: "Elementary School"
   grade_level_label_middle: "Middle School"
@@ -337,6 +347,7 @@
   call_to_action_open_positions: "View open positions"
   call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_donate: "Donate"
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
@@ -369,6 +380,8 @@
   call_to_action_learn_more_program_region: "Learn more about the program in your region"
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
+  call_to_action_view_our_supporters: "View our supporters"
+  call_to_action_download_video: "Download video"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -457,6 +470,8 @@
   aria_label_call_to_action_learn_more_csd: "Learn more about Computer Science Discoveries"
   aria_label_call_to_action_learn_more_csp: "Learn more about Computer Science Principles"
   aria_label_call_to_action_learn_more_csa: "Learn more about AP® Computer Science A"
+  aria_label_call_to_action_farsi_donate: "Donate to support the Code.org in Farsi campaign"
+  aria_label_call_to_action_farsi_learn_more: "Learn more about Code.org in Farsi"
 
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
   video_title_young_women_in_computer_science: "Young Women in Computer Science"
@@ -1391,9 +1406,13 @@
   donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
   donate_page_fundraise_title: "Fundraise for Code.org"
   donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_campaigns_heading: "Support a campaign"
+  donate_page_campaigns_farsi_desc: "Talent is widespread, but opportunity often isn't. The proposed Code.org in Farsi initiative aims to grant over 110 million Farsi speakers from countries like Iran, Afghanistan, and Tajikistan to global diasporas, access to educational resources currently available in other major languages. Let's make it a reality."
   donate_page_other_ways_title: "Other ways to give"
   donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_supporters_heading: "Join top industry leaders supporting Code.org"
+  donate_page_supporters_desc: "Prominent names nationwide trust and support our mission. View our esteemed supporters and consider adding your own commitment to Code.org's transformative cause."
   donate_page_donation_policy_title: "Understanding our Donation Policy"
   donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
   donate_tabs_tab_label_daf_direct: "DAF Direct"
@@ -1961,6 +1980,18 @@
   handouts_onepager: Spread the word with this one page handout
   handouts_brochure: Give this brochure to teachers and schools
   handouts_participationguide: Plan your Hour of Code with this participation guide
+
+  poster_aria_label_minecraft: "Download a poster featuring Minecraft Education: Generation AI"
+  poster_aria_label_dance_ai_01: "Download a poster featuring Dance Party: AI Edition frog, moose, and cat characters"
+  poster_aria_label_dance_ai_02: "Download a poster featuring Dance Party: AI Edition robot, sloth, and shark characters"
+  poster_aria_label_oceans_01: "Download a poster featuring AI for Oceans underwarer scene with AI Bot selecting a fish"
+  poster_aria_label_oceans_02: "Download a poster featuring AI for Oceans fish characters with different emotions"
+  poster_aria_label_steph: "Download a poster featuring NBA star Steph Curry"
+  poster_aria_label_malala: "Download a poster featuring activist Malala Yousafzai"
+  poster_aria_label_hadi: "Download a poster featuring Code.org founder Hadi Partovi"
+  poster_aria_label_mary: "Download a poster featuring General Motors CEO Mary Barra"
+  poster_aria_label_satya: "Download a poster featuring Microsoft CEO Satya Nadella"
+  poster_aria_label_shakira: "Download a poster featuring singer-songwriter Shakira"
 
   videos_title: Show these videos to inspire students
   videos_what_most_schools_dont_teach: What Most Schools Don't Teach (5 min)
@@ -10046,6 +10077,19 @@
   elementary_page_computer_science_card_title_2: "Computer Science Connections"
   elementary_page_computer_science_description_1: "Free set of elementary curricula that introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world."
   elementary_page_computer_science_description_2: "Make connections between computer science (CS) and other subjects like math, language arts, science, and social studies."
+
+  hoc_beyond_hero_description: "Now that you've completed your Hour of Code, take your learning to the next level! Many partners offer free, engaging options for teachers and students alike - no experience needed."
+  hoc_beyond_for_teachers_section_title: "For Teachers"
+  hoc_beyond_for_teachers_section_description: "You've held an Hour of Code event in your classroom... now what? Join the more than 2 million educators who use Code.org to teach computer science. Anyone can learn!"
+  hoc_beyond_for_teachers_course_title_1: "Teach with Code.org’s Courses"
+  hoc_beyond_for_teachers_course_title_2: "Teach Courses from Other Providers"
+  hoc_beyond_for_teachers_course_description_1: "Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge."
+  hoc_beyond_for_teachers_course_description_2: "Compare options by different partners, organized by grade band."
+  hoc_beyond_for_teachers_course_link_1: "Teach with Code.org"
+  hoc_beyond_for_teachers_course_link_2: "Explore other providers"
+  hoc_beyond_carousel_title: "For Students"
+  hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
+  hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
 
   language_code:
     ar: "Arabic"
