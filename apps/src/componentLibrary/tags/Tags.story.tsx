@@ -70,23 +70,23 @@ GroupOfSizesOfTags.args = {
   components: [
     {
       tagsList: [
-        {tooltipId: 'mathS', label: 'Math S', tooltipContent: 'Math S'},
-        {
-          label: '+1',
-          tooltipId: 'science-englishS',
-          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
-          tooltipContent: (
-            <>
-              <p>Science S,</p> <p>English S</p>
-            </>
-          ),
-        },
+        // {tooltipId: 'mathS', label: 'Math S', tooltipContent: 'Math S'},
+        // {
+        //   label: '+1',
+        //   tooltipId: 'science-englishS',
+        //   icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
+        //   tooltipContent: (
+        //     <>
+        //       <p>Science S,</p> <p>English S</p>
+        //     </>
+        //   ),
+        // },
         {
           tooltipId: 'englishS',
-          label: 'English S',
+          label: 'Tags',
           tooltipContent: 'English S',
           icon: {
-            icon: ' fa-solid fa-check',
+            icon: ' fa-solid fa-circle-user',
             title: 'check',
             placement: 'right',
           },
@@ -96,24 +96,23 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {tooltipId: 'mathM', label: 'Math M', tooltipContent: 'Math M'},
-        {
-          label: '+1',
-          tooltipId: 'science-englishM',
-          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
-          tooltipContent: (
-            <>
-              <p>Science M,</p> <p>English M</p>
-            </>
-          ),
-        },
+        // {tooltipId: 'mathM', label: 'Math M', tooltipContent: 'Math M'},
+        // {
+        //   label: '+1',
+        //   tooltipId: 'science-englishM',
+        //   icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
+        //   tooltipContent: (
+        //     <>
+        //       <p>Science M,</p> <p>English M</p>
+        //     </>
+        //   ),
+        // },
         {
           tooltipId: 'englishM',
-          label:
-            'English M English M English M English M English M English M English M English M English M',
+          label: 'Tags',
           tooltipContent: 'English M',
           icon: {
-            icon: ' fa-solid fa-check',
+            icon: ' fa-solid fa-circle-user',
             title: 'check',
             placement: 'right',
           },
@@ -123,23 +122,23 @@ GroupOfSizesOfTags.args = {
     },
     {
       tagsList: [
-        {tooltipId: 'mathL', label: 'Math L', tooltipContent: 'Math L'},
-        {
-          label: '+1',
-          tooltipId: 'science-englishL',
-          icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
-          tooltipContent: (
-            <>
-              <p>Science L,</p> <p>English L</p>
-            </>
-          ),
-        },
+        // {tooltipId: 'mathL', label: 'Math L', tooltipContent: 'Math L'},
+        // {
+        //   label: '+1',
+        //   tooltipId: 'science-englishL',
+        //   icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
+        //   tooltipContent: (
+        //     <>
+        //       <p>Science L,</p> <p>English L</p>
+        //     </>
+        //   ),
+        // },
         {
           tooltipId: 'englishL',
-          label: 'English L',
+          label: 'Tags',
           tooltipContent: 'English L',
           icon: {
-            icon: ' fa-solid fa-check',
+            icon: ' fa-solid fa-circle-user',
             title: 'check',
             placement: 'right',
           },
