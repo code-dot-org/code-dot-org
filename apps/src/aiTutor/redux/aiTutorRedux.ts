@@ -4,6 +4,7 @@ import {
 } from '@cdo/apps/aichat/chatApi';
 import {Role, Status, ChatCompletionMessage} from '@cdo/apps/aichat/types';
 import {createSlice, PayloadAction, createAsyncThunk} from '@reduxjs/toolkit';
+import {generalChatSystemPrompt} from '@cdo/apps/aiTutor/constants';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;
 
@@ -73,9 +74,7 @@ export const submitChatMessage = createAsyncThunk(
   'aitutor/submitChatMessage',
   async (message: string, thunkAPI) => {
     const state = thunkAPI.getState() as {aiTutor: AITutorState};
-    const systemPrompt =
-      'You are an assistant teacher in a high school classroom where the students are learning Java using the Code.org curriculum. Answer their questions in plain, easy-to-understanding English. Do not write any code in your response.';
-
+    const systemPrompt = generalChatSystemPrompt;
     const storedMessages = state.aiTutor.chatMessages;
     const newMessageId =
       storedMessages.length === 0
