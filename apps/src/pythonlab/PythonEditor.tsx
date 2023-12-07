@@ -10,7 +10,8 @@ import moduleStyles from './python-editor.module.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {PythonlabState, setCode} from './pythonlabRedux';
 import Button from '../templates/Button';
-import PyodideRunner from './pyodideRunner';
+import PyodideRunner from './PyodideRunnerOg';
+import {runPythonCode} from './pyodideConsumer';
 
 const PythonEditor: React.FunctionComponent = () => {
   const editorRef = useRef<HTMLDivElement>(null);
@@ -60,9 +61,10 @@ const PythonEditor: React.FunctionComponent = () => {
   }, [dispatch, editorRef]);
 
   const handleRun = () => {
-    if (pyodideRunner) {
-      pyodideRunner.runPython(code);
-    }
+    // if (pyodideRunner) {
+    //   pyodideRunner.runPython(code);
+    // }
+    runPythonCode(code);
   };
 
   return (
