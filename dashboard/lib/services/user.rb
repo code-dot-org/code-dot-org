@@ -15,7 +15,7 @@ class Services::User
   # option values submitted by the user, such as email, and updates the User
   # object.
   # Since a User can have multiple AuthenticationOptions, the form code treats
-  # the nested attribute as an Array, however there should only every be one
+  # the nested attribute as an Array, however there should only ever be one
   # value when a new account is being created. Since the User and
   # AuthenticationOptions haven't actually been created in the DB yet, there is
   # no unique `id` attribute for the objects, so we will assume the index in the

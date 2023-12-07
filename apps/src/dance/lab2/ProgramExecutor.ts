@@ -79,7 +79,7 @@ export default class ProgramExecutor {
 
     this.hooks = await this.compileAllCode(code);
     if (!this.hooks.runUserSetup || !this.hooks.getCueList) {
-      Lab2MetricsReporter.logWarning('Missing required hooks in compiled code');
+      this.reportMissingHooks('runUserSetup', 'getCueList');
       return;
     }
 
@@ -107,7 +107,7 @@ export default class ProgramExecutor {
     this.reset();
     this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
     if (!this.hooks.runUserSetup) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserSetup');
       return;
     }
 
@@ -161,7 +161,7 @@ export default class ProgramExecutor {
     this.hooks = await this.preloadSpritesAndCompileCode(code, 'runUserSetup');
 
     if (!this.hooks.runUserSetup) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserSetup');
       return;
     }
 
@@ -265,7 +265,7 @@ export default class ProgramExecutor {
     }
 
     if (!this.hooks.runUserEvents) {
-      Lab2MetricsReporter.logWarning('Missing required hook in compiled code');
+      this.reportMissingHooks('runUserEvents');
       return;
     }
     this.hooks.runUserEvents(currentFrameEvents);
@@ -294,5 +294,11 @@ export default class ProgramExecutor {
       callback: callbackWrapper,
       onEnded: onEndedWrapper,
     });
+  }
+
+  private reportMissingHooks(...hooks: string[]) {
+    Lab2MetricsReporter.logWarning(
+      `Missing required hooks in compiled code: ${hooks.join(', ')}`
+    );
   }
 }
