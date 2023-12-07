@@ -146,26 +146,24 @@ export default class AnimationPickerBody extends React.Component {
     if (this.props.hideBackgrounds) {
       categories = categories.filter(category => category !== 'backgrounds');
     }
-    // Library animations have more than 6 categories. Level-specific animations have
-    // fewer than 6 categories. We want to hide the "animals" and "" categories.
-    if (categories.length < 6) {
-      categories = categories.filter(
-        category => category !== '' && category !== 'animals'
-      );
-    }
     categories.push('all');
-    return categories.map(category => (
-      <AnimationPickerListItem
-        key={category}
-        label={
-          msg[`animationCategory_${category}`]
-            ? msg[`animationCategory_${category}`]()
-            : category
-        }
-        category={category}
-        onClick={this.onCategoryChange}
-      />
-    ));
+
+    return categories.map(category => {
+      let label = msg[`animationCategory_${category}`]
+        ? msg[`animationCategory_${category}`]()
+        : category;
+      if (label === 'Level Animations') {
+        label = 'Costumes'; // This is a more accurate label for level-specific animations that are not backgrounds.
+      }
+      return (
+        <AnimationPickerListItem
+          key={category}
+          label={label}
+          category={category}
+          onClick={this.onCategoryChange}
+        />
+      );
+    });
   }
 
   animationItemsRendering(animations) {
@@ -256,7 +254,11 @@ export default class AnimationPickerBody extends React.Component {
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
                 )}
-                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
+                <span>
+                  {categoryQuery !== 'level_animations'
+                    ? msg[`animationCategory_${categoryQuery}`]()
+                    : 'Costumes'}
+                </span>
               </div>
             )}
           </div>
