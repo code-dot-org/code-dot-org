@@ -10,6 +10,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   FALSEY_DEFAULT,
   TRUTHY_DEFAULT,

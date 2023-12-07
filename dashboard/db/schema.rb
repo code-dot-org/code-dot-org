@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_14_211036) do
+ActiveRecord::Schema.define(version: 2023_12_05_204616) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -37,25 +37,6 @@ ActiveRecord::Schema.define(version: 2023_11_14_211036) do
     t.datetime "updated_at", null: false
     t.index ["key"], name: "index_activity_sections_on_key", unique: true
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
-  end
-
-  create_table "ap_cs_offerings", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.string "school_code", limit: 6, null: false
-    t.string "course", limit: 3, null: false
-    t.integer "school_year", limit: 2, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_code", "school_year", "course"], name: "index_ap_cs_offerings_on_school_code_and_school_year_and_course", unique: true
-  end
-
-  create_table "ap_school_codes", id: false, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
-    t.integer "school_year"
-    t.string "school_code", limit: 6, null: false
-    t.string "school_id", limit: 12, null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["school_code", "school_year"], name: "index_ap_school_codes_on_school_code_and_school_year", unique: true
-    t.index ["school_id"], name: "fk_rails_08d2269647"
   end
 
   create_table "assessment_activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
@@ -2355,7 +2336,6 @@ ActiveRecord::Schema.define(version: 2023_11_14_211036) do
     t.index ["word", "definition"], name: "index_vocabularies_on_word_and_definition", type: :fulltext
   end
 
-  add_foreign_key "ap_school_codes", "schools"
   add_foreign_key "census_submission_form_maps", "census_submissions"
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "circuit_playground_discount_applications", "schools"

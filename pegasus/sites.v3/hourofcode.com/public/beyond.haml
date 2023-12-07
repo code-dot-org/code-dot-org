@@ -1,39 +1,53 @@
 ---
 title: Beyond an Hour of Code
-layout: wide
+layout: wide_index
 ---
 
-%link{href: "/css/beyond.css", rel: "stylesheet"}
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
+%link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
+%link{href: "/css/generated/beyond-carousel.css", rel: "stylesheet", type: "text/css"}
 
-%h1 Beyond an Hour of Code
+#fullwidth
+  = view :header
 
-%h1#teacher-section For teachers
-%p
-  You've held an Hour of Code event in your classroom... now what? Join the more than 2 million educators who use Code.org to teach computer science. Anyone can learn!
-.half-resource-block{style: "margin-right: 20px;"}
-  %img.top-image{src: "/images/beyond-teacher.jpg"}
-  .description-area
-    .description
-      %h2.resource-title Teach With Code.org’s Courses
-      Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge.
-    %a{href: "https://code.org/teach"}
-      %button.gray-button Teach with Code.org
+  %section.banner
+    .wrapper
+      %h1{style: "font-size: 3rem"}
+        =hoc_s(:beyond_an_hour)
+      %p.body-one
+        =hoc_s(:hoc_beyond_hero_description)
 
-.half-resource-block
-  %img.top-image{src: "/images/beyond-courses.png"}
-  .description-area
-    .description
-      %h2.resource-title Teach Courses from Other Providers
-      Compare options by different partners, organized by grade band.
-    %a{href: "https://code.org/educate/curriculum/3rd-party"}
-      %button.gray-button Explore other providers
+%section
+  .wrapper
+    .section-intro.centered
+      %h2.centered.heading-xxl
+        =hoc_s(:hoc_beyond_for_teachers_section_title)
+      %p.body-two
+        =hoc_s(:hoc_beyond_for_teachers_section_description)
+    .action-block__wrapper.action-block__wrapper--two-col
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3
+            =hoc_s(:hoc_beyond_for_teachers_course_title_1)
+          %img{src: "/images/beyond-teach.png", alt: ""}
+          %p
+            =hoc_s(:hoc_beyond_for_teachers_course_description_1)
+        .content-footer
+          %a.link-button{href: "https://code.org/teach", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:hoc_beyond_for_teachers_course_link_1)
+      .action-block.action-block--one-col.flex-space-between
+        .content-wrapper
+          %h3
+            =hoc_s(:hoc_beyond_for_teachers_course_title_2)
+          %img{src: "/images/beyond-courses.png", alt: ""}
+          %p
+            =hoc_s(:hoc_beyond_for_teachers_course_description_2)
+        .content-footer
+          %a.link-button{href: "https://code.org/educate/curriculum/3rd-party", target: "_blank", rel: "noopener noreferrer"}
+            =hoc_s(:hoc_beyond_for_teachers_course_link_2)
 
-.clear
+%section.bg-neutral-light
+  .wrapper
+    = view :learn_carousels, variation:'beyond'
 
-%h1#student-section For students
-%p
-  Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels.
-
-%div
-  = view :learn_carousels, variation:'beyond'
-
+= view :organized_by_cdo

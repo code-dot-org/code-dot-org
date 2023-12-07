@@ -2079,3 +2079,7 @@ et:
           lesson_groups:
             lessonGroup-7:
               display_name: Sissejuhatus
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Uuring

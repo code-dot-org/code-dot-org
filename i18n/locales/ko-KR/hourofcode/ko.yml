@@ -261,6 +261,7 @@ ko:
   call_to_action_share_on_social_media: 소셜미디어로 공유
   call_to_action_explore_all_hoc_activities: Code.org에서 제공하는 모든 아워오브코드 액티비티를 살펴보세요
   call_to_action_start_dance_party: 댄스 파티 시작
+  call_to_action_start_dance_party_ai_edition: '댄스 파티: AI 에디션 시작하기 '
   call_to_action_start_part_02: 2부 시작
   call_to_action_start_unplugged_activity: 언플러그드 액티비티 시작
   call_to_action_view_promo_resources: 프로모션 리소스 보기
@@ -375,6 +376,15 @@ ko:
   call_to_action_learn_about_ai: AI에 대해 알아보기
   call_to_action_learn_more_about_ai: AI에 관해 더 자세한 알아보기
   call_to_action_get_started: 시작하기
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: 교육자용 활용 가이드 보기
   aria_label_call_to_action_hoc_how_to_companies: 기업용 활용 가이드 보기
   aria_label_call_to_action_hoc_how_to_districts: 교육구용 활용 가이드 보기
@@ -391,6 +401,8 @@ ko:
   aria_label_call_to_action_teaching_csd: 컴퓨터 과학 디스커버리 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csp: 컴퓨터 과학 원리 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_problem_solving: 교육 문제 해결 및 컴퓨팅 전문 학습 프로그램 시작
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: 컴퓨터 과학 융합 수업 전문 학습 프로그램 시작하기
   aria_label_call_to_action_teaching_ai: 교육 AI 및 기계 학습 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_maker_cp: 교육 시작하기 (장치로 앱 만들기) 전문 학습 프로그램
@@ -463,6 +475,16 @@ ko:
   aria_label_call_to_action_minecraft_2020: 지구를 위한 마인크래프트 AI로 시작하기
   aria_label_call_to_action_register_student_workshop: 무료 학생 워크숍에 등록하기
   aria_label_call_to_action_view_more_cs_resources: 더 많은 컴퓨터 과학 리소스 보기
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.org의 전문 학습 프로그램
   curriculum_name_csf: 컴퓨터 과학 기초
   curriculum_name_csf_02: 모든 CS 기초 (A-F 과정)
@@ -481,6 +503,7 @@ ko:
   curriculum_name_csd: 컴퓨터 과학의 발견
   curriculum_name_csp: 컴퓨터 과학 원리
   curriculum_name_problem_solving: 문제 해결 및 컴퓨팅
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: 컴퓨터 과학 융합 수업
   curriculum_name_csa: AP® 컴퓨터 과학 A
   curriculum_name_csa_ai: 소프트웨어 엔지니어링 및 컴퓨터 비전
@@ -583,6 +606,7 @@ ko:
   module_label_languages: '지원 언어:'
   module_label_accessibility_features: '접근성:'
   module_label_accessibility_features_full: '접근성 기능:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: 교육자 도구
   module_label_educator_course: 교육자 과정
   module_label_educator_resources: Educator resources
@@ -636,6 +660,7 @@ ko:
   module_duration_1_hr: 1시간
   module_duration_2_hrs: 2시간
   module_duration_3_hrs: 3시간
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5시간
   module_duration_5_hrs_plus: 5시간 이상
   module_duration_8_hrs: 8시간
@@ -657,6 +682,7 @@ ko:
   module_label_teaching_csd: 컴퓨터 과학 발견을 가르치기
   module_label_teaching_csp: 컴퓨터 과학 원리 교육
   module_label_teaching_problem_solving: 문제 해결 및 컴퓨팅 교육
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: 컴퓨터 과학 융합 수업 진행하기
   module_label_teaching_ai: AI 및 머신 러닝 교육
   module_label_teaching_maker_cp: 디바이스를 이용한 앱 제작 교육 (서킷 플레이그라운드)
@@ -717,6 +743,12 @@ ko:
   heading_attend_free_workshop: 무료 학생 워크숍에 참석하기
   heading_access_more_cs_resources: 더 많은 컴퓨터 과학 리소스에 액세스하기
   heading_available_on_code_dot_org: Code.org에서 사용 가능
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: 더 많은 젊은 여성들이 학교에서 컴퓨터 공학을 전공하도록 격려하는 데 열정을 쏟는 고등학생이라면 여러분이
     필요합니다!
   cs_ambassador_desc: 의학, 엔터테인먼트, 스포츠, 교육, 비즈니스, 패션, 기업가 정신을 포함한 모든 분야는 컴퓨터 과학의 영향을
@@ -772,6 +804,19 @@ ko:
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: 올여름부터 대면 및 가상 워크숍이 시작됩니다.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: 디바이스가 없어도 괜찮습니다!
   no_devices_section_desc: 컴퓨터 과학 교육이 항상 화면 앞에서 이루어질 필요는 없습니다. 디바이스의 부재가 컴퓨터 과학 개념을
     배우는 데 방해가 되어서는 안 됩니다.
@@ -789,6 +834,11 @@ ko:
     팁 및 업데이트를 이메일로 바로 받을 수 있습니다.
   subscribe_form_section_desc_csp: 등록하면 Code.org의 컴퓨터 과학 원칙에 대한 월간 이메일을 받고 유용한 알림,
     팁 및 업데이트를 이메일로 바로 받을 수 있습니다.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: 언제든지 구독을 취소할 수 있습니다.
   hoc_page_what_is_hoc_heading: 아워오브코드란 무엇인가요?
   hoc_page_desc: "[아워오브코드](%{hoc_url})는 180개 이상의 국가에서 수천만 명의 학생들에게 다가가는 세계적인 운동입니다.
@@ -947,6 +997,7 @@ ko:
   ai_curriculum_desc_06: 다양한 관점에서 제너레이티브 AI의 영향을 조사한 다음, 팀으로 협업하여 모든 참가자의 요구 사항을 가장
     많이 충족하는 지침을 마련하세요.
   ai_curriculum_btn_aria_label_06: 제너레이티브 AI 수업 계획의 사회적 영향 보기
+  ai_curriculum_btn_aria_label_dance_ai: '댄스 파티: AI 에디션을 체험해보세요.'
   ai_carousel_heading: 'Code.org를 활용한 AI에 대한 교사들의 의견:'
   ai_carousel_quote_01: 또한 이 수업을 통해 학생들은 분류 체계에 의견 요소가 있다는 것을 알 수 있었습니다.나중에 AI에서 편견이
     어떻게 나타날 수 있는지 알아보기 시작했을 때, 모델을 학습하는 데 사용되는 데이터가 선택에 기반한다는 것을 상기시킬 수 있었습니다.
@@ -1088,6 +1139,68 @@ ko:
   ai_vid_computervision_caption: 컴퓨터 비전
   ai_vid_ethics1_caption: '윤리 및 AI: 평등 접근 및 알고리즘 편향'
   ai_vid_ethics2_caption: '윤리 및 AI: 프라이버시와 업무의 미래'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: 교육자를 위한 자기 주도형 전문 학습
   self_paced_pl_hero_desc: 컴퓨터 과학 교육 여정의 모든 단계에서 교사들을 지원하기 위한 전문 학습 서비스.
   self_paced_pl_intro_heading: 일정에 따른 전문 학습
@@ -2426,6 +2539,7 @@ ko:
   learn_banner_teachers_markdown: '교사: [한 시간 수업](%{host_url}) 또는 [하우 투 가이드 읽기](%{howto_url})'
   tutorial_dance2019_name: 댄스 파티 2019
   tutorial_danceparty_name: 댄스 파티
+  tutorial_dancepartyai_name: '댄스 파티: AI 에디션'
   tutorial_chibitronics_name: '치비트로닉스: 일러스트 스토리'
   tutorial_athlete_name: 나만의 스포츠 게임을 코딩하세요
   tutorial_moana_name: '모아나: 코드로 방법 찾기'
@@ -3102,6 +3216,8 @@ ko:
   tutorial_meeempathy_name: 마인크래프트 두 마을 이야기
   tutorial_danceparty_shortdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
     시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_dancepartyai_shortdescription: 인공지능도 배우고 최고의 아티스트들과 함께 나만의 가상 댄스 파티를 만들어보세요.
+    이제 실력을 뽐낼 시간입니다!
   tutorial_chibitronics_shortdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_shortdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_shortdescription: '모아나는 용감하고 두려움이 없으며 자신의 길을 찾기로 굳게 다짐합니다. '
@@ -3915,6 +4031,8 @@ ko:
     엑스, 패닉이 출연합니다! 디스크에는 조나스 브라더스 등 많은 이들이 함께 합니다!
   tutorial_danceparty_longdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
     시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_dancepartyai_longdescription: 인공지능도 배우고 최고의 아티스트들과 함께 나만의 가상 댄스 파티를 만들어보세요.
+    이제 실력을 뽐낼 시간입니다!
   tutorial_chibitronics_longdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_longdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_longdescription: 새 디즈니 아워오브코드 튜토리얼에서는 학생들이 비주얼 블록을 간단히 드래그하고 드롭하여
@@ -5677,6 +5795,7 @@ ko:
     포용에 대해 배우고, 우리 모두를 개성적으로 만들어주는 다양성을 받아들이게 될 것입니다.
   tutorial_dance2019_string_detail_grades: 초등 2학년 이상
   tutorial_danceparty_string_detail_grades: 초등 2학년 이상
+  tutorial_dancepartyai_string_detail_grades: 3학년 이상
   tutorial_chibitronics_string_detail_grades: 프리 리더 - 5학년
   tutorial_athlete_string_detail_grades: 초등 2학년 이상
   tutorial_moana_string_detail_grades: 초등 2학년 이상
@@ -6353,6 +6472,7 @@ ko:
   tutorial_meeempathy_string_detail_grades: 초등 2학년 이상
   tutorial_dance2019_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 언플러그드
   tutorial_danceparty_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_dancepartyai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_chibitronics_string_platforms: 최신 웹 브라우저
   tutorial_athlete_string_platforms: 모든 최신 브라우저
   tutorial_moana_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -7090,6 +7210,7 @@ ko:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: 치비트로틱스 치비 칩과 회로 스티커 LED
   tutorial_athlete_string_detail_platforms: ''
   tutorial_moana_string_detail_platforms: ''
@@ -7768,6 +7889,7 @@ ko:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: 블록
   tutorial_danceparty_string_detail_programming_languages: 블록
+  tutorial_dancepartyai_string_detail_programming_languages: 블록
   tutorial_chibitronics_string_detail_programming_languages: 블록
   tutorial_athlete_string_detail_programming_languages: 블록
   tutorial_moana_string_detail_programming_languages: 블록

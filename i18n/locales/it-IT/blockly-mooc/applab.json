@@ -15,7 +15,7 @@
   "container": "creare un contenitore",
   "containerTooltip": "Crea un contenitore di divisione e ne imposta il codice HTML interno.",
   "designToolboxDescription": "Trascina gli elementi nella tua app!",
-  "designToolboxHeader": "Cassetta degli strumenti di progettazione",
+  "designToolboxHeader": "Cassetta degli strumenti",
   "designWorkspaceDescription": "Fai clic su un elemento o selezionalo dal menu a discesa sottostante per modificarne le proprietà. Crea codice in Eventi.",
   "designWorkspaceHeader": "Area di lavoro: ",
   "designWorkspace_copyToScreenButton": "Copia sullo schermo",
