@@ -9,7 +9,7 @@ class PotentialTeachersController < ApplicationController
       begin
         @potential_teacher.save!
         render json: {message: 'Potential teacher created successfully'}, status: :created
-      rescue ActiveRecord::RecordInvalid => exception
+      rescue => exception
         raise "ERROR: #{exception.message}"
       end
     end
