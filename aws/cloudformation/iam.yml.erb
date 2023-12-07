@@ -306,7 +306,8 @@ roles = {
     GoogleIdsSSMParameter: 'DeveloperGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/ReadOnlyAccess',
-      '!Ref DenySecretsPolicy'
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
+      '!Ref DenySecretsPolicy',
     ]
   },
   EngineeringFullAccessRole: {
@@ -348,6 +349,13 @@ roles = {
       '!Ref DataAnalystRedshiftPolicy',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor',
       'arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess',
+    ]
+  },
+  MarketingReadOnlyRole: {
+    RoleName: 'Marketing_ReadOnly',
+    ManagedPolicyArns: [
+      'arn:aws:iam::aws:policy/ReadOnlyAccess',
+      '!Ref AthenaCloudwatchLogsQueryPolicy',
     ]
   },
   BillingReadOnlyRole: {
@@ -664,6 +672,27 @@ roles.each do |name, config| %>
       Type: StringList
       Value: initial,value
       Description: List of Google IDs of people being granted billing access.
+
+  AthenaCloudwatchLogsQueryPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: AthenaCloudwatchLogsQueryPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - athena:StartQueryExecution
+              - athena:GetQueryExecution
+            Resource: !Sub 'arn:aws:athena:${AWS::Region}:${AWS::AccountId}:workgroup/primary'
+          - Effect: Allow
+            Action:
+              - s3:GetObject
+              - s3:PutObject
+              - s3:ListBucket
+            Resource: 
+              - arn:aws:s3:::aws-athena-query-results-475661607190-us-east-1/*
+              - arn:aws:s3:::aws-athena-query-results-475661607190-us-east-1
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
