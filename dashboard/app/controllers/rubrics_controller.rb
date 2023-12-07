@@ -199,6 +199,7 @@ class RubricsController < ApplicationController
   def attempted_at
     script_level = @rubric.get_script_level
     channel_id = get_channel_id(@user, script_level)
+    return nil unless channel_id
     # fetch the user's code from S3
     source_data = SourceBucket.new.get(channel_id, "main.json")
     return nil unless source_data[:status] == 'FOUND'
@@ -224,7 +225,7 @@ class RubricsController < ApplicationController
       user_storage_id,
       script_level.script_id
     )
-    raise "channel token not found for user id #{user.id} and script level id #{script_level.id}" unless channel_token
+    return nil unless channel_token
     channel_token.channel
   end
 end
