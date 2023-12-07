@@ -68,7 +68,9 @@
   > div {
     span {
       @include overline-one;
+      line-height: 1.5;
       margin-bottom: 0;
+      margin-top: 1.5px;
     }
 
     i {
@@ -84,7 +86,9 @@
   > div {
     span {
       @include overline-two;
+      line-height: 1.54;
       margin-bottom: 0;
+      margin-top: 2px;
     }
 
     i {
@@ -100,7 +104,9 @@
   > div {
     span {
       @include overline-three;
+      line-height: 1.8;
       margin-bottom: 0;
+      margin-top: 1px;
     }
 
     i {
