@@ -919,12 +919,13 @@ form {
   // The plugin we're using disappears when <html dir="rtl">
   // - updating the inset value fixes it; it does remove the swiping
   // animation between slides on desktop, but keeps the content
-  .slides.rtl {
+  .slides {
     inset: 0 !important;
   }
 
   p {
     font-family: $barlowSemiCondensed-medium, sans-serif;
+    text-align: initial;
   }
 
   .pagination {
