@@ -290,7 +290,7 @@ class RubricsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test "returns bad request when getting aggregate status if ai isn't enabled" do
+  test "returns bad request when getting aggregate status if ai isn't enabled for script level" do
     student = create :student
     follower = create :follower, student_user: student, user: @teacher
     student2 = create :student
@@ -429,7 +429,6 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal 1, json_response['attemptedUnevaluatedCount']
     assert_equal 5, json_response['lastAttemptEvaluatedCount']
     assert json_response['csrfToken']
-    # end
   end
 
   test "returns forbidden when running ai evals for all if experiment isn't enabled" do
@@ -614,7 +613,6 @@ class RubricsControllerTest < ActionController::TestCase
     }
 
     assert_response :success
-    # end
   end
 
   test "gets teacher evaluations for current user" do
