@@ -172,7 +172,6 @@ function getStandardizedCategories(metadata) {
 export function generateLevelAnimationsManifest() {
   return getLevelAnimationsFiles().then(files => {
     return buildAnimationMetadata(files).then(animationMetadata => {
-      console.log('animationMetadata', animationMetadata);
       let aliasMap = buildMap(animationMetadata, getStandardizedAliases, null);
 
       let categoryMap = buildMap(
