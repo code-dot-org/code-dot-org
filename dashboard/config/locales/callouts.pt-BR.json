@@ -4151,6 +4151,51 @@
         "helloworld_retro_sounds": {
           "hello_world_new": "Novo bloco!"
         },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-customize apps-choice5_2023": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
         "ml-models in applab-screens-3-2021": {
           "CSD_AI_L7_ifstatement": "Adicione sua declaração if aqui"
         },
@@ -4159,6 +4204,60 @@
         },
         "ml-models in applab-screens-3_2023": {
           "CSD_AI_L7_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-choice5_2023": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3D_2023": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
+        },
+        "ml-use model card-example3_EditC_2023": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
         },
         "outbreak2": {
           "minitoolbox": "Clique aqui para ampliar o bloco.",

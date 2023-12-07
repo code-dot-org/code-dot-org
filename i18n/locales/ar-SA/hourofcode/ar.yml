@@ -304,6 +304,7 @@ ar:
   call_to_action_share_on_social_media: المشاركة على وسائل التواصل الاجتماعي
   call_to_action_explore_all_hoc_activities: استكشف جميع أنشطة «ساعة البرمجة» من Code.org
   call_to_action_start_dance_party: ابدأ حفلة الرقص
+  call_to_action_start_dance_party_ai_edition: 'ابدأ حفلة الرقص: إصدار الذكاء الاصطناعي'
   call_to_action_start_part_02: ابدأ الجزء الثاني
   call_to_action_start_unplugged_activity: ابدأ النشاط غير الموصول
   call_to_action_view_promo_resources: عرض الموارد الترويجية
@@ -418,6 +419,15 @@ ar:
   call_to_action_learn_about_ai: تعرف على الذكاء الاصطناعي
   call_to_action_learn_more_about_ai: تعلم المزيد عن الذكاء الاصطناعي
   call_to_action_get_started: ابدأ الآن
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: عرض الدليل الإرشادي للمعلمين
   aria_label_call_to_action_hoc_how_to_companies: عرض الدليل الإرشادي للشركات
   aria_label_call_to_action_hoc_how_to_districts: عرض الدليل الإرشادي للمناطق
@@ -441,6 +451,8 @@ ar:
     علوم الكمبيوتر
   aria_label_call_to_action_teaching_problem_solving: ابدأ برنامج التعلم المهني لحل
     مشكلات التدريس والحوسبة
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: ابدأ برنامج التعلم المهني لتدريس روابط علوم
     الكمبيوتر
   aria_label_call_to_action_teaching_ai: ابدأ برنامج التعلم الاحترافي لتعليم الذكاء
@@ -530,6 +542,16 @@ ar:
   aria_label_call_to_action_register_student_workshop: سجل للحصول على ورشة عمل مجانية
     للطلاب
   aria_label_call_to_action_view_more_cs_resources: عرض المزيد من مصادر علوم الكمبيوتر
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: برنامج التعلم المهني الخاص بـ Code.org
   curriculum_name_csf: أساسيات علوم الكمبيوتر
   curriculum_name_csf_02: أي أساسيات في علوم الكمبيوتر (الدورة من الألف إلى الياء)
@@ -548,6 +570,7 @@ ar:
   curriculum_name_csd: اكتشافات علوم الكمبيوتر
   curriculum_name_csp: مبادئ علوم الكمبيوتر
   curriculum_name_problem_solving: حل المشكلات والحوسبة
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: روابط علوم الكمبيوتر
   curriculum_name_csa: علوم الكمبيوتر A
   curriculum_name_csa_ai: سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
@@ -669,6 +692,7 @@ ar:
   module_label_languages: 'اللغات المدعومة:'
   module_label_accessibility_features: 'إمكانية الوصول:'
   module_label_accessibility_features_full: 'ميزات إمكانية الوصول:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: أداة المعلم
   module_label_educator_course: دورة المعلم
   module_label_educator_resources: Educator resources
@@ -722,6 +746,7 @@ ar:
   module_duration_1_hr: 1 ساعة
   module_duration_2_hrs: 2 ساعة
   module_duration_3_hrs: 3 ساعات
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 ساعات
   module_duration_5_hrs_plus: أكثر من 5 ساعات
   module_duration_8_hrs: 8 ساعات
@@ -743,6 +768,7 @@ ar:
   module_label_teaching_csd: تدريس اكتشافات علوم الكمبيوتر
   module_label_teaching_csp: مبادئ تدريس علوم الكمبيوتر
   module_label_teaching_problem_solving: تعليم حل المشكلات والحوسبة
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: تدريس روابط علوم الكمبيوتر
   module_label_teaching_ai: تعليم الذكاء الاصطناعي والتعلم الآلي
   module_label_teaching_maker_cp: تعليم إنشاء التطبيقات باستخدام الأجهزة (Circuit
@@ -806,6 +832,12 @@ ar:
   heading_attend_free_workshop: اشترك في ورشة عمل طلابية مجانية
   heading_access_more_cs_resources: الوصول إلى المزيد من مصادر علم الكمبيوتر
   heading_available_on_code_dot_org: متوفر على موقع Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: إذا كنت طالبة في المدرسة الثانوية شغوفة بتشجيع المزيد من
     الشابات على دراسة علوم الكمبيوتر في مدرستك، فنحن بحاجة إليك!
   cs_ambassador_desc: كل مجال، بما في ذلك الطب والترفيه والرياضة والتعليم والأعمال
@@ -871,6 +903,19 @@ ar:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: ورش عمل شخصية وافتراضية تبدأ هذا
     الصيف.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: انطلق، اقطع السلك (لفترة من الوقت)!
   no_devices_section_desc: لا يلزم أن يكون تعليم علوم الكمبيوتر دائمًا أمام الشاشة
     ويجب ألا يكون الوصول إلى الجهاز عائقًا أمام تعلم مفاهيم علوم الكمبيوتر.
@@ -894,6 +939,11 @@ ar:
   subscribe_form_section_desc_csp: اشترك لتلقي رسائل بريد إلكتروني شهرية حول مبادئ
     علوم الكمبيوتر الخاصة بـ Code.org واحصل على تذكيرات ونصائح وتحديثات مفيدة يتم
     إرسالها مباشرة إلى صندوق الوارد الخاص بك.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: يمكنك إلغاء الاشتراك في أي وقت.
   hoc_page_what_is_hoc_heading: ما هي ساعة البرمجة؟
   hoc_page_desc: إن [ساعة من البرمجة](%{hoc_url}) هي حركة عالمية تصل إلى عشرات ملايين
@@ -1086,6 +1136,7 @@ ar:
     ثم تعاون كفريق للتوصل إلى إرشادات تلبي معظم احتياجات جميع المشاركين.
   ai_curriculum_btn_aria_label_06: عرض التأثير المجتمعي لخطة دروس الذكاء الاصطناعي
     التوليدي
+  ai_curriculum_btn_aria_label_dance_ai: 'جرّب حفلة الرقص: نشاط إصدار الذكاء الاصطناعي'
   ai_carousel_heading: 'ماذا يقول المعلمون عن الذكاء الاصطناعي مع Code.org:'
   ai_carousel_quote_01: كما أتاح هذا الدرس لطلابي الفرصة لرؤية وجود عنصر رأي في أنظمة
     التصنيف. في وقت لاحق، عندما بدأنا نرى كيف يمكن أن ينتهي التحيز في الذكاء الاصطناعي،
@@ -1268,6 +1319,68 @@ ar:
   ai_vid_computervision_caption: رؤية الكمبيوتر
   ai_vid_ethics1_caption: 'الأخلاق والذكاء الاصطناعي: المساواة في الوصول والتحيز الخوارزمي'
   ai_vid_ethics2_caption: 'الأخلاق والذكاء الاصطناعي: الخصوصية ومستقبل العمل'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: التعلم المهني الذاتي للمعلمين
   self_paced_pl_hero_desc: عروض تعليمية احترافية لدعم المعلمين في كل مرحلة من مراحل
     رحلة تدريس علوم الكمبيوتر.
@@ -2815,6 +2928,7 @@ ar:
     أو [قراءة الدليل الإرشادي](%{howto_url})'
   tutorial_dance2019_name: حفلة الرقص 2019
   tutorial_danceparty_name: حفلة رقص
+  tutorial_dancepartyai_name: 'حفلة رقص: إصدار الذكاء الاصطناعي'
   tutorial_chibitronics_name: 'Chibitronics: قصة مضيئة'
   tutorial_athlete_name: اكتب التعليمات البرمجية للعبتك الرياضية الخاصة
   tutorial_moana_name: 'موانا: إيجاد الطريق بواسطة البرمجة'
@@ -3504,6 +3618,8 @@ ar:
   tutorial_meeempathy_name: قصة ماين كرافت لقريتين
   tutorial_danceparty_shortdescription: قم ببرمجة حفلة رقص لمشاركتها مع أصدقائك. تضم
     الحفلة كاتي بيري، ومادونا، وج.بالفين، وسيا، وكيث أوربان، وسيارا، و 25 آخرين!
+  tutorial_dancepartyai_shortdescription: تعرف على مفاهيم الذكاء الاصطناعي لإنشاء
+    حفلة رقص افتراضية خاصة بك تعرض أفضل الفنانين المعاصرين. حان الوقت لاستعراض مهاراتك!
   tutorial_chibitronics_shortdescription: برمجة دائرة ورقية لإضاءة قصتك الخاصة.
   tutorial_athlete_shortdescription: اختر بين إنشاء لعبة كرة سلة أو مزجها ومطابقتها
     عبر الألعاب الرياضية الأخرى!
@@ -4639,6 +4755,8 @@ ar:
     الكثير!
   tutorial_danceparty_longdescription: قم ببرمجة حفلة رقص لمشاركتها مع أصدقائك. تضم
     الحفلة كاتي بيري، ومادونا، وج.بالفين، وسيا، وكيث أوربان، وسيارا، و 25 آخرين!
+  tutorial_dancepartyai_longdescription: تعرف على مفاهيم الذكاء الاصطناعي لإنشاء حفلة
+    رقص افتراضية خاصة بك تعرض أفضل الفنانين المعاصرين. حان الوقت لاستعراض مهاراتك!
   tutorial_chibitronics_longdescription: برمجة دائرة ورقية لإضاءة قصتك الخاصة.
   tutorial_athlete_longdescription: اختر بين إنشاء لعبة كرة سلة أو مزجها ومطابقتها
     عبر الألعاب الرياضية الأخرى!
@@ -7208,6 +7326,7 @@ ar:
     ويتبنون التنوع الذي يجعلنا جميعًا مميزين بشكل فريد.
   tutorial_dance2019_string_detail_grades: من الصف الثاني فما فوق
   tutorial_danceparty_string_detail_grades: من الصف الثاني فما فوق
+  tutorial_dancepartyai_string_detail_grades: الصفوف 3+
   tutorial_chibitronics_string_detail_grades: قبل تعلم القراءة - الصف 5
   tutorial_athlete_string_detail_grades: من الصف الثاني فما فوق
   tutorial_moana_string_detail_grades: من الصف الثاني فما فوق
@@ -7887,6 +8006,8 @@ ar:
   tutorial_dance2019_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد، لا يتطلب أي أجهزة إلكترونية
   tutorial_danceparty_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
+    أجهزة آيباد
+  tutorial_dancepartyai_string_platforms: جميع المتصفحات الحديثة، أجهزة أندرويد اللوحية،
     أجهزة آيباد
   tutorial_chibitronics_string_platforms: جميع المتصفحات الحديثة
   tutorial_athlete_string_platforms: جميع المتصفحات الحديثة
@@ -8824,6 +8945,7 @@ ar:
     أجهزة آيباد
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: جهاز "Chibi Chip" من "Chibitronics"  وملصقات
     دوائر المصابيح الكهربائية
   tutorial_athlete_string_detail_platforms: ''
@@ -9506,6 +9628,7 @@ ar:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: القطع البرمجية
   tutorial_danceparty_string_detail_programming_languages: القطع البرمجية
+  tutorial_dancepartyai_string_detail_programming_languages: القطع البرمجية
   tutorial_chibitronics_string_detail_programming_languages: القطع البرمجية
   tutorial_athlete_string_detail_programming_languages: القطع البرمجية
   tutorial_moana_string_detail_programming_languages: القطع البرمجية

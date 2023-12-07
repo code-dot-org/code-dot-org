@@ -605,6 +605,9 @@ az:
             baxışın, məzmunun haradan gəldiyini düşünürəm....
           title: Andrea-test
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Təsadüf
           lessons:
             lesson-1:
               name: Maddənin aqreqat halları
@@ -612,6 +615,8 @@ az:
               name: Və Maddənin Dövlətləri
             lesson-5:
               name: Yoxlamalar
+            lesson-6:
+              name: Dərs 1
           name: angelina-oyun meydançası
         applab-1hour:
           description: arxa fon
@@ -3184,6 +3189,8 @@ az:
           title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
         csd-post-survey-2023:
           title: Kursdan Sonra Sorğusu
+        csd-post-survey-2024:
+          title: Kursdan Sonra Sorğusu
         csd-sample-online:
           title: CS Discoveries üçün onlayn fəaliyyət nümunəsi
         csd-test-saving-state:
@@ -3385,6 +3392,24 @@ az:
             həll etməyə kömək edən bir proqram hazırladığınız bir layihə ilə yekunlaşır.
           title: Problemin həlli və hesablama ('22-'23)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Problemin Həlli Prosesi'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Kompüterlər və Problemlərin Həlli'
+            lessonGroup-4:
+              display_name: Alternativ Dərslər
+            lessonGroup-5:
+              display_name: Sorğu
+          student_description: Problemlərin həlli və hesablama, problemlərin həlli
+            üçün daha geniş axtarış çərçivəsində qurulduğu kimi, kompüter elmləri
+            sahəsinə yüksək interaktiv və birgə girişdir. Bir sıra tapmacalar, problemlər
+            və real dünya ssenarilərini həll etmək üçün problem həlli prosesindən
+            istifadə edərək məşq edəcəksiniz. Sonra, kompüterlərin insanlara problemləri
+            həll etməyə kömək etmək üçün məlumatları necə daxil etdiyini, çıxardığını,
+            saxladığını və emal etdiyini öyrənəcəksiniz. Bölmə, seçdiyiniz problemi
+            həll etməyə kömək edən bir proqram hazırladığınız bir layihə ilə yekunlaşır.
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: Problemin Həlli Prosesi'
@@ -3656,6 +3681,18 @@ az:
             edəcəksiniz.
           title: Veb İnkişafı ('22-'23)
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: Bu bölmədə siz öz veb səhifələrinizdə məzmun yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Hansı məzmunu dünya ilə bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizin
+            quruluşunu və üslubunu öyrənəcəksiniz. Siz həmçinin sazlama, resurslardan
+            istifadə və komanda işi kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq
+            edəcəksiniz.
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
@@ -3956,6 +3993,18 @@ az:
           lessons:
             lesson-18:
               name: Mini-Layihə - Robot Üzü
+          student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv
+            incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf
+            etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma
+            konsepsiyalarından və kompüter alimlərinin gündəlik istifadə etdiyi dizayn
+            prosesindən istifadə edərək daha mürəkkəb sprite əsaslı oyunlar yaradır.
+            Yekun layihədə siz fərdiləşdirilmiş, interaktiv proqram hazırlayacaqsınız.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Şəkillər və Animasiyalar'
+            lessonGroup-3:
+              display_name: '2-ci fəsil: Oyunlar yaratmaq'
           student_description: 3-cü bölmədə siz Game Lab-da animasiyalar, interaktiv
             incəsənət və oyunları proqramlaşdırarkən kodlaşdırma təcrübənizi inkişaf
             etdirəcəksiniz. Bölmə sadə formalarla başlayır və eyni proqramlaşdırma
@@ -4264,6 +4313,13 @@ az:
             lessonGroup-3:
               display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
           student_description: rəy
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: İstifadəçi mərkəzli dizayn'
+            lessonGroup-3:
+              display_name: 'Fəsil 2: Tətbiq prototipləşdirilməsi'
+          student_description: rəy
         csd4-dlp:
           description: Bu təlimdə Code.org CS Discoveries fasilitatorları üçün Dərin
             Öyrənmə Planının 4-cü Bölməsidir. Burada siz Code.org CS Discoveries Curriculum-un
@@ -4565,6 +4621,23 @@ az:
             avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz. Fəsil məlumat probleminin
             həlli prosesinin seçdiyiniz sahəyə necə tətbiq oluna biləcəyini nəzərdən
             keçirməklə yekunlaşır.
+        csd5-2024:
+          description_short: İnsanların məlumat problemlərini həll etmək üçün kompüterlərdən
+            necə istifadə etdiyini öyrənin.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Məlumatı təmsil etmək'
+            lessonGroup-3:
+              display_name: həll etmək
+          student_description: Bu bölmə problemlərin həllində məlumatların əhəmiyyətindən
+            bəhs edir və kompüterlərin bu prosesdə necə kömək edə biləcəyini vurğulayır.
+            Birinci fəsil kompüterdə məlumatı təmsil etmək üçün istifadə edilən müxtəlif
+            sistemləri və onlardan istifadə zamanı yaranan çətinlikləri və mübadilələri
+            araşdırır. İkinci fəsildə siz məlumat kolleksiyalarının problemlərin həlli
+            üçün necə istifadə edildiyini və kompüterlərin bu prosesin addımlarını
+            avtomatlaşdırmağa necə kömək etdiyini öyrənəcəksiniz. Fəsil məlumat probleminin
+            həlli prosesinin seçdiyiniz sahəyə necə tətbiq oluna biləcəyini nəzərdən
+            keçirməklə yekunlaşır.
         csd5-dlp:
           description: Bu təlimdə Code.org CS Discoveries fasilitatorları üçün Dərin
             Öyrənmə Planının 5-ci Bölməsidir. Burada siz Code.org CS Discoveries Kurikulumunun
@@ -4847,7 +4920,23 @@ az:
             lessonGroup-4:
               display_name: App Laboratoriyasına giriş
           student_description: aparat
+        csd6a-2024:
+          description_short: Fiziki cihazlarla proqramlaşdırmağı öyrənin.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: Girişlər və Çıxışlar'
+            lessonGroup-3:
+              display_name: Fəsil
+            lessonGroup-4:
+              display_name: App Laboratoriyasına giriş
+          student_description: aparat
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: App Laboratoriyasına giriş
+            lessonGroup-3:
+              display_name: Verilənlər və Nəticələr
+        csd6b-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: App Laboratoriyasına giriş
@@ -4885,6 +4974,15 @@ az:
           student_description: cədvəlli
           title: AI və Maşın Öyrənməsi ('22-'23)
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1-ci Fəsil
+            lessonGroup-3:
+              display_name: 2-ci Fəsil
+            lessonGroup-4:
+              display_name: Proqram laboratoriyasına giriş
+          student_description: cədvəlli
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 1-ci Fəsil
@@ -10162,6 +10260,18 @@ az:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Fəsil 1: veb-səhifələrin yaradılması'
+            lessonGroup-3:
+              display_name: Fəsil
+          student_description: Bu bölmədə siz öz veb səhifələrinizdə məzmun yaratmağı
+            və paylaşmağı öyrənəcəksiniz. Hansı məzmunu dünya ilə bölüşmək istədiyinizə
+            qərar verdikdən sonra HTML və CSS-dən istifadə edərək səhifələrinizin
+            quruluşunu və üslubunu öyrənəcəksiniz. Siz həmçinin sazlama, resurslardan
+            istifadə və komanda işi kimi dəyərli proqramlaşdırma bacarıqlarını tətbiq
+            edəcəksiniz.
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

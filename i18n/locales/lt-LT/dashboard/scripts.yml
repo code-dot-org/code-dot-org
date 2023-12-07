@@ -1448,6 +1448,8 @@ lt:
           lessons:
             lesson-5:
               name: Žinių patikrinimas
+            lesson-6:
+              name: 1 pamoka
         pre-express-2023:
           lesson_groups:
             csf_loops:

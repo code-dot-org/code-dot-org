@@ -39,6 +39,11 @@
             "buttonText": "En savoir plus",
             "title": "L'heure du code : La créativité avec l'IA"
           },
+          "hoc-2023-dance-ai": {
+            "body": "Apprenez les concepts de l'intelligence artificielle (IA) et créez votre propre soirée dansante virtuelle avec les meilleurs artistes du moment. Choisissez parmi des dizaines de chansons et touchez tous vos élèves, quels que soient leurs goûts musicaux. Il est temps de jouer !",
+            "buttonText": "En savoir plus",
+            "title": "Soirée dansante : Édition IA"
+          },
           "hoc-more": {
             "body": "Le site Web Hour of Code propose plus de 500 activités informatiques, pour tous les âges et tous les niveaux d'expérience, développées par Code.org et ses partenaires."
           },
