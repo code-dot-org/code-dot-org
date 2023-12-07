@@ -8,7 +8,7 @@ import {
 } from 'react-bootstrap-2'; // TODO: Once we have [DSCO] Tooltip component, replace this import with it
 
 import moduleStyles from './tags.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 // Allow the tooltips to display on focus so that the information
 // can be shown via keyboard
@@ -25,6 +25,17 @@ const LabelTooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
   )
 );
 
+type TagIconProps = {
+  iconName: string;
+  iconStyle: 'light' | 'solid' | 'regular' | 'thin';
+  title: string;
+  placement: 'left' | 'right';
+};
+
+const TagIcon: React.FC<TagIconProps> = ({iconName, iconStyle, title}) => (
+  <FontAwesomeV6Icon iconName={iconName} iconStyle={iconStyle} title={title} />
+);
+
 export interface TagProps {
   /** Tag label */
   label: string;
@@ -37,9 +48,9 @@ export interface TagProps {
    *  Used to allow screen reader to read tag as ariaLabel content instead of the label content */
   ariaLabel?: string;
   /** Icon (object) to show next to text label (optional).
-   *  Icon object consists of icon(icon code/className, title for screenReader,
+   *  Icon object consists of icon(icon name/style, title for screenReader,
    *  and the placement of the icon (left or right))*/
-  icon?: {icon: string; title: string; placement: 'left' | 'right'};
+  icon?: TagIconProps;
 }
 
 const Tag: React.FunctionComponent<TagProps> = ({
@@ -61,14 +72,9 @@ const Tag: React.FunctionComponent<TagProps> = ({
       )}
     >
       <div tabIndex={0} role="tooltip" aria-describedby={tooltipId}>
-        {icon && icon.placement === 'left' && (
-          <FontAwesome icon={icon.icon} className="" title={icon.title} />
-        )}
+        {icon && icon.placement === 'left' && <TagIcon {...icon} />}
         <span>{label}</span>
-        {/*Todo: create DSCO icon component. Empty className and title props are here to fix typescript type errors*/}
-        {icon && icon.placement === 'right' && (
-          <FontAwesome icon={icon.icon} className="" title={icon.title} />
-        )}
+        {icon && icon.placement === 'right' && <TagIcon {...icon} />}
       </div>
     </LabelOverlayTrigger>
   );

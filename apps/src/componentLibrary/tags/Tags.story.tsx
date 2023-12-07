@@ -46,7 +46,12 @@ DefaultTags.args = {
     {tooltipId: 'math', label: 'Math', tooltipContent: 'Math'},
     {
       label: '+1',
-      icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'left'},
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'left',
+      },
       tooltipId: 'science-english',
       tooltipContent: (
         <>
@@ -56,7 +61,12 @@ DefaultTags.args = {
     },
     {
       label: '+1',
-      icon: {icon: ' fa-solid fa-check', title: 'check', placement: 'right'},
+      icon: {
+        iconName: 'check',
+        iconStyle: 'solid',
+        title: 'check',
+        placement: 'right',
+      },
       tooltipId: 'english-science',
       tooltipContent: 'English, Science',
     },
@@ -86,7 +96,8 @@ GroupOfSizesOfTags.args = {
           label: 'Tags',
           tooltipContent: 'English S',
           icon: {
-            icon: ' fa-solid fa-circle-user',
+            iconName: 'circle-user',
+            iconStyle: 'solid',
             title: 'check',
             placement: 'right',
           },
@@ -112,7 +123,8 @@ GroupOfSizesOfTags.args = {
           label: 'Tags',
           tooltipContent: 'English M',
           icon: {
-            icon: ' fa-solid fa-circle-user',
+            iconName: 'circle-user',
+            iconStyle: 'solid',
             title: 'check',
             placement: 'right',
           },
@@ -138,7 +150,8 @@ GroupOfSizesOfTags.args = {
           label: 'Tags',
           tooltipContent: 'English L',
           icon: {
-            icon: ' fa-solid fa-circle-user',
+            iconName: 'circle-user',
+            iconStyle: 'solid',
             title: 'check',
             placement: 'right',
           },
