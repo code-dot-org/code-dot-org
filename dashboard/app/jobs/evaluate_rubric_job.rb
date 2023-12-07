@@ -35,6 +35,7 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  # The CloudWatch metric namespace
   AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
 
   # Write out metrics reflected in the response to CloudWatch
