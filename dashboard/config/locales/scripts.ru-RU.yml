@@ -456,6 +456,9 @@ ru:
             required:
               display_name: Краткий обзор
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: СлучайноеЗначение
           lessons:
             lesson-5:
               name: Оценки
@@ -1859,6 +1862,8 @@ ru:
           title: 'Занимательная информатика: опрос по окончании курса'
         csd-post-survey-2023:
           title: Опрос после окончания курса
+        csd-post-survey-2024:
+          title: Опрос после окончания курса
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1908,6 +1913,14 @@ ru:
             cspSurvey:
               display_name: Опрос
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Процесс решения проблемы'
+            lessonGroup-3:
+              display_name: 'Глава 2: Компьютеры и решение проблем'
+            lessonGroup-5:
+              display_name: Опрос
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Процесс решения проблемы'
@@ -2067,6 +2080,12 @@ ru:
               display_name: 'Глава 1: Изображения и анимации'
             lessonGroup-3:
               display_name: 'Глава 2: Создание игры'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Изображения и анимации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание игры'
         csd3-dlp:
           lesson_groups:
             content:
@@ -2153,6 +2172,12 @@ ru:
             cspSurvey:
               display_name: Опрос
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Пользовательский дизайн'
+            lessonGroup-3:
+              display_name: 'Глава 2: Прототипирование приложения'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Пользовательский дизайн'
@@ -2247,6 +2272,12 @@ ru:
             cspSurvey:
               display_name: Опрос
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Глава 1: Представление информации'
+            lessonGroup-3:
+              display_name: 'Глава 2: Решение информационных проблем'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Глава 1: Представление информации'
@@ -2368,6 +2399,10 @@ ru:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Глава 2: Создание физических прототипов'
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Глава 2: Создание физических прототипов'
         csd7-2021:
           lesson_groups:
             lessonGroup-4:
@@ -2378,6 +2413,14 @@ ru:
             lessonGroup-4:
               display_name: Опрос
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Глава 1
+            lessonGroup-3:
+              display_name: Глава 2
+            lessonGroup-4:
+              display_name: Введение в Лабораторию приложений
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Глава 1

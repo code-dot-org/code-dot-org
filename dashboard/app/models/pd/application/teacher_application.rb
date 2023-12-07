@@ -551,8 +551,7 @@ module Pd::Application
 
         program: PROGRAM_OPTIONS,
 
-        csd_which_grades: (6..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Discoveries in the #{year} school year",
+        csd_which_grades: (6..12).map(&:to_s),
 
         csd_course_hours_per_week: [
           '5 or more course hours per week',
@@ -566,8 +565,7 @@ module Pd::Application
 
         csd_terms_per_year: COMMON_OPTIONS[:terms_per_year],
 
-        csp_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CS Principles in the #{year} school year",
+        csp_which_grades: (9..12).map(&:to_s),
 
         csp_course_hours_per_week: [
           'More than 5 course hours per week',
@@ -585,6 +583,13 @@ module Pd::Application
           'We will offer both introductory and AP-level courses'
         ],
 
+        will_teach: [
+          'Yes',
+          'No',
+          "No, but I plan to in the #{NEXT_APPLICATION_YEAR} school year",
+          "Not sure"
+        ],
+
         csp_ap_exam: [
           'Yes, all students will be expected to take the AP CS Principles exam',
           "Students will be encouraged to take the exam, but it won't be required",
@@ -595,8 +600,7 @@ module Pd::Application
 
         csa_phone_screen: [YES, NO],
 
-        csa_which_grades: (9..12).map(&:to_s) <<
-          "Not sure yet if my school plans to offer CSA in the #{year} school year",
+        csa_which_grades: (9..12).map(&:to_s),
 
         csa_how_offer: [
           'As a non-AP introductory Java programming course',
@@ -677,6 +681,8 @@ module Pd::Application
         race
 
         agree
+
+        will_teach
       )
     end
 
@@ -694,16 +700,19 @@ module Pd::Application
           end
         end
 
-        if hash[:program] == PROGRAMS[:csd]
-          required << :csd_which_grades
-        elsif hash[:program] == PROGRAMS[:csp]
-          required << :csp_which_grades
-          required << :csp_how_offer
-        elsif hash[:program] == PROGRAMS[:csa]
-          required << :csa_which_grades
-          required << :csa_how_offer
-          required << :csa_already_know
-          required << :csa_phone_screen
+        # If the applicant will teach the course, we require extra information
+        if hash[:will_teach] == 'Yes'
+          if hash[:program] == PROGRAMS[:csd]
+            required << :csd_which_grades
+          elsif hash[:program] == PROGRAMS[:csp]
+            required << :csp_which_grades
+            required << :csp_how_offer
+          elsif hash[:program] == PROGRAMS[:csa]
+            required << :csa_which_grades
+            required << :csa_how_offer
+            required << :csa_already_know
+            required << :csa_phone_screen
+          end
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -996,19 +1005,19 @@ module Pd::Application
       case course
       when 'csd'
         meets_minimum_criteria_scores[:csd_which_grades] =
-          (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csd_which_grades].present?) ? YES : NO
         took_csd_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Discoveries')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csd_course ? NO : YES
       when 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
-          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csp_which_grades].present?) ? YES : NO
         took_csp_course =
           responses[:previous_yearlong_cdo_pd].include?('CS Principles')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csp_course ? NO : YES
       when 'csa'
         meets_minimum_criteria_scores[:csa_which_grades] =
-          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
+          (responses[:will_teach] == options[:will_teach].first && options[:csa_which_grades].present?) ? YES : NO
         took_csa_course = responses[:previous_yearlong_cdo_pd].include?('Computer Science A (CSA)')
         meets_minimum_criteria_scores[:previous_yearlong_cdo_pd] = took_csa_course ? NO : YES
       end
