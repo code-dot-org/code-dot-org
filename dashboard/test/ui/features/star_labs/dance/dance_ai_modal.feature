@@ -23,7 +23,9 @@ Feature: Dance Party
 
     # Go to explanation and back.
     And I press "#explanation-button" using jQuery
+    And element "#explanation-area" is visible
     And I press "#leave-explanation-button" using jQuery
+    And element "#explanation-area" is not visible
 
     # Regenerate.
     And I press "#regenerate-button" using jQuery
@@ -46,6 +48,7 @@ Feature: Dance Party
 
     # Use effects.
     And I press "#use-button" using jQuery
+    And element "#ai-modal-header-area" is not visible
 
     # Run once.
     And I press "runButton"
