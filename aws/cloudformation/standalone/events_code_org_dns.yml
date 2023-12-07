@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: DNS records and resources supporting events.code.org
+
+Parameters:
+  CodeDotOrgHostedZoneId:
+    Type: String
+    Description: The Route53 Hosted Zone ID for code.org
+
+Resources:
+  # Create a new hosted zone for events.code.org
+  # The NS Records making this authoritative should be manually added.
+  HostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: events.code.org
+
+  RecordSetGroup:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: !Ref HostedZone
+      RecordSets:
+        - Name: events.code.org
+          Type: CNAME
+          TTL: 300
+          ResourceRecords:
+            - events.code.org.leadpages.net
