@@ -130,20 +130,31 @@ class LtiV1Controller < ApplicationController
     return redirect_to home_path unless current_user.teacher?
     params.require([:lti_integration_id, :deployment_id, :context_id, :rlid, :nrps_url]) if params[:section_code].blank?
 
-    lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code]) if params[:section_code].present?
-    lti_integration = lti_course.lti_integration unless lti_course.nil?
-    lti_integration_id = params[:lti_integration_id] || lti_integration.id
-    deployment_id = params[:deployment_id] || lti_course.lti_deployment_id
-    context_id = params[:context_id] || lti_course.context_id
-    resource_link_id = params[:rlid] || lti_course.resource_link_id
-    nrps_url = params[:nrps_url] || lti_course.nrps_url
-
-    lti_integration ||= LtiIntegration.find(lti_integration_id)
+    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    if params[:section_code].present?
+      # Section code present, meaning this is a sync from the teacher dashboard.
+      # Populate vars from the section associated with the input code.
+      lti_course = Queries::Lti.get_lti_course_from_section_code(params[:section_code])
+      return head :bad_request unless lti_course # Received a code for a non-LTI section
+      lti_integration = lti_course.lti_integration
+      deployment_id = lti_course.lti_deployment_id
+      context_id = lti_course.context_id
+      resource_link_id = lti_course.resource_link_id
+      nrps_url = lti_course.nrps_url
+    else
+      # Section code isn't present, meaning this is a sync from an LTI launch.
+      # Populate vars from the request params.
+      lti_integration = LtiIntegration.find(params[:lti_integration_id])
+      deployment_id = params[:deployment_id]
+      context_id = params[:context_id]
+      resource_link_id = params[:rlid]
+      nrps_url = params[:nrps_url]
+    end
     return head :bad_request unless lti_integration
 
     ActiveRecord::Base.transaction do
       lti_course ||= Queries::Lti.find_or_create_lti_course(
-        lti_integration_id: lti_integration_id,
+        lti_integration_id: lti_integration.id,
         context_id: context_id,
         deployment_id: deployment_id,
         nrps_url: nrps_url,
