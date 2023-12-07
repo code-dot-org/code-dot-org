@@ -31,6 +31,8 @@ export default function initializeVariables(blocklyWrapper) {
   };
 
   /**
+   * Note: We should be able to remove this post-migration: https://codedotorg.atlassian.net/browse/CT-215
+   * 
    * Return a new variable name that is not yet being used. The CDO implementation
    * of this function accepted a baseName parameter. We are using Google Blockly's
    * implementation here, which does the same thing. It accepts a workspace as an
