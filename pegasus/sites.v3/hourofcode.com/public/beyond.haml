@@ -44,12 +44,15 @@ layout: wide_index
           %a.link-button{href: "https://code.org/educate/curriculum/3rd-party", target: "_blank", rel: "noopener noreferrer"}
             =hoc_s(:hoc_beyond_for_teachers_course_link_2)
 
-%section.carousels.bg-neutral-light
+%section.bg-neutral-light
   .wrapper
     %h2.centered
       = hoc_s(:hoc_beyond_carousel_title)
     %p.centered.body-two
       = hoc_s(:hoc_beyond_carousel_description)
-    = view :course_carousels, variation:'beyond'
+    = view :course_carousels, variation:"beyond"
+    %hr
+    %p.body-one.centered{style: "margin-top: 3rem"}
+      =hoc_s(:hoc_beyond_submit_activity_form, markdown: :inline, locals:{form_url: "https://forms.gle/PqQVSCA7MxzXgN8s9"})
 
 = view :organized_by_cdo
