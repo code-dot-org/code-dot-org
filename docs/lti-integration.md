@@ -67,20 +67,20 @@ option.
         "text": "Launch Code.org",
         "placements": [
           {
-              "placement": "account_navigation",
-              "message_type": "LtiResourceLinkRequest"
+            "placement": "account_navigation",
+            "message_type": "LtiResourceLinkRequest"
           },
           {
-              "placement": "link_selection",
-              "message_type": "LtiResourceLinkRequest"
+            "placement": "link_selection",
+            "message_type": "LtiResourceLinkRequest"
           },
           {
-              "placement": "assignment_menu",
-              "message_type": "LtiResourceLinkRequest"
+            "placement": "assignment_menu",
+            "message_type": "LtiResourceLinkRequest"
           },
           {
-              "placement": "assignment_selection",
-              "message_type": "LtiResourceLinkRequest"
+            "placement": "assignment_selection",
+            "message_type": "LtiResourceLinkRequest"
           }
         ]
       }
