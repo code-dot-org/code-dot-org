@@ -1,9 +1,16 @@
 import _ from 'lodash';
 import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 
-export function readBooleanAttribute(xmlElement, attribute) {
+export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
+export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
+
+export function readBooleanAttribute(
+  xmlElement,
+  attribute,
+  callback = FALSEY_DEFAULT
+) {
   const attributeValue = xmlElement.getAttribute(attribute);
-  return attributeValue === 'true';
+  return callback(attributeValue);
 }
 
 export function capitalizeFirstLetter(string) {
