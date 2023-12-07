@@ -188,7 +188,6 @@ export default class FunctionEditor {
         fields: {
           NAME: procedure.getName(),
         },
-        deletable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -384,6 +383,7 @@ export default class FunctionEditor {
 
     return {
       ...blockConfig,
+      deletable: false,
       movable: false,
       x,
       y,
