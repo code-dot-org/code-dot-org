@@ -92,7 +92,7 @@ const customInputTypes = {
       const newField = new CdoFieldDanceAi();
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(newField, 'VALUE');
+        .appendField(newField, inputConfig.name);
     },
     generateCode(block, arg) {
       return block.getFieldValue(arg.name);
