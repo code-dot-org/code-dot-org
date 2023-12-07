@@ -109,7 +109,8 @@ module Pd
         ),
         csa_how_offer: 'How will you offer CSA?',
         enough_course_hours: "Will you have more than {{min hours}} hours with your {{CS program}} section(s)?",
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule?'
+        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
+        will_teach: "Are you planning to teach this course in the #{YEAR} school year?"
       },
       professional_learning_program_requirements:
         {

@@ -29,11 +29,17 @@ import * as blockUtils from '../../block_utils';
  * @param {Blockly.Workspace} workspace - the current Blockly workspace
  * @param {string} source - workspace serialization, either XML or JSON
  */
-export function loadBlocksToWorkspace(workspace, source) {
+export function loadBlocksToWorkspace(
+  workspace,
+  source,
+  includeHiddenDefinitions = true
+) {
   const {mainSource, hiddenDefinitionSource, blockOrderMap} =
     prepareSourcesForWorkspaces(source);
   // We intentionally load hidden definitions before other blocks on the main workspace.
-  loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
+  if (includeHiddenDefinitions) {
+    loadHiddenDefinitionBlocksToWorkspace(hiddenDefinitionSource);
+  }
   Blockly.serialization.workspaces.load(mainSource, workspace);
   positionBlocksOnWorkspace(workspace, blockOrderMap);
 }
