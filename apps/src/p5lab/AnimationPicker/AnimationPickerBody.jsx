@@ -146,6 +146,17 @@ export default class AnimationPickerBody extends React.Component {
     if (this.props.hideBackgrounds) {
       categories = categories.filter(category => category !== 'backgrounds');
     }
+    // Library animations have many categories. Level-specific animations have only
+    // the following categories:
+    // "level_animations", "backgrounds", "animals".
+    // We want to hide the "animals" category which has only one animation in it.
+    // It will be displayed in the "all" category added below.
+    // There is an 'animals' category because a level-specific animation was uploaded with the
+    // 'animals' category BEFORE the sprite upload feature dictated that level-specific animations
+    // can only be categorized as "costume" or "background".
+    if (categories.length < 4) {
+      categories = categories.filter(category => category !== 'animals');
+    }
     categories.push('all');
     return categories.map(category => {
       let label = msg[`animationCategory_${category}`]
@@ -160,6 +171,9 @@ export default class AnimationPickerBody extends React.Component {
           label={label}
           category={category}
           onClick={this.onCategoryChange}
+          isAnimationJsonMode={
+            this.props.pickerType === PICKER_TYPE.animationJson
+          }
         />
       );
     });
