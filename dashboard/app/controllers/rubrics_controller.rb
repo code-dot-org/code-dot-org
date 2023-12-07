@@ -197,10 +197,12 @@ class RubricsController < ApplicationController
   end
 
   def attempted_at
-    script = @rubric.lesson.script
-    level = @rubric.level
-    user_level = UserLevel.find_by(user: @user, level: level, script: script)
-    user_level&.updated_at
+    script_level = @rubric.get_script_level
+    channel_id = get_channel_id(@user, script_level)
+    # fetch the user's code from S3
+    source_data = SourceBucket.new.get(channel_id, "main.json")
+    return nil unless source_data[:status] == 'FOUND'
+    source_data[:last_modified]
   end
 
   def ai_evaluated_at
@@ -209,5 +211,20 @@ class RubricsController < ApplicationController
       order(updated_at: :desc).
       first&.
       created_at
+  end
+
+  # get the channel id of the project which stores the user's code on this script level.
+  private def get_channel_id(user, script_level)
+    # get the user's storage id from the database
+    user_storage_id = storage_id_for_user_id(user.id)
+
+    # get the channel id for this user's level (or project template level) from the database
+    channel_token = ChannelToken.find_channel_token(
+      script_level.level,
+      user_storage_id,
+      script_level.script_id
+    )
+    raise "channel token not found for user id #{user.id} and script level id #{script_level.id}" unless channel_token
+    channel_token.channel
   end
 end
