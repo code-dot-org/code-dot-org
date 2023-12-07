@@ -12,6 +12,10 @@ h2 {
   line-height: 1.2;
 }
 
+hr {
+  margin-top: 4rem;
+}
+
 section.banner {
   padding: 0;
 
@@ -25,18 +29,7 @@ section.banner {
   }
 }
 
-section.carousels {
-  padding-bottom: 1rem;
-
-  hr {
-    margin-top: 4rem;
-  }
-}
-
 .carousel-wrapper {
-  padding-bottom: 0;
-  margin-bottom: 50px;
-
 
   .slides {
     position: relative !important;
@@ -48,115 +41,14 @@ section.carousels {
     gap: 1.5rem;
   }
 
-  a.slide-prev,
-  a.slide-next {
-    display: none !important;
-  }
+  .carousel {
+    margin: 3rem 0;
 
-  @media screen and (min-width: 1280px) {
-    a.slide-prev {
-      position: absolute;
-      left: -3.5rem;
-    }
-
-    a.slide-next {
-      position: absolute;
-      right: -3.5rem;
-    }
-
-    a.slide-prev,
-    a.slide-next {
-      display: block !important;
-      top: calc(50% - 50px);
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: .3s;
-      padding: 0;
-      width: 1.75rem;
-
-      &:hover {
-        background: none;
-        opacity: .8;
-      }
-
-      img {
-        width: 100%;
-      }
+    @media screen and (max-width: $width-sm) {
+      margin: 1rem 0 2rem;
     }
   }
 }
-
-.carousel {
-  margin: 3rem 0;
-
-  @media screen and (max-width: $width-sm) {
-    margin: 1rem 0 2rem;
-  }
-
-  &.videos {
-
-    .video-wrapper {
-      min-width: 18.75rem;
-      max-width: 26.25rem;
-      margin: 0 auto;
-    }
-
-    @media (min-width: 640px) {
-      position: relative;
-
-      .slides {
-        width: 300%;
-        height: 26rem;
-        display: flex;
-      }
-
-      .slide {
-        height: 285px;
-
-        .action-block {
-          width: 48%;
-          margin: 0;
-        }
-      }
-
-      .video-wrapper {
-        min-width: 420px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .slides {
-        height: 15rem !important;
-        display: flex;
-      }
-    }
-  }
-
-  &.blocks {
-
-    .action-block {
-      min-width: 300px;
-      max-width: 420px;
-      margin: 0 auto;
-      justify-content: space-between;
-
-      &:hover {
-        cursor: auto;
-      }
-    }
-
-    @media (min-width: 640px) {
-      position: relative;
-
-      .slides {
-        width: 300%;
-        display: flex;
-      }
-    }
-  }
-}
-
 
 .action-block-wrapper {
   display: flex;
@@ -169,6 +61,7 @@ section.carousels {
   .action-block-wrapper{
     width: 100%;
   }
+
   button.slide-prev
   button.slide-next {
     display: none;
@@ -179,9 +72,7 @@ section.carousels {
   .button-wrapper {
     display: none;
   }
-  section{
-    padding: 4rem 1.5rem;
-  }
+
   .action-block {
     justify-content: center;
   }
