@@ -31,39 +31,21 @@ export function disableOrphans(blockEvent) {
     blockEvent.element === 'disabled' &&
     !blockEvent.newValue &&
     blockEvent.oldValue;
+  if (!blockEvent.workspaceId) {
+    return;
+  }
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     isEnabledEvent
   ) {
-    if (!blockEvent.workspaceId) {
-      return;
-    }
     if (!blockEvent.blockId) {
       throw new Error('Encountered a blockEvent without a proper blockId');
     }
     let block = eventWorkspace.getBlockById(blockEvent.blockId);
     if (block) {
-      // Changing blocks as part of this event shouldn't be undoable.
-      const initialUndoFlag = Blockly.Events.getRecordUndo();
-      try {
-        Blockly.Events.setRecordUndo(false);
-        const parent = block.getParent();
-        if (parent && parent.isEnabled()) {
-          const children = block.getDescendants(false);
-          for (let i = 0, child; (child = children[i]); i++) {
-            child.setEnabled(true);
-          }
-        } else if (block.outputConnection || block.previousConnection) {
-          do {
-            block.setEnabled(false);
-            block = block.getNextBlock();
-          } while (block);
-        }
-      } finally {
-        Blockly.Events.setRecordUndo(initialUndoFlag);
-      }
+      updateEnabled(block);
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
@@ -72,10 +54,34 @@ export function disableOrphans(blockEvent) {
   ) {
     // When a function definition is moved, we should not suddenly enable
     // its call blocks.
-    eventWorkspace
-      .getAllBlocks()
-      .filter(block => block.type === BLOCK_TYPES.procedureCall)
-      .forEach(block => block.setEnabled(false));
+    eventWorkspace.getTopBlocks().forEach(block => {
+      if (block.type === BLOCK_TYPES.procedureCall) {
+        block.setEnabled(false);
+      }
+      updateEnabled(block);
+    });
+  }
+}
+
+function updateEnabled(block) {
+  // Changing blocks as part of this event shouldn't be undoable.
+  const initialUndoFlag = Blockly.Events.getRecordUndo();
+  try {
+    Blockly.Events.setRecordUndo(false);
+    const parent = block.getParent();
+    if (parent && parent.isEnabled()) {
+      const children = block.getDescendants(false);
+      for (let i = 0, child; (child = children[i]); i++) {
+        child.setEnabled(true);
+      }
+    } else if (block.outputConnection || block.previousConnection) {
+      do {
+        block.setEnabled(false);
+        block = block.getNextBlock();
+      } while (block);
+    }
+  } finally {
+    Blockly.Events.setRecordUndo(initialUndoFlag);
   }
 }
 
