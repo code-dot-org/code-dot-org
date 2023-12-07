@@ -16,6 +16,214 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     # create arbitary state and nonce values
     @state = 'state'
     @nonce = 'nonce'
+    @parsed_nrps_sections = {
+      "1" =>
+      {
+        name: "Section 1",
+        members: [
+          {
+            status: "Active",
+            user_id: "0c00f8db-a039-45e1-8e2d-f1e17a047836",
+            roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+            message: [
+              {
+                'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+                locale: "en",
+                'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                  email: "student0@code.org",
+                  course_id: "115",
+                  full_name: "Test Zero",
+                  given_name: "Test",
+                  family_name: "Zero",
+                  section_ids: "1,2,3",
+                  display_name: "Test Zero",
+                  section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+                }
+              }
+            ]
+          },
+          {
+            status: "Active",
+            user_id: "8741ee5e-7544-484d-a7a5-9fce2b29b960",
+            roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+            message: [
+              {
+                'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+                locale: "en",
+                'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                  email: "student1@code.org",
+                  course_id: "115",
+                  full_name: "Test One",
+                  given_name: "Test",
+                  family_name: "One",
+                  section_ids: "1,2,3",
+                  display_name: "Test One",
+                  section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+                }
+              }
+            ]
+          },
+          {
+            status: "Active",
+            user_id: "cd50bfe6-cd55-4789-8d04-b4930fd8005d",
+            roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+            message: [
+              {
+                'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+                locale: "en",
+                'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                  email: "test2@code.org",
+                  course_id: "115",
+                  full_name: "Test Two",
+                  given_name: "Test",
+                  family_name: "Two",
+                  section_ids: "1,2,3",
+                  display_name: "Test Two",
+                  section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+                }
+              }
+            ]
+          }
+        ]
+      },
+     "2" => {
+       name: "Section 2",
+       members: [
+         {
+           status: "Active",
+           user_id: "0c00f8db-a039-45e1-8e2d-f1e17a047836",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "student0@code.org",
+                 course_id: "115",
+                 full_name: "Test Zero",
+                 given_name: "Test",
+                 family_name: "Zero",
+                 section_ids: "1,2,3",
+                 display_name: "Test Zero",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         },
+         {
+           status: "Active",
+           user_id: "8741ee5e-7544-484d-a7a5-9fce2b29b960",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "student1@code.org",
+                 course_id: "115",
+                 full_name: "Test One",
+                 given_name: "Test",
+                 family_name: "One",
+                 section_ids: "1,2,3",
+                 display_name: "Test One",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         },
+         {
+           status: "Active",
+           user_id: "cd50bfe6-cd55-4789-8d04-b4930fd8005d",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "test2@code.org",
+                 course_id: "115",
+                 full_name: "Test Two",
+                 given_name: "Test",
+                 family_name: "Two",
+                 section_ids: "1,2,3",
+                 display_name: "Test Two",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         }
+       ]
+     },
+     "3" =>
+     {
+       name: "Section 3",
+       members: [
+         {
+           status: "Active",
+           user_id: "0c00f8db-a039-45e1-8e2d-f1e17a047836",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "student0@code.org",
+                 course_id: "115",
+                 full_name: "Test Zero",
+                 given_name: "Test",
+                 family_name: "Zero",
+                 section_ids: "1,2,3",
+                 display_name: "Test Zero",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         },
+         {
+           status: "Active",
+           user_id: "8741ee5e-7544-484d-a7a5-9fce2b29b960",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "student1@code.org",
+                 course_id: "115",
+                 full_name: "Test One",
+                 given_name: "Test",
+                 family_name: "One",
+                 section_ids: "1,2,3",
+                 display_name: "Test One",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         },
+         {
+           status: "Active",
+           user_id: "cd50bfe6-cd55-4789-8d04-b4930fd8005d",
+           roles: ["http://purl.imsglobal.org/vocab/lis/v2/membership#Learner"],
+           message: [
+             {
+               'https://purl.imsglobal.org/spec/lti/claim/message_type': "LtiResourceLinkRequest",
+               locale: "en",
+               'https://purl.imsglobal.org/spec/lti/claim/custom': {
+                 email: "test2@code.org",
+                 course_id: "115",
+                 full_name: "Test Two",
+                 given_name: "Test",
+                 family_name: "Two",
+                 section_ids: "1,2,3",
+                 display_name: "Test Two",
+                 section_names: "[\"Section 1\", \"Section 2\", \"Section 3\"]"
+               }
+             }
+           ]
+         }
+       ]
+     }
+    }
   end
 
   setup do
@@ -255,5 +463,24 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
     assert_response :redirect
+  end
+
+  test 'transaction prevents partial sync from creating a partially-synced state' do
+    user = create :teacher
+    sign_in user
+    lti_integration = create :lti_integration
+    lti_course = create :lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps'
+
+    LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
+    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+
+    # Set up a situation where a sync has partially progressed, including saving some objects, but then
+    # encounters an error. Raising an exception during the section sync should cause the transaction to rollback after
+    # creating the first Section and LtiSection in the course sync method.
+    Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
+
+    get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
+    assert_empty lti_course.lti_sections
+    assert_response :internal_server_error
   end
 end

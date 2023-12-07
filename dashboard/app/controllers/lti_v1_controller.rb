@@ -138,20 +138,24 @@ class LtiV1Controller < ApplicationController
     resource_link_id = params[:rlid] || lti_course.resource_link_id
     nrps_url = params[:nrps_url] || lti_course.nrps_url
 
-    lti_course ||= Queries::Lti.find_or_create_lti_course(
-      lti_integration_id: lti_integration_id,
-      context_id: context_id,
-      deployment_id: deployment_id,
-      nrps_url: nrps_url,
-      resource_link_id: resource_link_id
-    )
     lti_integration ||= LtiIntegration.find(lti_integration_id)
     return head :bad_request unless lti_integration
 
-    lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
-    nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
-    nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
-    Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+    ActiveRecord::Base.transaction do
+      lti_course ||= Queries::Lti.find_or_create_lti_course(
+        lti_integration_id: lti_integration_id,
+        context_id: context_id,
+        deployment_id: deployment_id,
+        nrps_url: nrps_url,
+        resource_link_id: resource_link_id
+      )
+
+      lti_advantage_client = LtiAdvantageClient.new(lti_integration.client_id, lti_integration.issuer)
+      nrps_response = lti_advantage_client.get_context_membership(nrps_url, resource_link_id)
+      nrps_sections = Services::Lti.parse_nrps_response(nrps_response)
+
+      Services::Lti.sync_course_roster(lti_integration: lti_integration, lti_course: lti_course, nrps_sections: nrps_sections, section_owner_id: current_user.id)
+    end
 
     redirect_to home_path
   end
