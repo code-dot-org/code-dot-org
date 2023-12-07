@@ -1,4 +1,4 @@
-import {PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {readBooleanAttribute} from '../utils';
 
@@ -57,9 +57,14 @@ export default function initializeBlocklyXml(blocklyWrapper) {
     //  the rendered blocks and the coordinates in an array so that we can
     //  position them.
     partitionedBlockElements.forEach(xmlChild => {
+      // Recursively check blocks for XML attributes that need to be manipulated.
       processBlockAndChildren(xmlChild);
+
+      // Further manipulate the XML for specific top block types.
       addMutationToBehaviorDefBlocks(xmlChild);
       addMutationToMiniToolboxBlocks(xmlChild);
+      makeWhenRunUndeletable(xmlChild);
+
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
@@ -112,6 +117,18 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
 }
 
 /**
+ * Sets the deletable attribute on when_run blocks to false.
+ *
+ * @param {Element} blockElement - The XML element for a single block.
+ */
+export function makeWhenRunUndeletable(blockElement) {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.whenRun) {
+    return;
+  }
+  blockElement.setAttribute('deletable', false);
+}
+
+/**
  * Adds a mutation element to a block if it is a behavior definition.
  * CDO Blockly uses an unsupported method for serializing state
  * where arbitrary XML attributes could hold important information.
@@ -121,7 +138,7 @@ export function addMutationToMiniToolboxBlocks(blockElement) {
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addMutationToBehaviorDefBlocks(blockElement) {
-  if (blockElement.getAttribute('type') !== 'behavior_definition') {
+  if (blockElement.getAttribute('type') !== BLOCK_TYPES.behaviorDefinition) {
     return;
   }
   const mutationElement =
