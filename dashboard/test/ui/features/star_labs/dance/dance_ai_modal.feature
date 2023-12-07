@@ -9,9 +9,9 @@ Feature: Dance Party
 
     # First time choosing emojis.
     And I wait for 0.5 seconds
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(3)" using jQuery
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(15)" using jQuery
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(19)" using jQuery
+    And I press "[aria-label=🎉]" using jQuery
+    And I press "[aria-label=🤖]" using jQuery
+    And I press "[aria-label=🪩]" using jQuery
     And I press "#generate-button" using jQuery
 
     # Wait until results show.
@@ -36,9 +36,9 @@ Feature: Dance Party
 
     # Second time choosing emojis.
     And I wait for 0.5 seconds
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(4)" using jQuery
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(16)" using jQuery
-    And I press ".src-dance-ai-dance-ai-modal-module__emojiIcon:nth-of-type(20)" using jQuery
+    And I press "[aria-label=💎]" using jQuery
+    And I press "[aria-label=🌊]" using jQuery
+    And I press "[aria-label=🪩]" using jQuery
     And I press "#generate-button" using jQuery
 
     # Wait until results show.
