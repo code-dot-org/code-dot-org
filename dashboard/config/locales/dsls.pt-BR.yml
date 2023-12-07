@@ -12094,11 +12094,19 @@ pt-BR:
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para acessar a pesquisa com professores] https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para acessar a pesquisa com professores] https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -12649,7 +12657,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -12667,7 +12675,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - correct: true
@@ -12685,7 +12693,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -12906,86 +12914,77 @@ pt-BR:
         questions:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       aiml-ch1-pulse-survey_2021:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-ch1-pulse-survey_2022:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-ch1-pulse-survey_2023:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2022:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q2_2022:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q2_2023:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -13003,7 +13002,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -13021,7 +13020,7 @@ pt-BR:
         - correct: true
           text: Discordo Plenamente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
@@ -13039,7 +13038,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -13152,11 +13151,13 @@ pt-BR:
         questions:
         - text: Gosto de ciência da computação.
       aiml-intro-pulse-survey_2021:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey_2022:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey_2023:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: Pesquisa Rápida sobra Ciência da Computação!
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -13249,10 +13250,10 @@ pt-BR:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       aiml-pulse-check-survey-preamble_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       allthethings_external_displayed_as_unplugged:
         content1: descrição aqui
@@ -24037,10 +24038,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2022:
         markdown: |-
@@ -24065,10 +24066,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
         markdown: |
@@ -24107,24 +24108,24 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy3_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2022:
         markdown: |
@@ -24142,17 +24143,17 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2023a_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2222:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_copy1_2023:
         markdown: |
@@ -24163,10 +24164,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_mb2022:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
@@ -27942,13 +27943,12 @@ pt-BR:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
@@ -28343,33 +28343,223 @@ pt-BR:
         display_name: Personalize seu aplicativo
       ml-club app-choice parent_2022:
         display_name: Personalize seu aplicativo
+        teacher_markdown: |
+          **Apoioando os Alunos:** Esses níveis são semelhantes às personalizações que os alunos concluíram nas lições anteriores. Se os alunos ficarem travados, considere encaminhá-los para estas lições anteriores:
+          - Adicionando várias telas para cada recurso: [Lição 13 - Personalizando Aplicativos](../../13/levels/2)
+          - Adicionando várias telas para a predição resultante: [Lição 10 - Cartões Modelo no App Lab](../../10/levels/5)
       ml-club app-choice parent_2023:
-        display_name: Personalize seu aplicativo
+        display_name: Personalize Seu Aplicativo
+      ml-customize apps-practice choice-2021:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-customize apps-practice choice_2022:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-customize apps-practice choice_2023:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-isaac data_2023:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim data_2023:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
+      ml-good data-kim survey_2023:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
       ml-intro app lab-book recommender 5-2021:
         display_name: Personalize seu aplicativo
       ml-intro app lab-book recommender 5_2022:
         display_name: Personalize seu aplicativo
       ml-intro app lab-book recommender 5_2023:
-        display_name: Personalize seu aplicativo
+        display_name: Personalize Seu Aplicativo
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-2_2022:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-2_2023:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models in applab-choice parent_2022:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models in applab-choice parent_2023:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models-shoe survey:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
+          ## [Clique aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder à pesquisa Recomendação de Calçados
       ml-models-shoe survey_2022:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
+          ## [Clique aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder à pesquisa Recomendação de Calçados
+      ml-plan survey-copy form:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-plan survey-copy form_2023:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2023:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Pratique com Modelos no App Lab
+      ml-use models applab-practice choice_2022:
+        display_name: Pratique com Modelos no App Lab
+      ml-use models applab-practice choice_2023:
+        display_name: Pratique com Modelos no App Lab
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -29457,3 +29647,4 @@ pt-BR:
         questions:
         - text: Tenho medo de ser visto por outras pessoas como menos capaz nesta
             aula.
+...

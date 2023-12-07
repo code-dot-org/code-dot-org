@@ -39,6 +39,10 @@
             "buttonText": "Mehr erfahren",
             "title": "Hour of Code – Kreativität mit KI"
           },
+          "hoc-2023-dance-ai": {
+            "body": "Lernen Sie etwas über Konzepte der künstlichen Intelligenz (KI) und gestalten Sie Ihre eigene virtuelle Tanzparty mit den besten Künstlern von heute. Wählen Sie aus dutzenden Song aus, um alle SchülerInnen zu erreichen, egal welchen Musikgeschmack sie haben. Zeigen Sie, was Sie können!",
+            "buttonText": "Mehr erfahren"
+          },
           "hoc-more": {
             "body": "Die Hour of Code-Website hat mehr als 100 Informatik-Aktivitäten für alle Altersgruppen- und Erfahrungsstufen, die von Code.org und Partnern entwickelt wurden."
           },

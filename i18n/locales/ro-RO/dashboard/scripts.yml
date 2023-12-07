@@ -3596,6 +3596,9 @@ ro:
           lessons:
             lesson-5:
               name: Evaluări
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatoriu
         csc-pilot-fa2022-timecapsule: {}
         csc-pilot-fa2022-ecosystem: {}
         csp-playground:
@@ -4355,3 +4358,43 @@ ro:
         self-paced-pl-csd-unit5-2-2023:
           title: 'Modulul 5: Pregătirea pentru Predarea Date și Societate'
         ai-tutor-test: {}
+        web-dev-2024: {}
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sondaj
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+        csd2-2024: {}
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Cum facem jocuri'
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+        csd6a-2024: {}
+        csd6b-2024: {}
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introducere în App Lab
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+        csd-post-survey-2024:
+          title: Chestionar după curs

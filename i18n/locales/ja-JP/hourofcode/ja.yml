@@ -229,6 +229,7 @@ ja:
   call_to_action_share_on_social_media: ソーシャルメディアで共有
   call_to_action_explore_all_hoc_activities: Code.org の「アワー・オブ・コード」のアクティビティをすべて探索する
   call_to_action_start_dance_party: ダンスパーティーの開始
+  call_to_action_start_dance_party_ai_edition: 'ダンスパーティを始めよう: AI版'
   call_to_action_start_part_02: パート 2 の開始
   call_to_action_start_unplugged_activity: アンプラグドアクティビティの開始
   call_to_action_view_promo_resources: プロモーションリソースを見る
@@ -343,6 +344,15 @@ ja:
   call_to_action_learn_about_ai: AI について学ぼう
   call_to_action_learn_more_about_ai: AIについてさらに詳しく
   call_to_action_get_started: さあ、始めよう
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: 教育者向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_companies: 企業向けハウツーガイドを見る
   aria_label_call_to_action_hoc_how_to_districts: 地区向けハウツーガイドを見る
@@ -359,6 +369,8 @@ ja:
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
   aria_label_call_to_action_teaching_csp: コンピュータサイエンスの原理を教える専門学習プログラムを開始する
   aria_label_call_to_action_teaching_problem_solving: 教育問題解決とコンピューティング専門学習プログラムの開始
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: 専門学習プログラム「ティーチング・コンピュータ・サイエンス・コネクションズ」の開始
   aria_label_call_to_action_teaching_ai: AI と機械学習の教育専門学習プログラムを開始
   aria_label_call_to_action_teaching_maker_cp: デバイスを使った教育用アプリ作成（Circuit Playground）専門学習プログラムを開始
@@ -425,6 +437,16 @@ ja:
   aria_label_call_to_action_minecraft_2020: マインクラフト・AI・フォー・アースを始めよう
   aria_label_call_to_action_register_student_workshop: 無料の生徒向けワークショップに登録
   aria_label_call_to_action_view_more_cs_resources: コンピュータ・サイエンスのリソースをさらに表示
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.orgのプロフェッショナル・ラーニング・プログラム
   curriculum_name_csf: コンピュータサイエンスの基礎
   curriculum_name_csf_02: すべてのCSファンダメンタルズ (コースA～F)
@@ -443,6 +465,7 @@ ja:
   curriculum_name_csd: コンピュータサイエンスの発見
   curriculum_name_csp: コンピュータ サイエンス プリンシプル
   curriculum_name_problem_solving: 問題解決とコンピューティング
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: コンピューター・サイエンス・コネクション
   curriculum_name_csa: コンピュータ・サイエンスA
   curriculum_name_csa_ai: ソフトウェアエンジニアリングとコンピュータービジョン
@@ -519,6 +542,7 @@ ja:
   module_label_languages: 対応言語：
   module_label_accessibility_features: アクセシビリティ：
   module_label_accessibility_features_full: 'アクセシビリティ機能:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: 教育者用ツール
   module_label_educator_course: 教育者用コース
   module_label_educator_resources: Educator resources
@@ -572,6 +596,7 @@ ja:
   module_duration_1_hr: 1 時間
   module_duration_2_hrs: 2 時間
   module_duration_3_hrs: 3 時間
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 時間
   module_duration_5_hrs_plus: 5 時間以上
   module_duration_8_hrs: 8 時間
@@ -593,6 +618,7 @@ ja:
   module_label_teaching_csd: コンピュータサイエンスの発見を教える
   module_label_teaching_csp: コンピュータサイエンスの原則を教える
   module_label_teaching_problem_solving: 問題解決とコンピューティングの指導
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: ティーチング・コンピュータ・サイエンス・コネクションズ
   module_label_teaching_ai: AI と機械学習の教育
   module_label_teaching_maker_cp: デバイスを使ったアプリ制作指導（サーキットプレイグラウンド）
@@ -648,6 +674,12 @@ ja:
   heading_attend_free_workshop: 無料の生徒向けワークショップに参加
   heading_access_more_cs_resources: コンピューターサイエンスのその他のリソースにアクセスする
   heading_available_on_code_dot_org: Code.orgでご利用いただけます
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: より多くの若い女性に学校でコンピュータサイエンスを学ぶよう奨励することに情熱を注いでいる高校生なら、私たちにはあなたが必要です！
   cs_ambassador_desc: 医療、エンターテインメント、スポーツ、教育、ビジネス、ファッション、起業家精神など、あらゆる分野がコンピュータサイエンスの影響を受けています。しかし、高校生の若い女性のうち、コンピュータサイエンスの授業を受けるのはわずか
     5% です。アンバサダーは、仲間にコンピュータサイエンスの授業を受けるよう勧めることで、この男女格差を埋める手助けをすることができます。
@@ -688,6 +720,19 @@ ja:
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: この夏、対面式とバーチャル・ワークショップが始まります。
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: どうぞ、（しばらくの間は）コードを切ってください！
   no_devices_section_desc: CS教育は常にスクリーンの前で行われる必要はなく、デバイスへのアクセスがコンピューター・サイエンスの概念を学ぶ障害になるべきではありません。
   support_and_questions_section_subhead: まだ質問がございますか？私たちにご連絡ください！私たちがお手伝いします。
@@ -698,6 +743,11 @@ ja:
   subscribe_form_section_desc_csd: サインアップすると、Code.orgのComputer Science Discoverysに関する毎月のメールを受け取り、役立つリマインダー、ヒント、最新情報を受信トレイに直接送信できます。
   subscribe_form_section_desc_csf: サインアップすると、Code.orgのコンピュータサイエンスの基礎に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
   subscribe_form_section_desc_csp: サインアップすると、Code.orgのコンピュータサイエンス原則に関するメールを毎月受信し、役立つリマインダー、ヒント、更新情報を受信トレイに直接送信できます。
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: 購読はいつでも解除できます。
   hoc_page_what_is_hoc_heading: アワー・オブ・コードとは？
   hoc_page_desc: "[アワー・オブ・コード](%{hoc_url})は、180カ国以上の数千万人の学生に影響を与える世界的な運動です。誰でも、どこでも、アワー・オブ・コードのイベントを開催したり、45以上の言語でご利用いただける500以上の1時間チュートリアルを試しいただけます。"
@@ -822,6 +872,7 @@ ja:
   ai_curriculum_title_06: ジェネレーティブAIの社会的影響
   ai_curriculum_desc_06: ジェネレーティブAIの影響をさまざまな観点から調査し、チームとして協力して、すべての参加者からの最も多くのニーズに対応するガイドラインを考え出します。
   ai_curriculum_btn_aria_label_06: ジェネレーティブAI授業計画の社会的影響を見る
+  ai_curriculum_btn_aria_label_dance_ai: ダンスパーティにトライしてみよう：AI版アクティビティ
   ai_carousel_heading: 'Code.orgを使った人工知能についての教師たちの感想:'
   ai_carousel_quote_01: このレッスンは、生徒たちに、分類システムには意見の要素があることを知る機会にもなりました。後になって、AI にバイアスが入り込む可能性が明らかになったとき、私は生徒たちを引き戻して、モデルのトレーニングに使われるデータは選択に基づくものであることを思い出させることができました。
   ai_carousel_quote_02: 私の学生たちは、ほぼ日常的に経験している技術の進歩に関しては、自分たちが単なる消費者である必要はないことを学びました。彼らも実はクリエイターになれるのです！
@@ -935,6 +986,68 @@ ja:
   ai_vid_computervision_caption: コンピュータービジョン
   ai_vid_ethics1_caption: '倫理とAI: 平等なアクセスとアルゴリズムバイアス'
   ai_vid_ethics2_caption: '倫理とAI: プライバシーと仕事の未来'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: 教育者向けの自分のペースで進められる専門学習
   self_paced_pl_hero_desc: コンピュータサイエンスの教育過程のあらゆる段階で教師をサポートする専門的な学習サービス。
   self_paced_pl_intro_heading: タイムラインでの専門的な学習
@@ -2082,6 +2195,7 @@ ja:
     \ "
   tutorial_dance2019_name: ダンスパーティー2019
   tutorial_danceparty_name: ダンスパーティー
+  tutorial_dancepartyai_name: 'ダンスパーティー: AI エディション'
   tutorial_chibitronics_name: チビトロニクス:イルミネーションストーリー
   tutorial_athlete_name: 自分だけのスポーツゲームのコードを書く
   tutorial_moana_name: 'モアナと伝説の海: Wayfinding with Code'
@@ -2758,6 +2872,8 @@ ja:
   tutorial_meeempathy_name: Minecraft 2 つの村の物語
   tutorial_danceparty_shortdescription: "  ダンスパーティーをコード化して友達と共有しましょう。ケイティ・ペリー、マドンナ、J・バルビン、シア、キース・アーバン、シアラ、その他25曲を収録!
     \ "
+  tutorial_dancepartyai_shortdescription: 人工知能 (AI) の概念について学び、今日のトップ アーティストを紹介する独自のバーチャルダンス
+    パーティーを作りましょう。いいところを見せる時が来ました！
   tutorial_chibitronics_shortdescription: ペーパーサーキットをプログラムして、自分のストーリーを盛り上げましょう。
   tutorial_athlete_shortdescription: バスケットボールゲームや、様々なスポーツの混合競技を造ろう！
   tutorial_moana_shortdescription: モアナは勇敢で怖いもの知らず、自分の道を見つけようと決意します
@@ -3364,6 +3480,8 @@ ja:
     アット・ザ・ディスコ、ジョナス・ブラザース、他多数!  "
   tutorial_danceparty_longdescription: "  ダンスパーティーをコード化して友達と共有しましょう。ケイティ・ペリー、マドンナ、J・バルビン、シア、キース・アーバン、シアラ、その他25曲を収録!
     \ "
+  tutorial_dancepartyai_longdescription: 人工知能 (AI) の概念について学び、今日のトップ アーティストを紹介する独自のバーチャルダンス
+    パーティーを作りましょう。いいところを見せる時が来ました！
   tutorial_chibitronics_longdescription: ペーパーサーキットをプログラムして、自分のストーリーを盛り上げましょう。
   tutorial_athlete_longdescription: バスケットボールゲームや、様々なスポーツの混合競技を造ろう！
   tutorial_moana_longdescription: 新しいDisney Hour of Codeチュートリアルでは、ブロックを使ったビジュアルプログラミング言語を使用します。学生はビジュアルブロックをドラッグアンドドロップするだけでコードを書くことができます。ビジュアルプログラミングは、コーディングのロジックを教えるための楽しくてわかりやすい方法です。ビジュアルプログラミングに触れることで、より複雑な作業であるテキストベースのプログラミングの基礎が築かれます。このチュートリアルは、8
@@ -4348,6 +4466,7 @@ ja:
     つの村を 1 つにまとめましょう。プレイヤーは隣人に対する共感と思いやりを経験して、協力とインクルージョンを学び、私たち全員をユニークで特別なものにする多様性を受け入れます。
   tutorial_dance2019_string_detail_grades: 小学2年生～
   tutorial_danceparty_string_detail_grades: 小学2年生～
+  tutorial_dancepartyai_string_detail_grades: 3年生以上向け
   tutorial_chibitronics_string_detail_grades: 2～5年生（7～10歳）
   tutorial_athlete_string_detail_grades: 小学2年生～
   tutorial_moana_string_detail_grades: 小学2年生～
@@ -5024,6 +5143,7 @@ ja:
   tutorial_meeempathy_string_detail_grades: 小学2年生～
   tutorial_dance2019_string_platforms: すべての最新ブラウザ、アンドロイドタブレット、iPad、アンプラグド
   tutorial_danceparty_string_platforms: ブラウザベース, Androidタブレット, iPad
+  tutorial_dancepartyai_string_platforms: ブラウザベース, Androidタブレット, iPad
   tutorial_chibitronics_string_platforms: 最新ブラウザ
   tutorial_athlete_string_platforms: 最新のすべてのブラウザ
   tutorial_moana_string_platforms: ブラウザベース, Androidタブレット, iPad
@@ -5701,6 +5821,7 @@ ja:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: チビトロニクスチビチップとサーキットステッカーLED
   tutorial_athlete_string_detail_platforms: ''
   tutorial_moana_string_detail_platforms: ''
@@ -6378,6 +6499,7 @@ ja:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: ブロック
   tutorial_danceparty_string_detail_programming_languages: ブロック
+  tutorial_dancepartyai_string_detail_programming_languages: ブロック
   tutorial_chibitronics_string_detail_programming_languages: ブロック
   tutorial_athlete_string_detail_programming_languages: ブロック
   tutorial_moana_string_detail_programming_languages: ブロック
@@ -10234,7 +10356,7 @@ ja:
   hoc_how_to_step_label_prepare_your_event: イベントの準備
   hoc_how_to_step_label_plan_your_event: イベントの計画
   hoc_how_to_step_label_plan_your_hour: 時間の計画
-  hoc_how_to_step_label_help_spread_word: 情報を広めてください
+  hoc_how_to_step_label_help_spread_word: 情報を広める
   hoc_how_to_step_label_connect_with_school: 地元の学校とつながる
   hoc_how_to_step_label_inspire_employees: 従業員をインスパイアしよう
   hoc_how_to_step_label_encourage_employees: 従業員にボランティア活動を奨励しよう
