@@ -1,4 +1,4 @@
-import {asyncRun} from './pyodideRunner2';
+import {asyncRun} from './pyodideWorkerManager';
 
 export async function runPythonCode(code: string) {
   console.log('in pyodide consumer');

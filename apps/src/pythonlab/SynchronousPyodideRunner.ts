@@ -1,9 +1,5 @@
+// Run pyodide in the main thread
 import {loadPyodide} from 'pyodide';
-
-// TODO: make this a class that loads pyodide once in a load method,
-// then can run code faster.
-// or...try to run code in a web worker?
-// also try with pyodide saved in local storage
 
 interface PyodideRunnerInterface {
   initialize: () => void;
@@ -11,7 +7,9 @@ interface PyodideRunnerInterface {
   isLoaded: () => boolean;
 }
 
-export default class PyodideRunner implements PyodideRunnerInterface {
+export default class SynchronousPyodideRunner
+  implements PyodideRunnerInterface
+{
   loaded: boolean;
   // Pyodide does not export a type for their api
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

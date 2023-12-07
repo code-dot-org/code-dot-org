@@ -1,10 +1,10 @@
 console.log('creating web worker');
+// This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
   new URL('./pyodideWebWorker.js', import.meta.url)
 );
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const callbacks: {[key: number]: (data: any) => void} = {};
+const callbacks = {};
 
 pyodideWorker.onmessage = event => {
   console.log('in this on success callback');
@@ -14,12 +14,10 @@ pyodideWorker.onmessage = event => {
   onSuccess(data);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const asyncRun: (string: string, context: any) => Promise<any> = (() => {
+const asyncRun = (() => {
   console.log('in async run');
   let id = 0; // identify a Promise
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return (script: string, context: any) => {
+  return (script, context) => {
     console.log('in first callback');
     // the id could be generated more carefully
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
