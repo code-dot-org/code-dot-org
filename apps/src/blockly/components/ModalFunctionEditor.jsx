@@ -58,10 +58,6 @@ export default function ModalFunctionEditor() {
 
 // In-line styles are used to avoid conflicting with classes applied by the Button class.
 const buttonStyles = {
-  border: `1.5px solid ${color.neutral_dark}`,
-  borderRadius: `4px`,
-  color: color.neutral_dark,
-  height: '28px',
-  fontSize: '13px',
-  fontWeight: 600,
+  border: `2px solid ${color.neutral_dark}`,
+  fontWeight: 'bolder',
 };
