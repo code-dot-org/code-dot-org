@@ -4,6 +4,12 @@
 
 The Dance AI modal accompanies a new AI block added to Dance Party for Hour of Code in 2023.  The modal allows the user to select three emoji that will then be used to generate an effect, which is a combination of an existing Dance Party foreground and background effect.  This combination effect can be used as-is, or the user can view the equivalent code and even convert the AI block into those foreground and background effect blocks.
 
+### Architecture
+
+The most deliberate architectural decision was to not divide the modal by "screens" or "modes", but to instead ensure that all elements were available at all times.  This allowed us to do things like keep the A.I. bot head visible throughout the experience, and in early builds, we even slide it around the modal to carry out various tasks in different places.
+
+To ensure smoother display during the generating sequence, we fade each new visualization over the top of the previous one.
+
 ### Modes
 
 #### select inputs
@@ -31,3 +37,10 @@ Amongst many pull requests created during the 10 week development period, these 
 - We simplified the explanation bar chart and also used it in the generating mode: https://github.com/code-dot-org/code-dot-org/pull/54732
 - We adjusted the generating mode, with a series of candidates that fade into each other and speed up, also removing the bar chart from there: https://github.com/code-dot-org/code-dot-org/pull/54982
 - We then adjusted the generating mode again, showing the previews at a slower and consistent pace: https://github.com/code-dot-org/code-dot-org/pull/55104
+
+### Challenges
+
+There were some interesting design challenges:
+
+- A block that has a field with parameters, and does something, is quite natural to Blockly.  However, there was also interest in letting users advance to a situation in which they could output the underlying code; we settled on a transformation, but that is less natural to Blockly.  For the code generation scenario, it could have made sense to have an alternate UI which doesn't begin with a block, but instead simply emits blocks to the workspace.
+-
