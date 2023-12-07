@@ -1,5 +1,17 @@
 @import 'breakpoints', 'action-blocks';
 
+html {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
 section.banner {
   padding: 0;
 
@@ -13,32 +25,11 @@ section.banner {
   }
 }
 
-section.activities {
-  margin-bottom: -4rem;
+section.carousels {
+  padding-bottom: 1rem;
 
-  .section-intro {
-    width: 100%;
-  }
-
-  .flex-container {
-    margin: 3rem auto;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-    @media screen and (max-width: $width-md) {
-      justify-content: center;
-    }
-
-    img {
-      max-width: 175px;
-      border-radius: var(--border-radius);
-
-      @media screen and (max-width: $width-md) {
-        max-width: 125px;
-      }
-    }
+  hr {
+    margin-top: 4rem;
   }
 }
 
@@ -168,11 +159,12 @@ section.activities {
 
 
 .action-block-wrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    width: 30%;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  width: 30%;
 }
+
 @media(max-width: 768px) {
   .action-block-wrapper{
     width: 100%;
@@ -181,14 +173,6 @@ section.activities {
   button.slide-next {
     display: none;
   }
-}
-
-.age-tags {
-    color: #0093A4;
-}
-
-.action-block.action-block--one-col.flex-space-between {
-    background-color: white;
 }
 
 @media (max-width: 500px) {

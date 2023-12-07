@@ -29,6 +29,10 @@
   display: flex;
   align-content: baseline;
 
+  &.white {
+    background: var(--neutral_white);
+  }
+
   h3 {
     width: 100%;
     margin-top: 0;
