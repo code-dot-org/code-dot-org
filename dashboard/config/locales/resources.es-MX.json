@@ -737,12 +737,12 @@
         "csd_curriculum_guide/csd/2021": {
           "name": "CSD Guía Curricular",
           "url": "https://docs.google.com/document/d/1j5039CGHVj6L6FSh7Rr1jFwCea0NrGTw/edit?usp=sharing&ouid=115004829691861815221&rtpof=true&sd=true",
-          "type": "Recurso"
+          "type": "Recursos"
         },
         "csd_implementation_guide/csd/2021": {
           "name": "CSD Guía de Implementación",
           "url": "https://docs.google.com/document/d/1lMwXY9_LzWBPNYca_hBS8TQwYtgBR9JODcoWPgkc9JQ/edit?usp=sharing",
-          "type": "Recurso"
+          "type": "Recursos"
         },
         "aluminum-boats-exemplar-2020/csd/2021": {
           "name": "Barcos de aluminio",
@@ -864,7 +864,7 @@
         },
         "computer-science-practices/csd/2021": {
           "name": "Prácticas de las ciencias de la computación",
-          "url": "https://docs.google.com/document/d/1HvuGaW0nADVZv69TTFDGAVSdMfJaBfBS/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1HT-0RUWPC_d4CZwjdHEfWG8V7b4eKV7J/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Reflexión"
         },
         "apps-and-problem-solving-marked-rubrics/csd/2021": {
@@ -9019,10 +9019,12 @@
           "type": "Guía de Actividades"
         },
         "ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023": {
-          "type": "Vídeo"
+          "type": "Vídeo",
+          "name": "Ética e inteligencia artificial: privacidad y el futuro del trabajo"
         },
         "imagine_your_world/ai-ethics/2023": {
-          "type": "Guía de Actividades"
+          "type": "Guía de Actividades",
+          "name": "Imagina tu mundo"
         },
         "research_reflection_guide/ai-ethics/2023": {
           "type": "Guía de Actividades"

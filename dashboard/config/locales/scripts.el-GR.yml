@@ -1311,6 +1311,10 @@ el:
           lesson_groups:
             lessonGroup-5:
               display_name: Έρευνα
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Έρευνα
         csd1-dlp:
           lesson_groups:
             content:
@@ -1533,6 +1537,10 @@ el:
             lessonGroup-4:
               display_name: Έρευνα
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Εισαγωγή στο App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-4:
               display_name: Εισαγωγή στο App Lab

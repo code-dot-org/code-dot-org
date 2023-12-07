@@ -6869,6 +6869,11 @@ fr:
               name: Grille CSS
             lesson-5:
               name: Évaluations
+            lesson-6:
+              name: Leçon 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Random
           name: aire de jeux Angelina
           title: L'endroit où faire des choses d'Angelina
         csc-pilot-fa2022-timecapsule:
@@ -8438,6 +8443,7 @@ fr:
           lessons:
             lesson-1:
               name: 'Soirée dansante : Édition I.A.'
+          title: 'Soirée dansante : Édition IA'
         self-paced-pl-csd-unit2-2-2023:
           title: 'Module 2 : Se préparer à enseigner le développement Web'
         self-paced-pl-csd-unit3-2-2023:
@@ -8448,3 +8454,90 @@ fr:
           title: 'Module 4 : Se préparer à enseigner le processus de conception'
         self-paced-pl-csd-unit5-2-2023:
           title: 'Module 5 : Se préparer à enseigner les Données et la Société'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Création de pages Web'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Sites Web multipages'
+          title: Unité 2 - Développement Web ('23-'24)
+          student_description: " Dans cette unité, vous allez apprendre à créer et à partager du contenu sur vos propres pages Web. Après avoir décidé du contenu que vous souhaitez partager avec le monde entier, vous apprendrez à structurer et à styliser vos pages à l'aide du HTML et du CSS. Vous mettrez également en pratique de précieuses compétences en programmation, telles que le débogage, l'utilisation des ressources et le travail d'équipe.  "
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Enquête
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Le Processus de Résolution de Problèmes'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Ordinateurs et Résolution de Problèmes'
+            lessonGroup-4:
+              display_name: Leçons alternatives
+          title: Unité 1 - Résolution de problèmes et informatique ('23-'24)
+          student_description: Problem Solving and Computing est une introduction hautement interactive et collaborative au domaine de l'informatique, dans le cadre plus large de la résolution de problèmes. Vous vous entraînerez à utiliser un processus de résolution de problèmes pour résoudre une série d'énigmes, de défis et de scénarios du monde réel. Vous allez maintenant apprendre comment les ordinateurs saisissent, sortent, stockent et traitent les informations pour aider les humains à résoudre des problèmes. L'unité se termine par un projet dans lequel vous concevez une application qui aide à résoudre un problème de votre choix.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Création de pages Web'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Sites Web multipages'
+          title: Unité 2 - Développement Web ('23-'24)
+          student_description: " Dans cette unité, vous allez apprendre à créer et à partager du contenu sur vos propres pages Web. Après avoir décidé du contenu que vous souhaitez partager avec le monde entier, vous apprendrez à structurer et à styliser vos pages à l'aide du HTML et du CSS. Vous mettrez également en pratique de précieuses compétences en programmation, telles que le débogage, l'utilisation des ressources et le travail d'équipe.  "
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Images et Animations'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Jeux'
+          title: Unité 3 - Animations et jeux interactifs ('23-'24)
+          student_description: Dans l'Unité 3, tu tireras profit de ton expérience de codage en programmant des animations, de l'art interactif et des jeux dans le Labo des Jeux. L'unité commence avec des formes simples et progresse vers des jeux plus sophistiqués, basés sur les lutins, en utilisant les mêmes concepts de programmation et le processus de conception que les informaticiens utilisent quotidiennement. Dans le projet final, tu développeras un programme personnalisé et interactif.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Conception Centrée sur l''Utilisateur'
+            lessonGroup-3:
+              display_name: 'Chapitre 23 : Prototypage d''Applications'
+          title: Unité 4 - Le processus de conception (23-24)
+          student_description: L'unité 4 présente les impacts sociaux plus larges de l'informatique. À travers une série de défis de conception, tu apprendras à mieux comprendre les besoins des autres, tout en développant une solution à un problème. La seconde moitié de l'unité consiste en un projet d'équipe itératif, au cours duquel les équipes ont la possibilité d'identifier un besoin qui leur tient à cœur, de prototyper des solutions sur papier et dans le Labo de Applis, et de tester des solutions avec de vrais utilisateurs pour obtenir des commentaires et procéder à une itération supplémentaire.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Représentation de l''information'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Résolution des Problèmes de données'
+          title: Unité 5 - Données et société (23-24)
+          student_description: L'Unité 5 traite de l'importance des données dans la résolution des problèmes et met en évidence la façon dont les ordinateurs peuvent aider dans ce processus. Le premier chapitre explore les différents systèmes utilisés pour représenter l'information dans un ordinateur et les défis et les compromis posés par leur utilisation. Dans le deuxième chapitre, tu apprendras comment les données collectées sont utilisées pour résoudre les problèmes et comment les ordinateurs aident à automatiser les étapes de ce processus. Le chapitre conclut en examinant comment le processus de résolution de problèmes de données peut être appliqué à une zone de ton choix.
+          description_short: Apprends comment les gens utilisent les ordinateurs pour résoudre des problèmes de données.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Présentation d'App Lab
+            lessonGroup-2:
+              display_name: 'Chapitre 1 : Entrées et sorties'
+            lessonGroup-3:
+              display_name: 'Chapitre 2 : Construction de Prototypes Physiques'
+          title: Unité 6A - (Option A) Création d'applications avec des appareils - Circuit Playground (23—24)
+          student_description: Cette unité explore le rôle des plateformes matérielles dans l'informatique et explique comment différents capteurs peuvent fournir des entrées et des sorties plus efficaces que le clavier, la souris et le moniteur traditionnels. À l'aide d'App Lab et de Circuit Playground d'Adafruit, vous développerez des programmes qui utilisent les mêmes entrées et sorties matérielles que celles des appareils intelligents, en étudiant comment un simple prototype peut mener à un produit fini. L'unité se termine par un défi de conception consistant à utiliser le Circuit Playground comme base pour une innovation de votre propre conception.
+          description_short: Apprend à programmer des objets.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Présentation d'App Lab
+            lessonGroup-3:
+              display_name: Les Entrées et les Sorties
+            lessonGroup-4:
+              display_name: Création de prototypes physiques
+          title: Unité 6B - (Option B) Création d'applications avec des appareils (micro:bit)
+          student_description: Cette unité explore le rôle des plateformes matérielles dans l'informatique et explique comment différents capteurs peuvent fournir des entrées et des sorties plus efficaces que le clavier, la souris et le moniteur traditionnels. À l'aide d'App Lab et de BBC micro:bit, vous allez développer des programmes qui utilisent les mêmes entrées et sorties matérielles que celles des appareils intelligents, en étudiant comment un simple prototype peut mener à un produit fini. L'unité se termine par un défi de conception consistant à utiliser le micro:bit comme base pour une innovation de votre propre conception.
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Introduction au Labo des Applis
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
+          title: IA et apprentissage automatique
+          student_description: Cette unité est une introduction pratique au développement d'un modèle d'apprentissage automatique avec des données tabulaires. Vous découvrirez comment les ordinateurs tirent parti des données pour prendre des décisions, puis développerez vos propres projets d'apprentissage automatique à partir de données du monde réel. L'unité se termine par la conception de votre propre application d'apprentissage automatique pour résoudre un problème personnel.
+        csd-post-survey-2024:
+          title: Suivi d'après cours
+          description: Cette unité contient l'enquête postérieure au cours. Cette unité peut être attribuée une fois que les étudiants ont terminé leur dernière unité de ce cours.

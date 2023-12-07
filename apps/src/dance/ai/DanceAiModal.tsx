@@ -285,15 +285,18 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     minMaxAssociations.current = calculateMinMax(inputs);
   }, [calculateMinMax, inputs]);
 
-  const handleGenerateClick = useCallback(() => {
+  const startGenerating = useCallback(() => {
     startAi();
+    setMode(Mode.GENERATING);
+  }, [startAi]);
 
+  const handleGenerateClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
       emojis: inputs,
     });
 
-    setMode(Mode.GENERATING);
-  }, [startAi, inputs]);
+    startGenerating();
+  }, [startGenerating, inputs]);
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
@@ -316,8 +319,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    handleGenerateClick();
-  }, [handleGenerateClick, inputs]);
+    startGenerating();
+  }, [startGenerating, inputs]);
 
   const handleExplanationClick = useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED, {
@@ -487,6 +490,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   }, [currentAiModalField, onClose, inputs]);
 
+  const handleOnClose = useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
+      emojis: inputs,
+      mode,
+      currentToggle,
+      generatingStep: generatingProgress.step,
+    });
+
+    onClose();
+  }, [inputs, mode, currentToggle, generatingProgress.step, onClose]);
+
   const showUseButton =
     mode === Mode.RESULTS &&
     currentToggle === Toggle.EFFECT &&
@@ -548,7 +562,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
-      onClose={onClose}
+      onClose={handleOnClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >

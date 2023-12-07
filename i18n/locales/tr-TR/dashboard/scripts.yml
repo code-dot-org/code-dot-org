@@ -6237,6 +6237,11 @@ tr:
           lessons:
             lesson-5:
               name: Değerlendirmeler
+            lesson-6:
+              name: Ders 1
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Rastgele
         csp-playground:
           title: CSP Oyun Alanı
           description_audience: Mufredat Yazarları
@@ -7451,6 +7456,7 @@ tr:
           lessons:
             lesson-1:
               name: 'Dans Partisi: A.I Sürümü'
+          title: 'Dans Partisi: AI (Yapay Zeka) Sürümü'
         self-paced-pl-csd-unit2-2-2023:
           title: 'Modül 2: Web Geliştirmeyi Öğretme Hazırlığı'
         self-paced-pl-csd-unit3-2-2023:
@@ -7481,3 +7487,71 @@ tr:
           title: " Modül 4: Tasarım Sürecini Öğretme Hazırlığı"
         self-paced-pl-csd-unit5-2-2023:
           title: 'Modül 5: Veri ve Toplumu Öğretme Hazırlığı'
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama becerilerini de uygulayacaksınız.
+        csd1-2024:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Anket
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Problem çözme süreci'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Bilgisayar ve Problem çözme'
+          student_description: Problem Çözme ve Bilgi İşlem, daha geniş problem çözme arayışı içinde çerçevelendiği şekliyle, bilgisayar bilimi alanına oldukça etkileşimli ve işbirlikçi bir giriş niteliğindedir. Bir dizi bulmacayı, zorluğu ve gerçek dünya senaryolarını ele almak için bir problem çözme sürecini kullanma alıştırması yapacaksınız. Ardından, insanların sorunları çözmesine yardımcı olmak için bilgisayarların bilgileri nasıl girdiğini, çıkardığını, depoladığını ve işlediğini öğreneceksiniz. Ünite, seçtiğiniz bir sorunu çözmenize yardımcı olacak bir uygulama tasarladığınız bir proje ile sona erer.
+        csd2-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Web sayfası oluşturma'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Çok sayfalı Web siteleri'
+          title: Web Geliştirme
+          student_description: Bu ünitede, kendi web sayfalarınızdaki içeriği nasıl oluşturacağınızı ve paylaşacağınızı öğreneceksiniz. Dünyayla hangi içeriği paylaşmak istediğinize karar verdikten sonra, HTML ve CSS kullanarak sayfalarınızı nasıl yapılandıracağınızı ve biçimlendireceğinizi öğreneceksiniz. Ayrıca hata ayıklama, kaynakları kullanma ve ekip çalışması gibi değerli programlama becerilerini de uygulayacaksınız.
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Resim ve animasyon'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Oyun geliştirme'
+          student_description: " Ünite 3'te Oyun Laboratuvarında animasyonlar, etkileşimli sanat ve oyunlar programladığından dolayı kodlama deneyimini arttıracaksın. Ünite, basit şekiller ile başlar ve bilgisayar bilim insanlarının günlük kullandığı ile aynı programlama kavramları ve tasarım süreci kullanılarak daha karmaşık hareketli nesne tabanlı oyunlara doğru ilerler. Final projesinde kişiselleştirilmiş, etkileşimli bir program geliştireceksiniz."
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Uygulama prototipleme'
+          student_description: Ünite 4, bilgi işlemin daha geniş toplumsal etkilerini tanıtmaktadır. Bir dizi tasarım zorluğuyla, bir probleme bir çözüm geliştirirken diğerlerinin ihtiyaçlarını daha iyi anlayabileceğinizi öğreneceksiniz. Birimin ikinci yarısı, ekiplerin bakım ihtiyaçlarını belirleme, hem kağıt üzerinde hem de Uygulama Laboratuarında prototip çözümler üretme ve gerçek kullanıcılar ile geribildirim almak ve ilerlemek için çözümler test etme imkanı sağlayan bir tekrarlayıcı takım projesinden oluşur.
+        csd5-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bölüm 1: Bilgileri gösterme'
+            lessonGroup-3:
+              display_name: 'Bölüm 2: Veri problemlerini çözme'
+          student_description: 5.  ünite problem çözmede verilerin önemi hakkındadır ve bilgisayarların bu sürece nasıl yardımcı olabileceğini vurgulamaktadır. Birinci kısım bir bilgisayarda bilgiyi temsil etmek için kullanılan farklı sistemleri ve bunları kullanmanın getirdiği zorlukları, artılarını ve eksilerini araştırır. İkinci kısımda problem çözmek için kullanılan verilerin nasıl toplandığını ve bilgisayarların bu işlemin adımlarını otamatikleştirmede nasıl yardımcı olduklarını öğreneceksiniz. Bölüm, verilerin problem çözmede seçtiğiniz bir alana nasıl uygulanabileceğini dikkate alarak sonuçlandırılır.
+          description_short: İnsanların veri problemlerini çözmek için bilgisayarı nasıl kullandıklarını öğrenin.
+        csd6a-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bölüm 1: Donanım girdisi'
+          description_short: Fiziksel cihazlarla programlamayı öğrenin.
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Girdiler ve çıktılar
+        csd7-2024:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Uygulama Labına Giriş
+            lessonGroup-2:
+              display_name: Bölüm 1
+            lessonGroup-3:
+              display_name: Bölüm 2
+          title: Yapay Zeka ve Makine Öğrenimi
+          student_description: Bu ünite, tablo verileriyle bir makine öğrenimi modeli geliştirmeye uygulamalı bir giriş niteliğindedir. Bilgisayarların karar vermek için verilerden nasıl öğrendiğini keşfedecek, ardından gerçek dünya verileri etrafında kendi makine öğrenimi projelerinizi geliştireceksiniz. Ünite, kişisel olarak ilgili bir sorunu çözmek için kendi makine öğrenimi uygulamanızı tasarlamakla sona erer.
+        csd-post-survey-2024:
+          title: Kurs-Sonrası Anketi

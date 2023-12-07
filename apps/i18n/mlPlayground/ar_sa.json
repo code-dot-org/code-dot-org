@@ -344,12 +344,16 @@
     }
   },
   "incorrectAnswer": "غير صحيح",
+  "modelCardFeatures": "الميزات",
+  "modelCardLabel": "التسمية",
   "modelCardPossibleValuesMaximum": "الأكبر",
   "modelCardPossibleValuesMinimum": "على الاقل ",
   "navigateBack": "العودة",
   "navigateDone": "إنهاء",
   "navigateForward": "الاستمرار",
+  "resultsTableFeatureHeader": "الميزات",
   "saveProgress": "حفظ\n",
+  "trainModelHeading": "التدريب",
   "tryAgain": "حاول مرة أخرى",
   "uniqueOptionsWarningNotice": "ملاحظة"
 }

@@ -9,8 +9,8 @@ it:
   hours_of_code_served: Ore del Codice svolte
   hoc_stat_languages: Gli studenti stanno imparando in più di 45 lingue diverse
   hoc_stat_hours_served: Oltre 100 milioni di studenti hanno provato l'Ora del Codice
-  hoc_stat_females: Le studentesse costituiscono il 50% dei partecipanti ad Hour of
-    Code
+  hoc_stat_females: Le studentesse costituiscono il 50% dei partecipanti agli eventi
+    dell'Ora del Codice
   campaign_date_start_short: 4 dic.
   campaign_date_start_long: 4 dicembre
   campaign_date_short: 4-10 Dic.
@@ -54,7 +54,7 @@ it:
     l'AI!
   hoc2023_what_is_hoc_desc: L'Ora del Codice è un'introduzione gratuita all'informatica
     attraverso attività divertenti per studenti di tutte le età. La celebrazione di
-    quest'anno, oltre che sulla programmazione,  è focalizzata sull'Intelligenza Artifgiciale
+    quest'anno, oltre che sulla programmazione,  è focalizzata sull'Intelligenza Artificiale
     ed è sostenuta da oltre 400 partner, 20.000 educatori e 58.000 volontari.
   hoc2022_header: Esplora, gioca, crea!
   social_hoc2022_explore_play_create: Usa l'informatica per esplorare, giocare e creare!
@@ -213,8 +213,9 @@ it:
     gli educatori di tutto il mondo a insegnare con l'IA e sull'IA.
   curriculum_launch_2023_title: Ti presentiamo incredibili aggiornamenti al nostro
     curriculum
-  curriculum_launch_2023_desc: Aggiornamenti a CSC, CSP, CSD e altro ancora, oltre
-    a un nuovo catalogo dei programmi di studio e a una pagina Teach riprogettata
+  curriculum_launch_2023_desc: Aggiornamenti a "Informatica interdisciplinare", "Alla
+    scoperta dell'informatica", "Princìpi di informatica" e altro ancora, oltre a
+    un nuovo catalogo dei programmi di studio e a una pagina "Insegna" riprogettata
     per aiutarti a trovare tutto!
   in_partnership_with: In collaborazione con
   shop_code_dot_org_heading: Acquista Code.org
@@ -243,8 +244,8 @@ it:
   professional_development: Sviluppo professionale
   additional_educator_resources: Additional Educator Resources
   teach_computer_science: Insegna informatica
-  explore_our_curriculum: Esplora il nostro curriculum
-  start_professional_learning: Inizia l'apprendimento professionale
+  explore_our_curriculum: Esplora i nostri corsi
+  start_professional_learning: Inizia la formazione professionale
   how_ai_works_video_series: Serie di video su come funziona l'IA
   learn_how_ai_works: Scopri come funziona l'IA
   ai_101_for_educators: AI 101 per insegnanti
@@ -330,6 +331,7 @@ it:
   call_to_action_explore_all_hoc_activities: Scopri tutte le attività dell'Ora del
     Codice su Code.org
   call_to_action_start_dance_party: Inizia Ballando col codice
+  call_to_action_start_dance_party_ai_edition: 'Ballando col codice: edizione IA'
   call_to_action_start_part_02: Inizia la seconda parte
   call_to_action_start_unplugged_activity: Inizia l'attività tradizionale
   call_to_action_view_promo_resources: Visualizza le risorse promozionali
@@ -368,12 +370,13 @@ it:
   call_to_action_explore_hoc: Esplora i tutorial dell'Ora del Codice
   call_to_action_explore_hoc_short: Scopri Hour of Code
   call_to_action_explore_how_ai_works: Scopri come funziona l'IA
-  call_to_action_explore_dance_party: Esplora Dance Party
-  call_to_action_explore_ai_for_oceans: Esplora AI For Oceans
+  call_to_action_explore_dance_party: Esplora Ballando col codice
+  call_to_action_explore_ai_for_oceans: Esplora L'Intelligenza Artificiale per il
+    mare
   call_to_action_explore_minecraft: Esplora Minecraft
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Visualizza il piano delle lezioni
-  call_to_action_self_paced_pl: Inizia l'apprendimento professionale autonomo
+  call_to_action_self_paced_pl: Inizia la formazione professionale autonoma
   call_to_action_apply_for_pl: Richiedi un corso di formazione professionale
   call_to_action_watch_panel: Pannello dell'orologio
   call_to_action_learn_about_challenge: Scopri di più sulla sfida
@@ -383,7 +386,7 @@ it:
   call_to_action_get_updates: Ottieni aggiornamenti
   call_to_action_special_announcement: Vedi l'annuncio speciale
   call_to_action_learning_opportunity: Nuova opportunità di apprendimento professionale
-  call_to_action_start_pl: Inizia l'apprendimento professionale
+  call_to_action_start_pl: Inizia la formazione professionale
   call_to_action_contact_regional_partner: Contatta il tuo partner regionale
   call_to_action_join_csta: Iscriviti a CSTA
   call_to_action_support_farsi: Sostieni Code.org in persiano
@@ -395,9 +398,9 @@ it:
   call_to_action_sign_up_free: Iscriviti gratis
   call_to_action_explore_ai_resources: Esplora le risorse AI
   call_to_action_explore_ai_curricula: Esplora i curricula sull'IA
-  call_to_action_explore_curriculum_catalog: Esplora il Catalogo Curriculum
+  call_to_action_explore_curriculum_catalog: Esplora il catalogo dei corsi
   call_to_action_see_full_curriculum_catalog: Consulta il catalogo completo dei curriculum
-  call_to_action_view_curriculum_catalog: Visualizza Catalogo corsi
+  call_to_action_view_curriculum_catalog: Visualizza il catalogo dei corsi
   call_to_action_find_self_paced_modules: Trova moduli di autoapprendimento
   call_to_action_join_teacher_forums: Partecipa a un forum di insegnanti
   call_to_action_explore_teacher_forums: Esplora i forum degli insegnanti
@@ -444,6 +447,15 @@ it:
   call_to_action_learn_about_ai: Scopri di più sull'IA
   call_to_action_learn_more_about_ai: Scopri di più sull'AI
   call_to_action_get_started: Inizia
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Visualizza la guida pratica per
     gli insegnanti
   aria_label_call_to_action_hoc_how_to_companies: Visualizza la guida pratica per
@@ -473,6 +485,8 @@ it:
     Teaching Computer Science Principles
   aria_label_call_to_action_teaching_problem_solving: Avvia il programma di apprendimento
     professionale Teaching Problem Solving and Computing
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Avvia il programma di apprendimento professionale
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Avvia il programma di apprendimento professionale
@@ -577,6 +591,16 @@ it:
   aria_label_call_to_action_register_student_workshop: Registrati per un seminario
     gratuito per studenti
   aria_label_call_to_action_view_more_cs_resources: Visualizza altre risorse di informatica
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Programma di formazione professionale
     di Code.org
   curriculum_name_csf: Fondamenti di Informatica
@@ -596,6 +620,7 @@ it:
   curriculum_name_csd: Scoperte informatiche
   curriculum_name_csp: Principi di informatica
   curriculum_name_problem_solving: Risoluzione dei problemi e calcolo
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: Informatica A
   curriculum_name_csa_ai: Ingegneria del software e visione artificiale
@@ -734,6 +759,7 @@ it:
   module_label_languages: 'Lingue supportate:'
   module_label_accessibility_features: 'Accessibilità:'
   module_label_accessibility_features_full: 'Caratteristiche di accessibilità:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Strumento per educatori
   module_label_educator_course: Corso per educatori
   module_label_educator_resources: Educator resources
@@ -787,6 +813,7 @@ it:
   module_duration_1_hr: 1 ora
   module_duration_2_hrs: 2 ore
   module_duration_3_hrs: 3 ore
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 ore
   module_duration_5_hrs_plus: 5+ ore
   module_duration_8_hrs: 8 ore
@@ -808,6 +835,7 @@ it:
   module_label_teaching_csd: Insegnare le scoperte dell'informatica
   module_label_teaching_csp: Insegnamento dei principi dell'informatica
   module_label_teaching_problem_solving: Insegnamento di Problem Solving e Computing
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Teaching Computer Science Connections
   module_label_teaching_ai: Insegnamento dell'IA e dell'apprendimento automatico
   module_label_teaching_maker_cp: Insegnare a creare app con dispositivi (Circuit
@@ -877,6 +905,12 @@ it:
   heading_attend_free_workshop: Partecipa a un seminario gratuito per studenti
   heading_access_more_cs_resources: Accedi a ulteriori risorse di informatica
   heading_available_on_code_dot_org: Disponibile su Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Se sei una studentessa delle superiori appassionata di incoraggiare
     più giovani donne a studiare informatica nella tua scuola, allora abbiamo bisogno
     di te!
@@ -952,6 +986,19 @@ it:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Workshop di persona e virtuali
     a partire da questa estate.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Vai avanti, taglia il cavo (per un po')!
   no_devices_section_desc: L'istruzione CS non deve essere sempre davanti a uno schermo
     e l'accesso ai dispositivi non dovrebbe essere un ostacolo all'apprendimento dei
@@ -978,6 +1025,11 @@ it:
   subscribe_form_section_desc_csp: Iscriviti per ricevere e-mail mensili sui principi
     dell'informatica di Code.org e ricevere utili promemoria, suggerimenti e aggiornamenti
     direttamente nella tua casella di posta.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Puoi annullare l'iscrizione in qualsiasi momento.
   hoc_page_what_is_hoc_heading: Cosa è l'Ora del Codice?
   hoc_page_desc: "[Ora del Codice](%{hoc_url}) è un movimento globale che raggiunge
@@ -991,10 +1043,11 @@ it:
   hoc_page_place_to_start: Ci sono diversi punti di partenza, scegli quello più adatto
     a te e ai tuoi studenti
   hoc_page_lead_activity_heading: Svolgi un'attività dell'Ora del Codice
-  hoc_page_lead_activity_desc: Con più di 700 attività tra cui scegliere con classificazioni
-    per livello scolastico, esperienza e inclusione o meno dell'Intelligenza Artificaile,
-    le tue scelte sono ampie. Quando conosci i tuoi piani, [registra la tua attività](%{register_activity_url})
-    in modo da poter celebrare tutti gli eventi che si svolgono in tutto il mondo.
+  hoc_page_lead_activity_desc: Con più di 700 attività con classificazioni per livello
+    scolastico, esperienza e inclusione o meno dell'Intelligenza Artificaile, hai
+    un'ampia possibilità di scelta. Quando hai definito i tuoi piani, [registra la
+    tua attività](%{register_activity_url}) in modo da poter celebrare tutti gli eventi
+    che si svolgono in tutto il mondo.
   hoc_page_activity_minecraft_desc: Costruisci ed esplora con Minecraft! Impara le
     competenze informatiche di base con molte diverse attività di Minecraft tra cui
     scegliere.
@@ -1003,9 +1056,9 @@ it:
     tecnologie, attraverso video e piani di lezioni di accompagnamento.
   hoc_page_how_ai_works_title: Piani delle lezioni - Come funziona l'IA
   hoc_page_ai_101_heading: Interagisci con AI 101 for Teachers
-  hoc_page_ai_101_desc: AI 101 for Teachers è una serie di video sull'apprendimento
-    professionale in cinque parti che demistificherà l'IA, esplorerà l'implementazione
-    responsabile, affronterà i pregiudizi e mostrerà come l'apprendimento basato sull'IA
+  hoc_page_ai_101_desc: AI 101 for Teachers è una serie di cinque video per la formazione
+    degli insegnanti con la quale si intende demistificare l'IA, esplorare l'implementazione
+    responsabile, affrontare i pregiudizi e mostrare come l'apprendimento basato sull'IA
     può rivoluzionare i risultati degli studenti.
   hoc_page_ai_101_block_title: 'Serie di video: AI 101 for Teachers'
   hoc_page_ai_101_block_desc: Una serie di apprendimento online gratuita e fondamentale
@@ -1016,11 +1069,11 @@ it:
     2 milioni di educatori che danno potere alla prossima generazione di innovatori,
     risolutori di problemi e cittadini digitali.
   hoc_page_go_beyond_hoc_card_desc_curriculum: Sfrutta tutto il potenziale dei tuoi
-    studenti con il curriculum di informatica gratuito, flessibile e divertente di
-    Code.org. C'è qualcosa per ogni classe.
-  hoc_page_go_beyond_hoc_card_desc_pl: I nostri moduli gratuiti di autoapprendimento
-    ti aiutano a sviluppare la tua comprensione mentre ti prepari a insegnare informatica
-    in classe.
+    studenti con i corsi di informatica gratuiti, flessibili e divertente di Code.org.
+    C'è qualcosa per ogni classe.
+  hoc_page_go_beyond_hoc_card_desc_pl: I nostri corsi gratuiti in autoapprendimento
+    ti aiutano a sviluppare la comprensione di questi nuovi concetti, mentre ti prepari
+    a insegnare informatica in classe.
   dance_hero_heading: Programma con Ballando col codice
   dance_featuring_songs_by_short: 'Con canzoni di:'
   dance_featuring_songs_by_long: 'Dance Party include brani di:'
@@ -1187,6 +1240,7 @@ it:
     rispondano alla maggior parte delle esigenze di tutti i partecipanti.
   ai_curriculum_btn_aria_label_06: Visualizza il piano delle lezioni sull'impatto
     sociale dell'intelligenza artificiale generativa
+  ai_curriculum_btn_aria_label_dance_ai: 'Prova Dance Party: attività edizione AI'
   ai_carousel_heading: 'Cosa dicono gli insegnanti sull''IA con Code.org:'
   ai_carousel_quote_01: Questa lezione ha anche dato ai miei studenti l'opportunità
     di vedere che esiste un elemento di opinione nei sistemi di classificazione. Più
@@ -1265,7 +1319,7 @@ it:
     di Khan Academy consente agli insegnanti di smettere di dedicare tempo a compiti
     di preparazione che non amano e di concentrarsi su ciò che amano: insegnare.'
   ai_pl_101_explore__button_1: Prova Khanmigo
-  ai_pl_101_explore_title_2: Esplorazioni di intelligenza artificiale per insegnanti
+  ai_pl_101_explore_title_2: Esplorazioni sull'Intelligenza Artificiale per insegnanti
   ai_pl_101_explore__desc_2: Per sei anni, questo corso online di 15 ore dell'ISTE
     ha guidato gli educatori K-12 sugli elementi essenziali dell'IA per l'insegnamento
     e l'apprendimento. Il corso viene offerto tre volte all'anno ed è completamente
@@ -1400,6 +1454,68 @@ it:
     algoritmico'
   ai_vid_ethics2_caption: 'Etica e intelligenza artificiale: privacy e futuro del
     lavoro'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Apprendimento professionale autonomo per insegnanti
   self_paced_pl_hero_desc: Offerte di formazione professionale per supportare gli
     insegnanti in ogni fase del loro percorso di insegnamento dell'informatica.
@@ -1672,20 +1788,16 @@ it:
     e ti dà una guida su come farlo. Quindi, se entri senza alcuna esperienza in informatica,
     è tutto lì per te. Se hai già esperienza con l'informatica e l'hai insegnata,
     ti darà un nuovo modo di affrontare l'insegnamento per i tuoi studenti.
-  teach_page_free_curriculum_heading: Curriculum gratuito e coinvolgente
+  teach_page_free_curriculum_heading: Corsi gratuiti e coinvolgenti
   teach_page_free_curriculum_desc: Vogliamo che tu porti l'informatica nella tua scuola
-    senza preoccuparti dei costi. Ecco perché ci siamo impegnati affinché le nostre
-    offerte di curriculum siano gratuite per sempre!
-  teach_page_free_curriculum_list_desc_01: Curriculum gratuito, flessibile e divertente
-    con offerte in oltre 67 lingue.
-  teach_page_free_curriculum_list_desc_02: Code.org propone di tutto, dai programmi
-    di studio annuali alle attività di una singola unità. Inoltre, aggiorniamo i nostri
-    programmi di studio ogni anno, per supportare le migliori pratiche e le aree di
-    interesse e creare nuove offerte che insegnino argomenti attuali e richiesti.
-  teach_page_free_curriculum_list_desc_03: Ogni curriculum è associato ad almeno una
-    serie di standard nazionali, tra cui CSTA, Next Generation Science Standards e
-    Common Core.
-  teach_page_free_curriculum_list_desc_04: Offerte in oltre 67 lingue
+    senza preoccuparti dei costi. Ecco perché ci siamo impegnati affinché i nostri
+    corsi siano gratuiti per sempre!
+  teach_page_free_curriculum_list_desc_01: Corsi gratuiti, flessibili e divertenti
+  teach_page_free_curriculum_list_desc_02: Aggiornati ogni anno per stare al passo
+    con le migliori pratiche
+  teach_page_free_curriculum_list_desc_03: Integrazione di argomenti molto richiesti
+    nelle nuove versioni
+  teach_page_free_curriculum_list_desc_04: Disponibili in oltre 67 lingue
   teach_page_free_curriculum_list_desc_05: Mappato su almeno un set di standard nazionali
     (inclusi CSTA, NGSS e Common Core)
   teach_page_free_curriculum_heading_02: 'Esplora le nostre offerte di curriculum
@@ -2606,9 +2718,9 @@ it:
   hoc_homepage_join_the_movement_heading: Partecipa al movimento
   hoc_homepage_join_the_movement_description: Le attività dell'Ora del Codice sono
     disponibili tutto l'anno, ma a inizio dicembre la tua classe può partecipare insieme
-    a milioni di studenti che celebrano la Settimana di Educazione all'Informatica
-    con l'Ora del Codice (Hour of Code). La registrazione per la celebrazione annuale
-    inizia a ottobre.
+    a milioni di studenti che celebrano la Settimana Internazionale di Educazione
+    all'Informatica con l'Ora del Codice (Hour of Code). La registrazione per la celebrazione
+    annuale inizia a ottobre.
   hoc_homepage_join_the_celebration_description: La tua classe o il tuo gruppo possono
     unirsi a milioni di persone in tutto il mondo che partecipano all'Ora del Codice!
     Quest'anno la celebrazione della Settimana Internazionale di Educazione all'Informatica
@@ -2623,9 +2735,9 @@ it:
     e 200.000 educatori in tutto il mondo.
   hoc_homepage_registration_desc: La tua classe o il tuo gruppo possono unirsi a milioni
     di persone in tutto il mondo che partecipano all'Ora del Codice! Le iscrizioni
-    alla celebrazione annuale della Settimana di Educazione all'Informatica iniziano
-    a ottobre. Tuttavia, le attività dell'Ora del Codcie resatno disponibili tutto
-    l'anno.
+    alla celebrazione annuale della Settimana Internazionale di Educazione all'Informatica
+    iniziano a settembre. Considera comunque che le attività dell'Ora del Codice restano
+    disponibili tutto l'anno.
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Leggi la nostra guida pratica](%{howto_guide_url})
     per pianificare un evento per la tua lezione."
   hoc_homepage_highlights_heading: Punti salienti di Hour of Code
@@ -2666,9 +2778,9 @@ it:
   signup_event_entire_school_label: 'Partecipano tutti gli studenti della mia scuola '
   signup_event_location_label: Località dell'evento (facoltativo)
   signup_event_location_error: È necessario inserire il luogo dell'evento.
-  signup_special_event_flag_label: Il mio evento coinvolgerà un intero municipio,
-    un'intera comunità, membri della comunità e/o altri impianti speciali per oltre
-    un'ora.
+  signup_special_event_flag_label: Il mio evento coinvolge un intero municipio, un'intera
+    organizzazione, membri della comunità, oppure ha una programmazione speciale per
+    imparare più di un'Ora del Codice
   signup_special_event_details_label: Dettagli dell'evento speciale
   signup_send_posters_flag_label: Invia i <a href= "/resources#posters"> poster</a>
     alla mia scuola o organizzazione (solo negli USA)
@@ -2677,7 +2789,7 @@ it:
     scuola
   signup_your_event: Iscriviti
   signup_host_an_hour: Organizza un'Ora del Codice
-  signup_match_volunteer: Aiutami a trovare un esperto di informatica per stimolare
+  signup_match_volunteer: Aiutami a trovare un esperto di informatica per ispirare
     i miei studenti (solo per gli USA)
   signup_email_preference_opt_in: Possiamo inviarti via email aggiornamenti sui corsi
     di Code.org e altre notizie legate al mondo dell'informatica?
@@ -2697,7 +2809,7 @@ it:
     di essi. Contiamo solo un evento per ogni differente combinazione di nome e indirizzo
     di posta elettronica.
   signup_name_placeholder: Il tuo nome
-  signup_email_placeholder: Per esempio, nome.cognome@posta.istruzione.it
+  signup_email_placeholder: Per esempio, nome.cognome@scuola.istruzione.it
   signup_organization_name_placeholder: Per esempio, Liceo Dante Alighieri
   signup_event_country_label: Paese dell'evento
   signup_event_country_error: È necessario inserire il paese dell'evento.
@@ -2786,54 +2898,55 @@ it:
     (Grazie %{random_donor} per aver sostenuto @codeorg)'
   hoc_faq_title: FAQ
   hoc_faq_what_is_hoc_q: Cos'è l'Ora del Codice?
-  hoc_faq_what_is_hoc_a_markdown: L'Ora del Codice è iniziato come una lezione di
+  hoc_faq_what_is_hoc_a_markdown: L'Ora del Codice è iniziata come una lezione di
     introduzione all'informatica della durata di un'ora, progettata per rimuovere
-    l'alone di mistero che spesso avvolge il "codice" e la programmazione dei computer
-    e per allargare la partecipazione nel campo dell'informatica. Da allora è diventata
-    uno sforzo globale per diffondere l'informatica, iniziando con attività di programmazione
+    l'alone di mistero che spesso avvolge la programmazione informatica e per allargare
+    la partecipazione nel campo dell'informatica. Da allora è diventata uno sforzo
+    globale per diffondere l'informatica, iniziando con attività di programmazione
     della durata di 1 ora, ed espandendosi grazie ad un incredibile impegno collettivo.
     Guarda tutte le [attività disponibili](%{tutorials}). Questa campagna viene supportata
     da più di [400 partner](%{partners}) e 200,000 educatori in tutto il mondo.
   hoc_faq_last_year: Prova le esercitazioni
   hoc_faq_when_is_hoc_q: Quando è l'Ora del Codice?
   hoc_faq_when_is_hoc_a_markdown: L'Ora del Codice si svolge ogni anno durante la
-    [Settimana di Educazione all'Informatica](%{csedweek_url}). La Settimana di Educazione
-    all'Informatica del %{campaign_date_year} sarà nel periodo %{campaign_date_full},
-    ma puoi organizzare un'Ora del Codice durante tutto l'anno. La Settimana di Educazione
-    all'Informatica viene svolta ogni anno nel periodo in cui ricade la data di nascita
-    della pioniera dell'Informatica [Ammiraglio Grace Murray Hopper](%{grace_hopper})
-    (9 dicembre 1906).
+    [Settimana Internazionale di Educazione all'Informatica](%{csedweek_url}). La
+    Settimana Internazionale di Educazione all'Informatica del %{campaign_date_year}
+    sarà nel periodo %{campaign_date_full}, ma puoi organizzare un'Ora del Codice
+    durante tutto l'anno. La Settimana Internazionale di Educazione all'Informatica
+    viene svolta ogni anno nel periodo in cui ricade la data di nascita della pioniera
+    dell'Informatica [Ammiraglio Grace Murray Hopper](%{grace_hopper}) (9 dicembre
+    1906).
   hoc_faq_why_cs_q: Perché l'informatica?
   hoc_faq_why_cs_a_markdown: _Ogni_ studente dovrebbe avere l'opportunità di imparare
     l'informatica. Aiuta a coltivare abilità riguardanti la risoluzione di problemi,
     la logica e la creatività. Iniziando in giovane età, gli studenti avranno le basi
     per raggiungere il successo in qualsiasi tipo di carriera del XXI secolo. Vedi
-    ulteriori statistiche [here](%{stats_url}). Se sei in Italia visita il sito programmailfuturo.it
+    ulteriori statistiche [qui](%{stats_url}). Se sei in Italia visita il sito programmailfuturo.it
   hoc_faq_how_participate_q: Come partecipare all'Ora del Codice?
   hoc_faq_how_participate_a_markdown: "[Inizia la progettazione qui](%{howto}) esaminando
     la nostra guida. Puoi organizzare un evento dell'Ora del Codice nella tua scuola
     o nel tua comunità — come, ad esempio, in un circolo o in un'associazione senza
     scopo di lucro oppure al lavoro. "
   hoc_faq_behind_hoc_q: Chi c'è dietro l'Ora del Codice?
-  hoc_faq_behind_hoc_a_markdown: Hour of Code è organizzata con il supporto del Hour
-    of Code Review Committee, così come di un gruppo senza precedenti di [partners](%{partner_url})
-    che si sono uniti per supportare Hour of Code, compresi Microsoft, Apple, Amazon,
-    Boys and Girls Clubs of America e la College Board.
+  hoc_faq_behind_hoc_a_markdown: L'Ora di Codice è organizzata con il supporto dell'Hour
+    of Code Review Committee, così come di un gruppo senza precedenti di [partner](%{partner_url})
+    che si sono uniti per supportare il movimento dell'Ora del Codice, compresi Microsoft,
+    Apple, Amazon, Boys and Girls Clubs of America e la College Board.
   hoc_faq_host_q: Non so nulla di programmazione e di informatica. Posso organizzare
     ugualmente un evento?
-  hoc_faq_host_a_markdown: Naturalmente. Le attività di Hour of Code sono autogestite.
-    Tutto ciò che devi fare è  [provare le nostre esercitazioni ](%{learn_url}), scegliere
+  hoc_faq_host_a_markdown: Naturalmente. Le attività dell'Ora del Codice sono autogestite.
+    Tutto ciò che devi fare è [provare le nostre esercitazioni ](%{learn_url}), scegliere
     quello che preferisci e un orario, noi pensiamo a tutto il resto. Abbiamo opzioni
     per ogni età e livello di esperienza, a partire dall'età prescolare. Inizia a
     pianificare il tuo evento leggendo la nostra [guida che spiega come farlo](%{howto_url}).
   hoc_faq_devices_q: Quali dispositivi dovrei usare per i miei studenti?
-  hoc_faq_devices_a_markdown: I tutorial di Code.org funzionano su tutti i browser
-    e dispositivi. È possibile vedere ulteriori informazioni circa i requisiti tecnici
-    dei tutorial di Code.org [qui](%{it_url}). I requisiti tecnici per i tutorial
-    che non sono di Code.org possono essere trovati su [hourofcode.com/learn](%{learn_url})
-    nella descrizione specifica dei tutorial. Non dimenticare che offriamo anche [attività
-    non collegate](%{unplugged_url}) se la scuola non ha la possibilità di organizzare
-    i tutorial!
+  hoc_faq_devices_a_markdown: Le esercitazioni di Code.org funzionano su tutti i browser
+    e dispositivi. È possibile trovare ulteriori informazioni sui requisiti tecnici
+    delle esercitazioni di Code.org [qui](%{it_url}). I requisiti tecnici delle esercitazioni
+    di altri partner possono essere trovati su [hourofcode.com/learn](%{learn_url})
+    nella descrizione specifica dell'esercitazione. Non dimenticare che offriamo anche
+    [attività tradizionali](%{unplugged_url}) se la scuola non ha la possibilità di
+    ospitare esercitazini interattive!
   hoc_faq_need_computers_q: Ho bisogno di un computer per ogni partecipante?
   hoc_faq_need_computers_a_markdown: "No. Abbiamo lezioni dell'Ora del Codice che
     funzionano su PC, su smartphone, su tablet oltre a lezioni che non necessitano
@@ -2842,21 +2955,21 @@ it:
     in coppia.** [Le ricerche dimostrano](%{pair_programming_research}) come gli studenti
     imparino meglio attraverso la [programmazione in coppia](%{pair_programming_video}),
     condividendo un computer e lavorando insieme. Incoraggia i tuoi studenti a lavorare
-    insieme. - **Utilizza un proiettore.** Se hai un proiettore e un computer connesso
+    insieme.\n- **Utilizza un proiettore.** Se hai un proiettore e un computer connesso
     ad Internet, i tuoi studenti potranno partecipare all'Ora del Codice tutti insieme.
     Guardate insieme le parti dei video e a turno risolvete gli esercizi o rispondete
-    alle domande. -**Usa le lezioni tradizionali.** Offriamo anche [lezioni che non
+    alle domande.\n-**Usa le lezioni tradizionali.** Offriamo anche [lezioni che non
     richiedono alcun computer](%{unplugged_url})."
   hoc_faq_international_q: Io sono in Italia. Come posso partecipare a livello internazionale?
   hoc_faq_international_a_markdown: Tutti possono organizzare un evento dell'Ora del
     Codice, in tutto il mondo. L'anno scorso hanno partecipato all'Ora del Codice
     studenti di ogni parte del mondo. Per saperne di più clicca [qui](%{promote}).
   hoc_faq_tutorial_q: Come posso creare un'esercitazione dell'Ora del Codice?
-  hoc_faq_tutorial_a_markdown: Se sei interessato a creare un tutorial, [leggi le
-    nostre linee guida e le istruzioni](%{tutorial_guidelines}). Ci piacerebbe offrire
-    una grande varietà di opzioni coinvolgenti , ma l'obbiettivo primario è ottimizzare
-    l'esperienza per gli studenti ed i docenti che si affacciano per la prima volta
-    all'informatica.
+  hoc_faq_tutorial_a_markdown: Se sei interessato a creare una nuova esercitazione,
+    [leggi le nostre linee guida e le istruzioni](%{tutorial_guidelines}). Siamo felici
+    di offrire una grande varietà di opzioni coinvolgenti, ma l'obbiettivo primario
+    è di ottimizzare l'esperienza per gli studenti e i docenti che si affacciano per
+    la prima volta all'informatica.
   hoc_faq_account_q: Gli studenti devono accedere utilizzando un account?
   hoc_faq_account_a_markdown: Assolutamente no. Non è richiesta alcuna registrazione
     o accesso agli studenti che vogliono provare Hour of Code. La maggior parte dei
@@ -2866,14 +2979,14 @@ it:
     studenti, segui queste [istruzioni](%{section_instructions_url}).
   hoc_faq_high_school_q: Quale attività dovrei fare con gli studenti delle scuole
     superiori?
-  hoc_faq_high_school_a_markdown: I nostri tutorial di Guerre Stellari e Minecraft
+  hoc_faq_high_school_a_markdown: Le nostre esercitazioni di Guerre Stellari e Minecraft
     sono perfetti per le scuole superiori, soprattutto la versione JavaScript di Guerre
-    Stellari e gli esercizi "liberi" su entrambi i tutorial. In alternativa, per iniziare
-    raccomandiamo di provare uno dei tutorial per principianti su [hourofcode.com/learn](%{learn_url})
-    come, ad esempio, il tutorial con Angry Birds o quella con Anna ed Elsa. Uno studente
-    di scuola superiore è in grado di terminare ciascuna di essa in non più di 30
-    minuti; successivamente può provare una lezione avanzata per il linguaggio Javascript,
-    come quelli di Khan Academy o CodeHS.
+    Stellari e gli esercizi "liberi" di entrambe le attività. In alternativa, per
+    iniziare raccomandiamo di provare una delle esercitazioni per principianti su
+    [hourofcode.com/learn](%{learn_url}) come, ad esempio, quella con Angry Birds
+    o quella con Anna ed Elsa. Uno studente di scuola superiore è in grado di terminare
+    ciascuna di essa in non più di 30 minuti; successivamente può provare una lezione
+    avanzata per il linguaggio Javascript, come quelli di Khan Academy o CodeHS.
   hoc_faq_scratch_q: Sto usando Scratch per l'Ora del Codice, ma cosa succede se i
     miei studenti hanno un iPad invece di un computer portatile?
   hoc_faq_scratch_a_markdown: Scratch non funziona sui tablet. Se gli studenti sono
@@ -2883,46 +2996,63 @@ it:
     CodeSpark.
   hoc_faq_count_hoc_q: In che modo contate le Ore del Codice fatte?
   hoc_faq_map_q: Perché non vedo il mio segnalino sulla mappa?
-  hoc_faq_map_a_markdown: Ci dispiace che non si veda il tuo evento sulla mappa di
-    Hour of Code. A causa delle decine di migliaia di organizzatori che si iscrivono,
+  hoc_faq_map_a_markdown: Ci dispiace che non si veda il tuo evento sulla mappa dell'Ora
+    del Codice. A causa delle decine di migliaia di organizzatori che si iscrivono,
     la mappa aggrega i dati e viene visualizzato un segnalino per diversi eventi.
     Se clicchi sul link alla [pagina degli eventi](%{events_url}) sotto la mappa,
     accedi a un elenco di tutti gli eventi per nazione e puoi trovare il tuo evento
-    lì elencato. Inoltre, date le migliaia di persone che si iscrivono a Hour of Code,
-    sono in genere necessarie 48 ore per aggiornare la mappa. Ricontrolla tra qualche
-    giorno!
-  hoc_faq_count_hoc_a_markdown: 'Nel monitorare la partecipazione su Hour of Code,
-    non contiamo perfettamente gli ID univoci degli studenti. Perché? In parte perché
-    non vogliamo che venga richiesto di "accedere/registrarsi" prima che uno studente
-    o una classe provi per la prima volta, e in parte perché ci sono molte attività
-    che non possiamo monitorare online. Adottiamo alcune misure per ridurre i doppi
-    conteggi, ma senza una richiesta di accesso ciò non può funzionare perfettamente.
-    Allo stesso tempo, ci sono MOLTE attività degli studenti in Hour of Code che non
-    vengono affatto monitorate. Ad esempio: (1) gli studenti che utilizzano un''app
-    mobile/tablet per provare Hour of Code in genere non vengono conteggiati; (2)
-    gli studenti che condividono uno schermo per la programmazione in coppia o in
-    gruppo possono essere conteggiati come uno; (3) lo studente che prova un''attività
-    in classe offline non può essere conteggiato come online; (4) insegnanti che creano
-    le proprie attività di Hour of Code. Di conseguenza, si verificano alcuni sottoconteggi
-    e alcuni doppi conteggi, quindi non consideriamo il tracker di Hour of Code una
-    misura esatta dell''utilizzo. È certamente corretto e dimostra che hanno partecipato
-    molte decine di milioni di studenti.'
+    lì elencato. Inoltre, date le migliaia di persone che si iscrivono all'Ora del
+    Codice, sono in genere necessarie 48 ore per aggiornare la mappa. Ricontrolla
+    tra qualche giorno!
+  hoc_faq_count_hoc_a_markdown: 'Nel monitorare la partecipazione all''evento dell''Ora
+    del Codice, non contiamo perfettamente gli ID univoci degli studenti. Perché?
+    In parte perché non vogliamo che venga richiesto di "accedere/registrarsi" prima
+    che uno studente o una classe provi per la prima volta e in parte perché ci sono
+    molte attività che non possiamo monitorare online. Adottiamo alcune misure per
+    ridurre i doppi conteggi, ma senza una richiesta di accesso ciò non può funzionare
+    perfettamente. Allo stesso tempo, ci sono MOLTE attività dell''Ora del Codice
+    che non vengono affatto monitorate. Ad esempio: (1) gli studenti che utilizzano
+    un''app mobile/tablet per provare un''Ora del Codice in genere non vengono conteggiati;
+    (2) gli studenti che condividono uno schermo per la programmazione in coppia o
+    in gruppo possono essere conteggiati come uno; (3) lo studente che prova un''attività
+    tradizionale in classe non può essere conteggiato; (4) insegnanti che creano le
+    proprie attività dell''Ora del Codice. Di conseguenza, si verificano alcuni sottoconteggi
+    e alcuni doppi conteggi, quindi non consideriamo il tracker dell''Ora del Codice
+    una misura esatta dell''utilizzo. È certamente corretto l''ordine di grandezza
+    e dimostra che hanno partecipato molte decine di milioni di studenti.'
   hoc_faq_one_hour_q: Quanto posso imparare in un'ora?
-  hoc_faq_one_hour_a_markdown: |-
-    Lo scopo di Hour of Code non è insegnare a diventare un esperto informatico in un'ora, ma basta un'ora per imparare che l'informatica è divertente e creativa, accessibile a tutte le età e a tutti gli studenti, indipendentemente dal background. La misura del successo di questa campagna non è data da quanto apprendono gli studenti di informatica: il successo si riflette nell’ampia partecipazione di gruppi di genere, razza/etnia e socioeconomici e nel conseguente aumento delle iscrizioni e della partecipazione che vediamo nei corsi di informatica a tutti i livelli. Milioni di insegnanti e studenti partecipanti hanno deciso di andare oltre la prima ora, di imparare per un giorno intero, un'intera settimana o più, e di conseguenza molti studenti hanno deciso di iscriversi a un intero corso (o anche a una specializzazione universitaria).
-
-    Oltre agli studenti, un altro "discente" è l'educatore, che dopo un'ora acquisisce la sicurezza di poter insegnare informatica anche se non ha una laurea in informatica. Decine di migliaia di insegnanti decidono di approfondire l'informatica, frequentando corsi di sviluppo professionale o corsi online successivi, o entrambi. E questo vale anche per gli amministratori scolastici, che si rendono conto che l’informatica è qualcosa che i loro studenti desiderano e di cui i loro insegnanti sono capaci.
+  hoc_faq_one_hour_a_markdown: "L'obiettivo dell'Ora del Codice non è di insegnare
+    a diventare un esperto informatico in un'ora. Un'ora è solo quanto basta per rendersi
+    conto che l'informatica è divertente e creativa, che è accessibile a tutte le
+    età, a tutti gli studenti, indipendentemente dal contesto. La misura del successo
+    di questa campagna non è quanta informatica imparano gli studenti - il successo
+    è misurato dall'ampia partecipazione dei generi e dei vari gruppi etnici e socioeconomici
+    e il conseguente incremento di iscrizione ai corsi di informatica e la crescente
+    partecipazione che vediamo nei corsi di informatica a tutti i livelli. Milioni
+    di partecipanti, insegnanti e studenti, hanno deciso di proseguire al di là di
+    un'ora - di imparare per un intero giorno o un'intera settimana o più, e molti
+    studenti - come risultato di questo progetto - hanno deciso di iscriversi a un
+    intero corso universitario di informatica (o anche di laurearsi in informatica).
+    \n\nOltre agli studenti, un altro \"discente\" è l'educatore che dopo un'ora acquisisce
+    la sicurezza di poter insegnare informatica anche se non ha necessariamente una
+    laurea in informatica. Decine di migliaia di insegnanti decidono di proseguire
+    ulteriormente nello studio dell'informatica, frequentando corsi in presenza oppure
+    online o entrambi. E questo vale anche per gli amministratori della scuola, che
+    capiscono quanto l'informatica sia qualcosa che i loro studenti vogliono e che
+    gli insegnanti sono in grado di insegnare.\n\nSoprattutto, ciò che tutti i partecipanti
+    possono imparare in un'ora, è che POSSONO FARCELA."
   hoc_faq_more_questions_q: Hai ancora domande?
   hoc_faq_more_questions_a_markdown: Cerca una risposta nel nostro [support forum](http://support.code.org).
   hoc_faq_keep_learning_q: Come continuo ad imparare dopo l'Ora del Codice?
   hoc_faq_keep_learning_a_markdown: Chiunque può organizzare un'Ora del Codice in
     qualsiasi momento. Le nostre esercitazioni sono sempre disponibili, per tutto
-    il tempo che vorrai. Vai alla pagina [promuovi](%{promote}) per trovare per guide
-    a come organizzare un evento ed altre risorse utili per contribuire a rendere
+    il tempo che vorrai. Vai alla pagina [promuovi](%{promote}) per trovare delle
+    guide su come organizzare un evento e altre risorse utili per contribuire a rendere
     il tuo evento dell'Ora del Codice un successo.
   hoc_faq_certificates_q: Dove posso stampare gli attestati per i miei studenti?
-  hoc_faq_certificates_answer_markdown: Vai alla nostra [pagina dei certificati](%{certificates_url})
-    dove puoi stampare in anticipo i certificati per l'intera classe.
+  hoc_faq_certificates_answer_markdown: 'Vai alla nostra [pagina degli attestati](%{certificates_url})
+    dove puoi stampare in anticipo gli attestati per l''intera classe. Se vuoi la
+    versione italiana, la puoi trovare sul sito di Programma il Futuro: programmailfuturo.it/come/attestati-personalizzati'
   hoc_faq_logo_q: Ci sono limitazioni per l'uso del logo o del nome "Hour of Code"?
   hoc_faq_logo_a_markdown: '"Hour of Code" è un marchio registrato. Non vogliamo impedire
     il suo utilizzo, ma vogliamo essere sicuri che il suo utilizzo rientri all''interno
@@ -2989,7 +3119,7 @@ it:
   handouts_brochure: Dai questo opuscolo agli insegnanti e alle scuole
   handouts_participationguide: Programma la tua Ora del Codice seguendo con questa
     guida
-  videos_title: Mostra questi video per stimolare gli studenti
+  videos_title: Mostra questi video per ispirare gli studenti
   videos_what_most_schools_dont_teach: Ciò che la Maggior Parte delle Scuole Non Insegna
     (5 min)
   videos_hoc_2014: L'Ora del Codice è Qui - Chiunque Può Imparare
@@ -3011,11 +3141,11 @@ it:
   title_how_to: Guida
   title_international_partners: Contatti dei partner internazionali
   title_press_release: L'Ora del Codice Comunicato Stampa per i rappresentanti eletti
-  title_op_ed: Un esempio di articolo per supportare la Settimana di Educazione all'Informatica
-    e l'Ora del Codice
+  title_op_ed: Un esempio di articolo per supportare la Settimana Internazionale di
+    Educazione all'Informatica e l'Ora del Codice
   title_press_kit: Kit per la stampa
-  title_proclamation: Un esempio di delibera per supportare la Settimana di Educazione
-    all'Informatica e l'Ora del Codice
+  title_proclamation: Un esempio di delibera per supportare la Settimana Internazionale
+    di Educazione all'Informatica e l'Ora del Codice
   title_stats: Statistiche utili
   title_partners: Partner
   title_resources: Resources
@@ -3093,6 +3223,7 @@ it:
     o [leggi la guida](%{howto_url})'
   tutorial_dance2019_name: Ballando col codice
   tutorial_danceparty_name: Ballando col codice
+  tutorial_dancepartyai_name: 'Ballando col codice: edizione IA'
   tutorial_chibitronics_name: 'Chibitronic: Storia geniale'
   tutorial_athlete_name: Programma il tuo sport
   tutorial_moana_name: 'Oceania: orientati con il Codice'
@@ -3794,6 +3925,9 @@ it:
   tutorial_danceparty_shortdescription: Crea un progetto in "Ballando col codice"
     da condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara e altri 25!
+  tutorial_dancepartyai_shortdescription: Scopri i concetti di intelligenza artificiale
+    (AI) per creare il tuo Dance Party virtuale con i migliori artisti di oggi. È
+    ora di dimostrare le tue abilità!
   tutorial_chibitronics_shortdescription: Programma un circuito cartaceo per illuminare
     la tua storia.
   tutorial_athlete_shortdescription: Scegli se creare una partita di basket o abbina
@@ -5066,6 +5200,9 @@ it:
   tutorial_danceparty_longdescription: Crea un progetto in "Ballando col codice" da
     condividere con i tuoi amici. Con Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
     Ciara e altri 25!
+  tutorial_dancepartyai_longdescription: Scopri i concetti di intelligenza artificiale
+    (AI) per creare il tuo Dance Party virtuale con i migliori artisti di oggi. È
+    ora di dimostrare le tue abilità!
   tutorial_chibitronics_longdescription: Programma un circuito cartaceo per illuminare
     la tua storia.
   tutorial_athlete_longdescription: Scegli se creare una partita di basket o abbina
@@ -8146,6 +8283,7 @@ it:
     la diversità che rende tutti noi unicamente speciali.
   tutorial_dance2019_string_detail_grades: Da 7 anni in su
   tutorial_danceparty_string_detail_grades: Da 7 anni in su
+  tutorial_dancepartyai_string_detail_grades: Grado 3+
   tutorial_chibitronics_string_detail_grades: Da pre-scolare a 11 anni
   tutorial_athlete_string_detail_grades: Da 7 anni in su
   tutorial_moana_string_detail_grades: Da 7 anni in su
@@ -8822,6 +8960,7 @@ it:
   tutorial_meeempathy_string_detail_grades: Da 7 anni in su
   tutorial_dance2019_string_platforms: Tutti i browser moderni, iPad
   tutorial_danceparty_string_platforms: Tutti i browser moderni, Android, iOS
+  tutorial_dancepartyai_string_platforms: Tutti i browser moderni, Android, iOS
   tutorial_chibitronics_string_platforms: Tutti i browser moderni, Lettore di schermo
   tutorial_athlete_string_platforms: Tutti i browser moderni
   tutorial_moana_string_platforms: Tutti i browser moderni, Android, iOS
@@ -9661,6 +9800,7 @@ it:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip e LED adesivi
     per circuiti
   tutorial_athlete_string_detail_platforms: ''
@@ -10343,6 +10483,7 @@ it:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blocchi
   tutorial_danceparty_string_detail_programming_languages: Blocchi
+  tutorial_dancepartyai_string_detail_programming_languages: Blocchi
   tutorial_chibitronics_string_detail_programming_languages: Blocchi
   tutorial_athlete_string_detail_programming_languages: Blocchi
   tutorial_moana_string_detail_programming_languages: Blocchi
@@ -15184,86 +15325,88 @@ it:
   what: 'Cosa:'
   when: 'Quando:'
   where: 'Dove:'
-  hoc_how_to_top_heading: La tua guida per Hour of Code
-  hoc_how_to_top_desc: Guide pratiche su misura per la migliore esperienza di Hour
-    of Code.
+  hoc_how_to_top_heading: La tua guida all'Ora del Codice
+  hoc_how_to_top_desc: Guide pratiche su misura per la migliore esperienza dell'Ora
+    del Codice.
   hoc_how_to_top_view_guide: Visualizza la guida per
   hoc_how_to_nav_main_aria_label: Scegli una guida
   hoc_how_to_nav_sidebar_aria_label: Navigazione nella barra laterale
   hoc_how_to_educators_intro_heading: Come pianificare la tua Ora del Codice
   hoc_how_to_educators_intro_desc: L'Ora del Codice (Hour of Code) è un'introduzione
-    all'informatica di un'ora, che utilizza divertenti tutorial per dimostrare che
-    chiunque può imparare le basi. Quest'anno, stiamo portando l'Ora del Codice a
-    nuovi traguardi offrendo opportunità di programmazione che comprendono sia l'Intelligenza
+    all'informatica di un'ora, che utilizza divertenti esercitazioni per dimostrare
+    che chiunque può imparare le basi. Quest'anno, stiamo portando l'Ora del Codice
+    a nuovi traguardi offrendo opportunità di programmazione che comprendono sia l'Intelligenza
     Artificiale (IA) che componenti non basati su di essa. Che voi o i vostri studenti
     siate programmatori esperti o che stiate tutti partendo per la vostra primissima
     spedizione informatica, questa Ora del Codice promette un viaggio straordinario.
   hoc_how_to_companies_intro_heading: In che modo la tua azienda può partecipare all'Ora
     del Codice
-  hoc_how_to_companies_intro_desc_01: Hour of Code è un'introduzione di un'ora all'informatica,
-    che utilizza divertenti tutorial per dimostrare che chiunque può imparare le basi.
-    Quest'anno, porteremo Hour of Code a nuovi livelli offrendo opportunità di coding
-    che comprendono componenti di intelligenza artificiale (AI) e non basati su di
-    essa.
+  hoc_how_to_companies_intro_desc_01: L'Ora del Codice (Hour of Code) è un'introduzione
+    di un'ora all'informatica, che utilizza divertenti esercitazioni per dimostrare
+    che chiunque può imparare le basi. Quest'anno, porteremo l'Ora del Codice a nuovi
+    livelli offrendo opportunità di coding che comprendono componenti di intelligenza
+    artificiale (AI) e non basati su di essa.
   hoc_how_to_companies_intro_desc_02: Tutti i vostri sforzi possono avere un impatto
     enorme sul modo in cui le giovani donne e studentesse provenienti da gruppi razziali
     ed etnici emarginati vedono l'informatica e il proprio potenziale.
   hoc_how_to_districts_intro_heading: Coinvolgi un intero distretto scolastico in
     una Hour of Code
-  hoc_how_to_districts_intro_desc_01: Hour of Code è un'introduzione di un'ora all'informatica,
-    che utilizza divertenti tutorial per dimostrare che chiunque può imparare le basi.
-    I distretti che aderiscono appieno ad Hour of Code possono contribuire a sensibilizzare
-    l'opinione pubblica sul movimento informatico e ispirare un maggior numero di
-    studenti a cimentarsi con l'informatica, in particolare le giovani donne e gli
-    studenti provenienti da gruppi razziali ed etnici storicamente emarginati.
+  hoc_how_to_districts_intro_desc_01: L'Ora del Codice (Hour of Code) è un'introduzione
+    di un'ora all'informatica, che utilizza divertenti esercitazioni per dimostrare
+    che chiunque può imparare le basi. I distretti che aderiscono appieno all'Ora
+    del Codice possono contribuire a sensibilizzare l'opinione pubblica sul movimento
+    informatico e ispirare un maggior numero di studenti a cimentarsi con l'informatica,
+    in particolare le giovani donne e gli studenti provenienti da gruppi razziali
+    ed etnici storicamente emarginati.
   hoc_how_to_events_intro_heading: Come organizzare un evento dell'Ora del Codice
-  hoc_how_to_events_intro_desc_01: Hour of Code è un'introduzione di un'ora all'informatica,
-    che utilizza divertenti tutorial per dimostrare che chiunque può imparare le basi.
-    I tuoi sforzi possono avere un impatto enorme sul modo in cui gli studenti vedono
-    l'informatica e il loro potenziale.
+  hoc_how_to_events_intro_desc_01: L'Ora del Codice (Hour of Code) è un'introduzione
+    di un'ora all'informatica, che utilizza divertenti esercitazioni per dimostrare
+    che chiunque può imparare le basi. I tuoi sforzi possono avere un impatto enorme
+    sul modo in cui gli studenti vedono l'informatica e il loro potenziale.
   hoc_how_to_events_intro_desc_02: Scuole o aziende che collaborano pienamente con
     Hour of Code possono contribuire ad aumentare la consapevolezza del movimento
     dell'informatica e ispirare più studenti a provare l'informatica, in particolare
     le giovani donne e gli studenti provenienti da gruppi etnici e razziali storicamente
     emarginati.
   hoc_how_to_parents_intro_heading: Come eseguire un'Ora del Codice con il tuo bambino
-  hoc_how_to_parents_intro_desc_01: Provare un Hour of Code è un modo semplice e divertente
-    per avvicinare tuo figlio all'informatica, forse per la prima volta. Non solo
-    l'informatica è fondamentale per tutti i campi di studio, ma studi recenti dimostrano
-    che i bambini che studiano informatica ottengono risultati migliori in altre materie,
-    eccellono nella risoluzione dei problemi e hanno il 17% in più di probabilità
-    di iscriversi all'università.
-  hoc_how_to_parents_intro_desc_02: Tu e tuo figlio potete unirvi a decine di milioni
-    di studenti in tutto il mondo in questo evento globale. Insieme, possiamo ispirare
-    i bambini a imparare, rompere gli stereotipi e aiutare i bambini a scoprire un
-    nuovo interesse. E soprattutto, hai già tutto ciò di cui hai bisogno per portare
-    Hour of Code a casa tua!
+  hoc_how_to_parents_intro_desc_01: Provare un'Ora del Codice (Hour of Code) è un
+    modo semplice e divertente per avvicinare tuo figlio o tua figlia all'informatica,
+    forse per la prima volta. Non solo l'informatica è fondamentale per tutti i campi
+    di studio, ma studi recenti dimostrano che i bambini che studiano informatica
+    ottengono risultati migliori in altre materie, eccellono nella risoluzione dei
+    problemi e hanno il 17% in più di probabilità di iscriversi all'università.
+  hoc_how_to_parents_intro_desc_02: Tu e tuo figlio o tua figlia potete unirvi a decine
+    di milioni di studenti in tutto il mondo in questo evento globale. Insieme, possiamo
+    ispirare i bambini a imparare, rompere gli stereotipi e aiutare i bambini a scoprire
+    un nuovo interesse. E soprattutto, hai già tutto ciò di cui hai bisogno per portare
+    l'Ora del Codice a casa tua!
   hoc_how_to_public_officials_intro_heading: 'Ospitare un amministratore locale all''Ora
     del Codice '
   hoc_how_to_public_officials_intro_desc_01: Invitare un amministratore locale al
-    vostro evento dell'Ora del Codice mostrerà al vostro rappresentante l'impatto
-    e la necessità dell'istruzione informatica e i vostri studenti saranno ispirati
-    da un modello da seguire nell'amministrazione.
+    tuo evento dell'Ora del Codice premetterà di mostrargli l'impatto e la necessità
+    dell'istruzione informatica e i vostri studenti saranno ispirati da un modello
+    da seguire nell'amministrazione.
   hoc_how_to_public_officials_intro_desc_02: Per organizzare con successo un evento
-    dell'Ora del Codice coinvolgendo rappresentanti eletti, completa queste attività
-    prima che il rappresentante eletto entri nella tua scuola. L'attività include
-    il coordinamento con il loro punto di contatto, gli inviti dei media, le deroghe
-    e la pianificazione dell'agenda.
+    dell'Ora del Codice coinvolgendo amministratori pubblici, completa queste attività
+    prima che il funzionario entri nella tua scuola. L'attività include il coordinamento
+    con il loro punto di contatto, gli inviti dei media, le deroghe e la pianificazione
+    dell'agenda.
   hoc_how_to_volunteers_intro_heading: Come diventare volontario Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: Hour of Code è un'introduzione di un'ora all'informatica,
-    che utilizza divertenti tutorial per dimostrare che chiunque può imparare le basi.
-    In qualità di volontario, i tuoi sforzi possono avere un impatto enorme sul modo
-    in cui gli studenti vedono l'informatica e il loro potenziale.
+  hoc_how_to_volunteers_intro_desc_01: L'Ora del Codice (Hour of Code) è un'introduzione
+    di un'ora all'informatica, che utilizza divertenti esercitazioni per dimostrare
+    che chiunque può imparare le basi. In qualità di volontario, i tuoi sforzi possono
+    avere un impatto enorme sul modo in cui gli studenti vedono l'informatica e il
+    loro potenziale.
   hoc_how_to_volunteers_intro_desc_02: Chiunque sia appassionato di formazione informatica
     e della crescente diversità tecnologica può diventare volontario! Ci piacerebbe
-    vedere la partecipazione di volontari di ogni provenienza. Hour of Code offre
+    vedere la partecipazione di volontari di ogni provenienza. L'Ora del Codice offre
     una grande varietà di attività per tutte le età e livelli di abilità, quindi non
     devi essere un esperto di programmazione per fare volontariato.
-  hoc_how_to_virtual_event_intro_heading: Come ospitare una Hour of Code
-  hoc_how_to_virtual_event_intro_desc_02: Sebbene Hour of Code possa svolgersi in
-    classe, non è necessario essere presenti di persona per goderti il divertimento!
-    Puoi ospitare un evento da remoto interattivo e stimolante utilizzando alcuni
-    di questi consigli.
+  hoc_how_to_virtual_event_intro_heading: Come organizzare un'Ora del Codice virtuale
+  hoc_how_to_virtual_event_intro_desc_02: Sebbene la modalità milgiore per svolgere
+    un'Ora del Codice sia in una classe, non è indispensabile essere presenti di persona
+    per goderti il divertimento! Puoi ospitare un evento da remoto interattivo e stimolante
+    utilizzando alcuni di questi consigli.
   hoc_how_to_faq_question_prerequisites: Quali sono i prerequisiti per fare un'Ora
     del Codice?
   hoc_how_to_faq_answer_prerequisites: L'Ora del Codice è semplice da svolgere, anche
@@ -15382,9 +15525,9 @@ it:
     questi suggerimenti:'
   hoc_how_to_step_beyond_hoc_desc_generic: L'informatica non si conclude con L'Ora
     del Codice! Sebbene il 90% dei genitori desideri che i propri figli imparino l'informatica,
-    la maggior parte delle scuole non la insegna ancora. Scopri i curriculum offerti
-    dai vari partner dell'Ora del Codice e impara come portare oggi queste proposte
-    nella tua scuola.
+    la maggior parte delle scuole non la insegna ancora. Scopri i corsi offerti dai
+    vari partner dell'Ora del Codice e impara come portare oggi queste proposte nella
+    tua scuola.
   hoc_how_to_step_plan_hour_desc_01: 'Ecco un esempio di programma per iniziare:'
   hoc_how_to_step_choose_activities_desc_01: Quest'anno, il tema dell'Ora del Codice
     è La creatività con l'Intelligenza Artificiale. Che si tratti di programmare nuove
@@ -15457,7 +15600,7 @@ it:
     fluente. Se non conosci le risposte, potete scoprirle insieme!'
   hoc_how_to_step_educators_celebrate_desc: 'Dopo l''evento, stampa gli attestati
     e fai i complimenti ai tuoi studenti. Sul sito di Programma il Futuro sono anche
-    disponibili gli attestati in italiano (programmailfuturo.it / PERCORSI / Attestati
+    disponibili gli attestati in italiano (programmailfuturo.it → PERCORSI → Attestati
     personalizzati). Condividi foto e video del tuo evento dell''Ora del Codice e
     mostra i risultati dei tuoi studenti usando #HourOfCode @codeorg #OradelCodice
     @programmailfuturo.'
@@ -15494,19 +15637,19 @@ it:
     scolastiche. Con il tuo supporto, insegnanti e amministratori scolastici possono
     decidere quale tipo di evento soddisfa meglio gli interessi delle tue scuole.
   hoc_how_to_step_districts_register_desc_01: Di' a tutti gli organizzatori di un
-    evento di registrarsi! Quando registri il tuo evento L'Ora del Codice, riceverai
+    evento di registrarsi! Quando registri il tuo evento dell'Ora del Codice, riceverai
     utili e-mail con notizie e suggerimenti per organizzare un'evento di successo.
     È anche un modo per far sapere ai volontari locali che la tua scuola sta partecipando.
     I volontari sono una grande risorsa e possono venire a parlare di informatica
-    alla tua classe o aiutare i tuoi studenti con le attività de L'Ora del Codice.
+    alla tua classe o aiutare i tuoi studenti con le attività dell'Ora del Codice.
   hoc_how_to_step_districts_promote_desc_01: Fai sapere della tua partecipazione agli
     eventi dell'Ora del Codice ai membri della comunità e ai soggetti interessati!
     Pubblica su Facebook, Twitter, Instagram e sulla home page del tuo istituto! Esplora
     i nostri esempi di email che ti aiutano a condividere l'evento dell'Ora del Codice
     con la tua comunità.
   hoc_how_to_step_districts_celebrate_desc_01: 'Condividi foto e video del tuo evento
-    L''Ora del Codice e mostra i risultati dei tuoi studenti. Usa #HourOfCode e @codeorg
-    per vedere in azione il tuo istituto!'
+    L''Ora del Codice e mostra i risultati dei tuoi studenti. Usa #HourOfCode,  @codeorg,
+    #OradelCodice e @programmafuturo per vedere in azione il tuo istituto!'
   hoc_how_to_step_districts_beyond_desc_01: L'insegnamento dell'informatica non deve
     finire con L'Ora del Codice! Per contribuire a fornire agli studenti del tuo distretto
     competenze e conoscenze che li preparino a prepararsi agli studi superiori e alla
@@ -15576,11 +15719,11 @@ it:
   hoc_how_to_step_events_after_desc_06: Contatta la Parent Teacher Student Association
     della tua scuola o condividi le newsletter per i genitori, facendo sapere loro
     cosa stanno imparando i loro figli.
-  hoc_how_to_step_parents_register_desc_01: Inizia con l'impegno di organizzare una
-    Hour of Code con tuo figlio registrandoti. Quando registri il tuo evento, riceverai
-    utili e-mail con notizie e suggerimenti per organizzare con successo una Hour
-    of Code. Verrai anche [messo sulla mappa](%{map_url}) in modo da poter mostrare
-    a tuo figlio che fa parte di un movimento globale.
+  hoc_how_to_step_parents_register_desc_01: Inizia con l'impegno di organizzare un'Ora
+    del Codice con tuo figlio o tua figlia registrandoti. Quando registri il tuo evento,
+    riceverai utili e-mail con notizie e suggerimenti per organizzare con successo
+    un'Ora del Codice. Verrai anche [messo sulla mappa](%{map_url}) in modo da poter
+    mostrare a tuo figlio o tua figlia che fa parte di un movimento globale.
   hoc_how_to_step_parents_get_coding_desc_01: 'Indirizza tuo figlio all''attività
     e mettetevi al lavoro insieme. Potrebbero incontrare delle difficoltà, va bene!
     Imparare a programmare è come imparare una nuova lingua: non sarai subito fluente.
@@ -15590,8 +15733,10 @@ it:
   hoc_how_to_step_parents_celebrate_desc_01: 'Assicurati di festeggiare il successo!
     Condividi foto e video della tua Hour of Code sui social. Usa #HourOfCode e @codeorg,
     così daremo risalto anche noi al tuo successo!'
-  hoc_how_to_step_parents_celebrate_desc_02: Puoi anche stampare un certificato per
-    tuo figlio, per mostrare i suoi risultati!
+  hoc_how_to_step_parents_celebrate_desc_02: 'Puoi anche stampare un certificato per
+    tuo figlio, per mostrare i suoi risultati! Sul sito di Programma il Futuro sono
+    anche disponibili gli attestati in italiano (programmailfuturo.it / PERCORSI /
+    Attestati personalizzati). '
   hoc_how_to_step_parents_spread_word_desc_02: Chiedi al preside di tuo figlio di
     organizzare un evento coinvolgendo tutta la scuola. Quando partecipano 300 o più
     bambini, puoi ricevere uno speciale kit di coinvolgimento con magliette, poster,
@@ -15683,8 +15828,9 @@ it:
   hoc_how_to_step_public_officials_after_list_02: Ringrazia il funzionario per il
     tempo dedicato e offriti di rispondere a eventuali domande successive.
   hoc_how_to_step_public_officials_after_list_03: 'Pubblica foto, video o citazioni
-    importanti della giornata sui social media con #HourOfCode e @codeorg. (Potrebbe
-    essere necessario adeguarsi a specifiche politiche sulla pubblicità o sulla privacy.)'
+    importanti della giornata sui social media con #HourOfCode, @codeorg, #OradelCodice
+    e @programmafuturo. (Potrebbe essere necessario adeguarsi a specifiche politiche
+    sulla pubblicità o sulla privacy.)'
   hoc_how_to_step_public_officials_after_list_04: Invia al funzionario una nota di
     ringraziamento di follow-up. È particolarmente utile convincere gli studenti a
     firmare!
@@ -15707,8 +15853,8 @@ it:
     il più possibile per aumentare le possibilità che un insegnante ti contatti."
   hoc_how_to_step_volunteer_register_desc_01: Non importa come decidi di diventare
     volontario, collabora con l'organizzatore dell'evento per registrare il tuo evento
-    Hour of Code. Riceverai l'accesso anticipato alle informazioni su nuove attività
-    e promozioni speciali!
+    dell'Ora del Codice. Riceverai l'accesso anticipato alle informazioni su nuove
+    attività e promozioni speciali!
   hoc_how_to_step_volunteer_plan_desc_01: 'Se diventi volontario con una classe, discuti
     in anticipo di questi aspetti logistici con l''insegnante per comprendere meglio
     le sue esigenze:'
@@ -15781,10 +15927,12 @@ it:
   hoc_how_to_step_virtual_celebrate_desc_01: 'Assicurati di congratularti con entusiasmo
     per il successo! Puoi stampare i certificati in anticipo e inviarli ai tuoi studenti,
     oppure chiedere a ogni studente di chiedere a sua volta a un genitore di stamparli
-    a casa. Mostra i loro successi e condividi foto e video del tuo evento L''Ora
-    del Codice sui social media. Usa #HourOfCode e @codeorg per mettere in risalto
-    anche il tuo successo! (Potrebbe essere necessario adeguarsi a specifiche politiche
-    sulla pubblicità o sulla privacy.)'
+    a casa. Sul sito di Programma il Futuro sono anche disponibili gli attestati in
+    italiano (programmailfuturo.it / PERCORSI / Attestati personalizzati). Mostra
+    i loro successi e condividi foto e video del tuo evento dell''Ora del Codice sui
+    social media. Usa #HourOfCode, @codeorg, #OradelCodice e @programmafuturo per
+    mettere in risalto anche il tuo successo! (Potrebbe essere necessario adeguarsi
+    a specifiche politiche sulla pubblicità o sulla privacy.)'
   hoc_how_to_step_virtual_beyond_desc_01: L'informatica non si conclude con L'Ora
     del Codice! Sebbene il 90% dei genitori desideri che i propri figli imparino l'informatica,
     la maggior parte delle scuole non la insegna ancora. Per aiutarti, i partner de
@@ -16193,7 +16341,7 @@ it:
     input.
   csa_ai_page_article_link_3: Vedi un esempio
   csa_ai_page_learn_more_section_title: Scopri di più sull'intelligenza artificiale
-  csa_ai_page_learn_more_title: Esplora AI 101 per insegnanti
+  csa_ai_page_learn_more_title: Esplora AI 101 for Teachers
   csa_ai_page_learn_more_description: Scopri il rivoluzionario mondo dell'intelligenza
     artificiale (AI) e il suo potenziale trasformativo nell'istruzione con la nostra
     serie completa di apprendimento online per insegnanti.

@@ -12,6 +12,7 @@ const INPUTS = {
   STACK: 'STACK',
 };
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {editButtonHandler} from './proceduresBlocks';
 
 // This file contains customizations to Google Blockly Sprite Lab blocks.
@@ -173,7 +174,7 @@ export const blocks = {
         // Assume default icon if no XML attribute present
         !xmlElement.hasAttribute('useDefaultIcon') ||
         // Coerce string to Boolean
-        xmlElement.getAttribute('useDefaultIcon') === 'true';
+        readBooleanAttribute(xmlElement, 'useDefaultIcon');
       flyoutToggleButton.setIcon(useDefaultIcon);
     };
   },
@@ -316,6 +317,7 @@ export const blocks = {
     if (
       behaviorsFound &&
       Blockly.useModalFunctionEditor &&
+      block.workspace.toolbox_ &&
       // TODO: Support editing behaviors from within a modal editor workspace.
       block.workspace.id === Blockly.getMainWorkspace().id
     ) {

@@ -742,6 +742,7 @@ es-MX:
         what-is-creativity: '¿Qué es la creatividad?'
         code-break: '¡Tómate un descanso de código!'
         csd_ml_how_ai_works: Cómo funciona la Inteligencia Artificial
+        hoc-dance-ai-warmup: 'Fiesta de Baile Edición IA: Calentamiento'
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque

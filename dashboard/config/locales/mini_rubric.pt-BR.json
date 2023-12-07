@@ -698,6 +698,27 @@
           "rubric_performance_level_3": "Alguns elementos do protótipo em papel foram recriados no protótipo digital, mas há inconsistências suficientes para afetar a funcionalidade do protótipo.",
           "rubric_performance_level_4": "Não há elementos no protótipo digital ou os elementos não são consistentes com o protótipo em papel."
         },
+        "CSD U6 - Accelerometer - A_2023": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Accelerometer - A_mb2022": {
+          "rubric_key_concept": "Use o acelerômetro em um evento e com dados para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo corresponde à descrição, usando um onBoardEvent para detectar o movimento do acelerômetro e usa variáveis e blocos getOrientation para fazer alterações nas posições x e y.",
+          "rubric_performance_level_2": "O aplicativo usa um onBoardEvent, mas não faz alterações nas posições x e y do ponteiro",
+          "rubric_performance_level_3": "O aplicativo não usa o bloco de eventos correto e não faz alterações na posição do ponteiro",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
         "CSD U6 - Board Inputs - A_2023": {
           "rubric_key_concept": "Use os botões e o interruptor no circuit playground  para criar um aplicativo",
           "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com os emojis mudando para corresponder às entradas do usuário\n",
@@ -731,26 +752,187 @@
           "rubric_performance_level_3": "Alguns botões não possuem blocos inteiros de LED ou buzzer",
           "rubric_performance_level_4": "Nenhum bloco adicional de LED ou de buzzer foi adicionado ao programa"
         },
+        "CSD U6 - Color LEDs - A_2023": {
+          "rubric_key_concept": "Use os LEDs coloridos para criar um padrão no circuit playground",
+          "rubric_performance_level_1": "O padrão de luz usa pelo menos 3 cores diferentes e altera a intensidade de alguns dos LEDs",
+          "rubric_performance_level_2": "O padrão de luz usa apenas 2 cores ou usa 3 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_3": "O padrão de luz usa apenas 1 cor, ou usa 2 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_4": "Nenhum padrão é usado"
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "Use os LEDs coloridos para criar um padrão no circuit playground",
+          "rubric_performance_level_1": "O padrão de luz usa pelo menos 3 cores diferentes e altera a intensidade de alguns dos LEDs",
+          "rubric_performance_level_2": "O padrão de luz usa apenas 2 cores ou usa 3 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_3": "O padrão de luz usa apenas 1 cor, ou usa 2 cores, mas não altera a intensidade dos LEDs",
+          "rubric_performance_level_4": "Nenhum padrão é usado"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "rubric_key_concept": "Combinando elementos de entrada e saída do circuit playground e da tela para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com variáveis usadas para obter os valores da tela e acender os LEDs do circuit playground do lado correto.",
+          "rubric_performance_level_2": "O aplicativo liga os LEDs, mas uma das entradas (direção, cor ou brilho) não está funcionando corretamente",
+          "rubric_performance_level_3": "Os LEDs acendem, mas não reagem aos valores que o usuário insere. As variáveis não são usadas corretamente no programa.",
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "Combinando elementos de entrada e saída do circuit playground e da tela para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo funciona conforme descrito, com variáveis usadas para obter os valores da tela e acender os LEDs do circuit playground do lado correto.",
+          "rubric_performance_level_2": "O aplicativo liga os LEDs, mas uma das entradas (direção, cor ou brilho) não está funcionando corretamente",
+          "rubric_performance_level_3": "Os LEDs acendem, mas não reagem aos valores que o usuário insere. As variáveis não são usadas corretamente no programa.",
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Combine Inputs - A_mb2022": {
+          "rubric_performance_level_4": "O aplicativo não foi alterado."
+        },
+        "CSD U6 - Functions - A_2023": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_1": "O aplicativo usa uma função com dois parâmetros que correspondem ao nome e à quantidade a ser movida. Os parâmetros substituem corretamente cada nome original da neve e o valor da quantidade. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_2": "O aplicativo usa uma função com apenas um parâmetro ou usa uma função com dois parâmetros, mas nem todos os valores são atualizados usando parâmetros. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - Functions - A_2222": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_1": "O aplicativo usa uma função com dois parâmetros que correspondem ao nome e à quantidade a ser movida. Os parâmetros substituem corretamente cada nome original da neve e o valor da quantidade. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_2": "O aplicativo usa uma função com apenas um parâmetro ou usa uma função com dois parâmetros, mas nem todos os valores são atualizados usando parâmetros. Todos os 10 elementos da neve se movem quando o circuit playground é movido.",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - Functions - A_mb2022": {
+          "rubric_key_concept": "Use funções com parâmetros para organizar aplicativos",
+          "rubric_performance_level_3": "O aplicativo usa uma função, mas não usa parâmetros, ou nem todos os elementos da neve se movem na tela",
+          "rubric_performance_level_4": "O código não foi alterado em relação ao aplicativo original"
+        },
+        "CSD U6 - If Variables - A_2023": {
+          "rubric_key_concept": "Use variáveis e declarações if para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração if para soar o buzzer na hora correta",
+          "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "Use variáveis e declarações if para criar um aplicativo que usa o circuit playground",
+          "rubric_performance_level_1": "O programa funciona conforme descrito, usando variáveis para controlar o tamanho e uma declaração if para soar o buzzer na hora correta",
+          "rubric_performance_level_2": "As variáveis são usadas para acompanhar o tamanho do elemento, mas o buzzer não soa quando ele atinge o tamanho correto",
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - If Variables - A_mb2022": {
+          "rubric_performance_level_3": "As variáveis são usadas para o tamanho, mas não o aumentam quando o botão é pressionado",
+          "rubric_performance_level_4": "O código não foi mudado"
+        },
+        "CSD U6 - Music - A_2023": {
+          "rubric_key_concept": "Crie aplicativos que tocam músicas com o circuit playground",
+          "rubric_performance_level_1": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes. Cada música tem pelo menos quatro notas e inclui pelo menos uma pausa",
+          "rubric_performance_level_2": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes, mas pelo menos uma das músicas tem menos de quatro notas ou não inclui pausa",
+          "rubric_performance_level_3": "O aplicativo tem um bloco playSong() para um dos emojis, mas não para os dois emojis",
+          "rubric_performance_level_4": "O aplicativo não tem blocos playSong()"
+        },
+        "CSD U6 - Music - A_2222": {
+          "rubric_key_concept": "Crie aplicativos que tocam músicas com o circuit playground",
+          "rubric_performance_level_1": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes. Cada música tem pelo menos quatro notas e inclui pelo menos uma pausa",
+          "rubric_performance_level_2": "O aplicativo tem dois blocos playSong() que tocam músicas diferentes, mas pelo menos uma das músicas tem menos de quatro notas ou não inclui pausa",
+          "rubric_performance_level_3": "O aplicativo tem um bloco playSong() para um dos emojis, mas não para os dois emojis",
+          "rubric_performance_level_4": "O aplicativo não tem blocos playSong()"
+        },
+        "CSD U6 - Physical Input - A_2023": {
+          "rubric_key_concept": "Conecte botões externos ao circuit playground e crie aplicativos que usam botões externos",
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "rubric_key_concept": "Conecte botões externos ao circuit playground e crie aplicativos que usam botões externos",
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Input - A_mb2022": {
+          "rubric_performance_level_1": "O programa corresponde com a descrição com 3 eventos que escondem os quadrados azuis no aplicativo. Os botões estão conectados corretamente usando um fio de aterramento para sinalizar cada botão",
+          "rubric_performance_level_2": "Alguns botões escondem os quadrados azuis, mas nem todos funcionam corretamente. Ou, os botões estão conectados corretamente, mas usam vários fios terra em vez de apenas um.",
+          "rubric_performance_level_3": "Os botões estão conectados, mas os quadrados azuis não ficam ocultos quando os botões são pressionados",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado ou não há botões conectados ao circuit playground"
+        },
+        "CSD U6 - Physical Output - A_2023": {
+          "rubric_key_concept": "Conecte LEDs externos ao circuit playground e crie aplicativos que usam LEDs externos",
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Physical Output - A_2222": {
+          "rubric_key_concept": "Conecte LEDs externos ao circuit playground e crie aplicativos que usam LEDs externos",
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Physical Output - A_mb2022": {
+          "rubric_performance_level_1": "O programa corresponde à descrição do aplicativo usando os blocos on(), blink() e off() no local correto. Os LEDs estão conectados corretamente",
+          "rubric_performance_level_2": "O programa quase corresponde à descrição do aplicativo, mas um dos blocos pode corresponder ao evento errado. Os LEDs estão conectados corretamente.\n",
+          "rubric_performance_level_3": "Alguns dos blocos necessários estão faltando no programa ou os LEDs não estão conectados corretamente.",
+          "rubric_performance_level_4": "O programa não foi iniciado ou não há LEDs"
+        },
+        "CSD U6 - Screen Inputs - A_2023": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
+        "CSD U6 - Screen Inputs - A_mb2022": {
+          "rubric_key_concept": "Obter informações do usuário na tela e usá-las para atualizar um aplicativo",
+          "rubric_performance_level_1": "Cada elemento de design foi personalizado corretamente de acordo com a descrição do aplicativo, e o código recebe a entrada do usuário e a usa para atualizar o aplicativo",
+          "rubric_performance_level_2": "O código obtém a entrada do usuário e a usa para atualizar o aplicativo, mas os elementos de design podem não ter sido personalizados corretamente de acordo com a descrição do aplicativo",
+          "rubric_performance_level_3": "Há erros ao tentar obter valores da entrada de texto, do menu suspenso ou do controle deslizante; ou o aplicativo está incompleto e não obtém todos os elementos de entrada.",
+          "rubric_performance_level_4": "O aplicativo não recebe entrada de nenhum dos elementos na tela."
+        },
         "CSD U6 - Screen Outputs - ChalB_2023": {
-          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
           "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
           "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
           "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
           "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
           "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
           "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
         },
         "CSD U6 - Screen Outputs - ChalB_mb2022": {
-          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando o código",
+          "rubric_key_concept": "Atualize as propriedades e o texto dos elementos de design usando código",
           "rubric_performance_level_1": "O aplicativo finalizado corresponde à descrição, com cada botão atualizando corretamente o ícone e o texto",
           "rubric_performance_level_2": "O aplicativo finalizado é semelhante à descrição, mas tem no máximo um elemento incompleto (por exemplo, não atualizar o texto ou não atualizar a cor do ícone)",
           "rubric_performance_level_3": "O aplicativo finalizado pode ter alguns elementos que parecem corretos, mas a maioria dos elementos não são atualizados corretamente ou o aplicativo está apenas parcialmente concluído.\n",
           "rubric_performance_level_4": "O aplicativo não foi atualizado para corresponder à descrição"
+        },
+        "CSD U6 - Sensors - A_2023": {
+          "rubric_key_concept": "Use os sensores no circuit playground para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo exibe cada valor do sensor em tempo real, e os sensores de luz e som são dimensionados de 0 a 10",
+          "rubric_performance_level_2": "O aplicativo exibe cada valor do sensor, mas pode não estar em tempo real ou os sensores estão de 0 a 1023 em vez de 0 a 10",
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_key_concept": "Use os sensores no circuit playground para criar um aplicativo",
+          "rubric_performance_level_1": "O aplicativo exibe cada valor do sensor em tempo real, e os sensores de luz e som são dimensionados de 0 a 10",
+          "rubric_performance_level_2": "O aplicativo exibe cada valor do sensor, mas pode não estar em tempo real ou os sensores estão de 0 a 1023 em vez de 0 a 10",
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "CSD U6 - Sensors - A_mb2022": {
+          "rubric_performance_level_3": "Pelo menos um dos valores do sensor estão ausentes no aplicativo",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
         },
         "CSD U6 LED all_2019": {
           "rubric_key_concept": "Desenvolva um software para controlar uma variedade de dispositivos físicos.",
@@ -1206,6 +1388,69 @@
         },
         "allthethings-mini-rubric-gamelab": {
           "rubric_key_concept": "Conceito-chave"
+        },
+        "ml-club app-review submit": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-club app-review submit_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-intro app lab-book recommender 4_2023": {
+          "rubric_key_concept": "Criação de um aplicativo fácil de usar que use machine learning",
+          "rubric_performance_level_1": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt de cada menu suspenso foi editado para ser uma pergunta. O aplicativo tem uma tela de boas-vindas e um botão que altera as telas corretamente.",
+          "rubric_performance_level_2": "O modelo foi importado e o aplicativo funciona corretamente. O aplicativo tem um tema e o prompt do menu suspenso foi editado para ser uma pergunta. No entanto, a tela de boas-vindas está incompleta ou não funciona corretamente.",
+          "rubric_performance_level_3": "O modelo foi importado e o aplicativo funciona corretamente, mas não houve alterações no design ou no texto na tela. Não há tela de boas-vindas.",
+          "rubric_performance_level_4": "O aplicativo não foi iniciado"
+        },
+        "ml-models in applab-zoo assessment": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2022": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
+        },
+        "ml-models in applab-zoo assessment_2023": {
+          "rubric_key_concept": "Use o Cartão Modelo para atualizar um aplicativo e use declarações if para mudar as telas em um aplicativo",
+          "rubric_performance_level_1": "A tela de predição tem frases completas para cada recurso, e as declarações if são usadas para mudar a tela com base no valor previsto.",
+          "rubric_performance_level_2": "A tela de predição tem algumas frases completas e algumas declarações if são usadas para mudar a tela com base no valor previsto. No entanto, o aplicativo está incompleto.",
+          "rubric_performance_level_3": "A tela de predição não tem frases completas ou há erros nas declarações if para mudar a tela.",
+          "rubric_performance_level_4": "O aplicativo não foi atualizado."
         }
       }
     }
