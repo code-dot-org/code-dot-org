@@ -256,6 +256,9 @@ export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
     block.x = defaultX;
     block.y = defaultY;
     block.movable = true;
+
+    // Reset deletable to its initial value
+    block.deletable = block.extraState?.initialDeleteConfig;
   });
 
 /**
