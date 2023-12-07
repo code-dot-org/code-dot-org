@@ -28,7 +28,7 @@ describe RedactRestoreUtils do
       assert_equal redacted_data, redact_data
     end
 
-    context 'when no plugins' do
+    context 'when no plugins are provided' do
       let(:plugins) {[]}
 
       it 'redacts the data without plugins' do
