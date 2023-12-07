@@ -147,7 +147,6 @@ export default class AnimationPickerBody extends React.Component {
       categories = categories.filter(category => category !== 'backgrounds');
     }
     categories.push('all');
-
     return categories.map(category => {
       let label = msg[`animationCategory_${category}`]
         ? msg[`animationCategory_${category}`]()
