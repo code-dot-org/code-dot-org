@@ -642,9 +642,8 @@ int main(int argc, char *argv[]) {
 
     std::unique_ptr< sql::ResultSet >
       res(stmt->executeQuery("SHOW SESSION STATUS LIKE \"Compression\""));
-    while (res->next())
-    {
-      cout << "\t... MySQL replies: " << res->getString(1) << " " << res->getString(2) << endl;
+    while (res->next()) {
+      cout << "Checking compression: " << res->getString(1) << " " << res->getString(2) << endl;
     }
 
     insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
