@@ -31,9 +31,6 @@ export default class FunctionEditor {
     opt_disableParamEditing,
     opt_paramTypes
   ) {
-    this.dom = null;
-    this.editorWorkspace = null;
-
     // TODO: Are these options from the fork still relevant?
     this.msgOverrides_ = opt_msgOverrides || {};
     if (opt_definitionBlockType) {
@@ -191,6 +188,7 @@ export default class FunctionEditor {
         fields: {
           NAME: procedure.getName(),
         },
+        deletable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -386,7 +384,6 @@ export default class FunctionEditor {
 
     return {
       ...blockConfig,
-      deletable: false,
       movable: false,
       x,
       y,
