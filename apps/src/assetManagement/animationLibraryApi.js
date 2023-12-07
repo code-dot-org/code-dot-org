@@ -157,7 +157,15 @@ function getStandardizedAliases(metadata) {
 function getStandardizedCategories(metadata) {
   // If the animation doesn't have a category, place it in a section for
   // level-specific/hidden-from-library animations.
-  return metadata.categories || ['level_animations'];
+  // Animations that are level-specific and NOT backgrounds are costumes and
+  // either do not have the `categories` property or have categories assigned to [""]
+  const categories = metadata.categories;
+  const isLevelAnimationCostume =
+    categories === undefined || categories[0] === '';
+  if (isLevelAnimationCostume) {
+    return ['level_animations'];
+  }
+  return categories;
 }
 
 // Generates the json animation manifest for the level_animations folder
