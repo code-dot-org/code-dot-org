@@ -40,7 +40,7 @@ Feature: Dance Party
     And I wait for 0.5 seconds
     And I press "[aria-label=💎]" using jQuery
     And I press "[aria-label=🌊]" using jQuery
-    And I press "[aria-label=🪩]" using jQuery
+    And I press "[aria-label=🚀]" using jQuery
     And I press "generate-button"
 
     # Wait until results show.
