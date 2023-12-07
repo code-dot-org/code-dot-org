@@ -27,13 +27,15 @@ using namespace rapidjson;
 
 const bool RAW_DEBUG = false;
 const bool FINE_DEBUG = false;
+const bool ONE_ROW_PER_RECORD_MODE = true;
 const bool USE_WRITER_TO_COLLECT_STRING = true;
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
-const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = 1000;
+const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = ONE_ROW_PER_RECORD_MODE ? 1000000 : 1000;
 const bool SEND_RECORDS_TO_MYSQL = true;
+
 
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 const uint64_t BYTES_PER_RECORD = 250000;
@@ -54,8 +56,9 @@ const char *getEnv(string envVar, const char *defaultVal) {
   return env ? env : defaultVal;
 }
 
-const string DB_NAME = getEnv("MYSQL_DB", "unfirebasetxt");
-const string TABLE_NAME = getEnv("MYSQL_TABLE", "unfirebase");
+const string DB_NAME = getEnv("MYSQL_DB", "unfirebase");
+const string CHANNEL_TABLE_NAME = getEnv("MYSQL_TABLE", "unfirebase");
+const string ONE_ROW_PER_RECORD_TABLE_NAME = getEnv("MYSQL_TABLE", "unfirebase-one-row-per-record");
 
 thread_local sql::Connection *db = nullptr;
 sql::Driver *driver = nullptr;
@@ -160,7 +163,7 @@ void startChannel(string channelName) {
   if (FINE_DEBUG) cout << "START CHANNEL " << channelName << endl;
   currentChannelName = channelName;
 
-  if (USE_WRITER_TO_COLLECT_STRING) {
+  if (USE_WRITER_TO_COLLECT_STRING && !ONE_ROW_PER_RECORD_MODE) {
     writerBuffer = new StringBuffer();
     writer = new Writer<StringBuffer>(*writerBuffer);
   }
@@ -188,9 +191,10 @@ void loadData(string tsvFilename) {
   numRecordBytesMutex.unlock();
 
   if (SEND_RECORDS_TO_MYSQL) {
+    auto tableName = ONE_ROW_PER_RECORD_MODE ? ONE_ROW_PER_RECORD_TABLE_NAME : CHANNEL_TABLE_NAME;
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
     stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
-                  "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
+                  "' INTO TABLE `" + tableName + "` FIELDS TERMINATED BY '\t' LINES "
                   "TERMINATED BY '\n';");
     stmt->execute("COMMIT;");
   }
@@ -292,7 +296,7 @@ void commitRecords() {
   unComittedRecords = 0;
 }
 
-inline void insertIntoFirebase(string &channelId, const char *value) {
+inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordID, const char *json) {
   unComittedRecords++;
 
   if (LOAD_DATA_INSTEAD_OF_INSERT) {
@@ -301,12 +305,19 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
       loadDataBufferTSVFilename = loadDataBufferDir + to_string(totalRecordsCount) + ".tsv";
       loadDataBufferTSV = new ofstream(loadDataBufferTSVFilename);
     }
-    *loadDataBufferTSV << channelId << "\t" << value << endl;
+
+    // FIXME: we're not escaping the json string, so if it contains tabs we're screwed
+    if (ONE_ROW_PER_RECORD_MODE) {
+      *loadDataBufferTSV << channelId << "\t" << tableName << "\t" << recordID << "\t" << json << endl;
+    } else {
+      *loadDataBufferTSV << channelId << "\t" << json << endl;
+    }
   } else {
-    numRecordBytes += strlen(value);
+    assert(!ONE_ROW_PER_RECORD_MODE);
+    numRecordBytes += strlen(json);
     if (SEND_RECORDS_TO_MYSQL) {
       insertUnfirebaseStatement->setString(1, currentChannelName);
-      insertUnfirebaseStatement->setString(2, value);
+      insertUnfirebaseStatement->setString(2, json);
       insertUnfirebaseStatement->execute();
     }
   }
@@ -318,43 +329,22 @@ inline void insertIntoFirebase(string &channelId, const char *value) {
   }
 }
 
-inline void insertIntoFirebasePerRecord(string &channelId, string &tableName, uint64_t recordId, const char *value) {
-  unComittedRecords++;
-
-  if (LOAD_DATA_INSTEAD_OF_INSERT) {
-    if (!loadDataBufferTSV) {
-      //string shortFilename = filesystem::path(filename).filename();
-      loadDataBufferTSVFilename = loadDataBufferDir + to_string(totalRecordsCount) + ".tsv";
-      loadDataBufferTSV = new ofstream(loadDataBufferTSVFilename);
-    }
-    *loadDataBufferTSV << channelId << "\t" << value << endl;
-  } else {
-    numRecordBytes += strlen(value);
-    if (SEND_RECORDS_TO_MYSQL) {
-      insertUnfirebaseStatement->setString(1, currentChannelName);
-      insertUnfirebaseStatement->setString(2, value);
-      insertUnfirebaseStatement->execute();
-    }
-  }
-
-  totalRecordsCount++;
-
-  if (unComittedRecords >= NUMBER_OF_RECORDS_BEFORE_COMMIT) {
-    commitRecords();
-  }
-}
+const string NO_TABLE_NAME = "";
+const string NO_RECORD_ID = "";
 
 void endChannel() {
   assert(currentChannelName != NO_CHANNEL);
 
-  if (writer) {
-    insertIntoFirebase(currentChannelName, writerBuffer->GetString());
-    delete writer;
-    delete writerBuffer;
-    writer = nullptr;
-    writerBuffer = nullptr;
-  } else {
-    insertIntoFirebase(currentChannelName, "{ 'FAKE': 'DATA IS FAKE'}");
+  if (!ONE_ROW_PER_RECORD_MODE) {
+    if (writer) {
+      insertIntoDB(currentChannelName, NO_TABLE_NAME, NO_RECORD_ID, writerBuffer->GetString());
+      delete writer;
+      delete writerBuffer;
+      writer = nullptr;
+      writerBuffer = nullptr;
+    } else {
+      insertIntoDB(currentChannelName, NO_TABLE_NAME, NO_RECORD_ID, "{ 'FAKE': 'DATA IS FAKE'}");
+    }    
   }
 
   if (FINE_DEBUG) cout << "END CHANNEL " << currentChannelName << endl;
@@ -374,6 +364,8 @@ void handleRecord(string channelId, string tableName, string recordId,
                   string jsonString) {
   if (RAW_DEBUG)
     cout << "RECORD(" << channelId << ", " << tableName << ", " << channelId << ") = " << jsonString << endl;
+
+  insertIntoDB(channelId, tableName, recordId, jsonString.c_str());
 }
 
 // uint debugCount = 0;
@@ -629,9 +621,22 @@ int main(int argc, char *argv[]) {
 
     db->setSchema(DB_NAME);
 
-    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
-    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
-    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+    if (ONE_ROW_PER_RECORD_MODE) {
+      string createTable = "CREATE TABLE IF NOT EXISTS `" + ONE_ROW_PER_RECORD_TABLE_NAME + "` (" +
+        "`channel_id` VARCHAR(45) NOT NULL, " +
+        "`table_name` VARCHAR(45) NOT NULL, " +
+        "`record_id` INT NOT NULL, " +
+        "`record` TEXT(8192) NULL, " +
+        "PRIMARY KEY (`channel_id`, `table_name`, `record_id`), " + 
+        "INDEX `channel_index` (`channel_id`));";
+      cout << createTable << endl;
+      stmt->execute(createTable);
+    } else {
+      stmt->execute("CREATE TABLE IF NOT EXISTS `" + CHANNEL_TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+      //stmt->execute("CREATE TABLE IF NOT EXISTS `" + CHANNEL_TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
+      stmt->execute("DELETE FROM `" + CHANNEL_TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+      insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + CHANNEL_TABLE_NAME + "` VALUES (?, ?)");
+    }
     //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
     stmt->execute("SET autocommit=0;");
     stmt->execute("SET unique_checks=0;");
@@ -645,8 +650,6 @@ int main(int argc, char *argv[]) {
     while (res->next()) {
       cout << "Checking compression: " << res->getString(1) << " " << res->getString(2) << endl;
     }
-
-    insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
 
     if (db->isValid()) {
       cout << "Connected to MySQL!" << endl;
