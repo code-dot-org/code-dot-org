@@ -47,6 +47,17 @@ section.banner {
     @media screen and (max-width: $width-sm) {
       margin: 1rem 0 2rem;
     }
+
+    .slide-prev,
+    .slide-next {
+      position: absolute;
+      top: 0;
+      width: 40px;
+      height: 100%;
+    }
+
+    .slide-prev { left: -55px; }
+    .slide-next { right: -45px; }
   }
 }
 
