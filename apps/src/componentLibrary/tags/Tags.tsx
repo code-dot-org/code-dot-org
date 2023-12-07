@@ -14,22 +14,15 @@ export interface TagsProps {
   className?: string;
 }
 
-// TODO 2: check if we can add an icons inside of native html select item/option content
-
-// - tooltips always one line or multiline or both? (tooltip content: string or ReactNode?)
-// - (is left/right icon represents rtl/ltr? languages or should we create both at the same time?
-// - CardLabels.jsx - refactor to use Tags component
-// - refactor existing usages
-
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
+ * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
  * * (see apps/test/unit/componentLibrary/TagsTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```WIP```
+ * ###  Status: ```Ready for dev```
  *
  * Design System: Tags Component.
  * Can be used to render tags or as a part of bigger/more complex components (e.g. Some blocks, cards, etc).
