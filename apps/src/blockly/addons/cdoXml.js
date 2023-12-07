@@ -1,7 +1,6 @@
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
 import {readBooleanAttribute} from '../utils';
-import msg from '@cdo/locale';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -183,7 +182,7 @@ export function addNameToBlockFunctionDefinitionBlock(blockElement) {
   }
 
   if (fieldElement.textContent === '') {
-    fieldElement.textContent = msg.unnamedFunctionName();
+    fieldElement.textContent = Blockly.Msg.UNNAMED_KEY;
   }
 }
 
@@ -204,7 +203,7 @@ export function addNameToBlockFunctionCallBlock(blockElement) {
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
   if (!mutationElement.getAttribute('name')) {
-    mutationElement.setAttribute('name', msg.unnamedFunctionName());
+    mutationElement.setAttribute('name', Blockly.Msg.UNNAMED_KEY);
   }
 }
 
