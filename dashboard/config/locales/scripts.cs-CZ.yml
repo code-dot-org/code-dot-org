@@ -658,6 +658,8 @@ cs:
               name: Mřížka CSS
             lesson-5:
               name: Hodnocení
+            lesson-6:
+              name: Lekce 1
           name: angelina-hřiště
           title: Angelina místo dělat věci
         applab-1hour:
@@ -3527,6 +3529,10 @@ cs:
           description: Tato jednotka obsahuje průzkum po kurzu. Tuto jednotku lze
             přiřadit poté, co studenti absolvují závěrečnou jednotku v tomto kurzu.
           title: Průzkum po kurzu
+        csd-post-survey-2024:
+          description: Tato jednotka obsahuje průzkum po kurzu. Tuto jednotku lze
+            přiřadit poté, co studenti absolvují závěrečnou jednotku v tomto kurzu.
+          title: Průzkum po kurzu
         csd-sample-online:
           title: Ukázka online aktivit pro kurz Objevujeme informatiku
         csd-test-saving-state:
@@ -3696,6 +3702,24 @@ cs:
             aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
           title: Řešení problémů a výpočetní technika ('22-'23)
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Proces řešení problémů'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Počítače a řešení problémů'
+            lessonGroup-4:
+              display_name: Alternativní lekce
+            lessonGroup-5:
+              display_name: Průzkum
+          student_description: Řešení problémů a výpočetní technika je vysoce interaktivní
+            a kolaborativní úvod do oblasti informatiky, jak je koncipováno v širším
+            úsilí o řešení problémů. Procvičíte si pomocí procesu řešení problémů
+            k řešení řady hádanek, výzvy, a scénáře skutečného světa. Dále se dozvíte,
+            jak počítače vstupují, výstupní, ukládají a zpracovávají informace, které
+            lidem pomáhají řešit problémy. Jednotka končí projektem, ve kterém navrhujete
+            aplikaci, která pomáhá vyřešit problém podle vašeho výběru.
+          title: Jednotka 1 - Řešení problémů a výpočetní technika ('23-'24)
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Proces řešení problémů'
@@ -3943,6 +3967,18 @@ cs:
             jako je ladění, pomocí zdrojů a týmová práce.  "
           title: Vývoj webových aplikací ('22-'23)
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vytváření webových stránek'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vícestránkové webové stránky'
+          student_description: " V této jednotce, naučíte se, jak vytvořit a sdílet
+            obsah na svých vlastních webových stránkách. Poté, co se rozhodnete, jaký
+            obsah chcete sdílet se světem, se naučíte, jak strukturovat a stylovat
+            své stránky pomocí HTML a CSS. Procvičíte si také cenné programovací dovednosti,
+            jako je ladění, pomocí zdrojů a týmová práce.  "
+          title: Jednotka 2 - Vývoj webových aplikací ('23-'24)
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Kapitola 1: Vytváření webových stránek'
@@ -4254,6 +4290,19 @@ cs:
             návrhu, který počítačoví vědci používají denně. V závěrečném projektu
             vytvoříte osobní interaktivní program."
           title: Jednotka 3 - Interaktivní animace a hry ('23-'24)
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Obrázky a animace'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Tvorba her'
+          student_description: " V této jednotce, budete stavět na své zkušenosti
+            s kódováním při programování animací, interaktivní umění, a hry v Game
+            Lab. Jednotka začíná jednoduchými tvary a vytváří sofistikovanější hry
+            založené na sprite, pomocí stejných programovacích konceptů a procesu
+            návrhu, který počítačoví vědci používají denně. V závěrečném projektu
+            vytvoříte osobní interaktivní program."
+          title: Jednotka 3 - Interaktivní animace a hry ('23-'24)
         csd3-dlp:
           description: Toto je jednotka 3 plánu hlubšího učení pro zprostředkovatele
             Code.org CS Discoveries v oblasti školení. Zde najdete reflexe výzvy a
@@ -4548,6 +4597,20 @@ cs:
             řešení jak na papíře, tak v App Lab, a testovací řešení se skutečnými
             uživateli, abyste získali zpětnou vazbu a podpořili další iteraci.
           title: Jednotka 4 - Proces návrhu ('23-'24)
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Design zaměřený na uživatele'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Prototypování aplikací'
+          student_description: Tato jednotka představuje širší sociální dopady výpočetní
+            techniky. Prostřednictvím řady návrhových výzev, naučíte se, jak lépe
+            porozumět potřebám ostatních a zároveň vyvíjet řešení problému. Druhá
+            polovina jednotky se skládá z iterativního týmového projektu, během kterého
+            mají týmy příležitost identifikovat potřebu, na které jim záleží, prototypová
+            řešení jak na papíře, tak v App Lab, a testovací řešení se skutečnými
+            uživateli, abyste získali zpětnou vazbu a podpořili další iteraci.
+          title: Jednotka 4 - Proces návrhu ('23-'24)
         csd4-dlp:
           description: Toto je jednotka 4 plánu hlubšího učení pro Code.org CS Discoveries
             facilitátory ve výcviku. Zde naleznete reflexe výzvy a pokyny pro prokázání
@@ -4805,6 +4868,23 @@ cs:
             si vyberete.
           title: Data a společnost („22-'23)
         csd5-2023:
+          description_short: Zjistěte, jak lidé používají počítače k řešení problémů
+            s daty.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Zastupování informací'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Řešení datových problémů'
+          student_description: Tato jednotka je o důležitosti dat při řešení problémů
+            a zdůrazňuje, jak mohou počítače v tomto procesu pomoci. První kapitola
+            zkoumá různé systémy používané k reprezentaci informací v počítači a výzvy
+            a kompromisy, které představuje jejich používání. Ve druhé kapitole se
+            dozvíte, jak se sbírky dat používají k řešení problémů a jak počítače
+            pomáhají automatizovat kroky tohoto procesu. Kapitola je zakončena zvážením
+            toho, jak lze proces řešení datových problémů aplikovat na oblast, kterou
+            si vyberete.
+          title: Oddělení 5 — Data a společnost („23-'24)
+        csd5-2024:
           description_short: Zjistěte, jak lidé používají počítače k řešení problémů
             s daty.
           lesson_groups:
@@ -5219,6 +5299,25 @@ cs:
             jako základ pro inovaci vašeho vlastního designu.
           title: Jednotka 6A - (možnost A) Vytváření aplikací se zařízeními - hřiště
             s obvodem ('23-'24)
+        csd6a-2024:
+          description_short: Naučte se programovat s fyzickými zařízeními.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vstupy a výstupy'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Stavba fyzického prototypu'
+            lessonGroup-4:
+              display_name: Úvod do App Lab
+          student_description: Tato jednotka zkoumá roli hardwarových platforem ve
+            výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější
+            vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí App Lab
+            a Adafruit's Circuit Playground, budete vyvíjet programy, které využívají
+            stejné hardwarové vstupy a výstupy, jaké vidíte v inteligentních zařízeních,
+            při pohledu na to, jak jednoduchý hrubý prototyp může vést k hotovému
+            produktu. Jednotka končí konstrukční výzvou použít Circuit Playground
+            jako základ pro inovaci vašeho vlastního designu.
+          title: Jednotka 6A - (možnost A) Vytváření aplikací se zařízeními - hřiště
+            s obvodem ('23-'24)
         csd6b-2023:
           lesson_groups:
             lessonGroup-2:
@@ -5226,6 +5325,21 @@ cs:
             lessonGroup-4:
               display_name: Budování fyzikálních prototypů
           name: csd6b-2023
+          student_description: Tato jednotka zkoumá roli hardwarových platforem ve
+            výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější
+            vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí aplikace
+            App Lab a BBC micro:bit, budete vyvíjet programy, které využívají stejné
+            hardwarové vstupy a výstupy, jaké vidíte v chytrých zařízeních, při pohledu
+            na to, jak jednoduchý hrubý prototyp může vést k hotovému produktu. Jednotka
+            končí konstrukční výzvou použít mikro:bit jako základ pro inovaci vašeho
+            vlastního designu.
+          title: Jednotka 6B - (možnost B) Vytváření aplikací se zařízeními (micro:bit)
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Úvod do App Lab
+            lessonGroup-4:
+              display_name: Budování fyzikálních prototypů
           student_description: Tato jednotka zkoumá roli hardwarových platforem ve
             výpočetní technice a to, jak různé senzory mohou poskytovat efektivnější
             vstup a výstup než tradiční klávesnice, myš, a monitor. Pomocí aplikace
@@ -5287,6 +5401,20 @@ cs:
             pro strojové učení, která vyřeší osobně relevantní problém.
           title: AI a strojové učení ('22-'23)
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitola 1
+            lessonGroup-3:
+              display_name: Kapitola 2
+            lessonGroup-4:
+              display_name: Úvod do App Lab
+          student_description: Tato jednotka je praktickým úvodem do vývoje modelu
+            strojového učení s tabulkovými daty. Prozkoumáte, jak se počítače učí
+            z dat, aby se rozhodovali, a poté vytvořte své vlastní projekty strojového
+            učení kolem dat z reálného světa. Jednotka vyvrcholí návrhem vlastní aplikace
+            pro strojové učení, která vyřeší osobně relevantní problém.
+          title: Jednotka 7 - AI a strojové učení ('23-'24)
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Kapitola 1
@@ -11973,6 +12101,18 @@ cs:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitola 1: Vytváření webových stránek'
+            lessonGroup-3:
+              display_name: 'Kapitola 2: Vícestránkové webové stránky'
+          student_description: " V této jednotce, naučíte se, jak vytvořit a sdílet
+            obsah na svých vlastních webových stránkách. Poté, co se rozhodnete, jaký
+            obsah chcete sdílet se světem, se naučíte, jak strukturovat a stylovat
+            své stránky pomocí HTML a CSS. Procvičíte si také cenné programovací dovednosti,
+            jako je ladění, pomocí zdrojů a týmová práce.  "
+          title: Jednotka 2 - Vývoj webových aplikací ('23-'24)
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

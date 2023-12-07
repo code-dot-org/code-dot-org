@@ -326,6 +326,7 @@ id:
   call_to_action_explore_all_hoc_activities: Telusuri semua kegiatan Hour of Code
     dari Code.org
   call_to_action_start_dance_party: Mulai Pesta Dansa
+  call_to_action_start_dance_party_ai_edition: 'Mulai Pesta Dansa: Edisi AI'
   call_to_action_start_part_02: Mulai bagian dua
   call_to_action_start_unplugged_activity: Mulai kegiatan tanpa komputer
   call_to_action_view_promo_resources: Lihat materi promo
@@ -440,6 +441,15 @@ id:
   call_to_action_learn_about_ai: Pelajari tentang AI
   call_to_action_learn_more_about_ai: Pelajari selengkapnya tentang AI
   call_to_action_get_started: Memulai
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Lihat panduan untuk Pendidik
   aria_label_call_to_action_hoc_how_to_companies: Lihat panduan untuk Perusahaan
   aria_label_call_to_action_hoc_how_to_districts: Lihat panduan untuk Distrik
@@ -462,6 +472,8 @@ id:
     Prinsip Ilmu Komputer
   aria_label_call_to_action_teaching_problem_solving: Mulai program pembelajaran profesional
     Mengajarkan Pemecahan Masalah dan Komputasi
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Mulai Mengajarkan program pembelajaran profesional
     Computer Science Connections
   aria_label_call_to_action_teaching_ai: Mulai program pembelajaran profesional Teaching
@@ -563,6 +575,16 @@ id:
   aria_label_call_to_action_register_student_workshop: Daftar untuk lokakarya siswa
     gratis
   aria_label_call_to_action_view_more_cs_resources: Lihat materi ilmu komputer lainnya
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Program Pembelajaran Profesional Code.org
   curriculum_name_csf: Dasar-dasar Ilmu Komputer
   curriculum_name_csf_02: Dasar-dasar CS apa pun (Kursus A-F)
@@ -581,6 +603,7 @@ id:
   curriculum_name_csd: Penemuan Ilmu Komputer
   curriculum_name_csp: Prinsip Ilmu Komputer
   curriculum_name_problem_solving: Pemecahan Masalah dan Komputasi
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Computer Science Connections
   curriculum_name_csa: Ilmu Komputer A
   curriculum_name_csa_ai: Rekayasa Perangkat Lunak & Visi Komputer
@@ -714,6 +737,7 @@ id:
   module_label_languages: 'Bahasa yang Didukung:'
   module_label_accessibility_features: 'Aksesibilitas:'
   module_label_accessibility_features_full: 'Fitur Aksesibilitas:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Alat bagi pendidik
   module_label_educator_course: Kursus bagi pendidik
   module_label_educator_resources: Educator resources
@@ -767,6 +791,7 @@ id:
   module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 jam
   module_duration_5_hrs_plus: 5+ jam
   module_duration_8_hrs: 8 jam
@@ -788,6 +813,7 @@ id:
   module_label_teaching_csd: Pengajaran Penemuan Ilmu Komputer
   module_label_teaching_csp: Mengajar Prinsip Ilmu Komputer
   module_label_teaching_problem_solving: Mengajar Pemecahan Masalah dan Komputasi
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Mengajarkan Computer Science Connections
   module_label_teaching_ai: Mengajar AI dan Pembelajaran Mesin
   module_label_teaching_maker_cp: Mengajar Membuat Aplikasi dengan Perangkat (Circuit
@@ -857,6 +883,12 @@ id:
   heading_attend_free_workshop: Ikuti lokakarya siswa gratis
   heading_access_more_cs_resources: Akses materi ilmu komputer lainnya
   heading_available_on_code_dot_org: Tersedia di Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Jika Anda seorang siswa sekolah menengah yang bersemangat
     mendorong lebih banyak wanita muda untuk mengambil ilmu komputer di sekolah Anda,
     maka kami membutuhkan Anda!
@@ -931,6 +963,19 @@ id:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Workshop tatap muka dan virtual
     mulai musim panas ini.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Ayo, cabut kabelnya (untuk sementara)!
   no_devices_section_desc: Pendidikan ilmu komputer tidak selalu harus berada di depan
     layar, dan akses perangkat harusnya tidak menjadi penghalang untuk mempelajari
@@ -957,6 +1002,11 @@ id:
   subscribe_form_section_desc_csp: Daftar untuk menerima email bulanan tentang Prinsip
     Ilmu Komputer Code.org dan dapatkan pengingat, tip, dan pembaruan bermanfaat yang
     dikirim langsung ke kotak masuk Anda.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Anda dapat berhenti berlangganan kapan saja.
   hoc_page_what_is_hoc_heading: 'Apa itu Hour of Code? '
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) adalah sebuah gerakan global yang
@@ -1161,6 +1211,7 @@ id:
     memenuhi kebutuhan dari semua peserta.
   ai_curriculum_btn_aria_label_06: Lihat Dampak Masyarakat dari rencana pelajaran
     AI Generatif
+  ai_curriculum_btn_aria_label_dance_ai: 'Coba kegiatan Pesta Dansa: Edisi AI'
   ai_carousel_heading: 'Apa yang dikatakan guru tentang AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi siswa saya kesempatan untuk melihat
     bahwa ada unsur opini dalam sistem klasifikasi. Kemudian, ketika kami mulai melihat
@@ -1363,6 +1414,68 @@ id:
   ai_vid_computervision_caption: Visi Komputer
   ai_vid_ethics1_caption: 'Etika & AI: Akses yang Sama dan Bias Algoritma'
   ai_vid_ethics2_caption: 'Etika & AI: Privasi dan Masa Depan Pekerjaan'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Pembelajaran Profesional Mandiri Untuk Pendidik
   self_paced_pl_hero_desc: Penawaran pembelajaran profesional untuk mendukung guru
     di setiap tahap perjalanan pengajaran ilmu komputer mereka.
@@ -3037,6 +3150,7 @@ id:
     atau [baca Panduan](%{howto_url})'
   tutorial_dance2019_name: Pesta Tari 2019
   tutorial_danceparty_name: Pesta dansa
+  tutorial_dancepartyai_name: 'Pesta Dansa: Edisi AI'
   tutorial_chibitronics_name: 'Chibitronics: Cerita yang Diterangi'
   tutorial_athlete_name: Buatlah program permainan olahraga Anda sendiri
   tutorial_moana_name: 'Moana: Wayfinding dengan Code'
@@ -3721,6 +3835,9 @@ id:
   tutorial_danceparty_shortdescription: Buat code Dance Party untuk dibagikan kepada
     teman Anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara,
     dan 25 orang lainnya!
+  tutorial_dancepartyai_shortdescription: Pelajari konsep kecerdasan buatan (Artificial
+    Intelligence, AI) untuk membuat pesta dansa virtualmu sendiri yang menampilkan
+    artis papan atas masa kini. Saatnya menunjukkan kemampuanm!
   tutorial_chibitronics_shortdescription: Program sirkuit kertas untuk menerangi cerita
     Anda sendiri.
   tutorial_athlete_shortdescription: Pilih antara membuat permainan bola basket atau
@@ -4966,6 +5083,9 @@ id:
   tutorial_danceparty_longdescription: Buat code Dance Party untuk dibagikan kepada
     teman Anda. Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara,
     dan 25 orang lainnya!
+  tutorial_dancepartyai_longdescription: Pelajari konsep kecerdasan buatan (Artificial
+    Intelligence, AI) untuk membuat pesta dansa virtualmu sendiri yang menampilkan
+    artis papan atas masa kini. Saatnya menunjukkan kemampuanm!
   tutorial_chibitronics_longdescription: Program sirkuit kertas untuk menerangi cerita
     Anda sendiri.
   tutorial_athlete_longdescription: Pilih antara membuat permainan bola basket atau
@@ -8076,6 +8196,7 @@ id:
     dan merangkul keragaman yang membuat kita semua unik istimewa.
   tutorial_dance2019_string_detail_grades: Tingkat 2+
   tutorial_danceparty_string_detail_grades: Tingkat 2+
+  tutorial_dancepartyai_string_detail_grades: Kelas 3 ke atas.
   tutorial_chibitronics_string_detail_grades: Pre-reader - Grade 5
   tutorial_athlete_string_detail_grades: Tingkat 2+
   tutorial_moana_string_detail_grades: Tingkat 2+
@@ -8753,6 +8874,7 @@ id:
   tutorial_dance2019_string_platforms: Semua browser modern, tablet Android, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: Semua browser modern, tablet Android, iPad
+  tutorial_dancepartyai_string_platforms: Semua browser modern, tablet Android, iPad
   tutorial_chibitronics_string_platforms: Semua peramban modern
   tutorial_athlete_string_platforms: Semua browser modern
   tutorial_moana_string_platforms: Semua browser modern, tablet Android, iPad
@@ -9586,6 +9708,7 @@ id:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chip dan LED Stiker
     Sirkuit
   tutorial_athlete_string_detail_platforms: ''
@@ -10266,6 +10389,7 @@ id:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blok
   tutorial_danceparty_string_detail_programming_languages: Blok
+  tutorial_dancepartyai_string_detail_programming_languages: Blok
   tutorial_chibitronics_string_detail_programming_languages: Blok
   tutorial_athlete_string_detail_programming_languages: Blok
   tutorial_moana_string_detail_programming_languages: Blok

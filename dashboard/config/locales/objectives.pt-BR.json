@@ -2349,22 +2349,22 @@
           "description": "Forneça feedback e reflexões construtivas sobre os aplicativos interativos de capa de livro que eles usam, promovendo um ambiente de aprendizado colaborativo."
         },
         "4094e6da-1294-4686-aefc-b5363d35070a": {
-          "description": "Desenvolva uma simulação dos efeitos da sobrepesca em um ecossistema aquático"
+          "description": "Desenvolva uma simulação dos efeitos da pesca predatória em um ecossistema aquático"
         },
         "fa9ae023-cf9e-40d1-9128-e260e85bb8c8": {
           "description": "Use declarações condicionais para mostrar um cenário de causa e efeito na natureza."
         },
         "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
-          "description": "Analise os efeitos de muita, pouca ou apenas a quantidade certa de algas em um ecossistema marinho. "
+          "description": "Analise os efeitos de muita, pouca ou a quantidade certa de algas em um ecossistema marinho. "
         },
         "2523ed88-7219-4356-a342-5077931e97df": {
-          "description": "Consulte o artigo científico incluído para orientar suas soluções para a simulação de sobrepesca."
+          "description": "Consulte o artigo científico incluído para orientar suas soluções para a simulação de pesca predatória."
         },
         "8123b6d5-695d-49e4-8880-0d1f532656df": {
-          "description": "Crie e use uma variável para acompanhar a alteração de um valor em um programa."
+          "description": "Crie e use uma variável para acompanhar uma mudança de valor em um programa."
         },
         "025c46ee-bcd9-47e3-afa6-10d849dcd120": {
-          "description": "Explique como as simulações de ciência da computação podem ser benéficas para os cientistas. "
+          "description": "Explique como as simulações na ciência da computação podem ser benéficas para os cientistas. "
         },
         "621bdd35-b3ad-4df7-af0f-e8ba6e591131": {
           "description": "Experimente como as mudanças em uma parte da cadeia alimentar podem afetar todo o ecossistema."
@@ -4065,7 +4065,7 @@
           "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
         },
         "173089ae-6d54-457a-a391-0a8f5510aaca": {
-          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética na IA."
         },
         "078fec6a-9fc8-4d1c-be3b-145bbe8c44c9": {
           "description": "Escolher a melhor forma de representar algumas informações com base em como elas serão usadas."
@@ -4092,7 +4092,7 @@
           "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
         },
         "96b0c2a4-2817-4da1-a183-bb8615f96a07": {
-          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética na IA."
         },
         "2547cb4c-1965-492b-83e7-8c71e8225ae6": {
           "description": "Escolher a melhor forma de representar algumas informações com base em como elas serão usadas."
@@ -4107,7 +4107,7 @@
           "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
         },
         "2a58bbe6-0187-456f-825a-7cf23e16030e": {
-          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética na IA."
         },
         "95887ced-8b2d-4703-bd0d-234da5ab332b": {
           "description": "Defina inteligência artificial (IA) com suas próprias palavras, usando tecnologias que eles encontram em suas vidas diárias como exemplos."
@@ -4131,7 +4131,7 @@
           "description": "Descreva pelo menos um exemplo de uma questão ética relacionada à IA, juntamente com seu impacto na sociedade."
         },
         "a8074c06-9394-43f7-94a4-7055c9e44135": {
-          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética em IA."
+          "description": "Crie pelo menos um princípio orientador que aborde uma questão ética na IA."
         }
       }
     }

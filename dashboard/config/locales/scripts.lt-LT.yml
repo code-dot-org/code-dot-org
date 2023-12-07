@@ -122,6 +122,8 @@ lt:
           lessons:
             lesson-5:
               name: Žinių patikrinimas
+            lesson-6:
+              name: 1 pamoka
         aquatic:
           name: vandens
           title: 'Minecraft: Kelionės vandeniu'

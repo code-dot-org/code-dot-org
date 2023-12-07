@@ -104,6 +104,11 @@
       "title": "Hour of Code: Criatividade com I.A.",
       "body": "Junte-se a milhões de pessoas pelo mundo na organização de uma hora de codificação, com ou sem I.A. e aprenda como funciona a I.A. Qualquer pessoa, em qualquer lugar pode participar. Não é preciso ter experiência.",
       "buttonText": "Saiba mais"
+    },
+    "hoc-2023-dance-ai": {
+      "title": "Festa dançante: edição IA",
+      "body": "Aprenda os conceitos de inteligência artificial (IA) para criar sua própria festa dançante virtual estrelando os melhores artistas da atualidade. Com dezenas de músicas para escolher, envolva todos os alunos, qualquer que seja o gosto musical deles. É hora de mostrar o que você tem a oferecer!",
+      "buttonText": "Saiba mais"
     }
   }
 }

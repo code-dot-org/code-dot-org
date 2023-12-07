@@ -1110,6 +1110,9 @@ km:
           lessons:
             lesson-5:
               name: ការវាយតម្លៃ
+          lesson_groups:
+            lessonGroup-4:
+              display_name: ចៃដន្យ
         pre-express-2023:
           lesson_groups:
             csf_sequencing:
