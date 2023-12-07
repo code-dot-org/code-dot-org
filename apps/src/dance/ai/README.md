@@ -22,21 +22,12 @@ The explanation shows some of the lower-scoring candidates, and the winning cand
 
 Amongst many pull requests created during the 10 week development period, these were some of the more notable UI changes.
 
-https://github.com/code-dot-org/code-dot-org/pull/5376: The initial work was a developer-pitched idea to use an LLM which would both generate the output from a prompt.
-
-https://github.com/code-dot-org/code-dot-org/pull/5388: Next, the modal was built, emoji selection added, still with the LLM, which would also attempt to explain its choices.
-
-https://github.com/code-dot-org/code-dot-org/pull/5424: Next, the modal explanation evolved to go from emoji -> neural network -> blocks -> visualization.
-
-https://github.com/code-dot-org/code-dot-org/pull/5434: Initial explanations were quite detailed.
-
-https://github.com/code-dot-org/code-dot-org/pull/5436: We added a header to the modal which reflected the AI block's appearance, to help make it clearer that this work was happening inside the block.
-
-https://github.com/code-dot-org/code-dot-org/pull/545: After some classroom tests, we changed the generation to show a series of low-scoring candidates before the winner.  (The recent arrival of live previews was quite helpful for this.)
-
-https://github.com/code-dot-org/code-dot-org/pull/54732: We simplified the explanation bar chart and also used it in the generating mode.
-
-https://github.com/code-dot-org/code-dot-org/pull/54982: We adjusted the generating mode, with a series of candidates that fade into each other and speed up, also removing the bar chart from there.
-
-https://github.com/code-dot-org/code-dot-org/pull/5510: We then adjusted the generating mode again, showing the previews at a slower and consistent pace.
-
+- The initial work was a developer-pitched idea to use an LLM which would both generate the output from a prompt: https://github.com/code-dot-org/code-dot-org/pull/5376
+- Next, the modal was built, emoji selection added, still with the LLM, which would also attempt to explain its choices: https://github.com/code-dot-org/code-dot-org/pull/5388
+- Next, the modal explanation evolved to go from emoji -> neural network -> blocks -> visualization: https://github.com/code-dot-org/code-dot-org/pull/5424
+- Initial explanations were quite detailed: https://github.com/code-dot-org/code-dot-org/pull/5434
+- We added a header to the modal which reflected the AI block's appearance, to help make it clearer that this work was happening inside the block: https://github.com/code-dot-org/code-dot-org/pull/5436
+- After some classroom tests, we changed the generation to show a series of low-scoring candidates before the winner, now with live previews too: https://github.com/code-dot-org/code-dot-org/pull/54552
+- We simplified the explanation bar chart and also used it in the generating mode: https://github.com/code-dot-org/code-dot-org/pull/54732
+- We adjusted the generating mode, with a series of candidates that fade into each other and speed up, also removing the bar chart from there: https://github.com/code-dot-org/code-dot-org/pull/54982
+- We then adjusted the generating mode again, showing the previews at a slower and consistent pace: https://github.com/code-dot-org/code-dot-org/pull/5510
