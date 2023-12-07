@@ -1,10 +1,8 @@
 import {asyncRun} from './pyodideWorkerManager';
 
 export async function runPythonCode(code: string) {
-  console.log('in pyodide consumer');
   try {
     const {results, error} = await asyncRun(code, {});
-    console.log('in pyodide consumer, got results?');
     if (results) {
       console.log('pyodideWorker return results: ', results);
     } else if (error) {

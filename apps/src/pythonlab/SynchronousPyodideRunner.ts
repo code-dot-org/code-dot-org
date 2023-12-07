@@ -1,5 +1,7 @@
 // Run pyodide in the main thread
 import {loadPyodide} from 'pyodide';
+import {getStore} from '../redux';
+import {appendOutput} from './pythonlabRedux';
 
 interface PyodideRunnerInterface {
   initialize: () => void;
@@ -25,6 +27,9 @@ export default class SynchronousPyodideRunner
     if (!this.loaded) {
       const pyodide = await loadPyodide({
         indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
+      });
+      pyodide.setStdout({
+        batched: msg => getStore().dispatch(appendOutput(msg)),
       });
       console.log('loaded!');
       this.pyodideInstance = pyodide;

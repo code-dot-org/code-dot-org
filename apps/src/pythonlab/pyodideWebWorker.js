@@ -4,18 +4,21 @@ async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
     indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.24.1/full',
   });
-  console.log('loaded pyodide from worker');
+  await self.pyodide.loadPackage(['numpy']);
+  self.pyodide.setStdout({
+    batched: msg => {
+      self.postMessage({type: 'sysout', message: msg, id: 'none'});
+    },
+  });
 }
 
-console.log('about to call loadPyodideAndPackages');
 const pyodideReadyPromise = loadPyodideAndPackages();
 
 self.onmessage = async event => {
-  console.log('in on message');
+  console.log('checking if pyodide is loaded...');
   // make sure loading is done
   await pyodideReadyPromise;
   console.log('pyodide is ready');
-  // Don't bother yet with this line, suppose our API is built in such a way:
   const {id, python, ...context} = event.data;
   // The worker copies the context in its own "memory" (an object mapping name to values)
   for (const key of Object.keys(context)) {
@@ -27,8 +30,8 @@ self.onmessage = async event => {
     await self.pyodide.loadPackagesFromImports(python);
     let results = await self.pyodide.runPythonAsync(python);
     console.log('ran python');
-    self.postMessage({results, id});
+    self.postMessage({type: 'run_complete', results, id});
   } catch (error) {
-    self.postMessage({error: error.message, id});
+    self.postMessage({type: 'error', error: error.message, id});
   }
 };
