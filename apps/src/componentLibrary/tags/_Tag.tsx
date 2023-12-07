@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 import {
   OverlayTrigger,
@@ -32,9 +32,9 @@ type TagIconProps = {
   placement: 'left' | 'right';
 };
 
-const TagIcon: React.FC<TagIconProps> = ({iconName, iconStyle, title}) => (
+const TagIcon: React.FC<TagIconProps> = memo(({iconName, iconStyle, title}) => (
   <FontAwesomeV6Icon iconName={iconName} iconStyle={iconStyle} title={title} />
-);
+));
 
 export interface TagProps {
   /** Tag label */
@@ -80,4 +80,4 @@ const Tag: React.FunctionComponent<TagProps> = ({
   );
 };
 
-export default Tag;
+export default memo(Tag);
