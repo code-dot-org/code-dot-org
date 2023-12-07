@@ -18,8 +18,8 @@ Feature: Dance Party
     And I wait until element "#use-button" is visible
 
     # Toggle to code and back.
-    And I press "toggle-code-button" using jQuery
-    And I press "toggle-effect-button" using jQuery
+    And I press "#toggle-code-button" using jQuery
+    And I press "#toggle-effect-button" using jQuery
 
     # Go to explanation and back.
     And I press "#explanation-button" using jQuery
@@ -50,6 +50,21 @@ Feature: Dance Party
     And I press "#use-button" using jQuery
     And element "#ai-modal-header-area" is not visible
 
-    # Run once.
+    # Run.
+    And I press "runButton"
+    And I press "resetButton"
+
+    # Reopen modal.
+    And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableText"
+
+    # Toggle to code and use it.
+    And I press "#toggle-code-button" using jQuery
+    And I press "#convert-button" using jQuery
+    And element "#ai-modal-header-area" is not visible
+
+    # Setup now has two blocks.
+    And element "[data-id='setup'] > g > g > .blocklyPath" is visible
+
+    # Run.
     And I press "runButton"
     And I press "resetButton"

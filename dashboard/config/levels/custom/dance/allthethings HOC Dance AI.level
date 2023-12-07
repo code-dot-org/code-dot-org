@@ -33,6 +33,7 @@
     "default_song": "introtoshamstep_47SOUL",
     "preload_asset_list": null,
     "usesPreview": "true",
+    "aiOutput": "both",
     "encrypted_examples": [
 
     ]
