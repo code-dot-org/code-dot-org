@@ -167,10 +167,11 @@ Feature: Curriculum Catalog Page
     And I wait until current URL contains "/professional-development-workshops"
 
   Scenario: On expanded card, Signed-in teacher sees professional learning section
-    Given I create a student named "Teacher Tom"
+    Given I create a teacher named "Teacher Tom"
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
     And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I scroll the "h4:contains(CS Fundamentals: Course A)" element into view
     And I wait until element "h4:contains(Professional Learning)" is visible
 
   Scenario: On expanded card, Signed-in student does not see professional learning section
