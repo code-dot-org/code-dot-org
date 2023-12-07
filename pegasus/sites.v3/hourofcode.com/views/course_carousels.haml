@@ -12,7 +12,7 @@
 #all-tutorials{style: 'visibility:hidden;'}
   - beyond_categories.each do |category|
     - id = "collection-" + category[:tag]
-    = view :learn_carousel, heading: category[:name], gradelevel: category[:tag], tutorials: tutorials, id: id, shuffle: true
+    = view :course_carousel, heading: category[:name], gradelevel: category[:tag], tutorials: tutorials, id: id, shuffle: true
 
 :javascript
 

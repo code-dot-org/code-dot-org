@@ -1,5 +1,5 @@
 - subheading ||= nil
-- company = request.GET['company']
+- company = request.GET["company"]
 - shuffle ||= false
 - items = tutorials.find_with_grade_level(gradelevel)
 - item_count = 3
@@ -10,11 +10,11 @@
 
   %hr
 
-  %h3.centered{style: "font-size: 1.5rem; margin-block: 4rem -1rem"}!= heading
+  %h3.centered{style: "font-size: 1.5rem; margin-block: 4rem 2rem"}!= heading
 
-  .learnpage{:style=>'position:relative'}
+  .learnpage{style: "position:relative"}
     .carousel-wrapper
-      %div{id: id, class: 'carousel course-carousel'}
+      %div.carousel.course-carousel{id: id}
         .slides
           - items.each_slice(item_count) do |slice|
             .slide.clear
@@ -23,23 +23,24 @@
                 - url = "#{url}?company=#{company}" if company
                 .action-block-wrapper
                   .action-block.action-block--one-col.white.flex-space-between
-                    .slide-img-1
-                      %a{:href=>url, :target=>'_blank'}<
-                        .slide-tags.overline-two= tutorial[:age]
+                    .content-wrapper
+                      %p.overline-two= tutorial[:age]
                       %h4{style: "font-size: 18px;"}
                         = tutorial[:name]
-                        %img{:src=>tutorial[:image].sub("/images/", CDO.code_org_url("/images/fit-520/")).sub(".png", ".jpg"), style: "margin-top: 10px;"}
-                    .slide-text-1
-                      .slide-tags= tutorial[:platformtext]
+                      %img{src: tutorial[:image].sub("/images/", CDO.code_org_url("/images/fill-480x360/")).sub(".png", ".jpg")}
+                      %p
+                        %strong=hoc_s(:module_label_devices)
+                        = tutorial[:platformtext]
                       %p.slide-longdescription= tutorial[:longdescription]
-                    %a.link-button{:href=>url, :target=>'_blank'}<
-                      =I18n.t(:go)
+                    .content-footer
+                      %a.link-button{href: url, target: "_blank"}
+                        =I18n.t(:go)
 
         .button-wrapper
-          %button.slide-prev{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+          %button.slide-prev{href: "#", style: "border:none; background-color: var(--neutral_light);"}
             %img{src: "//code.org/images/carousel/prev.svg", alt: "previous"}
-          %button.slide-next{:href=>'#', style: "border:none; background-color: var(--neutral_light);"}<
+          %button.slide-next{href: '#', style: "border:none; background-color: var(--neutral_light);"}
             %img{src: "//code.org/images/carousel/next.svg", alt: "next"}
 
       .pagination
-        %div{:id => "pagination-#{id}"}
+        %div{id: "pagination-#{id}"}
