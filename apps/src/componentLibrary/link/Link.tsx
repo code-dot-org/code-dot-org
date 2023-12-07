@@ -23,8 +23,8 @@ export interface LinkProps {
   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   /** Size of link */
   size?: ComponentSizeXSToL;
-  /** Color/type of link */
-  color?: 'primary' | 'secondary';
+  /** Type of link */
+  type?: 'primary' | 'secondary';
 }
 
 /**
@@ -51,13 +51,13 @@ const Link: React.FunctionComponent<LinkProps> = ({
   disabled,
   onClick,
   size = 'm',
-  color = 'primary',
+  type = 'primary',
 }) => {
   return (
     <a
       className={classNames(
         moduleStyles.link,
-        moduleStyles[`link-${color}`],
+        moduleStyles[`link-${type}`],
         moduleStyles[`link-${size}`],
         className
       )}

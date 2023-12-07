@@ -53,8 +53,8 @@ DisabledLink.args = {
   size: 'm',
 };
 
-export const GroupOfColorsOfLinks = MultipleTemplate.bind({});
-GroupOfColorsOfLinks.args = {
+export const GroupOfTypesOfLinks = MultipleTemplate.bind({});
+GroupOfTypesOfLinks.args = {
   components: [
     {
       children: 'Link M Primary',
@@ -64,7 +64,7 @@ GroupOfColorsOfLinks.args = {
     {
       children: 'Link M Secondary',
       href: '#',
-      color: 'secondary',
+      type: 'secondary',
       size: 'm',
     },
   ],
