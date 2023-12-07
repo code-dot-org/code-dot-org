@@ -341,8 +341,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     partitionBlocksByType() {
       // Google Blockly only. Used to load/render certain block types before others.
     },
-    appendSharedFunctions(blocksXml, functionsXml) {
-      return blockUtils.appendNewFunctions(blocksXml, functionsXml);
+    appendSharedFunctions(source, functionsXml) {
+      const isXml = stringIsXml(source);
+      if (isXml) {
+        return blockUtils.appendNewFunctions(source, functionsXml);
+      } else {
+        // CDO Blockly is not equipped to handle json projects, and we will reset the
+        // project to empty in loadBlocksToWorkspace if it is json. So if we see
+        // json here, we just return the json as-is.
+        return source;
+      }
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
@@ -359,6 +367,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // CDO Blockly does not have a concept of a hidden definition workspace,
   // so we return undefined here.
   blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
     return undefined;
   };
 
