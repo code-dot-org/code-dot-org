@@ -1,6 +1,6 @@
 import {PROCEDURE_DEFINITION_TYPES} from '../constants';
 import {partitionBlocksByType} from './cdoUtils';
-import {readBooleanAttribute} from '../utils';
+import {FALSEY_DEFAULT, readBooleanAttribute} from '../utils';
 
 export default function initializeBlocklyXml(blocklyWrapper) {
   // Clear xml namespace
@@ -134,7 +134,11 @@ export function addMutationToBehaviorDefBlocks(blockElement) {
   // (e.g. shared behaviors).
   // In CDO Blockly, the 'usercreated' flag was set on the block. Google Blockly
   // expects this kind of extra state in a mutator.
-  const userCreated = readBooleanAttribute(blockElement, 'usercreated');
+  const userCreated = readBooleanAttribute(
+    blockElement,
+    'usercreated',
+    FALSEY_DEFAULT
+  );
   mutationElement.setAttribute('userCreated', userCreated);
 
   // In CDO Blockly, behavior ids were stored on the field. Google Blockly
