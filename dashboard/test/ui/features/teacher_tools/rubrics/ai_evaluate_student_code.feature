@@ -66,12 +66,6 @@ Feature: Evaluate student code against rubrics using AI
     And I click selector "#runButton"
     And I wait until element "#resetButton" is visible
 
-    # Student submits code, waits for AI eval to run, unsubmits, then updates their code.
-    # TODO: remove this block as part of https://codedotorg.atlassian.net/browse/AITT-325
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
     # This will trigger an AI evaluation job to be queued.
     # The delayed job worker runs every 5 seconds. The job itself should run
     # quickly since it hits the stubbed out /api/test/ai_proxy/assessment route.
