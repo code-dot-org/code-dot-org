@@ -516,34 +516,24 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     }
   );
 
+  const analyticsData = {
+    url: location.href,
+    video: videoInfo.download,
+    fallback: 'code.org',
+  };
+
   videoPlayer.on('ready', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
-      url: location.href,
-      video: videoInfo.download,
-      fallback: 'code.org',
-    })
+    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, analyticsData)
   );
   videoPlayer.on('play', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, {
-      url: location.href,
-      video: videoInfo.download,
-      fallback: 'code.org',
-    })
+    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, analyticsData)
   );
   videoPlayer.on('pause', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, {
-      url: location.href,
-      video: videoInfo.download,
-      fallback: 'code.org',
-    })
+    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, analyticsData)
   );
 
   videoPlayer.on('ended', () => {
-    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, {
-      url: location.href,
-      video: videoInfo.download,
-      fallback: 'code.org',
-    });
+    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, analyticsData);
     onVideoEnded();
   });
   showFallbackPlayerCaptionLink(videoInfo.inDialog);
