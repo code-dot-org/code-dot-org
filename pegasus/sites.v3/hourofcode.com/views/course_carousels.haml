@@ -9,19 +9,10 @@
 
 - @variation = variation
 
-%h2.centered.heading-xxl
-  = hoc_s(:hoc_beyond_carousel_title)
-%p.centered.body-two
-  = hoc_s(:hoc_beyond_carousel_description)
-
-#all-tutorials{:style=>'visibility:hidden;'}
+#all-tutorials{style: 'visibility:hidden;'}
   - beyond_categories.each do |category|
     - id = "collection-" + category[:tag]
-    = view :learn_carousel, :heading=>category[:name], :gradelevel=>category[:tag], :tutorials=>tutorials, :id=>id, :shuffle=>true
-
-- if request.locale == "en-US"
-  %br
-  %br
+    = view :course_carousel, heading: category[:name], gradelevel: category[:tag], tutorials: tutorials, id: id, shuffle: true
 
 :javascript
 
@@ -105,7 +96,7 @@
       var groupedCards = groupArray(cards, cardsPerSlide);
 
       $('#' + carouselId + ' .slides .slide').remove();
-      
+
       groupedCards.forEach(function(group, index) {
         var slide = $('<div class="slide"></div>');
         slide.append(group);

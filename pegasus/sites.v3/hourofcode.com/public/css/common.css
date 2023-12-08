@@ -18,10 +18,6 @@ html {
   text-align: center;
 }
 
-.course-carousel {
-  opacity: 0.4;
-}
-
 .clear:before, .clear:after {
   content: "\0020";
   display: block;
@@ -76,86 +72,8 @@ html {
 .carousel-wrapper .pagination a span {
   display: none;
 }
-.course-carousel-title {
-  text-align: center;
-}
-.course-carousel {
-  width: 100%;
-  margin: 0;
-  background: #ffffff;
-}
-.course-carousel .slides {
-  width: 100%;
-  height: 480px;
-  background: #ffffff;
-  overflow: hidden;
-}
-.course-carousel .slide {
-  display: block;
-  position: relative;
-  float: left;
-  background-color: var(--neutral_light);
-  margin: 0;
-}
-.course-carousel .slide-img {
-  float: left;
-  width: 100%;
-}
-.course-carousel .slide img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-.course-carousel .slide .slide-text {
-  float: left;
-  width: 100%;
-  padding: 10px;
-}
 .carousel-international .slide .slide-text {
   padding: 20px 10px;
-}
-.course-carousel .slide h2,
-.course-carousel .slide h3,
-.course-carousel .slide p,
-.course-carousel .slide div {
-  line-height: 1.2em;
-}
-.course-carousel .slide h2 {
-  font-size: 18px;
-  margin-top: 40px;
-}
-.course-carousel .slide h3 {
-  font-size: 14px;
-  margin: 0 0 .857em 0;
-}
-.course-carousel .slide p {
-  font-size: 12px;
-  line-height: 1.3em;
-  margin: 0 0 .833em 0;
-}
-.course-carousel .slide a {
-  font-weight: inherit;
-}
-.course-carousel .slide a:link,
-.course-carousel .slide a:visited {
-  text-decoration: none;
-}
-.course-carousel .slide .slide-longdescription {
-  display: none;
-}
-.course-carousel .slide .slide-shortdescription {
-  padding-right: 75px;
-  display: block;
-}
-.course-carousel .slide .slide-tags {
-  margin: 0 0 .833em 0;
-  font-size: 12px;
-}
-.course-carousel .slide .slide-teachers-notes-link {
-  display: none;
-}
-.course-carousel .slide .slide-shorturl-link {
-  display: none;
 }
 .btn-carousel-slide {
   position: absolute;
@@ -174,25 +92,6 @@ html {
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
-.course-carousel .slide-prev,
-.course-carousel .slide-next {
-  position: absolute;
-  top: 0;
-  width: 40px;
-  height: 100%;
-}
-.course-carousel .slide-prev {
-  left: -55px;
-}
-.course-carousel .slide-prev > span {
-  border-right-color: #fff;
-}
-.course-carousel .slide-next {
-  right: -45px;
-}
-.course-carousel .slide-next > span {
-  border-left-color: #fff;
-}
 
 @media screen and (max-width: 319px)
 {
@@ -206,22 +105,7 @@ html {
     width: 320px;
     margin: 0 auto;
   }
-  .course-carousel .slides {
-    width: 320px;
-    height: 383px;
-  }
-  .course-carousel .slide {
-    padding: 0;
-  }
-  .course-carousel .slide .slide-img {
-    width: 320px;
-    height: 180px;
-    padding: 0 40px;
-  }
 
-  .course-carousel .slide .slide-tags {
-    margin-bottom: 0;
-  }
   .btn-carousel-slide {
     right: 10px;
   }
@@ -233,75 +117,6 @@ html {
     width: 600px;
     margin: 0 auto;
   }
-
-  .course-carousel .slides {
-    width: 600px;
-    height: 514px;
-  }
-
-  .course-carousel .slide .slide-img {
-    width: 520px;
-    height: 390px;
-  }
-}
-
-@media screen and (min-width: 970px) {
-
-  .course-carousel-title {
-    text-align: center;
-  }
-  .course-carousel .slides {
-    width: 446px;
-    height: 335px;
-  }
-  .course-carousel .slide .slide-img {
-    width: 446px;
-    height: 335px;
-  }
-  
-  .course-carousel .slide .slide-text {
-    width: 444px;
-    padding: 20px 20px 0 20px;
-  }
-  .course-carousel .slide h2 {
-    font-size: 28px;
-    line-height: 1em;
-  }
-  .course-carousel .slide h3 {
-    font-size: 18px;
-  }
-  .course-carousel .slide p {
-    font-size: 13px;
-  }
-  .course-carousel .slide .slide-longdescription {
-    display: block;
-  }
-  .course-carousel .slide .slide-shortdescription {
-    display: none;
-  }
-  .course-carousel .slide .slide-tags {
-    font-size: 14px;
-    font-weight: bold;
-  }
-  .course-carousel .slide .slide-teachers-notes-link {
-    display: block;
-    margin: 0.2em 0 0 0;
-    padding-right: 120px;
-    font-size: 11px;
-  }
-  .course-carousel .slide .slide-teachers-notes-link :hover {
-    text-decoration: underline;
-  }
-  .course-carousel .slide .slide-shorturl-link {
-    display: block;
-    margin: 1em 0 0 0;
-    padding-right: 120px;
-    font-size: 11px;
-  }
-  .course-carousel .slide .slide-shorturl-link :hover {
-    text-decoration: underline;
-  }
-  
 }
 
 /* Datepicker customizations */

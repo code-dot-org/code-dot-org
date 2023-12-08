@@ -3,27 +3,25 @@ title: Beyond an Hour of Code
 layout: wide_index
 ---
 
-%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 %link{href: '/css/full-width-section.css', rel:'stylesheet', type:'text/css'}
-%link{href: "/css/generated/beyond-carousel.css", rel: "stylesheet", type: "text/css"}
+%link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
+%link{href: "/css/generated/page/beyond.css", rel: "stylesheet", type: "text/css"}
 
 #fullwidth
   = view :header
 
   %section.banner
     .wrapper
-      %h1{style: "font-size: 3rem"}
-        =hoc_s(:beyond_an_hour)
-      %p.body-one
+      %h1=hoc_s(:beyond_an_hour)
+      %p.body-one.no-margin-bottom
         =hoc_s(:hoc_beyond_hero_description)
 
 %section
   .wrapper
-    .section-intro.centered
-      %h2.centered.heading-xxl
-        =hoc_s(:hoc_beyond_for_teachers_section_title)
-      %p.body-two
-        =hoc_s(:hoc_beyond_for_teachers_section_description)
+    %h2.centered
+      =hoc_s(:hoc_beyond_for_teachers_section_title)
+    %p.body-two.centered
+      =hoc_s(:hoc_beyond_for_teachers_section_description)
     .action-block__wrapper.action-block__wrapper--two-col
       .action-block.action-block--one-col.flex-space-between
         .content-wrapper
@@ -48,6 +46,13 @@ layout: wide_index
 
 %section.bg-neutral-light
   .wrapper
-    = view :learn_carousels, variation:'beyond'
+    %h2.centered
+      = hoc_s(:hoc_beyond_carousel_title)
+    %p.centered.body-two
+      = hoc_s(:hoc_beyond_carousel_description)
+    = view :course_carousels, variation:"beyond"
+    %hr
+    %p.body-one.centered{style: "margin-top: 3rem"}
+      =hoc_s(:hoc_beyond_submit_activity_form, markdown: :inline, locals:{form_url: "https://forms.gle/PqQVSCA7MxzXgN8s9"})
 
 = view :organized_by_cdo
