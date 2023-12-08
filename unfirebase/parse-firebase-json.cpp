@@ -26,32 +26,6 @@
 #include "munged-reader.h"
 #include "stock-table-names.h"
 
-using namespace std;
-using namespace rapidjson;
-
-enum KindOfRow {
-  Record,
-  Channel,
-  Table,
-};
-
-const bool RAW_DEBUG = false;
-const bool FINE_DEBUG = false;
-
-const KindOfRow KIND_OF_ROW = Table;
-
-const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
-const bool LOAD_DATA_IN_THREAD = true;
-const uint NUM_DATA_THREADS = 4;
-const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
-const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 1000000 : 1000;
-const bool SEND_RECORDS_TO_MYSQL = false;
-
-const string TMP_DIR = "/tmp/parse-firebase-json/";
-const uint64_t BYTES_PER_RECORD = KIND_OF_ROW == Record ? 1000 : 250000;
-const uint64_t BYTES_PER_DATA_FILE = BYTES_PER_RECORD * NUMBER_OF_RECORDS_BEFORE_COMMIT;
-const uint64_t TMP_DIR_TMPFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE * 4;
-
 // We're using the ancient JDBC C++ api, because the new X DevAPI
 // requires the X Plugin to be enabled on the MySQL server, and
 // AWS RDS explicitly does not support that :-( Also, its not
@@ -61,13 +35,73 @@ const uint64_t TMP_DIR_TMPFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE 
 // https://dev.mysql.com/doc/dev/connector-cpp/latest/jdbc_ref.html
 #include <mysql/jdbc.h>
 
+using namespace std;
+using namespace rapidjson;
+
+enum KindOfRow {
+  Record=0,
+  Table,
+  Channel,
+};
+
+// What are we storing in a single MySQL row?
+// 1. One student data record?
+// 2. One student data table (containing many records)?
+// 3. All the data tables for a student channel aka project?
+const KindOfRow KIND_OF_ROW = Table;
+
+// Which MySQL table are we storing this data in?
+const unordered_map<KindOfRow, string> kindOfRowToSQLTableName = {
+  { Record, "records" }, 
+  { Channel, "channels" }, 
+  { Table, "tables" },
+};
+const string TABLE_NAME = kindOfRowToSQLTableName.at(KIND_OF_ROW);
+
+// Don't load tables into MySQL that are identical copies of stock data sets
+// These are code.org supplied datasets like 'Words' or 'US States'
+// that have many un-edited copies in student projects (>80% of data in firebase)
+// 
+// See stock-table-names.h for the list of stock table names
+const bool DONT_UPLOAD_STOCK_TABLES = true;
+
+// Use bulk `LOAD DATA LOCAL INFILE` instead of `INSERT INTO` statements
+// LOAD DATA INFILE statements /should/ be much faster, it copies the
+// TSV file to the server, and does an optimized load there straight from disk.
+const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
+
+// If LOAD_DATA_IN_THREAD, then spawn threads that do the MySQL query
+// and leave the main thread for parsing JSON
+const bool LOAD_DATA_IN_THREAD = true;
+const uint NUM_DATA_THREADS = 4;
+const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
+
+// This determines the `LOAD DATA LOCAL INFILE` tsv batch size and/or how often we COMMIT
+const uint64_t NUMBER_OF_ROWS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 1000000 : 1000;
+
+// If this is False, we don't actually transmit individual datum to MySQL
+const bool DEBUG_SEND_DATA_TO_MYSQL = true;
+
+// In LOAD_DATA_INSTEAD_OF_INSERT mode, we write TSVs to this directory
+const string TMP_DIR = "/tmp/parse-firebase-json/";
+
+// Different levels of debug output
+const bool RAW_DEBUG = false;
+const bool FINE_DEBUG = false;
+
+// On Linux we use tmpfs to write TSVs here without hitting the disk
+// these parameters are used to estimate the appropriate size of tmpfs
+const uint64_t BYTES_PER_ROW = KIND_OF_ROW == Record ? 1000 : 250000;
+const uint64_t BYTES_PER_DATA_FILE = BYTES_PER_ROW * NUMBER_OF_ROWS_BEFORE_COMMIT;
+const uint64_t TMP_DIR_TMPFS_SIZE = NUM_DATA_FILES_QUEUED * BYTES_PER_DATA_FILE * 4;
+
 const char *getEnv(string envVar, const char *defaultVal) {
   const char *env = getenv(envVar.c_str());
   return env ? env : defaultVal;
 }
 
+// MySQL DB Name
 const string DB_NAME = getEnv("MYSQL_DB", "unfirebase");
-const string TABLE_NAME = stringify(KIND_OF_ROW);
 
 thread_local sql::Connection *db = nullptr;
 sql::Driver *driver = nullptr;
@@ -187,7 +221,7 @@ void loadData(string tsvFilename) {
   cout << "LOAD DATA LOCAL INFILE '" << tsvFilename << "'" << endl;
   numRecordBytesMutex.unlock();
 
-  if (SEND_RECORDS_TO_MYSQL) {
+  if (DEBUG_SEND_DATA_TO_MYSQL) {
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
     stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
                   "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
@@ -198,14 +232,7 @@ void loadData(string tsvFilename) {
   numRecordBytesMutex.lock();
   numRecordBytes += std::filesystem::file_size(tsvFilename);
   double percent = (round(100 * 100 * numRecordBytes / (double)originalJSONBytes) / 100);
-  cout << "Written to MySQL: "
-    << "\033[1m"
-    << (round(numRecordBytes / (1000000000.0) * 100) / 100)
-    << "GB"
-    << "\033[0m"
-    << ", \033[1;32m"
-    << "~" << percent << "%\033[0m" << endl;
-  
+  cout << "Written to MySQL: " << "\033[1m" << (round(numRecordBytes / (1000000000.0) * 100) / 100) << "GB" << "\033[0m" << ", \033[1;32m" << "~" << percent << "%\033[0m" << endl;  
   numRecordBytesMutex.unlock();
 
   std::filesystem::remove(tsvFilename);
@@ -214,8 +241,6 @@ void loadData(string tsvFilename) {
 boost::atomic<bool> done(false);
 void loadDataThread() {
   db = getDB();
-
-  std::unique_ptr<sql::Statement> stmt(db->createStatement());
   db->setSchema(DB_NAME);
 
   cout << "loadDataThread: starting" << endl;
@@ -283,7 +308,7 @@ inline void commitRecords() {
     loadDataBufferTSV = nullptr;
   } else {
     cout << "COMMIT; (totalRecordsCount=" << totalRecordsCount << ")" << endl;
-    if (SEND_RECORDS_TO_MYSQL) {
+    if (DEBUG_SEND_DATA_TO_MYSQL) {
       std::unique_ptr<sql::Statement> stmt(db->createStatement());
       stmt->execute("COMMIT;");
     }
@@ -292,7 +317,97 @@ inline void commitRecords() {
   unComittedRecords = 0;
 }
 
-inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordID, const char *json) {
+inline bool jsonDeepEqual(const string &json1, const string &json2) {
+  // FIXME: we don't store the parse tree for the reference here, so
+  // its super super slow
+  Document doc1;
+  doc1.Parse(json1.c_str());
+  Document doc2;
+  doc2.Parse(json2.c_str());
+  return doc1 == doc2;
+}
+
+inline bool isStockTable(const string &tableName, const string &json) {
+  const bool TABLE_NAME_COUNTING = false;
+
+  static unordered_map<string, string> stockTableJSON;
+  static unordered_map<string, uint64_t> tableNameToCount; // if TABLE_NAME_COUNTING
+  static uint64_t tableBytes = 0; // DONT_UPLOAD_STOCK_TABLES
+  static uint64_t tableBytesStock = 0; // DONT_UPLOAD_STOCK_TABLES
+
+  static bool firstTimeRun = true;
+  if (firstTimeRun) {
+    firstTimeRun = false;
+    cerr << "WARNING: inStockTable() is really slow, it does a JSON deep equal, and we should move its execution to a data thread" << endl;
+  }
+
+  auto bytes = json.length();
+  tableBytes += bytes;
+
+  bool isStock = false;
+  if (STOCK_TABLE_NAMES.count(tableName) > 0) {
+    if (stockTableJSON.count(tableName) == 0) {
+      // FIXME: we set the first version of any "stock table" to be the
+      // reference table, but we should really get the reference table
+      // from a canonical source
+      stockTableJSON[tableName] = json;
+    }
+
+    // This is the core logic of isStockTable(), first we check if their strings
+    // happen to be string equal (sometimes Firebase preserves key order), and if not
+    // we then check if the JSON are deep equal (ignores key order!)
+    isStock = stockTableJSON[tableName] == json || jsonDeepEqual(stockTableJSON[tableName], json);
+
+  } else if (TABLE_NAME_COUNTING) {
+    //cout << tableName << endl;
+    tableNameToCount[tableName]++;
+  }
+
+  // if (tableName == "Fortune Data") {
+  //   cout << "Was " << tableName << " stock? " << isStock << endl;
+  //   // if (isStock) {
+  //   //   cout << json << endl;
+  //   // }
+  // }
+
+  if (TABLE_NAME_COUNTING && totalRecordsCount % 10000 == 0) {
+    vector<pair<string, uint64_t> > pairs;
+    auto m = tableNameToCount;
+    copy(m.begin(), m.end(), back_inserter<vector<pair<string, uint64_t> > >(pairs));
+    
+    sort(pairs.begin(), pairs.end(), [=](std::pair<string, uint64_t>& a, std::pair<string, uint64_t>& b) {
+      return a.second > b.second;
+    });
+    cout << "Table Name, Count" << endl;
+    for (size_t i = 0; i < pairs.size(); ++i) {
+      if (pairs[i].second > 2)
+      cout << pairs[i].first << " , " << pairs[i].second << "\n";
+    }
+    exit(0);
+  }
+
+  if (isStock) {
+    tableBytesStock += bytes;
+
+    // We don't upload stock tables anymore, but we DO claim their bytes
+    // so the percentage progress indicator is better than useless
+    numRecordBytes += bytes;
+
+    // burp every 1 in 10000 times
+    if (DONT_UPLOAD_STOCK_TABLES && (rand()/(float)RAND_MAX < 0.0001))
+      cout << "DONT_UPLOAD_STOCK_TABLES=true, skipped uploading " << 100.0 * ((double)tableBytesStock) / tableBytes << "\%" << " of bytes" << endl;
+
+  }
+
+  return isStock;
+}
+
+inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordID, const string &json) {
+  // FIXME: isStockTable() requires a SUPER expensive JSON deep equal, we
+  // should figure out how to do this in the data threads instead of here in the main thread
+  if (DONT_UPLOAD_STOCK_TABLES && isStockTable(tableName, json))
+    return;
+    
   unComittedRecords++;
 
   if (LOAD_DATA_INSTEAD_OF_INSERT) {
@@ -312,8 +427,8 @@ inline void insertIntoDB(const string &channelId, const string &tableName, const
     }
   } else {
     assert(KIND_OF_ROW != Record);
-    numRecordBytes += strlen(json);
-    if (SEND_RECORDS_TO_MYSQL) {
+    numRecordBytes += json.length();
+    if (DEBUG_SEND_DATA_TO_MYSQL) {
       insertUnfirebaseStatement->setString(1, currentChannelName);
       insertUnfirebaseStatement->setString(2, json);
       insertUnfirebaseStatement->execute();
@@ -322,7 +437,7 @@ inline void insertIntoDB(const string &channelId, const string &tableName, const
 
   totalRecordsCount++;
 
-  if (unComittedRecords >= NUMBER_OF_RECORDS_BEFORE_COMMIT) {
+  if (unComittedRecords >= NUMBER_OF_ROWS_BEFORE_COMMIT) {
     commitRecords();
   }
 }
@@ -373,64 +488,6 @@ inline void startTable(const string &tableName) {
   }
 }
 
-unordered_map<string, string> stockTableJSON;
-
-const bool TABLE_NAME_COUNTING = false;
-unordered_map<string, uint64_t> tableNameToCount; // if TABLE_NAME_COUNTING
-
-inline bool jsonDeepEqual(const string &json1, const string &json2) {
-  // FIXME: we don't store the parse tree for the reference here, so
-  // its super super slow
-  Document doc1;
-  doc1.Parse(json1.c_str());
-  Document doc2;
-  doc2.Parse(json2.c_str());
-  return doc1 == doc2;
-}
-
-inline bool isStockTable(const string &tableName, const string &json) {
-  bool isStock = false;
-  if (STOCK_TABLE_NAMES.count(tableName) > 0) {
-    if (stockTableJSON.count(tableName) == 0) {
-      // FIXME: we set the first version of any "stock table" to be the
-      // reference table, but we should really get the reference table
-      // from a canonical source
-      stockTableJSON[tableName] = json;
-    }
-    isStock = stockTableJSON[tableName] == json || jsonDeepEqual(stockTableJSON[tableName], json);
-  } else if (TABLE_NAME_COUNTING) {
-    //cout << tableName << endl;
-    tableNameToCount[tableName]++;
-  }
-
-  // if (tableName == "Fortune Data") {
-  //   cout << "Was " << tableName << " stock? " << isStock << endl;
-  //   // if (isStock) {
-  //   //   cout << json << endl;
-  //   // }
-  // }
-
-  if (TABLE_NAME_COUNTING && totalRecordsCount % 10000 == 0) {
-    vector<pair<string, uint64_t> > pairs;
-    auto m = tableNameToCount;
-    copy(m.begin(), m.end(), back_inserter<vector<pair<string, uint64_t> > >(pairs));
-    
-    sort(pairs.begin(), pairs.end(), [=](std::pair<string, uint64_t>& a, std::pair<string, uint64_t>& b) {
-      return a.second > b.second;
-    });
-    cout << "Table Name, Count" << endl;
-    for (size_t i = 0; i < pairs.size(); ++i) {
-      if (pairs[i].second > 2)
-      cout << pairs[i].first << " , " << pairs[i].second << "\n";
-    }
-    exit(0);
-  }
-
-  return isStock;
-}
-
-uint64_t tableBytes = 0;
-uint64_t tableBytesStock = 0;
 inline void endTable(const string &tableName) {
   if (FINE_DEBUG) cout << "END TABLE" << endl;
 
@@ -438,21 +495,9 @@ inline void endTable(const string &tableName) {
     assert(writer != nullptr);
     const string &json = writerBuffer->GetString();
 
-    auto bytes = json.length();
-    tableBytes += bytes;
-    if (isStockTable(tableName, json)) {
-      // FIXME: what do we do with stock table data? skipping for now...
+    // We only insert non-stock data into the DB
+    insertIntoDB(currentChannelName, tableName, NO_RECORD_ID, json.c_str());
 
-      tableBytesStock += bytes;
-      cout << "Percent Bytes from Stock Tables: " << 100.0 * ((double)tableBytesStock) / tableBytes << endl;
-    } else {
-      //cout << tableName << endl;
-
-      // We only insert non-stock data into the DB
-      insertIntoDB(currentChannelName, tableName, NO_RECORD_ID, json.c_str());
-    }
-
-    
     delete writer;
     delete writerBuffer;
     writer = nullptr;
@@ -468,8 +513,6 @@ inline void handleRecord(string channelId, string tableName, string recordId,
   insertIntoDB(channelId, tableName, recordId, jsonString.c_str());
 }
 
-// uint debugCount = 0;
-
 void printLastKeys() {
   cout << "lastKeys: ";
   for (int i =0; i <= depth; i++) {
@@ -477,8 +520,6 @@ void printLastKeys() {
   }
   cout << endl;
 }
-
-uint debugCount = 0;
 
 struct RawJSONHandler {
   bool StartObject() {
@@ -493,13 +534,6 @@ struct RawJSONHandler {
     } else if (depth == TABLE_DEPTH && lastKeys[TABLE_DEPTH-3] == "storage") {
       startTable(lastKeys[TABLE_DEPTH-1]);
     }
-
-    // if (debugCount++ > 90000) {
-    //   //throw std::runtime_error("DEBUG");
-    //   //return false;
-    //   printLastKeys();
-    //   return false;
-    // }
 
     if (writer) {
       if (!writer->StartObject()) {
@@ -674,6 +708,7 @@ void parseFirebaseJSON(string filename) {
   MungedReader<UTF8<>, UTF8<> > reader;
 
   loadDataBufferDir =  TMP_DIR + filename + "-tsvs/";
+  filesystem::remove_all(loadDataBufferDir);
   filesystem::create_directories(loadDataBufferDir);
 
   #if __linux__
@@ -707,6 +742,60 @@ void parseFirebaseJSON(string filename) {
   commitRecords();
 }
 
+void setupDB(sql::Connection *db) {
+  if (!DEBUG_SEND_DATA_TO_MYSQL) {
+    cerr << "DEBUG_SEND_DATA_TO_MYSQL=true, skipping MySQL data upload" << endl;
+    return;
+  }
+
+  cout << "Writing to MySQL table: " << DB_NAME << "." << TABLE_NAME << endl;
+  cout << "Connecting to MySQL..." << endl;
+
+  std::unique_ptr<sql::Statement> stmt(db->createStatement());
+
+  // stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
+  stmt->execute("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
+
+  db->setSchema(DB_NAME);
+
+  if (KIND_OF_ROW == Record) {
+    string createTable = "CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (" +
+      "`channel_id` VARCHAR(45) NOT NULL, " +
+      "`table_name` VARCHAR(45) NOT NULL, " +
+      "`record_id` INT NOT NULL, " +
+      "`record` TEXT(8192) NULL, " +
+      "PRIMARY KEY (`channel_id`, `table_name`, `record_id`), " + 
+      "INDEX `channel_index` (`channel_id`));";
+    stmt->execute(createTable);
+    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+  } else {
+    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
+    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + CHANNEL_TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
+    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+    insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
+  }
+  //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
+  stmt->execute("SET autocommit=0;");
+  stmt->execute("SET unique_checks=0;");
+  stmt->execute("SET foreign_key_checks=0;");
+  //stmt->execute("SET sql_log_bin=0;"); // NEEDS SUPER privs
+  stmt->execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
+  stmt->execute("COMMIT;");
+
+  std::unique_ptr< sql::ResultSet >
+    res(stmt->executeQuery("SHOW SESSION STATUS LIKE \"Compression\""));
+  while (res->next()) {
+    cout << "Checking compression: " << res->getString(1) << " " << res->getString(2) << endl;
+  }
+
+  if (db->isValid()) {
+    cout << "Connected to MySQL!" << endl;
+  } else {
+    cerr << "Failed to connect to MySQL!" << endl;
+    throw std::runtime_error("Failed to connect to MySQL!");
+  }
+}
+
 int main(int argc, char *argv[]) {
   if (argc != 2) {
     cout << "Usage: " << argv[0] << " <json file>" << endl;
@@ -716,54 +805,9 @@ int main(int argc, char *argv[]) {
   string filename = argv[1];
   cout << "Parsing: " << filename << endl;
 
-  cout << "Connecting to MySQL..." << endl;
   try {
     db = getDB();
-
-    std::unique_ptr<sql::Statement> stmt(db->createStatement());
-    // stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
-    stmt->execute("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
-
-    db->setSchema(DB_NAME);
-
-    cout << "Writing to MySQL table: " << TABLE_NAME << endl;
-
-    if (KIND_OF_ROW == Record) {
-      string createTable = "CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (" +
-        "`channel_id` VARCHAR(45) NOT NULL, " +
-        "`table_name` VARCHAR(45) NOT NULL, " +
-        "`record_id` INT NOT NULL, " +
-        "`record` TEXT(8192) NULL, " +
-        "PRIMARY KEY (`channel_id`, `table_name`, `record_id`), " + 
-        "INDEX `channel_index` (`channel_id`));";
-      stmt->execute(createTable);
-      stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
-    } else {
-      stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
-      //stmt->execute("CREATE TABLE IF NOT EXISTS `" + CHANNEL_TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
-      stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
-      insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
-    }
-    //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
-    stmt->execute("SET autocommit=0;");
-    stmt->execute("SET unique_checks=0;");
-    stmt->execute("SET foreign_key_checks=0;");
-    //stmt->execute("SET sql_log_bin=0;"); // NEEDS SUPER privs
-    stmt->execute("SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;");
-    stmt->execute("COMMIT;");
-
-    std::unique_ptr< sql::ResultSet >
-      res(stmt->executeQuery("SHOW SESSION STATUS LIKE \"Compression\""));
-    while (res->next()) {
-      cout << "Checking compression: " << res->getString(1) << " " << res->getString(2) << endl;
-    }
-
-    if (db->isValid()) {
-      cout << "Connected to MySQL!" << endl;
-    } else {
-      cerr << "Failed to connect to MySQL!" << endl;
-      return EXIT_FAILURE;
-    }
+    setupDB(db);
 
     if (LOAD_DATA_IN_THREAD) {
       boost::thread_group dataThreads;
