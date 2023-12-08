@@ -5,6 +5,7 @@
 #include <rapidjson/reader.h>
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/writer.h>
+#include <rapidjson/document.h>
 #include <rapidjson/error/en.h>
 #include <unistd.h>
 
@@ -19,6 +20,8 @@
 #include <mutex>
 #include <string>
 #include <thread>
+#include <unordered_map> 
+
 
 #include "munged-reader.h"
 #include "stock-table-names.h"
@@ -42,7 +45,7 @@ const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 const uint64_t NUMBER_OF_RECORDS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 1000000 : 1000;
-const bool SEND_RECORDS_TO_MYSQL = true;
+const bool SEND_RECORDS_TO_MYSQL = false;
 
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 const uint64_t BYTES_PER_RECORD = KIND_OF_ROW == Record ? 1000 : 250000;
@@ -370,24 +373,90 @@ inline void startTable(const string &tableName) {
   }
 }
 
+unordered_map<string, string> stockTableJSON;
+
+const bool TABLE_NAME_COUNTING = false;
+unordered_map<string, uint64_t> tableNameToCount; // if TABLE_NAME_COUNTING
+
+inline bool jsonDeepEqual(const string &json1, const string &json2) {
+  // FIXME: we don't store the parse tree for the reference here, so
+  // its super super slow
+  Document doc1;
+  doc1.Parse(json1.c_str());
+  Document doc2;
+  doc2.Parse(json2.c_str());
+  return doc1 == doc2;
+}
+
+inline bool isStockTable(const string &tableName, const string &json) {
+  bool isStock = false;
+  if (STOCK_TABLE_NAMES.count(tableName) > 0) {
+    if (stockTableJSON.count(tableName) == 0) {
+      // FIXME: we set the first version of any "stock table" to be the
+      // reference table, but we should really get the reference table
+      // from a canonical source
+      stockTableJSON[tableName] = json;
+    }
+    isStock = stockTableJSON[tableName] == json || jsonDeepEqual(stockTableJSON[tableName], json);
+  } else if (TABLE_NAME_COUNTING) {
+    //cout << tableName << endl;
+    tableNameToCount[tableName]++;
+  }
+
+  // if (tableName == "Fortune Data") {
+  //   cout << "Was " << tableName << " stock? " << isStock << endl;
+  //   // if (isStock) {
+  //   //   cout << json << endl;
+  //   // }
+  // }
+
+  if (TABLE_NAME_COUNTING && totalRecordsCount % 10000 == 0) {
+    vector<pair<string, uint64_t> > pairs;
+    auto m = tableNameToCount;
+    copy(m.begin(), m.end(), back_inserter<vector<pair<string, uint64_t> > >(pairs));
+    
+    sort(pairs.begin(), pairs.end(), [=](std::pair<string, uint64_t>& a, std::pair<string, uint64_t>& b) {
+      return a.second > b.second;
+    });
+    cout << "Table Name, Count" << endl;
+    for (size_t i = 0; i < pairs.size(); ++i) {
+      if (pairs[i].second > 2)
+      cout << pairs[i].first << " , " << pairs[i].second << "\n";
+    }
+    exit(0);
+  }
+
+  return isStock;
+}
+
+uint64_t tableBytes = 0;
+uint64_t tableBytesStock = 0;
 inline void endTable(const string &tableName) {
   if (FINE_DEBUG) cout << "END TABLE" << endl;
 
   if (KIND_OF_ROW == Table) {
-    if (STOCK_TABLE_NAMES.count(tableName) > 0) {
-      //cout << "\t\t\tSTOCK " << tableName << endl;
+    assert(writer != nullptr);
+    const string &json = writerBuffer->GetString();
+
+    auto bytes = json.length();
+    tableBytes += bytes;
+    if (isStockTable(tableName, json)) {
+      // FIXME: what do we do with stock table data? skipping for now...
+
+      tableBytesStock += bytes;
+      cout << "Percent Bytes from Stock Tables: " << 100.0 * ((double)tableBytesStock) / tableBytes << endl;
     } else {
-      cout << "ORIGI " << tableName << endl;
+      //cout << tableName << endl;
+
+      // We only insert non-stock data into the DB
+      insertIntoDB(currentChannelName, tableName, NO_RECORD_ID, json.c_str());
     }
-    if (writer) {
-      insertIntoDB(currentChannelName, tableName, NO_RECORD_ID, writerBuffer->GetString());
-      delete writer;
-      delete writerBuffer;
-      writer = nullptr;
-      writerBuffer = nullptr;
-    } else {
-      insertIntoDB(currentChannelName, NO_TABLE_NAME, NO_RECORD_ID, "{ 'FAKE': 'DATA IS FAKE'}");
-    }    
+
+    
+    delete writer;
+    delete writerBuffer;
+    writer = nullptr;
+    writerBuffer = nullptr;
   }
 }
 
