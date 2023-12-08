@@ -114,8 +114,8 @@ const std::unordered_set<std::string> STOCK_TABLE_NAMES = {
     "World's Tallest Buildings",
     "World's Tallest Mountains",
 
-    /* ABOVE HERE ARE TABLE NAMES THAT CAME FROM `dashboard/config/data-docs/*json` */
-    /* BELOW HERE ARE TABLE NAMES THAT WE INFERRED FROM USAGE */
+    // ABOVE HERE ARE TABLE NAMES THAT CAME FROM `dashboard/config/data-docs/*json`
+    // BELOW HERE ARE TABLE NAMES THAT WE INFERRED FROM USAGE
 
 
     // TODO: add a few stock tables that are probably level data injected by FirebaseStorage.populateTable
