@@ -45,7 +45,7 @@ export function disableOrphans(blockEvent) {
     }
     let block = eventWorkspace.getBlockById(blockEvent.blockId);
     if (block) {
-      updateEnabled(block);
+      updateBlockEnabled(block);
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
@@ -58,12 +58,12 @@ export function disableOrphans(blockEvent) {
       if (block.type === BLOCK_TYPES.procedureCall) {
         block.setEnabled(false);
       }
-      updateEnabled(block);
+      updateBlockEnabled(block);
     });
   }
 }
 
-function updateEnabled(block) {
+function updateBlockEnabled(block) {
   // Changing blocks as part of this event shouldn't be undoable.
   const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
