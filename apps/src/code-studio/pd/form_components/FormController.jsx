@@ -11,8 +11,6 @@ import i18n from '@cdo/locale';
  * array of components with extend from the FormComponent helper class.
  * Resulting form will then display those components paginated and in order,
  * with a submit button on the last page.
- *
- * @see WorkshopSurvey component for example usage.
  */
 export default class FormController extends React.Component {
   constructor(props) {
