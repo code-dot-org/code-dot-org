@@ -27,7 +27,7 @@
                       %p.overline-two= tutorial[:age]
                       %h4{style: "font-size: 18px;"}
                         = tutorial[:name]
-                      %img{src: tutorial[:image].sub("/images/", CDO.code_org_url("/images/fill-480x360/")).sub(".png", ".jpg")}
+                      %img{src: tutorial[:image].sub("/images/", CDO.code_org_url("/images/fill-480x360/")).sub(".png", ".jpg"), alt: ""}
                       %p
                         %strong=hoc_s(:module_label_devices)
                         = tutorial[:platformtext]
