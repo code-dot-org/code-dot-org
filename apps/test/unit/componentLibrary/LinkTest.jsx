@@ -46,11 +46,13 @@ describe('Design System - Link', () => {
     const user = userEvent.setup();
     const spyOnClick = sinon.spy();
 
-    const {rerender} = render(<Link onClick={spyOnClick}>Home</Link>);
+    const linkToRender = <Link onClick={spyOnClick}>Home</Link>;
+
+    const {rerender} = render(linkToRender);
 
     await user.click(screen.getByText('Home'));
 
-    rerender(<Link onClick={spyOnClick}>Home</Link>);
+    rerender(linkToRender);
 
     expect(spyOnClick).to.have.been.calledOnce;
   });
@@ -58,17 +60,14 @@ describe('Design System - Link', () => {
   it('Link - doesn`t call onClick when disabled', async () => {
     const user = userEvent.setup();
     const spyOnClick = sinon.spy();
-    const {rerender} = render(
-      <Link href="/" disabled onClick={spyOnClick}>
-        Home
-      </Link>
-    );
-
-    rerender(
+    const linkToRender = (
       <Link disabled onClick={spyOnClick}>
         Home
       </Link>
     );
+    const {rerender} = render(linkToRender);
+
+    rerender(linkToRender);
 
     await user.click(screen.getByText('Home'));
 
