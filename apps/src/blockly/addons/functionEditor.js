@@ -196,21 +196,20 @@ export default class FunctionEditor {
       );
     }
 
-    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
-    // We do not want to show the delete button for behaviors that are not user-created
-    const hideDeleteButton = isBehavior && !this.block.userCreated;
+    // We only want to be able to delete things that are user-created (functions and behaviors)
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
-    modalEditorDeleteButton.style.visibility = hideDeleteButton
-      ? 'hidden'
-      : 'visible';
+    modalEditorDeleteButton.style.visibility = this.block.userCreated
+      ? 'visible'
+      : 'hidden';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
       return Blockly.cdoUtils.getBlockColor(this.block);
     };
 
+    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
       isBehavior ? msg.behaviorEditorHeader() : msg.function(),
