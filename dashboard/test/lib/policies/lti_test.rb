@@ -51,4 +51,29 @@ class Policies::LtiTest < ActiveSupport::TestCase
     auth_option.update!(authentication_id: 'not-lti', credential_type: 'not-lti')
     refute Policies::Lti.lti?(@user)
   end
+
+  test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
+    user = create :teacher, :with_lti_auth
+    assert_equal user.email, Policies::Lti.lti_provided_email(user)
+  end
+
+  test 'lti_provided_email should NOT return an email given a non-LTI user' do
+    user = create :teacher
+    assert_equal nil, Policies::Lti.lti_provided_email(user)
+  end
+
+  test 'show_email_input?' do
+    test_matrix = [
+      [true, [:teacher, :with_lti_auth]],
+      [false, [:teacher]],
+      [false, [:student, :with_lti_auth]],
+      [false, [:student]],
+    ]
+    test_matrix.each do |expected, traits|
+      user = create(*traits)
+      actual = Policies::Lti.show_email_input?(user)
+      failure_msg = "Expected show_email_input?(#{traits}) to be #{expected} but it was #{actual}"
+      assert_equal expected, actual, failure_msg
+    end
+  end
 end

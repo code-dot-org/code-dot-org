@@ -599,6 +599,12 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
     this.studioApp_.playAudio('failure');
   }
 
+  analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_VALIDATION, {
+    result,
+    message,
+    testResults: this.testResults,
+  });
+
   const sendReport = () => {
     this.studioApp_.report({
       app: 'dance',

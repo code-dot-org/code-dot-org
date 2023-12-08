@@ -18,29 +18,28 @@ import {
   loadSongMetadata,
   isSongDeprecated,
 } from './songs';
-import {Field} from 'blockly';
 
 export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
-  currentAiModalField?: Field;
+  currentAiModalBlockId: string | undefined;
   aiOutput?: AiOutput;
+  aiModalOpenedFromFlyout: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
   currentSongMetadata: SongMetadata | undefined;
-  aiModalOpenedFromFlyout: boolean;
 }
 
 const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
-  currentAiModalField: undefined,
+  currentAiModalBlockId: undefined,
   aiOutput: AiOutput.AI_BLOCK,
+  aiModalOpenedFromFlyout: false,
   isRunning: false,
   currentSongMetadata: undefined,
-  aiModalOpenedFromFlyout: false,
 };
 
 // THUNKS
@@ -190,15 +189,15 @@ const danceSlice = createSlice({
     openAiModal: (
       state,
       action: PayloadAction<{
-        modalField: Field;
+        blockId: string;
         fromFlyout: boolean;
       }>
     ) => {
-      state.currentAiModalField = action.payload.modalField;
+      state.currentAiModalBlockId = action.payload.blockId;
       state.aiModalOpenedFromFlyout = action.payload.fromFlyout;
     },
     closeAiModal: state => {
-      state.currentAiModalField = undefined;
+      state.currentAiModalBlockId = undefined;
       state.aiModalOpenedFromFlyout = false;
     },
   },
