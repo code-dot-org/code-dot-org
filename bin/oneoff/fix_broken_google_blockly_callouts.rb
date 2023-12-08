@@ -17,7 +17,7 @@ def fix_callouts
     puts "THIS IS A FULL RUN"
   end
   puts "***SPRITE LAB***"
-  process_levels(GamelabJr.all)
+  process_levels(GamelabJr.where(game_id: 64))
 end
 
 def process_levels(levels)
