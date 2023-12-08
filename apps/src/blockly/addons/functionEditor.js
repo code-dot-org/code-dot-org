@@ -195,7 +195,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
-
+    this.block.setDeletable(false);
     // We only want to be able to delete things that are user-created (functions and behaviors)
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
@@ -379,10 +379,9 @@ export default class FunctionEditor {
     // Position the blocks within the workspace svg frame.
     const x = frameSizes.MARGIN_SIDE + 5;
     const y = frameSizes.MARGIN_TOP + frameSizes.WORKSPACE_HEADER_HEIGHT + 15;
-
     return {
       ...blockConfig,
-      deletable: false,
+      // deletable: false, // TODO: Figure out why this isn't making the block not deletable
       movable: false,
       x,
       y,
