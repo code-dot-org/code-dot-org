@@ -21,6 +21,9 @@ def fix_callouts
 end
 
 def process_levels(levels)
+  fixed_count = 0
+  could_not_fix_count = 0
+  failed_count = 0
   svg_flyout_id_matcher = /\.svgFlyoutGroup \[block-id="(.*)"\]/
   blockly_flyout_id_matcher = /\.blocklyFlyout \[data-id="(.*)"\]/
   svg_ws_id_matcher = /\.svgGroup \[block-id="(.*)"\]/
@@ -75,15 +78,19 @@ def process_levels(levels)
     add_new_callouts(category_ids_to_fix, broken_category_callouts, callouts)
     if add_ids_to_blocks(block_ids_to_fix, level, broken_block_callouts)
       level.callout_json = JSON.generate(callouts)
+      fixed_count += 1
       unless DRY_RUN
         level.save!(touch: false)
       end
     else
       puts "Could not update #{level.name}"
+      could_not_fix_count += 1
     end
   rescue => exception
     puts "Failed on #{level.name} with error #{exception.message}"
+    failed_count += 1
   end
+  puts "Fixed #{fixed_count} levels, could not fix #{could_not_fix_count} levels, failed on #{failed_count} levels"
 end
 
 def add_new_callouts(ids_to_fix, broken_callouts, callouts)
@@ -139,7 +146,7 @@ end
 def add_ids_to_blocks(ids_to_add, level, broken_callouts)
   toolbox_xml = Nokogiri::XML(level.toolbox_blocks)
   start_blocks_xml = Nokogiri::XML(level.start_blocks)
-  long_instructions_block_count = level.long_instructions.scan('<block').count
+  long_instructions_block_count = level.long_instructions&.scan('<block')&.count || 0
   existing_ids = []
   # Find all existing ids on blocks. If the id we are looking for already exists, don't add it.
   find_existing_ids(toolbox_xml.xpath('//*'), existing_ids)
@@ -171,7 +178,7 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
         could_match = false
       elsif start_blocks[index]['id']
         # If the block already has an id, we can't add a new one. Fail this update.
-        puts "#{level.name} Start block with index #{id_to_add} already has id #{toolbox_blocks[index]['id']}"
+        puts "#{level.name} Start block with index #{id_to_add} already has id #{start_blocks[index]['id']}"
         could_match = false
       else
         start_blocks[index]['id'] = id_to_add
