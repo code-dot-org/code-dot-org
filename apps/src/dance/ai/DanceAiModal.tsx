@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
 import moduleStyles from './dance-ai-modal.module.scss';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -51,6 +51,9 @@ import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ModalButton from './ModalButton';
+import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
+import {DANCE_AI_FIELD_NAME} from './constants';
 
 export enum Mode {
   INITIAL = 'initial',
@@ -153,9 +156,27 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   const [currentToggle, setCurrentToggle] = useState<Toggle>(Toggle.EFFECT);
   const [explanationProgress, setExplanationProgress] = useState<number>(0);
 
-  const currentAiModalField = useSelector(
-    (state: {dance: DanceState}) => state.dance.currentAiModalField
+  const aiModalBlockId = useSelector(
+    (state: {dance: DanceState}) => state.dance.currentAiModalBlockId
   );
+
+  const currentAiModalField: CdoFieldDanceAi | null = useMemo(() => {
+    if (aiModalBlockId === undefined) {
+      Lab2MetricsReporter.logWarning('AI modal opened without a field');
+      return null;
+    }
+
+    const field = Blockly.getMainWorkspace()
+      .getBlockById(aiModalBlockId)
+      ?.getField(DANCE_AI_FIELD_NAME);
+
+    if (field === null) {
+      Lab2MetricsReporter.logWarning('Could not find AI field');
+      return null;
+    }
+
+    return field as CdoFieldDanceAi;
+  }, [aiModalBlockId]);
 
   const aiModalOpenedFromFlyout = useSelector(
     (state: {dance: DanceState}) => state.dance.aiModalOpenedFromFlyout
@@ -298,14 +319,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
-  const handleGenerateClick = () => {
+  const startGenerating = () => {
     startAi();
+    setMode(Mode.GENERATING);
+  };
 
+  const handleGenerateClick = () => {
     analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
       emojis: inputs,
     });
 
-    setMode(Mode.GENERATING);
+    startGenerating();
   };
 
   const handleStartOverClick = () => {
@@ -326,7 +350,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     setGeneratingProgress({step: 0, subStep: 0});
     setGeneratedProgress(0);
     setCurrentToggle(Toggle.EFFECT);
-    handleGenerateClick();
+    startGenerating();
   };
 
   const handleExplanationClick = () => {
@@ -504,6 +528,17 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
     }
   };
 
+  const handleOnClose = () => {
+    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
+      emojis: inputs,
+      mode,
+      currentToggle,
+      generatingStep: generatingProgress.step,
+    });
+
+    onClose();
+  };
+
   const getPreviewCode = (currentGeneratedEffect?: GeneratedEffect): string => {
     if (!currentGeneratedEffect) {
       return '';
@@ -632,10 +667,16 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       ? i18n.danceAiModalExplanation2()
       : undefined;
 
+  // If the AI modal was somehow not opened by an AI block, or we couldn't find the source field,
+  // don't render anything.
+  if (currentAiModalField === null) {
+    return null;
+  }
+
   return (
     <AccessibleDialog
       className={moduleStyles.dialog}
-      onClose={onClose}
+      onClose={handleOnClose}
       initialFocus={false}
       styles={{modalBackdrop: moduleStyles.modalBackdrop}}
     >
@@ -656,7 +697,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             className={moduleStyles.closeButton}
             data-dismiss="modal"
             type="button"
-            onClick={onClose}
+            onClick={handleOnClose}
           >
             <i className="fa fa-close" aria-hidden={true} />
             <span className="sr-only">{i18n.danceAiModalClose()}</span>

@@ -1227,11 +1227,13 @@
         },
         "introduction_to_ai_lab/csd/2021": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "type": "شرائح"
+          "type": "شرائح",
+          "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy"
         },
         "introduction_to_ai_lab_1/csd/2021": {
           "name": "مقدمة لمختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=bs3slynHTvc"
         },
         "training_and_testing_in_ai_lab/csd/2021": {
           "name": "التدريب والاختبار في مختبر الذكاء الاصطناعي",
@@ -1319,21 +1321,28 @@
         },
         "numerical_data_in_ai_lab/csd/2021": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "شرائح"
+          "type": "شرائح",
+          "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit"
         },
         "numerical_data_in_ai_lab_1/csd/2021": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "دليل الأنشطة"
+          "type": "دليل الأنشطة",
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
         },
         "numerical_data_in_ai_lab_2/csd/2021": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
-          "type": "فيديو"
+          "type": "فيديو",
+          "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2021": {
-          "type": "الحل النموذجي"
+          "type": "الحل النموذجي",
+          "name": "[KEY] - البيانات العددية في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit"
         },
         "using_data_with_numerical_features/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "استخدام البيانات ذات الميزات العددية",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2021": {
           "type": "شرائح"
@@ -1380,13 +1389,19 @@
           "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing"
         },
         "survey_data_in_ai_lab/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy"
         },
         "cleaning_survey_data/csd/2021": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات استطلاع التنظيف",
+          "url": "https://www.youtube.com/watch?v=w8w-AosDcN8"
         },
         "view_and_download_survey_data/csd/2021": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "عرض بيانات الاستطلاع وتنزيلها",
+          "url": "https://www.youtube.com/watch?v=J0Avopx7FpM"
         },
         "troubleshooting_models/csd/2021": {
           "type": "شرائح",
@@ -1399,20 +1414,29 @@
           "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy"
         },
         "_template_5_why_s/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "[Template] 5 لماذا",
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit"
         },
         "design_an_ai_app/csd/2021": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy"
         },
         "model_card_-_digital_template/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب رقمي",
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view"
         },
         "model_card_-_printable_template/csd/2021": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب قابل للطباعة",
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view"
         },
         "design_an_ai_app_1/csd/2021": {
           "type": "نموذج التقييم",
-          "name": "تصميم تطبيق الذكاء الاصطناعي"
+          "name": "تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view"
         },
         "2021_change_log/coursea/2021": {
           "name": "سجل التغيير ٢٠٢١",
@@ -4143,21 +4167,26 @@
           "name": "نماذج عددية"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2022": {
-          "type": "الحل النموذجي"
+          "type": "الحل النموذجي",
+          "name": "[KEY] - البيانات العددية في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit"
         },
         "numerical_data_in_ai_lab/csd/2022": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
           "type": "شرائح"
         },
         "numerical_data_in_ai_lab_1/csd/2022": {
-          "name": "البيانات العددية في مختبر الذكاء الاصطناعي"
+          "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#"
         },
         "numerical_data_in_ai_lab_2/csd/2022": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
           "type": "فيديو"
         },
         "using_data_with_numerical_features/csd/2022": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "استخدام البيانات ذات الميزات العددية",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2022": {
           "type": "شرائح"
@@ -4204,13 +4233,16 @@
           "type": "فيديو"
         },
         "cleaning_survey_data/csd/2022": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات استطلاع التنظيف"
         },
         "survey_data_in_ai_lab/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي"
         },
         "view_and_download_survey_data/csd/2022": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "عرض بيانات الاستطلاع وتنزيلها"
         },
         "troubleshooting_models/csd/2022": {
           "type": "شرائح",
@@ -4221,19 +4253,28 @@
           "name": "إنشاء تطبيق"
         },
         "_template_5_why_s/csd/2022": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "[Template] 5 لماذا",
+          "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit"
         },
         "design_an_ai_app/csd/2022": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تصميم تطبيق الذكاء الاصطناعي"
         },
         "design_an_ai_app_1/csd/2022": {
-          "type": "نموذج التقييم"
+          "type": "نموذج التقييم",
+          "name": "تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view"
         },
         "model_card_-_digital_template/csd/2022": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب رقمي",
+          "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view"
         },
         "model_card_-_printable_template/csd/2022": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب قابل للطباعة",
+          "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view"
         },
         "common_core_and_ngss_guidance/coursea/2022": {
           "name": "الأساسيات المشتركة وتوجيهات معايير جيل العلوم الحديث",
@@ -7449,7 +7490,8 @@
           "name": "نماذج عددية"
         },
         "_key_-_numerical_data_in_ai_lab/csd/2023": {
-          "type": "الحل النموذجي"
+          "type": "الحل النموذجي",
+          "name": "[KEY] - البيانات العددية في مختبر الذكاء الاصطناعي"
         },
         "numerical_data_in_ai_lab/csd/2023": {
           "name": "البيانات العددية في مختبر الذكاء الاصطناعي",
@@ -7463,7 +7505,9 @@
           "type": "فيديو"
         },
         "using_data_with_numerical_features/csd/2023": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "استخدام البيانات ذات الميزات العددية",
+          "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing"
         },
         "customizing_apps/csd/2023": {
           "type": "شرائح"
@@ -7505,13 +7549,16 @@
           "type": "شرائح"
         },
         "cleaning_survey_data/csd/2023": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "بيانات استطلاع التنظيف"
         },
         "survey_data_in_ai_lab/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "بيانات الاستطلاع في مختبر الذكاء الاصطناعي"
         },
         "view_and_download_survey_data/csd/2023": {
-          "type": "فيديو"
+          "type": "فيديو",
+          "name": "عرض بيانات الاستطلاع وتنزيلها"
         },
         "troubleshooting_models/csd/2023": {
           "type": "شرائح",
@@ -7522,19 +7569,24 @@
           "name": "إنشاء تطبيق"
         },
         "_template_5_why_s/csd/2023": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "[Template] 5 لماذا"
         },
         "design_an_ai_app/csd/2023": {
-          "type": "شرائح"
+          "type": "شرائح",
+          "name": "تصميم تطبيق الذكاء الاصطناعي"
         },
         "design_an_ai_app_1/csd/2023": {
-          "type": "نموذج التقييم"
+          "type": "نموذج التقييم",
+          "name": "تصميم تطبيق الذكاء الاصطناعي"
         },
         "model_card_-_digital_template/csd/2023": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب رقمي"
         },
         "model_card_-_printable_template/csd/2023": {
-          "type": "مصدر"
+          "type": "مصدر",
+          "name": "بطاقة نموذجية - قالب قابل للطباعة"
         },
         "all_resources/coursea/2023": {
           "url": "/s/coursa-2023/الموارد"
@@ -9507,6 +9559,75 @@
         },
         "troubleshooting_models_-_activity_guide/csd/2023": {
           "name": "نماذج استكشاف الأخطاء وإصلاحها - دليل النشاط"
+        },
+        "training_a_model_in_ai_lab/csd/2021": {
+          "name": "تدريب نموذج في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2021": {
+          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "design_an_ai_app_-_project_guide/csd/2021": {
+          "name": "تصميم تطبيق الذكاء الاصطناعي - دليل المشروع",
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
+        "exemplar_-_design_an_ai_app/csd/2021": {
+          "name": "نموذج - تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2021": {
+          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2021": {
+          "name": "نموذج - دليل مشروع تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "training_a_model_in_ai_lab/csd/2022": {
+          "name": "تدريب نموذج في مختبر الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2022": {
+          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "design_an_ai_app_-_project_guide/csd/2022": {
+          "name": "تصميم تطبيق الذكاء الاصطناعي - دليل المشروع",
+          "url": "https://docs.google.com/document/d/1pCyhC1u0NPecz52ac8jqgM8QTsFHhgWO7saaCekZ3D4/edit"
+        },
+        "exemplar_-_design_an_ai_app/csd/2022": {
+          "name": "نموذج - تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2022": {
+          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/presentation/d/1X-KeHTkggkRya0_upLvQIIj9SrZm7vPuOtCPdiqSECg/edit"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2022": {
+          "name": "نموذج - دليل مشروع تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
+        },
+        "training_a_model_in_ai_lab/csd/2023": {
+          "name": "تدريب نموذج في مختبر الذكاء الاصطناعي"
+        },
+        "kim_s_survey_data_-_student_resource/csd/2023": {
+          "name": "بيانات استطلاع كيم - مصدر الطالب",
+          "url": "https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy"
+        },
+        "design_an_ai_app_-_project_guide/csd/2023": {
+          "name": "تصميم تطبيق الذكاء الاصطناعي - دليل المشروع"
+        },
+        "exemplar_-_design_an_ai_app/csd/2023": {
+          "name": "نموذج - تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw"
+        },
+        "exemplar_-_design_an_ai_app_model_card/csd/2023": {
+          "name": "نموذج - تصميم بطاقة نموذج تطبيق الذكاء الاصطناعي"
+        },
+        "exemplar_-_design_an_ai_app_project_guide/csd/2023": {
+          "name": "نموذج - دليل مشروع تصميم تطبيق الذكاء الاصطناعي",
+          "url": "https://docs.google.com/document/d/1GOcczf3U2d3qGXKSu4yeU0g2Tnnwib8q7xZcLsd0lLk/edit"
         }
       }
     }

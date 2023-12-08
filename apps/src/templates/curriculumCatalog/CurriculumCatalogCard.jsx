@@ -52,6 +52,8 @@ const CurriculumCatalogCard = ({
   onQuickViewClick,
   isInUS,
   availableResources,
+  isSignedOut,
+  isTeacher,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -80,7 +82,11 @@ const CurriculumCatalogCard = ({
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
-    pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    pathToCourse={`${
+      isSignedOut || isTeacher
+        ? pathToCourse + '?viewAs=Instructor'
+        : pathToCourse
+    }`}
     onAssignSuccess={onAssignSuccess}
     deviceCompatibility={deviceCompatibility}
     description={description}
@@ -92,6 +98,8 @@ const CurriculumCatalogCard = ({
     onQuickViewClick={onQuickViewClick}
     isInUS={isInUS}
     availableResources={availableResources}
+    isSignedOut={isSignedOut}
+    isTeacher={isTeacher}
     {...props}
   />
 );
@@ -130,6 +138,8 @@ CurriculumCatalogCard.propTypes = {
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -218,6 +228,11 @@ const CustomizableCurriculumCatalogCard = ({
     }
   };
 
+  const quickViewButtonColor =
+    !isSignedOut && !isTeacher
+      ? Button.ButtonColor.brandSecondaryDefault
+      : Button.ButtonColor.neutralDark;
+
   return (
     <div className={style.cardsContainer}>
       <div>
@@ -262,12 +277,12 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={Button.ButtonColor.neutralDark}
+                color={quickViewButtonColor}
                 type="button"
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
-                className={style.quickViewButton}
+                className={`${style.buttonFlex} ${style.quickViewButton}`}
               />
               <Button
                 __useDeprecatedTag
@@ -280,13 +295,16 @@ const CustomizableCurriculumCatalogCard = ({
                 text={i18n.learnMore()}
                 className={style.learnMoreButton}
               />
-              <Button
-                color={Button.ButtonColor.brandSecondaryDefault}
-                type="button"
-                onClick={() => handleClickAssign('top-card')}
-                aria-label={assignButtonDescription}
-                text={assignButtonText}
-              />
+              {(isSignedOut || isTeacher) && (
+                <Button
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  type="button"
+                  onClick={() => handleClickAssign('top-card')}
+                  aria-label={assignButtonDescription}
+                  text={assignButtonText}
+                  className={style.buttonFlex}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -312,6 +330,8 @@ const CustomizableCurriculumCatalogCard = ({
           imageSrc={imageSrc}
           imageAltText={imageAltText}
           availableResources={availableResources}
+          isSignedOut={isSignedOut}
+          isTeacher={isTeacher}
         />
       )}
     </div>
@@ -338,7 +358,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-  isTeacher: PropTypes.bool,
+  isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   onAssignSuccess: PropTypes.func,
   // for screenreaders
