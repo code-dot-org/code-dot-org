@@ -24,6 +24,7 @@ class TeacherSections extends Component {
     asyncLoadSectionData: PropTypes.func.isRequired,
     asyncLoadCoteacherInvite: PropTypes.func.isRequired,
     coteacherInvite: PropTypes.object,
+    coteacherInviteForPl: PropTypes.object,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -87,6 +88,7 @@ export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
+    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),

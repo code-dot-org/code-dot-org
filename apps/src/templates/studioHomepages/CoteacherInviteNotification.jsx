@@ -22,6 +22,7 @@ const CoteacherInviteNotification = ({
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   coteacherInvite,
+  coteacherInviteForPl,
 }) => {
   if (!showCoteacherInviteNotification(coteacherInvite)) {
     return null;
@@ -93,6 +94,7 @@ export const UnconnectedCoteacherInviteNotification =
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
+    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
   }),
   {
     asyncLoadCoteacherInvite,
@@ -104,6 +106,7 @@ CoteacherInviteNotification.propTypes = {
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
+  coteacherInviteForPl: PropTypes.object,
 };
 
 // The Notification object uses styles instead of className for legacy reasons.
