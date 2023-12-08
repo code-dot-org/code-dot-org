@@ -21,14 +21,6 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
   slotCount,
 }) => {
   const headerContent = useMemo(() => {
-    // The header comes from a localized string like this: "generate {input} effect".
-    // We split the localized string on the "{input}", and rebuild the HTML but with
-    // the emoji box in place of that "{input}".
-    const INPUT_KEY = '__CDO_INPUTS__';
-    const headerTextSplit = i18n
-      .danceAiModalHeading({input: INPUT_KEY})
-      .split(INPUT_KEY);
-
     const filledSelectedEmojis: (DanceAiModelItem | undefined)[] = [
       ...selectedEmojis,
     ];
@@ -36,25 +28,30 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
     filledSelectedEmojis.fill(undefined, selectedEmojis.length, slotCount);
 
     return (
-      <>
-        {headerTextSplit[0]}
-        <div
-          className={moduleStyles.inputsContainer}
-          tabIndex={0}
-          onClick={handleStartOverClick}
-        >
-          {filledSelectedEmojis.map((item, index) => (
-            <div key={item?.id || index} className={moduleStyles.emojiSlot}>
-              {item && (
-                <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
-              )}
-            </div>
-          ))}
-        </div>
-        {headerTextSplit[1]}
-      </>
+      <div
+        className={moduleStyles.inputsContainer}
+        tabIndex={0}
+        onClick={handleStartOverClick}
+      >
+        {filledSelectedEmojis.map((item, index) => (
+          <div key={item?.id || index} className={moduleStyles.emojiSlot}>
+            {item && (
+              <EmojiIcon item={item} className={moduleStyles.emojiSlotIcon} />
+            )}
+          </div>
+        ))}
+      </div>
     );
   }, [handleStartOverClick, selectedEmojis, slotCount]);
+
+  const headerTextSplit = useMemo(() => {
+    // The header comes from a localized string like this: "generate {input} effect".
+    // We split the localized string on the "{input}", and rebuild the HTML but with
+    // the emoji box in place of that "{input}".
+    const INPUT_KEY = '__CDO_INPUTS__';
+
+    return i18n.danceAiModalHeading({input: INPUT_KEY}).split(INPUT_KEY);
+  }, []);
 
   return (
     <div id="ai-modal-header-area" className={moduleStyles.headerArea}>
@@ -64,7 +61,9 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
           className={moduleStyles.botImage}
           alt={i18n.danceAiModalBotAlt()}
         />
+        {headerTextSplit[0]}
         {headerContent}
+        {headerTextSplit[1]}
       </div>
       <div
         id="ai-modal-header-area-right"
