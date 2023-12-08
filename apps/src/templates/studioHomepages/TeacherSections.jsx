@@ -62,7 +62,7 @@ class TeacherSections extends Component {
         </ContentContainer>
         {this.shouldRenderSections() && (
           <ContentContainer heading={i18n.sectionsTitle()}>
-            <CoteacherInviteNotification />
+            <CoteacherInviteNotification isForPl={false} />
             <OwnedSections
               sectionIds={studentSectionIds}
               hiddenSectionIds={hiddenStudentSectionIds}
@@ -71,6 +71,7 @@ class TeacherSections extends Component {
         )}
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
+            <CoteacherInviteNotification isForPl={true} />
             <OwnedSections
               isPlSections={true}
               sectionIds={plSectionIds}

@@ -18,13 +18,27 @@ export const showCoteacherInviteNotification = coteacherInvite => {
   return !!coteacherInvite && DCDO.get('show-coteacher-ui', true);
 };
 
+export const showCoteacherForPlInviteNotification = coteacherInviteForPl => {
+  return !!coteacherInviteForPl && DCDO.get('show-coteacher-ui', true);
+};
+
 const CoteacherInviteNotification = ({
+  isForPl,
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
   coteacherInvite,
   coteacherInviteForPl,
 }) => {
-  if (!showCoteacherInviteNotification(coteacherInvite)) {
+  if (
+    !(
+      showCoteacherInviteNotification(coteacherInvite) ||
+      showCoteacherForPlInviteNotification(coteacherInviteForPl)
+    )
+  ) {
+    console.log(
+      showCoteacherInviteNotification(coteacherInvite) ||
+        showCoteacherForPlInviteNotification(coteacherInviteForPl)
+    );
     return null;
   }
 
@@ -37,55 +51,112 @@ const CoteacherInviteNotification = ({
       .catch(err => console.error(err));
   };
 
-  const acceptCoteacherInvite = id => {
+  const acceptCoteacherInvite = (id, sectionId) => {
     analyticsReporter.sendEvent(EVENTS.COTEACHER_INVITE_ACCEPTED, {
-      sectionId: coteacherInvite.section_id,
+      sectionId: sectionId,
     });
     buttonAction(`/api/v1/section_instructors/${id}/accept`);
   };
 
-  const declineCoteacherInvite = id => {
+  const declineCoteacherInvite = (id, sectionId) => {
     analyticsReporter.sendEvent(EVENTS.COTEACHER_INVITE_DECLINED, {
-      sectionId: coteacherInvite.section_id,
+      sectionId: sectionId,
     });
     buttonAction(`/api/v1/section_instructors/${id}/decline`);
   };
 
-  return (
-    <Notification
-      dismissible={false}
-      type={NotificationType.collaborate}
-      iconStyles={styles.icon}
-      notice={i18n.coteacherInvite({
-        invitedByName: coteacherInvite.invited_by_name,
-      })}
-      details={
-        <BodyTwoText style={{marginBottom: 0}}>
-          {i18n.coteacherInviteDescription({
-            invitedByEmail: coteacherInvite.invited_by_email,
-          })}
-          <br />
-          <StrongText>{coteacherInvite.section_name}</StrongText>
-        </BodyTwoText>
-      }
-      tooltipText={i18n.coteacherTooltip()}
-      buttonsStyles={styles.buttons}
-      buttons={[
-        {
-          text: 'Decline',
-          onClick: () => declineCoteacherInvite(coteacherInvite.id),
-          color: Button.ButtonColor.neutralDark,
-          style: styles.declineButton,
-        },
-        {
-          text: 'Accept',
-          onClick: () => acceptCoteacherInvite(coteacherInvite.id),
-          color: Button.ButtonColor.brandSecondaryDefault,
-          style: styles.acceptButton,
-        },
-      ]}
-    />
-  );
+  if (showCoteacherInviteNotification(coteacherInvite) && !isForPl) {
+    return (
+      <Notification
+        dismissible={false}
+        type={NotificationType.collaborate}
+        iconStyles={styles.icon}
+        notice={i18n.coteacherInvite({
+          invitedByName: coteacherInvite.invited_by_name,
+        })}
+        details={
+          <BodyTwoText style={{marginBottom: 0}}>
+            {i18n.coteacherInviteDescription({
+              invitedByEmail: coteacherInvite.invited_by_email,
+            })}
+            <br />
+            <StrongText>{coteacherInvite.section_name}</StrongText>
+          </BodyTwoText>
+        }
+        tooltipText={i18n.coteacherTooltip()}
+        buttonsStyles={styles.buttons}
+        buttons={[
+          {
+            text: 'Decline',
+            onClick: () =>
+              declineCoteacherInvite(
+                coteacherInvite.id,
+                coteacherInvite.section_id
+              ),
+            color: Button.ButtonColor.neutralDark,
+            style: styles.declineButton,
+          },
+          {
+            text: 'Accept',
+            onClick: () =>
+              acceptCoteacherInvite(
+                coteacherInvite.id,
+                coteacherInvite.section_id
+              ),
+            color: Button.ButtonColor.brandSecondaryDefault,
+            style: styles.acceptButton,
+          },
+        ]}
+      />
+    );
+  }
+  if (showCoteacherForPlInviteNotification(coteacherInviteForPl) && isForPl) {
+    return (
+      <Notification
+        dismissible={false}
+        type={NotificationType.collaborate}
+        iconStyles={styles.icon}
+        notice={i18n.coteacherInvite({
+          invitedByName: coteacherInviteForPl.invited_by_name,
+        })}
+        details={
+          <BodyTwoText style={{marginBottom: 0}}>
+            {i18n.coteacherInviteDescription({
+              invitedByEmail: coteacherInviteForPl.invited_by_email,
+            })}
+            <br />
+            <StrongText>{coteacherInviteForPl.section_name}</StrongText>
+          </BodyTwoText>
+        }
+        tooltipText={i18n.coteacherTooltip()}
+        buttonsStyles={styles.buttons}
+        buttons={[
+          {
+            text: 'Decline',
+            onClick: () =>
+              declineCoteacherInvite(
+                coteacherInviteForPl.id,
+                coteacherInviteForPl.section_id
+              ),
+            color: 'green',
+            style: styles.declineButton,
+          },
+          {
+            text: 'Accept',
+            onClick: () =>
+              acceptCoteacherInvite(
+                coteacherInviteForPl.id,
+                coteacherInviteForPl.section_id
+              ),
+            color: Button.ButtonColor.brandSecondaryDefault,
+            style: styles.acceptButton,
+          },
+        ]}
+      />
+    );
+  } else {
+    return null;
+  }
 };
 
 export const UnconnectedCoteacherInviteNotification =
@@ -103,6 +174,7 @@ export default connect(
 )(CoteacherInviteNotification);
 
 CoteacherInviteNotification.propTypes = {
+  isForPl: PropTypes.bool,
   asyncLoadCoteacherInvite: PropTypes.func.isRequired,
   asyncLoadSectionData: PropTypes.func.isRequired,
   coteacherInvite: PropTypes.object,
