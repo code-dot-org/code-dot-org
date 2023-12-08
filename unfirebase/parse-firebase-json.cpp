@@ -70,20 +70,26 @@ const bool DONT_UPLOAD_STOCK_TABLES = true;
 // TSV file to the server, and does an optimized load there straight from disk.
 const bool LOAD_DATA_INSTEAD_OF_INSERT = true;
 
-// If LOAD_DATA_IN_THREAD, then spawn threads that do the MySQL query
+// If LOAD_DATA_IN_THREAD, then spawn threads to do the MySQL `LOAD DATA LOCAL INFILE`
 // and leave the main thread for parsing JSON
 const bool LOAD_DATA_IN_THREAD = true;
 const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 
 // This determines the `LOAD DATA LOCAL INFILE` tsv batch size and/or how often we COMMIT
-const uint64_t NUMBER_OF_ROWS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 250000 : 1000;
+const uint64_t NUMBER_OF_ROWS_BEFORE_COMMIT = 
+  (KIND_OF_ROW == Record && LOAD_DATA_INSTEAD_OF_INSERT)
+    ? 250000
+    : 1000;
 
 // If this is False, we don't actually transmit individual datum to MySQL
 const bool DEBUG_SEND_DATA_TO_MYSQL = true;
 
 // In LOAD_DATA_INSTEAD_OF_INSERT mode, we write TSVs to this directory
 const string TMP_DIR = "/tmp/parse-firebase-json/";
+
+// Should we use a JSON type column or a VARCHAR in MySQL?
+const bool USE_MYSQL_JSON_COLUMN = false;
 
 // Different levels of debug output
 const bool RAW_DEBUG = false;
@@ -201,7 +207,7 @@ string loadDataBufferDir = "";
 bool inAChannel = false;
 
 // "INSERT INTO unfirebase VALUES (?, ?)"
-sql::PreparedStatement *insertUnfirebaseStatement = nullptr;
+sql::PreparedStatement *insertStatement = nullptr;
 uint64_t unComittedRecords = 0;
 uint64_t totalRecordsCount = 0;
 atomic<uint64_t> numRecordBytes {0};
@@ -403,7 +409,7 @@ inline bool isStockTable(const string &tableName, const string &json) {
   return isStock;
 }
 
-inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordID, const string &json) {
+inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordId, const string &json) {
     
   unComittedRecords++;
 
@@ -416,19 +422,31 @@ inline void insertIntoDB(const string &channelId, const string &tableName, const
 
     // FIXME: we're not escaping the json string, so if it contains tabs we're screwed
     if (KIND_OF_ROW == Record) {
-      *loadDataBufferTSV << channelId << "\t" << tableName << "\t" << recordID << "\t" << json << endl;
+      *loadDataBufferTSV << channelId << "\t" << tableName << "\t" << recordId << "\t" << json << endl;
     } else if (KIND_OF_ROW == Table) {
       *loadDataBufferTSV << channelId << "\t" << tableName << "\t" << json << endl;
     } else if (KIND_OF_ROW == Channel) {
       *loadDataBufferTSV << channelId << "\t" << json << endl;
     }
   } else {
-    assert(KIND_OF_ROW != Record);
     numRecordBytes += json.length();
     if (DEBUG_SEND_DATA_TO_MYSQL) {
-      insertUnfirebaseStatement->setString(1, currentChannelName);
-      insertUnfirebaseStatement->setString(2, json);
-      insertUnfirebaseStatement->execute();
+      if (KIND_OF_ROW == Record) {
+        insertStatement->setString(1, channelId);
+        insertStatement->setString(2, tableName);
+        insertStatement->setString(3, recordId);
+        insertStatement->setString(4, json);
+        insertStatement->execute();
+      } else if (KIND_OF_ROW == Table) {
+        insertStatement->setString(1, channelId);
+        insertStatement->setString(2, tableName);
+        insertStatement->setString(3, json);
+        insertStatement->execute();
+      } else if (KIND_OF_ROW == Record) {
+        insertStatement->setString(1, currentChannelName);
+        insertStatement->setString(2, json);
+        insertStatement->execute();
+      }
     }
   }
 
@@ -788,22 +806,40 @@ void setupDB(sql::Connection *db) {
 
   db->setSchema(DB_NAME);
 
+  stmt->execute("DROP TABLE IF EXISTS `" + TABLE_NAME + "`;");
+
+  const string JSON_COLUMN_TYPE = USE_MYSQL_JSON_COLUMN ? "JSON" : "VARCHAR(8192)";
   if (KIND_OF_ROW == Record) {
     string createTable = "CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (" +
       "`channel_id` VARCHAR(45) NOT NULL, " +
       "`table_name` VARCHAR(45) NOT NULL, " +
       "`record_id` INT NOT NULL, " +
-      "`record` TEXT(8192) NULL, " +
+      "`json` " + JSON_COLUMN_TYPE + " NULL, " +
       "PRIMARY KEY (`channel_id`, `table_name`, `record_id`), " + 
       "INDEX `channel_index` (`channel_id`));";
     stmt->execute(createTable);
-    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
+    insertStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?, ?, ?)");
+  } else if (KIND_OF_ROW == Table) {
+    string createTable = "CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (" +
+      "`channel_id` VARCHAR(45) NOT NULL, " +
+      "`table_name` VARCHAR(45) NOT NULL, " +
+      "`json` " + JSON_COLUMN_TYPE + " NULL, " +
+      "PRIMARY KEY (`channel_id`, `table_name`), " + 
+      "INDEX `channel_index` (`channel_id`));";
+    stmt->execute(createTable);
+    insertStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?, ?)");
+  } else if (KIND_OF_ROW == Channel) {
+    string createTable = "CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (" +
+      "`channel_id` VARCHAR(45) NOT NULL, " +
+      "`json` " + JSON_COLUMN_TYPE + " NULL, " +
+      "PRIMARY KEY (`channel_id`);";
+    stmt->execute(createTable);
+    insertStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
   } else {
-    stmt->execute("CREATE TABLE IF NOT EXISTS `" + TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` MEDIUMTEXT NULL, PRIMARY KEY (`channel`));");
-    //stmt->execute("CREATE TABLE IF NOT EXISTS `" + CHANNEL_TABLE_NAME + "` (`channel` VARCHAR(45) NOT NULL, `json` JSON NULL, PRIMARY KEY (`channel`));");
-    stmt->execute("DELETE FROM `" + TABLE_NAME + "`;"); // DEBUG: clear the unfirebase table
-    insertUnfirebaseStatement = db->prepareStatement("INSERT INTO `" + TABLE_NAME + "` VALUES (?, ?)");
+    cerr << "Unknown KIND_OF_ROW: " << KIND_OF_ROW << endl;
+    assert(false);
   }
+
   //stmt->execute("SET GLOBAL max_allowed_packet=10000000000;"); // We'd need to set this to allow large inserts, but we're using load data for now (and it needs SUPER privs)
   stmt->execute("SET autocommit=0;");
   stmt->execute("SET unique_checks=0;");
@@ -834,6 +870,7 @@ int main(int argc, char *argv[]) {
 
   string filename = argv[1];
   cout << "Parsing: " << filename << endl;
+  cout << "KIND_OF_ROW=" << TABLE_NAME << endl;
 
   try {
     db = getDB();
@@ -861,7 +898,7 @@ int main(int argc, char *argv[]) {
     return EXIT_FAILURE;
   }
 
-  delete insertUnfirebaseStatement;
+  delete insertStatement;
   db->close();
   delete db;
 
