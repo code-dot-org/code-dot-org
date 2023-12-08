@@ -4,6 +4,7 @@ import {SOUND_PREFIX} from '@cdo/apps/assetManagement/assetPrefix';
 export const FALSEY_DEFAULT = attributeValue => attributeValue === 'true';
 export const TRUTHY_DEFAULT = attributeValue => attributeValue !== 'false';
 
+// TODO: Add comment
 export function readBooleanAttribute(
   xmlElement,
   attribute,

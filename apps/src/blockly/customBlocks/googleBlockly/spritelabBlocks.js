@@ -317,6 +317,7 @@ export const blocks = {
     if (
       behaviorsFound &&
       Blockly.useModalFunctionEditor &&
+      block.workspace.toolbox_ &&
       // TODO: Support editing behaviors from within a modal editor workspace.
       block.workspace.id === Blockly.getMainWorkspace().id
     ) {
@@ -351,8 +352,13 @@ export const blocks = {
   // blocks found on the main workspace.
   getAllBehaviorOptions() {
     const noBehaviorLabel = msg.behaviorsNotFound();
+    const noBehaviorOption = [noBehaviorLabel, NO_OPTIONS_MESSAGE];
     // Behavior definition blocks are always moved to the hidden workspace.
-    const behaviorBlocks = Blockly.getHiddenDefinitionWorkspace()
+    const definitionWorkspace = Blockly.getHiddenDefinitionWorkspace();
+    if (!definitionWorkspace) {
+      return [noBehaviorOption];
+    }
+    const behaviorBlocks = definitionWorkspace
       .getTopBlocks()
       .filter(block => block.type === BLOCK_TYPES.behaviorDefinition);
     // Menu options are an array, each option containing a human-readable part,
@@ -364,7 +370,7 @@ export const blocks = {
     behaviorOptions.sort();
     // Add a "No behaviors found" option, if needed
     if (behaviorOptions.length === 0) {
-      behaviorOptions.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+      behaviorOptions.push(noBehaviorOption);
     }
     return behaviorOptions;
   },
