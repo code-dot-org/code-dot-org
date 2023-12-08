@@ -64,6 +64,8 @@ const SET_SHOW_LOCK_SECTION_FIELD =
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const SET_COTEACHER_INVITE = 'teacherDashboard/SET_COTEACHER_INVITE';
+const SET_COTEACHER_INVITE_FOR_PL =
+  'teacherDashboard/SET_COTEACHER_INVITE_FOR_PL';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
@@ -446,15 +448,56 @@ export const setCoteacherInvite = coteacherInvite => ({
   coteacherInvite,
 });
 
+export const setCoteacherInviteForPl = coteacherInviteForPl => ({
+  type: SET_COTEACHER_INVITE_FOR_PL,
+  coteacherInviteForPl,
+});
+
 export const asyncLoadCoteacherInvite = () => dispatch => {
+  // this gets all of the section_instructors for the instuctor
+  // this line below calls the endpoint (this endpoint gets all the section instructors of the current id
+  // this includes sections where they are invited byt not)
   fetchJSON('/api/v1/section_instructors')
     .then(sectionInstructors => {
       // Find the oldest invite.
-      const coteacherInvite = sectionInstructors.find(
-        instructor => instructor.status === 'invited'
-      );
+      // this is what returns the NEWEST.
+      const invitedPlSections = sectionInstructors.filter(section => {
+        return (
+          section.status === 'invited' && section.participant_type === 'teacher'
+        );
+      });
+      const invitedClassroomSections = sectionInstructors.filter(section => {
+        return (
+          section.status === 'invited' && section.participant_type === 'student'
+        );
+      });
+      console.log(invitedPlSections);
+      console.log(invitedClassroomSections);
+      // go through each, and find the ones where the status is "invited"
+      // then grab the section_id and see if that section is a PL section
 
-      dispatch(setCoteacherInvite(coteacherInvite));
+      // const coteacherInvite = sectionInstructors.find(
+      //   instructor => instructor.status === 'invited'
+      // );
+
+      const coteacherInviteForClassrooms =
+        invitedClassroomSections.length > 0
+          ? invitedClassroomSections[0]
+          : null;
+
+      const coteacherInviteForPl =
+        invitedPlSections.length > 0 ? invitedPlSections[0] : null;
+
+      console.log(coteacherInviteForPl);
+
+      // change this to the variable... still not sure about null
+      if (invitedClassroomSections.length > 0) {
+        dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
+      }
+
+      if (invitedPlSections.length > 0) {
+        dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
+      }
     })
     .catch(err => {
       console.error(err.message);
@@ -752,6 +795,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       coteacherInvite: action.coteacherInvite,
+    };
+  }
+
+  if (action.type === SET_COTEACHER_INVITE_FOR_PL) {
+    return {
+      ...state,
+      coteacherInviteForPl: action.coteacherInviteForPl,
     };
   }
 
