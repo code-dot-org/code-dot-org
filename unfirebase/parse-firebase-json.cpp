@@ -652,7 +652,7 @@ int main(int argc, char *argv[]) {
     db = getDB();
 
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
-    stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
+    // stmt->execute("DROP DATABASE IF EXISTS `" + DB_NAME + "`;");  // DEBUG: clear the unfirebase DB
     stmt->execute("CREATE DATABASE IF NOT EXISTS `" + DB_NAME + "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;");
 
     db->setSchema(DB_NAME);
