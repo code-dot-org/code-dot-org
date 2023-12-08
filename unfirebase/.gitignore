@@ -2,6 +2,7 @@ chunks
 node_modules
 *gz
 error.json
+huge-data.json
 big-data.json
 med-data.json
 parse-firebase-json
