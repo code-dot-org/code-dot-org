@@ -84,11 +84,12 @@ export const behaviorDefMutator = {
       'userCreated',
       FALSEY_DEFAULT
     );
-    this.initialDeleteConfig = readBooleanAttribute(
+    const deletable = readBooleanAttribute(
       xmlElement,
       'deletable',
       TRUTHY_DEFAULT
     );
+    this.setDeletable(deletable);
   },
 
   /**
@@ -97,11 +98,11 @@ export const behaviorDefMutator = {
    */
   saveExtraState: function () {
     const state = Object.create(null);
-    state['procedureId'] = this.getProcedureModel().getId();
     state['behaviorId'] = this.behaviorId;
-    state['userCreated'] = this.userCreated;
     state['description'] = getBlockDescription(this);
-    state['initialDeleteConfig'] = this.deletable;
+    state['initialDeleteConfig'] = this.isDeletable();
+    state['procedureId'] = this.getProcedureModel().getId();
+    state['userCreated'] = this.userCreated;
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -155,9 +156,9 @@ export const behaviorDefMutator = {
       }
     }
 
-    this.deletable = state['initialDeleteConfig'];
     setBlockDescription(this, state);
     this.doProcedureUpdate();
+    this.setDeletable(state['initialDeleteConfig']);
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
 

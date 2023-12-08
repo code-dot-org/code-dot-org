@@ -82,11 +82,13 @@ export const procedureDefMutator = {
         this.description = node.textContent;
       }
     }
-    this.initialDeleteConfig = readBooleanAttribute(
+
+    const deletable = readBooleanAttribute(
       xmlElement,
       'deletable',
       TRUTHY_DEFAULT
     );
+    this.setDeletable(deletable);
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
 
@@ -98,7 +100,7 @@ export const procedureDefMutator = {
     const state = Object.create(null);
 
     state['description'] = getBlockDescription(this);
-    state['initialDeleteConfig'] = this.deletable;
+    state['initialDeleteConfig'] = this.isDeletable();
     state['procedureId'] = this.getProcedureModel().getId();
 
     const params = this.getProcedureModel().getParameters();
@@ -151,9 +153,9 @@ export const procedureDefMutator = {
       }
     }
 
-    this.deletable = state['initialDeleteConfig'];
     setBlockDescription(this, state);
     this.doProcedureUpdate();
+    this.setDeletable(state['initialDeleteConfig']);
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
 
