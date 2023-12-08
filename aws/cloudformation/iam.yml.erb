@@ -691,8 +691,8 @@ roles.each do |name, config| %>
               - s3:PutObject
               - s3:ListBucket
             Resource: 
-              - arn:aws:s3:::aws-athena-query-results-475661607190-us-east-1/*
-              - arn:aws:s3:::aws-athena-query-results-475661607190-us-east-1
+              - !Sub “arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*”
+              - !Sub “arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}”
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
