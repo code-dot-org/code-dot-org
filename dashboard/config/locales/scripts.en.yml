@@ -14015,3 +14015,119 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        coursec-maker-2024:
+          lessons:
+            lesson-3:
+              name: Meet your micro:bit
+            lesson-4:
+              name: Emotion badge
+            lesson-5:
+              name: Meet your micro:bit
+            lesson-6:
+              name: Calming LEDs
+            lesson-1:
+              name: Meet your micro:bit
+            lesson-2:
+              name: Counter
+            lesson-7:
+              name: Dance Party 2019 (need to clone)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Beginner: Events'
+            lessonGroup-3:
+              display_name: 'Intermediate: Sequencing and Loops'
+            lessonGroup-4:
+              display_name: 'Stretch: Data and Variables'
+          name: coursec-maker-2024
+          title: Course C - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        coursef-maker-2024:
+          lessons:
+            lesson-3:
+              name: Dance Party 2019 (need to clone)
+            lesson-4:
+              name: Meet your micro:bit
+            lesson-5:
+              name: Step counter
+            lesson-1:
+              name: Meet your micro:bit
+            lesson-6:
+              name: Micro:bit pet
+            lesson-2:
+              name: Meet your micro:bit
+            lesson-7:
+              name: Max-min thermometer
+            lesson-8:
+              name: Poem Art 2021 (need to clone)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Beginner: Events and Variables'
+            lessonGroup-3:
+              display_name: 'Intermediate: Conditionals, Events, and Sounds'
+            lessonGroup-4:
+              display_name: 'Stretch: Events, Conditionals, and Variables'
+          name: coursef-maker-2024
+          title: Course F - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        coursee-maker-2024:
+          lessons:
+            lesson-2:
+              name: Dance Party 2019 (need to clone)
+            lesson-4:
+              name: Meet your micro:bit
+            lesson-5:
+              name: Sensory toy
+            lesson-1:
+              name: Meet your micro:bit
+            lesson-6:
+              name: Simple door alarm
+            lesson-3:
+              name: Meet your micro:bit
+            lesson-7:
+              name: Tilt alarm
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Beginner: Events and Designing for Accessibility'
+            lessonGroup-3:
+              display_name: 'Intermediate: Conditionals '
+            lessonGroup-4:
+              display_name: 'Stretch: Functions'
+          name: coursee-maker-2024
+          title: Course E - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        coursed-maker-2024:
+          lessons:
+            lesson-3:
+              name: Meet your micro:bit
+            lesson-4:
+              name: Saving sea turtles
+            lesson-5:
+              name: Meet your micro:bit
+            lesson-6:
+              name: Rock, paper, scissors
+            lesson-1:
+              name: Meet your micro:bit
+            lesson-2:
+              name: Activity picker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Beginner: Conditionals'
+            lessonGroup-3:
+              display_name: 'Intermediate: Events and Conditionals '
+            lessonGroup-4:
+              display_name: 'Stretch: Conditionals and Text Inputs '
+          name: coursed-maker-2024
+          title: Course D - Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

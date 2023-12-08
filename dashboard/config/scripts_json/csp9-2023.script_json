@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-30 22:49:14 UTC",
+    "serialized_at": "2023-12-08 01:37:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -125,10 +125,10 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio.",
+        "overview": "It is finally time for students to take on the Create Performance Task. For a total of 9 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\n\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 9 hours of class time.  At the end, students will submit their program code, program video, and personalized project reference through their AP digital portfolio.",
         "preparation": "* Review pages 169-171 in the [Course and Exam Description](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf?course=ap-computer-science-principles)  to understand the teacher's role on the Create PT\n* Review how to create a stand-alone App Lab project to assist students\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1oA6gTYeeHtlUhwvE4wN2C9l_JfrDVYfHbL-8sE18ahI/edit?usp=sharing)",
         "purpose": ".",
-        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own."
+        "student_overview": "The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 9 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - personalized project references must be done on your own."
       },
       "seeding_key": {
         "lesson.key": "Create PT - Complete the Task (12 hrs)",
