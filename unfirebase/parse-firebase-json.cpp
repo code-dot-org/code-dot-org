@@ -393,8 +393,9 @@ inline bool isStockTable(const string &tableName, const string &json) {
     // so the percentage progress indicator is better than useless
     numRecordBytes += bytes;
 
-    // burp every 1 in 10000 times
-    if (DONT_UPLOAD_STOCK_TABLES && (rand()/(float)RAND_MAX < 0.0001))
+    // burp once every 10000 times
+    static uint64_t nTimesSincePrint = 0;
+    if (DONT_UPLOAD_STOCK_TABLES && nTimesSincePrint++ % 10000 == 0)
       cout << "DONT_UPLOAD_STOCK_TABLES=true, skipped uploading " << 100.0 * ((double)tableBytesStock) / tableBytes << "\%" << " of bytes" << endl;
 
   }
