@@ -257,7 +257,9 @@ export const resetEditorWorkspaceBlockConfig = (blocks = []) =>
     block.y = defaultY;
     block.movable = true;
 
-    // Reset deletable to its initial value
+    // Since all blocks opened with the function editor are forced to be
+    // undeletable, we need to reset deletable to its initial value
+    // before we save the block data to the project source
     block.deletable = block.extraState?.initialDeleteConfig;
   });
 
