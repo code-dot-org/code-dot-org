@@ -48,7 +48,7 @@ enum KindOfRow {
 // 1. One student data record?
 // 2. One student data table (containing many records)?
 // 3. All the data tables for a student channel aka project?
-const KindOfRow KIND_OF_ROW = Table;
+const KindOfRow KIND_OF_ROW = Record;
 
 // Which MySQL table are we storing this data in?
 const unordered_map<KindOfRow, string> kindOfRowToSQLTableName = {
@@ -77,7 +77,7 @@ const uint NUM_DATA_THREADS = 4;
 const uint NUM_DATA_FILES_QUEUED = NUM_DATA_THREADS * 2;
 
 // This determines the `LOAD DATA LOCAL INFILE` tsv batch size and/or how often we COMMIT
-const uint64_t NUMBER_OF_ROWS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 1000000 : 1000;
+const uint64_t NUMBER_OF_ROWS_BEFORE_COMMIT = KIND_OF_ROW == Record ? 250000 : 1000;
 
 // If this is False, we don't actually transmit individual datum to MySQL
 const bool DEBUG_SEND_DATA_TO_MYSQL = true;
@@ -404,10 +404,6 @@ inline bool isStockTable(const string &tableName, const string &json) {
 }
 
 inline void insertIntoDB(const string &channelId, const string &tableName, const string &recordID, const string &json) {
-  // FIXME: isStockTable() requires a SUPER expensive JSON deep equal, we
-  // should figure out how to do this in the data threads instead of here in the main thread
-  if (DONT_UPLOAD_STOCK_TABLES && isStockTable(tableName, json))
-    return;
     
   unComittedRecords++;
 
@@ -456,7 +452,7 @@ inline void startChannel(string channelName) {
 
   static uint64_t nChannelsProcessed = 1;
   if (nChannelsProcessed++ % 10000 == 0) {
-    cout << "Channel #" << nChannelsProcessed-1 << ": " << channelName << endl;
+    cout << "Channel #" << nChannelsProcessed-1 << ": channel_id='" << channelName << "'" << endl;
   }
 
   if (KIND_OF_ROW == Channel) {
@@ -488,21 +484,45 @@ inline void endChannel() {
 inline void startTable(const string &tableName) {
   if (FINE_DEBUG) cout << "START TABLE " << tableName << endl;
   
-  if (KIND_OF_ROW == Table) {
+  if (KIND_OF_ROW == Table || (KIND_OF_ROW == Record && DONT_UPLOAD_STOCK_TABLES)) {
     writerBuffer = new StringBuffer();
     writer = new Writer<StringBuffer>(*writerBuffer);
   }
 }
 
+// In KIND_OF_ROW == Record mode, when DONT_UPLOAD_STOCK_TABLES=true
+// we have to cache our records until we finish the table and are
+// able to check if its a stock table or not.
+vector<pair<string, string>> recordsInTable;
+
 inline void endTable(const string &tableName) {
   if (FINE_DEBUG) cout << "END TABLE" << endl;
 
-  if (KIND_OF_ROW == Table) {
+  if (KIND_OF_ROW == Table || (KIND_OF_ROW == Record && DONT_UPLOAD_STOCK_TABLES)) {
     assert(writer != nullptr);
     const string &json = writerBuffer->GetString();
+    const string &channelId = currentChannelName;
 
-    // We only insert non-stock data into the DB
-    insertIntoDB(currentChannelName, tableName, NO_RECORD_ID, json.c_str());
+    // FIXME: isStockTable() requires a SUPER expensive JSON deep equal, we
+    // should figure out how to do this in the data threads instead of here in the main thread
+    if (DONT_UPLOAD_STOCK_TABLES && isStockTable(tableName, json)) {
+      // cout << "SKIPPING STOCK TABLE " << tableName << endl;
+    } else {
+      if (KIND_OF_ROW == Table) {
+        insertIntoDB(channelId, tableName, NO_RECORD_ID, json.c_str());
+      } else if (KIND_OF_ROW == Record) {
+        for (auto &record : recordsInTable) {
+          insertIntoDB(channelId, tableName, record.first, record.second);
+        }
+      }
+
+      static uint64_t nTablesUploaded = 1;
+      if (nTablesUploaded++ % 5000 == 0) {
+        cout << "Table #" << nTablesUploaded-1 << ": channel_id='" << channelId << "' AND table_name='" << tableName << "'" << endl;
+      }
+    }
+    
+    recordsInTable.clear();
 
     delete writer;
     delete writerBuffer;
@@ -514,9 +534,13 @@ inline void endTable(const string &tableName) {
 inline void handleRecord(string channelId, string tableName, string recordId,
                   string jsonString) {
   if (RAW_DEBUG)
-    cout << "RECORD(" << channelId << ", " << tableName << ", " << channelId << ") = " << jsonString << endl;
+    cout << "RECORD(" << channelId << ", " << tableName << ", " << recordId << ") = " << jsonString << endl;
 
-  insertIntoDB(channelId, tableName, recordId, jsonString.c_str());
+  if (DONT_UPLOAD_STOCK_TABLES) {
+    recordsInTable.push_back(make_pair(recordId, jsonString));
+  } else {
+    insertIntoDB(channelId, tableName, recordId, jsonString.c_str());
+  }
 }
 
 void printLastKeys() {
@@ -553,11 +577,11 @@ struct RawJSONHandler {
   }
   bool Key(const char *key, SizeType length, bool copy) {
     lastKeys[depth] = key;
+    lastKey = key;
 
     if (writer) { if (!writer->Key(key, length, copy)) { cout << "Key(key, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
 
     if (RAW_DEBUG) cout << "Key(" << key << ", depth=" << depth << ")" << endl;
-    lastKey = key;
 
     return true;
   }
@@ -640,17 +664,17 @@ struct RawJSONHandler {
     return true;
   }
   bool String(const char *str, SizeType length, bool copy) {
-    if (writer) { if (!writer->String(str, length, copy)) { cout << "String(str, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
-
-    if (RAW_DEBUG)
-      cout << "String(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
-
-    if (lastKeys[RECORDS_DEPTH] == RECORDS_TOKEN) {
+    if (KIND_OF_ROW == Record && lastKeys[RECORDS_DEPTH] == RECORDS_TOKEN) {
       auto recordId = lastKey;
       auto tableName = lastKeys[TABLE_NAME_DEPTH];
       auto channelId = lastKeys[CHANNELS_DEPTH];
       handleRecord(channelId, tableName, recordId, str);
     }
+
+    if (writer) { if (!writer->String(str, length, copy)) { cout << "String(str, length, copy) failed " << endl; printLastKeys(); return false; } return true; }
+
+    if (RAW_DEBUG)
+      cout << "String(" << str << ", " << length << ", " << boolalpha << copy << ")" << endl;
 
     return true;
   }
