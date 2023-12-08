@@ -7,7 +7,7 @@
   display: flex;
   column-gap: 0.5em;
 
-  > div {
+  .tag {
     display: flex;
     align-items: baseline;
     gap: 2px;
@@ -45,8 +45,8 @@
 
   :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
     border-radius: 5px;
-    color: #fff;
-    background-color: #222;
+    color: $light_white;
+    background-color: $light_gray_900;
 
     p {
       color: #fff;
@@ -58,14 +58,14 @@
     left: 50%;
     bottom: 0;
     border: 15px solid transparent;
-    border-top: 15px solid #222;
+    border-top: 15px solid $light_gray_900;
     transform: translate(-50%, calc(100% - 8px));
   }
 }
 
 // Sizes
 .tags-l {
-  > div {
+  .tag {
     span {
       @include overline-one;
       line-height: 1.5;
@@ -83,7 +83,7 @@
 }
 
 .tags-m {
-  > div {
+  .tag {
     span {
       @include overline-two;
       line-height: 1.54;
@@ -101,7 +101,7 @@
 }
 
 .tags-s {
-  > div {
+  .tag {
     span {
       @include overline-three;
       line-height: 1.8;
