@@ -1,5 +1,8 @@
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
-import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
+import {
+  BlocklyVersion,
+  CLAMPED_NUMBER_REGEX,
+  stringIsXml,
+} from '@cdo/apps/blockly/constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {parseElement as parseXmlElement} from '../xml';
@@ -225,6 +228,11 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return strip(code);
   };
 
+  // We renamed createReadOnlyBlockSpace to createEmbeddedWorkspace for clarity.
+  blocklyWrapper.createEmbeddedWorkspace = function (container, xml, options) {
+    return Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, options);
+  };
+
   // The second argument to Google Blockly's blockToCode specifies whether to
   // generate code for the whole block stack or just the single block. The
   // second argument to Cdo Blockly's blockToCode specifies whether to generate
@@ -333,8 +341,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
     partitionBlocksByType() {
       // Google Blockly only. Used to load/render certain block types before others.
     },
-    appendSharedFunctions(blocksXml, functionsXml) {
-      return blockUtils.appendNewFunctions(blocksXml, functionsXml);
+    appendSharedFunctions(source, functionsXml) {
+      const isXml = stringIsXml(source);
+      if (isXml) {
+        return blockUtils.appendNewFunctions(source, functionsXml);
+      } else {
+        // CDO Blockly is not equipped to handle json projects, and we will reset the
+        // project to empty in loadBlocksToWorkspace if it is json. So if we see
+        // json here, we just return the json as-is.
+        return source;
+      }
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
@@ -351,6 +367,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // CDO Blockly does not have a concept of a hidden definition workspace,
   // so we return undefined here.
   blocklyWrapper.getHiddenDefinitionWorkspace = () => {
+    return undefined;
+  };
+
+  // CDO Blockly does not have a separate workspace for the function editor,
+  // so we return undefined here.
+  blocklyWrapper.getFunctionEditorWorkspace = () => {
     return undefined;
   };
 

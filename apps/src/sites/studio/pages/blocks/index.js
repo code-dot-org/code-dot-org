@@ -36,14 +36,10 @@ function renderBlock(element) {
   });
   const blockName = Object.values(blocksInstalled)[0][0];
   const blocksDom = parseElement(`<block type='${blockName}' />`);
-  const blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
-    element,
-    blocksDom,
-    {
-      noScrolling: true,
-      inline: false,
-    }
-  );
+  const blockSpace = Blockly.createEmbeddedWorkspace(element, blocksDom, {
+    noScrolling: true,
+    inline: false,
+  });
   shrinkBlockSpaceContainer(blockSpace, true);
 }
 

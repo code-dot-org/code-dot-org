@@ -431,6 +431,7 @@ function youTubeAvailabilityEndpointURL(noCookie) {
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   // Append `?force_youtube_fallback=1` to a url in order to use the fallback
   // player
+
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
 
   // If we have want the video player to be at 100% width & 100% height, then
@@ -515,7 +516,26 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     }
   );
 
-  videoPlayer.on('ended', onVideoEnded);
+  const analyticsData = {
+    url: location.href,
+    video: videoInfo.download,
+    fallback: 'code.org',
+  };
+
+  videoPlayer.on('ready', () =>
+    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, analyticsData)
+  );
+  videoPlayer.on('play', () =>
+    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, analyticsData)
+  );
+  videoPlayer.on('pause', () =>
+    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, analyticsData)
+  );
+
+  videoPlayer.on('ended', () => {
+    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, analyticsData);
+    onVideoEnded();
+  });
   showFallbackPlayerCaptionLink(videoInfo.inDialog);
 }
 

@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; "><strong>The draw loop</strong> is one of the core programming paradigms in Game Lab. After it is introduced, students will continue developing their understanding of the power of the draw loop throughout the Interactive Animations and Game unit. However, it is important that students understand that <strong>the commands in the draw loop are called after all other code but are then called repeatedly to create animation.</strong> Laying a strong conceptual foundation of the draw loop early on will serve students well for the rest of the unit as they move into more open ended creative tasks.
 </p></div>
 
-<img src="https://curriculum.code.org/media/uploads/animation4.gif" style="padding-left: 80px;  height: 150px; clear: both; margin-left:50px; margin-top:10px;">
+<img src="https://curriculum.code.org/media/uploads/animation4.gif" style="padding-left: 80px;  height: 150px; clear: both; margin-left:50px; margin-top:10px;" alt="A gif showing various figures walking.">
 
 ## Key understandings:
 
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 * ##### You should only have one draw loop in your program.
 
 
-## Let's continue learning! 
+#### Let's continue learning! 
 
 
 
