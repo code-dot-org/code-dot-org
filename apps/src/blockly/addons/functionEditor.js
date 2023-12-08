@@ -135,6 +135,10 @@ export default class FunctionEditor {
     return this.editorWorkspace.id;
   }
 
+  getWorkspace() {
+    return this.editorWorkspace;
+  }
+
   // TODO
   renameParameter(oldName, newName) {}
 
@@ -159,11 +163,14 @@ export default class FunctionEditor {
       Blockly.getHiddenDefinitionWorkspace()
     );
 
+    let type;
     if (existingProcedureBlock) {
+      type = existingProcedureBlock.type;
       // If we already have stored data about the procedure, use that.
       const existingData = Blockly.serialization.blocks.save(
         existingProcedureBlock
       );
+
       // Disable events here so we don't copy an existing block into the hidden definition
       // workspace.
       Blockly.Events.disable();
@@ -171,15 +178,16 @@ export default class FunctionEditor {
         this.addEditorWorkspaceBlockConfig(existingData),
         this.editorWorkspace
       );
-
       Blockly.Events.enable();
     } else {
+      type = procedureType;
       // Otherwise, we need to create a new block from scratch.
       const newDefinitionBlock = {
         kind: 'block',
-        type: procedureType,
+        type,
         extraState: {
           procedureId: procedure.getId(),
+          userCreated: true,
         },
         fields: {
           NAME: procedure.getName(),
@@ -193,8 +201,15 @@ export default class FunctionEditor {
       );
     }
 
-    const type = procedureType || existingProcedureBlock.type;
     const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
+    // We do not want to show the delete button for behaviors that are not user-created
+    const hideDeleteButton = isBehavior && !this.block.userCreated;
+    const modalEditorDeleteButton = document.getElementById(
+      MODAL_EDITOR_DELETE_ID
+    );
+    modalEditorDeleteButton.style.visibility = hideDeleteButton
+      ? 'hidden'
+      : 'visible';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
@@ -215,7 +230,7 @@ export default class FunctionEditor {
    * @returns a legal name for a new function definition.
    */
   getNameForNewFunction() {
-    let name = 'do something';
+    let name = msg.doSomething();
     // Copied logic from blockly core because findLegalName requires us to
     // have a block first.
     while (

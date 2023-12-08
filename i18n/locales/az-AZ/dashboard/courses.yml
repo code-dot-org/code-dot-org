@@ -100,6 +100,10 @@ az:
           title: öz templi-pl-csp-2021
         vpl-csd-2023:
           title: CSD Virtual Peşəkar Öyrənmə
+        self-paced-pl-csd-unit2-2023:
+          title: Veb İnkişafının Tədris
+        self-paced-pl-csd-unit5-2023:
+          title: Tədris Məlumatları və Cəmiyyət
     resources:
       curriculum/csd/2017:
         name: Kurikulum

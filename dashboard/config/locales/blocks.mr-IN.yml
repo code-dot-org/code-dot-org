@@ -980,6 +980,12 @@ mr:
         text: "{SPRITE}म्हणा{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} कडे सरकणे"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': गॅस
+            '"liquid"': तरल
+            '"solid"': ठोस
       KatiesBlocks_tumbling:
         text: टंबलिंग
       Mikelab_addBehaviorSimple:

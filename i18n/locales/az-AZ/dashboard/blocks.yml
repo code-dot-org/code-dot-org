@@ -1763,6 +1763,12 @@ az:
         text: y koordinatı
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': bərk
+            '"liquid"': maye
+            '"gas"': qaz
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

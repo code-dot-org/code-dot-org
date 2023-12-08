@@ -184,6 +184,7 @@ ko:
   for_students_teacher_led_learning: '학생용: 교사 주도 학습'
   for_students_teacher_led_lessons: '학생용: 교사 주도 수업'
   professional_development: 전문성 개발
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: 컴퓨터 과학 교육
   explore_our_curriculum: 커리큘럼 알아보기
   start_professional_learning: 전문 학습 시작
@@ -243,7 +244,7 @@ ko:
   call_to_action_register_event: 이벤트 등록
   call_to_action_register_your_hoc: 아워오브코드 등록하기
   call_to_action_register_now: 지금 등록하기
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: 이벤트 계획 공유하기
   call_to_action_select_activity: 액티비티 선택
   call_to_action_select_coding_activity: 코딩 액티비티 선택
   call_to_action_start_activity: 액티비티 시작
@@ -251,15 +252,16 @@ ko:
   call_to_action_print_certificates: 인증서 인쇄
   call_to_action_go_beyond_hoc: 아워오브코드를 넘어 더 나아가기
   call_to_action_see_volunteer_guide: 자원봉사 가이드 보기
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_see_teacher_guide: 교사 안내서 참조
+  call_to_action_see_event_guide: 이벤트 안내서 참조
   call_to_action_join_advocacy_coalition: 옹호 연합에 가입하세요
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_become_an_advocate: 지지자가 되어보세요
+  call_to_action_share_event_w_parents: 부모님과 이벤트 공유
   call_to_action_sign_up_to_volunteer: 자원봉사자로 등록하세요.
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: 소셜미디어로 공유
   call_to_action_explore_all_hoc_activities: Code.org에서 제공하는 모든 아워오브코드 액티비티를 살펴보세요
   call_to_action_start_dance_party: 댄스 파티 시작
+  call_to_action_start_dance_party_ai_edition: '댄스 파티: AI 에디션 시작하기 '
   call_to_action_start_part_02: 2부 시작
   call_to_action_start_unplugged_activity: 언플러그드 액티비티 시작
   call_to_action_view_promo_resources: 프로모션 리소스 보기
@@ -271,6 +273,8 @@ ko:
   call_to_action_try_hoc_ai_activities: 아워오브코드 AI 액티비티 체험하기
   call_to_action_explore_activities: 액티비티 살펴보기
   call_to_action_explore_ai: AI 살펴보기
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: 도구 살펴보기
   call_to_action_explore_unit: 익스플로어 유닛
   call_to_action_explore_curriculum: 커리큘럼 알아보기
   call_to_action_explore_curricula: 커리큘럼 살펴보기
@@ -331,7 +335,7 @@ ko:
   call_to_action_explore_teacher_forums: 교사 포럼 살펴보기
   call_to_action_explore_teacher_forum: 교사 포럼 살펴보기
   call_to_action_explore_career_resources: 커리어 리소스 알아보기
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: 통계 및 인포그래픽 살펴보기
   call_to_action_watch_videos: 영상 보기
   call_to_action_download_posters: 포스터 다운로드
   call_to_action_contact_support: Code.org 지원팀에 문의하기
@@ -370,8 +374,17 @@ ko:
   call_to_action_coming_soon: 곧 출시됩니다!
   call_to_action_learn_how_ai_works: AI 작동 방식 알아보기
   call_to_action_learn_about_ai: AI에 대해 알아보기
-  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_learn_more_about_ai: AI에 관해 더 자세한 알아보기
   call_to_action_get_started: 시작하기
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: 교육자용 활용 가이드 보기
   aria_label_call_to_action_hoc_how_to_companies: 기업용 활용 가이드 보기
   aria_label_call_to_action_hoc_how_to_districts: 교육구용 활용 가이드 보기
@@ -388,6 +401,8 @@ ko:
   aria_label_call_to_action_teaching_csd: 컴퓨터 과학 디스커버리 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_csp: 컴퓨터 과학 원리 교육 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_problem_solving: 교육 문제 해결 및 컴퓨팅 전문 학습 프로그램 시작
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: 컴퓨터 과학 융합 수업 전문 학습 프로그램 시작하기
   aria_label_call_to_action_teaching_ai: 교육 AI 및 기계 학습 전문 학습 프로그램 시작
   aria_label_call_to_action_teaching_maker_cp: 교육 시작하기 (장치로 앱 만들기) 전문 학습 프로그램
@@ -460,6 +475,16 @@ ko:
   aria_label_call_to_action_minecraft_2020: 지구를 위한 마인크래프트 AI로 시작하기
   aria_label_call_to_action_register_student_workshop: 무료 학생 워크숍에 등록하기
   aria_label_call_to_action_view_more_cs_resources: 더 많은 컴퓨터 과학 리소스 보기
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.org의 전문 학습 프로그램
   curriculum_name_csf: 컴퓨터 과학 기초
   curriculum_name_csf_02: 모든 CS 기초 (A-F 과정)
@@ -478,6 +503,7 @@ ko:
   curriculum_name_csd: 컴퓨터 과학의 발견
   curriculum_name_csp: 컴퓨터 과학 원리
   curriculum_name_problem_solving: 문제 해결 및 컴퓨팅
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: 컴퓨터 과학 융합 수업
   curriculum_name_csa: AP® 컴퓨터 과학 A
   curriculum_name_csa_ai: 소프트웨어 엔지니어링 및 컴퓨터 비전
@@ -580,8 +606,10 @@ ko:
   module_label_languages: '지원 언어:'
   module_label_accessibility_features: '접근성:'
   module_label_accessibility_features_full: '접근성 기능:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: 교육자 도구
   module_label_educator_course: 교육자 과정
+  module_label_educator_resources: Educator resources
   module_label_student_tool: 학생 도구
   module_label_student_product: 제품
   module_label_student_content_resources: 콘텐츠 및 리소스
@@ -590,6 +618,7 @@ ko:
   module_label_available_now: 지금 구매 가능
   module_label_video_series: 비디오 시리즈
   module_label_self_paced: 자습형 모듈
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -631,6 +660,7 @@ ko:
   module_duration_1_hr: 1시간
   module_duration_2_hrs: 2시간
   module_duration_3_hrs: 3시간
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5시간
   module_duration_5_hrs_plus: 5시간 이상
   module_duration_8_hrs: 8시간
@@ -652,6 +682,7 @@ ko:
   module_label_teaching_csd: 컴퓨터 과학 발견을 가르치기
   module_label_teaching_csp: 컴퓨터 과학 원리 교육
   module_label_teaching_problem_solving: 문제 해결 및 컴퓨팅 교육
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: 컴퓨터 과학 융합 수업 진행하기
   module_label_teaching_ai: AI 및 머신 러닝 교육
   module_label_teaching_maker_cp: 디바이스를 이용한 앱 제작 교육 (서킷 플레이그라운드)
@@ -712,6 +743,12 @@ ko:
   heading_attend_free_workshop: 무료 학생 워크숍에 참석하기
   heading_access_more_cs_resources: 더 많은 컴퓨터 과학 리소스에 액세스하기
   heading_available_on_code_dot_org: Code.org에서 사용 가능
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: 더 많은 젊은 여성들이 학교에서 컴퓨터 공학을 전공하도록 격려하는 데 열정을 쏟는 고등학생이라면 여러분이
     필요합니다!
   cs_ambassador_desc: 의학, 엔터테인먼트, 스포츠, 교육, 비즈니스, 패션, 기업가 정신을 포함한 모든 분야는 컴퓨터 과학의 영향을
@@ -767,6 +804,19 @@ ko:
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: 올여름부터 대면 및 가상 워크숍이 시작됩니다.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: 디바이스가 없어도 괜찮습니다!
   no_devices_section_desc: 컴퓨터 과학 교육이 항상 화면 앞에서 이루어질 필요는 없습니다. 디바이스의 부재가 컴퓨터 과학 개념을
     배우는 데 방해가 되어서는 안 됩니다.
@@ -784,6 +834,11 @@ ko:
     팁 및 업데이트를 이메일로 바로 받을 수 있습니다.
   subscribe_form_section_desc_csp: 등록하면 Code.org의 컴퓨터 과학 원칙에 대한 월간 이메일을 받고 유용한 알림,
     팁 및 업데이트를 이메일로 바로 받을 수 있습니다.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: 언제든지 구독을 취소할 수 있습니다.
   hoc_page_what_is_hoc_heading: 아워오브코드란 무엇인가요?
   hoc_page_desc: "[아워오브코드](%{hoc_url})는 180개 이상의 국가에서 수천만 명의 학생들에게 다가가는 세계적인 운동입니다.
@@ -942,6 +997,7 @@ ko:
   ai_curriculum_desc_06: 다양한 관점에서 제너레이티브 AI의 영향을 조사한 다음, 팀으로 협업하여 모든 참가자의 요구 사항을 가장
     많이 충족하는 지침을 마련하세요.
   ai_curriculum_btn_aria_label_06: 제너레이티브 AI 수업 계획의 사회적 영향 보기
+  ai_curriculum_btn_aria_label_dance_ai: '댄스 파티: AI 에디션을 체험해보세요.'
   ai_carousel_heading: 'Code.org를 활용한 AI에 대한 교사들의 의견:'
   ai_carousel_quote_01: 또한 이 수업을 통해 학생들은 분류 체계에 의견 요소가 있다는 것을 알 수 있었습니다.나중에 AI에서 편견이
     어떻게 나타날 수 있는지 알아보기 시작했을 때, 모델을 학습하는 데 사용되는 데이터가 선택에 기반한다는 것을 상기시킬 수 있었습니다.
@@ -1083,6 +1139,68 @@ ko:
   ai_vid_computervision_caption: 컴퓨터 비전
   ai_vid_ethics1_caption: '윤리 및 AI: 평등 접근 및 알고리즘 편향'
   ai_vid_ethics2_caption: '윤리 및 AI: 프라이버시와 업무의 미래'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: 교육자를 위한 자기 주도형 전문 학습
   self_paced_pl_hero_desc: 컴퓨터 과학 교육 여정의 모든 단계에서 교사들을 지원하기 위한 전문 학습 서비스.
   self_paced_pl_intro_heading: 일정에 따른 전문 학습
@@ -2421,6 +2539,7 @@ ko:
   learn_banner_teachers_markdown: '교사: [한 시간 수업](%{host_url}) 또는 [하우 투 가이드 읽기](%{howto_url})'
   tutorial_dance2019_name: 댄스 파티 2019
   tutorial_danceparty_name: 댄스 파티
+  tutorial_dancepartyai_name: '댄스 파티: AI 에디션'
   tutorial_chibitronics_name: '치비트로닉스: 일러스트 스토리'
   tutorial_athlete_name: 나만의 스포츠 게임을 코딩하세요
   tutorial_moana_name: '모아나: 코드로 방법 찾기'
@@ -3017,19 +3136,14 @@ ko:
   tutorial_csfirstdialogue_name: 대화
   tutorial_codemonkeybeaver_name: 비버 성취자
   tutorial_codestersdistance_name: 'Codesters: 사회적 거리두기 스프라이트'
-  tutorial_itchspace_name: 'iTCHcode: 우주 침입자 - RokCoder'
   tutorial_vidcodemagic_name: SFX 매직
   tutorial_vidcodemagices_name: SFX 매직
   tutorial_codespeakmeal_name: 건강한 식사 앱 코딩
-  tutorial_itchfish_name: 'iTCHcode: 피쉬 스크래치 게임'
   tutorial_bsdwebsite_name: 즐겨찾는 웹사이트
   tutorial_codespeaktime_name: 스크래치로 타임 캡슐 코딩
-  tutorial_itchwebcam_name: 'iTCHcode: 웹캠 증강현실'
-  tutorial_itchball_name: 'iTCHcode: 바운싱 볼'
   tutorial_ttrace_name: 레이스 조건
   tutorial_plethora_name: '플레토라: 원인과 결과'
   tutorial_educodesecret_name: 기관의 비밀을 적발하세요!
-  tutorial_itchshapes_name: 'iTCHcode: 도형 및 각도'
   tutorial_codeguppytext_name: 텍스트 기반 코딩 소개
   tutorial_vidcodeplastiche_name: 플라스틱 공해 PSA
   tutorial_educativechatbot_name: 파이썬으로 챗봇 제작.
@@ -3051,7 +3165,6 @@ ko:
   tutorial_codecapture_name: 당장 자바스크립트로 프로그래밍을 배우세요
   tutorial_codehslitter_name: 쓰레기 없는 커뮤니티를 위한 코딩
   tutorial_bsdocean_name: 수중 생물
-  tutorial_itchplatformer_name: 'iTCHcode: 스크리채 3.0 플랫포머 튜토리얼'
   tutorial_codejika_name: 'CodeJIKA: 5 분 웹사이트'
   tutorial_gamefrootclicker_name: 변수에 관해 배우기. 클리커 게임 코딩.
   tutorial_rmagicequity_name: 평등 대 공평
@@ -3103,6 +3216,8 @@ ko:
   tutorial_meeempathy_name: 마인크래프트 두 마을 이야기
   tutorial_danceparty_shortdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
     시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_dancepartyai_shortdescription: 인공지능도 배우고 최고의 아티스트들과 함께 나만의 가상 댄스 파티를 만들어보세요.
+    이제 실력을 뽐낼 시간입니다!
   tutorial_chibitronics_shortdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_shortdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_shortdescription: '모아나는 용감하고 두려움이 없으며 자신의 길을 찾기로 굳게 다짐합니다. '
@@ -3916,6 +4031,8 @@ ko:
     엑스, 패닉이 출연합니다! 디스크에는 조나스 브라더스 등 많은 이들이 함께 합니다!
   tutorial_danceparty_longdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
     시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_dancepartyai_longdescription: 인공지능도 배우고 최고의 아티스트들과 함께 나만의 가상 댄스 파티를 만들어보세요.
+    이제 실력을 뽐낼 시간입니다!
   tutorial_chibitronics_longdescription: 스토리를 빛내주는 종이 회로 프로그램.
   tutorial_athlete_longdescription: 농구 게임과 다양한 스포츠의 믹스 앤 매치 중 선택하세요!
   tutorial_moana_longdescription: 새 디즈니 아워오브코드 튜토리얼에서는 학생들이 비주얼 블록을 간단히 드래그하고 드롭하여
@@ -5484,21 +5601,14 @@ ko:
     만드세요. '
   tutorial_codestersdistance_longdescription: 파이썬 코딩의 기초를 배우고, 두 개의 스프라이트 사이의 거리를
     계산하는 프로그램을 만들어 그들이 사회적 거리를 두고 있는지 또는 마스크를 써야 하는지 확인하세요.
-  tutorial_itchspace_longdescription: 이 튜토리얼은 스크래치 MIT 프로그래밍 언어를 사용하여 클래식 스페이스 인베이더
-    게임을 만드는 튜토리얼입니다. 더 많은 스크래치 기반 동영상과 튜토리얼은 RokCoder YouTube 채널을 구독하세요! 각 동영상은 비트
-    크기 튜토리얼 (약 10분 분량)로 특정 최종 목표를 담고 있습니다.
   tutorial_vidcodemagic_longdescription: 루프를 사용하여 화면에 무작위로 플래시가 나오게 만드세요.
   tutorial_vidcodemagices_longdescription: 루프를 사용하여 화면에 무작위로 플래시가 나오게 만드세요.
   tutorial_codespeakmeal_longdescription: 사용자에게 건강한 식습관을 갖도록 돕는 앱 코딩 방법 배우기.
-  tutorial_itchfish_longdescription: 상어가 물고기를 추적하여 잡아 먹는 게임을 다이버가 사고로 잡혀 먹혔을 때 중단되게
-    만들기 위한 스크래치 3.0 튜토리얼.
   tutorial_bsdwebsite_longdescription: 이 과정을 통해 학생들을 코드를 그들에게 중요하고 흥미있는 것을 공유하는 수단으로서
     사용할 수 있습니다. 그들은 레슨을 따라 하거나 또는 고유 프로젝트를 하며 HTML, CSS, 자바스크립트를 배웁니다. '내 즐겨찾기 웹사이트'는
     여러분이 가장 관심을 갖는 또는 가장 하고 싶어하는 세 가지 일에 관한 웹사이트를 만드는 데 중점을 둡니다.#codeisyourvoice
   tutorial_codespeaktime_longdescription: 자신의 삶을 기록하고 성찰하기 위한 디지털 타임 캡슐 코딩법을 지금 당장
     배우세요.
-  tutorial_itchwebcam_longdescription: 증강현실에 대해 배우고 증강현실 가상 공간을 만드세요.
-  tutorial_itchball_longdescription: 화면 여기저기로 튕겨지는 공을 얻으세요. 루프와 루프 내 조건문에 관해 배우세요.
   tutorial_ttrace_longdescription: 함수를 호출하고 클래스를 설계함으로써, 플레이어는 자신의 레이스 카를 빠르고, 날렵하고,
     강력하게 프로그래밍하고 또한 그들은 경쟁자의 자동차를 해킹하여 그 자동차의 컨트롤을 교란시킬 수 있습니다.
   tutorial_plethora_longdescription: 이 플레토라 활동에서, 여러분은 시각적으로 재미있는 어려운 문제를 풀고 원인과 결과
@@ -5506,8 +5616,6 @@ ko:
   tutorial_educodesecret_longdescription: If 문과 문자열, for-in 루프를 배우며 학습의 깊이를 더해 갈 때,
     에이전트 스미스로 비밀의 세계를 탐구하세요. 에이전트 스미스가 범인을 찾고 파이썬으로 새로운 사용자를 위한 에이전트 운영시스템을 구성하도록
     도와 주세요.
-  tutorial_itchshapes_longdescription: 스크래치로 도형 그리는 법을 배우세요. 또한 도형을 그리기 위해 어느 정도 회전해야
-    하는지 계산법을 배울 것입니다.
   tutorial_codeguppytext_longdescription: 온라인 코딩 에디터로 생애 최초의 프로그램을 만들며 텍스트 기반 코딩의
     기초를 배우세요.
   tutorial_vidcodeplastiche_longdescription: 플라스틱으로 가득 찬 바다의 문제는 계속해서 심해지고 있습니다. 다행히,
@@ -5559,8 +5667,6 @@ ko:
     것을 선택하든, 지역사회에서 쓰레기 양을 줄이기 위해 컴퓨터 과학을 어떻게 활용하는지 탐구할 것입니다.  '
   tutorial_bsdocean_longdescription: '수중 생물은 오늘날 우리가 당면하고 있는 긴급한 문제인 환경 문제에 초점을 맞춥니다.
     이 프로젝트는 수자원을 보호하기 위한 웹페이지를 코딩하는 법을 안내합니다. '
-  tutorial_itchplatformer_longdescription: 스크래치를 사용하여 간단한 플랫포머 게임을 만드는 법을 위한 쉽게 따라할
-    수 있는 튜토리얼.
   tutorial_codejika_longdescription: 'HTML 및 CSS를 사용하는 코딩을 소개합니다. 몇 줄을 코딩하고 두 개 색상의
     그라데이션 배경과 이름, 웹사이트 시작 일이 담긴 랜딩 페이지를 만들어 어떻게와 왜에 얽매이지 않고 즉시 결과물을 보세요. '
   tutorial_gamefrootclicker_longdescription: 학습자는 자신의 클리커 게임을 코딩하고, 프로세스 중 변수와 여러
@@ -5689,6 +5795,7 @@ ko:
     포용에 대해 배우고, 우리 모두를 개성적으로 만들어주는 다양성을 받아들이게 될 것입니다.
   tutorial_dance2019_string_detail_grades: 초등 2학년 이상
   tutorial_danceparty_string_detail_grades: 초등 2학년 이상
+  tutorial_dancepartyai_string_detail_grades: 3학년 이상
   tutorial_chibitronics_string_detail_grades: 프리 리더 - 5학년
   tutorial_athlete_string_detail_grades: 초등 2학년 이상
   tutorial_moana_string_detail_grades: 초등 2학년 이상
@@ -6285,19 +6392,14 @@ ko:
   tutorial_csfirstdialogue_string_detail_grades: 2-8 학년
   tutorial_codemonkeybeaver_string_detail_grades: 프리 리더 - 5학년
   tutorial_codestersdistance_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_itchspace_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_vidcodemagic_string_detail_grades: 초등 2학년 이상
   tutorial_vidcodemagices_string_detail_grades: 초등 2학년 이상
   tutorial_codespeakmeal_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_itchfish_string_detail_grades: 2-8 학년
   tutorial_bsdwebsite_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codespeaktime_string_detail_grades: 2-8 학년
-  tutorial_itchwebcam_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_itchball_string_detail_grades: 2-8 학년
   tutorial_ttrace_string_detail_grades: 6-8학년(11-13세)
   tutorial_plethora_string_detail_grades: 초등 2학년 이상
   tutorial_educodesecret_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_itchshapes_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codeguppytext_string_detail_grades: 6-8학년(11-13세)
   tutorial_vidcodeplastiche_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_educativechatbot_string_detail_grades: 9학년 이상
@@ -6319,7 +6421,6 @@ ko:
   tutorial_codecapture_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codehslitter_string_detail_grades: 6-8학년(11-13세)
   tutorial_bsdocean_string_detail_grades: 6-8학년(11-13세)
-  tutorial_itchplatformer_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_codejika_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_gamefrootclicker_string_detail_grades: 6-8학년(11-13세)
   tutorial_rmagicequity_string_detail_grades: 6-8학년(11-13세)
@@ -6371,6 +6472,7 @@ ko:
   tutorial_meeempathy_string_detail_grades: 초등 2학년 이상
   tutorial_dance2019_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 언플러그드
   tutorial_danceparty_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
+  tutorial_dancepartyai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_chibitronics_string_platforms: 최신 웹 브라우저
   tutorial_athlete_string_platforms: 모든 최신 브라우저
   tutorial_moana_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
@@ -7021,19 +7123,14 @@ ko:
   tutorial_csfirstdialogue_string_platforms: 모든 최신 브라우저
   tutorial_codemonkeybeaver_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_codestersdistance_string_platforms: 최신 웹 브라우저
-  tutorial_itchspace_string_platforms: 모든 최신 브라우저
   tutorial_vidcodemagic_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 스크린 리더
   tutorial_vidcodemagices_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 스크린 리더
   tutorial_codespeakmeal_string_platforms: 크롬, 파이어폭스
-  tutorial_itchfish_string_platforms: 모든 최신 브라우저
   tutorial_bsdwebsite_string_platforms: 크롬
   tutorial_codespeaktime_string_platforms: 크롬, 파이어폭스
-  tutorial_itchwebcam_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
-  tutorial_itchball_string_platforms: 모든 최신 브라우저
   tutorial_ttrace_string_platforms: 크롬
   tutorial_plethora_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_educodesecret_string_platforms: 모든 최신 브라우저
-  tutorial_itchshapes_string_platforms: 모든 최신 브라우저
   tutorial_codeguppytext_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_vidcodeplastiche_string_platforms: 모든 브라우저, iPad, 무선 장치
   tutorial_educativechatbot_string_platforms: 모든 최신 브라우저
@@ -7058,7 +7155,6 @@ ko:
   tutorial_codehslitter_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
     폰, 아이폰
   tutorial_bsdocean_string_platforms: 크롬
-  tutorial_itchplatformer_string_platforms: 모든 최신 브라우저
   tutorial_codejika_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰,
     아이폰
   tutorial_gamefrootclicker_string_platforms: 모든 브라우저, iPad, 무선 장치
@@ -7114,6 +7210,7 @@ ko:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: 치비트로틱스 치비 칩과 회로 스티커 LED
   tutorial_athlete_string_detail_platforms: ''
   tutorial_moana_string_detail_platforms: ''
@@ -7710,19 +7807,14 @@ ko:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -7744,7 +7836,6 @@ ko:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -7798,6 +7889,7 @@ ko:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: 블록
   tutorial_danceparty_string_detail_programming_languages: 블록
+  tutorial_dancepartyai_string_detail_programming_languages: 블록
   tutorial_chibitronics_string_detail_programming_languages: 블록
   tutorial_athlete_string_detail_programming_languages: 블록
   tutorial_moana_string_detail_programming_languages: 블록
@@ -8403,19 +8495,14 @@ ko:
   tutorial_csfirstdialogue_string_detail_programming_languages: 블록, 스크래치
   tutorial_codemonkeybeaver_string_detail_programming_languages: 블록
   tutorial_codestersdistance_string_detail_programming_languages: 파이썬
-  tutorial_itchspace_string_detail_programming_languages: 블록
   tutorial_vidcodemagic_string_detail_programming_languages: 자바스크립트
   tutorial_vidcodemagices_string_detail_programming_languages: 자바스크립트
   tutorial_codespeakmeal_string_detail_programming_languages: 자바스크립트
-  tutorial_itchfish_string_detail_programming_languages: 블록
   tutorial_bsdwebsite_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: 블록
-  tutorial_itchwebcam_string_detail_programming_languages: 블록
-  tutorial_itchball_string_detail_programming_languages: 블록
   tutorial_ttrace_string_detail_programming_languages: 자바 스크립트, 커피 스크립트
   tutorial_plethora_string_detail_programming_languages: 언어와 무관 (복수 언어로 가르칠 수 있음)
   tutorial_educodesecret_string_detail_programming_languages: 파이썬
-  tutorial_itchshapes_string_detail_programming_languages: 블록
   tutorial_codeguppytext_string_detail_programming_languages: 자바스크립트
   tutorial_vidcodeplastiche_string_detail_programming_languages: 자바스크립트
   tutorial_educativechatbot_string_detail_programming_languages: 파이썬
@@ -8438,7 +8525,6 @@ ko:
   tutorial_codecapture_string_detail_programming_languages: 자바스크립트
   tutorial_codehslitter_string_detail_programming_languages: 파이썬, HTML
   tutorial_bsdocean_string_detail_programming_languages: 자바 스크립트, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: 블록
   tutorial_codejika_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: 블록
   tutorial_rmagicequity_string_detail_programming_languages: 블록, 자바스크립트
@@ -9233,10 +9319,7 @@ ko:
   tutorial_kodableshapes_name: 코드로 도형 만들기
   tutorial_nasabinary_name: '바이너리 코드: 우주선과 대화하는 방법'
   tutorial_3dmaker_name: 3D 메이커
-  tutorial_itchstart_name: '이치코드: 스크래치 5 블록 스타터'
   tutorial_hopsub_name: 친구와 함께 서브웨이 서퍼를 만드세요
-  tutorial_itchmundos_name: 내 세계의 세계_e2
-  tutorial_itchtenacity_name: 끈기
   tutorial_kcjskiing_name: '스포츠 + 코드: 스키'
   tutorial_groksecurity_name: '사이버 보안: 다크 햇에 대한 방어'
   tutorial_creaticode_name: 스크래치 블록을 사용한 3D 프로그래밍
@@ -9348,14 +9431,8 @@ ko:
   tutorial_nasabinary_longdescription: 바이너리 코드를 사용하여 우주선과 대화하는 방법을 알아보고 이름표, 팔찌, 핀
     또는 소리에 이름을 바이너리 코드로 변환하여 직접 시도해 보세요.
   tutorial_3dmaker_longdescription: 정말 멋지고 회전 가능한 3D 개체를 빠르고 쉽게 만들 수 있습니다.
-  tutorial_itchstart_longdescription: 이 수업은 스크래치를 처음 시도하는 2~3학년 아이들에게 좋은 입문점입니다.캐릭터가
-    몇 가지 행동을 수행하도록 하기 위해 조합해야 하는 5개의 블록 세트로 시작하게 됩니다.
   tutorial_hopsub_longdescription: 친구 또는 동급생과 프로그램을 페어링하는 방법을 배우고 Hopscotch 캐릭터로 나만의
     지하철 서퍼를 만드세요!
-  tutorial_itchmundos_longdescription: 프로그래밍 도구인 스크래치 (Scratch) 에 대해 알게 될 것입니다.개체
-    및 배경 추가, 이벤트 블록 및 모양 기능을 사용하여 프로그램에 생동감을 더할 수 있습니다.
-  tutorial_itchtenacity_longdescription: Scratch의 이 프로그래머 프로젝트에서는 해수를 정화하는 로봇 시뮬레이터를
-    개발했습니다.
   tutorial_kcjskiing_longdescription: '누군가 나무에 부딪히기 전까지는 모두 재미있고 게임이에요… 아니면 그게 재미있는
     부분인가요?이 스크래치 액티비티의 코드를 사용하여 캐릭터를 얼어붙은 장애물이 있는 언덕 아래로 인도하면서 스키를 묶고 무릎을 굽히세요.코스를
     설계하고, 움직임과 감지 기능을 추가하고, 약간의 충돌 상호 작용과 붐을 더하면 재미가 산더미처럼 펼쳐집니다. '
@@ -9542,10 +9619,7 @@ ko:
   tutorial_kodableshapes_language: 영어
   tutorial_nasabinary_language: 영어
   tutorial_3dmaker_language: 영어
-  tutorial_itchstart_language: 영어
   tutorial_hopsub_language: 중국어 (간체), 영어, 스페인어 (스페인), 스페인어 (멕시코)
-  tutorial_itchmundos_language: 스페인어 (멕시코)
-  tutorial_itchtenacity_language: 스페인어 (멕시코)
   tutorial_kcjskiing_language: 영어, 프랑스어
   tutorial_groksecurity_language: 영어
   tutorial_creaticode_language: 중국어 (간체), 중국어 (번체), 영어
@@ -9636,10 +9710,7 @@ ko:
   tutorial_kodableshapes_string_detail_grades: 프리 리더 - 5학년
   tutorial_nasabinary_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_3dmaker_string_detail_grades: 2-8 학년
-  tutorial_itchstart_string_detail_grades: 2-8 학년
   tutorial_hopsub_string_detail_grades: 2-8 학년
-  tutorial_itchmundos_string_detail_grades: 초등 2학년 이상
-  tutorial_itchtenacity_string_detail_grades: 초등 2학년 이상
   tutorial_kcjskiing_string_detail_grades: 초등 2학년 이상
   tutorial_groksecurity_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_creaticode_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -9727,10 +9798,7 @@ ko:
   tutorial_nasabinary_string_platforms: 언플러그드, 스크린 리더
   tutorial_3dmaker_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드 폰,
     아이폰
-  tutorial_itchstart_string_platforms: 모든 브라우저, iPad, 무선 장치
   tutorial_hopsub_string_platforms: 아이패드, 아이폰
-  tutorial_itchmundos_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
-  tutorial_itchtenacity_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드
   tutorial_kcjskiing_string_platforms: 모든 최신 브라우저
   tutorial_groksecurity_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
     폰, 아이폰
@@ -9822,10 +9890,7 @@ ko:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -9914,10 +9979,7 @@ ko:
     가르칠 수 있음)
   tutorial_nasabinary_string_detail_programming_languages: 바이너리 코드
   tutorial_3dmaker_string_detail_programming_languages: 블록
-  tutorial_itchstart_string_detail_programming_languages: 블록
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: 블록
-  tutorial_itchtenacity_string_detail_programming_languages: 블록
   tutorial_kcjskiing_string_detail_programming_languages: 블록
   tutorial_groksecurity_string_detail_programming_languages: 없음 - 프로그래밍 불필요
   tutorial_creaticode_string_detail_programming_languages: 블록
@@ -10770,7 +10832,7 @@ ko:
   tutorial_gsspacerocks_name: Build a Space Rocks game with GameSalad
   tutorial_ozobotbroadcast_name: Broadcast and Retrieve IR Messages with Ozobot
   tutorial_ozobotapplications_name: Basic Applications of IR Communications
-  tutorial_codecombatworlds_name: CodeCombat Worlds
+  tutorial_codecombatworlds_name: 코드코믹 월드
   tutorial_spherochatgpt_name: BOLT meets ChatGPT
   tutorial_spherorvrimage_name: 'AI with RVR+: Image Recognition'
   tutorial_spherorvrauto_name: 'AI with RVR+: Autonomous Vehicles'
@@ -10780,7 +10842,7 @@ ko:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Heddy:  쉽게 프로그래밍을 배우다'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -10867,6 +10929,15 @@ ko:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: 댄스 파티
+  tutorial_introtomlai_name: 머신 러닝 소개
+  tutorial_computervisionai_name: 컴퓨터 비전
+  tutorial_neuralnetworksai_name: 뉴럴 네트워크
+  tutorial_chatbotsllmai_name: 챗봇 및 대규모 언어 모델
+  tutorial_generativeimagesai_name: 제너레이티브 이미지
+  tutorial_algorithmicbiasai_name: 알고리즘 편향
+  tutorial_codeofethicsai_name: AI 윤리강령
+  tutorial_socimpactofgenaiai_name: 제너레이티브 AI의 사회적 영향
   tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -10995,12 +11066,10 @@ ko:
   tutorial_ozobotapplications_longdescription: Students will identify an everyday
     application of infrared communication andbuild a model of it with Ozobots and
     Ozobot Blockly.
-  tutorial_codecombatworlds_longdescription: Play your way to mastering the coding
-    skills needed for creating your own amazing Roblox games! Start in the Overworld,
-    where you'll code your own pets to harvest, battle, and play. Then, take on the
-    Learning Levels and master the core concepts of Luau coding. But the real magic
-    happens in Creative Mode, where you'll craft your own games with the help of AI.
-    The power to create is in your hands!
+  tutorial_codecombatworlds_longdescription: 자신만의 놀라운 Roblox 게임을 만들기 위해 필요한 코딩 기술을
+    습득하는 방법을 플레이해 보세요! 먼저 Overworld에서 직접 애완동물을 코딩하여 수확, 전투 및 놀이를 할 수 있습니다. 그런 다음 학습
+    레벨을 통해 Luau 코딩의 핵심 개념을 습득하세요. 하지만 진정한 마법은 AI의 도움을 받아 크리에이티브 모드에서 자신만의 게임을 만드는
+    곳에서 일어납니다. 창조의 힘은 당신 손에 있습니다!
   tutorial_spherochatgpt_longdescription: ChatGPT, an artificially intelligent chatbot,
     is all the rage these days. Is there anything it doesn’t know? In this activity,
     explore whether or not ChatGPT can program your BOLT robot, then reflect on the
@@ -11040,11 +11109,9 @@ ko:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Hedy는 텍스트 프로그래밍 언어를 시작하는 쉬운 방법입니다! 무료로 사용할 수
+    있고 오픈 소스이며 다국어를 지원하며 Hedy를 자신의 언어로 사용할 수 있습니다. 점진적이므로 하나의 개념을 배울 수 있으며 해당 구문은
+    교실에 맞게 구성되어 교사가 학생의 경험을 완전히 맞춤화할 수 있습니다.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -11275,10 +11342,8 @@ ko:
     on the different poses. They will follow step-by-step instructions and easily
     drag the blocks to solve the exercises. Your curious students can also deep dive
     into how AI works.
-  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
-    then train an AI to play the game on its own! Learn core JavaScript concepts including
-    Variables, Functions and Events, and get hands-on experience with Neural Networks
-    and Machine Learning.
+  tutorial_kcjpong_longdescription: 자바스크립트를 사용하여 클래식 게임인 퐁을 재현한 다음 AI에게 스스로 게임을 플레이하도록
+    훈련시키세요! 변수, 함수, 이벤트 등 자바스크립트의 핵심 개념을 배우고 신경망과 머신러닝을 직접 체험해 보세요.
   tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
     Day and promote clean energy to replace fossil fuels and help the environment.  Your
     task is to collect the sun's rays to power a city. Students will start with the
@@ -11338,7 +11403,35 @@ ko:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: '새로운 Minecraft Hour of Code: Generation AI에서 AI 기반 발명품을 제작하기 위해 시작을 투자하세요. 책임 있는 AI의 원칙과 함께 문제 해결, 창의력 및 컴퓨팅 사고를 활용하세요. 블록 또는 Python에서의 코딩을 통해, Hour of Code는 누구나 코딩의 기초 및 모두를 위한 더 나은 AI를 구축하는 방법을 배울 수 있습니다.'
+  tutorial_danceai2023_longdescription: 댄스 파티를 코딩해서 친구들과 공유하세요. 케이티 페리, 마돈나, J 발빈,
+    시아, 키스 어번, 시애라 외 25명 이상의 가수들이 출연!!
+  tutorial_introtomlai_longdescription: 머신 러닝이라는 인공 지능의 한 형태에 대해 알아보고 문제 해결 프로세스를
+    사용하여 로봇이 문제를 해결하도록 훈련하는 방법을 알아봅니다.로봇이 물고기의 패턴을 감지하는 방법을 학습하는 기계 학습 활동에 참여하세요.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: 신경망이 어떻게 작동하는지 알아보세요.위젯을 사용하여 직접 신경망을
+    탐색해 보세요.신경망을 설명하는 비디오를 시청하십시오.마지막으로 추천 시스템을 만들 때 다양한 관점의 필요성에 대해 논의하십시오.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: AI가 이미지를 생성하는 방법을 알아본 다음 확산 AI 위젯을
+    살펴보고 이러한 모델이 창의적인지 여부를 논의하세요.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: 다양한 관점에서 제너레이티브 AI의 영향을 조사한 다음, 팀으로
+    협업하여 모든 참가자의 요구 사항을 가장 많이 충족하는 지침을 마련하세요.
+  tutorial_generationai_longdescription: '새로운 Minecraft Hour of Code: Generation AI에서
+    AI 기반 발명품을 제작하기 위해 시작을 투자하세요. 책임 있는 AI의 원칙과 함께 문제 해결, 창의력 및 컴퓨팅 사고를 활용하세요. 블록
+    또는 Python에서의 코딩을 통해, Hour of Code는 누구나 코딩의 기초 및 모두를 위한 더 나은 AI를 구축하는 방법을 배울 수
+    있습니다.'
   tutorial_bsimage_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_bscomputing_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_stackpython_string_detail_grades: 6 학년 이상 (11 세 이상)
@@ -11440,7 +11533,7 @@ ko:
   tutorial_hwfanpage_string_detail_grades: 초등 2학년 이상
   tutorial_hwillusion_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_caevolution_string_detail_grades: 6 학년 이상 (11 세 이상)
-  tutorial_bbbusybot_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_bbbusybot_string_detail_grades: 9학년 이상
   tutorial_caaifarm_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_cafuture_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_dmscratch_string_detail_grades: 2-8 학년
@@ -11470,7 +11563,16 @@ ko:
   tutorial_madmobile_string_detail_grades: 6 학년 이상 (11 세 이상)
   tutorial_intelinosmile_string_detail_grades: 프리 리더 -8학년
   tutorial_intelinoaisign_string_detail_grades: 2-8 학년
-  tutorial_generationai_string_detail_grades: 2-5학년(7-10세) 6-8학년(11~13세) 9학년 이상(14세 이상)
+  tutorial_danceai2023_string_detail_grades: 초등 2학년 이상
+  tutorial_introtomlai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_computervisionai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_neuralnetworksai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_chatbotsllmai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_generativeimagesai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_algorithmicbiasai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_codeofethicsai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_socimpactofgenaiai_string_detail_grades: 6 학년 이상 (11 세 이상)
+  tutorial_generationai_string_detail_grades: 초등 2학년 이상
   tutorial_bsimage_string_platforms: 크롬, 파이어폭스, 사파리
   tutorial_bscomputing_string_platforms: 언플러그드
   tutorial_stackpython_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 윈도우즈 폰, 안드로이드
@@ -11637,7 +11739,22 @@ ko:
   tutorial_madmobile_string_platforms: 모든 최신 브라우저
   tutorial_intelinosmile_string_platforms: 모든 브라우저, iPad, 무선 장치
   tutorial_intelinoaisign_string_platforms: 모든 최신 브라우저
-  tutorial_generationai_string_platforms: 컴퓨터(Windows PC, Mac), Android(Chromebook), iPad
+  tutorial_danceai2023_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰, 아이폰
+  tutorial_introtomlai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰, 아이폰
+  tutorial_computervisionai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰,
+    아이폰
+  tutorial_neuralnetworksai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰,
+    아이폰
+  tutorial_chatbotsllmai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰, 아이폰
+  tutorial_generativeimagesai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드
+    폰, 아이폰
+  tutorial_algorithmicbiasai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드
+    폰, 아이폰
+  tutorial_codeofethicsai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드 폰,
+    아이폰
+  tutorial_socimpactofgenaiai_string_platforms: 모든 최신 브라우저, 안드로이드 태블릿, 아이패드, 안드로이드
+    폰, 아이폰
+  tutorial_generationai_string_platforms: 안드로이드 태블릿, 아이패드, 윈도우폰, 안드로이드폰, 아이폰
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -11769,6 +11886,15 @@ ko:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
   tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: 언어와 무관
@@ -11895,13 +12021,22 @@ ko:
   tutorial_codecombathack_string_detail_programming_languages: 언어와 무관
   tutorial_toxicodewords_string_detail_programming_languages: 언어와 무관
   tutorial_mitstepmisinformation_string_detail_programming_languages: 언플러그드
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: 언플러그드
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: 언플러그드
   tutorial_mitstepintrotoml_string_detail_programming_languages: 언플러그드
   tutorial_naflogo_string_detail_programming_languages: 자바스크립트
   tutorial_madmobile_string_detail_programming_languages: 자바 스크립트, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: 블록
   tutorial_intelinoaisign_string_detail_programming_languages: 블록
-  tutorial_generationai_string_detail_programming_languages: 블록, Python
+  tutorial_danceai2023_string_detail_programming_languages: 언어와 무관
+  tutorial_introtomlai_string_detail_programming_languages: 언어와 무관
+  tutorial_computervisionai_string_detail_programming_language: 언어와 무관
+  tutorial_neuralnetworksai_string_detail_programming_languages: 언어와 무관
+  tutorial_chatbotsllmai_string_detail_programming_languages: 언어와 무관
+  tutorial_generativeimagesai_string_detail_programming_languages: 언어와 무관
+  tutorial_algorithmicbiasai_string_detail_programming_languages: 언어와 무관
+  tutorial_codeofethicsai_string_detail_programming_languages: 언어와 무관
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: 언어와 무관
+  tutorial_generationai_string_detail_programming_languages: 블록, 파이썬
   school_not_found_heading: 귀하의 학교를 찾을 수 없습니다. 더 자세한 정보를 입력하시기 바랍니다.
   school_name: 학교 이름
   school_name_error: 학교 이름은 필수입력항목입니다.
@@ -11961,7 +12096,7 @@ ko:
   step_06: 6단계
   step_07: 7단계
   step_08: 8단계
-  step_09: Step 9
+  step_09: 9단계
   what: '대상:'
   when: '시간:'
   where: '장소:'
@@ -11981,51 +12116,40 @@ ko:
     아워오브코드를 새로운 차원으로 끌어올릴 예정입니다. '
   hoc_how_to_companies_intro_desc_02: 여러분의 모든 노력은 소외된 인종 및 민족 집단의 젊은 여성과 학생들이 컴퓨터
     과학과 자신의 잠재력을 바라보는 방식에 큰 영향을 미칠 수 있습니다.
-  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
-    Code
-  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    Districts who fully engage with Hour of Code can help raise awareness of the computer
-    science movement and inspire more students to try computer science, particularly
-    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_districts_intro_heading: 교육구 전체를 아워오브코드에 참여시키세요
+  hoc_how_to_districts_intro_desc_01: 아워오브코드는 한 시간 분량의 컴퓨터 과학 입문 과정으로, 재미있는 튜토리얼을
+    통해 누구나 기초를 배울 수 있다는 것을 보여줍니다. 아워오브코드에 적극적으로 참여하는 교육구는 컴퓨터 과학 운동에 대한 인식을 높이고 더
+    많은 학생들, 특히 젊은 여성과 역사적으로 소외된 인종 및 민족 집단의 학생들에게 컴퓨터 과학에 도전하도록 영감을 줄 수 있습니다.
   hoc_how_to_events_intro_heading: 아워오브코드 어셈블리 또는 이벤트 주최 방법
-  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.
-    Your efforts can make a huge impact on the way students view computer science
-    and their own potential.
-  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
-    Hour of Code can help raise awareness of the computer science movement and inspire
-    more students to try computer science, particularly young women and students from
-    historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_desc_01: 아워오브코드는 한 시간 분량의 컴퓨터 과학 입문 과정으로, 재미있는 튜토리얼을 통해
+    누구나 기초를 배울 수 있다는 것을 보여줍니다. 여러분의 노력은 학생들이 컴퓨터 과학과 자신의 잠재력을 바라보는 방식에 큰 영향을 미칠 수
+    있습니다.
+  hoc_how_to_events_intro_desc_02: 아워오브코드에 적극적으로 참여하는 학교와 조직은 컴퓨터 과학 운동의 인식을 제고하는데
+    도움을 줄 수 있으며, 더 많은 학생들 특히 오랜 시간 소외된 인종 및 민족 그룹의 어린 여성과 학생에게 컴퓨터 과학을 배우도록 영감을 줄
+    수 있습니다.
   hoc_how_to_parents_intro_heading: 자녀와 함께 아워오브코드를 하는 방법
-  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
-    to introduce your child to computer science, perhaps for the very first time.
-    Not only is computer science foundational to all fields of study, but recent studies
-    show: children who study computer science perform better in other subjects, excel
-    at problem-solving, and are 17% more likely to enroll in college.'
-  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
-    students worldwide in this global event. Together, we can inspire kids to learn,
-    break stereotypes, and help children discover a newfound interest. Best of all,
-    you already have everything you need to bring the Hour of Code into your home!
-  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
-    of Code
-  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
-    Hour of Code event will show your representative the impact and need for computer
-    science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
-  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    As a volunteer, your efforts can make a huge impact on the way students view computer
-    science and their own potential.
-  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
-    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
-    of all backgrounds participate. The Hour of Code features a large variety of activities
-    for all ages and skill levels, so you don't need to be a programming expert to
-    volunteer.
+  hoc_how_to_parents_intro_desc_01: 아워오브코드를 사용해 보는 것은 아마도 자녀에게 처음으로 컴퓨터 과학을 소개해 주는
+    간단하고 재미있는 방법입니다. 컴퓨터 과학은 모든 학문 분야의 기초일 뿐만 아니라 최근 연구에 따르면 컴퓨터 과학을 공부하는 아이들이 다른
+    과목에서도 더 나은 성과를 내고 문제 해결 능력이 뛰어나며 대학에 진학할 가능성이 17% 더 높다고 합니다.
+  hoc_how_to_parents_intro_desc_02: 귀하와 귀하의 자녀는 이 글로벌 이벤트에서 전 세계 수천만 명의 학생들과 함께 할
+    수 있습니다. 함께,  아이들이 배우고 고정관념을 깨도록 영감을 주며, 아이들이 새로운 흥미를 찾도록 도울 수 있습니다. 무엇보다도, 귀하는
+    아워오브코드를 가정에 가져오는 데 필요한 모든 것을 가지고 계십니다!
+  hoc_how_to_public_officials_intro_heading: 아워오브코드에 선출직 공무원을 초대하세요
+  hoc_how_to_public_officials_intro_desc_01: 선출직 공무원을 아워오브코드 이벤트에 초대하면 대표자에게 컴퓨터 과학
+    교육의 영향력과 필요성을 보여줄 수 있으며, 학생들은 정부의 역할 모델에서 영감을 얻을 수 있습니다.
+  hoc_how_to_public_officials_intro_desc_02: 선출직 공무원을 참여시키면서 아워오브코드 행사를 성공적으로 운영하려면,
+    선출직 공무원이 학교에 도착하기 전에 이러한 업무를 완료해야 합니다. 그러한 업무에는 담당자와의 조율, 미디어 초대, 면제, 의제 계획 수립
+    등이 포함됩니다.
+  hoc_how_to_volunteers_intro_heading: 아워오브코드 자원봉사 방법
+  hoc_how_to_volunteers_intro_desc_01: 아워오브코드는 한 시간 분량의 컴퓨터 과학 입문 과정으로, 재미있는 튜토리얼을
+    통해 누구나 기초를 배울 수 있다는 것을 보여줍니다. 자원봉사자로서 여러분의 노력은 학생들이 컴퓨터 과학과 자신의 잠재력을 바라보는 방식에
+    큰 영향을 미칠 수 있습니다.
+  hoc_how_to_volunteers_intro_desc_02: 컴퓨터 과학 교육과 기술의 다양성 증진에 열정을 가진 사람이라면 누구나 자원
+    봉사자가 될 수 있습니다! 다양한 배경을 가진 자원 봉사자들의 참여를 진심으로 환영합니다. 아워오브코드는 모든 연령과 기술 수준에 맞는 다양한
+    액티비티를 제공하므로, 프로그래밍 전문가가 아니어도 자원봉사를 할 수 있습니다.
+  hoc_how_to_virtual_event_intro_heading: 가상 아워오브코드 운영 방법
+  hoc_how_to_virtual_event_intro_desc_02: 아워오브코드는 교실에서 진행할 수 있지만, 재미를 즐기기 위해 직접 방문하지
+    않아도 됩니다! 이러한 권장 사항 중 일부를 활용하여 영감을 주는 대화형 원격 이벤트를 주최할 수 있습니다.
   hoc_how_to_faq_question_prerequisites: 아워오브코드를 하기 위한 전제 조건은 무엇인가요?
   hoc_how_to_faq_answer_prerequisites: 아워오브코드는 초보자도 쉽게 실행할 수 있습니다. 학생들이 새로운 것을 탐구하고,
     생성하고, 배우도록 영감을 주는 데 컴퓨터 과학이나 교육 관련 경험이 반드시 필요한 것은 아닙니다.
@@ -12033,8 +12157,8 @@ ko:
   hoc_how_to_faq_answer_devices_01: '사용할 수 있는 장치:'
   hoc_how_to_faq_answer_devices_02: 장치가 제한되어 있거나 사용할 수 없는 경우 [페어 프로그래밍](%{pair_url})을
     시도하거나 [언플러그드 활동](%{unplugged_url})을 시도하여 장치 없이도 학습할 수 있습니다!
-  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
-    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_answer_devices_02_v2: 가정에 기기가 없다면, 기기 없이도 학습이 가능한 [언플러그드 액티비티] (%{unplugged_url})를
+    알아 보세요!
   hoc_how_to_faq_question_volunteer: 자원봉사는 어떤 사람이 할 수 있나요?
   hoc_how_to_faq_answer_volunteer: 컴퓨터 과학 교육과 기술의 다양성 증진에 열정을 가진 사람이라면 누구나 자원 봉사자가
     될 수 있습니다! 다양한 배경을 가진 자원 봉사자들의 참여를 진심으로 환영합니다. 아워오브코드는 모든 연령과 기술 수준에 맞는 다양한 활동을
@@ -12067,9 +12191,8 @@ ko:
   hoc_how_to_faq_answer_classroom_visit: '직접 교실을 방문하는 경우 자원봉사는 60-90분 동안, 가상 방문인 경우
     일반적으로 20-30분 정도 합니다. '
   hoc_how_to_faq_question_age_groups: 아워오브코드 활동은 어느 연령 그룹에 적절한가요?
-  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
-    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
-    Everyone—even adults—can have fun learning!
+  hoc_how_to_faq_answer_age_groups: Code.org와 파트너사는 모든 배경의 전 학년 (K-12) 학생이 참여하는 모든
+    아워오브코드 액티비티를 설계했습니다. 심지어 성인도 재미있게 즐길 수 있습니다!
   hoc_how_to_resources_heading_educators: 교육자를 위한 기타 아워오브 리소스
   hoc_how_to_resources_heading_default: '아워오브코드의 다른 자료들:'
   hoc_how_to_resources_promo_heading: 프로모션 리소스
@@ -12079,22 +12202,21 @@ ko:
   hoc_how_to_resources_get_involved_heading: 참여 방법
   hoc_how_to_resources_get_involved_desc: 아워오브코드를 널리 알리는데 도움을 주세요! 커뮤니티를 참여시킬 수 있는
     방법을 찾아보세요.
-  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
-  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
-    look for ways to promote the Hour of Code in your district communication to stakeholders.
-    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_resources_hoc_stats_heading: 아워오브코드 통계
+  hoc_how_to_resources_hoc_stats_desc: 샘플 메시지와 인포그래픽을 활용하여 교육구 커뮤니케이션을 이해관계자에게 홍보할
+    방법을 모색하세요. 영향력 있는 인포그래픽과 통계를 찾아 커뮤니티와 공유하세요!
   hoc_how_to_step_label_plan: 아워오브코드를 언제 어디서 진행할지 계획해보세요
   hoc_how_to_step_label_choose_activity: 활동을 선택하세요
   hoc_how_to_step_label_choose_activities: 액티비티를 선택하세요
   hoc_how_to_step_label_test_activity: 활동 테스트하기
-  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_get_familiar_activities: 액티비티에 익숙해지기
   hoc_how_to_step_label_register_event: 이벤트 등록
   hoc_how_to_step_label_register_your_hoc: 아워오브코드 등록하기
   hoc_how_to_step_label_tell: 학생, 학교, 지역사회에 알리기
   hoc_how_to_step_label_get_coding: 코딩을 시작해보세요!
   hoc_how_to_step_label_celebrate: 축하합니다
   hoc_how_to_step_label_beyond_hoc: 아워오브코드를 넘어
-  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_prepare_your_event: 이벤트 준비
   hoc_how_to_step_label_plan_your_event: 이벤트 계획하기
   hoc_how_to_step_label_plan_your_hour: 시간 계획하기
   hoc_how_to_step_label_help_spread_word: 소문을 퍼뜨리도록 도와주세요
@@ -12102,23 +12224,20 @@ ko:
   hoc_how_to_step_label_inspire_employees: 직원들에게 영감을 주세요
   hoc_how_to_step_label_encourage_employees: 직원들의 자원봉사를 장려하세요
   hoc_how_to_step_label_plan_internal_event: 내부 이벤트를 계획해 보세요
-  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
-  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
-    in Hour of Code
-  hoc_how_to_step_label_after_event: After the event
-  hoc_how_to_step_label_invite_elected_official: Invite an elected official
-  hoc_how_to_step_label_coordinate_media: Coordinate with Media
-  hoc_how_to_step_label_confirm_details: Confirm all details
-  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
-  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_label_recruit_school_participation: 학교 참여자 모집
+  hoc_how_to_step_label_promote_district_involvement: 교육구의 아워오브코드 참여 촉진
+  hoc_how_to_step_label_after_event: 이벤트 후
+  hoc_how_to_step_label_invite_elected_official: 선출직 공무원 초대하기
+  hoc_how_to_step_label_coordinate_media: 미디어와의 조율
+  hoc_how_to_step_label_confirm_details: 모든 세부 정보 확인
+  hoc_how_to_step_label_volunteer_decide: 어떻게 자원봉사를 하고 싶은지 결정하세요
+  hoc_how_to_step_label_plan_classroom_visit: 교실 방문을 계획하세요
   hoc_how_to_step_beyond_hoc_subhead: 여기서 끝나지 않아요!
-  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
-  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
-    these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: 한 번의 튜토리얼을 너머 학습을 확장하세요.
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 다음의 제안으로 계속해서 흥미를 유발하세요.
+  hoc_how_to_step_beyond_hoc_desc_generic: 컴퓨터 과학이 아워오브코드로 끝나서는 안됩니다!  학부모의 90%가 자녀가
+    컴퓨터 과학을 배우길 바라지만, 대부분의 학교에서는 여전히 컴퓨터 과학을 가르치지 않습니다. 아워오브코드 파트너가 제공하는 다양한 커리큘럼을
+    확인해 보고, 지금 컴퓨터 과학을 학교에서 가르칠 수 있는 방법을 알아보세요!
   hoc_how_to_step_plan_hour_desc_01: 시작하는 데 도움이 되는 샘플 안건은 다음과 같습니다.
   hoc_how_to_step_choose_activities_desc_01: 올해 아워오브코드의 주제는 인공 지능(AI)을 통한 창의성입니다.
     새로운 앱과 알고리즘을 코딩하거나, 독특한 아트를 제작하거나, 춤을 추게 하는 안무를 만드는 등, AI는 창의성에 대한 이해를 넓히는 디지털
@@ -12129,9 +12248,8 @@ ko:
   hoc_how_to_step_choose_activities_desc_03: 그런 다음 [AI에 대한 모든 것을 알아보세요](%{ai_url}).
     학생들은 해당 분야의 전문가가 등장하는 짧은 비디오를 시청할 수 있으며, 액티비티를 연장하고 추가 토론을 안내하는 수업 계획도 함께 제공됩니다.
     또는 교육자를 위한 무료 전문 학습을 제공하여 AI와 관련된 교육의 미래를 개척할 수 있도록 합니다.
-  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
-    Students can watch short videos featuring experts in the field, and there are
-    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_choose_activities_desc_03_short: 그런 다음 [AI에 대한 모든 것을 알아보세요](%{ai_url}).
+    학생들은 해당 분야의 전문가가 등장하는 짧은 비디오를 시청할 수 있으며, 액티비티를 확장하고 심층 토론으로 안내하는 수업 계획도 함께 제공됩니다.
   hoc_how_to_step_beyond_advocacy_desc_01: 컴퓨터 과학은 아워오브코드로 끝날 필요가 없습니다! 90%의 부모가 자녀가
     컴퓨터 과학을 배우기를 바라지만, 대부분의 학교에서는 여전히 컴퓨터 과학을 가르치지 않고 있으며 수십만 개의 일자리가 채워지지 않고 있습니다.
     해당 지역의 더 많은 학교에 컴퓨터 과학을 도입하는 방법을 알아보고 컴퓨터 과학을 졸업 요건으로 삼으라고 권유해보세요.
@@ -12183,238 +12301,194 @@ ko:
   hoc_how_to_step_companies_spread_word_desc_01: '이벤트가 끝나면 맞춤형 수료증으로 직원들에게 축하의 말을
     전하세요. 아워오브코드 행사의 사진과 동영상을 공유하고 #HourOfCode 및 @codeorg를 사용해 컴퓨터 과학 운동을 지원하겠다는 의지를
     보여주세요.'
-  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
-    the resources provided in our how-to guides for educators and school assemblies.
-    With your support, teachers and school administrators can decide which type of
-    event best meets the interest of your schools.
-  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
-    When you register your Hour of Code event, you'll receive helpful emails with
-    news and tips for hosting a successful Hour of Code. It's also how you can let
-    local volunteers know your school is participating. Volunteers are a great resource
-    and can come speak to your class about computer science or help your students
-    with Hour of Code activities.
-  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
-    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
-    Instagram and your district's homepage! Explore our sample emails which help you
-    share your Hour of Code event with your community.
-  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
-    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
-    so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
-  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
-    to see your event, and know that your dedication is part of a worldwide movement.
-  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
-    your event, as well as the tech capabilities of your space. Students can work
-    on their own devices, in pairs on one device, or together as a classroom on a
-    projector, and there are even unplugged tutorials that can be completed with no
-    devices at all!
-  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
-    official or influential business person and invite them to speak. [Check out our
-    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
-    of Code for more info.
-  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
-    as a local news station, newspaper, or education/tech bloggers. [See our press
-    kit for help](%{press_kit_url}).
-  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
-    [inspirational videos](%{videos_url}).'
-  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
-    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
-  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
-    about their background and how technology and computer science plays an important
-    role in their everyday lives'
-  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
-    of Code demo for the school. Fun twist: have them teach the principal, politician,
-    or other students!'
-  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
-    activity and how computer science can be taught without using computers.'
-  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
-    organize school-wide event gives closing remarks.'
-  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
-    take pictures to commemorate the event, and to post on your organization's social
-    media networks. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
-    and that it remains on track to end on time—especially if any special guests have
-    other scheduled commitments to attend.
-  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
-    sure to:'
-  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
-    and congratulate your students.
-  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
-    great for students to do) and offer to answer any follow-up questions they may
-    have.
-  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
-    the day on social media. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
-    on how to make next year's event even better.
+  hoc_how_to_step_districts_recruit_desc_01: 교육자 및 학교 어셈블리용 안내서에 제공된 자료를 공유하여 학교 참여를
+    유도하세요. 교사와 학교 관리자는 여러분의 지원을 받으며, 학교의 관심사에 가장 잘 맞는 행사 유형을 결정할 수 있습니다.
+  hoc_how_to_step_districts_register_desc_01: 이벤트를 운영하는 이에게 등록하라고 말하세요! 아워오브코드 이벤트
+    등록 시, 성공적인 아워오브코드 운영을 위한 뉴스와 팁이 담긴 유용한 이메일을 받게 됩니다. 이는 또한 지역 자원봉사자에게 학교가 참여하고
+    있음을 알릴 수 있는 방법이기도 합니다. 자원 봉사자는 훌륭한 자원이며 학급에 와서 컴퓨터 과학에 대해 이야기하거나 학생들의 아워오브코드 활동을
+    도울 수 있습니다.
+  hoc_how_to_step_districts_promote_desc_01: 커뮤니티 회원과 이해관계자에게 아워오브코드 이벤트 참여에 대해 알려주세요!
+    페이스북, 트위터, 인스타그램 및 교육구 홈페이지에 게시하세요! 아워오브코드 이벤트를 커뮤니티와 공유하는 데 도움이 되는 샘플 이메일을 살펴보세요.
+  hoc_how_to_step_districts_celebrate_desc_01: '아워오브코드 이벤트의 사진과 비디오를 공유하고 학생들의 성과를
+    자랑하세요. #HourOfCode 및 @codeorg를 사용해 교육구가 실제로 활동하는 모습을 확인해 보세요!'
+  hoc_how_to_step_districts_beyond_desc_01: 컴퓨터 과학 교육이 아워오브코드로 끝날 필요는 없습니다!교육구 학생들에게
+    대학 진학 및 취업 준비를 위한 기술과 지식을 제공하려면 무료로 사용할 수 있는 웹 기반 커리큘럼을 확인해 보세요!
+  hoc_how_to_step_districts_beyond_desc_01_v2: 컴퓨터 과학 교육이 아워오브코드로 끝날 필요는 없습니다! 교육구
+    학생들에게 대학 진학 및 취업 준비를 위한 기술과 지식을 제공하기 위해 아워오브코드 파트너가 제공하는 다양한 커리큘럼을 확인해 보세요!
+  hoc_how_to_step_events_register_desc_01: 새로운 활동과 특별 프로모션에 관한 정보를 일찍 얻기 위해 아워오브코드
+    이벤트에 등록하세요! 300명 이상의 학생이 참가하면 티셔츠, 포스터, 노트북 스티커 등을 포함한 특별한 참가 키트를 받을 수 있습니다. [학교
+    전체 행사 계획 공유](%{share_url})를 통해 자격을 얻어 보세요.
+  hoc_how_to_step_events_register_desc_02: 또한 [아워오브코드 지도 보기](%{map_url})를 통해 이벤트를
+    확인하고 여러분의 헌신이 전 세계적 운동의 일부임을 알 수 있습니다.
+  hoc_how_to_step_events_prepare_desc_01: 이벤트를 운영할 장소와 시기는 물론 사용할 공간의 기술적 역량도 고려하세요.
+    학생은 자신의 기기를 사용하거나, 두 명의 학생이 짝을 이루어 한 기기를 사용하거나, 교실에서 프로젝터를 사용하여 함께 작업하거나, 심지어
+    기기없이 하는 언플러그드 튜토리얼도 있습니다!
+  hoc_how_to_step_events_prepare_desc_02: 선출직 공무원이나 영향력 있는 사업가에게 [편지](%{letter_url})를
+    보내 연설을 해 달라고 부탁하세요. 아워오브코드 기간에 선출직 공무원을 초대할 때 더 자세한 내용은 [사용 방법 도구 키트를 확인하세요](%{toolkit_url}).
+  hoc_how_to_step_events_prepare_desc_03: 지역 뉴스 방송국, 신문 또는 교육/기술 블로거 등과 같은 지역 미디어를
+    초대할 수도 있습니다. [도움이 필요하면 언론매체 관련 키트를 참조하십시오](%{press_kit_url}).
+  hoc_how_to_step_events_plan_hour_desc_02: '오전 10:00-10:05:  [영감을 주는 동영상](%{videos_url})
+    중 하나로 시작해 보세요'
+  hoc_how_to_step_events_plan_hour_desc_03: '오전 10:05-10:15: 교장선생님이 컴퓨터 과학의 중요성을 간략하게
+    설명하는 인사말을 합니다. [이 통계 및 인포그래픽을 활용하세요](%{stats_url})).'
+  hoc_how_to_step_events_plan_hour_desc_04: '오전 10:15-10:30: 특별 초청 게스트가 자신의 배경을 이야기하고
+    기술과 컴퓨터 과학이 일상 생활에서 어떤 중요한 역할을 하는지에 대해 이야기합니다.'
+  hoc_how_to_step_events_plan_hour_desc_05: '오전 10:30-10:40: 학생들이 학교를 위한 아워오브코드 데모를
+    합니다. 재미있는 반전: 학생들에게 교장 선생님과 정치인, 다른 학생들을 가르치게 하세요!'
+  hoc_how_to_step_events_plan_hour_desc_06: '오전 10:40 - 11:00: 학생들은 언플러그드 액티비티를 시연하며,
+    컴퓨터없이도 컴퓨터 과학을 배울 수 있는 방법을 보여줍니다.'
+  hoc_how_to_step_events_plan_hour_desc_07: '오전 11:00 - 11:05: 학교 전체 이벤트를 조직하는 데 도움을
+    준 교사가 마무리 인사를 합니다.'
+  hoc_how_to_step_events_get_coding_desc_01: 학생들은 액티비트를 하는 동안 사진을 찍어 이벤트를 기념하고 조직의
+    소셜 미디어 네트워크에 게시합니다.(홍보 또는 개인정보 보호정책이 적용될 수 있습니다.)
+  hoc_how_to_step_events_get_coding_desc_02: 안건이 순조롭게 진행되게 하며, 특히 특별 게스트에게  예정된 다른
+    약속이 있는 경우에는 계획대로 일정을 진행해야 합니다.
+  hoc_how_to_step_events_after_desc_01: 아워오브코드 이벤트를 성공적으로 마친 후에는 다음을 확인하세요.
+  hoc_how_to_step_events_after_desc_02: 축하해 주세요! 수료증을 인쇄하고 학생들을 축하해 주세요.
+  hoc_how_to_step_events_after_desc_03: 특별 게스트에게 시간을 내준 것에 대해 감사를 표하고 (특히 학생들이 감사를
+    표하는 것이 좋습니다) 그들이 가질 수 있는 후속 질문에 답해 주겠다고 제안하세요.
+  hoc_how_to_step_events_after_desc_04: 소셜 미디어에 그 날의 사진, 동영상 또는 주목할 만한 인용문을 게시하세요.(홍보
+    또는 개인정보 보호정책이 적용될 수 있습니다.)
+  hoc_how_to_step_events_after_desc_05: 자원 봉사자 또는 게스트에게 내년 행사를 더 멋지게 만드는 방법에 대한 피드백을
+    받아보세요.
   hoc_how_to_step_events_after_desc_06: 학교의 학부모 교사 학생 연합회에 연락하거나 학부모 뉴스레터를 공유하여 자녀가
     무엇을 배우고 있는지 알려주세요.
-  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
-    of Code with your child by registering. When you register your event, you'll receive
-    helpful emails with news and tips for hosting a successful Hour of Code. You'll
-    also be [put on the map](%{map_url}) so you can show your child that they are
-    part of a global movement.
-  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
-    get to work together. They may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. Computer science
-    is all about learning how to "debug" situations that didn't turn out the way we
-    thought they would. Together, you and your child can think of creative ways to
-    solve the problem!
-  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
-    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
-    your child to show off their achievement!
-  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
-    a school-wide event. When 300 or more kids participate, you can receive a special
-    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
-    whole school event plan](%{share_url}) to qualify.
-  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
-    hosting a company-wide event or encouraging other employees to host their own
-    Hour of Code event.
-  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
-    that features one of their favorite role models.
-  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
-    and why it matters.
-  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
-    with your child right away to get them excited or save it for the end of your
-    Hour of Code as a special prize."
-  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
-    your school today."
-  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
-    both your event and the elected official.
-  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
-    from your event (e.g., school administrator) and for the elected official attending
-    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
-    for the day of the event.
-  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
-    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
-  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
-    your Hour of Code event to register and put your event on the map. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
-    map](%{map_url}) to see your event, and know that your dedication is part of a
-    worldwide movement."
-  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
-    day and make sure all parties participating (teachers, students, administrators,
-    elected officials and their staff) are aware of what is happening and when. Things
-    to consider:'
-  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
-    each part of the event?
-  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
-    or rotate between many students during the event? (You may want to coordinate
-    this ahead of time with the official's staffer.)
-  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
-    as a group?
-  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
-    What if the official is running late? What if some students finish their activity
-    before others?
-  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
-    to talk about their background and how technology and computer science plays an
-    important role in their everyday life.'
-  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
-    their Hour of Code activity. Fun twist: have a group of students teach the principal,
-    politician, or other students!'
-  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
-    gives closing remarks.'
-  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
-    coordinating media invitations. It could be the school, the district, the official's
-    office, or any combination.
-  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
-    per your state/district/school policy.
-  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
-    (DocuSign - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
-    (Download and print)"
+  hoc_how_to_step_parents_register_desc_01: 등록을 함으로써 자녀와 함께 아워오브코드를 하겠다는 약속을 합니다.
+    이벤트에 등록하면 성공적인 아워오브코드 운영을 위한 뉴스와 팁이 담긴 유용한 이메일을 받게 됩니다. 또한 [지도에 표시](%{map_url})되어
+    자녀에게 글로벌 운동에 참여하고 있음을 보여줄 수 있습니다.
+  hoc_how_to_step_parents_get_coding_desc_01: 자녀에게 액티비티를 안내하고 함께 액티비티를 합니다. 자녀는 어려워
+    할 수도 있습니다. 그래도 괜찮습니다! 프로그래밍을 배우는 것은 새로운 언어를 배우는 것과 같아서 곧바로 잘 할 수는 없습니다. 컴퓨터 과학의
+    핵심은 우리가 생각했던 방식대로 되지 않은 상황을 “디버깅”하는 법을 배우는 것입니다.여러분과 자녀는 함께 문제를 해결할 창의적인 방법을 생각해
+    낼 수 있습니다!
+  hoc_how_to_step_parents_celebrate_desc_01: '성공을 기념해 보세요! 소셜 미디어에 아워오브코드 사진과 동영상을
+    공유하세요. #HourOfCode 및 @codeorg를 사용하면 저희도 여러분의 성공을 강조할 수 있습니다!'
+  hoc_how_to_step_parents_celebrate_desc_02: 자녀의 성취를 자랑하기 위한 수료증을 인쇄할 수도 있습니다!
+  hoc_how_to_step_parents_spread_word_desc_02: 교장선생님께 [학교 전체 행사 운영](%{host_url}}을
+    요청하세요. 300명 이상의 어린이가 참가하면 티셔츠, 포스터, 노트북 스티커 등이 포함된 특별한 참가 키트를 받을 수 있습니다. [학교 전체
+    행사 계획 공유](%{share_url})를 통해 자격을 얻어 보세요.
+  hoc_how_to_step_parents_spread_word_desc_03: 회사 차원의 이벤트를 운영하거나 다른 직원들에게 직접 아워오브코드
+    이벤트를 운영하도록 권장하여 고용주의 참여를 요청하세요.
+  hoc_how_to_step_parents_beyond_list_01: 가장 좋아하는 역할 모델 중 한 명이 등장하는 [영감을 주는 동영상](%{video_url})을
+    보여주세요.
+  hoc_how_to_step_parents_beyond_list_02: "[AI가 작동하는 방식](%{ai_url})과 그것이 중요한 이유에 대해
+    자세히 알아보세요."
+  hoc_how_to_step_parents_beyond_list_03: "[기념품 주문하기](%{swag_url})! 자녀와 바로 공유하여 아이들에게
+    흥미를 갖게 하거나 특별 상으로 아워오브코드가 끝날 때까지 비밀로 유지하세요."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) 오늘 학교에 CS를 도입하는 방법을
+    알아 보세요."
+  hoc_how_to_step_public_officials_invite_desc_01: 이벤트와 선출직 공무원 모두에 대한 담당자를 결정하세요.
+  hoc_how_to_step_public_officials_invite_desc_02: '이벤트 담당자(예: 학교 관리자)와 참석하는 선출직 공무원
+    (예: 교직원 또는 스케줄러) 사이를 조율하세요. 양 당사자가 행사 당일 상대방의 연락처 정보를 알고 있는지 확인하세요.'
+  hoc_how_to_step_public_officials_invite_desc_03: '왼쪽에서 오른쪽으로: 아칸소와 노스 캐롤라이나, 아리조나
+    주지사가 아워오브코드에 참여하고 있습니다'
+  hoc_how_to_step_public_officials_register_desc_01: 아워오브코드 이벤트를 조직하는 당사자들과 협력하여 이벤트를
+    등록하고 맵에 표시하세요. 새로운 액티비티와 특별 프로모션에 대한 정보를 미리 접할 수 있습니다!
+  hoc_how_to_step_public_officials_register_desc_02: "[아워오브코드 맵 확인하기](%{map_url})를
+    통해 이벤트를 확인하고, 여러분의 헌신이 전 세계적 운동의 일부라는 것을 알아보세요."
+  hoc_how_to_step_public_officials_plan_desc_01: '오늘의 구체적인 의제를 정하고 참여하는 모든 당사자 (교사,
+    학생, 관리자, 선출직 공무원 및 교직원)가 언제 무슨 일이 일어나고 있는지 알 수 있도록 하세요. 고려해야 할 사항:'
+  hoc_how_to_step_public_officials_plan_list_01: 각 참가자는 이벤트의 각 부분에서 무엇을 하고 있나요?
+  hoc_how_to_step_public_officials_plan_list_02: 이벤트 중에 해당 선출직 공무원이 학생 한 명과 함께 앉아
+    있을까요, 아니면 여러 학생 사이를 돌아가며 앉을까요?(이 문제는 해당 선출직 공무원의 직원과 미리 조율하는 것이 좋습니다.)
+  hoc_how_to_step_public_officials_plan_list_03: 선출직 공무원이 학생 그룹에게 연설을 합니까?
+  hoc_how_to_step_public_officials_plan_list_04: 의제에 유연하게 적용할 수 있도록 계획하세요. 선출직 공무원이
+    늦게 도착하면 어떻게 되나요? 일부 학생이 다른 학생들보다 먼저 액티비티를 마치면 어떻게 되나요?
+  hoc_how_to_step_public_officials_agenda_list_03: '오전 10:10-10:15분: 선출직 공무원이 자신의
+    배경을 이야기하고 기술과 컴퓨터 과학이 일상 생활에서 어떻게 중요한 역할을 하는지에 대해 이야기합니다.'
+  hoc_how_to_step_public_officials_agenda_list_04: '오전 10:15-10:55분: 학생들이 아워오브코드 활동을
+    합니다. 재미있는 반전: 한 무리의 학생들이 교장, 정치인 또는 다른 학생들을 가르치게 하세요!'
+  hoc_how_to_step_public_officials_agenda_list_05: '오전 10:55-11:00시: 교사/관리자가 마무리 발언을
+    합니다.'
+  hoc_how_to_step_public_officials_media_desc_01: 미디어 초대를 조율할 책임자가 누구인지 알아보세요. 학교,
+    학군, 공무원실 또는 이 대상자의 조합이 될 수 있습니다.
+  hoc_how_to_step_public_officials_media_desc_02: 주/학군/학교 정책에 의거, 모든 학생들에 대해 미디어 면책을
+    보장하세요.
+  hoc_how_to_step_public_officials_media_list_01: "[성인/일반](%{general_send_url}) (DocuSign
+    - 서명자에게 링크 보내기)"
+  hoc_how_to_step_public_officials_media_list_02: "[성인/일반](%{general_print_url}) (다운로드
+    및 인쇄)"
   hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
-    - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
-    and print)"
-  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
-    official 72 hours prior to the event. Include event dress code, who will greet
-    them, which classroom or event they will attend with teacher's name, and agenda
-    for the event.
-  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
-    technology the day before and day of the event to ensure the event runs smoothly.
-  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
-    feel welcome and engaged, greet the elected official at the door of the event
-    to show them where to go and answer any questions they may have. It is always
-    great to have a student help greet them!
-  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
-    to commemorate the visit and to post on your organization's social media networks.
-    (Publicity or privacy policies may apply).
-  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
-    smoothly and that it remains on track to end on time. The official may have other
-    visits or meetings scheduled following your event.
-  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
-    of completion and congratulate your students.
-  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
-    and offer to answer any follow-up questions they may have.
-  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
-    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
-    or privacy policies may apply.)'
-  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
-    you note. It's especially thoughtful to get students to sign!
-  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
-    on each side for feedback on how to make next year’s event even better.
-  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
-    or a degree in computer science—you''re already qualified as you are! There are
-    a few ways you can get involved in Hour of Code as a volunteer:'
-  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
-    Email a local teacher or administrator to see if they need support for their Hour
-    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
-    started!"
-  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
-    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
-    Hour of Code event!"
-  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
-    there, teachers in your area will be able to reach out to you. Teachers will review
-    your profile on the [map](%{map_url}), so try to complete as much as possible
-    to increase the chance that a teacher will contact you."
-  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
-    work with your event organizer to register your Hour of Code event. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
-    discuss these logistics with the teacher ahead of time to better understand their
-    needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
-  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
-    This can determine what times you need to be present and in what capacity.
-  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
-    Depending on their procedures you may need to complete a background check or arrive
-    a little early for check-in at an in-person event.
-  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
-    with Artificial Intelligence (AI). Make this year special by completing a coding
-    activity AND learning about AI.
-  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
-    science movement by sharing your volunteer plans with your friends and colleagues
-    on your social media accounts (e.g. LinkedIn).
-  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
-    free to answer questions—but try not to give them the solution outright. Ask them
-    questions so they can answer themselves what went wrong. Encourage students to
-    help each other if they get stuck.
-  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
-    okay! Let the student know that you're in this together and work alongside them
-    to figure it out.
-  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
-  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
-    to stop with the Hour of Code. Consider volunteering year round with programs
-    like [TEALS](%{teals_url}) or advocate for computer science education.
+    - 서명자에게 링크 보내기)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (다운로드
+    및 인쇄)"
+  hoc_how_to_step_public_officials_confirm_desc_01: 이벤트 72시간 전에 선출직 공무원에게 공개 의제를 보내십시오.
+    이벤트 복장 규정, 맞이할 사람, 참석할 교실 또는 이벤트와 교사 이름 그리고 이벤트 의제 등을 포함하세요.
+  hoc_how_to_step_public_officials_confirm_desc_02: 이벤트 전날과 당일에 의제를 검토하고 모든 기술을 테스트하여
+    행사가 순조롭게 진행되도록 하십시오.
+  hoc_how_to_step_public_officials_get_coding_desc_01: 선출직 공무원이 환영받고 참여한다는 느낌을 받을
+    수 있도록, 이벤트 문 앞에서 선출직 공무원을 맞이하여 어디로 가야 하는지 안내하고 그들이 가질 수 있는 모든 질문에 답해주세요. 학생들이
+    그들을 맞이하는 것을 도와주는 것은 언제나 좋은 일입니다!
+  hoc_how_to_step_public_officials_get_coding_desc_02: 이벤트 동안 사진을 찍어 방문을 기념하고 조직의
+    소셜 미디어 네트워크에 게시하세요.(홍보 또는 개인정보 보호정책이 적용될 수 있음).
+  hoc_how_to_step_public_officials_get_coding_desc_03: 의제가 순조롭게 진행되고 정시에 마치도록 계획대로
+    진행되는지 확인하세요. 선출직 공무원에게 이벤트 후에 다른 방문이나 회의 일정이 있을 수 있습니다.
+  hoc_how_to_step_public_officials_after_list_01: 축하해주세요! [수료증을 인쇄](%{certificate_url})하고
+    학생들에게 축하의 말을 전하세요.
+  hoc_how_to_step_public_officials_after_list_02: 시간을 내준 공무원에게 감사를 표하고 그들이 가질 수 있는
+    후속 질문에 답하겠다고 제안하십시오.
+  hoc_how_to_step_public_officials_after_list_03: "#HourOfCode 및 @codeorg와 함께 소셜 미디어에
+    그 날의 사진, 동영상 또는 주목할 만한 인용문을 게시하세요.(홍보 또는 개인정보 보호정책이 적용될 수 있습니다.)"
+  hoc_how_to_step_public_officials_after_list_04: 공무원에게 후속 감사 편지를 보내십시오. 학생들이 서명하는
+    경우 특히 배려심이 돋보이게 됩니다!
+  hoc_how_to_step_public_officials_after_list_05: 양측의 직원 담당자에게 문의하여 다음 해 이벤트를 더 잘
+    만들 수 있는 방법에 대한 피드백을 받아보세요.
+  hoc_how_to_step_volunteer_decide_desc_01: 기술적 배경이나 컴퓨터 과학 학위가 필요하지 않습니다. 이미 현 상태로
+    자격이 있습니다! 다음은 자원봉사자로 아워오브코드에 참여할 수 있는 몇 가지 방법입니다.
+  hoc_how_to_step_volunteer_decide_list_01: "**가까운 학교에 문의하세요.** 현지 교사나 관리자에게 이메일을
+    보내 아워오브코드 이벤트에 대한 지원이 필요한지 알아보세요. 자원 봉사자를 위한 [샘플 이메일](%{email_url})을 확인하여 시작해
+    보세요!"
+  hoc_how_to_step_volunteer_decide_list_02: "**회사와 함께 이벤트를 진행하세요.** 조직 차원의 아워오브코드
+    이벤트를 준비하려면 [기업을 위한 방법 안내](%{companies_url})를 확인하세요!"
+  hoc_how_to_step_volunteer_decide_list_03: "**자원 봉사자 맵에 등록하세요.** 여기에서 해당 지역의 교사들이
+    여러분에게 연락할 수 있습니다. 교사가 [map](%{map_url})에서 귀하의 프로필을 검토할 것이므로, 가능한 많이 작성하여 교사가 연락할
+    가능성을 높여보세요."
+  hoc_how_to_step_volunteer_register_desc_01: 어떤 방법으로 자원봉사를 하기로 결정하든, 이벤트 운영자와 협력하여
+    아워오브코드 이벤트를 등록하세요.새로운 액티비티와 특별 프로모션에 대한 정보를 일찍 접할 수 있습니다!
+  hoc_how_to_step_volunteer_plan_desc_01: 교실에서 자원 봉사하는 경우, 이러한 실행 계획에 대해 교사와 미리 논의하여
+    요구 사항을 더 잘 파악하도록 하십시오.
+  hoc_how_to_step_volunteer_plan_list_01: 이벤트에서 자원 봉사자로서 어떤 역할을 하시나요? 기술 분야에서 일하고
+    있는 경우, 개인적인 경험이나 이야기를 공유해 달라는 요청을 받을 수도 있습니다. 사전에 함께 액티비티를 진행해 교사가 준비하도록 도와주실
+    수 있나요? 교실을 돌아다니며 질문에 답하거나 학생들이 아워오브코드를 연습하도록 격려할 수 있나요?
+  hoc_how_to_step_volunteer_plan_list_02: 가상 또는 직접 자원봉사 중 어느 쪽을 선택하느냐에 따라 참석해야 하는
+    시간과 역량이 달라집니다.
+  hoc_how_to_step_volunteer_plan_list_03: 지역 및 학교 보건 및 안전 지침. 절차에 따라 신원 조사를 완료하거나
+    대면 행사 체크인을 위해 조금 일찍 도착해야 할 수도 있습니다.
+  hoc_how_to_step_volunteer_plan_list_04: 올해 아워오브코드의 주제는 인공 지능(AI)을 통한 창의성입니다. 코딩
+    액티비티를 완료하고 AI에 대해 학습하여 올해를 특별한 한 해로 만들어보세요.
+  hoc_how_to_step_volunteer_spread_word_desc_01: '소셜 미디어 계정(예: LinkedIn)에서 친구 및 동료와
+    자원 봉사 계획을 공유하여 컴퓨터 과학 운동에 대한 인식을 높여보세요.'
+  hoc_how_to_step_volunteer_get_coding_desc_01: 학생들이 학습하는 동안 자유롭게 질문에 답할 수 있지만, 학생들에게
+    명확한 해결책을 제시하지는 않도록 하세요. 학생들이 무엇이 잘못되었는지 스스로 답할 수 있도록 질문하세요. 학생들이 막히면 서로 돕도록 격려해주세요.
+  hoc_how_to_step_volunteer_get_coding_desc_02: 정답이 없어도 괜찮습니다! 학생에게 여러분이 이 일을 함께 하고
+    있다는 것을 알리고 학생들과 함께 노력해서 알아내도록 해보세요.
+  hoc_how_to_step_volunteer_beyond_desc_01: 연중무휴 컴퓨터 과학 학습을 지원해보세요!
+  hoc_how_to_step_volunteer_beyond_desc_02: 재미있었다면 아워오브코드(Hour of Code)에서 멈출 필요가 없습니다.
+    [TEALS](%{teals_url})와 같은 프로그램을 통해 일년 내내 자원봉사를 하거나 컴퓨터 과학 교육을 지지하는 활동에 참여하는 것도
+    고려해 보세요.
+  hoc_how_to_step_virtual_register_desc_01: 아워오브코드 이벤트에 등록하여 새로운 액티비티 및 특별 프로모션에 대한
+    정보를 미리 접할 수 있습니다.
+  hoc_how_to_step_virtual_register_desc_02: 직접 모이지는 않을 수도 있지만, 여러분은 여전히 이 운동에 참여하게
+    됩니다. 운영자의 위치를 활용해 아워오브코드 맵에 이벤트를 추가하고, 귀하의 헌신이 전 세계적인 운동의 일부라는 것을 알아두세요.
+  hoc_how_to_step_virtual_choose_activities_desc_04: 모든 학생을 위한 단일 튜토리얼을 선택할지, 아니면
+    각 학생마다 직접 선택하도록 할지 미리 결정하세요.
+  hoc_how_to_step_virtual_plan_list_01: '오전 10:00-10:05분: [영감을 주는 동영상](%{videos_url})
+    또는 컴퓨터 과학 기초의 중요성에 대한 운영자의 짧은 소개로 시작하세요.'
+  hoc_how_to_step_virtual_plan_list_02: '오전 10:05-10:45분: 학생들이 코딩 액티비티를 합니다'
+  hoc_how_to_step_virtual_plan_list_03: '오전 10:45-10:55분: 학생들이 AI에 대해 배웁니다'
+  hoc_how_to_step_virtual_plan_list_04: '오전 10:55-11:00시: 운영자가 마무리 발언을 합니다.'
+  hoc_how_to_step_virtual_plan_desc_02: 기술 설정 및 액티비티를 미리 테스트해 보십시오. 학생들이 통화에 어떻게 참여할지,
+    학생들이 별도의 창에서 액티비티를 완료하는 동안 통화에 참여할 수 있는지 생각해 보세요. 비디오를 상영할 때는 화면과 컴퓨터 사운드를 공유하세요.
+  hoc_how_to_step_virtual_plan_desc_03: 코딩 액티비티 중에 학생에게 질문이 생길 때까지 음소거하도록 요청할 수 있습니다.
+    또는 회의 도구가 지원하는 경우 학생들이 짝을 이루거나 그룹으로 함께 작업할 수 있는 소규모 회의실을 사용하는 것도 좋습니다.
+  hoc_how_to_step_virtual_get_coding_desc_01: 컨퍼런스 도구의 채팅 상자에서 링크를 공유하거나 학급의 학습 관리
+    시스템을 통해 학생들을 액티비티로 안내하세요. 학생들이 어려움을 겪을 수도 있습니다. 하지만, 괜찮습니다! 프로그래밍을 배우는 것은 새로운
+    언어를 배우는 것과 같습니다. 곧바로 능숙해질 수는 없습니다. 학생이 답을 모른다면 함께 알아내도록 격려해 주세요.
+  hoc_how_to_step_virtual_celebrate_desc_01: '성공을 축하해주세요! 증명서를 미리 인쇄해서 학생들에게 보내거나,
+    학생이 부모님에게 집에서 인쇄해 달라고 부탁하게 할 수 있습니다. 성과를 자랑하고 아워오브코드 행사의 사진과 동영상을 소셜 미디어에 공유하세요.
+    #HourOfCode 및 @codeorg를 사용하면 귀하의 성공도 강조해 드릴 수 있습니다!(홍보 또는 개인정보 보호정책이 적용될 수 있습니다.)'
+  hoc_how_to_step_virtual_beyond_desc_01: 컴퓨터 과학이 아워오브코드로 끝나서는 안됩니다! 90%의 부모가 자녀가
+    컴퓨터 과학을 배우길 바라지만, 대부분의 학교에서는 여전히 컴퓨터 과학을 가르치지 않습니다. 도움을 드리기 위해 아워오브코드의 파트너사들이
+    다양한 커리큘럼을 제공합니다. 지금 바로 이러한 커리큘럼을 학교에 도입하는 방법을 알아보세요.
   hoc_ai_top_desc: 강의실에 있는 학생이든, AI를 통해 교육의 미래를 여는 교육자이든, 누구나 AI에 대해 배울 수 있습니다.
   hoc_ai_how_ai_works_video_series_desc: 이 짧은 동영상 시리즈에서는 인공 지능이 작동하는 방식과 인공 지능이 왜
     중요한지 소개합니다.그런 다음 알고리즘 편향 및 AI 의사 결정의 윤리와 같은 문제를 자세히 살펴보세요.
@@ -12426,6 +12500,37 @@ ko:
     수업으로 교실에 참여하세요.
   hoc_ai_activities_desc: 완전히 새로워진 Hour of Code 활동은 사용자에게 재미있고 매력적인 방식으로 인공 지능의 세계를
     소개합니다.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: 거의 100명의 Code.org 직원들이 어울리는 파란색과 노란색 티셔츠를 입은 회사의 2022년
     여름 Codechella 행사를 위해 호텔 회의실에서 포즈를 취하고 있습니다.
   careers_page_code_pride_alt_text: 여성스러운 분위기를 연출하는 두 명의 직원이 Code.org 브랜드 무지개 배너의
@@ -12856,9 +12961,10 @@ ko:
   about_page_section_more_description_3: 저희의 작업은 컴퓨터 과학 교육의 설립, 자금 지원 및 확산을 도운 [수많은
     조직과 개인이 수십 년간 노력한 결과입니다](%{efforts_url}). 광범위한 컴퓨터 과학 교육 커뮤니티의 지칠 줄 모르는 도움의 혜택을
     받게 되어 감사하며, [수년 동안 저희의 영향력을 지원해 준 모든 파트너와 개인에게 감사드립니다](%{partners_url}).
-  about_page_section_more_list_1: "[Code.org 2021 연례 보고서](%{report_url}) (과거 보고서:
-    [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}
-    [2016]%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[당사의 핵심 가치 및 메시지 지침](%{core_url})"
   about_page_section_more_list_3: "[우리의 커리큘럼과 교육학 철학](%{curriculum_url})"
   about_page_section_more_list_4: "[컴퓨터 과학이 모두를 위한 이유에 대한 설립자 하디 파르토비의 TEDx 강연 (동영상)](%{tedx_url})"

@@ -984,6 +984,7 @@ pt:
         csd_gamelab_velocity: Velocidade
         csd_how_teamwork_works: Como funciona o trabalho em equipe
         csd_ml_ethics_ai: 'Ética e IA '
+        csd_ml_how_ai_works: Como funciona a IA
         csd_ml_import_model: Importando um modelo de IA
         csd_ml_intro_ai_lab_july2021: Introdução ao AI Lab
         csd_ml_intro_to_ai_lab: Introdução ao AI Lab
@@ -1060,6 +1061,7 @@ pt:
         hint_videos_d_11_7_last: 'Vídeo-dica: D.11.7 Último'
         hint_videos_d_11_9_first: 'Vídeo-dica: D.11.9 Primeiro'
         hint_videos_d_11_9_last: 'Vídeo-dica: D.11.9 Último'
+        hoc-dance-ai-warmup: 'Festa Dançante, Edição para IA: Aquecimento'
         hoc_dance_congrats: Festa Dançante - Festejar!
         hoc_dance_congrats_2019: Dance Party 2019 - Festejar!
         hoc_dance_events: Festa Dançante - Eventos
@@ -1070,6 +1072,9 @@ pt:
         hoc_dance_warmup: Festa Dançante - Aquecimento
         hoc_dance_warmup_2019: Dance Party 2019 - Aquecimento
         hoc_wrapup: Conclusão da Hora do Código
+        how-ai-works-creativity-full: A IA Possui Criatividade e Imaginação?
+        how-ai-works-llms-full: Como os Chatbots e os Grandes Modelos de Linguagem
+          Funcionam
         how-to-k5-workshops: 'Fundamentos de CS do Code.org: estudante testado, professor
           aprovado'
         iceage_events: Hora do Código com A Era do Gelo - Eventos

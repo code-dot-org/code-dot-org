@@ -4,6 +4,7 @@ it:
     attributes:
       user:
         age: Età
+        ai_settings_header: Impostazioni IA
         current_password: Password attuale
         edit_header: Modifica i dettagli dell'account
         email: Indirizzo email
@@ -829,7 +830,7 @@ it:
         csd: Alla scoperta dell'informatica
         csf_af: Fondamenti di Informatica (Corsi A-F)
         csf_express: Fondamenti di Informatica (Corsi rapidi)
-        csp: Principi di informatica
+        csp: Princìpi di informatica
         not_applicable: Non applicabile
         other: Altro
     form_labels:

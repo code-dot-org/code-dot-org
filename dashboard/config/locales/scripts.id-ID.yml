@@ -224,9 +224,14 @@ id:
             umum, konten....
           title: pengujian-andrea
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Acak
           lessons:
             lesson-5:
               name: Penilaian
+            lesson-6:
+              name: Pelajaran 1
         applab-1hour:
           description: Lokakarya ini dirancang untuk memberikan pengenalan dasar app
             lab kepada murid dalam 1 jam. Murid mestinya bisa hadir dengan latar belakang
@@ -1789,6 +1794,8 @@ id:
           title: Survei Pascakursus CS Discoveries
         csd-post-survey-2023:
           title: Survei Pasca Kursus
+        csd-post-survey-2024:
+          title: Survei Pasca Kursus
         csd-sample-online:
           title: Contoh aktivitas online untuk CS Discoveries
         csd-test-saving-state:
@@ -1870,6 +1877,14 @@ id:
             cspSurvey:
               display_name: Survei
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Proses Pemecahan Masalah'
+            lessonGroup-3:
+              display_name: 'Bab 2: Komputer dan Pemecahan Masalah'
+            lessonGroup-5:
+              display_name: Survei
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Proses Pemecahan Masalah'
@@ -2058,6 +2073,13 @@ id:
             pemrograman yang tak ternilai harganya, seperti debugging, menggunakan
             materi pembelajaran, dan kerja tim. "
         csd2-2023:
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
+            membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
+            yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur
+            dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan
+            pemrograman yang tak ternilai harganya, seperti debugging, menggunakan
+            materi pembelajaran, dan kerja tim. "
+        csd2-2024:
           student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
             membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
             yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur
@@ -2310,6 +2332,19 @@ id:
             Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang
             sudah mendapat sentuhan pribadi."
         csd3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Gambar dan Animasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Bangunan Permainan'
+          student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk
+            sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game
+            Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga
+            ke permainan berbasis-sprite yang lebih canggih, menggunakan konsep pemrograman
+            dan proses desain yang sama yang digunakan sehari-hari oleh ilmuwan komputer.
+            Dalam proyek terakhir, Anda akan mengembangkan program interaktif yang
+            sudah mendapat sentuhan pribadi."
+        csd3-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Bab 1: Gambar dan Animasi'
@@ -2575,6 +2610,20 @@ id:
             yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab,
             dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan
             masukan dan mendorong pengulangan lebih lanjut.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: User Centered Design'
+            lessonGroup-3:
+              display_name: 'Bab 2: Aplikasi Prototyping'
+          student_description: Unit 4 memperkenalkan dampak sosial yang lebih luas
+            dari komputasi.  Melalui serangkaian tantangan desain, Anda akan mempelajari
+            cara memahami kebutuhan orang lain dengan lebih baik sambil mengembangkan
+            solusi sebuah masalah. Bagian kedua unit ini berisi sebuah proyek tim
+            berulang, yang di dalamnya tim berkesempatan mengidentifikasi suatu kebutuhan
+            yang mereka pedulikan, solusi prototipe baik di kertas maupun di App Lab,
+            dan mengujikan solusi kepada pengguna yang sebenarnya untuk mendapatkan
+            masukan dan mendorong pengulangan lebih lanjut.
         csd4-dlp:
           description: Ini adalah Unit 4 dari Deeper Learning Plan bagi fasilitator
             pelatihan  CS Discoveries Code.org. Di sini Anda akan mendapati prompt
@@ -2814,6 +2863,22 @@ id:
             langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan
             cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
         csd5-2023:
+          description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
+            masalah data.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Bab 1: Yang Mewakili Informasi'
+            lessonGroup-3:
+              display_name: 'Bab 2: Memecahkan Masalah Data'
+          student_description: Unit 5 membahas pentingnya data dalam memecahkan masalah
+            dan menyoroti cara komputer dapat membantu dalam proses ini. Bab pertama
+            mengulas berbagai sistem yang digunakan untuk merepresentasikan informasi
+            dalam komputer beserta tantangan dan imbalan yang diterima jika menggunakan
+            sistem tersebut. Di bab kedua, Anda akan mempelajari cara menggunakan
+            kumpulan data untuk memecahkan masalah, dan cara komputer membantu mengotomatiskan
+            langkah-langkah dari proses ini. Bab ini diakhiri dengan mempertimbangkan
+            cara menerapkan proses pemecahan masalah data dalam bidang yang Anda pilih.
+        csd5-2024:
           description_short: Pelajari cara orang menggunakan komputer untuk memecahkan
             masalah data.
           lesson_groups:
@@ -3142,7 +3207,16 @@ id:
           lesson_groups:
             lessonGroup-3:
               display_name: 'Bab 2: Membangun Prototipe Fisik'
+        csd6a-2024:
+          description_short: Belajar program dengan perangkat fisik.
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Bab 2: Membangun Prototipe Fisik'
         csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Masukan dan keluaran
+        csd6b-2024:
           lesson_groups:
             lessonGroup-3:
               display_name: Masukan dan keluaran
@@ -3156,6 +3230,14 @@ id:
             lessonGroup-4:
               display_name: Survei
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
+            lessonGroup-4:
+              display_name: Pengenalan App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1
@@ -4753,6 +4835,11 @@ id:
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
             ke teman-teman Anda!
           title: Pesta Dansa (2019)
+        dance-ai-2023:
+          lessons:
+            lesson-1:
+              name: 'Pesta Dansa: Edisi AI'
+          title: 'Pesta Dansa: Edisi AI'
         dance-draft:
           title: JANGAN MENGGUNAKAN
         dance-extras:
@@ -6131,6 +6218,36 @@ id:
 
             **Waktu yang disarankan:** 30 menit
           title: 'Modul 1: Bersiap Mengajarkan Pemecahan Masalah dan Komputasi'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modul 2: Bersiap Mengajarkan Pengembangan Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          student_description: |-
+            Modul pembelajaran profesional ini dirancang untuk membantu Anda menyiapkan diri untuk mengajarkan unit Animasi Interaktif dan Game Code.org.
+
+            **Dalam modul ini, Anda akan:**
+
+            -   Mendapatkan pengenalan tentang Animasi Interaktif dan Game.
+            -   Mempraktikkan konsep-konsep utama yang tercantum di dalam unit.
+            -   Mencoba Game Lab.
+            -   Mengkesplorasi proyek-proyek akhir chapter.
+
+            **Waktu yang disarankan:** 120 menit
+          title: Bersiap Mengajarkan Animasi Interaktif dan Game
+        self-paced-pl-csd-unit4-2-2023:
+          title: " Modul 4: Bersiap Mengajarkan Proses Desain"
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modul 5: Bersiap Mengajarkan Data dan Masyarakat'
         self-paced-pl-csd1-2021:
           description: |-
             Modul ini merupakan pengantar singkat untuk Code.org dan kursus pembelajaran profesional ini.
@@ -7238,6 +7355,13 @@ id:
           title: Modul 7
         vpl-csp-2023-m8:
           title: Modul 8
+        web-dev-2024:
+          student_description: " Di Unit 2, Anda akan mempelajari cara membuat dan
+            membagikan konten di halaman web Anda sendiri. Setelah memutuskan konten
+            yang ingin Anda bagikan ke dunia, Anda akan mempelajari cara membuat struktur
+            dan gaya halaman menggunakan HTML dan CSS. Anda juga akan melatih keterampilan
+            pemrograman yang tak ternilai harganya, seperti debugging, menggunakan
+            materi pembelajaran, dan kerja tim. "
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

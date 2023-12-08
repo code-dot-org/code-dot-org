@@ -222,6 +222,7 @@ is:
   for_students_teacher_led_lessons: 'Fyrir nemendur: kennslustundir undir forystu
     kennara'
   professional_development: Fagleg þróun
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -308,6 +309,7 @@ is:
   call_to_action_explore_all_hoc_activities: Kanna öll verkefni Klukkastundar kóðunar
     frá Code.org
   call_to_action_start_dance_party: Byrja á Danspartý
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Byrja á 2. hluta
   call_to_action_start_unplugged_activity: Byrja verkefni án nets
   call_to_action_view_promo_resources: Skoða kynningarauðlindir
@@ -319,6 +321,8 @@ is:
   call_to_action_try_hoc_ai_activities: Prófaðu Hour of Code AI starfsemi
   call_to_action_explore_activities: Kannaðu starfsemi
   call_to_action_explore_ai: Kannaðu AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Kannaðu tól
   call_to_action_explore_unit: Explore eining
   call_to_action_explore_curriculum: Skoða námskrá
   call_to_action_explore_curricula: Skoða námskrár
@@ -420,6 +424,15 @@ is:
   call_to_action_learn_about_ai: Lærðu um AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Byrjaðu
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Skoða leiðbeiningar fyrir kennara
   aria_label_call_to_action_hoc_how_to_companies: Skoða leiðbeiningar fyrir fyrirtæki
   aria_label_call_to_action_hoc_how_to_districts: Skoða leiðbeiningar fyrir héruð
@@ -442,6 +455,8 @@ is:
     faglega nám program
   aria_label_call_to_action_teaching_problem_solving: Byrjaðu faglega námsáætlunina
     í kennslu vandamálalausnar og tölvumála
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Byrjaðu Kennsla Tölvunarfræði Tengingar
     faglega nám program
   aria_label_call_to_action_teaching_ai: Byrjaðu kennsluforritið AI og Machine Learning
@@ -538,6 +553,16 @@ is:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Professional Learning Program Code.org
   curriculum_name_csf: Tölvunarfræði Grundvallaratriði
   curriculum_name_csf_02: Allir CS Grundvallaratriði (Course A-F)
@@ -556,6 +581,7 @@ is:
   curriculum_name_csd: Tölvunarfræði Uppgötvanir
   curriculum_name_csp: Tölvunarfræði Meginreglur
   curriculum_name_problem_solving: Lausn vandamála og tölvunarfræði
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Tölvunarfræði Tengingar
   curriculum_name_csa: AP® Tölvunarfræði A
   curriculum_name_csa_ai: Hugbúnaðarverkfræði og tölvusjón
@@ -684,8 +710,10 @@ is:
   module_label_languages: 'Tungumál studd:'
   module_label_accessibility_features: 'Aðgengi:'
   module_label_accessibility_features_full: 'Aðgengi Lögun:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: kennari tól
   module_label_educator_course: Kennslumaður námskeið
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Námsmaður tól
   module_label_student_product: Vara
   module_label_student_content_resources: Innihald og auðlindir
@@ -694,6 +722,7 @@ is:
   module_label_available_now: Laus núna
   module_label_video_series: Video röð
   module_label_self_paced: Sjálf-skref mát
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -735,6 +764,7 @@ is:
   module_duration_1_hr: 1 klukkustund
   module_duration_2_hrs: 2 klukkustundir
   module_duration_3_hrs: 3 klukkustundir
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 klukkustundir
   module_duration_5_hrs_plus: 5+ klukkustundir
   module_duration_8_hrs: 8 klukkustundir
@@ -756,6 +786,7 @@ is:
   module_label_teaching_csd: Kennsla Tölvunarfræði Uppgötvanir
   module_label_teaching_csp: Kennsla Tölvunarfræði Meginreglur
   module_label_teaching_problem_solving: Kennsla á lausn vandamála og tölvumála
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Kennsla Tölvunarfræði Tengingar
   module_label_teaching_ai: Kennsla AI og vélanám
   module_label_teaching_maker_cp: Kennsla Búa til forrit með tækjum (Circuit Playground)
@@ -820,6 +851,12 @@ is:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Ef þú ert menntaskólanemi ástríðufullur um að hvetja fleiri
     ungar konur til að taka tölvunarfræði í skólanum þínum, þá þurfum við þig!
   cs_ambassador_desc: Sérhvert svið, þar á meðal læknisfræði, skemmtun, íþróttir,
@@ -890,6 +927,19 @@ is:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Persónu- og sýndarvinnustofur
     sem hefjast í sumar.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Fara á undan, skera leiðsluna (um stund)!
   no_devices_section_desc: CS menntun þarf ekki alltaf að vera fyrir framan skjá og
     tæki aðgangur ætti ekki að vera hindrun að læra tölvunarfræði hugtök.
@@ -914,6 +964,11 @@ is:
   subscribe_form_section_desc_csp: Skráðu þig til að fá mánaðarlega tölvupóst um Code.org
     er Computer Science Principles og fá gagnlegar áminningar, ábendingar, og uppfærslur
     send beint í pósthólfið þitt.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Þú getur sagt upp áskrift hvenær sem er.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1112,6 +1167,7 @@ is:
     frá öllum þátttakendum.
   ai_curriculum_btn_aria_label_06: Skoða samfélagsleg áhrif kynslóðaáætlunar um kynslóð
     AI
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Hvað kennarar segja um AI með Code.org:'
   ai_carousel_quote_01: Þessi kennslustund gaf nemendum mínum einnig tækifæri til
     að sjá að það er þáttur í skoðun í flokkunarkerfum. Seinna, þegar við byrjuðum
@@ -1301,6 +1357,68 @@ is:
   ai_vid_computervision_caption: Tölva Vision
   ai_vid_ethics1_caption: 'Siðfræði og AI: Jafn aðgangur og reiknirit hlutdrægni'
   ai_vid_ethics2_caption: 'Siðfræði og AI: Persónuvernd og framtíð vinnu'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Self-skref Professional Nám fyrir kennara
   self_paced_pl_hero_desc: Professional námsframboð til að styðja kennara í öllum
     stigum tölvunarfræði kennslu ferð þeirra.
@@ -2907,6 +3025,7 @@ is:
     eða [lestu leiðbeiningarnar um hvernig á að nota] ()%{howto_url}'
   tutorial_dance2019_name: Danspartý
   tutorial_danceparty_name: Danspartý
+  tutorial_dancepartyai_name: 'Danspartý: AI-útgáfa'
   tutorial_chibitronics_name: 'Chibitronics: Ljómandi saga'
   tutorial_athlete_name: Kóðaðu þinn eigin íþróttaleik
   tutorial_moana_name: 'Moana: Wayfinding með kóða'
@@ -3506,19 +3625,14 @@ is:
   tutorial_csfirstdialogue_name: Samræður
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Kóðarar: Félagsleg dreifing sprites'
-  tutorial_itchspace_name: 'ITchCode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magic
   tutorial_vidcodemagices_name: SFX Magic
   tutorial_codespeakmeal_name: Kóða heilbrigt máltíð app
-  tutorial_itchfish_name: 'iTchCode: Fiskur klóra leikur'
   tutorial_bsdwebsite_name: Uppáhalds vefsíðan mín
   tutorial_codespeaktime_name: Code a Time Capsule í Scratch
-  tutorial_itchwebcam_name: 'ITCHCode: Webcam Viðhaldið Reality'
-  tutorial_itchball_name: 'ITCHCode: Skoppar Ball'
   tutorial_ttrace_name: Race Ástand
   tutorial_plethora_name: 'Ognótt: Orsök og áhrif'
   tutorial_educodesecret_name: Afhjúpa leyndarmál stofnunarinnar!
-  tutorial_itchshapes_name: 'ITCHCode: Lögun og horn'
   tutorial_codeguppytext_name: Kynning á texta sem byggir á kóðun
   tutorial_vidcodeplastiche_name: Plast Mengun PSA
   tutorial_educativechatbot_name: Búðu til þitt eigið spjallbot í Python
@@ -3541,7 +3655,6 @@ is:
   tutorial_codecapture_name: Lærðu forritun með JavaScript í Jiffy
   tutorial_codehslitter_name: Kóðun fyrir Litter-Free Community
   tutorial_bsdocean_name: Lífið fyrir neðan vatn
-  tutorial_itchplatformer_name: 'ITCHCode: Scratch 3.0 Platformer Tutorial'
   tutorial_codejika_name: 'CodeJika: 5 mínútna Website'
   tutorial_gamefrootclicker_name: Lærðu breytur. Code eigin Clicker Game þinn.
   tutorial_rmagicequity_name: Jafnrétti vs jafnrétti
@@ -3594,6 +3707,9 @@ is:
   tutorial_danceparty_shortdescription: Code a Dance Party til að deila með vinum
     þínum. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, tónlist
     frá Disney 'Encanto', og fleira!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Forritaðu pappírsrás til að lýsa upp þína
     eigin sögu.
   tutorial_athlete_shortdescription: Veldu á milli þess að gera körfuboltaleik eða
@@ -4750,6 +4866,9 @@ is:
   tutorial_danceparty_longdescription: Code a Dance Party til að deila með vinum þínum.
     Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, tónlist frá Disney
     'Encanto', og fleira!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Forritaðu pappírsrás til að lýsa upp þína
     eigin sögu.
   tutorial_athlete_longdescription: Veldu á milli þess að gera körfuboltaleik eða
@@ -7253,19 +7372,12 @@ is:
   tutorial_codestersdistance_longdescription: Lærðu grunnatriði kóðunar í Python,
     búðu síðan til forrit sem reiknar út fjarlægðina milli tveggja spritta til að
     ganga úr skugga um að þeir séu í félagslegri fjarlægð eða þurfi að vera með grímu.
-  tutorial_itchspace_longdescription: Þessi kennsla tekur þig í gegnum sköpun af klassískum
-    Space Invaders leik með Scratch MIT forritunarmálinu. Gerast áskrifandi að RokCoder
-    YouTube rásinni fyrir fleiri Scratch-undirstaða vídeó og námskeið! Hvert myndband
-    er bitastærð einkatími (um það bil tíu mínútur að lengd) sem inniheldur sín sérstöku
-    lokamarkmið. Lokaniðurstaðan er hágæða Scratch spilakassa leikur.
   tutorial_vidcodemagic_longdescription: Láttu blikka birtast af handahófi um skjáinn
     með lykkju.
   tutorial_vidcodemagices_longdescription: Láttu blikka birtast af handahófi um skjáinn
     með lykkju.
   tutorial_codespeakmeal_longdescription: Lærðu að kóða forrit sem hjálpar notendum
     að taka heilsusamlegar ákvarðanir um mat.
-  tutorial_itchfish_longdescription: Scratch 3.0 einkatími til að gera leik með hákarl
-    elta og borða fisk truflað þegar kafari er borðað óvart.
   tutorial_bsdwebsite_longdescription: 'Þetta námskeið gerir nemendum kleift að nota
     kóða sem leið til að deila því sem er mikilvægt eða áhugavert fyrir þá. Þeir geta
     fylgst með kennslustundinni eða búið til einstök verkefni meðan þeir læra HTML,
@@ -7274,10 +7386,6 @@ is:
     af the toppur 3 hlutir sem þú hefur áhuga á eða elska að gera. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Lærðu hvernig á að kóða stafrænt tímahylki
     til að taka upp og endurspegla líf þitt núna.
-  tutorial_itchwebcam_longdescription: Lærðu um aukinn veruleika og búðu til þitt
-    eigið augmented reality sýndarrými.
-  tutorial_itchball_longdescription: Fáðu bolta til að skoppa um skjáinn. Lærðu um
-    lykkjur og conditionals innan lykkjur.
   tutorial_ttrace_longdescription: Með því að hringja í aðgerðir og hanna flokka forrita
     leikmenn sinn eigin keppnisbíl til að vera fljótur, fimur og öflugur; meðan á
     kynþáttum stendur geta þeir þá hakkað ökutæki keppinauta sinna til að spreyta
@@ -7288,9 +7396,6 @@ is:
     þegar þú kafa dýpra í að læra ef yfirlýsingar, strengir, fyrir-í lykkjur. Hjálp
     Agent Smith finna sökudólgur og stilla stýrikerfi stofnunarinnar fyrir nýja notendur
     sína með Python.
-  tutorial_itchshapes_longdescription: Lærðu hvernig á að teikna form í Scratch. Þú
-    munt einnig læra hvernig á að reikna út hversu mikið þú þarft að snúa fyrir hvaða
-    form sem er.
   tutorial_codeguppytext_longdescription: Lærðu grunnatriði texta sem byggir á kóðun
     með því að búa til fyrsta forritið þitt í netkóðunarritstjóra.
   tutorial_vidcodeplastiche_longdescription: Vandamálið við plastfyllingu hafsins
@@ -7365,8 +7470,6 @@ is:
   tutorial_bsdocean_longdescription: Lífið fyrir neðan vatn varpar ljósi á áríðandi
     mál sem við stöndum frammi fyrir nú á dögum - umhverfi okkar. Þetta verkefni leggur
     áherslu á að leiðbeina þér að kóða þína eigin vefsíðu til að vernda vötnin okkar.
-  tutorial_itchplatformer_longdescription: Auðvelt að fylgja leiðbeiningar um hvernig
-    á að búa til einfaldan platformer leik með Scratch.
   tutorial_codejika_longdescription: Frábær kynning á kóðun með HTML og CSS. Kóða
     nokkrar línur, sjá strax framleiðsla án þess að fá caught upp í Hows og Whys með
     því að búa til gott áfangasíðu með tveggja lita halli bakgrunni, nafn og website
@@ -7564,6 +7667,7 @@ is:
     einstaklega sérstök.
   tutorial_dance2019_string_detail_grades: 7 ára og eldri
   tutorial_danceparty_string_detail_grades: 7 ára og eldri
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Forlæsir - 10 ára
   tutorial_athlete_string_detail_grades: 7 ára og eldri
   tutorial_moana_string_detail_grades: 7 ára og eldri
@@ -8160,19 +8264,14 @@ is:
   tutorial_csfirstdialogue_string_detail_grades: 7 - 13 ára
   tutorial_codemonkeybeaver_string_detail_grades: Forlæsir - 10 ára
   tutorial_codestersdistance_string_detail_grades: 11 ára og eldri
-  tutorial_itchspace_string_detail_grades: 11 ára og eldri
   tutorial_vidcodemagic_string_detail_grades: 7 ára og eldri
   tutorial_vidcodemagices_string_detail_grades: 7 ára og eldri
   tutorial_codespeakmeal_string_detail_grades: 11 ára og eldri
-  tutorial_itchfish_string_detail_grades: 7 - 13 ára
   tutorial_bsdwebsite_string_detail_grades: 11 ára og eldri
   tutorial_codespeaktime_string_detail_grades: 7 - 13 ára
-  tutorial_itchwebcam_string_detail_grades: 11 ára og eldri
-  tutorial_itchball_string_detail_grades: 7 - 13 ára
   tutorial_ttrace_string_detail_grades: 11-13 ára
   tutorial_plethora_string_detail_grades: 7 ára og eldri
   tutorial_educodesecret_string_detail_grades: 11 ára og eldri
-  tutorial_itchshapes_string_detail_grades: 11 ára og eldri
   tutorial_codeguppytext_string_detail_grades: 11-13 ára
   tutorial_vidcodeplastiche_string_detail_grades: 11 ára og eldri
   tutorial_educativechatbot_string_detail_grades: 14 ára og eldri
@@ -8194,7 +8293,6 @@ is:
   tutorial_codecapture_string_detail_grades: 11 ára og eldri
   tutorial_codehslitter_string_detail_grades: 11-13 ára
   tutorial_bsdocean_string_detail_grades: 11-13 ára
-  tutorial_itchplatformer_string_detail_grades: 11 ára og eldri
   tutorial_codejika_string_detail_grades: 11 ára og eldri
   tutorial_gamefrootclicker_string_detail_grades: 11-13 ára
   tutorial_rmagicequity_string_detail_grades: 11-13 ára
@@ -8246,6 +8344,7 @@ is:
   tutorial_meeempathy_string_detail_grades: 7 ára og eldri
   tutorial_dance2019_string_platforms: Allir nútíma vafrar, Android tafla, iPad, Unplugged
   tutorial_danceparty_string_platforms: Allir nútíma vafrar, Android tafla, iPad
+  tutorial_dancepartyai_string_platforms: Allir nútíma vafrar, Android tafla, iPad
   tutorial_chibitronics_string_platforms: Allir nútíma vafrar, Skjár lesandi
   tutorial_athlete_string_platforms: Allir nútíma vafrar
   tutorial_moana_string_platforms: Allir nútíma vafrar, Android tafla, iPad
@@ -9000,21 +9099,16 @@ is:
   tutorial_codemonkeybeaver_string_platforms: Allir nútíma vafrar, Android tafla,
     iPad
   tutorial_codestersdistance_string_platforms: Allir nútíma vafrar, Skjár lesandi
-  tutorial_itchspace_string_platforms: Allir nútíma vafrar
   tutorial_vidcodemagic_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
     Skjár lesandi
   tutorial_vidcodemagices_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
     Skjár lesandi
   tutorial_codespeakmeal_string_platforms: Króm, Firefox
-  tutorial_itchfish_string_platforms: Allir nútíma vafrar
   tutorial_bsdwebsite_string_platforms: Króm
   tutorial_codespeaktime_string_platforms: Króm, Firefox
-  tutorial_itchwebcam_string_platforms: Allir nútíma vafrar, Android tafla, iPad
-  tutorial_itchball_string_platforms: Allir nútíma vafrar
   tutorial_ttrace_string_platforms: Króm
   tutorial_plethora_string_platforms: Allir nútíma vafrar, Android tafla, iPad
   tutorial_educodesecret_string_platforms: Allir nútíma vafrar
-  tutorial_itchshapes_string_platforms: Allir nútíma vafrar
   tutorial_codeguppytext_string_platforms: Allir nútíma vafrar, Android tafla, iPad
   tutorial_vidcodeplastiche_string_platforms: Allir nútíma vafrar, iPad
   tutorial_educativechatbot_string_platforms: Allir nútíma vafrar
@@ -9041,7 +9135,6 @@ is:
   tutorial_codehslitter_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
     Windows sími, Android sími, iPhone
   tutorial_bsdocean_string_platforms: Króm
-  tutorial_itchplatformer_string_platforms: Allir nútíma vafrar
   tutorial_codejika_string_platforms: Allir nútíma vafrar, Android tafla, iPad, Windows
     sími, Android sími, iPhone
   tutorial_gamefrootclicker_string_platforms: Allir nútíma vafrar, iPad
@@ -9098,6 +9191,7 @@ is:
     iPhone, iPad, Android sími, Android tafla
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi flís og hringrás
     límmiða LED
   tutorial_athlete_string_detail_platforms: ''
@@ -9696,19 +9790,14 @@ is:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9730,7 +9819,6 @@ is:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -9784,6 +9872,7 @@ is:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Kubbar
   tutorial_danceparty_string_detail_programming_languages: Kubbar
+  tutorial_dancepartyai_string_detail_programming_languages: Kubbar
   tutorial_chibitronics_string_detail_programming_languages: Kubbar
   tutorial_athlete_string_detail_programming_languages: Kubbar
   tutorial_moana_string_detail_programming_languages: Kubbar
@@ -10416,20 +10505,15 @@ is:
   tutorial_csfirstdialogue_string_detail_programming_languages: Blokkir, klóra
   tutorial_codemonkeybeaver_string_detail_programming_languages: Kubbar
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Kubbar
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Kubbar
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Kubbar
-  tutorial_itchwebcam_string_detail_programming_languages: Kubbar
-  tutorial_itchball_string_detail_programming_languages: Kubbar
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Tungumál sjálfstætt (hægt
     að kenna á mörgum tungumálum)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Kubbar
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10454,7 +10538,6 @@ is:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Kubbar
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Kubbar
   tutorial_rmagicequity_string_detail_programming_languages: Blokkir, JavaScript
@@ -11409,10 +11492,7 @@ is:
   tutorial_kodableshapes_name: Gerðu form með kóða
   tutorial_nasabinary_name: 'Tvöfaldur kóði: Hvernig á að tala við geimfar'
   tutorial_3dmaker_name: 3D framleiðandi
-  tutorial_itchstart_name: 'ITCHCode: Scratch 5 Block Starter'
   tutorial_hopsub_name: Byggja Subway Surfers með vini
-  tutorial_itchmundos_name: Los heimur en mi Mundo_e2
-  tutorial_itchtenacity_name: Þrautseigja
   tutorial_kcjskiing_name: 'Íþrótt+kóði: Skíði'
   tutorial_groksecurity_name: 'Cyber Security: Vörn gegn Dark Hattar'
   tutorial_creaticode_name: 3D Forritun með klóra blokkir
@@ -11550,17 +11630,8 @@ is:
     kóða á nafn tag, armband, pinna, eða jafnvel hljóð.
   tutorial_3dmaker_longdescription: Búðu til þína eigin virkilega flottu, snúanlegu,
     3D hluti hratt og auðveldlega.
-  tutorial_itchstart_longdescription: Þessi kennslustund er góður inngangspunktur
-    fyrir börn í 2. eða 3. bekk sem eru bara að prófa Scratch í fyrsta skipti. Þeir
-    vilja fá að byrja með a setja af 5 blokkir sem þeir þurfa að setja saman til að
-    gera eðli þeirra framkvæma nokkrar aðgerðir.
   tutorial_hopsub_longdescription: Lærðu hvernig á að para forrit með vini eða bekkjarfélaga,
     og búa til eigin neðanjarðarlestinni ofgnótt með Hopscotch stafi!
-  tutorial_itchmundos_longdescription: Scratch Conoceran, ein herramienta fyrir forritara.
-    Agargarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
-    a su programa.
-  tutorial_itchtenacity_longdescription: En este proyecto programan en Scratch el
-    simulador de un robot que limpia las aguas Marinas.
   tutorial_kcjskiing_longdescription: 'Það er allt gaman og leikir þar til einhver
     hrynur í tré… eða ER að gaman hluti? Ól á þeim skíðum og beygja á hné eins og
     þú leiða karakterinn þinn niður hæð frystum hindrunum með kóða í þessari Scratch
@@ -11839,11 +11910,8 @@ is:
   tutorial_kodableshapes_language: Enska
   tutorial_nasabinary_language: Enska
   tutorial_3dmaker_language: Enska
-  tutorial_itchstart_language: Enska
   tutorial_hopsub_language: Kínverska (einfölduð), enska, spænska (Spánn), spænska
     (Mexíkó)
-  tutorial_itchmundos_language: Spænska (Mexíkó)
-  tutorial_itchtenacity_language: Spænska (Mexíkó)
   tutorial_kcjskiing_language: Enska, Franska
   tutorial_groksecurity_language: Enska
   tutorial_creaticode_language: Kínverska (einfölduð), kínverska (hefðbundin), enska
@@ -11937,10 +12005,7 @@ is:
   tutorial_kodableshapes_string_detail_grades: Forlæsir - 10 ára
   tutorial_nasabinary_string_detail_grades: 11 ára og eldri
   tutorial_3dmaker_string_detail_grades: 7 - 13 ára
-  tutorial_itchstart_string_detail_grades: 7 - 13 ára
   tutorial_hopsub_string_detail_grades: 7 - 13 ára
-  tutorial_itchmundos_string_detail_grades: 7 ára og eldri
-  tutorial_itchtenacity_string_detail_grades: 7 ára og eldri
   tutorial_kcjskiing_string_detail_grades: 7 ára og eldri
   tutorial_groksecurity_string_detail_grades: 11 ára og eldri
   tutorial_creaticode_string_detail_grades: 11 ára og eldri
@@ -12030,10 +12095,7 @@ is:
   tutorial_nasabinary_string_platforms: Unplugged, Skjár lesandi
   tutorial_3dmaker_string_platforms: Allir nútíma vafrar, Android tafla, iPad, Windows
     sími, Android sími, iPhone
-  tutorial_itchstart_string_platforms: Allir nútíma vafrar, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Allir nútíma vafrar, Android tafla, iPad
-  tutorial_itchtenacity_string_platforms: Allir nútíma vafrar, Android tafla, iPad
   tutorial_kcjskiing_string_platforms: Allir nútíma vafrar
   tutorial_groksecurity_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
     Windows sími, Android sími, iPhone
@@ -12127,10 +12189,7 @@ is:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12220,10 +12279,7 @@ is:
     tungumál (hægt að kenna á mörgum tungumálum)
   tutorial_nasabinary_string_detail_programming_languages: Tvöfaldur kóða
   tutorial_3dmaker_string_detail_programming_languages: Kubbar
-  tutorial_itchstart_string_detail_programming_languages: Kubbar
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Kubbar
-  tutorial_itchtenacity_string_detail_programming_languages: Kubbar
   tutorial_kcjskiing_string_detail_programming_languages: Kubbar
   tutorial_groksecurity_string_detail_programming_languages: Ekkert - engin forritun
     krafist
@@ -13328,6 +13384,16 @@ is:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Danspartý
+  tutorial_introtomlai_name: Kynning á vélanámi
+  tutorial_computervisionai_name: Tölva Vision
+  tutorial_neuralnetworksai_name: tauga net
+  tutorial_chatbotsllmai_name: Chatbots og stór tungumál módel
+  tutorial_generativeimagesai_name: Kynslóðar myndir
+  tutorial_algorithmicbiasai_name: Reiknirit hlutdrægni
+  tutorial_codeofethicsai_name: Siðareglur AI okkar
+  tutorial_socimpactofgenaiai_name: Samfélagsleg áhrif kynslóða AI
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -13798,6 +13864,43 @@ is:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: Code a Dance Party til að deila með vinum
+    þínum. Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, tónlist
+    frá Disney 'Encanto', og fleira!
+  tutorial_introtomlai_longdescription: Lærðu um form gervigreindar sem kallast vélanám
+    og hvernig þeir geta notað lausnarferlið til að hjálpa til við að þjálfa vélmenni
+    til að leysa vandamál. Taktu þátt í vélanámi þar sem vélmenni er að læra hvernig
+    á að greina mynstur í fiski.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Lærðu hvernig tauga net vinna. Notaðu
+    búnað til að kanna taugakerfi í höndum á leiðinni. Horfðu á myndband sem útskýrir
+    taugakerfi. Að lokum ræða þörfina fyrir fjölbreytt sjónarmið þegar þú býrð til
+    meðmælakerfi.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Lærðu hvernig AI getur búið til myndir,
+    kannaðu síðan dreifingu AI búnað og ræddu hvort þessar gerðir séu skapandi eða
+    ekki.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Rannsaka áhrif kynslóð AI frá mismunandi
+    sjónarhornum og vinna síðan saman sem teymi til að koma með leiðbeiningar sem
+    taka á flestum þörfum frá öllum þátttakendum.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: 11 ára og eldri
   tutorial_bscomputing_string_detail_grades: 11 ára og eldri
   tutorial_stackpython_string_detail_grades: 11 ára og eldri
@@ -13899,7 +14002,7 @@ is:
   tutorial_hwfanpage_string_detail_grades: 7 ára og eldri
   tutorial_hwillusion_string_detail_grades: 11 ára og eldri
   tutorial_caevolution_string_detail_grades: 11 ára og eldri
-  tutorial_bbbusybot_string_detail_grades: 11 ára og eldri
+  tutorial_bbbusybot_string_detail_grades: 14 ára og eldri
   tutorial_caaifarm_string_detail_grades: 11 ára og eldri
   tutorial_cafuture_string_detail_grades: 11 ára og eldri
   tutorial_dmscratch_string_detail_grades: 7 - 13 ára
@@ -13929,6 +14032,16 @@ is:
   tutorial_madmobile_string_detail_grades: 11 ára og eldri
   tutorial_intelinosmile_string_detail_grades: Forlæsir - 13 ára
   tutorial_intelinoaisign_string_detail_grades: 7 - 13 ára
+  tutorial_danceai2023_string_detail_grades: 7 ára og eldri
+  tutorial_introtomlai_string_detail_grades: 11 ára og eldri
+  tutorial_computervisionai_string_detail_grades: 11 ára og eldri
+  tutorial_neuralnetworksai_string_detail_grades: 11 ára og eldri
+  tutorial_chatbotsllmai_string_detail_grades: 11 ára og eldri
+  tutorial_generativeimagesai_string_detail_grades: 11 ára og eldri
+  tutorial_algorithmicbiasai_string_detail_grades: 11 ára og eldri
+  tutorial_codeofethicsai_string_detail_grades: 11 ára og eldri
+  tutorial_socimpactofgenaiai_string_detail_grades: 11 ára og eldri
+  tutorial_generationai_string_detail_grades: 7 ára og eldri
   tutorial_bsimage_string_platforms: Króm, Firefox, Safari
   tutorial_bscomputing_string_platforms: Unplugged
   tutorial_stackpython_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
@@ -14095,6 +14208,26 @@ is:
   tutorial_madmobile_string_platforms: Allir nútíma vafrar
   tutorial_intelinosmile_string_platforms: Allir nútíma vafrar, iPad
   tutorial_intelinoaisign_string_platforms: Allir nútíma vafrar
+  tutorial_danceai2023_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
+    Android sími, iPhone
+  tutorial_introtomlai_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
+    Android sími, iPhone
+  tutorial_computervisionai_string_platforms: Allir nútíma vafrar, Android tafla,
+    iPad, Android sími, iPhone
+  tutorial_neuralnetworksai_string_platforms: Allir nútíma vafrar, Android tafla,
+    iPad, Android sími, iPhone
+  tutorial_chatbotsllmai_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
+    Android sími, iPhone
+  tutorial_generativeimagesai_string_platforms: Allir nútíma vafrar, Android tafla,
+    iPad, Android sími, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Allir nútíma vafrar, Android tafla,
+    iPad, Android sími, iPhone
+  tutorial_codeofethicsai_string_platforms: Allir nútíma vafrar, Android tafla, iPad,
+    Android sími, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Allir nútíma vafrar, Android tafla,
+    iPad, Android sími, iPhone
+  tutorial_generationai_string_platforms: Android tafla, iPad, Windows sími, Android
+    sími, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14226,6 +14359,16 @@ is:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Sjálfstætt tungumál
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14351,12 +14494,22 @@ is:
   tutorial_codecombathack_string_detail_programming_languages: Sjálfstætt tungumál
   tutorial_toxicodewords_string_detail_programming_languages: Sjálfstætt tungumál
   tutorial_mitstepmisinformation_string_detail_programming_languages: Unplugged
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Unplugged
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Unplugged
   tutorial_mitstepintrotoml_string_detail_programming_languages: Unplugged
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Kubbar
   tutorial_intelinoaisign_string_detail_programming_languages: Kubbar
+  tutorial_danceai2023_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_introtomlai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_computervisionai_string_detail_programming_language: Sjálfstætt tungumál
+  tutorial_neuralnetworksai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_chatbotsllmai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_generativeimagesai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_codeofethicsai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Sjálfstætt tungumál
+  tutorial_generationai_string_detail_programming_languages: Blokkir, Python
   school_not_found_heading: Við gátum ekki fundið skólann þinn. Vinsamlegast sláðu
     inn frekari upplýsingar.
   school_name: Nafn skóla
@@ -14497,6 +14650,10 @@ is:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Hverjar eru forsendur fyrir því að gera klukkutíma
     kóða?
   hoc_how_to_faq_answer_prerequisites: Hour of Code er einfalt að keyra - jafnvel
@@ -14938,6 +15095,44 @@ is:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: Hver sem er getur lært um AI, hvort sem þú ert nemandi í skólastofunni
     eða kennari sem opnar framtíð kennslu með og um AI.
   hoc_ai_how_ai_works_video_series_desc: Þessi röð af stuttum myndböndum mun kynna
@@ -14953,6 +15148,37 @@ is:
     á sumum málefnum AI.
   hoc_ai_activities_desc: Þessar nýjar athafnir Hour of Code kynna notendum heim gervigreindar
     á skemmtilegan og grípandi hátt.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Næstum 100 starfsmenn Code.org í samsvarandi bláum
     og gulum bolum sitja í hótelráðstefnusal fyrir Codechella viðburð fyrirtækisins
     sumarið 2022.
@@ -15561,9 +15787,10 @@ is:
     fyrir að njóta góðs af óþreytandi hjálp víðtækara tölvunarfræðslusamfélagsins
     og [við þökkum öllum þeim samstarfsaðilum og einstaklingum sem hafa stutt áhrif
     okkar í gegnum árin] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 ársskýrsla] (%{report_url}) (Fyrri
-    skýrslur: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Grunngildi okkar og leiðbeiningar um skilaboð]
     (%{core_url})"
   about_page_section_more_list_3: "[Námskrá okkar og kennslufræði heimspeki] (%{curriculum_url})"

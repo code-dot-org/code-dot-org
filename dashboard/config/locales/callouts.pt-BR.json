@@ -960,11 +960,222 @@
         "CSD U3L3 rect_2023": {
           "CSD_U3_rect_c1": "Aqui está o código"
         },
+        "CSD U6 - Accelerometer - PB_2023": {
+          "CSD U6L12.5 - increase_steps": "Aumente os passos aqui!",
+          "CSD U6L12.5 - shake_event": "Altere esse evento para detectar um evento de sacudir"
+        },
+        "CSD U6 - Accelerometer - PB_2222": {
+          "CSD U6L12.5 - increase_steps": "Aumente os passos aqui!",
+          "CSD U6L12.5 - shake_event": "Altere esse evento para detectar um evento de sacudir"
+        },
+        "CSD U6 - Accelerometer - PB_mb2022": {
+          "CSD U6L12.5 - increase_steps": "Aumente os passos aqui!",
+          "CSD U6L12.5 - shake_event": "Altere esse evento para detectar um evento de sacudir"
+        },
+        "CSD U6 - Accelerometer - PC_2023": {
+          "CSD U6L12.PB - adding": "Atualize a posição y aqui!",
+          "CSD U6L12.PB - pitch": "Atualize a variável pitch aqui!",
+          "CSD U6L12.PB - playery": "Obtenha a posição y do jogador aqui!"
+        },
+        "CSD U6 - Accelerometer - PC_2222": {
+          "CSD U6L12.PB - adding": "Atualize a posição y aqui!",
+          "CSD U6L12.PB - pitch": "Atualize a variável pitch aqui!",
+          "CSD U6L12.PB - playery": "Obtenha a posição y do jogador aqui!"
+        },
+        "CSD U6 - Accelerometer - PC_mb2022": {
+          "CSD U6L12.PB - adding": "Atualize a posição y aqui!",
+          "CSD U6L12.PB - pitch": "Atualize a variável pitch aqui!",
+          "CSD U6L12.PB - playery": "Obtenha a posição y do jogador aqui!"
+        },
+        "CSD U6 - Accelerometer - SB2_2023": {
+          "CSD U6L12.3 - turn_off": "Adicione aqui um código para desligar os LEDS ",
+          "CSD U6L12.3 - turn_on": "Adicione aqui um código para ligar os LEDS"
+        },
+        "CSD U6 - Accelerometer - SB2_2222": {
+          "CSD U6L12.3 - turn_off": "Adicione aqui um código para desligar os LEDS ",
+          "CSD U6L12.3 - turn_on": "Adicione aqui um código para ligar os LEDS"
+        },
+        "CSD U6 - Accelerometer - SB2_mb2022": {
+          "CSD U6L12.3 - turn_off": "Adicione aqui um código para desligar os LEDS ",
+          "CSD U6L12.3 - turn_on": "Adicione aqui um código para ligar os LEDS"
+        },
+        "CSD U6 - Color LEDs - CA_2023": {
+          "CSD U6L7.8b - counter": "Aumente sua variável aqui!",
+          "CSD U6L7.8b - toggle": "Use sua variável aqui"
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "CSD U6L7.8b - counter": "Aumente sua variável aqui!",
+          "CSD U6L7.8b - toggle": "Use sua variável aqui"
+        },
         "CSD U6 - Color LEDs - SB4_2023": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
+        },
+        "CSD U6 - Combine Inputs - A_2023": {
+          "CSD U6L10.7 - brightnessVar": "Crie sua variável aqui",
+          "CSD U6L10.7 - colorVar": "Crie sua variável aqui",
+          "CSD U6L10.7 - leftIf": "Ilumine o lado esquerdo da placa",
+          "CSD U6L10.7 - rightIf": "Acenda o lado direito da placa"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "CSD U6L10.7 - brightnessVar": "Crie sua variável aqui",
+          "CSD U6L10.7 - colorVar": "Crie sua variável aqui",
+          "CSD U6L10.7 - leftIf": "Ilumine o lado esquerdo da placa",
+          "CSD U6L10.7 - rightIf": "Acenda o lado direito da placa"
+        },
+        "CSD U6 - Combine Inputs - PA_mb2022": {
+          "CSD U6L10.2 - add_code": "Adicione seu código aqui!"
+        },
+        "CSD U6 - Combine Inputs - PracD_2023": {
+          "CSD U6L9.7 - if-statement": "Adicione sua declaração if aqui",
+          "CSD U6L9.7 - variable": "Obtenha o valor no menu suspenso aqui"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Adicione sua declaração if aqui",
+          "CSD U6L9.7 - variable": "Obtenha o valor no menu suspenso aqui"
+        },
+        "CSD U6 - Combine Inputs - SB1_2023": {
+          "CSD U6L10.2 - add_code": "Adicione seu código aqui!"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "CSD U6L10.2 - add_code": "Adicione seu código aqui!"
+        },
+        "CSD U6 - Combine Inputs - SB1_mb2022": {
+          "CSD U6L10.2 - add_code": "Adicione seu código aqui!"
+        },
+        "CSD U6 - Combine Inputs - SB6_mb2022": {
+          "CSD U6L10.2 - add_code": "Adicione seu código aqui!"
+        },
+        "CSD U6 - Functions - P2A_2023": {
+          "CSD U6L14.PA - define": "Aqui estão as funções"
+        },
+        "CSD U6 - Functions - P2A_2222": {
+          "CSD U6L14.PA - define": "Aqui estão as funções"
+        },
+        "CSD U6 - Functions - P2A_mb2022": {
+          "CSD U6L14.PA - define": "Aqui estão as funções"
+        },
+        "CSD U6 - Functions - P2C_2023": {
+          "CSD U6L14.PB - todo1": "Defina sua função aqui!",
+          "CSD U6L14.PB - todo2": "Mova esse código para sua função"
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "CSD U6L14.PB - todo1": "Defina sua função aqui!",
+          "CSD U6L14.PB - todo2": "Mova esse código para sua função"
+        },
+        "CSD U6 - Functions - P2C_mb2022": {
+          "CSD U6L14.PB - todo1": "Defina sua função aqui!",
+          "CSD U6L14.PB - todo2": "Mova esse código para sua função"
+        },
+        "CSD U6 - Functions - SB1_2023": {
+          "CSD U6L14.3 - examples": "Este evento já foi concluído",
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
+        "CSD U6 - Functions - SB1_2222": {
+          "CSD U6L14.3 - examples": "Este evento já foi concluído",
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
+        "CSD U6 - Functions - SB1_mb2022": {
+          "CSD U6L14.3 - examples": "Este evento já foi concluído",
+          "CSD U6L14.3 - functions": "Esta seção define duas funções"
+        },
+        "CSD U6 - Functions - SB2_2023": {
+          "CSD U6L14.4 - call": "Chame sua função aqui!",
+          "CSD U6L14.4 - define": "Defina sua função aqui!"
+        },
+        "CSD U6 - Functions - SB2_2222": {
+          "CSD U6L14.4 - call": "Chame sua função aqui!",
+          "CSD U6L14.4 - define": "Defina sua função aqui!"
+        },
+        "CSD U6 - Functions - SB2_mb2022": {
+          "CSD U6L14.4 - call": "Chame sua função aqui!",
+          "CSD U6L14.4 - define": "Defina sua função aqui!"
+        },
+        "CSD U6 - Functions - SB3_2023": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB3_2222": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB3_mb2022": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB4_2023": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB4_2222": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB4_mb2022": {
+          "CSD U6L5.14B - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB6_2023": {
+          "CSD U6L14.6 - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "CSD U6L14.6 - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB6_mb2022": {
+          "CSD U6L14.6 - define": "Adicione sua função aqui!"
+        },
+        "CSD U6 - Functions - SB7_2023": {
+          "CSD U6L14.9 - define": "Aqui estão as definições da função",
+          "CSD U6L14.9 - events": "Aqui estão os eventos"
+        },
+        "CSD U6 - Functions - SB7_2222": {
+          "CSD U6L14.9 - define": "Aqui estão as definições da função",
+          "CSD U6L14.9 - events": "Aqui estão os eventos"
+        },
+        "CSD U6 - Functions - SB7_mb2022": {
+          "CSD U6L14.9 - define": "Aqui estão as definições da função",
+          "CSD U6L14.9 - events": "Aqui estão os eventos"
+        },
+        "CSD U6 - Functions - SB_2023": {
+          "CSD U6L14.PD - todo1": "Atualize a função aqui!",
+          "CSD U6L14.PD - todo2": "Atualize o código para usar color1 e color2",
+          "CSD U6L14.PD - todo3": "Chame sua função aqui"
+        },
+        "CSD U6 - Functions - SB_2222": {
+          "CSD U6L14.PD - todo1": "Atualize a função aqui!",
+          "CSD U6L14.PD - todo2": "Atualize o código para usar color1 e color2",
+          "CSD U6L14.PD - todo3": "Chame sua função aqui"
+        },
+        "CSD U6 - If Variables - A_2023": {
+          "U6L6.4 - Counter": "Aumente sua variável aqui",
+          "U6L6.4 - If": "Adicione sua declaração if aqui",
+          "U6L6.4 - Variable": "Defina sua variável aqui"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - Counter": "Aumente sua variável aqui",
+          "U6L6.4 - If": "Adicione sua declaração if aqui",
+          "U6L6.4 - Variable": "Defina sua variável aqui"
+        },
+        "CSD U6 - If Variables - A_mb2022": {
+          "U6L6.4 - Counter": "Aumente sua variável aqui",
+          "U6L6.4 - If": "Adicione sua declaração if aqui",
+          "U6L6.4 - Variable": "Defina sua variável aqui"
+        },
+        "CSD U6 - Music - A_2023": {
+          "CSD U6L14.8 - happySong": "Adicione o código para sua música alegre aqui",
+          "CSD U6L14.8 - sadSong": "Adicione o código para sua música triste aqui"
+        },
+        "CSD U6 - Music - A_2222": {
+          "CSD U6L14.8 - happySong": "Adicione o código para sua música alegre aqui",
+          "CSD U6L14.8 - sadSong": "Adicione o código para sua música triste aqui"
+        },
+        "CSD U6 - Music - SB3_2023": {
+          "CSD U6L13.6 - sharp_notes": "Esses eventos são para notas sustenidas."
+        },
+        "CSD U6 - Music - SB3_2222": {
+          "CSD U6L13.6 - sharp_notes": "Esses eventos são para notas sustenidas."
+        },
+        "CSD U6 - Sensors - PB_2023": {
+          "CSD U6L11.PB - boardevent": "Adicione seu evento de placa aqui!"
+        },
+        "CSD U6 - Sensors - PB_2222": {
+          "CSD U6L11.PB - boardevent": "Adicione seu evento de placa aqui!"
         },
         "CSD U6 colorLeds intensity": {
           "CSDU6L10_rainbow": "Adicione seu código aqui"
@@ -3607,6 +3818,26 @@
           "New Artist Project_callout2": "Clique em \"Executar\" para salvar e executar seu programa",
           "sign_in_to_save_project": "Deseja acessar seu projeto depois? Faça Login para salvar esse projeto em sua conta!"
         },
+        "dance_ai_code_at_measure": {
+          "ai_dance_callout_02_b": "⬆️ Use este bloco.",
+          "dance_callout_02": "Adicione o bloco I.A. gera o efeito aqui. "
+        },
+        "dance_ai_code_key_press": {
+          "ai_dance_callout_02_b": "⬆️ Use este bloco.",
+          "dance_callout_02": "Adicione o movimento dançar."
+        },
+        "dance_ai_customize_effect": {
+          "ai_dance_callout_draft_level_6": "Clique aqui."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "ai_dance_callout_draft_level_02": "⬆️ Comece aqui."
+        },
+        "dance_ai_generate_effect": {
+          "ai_dance_callout_draft_level_03": "⬆️ Use este bloco. "
+        },
+        "dance_ai_generate_effect_again": {
+          "dance_callout_01": "⬆️ Use este bloco."
+        },
         "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Use este bloco para criar uma fada.",
           "hello_world_say": "Use este bloco para fazer a fada falar."
@@ -3919,6 +4150,114 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Novo bloco!"
+        },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice3_2023": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-customize apps-choice5_2023": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5C_2023": {
+          "CSD_AI_L7_event": "Adicione o bloco playSound aqui"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-intro app lab-book recommender 5E_2023": {
+          "CSD_AI_L7_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-1_2023": {
+          "CSD_AI_L10_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-models in applab-screens-3_2023": {
+          "CSD_AI_L7_ifstatement": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice3_2023": {
+          "CSD_AI_L10_predict": "Adicione sua declaração if aqui"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-choice5_2023": {
+          "CSD_AI_L11_top": "Coloque o bloco acima desta linha"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3C_2023": {
+          "CSD_AI_L11_temp": "Este é o recurso temperatura"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3D_2023": {
+          "CSD_AI_L11_time": "Este é o recurso Hora do Dia"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditB_2023": {
+          "CSD_AI_L11_cars": "Este é o recurso Número de Carros"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
+        },
+        "ml-use model card-example3_EditC_2023": {
+          "CSD_AI_L11_weather": "Este é o recurso clima"
         },
         "outbreak2": {
           "minitoolbox": "Clique aqui para ampliar o bloco.",

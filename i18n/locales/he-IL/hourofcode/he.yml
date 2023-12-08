@@ -208,6 +208,7 @@ he:
   for_students_teacher_led_learning: 'לתלמידים: למידה בהנחיית מורים'
   for_students_teacher_led_lessons: 'לתלמידים: שיעורים בהנחיית מורים'
   professional_development: פיתוח מקצועי
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -294,6 +295,7 @@ he:
   call_to_action_explore_all_hoc_activities: גלו את כל הפעילויות של שעת הקוד באתר
     Code.org
   call_to_action_start_dance_party: התחל מסיבת ריקודים
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: התחל חלק שני
   call_to_action_start_unplugged_activity: התחל פעילות מנותקת
   call_to_action_view_promo_resources: הצג משאבי פרומו
@@ -305,6 +307,8 @@ he:
   call_to_action_try_hoc_ai_activities: נסה פעילויות AI של שעת הקוד
   call_to_action_explore_activities: חקור פעילויות
   call_to_action_explore_ai: חקור את AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: כלי חקור
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
   call_to_action_explore_curricula: חקור תוכניות לימודים
@@ -406,6 +410,15 @@ he:
   call_to_action_learn_about_ai: למד על AI
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: להתחיל
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: צפה במדריך הדרכה למחנכים
   aria_label_call_to_action_hoc_how_to_companies: צפה במדריך הדרכה לחברות
   aria_label_call_to_action_hoc_how_to_districts: צפה במדריך הדרכה למחוזות
@@ -428,6 +441,8 @@ he:
     למידה מקצועית
   aria_label_call_to_action_teaching_problem_solving: התחל את תוכנית הלימוד המקצועית
     בהוראה לפתרון בעיות ומחשוב
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: התחל את תוכנית הלמידה המקצועית להוראת חיבורי
     מדעי המחשב
   aria_label_call_to_action_teaching_ai: התחל את תוכנית הלמידה המקצועית של הוראת AI
@@ -522,6 +537,16 @@ he:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: תוכנית הלמידה המקצועית של Code.org
   curriculum_name_csf: יסודות מדעי המחשב
   curriculum_name_csf_02: כל יסודות CS (קורס A-F)
@@ -540,6 +565,7 @@ he:
   curriculum_name_csd: תגליות מדעי המחשב
   curriculum_name_csp: עקרונות מדעי המחשב
   curriculum_name_problem_solving: פתרון בעיות ומחשוב
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: חיבורי מדעי המחשב
   curriculum_name_csa: AP® מדעי המחשב א
   curriculum_name_csa_ai: הנדסת תוכנה וראייה ממוחשבת
@@ -660,8 +686,10 @@ he:
   module_label_languages: 'שפות נתמכות:'
   module_label_accessibility_features: 'נגישות:'
   module_label_accessibility_features_full: 'תכונות נגישות:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: כלי מחנך
   module_label_educator_course: קורס מחנך
+  module_label_educator_resources: Educator resources
   module_label_student_tool: כלי סטודנטים
   module_label_student_product: מוצר
   module_label_student_content_resources: תוכן ומשאבים
@@ -670,6 +698,7 @@ he:
   module_label_available_now: זמין כעת
   module_label_video_series: סדרת וידאו
   module_label_self_paced: מודול בקצב עצמי
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -711,6 +740,7 @@ he:
   module_duration_1_hr: 1 שעה
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 שעות
   module_duration_5_hrs_plus: 5+ שעות
   module_duration_8_hrs: 8 שעות
@@ -732,6 +762,7 @@ he:
   module_label_teaching_csd: הוראת תגליות מדעי המחשב
   module_label_teaching_csp: הוראת עקרונות מדעי המחשב
   module_label_teaching_problem_solving: הוראת פתרון בעיות ומחשוב
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: הוראת חיבורי מדעי המחשב
   module_label_teaching_ai: הוראת AI ולמידת מכונה
   module_label_teaching_maker_cp: לימוד יצירת אפליקציות עם מכשירים (מגרש משחקים במעגל)
@@ -794,6 +825,12 @@ he:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: אם אתה תלמיד תיכון נלהב לעודד נשים צעירות יותר ללמוד מדעי
     המחשב בבית הספר שלך, אז אנחנו צריכים אותך!
   cs_ambassador_desc: כל תחום, כולל רפואה, בידור, ספורט, חינוך, עסקים, אופנה ויזמות
@@ -859,6 +896,19 @@ he:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: סדנאות אישיות ווירטואליות החל
     מהקיץ הקרוב.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: קדימה, חתוך את הכבל (לזמן מה)!
   no_devices_section_desc: חינוך למדעי המחשב לא תמיד צריך להיות מול מסך וגישה למכשירים
     לא אמורה להוות מכשול ללימוד מושגי מדעי המחשב.
@@ -883,6 +933,11 @@ he:
   subscribe_form_section_desc_csp: הירשם לקבלת הודעות דוא"ל חודשיות אודות עקרונות
     מדעי המחשב של Code.org וקבל תזכורות מועילות, טיפים ועדכונים הנשלחים ישירות לתיבת
     הדואר הנכנס שלך.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: אתה יכול לבטל את המנוי בכל עת.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1068,6 +1123,7 @@ he:
     שתף פעולה כצוות כדי להמציא הנחיות העונות על הצרכים הרבים ביותר של כל המשתתפים.
   ai_curriculum_btn_aria_label_06: צפה בהשפעה החברתית של מערך שיעורים בינה מלאכותית
     גנרטיבית
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -1236,6 +1292,68 @@ he:
   ai_vid_computervision_caption: ראייה ממוחשבת
   ai_vid_ethics1_caption: 'אתיקה ובינה מלאכותית: גישה שווה והטיה אלגוריתמית'
   ai_vid_ethics2_caption: 'אתיקה ובינה מלאכותית: פרטיות ועתיד העבודה'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: למידה מקצועית בקצב עצמי למחנכים
   self_paced_pl_hero_desc: הצעות למידה מקצועיות לתמיכה במורים בכל שלב במסע ההוראה
     שלהם במדעי המחשב.
@@ -2701,6 +2819,7 @@ he:
     את המדריך]%{howto_url}'
   tutorial_dance2019_name: מסיבת ריקודים
   tutorial_danceparty_name: מסיבת ריקודים
+  tutorial_dancepartyai_name: 'מסיבת ריקודים: מהדורת AI'
   tutorial_chibitronics_name: 'צ''יביטרוניקה: סיפור מואר'
   tutorial_athlete_name: תכנת משחק ספורט משלך
   tutorial_moana_name: 'מואנה: איתור דרך עם קוד'
@@ -3299,19 +3418,14 @@ he:
   tutorial_csfirstdialogue_name: דיאלוג
   tutorial_codemonkeybeaver_name: בונה משיג
   tutorial_codestersdistance_name: 'קודסטרים: שדונים להתרחקות חברתית'
-  tutorial_itchspace_name: 'קוד קופון: פולשים לחלל - RokCoder'
   tutorial_vidcodemagic_name: קסם SFX
   tutorial_vidcodemagices_name: קסם SFX
   tutorial_codespeakmeal_name: קוד אפליקציית ארוחה בריאה
-  tutorial_itchfish_name: 'קוד גירוד: משחק שריטת דגים'
   tutorial_bsdwebsite_name: אתר המועדפים שלי
   tutorial_codespeaktime_name: קוד קפסולת זמן בשריטה
-  tutorial_itchwebcam_name: 'ItchCode: מצלמת אינטרנט מציאות מוגברת'
-  tutorial_itchball_name: 'קוד גירוד: כדור מקפץ'
   tutorial_ttrace_name: מצב המירוץ
   tutorial_plethora_name: פלתורה - גורם ותוצאה
   tutorial_educodesecret_name: גלה את סודות הסוכנות!
-  tutorial_itchshapes_name: 'קוד ItchCode: צורות וזוויות'
   tutorial_codeguppytext_name: מבוא לקידוד מבוסס טקסט
   tutorial_vidcodeplastiche_name: הודעת שירות לציבור לגבי זיהום פלסטיק
   tutorial_educativechatbot_name: בנה צ'אט בוט משלך בפייתון
@@ -3334,7 +3448,6 @@ he:
   tutorial_codecapture_name: למד תכנות עם JavaScript במהירות
   tutorial_codehslitter_name: קידוד לקהילה נטולת פסולת
   tutorial_bsdocean_name: החיים מתחת למים
-  tutorial_itchplatformer_name: 'קוד ItchCode: מדריך פלטפורמת שריטות 3.0'
   tutorial_codejika_name: 'CodeJika: אתר של 5 דקות'
   tutorial_gamefrootclicker_name: למד משתנים. קוד משחק Clicker משלך.
   tutorial_rmagicequity_name: שוויון מול שוויון
@@ -3386,6 +3499,9 @@ he:
   tutorial_meeempathy_name: סיפור מיינקראפט על שני כפרים
   tutorial_danceparty_shortdescription: תכנתו מסיבת ריקודים ושתפו אותה עם חבריכם.
     עם שירים של קייטי פרי, מדונה, ג'יי באלווין, סיה, קית' אורבן, סיארה ועוד 25 אמנים!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: תכנת מעגל נייר כדי להאיר את הסיפור שלך.
   tutorial_athlete_shortdescription: בחר ליצור משחק כדורסל או משחק שישלב כמה פעילויות
     ספורטיביות שונות!
@@ -4434,6 +4550,9 @@ he:
     רבים אחרים!
   tutorial_danceparty_longdescription: תכנתו מסיבת ריקודים ושתפו אותה עם חבריכם. עם
     שירים של קייטי פרי, מדונה, ג'יי באלווין, סיה, קית' אורבן, סיארה ועוד 25 אמנים!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: תכנת מעגל נייר כדי להאיר את הסיפור שלך.
   tutorial_athlete_longdescription: בחר ליצור משחק כדורסל או משחק שישלב כמה פעילויות
     ספורטיביות שונות!
@@ -6562,18 +6681,12 @@ he:
   tutorial_codestersdistance_longdescription: למד את היסודות של קידוד בפייתון, ולאחר
     מכן צור תוכנית המחשבת את המרחק בין שני ספרייטים כדי לוודא שהם מתרחקים חברתיים
     או צריכים ללבוש מסכה.
-  tutorial_itchspace_longdescription: הדרכה זו לוקחת אותך דרך יצירת משחק פולשי החלל
-    הקלאסי באמצעות שפת התכנות Scratch MIT. הירשם לערוץ היוטיוב של RokCoder לעוד סרטונים
-    והדרכות מבוססות שריטות! כל סרטון הוא מדריך בגודל ביס (באורך של כעשר דקות) המכיל
-    יעדי סיום ספציפיים משלו. התוצאה הסופית היא משחק ארקייד Scratch באיכות גבוהה.
   tutorial_vidcodemagic_longdescription: הפוך הבזקים להופיע באופן אקראי סביב המסך
     באמצעות לולאה.
   tutorial_vidcodemagices_longdescription: הפוך הבזקים להופיע באופן אקראי סביב המסך
     באמצעות לולאה.
   tutorial_codespeakmeal_longdescription: למד לקודד אפליקציה שעוזרת למשתמשים לקבל
     החלטות על אוכל בריא.
-  tutorial_itchfish_longdescription: מדריך Scratch 3.0 להכנת משחק עם כריש שרודף ואוכל
-    דגים שהופרעו כאשר צולל נאכל בטעות.
   tutorial_bsdwebsite_longdescription: 'קורס זה מאפשר לתלמידים להשתמש בקוד כדרך לשתף
     את מה שחשוב או מעניין אותם. הם יכולים לעקוב אחר השיעור או ליצור פרויקטים ייחודיים
     תוך כדי לימוד HTML, CSS ו- JavaScript. הם מודרכים עם הדרכות וידאו, קידוד חי וגישה
@@ -6581,10 +6694,6 @@ he:
     המובילים שאתה מעוניין בהם או אוהב לעשות. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: למד כיצד לקודד קפסולת זמן דיגיטלית כדי להקליט
     ולהרהר בחייך ברגע זה.
-  tutorial_itchwebcam_longdescription: למדו על מציאות רבודה והכינו מרחב וירטואלי מציאות
-    רבודה משלכם.
-  tutorial_itchball_longdescription: קבל כדור להקפיץ סביב המסך. למד על לולאות ותנאים
-    בתוך לולאות.
   tutorial_ttrace_longdescription: על ידי קריאת פונקציות ועיצוב שיעורים, שחקנים מתכנתים
     את מכונית המירוץ שלהם להיות מהירה, זריזה ועוצמתית; במהלך מירוצים, הם יכולים לפרוץ
     את כלי הרכב של המתחרים שלהם כדי לטרוף את השליטה שלהם.
@@ -6593,8 +6702,6 @@ he:
   tutorial_educodesecret_longdescription: חקור את עולמות הסודות עם הסוכן סמית 'כשאתה
     צולל עמוק יותר בלימוד אמירות, מיתרים, לולאות כניסה. עזור לסוכן סמית למצוא את האשמים
     ולהגדיר את מערכת ההפעלה של הסוכנות למשתמשים החדשים שלהם באמצעות Python.
-  tutorial_itchshapes_longdescription: למד כיצד לצייר צורות ב- Scratch. תוכלו גם ללמוד
-    כיצד לחשב כמה אתה צריך לפנות עבור כל צורה.
   tutorial_codeguppytext_longdescription: למד את היסודות של קידוד מבוסס טקסט על ידי
     יצירת התוכנית הראשונה שלך בעורך קידוד מקוון.
   tutorial_vidcodeplastiche_longdescription: בעיית זיהום האוקיינוסים והימים בפלסטיק
@@ -6662,8 +6769,6 @@ he:
   tutorial_bsdocean_longdescription: החיים מתחת למים שופכים אור על נושא דחוף שעומד
     בפנינו בימינו - הסביבה שלנו. פרויקט זה מתמקד בהנחייתך לקודד דף אינטרנט משלך בהגנה
     על המים שלנו.
-  tutorial_itchplatformer_longdescription: מדריך קל לעקוב אחר איך ליצור משחק platformer
-    פשוט באמצעות Scratch.
   tutorial_codejika_longdescription: מבוא נהדר לקידוד באמצעות HTML ו- CSS. קוד כמה
     שורות, ראה פלט מיידי מבלי להיקלע ל- Hows and Whys על ידי יצירת דף נחיתה נחמד עם
     רקע שיפוע בשני צבעים, שם ותאריך השקת אתר.
@@ -6833,6 +6938,7 @@ he:
     ויאמצו את המגוון שהופך את כולנו למיוחדים באופן ייחודי.
   tutorial_dance2019_string_detail_grades: כיתות ב 'ומעלה
   tutorial_danceparty_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: כיתות 2-5
   tutorial_athlete_string_detail_grades: כיתות ב 'ומעלה
   tutorial_moana_string_detail_grades: כיתות ב 'ומעלה
@@ -7429,19 +7535,14 @@ he:
   tutorial_csfirstdialogue_string_detail_grades: כיתות ב'-ח
   tutorial_codemonkeybeaver_string_detail_grades: קורא מקדים - כיתה ה '
   tutorial_codestersdistance_string_detail_grades: כיתה ב 'ומעלה
-  tutorial_itchspace_string_detail_grades: כיתה ב 'ומעלה
   tutorial_vidcodemagic_string_detail_grades: כיתות ב 'ומעלה
   tutorial_vidcodemagices_string_detail_grades: כיתות ב 'ומעלה
   tutorial_codespeakmeal_string_detail_grades: כיתה ב 'ומעלה
-  tutorial_itchfish_string_detail_grades: כיתות ב'-ח
   tutorial_bsdwebsite_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codespeaktime_string_detail_grades: כיתות ב'-ח
-  tutorial_itchwebcam_string_detail_grades: כיתה ב 'ומעלה
-  tutorial_itchball_string_detail_grades: כיתות ב'-ח
   tutorial_ttrace_string_detail_grades: כיתות ו'-ח
   tutorial_plethora_string_detail_grades: כיתות ב 'ומעלה
   tutorial_educodesecret_string_detail_grades: כיתה ב 'ומעלה
-  tutorial_itchshapes_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codeguppytext_string_detail_grades: כיתות ו'-ח
   tutorial_vidcodeplastiche_string_detail_grades: כיתה ב 'ומעלה
   tutorial_educativechatbot_string_detail_grades: כיתות ט ומעלה
@@ -7463,7 +7564,6 @@ he:
   tutorial_codecapture_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codehslitter_string_detail_grades: כיתות ו'-ח
   tutorial_bsdocean_string_detail_grades: כיתות ו'-ח
-  tutorial_itchplatformer_string_detail_grades: כיתה ב 'ומעלה
   tutorial_codejika_string_detail_grades: כיתה ב 'ומעלה
   tutorial_gamefrootclicker_string_detail_grades: כיתות ו'-ח
   tutorial_rmagicequity_string_detail_grades: כיתות ו'-ח
@@ -7516,6 +7616,8 @@ he:
   tutorial_dance2019_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     מנותק
   tutorial_danceparty_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_dancepartyai_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
     ואייפד
   tutorial_chibitronics_string_platforms: כל הדפדפנים המודרניים, קורא מסך
   tutorial_athlete_string_platforms: כל הדפדפנים המודרניים
@@ -8289,23 +8391,17 @@ he:
   tutorial_codemonkeybeaver_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
     ואייפד
   tutorial_codestersdistance_string_platforms: כל הדפדפנים המודרניים, קורא מסך
-  tutorial_itchspace_string_platforms: כל הדפדפנים המודרניים
   tutorial_vidcodemagic_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     קורא מסך
   tutorial_vidcodemagices_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד,
     אייפד, קורא מסך
   tutorial_codespeakmeal_string_platforms: כרום, פיירפוקס
-  tutorial_itchfish_string_platforms: כל הדפדפנים המודרניים
   tutorial_bsdwebsite_string_platforms: כרום
   tutorial_codespeaktime_string_platforms: כרום, פיירפוקס
-  tutorial_itchwebcam_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
-    ואייפד
-  tutorial_itchball_string_platforms: כל הדפדפנים המודרניים
   tutorial_ttrace_string_platforms: כרום
   tutorial_plethora_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
     ואייפד
   tutorial_educodesecret_string_platforms: כל הדפדפנים המודרניים
-  tutorial_itchshapes_string_platforms: כל הדפדפנים המודרניים
   tutorial_codeguppytext_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
     ואייפד
   tutorial_vidcodeplastiche_string_platforms: כל הדפדפנים המודרניים במחשבים שולחניים,
@@ -8334,7 +8430,6 @@ he:
   tutorial_codehslitter_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     טלפון חלונות, טלפון אנדרואיד, אייפון
   tutorial_bsdocean_string_platforms: כרום
-  tutorial_itchplatformer_string_platforms: כל הדפדפנים המודרניים
   tutorial_codejika_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     טלפון חלונות, טלפון אנדרואיד, אייפון
   tutorial_gamefrootclicker_string_platforms: כל הדפדפנים המודרניים, iPad
@@ -8394,6 +8489,7 @@ he:
     אייפון, אייפד, טלפון אנדרואיד, טאבלט אנדרואיד
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: שבב צ'יביטרוניקה צ'יבי ומדבקת מעגלים
     נוריות
   tutorial_athlete_string_detail_platforms: ''
@@ -8991,19 +9087,14 @@ he:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9025,7 +9116,6 @@ he:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -9079,6 +9169,7 @@ he:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: בלוקים
   tutorial_danceparty_string_detail_programming_languages: בלוקים
+  tutorial_dancepartyai_string_detail_programming_languages: בלוקים
   tutorial_chibitronics_string_detail_programming_languages: בלוקים
   tutorial_athlete_string_detail_programming_languages: בלוקים
   tutorial_moana_string_detail_programming_languages: בלוקים
@@ -9706,19 +9797,14 @@ he:
   tutorial_csfirstdialogue_string_detail_programming_languages: בלוקים, שריטה
   tutorial_codemonkeybeaver_string_detail_programming_languages: בלוקים
   tutorial_codestersdistance_string_detail_programming_languages: פיתון
-  tutorial_itchspace_string_detail_programming_languages: בלוקים
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: בלוקים
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: בלוקים
-  tutorial_itchwebcam_string_detail_programming_languages: בלוקים
-  tutorial_itchball_string_detail_programming_languages: בלוקים
   tutorial_ttrace_string_detail_programming_languages: JavaScript, קפה סקריפט
   tutorial_plethora_string_detail_programming_languages: לא דורש שפת תכנות
   tutorial_educodesecret_string_detail_programming_languages: פיתון
-  tutorial_itchshapes_string_detail_programming_languages: בלוקים
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: פיתון
@@ -9742,7 +9828,6 @@ he:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: פייתון, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: בלוקים
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: בלוקים
   tutorial_rmagicequity_string_detail_programming_languages: בלוקים, ג'אווה סקריפט
@@ -10631,10 +10716,7 @@ he:
   tutorial_kodableshapes_name: צור צורות עם קוד
   tutorial_nasabinary_name: 'קוד בינארי: איך לדבר עם חללית'
   tutorial_3dmaker_name: יצרנית תלת מימד
-  tutorial_itchstart_name: 'קוד IchCode: שריטות 5 בלוק סטרטר'
   tutorial_hopsub_name: בנה גולשי רכבת תחתית עם חבר
-  tutorial_itchmundos_name: לוס מונדוס ומי מונדו_e2
-  tutorial_itchtenacity_name: עקשנות
   tutorial_kcjskiing_name: 'ספורט + קוד: סקי'
   tutorial_groksecurity_name: 'אבטחת סייבר: הגנה מפני הכובעים האפלים'
   tutorial_creaticode_name: תכנות תלת מימד עם בלוקי שריטות
@@ -10761,15 +10843,8 @@ he:
     אפילו צליל.
   tutorial_3dmaker_longdescription: הכינו אובייקטים תלת-ממדיים ממש מגניבים, מסתובבים
     במהירות ובקלות.
-  tutorial_itchstart_longdescription: שיעור זה הוא נקודת כניסה טובה לילדים בכיתה ב'
-    או ג' שרק מנסים את Scratch בפעם הראשונה. הם יתחילו עם סט של 5 בלוקים שהם צריכים
-    להרכיב כדי לגרום לדמות שלהם לבצע כמה פעולות.
   tutorial_hopsub_longdescription: למד כיצד להתאים תוכנית עם חבר או חבר לכיתה, וליצור
     גולש רכבת תחתית משלך עם דמויות Hopscotch!
-  tutorial_itchmundos_longdescription: שריטה קונוצרנית, הרמיזה לתוכנות. אגרגרן אוביטוס
-    y fondos, הבלוגים של אירועים ואפראיים עבור דר וידה בתכנית.
-  tutorial_itchtenacity_longdescription: תוכנית פרויקט אחת ו Scratch אל סימולטור הרובוט
-    que limpia las aguas מרינאס.
   tutorial_kcjskiing_longdescription: 'הכל כיף ומשחקים עד שמישהו מתנגש בעץ… או שזה
     החלק המהנה? קשרו את המגלשיים האלה והתכופפו בברכיים כשאתם מנחים את הדמות שלכם במורד
     גבעה של מכשולים קפואים באמצעות קוד בפעילות השריטה הזו. תכנן את הקורס, הוסף תנועה
@@ -11013,10 +11088,7 @@ he:
   tutorial_kodableshapes_language: עברית
   tutorial_nasabinary_language: עברית
   tutorial_3dmaker_language: עברית
-  tutorial_itchstart_language: עברית
   tutorial_hopsub_language: סינית מופשטת), אנגלית, ספרדית ספרד, ספרדית מקסיקו
-  tutorial_itchmundos_language: ספרדית (מקסיקו)
-  tutorial_itchtenacity_language: ספרדית (מקסיקו)
   tutorial_kcjskiing_language: אנגלית, צרפתית
   tutorial_groksecurity_language: עברית
   tutorial_creaticode_language: סינית מופשטת), מסורת סינית), אנגלית
@@ -11108,10 +11180,7 @@ he:
   tutorial_kodableshapes_string_detail_grades: קורא מקדים - כיתה ה '
   tutorial_nasabinary_string_detail_grades: כיתה ב 'ומעלה
   tutorial_3dmaker_string_detail_grades: כיתות ב'-ח
-  tutorial_itchstart_string_detail_grades: כיתות ב'-ח
   tutorial_hopsub_string_detail_grades: כיתות ב'-ח
-  tutorial_itchmundos_string_detail_grades: כיתות ב 'ומעלה
-  tutorial_itchtenacity_string_detail_grades: כיתות ב 'ומעלה
   tutorial_kcjskiing_string_detail_grades: כיתות ב 'ומעלה
   tutorial_groksecurity_string_detail_grades: כיתה ב 'ומעלה
   tutorial_creaticode_string_detail_grades: כיתה ב 'ומעלה
@@ -11203,12 +11272,7 @@ he:
   tutorial_nasabinary_string_platforms: מנותק, קורא מסך
   tutorial_3dmaker_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     טלפון חלונות, טלפון אנדרואיד, אייפון
-  tutorial_itchstart_string_platforms: כל הדפדפנים המודרניים, iPad
   tutorial_hopsub_string_platforms: אייפד, אייפון
-  tutorial_itchmundos_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
-    ואייפד
-  tutorial_itchtenacity_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
-    ואייפד
   tutorial_kcjskiing_string_platforms: כל הדפדפנים המודרניים
   tutorial_groksecurity_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
     טלפון חלונות, טלפון אנדרואיד, אייפון
@@ -11305,10 +11369,7 @@ he:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -11398,10 +11459,7 @@ he:
     (ניתן ללמד במספר שפות)
   tutorial_nasabinary_string_detail_programming_languages: קוד בינארי
   tutorial_3dmaker_string_detail_programming_languages: בלוקים
-  tutorial_itchstart_string_detail_programming_languages: בלוקים
   tutorial_hopsub_string_detail_programming_languages: הופסקוטש
-  tutorial_itchmundos_string_detail_programming_languages: בלוקים
-  tutorial_itchtenacity_string_detail_programming_languages: בלוקים
   tutorial_kcjskiing_string_detail_programming_languages: בלוקים
   tutorial_groksecurity_string_detail_programming_languages: אין - אין צורך בתכנות
   tutorial_creaticode_string_detail_programming_languages: בלוקים
@@ -12336,7 +12394,7 @@ he:
   tutorial_wizsea_name: 'Saving the sea: creating a game with code'
   tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
   tutorial_bekidsadventure_name: Creative Coding Adventures
-  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
+  tutorial_myqpixel_name: MyQ Pixel - גורם ותוצאה
   tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
   tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
     Thunkable
@@ -12442,6 +12500,16 @@ he:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: מסיבת ריקודים
+  tutorial_introtomlai_name: מבוא ללמידת מכונה
+  tutorial_computervisionai_name: ראייה ממוחשבת
+  tutorial_neuralnetworksai_name: רשתות עצביות
+  tutorial_chatbotsllmai_name: צ'אטבוטים ומודלים בשפה גדולה
+  tutorial_generativeimagesai_name: תמונות גנראטיביות
+  tutorial_algorithmicbiasai_name: הטיה אלגוריתמית
+  tutorial_codeofethicsai_name: קוד האתיקה של AI
+  tutorial_socimpactofgenaiai_name: השפעה חברתית של AI גנרטיבי
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -12547,9 +12615,9 @@ he:
     games with block-based programming! Create fun geometric patterns, and craft car
     routes through exciting challenges. Unleash creativity, enhance logic, and get
     to know the art of programming!
-  tutorial_myqpixel_longdescription: In this MyQ activity, you will solve visual fun
-    challenges to help our cute dog find its bones, while leraning the concepts of
-    cause and effect and user interactions.
+  tutorial_myqpixel_longdescription: בפעילות זו של MyQ תפתרו שלבים ויזואליים ומשעשעים
+    כדי לעזור לכלכלב החמוד למצוא את העצם שלו, תוך כדי לימוד של עקרונות כגון גורם ותוצאה
+    ופעולות משתמש.
   tutorial_creaticodechatgpt_longdescription: Learn to use OpenAI's ChatGPT AI as
     a chatting and reasoning engine to build fun games and smart apps. Scratch-like
     blocks and user interface are used so no need to install any software or learn
@@ -12912,6 +12980,39 @@ he:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: תכנתו מסיבת ריקודים ושתפו אותה עם חבריכם.
+    עם שירים של קייטי פרי, מדונה, ג'יי באלווין, סיה, קית' אורבן, סיארה ועוד 25 אמנים!
+  tutorial_introtomlai_longdescription: למד על צורה של בינה מלאכותית הנקראת למידת
+    מכונה וכיצד הם יכולים להשתמש בתהליך פתרון הבעיות כדי לסייע באימון רובוט לפתרון
+    בעיות. השתתף בפעילויות למידת מכונה בהן רובוט לומד כיצד לזהות דפוסים בדגים.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: למד כיצד פועלות רשתות עצביות. השתמש בווידג'טים
+    כדי לחקור רשתות עצביות בידיים בדרך. צפו בסרטון המסביר רשתות עצביות. לבסוף דנו
+    בצורך בפרספקטיבות מגוונות בעת יצירת מערכות המלצות.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: למד כיצד AI יכול ליצור תמונות, ואז
+    חקור יישומון AI דיפוזיה ודון אם המודלים הללו יצירתיים או לא.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: חקור את ההשפעה של AI גנרטיבי מנקודות
+    מבט שונות, ולאחר מכן שתף פעולה כצוות כדי להמציא הנחיות העונות על הצרכים הרבים
+    ביותר של כל המשתתפים.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: כיתה ב 'ומעלה
   tutorial_bscomputing_string_detail_grades: כיתה ב 'ומעלה
   tutorial_stackpython_string_detail_grades: כיתה ב 'ומעלה
@@ -13013,7 +13114,7 @@ he:
   tutorial_hwfanpage_string_detail_grades: כיתות ב 'ומעלה
   tutorial_hwillusion_string_detail_grades: כיתה ב 'ומעלה
   tutorial_caevolution_string_detail_grades: כיתה ב 'ומעלה
-  tutorial_bbbusybot_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_bbbusybot_string_detail_grades: כיתות ט ומעלה
   tutorial_caaifarm_string_detail_grades: כיתה ב 'ומעלה
   tutorial_cafuture_string_detail_grades: כיתה ב 'ומעלה
   tutorial_dmscratch_string_detail_grades: כיתות ב'-ח
@@ -13043,6 +13144,16 @@ he:
   tutorial_madmobile_string_detail_grades: כיתה ב 'ומעלה
   tutorial_intelinosmile_string_detail_grades: קורא מקדים - כיתה ח'
   tutorial_intelinoaisign_string_detail_grades: כיתות ב'-ח
+  tutorial_danceai2023_string_detail_grades: כיתות ב 'ומעלה
+  tutorial_introtomlai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_computervisionai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_neuralnetworksai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_chatbotsllmai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_generativeimagesai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_algorithmicbiasai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_codeofethicsai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_socimpactofgenaiai_string_detail_grades: כיתה ב 'ומעלה
+  tutorial_generationai_string_detail_grades: כיתות ב 'ומעלה
   tutorial_bsimage_string_platforms: כרום, פיירפוקס, ספארי
   tutorial_bscomputing_string_platforms: מנותק
   tutorial_stackpython_string_platforms: כל הדפדפנים המודרניים, טאבלט אנדרואיד, אייפד,
@@ -13213,6 +13324,26 @@ he:
   tutorial_madmobile_string_platforms: כל הדפדפנים המודרניים
   tutorial_intelinosmile_string_platforms: כל הדפדפנים המודרניים, iPad
   tutorial_intelinoaisign_string_platforms: כל הדפדפנים המודרניים
+  tutorial_danceai2023_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
+    iPad, iPhone
+  tutorial_introtomlai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון וטאבלט),
+    iPad, iPhone
+  tutorial_computervisionai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_neuralnetworksai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_chatbotsllmai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_generativeimagesai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_algorithmicbiasai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_codeofethicsai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: כל הדפדפנים המודרניים, אנדרואיד (טלפון
+    וטאבלט), iPad, iPhone
+  tutorial_generationai_string_platforms: טאבלט אנדרואיד, אייפד, טלפון חלונות, טלפון
+    אנדרואיד, אייפון
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -13344,6 +13475,16 @@ he:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: לא תלוי בשפה
   tutorial_stackpython_string_detail_programming_languages: פיתון
@@ -13469,12 +13610,22 @@ he:
   tutorial_codecombathack_string_detail_programming_languages: לא תלוי בשפה
   tutorial_toxicodewords_string_detail_programming_languages: לא תלוי בשפה
   tutorial_mitstepmisinformation_string_detail_programming_languages: מנותק
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: מנותק
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: מנותק
   tutorial_mitstepintrotoml_string_detail_programming_languages: מנותק
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: בלוקים
   tutorial_intelinoaisign_string_detail_programming_languages: בלוקים
+  tutorial_danceai2023_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_introtomlai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_computervisionai_string_detail_programming_language: לא תלוי בשפה
+  tutorial_neuralnetworksai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_chatbotsllmai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_generativeimagesai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_algorithmicbiasai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_codeofethicsai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: לא תלוי בשפה
+  tutorial_generationai_string_detail_programming_languages: בלוקים, פיתון
   school_not_found_heading: לא הצלחנו למצוא את בית הספר שלך. אנא הכנס מידע נוסף.
   school_name: שם בית הספר
   school_name_error: שם בית הספר נדרש.
@@ -13608,6 +13759,10 @@ he:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: מהם התנאים המוקדמים לביצוע שעת קוד?
   hoc_how_to_faq_answer_prerequisites: שעת הקוד פשוטה להפעלה - אפילו למתחילים. אינך
     זקוק לניסיון במדעי המחשב או בהוראה על מנת לעורר את התלמידים לחקור, ליצור וללמוד
@@ -14036,6 +14191,44 @@ he:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: כל אחד יכול ללמוד על בינה מלאכותית, בין אם אתה תלמיד בכיתה או מחנך
     הפותח את עתיד ההוראה עם ובינה מלאכותית.
   hoc_ai_how_ai_works_video_series_desc: סדרת סרטונים קצרים זו תציג בפניכם כיצד עובדת
@@ -14049,6 +14242,37 @@ he:
     של בינה מלאכותית ומזמינים את הלומדים לחשוב על פתרונות לחלק מהבעיות של AI.
   hoc_ai_activities_desc: פעילויות שעת הקוד החדשות הללו מציגות למשתמשים את עולם הבינה
     המלאכותית בצורה מהנה ומרתקת.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: כמעט 100 עובדי Code.org בחולצות טריקו תואמות כחולות
     וצהובות מתייצבים בחדר ישיבות במלון לאירוע Codechella בקיץ 2022 של החברה.
   careers_page_code_pride_alt_text: שתי עובדות המציגות נשים מחייכות כשהן אוחזות בקצוות
@@ -14561,9 +14785,10 @@ he:
     ידי אינספור ארגונים ויחידים] (%{efforts_url}) שעזרו להקים, לממן ולהפיץ חינוך למדעי
     המחשב. אנו מודים להפיק תועלת מהעזרה הבלתי נלאית של קהילת החינוך המדעי הרחבה יותר,
     ו [אנו מודים לכל השותפים והאנשים שתמכו בהשפעה שלנו לאורך השנים] (%{partners_url})).
-  about_page_section_more_list_1: "[דוח שנתי של Code.org 2021] (%{report_url}) (דוחות
-    עבר: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
-    [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[ערכי הליבה והנחיות ההודעות שלנו] (%{core_url})"
   about_page_section_more_list_3: "[תכנית הלימודים והפילוסופיה הפדגוגית שלנו] (%{curriculum_url})"
   about_page_section_more_list_4: "[שיחת TEDx מאת מייסדנו האדי פרטובי על מדוע מדעי

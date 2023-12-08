@@ -5,6 +5,7 @@ import {
   insertCollider,
   isBlockLocationUnset,
   isOverlapping,
+  appendProceduresToState,
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 
 describe('CdoSerializationHelpers', () => {
@@ -236,6 +237,112 @@ describe('CdoSerializationHelpers', () => {
 
       const result = isOverlapping(collider1, collider2);
       expect(result).to.equal(false);
+    });
+  });
+  describe('appendProceduresToState', () => {
+    const sharedBehaviorsState = {
+      blocks: {
+        blocks: [
+          {
+            type: 'behavior_definition',
+            extraState: {
+              procedureId: 'procedure1',
+              behaviorId: 'walking',
+            },
+          },
+          {
+            type: 'behavior_definition',
+            extraState: {
+              procedureId: 'procedure2',
+              behaviorId: 'running',
+            },
+          },
+        ],
+      },
+      procedures: [
+        {id: 'procedure1', name: 'walking'},
+        {id: 'procedure2', name: 'running'},
+      ],
+    };
+    it('should add all shared behaviors to a project when project contains none', () => {
+      const projectState = {
+        blocks: {
+          blocks: [
+            {
+              type: 'when_run',
+            },
+          ],
+        },
+        procedures: [],
+      };
+
+      const updatedState = appendProceduresToState(
+        projectState,
+        sharedBehaviorsState
+      );
+
+      // Check if all shared behavior blocks are added to the project
+      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
+      // Check if all associated procedures are added to the project
+      expect(updatedState.procedures).to.have.lengthOf(2);
+    });
+
+    it('should not add duplicates when one or more existing behaviors are found', () => {
+      const projectState = {
+        blocks: {
+          blocks: [
+            {
+              type: 'when_run',
+            },
+            {
+              type: 'behavior_definition',
+              extraState: {
+                procedureId: 'procedure1',
+                behaviorId: 'walking',
+                userCreated: true,
+              },
+            },
+          ],
+        },
+        procedures: [{id: 'procedure1', name: 'walking'}],
+      };
+
+      const updatedState = appendProceduresToState(
+        projectState,
+        sharedBehaviorsState
+      );
+
+      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
+      expect(updatedState.procedures).to.have.lengthOf(2);
+    });
+
+    it('should not add duplicate shared behaviors for any that have been renamed', () => {
+      const projectState = {
+        blocks: {
+          blocks: [
+            {
+              type: 'when_run',
+            },
+            {
+              type: 'behavior_definition',
+              extraState: {
+                procedureId: 'procedure1',
+                behaviorId: 'walking',
+                userCreated: true,
+              },
+            },
+          ],
+        },
+        procedures: [{id: 'procedure1', name: 'moseying'}],
+      };
+
+      const updatedState = appendProceduresToState(
+        projectState,
+        sharedBehaviorsState
+      );
+
+      expect(updatedState.blocks.blocks).to.have.lengthOf(3);
+      expect(updatedState.procedures).to.have.lengthOf(2);
     });
   });
 });

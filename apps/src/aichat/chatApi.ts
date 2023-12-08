@@ -6,10 +6,13 @@ import Lab2MetricsReporter from '../lab2/Lab2MetricsReporter';
 /**
  * This function sends a POST request to the chat completion backend controller.
  */
-async function postOpenaiChatCompletion(
-  messagesToSend: OpenaiChatCompletionMessage[]
+export async function postOpenaiChatCompletion(
+  messagesToSend: OpenaiChatCompletionMessage[],
+  levelId?: number
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = {messages: messagesToSend};
+  const payload = levelId
+    ? {levelId: levelId, messages: messagesToSend}
+    : {messages: messagesToSend};
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -62,7 +65,7 @@ export async function getChatCompletionMessage(
   // For now, response will be null if there was an error.
   // TODO: If user message was inappropriate or too personal, update status accordingly.
   if (!response) {
-    return {status: Status.PERSONAL, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
+    return {status: Status.ERROR, id: userMessageId}; // TODO: Update more accurately as either too personal or inappropriate.
   }
   return {
     status: Status.OK,

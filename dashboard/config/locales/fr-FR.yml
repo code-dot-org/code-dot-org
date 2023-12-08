@@ -5,7 +5,7 @@ fr:
       user:
         age: Age
         ai_rubrics_disabled: Désactiver la rubrique AI
-        ai_settings_header: 'Paramètres d''AI '
+        ai_settings_header: Paramètres IA
         current_password: Mot de passe actuel
         edit_header: Modifier les détails du compte
         email: E-mail

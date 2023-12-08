@@ -2573,19 +2573,6 @@ pt-BR:
           [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
 
           [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
-      CSD U2 Top Websites_2018_2019_pilot_2023:
-        markdown: |
-          # Sites de Rolução de Problemas
-
-          Aqui estão alguns sites que foram criados para resolver um problema. Escolha dois sites e use-os para concluir o guia de atividades.
-
-          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">] (https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
-
-          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">] (https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
-
-          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">] (https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
-
-          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">] (https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: descrição aqui
         markdown: |
@@ -3073,6 +3060,7 @@ pt-BR:
       CSD U2L2 - Prac_2023:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Níveis de Prática
       CSD U3 - Design a Game 1 - ExampleChoice_2022:
         description: |-
           Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
@@ -6074,28 +6062,62 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Accelerometer - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Accelerometer - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Accelerometer - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Board Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Board Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Board Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Board Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Color LEDs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Color LEDs - Chal_2222:
         display_name: Níveis de Desafio
+      CSD U6 - Color LEDs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Color LEDs - Prac_2222:
+        display_name: Níveis de Prática
       CSD U6 - Combine Inputs - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Combine Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Combine Inputs - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Combine Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Functions - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - If Variables - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - If Variables - Chal_2222:
@@ -6112,30 +6134,60 @@ pt-BR:
         display_name: Níveis de Desafio
       CSD U6 - Physical Input - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Input - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Input - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Physical Output - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Physical Output - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Physical Output - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Physical Output - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Inputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Inputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Inputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Inputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Screen Outputs - Chal_2023:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Screen Outputs - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Screen Outputs - Prac_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Screen Outputs - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 - Sensors - Chal_2023a_2023:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_2222:
         display_name: Níveis de Desafio
       CSD U6 - Sensors - Chal_mb2022:
         display_name: Níveis de Desafio
+      CSD U6 - Sensors - Prac_2023a_2023:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_2222:
+        display_name: Níveis de Prática
+      CSD U6 - Sensors - Prac_mb2022:
+        display_name: Níveis de Prática
       CSD U6 LED create intro:
         content1: descrição aqui
         markdown: |
@@ -6644,64 +6696,80 @@ pt-BR:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test algorithms multi2_2021:
         answers:
         - text: manipuladores de eventos
         - correct: true
-          text: para loops e matrizes
+          text: for loops e matrizes
         - text: funções com parâmetros
         - correct: true
-          text: Getters/GetProperty
-        - text: conversão analógica para digital
+          text: getters/getProperty
+        - text: conversão analógica para o digital
         questions:
-        - text: Uma turma quer criar um programa que mostre bom dia a todos. Por exemplo,
-            o programa exibirá “Bom dia, Dwayne!” , “Bom dia, Mari!” para cada aluno.
-            Quais são as DUAS ferramentas de programação mais úteis ao escrever este
-            programa?
+        - text: Uma turma quer criar um programa que dê bom dia para todos. Por exemplo,
+            o programa exibirá “Bom dia, Dwayne!”, “Bom dia, Mari!” para cada aluno.
+            Quais as duas ferramentas de programação que serão as mais úteis ao escrever
+            este programa?
       CSD U6 test debugging multi:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2021:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test debugging multi_2022:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
-        - {}
+          text: O botão direito está quebrado na placa.
+        - text: Os alto-falantes do computador não estão funcionando.
+        - text: O nome do arquivo da música triste está incorreto.
+        - text: A placa não está conectada ao computador.
+        - text: O manipulador de eventos não possui os parâmetros corretos.
         questions:
-        - {}
+        - text: Uma equipe está criando um protótipo que reproduz um som alegre no
+            computador quando o botão esquerdo da placa é pressionado e uma música
+            triste quando o botão direito da placa é pressionado. A música alegre
+            está funcionando, mas a música triste não. Escolha um problema de HARDWARE
+            que possa estar causando esse erro.
       CSD U6 test events multi:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
         - text: "O que um programador precisa saber ao criar um ouvinte de eventos?
             \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
@@ -6709,76 +6777,117 @@ pt-BR:
             O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test events multi_2022:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: Apenas I
+        - text: Apenas II
+        - text: I e II
         - correct: true
-        - {}
+          text: I e III
+        - text: I, II e III
         questions:
-        - {}
+        - text: "O que um programador precisa saber ao criar um receptor de eventos?
+            \ \n&nbsp;&nbsp;&nbsp;I. O evento que desencadeará a mudança  \n&nbsp;&nbsp;&nbsp;II.
+            Quando estiver no programa, o evento será acionado  \n&nbsp;&nbsp;&nbsp;III.
+            O que o programa deve fazer quando o evento é acionado"
       CSD U6 test hardware multi2:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2021:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test hardware multi2_2022:
         answers:
-        - {}
+        - text: O hardware deve ser controlado fisicamente por uma pessoa e o software
+            pode ser controlado com código.
         - correct: true
-        - {}
+          text: O hardware permite que o software interaja com o mundo físico de muitas
+            maneiras diferentes.
+        - text: Hardware é o tipo de software usado em protótipos físicos.
         - correct: true
-        - {}
+          text: Hardware e software trabalham juntos para tornar os dispositivos de
+            computação úteis.
+        - text: Em dispositivos de computação, o hardware controla a saída e o software
+            controla a entrada.
         questions:
-        - {}
+        - text: Quais são as DUAS RESPOSTAS que melhor descrevem a relação entre hardware
+            (dispositivos físicos) e software (programas)?
       CSD U6 test parameters multi:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2021:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 test parameters multi_2022:
         answers:
-        - {}
-        - {}
+        - text: Eles podem ser usados com dispositivos físicos ou hardware.
+        - text: Eles podem ser usados dentro de um for loop
         - correct: true
-        - {}
-        - {}
+          text: Eles podem ser usados como uma solução geral para problemas com detalhes
+            diferentes e específicos.
+        - text: Eles podem ser usados para executar o mesmo código em vários lugares
+            diferentes do programa.
+        - text: Eles podem ser usados para detectar quando o usuário forneceu entrada.
         questions:
-        - {}
+        - text: O que torna as funções com parâmetros mais úteis do que as funções
+            sem parâmetros?
       CSD U6 tugowar stop:
         markdown: |
           # Pare
@@ -7570,74 +7679,79 @@ pt-BR:
           * [CNet](https://www.cnet.com/smart-home/)
           * [Evolução do IoT](http://www.iotevolutionworld.com/smart-home/)
       CSDU6 Innovation_2021:
-        markdown: |
-          # Pesquisa de inovação
-
-          Escolha um dos seguintes tópicos para analisar. Você vai querer encontrar informações sobre alguns dos dispositivos de computação inovadores mais recentes relacionados à sua categoria.
-
-          ## Tecnologia vestível A tecnologia
-          vestível inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes, se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível _e_ destinado a ajudar a melhorar sua saúde pessoal.
-
-          ## Saúde e segurança
-          O amplo tópico inclui tecnologia de consumo (coisas que você pode usar para melhorar sua saúde ou segurança) e tecnologia profissional (equipamento que um médico ou outro profissional possa usar).
-
-          ## Agricultura A
-          agricultura pode não ser um tópico óbvio, mas as inovações tecnológicas tiveram um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação de computadores aos equipamentos agrícolas existentes, o uso de sensores e robótica para monitorar as plantações e a análise de dados para melhorar a eficiência e a sustentabilidade.
-
-          ##
-          Os avanços na manufatura em prototipagem rápida, robótica industrial e automação tiveram um grande impacto na forma como os produtos são produzidos. Seja a tecnologia para permitir a fabricação acessível em pequena escala (como impressoras 3D e cortadores a laser) ou a integração de computadores ao trabalho na fábrica, há muitas áreas interessantes para pesquisar aqui.
-
-          ## Arte e design
-          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos comercialmente disponíveis relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todos os tipos de dispositivos de computação de maneiras criativas e expressivas.
-
-          ## Casa inteligente
-          O sonho de uma casa que compreende e até mesmo antecipa suas necessidades está mais perto do que nunca. Sejam controlados explicitamente por meio de comandos de voz ou usando sensores para monitorar e responder às mudanças nas condições, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas rotineiras ou repetitivas em casa.
-
-
-          # Considerações de pesquisa
-
-          Ao pesquisar dispositivos sobre seu tópico, lembre-se das seguintes considerações:
-
-          * Concentre-se em soluções baseadas em hardware em vez de programas de software
-          * Concentre-se em inovações recentes em vez de notícias antigas
-          * Siga o que lhe interessa
-
-          # Iniciando sua pesquisa
-
-          Verifique com seu professor os sites recomendados para iniciar sua pesquisa. Você também pode usar algumas das palavras-chave acima para começar a pesquisar ideias específicas na Internet. Por exemplo, considere consultar os vários sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para ver os produtos que ainda não foram lançados.
+        markdown: "# Pesquisa em Inovação\n\nEscolha um dos seguintes tópicos para
+          analisar. Você vai querer encontrar informações sobre alguns dos dispositivos
+          de computação inovadores mais recentes relacionados à sua categoria.\n\n##
+          Tecnologia Vestível \nA tecnologia vestível inclui qualquer forma de computação
+          projetada para ser usada pelo usuário, seja ela embutida na roupa ou usada
+          como acessório. Muitos dispositivos vestíveis, como pedômetros inteligentes,
+          se sobrepõem um pouco à saúde e à segurança, pois o dispositivo é vestível
+          _e_ destinado a ajudar a melhorar sua saúde pessoal.\n\n## Saúde e Segurança\nO
+          amplo tópico inclui tecnologia de consumo (coisas que você pode usar para
+          melhorar sua saúde ou segurança) e tecnologia profissional (equipamento
+          que um médico ou outro profissional pode usar).\n\n## Agricultura \nA agricultura
+          pode não ser um tópico que bem à mente, mas as inovações tecnológicas tiveram
+          um grande impacto na forma como abordamos a agricultura. Isso inclui a incorporação
+          de computadores em equipamentos agrícolas existentes, o uso de sensores
+          e robótica para monitorar as plantações e a análise de dados para melhorar
+          a eficiência e a sustentabilidade.\n\n## Manufaturação\nOs avanços na fabricação
+          em prototipagem rápida, robótica industrial e automação tiveram um grande
+          impacto na forma como os produtos são produzidos. Seja atavés da tecnologia
+          facilitando a fabricação acessível em pequena escala (como impressoras 3D
+          e cortadores a laser) ou a integração de computadores no trabalho fabril,
+          há muitas áreas interessantes para se pesquisar aqui.\n\n## Arte e Design\nA
+          interseção entre expressão artística e computação pode produzir resultados
+          impressionantes e inesperados. Embora seja menos provável que você encontre
+          produtos comercialmente disponíveis relacionados à arte e ao design, você
+          encontrará uma grande variedade de criações caseiras que usam todos os tipos
+          de dispositivos de computação de maneiras criativas e expressivas.\n\n##
+          Casa Inteligente\nO sonho de uma casa que entende e até antecipa suas necessidades
+          está mais próximo do que nunca. Quer sejam controlados explicitamente por
+          meio de comandos de voz ou usando sensores para monitorar e responder às
+          mudanças nas condições, os dispositivos domésticos inteligentes cuidam de
+          qualquer número de tarefas rotineiras ou repetitivas em casa.\n\n\n# Considerações
+          para Pesquisa\n\nAo pesquisar dispositivos sobre seu tópico, lembre-se das
+          seguintes considerações:\n\n* Concentre-se em soluções baseadas em hardware
+          em vez de programas de software\n* Concentre-se em inovações recentes em
+          vez de antigas\n* Vá atrás do que lhe interessa\n\n# Iniciando sua Pesquisa\n\nVerifique
+          com seu professor os sites recomendados para iniciar sua pesquisa. Você
+          também pode usar algumas das palavras-chave acima para começar a pesquisar
+          ideias específicas na Internet. Por exemplo, considere visitar os vários
+          sites de financiamento coletivo (como o Kickstarter e o Indiegogo) para
+          ver os produtos que ainda não foram lançados.\n"
         teacher_markdown: |+
-          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos estudantes porque, às vezes, esses sites são bloqueados por programas distritais de filtragem ou a inovação mais recente digna de notícias pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique se há conteúdo impróprio em cada site e certifique-se de que ele será carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
+          Abaixo estão vários sites que os alunos podem usar para iniciar suas pesquisas. Não os fornecemos diretamente aos alunos porque, às vezes, esses sites são bloqueados por programas distritais de filtragem, ou a inovação mais recente digna de notícia pode não ser apropriada para o ensino médio. **É altamente recomendável que você verifique cada site em busca de conteúdo impróprio e certifique-se de que ele seja carregado nos computadores da sala de aula antes de compartilhá-lo com os alunos**.
 
-          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
+          Usando a lista abaixo como ponto de partida, recomendamos fornecer uma lista digital de sites de pesquisa aos alunos. Isso pode incluir os sites abaixo e quaisquer recursos adicionais que você possa encontrar em sua própria pesquisa.
 
-          ### Tecnologia vestível
+          ### Tecnologia Vestível
 
           * [Wareable.com](https://www.wareable.com/)
 
-          ### Saúde e segurança
+          ### Saúde e Segurança
 
-          * [Saúde moderna] (http://www.modernhealthcare.com/section/medical-devices) * (http://www.medstartr.com/) ##
-           [Medstartr]
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
 
-          # Agricultura
+          ### Agricultura
 
-          * [Instituto Nacional de Alimentação e Agricultura] (https://nifa.usda.gov/topic/agriculture-technology)
-          * [Notícias da Indústria Agrícola] (http://www.farmindustrynews.com/technology)
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
 
-          ### Manufatura
+          ### Manufaturação
 
-          * [Semana da Indústria] (https://www.industryweek.com/technology-and-iiot)
-          * [Impressão 3D] (https://3dprinting.com/)
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
 
-          ### Arte e design
+          ### Arte e Design
 
           * [ArtFab](http://artfab.art.cmu.edu/)
           * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
 
-          ### Smart Home
+          ### Casa Inteligente
 
-          * (https://www.cnet.com/smart-home/) [CNet]
-          * [Evolução da IoT] (http://www.iotevolutionworld.com/smart-home/)
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
 
 
       CSP PD Example Question 1:
@@ -11962,21 +12076,37 @@ pt-BR:
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade Com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para ver a pesquisa com professores] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data unit_number =6)%5B%5D
       Student End of Unit Survey - Intro+TeacherMD_csd6_2023:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade Com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para ver a pesquisa com professores] (https://studio.code.org/form/teacher_csd_unit_survey?survey_data unit_number =6)%5B%5D
       Student End of Unit Survey - Intro+TeacherMD_csd7-2022:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para acessar a pesquisa com professores] https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Intro+TeacherMD_csd7_2023:
         markdown: |-
           ### Reserve um momento para responder a essas **três perguntas rápidas**.
 
           _Code.org leva sua privacidade muito a sério._ Suas respostas aqui serão mantidas  <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+        teacher_markdown: |
+          **Pesquisas de Conclusão de Unidade com Professores:** Enquanto seus alunos concluem a pesquisa, gostaríamos que você respondesse a uma rápida pesquisa com professores
+
+          ## [Clique aqui para acessar a pesquisa com professores] https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7)
       Student End of Unit Survey - Q1_2022:
         answers:
         - correct: true
@@ -12527,7 +12657,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q1_2022:
         answers:
         - correct: true
@@ -12545,7 +12675,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q1_2023:
         answers:
         - correct: true
@@ -12563,7 +12693,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-ch1-pulse-survey-q2_2021:
         answers:
         - correct: true
@@ -12784,86 +12914,77 @@ pt-BR:
         questions:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       aiml-ch1-pulse-survey_2021:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-ch1-pulse-survey_2022:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-ch1-pulse-survey_2023:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2022:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q1_2023:
         answers:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       aiml-intro-pulse-survey-q2_2021:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q2_2022:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q2_2023:
         answers:
         - correct: true
-          text: Esta é a primeira vez que estou aprendendo sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Esta é a primeira vez que estou aprendendo sobre IA e Machine Learning
         - correct: true
-          text: 'Eu fiz algumas atividades menores de IA (Por exemplo: uma hora de
-            código), mas esta é minha aula mais longa'
+          text: 'Eu já fiz atividades menores sobre IA (por exemplo: uma hora do código),
+            mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Eu já fiz aulas ou fiz tutoriais on-line sobre Inteligência Artificial
-            e Aprendizado de Máquina
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre IA e Machine Learning
         questions:
-        - text: Quais experiências anteriores você teve com IA e aprendizado de máquina?
+        - text: Quais foram suas experiências anteriores com a IA e o Machine Learning?
       aiml-intro-pulse-survey-q3_2021:
         answers:
         - correct: true
@@ -12881,7 +13002,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q3_2022:
         answers:
         - correct: true
@@ -12899,7 +13020,7 @@ pt-BR:
         - correct: true
           text: Discordo Plenamente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q3_2023:
         answers:
         - correct: true
@@ -12917,7 +13038,7 @@ pt-BR:
         - correct: true
           text: Discordo totalmente
         questions:
-        - text: Eu entendo e posso explicar os conceitos de IA e Aprendizado de Máquina
+        - text: Eu entendo e posso explicar os conceitos de IA e Machine Learning
       aiml-intro-pulse-survey-q4_2021:
         answers:
         - correct: true
@@ -13030,11 +13151,13 @@ pt-BR:
         questions:
         - text: Gosto de ciência da computação.
       aiml-intro-pulse-survey_2021:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey_2022:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
       aiml-intro-pulse-survey_2023:
-        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+        title: Pesquisa Rápida Sobre IA e Machine Learning!
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: Pesquisa Rápida sobra Ciência da Computação!
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - correct: true
@@ -13127,10 +13250,10 @@ pt-BR:
         - text: Quero fazer mais cursos de ciência da computação no futuro.
       aiml-pulse-check-survey-preamble_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       allthethings_external_displayed_as_unplugged:
         content1: descrição aqui
@@ -23915,10 +24038,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_2022:
         markdown: |-
@@ -23943,10 +24066,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd1_2023:
         markdown: |
@@ -23985,24 +24108,24 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy2_csd6_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2019_pilot_copy3_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2021:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2022:
         markdown: |
@@ -24020,17 +24143,17 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_2023a_2023:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_2222:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csd-pulse-check-survey-preamble_copy1_2023:
         markdown: |
@@ -24041,10 +24164,10 @@ pt-BR:
           </small>
       csd-pulse-check-survey-preamble_mb2022:
         markdown: |
-          ### Reserve um momento para responder a essas **cinco perguntas rápidas**.
+          ### Por favor, reserve um momento para responder a essas **cinco perguntas rápidas**.
 
           <small>
-          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas sem os nomes anexados.
+          <em>A Code.org leva sua privacidade a sério.</em> Suas respostas aqui serão mantidas <strong>anônimas</strong>. Seu professor pode ver as respostas de toda a turma, mas não os nomes dos alunos.
           </small>
       csf_be_a_super_digital_citizen:
         content1: descrição aqui
@@ -27820,13 +27943,12 @@ pt-BR:
         - correct: true
           text: Esta é a primeira vez que estou aprendendo sobre ciência da computação
         - correct: true
-          text: 'Já fiz atividades menores de ciência da computação (por exemplo:
-            uma hora de código), mas esta é minha primeira aula mais longa'
+          text: 'Já fiz atividades menores sobre ciência da computação (por exemplo:
+            uma hora do código), mas esta é minha primeira aula mais longa'
         - correct: true
-          text: Já fiz aulas ou fiz tutoriais on-line mais longos sobre ciência da
-            computação
+          text: Já fiz aulas ou tutoriais on-line mais longos sobre ciência da computação
         questions:
-        - text: Quais experiências anteriores você teve com a ciência da computação?
+        - text: Quais foram as suas experiências anteriores com a ciência da computação?
       intro-pulse-survey-q2_csd1_2023:
         answers:
         - correct: true
@@ -28221,33 +28343,223 @@ pt-BR:
         display_name: Personalize seu aplicativo
       ml-club app-choice parent_2022:
         display_name: Personalize seu aplicativo
+        teacher_markdown: |
+          **Apoioando os Alunos:** Esses níveis são semelhantes às personalizações que os alunos concluíram nas lições anteriores. Se os alunos ficarem travados, considere encaminhá-los para estas lições anteriores:
+          - Adicionando várias telas para cada recurso: [Lição 13 - Personalizando Aplicativos](../../13/levels/2)
+          - Adicionando várias telas para a predição resultante: [Lição 10 - Cartões Modelo no App Lab](../../10/levels/5)
       ml-club app-choice parent_2023:
-        display_name: Personalize seu aplicativo
+        display_name: Personalize Seu Aplicativo
+      ml-customize apps-practice choice-2021:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-customize apps-practice choice_2022:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-customize apps-practice choice_2023:
+        display_name: Pratique a Personalização de Seus Aplicativos
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-isaac data_2022:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-isaac data_2023:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para criar uma cópia dos dados do Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim data_2022:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim data_2023:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Clique aqui] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para criar uma cópia dos dados do Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
+      ml-good data-kim survey_2022:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
+      ml-good data-kim survey_2023:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Clique aqui] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder à pesquisa do Kim
       ml-intro app lab-book recommender 5-2021:
         display_name: Personalize seu aplicativo
       ml-intro app lab-book recommender 5_2022:
         display_name: Personalize seu aplicativo
       ml-intro app lab-book recommender 5_2023:
-        display_name: Personalize seu aplicativo
+        display_name: Personalize Seu Aplicativo
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2023:
+        markdown: |
+          # Recomendador ER V1
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-2_2022:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-2_2023:
+        markdown: "# Prioridade ER Northern Lights \n\nClique no cartão modelo para
+          ampliar e ver uma versão maior\n\n<a href=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png\"
+          width=\"45%\" style=\"float:left; margin: 2px;\"></a>\n\n<a href=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          target=\"_blank\">\n<img src=\"https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png\"
+          width=\"45%\" style=\"float:right; margin: 2px\"></a>\n\n![]()\n"
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2023:
+        markdown: |
+          # Recomendador Médico IA
+
+          Clique no cartão modelo para ampliar e ver uma versão maior
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models in applab-choice parent_2022:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models in applab-choice parent_2023:
         description: Experimente o que você aprendeu em uma ou mais das atividades
           a seguir.
+        display_name: Praticando com Cartões Modelo
       ml-models-shoe survey:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
+          ## [Clique aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder à pesquisa Recomendação de Calçados
       ml-models-shoe survey_2022:
         markdown: |
           ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
 
-          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
+          ## [Clique aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder à pesquisa Recomendação de Calçados
+      ml-plan survey-copy form:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-plan survey-copy form_2023:
+        markdown: |
+          # Copie um Formulário do Google
+
+          ## [Clique aqui](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para criar uma cópia de um modelo de questionário que usaremos hoje
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2023:
+        markdown: |+
+          # Cartão Modelo - Recomendador de Pets
+
+          **Com um Coelga:** Como você poderia diferenciar recursos categóricos e recursos numéricos no cartão modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Pratique com Modelos no App Lab
+      ml-use models applab-practice choice_2022:
+        display_name: Pratique com Modelos no App Lab
+      ml-use models applab-practice choice_2023:
+        display_name: Pratique com Modelos no App Lab
       naturally-better-at-cs:
         answers:
         - correct: true
@@ -29335,3 +29647,4 @@ pt-BR:
         questions:
         - text: Tenho medo de ser visto por outras pessoas como menos capaz nesta
             aula.
+...

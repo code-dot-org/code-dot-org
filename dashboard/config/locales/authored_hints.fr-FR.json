@@ -14380,17 +14380,17 @@
           "change": "Apportez quelques changements à la simulation !"
         },
         "csc_ecosystems_arctic_2023": {
-          "hint1": "L'ours polaire doit être plus gros ! Modifiez sa taille pour qu'elle soit supérieure à 30.",
-          "hint2": "Changez l'arrière-plan pour qu'il y ait plus de glace sur laquelle l'ours polaire pourra chasser. "
+          "hint1": "L'ours polaire doit être plus grand ! Modifier sa taille pour qu'elle soit supérieure à 30.",
+          "hint2": "Changer l'arrière-plan pour qu'il y ait plus de glace sur laquelle l'ours polaire pourra chasser. "
         },
         "csc_ecosystems_desert_2023": {
-          "hint1": "Il faut que les lapins bougent plus vite ! Modifiez la \nvitesse des lapins pour qu'elle soit supérieure à 0."
+          "hint1": "Il faut que les lapins bougent plus vite ! Modifier la \nvitesse des lapins pour qu'elle soit supérieure à 0."
         },
         "csc_ecosystems_giraffe_evo_2023": {
           "first_event_hint": "Votre « événement » (#6AF36C) utilise-t-il la girafe à col court ? \n\nEst-ce que le costume passe d'un **cou court à un costume long** ?\n\nLe bloc de changement de costume devrait ressembler à ceci :\n<xml>\n<block type=\"gamelab_setAnimation\">\n  <field name=\"ANIMATION\">\"giraffe_longer_neck\"</field>\n  <value name=\"THIS\">\n    <block type=\"gamelab_allSpritesWithAnimation\" movable=\"false\">\n      <field name=\"ANIMATION\">\"giraffe_shorter_neck\"</field>\n    </block>\n  </value>\n</block></xml>"
         },
         "csc_ecosystems_marsh_2023": {
-          "Hint1": "Nous avons besoin de plus de grenouilles ! Modifiez le nombre de grenouilles pour qu'il soit supérieur à 0."
+          "Hint1": "Il nous faut plus de grenouilles ! Modifier le nombre de grenouilles pour qu'il soit supérieur à 0."
         },
         "csc_ecosystems_ocean_algae_2023": {
           "Connect": "S'assurer que le bloc « manger » est bien connecté au bloc événement. \n\nIls devraient s'assembler comme des pièces de puzzle !"
@@ -14405,7 +14405,7 @@
           "TooMuch": "Connecter le bloc « si trop d'algues » à l'événement « quand un poisson touche l'algue »."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
-          "Below": "Continuez à connecter les blocs au bas de l'espace de travail là où vous avez fini dans le dernier niveau !",
+          "Below": "Continuer à connecter les blocs au bas de l'espace de travail là où on en a fini avec le dernier niveau !",
           "BlocksInside": "S'il y a trop peu d'algues, les poissons s'en iront.\n\nPlacer les autres blocs à l'intérieur du bloc « s'il y a trop peu d'algues ».",
           "TooLittle": "Connecter le bloc « si trop peu d'algues » à l'événement « quand un poisson touche l'algue »."
         },
@@ -14413,22 +14413,22 @@
           "No Code": "Il n'y a encore rien à coder pour l'instant. Il suffit d'observer ce système en action. "
         },
         "csc_ecosystems_ocean_justright_algae": {
-          "Bellow": "Continuez à connecter les blocs au bas de l'espace de travail là où vous avez fini dans le dernier niveau !",
+          "Bellow": "Continuer à connecter les blocs au bas de l'espace de travail là où on en a fini avec le dernier niveau !",
           "JustRight": "Connecter le bloc d'algues « si juste assez » à l'événement « quand un poisson touche l'algue ».",
           "costume": "Si la quantité d'algues est tout juste suffisante, le corail sera en bonne santé. \n\nUtiliser le bloc « changer de costume » à l'intérieur du bloc « si juste assez d'algues ». "
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
-          "hint1": "Il y a trop de perroquets ! Modifiez le nombre\nde perroquets pour qu'il soit inférieur à 8."
+          "hint1": "Il y a trop de perroquets ! Modifier le nombre\nde perroquets pour faire qu'il soit inférieur à 8."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "Avant le début du programme, aucun poisson n' \navait été pêché. Utilisez le `set FishCaught to 0` tout en haut \nde l'espace de travail.",
-          "hint2": "Utilisez le changement « FishCatch by 1 »\nsous le bloc « Catch fish » pour compter\nchaque poisson capturé par le bateau.",
-          "hint3": "Connectez le bloc `boat says` **underneath** au\nbloc `change FishCaught by 1` "
+          "hint1": "Avant que le programme n'ait été lancé, 0 poissons ont \nété pêchés. Utiliser le bloc « régler PoissonsAttrapés à 0 » \ntout en haut de l'espace de travail.",
+          "hint2": "Utiliser le changement « PoissonsAttrapés par 1 »\nen dessous du bloc « attraper poisson » pour compter\nchaque poisson que le bateau attrape.",
+          "hint3": "Connecter le bloc « bateau dit » **en dessous** du\nbloc « changer poissonsAttrapés par 1 »"
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "Continuez à connecter des blocs \ndans le cadre de l'événement « Quand un bateau touche un poisson » où vous avez \nterminé le dernier niveau !",
-          "hint2": "Pour que le bateau arrête de pêcher à 5 poissons, connectez le bloc « if FishCaught = 5 » à la fin de l'événement « when boat touch fish ».",
-          "hint3": "Ajoutez ensuite le bloc `remove boat` à\n**à l'intérieur** le bloc \\`if FishCaught = 5``"
+          "hint1": "Continuer à connecter des blocs \nen dessous de l'événement « quand le bateau touche un poisson » là où\non s'en est arrêté au dernier niveau !",
+          "hint2": "Pour que le bateau s'arrête de pêcher lors qu'il atteint 5 poissons, connecter le bloc « si PoissonsAttrapés = 5 » à la fin de l'événement « quand le bateau touche un poisson ».",
+          "hint3": "Ensuite, ajouter le bloc « enlever bateau » à\n**l'intérieur** du bloc « si PoissonsAttrapés = 5 »"
         },
         "csc_ecosystems_solution2_2023": {
           "Hint1": "**Remarque** : Il faudra peut-être faire glisser une partie du code </code>quand touche<code style=\"color:black; background-color:#6AF36C\"> plus loin vers le bas de l'écran afin de faire de la place pour les nouveaux blocs.",
@@ -14492,6 +14492,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Utilisez le menu déroulant pour choisir parmi différentes couleurs et effets.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "Connecte un bloc `I.A. génère effet` à l'événement `à 2 mesures` dans t'espace de travail comme ceci : \n\n[blocs blockly][0]",
+          "hint2": "Clique sur le bloc [block blockly][0] pour créer un nouvel effet. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **Toujours bloqué ?** Regarde à nouveau la vidéo sur les événements pour apprendre comment ils fonctionnent. ",
+          "hint2": "💡Voici un exemple de ce à quoi votre code peut ressembler. <xml><xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n<block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"haut\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"OURS\"</field>\n        <field name=\"MOVE\">Mouvements.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personnalise l'effet en cliquant sur les emojis dans le menu <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">.\n  <field name=\"VALUE\">{\"inputs\" :[\"cool\", \"cold\", \"wavy\"], \"backgroundEffect\" : \"sparkles\", \"backgroundColor\" : \"cool\", \"foregroundEffect\" : \"bubbles\"}</field>\n\n</block> </xml> bloc dans l'espace de travail. ",
+          "Hint2": "💡 **Toujours bloqué?** Regarde la vidéo pour voir comment personnaliser l'effet. ",
+          "HintEdit": "💡 Si tu veux utiliser le code écrit par l'I.A., bascule pour afficher le code et clique sur `Utiliser le code`. Les blocs remplaceront ceux de `Effet généré par l'I.A.` dans ton espace de travail. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Le danseur doit être le même sur les deux blocs et la séquence (l'ordre) est importante.  ",
+          "validation": "💡  Ajoute ces blocs au <code style=\"color:white; background-color:#FFBD46\">paramètre</code> pour créer ton premier danseur : \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"suivant\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Connecte le bloc [bloc Blockly][0] dans le bloc orange <code style=\"color:white; background-color:#FFBD46\">configuration</code>. Clique ensuite dessus pour démarrer.",
+          "Hint3": "💡 Si tu veux régénérer l'effet ou changer les emojis, clique à nouveau sur le bloc `I.A. génère effet`. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Écoute la chanson et pense à l'ambiance de la musique. ",
+          "Hint2": "💡 Connecte le bloc [bloc Blockly][0] dans le bloc orange <code style=\"color:white; background-color:#FFBD46\">configuration</code>. Clique ensuite dessus pour démarrer.",
+          "Hint3": "💡 Si tu veux régénérer l'effet ou changer les émojis, clique à nouveau sur le bloc `I.A. génère effet`."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Tes danseurs ne répondront pas à tes indications à moins qu'ils soient en train de danser. ",
+          "hint2": "💡 Après avoir appuyé sur <code style=\"color:white; background-color:#FFBD46\">Démarrer</code>, donne la réplique à tes danseurs en appuyant sur la flèche <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> droite ou gauche. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Cliquez et faites glisser un bloc « créer un nouveau sprite » et connectez-le sous « when run ». \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

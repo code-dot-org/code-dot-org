@@ -1,0 +1,64 @@
+---
+title: Ghidul de organizare pentru funcţionarii publici
+---
+
+{{ signup_button }}
+
+# Cum să implicați întreaga comunitate a dumneavoastră
+
+### Arătați angajamentul dumneavoastră în domeniul Informaticii în țara, județul sau orașul dvs.
+
+* * *
+
+</br>
+
+## Găzduiți un oficial ales la evenimentul dumneavoastră Ora de Cod?
+
+[Consultă setul nostru de instrumente](/files/elected-official.pdf) cu toate informațiile de care ai nevoie pentru a face ca vizita lor și evenimentul tău să fie minunate!
+
+![](/images/fit-800/hoc_govs.png)
+
+De la stânga la dreapta: *Guvernatorii statelor Arkansas, Carolina de Nord și Arizona participă la un eveniment Hour of Code.*
+
+## Implică fiecare școală in eveniment, fiecare elev trebuie sa invete!
+
+### 1. Citește mesajul nostru de o pagină
+
+Află [de ce este importantă educația în domeniul științei calculatoarelor ]({{ localized_files/hoc_one_pager }}) și cum poți contribui la acest efort susținând Hour of Code.
+
+### 2. Recrutează școli și districte locale
+
+Folosește acest [e-mail]({{ promote/sample_emails }}) sau [acest anunț]({{ promote/stats_url }}) ca punct de plecare și consultă acest [ghid instructiv pentru]({{ urls/how_to_guide }}) școli și districte.
+
+### 3. Găzduiește un eveniment Hour of Code
+
+Consultă [ghidul nostru instructiv]({{ urls/how_to_events }}) petnru o demonstrație de organizare a evenimentelor, [kitul mass-media]({{ promote/press_kit_url }}) și alte resurse pentru planificarea evenimentului. Găzduirea unui eveniment este o modalitate excelentă de a promova Hour of Code și de a contribui la creșterea numărului de participanți la acesta.
+
+### 4. Participarea la un eveniment în timpul Săptămânii educației în domeniul științei calculatoarelor ({{ campaign_date/short }})
+
+[Găsește clasele și școlile]({{ urls/events }}) participante din districtul, orașul sau statul tău.
+
+### 5. Elaborarea unei rezoluții
+
+Consultă acest [model de rezoluție]({{ urls/proclamation }}) care vine în sprijinul Săptămânii educației în domeniul științei calculatoarelor și al obiectivelor acesteia și care poate fi folosit de autoritățile legislative la nivel local și de stat.
+
+### 6. Scrie un editorial
+
+Ia în calcul posibilitatea de a publica un articol în ziarul local. Consultă acest [exemplu de editorial]({{ promote/op_ed }}) care susține Săptămâna educației în domeniul științei calculatoarelor și obiectivele acesteia.
+
+### 7. Spune-le și altora
+
+[Distribuie clipul video despre Hour of Code pe Facebook](https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus) și [discută despre sprijinul acordat pe Twitter](https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&related=codeorg&hashtags=). Distribuie fotografii de la evenimente sau un clip video în care apari tu și alți adulți care participă la Hour of Code. Folosește hashtag-ul **#HourOfCode**, Code.org (@code.org) îl va vedea și te va promova. Sau folosește aceste exemple de tweet-uri:
+
+- *Fiecare elev, băiat sau fată, ar trebui să aibă șansa de a se familiariza cu știința calculatoarelor . Alătură-te mișcării noastre la un eveniment #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+- *Suntem mândri să ne alăturăm astăzi mișcării Hour of Code. Ești și tu alături de noi? #HourOfCode [https://hourofcode.com]({{ urls/home }})*
+
+### 8. Publică un comunicat de presă
+
+[Folosește acest model]({{ promote/official_press_release }}) ca ghid.
+
+### 9. Creează legături în plan local
+
+[Află mai multe despre educația în domeniul științei calculatoarelor în zona ta]({{ urls/advocacy }}). Semnează petiția și vei primi informații actualizate despre eforturile de consiliere și reprezentare socială ale Code.org la nivel local, de stat și federal.
+
+{{ signup_button }}

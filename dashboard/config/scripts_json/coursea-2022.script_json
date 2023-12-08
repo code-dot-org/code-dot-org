@@ -19,7 +19,6 @@
         "es-MX",
         "fa-AF",
         "fa-IR",
-        "fil-PH",
         "sq-AL"
       ],
       "tts": true,
@@ -28,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-11-01 21:04:23 UTC",
+    "serialized_at": "2023-11-15 22:32:24 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -43,7 +43,7 @@ uk:
   hoc2023_header: Творчість з ШІ
   hoc2023_hero_desc_homepage: Приєднуйтесь до мільйонів людей по всьому світу, організуючи
     годину кодування, з штучним інтелектом чи без нього, і вивчаючи, як працює штучний
-    інтелект. Це може зробити будь-хто, де завгодно. Досвід не потрібен.
+    інтелект. Це може зробити будь-хто, де завгодно. Попередній досвід не потрібен.
   hoc2023_hero_desc_learn_page: Цього року ми піднімаємо Годину коду на нові висоти,
     пропонуючи можливості програмування, які охоплюють як штучний інтелект (ШІ), так
     і компоненти, що не належать до ШІ.
@@ -106,8 +106,8 @@ uk:
     X, Брати Джонас, Нікі Мінаж та ще 34!
   social_hoc_anybody: 'Година коду: Навчитися може кожен'
   oceans_landing_title: Штучний інтелект для океанів
-  oceans_landing_description: Дізнайтеся про Машинне навчання та етичне використання
-    AI.
+  oceans_landing_description: Дізнайтеся про машинне навчання та етичне використання
+    ШІ.
   cs_for_good_hashtag: "#CSforGood"
   oceans_landing_specs: Доступно на 25+ мовах/Класи 3+
   oceans_landing_explanation: Інформатика – це набагато більше, ніж просто програмування!
@@ -177,10 +177,10 @@ uk:
     які ми намагаємося вивчити (наприклад, «синій» або «не синій»).
   social_hoc2019_oceans_title: 'Штучний інтелект для океанів #CSforGood'
   social_hoc2019_oceans_desc: Дізнайтеся про штучний інтелект, машинне навчання, дані
-    навчання та упередженість, вивчаючи етичні питання та способи використання AI
+    навчання та упередженість, вивчаючи етичні питання та способи використання ШІ
     для вирішення світових проблем. Інформатика – це набагато більше, ніж просто програмування!
     Насолоджуйтесь першим кроком Code.org у новій подорожі, щоб дізнатися більше про
-    AI в рамках нашої навчальної програми.
+    ШІ в рамках нашої навчальної програми.
   social_coldplay_title: Create with Coldplay & Code.org
   social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
     and you could win.
@@ -228,6 +228,7 @@ uk:
   for_students_teacher_led_learning: 'Для учнів: Навчання під керівництвом учителя'
   for_students_teacher_led_lessons: 'Для учнів: Уроки під керівництвом вчителя'
   professional_development: Професійний розвиток
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Викладайте інформатику
   explore_our_curriculum: Ознайомтеся з нашими матеріалами
   start_professional_learning: Почніть підвищення кваліфікації
@@ -235,7 +236,7 @@ uk:
   learn_how_ai_works: Дізнайтеся, як працює штучний інтелект
   ai_101_for_educators: AI 101 для освітян
   learn_about_ai_impacts: Дізнайтеся про вплив штучного інтелекту
-  hoc_ai_activities: Година коду діяльності AI
+  hoc_ai_activities: Діяльності Години коду з ШІ
   subscribe_to_emails_heading: Підпишіться на електронні листи
   subscribe_to_emails_desc: Читайте про те, що відбувається на Code.org та в освіті
     з інформатики через щоквартальні оновлення через наш список розсилки.
@@ -315,7 +316,9 @@ uk:
   call_to_action_share_on_social_media: Share on social media
   call_to_action_explore_all_hoc_activities: Ознайомтеся з усіма заняттями Години
     коду на Code.org
-  call_to_action_start_dance_party: Почати танцювальну вечірку
+  call_to_action_start_dance_party: Почніть танцювальну вечірку
+  call_to_action_start_dance_party_ai_edition: 'Розпочинаємо танцювальну вечірку:
+    версія ШІ'
   call_to_action_start_part_02: Почніть частину другу
   call_to_action_start_unplugged_activity: Почніть безмашинну вправу
   call_to_action_view_promo_resources: Переглянути промо ресурси
@@ -325,17 +328,18 @@ uk:
   call_to_action_try_activity: Спробуйте активність
   call_to_action_try_activities: Спробуйте різні заняття
   call_to_action_try_hoc_ai_activities: Спробуйте заняття «Година коду» AI
-  call_to_action_explore_activities: Знайди заняття саме для тебе
-  call_to_action_explore_ai: Досліджуйте AI
+  call_to_action_explore_activities: Ознайомтесь з заняттями
+  call_to_action_explore_ai: Ознайомтесь з AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Дослідіть інструмент
   call_to_action_explore_unit: Знайомство з розділом
-  call_to_action_explore_curriculum: Дослідіть навчальну програму
-  call_to_action_explore_curricula: Ознайомитися з навчальними програмами
-  call_to_action_explore_curriculum_options: Дізнайтесь про інші варіанти навчальних
-    програм
-  call_to_action_explore_lessons: Досліджуйте уроки
-  call_to_action_explore_modules: Ознайомтеся з курсами
-  call_to_action_explore_module: Ознайомтеся з модулем
-  call_to_action_explore_workshops: Ознайомитися з майстернями
+  call_to_action_explore_curriculum: Ознайомтесь з програмою
+  call_to_action_explore_curricula: Ознайомтесь з програмами
+  call_to_action_explore_curriculum_options: Ознайомтесь з варіантами програм
+  call_to_action_explore_lessons: Ознайомтесь з уроками
+  call_to_action_explore_modules: Ознайомтеся з розділами
+  call_to_action_explore_module: Ознайомтеся з розділом
+  call_to_action_explore_workshops: Ознайомтесь з майстернями
   call_to_action_explore_course: Ознайомтеся з курсом
   call_to_action_explore_courses: Ознайомтеся з курсами
   call_to_action_explore_full_course: Ознайомтеся з повним курсом
@@ -343,19 +347,19 @@ uk:
   call_to_action_explore_choice_level: Ознайомтеся з прикладами рівня вибору
   call_to_action_explore_collection: Ознайомтеся з колекцією
   call_to_action_explore_unplugged_lesson: Ознайомтеся з уроками без комп'ютера
-  call_to_action_explore_csf: Ознайомтеся з основами інформатики
-  call_to_action_explore_csd: Досліджуйте Дослідження інформатики
-  call_to_action_explore_csp: Ознайомтеся з принципами інформатики
-  call_to_action_explore_csc: Дослідіть Інтегровану інформатику
-  call_to_action_explore_csa: Дослідіть AP® Комп'ютерні науки A
-  call_to_action_explore_csa_short: Дослідіть AP® CSA
-  call_to_action_explore_maker: Дослідіть навчальні програми Maker
+  call_to_action_explore_csf: Ознайомтеся з Основами інформатики
+  call_to_action_explore_csd: Ознайомтесь з Дослідженнями інформатики
+  call_to_action_explore_csp: Ознайомтеся з Принципами інформатики
+  call_to_action_explore_csc: Ознайомтесь з Інтегрованою інформатикою
+  call_to_action_explore_csa: Ознайомтесь з AP® Інформатикою-A
+  call_to_action_explore_csa_short: Ознайомтесь з AP® CSA
+  call_to_action_explore_maker: Ознайомтесь з програмою для мейкерів
   call_to_action_explore_hoc: Ознайомтеся з підручниками «Година коду»
-  call_to_action_explore_hoc_short: Дослідіть Година коду
-  call_to_action_explore_how_ai_works: Дізнайся, як працює ШІ
+  call_to_action_explore_hoc_short: Більше про Годину коду
+  call_to_action_explore_how_ai_works: Дізнайтеся, як працює ШІ
   call_to_action_explore_dance_party: Дослідіть Танцювальну вечірку
   call_to_action_explore_ai_for_oceans: Дослідіть ШІ для океанів
-  call_to_action_explore_minecraft: Досліджуйте Майнкрафт
+  call_to_action_explore_minecraft: Дослідіть Майнкрафт
   call_to_action_try_app_lab: Спробуйте Програмну лабораторію
   call_to_action_view_lesson_plan: Переглянути план уроку
   call_to_action_self_paced_pl: Почніть самостійне підвищення кваліфікації
@@ -379,7 +383,7 @@ uk:
   call_to_action_resources_tools: Спробуйте інструменти програмування
   call_to_action_sign_up_free: Зареєструйтеся безкоштовно
   call_to_action_explore_ai_resources: Ознайомитися з ресурсами ШІ
-  call_to_action_explore_ai_curricula: Дослідіть матеріали з ШІ
+  call_to_action_explore_ai_curricula: Ознайомтесь з матеріалами з ШІ
   call_to_action_explore_curriculum_catalog: Ознайомитися з каталогом навчальних програм
   call_to_action_see_full_curriculum_catalog: Дивитися повний каталог навчальних програм
   call_to_action_view_curriculum_catalog: Переглянути каталог матеріалів та курсів
@@ -429,6 +433,15 @@ uk:
   call_to_action_learn_about_ai: Детальніше про ШІ
   call_to_action_learn_more_about_ai: Дізнайтеся більше про ШІ
   call_to_action_get_started: Приступити до роботи
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Переглянути інструкції для вчителів
   aria_label_call_to_action_hoc_how_to_companies: Переглянути інструкції для компаній
   aria_label_call_to_action_hoc_how_to_districts: Переглянути інструкції для районів
@@ -453,6 +466,8 @@ uk:
     «Викладання Принципів інформатики»
   aria_label_call_to_action_teaching_problem_solving: Почніть програму підвищення
     кваліфікації «Викладання розділу вирішення проблем та обчислення»
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Почніть програму підвищення кваліфікації
     «Викладання інтегрованої інформатики»
   aria_label_call_to_action_teaching_ai: Почніть програму підвищення кваліфікації
@@ -481,14 +496,14 @@ uk:
   aria_label_call_to_action_curriculum_maker_microbit: Ознайомтеся з навчальною програмою
     «Створення програм за допомогою пристроїв» (micro:bit)
   aria_label_call_to_action_curriculum_creating_apps_with_devices: Ознайомтеся з блоком
-    «Створення застосунків за допомогою пристроїв»
+    «Програмування пристроїв»
   aria_label_call_to_action_curriculum_problem_solving_computing: Ознайомтеся з блоком
     «Вирішення проблем та обчислення»
-  aria_label_call_to_action_curriculum_web_development: Ознайомтеся з блоком «Веб-розробка»
+  aria_label_call_to_action_curriculum_web_development: Ознайомтеся з блоком «Веброзробка»
   aria_label_call_to_action_curriculum_interactive_animations_games: Ознайомтеся з
     блоком «Інтерактивні анімації та ігри»
   aria_label_call_to_action_curriculum_design_process: Ознайомтеся з блоком «Процес
-    проєктування»
+    розробки»
   aria_label_call_to_action_curriculum_data_society: Ознайомтеся з блоком «Дані й
     суспільство»
   aria_label_call_to_action_collection_hardware: Ознайомтеся з колекцією «Обладнання»
@@ -559,6 +574,16 @@ uk:
     майстерню для учнів
   aria_label_call_to_action_view_more_cs_resources: Переглянути більше ресурсів з
     інформатики
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Програма підвищення кваліфікації Code.org
   curriculum_name_csf: Основи інформатики
   curriculum_name_csf_02: Будь-які основи CS (курс A-F)
@@ -577,16 +602,17 @@ uk:
   curriculum_name_csd: Дослідження інформатики
   curriculum_name_csp: Принципи інформатики
   curriculum_name_problem_solving: Розв'язання проблем та обчислення
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Інтеграція інформатики
   curriculum_name_csa: 'Інформатика A '
   curriculum_name_csa_ai: Програмна інженерія та комп'ютерний зір
   curriculum_name_csc_02: Будь-який модуль "Зв'язки в інформатиці"
-  curriculum_name_ai: AI та машинне навчання
+  curriculum_name_ai: ШІ та машинне навчання
   curriculum_name_artificial_intelligence: Штучний інтелект (AI)
   curriculum_name_maker: Мейкер
   curriculum_name_maker_cp: Створення програм за допомогою пристроїв (Circuit Playground)
   curriculum_name_maker_microbit: Створення програм за допомогою пристроїв (micro:bit)
-  curriculum_name_creating_apps_with_devices: Створення застосунків за допомогою пристроїв
+  curriculum_name_creating_apps_with_devices: Програмування пристроїв
   curriculum_name_poetry: Кодування за допомогою поезії
   curriculum_name_dance_party: Танцювальна вечірка
   curriculum_name_dance_party_02: Продовжуємо танцювати
@@ -595,9 +621,9 @@ uk:
   curriculum_name_ai_for_oceans: Штучний інтелект для океанів
   curriculum_name_minecraft: Майнкрафт
   curriculum_name_problem_solving_computing: Вирішення проблем та обчислення
-  curriculum_name_web_development: Веб-розробка
+  curriculum_name_web_development: Веброзробка
   curriculum_name_interactive_animations_games: Інтерактивні анімації та ігри
-  curriculum_name_design_process: Процес проєктування
+  curriculum_name_design_process: Процес розробки
   curriculum_name_data_society: Дані й суспільство
   curriculum_desc_dance_party_01: У цій вступній діяльності використовуйте код, щоб
     змусити різноманітних барвистих персонажів перейти до анімованих фонів та оптимістичної
@@ -641,9 +667,9 @@ uk:
   curriculum_desc_csf_course_f: Подивіться, як саме користувачі роблять вибір у застосунках.
     Створюйте різноманітні застосунки у Спрайт Лабораторії, які також пропонують вибір
     для користувача. Вивчайте більш складні поняття, зокрема змінні та цикли «для».
-  curriculum_desc_problem_solving_computing: Використовуйте процес вирішення проблем
-    для розв'язання головоломок, проблем і роботи з реальними сценаріями. Дізнайтеся
-    про введення, виведення, зберігання та обробку комп'ютером з метою вирішення проблем.
+  curriculum_desc_problem_solving_computing: Застосовуємо процес вирішення проблем
+    для головоломок, викликів і реальних ситуацій. Дізнайтеся про введення, виведення,
+    зберігання та опрацювання даних комп'ютером з метою вирішення проблем.
   curriculum_desc_web_development: Створюйте контент і діліться ним на веб-сторінках,
     досліджуючи творчі можливості в інтернеті. Розвивайте навички критичного споживання,
     вирішення проблем і командної роботу під час програмування.
@@ -653,13 +679,12 @@ uk:
   curriculum_desc_design_process: Зосередьтеся на розгляді соціального впливу обчислень.
     Вирішуючи проблем проєктування, учні більш емпатійно сприймають потреби інших
     людей і тому розробляють максимально успішні рішення.
-  curriculum_desc_data_society: Це підкреслює роль даних у вирішенні проблем і значення
-    комп'ютерів у цьому процесі. Ви розглядатимете системи представлення інформації
-    та пов'язані з цим проблеми. Крім того, ви дізнаєтеся, як збір даних допомагає
-    вирішувати складні завдання.
+  curriculum_desc_data_society: Підкресліть роль даних у вирішенні проблем і значення
+    комп'ютерів для цього. Розгляньте системи представлення інформації та пов'язані
+    з цим проблеми. Учні дізнаються, як дані допомагають вирішувати складні проблеми.
   curriculum_desc_creating_apps_with_devices: Досліджуйте роль фізичних пристроїв
-    в обчислювальних процесах. Розробляйте програми, які використовують апаратні введення
-    й виведення. Існує версія цього блоку як для micro:bit, так і для Circuit Playground.
+    в обчислювальних процесах. Розробляйте програми, які використовують апаратне введення
+    й виведення. Є версії для micro:bit, і для Circuit Playground.
   curriculum_desc_csa: Познайомте учнів з програмною інженерією та об'єктно-орієнтованим
     дизайном, поки вони вивчають мову програмування Java у цій безкоштовній навчальній
     програмі AP® Computer Science A (AP® CSA).
@@ -668,9 +693,9 @@ uk:
     навчити вирішенню проблем та критичному мисленню.
   curriculum_desc_maker_short: Maker Education запрошує практичний досвід та співпрацю
     в класі, щоб допомогти навчити вирішенню проблем та критичному мисленню.
-  curriculum_desc_csd: Гнучкий курс, що дозволяє викладати кожну одиницю окремо або
-    комбіновано. Знайомить учнів із створенням веб-сайтів, додатків, анімації, ігор
-    та фізичних обчислювальних систем.
+  curriculum_desc_csd: Гнучкий курс, що дозволяє викладати кожен розділ окремо або
+    цілісно. Знайомить учнів із створенням веб-сайтів, додатків, анімації, ігор та
+    програмуванням пристроїв.
   curriculum_desc_csp: Безкоштовний, схвалений AP® CSP, вступний курс середньої школи,
     який знайомить учнів з основоположними концепціями інформатики.
   curriculum_desc_csa_ai_long: 'Цей модуль CSA з двох розділів після AP пропонує старшокласникам
@@ -710,8 +735,10 @@ uk:
   module_label_languages: 'Підтримувані мови:'
   module_label_accessibility_features: 'Доступність:'
   module_label_accessibility_features_full: 'Особливості доступності:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Інструмент педагога
   module_label_educator_course: Курс педагога
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Інструмент учня
   module_label_student_product: Продукт
   module_label_student_content_resources: Контент і ресурси
@@ -720,6 +747,7 @@ uk:
   module_label_available_now: Доступно зараз
   module_label_video_series: Серія відео
   module_label_self_paced: Самостійний модуль
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -761,6 +789,7 @@ uk:
   module_duration_1_hr: 1 година
   module_duration_2_hrs: 2 години
   module_duration_3_hrs: 3 годин
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 годин
   module_duration_5_hrs_plus: 5+ годин
   module_duration_8_hrs: 8 годин
@@ -783,12 +812,11 @@ uk:
   module_label_teaching_csp: Викладання Принципів інформатики
   module_label_teaching_problem_solving: Викладання розділу "Вирішення проблем та
     обчислення"
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Викладання інтегрованої інформатики
   module_label_teaching_ai: Викладання штучного інтелекту та машинного навчання
-  module_label_teaching_maker_cp: Викладання створення застосунків на основі пристроїв
-    (Circuit Playground)
-  module_label_teaching_maker_microbit: Викладання створення застосунків на основі
-    пристроїв (micro:bit)
+  module_label_teaching_maker_cp: Викладання Програмування пристроїв (Circuit Playground)
+  module_label_teaching_maker_microbit: Викладання Програмування пристроїв (micro:bit)
   module_subject_english_language_arts: Мистецтво англійської мови
   module_subject_social_studies: Суспільні науки
   module_subject_science: Природничі науки
@@ -854,6 +882,12 @@ uk:
   heading_attend_free_workshop: Відвідайте безкоштовну майстерню для учнів
   heading_access_more_cs_resources: Отримайте доступ до нових ресурсів з інформатики
   heading_available_on_code_dot_org: Доступно на Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Якщо ви старшокласник, захоплений заохоченням більшої кількості
     молодих жінок вчитися в інформатиці у вашій школі, тоді ви нам потрібні!
   cs_ambassador_desc: Кожна сфера, включаючи медицину, розваги, спорт, освіту, бізнес,
@@ -922,6 +956,19 @@ uk:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Очні й віртуальні майстер-класи
     починаються вже цього літа.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Вперед, переріжте шнур (лише на деякий час)!
   no_devices_section_desc: Викладання інформатики не завжди має проводитись перед
     екраном, і доступ до пристроїв не має ставати перешкодою для засвоєння концепцій
@@ -947,6 +994,11 @@ uk:
   subscribe_form_section_desc_csp: Зареєструйтеся, щоб отримувати щомісячні електронні
     листи про Принципи комп'ютерних наук Code.org та отримувати корисні нагадування,
     поради та оновлення, які надсилаються прямо на вашу поштову скриньку.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Ви можете відмовитися від підписки в будь-який
     час.
   hoc_page_what_is_hoc_heading: Що таке Година коду?
@@ -1118,13 +1170,13 @@ uk:
   ai_why_desc: Всі необхідні ресурси в одному місці! Ознайомтеся з нашими пропозиціями
     навчальних програм, професійними навчальними курсами та відеосеріями, розробленими
     для вас та ваших учнів.
-  ai_why_link_01: Дослідіть матеріали з ШІ
+  ai_why_link_01: Ознайомтесь з матеріалами з ШІ
   ai_why_link_02: Перегляньте варіанти підвищення кваліфікації
   ai_why_link_03: Переглянути відео з AI
   ai_curricula_heading: Навчальні програми AI
   ai_curricula_desc: Дослідіть різні пропозиції навчальних програм з ШІ, які відповідають
     різноманітним потребам учнів.
-  ai_curriculum_title_01: AI та машинне навчання
+  ai_curriculum_title_01: ШІ та машинне навчання
   ai_curriculum_desc_01: Дізнайтеся, як комп'ютери навчаються на даних. Розробляйте
     проекти машинного навчання навколо реальних даних. Створіть додаток для машинного
     навчання, щоб вирішити особисто актуальну проблему.
@@ -1161,6 +1213,7 @@ uk:
     потребам усіх учасників.
   ai_curriculum_btn_aria_label_06: Переглянути план уроку генеративного ШІ на суспільний
     вплив
+  ai_curriculum_btn_aria_label_dance_ai: 'Спробуйте Танцювальну вечірку: версія ШІ'
   ai_carousel_heading: 'Що кажуть вчителі про AI з Code.org:'
   ai_carousel_quote_01: Цей урок також дав моїм учням можливість побачити, що в системах
     класифікації є елемент думки. Пізніше, коли ми почали бачити, як упередження може
@@ -1312,7 +1365,7 @@ uk:
   how_ai_works_lessons_heading: Уроки AI для вашого класу
   how_ai_works_lesson_title_01: Вступ до машинного навчання
   how_ai_works_lesson_desc_01: Дізнайтеся про форму штучного інтелекту під назвою
-    машинне навчання та про те, як вони можуть використовувати процес вирішення проблем,
+    машинне навчання та про те, як можна використовувати процес вирішення проблем,
     щоб допомогти навчити робота вирішувати проблеми. Беріть участь у заходах машинного
     навчання, де робот навчається виявляти закономірності у риб.
   how_ai_works_lesson_title_02: Комп'ютерний зір
@@ -1332,7 +1385,7 @@ uk:
   how_ai_works_lesson_title_05: Генеративні зображення
   how_ai_works_lesson_desc_05: Дізнайтеся, як AI може генерувати зображення, а потім
     вивчіть дифузійний віджет AI та обговоріть, чи є ці моделі творчими чи ні.
-  how_ai_works_lesson_title_06: Алгоритмічний упередження
+  how_ai_works_lesson_title_06: Алгоритмічні упередження
   how_ai_works_lesson_desc_06: Практикуйте обрізання зображень, щоб виявити упередженість,
     що лежить в основі алгоритму обрізання Twitter, а потім прочитайте та перегляньте
     відео про відкриття цього упередженого алгоритму. Нарешті, обговоріть способи
@@ -1363,6 +1416,68 @@ uk:
     упередженість'
   ai_vid_ethics2_caption: 'Етика та штучний інтелект: конфіденційність та майбутнє
     роботи'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Самостійне підвищення кваліфікації для педагогів
   self_paced_pl_hero_desc: Пропозиції підвищення кваліфікації для підтримки вчителів
     на кожному етапі їх шляху викладання інформатики.
@@ -1809,10 +1924,10 @@ uk:
   csp_page_faq_answer_07_04: For more information about our goals and approach to
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
-  csd_page_top_desc: Найбільш гнучкий курс Code.org, що дозволяє викладати кожен блок
-    окремо, об'єднаний у колекції, зосереджені на конкретних областях, або ж у формі
-    річного курсу. Безкоштовна навчальна програма знайомить учнів зі створенням власних
-    вебсайтів, застосунків, анімації, ігор і фізичних обчислювальних систем.
+  csd_page_top_desc: Найбільш гнучкий курс Code.org, що дозволяє викладати кожен розділ
+    окремо, об'єднаний у колекції, сфокусовані на конкретних областях, або ж у формі
+    річного курсу. Безкоштовна програма знайомить учнів зі створенням власних вебсайтів,
+    застосунків, анімації, ігор і програмуванням пристроїв.
   csd_page_intro_heading: Гнучка навчальна програма для ваших потреб
   csd_page_intro_list_01: Гнучка вступна навчальна програма
   csd_page_intro_list_02: Широке коло тем
@@ -1894,19 +2009,18 @@ uk:
   csd_page_faq_answer_04_05: Алюмінієва фольга, ємність для води, монети (зверніть
     увагу, що монети можна замінити якимось іншим видом ваги такого ж розміру). Якщо
     у вас немає таких матеріалів, можливі альтернативні види діяльності.
-  csd_page_faq_answer_04_06: Створення застосунків за допомогою пристроїв (варіант
-    А та варіант В)
+  csd_page_faq_answer_04_06: Програмування пристроїв (варіант А та варіант В)
   csd_page_faq_answer_04_07: 'Варіант A: набір Circuit Playgrounds для класної кімнати.
     Дізнайтеся більше тут: [code.org/maker/circuitplayground](%{url}).'
   csd_page_faq_answer_04_08: 'Варіант B: набір пристроїв micro:bit для класно кімнати.
     Дізнайтеся більше тут: [code.org/maker/microbit](%{url}).'
   csd_page_faq_answer_04_09: 'Матеріали для роботи: порожні коробки для серветок,
     або картонні рулони, або скретч-папір'
-  csd_page_faq_answer_04_10: "*Примітка: блок «Створення застосунків за допомогою
-    пристроїв» має два варіанти реалізації: один для тих, хто використовує Circuit
-    Playgrounds, і один для тих, хто використовує micro:bit. Вчителі не мають купувати
-    обидва набори пристроїв або навчати обидва варіанти блоків, оскільки вони еквівалентні
-    й охоплюють один і той самий зміст."
+  csd_page_faq_answer_04_10: "*Примітка: блок «Програмування пристроїв» має два варіанти
+    реалізації: один для тих, хто використовує Circuit Playgrounds, і один для тих,
+    хто використовує micro:bit. Вчителі не мають купувати обидва набори пристроїв
+    або навчати обидва варіанти блоків, оскільки вони еквівалентні й охоплюють один
+    і той самий зміст."
   csd_page_faq_question_06: Як «Дослідження інформатики» поєднуються з іншими курсами
     Code.org?
   csd_page_faq_answer_06_01: "«Дослідження інформатики» розроблено таким чином, щоб
@@ -2197,9 +2311,9 @@ uk:
   hoc_live_join_us: Приєднуйтесь до нас
   hoc_live_learn_more: Дізнатися більше
   hoc_overview_oceans_tutorial_header: Штучний інтелект для океанів
-  hoc_overview_oceans_tutorial_desc: Дізнайтеся про штучний інтелект (AI), машинне
+  hoc_overview_oceans_tutorial_desc: Дізнайтеся про штучний інтелект (ШІ), машинне
     навчання, дані про навчання та упередженість, вивчаючи етичні питання та способи
-    використання AI для вирішення світових проблем.
+    використання ШІ для вирішення світових проблем.
   hoc_overview_csc_header: Представляємо підключення CS
   hoc_overview_csc_desc: Наша новітня навчальна програма підкреслює зв'язки між інформатикою
     та іншими предметами, такими як математика, мовне мистецтво, наука та суспільствознавство.
@@ -2545,9 +2659,8 @@ uk:
     around the world doing the Hour of Code! This year, the annual Computer Science
     Education Week celebration is %{campaign_date} and registration begins in October.
     Though, Hour of Code is available year-round.
-  hoc_homepage_what_is_hoc_subhead: Навчання тривалістю одну годину проводиться 45
-    мовами. Досвід не обов’язковий. Заняття «Години коду» доступні безкоштовно весь
-    рік.
+  hoc_homepage_what_is_hoc_subhead: Одногодинне навчання доступне 45 мовами. Попередній
+    досвід не обов’язковий. Заняття «Години коду» доступні безкоштовно весь рік.
   hoc_homepage_what_is_hoc_description: "«Година коду» – це заняття тривалістю одну
     годину, під час якого учні в цікавій формі можуть ознайомитися з основами інформатики.
     Ця кампанія для учнів початкового рівня проводиться за підтримки 400 партнерів
@@ -2982,6 +3095,7 @@ uk:
     або [Прочитайте практичне керівництво] (%{howto_url})'
   tutorial_dance2019_name: Танцювальна вечірка 2019
   tutorial_danceparty_name: Танцювальна вечірка
+  tutorial_dancepartyai_name: 'Танцювальна вечірка: версія ШІ'
   tutorial_chibitronics_name: 'Хібітроніка: освітлена історія'
   tutorial_athlete_name: Створи власну спортивну гру
   tutorial_moana_name: 'Ваяна: Мандрівка з кодом'
@@ -3012,7 +3126,7 @@ uk:
   tutorial_itchbounceball_name: ITCH М'ячик-стрибунець (Scratch)
   tutorial_vidclim_name: 'Відкод: наука про клімат та код'
   tutorial_matlab_name: Вчимося кодувати з MATLAB
-  tutorial_flap_name: Зроби гру в Пурха
+  tutorial_flap_name: Створи гру в Пурха
   tutorial_galaxy_name: Галактична гра
   tutorial_inf_name: Ігрова лабораторія Infinity
   tutorial_tynkersol_name: STEM-набір Сонячна система
@@ -3585,19 +3699,14 @@ uk:
   tutorial_csfirstdialogue_name: Діалог
   tutorial_codemonkeybeaver_name: Бівер Ахівер
   tutorial_codestersdistance_name: 'Кодестри: спрайти соціального дистанціювання'
-  tutorial_itchspace_name: 'Код ІЧ: Космічні загарбники - RokCoder'
   tutorial_vidcodemagic_name: SFX Магія
   tutorial_vidcodemagices_name: SFX Магія
   tutorial_codespeakmeal_name: Кодування програми здорового харчування
-  tutorial_itchfish_name: 'Код Itch: Гра скретч-риба'
   tutorial_bsdwebsite_name: Мої улюблені веб-сайти
   tutorial_codespeaktime_name: Кодування капсули часу в Scratch
-  tutorial_itchwebcam_name: 'ItchCode: Веб-камера Доповнена реальність'
-  tutorial_itchball_name: 'Код ITCH-коду: Підстрибуючий м''яч'
   tutorial_ttrace_name: Стан гонки
   tutorial_plethora_name: 'Плітора: причина і наслідок'
   tutorial_educodesecret_name: Розкрийте секрети агентства!
-  tutorial_itchshapes_name: 'Код ITCH-коду: фігури та кути'
   tutorial_codeguppytext_name: Вступ до кодування на основі тексту
   tutorial_vidcodeplastiche_name: Пластикове забруднення PSA
   tutorial_educativechatbot_name: Створіть власного чат-бота на Python
@@ -3621,7 +3730,6 @@ uk:
     мить
   tutorial_codehslitter_name: Кодування для спільноти без сміту
   tutorial_bsdocean_name: Життя під водою
-  tutorial_itchplatformer_name: 'ITCHCode: Підручник з платформера Scratch 3.0'
   tutorial_codejika_name: 'CodeJika: 5-хвилинний веб-сайт'
   tutorial_gamefrootclicker_name: Вивчіть змінні. Кодуйте власну гру Clicker.
   tutorial_rmagicequity_name: Справедливість проти рівності
@@ -3674,6 +3782,9 @@ uk:
   tutorial_danceparty_shortdescription: Створіть танцювальну вечірку, щоб поділитися
     з друзями. За участі Кеті Перрі, Мадонни, Дж. Белвіна, Сіа, Кейта Урбана, Сіари
     і ще 25 чоловік!
+  tutorial_dancepartyai_shortdescription: Дізнайтеся про поняття штучного інтелекту
+    (ШІ), щоб створити власну віртуальну танцювальну вечірку, яка демонструє найкращих
+    сучасних виконавців. Настав час продемонструвати свою майстерність!
   tutorial_chibitronics_shortdescription: Запрограмуйте паперову схему, щоб висвітлити
     власну історію.
   tutorial_athlete_shortdescription: Створи гру в баскетбол або поєднай у грі кілька
@@ -4896,6 +5007,9 @@ uk:
   tutorial_danceparty_longdescription: Створіть танцювальну вечірку, щоб поділитися
     з друзями. За участі Кеті Перрі, Мадонни, Дж. Белвіна, Сіа, Кейта Урбана, Сіари
     і ще 25 чоловік!
+  tutorial_dancepartyai_longdescription: Дізнайтеся про поняття штучного інтелекту
+    (ШІ), щоб створити власну віртуальну танцювальну вечірку, яка демонструє найкращих
+    сучасних виконавців. Настав час продемонструвати свою майстерність!
   tutorial_chibitronics_longdescription: Запрограмуйте паперову схему, щоб висвітлити
     власну історію.
   tutorial_athlete_longdescription: Створи гру в баскетбол або поєднай у грі кілька
@@ -7467,20 +7581,12 @@ uk:
   tutorial_codestersdistance_longdescription: Вивчіть основи кодування на Python,
     а потім створіть програму, яка обчислює відстань між двома спрайтами, щоб переконатися,
     що вони мають соціальне дистанціювання або потребують носіння маски.
-  tutorial_itchspace_longdescription: Цей підручник проведе вас через створення класичної
-    гри Space Invaders з використанням мови програмування Scratch MIT. Підпишіться
-    на канал RokCoder YouTube, щоб отримати більше відео та навчальних посібників
-    на основі Scratch-файлів! Кожне відео - це підручник розміром з укус (довжиною
-    приблизно десять хвилин), який містить власні конкретні кінцеві цілі. Кінцевий
-    результат - якісна аркада Scratch.
   tutorial_vidcodemagic_longdescription: Зробіть спалахи випадковим чином навколо
     екрана за допомогою петлі.
   tutorial_vidcodemagices_longdescription: Зробіть спалахи випадковим чином навколо
     екрана за допомогою петлі.
   tutorial_codespeakmeal_longdescription: Навчіться кодувати додаток, який допомагає
     користувачам приймати рішення про здорову їжу.
-  tutorial_itchfish_longdescription: Підручник Scratch 3.0 для створення гри з акулою,
-    яка переслідує та їсть рибу, порушена, коли дайвера з'їли випадково.
   tutorial_bsdwebsite_longdescription: 'Цей курс дозволяє учням використовувати код
     як спосіб поділитися тим, що для них важливо чи цікаво. Вони можуть стежити за
     уроком або створювати унікальні проекти, вивчаючи HTML, CSS і JavaScript. Вони
@@ -7489,10 +7595,6 @@ uk:
     цікавлять або любите робити. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Дізнайтеся, як закодувати цифрову капсулу
     часу, щоб записувати та розмірковувати про своє життя прямо зараз.
-  tutorial_itchwebcam_longdescription: Дізнайтеся про доповнену реальність і створіть
-    власний віртуальний простір доповненої реальності.
-  tutorial_itchball_longdescription: Отримайте м'яч, щоб підстрибнути навколо екрану.
-    Дізнайтеся про петлі та умовні умови всередині петель.
   tutorial_ttrace_longdescription: Викликаючи функції та проектуючи класи, гравці
     програмують свій власний гоночний автомобіль, щоб він був швидким, спритним та
     потужним; під час перегонів вони можуть зламати транспортні засоби своїх конкурентів,
@@ -7503,8 +7605,6 @@ uk:
     занурюючись глибше у вивчення тверджень, рядків, циклів для входу. Допоможіть
     агенту Сміту знайти винуватців і налаштувати операційну систему Агентства для
     своїх нових користувачів за допомогою Python.
-  tutorial_itchshapes_longdescription: Дізнайтеся, як малювати фігури в Scratch. Ви
-    також дізнаєтеся, як розрахувати, скільки потрібно перевертати для будь-якої фігури.
   tutorial_codeguppytext_longdescription: Вивчіть основи текстового кодування, створивши
     свою першу програму в онлайн-редакторі кодування.
   tutorial_vidcodeplastiche_longdescription: Проблема засмічення океанів пластиком
@@ -7583,8 +7683,6 @@ uk:
   tutorial_bsdocean_longdescription: Життя під водою проливає світло на нагальну проблему,
     з якою ми стикаємося сьогодні, - наше довкілля. Цей проект зосереджений на тому,
     щоб навести вас до кодування власної веб-сторінки щодо захисту наших вод.
-  tutorial_itchplatformer_longdescription: Простий у виконанні підручник про те, як
-    створити просту гра-платформер за допомогою Scratch.
   tutorial_codejika_longdescription: Чудовий вступ до кодування за допомогою HTML
     та CSS. Кодуйте кілька рядків, перегляньте негайний результат, не потрапляючи
     в Hows and Whys, створивши гарну цільову сторінку з двоколірним градієнтним фоном,
@@ -7786,6 +7884,7 @@ uk:
     робить нас усіх унікальними.
   tutorial_dance2019_string_detail_grades: Класи 2+
   tutorial_danceparty_string_detail_grades: Класи 2+
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Дошкільнята - Клас 5
   tutorial_athlete_string_detail_grades: Класи 2+
   tutorial_moana_string_detail_grades: Класи 2+
@@ -8382,19 +8481,14 @@ uk:
   tutorial_csfirstdialogue_string_detail_grades: Класи 2-8
   tutorial_codemonkeybeaver_string_detail_grades: Дошкільнята - Клас 5
   tutorial_codestersdistance_string_detail_grades: Класи 6+
-  tutorial_itchspace_string_detail_grades: Класи 6+
   tutorial_vidcodemagic_string_detail_grades: Класи 2+
   tutorial_vidcodemagices_string_detail_grades: Класи 2+
   tutorial_codespeakmeal_string_detail_grades: Класи 6+
-  tutorial_itchfish_string_detail_grades: Класи 2-8
   tutorial_bsdwebsite_string_detail_grades: Класи 6+
   tutorial_codespeaktime_string_detail_grades: Класи 2-8
-  tutorial_itchwebcam_string_detail_grades: Класи 6+
-  tutorial_itchball_string_detail_grades: Класи 2-8
   tutorial_ttrace_string_detail_grades: 6-8 класи (11-13 років)
   tutorial_plethora_string_detail_grades: Класи 2+
   tutorial_educodesecret_string_detail_grades: Класи 6+
-  tutorial_itchshapes_string_detail_grades: Класи 6+
   tutorial_codeguppytext_string_detail_grades: 6-8 класи (11-13 років)
   tutorial_vidcodeplastiche_string_detail_grades: Класи 6+
   tutorial_educativechatbot_string_detail_grades: Класи 9+
@@ -8416,7 +8510,6 @@ uk:
   tutorial_codecapture_string_detail_grades: Класи 6+
   tutorial_codehslitter_string_detail_grades: 6-8 класи (11-13 років)
   tutorial_bsdocean_string_detail_grades: 6-8 класи (11-13 років)
-  tutorial_itchplatformer_string_detail_grades: Класи 6+
   tutorial_codejika_string_detail_grades: Класи 6+
   tutorial_gamefrootclicker_string_detail_grades: 6-8 класи (11-13 років)
   tutorial_rmagicequity_string_detail_grades: 6-8 класи (11-13 років)
@@ -8469,6 +8562,7 @@ uk:
   tutorial_dance2019_string_platforms: Всі сучасні браузери, планшет Android, iPad,
     безмашинна
   tutorial_danceparty_string_platforms: Всі сучасні браузери, планшет Android, iPad
+  tutorial_dancepartyai_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_chibitronics_string_platforms: Усі сучасні браузери
   tutorial_athlete_string_platforms: Всі сучасні браузери
   tutorial_moana_string_platforms: Всі сучасні браузери, планшет Android, iPad
@@ -9217,20 +9311,15 @@ uk:
   tutorial_codemonkeybeaver_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
   tutorial_codestersdistance_string_platforms: Усі сучасні браузери
-  tutorial_itchspace_string_platforms: Всі сучасні браузери
   tutorial_vidcodemagic_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_vidcodemagices_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: Всі сучасні браузери
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: Всі сучасні браузери, планшет Android, iPad
-  tutorial_itchball_string_platforms: Всі сучасні браузери
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_educodesecret_string_platforms: Всі сучасні браузери
-  tutorial_itchshapes_string_platforms: Всі сучасні браузери
   tutorial_codeguppytext_string_platforms: Всі сучасні браузери, планшет Android,
     iPad
   tutorial_vidcodeplastiche_string_platforms: Всі сучасні браузери, iPad
@@ -9258,7 +9347,6 @@ uk:
   tutorial_codehslitter_string_platforms: Всі сучасні браузери, планшет Android, iPad,
     телефон Windows, телефон Android, iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: Всі сучасні браузери
   tutorial_codejika_string_platforms: Всі сучасні браузери, планшет Android, iPad,
     телефон Windows, телефон Android, iPhone
   tutorial_gamefrootclicker_string_platforms: Всі сучасні браузери, iPad
@@ -9315,6 +9403,7 @@ uk:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Чібітроніка Чібі Чібі та світлодіодні
     наклейки
   tutorial_athlete_string_detail_platforms: ''
@@ -9914,19 +10003,14 @@ uk:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9948,7 +10032,6 @@ uk:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10003,6 +10086,7 @@ uk:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Блоки
   tutorial_danceparty_string_detail_programming_languages: Блоки
+  tutorial_dancepartyai_string_detail_programming_languages: Блоки
   tutorial_chibitronics_string_detail_programming_languages: Блоки
   tutorial_athlete_string_detail_programming_languages: Блоки
   tutorial_moana_string_detail_programming_languages: Блоки
@@ -10619,20 +10703,15 @@ uk:
   tutorial_csfirstdialogue_string_detail_programming_languages: Блоки, Scratch
   tutorial_codemonkeybeaver_string_detail_programming_languages: Блоки
   tutorial_codestersdistance_string_detail_programming_languages: Пітон
-  tutorial_itchspace_string_detail_programming_languages: Блоки
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Блоки
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Блоки
-  tutorial_itchwebcam_string_detail_programming_languages: Блоки
-  tutorial_itchball_string_detail_programming_languages: Блоки
   tutorial_ttrace_string_detail_programming_languages: JavaScript, кавовий скрипт
   tutorial_plethora_string_detail_programming_languages: Незалежний від мови (можна
     викладати кількома мовами)
   tutorial_educodesecret_string_detail_programming_languages: Пітон
-  tutorial_itchshapes_string_detail_programming_languages: Блоки
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Пітон
@@ -10657,7 +10736,6 @@ uk:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Пітон, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Блоки
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Блоки
   tutorial_rmagicequity_string_detail_programming_languages: Блоки, JavaScript
@@ -11182,7 +11260,7 @@ uk:
     KUBO для подорожі в різні місця на друкованій карті.
   tutorial_ai-oceans_longdescription: Інформатика – це набагато більше, ніж просто
     програмування! Дізнайтеся про штучний інтелект, машинне навчання, дані навчання
-    та упередженість, вивчаючи етичні питання та способи використання AI для вирішення
+    та упередженість, вивчаючи етичні питання та способи використання ШІ для вирішення
     світових проблем.
   tutorial_scratchimagine_string_detail_grades: Класи 2+
   tutorial_codesterspsa_string_detail_grades: Класи 6+
@@ -11599,7 +11677,7 @@ uk:
   tutorial_mee_string_detail_programming_languages: Блоки
   tutorial_kuborobo_string_detail_programming_languages: Тагтилі, які учні збирають
     разом
-  tutorial_ai-oceans_string_detail_programming_languages: AI та машинне навчання
+  tutorial_ai-oceans_string_detail_programming_languages: ШІ та машинне навчання
   tutorial_hello_name: Привіт Світ
   tutorial_raspispace_name: 'Space Talk: запуск у Scratch кодування'
   tutorial_codemonkeyjump_name: 'Blocks Jumper: Створення гри'
@@ -11621,10 +11699,7 @@ uk:
   tutorial_kodableshapes_name: Створіть фігури за допомогою коду
   tutorial_nasabinary_name: 'Двійковий код: як розмовляти з космічним кораблем'
   tutorial_3dmaker_name: 3D Виробник
-  tutorial_itchstart_name: 'Код ITCH: Scratch 5 Блок-стартер'
   tutorial_hopsub_name: Побудуйте серферів Subway з другом
-  tutorial_itchmundos_name: Світи в мірі_E2
-  tutorial_itchtenacity_name: завзятість
   tutorial_kcjskiing_name: 'Спорт + Код: Катання на лижах'
   tutorial_groksecurity_name: 'Кібербезпека: захист від темних капелюхів'
   tutorial_creaticode_name: 3D програмування за допомогою скретч-блоків
@@ -11765,16 +11840,8 @@ uk:
     своє ім'я у двійковий код на тезі імені, браслеті, шпильці або навіть звуку.
   tutorial_3dmaker_longdescription: Зробіть свої власні дійсно круті, обертаються,
     3D-об'єкти швидко та легко.
-  tutorial_itchstart_longdescription: Цей урок є гарною точкою вступу для дітей 2
-    або 3 класу, які вперше пробують Scratch. Вони почнуть з набору з 5 блоків, які
-    їм потрібно зібрати, щоб змусити свого персонажа виконати деякі дії.
   tutorial_hopsub_longdescription: Дізнайтеся, як поєднати програму з другом або однокласником,
     і створіть свого власного серфера в метро з персонажами Hopscotch!
-  tutorial_itchmundos_longdescription: Звіряйте Scratch, розробку для програмування.
-    Збільшуйте об'єкти та фонди, використовуйте блоки подій та здачі, для того, асоціюючи
-    їх програму.
-  tutorial_itchtenacity_longdescription: У проекті запрограмований на Scratch симулятор
-    робота, який лімпіює морські гавани.
   tutorial_kcjskiing_longdescription: 'Це все розваги та ігри, поки хтось не врізався
     в дерево… або це весела частина? Прилягайте лижі та зігніть в коліна, коли ви
     направляєте свого персонажа вниз по пагорбу застиглих перешкод, використовуючи
@@ -12063,11 +12130,8 @@ uk:
   tutorial_kodableshapes_language: Англійською
   tutorial_nasabinary_language: Англійською
   tutorial_3dmaker_language: Англійською
-  tutorial_itchstart_language: Англійською
   tutorial_hopsub_language: Китайська (спрощена), англійська, іспанська (Іспанія),
     іспанська (Мексика)
-  tutorial_itchmundos_language: Іспанська (Мексика)
-  tutorial_itchtenacity_language: Іспанська (Мексика)
   tutorial_kcjskiing_language: Англійська, Французька
   tutorial_groksecurity_language: Англійською
   tutorial_creaticode_language: Китайська (спрощена), Китайська (традиційна), Англійська
@@ -12162,10 +12226,7 @@ uk:
   tutorial_kodableshapes_string_detail_grades: Дошкільнята - Клас 5
   tutorial_nasabinary_string_detail_grades: Класи 6+
   tutorial_3dmaker_string_detail_grades: Класи 2-8
-  tutorial_itchstart_string_detail_grades: Класи 2-8
   tutorial_hopsub_string_detail_grades: Класи 2-8
-  tutorial_itchmundos_string_detail_grades: Класи 2+
-  tutorial_itchtenacity_string_detail_grades: Класи 2+
   tutorial_kcjskiing_string_detail_grades: Класи 2+
   tutorial_groksecurity_string_detail_grades: Класи 6+
   tutorial_creaticode_string_detail_grades: Класи 6+
@@ -12256,10 +12317,7 @@ uk:
   tutorial_nasabinary_string_platforms: Відключений від мережі, зчитувач екрану
   tutorial_3dmaker_string_platforms: Всі сучасні браузери, планшет Android, iPad,
     телефон Windows, телефон Android, iPhone
-  tutorial_itchstart_string_platforms: Всі сучасні браузери, iPad
   tutorial_hopsub_string_platforms: Айпад, Айфон
-  tutorial_itchmundos_string_platforms: Всі сучасні браузери, планшет Android, iPad
-  tutorial_itchtenacity_string_platforms: Всі сучасні браузери, планшет Android, iPad
   tutorial_kcjskiing_string_platforms: Всі сучасні браузери
   tutorial_groksecurity_string_platforms: Всі сучасні браузери, планшет Android, iPad,
     телефон Windows, телефон Android, iPhone
@@ -12355,10 +12413,7 @@ uk:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12448,10 +12503,7 @@ uk:
     від мови (можна викладати кількома мовами)
   tutorial_nasabinary_string_detail_programming_languages: Двійковий код
   tutorial_3dmaker_string_detail_programming_languages: Блоки
-  tutorial_itchstart_string_detail_programming_languages: Блоки
   tutorial_hopsub_string_detail_programming_languages: Хопскотч
-  tutorial_itchmundos_string_detail_programming_languages: Блоки
-  tutorial_itchtenacity_string_detail_programming_languages: Блоки
   tutorial_kcjskiing_string_detail_programming_languages: Блоки
   tutorial_groksecurity_string_detail_programming_languages: Немає - програмування
     не потрібно
@@ -13487,7 +13539,7 @@ uk:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy:  навчитися легко програмувати'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13574,6 +13626,15 @@ uk:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Танцювальна вечірка
+  tutorial_introtomlai_name: Вступ до машинного навчання
+  tutorial_computervisionai_name: Комп'ютерний зір
+  tutorial_neuralnetworksai_name: Нейронні мережі
+  tutorial_chatbotsllmai_name: Чат-боти та великі мовні моделі
+  tutorial_generativeimagesai_name: Генеративні зображення
+  tutorial_algorithmicbiasai_name: Алгоритмічні упередження
+  tutorial_codeofethicsai_name: Наш Кодекс етики AI
+  tutorial_socimpactofgenaiai_name: Суспільний вплив генеративного ШІ
   tutorial_generationai_name: Покоління ШІ
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -13747,11 +13808,11 @@ uk:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Hedy — це простий спосіб розпочати роботу з мовами
+    текстового програмування! вільний у використанні, з відкритим кодом, багатомовний,
+    ви можете використовувати Hedy своєю рідною мовою; є поступовим, тож ви можете
+    вивчити одну концепцію та її синтаксис, а час будується для класу, дозволяючи
+    вчителям повністю налаштовувати досвід своїх учнів.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -14045,7 +14106,43 @@ uk:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: 'Вирушайте в минуле, щоб створити свої винаходи на основі штучного інтелекту в новій грі Minecraft «Година програмування: Покоління ШІ». Розвивайте рішення проблем, творчість та обчислювальне мислення, орієнтуючись на відповідальний ШІ. З блоковим кодуванням чи Python, ця гра навчає основам програмування, допомагаючи творити кращий ШІ для всіх.'
+  tutorial_danceai2023_longdescription: Створіть танцювальну вечірку, щоб поділитися
+    з друзями. За участі Кеті Перрі, Мадонни, Дж. Белвіна, Сіа, Кейта Урбана, Сіари
+    і ще 25 чоловік!
+  tutorial_introtomlai_longdescription: Дізнайтеся про форму штучного інтелекту під
+    назвою машинне навчання та про те, як можна використовувати процес вирішення проблем,
+    щоб допомогти навчити робота вирішувати проблеми. Беріть участь у заходах машинного
+    навчання, де робот навчається виявляти закономірності у риб.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Дізнайтеся, як працюють нейронні мережі
+    Використовуйте віджети, щоб досліджувати нейронні мережі в руці. Подивіться відео,
+    що пояснює нейронні мережі. Нарешті обговоріть необхідність різноманітних перспектив
+    при створенні рекомендаційних систем.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Дізнайтеся, як AI може генерувати зображення,
+    а потім вивчіть дифузійний віджет AI та обговоріть, чи є ці моделі творчими чи
+    ні.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Досліджуйте вплив генеративного ШІ
+    з різних точок зору, а потім співпрацюйте як команда, щоб розробити рекомендації,
+    які відповідають найбільшим потребам усіх учасників.
+  tutorial_generationai_longdescription: 'Вирушайте в минуле, щоб створити свої винаходи
+    на основі штучного інтелекту в новій грі Minecraft «Година програмування: Покоління
+    ШІ». Розвивайте рішення проблем, творчість та обчислювальне мислення, орієнтуючись
+    на відповідальний ШІ. З блоковим кодуванням чи Python, ця гра навчає основам програмування,
+    допомагаючи творити кращий ШІ для всіх.'
   tutorial_bsimage_string_detail_grades: Класи 6+
   tutorial_bscomputing_string_detail_grades: Класи 6+
   tutorial_stackpython_string_detail_grades: Класи 6+
@@ -14147,7 +14244,7 @@ uk:
   tutorial_hwfanpage_string_detail_grades: Класи 2+
   tutorial_hwillusion_string_detail_grades: Класи 6+
   tutorial_caevolution_string_detail_grades: Класи 6+
-  tutorial_bbbusybot_string_detail_grades: Класи 6+
+  tutorial_bbbusybot_string_detail_grades: Класи 9+
   tutorial_caaifarm_string_detail_grades: Класи 6+
   tutorial_cafuture_string_detail_grades: Класи 6+
   tutorial_dmscratch_string_detail_grades: Класи 2-8
@@ -14177,7 +14274,16 @@ uk:
   tutorial_madmobile_string_detail_grades: Класи 6+
   tutorial_intelinosmile_string_detail_grades: Дошкільнята - Клас 8
   tutorial_intelinoaisign_string_detail_grades: Класи 2-8
-  tutorial_generationai_string_detail_grades: 2-5 класи (7-10 років) 6-8 класи (11-13 років) Класи від 9-го (від 14 років)
+  tutorial_danceai2023_string_detail_grades: Класи 2+
+  tutorial_introtomlai_string_detail_grades: Класи 6+
+  tutorial_computervisionai_string_detail_grades: Класи 6+
+  tutorial_neuralnetworksai_string_detail_grades: Класи 6+
+  tutorial_chatbotsllmai_string_detail_grades: Класи 6+
+  tutorial_generativeimagesai_string_detail_grades: Класи 6+
+  tutorial_algorithmicbiasai_string_detail_grades: Класи 6+
+  tutorial_codeofethicsai_string_detail_grades: Класи 6+
+  tutorial_socimpactofgenaiai_string_detail_grades: Класи 6+
+  tutorial_generationai_string_detail_grades: Класи 2+
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Безмашинна
   tutorial_stackpython_string_platforms: Всі сучасні браузери, планшет Android, iPad,
@@ -14346,7 +14452,26 @@ uk:
   tutorial_madmobile_string_platforms: Всі сучасні браузери
   tutorial_intelinosmile_string_platforms: Всі сучасні браузери, iPad
   tutorial_intelinoaisign_string_platforms: Всі сучасні браузери
-  tutorial_generationai_string_platforms: Комп'ютери (ПК з ОС Windows, Mac), Android (Chromebook), iPad
+  tutorial_danceai2023_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
+  tutorial_introtomlai_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
+  tutorial_computervisionai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_neuralnetworksai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_chatbotsllmai_string_platforms: Усі сучасні браузери, планшет на базі Android,
+    iPad, телефон на базі Android, iPhone
+  tutorial_generativeimagesai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_codeofethicsai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Усі сучасні браузери, планшет на базі
+    Android, iPad, телефон на базі Android, iPhone
+  tutorial_generationai_string_platforms: Планшет Android, iPad, телефон Windows,
+    телефон Android, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14457,7 +14582,6 @@ uk:
   tutorial_dmbeatbox_string_detail_platforms: ''
   tutorial_kinderaikibo_string_detail_platforms: Комплект роботів KIBO
   tutorial_kinderairvr_string_detail_platforms: Комплект роботів KIBO
-  tutorial_generationai_string_detail_platforms: ''
   tutorial_bbtai_string_detail_platforms: ''
   tutorial_cagenius_string_detail_platforms: ''
   tutorial_tynkerweather_string_detail_platforms: ''
@@ -14479,6 +14603,16 @@ uk:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Незалежно від мови
   tutorial_stackpython_string_detail_programming_languages: Пітон
@@ -14604,12 +14738,21 @@ uk:
   tutorial_codecombathack_string_detail_programming_languages: Незалежно від мови
   tutorial_toxicodewords_string_detail_programming_languages: Незалежно від мови
   tutorial_mitstepmisinformation_string_detail_programming_languages: Безмашинна
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Безмашинна
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Безмашинна
   tutorial_mitstepintrotoml_string_detail_programming_languages: Безмашинна
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Блоки
   tutorial_intelinoaisign_string_detail_programming_languages: Блоки
+  tutorial_danceai2023_string_detail_programming_languages: Незалежно від мови
+  tutorial_introtomlai_string_detail_programming_languages: Незалежно від мови
+  tutorial_computervisionai_string_detail_programming_language: Незалежно від мови
+  tutorial_neuralnetworksai_string_detail_programming_languages: Незалежно від мови
+  tutorial_chatbotsllmai_string_detail_programming_languages: Незалежно від мови
+  tutorial_generativeimagesai_string_detail_programming_languages: Незалежно від мови
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Незалежно від мови
+  tutorial_codeofethicsai_string_detail_programming_languages: Незалежно від мови
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Незалежно від мови
   tutorial_generationai_string_detail_programming_languages: Блоки, Python
   school_not_found_heading: Ми не змогли знайти вашу школу. Будь ласка, введіть додаткову
     інформацію.
@@ -14690,7 +14833,7 @@ uk:
   hoc_how_to_top_view_guide: Переглянути посібник для
   hoc_how_to_nav_main_aria_label: Виберіть керівництво
   hoc_how_to_nav_sidebar_aria_label: Навігація на бічній панелі
-  hoc_how_to_educators_intro_heading: How to plan your Hour of Code
+  hoc_how_to_educators_intro_heading: Як спланувати Годину коду
   hoc_how_to_educators_intro_desc: Година коду - це одногодинний вступ до інформатики,
     який використовує веселі навчальні посібники, щоб показати, що кожен може вивчити
     основи. Цього року ми піднімаємо Годину коду на нові висоти, пропонуючи можливості
@@ -14739,10 +14882,10 @@ uk:
   hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
     Hour of Code event will show your representative the impact and need for computer
     science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
+  hoc_how_to_public_officials_intro_desc_02: Щоб успішно провести "Годину коду", залучивши
+    до неї представників влади, виконайте ці завдання до того, як вони відвідають
+    вашу школу. Це завдання включає координацію з контактною особою, запрошення для
+    ЗМІ, відмову від запрошень та планування програми заходу.
   hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
   hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
     to computer science, using fun tutorials to show that anybody can learn the basics.
@@ -14753,6 +14896,10 @@ uk:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Які вимоги для проведення Години коду?
   hoc_how_to_faq_answer_prerequisites: Година коду проста у запуску — навіть для початківців.
     Вам не потрібен досвід інформатики чи викладання, щоб надихнути учнів досліджувати,
@@ -14836,7 +14983,7 @@ uk:
   hoc_how_to_step_label_register_event: Зареєструйте свій захід
   hoc_how_to_step_label_register_your_hoc: Зареєструйте свою Годину коду
   hoc_how_to_step_label_tell: Розкажіть своїм учням, школі та громаді
-  hoc_how_to_step_label_get_coding: Отримайте кодування!
+  hoc_how_to_step_label_get_coding: Починайте кодувати!
   hoc_how_to_step_label_celebrate: Відсвяткуйте
   hoc_how_to_step_label_beyond_hoc: Поза годиною коду
   hoc_how_to_step_label_prepare_your_event: Prepare for your event
@@ -14860,10 +15007,11 @@ uk:
   hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
   hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
     these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_desc_generic: Інформатика не повинна закінчуватися Годиною
+    коду! Хоча 90% батьків хочуть, щоб їхня дитина вивчала інформатику, більшість
+    шкіл все ще не викладають її. Ознайомтеся з різноманітними пропозиціями навчальних
+    програм від партнерів «Години коду» та дізнайтеся, як принести інформатику у вашу
+    школу вже сьогодні!
   hoc_how_to_step_plan_hour_desc_01: 'Ось зразок порядку денного для початку:'
   hoc_how_to_step_choose_activities_desc_01: Цього року темою Години коду є творчість
     зі штучним інтелектом (ШІ). Незалежно від того, чи це кодування нових застосунків
@@ -14907,9 +15055,9 @@ uk:
     які можна виконати без пристроїв взагалі, тому їх можна робити навіть на вулиці!
   hoc_how_to_step_educators_spread_word_desc_01: Допоможіть нам поширювати інформацію
     у вашій спільноті за допомогою [цих шаблонів електронної пошти] (%{email_url}).
-  hoc_how_to_step_educators_spread_word_desc_02: Запросіть двох колег [register](%{register_url})
-    влаштувати діяльність Години коду. Вони, в свою чергу, можуть запросити ще двох
-    колег, які можуть запросити двох колег і т.д.
+  hoc_how_to_step_educators_spread_word_desc_02: Запросіть двох колег [зареєструватись](%{register_url}),
+    щоб влаштувати Годину коду. Вони, в свою чергу, можуть запросити ще двох колег,
+    які можуть запросити двох колег і т.д.
   hoc_how_to_step_educators_spread_word_desc_03: Попросіть свого директора [провести
     загальношкільну подію] ()%{host_url}. Коли беруть участь 300 і більше дітей, ви
     можете отримати спеціальний набір для зацікавлення із футболками, плакатами, наклейками
@@ -14925,7 +15073,7 @@ uk:
     інтелект'
   hoc_how_to_step_educators_plan_hour_desc_05: '10:55-11:00: Вчитель резюмує і завершує
     захід'
-  hoc_how_to_step_educators_get_coding_desc: Спрямовуйте своїх учнів на діяльність,
+  hoc_how_to_step_educators_get_coding_desc: Скеруйте своїх учнів до діяльніості,
     наприклад, поділившись посиланням на дошці або через систему керування навчанням
     у вашому класі. Ваші учні можуть зіткнутися з проблемами - це нормально! Навчитися
     програмувати - це як вивчити нову мову; нею неможливо вільно оволодіти відразу.
@@ -14979,19 +15127,19 @@ uk:
   hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
     of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
     so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
+  hoc_how_to_step_districts_beyond_desc_01: Інформатика не повинна закінчуватися Годиною
+    коду! Щоб допомогти учням вашої громади здобути навички та знання, які підготують
+    їх до подальшого навчання та кар'єри, ознайомтеся з нашими безкоштовними веб-базованими
+    матеріалами!
+  hoc_how_to_step_districts_beyond_desc_01_v2: Інформатика не повинна закінчуватися
+    Годиною коду! Щоб допомогти учням вашої громади здобути навички та знання, які
+    підготують їх до подальшого навчання та кар'єри, ознайомтеся з різноманітними
+    навчальними програмами від партнерів Години Коду!
+  hoc_how_to_step_events_register_desc_01: Зареєструйте свою подію Години коду, щоб
+    отримати ранній доступ до інформації про нові заходи та спеціальні акції! Якщо
+    у заході візьмуть участь 300 або більше учнів, ви можете отримати спеціальний
+    набір для залучення з футболками, плакатами, наклейками на ноутбук тощо. [Поділіться
+    планом заходів для всієї школи] (%{share_url}), щоб отримати право на участь.
   hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
     to see your event, and know that your dedication is part of a worldwide movement.
   hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
@@ -15168,11 +15316,11 @@ uk:
   hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
     discuss these logistics with the teacher ahead of time to better understand their
     needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
+  hoc_how_to_step_volunteer_plan_list_01: Яка ваша роль як волонтера на заході? Якщо
+    ви працюєте в технічній сфері, вас можуть попросити поділитися особистим досвідом
+    чи історією. Чи можете ви допомогти вчителю підготуватися, виконавши вправу разом
+    заздалегідь? Чи можете ви ходити по класу, щоб відповідати на запитання або заохочувати
+    учнів під час Години коду?
   hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
     This can determine what times you need to be present and in what capacity.
   hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
@@ -15195,6 +15343,44 @@ uk:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Інформатика не повинна закінчуватися з Годиною
+    коду! Хоча 90% батьків хочуть, щоб їхні діти вивчали інформатику, у більшості
+    шкіл її досі не викладають. Щоб допомогти, партнери Години коду пропонують різноманітні
+    навчальні програми. Дізнайтеся, як принести ці пропозиції до шкіл вже сьогодні.
   hoc_ai_top_desc: Будь-хто може дізнатися про штучний інтелект, незалежно від того,
     чи ви студент у класі чи вчитель, який відкриває майбутнє навчання за допомогою
     штучного інтелекту та про нього.
@@ -15212,6 +15398,37 @@ uk:
     деяких проблем штучного інтелекту.
   hoc_ai_activities_desc: Ці абсолютно нові заходи «Година коду» знайомлять користувачів
     зі світом штучного інтелекту веселим та захоплюючим способом.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Майже 100 співробітників Code.org у відповідних синіх
     та жовтих футболках позують у конференц-залі готелю на заході компанії Codechella
     влітку 2022 року.
@@ -15825,9 +16042,10 @@ uk:
     те, що скористаємося невтомною допомогою ширшої спільноти освіти з інформатики,
     і [ми дякуємо всім партнерам та особам, які підтримували наш вплив протягом багатьох
     років] (%{partners_url})).
-  about_page_section_more_list_1: "[Річний звіт Code.org 2021] (%{report_url}) (Минулі
-    звіти: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}), [2017](%{past_url_4}),
-    [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Наші основні цінності та рекомендації щодо обміну
     повідомленнями] (%{core_url})"
   about_page_section_more_list_3: "[Наша навчальна програма та філософія педагогіки]
@@ -15981,7 +16199,7 @@ uk:
     та об'єктно-орієнтованим дизайном, поки вони вивчають мову програмування Java
     у цій безкоштовній навчальній програмі AP® Computer Science A (AP® CSA).
   middle_high_page_cs_link_1: Ознайомтеся з Дослідженнями інформатики
-  middle_high_page_cs_link_2: Ознайомтеся з принципами інформатики
+  middle_high_page_cs_link_2: Ознайомтеся з Принципами інформатики
   middle_high_page_cs_link_3: Дослідіть CSA
   elemeentary_page_main_title: Навчання у віці від 5 до 11 років
   elementary_page_main_description: Досліджуйте світ інформатики за допомогою захоплюючих

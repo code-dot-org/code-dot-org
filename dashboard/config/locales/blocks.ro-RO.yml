@@ -1074,6 +1074,12 @@ ro:
         text: "{SPRITE}spune{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} culisează către {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': lichid
+            '"solid"': solid
       KatiesBlocks_tumbling:
         text: acrobatică
       Mikelab_addBehaviorSimple:

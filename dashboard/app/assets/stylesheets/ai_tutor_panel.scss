@@ -1,0 +1,71 @@
+@import "color";
+@import "font";
+
+.ai-tutor-panel {
+  position: fixed;
+  top: 85px;
+  bottom: 20px;
+  right: 0;
+  width: 800px;
+  transition: right 0.5s;
+
+  background: $background_gray;
+
+  opacity: 0.98;
+
+  border: 5px solid $dark_teal;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+
+  /* Must appear in front of <Overlay/>, whose z-index is 1020. */
+  z-index: 1022;
+
+  .hide-handle,
+  .show-handle {
+    cursor: pointer;
+    transition: right 0.5s;
+    position: absolute;
+    right: 800px;
+    top: 45%;
+    border-radius: 10px 0 0 10px;
+    color: $white;
+    background: $dark_teal;
+    height: 30px;
+    width: 25px;
+    i {
+      line-height: 30px;
+      padding-left: 5px;
+      font-size: 20px;
+    }
+  }
+
+  .hide-handle {
+    display: block;
+  }
+
+  .show-handle {
+    display: none;
+  }
+
+  h3 {
+    padding: 5px;
+    font-size: 18px;
+    @include main-font-bold;
+    font-weight: normal;
+    color: $white;
+    background: $dark_teal;
+    margin: 0;
+  }
+
+  &.hidden {
+    right: -795px;
+    .hide-handle {
+      right: 800px;
+      display: none;
+    }
+    .show-handle {
+      right: 800px;
+      display: block;
+    }
+  }
+}

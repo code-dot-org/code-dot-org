@@ -4,24 +4,22 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# Unit 7 - AI and Machine Learning
+# Creating Apps with Devices - Lesson 2: Physical Designs
 
-> ##### <a href="https://studio.code.org/s/csd7-2023" target="blank">Unit 7 - AI and Machine Learning</a>
 
-## Unit Overview
+> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/2" target="blank">U6L2 Lesson Plan: Physical Designs</a> <br /> **Note:** This lesson does not require students to use a device. Therefore, the lesson is the same across Unit 6A (Circuit Playground) and Unit 6B (micro:bit). We've linked to the Unit 6A version of the lesson plan for you here.
 
-##### In this unit, students learn how computers can find patterns in data to make decisions. They use the Problem Solving Process for machine learning to define a problem, prepare their data, train a model, then test and evaluate their model for accuracy and potential bias. Students explore a variety of scenarios and datasets that lend themselves to machine learning. They also explore some of the modern problems with machine learning, especially around bias and impact.
+## Investigation Goal
 
-##### Students will:
-* ##### Test and evaluate machine learning models for accuracy and potential bias.
-* ##### Learn how machine learning models use data to make decisions.
-* ##### Create a machine learning model to solve a problem.
-* ##### Create an app that uses their machine learning model.
+##### Investigate the design of different physical devices and their apps
 
 ## Investigation Tasks
 
-* ##### Review the Unit 7 page
-* ##### View the weekly lesson layout using the calendar
+* ##### Review the "Recommending Physical Designs" section in the Activity of the Lesson Plan
+* ##### Open up the Activity Guide and read through the "Choosing The Physical Design" section
+* ##### Take a look at the prototypes in Level 1 of the lesson. Which prototypes would you recommend to which user?
+
+##### If you'd like, you can read through the Activity Guide exemplar (linked in the "For the teachers" section of the Lesson Plan) to get an idea of which prototypes can be assigned to which user
 
 
 

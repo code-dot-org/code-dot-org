@@ -229,6 +229,7 @@ cs:
   for_students_teacher_led_learning: 'Pro studenty: Učení vedené učitelem'
   for_students_teacher_led_lessons: 'Pro studenty: Lekce vedené učitelem'
   professional_development: Profesní rozvoj
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Vyučujte informatiku
   explore_our_curriculum: Prozkoumejte naše učební osnovy
   start_professional_learning: Začněte se profesně vzdělávat
@@ -318,6 +319,7 @@ cs:
   call_to_action_explore_all_hoc_activities: Prozkoumejte všechny aktivity Hodiny
     programování na webu Code.org
   call_to_action_start_dance_party: Spusťte taneční párty
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: Začátek druhé části
   call_to_action_start_unplugged_activity: Spusťte odpojenou aktivitu
   call_to_action_view_promo_resources: Zobrazit propagační zdroje
@@ -329,6 +331,8 @@ cs:
   call_to_action_try_hoc_ai_activities: Vyzkoušejte aktivity Hour of Code AI
   call_to_action_explore_activities: Prozkoumejte aktivity
   call_to_action_explore_ai: Prozkoumejte AI
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Prozkoumat nástroj
   call_to_action_explore_unit: Prozkoumejte jednotku
   call_to_action_explore_curriculum: Prozkoumejte kurikulum
   call_to_action_explore_curricula: Prozkoumat učební osnovy
@@ -430,6 +434,15 @@ cs:
   call_to_action_learn_about_ai: Učte se o umělé inteligenci
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Začínáme
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Podívejte se na návod pro pedagogy
   aria_label_call_to_action_hoc_how_to_companies: Zobrazit průvodce návody pro společnosti
   aria_label_call_to_action_hoc_how_to_districts: Zobrazit průvodce návody pro okresy
@@ -453,6 +466,8 @@ cs:
     výuky informatiky
   aria_label_call_to_action_teaching_problem_solving: Spusťte program profesního učení
     pro řešení problémů a výpočetní techniku
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Spusťte profesionální vzdělávací program
     Teaching Computer Science Connections
   aria_label_call_to_action_teaching_ai: Spusťte program odborného učení výuky umělé
@@ -557,6 +572,16 @@ cs:
     pro studenty
   aria_label_call_to_action_view_more_cs_resources: Zobrazit další zdroje z oblasti
     informatiky
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Profesionální vzdělávací program Code.org
   curriculum_name_csf: Základy informatiky
   curriculum_name_csf_02: Jakékoli základy CS (Kurz A-F)
@@ -575,6 +600,7 @@ cs:
   curriculum_name_csd: Objevy informatiky
   curriculum_name_csp: Principy informatiky
   curriculum_name_problem_solving: Řešení problémů a práce s počítačem
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Napojení na počítačovou vědu
   curriculum_name_csa: AP® Počítačová věda A
   curriculum_name_csa_ai: Softwarové inženýrství a počítačové vidění
@@ -705,8 +731,10 @@ cs:
   module_label_languages: 'Podporované jazyky:'
   module_label_accessibility_features: 'Přístupnost:'
   module_label_accessibility_features_full: 'Funkce usnadnění přístupu:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Nástroj pro učitele
   module_label_educator_course: Kurz pro učitele
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Nástroj pro studenty
   module_label_student_product: Produkt
   module_label_student_content_resources: Obsah a zdroje
@@ -715,6 +743,7 @@ cs:
   module_label_available_now: Nyní k dispozici
   module_label_video_series: Video série
   module_label_self_paced: Modul s vlastním tempem
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -756,6 +785,7 @@ cs:
   module_duration_1_hr: 1 hodina
   module_duration_2_hrs: 2 hodiny
   module_duration_3_hrs: 3 hodiny
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 hodin
   module_duration_5_hrs_plus: 5+ hodin
   module_duration_8_hrs: 8 hodin
@@ -777,6 +807,7 @@ cs:
   module_label_teaching_csd: Výuka objevů informatiky
   module_label_teaching_csp: Výuka principů informatiky
   module_label_teaching_problem_solving: Výuka řešení problémů a výpočetní techniky
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Výuka propojení informatiky
   module_label_teaching_ai: Výuka umělé inteligence a strojového učení
   module_label_teaching_maker_cp: Výuka vytváření aplikací pomocí zařízení (Circuit
@@ -846,6 +877,12 @@ cs:
   heading_attend_free_workshop: Zúčastněte se bezplatného workshopu pro studenty
   heading_access_more_cs_resources: Získejte přístup k dalším zdrojům z oblasti informatiky
   heading_available_on_code_dot_org: Dostupné na Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Pokud jste studentem střední školy, který je nadšený povzbuzováním
     více mladých žen, aby ve vaší škole studovaly informatiku, pak tě potřebujeme!
   cs_ambassador_desc: Počítačová věda se dotýká každého oboru, včetně medicíny, zábavy,
@@ -916,6 +953,19 @@ cs:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Prezenční i virtuální workshopy
     začínají letos v létě.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Jen do toho, odpojte se (aspoň na chvíli)!
   no_devices_section_desc: Učení informatiky nemusí zahrnovat jen sezení před obrazovkou,
     a možnost naučit se základy by měl mít každý, bez ohledu na to, zda má přístup
@@ -941,6 +991,11 @@ cs:
   subscribe_form_section_desc_csp: Přihlaste se k odběru měsíčních e-mailů o principech
     informatiky Code.org a získejte užitečné připomenutí, tipy a aktualizace zasílané
     přímo do vaší doručené pošty.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Z odběru se můžete kdykoli odhlásit.
   hoc_page_what_is_hoc_heading: 'Co je to Hodina programování? '
   hoc_page_desc: "[Hodina programování](%{hoc_url}) je globální hnutí oslovující desítky
@@ -1143,6 +1198,7 @@ cs:
     perspektiv a poté spolupracujte jako tým a vypracujte pokyny, které řeší nejvíce
     potřeb všech účastníků.
   ai_curriculum_btn_aria_label_06: Zobrazit společenský dopad generativní umělé inteligence
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Co říkají učitelé o AI s Code.org:'
   ai_carousel_quote_01: Tato lekce také dala mým studentům příležitost vidět, že v
     klasifikačních systémech existuje prvek názoru. Později, když jsme začali vidět,
@@ -1337,6 +1393,68 @@ cs:
   ai_vid_computervision_caption: Počítačové vidění
   ai_vid_ethics1_caption: 'Etika a AI: Rovný přístup a algoritmická zkreslení'
   ai_vid_ethics2_caption: 'Etika a umělá inteligence: Soukromí a budoucnost práce'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Vlastní profesionální učení pro pedagogy
   self_paced_pl_hero_desc: Nabídky profesionálního učení na podporu učitelů v každé
     fázi jejich cesty výuky informatiky.
@@ -2935,6 +3053,7 @@ cs:
     přečtěte návod jak na to](%{howto_url})'
   tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Taneční párty
+  tutorial_dancepartyai_name: 'Taneční párty: AI Edition'
   tutorial_chibitronics_name: 'Chibitronics: Osvětlený příběh'
   tutorial_athlete_name: Naprogramuj si svou vlastní sportovní hru
   tutorial_moana_name: 'Moana: Hledání cesty s kódem'
@@ -3537,19 +3656,14 @@ cs:
   tutorial_csfirstdialogue_name: Dialog
   tutorial_codemonkeybeaver_name: Bobr Achiever
   tutorial_codestersdistance_name: 'Kodesters: Sociální distancování skřítků'
-  tutorial_itchspace_name: 'ITchCode: Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: SFX Magie
   tutorial_vidcodemagices_name: SFX Magie
   tutorial_codespeakmeal_name: Kód aplikace Zdravé jídlo
-  tutorial_itchfish_name: 'ITchCode: Fish Scratch hra'
   tutorial_bsdwebsite_name: Můj oblíbený web
   tutorial_codespeaktime_name: Kódujte časovou kapsli ve Scratch
-  tutorial_itchwebcam_name: 'ItChCode: Webová kamera Rozšířená realita'
-  tutorial_itchball_name: 'ItCode: Skákací míč'
   tutorial_ttrace_name: Podmínka závodu
   tutorial_plethora_name: 'Plethora: Příčina a následek'
   tutorial_educodesecret_name: Odhalte tajemství agentury!
-  tutorial_itchshapes_name: 'ItCode: Tvary a úhly'
   tutorial_codeguppytext_name: Úvod do kódování založeného na textu
   tutorial_vidcodeplastiche_name: Plastové znečištění PSA
   tutorial_educativechatbot_name: Sestavte si vlastního chatbota v Pythonu
@@ -3572,8 +3686,6 @@ cs:
   tutorial_codecapture_name: Naučte se programovat pomocí JavaScriptu v Jiffy
   tutorial_codehslitter_name: Kódování pro komunitu bez odpadu
   tutorial_bsdocean_name: Život pod vodou
-  tutorial_itchplatformer_name: 'ITchCode: Výukový program pro plošinovku Scratch
-    3.0'
   tutorial_codejika_name: 'CodeJika: 5minutová webová stránka'
   tutorial_gamefrootclicker_name: Naučte se proměnné. Kódujte svou vlastní hru Clicker.
   tutorial_rmagicequity_name: Vlastní kapitál vs. rovnost
@@ -3625,6 +3737,9 @@ cs:
   tutorial_meeempathy_name: Minecraftový příběh dvou vesnic
   tutorial_danceparty_shortdescription: Nakóduj Taneční party a sdílej ji s přáteli.
     Účinkují Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 dalších!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Naprogramujte papírový obvod, abyste osvětlili
     svůj vlastní příběh.
   tutorial_athlete_shortdescription: Vyber si mezi vytvořením basketbalové hry nebo
@@ -4803,6 +4918,9 @@ cs:
     Jonas Brothers a mnoho dalších!
   tutorial_danceparty_longdescription: Nakóduj Taneční party a sdílej ji s přáteli.
     Účinkují Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 dalších!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Naprogramujte papírový obvod, abyste osvětlili
     svůj vlastní příběh.
   tutorial_athlete_longdescription: Vyber si mezi vytvořením basketbalové hry nebo
@@ -7274,20 +7392,12 @@ cs:
   tutorial_codestersdistance_longdescription: Naučte se základy kódování v Pythonu,
     poté vytvořte program, který vypočítá vzdálenost mezi dvěma skřítky, abyste se
     ujistili, že se distancují od společnosti nebo potřebují nosit masku.
-  tutorial_itchspace_longdescription: Tento tutoriál vás provede vytvořením klasické
-    hry Space Invaders pomocí programovacího jazyka Scratch MIT. Přihlaste se k odběru
-    kanálu RokCoder YouTube a získejte další videa a výukové programy založené na
-    Scratch! Každé video je výukový program o velikosti kousnutí (přibližně deset
-    minut dlouhý), který obsahuje své vlastní konkrétní konečné cíle. Konečným výsledkem
-    je vysoce kvalitní arkádová hra Scratch.
   tutorial_vidcodemagic_longdescription: Pomocí smyčky zajistte, aby se záblesky zobrazovaly
     náhodně kolem obrazovky.
   tutorial_vidcodemagices_longdescription: Pomocí smyčky zajistte, aby se záblesky
     zobrazovaly náhodně kolem obrazovky.
   tutorial_codespeakmeal_longdescription: Naučte se kódovat aplikaci, která pomáhá
     uživatelům rozhodovat o zdravém jídle.
-  tutorial_itchfish_longdescription: Výukový program Scratch 3.0 pro vytvoření hry
-    s pronásledováním žraloků a požíráním ryb, když je potápěč náhodou sežrán.
   tutorial_bsdwebsite_longdescription: 'Tento kurz umožňuje studentům používat kód
     jako způsob sdílení toho, co je pro ně důležité nebo zajímavé. Mohou sledovat
     lekci nebo vytvářet jedinečné projekty při učení HTML, CSS a JavaScript. Jsou
@@ -7296,10 +7406,6 @@ cs:
     nebo které rádi děláte. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Naučte se, jak kódovat digitální časovou
     kapsli, abyste mohli nahrávat a přemýšlet o svém životě právě teď.
-  tutorial_itchwebcam_longdescription: Zjistěte více o rozšířené realitě a vytvořte
-    si vlastní virtuální prostor rozšířené reality.
-  tutorial_itchball_longdescription: Získejte míč, který se odrazí po obrazovce. Zjistěte
-    více o smyčkách a kondicionálech ve smyčkách.
   tutorial_ttrace_longdescription: Voláním funkcí a navrhováním tříd si hráči naprogramují
     své vlastní závodní auto tak, aby bylo rychlé, hbité a silné; během závodů pak
     mohou hacknout vozidla svých konkurentů, aby ovládali své ovládání.
@@ -7309,8 +7415,6 @@ cs:
     a ponořte se hlouběji do učení, pokud prohlášení, řetězce, smyčky pro vstup. Pomozte
     agentovi Smithovi najít viníky a nakonfigurovat operační systém agentury pro nové
     uživatele pomocí Pythonu.
-  tutorial_itchshapes_longdescription: Naučte se kreslit tvary v Scratch. Dozvíte
-    se také, jak vypočítat, kolik musíte otočit pro jakýkoli tvar.
   tutorial_codeguppytext_longdescription: Naučte se základy kódování založeného na
     textu vytvořením prvního programu v online editoru kódování.
   tutorial_vidcodeplastiche_longdescription: Problém plastů zaplňujících oceány se
@@ -7388,8 +7492,6 @@ cs:
   tutorial_bsdocean_longdescription: Život pod vodou vrhá světlo na naléhavý problém,
     kterému dnes čelíme - naše životní prostředí. Tento projekt se zaměřuje na to,
     aby vás vedl k kódování vaší vlastní webové stránky o ochraně našich vod.
-  tutorial_itchplatformer_longdescription: Snadno sledovatelný návod, jak vytvořit
-    jednoduchou plošinovku pomocí Scratch.
   tutorial_codejika_longdescription: Skvělý úvod do kódování pomocí HTML a CSS. Kódujte
     několik řádků, podívejte se na okamžitý výstup, aniž byste se nechali chytit do
     Hows and Whys vytvořením pěkné vstupní stránky s dvoubarevným přechodovým pozadím,
@@ -7582,6 +7684,7 @@ cs:
     výjimeční.
   tutorial_dance2019_string_detail_grades: Stupně 2 a vyšší
   tutorial_danceparty_string_detail_grades: Stupně 2 a vyšší
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: Třídy 2-5
   tutorial_athlete_string_detail_grades: Stupně 2 a vyšší
   tutorial_moana_string_detail_grades: Stupně 2 a vyšší
@@ -8178,19 +8281,14 @@ cs:
   tutorial_csfirstdialogue_string_detail_grades: Pro 2.-8. třídu
   tutorial_codemonkeybeaver_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_codestersdistance_string_detail_grades: Od 6. třídy
-  tutorial_itchspace_string_detail_grades: Od 6. třídy
   tutorial_vidcodemagic_string_detail_grades: Stupně 2 a vyšší
   tutorial_vidcodemagices_string_detail_grades: Stupně 2 a vyšší
   tutorial_codespeakmeal_string_detail_grades: Od 6. třídy
-  tutorial_itchfish_string_detail_grades: Pro 2.-8. třídu
   tutorial_bsdwebsite_string_detail_grades: Od 6. třídy
   tutorial_codespeaktime_string_detail_grades: Pro 2.-8. třídu
-  tutorial_itchwebcam_string_detail_grades: Od 6. třídy
-  tutorial_itchball_string_detail_grades: Pro 2.-8. třídu
   tutorial_ttrace_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_plethora_string_detail_grades: Stupně 2 a vyšší
   tutorial_educodesecret_string_detail_grades: Od 6. třídy
-  tutorial_itchshapes_string_detail_grades: Od 6. třídy
   tutorial_codeguppytext_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_vidcodeplastiche_string_detail_grades: Od 6. třídy
   tutorial_educativechatbot_string_detail_grades: Stupně 9 a vyšší
@@ -8212,7 +8310,6 @@ cs:
   tutorial_codecapture_string_detail_grades: Od 6. třídy
   tutorial_codehslitter_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_bsdocean_string_detail_grades: 6.–8. třída (11–13 let)
-  tutorial_itchplatformer_string_detail_grades: Od 6. třídy
   tutorial_codejika_string_detail_grades: Od 6. třídy
   tutorial_gamefrootclicker_string_detail_grades: 6.–8. třída (11–13 let)
   tutorial_rmagicequity_string_detail_grades: 6.–8. třída (11–13 let)
@@ -8265,6 +8362,8 @@ cs:
   tutorial_dance2019_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Unplugged
   tutorial_danceparty_string_platforms: Všechny moderní prohlížeče, Android tablet,
+    iPad
+  tutorial_dancepartyai_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad
   tutorial_chibitronics_string_platforms: Všechny moderní prohlížeče
   tutorial_athlete_string_platforms: Všechny moderní prohlížeče
@@ -9047,23 +9146,17 @@ cs:
   tutorial_codemonkeybeaver_string_platforms: Všechny moderní prohlížeče, Android
     tablet, iPad
   tutorial_codestersdistance_string_platforms: Všechny moderní prohlížeče
-  tutorial_itchspace_string_platforms: Všechny moderní prohlížeče
   tutorial_vidcodemagic_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Čtečka obrazovky
   tutorial_vidcodemagices_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Čtečka obrazovky
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: Všechny moderní prohlížeče
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: Všechny moderní prohlížeče, Android tablet,
-    iPad
-  tutorial_itchball_string_platforms: Všechny moderní prohlížeče
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad
   tutorial_educodesecret_string_platforms: Všechny moderní prohlížeče
-  tutorial_itchshapes_string_platforms: Všechny moderní prohlížeče
   tutorial_codeguppytext_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad
   tutorial_vidcodeplastiche_string_platforms: Všechny moderní prohlížeče, iPad
@@ -9092,7 +9185,6 @@ cs:
   tutorial_codehslitter_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Windows phone, telefon Android, iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: Všechny moderní prohlížeče
   tutorial_codejika_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Windows phone, telefon Android, iPhone
   tutorial_gamefrootclicker_string_platforms: Všechny moderní prohlížeče, iPad
@@ -9151,6 +9243,7 @@ cs:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Chibi LED diody
     s čipem a obvodem
   tutorial_athlete_string_detail_platforms: ''
@@ -9750,19 +9843,14 @@ cs:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -9784,7 +9872,6 @@ cs:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -9838,6 +9925,7 @@ cs:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloky
   tutorial_danceparty_string_detail_programming_languages: Bloky
+  tutorial_dancepartyai_string_detail_programming_languages: Bloky
   tutorial_chibitronics_string_detail_programming_languages: Bloky
   tutorial_athlete_string_detail_programming_languages: Bloky
   tutorial_moana_string_detail_programming_languages: Bloky
@@ -10469,20 +10557,15 @@ cs:
   tutorial_csfirstdialogue_string_detail_programming_languages: Bloky, škrábance
   tutorial_codemonkeybeaver_string_detail_programming_languages: Bloky
   tutorial_codestersdistance_string_detail_programming_languages: Krajta
-  tutorial_itchspace_string_detail_programming_languages: Bloky
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Bloky
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Bloky
-  tutorial_itchwebcam_string_detail_programming_languages: Bloky
-  tutorial_itchball_string_detail_programming_languages: Bloky
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Jazykově nezávislý (lze vyučovat
     ve více jazycích)
   tutorial_educodesecret_string_detail_programming_languages: Krajta
-  tutorial_itchshapes_string_detail_programming_languages: Bloky
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Krajta
@@ -10507,7 +10590,6 @@ cs:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Bloky
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Bloky
   tutorial_rmagicequity_string_detail_programming_languages: Bloky, JavaScript
@@ -11470,10 +11552,7 @@ cs:
   tutorial_kodableshapes_name: Vytvářejte tvary pomocí kódu
   tutorial_nasabinary_name: 'Binární kód: Jak mluvit s kosmickou lodí'
   tutorial_3dmaker_name: 3D Maker
-  tutorial_itchstart_name: 'ItCode: Scratch 5 Block Starter'
   tutorial_hopsub_name: Budujte Subway Surfers s přítelem
-  tutorial_itchmundos_name: Los mundos en mi Mundo_E2
-  tutorial_itchtenacity_name: Houževnatost
   tutorial_kcjskiing_name: 'Sport + Kód: Lyžování'
   tutorial_groksecurity_name: 'Kybernetická bezpečnost: Obrana proti temným kloboukům'
   tutorial_creaticode_name: 3D programování pomocí Scratch Blocks
@@ -11608,16 +11687,8 @@ cs:
     na jmenovce, náramek, špendlík, nebo dokonce zvuk.
   tutorial_3dmaker_longdescription: Vytvořte si své vlastní opravdu skvělé, otočné
     3D objekty rychle a snadno.
-  tutorial_itchstart_longdescription: Tato lekce je dobrým vstupním bodem pro děti
-    třídy 2 nebo 3, které právě zkouší Scratch vůbec poprvé. Začnou se sadou 5 bloků,
-    které musí dát dohromady, aby jejich postava provedla některé akce.
   tutorial_hopsub_longdescription: Naučte se spárovat program s přítelem nebo spolužákem,
     a vytvořte si vlastního surfaře v metru s postavami Hopscotch!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, una herramienta pro programar.
-    Agregarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
-    a su program.
-  tutorial_itchtenacity_longdescription: Tento program je Scratch el simulador de
-    un robot que limpia las aguas marinas.
   tutorial_kcjskiing_longdescription: 'Je to všechno zábava a hry, dokud někdo nenarazí
     do stromu… nebo JE to zábavná část? Připoutejte si tyto lyže a ohněte se na kolena,
     když budete vést svou postavu z kopce zamrzlých překážek pomocí kódu v této aktivitě
@@ -11900,11 +11971,8 @@ cs:
   tutorial_kodableshapes_language: Čeština
   tutorial_nasabinary_language: Čeština
   tutorial_3dmaker_language: Čeština
-  tutorial_itchstart_language: Čeština
   tutorial_hopsub_language: Čínština (zjednodušená), Angličtina, Španělština (Španělsko),
     Španělština (Mexiko)
-  tutorial_itchmundos_language: Španělština (Mexiko)
-  tutorial_itchtenacity_language: Španělština (Mexiko)
   tutorial_kcjskiing_language: Angličtina, Francouzština
   tutorial_groksecurity_language: Čeština
   tutorial_creaticode_language: Čínština (zjednodušená), Čínština (tradiční), Angličtina
@@ -12000,10 +12068,7 @@ cs:
   tutorial_kodableshapes_string_detail_grades: Předběžný čtenář - stupeň 5
   tutorial_nasabinary_string_detail_grades: Od 6. třídy
   tutorial_3dmaker_string_detail_grades: Pro 2.-8. třídu
-  tutorial_itchstart_string_detail_grades: Pro 2.-8. třídu
   tutorial_hopsub_string_detail_grades: Pro 2.-8. třídu
-  tutorial_itchmundos_string_detail_grades: Stupně 2 a vyšší
-  tutorial_itchtenacity_string_detail_grades: Stupně 2 a vyšší
   tutorial_kcjskiing_string_detail_grades: Stupně 2 a vyšší
   tutorial_groksecurity_string_detail_grades: Od 6. třídy
   tutorial_creaticode_string_detail_grades: Od 6. třídy
@@ -12094,12 +12159,7 @@ cs:
   tutorial_nasabinary_string_platforms: Odpojeno, Čtečka obrazovky
   tutorial_3dmaker_string_platforms: Všechny moderní prohlížeče, Android tablet, iPad,
     Windows phone, telefon Android, iPhone
-  tutorial_itchstart_string_platforms: Všechny moderní prohlížeče, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Všechny moderní prohlížeče, Android tablet,
-    iPad
-  tutorial_itchtenacity_string_platforms: Všechny moderní prohlížeče, Android tablet,
-    iPad
   tutorial_kcjskiing_string_platforms: Všechny moderní prohlížeče
   tutorial_groksecurity_string_platforms: Všechny moderní prohlížeče, Android tablet,
     iPad, Windows phone, telefon Android, iPhone
@@ -12196,10 +12256,7 @@ cs:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12289,10 +12346,7 @@ cs:
     nezávislý (lze vyučovat ve více jazycích)
   tutorial_nasabinary_string_detail_programming_languages: Binární kód
   tutorial_3dmaker_string_detail_programming_languages: Bloky
-  tutorial_itchstart_string_detail_programming_languages: Bloky
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Bloky
-  tutorial_itchtenacity_string_detail_programming_languages: Bloky
   tutorial_kcjskiing_string_detail_programming_languages: Bloky
   tutorial_groksecurity_string_detail_programming_languages: Žádné - není nutné žádné
     programování
@@ -13306,7 +13360,7 @@ cs:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy: naučit se snadno programovat'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -13393,6 +13447,15 @@ cs:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Taneční párty
+  tutorial_introtomlai_name: Úvod do strojového učení
+  tutorial_computervisionai_name: Počítačové vidění
+  tutorial_neuralnetworksai_name: Neuronové sítě
+  tutorial_chatbotsllmai_name: Chatboti a velké jazykové modely
+  tutorial_generativeimagesai_name: Generativní obrázky
+  tutorial_algorithmicbiasai_name: Algoritmické zkreslení
+  tutorial_codeofethicsai_name: Náš etický kodex AI
+  tutorial_socimpactofgenaiai_name: Společenský dopad generativní AI
   tutorial_generationai_name: Generace umělé inteligence
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -13566,11 +13629,11 @@ cs:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Hedy je snadný způsob, jak začít s textovými
+    programovacími jazyky! je zdarma k použití, open source, vícejazyčný, můžete používat
+    Hedy ve svém vlastním jazyce; je postupná, takže se můžete naučit jeden koncept
+    a jeho syntaxi a čas je vytvořen pro třídu, což umožňuje učitelům plně přizpůsobit
+    zkušenosti svých studentů.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -13864,7 +13927,42 @@ cs:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: 'Vydej se na cestu časem a vytvoř vynálezy poháněné umělou inteligencí v nové hře Minecraft Hodina kódu: Generace umělé inteligence. Využij řešení problémů, tvořivost a počítačové myšlení s principy zodpovědné umělé inteligence. Díky kódování v blocích nebo Pythonu se v Hodině kódu může každý naučit základy kódování a vytváření lepší umělé inteligence pro všechny.'
+  tutorial_danceai2023_longdescription: Nakóduj Taneční party a sdílej ji s přáteli.
+    Účinkují Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, a 25 dalších!
+  tutorial_introtomlai_longdescription: Zjistěte více o formě umělé inteligence zvané
+    strojové učení a o tom, jak mohou pomocí procesu řešení problémů pomoci vycvičit
+    robota k řešení problémů. Zúčastněte se aktivit strojového učení, kde se robot
+    učí detekovat vzorce u ryb.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Zjistěte, jak fungují neuronové sítě.
+    Pomocí widgetů můžete prozkoumat neuronové sítě v ruce. Podívejte se na video
+    vysvětlující neuronové sítě. Nakonec diskutujte o potřebě různých perspektiv při
+    vytváření systémů doporučení.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Zjistěte, jak umělá inteligence může
+    generovat obrázky, poté prozkoumejte widget pro rozptýlení AI a diskutujte o tom,
+    zda jsou tyto modely kreativní.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Prozkoumejte dopad generativní umělé
+    inteligence z různých perspektiv a poté spolupracujte jako tým a vypracujte pokyny,
+    které řeší nejvíce potřeb všech účastníků.
+  tutorial_generationai_longdescription: 'Vydej se na cestu časem a vytvoř vynálezy
+    poháněné umělou inteligencí v nové hře Minecraft Hodina kódu: Generace umělé inteligence.
+    Využij řešení problémů, tvořivost a počítačové myšlení s principy zodpovědné umělé
+    inteligence. Díky kódování v blocích nebo Pythonu se v Hodině kódu může každý
+    naučit základy kódování a vytváření lepší umělé inteligence pro všechny.'
   tutorial_bsimage_string_detail_grades: Od 6. třídy
   tutorial_bscomputing_string_detail_grades: Od 6. třídy
   tutorial_stackpython_string_detail_grades: Od 6. třídy
@@ -13966,7 +14064,7 @@ cs:
   tutorial_hwfanpage_string_detail_grades: Stupně 2 a vyšší
   tutorial_hwillusion_string_detail_grades: Od 6. třídy
   tutorial_caevolution_string_detail_grades: Od 6. třídy
-  tutorial_bbbusybot_string_detail_grades: Od 6. třídy
+  tutorial_bbbusybot_string_detail_grades: Stupně 9 a vyšší
   tutorial_caaifarm_string_detail_grades: Od 6. třídy
   tutorial_cafuture_string_detail_grades: Od 6. třídy
   tutorial_dmscratch_string_detail_grades: Pro 2.-8. třídu
@@ -13996,7 +14094,16 @@ cs:
   tutorial_madmobile_string_detail_grades: Od 6. třídy
   tutorial_intelinosmile_string_detail_grades: Předběžný čtenář - stupeň 8
   tutorial_intelinoaisign_string_detail_grades: Pro 2.-8. třídu
-  tutorial_generationai_string_detail_grades: Stupeň 2–5 (věk 7–10) Stupeň 6-8 (věk 11–13) Stupeň 9+ (věk 14+)
+  tutorial_danceai2023_string_detail_grades: Stupně 2 a vyšší
+  tutorial_introtomlai_string_detail_grades: Od 6. třídy
+  tutorial_computervisionai_string_detail_grades: Od 6. třídy
+  tutorial_neuralnetworksai_string_detail_grades: Od 6. třídy
+  tutorial_chatbotsllmai_string_detail_grades: Od 6. třídy
+  tutorial_generativeimagesai_string_detail_grades: Od 6. třídy
+  tutorial_algorithmicbiasai_string_detail_grades: Od 6. třídy
+  tutorial_codeofethicsai_string_detail_grades: Od 6. třídy
+  tutorial_socimpactofgenaiai_string_detail_grades: Od 6. třídy
+  tutorial_generationai_string_detail_grades: Stupně 2 a vyšší
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Nepřipojený
   tutorial_stackpython_string_platforms: Všechny moderní prohlížeče, Android tablet,
@@ -14167,7 +14274,26 @@ cs:
   tutorial_madmobile_string_platforms: Všechny moderní prohlížeče
   tutorial_intelinosmile_string_platforms: Všechny moderní prohlížeče, iPad
   tutorial_intelinoaisign_string_platforms: Všechny moderní prohlížeče
-  tutorial_generationai_string_platforms: Počítače (Windows PC, Mac), Android (Chromebooky), iPad
+  tutorial_danceai2023_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_introtomlai_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_computervisionai_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_neuralnetworksai_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_chatbotsllmai_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_generativeimagesai_string_platforms: Všechny moderní prohlížeče, tablet
+    Android, iPad, telefon Android, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Všechny moderní prohlížeče, tablet
+    Android, iPad, telefon Android, iPhone
+  tutorial_codeofethicsai_string_platforms: Všechny moderní prohlížeče, tablet Android,
+    iPad, telefon Android, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Všechny moderní prohlížeče, tablet
+    Android, iPad, telefon Android, iPhone
+  tutorial_generationai_string_platforms: Android tablet, iPad, Windows telefon, telefon
+    Android, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14299,6 +14425,15 @@ cs:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
   tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Nezáleží na jazyce
@@ -14425,13 +14560,22 @@ cs:
   tutorial_codecombathack_string_detail_programming_languages: Nezáleží na jazyce
   tutorial_toxicodewords_string_detail_programming_languages: Nezáleží na jazyce
   tutorial_mitstepmisinformation_string_detail_programming_languages: Nepřipojený
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Nepřipojený
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Nepřipojený
   tutorial_mitstepintrotoml_string_detail_programming_languages: Nepřipojený
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Bloky
   tutorial_intelinoaisign_string_detail_programming_languages: Bloky
-  tutorial_generationai_string_detail_programming_languages: Bloky, JavaScript
+  tutorial_danceai2023_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_introtomlai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_computervisionai_string_detail_programming_language: Nezáleží na jazyce
+  tutorial_neuralnetworksai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_chatbotsllmai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_generativeimagesai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_codeofethicsai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Nezáleží na jazyce
+  tutorial_generationai_string_detail_programming_languages: Bloky, Python
   school_not_found_heading: Nemohli jsme najít vaši školu. Zadejte více informací.
   school_name: Název školy
   school_name_error: Název školy je povinný.
@@ -14572,6 +14716,10 @@ cs:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Jaké jsou předpoklady pro provedení Hodiny
     kódu?
   hoc_how_to_faq_answer_prerequisites: Hodina kódu je jednoduchá na spuštění - dokonce
@@ -15012,6 +15160,44 @@ cs:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: O umělé inteligenci se může dozvědět kdokoli, ať už jste student
     ve třídě nebo pedagog, který odemyká budoucnost výuky s AI a o ní.
   hoc_ai_how_ai_works_video_series_desc: Tato série krátkých videí vás seznámí s tím,
@@ -15027,6 +15213,37 @@ cs:
     problémů umělé inteligence.
   hoc_ai_activities_desc: Tyto zcela nové aktivity Hodiny kódu představí uživatelům
     svět umělé inteligence zábavným a poutavým způsobem.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Téměř 100 zaměstnanců Code.org v odpovídajících modrých
     a žlutých tričkách pózuje v hotelové konferenční místnosti pro firemní letní akci
     Codechella 2022.
@@ -15635,9 +15852,10 @@ cs:
     a šířit vzdělávání v oblasti informatiky. Jsme vděční, že můžeme těžit z neúnavné
     pomoci širší komunity vzdělávání v oblasti informatiky, a [děkujeme všem partnerům
     a jednotlivcům, kteří v průběhu let podporovali náš dopad] (%{partners_url})).
-  about_page_section_more_list_1: "[Výroční zpráva Code.org 2021] (%{report_url})
-    (Minulé zprávy: [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Naše základní hodnoty a pokyny pro zasílání zpráv]
     (%{core_url})"
   about_page_section_more_list_3: "[Naše učební osnovy a filozofie pedagogiky] (%{curriculum_url})"

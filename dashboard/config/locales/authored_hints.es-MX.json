@@ -14536,56 +14536,56 @@
           "Hint1": "¡Necesitamos más ranas! Cambia el número de ranas para que sea más de 0."
         },
         "csc_ecosystems_ocean_algae_2023": {
-          "Connect": "Asegúrese de que el bloque eat esté conectado al bloque de eventos. \n\n¡Deberían juntarse como piezas de rompecabezas!"
+          "Connect": "Asegúrate de que el bloque comer está conectado al bloque evento. \n\n¡Deberían encajar como piezas de puzzle."
         },
         "csc_ecosystems_ocean_boat_2023": {
-          "Catch": "Usa el bloque de objetos de captura para que el bote atrapa a los peces",
-          "CatchUnder": "El bloque de objetos de captura debe estar\nconectado debajo de los barcos toca evento de \npeces."
+          "Catch": "Usa el bloque de objeto de captura para que el bote atrapa a los peces",
+          "CatchUnder": "El bloque del objeto de captura debe estar\nconectado bajo el barco toca\npez evento."
         },
         "csc_ecosystems_ocean_coral_2023": {
-          "BlockInside": "Coloca el bloque de cambio de vestuario dentro del bloque si demasiadas algas.",
-          "Costume": "Si hay demasiadas algas, el coral se dañará. \n\nUsa el bloque de cambio de vestuario a continuación.",
-          "TooMuch": "Conecte el bloque de algas si demasiadas al evento cuando los peces tocan las algas."
+          "BlockInside": "Coloca el bloque de cambio de disfraz dentro del bloque de si hay demasiadas algas.",
+          "Costume": "Si hay demasiadas algas, el coral se dañará. \n\nUtiliza el bloque de cambio de disfraz a continuación.",
+          "TooMuch": "Conecta el bloque si hay demasiadas algas al evento cuando los peces toquen las algas."
         },
         "csc_ecosystems_ocean_coral_health_2023": {
           "Below": "¡Sigue conectando bloques en la parte inferior del espacio de trabajo donde terminaste el último nivel!",
-          "BlocksInside": "Si hay muy pocas algas, los peces se irán. \n\nColoca los otros bloques dentro del bloque de algas si muy poco.",
-          "TooLittle": "Conecte el bloque de algas si muy poco al evento cuando los peces tocan las algas."
+          "BlocksInside": "Si hay muy pocas algas, los peces se irán. \n\nColoca los otros bloques dentro del bloque de si hay pocas algas.",
+          "TooLittle": "Conecta el bloque si hay pocas algas al evento cuando los peces toquen las algas."
         },
         "csc_ecosystems_ocean_fish_2023": {
-          "No Code": "Aún no hay nada que codificar. Basta con observar este sistema en acción. "
+          "No Code": "Aún no hay nada que codificar. Sólo tienes que observar este sistema en acción."
         },
         "csc_ecosystems_ocean_justright_algae": {
           "Bellow": "¡Sigue conectando bloques en la parte inferior del espacio de trabajo donde terminaste el último nivel!",
-          "JustRight": "Conecte el bloque de algas, si es justo, al evento cuando los peces tocan las algas.",
-          "costume": "Si el alga es justo, el coral\nestará sano. \n\nUsa el bloque de cambio de vestuario dentro del bloque de algas si justo a la derecha."
+          "JustRight": "Conecte el bloque de algas \"si es justo\" al evento de cuando el pez toca las algas.",
+          "costume": "Si el alga es justo, el coral\nestará sano. \n\nUsa el bloque de cambio de disfraz dentro del bloque de algas \"si es justo\" ."
         },
         "csc_ecosystems_rainforest_freeplay_2023": {
           "hint1": "¡Hay demasiados loros! Cambiar el número\nde loros para que sea menor a 8."
         },
         "csc_ecosystems_solution1_2023": {
-          "hint1": "Antes de que el programa haya comenzado 0 peces han \nsido capturados. Usa el `set FishCaught a 0` en \nla parte superior del espacio de trabajo.",
-          "hint2": "Usa el cambio `PescadoAtrapado por 1`\ndebajo del bloque de peces de captura para contar\ncada pez que atrapa el barco.",
-          "hint3": "Conecta el bloque `boat says` **underneath** el\nbloque `change fishCaught by 1` "
+          "hint1": "Antes de que el programa haya comenzado 0 peces han \nsido capturados. Utiliza el \" establecer pescadoCapturado a 0 \" en \nen la parte superior del espacio de trabajo.",
+          "hint2": "Utiliza el cambio \" pescadoCapturado por 1\"\ndebajo el bloque capturar peces para contar\ncada pez que captura el barco.",
+          "hint3": "Conecta el bloque \\`barco dice'\n**debajo** del bloque \n'cambiar pescadoCapturado por 1' "
         },
         "csc_ecosystems_solution1b_2023": {
-          "hint1": "¡Sigue conectando bloques \ndebajo del evento `when boat touches fish` donde \nterminaste el último nivel!",
-          "hint2": "Para hacer que el barco deje de pescar a 5 peces, conecte el bloque `if FishCaught = 5` al final del evento `when boat touches fish`.",
-          "hint3": "Luego agrega el bloque `remove boat` a\n**dentro** el bloque `if FishCaught = 5`bloque"
+          "hint1": "Sigue conectando bloques \nbajo el evento `cuando el barco toca los peces` donde \nterminaste el último nivel!",
+          "hint2": "Para que el barco deje de pescar a los 5 peces, conecta el bloque `si pescadoCapturado = 5` al final del evento `cuando el barco toca los peces`.",
+          "hint3": "Luego añade el bloque `retirar barco` a\n**dentro** del bloque \\`si pescadoCapturado = 5"
         },
         "csc_ecosystems_solution2_2023": {
           "Hint1": "**Nota**: Es posible que tengas que arrastrar parte del</code> código  <code style=\"color:black; background-color:#6AF36C\">cuando toques más abajo en tu pantalla para que se ajuste a los nuevos bloques.",
-          "hint2": "En la parte superior del worskpace, conecta el bloque de fondo a cuando se ejecuta.",
-          "hint3": "Bajo el fondo\nconectar el comienza a\npescar solo en\nzona de pesca"
+          "hint2": "En la parte superior del espacio de trabajo, conecta el bloque de fondo a cuando se ejecute.",
+          "hint3": "Bajo el fondo\nconectar el comienza a\npescar solo en la\nzona de pesca"
         },
         "csc_ecosystems_solution3A_2023": {
           "hint1": "Agrega los nuevos bloques debajo\ndel bloque \\`repetir cada 4 segundos'.",
           "hint2": "Conecte el fondo `Sin pesca`\ncerca de la parte superior del espacio de trabajo bajo \nel bloque `cada 4 segundos`.",
-          "hint3": "Conecta `comenzar sin pescar`\nbajo el `fondo de no pescado`. "
+          "hint3": "Conecta `comenzar sin pescar`\nbajo el `fondo de no pescar`. "
         },
         "csc_ecosystems_solution3B_2023": {
           "hint1": "Añadir los nuevos bloques debajo\ndel bloque repetirse \\`cada 9 segundos'",
-          "hint2": "Utilizar el comportamiento `no pescar`\ny el comportamiento `comenzar la temporada de pescar`"
+          "hint2": "Utiliza el comportamiento `sin fondo de pesca`\ny el comportamiento `iniciar temporada de no pesca`."
         },
         "csc_ecosystems_whale_explain_2023": {
           "event_hint": "Asegúrate de agregar un bloque `set background` y un bloque de `cambio de costume` debajo de tu evento. \n\n¡No olvides presionar la flecha hacia abajo para activar tu evento! \n\n<xml><block type=\"gamelab_keyPressed\"><field name=\"CONDITION\">\"when\"</field><field name=\"KEY\">\"down\"</field><next><block type=\"gamelab_setBackgroundImageAs\"><field name=\"IMG\">\"night_moon\"</field><next><block type=\"gamelab_setAnimation\"><field name=\"ANIMATION\">\"firefily\"</field><value name=\"THIS\"><block type=\"gamelab_allSpritesWithAnimation\"><field name=\"ANIMATION\">\"firefily_dark\"</field></block></value></block></next></block></next></block></xml>"
@@ -14635,6 +14635,36 @@
         },
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Usa el menú desplegable para elegir entre diferentes colores y efectos.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
+        },
+        "dance_ai_code_at_measure": {
+          "hint1": "Conecta el bloque `A.I. genera efecto` al bloque de evento `en 2 compases` en tu area de trabajo:\n\n[blockly block][0]",
+          "hint2": "Dale clic al bloque [blockly block][0] para crear un efecto nuevo. "
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **¿Atascado?** Vuelva a ver el video sobre los eventos para saber cómo funcionan. ",
+          "hint2": "💡 Este es un ejemplo de cómo podría verse tu código. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">“arriba”</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">“OSO”</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\"></field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Personaliza el efecto dandole clic a los emojis en el bloque <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> en el espacio de trabajo. ",
+          "Hint2": "💡 **¿Atascado?** Mira el video explicativo para aprender a personalizar tu efecto. ",
+          "HintEdit": "💡 Si quieres usar el código que A.I. escribe, dale clic a 'código' y luego a 'Usar Código.' Los bloques reemplazarán el bloque `A.I. genera efecto` en tu espacio de trabajo."
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Selecciona al mismo bailarín en cada bloque, ten en cuenta la secuencia (osea, el orden) de tus bloques.",
+          "validation": "💡 Agrega estos bloques bajo el bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code> para crear tu primer bailarín: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">“GATO”</field>\n            <field name=\"MOVE\">“siguiente”</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `I.A. genera efecto` una vez más. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Escucha la canción y ponte a pensar sobre sobre las emociones que evoca esta música. ",
+          "Hint2": "💡 Conecta este bloque [blockly block][0] al bloque <code style=\"color:white; background-color:#FFBD46\">establecer</code>. Luego dale clic para comenzar.",
+          "Hint3": "💡 Si quieres regenerar el efecto o cambiar los emojis, hazle clic al bloque `A.I. genera efecto` una vez más."
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Si el baile no se está ejecutando, tus bailarines no reaccionarán cuando uses las flechas. ",
+          "hint2": "💡 Después de hacer clic en  <code style=\"color:white; background-color:#FFBD46\">Ejecutar</code>, usa las flechas  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> derecha o izquierda para hacer que tus bailarines reaccionen. "
         },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Haga clic y arrastre un bloque `make new sprite` y conéctelo bajo `when run`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",

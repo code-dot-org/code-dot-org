@@ -1,6 +1,6 @@
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+//import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+//import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -12,7 +12,6 @@ import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox'
 import color from '@cdo/apps/util/color';
 import fontConstants from '@cdo/apps/fontConstants';
 import {isEmail} from '@cdo/apps/util/formatValidation';
-import {STATES} from '@cdo/apps/geographyConstants';
 import DCDO from '@cdo/apps/dcdo';
 
 const VALIDATION_STATE_ERROR = 'error';
@@ -112,17 +111,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       'consentAFE',
     ]);
 
-    let shippingAddress = {};
-    if (this.state.inspirationKit) {
-      shippingAddress = _.pick(this.state, [
-        'street1',
-        'street2',
-        'city',
-        'state',
-        'zip',
-      ]);
-    }
-
     let consentCSTA = {};
     if (this.state.csta) {
       consentCSTA = {consentCSTA: this.state.consentCSTA};
@@ -144,7 +132,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
     let submitData = {
       ...requiredFormData,
-      ...shippingAddress,
       ...consentCSTA,
       ...roleCSTA,
     };
@@ -154,9 +141,10 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
       event: 'continue',
       data_json: JSON.stringify(submitData),
     });
-    analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
+    // TODO: Reenable Amplitude https://codedotorg.atlassian.net/browse/ACQ-1209
+    /*analyticsReporter.sendEvent(EVENTS.AFE_CONTINUE, {
       submitData: JSON.stringify(submitData),
-    });
+    });*/
 
     this.props.updateFormData(submitData);
     this.props.updateFormData(submitData);
@@ -166,10 +154,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
     if (this.validateRequiredFields()) {
       this.submit();
     }
-  };
-
-  checkValidationState = elementId => {
-    return Object.prototype.hasOwnProperty.call(this.state.errors, elementId);
   };
 
   validateRequiredFields = () => {
@@ -205,10 +189,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
 
     if (this.state.csta) {
       requiredFields.push('consentCSTA');
-    }
-
-    if (this.state.inspirationKit) {
-      requiredFields.push('street1', 'city', 'state', 'zip');
     }
 
     const missingRequiredFields = requiredFields.filter(f => {
@@ -284,8 +264,7 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             }
           />
           <div>
-            How can Amazon Future Engineer help you grow computer science at
-            your school?
+            How can Amazon Future Engineer support you and your students?
           </div>
           <hr style={styles.sectionBreak} />
           <SingleCheckbox
@@ -295,14 +274,6 @@ export default class AmazonFutureEngineerEligibilityForm extends React.Component
             onChange={this.handleChange}
             value={this.state.inspirationKit}
           />
-          {this.state.inspirationKit && (
-            <div>
-              <ShippingAddressFormGroup
-                handleChange={this.handleChange}
-                checkValidationState={this.checkValidationState}
-              />
-            </div>
-          )}
           <SingleCheckbox
             name="csta"
             label="Send me a free annual Computer Science Teachers Association Plus
@@ -439,77 +410,4 @@ const styles = {
   checkboxLabel: {
     paddingLeft: 5,
   },
-};
-
-const ShippingAddressFormGroup = ({handleChange, checkValidationState}) => {
-  const renderedStateOptions = STATES.map(state => (
-    <option key={state} value={state}>
-      {state}
-    </option>
-  ));
-
-  return (
-    <div>
-      <div>
-        By checking the box above, I consent to Amazon sharing my email address
-        and school address with its third party vendor, Corporate Imaging
-        Concepts, LLC, solely in order to fulfill my request. I understand
-        Amazon's vendor will email me a promo code to allow me to select and
-        redeem my Thank You Kit items.
-      </div>
-      <FieldGroup
-        id="street1"
-        label="Street 1"
-        type="text"
-        required={true}
-        onChange={handleChange}
-        validationState={
-          checkValidationState('street1') ? VALIDATION_STATE_ERROR : null
-        }
-      />
-      <FieldGroup
-        id="street2"
-        label="Street 2"
-        type="text"
-        required={false}
-        onChange={handleChange}
-      />
-      <FieldGroup
-        id="city"
-        label="City"
-        type="text"
-        required={true}
-        onChange={handleChange}
-        validationState={
-          checkValidationState('city') ? VALIDATION_STATE_ERROR : null
-        }
-      />
-      <FieldGroup
-        id="state"
-        label="State"
-        required={true}
-        onChange={handleChange}
-        validationState={
-          checkValidationState('state') ? VALIDATION_STATE_ERROR : null
-        }
-        componentClass="select"
-      >
-        {renderedStateOptions}
-      </FieldGroup>
-      <FieldGroup
-        id="zip"
-        label="Zip code"
-        type="number"
-        required={true}
-        onChange={handleChange}
-        validationState={
-          checkValidationState('zip') ? VALIDATION_STATE_ERROR : null
-        }
-      />
-    </div>
-  );
-};
-ShippingAddressFormGroup.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  checkValidationState: PropTypes.func.isRequired,
 };

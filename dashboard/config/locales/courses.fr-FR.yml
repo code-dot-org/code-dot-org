@@ -150,6 +150,10 @@ fr:
           title: Les bases de l'Informatique
         self-paced-pl-csd-unit1-2023:
           title: Enseignement de la résolution de problèmes et de l'informatique
+        self-paced-pl-csd-unit2-2023:
+          title: Formation au développement Web
+        self-paced-pl-csd-unit5-2023:
+          title: Enseigner, données et société
         vpl-csa-2023:
           title: Formation professionnelle virtuelle CSA
     resources:

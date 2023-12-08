@@ -9,6 +9,7 @@ const HintPrompt = ({
   onConfirm,
   onDismiss,
   borderColor,
+  backgroundColor,
   isMinecraft,
   skinId,
   textToSpeechEnabled,
@@ -18,6 +19,7 @@ const HintPrompt = ({
   return (
     <ChatBubble
       borderColor={borderColor}
+      backgroundColor={backgroundColor}
       ttsMessage={message}
       isMinecraft={isMinecraft}
       skinId={skinId}
@@ -36,6 +38,7 @@ const HintPrompt = ({
 
 HintPrompt.propTypes = {
   borderColor: PropTypes.string,
+  backgroundColor: PropTypes.string,
   onConfirm: PropTypes.func.isRequired,
   onDismiss: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,

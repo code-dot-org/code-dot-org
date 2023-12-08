@@ -26,8 +26,9 @@ class DanceVisualizationColumn extends React.Component {
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
     over21: PropTypes.bool.isRequired,
-    currentAiModalField: PropTypes.object,
+    currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
+    playSound: PropTypes.func.isRequired,
   };
 
   state = {
@@ -43,16 +44,13 @@ class DanceVisualizationColumn extends React.Component {
 
   componentDidUpdate(prevProps) {
     // Reset the program when the AI modal is opened
-    if (
-      prevProps.currentAiModalField === undefined &&
-      this.props.currentAiModalField
-    ) {
+    if (!prevProps.currentAiModalBlockId && this.props.currentAiModalBlockId) {
       this.props.resetProgram();
     }
   }
 
   render() {
-    const {levelIsRunning} = this.props;
+    const {levelIsRunning, playSound} = this.props;
     const filenameToImgUrl = {
       'click-to-run': require('@cdo/static/dance/click-to-run.png'),
     };
@@ -111,7 +109,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
-          {this.props.currentAiModalField && <DanceAiModal />}
+          {this.props.currentAiModalBlockId && (
+            <DanceAiModal playSound={playSound} />
+          )}
         </div>
       </div>
     );
@@ -151,5 +151,5 @@ export default connect(state => ({
   over21: state.currentUser.over21,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
-  currentAiModalField: state.dance.currentAiModalField,
+  currentAiModalBlockId: state.dance.currentAiModalBlockId,
 }))(DanceVisualizationColumn);

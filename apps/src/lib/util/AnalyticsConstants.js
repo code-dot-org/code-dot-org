@@ -48,6 +48,7 @@ const EVENTS = {
   AFE_INELIGIBLE: 'AFE Ineligible',
   AFE_CONTINUE: 'AFE Continue',
   AFE_SUBMIT: 'AFE Submit',
+  AFE_HOMEPAGE_BANNER_SUBMIT: 'AFE Teacher Homepage Banner Submitted',
 
   // Sections
   COMPLETED_EVENT: 'Section Setup Completed',
@@ -100,8 +101,15 @@ const EVENTS = {
   TA_RUBRIC_RUN_BUTTON_CLICKED:
     'TA Rubric Teacher clicked RUN button on student work',
 
+  // AI Tutor
+  AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
+  AI_TUTOR_PANEL_CLOSED: 'AI Tutor Panel Closed',
+  AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
+  AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
+
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
+  HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
 
   // Hour of Code - Dance Party
@@ -115,6 +123,9 @@ const EVENTS = {
   DANCE_PARTY_AI_BACKGROUND_EDITED: 'Dance Party AI Background Edited',
   DANCE_PARTY_AI_BACKGROUND_EXPLAINED: 'Dance Party AI Background Explained',
   DANCE_PARTY_AI_EMOJI_USED: 'Dance Party AI Emoji Used',
+  DANCE_PARTY_SONG_UNAVAILABLE: 'Dance Party Song Unavailable',
+  DANCE_PARTY_VALIDATION: 'Dance Party Validation',
+  DANCE_PARTY_AI_MODAL_CLOSED: 'Dance Party AI Modal Closed',
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
@@ -125,6 +136,13 @@ const EVENTS = {
   BATCH_CERTIFICATES_PAGE_VIEWED: 'Batch Certificates Page Viewed',
   TEACHER_HOC_CONGRATS_PAGE_VISITED:
     'Teacher Hour of Code Congrats Page Visited ',
+
+  // Coteacher
+  COTEACHER_INVITE_SENT: 'Coteacher Invite Sent',
+  COTEACHER_EMAIL_INVALID: 'Coteacher Email Invalid',
+  COTEACHER_INVITE_ACCEPTED: 'Coteacher Invite Accepted',
+  COTEACHER_INVITE_DECLINED: 'Coteacher Invite Declined',
+  COTEACHER_REMOVED: 'Coteacher Removed',
 };
 
 const EVENT_GROUP_NAMES = {
@@ -143,6 +161,8 @@ const EVENT_GROUPS = {
   [EVENTS.DANCE_PARTY_AI_BACKGROUND_EDITED]: EVENT_GROUP_NAMES.DANCE_PARTY,
   [EVENTS.DANCE_PARTY_AI_BACKGROUND_EXPLAINED]: EVENT_GROUP_NAMES.DANCE_PARTY,
   [EVENTS.DANCE_PARTY_AI_EMOJI_USED]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_SONG_UNAVAILABLE]: EVENT_GROUP_NAMES.DANCE_PARTY,
+  [EVENTS.DANCE_PARTY_AI_MODAL_CLOSED]: EVENT_GROUP_NAMES.DANCE_PARTY,
 
   // videos
   [EVENTS.VIDEO_LOADED]: EVENT_GROUP_NAMES.VIDEO_EVENTS,

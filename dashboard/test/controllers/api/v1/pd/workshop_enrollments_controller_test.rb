@@ -286,6 +286,35 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     refute_nil Pd::Enrollment.find_by(pd_workshop_id: workshop.id)
   end
 
+  test 'creating an enrollment can find user and submit if enrollment email is alternate email' do
+    teacher = create :teacher
+    sign_in teacher
+
+    application = create :pd_teacher_application, user: teacher, status: 'accepted'
+    app_alt_email = application.form_data_hash['alternateEmail']
+
+    refute_equal teacher.email, app_alt_email
+    assert_equal teacher.email_for_enrollments, app_alt_email
+
+    params = enrollment_test_params.merge(
+      {
+        user_id: teacher.id,
+        email: app_alt_email,
+        email_confirmation: app_alt_email,
+        workshop_id: @workshop.id,
+        school_info: school_info_params
+      }
+    )
+    post :create, params: params
+
+    assert_response :success
+
+    response_body = JSON.parse(@response.body)
+    assert_equal RESPONSE_MESSAGES[:SUCCESS], response_body["workshop_enrollment_status"]
+    assert response_body["account_exists"]
+    refute_nil Pd::Enrollment.find_by(pd_workshop_id: @workshop.id)
+  end
+
   test 'creating a duplicate enrollment sends \'duplicate\' workshop enrollment status' do
     @teacher = create :teacher
     params = enrollment_test_params.merge(
@@ -433,7 +462,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
   test 'edit' do
     workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', email: 'rubeushagrid@code.org', workshop: workshop
 
     admin = create :workshop_admin
     sign_in admin
@@ -441,12 +470,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     post :edit, params: {
       id: enrollment.id,
       first_name: 'Harry',
-      last_name: 'Potter'
+      last_name: 'Potter',
+      email: 'harrypotter@code.org'
     }
 
     enrollment.reload
     assert_equal 'Harry', enrollment.first_name
     assert_equal 'Potter', enrollment.last_name
+    assert_equal 'harrypotter@code.org', enrollment.email
   end
 
   test 'non-workshop-admins cannot move enrollments' do

@@ -4,26 +4,18 @@ display_name 'Introduction to Debugging'
 
 title 'Debugging Session'
 markdown <<MARKDOWN
-# AI and Machine Learning - Lesson 2: Introduction to Machine Learning
+# Creating Apps with Devices - Lesson 5: Board Events
 
-> ##### <a href="https://studio.code.org/s/csd7-2023/lessons/2" target="blank">U7L2 Lesson Plan: Introduction to Machine Learning</a>
+> ##### <a href="https://studio.code.org/s/csd6a-2023/lessons/5" target="blank">U6AL5 Lesson Plan: Board Events</a> (Circuit Playground)
+> ##### <a href="https://studio.code.org/s/csd6b-2023/lessons/5" target="blank">U6BL5 Lesson Plan: Board Events</a> (micro:bit)
 
+## Tasks
 
-## Important Note
-##### We completed Lesson 2: Introduction to Machine Learning over the summer. We’ll do a quick review here as a reminder before we dive into the remainder of the unit.
+* ##### Choose the appropriate lesson plan above and read through
+* ##### Identify how students will use onBoardEvent() in order to get input from their devices
 
-## Lesson Overview
-##### In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.
-
-## Lesson Objectives
-* ##### Apply the Problem Solving Process to train a computer to solve a problem.
-
-## Investigation Tasks
-
-* ##### Review the lesson plan to refresh your memory of what you did over the summer
-
-### Next Up
-##### Click continue review the What is Machine Learning video.
+### Next Up (Levels 11 & 12)
+##### Click continue to revisit how input is taken in using Game Lab and App Lab in comparison to how devices get input.
 
 
 

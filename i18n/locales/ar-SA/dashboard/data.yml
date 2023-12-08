@@ -750,6 +750,8 @@ ar:
         csc_bookcovers_intro: برمجة أغلفة الكتب
         what-is-creativity: ما هو الابداع؟
         code-break: خذ استراحة من البرمجة
+        csd_ml_how_ai_works: كيف يعمل الذكاء الاصطناعي
+        hoc-dance-ai-warmup: 'إصدار حفلة الرقص بالذكاء الاصطناعي: الإحماء'
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

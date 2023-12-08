@@ -7,10 +7,21 @@ $preview-button-border-width: 1px;
 .songSelectorWrapper {
 
   .selectStyle {
-    width: calc(100% - ($preview-button-width + $preview-button-margin-left + ($preview-button-border-width * 2)));
+    width: calc(100% - ($preview-button-width + $preview-button-margin-left));
     height: 32px;
     color: $neutral_dark;
     border-color: $neutral_dark;
+
+    &:focus-visible {
+      outline: 2px solid $light_primary_500;
+      outline-offset: 2px;
+    }
+
+    &:disabled {
+      color: $light_gray_200;
+      border-color: $light_gray_200;
+      background-color: $neutral_white;
+    }
   }
 
   button.previewSongButton {

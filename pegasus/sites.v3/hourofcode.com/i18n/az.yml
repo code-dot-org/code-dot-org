@@ -234,6 +234,7 @@ az:
   for_students_teacher_led_lessons: 'Tələbələr üçün: Müəllim tərəfindən idarə olunan
     dərslər'
   professional_development: Peşəkar inkişaf
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Teach Computer Science
   explore_our_curriculum: Explore Our Curriculum
   start_professional_learning: Start Professional Learning
@@ -321,6 +322,7 @@ az:
   call_to_action_explore_all_hoc_activities: Code.org saytından bütün Hour of Code
     fəaliyyətlərini araşdırın
   call_to_action_start_dance_party: Rəqs partiyasına başlayın
+  call_to_action_start_dance_party_ai_edition: 'Start Dance Party: AI Edition'
   call_to_action_start_part_02: İkinci hissəyə başlayın
   call_to_action_start_unplugged_activity: Şəbəkdən çıxarılmış fəaliyyətə başlayın
   call_to_action_view_promo_resources: Promo resurslarına baxın
@@ -332,6 +334,8 @@ az:
   call_to_action_try_hoc_ai_activities: Hour of Code AI fəaliyyətlərini sınayın
   call_to_action_explore_activities: Fəaliyyətləri araşdırın
   call_to_action_explore_ai: AI-ni araşdırın
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Aləti araşdırın
   call_to_action_explore_unit: Bölməni araşdırın
   call_to_action_explore_curriculum: Kurikulumu araşdırın
   call_to_action_explore_curricula: Kurikulumları araşdırın
@@ -434,6 +438,15 @@ az:
   call_to_action_learn_about_ai: AI haqqında məlumat əldə edin
   call_to_action_learn_more_about_ai: Learn more about AI
   call_to_action_get_started: Başlamaq
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Müəllimlər üçün necə təlimatına
     baxın
   aria_label_call_to_action_hoc_how_to_companies: Şirkətlər üçün necə təlimatına baxın
@@ -461,6 +474,8 @@ az:
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_problem_solving: Problemlərin həlli və hesablama
     peşəkar tədris proqramına başlayın
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Tədris Kompüter Elmləri Əlaqələri peşəkar
     təlim proqramına başlayın
   aria_label_call_to_action_teaching_ai: Tədris AI və Maşın Öyrənmə peşəkar öyrənmə
@@ -566,6 +581,16 @@ az:
   aria_label_call_to_action_register_student_workshop: Register for a free student
     workshop
   aria_label_call_to_action_view_more_cs_resources: View more computer science resources
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Code.org-un Peşəkar Öyrənmə Proqramı
   curriculum_name_csf: Kompüter elminin əsasları
   curriculum_name_csf_02: Hər hansı bir CS Əsasları (Kurs A-F)
@@ -584,6 +609,7 @@ az:
   curriculum_name_csd: Kompüter Elmləri Kəşfləri
   curriculum_name_csp: Kompüter Elmləri Prinsipləri
   curriculum_name_problem_solving: Problemlərin həlli və hesablanması
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Kompüter Elmləri Əlaqələri
   curriculum_name_csa: AP® Kompüter Elmləri A
   curriculum_name_csa_ai: Proqram mühəndisliyi və kompüter baxışı
@@ -722,8 +748,10 @@ az:
   module_label_languages: 'Dəstəklənən Dillər:'
   module_label_accessibility_features: 'Əlçatanlıq:'
   module_label_accessibility_features_full: 'Əlçatanlıq xüsusiyyətləri:'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Tərbiyəçi vasitəsi
   module_label_educator_course: Pedaqoq kursu
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Tələbə aləti
   module_label_student_product: Məhsul
   module_label_student_content_resources: Məzmun və resurslar
@@ -732,6 +760,7 @@ az:
   module_label_available_now: İndi mövcuddur
   module_label_video_series: Video seriyası
   module_label_self_paced: Self-öğreten modul
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -773,6 +802,7 @@ az:
   module_duration_1_hr: 1 saat
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 saat
   module_duration_5_hrs_plus: 5+ saat
   module_duration_8_hrs: 8 saat
@@ -794,6 +824,7 @@ az:
   module_label_teaching_csd: Kompüter Elmləri Kəşflərinin Tədrisi
   module_label_teaching_csp: Kompüter Elmi Prinsiplərinin Tədrisi
   module_label_teaching_problem_solving: Problemlərin həlli və hesablama tədrisi
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Kompüter elmləri əlaqələrinin tədrisi
   module_label_teaching_ai: Süni intellekt və maşın öyrənməsinin tədrisi
   module_label_teaching_maker_cp: Cihazlarla Proqramlar yaratmağı öyrətmək (Circuit
@@ -863,6 +894,12 @@ az:
   heading_attend_free_workshop: Attend a free student workshop
   heading_access_more_cs_resources: Access more computer science resources
   heading_available_on_code_dot_org: Available on Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Əgər siz məktəbinizdə daha çox gənc qadını kompüter elmləri
     almağa təşviq etmək həvəsli bir orta məktəb tələbəsinizsə, onda sizə ehtiyacımız
     var!
@@ -934,6 +971,19 @@ az:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Bu yaydan başlayan şəxsən və virtual
     seminarlar.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Davam edin, şnurunu kəsin (bir müddət)!
   no_devices_section_desc: CS təhsili həmişə ekranın qarşısında olmağa ehtiyac duymur
     və cihaza giriş kompüter elmləri anlayışlarını öyrənmək üçün bir maneə olmamalıdır.
@@ -958,6 +1008,11 @@ az:
   subscribe_form_section_desc_csp: Code.org-un Kompüter Elmləri Prinsipləri haqqında
     aylıq e-poçt almaq üçün qeydiyyatdan keçin və birbaşa gələnlər qutunuza göndərilən
     faydalı xatırlatmalar, məsləhətlər və yeniləmələri əldə edin.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: İstənilən vaxt abunəlikdən çıxa bilərsiniz.
   hoc_page_what_is_hoc_heading: What is Hour of Code?
   hoc_page_desc: "[The Hour of Code](%{hoc_url}) is a global movement reaching tens
@@ -1160,6 +1215,7 @@ az:
     sonra bütün iştirakçıların ən çox ehtiyaclarını ödəən təlimatlar hazırlamaq üçün
     bir komanda olaraq əməkdaşlıq edin.
   ai_curriculum_btn_aria_label_06: Generativ AI dərs planının ictimai təsirinə baxın
+  ai_curriculum_btn_aria_label_dance_ai: 'Try the Dance Party: AI Edition activity'
   ai_carousel_heading: 'Code.org ilə AI haqqında müəllimlərin dedikləri:'
   ai_carousel_quote_01: Bu dərs həm də şagirdlərimə təsnifat sistemlərində fikir elementinin
     olduğunu görmək imkanı verdi. Daha sonra, AI -də qərəzin necə nəticələnə biləcəyini
@@ -1370,6 +1426,68 @@ az:
   ai_vid_computervision_caption: Kompüter Görmə
   ai_vid_ethics1_caption: 'Etika və AI: Bərabər Giriş və Alqoritmik Yanlışlıq'
   ai_vid_ethics2_caption: 'Etika və AI: Məxfilik və İşin Gələcəyi'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Tərbiyəçilər üçün öz-özünə inkişaf edən peşəkar öyrənmə
   self_paced_pl_hero_desc: Kompüter elmləri tədris səyahətinin hər mərhələsində müəllimlərə
     dəstək olmaq üçün peşəkar öyrənmə təklifləri.
@@ -2994,6 +3112,7 @@ az:
     və ya [Necə Ediləcək Bələdçini oxuyun] ()%{howto_url}'
   tutorial_dance2019_name: Rəqs şənliyi 2019
   tutorial_danceparty_name: Rəqs şənliyi
+  tutorial_dancepartyai_name: 'Rəqs partiyası: AI nəşri'
   tutorial_chibitronics_name: 'Chibitronics: İşıqlandırılmış Hekayə'
   tutorial_athlete_name: Öz idman oyununuzu kodlayın
   tutorial_moana_name: 'Moana: Kodla yol tapmaq'
@@ -3593,19 +3712,14 @@ az:
   tutorial_csfirstdialogue_name: Dialoq
   tutorial_codemonkeybeaver_name: Qunduz müvəffəqiyyətli
   tutorial_codestersdistance_name: 'Codesters: Sosial Distancing Sprites'
-  tutorial_itchspace_name: 'ITCHCode: Kosmik İşğalçılar - RokCoder'
   tutorial_vidcodemagic_name: SFX Sehrli
   tutorial_vidcodemagices_name: SFX Sehrli
   tutorial_codespeakmeal_name: Sağlam Yemək Tətbiqi Kodu
-  tutorial_itchfish_name: 'ItchCode: Balıq danışıq oyunu'
   tutorial_bsdwebsite_name: Sevimlilərim Veb səhifə
   tutorial_codespeaktime_name: Çizilmədə bir zaman kapsulu kodu
-  tutorial_itchwebcam_name: 'ITCHCode: Veb kamera genişlənmiş reallıq'
-  tutorial_itchball_name: 'ItchCode: Bouncing Ball'
   tutorial_ttrace_name: Yarış vəziyyəti
   tutorial_plethora_name: 'Plethora: Səbəb və Təsir'
   tutorial_educodesecret_name: Agentliyin sirlərini açın!
-  tutorial_itchshapes_name: 'ItchCode: Şekiller və Bucaqlar'
   tutorial_codeguppytext_name: Mətn əsaslı kodlaşdırmaya giriş
   tutorial_vidcodeplastiche_name: Plastik Çirklənmə PSA
   tutorial_educativechatbot_name: Python-da öz chatbotunuzu yaradın
@@ -3628,7 +3742,6 @@ az:
   tutorial_codecapture_name: JavaScript ilə Proqramlaşdırma öyrənin
   tutorial_codehslitter_name: Zibilsiz İcma üçün Kodlaşdırma
   tutorial_bsdocean_name: Suyun altındakı həyat
-  tutorial_itchplatformer_name: 'ITCHCode: Scratch 3.0 Platformer Tutorial'
   tutorial_codejika_name: 'CodeJika: 5 Dəqiqə Veb səhifə'
   tutorial_gamefrootclicker_name: Dəyişənləri öyrənin. Öz Clicker Oyununuzu kodlayın.
   tutorial_rmagicequity_name: Kapital və Bərabərlik
@@ -3681,6 +3794,9 @@ az:
   tutorial_danceparty_shortdescription: Dostlarınızla bölüşmək üçün bir Rəqs Partiyasını
     kodlayın. Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, Disneyin 'Encanto'
     musiqisi və daha çoxunu təqdim edir!
+  tutorial_dancepartyai_shortdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_shortdescription: Öz hekayənizi işıqlandırmaq üçün bir kağız
     dövrəsini proqramlaşdırın.
   tutorial_athlete_shortdescription: Basketbol oyunu etmək və ya idman arasında qarışdırın
@@ -4912,6 +5028,9 @@ az:
   tutorial_danceparty_longdescription: Dostlarınızla bölüşmək üçün bir Rəqs Partiyasını
     kodlayın. Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, Disneyin 'Encanto'
     musiqisi və daha çoxunu təqdim edir!
+  tutorial_dancepartyai_longdescription: Learn about artificial intelligence (AI)
+    concepts to create your own virtual dance party showcasing today's top artists.
+    It's time to strut your stuff!
   tutorial_chibitronics_longdescription: Öz hekayənizi işıqlandırmaq üçün bir kağız
     dövrəsini proqramlaşdırın.
   tutorial_athlete_longdescription: Basketbol oyunu etmək və ya idman arasında qarışdırın
@@ -7564,20 +7683,12 @@ az:
   tutorial_codestersdistance_longdescription: Python-da kodlaşdırmanın əsaslarını
     öyrənin, sonra sosial uzaqlaşdıqlarından və ya maska taxmaq lazım olduğundan əmin
     olmaq üçün iki sprit arasındakı məsafəni hesablayan bir proqram yaradın.
-  tutorial_itchspace_longdescription: Bu təlimat sizi Scratch MIT proqramlaşdırma
-    dilindən istifadə edərək klassik Space Invaders oyununun yaradılması yolu ilə
-    aparır. Daha çox cızıq əsaslı video və dərsliklər üçün RokCoder YouTube kanalına
-    abunə olun! Hər bir video, özünəməxsus son hədəflərini ehtiva edən ısırıq ölçülü
-    bir təlimatdır (uzunluğu təxminən on dəqiqə). Son nəticə yüksək keyfiyyətli Scratch
-    arcade oyunudur.
   tutorial_vidcodemagic_longdescription: Flaşları bir döngə istifadə edərək ekranın
     ətrafında təsadüfi görünməsini təmin edin.
   tutorial_vidcodemagices_longdescription: Flaşları bir döngə istifadə edərək ekranın
     ətrafında təsadüfi görünməsini təmin edin.
   tutorial_codespeakmeal_longdescription: İstifadəçilərə sağlam qida qərarları verməyə
     kömək edən bir proqramı kodlaşdırmağı öyrənin.
-  tutorial_itchfish_longdescription: Bir dalğıc təsadüfən yeyilir zaman pozulmuş bir
-    köpək balığı chasing və yemək balıq ilə bir oyun edilməsi üçün Scratch 3.0 tutorial.
   tutorial_bsdwebsite_longdescription: 'Bu kurs tələbələrə koddan onlar üçün vacib
     və ya maraqlı olanları bölüşmək üçün istifadə etməyə imkan verir. HTML, CSS və
     JavaScript öyrənərkən dərsi izləyə və ya unikal layihələr yarada bilərlər. Onlar
@@ -7586,10 +7697,6 @@ az:
     veb səhifəsini yaratmağa yönəlmişdir. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Hal-hazırda həyatınızı qeyd etmək və əks
     etdirmək üçün rəqəmsal vaxt kapsulunu necə kodlayacağınızı öyrənin.
-  tutorial_itchwebcam_longdescription: Genişləndirilmiş reallıq haqqında məlumat əldə
-    edin və öz genişlənmiş reallıq virtual məkanınızı yaradın.
-  tutorial_itchball_longdescription: Ekranın ətrafında sıçramaq üçün bir top alın.
-    Döngələr daxilində döngələr və şərtlər haqqında məlumat əldə edin.
   tutorial_ttrace_longdescription: Funksiyalara zəng edərək və dərsləri tərtib etməklə
     oyunçular öz yarış avtomobillərini sürətli, çevik və güclü olmağa proqramlaşdırırlar;
     yarışlar zamanı daha sonra idarəetmələrini sındırmaq üçün rəqiblərinin nəqliyyat
@@ -7601,9 +7708,6 @@ az:
     çünki ifadələr, sətirlər, döngələr üçün öyrənməyə daha dərindən dalış edin. Agent
     Smithin günahkarları tapmasına və Python ilə yeni istifadəçiləri üçün Agentliyin
     əməliyyat sistemini konfiqurasiya etməsinə kömək edin.
-  tutorial_itchshapes_longdescription: Çizilmə şəklində necə çəkəcəyinizi öyrənin.
-    Hər hansı bir forma çevirmək üçün nə qədər ehtiyacınız olduğunu hesablamağı da
-    öyrənəcəksiniz.
   tutorial_codeguppytext_longdescription: Onlayn kodlaşdırma redaktorunda ilk proqramınızı
     yaratmaqla mətn əsaslı kodlaşdırmanın əsaslarını öyrənin.
   tutorial_vidcodeplastiche_longdescription: Okeanlarımızı plastik doldurmaq problemi
@@ -7683,8 +7787,6 @@ az:
   tutorial_bsdocean_longdescription: Suyun altındakı həyat günümüzdə qarşılaşdığımız
     aktual bir məsələyə - ətraf mühitimizə işıq salır. Bu layihə sularımızı qorumaq
     üçün öz veb səhifənizi kodlaşdırmağınıza rəhbərlik etməyə yönəlib.
-  tutorial_itchplatformer_longdescription: Scratch istifadə edərək sadə platformer
-    oyun yaratmaq üçün necə tutorial izləmək üçün asan.
   tutorial_codejika_longdescription: HTML və CSS istifadə edərək kodlaşdırma üçün
     əla giriş. Bir neçə sətri kodlayın, iki rəngli gradient fonu, adı və veb saytın
     təqdimat tarixi ilə gözəl açılış səhifəsi yaradaraq Hows və Whys-ə qapılmadan
@@ -7894,6 +7996,7 @@ az:
     özünəməxsus xüsusi edən müxtəlifliyi qəbul edəcəklər.
   tutorial_dance2019_string_detail_grades: 2+ siniflər
   tutorial_danceparty_string_detail_grades: 2+ siniflər
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: 2-5 siniflər
   tutorial_athlete_string_detail_grades: 2+ siniflər
   tutorial_moana_string_detail_grades: 2+ siniflər
@@ -8490,19 +8593,14 @@ az:
   tutorial_csfirstdialogue_string_detail_grades: 2-8 siniflər
   tutorial_codemonkeybeaver_string_detail_grades: Pre-oxucu - 5-ci sinif
   tutorial_codestersdistance_string_detail_grades: 6+ siniflər
-  tutorial_itchspace_string_detail_grades: 6+ siniflər
   tutorial_vidcodemagic_string_detail_grades: 2+ siniflər
   tutorial_vidcodemagices_string_detail_grades: 2+ siniflər
   tutorial_codespeakmeal_string_detail_grades: 6+ siniflər
-  tutorial_itchfish_string_detail_grades: 2-8 siniflər
   tutorial_bsdwebsite_string_detail_grades: 6+ siniflər
   tutorial_codespeaktime_string_detail_grades: 2-8 siniflər
-  tutorial_itchwebcam_string_detail_grades: 6+ siniflər
-  tutorial_itchball_string_detail_grades: 2-8 siniflər
   tutorial_ttrace_string_detail_grades: 6-8 siniflər
   tutorial_plethora_string_detail_grades: 2+ siniflər
   tutorial_educodesecret_string_detail_grades: 6+ siniflər
-  tutorial_itchshapes_string_detail_grades: 6+ siniflər
   tutorial_codeguppytext_string_detail_grades: 6-8 siniflər
   tutorial_vidcodeplastiche_string_detail_grades: 6+ siniflər
   tutorial_educativechatbot_string_detail_grades: 9+ siniflər
@@ -8524,7 +8622,6 @@ az:
   tutorial_codecapture_string_detail_grades: 6+ siniflər
   tutorial_codehslitter_string_detail_grades: 6-8 siniflər
   tutorial_bsdocean_string_detail_grades: 6-8 siniflər
-  tutorial_itchplatformer_string_detail_grades: 6+ siniflər
   tutorial_codejika_string_detail_grades: 6+ siniflər
   tutorial_gamefrootclicker_string_detail_grades: 6-8 siniflər
   tutorial_rmagicequity_string_detail_grades: 6-8 siniflər
@@ -8577,6 +8674,8 @@ az:
   tutorial_dance2019_string_platforms: Bütün müasir brauzerlər, Android tablet, iPad,
     Unplugged
   tutorial_danceparty_string_platforms: Bütün müasir brauzerlər, Android planşet,
+    iPad
+  tutorial_dancepartyai_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad
   tutorial_chibitronics_string_platforms: Bütün müasir brauzerlər, Ekran oxuyucusu
   tutorial_athlete_string_platforms: Bütün müasir brauzerlər
@@ -9351,22 +9450,16 @@ az:
   tutorial_codemonkeybeaver_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad
   tutorial_codestersdistance_string_platforms: Bütün müasir brauzerlər, Ekran oxuyucusu
-  tutorial_itchspace_string_platforms: Bütün müasir brauzerlər
   tutorial_vidcodemagic_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad, Ekran oxuyucusu
   tutorial_vidcodemagices_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad, Ekran oxuyucusu
   tutorial_codespeakmeal_string_platforms: Xrom, Firefox
-  tutorial_itchfish_string_platforms: Bütün müasir brauzerlər
   tutorial_bsdwebsite_string_platforms: Xrom
   tutorial_codespeaktime_string_platforms: Xrom, Firefox
-  tutorial_itchwebcam_string_platforms: Bütün müasir brauzerlər, Android planşet,
-    iPad
-  tutorial_itchball_string_platforms: Bütün müasir brauzerlər
   tutorial_ttrace_string_platforms: Xrom
   tutorial_plethora_string_platforms: Bütün müasir brauzerlər, Android planşet, iPad
   tutorial_educodesecret_string_platforms: Bütün müasir brauzerlər
-  tutorial_itchshapes_string_platforms: Bütün müasir brauzerlər
   tutorial_codeguppytext_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad
   tutorial_vidcodeplastiche_string_platforms: Bütün müasir brauzerlər, iPad
@@ -9395,7 +9488,6 @@ az:
   tutorial_codehslitter_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad, Windows telefonu, Android telefonu, iPhone
   tutorial_bsdocean_string_platforms: Xrom
-  tutorial_itchplatformer_string_platforms: Bütün müasir brauzerlər
   tutorial_codejika_string_platforms: Bütün müasir brauzerlər, Android planşet, iPad,
     Windows telefonu, Android telefonu, iPhone
   tutorial_gamefrootclicker_string_platforms: Bütün müasir brauzerlər, iPad
@@ -9454,6 +9546,7 @@ az:
     iPhone, iPad, Android telefon, Android tablet
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Chibitronics Chibi Çip və Dövrə Etiketi
     LEDləri
   tutorial_athlete_string_detail_platforms: ''
@@ -10052,19 +10145,14 @@ az:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10086,7 +10174,6 @@ az:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10140,6 +10227,7 @@ az:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Bloklar
   tutorial_danceparty_string_detail_programming_languages: Bloklar
+  tutorial_dancepartyai_string_detail_programming_languages: Bloklar
   tutorial_chibitronics_string_detail_programming_languages: Bloklar
   tutorial_athlete_string_detail_programming_languages: Bloklar
   tutorial_moana_string_detail_programming_languages: Bloklar
@@ -10771,20 +10859,15 @@ az:
   tutorial_csfirstdialogue_string_detail_programming_languages: Bloklar, cızıqlar
   tutorial_codemonkeybeaver_string_detail_programming_languages: Bloklar
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Bloklar
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Bloklar
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Bloklar
-  tutorial_itchwebcam_string_detail_programming_languages: Bloklar
-  tutorial_itchball_string_detail_programming_languages: Bloklar
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Dil müstəqil (bir çox dildə
     tədris edilə bilər)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Bloklar
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -10809,7 +10892,6 @@ az:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Bloklar
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Bloklar
   tutorial_rmagicequity_string_detail_programming_languages: Bloklar, JavaScript
@@ -11795,10 +11877,7 @@ az:
   tutorial_kodableshapes_name: Kodla şəkillər yaradın
   tutorial_nasabinary_name: 'İkili Kod: Bir kosmik gəmi ilə necə danışmaq olar'
   tutorial_3dmaker_name: 3D Maker
-  tutorial_itchstart_name: 'ITCHCode: Scratch 5 Blok Başlanğıc'
   tutorial_hopsub_name: Bir dostunuzla metro sörfçüləri qurun
-  tutorial_itchmundos_name: Los mundos en mi Mundo_E2
-  tutorial_itchtenacity_name: Əzmkarlıq
   tutorial_kcjskiing_name: 'İdman+Kod: Xizək sürmə'
   tutorial_groksecurity_name: 'Kiber Təhlükəsizlik: Qaranlıq papaqlara qarşı müdafiə'
   tutorial_creaticode_name: Çizilmə blokları ilə 3D proqramlaşdırma
@@ -11939,17 +12018,8 @@ az:
     və ya hətta səsdə ikili koda çevirərək özünüz sınayın.
   tutorial_3dmaker_longdescription: Öz həqiqətən sərin, rotatable, 3D obyektləri sürətli
     və asanlıqla olun.
-  tutorial_itchstart_longdescription: Bu dərs uşaqlar sinif 2 və ya 3 üçün yaxşı bir
-    giriş nöqtəsidir ki, yalnız ilk dəfə Scratch həyata çalışırıq. Xarakterlərini
-    bəzi hərəkətləri yerinə yetirmək üçün bir araya gətirməli olduqları 5 blokdan
-    ibarət bir dəstdən başlaya biləcəklər.
   tutorial_hopsub_longdescription: Proqramı bir dost və ya sinif yoldaşı ilə necə
     cütləşdirəcəyinizi və Hopscotch simvolları ilə öz metro sörfçünüzü yaratmağı öyrənin!
-  tutorial_itchmundos_longdescription: Conocerán Scratch, proqramlaşdırma üçün bir
-    herramienta. Agregarán objetos y fondos, usarán bloques de eventos y apariencia
-    para dar vida a su proqramı.
-  tutorial_itchtenacity_longdescription: En est proyecto programman en Scratch el
-    simulador de un robot que limpia las aguas marinas.
   tutorial_kcjskiing_longdescription: 'Kimsə ağaca çırpılana qədər bütün əyləncəli
     və oyundur… və ya bu əyləncəli hissədir? Bu xizək fəaliyyətində kodu istifadə
     edərək dondurulmuş maneələr təpəsindən aşağıya doğru xarakterinizi istiqamətləndirdiyiniz
@@ -12236,11 +12306,8 @@ az:
   tutorial_kodableshapes_language: Azərbaycan dili
   tutorial_nasabinary_language: Azərbaycan dili
   tutorial_3dmaker_language: Azərbaycan dili
-  tutorial_itchstart_language: Azərbaycan dili
   tutorial_hopsub_language: Çin (Sadələşdirilmiş), İngilis, İspan (İspaniya), İspan
     (Meksika)
-  tutorial_itchmundos_language: İspan (Meksika)
-  tutorial_itchtenacity_language: İspan (Meksika)
   tutorial_kcjskiing_language: İngilis, Fransız
   tutorial_groksecurity_language: Azərbaycan dili
   tutorial_creaticode_language: Çin (Sadələşdirilmiş), Çin (Ənənəvi), İngilis
@@ -12333,10 +12400,7 @@ az:
   tutorial_kodableshapes_string_detail_grades: Pre-oxucu - 5-ci sinif
   tutorial_nasabinary_string_detail_grades: 6+ siniflər
   tutorial_3dmaker_string_detail_grades: 2-8 siniflər
-  tutorial_itchstart_string_detail_grades: 2-8 siniflər
   tutorial_hopsub_string_detail_grades: 2-8 siniflər
-  tutorial_itchmundos_string_detail_grades: 2+ siniflər
-  tutorial_itchtenacity_string_detail_grades: 2+ siniflər
   tutorial_kcjskiing_string_detail_grades: 2+ siniflər
   tutorial_groksecurity_string_detail_grades: 6+ siniflər
   tutorial_creaticode_string_detail_grades: 6+ siniflər
@@ -12428,12 +12492,7 @@ az:
   tutorial_nasabinary_string_platforms: Unplugged, Ekran oxucu
   tutorial_3dmaker_string_platforms: Bütün müasir brauzerlər, Android planşet, iPad,
     Windows telefonu, Android telefonu, iPhone
-  tutorial_itchstart_string_platforms: Bütün müasir brauzerlər, iPad
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Bütün müasir brauzerlər, Android planşet,
-    iPad
-  tutorial_itchtenacity_string_platforms: Bütün müasir brauzerlər, Android planşet,
-    iPad
   tutorial_kcjskiing_string_platforms: Bütün müasir brauzerlər
   tutorial_groksecurity_string_platforms: Bütün müasir brauzerlər, Android planşet,
     iPad, Windows telefonu, Android telefonu, iPhone
@@ -12529,10 +12588,7 @@ az:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -12622,10 +12678,7 @@ az:
     (birdən çox dildə tədris edilə bilər)
   tutorial_nasabinary_string_detail_programming_languages: İkili kod
   tutorial_3dmaker_string_detail_programming_languages: Bloklar
-  tutorial_itchstart_string_detail_programming_languages: Bloklar
   tutorial_hopsub_string_detail_programming_languages: Hopscotch
-  tutorial_itchmundos_string_detail_programming_languages: Bloklar
-  tutorial_itchtenacity_string_detail_programming_languages: Bloklar
   tutorial_kcjskiing_string_detail_programming_languages: Bloklar
   tutorial_groksecurity_string_detail_programming_languages: Yoxdur - heç bir proqramlaşdırma
     tələb olunmur
@@ -13747,6 +13800,16 @@ az:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Rəqs şənliyi
+  tutorial_introtomlai_name: Maşın Öyrənməsinə Giriş
+  tutorial_computervisionai_name: Kompüter Görmə
+  tutorial_neuralnetworksai_name: Sinir şəbəkələri
+  tutorial_chatbotsllmai_name: Chatbotlar və Böyük Dil Modelləri
+  tutorial_generativeimagesai_name: Generativ Şəkillər
+  tutorial_algorithmicbiasai_name: Alqoritmik Yanlışlıq
+  tutorial_codeofethicsai_name: AI Etika Kodeksimiz
+  tutorial_socimpactofgenaiai_name: Generativ AI-nin ictimai təsiri
+  tutorial_generationai_name: Generation AI
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
     Pyret programming language, image-producing functions, defining values and image
@@ -14217,6 +14280,43 @@ az:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
+  tutorial_danceai2023_longdescription: Dostlarınızla bölüşmək üçün bir Rəqs Partiyasını
+    kodlayın. Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, Disneyin 'Encanto'
+    musiqisi və daha çoxunu təqdim edir!
+  tutorial_introtomlai_longdescription: Maşın öyrənmə adlanan süni intellekt forması
+    və problemləri həll etmək üçün robotu öyrətmək üçün Problemlərin Çözülməsi Prosesindən
+    necə istifadə edə biləcəklərini öyrənin. Bir robotun balıqdakı nümunələri necə
+    aşkar etməyi öyrəndiyi maşın öyrənmə fəaliyyətlərində iştirak edin.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Sinir şəbəkələrinin necə işlədiyini öyrənin.
+    Yolda əllərindəki sinir şəbəkələrini araşdırmaq üçün bir widget istifadə edin.
+    Sinir şəbəkələrini izah edən bir videoya baxın. Nəhayət tövsiyə sistemləri yaratarkən
+    müxtəlif perspektivlərə olan ehtiyacı müzakirə edin.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Süni intellektin şəkillər necə yarada
+    biləcəyini öyrənin, sonra diffuziya AI widgetını araşdırın və bu modellərin yaradıcı
+    olub olmadığını müzakirə edin.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Generativ süni intellektin təsirini
+    fərqli baxımlardan araşdırın, sonra bütün iştirakçıların ən çox ehtiyaclarını
+    ödəən təlimatlar hazırlamaq üçün bir komanda olaraq əməkdaşlıq edin.
+  tutorial_generationai_longdescription: 'Venture through time to create your AI-powered
+    inventions in the new Minecraft Hour of Code: Generation AI. Use problem solving,
+    creativity, and computational thinking with the principles of Responsible AI.
+    With coding in blocks or Python, Hour of Code allows anyone to learn the basics
+    of coding and how to build a better AI for all.'
   tutorial_bsimage_string_detail_grades: 6+ siniflər
   tutorial_bscomputing_string_detail_grades: 6+ siniflər
   tutorial_stackpython_string_detail_grades: 6+ siniflər
@@ -14318,7 +14418,7 @@ az:
   tutorial_hwfanpage_string_detail_grades: 2+ siniflər
   tutorial_hwillusion_string_detail_grades: 6+ siniflər
   tutorial_caevolution_string_detail_grades: 6+ siniflər
-  tutorial_bbbusybot_string_detail_grades: 6+ siniflər
+  tutorial_bbbusybot_string_detail_grades: 9+ siniflər
   tutorial_caaifarm_string_detail_grades: 6+ siniflər
   tutorial_cafuture_string_detail_grades: 6+ siniflər
   tutorial_dmscratch_string_detail_grades: 2-8 siniflər
@@ -14348,6 +14448,16 @@ az:
   tutorial_madmobile_string_detail_grades: 6+ siniflər
   tutorial_intelinosmile_string_detail_grades: Pre-oxucu - 8-ci sinif
   tutorial_intelinoaisign_string_detail_grades: 2-8 siniflər
+  tutorial_danceai2023_string_detail_grades: 2+ siniflər
+  tutorial_introtomlai_string_detail_grades: 6+ siniflər
+  tutorial_computervisionai_string_detail_grades: 6+ siniflər
+  tutorial_neuralnetworksai_string_detail_grades: 6+ siniflər
+  tutorial_chatbotsllmai_string_detail_grades: 6+ siniflər
+  tutorial_generativeimagesai_string_detail_grades: 6+ siniflər
+  tutorial_algorithmicbiasai_string_detail_grades: 6+ siniflər
+  tutorial_codeofethicsai_string_detail_grades: 6+ siniflər
+  tutorial_socimpactofgenaiai_string_detail_grades: 6+ siniflər
+  tutorial_generationai_string_detail_grades: 2+ siniflər
   tutorial_bsimage_string_platforms: Xrom, Firefox, Safari
   tutorial_bscomputing_string_platforms: Ayrılmış
   tutorial_stackpython_string_platforms: Bütün müasir brauzerlər, Android planşet,
@@ -14517,6 +14627,26 @@ az:
   tutorial_madmobile_string_platforms: Bütün müasir brauzerlər
   tutorial_intelinosmile_string_platforms: Bütün müasir brauzerlər, iPad
   tutorial_intelinoaisign_string_platforms: Bütün müasir brauzerlər
+  tutorial_danceai2023_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_introtomlai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_computervisionai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_neuralnetworksai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_chatbotsllmai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_generativeimagesai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_codeofethicsai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Bütün müasir brauzerlər, Android tablet,
+    iPad, Android telefon, iPhone
+  tutorial_generationai_string_platforms: Android planşet, iPad, Windows telefonu,
+    Android telefonu, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -14648,6 +14778,16 @@ az:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Dil müstəqil
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -14773,12 +14913,22 @@ az:
   tutorial_codecombathack_string_detail_programming_languages: Dil müstəqil
   tutorial_toxicodewords_string_detail_programming_languages: Dil müstəqil
   tutorial_mitstepmisinformation_string_detail_programming_languages: Ayrılmış
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Ayrılmış
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Ayrılmış
   tutorial_mitstepintrotoml_string_detail_programming_languages: Ayrılmış
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Bloklar
   tutorial_intelinoaisign_string_detail_programming_languages: Bloklar
+  tutorial_danceai2023_string_detail_programming_languages: Dil müstəqil
+  tutorial_introtomlai_string_detail_programming_languages: Dil müstəqil
+  tutorial_computervisionai_string_detail_programming_language: Dil müstəqil
+  tutorial_neuralnetworksai_string_detail_programming_languages: Dil müstəqil
+  tutorial_chatbotsllmai_string_detail_programming_languages: Dil müstəqil
+  tutorial_generativeimagesai_string_detail_programming_languages: Dil müstəqil
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Dil müstəqil
+  tutorial_codeofethicsai_string_detail_programming_languages: Dil müstəqil
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Dil müstəqil
+  tutorial_generationai_string_detail_programming_languages: Bloklar, Python
   school_not_found_heading: Məktəbinizi tapa bilmədik. Zəhmət olmasa daha çox məlumat
     daxil edin.
   school_name: Məktəbin adı
@@ -14919,6 +15069,10 @@ az:
     of all backgrounds participate. The Hour of Code features a large variety of activities
     for all ages and skill levels, so you don't need to be a programming expert to
     volunteer.
+  hoc_how_to_virtual_event_intro_heading: How to host a virtual Hour of Code
+  hoc_how_to_virtual_event_intro_desc_02: While Hour of Code can be held in a classroom,
+    you don't need to be in-person to enjoy the fun! You can host an interactive and
+    inspirational remote event utilizing some of these recommendations.
   hoc_how_to_faq_question_prerequisites: Kod Saatı etmək üçün ilkin şərtlər hansılardır?
   hoc_how_to_faq_answer_prerequisites: Kod Saatı işləmək sadədir - hətta yeni başlayanlar
     üçün də. Şagirdləri yeni bir şey araşdırmağa, yaratmağa və öyrənməyə ruhlandırmaq
@@ -15360,6 +15514,44 @@ az:
   hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
     to stop with the Hour of Code. Consider volunteering year round with programs
     like [TEALS](%{teals_url}) or advocate for computer science education.
+  hoc_how_to_step_virtual_register_desc_01: Register your Hour of Code event to receive
+    early access to information about new activities and special promotions.
+  hoc_how_to_step_virtual_register_desc_02: You may not be gathering in person, but
+    you're still a part of the movement. Use your host's location to add your event
+    to the Hour of Code map, and know that your dedication is part of a worldwide
+    movement.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Decide ahead of time if you want
+    to choose a single tutorial for all of your students, or let each student pick
+    their own.
+  hoc_how_to_step_virtual_plan_list_01: '10:00 - 10:05 am: Begin with an [inspirational
+    video](%{videos_url}) or a short introduction from the host about the importance
+    of computer science fundamentals'
+  hoc_how_to_step_virtual_plan_list_02: '10:05 - 10:45 am: Students do their coding
+    activity'
+  hoc_how_to_step_virtual_plan_list_03: '10:45 - 10:55 am: Students learn about AI'
+  hoc_how_to_step_virtual_plan_list_04: '10:55 - 11:00 am: Host gives closing remarks'
+  hoc_how_to_step_virtual_plan_desc_02: Test out your technology set up and activities
+    in advance. Think about how your students will be joining the call and if they
+    can be on the call while they complete their activity in a separate window. When
+    showing a video, share your screen and your computer's sound.
+  hoc_how_to_step_virtual_plan_desc_03: During the coding activity, you can ask students
+    to mute until they have questions. Or, if your conference tool supports it, consider
+    using breakout rooms for students to work together in pairs or groups.
+  hoc_how_to_step_virtual_get_coding_desc_01: Direct your students to the activity,
+    maybe by sharing the link in the conference tool's chat box or through your classroom's
+    learning management system. Your students may encounter challenges—that's okay!
+    Learning to program is like learning a new language; you won't be fluent right
+    away. If a student doesn't know the answer, encourage them to pair up and figure
+    it out together.
+  hoc_how_to_step_virtual_celebrate_desc_01: 'Be sure to celebrate success! You can
+    print certificates in advance and send them to your students, or have each student
+    ask a parent to print at home. Show off their achievement and share photos and
+    videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg
+    so we can highlight your success, too! (Publicity or privacy policies may apply.)'
+  hoc_how_to_step_virtual_beyond_desc_01: Computer science doesn't have to end with
+    the Hour of Code! While 90% of parents want their child to learn computer science,
+    most schools still don't teach it. To help, Hour of Code partners have diverse
+    curriculum offerings. Learn how to bring these offerings to schools today.
   hoc_ai_top_desc: İstər sinifdə tələbə olsanız, istərsə də AI ilə tədrisin gələcəyini
     açan bir pedaqoq olmağınızdan asılı olmayaraq hər kəs AI haqqında öyrənə bilər.
   hoc_ai_how_ai_works_video_series_desc: Bu qısa videolar sizi süni intellektin necə
@@ -15376,6 +15568,37 @@ az:
     rəhbərlik etdiyi dərslərlə cəlb edin.
   hoc_ai_activities_desc: Bu tamamilə yeni Kod Saatı fəaliyyətləri istifadəçiləri
     süni intellekt dünyası ilə əyləncəli, cəlbedici bir şəkildə tanış edir.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Uyğun mavi və sarı köynəklərdə 100-ə yaxın Code.org
     işçisi şirkətin yay 2022 Codechella tədbiri üçün otel konfrans salonunda poza
     verir.
@@ -16007,9 +16230,10 @@ az:
     kompüter elmləri təhsili cəmiyyətinin yorulmaz köməyindən faydalanmağımıza görə
     minnətdarıq və [illər ərzində təsirimizi dəstəkləyən bütün tərəfdaşlara və şəxslərə
     təşəkkür edirik] (%{partners_url})).
-  about_page_section_more_list_1: "[Code.org 2021 İllik Hesabatı] (%{report_url})
-    (Keçmiş hesabatlar: [2020] [2019](%{past_url_1}%{past_url_2}), (), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Əsas dəyərlərimiz və mesajlaşma qaydalarımız]
     (%{core_url})"
   about_page_section_more_list_3: "[Bizim kurikulum və pedaqogika fəlsəfəmiz] (%{curriculum_url})"

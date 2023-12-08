@@ -155,6 +155,9 @@ ro:
             required:
               display_name: Prezentare generală
         angelina-playground:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Aleatoriu
           lessons:
             lesson-5:
               name: Evaluări
@@ -1605,6 +1608,8 @@ ro:
             va spune când trebuie să răspunzi la acest sondaj.
         csd-post-survey-2023:
           title: Chestionar după curs
+        csd-post-survey-2024:
+          title: Chestionar după curs
         csd1-2017:
           lesson_groups:
             csd1_1:
@@ -1654,6 +1659,14 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Calculatoare și rezolvarea problemelor'
+            lessonGroup-5:
+              display_name: Sondaj
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Procesul de rezolvare a problemelor'
@@ -1813,6 +1826,12 @@ ro:
               display_name: 'Capitolul 1: Imagini şi animaţii'
             lessonGroup-3:
               display_name: 'Capitolul 2: Cum facem jocuri'
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Imagini şi animaţii'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Cum facem jocuri'
         csd3-dlp:
           lesson_groups:
             content:
@@ -1897,6 +1916,12 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd4-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Design orientat spre utilizator'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Prototipare aplicații'
+        csd4-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Design orientat spre utilizator'
@@ -1991,6 +2016,12 @@ ro:
             cspSurvey:
               display_name: Sondaj
         csd5-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Capitolul 1: Reprezentarea informaţiilor'
+            lessonGroup-3:
+              display_name: 'Capitolul 2: Rezolvarea problemelor cu seturi de date'
+        csd5-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolul 1: Reprezentarea informaţiilor'
@@ -2098,6 +2129,14 @@ ro:
             lessonGroup-4:
               display_name: Sondaj
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
+            lessonGroup-4:
+              display_name: Introducere în App Lab
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolul 1
@@ -3797,6 +3836,28 @@ ro:
             ajute să îți pregătești modul de predare a unității Code.org Rezolvarea
             Problemelor și Calculatoarele.
           title: 'Modul 1: Pregătirea Predării Rezolvarea Problemelor și Calculatoarele'
+        self-paced-pl-csd-unit2-2-2023:
+          title: 'Modulul 2: Pregătirea Predării Dezvoltării Web'
+        self-paced-pl-csd-unit3-2-2023:
+          description: "Acest modul de învățare profesională este conceput să te ajute
+            să te pregătești pentru predarea unitatea de Animații și Jocuri Interactive
+            de la Code.org. \n\n**În acest modul de învățare profesională, vei:**\n\n-
+            \  Obține o introducere în Animații și Jocuri Interactive.\n-   Practica
+            conceptele cheie incluse în unitate.\n-   Te vei implica în Game Lab.\n-
+            \  Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:** 120
+            de minute"
+          student_description: "Acest modul de învățare profesională este conceput
+            să te ajute să te pregătești pentru predarea unitatea de Animații și Jocuri
+            Interactive de la Code.org. \n\n**În acest modul de învățare profesională,
+            vei:**\n\n-   Obține o introducere în Animații și Jocuri Interactive.\n-
+            \  Practica conceptele cheie incluse în unitate.\n-   Te vei implica în
+            Game Lab.\n-   Explora proiectele de sfârșit de capitol.\n\n**Timp sugerat:**
+            120 de minute"
+          title: Pregătire pentru Predarea Animații și Jocuri Interactive
+        self-paced-pl-csd-unit4-2-2023:
+          title: 'Modulul 4: Pregătirea pentru Predarea Procesului de Design'
+        self-paced-pl-csd-unit5-2-2023:
+          title: 'Modulul 5: Pregătirea pentru Predarea Date și Societate'
         self-paced-pl-csd1-2021:
           description: |-
             Acest modul este o scurtă introducere atât în Code.org, cât și în acest curs de învățare profesională.

@@ -38,7 +38,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           MOVE1:
             MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
@@ -97,7 +97,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           MOVE:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
@@ -178,7 +178,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -202,7 +202,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
@@ -347,7 +347,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           LOCATION:
             "{x: 200, y: 100}": fent
             "{x: 200, y: 300}": lent
@@ -375,7 +375,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           FORMAT:
             '"border"': határ
             '"inner"': belső négyzet
@@ -485,7 +485,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           LAYOUT:
             '"border"': határ
             '"inner"': belső négyzet
@@ -660,7 +660,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           SPEED:
             '1': normál
             '2': gyors
@@ -734,7 +734,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -770,7 +770,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -797,7 +797,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
       Dancelab_setTintEachInline:
         text: 'állítsd {THIS} árnyalat: {VAL}'
         options:
@@ -814,7 +814,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
       Dancelab_setTintInline:
         text: "{SPRITE} árnyalatának beállítása: {VAL}"
       Dancelab_setVisible:
@@ -839,7 +839,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           VISIBILITY:
             'true': látható
             'false': láthatatlan
@@ -874,7 +874,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -919,7 +919,7 @@ hu:
             '"ROBOT"': összes robot
             '"SHARK"': összes cápa
             '"SLOTH"': lajhárok
-            '"UNICORN"': Egyszarvúk
+            '"UNICORN"': egyszarvúk
           PROPERTY:
             '"scale"': méret
             '"width"': szélesség
@@ -1708,6 +1708,12 @@ hu:
         text: "{SPRITE} y koordinátája"
       KatiesBlocks_glideTo:
         text: "{SPRITE}[0] siklik ide {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"solid"': szilárd
+            '"liquid"': folyékony
+            '"gas"': gáznemű
       KatiesBlocks_tumbling:
         text: bukdácsoló
       Mikelab_addBehaviorSimple:

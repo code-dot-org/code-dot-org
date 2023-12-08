@@ -1113,6 +1113,12 @@ ru:
         text: "{SPRITE}сказать{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} плавно перейти к {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': газ
+            '"liquid"': жидкий
+            '"solid"': твердый
       KatiesBlocks_tumbling:
         text: акробатика
       Mikelab_addBehaviorSimple:

@@ -8,6 +8,9 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/districts-styles.css", rel: "stylesheet"}
 
+-# Button urls
+- url_learn_more = "#email-signup-form"
+- url_enroll_now = "https://docs.google.com/forms/d/e/1FAIpQLSfFV_iJoDK4erZxIeX_tZiq5vZ7ZDa9HFjHbYzBDNLT9rIFhQ/viewform"
 
 -# FontAwesome icons
 - icon_laptop_file = "fa-solid fa-laptop-file"
@@ -40,7 +43,9 @@ theme: responsive_full_width
         %li Invest in teachers and administrators through <a href="/educate/professional-learning" target="_blank" rel="noopener noreferrer">high-quality professional learning</a> experiences
         %li Tap into the energy, aspirations, and potential of all students to close equity gaps in computer science education and career pathways
         %li Align with the education-to-workforce priorities of employers and policymakers
-      %a{href: "#email-signup-form", class: "link-button"} Enroll in Code.org’s District Program
+      .button-wrapper.flex-container
+        %a.link-button{href: url_learn_more} Learn more
+        %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
     %div.col-45{style: "float:right; margin-top: 3px"}
       %figure.video-responsive{style: "max-width: unset"}
         %div
@@ -100,8 +105,9 @@ theme: responsive_full_width
         .text-wrapper
           %h3 Scholarships for schools serving underserved students
           %p Access to $1.5M in Professional Learning scholarships for teachers serving students traditionally underrepresented in CS.
-    %div.centered
-      %a{href: '#email-signup-form', class: 'link-button'} Enroll in Code.org’s District Program
+    .button-wrapper.flex-container.justify-center
+      %a.link-button{href: url_learn_more} Learn more
+      %a.link-button.secondary{href: url_enroll_now, target: "_blank", rel: "noopener noreferrer"} Enroll now
 
 %section.bg-primary-light{style: "display: block !important"}
   .wrapper

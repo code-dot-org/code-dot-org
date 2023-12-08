@@ -14,7 +14,7 @@ tr:
             '"too little"': çok az
             '"too much"': çok fazla
         text: |2-
-           if {CONDITION}{SPRITE}
+           eğer {CONDITION}{SPRITE}
           {STATEMENT}
       AmysBlocks_goldilocksElse:
         text: |2-
@@ -55,6 +55,8 @@ tr:
             '2.00': Büyük
             '3.00': ekstra büyük
         text: "{SPRITE} boyutunu {SIZE} olarak ayarlayın"
+      Dancelab_ai:
+        text: "{IMAGE} {VALUE} efekti oluşturur"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -649,6 +651,7 @@ tr:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': Çiçek Açan Yapraklar
             '"circles"': Çemberler
             '"color_cycle"': Renkler
             '"diamonds"': Elmaslar
@@ -656,6 +659,7 @@ tr:
             '"disco_ball"': Disko Topu
             '"fireworks"': Havai fişekler
             '"flowers"': Çiçekler
+            '"frosted_grid"': Buzlu Izgara
             '"galaxy"': Uzay
             '"growing_stars"': Büyüyen Yıldızlar
             '"higher_power"': Higher Power
@@ -678,17 +682,27 @@ tr:
             '"swirl"': Hipnozcu
             '"text"': Şarkı Adları
           PALETTE:
+            '"autumn"': Sonbahar
             '"cool"': Havalı
             '"default"': Işık
             '"electronic"': Elektronik
+            '"grayscale"': Gri ton
             '"iceCream"': Dondurma
             '"neon"': Neon
             '"ocean"': Okyanus
             '"rainbow"': Gökkuşağı
             '"rave"': Siyah Beyaz
+            '"roses"': Güller
+            '"sky"': Gökyüzü
+            '"spring"': İlkbahar
+            '"summer"': Yaz
+            '"sunrise"': Gün Doğumu
+            '"sunset"': Gün batımı
             '"tropical"': Tropik
+            '"twinkling"': Parıldayan
             '"vintage"': Eski tip
             '"warm"': Sıcak
+            '"winter"': Kış
         text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
       Dancelab_setDanceSpeed:
         options:
@@ -1155,6 +1169,15 @@ tr:
         text: "{SPRITE}, {TEXT1} der"
       KatiesBlocks_glideTo:
         text: "{SPRITE}, {LOCATION} konumuna süzülür"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gaz
+            '"liquid"': sıvı
+            '"solid"': katı
+        text: |2-
+          eğer {CONDITION}{SPRITE}
+          {STATEMENT}
       KatiesBlocks_makeNumSpritesNear:
         text: "{LOCATION} yakınında {NUM} yeni {ANIMATION_NAME} karakter yap"
       KatiesBlocks_spriteBirdSay:
@@ -1168,7 +1191,7 @@ tr:
       KatiesBlocks_tumbling:
         text: karıştır
       Mikelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       Mikelab_addTrainingData:
         options:
           LOCATION:
@@ -2175,7 +2198,7 @@ tr:
             "{x1:0, x2:400, y1:0, y2:200}": Alt
             "{x1:0, x2:400, y1:200, y2:400}": Üst
       gamelab_addBehaviorSimple:
-        text: hareket {SPRITE} Başlar {BEHAVIOR}
+        text: "{SPRITE} karakteri {BEHAVIOR} 'e başlar"
       gamelab_addTarget:
         options:
           OPT:

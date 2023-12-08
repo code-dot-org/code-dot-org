@@ -2097,10 +2097,10 @@
         },
         "network/how-ai-works/2023": {
           "word": "네트워크",
-          "definition": "서로 연결된 항목 모음입니다.이러한 연결을 따르는 것은 순서도와 같은 알고리즘의 단계를 나타낼 수 있습니다."
+          "definition": "서로 연결된 항목 모음. 이러한 연결을 따르는 것은 순서도와 같은 알고리즘의 단계를 나타낼 수 있습니다."
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "대형 언어 모델 (LLM)",
+          "word": "대규모 언어 모델 (LLM)",
           "definition": "매우 방대한 지식을 바탕으로 훈련되는 범용 형태의 AI"
         },
         "model/how-ai-works/2023": {
@@ -2109,15 +2109,15 @@
         },
         "diffusion_ai/how-ai-works/2023": {
           "word": "디퓨전 AI",
-          "definition": "이미지를 노이즈로 변환하고 프로세스를 역전시키도록 AI를 훈련시킵니다."
+          "definition": "이미지를 노이즈로 변환하고 프로세스를 뒤바꾸도록 AI를 훈련시킵니다."
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
-          "word": "GAN (생성적 적대 네트워크)",
+          "word": "GAN (적대적 생성 신경망)",
           "definition": "경쟁하는 두 AI 모델을 사용하여 무언가를 생성하는 방법"
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "인공지능",
-          "definition": "학습하고 문제를 해결하는 기계의 능력."
+          "definition": "학습하고 문제를 해결하는 머신의 능력."
         },
         "ethics/how-ai-works/2023": {
           "word": "윤리",
@@ -2452,7 +2452,12 @@
           "definition": " 무언가를 일으키는 행위."
         },
         "program/dance-ai/2023": {
-          "word": "프로그램 "
+          "word": "프로그램 ",
+          "definition": " 머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "인공지능(A.I.) ",
+          "definition": "데이터로 받아들이고 그 데이터에서 패턴을 학습한 다음 학습한 내용을 기반으로 결정을 내리는 컴퓨터 프로그램."
         }
       }
     }

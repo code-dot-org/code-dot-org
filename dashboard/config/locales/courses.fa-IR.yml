@@ -136,7 +136,7 @@ fa:
         csp-2023:
           description_short: آموزش مفاهیم بنیادین علوم کامپیوتر.
         mike-test:
-          title: مقدمات علم کامپیوتر
+          title: مبانی علوم کامپیوتر
         self-paced-pl-csa-2022:
           title: ماژولهای آغاز دوره‌های CSA
         self-paced-pl-csa-2023:
@@ -158,14 +158,32 @@ fa:
         vpl-csd-summer-pilot-ci-2022:
           title: بررسی دوره آموزشی "کشفیات علوم کامپیوتر"
     resources:
+      all_resources_1/csd/2021:
+        name: تمام منابع
+      all_resources_2/csd/2023:
+        name: تمام منابع
+      all_resources_7/csd/2022:
+        name: تمام منابع
+      all_standards_1/csd/2021:
+        name: تمام استانداردها
+      all_standards_2/csd/2023:
+        name: تمام استانداردها
+      all_standards_7/csd/2022:
+        name: تمام استانداردها
+      all_vocabulary_1/csd/2021:
+        name: تمام واژگان
+      all_vocabulary_2/csd/2023:
+        name: تمام واژگان
+      all_vocabulary_7/csd/2022:
+        name: تمام واژگان
       curriculum/csd/2017:
-        name: برنامه آموزشی
+        name: برنامه درسی
       curriculum/csd/2018:
-        name: برنامه آموزشی
+        name: برنامه درسی
       curriculum/csd/2019:
-        name: برنامه آموزشی
+        name: برنامه درسی
       curriculum/csd/2020:
-        name: برنامه آموزشی
+        name: برنامه درسی
       teacher_forum/csd/2019:
         name: انجمن استادان
       teacher_forum/csd/2020:

@@ -1409,18 +1409,18 @@
         },
         "conditionals/csc-ecosystems/2023": {
           "word": "Condições",
-          "definition": "Declarações que só funcionam sob certas condições"
+          "definition": "Declarações que só são executadas sob certas condições"
         },
         "ecosystem/csc-ecosystems/2023": {
           "word": "Ecossistema",
-          "definition": "Uma comunidade biológica de organismos em interação e seu ambiente"
+          "definition": "Uma comunidade biológica de organismos interagindo e seu ambiente"
         },
         "event/csc-ecosystems/2023": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça"
         },
         "overfishing/csc-ecosystems/2023": {
-          "word": "Sobrepesca",
+          "word": "Pesca Predatória",
           "definition": "Remoção de peixes mais rápido do que eles podem se reproduzir"
         },
         "simulation/csc-ecosystems/2023": {
@@ -1428,8 +1428,8 @@
           "definition": "Um modelo de computador para fins de estudo."
         },
         "debug/csc-ecosystems/2023": {
-          "word": "Depurar",
-          "definition": "Encontrando e corrigindo erros ou problemas no código."
+          "word": "Depure",
+          "definition": "Localizando e corrigindo erros ou problemas no código."
         },
         "variable/csc-ecosystems/2023": {
           "word": "Variável",
@@ -2190,16 +2190,16 @@
           "definition": "Uma coleção de itens conectados entre si. Seguir essas conexões pode representar as etapas em um algoritmo, como um fluxograma."
         },
         "large_language_model_llm_/how-ai-works/2023": {
-          "word": "Modelo de linguagem grande (LLM)",
-          "definition": "uma forma de IA de uso geral que é treinada em um corpo de conhecimento muito, muito grande"
+          "word": "Grande Modelo de Linguagem (LLM)",
+          "definition": "uma forma IA para vários propósitos que é treinada em um corpo de conhecimento muito, muito grande"
         },
         "model/how-ai-works/2023": {
           "word": "Modelo",
           "definition": "Um programa de computador projetado para tomar uma determinada decisão"
         },
         "diffusion_ai/how-ai-works/2023": {
-          "word": "Difusão AI",
-          "definition": "convertendo uma imagem em ruído e treinando uma IA para reverter o processo"
+          "word": "IA de Difusão",
+          "definition": "convertendo uma imagem em ruído e treinando uma IA para reverter esse processo"
         },
         "gan_generative_adversarial_network_/how-ai-works/2023": {
           "word": "GAN (Rede Adversarial Generativa)",
@@ -2207,7 +2207,7 @@
         },
         "artificial_intelligence/how-ai-works/2023": {
           "word": "Inteligência Artificial",
-          "definition": "a capacidade das máquinas de aprender e resolver problemas."
+          "definition": "a capacidade das máquinas de aprender e solucionar problemas."
         },
         "code/aquatic/unversioned": {
           "word": "Código",
@@ -2305,7 +2305,7 @@
           "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
         },
         "code/flappy/unversioned": {
-          "word": "codificar",
+          "word": "código",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "debugging/flappy/unversioned": {
@@ -2559,7 +2559,88 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "program/dance-ai/2023": {
-          "word": "Programa"
+          "word": "Programa",
+          "definition": "Um algoritmo que foi codificado tornando-se algo que pode ser administrado por uma máquina."
+        },
+        "binary_system/csd/2021": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "ascii/csd/2021": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "bit/csd/2021": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2021": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2021": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2021": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2021": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "ascii/csd/2022": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "binary_system/csd/2022": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "bit/csd/2022": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2022": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2022": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2022": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2022": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "ascii/csd/2023": {
+          "definition": "um sistema popular para representar texto em binário"
+        },
+        "binary_system/csd/2023": {
+          "definition": "uma forma de representar informações usando apenas duas opções"
+        },
+        "bit/csd/2023": {
+          "definition": "uma única informação binária"
+        },
+        "pixel/csd/2023": {
+          "definition": "um pequeno quadrado ou ponto que contém um único ponto de cor de uma imagem maior."
+        },
+        "decrypt/csd/2023": {
+          "word": "Descriptografar",
+          "definition": "alterar as informações para que seu significado oculto seja revelado"
+        },
+        "encrypt/csd/2023": {
+          "word": "Criptografar",
+          "definition": "alterar as informações para que seu significado permaneça oculto"
+        },
+        "ethics/csd/2023": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
+        },
+        "artificial_intelligence_a_i_/dance-ai/2023": {
+          "word": "Inteligência Artificial (I.A.) ",
+          "definition": "Um programa de computador que recebe dados, aprende padrões com esses dados e então toma decisões com base no que aprendeu."
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "Ética",
+          "definition": "diretrizes para bom comportamento."
         }
       }
     }

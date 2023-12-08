@@ -66,6 +66,8 @@ vi:
           description_short: Tìm hiểu khái niệm nền tảng khoa học máy tính.
         csd-2023:
           title: Những khám phá Khoa học Máy tính
+        self-paced-pl-csd-unit2-2023:
+          title: Giảng dạy về Phát triển web
     resources:
       curriculum/csd/2017:
         name: Chương trình

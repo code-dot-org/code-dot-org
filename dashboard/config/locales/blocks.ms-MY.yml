@@ -1072,6 +1072,12 @@ ms:
         text: "{SPRITE}katakan{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE} meluncur ke {LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': gas
+            '"liquid"': cecair
+            '"solid"': pepejal
       KatiesBlocks_tumbling:
         text: berguling
       Mikelab_addBehaviorSimple:

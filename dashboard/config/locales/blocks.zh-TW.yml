@@ -24,6 +24,8 @@ zh-TW:
             '0.75': 小
             '1.00': 中
             '2.00': 大
+      Dancelab_ai:
+        text: "{IMAGE}生成{VALUE}效果"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -621,6 +623,7 @@ zh-TW:
       Dancelab_setBackgroundEffectWithPaletteAI:
         options:
           EFFECT:
+            '"blooming_petals"': 盛開的花瓣
             '"circles"': 隧道
             '"color_cycle"': 色塊
             '"diamonds"': 菱形
@@ -628,6 +631,7 @@ zh-TW:
             '"disco_ball"': 迪斯科球
             '"fireworks"': 煙火
             '"flowers"': 花朵
+            '"frosted_grid"': 磨砂網格
             '"galaxy"': 太空
             '"growing_stars"': 星星
             '"higher_power"': Higher Power
@@ -650,17 +654,27 @@ zh-TW:
             '"swirl"': 催眠
             '"text"': 歌曲標題
           PALETTE:
+            '"autumn"': 秋天
             '"cool"': 藍調
             '"default"': 光亮
             '"electronic"': 電子
+            '"grayscale"': 灰度
             '"iceCream"': 冰淇淋
             '"neon"': 霓虹
             '"ocean"': 海洋
             '"rainbow"': 彩虹
             '"rave"': 黑白
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"sunrise"': 日出
+            '"sunset"': 日落
             '"tropical"': 熱帶
+            '"twinkling"': 閃爍
             '"vintage"': 復古
             '"warm"': 紅色
+            '"winter"': 冬天
         text: |-
           "設置背景效果
           {PALETTE} {EFFECT}"
@@ -1096,6 +1110,12 @@ zh-TW:
         text: "{SPRITE}說{TEXT1}"
       KatiesBlocks_glideTo:
         text: "{SPRITE}滑動到{LOCATION}"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': 氣體
+            '"liquid"': 液體
+            '"solid"': 固體
       KatiesBlocks_tumbling:
         text: 翻滾
       Mikelab_addBehaviorSimple:

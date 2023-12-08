@@ -14413,6 +14413,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "ドロップダウンを使用して、さまざまな色や効果を選択します。\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "「AI生成エフェクト」ブロックをワークスペースの「2小節目で」 イベントに次のように接続します： \n\n[ブロックリーブロック][0]。",
+          "hint2": "[グロックリーブロック][0]ブロックをクリックして新しいエフェクトを作る。"
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **まだ行き詰っていますか?**イベントのビデオをもう一度見て、どのように機能するかを学んでください。",
+          "hint2": "💡 以下は、あなたのコードがどのように見えるかの例です。 <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"上\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"クマ\"</field>\n        <field name=\"MOVE\">動く.ダブ</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">の絵文字をクリックしてエフェクトをカスタマイズしてください。\n  <field name=\"VALUE\">{\"入力\":\n[\"クール\",\"コールド\",\"ウェービー\"]、\"背景効果\":\"スパークル\",\"背景色\":\"クール\",\"忘れなれないエフェ入力クト\":\"バブル\" }</field> \n\n</block> \\<0>ブロックをワークスペースに置く。",
+          "Hint2": "💡 **まだ行き詰まっていますか？**エフェクトをカスタマイズする方法をビデオでご覧ください。",
+          "HintEdit": "💡 A.I.が書いたコードを使いたい場合は、切り替えでコードを表示させ、「コードを使用」をクリックします。このブロックがワークスペースの「A.I.生成エフェクト」ブロックに置き換わります。"
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "ダンサーは両方のブロックで同じであるべきで、シークエンス（順番）が重要です。",
+          "validation": "これらのブロックを<code style=\"color:white; background-color:#FFBD46\">セットアップ</code>に追加して、最初のダンサーを作ってください：\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"ネコ\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"ネコ\"</field>\n            <field name=\"MOVE\">\"次\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 [ブロックリー・ブロック][0]を<code style=\"color:white; background-color:#FFBD46\">セットアップ</code>に接続します。そして、それをクリックして開始します。",
+          "Hint3": "💡 エフェクトを再生成したり、絵文字を変更したい場合は、もう一度「A.I.生成エフェクト」ブロックをクリックしてください。"
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 曲を聴いて、曲の雰囲気を考えよう。",
+          "Hint2": "💡 [ブロックリー・ブロック][0]を<code style=\"color:white; background-color:#FFBD46\">セットアップ</code>に接続します。そして、それをクリックして開始します。",
+          "Hint3": "💡 エフェクトを再生成したり、絵文字を変更したい場合は、「A.I. 生成エフェクト」ブロックをもう一度クリックしてください。"
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 ダンサーはダンスが実行されていないと合図に反応しません。",
+          "hint2": "💡 <code style=\"color:white; background-color:#FFBD46\">実行</code> を押した後、<code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> 右または左の矢印を押してダンサーに合図を出します。"
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "「新しいスプライトを作成」ブロックをクリックしてドラッグし、「実行時」の下に接続します。 \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "スプライトの場所を変えるには、ロケーションブロックのピンをクリックして、移動させたい場所をクリックします。\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"

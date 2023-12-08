@@ -618,7 +618,7 @@ fa:
         csd_u6_circuit_playground: محاسبات فیزیکی
         CSA-PL-for-loops: حلقه‌های For در جاوا
         CSA-PL-variables: ایجاد متغیرها در جاوا
-        PL_CS_Journeys_Overview: سفرهای cs
+        PL_CS_Journeys_Overview: سفرهای علوم کامپیوتر
         CSA-PL-intro-to-java-lab: مبانی آزمایشگاه جاوا
         CSA-PL-first-program: نوشتن برنامه در جاوا
         CSD_u6_variables_part1: 'CSD: متغیرها'
@@ -696,6 +696,9 @@ fa:
         csd_sprite_properties: ویژگی‌های اسپرایت
         csc-starquilts-intro: کدنویسی لحاف ستاره‌ هندسی
         csc-ecosystems-intro: شبیه‌سازی اکوسیستم دریایی
+        how-ai-works-llms-full: چت‌بات‌ها و مدل‌های زبانی بزرگ چگونه کار می‌کنند
+        how-ai-works-creativity-full: آیا هوش مصنوعی دارای خلاقیت و تخیل است؟
+        csd_ml_how_ai_works: هوش مصنوعی چگونه کار می‌کند
     callout:
       text:
         drag_blocks: یک بلوک «حرکت» را بکش و آن را زیر بلوک دیگری بچسبان

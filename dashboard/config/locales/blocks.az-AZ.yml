@@ -1106,6 +1106,12 @@ az:
         text: əlavə səkkiz
       KatiesBlocks_glideTo:
         text: "{SPRITE} {LOCATION} yerə sürüşmək"
+      KatiesBlocks_goldilocks:
+        options:
+          CONDITION:
+            '"gas"': qaz
+            '"liquid"': maye
+            '"solid"': bərk
       KatiesBlocks_tumbling:
         text: yıxılma
       Mikelab_addBehaviorSimple:

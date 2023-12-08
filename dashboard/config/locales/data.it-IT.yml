@@ -1032,6 +1032,7 @@ it:
         csd_gamelab_velocity: Velocità
         csd_how_teamwork_works: Come funziona il lavoro di squadra
         csd_ml_ethics_ai: 'Etica e Intelligenza Artificiale '
+        csd_ml_how_ai_works: Come funziona l'IA
         csd_ml_import_model: Importazione di un modello AI
         csd_ml_intro_ai_lab_july2021: Introduzione al Laboratorio IA
         csd_ml_intro_to_ai_lab: Introduzione al Laboratorio IA
@@ -1109,6 +1110,7 @@ it:
         hint_videos_d_11_7_last: 'Video suggerimenti: D.11.7 Infine'
         hint_videos_d_11_9_first: 'Video suggerimenti: D.11.9 Prima di tutto'
         hint_videos_d_11_9_last: 'Video suggerimenti: D.11.9 Infine'
+        hoc-dance-ai-warmup: 'Dance Party edizione AI: preparazione'
         hoc_dance_congrats: Ballando col codice - Parte la festa!
         hoc_dance_congrats_2019: Dance Party - Via al party!
         hoc_dance_events: Ballando col codice - Eventi
@@ -1119,8 +1121,7 @@ it:
         hoc_dance_warmup: Ballando col codice - Preparazione
         hoc_dance_warmup_2019: Dance Party - Warm up
         hoc_wrapup: Conclusione dell'Ora del Codice
-        how-ai-works-creativity-full: Le Intelligenze artificiali hanno creatività
-          o immaginazione?
+        how-ai-works-creativity-full: L'IA è dotata di creatività e di immaginazione?
         how-ai-works-lessons: 'Come funziona l''IA: panoramica delle lezioni'
         how-ai-works-llms-full: Come funzionano i Chatbot e i Modelli linguistici
           di grandi dimensioni
@@ -1141,7 +1142,7 @@ it:
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
         lesson_planning: Pianificazione Lezione
         llms-cobranded: 'Come funziona l''IA: chatbot e modelli linguistici di grandi
-          dimensioni'
+          dimensioni (LLM)'
         loop_for: Blocco "ripeti con contatore"
         loop_times: Blocco "ripeti ... volte"
         loop_until: Blocco "ripeti fino a che"

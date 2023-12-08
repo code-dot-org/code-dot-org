@@ -3478,6 +3478,15 @@
         },
         "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
           "description": "Bilgisayar faresini, dokunmatik fareyi veya dokunmatik ekranı belirtirken uygun terminolojiyi kullanın."
+        },
+        "120d0539-1db0-452c-ab3c-e15980fbef26": {
+          "description": "Bilgisayarların yaratıcı süreçlere nasıl katkıda bulunabileceğini düşünün."
+        },
+        "3d8bf8f0-1aa6-4758-9acb-f2fc35e3af5a": {
+          "description": "Dans partilerinin görsel deneyimini geliştirmek için, seçilen emojilere göre uygun, özel efektleri seçmek ve oluşturmak için, Yapay Zekadan yararlanın."
+        },
+        "eaa9f1b1-c83f-4cc7-aff7-c1da143706a1": {
+          "description": "Tuş vuruşları ve zamanlı olaylar gibi, kullanıcı girdilerine yanıt veren, etkileşimli öğeleri programlamak için, temel kodlama kavramlarını kullanın."
         }
       }
     }

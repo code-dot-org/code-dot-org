@@ -9,15 +9,6 @@ $ai-block-inputs-border-color: rgba(255 255 255 / 0.6);
 $ai-modal-header-height: 50px;
 $ai-modal-border-width: 8px;
 
-@keyframes preview-right-to-normal {
-  0% {
-    left: 72%;
-  }
-  100% {
-    left: 70%;
-  }
-}
-
 // Emoji moves across linearly but downwards with acceleration.
 @keyframes flying-emoji-x {
   0% {
@@ -25,6 +16,15 @@ $ai-modal-border-width: 8px;
   }
   100% {
     left: 100px;
+  }
+}
+
+@keyframes flying-emoji-x-rtl {
+  0% {
+    left: 65px;
+  }
+  100% {
+    left: 115px;
   }
 }
 
@@ -49,9 +49,15 @@ $ai-modal-border-width: 8px;
 }
 
 .dialog {
+  @media (max-height: 580px) {
+    top: 10px;
+    transform-origin: top center;
+    transform: translateX(-50%) scale(0.85);
+  }
+
   max-width: initial !important;
   width: 824px !important;
-  height: 514px;
+  height: 508px;
   padding: 0 !important;
   background-color: $ai-block-color !important;
   border: solid 1px $ai-block-border-color;
@@ -123,7 +129,6 @@ $ai-modal-border-width: 8px;
     height: calc(100% - $ai-modal-header-height - 3 * $ai-modal-border-width);
     position: relative;
     user-select: none;
-    padding: 10px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: white;
@@ -131,19 +136,22 @@ $ai-modal-border-width: 8px;
     .toggleArea {
       position: absolute;
       width: 40%;
-      top: 10px;
+      top: 5px;
       left: 50%;
       text-align: center;
       transform: translateX(-50%);
       display: flex;
       justify-content: space-around;
+      animation: appear 0.3s;
+      margin-top: 3px;
 
       span {
         button {
           &:focus-visible {
             // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
             // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
-            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability - we'll simply use SegmentedButton here
+            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability -
+            // we'll simply use SegmentedButton here.
             outline: 2px solid $light_primary_500 !important;
           }
         }
@@ -152,17 +160,18 @@ $ai-modal-border-width: 8px;
 
     .textArea {
       position: absolute;
-      width: calc(100% - 30px);
-      top: 353px;
+      width: calc(100% - 16px);
+      top: 345px;
       text-align: center;
       font-size: 16px;
       transform: translateX(-50%);
       left: 50%;
       line-height: 25px;
       padding: 4px 0;
-      border-top: solid 1px $neutral_dark30;
-      border-bottom: solid 1px $neutral_dark30;
+      border-top: solid 1px $neutral_dark10;
+      border-bottom: solid 1px $neutral_dark10;
       white-space: pre-wrap;
+      animation: appear 0.3s;
 
       .text {
         animation: appear 0.2s;
@@ -174,7 +183,8 @@ $ai-modal-border-width: 8px;
       width: 305px;
       height: 305px;
       top: 22px;
-      left: 320px;
+      transform: translate(-50%);
+      left: 50%;
 
       .inputsContainer {
         animation: appear 0.5s;
@@ -195,16 +205,29 @@ $ai-modal-border-width: 8px;
       width: 260px;
       height: 280px;
       top: 50px;
-      left: 0;
       pointer-events: none;
       z-index: 1;
+
+      html[dir='ltr'] & {
+        left: 0;
+      }
+
+      html[dir='rtl'] & {
+        right: 0;
+      }
 
       .flyingEmoji {
         position: absolute;
         left: 110px;
         top: 100px;
 
-        animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+        html[dir='ltr'] & {
+          animation: flying-emoji-x 0.4s linear, flying-emoji-y 0.4s ease-in;
+        }
+
+        html[dir='rtl'] & {
+          animation: flying-emoji-x-rtl 0.4s linear, flying-emoji-y 0.4s ease-in;
+        }
       }
 
       .botContainer {
@@ -213,14 +236,29 @@ $ai-modal-border-width: 8px;
         .botHead {
           position: absolute;
           width: 97px;
-          left: 81.5px;
           top: 34px;
-          transform-origin: bottom left;
           transition: transform 0.5s 0.25s;
           transform: rotate(0deg);
+          pointer-events: none;
+
+          html[dir='ltr'] & {
+            left: 81.5px;
+            transform-origin: bottom left;
+          }
+
+          html[dir='rtl'] & {
+            left: 82px;
+            transform-origin: bottom right;
+          }
 
           &Open {
-            transform: rotate(-60deg);
+            html[dir='ltr'] & {
+              transform: rotate(-60deg);
+            }
+
+            html[dir='rtl'] & {
+              transform: rotate(60deg);
+            }
           }
         }
 
@@ -230,6 +268,7 @@ $ai-modal-border-width: 8px;
           left: 50%;
           position: absolute;
           top: 100px;
+          pointer-events: none;
         }
 
         animation: appear 0.5s;
@@ -242,12 +281,6 @@ $ai-modal-border-width: 8px;
       }
     }
 
-    .scoreArea {
-      position: absolute;
-      left: 270px;
-      top: 120px;
-    }
-
     .previewArea {
       position: absolute;
       width: 280px;
@@ -257,26 +290,19 @@ $ai-modal-border-width: 8px;
       display: flex;
       align-items: center;
       margin-top: 10px;
-      transition: left 1.5s, box-shadow 0.3s;
-
-      &Generating {
-        animation: appear 0.7s, preview-right-to-normal 0.7s;
-        left: 70%;
-      }
-
-      &Results {
-        left: 50%;
-        animation: appear 0.7s;
-      }
+      transition: left 1.5s, box-shadow 0.05s;
+      left: 50%;
 
       &Yes {
-        box-shadow: 0 0 0 2px $yes-color;
+        box-shadow: 0 0 0 4px $yes-color;
         border-radius: 4px;
       }
 
-      &No {
-        box-shadow: 0 0 0 2px $no-color;
-        border-radius: 4px;
+      .previewContainer {
+        animation: appear 0.3s;
+        position: absolute;
+        top: 0;
+        left: 0;
       }
 
       .flipCard {
@@ -302,20 +328,46 @@ $ai-modal-border-width: 8px;
         &Back {
           position: absolute;
           backface-visibility: hidden;
-          left: 50%;
+          top: 0;
         }
 
         &Front {
-          transform: translateX(-50%);
+          left: 0;
+          transform: translateZ(0);
         }
 
         &Back {
-          transform: rotateY(180deg) translateX(50%);
+          html[dir='ltr'] & {
+            right: 0;
+          }
+
+          html[dir='rtl'] & {
+            left: 0;
+          }
+
+          transform: rotateY(180deg);
 
           .blockPreview {
             margin-top: 50px;
           }
         }
+      }
+    }
+
+    .checkArea {
+      position: absolute;
+      top: 120px;
+
+      font-size: 100px;
+      color: $yes-color;
+      animation: appear 0.05s;
+
+      html[dir='ltr'] & {
+        left: 630px;
+      }
+
+      html[dir='rtl'] & {
+        left: 80px;
       }
     }
 
@@ -331,15 +383,17 @@ $ai-modal-border-width: 8px;
         position: absolute;
         padding-inline-start: 15px;
         box-sizing: border-box;
-        right: 20px;
         width: 110px;
         border-radius: 4px;
         border: solid $neutral_dark10 1px;
         animation: appear 1s;
 
+        html[dir='ltr'] & {
+          right: 20px;
+        }
+
         html[dir='rtl'] & {
           left: 20px;
-          right: initial;
         }
 
         .emojiSlot {
@@ -385,28 +439,31 @@ $ai-modal-border-width: 8px;
     }
 
     .buttonsArea {
-      height: 44px;
       margin-top: auto;
       display: flex;
       justify-content: space-between;
       position: absolute;
       bottom: 0;
-      width: calc(100% - 20px);
-      transform: translateX(-50%);
-      left: 50%;
+      width: 100%;
+      padding: 3px;
+      box-sizing: border-box;
     }
 
     .buttonsAreaTop {
       position: absolute;
-      top: 0;
       display: flex;
       justify-content: space-between;
-      width: inherit;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 3px;
+      box-sizing: border-box;
     }
   }
 
   .button {
     font-size: 16px;
+    animation: appear 0.3s;
 
     &:disabled {
       pointer-events: none;
@@ -433,6 +490,12 @@ $ai-modal-border-width: 8px;
         html[dir='rtl'] & {
           margin-left: 10px;
         }
+      }
+    }
+
+    &WithoutText {
+      span {
+        margin: 0;
       }
     }
   }

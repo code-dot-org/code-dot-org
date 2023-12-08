@@ -9399,11 +9399,11 @@ ar-SA:
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_conditionals:
         answers:
-        - text: "! [](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+        - text: "![](https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
             PM.png)"
-        - text: "! [](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+        - text: "![](https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
             PM.png)"
-        - text: "! [](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+        - text: "![](https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
             PM.png)"
         markdown: |
           ## انظر إلى النظم البيئية الثلاثة
@@ -9418,7 +9418,7 @@ ar-SA:
             ![](https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
         - text: |-
             تسمح الكمية المناسبة من الطحالب للمرجان المريض بالشفاء والحفاظ على صحة الأسماك أيضًا.
-            ! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+            ![](https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
         title: قم بمطابقة الكود مع الصورة
       csc_ecosystems_matching_events:
         answers:

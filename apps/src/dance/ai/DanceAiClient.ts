@@ -2,7 +2,7 @@ import UntypedCachedBackgroundEffects from '@cdo/static/dance/ai/model/cached_ba
 import UntypedCachedForegroundEffects from '@cdo/static/dance/ai/model/cached_foreground_effects_map.json';
 import UntypedCachedPalettes from '@cdo/static/dance/ai/model/cached_palettes_map.json';
 
-import {FieldKey, GeneratedEffect} from '../types';
+import {FieldKey, GeneratedEffect} from './types';
 
 export enum ChooseEffectsQuality {
   GOOD = 'good',
@@ -19,6 +19,10 @@ const cachedWeightsMappings: {[key in FieldKey]: CachedWeightsMapping} = {
   foregroundEffect: UntypedCachedForegroundEffects,
   backgroundColor: UntypedCachedPalettes,
 };
+
+const NUM_RANDOM_TOP_OPTIONS = 3;
+const NUM_RANDOM_BOTTOM_OPTIONS = 20;
+
 /**
  * Chooses a random background effect, background color, and foreground effect associated
  * with the emojis the user selected.  If quality is GOOD, then choose one of the best
@@ -48,11 +52,10 @@ export function chooseEffects(
     const weightVector = calculateOutputSummedWeights(selectedEmojis, mapping);
     // Sort and slice top or bottom scoring options, mapped to their output identifiers (e.g. [[0.25, 'squiggles'], ...])
     const allSortedOptions = getSortedOptions(weightVector, mapping);
-    const numRandomOptions = 3;
     const topOrBottomOptions =
       quality === ChooseEffectsQuality.GOOD
-        ? allSortedOptions.slice(0, numRandomOptions)
-        : allSortedOptions.slice(-numRandomOptions);
+        ? allSortedOptions.slice(0, NUM_RANDOM_TOP_OPTIONS)
+        : allSortedOptions.slice(-NUM_RANDOM_BOTTOM_OPTIONS);
 
     const selectedOutputOption =
       topOrBottomOptions[Math.floor(Math.random() * topOrBottomOptions.length)];

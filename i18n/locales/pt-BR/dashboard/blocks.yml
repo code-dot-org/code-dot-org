@@ -31,6 +31,8 @@ pt:
             '0.75': pequeno
             '1.00': médio
             '2.00': grande
+      Dancelab_ai:
+        text: "{IMAGE}gerar {VALUE} efeito"
       Dancelab_alternateMoves:
         text: "{GROUP} alterna a cada {N} medida entre {MOVE1} e {MOVE2}"
         options:
@@ -630,12 +632,15 @@ pt:
             '"none"': Nenhum
             '"rand"': "(Aleatório)"
             '"quads"': Ângulos
+            '"blooming_petals"': Pétalas florescentes
             '"circles"': Túnel
+            '"clouds"': Nuvens
             '"color_cycle"': Cores
             '"diamonds"': Diamantes
             '"disco_ball"': Bola de discoteca
             '"fireworks"': Fogos de artifício
             '"flowers"': Flores
+            '"frosted_grid"': Malha congelada
             '"growing_stars"': Estrelas em crescimento
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
@@ -655,17 +660,27 @@ pt:
             '"stars"': Estrelas
             '"music_wave"': Ondas
           PALETTE:
+            '"autumn"': Outono
             '"rave"': Preto e branco
             '"cool"': Tons de azul
             '"electronic"': Electrônica
+            '"grayscale"': Escala cinza
             '"iceCream"': Sorvete
             '"default"': Claro
             '"neon"': Néon
             '"ocean"': Oceano
             '"rainbow"': Arco-íris
+            '"roses"': Rosas
+            '"sky"': Céu
+            '"spring"': Primavera
+            '"summer"': Verão
+            '"sunrise"': Nascer do sol
+            '"sunset"': Pôr do sol
             '"tropical"': Tropical
+            '"twinkling"': Cintilante
             '"vintage"': Vintage
             '"warm"': Tons de vermelho
+            '"winter"': Inverno
       Dancelab_setDanceSpeed:
         text: alterar a velocidade da dança de {SPRITE} para {SPEED}
         options:
@@ -1722,6 +1737,13 @@ pt:
         text: coordenada y do {SPRITE}
       KatiesBlocks_glideTo:
         text: "{SPRITE} deslizar para {LOCATION}"
+      KatiesBlocks_goldilocks:
+        text: if {CONDITION}{SPRITE} {STATEMENT}
+        options:
+          CONDITION:
+            '"solid"': sólido
+            '"liquid"': líquido
+            '"gas"': gás
       KatiesBlocks_tumbling:
         text: em queda
       Mikelab_addBehaviorSimple:

@@ -236,6 +236,11 @@ pl:
               name: "[Lekcja obrazów generatywnych (dall-e-esque)]"
           name: ai-temp
           title: "[Temp] Wprowadzenie do AI"
+        ai-tutor-test:
+          lessons:
+            lesson-1:
+              name: Test nauczyciela AI
+          name: ai-tutor-test
         ai-unit-pilot:
           description_short: Pilotaż Jednostki AI w CSD
           lesson_groups:
@@ -414,6 +419,8 @@ pl:
               name: Siatka CSS
             lesson-5:
               name: Oceny/Sprawdziany
+            lesson-6:
+              name: Lekcja 1
           name: angelina-playground
           title: Miejsce Angeliny do robienia rzeczy
         applab-1hour:
@@ -3056,6 +3063,10 @@ pl:
             przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
           name: csd-post-survey-2023
           title: Ankieta po odbyciu kursu
+        csd-post-survey-2024:
+          description: Ta jednostka zawiera ankietę po kursie. Ta jednostka może zostać
+            przypisana po ukończeniu przez uczniów końcowej jednostki w tym kursie.
+          title: Ankieta po odbyciu kursu
         csd-sample-online:
           title: Próbka działań on-line Odkryć Informatyki
         csd-test-saving-state:
@@ -3160,6 +3171,16 @@ pl:
               display_name: Ankieta
           name: csd1-2022
         csd1-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Proces rozwiązywania problemów'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Komputery i rozwiązywanie problemów'
+            lessonGroup-4:
+              display_name: Lekcje alternatywne
+            lessonGroup-5:
+              display_name: Ankieta
+        csd1-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Rozdział 1: Proces rozwiązywania problemów'
@@ -3400,6 +3421,19 @@ pl:
             w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
             i praca zespołowa.
         csd2-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+          title: Opracowywaniem stron internetowych
+        csd2-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
@@ -3720,6 +3754,20 @@ pl:
             używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
             spersonalizowany program interaktywny.
           title: Interaktywne animacje i gry
+        csd3-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Obrazy i animacje'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie gier'
+          student_description: W dziale 3 będziesz korzystać z doświadczeń w zakresie
+            kodowania w trakcie programowania animacji, sztuki interaktywną i gry
+            w Game Lab.Dział rozpoczyna się  od prostych kształtów i buduje się w
+            nim bardziej wyszukane animacje i gry oparte na duszku, używając tych
+            samych koncepcji programowania i procesu projektowania, którego informatycy
+            używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać
+            spersonalizowany program interaktywny.
+          title: Interaktywne animacje i gry
         csd3-dlp:
           description: To jest Dział 3 "Planu pogłębionej nauki" dla prowadzących
             "Odkrycia informatyki" Code.org w trakcie szkolenia. Tutaj znajdziesz
@@ -4026,6 +4074,20 @@ pl:
             dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
             testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
             informacje zwrotne i kształtować dalszą iterację.
+        csd4-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Prototypowanie aplikacji'
+          student_description: Dział 4 wprowadza zagadnienia szerszego oddziaływania
+            społecznego informatyki. Poprzez serię wyzwań projektowych będziesz się
+            uczył lepiej rozumieć potrzeby innych, opracowując rozwiązanie problemu.
+            Druga połowa działu składa się z iteracyjnego projektu zespołowego, w
+            trakcie którego zespoły mają możliwość identyfikacji potrzeb, które są
+            dla nich ważne, tworzyć prototypy rozwiązań na papierze i w App Lab oraz
+            testować rozwiązania na prawdziwych użytkownikach, aby uzyskać od nich
+            informacje zwrotne i kształtować dalszą iterację.
         csd4-dlp:
           description: To jest Dział 4 "Planu pogłębionej nauki" dla prowadzących
             "Odkrycia informatyki" Code.org w trakcie szkolenia. Tutaj znajdziesz
@@ -4314,6 +4376,24 @@ pl:
             jak proces rozwiązywania problemu z danym może być stosowany w wybranym
             przez siebie obszarze.
         csd5-2023:
+          description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
+            aby rozwiązywać problemy z danymi.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Reprezentowanie Informacji'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Rozwiązywanie problemów z danymi'
+          student_description: Dział 5 poświęcony jest znaczeniu danych w rozwiązywaniu
+            problemów oraz podkreślaniu, w jaki sposób komputery mogą pomóc w tym
+            procesie. W pierwszym rozdziale bada się różne systemy używane do przedstawiania
+            informacji na komputerze oraz wyzwań i kompromisów zamieszczone przez
+            tych, którzy go używają. W drugim rozdziale dowiesz się, jak zbieranie
+            danych są używane do rozwiązywania problemów i jak komputery pomagają
+            w automatyzacji kroków tego procesu. Rozdział kończy się przemyśleniem,
+            jak proces rozwiązywania problemu z danym może być stosowany w wybranym
+            przez siebie obszarze.
+          title: Dane i społeczeństwo
+        csd5-2024:
           description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
             aby rozwiązywać problemy z danymi.
           lesson_groups:
@@ -4719,6 +4799,13 @@ pl:
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
           name: csd6a-2023
+        csd6a-2024:
+          description_short: Naucz się programować przy pomocy urządzeń fizycznych
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Dane i wyniki'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
         csd6b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -4726,6 +4813,21 @@ pl:
             lessonGroup-4:
               display_name: Budowanie fizycznych prototypów
           name: csd6b-2023
+          student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach
+            i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście
+            danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab
+            i BBC micro:bita, opracujesz programy, które wykorzystują te same wejścia
+            i wyjścia sprzętowe, które widzisz w inteligentnych urządzeniach, patrząc
+            na to, jak prosty prototyp może doprowadzić do gotowego produktu. Jednostka
+            kończy się wyzwaniem projektowym, aby użyć micro:bita jako bazy dla innowacji
+            we własnym projekcie.
+          title: Jednostka 6B - (Opcja B) Tworzenie aplikacji z urządzeniami (micro:bit)
+        csd6b-2024:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Wejścia i wyjścia
+            lessonGroup-4:
+              display_name: Budowanie fizycznych prototypów
           student_description: Ta jednostka bada rolę platform sprzętowych w obliczeniach
             i jak różne czujniki mogą zapewnić bardziej efektywne wejście i wyjście
             danych niż tradycyjna klawiatura, mysz i monitor. Korzystając z App Lab
@@ -4773,6 +4875,15 @@ pl:
           name: csd7-2022
           title: AI i uczenie maszynowe
         csd7-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Rozdział 1
+            lessonGroup-3:
+              display_name: Rozdział 2
+            lessonGroup-4:
+              display_name: Wprowadzenie do App Lab
+          title: AI i uczenie maszynowe
+        csd7-2024:
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1
@@ -6636,7 +6747,7 @@ pl:
         dance-ai-2023:
           lessons:
             lesson-1:
-              name: 'Potańcówka: edycja AI'
+              name: 'Potańcówka: edycja A.I.'
           name: dance-ai-2023
           title: 'Potańcówka: edycja AI'
         dance-draft:
@@ -9866,12 +9977,16 @@ pl:
           lessons:
             lesson-2:
               name: Moduł CSD 7 Synchroniczny
+            lesson-6:
+              name: 'Sesja synchroniczna 5: Podsumowanie'
           name: vpl-csd-2023-m7
           title: Moduł 7
         vpl-csd-2023-m8:
           lessons:
             lesson-2:
               name: Moduł CSD 8 Synchroniczny
+            lesson-3:
+              name: 'Sesja synchroniczna 2: Wnioski i powiązania'
           name: vpl-csd-2023-m8
           title: Moduł 8
         vpl-csd-ci-1:
@@ -10082,6 +10197,19 @@ pl:
         vpl-csp-2023-m8:
           name: vpl-csp-2023-m8
           title: Moduł 8
+        web-dev-2024:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Tworzenie stron internetowych'
+            lessonGroup-3:
+              display_name: 'Rozdział 2: Wielostronicowe witryny'
+          student_description: W Części 2 nauczysz się, jak tworzyć i udostępniać
+            treści na Twoich własnych stronach internetowych. Po podjęciu decyzji
+            jaką treść chcesz udostępniać światu nauczysz się, jak konstruować i stylizować
+            swoje strony z wykorzystaniem HTML i CSS. Będziesz też ćwiczyć cenne umiejętności
+            w zakresie programowania takie jak debugowanie, korzystanie  z zasobów
+            i praca zespołowa.
+          title: Opracowywaniem stron internetowych
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

@@ -244,6 +244,7 @@ fr:
   for_students_teacher_led_learning: 'Pour les élèves : Apprentissage dirigé par l''enseignant'
   for_students_teacher_led_lessons: 'Pour les étudiants : cours dispensés par un enseignant'
   professional_development: Pseudoloc-Þŕôƒéššîôñàļ ðéṽéļôþɱéñţ
+  additional_educator_resources: Additional Educator Resources
   teach_computer_science: Enseigner les sciences informatiques
   explore_our_curriculum: Découvrez notre programme de formation
   start_professional_learning: Commencer la formation professionnelle
@@ -314,7 +315,7 @@ fr:
   call_to_action_register_event: Enregistrez votre événement
   call_to_action_register_your_hoc: Enregistrez votre heure de code
   call_to_action_register_now: S'inscrire maintenant
-  call_to_action_share_event_plan: Share your event plan
+  call_to_action_share_event_plan: Partagez le programme de votre événement
   call_to_action_select_activity: Choisir une activité
   call_to_action_select_coding_activity: Sélectionnez une activité de codage
   call_to_action_start_activity: Commencer une activité
@@ -322,16 +323,18 @@ fr:
   call_to_action_print_certificates: Imprimer des certificats
   call_to_action_go_beyond_hoc: Après avoir fait Une Heure de Code
   call_to_action_see_volunteer_guide: Consultez le guide du volontaire
-  call_to_action_see_teacher_guide: See teacher how-to guide
-  call_to_action_see_event_guide: See event how-to guide
+  call_to_action_see_teacher_guide: Voir le guide pratique de l'enseignant
+  call_to_action_see_event_guide: Consulter le guide pratique de l'événement
   call_to_action_join_advocacy_coalition: Rejoignez la coalition des militants
-  call_to_action_become_an_advocate: Become an advocate
-  call_to_action_share_event_w_parents: Share your event with parents
+  call_to_action_become_an_advocate: Devenez notre porte-parole
+  call_to_action_share_event_w_parents: Partagez l'événement avec vos parents
   call_to_action_sign_up_to_volunteer: Inscrivez-vous pour vous porter volontaire
-  call_to_action_share_on_social_media: Share on social media
+  call_to_action_share_on_social_media: Partager sur les réseaux sociaux
   call_to_action_explore_all_hoc_activities: Découvrez toutes les activités liées
     à l'Heure de Code sur Code.org
   call_to_action_start_dance_party: Commencez l'activité "Dance Party"
+  call_to_action_start_dance_party_ai_edition: 'Commencer la soirée dansante : Édition
+    de l''IA'
   call_to_action_start_part_02: Commencez la partie deux
   call_to_action_start_unplugged_activity: Lancez une activité débranchée
   call_to_action_view_promo_resources: Afficher les ressources promotionnelles
@@ -343,6 +346,8 @@ fr:
   call_to_action_try_hoc_ai_activities: Essayez les activités d'IA d'Hour of Code
   call_to_action_explore_activities: Explorer les activités
   call_to_action_explore_ai: Découvrir l'IA
+  call_to_action_explore_resources: Explore resources
+  call_to_action_explore_tool: Outil d'exploration
   call_to_action_explore_unit: Explorez l'unité
   call_to_action_explore_curriculum: Explorez le programme
   call_to_action_explore_curricula: Explorez les programmes
@@ -405,7 +410,7 @@ fr:
   call_to_action_explore_teacher_forums: Explorez les forums pour enseignants
   call_to_action_explore_teacher_forum: Explorez le forum des enseignants
   call_to_action_explore_career_resources: Explorez les ressources professionnelles
-  call_to_action_explore_stats_infographics: Explore statistics & infographics
+  call_to_action_explore_stats_infographics: Découvrez les statistiques et les infographies
   call_to_action_watch_videos: Regardez des vidéos
   call_to_action_download_posters: Téléchargez des affiches
   call_to_action_contact_support: Contactez l'assistance de Code.org
@@ -444,8 +449,17 @@ fr:
   call_to_action_coming_soon: Prochainement !
   call_to_action_learn_how_ai_works: Découvrez comment fonctionne l'IA
   call_to_action_learn_about_ai: En savoir plus sur l'IA
-  call_to_action_learn_more_about_ai: Learn more about AI
+  call_to_action_learn_more_about_ai: Plus d'informations sur l'IA
   call_to_action_get_started: Commencez
+  call_to_action_explore_self_paced_pl: Explore self-paced professional learning
+  call_to_action_applications_get_notified: Get notified when applications open
+  call_to_action_applications_notify_me: Notify me when I can apply
+  call_to_action_apply_now: Apply now
+  call_to_action_explore_self_paced_learning: Explore self-paced learning
+  call_to_action_explore_k_5_workshops: Explore K-5 workshops
+  call_to_action_for_intl_educators: For international educators
+  call_to_action_learn_more_program_region: Learn more about the program in your region
+  call_to_action_visit_support_center: Visit our support center
   aria_label_call_to_action_hoc_how_to_educators: Consultez le guide pour les éducateurs
   aria_label_call_to_action_hoc_how_to_companies: Consultez le guide pour les entreprises
   aria_label_call_to_action_hoc_how_to_districts: Consultez le guide pour les districts
@@ -471,6 +485,8 @@ fr:
     Teaching Computer Science Principles
   aria_label_call_to_action_teaching_problem_solving: Organiser le programme de formation
     à la résolution de problèmes professionnels et à l'enseignement de l'informatique.
+  aria_label_call_to_action_teaching_interactive_animations_games: Start the Teaching
+    Interactive Animations and Games professional learning program
   aria_label_call_to_action_teaching_csc: Suivez le programme d'apprentissage professionnel
     "Teaching Computer Science Connections" (Enseigner les connexions en informatique).
   aria_label_call_to_action_teaching_ai: Lancez le programme d'apprentissage professionnel
@@ -582,6 +598,16 @@ fr:
     pour étudiants
   aria_label_call_to_action_view_more_cs_resources: Consulter d'autres ressources
     informatiques
+  aria_label_call_to_action_pl_apply_csd: Apply now for Computer Science Discoveries
+    professional learning
+  aria_label_call_to_action_pl_apply_csp: Apply now for Computer Science Principles
+    professional learning
+  aria_label_call_to_action_pl_apply_csa: Apply now for AP® Computer Science A professional
+    learning
+  aria_label_call_to_action_learn_more_csd: Learn more about Computer Science Discoveries
+  aria_label_call_to_action_learn_more_csp: Learn more about Computer Science Principles
+  aria_label_call_to_action_learn_more_csa: Learn more about AP® Computer Science
+    A
   video_title_professional_learning_program: Le programme de formation professionnelle
     de Code.org
   curriculum_name_csf: Principes fondamentaux de l'informatique
@@ -601,6 +627,7 @@ fr:
   curriculum_name_csd: Découvertes en informatique
   curriculum_name_csp: Principes de l'informatique
   curriculum_name_problem_solving: Résolution de problèmes et informatique
+  curriculum_name_teaching_animation: Teaching Interactive Animations and Games
   curriculum_name_csc: Connexions en l'Informatique
   curriculum_name_csa: Sciences informatiques A
   curriculum_name_csa_ai: Pseudoloc-Šôƒţŵàŕé Éñĝîñééŕîñĝ ⅋ Çôɱþûţéŕ Ṽîšîôñ
@@ -748,8 +775,10 @@ fr:
   module_label_languages: 'Langues prises en charge :'
   module_label_accessibility_features: 'Accessibilité :'
   module_label_accessibility_features_full: 'Caractéristiques d''accessibilité :'
+  module_label_teacher_requirements: 'Teacher Requirements:'
   module_label_educator_tool: Outil pédagogique
   module_label_educator_course: Cours pour éducateurs
+  module_label_educator_resources: Educator resources
   module_label_student_tool: Outil pour étudiants
   module_label_student_product: Produit
   module_label_student_content_resources: Contenu et ressources
@@ -758,6 +787,7 @@ fr:
   module_label_available_now: Disponible dès maintenant
   module_label_video_series: Séries de vidéos
   module_label_self_paced: Module à rythme automatique
+  module_label_event_or_lessons: Event or lessons
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -799,6 +829,7 @@ fr:
   module_duration_1_hr: 1 heure
   module_duration_2_hrs: 2 heures
   module_duration_3_hrs: 3 heures
+  module_duration_3_hrs_20_minutes: 3 hours 20 minutes
   module_duration_5_hrs: 5 heures
   module_duration_5_hrs_plus: Plus de 5 heures
   module_duration_8_hrs: 8 heures
@@ -820,6 +851,7 @@ fr:
   module_label_teaching_csd: Enseigner les découvertes en informatique
   module_label_teaching_csp: Principes d'enseignement de l'informatique
   module_label_teaching_problem_solving: Enseigner la résolution de problèmes et l'informatique
+  module_label_teaching_animations: Interactive Animations and Games
   module_label_teaching_csc: Enseigner les connexions en informatiques
   module_label_teaching_ai: Enseignement de l'IA et de l'apprentissage automatique
   module_label_teaching_maker_cp: Enseignement de la création d'applications avec
@@ -892,6 +924,12 @@ fr:
   heading_attend_free_workshop: Participer à un atelier pour étudiant gratuit
   heading_access_more_cs_resources: Accéder à plus de ressources en informatique
   heading_available_on_code_dot_org: Disponible sur Code.org
+  heading_program_design: Program design
+  heading_how_does_application_process_work: How does the application process work?
+  heading_apply: Apply
+  heading_acceptance: Acceptance
+  heading_enroll: Enroll
+  heading_have_questions: Have questions?
   cs_ambassador_subhead: Si vous êtes une lycéenne passionnée par le fait d'encourager
     un plus grand nombre de jeunes femmes à suivre des cours d'informatique dans votre
     école, nous avons besoin de vous !
@@ -969,6 +1007,19 @@ fr:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Des ateliers en présentiel et
     virtuels débuteront cet été.
+  pl_self_paced_learning_heading: Self-Paced Learning
+  pl_self_paced_learning_desc: Learn at your own pace using our online learning modules.
+    You can start whenever is convenient for you and the courses are free.
+  pl_elementary_workshops_heading: Elementary Workshops
+  pl_elementary_workshops_desc: Do you teach Kindergarten through 5th grade? Check
+    out the link below to learn more about our K5 workshops.
+  pl_outside_us_heading: Outside the United States
+  pl_outside_us_desc: If you're an international teacher interested in professional
+    learning, learn more about what's offered in your area.
+  pl_regional_partner_desc: Your local Code.org Regional Partner provides high quality
+    Code.org professional learning to teachers, and can help guide your school or
+    district on implementation, certification, funding, and more. They are happy to
+    answer any questions you may have about the program!
   no_devices_section_subhead: Allez-y, coupez le cordon (pendant un moment) !
   no_devices_section_desc: L'enseignement de l'informatique n'a pas toujours besoin
     d'être présenté devant un écran et l'accès aux appareils ne devrait pas constituer
@@ -995,6 +1046,11 @@ fr:
   subscribe_form_section_desc_csp: Inscrivez-vous pour recevoir des e-mails mensuels
     sur les principes informatiques de Code.org et recevoir des rappels, des conseils
     et des mises à jour utiles directement dans votre boîte de réception.
+  subscribe_form_section_title_pl: Get notified when Professional Learning registration
+    opens
+  subscribe_form_section_desc_pl: Be the first to know when registration begins! Sign
+    up to receive an email notification when teachers can start applying for the Code.org
+    Professional Learning Program.
   subscribe_form_section_unsubscribe: Vous pouvez vous désinscrire à tout moment.
   hoc_page_what_is_hoc_heading: Qu'est-ce que l'Heure du code ?
   hoc_page_desc: '[L''Heure du code](%{hoc_url}) est une initiative internationale
@@ -1210,6 +1266,8 @@ fr:
     des besoins de tous les participants.
   ai_curriculum_btn_aria_label_06: Afficher le plan de cours sur l'impact sociétal
     de l'IA générative
+  ai_curriculum_btn_aria_label_dance_ai: 'Testez la soirée dansante : Activité d''édition
+    de l''IA '
   ai_carousel_heading: 'Ce que les enseignants disent à propos de l''IA avec Code.org :'
   ai_carousel_quote_01: Cette leçon a également permis à mes élèves de constater qu'il
     existe un élément d'opinion dans les systèmes de classification. Plus tard, lorsque
@@ -1430,6 +1488,68 @@ fr:
   ai_vid_computervision_caption: Vision par ordinateur
   ai_vid_ethics1_caption: 'Éthique et IA : égalité d''accès et biais algorithmique'
   ai_vid_ethics2_caption: 'Éthique et IA : confidentialité et avenir du travail'
+  pl_middle_high_top_heading: Professional Learning Workshops for Grades 6-12
+  pl_middle_high_top_desc: Our engaging workshops are for new and experienced computer
+    science teachers!
+  pl_middle_high_top_desc_02: 'In this program, you will:'
+  pl_middle_high_top_list_01: Explore the curriculum and learning tools
+  pl_middle_high_top_list_02: Experience the course as a teacher and a learner
+  pl_middle_high_top_list_03: Collaborate with fellow teachers
+  pl_middle_high_quotes_heading: 'What teachers are saying about Code.org professional
+    learning:'
+  pl_middle_high_quotes_01: I liked seeing the lessons in action — it helped me understand
+    how to pace them in my own classroom. I liked the opportunity to talk to my peers
+    about assessment ideas and recruitment ideas.
+  pl_middle_high_quotes_02: This was excellent professional development that allowed
+    us time to reflect, process and debrief both individually and as a group. The
+    activities were engaging and meaningful to learning the content. I feel like I'm
+    leaving with skill I can immediately apply in teaching the curriculum.
+  pl_middle_high_quotes_03: By the end, I just felt so prepared, motivated, and ready
+    to get back in the classroom again!
+  pl_middle_high_programs_heading: Professional learning programs specific to the
+    course
+  pl_middle_high_programs_desc: Join one of our professional learning programs in
+    your area. The programs are designed to prepare you before and during your first
+    year teaching [Computer Science Discoveries](%{csd_url}), [Computer Science Principles](%{csp_url}),
+    or [AP® Computer Science A](%{csa_url}).
+  pl_middle_high_programs_no_experience_req: No computer science experience required
+  pl_middle_high_programs_some_experience_req: Able to use functions, conditionals,
+    loops, and arrays
+  pl_middle_high_programs_based_in_us: Based in United States
+  pl_middle_high_programs_teach_ap_course: Teach AP® or non-AP® course
+  pl_middle_high_programs_csd_hours: Teaching 25+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csp_hours: Teaching 100+ hours of course to a class in next
+    school year
+  pl_middle_high_programs_csa_hours: Teaching 140+ hours of course to a class in next
+    school year
+  pl_middle_high_program_design_desc: The yearlong professional learning programs
+    all follow a similar design. Regional Partners across the country provide our
+    programs and offer local workshops led by trained facilitators.
+  pl_middle_high_program_design_summer_title: Summer Workshops
+  pl_middle_high_program_design_summer_desc: Attend a multi-day summer workshop to
+    get familiar with the curriculum and prepare for the school year.
+  pl_middle_high_program_design_year_title: Academic Year Workshops
+  pl_middle_high_program_design_year_desc: Attend workshops during the year to receive
+    support as you teach the curriculum.
+  pl_middle_high_program_design_community_title: Community Support
+  pl_middle_high_program_design_community_desc: Collaborate with your regional cohort
+    of teachers and get the support of a nationwide online teacher community.
+  pl_middle_high_process_apply_desc: Fill out an application with information about
+    you, your school, and the course you're teaching.
+  pl_middle_high_process_acceptance_desc: If accepted, you will be notified of your
+    acceptance by your Regional Partner after applying.
+  pl_middle_high_process_enroll_desc: Sign up for the summer workshop in your region
+    and get ready to start the yearlong program!
+  pl_middle_high_cost_heading: What does the program cost?
+  pl_middle_high_cost_subhead: The cost of the program varies by region.
+  pl_middle_high_cost_desc: You may be eligible for a scholarship to cover the cost
+    of your program.
+  pl_middle_high_additional_programs_desc: In addition to our in-person facilitator
+    led options for middle and high school teachers we have several other programs
+    to meet the diverse needs of our teachers.
+  pl_middle_high_additional_programs_heading: Additional programs to meet diverse
+    teacher needs
   self_paced_pl_hero_heading: Apprentissage professionnel à votre rythme pour les
     éducateurs
   self_paced_pl_hero_desc: Des offres de formation professionnelle pour aider les
@@ -3203,6 +3323,7 @@ fr:
     ou [lisez le guide pratique](%{howto_url})  '
   tutorial_dance2019_name: Dance Party 2019
   tutorial_danceparty_name: Soirée Dansante
+  tutorial_dancepartyai_name: 'Soirée dansante : édition IA'
   tutorial_chibitronics_name: 'Chibitronics : une histoire illuminée'
   tutorial_athlete_name: Code ton propre jeu de sport
   tutorial_moana_name: 'Moana: Signalisation avec le Code'
@@ -3814,19 +3935,14 @@ fr:
   tutorial_csfirstdialogue_name: Dialogue
   tutorial_codemonkeybeaver_name: Beaver Achiever
   tutorial_codestersdistance_name: 'Codesters : Sprites de distanciation sociale'
-  tutorial_itchspace_name: 'ItchCode : Space Invaders - RokCoder'
   tutorial_vidcodemagic_name: Magie des effets spéciaux
   tutorial_vidcodemagices_name: Magie des effets spéciaux
   tutorial_codespeakmeal_name: Codez une application Healthy Meal
-  tutorial_itchfish_name: 'ItchCode : jeu de scratch Fish'
   tutorial_bsdwebsite_name: Mon site Web préféré
   tutorial_codespeaktime_name: Codez une capsule temporelle dans Scratch
-  tutorial_itchwebcam_name: 'ItchCode : réalité augmentée par webcam'
-  tutorial_itchball_name: 'ItchCode : Boule rebondissante'
   tutorial_ttrace_name: Condition de course
   tutorial_plethora_name: 'Pléthora : Cause et effet'
   tutorial_educodesecret_name: Découvrez les secrets de l'Agence !
-  tutorial_itchshapes_name: 'ItchCode : Formes et angles'
   tutorial_codeguppytext_name: Introduction au codage basé sur le texte
   tutorial_vidcodeplastiche_name: Pollution plastique PSA
   tutorial_educativechatbot_name: Créez votre propre chatbot en Python
@@ -3850,8 +3966,6 @@ fr:
   tutorial_codecapture_name: Apprenez à programmer avec JavaScript en un tour de main
   tutorial_codehslitter_name: Codage pour une communauté sans déchets
   tutorial_bsdocean_name: La vie sous l'eau
-  tutorial_itchplatformer_name: 'ItchCode : Tutoriel sur le jeu de plateforme Scratch
-    3.0'
   tutorial_codejika_name: 'CodeJika : site Web de 5 minutes'
   tutorial_gamefrootclicker_name: Apprenez les variables. Codez votre propre jeu Clicker.
   tutorial_rmagicequity_name: Équité contre égalité
@@ -3905,6 +4019,9 @@ fr:
   tutorial_danceparty_shortdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
+  tutorial_dancepartyai_shortdescription: Apprenez ce qu'est l'intelligence artificielle
+    (IA) et créez votre propre soirée dansante virtuelle en vous inspirant des morceaux
+    des meilleurs artistes d'aujourd'hui. Il est temps de jouer !
   tutorial_chibitronics_shortdescription: Programmez un circuit papier pour éclairer
     votre propre histoire.
   tutorial_athlete_shortdescription: Choisis entre créer un jeu de basket ou un jeu
@@ -5218,6 +5335,9 @@ fr:
   tutorial_danceparty_longdescription: Programme une Soirée Dansante à partager avec
     tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
     !
+  tutorial_dancepartyai_longdescription: Apprenez ce qu'est l'intelligence artificielle
+    (IA) et créez votre propre soirée dansante virtuelle en vous inspirant des morceaux
+    des meilleurs artistes d'aujourd'hui. Il est temps de jouer !
   tutorial_chibitronics_longdescription: Programmez un circuit papier pour éclairer
     votre propre histoire.
   tutorial_athlete_longdescription: Choisis entre créer un jeu de basket ou un jeu
@@ -8111,21 +8231,12 @@ fr:
   tutorial_codestersdistance_longdescription: Apprenez les bases du codage en Python,
     puis créez un programme qui calcule la distance entre deux sprites pour vous assurer
     qu'ils respectent la distance sociale ou qu'ils doivent porter un masque.
-  tutorial_itchspace_longdescription: Ce tutoriel vous explique comment créer un jeu
-    Space Invaders classique à l'aide du langage de programmation Scratch MIT. Abonnez-vous
-    à la chaîne YouTube de RokCoder pour plus de vidéos et de tutoriels basés sur
-    Scratch ! Chaque vidéo est un petit didacticiel (d'une durée d'environ dix minutes)
-    qui contient ses propres objectifs finaux spécifiques. Le résultat final est un
-    jeu d'arcade Scratch de haute qualité.
   tutorial_vidcodemagic_longdescription: Faites apparaître des flashs de manière aléatoire
     sur l'écran à l'aide d'une boucle.
   tutorial_vidcodemagices_longdescription: Faites apparaître des flashs de manière
     aléatoire sur l'écran à l'aide d'une boucle.
   tutorial_codespeakmeal_longdescription: Apprenez à coder une application qui aide
     les utilisateurs à prendre des décisions alimentaires saines.
-  tutorial_itchfish_longdescription: Tutoriel Scratch 3.0 pour créer un jeu dans lequel
-    un requin pourchassant et mangeant du poisson est perturbé lorsqu'un plongeur
-    est mangé accidentellement.
   tutorial_bsdwebsite_longdescription: 'Ce cours permet aux étudiants d''utiliser
     le code pour partager ce qui est important ou intéressant pour eux. Ils peuvent
     suivre la leçon ou créer des projets uniques tout en apprenant le HTML, le CSS
@@ -8135,10 +8246,6 @@ fr:
     ou que vous aimez faire. #codeisyourvoice'
   tutorial_codespeaktime_longdescription: Apprenez à coder une capsule temporelle
     numérique pour enregistrer et réfléchir à votre vie actuelle.
-  tutorial_itchwebcam_longdescription: Apprenez-en davantage sur la réalité augmentée
-    et créez votre propre espace virtuel de réalité augmentée.
-  tutorial_itchball_longdescription: Faites rebondir une balle sur l'écran. Apprenez-en
-    davantage sur les boucles et les conditions qu'elles contiennent.
   tutorial_ttrace_longdescription: En appelant des fonctions et en concevant des classes,
     les joueurs programment leur propre voiture de course pour qu'elle soit rapide,
     agile et puissante ; pendant les courses, ils peuvent ensuite pirater les véhicules
@@ -8150,9 +8257,6 @@ fr:
     Smith tout en découvrant plus en profondeur les instructions, les chaînes et les
     boucles. Aidez l'agent Smith à trouver les coupables et à configurer le système
     d'exploitation de l'Agence pour ses nouveaux utilisateurs avec Python.
-  tutorial_itchshapes_longdescription: Apprenez à dessiner des formes dans Scratch.
-    Vous apprendrez également à calculer la distance à tourner pour n'importe quelle
-    forme.
   tutorial_codeguppytext_longdescription: Apprenez les bases du codage textuel en
     créant votre premier programme dans un éditeur de codage en ligne.
   tutorial_vidcodeplastiche_longdescription: "  Le problème du plastique qui remplit
@@ -8242,8 +8346,6 @@ fr:
   tutorial_bsdocean_longdescription: 'La vie sous l''eau met en lumière un problème
     urgent auquel nous sommes confrontés aujourd''hui : notre environnement. Ce projet
     vise à vous aider à coder votre propre page Web sur la protection de nos eaux.'
-  tutorial_itchplatformer_longdescription: Un tutoriel facile à suivre pour créer
-    un jeu de plateforme simple à l'aide de Scratch.
   tutorial_codejika_longdescription: Une excellente introduction au codage à l'aide
     de HTML et de CSS. Codez quelques lignes, obtenez un résultat immédiat sans vous
     perdre dans le comment et le pourquoi en créant une belle page de destination
@@ -8468,6 +8570,7 @@ fr:
     si uniques.
   tutorial_dance2019_string_detail_grades: 2ème année scolaire et plus
   tutorial_danceparty_string_detail_grades: 2ème année scolaire et plus
+  tutorial_dancepartyai_string_detail_grades: Grade 3+
   tutorial_chibitronics_string_detail_grades: K-5
   tutorial_athlete_string_detail_grades: 2ème année scolaire et plus
   tutorial_moana_string_detail_grades: 2ème année scolaire et plus
@@ -9064,19 +9167,14 @@ fr:
   tutorial_csfirstdialogue_string_detail_grades: 2e-5e années (7-10 ans)
   tutorial_codemonkeybeaver_string_detail_grades: K-5
   tutorial_codestersdistance_string_detail_grades: 6e année et plus (11 ans et plus)
-  tutorial_itchspace_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_vidcodemagic_string_detail_grades: 2ème année scolaire et plus
   tutorial_vidcodemagices_string_detail_grades: 2ème année scolaire et plus
   tutorial_codespeakmeal_string_detail_grades: 6e année et plus (11 ans et plus)
-  tutorial_itchfish_string_detail_grades: 2e-5e années (7-10 ans)
   tutorial_bsdwebsite_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codespeaktime_string_detail_grades: 2e-5e années (7-10 ans)
-  tutorial_itchwebcam_string_detail_grades: 6e année et plus (11 ans et plus)
-  tutorial_itchball_string_detail_grades: 2e-5e années (7-10 ans)
   tutorial_ttrace_string_detail_grades: 6e-8e année (11-13 ans)
   tutorial_plethora_string_detail_grades: 2ème année scolaire et plus
   tutorial_educodesecret_string_detail_grades: 6e année et plus (11 ans et plus)
-  tutorial_itchshapes_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codeguppytext_string_detail_grades: 6e-8e année (11-13 ans)
   tutorial_vidcodeplastiche_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_educativechatbot_string_detail_grades: A partir de 9 ans
@@ -9098,7 +9196,6 @@ fr:
   tutorial_codecapture_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codehslitter_string_detail_grades: 6e-8e année (11-13 ans)
   tutorial_bsdocean_string_detail_grades: 6e-8e année (11-13 ans)
-  tutorial_itchplatformer_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_codejika_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_gamefrootclicker_string_detail_grades: 6e-8e année (11-13 ans)
   tutorial_rmagicequity_string_detail_grades: 6e-8e année (11-13 ans)
@@ -9151,6 +9248,8 @@ fr:
   tutorial_dance2019_string_platforms: Tous les navigateurs modernes, iPad
   tutorial_danceparty_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
+  tutorial_dancepartyai_string_platforms: Tous les navigateurs modernes, tablette
+    Android, iPad
   tutorial_chibitronics_string_platforms: Tous les navigateurs actuels
   tutorial_athlete_string_platforms: Tous les navigateurs actuels
   tutorial_moana_string_platforms: Tous les navigateurs modernes, tablette Android,
@@ -9960,23 +10059,17 @@ fr:
   tutorial_codemonkeybeaver_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
   tutorial_codestersdistance_string_platforms: Tous les navigateurs actuels
-  tutorial_itchspace_string_platforms: Tous les navigateurs actuels
   tutorial_vidcodemagic_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
   tutorial_vidcodemagices_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
   tutorial_codespeakmeal_string_platforms: Chrome, Firefox
-  tutorial_itchfish_string_platforms: Tous les navigateurs actuels
   tutorial_bsdwebsite_string_platforms: Chrome
   tutorial_codespeaktime_string_platforms: Chrome, Firefox
-  tutorial_itchwebcam_string_platforms: Tous les navigateurs modernes, tablette Android,
-    iPad
-  tutorial_itchball_string_platforms: Tous les navigateurs actuels
   tutorial_ttrace_string_platforms: Chrome
   tutorial_plethora_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad
   tutorial_educodesecret_string_platforms: Tous les navigateurs actuels
-  tutorial_itchshapes_string_platforms: Tous les navigateurs actuels
   tutorial_codeguppytext_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad
   tutorial_vidcodeplastiche_string_platforms: Tous les navigateurs modernes, iPad,
@@ -10006,7 +10099,6 @@ fr:
   tutorial_codehslitter_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad, téléphone Windows, téléphone Android, iPhone
   tutorial_bsdocean_string_platforms: Chrome
-  tutorial_itchplatformer_string_platforms: Tous les navigateurs actuels
   tutorial_codejika_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad, téléphone Windows, téléphone Android, iPhone
   tutorial_gamefrootclicker_string_platforms: Tous les navigateurs modernes, iPad,
@@ -10067,6 +10159,7 @@ fr:
   tutorial_meeempathy_string_platforms: Windows, iPad, MacOS
   tutorial_dance2019_string_detail_platforms: ''
   tutorial_danceparty_string_detail_platforms: ''
+  tutorial_dancepartyai_string_detail_platforms: ''
   tutorial_chibitronics_string_detail_platforms: Autocollants LED Chibitronics Chibi
     pour puces et circuits
   tutorial_athlete_string_detail_platforms: ''
@@ -10666,19 +10759,14 @@ fr:
   tutorial_csfirstdialogue_string_detail_platforms: ''
   tutorial_codemonkeybeaver_string_detail_platforms: ''
   tutorial_codestersdistance_string_detail_platforms: ''
-  tutorial_itchspace_string_detail_platforms: ''
   tutorial_vidcodemagic_string_detail_platforms: ''
   tutorial_vidcodemagices_string_detail_platforms: ''
   tutorial_codespeakmeal_string_detail_platforms: ''
-  tutorial_itchfish_string_detail_platforms: ''
   tutorial_bsdwebsite_string_detail_platforms: ''
   tutorial_codespeaktime_string_detail_platforms: ''
-  tutorial_itchwebcam_string_detail_platforms: ''
-  tutorial_itchball_string_detail_platforms: ''
   tutorial_ttrace_string_detail_platforms: ''
   tutorial_plethora_string_detail_platforms: ''
   tutorial_educodesecret_string_detail_platforms: ''
-  tutorial_itchshapes_string_detail_platforms: ''
   tutorial_codeguppytext_string_detail_platforms: ''
   tutorial_vidcodeplastiche_string_detail_platforms: ''
   tutorial_educativechatbot_string_detail_platforms: ''
@@ -10700,7 +10788,6 @@ fr:
   tutorial_codecapture_string_detail_platforms: ''
   tutorial_codehslitter_string_detail_platforms: ''
   tutorial_bsdocean_string_detail_platforms: ''
-  tutorial_itchplatformer_string_detail_platforms: ''
   tutorial_codejika_string_detail_platforms: ''
   tutorial_gamefrootclicker_string_detail_platforms: ''
   tutorial_rmagicequity_string_detail_platforms: ''
@@ -10755,6 +10842,7 @@ fr:
   tutorial_meeempathy_string_detail_platforms: ''
   tutorial_dance2019_string_detail_programming_languages: Blocs
   tutorial_danceparty_string_detail_programming_languages: Blocs
+  tutorial_dancepartyai_string_detail_programming_languages: Blocs
   tutorial_chibitronics_string_detail_programming_languages: Blocs
   tutorial_athlete_string_detail_programming_languages: Blocs
   tutorial_moana_string_detail_programming_languages: Blocs
@@ -11378,20 +11466,15 @@ fr:
   tutorial_csfirstdialogue_string_detail_programming_languages: Blocs, rayures
   tutorial_codemonkeybeaver_string_detail_programming_languages: Blocs
   tutorial_codestersdistance_string_detail_programming_languages: Python
-  tutorial_itchspace_string_detail_programming_languages: Blocs
   tutorial_vidcodemagic_string_detail_programming_languages: JavaScript
   tutorial_vidcodemagices_string_detail_programming_languages: JavaScript
   tutorial_codespeakmeal_string_detail_programming_languages: JavaScript
-  tutorial_itchfish_string_detail_programming_languages: Blocs
   tutorial_bsdwebsite_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_codespeaktime_string_detail_programming_languages: Blocs
-  tutorial_itchwebcam_string_detail_programming_languages: Blocs
-  tutorial_itchball_string_detail_programming_languages: Blocs
   tutorial_ttrace_string_detail_programming_languages: JavaScript, CoffeeScript
   tutorial_plethora_string_detail_programming_languages: Indépendance linguistique
     (peut être enseigné dans plusieurs langues)
   tutorial_educodesecret_string_detail_programming_languages: Python
-  tutorial_itchshapes_string_detail_programming_languages: Blocs
   tutorial_codeguppytext_string_detail_programming_languages: JavaScript
   tutorial_vidcodeplastiche_string_detail_programming_languages: JavaScript
   tutorial_educativechatbot_string_detail_programming_languages: Python
@@ -11416,7 +11499,6 @@ fr:
   tutorial_codecapture_string_detail_programming_languages: JavaScript
   tutorial_codehslitter_string_detail_programming_languages: Python, HTML
   tutorial_bsdocean_string_detail_programming_languages: JavaScript, HTML, CSS
-  tutorial_itchplatformer_string_detail_programming_languages: Blocs
   tutorial_codejika_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_gamefrootclicker_string_detail_programming_languages: Blocs
   tutorial_rmagicequity_string_detail_programming_languages: Blocs, JavaScript
@@ -12446,10 +12528,7 @@ fr:
   tutorial_kodableshapes_name: Créez des formes avec du code
   tutorial_nasabinary_name: 'Code binaire : comment parler à un vaisseau spatial'
   tutorial_3dmaker_name: Créateur 3D
-  tutorial_itchstart_name: 'ItchCode : Scratch 5 Block Starter'
   tutorial_hopsub_name: Construisez Subway Surfers avec un ami
-  tutorial_itchmundos_name: Los mundos en mi mundo_E2
-  tutorial_itchtenacity_name: Ténacité
   tutorial_kcjskiing_name: 'Sport + Code: Ski'
   tutorial_groksecurity_name: 'Cybersécurité : défense contre les chapeaux noirs'
   tutorial_creaticode_name: Programmation 3D avec des blocs à gratter
@@ -12598,18 +12677,9 @@ fr:
     nom en code binaire sur une étiquette, un bracelet, une épingle ou même un son.
   tutorial_3dmaker_longdescription: Créez rapidement et facilement vos propres objets
     3D vraiment sympas et rotatifs.
-  tutorial_itchstart_longdescription: Cette leçon est un bon point de départ pour
-    les enfants de 2e ou 3e année qui essaient Scratch pour la toute première fois.
-    Ils commenceront avec un ensemble de 5 blocs qu'ils devront assembler pour que
-    leur personnage effectue certaines actions.
   tutorial_hopsub_longdescription: Apprenez à associer le programme à un ami ou à
     un camarade de classe et créez votre propre Subway Surfer avec les personnages
     Hopscotch !
-  tutorial_itchmundos_longdescription: Découvrez Scratch, un outil de programmation.
-    Ajoutez des objets et des fonds, utilisez des blocs d'événements et des apparences
-    pour donner vie à votre programme.
-  tutorial_itchtenacity_longdescription: Dans ce projet, programmez sur Scratch le
-    simulateur d'un robot qui nettoie les eaux marines.
   tutorial_kcjskiing_longdescription: Tout est amusant jusqu’à ce que quelqu’un finisse
     dans un arbre... mais peut-être que c’est ÇA qui est amusant en fait? Enfilez
     vos skis et pliez les genoux pour guider votre personnage sur une descente pleine
@@ -12915,11 +12985,8 @@ fr:
   tutorial_kodableshapes_language: Anglais
   tutorial_nasabinary_language: Anglais
   tutorial_3dmaker_language: Anglais
-  tutorial_itchstart_language: Anglais
   tutorial_hopsub_language: chinois (simplifié), anglais, espagnol (Espagne), espagnol
     (Mexique)
-  tutorial_itchmundos_language: Espagnol (Mexique)
-  tutorial_itchtenacity_language: Espagnol (Mexique)
   tutorial_kcjskiing_language: Anglais, Français
   tutorial_groksecurity_language: Anglais
   tutorial_creaticode_language: chinois (simplifié), chinois (traditionnel), anglais
@@ -13013,10 +13080,7 @@ fr:
   tutorial_kodableshapes_string_detail_grades: K-5
   tutorial_nasabinary_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_3dmaker_string_detail_grades: 2e-5e années (7-10 ans)
-  tutorial_itchstart_string_detail_grades: 2e-5e années (7-10 ans)
   tutorial_hopsub_string_detail_grades: 2e-5e années (7-10 ans)
-  tutorial_itchmundos_string_detail_grades: 2ème année scolaire et plus
-  tutorial_itchtenacity_string_detail_grades: 2ème année scolaire et plus
   tutorial_kcjskiing_string_detail_grades: 2ème année scolaire et plus
   tutorial_groksecurity_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_creaticode_string_detail_grades: 6e année et plus (11 ans et plus)
@@ -13108,13 +13172,7 @@ fr:
   tutorial_nasabinary_string_platforms: Débranché, lecteur d'écran
   tutorial_3dmaker_string_platforms: Tous les navigateurs modernes, tablette Android,
     iPad, téléphone Windows, téléphone Android, iPhone
-  tutorial_itchstart_string_platforms: Tous les navigateurs modernes, iPad, classes
-    non connectées.
   tutorial_hopsub_string_platforms: iPad, iPhone
-  tutorial_itchmundos_string_platforms: Tous les navigateurs modernes, tablette Android,
-    iPad
-  tutorial_itchtenacity_string_platforms: Tous les navigateurs modernes, tablette
-    Android, iPad
   tutorial_kcjskiing_string_platforms: Tous les navigateurs actuels
   tutorial_groksecurity_string_platforms: Tous les navigateurs modernes, tablette
     Android, iPad, téléphone Windows, téléphone Android, iPhone
@@ -13214,10 +13272,7 @@ fr:
   tutorial_kodableshapes_string_detail_platforms: ''
   tutorial_nasabinary_string_detail_platforms: ''
   tutorial_3dmaker_string_detail_platforms: ''
-  tutorial_itchstart_string_detail_platforms: ''
   tutorial_hopsub_string_detail_platforms: ''
-  tutorial_itchmundos_string_detail_platforms: ''
-  tutorial_itchtenacity_string_detail_platforms: ''
   tutorial_kcjskiing_string_detail_platforms: ''
   tutorial_groksecurity_string_detail_platforms: ''
   tutorial_creaticode_string_detail_platforms: ''
@@ -13306,10 +13361,7 @@ fr:
     de la langue (peut être enseigné en plusieurs langues)
   tutorial_nasabinary_string_detail_programming_languages: Code binaire
   tutorial_3dmaker_string_detail_programming_languages: Blocs
-  tutorial_itchstart_string_detail_programming_languages: Blocs
   tutorial_hopsub_string_detail_programming_languages: marelle
-  tutorial_itchmundos_string_detail_programming_languages: Blocs
-  tutorial_itchtenacity_string_detail_programming_languages: Blocs
   tutorial_kcjskiing_string_detail_programming_languages: Blocs
   tutorial_groksecurity_string_detail_programming_languages: 'Aucune : aucune programmation
     requise'
@@ -14364,7 +14416,7 @@ fr:
   tutorial_wizsea_name: 'Saving the sea: creating a game with code'
   tutorial_wizroad_name: 'Road crossing game: building a road crossing game with code'
   tutorial_bekidsadventure_name: Creative Coding Adventures
-  tutorial_myqpixel_name: MyQ Pixel - Cause and effect (formerly Plethora)
+  tutorial_myqpixel_name: MyQ Pixel – Cause et effet (anciennement Plethora)
   tutorial_creaticodechatgpt_name: Build Fun Apps/Games Using ChatGPT AI
   tutorial_thunkabletranslator_name: Build a Translator and Text-to-Speech App with
     Thunkable
@@ -14383,7 +14435,7 @@ fr:
   tutorial_codetribespace_name: My Space Explorer
   tutorial_codetribelanding_name: My First Landing Page
   tutorial_cakeyboard_name: 'Keyboard Quest: CS100 Software & Hardware'
-  tutorial_hedytext_name: 'Hedy: textual programming made easy!'
+  tutorial_hedytext_name: 'Hedy:  apprendre à programmer facilement'
   tutorial_pickcodelanguage_name: 'Pickcode: Little Language Model'
   tutorial_pickcodegenart_name: 'Pickcode: Generative Art Creator'
   tutorial_pickcodecarbon_name: 'Pickcode: Carbon Footprint Calculator'
@@ -14459,7 +14511,7 @@ fr:
   tutorial_blocksmithrescue_name: A.I. Rescue
   tutorial_cstaheroes_name: CSTA CS Heroes
   tutorial_codecombathack_name: CodeCombat AI HackStack
-  tutorial_toxicodewords_name: 'N-Gram Explorers: Quest for Words'
+  tutorial_toxicodewords_name: 'N-Gram Explorers: à la recherche des mots'
   tutorial_mitstepmisinformation_name: 'Developing AI Literacy (DAILy) 2.0: Spread
     of Misinformation'
   tutorial_mitstepdeepfakes_name: 'Developing AI Literacy (DAILy) 2.0: Deepfakes +
@@ -14470,6 +14522,15 @@ fr:
   tutorial_madmobile_name: 'Mobile App Development: Coding with A.I. and MAD-learn'
   tutorial_intelinosmile_name: Smile to Drive intelino
   tutorial_intelinoaisign_name: Driving the intelino AI Sign Train
+  tutorial_danceai2023_name: Soirée Dansante
+  tutorial_introtomlai_name: Présentation de l'apprentissage automatique
+  tutorial_computervisionai_name: Vision par ordinateur
+  tutorial_neuralnetworksai_name: Réseaux de neurones
+  tutorial_chatbotsllmai_name: Chatbots et grands modèles de langage
+  tutorial_generativeimagesai_name: Images génératives
+  tutorial_algorithmicbiasai_name: Biais algorithmique
+  tutorial_codeofethicsai_name: Notre code d'éthique en matière d'IA
+  tutorial_socimpactofgenaiai_name: Impact sociétal de l'IA générative
   tutorial_generationai_name: Génération IA
   tutorial_bsimage_longdescription: In this lesson students engage with a series of
     scaffolded self-paced activities in our Parley editor that introduce them to the
@@ -14576,9 +14637,9 @@ fr:
     games with block-based programming! Create fun geometric patterns, and craft car
     routes through exciting challenges. Unleash creativity, enhance logic, and get
     to know the art of programming!
-  tutorial_myqpixel_longdescription: In this MyQ activity, you will solve visual fun
-    challenges to help our cute dog find its bones, while leraning the concepts of
-    cause and effect and user interactions.
+  tutorial_myqpixel_longdescription: Dans cette activité MyQ, vous résoudrez des défis
+    visuels amusants pour aider notre adorable chien à retrouver ses os, tout en apprenant
+    les concepts de cause à effet et d'interactions avec les utilisateurs.
   tutorial_creaticodechatgpt_longdescription: Learn to use OpenAI's ChatGPT AI as
     a chatting and reasoning engine to build fun games and smart apps. Scratch-like
     blocks and user interface are used so no need to install any software or learn
@@ -14643,11 +14704,11 @@ fr:
     literacy skills, letter recognition and capitalization, and troubleshoot problems.
     Complete the 5 tasks in an hour or split for junior students. Additional activities
     included.
-  tutorial_hedytext_longdescription: 'Hedy is the easy way to get started with textual
-    programming languages! Hedy is free to use, open source, and unlike any other
-    textual programming language in three ways: you can use Hedy in your own language,
-    you can learn one concept and its syntax a time, is built for the classroom, allowing
-    teachers to fully customize their student''s experience.'
+  tutorial_hedytext_longdescription: Hedy est le moyen simple de démarrer avec les
+    langages de programmation textuels ! est gratuit, open source, multilingue, vous
+    pouvez utiliser Hedy dans votre propre langue ; est progressif, vous pouvez donc
+    apprendre un concept et sa syntaxe au fil du temps, ce qui permet aux enseignants
+    de personnaliser entièrement l'expérience de leurs élèves.
   tutorial_pickcodelanguage_longdescription: In this lesson, we're going to create
     a Little Language Model, which isn't nearly as powerful as systems like ChatGPT
     but will demonstrate some important concepts in AI.
@@ -14878,10 +14939,10 @@ fr:
     on the different poses. They will follow step-by-step instructions and easily
     drag the blocks to solve the exercises. Your curious students can also deep dive
     into how AI works.
-  tutorial_kcjpong_longdescription: Recreate the classic game of Pong using JavaScript,
-    then train an AI to play the game on its own! Learn core JavaScript concepts including
-    Variables, Functions and Events, and get hands-on experience with Neural Networks
-    and Machine Learning.
+  tutorial_kcjpong_longdescription: Recréez le jeu classique de Pong à l'aide de JavaScript,
+    puis entraînez une IA à jouer au jeu toute seule ! Apprenez les concepts fondamentaux
+    de JavaScript, notamment les variables, les fonctions et les événements, et découvrez
+    les réseaux neuronaux et l'apprentissage automatique.
   tutorial_dmsolar_longdescription: Solar Power Hour is a project to celebrate Earth
     Day and promote clean energy to replace fossil fuels and help the environment.  Your
     task is to collect the sun's rays to power a city. Students will start with the
@@ -14909,8 +14970,8 @@ fr:
     minutes, unleash your creativity and go from ideas to fully published projects
     like - games, art, websites, and code. HackStack is your new AI companion for
     limitless possibilities!
-  tutorial_toxicodewords_longdescription: Unlock some of the secrets behind computer-assisted
-    words and sentences crafting, with our dynamic exploration.
+  tutorial_toxicodewords_longdescription: Découvre les secrets de la génération de
+    phrases et de mots par ordinateur, avec notre exploration guidée.
   tutorial_mitstepmisinformation_longdescription: Play out a simulation game of the
     spread misinformation. Learn about how and why misinformation spreads. As an extension,
     learn how to spot and stop misinformation.
@@ -14941,7 +15002,45 @@ fr:
     the help of AI and intelino Scratch! Create and train an AI model that recognizes
     signs. Then, use this model in intelino Scratch to program and control movement
     and steering of the intelino train.
-  tutorial_generationai_longdescription: "Aventurez-vous à travers le temps pour créer des inventions utilisant l'IA dans cette nouvelle Heure de Code : Génération IA de Minecraft. Explorez la résolution de problèmes, la créativité et la pensée informatique pour développer une IA responsable. Avec les blocs ou Python, l'Heure de Code offre une initiation à la programmation et la création d'une IA meilleure pour tous."
+  tutorial_danceai2023_longdescription: Programme une Soirée Dansante à partager avec
+    tes amis. Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres
+    !
+  tutorial_introtomlai_longdescription: Découvrez une forme d'intelligence artificielle
+    appelée apprentissage automatique et comment ils peuvent utiliser le processus
+    de résolution de problèmes pour entraîner un robot à résoudre des problèmes. Participez
+    à des activités d'apprentissage automatique dans le cadre desquelles un robot
+    apprend à détecter des modèles chez les poissons.
+  tutorial_computervisionai_longdescription: Learn how computer vision works. Watch
+    a video explaining computer vision and how a computer sees. Then design an algorithm
+    that uses a network to decide what number the seven segment display is displaying
+    and test it.
+  tutorial_neuralnetworksai_longdescription: Découvrez comment fonctionnent les réseaux
+    de neurones. Utilisez un widget pour explorer les réseaux de neurones de manière
+    pratique. Regardez une vidéo expliquant les réseaux neuronaux. Enfin, discutez
+    de la nécessité de perspectives diverses lors de la création de systèmes de recommandation.
+  tutorial_chatbotsllmai_longdescription: Learn what a Large Language Model (LLM)
+    is and how it works, then use an LLM to co-create a text with AI. Finally, discuss
+    about whether or not LLMs are intelligent or creative.
+  tutorial_generativeimagesai_longdescription: Découvrez comment l'IA peut générer
+    des images, puis explorez un widget d'IA de diffusion et déterminez si ces modèles
+    sont créatifs ou non.
+  tutorial_algorithmicbiasai_longdescription: Practice cropping images to uncover
+    the bias underlying the Twitter cropping algorithm, then read and watch a video
+    about the discovery of this biased algorithm.  Finally, discuss ways to recognize
+    and reduce bias in algorithms.
+  tutorial_codeofethicsai_longdescription: Conduct research using articles and videos
+    that expose ethical pitfalls in an artificial intelligence area of their choice.
+    Assemble a class-wide Our AI Code of Ethics resource for AI creators and legislators
+    everywhere.
+  tutorial_socimpactofgenaiai_longdescription: Étudiez l'impact de l'IA générative
+    sous différents angles, puis collaborez en équipe pour élaborer des directives
+    répondant à la plupart des besoins de tous les participants.
+  tutorial_generationai_longdescription: 'Aventurez-vous à travers le temps pour créer
+    des inventions utilisant l''IA dans cette nouvelle Heure de Code : Génération
+    IA de Minecraft. Explorez la résolution de problèmes, la créativité et la pensée
+    informatique pour développer une IA responsable. Avec les blocs ou Python, l''Heure
+    de Code offre une initiation à la programmation et la création d''une IA meilleure
+    pour tous.'
   tutorial_bsimage_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_bscomputing_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_stackpython_string_detail_grades: 6e année et plus (11 ans et plus)
@@ -15043,7 +15142,7 @@ fr:
   tutorial_hwfanpage_string_detail_grades: 2ème année scolaire et plus
   tutorial_hwillusion_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_caevolution_string_detail_grades: 6e année et plus (11 ans et plus)
-  tutorial_bbbusybot_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_bbbusybot_string_detail_grades: A partir de 9 ans
   tutorial_caaifarm_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_cafuture_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_dmscratch_string_detail_grades: 2e-5e années (7-10 ans)
@@ -15073,7 +15172,16 @@ fr:
   tutorial_madmobile_string_detail_grades: 6e année et plus (11 ans et plus)
   tutorial_intelinosmile_string_detail_grades: Pré-lecteur - 8e année
   tutorial_intelinoaisign_string_detail_grades: 2e-5e années (7-10 ans)
-  tutorial_generationai_string_detail_grades: CE1 à CM2 (de 7 à 10 ans) 6e à 4e (de 11 à 13 ans) 3e et + (14 ans et +)
+  tutorial_danceai2023_string_detail_grades: 2ème année scolaire et plus
+  tutorial_introtomlai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_computervisionai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_neuralnetworksai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_chatbotsllmai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_generativeimagesai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_algorithmicbiasai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_codeofethicsai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_socimpactofgenaiai_string_detail_grades: 6e année et plus (11 ans et plus)
+  tutorial_generationai_string_detail_grades: 2ème année scolaire et plus
   tutorial_bsimage_string_platforms: Chrome, Firefox, Safari
   tutorial_bscomputing_string_platforms: Débranché
   tutorial_stackpython_string_platforms: Tous les navigateurs modernes, tablette Android,
@@ -15245,7 +15353,26 @@ fr:
   tutorial_intelinosmile_string_platforms: Tous les navigateurs modernes, iPad, classes
     non connectées.
   tutorial_intelinoaisign_string_platforms: Tous les navigateurs actuels
-  tutorial_generationai_string_platforms: Ordinateurs (PC sous Windows, Mac), Android (Chromebooks), iPad
+  tutorial_danceai2023_string_platforms: Tous les navigateurs actuels, tablette Android,
+    iPad, téléphone Android, iPhone
+  tutorial_introtomlai_string_platforms: Tous les navigateurs actuels, tablette Android,
+    iPad, téléphone Android, iPhone
+  tutorial_computervisionai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_neuralnetworksai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_chatbotsllmai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_generativeimagesai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_algorithmicbiasai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_codeofethicsai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_socimpactofgenaiai_string_platforms: Tous les navigateurs actuels, tablette
+    Android, iPad, téléphone Android, iPhone
+  tutorial_generationai_string_platforms: Tablette Android, iPad, téléphone Windows,
+    téléphone Android, iPhone
   tutorial_bsimage_string_detail_platforms: ''
   tutorial_bscomputing_string_detail_platforms: ''
   tutorial_stackpython_string_detail_platforms: ''
@@ -15377,6 +15504,16 @@ fr:
   tutorial_madmobile_string_detail_platforms: ''
   tutorial_intelinosmile_string_detail_platforms: intelino smart train set
   tutorial_intelinoaisign_string_detail_platforms: intelino smart train set
+  tutorial_danceai2023_string_detail_platforms: ''
+  tutorial_introtomlai_string_detail_platforms: ''
+  tutorial_computervisionai_string_detail_platforms: ''
+  tutorial_neuralnetworksai_string_detail_platforms: ''
+  tutorial_chatbotsllmai_string_detail_platforms: ''
+  tutorial_generativeimagesai_string_detail_platforms: ''
+  tutorial_algorithmicbiasai_string_detail_platforms: ''
+  tutorial_codeofethicsai_string_detail_platforms: ''
+  tutorial_socimpactofgenaiai_string_detail_platforms: ''
+  tutorial_generationai_string_detail_platforms: ''
   tutorial_bsimage_string_detail_programming_languages: Pyret
   tutorial_bscomputing_string_detail_programming_languages: Indépendant de la langue
   tutorial_stackpython_string_detail_programming_languages: Python
@@ -15504,13 +15641,27 @@ fr:
   tutorial_codecombathack_string_detail_programming_languages: Indépendant de la langue
   tutorial_toxicodewords_string_detail_programming_languages: Indépendant de la langue
   tutorial_mitstepmisinformation_string_detail_programming_languages: Débranché
-  tutorial_mitstepdeepfakes_string_detail_programming_languagess: Débranché
+  tutorial_mitstepdeepfakes_string_detail_programming_languages: Débranché
   tutorial_mitstepintrotoml_string_detail_programming_languages: Débranché
   tutorial_naflogo_string_detail_programming_languages: JavaScript
   tutorial_madmobile_string_detail_programming_languages: JavaScript, HTML, CSS
   tutorial_intelinosmile_string_detail_programming_languages: Blocs
   tutorial_intelinoaisign_string_detail_programming_languages: Blocs
-  tutorial_generationai_string_detail_programming_languages: Block, Python
+  tutorial_danceai2023_string_detail_programming_languages: Indépendant de la langue
+  tutorial_introtomlai_string_detail_programming_languages: Indépendant de la langue
+  tutorial_computervisionai_string_detail_programming_language: Indépendant de la
+    langue
+  tutorial_neuralnetworksai_string_detail_programming_languages: Indépendant de la
+    langue
+  tutorial_chatbotsllmai_string_detail_programming_languages: Indépendant de la langue
+  tutorial_generativeimagesai_string_detail_programming_languages: Indépendant de
+    la langue
+  tutorial_algorithmicbiasai_string_detail_programming_languages: Indépendant de la
+    langue
+  tutorial_codeofethicsai_string_detail_programming_languages: Indépendant de la langue
+  tutorial_socimpactofgenaiai_string_detail_programming_languages: Indépendant de
+    la langue
+  tutorial_generationai_string_detail_programming_languages: Blocs, Python
   school_not_found_heading: Nous n'avons pas pu trouver votre école. Veuillez saisir
     plus d'informations.
   school_name: Nom de l'école
@@ -15583,7 +15734,7 @@ fr:
   step_06: Étape 6
   step_07: Étape 7
   step_08: Étape 8
-  step_09: Step 9
+  step_09: Étape 9
   what: 'Quoi :'
   when: 'Quand :'
   where: 'Où :'
@@ -15615,54 +15766,69 @@ fr:
     considérablement sur la manière dont les jeunes femmes et les étudiants issus
     de races et de groupes ethniques minoritaires perçoivent l'informatique et leur
     propre potentiel.
-  hoc_how_to_districts_intro_heading: Involve a whole school district in an Hour of
-    Code
-  hoc_how_to_districts_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    Districts who fully engage with Hour of Code can help raise awareness of the computer
-    science movement and inspire more students to try computer science, particularly
-    young women and students from historically marginalized racial and ethnic groups.
+  hoc_how_to_districts_intro_heading: Faites participer tout un district scolaire
+    à une heure de code.
+  hoc_how_to_districts_intro_desc_01: L'Heure du code est une initiation d'une heure
+    à l'informatique, basée sur des tutoriels amusants qui montrent que tout le monde
+    peut apprendre les bases de l'informatique. Les districts qui s'engagent pleinement
+    dans l'Heure du code peuvent contribuer à sensibiliser le public à l'informatique
+    et inciter davantage d'élèves à s'y intéresser, en particulier les jeunes femmes
+    et les élèves issus de groupes raciaux et ethniques historiquement marginalisés.
   hoc_how_to_events_intro_heading: 'Commment organiser un événement ou une réunion
     générale Une Heure de Code '
-  hoc_how_to_events_intro_desc_01: The Hour of Code is a one-hour introduction to
-    computer science, using fun tutorials to show that anybody can learn the basics.
-    Your efforts can make a huge impact on the way students view computer science
-    and their own potential.
-  hoc_how_to_events_intro_desc_02: Schools and organizations who fully engage with
-    Hour of Code can help raise awareness of the computer science movement and inspire
-    more students to try computer science, particularly young women and students from
-    historically marginalized racial and ethnic groups.
+  hoc_how_to_events_intro_desc_01: L'Heure du code est une initiation d'une heure
+    à l'informatique, grâce à des tutoriels amusants qui montrent que tout le monde
+    peut apprendre les fondamentaux de l'informatique. Votre participation peut influencer
+    considérablement la façon dont les élèves perçoivent l'informatique et leur propre
+    potentiel.
+  hoc_how_to_events_intro_desc_02: Les écoles et organisations qui s'engagent pleinement
+    dans le programme Heure de code contribuent à sensibiliser les élèves à l'informatique
+    et à inciter un plus grand nombre d'entre eux à s'y intéresser, en particulier
+    les jeunes femmes et les élèves issus de groupes ethniques et raciaux historiquement
+    minoritaires.
   hoc_how_to_parents_intro_heading: 'Comment faire une Heure de Code avec votre enfant ?
 
     '
-  hoc_how_to_parents_intro_desc_01: 'Trying an Hour of Code is a simple and fun way
-    to introduce your child to computer science, perhaps for the very first time.
-    Not only is computer science foundational to all fields of study, but recent studies
-    show: children who study computer science perform better in other subjects, excel
-    at problem-solving, and are 17% more likely to enroll in college.'
-  hoc_how_to_parents_intro_desc_02: You and your child can join tens of millions of
-    students worldwide in this global event. Together, we can inspire kids to learn,
-    break stereotypes, and help children discover a newfound interest. Best of all,
-    you already have everything you need to bring the Hour of Code into your home!
-  hoc_how_to_public_officials_intro_heading: Hosting an elected official at your Hour
-    of Code
-  hoc_how_to_public_officials_intro_desc_01: Inviting an elected official to your
-    Hour of Code event will show your representative the impact and need for computer
-    science education, and your students will be inspired by a role model in government.
-  hoc_how_to_public_officials_intro_desc_02: In order to run a successful Hour of
-    Code event while engaging elected officials, complete these tasks prior to the
-    elected official attending your school. The task includes coordination with their
-    point of contact, media invitations, waivers, and planning your agenda.
-  hoc_how_to_volunteers_intro_heading: How to volunteer for an Hour of Code
-  hoc_how_to_volunteers_intro_desc_01: The Hour of Code is a one-hour introduction
-    to computer science, using fun tutorials to show that anybody can learn the basics.
-    As a volunteer, your efforts can make a huge impact on the way students view computer
-    science and their own potential.
-  hoc_how_to_volunteers_intro_desc_02: Anyone passionate about computer science education
-    and increasing diversity in tech can be a volunteer! We'd love to see volunteers
-    of all backgrounds participate. The Hour of Code features a large variety of activities
-    for all ages and skill levels, so you don't need to be a programming expert to
-    volunteer.
+  hoc_how_to_parents_intro_desc_01: Participer à une heure de code est un moyen simple
+    et amusant d'initier votre enfant à l'informatique, peut-être pour la toute première
+    fois. Non seulement l'informatique est fondamentale pour réussir dans tous les
+    domaines, mais de récentes études montrent que les enfants qui étudient l'informatique
+    obtiennent de meilleurs résultats dans toutes les autres matières, excellent dans
+    la résolution de problèmes et ont 17 % plus de chances de s'inscrire à l'université.
+  hoc_how_to_parents_intro_desc_02: Vous et votre enfant pouvez vous joindre à des
+    dizaines de millions d'élèves du monde entier pour participer à cet événement
+    mondial. Ensemble, nous pouvons inciter les enfants à apprendre, briser les stéréotypes
+    et les aider à se découvrir un nouveau centre d'intérêt. Mieux encore, vous avez
+    déjà tout ce qu'il faut pour amener l'Heure du code chez vous !
+  hoc_how_to_public_officials_intro_heading: Accueillir un élu lors de votre Heure
+    de code
+  hoc_how_to_public_officials_intro_desc_01: En invitant un élu à votre événement
+    "Heure de code", vous montrerez à votre représentant l'impact et la nécessité
+    de l'enseignement de l'informatique, et vos élèves seront motivés par l'envie
+    de suivre un véritable modèle et d'occuper un poste au sein des instances dirigeantes.
+  hoc_how_to_public_officials_intro_desc_02: 'Afin d''organiser un événement "Heure
+    de code" réussi tout en impliquant des élus, effectuez les tâches suivantes avant
+    que l''élu ne se rende dans votre école. Ces tâches englobent : la coordination
+    avec leur interlocuteur, les invitations aux médias, les dérogations et la planification
+    de l''ordre du jour.'
+  hoc_how_to_volunteers_intro_heading: Comment se porter volontaire pour participer
+    à une heure de code ?
+  hoc_how_to_volunteers_intro_desc_01: L'Heure du code est une initiation d'une heure
+    à l'informatique, grâce à des tutoriels originaux qui montrent que tout le monde
+    peut apprendre les fondamentaux de l'informatique. En tant que bénévole, vos efforts
+    peuvent avoir un impact considérable sur la façon dont les élèves perçoivent l'informatique
+    et leur propre potentiel.
+  hoc_how_to_volunteers_intro_desc_02: Toute personne passionnée par l'enseignement
+    de l'informatique et la promotion de la diversité dans le secteur des technologies
+    peut participer en tant que bénévole ! Nous aimerions que des bénévoles de tous
+    horizons participent. L'Heure du code propose une grande variété d'activités pour
+    tous les âges et tous les niveaux de compétence, il n'est donc pas nécessaire
+    d'être un expert en programmation pour devenir bénévole.
+  hoc_how_to_virtual_event_intro_heading: Comment planifier une Heure de Code virtuel
+  hoc_how_to_virtual_event_intro_desc_02: Bien que l'Heure de Code se déroule dans
+    une salle de classe, il n'est pas nécessaire d'être présent en personne pour s'amuser
+    ! Vous pouvez organiser un événement interactif et stimulant à distance en appliquant
+    quelques-unes des recommandations suivantes.
   hoc_how_to_faq_question_prerequisites: Quels sont les prérequis pour planifier une
     Heure de Code ?
   hoc_how_to_faq_answer_prerequisites: The Hour of Code est simple à exécuter, même
@@ -15676,8 +15842,9 @@ fr:
     pas disponibles, essayez la [programmation en binôme](%{pair_url}) ou explorez
     nos [activités débranchées](%{unplugged_url}) pour apprendre sans le moindre appareil
     !
-  hoc_how_to_faq_answer_devices_02_v2: If you don't have a device at home, explore
-    our [unplugged activities](%{unplugged_url}) to learn without any devices at all!
+  hoc_how_to_faq_answer_devices_02_v2: Si vous n'avez pas d'appareil chez vous, découvrez
+    nos [activités débranchées](%{unplugged_url}) pour apprendre sans aucun appareil
+    !
   hoc_how_to_faq_question_volunteer: Qui peut se porter volontaire ?
   hoc_how_to_faq_answer_volunteer: Toute personne passionnée par l'enseignement de
     l'informatique et l'augmentation de la diversité technologique peut devenir bénévole !
@@ -15736,9 +15903,10 @@ fr:
     '
   hoc_how_to_faq_question_age_groups: À quelle tranche d'âge l'activité Une Heure
     de Code est-elle adaptée ?
-  hoc_how_to_faq_answer_age_groups: Code.org and our partners design all the Hour
-    of Code activities to engage students of all grade levels (K-12) from all backgrounds.
-    Everyone—even adults—can have fun learning!
+  hoc_how_to_faq_answer_age_groups: Code.org et ses partenaires conçoivent toutes
+    les activités de l'Heure du code pour faire participer les élèves de tous les
+    niveaux scolaires (de la maternelle à la terminale) et de tous les milieux. Tout
+    le monde - même les adultes - peut s'amuser en apprenant !
   hoc_how_to_resources_heading_educators: Autres ressources de l'Heure de Code pour
     les enseignants
   hoc_how_to_resources_heading_default: Autres ressources de l'Heure du code
@@ -15751,22 +15919,23 @@ fr:
   hoc_how_to_resources_get_involved_heading: Comment participer
   hoc_how_to_resources_get_involved_desc: Aidez à faire connaître l'Heure du code
     ! Découvrez les moyens de faire participer votre communauté.
-  hoc_how_to_resources_hoc_stats_heading: Hour of Code Statistics
-  hoc_how_to_resources_hoc_stats_desc: Use sample messaging and infographics as you
-    look for ways to promote the Hour of Code in your district communication to stakeholders.
-    Find impactful infographics and statistics to share with your community!
+  hoc_how_to_resources_hoc_stats_heading: Statistiques de l'Heure du code
+  hoc_how_to_resources_hoc_stats_desc: Utilisez des exemples de messages et d'infographies
+    lorsque vous cherchez des moyens de promouvoir l'Heure du code dans vos communications
+    avec les parties prenantes de votre district. Trouvez des infographies et des
+    statistiques percutantes à partager avec votre communauté !
   hoc_how_to_step_label_plan: Planifiez où et quand vous ferez votre heure de code
   hoc_how_to_step_label_choose_activity: Choisissez votre activité
   hoc_how_to_step_label_choose_activities: Choisissez vos activités
   hoc_how_to_step_label_test_activity: Testez votre activité
-  hoc_how_to_step_label_get_familiar_activities: Get familiar with the activities
+  hoc_how_to_step_label_get_familiar_activities: Familiarisez-vous avec les activités
   hoc_how_to_step_label_register_event: Enregistrez votre événement
   hoc_how_to_step_label_register_your_hoc: Enregistrez votre heure de code
   hoc_how_to_step_label_tell: Parlez-en à vos élèves, à votre école et à votre communauté
   hoc_how_to_step_label_get_coding: Commencez à coder !
   hoc_how_to_step_label_celebrate: Pseudoloc-Çéļéƀŕàţé
   hoc_how_to_step_label_beyond_hoc: Au-delà de l'heure de code
-  hoc_how_to_step_label_prepare_your_event: Prepare for your event
+  hoc_how_to_step_label_prepare_your_event: Préparez l'événement
   hoc_how_to_step_label_plan_your_event: Planifiez votre événement
   hoc_how_to_step_label_plan_your_hour: Planifiez votre heure
   hoc_how_to_step_label_help_spread_word: Aidez à faire passer le message
@@ -15774,23 +15943,28 @@ fr:
   hoc_how_to_step_label_inspire_employees: Stimulez l'enthousiasme de vos employés
   hoc_how_to_step_label_encourage_employees: Encourager vos employés à se porter volontaires
   hoc_how_to_step_label_plan_internal_event: Organisez un événement interne
-  hoc_how_to_step_label_recruit_school_participation: Recruit school participation
-  hoc_how_to_step_label_promote_district_involvement: Promote your district's involvement
-    in Hour of Code
-  hoc_how_to_step_label_after_event: After the event
-  hoc_how_to_step_label_invite_elected_official: Invite an elected official
-  hoc_how_to_step_label_coordinate_media: Coordinate with Media
-  hoc_how_to_step_label_confirm_details: Confirm all details
-  hoc_how_to_step_label_volunteer_decide: Decide how you want to volunteer
-  hoc_how_to_step_label_plan_classroom_visit: Plan your classroom visit
+  hoc_how_to_step_label_recruit_school_participation: Susciter la participation des
+    écoles
+  hoc_how_to_step_label_promote_district_involvement: Faites la promotion de la participation
+    de votre district à l'Heure du code
+  hoc_how_to_step_label_after_event: Après l'événement
+  hoc_how_to_step_label_invite_elected_official: Inviter un élu
+  hoc_how_to_step_label_coordinate_media: Assurer la coordination avec les médias
+  hoc_how_to_step_label_confirm_details: Confirmer toutes les informations
+  hoc_how_to_step_label_volunteer_decide: Décidez de la façon dont vous souhaitez
+    vous engager
+  hoc_how_to_step_label_plan_classroom_visit: Planifiez votre visite de classe
   hoc_how_to_step_beyond_hoc_subhead: Cela ne s'arrête pas là !
-  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Extend learning beyond one tutorial.
-  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Keep the excitement going with
-    these suggestions:'
-  hoc_how_to_step_beyond_hoc_desc_generic: Computer science doesn't have to end with
-    the Hour of Code! While 90% of parents want their child to learn computer science,
-    most schools still don't teach it. Check out the diverse curriculum offerings
-    from Hour of Code partners, and learn how to bring CS to your school today!
+  hoc_how_to_step_beyond_hoc_subhead_extend_learning: Poursuivez votre apprentissage
+    au-delà du seul tuto.
+  hoc_how_to_step_beyond_hoc_desc_keep_excitement: 'Faites durer l''excitation grâce
+    aux suggestions suivantes :'
+  hoc_how_to_step_beyond_hoc_desc_generic: L'informatique ne doit pas s'arrêter à
+    l'Heure du code ! Bien que plus de 90 % des parents souhaitent que leurs enfants
+    apprennent l'informatique, la plupart des écoles ne l'enseignent toujours pas.
+    Découvrez les divers programmes proposés par les partenaires de l'Heure du code
+    et apprenez comment intégrer l'informatique dans le programme de votre école dès
+    aujourd'hui !
   hoc_how_to_step_plan_hour_desc_01: 'Voici un exemple de programme pour vous aider
     à commencer :'
   hoc_how_to_step_choose_activities_desc_01: Cette année, le thème de l'Heure du code
@@ -15810,9 +15984,10 @@ fr:
     l'activité et susciter de nouvelles réflexions. Nous proposons également des formations
     professionnelles gratuites pour les éducateurs afin de préparer l'avenir de l'enseignement
     de l'IA.
-  hoc_how_to_step_choose_activities_desc_03_short: Then, [learn all about AI](%{ai_url}).
-    Students can watch short videos featuring experts in the field, and there are
-    accompanying lesson plans to extend the activity and guide further discussion.
+  hoc_how_to_step_choose_activities_desc_03_short: Ensuite, [découvrez l'IA](%{ai_url}).
+    Les élèves sont invités à visionner de courtes vidéos mettant en scène des experts
+    dans ce domaine. Des plans de cours sont également proposés pour approfondir l'activité
+    et guider la discussion.
   hoc_how_to_step_beyond_advocacy_desc_01: La pratique de l'informatique ne doit pas
     s'arrêter à l'Heure du code ! Tandis que 90 % des parents souhaitent que leurs
     enfants apprennent l'informatique, la plupart des écoles ne l'enseignent toujours
@@ -15905,239 +16080,325 @@ fr:
     des photos et des vidéos de votre événement "Heure de code" et montrez votre engagement
     à soutenir l''initiative en faveur de la promotion de l''informatique en utilisant
     les mentions #HourOfCode et @codeorg.'
-  hoc_how_to_step_districts_recruit_desc_01: Recruit school participation by sharing
-    the resources provided in our how-to guides for educators and school assemblies.
-    With your support, teachers and school administrators can decide which type of
-    event best meets the interest of your schools.
-  hoc_how_to_step_districts_register_desc_01: Tell everyone hosting an event to register!
-    When you register your Hour of Code event, you'll receive helpful emails with
-    news and tips for hosting a successful Hour of Code. It's also how you can let
-    local volunteers know your school is participating. Volunteers are a great resource
-    and can come speak to your class about computer science or help your students
-    with Hour of Code activities.
-  hoc_how_to_step_districts_promote_desc_01: Let community members and stakeholders
-    know about your participation in Hour of Code Events! Post to Facebook, Twitter,
-    Instagram and your district's homepage! Explore our sample emails which help you
-    share your Hour of Code event with your community.
-  hoc_how_to_step_districts_celebrate_desc_01: 'Share photos and videos of your Hour
-    of Code event and show off your students'' achievements. Use #HourOfCode and @codeorg
-    so we can see your district in action!'
-  hoc_how_to_step_districts_beyond_desc_01: Computer science education doesn't have
-    to end with the Hour of Code! To help provide students in your district with skills
-    and knowledge that will prepare them to be college and career ready, check out
-    our free to use web-based curriculum!
-  hoc_how_to_step_districts_beyond_desc_01_v2: Computer science education doesn't
-    have to end with the Hour of Code! To help provide students in your district with
-    skills and knowledge that will prepare them to be college and career ready, check
-    out the diverse curriculum offerings from Hour of Code partners!
-  hoc_how_to_step_events_register_desc_01: Register your Hour of Code event to receive
-    early access to information about new activities and special promotions! When
-    300 or more students participate, you can receive a special engagement kit with
-    t-shirts, posters, laptop stickers, and more. [Share your whole school event plan](%{share_url})
-    to qualify.
-  hoc_how_to_step_events_register_desc_02: You can also [view the Hour of Code map](%{map_url})
-    to see your event, and know that your dedication is part of a worldwide movement.
-  hoc_how_to_step_events_prepare_desc_01: Consider where and when you want to hold
-    your event, as well as the tech capabilities of your space. Students can work
-    on their own devices, in pairs on one device, or together as a classroom on a
-    projector, and there are even unplugged tutorials that can be completed with no
-    devices at all!
-  hoc_how_to_step_events_prepare_desc_02: Send [a letter](%{letter_url}) to an elected
-    official or influential business person and invite them to speak. [Check out our
-    how-to toolkit](%{toolkit_url}) when hosting an elected official during an Hour
-    of Code for more info.
-  hoc_how_to_step_events_prepare_desc_03: You may also invite the local media, such
-    as a local news station, newspaper, or education/tech bloggers. [See our press
-    kit for help](%{press_kit_url}).
-  hoc_how_to_step_events_plan_hour_desc_02: '10:00 - 10:05 am: Open with one of our
-    [inspirational videos](%{videos_url}).'
-  hoc_how_to_step_events_plan_hour_desc_03: '10:05 - 10:15 am: Principal gives an
-    intro overviewing the importance of computer science. [Use these stats and infographics](%{stats_url}).'
-  hoc_how_to_step_events_plan_hour_desc_04: '10:15 - 10:30 am: Special guest to talk
-    about their background and how technology and computer science plays an important
-    role in their everyday lives'
-  hoc_how_to_step_events_plan_hour_desc_05: '10:30 - 10:40 am: Students do an Hour
-    of Code demo for the school. Fun twist: have them teach the principal, politician,
-    or other students!'
-  hoc_how_to_step_events_plan_hour_desc_06: '10:40 - 11:00 am: Students demo an unplugged
-    activity and how computer science can be taught without using computers.'
-  hoc_how_to_step_events_plan_hour_desc_07: '11:00 - 11:05 am: Teacher who helped
-    organize school-wide event gives closing remarks.'
-  hoc_how_to_step_events_get_coding_desc_01: As students are working on their activity,
-    take pictures to commemorate the event, and to post on your organization's social
-    media networks. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_get_coding_desc_02: Make sure the agenda is running smoothly,
-    and that it remains on track to end on time—especially if any special guests have
-    other scheduled commitments to attend.
-  hoc_how_to_step_events_after_desc_01: 'After a successful Hour of Code event, make
-    sure to:'
-  hoc_how_to_step_events_after_desc_02: Celebrate! Print certificates of completion
-    and congratulate your students.
-  hoc_how_to_step_events_after_desc_03: Thank any special guests for their time (especially
-    great for students to do) and offer to answer any follow-up questions they may
-    have.
-  hoc_how_to_step_events_after_desc_04: Post pictures, videos, or notable quotes from
-    the day on social media. (Publicity or privacy policies may apply.)
-  hoc_how_to_step_events_after_desc_05: Follow up with volunteers or guests for feedback
-    on how to make next year's event even better.
+  hoc_how_to_step_districts_recruit_desc_01: Suscitez la participation des écoles
+    en partageant les ressources fournies dans nos guides pratiques à l'intention
+    des éducateurs et des associations scolaires. Avec votre soutien, les enseignants
+    et les directeurs d'école pourront décider du type d'événement qui répond le mieux
+    aux intérêts de leurs écoles.
+  hoc_how_to_step_districts_register_desc_01: Dites à tous ceux qui souhaitent organiser
+    un événement de s'inscrire ! Lorsque vous inscrivez votre événement de l'Heure
+    de code, vous recevez des courriels utiles contenant des nouvelles et des conseils
+    pour organiser une Heure de code réussie. C'est également ainsi que vous pourrez
+    informer les bénévoles locaux de la participation de votre école. Les bénévoles
+    sont une ressource précieuse et sont prêts à venir sensibiliser votre classe à
+    l'informatique ou à aider vos élèves à organiser des activités dans le cadre de
+    l'Heure du code.
+  hoc_how_to_step_districts_promote_desc_01: Faites connaître aux membres de la communauté
+    et aux parties prenantes votre participation aux événements "Heure de code" !
+    Publiez sur Facebook, Twitter, Instagram et sur la page d'accueil de votre district
+    ! Consultez nos exemples de mails afin que vous puissiez partager votre événement
+    Heure de code avec votre communauté.
+  hoc_how_to_step_districts_celebrate_desc_01: 'Partagez des photos et des vidéos
+    de votre événement Heure du code et exposez les réalisations de vos élèves. Utilisez
+    #HourOfCode et @codeorg afin que nous puissions admirer votre district en action
+    !'
+  hoc_how_to_step_districts_beyond_desc_01: L'enseignement de l'informatique ne doit
+    pas s'arrêter à l'Heure du code ! Pour aider les élèves de votre district à acquérir
+    des compétences et des connaissances qui les prépareront à l'enseignement supérieur
+    et à la vie professionnelle, consultez notre programme d'études en ligne gratuit
+    !
+  hoc_how_to_step_districts_beyond_desc_01_v2: L'enseignement de l'informatique ne
+    doit pas s'arrêter à l'Heure du code ! Pour aider les élèves de votre district
+    à acquérir des compétences et des connaissances qui les prépareront à entrer à
+    l'université et plus tard dans la vie active, consultez les diverses offres de
+    programmes d'études des partenaires de l'Heure du code !
+  hoc_how_to_step_events_register_desc_01: Inscrivez votre événement Heure de code
+    pour recevoir rapidement des informations sur les nouvelles activités et les promotions
+    spéciales ! Dès que 300 élèves auront participé, vous pourrez recevoir un kit
+    d'engagement spécial comprenant des t-shirts, des affiches, des autocollants pour
+    ordinateur portable et bien plus encore. [Partagez le programme de l'événement
+    de votre école](%{share_url}) pour vous qualifier.
+  hoc_how_to_step_events_register_desc_02: Vous pouvez également [afficher la carte
+    de l'Heure du code](%{map_url}) et visualiser votre événement, conscient du fait
+    que votre dévouement participe à une initiative mondiale.
+  hoc_how_to_step_events_prepare_desc_01: Songez à où et quand vous souhaitez organiser
+    votre événement, ainsi qu'aux capacités techniques de votre espace. Les participants
+    peuvent travailler sur leurs propres appareils, en binôme sur un appareil, ou
+    tous ensemble en classe autour d'un projecteur, et il existe même des tutoriels
+    débranchés qui peuvent être réalisés sans qu'il soit nécessaire de recourir au
+    moindre appareil !
+  hoc_how_to_step_events_prepare_desc_02: Envoyez [une lettre](%{letter_url}) à un
+    élu ou à un homme d'affaires influent et invitez-le à prendre la parole. [Pour
+    plus d'informations, consultez notre guide pratique](%{toolkit_url}) sur l'accueil
+    d'un élu lors d'une Heure de code.
+  hoc_how_to_step_events_prepare_desc_03: Vous pouvez également inviter les médias
+    locaux, tels qu'une station de presse locale, un journal ou des blogueurs spécialisés
+    dans l'éducation ou la technologie. [Voir notre guide d'information pour plus
+    d'informations](%{press_kit_url}).
+  hoc_how_to_step_events_plan_hour_desc_02: '10 h 00 - 10 h 05 : Commencez par l''une
+    de nos [vidéos inspirantes](%{videos_url}).'
+  hoc_how_to_step_events_plan_hour_desc_03: '10 h 05 - 10 h 15 : Le directeur de l''école
+    fait une présentation de l''importance de l''informatique. [Utilisez ces statistiques
+    et infographies](%{stats_url}).'
+  hoc_how_to_step_events_plan_hour_desc_04: '10 h 15 - 10 h 30 : Un invité spécial
+    parlera de son parcours et de la manière dont la technologie et l''informatique
+    occupent une place prépondérante dans sa vie quotidienne.'
+  hoc_how_to_step_events_plan_hour_desc_05: '10 h 30 - 10 h 40 : Les élèves font une
+    démonstration de l''Heure du code dans l''école. Petite touche amusante : demandez-leur
+    d''enseigner le code au principal, à un politicien ou à d''autres élèves !'
+  hoc_how_to_step_events_plan_hour_desc_06: '10 h 40 - 11 h 00 : Les élèves font la
+    démonstration d''une activité " débranchée " et expliquent comment l''informatique
+    peut être enseignée sans ordinateur.'
+  hoc_how_to_step_events_plan_hour_desc_07: '11 h 00 - 11 h 05 : L''enseignant qui
+    a aidé à organiser l''événement dans l''école prononce le mot de la fin.'
+  hoc_how_to_step_events_get_coding_desc_01: 'Prenez des photos pendant que les élèves
+    travaillent sur leur projet, afin de commémorer l''événement et de les publier
+    sur les réseaux sociaux de votre organisation (des politiques de publicité ou
+    de confidentialité peuvent s''appliquer). '
+  hoc_how_to_step_events_get_coding_desc_02: Veillez à ce que le programme se déroule
+    sans encombre et à ce qu'il se termine à l'heure prévue, surtout si les invités
+    spéciaux ont d'autres engagements à respecter.
+  hoc_how_to_step_events_after_desc_01: 'Après une heure de code réussie, assurez-vous
+    de :'
+  hoc_how_to_step_events_after_desc_02: Célébrez ! Imprimez les attestations de succès
+    et félicitez vos élèves.
+  hoc_how_to_step_events_after_desc_03: Remerciez les invités spéciaux pour leur temps
+    (ce qui est particulièrement intéressant pour les élèves) et proposez-leur de
+    répondre à toute question complémentaire qu'ils pourraient avoir.
+  hoc_how_to_step_events_after_desc_04: Publiez des photos, des vidéos ou des citations
+    marquantes de la journée sur les réseaux sociaux. (Des politiques de publicité
+    ou de confidentialité peuvent s'appliquer).
+  hoc_how_to_step_events_after_desc_05: Faites le suivi avec les bénévoles ou les
+    invités pour obtenir un retour d'information sur comment rendre l'événement de
+    l'année prochaine encore meilleur.
   hoc_how_to_step_events_after_desc_06: Contactez l'association des parents d'élèves
     de votre école ou diffusez des informations dans les bulletins d'information destinés
     aux parents, afin de les tenir au courant de ce que leurs enfants apprennent.
-  hoc_how_to_step_parents_register_desc_01: Start with a commitment to doing an Hour
-    of Code with your child by registering. When you register your event, you'll receive
-    helpful emails with news and tips for hosting a successful Hour of Code. You'll
-    also be [put on the map](%{map_url}) so you can show your child that they are
-    part of a global movement.
-  hoc_how_to_step_parents_get_coding_desc_01: Direct your child to the activity and
-    get to work together. They may encounter challenges—that's okay! Learning to program
-    is like learning a new language; you won't be fluent right away. Computer science
-    is all about learning how to "debug" situations that didn't turn out the way we
-    thought they would. Together, you and your child can think of creative ways to
-    solve the problem!
-  hoc_how_to_step_parents_celebrate_desc_01: 'Be sure to celebrate success! Share
-    photos and videos of your Hour of Code on social media. Use #HourOfCode and @codeorg
-    so we can highlight your success, too!'
-  hoc_how_to_step_parents_celebrate_desc_02: You can also print a certificate for
-    your child to show off their achievement!
-  hoc_how_to_step_parents_spread_word_desc_02: Ask your child's principal to host
-    a school-wide event. When 300 or more kids participate, you can receive a special
-    engagement kit with t-shirts, posters, laptop stickers, and more. [Share your
-    whole school event plan](%{share_url}) to qualify.
-  hoc_how_to_step_parents_spread_word_desc_03: Ask your employer to participate by
-    hosting a company-wide event or encouraging other employees to host their own
-    Hour of Code event.
-  hoc_how_to_step_parents_beyond_list_01: Show them an [inspirational video](%{video_url})
-    that features one of their favorite role models.
-  hoc_how_to_step_parents_beyond_list_02: Learn all about [how AI works](%{ai_url}),
-    and why it matters.
-  hoc_how_to_step_parents_beyond_list_03: "[Order some swag](%{swag_url})! Share it
-    with your child right away to get them excited or save it for the end of your
-    Hour of Code as a special prize."
-  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) how to bring CS to
-    your school today."
-  hoc_how_to_step_public_officials_invite_desc_01: Determine the point person for
-    both your event and the elected official.
-  hoc_how_to_step_public_officials_invite_desc_02: Coordinate both the point person
-    from your event (e.g., school administrator) and for the elected official attending
-    (e.g., staffer or scheduler). Ensure both parties have each other's contact information
-    for the day of the event.
-  hoc_how_to_step_public_officials_invite_desc_03: 'From left to right: Governors
-    from Arkansas, North Carolina, and Arizona participating in an Hour of Code'
-  hoc_how_to_step_public_officials_register_desc_01: Work with the parties organizing
-    your Hour of Code event to register and put your event on the map. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_public_officials_register_desc_02: "[Check out the Hour of Code
-    map](%{map_url}) to see your event, and know that your dedication is part of a
-    worldwide movement."
-  hoc_how_to_step_public_officials_plan_desc_01: 'Create a specific agenda for the
-    day and make sure all parties participating (teachers, students, administrators,
-    elected officials and their staff) are aware of what is happening and when. Things
-    to consider:'
-  hoc_how_to_step_public_officials_plan_list_01: What is each participant doing during
-    each part of the event?
-  hoc_how_to_step_public_officials_plan_list_02: Will the official sit with one student,
-    or rotate between many students during the event? (You may want to coordinate
-    this ahead of time with the official's staffer.)
-  hoc_how_to_step_public_officials_plan_list_03: Will the official speak to the students
-    as a group?
-  hoc_how_to_step_public_officials_plan_list_04: Plan flexibility into the agenda.
-    What if the official is running late? What if some students finish their activity
-    before others?
-  hoc_how_to_step_public_officials_agenda_list_03: '10:10 - 10:15 am: Elected official
-    to talk about their background and how technology and computer science plays an
-    important role in their everyday life.'
-  hoc_how_to_step_public_officials_agenda_list_04: '10:15 - 10:55 am: Students do
-    their Hour of Code activity. Fun twist: have a group of students teach the principal,
-    politician, or other students!'
-  hoc_how_to_step_public_officials_agenda_list_05: '10:55 - 11:00 am: Teacher/administrator
-    gives closing remarks.'
-  hoc_how_to_step_public_officials_media_desc_01: Know who will be responsible for
-    coordinating media invitations. It could be the school, the district, the official's
-    office, or any combination.
-  hoc_how_to_step_public_officials_media_desc_02: Secure media waivers for all students,
-    per your state/district/school policy.
-  hoc_how_to_step_public_officials_media_list_01: "[Adult/General](%{general_send_url})
-    (DocuSign - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_02: "[Adult/General](%{general_print_url})
-    (Download and print)"
+  hoc_how_to_step_parents_register_desc_01: Engagez-vous dès maintenant à organiser
+    une heure de code avec votre enfant en vous inscrivant. Une fois votre événement
+    inscrit, vous recevrez des courriels utiles contenant des informations et des
+    conseils pour organiser une Heure de code réussie. Vous serez également [placé
+    sur la carte](%{map_url}) afin de montrer à votre enfant qu'il fait partie d'un
+    mouvement mondial.
+  hoc_how_to_step_parents_get_coding_desc_01: Guidez votre enfant lors de l'activité
+    et commencez à travailler avec lui. Il peut arriver qu'il rencontre des difficultés
+    - ce n'est pas grave ! Apprendre à programmer, c'est comme apprendre une nouvelle
+    langue ; nul ne pourra la parler couramment dès le premier jour. L'informatique
+    consiste à apprendre à "déboguer" des situations inattendues. Ensemble, vous et
+    votre enfant pouvez trouver des moyens créatifs de résoudre les problèmes !
+  hoc_how_to_step_parents_celebrate_desc_01: 'Ne manquez pas de célébrer votre succès
+    ! Publiez des photos et des vidéos de votre Heure de code sur les réseaux sociaux.
+    Utilisez #HourOfCode et @codeorg pour partager votre succès avec nous !'
+  hoc_how_to_step_parents_celebrate_desc_02: Vous pouvez également imprimer une attestation
+    pour votre enfant afin qu'il puisse montrer sa réussite !
+  hoc_how_to_step_parents_spread_word_desc_02: Demandez au directeur de l'école de
+    votre enfant d'organiser un événement à l'échelle de l'école. Dès que 300 enfants
+    ou plus participent, vous recevez un kit d'engagement spécial comprenant des t-shirts,
+    des affiches, des autocollants pour ordinateur portable et bien d'autres choses
+    encore. [Partagez votre projet d'événement scolaire](%{share_url}) pour vous qualifier.
+  hoc_how_to_step_parents_spread_word_desc_03: Invitez votre employeur à participer
+    en organisant un événement au sein de l'entreprise ou en encourageant d'autres
+    employés à organiser leur propre événement " Heure du code ".
+  hoc_how_to_step_parents_beyond_list_01: Montrez-leur une [vidéo inspirante](%{video_url})
+    qui met en scène l'un de leurs modèles préférés.
+  hoc_how_to_step_parents_beyond_list_02: Découvrez [comment fonctionne l'IA](%{ai_url})
+    et pourquoi elle est si importante.
+  hoc_how_to_step_parents_beyond_list_03: "[Commandez un swag](%{swag_url}) ! Partagez-le
+    avec votre enfant dès maintenant pour le motiver ou gardez-le pour la fin de votre
+    Heure de code en guise de prix spécial."
+  hoc_how_to_step_parents_beyond_list_04: "[Learn](%{learn_url}) comment introduire
+    l'informatique dans votre école dès aujourd'hui."
+  hoc_how_to_step_public_officials_invite_desc_01: Déterminez l'interlocuteur principal
+    à la fois de l'événement et de l'élu.
+  hoc_how_to_step_public_officials_invite_desc_02: Assurez-vous de la coordination
+    entre la personne responsable de votre événement (par exemple, l'administrateur
+    de l'école) et l'élu participant à l'événement (par exemple, le membre du personnel
+    ou le responsable du programme). Veillez à ce que les deux parties disposent des
+    coordonnées de l'autre pour le jour de l'événement.
+  hoc_how_to_step_public_officials_invite_desc_03: 'De gauche à droite nous avons
+    : les Gouverneurs de l''Arkansas, de la Caroline du Nord et de l''Arizona participant
+    à une heure de code.'
+  hoc_how_to_step_public_officials_register_desc_01: Collaborez avec les parties qui
+    organisent votre événement "Heure de code" pour vous inscrire et mettre votre
+    événement sur la carte. Vous recevrez rapidement des informations sur les nouvelles
+    activités et les promotions spéciales !
+  hoc_how_to_step_public_officials_register_desc_02: "[Consultez la carte de l'Heure
+    du code](%{map_url}) pour voir votre événement, et sachez que vous participez
+    à un mouvement mondial."
+  hoc_how_to_step_public_officials_plan_desc_01: 'Établissez un programme précis pour
+    la journée et assurez-vous que toutes les parties concernées (enseignants, élèves,
+    administrateurs, représentants élus et leur personnel) sont informées de ce qui
+    se passe et à quel moment. Éléments à considérer :'
+  hoc_how_to_step_public_officials_plan_list_01: Que fera chaque participant pendant
+    chaque séquence de l'événement ?
+  hoc_how_to_step_public_officials_plan_list_02: L'officiel va-t-il devoir s'asseoir
+    avec un seul élève ou passer d'un élève à l'autre au cours de l'événement ? (Vous
+    pouvez coordonner cette question à l'avance avec les collaborateurs de l'officiel).
+  hoc_how_to_step_public_officials_plan_list_03: Le fonctionnaire va-t-il s'adresser
+    aux élèves en tant que groupe ?
+  hoc_how_to_step_public_officials_plan_list_04: Prévoyez suffisamment de flexibilité
+    dans l'ordre du jour. Que faire si l'élu est en retard ? Que faire si certains
+    élèves terminent leur activité avant les autres ?
+  hoc_how_to_step_public_officials_agenda_list_03: '10 h 10 - 10 h 15 : Les élus parleront
+    de leur parcours et de l''importance de la technologie et de l''informatique dans
+    leur vie quotidienne.'
+  hoc_how_to_step_public_officials_agenda_list_04: '10 h 15 - 10 h 55 : Les élèves
+    réalisent leur activité dans le cadre de l''Heure du code. Un groupe d''élèves
+    peut montrer ce qu''il a appris au directeur, à un politicien ou à d''autres élèves
+    !'
+  hoc_how_to_step_public_officials_agenda_list_05: '10 h 55 - 11 h 00 : L''enseignant
+    ou le directeur de l''école prononce le discours de clôture.'
+  hoc_how_to_step_public_officials_media_desc_01: Déterminez qui sera chargé de coordonner
+    l'invitation des médias. Il peut s'agir de l'école, du district, du bureau de
+    l'élu ou d'une combinaison des deux.
+  hoc_how_to_step_public_officials_media_desc_02: Collectez les consentements ou autorisations
+    des parents ou tuteurs légaux des élèves pour permettre l'utilisation de médias
+    conformément à la politique de votre État, du district ou de l'école.
+  hoc_how_to_step_public_officials_media_list_01: "[Adultes/Général](%{general_send_url})
+    (DocuSign - envoyer le lien au signataire)"
+  hoc_how_to_step_public_officials_media_list_02: "[Adultes/Général](%{general_print_url})
+    (Télécharger et imprimer)"
   hoc_how_to_step_public_officials_media_list_03: "[Minor](%{minor_send_url}) (DocuSign
-    - send link to signer)"
-  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Download
-    and print)"
-  hoc_how_to_step_public_officials_confirm_desc_01: Send the public agenda to the
-    official 72 hours prior to the event. Include event dress code, who will greet
-    them, which classroom or event they will attend with teacher's name, and agenda
-    for the event.
-  hoc_how_to_step_public_officials_confirm_desc_02: Review the agenda and test all
-    technology the day before and day of the event to ensure the event runs smoothly.
-  hoc_how_to_step_public_officials_get_coding_desc_01: To ensure the elected officials
-    feel welcome and engaged, greet the elected official at the door of the event
-    to show them where to go and answer any questions they may have. It is always
-    great to have a student help greet them!
-  hoc_how_to_step_public_officials_get_coding_desc_02: Take pictures during the event
-    to commemorate the visit and to post on your organization's social media networks.
-    (Publicity or privacy policies may apply).
-  hoc_how_to_step_public_officials_get_coding_desc_03: Make sure the agenda is running
-    smoothly and that it remains on track to end on time. The official may have other
-    visits or meetings scheduled following your event.
-  hoc_how_to_step_public_officials_after_list_01: Celebrate! [Print certificates](%{certificate_url})
-    of completion and congratulate your students.
-  hoc_how_to_step_public_officials_after_list_02: Thank the official for their time
-    and offer to answer any follow-up questions they may have.
-  hoc_how_to_step_public_officials_after_list_03: 'Post pictures, videos, or notable
-    quotes from the day on social media with #HourOfCode and @codeorg. (Publicity
-    or privacy policies may apply.)'
-  hoc_how_to_step_public_officials_after_list_04: Send the official a follow-up thank
-    you note. It's especially thoughtful to get students to sign!
-  hoc_how_to_step_public_officials_after_list_05: Follow up with the staff point person
-    on each side for feedback on how to make next year’s event even better.
-  hoc_how_to_step_volunteer_decide_desc_01: 'You don''t need a technical background
-    or a degree in computer science—you''re already qualified as you are! There are
-    a few ways you can get involved in Hour of Code as a volunteer:'
-  hoc_how_to_step_volunteer_decide_list_01: "**Reach out to a school in your area.**
-    Email a local teacher or administrator to see if they need support for their Hour
-    of Code event. Check out our [sample email](%{email_url}) for volunteers to get
-    started!"
-  hoc_how_to_step_volunteer_decide_list_02: "**Run an event with your company.** Check
-    out our [how-to guide for companies](%{companies_url}) to set up an organization-wide
-    Hour of Code event!"
-  hoc_how_to_step_volunteer_decide_list_03: "**Sign up on the volunteer map.** From
-    there, teachers in your area will be able to reach out to you. Teachers will review
-    your profile on the [map](%{map_url}), so try to complete as much as possible
-    to increase the chance that a teacher will contact you."
-  hoc_how_to_step_volunteer_register_desc_01: No matter how you decide to volunteer,
-    work with your event organizer to register your Hour of Code event. You'll receive
-    early access to information about new activities and special promotions!
-  hoc_how_to_step_volunteer_plan_desc_01: 'If you''re volunteering with a classroom,
-    discuss these logistics with the teacher ahead of time to better understand their
-    needs:'
-  hoc_how_to_step_volunteer_plan_list_01: What is your role, as a volunteer, at the
-    event? If you work in tech, you might be asked to share your personal experience
-    or story. Can you help the teacher prepare by doing the activity together in advance?
-    Can you walk around the classroom to answer questions or encourage students as
-    they do their Hour of Code?
-  hoc_how_to_step_volunteer_plan_list_02: If you'll be volunteering virtually or in-person.
-    This can determine what times you need to be present and in what capacity.
-  hoc_how_to_step_volunteer_plan_list_03: Local and school health and safety guidelines.
-    Depending on their procedures you may need to complete a background check or arrive
-    a little early for check-in at an in-person event.
-  hoc_how_to_step_volunteer_plan_list_04: This year, the Hour of Code theme is Creativity
-    with Artificial Intelligence (AI). Make this year special by completing a coding
-    activity AND learning about AI.
-  hoc_how_to_step_volunteer_spread_word_desc_01: Help raise awareness of the computer
-    science movement by sharing your volunteer plans with your friends and colleagues
-    on your social media accounts (e.g. LinkedIn).
-  hoc_how_to_step_volunteer_get_coding_desc_01: As the students are working, feel
-    free to answer questions—but try not to give them the solution outright. Ask them
-    questions so they can answer themselves what went wrong. Encourage students to
-    help each other if they get stuck.
-  hoc_how_to_step_volunteer_get_coding_desc_02: If you don't have the answer, that's
-    okay! Let the student know that you're in this together and work alongside them
-    to figure it out.
-  hoc_how_to_step_volunteer_beyond_desc_01: Support computer science learning year-round!
-  hoc_how_to_step_volunteer_beyond_desc_02: If you had fun, the work doesn't have
-    to stop with the Hour of Code. Consider volunteering year round with programs
-    like [TEALS](%{teals_url}) or advocate for computer science education.
+    - envoyer le lien au signataire)"
+  hoc_how_to_step_public_officials_media_list_04: "[Minor](%{minor_print_url}) (Télécharger
+    et imprimer)"
+  hoc_how_to_step_public_officials_confirm_desc_01: Envoyez l'ordre du jour à l'officiel
+    72 heures avant l'événement. Mentionnez le code vestimentaire de l'événement,
+    la personne chargée de les accueillir, la salle de classe ou l'événement auquel
+    ils assisteront ainsi que le nom de l'enseignant, et le programme de l'événement.
+  hoc_how_to_step_public_officials_confirm_desc_02: Passez en revue le programme et
+    testez toutes les technologies la veille et le jour même de l'événement pour vous
+    assurer que tout se déroule sans accroc.
+  hoc_how_to_step_public_officials_get_coding_desc_01: Pour que les élus se sentent
+    bien accueillis et impliqués, il convient de les accueillir à l'entrée de la manifestation
+    pour leur montrer où aller et répondre à leurs questions. Il est toujours agréable
+    d'avoir un élève qui vous aide à les accueillir !
+  hoc_how_to_step_public_officials_get_coding_desc_02: Prenez des photos au cours
+    de l'événement pour commémorer la visite et les publier sur les réseaux de réseaux
+    sociaux de votre organisation. (Des politiques de publicité ou de confidentialité
+    peuvent s'appliquer).
+  hoc_how_to_step_public_officials_get_coding_desc_03: Assurez-vous que le programme
+    se déroule sans encombre et qu'il se termine à l'heure prévue. L'élu peut avoir
+    d'autres visites ou réunions prévues à la suite de votre événement.
+  hoc_how_to_step_public_officials_after_list_01: Célébrez ! [Imprimez les attestations](%{certificate_url})
+    de réussite et félicitez vos élèves.
+  hoc_how_to_step_public_officials_after_list_02: Remerciez le fonctionnaire pour
+    le temps qu'il vous a consacré et proposez-lui de répondre à ses questions éventuelles.
+  hoc_how_to_step_public_officials_after_list_03: 'Postez des photos, des vidéos ou
+    des citations marquantes de la journée sur les réseaux sociaux avec les mentions
+    #HourOfCode et @codeorg. (Des politiques de publicité ou de confidentialité peuvent
+    s''appliquer).'
+  hoc_how_to_step_public_officials_after_list_04: Envoyez à l'élu une note de remerciement.
+    Il serait particulièrement intéressant de la faire signer par tous les élèves
+    !
+  hoc_how_to_step_public_officials_after_list_05: Assurez le suivi avec la personne
+    de contact de chaque côté pour obtenir un retour d'information sur la manière
+    d'améliorer encore l'événement de l'année prochaine.
+  hoc_how_to_step_volunteer_decide_desc_01: 'Nul besoin d''un bagage technique ou
+    d''un diplôme en informatique, vous êtes déjà qualifié ! Il y a plusieurs façons
+    de participer à l''Heure de code en tant que bénévole :'
+  hoc_how_to_step_volunteer_decide_list_01: "**Envoyez un courriel à un enseignant
+    ou à un administrateur local pour lui demander s'il a besoin d'aide pour son activité
+    d'heure de code. Consultez notre [exemple d'e-mail](%{email_url}) destiné aux
+    volontaires pour commencer !"
+  hoc_how_to_step_volunteer_decide_list_02: '**Consultez notre [guide pratique destinée
+    aux entreprises](%{companies_url}) pour organiser un événement "Heure de code"
+    dans votre entreprise !'
+  hoc_how_to_step_volunteer_decide_list_03: "**Ainsi, les enseignants de votre région
+    pourront vous contacter. Ils consulteront votre profil sur la [carte](%{map_url}).
+    Essayez donc d'y ajouter le plus d'informations possible pour augmenter les chances
+    qu'un enseignant vous contacte."
+  hoc_how_to_step_volunteer_register_desc_01: Quelle que soit la façon dont vous décidez
+    de vous engager, travaillez avec l'organisateur de l'événement pour enregistrer
+    votre événement de l'Heure du code. Vous recevrez rapidement des informations
+    sur les nouvelles activités et les promotions spéciales !
+  hoc_how_to_step_volunteer_plan_desc_01: 'Si vous êtes volontaire dans une classe,
+    discutez des questions logistiques avec l''enseignant à l''avance afin de mieux
+    comprendre ses besoins :'
+  hoc_how_to_step_volunteer_plan_list_01: Quel est votre rôle, comme bénévole, lors
+    de l'événement ? Si vous travaillez dans le secteur de la technologie, il vous
+    sera peut-être demandé de faire part de votre expérience personnelle ou de votre
+    histoire. Pouvez-vous aider l'enseignant à se préparer en réalisant l'activité
+    ensemble à l'avance ? Pouvez-vous vous déplacer dans la classe pour répondre aux
+    questions ou encourager les élèves pendant qu'ils participent à l'Heure du code
+    ?
+  hoc_how_to_step_volunteer_plan_list_02: Si vous souhaitez participer en tant que
+    volontaires à distance ou en personne. Cela permettra de déterminer à quels moments
+    vous devrez être présent et à quel titre.
+  hoc_how_to_step_volunteer_plan_list_03: les directives locales et scolaires en matière
+    de santé et de sécurité. Selon les procédures en vigueur, il est possible que
+    vous deviez passer par une vérification de vos antécédents ou que vous deviez
+    arriver un peu plus tôt pour vous faire enregistrer si vous assistez à l'événement
+    en personne.
+  hoc_how_to_step_volunteer_plan_list_04: Cette année, l'Heure du code a pour thème
+    la créativité et l'intelligence artificielle (IA). Faites de cette année une année
+    spéciale en réalisant une activité de codage ET en vous informant à l'utilisation
+    de l'IA.
+  hoc_how_to_step_volunteer_spread_word_desc_01: Contribuez à promouvoir le mouvement
+    informatique en partageant vos projets de bénévolat avec vos amis et collègues
+    sur vos comptes de réseaux sociaux (p. ex. LinkedIn).
+  hoc_how_to_step_volunteer_get_coding_desc_01: Pendant que les élèves travaillent,
+    n'hésitez pas à répondre à leurs questions, mais essayez de ne pas leur donner
+    la solution d'emblée. Posez-leur plutôt des questions pour qu'ils puissent trouver
+    eux-mêmes ce qui n'a pas fonctionné. Encouragez les élèves à s'entraider s'ils
+    sont bloqués.
+  hoc_how_to_step_volunteer_get_coding_desc_02: Si vous n'avez pas la réponse à une
+    question, ce n'est pas grave ! Faites savoir à l'élève que vous êtes dans le même
+    bateau et travaillez avec lui pour trouver la solution.
+  hoc_how_to_step_volunteer_beyond_desc_01: Faites la promotion de l'apprentissage
+    de l'informatique tout au long de l'année !
+  hoc_how_to_step_volunteer_beyond_desc_02: Si vous vous êtes amusé, le travail ne
+    doit pas s'arrêter à l'Heure du code. Envisagez de vous engager toute l'année
+    dans des programmes tels que [TEALS](%{teals_url}) ou de plaider en faveur de
+    l'enseignement de l'informatique.
+  hoc_how_to_step_virtual_register_desc_01: Inscrivez votre événement " Heure de code
+    " pour recevoir rapidement des informations sur les nouvelles activités et les
+    promotions spéciales.
+  hoc_how_to_step_virtual_register_desc_02: Vous ne serez peut-être pas présent en
+    personne, mais vous ferez tout de même partie du mouvement. Servez-vous de la
+    localisation de votre hôte pour ajouter votre événement à la carte de l'Heure
+    du code, et n'oubliez pas que votre dévouement fait partie d'un mouvement mondial.
+  hoc_how_to_step_virtual_choose_activities_desc_04: Décidez à l'avance si vous souhaitez
+    utiliser un seul tutoriel pour l'ensemble de vos élèves ou si vous souhaitez que
+    chacun d'entre eux choisisse le sien.
+  hoc_how_to_step_virtual_plan_list_01: '10h00 - 10h05 : Commencez par une [vidéo
+    stimulante](%{videos_url}) ou une brève introduction du présentateur sur l''importance
+    de la maîtrise des fondamentaux de l''informatique.'
+  hoc_how_to_step_virtual_plan_list_02: '10 h 05 - 10 h 45 : Les élèves réalisent
+    leur activité de codage.'
+  hoc_how_to_step_virtual_plan_list_03: '10 h 45 - 10 h 55 : Les élèves découvrent
+    l''IA'
+  hoc_how_to_step_virtual_plan_list_04: '10 h 55 - 11 h 00 : Discours de clôture du
+    présentateur'
+  hoc_how_to_step_virtual_plan_desc_02: Testez au préalable vos installations technologiques
+    et les activités que vous souhaitez proposer. Réfléchissez à comment vos élèves
+    participeront à l'appel et s'ils peuvent rester en ligne tout en effectuant leur
+    activité dans des fenêtres séparées. Lorsque vous présentez une vidéo, partagez
+    votre écran et le son de votre ordinateur.
+  hoc_how_to_step_virtual_plan_desc_03: Pendant l'activité de codage, demandez à vos
+    élèves de mettre leur ordinateur en sourdine jusqu'à ce qu'ils aient des questions
+    à poser. Ou, si votre outil de conférence le permet, pensez à utiliser des salles
+    de réunion pour que les apprenants puissent travailler ensemble par paires ou
+    par groupes.
+  hoc_how_to_step_virtual_get_coding_desc_01: 'Guidez vos élèves vers l''activité,
+    peut-être en partageant le lien dans la boîte de dialogue de l''outil de conférence
+    ou via le système de gestion de l''apprentissage de la classe. Vos élèves peuvent
+    avoir du mal à s''en sortir - ce n''est pas grave ! Apprendre à programmer, c''est
+    comme apprendre une nouvelle langue : on ne la parle pas couramment tout de suite.
+    Si un élève est bloqué, encouragez-le à se rapprocher de ses pairs en se mettant
+    à deux et à trouver la réponse ensemble.'
+  hoc_how_to_step_virtual_celebrate_desc_01: 'N''oubliez pas de célébrer les réussites
+    ! Imprimez des attestations à l''avance et envoyez-les à vos élèves, ou demandez
+    à chaque élève de demander à leurs parents d''imprimer les attestations à la maison.
+    Affichez leur réalisation et partagez des photos et des vidéos de votre Heure
+    de code sur les réseaux sociaux. Utilisez #HourOfCode et @codeorg afin que nous
+    puissions également souligner votre succès ! (Des politiques de publicité ou de
+    confidentialité peuvent s''appliquer).'
+  hoc_how_to_step_virtual_beyond_desc_01: L'informatique ne doit pas s'arrêter à l'Heure
+    du code ! Bien que 90 % des parents souhaitent que leurs enfants apprennent l'informatique,
+    la plupart des écoles ne l'enseignent toujours pas. Pour les aider, les partenaires
+    de l'Heure du code proposent divers programmes d'études. Apprenez comment proposer
+    ces activités aux écoles dès aujourd'hui.
   hoc_ai_top_desc: Tout le monde peut en apprendre davantage sur l'IA, que vous soyez
     un étudiant en classe ou un enseignant qui découvre l'avenir de l'enseignement
     avec et sur l'IA.
@@ -16157,6 +16418,37 @@ fr:
   hoc_ai_activities_desc: Ces toutes nouvelles activités Hour of Code présentent aux
     utilisateurs le monde de l'intelligence artificielle d'une manière amusante et
     engageante.
+  hoc_ai_additional_educator_resources_desc: There is so much to learn about how AI
+    can support you and your students. Check out these courses and tools from partners.
+  hoc_ai_resources_adobe_title: Bring generative AI into your classroom with Adobe
+    Express
+  hoc_ai_resources_adobe_desc: In this self-paced Lightning Learning course, you'll
+    learn about the many applications Adobe Express's new generative AI features have
+    for teaching and learning. You'll also explore creative and simple activities
+    that support your students throughout any project.
+  hoc_ai_resources_adobe_aria_label: Explore the Adobe Express course
+  hoc_ai_resources_day_of_ai_title: Day of AI
+  hoc_ai_resources_day_of_ai_desc: Join a global community to bring a Day of AI to
+    your school. Explore engaging activities and teacher resources for all grade levels
+    that help build AI literacy and a foundational knowledge of artificial intelligence.
+  hoc_ai_resources_microsoft_01_title: Explore the potential of artificial intelligence
+  hoc_ai_resources_microsoft_01_desc: Navigate AI in education by looking at essential
+    AI concepts, techniques, and tools, highlighting practical applications.
+  hoc_ai_resources_microsoft_01_aria_label: See details for exploring the potential
+    of artificial intelligence lessons
+  hoc_ai_resources_microsoft_02_title: 'AI for education: Resources and learning opportunities'
+  hoc_ai_resources_microsoft_02_desc: Explore resources and courses on how to use
+    AI in education with Microsoft.
+  hoc_ai_resources_microsoft_02_aria_label: Explore resources from Microsoft
+  hoc_ai_resources_bing_title: Enhance teaching and learning with Bing Chat
+  hoc_ai_resources_bing_desc: Explore using Bing Chat in education by learning basic
+    concepts, modes, and features and then applying that knowledge to design effective
+    prompts and analyze results.
+  hoc_ai_resources_bing_aria_label: See details for the enhance teaching and learning
+    with Bing Chat lessons
+  hoc_ai_resources_iste_aria_label: Explore the ISTE U AI Explorations for Educators
+    course
+  hoc_ai_resources_day_of_ai_aria_label: Explore Day of AI lessons
   team_page_full_team_alt_text: Près de 100 employés de Code.org portant des t-shirts
     bleus et jaunes assortis posent dans la salle de conférence d'un hôtel pour l'événement
     Codechella organisé par l'entreprise à l'été 2022.
@@ -16855,9 +17147,10 @@ fr:
     de l'ensemble de la communauté des professeurs d'informatique et [nous remercions
     tous les partenaires et toutes les personnes qui ont soutenu notre action au fil
     des ans](%{partenaires_url})).
-  about_page_section_more_list_1: "[Rapport annuel 2021 de Code.org](%{report_url})
-    (Rapports précédents : [2020](%{past_url_1}), [2019](%{past_url_2}), [2018](%{past_url_3}),
-    [2017](%{past_url_4}), [2016](%{past_url_5}), [2015](%{past_url_6}), [2014](%{past_url_7}))"
+  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022})
+    (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}),
+    [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}),
+    [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Nos valeurs fondamentales et nos directives en
     matière de messagerie](%{core_url})"
   about_page_section_more_list_3: "[Notre philosophie en matière de curriculum et

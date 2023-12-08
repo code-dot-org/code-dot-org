@@ -1,0 +1,95 @@
+---
+title: როგორ ჩავატაროთ კოდის ერთი საათი – ორგანიზაციებს
+---
+
+{{ signup_button }}
+
+# როგორ უნდა გააცნოთ კოდის ერთი საათი თქვენს კომპანიას
+### გაიგეთ, თუ როგორ შეგიძლიათ თქვენ და თქვენს თანამშრომლებს დააინტერესოთ მოსწავლეები გამოსცადონ თავიანთი თავი კომპიუტერულ მეცნიერებაში.
+
+***
+
+## დააკავშირეთ ადგილობრივი მოსწავლეები და მოხალისეები კოდირების საათის ფარგლებში.
+Code.org offers the opportunity for your employees to [connect]({{ urls/volunteer }}) with local classrooms doing the Hour of Code where they can share their tech career experience and inspire students to study computer science.
+
+[<button>Sign up to volunteer!</button>]({{ urls/volunteer }})
+<br>
+<br>
+
+For more instructions on encouraging employees and connecting your employees with classrooms, check out our [guide for corporate partners]({{ localized_files/hoc_corporate_toolkit }}).
+
+## Additional ways companies can support the Hour of Code
+
+- Ask your CEO to [send a company-wide email]({{ promote/sample_emails }}) emphasizing the importance of computer science and encouraging employees to spread the word.
+- Host an Hour of Code Happy Hour with coworkers to try the [activities]({{ urls/learn }}).
+- Host an Hour of Code event for a local classroom of students or non profits partners to do an Hour of Code at your company’s office. See event how-to guide below.
+
+
+# როგორ ჩავატაროთ კოდის ერთი საათი მოსწავლეებთან ერთად
+
+## 1. გაუწიეთ პოპულარიზაცია თქვენს კოდის საათს
+- Promote your [Hour of Code]({{ urls/promote }}) event and encourage others to host.
+- მოუწოდეთ თქვენი კომპანიის პროგრამისტებს, ეწვიონ ადგილობრივ კლასს, დაეხმარონ მასწავლებელს კოდის ერთი საათის ჩატარებაში და დააინტერესონ ბავშვები პროგრამირების სწავლით. They can [sign up]({{ urls/volunteer_engineer }}) to be connected with a classroom.
+
+## 2. უყურეთ ამ ინსტრუქციულ ვიდეოს <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+
+## 3. Choose an activity
+We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participants of all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+
+**All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+
+[<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
+
+## 4. Plan your technology needs - computers are optional
+
+კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. But you **don’t** need a computer for every participant, and you can even do the Hour of Code without a computer at all.
+
+**Plan Ahead!** Do the following before your event starts:
+
+- Test activities on computers or devices. Make sure they work properly on browsers with sound and video.
+- თუ თქვენ მიერ არჩეული აქტივობა ხმით უკეთ მუშაობს, უზრუნველყავით მონაწილეები ყურსასმენებით ან სთოხვეთ მათ თავიანთი ყურსასმენების მოტანა.
+- **Don't have enough devices?** Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). ერთად მუშაობისას მონაწილეები ერთმანეთს ეხმარებიან და ნაკლებად არიან დამოკიდებულნი ორგანიზატორზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
+- **Have low bandwidth?** Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+
+## 5.  Start your Hour of Code off with an inspiring video
+დაიწყეთ თქვენი ღონისძიება მონაწილეებთან ერთად იმის განხილვით, თუ როგორ გავლენას იქონიებს მათ ცხოვრებაზე კომპიუტერული მეცნიერებების ცოდნა. გაუზიარეთ, რატომ გადაწყვიტეთ კომპიუტერულ მეცნიერებას გაჰყოლოდით და რა როლს ასრულებთ ის თქვენს კომპანიაში.
+
+**აჩვენეთ შთამაგონებელი ვიდეო:**
+
+- Code.org-ის მთავარი ვიდეო-რგოლი, რომელშიც ლაპარაკობენ ბილ გეითსი, მარკ ცუკერბერგი და NBA-ის ვარსკვლავი ქრის ბოში (ხანგრძლივობა: [1 წუთი](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 წუთი](https://www.youtube.com/watch?v=nKIu9yen5nc) ან [9 წუთი](https://www.youtube.com/watch?v=dU1xS07N-FA)).
+- [კოდის ერთი საათის მსოფლიო მასშტაბის ვიდეო](https://www.youtube.com/watch?v=KsOIlDT145A)
+- [პრეზიდენტი ობამა მოუწოდებს ყველა მოსწავლეს, შეისწავლონ კომპიუტერული მეცნიერება](https://www.youtube.com/watch?v=6XvmhE1J9PY).
+- მეტი შთამაგონებელი ვიდეო იხილეთ [აქ](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+
+**იდეები თქვენი კოდის ერთი საათის აქტივობის მოსწავლეებისთვის წარსადგენად:**
+
+- ახსენით, რა გავლენას ახდენს ტექნოლოგიები ჩვენს ცხოვრებაზე. გამოიყენეთ მაგალითები, რომლებიც გოგონებისთვის და ბიჭებისთვის ერთნაირად საინტერესო იქნება - ესაუბრეთ ტექნოლოგიებზე, რომელიც სიცოცხლის გადასარჩენად, ადამიანების დასახმარებლად და მათ დასაკავშირებლად გამოიყენება.
+- თუ ტექნოლოგიური კომპანია ხართ, წარმოადგინეთ სახალისო, ინოვაციური პროდუქტები, რომლებზეც მუშაობთ.
+- თუ არ ხართ ტექნოლოგიური კომპანია, ისაუბრეთ, როგორ იყენებთ ტექნოლოგიას პრობლემების გადასაჭრელად და მიზნების მისაღწევად.
+- მოიწვიეთ პროგრამისტები თქვენი კომპანიიდან, რათა ისაუბრონ იმაზე, რატომ გადაწყვიტეს კომპიუტერული მეცნიერების სწავლა და რა პროექტებზე მუშაობენ ამჟამად.
+- იხილეთ რჩევები გოგონების კომპიუტერული მეცნიერებით [დაინტერ]({{ urls/girls }})ესებისთვის
+
+## 6. Code!
+**მიეცით მონაწილეებს მითითებები აქტივობის შესახებ**
+
+- Write the activity link on a whiteboard. Find the link listed on the [information for your selected activity]({{ urls/learn }}) under the number of participants.
+- უმცროსი მოსწავლეებისთვის, წინასწარ ჩატვირთეთ აქტივობების გვერდი ან შეინახეთ სანიშნის სახით.
+
+**როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ უპასუხებთ:**
+
+- "არ ვიცი. მოდი ერთად გავარჩიოთ."
+- „პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია პირველი ცდის მერე დაიწყოთ გამართულად საუბარი.“
+
+**როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
+
+- They can try another Hour of Code activity at hourofcode.com/learn.
+- ან სთხოვეთ, დაეხმარონ მეგობარს, რომელსაც უჭირს დავალების შესრულება.
+
+## 7) აღნიშნეთ
+
+- [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) მონაწილეების და მოსწავლეებისთვის.
+- [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
+- [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი თანამშრომლებისთვის.
+- გააზიარეთ თქვენი კოდირების საათის ამსახველი ფოტო და ვიდეო მასალა სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg რათა ჩვენც შევძლოთ თქვენი წარმატების აღნიშვნა!
+
+{{ signup_button }}

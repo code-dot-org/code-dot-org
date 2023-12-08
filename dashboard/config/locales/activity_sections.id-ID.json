@@ -36126,36 +36126,120 @@
           "name": "Penutupan"
         },
         "3125ec73-4d68-45a9-a6f8-b2921c55d4a3": {
-          "name": "Pemfilteran Musik"
+          "name": "Pemfilteran Musik",
+          "description": "Tutorial ini menampilkan lagu dari artis populer. Untuk mendapatkan cuplikan daftar lagu dalam tutorial ini, lihat [Daftar Lagu Spotify (semua usia)] ini. Kami menggunakan versi lagu yang seluruhnya aman di radio dan untuk siswa di bawah 13 tahun."
         },
         "524efe4b-796a-48eb-b1c6-f4e138699443": {
-          "name": "Dukungan Umum"
+          "name": "Dukungan Umum",
+          "description": "Sebagai guru, tugas Anda adalah membantu siswa saat mereka mengerjakan tutorialnya. Berikut tips yang dapat membantu siswa apapun level yang mereka kerjakan.\n\n-   \\***\\*Bekerjasama dengan Teman:** Anjurkan siswa untuk berdiskusi dengan teman saat mereka mengalami kesulitan. Karena tutorial ini mencakup video dan siswa mungkin memakai headphone, maka mereka bisa merasa terisolasi. Bantu atasi hambatan tersebut dengan memasangkan siswa jika mereka tampak butuh bantuan. Dengan mempertimbangkan usia dan kemampuan siswa, Anda dapat membagi kelas Anda untuk berpasangan guna menyelesaikan tutorial dengan menggunakan pemrograman berpasangan.\n-   **Baca Instruksinya:** Instruksinya memberikan langkah-langkah untuk menyelesaikan level.\n-   **Kesulitan? Cari petunjuk:** Tiap level berisi petunjuk yang memperlihatkan cara melewati sebuah level. Jika siswa mencoba melewati levelnya secepat mungkin, mereka mungkin harus menunggu beberapa saat hingga semua kodenya dapat dijalankan sebelum melanjutkan.\n-   \\*\\*Lanjutkan dan Kembali:\\*\\* Terkadang siswa akan mendapat manfaat lebih banyak jika kembali ke level yang sulit. Semua level tidak berkaitan satu sama lain, namun terkadang bergantung pada konsep yang sebelumnya dipelajari.\n-   **Luangkan waktu dan lakukan ksperimen.** Instruksi dan petunjuk yang jelas disediakan untuk membantu siswa dalam menyelesaikan tiap level. Selain menyelesaikan level,, siswa juga harus bebas untuk mencoba idenya sendiri, misalnya bereksperimen dengan penari, gerakan tari, efek, dan lagu yang berbeda. "
         },
         "b9bacf54-bd37-42b8-85fc-bc9d07a50537": {
           "tips": [
-            null
+            "Untuk mengembangkan pengetahuan dasar tentang Kecerdasan Buatan dan/atau memperluas pembelajaran, kunjungi materi video, pelajaran, dan peluang pembelajaran profesional di [halaman Kreativitas dengan A.I.](https://hourofcode.com/ca) kami.\n\nJika Anda punya waktu dan ingin menyiapkan siswa Anda dengan kegiatan tanpa komputer, cobalah [Pesta Dansa: Tanpa Komputer](https://studio.code.org/s/dance-unplugged/lessons/1) sebelum acara Hour of Code Anda. Pelajaran singkat ini memperkenalkan siswa pada ide tentang event/peristiwa yang memicu gerakan tari yang berbeda."
           ]
         },
         "58bdb8b5-159d-4b7a-aae7-d250213c1379": {
-          "progression_name": "Video Pembuka"
+          "progression_name": "Video Pembuka",
+          "name": "Pengantar ke Pesta Dansa",
+          "description": "Dalam video ini, siswa akan melihat contoh coding kreatif di dunia nyata untuk membantu menginspirasi mereka dalam membuat kode pesta dansa interaktif mereka sendiri. Video ini juga menjelaskan berbagai elemen platform coding seperti Panel Instruksi, Area Kerja, Kotak Alat, dan Ruang Bermain."
         },
         "b8daa26e-57e7-4bc5-8a6e-1e541a407c8e": {
           "tips": [
-            null
+            "Video tersemat akan berada di atas level saat pengguna membuka level tersebut untuk pertama kali. Siswa dapat menutupnya setelah selesai menonton. Jika ingin menontonnnya kembali, video tersebut berada di bawah tombol \"jalankan\"."
           ]
         },
         "7c95f7a1-478d-45fc-ba2d-5807bd2b828f": {
-          "name": "Pengarahan singkat"
+          "name": "Pengarahan singkat",
+          "description": "Bangun pengalaman positif mereka dengan coding.. \n\n**Diskusikan:** \n\n\\__Jika ini pertama kalinya mereka melakukan coding, tanyakan:_\n\n-   Apa yang kamu sukai dari kegiatan hari ini?\n    atau \n-   “Bagaimana cara kamu menggunakan kreativitas dan ilmu komputer hari ini??\n\n_Jika siswa Anda pernah melakukan coding sebelumnya, tanyakan:_\n\n-   Apa hal baru yang kamu kodekan hari ini yang belum pernah kamu lakukan sebelumnya?\n\nLalu, **pikirkan proses penggunaan A.I.** untuk membantu mereka dalam melakukan coding:\n\n-   Menurut kalian, apakah lebih baik membuat segala sesuatunya sendiri, atau sebaiknya bekerjasama dengan komputer atau robot? Mengapa?\n-   Apa saja cara keren dalam memanfaatkan A.I. di sekolah untuk membantu siswa lebih kreatif?\n-   Apakah ada cerita atau gambar seru yang kamu pikirkan yang kamu ingin dibuat oleh komputer? Dengan cara apa ia dapat membantumu?"
         },
         "c624ab39-fa08-4b83-b1e9-bf97fb42667f": {
-          "name": "Rayakan"
+          "name": "Rayakan",
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan global ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
         },
         "07a73ab9-8996-453a-a87f-63628f2387db": {
           "name": "Langkah berikutnya",
           "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
         },
         "fb665f5b-457e-484e-924a-7aa4f2e097be": {
-          "name": "Viralkan"
+          "name": "Viralkan",
+          "description": "Hour of Code adalah tentang kreativitas, dan kami tak sabar menunggu kreasi Anda! Harap bagikan hasil kreasi, foto, dan video siswa di media sosial! Pak/Bu Guru, rekamlah siswa Anda saat mengkodekan tarian, atau menarikan tarian tersebut. \n\nPastikan untuk menyertakan tagar #HourOfCode dan tandai kami di Facebook, Twitter, dan Instagram. Poin bonus untuk menandai seniman yang musiknya digunakan oleh siswa Anda. Code.org akan membagikan ulang postingan favorit kami ke jutaan pengikut.  \n\n_Dan tentunya, pastikan untuk mematuhi kebijakan media sosial sekolah Anda._"
+        },
+        "596336ba-e584-4453-a2cd-2268dc3c59bc": {
+          "description": "Hari ini, kita akan melakukan sesuatu yang sangat kreatif dengan kode! “Kode” adalah kumpulan petunjuk yang dapat dipahami oleh komputer. Sebelum memulai, cara apa saja yang kalian sukai untuk berkreasi atau mengekspresikan diri?"
+        },
+        "84a173a8-19dd-407d-88cb-6747bdc1122d": {
+          "description": "Dorong siswa Anda untuk berbagi cara dalam mengekspresikan kreativitas, misalnya dengan seni, tari, musik, dan menulis.\\_"
+        },
+        "66891774-46dc-4488-a30b-5d231e4145ff": {
+          "description": "Seperti halnya memilih warna cat atau kata-kata yang akan digunakan untuk menulis yang merupakan cara mengekspresikan kreativitas. Memilih kode apa yang ditulis dan cara orang berinteraksi dengan kode tersebut juga bisa menjadi ruang untuk mengekspresikan kreativitas!\nDalam kegiatan coding kreatif ini, kalian akan diperkenalkan dengan alat baru yang berguna, yakni Kecerdasan Buatan, yang juga dikenal sebagai A.I.! A.I. merupakan program komputer yang bekerja seperti otak manusia. A.I. Bot dalam kegiatan ini dapat membantu dalam mengambil pilihan efek khusus dengan sangat cepat."
+        },
+        "b98db6e3-3139-4e85-bd62-60603e22af96": {
+          "description": "**Diskusikan:** Menurut kalian, bagaimana cara komputer dan robot dalam membantu kita menjadi lebih kreatif?\n\n**Tujuan Diskusi:** Siswa harus mulai memikirkan cara agar AI dapat membantu dalam proses kreatif. Idenya bisa mencakup:\n\n-   **Pembuatan ide:** AI dapat membantu memunculkan ide-ide baru dan menarik untuk membuat cerita, gambar, dan proyek kreatif lainnya saat Anda merasa kesulitan.\n-   **Inspirasi Artistik:** AI dapat menyarankan warna, gaya, dan tema untuk karya seni, sehingga memberi inspirasi untuk karya kalian berikutnya.\n-   **Kolaborasi:** AI bisa menjadi mitra yang kreatif, membantu kalian bertukar pikiran dan bekerjasama dengan orang lain dalam proyek."
+        },
+        "e6f1d97d-4c0c-42e1-8bde-dc89400d0baf": {
+          "name": "Ayo menari",
+          "description": "Level ini mengharuskan siswa untuk membuat penari baru dengan satu blok kode dan membuat penari tersebut melakukan gerakan tari dengan blok kode kedua. Minta siswa untuk menggunakan menu drop-down untuk menelusuri berbagai jenis penari, gerakan tari, dan lagu.",
+          "progression_name": "Membuat Penari & Gerakan Tari"
+        },
+        "e150925b-003d-4acd-a87c-5aca4d8b1a89": {
+          "name": "Gunakan A.I. untuk membuat efek khusus",
+          "description": "Dalam tiga level ini, siswa diperkenalkan dengan blok A.I. yang baru. Ada dua video yang mendampingi level ini. Minta siswa untuk menonton kembali video ini jika mereka merasa kesulitan. Untuk melewati level ini, siswa meminta A.I. untuk membuat kode dengan efek warna-warni yang selaras dengan pesta dansa mereka. Minta siswa untuk memilih tiga emoji yang menggambarkan mood yang ingin mereka sampaikan untuk pesta dansanya.",
+          "progression_name": "Gunakan A.I. "
+        },
+        "3ae03e0b-0a31-42b7-bee8-98aa457a9542": {
+          "name": "Buat kode event untuk menambah interaksi",
+          "description": "Sekarang, siswa diperkenalkan dengan event. Ini adalah konsep coding tersulit dalam tutorial ini. Event sangat istimewa karena tidak terhubung ke blok setup, melainkan merupakan program mini tersendiri. Bayangkan event sebagai telinga yang mendengarkan yang akan mengeksekusi kode apa pun yang ada di bawahnya ketika dipicu. Event pertama yang digunakan siswa adalah event `saat tanda panah ditekan` yang memungkinkan siswa untuk memicu potongan kode baru dengan menekan tombol pada keyboard. Event kedua adalah event `hitungan` yang bekerja seperti pengatur waktu pada jam. Saat lagu telah diputar selama jumlah hitungan tertentu, maka kode baru akan terpicu.\n\nMinta siswa untuk menonton kembali video tentang event yang mendampingi kedua level ini.",
+          "progression_name": "Tekanan Tombol & Event Pada Hitungan"
+        },
+        "7f2f14df-e85e-4dea-bf5a-5d9537baca14": {
+          "name": "Berkreasilah!",
+          "description": "Level terakhir ini ditujukan sebagai ruang untuk bermain bebas dan bereksplorasi. Minta siswa untuk berkreasi dan melatih keterampilan coding yang baru mereka pelajari untuk membuat pesta dansa mereka sendiri!",
+          "progression_name": "Proyek Pesta Dansa Akhir"
+        },
+        "c03cf1cb-2946-48c9-aede-76ccf4b787a9": {
+          "tips": [
+            null
+          ]
+        },
+        "3c17e9fd-b06b-478e-bb56-5734d9344b68": {
+          "tips": [
+            null
+          ]
+        },
+        "913cf29b-f688-4c8b-9834-96c9b75274f5": {
+          "tips": [
+            null
+          ]
+        },
+        "f39d7745-dd63-424d-baa1-de4e4fd0f0c0": {
+          "tips": [
+            null
+          ]
+        },
+        "a7f20e25-3940-4615-b90f-8664e1661b3a": {
+          "tips": [
+            null
+          ]
+        },
+        "2a1748fb-e49f-4ae0-be55-0c603dbe3335": {
+          "tips": [
+            null
+          ]
+        },
+        "e72dd2c9-59cc-4063-9dcc-d270e7fed0fe": {
+          "tips": [
+            null
+          ]
+        },
+        "5ff66bb0-517f-486e-b70f-cad0319c23df": {
+          "tips": [
+            null
+          ]
+        },
+        "31d4feb6-1e0c-4342-988b-6730a0d0155e": {
+          "tips": [
+            null
+          ]
         }
       }
     }

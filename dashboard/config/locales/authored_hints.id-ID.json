@@ -14472,6 +14472,36 @@
         "csc_timecapsule_textstyle_2023": {
           "hint1": "Gunakan dropdown untuk memilih dari berbagai warna dan efek.\n\n![](<https://images.code.org/b3cd57bafe3e5eb487d61ef846a4715c-image-1660769880438.57.55 PM.png>)"
         },
+        "dance_ai_code_at_measure": {
+          "hint1": "Hubungkan blok `buat efek AI` ke event `pada 2 hitungan` di area kerjamu seperti ini: \n\n[blockly block][0]",
+          "hint2": "Klik blok [blockly block][0]  untuk membuat efek baru."
+        },
+        "dance_ai_code_key_press": {
+          "hint1": "💡 **Masih kesulitan?** Tonton video event sekali lagi untuk mempelajari cara kerjanya.",
+          "hint2": "💡 Berikut contoh tampilan kode Anda. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "dance_ai_customize_effect": {
+          "Hint1": "💡 Sesuaikan efeknya dengan mengklik emoji pada blok <xml> <block xmlns=\"https://developers.google.com/blockly/xml\" type=\"Dancelab_ai\" id=\"*6NOt^DsApsRC-pPZKBQ\">\n  <field name=\"VALUE\">{\"inputs\":[\"cool\",\"cold\",\"wavy\"],\"backgroundEffect\":\"sparkles\",\"backgroundColor\":\"cool\",\"foregroundEffect\":\"bubbles\"}</field>\n\n</block> </xml> di area kerja. ",
+          "Hint2": "💡 \\*\\*Masih kesulitan? \\*\\* Tonton video untuk melihat cara menyesuaikan efeknya. ",
+          "HintEdit": "💡 Jika ingin menggunakan kode yang ditulis oleh A.I., alihkan untuk menampilkan kodenya lalu klik `Gunakan Kode`. Blok akan menggantikan blok `buat efek A.I.` di area kerja. "
+        },
+        "dance_ai_dancer_and_dance_move": {
+          "HInt2": "Penari harus sama pada kedua blok dan urutan (susunannya) sangat penting.  ",
+          "validation": "💡  Tambahkan blok ini ke <code style=\"color:white; background-color:#FFBD46\">setup</code> untuk membuat penari pertamamu: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">\"next\"</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+        },
+        "dance_ai_generate_effect": {
+          "Hint2": "💡 Hubungkan [blockly block][0] ke dalam <code style=\"color:white; background-color:#FFBD46\">setup</code>. Lalu klik untuk memulai.",
+          "Hint3": "💡 Jika ingin membuat ulang efeknya atau mengubah emoji, kamu dapat mengklik kembali blok `A.I. generate effect`. "
+        },
+        "dance_ai_generate_effect_again": {
+          "Hint1": "💡 Dengarkan lagu tersebut dan pikirkan mood musiknya.",
+          "Hint2": "💡 Hubungkan [blockly block][0] ke dalam <code style=\"color:white; background-color:#FFBD46\">setup</code>. Lalu klik untuk memulai.",
+          "Hint3": "💡 Jika ingin membuat ulang efeknya atau mengubah emoji, kamu dapat mengklik kembali blok `buat efek A.I.`. "
+        },
+        "dance_ai_try_key_press": {
+          "hint1": "💡 Penari tidak akan menanggapi isyaratmu kecuali tariannya sedang berjalan. ",
+          "hint2": "💡 Setelah menekan <code style=\"color:white; background-color:#FFBD46\">Jalankan</code>, beri isyarat ke penari dengan menekan  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> panah kiri atau kanan. "
+        },
         "ecosystems_helloworld_say_2023": {
           "add_sprite": "Klik dan seret blok `make new sprite`dan sambungkan di bawah `saat menjalankan`. \n\n<xml><block type=\"when_run\" deletable=\"false\"><next><block type=\"gamelab_makeNewSpriteAnon\"><field name=\"ANIMATION_NAME\">\"bunny1_ready\"</field><value name=\"LOCATION\"><block type=\"gamelab_location_picker\" can_disconnect_from_parent=\"false\"><field name=\"LOCATION\">{\"x\":200,\"y\":200}</field></block></value></block></next></block></xml>",
           "change_location": "Untuk mengubah lokasi sprite, klik pin pada blok lokasi, lalu klik ke arah mana kamu ingin ia bergerak.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
