@@ -247,8 +247,8 @@ void loadDataThread() {
   char *tsvFilename;
   while (!done) {
     while (loadDataFilenameQueue.pop(tsvFilename)) {
+      cout << "loadDataThread: taking job (queue size=" << --numDataJobsQueued << ")" << endl;
       loadData(tsvFilename);
-      numDataJobsQueued--;
       delete tsvFilename;
     }
   }
@@ -256,8 +256,8 @@ void loadDataThread() {
   cout << "loadDataThread: done=true, draining queue" << endl;
 
   while (loadDataFilenameQueue.pop(tsvFilename)) {
+    cout << "Num data jobs queued: " << --numDataJobsQueued << endl;
     loadData(tsvFilename);
-    cout << "Num data jobs queued: " << numDataJobsQueued-- << endl;
     delete tsvFilename;
   }
 
@@ -299,8 +299,8 @@ inline void commitRecords() {
     if (LOAD_DATA_IN_THREAD) {
       // we're using threads, but we're not in one, just queue it up
       char *filename = strdup(loadDataBufferTSVFilename.c_str());
+      numDataJobsQueued++;
       while (!loadDataFilenameQueue.push(filename));
-      cout << "Num data jobs queued: " << numDataJobsQueued++ << endl;
     } else {
       loadData(loadDataBufferTSVFilename);
     }
