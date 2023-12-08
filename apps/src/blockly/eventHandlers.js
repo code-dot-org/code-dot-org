@@ -35,6 +35,7 @@ export function disableOrphans(blockEvent) {
     return;
   }
   const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
+  const block = eventWorkspace.getBlockById(blockEvent.blockId);
   if (
     blockEvent.type === Blockly.Events.BLOCK_MOVE ||
     blockEvent.type === Blockly.Events.BLOCK_CREATE ||
@@ -43,14 +44,13 @@ export function disableOrphans(blockEvent) {
     if (!blockEvent.blockId) {
       throw new Error('Encountered a blockEvent without a proper blockId');
     }
-    let block = eventWorkspace.getBlockById(blockEvent.blockId);
     if (block) {
       updateBlockEnabled(block);
     }
   } else if (
     blockEvent.type === Blockly.Events.BLOCK_DRAG &&
-    eventWorkspace.getBlockById(blockEvent.blockId).type ===
-      BLOCK_TYPES.procedureDefinition
+    block &&
+    block.type === BLOCK_TYPES.procedureDefinition
   ) {
     // When a function definition is moved, we should not suddenly enable
     // its call blocks.
