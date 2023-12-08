@@ -6,17 +6,14 @@ require 'authentication_option'
 class Services::Lti
   def self.initialize_lti_user(id_token)
     user_type = Policies::Lti.get_account_type(id_token)
-    teacher_name_keys = [:name, :display_name, :full_name, :family_name, :given_name]
-    student_name_keys = [:name, :display_name, :full_name, :given_name]
-
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = user_type
     if user_type == User::TYPE_TEACHER
       user.age = '21+'
-      user.name = get_claim_from_list(id_token, teacher_name_keys)
+      user.name = get_claim_from_list(id_token, Policies::Lti::TEACHER_NAME_KEYS)
     else
-      user.name = get_claim_from_list(id_token, student_name_keys)
+      user.name = get_claim_from_list(id_token, Policies::Lti::STUDENT_NAME_KEYS)
       user.family_name = get_claim(id_token, :family_name)
     end
     ao = AuthenticationOption.new(
@@ -45,12 +42,12 @@ class Services::Lti
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
     # TODO DAYNE don't do [0]
-    custom_claims = nrps_member[:message][0][Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym]
+    nrps_member_message = nrps_member[:message][0]
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = User::TYPE_STUDENT
-    user.name = custom_claims[:display_name] || custom_claims[:full_name] || custom_claims[:given_name]
-    user.family_name = custom_claims[:family_name]
+    user.name = get_claim_from_list(nrps_member_message, Policies::Lti::STUDENT_NAME_KEYS)
+    user.family_name = get_claim(nrps_member_message, :family_name)
     id_token = {
       sub: nrps_member[:user_id],
       aud: client_id,
@@ -59,7 +56,7 @@ class Services::Lti
     ao = AuthenticationOption.new(
       authentication_id: Policies::Lti.generate_auth_id(id_token),
       credential_type: AuthenticationOption::LTI_V1,
-      email: custom_claims[:email],
+      email: get_claim(nrps_member_message, :email),
       )
     user.authentication_options = [ao]
     user

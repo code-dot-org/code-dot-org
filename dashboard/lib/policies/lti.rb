@@ -32,6 +32,10 @@ class Policies::Lti
   LTI_DEPLOYMENT_ID_CLAIM = "https://purl.imsglobal.org/spec/lti/claim/deployment_id".freeze
   LTI_NRPS_CLAIM = "https://purl.imsglobal.org/spec/lti-nrps/claim/namesroleservice".freeze
 
+  # Prioritized lists for looking up a user's name from custom LTI variable claims.
+  TEACHER_NAME_KEYS = [:name, :display_name, :full_name, :family_name, :given_name].freeze
+  STUDENT_NAME_KEYS = [:name, :display_name, :full_name, :given_name].freeze
+
   def self.get_account_type(id_token)
     id_token[LTI_ROLES_KEY].each do |role|
       return User::TYPE_TEACHER if TEACHER_ROLES.include? role
