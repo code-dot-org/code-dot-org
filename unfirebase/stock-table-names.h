@@ -114,17 +114,62 @@ const std::unordered_set<std::string> STOCK_TABLE_NAMES = {
     "World's Tallest Buildings",
     "World's Tallest Mountains",
 
+    /* ABOVE HERE ARE TABLE NAMES THAT CAME FROM `dashboard/config/data-docs/*json` */
+    /* BELOW HERE ARE TABLE NAMES THAT WE INFERRED FROM USAGE */
+
+
     // TODO: add a few stock tables that are probably level data injected by FirebaseStorage.populateTable
     "US States",
     "TheRoot: 100 Influential African Americans",
-    //"AP Computer Science Test Takers and Demographics, by State (2019)",
     "AP Computer Science Test Taker Demographics by State (2019)",
     "US Voter Registration and Demographics By State",
     "RollingStone: 500 Albums",
     "College Majors & Incomes",
     "Most Spoken Languages Worldwide",
     "US 2016 Presidential Election Results",
-
+    "Favorite Classes",  // more than 95% of these are duplicates in big-data.json
+    "toppings", // about 50% stock in huge-data.json
+    "Student Info", // about 30% stock in huge-data.json
+    "Foods", // 100% stock in huge-data.json
+    "topMovies", // 75% stock in huge-data.json
+    // "SuperUsers", // 0% stock in huge.data.json
+    // "mySongs", // 5% stock in huge-data.json
+    // "mytable", // 0% stock in huge-data.json
+    // "ages", // 50% stock in huge-data.json
+    "rottenTomatoes", // 95% stock in huge-data.json
+    "Fortune Data", // 90% stock in huge-data.json
 };
+
+/* Here's the top non-stock names in big-data.json:
+
+Student Info , 322
+mytable , 179
+mySongs , 132
+topMovies , 126
+SuperUsers , 74
+voteTable , 60
+drawings , 56
+ages , 44
+myTable , 38
+elements , 37
+words , 36
+lines , 34
+Toy's Collection , 33
+Survey , 33
+Fortune Data , 29
+Voters , 28
+QuizTable , 24
+users , 23
+Candidates , 23
+rottenTomatoes , 21
+Users , 19
+Emoji Data , 19
+myContacts , 18
+cards , 18
+CardDetails , 17
+Netflix Data , 17
+Genres , 17
+
+*/
 
 #endif
