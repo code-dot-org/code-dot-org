@@ -154,13 +154,14 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
   ids_to_add = ids_to_add.difference(existing_ids)
   # This xpath syntax ignores namespaces, which some xml nodes use.
   toolbox_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
+  category_blocks = toolbox_xml.xpath("*[local-name()='xml']//*[local-name()='category']")
   start_blocks = start_blocks_xml.xpath("*[local-name()='xml']//*[local-name()='block']")
   could_match = true
   ids_to_add.each do |id_to_add|
-    index = id_to_add.to_i - 1
     callout_data = broken_callouts[id_to_add]
     is_toolbox_block = callout_data[:new_element_id].include? 'blocklyFlyout'
     if is_toolbox_block
+      index = category_blocks.empty? ? id_to_add.to_i - 1 : id_to_add.to_i - start_blocks.length - 1 - long_instructions_block_count
       if toolbox_blocks.length <= index
         puts "#{level.name} INVALID TOOLBOX INDEX #{id_to_add}"
         could_match = false
@@ -172,7 +173,7 @@ def add_ids_to_blocks(ids_to_add, level, broken_callouts)
         toolbox_blocks[index]['id'] = id_to_add
       end
     else # Otherwise it's a start block.
-      index = id_to_add.to_i - toolbox_blocks.length - 1 - long_instructions_block_count
+      index = category_blocks.empty? ? id_to_add.to_i - toolbox_blocks.length - 1 - long_instructions_block_count : id_to_add.to_i - 1 - long_instructions_block_count
       if start_blocks.length <= index
         puts "#{level.name} INVALID START_BLOCKS INDEX #{id_to_add}"
         could_match = false
