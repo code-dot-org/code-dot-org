@@ -396,7 +396,7 @@ inline bool isStockTable(const string &tableName, const string &json) {
     // burp once every 10000 times
     static uint64_t nTimesSincePrint = 0;
     if (DONT_UPLOAD_STOCK_TABLES && nTimesSincePrint++ % 10000 == 0)
-      cout << "DONT_UPLOAD_STOCK_TABLES=true, skipped uploading " << 100.0 * ((double)tableBytesStock) / tableBytes << "\%" << " of bytes" << endl;
+      cout << "DONT_UPLOAD_STOCK_TABLES=true has skipped uploading of " << 100.0 * ((double)tableBytesStock) / tableBytes << "\%" << " of bytes" << endl;
 
   }
 
@@ -453,6 +453,11 @@ inline void startChannel(string channelName) {
 
   if (FINE_DEBUG) cout << "START CHANNEL " << channelName << endl;
   currentChannelName = channelName;
+
+  static uint64_t nChannelsProcessed = 1;
+  if (nChannelsProcessed++ % 10000 == 0) {
+    cout << "Channel #" << nChannelsProcessed-1 << ": " << channelName << endl;
+  }
 
   if (KIND_OF_ROW == Channel) {
     writerBuffer = new StringBuffer();
