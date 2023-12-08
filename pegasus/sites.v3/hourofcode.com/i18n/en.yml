@@ -382,6 +382,8 @@
   call_to_action_contact_regional_partner: "Contact your regional partner"
   call_to_action_visit_support_center: "Visit our support center"
   call_to_action_download_video: "Download video"
+  call_to_action_explore_learning_ages_5_11: "Explore learning for ages 5-11"
+  call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
 
   aria_label_call_to_action_hoc_how_to_educators: "View how-to guide for Educators"
   aria_label_call_to_action_hoc_how_to_companies: "View how-to guide for Companies"
@@ -598,6 +600,7 @@
   module_grade_3_12: "3-12"
   module_grade_5_12: "5-12"
   module_grade_6_12: "6-12"
+  module_grade_6_12_plus: "6-12+"
   module_grade_6_10: "6-10"
   module_grade_7_12: "7-12"
   module_grade_9_12: "9-12"
@@ -678,6 +681,8 @@
   values_05: "We act with integrity and transparency"
   values_06: "We believe broad impact requires thinking big and acting holistically"
 
+  heading_anyone_can_learn: "Anyone can learn Computer Science"
+  heading_find_right_opportunity: "Find the right learning opportunity for you!"
   heading_professional_learning: "Professional learning that meets your needs"
   heading_additional_resources: "Additional resources"
   heading_support_and_questions: "Support and questions"
@@ -711,6 +716,11 @@
   heading_acceptance: "Acceptance"
   heading_enroll: "Enroll"
   heading_have_questions: "Have questions?"
+
+  student_courses_top_desc: "Start coding today. Our courses and activities are free! It's easier—and more fun—than you think."
+  student_courses_explore_desc: "Explore the world of computer science with engaging videos, self-paced tutorials, programming activities, and more for all ages and experience levels!"
+  student_courses_k_5_desc: "Start with an Hour of Code, then discover more block-based coding in our Express Courses. Get creative in our fun programming environment, Sprite Lab, or watch cool videos to learn more about key topics. There's so much to explore!"
+  student_courses_6_12_desc: "Try an Hour of Code, or check out our self-paced courses on creating apps, games, and animations. Do your own thing in our Web Lab, Game Lab, and App Lab programming environments. Plus, learn more about AI, careers in programming, scholarships, and more."
 
   cs_ambassador_subhead: "If you're a high school student passionate about encouraging more young women to take computer science at your school, then we need you!"
   cs_ambassador_desc: "Every field, including medicine, entertainment, sports, education, business, fashion, and entrepreneurship is touched by computer science. Yet only 5% of high school aged young women take computer science classes. Ambassadors can help close this gender gap by encouraging their peers to take a computer science class."
