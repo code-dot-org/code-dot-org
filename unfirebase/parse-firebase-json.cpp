@@ -89,7 +89,7 @@ const bool DEBUG_SEND_DATA_TO_MYSQL = true;
 const string TMP_DIR = "/tmp/parse-firebase-json/";
 
 // Should we use a JSON type column or a VARCHAR in MySQL?
-const bool USE_MYSQL_JSON_COLUMN = false;
+const bool USE_MYSQL_JSON_COLUMN = true;
 
 // Different levels of debug output
 const bool RAW_DEBUG = false;
@@ -229,9 +229,14 @@ void loadData(string tsvFilename) {
 
   if (DEBUG_SEND_DATA_TO_MYSQL) {
     std::unique_ptr<sql::Statement> stmt(db->createStatement());
-    stmt->execute("LOAD DATA LOCAL INFILE '" + tsvFilename +
-                  "' INTO TABLE `" + TABLE_NAME + "` FIELDS TERMINATED BY '\t' LINES "
-                  "TERMINATED BY '\n';");
+    stmt->execute(
+      "LOAD DATA LOCAL INFILE '" + tsvFilename + "'" +
+        + "INTO TABLE `" + TABLE_NAME + "` "
+        + "CHARACTER SET utf8mb4 "
+        + "FIELDS TERMINATED BY '\t' ESCAPED BY '' "
+        + "LINES TERMINATED BY '\n' "
+        + ";"
+    );
     stmt->execute("COMMIT;");
   }
   
@@ -323,14 +328,36 @@ inline void commitRecords() {
   unComittedRecords = 0;
 }
 
-inline bool jsonDeepEqual(const string &json1, const string &json2) {
+class JSONParseException : public std::exception {
+  public:
+  const char* err;
+  uint64_t offset;
+  const string &document;
+
+  JSONParseException(const string &document_, ParseResult result) : 
+    document(document_)
+  {
+    err = GetParseError_En(result.Code());
+    offset = result.Offset();
+  }
+};
+
+inline bool jsonDeepEqual(const string &reference, const string &document) {
   // FIXME: we don't store the parse tree for the reference here, so
   // its super super slow
-  Document doc1;
-  doc1.Parse(json1.c_str());
-  Document doc2;
-  doc2.Parse(json2.c_str());
-  return doc1 == doc2;
+  Document ref;
+  ref.Parse(reference.c_str());
+
+  Document doc;
+  ParseResult ok = doc.Parse(document.c_str());
+  if (!ok) {
+    cerr << "JSON parse error: " << GetParseError_En(ok.Code()) << " (" << ok.Offset() << ")" << endl;
+    cerr << endl << endl;
+    exit(EXIT_FAILURE);
+    throw JSONParseException(document, ok);
+  }
+
+  return ref == doc;
 }
 
 inline bool isStockTable(const string &tableName, const string &json) {
@@ -521,24 +548,42 @@ inline void endTable(const string &tableName) {
     const string &json = writerBuffer->GetString();
     const string &channelId = currentChannelName;
 
-    // FIXME: isStockTable() requires a SUPER expensive JSON deep equal, we
-    // should figure out how to do this in the data threads instead of here in the main thread
-    if (DONT_UPLOAD_STOCK_TABLES && isStockTable(tableName, json)) {
-      // cout << "SKIPPING STOCK TABLE " << tableName << endl;
-    } else {
-      if (KIND_OF_ROW == Table) {
-        insertIntoDB(channelId, tableName, NO_RECORD_ID, json.c_str());
-      } else if (KIND_OF_ROW == Record) {
-        for (auto &record : recordsInTable) {
-          insertIntoDB(channelId, tableName, record.first, record.second);
+    try {
+      // FIXME: isStockTable() requires a SUPER expensive JSON deep equal, we
+      // should figure out how to do this in the data threads instead of here in the main thread
+      if (DONT_UPLOAD_STOCK_TABLES && isStockTable(tableName, json)) {
+        // cout << "SKIPPING STOCK TABLE " << tableName << endl;
+      } else {
+        if (KIND_OF_ROW == Table) {
+          insertIntoDB(channelId, tableName, NO_RECORD_ID, json.c_str());
+        } else if (KIND_OF_ROW == Record) {
+          for (auto &record : recordsInTable) {
+            insertIntoDB(channelId, tableName, record.first, record.second);
+          }
+        }
+
+        static uint64_t nTablesUploaded = 1;
+        if (nTablesUploaded++ % 5000 == 0) {
+          cout << "Table #" << nTablesUploaded-1 << ": channel_id='" << channelId << "' AND table_name='" << tableName << "'" << endl;
         }
       }
+    } catch (JSONParseException& e) {
+      static uint64_t nTableParseErrors = 0;
 
-      static uint64_t nTablesUploaded = 1;
-      if (nTablesUploaded++ % 5000 == 0) {
-        cout << "Table #" << nTablesUploaded-1 << ": channel_id='" << channelId << "' AND table_name='" << tableName << "'" << endl;
-      }
+      nTableParseErrors++;
+
+      string filename = "error-in-table_" + channelId + "_" + tableName + ".json";
+      ofstream errorFile(filename);
+      errorFile << e.document << endl;
+      errorFile.close();
+
+      cerr << endl;
+      cerr << "TABLE(" << channelId << ", " << tableName << ") was not valid JSON and was dropped" << endl;
+      cerr << "JSON parse error #" << nTableParseErrors << ": " << e.err << " (" << e.offset << ")" << endl;
+      cerr << "See: " << filename << endl;
+      cerr << endl;
     }
+
     
     recordsInTable.clear();
 
@@ -549,10 +594,34 @@ inline void endTable(const string &tableName) {
   }
 }
 
+static uint64_t singleRecordJSONParseErrors = 0;
 inline void handleRecord(string channelId, string tableName, string recordId,
                   string jsonString) {
   if (RAW_DEBUG)
     cout << "RECORD(" << channelId << ", " << tableName << ", " << recordId << ") = " << jsonString << endl;
+
+  // It turns out the JSON parser MySQL uses is ... RapidJSON!
+  // So we can validate each row before sending it to MySQL
+  // for the case where we use a JSON column type
+  if (USE_MYSQL_JSON_COLUMN) {
+
+    // FIXME: this does a double-json-parse on some values
+    // because we also parse (some) json in isStockTable()
+
+    Document doc1;
+    ParseResult ok = doc1.Parse(jsonString.c_str());
+    if (!ok) {
+      singleRecordJSONParseErrors++;
+      cerr << endl;
+      cerr << "RECORD(" << channelId << ", " << tableName << ", " << recordId << ")" << endl;
+      cerr << "JSON parse error #" << singleRecordJSONParseErrors << ": " << GetParseError_En(ok.Code()) << " (" << ok.Offset() << ")" << endl;
+      cerr << endl;
+      cerr << "Trying to parse " << ":" << endl;
+      cerr << jsonString << endl;
+      cerr << endl;
+      return;
+    }
+  }
 
   if (DONT_UPLOAD_STOCK_TABLES) {
     recordsInTable.push_back(make_pair(recordId, jsonString));
@@ -886,6 +955,9 @@ int main(int argc, char *argv[]) {
       dataThreads.join_all();
     } else {
       parseFirebaseJSON(filename);
+    }
+    if (KIND_OF_ROW == Record && singleRecordJSONParseErrors > 0) {
+      cout << "Number of Record dropped due to JSON parse errors: " << singleRecordJSONParseErrors << endl;
     }
     filesystem::remove_all(loadDataBufferDir);
 
