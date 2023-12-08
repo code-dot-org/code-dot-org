@@ -71,7 +71,12 @@ const Tag: React.FunctionComponent<TagProps> = ({
         </LabelTooltip>
       )}
     >
-      <div tabIndex={0} role="tooltip" aria-describedby={tooltipId}>
+      <div
+        tabIndex={0}
+        role="tooltip"
+        aria-describedby={tooltipId}
+        className={moduleStyles.tag}
+      >
         {icon && icon.placement === 'left' && <TagIcon {...icon} />}
         <span>{label}</span>
         {icon && icon.placement === 'right' && <TagIcon {...icon} />}
