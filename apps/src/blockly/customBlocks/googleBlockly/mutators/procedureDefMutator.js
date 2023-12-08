@@ -11,6 +11,7 @@
  */
 
 import {ObservableParameterModel} from '@blockly/block-shareable-procedures';
+import {TRUTHY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {
   getBlockDescription,
   setBlockDescription,
@@ -81,6 +82,12 @@ export const procedureDefMutator = {
         this.description = node.textContent;
       }
     }
+    const deletableAttribute = readBooleanAttribute(
+      xmlElement,
+      'deletable',
+      TRUTHY_DEFAULT
+    );
+    this.setDeletable(deletableAttribute);
     this.setStatements_(xmlElement.getAttribute('statements') !== 'false');
   },
 
@@ -93,6 +100,7 @@ export const procedureDefMutator = {
 
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
+    state['initialDeleteConfig'] = this.isDeletable();
 
     const params = this.getProcedureModel().getParameters();
     if (!params.length && this.hasStatements_) return state;
@@ -146,6 +154,7 @@ export const procedureDefMutator = {
 
     setBlockDescription(this, state);
     this.doProcedureUpdate();
+    this.setDeletable(state['initialDeleteConfig']);
     this.setStatements_(state['hasStatements'] === false ? false : true);
   },
 

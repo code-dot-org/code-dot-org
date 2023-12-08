@@ -192,7 +192,6 @@ export default class FunctionEditor {
         fields: {
           NAME: procedure.getName(),
         },
-        deletable: false,
       };
 
       this.block = Blockly.serialization.blocks.append(
@@ -200,16 +199,15 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.block.setDeletable(false);
 
-    const isBehavior = type === BLOCK_TYPES.behaviorDefinition;
-    // We do not want to show the delete button for behaviors that are not user-created
-    const hideDeleteButton = isBehavior && !this.block.userCreated;
+    // We only want to be able to delete things that are user-created (functions and behaviors)
     const modalEditorDeleteButton = document.getElementById(
       MODAL_EDITOR_DELETE_ID
     );
-    modalEditorDeleteButton.style.visibility = hideDeleteButton
-      ? 'hidden'
-      : 'visible';
+    modalEditorDeleteButton.style.visibility = this.block.userCreated
+      ? 'visible'
+      : 'hidden';
 
     // Used to create and render an SVG frame instance.
     const getDefinitionBlockColor = () => {
@@ -218,7 +216,9 @@ export default class FunctionEditor {
 
     this.editorWorkspace.svgFrame_ = new WorkspaceSvgFrame(
       this.editorWorkspace,
-      isBehavior ? msg.behaviorEditorHeader() : msg.function(),
+      type === BLOCK_TYPES.behaviorDefinition
+        ? msg.behaviorEditorHeader()
+        : msg.function(),
       'blocklyWorkspaceSvgFrame',
       getDefinitionBlockColor
     );
@@ -388,6 +388,7 @@ export default class FunctionEditor {
 
     return {
       ...blockConfig,
+      // deletable: false, // TODO: Figure out why this isn't making the block not deletable
       movable: false,
       x,
       y,
