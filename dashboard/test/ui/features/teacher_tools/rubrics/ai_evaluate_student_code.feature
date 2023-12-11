@@ -66,27 +66,6 @@ Feature: Evaluate student code against rubrics using AI
     And I click selector "#runButton"
     And I wait until element "#resetButton" is visible
 
-    # Student submits code, waits for AI eval to run, unsubmits, then updates their code.
-    # TODO: remove this block as part of https://codedotorg.atlassian.net/browse/AITT-325
-    And I wait until element "#submitButton" is visible
-    And I click selector "#submitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
-    # This will trigger an AI evaluation job to be queued.
-    # The delayed job worker runs every 5 seconds. The job itself should run
-    # quickly since it hits the stubbed out /api/test/ai_proxy/assessment route.
-    And I wait for 10 seconds
-    And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
-    And I click selector "#unsubmitButton"
-    And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button" to load a new page
-    And I wait for the page to fully load
-    And I ensure droplet is in text mode
-    And I append text to droplet "// the quick brown fox jumped over the lazy dog.\n"
-    And I click selector "#runButton"
-    And I wait until element "#resetButton" is visible
-
     # Teacher views student progress and floating action button
     When I sign in as "Teacher_Aiden"
     And I am on "http://studio.code.org/home"
