@@ -3,13 +3,24 @@
 // See the root .eslintrc.js for generic eslint linting rules.
 module.exports = {
   parser: '@babel/eslint-parser',
-  plugins: ['cdo-custom-rules', 'react', 'react-hooks', 'mocha', 'babel'],
+  plugins: [
+    'cdo-custom-rules',
+    'react',
+    'react-hooks',
+    'mocha',
+    'babel',
+    'jsx-a11y',
+  ],
   parserOptions: {
     babelOptions: {
       presets: ['@babel/preset-react'],
     },
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
+  ],
   env: {
     es6: true,
   },
@@ -91,11 +102,8 @@ module.exports = {
       // Use the typescript parser for typescript files
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint', 'jsx-a11y'],
-      extends: [
-        'plugin:@typescript-eslint/recommended',
-        'plugin:jsx-a11y/recommended',
-      ],
+      plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
