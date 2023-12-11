@@ -210,31 +210,6 @@ a:link:has(*) {
   text-decoration: none;
 }
 
-/* Adds an icon to external links
-  - apply this class to container elements or directly onto
-  an "a" tag when a link opens in a new tab or window */
-.has-external-link a::after,
-a.has-external-link::after {
-  font: var(--fa-font-solid);
-  content: "\f08e";
-  margin: 0 2px 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a::after,
-html[dir="rtl"] a.has-external-link::after {
-  margin: 0 4px 0 2px;
-}
-
-.has-external-link a.link-button::after,
-a.link-button.has-external-link::after {
-  margin: 0 0 0 4px;
-}
-
-html[dir="rtl"] .has-external-link a.link-button::after,
-html[dir="rtl"] a.link-button.has-external-link::after {
-  margin: 0 4px 0 0;
-}
-
 /* Button styles */
 /* For links that looks like buttons use the .link-button
 class on an <a> tag in lieu of a <button> element */
@@ -325,6 +300,31 @@ input[type=submit] {
   @media (max-width: 640px) {
     line-height: 1.2;
   }
+}
+
+/* Adds an icon to external links
+  - apply this class to container elements or directly onto
+  an "a" tag when a link opens in a new tab or window */
+.has-external-link a::after,
+a.has-external-link::after {
+  font: var(--fa-font-solid);
+  content: "\f08e";
+  margin: 0 2px 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a::after,
+html[dir="rtl"] a.has-external-link::after {
+  margin: 0 4px 0 2px;
+}
+
+.has-external-link a.link-button::after,
+a.link-button.has-external-link::after {
+  margin: 0 0 0 4px;
+}
+
+html[dir="rtl"] .has-external-link a.link-button::after,
+html[dir="rtl"] a.link-button.has-external-link::after {
+  margin: 0 4px 0 0;
 }
 
 li > ul {
