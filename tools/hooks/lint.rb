@@ -86,13 +86,21 @@ def lint_failure(output)
   raise "Lint failed"
 end
 
+# Helper method for running the appropriate linter on each of a subset of
+# files. If no branches are specified, that subset will be all the files staged
+# in git to be committed; this is useful for running linting in a pre-commit
+# hook. If branches are specified, that subset will be those files that have
+# been changed between branches; this is useful for a continuous integration or
+# pre-merge hook.
 def do_linting(base = nil, current = nil)
+  puts "do_linting(#{base.inspect}, #{current.inspect})"
   modified_files =
     if base.nil? || current.nil?
       HooksUtils.get_staged_files
     else
       HooksUtils.get_changed_files_between_branches(base, current)
     end
+  puts "modified_files: #{modified_files.inspect}"
 
   todo = {
     Object.method(:run_haml) => filter_haml(modified_files),
