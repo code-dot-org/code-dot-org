@@ -21,6 +21,8 @@ import style from './animation-picker-body.module.scss';
 import AnimationUploadButton from './AnimationUploadButton.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
+const LEVEL_COSTUMES = 'level_costumes';
+const BACKGROUNDS = 'backgrounds';
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -144,7 +146,7 @@ export default class AnimationPickerBody extends React.Component {
   animationCategoriesRendering() {
     let categories = Object.keys(this.props.libraryManifest.categories || []);
     if (this.props.hideBackgrounds) {
-      categories = categories.filter(category => category !== 'backgrounds');
+      categories = categories.filter(category => category !== BACKGROUNDS);
     }
     // Level-specific animations currently have the following categories:
     // "level_costumes", "backgrounds", "animals".
@@ -153,9 +155,9 @@ export default class AnimationPickerBody extends React.Component {
     // There is an 'animals' category because a level-specific animation was uploaded with the
     // 'animals' category BEFORE the sprite upload feature dictated that level-specific animations
     // can only be categorized as "costume" or "background".
-    if (categories.includes('level_costumes')) {
+    if (categories.includes(LEVEL_COSTUMES)) {
       categories = categories.filter(
-        category => category === 'backgrounds' || category === 'level_costumes'
+        category => category === BACKGROUNDS || category === LEVEL_COSTUMES
       );
     }
     categories.push('all');
@@ -218,7 +220,7 @@ export default class AnimationPickerBody extends React.Component {
 
     const searching = searchQuery !== '';
     const inCategory = categoryQuery !== '';
-    const isBackgroundsTab = this.props.pickerType === 'backgrounds';
+    const isBackgroundsTab = this.props.pickerType === BACKGROUNDS;
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton = isMobileDevice();

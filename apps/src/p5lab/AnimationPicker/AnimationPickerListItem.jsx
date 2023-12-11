@@ -5,7 +5,7 @@ import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
 import style from './animation-picker-list-item.module.scss';
-
+import allLevelSpecificAnimationsThumbnail from '@cdo/static/p5lab/animation-preview/category_all_including_backgrounds.png';
 import classNames from 'classnames';
 
 export default class AnimationPickerListItem extends React.Component {
@@ -44,8 +44,7 @@ export default class AnimationPickerListItem extends React.Component {
       ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
       : '';
     if (isAnimationJsonMode && category === 'all') {
-      iconImageSrc =
-        '/blockly/media/p5lab/animation-previews/category_all_including_backgrounds.png';
+      iconImageSrc = allLevelSpecificAnimationsThumbnail;
     }
     const multiSelectIconClassName = `fa ${
       selected ? 'fa-check' : 'fa-plus'
