@@ -163,7 +163,7 @@ function getStandardizedCategories(metadata) {
   const isLevelAnimationCostume =
     categories === undefined || categories[0] === '';
   if (isLevelAnimationCostume) {
-    return ['level_animations'];
+    return ['level_costumes'];
   }
   return categories;
 }
