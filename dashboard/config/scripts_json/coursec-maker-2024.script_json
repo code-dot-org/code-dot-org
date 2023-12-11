@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "coursec-maker",
-    "serialized_at": "2023-12-07 20:51:34 UTC",
+    "serialized_at": "2023-12-08 16:28:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,21 +59,21 @@
   ],
   "lessons": [
     {
-      "key": "The Big Event",
-      "name": "The Big Event",
+      "key": "Dance Party: Unplugged",
+      "name": "Dance Party: Unplugged",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **context-setting** lesson, students will learn that events are a great way to add flexibility to a pre-written algorithm.",
-        "preparation": "- Print or display the ***Event Controller**.\n- Print one ***assessment** for each student.\n",
-        "purpose": "Today, students will learn to distinguish events and actions. The students will see activities interrupted by having a \"button\" pressed on a paper remote. When seeing this event, the class will react with a unique action. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "student_overview": "Play a fun game to learn about events. "
+        "overview": "In this lesson, learners of all ages get an introductory experience with computer science in a safe, supportive, and unplugged environment. This lesson has been designed for learners of all ages. Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.",
+        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://studio.code.org/certificates/batch). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* Download the [Big Dance Party](https://docs.google.com/presentation/d/1Guau5AeuqQCcPz06bfhtTmgt_ykaxKZ_JzkhzcECOcQ/) slides.",
+        "purpose": "Students will learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.",
+        "student_overview": "Have a class dance party to learn about events. "
       },
       "seeding_key": {
-        "lesson.key": "The Big Event",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
@@ -99,47 +99,12 @@
       }
     },
     {
-      "key": "Dance Party: Unplugged",
-      "name": "Dance Party: Unplugged",
+      "key": "lesson-3",
+      "name": "Meet your micro:bit",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, learners of all ages get an introductory experience with computer science in a safe, supportive, and unplugged environment. This lesson has been designed for learners of all ages. Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.",
-        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://studio.code.org/certificates/batch). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* Download the [Big Dance Party](https://docs.google.com/presentation/d/1Guau5AeuqQCcPz06bfhtTmgt_ykaxKZ_JzkhzcECOcQ/) slides.",
-        "purpose": "Students will learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.",
-        "student_overview": "Have a class dance party to learn about events. "
-      },
-      "seeding_key": {
-        "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "lesson-7",
-      "name": "Dance Party 2019 (need to clone)",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "lesson-3",
-      "name": "Meet your micro:bit",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
       "properties": {
         "overview": "[micro:bit Physical Computing Fundamentals](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
       },
@@ -152,10 +117,10 @@
     {
       "key": "lesson-4",
       "name": "Emotion badge",
-      "absolute_position": 6,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 6,
+      "relative_position": 4,
       "properties": {
         "overview": "[micro:bit Physical Computing Fundamentals pp. 22-24](https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf)"
       },
@@ -168,10 +133,10 @@
     {
       "key": "My Loopy Robotic Friends Jr",
       "name": "My Loopy Robotic Friends Jr.",
-      "absolute_position": 7,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting** lesson builds on the initial \"My Robotic Friends\" activity, featuring larger and more complicated designs. ",
@@ -188,10 +153,10 @@
     {
       "key": "Drawing Gardens with Loops",
       "name": "Drawing Gardens with Loops",
-      "absolute_position": 8,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, students use loops to create patterns. ",
@@ -208,10 +173,10 @@
     {
       "key": "Play Lab",
       "name": "Play Lab",
-      "absolute_position": 9,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.",
@@ -228,10 +193,10 @@
     {
       "key": "lesson-5",
       "name": "Meet your micro:bit",
-      "absolute_position": 10,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -243,10 +208,10 @@
     {
       "key": "lesson-6",
       "name": "Calming LEDs",
-      "absolute_position": 11,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -258,10 +223,10 @@
     {
       "key": "Picturing Data",
       "name": "Picturing Data",
-      "absolute_position": 12,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will collect data from a Play Lab project and visualize it using different graphs in this **exploratory** lesson.",
@@ -278,10 +243,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 13,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 11,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -297,10 +262,10 @@
     {
       "key": "lesson-1",
       "name": "Meet your micro:bit",
-      "absolute_position": 14,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -312,10 +277,10 @@
     {
       "key": "lesson-2",
       "name": "Counter",
-      "absolute_position": 15,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -327,68 +292,69 @@
   ],
   "lesson_activities": [
     {
-      "key": "01acc9e6-9ed6-4bb3-b330-b5b756219b43",
+      "key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9",
       "position": 1,
       "properties": {
-        "duration": 15,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "01acc9e6-9ed6-4bb3-b330-b5b756219b43",
-        "lesson.key": "The Big Event",
+        "lesson_activity.key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b",
+      "key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2",
       "position": 2,
       "properties": {
-        "duration": 15,
+        "duration": 25,
         "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b",
-        "lesson.key": "The Big Event",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "84322f9f-fea6-4152-b1d3-d40c1190dd11",
+      "key": "c0230991-de53-4223-ada2-bca253f0953a",
       "position": 3,
       "properties": {
-        "duration": 15,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "84322f9f-fea6-4152-b1d3-d40c1190dd11",
-        "lesson.key": "The Big Event",
+        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "9a70c9bb-85e8-43e9-847d-f45f69963afb",
+      "key": "437c04eb-de99-489b-9fc6-417248dd4882",
       "position": 4,
       "properties": {
+        "name": "Go Viral!"
       },
       "seeding_key": {
-        "lesson_activity.key": "9a70c9bb-85e8-43e9-847d-f45f69963afb",
-        "lesson.key": "The Big Event",
+        "lesson_activity.key": "437c04eb-de99-489b-9fc6-417248dd4882",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
     },
     {
-      "key": "61bcea49-a5e2-4c15-8da9-10703f830e63",
+      "key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797",
       "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
       "seeding_key": {
-        "lesson_activity.key": "61bcea49-a5e2-4c15-8da9-10703f830e63",
-        "lesson.key": "The Big Event",
+        "lesson_activity.key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797",
+        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
@@ -471,74 +437,6 @@
       "seeding_key": {
         "lesson_activity.key": "626f8596-11a9-47e8-b01d-ea6e19078ab9",
         "lesson.key": "Build a Flappy Game",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9",
-        "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2",
-      "position": 2,
-      "properties": {
-        "duration": 25,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2",
-        "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "c0230991-de53-4223-ada2-bca253f0953a",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a",
-        "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "437c04eb-de99-489b-9fc6-417248dd4882",
-      "position": 4,
-      "properties": {
-        "name": "Go Viral!"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "437c04eb-de99-489b-9fc6-417248dd4882",
-        "lesson.key": "Dance Party: Unplugged",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024"
-      }
-    },
-    {
-      "key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797",
-        "lesson.key": "Dance Party: Unplugged",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "coursec-maker-2024"
       }
@@ -868,121 +766,155 @@
   ],
   "activity_sections": [
     {
-      "key": "dd0ab2de-f01c-4dd4-a651-26262ac52cee",
+      "key": "c15aba4c-7063-4525-882f-1eb45901e64a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took?_\n_For example, you flipped a switch, the lights turned on._\n",
-        "name": "Reflect"
-      },
-      "seeding_key": {
-        "activity_section.key": "dd0ab2de-f01c-4dd4-a651-26262ac52cee",
-        "lesson_activity.key": "01acc9e6-9ed6-4bb3-b330-b5b756219b43"
-      }
-    },
-    {
-      "key": "a610b648-3fa8-4778-929f-e8f8e35cc54d",
-      "position": 2,
-      "properties": {
-        "description": "\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s see if we can find a pattern here” slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Next” slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*\n",
+        "description": "\n\n<img style=\"float: right;\" src=\"https://curriculum.code.org/media/uploads/floss_sm.gif\">\n\n####Vocabulary\nThis lesson has one new and important vocabulary word:\n\n**Event:**\nAn action that causes something to happen.\n####Warming up to Events\n\n* *Today we're going to have a dance party! Does anyone have a favorite dance move?*\n\t- *Have you ever watched a dance team perform to music together? How do they stay in sync?*\n\t\t- *One way to do this might be to plan out all of the moves in advance. It's almost like the dancers are programmed! Computer scientists would call this an algorithm because it's a list of steps to get something done.*\n\t\t- *Another way to keep in sync is to have a cue that tells everyone when to change to a different move. Everyone would still need to know what moves to perform and agree on what the cues mean.*\n\t- *If I want everyone in class to clap at the exact same time, I could do that by giving you a countdown from 3.* (Try it!) \n\t- *When I reached \"1\", that was the event that gave you all the signal to clap.*\n- Ask the class if they can think of any other events that could give signals.\n\t- You may need to remind them that you're not talking about an event like a birthday party or a field trip.\n\t- If they have trouble, you can remind them that an event is an action that causes something to happen.\n\t\t- Blowing a whistle\n\t\t- Waving a flag\n\t\t- Saying a magic word\n\t\t- Pressing a button\n- *Today, we're going to organize our class dance party using events.*",
         "name": "Introduction"
       },
       "seeding_key": {
-        "activity_section.key": "a610b648-3fa8-4778-929f-e8f8e35cc54d",
-        "lesson_activity.key": "01acc9e6-9ed6-4bb3-b330-b5b756219b43"
+        "activity_section.key": "c15aba4c-7063-4525-882f-1eb45901e64a",
+        "lesson_activity.key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9"
       }
     },
     {
-      "key": "da9f6f81-e67f-454d-83da-c06894d2f1d7",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - An event is an action that causes something to happen.",
-        "name": "Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "da9f6f81-e67f-454d-83da-c06894d2f1d7",
-        "lesson_activity.key": "01acc9e6-9ed6-4bb3-b330-b5b756219b43"
-      }
-    },
-    {
-      "key": "1499e4d2-e84b-4b1c-a813-68bf9bb9c171",
+      "key": "d647307a-77bc-4efb-94b3-68f50c202827",
       "position": 1,
       "properties": {
-        "name": "The Big Event",
-        "progression_name": "The Big Event - Unplugged Activity"
+        "description": "**Directions:**"
       },
       "seeding_key": {
-        "activity_section.key": "1499e4d2-e84b-4b1c-a813-68bf9bb9c171",
-        "lesson_activity.key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b"
+        "activity_section.key": "d647307a-77bc-4efb-94b3-68f50c202827",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
       }
     },
     {
-      "key": "867259d7-9cb9-43cc-af56-02be8c39a8f6",
+      "key": "118cd8f1-60b9-496f-9cf4-d8cbac95b855",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Remember This?” slide\n\n**Say:** _Do you remember guiding *Red* from \"Angry Birds\" to the pig in the Maze puzzles? You wrote a program that took Red from start to finish without any interruptions._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Giving the User Options” slide\n\n**Say:** _In most real programs we want more options._\n_What if I only want my character to move when my finger is on the screen of my phone?_\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Controlling the Game” slide\n\n**Say:** _I need to program the character to only move when my finger is on the screen of my phone._\n_Putting my finger on the screen would then become an event that tells my character to move._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “When Do We Use Events” slide\n\n**Say:** _In earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time._ \n\n_It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance?_ \n\n_This is where events come in!_\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your students seem confused, talk about their favorite games and all of the ways that they let the characters know what they're supposed to do. Point out how the game would be really boring if it ran from start to finish without any events required.\r\n"
+            "markdown": "It is important to note that each move is performed continuously but also in left/right pairs. For example, when performing **Clap High** students will clap once to the left, then once to the right, then repeat that until the next move starts.\r\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "867259d7-9cb9-43cc-af56-02be8c39a8f6",
-        "lesson_activity.key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b"
+        "activity_section.key": "118cd8f1-60b9-496f-9cf4-d8cbac95b855",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
       }
     },
     {
-      "key": "000200e6-bba6-4a71-9c71-c90f8f156906",
+      "key": "6fa3f22d-2600-476a-822e-bfb2f10e97af",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](https://code.org/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "\n\n####Dance Rehearsal\n- Project the Dance Moves Slides onto your classroom screen.\n- Practice each of the moves until students feel secure with them.\n\t- Consider expectations you might need to set around safety and personal space.\n- When you reach the last slide, decide with your class what each button does. We suggest:\n\t- Green Button -> **High Clap**\n\t- Orange Button -> **Dab**\n\t- Teal Button -> **Star**\n\t- Purple Button -> **Body Roll**\n\t- Pink Button -> **This Or That**\n- Practice tapping the buttons on the overhead and having your class react.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to start doing next."
       },
       "seeding_key": {
-        "activity_section.key": "000200e6-bba6-4a71-9c71-c90f8f156906",
-        "lesson_activity.key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b"
+        "activity_section.key": "6fa3f22d-2600-476a-822e-bfb2f10e97af",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
       }
     },
     {
-      "key": "1626dbab-1fb0-49d9-b565-d0454bdc325b",
+      "key": "0063c89f-b96c-4e20-95cc-c93755eda8ed",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n- Hand out ***Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
-        "name": "Optional Assessment (5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "1626dbab-1fb0-49d9-b565-d0454bdc325b",
-        "lesson_activity.key": "a2abb66e-dd28-4236-a3de-0e8c6173ed8b"
-      }
-    },
-    {
-      "key": "de4f4680-0b1b-4bbb-8a3e-1cc3cdd747df",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What are some examples of events?_",
-        "duration": "10",
-        "name": "Reflection",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students should demonstrate understanding that events are something that can cause other actions to happen. Refer back to earlier examples from the lesson or encourage students to come up with their own."
+            "markdown": "At the beginning, give enough space between button presses for students to perform the move in both directions a couple times. You can get faster over time.\r\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "de4f4680-0b1b-4bbb-8a3e-1cc3cdd747df",
-        "lesson_activity.key": "84322f9f-fea6-4152-b1d3-d40c1190dd11"
+        "activity_section.key": "0063c89f-b96c-4e20-95cc-c93755eda8ed",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
       }
     },
     {
-      "key": "daf81bc8-befe-45cf-82b0-4d8cd04aff24",
-      "position": 1,
+      "key": "1a301cd0-f473-4a4a-963e-e834019570be",
+      "position": 5,
       "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n**One Person's Event is Another One's Action**\n\n- Assign each student an event to watch out for, and an appropriate reaction to that event. Chain the actions so that each child's action becomes an event that triggers the reaction of another student. Keep assigning until everyone has something to do and everyone makes someone react.\n\n**Eventopalooza**\n\n- Break the class up into groups. Using the Events Controller, assign each group a different reaction to the same button. Do this for all three buttons, then watch the chaos!"
+        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays."
       },
       "seeding_key": {
-        "activity_section.key": "daf81bc8-befe-45cf-82b0-4d8cd04aff24",
-        "lesson_activity.key": "61bcea49-a5e2-4c15-8da9-10703f830e63"
+        "activity_section.key": "1a301cd0-f473-4a4a-963e-e834019570be",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
+      }
+    },
+    {
+      "key": "6a59e5ee-997c-4727-b92c-fa545923b172",
+      "position": 6,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Feel free to change up the music or to re-program each of your events. This is called iteration and it's a big part of what computer scientists do!\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a59e5ee-997c-4727-b92c-fa545923b172",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
+      }
+    },
+    {
+      "key": "a055fcc1-bc65-4775-806f-142f844d3368",
+      "position": 7,
+      "properties": {
+        "description": "- Mix up the dance moves using suggestions from the class. Encourage students to teach each other what they know.\r\n\t- If only a few students can perform a complex move, you can make them the lead dancers for a particular event.\r\n\t\t- For example, pressing one button might cause 3 students to start **flossing** while the rest of the class performs a **body roll**.",
+        "name": "Extensions\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a055fcc1-bc65-4775-806f-142f844d3368",
+        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
+      }
+    },
+    {
+      "key": "897d43c3-b27e-488e-91ca-f002ac0e4d48",
+      "position": 1,
+      "properties": {
+        "description": "- Why do we need to be able to handle events in a program?\r\n- What are some other kinds of events that you can think of?",
+        "name": "Flash Chat: What did we learn?\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "897d43c3-b27e-488e-91ca-f002ac0e4d48",
+        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a"
+      }
+    },
+    {
+      "key": "e9f67bed-483c-492d-bce2-4533b6092e9f",
+      "position": 2,
+      "properties": {
+        "description": "Explain that you are spending one hour learning computer science today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\n\nGive each student a [certificate](https://studio.code.org/certificates/batch) with his or her name on it.",
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9f67bed-483c-492d-bce2-4533b6092e9f",
+        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a"
+      }
+    },
+    {
+      "key": "f30527eb-7e18-478c-bdef-323f110d5f3f",
+      "position": 1,
+      "properties": {
+        "description": "The Hour of Code is about creativity, and we can’t wait to see what you create! Please share student creations, photos, and videos on social media! Teachers, record your classroom coding a dance, or dancing the dance. Make your video special by adding an [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nBe sure to include #HourOfCode and tag us on Facebook, Twitter and Instagram.  Bonus points for tagging the artist whose music your students used. Code.org will re-share our favorite posts to our millions of followers. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Of course, make sure to respect your school's social media policy_"
+      },
+      "seeding_key": {
+        "activity_section.key": "f30527eb-7e18-478c-bdef-323f110d5f3f",
+        "lesson_activity.key": "437c04eb-de99-489b-9fc6-417248dd4882"
+      }
+    },
+    {
+      "key": "e4445135-9013-48c5-a090-ceb0a8a9e7f8",
+      "position": 1,
+      "properties": {
+        "description": "\nAfter your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n* Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning come alive. Code.org offers free professional development for these courses, online or in-person.\n* Visit [You can Teach Computer Science](https://code.org/teach) for more course suggestions.\n* Invite a computer science expert to talk to your class about his or her work. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local).\n",
+        "name": "Beyond an Hour of Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4445135-9013-48c5-a090-ceb0a8a9e7f8",
+        "lesson_activity.key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797"
       }
     },
     {
@@ -1157,158 +1089,6 @@
       "seeding_key": {
         "activity_section.key": "39602039-a2e3-4f79-83ab-379ccd8d4817",
         "lesson_activity.key": "626f8596-11a9-47e8-b01d-ea6e19078ab9"
-      }
-    },
-    {
-      "key": "c15aba4c-7063-4525-882f-1eb45901e64a",
-      "position": 1,
-      "properties": {
-        "description": "\n\n<img style=\"float: right;\" src=\"https://curriculum.code.org/media/uploads/floss_sm.gif\">\n\n####Vocabulary\nThis lesson has one new and important vocabulary word:\n\n**Event:**\nAn action that causes something to happen.\n####Warming up to Events\n\n* *Today we're going to have a dance party! Does anyone have a favorite dance move?*\n\t- *Have you ever watched a dance team perform to music together? How do they stay in sync?*\n\t\t- *One way to do this might be to plan out all of the moves in advance. It's almost like the dancers are programmed! Computer scientists would call this an algorithm because it's a list of steps to get something done.*\n\t\t- *Another way to keep in sync is to have a cue that tells everyone when to change to a different move. Everyone would still need to know what moves to perform and agree on what the cues mean.*\n\t- *If I want everyone in class to clap at the exact same time, I could do that by giving you a countdown from 3.* (Try it!) \n\t- *When I reached \"1\", that was the event that gave you all the signal to clap.*\n- Ask the class if they can think of any other events that could give signals.\n\t- You may need to remind them that you're not talking about an event like a birthday party or a field trip.\n\t- If they have trouble, you can remind them that an event is an action that causes something to happen.\n\t\t- Blowing a whistle\n\t\t- Waving a flag\n\t\t- Saying a magic word\n\t\t- Pressing a button\n- *Today, we're going to organize our class dance party using events.*",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "c15aba4c-7063-4525-882f-1eb45901e64a",
-        "lesson_activity.key": "d3c9b3f9-3868-472a-86da-27c57f7f7df9"
-      }
-    },
-    {
-      "key": "d647307a-77bc-4efb-94b3-68f50c202827",
-      "position": 1,
-      "properties": {
-        "description": "**Directions:**"
-      },
-      "seeding_key": {
-        "activity_section.key": "d647307a-77bc-4efb-94b3-68f50c202827",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "118cd8f1-60b9-496f-9cf4-d8cbac95b855",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "It is important to note that each move is performed continuously but also in left/right pairs. For example, when performing **Clap High** students will clap once to the left, then once to the right, then repeat that until the next move starts.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "118cd8f1-60b9-496f-9cf4-d8cbac95b855",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "6fa3f22d-2600-476a-822e-bfb2f10e97af",
-      "position": 3,
-      "properties": {
-        "description": "\n\n####Dance Rehearsal\n- Project the Dance Moves Slides onto your classroom screen.\n- Practice each of the moves until students feel secure with them.\n\t- Consider expectations you might need to set around safety and personal space.\n- When you reach the last slide, decide with your class what each button does. We suggest:\n\t- Green Button -> **High Clap**\n\t- Orange Button -> **Dab**\n\t- Teal Button -> **Star**\n\t- Purple Button -> **Body Roll**\n\t- Pink Button -> **This Or That**\n- Practice tapping the buttons on the overhead and having your class react.\n- Let your class know that every time you push a button, it is an “event” that lets them know what they are expected to start doing next."
-      },
-      "seeding_key": {
-        "activity_section.key": "6fa3f22d-2600-476a-822e-bfb2f10e97af",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "0063c89f-b96c-4e20-95cc-c93755eda8ed",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "At the beginning, give enough space between button presses for students to perform the move in both directions a couple times. You can get faster over time.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0063c89f-b96c-4e20-95cc-c93755eda8ed",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "1a301cd0-f473-4a4a-963e-e834019570be",
-      "position": 5,
-      "properties": {
-        "description": "####Dance Party\n\n- Start playing some music.\n\t- Check out this [Spotify Playlist (all ages)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). We are using radio-safe versions of all songs.\n- Use the controller buttons to have class change dance moves while the music plays."
-      },
-      "seeding_key": {
-        "activity_section.key": "1a301cd0-f473-4a4a-963e-e834019570be",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "6a59e5ee-997c-4727-b92c-fa545923b172",
-      "position": 6,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Feel free to change up the music or to re-program each of your events. This is called iteration and it's a big part of what computer scientists do!\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6a59e5ee-997c-4727-b92c-fa545923b172",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "a055fcc1-bc65-4775-806f-142f844d3368",
-      "position": 7,
-      "properties": {
-        "description": "- Mix up the dance moves using suggestions from the class. Encourage students to teach each other what they know.\r\n\t- If only a few students can perform a complex move, you can make them the lead dancers for a particular event.\r\n\t\t- For example, pressing one button might cause 3 students to start **flossing** while the rest of the class performs a **body roll**.",
-        "name": "Extensions\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "a055fcc1-bc65-4775-806f-142f844d3368",
-        "lesson_activity.key": "e5b0e53f-5a00-4f4d-bb5b-029cc99751a2"
-      }
-    },
-    {
-      "key": "897d43c3-b27e-488e-91ca-f002ac0e4d48",
-      "position": 1,
-      "properties": {
-        "description": "- Why do we need to be able to handle events in a program?\r\n- What are some other kinds of events that you can think of?",
-        "name": "Flash Chat: What did we learn?\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "897d43c3-b27e-488e-91ca-f002ac0e4d48",
-        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a"
-      }
-    },
-    {
-      "key": "e9f67bed-483c-492d-bce2-4533b6092e9f",
-      "position": 2,
-      "properties": {
-        "description": "Explain that you are spending one hour learning computer science today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\n\nGive each student a [certificate](https://studio.code.org/certificates/batch) with his or her name on it.",
-        "name": "Celebrate"
-      },
-      "seeding_key": {
-        "activity_section.key": "e9f67bed-483c-492d-bce2-4533b6092e9f",
-        "lesson_activity.key": "c0230991-de53-4223-ada2-bca253f0953a"
-      }
-    },
-    {
-      "key": "f30527eb-7e18-478c-bdef-323f110d5f3f",
-      "position": 1,
-      "properties": {
-        "description": "The Hour of Code is about creativity, and we can’t wait to see what you create! Please share student creations, photos, and videos on social media! Teachers, record your classroom coding a dance, or dancing the dance. Make your video special by adding an [ending clip](https://www.dropbox.com/sh/rosgan9bmb7dqsy/AACoqvjQVltlBORTNWjLTk0Na?dl=0).\n\nBe sure to include #HourOfCode and tag us on Facebook, Twitter and Instagram.  Bonus points for tagging the artist whose music your students used. Code.org will re-share our favorite posts to our millions of followers. \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)\n\n_Of course, make sure to respect your school's social media policy_"
-      },
-      "seeding_key": {
-        "activity_section.key": "f30527eb-7e18-478c-bdef-323f110d5f3f",
-        "lesson_activity.key": "437c04eb-de99-489b-9fc6-417248dd4882"
-      }
-    },
-    {
-      "key": "e4445135-9013-48c5-a090-ceb0a8a9e7f8",
-      "position": 1,
-      "properties": {
-        "description": "\nAfter your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n* Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning come alive. Code.org offers free professional development for these courses, online or in-person.\n* Visit [You can Teach Computer Science](https://code.org/teach) for more course suggestions.\n* Invite a computer science expert to talk to your class about his or her work. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local).\n",
-        "name": "Beyond an Hour of Code"
-      },
-      "seeding_key": {
-        "activity_section.key": "e4445135-9013-48c5-a090-ceb0a8a9e7f8",
-        "lesson_activity.key": "da8cbfd9-10b4-4e9b-9a5e-9460b2b83797"
       }
     },
     {
@@ -2108,28 +1888,6 @@
     }
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Big Event - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "BigEvent-Unplugged2022_maker"
-        ],
-        "lesson.key": "The Big Event",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "1499e4d2-e84b-4b1c-a813-68bf9bb9c171"
-      },
-      "level_keys": [
-        "BigEvent-Unplugged2022_maker"
-      ]
-    },
     {
       "chapter": 2,
       "position": 1,
@@ -3202,18 +2960,6 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "BigEvent-Unplugged2022_maker",
-        "script_level.level_keys": [
-          "BigEvent-Unplugged2022_maker"
-        ],
-        "lesson.key": "The Big Event",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "coursec-maker-2024",
-        "activity_section.key": "1499e4d2-e84b-4b1c-a813-68bf9bb9c171"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseC_video_flappyIntro_maker",
         "script_level.level_keys": [
           "courseC_video_flappyIntro_maker"
@@ -4000,45 +3746,6 @@
       }
     },
     {
-      "name": "The Big Event",
-      "url": "https://youtu.be/u0WV9shCoak",
-      "key": "the_big_event",
-      "properties": {
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
-        "type": "Unplugged Video"
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event"
-      }
-    },
-    {
-      "name": "The Big Event",
-      "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
-      "key": "the_big_event_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Assessment"
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_1"
-      }
-    },
-    {
-      "name": "The Big Event",
-      "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
-      "key": "the_big_event_2",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Assessment Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "the_big_event_2"
-      }
-    },
-    {
       "name": "The Big Event (Course C)",
       "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit",
       "key": "the_big_event_course_c_",
@@ -4190,36 +3897,6 @@
         "lesson.key": "Picturing Data",
         "resource.key": "graphing_data_from_play_lab"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "resource.key": "csf_-_course_c_-_slides_2022-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "resource.key": "the_big_event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "resource.key": "the_big_event_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "resource.key": "the_big_event_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "resource.key": "the_big_event_course_c_"
-      }
     }
   ],
   "scripts_resources": [
@@ -4370,28 +4047,12 @@
         "lesson.key": "Play Lab",
         "vocabulary.key": "program"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "vocabulary.key": "event"
-      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-    {
-      "key": "091ce69c-b272-40eb-b302-489af25dbb55",
-      "properties": {
-        "description": "Recognize movements of the teacher as signals to initiate commands."
-      },
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "objective.key": "091ce69c-b272-40eb-b302-489af25dbb55"
-      }
-    },
     {
       "key": "133fe9ce-778b-48d0-9459-8f1f31f04891",
       "properties": {
@@ -4473,16 +4134,6 @@
       }
     },
     {
-      "key": "7bd4ba71-b519-42c0-b01b-80c5a8ec8118",
-      "properties": {
-        "description": "Practice differentiating pre-defined actions and event-driven ones."
-      },
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "objective.key": "7bd4ba71-b519-42c0-b01b-80c5a8ec8118"
-      }
-    },
-    {
       "key": "84a2e081-32dd-4381-976a-4ab10a4456df",
       "properties": {
         "description": "Make connections between computer science concepts and the real world"
@@ -4520,16 +4171,6 @@
       "seeding_key": {
         "lesson.key": "Dance Party: Unplugged",
         "objective.key": "b5b6721d-ddd7-4ba7-ab9f-688a79302779"
-      }
-    },
-    {
-      "key": "c8a6bbc4-f443-45ac-b9ef-ff0a3161a017",
-      "properties": {
-        "description": "Repeat commands given by an instructor."
-      },
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "objective.key": "c8a6bbc4-f443-45ac-b9ef-ff0a3161a017"
       }
     },
     {
@@ -4948,20 +4589,6 @@
         "lesson.key": "Play Lab",
         "framework.shortcode": "iste",
         "standard.shortcode": "6.d"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
       }
     }
   ],
