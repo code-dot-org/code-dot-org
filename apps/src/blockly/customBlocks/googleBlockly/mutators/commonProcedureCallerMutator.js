@@ -38,6 +38,19 @@ export const commonFunctions = {
     this.setFieldValue(name, 'NAME');
     // Typically, the procedure will share its name with the caller block.
     if (!this.model_) this.model_ = this.findProcedureModel_(name, params);
+    // If the state we are loading doesn't match the workspace, we fall back
+    // to using the behavior id.
+    if (!this.model_) {
+      this.model_ = this.findProcedureModel_(
+        this.behaviorId,
+        this.paramsFromSerializedState_
+      );
+    }
+    // If we still can't find the right model, assign the first model entry
+    // so that the student's program doesn't crash.
+    if (!this.model_) {
+      this.model_ = this.workspace.getProcedureMap().getProcedures()[0];
+    }
     if (this.getProcedureModel()) {
       this.initBlockWithProcedureModel_();
     } else {
