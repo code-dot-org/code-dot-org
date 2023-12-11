@@ -91,8 +91,11 @@ module.exports = {
       // Use the typescript parser for typescript files
       files: ['**/*.ts', '**/*.tsx'],
       parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
-      extends: ['plugin:@typescript-eslint/recommended'],
+      plugins: ['@typescript-eslint', 'jsx-a11y'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:jsx-a11y/recommended',
+      ],
       rules: {
         // We can rely on typescript types instead of prop types
         'react/prop-types': 'off',
