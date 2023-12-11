@@ -87,11 +87,11 @@ export default class StudentHomepage extends Component {
             isTeacher={false}
             hasFeedback={hasFeedback}
           />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
           <ProjectWidgetWithData
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );
