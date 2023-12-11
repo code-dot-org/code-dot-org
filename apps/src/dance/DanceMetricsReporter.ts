@@ -1,5 +1,7 @@
-import {LabMetricsReporter} from '../lab2/Lab2MetricsReporter';
+import {LabMetricsReporter as LabMetricsReporterConstructor} from '../lab2/Lab2MetricsReporter';
 
-const DanceMetricsReporter = new LabMetricsReporter({appName: 'Dance'});
+const DanceMetricsReporter = new LabMetricsReporterConstructor({
+  appName: 'Dance',
+});
 
 export default DanceMetricsReporter;
