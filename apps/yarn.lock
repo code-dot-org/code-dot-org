@@ -16163,25 +16163,14 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"internal-slot@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "internal-slot@npm:1.0.3"
+"internal-slot@npm:^1.0.3, internal-slot@npm:^1.0.4, internal-slot@npm:^1.0.5":
+  version: 1.0.6
+  resolution: "internal-slot@npm:1.0.6"
   dependencies:
-    get-intrinsic: ^1.1.0
-    has: ^1.0.3
+    get-intrinsic: ^1.2.2
+    hasown: ^2.0.0
     side-channel: ^1.0.4
-  checksum: 1944f92e981e47aebc98a88ff0db579fd90543d937806104d0b96557b10c1f170c51fb777b97740a8b6ddeec585fca8c39ae99fd08a8e058dfc8ab70937238bf
-  languageName: node
-  linkType: hard
-
-"internal-slot@npm:^1.0.4, internal-slot@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "internal-slot@npm:1.0.5"
-  dependencies:
-    get-intrinsic: ^1.2.0
-    has: ^1.0.3
-    side-channel: ^1.0.4
-  checksum: 97e84046bf9e7574d0956bd98d7162313ce7057883b6db6c5c7b5e5f05688864b0978ba07610c726d15d66544ffe4b1050107d93f8a39ebc59b15d8b429b497a
+  checksum: 7872454888047553ce97a3fa1da7cc054a28ec5400a9c2e9f4dbe4fe7c1d041cb8e8301467614b80d4246d50377aad2fb58860b294ed74d6700cc346b6f89549
   languageName: node
   linkType: hard
 
