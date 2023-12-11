@@ -39,7 +39,17 @@ class OmniAuthSection < Section
     oauth_section = with_deleted.where(code: code).first_or_create
 
     oauth_section.name = section_name || I18n.t('sections.default_name', default: 'Untitled Section')
-    oauth_section.user_id = owner_id
+
+    # Add the user as an owner if the section does not exist. Otherwise add as a coteacher to existing section.
+    if oauth_section.user_id.nil? || oauth_section.deleted?
+      oauth_section.user_id = owner_id
+    else
+      # create a section instructor record if one doesn't exist
+      section_instructor = oauth_section.section_instructors.with_deleted.where(instructor_id: owner_id).first_or_create(status: :active)
+      section_instructor.restore if section_instructor.deleted?
+      section_instructor.status = :active
+      section_instructor.save! if section_instructor.changed?
+    end
     oauth_section.login_type = type
 
     oauth_section.save! if oauth_section.changed?

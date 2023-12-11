@@ -112,6 +112,7 @@ GoogleBlockly.Extensions.register('procedures_edit_button', function () {
     Blockly.useModalFunctionEditor &&
     this.inputList.length &&
     !this.workspace.isFlyout &&
+    this.workspace.toolbox_ &&
     this.workspace.id !== Blockly.functionEditor.getWorkspaceId()
   ) {
     const button = new Blockly.FieldButton({
