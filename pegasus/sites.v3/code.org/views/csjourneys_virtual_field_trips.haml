@@ -1,0 +1,66 @@
+:ruby
+  block_item = [
+    {
+      title: "Behind the Cloud: Explore Amazon's data centers",
+      image: "/images/csjourneys/data-center-tour.gif",
+      desc: "How did we go from renting movies at the store to streaming from anywhere at any time? Learn how data centers and cloud computing have changed the way we watch our favorite content, and the careers behind it.",
+      url: "https://www.amazonfutureengineer.com/datacentertour1?utm_campaign=Code.org&utm_medium=AWS1&utm_source=US&utm_content=Website",
+      aria_label: "View details about the Behind the Cloud tour",
+      overline: "Available on Kahoot!"
+    },
+    {
+      title: "Discover how Amazon keeps data safe and sustainable",
+      image: "/images/csjourneys/cloud-tour.gif",
+      desc: "You want to upload your photos to the cloud, but what if something happens at a data center? Learn how AWS and data center professionals keep data safe and sustainable.",
+      url: "https://www.amazonfutureengineer.com/datacentertour2?utm_campaign=Code.org&utm_medium=AWS2&utm_source=US&utm_content=Website",
+      aria_label: "View details about the Amazon data safety tour",
+      overline: "Available on Kahoot!"
+    },
+    {
+      title: "Alexa, take me to the Moon!",
+      image: "/images/csjourneys/alexatour.gif",
+      desc: "Join Amazon, Lockheed Martin, and Webex for a behind-the-scenes look at the technology being tested on NASA's Artemis I mission.",
+      url: "https://www.amazonfutureengineer.com/space?utm_campaign=codeorg&utm_medium=alexaforastronauts&utm_source=US&utm_content=Website",
+      aria_label: "View details about the Alexa moon tour",
+      overline: "Available on Kahoot!"
+    },
+     {
+      title: "Explore the technology of Amazon's Fulfillment Centers",
+      image: "/images/csjourneys/fctour.gif",
+      desc: "Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.",
+      url: "https://www.amazonfutureengineer.com/fctours?utm_campaign=Code.org&utm_medium=Website&utm_source=FC%20Tours",
+      aria_label: "View details about the Amazon's Fulfillment Centers tour",
+      overline: "Available on Kahoot!"
+    },
+    {
+      title: "Go inside the iRobot Cool Stuff Museum",
+      image: "/images/csjourneys/fill-485x235/iRobot-trip.png",
+      desc: "Join us in the iRobot Cool Stuff Museum, exploring 30 years of robotics history. See via our mobile robot as our guide brings robotics and computer science to life.",
+      url: "https://experience.irobot.com/irobot-education-virtual-museum-tours-2023",
+      aria_label: "View details about the iRobot Cool Stuff Museum tour",
+      overline: "Select dates"
+    },
+    {
+      title: "Exploring the Deep Bit by Bit",
+      image: "/images/csjourneys/fill-485x235/mbari-trip.jpg",
+      desc: "Learn about the deep sea with the Monterey Bay Aquarium and see how computer science plays a part in helping us understand this challenging habitat!",
+      url: "https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit",
+      aria_label: "View details about the Monterey Bay Aquarium tour",
+      overline: "Self-paced"
+    }
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_item.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %img{src: "#{block_item[:image]}", alt: ""}
+        %p.overline
+          = block_item[:overline]
+        %h3
+          = block_item[:title]
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: "#{block_item[:url]}", target: "_blank", rel: "noopener noreferrer", aria:{label: "#{block_item[:aria_label]}"}}
+          View details
