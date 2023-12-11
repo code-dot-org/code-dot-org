@@ -1,4 +1,5 @@
 import {commonFunctions} from './commonProcedureCallerMutator';
+import GoogleBlockly from 'blockly/core';
 
 export const behaviorGetMutator = {
   previousEnabledState_: true,
@@ -12,7 +13,11 @@ export const behaviorGetMutator = {
   },
 
   // Only used to save in XML, but still required to exist by Blockly.
-  mutationToDom: function () {},
+  mutationToDom: function () {
+    const container = GoogleBlockly.utils.xml.createElement('mutation');
+    container.setAttribute('behaviorId', this.behaviorId);
+    return container;
+  },
 
   ...commonFunctions,
 };
