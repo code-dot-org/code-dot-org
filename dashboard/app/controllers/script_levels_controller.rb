@@ -107,10 +107,10 @@ class ScriptLevelsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @script_level
     if @script.login_required? || (!params.nil? && params[:login_required] == "true")
       if cachable_request?(request)
-        # if login_required on a cached level, redirect to login_or_redirect
+        # if login_required on a cached level, redirect to cached_page_auth_redirect
         # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
         path_without_params = request.fullpath.split('?').first || request.fullpath
-        return redirect_to "/api/v1/users/login_or_redirect?user_return_to=" + path_without_params
+        return redirect_to "/api/v1/users/cached_page_auth_redirect?user_return_to=" + path_without_params
       else
         authenticate_user!
       end

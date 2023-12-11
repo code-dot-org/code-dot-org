@@ -77,8 +77,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   # NOTE: the `user_return_to` path must not include a redirect back to this path
   # or there will be an infinite redirect loop. e.g. strip out `login_required` URL
   # parameters before calling this method.
-  # GET /api/v1/users/login_or_redirect
-  def login_or_redirect
+  # GET /api/v1/users/cached_page_auth_redirect
+  def cached_page_auth_redirect
     if user_signed_in?
       redirect_to params[:user_return_to] || home_url
     else
