@@ -77,6 +77,13 @@ export default class AnimationPickerBody extends React.Component {
     if (categoryQuery === undefined) {
       categoryQuery = this.state.categoryQuery;
     }
+    // For animations that are level-specific but NOT 'backgrounds', we rename the category as
+    // 'costumes' for better clarity for content editor users. When we query for these level-specific
+    // costume animations, use the 'level_animations' category  which these animations are automatically
+    // assigned when uploaded.
+    if (categoryQuery === 'costumes') {
+      categoryQuery = 'level_animations';
+    }
     if (libraryManifest === undefined) {
       libraryManifest = this.props.libraryManifest;
     }
@@ -153,20 +160,15 @@ export default class AnimationPickerBody extends React.Component {
     // There is an 'animals' category because a level-specific animation was uploaded with the
     // 'animals' category BEFORE the sprite upload feature dictated that level-specific animations
     // can only be categorized as "costume" or "background".
+    // We also replace 'level_animations' with the 'costumes' category.
+    // This is a more accurate label for level-specific animations that are not backgrounds.
     if (categories.includes('level_animations')) {
-      categories = categories.filter(
-        category =>
-          category === 'level_animations' || category === 'backgrounds'
-      );
+      categories = categories.filter(category => category === 'backgrounds');
+      categories.push('costumes');
     }
     categories.push('all');
     return categories.map(category => {
-      let label = msg[`animationCategory_${category}`]
-        ? msg[`animationCategory_${category}`]()
-        : category;
-      if (label === 'Level Animations') {
-        label = 'Costumes'; // This is a more accurate label for level-specific animations that are not backgrounds.
-      }
+      let label = msg[`animationCategory_${category}`]?.() ?? category;
       return (
         <AnimationPickerListItem
           key={category}
@@ -269,11 +271,7 @@ export default class AnimationPickerBody extends React.Component {
                     {`${msg.animationPicker_allCategories()} > `}
                   </span>
                 )}
-                <span>
-                  {categoryQuery !== 'level_animations'
-                    ? msg[`animationCategory_${categoryQuery}`]()
-                    : 'Costumes'}
-                </span>
+                <span>{msg[`animationCategory_${categoryQuery}`]()}</span>
               </div>
             )}
           </div>
