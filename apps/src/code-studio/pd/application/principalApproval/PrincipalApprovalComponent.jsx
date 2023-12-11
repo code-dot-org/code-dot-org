@@ -313,8 +313,6 @@ PrincipalApprovalComponent.propTypes = {
 PrincipalApprovalComponent.associatedFields = [
   ...Object.keys(PageLabels),
   'doYouApprove',
-  'contactInvoicing',
-  'contactInvoicingDetail',
 ];
 
 PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {

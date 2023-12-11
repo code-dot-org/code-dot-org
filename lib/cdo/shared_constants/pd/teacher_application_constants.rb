@@ -137,8 +137,6 @@ module Pd
         other_races_percent: 'Percent of student enrollment by race: Other',
         principal_approval: "Do you approve of <Teacher Name> participating in Code.org's #{YEAR} Professional Learning Program?",
         principal_schedule_confirmed: "Are you committed to including Computer Science <Program> on the master schedule in #{YEAR} if <Teacher Name> is accepted into the program?",
-        contact_invoicing: "Contact name for invoicing",
-        contact_invoicing_detail: "Contact email or phone number for invoicing",
       }
     }.freeze
 
@@ -404,10 +402,7 @@ module Pd
         :csp_implementation,
         :csd_implementation,
         :csa_implementation,
-        :pay_fee,
         :share_ap_scores,
-        :contact_invoicing,
-        :contact_invoicing_detail
       ],
       nces: [
         :title_i_status,

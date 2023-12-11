@@ -141,8 +141,6 @@ module Pd::Application
     def additional_text_fields
       [
         [:do_you_approve],
-        [:contact_invoicing],
-        [:contact_invoicing_detail]
       ]
     end
 

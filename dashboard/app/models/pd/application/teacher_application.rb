@@ -1137,8 +1137,6 @@ module Pd::Application
       # Approval application created, now score corresponding teacher application
       principal_response = principal_approval.sanitized_form_data_hash
 
-      replace_course_string = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ").gsub('::', ':')
-
       principal_school = School.find_by(id: principal_response[:school])
       update_form_data_hash(
         {
@@ -1150,8 +1148,6 @@ module Pd::Application
           principal_school_type: principal_school.try(:school_type),
           principal_school_district: principal_school.try(:district).try(:name),
           principal_approval: principal_response.values_at(:do_you_approve, :do_you_approve_other).compact.join(" "),
-          principal_schedule_confirmed:
-            principal_response.values_at(:committed_to_master_schedule, :committed_to_master_schedule_other).compact.join(" "),
           principal_total_enrollment: principal_response[:total_student_enrollment],
           principal_free_lunch_percent:
             principal_response[:free_lunch_percent] ? format("%0.02f%%", principal_response[:free_lunch_percent]) : nil,
@@ -1168,10 +1164,7 @@ module Pd::Application
             principal_response[:pacific_islander] ? format("%0.02f%%", principal_response[:pacific_islander]) : nil,
           principal_white_percent: principal_response[:white] ? format("%0.02f%%", principal_response[:white]) : nil,
           principal_other_percent: principal_response[:other] ? format("%0.02f%%", principal_response[:other]) : nil,
-          principal_wont_replace_existing_course: replace_course_string,
           principal_send_ap_scores: principal_response[:send_ap_scores],
-          principal_contact_invoicing: principal_response[:contact_invoicing],
-          principal_contact_invoicing_detail: principal_response[:contact_invoicing_detail]
         }
       )
       save!

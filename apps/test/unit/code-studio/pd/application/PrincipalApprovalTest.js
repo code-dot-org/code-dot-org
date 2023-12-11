@@ -12,7 +12,7 @@ describe('PrincipalApproval', () => {
       PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'No',
       })
-    );
+    ).to.deep.equal(ALWAYS_REQUIRED_FIELDS);
   });
 
   it('Requires more fields if the application is accepted', () => {

@@ -56,29 +56,6 @@ module Api::V1::Pd::Application
       assert_equal expected_principal_fields, actual_principal_fields
     end
 
-    test 'application update contains replaced courses' do
-      teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
-
-      test_params = {
-        application_guid: teacher_application.application_guid,
-        form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY).merge(
-          {
-            replace_course: 'Yes'
-          }.stringify_keys
-        )
-      }
-
-      assert_creates(PRINCIPAL_APPROVAL_APPLICATION_CLASS) do
-        put :create, params: test_params
-        assert_response :success
-      end
-
-      assert_equal(
-        'Yes',
-        teacher_application.reload.sanitized_form_data_hash[:principal_wont_replace_existing_course]
-      )
-    end
-
     test 'application update includes Other fields' do
       teacher_application = create TEACHER_APPLICATION_FACTORY, application_guid: SecureRandom.uuid
 
@@ -87,8 +64,6 @@ module Api::V1::Pd::Application
         form_data: build(PRINCIPAL_APPROVAL_HASH_FACTORY,
           do_you_approve: "Other:",
           do_you_approve_other: "this is the other for do you approve",
-          replace_course: "I don't know (Please Explain):",
-          replace_course_other: "this is the other for replace course"
         )
       }
 
@@ -99,7 +74,6 @@ module Api::V1::Pd::Application
 
       expected_principal_fields = {
         principal_approval: "Other: this is the other for do you approve",
-        principal_wont_replace_existing_course: "I don't know (Please Explain): this is the other for replace course",
       }
       actual_principal_fields = teacher_application.reload.sanitized_form_data_hash.select do |k, _|
         expected_principal_fields.key?(k)

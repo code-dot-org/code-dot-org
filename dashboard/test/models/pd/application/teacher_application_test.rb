@@ -353,19 +353,19 @@ module Pd::Application
       assert_includes(csv_header_csd, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       refute_includes(csv_header_csd, csa_plan_offer_question)
-      assert_equal 88, csv_header_csd.length
+      assert_equal 85, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
       refute_includes(csv_header_csp, csd_plan_offer_question)
       assert_includes(csv_header_csp, csp_plan_offer_question)
       refute_includes(csv_header_csp, csa_plan_offer_question)
-      assert_equal 90, csv_header_csp.length
+      assert_equal 87, csv_header_csp.length
 
       csv_header_csa = CSV.parse(TeacherApplication.csv_header('csa'))[0]
       refute_includes(csv_header_csa, csd_plan_offer_question)
       refute_includes(csv_header_csd, csp_plan_offer_question)
       assert_includes(csv_header_csa, csa_plan_offer_question)
-      assert_equal 92, csv_header_csa.length
+      assert_equal 89, csv_header_csa.length
     end
 
     test 'school cache' do
