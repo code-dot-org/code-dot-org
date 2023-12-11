@@ -5,7 +5,7 @@ import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
 import style from './animation-picker-list-item.module.scss';
-import allLevelSpecificAnimationsThumbnail from '@cdo/static/p5lab/animation-preview/category_all_including_backgrounds.png';
+import allLevelSpecificAnimationsThumbnail from '../../../static/p5lab/animation-previews/category_all_including_backgrounds.png';
 import classNames from 'classnames';
 
 export default class AnimationPickerListItem extends React.Component {
@@ -39,10 +39,14 @@ export default class AnimationPickerListItem extends React.Component {
       isAnimationJsonMode,
     } = this.props;
     const {loaded, hover} = this.state;
-
-    let iconImageSrc = category
-      ? `/blockly/media/p5lab/animation-previews/category_${category}.png`
-      : '';
+    let iconImageSrc = '';
+    import(`../../../static/p5lab/animation-previews/category_${category}.png`)
+      .then(file => {
+        iconImageSrc = file;
+      })
+      .catch(error => {
+        console.log('Error loading the file', error);
+      });
     if (isAnimationJsonMode && category === 'all') {
       iconImageSrc = allLevelSpecificAnimationsThumbnail;
     }
