@@ -6,7 +6,7 @@ require 'policies/lti'
 class Services::LtiTest < ActiveSupport::TestCase
   setup do
     @roles_key = Policies::Lti::LTI_ROLES_KEY
-    @custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    @custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym
     @teacher_roles = [
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Administrator',
       'http://purl.imsglobal.org/vocab/lis/v2/institution/person#Instructor',

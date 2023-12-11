@@ -37,12 +37,11 @@ class Services::Lti
   end
 
   def self.get_claim(id_token, key)
-    id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS, key)
+    id_token[key] || id_token.dig(Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym, key)
   end
 
   def self.initialize_lti_student_from_nrps(client_id:, issuer:, nrps_member:)
-    # TODO DAYNE don't do [0]
-    nrps_member_message = nrps_member[:message][0]
+    nrps_member_message = nrps_member[:message].first
     user = User.new
     user.provider = User::PROVIDER_MIGRATED
     user.user_type = User::TYPE_STUDENT
