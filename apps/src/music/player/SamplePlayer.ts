@@ -1,6 +1,7 @@
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -32,18 +33,22 @@ const PREVIEW_GROUP = 'preview';
  * Handles playback of individual samples.
  */
 export default class SamplePlayer {
+  private readonly metricsReporter: LabMetricsReporter;
   private playingSamples: PlayingSample[];
   private isPlaying: boolean;
   private startPlayingAudioTime: number;
   private isInitialized: boolean;
   private groupPath: string;
 
-  constructor() {
+  constructor(
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
     this.isInitialized = false;
     this.groupPath = '';
+    this.metricsReporter = metricsReporter;
   }
 
   initialize(
@@ -77,9 +82,11 @@ export default class SamplePlayer {
       // Use a delay value of a half of a beat
       delayTimeSeconds: secondsPerBeat / 2,
       reportSoundLibraryLoadTime: (loadTimeMs: number) => {
-        Lab2MetricsReporter.reportLoadTime('SoundLibraryLoadTime', loadTimeMs, [
-          {name: 'Library', value: library.name},
-        ]);
+        this.metricsReporter.reportLoadTime(
+          'SoundLibraryLoadTime',
+          loadTimeMs,
+          [{name: 'Library', value: library.name}]
+        );
       },
       updateLoadProgress: updateLoadProgress,
     });
@@ -248,6 +255,6 @@ export default class SamplePlayer {
   }
 
   private logUninitialized() {
-    Lab2MetricsReporter.logWarning('Sample player not initialized.');
+    this.metricsReporter.logWarning('Sample player not initialized.');
   }
 }

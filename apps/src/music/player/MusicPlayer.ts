@@ -7,7 +7,8 @@ import SamplePlayer, {SampleEvent} from './SamplePlayer';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 // Using require() to import JS in TS files
 const soundApi = require('./sound');
@@ -23,16 +24,22 @@ const DEFAULT_KEY = Key.C;
  * uses a {@link SamplePlayer} to play sounds.
  */
 export default class MusicPlayer {
+  private readonly metricsReporter: LabMetricsReporter;
   private bpm: number;
   private key: Key;
   private samplePlayer: SamplePlayer;
   private library: MusicLibrary | null;
 
-  constructor(bpm: number = DEFAULT_BPM, key: Key = DEFAULT_KEY) {
+  constructor(
+    bpm: number = DEFAULT_BPM,
+    key: Key = DEFAULT_KEY,
+    metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     this.bpm = this.validateBpm(bpm);
     this.key = this.validateKey(key);
     this.samplePlayer = new SamplePlayer();
     this.library = null;
+    this.metricsReporter = metricsReporter;
   }
 
   /**
@@ -198,7 +205,7 @@ export default class MusicPlayer {
 
   private convertEventToSamples(event: PlaybackEvent): SampleEvent[] {
     if (this.library === null) {
-      Lab2MetricsReporter.logWarning('Music Player not initialized');
+      this.metricsReporter.logWarning('Music Player not initialized');
       return [];
     }
 
@@ -210,7 +217,7 @@ export default class MusicPlayer {
       const soundEvent = event as SoundEvent;
       const soundData = this.library.getSoundForId(soundEvent.id);
       if (!soundData) {
-        Lab2MetricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
+        this.metricsReporter.logWarning('No sound for ID: ' + soundEvent.id);
         return [];
       }
 
@@ -300,13 +307,13 @@ export default class MusicPlayer {
       this.library.getFolderForPath(instrument);
 
     if (folder === null) {
-      Lab2MetricsReporter.logWarning(`No instrument ${instrument}`);
+      this.metricsReporter.logWarning(`No instrument ${instrument}`);
       return null;
     }
 
     const sound = folder.sounds.find(sound => sound.note === note) || null;
     if (sound === null) {
-      Lab2MetricsReporter.logWarning(
+      this.metricsReporter.logWarning(
         `No sound for note value ${note} on instrument ${instrument}`
       );
       return null;
