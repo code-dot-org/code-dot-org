@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-11-21 22:51:46 UTC",
+    "serialized_at": "2023-12-11 23:36:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1503,12 +1503,12 @@
       }
     },
     {
-      "key": "ae9a7e04-6820-4764-9d29-9e8d593cb9cc",
+      "key": "5688685c-b8bf-4563-b285-04a9cce9bb6e",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "ae9a7e04-6820-4764-9d29-9e8d593cb9cc",
+        "lesson_activity.key": "5688685c-b8bf-4563-b285-04a9cce9bb6e",
         "lesson.key": "lesson-53",
         "lesson_group.key": "",
         "script.name": "allthethings"
@@ -2037,13 +2037,13 @@
       }
     },
     {
-      "key": "76a112e1-ed1b-4dba-b33c-575c68d42881",
+      "key": "465bc905-13b5-487c-8fd6-8043676ee607",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "76a112e1-ed1b-4dba-b33c-575c68d42881",
-        "lesson_activity.key": "ae9a7e04-6820-4764-9d29-9e8d593cb9cc"
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607",
+        "lesson_activity.key": "5688685c-b8bf-4563-b285-04a9cce9bb6e"
       }
     }
   ],
@@ -5247,6 +5247,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_spritelab_functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5268,6 +5271,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_spritelab_stress_test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6484,7 +6490,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 183,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6498,7 +6504,7 @@
         "lesson.key": "lesson-53",
         "lesson_group.key": "",
         "script.name": "allthethings",
-        "activity_section.key": "76a112e1-ed1b-4dba-b33c-575c68d42881"
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
       },
       "level_keys": [
         "Allthethings Python Lab 1"
@@ -7828,6 +7834,19 @@
     },
     {
       "seeding_key": {
+        "level.key": "2-3 Maze 1",
+        "script_level.level_keys": [
+          "2-3 Maze 1",
+          "2-3 Maze 4"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "2-3 Maze 4",
         "script_level.level_keys": [
           "2-3 Maze 1",
@@ -7936,6 +7955,19 @@
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist 3",
+        "script_level.level_keys": [
+          "2-3 Artist 3",
+          "2-3 Artist Loops 4"
         ],
         "lesson.key": "Swapped Levels",
         "lesson_group.key": "",
@@ -8799,7 +8831,7 @@
         "lesson.key": "lesson-53",
         "lesson_group.key": "",
         "script.name": "allthethings",
-        "activity_section.key": "76a112e1-ed1b-4dba-b33c-575c68d42881"
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
       }
     }
   ],
