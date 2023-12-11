@@ -31,13 +31,13 @@ import {FormContext} from '../../form_components_func/FormComponent';
 const getProgramName = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return 'CS Discoveries';
+      return 'Computer Science Discoveries';
     case PROGRAM_CSP:
-      return 'CS Principles';
+      return 'Computer Science Principles';
     case PROGRAM_CSA:
       return 'Computer Science A';
     default:
-      return 'CS Program';
+      return 'Computer Science Program';
   }
 };
 

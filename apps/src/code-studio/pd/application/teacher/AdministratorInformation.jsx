@@ -21,7 +21,7 @@ const AdministratorInformation = props => {
     'Please provide information for an Administrator/School Leader (i.e. ' +
     'Principal, Vice Principal, STEM Program Director, etc) who can\n' +
     'certify that the course will be offered at your school. Upon your\n' +
-    'submission of this application, we my contact the\n' +
+    'submission of this application, we may contact the\n' +
     'Administrator/School Leader that you listed via email in order to\n' +
     'obtain their approval.';
   const formDescriptionWithoutAdminApprovalRequired =
