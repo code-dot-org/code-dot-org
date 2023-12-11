@@ -12,10 +12,7 @@ const testPrimaryTeacher = {
 describe('PrimaryTeacher', () => {
   it('renders the primary teacher if there are coteachers', () => {
     const wrapper = mount(
-      <PrimaryTeacher
-        primaryTeacher={testPrimaryTeacher}
-        coteachersExist={true}
-      />
+      <PrimaryTeacher primaryTeacher={testPrimaryTeacher} numCoteachers={1} />
     );
     expect(wrapper.text()).to.include('Parmesan');
     expect(wrapper.text()).to.include('parmesan@code.org');
@@ -23,24 +20,21 @@ describe('PrimaryTeacher', () => {
 
   it('renders nothing if there are no coteachers', () => {
     const wrapper = shallow(
-      <PrimaryTeacher
-        primaryTeacher={testPrimaryTeacher}
-        coteachersExist={false}
-      />
+      <PrimaryTeacher primaryTeacher={testPrimaryTeacher} numCoteachers={0} />
     );
     expect(wrapper).to.be.empty;
   });
 
   it('renders nothing if coteachers are added', () => {
-    let coteachersExist = false;
+    let numCoteachers = 0;
     const wrapper = shallow(
       <PrimaryTeacher
         primaryTeacher={testPrimaryTeacher}
-        coteachersExist={coteachersExist}
+        numCoteachers={numCoteachers}
       />
     );
     expect(wrapper).to.be.empty;
-    coteachersExist = true;
+    numCoteachers = 3;
     wrapper.update();
 
     expect(wrapper).to.be.empty;

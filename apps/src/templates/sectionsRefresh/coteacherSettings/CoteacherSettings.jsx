@@ -73,12 +73,14 @@ export default function CoteacherSettings({
     [setSavedCoteachers]
   );
 
+  console.log('lfm', coteachers);
+
   return (
     <div className={styles.expandedSection}>
       {i18n.coteacherAddInfo()}
       <PrimaryTeacher
         primaryTeacher={primaryTeacher}
-        coteachersExist={coteachers.length > 0}
+        numCoteachers={coteachers.length}
       />
       <label className={styles.label}>
         <StrongText>{i18n.coteacherLabel()}</StrongText>
