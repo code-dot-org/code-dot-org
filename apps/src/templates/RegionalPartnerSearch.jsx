@@ -306,7 +306,6 @@ class RegionalPartnerSearch extends Component {
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
                     nominated={this.state.nominated}
                     priorityDeadlineDate={appsPriorityDeadlineDate}
                   />
@@ -317,7 +316,6 @@ class RegionalPartnerSearch extends Component {
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
                     link={partnerInfo.link_to_partner_application}
                     partnerSite={true}
                     nominated={this.state.nominated}
@@ -498,7 +496,6 @@ class RegionalPartnerSearch extends Component {
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
-                  id={`id-${partnerInfo.id}`}
                   nominated={this.state.nominated}
                   priorityDeadlineDate={appsPriorityDeadlineDate}
                 />
@@ -509,7 +506,6 @@ class RegionalPartnerSearch extends Component {
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
-                  id={`id-${partnerInfo.id}`}
                   link={partnerInfo.link_to_partner_application}
                   partnerSite={true}
                   nominated={this.state.nominated}
@@ -611,7 +607,6 @@ const styles = {
 const StartApplicationButton = ({
   buttonOnly,
   className,
-  id,
   link,
   partnerSite,
   nominated,
@@ -657,9 +652,11 @@ const StartApplicationButton = ({
           notice={notificationHeading}
           details={notificationText}
           dismissible={false}
-        >
-          {button}
-        </Notification>
+          buttonText={buttonText}
+          buttonColor={Button.ButtonColor.brandSecondaryDefault}
+          buttonLink={link}
+          buttonClassName={className}
+        />
       </div>
     );
   }
