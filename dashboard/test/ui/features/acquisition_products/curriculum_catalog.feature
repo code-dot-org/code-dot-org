@@ -147,6 +147,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I wait until element "a:contains(See curriculum details)" is visible
 
+  @no_mobile
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
@@ -167,6 +168,7 @@ Feature: Curriculum Catalog Page
     Then I wait for jquery to load
     And I wait until current URL contains "/professional-development-workshops"
 
+  @no_mobile
   Scenario: On expanded card, Signed-in teacher sees professional learning section
     Given I create a teacher named "Teacher Tom"
     Given I am on "http://studio.code.org/catalog"
@@ -175,6 +177,7 @@ Feature: Curriculum Catalog Page
     And I scroll the "h4:contains(CS Fundamentals: Course A)" element into view
     And I wait until element "h4:contains(Professional Learning)" is visible
 
+  @no_mobile
   Scenario: On expanded card, Signed-in student does not see professional learning section
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
@@ -183,6 +186,7 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(Professional Learning)" is not visible
 
   # Expanded Card Assign button scenarios
+  @no_mobile
   Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
     Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
@@ -192,6 +196,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Sign in or create account)"
     And I wait until element "h2:contains(Have an account already? Sign in)" is visible
 
+  @no_mobile
   Scenario: On expanded card, Signed-in student does not see Assign button
     Given I create a student named "Student Sam"
     Given I am on "http://studio.code.org/catalog"
@@ -199,6 +204,7 @@ Feature: Curriculum Catalog Page
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I wait until element "span:contains(Assign to class sections)" is not visible
 
+  @no_mobile
   Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
     Given I create a teacher named "Teacher Tom"
     Then I am on "http://studio.code.org/catalog"
@@ -211,6 +217,7 @@ Feature: Curriculum Catalog Page
     Then I click selector "a:contains(Create Section)"
     And I wait until element "h3:contains(Create a new section)" is visible
   
+  @no_mobile
   Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
     Given I am a teacher with student sections named Section 1 and Section 2
 

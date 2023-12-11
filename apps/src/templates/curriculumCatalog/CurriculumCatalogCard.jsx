@@ -293,7 +293,7 @@ const CustomizableCurriculumCatalogCard = ({
                   course_name: courseDisplayName,
                 })}
                 text={i18n.learnMore()}
-                className={style.learnMoreButton}
+                className={`${style.buttonFlex} ${style.learnMoreButton}`}
               />
               {(isSignedOut || isTeacher) && (
                 <Button
