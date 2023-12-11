@@ -16,7 +16,7 @@ export default function AiAssessment({
   aiEvalInfo,
 }) {
   return (
-    <div>
+    <div className="uitest-ai-assessment">
       <Heading6>{i18n.aiAssessment()}</Heading6>
       <div className={style.aiAssessmentBlock}>
         <img alt={i18n.aiBot()} src={icon} className={style.aiBotImg} />
