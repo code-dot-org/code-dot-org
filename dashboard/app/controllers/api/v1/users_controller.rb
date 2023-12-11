@@ -3,7 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :login_or_redirect]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
 
   def load_user
@@ -67,6 +67,24 @@ class Api::V1::UsersController < Api::V1::JSONApiController
       email: current_user&.email,
       zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
     }
+  end
+
+  # This is used as a way to redirect correctly to either the sign in page or the
+  # URL specified in the user_return_to parameter. This is necessary because
+  # cached pages do not have a valid user auth token and therefore will attempt to
+  # redirect to the sign in page instead of the correct page if the user is signed in.
+  # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+  # NOTE: the `user_return_to` path must not include a redirect back to this path
+  # or there will be an infinite redirect loop. e.g. strip out `login_required` URL
+  # parameters before calling this method.
+  # GET /api/v1/users/login_or_redirect
+  def login_or_redirect
+    if user_signed_in?
+      redirect_to params[:user_return_to] || home_url
+    else
+      session[:user_return_to] ||= params[:user_return_to]
+      authenticate_user!
+    end
   end
 
   # GET /api/v1/users/<user_id>/using_text_mode

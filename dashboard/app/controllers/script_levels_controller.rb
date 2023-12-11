@@ -105,8 +105,19 @@ class ScriptLevelsController < ApplicationController
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    # If we have a signed out user for any of these cases we will want to redirect them to sign in
-    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+    if @script.login_required? || (!params.nil? && params[:login_required] == "true")
+      if cachable_request?(request)
+        # if login_required on a cached level, redirect to login_or_redirect
+        # See https://codedotorg.atlassian.net/browse/TEACH-758 for more details.
+        path_without_params = request.fullpath.split('?').first || request.fullpath
+        return redirect_to "/api/v1/users/login_or_redirect?user_return_to=" + path_without_params
+      else
+        authenticate_user!
+      end
+    end
+    authenticate_user! unless can?(:read, @script)
+
+    #    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true" && !cachable_request?(request))
     return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user&.script_level_hidden?(@script_level)
