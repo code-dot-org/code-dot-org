@@ -77,13 +77,6 @@ export default class AnimationPickerBody extends React.Component {
     if (categoryQuery === undefined) {
       categoryQuery = this.state.categoryQuery;
     }
-    // For animations that are level-specific but NOT 'backgrounds', we rename the category as
-    // 'costumes' for better clarity for content editor users. When we query for these level-specific
-    // costume animations, use the 'level_animations' category  which these animations are automatically
-    // assigned when uploaded.
-    if (categoryQuery === 'costumes') {
-      categoryQuery = 'level_animations';
-    }
     if (libraryManifest === undefined) {
       libraryManifest = this.props.libraryManifest;
     }
@@ -154,17 +147,16 @@ export default class AnimationPickerBody extends React.Component {
       categories = categories.filter(category => category !== 'backgrounds');
     }
     // Level-specific animations currently have the following categories:
-    // "level_animations", "backgrounds", "animals".
+    // "level_costumes", "backgrounds", "animals".
     // We want to hide the "animals" category which has only one animation in it.
     // It will be displayed in the "all" category added below.
     // There is an 'animals' category because a level-specific animation was uploaded with the
     // 'animals' category BEFORE the sprite upload feature dictated that level-specific animations
     // can only be categorized as "costume" or "background".
-    // We also replace 'level_animations' with the 'costumes' category.
-    // This is a more accurate label for level-specific animations that are not backgrounds.
-    if (categories.includes('level_animations')) {
-      categories = categories.filter(category => category === 'backgrounds');
-      categories.push('costumes');
+    if (categories.includes('level_costumes')) {
+      categories = categories.filter(
+        category => category === 'backgrounds' || category === 'level_costumes'
+      );
     }
     categories.push('all');
     return categories.map(category => {
