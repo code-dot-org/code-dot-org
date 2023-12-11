@@ -196,7 +196,7 @@ export default class BaseDialog extends React.Component {
     }
 
     return (
-      <div className={wrapperClassNames} role="dialog" aria-modal="true">
+      <div className={wrapperClassNames}>
         <div
           className={modalBackdropClassNames}
           style={this.props.backdropStyle}
