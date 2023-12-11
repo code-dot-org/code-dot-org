@@ -211,15 +211,16 @@ a:link:has(*) {
 }
 
 /* Button styles */
-/* For links that looks like buttons use the .link-button
-class on an <a> tag in lieu of a <button> element */
+/* For call to action links that look like buttons
+  use the .link-button class on an <a> tag instead
+  of a <button> element */
 a.link-button,
 button,
 .btn,
 input[type=submit] {
   display: inline-block;
   color: var(--neutral_white);
-  background-color: var(--brand_secondary_default);
+  background: var(--brand_secondary_default);
   border: 2px solid var(--brand_secondary_default);
   border-radius: 4px;
   padding: .75rem 1rem;
@@ -234,7 +235,7 @@ input[type=submit] {
 
   /* Hover styles */
   &:hover {
-    background-color: var(--brand_secondary_dark);
+    background: var(--brand_secondary_dark);
     border-color: var(--brand_secondary_dark);
     color: var(--neutral_white);
     text-decoration: none;
@@ -262,7 +263,7 @@ input[type=submit] {
 
   /* White button styles */
   &.white {
-    background-color: var(--neutral_white);
+    background: var(--neutral_white);
     border-color: var(--neutral_white);
     color: var(--neutral_dark);
     &:hover {
@@ -284,7 +285,7 @@ input[type=submit] {
   &:disabled,
   &.disabled {
     cursor: default;
-    background-color: var(--neutral_dark20);
+    background: var(--neutral_dark20);
     border: 2px solid var(--neutral_dark20);
     color: var(--neutral_dark70);
   }
@@ -296,7 +297,7 @@ input[type=submit] {
   }
 
   /* Increases line height on mobile
-    if button goes to 2+ lines */
+    if button text goes to 2+ lines */
   @media (max-width: 640px) {
     line-height: 1.2;
   }
