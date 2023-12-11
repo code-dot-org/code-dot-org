@@ -140,7 +140,7 @@ export default class BaseDialog extends React.Component {
         position: 'absolute',
         top: 0,
         right: 0,
-        padding: '0',
+        padding: 0,
         color: '#ddd',
         cursor: 'pointer',
         fontSize: 24,
