@@ -488,17 +488,9 @@ export const asyncLoadCoteacherInvite = () => dispatch => {
 
       const coteacherInviteForPl =
         invitedPlSections.length > 0 ? invitedPlSections[0] : null;
-
-      console.log(coteacherInviteForPl);
-
       // change this to the variable... still not sure about null
-      if (invitedClassroomSections.length > 0) {
-        dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
-      }
-
-      if (invitedPlSections.length > 0) {
-        dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
-      }
+      dispatch(setCoteacherInvite(coteacherInviteForClassrooms));
+      dispatch(setCoteacherInviteForPl(coteacherInviteForPl));
     })
     .catch(err => {
       console.error(err.message);
