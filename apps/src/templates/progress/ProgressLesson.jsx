@@ -169,7 +169,7 @@ class ProgressLesson extends React.Component {
                   this.toggleCollapsed();
                 }
               }}
-              aria-label={title}
+              aria-expanded={!this.state.collapsed}
             >
               <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
